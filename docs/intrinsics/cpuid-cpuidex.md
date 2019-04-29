@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
 ms.openlocfilehash: 30b66c78c6c3477c4da634901058d77d0e362101
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349080"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 
@@ -63,9 +63,9 @@ Cet intrinsèque stocke les fonctionnalités prises en charge et les information
 
 L'intrinsèque `__cpuid` efface le registre ECX avant d'appeler l'instruction `cpuid`. Le `__cpuidex` intrinsèque définit la valeur du Registre ECX à *subfunction_id* avant de générer la `cpuid` instruction. Cela vous permet de rassembler des informations supplémentaires sur le processeur.
 
-Pour plus d’informations sur les paramètres spécifiques à utiliser et les valeurs retournées par ces intrinsèques sur les processeurs Intel, consultez la documentation pour le `cpuid` instruction dans [Intel 64 et IA-32 Architectures Software développeurs manuel Volume 2 : Instruction Set référence](http://go.microsoft.com/fwlink/p/?LinkID=510021) et [référence de programmation des Extensions du jeu d’instructions d’Architecture Intel](http://go.microsoft.com/fwlink/p/?LinkID=506627). Documentation Intel utilise les termes « feuille » et « sous-feuille » pour le *function_id* et *subfunction_id* paramètres passés dans EAX et ECX.
+Pour plus d’informations sur les paramètres spécifiques à utiliser et les valeurs retournées par ces intrinsèques sur les processeurs Intel, consultez la documentation pour le `cpuid` instruction dans [Intel 64 et IA-32 Architectures Software développeurs manuel Volume 2 : Référence du jeu d’instructions](http://go.microsoft.com/fwlink/p/?LinkID=510021) et [référence de programmation des Extensions du jeu d’instructions d’Architecture Intel](http://go.microsoft.com/fwlink/p/?LinkID=506627). Documentation Intel utilise les termes « feuille » et « sous-feuille » pour le *function_id* et *subfunction_id* paramètres passés dans EAX et ECX.
 
-Pour plus d’informations sur les paramètres spécifiques à utiliser et les valeurs retournées par ces intrinsèques sur les processeurs AMD, consultez la documentation pour le `cpuid` instruction dans Manual, Volume 3 le programmeur AMD64 Architecture : à usage général et système Obtenir des instructions et dans les Guides de révision pour les familles de processeur spécifique. Pour accéder à ces documents et d’autres informations, consultez le AMD [Guides du développeur, des manuels et des Documents de ISA](http://go.microsoft.com/fwlink/p/?LinkId=510023) page. Documentation AMD utilise les termes « numéro de fonction » et « numéro de sous-fonction » pour le *function_id* et *subfunction_id* paramètres passés dans EAX et ECX.
+Pour plus d’informations sur les paramètres spécifiques à utiliser et les valeurs retournées par ces intrinsèques sur les processeurs AMD, consultez la documentation pour le `cpuid` instruction dans Manual, Volume 3 le programmeur AMD64 Architecture : À usage général et obtenir des Instructions du système et dans les Guides de révision pour les familles de processeur spécifique. Pour accéder à ces documents et d’autres informations, consultez le AMD [Guides du développeur, des manuels et des Documents de ISA](http://go.microsoft.com/fwlink/p/?LinkId=510023) page. Documentation AMD utilise les termes « numéro de fonction » et « numéro de sous-fonction » pour le *function_id* et *subfunction_id* paramètres passés dans EAX et ECX.
 
 Lorsque le *function_id* argument est 0, *cpuInfo*[0] Retourne le plus élevé disponible non étendues *function_id* valeur prise en charge par le processeur. Le fabricant du processeur est encodé dans *cpuInfo*[1], *cpuInfo*[2], et *cpuInfo*[3].
 
@@ -75,7 +75,7 @@ Certains processeurs prennent en charge les informations CPUID des fonctions ét
 
 ## <a name="example"></a>Exemple
 
-Cet exemple montre certaines des informations disponibles par l'intermédiaire des intrinsèques `__cpuid` et `__cpuidex`. L'application répertorie les extensions du jeu d'instructions prises en charge par le processeur actuel. La sortie montre un résultat possible pour un processeur particulier.
+Cet exemple montre certaines des informations disponibles par l'intermédiaire des intrinsèques `__cpuid` et `__cpuidex`. L’application répertorie les extensions du jeu d’instructions prises en charge par le processeur actuel. La sortie montre un résultat possible pour un processeur particulier.
 
 ```cpp
 // InstructionSet.cpp

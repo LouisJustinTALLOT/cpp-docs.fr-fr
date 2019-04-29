@@ -8,11 +8,11 @@ helpviewer_keywords:
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
 ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297006"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Assistant Ajout de classes d'une Typelib
 
@@ -70,4 +70,4 @@ Utilisez cet Assistant pour ajouter une classe MFC à partir d’une bibliothèq
 ## <a name="see-also"></a>Voir aussi
 
 [Classe MFC à partir d’une bibliothèque de types](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)<br/>
-[Clients Automation : À l’aide de bibliothèques de types](../../mfc/automation-clients-using-type-libraries.md)
+[Clients Automation : Utilisation de bibliothèques de types](../../mfc/automation-clients-using-type-libraries.md)

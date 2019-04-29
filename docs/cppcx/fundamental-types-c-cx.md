@@ -3,11 +3,11 @@ title: Types fondamentaux (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
 ms.openlocfilehash: 2bd5be01b868fd3086c2064edfd4ca343db425be
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301449"
 ---
 # <a name="fundamental-types-ccx"></a>Types fondamentaux (C++/CX)
 
@@ -20,7 +20,7 @@ Le tableau suivant répertorie les types intégrés booléens et de caractère, 
 |Espace de noms|C++ / c++ / nom CX|Définition|Nom C++ standard|Plage de valeurs|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
 |Plateforme|Booléen|Valeur booléenne de 8 bits.|bool|**true** (différent de zéro) et **false** (zéro)|
-|default|char16|Valeur non numérique 16 bits qui représente un point de code Unicode (UTF-16).|wchar_t<br /><br /> ou<br /><br /> L’c’|(Spécifié par la norme Unicode)|
+|default|char16|Valeur non numérique 16 bits qui représente un point de code Unicode (UTF-16).|wchar_t<br /><br /> - ou -<br /><br /> L’c’|(Spécifié par la norme Unicode)|
 
 ## <a name="numeric-types"></a>Types numériques
 
@@ -43,7 +43,7 @@ Le tableau suivant répertorie les types numériques intégrés. Les types numé
 
 Le tableau suivant répertorie certains types supplémentaires qui sont définis par l’architecture de Windows Runtime et sont intégrés dans C++ / c++ / CX. Object et String sont des types référence. Tous les autres sont des types valeur. Tous ces types sont déclarés dans l’espace de noms `Platform` . Pour obtenir une liste complète, consultez [Platform namespace](../cppcx/platform-namespace-c-cx.md).
 
-|Name|Définition|
+|Nom|Définition|
 |----------|----------------|
 |Object|Représente n’importe quel type Windows Runtime.|
 |Chaîne|Série de caractères représentant du texte.|

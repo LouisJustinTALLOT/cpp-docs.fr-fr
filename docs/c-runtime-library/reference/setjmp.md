@@ -24,11 +24,11 @@ helpviewer_keywords:
 - setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
 ms.openlocfilehash: 9f1a2b71a7b8fc7603c36938879348dca16288e2
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356418"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -70,7 +70,7 @@ Dans le code C++ de Microsoft sur Windows, **longjmp** utilise la même sémanti
 
 Pour plus d’informations, consultez [Utilisation de setjmp et longjmp](../../cpp/using-setjmp-longjmp.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

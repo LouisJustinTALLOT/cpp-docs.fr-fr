@@ -47,11 +47,11 @@ helpviewer_keywords:
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
 ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341351"
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -98,7 +98,7 @@ La chaîne d’entrée est une séquence de caractères qui peut être interpré
 
 Le *str* l’argument de **atof** et **_wtof** a la forme suivante :
 
-[*espace blanc*] [*connexion*] [*chiffres*] [__.__ *chiffres*] [{**e** &#124; **E** } [*connexion*]*chiffres*]
+[*whitespace*] [*sign*] [*digits*] [__.__*digits*] [ {**e** &#124; **E** }[*sign*]*digits*]
 
 Un *espace blanc* se compose de caractères espace ou tabulation, qui sont ignorés ; *connexion* est soit plus (+) ou moins (-) ; et *chiffres* représente un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant la virgule décimale, au moins un doit apparaître après celle-ci. Les chiffres décimaux peuvent être suivies d’un exposant, qui se compose d’une lettre d’introduction (**e**, ou **E**) et un entier décimal signé si vous le souhaitez.
 

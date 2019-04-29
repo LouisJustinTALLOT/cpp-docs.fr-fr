@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
 ms.openlocfilehash: 9ac79e790f0b1e7a89413a0d4974f6053c95616e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333993"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -47,7 +47,7 @@ int fesetexceptflag(
 *pstatus*<br/>
 Pointeur vers un **fexcept_t** objet contenant les valeurs pour définir des indicateurs d’état de l’exception. L’objet peut être défini par un appel précédent à [fegetexceptflag](fegetexceptflag2.md).
 
-*sauf*<br/>
+*excepts*<br/>
 Indicateurs d’état d’exception de virgule flottante à définir.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -71,9 +71,9 @@ Le *, sauf* argument peut être égal à zéro, une des macros d’exception à 
 
 Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-|Fonction|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**fesetexceptflag**|\<fenv.h>|\<cfenv>|
 

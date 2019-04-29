@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
 ms.openlocfilehash: ecffdb3a6f44f60004cf4f039bdab9c98e212ce1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338036"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile, classe
 
@@ -78,7 +78,7 @@ Pour plus d’informations sur les flux et des monikers, consultez [COleStreamFi
 
 `CMonikerFile`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxole.h
 

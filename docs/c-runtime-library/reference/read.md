@@ -27,11 +27,11 @@ helpviewer_keywords:
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
 ms.openlocfilehash: 40f52ea37ae5419fe986aa505aad4fddfe8403ff
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357653"
 ---
 # <a name="read"></a>_read
 
@@ -74,7 +74,7 @@ Le **_read** fonction lit un maximum de *buffer_size* octets dans *tampon* à pa
 
 Si le fichier a été ouvert en mode texte, la lecture termine quand **_read** rencontre un caractère CTRL + Z, qui est traité comme un indicateur de fin de fichier. Utilisez [_lseek](lseek-lseeki64.md) pour effacer l’indicateur de fin de fichier.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

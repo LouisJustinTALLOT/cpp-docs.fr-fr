@@ -34,11 +34,11 @@ helpviewer_keywords:
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
 ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334773"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -85,7 +85,7 @@ Transmis à des descripteurs de fichiers **_fdopen** sont détenus par retourné
 
 Le *mode* chaîne de caractères Spécifie le type d’accès au fichier demandé pour le fichier :
 
-| *mode* | Accès |
+| *mode* | Access |
 |--------|--------|
 | **"r"** | Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, la **fopen** appeler échoue. |
 | **"w"** | Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit. |
@@ -114,11 +114,11 @@ Caractères valides pour le *mode* chaîne utilisée dans **fopen** et **_fdopen
 |Les caractères de *mode* chaîne|Équivalent *oflag* valeur **_open** et **_sopen**|
 |---------------------------------|---------------------------------------------------|
 |**a**|**\_O\_WRONLY &#124; \_O\_APPEND** (généralement  **\_O\_WRONLY &#124; \_O\_créer &#124; \_O \_APPEND**)|
-|**a +**|**\_O\_RDWR &#124; \_O\_APPEND** (généralement  **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_ Créer un** )|
+|**a+**|**\_O\_RDWR &#124; \_O\_APPEND** (généralement  **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_ Créer un** )|
 |**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
+|**r+**|**\_O\_RDWR**|
 |**w**|**\_O\_WRONLY** (généralement  **\_O\_WRONLY &#124; \_O\_créer &#124; \_O\_TRUNC**)|
-|**w +**|**\_O\_RDWR** (généralement  **\_O\_RDWR &#124; \_O\_créer &#124; \_O\_TRUNC**)|
+|**w+**|**\_O\_RDWR** (généralement  **\_O\_RDWR &#124; \_O\_créer &#124; \_O\_TRUNC**)|
 |**b**|**\_O\_BINAIRE**|
 |**t**|**\_O\_TEXTE**|
 |**c**|Aucun.|
@@ -190,4 +190,4 @@ Lines in file: 2
 [fclose, \_fcloseall](fclose-fcloseall.md)<br/>
 [fopen, \_wfopen](fopen-wfopen.md)<br/>
 [freopen, \_wfreopen](freopen-wfreopen.md)<br/>
-[\_Ouvrir, \_wopen](open-wopen.md)<br/>
+[\_open, \_wopen](open-wopen.md)<br/>

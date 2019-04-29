@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
 ms.openlocfilehash: 370b7e9f20bcc32f6243cff804381b5453801dbd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333129"
 ---
 # <a name="fputcnolock-fputwcnolock"></a>_fputc_nolock, _fputwc_nolock
 
@@ -62,7 +62,7 @@ wint_t _fputwc_nolock(
 *c*<br/>
 Caractère à écrire.
 
-*flux de données*<br/>
+*stream*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
 ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356389"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -76,7 +76,7 @@ Vous pouvez également passer **_O_U16TEXT**, **_O_U8TEXT**, ou **_O_WTEXT** pou
 > [!CAUTION]
 > Si vous écrivez des données dans un flux de fichier, explicitement videz le code à l’aide de [fflush](fflush.md) avant d’utiliser **_setmode** pour modifier le mode. Si vous ne videz pas le code, un comportement inattendu peut se produire. Si vous n'avez pas écrit de données dans le flux, vous n'avez pas à vider le code.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|

@@ -39,11 +39,11 @@ helpviewer_keywords:
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
 ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341715"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
@@ -82,7 +82,7 @@ N’importe quels nombres.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|+ **QNAN**, **IND**|none|**_DOMAINE**|
+|± **QNAN**, **IND**|none|**_DOMAIN**|
 
 ## <a name="remarks"></a>Notes
 
@@ -96,7 +96,7 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **a
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------|-|
-|**ATAN**, **atan2**, **atanf**, **atan2f**, **atanl**, **atan2l**|\<math.h>|\<cmath> ou \<math.h>|
+|**atan**, **atan2**, **atanf**, **atan2f**, **atanl**, **atan2l**|\<math.h>|\<cmath> ou \<math.h>|
 
 ## <a name="example"></a>Exemple
 

@@ -44,11 +44,11 @@ helpviewer_keywords:
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
 ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347806"
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -95,7 +95,7 @@ La chaîne d’entrée est une séquence de caractères qui peut être interpré
 
 Le *str* l’argument de **atol** a la forme suivante :
 
-> [*espace blanc*] [*connexion*] [*chiffres*]]
+> [*whitespace*] [*sign*] [*digits*]]
 
 Un *espace blanc* se compose de caractères espace ou tabulation, qui sont ignorés ; *connexion* est soit plus (+) ou moins (-) ; et *chiffres* sont un ou plusieurs chiffres.
 

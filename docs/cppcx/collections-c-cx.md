@@ -3,11 +3,11 @@ title: Collections (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
 ms.openlocfilehash: 850ac0f4801a13a5407f8fe008740bbfa21cc02c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347347"
 ---
 # <a name="collections-ccx"></a>Collections (C++/CX)
 
@@ -147,4 +147,4 @@ Les délégués [Windows::Foundation::Collections::VectorChangedEventHandler](/u
 
 [Système de type](../cppcx/type-system-c-cx.md)<br/>
 [Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Référence des espaces de noms](../cppcx/namespaces-reference-c-cx.md)
+[Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)

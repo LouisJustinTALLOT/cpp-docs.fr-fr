@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: efb833a8d4cc0b801f75951bc648d6b83df5bae8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372196"
 ---
 # <a name="crecordset-class"></a>CRecordset, classe
 
@@ -257,7 +257,7 @@ Pour plus d’informations sur l’échange de champs d’enregistrement et de j
 
 `CRecordset`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -288,7 +288,7 @@ Si la source de données prend en charge les transactions, vous pouvez rendre vo
 
 Il est illégal d’appeler `AddNew` pour un jeu d’enregistrements dont `Open` fonction membre n’a pas été appelée. Un `CDBException` est levée si vous appelez `AddNew` pour un jeu d’enregistrements qui ne peut pas être ajouté au. Vous pouvez déterminer si le jeu d’enregistrements est modifiable en appelant [CanAppend](#canappend).
 
-Pour plus d’informations, consultez les articles suivants : [Recordset : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md), [jeu d’enregistrements : Ajout, la mise à jour et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), et [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
+Pour plus d’informations, consultez les articles suivants : [Recordset : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md), [jeu d’enregistrements : Ajout, la mise à jour et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), et [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
 
 ### <a name="example"></a>Exemple
 

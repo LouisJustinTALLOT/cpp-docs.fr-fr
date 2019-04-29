@@ -5,11 +5,11 @@ helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
 ms.openlocfilehash: 17b89f00b2e51c960ed7d3219427b56d92851b81
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319466"
 ---
 # <a name="property-page-xml-rule-files"></a>Fichiers de règles XML des pages de propriétés
 
@@ -85,9 +85,9 @@ La section suivante décrit les principaux éléments et certaines des métadonn
       </Rule.DisplayName>
     ```
 
-   a. **Nom :** L’attribut de nom est un id pour la règle. Il doit être unique parmi tous les fichiers XML des pages de propriétés pour un projet.
+   A. **Nom :** L’attribut de nom est un id pour la règle. Il doit être unique parmi tous les fichiers XML des pages de propriétés pour un projet.
 
-   b. **PageTemplate :** La valeur de cet attribut est utilisée par l’interface utilisateur de choisir à partir d’une collection de modèles d’interface utilisateur. Le modèle « tool » montre les propriétés selon un format de grille standard. D’autres valeurs prédéfinies de cet attribut sont « debugger » et « generic ». Regardez respectivement le nœud Debugging et le nœud General pour voir le format d’interface utilisateur qui résulte de la spécification de ces valeurs. L’interface utilisateur pour le modèle de page « debugger » utilise une zone de liste déroulante pour basculer entre les propriétés des différents débogueurs, tandis que le modèle « generic » affiche les différentes catégories de propriétés dans une même page, au lieu d’avoir plusieurs sous-nœuds de catégorie sous le nœud Rule. Cet attribut est simplement une suggestion pour l’interface utilisateur ; le fichier XML est conçu pour être indépendant de l’interface utilisateur. Une autre interface utilisateur peut utiliser cet attribut à des fins différentes.
+   B. **PageTemplate :** La valeur de cet attribut est utilisée par l’interface utilisateur de choisir à partir d’une collection de modèles d’interface utilisateur. Le modèle « tool » montre les propriétés selon un format de grille standard. D’autres valeurs prédéfinies de cet attribut sont « debugger » et « generic ». Regardez respectivement le nœud Debugging et le nœud General pour voir le format d’interface utilisateur qui résulte de la spécification de ces valeurs. L’interface utilisateur pour le modèle de page « debugger » utilise une zone de liste déroulante pour basculer entre les propriétés des différents débogueurs, tandis que le modèle « generic » affiche les différentes catégories de propriétés dans une même page, au lieu d’avoir plusieurs sous-nœuds de catégorie sous le nœud Rule. Cet attribut est simplement une suggestion pour l’interface utilisateur ; le fichier XML est conçu pour être indépendant de l’interface utilisateur. Une autre interface utilisateur peut utiliser cet attribut à des fins différentes.
 
    c. **SwitchPrefix :** Il s’agit le préfixe utilisé dans la ligne de commande pour les commutateurs. La valeur « / » aboutirait à des commutateurs comme /ZI, /nologo, /W3, etc.
 
@@ -164,9 +164,9 @@ La section suivante décrit les principaux éléments et certaines des métadonn
 
    La plupart des attributs de l’extrait de code ont été décrits précédemment. Les nouveaux attributs sont Subtype, Category et Switch.
 
-   a. **Subtype** est un attribut disponible seulement pour **StringProperty** et **StringListProperty** ; il donne des informations contextuelles. Par exemple, la valeur « file » indique que la propriété représente un chemin de fichier. Ces informations contextuelles sont utilisées pour améliorer l’expérience d’édition en fournissant un Explorateur Windows comme éditeur de la propriété qui permet à l’utilisateur de choisir le fichier visuellement.
+   A. **Subtype** est un attribut disponible seulement pour **StringProperty** et **StringListProperty** ; il donne des informations contextuelles. Par exemple, la valeur « file » indique que la propriété représente un chemin de fichier. Ces informations contextuelles sont utilisées pour améliorer l’expérience d’édition en fournissant un Explorateur Windows comme éditeur de la propriété qui permet à l’utilisateur de choisir le fichier visuellement.
 
-   b. **Catégorie :** Cela déclare la catégorie sous laquelle cette propriété se Range. Recherchez cette propriété sous la catégorie **Fichiers de sortie** dans l’interface utilisateur.
+   B. **Catégorie :** Cela déclare la catégorie sous laquelle cette propriété se Range. Recherchez cette propriété sous la catégorie **Fichiers de sortie** dans l’interface utilisateur.
 
    c. **Commutateur :** Lorsqu’une règle représente un outil – telles que l’outil compilateur dans ce cas, la plupart des propriétés de la règle sont passées comme commutateurs à l’outil exécutables au moment de la build. La valeur de cet attribut indique le littéral du commutateur à utiliser. La propriété ci-dessus spécifie que son commutateur doit être **Fo**. Combinée avec l’attribut **SwitchPrefix** sur la règle parent, cette propriété est passée à l’exécutable en tant que **/Fo"Debug\"** (visible dans la ligne de commande pour C/C++ dans l’interface utilisateur de la page des propriétés).
 

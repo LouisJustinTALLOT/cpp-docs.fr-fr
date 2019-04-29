@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
 ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340727"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh, cacoshf, cacoshl
 
@@ -72,13 +72,13 @@ Cosinus hyperbolique inverse de *z*, en radians. Le résultat est illimitée et 
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **cacosh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **cacosh** accepte et retourne toujours un **_Dcomplex** valeur.
+Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **cacosh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **cacosh** accepte et retourne toujours un **_Dcomplex** valeur.
 
 ## <a name="requirements"></a>Configuration requise
 
-|Routine|En-tête C|En-tête C++|
+|Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**cacosh**, **cacoshf**, **cacoshl**|\<complex.h>|\<ccomplex>|
+|**cacosh**,               **cacoshf**, **cacoshl**|\<complex.h>|\<ccomplex>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

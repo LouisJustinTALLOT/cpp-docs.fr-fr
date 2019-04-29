@@ -43,11 +43,11 @@ helpviewer_keywords:
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
 ms.openlocfilehash: 016be9a1d753787b6e0c3800df5a96baea1a19f5
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347296"
 ---
 # <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
@@ -133,7 +133,7 @@ Le `strrchr` fonction recherche la dernière occurrence de *c* (converti en **ch
 
 `wcsrchr` et `_mbsrchr` sont des versions à caractères larges et à caractères multioctets de `strrchr`. Les arguments et la valeur de retour de `wcsrchr` sont des chaînes de caractères larges ; ceux de `_mbsrchr` sont des chaînes de caractères multioctets.
 
-En C, ces fonctions prennent une **const** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non -**const** retourne un pointeur vers non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS est défini si les deux le **const** et non-**const** versions de ces fonctions sont disponibles. Si vous avez besoin non -**const** comportement pour les deux surcharges C++, définissez le symbole _CONST_RETURN.
+En C, ces fonctions prennent une **const** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non -**const** retourne un pointeur vers non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS est défini si les deux le **const** et non-**const** versions de ces fonctions sont disponibles. Si vous avez besoin non -**const** comportement pour les deux C++ surcharges, définissez le symbole _CONST_RETURN.
 
 `_mbsrchr` valide ses paramètres. Si *str* est NULL, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` est défini sur EINVAL et `_mbsrchr` retourne 0. `strrchr` et `wcsrchr` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
 
@@ -146,7 +146,7 @@ La valeur de sortie est affectée par la valeur du paramètre de catégorie LC_C
 |`_tcsrchr`|`strrchr`|`_mbsrchr`|`wcsrchr`|
 |**n/a**|**n/a**|`_mbsrchr_l`|**n/a**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

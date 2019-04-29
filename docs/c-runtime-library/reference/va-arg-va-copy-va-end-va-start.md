@@ -38,11 +38,11 @@ helpviewer_keywords:
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353564"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 
@@ -94,7 +94,7 @@ Paramètre qui précède le premier argument facultatif.
 
 ## <a name="remarks"></a>Notes
 
-Le **va_arg**, **va_copy**, **va_end**, et **va_start** macros fournissent un moyen portable d’accéder aux arguments à une fonction lors de la fonction accepte un nombre variable d’arguments. Il existe deux versions de ces macros : les macros définies dans STDARG.H, qui sont conformes à la norme ISO C99, et les macros définies dans VARARGS.H qui, bien que dépréciées, sont conservées pour des besoins de compatibilité descendante avec le code qui a été écrit avant la norme ANSI C89.
+Le **va_arg**, **va_copy**, **va_end**, et **va_start** macros fournissent un moyen portable d’accéder aux arguments à une fonction lors de la fonction accepte un nombre variable d’arguments. Il existe deux versions de ces macros : Les macros définies dans STDARG. H est conforme à la norme ISO C99 standard ; les macros définies dans les VARARGS. H sont déconseillés, mais sont conservés pour la compatibilité descendante avec le code qui a été écrit avant la norme ANSI C89.
 
 Ces macros considèrent que la fonction accepte un nombre fixe d’arguments obligatoires, suivi d’un nombre variable d’arguments facultatifs. Les arguments obligatoires sont déclarés à la fonction en tant que paramètres ordinaires et sont accessibles via les noms des paramètres. Les arguments facultatifs sont accessibles via les macros contenues dans STDARG.H (ou dans VARARGS.H pour le code qui a été écrit avant la norme ANSI C89). Ils définissent le pointeur désignant le premier argument facultatif de la liste d’arguments, récupère les arguments de la liste et réinitialise le pointeur dès que le traitement de l’argument est terminé.
 

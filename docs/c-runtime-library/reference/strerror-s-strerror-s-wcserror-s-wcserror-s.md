@@ -40,11 +40,11 @@ helpviewer_keywords:
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
 ms.openlocfilehash: 00ff9d0df1a78d07eaa509201fb998b30396cc4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353818"
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -122,7 +122,7 @@ Zéro si l'opération a réussi, un code d'erreur en cas d'échec.
 
 ## <a name="remarks"></a>Notes
 
-Le **strerror_s** fonction maps *errnum* vers une chaîne de message d’erreur, retournant la chaîne dans *tampon*. **_strerror_s** ne prend pas le numéro d’erreur ; elle utilise la valeur actuelle de **errno** pour déterminer le message approprié. Ni **strerror_s** ni **_strerror_s** n’imprime réellement le message : pour ce faire, vous devez appeler une fonction de sortie comme [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+Le **strerror_s** fonction maps *errnum* vers une chaîne de message d’erreur, retournant la chaîne dans *tampon*. **_strerror_s** ne prend pas le numéro d’erreur ; elle utilise la valeur actuelle de **errno** pour déterminer le message approprié. Ni **strerror_s** ni **_strerror_s** n’imprime réellement le message : Pour ce faire, vous devez appeler une fonction de sortie comme [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )

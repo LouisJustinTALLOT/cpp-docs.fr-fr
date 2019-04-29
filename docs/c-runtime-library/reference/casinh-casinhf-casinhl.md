@@ -31,11 +31,11 @@ helpviewer_keywords:
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
 ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340675"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 
@@ -72,13 +72,13 @@ Le sinus hyperbolique inverse de *z*, en radians. Le résultat est détachée su
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **casinh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **casinh** accepte et retourne toujours un **_Dcomplex** valeur.
+Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **casinh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **casinh** accepte et retourne toujours un **_Dcomplex** valeur.
 
 ## <a name="requirements"></a>Configuration requise
 
-|Routine|En-tête C|En-tête C++|
+|Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**casinh**, **casinhf**, **casinhl**|\<complex.h>|\<ccomplex>|
+|**casinh**,               **casinhf**, **casinhl**|\<complex.h>|\<ccomplex>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

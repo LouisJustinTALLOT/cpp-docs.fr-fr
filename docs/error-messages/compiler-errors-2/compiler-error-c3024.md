@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3024
 ms.assetid: 1c031c28-ce37-4de3-aead-cfe76b261856
 ms.openlocfilehash: 46a7385f530742c19c9c586be7a932d0e054b7d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360084"
 ---
 # <a name="compiler-error-c3024"></a>Erreur du compilateur C3024
 
-'schedule(runtime)' : l'expression chunk_size n'est pas autorisée
+'schedule(runtime)' : l'expression chunk_size n'est pas autorisée
 
 Une valeur ne peut pas être passée au paramètre à l’exécution de la clause schedule.
 

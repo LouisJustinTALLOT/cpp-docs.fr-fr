@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::move [C++]
 - std::swap [C++]
 ms.openlocfilehash: 7a061ede19c5c4c181b5fea912b9c6212c583267
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362365"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt;, fonctions
 
@@ -39,7 +39,7 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*<br/>
+*val*<br/>
 Objet qui reçoit la valeur de new_val.
 
 *new_val*<br/>
@@ -100,7 +100,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 |Paramètre|Description|
 |---------------|-----------------|
 |*Type*|Le type de la valeur passée dans *Arg*, qui peut être différent du type de *Arg*. Généralement déterminé par un argument template de la fonction de transfert.|
-|*arg*|Argument sur lequel effectuer un cast.|
+|*Arg*|Argument sur lequel effectuer un cast.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -170,7 +170,7 @@ Type du premier élément de la paire.
 *T2*<br/>
 Type du deuxième élément de la paire.
 
-*demande de tirage*<br/>
+*pr*<br/>
 Paire dans laquelle opérer la sélection.
 
 ### <a name="remarks"></a>Notes
@@ -276,7 +276,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 |Paramètre|Description|
 |---------------|-----------------|
 |*Type*|Un type déduit du type de l’argument passé dans *Arg*, avec la référence de règles de réduction.|
-|*arg*|Argument sur lequel effectuer un cast. Bien que le type de *Arg* semble être spécifié comme une référence rvalue, `move` accepte également les arguments lvalue, car les références lvalue peuvent lier aux références rvalue.|
+|*Arg*|Argument sur lequel effectuer un cast. Bien que le type de *Arg* semble être spécifié comme une référence rvalue, `move` accepte également les arguments lvalue, car les références lvalue peuvent lier aux références rvalue.|
 
 ### <a name="return-value"></a>Valeur de retour
 

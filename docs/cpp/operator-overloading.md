@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
 ms.openlocfilehash: d6a294af3ea7ef6085eae0f7069ea2d1fdbb30e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377359"
 ---
 # <a name="operator-overloading"></a>Surcharge d’opérateur
 
@@ -24,7 +24,7 @@ Le **opérateur** mot clé déclare une fonction spécifiant la signification *s
 
 ## <a name="syntax"></a>Syntaxe
 
-> *type* **opérateur** *symbole d’opérateur* **(** *liste de paramètres* **)**
+> *type* **operator** *operator-symbol* **(** *parameter-list* **)**
 
 ## <a name="remarks"></a>Notes
 
@@ -66,7 +66,7 @@ Le nom d’un opérateur surchargé est **opérateur** *x*, où *x* est l’opé
 |**<<**|Décalage vers la gauche|Binaire|
 |**<<=**|Assignation de décalage vers la gauche|Binaire|
 |**<=**|Inférieur ou égal à|Binaire|
-|**=**|Assignation|Binaire|
+|**=**|Attribution|Binaire|
 |**==**|Égalité|Binaire|
 |**>**|Supérieur à|Binaire|
 |**>=**|Supérieur ou égal à|Binaire|
@@ -107,7 +107,7 @@ Les opérateurs indiqués dans le tableau suivant ne peuvent pas être surcharg�
 
 ### <a name="nonredefinable-operators"></a>Opérateurs non redéfinissables
 
-|Opérateur|Name|
+|Opérateur|Nom|
 |-|-|
 |**.**|Sélection de membres|
 |**.&#42;**|Sélection de pointeur de membre|

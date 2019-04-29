@@ -28,11 +28,11 @@ helpviewer_keywords:
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
 ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341092"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -67,9 +67,9 @@ Valeur à virgule flottante
 
 Le **cbrt** fonctions retournent la racine cubique de *x*.
 
-|Entrée|Exception SEH|**_matherr** exception|
+|Entrée|Exception SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|aucun|none|
+|± ∞, QNAN, IND|none|none|
 
 ## <a name="remarks"></a>Notes
 

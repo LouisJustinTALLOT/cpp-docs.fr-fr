@@ -269,11 +269,11 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
 ms.openlocfilehash: 06e08c24a92259e34be59a9f021ae13f38e974a5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351574"
 ---
 # <a name="norm4-class"></a>norm_4, classe
 
@@ -455,7 +455,7 @@ class norm_4;
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[taille (constante)](#norm_4__size)||
 
@@ -596,7 +596,7 @@ class norm_4;
 
 `norm_4`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp_short_vectors.h
 

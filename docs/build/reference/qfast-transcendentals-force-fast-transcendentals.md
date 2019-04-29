@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Force Fast Transcendentals
 ms.assetid: 4de24bd1-38e6-49d4-9a05-04c9937d24ac
 ms.openlocfilehash: 383a915721d627367ca2ca035957df947996bbe2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319315"
 ---
 # <a name="qfasttranscendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (Force Fast Transcendentals)
 
@@ -48,4 +48,4 @@ Cette option n’est pas compatible avec **/fp : strict**. Consultez [/fp (spé
 
 [/Q, options (Opérations de bas niveau)](q-options-low-level-operations.md)<br/>
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

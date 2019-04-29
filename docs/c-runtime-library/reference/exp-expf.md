@@ -1,5 +1,5 @@
 ---
-title: EXP, expf, expl
+title: exp, expf, expl
 ms.date: 04/05/2018
 apiname:
 - expf
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
 ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288186"
 ---
-# <a name="exp-expf-expl"></a>EXP, expf, expl
+# <a name="exp-expf-expl"></a>exp, expf, expl
 
 Calcule la valeur exponentielle.
 
@@ -72,7 +72,7 @@ Le **exp** fonctions retournent la valeur exponentielle du paramètre à virgule
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|+ Valeur NaN silencieuse, indéterminé|None|_DOMAIN|
+|+ Valeur NaN silencieuse, indéterminé|Aucun.|_DOMAIN|
 |+ Infini|INVALID|_DOMAIN|
 |x ≥ 7,097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7,083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
@@ -83,11 +83,11 @@ Le **exp** possède une implémentation qui utilise des Extensions Streaming SIM
 
 C++ autorisant la surcharge, vous pouvez appeler des surcharges de **exp** qui prennent un **float** ou **long double** argument. Dans un programme C, **exp** accepte et retourne toujours un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C requis|En-tête C++ requis|
 |--------------|---------------------|---|
-|**EXP**, **expf**, **expl**|\<math.h>|\<cmath> ou \<math.h>|
+|**exp**, **expf**, **expl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

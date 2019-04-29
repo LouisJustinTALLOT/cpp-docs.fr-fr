@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
 ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349899"
 ---
 # <a name="c-amp-overview"></a>Présentation de C++ AMP
 
@@ -102,7 +102,7 @@ void CppAmpMethod() {
 
 Les mêmes éléments de base sont présents, mais les constructions C++ AMP sont utilisées :
 
-- Données : Vous utilisez des tableaux C++ pour construire trois C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) objets. Vous fournissez quatre valeurs pour construire un `array_view` objet : les valeurs de données, le rang, le type d’élément et la longueur de la `array_view` objet dans chaque dimension. Le rang et le type sont passés en tant que paramètres de type. Les données et la longueur sont passées comme paramètres du constructeur. Dans cet exemple, le tableau C++ qui est passé au constructeur est unidimensionnel. Le rang et la longueur sont utilisés pour construire la forme rectangulaire des données dans le `array_view` objet et les valeurs sont utilisées pour remplir le tableau de données. La bibliothèque runtime inclut également le [array, classe](../../parallel/amp/reference/array-class.md), qui possède une interface qui ressemble à la `array_view` classe et est décrit plus loin dans cet article.
+- Données : Vous utilisez C++ tableaux pour construire trois C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) objets. Vous fournissez quatre valeurs pour construire un `array_view` objet : les valeurs de données, le rang, le type d’élément et la longueur de la `array_view` objet dans chaque dimension. Le rang et le type sont passés en tant que paramètres de type. Les données et la longueur sont passées comme paramètres du constructeur. Dans cet exemple, le tableau C++ qui est passé au constructeur est unidimensionnel. Le rang et la longueur sont utilisés pour construire la forme rectangulaire des données dans le `array_view` objet et les valeurs sont utilisées pour remplir le tableau de données. La bibliothèque runtime inclut également le [array, classe](../../parallel/amp/reference/array-class.md), qui possède une interface qui ressemble à la `array_view` classe et est décrit plus loin dans cet article.
 
 - Itération : Le [parallel_for_each, fonction (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) fournit un mécanisme pour itérer les éléments de données, ou *domaine de calcul*. Dans cet exemple, le domaine de calcul spécifié par `sum.extent`. Le code que vous souhaitez exécuter est contenu dans une expression lambda, ou *fonction noyau*. La `restrict(amp)` indique que seul le sous-ensemble du langage C++ que C++ AMP peut accélérer est utilisé.
 
@@ -469,7 +469,7 @@ C++ AMP inclut une bibliothèque de graphiques qui est conçue pour la programma
 
 ## <a name="universal-windows-platform-uwp-apps"></a>Applications de la plateforme Windows universelle (UWP)
 
-Comme les autres bibliothèques C++, vous pouvez utiliser C++ AMP dans vos applications UWP. Ces articles décrivent comment inclure du code C++ AMP dans les applications qui est créé à l’aide de C++, C#, Visual Basic ou JavaScript :
+Comme les autres bibliothèques C++, vous pouvez utiliser C++ AMP dans vos applications UWP. Ces articles décrivent comment inclure du code C++ AMP dans les applications qui est créé à l’aide de C++, c#, Visual Basic ou JavaScript :
 
 - [Utilisation de C++ AMP dans les applications UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
@@ -477,9 +477,9 @@ Comme les autres bibliothèques C++, vous pouvez utiliser C++ AMP dans vos appli
 
 - [Bing Maps Trip Optimizer, une application de la fenêtre Store en JavaScript et C++](http://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [Comment utiliser C++ AMP à partir de C# à l’aide de l’exécution de Windows](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [Comment utiliser C++ AMP à partir de c# à l’aide de l’exécution de Windows](http://go.microsoft.com/fwlink/p/?linkid=249080)
 
-- [Comment utiliser C++ AMP à partir de C#](http://go.microsoft.com/fwlink/p/?linkid=249081)
+- [Comment utiliser C++ AMP à partir de c#](http://go.microsoft.com/fwlink/p/?linkid=249081)
 
 - [Appel à des fonctions natives à partir de code managé](../../dotnet/calling-native-functions-from-managed-code.md)
 

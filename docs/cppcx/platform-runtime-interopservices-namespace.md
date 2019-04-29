@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Runtime::InteropServices Namespace
 ms.assetid: 546b981a-a360-4a78-b89f-fdf0df848747
 ms.openlocfilehash: c527c642228d97d8b185e3b97ff38304b09d5769
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330191"
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime::InteropServices (espace de noms)
 
@@ -30,7 +30,7 @@ namespace Platform {
 
 Bien que cet espace de noms est destiné à un usage interne, les navigateurs peuvent afficher les membres suivants de cet espace de noms.
 
-|Name|Note|
+|Nom|Note|
 |----------|------------|
 |ComInterfaceType|énumération|
 |InterfaceTypeAttribute||
@@ -43,7 +43,7 @@ Bien que cet espace de noms est destiné à un usage interne, les navigateurs pe
 
 `Platform`
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Métadonnées :** platform.winmd
 

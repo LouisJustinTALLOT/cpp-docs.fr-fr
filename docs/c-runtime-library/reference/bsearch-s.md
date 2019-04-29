@@ -24,11 +24,11 @@ helpviewer_keywords:
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
 ms.openlocfilehash: 56c5fa45a9d8f9ac9b22474601934d3994da55e4
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349249"
 ---
 # <a name="bsearchs"></a>bsearch_s
 
@@ -95,7 +95,7 @@ Le **bsearch_s** fonction effectue une recherche binaire dans un tableau trié d
 
 Le *contexte* pointeur peut être utile si la structure de données explorée fait partie d’un objet, et la fonction de comparaison doit accéder aux membres de l’objet. Le *comparer* fonction peut effectuer un cast du pointeur void vers l’objet approprié type et accéder aux membres de cet objet. L’ajout de la *contexte* paramètre rend **bsearch_s** plus sécurisée dans la mesure où un contexte supplémentaire peut être utilisé pour éviter les bogues de réentrance associés à l’utilisation de variables statiques et pour rendre les données accessibles à la *comparer* (fonction).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

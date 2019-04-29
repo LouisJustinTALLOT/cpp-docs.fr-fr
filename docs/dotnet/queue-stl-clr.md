@@ -64,11 +64,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
 ms.openlocfilehash: 2cf0467c2b4799c2009f866b7aa22be5e421f762
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384723"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -262,7 +262,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a> Queue::back_item (STL/CLR)
+## <a name="back_item"></a> queue::back_item (STL/CLR)
 
 Accède au dernier élément.
 
@@ -564,7 +564,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a> Queue::front_item (STL/CLR)
+## <a name="front_item"></a> queue::front_item (STL/CLR)
 
 Accède au premier élément.
 
@@ -737,7 +737,7 @@ a b c
 a b c
 ```
 
-## <a name="get_container"></a> Queue::get_container (STL/CLR)
+## <a name="get_container"></a> queue::get_container (STL/CLR)
 
 Accède au conteneur sous-jacent.
 
@@ -778,7 +778,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> Queue::operator = (STL/CLR)
+## <a name="op_as"></a> queue::operator= (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -939,7 +939,7 @@ explicit queue(container_type% wrapped);
 *right*<br/>
 Objet à copier.
 
-*encapsulé*<br/>
+*wrapped*<br/>
 Conteneur encapsulée à utiliser.
 
 ### <a name="remarks"></a>Notes
@@ -1166,7 +1166,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="to_array"></a> Queue::to_array (STL/CLR)
+## <a name="to_array"></a> queue::to_array (STL/CLR)
 
 Copie la séquence contrôlée vers un nouveau tableau.
 
@@ -1216,7 +1216,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a> Queue::Value_type (STL/CLR)
+## <a name="value_type"></a> queue::value_type (STL/CLR)
 
 Type d’un élément.
 

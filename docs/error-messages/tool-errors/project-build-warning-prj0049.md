@@ -5,11 +5,11 @@ helpviewer_keywords:
 - PRJ0049
 ms.assetid: 8b38afa1-e080-4efd-ae89-776cfd044413
 ms.openlocfilehash: 0252103757df1c5dc95c9691c6da1d3630d29772
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346715"
 ---
 # <a name="project-build-warning-prj0049"></a>Avertissement de génération de projet PRJ0049
 

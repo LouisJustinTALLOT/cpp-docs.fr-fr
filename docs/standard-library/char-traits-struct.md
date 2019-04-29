@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379439"
 ---
 # <a name="chartraits-struct"></a>char_traits, struct
 
@@ -255,7 +255,7 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Vers*<br/>
+*_To*<br/>
 Élément au début du tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
 *_From*<br/>
@@ -384,7 +384,7 @@ Caractère EOF.
 
 Une valeur qui représente la fin du fichier (par exemple, EOF ou WEOF).
 
-La norme C++ stipule que cette valeur ne doit pas correspondre à une valeur `char_type` valide. Le compilateur Visual C++ applique cette contrainte de type **char**, mais pas pour le type **wchar_t**. C'est ce qu'illustre l'exemple ci-dessous.
+La norme C++ stipule que cette valeur ne doit pas correspondre à une valeur `char_type` valide. L’élément visuel C++ compilateur applique cette contrainte de type **char**, mais pas pour le type **wchar_t**. C'est ce qu'illustre l'exemple ci-dessous.
 
 ### <a name="example"></a>Exemple
 
@@ -763,7 +763,7 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Vers*<br/>
+*_To*<br/>
 Élément au début du tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
 *_From*<br/>

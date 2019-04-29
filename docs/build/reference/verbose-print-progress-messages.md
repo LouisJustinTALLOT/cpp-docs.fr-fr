@@ -14,11 +14,11 @@ helpviewer_keywords:
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
 ms.openlocfilehash: 7aed1e17034b40ffdad4da4136fc5a64361b3d77
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317300"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (Imprimer les messages d'avancement)
 
@@ -56,5 +56,5 @@ L’éditeur de liens envoie des informations sur la progression de la session d
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

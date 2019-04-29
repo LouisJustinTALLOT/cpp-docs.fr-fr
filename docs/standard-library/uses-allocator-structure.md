@@ -5,11 +5,11 @@ f1_keywords:
 - future/std::uses_allocator
 ms.assetid: c418f002-62e9-4806-b70c-41c663cae583
 ms.openlocfilehash: 9046f27397ba04c601dd8af361d47cc0ea94926d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362489"
 ---
 # <a name="usesallocator-structure"></a>uses_allocator, structure
 

@@ -42,11 +42,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
 ms.openlocfilehash: 4d4bec339caccf9b0843afada4b56b435243dd11
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354945"
 ---
 # <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 
@@ -141,7 +141,7 @@ Il existe des versions de **sprintf_s** qui offrent un contrôle supplémentaire
 |**_stprintf_s**|**sprintf_s**|**sprintf_s**|**swprintf_s**|
 |**_stprintf_s_l**|**_sprintf_s_l**|**_sprintf_s_l**|**_swprintf_s_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

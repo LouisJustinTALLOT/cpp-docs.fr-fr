@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
 ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329918"
 ---
 # <a name="transaction-odbc"></a>Transaction (ODBC)
 
@@ -43,9 +43,9 @@ Dans les classes de base de données, vous effectuez des transactions via `CData
 
 Les rubriques suivantes fournissent plus d’informations sur la façon dont les transactions sont effectuées :
 
-- [Transaction : Exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
+- [Transaction : Exécution d’une transaction dans un recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
-- [Transaction : Répercussions des Transactions sur les mises à jour (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
+- [Transaction : Répercussions des transactions sur les mises à jour (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
 
 ## <a name="see-also"></a>Voir aussi
 

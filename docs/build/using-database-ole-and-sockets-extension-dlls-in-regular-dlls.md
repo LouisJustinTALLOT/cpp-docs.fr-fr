@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
 ms.openlocfilehash: d08822a04abe5a01883ad8aa1bd6d94269e810cc
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57807973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314687"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>À l’aide de la base de données, OLE et Sockets MFC DLL d’extension dans les DLL MFC normales
 

@@ -33,11 +33,11 @@ helpviewer_keywords:
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
 ms.openlocfilehash: 0d61746365a8ded8d68072b1f398a18ba6ce7605
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357666"
 ---
 # <a name="realloc"></a>realloc
 

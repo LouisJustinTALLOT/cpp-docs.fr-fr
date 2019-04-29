@@ -7,11 +7,11 @@ f1_keywords:
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
 ms.openlocfilehash: e36c3c2cfa9d1b617e377a7e340f98875457bdf1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352869"
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock, classe
 
@@ -42,7 +42,7 @@ class scoped_d3d_access_lock;
 
 `scoped_d3d_access_lock`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amprt.h
 

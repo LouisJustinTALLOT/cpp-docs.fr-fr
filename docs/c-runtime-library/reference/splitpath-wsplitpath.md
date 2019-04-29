@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
 ms.openlocfilehash: d079bd17912c0711a4e1fbadadf12430520f2c96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355001"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -68,7 +68,7 @@ void _wsplitpath(
 *path*<br/>
 Chemin complet.
 
-*Lecteur*<br/>
+*drive*<br/>
 Lecteur de lettre, suivie par un signe deux-points (**:**). Vous pouvez transmettre **NULL** pour ce paramètre si vous n’avez pas besoin de la lettre de lecteur.
 
 *dir*<br/>
@@ -77,7 +77,7 @@ Chemin de répertoire incluant une barre oblique de fin. Barres obliques ( **/**
 *fname*<br/>
 Nom de fichier de base (sans extension). Vous pouvez transmettre **NULL** pour ce paramètre si vous n’avez pas besoin du nom de fichier.
 
-*Ext*<br/>
+*ext*<br/>
 Extension de nom de fichier, y compris le point de début (**.**). Vous pouvez transmettre **NULL** pour ce paramètre si vous n’avez pas besoin de l’extension de nom de fichier.
 
 ## <a name="remarks"></a>Notes
@@ -98,7 +98,7 @@ Chaque mémoire tampon doit être aussi volumineuse que sa constante manifeste c
 
 Le tableau suivant répertorie les valeurs des constantes manifestes.
 
-|Name|Value|
+|Nom|Value|
 |----------|-----------|
 |**_MAX_DRIVE**|3|
 |**_MAX_DIR**|256|

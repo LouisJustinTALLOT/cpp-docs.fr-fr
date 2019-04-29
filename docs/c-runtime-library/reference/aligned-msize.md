@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
 ms.openlocfilehash: 97c739eed1f54f0c6705d37542eb13c6ec6879d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341923"
 ---
 # <a name="alignedmsize"></a>_aligned_msize
 
@@ -49,7 +49,7 @@ size_t _msize(
 *memblock*<br/>
 Pointeur désignant le bloc de mémoire.
 
-*Alignement*<br/>
+*alignment*<br/>
 Valeur d'alignement, qui doit être un entier à puissance 2.
 
 *offset*<br/>

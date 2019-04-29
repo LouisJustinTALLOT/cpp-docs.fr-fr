@@ -23,11 +23,11 @@ helpviewer_keywords:
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
 ms.openlocfilehash: 59aa535136cf32ea5dd68b8917ec969eee41e2ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347728"
 ---
 # <a name="calloc"></a>calloc
 
@@ -44,7 +44,7 @@ void *calloc(
 
 ### <a name="parameters"></a>Paramètres
 
-*Nombre*<br/>
+*number*<br/>
 Nombre d'éléments.
 
 *size*<br/>
@@ -72,7 +72,7 @@ Lorsque l’application est liée à une version debug des bibliothèques Runtim
 
 **calloc** est marquée `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction ne peut ne pas modifier les variables globales et que le pointeur retourné n’est pas un alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

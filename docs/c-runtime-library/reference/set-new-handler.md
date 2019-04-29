@@ -26,11 +26,11 @@ helpviewer_keywords:
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
 ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356496"
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 

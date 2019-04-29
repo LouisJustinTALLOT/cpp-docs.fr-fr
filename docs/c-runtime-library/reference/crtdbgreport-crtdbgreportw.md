@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
 ms.openlocfilehash: f12dafc62e302d90e5cffa04ee93e662b78295be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339479"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -96,7 +96,7 @@ Le [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) déboguer les macros appel **_Cr
 
 Le tableau suivant répertorie les options disponibles pour le mode de rapport ou les modes et les fichiers et le comportement résultant de **_CrtDbgReport** et **_CrtDbgReportW**. Ces options sont définies sous forme d’indicateurs binaires dans \<crtdbg.h>.
 
-|Mode de rapport|Fichier de rapport|**_CrtDbgReport**, **_CrtDbgReportW** comportement|
+|Mode de rapport|Fichier de rapport|**_CrtDbgReport**, **_CrtDbgReportW** behavior|
 |-----------------|-----------------|------------------------------------------------|
 |**_CRTDBG_MODE_DEBUG**|Non applicable|Écrit un message à l’aide de l’API Windows [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx).|
 |**_CRTDBG_MODE_WNDW**|Non applicable|Appelle l’API Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) pour créer une boîte de message et afficher le message avec des boutons **Abandonner**, **Réessayer** et **Ignorer**. Si un utilisateur clique sur **abandonner**, **_CrtDbgReport** ou **_CrtDbgReport** abandonne immédiatement l’opération. Si un utilisateur clique sur **Réessayer**, la valeur 1 est retournée. Si un utilisateur clique sur **ignorer**, l’exécution se poursuit et **_CrtDbgReport** et **_CrtDbgReportW** retournent 0. Notez que le fait de cliquer sur **Ignorer** alors qu’il existe une condition d’erreur entraîne souvent un « comportement indéfini ».|

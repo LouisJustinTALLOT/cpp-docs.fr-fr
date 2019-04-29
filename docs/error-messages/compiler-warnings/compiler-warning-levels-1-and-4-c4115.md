@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4115
 ms.assetid: f3f94e72-fc49-4d09-b3e7-23d68e61152f
 ms.openlocfilehash: 20e44eba3b6f6079e6f37b7cf33fa530a996e829
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360019"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4115"></a>Avertissement du compilateur (niveaux 1 et 4) C4115
 
-'type' : définition d’un type nommé dans les parenthèses
+'type' : définition d’un type nommé dans les parenthèses
 
 Le symbole donné est utilisé pour définir une structure, une union ou un type énuméré dans une expression entre parenthèses. La portée de la définition peut être inattendue.
 

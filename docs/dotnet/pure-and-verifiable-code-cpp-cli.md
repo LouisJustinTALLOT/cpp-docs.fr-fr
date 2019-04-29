@@ -18,11 +18,11 @@ helpviewer_keywords:
 - assemblies [C++], pure code
 ms.assetid: 9050e110-fa11-4356-b56c-665187ff871c
 ms.openlocfilehash: 66f3b5a33791d20297cde6e6223ba65189a99682
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384712"
 ---
 # <a name="pure-and-verifiable-code-ccli"></a>Code pur et vérifiable (C++ / c++ / CLI)
 

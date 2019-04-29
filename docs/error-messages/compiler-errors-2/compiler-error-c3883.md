@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3883
 ms.assetid: cdd1c1f4-f268-4469-9c62-d52303114b0c
 ms.openlocfilehash: 51ecf5fbc793c02a23e2aa02fb08e37ebe4b0ad0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347036"
 ---
 # <a name="compiler-error-c3883"></a>Erreur du compilateur C3883
 

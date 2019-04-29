@@ -31,11 +31,11 @@ helpviewer_keywords:
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
 ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335592"
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
 
@@ -72,13 +72,13 @@ L’arc sinus de *z*, en radians. Le résultat est illimité sur l’axe des ima
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **casin** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **casin** accepte et retourne toujours un **_Dcomplex** valeur.
+Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **casin** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **casin** accepte et retourne toujours un **_Dcomplex** valeur.
 
 ## <a name="requirements"></a>Configuration requise
 
-|Routine|En-tête C|En-tête C++|
+|Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**casin**, **casinf**, **casinl**|\<complex.h>|\<ccomplex>|
+|**casin**,               **casinf**, **casinl**|\<complex.h>|\<ccomplex>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

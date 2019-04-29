@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
 ms.openlocfilehash: 2096d39a8ba316fc76c97517a16e34231940e7f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335293"
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 
@@ -83,7 +83,7 @@ Le **_CrtSetReportMode** fonction assigne le nouveau mode de rapport spécifié 
 |**_CRTDBG_MODE_DEBUG**|Écrit le message dans la fenêtre de sortie du débogueur.|
 |**_CRTDBG_MODE_FILE**|Écrit le message dans un handle de fichier fourni par l’utilisateur. [_CrtSetReportFile](crtsetreportfile.md) doit être appelée pour définir le flux ou fichier spécifique à utiliser comme destination.|
 |**_CRTDBG_MODE_WNDW**|Crée une boîte de message pour afficher le message avec le [abandonner](abort.md), **de nouvelle tentative**, et **ignorer** boutons.|
-|**_CRTDBG_REPORT_MODE**|Retourne *reportMode* spécifié *reportType*:<br /><br /> 1 **_CRTDBG_MODE_FILE**<br /><br /> 2 **_CRTDBG_MODE_DEBUG**<br /><br /> 4 **_CRTDBG_MODE_WNDW**|
+|**_CRTDBG_REPORT_MODE**|Retourne *reportMode* spécifié *reportType*:<br /><br /> 1   **_CRTDBG_MODE_FILE**<br /><br /> 2   **_CRTDBG_MODE_DEBUG**<br /><br /> 4   **_CRTDBG_MODE_WNDW**|
 
 Chaque type de rapport peut être signalé à l’aide d’un, deux ou trois modes ou sans aucun mode. Ainsi, plusieurs destinations peuvent être définies pour un même type de rapport. Par exemple, le fragment de code suivant provoque des échecs d’assertion à envoyer vers les deux une fenêtre de message de débogage et en **stderr**:
 
@@ -102,7 +102,7 @@ En outre, vous pouvez contrôler séparément le(s) mode(s) de création de rapp
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-**Bibliothèques :** uniquement les versions de débogage des [fonctions de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliothèques :** Les versions Debug de [fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md) uniquement.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
 ms.openlocfilehash: 04489151cedf1a47aeebd883e76b8d26b51031ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337763"
 ---
 # <a name="badtarget-class"></a>bad_target, classe
 
@@ -43,7 +43,7 @@ Cette exception est généralement levée pour des raisons telles que d’une ci
 
 `bad_target`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 

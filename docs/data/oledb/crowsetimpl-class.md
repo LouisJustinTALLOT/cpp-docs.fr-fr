@@ -35,11 +35,11 @@ helpviewer_keywords:
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
 ms.openlocfilehash: 1fac3a74ca259fe3b680355fadc7f9bbd6e3cc13
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368706"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl, classe
 
@@ -134,7 +134,7 @@ HRESULT CRowsetBaseImpl::NameFromDBID(DBID* pDBID,
 *pDBID*<br/>
 [in] Un pointeur vers le `DBID` à partir duquel extraire une chaîne.
 
-*BSTR*<br/>
+*bstr*<br/>
 [in] Un [CComBSTR](../../atl/reference/ccombstr-class.md) référence pour placer une copie de la `DBID` chaîne.
 
 *bIndex*<br/>
@@ -190,7 +190,7 @@ static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,
 
 #### <a name="parameters"></a>Paramètres
 
-*PV*<br/>
+*pv*<br/>
 [in] Un pointeur vers l’utilisateur `CRowsetImpl` classe dérivée.
 
 *pcCols*<br/>

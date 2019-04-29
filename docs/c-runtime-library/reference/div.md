@@ -26,11 +26,11 @@ helpviewer_keywords:
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
 ms.openlocfilehash: 0ee1b3b6a5d7b15470ffe1e667b4077d1f9581e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339258"
 ---
 # <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
 
@@ -66,7 +66,7 @@ lldiv_t div(
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre*<br/>
+*numer*<br/>
 Numérateur.
 
 *denom*<br/>

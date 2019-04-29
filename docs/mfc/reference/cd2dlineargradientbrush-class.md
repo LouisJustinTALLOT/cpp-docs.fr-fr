@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
 ms.openlocfilehash: d86235893d1f238f4cba9c927fad17f29060e591
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348625"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush, classe
 
@@ -78,7 +78,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CD2DLinearGradientBrush::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|Les points de début et fin du dégradé.|
 |[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|Pointeur vers un ID2D1LinearGradientBrush.|
@@ -95,7 +95,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 `CD2DLinearGradientBrush`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrendertarget.h
 

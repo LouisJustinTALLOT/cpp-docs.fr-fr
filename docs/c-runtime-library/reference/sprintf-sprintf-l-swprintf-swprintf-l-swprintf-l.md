@@ -47,11 +47,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
 ms.openlocfilehash: f32b1622539e73ab04c19d6d46ffdbc58b9961d6
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354871"
 ---
 # <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
@@ -150,7 +150,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**_stprintf**|**sprintf**|**sprintf**|**_swprintf**|
 |**_stprintf_l**|**_sprintf_l**|**_sprintf_l**|**__swprintf_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

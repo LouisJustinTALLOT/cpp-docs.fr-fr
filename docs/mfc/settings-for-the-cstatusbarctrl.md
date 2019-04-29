@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CStatusBarCtrl class [MFC], settings
 ms.assetid: adeba0c3-17f3-435c-b140-a57845e9ce49
 ms.openlocfilehash: b41997fb9342a651260bc2196d212016dc0deb7e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307690"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Paramètres de l'objet CStatusBarCtrl
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - R6028
 ms.assetid: 81e99079-4388-4244-a4f7-4641c508871c
 ms.openlocfilehash: 4992641c2456f0322b5c52eb907b159904e4c9f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62380511"
 ---
 # <a name="c-runtime-error-r6028"></a>Erreur Runtime C R6028
 
@@ -32,4 +32,4 @@ impossible d'initialiser le tas
 
 Cette erreur se produit lorsque le système d'exploitation ne parvient pas à créer le pool de mémoire pour l'application ; plus particulièrement, CRT (C Runtime) a appelé la fonction Win32 `HeapCreate`, qui a retourné la valeur NULL, ce qui indique un échec.
 
-Si cette erreur se produit au démarrage de l'application, le système n'est peut-être pas en mesure de répondre aux requêtes de tas, en raison du chargement de pilotes défectueux. Consultez le site Web Windows Update ou le site Web du fabricant de votre matériel pour obtenir des pilotes mis à jour.
+Si cette erreur se produit au démarrage de l'application, le système n'est peut-être pas en mesure de répondre aux requêtes de tas, en raison du chargement de pilotes défectueux. Consultez le site web Windows Update ou le site web du fabricant de votre matériel pour obtenir des pilotes mis à jour.

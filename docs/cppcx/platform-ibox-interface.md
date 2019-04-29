@@ -7,11 +7,11 @@ f1_keywords:
 - VCCORLIB/Namespace not found::Platform::Value
 ms.assetid: 774df45d-f8a7-45a3-ae24-eecc3c681040
 ms.openlocfilehash: 24e70ad646e2673869b135e8cc7657910b9b499c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383293"
 ---
 # <a name="platformibox-interface"></a>Platform::IBox, interface
 
@@ -33,7 +33,7 @@ Type de la valeur boxed.
 
 L'interface `IBox<T>` est principalement utilisée en interne pour représenter les types de valeur Nullable, comme décrit dans [Classes et structs value (C++/CX)](../cppcx/value-classes-and-structs-c-cx.md). L'interface est aussi utilisée en interne pour effectuer un boxing des types valeur passés aux méthodes C++ qui prennent des paramètres de type `Object^`. Vous pouvez déclarer explicitement un paramètre d'entrée comme `IBox<SomeValueType>`. Pour obtenir un exemple, consultez [Boxing](../cppcx/boxing-c-cx.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 ### <a name="members"></a>Membres
 
@@ -70,4 +70,4 @@ Pour obtenir un exemple, consultez [Boxing](../cppcx/boxing-c-cx.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)
+[Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)

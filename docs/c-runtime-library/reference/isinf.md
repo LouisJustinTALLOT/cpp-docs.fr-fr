@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - isinf function
 ms.openlocfilehash: be99970a0c7b152ba213eabd59b53a7503cd3c54
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331608"
 ---
 # <a name="isinf"></a>isinf
 
@@ -43,7 +43,7 @@ Valeur à virgule flottante à tester.
 
 **isinf** est une macro lors de la compilation en tant que C et une fonction de modèle inline, lors de la compilation en C++.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis (C)|En-tête requis (C++)|
 |--------------|---------------------------|-------------------------------|

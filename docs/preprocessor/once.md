@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, once
 ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
 ms.openlocfilehash: 6061fe77960aa64e2dcb39db05897ef0e7fb5f2e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59039875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326338"
 ---
 # <a name="once"></a>once
 Spécifie que le fichier sera inclus (ouvert) une seule fois par le compilateur lors de la compilation d'un fichier de code source.

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
 ms.openlocfilehash: 802380bad59534e8402020142e394b3948032476
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377223"
 ---
 # <a name="overloading-unary-operators"></a>Surcharge des opérateurs unaires
 
@@ -24,7 +24,7 @@ Les opérateurs unaires qui peuvent être surchargés sont les suivants :
 
 1. `!` ([NOT logique](../cpp/logical-negation-operator-exclpt.md))
 
-1. `&` ([adresse](../cpp/address-of-operator-amp.md))
+1. `&` ([address-of](../cpp/address-of-operator-amp.md))
 
 1. `~` ([complément](../cpp/one-s-complement-operator-tilde.md))
 
@@ -46,13 +46,13 @@ Les opérateurs de conversion sont également traités dans une rubrique distinc
 
 Les règles suivantes s'appliquent à tous les autres opérateurs unaires. Pour déclarer une fonction d'opérateur unaire en tant que membre non statique, vous devez la déclarer comme suit :
 
-> *RET-type* **opérateur** *op* **()**
+> *ret-type* **operator** *op* **()**
 
 où *ret-type* est le type de retour et *op* est un des opérateurs répertoriés dans le tableau précédent.
 
 Pour déclarer une fonction d'opérateur unaire en tant que fonction globale, vous devez la déclarer comme suit :
 
-> *RET-type* **opérateur** *op* **(** *arg* **)**
+> *ret-type* **operator** *op* **(** *arg* **)**
 
 où *ret-type* et *op* sont celles décrites pour les fonctions d’opérateur de membre et le *arg* est un argument de type de classe à utiliser.
 

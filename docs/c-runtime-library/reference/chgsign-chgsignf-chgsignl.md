@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
 ms.openlocfilehash: dad60b1fec4d402d340eeb4c87028975ef09e3ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340239"
 ---
 # <a name="chgsign-chgsignf-chgsignl"></a>_chgsign, _chgsignf, _chgsignl
 
@@ -63,7 +63,7 @@ Valeur à virgule flottante à modifier.
 
 Le **_chgsign** fonctions retournent une valeur qui est égale à l’argument à virgule flottante *x*, mais avec son signe inversé. Aucun retour d'erreur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

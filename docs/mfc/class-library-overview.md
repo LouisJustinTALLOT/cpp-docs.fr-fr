@@ -11,11 +11,11 @@ helpviewer_keywords:
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
 ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62327312"
 ---
 # <a name="class-library-overview"></a>Vue d'ensemble de la bibliothèque de classes
 
@@ -23,7 +23,7 @@ Cette vue d’ensemble de classe et décrit les classes dans les MFC Microsoft F
 
 Les classes de la bibliothèque sont présentées ici dans les catégories suivantes :
 
-- [Classe racine : CObject](../mfc/root-class-cobject.md)
+- [Classe racine : CObject](../mfc/root-class-cobject.md)
 
 - [Classes d’architecture des applications MFC](../mfc/mfc-application-architecture-classes.md)
 

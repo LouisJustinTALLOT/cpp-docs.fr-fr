@@ -8,11 +8,11 @@ helpviewer_keywords:
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
 ms.openlocfilehash: a7b41a2cabc2cff2eca24cf50c6c30d5190d39a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385087"
 ---
 # <a name="abstract-classes-c"></a>Classes abstraites (C++)
 
@@ -43,7 +43,7 @@ Les classes abstraites ne peuvent pas être utilisées pour :
 
 - Variables ou données membres
 
-- Types d'arguments
+- Types d’arguments
 
 - Types de retour de fonction
 
@@ -53,7 +53,7 @@ Une autre restriction est que si le constructeur d'une classe abstraite appelle 
 
 Les fonctions virtuelles pures peuvent être définies pour les classes abstraites, mais elles peuvent être appelées directement en utilisant la syntaxe suivante :
 
-*nom de classe abstraite*::*nom de la fonction*)
+*abstract-class-name*::*function-name*()
 
 C’est utile lors de la création des hiérarchies de classes dont les classes de base incluent des destructeurs virtuels purs, car les destructeurs de classe de base sont toujours appelés dans le processus de destruction d’un objet. Prenons l'exemple suivant :
 

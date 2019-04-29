@@ -51,11 +51,11 @@ helpviewer_keywords:
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
 ms.openlocfilehash: dcb8e37090e4c15ba849e76ca1cb1cc646a7bcc0
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348183"
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 
@@ -86,11 +86,11 @@ Le tableau suivant répertorie les champs de bits pour **_crtDbgFlag** et décri
 
 |Champ de bits|Valeur|Description|
 |---------------|-------------|-----------------|
-|**_CRTDBG_ALLOC_MEM_DF**|ON|ON : Permet les allocations de tas de débogage et l’utilisation des identificateurs de type de bloc de mémoire, tel que **_CLIENT_BLOCK**. OFF : ajoute les nouvelles allocations à la liste liée du tas, mais affecte au type de bloc la valeur **_IGNORE_BLOCK**.<br /><br /> Peuvent aussi être combinés avec n'importe quelle macro de contrôle de fréquence sur le tas.|
-|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON : appelle [_CrtCheckMemory](crtcheckmemory.md) à chaque demande d’allocation et de désallocation. OFF : **_CrtCheckMemory** doit être appelé explicitement.<br /><br /> Les macros de contrôle de fréquence sur le tas n'ont aucun effet quand cet indicateur est défini.|
-|**_CRTDBG_CHECK_CRT_DF**|OFF|ON : Inclut **_CRT_BLOCK** opérations sur les types dans l’état de détection et de la mémoire de fuite différences. OFF : la mémoire utilisée en interne par la bibliothèque Runtime est ignorée par ces opérations.<br /><br /> Peuvent aussi être combinés avec n'importe quelle macro de contrôle de fréquence sur le tas.|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON : conserve les blocs de mémoire libérés dans la liste liée du tas, leur assigne le type **_FREE_BLOCK** et les remplit avec la valeur d’octet 0xDD. OFF : ne conserve pas les blocs libérés dans la liste liée du tas.<br /><br /> Peuvent aussi être combinés avec n'importe quelle macro de contrôle de fréquence sur le tas.|
-|**_CRTDBG_LEAK_CHECK_DF**|OFF|ON : exécute la recherche automatique de fuites à la sortie du programme via un appel à [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) et génère un rapport d’erreurs si l’application n’a pas pu libérer toute la mémoire qu’elle avait allouée. OFF : n'exécute pas automatiquement la recherche de fuites à la sortie du programme.<br /><br /> Peuvent aussi être combinés avec n'importe quelle macro de contrôle de fréquence sur le tas.|
+|**_CRTDBG_ALLOC_MEM_DF**|ON|ON : Activer les allocations de tas de débogage et l’utilisation des identificateurs de type de bloc de mémoire, tel que **_CLIENT_BLOCK**. DÉSACTIVÉ : Ajoute les nouvelles allocations à la liste liée du tas, mais définissez type de bloc **_IGNORE_BLOCK**.<br /><br /> Peuvent aussi être combinés avec n'importe quelle macro de contrôle de fréquence sur le tas.|
+|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON : Appelez [_CrtCheckMemory](crtcheckmemory.md) à chaque demande d’allocation et désallocation. OFF : **_CrtCheckMemory** doit être appelé explicitement.<br /><br /> Les macros de contrôle de fréquence sur le tas n'ont aucun effet quand cet indicateur est défini.|
+|**_CRTDBG_CHECK_CRT_DF**|OFF|ON : Inclure **_CRT_BLOCK** opérations sur les types dans l’état de détection et de la mémoire de fuite différences. DÉSACTIVÉ : Mémoire utilisée en interne par la bibliothèque Runtime est ignorée par ces opérations.<br /><br /> Peuvent aussi être combinés avec n'importe quelle macro de contrôle de fréquence sur le tas.|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON : Conserver les blocs de mémoire libérés dans la liste liée du tas, leur assigne le **_FREE_BLOCK** tapez et les remplit avec la valeur d’octet 0xDD. DÉSACTIVÉ : Ne pas conserver les blocs libérés dans la liste liée du tas.<br /><br /> Peuvent aussi être combinés avec n'importe quelle macro de contrôle de fréquence sur le tas.|
+|**_CRTDBG_LEAK_CHECK_DF**|OFF|ON : Effectuer la recherche automatique de fuites à la sortie du programme via un appel à [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) et générer un rapport d’erreurs si l’application a échoué à libérer toute la mémoire, il est alloué. DÉSACTIVÉ : N’effectuez pas automatiquement la recherche de fuites à la sortie du programme.<br /><br /> Peuvent aussi être combinés avec n'importe quelle macro de contrôle de fréquence sur le tas.|
 
 **Macros de contrôle de fréquence sur le tas**
 

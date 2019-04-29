@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 01c8b79f596c2fda8cef0a74a7b5dcdc70786dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362736"
 ---
 # <a name="unorderedset-class"></a>unordered_set, classe
 
@@ -175,7 +175,7 @@ class unordered_set;
 |[const_pointer](#const_pointer)|Type d'un pointeur constant vers un élément.|
 |[const_reference](#const_reference)|Type d'une référence constante à un élément.|
 |[difference_type](#difference_type)|Type d'une distance signée entre deux éléments.|
-|[hacheur de](#hasher)|Type de la fonction de hachage.|
+|[hasher](#hasher)|Type de la fonction de hachage.|
 |[iterator](#iterator)|Type d'un itérateur pour la séquence contrôlée.|
 |[key_equal](#key_equal)|Type de la fonction de comparaison.|
 |[key_type](#key_type)|Type d'une clé de tri.|
@@ -188,7 +188,7 @@ class unordered_set;
 |Fonction membre|Description|
 |-|-|
 |[begin](#begin)|Désigne le début de la séquence contrôlée.|
-|[compartiment](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|
+|[bucket](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|
 |[bucket_count](#bucket_count)|Obtient le nombre de compartiments.|
 |[bucket_size](#bucket_size)|Obtient la taille d'un compartiment.|
 |[cbegin](#cbegin)|Désigne le début de la séquence contrôlée.|
@@ -363,7 +363,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*<br/>
+*keyval*<br/>
 Valeur de clé à mapper.
 
 ### <a name="remarks"></a>Notes
@@ -855,7 +855,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*<br/>
+*keyval*<br/>
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -1165,7 +1165,7 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*<br/>
+*keyval*<br/>
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -1236,10 +1236,10 @@ size_type erase(const key_type& Key);
 *Where*<br/>
 Position de l’élément à supprimer.
 
-*Premier*<br/>
+*First*<br/>
 Position du premier élément à supprimer.
 
-*Dernière*<br/>
+*Last*<br/>
 Position juste après le dernier élément à supprimer.
 
 *Key*<br/>
@@ -1265,7 +1265,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*<br/>
+*keyval*<br/>
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -1462,8 +1462,8 @@ void insert(initializer_list<value_type> IList);
 |*Val*|Valeur d'un élément à insérer dans la classe unordered_set sauf si elle contient déjà un élément dont la clé est classée de manière équivalente.|
 |*Where*|Emplacement où commencer à rechercher le point d'insertion correct.|
 |*ValTy*|Paramètre de modèle qui spécifie le type d’argument que la classe unordered_set peut utiliser pour construire un élément de[value_type](../standard-library/map-class.md#value_type)et effectue un transfert parfait *Val* en tant qu’argument.|
-|*Premier*|Position du premier élément à copier.|
-|*Dernière*|Position juste au-delà du dernier élément à copier.|
+|*First*|Position du premier élément à copier.|
+|*Last*|Position juste au-delà du dernier élément à copier.|
 |*InputIterator*|Argument de fonction avec modèle qui remplit les conditions requises par un [itérateur d’entrée](../standard-library/input-iterator-tag-struct.md) qui pointe sur des éléments d’un type pouvant servir à construire des objets [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|Objet [initializer_list](../standard-library/initializer-list.md) à partir duquel copier les éléments.|
 
@@ -2428,7 +2428,7 @@ unordered_set(
 |-|-|
 |*InputIterator*|Type d'itérateur.|
 |*Al*|Objet allocateur à stocker.|
-|*Comp.*|Objet de fonction de comparaison à stocker.|
+|*Comp*|Objet de fonction de comparaison à stocker.|
 |*hachage*|Objet de fonction de hachage à stocker.|
 |*bucket_count*|Nombre minimal de compartiments.|
 |*Droite*|Conteneur à copier.|

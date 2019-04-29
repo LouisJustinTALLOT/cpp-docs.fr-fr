@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
 ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358047"
 ---
 # <a name="putw"></a>_putw
 
@@ -50,7 +50,7 @@ int _putw(
 *binint*<br/>
 Entier binaire à sortir.
 
-*flux de données*<br/>
+*stream*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour

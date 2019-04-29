@@ -12,11 +12,11 @@ helpviewer_keywords:
 - page footers [MFC]
 ms.assetid: b0be9c53-5773-4955-a777-3c15da745128
 ms.openlocfilehash: 1e2e57331ccbc7f0afd7b82dc035410af495abd8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297227"
 ---
 # <a name="headers-and-footers"></a>En-têtes et pieds de page
 

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2075
 ms.assetid: 8b1865d2-540b-4117-b982-e7a58a0b6cf7
 ms.openlocfilehash: d53ef6f34b061a04f2c136b4e349d4951529b94b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62303175"
 ---
 # <a name="compiler-error-c2075"></a>Erreur du compilateur C2075
 
-'identificateur' : l’initialisation d’un tableau nécessite des accolades
+'identificateur' : l’initialisation d’un tableau nécessite des accolades
 
 Il n’y a aucune accolade autour de l’initialiseur de tableau spécifié.
 
