@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
 ms.openlocfilehash: a03a6100c372e059bd9ef2ddde0558da307923dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385022"
 ---
 # <a name="address-of-operator-amp"></a>Opérateur address-of : &amp;
 
@@ -27,7 +27,7 @@ ms.locfileid: "50519117"
 
 L’opérateur unaire address-of (**&**) prend l’adresse de son opérande. L’opérande de l’opérateur address-of peut être un désignateur de fonction ou une l-value qui désigne un objet qui n’est pas un champ de bits.
 
-L’opérateur d’adresse peut être appliqué uniquement aux variables dotées de types fondamentaux, structure, classe ou union qui sont déclarées au niveau de la portée du fichier, ou aux références indicées de tableau. Dans ces expressions, une expression constante qui n'inclut pas l'opérateur d'adresse peut être ajoutée ou soustraite dans l'expression d'adresse.
+L'opérateur d'adresse peut être appliqué uniquement aux variables dotées de types fondamentaux, de structure, de classe ou d'union qui sont déclarées au niveau de la portée du fichier, ou aux références indicées de tableau. Dans ces expressions, une expression constante qui n'inclut pas l'opérateur d'adresse peut être ajoutée ou soustraite dans l'expression d'adresse.
 
 Lorsqu’il est appliqué à des fonctions ou des l-values, le résultat de l’expression est un type pointeur (une r-value) dérivé du type de l’opérande. Par exemple, si l’opérande est de type **char**, le résultat de l’expression est de type pointeur vers **char**. L’opérateur d’adresse, appliqué à **const** ou **volatile** objets, la valeur de `const type *` ou `volatile type *`, où **type** est le type de l’original objet.
 

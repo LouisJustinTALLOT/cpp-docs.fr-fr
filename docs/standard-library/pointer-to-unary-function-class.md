@@ -8,11 +8,11 @@ helpviewer_keywords:
 - pointer_to_unary_function class
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
 ms.openlocfilehash: 710453711e60f4607a20eb3e71b65127c8dd5316
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370266"
 ---
 # <a name="pointertounaryfunction-class"></a>pointer_to_unary_function, classe
 
@@ -51,7 +51,7 @@ Un pointeur de fonction unaire est un objet de fonction. Il peut être passé à
 
 Le constructeur de `pointer_to_unary_function` est rarement utilisé directement. Consultez la fonction d’assistance [ptr_fun](../standard-library/functional-functions.md#ptr_fun) pour obtenir un exemple montrant comment déclarer et utiliser le prédicat de l’adaptateur `pointer_to_unary_function`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

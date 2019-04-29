@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: fdc3705980ac8f763e0438f19920148437e7ed27
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377502"
 ---
 # <a name="array-class-c-standard-library"></a>array, classe (Bibliothèque C++ standard)
 
@@ -162,7 +162,7 @@ class array;
 |Opérateur|Description|
 |-|-|
 |[array::operator=](#op_eq)|Remplace la séquence contrôlée.|
-|[Array::operator\[\]](#op_at)|Accède à un élément à une position spécifiée.|
+|[array::operator\[\]](#op_at)|Accède à un élément à une position spécifiée.|
 
 ## <a name="remarks"></a>Notes
 
@@ -174,7 +174,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 crée l'objet `ai` qui contient quatre valeurs entières, initialise les trois premiers éléments respectivement aux valeurs 1, 2 et 3, et initialise le quatrième élément à la valeur 0.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<array>
 
@@ -247,7 +247,7 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*<br/>
+*val*<br/>
 Valeur à attribuer.
 
 ### <a name="remarks"></a>Notes
@@ -303,7 +303,7 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Hors tension*<br/>
+*off*<br/>
 Position de l'élément auquel accéder.
 
 ### <a name="remarks"></a>Notes
@@ -963,7 +963,7 @@ void fill(const Type& val);
 
 |Paramètre|Description|
 |-|-|
-|*Val*|Valeur de l'élément inséré dans le tableau.|
+|*val*|Valeur de l'élément inséré dans le tableau.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1149,7 +1149,7 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Hors tension*<br/>
+*off*<br/>
 Position de l'élément auquel accéder.
 
 ### <a name="remarks"></a>Notes

@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
 ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370448"
 ---
 # <a name="path-class"></a>path, classe
 
@@ -66,18 +66,18 @@ class path;
 |[has_root_path](#has_root_path)|Retourne `!root_path().empty()`.|
 |[has_stem](#has_stem)|Retourne `!stem().empty()`.|
 |[is_absolute](#is_absolute)|Pour Windows, la fonction retourne `has_root_name() && has_root_directory()`. Pour Posix, la fonction retourne `has_root_directory()`.|
-|[is_relative.](#is_relative)|Retourne `!is_absolute()`.|
+|[is_relative](#is_relative)|Retourne `!is_absolute()`.|
 |[make_preferred](#make_preferred)|Convertit chaque séparateur en un preferred_separator selon les besoins.|
 |[native](#native)|Retourne `myname`.|
 |[parent_path](#parent_path)|Retourne le parent de composant de chemin d’accès de `myname`.|
 |[preferred_separator](#preferred_separator)|L’objet de constante donne le caractère préféré pour la séparation des composants du chemin, en fonction du système d’exploitation hôte. |
-|[RELATIVE_PATH](#relative_path)|Retourne le composant de chemin d’accès relatif de `myname`. |
+|[relative_path](#relative_path)|Retourne le composant de chemin d’accès relatif de `myname`. |
 |[remove_filename](#remove_filename)|Supprime le nom de fichier.|
 |[replace_extension](#replace_extension)|Remplace l’extension de `myname`. |
 |[replace_filename](#replace_filename)|RReplaces le nom de fichier.|
 |[root_directory](#root_directory)|Retourne le composant du répertoire racine de `myname`. |
 |[root_name](#root_name)|Retourne le composant de nom racine de `myname`. |
-|[chemin_racine](#root_path)|Retourne le composant de chemin d’accès racine de `myname`.|
+|[root_path](#root_path)|Retourne le composant de chemin d’accès racine de `myname`.|
 |[stem](#stem)|Retourne le `stem` composant de `myname`.|
 |[string](#string)|Convertit la séquence stockée dans `mypath`.|
 |[swap](#swap)|Exécute `swap(mypath, right.mypath)`.|
@@ -102,7 +102,7 @@ class path;
 
 **Espace de noms :** std::experimental::filesystem
 
-## <a name="append"></a> Path::Append
+## <a name="append"></a> path::append
 
 Ajoute la séquence spécifiée à `mypath`, converti et insérant un `preferred_separator` en fonction des besoins.
 
@@ -125,7 +125,7 @@ Début de la séquence spécifiée.
 *last*<br/>
 Fin de la séquence spécifiée.
 
-## <a name="assign"></a> Path::Assign
+## <a name="assign"></a> path::assign
 
 Remplace `mypath` avec la séquence spécifiée, convertie en fonction des besoins.
 
@@ -148,7 +148,7 @@ Début de la séquence spécifiée.
 *last*<br/>
 Fin de la séquence spécifiée.
 
-## <a name="begin"></a> Path::BEGIN
+## <a name="begin"></a> path::begin
 
 Retourne un `path::iterator` désignant le premier élément de chemin d’accès dans le chemin d’accès, le cas échéant.
 
@@ -156,7 +156,7 @@ Retourne un `path::iterator` désignant le premier élément de chemin d’accè
 iterator begin() const;
 ```
 
-## <a name="c_str"></a> Path::c_str
+## <a name="c_str"></a> path::c_str
 
 Retourne un pointeur vers le premier caractère dans `mypath`.
 
@@ -164,7 +164,7 @@ Retourne un pointeur vers le premier caractère dans `mypath`.
 const value_type& *c_str() const noexcept;
 ```
 
-## <a name="clear"></a> Path::Clear
+## <a name="clear"></a> path::clear
 
 Exécute `mypath.clear()`.
 
@@ -172,7 +172,7 @@ Exécute `mypath.clear()`.
 void clear() noexcept;
 ```
 
-## <a name="compare"></a> Path::compare
+## <a name="compare"></a> path::compare
 
 La première fonction retourne `mypath.compare(pval.native())`. La deuxième fonction retourne `mypath.compare(str)`. La troisième fonction retourne `mypath.compare(ptr)`.
 
@@ -184,7 +184,7 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*PVal*<br/>
+*pval*<br/>
 Chemin d’accès à comparer.
 
 *str*<br/>
@@ -193,7 +193,7 @@ Chaîne à comparer.
 *ptr*<br/>
 Pointeur à comparer.
 
-## <a name="concat"></a> Path::concat
+## <a name="concat"></a> path::concat
 
 Ajoute la séquence spécifiée à `mypath`, converti (mais ne pas en insérant un séparateur) en fonction des besoins.
 
@@ -216,7 +216,7 @@ Début de la séquence spécifiée.
 *last*<br/>
 Fin de la séquence spécifiée.
 
-## <a name="const_iterator"></a> Path::const_iterator
+## <a name="const_iterator"></a> path::const_iterator
 
 Synonyme de `iterator`.
 
@@ -224,7 +224,7 @@ Synonyme de `iterator`.
 typedef iterator const_iterator;
 ```
 
-## <a name="empty"></a> Path::Empty
+## <a name="empty"></a> path::empty
 
 Retourne `mypath.empty()`.
 
@@ -232,7 +232,7 @@ Retourne `mypath.empty()`.
 bool empty() const noexcept;
 ```
 
-## <a name="end"></a> Path::end
+## <a name="end"></a> path::end
 
 Retourne un itérateur de fin de séquence de type `iterator`.
 
@@ -240,7 +240,7 @@ Retourne un itérateur de fin de séquence de type `iterator`.
 iterator end() const;
 ```
 
-## <a name="extension"></a> Path::extension
+## <a name="extension"></a> path::extension
 
 Retourne le suffixe de `filename()`.
 
@@ -256,7 +256,7 @@ Si `X == path(".") || X == path("..")` ou si `X` ne contient aucun point, le suf
 
 Dans le cas contraire, le suffixe commence par (et inclut) le point le plus à droite.
 
-## <a name="filename"></a> Path::filename
+## <a name="filename"></a> path::filename
 
 Retourne le composant du répertoire racine de myname, spécifiquement `empty() path() : *--end()`. Le composant peut être vide.
 
@@ -264,7 +264,7 @@ Retourne le composant du répertoire racine de myname, spécifiquement `empty() 
 path filename() const;
 ```
 
-## <a name="generic_string"></a> Path::generic_string
+## <a name="generic_string"></a> path::generic_string
 
 Retourne `this->string<Elem, Traits, Alloc>(al)` avec (sous Windows) les barres obliques inverses converties en barres obliques.
 
@@ -278,7 +278,7 @@ template <class Elem,
 string generic_string() const;
 ```
 
-## <a name="generic_u16string"></a> Path::generic_u16string
+## <a name="generic_u16string"></a> path::generic_u16string
 
 Retourne `u16string()` avec (sous Windows) les barres obliques inverses converties en barres obliques.
 
@@ -286,7 +286,7 @@ Retourne `u16string()` avec (sous Windows) les barres obliques inverses converti
 u16string generic_u16string() const;
 ```
 
-## <a name="generic_u32string"></a> Path::generic_u32string
+## <a name="generic_u32string"></a> path::generic_u32string
 
 Retourne `u32string()` avec (sous Windows) les barres obliques inverses converties en barres obliques.
 
@@ -294,7 +294,7 @@ Retourne `u32string()` avec (sous Windows) les barres obliques inverses converti
 u32string generic_u32string() const;
 ```
 
-## <a name="generic_u8string"></a> Path::generic_u8string
+## <a name="generic_u8string"></a> path::generic_u8string
 
 Retourne `u8string()` avec (sous Windows) les barres obliques inverses converties en barres obliques.
 
@@ -302,7 +302,7 @@ Retourne `u8string()` avec (sous Windows) les barres obliques inverses convertie
 string generic_u8string() const;
 ```
 
-## <a name="generic_wstring"></a> Path::generic_wstring
+## <a name="generic_wstring"></a> path::generic_wstring
 
 Retourne `wstring()` avec (sous Windows) les barres obliques inverses converties en barres obliques.
 
@@ -310,7 +310,7 @@ Retourne `wstring()` avec (sous Windows) les barres obliques inverses converties
 wstring generic_wstring() const;
 ```
 
-## <a name="has_extension"></a> Path::has_extension
+## <a name="has_extension"></a> path::has_extension
 
 Retourne `!extension().empty()`.
 
@@ -318,7 +318,7 @@ Retourne `!extension().empty()`.
 bool has_extension() const;
 ```
 
-## <a name="has_filename"></a> Path::has_filename
+## <a name="has_filename"></a> path::has_filename
 
 Retourne `!filename().empty()`.
 
@@ -326,7 +326,7 @@ Retourne `!filename().empty()`.
 bool has_filename() const;
 ```
 
-## <a name="has_parent_path"></a> Path::has_parent_path
+## <a name="has_parent_path"></a> path::has_parent_path
 
 Retourne `!parent_path().empty()`.
 
@@ -334,7 +334,7 @@ Retourne `!parent_path().empty()`.
 bool has_parent_path() const;
 ```
 
-## <a name="has_relative_path"></a> Path::has_relative_path
+## <a name="has_relative_path"></a> path::has_relative_path
 
 Retourne `!relative_path().empty()`.
 
@@ -342,7 +342,7 @@ Retourne `!relative_path().empty()`.
 bool has_relative_path() const;
 ```
 
-## <a name="has_root_directory"></a> Path::has_root_directory
+## <a name="has_root_directory"></a> path::has_root_directory
 
 Retourne `!root_directory().empty()`.
 
@@ -350,7 +350,7 @@ Retourne `!root_directory().empty()`.
 bool has_root_directory() const;
 ```
 
-## <a name="has_root_name"></a> Path::has_root_name
+## <a name="has_root_name"></a> path::has_root_name
 
 Retourne `!root_name().empty()`.
 
@@ -358,7 +358,7 @@ Retourne `!root_name().empty()`.
 bool has_root_name() const;
 ```
 
-## <a name="has_root_path"></a> Path::has_root_path
+## <a name="has_root_path"></a> path::has_root_path
 
 Retourne `!root_path().empty()`.
 
@@ -366,7 +366,7 @@ Retourne `!root_path().empty()`.
 bool has_root_path() const;
 ```
 
-## <a name="has_stem"></a> Path::has_stem
+## <a name="has_stem"></a> path::has_stem
 
 Retourne `!stem().empty()`.
 
@@ -374,7 +374,7 @@ Retourne `!stem().empty()`.
 bool has_stem() const;
 ```
 
-## <a name="is_absolute"></a> Path::is_absolute
+## <a name="is_absolute"></a> path::is_absolute
 
 Pour Windows, la fonction retourne `has_root_name() && has_root_directory()`. Pour Posix, la fonction retourne `has_root_directory()`.
 
@@ -382,7 +382,7 @@ Pour Windows, la fonction retourne `has_root_name() && has_root_directory()`. Po
 bool is_absolute() const;
 ```
 
-## <a name="is_relative"></a> Path::is_relative
+## <a name="is_relative"></a> path::is_relative
 
 Retourne `!is_absolute()`.
 
@@ -390,7 +390,7 @@ Retourne `!is_absolute()`.
 bool is_relative() const;
 ```
 
-## <a name="iterator"></a> Path::iterator
+## <a name="iterator"></a> path::iterator
 
 Un itérateur de constante bidirectionnel qui désigne les composants de chemin d’accès de `myname`.
 
@@ -431,7 +431,7 @@ Pour `pval` un objet de type `path`:
 
 1. Modification `myname` invalide tous les itérateurs désignant des éléments dans `myname`.
 
-## <a name="make_preferred"></a> Path::make_preferred
+## <a name="make_preferred"></a> path::make_preferred
 
 Convertit chaque séparateur à un `preferred_separator` en fonction des besoins.
 
@@ -439,7 +439,7 @@ Convertit chaque séparateur à un `preferred_separator` en fonction des besoins
 path& make_preferred();
 ```
 
-## <a name="native"></a> Path::native
+## <a name="native"></a> path::native
 
 Retourne `myname`.
 
@@ -447,7 +447,7 @@ Retourne `myname`.
 const string_type& native() const noexcept;
 ```
 
-## <a name="op_as"></a> Path::operator =
+## <a name="op_as"></a> path::operator=
 
 Remplace les éléments du chemin d’accès avec une copie d’un autre chemin d’accès.
 
@@ -471,7 +471,7 @@ Le chemin d’accès source.
 
 Les copies d’opérateur membre premier `right.myname` à `myname`. Déplace le deuxième opérateur membre `right.myname` à `myname`. Le troisième opérateur membre comporte comme `*this = path(source)`.
 
-## <a name="op_add"></a> Path::operator +=
+## <a name="op_add"></a> path::operator+=
 
 Divers `concat` expressions.
 
@@ -499,7 +499,7 @@ La chaîne ajoutée.
 *ptr*<br/>
 Le pointeur ajouté.
 
-*Elem*<br/>
+*elem*<br/>
 L’ajout `value_type` ou `Elem`.
 
 *source*<br/>
@@ -521,7 +521,7 @@ Les fonctions membres se comportent comme les expressions correspondantes suivan
 
 1. `concat(path(basic_string<Elem>(1, elem)));`
 
-## <a name="op_divide"></a> Path::operator / =
+## <a name="op_divide"></a> path::operator/=
 
 Divers `append` expressions.
 
@@ -556,7 +556,7 @@ Retourne `myname`.
 operator string_type() const;
 ```
 
-## <a name="parent_path"></a> Path::parent_path
+## <a name="parent_path"></a> path::parent_path
 
 Retourne le parent de composant de chemin d’accès de `myname`.
 
@@ -568,7 +568,7 @@ path parent_path() const;
 
 Retourne le parent de composant de chemin d’accès de `myname`, spécifiquement le préfixe de `myname` après la suppression `filename().native()` et des séparateurs de répertoire immédiatement précédents. (De même, si `begin() != end()`, il correspond à la combinaison de tous les éléments dans la plage `[begin(), --end())` en appliquant successivement `operator/=`.) Le composant peut être vide.
 
-## <a name="path"></a> Path::path
+## <a name="path"></a> path::path
 
 Construit un `path` de différentes manières.
 
@@ -599,7 +599,7 @@ Le chemin d’accès sur lequel le chemin d’accès construit doit être une co
 *source*<br/>
 La source sur lequel le chemin d’accès construit doit être une copie.
 
-*Loc*<br/>
+*loc*<br/>
 Les paramètres régionaux spécifiés.
 
 *first*<br/>
@@ -626,7 +626,7 @@ Pour `template<class InIt> path(InIt first, InIt last)` doivent impérativement 
 
 Pour `template<class InIt> path(InIt first, InIt last, const locale& loc)` doivent impérativement `myname(first, last)`, obtenant toutes facettes codecvt nécessaires de `loc`.
 
-## <a name="preferred_separator"></a> Path::preferred_separator
+## <a name="preferred_separator"></a> path::preferred_separator
 
 L’objet de constante donne le caractère préféré pour la séparation des composants du chemin, en fonction du système d’exploitation hôte.
 
@@ -642,7 +642,7 @@ static constexpr value_type preferred_separator == '/';
 
 Notez qu’il est également possible dans la plupart des contextes sous Windows d’utiliser à la place L'/'.
 
-## <a name="relative_path"></a> Path::RELATIVE_PATH
+## <a name="relative_path"></a> path::relative_path
 
 Retourne le composant de chemin d’accès relatif de `myname`.
 
@@ -654,7 +654,7 @@ path relative_path() const;
 
 Retourne le composant de chemin d’accès relatif de `myname`, spécifiquement le suffixe de `myname` après la suppression `root_path().native()` et des séparateurs de répertoire redondants immédiatement suivants. Le composant peut être vide.
 
-## <a name="remove_filename"></a> Path::remove_filename
+## <a name="remove_filename"></a> path::remove_filename
 
 Supprime le nom de fichier.
 
@@ -662,7 +662,7 @@ Supprime le nom de fichier.
 path& remove_filename();
 ```
 
-## <a name="replace_extension"></a> Path::replace_extension
+## <a name="replace_extension"></a> path::replace_extension
 
 Remplace l’extension de `myname`.
 
@@ -679,7 +679,7 @@ La nouvelle extension.
 
 Supprime d’abord le suffixe `extension().native()` de `myname`. Ensuite si `!newext.empty() && newext[0] != dot` (où `dot` est `*path(".").c_str()`), puis `dot` est ajouté à `myname`. Puis *newext* est ajouté à `myname`.
 
-## <a name="replace_filename"></a> Path::replace_filename
+## <a name="replace_filename"></a> path::replace_filename
 
 Remplace le nom de fichier.
 
@@ -689,7 +689,7 @@ path& replace_filename(const path& pval);
 
 ### <a name="parameters"></a>Paramètres
 
-*PVal*<br/>
+*pval*<br/>
 Le chemin d’accès du nom de fichier.
 
 ### <a name="remarks"></a>Notes
@@ -703,7 +703,7 @@ remove_filename();
 return (*this);
 ```
 
-## <a name="root_directory"></a> Path::root_directory
+## <a name="root_directory"></a> path::root_directory
 
 Retourne le composant du répertoire racine de `myname`.
 
@@ -715,7 +715,7 @@ path root_directory() const;
 
 Le composant peut être vide.
 
-## <a name="root_name"></a> Path::root_name
+## <a name="root_name"></a> path::root_name
 
 Retourne le composant de nom racine de `myname`.
 
@@ -727,7 +727,7 @@ path root_name() const;
 
 Le composant peut être vide.
 
-## <a name="root_path"></a> Path::root_path
+## <a name="root_path"></a> path::root_path
 
 Retourne le composant de chemin d’accès racine de `myname`.
 
@@ -739,7 +739,7 @@ path root_path() const;
 
 Retourne le composant de chemin d’accès racine de `myname`, plus précisément `root_name()`  /  `root_directory`. Le composant peut être vide.
 
-## <a name="stem"></a> Path::stem
+## <a name="stem"></a> path::stem
 
 Retourne le `stem` composant de `myname`.
 
@@ -751,7 +751,7 @@ path stem() const;
 
 Retourne le `stem` composant de `myname`, plus précisément `filename().native()` avec n’importe quel type de fin `extension().native()` supprimé. Le composant peut être vide.
 
-## <a name="string"></a> Path::String
+## <a name="string"></a> path::string
 
 Convertit la séquence stockée dans `mypath`.
 
@@ -775,7 +775,7 @@ La première fonction membre (modèle) convertit la séquence stockée dans `myp
 
 La deuxième fonction membre convertit la séquence stockée dans `mypath` dans l’encodage privilégié par le système hôte pour un **char** séquence et la retourne stockée dans un objet de type `string`.
 
-## <a name="string_type"></a> Path::STRING_TYPE
+## <a name="string_type"></a> path::string_type
 
 Le type est un synonyme de `basic_string<value_type>`.
 
@@ -783,7 +783,7 @@ Le type est un synonyme de `basic_string<value_type>`.
 typedef basic_string<value_type> string_type;
 ```
 
-## <a name="swap"></a> Path::swap
+## <a name="swap"></a> path::swap
 
 Exécute `swap(mypath, right.mypath)`.
 
@@ -815,7 +815,7 @@ Convertit la séquence stockée dans `mypath` à UTF-8 et la retourne stockée d
 string u8string() const;
 ```
 
-## <a name="value_type"></a> Path::Value_type
+## <a name="value_type"></a> path::value_type
 
 Le type décrit le `path` éléments privilégiés par le système d’exploitation hôte.
 
@@ -827,7 +827,7 @@ typedef char value_type;
 #endif // filesystem model now defined
 ```
 
-## <a name="wstring"></a> Path::wstring
+## <a name="wstring"></a> path::wstring
 
 Convertit la séquence stockée dans `mypath` dans l’encodage privilégié par le système hôte pour un **wchar_t** séquence et la retourne stockée dans un objet de type `wstring`.
 

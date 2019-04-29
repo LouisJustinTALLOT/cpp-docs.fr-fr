@@ -8,11 +8,11 @@ helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
 ms.openlocfilehash: a7ee0ef9c98ee940ab810abd82f6220da95d7346
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351493"
 ---
 # <a name="callinappdomain-function"></a>call_in_appdomain, fonction
 
@@ -50,7 +50,7 @@ Pointeur vers un `void` fonction qui accepte des paramètres de N (0 < = N < = 1
 *nonvoidFunc*<br/>
 Pointeur vers non -`void` fonction qui accepte des paramètres de N (0 < = N < = 15).
 
-*Arg1... argN*<br/>
+*arg1...argN*<br/>
 Zéro à 15 paramètres à passer à `voidFunc` ou `nonvoidFunc` dans l’autre appdomain.
 
 ## <a name="return-value"></a>Valeur de retour

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4544
 ms.assetid: 11ee04df-41ae-435f-af44-881e801315a8
 ms.openlocfilehash: f2a3f2e64a6a859add8182de4fc883c735563e92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352921"
 ---
 # <a name="compiler-warning-level-1-c4544"></a>Avertissement du compilateur (niveau 1) C4544
 
-’déclaration’ : argument template par défaut ignoré sur cette déclaration de modèle
+'déclaration' : Argument de modèle par défaut ignoré sur cette déclaration de modèle
 
 Un argument template par défaut a été spécifié dans un emplacement incorrect et a été ignoré. Un argument template par défaut pour un modèle de classe peut uniquement être spécifié dans la déclaration ou la définition du modèle de classe et non sur un membre du modèle de classe.
 

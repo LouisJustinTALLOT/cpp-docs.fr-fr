@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CResourceException [MFC], CResourceException
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
 ms.openlocfilehash: b29112b4901a1fecac37aa7ae61496e874959370
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372192"
 ---
 # <a name="cresourceexception-class"></a>Cresourceexception, classe
 
@@ -49,7 +49,7 @@ Pour plus d’informations sur l’utilisation de `CResourceException`, consulte
 
 `CResourceException`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 

@@ -5,11 +5,11 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
 ms.openlocfilehash: ef61c93e062b375377a0afe62aa7f622f6c0d4ac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375598"
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics, espace de noms
 
@@ -37,7 +37,7 @@ namespace graphics;
 
 ### <a name="enumerations"></a>Énumérations
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[address_mode, énumération](concurrency-graphics-namespace-enums.md#address_mode).|Spécifie les modes d’adresse pris en charge pour l’échantillonnage de texture.|
 |[filter_mode, énumération](concurrency-graphics-namespace-enums.md#filter_mode)|Spécifie les modes de filtre pris en charge pour l’échantillonnage de texture.|
@@ -78,7 +78,7 @@ namespace graphics;
 |[copy](concurrency-graphics-namespace-functions.md#copy)|Surchargé. Copie le contenu de la texture source dans la mémoire tampon hôte de destination.|
 |[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Surchargé. Copie de façon asynchrone le contenu de la texture source dans la mémoire tampon hôte de destination.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp_graphics.h
 

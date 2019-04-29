@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4218
 ms.assetid: d6c3cd90-4518-49e9-ae86-4ba9e2761d98
 ms.openlocfilehash: 36d5de3b1270b41edfc391df960a556aca207709
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386471"
 ---
 # <a name="compiler-warning-level-1-c4218"></a>Avertissement du compilateur (niveau 4) C4218
 

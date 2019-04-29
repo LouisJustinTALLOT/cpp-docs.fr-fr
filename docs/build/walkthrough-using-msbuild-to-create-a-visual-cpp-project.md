@@ -7,11 +7,11 @@ helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
 ms.openlocfilehash: c7b038ede8c03f7016c5e9f81a9db785c49da448
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57813914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313595"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Procédure pas à pas : Utilisation de MSBuild pour créer un projet Visual C++
 

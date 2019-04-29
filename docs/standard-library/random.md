@@ -7,11 +7,11 @@ helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
 ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369804"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -212,11 +212,11 @@ Ce code illustre deux randomisations différentes (rendre aléatoire un vecteur 
 
 Les générateurs URNG sont souvent décrits sous l'angle des propriétés suivantes :
 
-1. **Longueur de période** : nombre d’itérations nécessaires pour répéter la séquence des nombres générés. Plus la période est longue, mieux c'est.
+1. **Longueur de période**: Le nombre d’itérations nécessaires pour répéter la séquence des nombres générés. Plus la période est longue, mieux c'est.
 
-2. **Performances** : vitesse à laquelle les nombres peuvent être générés et quantité de mémoire nécessaire. Plus la valeur est faible, mieux c'est.
+2. **Performances**: La vitesse à laquelle les nombres peuvent être générés et la quantité de mémoire nécessaire. Plus la valeur est faible, mieux c'est.
 
-3. **Qualité** : proximité de la séquence générée des nombres véritablement aléatoires. Cette propriété est souvent appelée *caractère aléatoire*.
+3. **Qualité**: La proximité des nombres véritablement aléatoires est la séquence générée. Cette propriété est souvent appelée *caractère aléatoire*.
 
 Les sections suivantes répertorient les uniformes générateurs de nombres aléatoires (Urng) fournis dans le \<aléatoire > en-tête.
 

@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
 ms.openlocfilehash: febefbe46d95b7e5c8de026806a20d7eff74e7cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357875"
 ---
 # <a name="querynewhandler"></a>_query_new_handler
 
@@ -52,7 +52,7 @@ Retourne l’adresse de la routine de nouveau gestionnaire actuelle telle que d�
 
 Le C++ **_query_new_handler** fonction retourne l’adresse de la fonction de gestion des exceptions actuelle définie par le C++ [_set_new_handler](set-new-handler.md) (fonction). **_set_new_handler** est utilisé pour spécifier une fonction de gestion des exceptions qui consiste à prendre le contrôle si le **nouveau** opérateur ne parvient pas à allouer de la mémoire. Pour plus d’informations, consultez la description des [opérateurs new et delete](../../cpp/new-and-delete-operators.md) dans la Référence du langage C++.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

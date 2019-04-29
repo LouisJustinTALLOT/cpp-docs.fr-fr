@@ -13,11 +13,11 @@ helpviewer_keywords:
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
 ms.openlocfilehash: be9e1830ea44223aa46ad9a7f5c6cee6734fa9e6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385048"
 ---
 # <a name="additive-operators--and--"></a>Opérateurs additifs : + et -
 
@@ -38,7 +38,7 @@ Les opérateurs additifs sont les suivants :
 
 Ces opérateurs binaires ont une associativité de droite à gauche.
 
-Les opérateurs additifs prennent des opérandes de type arithmétique ou pointeur. Le résultat de l’addition (**+**) opérateur correspond à la somme des opérandes. Le résultat de la soustraction (**-**) opérateur est la différence entre les opérandes. Si l’un des opérandes ou les deux sont des pointeurs, ils doit d’agir de pointeurs vers des objets, et non des fonctions. Si les deux opérandes sont des pointeurs, les résultats ne sont pas significatifs à moins que tous deux ne soient des pointeurs vers des objets dans le même tableau.
+Les opérateurs additifs prennent des opérandes de type arithmétique ou pointeur. Le résultat de l’addition (**+**) opérateur correspond à la somme des opérandes. Le résultat de la soustraction (**-**) opérateur est la différence entre les opérandes. Si l'un des opérandes ou les deux sont des pointeurs, ils doit d'agir de pointeurs vers des objets, et non des fonctions. Si les deux opérandes sont des pointeurs, les résultats ne sont pas significatifs à moins que tous deux ne soient des pointeurs vers des objets dans le même tableau.
 
 Opérateurs additifs prennent des opérandes de *arithmétique*, *intégraux*, et *scalaire* types. Ils sont définis dans le tableau suivant.
 
@@ -46,21 +46,21 @@ Opérateurs additifs prennent des opérandes de *arithmétique*, *intégraux*, e
 
 |Type|Signification|
 |----------|-------------|
-|*opérations arithmétiques*|Les types intégraux et flottants sont appelés collectivement des types « arithmétiques ».|
-|*Type intégral*|Les types char et int de toutes tailles (longs, courts) et les énumérations sont des types « intégraux ».|
+|*arithmetic*|Les types intégraux et flottants sont appelés collectivement des types « arithmétiques ».|
+|*integral*|Les types char et int de toutes tailles (longs, courts) et les énumérations sont des types « intégraux ».|
 |*scalar*|Les opérandes scalaires sont des opérandes de type arithmétique ou pointeur.|
 
 Les combinaisons valides pour ces opérateurs sont les suivantes :
 
-*arithmétique* + *arithmétique*
+*arithmetic* + *arithmetic*
 
-*scalaire* + *intégrale*
+*scalar* + *integral*
 
-*intégraux* + *scalaire*
+*integral* + *scalar*
 
-*arithmétique* - *arithmétique*
+*arithmetic* - *arithmetic*
 
-*scalaire* - *scalaire*
+*scalar* - *scalar*
 
 Notez que l'addition et la soustraction ne sont pas des opérations équivalentes.
 
@@ -88,7 +88,7 @@ int main() {
 
 ## <a name="pointer-addition"></a>Addition de pointeur
 
-Si l'un des opérandes d'une addition est un pointeur vers un tableau d'objets, l'autre doit être de type intégral. Le résultat est un pointeur qui est du même type que le pointeur d'origine et qui pointe vers un autre élément de tableau. Le fragment de code suivant illustre ce concept :
+Si l’un des opérandes d’une addition est un pointeur vers un tableau d’objets, l’autre doit être de type intégral. Le résultat est un pointeur qui est du même type que le pointeur d'origine et qui pointe vers un autre élément de tableau. Le fragment de code suivant illustre ce concept :
 
 ```cpp
 short IntArray[10]; // Objects of type short occupy 2 bytes

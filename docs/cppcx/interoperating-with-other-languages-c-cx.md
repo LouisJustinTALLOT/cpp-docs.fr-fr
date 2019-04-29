@@ -3,11 +3,11 @@ title: Interopérabilité avec d'autres langages (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
 ms.openlocfilehash: 72e1f08464085197bd3581405f6b8d31749dbeff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375234"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>Interopérabilité avec d'autres langages (C++/CX)
 
@@ -15,10 +15,10 @@ Cette partie de la documentation décrit comment utiliser C++ / c++ / CX pour cr
 
 ## <a name="related-topics"></a>Rubriques connexes
 
-- [Intégration JavaScript](../cppcx/javascript-integration-c-cx.md)
+- [Intégration JavaScript](../cppcx/javascript-integration-c-cx.md)
 
-- [Intégration du CLR](../cppcx/clr-integration-c-cx.md)
+- [Intégration CLR](../cppcx/clr-integration-c-cx.md)
 
-- [Intégration WRL](../cppcx/wrl-integration-c-cx.md)
+- [Intégration WRL](../cppcx/wrl-integration-c-cx.md)
 
 - [Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)

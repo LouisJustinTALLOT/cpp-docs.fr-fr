@@ -4,11 +4,11 @@ ms.date: 03/14/2018
 f1_keywords:
 - USEPROFILE
 ms.openlocfilehash: 7bc0033ae5ef512cbd2e2063c5cb9bd9b061c180
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317131"
 ---
 # <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (exécuter PGO en mode sans échec du thread)
 
@@ -32,7 +32,7 @@ Le **/USEPROFILE** option de l’éditeur de liens est utilisée conjointement a
 
 Le paramètre facultatif **agressif** argument désactive relatifs à la taille des heuristiques pour tenter d’optimiser pour la vitesse. Cela peut entraîner des optimisations qui considérablement augmenter la taille de votre fichier exécutable et ne peuvent pas augmenter la vitesse qui en résulte. Vous devez profiler et comparer les résultats de l’utilisation et de ne pas à l’aide de **agressif**. Cet argument doit être spécifié explicitement ; Il n’est pas activé par défaut.
 
-Le **PGD** argument spécifie un nom facultatif pour le fichier de .pgd des données de formation à utiliser, les mêmes que dans [/GENPROFILE ou /fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md). Il est l’équivalent de déconseillées **/PGD** basculer. Par défaut, ou si aucun *filename* est spécifié, un fichier .pgd qui porte le même nom de base que le fichier exécutable est utilisé.
+Le **PGD** argument spécifie un nom facultatif pour le fichier de .pgd des données de formation à utiliser, les mêmes que dans [/GENPROFILE ou /fastgenprofile.](genprofile-fastgenprofile-generate-profiling-instrumented-build.md). Il est l’équivalent de déconseillées **/PGD** basculer. Par défaut, ou si aucun *filename* est spécifié, un fichier .pgd qui porte le même nom de base que le fichier exécutable est utilisé.
 
 Le **/USEPROFILE** option de l’éditeur de liens est une nouveauté de Visual Studio 2015.
 

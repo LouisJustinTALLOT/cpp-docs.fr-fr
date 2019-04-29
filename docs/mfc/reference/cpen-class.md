@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
 ms.openlocfilehash: 8510c29571e6a370c7948ebe49e53b2c22dbfb9c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372918"
 ---
 # <a name="cpen-class"></a>CPen (classe)
 
@@ -71,7 +71,7 @@ Pour plus d’informations sur l’utilisation de `CPen`, consultez [objets grap
 
 `CPen`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 

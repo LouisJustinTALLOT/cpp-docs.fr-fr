@@ -13,11 +13,11 @@ helpviewer_keywords:
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
 ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384853"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Assemblys mixtes (natifs et managés)
 
@@ -31,10 +31,10 @@ Les versions antérieures de l’ensemble d’outils du compilateur Visual C++ p
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Comment : migrer vers/CLR](../dotnet/how-to-migrate-to-clr.md)<br/>
+[Guide pratique pour Migrer vers/CLR](../dotnet/how-to-migrate-to-clr.md)<br/>
 Décrit les étapes recommandées pour introduire ou la mise à niveau des fonctionnalités de .NET dans votre application.
 
-[Comment : compiler MFC et ATL Code à l’aide de /clr](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
+[Guide pratique pour / CLR MFC et ATL Code à l’aide de la compilation](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
 Explique comment compiler des programmes MFC et ATL existants pour cibler le Common Language Runtime.
 
 [Initialisation d’assemblys mixtes](../dotnet/initialization-of-mixed-assemblies.md)<br/>

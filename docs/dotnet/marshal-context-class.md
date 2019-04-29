@@ -9,11 +9,11 @@ helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
 ms.openlocfilehash: 25fc2be80ba0e5d8c7f76cee1f22eed4d1bb4fc7
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384866"
 ---
 # <a name="marshalcontext-class"></a>marshal_context, classe
 
@@ -35,19 +35,19 @@ Le même `marshal_context` peut être utilisé pour les conversions de nombreuse
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description| 
+|Nom|Description| 
 |---------|-----------| 
 |[marshal_context::marshal_context](#marshal-context)|Construit un `marshal_context` objet à utiliser pour la conversion des données entre les types de données managés et natifs.| 
 |[marshal_context::~marshal_context](#tilde-marshal-context)|Détruit un objet `marshal_context`.| 
 
 ### <a name="public-methods"></a>Méthodes publiques
 
-|Name|Description| 
+|Nom|Description| 
 |---------|-----------| 
 |[marshal_context::marshal_as](#marshal-as)|Effectue le marshaling sur un objet de données spécifique pour le convertir entre managé et un type de données natif.| 
 
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Fichier d’en-tête :** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, ou \<msclr\marshal_atl.h >
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
 ms.openlocfilehash: 63b474d0209a5cc385de9dc11b56d5de8382a9cf
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376417"
 ---
 # <a name="badalloc-class"></a>bad_alloc, classe
 
@@ -31,7 +31,7 @@ virtual ~bad_alloc();
 
 La valeur retournée par `what` est une chaîne C définie par l’implémentation. Aucune des fonctions membres ne lève d'exception.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<new>
 
@@ -64,7 +64,7 @@ int main() {
 bad allocation
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<new>
 

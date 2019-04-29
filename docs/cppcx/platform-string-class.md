@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0b8a29efc5b18432eabfeddc75af12737538281c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330204"
 ---
 # <a name="platformstring-class"></a>Platform::String, classe
 
@@ -92,7 +92,7 @@ La classe String a les opérateurs suivants.
 |[String::operator ! =, opérateur](#operator-inequality)|Indique si deux objets String spécifiés ont des valeurs différentes.|
 |[String::operator < opérateur](#operator-less-than)|Indique si la valeur d'un objet String est inférieure à la valeur d'un deuxième objet String.|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Prise en charge minimale du client :** Windows 8
 
@@ -411,7 +411,7 @@ Second objet `String`.
 
 ## <a name="operator-inequality"></a> String::operator!=
 
-Indique si deux spécifiée `String` objets ont des valeurs différentes.
+Indique si deux spécifiées `String` objets ont des valeurs différentes.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -498,4 +498,4 @@ Un `String` objet dont la valeur est identique à la chaîne actuelle.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)
+[Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)

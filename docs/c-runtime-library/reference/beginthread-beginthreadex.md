@@ -30,11 +30,11 @@ helpviewer_keywords:
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
 ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349262"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -134,7 +134,7 @@ Les paramètres régionaux du nouveau thread sont initialisé en utilisant les i
 
 Pour **/CLR** code, **_beginthread** et **_beginthreadex** ont chacun deux surcharges. Une prend un pointeur de fonction de convention d’appel native, et l’autre prend un **__clrcall** pointeur de fonction. La première surcharge n'est pas sécurisée au niveau du domaine d'application et ne le sera jamais. Si vous écrivez **/CLR** code, vous devez vous assurer que le nouveau thread accède le domaine d’application correct avant d’accéder à des ressources managées. Pour cela, vous pouvez par exemple utiliser la [fonction call_in_appdomain](../../dotnet/call-in-appdomain-function.md). La deuxième surcharge est application domaine-safe. le nouveau thread finit toujours dans le domaine d’application de l’appelant de **_beginthread** ou **_beginthreadex**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
 ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335306"
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 
@@ -94,7 +94,7 @@ Si le fichier spécifié par *filename* n’existe pas, un nouveau fichier est c
 |-----------|----------------|
 |**_S_IWRITE**|Écriture autorisée.|
 |**_S_IREAD**|Lecture autorisée.|
-|**_S_IREAD** &AMP;#124; **_S_IWRITE**|Lecture et écriture autorisées.|
+|**_S_IREAD** &#124; **_S_IWRITE**|Lecture et écriture autorisées.|
 
 Si l'autorisation d'écriture n'est pas accordée, le fichier est en lecture seule. Tous les fichiers sont toujours accessibles en lecture ; il est impossible d’accorder l’autorisation en écriture seule. Les modes **_S_IWRITE** et **_S_IREAD** | **_S_IWRITE** sont équivalents. Fichiers ouverts à l’aide de **_creat** sont toujours ouverts en mode de compatibilité (consultez [_sopen](sopen-wsopen.md)) avec **_SH_DENYNO**.
 

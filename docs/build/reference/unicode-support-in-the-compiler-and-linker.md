@@ -9,11 +9,11 @@ f1_keywords:
 helpviewer_keywords:
 - Unicode, Visual C++
 ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317326"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Prise en charge Unicode dans le compilateur et l'éditeur de liens
 
@@ -49,4 +49,4 @@ dumps .asm et .cod est au format ANSI par défaut pour la compatibilité avec MA
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utiliser l’ensemble d’outils MSVC à partir de la ligne de commande](../building-on-the-command-line.md)
+[Utiliser le jeu d’outils MSVC à partir de la ligne de commande](../building-on-the-command-line.md)

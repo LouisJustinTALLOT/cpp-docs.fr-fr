@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
 ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368732"
 ---
 # <a name="platformexception-class"></a>Platform::Exception (classe)
 
@@ -56,7 +56,7 @@ La classe Exception comporte aussi les propriétés ci-dessous.
 |[Exception::HResult](#hresult)|HRESULT qui correspond à l'exception.|
 |[Exception::Message](#message)|Message qui décrit l'exception. Cette valeur est en lecture seule et ne peut pas être modifiée après la construction d' `Exception` .|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Prise en charge minimale du client :** Windows 8
 
@@ -125,7 +125,7 @@ public:
     property int HResult { int get(); }
 ```
 
-## <a name="property-value"></a>Valeur de propriété
+## <a name="property-value"></a>Valeur de la propriété
 
 Valeur HRESULT.
 
@@ -143,7 +143,7 @@ Message qui décrit l'erreur.
 public:property String^ Message;
 ```
 
-## <a name="property-value"></a>Valeur de propriété
+## <a name="property-value"></a>Valeur de la propriété
 
 Dans les exceptions qui proviennent de Windows Runtime, il s'agit d'une description de l'erreur fournie par le système.
 
@@ -153,4 +153,4 @@ Dans Windows 8, cette propriété est en lecture seule, car les exceptions dans 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)
+[Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)

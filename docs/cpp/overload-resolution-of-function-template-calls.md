@@ -5,15 +5,15 @@ helpviewer_keywords:
 - function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
 ms.openlocfilehash: a736e89565bb7ab6bc49c3c0f65d12fc9508200c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379127"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Résolution de surcharge des appels de modèles de fonctions
 
-Un modèle de fonction peut surcharger des fonctions non basées sur un modèle du même nom. Dans ce scénario, les appels de fonction sont résolus d’abord en utilisant la déduction de l’argument template pour instancier le modèle de fonction avec une seule spécialisation. Si la déduction d’argument template échoue, les autres surcharges de fonction sont prises en compte pour résoudre l’appel. Ces autres surcharges, également connues comme étant l'ensemble de candidats, incluent des fonctions non basées sur un modèle et d'autres modèles de fonctions instanciés. Si la déduction d’arguments template réussit, la fonction générée est comparée aux autres fonctions pour déterminer la meilleure correspondance, d’après les règles relative à la résolution de la surcharge. Pour plus d’informations, consultez [surcharge de fonction](function-overloading.md).
+Un modèle de fonction peut surcharger des fonctions non basées sur un modèle du même nom. Dans ce scénario, les appels de fonction sont résolus d’abord en utilisant la déduction de l’argument template pour instancier le modèle de fonction avec une seule spécialisation. Si la déduction d'argument template échoue, les autres surcharges de fonction sont prises en compte pour résoudre l'appel. Ces autres surcharges, également connues comme étant l'ensemble de candidats, incluent des fonctions non basées sur un modèle et d'autres modèles de fonctions instanciés. Si la déduction d'arguments template réussit, la fonction générée est comparée aux autres fonctions pour déterminer la meilleure correspondance, d'après les règles relative à la résolution de la surcharge. Pour plus d’informations, consultez [surcharge de fonction](function-overloading.md).
 
 ## <a name="example"></a>Exemple
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - item labels
 ms.assetid: fe834107-1a25-4280-aced-774c11565805
 ms.openlocfilehash: c945556ff9236db1ca61b15f1072efdc2f49541f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371949"
 ---
 # <a name="tree-control-item-labels"></a>Étiquettes d'élément de contrôle d'arborescence
 

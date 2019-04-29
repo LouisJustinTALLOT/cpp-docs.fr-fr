@@ -15,11 +15,11 @@ helpviewer_keywords:
 - HWND, window objects [MFC]
 ms.assetid: 28b33ce2-af05-4617-9d03-1cb9a02be687
 ms.openlocfilehash: b62f43aa0d37c5e614636b3d7543bc927d41039b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378074"
 ---
 # <a name="window-objects"></a>Objets fenêtres
 

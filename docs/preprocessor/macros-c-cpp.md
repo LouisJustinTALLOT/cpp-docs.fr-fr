@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
 ms.openlocfilehash: 281aaf686c07894b5cb1fab187ba903179c51de8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371774"
 ---
 # <a name="macros-cc"></a>Macros (C/C++)
 Prétraitement développe des macros dans toutes les lignes qui ne sont pas des directives de préprocesseur (lignes qui n’ont pas un **#** comme premier caractère autre qu’un espace blanc) et dans les parties de certaines directives qui ne sont pas ignorées en tant que partie d’un compilation conditionnelle. Les directives de « compilation conditionnelle » vous permettent de supprimer la compilation des parties d'un fichier source en testant une expression constante ou un identificateur pour déterminer quels blocs de texte sont transmis au compilateur et quels blocs de texte sont supprimés du fichier source pendant le prétraitement.

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
 ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308210"
 ---
 # <a name="serialization-in-mfc"></a>Sérialisation dans MFC
 
@@ -36,11 +36,11 @@ Si vous le souhaitez, vous pouvez ignorer la sérialisation MFC pour créer vot
 
 Les articles suivants détaillent les deux principales tâches requises pour la sérialisation :
 
-- [Sérialisation : Définir une classe sérialisable](../mfc/serialization-making-a-serializable-class.md)
+- [Sérialisation : Définition d’une classe sérialisable](../mfc/serialization-making-a-serializable-class.md)
 
-- [Sérialisation : Sérialisation d’un objet](../mfc/serialization-serializing-an-object.md)
+- [Sérialisation : Sérialisation d’un objet](../mfc/serialization-serializing-an-object.md)
 
-L’article [sérialisation : Visual Studio de sérialisation. Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md) décrit la sérialisation est une technique d’entrée/sortie appropriée dans les applications de base de données.
+L’article [sérialisation : Sérialisation ou Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md) décrit la sérialisation est une technique d’entrée/sortie appropriée dans les applications de base de données.
 
 ## <a name="see-also"></a>Voir aussi
 

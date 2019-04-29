@@ -9,15 +9,15 @@ helpviewer_keywords:
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
 ms.openlocfilehash: e7dcb8290c0130fa9376e48f065e82163a1ca5b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312308"
 ---
 # <a name="primary-expressions"></a>Expressions primaires
 
-Les expressions primaires sont des blocs de construction d'expressions plus complexes. Il s’agit de littéraux, de noms et de noms qualifiés par l’opérateur résolution-portée (`::`).  Une expression primaire peut prendre chacune des formes suivantes :
+Les expressions primaires sont des blocs de construction d'expressions plus complexes. Il s'agit de littéraux, de noms et de noms qualifiés par l'opérateur résolution-portée (`::`).  Une expression primaire peut prendre chacune des formes suivantes :
 
 ```
 literal

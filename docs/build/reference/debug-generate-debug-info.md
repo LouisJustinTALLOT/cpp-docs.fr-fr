@@ -17,11 +17,11 @@ helpviewer_keywords:
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
 ms.openlocfilehash: ca7ef5d1935ddea0441f49e387e35184c6fd1fc6
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294016"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (Générer les informations de débogage)
 
@@ -71,5 +71,5 @@ Il n’est pas possible de créer un .exe ou .dll qui contient les informations 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

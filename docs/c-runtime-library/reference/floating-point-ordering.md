@@ -22,11 +22,11 @@ helpviewer_keywords:
 - islessgreater function
 - isunordered function
 ms.openlocfilehash: 748360cae1dd0ee43645dee369c60c835246ed03
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333701"
 ---
 # <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered
 
@@ -123,7 +123,7 @@ Le **isunordered** macro retourne une valeur différente de zéro si *x*, *y*, o
 
 Ces opérations de comparaison sont implémentées en tant que macros lors de la compilation en C et en tant que fonctions de modèle inline lors de la compilation en C++.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis (C)|En-tête requis (C++)|
 |--------------|---------------------------|-------------------------------|

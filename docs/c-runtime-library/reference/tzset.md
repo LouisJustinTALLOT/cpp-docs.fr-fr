@@ -24,11 +24,11 @@ helpviewer_keywords:
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
 ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385191"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -47,7 +47,7 @@ void _tzset( void );
 
 Le **_tzset** fonction utilise le paramètre actuel de la variable d’environnement **TZ** pour affecter des valeurs à trois variables globales : **_daylight**, **_timezone** , et **_tzname**. Ces variables sont utilisées par le [_ftime](ftime-ftime32-ftime64.md) et [localtime](localtime-localtime32-localtime64.md) fonctions pour apporter des corrections à partir du temps universel coordonné (UTC) en heure locale et à la [temps](time-time32-time64.md) à fonction calculer l’heure UTC à partir de l’heure système. Utilisez la syntaxe suivante pour définir le **TZ** variable d’environnement :
 
-> **Définissez TZ =**_tzn_ \[ **+** &#124; **-**]*hh* \[ **:**_mm_\[**:**_ss_]] [*dzn*]
+> **set TZ=**_tzn_ \[**+**&#124;**-**]*hh*\[**:**_mm_\[**:**_ss_] ][*dzn*]
 
 |Paramètre|Description|
 |-|-|
@@ -62,7 +62,7 @@ Le **_tzset** fonction utilise le paramètre actuel de la variable d’environne
 
 Par exemple, pour définir le **TZ** variable d’environnement pour qu’elles correspondent au fuseau horaire actuel en Allemagne, entrez les informations suivantes sur la ligne de commande :
 
-> **Définissez TZ = TPS-1GDT**
+> **set TZ=GST-1GDT**
 
 Cette commande utilise GST pour indiquer l’heure standard allemande, suppose que l’heure UTC est en retard d’une heure sur l’Allemagne (ou autrement dit, que l’Allemagne est en avance d’une heure sur l’heure UTC) et suppose qu’Allemagne observe l’heure d’été.
 

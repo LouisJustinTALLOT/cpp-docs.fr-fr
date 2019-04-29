@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
 ms.openlocfilehash: 43259001bd05bb7df9e2e1636c174018dcdaef3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334422"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
@@ -47,7 +47,7 @@ int fegetexceptflag(
 *pstatus*<br/>
 Un pointeur vers un **fexcept_t** objet destiné à contenir les valeurs actuelles des indicateurs d’exception spécifiés par *, sauf*.
 
-*sauf*<br/>
+*excepts*<br/>
 Les indicateurs d’exception de virgule flottante à stocker dans *pstatus*.
 
 ## <a name="return-value"></a>Valeur de retour

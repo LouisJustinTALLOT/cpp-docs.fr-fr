@@ -10,11 +10,11 @@ helpviewer_keywords:
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
 ms.openlocfilehash: 99dd7f58b862fadc86ee2515bb8ef2008bc538fa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385321"
 ---
 # <a name="ole-server-classes"></a>Classes de serveur OLE
 

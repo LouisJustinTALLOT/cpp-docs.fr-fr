@@ -49,11 +49,11 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
 ms.openlocfilehash: 648bc17f0f130b831aa619b90ed13ba6be35b4d4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373243"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl, classe
 
@@ -116,7 +116,7 @@ Le `CPagerCtrl` classe est dérivée de la [CWnd](../../mfc/reference/cwnd-class
 
 `CPagerCtrl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcmn.h
 

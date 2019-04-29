@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3868
 ms.assetid: f0e45c2a-2149-4885-a03b-0d230069f03a
 ms.openlocfilehash: 3d759d8e527bf38c7408f3497b27287e030d387e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59776782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338439"
 ---
 # <a name="compiler-error-c3868"></a>Erreur du compilateur C3868
 

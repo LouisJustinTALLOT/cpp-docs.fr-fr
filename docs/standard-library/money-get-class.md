@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 ms.openlocfilehash: 40ce364d768e682c9e85506d2af9e46a01c76e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383527"
 ---
 # <a name="moneyget-class"></a>money_get, classe
 
@@ -120,7 +120,7 @@ Indicateur de format qui, quand il est spécifié, indique que le symbole monét
 *État*<br/>
 Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*Val*<br/>
+*val*<br/>
 Chaîne stockant la séquence convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -202,7 +202,7 @@ Indicateur de format qui, quand il est défini, indique que le symbole monétair
 *État*<br/>
 Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*Val*<br/>
+*val*<br/>
 Chaîne stockant la séquence convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -291,11 +291,11 @@ Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l�
 
 Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
 
-- 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0: La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
-- 1 : la durée de vie de l’objet doit être gérée manuellement.
+- 1 : La durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1 : ces valeurs ne sont pas définies.
+- \> 1: Ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 

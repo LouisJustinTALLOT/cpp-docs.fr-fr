@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CMFCImageEditorPaletteBar [MFC], IsButtonExtraSizeAvailable
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
 ms.openlocfilehash: 6812f3f425186484ef892d7f5c626c0dfce0f863
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378100"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>Cmfcimageeditorpalettebar, classe
 
@@ -61,7 +61,7 @@ Le framework utilise cette classe pour afficher une barre de palette dans une im
 
 [CMFCImageEditorPaletteBar](../../mfc/reference/cmfcimageeditorpalettebar-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afximageeditordialog.h
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
 ms.openlocfilehash: 18ee500d7b884d1934c29dc91d9bcb03d507680d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356548"
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 
@@ -53,7 +53,7 @@ Retourne un pointeur vers la précédente fonction inscrite par **_set_se_transl
 
 ## <a name="remarks"></a>Notes
 
-Le **_set_se_translator** fonction fournit un moyen pour gérer les exceptions Win32 (exceptions structurées C) en tant que C++ exceptions typées. Pour autoriser chaque exception C à être gérées par un C++ **catch** gestionnaire, définissez d’abord une classe de wrapper d’exception C qui peut être utilisée ou dérivée, pour attribuer un type de classe spécifique à une exception C. Pour utiliser cette classe, installez une fonction de traduction d'exception C personnalisée appelée par le mécanisme de gestion des exceptions interne chaque fois qu'une exception C est levée. Dans votre fonction de traduction, vous pouvez lever toute exception typée qui peut être interceptée par une correspondance C++ **catch** gestionnaire.
+Le **_set_se_translator** fonction fournit un moyen de gérer les exceptions Win32 (exceptions structurées C) en tant que C++ exceptions typées. Pour autoriser chaque exception C à être gérées par un C++ **catch** gestionnaire, définissez d’abord une classe de wrapper d’exception C qui peut être utilisée ou dérivée, pour attribuer un type de classe spécifique à une exception C. Pour utiliser cette classe, installez une fonction de traduction d'exception C personnalisée appelée par le mécanisme de gestion des exceptions interne chaque fois qu'une exception C est levée. Dans votre fonction de traduction, vous pouvez lever toute exception typée qui peut être interceptée par une correspondance C++ **catch** gestionnaire.
 
 Vous devez utiliser [/EHa](../../build/reference/eh-exception-handling-model.md) lors de l’utilisation **_set_se_translator**.
 
@@ -73,7 +73,7 @@ Pour **_set_se_translator**, il existe des implications lors de la liaison dynam
 
 Lorsque vous utilisez **_set_se_translator** à partir du code managé (code compilé avec/CLR) ou mixte du code natif et managé, n’oubliez pas que le traducteur affecte les exceptions générées en code natif uniquement. Les exceptions managées générées en code managé (par exemple, en déclenchant `System::Exception`) ne sont pas acheminées par le biais de la fonction de traduction. Les exceptions levées dans le code managé à l’aide de la fonction Win32 **RaiseException** ou provoquée par une exception de système comme une exception de division par zéro sont acheminées via le traducteur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - updating user-interface objects [MFC]
 ms.assetid: 3e72b50f-4119-4c82-81cf-6e09b132de05
 ms.openlocfilehash: 986bc4f12223048a20f88da5d164b24dc1c08ace
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385350"
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI, macro
 
@@ -28,4 +28,4 @@ Comme tous les gestionnaires, la fonction montre le **afx_msg** mot clé. Comme 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide pratique pour Mettre à jour des objets d’Interface utilisateur](../mfc/how-to-update-user-interface-objects.md)
+[Guide pratique pour Mettre à jour des objets d’interface utilisateur](../mfc/how-to-update-user-interface-objects.md)

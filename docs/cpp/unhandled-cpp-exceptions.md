@@ -9,15 +9,15 @@ helpviewer_keywords:
 - unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
 ms.openlocfilehash: 85227e0bd0ca33f925e8fe72b6489fa81305d031
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312208"
 ---
 # <a name="unhandled-c-exceptions"></a>Exceptions C++ non gérées
 
-Si un gestionnaire correspondant (ou points de suspension **catch** gestionnaire) est introuvable pour l’exception actuelle, le texte prédéfinie `terminate` fonction de l’exécution est appelée. (Vous pouvez également appeler explicitement `terminate` dans vos gestionnaires.) L'action par défaut de `terminate` est d'appeler `abort`. Si vous souhaitez `terminate` pour appeler une autre fonction dans votre programme avant de quitter l'application, appelez la fonction `set_terminate` avec le nom de la fonction à appeler comme unique argument. Vous pouvez appeler `set_terminate` à tout moment dans votre programme. Le `terminate` routine appelle toujours la dernière fonction donnée comme argument à `set_terminate`.
+Si un gestionnaire correspondant (ou points de suspension **catch** gestionnaire) est introuvable pour l’exception actuelle, le texte prédéfinie `terminate` fonction de l’exécution est appelée. (Vous pouvez également appeler explicitement `terminate` dans vos gestionnaires.) L'action par défaut de `terminate` est d'appeler `abort`. Si vous souhaitez `terminate` pour appeler une autre fonction dans votre programme avant de quitter l’application, appelez la fonction `set_terminate` avec le nom de la fonction à appeler comme unique argument. Vous pouvez appeler `set_terminate` à tout moment dans votre programme. Le `terminate` routine appelle toujours la dernière fonction donnée comme argument à `set_terminate`.
 
 ## <a name="example"></a>Exemple
 

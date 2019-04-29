@@ -63,11 +63,11 @@ helpviewer_keywords:
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
 ms.openlocfilehash: 6ec4ff879b70e4d2cc16a3328217660db695e859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377136"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt;, fonctions
 
@@ -306,7 +306,7 @@ Pointeur vers un objet `atomic` qui stocke une valeur de type `Ty`.
 *Valeur*<br/>
 Valeur de type `Ty`.
 
-*Commande*<br/>
+*Order*<br/>
 Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -457,7 +457,7 @@ Pointeur vers un objet `atomic` qui stocke une valeur de type `T`.
 *Valeur*<br/>
 Valeur de type `T`.
 
-*Commande*<br/>
+*Order*<br/>
 Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -521,7 +521,7 @@ Pointeur vers un objet `atomic` qui stocke une valeur de type `T`.
 *Valeur*<br/>
 Valeur de type `T`.
 
-*Commande*<br/>
+*Order*<br/>
 Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -676,7 +676,7 @@ Pointeur vers un objet `atomic` qui stocke une valeur de type `T`.
 *Valeur*<br/>
 Valeur de type `T`.
 
-*Commande*<br/>
+*Order*<br/>
 Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -698,7 +698,7 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Indicateur*<br/>
+*Marquer*<br/>
 Pointeur vers un objet `atomic_flag` .
 
 ## <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit
@@ -712,10 +712,10 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>Paramètres
 
-*Indicateur*<br/>
+*Marquer*<br/>
 Pointeur vers un objet `atomic_flag` .
 
-*Commande*<br/>
+*Order*<br/>
 Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set
@@ -729,7 +729,7 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Indicateur*<br/>
+*Marquer*<br/>
 Pointeur vers un objet `atomic_flag` .
 
 ### <a name="return-value"></a>Valeur de retour
@@ -747,10 +747,10 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>Paramètres
 
-*Indicateur*<br/>
+*Marquer*<br/>
 Pointeur vers un objet `atomic_flag` .
 
-*Commande*<br/>
+*Order*<br/>
 Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -844,7 +844,7 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 *Atom*<br/>
 Pointeur vers un objet `atomic` qui contient une valeur de type `Ty`.
 
-*Commande*<br/>
+*Order*<br/>
 Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum). N’utilisez pas `memory_order_release` ou `memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -861,7 +861,7 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Commande*<br/>
+*Order*<br/>
 Contrainte d’ordre de mémoire qui détermine le type de délimitation.
 
 ### <a name="remarks"></a>Notes
@@ -926,7 +926,7 @@ Pointeur vers un objet `atomic` qui contient une valeur de type `Ty`.
 *Valeur*<br/>
 Valeur de type `Ty`.
 
-*Commande*<br/>
+*Order*<br/>
 Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum). N’utilisez pas `memory_order_consume`, `memory_order_acquire` ou `memory_order_acq_rel`.
 
 ### <a name="remarks"></a>Notes
@@ -943,7 +943,7 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Commande*<br/>
+*Order*<br/>
 Contrainte d’ordre de mémoire qui détermine le type de délimitation.
 
 ### <a name="remarks"></a>Notes
@@ -970,7 +970,7 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Valeur de type `Ty`.
 
 ### <a name="return-value"></a>Valeur de retour

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
 ms.openlocfilehash: e39905608087425fe5a445f4ef88434d73bb2ded
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320095"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox (activer la plupart des optimisations de vitesse)
 
@@ -70,4 +70,4 @@ Pour appliquer toutes les optimisations au niveau des fichiers disponibles pour 
 
 [/O, options (Optimiser le code)](o-options-optimize-code.md)<br/>
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - C++/CX namespaces
 ms.assetid: 5ebc0b49-1f22-48a7-90c4-a310bab9aba6
 ms.openlocfilehash: a749220b4f1f735e9559d8e4aacca27d73fa5d76
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375208"
 ---
 # <a name="namespaces-reference-ccx"></a>Référence aux espaces de noms (C++/CX)
 
@@ -24,8 +24,8 @@ Pour simplifier le codage des programmes qui ciblent le Runtime de Windows, le C
 |Titre|Description|
 |-----------|-----------------|
 |[Espace de noms par défaut](../cppcx/default-namespace.md)|Contient les descriptions des types fondamentaux intégrés.|
-|[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)|Contient les descriptions des types que vous pouvez utiliser, ainsi que des types internes utilisés uniquement par l'infrastructure du compilateur.|
-|[Windows::Foundation :: Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)|Contient les descriptions des améliorations et des extensions pour le Runtime Windows`Windows::Foundation::Collections` espace de noms.|
+|[Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)|Contient les descriptions des types que vous pouvez utiliser, ainsi que des types internes utilisés uniquement par l'infrastructure du compilateur.|
+|[Windows::Foundation::Collections, espace de noms](../cppcx/windows-foundation-collections-namespace-c-cx.md)|Contient les descriptions des améliorations et des extensions pour le Runtime Windows`Windows::Foundation::Collections` espace de noms.|
 
 ## <a name="see-also"></a>Voir aussi
 

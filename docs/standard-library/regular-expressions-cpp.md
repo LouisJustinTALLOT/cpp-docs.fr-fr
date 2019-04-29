@@ -7,11 +7,11 @@ helpviewer_keywords:
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
 ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369031"
 ---
 # <a name="regular-expressions-c"></a>Expressions régulières (C++)
 
@@ -148,7 +148,7 @@ Pour toutes les grammaires, sauf `basic` et `grep`, un nombre de répétitions p
 
 Exemples :
 
-- « a » ? correspond à la séquence cible « » et la séquence cible « a », mais pas à la séquence cible « aa ».
+- "a?" correspond à la séquence cible « » et la séquence cible « a », mais pas à la séquence cible « aa ».
 
 - "a+" correspond aux séquences cibles "a", "aa", et ainsi de suite, mais pas à la séquence cible "".
 
@@ -303,8 +303,8 @@ Un caractère d'échappement dsw est un nom court donné à une plage de caract�
 |"\D"|"[^[:d:]]"|"[^[:digit:]]"|
 |"\s"|"[[:s:]]"|"[[:space:]]"|
 |"\S"|"[^[:s:]]"|"[^[:space:]]"|
-|"\w"|"[[:w:]]"|« [a-zA-Z0-9_] »\*|
-|"\W"|"[^[:w:]]"|« [^ a-zA-Z0-9_] »\*|
+|"\w"|"[[:w:]]"|"[a-zA-Z0-9_]"\*|
+|"\W"|"[^[:w:]]"|"[^a-zA-Z0-9_]"\*|
 
 \*Jeu de caractères ASCII
 
@@ -393,7 +393,7 @@ Un caractère ordinaire est un caractère valide qui n'a pas de signification sp
 
 Dans `ECMAScript`, les caractères suivants ont une signification particulière :
 
-- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }  &#124;
 
 Dans `basic` et `grep`, les caractères suivants ont une signification particulière :
 
@@ -480,7 +480,7 @@ Une correspondance partielle aboutit si la correspondance atteint la fin de la s
 |"$&"|"&"|Séquence de caractères qui correspond à l'intégralité de l'expression régulière (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|« $\`» (signe dollar suivi d’apostrophe)||Séquence de caractères qui précède la sous-séquence correspondant à l'expression régulière (`[match.prefix().first, match.prefix().second)`)|
+|« $\`» (signe dollar suivi d’apostrophe) || La séquence de caractères qui précède la sous-séquence qui correspond à l’expression régulière (`[match.prefix().first, match.prefix().second)`)|
 |"$'" (signe dollar suivi d'un guillemet)||Séquence de caractères qui suit la sous-séquence correspondant à l'expression régulière (`[match.suffix().first, match.suffix().second)`)|
 |"$n"|"\n"|La séquence de caractères qui correspond au groupe de capture à la position `n`, où `n` est un nombre compris entre 0 et 9 (`[match[n].first, match[n].second)`)|
 ||"\\\n"|"\n"|

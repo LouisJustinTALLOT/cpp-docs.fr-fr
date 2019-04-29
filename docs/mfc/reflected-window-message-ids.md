@@ -47,11 +47,11 @@ helpviewer_keywords:
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
 ms.openlocfilehash: 2f6aea30fbf86865b5d42ea8da364685010c95c0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309055"
 ---
 # <a name="reflected-window-message-ids"></a>ID des messages de fenêtre réfléchis
 
@@ -86,5 +86,5 @@ Le tableau suivant montre les messages qui sont interceptées et les messages co
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôles ActiveX MFC : Sous-classement d’un contrôle Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
-[TN062 : Réflexion de message pour les contrôles Windows](../mfc/tn062-message-reflection-for-windows-controls.md)
+[Contrôles ActiveX MFC : Sous-classement d’un contrôle Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
+[TN062 : Réflexion de message pour les contrôles Windows](../mfc/tn062-message-reflection-for-windows-controls.md)

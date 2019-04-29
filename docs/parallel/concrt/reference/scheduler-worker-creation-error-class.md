@@ -9,11 +9,11 @@ helpviewer_keywords:
 - scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
 ms.openlocfilehash: 66e7485787606c22aba2970dbe481a7d29e66621
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337360"
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error, classe
 
@@ -45,7 +45,7 @@ Cette exception est généralement levée en cas d’échec d’un appel au syst
 
 `scheduler_worker_creation_error`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 

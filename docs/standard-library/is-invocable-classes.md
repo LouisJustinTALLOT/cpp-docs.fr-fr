@@ -16,11 +16,11 @@ helpviewer_keywords:
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
 ms.openlocfilehash: bb5e75a897029ded2e00e491d93d2df41a3e115b
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62336229"
 ---
 # <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>is_invocable, is_invocable_r, is_nothrow_invocable, classes d’is_nothrow_invocable_r
 
@@ -114,7 +114,7 @@ int main()
 }
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - U1059
 ms.assetid: b21d9198-9c63-40d0-b589-80e17294ce24
 ms.openlocfilehash: 3c148bf2feb7ba12686e00b29f5bf90cb9f2f2d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62367289"
 ---
 # <a name="nmake-fatal-error-u1059"></a>Erreur irrécupérable NMAKE U1059
 
@@ -21,7 +21,7 @@ Un chemin de recherche pour une dépendance a été incorrectement spécifié. S
 
 La syntaxe pour une spécification de répertoire pour une dépendance est
 
-> **{** *répertoires* **} dépendant**
+> **{** *directories* **}dependent**
 
 où *répertoires* spécifie un ou plusieurs chemins d’accès, chacun étant séparés par un point-virgule (**;**). Sans les espaces sont autorisés.
 

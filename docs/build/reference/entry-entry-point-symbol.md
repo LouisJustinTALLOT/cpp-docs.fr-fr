@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
 ms.openlocfilehash: 0f3604ef75ce10928463c088e423615886555eda
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293210"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (Symbole de point d'entrée)
 
@@ -66,5 +66,5 @@ Pour plus d’informations sur la façon de définir les vôtres `DllMain` point
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

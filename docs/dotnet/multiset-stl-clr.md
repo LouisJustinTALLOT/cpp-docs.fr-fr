@@ -98,11 +98,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
 ms.openlocfilehash: e7a0551c1d75993d588f5dbb369989c42a71d903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384775"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 
@@ -467,7 +467,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> multiset::Count (STL/CLR)
+## <a name="count"></a> multiset::count (STL/CLR)
 
 Recherche le nombre d’éléments qui correspondent à une clé spécifiée.
 
@@ -1131,7 +1131,7 @@ Fin de la plage à insérer.
 *right*<br/>
 Énumération à insérer.
 
-*Val*<br/>
+*val*<br/>
 Valeur de clé à insérer.
 
 *where*<br/>
@@ -1557,7 +1557,7 @@ Début de la plage à insérer.
 *last*<br/>
 Fin de la plage à insérer.
 
-*Pred*<br/>
+*pred*<br/>
 Classement de prédicat pour la séquence contrôlée.
 
 *right*<br/>
@@ -1699,7 +1699,7 @@ c b a
 a b c
 ```
 
-## <a name="op_as"></a> multiset::operator = (STL/CLR)
+## <a name="op_as"></a> multiset::operator= (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -2304,7 +2304,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> multiset::Value_type (STL/CLR)
+## <a name="value_type"></a> multiset::value_type (STL/CLR)
 
 Type d’un élément.
 
@@ -2349,7 +2349,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> opérateur ! = (multiset) (STL/CLR)
+## <a name="op_neq"></a> operator!= (multiset) (STL/CLR)
 
 Liste différent de comparaison.
 
@@ -2489,7 +2489,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> opérateur&lt;= (multiset) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (multiset) (STL/CLR)
 
 Liste inférieure ou égale comparaison.
 
@@ -2559,7 +2559,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> opérateur == (multiset) (STL/CLR)
+## <a name="op_eq"></a> operator== (multiset) (STL/CLR)
 
 Liste de comparaison égale.
 
@@ -2699,7 +2699,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> opérateur&gt;= (multiset) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (multiset) (STL/CLR)
 
 Liste supérieur ou égal à comparaison.
 

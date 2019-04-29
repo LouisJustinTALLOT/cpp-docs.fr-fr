@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
 ms.openlocfilehash: 2d4a7a780f1a7db27bcb600c13430deaa0dc35cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370866"
 ---
 # <a name="ostrstream-class"></a>ostrstream, classe
 
@@ -98,7 +98,7 @@ Mémoire tampon.
 *count*<br/>
 Taille de la mémoire tampon en octets.
 
-*Mode _De*<br/>
+*_Mode*<br/>
 Mode d’entrée et de sortie de la mémoire tampon. Pour plus d’informations, consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="remarks"></a>Notes

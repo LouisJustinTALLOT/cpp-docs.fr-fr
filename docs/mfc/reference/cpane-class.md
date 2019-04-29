@@ -134,11 +134,11 @@ helpviewer_keywords:
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
 ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373152"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -237,7 +237,7 @@ class CPane : public CBasePane
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CPane::m_bHandleMinSize](#m_bhandleminsize)|Permet une gestion cohérente de la taille minimale pour les volets.|
 |[CPane::m_recentDockInfo](#m_recentdockinfo)|Contient des informations récentes sur la station d’accueil.|
@@ -260,7 +260,7 @@ Lorsque vous dérivez une classe de `CPane`, elle peut être ancrée dans un [CD
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxPane.h
 

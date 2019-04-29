@@ -60,11 +60,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
 ms.openlocfilehash: ec3863796f7c49c155af61576c15c1ca8a9d5109
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384606"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -523,7 +523,7 @@ a b c
 c b a
 ```
 
-## <a name="get_container"></a> Stack::get_container (STL/CLR)
+## <a name="get_container"></a> stack::get_container (STL/CLR)
 
 Accède au conteneur sous-jacent.
 
@@ -565,7 +565,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> Stack::operator = (STL/CLR)
+## <a name="op_as"></a> stack::operator= (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -811,7 +811,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> Stack::size_type (STL/CLR)
+## <a name="size_type"></a> stack::size_type (STL/CLR)
 
 Le type d’une distance signée entre deux éléments.
 
@@ -878,7 +878,7 @@ explicit stack(container_type% wrapped);
 *right*<br/>
 Objet à copier.
 
-*encapsulé*<br/>
+*wrapped*<br/>
 Conteneur encapsulée à utiliser.
 
 ### <a name="remarks"></a>Notes
@@ -1055,7 +1055,7 @@ top() = c
 a b x
 ```
 
-## <a name="top_item"></a> Stack::top_item (STL/CLR)
+## <a name="top_item"></a> stack::top_item (STL/CLR)
 
 Accède au dernier élément.
 
@@ -1107,7 +1107,7 @@ top_item = c
 a b x
 ```
 
-## <a name="value_type"></a> Stack::Value_type (STL/CLR)
+## <a name="value_type"></a> stack::value_type (STL/CLR)
 
 Type d’un élément.
 
@@ -1152,7 +1152,7 @@ int main()
 c b a
 ```
 
-## <a name="op_neq"></a> opérateur ! = (pile) (STL/CLR)
+## <a name="op_neq"></a> operator!= (stack) (STL/CLR)
 
 Comparaison différent de la pile.
 
@@ -1365,7 +1365,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> opérateur == (pile) (STL/CLR)
+## <a name="op_eq"></a> operator== (stack) (STL/CLR)
 
 Pile de comparaison égale.
 

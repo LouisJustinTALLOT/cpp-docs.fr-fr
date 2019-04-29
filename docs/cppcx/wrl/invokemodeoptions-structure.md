@@ -8,11 +8,11 @@ helpviewer_keywords:
 - InvokeModeOptions structure
 - InvokeMode enum
 ms.openlocfilehash: 0e5b45042c9959b87ad5db97ab755e49de469149
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386042"
 ---
 # <a name="invokemodeoptions-structure"></a>Invokemodeoptions, Structure
 

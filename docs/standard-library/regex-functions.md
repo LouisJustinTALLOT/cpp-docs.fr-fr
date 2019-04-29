@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::swap [C++]
 ms.openlocfilehash: 47b3ae9d59db7c39d7b9667038d216f24530d5dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369603"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt;, fonctions
 
@@ -120,7 +120,7 @@ Résultats de correspondances. Correspond au type Elem : [smatch](../standard-l
 *ptr*<br/>
 Pointeur vers le début de la séquence à mettre en correspondance. Si *ptr* est `char*`, puis utilisez `cmatch` et `regex`. Si *ptr* est `wchar_t*` ensuite utiliser `wcmatch` et `wregex`.
 
-*RE*<br/>
+*re*<br/>
 Expression régulière à mettre en correspondance. Type `regex` pour `string` et `char*`, ou `wregex` pour `wstring` et `wchar_t*`.
 
 *str*<br/>
@@ -220,7 +220,7 @@ basic_string<Elem> regex_replace(
 
 ### <a name="parameters"></a>Paramètres
 
-*Outlt*<br/>
+*OutIt*<br/>
 Type d’itérateur pour les remplacements.
 
 *BidIt*<br/>
@@ -241,7 +241,7 @@ Indicateurs pour les correspondances.
 *first*<br/>
 Début de la séquence à mettre en correspondance.
 
-*FMT*<br/>
+*fmt*<br/>
 Format des remplacements.
 
 *last*<br/>
@@ -250,7 +250,7 @@ Fin de la séquence à mettre en correspondance.
 *out*<br/>
 Itérateur de sortie.
 
-*RE*<br/>
+*re*<br/>
 Expression régulière à mettre en correspondance.
 
 *str*<br/>
@@ -389,7 +389,7 @@ Résultats de correspondances.
 *ptr*<br/>
 Pointeur vers le début de la séquence à mettre en correspondance.
 
-*RE*<br/>
+*re*<br/>
 Expression régulière à mettre en correspondance.
 
 *str*<br/>

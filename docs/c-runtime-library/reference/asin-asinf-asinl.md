@@ -30,11 +30,11 @@ helpviewer_keywords:
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
 ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347962"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -66,9 +66,9 @@ Par défaut, si *x* est inférieur à -1 ou supérieur à 1, **asin** retourne u
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NON VALIDE**|**_DOMAINE**|
-|+ **QNAN**, **IND**|none|**_DOMAINE**|
-|&#124;x&#124;>1|**NON VALIDE**|**_DOMAINE**|
+|± ∞|**NON VALIDE**|**_DOMAIN**|
+|± **QNAN**, **IND**|none|**_DOMAIN**|
+|&#124;x&#124;>1|**NON VALIDE**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Notes
 
@@ -78,7 +78,7 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **a
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------|-|
-|**ASIN**, **asinf**, **asinl**|\<math.h>|\<cmath> ou \<math.h>|
+|**asin**, **asinf**, **asinl**|\<math.h>|\<cmath> ou \<math.h>|
 
 ## <a name="example"></a>Exemple
 

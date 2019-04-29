@@ -24,11 +24,11 @@ helpviewer_keywords:
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
 ms.openlocfilehash: e170ce67d22c0d97825a7eb754546a29daac6d89
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347754"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -79,7 +79,7 @@ Le **bsearch** fonction effectue une recherche binaire dans un tableau trié de 
 
 Cette fonction valide ses paramètres. Si *comparer*, *clé* ou *nombre* est **NULL**, ou si *base* est **NULL**et *nombre* est différent de zéro, ou si *largeur* est égal à zéro, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur `EINVAL` et la fonction retourne **NULL**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
 ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334877"
 ---
 # <a name="fclose-fcloseall"></a>fclose, _fcloseall
 
@@ -47,7 +47,7 @@ int _fcloseall( void );
 
 ### <a name="parameters"></a>Paramètres
 
-*flux de données*<br/>
+*stream*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -62,7 +62,7 @@ Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_d
 
 Le **_fcloseall** fonction ferme tous les flux ouverts sauf **stdin**, **stdout**, **stderr** (et, dans MS-DOS, **_stdaux**  et **_stdprn**). Ferme et supprime tous les fichiers temporaires créés par également **tmpfile**. Dans les deux fonctions, toutes les mémoires tampons associées au flux sont vidées avant la fermeture. Les mémoires tampons allouées par le système sont libérées quand le flux est fermé. Mémoires tampons assignées par l’utilisateur avec **setbuf** et **setvbuf** ne sont pas automatiquement libérées.
 
-**Remarque :** Quand ces fonctions sont utilisées pour fermer un flux, le descripteur de fichier sous-jacent et le handle de fichier de système d’exploitation (ou socket) sont fermés, ainsi que le flux. Par conséquent, si le fichier a été ouvert à l’origine en tant que fichier gérer ou descripteur de fichier et est fermé avec **fclose**, n’appelez pas également **_close** à fermer le descripteur de fichier ; n’appelez pas la fonction Win32  **CloseHandle** pour fermer le handle de fichier.
+**Remarque :** Lorsque ces fonctions sont utilisées pour fermer un flux de données, le sous-jacent descripteur de fichier et du système d’exploitation handle de fichier (ou socket) est fermé, ainsi que le flux. Par conséquent, si le fichier a été ouvert à l’origine en tant que fichier gérer ou descripteur de fichier et est fermé avec **fclose**, n’appelez pas également **_close** à fermer le descripteur de fichier ; n’appelez pas la fonction Win32  **CloseHandle** pour fermer le handle de fichier.
 
 **fclose** et **_fcloseall** inclure du code pour vous protéger contre les interférences avec d’autres threads. Pour la version sans verrouillage d’un **fclose**, consultez **_fclose_nolock**.
 

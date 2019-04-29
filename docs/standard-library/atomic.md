@@ -49,11 +49,11 @@ f1_keywords:
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
 ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376599"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -78,7 +78,7 @@ Une opération atomique a deux propriétés clés qui vous aident à utiliser pl
 
 Sur certaines plateformes, il n’est pas possible d’implémenter efficacement des opérations atomiques pour certains types sans utiliser de verrous `mutex`. Un type atomique est *sans verrou* si aucune opération atomique sur ce type utilise un verrou.
 
-**C++11** : Dans les gestionnaires de signal, vous pouvez effectuer des opérations atomiques sur un objet `obj` si `obj.is_lock_free()` ou `atomic_is_lock_free(x)` ont la valeur true.
+**C ++ 11**: Dans les gestionnaires de signal, vous pouvez effectuer des opérations atomiques sur un objet `obj` si `obj.is_lock_free()` ou `atomic_is_lock_free(x)` sont remplies.
 
 La classe [atomic_flag](../standard-library/atomic-flag-structure.md) fournit un type atomique minimal qui contient un **bool** indicateur. Ses opérations sont toujours sans verrou.
 
@@ -113,7 +113,7 @@ Pour chacun des types intégraux, il existe un type d’atomique nommé correspo
 |`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
-|`atomic_ullong`|**long long non signé**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**unsigned long long**|ATOMIC_LLONG_LOCK_FREE|
 
 Des noms typedef existent pour les spécialisations du modèle atomique pour certains types qui sont définis dans l’en-tête \<inttypes.h>.
 
@@ -152,14 +152,14 @@ Des noms typedef existent pour les spécialisations du modèle atomique pour cer
 
 ## <a name="structs"></a>Structs
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[atomic, structure](../standard-library/atomic-structure.md)|Décrit un objet qui effectue des opérations atomiques sur une valeur stockée.|
 |[atomic_flag, structure](../standard-library/atomic-flag-structure.md)|Décrit un objet qui définit et efface atomiquement un **bool** indicateur.|
 
 ## <a name="enums"></a>Enums
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[memory_order, énumération](../standard-library/atomic-enums.md#memory_order_enum)|Fournit les noms symboliques des opérations de synchronisation sur les emplacements de mémoire. Ces opérations affectent l’affichage des assignations d’un thread dans un autre thread.|
 
@@ -167,7 +167,7 @@ Des noms typedef existent pour les spécialisations du modèle atomique pour cer
 
 Dans la liste suivante, les fonctions qui ne se terminent pas par `_explicit` ont la sémantique du `_explicit` correspondant, sauf qu’elles ont les arguments [memory_order](../standard-library/atomic-enums.md#memory_order_enum) implicites de `memory_order_seq_cst`.
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Effectue une opération *atomique de comparaison et d’échange*.|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Effectue une opération *atomique de comparaison et d’échange*.|

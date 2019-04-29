@@ -33,11 +33,11 @@ helpviewer_keywords:
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
 ms.openlocfilehash: 8df36c06fb3ca9af9be4cf704998946b3eaf9a6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334942"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -74,7 +74,7 @@ Le **fabs** fonctions retournent la valeur absolue de l’argument *x*. Aucun re
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|aucun|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
 
 ## <a name="remarks"></a>Notes
 
