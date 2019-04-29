@@ -6,11 +6,11 @@ f1_keywords:
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
 ms.openlocfilehash: d790833e7dcecb5776d2adecd5e6bc1f681db1cf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337685"
 ---
 # <a name="concurrency-namespace-operators"></a>espace de noms d’accès concurrentiel opérateurs
 
@@ -107,7 +107,7 @@ Seconde tâche à associer à la tâche obtenue.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Tâche qui s'effectue correctement lorsque les deux tâches d'entrée se sont correctement déroulées. Si les tâches d'entrée sont de type `T`, le résultat de cette fonction sera `task<std::vector<T>>`. Si les tâches d’entrée sont de type `void`, la tâche de sortie sera également `task<void>`.
+Tâche qui s'effectue correctement lorsque les deux tâches d'entrée se sont correctement déroulées. Si les tâches d’entrée sont de type `T`, le résultat de cette fonction sera `task<std::vector<T>>`. Si les tâches d’entrée sont de type `void`, la tâche de sortie sera également `task<void>`.
 
 ### <a name="remarks"></a>Notes
 

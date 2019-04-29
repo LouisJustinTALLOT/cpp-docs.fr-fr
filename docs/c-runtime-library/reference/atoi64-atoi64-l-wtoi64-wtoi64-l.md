@@ -47,11 +47,11 @@ helpviewer_keywords:
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
 ms.openlocfilehash: c80480be8895db6afe499d5426b91dcde786d654
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341533"
 ---
 # <a name="atoi64-atoi64l-wtoi64-wtoi64l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
@@ -100,7 +100,7 @@ La chaîne d’entrée est une séquence de caractères qui peut être interpré
 
 Le *str* l’argument de **_atoi64** a la forme suivante :
 
-> [*espace blanc*] [*connexion*] [*chiffres*]
+> [*whitespace*] [*sign*] [*digits*]
 
 Un *espace blanc* se compose de caractères espace ou tabulation, qui sont ignorés ; *connexion* est soit plus (+) ou moins (-) ; et *chiffres* sont un ou plusieurs chiffres.
 

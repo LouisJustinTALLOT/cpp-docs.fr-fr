@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
 ms.openlocfilehash: c4a85ebeb45552c6f5355853de2a45766d6bc984
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339895"
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 

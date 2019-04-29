@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
 ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340714"
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 
@@ -72,13 +72,13 @@ L’argument (également appelé phase) de *z*. Le résultat est dans l’interv
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **carg** acceptant **_Fcomplex** ou **_Lcomplex** valeurs et retournent **float** ou **long** **double** valeurs. Dans un programme C, **carg** prend toujours un **_Dcomplex** valeur et retourne un **double** valeur.
+Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **carg** acceptant **_Fcomplex** ou **_Lcomplex** valeurs et retournent **float**ou **long** **double** valeurs. Dans un programme C, **carg** prend toujours un **_Dcomplex** valeur et retourne un **double** valeur.
 
 ## <a name="requirements"></a>Configuration requise
 
-|Routine|En-tête C|En-tête C++|
+|Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
+|**carg**,               **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

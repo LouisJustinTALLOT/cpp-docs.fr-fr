@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4545
 ms.assetid: 43f8f34f-ed46-4661-95c0-c588c577ff73
 ms.openlocfilehash: 59e8bf18302d94ac609773e36a782f1457c8db6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352885"
 ---
 # <a name="compiler-warning-level-1-c4545"></a>Avertissement du compilateur (niveau 1) C4545
 

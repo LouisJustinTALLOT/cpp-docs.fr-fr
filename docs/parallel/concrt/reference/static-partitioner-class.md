@@ -9,11 +9,11 @@ helpviewer_keywords:
 - static_partitioner class
 ms.assetid: 2b3dbdf0-6eb9-49f6-8639-03df1d974143
 ms.openlocfilehash: 5120e3c53dc00ba9d5c3a4218efe1dcfb8f92e28
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337386"
 ---
 # <a name="staticpartitioner-class"></a>static_partitioner, classe
 
@@ -38,7 +38,7 @@ class static_partitioner;
 
 `static_partitioner`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** ppl.h
 

@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
 ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334864"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -65,7 +65,7 @@ La mémoire tampon fournie destinée à contenir le résultat de la conversion.
 *sizeInBytes*<br/>
 Taille de la mémoire tampon en octets.
 
-*valeur*<br/>
+*value*<br/>
 Nombre à convertir.
 
 *count*<br/>
@@ -118,7 +118,7 @@ La version de débogage de cette fonction remplit d’abord la mémoire tampon a
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-**Bibliothèques :** toutes les versions des [fonctionnalités de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliothèques :** Toutes les versions de la [fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Exemple
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
 ms.openlocfilehash: e1b787e7149afe93fb50cc1e6ceaecba2e787876
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384247"
 ---
 # <a name="compiler-warning-level-1-c4291"></a>Avertissement du compilateur (niveau 1) C4291
 

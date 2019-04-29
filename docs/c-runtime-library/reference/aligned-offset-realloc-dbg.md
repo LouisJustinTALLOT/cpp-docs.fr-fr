@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _aligned_offset_realloc_dbg function
 ms.assetid: 64e30a12-887e-453b-aea8-aed793fca9d8
 ms.openlocfilehash: 7684a752f489eb726b2105b1055b6da1e86e9cd1
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341572"
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
 
@@ -54,7 +54,7 @@ Pointeur de bloc de mémoire actif.
 *size*<br/>
 Taille de l'allocation de mémoire.
 
-*Alignement*<br/>
+*alignment*<br/>
 Valeur d'alignement, qui doit être un entier à puissance 2.
 
 *offset*<br/>

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - DLLs [C++], creating
 ms.assetid: 0214dd41-35ad-43ab-b892-e636e038621a
 ms.openlocfilehash: c750fd94e21eec39a25acf216a452faaa277bf7c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320407"
 ---
 # <a name="noentry-no-entry-point"></a>/NOENTRY (Aucun point d'entrée)
 
@@ -48,5 +48,5 @@ Utilisez cette option pour empêcher LINK de lier une référence à `_main` dan
 ## <a name="see-also"></a>Voir aussi
 
 [Création d’une DLL de ressource uniquement](../creating-a-resource-only-dll.md)<br/>
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

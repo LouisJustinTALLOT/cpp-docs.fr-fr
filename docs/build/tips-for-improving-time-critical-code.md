@@ -31,11 +31,11 @@ helpviewer_keywords:
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
 ms.openlocfilehash: 97a9a54be1b322edfe8cfeca84e03f9a6766b8fe
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314713"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Conseils pour l'amélioration du code à durée critique
 
@@ -101,13 +101,13 @@ Voici quelques conseils généraux en matière de tri :
 
 - Pensez à la localité de référence de l'algorithme de tri et aux données sur lesquelles vous prévoyez qu'il s'exécutera.
 
-Il existe moins d'alternatives pour les recherches que pour le tri. Si la recherche dépend de façon critique du temps, une recherche binaire ou une recherche dans une table de hachage est quasiment toujours la meilleure solution, mais pour ce qui est du tri, vous devez garder à l'esprit la localité. Une recherche linéaire dans un petit tableau peut être plus rapide qu'une recherche binaire dans une structure de données avec de nombreux pointeurs qui génère des défauts de page ou des échecs dans le cache.
+Il existe moins d'alternatives pour les recherches que pour le tri. Si la recherche dépend de façon critique du temps, une recherche binaire ou une recherche dans une table de hachage est quasiment toujours la meilleure solution, mais pour ce qui est du tri, vous devez garder à l’esprit la localité. Une recherche linéaire dans un petit tableau peut être plus rapide qu'une recherche binaire dans une structure de données avec de nombreux pointeurs qui génère des défauts de page ou des échecs dans le cache.
 
 ##  <a name="_core_mfc_and_class_libraries"></a> MFC et les bibliothèques de classes
 
-La bibliothèque MFC (Microsoft Foundation Classes) peut grandement simplifier l'écriture de code. Lorsque vous écrivez du code fortement dépendant du temps, vous devez être conscient de la surcharge inhérente à certaines classes. Examinez le code MFC qu'utilise votre code fortement dépendant du temps pour voir s'il satisfait à vos exigences en matière de performances. La liste suivante identifie les fonctions et classes MFC dont vous devez être conscient :
+La bibliothèque MFC (Microsoft Foundation Classes) peut grandement simplifier l'écriture de code. Lorsque vous écrivez du code fortement dépendant du temps, vous devez être conscient de la surcharge inhérente à certaines classes. Examinez le code MFC qu’utilise votre code fortement dépendant du temps pour voir s’il satisfait à vos exigences en matière de performances. La liste suivante identifie les fonctions et classes MFC dont vous devez être conscient :
 
-- `CString` MFC appelle la bibliothèque Runtime C pour allouer de mémoire pour un [CString](../atl-mfc-shared/reference/cstringt-class.md) dynamiquement. Dans l'ensemble, `CString` est aussi efficace que toute autre chaîne allouée dynamiquement. Comme pour toute chaîne allouée dynamiquement, il a la surcharge de l'allocation et de la libération dynamiques. Souvent, un tableau `char` simple sur la pile peut servir le même objectif et être plus rapide. N'utilisez pas `CString` pour stocker une chaîne constante. Utilisez plutôt `const char *`. Toute opération que vous effectuez avec un objet `CString` présente une certaine surcharge. À l’aide de la bibliothèque du run-time [fonctions de chaîne](../c-runtime-library/string-manipulation-crt.md) peut être plus rapide.
+- `CString` MFC appelle la bibliothèque Runtime C pour allouer de mémoire pour un [CString](../atl-mfc-shared/reference/cstringt-class.md) dynamiquement. Dans l'ensemble, `CString` est aussi efficace que toute autre chaîne allouée dynamiquement. Comme pour toute chaîne allouée dynamiquement, il a la surcharge de l’allocation et de la mise en production dynamiques. Souvent, un tableau `char` simple sur la pile peut servir le même objectif et être plus rapide. N'utilisez pas `CString` pour stocker une chaîne constante. Utilisez plutôt `const char *`. Toute opération que vous effectuez avec un objet `CString` présente une certaine surcharge. À l’aide de la bibliothèque du run-time [fonctions de chaîne](../c-runtime-library/string-manipulation-crt.md) peut être plus rapide.
 
 - `CArray` Un [CArray](../mfc/reference/carray-class.md) fournit un tableau standard ne que votre programme a ne peut-être pas besoin de souplesse. Si vous connaissez les limites spécifiques du tableau, vous pouvez utiliser un tableau fixe global à la place. Si vous utilisez `CArray`, utilisez `CArray::SetSize` pour établir sa taille et spécifiez le nombre d'éléments dont il croîtra quand une réallocation sera nécessaire. Dans le cas contraire, l'ajout d'éléments peut entraîner la réallocation et la copie fréquentes de votre tableau, ce qui est inefficace et peut fragmenter la mémoire. De plus, sachez que si vous insérez un élément dans un tableau, l'objet `CArray` déplace les éléments suivants dans la mémoire et peut être amené à augmenter la taille du tableau. Ces actions peuvent provoquer des défauts de page et des échecs dans le cache. Si vous examinez le code que la bibliothèque MFC utilise, vous pouvez voir que vous pouvez écrire quelque chose de plus spécifique dans votre scénario pour améliorer les performances. Comme `CArray` est un modèle, par exemple, vous pouvez fournir des spécialisations de `CArray` pour des types spécifiques.
 

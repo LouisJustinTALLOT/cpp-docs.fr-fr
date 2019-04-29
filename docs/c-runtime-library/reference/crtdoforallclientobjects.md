@@ -24,11 +24,11 @@ helpviewer_keywords:
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
 ms.openlocfilehash: 86268bd9ac49c8ea27f715404236bcb9291f5d8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339713"
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 
@@ -45,7 +45,7 @@ void _CrtDoForAllClientObjects(
 
 ### <a name="parameters"></a>Paramètres
 
-*NFP*<br/>
+*pfn*<br/>
 Pointeur vers la fonction de rappel de la fonction fournie par l'application. Le premier paramètre de cette fonction pointe vers les données. Le deuxième paramètre est le pointeur de contexte qui est passé à l’appel à **_CrtDoForAllClientObjects**.
 
 *context*<br/>
@@ -69,11 +69,11 @@ Si *pfn* est **NULL**, le Gestionnaire de paramètre non valide est appelé, com
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-**Bibliothèques :** uniquement les versions de débogage des bibliothèques Runtime C.
+**Bibliothèques :** Les versions Debug de runtime bibliothèques C uniquement.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Routines de débogage](../../c-runtime-library/debug-routines.md)<br/>
 [_CrtSetDbgFlag](crtsetdbgflag.md)<br/>
-[Fonctions de création de rapports d’état du tas](/visualstudio/debugger/crt-debug-heap-details)<br/>
+[Fonctions de création de rapports sur l’état du tas](/visualstudio/debugger/crt-debug-heap-details)<br/>
 [_CrtReportBlockType](crtreportblocktype.md)<br/>

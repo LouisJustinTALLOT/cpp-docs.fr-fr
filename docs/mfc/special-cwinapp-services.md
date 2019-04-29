@@ -31,11 +31,11 @@ helpviewer_keywords:
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
 ms.openlocfilehash: 910660253c9d306b13294a710021a6bbd36c1952
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307313"
 ---
 # <a name="special-cwinapp-services"></a>Services CWinApp spéciaux
 
@@ -82,4 +82,4 @@ Ces entrées sont stockées comme suit :
 
 ## <a name="see-also"></a>Voir aussi
 
-[CWinApp : La classe d’Application](../mfc/cwinapp-the-application-class.md)
+[CWinApp : Classe d’application](../mfc/cwinapp-the-application-class.md)

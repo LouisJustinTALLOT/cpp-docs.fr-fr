@@ -26,11 +26,11 @@ helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
 ms.openlocfilehash: 6033da1347e116b4b68cf719a461a1cf6ff5d04f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385158"
 ---
 # <a name="targetblock-class"></a>target_block, classe
 
@@ -99,7 +99,7 @@ Le type de processeur pour le traitement du message.
 
 `target_block`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** agents.h
 

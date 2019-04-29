@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2374
 ms.assetid: 73b51965-e91c-4e21-9732-f71c1449d22e
 ms.openlocfilehash: 44f2d9d8c80af2111e7c63d976ef39cfa4809e48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338803"
 ---
 # <a name="compiler-error-c2374"></a>Erreur du compilateur C2374
 
-'identificateur' : redéfinition ; initialisation multiple
+'identificateur' : redéfinition ; initialisation multiple
 
 L’identificateur est initialisé plusieurs fois.
 

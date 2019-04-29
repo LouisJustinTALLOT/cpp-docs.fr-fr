@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2396
 ms.assetid: 1b515ef6-7af4-400f-b4ed-564313ea15f6
 ms.openlocfilehash: d320f78937fc60910bbed4a5b1b89841ea674fb7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62303513"
 ---
 # <a name="compiler-error-c2396"></a>Erreur du compilateur C2396
 
-' your_type::operator '' : functionnot de conversion définie par l’utilisateur CLR ou WinRT valide. La conversion doit être opérée depuis ou vers : 'T^', 'T^%', 'T^&', où T = 'your_type'
+'your_type::operator'type'' : CLR ou WinRT conversion définie par l’utilisateur functionnot valide. Doit soit opérée depuis ou vers : ' T ^', ' t ^ %', ' t ^ &', où T = 'your_type'
 
 Une fonction de conversion dans un type managé ou Windows Runtime ne disposait pas d'au moins un paramètre dont le type est le même que le type qui contient la fonction de conversion.
 

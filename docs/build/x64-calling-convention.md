@@ -4,11 +4,11 @@ description: Détails de la convention d’appel par défaut x64 ABI.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
 ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313614"
 ---
 # <a name="x64-calling-convention"></a>convention d’appel de x64
 
@@ -97,7 +97,7 @@ func2() {   // RCX = 2, RDX = XMM1 = 1.0, and R8 = 7
 
 Valeur de retour scalaire qui s’adapte à 64 bits est retournée via RAX ; Cela inclut les types __m64. Les types non scalaires, y compris les valeurs float, double et types de vecteur, tels que [__m128](../cpp/m128.md), [__m128i](../cpp/m128i.md), [__m128d](../cpp/m128d.md) sont retournées dans XMM0. L'état des bits non utilisés dans la valeur retournée dans RAX ou XMM0 est non défini.
 
-Les types définis par l'utilisateur peuvent être retournés par valeur depuis des fonctions globales et des fonctions de membres statiques. Pour retourner un type défini par l’utilisateur par valeur dans RAX, il doit avoir une longueur de 1, 2, 4, 8, 16, 32 ou 64 bits. Il ne doit également avoir aucun constructeur défini par l’utilisateur, un destructeur ou un opérateur d’assignation de copie ; Aucun membre des données non statiques privé ou protégé ; Aucun membre de données non statiques de type référence ; aucune classe de base ; aucune fonction virtuelle ; et aucun membre de données qui ne répondent pas également à ces exigences. (Il s'agit essentiellement de la définition d'un type POD de C++ 03. Étant donné que la définition a changé dans la norme C ++ 11, nous déconseillons l’utilisation `std::is_pod` pour ce test.) Sinon, l’appelant prend la responsabilité d’allouer de la mémoire et de passer un pointeur pour la valeur de retour comme premier argument. Les arguments suivants sont décalés d'un argument vers la droite. Le même pointeur doit être retourné par l'appelé dans RAX.
+Les types définis par l'utilisateur peuvent être retournés par valeur depuis des fonctions globales et des fonctions de membres statiques. Pour retourner un type défini par l’utilisateur par valeur dans RAX, il doit avoir une longueur de 1, 2, 4, 8, 16, 32 ou 64 bits. Il ne doit également avoir aucun constructeur défini par l’utilisateur, un destructeur ou un opérateur d’assignation de copie ; Aucun membre des données non statiques privé ou protégé ; Aucun membre de données non statiques de type référence ; aucune classe de base ; aucune fonction virtuelle ; et aucun membre de données qui ne répondent pas également à ces exigences. (Il s'agit essentiellement de la définition d'un type POD de C++ 03. Étant donné que la définition a changé dans la norme C ++ 11, nous déconseillons l’utilisation `std::is_pod` pour ce test.) Sinon, l’appelant prend la responsabilité d’allouer de la mémoire et de passer un pointeur pour la valeur de retour comme premier argument. Les arguments suivants sont décalés d’un argument vers la droite. Le même pointeur doit être retourné par l'appelé dans RAX.
 
 Ces exemples montrent comment les paramètres et les valeurs de retour sont passés pour les fonctions avec les déclarations spécifiées :
 

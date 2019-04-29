@@ -117,11 +117,11 @@ helpviewer_keywords:
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
 ms.openlocfilehash: 04c8a60f546700be8eeb2ec8a948e0ea321d12f8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324304"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -245,7 +245,7 @@ L’illustration suivante montre un exemple `CTaskDialog` pour illustrer l’emp
 ![Exemple de CTaskDialog](../../mfc/reference/media/ctaskdialogsample.png "exemple de CTaskDialog") <br/>
 Exemple de CTaskDialog
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Au minimum le système d’exploitation requis :** Windows Vista
 
@@ -1623,4 +1623,4 @@ Les valeurs de *wParam* et *lParam* dépendent du message généré spécifique.
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[Procédure pas à pas : Ajout d’une classe CTaskDialog à une Application](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)
+[Procédure pas à pas : Ajout d’une classe CTaskDialog à une application](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)

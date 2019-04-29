@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
 ms.openlocfilehash: caffa84052f774803b92730f7906bf53cb3c824a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348365"
 ---
 # <a name="multimap-class"></a>multimap, classe
 
@@ -515,7 +515,7 @@ Nombre d'éléments dont les clés de tri correspondent à la clé de paramètre
 
 La fonction membre retourne le nombre d'éléments dans la plage
 
-\[ lower_bound (*clé*), upper_bound (*clé*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 qui ont une valeur de clé *clé*.
 
@@ -993,10 +993,10 @@ size_type erase(
 *Where*<br/>
 Position de l’élément à supprimer.
 
-*Premier*<br/>
+*First*<br/>
 Position du premier élément à supprimer.
 
-*Dernière*<br/>
+*Last*<br/>
 Position juste après le dernier élément à supprimer.
 
 *Key*<br/>
@@ -1216,8 +1216,8 @@ IList);
 |*Val*|Valeur d'un élément à insérer dans la classe multimap.|
 |*Where*|Emplacement où commencer à rechercher le point d'insertion correct. (Si ce point précède immédiatement *où*, insertion peut se produire dans le temps fixe amorti au lieu de temps logarithmique.)|
 |*ValTy*|Paramètre de modèle qui spécifie le type d’argument que la classe map peut utiliser pour construire un élément de [value_type](../standard-library/map-class.md#value_type)et effectue un transfert parfait *Val* en tant qu’argument.|
-|*Premier*|Position du premier élément à copier.|
-|*Dernière*|Position juste au-delà du dernier élément à copier.|
+|*First*|Position du premier élément à copier.|
+|*Last*|Position juste au-delà du dernier élément à copier.|
 |*InputIterator*|Argument de fonction de modèle qui remplit les conditions requises par un [itérateur d’entrée](../standard-library/input-iterator-tag-struct.md) qui pointe vers des éléments d’un type pouvant servir à construire des objets [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|[initializer_list](../standard-library/initializer-list.md) à partir de laquelle copier les éléments.|
 
@@ -1654,10 +1654,10 @@ multimap(
 |Paramètre|Description|
 |-|-|
 |*Al*|Classe d’allocateur de stockage à utiliser pour cet objet multimap, qui est par défaut Allocator.|
-|*Comp.*|Fonction de comparaison de type `constTraits` utilisée pour ordonner les éléments dans le mappage (par défaut, `Traits`).|
+|*Comp*|Fonction de comparaison de type `constTraits` utilisée pour ordonner les éléments dans le mappage (par défaut, `Traits`).|
 |*Droite*|Classe map dont l’ensemble construit doit être une copie.|
-|*Premier*|Position du premier élément de la plage d'éléments à copier.|
-|*Dernière*|Position du premier élément au-delà de la plage d'éléments à copier.|
+|*First*|Position du premier élément de la plage d'éléments à copier.|
+|*Last*|Position du premier élément au-delà de la plage d'éléments à copier.|
 |*IList*|Initializer_list depuis laquelle copier les éléments.|
 
 ### <a name="remarks"></a>Notes

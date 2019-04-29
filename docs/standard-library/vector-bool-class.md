@@ -16,11 +16,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
 ms.openlocfilehash: f7663987b2759c762d1f6c1604923478915f5726
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364998"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt;, classe
 
@@ -142,7 +142,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |Paramètre|Description|
 |-|-|
-|*points de vente*|Position de l'élément `vector<bool>`.|
+|*Pos*|Position de l'élément `vector<bool>`.|
 
 ### <a name="return-value"></a>Valeur de retour
 
