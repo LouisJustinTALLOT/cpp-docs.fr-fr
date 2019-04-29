@@ -21,11 +21,11 @@ helpviewer_keywords:
 - execve function
 ms.assetid: f28aabe4-fd76-422e-a0e4-80864736d245
 ms.openlocfilehash: 6ed2bc258dfb0b627b23391b90e94222e9803a6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288333"
 ---
 # <a name="execve"></a>execve
 

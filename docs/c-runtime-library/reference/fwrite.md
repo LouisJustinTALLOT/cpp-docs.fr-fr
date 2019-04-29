@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
 ms.openlocfilehash: b4d6b9ce4fb66ee545f52946e28e4984d9e4f924
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287545"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -55,7 +55,7 @@ Taille de l'élément, en octets.
 *count*<br/>
 Nombre maximal d'éléments à écrire.
 
-*flux de données*<br/>
+*stream*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour

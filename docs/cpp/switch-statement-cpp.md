@@ -11,11 +11,11 @@ helpviewer_keywords:
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
 ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267087"
 ---
 # <a name="switch-statement-c"></a>switch, instruction (C++)
 
@@ -106,7 +106,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : une instruction switch peut introduire et initialiser une variable dont la portée est limitée au bloc de l’instruction switch :
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) :  Une instruction switch peut introduire et initialiser une variable dont la portée est limitée au bloc de l’instruction switch :
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())

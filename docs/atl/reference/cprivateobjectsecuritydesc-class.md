@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
 ms.openlocfilehash: 99b47c15af4cdb87fb35d5c7342ea2719d341868
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278148"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Cprivateobjectsecuritydesc, classe
 
@@ -65,7 +65,7 @@ Pour une présentation du modèle de contrôle d’accès dans Windows, consulte
 
 `CPrivateObjectSecurityDesc`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsecurity.h
 

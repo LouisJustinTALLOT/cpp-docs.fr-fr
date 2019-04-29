@@ -3,11 +3,11 @@ title: /GUARD (activer les contrôles de protection)
 ms.date: 11/04/2016
 ms.assetid: 72758e23-70ac-4616-94d7-d767477406d1
 ms.openlocfilehash: e48921e57977cc7a1ca6a580fed78a6a2a960a02
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292248"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (activer les contrôles de protection)
 
@@ -38,5 +38,5 @@ L'option /GUARD:CF doit être spécifiée dans le compilateur et l'éditeur de l
 ## <a name="see-also"></a>Voir aussi
 
 [/guard (Activer la protection du flux de contrôle)](guard-enable-control-flow-guard.md)<br/>
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

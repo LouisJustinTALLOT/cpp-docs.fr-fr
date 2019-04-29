@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
 ms.openlocfilehash: 0624cbfb4870ca87efebac01a8de682b588a4ca3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335376"
 ---
 # <a name="controlfps"></a>_controlfp_s
 
@@ -55,7 +55,7 @@ Valeur en bits du mot de contrôle actuelle.
 *newControl*<br/>
 Nouvelles valeurs en bits du mot de contrôle.
 
-*Masque*<br/>
+*mask*<br/>
 Masque des bits du nouveau mot de contrôle à définir.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -68,7 +68,7 @@ Le **_controlfp_s** (fonction) est une version indépendante de la plateforme et
 
 Si la valeur de *masque* est égal à 0, **_controlfp_s** Obtient le mot de contrôle à virgule flottante et stocke la valeur récupérée dans *currentControl*.
 
-Si *masque* est différent de zéro, une nouvelle valeur pour le mot de contrôle est définie : pour tout bit est défini (autrement dit, égal à 1) dans *masque*, le bit correspondant dans *nouveau* est utilisé pour mettre à jour le contrôle Word. En d’autres termes, *fpcntrl* = ((*fpcntrl* & ~*masque*) &#124; (*newControl* & *masque* )) où *fpcntrl* est le mot de contrôle à virgule flottante. Dans ce scénario, *currentControl* est définie sur la valeur après la modification effectuée ; il n’est pas l’ancienne valeur de bit du mot de contrôle.
+Si *masque* est différent de zéro, une nouvelle valeur pour le mot de contrôle est définie : Pour un bit qui est défini (autrement dit, égal à 1) dans *masque*, le bit correspondant dans *nouveau* est utilisé pour mettre à jour le mot de contrôle. En d’autres termes, *fpcntrl* = ((*fpcntrl* & ~*masque*) &#124; (*newControl* & *masque* )) où *fpcntrl* est le mot de contrôle à virgule flottante. Dans ce scénario, *currentControl* est définie sur la valeur après la modification effectuée ; il n’est pas l’ancienne valeur de bit du mot de contrôle.
 
 > [!NOTE]
 > Par défaut, les bibliothèques d’exécution masquent toutes les exceptions de virgule flottante.

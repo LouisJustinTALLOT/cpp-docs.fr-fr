@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CMFCRibbonCustomizeDialog [MFC], CMFCRibbonCustomizeDialog
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
 ms.openlocfilehash: d73fd05a775ac26f5d289a5233341102f40e9af3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237616"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>Cmfcribboncustomizedialog, classe
 
@@ -62,7 +62,7 @@ Si vous souhaitez utiliser cette classe dans votre application pour afficher le 
 
 [CMFCRibbonCustomizeDialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxribboncustomizedialog.h
 

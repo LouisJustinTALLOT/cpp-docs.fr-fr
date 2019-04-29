@@ -9,11 +9,11 @@ helpviewer_keywords:
 - improper_scheduler_attach class
 ms.assetid: 5a76da0a-091b-4748-8f62-b3a28f674f9e
 ms.openlocfilehash: 2d6a7b53269d305c976bcc596fe85dc018442332
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262474"
 ---
 # <a name="improperschedulerattach-class"></a>improper_scheduler_attach, classe
 
@@ -39,7 +39,7 @@ class improper_scheduler_attach : public std::exception;
 
 `improper_scheduler_attach`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 

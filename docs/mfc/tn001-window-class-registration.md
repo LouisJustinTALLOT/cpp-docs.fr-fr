@@ -9,11 +9,11 @@ helpviewer_keywords:
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
 ms.openlocfilehash: 68c851ae6a6b1b8578df90e2618f257122797aa5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306264"
 ---
 # <a name="tn001-window-class-registration"></a>TN001 : Inscription de classe de fenêtre
 

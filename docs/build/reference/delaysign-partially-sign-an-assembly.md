@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -DELAYSIGN linker option
 ms.assetid: 15244d30-3ecb-492f-a408-ffe81f38de20
 ms.openlocfilehash: 65585b856627ad9fda5a8f8bfad6ad81fef0f81c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293834"
 ---
 # <a name="delaysign-partially-sign-an-assembly"></a>/DELAYSIGN (Signer partiellement un assembly)
 
@@ -67,5 +67,5 @@ Autres options de l’éditeur de liens qui affectent la génération de l’ass
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

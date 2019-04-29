@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
 ms.openlocfilehash: 9308e238c86c7b8a957720228a823688fac289d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62242875"
 ---
 # <a name="compiler-error-c3867"></a>Erreur du compilateur C3867
 
-’fonction’ : liste d’arguments manquante dans l’appel de fonction ; utilisez ’&fonction’ pour créer un pointeur vers membre
+'fonction' : appel de fonction manquant de liste d’arguments ; Utilisez ' & func' pour créer un pointeur vers membre
 
 Vous avez essayé de prendre l'adresse d'une fonction membre sans qualifier la fonction membre avec son nom de classe et l'opérateur d'adresse.
 
@@ -23,7 +23,7 @@ Cette erreur peut également être due à la mise en conformité du compilateur 
 
 ## <a name="example"></a>Exemple
 
-L’erreur C3867 peut provenir du compilateur avec une résolution suggérée équivoque. Si possible, utilisez la classe la plus dérivée.
+L'erreur C3867 peut provenir du compilateur avec une résolution suggérée équivoque. Si possible, utilisez la classe la plus dérivée.
 
 L'exemple suivant génère l'erreur C3867 et montre comment la corriger.
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - await enable coroutine support [C++]
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
 ms.openlocfilehash: c0c8c0183c356900ba8f95d39e427d56eb1ec96b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295000"
 ---
 # <a name="await-enable-coroutine-support"></a>/ await (activer la prise en charge des coroutine)
 
@@ -26,7 +26,7 @@ Utilisez le **/ await** option du compilateur pour activer la prise en charge du
 
 ## <a name="remarks"></a>Notes
 
-Le **/ await** option du compilateur permet la prise en charge du compilateur pour les coroutines C++ et les mots clés **co_await**, **co_yield**, et **co_return**. Cette option est désactivée par défaut. Pour plus d’informations sur la prise en charge pour les coroutines dans Visual Studio, consultez le [Blog de l’équipe Visual Studio](https://blogs.msdn.microsoft.com/vcblog/category/coroutine/). Pour plus d’informations sur la proposition de norme de coroutines, consultez [N4628 Working Draft, la spécification technique d’Extensions C++ pour les Coroutines](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4628.pdf).
+Le **/ await** option du compilateur permet la prise en charge du compilateur de C++ les coroutines et les mots clés **co_await**, **co_yield**, et **co_return**. Cette option est désactivée par défaut. Pour plus d’informations sur la prise en charge pour les coroutines dans Visual Studio, consultez le [Blog de l’équipe Visual Studio](https://blogs.msdn.microsoft.com/vcblog/category/coroutine/). Pour plus d’informations sur la proposition de norme de coroutines, consultez [N4628 Working Draft, la spécification technique d’Extensions C++ pour les Coroutines](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4628.pdf).
 
 Le **/ await** option est disponible à compter de Visual Studio 2015.
 
@@ -45,4 +45,4 @@ Le **/ await** option est disponible à compter de Visual Studio 2015.
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

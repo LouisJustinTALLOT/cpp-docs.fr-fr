@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2089
 ms.assetid: 7c777775-5535-4eea-b6a2-340b71af9560
 ms.openlocfilehash: 0705d9a47dd5574f8a134ae5021d35ecd6f15597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257671"
 ---
 # <a name="compiler-error-c2089"></a>Erreur du compilateur C2089
 

@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
 ms.openlocfilehash: 14ce057c141f22c14361bafd55fce3ccd345d4dd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237389"
 ---
 # <a name="cmfcribboncategory-class"></a>Cmfcribboncategory, classe
 
@@ -252,7 +252,7 @@ Le diagramme suivant illustre une figure de la catégorie d’accueil à partir 
 
 `CMFCRibbonCategory`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxribboncategory.h
 

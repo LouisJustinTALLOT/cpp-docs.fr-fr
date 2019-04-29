@@ -21,11 +21,11 @@ helpviewer_keywords:
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
 ms.openlocfilehash: 07b888b031a38dc2f09404a14e729e26b3eaa019
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235131"
 ---
 # <a name="cfiletime-class"></a>Cfiletime, classe
 
@@ -73,7 +73,7 @@ class CFileTime :  public FILETIME
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CFileTime::Day](#day)|Une donnée membre static stocker le nombre d’intervalles de 100 nanosecondes qui composent un jour.|
 |[CFileTime::Hour](#hour)|Une donnée membre static stocker le nombre d’intervalles de 100 nanosecondes qui composent une heure.|
@@ -107,7 +107,7 @@ Les variables membres constantes static suivantes sont fournies pour simplifier 
 
 `CFileTime`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atltime.h
 

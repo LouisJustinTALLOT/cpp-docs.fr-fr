@@ -36,11 +36,11 @@ helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
 ms.openlocfilehash: 2d4d5d4a5c4d8a52f792cc04a968974967c1e13a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260193"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT, classe
 
@@ -127,7 +127,7 @@ Cette classe remplace obsolète [CComModule (classe)](../../atl/reference/ccommo
 
 `CAtlServiceModuleT`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
 

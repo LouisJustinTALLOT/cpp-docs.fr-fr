@@ -12,11 +12,11 @@ helpviewer_keywords:
 - GX compiler option [C++]
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
 ms.openlocfilehash: 43be8f6d0f080f0d85568ce5b089751fc68f0e8e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292001"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (Activer la gestion des exceptions)
 
@@ -51,5 +51,5 @@ Pour plus d’informations, consultez [gestion des exceptions C++](../../cpp/cpp
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [/EH (Modèle de gestion des exceptions)](eh-exception-handling-model.md)

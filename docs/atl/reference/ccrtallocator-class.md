@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
 ms.openlocfilehash: c08d594e1c0f4d532f46961e266bf6ced98c51b2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259077"
 ---
 # <a name="ccrtallocator-class"></a>Ccrtallocator, classe
 
@@ -41,7 +41,7 @@ class ATL::CCRTAllocator
 
 Cette classe est utilisée par [CHeapPtr](../../atl/reference/cheapptr-class.md) pour fournir des routines d’allocation de la mémoire CRT. La classe équivalent, [CComAllocator](../../atl/reference/ccomallocator-class.md), fournit les mêmes méthodes à l’aide des routines de COM.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcore.h
 

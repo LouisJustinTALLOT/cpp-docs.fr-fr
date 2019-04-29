@@ -9,11 +9,11 @@ helpviewer_keywords:
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
 ms.openlocfilehash: 9e52112bed0f583a3f5652f9213bd5049d543a80
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306146"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017 : Destruction d'objets fenêtres
 
@@ -46,7 +46,7 @@ L’implémentation par défaut de `CWnd::PostNcDestroy` ne fait rien, ce qui co
 Ces classes sont conçues pour être seul alloués sur le tas remplacent le `PostNcDestroy` méthode pour effectuer un **supprimer ce**. Cette instruction libère toute mémoire associée à l’objet C++. Même si la valeur par défaut `CWnd` appels de destructeur `DestroyWindow` si *m_hWnd* est non NULL, cela n’aboutit pas à une récurrence infinie, car le handle pendant la phase de nettoyage sera détaché et NULL.
 
 > [!NOTE]
->  Le système appelle généralement `CWnd::PostNcDestroy` lorsqu’il a traité le message WM_NCDESTROY de Windows et le `HWND` et l’objet fenêtre C++ n’êtes plus connecté. Le système appelle également `CWnd::PostNcDestroy` dans l’implémentation de la plupart des [CWnd::Create](../mfc/reference/cwnd-class.md#create) appelle si l’échec se produit. Les règles de nettoyage automatique sont décrites plus loin dans cette rubrique.
+>  Le système appelle généralement `CWnd::PostNcDestroy` lorsqu’il a traité le message WM_NCDESTROY de Windows et le `HWND` et C++ objet window n’êtes plus connecté. Le système appelle également `CWnd::PostNcDestroy` dans l’implémentation de la plupart des [CWnd::Create](../mfc/reference/cwnd-class.md#create) appelle si l’échec se produit. Les règles de nettoyage automatique sont décrites plus loin dans cette rubrique.
 
 ## <a name="auto-cleanup-classes"></a>Classes de nettoyage automatique
 
@@ -91,7 +91,7 @@ Warning: calling DestroyWindow in CWnd::~CWnd
 
 Dans le cas d’objets C++ Windows qui effectuent le nettoyage automatique, vous devez appeler `DestroyWindow`. Si vous utilisez le **supprimer** opérateur directement, l’allocateur de mémoire de diagnostic MFC vous informera que vous sont libération de mémoire deux fois. Les deux occurrences sont votre premier appel explicite et l’appel indirect à **supprimer cette** dans l’implémentation de nettoyage automatique de `PostNcDestroy`.
 
-Après avoir appelé `DestroyWindow` sur un objet non--nettoyage automatique, l’objet C++ sera toujours, mais *m_hWnd* sera NULL. Après avoir appelé `DestroyWindow` sur un objet de nettoyage automatique, l’objet C++ auront disparu, libérée par l’opérateur de suppression de C++ dans l’implémentation de nettoyage automatique de `PostNcDestroy`.
+Après avoir appelé `DestroyWindow` sur un objet non--nettoyage automatique, le C++ objet sera toujours, mais *m_hWnd* sera NULL. Après avoir appelé `DestroyWindow` sur un objet de nettoyage automatique, l’objet C++ auront disparu, libérée par l’opérateur de suppression de C++ dans l’implémentation de nettoyage automatique de `PostNcDestroy`.
 
 ## <a name="see-also"></a>Voir aussi
 

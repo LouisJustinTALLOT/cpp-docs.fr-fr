@@ -13,11 +13,11 @@ helpviewer_keywords:
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
 ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271799"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modèle de gestion des exceptions)
 
@@ -113,7 +113,7 @@ Toutefois, l’attribut relatif à l’absence de levée d’exceptions ne garan
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [Erreurs et exceptions](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Spécifications d’exception (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [Gestion structurée des exceptions (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

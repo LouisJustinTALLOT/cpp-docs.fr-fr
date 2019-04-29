@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4142
 ms.assetid: 1fdfc3dc-60a2-4f00-b133-20e400f9b7a6
 ms.openlocfilehash: 762f52c9f051a660cce68d424e02fc45422376e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62302278"
 ---
 # <a name="compiler-warning-level-1-c4142"></a>Compilateur avertissement (niveau 1) C4142
 

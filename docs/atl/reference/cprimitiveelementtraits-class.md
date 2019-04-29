@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CPrimitiveElementTraits class
 ms.assetid: 21c1cea8-2c5a-486c-b65c-85490f3ed4e6
 ms.openlocfilehash: 53d039b15c9f4a79956bd86fbb93600854f90e5f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278161"
 ---
 # <a name="cprimitiveelementtraits-class"></a>Cprimitiveelementtraits, classe
 
@@ -59,7 +59,7 @@ Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl
 
 `CPrimitiveElementTraits`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcoll.h
 

@@ -1,5 +1,5 @@
 ---
-title: Platform::IDisposable (interface)
+title: Interface Platform::IDisposable
 ms.date: 02/03/2017
 ms.topic: reference
 f1_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - Platform::IDisposable Interface
 ms.assetid: f4344056-7030-42ed-bc98-b140edffddcd
 ms.openlocfilehash: f114959321c0ed3879a089b944a5ff1b19843118
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257827"
 ---
-# <a name="platformidisposable-interface"></a>Platform::IDisposable (interface)
+# <a name="platformidisposable-interface"></a>Interface Platform::IDisposable
 
 Utilisée pour libérer des ressources non managées.
 
@@ -44,8 +44,8 @@ L’interface IDisposable possède les méthodes suivantes.
 
 ### <a name="requirements"></a>Configuration requise
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme

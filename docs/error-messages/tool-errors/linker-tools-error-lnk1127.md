@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK1127
 ms.assetid: 45404700-1420-4f24-97e1-efb7252ffd8f
 ms.openlocfilehash: 4144e95261df9a16d6cbb094a2785121b3bdfd92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255077"
 ---
 # <a name="linker-tools-error-lnk1127"></a>Erreur des outils Éditeur de liens LNK1127
 

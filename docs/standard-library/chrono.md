@@ -11,11 +11,11 @@ f1_keywords:
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
 ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279097"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -38,7 +38,7 @@ Incluez l’en-tête standard \<chrono> pour définir des classes et des fonctio
 
 ### <a name="structs"></a>Structs
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[common_type, structure](../standard-library/common-type-structure.md)|Décrit les spécialisations de la classe de modèle [common_type](../standard-library/common-type-class.md) pour les instanciations de `duration` et `time_point`.|
 |[duration_values, structure](../standard-library/duration-values-structure.md)|Fournit des valeurs spécifiques pour le paramètre de modèle `duration` `Rep`.|
@@ -89,7 +89,7 @@ Pour plus d’informations sur les types de rapports utilisés dans les typedefs
 |Literal|Description|
 |-------------|-----------------|
 |chrono::hours opérateur "" h(unsigned long long Val)|Spécifie les heures comme valeur intégrale.|
-|chrono::Duration\<double, ratio\<3600 >> opérateur « » h (long double Val)|Spécifie les heures comme valeur à virgule flottante.|
+|chrono::duration\<double, ratio\<3600> > operator "" h(long double Val)|Spécifie les heures comme valeur à virgule flottante.|
 |chrono::minutes (opérateur "" min)(unsigned long long Val)|Spécifie les minutes comme valeur intégrale.|
 |chrono::Duration\<double, ratio\<60 >> (opérateur « » min) (long double Val)|Spécifie les minutes comme valeur à virgule flottante.|
 |chrono::seconds opérateur "" s(unsigned long long Val)|Spécifie les minutes comme valeur intégrale.|

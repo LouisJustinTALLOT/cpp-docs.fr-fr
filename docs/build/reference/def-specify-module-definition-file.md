@@ -12,11 +12,11 @@ helpviewer_keywords:
 - /DEF linker option
 ms.assetid: 6497fa68-65f0-48ca-8f66-b87166fc631a
 ms.openlocfilehash: c08412fb50835485e7941b2bb1db088943387b71
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272306"
 ---
 # <a name="def-specify-module-definition-file"></a>/DEF (Spécifier le fichier de définition de module)
 
@@ -51,5 +51,5 @@ Pour spécifier un fichier .def dans l’environnement de développement, vous d
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

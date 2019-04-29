@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2939
 ms.assetid: 455b050b-f2dc-4b5b-bd6a-e1f81d3d1644
 ms.openlocfilehash: 59b2f63ba12a644f13b3586fbf6eec4d5bfa8be5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62302655"
 ---
 # <a name="compiler-error-c2939"></a>Erreur du compilateur C2939
 
-'classe' : type-class-id redéfini comme variable locale de données
+'classe' : type-class-id redéfini comme variable locale de données
 
 Vous ne pouvez pas utiliser une classe générique ou de modèle comme variable locale de données.
 

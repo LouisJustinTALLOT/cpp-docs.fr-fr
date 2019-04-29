@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CComObjectRoot class
 ms.assetid: f8797c38-6e73-4f67-85c2-71654cffa8eb
 ms.openlocfilehash: 9a9ffa1813fb15297d209894050b6bcce6802df2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259363"
 ---
 # <a name="ccomobjectroot-class"></a>CComObjectRoot, classe
 
@@ -30,7 +30,7 @@ typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;
 
 `CComObjectRootEx` gère la gestion du nombre de référence objet pour les objets non regroupées en agrégats et agrégées. Elle contient le nombre de références d’objet si votre objet n’est pas agrégée et conserve le pointeur vers l’inconnu externe si votre objet est en cours d’agrégation. Pour les objets agrégées, `CComObjectRootEx` méthodes peuvent être utilisées pour gérer l’échec de l’objet interne pour construire et à protéger l’objet externe à partir de suppression lors de la publication des interfaces internes ou l’objet interne est supprimé.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcom.h
 

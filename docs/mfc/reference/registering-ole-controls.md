@@ -8,11 +8,11 @@ helpviewer_keywords:
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
 ms.openlocfilehash: 9c480696bdec3591f0509cbad04051a2b3af4070
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310134"
 ---
 # <a name="registering-ole-controls"></a>Inscription des contrôles OLE
 
@@ -149,7 +149,7 @@ L’exemple ci-dessus montre comment `AfxOleRegisterControlClass` est appelée a
 
 Le contrôle s’affichera dans la boîte de dialogue Insérer un objet pour les conteneurs activés, et il sera compatible avec le modèle de cloisonnement. Contrôles compatible avec le modèle de cloisonnement doivent garantir que les données sont protégées par des verrous, de classe statique afin que lorsqu’un contrôle dans un apartment (cloisonné) accède à des données statiques, elle n’est pas désactivée par le planificateur avant la fin de l’installation et une autre instance de la même classe démarre à l’aide les mêmes données statiques. Tout accès aux données statiques seront entourés par le code de section critique.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl.h
 
@@ -192,7 +192,7 @@ Différent de zéro si la classe de contrôle a été inscrit ; sinon 0.
 
 Ainsi, la page de propriétés à utiliser par les conteneurs de contrôle OLE prenant en charge. `AfxOleRegisterPropertyPageClass` met à jour le Registre avec le nom de page de propriété et son emplacement sur le système et définit également le modèle de thread qui le contrôle prend en charge dans le Registre. Pour plus d’informations, consultez [technique Remarque 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), « Modèle de cloisonnement de thread dans OLE contrôles, » et [sur les processus et Threads](/windows/desktop/ProcThread/about-processes-and-threads) dans le SDK Windows.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl.h
 
@@ -236,7 +236,7 @@ Cette fonction met à jour le Registre avec le nom de bibliothèque de types et 
 
 [!code-cpp[NVC_MFCAutomation#8](../../mfc/codesnippet/cpp/registering-ole-controls_4.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 
@@ -260,7 +260,7 @@ L’ID unique du programme de la page de contrôle ou une propriété.
 
 Différent de zéro si la classe de page de contrôle ou une propriété a été correctement annulée ; sinon 0.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl.h
 
@@ -285,7 +285,7 @@ Différent de zéro si la bibliothèque de types a été correctement annulée 
 
 [!code-cpp[NVC_MFCAxCtl#13](../../mfc/reference/codesnippet/cpp/registering-ole-controls_5.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 

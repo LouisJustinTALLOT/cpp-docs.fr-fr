@@ -13,11 +13,11 @@ helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
 ms.openlocfilehash: 8e05d6a47ea67138e8d1d456077526dd3178cc44
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274640"
 ---
 # <a name="registry-macros"></a>Macros de Registre
 
@@ -33,7 +33,7 @@ Ces macros définissent les fonctionnalités de bibliothèque et du Registre de 
 |[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Recherche de la ressource nommée et exécute le script de Registre qu’il contient.|
 |[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Recherche de la ressource identifiée par un numéro d’identification et exécute le script de Registre qu’il contient.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcom.h
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
 ms.openlocfilehash: c47a45208ac5b5c7e0000516ed114c008feda7ca
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292287"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Nom du fichier #using imposé)
 
@@ -54,4 +54,4 @@ Pour plus d’informations sur la création d’un assembly ou un module pour le
 
 [Options du fichier de sortie (/F)](output-file-f-options.md)<br/>
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

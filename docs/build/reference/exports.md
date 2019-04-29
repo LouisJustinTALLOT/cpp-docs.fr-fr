@@ -7,11 +7,11 @@ helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
 ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271344"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -51,7 +51,7 @@ EXPORTS
    func2=other_module.#42
 ```
 
-Étant donné que le compilateur MSVC utilise la décoration de nom pour les fonctions C++, vous devez utiliser le nom décoré *internal_name* ou définir les fonctions exportées à l’aide de `extern "C"` dans le code source. Le compilateur décore également les fonctions C qui utilisent le [__stdcall](../../cpp/stdcall.md) convention avec un trait de soulignement d’appel (\_) préfixe et un suffixe composé de l’arobase (\@) suivi du nombre d’octets (au format décimal) dans le liste d’arguments.
+Étant donné que le compilateur MSVC utilise la décoration de nom pour C++ fonctions, vous devez utiliser le nom décoré *internal_name* ou définir les fonctions exportées à l’aide de `extern "C"` dans le code source. Le compilateur décore également les fonctions C qui utilisent le [__stdcall](../../cpp/stdcall.md) convention avec un trait de soulignement d’appel (\_) préfixe et un suffixe composé de l’arobase (\@) suivi du nombre d’octets (au format décimal) dans le liste d’arguments.
 
 Pour rechercher les noms décorés produits par le compilateur, utilisez le [DUMPBIN](dumpbin-reference.md) outil ou l’éditeur de liens [/mapper](map-generate-mapfile.md) option. Les noms décorés sont spécifiques au compilateur. Si vous exportez les noms décorés dans le fichier .DEF, les exécutables qui sont liés à la DLL doivent également être générés à l'aide la même version du compilateur. Cela garantit que les noms décorés dans l'appelant correspondent aux noms exportés dans le fichier .DEF.
 

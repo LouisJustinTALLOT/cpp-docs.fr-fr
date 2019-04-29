@@ -21,11 +21,11 @@ helpviewer_keywords:
 - execlp function
 ms.assetid: 68b19143-e7b1-49c6-89b5-084d0d66de9c
 ms.openlocfilehash: a39d304ae6a1547cac383590fb79c0efbdef28b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288295"
 ---
 # <a name="execlp"></a>execlp
 

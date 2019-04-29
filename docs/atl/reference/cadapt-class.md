@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
 ms.openlocfilehash: 39184e952475fa0f05a6fc25c433191ea22b5c16
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260738"
 ---
 # <a name="cadapt-class"></a>CAdapt, classe
 
@@ -69,7 +69,7 @@ La classe d'adaptateur `CAdapt` est utile, car certaines classes de type contene
 
 En règle générale, utilisez `CAdapt` lorsque vous souhaitez stocker des objets `CComBSTR`, `CComPtr`, `CComQIPtr` ou `_com_ptr_t` dans une classe de type conteneur. Ceci était le plus souvent nécessaire pour les conteneurs de bibliothèque standard C++ avant la prise en charge de la norme C++11. Toutefois, les conteneurs de bibliothèque standard C++11 fonctionnent automatiquement avec les types ayant un `operator&()` surchargé. La bibliothèque Standard pour cela en interne à l’aide de [std::addressof](../../standard-library/memory-functions.md#addressof) pour obtenir les adresses réelles des objets.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcomcli.h
 

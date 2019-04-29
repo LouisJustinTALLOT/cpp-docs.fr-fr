@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CSimpleArrayEqualHelper class
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
 ms.openlocfilehash: 8b7e32ddab5b2f0667b17b0f127ac2e7e5d9a426
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277992"
 ---
 # <a name="csimplearrayequalhelper-class"></a>Csimplearrayequalhelper, classe
 
@@ -43,7 +43,7 @@ Une classe dérivée.
 
 Cette classe de traits constitue un supplément pour le `CSimpleArray` classe. Il fournit une méthode de comparaison de deux éléments stockés dans un `CSimpleArray` objet. Par défaut, les éléments sont comparés à l’aide de **operator=()**, mais si le tableau contient les types de données complexes qui ne disposent pas de leur propre opérateur d’égalité, vous devez substituer cette classe.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsimpcoll.h
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
 ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301550"
 ---
 # <a name="nested-class-declarations"></a>Déclarations de classes imbriquées
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` et `BufferedIO::BufferedOutput` sont déclarées dans `BufferedIO`. Ces noms de classe ne sont pas visibles en dehors de la portée de la classe `BufferedIO`. Toutefois, un objet de type `BufferedIO` ne contient aucun objet de type `BufferedInput` ou `BufferedOutput`.
+`BufferedIO::BufferedInput` et `BufferedIO::BufferedOutput` sont déclarés dans `BufferedIO`. Ces noms de classe ne sont pas visibles en dehors de la portée de la classe `BufferedIO`. Toutefois, un objet de type `BufferedIO` ne contient aucun objet de type `BufferedInput` ou `BufferedOutput`.
 
 Les classes imbriquées ne peuvent utiliser directement les noms, les noms de types, les noms des membres statiques et les énumérateurs qu'à partir de la classe englobante. Pour utiliser des noms d'autres membres de classe, vous devez utiliser des pointeurs, les références ou des noms d'objet.
 
