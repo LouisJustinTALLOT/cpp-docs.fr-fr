@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2111
 ms.assetid: 38fd42ec-1480-4a44-aaca-ae4593ed5f50
 ms.openlocfilehash: 9545e44518a7a377378929d684bf08573a214b18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364413"
 ---
 # <a name="compiler-error-c2111"></a>Erreur du compilateur C2111
 
-'+' : l’addition d’un pointeur exige un opérande de type entier
+'+' : l’addition d’un pointeur exige un opérande de type entier
 
 Une tentative a été effectuée d’ajouter une valeur non entière à un pointeur avec l’opérateur plus ( `+` ).
 

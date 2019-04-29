@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
 ms.openlocfilehash: 04a7b2b1d33ab7efa77563406ab3c12831cf80fc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360123"
 ---
 # <a name="compiler-error-c2797"></a>Erreur du compilateur C2797
 
@@ -45,7 +45,7 @@ struct S2 {
 };
 ```
 
-Pour résoudre ce problème, vous pouvez utiliser une construction explicite de listes internes. Par exemple :
+Pour résoudre ce problème, vous pouvez utiliser une construction explicite de listes internes. Exemple :
 
 ```
 #include <vector>

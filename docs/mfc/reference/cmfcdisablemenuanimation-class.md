@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
 ms.openlocfilehash: bf8c598e9e105569e0a5676267e205b3d3939712
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345602"
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>Cmfcdisablemenuanimation, classe
 
@@ -46,7 +46,7 @@ class CMFCDisableMenuAnimation
 
 |||
 |-|-|
-|Name|Description|
+|Nom|Description|
 |`CMFCDisableMenuAnimation::m_animType`|Stocke le type d’animation de menu déroulant précédent.|
 
 ### <a name="remarks"></a>Notes
@@ -67,7 +67,7 @@ L’exemple suivant montre comment utiliser la pile pour désactiver temporairem
 
 [CMFCDisableMenuAnimation](../../mfc/reference/cmfcdisablemenuanimation-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxpopupmenu.h
 

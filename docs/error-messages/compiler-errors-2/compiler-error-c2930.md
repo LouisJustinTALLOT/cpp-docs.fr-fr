@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2930
 ms.assetid: f07eecd1-e5d1-4518-bd89-b1fd2a003a17
 ms.openlocfilehash: 20fa3e81e66bb30bd63e579a863b6071de4ef871
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385756"
 ---
 # <a name="compiler-error-c2930"></a>Erreur du compilateur C2930
 
-'class' : type-class-id redéfini comme énumérateur de 'enum identifier'
+'class' : type-class-id redéfini comme énumérateur de 'enum identifier'
 
 Vous ne pouvez pas utiliser une classe générique ni de modèle en tant que membre d’une énumération.
 

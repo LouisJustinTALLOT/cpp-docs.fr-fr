@@ -14,11 +14,11 @@ helpviewer_keywords:
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
 ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317001"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Annuler la définition de symboles)
 
@@ -72,7 +72,7 @@ Par défaut, le compilateur définit des symboles suivants spécifiques à Micro
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [/J (Type de caractère par défaut non signé)](j-default-char-type-is-unsigned.md)<br/>
 [/GR (Activer les informations de type au moment de l’exécution)](gr-enable-run-time-type-information.md)<br/>
 [/EH (Modèle de gestion des exceptions)](eh-exception-handling-model.md)<br/>

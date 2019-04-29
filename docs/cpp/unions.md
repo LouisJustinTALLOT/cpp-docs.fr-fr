@@ -8,11 +8,11 @@ helpviewer_keywords:
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
 ms.openlocfilehash: f14f1197c4c835e9dfb753b1396e12e2d2f12772
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312173"
 ---
 # <a name="unions"></a>Unions
 
@@ -31,7 +31,7 @@ union [name]  { member-list };
 *name*<br/>
 Nom du type donné à l'union.
 
-*liste des membres*<br/>
+*member-list*<br/>
 Membres que l'union peut contenir. Consultez la section Notes.
 
 ## <a name="remarks"></a>Notes
@@ -147,7 +147,7 @@ void Initialize()
 
 Dans l'exemple précédent, notez que l'union dans le struct d'entrée n'a aucun nom. Il s'agit d'une union anonyme et ses membres sont accessibles comme s'ils étaient des membres directs du struct. Pour plus d'informations sur les unions anonymes, consultez la section ci-dessous.
 
-Bien sûr, l'exemple précédent indique un problème qui peut également être résolu en utilisant des classes qui dérivent d'une classe de base commune et en créant une branche pour votre code en fonction du type d'exécution de chaque objet dans le conteneur. Le code obtenu peut être plus simple à gérer et à comprendre, mais peut également être plus lent que l'utilisation d'unions. En outre, avec une union, vous pouvez stocker des types complètement indépendants et modifier dynamiquement le type de la valeur qui est stockée sans modifier le type de la variable d'union elle-même. Par conséquent, vous pouvez créer un tableau hétérogène de MyUnionType dont les éléments stockent différentes valeurs de types différents.
+Bien sûr, l’exemple précédent indique un problème qui peut également être résolu en utilisant des classes qui dérivent d’une classe de base commune et en créant une branche pour votre code en fonction du type d’exécution de chaque objet dans le conteneur. Le code obtenu peut être plus simple à gérer et à comprendre, mais peut également être plus lent que l'utilisation d'unions. En outre, avec une union, vous pouvez stocker des types complètement indépendants et modifier dynamiquement le type de la valeur qui est stockée sans modifier le type de la variable d'union elle-même. Par conséquent, vous pouvez créer un tableau hétérogène de MyUnionType dont les éléments stockent différentes valeurs de types différents.
 
 Notez que le struct `Input` dans l'exemple précédent peut être facilement utilisé à mauvais escient. Il revient entièrement à l'utilisateur d'utiliser le discriminateur correctement pour accéder au membre qui contient les données. Vous pouvez vous protéger contre toute utilisation inappropriée en rendant l'union privée et en fournissant des fonctions d'accès spéciales, comme indiqué dans l'exemple suivant.
 

@@ -32,11 +32,11 @@ helpviewer_keywords:
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
 ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356249"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -67,7 +67,7 @@ Le **sin** fonctions retournent le sinus de *x*. Si *x* est supérieur ou égal 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|Aucun.|_DOMAIN|
-|+ ∞ (sin, sinf, sinl)|INVALID|_DOMAIN|
+|± ∞ (sin, sinf, sinl)|INVALID|_DOMAIN|
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
