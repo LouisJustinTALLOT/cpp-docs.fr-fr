@@ -8,11 +8,11 @@ helpviewer_keywords:
 - IDispatch class support in ATL
 ms.assetid: 7db2220f-319d-4ce9-9382-d340019f14f7
 ms.openlocfilehash: 2dcebd215ff5e1bdf72323323dfbaebd16fa3403
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807414"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342021"
 ---
 # <a name="supporting-idispatch-and-ierrorinfo"></a>Prise en charge d’IDispatch et IErrorInfo
 

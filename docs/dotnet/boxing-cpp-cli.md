@@ -3,11 +3,11 @@ title: Boxing (C++/CLI)
 ms.date: 11/04/2016
 ms.assetid: f4ee27a8-6a34-432d-b9ec-39285d513b23
 ms.openlocfilehash: 3f756eaef59c24ca5b82c485bd8352dffe9fb1db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614498"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345768"
 ---
 # <a name="boxing-ccli"></a>Boxing (C++/CLI)
 

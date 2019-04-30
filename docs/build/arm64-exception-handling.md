@@ -2,11 +2,11 @@
 title: La gestion des exceptions ARM64
 ms.date: 11/19/2018
 ms.openlocfilehash: 55476119499a3216f6801877dba692b2a0d1d9ee
-ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59534121"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342296"
 ---
 # <a name="arm64-exception-handling"></a>La gestion des exceptions ARM64
 
@@ -357,7 +357,7 @@ Les champs sont les suivantes :
 
 Les prologues canoniques qui appartiennent aux catégories 1, 2 (sans zone de paramètres sortants), 3 et 4 dans la section ci-dessus peuvent être représentés par le format de déroulement compressé.  Les épilogues pour les fonctions canoniques suivent une forme très similaire, sauf **H** n’a aucun effet, la `set_fp` instruction est omise, ainsi que l’ordre des étapes, ainsi que des instructions dans chaque étape dans l’épilogue. L’algorithme pour xdata compressé suit ces étapes détaillées dans le tableau suivant :
 
-Étape 0 : Effectuer le calcul préalable de la taille de chaque zone.
+Étape 0 : Effectuer le calcul préalable de la taille de chaque zone.
 
 Étape 1 : Enregistrer des registres enregistrés des appelés de Int.
 
