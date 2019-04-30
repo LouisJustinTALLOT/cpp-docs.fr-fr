@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
 ms.openlocfilehash: e0edfbc69d6cba6ee352a34406860e4c999dc3a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412213"
 ---
 # <a name="submatch-class"></a>sub_match, classe
 
@@ -70,14 +70,14 @@ Une correspondance de longueur nulle peut se produire quand un groupe de capture
 |-|-|
 |[compare](#compare)|Comparer une sous-correspondance à une séquence.|
 |[length](#length)|Retourne la longueur d'une sous-correspondance.|
-|[mise en correspondance](#matched)|Indique si la correspondance a réussi.|
+|[matched](#matched)|Indique si la correspondance a réussi.|
 |[str](#str)|Convertit la sous-correspondance en chaîne.|
 
 ### <a name="operators"></a>Opérateurs
 
 |Opérateur|Description|
 |-|-|
-|[operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Effectue un cast de la sous-correspondance en chaîne.|
+|[operator basic_string<value_type>](#op_basic_string_lt_value_type_gt)|Effectue un cast de la sous-correspondance en chaîne.|
 
 ## <a name="example"></a>Exemple
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
 ms.openlocfilehash: b88544f399031a5f770fa39aa1f3300306158511
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394427"
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor, classe
 
@@ -74,7 +74,7 @@ Type de charge utile des messages traités par le processeur.
 
 `ordered_message_processor`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** agents.h
 

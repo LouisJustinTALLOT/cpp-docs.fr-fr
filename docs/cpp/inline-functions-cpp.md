@@ -13,11 +13,11 @@ helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
 ms.openlocfilehash: 55cf598877c2447e0f80e783b53b290699042b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400589"
 ---
 # <a name="inline-functions-c"></a>Fonctions inline (C++)
 
@@ -78,7 +78,7 @@ L'utilisation des fonctions inline permet accélérer l'exécution de votre prog
 
 Le compilateur traite les options d'expansion inline et les mots clés comme des suggestions. Rien ne garantit que les fonctions seront incorporées. Vous ne pouvez pas forcer le compilateur à incorporer une fonction particulière, même avec le **__forceinline** mot clé. Lors de la compilation avec **/CLR**, le compilateur n’incorpore pas une fonction s’il existe des attributs de sécurité appliqués à la fonction.
 
-Le **inline** mot clé est disponible uniquement en C++. Le **__inline** et **__forceinline** mots clés sont disponibles en C et C++. Pour assurer la compatibilité avec les versions précédentes, **_inline** et **_forceinline** sont synonymes de **__inline**, et **__forceinline** , sauf si option du compilateur [/Za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
+Le **inline** mot clé est disponible uniquement en C++. Le **__inline** et **__forceinline** mots clés sont disponibles dans les deux C et C++. Pour assurer la compatibilité avec les versions précédentes, **_inline** et **_forceinline** sont synonymes de **__inline**, et **__forceinline** , sauf si option du compilateur [/Za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
 
 Le **inline** mot clé indique au compilateur que l’expansion inline est recommandée. Toutefois, le compilateur peut créer une instance séparée de la fonction (instanciation) et créer des liaisons d'appel standard au lieu d'insérer le code inline. Les deux cas où cela peut se produire sont :
 
@@ -164,7 +164,7 @@ Pour plus d’informations sur l’utilisation de la **inline** spécificateur, 
 
 ## <a name="when-to-use-inline-functions"></a>Quand utiliser les fonctions inline
 
-Les fonctions inline sont utilisées de façon optimale pour les petites fonctions telles que l'accès aux membres de données privées. L'objectif principal de ces fonctions d'accesseur à une ou deux lignes est de retourner des informations d'état sur les objets. Les fonctions courtes sont sensibles aux charges mémoire des appels de fonction. Les fonctions longues passent proportionnellement moins de temps dans la séquence d'appel/retour et bénéficient moins de l'inlining.
+Les fonctions inline sont utilisées de façon optimale pour les petites fonctions telles que l'accès aux membres de données privées. L’objectif principal de ces fonctions d’accesseur à une ou deux lignes est de retourner des informations d’état sur les objets. Les fonctions courtes sont sensibles aux charges mémoire des appels de fonction. Les fonctions longues passent proportionnellement moins de temps dans la séquence d'appel/retour et bénéficient moins de l'inlining.
 
 Un `Point` classe peut être définie comme suit :
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Details::IEquatable Interface
 ms.assetid: 72f15f55-f7a4-4cca-aeba-2d5a9996818c
 ms.openlocfilehash: a0da4d82bc0d2a06fa73519aedf2e22ae89f3900
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387628"
 ---
 # <a name="platformdetailsiequatable-interface"></a>Platform::Details::IEquatable (interface)
 
@@ -32,7 +32,7 @@ Cette interface est fournie uniquement par souci d’exhaustivité, car elle peu
 
 `Platform`
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Métadonnées :** platform.winmd
 

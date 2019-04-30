@@ -43,11 +43,11 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: a67955da21c1229c3492d5b52dd6e14c9caa33fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389201"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt;, fonctions
 
@@ -1133,7 +1133,7 @@ Nombre complexe qui correspond au sinus du nombre complexe d’entrée.
 
 Identités définissant les sinus complexes :
 
-SIN ( *z*) = (1/2 *je*)\*(exp ( *iz*)-exp (- *iz*))
+sin ( *z*) = (1/2 *i*)\*( exp ( *iz*) - exp (- *iz*) )
 
 sin ( *z*) = sin ( *a + bi*) = sin ( *a*) cosh ( *b*) + icos ( *a*) sinh ( *b*)
 
@@ -1224,7 +1224,7 @@ Nombre complexe qui correspond au sinus hyperbolique du nombre complexe d’entr
 
 Identités définissant les sinus hyperboliques complexes :
 
-sinh ( *z*) = (1/2)\*(exp ( *z*)-exp (- *z*))
+sinh ( *z*) = (1/2)\*( exp ( *z*) - exp (- *z*) )
 
 sinh ( *z*) = sinh ( *a + bi*) = sinh ( *a*) cos ( *b*) + *i*cosh ( *a*) sin ( *b*)
 
@@ -1392,7 +1392,7 @@ Nombre complexe qui correspond à la tangente du nombre complexe d’entrée.
 
 Identités définissant la cotangente complexe :
 
-tan ( *z*) = sin ( *z*) / cos ( *z*) = (exp ( *iz*)-exp (- *iz*)) / *i*(exp ( *iz*) + exp (- *iz*))
+tan ( *z*) = sin ( *z*) / cos ( *z*) = ( exp ( *iz*) - exp (- *iz*) ) / *i*( exp ( *iz*) + exp (- *iz*) )
 
 ### <a name="example"></a>Exemple
 
@@ -1481,7 +1481,7 @@ Nombre complexe qui correspond à la tangente hyperbolique du nombre complexe d�
 
 Identités définissant la cotangente hyperbolique complexe :
 
-TANH ( *z*) = sinh ( *z*) / cosh ( *z*) = (exp ( *z*)-exp (- *z*)) / (exp ( *z*) + exp (- *z*))
+tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = ( exp ( *z*) - exp (- *z*) ) / ( exp ( *z*) + exp (- *z*) )
 
 ### <a name="example"></a>Exemple
 

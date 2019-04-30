@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
 ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409757"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf, classe
 
@@ -128,7 +128,7 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Paramètres
 
-*Mode _De*<br/>
+*_Mode*<br/>
 Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *str*<br/>
@@ -241,7 +241,7 @@ La position à rechercher par rapport à *_Way*. Pour plus d’informations, con
 *_Way*<br/>
 Point de départ des opérations de décalage. Consultez [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
 
-*Mode _De*<br/>
+*_Mode*<br/>
 Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture. Pour plus d’informations, consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -277,7 +277,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 *_Sp*<br/>
 Position à rechercher.
 
-*Mode _De*<br/>
+*_Mode*<br/>
 Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -379,7 +379,7 @@ Si la fonction ne peut pas réussir, elle retourne **traits_type::**[eof](../sta
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre virtuelle protégée tente d’extraire l’élément actuel `byte` à partir de la mémoire tampon d’entrée, avance la position du flux actuel et retourne l’élément en tant que **traits_type ::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **octets**). Elle peut le faire d’une façon : si une position de lecture est disponible, elle accepte `byte` comme élément stocké dans la position de lecture et avance le pointeur suivant pour la mémoire tampon d’entrée.
+La fonction membre virtuelle protégée tente d’extraire l’élément actuel `byte` à partir de la mémoire tampon d’entrée, avance la position du flux actuel et retourne l’élément en tant que **traits_type ::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **octets**). Il peut le faire dans une façon : Si une position de lecture est disponible, elle accepte `byte` comme élément stocké dans la position de lecture et avance le pointeur suivant pour la mémoire tampon d’entrée.
 
 ## <a name="swap"></a>  basic_streambuf::swap
 

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
 ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396013"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC : À l’aide des Classes de base de données sans document ni vue
 
@@ -59,7 +59,7 @@ L’Assistant Application MFC propose plusieurs options **sélectionnez prise en
 |**Vue de base de données sans prise en charge de fichier**|Dérivé de `CRecordView`|Fournit la prise en charge du document, mais aucune prise en charge de la sérialisation. Le document peut stocker le jeu d’enregistrements et coordonner plusieurs vues ; ne prend pas en charge la sérialisation ou la **New**, **Open**, **enregistrer**, et **Enregistrer sous** commandes. Consultez [Applications avec des Documents minimaux](#_core_applications_with_minimal_documents). Si vous incluez une vue de base de données, vous devez spécifier la source de données.<br /><br /> Inclut les fichiers d’en-tête de base de données, des bibliothèques de liens, une vue d’enregistrement et un jeu d’enregistrements. (Disponible uniquement pour les applications avec le **support de l’architecture Document/vue** option est sélectionnée sur la [Type d’Application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md) page.)|
 |**Vue de base de données avec prise en charge de fichier**|Dérivé de `CRecordView`|Prend en charge le document complet, y compris la sérialisation et liées aux documents **fichier** commandes de menu. Applications de base de données opèrent généralement par enregistrement plutôt que sur un fichier par fichier et n’avez pas besoin sérialisation. Toutefois, vous pouvez avoir une utilisation spéciale pour la sérialisation. Consultez [Applications avec des Documents minimaux](#_core_applications_with_minimal_documents). Si vous incluez une vue de base de données, vous devez spécifier la source de données.<br /><br /> Inclut les fichiers d’en-tête de base de données, des bibliothèques de liens, une vue d’enregistrement et un jeu d’enregistrements. (Disponible uniquement pour les applications avec le **support de l’architecture Document/vue** option est sélectionnée sur la [Type d’Application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md) page.)|
 
-Pour une présentation des alternatives à la sérialisation et les autres utilisations pour la sérialisation, consultez [sérialisation : Visual Studio de sérialisation. Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md).
+Pour une présentation des alternatives à la sérialisation et les autres utilisations pour la sérialisation, consultez [sérialisation : Sérialisation ou Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md).
 
 ##  <a name="_core_applications_with_minimal_documents"></a> Applications avec des Documents minimaux
 
@@ -81,7 +81,7 @@ Vous utilisez généralement cette option pour les applications simples basées 
 
 ###  <a name="_core_a_document_with_file_support"></a> Document avec prise en charge de fichier
 
-Sélectionnez l’option de base de données d’Assistant application **vue avec prise en charge du fichier de base de données** lorsque vous avez une utilisation alternative pour les documents liés **fichier** commandes de menu et de la sérialisation de documents. Pour la partie accès aux données de votre programme, vous pouvez utiliser le document de la même façon comme décrit dans [Document sans prise en charge de fichiers](#_core_a_document_without_file_support). Vous pouvez utiliser les capacités de sérialisation du document, par exemple, pour lire et écrire un document de profil utilisateur sérialisé qui stocke les préférences de l’utilisateur ou d’autres informations utiles. Pour plus d’informations, consultez [sérialisation : Visual Studio de sérialisation. Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md).
+Sélectionnez l’option de base de données d’Assistant application **vue avec prise en charge du fichier de base de données** lorsque vous avez une utilisation alternative pour les documents liés **fichier** commandes de menu et de la sérialisation de documents. Pour la partie accès aux données de votre programme, vous pouvez utiliser le document de la même façon comme décrit dans [Document sans prise en charge de fichiers](#_core_a_document_without_file_support). Vous pouvez utiliser les capacités de sérialisation du document, par exemple, pour lire et écrire un document de profil utilisateur sérialisé qui stocke les préférences de l’utilisateur ou d’autres informations utiles. Pour plus d’informations, consultez [sérialisation : Sérialisation ou Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md).
 
 L’Assistant application prend en charge cette option, mais vous devez écrire le code qui sérialise le document. Store les informations sérialisées dans les membres de données de document.
 

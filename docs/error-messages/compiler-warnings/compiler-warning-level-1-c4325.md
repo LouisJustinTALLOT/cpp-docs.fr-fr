@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4325
 ms.assetid: 8127a08c-d626-481b-aa7b-04a3fdc9a9ec
 ms.openlocfilehash: 293cbbcfe134f6cb4f5e1bf924be7c03fa278833
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408535"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>Avertissement du compilateur (niveau 1) C4325
 
@@ -29,15 +29,15 @@ Cela remplacerait la `.sdata` section standard qui utilise le **court** type de 
 
 Sections standards dont vous ne pouvez pas modifier les attributs incluent,
 
-- .Data
+- .data
 
 - .sdata
 
-- .BSS
+- .bss
 
 - .sbss
 
-- ".Text"
+- .text
 
 - .const
 

@@ -1,6 +1,6 @@
 ---
 title: Erreurs du compilateur C2400 à C2499
-ms.date: 11/17/2017
+ms.date: 04/21/2019
 f1_keywords:
 - C2416
 - C2442
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - C2481
 - C2497
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-ms.openlocfilehash: 2ba9a55610c6f2e5e38733125414c6076e2c2f67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 569780a0716d26406c1703fa91fe5216d92ce653
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404349"
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>Erreurs du compilateur C2400 à C2499
 
@@ -50,7 +50,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2404](compiler-error-c2404.md)|«*identificateur*' : Registre non conforme dans '*contexte*»|
 |[Erreur du compilateur C2405](compiler-error-c2405.md)|référence non conforme au type short avec offset|
 |[Erreur du compilateur C2406](compiler-error-c2406.md)|«*identificateur*' : nom non défini dans '*contexte*»|
-|[Erreur du compilateur C2407](compiler-error-c2407.md)|Registre 'float' non conforme dans '*contexte*'|
+|[Erreur du compilateur C2407](compiler-error-c2407.md)|illegal 'float' register in '*context*'|
 |[Erreur du compilateur C2408](compiler-error-c2408.md)|type non conforme sur l’opérateur PTR dans '*contexte*'|
 |[Erreur du compilateur C2409](compiler-error-c2409.md)|type non conforme utilisé comme opérateur dans '*contexte*'|
 |[Erreur du compilateur C2410](compiler-error-c2410.md)|«*identificateur*' : nom de membre ambigu dans '*contexte*»|
@@ -59,7 +59,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2413](compiler-error-c2413.md)|«*identificateur*' : taille d’alignement non conforme|
 |[Erreur du compilateur C2414](compiler-error-c2414.md)|nombre non conforme d’opérandes|
 |[Erreur du compilateur C2415](compiler-error-c2415.md)|type d’opérande incorrect|
-|C2416 d’erreur du compilateur|attribut '*attribut*' ne peut pas être appliqué dans ce contexte|
+|Erreur du compilateur C2416|attribut '*attribut*' ne peut pas être appliqué dans ce contexte|
 |[Erreur du compilateur C2417](compiler-error-c2417.md)|division par zéro dans '*contexte*'|
 |[Erreur du compilateur C2418](compiler-error-c2418.md)|Impossible de supprimer le fichier browser : *nom de fichier*|
 |[Erreur du compilateur C2419](compiler-error-c2419.md)|Mod par zéro dans '*contexte*'|
@@ -85,7 +85,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2439](compiler-error-c2439.md)|«*identificateur*' : membre n’a pas pu être initialisé.|
 |[Erreur du compilateur C2440](compiler-error-c2440.md)|'*conversion*' : Impossible de convertir '*type_1*'en'*type_2*'|
 |[Erreur du compilateur C2441](compiler-error-c2441.md)|«*variable*' : un symbole déclaré avec __declspec (Process) doit être const en/clr : pur mode|
-|C2442 d’erreur du compilateur|«*identificateur*' : nested-namespace-definition ne peut pas être inséré ni avoir des attributs|
+|Erreur du compilateur C2442|«*identificateur*' : nested-namespace-definition ne peut pas être inséré ni avoir des attributs|
 |[Erreur du compilateur C2443](compiler-error-c2443.md)|conflit de taille d’opérande|
 |[Erreur du compilateur C2444](compiler-error-c2444.md)|«*identificateur*' : prototype ANSI utilisé, 'type' attendu ' {' ou ';'|
 |[Erreur du compilateur C2446](compiler-error-c2446.md)|«*opérateur*' : aucune conversion de '*type_1*'en'*type_2*»|
@@ -95,10 +95,10 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2450](compiler-error-c2450.md)|expression de type de commutateur «*type*' n’est pas conforme|
 |[Erreur du compilateur C2451](compiler-error-c2451.md)|expression conditionnelle de type '*type*' n’est pas conforme|
 |[Erreur du compilateur C2452](compiler-error-c2452.md)|«*type*' : type de source non valide pour safe_cast|
-|C2453 d’erreur du compilateur|«*type*' : type de cible non valide pour safe_cast|
-|C2454 d’erreur du compilateur|«*identificateur*' : nom d’espace de noms alias ne peuvent pas être déclaré à l’aide d’un nom qualifié|
-|C2455 d’erreur du compilateur|«*classe*' une classe ref WinRT qui dérive d’une classe de base importée ne peut pas être abstraite.|
-|C2456 d’erreur du compilateur|«*classe*' une classe référencée unsealed ne peut pas avoir un constructeur public visible. Scellez la classe, ou spécifiez constructeur en tant que 'internal', 'protected private' ou 'private' à la place.|
+|Erreur du compilateur C2453|«*type*' : type de cible non valide pour safe_cast|
+|Erreur du compilateur C2454|«*identificateur*' : nom d’espace de noms alias ne peuvent pas être déclaré à l’aide d’un nom qualifié|
+|Erreur du compilateur C2455|«*classe*' une classe ref WinRT qui dérive d’une classe de base importée ne peut pas être abstraite.|
+|Erreur du compilateur C2456|«*classe*' une classe référencée unsealed ne peut pas avoir un constructeur public visible. Scellez la classe, ou spécifiez constructeur en tant que 'internal', 'protected private' ou 'private' à la place.|
 |[Erreur du compilateur C2457](compiler-error-c2457.md)|«*identificateur*' : la macro prédéfinie ne peut pas apparaître en dehors d’un corps de fonction|
 |[Erreur du compilateur C2458](compiler-error-c2458.md)|«*identificateur*' : redéfinition au sein de la définition|
 |[Erreur du compilateur C2459](compiler-error-c2459.md)|«*identificateur*' : est en cours de définition ; Impossible d’ajouter comme membre anonyme|
@@ -109,19 +109,19 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2465](compiler-error-c2465.md)|impossible de définir un type anonyme entre parenthèses|
 |[Erreur du compilateur C2466](compiler-error-c2466.md)|Impossible d’allouer un tableau de taille constante 0|
 |[Erreur du compilateur C2467](compiler-error-c2467.md)|déclaration d’anonyme non conforme '*user_defined_type*'|
-|C2468 d’erreur du compilateur|le constructeur ne peut pas être 'constexpr' dans une classe ou un struct avec les classes de base virtuelles|
+|Erreur du compilateur C2468|le constructeur ne peut pas être 'constexpr' dans une classe ou un struct avec les classes de base virtuelles|
 |[Erreur du compilateur C2469](compiler-error-c2469.md)|'new' : Impossible d’allouer des objets 'void'|
 |[Erreur du compilateur C2470](compiler-error-c2470.md)|«*fonction*' : similaire à une définition de fonction, mais il n’existe aucun paramètre liste ; corps apparent ignoré|
 |[Erreur du compilateur C2471](compiler-error-c2471.md)|Impossible de mettre à jour la base de données du programme '*filename*'|
 |[Erreur du compilateur C2472](compiler-error-c2472.md)|«*fonction*' ne peut pas être généré dans le code managé : '*message*' ; compilez avec /clr pour générer une image mixte|
 |[Erreur du compilateur C2473](compiler-error-c2473.md)|«*identificateur*' : similaire à une définition de fonction, mais il n’existe aucune liste de paramètres.|
 |[Erreur du compilateur C2474](compiler-error-c2474.md)|«*identificateur*' : point-virgule adjacent manquant peut être mot clé ou identificateur.|
-|C2475 d’erreur du compilateur|«*identificateur*' : redéfinition ; incompatibilité du spécificateur 'constexpr'|
+|Erreur du compilateur C2475|'*identifier*': redefinition; 'constexpr' specifier mismatch|
 |[Erreur du compilateur C2477](compiler-error-c2477.md)|«*membre*' : données membres static ne peuvent pas être initialisées via une classe dérivée|
-|C2478 d’erreur du compilateur|la déclaration est incompatible avec '*instance*'|
+|Erreur du compilateur C2478|la déclaration est incompatible avec '*instance*'|
 |[Erreur du compilateur C2479](compiler-error-c2479.md)|«*identificateur*' : 'allocate ()' est uniquement valide pour les éléments de données d’étendue static|
 |[Erreur du compilateur C2480](compiler-error-c2480.md)|«*identificateur*' : 'thread' est uniquement valide pour les éléments de données d’étendue static|
-|C2481 d’erreur du compilateur|«*identificateur*' : thread_local est valide uniquement sur des membres statiques et les variables à la portée espace de noms ou de bloc|
+|Erreur du compilateur C2481|«*identificateur*' : thread_local est valide uniquement sur des membres statiques et les variables à la portée espace de noms ou de bloc|
 |[Erreur du compilateur C2482](compiler-error-c2482.md)|«*identificateur*' : l’initialisation dynamique des données locales de thread non autorisée dans le code managé/WINRT|
 |[Erreur du compilateur C2483](compiler-error-c2483.md)|«*identificateur*' : objet avec un destructeur ou un type non agrégé ne peut pas être déclaré avec une durée de stockage de thread dans le code managé/WINRT|
 |[Erreur du compilateur C2485](compiler-error-c2485.md)|«*identificateur*' : attribut étendu non reconnu|
@@ -136,6 +136,11 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2494](compiler-error-c2494.md)|«*mot clé*' ne peut pas être appelée à partir d’une expression de filtre ou &#95; &#95;bloc finally/finally|
 |[Erreur du compilateur C2495](compiler-error-c2495.md)|«*identificateur*' : '__declspec(noexcept)' peut uniquement être appliqué aux définitions ou déclarations de fonction|
 |[Erreur du compilateur C2496](compiler-error-c2496.md)|«*identificateur*' : 'selectany' peut uniquement être appliqué aux éléments de données avec liaison externe|
-|C2497 d’erreur du compilateur|«*identificateur*' : 'implementation_key' peut uniquement être appliqué aux déclarations de fonction|
+|Erreur du compilateur C2497|«*identificateur*' : 'implementation_key' peut uniquement être appliqué aux déclarations de fonction|
 |[Erreur du compilateur C2498](compiler-error-c2498.md)|«*fonction*' : 'novtable' peut uniquement être appliqué aux définitions ou déclarations de classe|
 |[Erreur du compilateur C2499](compiler-error-c2499.md)|«*classe*' : une classe ne peut pas être sa propre classe de base|
+
+## <a name="see-also"></a>Voir aussi
+
+[C /C++ compilateur et build erreurs et avertissements des outils](../compiler-errors-1/c-cpp-build-errors.md) \
+[Erreurs du compilateur C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

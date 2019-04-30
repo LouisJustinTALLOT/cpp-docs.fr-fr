@@ -64,11 +64,11 @@ helpviewer_keywords:
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
 ms.openlocfilehash: f4a99ea972c6d2ea9b9721664cc75dec257fd7b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393751"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -141,7 +141,7 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>Paramètres
 
-*arg1*<br/>
+*Arg1*<br/>
 Le type du premier argument.
 
 *Arg2*<br/>
@@ -216,7 +216,7 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>Paramètres
 
-*arg1*<br/>
+*Arg1*<br/>
 Le type du premier argument.
 
 *Arg2*<br/>
@@ -311,7 +311,7 @@ Le type de foncteur stocké.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 |stored_function_type|Le type de foncteur.|
 
@@ -322,7 +322,7 @@ Le type de foncteur stocké.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type^()|Convertit le functor à un délégué.|
+|operator delegate_type^()|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -401,7 +401,7 @@ template<typename Fun,
 
 #### <a name="template-parameters"></a>Paramètres de modèle
 
-*arg*<br/>
+*Arg*<br/>
 Type de l’argument.
 
 *amusement*<br/>
@@ -482,7 +482,7 @@ template<typename Fun,
 
 #### <a name="template-parameters"></a>Paramètres de modèle
 
-*arg*<br/>
+*Arg*<br/>
 Type de l’argument.
 
 *amusement*<br/>
@@ -586,7 +586,7 @@ Le type de foncteur stocké.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 |stored_function_type|Le type de foncteur.|
 
@@ -597,7 +597,7 @@ Le type de foncteur stocké.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type^()|Convertit le functor à un délégué.|
+|operator delegate_type^()|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -691,7 +691,7 @@ Le type de foncteur stocké.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 |stored_function_type|Le type de foncteur.|
 
@@ -702,7 +702,7 @@ Le type de foncteur stocké.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type^()|Convertit le functor à un délégué.|
+|operator delegate_type^()|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -787,7 +787,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments et de la valeur de retour.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -796,7 +796,7 @@ Le type des arguments et de la valeur de retour.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 
 |Membre|Description|
@@ -806,7 +806,7 @@ Le type des arguments et de la valeur de retour.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type^()|Convertit le functor à un délégué.|
+|operator delegate_type^()|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -888,7 +888,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -897,7 +897,7 @@ Le type des arguments.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 
 |Membre|Description|
@@ -907,7 +907,7 @@ Le type des arguments.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type^()|Convertit le functor à un délégué.|
+|operator delegate_type^()|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -989,7 +989,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -998,7 +998,7 @@ Le type des arguments.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 
 |Membre|Description|
@@ -1008,7 +1008,7 @@ Le type des arguments.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type ^|Convertit le functor à un délégué.|
+|operator delegate_type^|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1090,7 +1090,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -1099,7 +1099,7 @@ Le type des arguments.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 
 |Membre|Description|
@@ -1109,7 +1109,7 @@ Le type des arguments.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type ^|Convertit le functor à un délégué.|
+|operator delegate_type^|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1191,7 +1191,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -1200,7 +1200,7 @@ Le type des arguments.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 
 |Membre|Description|
@@ -1210,7 +1210,7 @@ Le type des arguments.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type ^|Convertit le functor à un délégué.|
+|operator delegate_type^|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1292,7 +1292,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -1301,7 +1301,7 @@ Le type des arguments.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 
 |Membre|Description|
@@ -1311,7 +1311,7 @@ Le type des arguments.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type ^|Convertit le functor à un délégué.|
+|operator delegate_type^|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1393,7 +1393,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -1402,7 +1402,7 @@ Le type des arguments.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 
 |Membre|Description|
@@ -1412,7 +1412,7 @@ Le type des arguments.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type ^|Convertit le functor à un délégué.|
+|operator delegate_type^|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1492,7 +1492,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -1501,7 +1501,7 @@ Le type des arguments.
 |---------------------|-----------------|
 |argument_type|Le type de l’argument functor.|
 |delegate_type|Le type du délégué générique.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 
 |Membre|Description|
 |------------|-----------------|
@@ -1510,7 +1510,7 @@ Le type des arguments.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type ^|Convertit le functor à un délégué.|
+|operator delegate_type^|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1584,7 +1584,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -1593,7 +1593,7 @@ Le type des arguments.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 
 |Membre|Description|
@@ -1603,7 +1603,7 @@ Le type des arguments.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type ^|Convertit le functor à un délégué.|
+|operator delegate_type^|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1685,7 +1685,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments et de la valeur de retour.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -1694,7 +1694,7 @@ Le type des arguments et de la valeur de retour.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 
 |Membre|Description|
@@ -1704,7 +1704,7 @@ Le type des arguments et de la valeur de retour.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type ^|Convertit le functor à un délégué.|
+|operator delegate_type^|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1786,7 +1786,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments et de la valeur de retour.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -1795,17 +1795,17 @@ Le type des arguments et de la valeur de retour.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 
 |Membre|Description|
 |------------|-----------------|
-|modulus|Construit le functor.|
+|modulo|Construit le functor.|
 
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type ^|Convertit le functor à un délégué.|
+|operator delegate_type^|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1887,7 +1887,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments et de la valeur de retour.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -1896,7 +1896,7 @@ Le type des arguments et de la valeur de retour.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 
 |Membre|Description|
@@ -1906,7 +1906,7 @@ Le type des arguments et de la valeur de retour.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type ^|Convertit le functor à un délégué.|
+|operator delegate_type^|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1986,7 +1986,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -1995,7 +1995,7 @@ Le type des arguments.
 |---------------------|-----------------|
 |argument_type|Le type de l’argument functor.|
 |delegate_type|Le type du délégué générique.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 
 |Membre|Description|
 |------------|-----------------|
@@ -2004,7 +2004,7 @@ Le type des arguments.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type ^|Convertit le functor à un délégué.|
+|operator delegate_type^|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -2049,7 +2049,7 @@ int main()
 -4 3
 ```
 
-## <a name="not_equal_to"></a> Not_Equal_To (STL/CLR)
+## <a name="not_equal_to"></a> not_equal_to (STL/CLR)
 
 La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourne true uniquement si le premier argument n’est pas égal au second. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.
 
@@ -2078,7 +2078,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -2087,7 +2087,7 @@ Le type des arguments.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 
 |Membre|Description|
@@ -2097,7 +2097,7 @@ Le type des arguments.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type ^|Convertit le functor à un délégué.|
+|operator delegate_type^|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -2332,7 +2332,7 @@ public:
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Le type des arguments et de la valeur de retour.
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -2341,7 +2341,7 @@ Le type des arguments et de la valeur de retour.
 |---------------------|-----------------|
 |delegate_type|Le type du délégué générique.|
 |first_argument_type|Le type du premier argument functor.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 |second_argument_type|Le type du deuxième argument functor.|
 
 |Membre|Description|
@@ -2351,7 +2351,7 @@ Le type des arguments et de la valeur de retour.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|opérateur delegate_type ^|Convertit le functor à un délégué.|
+|operator delegate_type^|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 
@@ -2418,7 +2418,7 @@ generic<typename Arg,
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Type de l’argument.
 
 *Résultat*<br/>
@@ -2483,7 +2483,7 @@ generic<typename Arg>
 
 #### <a name="parameters"></a>Paramètres
 
-*arg*<br/>
+*Arg*<br/>
 Type de l’argument.
 
 ### <a name="remarks"></a>Notes
@@ -2570,7 +2570,7 @@ Le type de foncteur stocké.
 |---------------------|-----------------|
 |argument_type|Le type de l’argument functor.|
 |delegate_type|Le type du délégué générique.|
-|RESULT_TYPE|Le type du résultat de functor.|
+|result_type|Le type du résultat de functor.|
 
 |Membre|Description|
 |------------|-----------------|
@@ -2579,7 +2579,7 @@ Le type de foncteur stocké.
 |Opérateur|Description|
 |--------------|-----------------|
 |operator()|Calcule la fonction souhaitée.|
-|delegate_type ^|Convertit le functor à un délégué.|
+|delegate_type^|Convertit le functor à un délégué.|
 
 ### <a name="remarks"></a>Notes
 

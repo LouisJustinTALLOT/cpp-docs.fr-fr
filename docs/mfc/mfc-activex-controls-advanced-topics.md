@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
 ms.openlocfilehash: df71e2e59763644bd4aefb5d3e3afa46f82f538a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392711"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Contrôles ActiveX MFC : Rubriques avancées
 
@@ -174,7 +174,7 @@ Vous pouvez créer des contrôles de boîte de dialogue qui n’ont aucune inter
 
 - À l’aide de l’Assistant Ajout de membre Variable, sélectionnez **contrôle Variable** , puis ID. du contrôle Entrez un nom de variable de membre et sélectionnez la classe du contrôle wrapper en tant que le **Type de contrôle**.
 
-     ou
+     - ou -
 
 - Déclarez une variable locale et une sous-classe en tant que l’élément de boîte de dialogue. Insérer du code qui ressemble à celui-ci (`CMyCtrl` est la classe wrapper, IDC_MYCTRL1 est l’ID du contrôle) :
 

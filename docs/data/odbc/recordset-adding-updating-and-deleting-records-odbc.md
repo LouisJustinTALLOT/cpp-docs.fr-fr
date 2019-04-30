@@ -19,11 +19,11 @@ helpviewer_keywords:
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
 ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395623"
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Recordset : Ajout, la mise à jour et suppression d’enregistrements (ODBC)
 
@@ -202,4 +202,4 @@ Pour plus d’informations sur les effets de la `AddNew`, `Edit`, et `Delete` fo
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : Verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Recordset : Verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

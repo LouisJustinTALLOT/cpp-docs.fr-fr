@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4584
 ms.assetid: ad86582f-cb8c-4d21-8c4c-a6c800059e25
 ms.openlocfilehash: 3c60575e766ea3490a40711fe26c3e402c41fbdd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397248"
 ---
 # <a name="compiler-warning-level-1-c4584"></a>Avertissement du compilateur (niveau 1) C4584
 

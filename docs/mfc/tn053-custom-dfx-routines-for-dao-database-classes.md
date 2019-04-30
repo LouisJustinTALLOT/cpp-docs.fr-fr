@@ -14,11 +14,11 @@ helpviewer_keywords:
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
 ms.openlocfilehash: b610604c1b7a68128dc9eb6fb5515225ed22b16e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399679"
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053 : Personnaliser les Routines DFX pour les Classes de base de données DAO
 

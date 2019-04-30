@@ -15,11 +15,11 @@ helpviewer_keywords:
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
 ms.openlocfilehash: e1a87fe4815a75b97616d7b11a4b9aa4ae65eb9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392139"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Opérateurs suffixés d'incrémentation et de décrémentation : ++ et --
 
@@ -48,7 +48,7 @@ Application de l’opérateur d’incrémentation suffixé à un pointeur vers u
 
 Les opérandes incrémentation et opérateurs de décrément suffixés doivent être modifiables (pas **const**) l-values de type arithmétique ou pointeur. Le type du résultat est identique à celui de la *postfix-expression*, mais il n’est plus une l-value.
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : l’opérande d’une incrémentation ou de décrémentation opérateur ne peut pas être de type **bool**.
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : L’opérande d’une incrémentation ou de décrémentation opérateur ne peut pas être de type **bool**.
 
 Le code suivant illustre l'opérateur d'incrémentation suffixé :
 

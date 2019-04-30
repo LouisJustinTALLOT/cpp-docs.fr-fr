@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4925
 ms.assetid: a4b206c0-016a-4f28-873a-bb8bb41bad50
 ms.openlocfilehash: cb7b416fe15380dc914bd57152e8a0ce3618ee85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393504"
 ---
 # <a name="compiler-warning-level-1-c4925"></a>Avertissement du compilateur (niveau 1) C4925
 
-'méthode' : la méthode dispinterface ne peut pas être appelée à partir d’un script
+'méthode' : la méthode dispinterface ne peut pas être appelée à partir d’un script
 
 Les langages de script ne peuvent pas créer de paramètres VT_BYREF « in », mais uniquement des paramètres VT_BYREF « out ».
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
 ms.openlocfilehash: 2a029f653753363e08b3c4f8b9fceab6295924af
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395649"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Record Field Exchange : Utilisation de RFX
 
@@ -20,9 +20,9 @@ Cette rubrique explique comment pour utiliser RFX en relation avec ce que fait l
 
 Les rubriques suivantes contiennent des informations connexes :
 
-- [Record Field Exchange : Utilisation de l’Assistant Code](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) présente les principaux composants de RFX et explique le code que l’Assistant Application MFC et **ajouter une classe** (comme décrit dans [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) écrire pour prendre en charge RFX et la façon dont vous souhaiterez peut-être modifier le code de l’Assistant.
+- [Record Field Exchange : Utilisation de l’Assistant Code](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) présente les principaux composants de RFX et explique le code que l’Assistant Application MFC et **ajouter une classe** (comme décrit dans [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) écrire pour prendre en charge RFX et la façon dont vous souhaiterez peut-être modifier le code de l’Assistant.
 
-- [Record Field Exchange : Utilisation des fonctions RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) explique écrire les appels aux fonctions RFX dans votre `DoFieldExchange` remplacer.
+- [Record Field Exchange : Utilisation des fonctions RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) explique écrire les appels aux fonctions RFX dans votre `DoFieldExchange` remplacer.
 
 Le tableau suivant indique le rôle par rapport à ce que l’infrastructure effectue pour vous.
 
@@ -41,8 +41,8 @@ Le tableau suivant indique le rôle par rapport à ce que l’infrastructure eff
 ## <a name="see-also"></a>Voir aussi
 
 [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
-[Recordset : Calculs de totaux et autres résultats de regroupement (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
+[Recordset : Calculs de totaux et autres résultats de regroupement (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [CRecordset, classe](../../mfc/reference/crecordset-class.md)<br/>
 [CFieldExchange, classe](../../mfc/reference/cfieldexchange-class.md)<br/>
 [Macros, fonctions globales et Variables globales](../../mfc/reference/mfc-macros-and-globals.md)

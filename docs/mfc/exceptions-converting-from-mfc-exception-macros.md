@@ -1,5 +1,5 @@
 ---
-title: "Exceptions : conversion à partir de macros d'exception MFC"
+title: 'Exceptions : Conversion à partir de Macros d’Exception MFC'
 ms.date: 08/27/2018
 helpviewer_keywords:
 - converting exceptions [MFC]
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
 ms.openlocfilehash: 59b83438d5341fd6a139af64a2f365a739438741
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394505"
 ---
-# <a name="exceptions-converting-from-mfc-exception-macros"></a>Exceptions : conversion à partir de macros d'exception MFC
+# <a name="exceptions-converting-from-mfc-exception-macros"></a>Exceptions : Conversion à partir de Macros d’Exception MFC
 
 Il s’agit d’une rubrique avancée.
 
@@ -33,15 +33,15 @@ Cet article explique comment convertir le code existant écrit avec les macros d
 
 ##  <a name="_core_advantages_of_converting"></a> Avantages de la conversion
 
-Probablement inutile convertir le code existant, bien que vous devez être conscient des différences entre les implémentations de macros dans MFC version 3.0 et les implémentations dans les versions antérieures. Ces différences et les modifications suivantes dans le comportement de code sont abordées dans [Exceptions : modifications apportées aux Macros d’Exception dans la Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).
+Probablement inutile convertir le code existant, bien que vous devez être conscient des différences entre les implémentations de macros dans MFC version 3.0 et les implémentations dans les versions antérieures. Ces différences et les modifications suivantes dans le comportement de code sont abordées dans [Exceptions : Modifications apportées aux Macros d’Exception dans la Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).
 
 Les principaux avantages de la conversion sont :
 
 - Code qui utilise les mots clés de gestion des exceptions C++ se compile en un peu plus petits. EXE ou. DLL.
 
-- Les mots clés de gestion des exceptions C++ sont plus polyvalents : ils peuvent gérer les exceptions de n’importe quel type de données qui peuvent être copiés (**int**, **float**, **char**, et ainsi de suite), tandis que le macros de gérer les exceptions uniquement de la classe `CException` et les classes dérivées à partir de celui-ci.
+- Le C++ mots clés de gestion des exceptions sont plus polyvalents : Ils peuvent gérer les exceptions de n’importe quel type de données qui peuvent être copiés (**int**, **float**, **char**, et ainsi de suite), tandis que les macros ne gérer que les exceptions de classe `CException` et les classes dérivées à partir de celui-ci.
 
-La principale différence entre les macros et les mots clés est que l’utilisation des macros « automatique » de code supprime une exception interceptée lorsque l’exception passe hors de portée. Code à l’aide de mots clés ne fait pas, donc vous devez supprimer explicitement une exception interceptée. Pour plus d’informations, consultez l’article [Exceptions : interception et suppression des Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).
+La principale différence entre les macros et les mots clés est que l’utilisation des macros « automatique » de code supprime une exception interceptée lorsque l’exception passe hors de portée. Code à l’aide de mots clés ne fait pas, donc vous devez supprimer explicitement une exception interceptée. Pour plus d’informations, consultez l’article [Exceptions : Interception et suppression d’Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 Une autre différence est la syntaxe. La syntaxe pour les macros et les mots clés diffère dans trois aspects :
 
@@ -49,13 +49,13 @@ Une autre différence est la syntaxe. La syntaxe pour les macros et les mots cl�
 
    Un **CATCH** appel de macro présente la syntaxe suivante :
 
-   **CATCH (** *classe_exception*, *nom_pointeur_objet_exception* **)**
+   **CATCH(** *exception_class*, *exception_object_pointer_name* **)**
 
    Notez que la virgule entre le nom de classe et le nom de pointeur d’objet.
 
    La déclaration d’exception pour le **catch** mot clé utilise la syntaxe suivante :
 
-   **catch (** *type_exception* *nom_exception* **)**
+   **catch(** *exception_type* *exception_name* **)**
 
    Cette instruction de déclaration d’exception indique le type d’exception catch bloquer des handles.
 
@@ -99,7 +99,7 @@ Une autre différence est la syntaxe. La syntaxe pour les macros et les mots cl�
 
    [!code-cpp[NVC_MFCExceptions#7](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
 
-4. Modifier le code dans les blocs catch afin qu’il supprime des objets d’exception en fonction des besoins. Pour plus d’informations, consultez l’article [Exceptions : interception et suppression des Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).
+4. Modifier le code dans les blocs catch afin qu’il supprime des objets d’exception en fonction des besoins. Pour plus d’informations, consultez l’article [Exceptions : Interception et suppression d’Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 Voici un exemple de code de gestion des exceptions à l’aide de macros d’exception MFC. Étant donné que le code dans l’exemple suivant utilise les macros, l’exception `e` est automatiquement supprimé :
 
@@ -109,7 +109,7 @@ Le code dans l’exemple suivant utilise les mots clés des exceptions C++, donc
 
 [!code-cpp[NVC_MFCExceptions#9](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_4.cpp)]
 
-Pour plus d’informations, consultez [Exceptions : utilisation des Macros MFC et des Exceptions C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
+Pour plus d’informations, consultez [Exceptions : À l’aide de Macros MFC et des Exceptions C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
 ## <a name="see-also"></a>Voir aussi
 

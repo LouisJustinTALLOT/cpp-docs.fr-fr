@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
 ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411043"
 ---
 # <a name="allocator-class"></a>allocator, classe
 
@@ -77,7 +77,7 @@ Ainsi, un allocateur définit les types suivants :
 
 Ces `Type`s spécifient la forme des pointeurs et références doivent prendre pour les éléments alloués. ( [allocator::pointer](#pointer) n’est pas nécessairement identique `Type*` pour tous les objets allocateur, même s’il a cette définition évidente pour la classe `allocator`.)
 
-**C++11 et versions ultérieures :** Pour autoriser les opérations de déplacement dans votre allocateur, utilisez l’interface d’allocateur minimale et implémentez le constructeur de copie, les opérateurs == et !=, allocate et deallocate. Pour plus d’informations et pour obtenir un exemple, consultez [Allocateurs](../standard-library/allocators.md)
+**C ++ 11 et versions ultérieures :**  Pour activer les opérations de déplacement dans votre allocateur, utilisez l’interface d’allocateur minimale et implémentez le constructeur de copie, == et ! = opérateurs, allocate et deallocate. Pour plus d’informations et pour obtenir un exemple, consultez [Allocateurs](../standard-library/allocators.md)
 
 ## <a name="members"></a>Membres
 
@@ -134,7 +134,7 @@ const_pointer address(const_reference val) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*<br/>
+*val*<br/>
 Valeur const ou nonconst de l’objet dont l’adresse est recherchée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -469,7 +469,7 @@ void construct(pointer ptr, _Other&&...   val);
 *ptr*<br/>
 Pointeur vers l’emplacement où l’objet doit être construit.
 
-*Val*<br/>
+*val*<br/>
 Valeur avec laquelle l’objet en cours de construction doit être initialisé.
 
 ### <a name="remarks"></a>Notes

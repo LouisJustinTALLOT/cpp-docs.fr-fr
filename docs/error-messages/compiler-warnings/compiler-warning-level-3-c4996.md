@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57816423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401499"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilateur avertissement (niveau 3) C4996
 
@@ -19,7 +19,7 @@ Le compilateur a rencontré une déclaration déconseillée. **Cet avertissement
 
 Il s’agit de quelques messages d’erreur C4996 courants générés par la bibliothèque Runtime C et la bibliothèque Standard, mais pas une liste exhaustive. Suivez les liens ou lisez la suite pour les méthodes pour résoudre le problème ou de désactiver l’avertissement.
 
-- [Le nom POSIX pour cet élément est déconseillé. Au lieu de cela, utilisez le nom conforme ISO C et C++ : *nouveau_nom*. Consultez l’aide en ligne pour plus d’informations.](#posix-function-names)
+- [Le nom POSIX pour cet élément est déconseillé. Au lieu de cela, utilisez l’ISO C et C++ nom conforme : *nouveau_nom*. Consultez l’aide en ligne pour plus d’informations.](#posix-function-names)
 
 - [Cette fonction ou cette variable peut être dangereux. Envisagez d’utiliser *version_sécurisée* à la place. Pour désactiver la dépréciation, utilisez \_CRT\_SECURE\_non\_avertissements.  Consultez l’aide en ligne pour plus d’informations.](#unsafe-crt-library-functions)
 
@@ -65,7 +65,7 @@ Voici quelques-unes des sources courantes d’erreurs et avertissements de l’e
 
 ### <a name="posix-function-names"></a>Noms de fonction POSIX
 
-**Le nom POSIX pour cet élément est déconseillé. Au lieu de cela, utilisez le nom conforme ISO C et C++ :** *nouveau_nom*. **Consultez l’aide en ligne pour plus d’informations.**
+**Le nom POSIX pour cet élément est déconseillé. Au lieu de cela, utilisez l’ISO C et C++ nom conforme :** *nouveau_nom*. **Consultez l’aide en ligne pour plus d’informations.**
 
 Microsoft a renommé certaines fonctions POSIX dans le CRT se conforme à C99 et C ++ 03 règles pour les noms définis par l’implémentation de fonction globale. Seuls les noms POSIX d’origine sont déconseillés, pas les fonctions elles-mêmes. Dans la plupart des cas, un trait de soulignement de début a été ajouté au nom de fonction POSIX pour créer un nom conforme à la norme. Le compilateur émet un avertissement de désapprobation pour le nom de fonction d’origine et suggère le nom par défaut.
 

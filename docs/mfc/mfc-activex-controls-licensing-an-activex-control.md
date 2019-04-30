@@ -12,11 +12,11 @@ helpviewer_keywords:
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
 ms.openlocfilehash: eda2ea08c6bd3526befb71c704aa20eba6935b04
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392762"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Contrôles ActiveX MFC : Licences des contrôles ActiveX
 
