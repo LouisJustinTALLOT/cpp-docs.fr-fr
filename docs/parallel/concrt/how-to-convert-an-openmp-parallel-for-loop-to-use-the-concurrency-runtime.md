@@ -8,11 +8,11 @@ helpviewer_keywords:
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
 ms.openlocfilehash: bc408465f34f0558e9f426ae35b83d4610898414
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413890"
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Procédure : Convertir une boucle utiliser le Runtime d’accès concurrentiel OpenMP parallèle
 
@@ -41,7 +41,7 @@ Pour plus d’informations sur `parallel_for` et d’autres algorithmes parallè
 
 ## <a name="example"></a>Exemple
 
-Cet exemple modifie le précédent pour agir sur un [std::array](../../standard-library/array-class-stl.md) au lieu de l’objet sur un tableau natif. Étant donné que les versions 2.0 et 2.5 d’OpenMP autorisent pour signés uniquement dans les types d’index intégraux un `parallel_for` construction, vous ne pouvez pas utiliser des itérateurs pour accéder aux éléments d’un conteneur de bibliothèque C++ Standard en parallèle. La bibliothèque de modèles parallèles (PPL) fournit la [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorithme, qui effectue des tâches, en parallèle, sur un conteneur itératif telles que celles fournies par la bibliothèque Standard C++. Il utilise la même logique de partitionnement qui le `parallel_for` algorithme utilise. Le `parallel_for_each` algorithme ressemble à la bibliothèque Standard C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorithme, à ceci près que le `parallel_for_each` algorithme exécute les tâches simultanément.
+Cet exemple modifie le précédent pour agir sur un [std::array](../../standard-library/array-class-stl.md) au lieu de l’objet sur un tableau natif. Étant donné que les versions 2.0 et 2.5 d’OpenMP autorisent pour signés uniquement dans les types d’index intégraux un `parallel_for` construction, vous ne pouvez pas utiliser des itérateurs pour accéder aux éléments d’un conteneur de bibliothèque C++ Standard en parallèle. La bibliothèque de modèles parallèles (PPL) fournit la [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorithme, qui effectue des tâches, en parallèle, sur un conteneur itératif telles que celles fournies par le C++ bibliothèque Standard. Il utilise la même logique de partitionnement qui le `parallel_for` algorithme utilise. Le `parallel_for_each` algorithme ressemble à la C++ bibliothèque Standard [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorithme, à ceci près que le `parallel_for_each` algorithme exécute les tâches simultanément.
 
 [!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]
 

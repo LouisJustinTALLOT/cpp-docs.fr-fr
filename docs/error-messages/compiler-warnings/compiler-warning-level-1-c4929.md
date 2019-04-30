@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
 ms.openlocfilehash: 07081f2b8e305e20eb1725d3d76a6d77638caa7e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393400"
 ---
 # <a name="compiler-warning-level-1-c4929"></a>Avertissement du compilateur (niveau 1) C4929
 
-'fichier' : typelibrary contient une union ; en ignorant le qualificateur 'embedded_idl ' ignoré
+'file': typelibrary contains a union; ignoring the 'embedded_idl' qualifier
 
 L’attribut embedded_idl de [#import](../../preprocessor/hash-import-directive-cpp.md) ne peut pas être appliqué à la bibliothèque de types car une union est présente dans la bibliothèque de types. Pour résoudre cet avertissement, n’utilisez pas embedded_idl.
 

@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
 ms.openlocfilehash: 52a24bb2372cc7f22797ae7122b6659724c47b55
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413006"
 ---
 # <a name="map-class"></a>map, classe
 
@@ -577,7 +577,7 @@ Valeur de clé des éléments à mettre en correspondance à partir de la classe
 
 La fonction membre retourne le nombre d’éléments *x* dans la plage
 
-\[ lower_bound (*clé*), upper_bound (*clé*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 qui est 0 ou 1 dans le cas de map, qui est un conteneur associatif unique.
 
@@ -1115,10 +1115,10 @@ size_type erase(
 *Where*<br/>
 Position de l’élément à supprimer.
 
-*Premier*<br/>
+*First*<br/>
 Position du premier élément à supprimer.
 
-*Dernière*<br/>
+*Last*<br/>
 Position juste après le dernier élément à supprimer.
 
 *Key*<br/>
@@ -1413,8 +1413,8 @@ IList);
 |*Val*|Valeur d'un élément à insérer dans la classe map sauf si elle contient déjà un élément dont la clé est classée de manière équivalente.|
 |*Where*|Emplacement où commencer à rechercher le point d'insertion correct. (Si ce point précède immédiatement *où*, insertion peut se produire dans le temps fixe amorti au lieu de temps logarithmique.)|
 |*ValTy*|Paramètre de modèle qui spécifie le type d’argument que la classe map peut utiliser pour construire un élément de [value_type](#value_type)et effectue un transfert parfait *Val* en tant qu’argument.|
-|*Premier*|Position du premier élément à copier.|
-|*Dernière*|Position juste au-delà du dernier élément à copier.|
+|*First*|Position du premier élément à copier.|
+|*Last*|Position juste au-delà du dernier élément à copier.|
 |*InputIterator*|Argument de fonction de modèle qui remplit les conditions requises par un [itérateur d’entrée](../standard-library/input-iterator-tag-struct.md) qui pointe vers des éléments d’un type pouvant servir à construire des objets [value_type](#value_type).|
 |*IList*|[initializer_list](../standard-library/initializer-list.md) à partir de laquelle copier les éléments.|
 
@@ -1793,10 +1793,10 @@ map(
 |-|-|
 |Paramètre|Description|
 |*Al*|Classe d’allocateur de stockage à utiliser pour cet objet map, qui est par défaut `Allocator`.|
-|*Comp.*|Fonction de comparaison de type `const Traits` utilisée pour ordonner les éléments dans le mappage (par défaut, `hash_compare`).|
+|*Comp*|Fonction de comparaison de type `const Traits` utilisée pour ordonner les éléments dans le mappage (par défaut, `hash_compare`).|
 |*Droite*|Classe map dont l’ensemble construit doit être une copie.|
-|*Premier*|Position du premier élément de la plage d'éléments à copier.|
-|*Dernière*|Position du premier élément au-delà de la plage d'éléments à copier.|
+|*First*|Position du premier élément de la plage d'éléments à copier.|
+|*Last*|Position du premier élément au-delà de la plage d'éléments à copier.|
 |*IList*|Initializer_list à partir de laquelle les éléments doivent être copiés.|
 
 ### <a name="remarks"></a>Notes

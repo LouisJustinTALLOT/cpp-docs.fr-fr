@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
 ms.openlocfilehash: 78d736b53a2febe4f4a026e3aaf9db14dd7f9c0b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392490"
 ---
 # <a name="cobarray-class"></a>CObArray (classe)
 
@@ -125,7 +125,7 @@ Dérivation de classe de tableau est similaire à la dérivation de la liste. Po
 
 `CObArray`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcoll.h
 
@@ -154,12 +154,12 @@ Le tableau suivant présente les autres membres fonctions qui sont similaires au
 
 |Classe|Fonction membre|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**Ajouter INT_PTR (octets** `newElement` **) ;**<br /><br /> **throw (CMemoryException\* ) ;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Ajouter INT_PTR (DWORD** `newElement` **) ;**<br /><br /> **throw (CMemoryException\* ) ;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**Ajouter INT_PTR (void** <strong>\*</strong> `newElement` **) ;**<br /><br /> **throw (CMemoryException\* ) ;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**Ajouter INT_PTR (LPCTSTR** `newElement` **) ; lever (CMemoryException\* ) ;**<br /><br /> **INT_PTR Add(const CString&** `newElement` **) ;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**Ajouter INT_PTR (UINT** `newElement` **) ;**<br /><br /> **throw (CMemoryException\* ) ;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**Ajouter INT_PTR (WORD** `newElement` **) ;**<br /><br /> **throw (CMemoryException\* ) ;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR Add( BYTE** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR Add( DWORD** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR Add( void** <strong>\*</strong> `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR Add( LPCTSTR** `newElement` **); throw( CMemoryException\* );**<br /><br /> **INT_PTR Add(const CString&** `newElement` **);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR Add( UINT** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR Add( WORD** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
 
 ### <a name="example"></a>Exemple
 
@@ -202,12 +202,12 @@ Le tableau suivant présente les autres membres fonctions qui sont similaires au
 
 |Classe|Fonction membre|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**Ajouter INT_PTR (const CByteArray &** *src* **) ;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Ajout de INT_PTR (CDWordArray const &** *src* **) ;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**Ajouter INT_PTR (const CPtrArray &** *src* **) ;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**Ajout de INT_PTR (CStringArray const &** *src* **) ;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**Ajout de INT_PTR (CUIntArray const &** *src* **) ;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**Ajouter INT_PTR (const CWordArray &** *src* **) ;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR Append( const CByteArray&** *src* **);**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR Append( const CDWordArray&** *src* **);**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR Append( const CPtrArray&** *src* **);**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR Append( const CStringArray&** *src* **);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR Append( const CUIntArray&** *src* **);**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR Append( const CWordArray&** *src* **);**|
 
 ### <a name="example"></a>Exemple
 
@@ -236,12 +236,12 @@ Le tableau suivant présente les autres membres fonctions qui sont similaires au
 
 |Classe|Fonction membre|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void copie (const CByteArray &** *src* **) ;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void copie (CDWordArray const &** *src* **) ;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void copie (const CPtrArray &** *src* **) ;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void copie (CStringArray const &** *src* **) ;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void copie (CUIntArray const &** *src* **) ;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void copie (const CWordArray &** *src* **) ;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void Copy( const CByteArray&** *src* **);**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void Copy( const CDWordArray&** *src* **);**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void Copy( const CPtrArray&** *src* **);**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void Copy( const CStringArray&** *src* **);**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void Copy( const CUIntArray&** *src* **);**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void Copy( const CWordArray&** *src* **);**|
 
 ### <a name="example"></a>Exemple
 
@@ -265,12 +265,12 @@ Le tableau suivant présente les autres constructeurs sont similaires aux `CObAr
 
 |Classe|Constructeur|
 |-----------|-----------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**() CByteArray ;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**() CDWordArray ;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**() CPtrArray ;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**() CStringArray ;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**() CUIntArray ;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**() CWordArray ;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**CByteArray( );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**CDWordArray( );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**CPtrArray( );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CStringArray( );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**CUIntArray( );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**CWordArray( );**|
 
 ### <a name="example"></a>Exemple
 
@@ -303,8 +303,8 @@ Le tableau suivant présente les autres membres fonctions qui sont similaires au
 |-----------|---------------------|
 |[CByteArray](../../mfc/reference/cbytearray-class.md)|**OCTETS & ElementAt (INT_PTR** `nIndex` **) ;**|
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD & ElementAt (INT_PTR** `nIndex` **) ;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& ElementAt (INT_PTR** `nIndex` **) ;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString & ElementAt (INT_PTR** `nIndex` **) ;**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& ElementAt( INT_PTR** `nIndex` **);**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString& ElementAt( INT_PTR** `nIndex` **);**|
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT & ElementAt (INT_PTR** `nIndex` **) ;**|
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**MOT & ElementAt (INT_PTR** `nIndex` **) ;**|
 
@@ -328,12 +328,12 @@ Le tableau suivant présente les autres membres fonctions qui sont similaires au
 
 |Classe|Fonction membre|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void () FreeExtra ;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void () FreeExtra ;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void () FreeExtra ;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void () FreeExtra ;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void () FreeExtra ;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void () FreeExtra ;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void FreeExtra( );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void FreeExtra( );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void FreeExtra( );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void FreeExtra( );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void FreeExtra( );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void FreeExtra( );**|
 
 ### <a name="example"></a>Exemple
 
@@ -367,7 +367,7 @@ Le tableau suivant présente les autres membres fonctions qui sont similaires au
 |-----------|---------------------|
 |[CByteArray](../../mfc/reference/cbytearray-class.md)|**OCTETS GetAt (INT_PTR** `nIndex` **) const ;**|
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD GetAt (INT_PTR** `nIndex` **) const ;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\* GetAt (INT_PTR** `nIndex` **) const ;**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\* GetAt( INT_PTR** `nIndex` **) const;**|
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString GetAt (INT_PTR** `nIndex` **) const ;**|
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT GetAt (INT_PTR** `nIndex` **) const ;**|
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD GetAt (INT_PTR** `nIndex` **) const ;**|
@@ -398,12 +398,12 @@ Le tableau suivant présente les autres membres fonctions qui sont similaires au
 
 |Classe|Fonction membre|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR const ; (GetCount)**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR const ; (GetCount)**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR const ; (GetCount)**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR const ; (GetCount)**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR const ; (GetCount)**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR const ; (GetCount)**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetCount( ) const;**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetCount( ) const;**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetCount( ) const;**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetCount( ) const;**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetCount( ) const;**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetCount( ) const;**|
 
 ### <a name="example"></a>Exemple
 
@@ -435,12 +435,12 @@ Le tableau suivant présente les autres membres fonctions qui sont similaires au
 
 |Classe|Fonction membre|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**OCTETS const\* const ; à GetData) OCTETS\* () GetData ;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD const\* GetData () const ; DWORD\* () GetData ;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**const void\* \* () GetData const ; void\* \* () GetData ;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**const CString\* const ; à GetData) CString\* () GetData ;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT const\* const ; à GetData) UINT\* () GetData ;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD const\* const ; à GetData) WORD\* () GetData ;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**const BYTE\* GetData( ) const;BYTE\* GetData( );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**const DWORD\* GetData( ) const;DWORD\* GetData( );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**const void\*\* GetData( ) const;void\*\* GetData( );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**const CString\* GetData( ) const;CString\* GetData( );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**const UINT\* GetData( ) const;UINT\* GetData( );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**const WORD\* GetData( ) const;WORD\* GetData( );**|
 
 ### <a name="example"></a>Exemple
 
@@ -499,12 +499,12 @@ Le tableau suivant présente les autres membres fonctions qui sont similaires au
 
 |Classe|Fonction membre|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetUpperBound () const ;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetUpperBound () const ;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetUpperBound () const ;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetUpperBound () const ;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetUpperBound () const ;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetUpperBound () const ;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetUpperBound( ) const;**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
 
 ### <a name="example"></a>Exemple
 
@@ -556,12 +556,12 @@ Le tableau suivant présente les autres membres fonctions qui sont similaires au
 
 |Classe|Fonction membre|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, octets** `newElement` **, int** `nCount` **= 1) ;**<br /><br /> **throw (CMemoryException\* ) ;**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CByteArray** <strong>\*</strong> `pNewArray` **) ;**<br /><br /> **throw (CMemoryException\* ) ;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, DWORD** `newElement` **, int** `nCount` **= 1) ;**<br /><br /> **throw (CMemoryException\* ) ;**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CDWordArray** <strong>\*</strong> `pNewArray` **) ;**<br /><br /> **throw (CMemoryException\* ) ;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **, int** `nCount` **= 1) ;**<br /><br /> **throw (CMemoryException\* ) ;**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CPtrArray** <strong>\*</strong> `pNewArray` **) ;**<br /><br /> **throw (CMemoryException\* ) ;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **, int** `nCount` **= 1) ;**<br /><br /> **throw (CMemoryException\* ) ;**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CStringArray** <strong>\*</strong> `pNewArray` **) ;**<br /><br /> **throw (CMemoryException\* ) ;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, UINT** `newElement` **, int** `nCount` **= 1) ;**<br /><br /> **throw (CMemoryException\* ) ;**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CUIntArray** <strong>\*</strong> `pNewArray` **) ;**<br /><br /> **throw (CMemoryException\* ) ;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, WORD** `newElement` **, int** `nCount` **= 1) ;**<br /><br /> **throw (CMemoryException\* ) ;**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CWordArray** <strong>\*</strong> `pNewArray` **) ;**<br /><br /> **throw (CMemoryException\* ) ;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, BYTE** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CByteArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, DWORD** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CDWordArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CPtrArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, LPCTSTR** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CStringArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, UINT** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CUIntArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, WORD** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CWordArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
 
 ### <a name="example"></a>Exemple
 
@@ -609,12 +609,12 @@ Le tableau suivant présente les autres opérateurs qui sont similaires aux `COb
 
 |Classe|Opérateur|
 |-----------|--------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**[] Octets &, opérateur (int_ptr** `nindex`  **\);**<br /><br /> **Opérateur BYTE [] (int_ptr** `nindex`  **\) const ;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**[] DWORD &, opérateur (int_ptr** `nindex`  **\);**<br /><br /> **DWORD operator [] (int_ptr** `nindex`  **\) const ;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& operator [] (int_ptr** `nindex`  **\);**<br /><br /> **void\* operator [] (int_ptr** `nindex`  **\) const ;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**[] Octets &, opérateur (int_ptr** `nindex`  **\);**<br /><br /> **BYTE operator [](int_ptr** `nindex` **\) const;**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**[] DWORD &, opérateur (int_ptr** `nindex`  **\);**<br /><br /> **DWORD operator [](int_ptr** `nindex` **\) const;**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& operator [](int_ptr** `nindex` **\);**<br /><br /> **void\* operator [](int_ptr** `nindex` **\) const;**|
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**[] CString &, opérateur (int_ptr** `nindex`  **\);**<br /><br /> **CString operator [] (int_ptr** `nindex`  **\) const ;**|
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**[] UINT &, opérateur (int_ptr** `nindex`  **\);**<br /><br /> **UINT, opérateur [] (int_ptr** `nindex`  **\) const ;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**[] WORD &, opérateur (int_ptr** `nindex`  **\);**<br /><br /> **WORD operator [] (int_ptr** `nindex`  **\) const ;**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**[] WORD &, opérateur (int_ptr** `nindex`  **\);**<br /><br /> **WORD operator [](int_ptr** `nindex` **\) const;**|
 
 ### <a name="example"></a>Exemple
 
@@ -683,12 +683,12 @@ Le tableau suivant présente les autres membres fonctions qui sont similaires au
 
 |Classe|Fonction membre|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1) ;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1) ;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1) ;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1) ;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1) ;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **, INT_PTR** *nCount* **= 1) ;**|
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** *nCount* **= 1 );**|
 
 ### <a name="example"></a>Exemple
 

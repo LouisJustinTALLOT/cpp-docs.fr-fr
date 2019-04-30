@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
 ms.openlocfilehash: 8510bbc89a22fe3eb8df6bbf8ce77db44c7a65a0
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405077"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap, classe
 
@@ -849,7 +849,7 @@ iterator emplace(ValTy&& val);
 
 |Paramètre|Description|
 |-|-|
-|*Val*|Valeur utilisée pour construire un élément à insérer dans le [hash_multimap](../standard-library/hash-multimap-class.md).|
+|*val*|Valeur utilisée pour construire un élément à insérer dans le [hash_multimap](../standard-library/hash-multimap-class.md).|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -906,8 +906,8 @@ iterator emplace_hint(
 
 |Paramètre|Description|
 |-|-|
-|*Val*|Valeur utilisée pour déplacer un élément à insérer dans le [hash_multimap](../standard-library/hash-multimap-class.md), sauf si le `hash_multimap` contient déjà cet élément (ou, plus généralement, s’il contient déjà un élément dont la clé est ordonnée de façon équivalente).|
-|*_WHERE*|Indicateur concernant l’emplacement où commencer à rechercher le point d’insertion correct.|
+|*val*|Valeur utilisée pour déplacer un élément à insérer dans le [hash_multimap](../standard-library/hash-multimap-class.md), sauf si le `hash_multimap` contient déjà cet élément (ou, plus généralement, s’il contient déjà un élément dont la clé est ordonnée de façon équivalente).|
+|*_Where*|Indicateur concernant l’emplacement où commencer à rechercher le point d’insertion correct.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1176,7 +1176,7 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*_WHERE*<br/>
+*_Where*<br/>
 Position de l'élément à supprimer du hash_multimap.
 
 *first*<br/>
@@ -1516,10 +1516,10 @@ hash_multimap(
 |Paramètre|Description|
 |-|-|
 |*Al*|Classe d’allocateur de stockage à utiliser pour cet objet hash_multimap, qui est par défaut `Allocator`.|
-|*Comp.*|Fonction de comparaison de type `const Traits` utilisée pour ordonner les éléments dans le mappage (par défaut, `Traits`).|
+|*Comp*|Fonction de comparaison de type `const Traits` utilisée pour ordonner les éléments dans le mappage (par défaut, `Traits`).|
 |*Droite*|Classe map dont l’ensemble construit doit être une copie.|
-|*Premier*|Position du premier élément de la plage d'éléments à copier.|
-|*Dernière*|Position du premier élément au-delà de la plage d'éléments à copier.|
+|*First*|Position du premier élément de la plage d'éléments à copier.|
+|*Last*|Position du premier élément au-delà de la plage d'éléments à copier.|
 |*IList*|Initializer_list à partir duquel copier.|
 
 ### <a name="remarks"></a>Notes
@@ -1577,8 +1577,8 @@ iterator insert(
 |-|-|
 |*Val*|Valeur d’un élément à insérer dans la classe hash_multimap sauf si elle contient déjà cet élément ou, plus généralement, si elle contient déjà un élément dont la clé est classée de façon équivalente.|
 |*Where*|Indication de l’emplacement de départ de la recherche du point d’insertion correct.|
-|*Premier*|Position du premier élément à copier à partir d’une carte.|
-|*Dernière*|Position juste au-delà du dernier élément à copier à partir d’une carte.|
+|*First*|Position du premier élément à copier à partir d’une carte.|
+|*Last*|Position juste au-delà du dernier élément à copier à partir d’une carte.|
 
 ### <a name="return-value"></a>Valeur de retour
 

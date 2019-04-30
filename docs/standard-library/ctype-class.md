@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: e7c474e9112acadc11af889471b1e126dfeeb23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394141"
 ---
 # <a name="ctype-class"></a>ctype, classe
 
@@ -147,11 +147,11 @@ Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l�
 
 Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
 
-- 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0: La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
-- 1 : la durée de vie de l’objet doit être gérée manuellement.
+- 1 : La durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1 : ces valeurs ne sont pas définies.
+- \> 1: Ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
 ms.openlocfilehash: 954dfec50db75c0e3d11f0924b0ee398cd211fe1
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59036138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407703"
 ---
 # <a name="import-attributes-c"></a>Attributs #import (C++)
 Fournit des liens vers les attributs utilisés avec la `#import` directive.

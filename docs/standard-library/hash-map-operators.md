@@ -6,11 +6,11 @@ f1_keywords:
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 ms.openlocfilehash: ba84f476c712f64e7782f0ea476bbb65a35dc14a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405051"
 ---
 # <a name="lthashmapgt-operators"></a>&lt;hash_map&gt;, opérateurs
 
@@ -155,7 +155,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_neq_mm"></a>  opérateur ! = (hash_multimap)
+## <a name="op_neq_mm"></a>  operator!= (hash_multimap)
 
 > [!NOTE]
 > Cette API est obsolète. L’alternative est [unordered_multimap, classe](unordered-multimap-class.md).
@@ -222,7 +222,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq_mm"></a>  opérateur == (hash_multimap)
+## <a name="op_eq_eq_mm"></a>  operator==  (hash_multimap)
 
 > [!NOTE]
 > Cette API est obsolète. L’alternative est [unordered_multimap, classe](unordered-multimap-class.md).

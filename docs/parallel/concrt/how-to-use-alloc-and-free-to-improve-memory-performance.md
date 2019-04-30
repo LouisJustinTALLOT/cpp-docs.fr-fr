@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
 ms.openlocfilehash: f55bf360ac2b4c7162c1ed2b917ac6ce8c7cd11f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410017"
 ---
 # <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>Procédure : Utiliser Alloc et Free pour améliorer les performances de la mémoire
 

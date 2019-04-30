@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4747
 ms.assetid: af37befd-ba1f-4bdc-96e1-a953f7a2ad9c
 ms.openlocfilehash: ecaabd482049771b1d3915470a2be7a52e36d361
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404013"
 ---
 # <a name="compiler-warning-level-1-c4747"></a>Avertissement du compilateur (niveau 1) C4747
 
-Appelant managé 'entrypoint' : Impossible d’exécuter du code managé le verrouillage du chargeur, y compris le point d’entrée DLL et les appels accessibles à partir du point d’entrée DLL
+Appel géré 'point d’entrée' : Impossible d’exécuter du code managé le verrouillage du chargeur, y compris le point d’entrée DLL et les appels accessibles à partir du point d’entrée DLL
 
 Le compilateur a détecté un point d’entrée DLL (probable) compilé en langage MSIL.  En raison de problèmes potentiels avec le chargement d’une DLL dont point d’entrée a été compilé en langage MSIL, il est vivement déconseillé de se compiler une fonction de point d’entrée DLL en langage MSIL.
 

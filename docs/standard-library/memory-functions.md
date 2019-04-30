@@ -75,11 +75,11 @@ helpviewer_keywords:
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
 ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55763932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412850"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt;, fonctions
 
@@ -269,7 +269,7 @@ La fonction informe tout RÉCUPÉRATEUR de mémoire que la plage d’adresses `[
 
 ## <a name="declare_reachable"></a>  declare_reachable
 
-Informe une opération garbage collection que l'adresse indiquée est dédiée au stockage alloué et est accessible.
+Informe une opération garbage collection que l’adresse indiquée est dédiée au stockage alloué et est accessible.
 
 ```cpp
 void declare_reachable(void* ptr);
@@ -954,13 +954,13 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 ### <a name="parameters"></a>Paramètres
 
 *first*<br/>
-Itérateur d'entrée qui traite le premier élément d'une plage source.
+Itérateur d'entrée qui traite le premier élément de la plage source.
 
 *last*<br/>
-Itérateur d'entrée qui traite le dernier élément d'une plage source.
+Itérateur d'entrée qui traite le dernier élément de la plage source.
 
 *dest*<br/>
-Itérateur forward qui traite le premier élément d'une plage de destination.
+Itérateur vers l’avant qui traite le premier élément de la plage de destination.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1068,11 +1068,11 @@ Itérateur d'entrée qui fait référence à l'objet à copier.
 Type entier signé ou non signé spécifiant le nombre de fois que l'objet doit être copié.
 
 *dest*<br/>
-Itérateur forward qui fait référence à l'emplacement des nouvelles copies.
+Itérateur vers l’avant qui fait référence à l'emplacement des nouvelles copies.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Itérateur forward qui traite la première position au-delà de la destination. Si la plage source est vide, l’itérateur traite *premier*.
+Itérateur vers l’avant qui traite la première position au-delà de la destination. Si la plage source est vide, l’itérateur traite *premier*.
 
 ### <a name="remarks"></a>Notes
 
@@ -1085,7 +1085,7 @@ La fonction de modèle effectue les opérations suivantes :
     return dest;
 ```
 
-à moins que le code ne provoque la levée d'une exception. Dans ce cas, tous les objets construits sont détruits et l'exception est de nouveau levée.
+à moins que le code ne provoque la levée d'une exception. Dans ce cas, tous les objets construits sont détruits et l’exception est de nouveau levée.
 
 ## <a name="uninitialized_fill"></a>  uninitialized_fill
 
@@ -1171,7 +1171,7 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 ### <a name="parameters"></a>Paramètres
 
 *first*<br/>
-Itérateur forward qui traite le premier élément de la plage de destination devant être initialisée.
+Itérateur vers l’avant qui traite le premier élément de la plage de destination devant être initialisée.
 
 *count*<br/>
 Nombre d'éléments à initialiser.

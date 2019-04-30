@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d990efb7d4c363b8d8e38f42f9edac7eea0a3882
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413214"
 ---
 # <a name="list-class"></a>list, classe
 
@@ -242,10 +242,10 @@ void assign(
 
 ### <a name="parameters"></a>Paramètres
 
-*Premier*<br/>
+*First*<br/>
 Position du premier élément de la plage d’éléments à copier à partir de la liste d’arguments.
 
-*Dernière*<br/>
+*Last*<br/>
 Position du premier élément juste après la plage d'éléments à copier à partir de la liste d'arguments.
 
 *Nombre*<br/>
@@ -758,7 +758,7 @@ void emplace(iterator Where, Type&& val);
 |Paramètre|Description|
 |-|-|
 |*Where*|Position dans l’objet [liste](../standard-library/list-class.md) cible où le premier élément est inséré.|
-|*Val*|Élément ajouté à la fin de l'objet `list`.|
+|*val*|Élément ajouté à la fin de l'objet `list`.|
 
 ### <a name="remarks"></a>Notes
 
@@ -800,7 +800,7 @@ void emplace_back(Type&& val);
 
 |Paramètre|Description|
 |-|-|
-|*Val*|Élément ajouté à la fin de l’objet [list](../standard-library/list-class.md).|
+|*val*|Élément ajouté à la fin de l’objet [list](../standard-library/list-class.md).|
 
 ### <a name="remarks"></a>Notes
 
@@ -842,7 +842,7 @@ void emplace_front(Type&& val);
 
 |Paramètre|Description|
 |-|-|
-|*Val*|Élément ajouté au début de l’objet [list](../standard-library/list-class.md).|
+|*val*|Élément ajouté au début de l’objet [list](../standard-library/list-class.md).|
 
 ### <a name="remarks"></a>Notes
 
@@ -1153,8 +1153,8 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 |*Where*|Position dans la liste cible où le premier élément est inséré.|
 |*Val*|Valeur de l'élément inséré dans la liste.|
 |*Nombre*|Nombre d'éléments insérés dans la liste.|
-|*Premier*|Position du premier élément de la plage d'éléments dans la liste d'arguments à copier.|
-|*Dernière*|Position du premier élément au-delà de la plage d’éléments dans la liste d’arguments à copier.|
+|*First*|Position du premier élément de la plage d'éléments dans la liste d'arguments à copier.|
+|*Last*|Position du premier élément au-delà de la plage d’éléments dans la liste d’arguments à copier.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1276,8 +1276,8 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Nombre*|Nombre d'éléments dans la liste construite.|
 |*Val*|Valeur des éléments de la liste.|
 |*Droite*|Liste dont la liste construite doit être une copie.|
-|*Premier*|Position du premier élément de la plage d'éléments à copier.|
-|*Dernière*|Position du premier élément au-delà de la plage d'éléments à copier.|
+|*First*|Position du premier élément de la plage d'éléments à copier.|
+|*Last*|Position du premier élément au-delà de la plage d'éléments à copier.|
 |*IList*|initializer_list qui contient les éléments à copier.|
 
 ### <a name="remarks"></a>Notes
@@ -1678,7 +1678,7 @@ void push_back(void push_back(Type&& val);
 
 |Paramètre|Description|
 |-|-|
-|*Val*|Élément ajouté à la fin de la liste.|
+|*val*|Élément ajouté à la fin de la liste.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1734,7 +1734,7 @@ void push_front(Type&& val);
 
 |Paramètre|Description|
 |-|-|
-|*Val*|Élément ajouté au début de la liste.|
+|*val*|Élément ajouté au début de la liste.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1894,7 +1894,7 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*<br/>
+*val*<br/>
 Valeur qui, si elle est contenue dans un élément, entraîne la suppression de cet élément de la liste.
 
 ### <a name="remarks"></a>Notes
@@ -1952,7 +1952,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>Paramètres
 
-*Pred*<br/>
+*pred*<br/>
 Prédicat unaire qui, s’il est satisfait par un élément, entraîne la suppression de cet élément de la liste.
 
 ### <a name="example"></a>Exemple
@@ -2106,7 +2106,7 @@ void resize(size_type _Newsize, Type val);
 *_Newsize*<br/>
 Nouvelle taille de la liste.
 
-*Val*<br/>
+*val*<br/>
 Valeur des nouveaux éléments à ajouter à la liste si la nouvelle taille est supérieure à la taille d’origine. Si la valeur est omise, la valeur par défaut pour la classe est assignée aux nouveaux éléments.
 
 ### <a name="remarks"></a>Notes
@@ -2366,10 +2366,10 @@ Liste source qui doit être insérée dans la liste de destination.
 *Iter*<br/>
 Élément à insérer à partir de la liste source.
 
-*Premier*<br/>
+*First*<br/>
 Premier élément de la plage à insérer à partir de la liste source.
 
-*Dernière*<br/>
+*Last*<br/>
 Première position au-delà du dernier élément de la plage à insérer à partir de la liste source.
 
 ### <a name="remarks"></a>Notes
@@ -2538,7 +2538,7 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>Paramètres
 
-*Pred*<br/>
+*pred*<br/>
 Prédicat binaire utilisé pour comparer des éléments consécutifs.
 
 ### <a name="remarks"></a>Notes

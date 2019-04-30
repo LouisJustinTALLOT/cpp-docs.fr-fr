@@ -7,11 +7,11 @@ helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 ms.openlocfilehash: 83306e47995f652014682d6bcc94966aab75c062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413253"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine, classe
 
@@ -49,13 +49,13 @@ class linear_congruential_engine{
 Type des résultats entiers non signés. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 *A*<br/>
-**Multiplier**. **Condition préalable** : consultez la section Notes.
+**Multiplier**. **Condition préalable**: Consultez la section Notes.
 
 *C*<br/>
-**Increment**. **Condition préalable** : consultez la section Notes.
+**Increment**. **Condition préalable**: Consultez la section Notes.
 
 *M*<br/>
-**Modulus**. **Condition préalable** : consultez la section Notes.
+**Modulus**. **Condition préalable**: Consultez la section Notes.
 
 ## <a name="members"></a>Membres
 
@@ -80,13 +80,13 @@ Si *M* est ne pas égal à zéro, les valeurs des arguments template *A* et *C* 
 
 Bien que vous puissiez construire un générateur directement à partir de ce moteur, vous pouvez aussi utiliser l’un des typedefs prédéfinis suivants.
 
-`minstd_rand0` : moteur standard minimal 1988 (Lewis, Goodman et Miller, 1969).
+`minstd_rand0`: Moteur standard minimal 1988 (Lewis, Goodman et Miller, 1969).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
 ```
 
-`minstd_rand` : moteur standard minimal mis à jour `minstd_rand0` (Park, Miller et Stockmeyer, 1993).
+`minstd_rand`: Moteur standard minimal mis à jour `minstd_rand0` (Park, Miller et Stockmeyer, 1993).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;

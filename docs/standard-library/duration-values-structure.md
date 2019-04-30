@@ -8,11 +8,11 @@ f1_keywords:
 - chrono/std::chrono::duration_values::zero
 ms.assetid: 7f66d2e3-1faf-47c3-b47e-08f2a87f20e8
 ms.openlocfilehash: bc382bbc408b11cbc18210f3ab944dda39adc8f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413773"
 ---
 # <a name="durationvalues-structure"></a>duration_values, structure
 
@@ -33,7 +33,7 @@ struct duration_values;
 |----------|-----------------|
 |[max](#max)|Static. Spécifie la limite supérieure pour une valeur de type `Rep`.|
 |[min](#min)|Static. Spécifie la limite inférieure pour une valeur de type `Rep`.|
-|[zéro](#zero)|Static. Retourne `Rep(0)`.|
+|[zero](#zero)|Static. Retourne `Rep(0)`.|
 
 ## <a name="requirements"></a>Configuration requise
 

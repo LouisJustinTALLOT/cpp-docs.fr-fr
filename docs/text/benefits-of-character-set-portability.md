@@ -6,11 +6,11 @@ helpviewer_keywords:
 - portability [C++], character sets
 ms.assetid: bd60b925-1498-4e4f-897b-4c8ce66edcf7
 ms.openlocfilehash: 0ca7e46cabb2d98a64a244863f8574a3e9e2a456
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410774"
 ---
 # <a name="benefits-of-character-set-portability"></a>Avantages de la portabilité d'un jeu de caractères
 

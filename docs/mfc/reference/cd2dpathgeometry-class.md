@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
 ms.openlocfilehash: 8657421e67239cdeb782cffbbd42e0c50f6c0e96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396351"
 ---
 # <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry, classe
 
@@ -66,7 +66,7 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|Pointeur vers un ID2D1PathGeometry.|
 
@@ -80,7 +80,7 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 `CD2DPathGeometry`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrendertarget.h
 

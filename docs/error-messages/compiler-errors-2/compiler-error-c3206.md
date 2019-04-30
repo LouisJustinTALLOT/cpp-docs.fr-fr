@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3206
 ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
 ms.openlocfilehash: 665244cbfc87f32274f9eaf9afacfb1caad50659
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402682"
 ---
 # <a name="compiler-error-c3206"></a>Erreur du compilateur C3206
 
-'fonction' : argument type non valide pour 'param', liste d’arguments type absente dans le type de classe 'nom_type'
+'fonction' : argument type non valide pour 'param', liste d’arguments type absente dans le type de classe 'nom_type'
 
 Une fonction avec modèle est définie comme prenant un argument de type de modèle. Toutefois, un argument de type de modèle a été passé.
 

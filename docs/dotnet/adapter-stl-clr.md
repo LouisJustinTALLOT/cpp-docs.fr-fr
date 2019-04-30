@@ -50,11 +50,11 @@ helpviewer_keywords:
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
 ms.openlocfilehash: d5c554439d9bb418b9b62484ee10cd6917cf1777
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397677"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
@@ -600,7 +600,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_eq"></a> collection_adapter::operator = (STL/CLR)
+## <a name="op_eq"></a> collection_adapter::operator= (STL/CLR)
 
 Remplace le descripteur stocké de la BCL.
 
@@ -862,7 +862,7 @@ x x x x x
 a b c
 ```
 
-## <a name="value_type"></a> collection_adapter::Value_type (STL/CLR)
+## <a name="value_type"></a> collection_adapter::value_type (STL/CLR)
 
 Type d’un élément.
 
@@ -1034,7 +1034,7 @@ Le type associé aux itérateurs encapsulées.
 
 La range_adapter stocke une paire d’itérateurs, qui à son tour délimiter une séquence d’éléments. L’objet implémente quatre interfaces BCL qui vous permettent de parcourir les éléments, dans l’ordre. Vous utilisez cette classe de modèle pour manipuler des plages STL/CLR comme conteneurs de la BCL.
 
-## <a name="range_adapter_op_eq"></a> range_adapter::operator = (STL/CLR)
+## <a name="range_adapter_op_eq"></a> range_adapter::operator= (STL/CLR)
 
 Remplace la paire itérateur stocké.
 

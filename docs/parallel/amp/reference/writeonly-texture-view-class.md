@@ -9,11 +9,11 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
 ms.openlocfilehash: 5244ae5df99b06c77f4eb27317e5829b21fabf24
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405415"
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view, classe
 
@@ -73,7 +73,7 @@ Le rang de la texture.
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[rang (constante)](#rank)|Obtient le rang de le `writeonly_texture_view` objet.|
 
@@ -83,7 +83,7 @@ Le rang de la texture.
 
 `writeonly_texture_view`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp_graphics.h
 

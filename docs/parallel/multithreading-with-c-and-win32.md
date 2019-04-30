@@ -11,11 +11,11 @@ helpviewer_keywords:
 - threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
 ms.openlocfilehash: b961671850acfc74cb72bc1c08aef74fdc7a64f8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407768"
 ---
 # <a name="multithreading-with-c-and-win32"></a>Multithreading à l'aide de C et de Win32
 

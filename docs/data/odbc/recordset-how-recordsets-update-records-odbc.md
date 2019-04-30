@@ -9,11 +9,11 @@ helpviewer_keywords:
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
 ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397807"
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>Recordset : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)
 
@@ -33,9 +33,9 @@ Cette rubrique explique :
 
 - [Le jeu d’enregistrements en tant que tampon d’édition](#_core_the_edit_buffer) et [différences entre les feuilles de réponse dynamiques et les instantanés](#_core_dynasets_and_snapshots).
 
-[Recordset : Comment AddNew, Edit et Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) décrit les actions de ces fonctions à partir du point de vue de l’objet recordset.
+[Recordset : Comment AddNew, Edit et Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) décrit les actions de ces fonctions à partir du point de vue de l’objet recordset.
 
-[Recordset : Informations complémentaires sur les mises à jour (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) conclut la mise à jour des recordsets en expliquant comment les transactions affectent les mises à jour, comment la fermeture d’un recordset influe sur les mises à jour en cours d’exécution, et comment vos mises à jour interagissent avec les mises à jour d’autres utilisateurs.
+[Recordset : Informations complémentaires sur les mises à jour (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) conclut la mise à jour des recordsets en expliquant comment les transactions affectent les mises à jour, comment la fermeture d’un recordset influe sur les mises à jour en cours d’exécution, et comment vos mises à jour interagissent avec les mises à jour d’autres utilisateurs.
 
 ##  <a name="_core_your_role_in_recordset_updating"></a> Votre rôle dans la mise à jour du jeu d’enregistrements
 
@@ -73,4 +73,4 @@ Lorsque vous appelez [AddNew](../../mfc/reference/crecordset-class.md#addnew) ou
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : Comment AddNew, modifier et supprimer des travaux (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[Recordset : Fonctionnement d’AddNew, Edit et Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

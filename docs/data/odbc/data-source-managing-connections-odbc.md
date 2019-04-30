@@ -19,11 +19,11 @@ helpviewer_keywords:
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
 ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395948"
 ---
 # <a name="data-source-managing-connections-odbc"></a>Source de données : Gestion des connexions (ODBC)
 
@@ -139,5 +139,5 @@ Vous pouvez réutiliser un `CDatabase` objet après la déconnexion à partir de
 ## <a name="see-also"></a>Voir aussi
 
 [Source de données (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
-[Source de données : Détermination du schéma de la Source de données (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
+[Source de données : Détermination du schéma de la source de données (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
 [CRecordset, classe](../../mfc/reference/crecordset-class.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
 ms.openlocfilehash: 3788d904bf903481d57dd73a28bf6eafadd5f019
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392555"
 ---
 # <a name="class-factories-and-licensing"></a>Fabriques de classes et gestion des licences
 
@@ -52,7 +52,7 @@ Notez que cette macro a le même objectif que l’exemple de code suivant :
 
 [!code-cpp[NVC_MFCAxCtl#14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl.h
 
@@ -92,7 +92,7 @@ Composants du CLSID de la classe. Pour plus d’informations sur ces paramètres
 
 Cette macro doit apparaître dans le fichier d’implémentation pour n’importe quelle classe de contrôle qui utilise le declare_olecreate_ex (macro) ou les macros BEGIN_OLEFACTORY et END_OLEFACTORY. Le nom externe est l’identificateur du contrôle OLE qui est exposé à d’autres applications. Conteneurs utilisent ce nom pour demander un objet de cette classe de contrôle.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl.h
 
@@ -113,7 +113,7 @@ Spécifie le nom de la classe de contrôle dont il s’agit de fabrique de class
 
 Les déclarations de fonctions de gestion de licences de fabrique de classe doivent commencer immédiatement après BEGIN_OLEFACTORY.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl.h
 
@@ -130,7 +130,7 @@ END_OLEFACTORY(class_name)
 *class_name*<br/>
 Le nom de la classe de contrôle dont il s’agit de fabrique de classe.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl.h
 
@@ -170,7 +170,7 @@ Si *cch* est -1, cette fonction utilise :
 
 [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl.h
 

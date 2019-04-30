@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
 ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412603"
 ---
 # <a name="sharedfuture-class"></a>shared_future, classe
 
@@ -56,7 +56,7 @@ Les objets `shared_future` ne sont pas synchronisés. L’appel de méthodes sur
 |----------|-----------------|
 |[get](#get)|Récupère le résultat qui est stocké dans l’*état asynchrone associé*.|
 |[valid](#valid)|Spécifie si l’objet n’est pas vide.|
-|[attente](#wait)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|
+|[wait](#wait)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|
 |[wait_for](#wait_for)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou que le délai spécifié soit écoulé.|
 |[wait_until](#wait_until)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou jusqu’à un point spécifié dans le temps.|
 
@@ -72,7 +72,7 @@ Les objets `shared_future` ne sont pas synchronisés. L’appel de méthodes sur
 
 **Espace de noms :** std
 
-## <a name="get"></a>  shared_future::Get
+## <a name="get"></a>  shared_future::get
 
 Récupère le résultat qui est stocké dans l’*état asynchrone associé*.
 
@@ -142,7 +142,7 @@ Les deuxième et troisième constructeurs construisent un `shared_future` de l�
 
 Le quatrième constructeur construit un `shared_future` objet ayant le même état asynchrone associé que *droite*.
 
-## <a name="valid"></a>  shared_future::Valid
+## <a name="valid"></a>  shared_future::valid
 
 Spécifie si l’objet a un *état asynchrone associé*.
 

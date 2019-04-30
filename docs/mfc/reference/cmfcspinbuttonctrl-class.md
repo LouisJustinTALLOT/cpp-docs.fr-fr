@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
 ms.openlocfilehash: 60808359c11604368493031e1b6f4573b3b2026f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410093"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>Cmfcspinbuttonctrl, classe
 
@@ -62,7 +62,7 @@ L’exemple suivant montre comment créer un objet de la `CMFCSpinButtonCtrl` cl
 
 [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxspinbuttonctrl.h
 

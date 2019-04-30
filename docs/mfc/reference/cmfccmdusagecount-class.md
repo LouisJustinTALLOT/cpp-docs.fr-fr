@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
 ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403800"
 ---
 # <a name="cmfccmdusagecount-class"></a>Cmfccmdusagecount, classe
 
@@ -64,7 +64,7 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|Name|Description|
+|Nom|Description|
 |`m_CmdUsage`|Un `CMap` objet qui mappe des commandes à leurs compteurs d’utilisation.|
 |`m_nMinUsagePercentage`|Le pourcentage d’utilisation minimale pour une commande à utiliser fréquemment.|
 |`m_nStartCount`|Le compteur de démarrage qui est utilisé pour déterminer si cet objet a collectées à la quantité minimale de données de suivi.|
@@ -82,7 +82,7 @@ Vous pouvez conserver `CMFCCmdUsageCount` classe les données entre les exécuti
 
 [CMFCCmdUsageCount](../../mfc/reference/cmfccmdusagecount-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcmdusagecount.h
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::thread [C++], native_handle
 - std::thread [C++], swap
 ms.openlocfilehash: d1405062ef553dbfea3b60b5f39e0546707343b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412070"
 ---
 # <a name="thread-class"></a>thread, classe
 
@@ -68,7 +68,7 @@ Chaque thread d’exécution possède un identificateur unique de type `thread::
 |[get_id](#get_id)|Retourne l’identificateur unique du thread associé.|
 |[hardware_concurrency](#hardware_concurrency)|Static. Retourne une estimation du nombre de contextes de thread matériel.|
 |[join](#join)|Bloque jusqu’à ce que le thread associé soit terminé.|
-|[joignable](#joinable)|Spécifie si le thread associé est joignable.|
+|[joinable](#joinable)|Spécifie si le thread associé est joignable.|
 |[native_handle](#native_handle)|Retourne le type propre à l’implémentation qui représente le descripteur de thread.|
 |[swap](#swap)|Permute l’état de l’objet avec une certaine **thread** objet.|
 
@@ -140,7 +140,7 @@ Le constructeur par défaut crée un objet qui n’est pas considéré comme ég
 
 Tous les objets `thread::id` construits par défaut sont considérés comme égaux.
 
-## <a name="join"></a>  thread::Join
+## <a name="join"></a>  thread::join
 
 Bloque jusqu’à ce que le thread d’exécution associé à l’objet appelant soit terminé.
 

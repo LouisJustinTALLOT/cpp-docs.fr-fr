@@ -25,11 +25,11 @@ helpviewer_keywords:
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
 ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411797"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Texte et chaînes en Visual C++
 
@@ -49,7 +49,7 @@ Explique MBCS, une alternative au format Unicode pour prendre en charge les jeux
 [Mappages de texte générique dans tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
 Fournit des mappages de texte générique spécifiques à Microsoft pour nombreux types de données, routines et autres objets.
 
-[Guide pratique pour Effectuer une conversion entre différents Types de chaînes](../text/how-to-convert-between-various-string-types.md)<br/>
+[Guide pratique pour effectuer une conversion entre différents types de chaînes](../text/how-to-convert-between-various-string-types.md)<br/>
 Montre comment convertir différents types de chaînes Visual C++ en d’autres chaînes.
 
 ## <a name="related-sections"></a>Rubriques connexes

@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
 ms.openlocfilehash: 8a50d04751ac5b4abaf94d0d9fd16f57c6200f66
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394011"
 ---
 # <a name="deque-class"></a>deque, classe
 
@@ -235,10 +235,10 @@ void assign(initializer_list<Type> IList);
 
 ### <a name="parameters"></a>Paramètres
 
-*Premier*<br/>
+*First*<br/>
 Position du premier élément de la plage d’éléments à copier à partir de la file d’attente à deux extrémités de l’argument.
 
-*Dernière*<br/>
+*Last*<br/>
 Position du premier élément après la plage d’éléments à copier à partir de la file d’attente à deux extrémités de l’argument.
 
 *Nombre*<br/>
@@ -321,7 +321,7 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*<br/>
+*pos*<br/>
 Indice (ou numéro de position) de l’élément à référencer dans la file d’attente à deux extrémités.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -775,9 +775,9 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 |*Nombre*|Nombre d’éléments de la file d’attente à deux extrémités construite.|
 |*Val*|Valeur des éléments de la file d’attente à deux extrémités construite.|
 |*Droite*|File d’attente à deux extrémités dont la file d’attente à deux extrémités construite doit être une copie.|
-|*Premier*|Position du premier élément dans la plage d'éléments à copier.|
-|*Dernière*|Position du premier élément suivant la fin de la plage d'éléments à copier.|
-|* IList'|Initializer_list à copier.|
+|*First*|Position du premier élément dans la plage d'éléments à copier.|
+|*Last*|Position du premier élément suivant la fin de la plage d'éléments à copier.|
+|* IList'| Initializer_list à copier.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1072,8 +1072,8 @@ iterator emplace(
 
 |Paramètre|Description|
 |-|-|
-|*_WHERE*|Position dans la classe [deque](../standard-library/deque-class.md) où le premier élément est inséré.|
-|*Val*|Valeur de l'élément inséré dans le `deque`.|
+|*_Where*|Position dans la classe [deque](../standard-library/deque-class.md) où le premier élément est inséré.|
+|*val*|Valeur de l'élément inséré dans le `deque`.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1137,7 +1137,7 @@ void emplace_back(Type&& val);
 
 |Paramètre|Description|
 |-|-|
-|*Val*|Élément ajouté à la fin de la classe [deque](../standard-library/deque-class.md).|
+|*val*|Élément ajouté à la fin de la classe [deque](../standard-library/deque-class.md).|
 
 ### <a name="example"></a>Exemple
 
@@ -1187,7 +1187,7 @@ void emplace_front(Type&& val);
 
 |Paramètre|Description|
 |-|-|
-|*Val*|Élément ajouté au début de la classe [deque](../standard-library/deque-class.md).|
+|*val*|Élément ajouté au début de la classe [deque](../standard-library/deque-class.md).|
 
 ### <a name="example"></a>Exemple
 
@@ -1334,7 +1334,7 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Paramètres
 
-*_WHERE*<br/>
+*_Where*<br/>
 Position de l’élément à supprimer de la file d’attente à deux extrémités.
 
 *first*<br/>
@@ -1520,8 +1520,8 @@ IList);
 |*Where*|Position dans la file d’attente à deux extrémités cible où le premier élément est inséré.|
 |*Val*|Valeur de l’élément inséré dans la file d’attente à deux extrémités.|
 |*Nombre*|Nombre d’éléments insérés dans la file d’attente à deux extrémités.|
-|*Premier*|Position du premier élément de la plage d’éléments dans la file d’attente à deux extrémités de l’argument à copier.|
-|*Dernière*|Position du premier élément après la plage d’éléments dans la file d’attente à deux extrémités de l’argument à copier.|
+|*First*|Position du premier élément de la plage d’éléments dans la file d’attente à deux extrémités de l’argument à copier.|
+|*Last*|Position du premier élément après la plage d’éléments dans la file d’attente à deux extrémités de l’argument à copier.|
 |*IList*|initializer_list des éléments à insérer.|
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1591,7 +1591,7 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*<br/>
+*pos*<br/>
 Position de l’élément de file d’attente à deux extrémités à référencer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1816,7 +1816,7 @@ void push_back(Type&& val);
 
 |Paramètre|Description|
 |-|-|
-|*Val*|Élément ajouté à la fin de la file d’attente à deux extrémités.|
+|*val*|Élément ajouté à la fin de la file d’attente à deux extrémités.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1835,7 +1835,7 @@ void push_front(Type&& val);
 
 |Paramètre|Description|
 |-|-|
-|*Val*|Élément ajouté au début de la file d’attente à deux extrémités.|
+|*val*|Élément ajouté au début de la file d’attente à deux extrémités.|
 
 ### <a name="remarks"></a>Notes
 
@@ -2090,7 +2090,7 @@ void resize(size_type _Newsize, Type val);
 *_Newsize*<br/>
 Nouvelle taille de la file d’attente à deux extrémités.
 
-*Val*<br/>
+*val*<br/>
 Valeur des nouveaux éléments à ajouter à la file d’attente à deux extrémités si la nouvelle taille est supérieure à la taille d’origine. Si la valeur est omise, la valeur par défaut pour la classe est assignée aux nouveaux éléments.
 
 ### <a name="remarks"></a>Notes

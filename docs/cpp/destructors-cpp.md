@@ -10,11 +10,11 @@ helpviewer_keywords:
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
 ms.openlocfilehash: f26f797da75f0d7d7aa6f6849c9484cea35fb125
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398985"
 ---
 # <a name="destructors-c"></a>Destructeurs (C++)
 
@@ -70,7 +70,7 @@ Les destructeurs sont des fonctions ayant le même nom que la classe, mais préc
 
 Plusieurs règles régissent la déclaration des destructeurs. Les destructeurs :
 
-- n’acceptent pas d’arguments ;
+- n'acceptent pas d'arguments ;
 
 - Ne retournent pas de valeur (ou **void**).
 
@@ -203,7 +203,7 @@ Ce processus crée une liste triée d'entrées uniques. Aucun nom de classe n'ap
 
 L'ordre de construction ou de destruction est particulièrement important lorsque les constructeurs ou les destructeurs d'une classe reposent sur l'autre composant créé en premier ou persistant plus longtemps (par exemple, si le destructeur de `A` (dans l'illustration ci-dessus) reposait sur la présence de `B` lors de l'exécution de son code, ou vice versa).
 
-Ces interdépendances entre les classes dans un graphique d’héritage sont fondamentalement dangereuses car les classes dérivées ultérieurement peuvent modifier le tracé à l’extrême gauche, modifiant ainsi l’ordre de construction et de destruction.
+Ces interdépendances entre les classes dans un graphique d'héritage sont fondamentalement dangereuses car les classes dérivées ultérieurement peuvent modifier le tracé à l'extrême gauche, modifiant ainsi l'ordre de construction et de destruction.
 
 ### <a name="non-virtual-base-classes"></a>Classes de base non virtuelles
 

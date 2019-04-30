@@ -7,11 +7,11 @@ helpviewer_keywords:
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
 ms.openlocfilehash: 07dfd8a602dca93c89a078b2eb69e04cf9d4a7a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393842"
 ---
 # <a name="virtual-functions"></a>Fonctions virtuelles
 
@@ -147,7 +147,7 @@ Le **virtuel** mot clé peut être utilisé lors de la déclaration de substitut
 
 Fonctions virtuelles dans une classe de base doivent être définies, sauf si elles sont déclarées à l’aide de la *spécificateur pure*. (Pour plus d’informations sur les fonctions virtuelles pures, consultez [Classes abstraites](../cpp/abstract-classes-cpp.md).)
 
-Le mécanisme d’appel de fonction virtuelle peut être supprimé en qualifiant explicitement le nom de fonction à l’aide de l’opérateur de résolution de portée (`::`). Prenons l'exemple précédent qui implique la classe `Account`. Pour appeler `PrintBalance` dans la classe de base, utilisez le code suivant :
+Le mécanisme d'appel de fonction virtuelle peut être supprimé en qualifiant explicitement le nom de fonction à l'aide de l'opérateur de résolution de portée (`::`). Prenons l'exemple précédent qui implique la classe `Account`. Pour appeler `PrintBalance` dans la classe de base, utilisez le code suivant :
 
 ```cpp
 CheckingAccount *pChecking = new CheckingAccount( 100.00 );

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - writing to files [MFC]
 ms.assetid: f390d6d8-d0e1-4497-9b6a-435f7ce0776c
 ms.openlocfilehash: fb35d1731912b2e322bc61621f7900e0d98e1e72
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411589"
 ---
 # <a name="using-documents"></a>Utilisation de documents
 

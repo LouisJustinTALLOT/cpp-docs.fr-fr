@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
 ms.openlocfilehash: 731735bccf9225e67d82b1fe90336c92a630b368
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391307"
 ---
 # <a name="carchiveexception-class"></a>CArchiveException, classe
 
@@ -58,7 +58,7 @@ Le `CArchiveException` classe inclut une donnée membre publique qui indiquent l
 
 `CArchiveException`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 

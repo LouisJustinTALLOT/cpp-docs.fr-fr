@@ -87,11 +87,11 @@ helpviewer_keywords:
 - CDockSite [MFC], SwapRows
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
 ms.openlocfilehash: ccd1bc115f92e0c2605fe5f587a0567f672c6c09
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391164"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 
@@ -170,7 +170,7 @@ L'exemple suivant montre comment créer un objet de la classe `CDockSite`.
 
 [CBasePane](../../mfc/reference/cbasepane-class.md) [CDockSite](../../mfc/reference/cdocksite-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxDockSite.h
 

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
 ms.openlocfilehash: ae59abc542a4599d289c099801fc34d56b2b13d4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59028533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409159"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl, classe
 

@@ -1,5 +1,5 @@
 ---
-title: "TN058 : implémentation de l'état du module MFC"
+title: 'TN058 : Implémentation de l’état du Module MFC'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.implementation
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
 ms.openlocfilehash: db34f528e70a7dcc437836684656b3ce8a4078fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399594"
 ---
-# <a name="tn058-mfc-module-state-implementation"></a>TN058 : implémentation de l'état du module MFC
+# <a name="tn058-mfc-module-state-implementation"></a>TN058 : Implémentation de l’état du Module MFC
 
 > [!NOTE]
 > La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
@@ -30,7 +30,7 @@ Avant de lire cette note, reportez-vous à « La gestion de l’état de MFC Mo
 
 ## <a name="overview"></a>Vue d'ensemble
 
-Il existe trois types d’informations d’état MFC : état du Module, l’état du processus et état du Thread. Parfois ces types d’état peuvent être combinées. Par exemple, les cartes de handles de MFC sont module local et thread local. Ainsi, les deux modules différents avoir des mappages différents dans chacun de leurs threads.
+Il existe trois types d’informations d’état MFC : État du module, l’état du processus et état du Thread. Parfois ces types d’état peuvent être combinées. Par exemple, les cartes de handles de MFC sont module local et thread local. Ainsi, les deux modules différents avoir des mappages différents dans chacun de leurs threads.
 
 État du processus et l’état du Thread sont similaires. Ces éléments de données sont traditionnellement les variables globales, mais ont besoin d’être spécifiques à un processus donné ou thread pour la prise en charge Win32s appropriée ou pour la prise en charge du multithreading appropriée. Catégorie à laquelle un élément de données donné s’intègre dans dépend de cet élément et ses sémantiques souhaitées en ce qui concerne les limites de processus et de threads.
 

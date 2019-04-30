@@ -7,11 +7,11 @@ helpviewer_keywords:
 - mem_fun1_t class
 ms.assetid: 01a8c2c2-b2f7-4e3f-869c-5b5b9f06ea54
 ms.openlocfilehash: 42a6ee7c169d078e216b82365ab26d10838798c6
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412863"
 ---
 # <a name="memfun1t-class"></a>mem_fun1_t, classe
 
@@ -55,7 +55,7 @@ La classe de modèle stocke une copie de *_Pm*, qui doit être un pointeur vers 
 
 Le constructeur de `mem_fun1_t` n’est généralement pas utilisé directement ; la fonction d’assistance `mem_fun` est utilisée pour adapter les fonctions membres. Pour obtenir un exemple d’utilisation des adaptateurs de fonction membre, consultez [mem_fun](../standard-library/functional-functions.md#mem_fun).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

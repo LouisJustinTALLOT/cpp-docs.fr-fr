@@ -1,5 +1,5 @@
 ---
-title: 'TN055 : Migration des applications de classe de base de données ODBC MFC vers des classes DAO MFC'
+title: 'TN055 : Migration d’Applications de classe de base de données de ODBC MFC vers les Classes DAO MFC'
 ms.date: 06/20/2018
 f1_keywords:
 - vc.mfc.odbc
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
 ms.openlocfilehash: f8e0d8e50f05e86c35e0f8b7f324533bffea6f25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399666"
 ---
-# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055 : Migration des applications de classe de base de données ODBC MFC vers des classes DAO MFC
+# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055 : Migration d’Applications de classe de base de données de ODBC MFC vers les Classes DAO MFC
 
 > [!NOTE]
 > Les Assistants et l’environnement Visual C++ ne prennent pas en charge les DAO (bien que les classes DAO sont incluses et vous pouvez toujours les utiliser). Microsoft recommande d’utiliser [modèles OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour les nouveaux projets. Vous devez uniquement utiliser DAO à la gestion des applications existantes.
@@ -97,7 +97,7 @@ Les principales modifications apportées aux fonctionnalités qui peuvent affect
 
 - Un jeu d'enregistrements basé sur l'ajout uniquement lors de l'ouverture d'un objet `CRecordset` signifiait que les données du jeu d'enregistrements pouvaient être lues et ajoutées. Avec l'objet `CDaoRecordset`, l'option d'ajout uniquement signifie littéralement que les données du jeu d'enregistrements peuvent être ajoutées (et non lues).
 
-- Les fonctions membres de la transaction des classes ODBC sont membres de `CDatabase` et agissent au niveau de la base de données. Dans les classes DAO, les fonctions membres de transaction sont membres d'une classe de niveau supérieur (`CDaoWorkspace`) et peuvent avoir un impact sur plusieurs objets `CDaoDatabase` qui partagent le même espace de travail (espace de transaction).
+- Les fonctions membres de la transaction des classes ODBC sont membres de `CDatabase` et agissent au niveau de la base de données. Dans les classes DAO, les fonctions membres de transaction sont membres d’une classe de niveau supérieur (`CDaoWorkspace`) et peuvent avoir un impact sur plusieurs objets `CDaoDatabase` qui partagent le même espace de travail (espace de transaction).
 
 - La classe d'exception a été modifiée. `CDBExceptions` sont levées dans les classes ODBC et `CDaoExceptions` dans les classes DAO.
 

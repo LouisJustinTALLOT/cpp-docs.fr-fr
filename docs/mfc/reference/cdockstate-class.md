@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
 ms.openlocfilehash: b8c4b80d7182795d8919adb64491d506325976ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391177"
 ---
 # <a name="cdockstate-class"></a>Cdockstate, classe
 
@@ -66,7 +66,7 @@ Pour plus d’informations sur la station d’accueil de barres de contrôles, c
 
 `CDockState`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxadv.h
 

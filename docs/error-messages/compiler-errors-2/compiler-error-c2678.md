@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2678
 ms.assetid: 1f0a4e26-b429-44f5-9f94-cb66441220c8
 ms.openlocfilehash: 9055210401e14eeb9fdb88266870ac8fe5cbd496
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395389"
 ---
 # <a name="compiler-error-c2678"></a>Erreur du compilateur C2678
 
@@ -21,7 +21,7 @@ Pour utiliser l'opérateur, vous devez le surcharger pour le type spécifié ou 
 
 ## <a name="example"></a>Exemple
 
-L’erreur C2678 peut se produire quand l’opérande de partie gauche est qualifié const, mais que l’opérateur est défini pour accepter un argument non const.
+L'erreur C2678 peut se produire quand l'opérande de partie gauche est qualifié const, mais que l'opérateur est défini pour accepter un argument non const.
 
 L'exemple suivant génère l'erreur C2678 et montre comment la corriger :
 
