@@ -11,11 +11,11 @@ helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
 ms.openlocfilehash: 6afbd7b3a3f4280ad658c1cb9d8802cc3251d0ed
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405480"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d, espace de noms
 
@@ -71,7 +71,7 @@ namespace direct3d;
 |[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|Compare deux valeurs non signées, retournant la valeur est supérieure.|
 |[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|Compare deux valeurs non signées, retournant la valeur est inférieure.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp.h
 

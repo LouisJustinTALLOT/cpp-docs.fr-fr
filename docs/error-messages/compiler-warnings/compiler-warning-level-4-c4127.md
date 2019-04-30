@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
 ms.openlocfilehash: 7f1e23d15d8daa126987278611cb5a85a5a36fc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401308"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Avertissement du compilateur (niveau 4) C4127
 

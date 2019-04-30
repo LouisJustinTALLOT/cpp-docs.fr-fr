@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
 ms.openlocfilehash: 55f64fcebc308bd0e63643cfb5447608c4e2e37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399770"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo, structure
 
@@ -61,7 +61,7 @@ Lorsque vous définissez une clé primaire pour une table, la clé primaire est 
 *m_bUnique*<br/>
 Indique si un objet index représente un index unique pour une table. Si cette propriété est TRUE, l’objet index représente un index unique. Un index unique se compose d’un ou plusieurs champs qui organisent de manière logique tous les enregistrements dans une table dans un ordre prédéfini unique. Si l’index se compose d’un champ, les valeurs dans le champ doivent être uniques pour la table entière. Si l’index se compose de plusieurs champs, chaque champ peut contenir des valeurs dupliquées, mais chaque combinaison de valeurs à partir de tous les champs indexés doit être unique.
 
-Si les propriétés de l’Unique et le principal d’un objet d’index sont définies sur TRUE, l’index est unique et primaire : il identifie de manière unique tous les enregistrements dans la table dans un ordre logique prédéfini. Si la propriété Primary est définie sur FALSE, l’index est un index secondaire. Index secondaires (clés et non-clés) organisent logiquement les enregistrements dans un ordre prédéfini sans servant d’identificateur pour les enregistrements dans la table.
+Si les propriétés de l’Unique et le principal d’un objet d’index sont définies sur TRUE, l’index est unique et primaire : Il identifie tous les enregistrements dans la table dans un ordre logique prédéfini. Si la propriété Primary est définie sur FALSE, l’index est un index secondaire. Index secondaires (clés et non-clés) organisent logiquement les enregistrements dans un ordre prédéfini sans servant d’identificateur pour les enregistrements dans la table.
 
 Pour plus d’informations, consultez les rubriques « Propriété principal » et « Propriété Unique » dans l’aide de DAO.
 
@@ -74,7 +74,7 @@ Indique si un objet index représente un index cluster pour une table. Si cette 
 *m_bIgnoreNulls*<br/>
 Indique s’il y a des entrées d’index pour les enregistrements qui ont des valeurs Null dans leurs champs d’index. Si cette propriété est TRUE, les champs avec des valeurs Null n’ont pas une entrée d’index. Pour rendre la recherche d’enregistrements à l’aide d’un champ plus rapidement, vous pouvez définir un index pour le champ. Si vous autorisez les entrées Null dans un champ indexé et que vous prévoyez d’avoir beaucoup des entrées pour avoir la valeur Null, vous pouvez définir la propriété Ignorer Nulls pour l’objet index sur TRUE pour réduire la quantité d’espace de stockage qui utilise l’index. Le paramètre de propriété Ignorer Nulls et le paramètre de propriété requis déterminent ensemble si un enregistrement avec une valeur d’index de valeur Null a une entrée d’index, comme le tableau suivant.
 
-|Ignorer Nulls|Obligatoire|Valeur NULL dans le champ d’index|
+|IgnoreNulls|Obligatoire|Valeur NULL dans le champ d’index|
 |-----------------|--------------|-------------------------|
 |True|False|Valeur NULL autorisée ; Aucune entrée d’index ajoutée.|
 |False|False|Valeur NULL autorisée ; entrée d’index ajoutée.|

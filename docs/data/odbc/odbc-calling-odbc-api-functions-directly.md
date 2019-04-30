@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
 ms.openlocfilehash: 435df301ad54c7ff5b2f0e46190e3dad7e9c07f1
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59026381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395805"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC : Appel direct de fonctions API ODBC
 

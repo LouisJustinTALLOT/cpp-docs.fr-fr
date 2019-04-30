@@ -99,11 +99,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
 ms.openlocfilehash: ff5ddcfa101baf4c85145d1c6d64a6a3b9e7df58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393764"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 
@@ -252,7 +252,7 @@ Fin de la plage à insérer.
 *right*<br/>
 Énumération à insérer.
 
-*Val*<br/>
+*val*<br/>
 Valeur de l’élément à insérer.
 
 ### <a name="remarks"></a>Notes
@@ -318,7 +318,7 @@ reference at(size_type pos);
 
 #### <a name="parameters"></a>Paramètres
 
-*points de vente*<br/>
+*pos*<br/>
 Position de l'élément auquel accéder.
 
 ### <a name="remarks"></a>Notes
@@ -730,7 +730,7 @@ Fin de la plage à insérer.
 *right*<br/>
 Objet ou plage à insérer.
 
-*Val*<br/>
+*val*<br/>
 Valeur de l’élément à insérer.
 
 ### <a name="remarks"></a>Notes
@@ -1451,7 +1451,7 @@ Fin de la plage à insérer.
 *right*<br/>
 Énumération à insérer.
 
-*Val*<br/>
+*val*<br/>
 Valeur de l’élément à insérer.
 
 *where*<br/>
@@ -1580,7 +1580,7 @@ a b c
 x b c
 ```
 
-## <a name="op_neq"></a> deque::operator ! = (STL/CLR)
+## <a name="op_neq"></a> deque::operator!= (STL/CLR)
 
 Deque différent de comparaison.
 
@@ -1661,7 +1661,7 @@ reference operator[](size_type pos);
 
 #### <a name="parameters"></a>Paramètres
 
-*points de vente*<br/>
+*pos*<br/>
 Position de l'élément auquel accéder.
 
 ### <a name="remarks"></a>Notes
@@ -2054,10 +2054,10 @@ void resize(size_type new_size, value_type val);
 
 #### <a name="parameters"></a>Paramètres
 
-*NEW_SIZE*<br/>
+*new_size*<br/>
 Nouvelle taille de la séquence contrôlée.
 
-*Val*<br/>
+*val*<br/>
 Valeur de l’élément de remplissage.
 
 ### <a name="remarks"></a>Notes
@@ -2361,7 +2361,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a> deque::Value_type (STL/CLR)
+## <a name="value_type"></a> deque::value_type (STL/CLR)
 
 Type d’un élément.
 
@@ -2475,7 +2475,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> opérateur&lt;= (deque) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (deque) (STL/CLR)
 
 Deque inférieure ou égale comparaison.
 
@@ -2544,7 +2544,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_as"></a> opérateur = (deque) (STL/CLR)
+## <a name="op_as"></a> operator= (deque) (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -2597,7 +2597,7 @@ a b c
 a b c
 ```
 
-## <a name="op_eq"></a> opérateur == (deque) (STL/CLR)
+## <a name="op_eq"></a> operator== (deque) (STL/CLR)
 
 Comparaison d’égalité deque.
 
@@ -2735,7 +2735,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> opérateur&gt;= (deque) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (deque) (STL/CLR)
 
 Comparaison supérieure ou égale à deque.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
 ms.openlocfilehash: 4cd922fff691b524ec9d278ac5948992fc096e09
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396777"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Erreur RW2002 du compilateur de ressources 
 
@@ -69,7 +69,7 @@ Erreur d’analyse
 
 1. **Nom de classe de contrôle attendu**
 
-   Le `class` champ un **contrôle** instruction dans le **boîte de dialogue** instruction doit être un des types suivants : bouton, COMBOBOX, EDIT, LISTBOX, barre de défilement, statique, ou défini par l’utilisateur. Assurez-vous que la classe est correctement orthographiée.
+   Le `class` champ un **contrôle** instruction dans le **boîte de dialogue** instruction doit être un des types suivants : BOUTON, COMBOBOX, EDIT, LISTBOX, barre de défilement, statique, ou défini par l’utilisateur. Assurez-vous que la classe est correctement orthographiée.
 
 1. **Nom de police d’attendu**
 
@@ -141,7 +141,7 @@ Erreur d’analyse
 
 1. **type de contrôle non valide**
 
-   Chaque instruction de contrôle dans un **boîte de dialogue** instruction doit être un des éléments suivants : case à cocher, COMBOBOX, contrôle, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, icône, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, barre de défilement. Assurez-vous que ces instructions de contrôle sont correctement orthographiées.
+   Chaque instruction de contrôle dans un **boîte de dialogue** instruction doit être une des opérations suivantes : CASE À COCHER, COMBOBOX, CONTRÔLE, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ICÔNE, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, BARRE DE DÉFILEMENT. Assurez-vous que ces instructions de contrôle sont correctement orthographiées.
 
 1. **Type non valide**
 

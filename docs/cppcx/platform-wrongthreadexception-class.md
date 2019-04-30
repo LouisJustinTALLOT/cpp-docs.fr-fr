@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Platform::WrongThreadException
 ms.assetid: c193f97e-0392-4535-a4c4-0711e4e4a836
 ms.openlocfilehash: dde8c9afff6be083580042a958f59e057bc44350
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396078"
 ---
 # <a name="platformwrongthreadexception-class"></a>Platform::WrongThreadException, classe
 
@@ -29,7 +29,7 @@ public ref class WrongThreadException : COMException,    IException,    IPrintab
 
 Pour plus d'informations, consultez l'exception [COMException](../cppcx/platform-comexception-class.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Prise en charge minimale du client :** Windows 8
 

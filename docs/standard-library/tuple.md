@@ -7,11 +7,11 @@ helpviewer_keywords:
 - tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
 ms.openlocfilehash: 2e46b3997096c6e61f7dd6140131e3f10223b8e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399419"
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 

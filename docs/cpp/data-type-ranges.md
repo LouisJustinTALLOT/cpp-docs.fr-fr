@@ -36,11 +36,11 @@ helpviewer_keywords:
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
 ms.openlocfilehash: 88fbb128d995338e5976fbb3df939524f3ef8b63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392230"
 ---
 # <a name="data-type-ranges"></a>plages de types de données
 
@@ -71,26 +71,26 @@ Les plages spécifiées dans le tableau ci-dessous sont inclusives-inclusives.
 |**int**|4|**signed**|-2,147,483,648 en 2,147,483,647|
 |**unsigned int**|4|**unsigned**|de 0 à 4 294 967 295|
 |**__int8**|1|**char**|-128 à 127|
-|**__int8 non signé**|1|**unsigned char**|0 à 255|
-|**__int16**|2|**court**, **short int**, **signés short int**|de -32 768 à 32 767|
-|**__int16 non signé**|2|**unsigned short**, **entier court non signé**|0 à 65 535|
-|**__int32**|4|**signé**, **type signed int**, **int**|-2,147,483,648 en 2,147,483,647|
+|**unsigned __int8**|1|**unsigned char**|0 à 255|
+|**__int16**|2|**short**, **short int**, **signed short int**|de -32 768 à 32 767|
+|**unsigned __int16**|2|**unsigned short**, **entier court non signé**|0 à 65 535|
+|**__int32**|4|**signed**, **signed int**, **int**|-2,147,483,648 en 2,147,483,647|
 |**unsigned __int32**|4|**non signé**, **int non signé**|de 0 à 4 294 967 295|
-|**__int64**|8|**longue**, **long long signé**|-9 223 372 036 854 775 808 à 9 223 372 036 854 775 807|
-|**unsigned __int64**|8|**long long non signé**|de 0 à 18 446 744 073 709 551 615|
+|**__int64**|8|**long long**, **signed long long**|-9 223 372 036 854 775 808 à 9 223 372 036 854 775 807|
+|**unsigned __int64**|8|**unsigned long long**|de 0 à 18 446 744 073 709 551 615|
 |**bool**|1|none|**false** ou **true**|
 |**char**|1|none|-128 à 127 par défaut<br /><br /> 0 à 255 une fois compilé à l’aide de [/J](../build/reference/j-default-char-type-is-unsigned.md)|
 |**char signé**|1|none|-128 à 127|
 |**unsigned char**|1|none|0 à 255|
-|**short**|2|**short int**, **signés short int**|de -32 768 à 32 767|
+|**short**|2|**short int**, **signed short int**|de -32 768 à 32 767|
 |**unsigned short**|2|**unsigned short int**|0 à 65 535|
-|**long**|4|**long int**, **signé long int**|-2,147,483,648 en 2,147,483,647|
+|**long**|4|**long int**, **signed long int**|-2,147,483,648 en 2,147,483,647|
 |**unsigned long**|4|**unsigned long int**|de 0 à 4 294 967 295|
 |**long long**|8|Aucun (mais équivaut à **__int64**)|-9 223 372 036 854 775 808 à 9 223 372 036 854 775 807|
-|**long long non signé**|8|Aucun (mais équivaut à **unsigned __int64**)|de 0 à 18 446 744 073 709 551 615|
+|**unsigned long long**|8|Aucun (mais équivaut à **unsigned __int64**)|de 0 à 18 446 744 073 709 551 615|
 |**enum**|selon le cas|none| |
 |**float**|4|none|3.4E +/- 38 (7 chiffres)|
-|**double**|8|aucun|1.7E +/- 308 (15 chiffres)|
+|**double**|8|none|1.7E +/- 308 (15 chiffres)|
 |**long double**|identique à **double**|none|identique à **double**|
 |**wchar_t**|2|**__wchar_t**|0 à 65 535|
 

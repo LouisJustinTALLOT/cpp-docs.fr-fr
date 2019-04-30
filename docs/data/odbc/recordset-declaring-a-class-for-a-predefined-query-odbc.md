@@ -9,11 +9,11 @@ helpviewer_keywords:
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
 ms.openlocfilehash: d4ae9f21c4bd53a8050d6f8c3765bb9823d077ba
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59026525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395597"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Recordset : Déclaration de la classe d’une requête prédéfinie (ODBC)
 
@@ -153,6 +153,6 @@ Ce code construit un instantané, il passe un paramètre obtenu précédemment �
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : Actualisation d’un jeu d’enregistrements (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
-[Recordset : Déclaration de la classe d’une Table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Recordset : Création d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[Recordset : Lancement d’une nouvelle requête sur un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
+[Recordset : Déclaration de la classe d’une table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Recordset : Création d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

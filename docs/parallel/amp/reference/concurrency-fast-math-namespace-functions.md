@@ -47,11 +47,11 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
 ms.openlocfilehash: 96178ee72073e5063fc009f17ab21565f3cf1ab5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405616"
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Fonctions d’espace de noms Concurrency::fast_math
 
@@ -1273,7 +1273,7 @@ Valeur à virgule flottante
 
 Retourne la partie entière de l’argument
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp_math.h **Namespace :** Concurrency::fast_math
 

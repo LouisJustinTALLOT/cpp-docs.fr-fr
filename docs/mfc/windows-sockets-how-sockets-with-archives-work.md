@@ -10,11 +10,11 @@ helpviewer_keywords:
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
 ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389443"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets : Fonctionnement des Sockets avec des Archives
 
@@ -46,7 +46,7 @@ Si `CSocket` n’étaient pas implémentées en tant qu’objet deux États, il 
 
 En mode « compatible archive », un `CSocketFile` objet offre de meilleures performances et réduit le risque d’un « blocage ». Un blocage se produit lorsque les sockets émettrices et réceptrices sont en attente sur eux ou en attente pour une ressource commune. Cette situation peut se produire si le `CArchive` objet travaillé avec le `CSocketFile` comme il le fait avec un `CFile` objet. Avec `CFile`, l’archive peut supposer que s’il reçoit le moins d’octets qu’il est demandé, la fin du fichier a été atteinte. Avec `CSocketFile`, toutefois, données en fonction de message ; la mémoire tampon peut contenir plusieurs messages, jusqu'à réception de moins que le nombre d’octets demandés n’implique pas la fin du fichier. L’application ne bloque pas, dans ce cas, comme cela pourrait être avec `CFile`, et il peut continuer à lire des messages à partir de la mémoire tampon jusqu'à ce que la mémoire tampon est vide. Le [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) fonctionner dans `CArchive` est utile pour surveiller l’état de la mémoire tampon de l’archive dans ce cas.
 
-Pour plus d’informations, consultez [Windows Sockets : Utilisation de Sockets avec des Archives](../mfc/windows-sockets-using-sockets-with-archives.md)
+Pour plus d’informations, consultez [Windows Sockets : Utilisation de sockets avec des archives](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 ## <a name="see-also"></a>Voir aussi
 

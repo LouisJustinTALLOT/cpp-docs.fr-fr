@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
 ms.openlocfilehash: 1d079ec6c96f96919fde39b73297580ed2a0ac75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391294"
 ---
 # <a name="cd2dbrush-class"></a>CD2DBrush, classe
 
@@ -78,7 +78,7 @@ class CD2DBrush : public CD2DResource;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CD2DBrush::m_pBrush](#m_pbrush)|Stocke un pointeur vers un objet ID2D1Brush.|
 |[CD2DBrush::m_pBrushProperties](#m_pbrushproperties)|Propriétés de pinceau.|
@@ -91,7 +91,7 @@ class CD2DBrush : public CD2DResource;
 
 `CD2DBrush`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrendertarget.h
 

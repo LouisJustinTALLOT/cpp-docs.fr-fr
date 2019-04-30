@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: 80416e3af18774a7a8bf64264dca2906995ae202
-ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410900"
 ---
 # <a name="vector-class"></a>vector, classe
 
@@ -224,10 +224,10 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Paramètres
 
-*Premier*<br/>
+*First*<br/>
 Position du premier élément dans la plage d'éléments à copier.
 
-*Dernière*<br/>
+*Last*<br/>
 Position du premier élément suivant la fin de la plage d'éléments à copier.
 
 *Nombre*<br/>
@@ -897,8 +897,8 @@ iterator emplace(
 
 |Paramètre|Description|
 |-|-|
-|*_WHERE*|Position dans l’objet [vector](../standard-library/vector-class.md) où le premier élément est inséré.|
-|*Val*|Valeur de l'élément inséré dans le `vector`.|
+|*_Where*|Position dans l’objet [vector](../standard-library/vector-class.md) où le premier élément est inséré.|
+|*val*|Valeur de l'élément inséré dans le `vector`.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1080,7 +1080,7 @@ iterator erase(
 
 |Paramètre|Description|
 |-|-|
-|*_WHERE*|Position de l'élément à supprimer du vecteur.|
+|*_Where*|Position de l'élément à supprimer du vecteur.|
 |*first*|Position du premier élément supprimé du vecteur.|
 |*last*|Position juste après le dernier élément supprimé du vecteur.|
 
@@ -1247,8 +1247,8 @@ void insert(
 
 |Paramètre|Description|
 |-|-|
-|*_WHERE*|Position dans le vecteur où le premier élément est inséré.|
-|*Val*|Valeur de l'élément inséré dans le vecteur.|
+|*_Where*|Position dans le vecteur où le premier élément est inséré.|
+|*val*|Valeur de l'élément inséré dans le vecteur.|
 |*count*|Nombre d'éléments insérés dans le vecteur.|
 |*first*|Position du premier élément de la plage d'éléments à copier.|
 |*last*|Position du premier élément au-delà de la plage d'éléments à copier.|
@@ -1386,7 +1386,7 @@ const_reference operator[](size_type Pos) const;
 
 |Paramètre|Description|
 |-|-|
-|*points de vente*|Position de l'élément de vecteur.|
+|*Pos*|Position de l'élément de vecteur.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2102,8 +2102,8 @@ vector(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Nombre*|Nombre d'éléments figurant dans le vecteur construit.|
 |*Val*|Valeur des éléments contenus dans le vecteur construit.|
 |*Droite*|Vecteur dont le vecteur construit doit être une copie.|
-|*Premier*|Position du premier élément dans la plage d'éléments à copier.|
-|*Dernière*|Position du premier élément suivant la fin de la plage d'éléments à copier.|
+|*First*|Position du premier élément dans la plage d'éléments à copier.|
+|*Last*|Position du premier élément suivant la fin de la plage d'éléments à copier.|
 |*IList*|Objet initializer_list contenant les éléments à copier.|
 
 ### <a name="remarks"></a>Notes

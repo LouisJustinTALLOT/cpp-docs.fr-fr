@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
 ms.openlocfilehash: f24827e2dc1f4d1131f5b63aebeb0e2b09bc2281
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388473"
 ---
 # <a name="cautohidedocksite-class"></a>Cautohidedocksite, classe
 
@@ -67,7 +67,7 @@ class CAutoHideDockSite : public CDockSite
 
 |||
 |-|-|
-|Name|Description|
+|Nom|Description|
 |[CAutoHideDockSite::m_nExtraSpace](#m_nextraspace)|Définit la taille de l’espace entre les barres d’outils et le bord de la barre d’ancrage. Cet espace est mesuré à partir du bord gauche ou le bord supérieur, en fonction de l’alignement de l’espace d’ancrage.|
 
 ## <a name="remarks"></a>Notes
@@ -94,7 +94,7 @@ L’exemple suivant montre comment récupérer un `CAutoHideDockSite` de l’obj
 
 [!code-cpp[NVC_MFC_RibbonApp#29](../../mfc/reference/codesnippet/cpp/cautohidedocksite-class_1.cpp)]
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxautohidedocksite.h
 

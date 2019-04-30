@@ -9,11 +9,11 @@ helpviewer_keywords:
 - startup code, parsing command-line arguments
 ms.assetid: e634e733-ac2f-4298-abe2-7e9288c94951
 ms.openlocfilehash: 53873fa9340253ab5e8459eb442385641246f930
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396117"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analyse des arguments de ligne de commande C++
 

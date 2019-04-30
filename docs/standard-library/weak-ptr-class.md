@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
 ms.openlocfilehash: e2efb5d534ad43e2492ac4fb0bf76db402dca272
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410852"
 ---
 # <a name="weakptr-class"></a>weak_ptr, classe
 
@@ -281,10 +281,10 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 *Autre*<br/>
 Type contrôlé par le pointeur partagé/faible d’argument.
 
-*WP*<br/>
+*wp*<br/>
 Pointeur faible à copier.
 
-*SP*<br/>
+*sp*<br/>
 Pointeur partagé à copier.
 
 ### <a name="remarks"></a>Notes
@@ -396,7 +396,7 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Paramètres
 
-*WP*<br/>
+*wp*<br/>
 Pointeur faible à échanger.
 
 ### <a name="remarks"></a>Notes
@@ -517,10 +517,10 @@ weak_ptr(const shared_ptr<Other>& sp);
 *Autre*<br/>
 Type contrôlé par le pointeur partagé/faible d’argument.
 
-*WP*<br/>
+*wp*<br/>
 Pointeur faible à copier.
 
-*SP*<br/>
+*sp*<br/>
 Pointeur partagé à copier.
 
 ### <a name="remarks"></a>Notes

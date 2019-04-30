@@ -9,11 +9,11 @@ helpviewer_keywords:
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
 ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397859"
 ---
 # <a name="recordset-filtering-records-odbc"></a>Recordset : Filtrage d’enregistrements (ODBC)
 
@@ -90,7 +90,7 @@ L’utilisation des guillemets ci-dessus est conforme à la spécification ODBC,
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : Tri d’enregistrements (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[Recordset : La sélection de jeux d’enregistrements d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[Recordset : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
-[Recordset : Verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Recordset : Tri d’enregistrements (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
+[Recordset : Sélection d’enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Recordset : Modification des enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Recordset : Verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

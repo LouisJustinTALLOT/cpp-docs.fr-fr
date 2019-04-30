@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
 ms.openlocfilehash: 414fc542aa3f84f985e326960d8cf73b67fd1580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389305"
 ---
 # <a name="dataseg"></a>data_seg
 
@@ -38,10 +38,10 @@ Spécifie le segment de données où les variables initialisées sont stockées 
 
 *identificateur* permet à plusieurs enregistrements à dépiler avec une seule **pop** commande.
 
-*« segment-name »*<br/>
+*"segment-name"*<br/>
 (Facultatif) Le nom d’un segment. Lorsqu’il est utilisé avec **pop**, la pile est dépilée et *segment-name* devient le nom de segment actif.
 
-*« segment-class »*<br/>
+*"segment-class"*<br/>
 (Facultatif) Inclus pour la compatibilité avec C++ antérieures à la version 2.0. Elle est ignorée.
 
 ## <a name="remarks"></a>Notes

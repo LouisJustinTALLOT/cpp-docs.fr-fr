@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CD2DSizeF [MFC], IsNull
 ms.assetid: f486a1e1-997d-4286-8cb9-26369dc82055
 ms.openlocfilehash: 09ccd8c4ba6bb0c345adb32bcf22686c485d1184
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396234"
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF, classe
 
@@ -53,7 +53,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
 
 [CD2DSizeF](../../mfc/reference/cd2dsizef-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrendertarget.h
 

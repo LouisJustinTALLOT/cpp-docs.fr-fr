@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_fstream [C++], swap
 ms.assetid: 8473817e-42a4-430b-82b8-b476c86bcf8a
 ms.openlocfilehash: 894ac0bf7703bf68c9125d11023dbc32cfbb5941
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400669"
 ---
 # <a name="basicfstream-class"></a>basic_fstream, classe
 
@@ -130,7 +130,7 @@ basic_fstream(basic_fstream&& right);
 *_Filename*<br/>
 Nom du fichier à ouvrir.
 
-*Mode _De*<br/>
+*_Mode*<br/>
 Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
@@ -213,7 +213,7 @@ void open(
 *_Filename*<br/>
 Nom du fichier à ouvrir.
 
-*Mode _De*<br/>
+*_Mode*<br/>
 Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Errors collection
 ms.assetid: cd37ef71-b0b3-401d-bc2b-540c9147f532
 ms.openlocfilehash: dd9610fce88c18ac42de81ed712492766ee705de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399844"
 ---
 # <a name="cdaoerrorinfo-structure"></a>CDaoErrorInfo, structure
 
@@ -56,7 +56,7 @@ Pour plus d’informations sur la gestion des erreurs DAO, consultez l’article
 
 Les informations récupérées par le [CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) fonction membre est stockée dans un `CDaoErrorInfo` structure. Examiner le [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) membre de données à partir d’un `CDaoException` objet que vous interceptez dans un gestionnaire d’exceptions, ou un appel `GetErrorInfo` à partir d’un `CDaoException` objet que vous créez explicitement afin de vérifier les erreurs qui peuvent avoir s’est produite lors d’un appel direct aux interfaces DAO. `CDaoErrorInfo` définit également un `Dump` génère de la fonction membre en mode de débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoErrorInfo` objet.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 

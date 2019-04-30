@@ -3,11 +3,11 @@ title: Résolution des déclarations ambiguës (C++)
 ms.date: 11/04/2016
 ms.assetid: 3d773ee7-bbea-47de-80c2-cb0a9d4ec0b9
 ms.openlocfilehash: 52e94f474d59505298cb4f78a477cedd21b90aad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403397"
 ---
 # <a name="resolving-ambiguous-declarations-c"></a>Résolution des déclarations ambiguës (C++)
 
@@ -17,7 +17,7 @@ Pour exécuter des conversions explicites d'un type en un autre, vous devez util
 char *aName( String( s ) );
 ```
 
-Il est difficile de savoir s’il s’agit d’une déclaration de fonction ou une déclaration d’objet avec un cast de style fonction comme initialiseur : il peut déclarer une fonction qui retourne le type `char *` qui prend un argument de type `String`, ou il peut déclarer l’objet `aName` et initialisez-la avec la valeur de `s` cast en type `String`.
+Il est difficile de savoir s’il s’agit d’une déclaration de fonction ou une déclaration d’objet avec un cast de style fonction comme initialiseur : Il peut déclarer une fonction qui retourne le type `char *` qui prend un argument de type `String`, ou il peut déclarer l’objet `aName` et initialisez-la avec la valeur de `s` cast en type `String`.
 
 Si une déclaration peut être considérée comme une déclaration de fonction valide, elle est traitée comme telle. Une instruction est examinée pour voir s'il s'agit d'un cast de type de style fonction seulement si ce peut être une déclaration de fonction, c'est-à-dire si elle serait syntaxiquement incorrecte. Par conséquent, le compilateur considère l'instruction comme une déclaration d'une fonction et ignore les parenthèses autour de l'identificateur `s`. En revanche, les instructions :
 

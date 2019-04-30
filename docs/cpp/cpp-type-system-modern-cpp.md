@@ -4,11 +4,11 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392277"
 ---
 # <a name="c-type-system-modern-c"></a>Système de type C++ (Modern C++)
 
@@ -90,11 +90,11 @@ PI = .75 //Error. Cannot modify const variable.
 
 Le **const** qualificateur est largement utilisé dans les déclarations de fonction et de variable et « vérification const » est un concept important en C++ ; cela signifie qu’il utiliser **const** pour s’assurer, au moment de la compilation que les valeurs ne sont pas modifiées involontairement. Pour plus d’informations, consultez [const](../cpp/const-cpp.md).
 
-Un **const** type est différent de sa version non-const ; par exemple, **const int** est un type différent de **int**. Vous pouvez utiliser le C++ **const_cast** opérateur dans les rares occasions où vous devez supprimer *const-ness* à partir d’une variable. Pour plus d’informations, consultez [les Conversions de Type et sécurité de Type](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+Un **const** type est différent de sa version non-const ; par exemple, **const int** est un type différent de **int**. Vous pouvez utiliser la C++ **const_cast** opérateur dans les rares occasions où vous devez supprimer *const-ness* à partir d’une variable. Pour plus d’informations, consultez [les Conversions de Type et sécurité de Type](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="string-types"></a>Types chaîne
 
-À proprement parler, le langage C++ n’a aucun type de chaîne intégrées ; **char** et **wchar_t** stockent des caractères uniques : vous devez déclarer un tableau de ces types à rapprocher d’une chaîne, en ajoutant une valeur null de fin (par exemple, ASCII `'\0'`) pour le premier élément de tableau après le dernier caractère valid (également appelé un *chaîne de style C*). Les chaînes de style C exigent beaucoup plus de code pour être écrites ou l'utilisation de fonctions de bibliothèque d'utilitaires de chaînes externes. Mais en C++ moderne, nous avons les types de bibliothèque Standard `std::string` (de 8 bits **char**-type chaînes de caractères) ou `std::wstring` (de 16 bits **wchar_t**-type chaînes de caractères). Ces conteneurs de bibliothèque C++ Standard peuvent être considérés en tant que types de chaîne natifs, car ils font partie des bibliothèques standard qui sont inclus dans n’importe quel environnement de génération C++ conforme. Utilisez simplement la directive `#include <string>` pour rendre ces types disponibles dans votre programme. (Si vous utilisez MFC ou ATL, la classe CString est également disponible, mais ne fait pas partie de la norme C++.) L'utilisation de tableaux de caractères se terminant par null (les chaînes de style C susmentionnées) est vivement déconseillée en C++ moderne.
+À proprement parler, le C++ langage n’a aucun type de chaîne intégrées ; **char** et **wchar_t** stockent des caractères uniques : vous devez déclarer un tableau de ces types à rapprocher d’une chaîne, en ajoutant une valeur null de fin (par exemple, ASCII `'\0'`) à l’élément de tableau juste après le dernier caractère valid (également appelé un *chaîne de style C*). Les chaînes de style C exigent beaucoup plus de code pour être écrites ou l'utilisation de fonctions de bibliothèque d'utilitaires de chaînes externes. Mais moderne C++, nous avons les types de bibliothèque Standard `std::string` (8 bits **char**-type chaînes de caractères) ou `std::wstring` (pour 16 bits **wchar_t**-type chaînes de caractères). Ces conteneurs de bibliothèque C++ Standard peuvent être considérés en tant que types de chaîne natifs, car ils font partie des bibliothèques standard qui sont inclus dans n’importe quel environnement de génération C++ conforme. Utilisez simplement la directive `#include <string>` pour rendre ces types disponibles dans votre programme. (Si vous utilisez MFC ou ATL, la classe CString est également disponible, mais ne fait pas partie de la norme C++.) L'utilisation de tableaux de caractères se terminant par null (les chaînes de style C susmentionnées) est vivement déconseillée en C++ moderne.
 
 ## <a name="user-defined-types"></a>Types définis par l'utilisateur
 

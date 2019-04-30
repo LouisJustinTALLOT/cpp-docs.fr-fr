@@ -67,11 +67,11 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
 ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399744"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef Class
 
@@ -187,7 +187,7 @@ Pour plus d’informations, consultez les rubriques « Objet QueryDef », « 
 
 `CDaoQueryDef`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 
@@ -636,7 +636,7 @@ Le type de requête est défini par ce que vous spécifiez dans la chaîne SQL d
 
 - `dbQSelect` Sélectionnez
 
-- Action `dbQAction`
+- `dbQAction` Action
 
 - `dbQCrosstab` Crosstab
 

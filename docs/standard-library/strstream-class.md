@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
 ms.openlocfilehash: 9494f7ee2508df1971d56c94b929a7212bedb254
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412291"
 ---
 # <a name="strstream-class"></a>strstream, classe
 
@@ -155,7 +155,7 @@ strstream(char* ptr,
 *count*<br/>
 Taille de la mémoire tampon.
 
-*Mode _De*<br/>
+*_Mode*<br/>
 Mode d’entrée et de sortie de la mémoire tampon. Pour plus d’informations, consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *ptr*<br/>
