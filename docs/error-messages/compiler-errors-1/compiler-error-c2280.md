@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2280
 ms.assetid: e6c5b1fb-2b9b-4554-8ff9-775eeb37161b
 ms.openlocfilehash: e1ec032878fefdc1992605df5ee1aa13c673d4cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388902"
 ---
 # <a name="compiler-error-c2280"></a>Erreur du compilateur C2280
 
@@ -19,7 +19,7 @@ ms.locfileid: "50572807"
 
 Le compilateur a détecté une tentative pour faire référence à un `deleted` (fonction). Cette erreur peut être provoquée par un appel à une fonction membre qui a été marquée explicitement comme `= deleted` dans le code source. Cette erreur peut également être provoquée par un appel à une fonction membre spéciale implicite d’un struct ou une classe qui est automatiquement déclarée et marquée comme `deleted` par le compilateur. Pour plus d’informations sur quand le compilateur génère automatiquement `default` ou `deleted` fonctions membres spéciales, consultez [fonctions membres spéciales](../../cpp/special-member-functions.md).
 
-## <a name="example-explicitly-deleted-functions"></a>Exemple : Les fonctions explicitement supprimés
+## <a name="example-explicitly-deleted-functions"></a>Exemple : Fonctions supprimées explicitement
 
 Un appel à une explicitement `deleted` fonction provoque cette erreur. Un explicitement `deleted` fonction membre implique que la classe ou structure est délibérément conçu pour empêcher son utilisation, par conséquent, pour résoudre ce problème, vous devez modifier votre code pour éviter cette situation.
 
@@ -42,7 +42,7 @@ void f() {
 }
 ```
 
-## <a name="example-uninitialized-data-members"></a>Exemple : Données membres non initialisées
+## <a name="example-uninitialized-data-members"></a>Exemple : Membres de données non initialisé
 
 Un membre de données de type de référence non initialisé ou `const` membre de données indique au compilateur de déclarer implicitement une `deleted` constructeur par défaut. Pour résoudre ce problème, initialisez le membre de données lorsqu’il est déclaré.
 
@@ -58,7 +58,7 @@ struct A {
 } a;    // C2280
 ```
 
-## <a name="example-reference-and-const-data-members"></a>Exemple : Référence et les données membres const
+## <a name="example-reference-and-const-data-members"></a>Exemple : Référence et les données membres const
 
 Un `const` ou membre de données de type de référence indique au compilateur de déclarer un `deleted` opérateur d’assignation de copie. Une fois initialisée, ces membres ne peut pas être assignées, donc une simple copie ni déplacement ne peut pas fonctionner. Pour résoudre ce problème, nous vous recommandons de que modifier votre logique afin de supprimer les opérations d’assignation qui provoquent l’erreur.
 
@@ -79,7 +79,7 @@ void f() {
 }
 ```
 
-## <a name="example-movable-deletes-implicit-copy"></a>Exemple : Movable supprime copie implicite
+## <a name="example-movable-deletes-implicit-copy"></a>Exemple : Copie implicite de suppressions mobile
 
 Si une classe déclare un constructeur de déplacement ou un opérateur d’assignation de déplacement, mais ne déclare pas explicitement un constructeur de copie, le compilateur implicitement déclare un constructeur de copie et définit en tant que `deleted`. De même, si une classe déclare un constructeur de déplacement ou un opérateur d’assignation de déplacement, mais ne déclare pas explicitement un opérateur d’assignation de copie, le compilateur implicitement déclare un opérateur d’assignation de copie et définit en tant que `deleted`. Pour résoudre ce problème, vous devez déclarer explicitement ces membres.
 
@@ -108,7 +108,7 @@ void copy(base *p)
 }
 ```
 
-## <a name="example-variant-and-volatile-members"></a>Exemple : Les membres de type Variant et volatiles
+## <a name="example-variant-and-volatile-members"></a>Exemple : Membres de type variants et volatiles
 
 Les versions du compilateur avant Visual Studio 2015 Update 2 ont des constructeurs par défaut généré et non conformes et les destructeurs pour les unions anonymes. Ils sont désormais implicitement déclarés en tant que `deleted`. Ces versions autorisaient également non conforme de définition implicite de `default` copier et déplacer des constructeurs et `default` copier et déplacer des opérateurs d’assignation dans les classes et structs qui ont `volatile` variables membres. Le compilateur considère qu’elles aient des constructeurs non triviaux et opérateurs d’assignation maintenant et ne génère pas de `default` implémentations. Lorsqu’une telle classe est membre d’une union ou une union anonyme à l’intérieur d’une classe, les constructeurs de copie et de déplacement et opérateurs d’assignation de copie et déplacement de la classe ou union sont implicitement définis en tant que `deleted`. Pour résoudre ce problème, vous devez déclarer explicitement les fonctions membres spéciales requises.
 
@@ -137,7 +137,7 @@ int main() {
 }
 ```
 
-## <a name="example-indirect-base-members-deleted"></a>Exemple : Membres base indirectes de suppression
+## <a name="example-indirect-base-members-deleted"></a>Exemple : Membres de base indirectes supprimés
 
 Les versions du compilateur avant Visual Studio 2015 Update 2 ont été non conformes et autorisaient une classe dérivée à appeler des fonctions d’indirectement dérivée des membres spéciaux `private virtual` classes de base. Le compilateur émet désormais l’erreur du compilateur C2280 lorsqu’un appel est effectué.
 

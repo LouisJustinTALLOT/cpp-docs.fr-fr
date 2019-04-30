@@ -6,11 +6,11 @@ helpviewer_keywords:
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
 ms.openlocfilehash: e02d5523b894f89aa93c8d2765a128920afa2353
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392776"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Contrôles ActiveX MFC : Ajout de propriétés personnalisées
 
@@ -95,6 +95,6 @@ Notez que l’Assistant Ajout de propriété ajoute automatiquement un appel, à
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Contrôles ActiveX MFC : Propriétés](../mfc/mfc-activex-controls-properties.md)<br/>
-[Contrôles ActiveX MFC : Méthodes](../mfc/mfc-activex-controls-methods.md)<br/>
+[Contrôles ActiveX MFC : Propriétés](../mfc/mfc-activex-controls-properties.md)<br/>
+[Contrôles ActiveX MFC : Méthodes](../mfc/mfc-activex-controls-methods.md)<br/>
 [COleControl, classe](../mfc/reference/colecontrol-class.md)

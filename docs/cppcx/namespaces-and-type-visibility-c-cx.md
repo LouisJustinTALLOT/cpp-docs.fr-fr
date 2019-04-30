@@ -3,11 +3,11 @@ title: Visibilité des espaces de noms et des types (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
 ms.openlocfilehash: 54bac3492991d0bd849f7476cc87a1336108bd52
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392126"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Visibilité des espaces de noms et des types (C++/CX)
 
@@ -31,12 +31,12 @@ Utilisez les modificateurs d'accès suivants pour contrôler la visibilité des 
 ||||
 |-|-|-|
 |Modificateur|Signification|Émis vers des métadonnées ?|
-|private|Accessibilité par défaut. Même signification que dans le langage C++ standard.|Aucune|
+|private|Accessibilité par défaut. Même signification que dans le langage C++ standard.|Non|
 |protected|Même signification qu'en C++ standard, à la fois dans l'application ou le composant et dans les métadonnées.|Oui|
 |public|Même signification que dans le langage C++ standard.|Oui|
 |`public protected` ou `protected public`|Accessibilité protégée dans les métadonnées, publique dans l'application ou le composant.|Oui|
 |`protected private` ou `private protected`|Non visible dans les métadonnées ; accessibilité protégée dans l'application ou le composant.||
-|`internal` ou `private public`|Le membre est public dans l'application ou le composant, mais n'est pas visible dans les métadonnées.|Aucune|
+|`internal` ou `private public`|Le membre est public dans l'application ou le composant, mais n'est pas visible dans les métadonnées.|Non|
 
 ## <a name="windows-runtime-namespaces"></a>Espaces de noms Windows Runtime
 

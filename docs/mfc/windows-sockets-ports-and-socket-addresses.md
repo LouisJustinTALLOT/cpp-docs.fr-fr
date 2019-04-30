@@ -11,11 +11,11 @@ helpviewer_keywords:
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
 ms.openlocfilehash: c33ec1376c1898272cf80e8d77c5cc273e16f9de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389370"
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets : Ports et adresses de Socket
 
@@ -40,15 +40,15 @@ Lorsque vous cherchez à créer un socket, généralement inutile de spécifier 
 
 Pour plus d'informations, voir :
 
-- [Windows Sockets : À l’aide de la classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets : Utilisation de la classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets : Utilisation de Sockets avec des Archives](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets : Utilisation de sockets avec des archives](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets : Fonctionnement des Sockets avec des Archives](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets : Fonctionnement des sockets avec des archives](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets : Sockets de Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets : Sockets flux](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets : Sockets datagramme](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets : Sockets datagramme](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Voir aussi
 

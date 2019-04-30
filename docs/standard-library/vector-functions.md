@@ -7,11 +7,11 @@ ms.assetid: 6cdcf043-eef6-4330-83f0-4596fb9f968a
 helpviewer_keywords:
 - std::swap [vector]
 ms.openlocfilehash: e883653338a35d39b14b03dfd75ccf2ac2a8d873
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410876"
 ---
 # <a name="ltvectorgt-functions"></a>&lt;vector&gt;, fonctions
 
@@ -34,7 +34,7 @@ Le vecteur dont les éléments doivent être échangés avec ceux du vecteur *dr
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle est un algorithme spécialisé sur la classe de conteneur vector pour exécuter la fonction membre `left`. [Vector::swap](../standard-library/vector-class.md) *(droit*). Il s’agit d’instances de l’ordonnancement partiel des modèles de fonctions par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle, **template** \< **class T**> **void swap**( **T&**, **T&**), dans la classe d’algorithme fonctionne par assignation et est une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide, car elle peut fonctionner avec la représentation interne de la classe de conteneur.
+La fonction de modèle est un algorithme spécialisé sur la classe de conteneur vector pour exécuter la fonction membre `left`. [vector::swap](../standard-library/vector-class.md) *( right*). Il s’agit d’instances de l’ordonnancement partiel des modèles de fonctions par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle, **template** \< **class T**> **void swap**( **T&**, **T&**), dans la classe d’algorithme fonctionne par assignation et est une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide, car elle peut fonctionner avec la représentation interne de la classe de conteneur.
 
 ### <a name="example"></a>Exemple
 

@@ -1,5 +1,5 @@
 ---
-title: 'TN061 : messages ON_NOTIFY et WM_NOTIFY'
+title: 'TN061 : Messages ON_NOTIFY et WM_NOTIFY'
 ms.date: 06/28/2018
 f1_keywords:
 - ON_NOTIFY
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
 ms.openlocfilehash: 74eb39a855da3ff3e6da7f14a76bf0804919826d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399575"
 ---
-# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061 : messages ON_NOTIFY et WM_NOTIFY
+# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061 : Messages ON_NOTIFY et WM_NOTIFY
 
 > [!NOTE]
 > La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
@@ -31,7 +31,7 @@ Cette note technique fournit des informations générales sur le nouveau message
 
 Dans Windows 3.x, contrôles notifier leurs parents d’événements tels que des clics de souris, change dans le contenu et de sélection et de peinture en arrière-plan en envoyant un message au parent. Simples notifications sont envoyées sous forme de messages WM_COMMAND spéciaux, avec le code de notification (par exemple, BN_CLICKED) et contrôler les ID empaqueté dans *wParam* et le handle du contrôle dans *lParam*. Notez que depuis *wParam* et *lParam* sont remplis, il n’existe aucun moyen de passer des données supplémentaires, ces messages peuvent être uniquement une notification simple. Par exemple, dans la notification BN_CLICKED, il est impossible d’envoyer des informations relatives à l’emplacement du curseur de la souris lorsque l’utilisateur a cliqué sur le bouton.
 
-Lorsque les contrôles dans Windows 3.x devons envoient un message de notification qui inclut des données supplémentaires, ils utilisent différents messages spéciaux, y compris WM_CTLCOLOR, WM_VSCROLL, messages WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM, WM_DELETEITEM, WM_ CHARTOITEM, WM_VKEYTOITEM et ainsi de suite. Ces messages peuvent être reflétées au contrôle qui les a envoyés. Pour plus d’informations, consultez [TN062 : réflexion de Message pour Windows contrôles](../mfc/tn062-message-reflection-for-windows-controls.md).
+Lorsque les contrôles dans Windows 3.x devons envoient un message de notification qui inclut des données supplémentaires, ils utilisent différents messages spéciaux, y compris WM_CTLCOLOR, WM_VSCROLL, messages WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM, WM_DELETEITEM, WM_ CHARTOITEM, WM_VKEYTOITEM et ainsi de suite. Ces messages peuvent être reflétées au contrôle qui les a envoyés. Pour plus d’informations, consultez [TN062 : Message de réflexion pour les contrôles Windows](../mfc/tn062-message-reflection-for-windows-controls.md).
 
 **Messages de notification dans Win32**
 
@@ -114,7 +114,7 @@ où les paramètres sont :
 *pNotifyStruct*<br/>
 Pointeur vers la structure de notification, comme décrit dans la section ci-dessus.
 
-*Résultat*<br/>
+*result*<br/>
 Un pointeur vers le code de résultat que vous allez définir avant de retourner.
 
 ## <a name="example"></a>Exemple
@@ -183,7 +183,7 @@ L’identificateur de l’enfant du contrôle qui a envoyé la notification.
 *pNotifyStruct*<br/>
 Pointeur vers la structure de notification, comme décrit ci-dessus.
 
-*Résultat*<br/>
+*result*<br/>
 Un pointeur vers le code de résultat que vous allez définir avant de retourner.
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE

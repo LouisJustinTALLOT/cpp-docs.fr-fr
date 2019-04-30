@@ -10,11 +10,11 @@ helpviewer_keywords:
 - std::invoke_result_t
 - std::invoke_result::type
 ms.openlocfilehash: 7c03240d3ee666fcda30562279a8dbda2ca8dc7b
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404844"
 ---
 # <a name="invokeresult-class"></a>invoke_result, classe
 
@@ -43,7 +43,7 @@ Types de la liste d’arguments pour le type pouvant être appelé à interroger
 
 Utilisez ce modèle pour déterminer le type de résultat de *joignable*(*Args*...) au moment de la compilation, où *joignable* et tous les types dans *Args* sont n’importe quel type terminée, un tableau de limite inconnue ou un éventuellement cv-qualifié `void`. Le `type` membre de la classe de modèle désigne le type de retour de *joignable* lorsqu’elle est appelée à l’aide des arguments *Args*... Le `type` membre est défini uniquement si *joignable* peut être appelée lorsqu’elle est appelée à l’aide des arguments *Args*... dans un contexte non évalué. Sinon, la classe de modèle n’a aucun membre `type`, ce qui permet de SFINAE des tests sur un ensemble particulier de types d’argument au moment de la compilation.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
 ms.openlocfilehash: 62addd44f8aa8fceafef6a27244994a2ec6b766b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399783"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo, structure
 
@@ -53,7 +53,7 @@ Les informations récupérées par le [CDaoQueryDef::GetParameterInfo](../../mfc
 
 `CDaoParameterInfo` définit également un `Dump` génère de la fonction membre en mode de débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoParameterInfo` objet.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 

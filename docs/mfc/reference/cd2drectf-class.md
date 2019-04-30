@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
 ms.openlocfilehash: 8e5c22fe15ce0d930f81dd16673927d5299bf630
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396273"
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF, classe
 
@@ -53,7 +53,7 @@ class CD2DRectF : public D2D1_RECT_F;
 
 `CD2DRectF`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrendertarget.h
 

@@ -3,11 +3,11 @@ title: espace de noms par défaut
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
 ms.openlocfilehash: 60a47c9549ee40b419eb5f4aa84720f8dcd1c366
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389461"
 ---
 # <a name="default-namespace"></a>espace de noms par défaut
 
@@ -32,7 +32,7 @@ Tous les types intégrés héritent des membres suivants.
 
 ### <a name="built-in-types"></a>Types intégrés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`char16`|Valeur non numérique 16 bits qui représente un point de code Unicode (UTF-16).|
 |`float32`|Nombre à virgule flottante IEEE 754 32 bits.|
@@ -46,7 +46,7 @@ Tous les types intégrés héritent des membres suivants.
 |`uint64`|Entier non signé 64 bits.|
 |`uint8`|Valeur numérique non signée 8 bits.|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** vccorlib.h
 

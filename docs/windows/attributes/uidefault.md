@@ -7,11 +7,11 @@ helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
 ms.openlocfilehash: a5bb8d3ad869d9ee60b2ab04743f5a926a10dd2a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59027673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407092"
 ---
 # <a name="uidefault"></a>uidefault
 

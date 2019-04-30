@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2577
 ms.assetid: fc79ef83-8362-40a2-9257-8037c3195ce4
 ms.openlocfilehash: 4406aa90b26bc517308132ae9cccd003d44a9aad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408457"
 ---
 # <a name="compiler-error-c2577"></a>Erreur du compilateur C2577
 

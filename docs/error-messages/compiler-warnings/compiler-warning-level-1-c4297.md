@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4297
 ms.assetid: ba92fcdc-9f70-4f60-abe6-281f9582ca59
 ms.openlocfilehash: 07dd6c65498ddd0d377ec3e0fbc7b44e52bec96b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408626"
 ---
 # <a name="compiler-warning-level-1-c4297"></a>Avertissement du compilateur (niveau 1) C4297
 
@@ -23,7 +23,7 @@ Par défaut, le compilateur génère des spécificateurs `noexcept(true)` implic
 
 Pour plus d’informations sur les spécifications d’exceptions, consultez [spécifications d’Exception (throw)](../../cpp/exception-specifications-throw-cpp.md). En outre, consultez [/EH (modèle de gestion des exceptions)](../../build/reference/eh-exception-handling-model.md) pour plus d’informations sur la façon de modifier le comportement des exceptions au moment de la compilation.
 
-Cet avertissement est également généré pour __declspec ([dllexport](../../cpp/dllexport-dllimport.md)) les fonctions marquées extern « C », même s’ils sont des fonctions C++.
+Cet avertissement est également généré pour __declspec ([dllexport](../../cpp/dllexport-dllimport.md)) les fonctions marquées extern « C », même s’ils sont C++ fonctions.
 
 L'exemple suivant génère l'avertissement C4297 :
 

@@ -100,11 +100,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: c3cfc69b-04c6-42ae-a30e-0eda953fe883
 ms.openlocfilehash: fb7db25785d041786f5dfc0d2c3986a76d776d5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404414"
 ---
 # <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
 
@@ -143,7 +143,7 @@ template<typename Key,
 *Key*<br/>
 Le type du composant clé d’un élément dans la séquence contrôlée.
 
-*mappé*<br/>
+*Mappé*<br/>
 Le type du composant supplémentaire d’un élément dans la séquence contrôlée.
 
 ## <a name="requirements"></a>Configuration requise
@@ -568,7 +568,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="count"></a> hash_map::Count (STL/CLR)
+## <a name="count"></a> hash_map::count (STL/CLR)
 
 Recherche le nombre d’éléments qui correspondent à une clé spécifiée.
 
@@ -1301,7 +1301,7 @@ Fonction pour les clés de mappage aux compartiments de hachage.
 *last*<br/>
 Fin de la plage à insérer.
 
-*Pred*<br/>
+*pred*<br/>
 Classement de prédicat pour la séquence contrôlée.
 
 *right*<br/>
@@ -1570,7 +1570,7 @@ Fin de la plage à insérer.
 *right*<br/>
 Énumération à insérer.
 
-*Val*<br/>
+*val*<br/>
 Valeur de clé à insérer.
 
 *where*<br/>
@@ -2019,7 +2019,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 Valeur de clé à utiliser.
 
-*mappé*<br/>
+*mapped*<br/>
 Valeur mappée à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -2180,7 +2180,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="op_as"></a> hash_map::operator = (STL/CLR)
+## <a name="op_as"></a> hash_map::operator= (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -2939,7 +2939,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_type"></a> hash_map::Value_type (STL/CLR)
+## <a name="value_type"></a> hash_map::value_type (STL/CLR)
 
 Type d’un élément.
 

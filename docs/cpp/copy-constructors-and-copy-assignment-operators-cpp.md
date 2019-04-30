@@ -11,11 +11,11 @@ helpviewer_keywords:
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
 ms.openlocfilehash: 59f463d103e233a1d9b25da3243a16f67263c815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392295"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Constructeurs de copie et opérateurs d'assignation de copie (C++)
 
@@ -24,7 +24,7 @@ ms.locfileid: "50535042"
 >
 > Les opérations d'assignation et d'initialisation génèrent une copie des objets.
 
-- **Affectation**: lors de la valeur d’un objet est affectée à un autre objet, le premier objet est copié vers le deuxième objet. Par conséquent,
+- **Affectation**: Lorsque la valeur d’un objet est affectée à un autre objet, le premier objet est copié vers le deuxième objet. Par conséquent,
 
     ```cpp
     Point a, b;
@@ -34,7 +34,7 @@ ms.locfileid: "50535042"
 
    entraîne la copie de la valeur de `b` dans `a`.
 
-- **L’initialisation**: l’initialisation se produit lorsqu’un nouvel objet est déclaré, lorsque les arguments sont passés aux fonctions par valeur, ou lorsque les valeurs sont retournées à partir de fonctions par valeur.
+- **L’initialisation**: L’initialisation se produit lorsqu’un nouvel objet est déclaré, lorsque les arguments sont passés aux fonctions par valeur, ou lorsque les valeurs sont retournées à partir de fonctions par valeur.
 
 Vous pouvez définir la sémantique de « copie » pour les objets de type classe. Par exemple, prenons le code suivant :
 
@@ -76,13 +76,13 @@ int main()
 
 Les constructeurs de copie généré par le compilateur, telles que les constructeurs de copie défini par l’utilisateur, ont un seul argument de type « référence à *nom de la classe*. » Une exception est lorsque toutes les classes de base et les classes de membre possèdent des constructeurs de copie déclarés comme prenant un argument unique de type **const** <em>nom de la classe</em><strong>&</strong>. Dans ce cas, les arguments du constructeur de copie généré par le compilateur est également **const**.
 
-Lorsque le type d’argument au constructeur de copie n’est pas **const**, l’initialisation en copiant un **const** objet génère une erreur. L’inverse n’est pas vrai : si l’argument est **const**, vous pouvez initialiser en copiant un objet qui n’est pas **const**.
+Lorsque le type d’argument au constructeur de copie n’est pas **const**, l’initialisation en copiant un **const** objet génère une erreur. L’inverse n’est pas vrai : Si l’argument est **const**, vous pouvez initialiser en copiant un objet qui n’est pas **const**.
 
 Opérateurs d’assignation généré par le compilateur suivent le même modèle aux **const.** Ils acceptent un argument unique de type <em>nom de la classe</em> <strong>&</strong> à moins que les opérateurs d’assignation dans toutes les classes de base et membres acceptent des arguments de type **const** <em>nom de la classe</em><strong>&</strong>. Dans ce cas, la classe générée du affectation opérateur prend un **const** argument.
 
 > [!NOTE]
 > Lorsque des classes de base virtuelles sont initialisées par des constructeurs de copie, générés par le compilateur ou définis par l'utilisateur, elles ne sont initialisées qu'une seule fois : au moment où elles sont construites.
 
-Les conséquences sont semblables à celles du constructeur de copie. Lorsque le type d’argument n’est pas **const**, affectation à partir d’un **const** objet génère une erreur. L’inverse n’est pas vrai : si un **const** valeur est assignée à une valeur qui n’est pas **const**, l’assignation réussit.
+Les conséquences sont semblables à celles du constructeur de copie. Lorsque le type d’argument n’est pas **const**, affectation à partir d’un **const** objet génère une erreur. L’inverse n’est pas vrai : Si un **const** valeur est assignée à une valeur qui n’est pas **const**, l’assignation réussit.
 
 Pour plus d’informations sur les opérateurs d’assignation surchargés, consultez [attribution](../cpp/assignment.md).

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 ms.openlocfilehash: 98bd58745e56a62bf5700e9b5fe4963a7b584953
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58766798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405922"
 ---
 # <a name="drag-and-drop-ole"></a>Glisser-déplacer (OLE)
 
@@ -32,11 +32,11 @@ Si vous n’avez pas lu la [objets de données et Sources de données (OLE)](../
 
 Pour plus d'informations sur la fonction Glisser-déplacer, consultez les rubriques suivantes :
 
-- [Glisser -déplacer : Implémentation d’une Source de dépôt](../mfc/drag-and-drop-implementing-a-drop-source.md)
+- [Glisser-déposer : Implémentation d’une source de déplacement](../mfc/drag-and-drop-implementing-a-drop-source.md)
 
-- [Glisser -déplacer : Implémentation d’une cible de dépôt](../mfc/drag-and-drop-implementing-a-drop-target.md)
+- [Glisser-déposer : Implémentation d’une cible de déplacement](../mfc/drag-and-drop-implementing-a-drop-target.md)
 
-- [Glisser -déplacer : Personnalisation](../mfc/drag-and-drop-customizing.md)
+- [Glisser-déposer : Personnalisation](../mfc/drag-and-drop-customizing.md)
 
 ## <a name="see-also"></a>Voir aussi
 

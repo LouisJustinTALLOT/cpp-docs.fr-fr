@@ -27,11 +27,11 @@ helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
 ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405558"
 ---
 # <a name="arrayview-class"></a>array_view, classe
 
@@ -99,13 +99,13 @@ Le rang de le `array_view` objet.
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[rang (constante)](#rank)|Stocke le rang de le `array_view` objet.|
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[extent](#extent)|Obtient l'objet `extent` qui définit la forme de l'objet `array_view`.|
 |[source_accelerator_view](#source_accelerator_view)|Obtient le [accelerator_view](accelerator-view-class.md) où la source de données de la `array_view` se trouve|
@@ -147,7 +147,7 @@ Chacune des actions informe le `array_view` de l’objet que la mémoire native 
 
 `array_view`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp.h
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
 ms.openlocfilehash: 0c2fed4aa239faa96abf692a46a27102ce9820a1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403683"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Cmfccolorpopupmenu, classe
 
@@ -55,7 +55,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 |||
 |-|-|
-|Name|Description|
+|Nom|Description|
 |`m_bEnabledInCustomizeMode`|Valeur booléenne qui détermine s’il faut afficher la barre de couleurs.|
 |`m_wndColorBar`|Le `CMFCColorBar` objet qui fournit la sélection de couleur.|
 
@@ -81,7 +81,7 @@ Pour plus d’informations sur `CMFCColorBar`, consultez [cmfccolorbar, classe](
 
 [CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcolorpopupmenu.h
 
@@ -141,7 +141,7 @@ L’étiquette pour le bouton automatique standard est **automatique**.
 *lpszOtherColor*<br/>
 [in] L’étiquette de texte de la *autres* bouton, qui affiche plus choix de couleurs, ou NULL.
 
-L’étiquette du bouton autre standard est **couleurs supplémentaires...** .
+L’étiquette du bouton autre standard est **couleurs supplémentaires...**.
 
 *lpszDocColors*<br/>
 [in] L’étiquette de texte du bouton de couleurs de document. La palette de couleurs de document répertorie toutes les couleurs que le document utilise actuellement.

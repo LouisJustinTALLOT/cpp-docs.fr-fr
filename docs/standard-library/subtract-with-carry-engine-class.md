@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
 ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412187"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine, classe
 
@@ -68,10 +68,10 @@ L'argument de modèle `UIntType` doit être assez volumineux pour contenir des v
 
 Bien que vous puissiez construire un générateur directement à partir de ce moteur, vous pouvez aussi utiliser l’un des typedefs prédéfinis suivants :
 
-`ranlux24_base` : utilisé comme base pour `ranlux24`.
+`ranlux24_base`: Utilisé comme base pour `ranlux24`.
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-`ranlux48_base` : utilisé comme base pour `ranlux48`.
+`ranlux48_base`: Utilisé comme base pour `ranlux48`.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
 Pour plus d’informations sur l’algorithme du moteur Substract With Carry, consultez l’article Wikipedia [Lagged Fibonacci generator](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator).
