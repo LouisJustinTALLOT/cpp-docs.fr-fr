@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
 ms.openlocfilehash: a42128d097c9d63d82243090e2e215a250ff432b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276336"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341694"
 ---
 # <a name="cmditabinfo-class"></a>Cmditabinfo, classe
 
@@ -61,7 +61,7 @@ class CMDITabInfo
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMDITabInfo::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|Spécifie si un **fermer** bouton est affiché sur l’étiquette de l’onglet actif.|
 |[CMDITabInfo::m_bAutoColor](#m_bautocolor)|Spécifie s’il faut les onglets MDI de couleur.|
@@ -89,7 +89,7 @@ L’exemple suivant montre comment définir les valeurs des variables de membres
 
 [CMDITabInfo](../../mfc/reference/cmditabinfo-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxmdiclientareawnd.h
 

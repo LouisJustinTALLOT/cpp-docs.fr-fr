@@ -9,17 +9,17 @@ helpviewer_keywords:
 - try-catch keyword [C++], mixed-language
 ms.assetid: a149154e-36dd-4d1a-980b-efde2a563a56
 ms.openlocfilehash: 94d6dc249cb130aaf09d3202b9e8f437d00a9597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548201"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345953"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Mélange d’exceptions C (structurées) et des exceptions C++
 
-Si vous souhaitez écrire du code portable, l’utilisation de structurée des exceptions (SEH) dans un programme C++ n’est pas recommandée. Toutefois, vous souhaiterez parfois compiler à l’aide de [/EHa](../build/reference/eh-exception-handling-model.md) et combiner des exceptions structurées et code source C++ et avez besoin d’un autre mécanisme pour gérer ces deux types d’exceptions. Étant donné que le Gestionnaire d’exceptions structuré n’a aucun concept d’objets ou des exceptions typées, il ne peut pas gérer les exceptions levées par du code C++. Toutefois, C++ **catch** gestionnaires peuvent gérer les exceptions structurées. Syntaxe des exceptions C++ (**essayez**, **lever**, **catch**) n’est pas accepté par le compilateur C, mais la syntaxe de gestion structurée des exceptions (**__try**, **__except**, **__finally**) est pris en charge par le compilateur C++.
+Si vous souhaitez écrire du code portable, l’utilisation de structurée des exceptions (SEH) dans un programme C++ n’est pas recommandée. Toutefois, vous souhaiterez parfois compiler à l’aide de [/EHa](../build/reference/eh-exception-handling-model.md) et combiner des exceptions structurées et code source C++ et avez besoin d’un autre mécanisme pour gérer ces deux types d’exceptions. Étant donné que le Gestionnaire d’exceptions structuré n’a aucun concept d’objets ou des exceptions typées, il ne peut pas gérer les exceptions levées par du code C++. Toutefois, C++ **catch** gestionnaires peuvent gérer les exceptions structurées. C++syntaxe de gestion des exceptions (**essayez**, **lever**, **catch**) n’est pas accepté par le compilateur C, mais la syntaxe de gestion structurée des exceptions (**__try**, **__except**, **__finally**) est pris en charge par le C++ compilateur.
 
-Consultez [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) pour plus d’informations sur la façon de gérer les exceptions structurées en tant qu’exceptions C++.
+Consultez [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) pour plus d’informations sur la façon de gérer les exceptions structurées en tant que C++ exceptions.
 
 Si vous combinez structurées et des exceptions C++, n’oubliez pas de ces problèmes potentiels :
 

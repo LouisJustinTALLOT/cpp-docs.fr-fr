@@ -1,17 +1,17 @@
 ---
-title: Exemples d'expressions lambda
+title: Exemples d’expressions lambda
 ms.date: 11/04/2016
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392191"
 ---
-# <a name="examples-of-lambda-expressions"></a>Exemples d'expressions lambda
+# <a name="examples-of-lambda-expressions"></a>Exemples d’expressions lambda
 
 Cet article explique comment utiliser des expressions lambda dans vos programmes. Pour une vue d’ensemble des expressions lambda, consultez [Expressions Lambda](../cpp/lambda-expressions-in-cpp.md). Pour plus d’informations sur la structure d’une expression lambda, consultez [syntaxe d’Expression Lambda](../cpp/lambda-expression-syntax.md).
 
@@ -61,7 +61,7 @@ Bien que les expressions lambda soient le plus souvent déclarées dans le corps
 
 ### <a name="example-2"></a>Exemple 2
 
-Le compilateur Visual C++ lie une expression lambda à ses variables capturées lorsque l'expression est déclarée plutôt que lorsque l'expression est appelée. L'exemple suivant montre une expression lambda qui capture la variable locale `i` par valeur et la variable locale `j` par référence. Puisque l'expression lambda capture `i` par valeur, la réaffectation de `i` ultérieurement dans le programme n'affecte pas le résultat de l'expression. Toutefois, puisque l'expression lambda enregistre `j` par référence, la réaffectation de `j` influence le résultat de l'expression.
+Le compilateur Visual C++ lie une expression lambda à ses variables capturées lorsque l'expression est déclarée plutôt que lorsque l'expression est appelée. L’exemple suivant montre une expression lambda qui capture la variable locale `i` par valeur et la variable locale `j` par référence. Puisque l'expression lambda capture `i` par valeur, la réaffectation de `i` ultérieurement dans le programme n'affecte pas le résultat de l'expression. Toutefois, puisque l’expression lambda enregistre `j` par référence, la réaffectation de `j` influence le résultat de l’expression.
 
 ### <a name="code"></a>Code
 
@@ -101,11 +101,11 @@ int main()
 
 ##  <a name="callingLambdaExpressions"></a> Appel d’Expressions Lambda
 
-Vous pouvez appeler une expression lambda immédiatement, comme indiqué dans l'extrait de code suivant. Le deuxième extrait montre comment passer une expression lambda en tant qu’argument des algorithmes de bibliothèque C++ Standard tel que `find_if`.
+Vous pouvez appeler une expression lambda immédiatement, comme indiqué dans l’extrait de code suivant. Le deuxième extrait montre comment passer une expression lambda en tant qu’argument des algorithmes de bibliothèque C++ Standard tel que `find_if`.
 
 ### <a name="example-1"></a>Exemple 1
 
-Cet exemple déclare une expression lambda qui retourne la somme de deux entiers et appelle l'expression immédiatement avec les arguments `5` et `4`:
+Cet exemple déclare une expression lambda qui retourne la somme de deux entiers et appelle l’expression immédiatement avec les arguments `5` et `4`:
 
 ### <a name="code"></a>Code
 
@@ -183,7 +183,7 @@ Pour plus d’informations sur la `find_if` de fonction, consultez [find_if](../
 
 ### <a name="example"></a>Exemple
 
-Vous pouvez imbriquer une expression lambda dans une autre, comme le montre l'exemple suivant. L'expression lambda interne multiplie son argument par 2 et retourne le résultat. L'expression lambda externe appelle l'expression lambda interne avec son argument et ajoute 3 au résultat.
+Vous pouvez imbriquer une expression lambda dans une autre, comme le montre l'exemple suivant. L’expression lambda interne multiplie son argument par 2 et retourne le résultat. L’expression lambda externe appelle l’expression lambda interne avec son argument et ajoute 3 au résultat.
 
 ### <a name="code"></a>Code
 
@@ -213,7 +213,7 @@ int main()
 
 ### <a name="remarks"></a>Notes
 
-Dans cet exemple, `[](int y) { return y * 2; }` est l'expression lambda imbriquée.
+Dans cet exemple, `[](int y) { return y * 2; }` est l’expression lambda imbriquée.
 
 [[Dans cet article](#top)]
 
@@ -271,7 +271,7 @@ int main()
 ### <a name="example"></a>Exemple
 
 Vous pouvez utiliser les expressions lambda dans le corps d'une fonction. L’expression lambda peut accéder à toute donnée membre ou fonction accessible à la fonction englobante. Vous pouvez explicitement ou implicitement capturer le **cela** pointeur pour fournir l’accès aux fonctions et les données membres de la classe englobante.
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : capturer **cela** par valeur (`[*this]`) lorsque l’expression lambda sera utilisé dans les opérations asynchrones ou parallèles où le code peut s’exécuter après l’objet d’origine est hors de portée.
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Capturer **cela** par valeur (`[*this]`) lorsque l’expression lambda sera utilisé dans les opérations asynchrones ou parallèles où le code peut s’exécuter une fois que l’objet d’origine est hors de portée.
 
 Vous pouvez utiliser la **cela** pointeur explicitement dans une fonction, comme illustré ici :
 
@@ -483,7 +483,7 @@ Pour plus d’informations sur la gestion des exceptions, consultez [gestion des
 
 ### <a name="example"></a>Exemple
 
-La clause de capture d'une expression lambda ne peut pas contenir une variable qui a un type managé. Toutefois, vous pouvez passer un argument qui a un type managé dans la liste de paramètres d'une expression lambda. L'exemple suivant contient une expression lambda qui capture la variable non managée locale `ch` par valeur et prend un objet <xref:System.String?displayProperty=fullName> comme paramètre.
+La clause de capture d’une expression lambda ne peut pas contenir une variable qui a un type managé. Toutefois, vous pouvez passer un argument qui a un type managé dans la liste de paramètres d'une expression lambda. L'exemple suivant contient une expression lambda qui capture la variable non managée locale `ch` par valeur et prend un objet <xref:System.String?displayProperty=fullName> comme paramètre.
 
 ### <a name="code"></a>Code
 

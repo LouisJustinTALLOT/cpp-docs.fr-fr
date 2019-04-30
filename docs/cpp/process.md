@@ -1,5 +1,5 @@
 ---
-title: process
+title: processus
 ms.date: 11/04/2016
 f1_keywords:
 - process_cpp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - process __declspec keyword
 ms.assetid: 60eecc2f-4eef-4567-b9db-aaed34733023
 ms.openlocfilehash: 049360dddff2b9ca2ea460b96e027e86899f1ecb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591735"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344995"
 ---
-# <a name="process"></a>process
+# <a name="process"></a>processus
 
 Spécifie que votre processus d'application managé doit comporter une seule copie d'une variable globale particulière, d'une variable membre static ou d'une variable locale static partagée par tous les domaines d'application du processus. Cela a été principalement destinée à être utilisée lors de la compilation avec **/CLR : pure**, qui est déconseillé dans Visual Studio 2017 et non pris en charge dans Visual Studio 2017. Lors de la compilation avec **/CLR**, variables globales et static sont par le processus par défaut et n’avez pas besoin d’utiliser **__declspec (Process)**.
 

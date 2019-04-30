@@ -10,17 +10,17 @@ helpviewer_keywords:
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
 ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441299"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345897"
 ---
 # <a name="new-and-delete-operators"></a>Opérateurs new et delete
 
 C++ prend en charge l’allocation dynamique et la désallocation des objets à l’aide de la [nouveau](../cpp/new-operator-cpp.md) et [supprimer](../cpp/delete-operator-cpp.md) opérateurs. Ces opérateurs allouent de la mémoire pour les objets à partir d'un pool appelé magasin gratuit. Le **nouveau** opérateur appelle la fonction spéciale [opérateur new](../cpp/new-operator-cpp.md)et le **supprimer** opérateur appelle la fonction spéciale [opérateur delete](../cpp/delete-operator-cpp.md).
 
-Le **nouveau** fonction dans la bibliothèque Standard C++ prend en charge le comportement spécifié dans la norme C++, qui consiste à lever une exception std::bad_alloc si l’allocation de mémoire échoue. Si vous souhaitez toujours la version non lanceurs de **nouveau**, liez votre programme avec nothrownew.obj. Toutefois, lorsque vous liez avec nothrownew.obj, la valeur par défaut **opérateur new** dans la bibliothèque C++ Standard ne fonctionne plus.
+Le **nouveau** fonctionner dans le C++ bibliothèque Standard prend en charge le comportement spécifié dans le C++ standard, qui consiste à lever une exception std::bad_alloc si l’allocation de mémoire échoue. Si vous souhaitez toujours la version non lanceurs de **nouveau**, liez votre programme avec nothrownew.obj. Toutefois, lorsque vous liez avec nothrownew.obj, la valeur par défaut **opérateur new** dans la bibliothèque C++ Standard ne fonctionne plus.
 
 Pour obtenir la liste des fichiers de bibliothèque qui composent la bibliothèque Runtime C et la bibliothèque C++ Standard, consultez [fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md).
 
@@ -43,7 +43,7 @@ Les deux portées des **opérateur new** fonctions sont décrites dans le tablea
 |Opérateur|Portée|
 |--------------|-----------|
 |**:: opérateur new**|Global|
-|*nom de la classe* **:: opérateur new**|Classe|
+|*class-name* **::operator new**|Classe|
 
 Le premier argument de **opérateur new** doit être de type `size_t` (un type défini dans \<stddef.h >), et le type de retour est toujours **void** <strong>\*</strong>.
 

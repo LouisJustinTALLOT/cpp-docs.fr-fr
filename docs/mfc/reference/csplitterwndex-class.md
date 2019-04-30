@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
 ms.openlocfilehash: 8dedad4e99a37b13dc618859c8e6d8a83a65ea76
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265143"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64339605"
 ---
 # <a name="csplitterwndex-class"></a>Classe de CSplitterWndEx
 
@@ -56,7 +56,7 @@ Le `CSplitterWndEx` classe est utilisée conjointement avec la [OnDrawSplitterBo
 
 [CSplitterWnd](csplitterwnd-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxsplitterwndex.h
 

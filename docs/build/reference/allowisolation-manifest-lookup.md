@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
 ms.openlocfilehash: fe76e0d40a2a19a002136a7e095875ad2903d434
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818451"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341084"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Recherche de manifeste)
 
@@ -47,5 +47,5 @@ Pour plus d’informations, consultez [référence des fichiers manifeste](/wind
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

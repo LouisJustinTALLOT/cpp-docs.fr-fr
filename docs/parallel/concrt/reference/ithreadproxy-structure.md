@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
 ms.openlocfilehash: 906b05800711e89592e5230bec7fa0fe1640379f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265715"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346236"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy, structure
 
@@ -47,7 +47,7 @@ Les proxys de thread sont associés aux contextes d’exécution représentés p
 
 `IThreadProxy`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrtrm.h
 

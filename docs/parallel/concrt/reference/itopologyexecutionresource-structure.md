@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
 ms.openlocfilehash: 4bfb614d5ffd6a399fae33d38a50cee62f17c208
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272852"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64339499"
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource, structure
 
@@ -43,7 +43,7 @@ Cette interface est généralement utilisée pour parcourir la topologie du syst
 
 `ITopologyExecutionResource`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrtrm.h
 

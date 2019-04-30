@@ -3,15 +3,15 @@ title: Résolution de nom pour les noms déclarés localement
 ms.date: 11/04/2016
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
 ms.openlocfilehash: 91ed065a6c8aca6c7f740f0236cb13c8133fc96f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602551"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345917"
 ---
 # <a name="name-resolution-for-locally-declared-names"></a>Résolution de nom pour les noms déclarés localement
 
-Le nom du modèle lui-même peut être qualifié avec ou sans les arguments template. Dans la portée d'un modèle de classe, le nom lui-même fait référence au modèle. Dans la portée d'une spécialisation de modèle ou d'une spécialisation partielle, le nom seul fait référence à la spécialisation ou la spécialisation partielle. D’autres spécialisations ou spécialisations partielles du modèle peuvent également être référencées, avec les arguments template appropriés.
+Le nom du modèle lui-même peut être qualifié avec ou sans les arguments template. Dans la portée d'un modèle de classe, le nom lui-même fait référence au modèle. Dans la portée d'une spécialisation de modèle ou d'une spécialisation partielle, le nom seul fait référence à la spécialisation ou la spécialisation partielle. D'autres spécialisations ou spécialisations partielles du modèle peuvent également être référencées, avec les arguments template appropriés.
 
 ## <a name="example"></a>Exemple
 
@@ -39,7 +39,7 @@ template<> class A<int> {
 
 Dans le cas d'un conflit au niveau du nom entre un paramètre de modèle et un autre objet, le paramètre de modèle peut ou ne peut pas être masqué. Les règles suivantes vous aideront à déterminer la priorité.
 
-Le paramètre de modèle est dans la portée à partir du point où il apparaît la première fois, jusqu'à la fin de la classe ou du modèle de fonction. Si le nom s’affiche à nouveau dans la liste d’arguments template ou dans la liste de classes de base, il fait référence au même type. En C++ standard, aucun autre nom identique au paramètre de modèle ne peut être déclaré dans la même portée. Une extension Microsoft permet de redéfinir le paramètre de modèle dans la portée du modèle. L'exemple suivant montre l'utilisation du paramètre de modèle dans la spécification de base d'un modèle de classe.
+Le paramètre de modèle est dans la portée à partir du point où il apparaît la première fois, jusqu'à la fin de la classe ou du modèle de fonction. Si le nom s'affiche à nouveau dans la liste d'arguments template ou dans la liste de classes de base, il fait référence au même type. En C++ standard, aucun autre nom identique au paramètre de modèle ne peut être déclaré dans la même portée. Une extension Microsoft permet de redéfinir le paramètre de modèle dans la portée du modèle. L'exemple suivant montre l'utilisation du paramètre de modèle dans la spécification de base d'un modèle de classe.
 
 ```cpp
 // template_name_resolution4.cpp
@@ -92,7 +92,7 @@ Z::Z()
 
 ## <a name="example"></a>Exemple
 
-Lors de la définition d'une fonction modèle ou d'une fonction membre en dehors de l'espace de noms dans lequel le modèle a été déclaré, l'argument template a priorité sur les noms des autres membres de l'espace de noms.
+Lors de la définition d’une fonction modèle ou d’une fonction membre en dehors de l’espace de noms dans lequel le modèle a été déclaré, l’argument template a priorité sur les noms des autres membres de l’espace de noms.
 
 ```cpp
 // template_name_resolution6.cpp

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
 ms.openlocfilehash: 32a560e09c47468daf48c185e23d6e289c6d1d9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464244"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343018"
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 
@@ -106,7 +106,7 @@ Le fichier de rapport utilisé par chaque type de rapport peut être contrôlé 
 
 La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-**Bibliothèques :** uniquement les versions de débogage des [fonctions de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliothèques :** Les versions Debug de [fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md) uniquement.
 
 ## <a name="see-also"></a>Voir aussi
 
