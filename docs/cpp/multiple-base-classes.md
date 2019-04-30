@@ -8,11 +8,11 @@ helpviewer_keywords:
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
 ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176359"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345950"
 ---
 # <a name="multiple-base-classes"></a>Plusieurs classes de base
 
@@ -33,7 +33,7 @@ L'ordre dans lequel les classes de base sont spécifiées n'a pas d'importance s
 
 - L'ordre dans lequel l'initialisation du constructeur est exécutée. Si votre code repose sur la partie `Book` de `CollectionOfBook` à initialiser avant la partie `Collection`, l'ordre des spécifications est important. L’initialisation a lieu dans l’ordre les classes sont spécifiées dans le *base-list*.
 
-- L'ordre dans lequel les destructeurs sont appelés pour effectuer le nettoyage. Là encore, si un « élément » particulier de la classe doit être présent lorsque l’autre élément est détruit, l’ordre a une importance. Les destructeurs sont appelés dans l’ordre inverse des classes spécifiées dans le *base-list*.
+- L'ordre dans lequel les destructeurs sont appelés pour effectuer le nettoyage. Là encore, si un « élément » particulier de la classe doit être présent lorsque l'autre élément est détruit, l'ordre a une importance. Les destructeurs sont appelés dans l’ordre inverse des classes spécifiées dans le *base-list*.
 
     > [!NOTE]
     >  L'ordre de spécification des classes de base peut avoir une incidence sur la disposition de mémoire de la classe. Ne prenez aucune décision de programmation concernant l'ordre des membres de base en mémoire.
@@ -81,7 +81,7 @@ Une classe peut avoir à la fois un composant virtuel et un composant non virtue
 ![Virtuel et non&#45;composants virtuels d’une classe](../cpp/media/vc38xp4.gif "virtuel et non&#45;composants virtuels d’une classe") <br/>
 Composants non virtuels et de la même classe
 
-Dans cette figure, `CashierQueue` et `LunchQueue` utilisent `Queue` comme classe de base virtuelle. Toutefois, `TakeoutQueue` spécifie `Queue` en tant que classe de base, et non pas comme classe de base virtuelle. Par conséquent, `LunchTakeoutCashierQueue` a deux sous-objets de type `Queue` : l'un provenant du chemin d'héritage qui inclut `LunchCashierQueue` et l'autre provenant du chemin qui inclut `TakeoutQueue`. La figure ci-dessous illustre cela.
+Dans cette figure, `CashierQueue` et `LunchQueue` utilisent `Queue` comme classe de base virtuelle. Toutefois, `TakeoutQueue` spécifie `Queue` en tant que classe de base, et non pas comme classe de base virtuelle. Par conséquent, `LunchTakeoutCashierQueue` a deux sous-objets de type `Queue` : l’un provenant du chemin d’héritage qui inclut `LunchCashierQueue` et l’autre provenant du chemin qui inclut `TakeoutQueue`. La figure ci-dessous illustre cela.
 
 ![Virtuel & non&#45;l’héritage virtuel dans la disposition des objets](../cpp/media/vc38xp5.gif "virtuel & non&#45;l’héritage virtuel dans la disposition des objets") <br/>
 Disposition des objets avec l’héritage virtuel et non virtuel
@@ -101,7 +101,7 @@ class GetReal : virtual public { ... };
 
 ## <a name="name-ambiguities"></a>Ambiguïtés au niveau du nom
 
-L’héritage multiple présente le risque que les noms soient hérités le long de plusieurs chemins. Les noms de membre de classe le long de ces chemins d'accès ne sont pas nécessairement uniques. Ces conflits de nom sont appelés « ambiguïtés. »
+L'héritage multiple présente le risque que les noms soient hérités le long de plusieurs chemins. Les noms de membre de classe le long de ces chemins d'accès ne sont pas nécessairement uniques. Ces conflits de nom sont appelés « ambiguïtés. »
 
 Toute expression qui fait référence à un membre de classe doit faire une référence qui ne soit pas ambigu. L'exemple suivant montre comment développer les ambiguïtés :
 

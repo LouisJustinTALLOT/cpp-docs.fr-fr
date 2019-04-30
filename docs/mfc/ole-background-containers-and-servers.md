@@ -15,11 +15,11 @@ helpviewer_keywords:
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
 ms.openlocfilehash: c154562e58cf8f37d77df61556fe25b19ca54c70
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304819"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346114"
 ---
 # <a name="ole-background-containers-and-servers"></a>Arrière-plan OLE : Conteneurs et les serveurs
 
@@ -36,8 +36,8 @@ Conteneurs et les serveurs ne communiquent pas directement. Au lieu de cela, ils
 ## <a name="see-also"></a>Voir aussi
 
 [Arrière-plan OLE](../mfc/ole-background.md)<br/>
-[Arrière-plan OLE : Implémentation MFC](../mfc/ole-background-mfc-implementation.md)<br/>
+[Arrière-plan OLE : Implémentation MFC](../mfc/ole-background-mfc-implementation.md)<br/>
 [Conteneurs](../mfc/containers.md)<br/>
 [Serveurs](../mfc/servers.md)<br/>
-[Conteneurs : Éléments clients](../mfc/containers-client-items.md)<br/>
-[serveurs : Éléments de serveur](../mfc/servers-server-items.md)
+[Conteneurs : Éléments clients](../mfc/containers-client-items.md)<br/>
+[Serveurs : Éléments du serveur](../mfc/servers-server-items.md)

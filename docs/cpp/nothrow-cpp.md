@@ -8,11 +8,11 @@ helpviewer_keywords:
 - nothrow __declspec keyword
 ms.assetid: 0a475139-459c-4ec6-99e8-7ecd0d7f44a3
 ms.openlocfilehash: 88041b374cc48ac31c8990aa7f867ba25b33e1d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548133"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345882"
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
 
@@ -22,7 +22,7 @@ Un **__declspec** des attributs étendus, qui peuvent être utilisé dans la dé
 
 ## <a name="syntax"></a>Syntaxe
 
-> *type de retour* __declspec (nothrow) [*convention d’appel*] *nom de la fonction* ([*liste d’arguments*])
+> *return-type* __declspec(nothrow) [*call-convention*] *function-name* ([*argument-list*])
 
 ## <a name="remarks"></a>Notes
 

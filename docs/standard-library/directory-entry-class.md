@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.openlocfilehash: c1b68aefd44d8f0ac60c36307dee93333d801bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533820"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342985"
 ---
 # <a name="directoryentry-class"></a>directory_entry, classe
 
@@ -92,7 +92,7 @@ Pour plus d’informations et pour obtenir des exemples de code, consultez [Navi
 
 **Espace de noms :** std::experimental::filesystem
 
-## <a name="assign"></a> Affecter
+## <a name="assign"></a> assign
 
 La fonction membre assigne *pval* à `mypath`, *stat_arg* à `mystat`, et *symstat_arg* à `mysymstat`.
 
@@ -104,7 +104,7 @@ void assign(const std::experimental::filesystem::path& pval,
 
 ### <a name="parameters"></a>Paramètres
 
-*PVal*<br/>
+*pval*<br/>
 Le chemin d’accès de nom de fichier stocké.
 
 *stat_arg*<br/>
@@ -128,7 +128,7 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 
 ### <a name="parameters"></a>Paramètres
 
-*PVal*<br/>
+*pval*<br/>
 Le chemin d’accès de nom de fichier stocké.
 
 *stat_arg*<br/>
@@ -137,7 +137,7 @@ Le chemin d’accès de nom de fichier stocké.
 *symstat_arg*<br/>
 L’état du lien symbolique du nom de fichier stocké.
 
-## <a name="op_neq"></a> opérateur ! =
+## <a name="op_neq"></a> operator!=
 
 La fonction membre retourne `!(*this == right)`.
 
@@ -150,7 +150,7 @@ bool operator!=(const directory_entry& right) const noexcept;
 *right*<br/>
 Le [directory_entry](../standard-library/directory-entry-class.md) qui est comparée à la `directory_entry`.
 
-## <a name="op_as"></a> opérateur =
+## <a name="op_as"></a> operator=
 
 Les opérateurs d’affectation de membre par défaut se comportent comme prévu.
 
@@ -164,7 +164,7 @@ directory_entry& operator=(directory_entry&&) noexcept = default;
 *right*<br/>
 Le [directory_entry](../standard-library/directory-entry-class.md) copié dans le `directory_entry`.
 
-## <a name="op_eq"></a> opérateur ==
+## <a name="op_eq"></a> operator==
 
 La fonction membre retourne `mypath == right.mypath`.
 
@@ -177,7 +177,7 @@ bool operator==(const directory_entry& right) const noexcept;
 *right*<br/>
 Le [directory_entry](../standard-library/directory-entry-class.md) qui est comparée à la `directory_entry`.
 
-## <a name="op_lt"></a> Opérateur&lt;
+## <a name="op_lt"></a>, opérateur&lt;
 
 La fonction membre retourne `mypath < right.mypath`.
 
@@ -203,7 +203,7 @@ bool operator&lt;=(const directory_entry& right) const noexcept;
 *right*<br/>
 Le [directory_entry](../standard-library/directory-entry-class.md) qui est comparée à la `directory_entry`.
 
-## <a name="op_gt"></a> Opérateur&gt;
+## <a name="op_gt"></a>, opérateur&gt;
 
 La fonction membre retourne `right < *this`.
 
@@ -258,7 +258,7 @@ void replace_filename(
 
 ### <a name="parameters"></a>Paramètres
 
-*PVal*<br/>
+*pval*<br/>
 Le chemin d’accès de nom de fichier stocké.
 
 *stat_arg*<br/>
@@ -282,12 +282,12 @@ file_status status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*EC*<br/>
+*ec*<br/>
 Le code d’erreur état.
 
 ## <a name="symlink_status"></a> symlink_status
 
-Les deux fonctions membres retournent `mysymstat` éventuellement modifié comme suit : si `status_known(mysymstat)` , ne rien faire. Sinon, `mysymstat = symlink_status(mypval)`.
+Les deux fonctions membres retournent `mysymstat` éventuellement modifié comme suit : Si `status_known(mysymstat)` , ne rien faire. Sinon, `mysymstat = symlink_status(mypval)`.
 
 ```cpp
 file_status symlink_status() const;
@@ -296,7 +296,7 @@ file_status symlink_status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*EC*<br/>
+*ec*<br/>
 Le code d’erreur état.
 
 ## <a name="see-also"></a>Voir aussi

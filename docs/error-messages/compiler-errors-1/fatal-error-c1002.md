@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1002
 ms.assetid: bd6d274a-c7b4-43af-8bf2-23c5e442aa22
 ms.openlocfilehash: 0588da99994be547742cc530ba435002a2d73359
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640503"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344834"
 ---
 # <a name="fatal-error-c1002"></a>Erreur irrécupérable C1002
 

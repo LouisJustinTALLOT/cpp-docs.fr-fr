@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
 ms.openlocfilehash: 5c7a992b983552340ebe21e59d2ee9a667841ec0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275192"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64339522"
 ---
 # <a name="csettingsstoresp-class"></a>Csettingsstoresp, classe
 
@@ -46,7 +46,7 @@ class CSettingsStoreSP
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`m_dwUserData`|Les données utilisateur personnalisées qui sont stockées dans le `CSettingsStoreSP` objet. Vous fournissez ces données dans le constructeur de la `CSettingsStoreSP` objet.|
 |`m_pRegistry`|Le `CSettingsStore`-dérivée de l’objet qui le `Create` crée de la méthode.|
@@ -67,7 +67,7 @@ Chaque fois que l’infrastructure accéderait généralement le Registre, il va
 
 `CSettingsStoreSP::SetRuntimeClass` utilise une variable statique globale. Par conséquent, qu’un seul magasin personnalisé est disponible à la fois.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxsettingsstore.h
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
 ms.openlocfilehash: e651b4422a159bf947e364c82cc4aac1b888d30d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177080"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345846"
 ---
 # <a name="overview-of-declarators"></a>Vue d'ensemble des déclarateurs
 
@@ -52,7 +52,7 @@ int **i; // declarator is **i;
 int &i = x; // declaratory is &i
 ```
 
-Ajout de **const** ou **volatile** DOTE le pointeur de ces propriétés spéciales.  L'utilisation de ces spécificateurs dans un déclarateur (par opposition à leur utilisation dans le spécificateur de type) modifie les propriétés du pointeur, pas l'objet désigné :
+Ajout de **const** ou **volatile** DOTE le pointeur de ces propriétés spéciales.  L’utilisation de ces spécificateurs dans un déclarateur (par opposition à leur utilisation dans le spécificateur de type) modifie les propriétés du pointeur, pas l’objet désigné :
 
 ```cpp
 char *const cpc; // const pointer to char
@@ -157,15 +157,15 @@ int a, *b, c[5], **d, &e=a;
 - Un `declarator` est défini en tant que l'un des éléments suivants :
 
   - 'identificateur'
-  - nom qualifié
+  - qualified-name
   - déclarateur (liste d’arguments) [cv-qualfiers] [exception-spec]
-  - déclarateur [[expression de constante]]
+  - declarator [ [ constant-expression ] ]
   - déclarateur de pointeur-, opérateur
   - (déclarateur)
 
 - et *pointeur-, opérateur* est une des :
 
-  - \* [qualificateurs cv]
+  - \* [cv-qualifiers]
   - & [qualificateurs cv] :: spécificateur de nom imbriqué \* [qualificateurs cv]
 
 Comme un déclarateur peut contenir des déclarateurs, il est possible de construire des types dérivés plus complexes, tels que des tableaux de pointeurs ou des fonctions retournant des tableaux de pointeurs de fonction, à l'aide des règles ci-dessus.  Pour former chaque étape de la construction, commencez avec l'identificateur représentant le type de données de base et appliquez la règle de syntaxe ci-dessus avec l'expression précédente comme `declarator`.  L'ordre dans lequel vous appliquez les règles de syntaxe doit être inverse à l'ordre dans lequel l'expression est énoncée en anglais.  Si l’application de la *pointeur-, opérateur* règle de syntaxe pour une expression de tableau ou fonction, utilisez des parenthèses si vous souhaitez un pointeur vers le tableau ou la fonction, comme dans la dernière ligne dans le tableau ci-dessous.

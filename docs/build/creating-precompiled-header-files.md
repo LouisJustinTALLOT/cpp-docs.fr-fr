@@ -10,11 +10,11 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 5afda50c43f93baa2d73e6afb68f436560c3243e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825317"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341749"
 ---
 # <a name="precompiled-header-files"></a>Fichiers d'en-tête précompilés
 
@@ -118,7 +118,7 @@ Lorsque vous utilisez un en-tête précompilé créé à l’aide de /Yc ou/Yu, 
 
 Ce tableau répertorie les options du compilateur pouvant déclencher un avertissement d’incohérence lors de l’utilisation d’un en-tête précompilé :
 
-|Option|Name|Règle|
+|Option|Nom|Règle|
 |------------|----------|----------|
 |/D|Définir des constantes et macros|Doit être le même entre la compilation qui a créé l’en-tête précompilé et la compilation en cours. L’état des constantes définies n’est pas activée, mais des résultats imprévisibles peuvent se produire si vos fichiers dépendent des valeurs des constantes modifiées.|
 |/E ou /EP|Copie la sortie du préprocesseur vers la sortie standard|En-têtes précompilés ne fonctionnent pas avec l’option /E ou /EP.|
