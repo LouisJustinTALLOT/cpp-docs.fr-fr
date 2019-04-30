@@ -11,11 +11,11 @@ helpviewer_keywords:
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
 ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395681"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Record Field Exchange : Utilisation des fonctions RFX
 
@@ -65,8 +65,8 @@ Pour plus d’informations, consultez la documentation relative aux fonctions RF
 ## <a name="see-also"></a>Voir aussi
 
 [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
-[Recordset : Paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
-[Recordset : Liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
+[Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
+[Recordset : Paramétrage d’un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
+[Recordset : Liaison dynamique de colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
 [CRecordset, classe](../../mfc/reference/crecordset-class.md)<br/>
 [CFieldExchange, classe](../../mfc/reference/cfieldexchange-class.md)

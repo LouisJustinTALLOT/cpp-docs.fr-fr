@@ -1,5 +1,5 @@
 ---
-title: Erreur d’exécution C R6030
+title: Erreur Runtime C R6030
 ms.date: 11/04/2016
 f1_keywords:
 - R6030
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - R6030
 ms.assetid: 0238a6c3-a033-4046-8adc-f8f99d961153
 ms.openlocfilehash: 7f5c61d9b39b1d655bcbf3d42ea870370ddf2842
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400017"
 ---
-# <a name="c-runtime-error-r6030"></a>Erreur d’exécution C R6030
+# <a name="c-runtime-error-r6030"></a>Erreur Runtime C R6030
 
 CRT non initialisé
 

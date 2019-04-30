@@ -14,11 +14,11 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
 ms.openlocfilehash: 663122c2d8cd430e921773e75dfd7975e4a41516
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405571"
 ---
 # <a name="completionfuture-class"></a>completion_future, classe
 
@@ -62,7 +62,7 @@ class completion_future;
 
 `completion_future`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amprt.h
 
@@ -91,7 +91,7 @@ Le `completion_future` objet à copier ou déplacer.
 
 ### <a name="overloads-list"></a>Liste des surcharges
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`completion_future();`|Initialise une nouvelle instance de la `completion_future` classe|
 |`completion_future(const completion_future& _Other);`|Initialise une nouvelle instance de la `completion_future` classe en copiant un constructeur.|
@@ -143,7 +143,7 @@ Une référence à cet `completion_future` objet.
 
 ## <a name="overloads-list"></a>Liste des surcharges
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`completion_future& operator=(const completion_future& _Other);`|Copie le contenu de l’objet `completion_future` objet dans celui-ci, à l’aide d’une copie complète.|
 |`completion_future& operator=(completion_future&& _Other);`|Copie le contenu de l’objet `completion_future` objet dans celui-ci, à l’aide d’une assignation de déplacement.|

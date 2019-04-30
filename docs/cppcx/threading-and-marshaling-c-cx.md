@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
 ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404635"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Thread et Marshaling (C++/CX)
 

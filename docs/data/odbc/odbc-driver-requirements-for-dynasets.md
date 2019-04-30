@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ODBC drivers, dynasets
 ms.assetid: 585cc67b-4d92-404b-9903-d769cd17badc
 ms.openlocfilehash: c44e34023ecdeb994ea3a60ea3b699cd5b1488a3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395753"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>Pilote ODBC requis pour les feuilles de réponse dynamiques
 

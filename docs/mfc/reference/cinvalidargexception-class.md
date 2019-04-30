@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CInvalidArgException [MFC], CInvalidArgException
 ms.assetid: e43d7c67-1157-47f8-817a-804083e8186e
 ms.openlocfilehash: d2df9b482fe95ad0a13a85a51037a4cbbc28d057
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392619"
 ---
 # <a name="cinvalidargexception-class"></a>Cinvalidargexception, classe
 
@@ -49,7 +49,7 @@ Pour plus d’informations sur la gestion des exceptions, consultez le [CExcepti
 
 `CInvalidArgException`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 

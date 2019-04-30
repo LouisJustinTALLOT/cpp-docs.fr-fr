@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2245
 ms.assetid: 08aaeadf-10ec-485a-b2a6-6e775289082b
 ms.openlocfilehash: 53288d86a59fe2cd31ddac4af7766360544c65c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403035"
 ---
 # <a name="compiler-error-c2245"></a>Erreur du compilateur C2245
 

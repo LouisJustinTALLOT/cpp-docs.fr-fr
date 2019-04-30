@@ -7,11 +7,11 @@ helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
 ms.openlocfilehash: c0f30eacb308da61064a0383a6433b7127032a3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410971"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine, classe
 
@@ -73,11 +73,11 @@ Cette classe de modèle décrit un moteur de nombres aléatoires, avec retour de
 
 Le générateur déforme la valeur élevée qu’il contient en utilisant un Registre à décalage de commentaires généralisés déformés défini par les valeurs de décalage *N* et *M*, une valeur de torsion *R*et un masque XOR conditionnel *A*. En outre, les bits du Registre à décalage brut sont brouillés (altérés) selon une matrice de brouillage des bits définie par les valeurs *U*, *D*, *S*, *B* , *T*, *C*, et *L*.
 
-L’argument de modèle `UIntType` doit être assez volumineux pour contenir des valeurs jusqu’à `2`<sup>W</sup> - `1`. Les valeurs des autres arguments de modèle doivent être conformes aux exigences suivantes : `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
+L’argument de modèle `UIntType` doit être assez volumineux pour contenir des valeurs jusqu’à `2`<sup>W</sup> - `1`. Les valeurs des autres arguments de modèle doivent être conformes aux spécifications suivantes : `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 
 Bien que vous puissiez construire un générateur directement à partir de ce moteur, nous vous conseillons d’utiliser l’un des typedefs prédéfinis suivants :
 
-`mt19937` : moteur twister Mersenne 32 bits (Matsumoto et Nishimura, 1998).
+`mt19937`: Moteur twister Mersenne 32 bits (Matsumoto et Nishimura, 1998).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
@@ -88,7 +88,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;
 ```
 
-`mt19937_64` : moteur twister Mersenne 64 bits (Matsumoto et Nishimura, 2000).
+`mt19937_64`: Moteur twister Mersenne 64 bits (Matsumoto et Nishimura, 2000).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,

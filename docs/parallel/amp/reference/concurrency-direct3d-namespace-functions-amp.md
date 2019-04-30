@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405584"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Fonctions Concurrency::Direct3D de l’espace de noms (AMP)
 
@@ -42,7 +42,7 @@ ms.locfileid: "57281328"
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|
 |[step](#step)|[umax](#umax)|[umin](#umin)|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp.h **Namespace :** Concurrence
 
@@ -156,7 +156,7 @@ Le runtime C++ AMP fournit des informations d’erreur détaillées en mode déb
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-Acquérir un verrou sur un accelerator_view pour exécuter sans risque les opérations D3D sur les ressources partagées avec l’accelerator_view. L’accelerator_view et toutes les ressources de C++ AMP associés à cet accelerator_view en interne prennent ce verrou lors des opérations et se bloquent lorsqu’un autre thread détient le verrou d’accès D3D. Ce verrou est non-récursif : Il est un comportement non défini pour appeler cette fonction à partir d’un thread qui détient déjà le verrou. Il est un comportement non défini pour effectuer des opérations sur l’accelerator_view ou de n’importe quel conteneur de données associées à accelerator_view du thread qui détient le verrou d’accès D3D. Voir également scoped_d3d_access_lock, une classe de style RAII pour un verrou d’accès D3D basée sur l’étendue.
+Acquérir un verrou sur un accelerator_view pour exécuter sans risque les opérations D3D sur les ressources partagées avec l’accelerator_view. L’accelerator_view et toutes les C++ ressources AMP associés à cet accelerator_view en interne prennent ce verrou lors des opérations et se bloquent lorsqu’un autre thread détient le verrou d’accès D3D. Ce verrou est non-récursif : Il est un comportement non défini pour appeler cette fonction à partir d’un thread qui détient déjà le verrou. Il est un comportement non défini pour effectuer des opérations sur l’accelerator_view ou de n’importe quel conteneur de données associées à accelerator_view du thread qui détient le verrou d’accès D3D. Voir également scoped_d3d_access_lock, une classe de style RAII pour un verrou d’accès D3D basée sur l’étendue.
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);

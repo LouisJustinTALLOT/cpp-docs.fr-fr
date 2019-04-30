@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.openlocfilehash: 66c8c998a91ddd3e6550b57415a513fae55856da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410967"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits, classe
 
@@ -78,7 +78,7 @@ class allocator_traits;
 
 Les méthodes statiques suivantes appellent la méthode correspondante sur un paramètre d’allocateur donné.
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[allocate](#allocate)|Méthode statique qui alloue de la mémoire en utilisant le paramètre d’allocateur donné.|
 |[construct](#construct)|Méthode statique qui utilise un allocateur spécifié pour construire un objet.|
@@ -106,13 +106,13 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Paramètres
 
-*Al*<br/>
+*al*<br/>
 Objet allocateur.
 
 *count*<br/>
 Nombre d’éléments à allouer.
 
-*indicateur*<br/>
+*hint*<br/>
 `const_pointer` pouvant aider l’objet allocateur à satisfaire la demande de stockage en recherchant l’adresse d’un objet alloué avant la demande. Un pointeur null est traité comme s’il n’y avait aucun argument hint.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -123,7 +123,7 @@ La première méthode statique retourne `al.allocate(count)`.
 
 La seconde méthode retourne `al.allocate(count, hint)`, si cette expression est correctement construite ; sinon, `al.allocate(count)`.
 
-## <a name="construct"></a>  allocator_traits::Construct
+## <a name="construct"></a>  allocator_traits::construct
 
 Méthode statique qui utilise un allocateur spécifié pour construire un objet.
 
@@ -134,7 +134,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Paramètres
 
-*Al*<br/>
+*al*<br/>
 Objet allocateur.
 
 *ptr*<br/>
@@ -159,7 +159,7 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Paramètres
 
-*Al*<br/>
+*al*<br/>
 Objet allocateur.
 
 *ptr*<br/>
@@ -185,7 +185,7 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Paramètres
 
-*Al*<br/>
+*al*<br/>
 Objet allocateur.
 
 *ptr*<br/>
@@ -205,7 +205,7 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Paramètres
 
-*Al*<br/>
+*al*<br/>
 Objet allocateur.
 
 ### <a name="remarks"></a>Notes
@@ -222,7 +222,7 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Paramètres
 
-*Al*<br/>
+*al*<br/>
 Objet allocateur.
 
 ### <a name="return-value"></a>Valeur de retour

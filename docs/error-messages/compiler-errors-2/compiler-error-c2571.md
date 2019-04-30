@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2571
 ms.assetid: c6522616-dee9-4d7d-9bf8-30a7e1deaadf
 ms.openlocfilehash: d7d4898e5f0b55c50a4c18cef053cc150394d7e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408575"
 ---
 # <a name="compiler-error-c2571"></a>Erreur du compilateur C2571
 

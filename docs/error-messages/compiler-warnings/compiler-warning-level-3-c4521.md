@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4521
 ms.assetid: 057d770c-ebcf-44cd-b943-1b1bb1ceaa8c
 ms.openlocfilehash: 887526810f7e65280adcde422ef871a67ccdde1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401915"
 ---
 # <a name="compiler-warning-level-3-c4521"></a>Avertissement du compilateur (niveau 3) C4521
 

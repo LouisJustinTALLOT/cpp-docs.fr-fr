@@ -117,11 +117,11 @@ helpviewer_keywords:
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 ms.openlocfilehash: ab93f8b225e27c0cf4d294d176c566bd6f2b5d02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409783"
 ---
 # <a name="basicstring-class"></a>basic_string, classe
 
@@ -137,7 +137,7 @@ class basic_string;
 ### <a name="parameters"></a>Paramètres
 
 *CharType*<br/>
-Type de données d'un seul caractère à stocker dans la chaîne. La bibliothèque C++ Standard fournit des spécialisations de cette classe de modèle, avec les définitions de type [chaîne](../standard-library/string-typedefs.md#string) pour les éléments de type **char**, [wstring](../standard-library/string-typedefs.md#wstring), pour **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) pour `char16_t`, et [u32string](../standard-library/string-typedefs.md#u32string) pour `char32_t`.
+Type de données d'un seul caractère à stocker dans la chaîne. Le C++ bibliothèque Standard fournit des spécialisations de cette classe de modèle, avec les définitions de type [chaîne](../standard-library/string-typedefs.md#string) pour les éléments de type **char**, [wstring](../standard-library/string-typedefs.md#wstring), pour **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) pour `char16_t`, et [u32string](../standard-library/string-typedefs.md#u32string) pour `char32_t`.
 
 *Caractéristiques*<br/>
 Plusieurs propriétés importantes de la `CharType` éléments d’une spécialisation basic_string sont décrites par la classe `Traits`. La valeur par défaut est `char_traits`< `CharType`>.
@@ -486,7 +486,7 @@ Itérateur d’entrée, const_pointer ou const_iterator, qui cible le premier ca
 *last*<br/>
 Itérateur d’entrée, const_pointer ou const_iterator, qui cible la position juste après le dernier caractère de la plage de la chaîne source à assigner à la plage cible.
 
-*Hors tension*<br/>
+*off*<br/>
 Position à laquelle les nouveaux caractères commencent à être assignés.
 
 ### <a name="return-value"></a>Valeur de retour

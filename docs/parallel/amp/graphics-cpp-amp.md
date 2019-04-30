@@ -3,11 +3,11 @@ title: Graphiques (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
 ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405662"
 ---
 # <a name="graphics-c-amp"></a>Graphiques (C++ AMP)
 
@@ -263,7 +263,7 @@ Vous pouvez également copier à partir d’une texture à un autre à l’aide 
 
 ## <a name="texture-view-classes"></a>Classes d'affichage de texture
 
-C++ AMP introduit le [texture_view, classe](../../parallel/amp/reference/texture-view-class.md) dans Visual Studio 2013. Les vues de texture prennent en charge les mêmes types de texel et rangs en tant que le [texture, classe](../../parallel/amp/reference/texture-class.md), mais contrairement aux textures, ils fournissent un accès à des fonctionnalités matérielles supplémentaires telles que l’échantillonnage de texture et les mipmaps. Les vues de texture prennent en charge l'accès en lecture seule, en écriture seule et en lecture-écriture aux données de texture sous-jacentes.
+C++AMP introduit le [texture_view, classe](../../parallel/amp/reference/texture-view-class.md) dans Visual Studio 2013. Les vues de texture prennent en charge les mêmes types de texel et rangs en tant que le [texture, classe](../../parallel/amp/reference/texture-class.md), mais contrairement aux textures, ils fournissent un accès à des fonctionnalités matérielles supplémentaires telles que l’échantillonnage de texture et les mipmaps. Les vues de texture prennent en charge l'accès en lecture seule, en écriture seule et en lecture-écriture aux données de texture sous-jacentes.
 
 - L'accès en lecture seule est fourni par une spécialisation de modèle `texture_view<const T, N>`, qui prend en charge des éléments comportant 1, 2 ou 4 composants, un échantillonnage de texture et un accès dynamique à une plage de niveaux de mipmaps qui sont déterminés lorsque la vue est instanciée.
 
@@ -271,8 +271,7 @@ C++ AMP introduit le [texture_view, classe](../../parallel/amp/reference/texture
 
 - L'accès en lecture-écriture est fourni par la classe de modèles non spécialisée `texture_view<T, N>`, qui, comme les textures, prend en charge les éléments comportant uniquement un composant ; la vue peut accéder à un niveau de mipmap qui est déterminé lorsque la vue est instanciée. L'échantillonnage n'est pas pris en charge.
 
-Les vues de texture sont analogues aux vues de tableaux, mais ne fournissent pas les fonctionnalités de gestion et de déplacement automatique des données qui le [array_view, classe](../../parallel/amp/reference/array-view-class.md) fournit sur le [array, classe](../../parallel/amp/reference/array-class.md). 
-  `texture_view` est accessible uniquement sur la vue d'accélérateur où les données de texture sous-jacentes résident.
+Les vues de texture sont analogues aux vues de tableaux, mais ne fournissent pas les fonctionnalités de gestion et de déplacement automatique des données qui le [array_view, classe](../../parallel/amp/reference/array-view-class.md) fournit sur le [array, classe](../../parallel/amp/reference/array-class.md). `texture_view` est accessible uniquement sur la vue d'accélérateur où les données de texture sous-jacentes résident.
 
 ### <a name="writeonlytextureview-deprecated"></a>writeonly_texture_view déconseillé
 

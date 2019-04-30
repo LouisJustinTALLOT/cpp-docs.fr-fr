@@ -19,11 +19,11 @@ helpviewer_keywords:
 - graphics [C++], converting image file formats
 ms.assetid: bba27228-b9b3-4c9c-b31c-a04b76702a95
 ms.openlocfilehash: c7c6d62eb4059069e6e266544ce6323c63dd15c0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393738"
 ---
 # <a name="graphics-operations-ccli"></a>Opérations graphiques (C++/CLI)
 

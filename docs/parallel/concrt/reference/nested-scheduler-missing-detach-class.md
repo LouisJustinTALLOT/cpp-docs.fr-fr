@@ -9,11 +9,11 @@ helpviewer_keywords:
 - nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
 ms.openlocfilehash: db51f7b083cc0cbd9337fbbe5c672d190208f328
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394388"
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach, classe
 
@@ -43,7 +43,7 @@ Cette exception est levée uniquement lorsque vous imbriquez un planificateur à
 
 `nested_scheduler_missing_detach`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 

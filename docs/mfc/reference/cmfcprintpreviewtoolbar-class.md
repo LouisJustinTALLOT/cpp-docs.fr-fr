@@ -6,11 +6,11 @@ helpviewer_keywords:
 - CMFCPrintPreviewToolBar class [MFC], destructor
 ms.assetid: 7b9f641b-d402-4339-8815-e5247237e7e5
 ms.openlocfilehash: ac1fba453a539c6c311e672c1b26e34a3bf81ffd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403618"
 ---
 # <a name="cmfcprintpreviewtoolbar-class"></a>Cmfcprintpreviewtoolbar, classe
 
@@ -56,7 +56,7 @@ class CMFCPrintPreviewToolBar : public CMFCToolBar
 
 [CMFCPrintPreviewToolBar](../../mfc/reference/cmfcprintpreviewtoolbar-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxpreviewviewex.h
 

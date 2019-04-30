@@ -33,11 +33,11 @@ helpviewer_keywords:
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
 ms.openlocfilehash: 65bc36856e253d086cc430a600daa9255e21ea75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405740"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile, classe
 
@@ -81,7 +81,7 @@ class CInternetFile : public CStdioFile
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CInternetFile::m_hFile](#m_hfile)|Handle vers un fichier.|
 
@@ -103,7 +103,7 @@ Pour en savoir plus sur la façon `CInternetFile` fonctionne avec les autres cla
 
 `CInternetFile`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxinet.h
 

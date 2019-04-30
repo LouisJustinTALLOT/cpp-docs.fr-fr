@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4358
 ms.assetid: a9848f84-14b3-405e-81bf-ee3e91a51511
 ms.openlocfilehash: aebac17a343efedf678b55f8940004c85a2db708
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408379"
 ---
 # <a name="compiler-warning-level-1-c4358"></a>Avertissement du compilateur (niveau 1) C4358
 
-'opérateur' : type de retour des délégués combinés n'est pas 'void' ; valeur retournée n’est pas définie
+'operator': return type of combined delegates is not 'void'; returned value is undefined
 
 Deux délégués ont été combinés et la valeur de retour n’est pas void. Si deux délégués avec les valeurs de retour non void sont combinés, le compilateur ne sera pas en mesure d’effectuer une assignation correcte si la valeur de retour du délégué est utilisée.
 

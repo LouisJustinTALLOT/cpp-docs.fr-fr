@@ -4,11 +4,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
 ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404687"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversions de types et sécurité de type (Modern C++)
 
@@ -30,7 +30,7 @@ Dans une conversion étendue, une valeur dans une variable plus petits est affec
 |----------|--------|
 |Tout signés ou non signés de type intégral sauf **longue** ou **__int64**|**double**|
 |**bool** ou **char**|N’importe quel autre type intégré|
-|**court** ou **wchar_t**|**int**, **long**, **longue**|
+|**court** ou **wchar_t**|**int**, **long**, **long long**|
 |**int**, **long**|**long long**|
 |**float**|**double**|
 

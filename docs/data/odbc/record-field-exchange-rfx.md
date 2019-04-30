@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
 ms.openlocfilehash: 8630fab11728b0c0cd16eee5035df028a8382706
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395714"
 ---
 # <a name="record-field-exchange-rfx"></a>Record Field Exchange (RFX)
 
@@ -38,11 +38,11 @@ Si vous avez besoin d’une plus grande maîtrise de RFX, consultez [Record Fiel
 
 Les rubriques suivantes expliquent les détails d’utilisation des objets de jeu d’enregistrements :
 
-- [Record Field Exchange : Utilisation de RFX](../../data/odbc/record-field-exchange-using-rfx.md)
+- [Record Field Exchange : Utilisation de RFX](../../data/odbc/record-field-exchange-using-rfx.md)
 
-- [Record Field Exchange : Utilisation des fonctions RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
+- [Record Field Exchange : Utilisation des fonctions RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
-- [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)
+- [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)
 
 ## <a name="see-also"></a>Voir aussi
 

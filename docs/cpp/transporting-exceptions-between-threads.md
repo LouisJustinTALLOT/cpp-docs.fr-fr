@@ -15,15 +15,15 @@ helpviewer_keywords:
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
 ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404739"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transport des exceptions entre les threads
 
-Visual C++ prend en charge *transport d’une exception* à partir d’un seul thread à un autre. Le transport des exceptions vous permet d'intercepter une exception dans un thread, puis faire en sorte que l'exception semble levée dans un thread différent. Par exemple, utilisez cette fonctionnalité pour écrire une application multithread où le thread principal gère toutes les exceptions levées par les threads secondaires. Le gestion des exceptions est utile principalement aux développeurs qui créent des bibliothèques ou systèmes de programmation parallèle. Pour implémenter le transport des exceptions, Visual C++ fournit la [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) type et le [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), et [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) fonctions.
+Visual C++ prend en charge *transport d’une exception* à partir d’un seul thread à un autre. Le transport des exceptions vous permet d'intercepter une exception dans un thread, puis faire en sorte que l'exception semble levée dans un thread différent. Par exemple, utilisez cette fonction pour écrire une application multithread où le thread principal gère toutes les exceptions levées par les threads secondaires. Le gestion des exceptions est utile principalement aux développeurs qui créent des bibliothèques ou systèmes de programmation parallèle. Pour implémenter le transport des exceptions, Visual C++ fournit le [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) type et le [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)et [make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) fonctions.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,7 +42,7 @@ namespace std
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*Non spécifié*|Une classe interne non spécifiée utilisée pour implémenter le type `exception_ptr`.|
+|*unspecified*|Une classe interne non spécifiée utilisée pour implémenter le type `exception_ptr`.|
 |*p*|Un objet `exception_ptr` qui référence une exception.|
 |*E*|Une classe représentant une exception.|
 |*e*|Une instance de la classe de paramètre `E`.|
@@ -120,7 +120,7 @@ Le destructeur de l’exception actuelle est appelé à la fin de la **catch** b
 
 Les appels successifs à la fonction `current_exception` retournent des objets `exception_ptr` qui font référence à des copies de l'exception actuelle. Par conséquent, les objets sont considérés comme inégaux car ils font référence à des copies, bien que les copies aient la même valeur binaire.
 
-### <a name="seh-exceptions"></a>Exceptions SEH
+### <a name="seh-exceptions"></a>SEH Exceptions
 
 Si vous utilisez le **/EHa** option du compilateur, vous pouvez intercepter une exception SEH dans C++ **catch** bloc. La fonction `current_exception` retourne un objet `exception_ptr` qui référence l'exception SEH. Et le `rethrow_exception` fonction lève une exception SEH si vous l’appelez avec thetransported `exception_ptr` objet comme argument.
 
@@ -130,7 +130,7 @@ Une exception transportée ne prend pas en charge les exceptions imbriquées. Un
 
 Si vous interceptez une exception SEH, vous devez gérer la mémoire référencée par tout pointeur dans le tableau de données membres `EXCEPTION_RECORD.ExceptionInformation`. Vous devez vous assurer que la mémoire est valide pendant la durée de vie de l'objet `exception_ptr` correspondant, et que cette mémoire est libérée lorsque l'objet `exception_ptr` est supprimé.
 
-Vous pouvez utiliser les fonctions de traduction d'exceptions structurées avec la fonctionnalité de transport d'exceptions. Si une exception SEH est traduite en une exception C++, la fonction `current_exception` retourne `exception_ptr` qui référence l'exception traduite au lieu de l'exception SEH originale. La fonction `rethrow_exception` lève ultérieurement l'exception traduite, pas l'exception d'origine. Pour plus d’informations sur les fonctions de traduction d’exceptions, consultez [_set_se_translator](../c-runtime-library/reference/set-se-translator.md).
+Vous pouvez utiliser les fonctions de traduction d’exceptions structurées avec la fonctionnalité de transport d’exceptions. Si une exception SEH est traduite en une exception C++, la fonction `current_exception` retourne `exception_ptr` qui référence l'exception traduite au lieu de l'exception SEH originale. La fonction `rethrow_exception` lève ultérieurement l'exception traduite, pas l'exception d'origine. Pour plus d’informations sur les fonctions de traduction d’exceptions, consultez [_set_se_translator](../c-runtime-library/reference/set-se-translator.md).
 
 ## <a name="rethrowexception-function"></a>Fonction rethrow_exception
 
@@ -140,7 +140,7 @@ L'exception extraite est maintenant l'exception actuelle dans le thread principa
 
 ## <a name="makeexceptionptr-function"></a>Fonction make_exception_ptr
 
-La fonction `make_exception_ptr` prend une instance de classe comme argument puis retourne un `exception_ptr` qui référence l’instance. Généralement, vous spécifiez un objet de [classe exception](../standard-library/exception-class.md) comme argument pour la fonction `make_exception_ptr`, bien que tout objet de classe puisse être l’argument.
+La fonction `make_exception_ptr` prend une instance de classe comme argument puis retourne un `exception_ptr` qui référence l'instance. Généralement, vous spécifiez un objet de [classe exception](../standard-library/exception-class.md) comme argument pour la fonction `make_exception_ptr`, bien que tout objet de classe puisse être l’argument.
 
 Appelant le `make_exception_ptr` fonction équivaut à lever une exception C++, intercepter dans un **catch** bloc, puis en appelant le `current_exception` fonction pour retourner une `exception_ptr` objet qui fait référence à l’exception. L'implémentation Microsoft de la fonction `make_exception_ptr` est plus efficace que le fait de lever puis d'intercepter une exception.
 
