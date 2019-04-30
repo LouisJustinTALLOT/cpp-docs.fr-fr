@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812120"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342166"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>Utiliser l’ensemble d’outils MSVC à partir de la ligne de commande
 
@@ -192,4 +192,4 @@ Fournit des liens vers les C/C++ outils de génération qui sont inclus dans Vis
 
 ## <a name="see-also"></a>Voir aussi
 
-[Projets et des systèmes de génération](projects-and-build-systems-cpp.md)
+[Projets et systèmes de build](projects-and-build-systems-cpp.md)

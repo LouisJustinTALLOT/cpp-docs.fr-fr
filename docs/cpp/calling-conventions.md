@@ -5,17 +5,17 @@ helpviewer_keywords:
 - calling conventions
 ms.assetid: 11b1e45c-8fd1-420b-bca0-a19e294c1d85
 ms.openlocfilehash: cc79a0636f900aa49e31f0dc35ee19657c3e1ccb
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626732"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345119"
 ---
 # <a name="calling-conventions"></a>Conventions d’appel
 
 Le compilateur Visual C/C++ fournit diverses conventions pour appeler des fonctions internes et externes. La compréhension de ces différentes approches peut vous aider à déboguer votre programme et à lier votre code avec des routines en langage assembleur.
 
-Les rubriques se rapportant à ce sujet expliquent les différences entre les conventions d'appel, la façon dont les arguments sont passés et la manière dont les valeurs sont retournées par les fonctions. Elles présentent également les appels de fonction naked, une fonctionnalité avancée qui vous permet d’écrire votre propre code de prologue et d’épilogue.
+Les rubriques se rapportant à ce sujet expliquent les différences entre les conventions d’appel, la façon dont les arguments sont passés et la manière dont les valeurs sont retournées par les fonctions. Elles présentent également les appels de fonction naked, une fonctionnalité avancée qui vous permet d’écrire votre propre code de prologue et d’épilogue.
 
 Pour plus d’informations sur les conventions d’appel de x64 processeurs, consultez [Convention d’appel](../build/x64-calling-convention.md).
 
@@ -23,7 +23,7 @@ Pour plus d’informations sur les conventions d’appel de x64 processeurs, con
 
 - [Passage d’arguments et Conventions d’affectation de noms](../cpp/argument-passing-and-naming-conventions.md) (`__cdecl`, `__stdcall`, `__fastcall`, etc.)
 
-- [Exemple d’appel : Appel et Prototype de fonction](../cpp/calling-example-function-prototype-and-call.md)
+- [Exemple d’appel : prototype et appel de fonction](../cpp/calling-example-function-prototype-and-call.md)
 
 - [À l’aide d’appels de fonction naked pour écrire du code de prologue/épilogue personnalisées](../cpp/naked-function-calls.md)
 

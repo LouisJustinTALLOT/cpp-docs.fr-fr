@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
 ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278689"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346038"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency, espace de noms (C++ AMP)
 
@@ -57,7 +57,7 @@ namespace Concurrency;
 
 ### <a name="enumerations"></a>Énumérations
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[access_type, énumération](concurrency-namespace-enums-amp.md#access_type)|Spécifie le type d’accès aux données.|
 |[Énumération queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)|Spécifie les modes de file d’attente qui sont pris en charge sur l’accélérateur.|
@@ -92,7 +92,7 @@ namespace Concurrency;
 |[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Surchargé. Définit la valeur stockée à l’emplacement spécifié à la différence entre cette valeur et une valeur spécifiée comme une opération atomique.|
 |[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Surchargé. Définit la valeur stockée à l’emplacement spécifié au niveau du bit `xor` de cette valeur et une valeur spécifiée comme une opération atomique.|
 |[copy](concurrency-namespace-functions-amp.md#copy)|Copie un objet C++ AMP. Toutes les exigences de transfert de données synchrone sont remplies. Impossible de copier des données lorsque le code s’exécute le code sur un accélérateur. La forme générale de cette fonction est `copy(src, dest)`.|
-|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Copie un objet C++ AMP et renvoie [completion_future](completion-future-class.md) qui peut être attendu. Impossible de copier des données lorsque le code s’exécute sur un accélérateur. La forme générale de cette fonction est `copy(src, dest)`.|
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Copie un C++ objet AMP et renvoie [completion_future](completion-future-class.md) qui peut être attendu. Impossible de copier des données lorsque le code s’exécute sur un accélérateur. La forme générale de cette fonction est `copy(src, dest)`.|
 |[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Interrompt l’exécution d’une fonction qui a le `restrict(amp)` clause de restriction.|
 |[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Imprime une chaîne mise en forme dans Visual Studio **sortie** fenêtre et déclenche une [runtime_exception](runtime-exception-class.md) exception qui a la même mise en forme de chaîne.|
 |[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Imprime une chaîne mise en forme dans Visual Studio **sortie** fenêtre. Elle est appelée à partir d’une fonction qui a le `restrict(amp)` clause de restriction.|
@@ -107,7 +107,7 @@ namespace Concurrency;
 |[Hlsl_max_num_buffers, constante](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|Le nombre maximal de mémoires tampons allouées par DirectX.|
 |[MODULENAME_MAX_LENGTH (constante)](concurrency-namespace-constants-amp.md#modulename_max_length)|Stocke la longueur maximale du nom du module. Cette valeur doit être identique sur le compilateur et le runtime.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp.h
 
