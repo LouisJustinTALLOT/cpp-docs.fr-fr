@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CLinearTransition [MFC], m_duration
 ms.assetid: 7fcb2dba-beb8-4933-9f5d-3b7fb1585ef0
 ms.openlocfilehash: 4aa2d9955d2bbf98d2d7829806c4bcbd76340847
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392529"
 ---
 # <a name="clineartransition-class"></a>CLinearTransition, classe
 
@@ -64,7 +64,7 @@ Pendant une transition linéaire, la valeur de la variable de l’animation pass
 
 [CLinearTransition](../../mfc/reference/clineartransition-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxanimationcontroller.h
 

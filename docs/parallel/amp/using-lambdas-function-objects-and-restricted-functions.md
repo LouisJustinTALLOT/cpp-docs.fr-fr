@@ -3,15 +3,15 @@ title: Utilisation de fonctions lambda, d'objets de fonctions et de fonctions re
 ms.date: 11/04/2016
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
 ms.openlocfilehash: 0c72ae6f600fe73405481e34ab05b60f163e44d2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405324"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Utilisation de fonctions lambda, d'objets de fonctions et de fonctions restreintes
 
-Le code C++ AMP à exécuter sur l’accélérateur est spécifié en tant qu’argument dans un appel à la [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) (méthode). Vous pouvez fournir une expression lambda ou un objet de fonction (functor) en tant qu’argument. En outre, l’objet d’expression ou une fonction lambda peut appeler une fonction restreinte C++ AMP. Cette rubrique utilise un algorithme d’addition de tableau pour illustrer les expressions lambda, les objets de fonction et les fonctions restreintes. L’exemple suivant montre l’algorithme sans code C++ AMP. Tableaux à deux dimensions de 1 de longueur égale sont créés. Les éléments entiers correspondants sont ajoutés et stockés dans un troisième tableau 1D. C++ AMP n’est pas utilisé.
+Le C++ code AMP que vous souhaitez exécuter sur l’accélérateur est spécifié en tant qu’argument dans un appel à la [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) (méthode). Vous pouvez fournir une expression lambda ou un objet de fonction (functor) en tant qu’argument. En outre, l’objet d’expression ou une fonction lambda peut appeler une fonction restreinte C++ AMP. Cette rubrique utilise un algorithme d’addition de tableau pour illustrer les expressions lambda, les objets de fonction et les fonctions restreintes. L’exemple suivant montre l’algorithme sans code C++ AMP. Tableaux à deux dimensions de 1 de longueur égale sont créés. Les éléments entiers correspondants sont ajoutés et stockés dans un troisième tableau 1D. C++ AMP n’est pas utilisé.
 
 ```cpp
 void CpuMethod() {

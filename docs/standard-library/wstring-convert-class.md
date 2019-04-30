@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
 ms.openlocfilehash: df3b003289dcd86e8033521d8cb0cacdbb7dfbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410796"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert, classe
 
@@ -139,7 +139,7 @@ wide_string from_bytes(const char* first, const char* last);
 |---------------|-----------------|
 |*Byte*|Séquence d'octets à élément unique à convertir.|
 |*ptr*|Séquence de caractères de style C et se terminant par null à convertir.|
-|*BSTR*|[byte_string](#byte_string) à convertir.|
+|*Bstr*|[byte_string](#byte_string) à convertir.|
 |*first*|Premier caractère d'une plage de caractères à convertir.|
 |*last*|Dernier caractère d'une plage de caractères à convertir.|
 
@@ -208,7 +208,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |---------------|-----------------|
 |*Char*|Caractère large à convertir.|
 |*Wptr*|Séquence de style C, se terminant par null et commençant à `wptr`, à convertir.|
-|*WSTR*|[wide_string](#wide_string) à convertir.|
+|*Wstr*|[wide_string](#wide_string) à convertir.|
 |*first*|Premier élément dans une plage d'éléments à convertir.|
 |*last*|Dernier élément dans une plage d'éléments à convertir.|
 

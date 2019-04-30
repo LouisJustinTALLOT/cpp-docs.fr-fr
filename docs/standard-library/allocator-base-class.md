@@ -39,11 +39,11 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
 ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411069"
 ---
 # <a name="allocatorbase-class"></a>allocator_base, classe
 
@@ -61,7 +61,7 @@ class allocator_base
 |Paramètre|Description|
 |---------------|-----------------|
 |*Type*|Type des éléments alloués par l'allocateur.|
-|*synchronisation*|Stratégie de synchronisation de l’allocateur, qui est la classe [sync_none](../standard-library/sync-none-class.md), [sync_per_container](../standard-library/sync-per-container-class.md), [sync_per_thread](../standard-library/sync-per-thread-class.md) ou [sync_shared](../standard-library/sync-shared-class.md).|
+|*Sync*|Stratégie de synchronisation de l’allocateur, qui est la classe [sync_none](../standard-library/sync-none-class.md), [sync_per_container](../standard-library/sync-per-container-class.md), [sync_per_thread](../standard-library/sync-per-thread-class.md) ou [sync_shared](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*<br/>
+*val*<br/>
 Valeur const ou nonconst de l’objet dont l’adresse est recherchée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -240,7 +240,7 @@ void construct(pointer ptr, const Type& val);
 |Paramètre|Description|
 |---------------|-----------------|
 |*ptr*|Pointeur vers l’emplacement où l’objet doit être construit.|
-|*Val*|Valeur avec laquelle l’objet en cours de construction doit être initialisé.|
+|*val*|Valeur avec laquelle l’objet en cours de construction doit être initialisé.|
 
 ### <a name="remarks"></a>Notes
 

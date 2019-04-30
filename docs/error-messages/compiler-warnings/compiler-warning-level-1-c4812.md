@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4812
 ms.assetid: a7f5721f-2019-44de-ad62-ed30bac8b1f3
 ms.openlocfilehash: 6ba32bf3cad905d686eae78fbfbc198e911e91c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406260"
 ---
 # <a name="compiler-warning-level-1-c4812"></a>Avertissement du compilateur (niveau 1) C4812
 
-style de déclaration obsolète : utilisez 'nouvelle_syntaxe' à la place
+style de déclaration obsolète : utilisez 'nouvelle_syntaxe' à la place
 
 Dans la version actuelle de Visual C++, la spécialisation du constructeur explicite est toujours prise en charge, mais elle ne le sera peut être plus dans les versions ultérieures.
 

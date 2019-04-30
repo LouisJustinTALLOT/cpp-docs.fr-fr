@@ -16,11 +16,11 @@ helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
 ms.openlocfilehash: 111d48b9c4a575078f2342bfaa944871bbd628f5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394336"
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock, classe
 
@@ -66,7 +66,7 @@ Pour plus d’informations, consultez [les Structures de données de synchronisa
 
 `reader_writer_lock`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 

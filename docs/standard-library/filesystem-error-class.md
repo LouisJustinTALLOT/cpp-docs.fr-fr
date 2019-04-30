@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
 ms.openlocfilehash: add1e0da43a44c35f39c96e8d65e36aeea0d3afb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405155"
 ---
 # <a name="filesystemerror-class"></a>filesystem_error, classe
 
@@ -35,9 +35,9 @@ La classe sert de classe de base pour toutes les exceptions levées afin de sign
 
 |Fonction membre|Description|
 |-|-|
-|[chemin1](#path1)|Retourne `mypval1`.|
-|[chemin2](#path2)|Retourne `mypval2`.|
-|[ce que](#what)|Retourne un pointeur vers `NTBS`.|
+|[path1](#path1)|Retourne `mypval1`.|
+|[path2](#path2)|Retourne `mypval2`.|
+|[what](#what)|Retourne un pointeur vers `NTBS`.|
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -68,7 +68,7 @@ filesystem_error(const string& what_arg,
 *what_arg*<br/>
 Message spécifié.
 
-*EC*<br/>
+*ec*<br/>
 Code d’erreur spécifié.
 
 *mypval1*<br/>
@@ -93,7 +93,7 @@ La fonction membre retourne `mypval2`
 const path& path2() const noexcept;
 ```
 
-## <a name="what"></a> filesystem_error::What
+## <a name="what"></a> filesystem_error::what
 
 La fonction membre retourne un pointeur vers un `NTBS`, de préférence, composé à partir de, `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, et `mypval2.native_string()`.
 

@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: df5a6da3995b1485585a3105ac027f19a27dc8eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412031"
 ---
 # <a name="timeget-class"></a>time_get, classe
 
@@ -232,10 +232,10 @@ Un champ dans iosbase où les éléments de masque de bits appropriés sont déf
 *ptm*<br/>
 Pointeur vers la structure time, où l'heure doit être stockée.
 
-*FMT*<br/>
+*fmt*<br/>
 Caractère de spécificateur de conversion.
 
-*Mod*<br/>
+*mod*<br/>
 Caractère de modificateur facultatif.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -568,10 +568,10 @@ Les éléments du masque de bits appropriés sont définis pour l'état du flux 
 *ptm*<br/>
 Pointeur vers la structure time, où la date/heure doit être stockée.
 
-*FMT*<br/>
+*fmt*<br/>
 Caractère de spécificateur de conversion.
 
-*Mod*<br/>
+*mod*<br/>
 Caractère de modificateur facultatif.
 
 *fmt_first*<br/>
@@ -1040,18 +1040,18 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*Refs*<br/>
+*refs*<br/>
 Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
 Les valeurs possibles pour le *refs* paramètre et leur signification sont :
 
-- 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0: La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
-- 1 : la durée de vie de l’objet doit être gérée manuellement.
+- 1 : La durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1 : ces valeurs ne sont pas définies.
+- \> 1: Ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CD2DMesh [MFC], m_pMesh
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
 ms.openlocfilehash: f4ad6fd054eeb8576c2fdb2dc924f70034b3abad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396364"
 ---
 # <a name="cd2dmesh-class"></a>CD2DMesh, classe
 
@@ -70,7 +70,7 @@ class CD2DMesh : public CD2DResource;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CD2DMesh::m_pMesh](#m_pmesh)|Pointeur vers un ID2D1Mesh.|
 
@@ -82,7 +82,7 @@ class CD2DMesh : public CD2DResource;
 
 `CD2DMesh`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrendertarget.h
 

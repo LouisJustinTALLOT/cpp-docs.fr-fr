@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::to_string [C++]
 - std::to_wstring [C++]
 ms.openlocfilehash: d10af9bc32acd730db1fe9da3775ac2aa84e5fff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412343"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt;, fonctions
 
@@ -82,7 +82,7 @@ Flux d'entrée à partir duquel une chaîne doit être extraite.
 *str*<br/>
 Chaîne dans laquelle les caractères sont lus à partir du flux d'entrée.
 
-*Delim*<br/>
+*delim*<br/>
 Délimiteur de ligne.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -176,7 +176,7 @@ double stod(
 |Paramètre|Description|
 |---------------|-----------------|
 |*str*|Séquence de caractères à convertir.|
-|*IDX*|Valeur d'index du premier caractère non converti.|
+|*idx*|Valeur d'index du premier caractère non converti.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -205,7 +205,7 @@ float stof(
 |Paramètre|Description|
 |---------------|-----------------|
 |*str*|Séquence de caractères à convertir.|
-|*IDX*|Valeur d'index du premier caractère non converti.|
+|*idx*|Valeur d'index du premier caractère non converti.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -240,7 +240,7 @@ Valeur entière.
 |Paramètre|Description|
 |---------------|-----------------|
 |*str*|Séquence de caractères à convertir.|
-|*IDX*|Contient l'index du premier caractère non converti au retour.|
+|*idx*|Contient l'index du premier caractère non converti au retour.|
 |*base*|Base numérique à utiliser.|
 
 ### <a name="remarks"></a>Notes
@@ -272,7 +272,7 @@ long stol(
 |Paramètre|Description|
 |---------------|-----------------|
 |*str*|Séquence de caractères à convertir.|
-|*IDX*|Valeur d'index du premier caractère non converti.|
+|*idx*|Valeur d'index du premier caractère non converti.|
 |*base*|Base numérique à utiliser.|
 
 ### <a name="return-value"></a>Valeur de retour
@@ -302,7 +302,7 @@ double stold(
 |Paramètre|Description|
 |---------------|-----------------|
 |*str*|Séquence de caractères à convertir.|
-|*IDX*|Valeur d'index du premier caractère non converti.|
+|*idx*|Valeur d'index du premier caractère non converti.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -333,7 +333,7 @@ long long stoll(
 |Paramètre|Description|
 |---------------|-----------------|
 |*str*|Séquence de caractères à convertir.|
-|*IDX*|Valeur d'index du premier caractère non converti.|
+|*idx*|Valeur d'index du premier caractère non converti.|
 |*base*|Base numérique à utiliser.|
 
 ### <a name="return-value"></a>Valeur de retour
@@ -365,7 +365,7 @@ unsigned long stoul(
 |Paramètre|Description|
 |---------------|-----------------|
 |*str*|Séquence de caractères à convertir.|
-|*IDX*|Valeur d'index du premier caractère non converti.|
+|*idx*|Valeur d'index du premier caractère non converti.|
 |*base*|Base numérique à utiliser.|
 
 ### <a name="return-value"></a>Valeur de retour
@@ -397,7 +397,7 @@ unsigned long long stoull(
 |Paramètre|Description|
 |---------------|-----------------|
 |*str*|Séquence de caractères à convertir.|
-|*IDX*|Valeur d'index du premier caractère non converti.|
+|*idx*|Valeur d'index du premier caractère non converti.|
 |*base*|Base numérique à utiliser.|
 
 ### <a name="return-value"></a>Valeur de retour

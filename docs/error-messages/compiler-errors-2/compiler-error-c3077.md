@@ -7,19 +7,19 @@ helpviewer_keywords:
 - C3077
 ms.assetid: d9f3c619-d1e2-4656-81a5-a35a9586a7d4
 ms.openlocfilehash: d59859b82c1a8d506bb793a2c4dcd887b0898d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406689"
 ---
 # <a name="compiler-error-c3077"></a>Erreur du compilateur C3077
 
-'finaliseur' : un finaliseur ne peut être que membre d’un type référence
+'finaliseur' : un finaliseur ne peut être que membre d’un type référence
 
 Vous ne pouvez pas déclarer un finaliseur dans un type natif ou valeur.
 
-Pour plus d’informations, consultez [destructeurs et finaliseurs dans Comment : définir et consommer des classes et structs (C++ / c++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Pour plus d’informations, consultez [destructeurs et finaliseurs dans Comment : Définir et consommer des classes et structs (C++ / c++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Exemple
 

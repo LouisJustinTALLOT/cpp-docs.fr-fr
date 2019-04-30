@@ -7,11 +7,11 @@ helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
 ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412967"
 ---
 # <a name="matchresults-class"></a>match_results, classe
 
@@ -68,11 +68,11 @@ La classe de modèle décrit un objet qui contrôle une séquence non modifiable
 |[get_allocator](#get_allocator)|Retourne l'allocateur stocké.|
 |[length](#length)|Retourne la longueur d’une sous-correspondance.|
 |[max_size](#max_size)|Obtient le plus grand nombre de sous-correspondances.|
-|[Position](#position)|Obtenez l’offset de démarrage d’un sous-groupe.|
-|[Préfixe](#prefix)|Obtient la séquence avant la première sous-correspondance.|
+|[position](#position)|Obtenez l’offset de démarrage d’un sous-groupe.|
+|[prefix](#prefix)|Obtient la séquence avant la première sous-correspondance.|
 |[size](#size)|Compte le nombre de sous-correspondances.|
 |[str](#str)|Retourne une sous-correspondance.|
-|[Suffixe](#suffix)|Obtient la séquence après la dernière sous-correspondance.|
+|[suffix](#suffix)|Obtient la séquence après la dernière sous-correspondance.|
 |[swap](#swap)|Échange deux objets match_results.|
 
 ### <a name="operators"></a>Opérateurs
@@ -298,13 +298,13 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Paramètres
 
-*Outlt*<br/>
+*OutIt*<br/>
 Type d'itérateur de sortie.
 
 *out*<br/>
 Flux de sortie dans lequel écrire.
 
-*FMT*<br/>
+*fmt*<br/>
 Chaîne de format.
 
 *flags*<br/>
@@ -369,7 +369,7 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Alloc*<br/>
+*alloc*<br/>
 Objet allocateur à stocker.
 
 *right*<br/>

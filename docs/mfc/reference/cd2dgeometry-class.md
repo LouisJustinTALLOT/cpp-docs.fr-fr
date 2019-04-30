@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
 ms.openlocfilehash: 4549b2e7981d5f8493ddf9f24477e75a94ddde8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405727"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry, classe
 
@@ -103,7 +103,7 @@ class CD2DGeometry : public CD2DResource;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CD2DGeometry::m_pGeometry](#m_pgeometry)|Pointeur vers un ID2D1Geometry.|
 
@@ -115,7 +115,7 @@ class CD2DGeometry : public CD2DResource;
 
 `CD2DGeometry`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrendertarget.h
 

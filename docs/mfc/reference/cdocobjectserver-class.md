@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CDocObjectServer [MFC], OnSaveViewState
 ms.assetid: 18cd0dff-0616-4472-b8d9-66c081bc383a
 ms.openlocfilehash: f4b1a352a9fa62dfcb46d1c1cb0784661e66e5b4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391132"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer, classe
 
@@ -73,7 +73,7 @@ Pour plus d’informations sur DocObjects, consultez [CDocObjectServerItem](../.
 
 `CDocObjectServer`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdocob.h
 

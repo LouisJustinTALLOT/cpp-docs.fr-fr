@@ -1,5 +1,5 @@
 ---
-title: decltype (C++)
+title: decltype  (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - decltype_cpp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
 ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399081"
 ---
-# <a name="decltype--c"></a>decltype (C++)
+# <a name="decltype--c"></a>decltype  (C++)
 
 Le **decltype** spécificateur de type génère le type d’une expression spécifiée. Le **decltype** spécificateur, de type avec le [auto, mot clé](../cpp/auto-cpp.md), est particulièrement utile pour les développeurs qui écrivent des bibliothèques de modèles. Utilisez **automatique** et **decltype** pour déclarer une fonction de modèle dont retour type dépend des types de ses arguments template. Ou, utilisez **automatique** et **decltype** pour déclarer une fonction de modèle qui encapsule un appel à une autre fonction, puis retourne le type de retour de la fonction encapsulée.
 
@@ -30,7 +30,7 @@ decltype( expression )
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*Expression*|d'une expression. Pour plus d’informations, consultez [Expressions](../cpp/expressions-cpp.md).|
+|*expression*|d'une expression. Pour plus d’informations, consultez [Expressions](../cpp/expressions-cpp.md).|
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -83,7 +83,7 @@ Le prototype suivant illustre la syntaxe d'une autre déclaration de fonction. N
 
 **Auto** *function_name* **(** *paramètres*<sub>opt</sub> **)**  **const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **decltype (** *expression* **)** **lever**<sub>opt</sub> **{** *function_body* **};**
 
-Dans l’exemple de code suivant, le type de retour spécifié à la fin de la fonction de modèle `myFunc` est déterminé par les types des arguments template de `t` et de `u`. Comme une meilleure pratique de programmation, l’exemple de code utilise également les références rvalue et les `forward` modèle de fonction, qui prennent en charge *un transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+Dans l'exemple de code suivant, le type de retour spécifié à la fin de la fonction de modèle `myFunc` est déterminé par les types des arguments template de `t` et de `u`. Comme une meilleure pratique de programmation, l’exemple de code utilise également les références rvalue et les `forward` modèle de fonction, qui prennent en charge *un transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ```cpp
 //C++11
@@ -99,13 +99,13 @@ decltype(auto) myFunc(T&& t, U&& u)
 
 ## <a name="decltype-and-forwarding-functions-c11"></a>Decltype et fonctions de transfert (C++11)
 
-Les fonctions de transfert encapsulent les appels à d'autres fonctions. Considérez un modèle de fonction qui transfère ses arguments, ou les résultats d’une expression qui implique ces arguments, à une autre fonction. En outre, la fonction de transfert retourne le résultat de l'appel à l'autre fonction. Dans ce scénario, le type de retour de la fonction de transfert doit être identique au type de retour de la fonction encapsulée.
+Les fonctions de transfert encapsulent les appels à d'autres fonctions. Considérez un modèle de fonction qui transfère ses arguments, ou les résultats d'une expression qui implique ces arguments, à une autre fonction. En outre, la fonction de transfert retourne le résultat de l'appel à l'autre fonction. Dans ce scénario, le type de retour de la fonction de transfert doit être identique au type de retour de la fonction encapsulée.
 
 Dans ce scénario, vous ne pouvez pas écrire une expression de type approprié sans le **decltype** spécificateur de type. Le **decltype** spécificateur de type permet des fonctions génériques de transfert, car il ne perd pas les informations requises si une fonction retourne un type référence. Pour obtenir un exemple de code d'une fonction de transfert, consultez l'exemple de la fonction de modèle `myFunc` précédent.
 
 ## <a name="example"></a>Exemple
 
-L’exemple de code suivant déclare le type de retour spécifié à la fin de la fonction de modèle `Plus()`. Le `Plus` fonction traite ses deux opérandes avec le **opérateur +** de surcharge. Par conséquent, l’interprétation de l’opérateur plus (+) et le type de retour de la fonction `Plus` dépend des types des arguments de fonction.
+L'exemple de code suivant déclare le type de retour spécifié à la fin de la fonction de modèle `Plus()`. Le `Plus` fonction traite ses deux opérandes avec le **opérateur +** de surcharge. Par conséquent, l'interprétation de l'opérateur plus (+) et le type de retour de la fonction `Plus` dépend des types des arguments de fonction.
 
 ```cpp
 // decltype_1.cpp
@@ -179,7 +179,7 @@ x3.Dump() = 42
 
 ## <a name="example"></a>Exemple
 
-**Visual Studio 2017 et versions ultérieur :** le compilateur analyse les arguments decltype quand les modèles sont déclarés et non instanciés. Ainsi, si une spécialisation non dépendante est trouvée dans l’argument decltype, elle n’est pas reportée à l’instanciation et est traitée immédiatement, et toute erreur résultante est diagnostiquée à ce moment-là.
+**Visual Studio 2017 et versions ultérieur :** Le compilateur analyse les arguments decltype quand les modèles sont déclarés et non instanciés. Ainsi, si une spécialisation non dépendante est trouvée dans l’argument decltype, elle n’est pas reportée à l’instanciation et est traitée immédiatement, et toute erreur résultante est diagnostiquée à ce moment-là.
 
 L’exemple suivant montre une erreur de compilateur de ce type générée au moment de la déclaration :
 

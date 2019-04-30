@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
 ms.openlocfilehash: 0c26c0c9c9026f8312218b2ac15f83a50a67be79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403852"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Cmfcbasevisualmanager, classe
 
@@ -93,7 +93,7 @@ S’agissant d’une classe de base pour tous les gestionnaires visuels, vous po
 
 [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxvisualmanager.h
 

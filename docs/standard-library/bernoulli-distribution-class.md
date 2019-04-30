@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
 ms.openlocfilehash: b5ddbadea4d16d7a76df332074ec5c80fae57eb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414124"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution, classe
 
@@ -187,7 +187,7 @@ Le deuxième constructeur construit un objet dont les paramètres stockés sont 
 
 Contient les paramètres de la distribution.
 
-struct param_type {typedef bernoulli_distribution distribution_type ; param_type (double p = 0,5) ; double-cliquez p() const ;
+struct param_type { typedef bernoulli_distribution distribution_type; param_type(double p = 0.5); double p() const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 

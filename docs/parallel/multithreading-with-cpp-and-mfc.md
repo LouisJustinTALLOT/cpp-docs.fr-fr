@@ -14,11 +14,11 @@ helpviewer_keywords:
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
 ms.openlocfilehash: bcffc2964d8e15fd47f437366863748175e12622
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407664"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Multithreading à l'aide de C++ et de MFC
 
@@ -32,7 +32,7 @@ Si vous le souhaitez, vous pouvez créer des threads supplémentaires dans votre
 
 MFC distingue deux types de threads : threads d’interface utilisateur et les threads de travail. Threads d’interface utilisateur sont couramment utilisés pour gérer l’entrée d’utilisateur et répondre aux événements et messages générés par l’utilisateur. Threads de travail sont couramment utilisés pour effectuer des tâches, telles que le recalcul, qui ne nécessitent pas d’entrée d’utilisateur. L’API Win32 ne fait pas la distinction entre les types de threads ; Il a juste besoin de connaître l’adresse de départ du thread afin de pouvoir commencer à exécuter le thread. MFC gère les threads d’interface utilisateur en fournissant notamment une pompe de messages pour les événements dans l’interface utilisateur. `CWinApp` est un exemple d’un objet de thread d’interface utilisateur, car il dérive `CWinThread` et gère les événements et messages générés par l’utilisateur.
 
-Une attention particulière convient aux situations où plusieurs threads peuvent nécessiter un accès au même objet. [Multithreading : Conseils de programmation](multithreading-programming-tips.md) décrit les techniques que vous pouvez utiliser pour contourner les problèmes qui peuvent survenir dans ces situations. [Multithreading : Comment utiliser les Classes de synchronisation](multithreading-how-to-use-the-synchronization-classes.md) explique comment utiliser les classes qui sont disponibles pour synchroniser l’accès à partir de plusieurs threads à un seul objet.
+Une attention particulière convient aux situations où plusieurs threads peuvent nécessiter un accès au même objet. [Multithreading : Conseils de programmation](multithreading-programming-tips.md) décrit les techniques que vous pouvez utiliser pour contourner les problèmes qui peuvent survenir dans ces situations. [Multithreading : Comment utiliser les Classes de synchronisation](multithreading-how-to-use-the-synchronization-classes.md) explique comment utiliser les classes qui sont disponibles pour synchroniser l’accès à partir de plusieurs threads à un seul objet.
 
 Écriture et débogage de programmes multithread sont par nature une entreprise complexe et épineuse, car vous devez vous assurer que les objets ne sont pas accessibles par plusieurs threads à la fois. Les rubriques de multithreading n’abordent pas les principes fondamentaux de la programmation multithread, mais que la manière d’utiliser MFC dans un programme multithread. Les exemples multithread MFC inclus dans Visual C++ illustrent quelques Adding Functionality et API Win32 non comprises dans la bibliothèque MFC ; multithread Toutefois, ils sont uniquement destinés à être un point de départ.
 
@@ -40,17 +40,17 @@ Pour plus d’informations sur la façon dont le système d’exploitation gère
 
 Pour plus d’informations sur la prise en charge du multithreading de MFC, consultez les rubriques suivantes :
 
-- [Multithreading : Création de Threads d’Interface utilisateur](multithreading-creating-user-interface-threads.md)
+- [Multithreading : Création de threads d’interface utilisateur](multithreading-creating-user-interface-threads.md)
 
-- [Multithreading : Création de Threads de travail](multithreading-creating-worker-threads.md)
+- [Multithreading : Création de threads de travail](multithreading-creating-worker-threads.md)
 
-- [Multithreading : Comment utiliser les Classes de synchronisation](multithreading-how-to-use-the-synchronization-classes.md)
+- [Multithreading : Comment utiliser les classes de synchronisation](multithreading-how-to-use-the-synchronization-classes.md)
 
-- [Multithreading : Arrêt des Threads](multithreading-terminating-threads.md)
+- [Multithreading : Arrêt de threads](multithreading-terminating-threads.md)
 
-- [Multithreading : Conseils de programmation](multithreading-programming-tips.md)
+- [Multithreading : Conseils de programmation](multithreading-programming-tips.md)
 
-- [Multithreading : Quand utiliser les Classes de synchronisation](multithreading-when-to-use-the-synchronization-classes.md)
+- [Multithreading : Quand utiliser les classes de synchronisation](multithreading-when-to-use-the-synchronization-classes.md)
 
 ## <a name="see-also"></a>Voir aussi
 

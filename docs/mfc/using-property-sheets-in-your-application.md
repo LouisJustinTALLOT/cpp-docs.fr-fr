@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
 ms.openlocfilehash: 4fd68f57db082ab0b0da0e8248e0be239c63c99a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411524"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Utilisation des feuilles de propriétés dans votre application
 

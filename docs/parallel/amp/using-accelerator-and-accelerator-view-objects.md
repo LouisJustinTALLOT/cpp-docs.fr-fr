@@ -3,15 +3,15 @@ title: Utilisation des objets accelerator et accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
 ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405389"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Utilisation des objets accelerator et accelerator_view
 
-Vous pouvez utiliser la [accelerator](../../parallel/amp/reference/accelerator-class.md) et [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) pour spécifier le périphérique ou l’émulateur pour exécuter votre code C++ AMP sur les classes. Un système peut avoir plusieurs périphériques ou émulateurs qui varient selon la quantité de mémoire, de prise en charge de la mémoire partagée, de prise en charge de débogage ou de prise en charge double précision. C++ Accelerated les Massive Parallelism (C++ AMP) fournit des API que vous pouvez utiliser pour examiner les accélérateurs disponibles, définir un comme la valeur par défaut, spécifier plusieurs accelerator_views pour plusieurs appels au parallel_for_each et effectuer des tâches spéciales de débogage.
+Vous pouvez utiliser la [accelerator](../../parallel/amp/reference/accelerator-class.md) et [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) classes pour spécifier le périphérique ou l’émulateur pour exécuter votre C++ code AMP sur. Un système peut avoir plusieurs périphériques ou émulateurs qui varient selon la quantité de mémoire, de prise en charge de la mémoire partagée, de prise en charge de débogage ou de prise en charge double précision. C++Accelerated Massive Parallelism (C++ AMP) fournit des API que vous pouvez utiliser pour examiner les accélérateurs disponibles, définir un comme la valeur par défaut, spécifier plusieurs accelerator_views pour plusieurs appels au parallel_for_each et effectuer des tâches spéciales de débogage.
 
 ## <a name="using-the-default-accelerator"></a>À l’aide de l’accélérateur par défaut
 

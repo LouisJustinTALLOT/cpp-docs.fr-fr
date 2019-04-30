@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
 ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395896"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Informations supplémentaires sur les classes ODBC MFC
 
@@ -23,11 +23,11 @@ Plus les rubriques suivantes expliquent les concepts et techniques présentés d
 
 - [Feuille de réponse dynamique](../../data/odbc/dynaset.md)
 
-- [Exceptions : Exceptions de base de données](../../mfc/exceptions-database-exceptions.md)
+- [Exceptions : Exceptions de base de données](../../mfc/exceptions-database-exceptions.md)
 
-- [MFC : À l’aide des Classes de base de données des Documents et vues](../../data/mfc-using-database-classes-with-documents-and-views.md)
+- [MFC : Utilisation de classes de bases de données avec des documents et des vues](../../data/mfc-using-database-classes-with-documents-and-views.md)
 
-- [MFC : À l’aide des Classes de base de données sans document ni vue](../../data/mfc-using-database-classes-without-documents-and-views.md)
+- [MFC : Utilisation de classes de bases de données sans document ni vue](../../data/mfc-using-database-classes-without-documents-and-views.md)
 
 - [ODBC](../../data/odbc/odbc-basics.md)
 
@@ -39,7 +39,7 @@ Plus les rubriques suivantes expliquent les concepts et techniques présentés d
 
 - [Vues d’enregistrement](../../data/record-views-mfc-data-access.md)
 
-- [Sérialisation : Visual Studio de sérialisation. Base de données d’entrée/sortie](../../mfc/serialization-serialization-vs-database-input-output.md)
+- [Sérialisation : Sérialisation ou Base de données d’entrée/sortie](../../mfc/serialization-serialization-vs-database-input-output.md)
 
 - [Instantané](../../data/odbc/snapshot.md)
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4334
 ms.assetid: d845857f-bc95-4faf-a079-626a0cf935ba
 ms.openlocfilehash: 55512bf28c8c20512d0d245810d3e5c1fec36939
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402032"
 ---
 # <a name="compiler-warning-level-3-c4334"></a>Avertissement du compilateur (niveau 3) C4334
 

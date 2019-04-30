@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4306
 ms.assetid: 5b2192d7-402d-4b6d-8619-08105e7dcac7
 ms.openlocfilehash: 78ec291b555838b1af63287e3d24fdb809afd7c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402058"
 ---
 # <a name="compiler-warning-level-3-c4306"></a>Avertissement du compilateur (niveau 3) C4306
 

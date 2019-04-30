@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
 ms.openlocfilehash: 372a1df6500f4d7219c89d8f82425246c2236514
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410172"
 ---
 # <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration
 
@@ -49,7 +49,7 @@ Le `CMFCImagePaintArea` et `CMFCImageEditorDialog` classes utilisent cette énum
 
 Lorsque vous sélectionnez une couleur à partir d’une image en utilisant le mode de dessin IMAGE_EDIT_MODE_COLOR, le framework définit le mode de dessin actuel à IMAGE_EDIT_MODE_PEN.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afximagepaintarea.h
 

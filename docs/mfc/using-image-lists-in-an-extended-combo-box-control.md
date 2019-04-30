@@ -7,11 +7,11 @@ helpviewer_keywords:
 - images [MFC], combo box items
 ms.assetid: dfff25fe-af70-47a2-8032-3901d1e6842d
 ms.openlocfilehash: 6e4d983d53e49fc8d9c80c206f1a23078eb82f61
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411550"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Utilisation de listes d'images dans un contrôle de zone de liste déroulante étendue
 

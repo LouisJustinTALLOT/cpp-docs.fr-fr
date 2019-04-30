@@ -8,11 +8,11 @@ helpviewer_keywords:
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
 ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413760"
 ---
 # <a name="enableif-class"></a>enable_if, classe
 
@@ -50,7 +50,7 @@ En C++, l’échec du remplacement des paramètres de modèle n’est pas une er
 
 Voici quatre exemples de scénarios :
 
-- Scénario 1 : Encapsulation du type de retour d'une fonction :
+- Scénario 1 : Le type de retour d’une fonction d’habillage :
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- Scénario 2 : Ajout d'un paramètre de fonction qui a un argument par défaut :
+- Scénario 2 : Ajout d’un paramètre de fonction qui a un argument par défaut :
 
 ```cpp
     template <your_stuff>
@@ -73,14 +73,14 @@ your_return_type_if_present
 }
 ```
 
-- Scénario 3 : Ajout d'un paramètre de modèle qui a un argument par défaut :
+- Scénario 3 : Ajout d’un paramètre de modèle qui a un argument par défaut :
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>
 rest_of_function_declaration_goes_here
 ```
 
-- Scénario 4 : Si votre fonction a un argument non basé sur un modèle, vous pouvez encapsuler son type :
+- Scénario 4 : Si votre fonction a un argument non basé sur un modèle, vous pouvez encapsuler son type :
 
 ```cpp
     template <typename T>

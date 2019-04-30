@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
 ms.openlocfilehash: 8744ca8546d48e9283cc0dfa9d80babf5076f8b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399146"
 ---
 # <a name="conditional-operator--"></a>Opérateur conditionnel : ? :
 
@@ -33,7 +33,7 @@ L’opérateur conditionnel (**? :**) est un opérateur ternaire (il prend troi
 
 - Si le premier opérande prend la valeur **false** (0), le troisième opérande est évalué.
 
-Le résultat de l’opérateur conditionnel est que le résultat de tout opérande est évalué — le deuxième ou le troisième. Seul l'un des deux derniers opérandes est évalué dans une expression conditionnelle.
+Le résultat de l’opérateur conditionnel est que le résultat de tout opérande est évalué — le deuxième ou le troisième. Seul l’un des deux derniers opérandes est évalué dans une expression conditionnelle.
 
 Les expressions conditionnelles ont une associativité de droite à gauche. Le premier opérande doit être de type intégral ou de type pointeur. Les règles suivantes s'appliquent au deuxième et au troisième opérandes :
 
@@ -41,17 +41,17 @@ Les expressions conditionnelles ont une associativité de droite à gauche. Le p
 
 - Si les deux opérandes sont de type arithmétique ou énumération, les conversions arithmétiques classiques (traitées dans [Conversions Standard](standard-conversions.md)) sont exécutées pour les convertir en un type commun.
 
-- Si les deux opérandes sont des types pointeur ou si l’un est de type pointeur et l’autre une expression constante qui correspond à 0, les conversions de pointeur sont exécutées pour les convertir en un type commun.
+- Si les deux opérandes sont des types pointeur ou si l'un est de type pointeur et l'autre une expression constante qui correspond à 0, les conversions de pointeur sont exécutées pour les convertir en un type commun.
 
 - Si les deux opérandes sont des types référence, les conversions de référence sont exécutées pour les convertir en un type commun.
 
 - Si les deux opérandes sont de type void, le type commun est le type void.
 
-- Si les deux opérandes sont du même type défini par l'utilisateur, le type commun correspond à ce type.
+- Si les deux opérandes sont du même type défini par l’utilisateur, le type commun correspond à ce type.
 
-- Si les opérandes ont des types différents et qu'au moins un des opérandes a un type défini par l'utilisateur, alors les règles de langage sont utilisées pour déterminer le type commun. (Voir l'avertissement ci-dessous.)
+- Si les opérandes ont des types différents et qu’au moins un des opérandes a un type défini par l’utilisateur, alors les règles de langage sont utilisées pour déterminer le type commun. (Voir l'avertissement ci-dessous.)
 
-Toutes les combinaisons des deuxième et troisième opérande qui ne sont pas dans la liste précédente ne sont pas conformes. Le type du résultat est le type commun, et c'est une l-value si le deuxième et le troisième opérande sont du même type et si les deux sont des valeurs l-value.
+Toutes les combinaisons des deuxième et troisième opérandes qui ne sont pas dans la liste précédente ne sont pas conformes. Le type du résultat est le type commun, et c’est une l-value si le deuxième et le troisième opérande sont du même type et si les deux sont des valeurs l-value.
 
 > [!WARNING]
 >  Si les types des deuxième et troisième opérandes ne sont pas identiques, les règles de conversion de type complexe, telles que spécifiées par la norme C++, sont appelées. Ces conversions peuvent entraîner un comportement inattendu, notamment la construction et la destruction d'objets temporaires. Pour cette raison, il est fortement conseillé de soit (1) éviter d’utiliser les types définis par l’utilisateur comme des opérandes avec l’opérateur conditionnel ou (2) si vous utilisez des types définis par l’utilisateur, d’effectuer une conversion de type explicite pour chaque opérande vers un type commun.

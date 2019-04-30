@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
 ms.openlocfilehash: 2a6735ab558480039a0d2fa0e83ee4c5de02c5f2
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414080"
 ---
 # <a name="binaryfunction-struct"></a>binary_function, struct
 
@@ -95,7 +95,7 @@ The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )
 */
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

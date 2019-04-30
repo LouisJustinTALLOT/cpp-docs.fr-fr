@@ -7,14 +7,14 @@ helpviewer_keywords:
 - C4164
 ms.assetid: 6d7e4a36-8227-4419-880f-44576033493e
 ms.openlocfilehash: fee06812753c705444a75d0a1c3a3ead9d402f67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391801"
 ---
 # <a name="compiler-warning-level-1-c4164"></a>Avertissement du compilateur (niveau 1) C4164
 
-'identifier' : fonction intrinsèque non déclarée
+'identifier' : fonction intrinsèque non déclarée
 
 La fonction intrinsèque spécifiée n’est pas déclarée ; vous devez peut-être inclure le fichier d’en-tête approprié.

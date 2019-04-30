@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
 ms.openlocfilehash: 15b449b4b9f9074966ac269787b1b3ca6f977f48
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403883"
 ---
 # <a name="cmfcautohidebutton-class"></a>Cmfcautohidebutton, classe
 
@@ -116,7 +116,7 @@ L'exemple suivant montre comment construire un objet `CMFCAutoHideButton` et uti
 
 `CMFCAutoHideButton`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxautohidebutton.h
 

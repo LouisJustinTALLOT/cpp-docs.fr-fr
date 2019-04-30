@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
 ms.openlocfilehash: 791a18461b3a0ee8237dec47c87f9d441221141d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412551"
 ---
 # <a name="sharedptr-class"></a>shared_ptr, classe
 
@@ -337,10 +337,10 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Paramètres
 
-*SP*<br/>
+*sp*<br/>
 Pointeur partagé à copier.
 
-*Asie-Pacifique*<br/>
+*ap*<br/>
 Pointeur automatique à copier.
 
 ### <a name="remarks"></a>Notes
@@ -462,13 +462,13 @@ Type du suppresseur.
 *ptr*<br/>
 Pointeur à copier.
 
-*DTOR*<br/>
+*dtor*<br/>
 Suppresseur à copier.
 
 *A*<br/>
 Type de l'allocateur.
 
-*Alloc*<br/>
+*alloc*<br/>
 Allocateur à copier.
 
 ### <a name="remarks"></a>Notes
@@ -585,19 +585,19 @@ Type du suppresseur.
 *A*<br/>
 Type de l'allocateur.
 
-*DTOR*<br/>
+*dtor*<br/>
 Suppresseur.
 
-*r*<br/>
+*ator*<br/>
 Allocateur.
 
-*SP*<br/>
+*sp*<br/>
 Pointeur intelligent à copier.
 
-*WP*<br/>
+*wp*<br/>
 Pointeur faible.
 
-*Asie-Pacifique*<br/>
+*ap*<br/>
 Pointeur automatique à copier.
 
 ### <a name="remarks"></a>Notes
@@ -721,7 +721,7 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Paramètres
 
-*SP*<br/>
+*sp*<br/>
 Pointeur partagé à échanger.
 
 ### <a name="remarks"></a>Notes

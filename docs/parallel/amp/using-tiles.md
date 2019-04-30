@@ -3,11 +3,11 @@ title: Utilisation des mosaïques
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
 ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405371"
 ---
 # <a name="using-tiles"></a>Utilisation des mosaïques
 
@@ -291,13 +291,13 @@ Il existe deux types d’accès mémoire qui doivent être synchronisés, les ac
 
 Un *barrière mémoire* garantit que les accès mémoire sont disponibles à d’autres threads dans la mosaïque de threads et cet accès mémoire sont exécutés en fonction de l’ordre du programme. Pour ce faire, les compilateurs et les processeurs ne pas réordonnancer les lectures et écritures sur la plage de gestion. En C++ AMP, une barrière mémoire est créée par un appel à une des méthodes suivantes :
 
-- [tile_barrier::wait, méthode](reference/tile-barrier-class.md#wait): crée une frontière de sécurité autour de la global et `tile_static` mémoire.
+- [tile_barrier::wait, méthode](reference/tile-barrier-class.md#wait): Crée une frontière de sécurité autour de la global et `tile_static` mémoire.
 
-- [tile_barrier::wait_with_all_memory_fence, méthode](reference/tile-barrier-class.md#wait_with_all_memory_fence): crée une frontière de sécurité autour de la global et `tile_static` mémoire.
+- [tile_barrier::wait_with_all_memory_fence, méthode](reference/tile-barrier-class.md#wait_with_all_memory_fence): Crée une frontière de sécurité autour de la global et `tile_static` mémoire.
 
-- [tile_barrier::wait_with_global_memory_fence, méthode](reference/tile-barrier-class.md#wait_with_global_memory_fence): crée une frontière de sécurité autour uniquement la mémoire globale.
+- [tile_barrier::wait_with_global_memory_fence, méthode](reference/tile-barrier-class.md#wait_with_global_memory_fence): Crée une frontière de sécurité autour uniquement la mémoire globale.
 
-- [tile_barrier::wait_with_tile_static_memory_fence, méthode](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): crée une frontière de sécurité autour uniquement `tile_static` mémoire.
+- [tile_barrier::wait_with_tile_static_memory_fence, méthode](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): Crée une frontière de sécurité autour uniquement `tile_static` mémoire.
 
 Appel de délimitation spécifique dont vous avez besoin peut améliorer les performances de votre application. Le type de barrière affecte la façon dont le compilateur et le matériel réorganisent les instructions. Par exemple, si vous utilisez une barrière de mémoire globale, elle s’applique uniquement aux accès mémoire globaux et par conséquent, le compilateur et le matériel peuvent réorganiser lit et écrit dans `tile_static` variables sur les deux côtés de la clôture.
 

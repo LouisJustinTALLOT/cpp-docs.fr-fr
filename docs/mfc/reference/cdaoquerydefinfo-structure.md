@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CDaoQueryDefInfo structure [MFC]
 ms.assetid: e20837dc-e78d-4171-a195-1b4075fb5d2a
 ms.openlocfilehash: d88d919bb87f614d140d710aee9df3fdf4fd10bc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399731"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo, structure
 
@@ -101,7 +101,7 @@ Lorsque vous ajoutez un champ ou un objet de paramètre à la collection de cham
 
 Les paramètres de date et d’heure sont dérivés de l’ordinateur sur lequel la querydef a été créée ou mises à jour. Dans un environnement multi-utilisateur, les utilisateurs doivent obtenir ces paramètres directement à partir du serveur de fichier à l’aide de la **net temps** commande afin d’éviter des incohérences dans les paramètres de propriété DateCreated et LastUpdated.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 

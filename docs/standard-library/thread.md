@@ -5,11 +5,11 @@ f1_keywords:
 - <thread>
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
 ms.openlocfilehash: 43fb79ceda6de7409e6f93797ce2f4ff213c43ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411979"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
@@ -38,13 +38,13 @@ Le `__STDCPP_THREADS__` macro est définie comme une valeur différente de zéro
 
 ### <a name="public-structures"></a>Structures publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[hash, structure (bibliothèque standard C++)](../standard-library/hash-structure-stl.md)|Définit une fonction membre qui retourne une valeur qui est déterminée de manière unique par un `thread::id`. La fonction membre définit un [hachage](../standard-library/hash-class.md) fonction qui est appropriée pour les valeurs de mappage de type `thread::id` pour une distribution de valeurs d’index.|
 
 ### <a name="public-functions"></a>Fonctions publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[get_id](../standard-library/thread-functions.md#get_id)|Identifie de façon unique le thread d’exécution en cours.|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|Bloque le thread appelant.|

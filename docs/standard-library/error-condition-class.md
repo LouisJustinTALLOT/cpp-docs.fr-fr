@@ -18,11 +18,11 @@ helpviewer_keywords:
 - std::error_condition::message
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
 ms.openlocfilehash: ccc2b41aa6c008fbda29c065ad63aa9f61b6680f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413682"
 ---
 # <a name="errorcondition-class"></a>error_condition, classe
 
@@ -87,7 +87,7 @@ void assign(value_type val, const error_category& _Cat);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*Val*|Valeur de code d’erreur à stocker dans `error_code`.|
+|*val*|Valeur de code d’erreur à stocker dans `error_code`.|
 |*_Cat*|Catégorie d’erreur à stocker dans `error_code`.|
 
 ### <a name="remarks"></a>Notes
@@ -139,7 +139,7 @@ error_condition(_Enum _Errcode,
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*Val*|Valeur de code d’erreur à stocker dans `error_condition`.|
+|*val*|Valeur de code d’erreur à stocker dans `error_condition`.|
 |*_Cat*|Catégorie d’erreur à stocker dans `error_condition`.|
 |*_Errcode*|Valeur d’énumération à stocker dans `error_condition`.|
 
