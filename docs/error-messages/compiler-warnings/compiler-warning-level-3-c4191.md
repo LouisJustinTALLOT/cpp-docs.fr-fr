@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
 ms.openlocfilehash: 72a485811647911207b6d048c686acdadd142b65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402253"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Avertissement du compilateur (niveau 3) C4191
 
-'operator/operation' : conversion risquée de 'type of expression' en 'type required'
+'operator/operation' : conversion risquée de 'type of expression' en 'type required'
 
 Plusieurs opérations faisant appel à des pointeurs fonction sont considérées comme non sécurisées :
 
