@@ -808,7 +808,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 ### <a name="parameters"></a>Paramètres
 
 *lpszDefaultUser*<br/>
-Le nom d’utilisateur par défaut. Un nom d’utilisateur peut avoir une longueur de 1 à 20 caractères et inclure des caractères alphabétiques, des caractères accentués, des chiffres, des espaces et des symboles à l’exception de : » (entre guillemets), / (barre oblique), \ (barre oblique inverse), \[ \] (crochets), : (deux-points), &#124; () barre verticale), \< (moins-signe supérieur), > (supérieur-signe supérieur), signe plus (+), = (signe égal), (point-virgule), (virgule), (point d’interrogation), \* astérisque (*), des espaces et les caractères de contrôle (ASCII 00 et ASCII 31). Pour plus d’informations, consultez la rubrique « Propriété de nom d’utilisateur » dans l’aide de DAO.
+Le nom d’utilisateur par défaut. Un nom d’utilisateur peut avoir une longueur de 1 à 20 caractères et inclure des caractères alphabétiques, des caractères accentués, des chiffres, des espaces et des symboles à l’exception de : » (entre guillemets), / (barre oblique), \ (barre oblique inverse), \[ \] (crochets), : (deux-points), &#124; () barre verticale), \< (moins-signe supérieur), > (supérieur-signe supérieur), signe plus (+), = (signe égal), (point-virgule), (virgule), (point d’interrogation), \* astérisque , des espaces et les caractères de contrôle (ASCII 00 et ASCII 31). Pour plus d’informations, consultez la rubrique « Propriété de nom d’utilisateur » dans l’aide de DAO.
 
 ### <a name="remarks"></a>Notes
 
