@@ -1,6 +1,6 @@
 ---
 title: Options du compilateur MSVC
-ms.date: 01/29/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler
 - x86 MSVC compiler
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - compiler options, C++
 - x64 MSVC compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-ms.openlocfilehash: 831aade72cd728ec42aee5ef1f320deb7bdf173d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ab41a5de027f28b361937e58fb179fd72db54e4e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294263"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221742"
 ---
 # <a name="compiler-options"></a>Options du compilateur
 
-CL.exe est un outil qui contrôle le Microsoft Visual C++ (MSVC) C et de compilateurs C++ et de l’éditeur de liens. CL.exe peut être exécuté uniquement sur les systèmes d’exploitation qui prennent en charge de Microsoft Visual Studio pour Windows.
+CL.exe est un outil qui contrôle le Microsoft C++ (MSVC) C et C++ compilateurs et l’éditeur de liens. CL.exe peut être exécuté uniquement sur les systèmes d’exploitation qui prennent en charge de Microsoft Visual Studio pour Windows.
 
 > [!NOTE]
 > Vous pouvez démarrer cet outil uniquement à partir d’une invite de commandes développeur Visual Studio. Vous ne pouvez pas le démarrer à partir d'une invite de commandes système ni de l'Explorateur de fichiers. Pour plus d’informations, consultez [utiliser l’ensemble d’outils MSVC à partir de la ligne de commande](../building-on-the-command-line.md).

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
-ms.openlocfilehash: 0cbab7c7cca1fc88bb99210262be45c56b6be7a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 441d01eca7c8266b6d7948508eeb561341e64c57
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391424"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447759"
 ---
 # <a name="compiler-warning-level-4-c4459"></a>Compilateur avertissement (niveau 4) C4459
 
@@ -19,7 +19,7 @@ ms.locfileid: "62391424"
 
 La déclaration de *identificateur* dans l’étendue locale masque la déclaration de la portant *identificateur* dans la portée globale. Cet avertissement vous informe que les références à *identificateur* dans cette portée correspondent à la version déclarée localement, pas la version globale, ce qui peut ou peut ne pas être votre intention. En règle générale, nous vous recommandons de que vous réduisez l’utilisation de variables globales comme une bonne pratique. Pour réduire la pollution de l’espace de noms global, nous vous recommandons d’utiliser un espace de noms nommé pour les variables globales.
 
-Cet avertissement est une nouveauté de Visual Studio 2015, dans la version du compilateur 18,00 Visual C++. Pour supprimer des avertissements à partir de cette version du compilateur ou ultérieurement lors de la migration de votre code, utilisez le [/WV : 18](../../build/reference/compiler-option-warning-level.md) option du compilateur.
+Cet avertissement est une nouveauté de Visual Studio 2015, dans Microsoft C++ version du compilateur 18,00. Pour supprimer des avertissements à partir de cette version du compilateur ou ultérieurement lors de la migration de votre code, utilisez le [/WV : 18](../../build/reference/compiler-option-warning-level.md) option du compilateur.
 
 ## <a name="example"></a>Exemple
 

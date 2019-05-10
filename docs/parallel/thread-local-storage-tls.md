@@ -9,16 +9,16 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c7bf2ae7cb5bfe71be9a1d72147e97c894064b3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362723"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448909"
 ---
 # <a name="thread-local-storage-tls"></a>Stockage local des threads (TLS)
 
-Le stockage local des threads (TLS, \{i\&gt;Thread Local Storage\&lt;i\}) est une méthode où chaque thread d'un processus multithread donné peut allouer des emplacements de stockage de données propres au thread. Dynamiquement les données propres au thread (exécution) sont pris en charge par le biais de l’API TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 et le compilateur Visual C++ prennent désormais en charge les données par thread liées statiquement (au moment du chargement) en plus de l'implémentation existante des API.
+Le stockage local des threads (TLS, \{i\&gt;Thread Local Storage\&lt;i\}) est une méthode où chaque thread d'un processus multithread donné peut allouer des emplacements de stockage de données propres au thread. Dynamiquement les données propres au thread (exécution) sont pris en charge par le biais de l’API TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 et Microsoft C++ compilateur maintenant la prise en charge liées statiquement des données (au moment du chargement) des threads en plus de l’implémentation d’API existante.
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> Implémentation du compilateur pour TLS
 

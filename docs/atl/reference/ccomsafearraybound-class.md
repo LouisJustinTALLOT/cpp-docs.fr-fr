@@ -1,6 +1,6 @@
 ---
 title: CComSafeArrayBound, classe
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArrayBound
 - ATLSAFE/ATL::CComSafeArrayBound
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: a79079c95536746cf5a4fa4b35caf39a55ca0f42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 6d4650273661c0ce40558a37ef02bb2a3ff81809
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246138"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221141"
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound, classe
 
@@ -76,7 +76,7 @@ La limite inférieure à partir de laquelle le tableau est numéroté.
 
 ### <a name="remarks"></a>Notes
 
-Si le tableau est accessible à partir d’un programme Visual C++, il est recommandé que la limite inférieure est définie comme 0. Il peut être préférable d’utiliser une valeur de limite inférieure différente si le tableau doit être utilisé avec d’autres langages, tels que Visual Basic.
+Si le tableau est accessible à partir d’un C++ programme, il est recommandé que la limite inférieure est définie comme 0. Il peut être préférable d’utiliser une valeur de limite inférieure différente si le tableau doit être utilisé avec d’autres langages, tels que Visual Basic.
 
 ##  <a name="getcount"></a>  CComSafeArrayBound::GetCount
 

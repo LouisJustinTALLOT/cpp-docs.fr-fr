@@ -1,17 +1,15 @@
 ---
 title: Gestion des événements
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
-- attributes [C++], event handling
-- intrinsic functions [C++], event handling
-- event handling [C++], Visual C++
+- event handling [C++]
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
-ms.openlocfilehash: 4c6701f04544b336de97196e8b65f4d0cd4be296
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bd74ba0b20e2058f0b04d0d0d3c22c9d526157a0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392152"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222123"
 ---
 # <a name="event-handling"></a>Gestion des événements
 
@@ -21,7 +19,7 @@ La gestion des événements est également prise en charge pour les classes C++ 
 
 La gestion des événements prend en charge l'utilisation de thread unique et multithread et protège les données de l'accès multithread simultané. Elle vous permet également de dériver des sous-classes de classes de sources d'événements ou de récepteurs, et de prendre en charge la source/réception d'événements étendue dans la classe dérivée.
 
-Visual C++ inclut des attributs et des mots clés pour déclarer des événements et des gestionnaires d'événements. Les attributs et les mots clés d'événement peuvent être utilisés dans les programmes CLR et dans les programmes C++ natifs.
+Microsoft C++ compilateur inclut des attributs et mots clés pour déclarer des événements et gestionnaires d’événements. Les attributs et les mots clés d'événement peuvent être utilisés dans les programmes CLR et dans les programmes C++ natifs.
 
 |Rubrique|Description|
 |-----------|-----------------|

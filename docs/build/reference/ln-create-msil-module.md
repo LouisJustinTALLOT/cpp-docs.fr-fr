@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -LN compiler option [C++]
 - /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
-ms.openlocfilehash: 18b0e72d50f328afc1f2856f833cec1aa7d46f30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2dbd5ae5ddf802185912c49caf37aa61c6a7d4c3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176214"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446261"
 ---
 # <a name="ln-create-msil-module"></a>/LN (Créer le module MSIL)
 
@@ -36,7 +36,7 @@ Vous souhaiterez peut-être créer des modules si vous souhaitez adopter une app
 
 L’extension de fichier par défaut pour un module est .netmodule.
 
-Dans les versions de Visual C++ avant Visual C++ 2005, un module a été créé avec **/CLR : noAssembly**.
+Dans les versions antérieures à Visual Studio 2005, un module a été créé avec **/CLR : noAssembly**.
 
 L’éditeur de liens MSVC accepte les fichiers .netmodule en tant qu’entrée et le fichier de sortie produit par l’éditeur de liens sera un assembly ou un fichier .netmodule sans aucune dépendance d’exécution sur un des fichiers .netmodule qui ont été entrés à l’éditeur de liens.  Pour plus d’informations, consultez [Fichiers .netmodule en tant qu’entrée de l’Éditeur de liens](netmodule-files-as-linker-input.md).
 

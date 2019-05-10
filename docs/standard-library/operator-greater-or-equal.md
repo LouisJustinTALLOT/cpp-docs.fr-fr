@@ -13,17 +13,17 @@ helpviewer_keywords:
 - operator >=
 - operator>=
 ms.assetid: 14fbebf5-8b75-4afa-a51b-3112d31c07cf
-ms.openlocfilehash: 0f7ed1fcf0c4e3290d110d9aa12b66289cb331f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9994456a1345276af426bddd883fa7c53d7b93d0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371457"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220283"
 ---
 # <a name="operatorgt"></a>operator&gt;=
 
 > [!NOTE]
-> Cette rubrique fait partie de la documentation Visual C++. Elle fournit un exemple non opérationnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
+> Cette rubrique se trouve dans le Microsoft C++ documentation comme exemple non fonctionnel de conteneurs utilisés dans le C++ bibliothèque Standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
 
 Surcharge **operator>=** pour comparer deux objets de la classe de modèle [Container](../standard-library/sample-container-class.md).
 

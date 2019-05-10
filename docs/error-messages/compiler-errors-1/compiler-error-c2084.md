@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2084
 ms.assetid: 990b107f-3721-4851-ae8b-4b69a8c149ed
-ms.openlocfilehash: 9aaf3a88e63234dfb842e4b48afd6e55595e96ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f7e049bc3f96e0a8e2b0a8cd306afeff52f7a5f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391918"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447330"
 ---
 # <a name="compiler-error-c2084"></a>Erreur du compilateur C2084
 
@@ -19,7 +19,7 @@ fonction '*fonction*' a déjà un corps
 
 La fonction a déjà été définie.
 
-Dans les versions de Visual C++ antérieures à Visual Studio 2002,
+Avant Visual Studio 2002,
 
 - Le compilateur accepte plusieurs spécialisations de modèle résolu sur le même type, bien que les définitions supplémentaires ne seraient jamais disponibles. Le compilateur détecte maintenant ces définitions multiples.
 

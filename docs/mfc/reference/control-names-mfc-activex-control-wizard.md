@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
-ms.openlocfilehash: a1b310de8cd8fcab1d880738faa7bd8b5b7cef32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7eb1686f191e3bfc60632447978e16ff48b2ab8
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373321"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448592"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>Noms du contrôle, Assistant Contrôle ActiveX MFC
 
@@ -86,5 +86,5 @@ Spécifiez les noms de la classe de contrôle et de la classe de page de propri�
 [Contrôle ActiveX MFC, Assistant](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [Paramètres de l’application, Assistant Contrôle ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [Paramètres du contrôle, Assistant Contrôle ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)<br/>
-[Types de fichiers créés pour les projets Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)
+[Types de fichiers créés pour Visual C++ projets](../../build/reference/file-types-created-for-visual-cpp-projects.md)
 

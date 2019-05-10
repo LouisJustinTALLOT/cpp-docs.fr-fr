@@ -1,22 +1,22 @@
 ---
 title: Prise en charge COM du compilateur
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
-ms.openlocfilehash: f0b1d6280dc27641287de8fe539cd3a148048245
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e13874bad44610821bed9c588af6bd9124162116
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154836"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222211"
 ---
 # <a name="compiler-com-support"></a>Prise en charge COM du compilateur
 
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft
 
-Le compilateur Visual C++ peut directement lire les bibliothèques de types COM (Component Object Model) et traduire le contenu en code source C++ qui peut être inclus dans la compilation. Les extensions de langage sont disponibles pour simplifier la programmation COM côté client.
+Microsoft C++ compilateur peut directement lire les bibliothèques de types de composant objet model (COM) et traduire le contenu dans C++ code source qui peut être inclus dans la compilation. Les extensions de langage sont disponibles pour simplifier la programmation COM côté client.
 
 À l’aide de la [directive de préprocesseur #import](../preprocessor/hash-import-directive-cpp.md), le compilateur peut lire une bibliothèque de types et les convertir dans un fichier d’en-tête C++ qui décrit le modèle COM des interfaces en tant que classes. Un ensemble d'attributs `#import` est disponible pour permettre le contrôle utilisateur du contenu pour les fichiers d'en-tête de la bibliothèque de types obtenus.
 

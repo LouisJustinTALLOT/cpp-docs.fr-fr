@@ -1,16 +1,16 @@
 ---
 title: Concepts d'applications isolées et d'assemblys côte à côte
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 448d2088a9e91de8fc34b4f23721ffec77f6c697
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f569381b9efe9a8ca7704dc87bcb8e8102e0cde2
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196701"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220910"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Concepts d'applications isolées et d'assemblys côte à côte
 
@@ -32,7 +32,7 @@ Vous pouvez modifier des dépendances d’assemblys côte à côte après qu’u
 
 ## <a name="visual-c-libraries"></a>Bibliothèques Visual C++
 
-Dans Visual Studio 2005 et Visual Studio 2008, les bibliothèques redistribuables telles qu'ATL, MFC, CRT, Standard C++, OpenMP et MSDIA ont été déployées en tant qu'assemblys côte à côte partagés dans le cache d'assembly natif. Dans la version actuelle, les bibliothèques redistribuables utilisent un déploiement central. Par défaut, toutes les applications en Visual C++ sont générées avec le manifeste incorporé au fichier binaire final. Par ailleurs, le manifeste décrit les dépendances de ce fichier binaire vis-à-vis des bibliothèques Visual C++. Pour en savoir plus sur la génération de manifestes d’applications Visual C++, consultez [Understanding Manifest Generation for C/C++ Programs](understanding-manifest-generation-for-c-cpp-programs.md). Un manifeste n'est pas obligatoire pour les applications qui sont liées de façon statique aux bibliothèques qu'elles utilisent, ou qui utilisent un déploiement local. Pour plus d’informations sur le déploiement, consultez [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md).
+Dans Visual Studio 2005 et Visual Studio 2008, les bibliothèques redistribuables telles qu'ATL, MFC, CRT, Standard C++, OpenMP et MSDIA ont été déployées en tant qu'assemblys côte à côte partagés dans le cache d'assembly natif. Dans la version actuelle, les bibliothèques redistribuables utilisent un déploiement central. Par défaut, toutes les applications qui sont générées à l’aide de Visual Studio sont générées avec le manifeste incorporé dans le fichier binaire final, et le manifeste décrit les dépendances du fichier binaire sur le visuel C++ bibliothèques. Pour comprendre la génération de manifestes pour C++ applications, consultez [Understanding Manifest Generation for C /C++ programmes](understanding-manifest-generation-for-c-cpp-programs.md). Un manifeste n'est pas obligatoire pour les applications qui sont liées de façon statique aux bibliothèques qu'elles utilisent, ou qui utilisent un déploiement local. Pour plus d’informations sur le déploiement, consultez [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,23 +1,23 @@
 ---
 title: __interface
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - __interface_cpp
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 1ec3a1d2cddbf8dbbb248a7366d5d56dd95ad074
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 7c95e3700b4124c4793e0214ed3b06ecfeee72f1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166293"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222080"
 ---
 # <a name="interface"></a>__interface
 
 **Section spécifique à Microsoft**
 
-Une interface Visual C++ peut être définie comme suit :
+Microsoft C++ interface peut être définie comme suit :
 
 - Peut hériter de zéro ou plusieurs interfaces de base.
 

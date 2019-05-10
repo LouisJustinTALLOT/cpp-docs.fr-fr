@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: 83ee85dbf952fd78a1cd1b8d0c932b9dcd02682d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f78aca6621462ccbd86cfe09ae71b715b5e56f09
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407079"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448461"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Déploiement de ClickOnce pour les applications Visual C++
 
@@ -19,10 +19,10 @@ Visual Studio fournit différentes technologies pour déployer des applications 
 
 ## <a name="clickonce-deployment-in-c"></a>Déploiement ClickOnce en C++
 
-L’environnement de développement Visual C++ ne prend pas directement en charge le déploiement de projets Visual C++ avec ClickOnce, mais les outils pour l’utiliser sont disponibles.
+L’élément visuel C++ environnement de développement ne prend pas directement en charge le déploiement de Visual Studio C++ projets avec ClickOnce, mais les outils sont disponibles pour l’utiliser.
 
 > [!NOTE]
->  Visual Studio prend en charge ClickOnce dans les environnements de développement Visual C# et Visual Basic. Si votre projet Visual C++ est une dépendance d’un projet Visual C#, vous pouvez publier l’application (dont ses dépendances) à l’aide du déploiement ClickOnce à partir de l’environnement de développement Visual C#.
+>  Visual Studio prend en charge ClickOnce dans les environnements de développement Visual C# et Visual Basic. Si Visual Studio C++ projet est une dépendance d’un objet visuel C# projet, vous pouvez publier l’application (y compris ses dépendances) à l’aide du déploiement ClickOnce à partir de l’élément visuel C# environnement de développement.
 
 Pour déployer une application Visual C++ à l’aide de ClickOnce, vous devez tout d’abord générer un [manifeste d’application ClickOnce](/visualstudio/deployment/clickonce-application-manifest) et un [manifeste de déploiement ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) à l’aide de [Mage.exe (outil Manifest Generation and Editing)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) ou de sa version avec interface utilisateur graphique. Pour plus d’informations, consultez [MageUI.exe (outil Manifest Generation and Editing, client graphique)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client).
 

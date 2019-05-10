@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a752122d89b3d952aec664f0dec092af1599f143
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388174"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448918"
 ---
 # <a name="resource-editors-c"></a>Éditeurs de ressources (C++)
 
@@ -39,15 +39,15 @@ L’éditeur approprié s’ouvre automatiquement quand vous créez ou que vous 
 
 |Utilisez|Pour modifier|
 |----------------|----------------|
-|[Éditeur d’accélérateurs](../windows/accelerator-editor.md)|Tables d’accélérateurs dans les projets Visual C++.|
+|[Éditeur d’accélérateurs](../windows/accelerator-editor.md)|Tables d’accélérateurs dans Visual Studio C++ projets.|
 |[Binary Editor](binary-editor.md)|Informations de données binaires et ressources personnalisées dans des projets Visual C++, Visual Basic ou Visual C#.|
-|[Éditeur de boîtes de dialogue](../windows/dialog-editor.md)|Boîtes de dialogue dans des projets Visual C++.|
+|[Éditeur de boîtes de dialogue](../windows/dialog-editor.md)|Boîtes de dialogue dans Visual Studio C++ projets.|
 |[Image Editor](../windows/image-editor-for-icons.md)|Bitmaps, icônes, curseurs et autres fichiers image dans des projets Visual C++, Visual Basic ou Visual C#.|
-|[Éditeur de menus](../windows/menu-editor.md)|Ressources de menu dans des projets Visual C++.|
+|[Éditeur de menus](../windows/menu-editor.md)|Ressources de menu dans Visual Studio C++ projets.|
 |[Éditeur Ribbon](../mfc/ribbon-designer-mfc.md)|Ressources de ruban dans les projets MFC.|
-|[Éditeur de chaînes](../windows/string-editor.md)|Tableaux de chaînes dans des projets Visual C++.|
-|[Éditeur de barres d’outils](../windows/toolbar-editor.md)|Ressources de barre d’outils dans des projets Visual C++. Le **barre d’outils Éditeur** fait partie de la **Éditeur d’images**.|
-|[Éditeur d’informations sur la version](../windows/version-information-editor.md)|Informations de version dans des projets Visual C++.|
+|[Éditeur de chaînes](../windows/string-editor.md)|Tableaux de chaînes dans Visual Studio C++ projets.|
+|[Éditeur de barres d’outils](../windows/toolbar-editor.md)|Ressources de barre d’outils dans Visual Studio C++ projets. Le **barre d’outils Éditeur** fait partie de la **Éditeur d’images**.|
+|[Éditeur d’informations sur la version](../windows/version-information-editor.md)|Informations de version dans Visual Studio C++ projets.|
 
 > [!NOTE]
 > Si votre projet ne contient pas déjà un fichier .rc, consultez [Comment : Créer des ressources](../windows/how-to-create-a-resource-script-file.md).
@@ -124,7 +124,7 @@ Un aperçu visuel ne fournissent pas les ressources suivantes : Accélérateur,
 
 ## <a name="requirements"></a>Configuration requise
 
-Aucun.
+None
 
 ## <a name="see-also"></a>Voir aussi
 

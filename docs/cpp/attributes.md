@@ -1,13 +1,13 @@
 ---
 title: Attributs en C++
-ms.date: 06/01/2018
+ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bc92e5f3e279edc6fbea7f99d52c469f9fdf04f8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284745"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222305"
 ---
 # <a name="attributes-in-c"></a>Attributs en C++
 
@@ -41,7 +41,7 @@ Les attributs représentent une alternative standardisée aux extensions spécif
 
 - `[[deprecated]]` **Visual Studio 2015 et versions ultérieur :** Spécifie qu’une fonction n’est pas destinée à utiliser et peut ne pas exister dans les futures versions d’une interface de bibliothèque. Le compilateur peut l’utiliser pour générer un message d’information lorsque le code client tente d’appeler la fonction. Peut être appliqué à la déclaration d’une classe, un nom de typedef, une variable, une donnée membre non static, une fonction, un espace de noms, une énumération, un énumérateur ou une spécialisation de modèle.
 
-- `[[fallthrough]]` **Visual Studio 2017 et versions ultérieur :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) le `[[fallthrough]]` attribut peut être utilisé dans le contexte de [basculer](switch-statement-cpp.md) instructions en tant qu’indicateur pour le compilateur (ou toute personne lisant le code) qui le comportement fallthrough est prévu. Le compilateur Visual C++ n’avertit actuellement pas sur le comportement fallthrough, cet attribut n’a aucun comportement de compilateur effet.
+- `[[fallthrough]]` **Visual Studio 2017 et versions ultérieur :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) le `[[fallthrough]]` attribut peut être utilisé dans le contexte de [basculer](switch-statement-cpp.md) instructions en tant qu’indicateur pour le compilateur (ou toute personne lisant le code) qui le comportement fallthrough est prévu. Microsoft C++ compilateur actuellement n’avertit pas sur le comportement fallthrough, cet attribut n’a aucun comportement de compilateur effet.
 
 - `[[nodiscard]]` **Visual Studio 2017 15.3 et versions ultérieures :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) Spécifie que valeur de retour d’une fonction n’est pas destinée à être ignoré. Déclenche avertissement de C4834, comme illustré dans cet exemple :
 

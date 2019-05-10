@@ -1,16 +1,16 @@
 ---
 title: 'Procédure pas à pas : Ajout d’un objet D2D à un projet MFC'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - MFC, D2D
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
-ms.openlocfilehash: 0793511f09be9dcb37732c4c16bfd2b3038a6cf4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 5710add59c0e5d27b2969ae22087533cae901ca9
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358615"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558175"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Procédure pas à pas : Ajout d’un objet D2D à un projet MFC
 
@@ -36,9 +36,9 @@ Pour effectuer cette procédure pas à pas, vous devez disposer de Visual Studio
 
 ## <a name="to-create-an-mfc-application"></a>Pour créer une application MFC
 
-1. Sur le **fichier** menu, pointez sur **New** , puis **projet**.
+1. Utilisez le **Assistant Application MFC** pour créer une application MFC. Consultez [Procédure pas à pas : À l’aide de nouveaux contrôles d’environnement MFC](walkthrough-using-the-new-mfc-shell-controls.md) pour obtenir des instructions sur la façon d’ouvrir l’Assistant pour votre version de Visual Studio.
 
-1. Dans le **nouveau projet** boîte de dialogue, dans le volet gauche sous **modèles installés**, développez **Visual C++** , puis sélectionnez **MFC**. Dans le volet central, sélectionnez **Application MFC**. Dans le **nom** , tapez *MFCD2DWalkthrough*. Cliquez sur **OK**.
+1. Dans le **nom** , tapez *MFCD2DWalkthrough*. Cliquez sur **OK**.
 
 1. Dans le **Assistant Application MFC**, choisissez **Terminer** sans modifier les paramètres.
 

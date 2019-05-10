@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4867
 ms.assetid: 8a257d70-c3a7-462d-b285-e57c952a8bf7
-ms.openlocfilehash: 9fa9b382b42a2fb8ba72fd9744c612af5dd598d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0fd5de46f713aed08508f8755c9e54c3ff46366b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311070"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447207"
 ---
 # <a name="compiler-warning-c4867"></a>Avertissement du compilateur C4867
 
@@ -19,7 +19,7 @@ ms.locfileid: "62311070"
 
 Un pointeur vers la fonction membre a été initialisé correctement.
 
-Cet avertissement peut être due à la mise en conformité du compilateur pour Visual C++ 2005 : conformité pointeur vers membre améliorée.  Le code compilé avant Visual C++ 2005 génère désormais C4867.
+Cet avertissement peut être due à la mise en conformité du compilateur pour Visual Studio 2005 : conformité pointeur vers membre améliorée.  Le code compilé avant Visual Studio 2005 génère désormais C4867.
 
 Cet avertissement est toujours émis en tant qu’erreur. Pour désactiver cet avertissement, utilisez le pragma [warning](../../preprocessor/warning.md) . Pour plus d’informations sur l’erreur C4867 et MFC/ATL, consultez [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).
 

@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - rbegin method
 ms.assetid: c1f0d60c-93aa-4313-81b9-04e3f9c796c2
-ms.openlocfilehash: baa718e3902aeae13d169e9ac2ad19c0b5607d79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 799ea3ce23f705872fb930f78bc21a1ac25bbd5b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211015"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221575"
 ---
 # <a name="container-classrbegin"></a>Conteneur Class::rbegin
 
 > [!NOTE]
-> Cette rubrique fait partie de la documentation Visual C++ comme exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
+> Cette rubrique se trouve dans le Microsoft C++ documentation comme exemple non fonctionnel de conteneurs utilisés dans le C++ bibliothèque Standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
 
 Retourne un itérateur inverse qui pointe juste après la fin de la séquence contrôlée, désignant ainsi le début de la séquence inverse.
 

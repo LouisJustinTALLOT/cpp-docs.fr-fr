@@ -4,12 +4,12 @@ ms.date: 09/18/2018
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317118"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446504"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Structure des fichiers .vcxproj et .props
 
@@ -21,13 +21,13 @@ Si vous choisissez de modifier manuellement un fichier .vcxproj, tenez compte de
 
 1. La structure du fichier doit suivre un formulaire prescrit qui est décrit dans cet article.
 
-1. Le système de projet Visual C++ ne prend pas actuellement en charge les caractères génériques dans les éléments de projet. L’exemple suivant n’est pas pris en charge :
+1. Visual Studio C++ système de projet actuellement ne prend pas en charge des caractères génériques dans les éléments de projet. L’exemple suivant n’est pas pris en charge :
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. À l’heure actuelle, le système de projet Visual C++ ne prend pas en charge les macros dans les chemins d’élément de projet. L’exemple suivant n’est pas pris en charge :
+1. Visual Studio C++ système de projet actuellement ne prend pas en charge les macros dans les chemins d’élément de projet. L’exemple suivant n’est pas pris en charge :
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -224,7 +224,7 @@ Les métadonnées doivent avoir des conditions de configuration pour chaque conf
 </ItemGroup>
 ```
 
-Le système de projet Visual C++ ne prend pas actuellement en charge les caractères génériques dans les éléments de projet.
+Visual Studio C++ système de projet actuellement ne prend pas en charge des caractères génériques dans les éléments de projet.
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ Le système de projet Visual C++ ne prend pas actuellement en charge les caract�
 </ItemGroup>
 ```
 
-Le système de projet Visual C++ ne prend pas actuellement en charge les macros dans les éléments de projet.
+Visual Studio C++ système de projet actuellement ne prend pas en charge les macros dans les éléments de projet.
 
 ```xml
 <ItemGroup>

@@ -1,17 +1,15 @@
 ---
 title: MSBuild sur la ligne de commande - C++
 ms.date: 12/12/2018
-f1_keywords:
-- MSBuild
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e95d99cf5c63c824bb9bade8e76bc3ca99079669
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273311"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220564"
 ---
 # <a name="msbuild-on-the-command-line---c"></a>MSBuild sur la ligne de commande - C++
 
@@ -53,7 +51,7 @@ Pour plus d’informations sur MSBuild, consultez :
 
 |Terme|Définition|
 |----------|----------------|
-|[Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Montre comment créer un projet Visual C++ à l’aide **MSBuild**.|
+|[Procédure pas à pas : Utilisation de MSBuild pour créer un projet C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Montre comment créer un Visual Studio C++ à l’aide de projet **MSBuild**.|
 |[Guide pratique pour utiliser des événements de génération dans des projets MSBuild](how-to-use-build-events-in-msbuild-projects.md)|Montre comment spécifier une action qui se produit à une étape particulière dans la build : avant le début de la génération ; avant le démarrage d’étape de liaison ; ou après la fin du build.|
 |[Guide pratique pour ajouter une étape de génération personnalisée à des projets MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)|Montre comment ajouter une étape définie par l’utilisateur à la séquence de génération.|
 |[Guide pratique pour ajouter des outils de génération personnalisée à des projets MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)|Montre comment associer un outil de génération d’un fichier particulier.|

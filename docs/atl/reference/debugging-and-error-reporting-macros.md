@@ -1,6 +1,6 @@
 ---
 title: Macros de débogage et rapport d’erreurs
-ms.date: 03/27/2019
+ms.date: 05/06/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a243351ff337cb517f8a8231c18c495c8d2ca302
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276625"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221075"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de débogage et rapport d’erreurs
 
@@ -176,7 +176,7 @@ ATLTRACE(
 ### <a name="parameters"></a>Paramètres
 
 *exp*<br/>
-[in] La chaîne et les variables à envoyer à l’élément visuel C++ fenêtre Sortie ou n’importe quelle application qui intercepte ces messages.
+[in] La chaîne et les variables à envoyer à la fenêtre Sortie ou de n’importe quelle application qui intercepte ces messages.
 
 *category*<br/>
 [in] Type d’événement ou méthode sur lequel au rapport. Consultez la section Notes pour obtenir la liste des catégories.
@@ -207,7 +207,7 @@ ATLTRACE2(
 ### <a name="parameters"></a>Paramètres
 
 *exp*<br/>
-[in] Chaîne à envoyer à l’élément visuel C++ fenêtre Sortie ou n’importe quelle application qui intercepte ces messages.
+[in] Chaîne à envoyer à la fenêtre Sortie ou de n’importe quelle application qui intercepte ces messages.
 
 *category*<br/>
 [in] Type d’événement ou méthode sur lequel au rapport. Consultez la section Notes pour obtenir la liste des catégories.

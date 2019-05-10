@@ -1,20 +1,18 @@
 ---
 title: Fichiers d'en-tête précompilés
-ms.date: 12/10/2018
-f1_keywords:
-- pch
+ms.date: 05/06/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 5afda50c43f93baa2d73e6afb68f436560c3243e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 1dc6ff9de94f98a4eef3d3827bec177f22672674
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341749"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220823"
 ---
 # <a name="precompiled-header-files"></a>Fichiers d'en-tête précompilés
 
@@ -43,7 +41,7 @@ Vous pouvez précompiler des programmes C et C++. Dans la programmation C++, il 
 
 ## <a name="two-choices-for-precompiling-code"></a>Deux méthodes au choix pour la précompilation du code
 
-Avec Visual C++, vous pouvez précompiler n’importe quel code C ou C++ ; vous n’êtes pas limité à précompiler uniquement les fichiers d’en-tête.
+Vous pouvez précompiler toutes C ou C++ code ; vous n’êtes pas limité à précompiler uniquement les fichiers d’en-tête.
 
 La précompilation requiert une planification, mais il offre des compilations sensiblement plus rapides si vous précompilez un code source autre que des fichiers d’en-tête simples.
 
@@ -133,7 +131,7 @@ Ce tableau répertorie les options du compilateur pouvant déclencher un avertis
 
 Les sections précédentes donnent une vue d’ensemble d’en-têtes précompilés : /Yc et/Yu, l’option/Fp et le [hdrstop](../preprocessor/hdrstop.md) pragma. Cette section décrit une méthode d’utilisation manuelle des options d’en-tête précompilé dans un projet ; Il se termine par un exemple de makefile et le code qu’il gère.
 
-Pour une autre approche pour utilisation manuelle des options d’en-têtes précompilés dans un projet, étudiez l’un des makefiles situés dans le répertoire MFC\SRC créé lors de l’installation par défaut de Visual C++. Ces fichiers Make adopter une approche similaire à celle présentée dans cette section mais tirer le meilleur parti des macros de NMAKE Microsoft Program Maintenance Utility () et offre un meilleur contrôle du processus de génération.
+Pour une autre approche pour utilisation manuelle des options d’en-têtes précompilés dans un projet, étudiez l’un des makefiles situés dans le répertoire MFC\SRC créé lors de l’installation par défaut de Visual Studio. Ces fichiers Make adopter une approche similaire à celle présentée dans cette section mais tirer le meilleur parti des macros de NMAKE Microsoft Program Maintenance Utility () et offre un meilleur contrôle du processus de génération.
 
 ## <a name="pch-files-in-the-build-process"></a>Fichiers PCH utilisés dans le processus de génération
 

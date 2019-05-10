@@ -1,20 +1,20 @@
 ---
 title: Conteneur Class::begin
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - begin method
 ms.assetid: 633708cb-17fe-488b-9fb1-1b5f2da0f46c
-ms.openlocfilehash: ede3b1d430a057772d1461d6565dcd3a13f86c46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d3ea3501282c1570d9858f523c96b2eae234ecc
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211934"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221729"
 ---
 # <a name="container-classbegin"></a>Conteneur Class::begin
 
 > [!NOTE]
-> Cette rubrique fait partie de la documentation Visual C++ comme exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
+> Cette rubrique se trouve dans Visual Studio C++ documentation comme exemple non fonctionnel de conteneurs utilisés dans le C++ bibliothèque Standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
 
 Retourne un itérateur qui pointe sur le premier élément de la séquence (ou juste après la fin d’une séquence vide).
 

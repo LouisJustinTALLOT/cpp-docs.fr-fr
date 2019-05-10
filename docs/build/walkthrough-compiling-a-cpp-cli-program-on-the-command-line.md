@@ -1,13 +1,13 @@
 ---
 title: 'Procédure pas à pas : Compilation de C++ / c++ / CLI des programme sur la ligne de commande'
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
-ms.openlocfilehash: c90d2c915db7264dc1b4e4807803e063c2a24fc7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8a5c5659367350a80725b365ef9c431bbec209d1
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314167"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877451"
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Procédure pas à pas : Compilation de C++ / c++ / CLI des programme sur la ligne de commande
 

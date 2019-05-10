@@ -2,12 +2,12 @@
 title: Résolution du nom pour les types dépendants
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: 04db4b0efc5e58dbd3de6fc9979c3a3cdd44d84e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 798cc7067967e8992c32d7c0ced9f647e4877110
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345935"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222404"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Résolution du nom pour les types dépendants
 
@@ -90,7 +90,7 @@ Int MyNamespace::myFunction
 
 ### <a name="template-disambiguation"></a>Levée des ambiguïtés de modèle
 
-Visual Studio 2012 applique les règles C ++ 98/03/11 standards pour éviter les ambiguïtés avec le mot clé « modèle ». Dans l’exemple suivant, Visual C++ 2010 accepterait les lignes non conformes et les lignes conformes.  Visual Studio 2012 accepte uniquement les lignes conformes.
+Visual Studio 2012 applique les règles C ++ 98/03/11 standards pour éviter les ambiguïtés avec le mot clé « modèle ». Dans l’exemple suivant, Visual Studio 2010 accepterait les lignes non conformes et les lignes conformes.  Visual Studio 2012 accepte uniquement les lignes conformes.
 
 ```cpp
 #include <iostream>

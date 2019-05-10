@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: b1f7534098a04c7c65a380d302999260c960f284
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8a3ab1b11c719730016e6a0cd248770cd89af8
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400954"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447777"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>Avertissement du compilateur (niveau 4) C4256
 
@@ -19,7 +19,7 @@ ms.locfileid: "62400954"
 
 Incompatibilité possible.
 
-Prenons l’exemple de code suivant. Si la définition du constructeur S2::S2 (int i,...) a été compilé à l’aide d’une version du compilateur Visual C++ avant la version 7, mais l’exemple suivant est compilé à l’aide de la version actuelle, l’appel au constructeur pour S3 ne fonctionnerait pas correctement raison de une modification de la convention d’appel de cas spéciaux. Si les deux ont été compilés à l’aide de Visual C++ 6.0, l’appel fonctionnerait pas tout à fait à droite, sauf si aucun paramètre ont été passés pour les points de suspension.
+Prenons l’exemple de code suivant. Si la définition du constructeur S2::S2 (int i,...) a été compilé à l’aide d’une version de Microsoft C++ compilateur avant version 7, mais l’exemple suivant est compilé à l’aide de la version actuelle, l’appel au constructeur pour S3 ne fonctionnerait pas correctement en raison d’une modification de la convention d’appel de cas spéciaux. Si les deux ont été compilés à l’aide de Visual C++ 6.0, l’appel fonctionnerait pas tout à fait à droite, sauf si aucun paramètre ont été passés pour les points de suspension.
 
 Pour résoudre cet avertissement,
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 9e370bcff0c30fb508ebc22aaff1f6a56dd420a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9868d33538a1f56906455f2b1772b53eb3a7734d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397274"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447102"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>Avertissement du compilateur (niveau 1) C4581
 
 comportement déconseillé : '« string1 »' remplacé par 'chaîne2' pour traiter l’attribut
 
-Cette erreur peut être due à la mise en conformité du compilateur pour Visual C++ 2005 : vérification des paramètres des attributs Visual C++.
+Cette erreur peut être due à la mise en conformité du compilateur pour Visual Studio 2005 : vérification des paramètres des Visual C++ attributs.
 
 Dans les versions précédentes, les valeurs d’attribut ont été acceptées s’ils ont été placés entre guillemets. Si la valeur est une énumération, elle ne doit pas figurer entre guillemets.
 

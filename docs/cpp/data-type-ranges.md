@@ -1,6 +1,6 @@
 ---
 title: plages de types de données
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - float keyword [C++]
 - char keyword [C++]
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - long int keyword [C++]
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
-ms.openlocfilehash: 88fbb128d995338e5976fbb3df939524f3ef8b63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 9eed9b35df6f5a970d05b09a604507df719345db
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392230"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222170"
 ---
 # <a name="data-type-ranges"></a>plages de types de données
 
-Les compilateurs Visual C++ 32 bits et 64 bits identifient les types de la table dans la suite de cet article.
+Microsoft C++ compilateurs 32 bits et 64 bits reconnaissent les types dans le tableau plus loin dans cet article.
 
 - `int` (`unsigned int`)
 
