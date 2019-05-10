@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: fc5a32fedf52377889b61103856e2125733cd696
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e51879ae62b2881e0adadbe59859605f6cc58947
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266779"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221908"
 ---
 # <a name="thiscall"></a>__thiscall
 
@@ -24,7 +24,7 @@ Une des raisons d’utiliser **__thiscall** est dans les classes dont le membre 
 
 Lors de la compilation avec [/CLR : pure](../build/reference/clr-common-language-runtime-compilation.md), toutes les fonctions et les pointeurs de fonction sont `__clrcall` , sauf indication contraire. Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
 
-Dans les versions antérieures à Visual C++ 2005, le **__thiscall** convention d’appel pas pu être explicitement spécifiée dans un programme, car **__thiscall** n’était pas un mot clé.
+Dans les versions antérieures à Visual Studio 2005, le **__thiscall** convention d’appel pas pu être explicitement spécifiée dans un programme, car **__thiscall** n’était pas un mot clé.
 
 `vararg` utilisation de fonctions membres le **__cdecl** convention d’appel. Tous les arguments de fonction sont envoyées sur la pile, avec le **cela** pointeur placées en dernier sur la pile
 

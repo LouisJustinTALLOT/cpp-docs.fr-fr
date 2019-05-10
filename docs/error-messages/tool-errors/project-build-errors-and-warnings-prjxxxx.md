@@ -3,11 +3,11 @@ title: Erreurs et avertissements de génération de projet
 ms.date: 04/16/2019
 ms.assetid: 79d223ed-986a-4536-8299-aec8356b449c
 ms.openlocfilehash: e735214912b737a5fdb9ddf8a8ed9fe37e285d12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346754"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857284"
 ---
 # <a name="project-build-errors-and-warnings-prjxxxx"></a>Erreurs et avertissements de génération de projet (PRJxxxx)
 

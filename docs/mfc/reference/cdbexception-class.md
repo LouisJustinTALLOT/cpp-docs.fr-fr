@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: 755b89635eedd7808f900dc63cd3039845db1dd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bdfb9bd0b45fd241de4378a2caa19e7dd9f9bdf2
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253411"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877487"
 ---
 # <a name="cdbexception-class"></a>CDBException, classe
 
@@ -132,7 +132,7 @@ Contient une chaîne décrivant l’erreur qui a provoqué l’exception.
 
 La chaîne est du formulaire « état : % s, natif : % ld, origine : % s », où les codes de format, dans l’ordre, sont remplacés par les valeurs qui décrivent :
 
-- La valeur SQLSTATE, une chaîne se terminant par null qui contient un code d’erreur à cinq caractères retournés dans le *szSqlState* paramètre de la fonction ODBC `SQLError`. Les valeurs SQLSTATE sont répertoriés dans l’annexe A, [Codes d’erreur ODBC](/previous-versions/windows/desktop/ms714687(v=vs.85)), dans le *de référence du programmeur ODBC*. Exemple : "S0022".
+- La valeur SQLSTATE, une chaîne se terminant par null qui contient un code d’erreur à cinq caractères retournés dans le *szSqlState* paramètre de la fonction ODBC `SQLError`. Les valeurs SQLSTATE sont répertoriés dans l’annexe A, [Codes d’erreur ODBC](/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes), dans le *de référence du programmeur ODBC*. Exemple : "S0022".
 
 - Le code d’erreur natif spécifique à la source de données retournées dans le *pfNativeError* paramètre de la `SQLError` (fonction). Exemple : 207.
 
@@ -140,11 +140,11 @@ La chaîne est du formulaire « état : % s, natif : % ld, origine : % s »
 
 Le framework interprète la chaîne d’erreur et met ses composants dans `m_strStateNativeOrigin`; si `m_strStateNativeOrigin` contient des informations pour plusieurs erreurs, les erreurs sont séparées par des sauts de ligne. Le framework met le texte d’erreur d’alphanumériques dans `m_strError`.
 
-Pour plus d’informations sur les codes utilisées pour créer cette chaîne, consultez la [SQLError](/previous-versions/windows/desktop/ms716312(v=vs.85)) fonctionner dans le *de référence du programmeur ODBC*.
+Pour plus d’informations sur les codes utilisées pour créer cette chaîne, consultez la [SQLError](/sql/odbc/reference/syntax/sqlerror-function) fonctionner dans le *de référence du programmeur ODBC*.
 
 ### <a name="example"></a>Exemple
 
-  À partir d’ODBC : « Origine, natif : 207, état : S0022 :\[Microsoft]\[le pilote ODBC SQL Server]\[SQL Server] le nom de colonne non valide 'ColName' »
+À partir d’ODBC : « Origine, natif : 207, état : S0022 :\[Microsoft]\[le pilote ODBC SQL Server]\[SQL Server] le nom de colonne non valide 'ColName' »
 
 Dans `m_strStateNativeOrigin`: « Origine, natif : 207, état : S0022 :\[Microsoft]\[pilote ODBC SQL Server]\[SQL Server] »
 
