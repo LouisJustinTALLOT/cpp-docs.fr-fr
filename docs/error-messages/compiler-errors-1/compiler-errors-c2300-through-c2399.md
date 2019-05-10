@@ -57,11 +57,11 @@ helpviewer_keywords:
 - C2399
 ms.assetid: 07ca45b5-b2f0-4049-837b-40a7a3caed88
 ms.openlocfilehash: 28ab73857b46fed29e2ba8d7bc051ffb81b54bb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360448"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857365"
 ---
 # <a name="compiler-errors-c2300-through-c2399"></a>Erreurs du compilateur C2300 à C2399
 

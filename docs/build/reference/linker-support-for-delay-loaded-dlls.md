@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-ms.openlocfilehash: b6e514a6b13aced4fcd765df091810504f948588
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 384ea563853906a76e2c9993cbcedb3b15c354f2
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176250"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217592"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Prise en charge de l'éditeur de liens pour les DLL à chargement différé
 
@@ -51,5 +51,5 @@ Les rubriques suivantes décrivent les DLL à chargement différé :
 
 ## <a name="see-also"></a>Voir aussi
 
-[DLL dans Visual C++](../dlls-in-visual-cpp.md)<br/>
+[Créer des DLL C/C++ dans Visual Studio](../dlls-in-visual-cpp.md)<br/>
 [Informations de référence sur l’éditeur de liens MSVC](linking.md)
