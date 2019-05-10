@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 6b9499fbd806c04774d12750c70816d0312a4e3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28678b560387fa6b111d60a7487ed44f9244a821
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345264"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449062"
 ---
 # <a name="how-to-manage-resources-c"></a>Procédure : Gérer les ressources (C++)
 
@@ -100,7 +100,7 @@ Fichiers de ressources managés (.resx) sont des fichiers XML. Lorsque vous ajou
 
 ## <a name="import-and-export-resources"></a>Importation et exportation de ressources
 
-Vous pouvez importer des ressources graphiques (images bitmap, icônes, curseurs et barres d'outils), des fichiers HTML et des ressources personnalisées pour les utiliser dans Visual C++. Vous pouvez exporter les mêmes types de fichier depuis un projet Visual C++ vers des fichiers distincts utilisables en dehors de l'environnement de développement.
+Vous pouvez importer des ressources graphiques (images bitmap, icônes, curseurs et barres d'outils), des fichiers HTML et des ressources personnalisées pour les utiliser dans Visual C++. Vous pouvez exporter les mêmes types de fichiers à partir de Visual Studio C++ projet pour séparer les fichiers qui peuvent être utilisés en dehors de l’environnement de développement.
 
 > [!NOTE]
 > Types de ressources tels que les accélérateurs, les boîtes de dialogue et les tables de chaînes ne peuvent pas être importées ou exportées, car ils ne sont pas des types de fichiers autonome.

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae4193b8e6edf94ab0f8d839ac36fc1addfd8d04
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396137"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220337"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -86,7 +86,7 @@ Il est important de comprendre les promesses et les limites de chaque catégorie
 > [!NOTE]
 > Vous pouvez éviter d'utiliser des itérateurs explicitement avec des boucles for basées sur un intervalle. Pour plus d’informations, consultez [Range-based pour instruction](../cpp/range-based-for-statement-cpp.md).
 
-Visual C++ propose désormais des itérateurs vérifiés et les itérateurs de débogage pour vous assurer que vous ne remplacez pas les limites de votre conteneur. Pour plus d’informations, consultez [itérateurs vérifiés](../standard-library/checked-iterators.md) et [Itérateurs de débogage, prise en charge](../standard-library/debug-iterator-support.md).
+Microsoft C++ propose désormais des itérateurs vérifiés et itérateurs de débogage pour vous assurer que vous ne remplacez pas les limites de votre conteneur. Pour plus d’informations, consultez [itérateurs vérifiés](../standard-library/checked-iterators.md) et [Itérateurs de débogage, prise en charge](../standard-library/debug-iterator-support.md).
 
 ## <a name="see-also"></a>Voir aussi
 

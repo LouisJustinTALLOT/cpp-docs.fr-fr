@@ -67,11 +67,11 @@ helpviewer_keywords:
 - C3193
 ms.assetid: 7bc40c2f-6a8d-488a-b665-f39375afee77
 ms.openlocfilehash: efa3207a9fdfb81a52bf319a1cbc2da84084b6cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281651"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856821"
 ---
 # <a name="compiler-errors-c3100-through-c3199"></a>Erreurs du compilateur C3100 à C3199
 

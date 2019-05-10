@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: eadeeb7ac19e3975a37a1364502b33400018cb05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc6305ab2e96496aa212004e186150d4a51cf3fc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255511"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446969"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Erreur des outils Éditeur de liens LNK1104
 
@@ -59,7 +59,7 @@ Assurez-vous que vous avez installé chaque version de la bibliothèque que vous
 
 ### <a name="cannot-open-a-file-built-by-your-project"></a>Impossible d’ouvrir un fichier généré par votre projet
 
-Vous pouvez voir cette erreur si le fichier *filename* est généré par votre solution, mais n’existe pas lorsque l’éditeur de liens tente d’y accéder. Cela peut se produire quand un projet dépend d’un autre projet, mais les projets ne sont pas générés dans le bon ordre. Pour résoudre ce problème, assurez-vous que vos références de projet sont définies dans le projet qui utilise le fichier donc le fichier manquant est créé avant qu’il soit nécessaire. Pour plus d’informations, consultez [Ajout de références aux projets Visual C++](../../build/adding-references-in-visual-cpp-projects.md) et [gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project).
+Vous pouvez voir cette erreur si le fichier *filename* est généré par votre solution, mais n’existe pas lorsque l’éditeur de liens tente d’y accéder. Cela peut se produire quand un projet dépend d’un autre projet, mais les projets ne sont pas générés dans le bon ordre. Pour résoudre ce problème, assurez-vous que vos références de projet sont définies dans le projet qui utilise le fichier donc le fichier manquant est créé avant qu’il soit nécessaire. Pour plus d’informations, consultez [Ajout de références dans Visual Studio C++ projets](../../build/adding-references-in-visual-cpp-projects.md) et [gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project).
 
 ### <a name="cannot-open-file-cprogramobj"></a>Impossible d’ouvrir le fichier ' C:\\Program.obj'
 

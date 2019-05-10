@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: 5ef4352101541391a7cda88471fbaa6aeae4ffb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07cfda76af26ddb285be4f77131aaf48a20a761f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328716"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447856"
 ---
 # <a name="compiler-error-c3451"></a>Erreur du compilateur C3451
 
@@ -21,7 +21,7 @@ Un attribut C++ ne peut pas être appliqué à un type CLR. Consultez [référen
 
 Pour plus d'informations, consultez [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
-Cette erreur peut être due à la mise en conformité du compilateur pour Visual C++ 2005 : le [uuid](../../windows/uuid-cpp-attributes.md) attribut n’est plus autorisé sur un attribut défini par l’utilisateur à l’aide de la programmation CLR. Utilisez plutôt <xref:System.Runtime.InteropServices.GuidAttribute>.
+Cette erreur peut être due à la mise en conformité du compilateur pour Visual Studio 2005 : le [uuid](../../windows/uuid-cpp-attributes.md) attribut n’est plus autorisé sur un attribut défini par l’utilisateur à l’aide de la programmation CLR. Utilisez plutôt <xref:System.Runtime.InteropServices.GuidAttribute>.
 
 ## <a name="example"></a>Exemple
 

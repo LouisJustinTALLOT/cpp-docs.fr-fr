@@ -1,6 +1,6 @@
 ---
 title: 'Procédure : créer un projet C++ à partir de code existant'
-ms.date: 01/15/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, creating projects from existing code
 - Create New Project From Existing Code Files Wizard, project settings
@@ -10,12 +10,12 @@ f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: 1658e19595d8cfc7966ca881abfdd2aa8acf76ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a899fe7f1b038ac1497465171098183f63f40564
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62189026"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221454"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>Procédure : créer un projet C++ à partir de code existant
 
@@ -26,8 +26,6 @@ Le déplacement de vos fichiers de code existants dans un projet C++ permet d�
 ### <a name="to-create-a-c-project-from-existing-code"></a>Pour créer un projet C++ à partir de code existant
 
 1. Dans le menu **Fichier**, sélectionnez **Nouveau** > **Projet à partir de code existant**.
-
-1. Dans la première page de l’Assistant **Créer un projet à partir de fichiers de code existants**, sélectionnez **Visual C++** dans la liste **Quel type de projet souhaitez-vous créer ?**. Choisissez **Suivant** pour continuer.
 
 1. Spécifiez l’emplacement de votre projet, le répertoire de vos fichiers sources et les types de fichiers importés par l’Assistant dans le nouveau projet. Choisissez **Suivant** pour continuer.
 
@@ -44,7 +42,7 @@ Le déplacement de vos fichiers de code existants dans un projet C++ permet d�
 
     | Paramètre | Description |
     | --- | --- |
-    | **Utiliser Visual Studio** | Spécifie l’utilisation des outils de génération inclus dans Visual Studio pour générer le nouveau projet. Cette option est activée par défaut.<br/><br/>Sélectionnez **Type de projet** pour spécifier le type de projet généré par l’Assistant. Choisissez **Projet d’application Windows**, **Projet d’application console**, **Projet DLL (Dynamically Linked Library)** ou **Projet LIB (Static Library)**.<br/><br/>Cochez **Ajouter la prise en charge pour ATL** pour ajouter la prise en charge ATL au nouveau projet.<br/><br/>Cochez **Ajouter la prise en charge pour MFC** pour ajouter la prise en charge MFC au nouveau projet.<br/><br/>Cochez **Ajouter la prise en charge pour le Common Language Runtime** pour ajouter la prise en charge de la programmation du CLR au projet. Choisissez **Prise en charge du Common Language Runtime** pour le type de conformité, par exemple **Common Language Runtime (ancienne syntaxe)** pour la conformité avec la syntaxe Extensions managées pour C++, la syntaxe de programmation du CLR antérieure à Visual C++ 2005. |
+    | **Utiliser Visual Studio** | Spécifie l’utilisation des outils de génération inclus dans Visual Studio pour générer le nouveau projet. Cette option est activée par défaut.<br/><br/>Sélectionnez **Type de projet** pour spécifier le type de projet généré par l’Assistant. Choisissez **Projet d’application Windows**, **Projet d’application console**, **Projet DLL (Dynamically Linked Library)** ou **Projet LIB (Static Library)**.<br/><br/>Cochez **Ajouter la prise en charge pour ATL** pour ajouter la prise en charge ATL au nouveau projet.<br/><br/>Cochez **Ajouter la prise en charge pour MFC** pour ajouter la prise en charge MFC au nouveau projet.<br/><br/>Cochez **Ajouter la prise en charge pour le Common Language Runtime** pour ajouter la prise en charge de la programmation du CLR au projet. Choisissez le **prise en charge du Common Language Runtime** pour le type de conformité, telles que **Common Language Runtime (ancienne syntaxe)** pour la conformité avec les Extensions managées pour C++ syntaxe, la syntaxe de programmation CLR Avant Visual Studio 2005. |
     | **Utiliser un système de génération externe** | Spécifie l’utilisation d’outils de génération qui ne sont pas inclus dans Visual Studio pour générer le nouveau projet. Quand cette option est sélectionnée, vous pouvez spécifier des lignes de commande de génération dans les pages **Spécifier les paramètres de configuration Debug** et **Spécifier les paramètres de configuration Release**. |
 
     ![Paramètres du projet](media/settings.png)

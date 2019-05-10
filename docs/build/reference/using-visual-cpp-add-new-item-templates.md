@@ -1,24 +1,24 @@
 ---
 title: Utilisation de modèles Ajouter un nouvel élément de Visual C++
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - Add New Item
 - Add New Item templates
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: afa6f7e3a1e3a6ac293a23fc18ecd0834d70555f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e6ef78d1a43bc649a31b715afd4ce1d44f25a8c6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317144"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217764"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Utilisation de modèles Ajouter un nouvel élément de Visual C++
 
-Vous pouvez facilement ajouter des éléments qui sont communs aux projets Visual C++ à l’aide de la commande **Ajouter un nouvel élément**. Quand vous utilisez la commande **Ajouter un nouvel élément**, la boîte de dialogue `Add New Item` s’affiche avec une liste de modèles d’élément, qui ajoutent les fichiers appropriés à votre projet.
+Vous pouvez facilement ajouter des éléments qui sont communes aux projets Visual Studio à l’aide de la **ajouter un nouvel élément** commande. Quand vous utilisez la commande **Ajouter un nouvel élément**, la boîte de dialogue `Add New Item` s’affiche avec une liste de modèles d’élément, qui ajoutent les fichiers appropriés à votre projet.
 
-Le tableau suivant présente la liste des modèles Ajouter un nouvel élément de Visual C++.
+Le tableau suivant est une liste alphabétique des modèles Ajouter un nouvel élément de Visual Studio.
 
 |Modèle|Description|
 |--------------|-----------------|
@@ -38,7 +38,7 @@ Le tableau suivant présente la liste des modèles Ajouter un nouvel élément d
 |Classe Installer|Ajoute une classe qui hérite de <xref:System.Configuration.Install.Installer> à l’aide des fonctionnalités du CLR.|
 |Fichier MIDL (.idl)|Crée un fichier IDL (Interface Definition Language).|
 |Fichier de définition de module (.def)|Crée un fichier de définition d’exportation de DLL.|
-|Feuille de propriétés (.props)|Crée un fichier de feuille de propriétés Visual C++.|
+|Feuille de propriétés (.props)|Crée un fichier de feuille de propriétés.|
 |Script d’inscription (.rgs)|Crée un fichier de script d’inscription ATL.|
 |Rapport (.rdlc)|Crée un fichier de rapport.|
 |Fichier de ressources (.rc)|Crée un fichier de ressources Win32.|

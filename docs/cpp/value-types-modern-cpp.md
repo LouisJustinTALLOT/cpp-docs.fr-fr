@@ -1,14 +1,14 @@
 ---
 title: Types de valeur (Modern C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-ms.openlocfilehash: 32cdb29ec1c59081ad7e0493888f290f21561d2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 204ea9f86377eb8a5796f01cb81a9161163d9649
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390904"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221884"
 ---
 # <a name="value-types-modern-c"></a>Types de valeur (Modern C++)
 
@@ -49,7 +49,7 @@ test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private memb
 
 ## <a name="value-types-and-move-efficiency"></a>Types valeur et déplacer l’efficacité
 
-Surcharge d’allocation de copie est évitée en raison de nouvelles optimisations de copie. Par exemple, lorsque vous insérez une chaîne au milieu d’un vecteur de chaînes, il n’y aura aucune surcharge de réallocation de copie, uniquement un déplacement - même s’il en résulte une augmentation du vecteur proprement dit. Cela s’applique également à d’autres opérations, par exemple effectuer une opération d’ajout sur deux objets très volumineux. Comment faire pour activer ces optimisations d’opération de valeur ? Dans certains compilateurs C++, le compilateur active cette option pour vous implicitement, de la même manière que les constructeurs de copie peuvent être générées automatiquement par le compilateur. Toutefois, dans Visual C++, votre classe devra « opt-in » pour déplacer des constructeurs et affectation en le déclarant dans votre définition de classe. Cela est accompli en utilisant la double perluète (& &) référence rvalue dans le membre approprié définition de constructeur de déplacement et les déclarations de fonctions et méthodes d’affectation de déplacement.  Vous devez également insérer le code correct pour « subtiliser finalement voir le fonctionnement « hors de l’objet source.
+Surcharge d’allocation de copie est évitée en raison de nouvelles optimisations de copie. Par exemple, lorsque vous insérez une chaîne au milieu d’un vecteur de chaînes, il n’y aura aucune surcharge de réallocation de copie, uniquement un déplacement - même s’il en résulte une augmentation du vecteur proprement dit. Cela s’applique également à d’autres opérations, par exemple effectuer une opération d’ajout sur deux objets très volumineux. Comment faire pour activer ces optimisations d’opération de valeur ? Dans certains compilateurs C++, le compilateur active cette option pour vous implicitement, de la même manière que les constructeurs de copie peuvent être générées automatiquement par le compilateur. Toutefois, dans C++, votre classe doit « opt-in » pour déplacer des constructeurs et affectation en le déclarant dans votre définition de classe. Cela est accompli en utilisant la double perluète (& &) référence rvalue dans le membre approprié définition de constructeur de déplacement et les déclarations de fonctions et méthodes d’affectation de déplacement.  Vous devez également insérer le code correct pour « subtiliser finalement voir le fonctionnement « hors de l’objet source.
 
 Comment décider si vous devez déplacer activé ? Si vous connaissez déjà que vous devez copier la construction activée, vous souhaitez probablement déplacer est activée si elle peut être moins cher que d’une copie complète. Toutefois, si vous savez que vous avez besoin de déplacer la prise en charge, n’implique pas forcément copie activée. Ce dernier cas est appelé un « type move-only ». Un exemple déjà dans la bibliothèque standard est `unique_ptr`. Note à part, l’ancien `auto_ptr` est déconseillé et a été remplacé par `unique_ptr` exactement en raison de l’absence de prise en charge la sémantique de déplacement dans la version précédente de C++.
 

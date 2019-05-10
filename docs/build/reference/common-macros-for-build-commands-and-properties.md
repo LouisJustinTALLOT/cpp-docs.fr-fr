@@ -93,12 +93,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: abb42db6a44f1c48d120eff1f117e06c970b6b44
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294440"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221782"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Macros courantes pour les propriétés et les commandes de MSBuild
 
@@ -121,7 +121,7 @@ Ce tableau décrit un sous-ensemble couramment utilisé des macros disponibles 
 |**$(FrameworkDir)**|Le répertoire où le .NET Framework a été installé.|
 |**$(FrameworkSDKDir)**|Le répertoire où vous avez installé le .NET Framework. Le .NET Framework peut avoir été installé dans le cadre de Visual Studio ou bien séparément.|
 |**$(FrameworkVersion)**|La version du .NET Framework utilisée par Visual Studio. Combiné avec **$(FrameworkDir)**, le chemin complet de la version du .NET Framework utilisé par Visual Studio.|
-|**$(FxCopDir)**|Le chemin du fichier fxcop.cmd. Le fichier fxcop.cmd n’est pas installé avec toutes les éditions de Visual C++.|
+|**$(FxCopDir)**|Le chemin du fichier fxcop.cmd. Le fichier fxcop.cmd n’est pas installé avec toutes les éditions de Visual Studio.|
 |**$(IntDir)**|Chemin du répertoire spécifié pour les fichiers intermédiaires. S’il s’agit d’un chemin relatif, les fichiers intermédiaires sont placés dans ce chemin ajouté au répertoire du projet. Ce chemin doit se terminer par une barre oblique. Ceci se résout en la valeur de la propriété **Intermediate Directory** . N’utilisez pas **$(OutDir)** pour définir cette propriété.|
 |**$(OutDir)**|Chemin du répertoire des fichiers de sortie. S’il s’agit d’un chemin relatif, les fichiers de sortie sont placés dans ce chemin ajouté au répertoire du projet. Ce chemin doit se terminer par une barre oblique. Ceci se résout en la valeur de la propriété **Output Directory** . N’utilisez pas **$(IntDir)** pour définir cette propriété.|
 |**$(Platform)**|Nom de la plateforme de projet actuelle, par exemple, « Win32 ».|
@@ -143,7 +143,7 @@ Ce tableau décrit un sous-ensemble couramment utilisé des macros disponibles 
 |**$(TargetFileName)**|Le nom de fichier du fichier de sortie principal pour la build (défini comme étant nom de base + extension de fichier).|
 |**$(TargetName)**|Le nom de base du fichier de sortie principal pour la build.|
 |**$(TargetPath)**|Le nom du chemin absolu du fichier de sortie principal pour la build (défini comme étant lecteur + chemin + nom de base + extension de fichier).|
-|**$(VCInstallDir)**|Répertoire qui comprend le contenu C++ de votre installation de Visual Studio. Cette propriété contient la version de l’ensemble d’outils Visual C++ ciblé, qui peut être différente de celle du Visual Studio hôte. Par exemple, quand la génération s’effectue avec `$(PlatformToolset) = v140`, **$(VCInstallDir)** contient le chemin d’installation de Visual C++ 2015.|
+|**$(VCInstallDir)**|Répertoire qui comprend le contenu C++ de votre installation de Visual Studio. Cette propriété contient la version de Microsoft ciblé C++ ensemble d’outils (MSVC), qui peut être différente que l’hôte Visual Studio. Par exemple, lors de la génération avec `$(PlatformToolset) = v140`, **VCInstallDir** contient le chemin d’accès à l’installation de Visual Studio 2015.|
 |**$(VSInstallDir)**|Le répertoire où vous avez installé Visual Studio. Cette propriété contient la version de l’ensemble d’outils Visual Studio ciblé, qui peut être différente de celle du Visual Studio hôte. Par exemple, lors d’une génération avec `$(PlatformToolset) = v110`, **$(VSInstallDir)** contient le chemin de l’installation de Visual Studio 2012.|
 |**$(WebDeployPath)**|Le chemin relatif à partir de la racine du déploiement auquel les sorties du projet appartiennent. Retourne la même valeur que <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|
 |**$(WebDeployRoot)**|Chemin absolu de l’emplacement de **\<localhost>**. Par exemple, c:\inetpub\wwwroot.|

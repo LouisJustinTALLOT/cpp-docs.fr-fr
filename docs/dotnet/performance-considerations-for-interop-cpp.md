@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-ms.openlocfilehash: c6b4456d9c75061c9a8c93f37f98b58f92adc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 29dbfa6465f6bcbcf4d0618b1820e59a8edbd3a3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384749"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447248"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Considérations sur les performances de l'interopérabilité (C++)
 
@@ -21,7 +21,7 @@ Cette rubrique fournit des instructions pour réduire l’effet de transitions d
 
 Visual C++ prend en charge les mêmes mécanismes d’interopérabilité que d’autres langages .NET tels que Visual Basic et c# (P/Invoke), mais il fournit également la prise en charge de l’interopérabilité spécifique à Visual C++ (C++ interop). Pour les applications critiques pour les performances, il est important de comprendre les implications de performances de chaque technique d’interopérabilité.
 
-Quelle que soit la technique d’interopérabilité utilisée, des séquences de transition spéciales, appelées thunks sont requis chaque fois qu’une fonction managée appelle une versa non managé de fonction et inversement. Ces thunks sont insérés automatiquement par le compilateur Visual C++, mais il est important de garder à l’esprit qu’ensemble, ces transitions peuvent être coûteuses en termes de performances.
+Quelle que soit la technique d’interopérabilité utilisée, des séquences de transition spéciales, appelées thunks sont requis chaque fois qu’une fonction managée appelle une versa non managé de fonction et inversement. Ces thunks sont insérés automatiquement par Microsoft C++ compilateur, mais il est important de garder à l’esprit qu’ensemble, ces transitions peuvent être coûteuses en termes de performances.
 
 ## <a name="reducing-transitions"></a>Réduction des Transitions
 

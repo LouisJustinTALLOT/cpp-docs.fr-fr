@@ -154,11 +154,11 @@ helpviewer_keywords:
 - C5106
 - C5107
 ms.openlocfilehash: 93ff809d640efab6852e855f85e7b6e0109d9c1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280312"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857448"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Avertissements du compilateur C4800 à C5999
 

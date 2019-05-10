@@ -2,12 +2,12 @@
 title: Bibliothèques statiques (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: 242ba10b29a8efe0c3e9580f1d0d0c3be529a7d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 188ba06518bf6cdd154b7d6bd61216ed1e4ffad3
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398860"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877240"
 ---
 # <a name="static-libraries-ccx"></a>Bibliothèques statiques (C++/CX)
 
@@ -15,11 +15,32 @@ Une bibliothèque statique qui est utilisée dans une application de plateforme 
 
 ## <a name="creating-static-libraries"></a>Création de bibliothèques statiques
 
-#### <a name="to-create-a-static-library-for-use-in-a-uwp-app"></a>Pour créer une bibliothèque statique pour une utilisation dans une application UWP
+
+Instructions pour la création d’un nouveau projet varient en fonction de la version de Visual Studio que vous avez installée. Assurez-vous que vous avez le sélecteur de version dans le coin supérieur gauche défini sur la version correcte.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>Pour créer une bibliothèque statique UWP dans Visual Studio 2019
+
+1. Dans la barre de menus, choisissez **fichier** > **New** > **projet** pour ouvrir le **créer un nouveau projet** boîte de dialogue.
+
+1. En haut de la boîte de dialogue, définissez **langage** à **C++**, affectez la valeur **plateforme** à **Windows**et définissez **detypedeprojet** à **UWP**. 
+
+1. Dans la liste filtrée des types de projets, choisissez **bibliothèque statique (Universal Windows - C++/CX)** puis choisissez **suivant**. Dans la page suivante, donnez un nom au projet et spécifier l’emplacement du projet si vous le souhaitez.
+
+1. Choisissez le **créer** bouton pour créer le projet.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Pour créer une bibliothèque statique UWP dans Visual Studio 2017 ou Visual Studio 2015
 
 1. Dans la barre de menus, choisissez **Fichier** > **Nouveau** > **Projet**. Sous **Visual C++** > **Windows universel** choisissez **bibliothèque statique (Windows universel)**.
 
 1. Dans l' **Explorateur de solutions**, ouvrez le menu contextuel du projet et choisissez **Propriétés**. Dans le **propriétés** boîte de dialogue le **propriétés de Configuration** > **C/C++** , définissez **consommer l’Extension de Runtime Windows** à **Oui (/ZW)**.
+
+::: moniker-end
 
 Lorsque vous compilez une nouvelle bibliothèque statique, si vous effectuez un appel à une API Win32 qui est exclue pour les applications UWP, le compilateur déclenche l’erreur C3861 « Identificateur introuvable ». Pour rechercher une méthode alternative qui est pris en charge pour l’exécution de Windows, consultez [Alternatives aux API Windows dans les applications UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
 

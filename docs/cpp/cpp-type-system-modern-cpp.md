@@ -3,12 +3,12 @@ title: Système de type C++ (Modern C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 3fa13d2f0b274361c2ad34b0eb64421d2d1d037e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392277"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222132"
 ---
 # <a name="c-type-system-modern-c"></a>Système de type C++ (Modern C++)
 
@@ -53,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>Types fondamentaux (intégrés)
 
-Contrairement à certains langages, C++ n'a aucun type de base universel dont tous les autres types sont dérivés. L’implémentation Visual C++ du langage inclut de nombreuses *types fondamentaux*, également appelé *types intégrés*. Cela inclut les types numériques tels que **int**, **double**, **long**, **bool**, ainsi que les **char** et **wchar_t** pour les caractères ASCII et UNICODE, respectivement, les types. Types fondamentaux plus (à l’exception **bool**, **double**, **wchar_t** et des types connexes) tous ont versions non signées, qui modifient la plage de valeurs que la variable peut stocker. Par exemple, un **int**, qui stocke un entier signé 32 bits, peut représenter une valeur à partir d’allant de -2,147,483,648 à 2 147 483 647. Un **unsigned int**, qui est également stocké en tant que 32 bits, peut stocker une valeur entre 0 et 4 294 967 295. Le nombre total de valeurs possibles dans chaque cas est identique ; seule la plage est différente.
+Contrairement à certains langages, C++ n'a aucun type de base universel dont tous les autres types sont dérivés. Le langage inclut de nombreuses *types fondamentaux*, également appelé *types intégrés*. Cela inclut les types numériques tels que **int**, **double**, **long**, **bool**, ainsi que les **char** et **wchar_t** pour les caractères ASCII et UNICODE, respectivement, les types. Types fondamentaux plus (à l’exception **bool**, **double**, **wchar_t** et des types connexes) tous ont versions non signées, qui modifient la plage de valeurs que la variable peut stocker. Par exemple, un **int**, qui stocke un entier signé 32 bits, peut représenter une valeur à partir d’allant de -2,147,483,648 à 2 147 483 647. Un **unsigned int**, qui est également stocké en tant que 32 bits, peut stocker une valeur entre 0 et 4 294 967 295. Le nombre total de valeurs possibles dans chaque cas est identique ; seule la plage est différente.
 
 Les types fondamentaux sont identifiés par le compilateur, qui dispose de règles intégrées régissant les opérations que vous pouvez exécuter sur ces types, ainsi que la façon dont ces types peuvent être convertis en d'autres types fondamentaux. Pour obtenir une liste complète des types intégrés et leur taille et les limites numériques, consultez [Types fondamentaux](../cpp/fundamental-types-cpp.md).
 

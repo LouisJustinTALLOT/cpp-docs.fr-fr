@@ -1,12 +1,12 @@
 ---
 title: Vue d’ensemble des conventions ABI de ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfb1b5b6be6a7a368c2ed7cab255da90ae7a22df
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195501"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220988"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Vue d’ensemble des conventions ABI de ARM64
 
@@ -50,6 +50,24 @@ Comme avec la ARM32 version de Windows, sur ARM64 Windows s’exécute en mode l
 Windows s’exécutant sur ARM64 permet le matériel de processeur pour gérer les accès non alignés en toute transparence. Dans une amélioration par rapport à AArch32, cette prise en charge désormais fonctionne également pour tous les accès entier (y compris l’accès à plusieurs mots) et pour l’accès à virgule flottante.
 
 Toutefois, les accès mémoire non mis en cache (périphérique) toujours doivent toujours être alignées. Si le code peut éventuellement lire ou écrire des données mal alignées de la mémoire non mis en cache, qu'elle doit s’assurer d’aligner tous les accès.
+
+Alignement de la disposition par défaut pour les variables locales :
+
+| Taille en octets | Alignement en octets |
+| - | - |
+| 1 | 1 |
+| 2 | 2 |
+| 3, 4 | 4 |
+| > 4 | 8 |
+
+Alignement de la disposition par défaut pour les variables globales et statiques :
+
+| Taille en octets | Alignement en octets |
+| - | - |
+| 1 | 1 |
+| 2 - 7 | 4 |
+| 8 - 63 | 8 |
+| >= 64 | 16 |
 
 ## <a name="integer-registers"></a>Registres d’entiers
 
@@ -185,7 +203,9 @@ En effet, il est le même que les règles suivantes C.12–C.15 pour allouer des
 
 Valeurs intégrales sont retournées dans x0.
 
-Les valeurs à virgule flottante sont retournées dans s0/d0/v0 comme il convient.
+Les valeurs à virgule flottante sont retournées dans s0, d0 ou v0, comme il convient.
+
+Valeurs HFA et HVA sont retournées dans s0-s3, d0-d3 ou v0-v3, comme il convient.
 
 Les types retournés par valeur sont gérées différemment selon qu’ils aient certaines propriétés. Types de toutes ces propriétés,
 

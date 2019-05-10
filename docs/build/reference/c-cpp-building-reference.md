@@ -1,23 +1,23 @@
 ---
 title: Référence de génération C/C++ - Visual Studio
 description: Contenu de référence pour les outils de génération et de système de projet dans Visual Studio C/C++.
-ms.date: 12/10/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiling source code [C++], additional information
 - cl.exe compiler [C++], building programs
 - linker [C++], building reference
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
-ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: abe946ce516e915cd597a0f863c5949fed212bfa
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294757"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221444"
 ---
 # <a name="cc-building-reference"></a>Référence à la génération C/C++
 
-Visual C++ propose deux méthodes de génération d’un programme C/C++. Le moyen le plus simple (et la plus courante) consiste à [générer l’IDE de Visual Studio](../creating-and-managing-visual-cpp-projects.md). L’autre consiste à [construire à partir d’une invite de commandes à l’aide des outils de ligne de commande](../building-on-the-command-line.md). Dans les deux cas, vous pouvez créer et modifier vos fichiers source à l’aide de Visual Studio ou un éditeur tiers de votre choix.
+Visual Studio fournit deux méthodes de génération C /C++ programme. Le moyen le plus simple (et la plus courante) consiste à [générer l’IDE de Visual Studio](../creating-and-managing-visual-cpp-projects.md). L’autre consiste à [construire à partir d’une invite de commandes à l’aide des outils de ligne de commande](../building-on-the-command-line.md). Dans les deux cas, vous pouvez créer et modifier vos fichiers source à l’aide de Visual Studio ou un éditeur tiers de votre choix.
 
 ## <a name="in-this-section"></a>Dans cette section
 

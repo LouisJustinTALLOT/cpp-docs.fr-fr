@@ -1,6 +1,6 @@
 ---
 title: Référence BSCMAKE
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - BSCMAKE, reference
 - Microsoft Browse Information Maintenance Utility
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 4303e48e3d02f0f69b177e8a888157a6f90aaa89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 72ad297ee5a24bc0c7ffd3ed25959031d0b8a309
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294887"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220556"
 ---
 # <a name="bscmake-reference"></a>Référence BSCMAKE
 
@@ -24,7 +24,7 @@ ms.locfileid: "62294887"
 
 Microsoft Browse Information Maintenance Utility (BSCMAKE.EXE) génère un fichier d'informations de consultation (.bsc) à partir des fichiers .sbr créés lors de la compilation. Certains des outils tiers utilisent des fichiers .bsc pour l’analyse du code.
 
-Quand vous générez votre programme, vous pouvez créer automatiquement un fichier d'informations de consultation pour votre programme en utilisant BSCMAKE pour générer le fichier. Vous n'avez pas besoin de savoir comment exécuter BSCMAKE si vous créez votre fichier d'informations de consultation dans l'environnement de développement Visual C++. Toutefois, vous pouvez lire cette rubrique pour comprendre les choix disponibles.
+Quand vous générez votre programme, vous pouvez créer automatiquement un fichier d'informations de consultation pour votre programme en utilisant BSCMAKE pour générer le fichier. Vous n’avez pas besoin de savoir comment exécuter BSCMAKE si vous créez votre fichier d’informations de consultation dans l’environnement de développement Visual Studio. Toutefois, vous pouvez lire cette rubrique pour comprendre les choix disponibles.
 
 Si vous générez votre programme en dehors de l'environnement de développement, vous pouvez encore créer un fichier .bsc personnalisé que vous pouvez examiner dans l'environnement. Exécutez BSCMAKE sur les fichiers .sbr que vous avez créés lors de la compilation.
 

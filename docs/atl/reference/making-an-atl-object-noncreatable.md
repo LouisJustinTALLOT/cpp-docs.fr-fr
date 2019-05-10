@@ -7,12 +7,12 @@ helpviewer_keywords:
 - noncreatable ATL objects
 - ATL projects, noncreatable objects
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
-ms.openlocfilehash: 966c7c1e42cd707726a8ca65bb80914c29ad582e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5b259a677fdf3013ae1be6073afaf34f76a6e2fd
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200144"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221051"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Rendre un objet ATL comme Noncreatable
 
@@ -37,7 +37,7 @@ Vous pouvez modifier les attributs d’un objet COM basé sur ATL afin qu’un c
 ## <a name="see-also"></a>Voir aussi
 
 [Assistant Projet ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[Types de projets Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
+[C++types de projets dans Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Programmation avec ATL et le code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Configurations de projet ATL par défaut](../../atl/reference/default-atl-project-configurations.md)

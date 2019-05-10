@@ -1,6 +1,6 @@
 ---
 title: Importation et exportation
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - DLLs [C++], importing
 - exporting DLLs [C++]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 03931f7f128ab0666890bb8e76677db67dda8fc7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188845"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220640"
 ---
 # <a name="importing-and-exporting"></a>Importation et exportation
 
@@ -31,8 +31,6 @@ Vous pouvez utiliser des fichiers .def pour [importer dans une application](impo
 
 ## <a name="using-declspec"></a>À l’aide de __declspec
 
-Visual C++ utilise **__declspec (dllimport)** et **__declspec (dllexport)** pour remplacer le **__export** mot clé utilisé précédemment dans les versions 16 bits de Visual C++.
-
 Vous n’avez pas besoin d’utiliser **__declspec (dllimport)** pour votre code se compile correctement, mais cela permet au compilateur de générer un meilleur code. Le compilateur est en mesure de générer le code de meilleure qualité, car elle peut déterminer si une fonction existe dans une DLL ou non, ce qui permet au compilateur de générer le code qui ignore un niveau d’indirection qui serait normalement pas présente dans un appel de fonction qui ont franchi une limite de DLL. Toutefois, vous devez utiliser **__declspec (dllimport)** pour importer des variables utilisées dans une DLL.
 
 Avec la section EXPORTS du fichier .def appropriée, **__declspec (dllexport)** n’est pas obligatoire. **__declspec (dllexport)** a été ajoutée pour fournir un moyen simple pour exporter des fonctions à partir d’un fichier .exe ou .dll sans utiliser un fichier .def.
@@ -47,4 +45,4 @@ Le format de fichier exécutable Portable Win32 est conçu pour réduire le nomb
 
 ## <a name="see-also"></a>Voir aussi
 
-[DLL dans Visual C++](dlls-in-visual-cpp.md)
+[Créer des DLL C/C++ dans Visual Studio](dlls-in-visual-cpp.md)

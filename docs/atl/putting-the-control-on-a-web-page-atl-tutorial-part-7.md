@@ -1,14 +1,14 @@
 ---
 title: Insertion d'un contrôle sur une page Web (Didacticiel ATL, Partie 7)
 ms.custom: get-started-article
-ms.date: 09/27/2018
+ms.date: 05/06/2019
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-ms.openlocfilehash: baf0ca56ae7512ac76f64b29e3060e0749c083c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: aab9557fd73e870c0362f876642e828616b538bd
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261538"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221236"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Insertion d'un contrôle sur une page Web (Didacticiel ATL, Partie 7)
 
@@ -74,7 +74,7 @@ Vous avez ajouté du code VBScript qui obtient la propriété Sides à partir du
 
 ## <a name="indicating-that-the-control-is-safe-for-scripting"></a>Qui indique que le contrôle est sécurisé pour le script
 
-Vous pouvez afficher la page Web avec le contrôle dans Internet Explorer ou, plus commodément, utilisent la vue du navigateur Web intégrée à Visual C++. Pour voir votre contrôle dans la vue du navigateur Web, cliquez sur PolyCtl.htm, puis cliquez sur **afficher dans le navigateur**.
+Vous pouvez afficher la page Web avec le contrôle dans Internet Explorer uniquement. D’autres navigateurs ne plus en charge les contrôles ActiveX en raison de failles de sécurité. 
 
 > [!NOTE]
 > Si le contrôle n’est pas visible, savoir que certains navigateurs nécessitent des réglages de paramètres pour exécuter les contrôles ActiveX. Reportez-vous à la documentation du navigateur sur l’activation des contrôles ActiveX.

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: e469556a773ffcdbf50e53d94022c0b6b7abf869
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 05b9d8bcf5d7364e1dcd31940bc0db64a5e605f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404427"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447306"
 ---
 # <a name="friend-assemblies-c"></a>Assemblys friend (C++)
 
@@ -47,7 +47,7 @@ Bien que les types au niveau de la portée espace de noms et portée globale peu
 
 Accès à tous les types dans un assembly doit être accordé explicitement.  Par exemple, l’assembly C n’a pas accès à tous les types dans l’assembly A Si l’assembly C référence l’assembly B et assembly B a accès à tous les types dans l’assembly A.
 
-Pour plus d’informations sur la signature, autrement dit, comment donner un nom fort à — un assembly qui est généré à l’aide du compilateur Visual C++, consultez [les assemblys de nom fort (signature d’Assembly) (C++ / c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+Pour plus d’informations sur la signature, autrement dit, comment donner un nom fort à — un assembly qui est généré à l’aide de Microsoft C++ compilateur, consultez [les assemblys de nom fort (signature d’Assembly) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 Comme alternative à l’aide de la fonctionnalité d’assemblys friend, vous pouvez utiliser <xref:System.Security.Permissions.StrongNameIdentityPermission> pour restreindre l’accès aux types individuels.
 

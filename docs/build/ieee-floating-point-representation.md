@@ -1,6 +1,6 @@
 ---
 title: Représentation à virgule flottante IEEE
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - float keyword
 - real*8 value
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: 69686e7e1c8994b799607eebf7e50387ed688272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 130a79ae6846df27ffabfd6cb6649e0a0de03e4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188832"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220619"
 ---
 # <a name="ieee-floating-point-representation"></a>Représentation à virgule flottante IEEE
 
-Microsoft Visual C++ est cohérent avec les standards numériques IEEE. La norme IEEE-754 décrit les formats à virgule flottante, une méthode pour représenter des nombres réels dans le matériel. Il existe au moins cinq formats internes pour les nombres à virgule flottante qui peuvent être représentées dans le matériel ciblé par le compilateur MSVC, mais le compilateur utilise uniquement deux d'entre eux. Le *simple précision* (4 octets) et *double précision* les formats (8 octets) sont utilisés dans Visual C++. Simple précision est déclarée à l’aide du mot clé **float**. Double précision est déclarée à l’aide du mot clé **double**. La norme IEEE spécifie également *demi-précision* (2 octets) et *quadruple-précision* formats (16 octets), ainsi qu’une *double étendu-précision* (10 octets) format, certains compilateurs C et C++ implémentent en tant que le **long double** type de données. Dans le compilateur MSVC, le **long double** type de données est traité comme un type distinct, mais le type de stockage est mappé sur **double**. Il existe, toutefois, intrinsèque et prise en charge du langage assembleur pour effectuer des calculs à l’aide d’autres formats, y compris l’étendue-format double précision (10 octets), où la prise en charge par le matériel.
+Microsoft C++ (MSVC) est cohérent avec les standards numériques IEEE. La norme IEEE-754 décrit les formats à virgule flottante, une méthode pour représenter des nombres réels dans le matériel. Il existe au moins cinq formats internes pour les nombres à virgule flottante qui peuvent être représentées dans le matériel ciblé par le compilateur MSVC, mais le compilateur utilise uniquement deux d'entre eux. Le *simple précision* (4 octets) et *double précision* les formats (8 octets) sont utilisés dans MSVC. Simple précision est déclarée à l’aide du mot clé **float**. Double précision est déclarée à l’aide du mot clé **double**. La norme IEEE spécifie également *demi-précision* (2 octets) et *quadruple-précision* formats (16 octets), ainsi qu’une *double étendu-précision* (10 octets) format, certains compilateurs C et C++ implémentent en tant que le **long double** type de données. Dans le compilateur MSVC, le **long double** type de données est traité comme un type distinct, mais le type de stockage est mappé sur **double**. Il existe, toutefois, intrinsèque et prise en charge du langage assembleur pour effectuer des calculs à l’aide d’autres formats, y compris l’étendue-format double précision (10 octets), où la prise en charge par le matériel.
 
 Les valeurs sont stockées comme suit :
 

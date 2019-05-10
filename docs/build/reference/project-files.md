@@ -5,16 +5,16 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: cfe40d6520187212ab77607273c555f12012fd02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 306b6a7b39db758c3712b1d57460268fc6414726
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319822"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217734"
 ---
 # <a name="project-files"></a>Fichiers projet
 
-Un fichier projet Visual C++ est un fichier XML dont l’extension de nom de fichier est .vcxproj et qui contient des informations nécessaires à la génération d’un projet Visual C++. Notez que le fichier de projet importe différents fichiers de projet ayant l’extension *.props* ou *.targets*. Ces fichiers contiennent des informations de build supplémentaires, et peuvent faire référence à d’autres fichiers *.props* ou *.targets*. Les macros contenues dans le chemin d’accès au fichier (par exemple `$(VCTargetsPath)`) dépendent de votre installation de Visual Studio. Pour plus d’informations sur ces macros et *.props* et *.targets* de fichiers, consultez [VC ++ Directories Property Page](vcpp-directories-property-page.md), [compilateur C++ de définir et build propriétés dans Visual Studio](../working-with-project-properties.md) et [macros courantes pour générer des propriétés et les commandes](common-macros-for-build-commands-and-properties.md).
+Un C++ fichier projet dans Visual Studio est un fichier basé sur XML qui a l’extension de nom de fichier .vcxproj et contient des informations qui sont requis pour générer un C++ projet. Notez que le fichier de projet importe différents fichiers de projet ayant l’extension *.props* ou *.targets*. Ces fichiers contiennent des informations de build supplémentaires, et peuvent faire référence à d’autres fichiers *.props* ou *.targets*. Les macros contenues dans le chemin d’accès au fichier (par exemple `$(VCTargetsPath)`) dépendent de votre installation de Visual Studio. Pour plus d’informations sur ces macros et *.props* et *.targets* de fichiers, consultez [VC ++ Directories Property Page](vcpp-directories-property-page.md), [compilateur C++ de définir et build propriétés dans Visual Studio](../working-with-project-properties.md) et [macros courantes pour générer des propriétés et les commandes](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Exemple
 

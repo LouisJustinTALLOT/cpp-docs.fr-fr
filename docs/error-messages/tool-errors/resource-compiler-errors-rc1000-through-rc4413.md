@@ -1,15 +1,15 @@
 ---
-title: Avertissements et erreurs du compilateur de ressources
+title: Erreurs et avertissements du compilateur et de ressources
 ms.date: 04/17/2019
 ms.assetid: 0819f955-0561-491d-af3d-2453f4e2d035
 ms.openlocfilehash: c760e59e183b78122b7498ca8faf2c70ac454fd2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297838"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857262"
 ---
-# <a name="resource-compiler-errors-and-warnings-rcxxxx-rwxxxx"></a>Erreurs du compilateur de ressources et des avertissements (RCxxxx, RWxxxx)
+# <a name="resource-compiler-errors-and-warnings-rcxxxx-rwxxxx"></a>Erreurs et avertissements du compilateur et de ressources (RCxxxx, RWxxxx)
 
 Cette section est une référence pour les erreurs générées par le compilateur de ressources. Erreurs du compilateur de ressources et des avertissements ont la forme RC*xxxx* ou RW*xxxx*, où *xxxx* est un nombre à quatre chiffres.
 

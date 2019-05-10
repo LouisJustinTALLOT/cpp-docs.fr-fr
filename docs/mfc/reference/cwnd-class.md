@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323471"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220357"
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 
@@ -8262,7 +8262,7 @@ Contient les coordonnées x et y du curseur. Ces coordonnées sont toujours des 
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un des test de positionnement de souris énumérées valeurs répertoriées ci-dessous.
+Un des test de positionnement de souris valeurs énumérées. Consultez [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) pour obtenir la liste de valeurs.
 
 ### <a name="remarks"></a>Notes
 
@@ -8282,7 +8282,7 @@ afx_msg void OnNcLButtonDblClk(
 ### <a name="parameters"></a>Paramètres
 
 *nHitTest*<br/>
-Spécifie le [code de test de positionnement](#onnchittest). Un test de positionnement est un test qui détermine l’emplacement du curseur.
+Spécifie le [code de test de positionnement](#onnchittest). Un test de positionnement est un test qui détermine l’emplacement du curseur. Consultez [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) pour obtenir la liste de valeurs.
 
 *point*<br/>
 Spécifie un `CPoint` objet qui contient les coordonnées x et y de la position du curseur, les coordonnées d’écran. Ces coordonnées sont toujours relatives à l’angle supérieur gauche de l’écran.
@@ -8307,7 +8307,7 @@ afx_msg void OnNcLButtonDown(
 ### <a name="parameters"></a>Paramètres
 
 *nHitTest*<br/>
-Spécifie le [code de test de positionnement](#onnchittest). Un test de positionnement est un test qui détermine l’emplacement du curseur.
+Spécifie le [code de test de positionnement](#onnchittest). Un test de positionnement est un test qui détermine l’emplacement du curseur. Consultez [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) pour obtenir la liste de valeurs.
 
 *point*<br/>
 Spécifie un `CPoint` objet qui contient les coordonnées x et y de la position du curseur, les coordonnées d’écran. Ces coordonnées sont toujours relatives à l’angle supérieur gauche de l’écran.
@@ -8332,7 +8332,7 @@ afx_msg void OnNcLButtonUp(
 ### <a name="parameters"></a>Paramètres
 
 *nHitTest*<br/>
-Spécifie le [code de test de positionnement](#onnchittest). Un test de positionnement est un test qui détermine l’emplacement du curseur.
+Spécifie le [code de test de positionnement](#onnchittest). Un test de positionnement est un test qui détermine l’emplacement du curseur. Consultez [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) pour obtenir la liste de valeurs.
 
 *point*<br/>
 Spécifie un `CPoint` objet qui contient les coordonnées x et y de la position du curseur, les coordonnées d’écran. Ces coordonnées sont toujours relatives à l’angle supérieur gauche de l’écran.

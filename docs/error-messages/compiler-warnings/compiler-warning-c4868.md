@@ -4,12 +4,12 @@ ms.date: 10/26/2017
 f1_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: d0bc8716e53e71c52f6a31036a95d0b4cefedd79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72700091fcd22271e6913228a1206b3d5efcbdef
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388707"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447180"
 ---
 # <a name="compiler-warning-level-4-c4868"></a>Avertissement (niveau 4) du compilateur C4868
 
@@ -17,7 +17,7 @@ ms.locfileid: "62388707"
 
 Les éléments d’une liste d’initialiseurs entre accolades doivent être évaluées dans l’ordre de gauche à droite. Il existe deux cas dans lequel le compilateur est incapable de garantir l’ordre : la première est lorsque certains éléments sont des objets passés par valeur ; la seconde est lors de la compilation avec `/clr` et certains éléments de sont des champs d’objets ou éléments de tableau. Lorsque le compilateur ne peut pas garantir l’évaluation de gauche à droite, il émet l’avertissement C4868.
 
-Cet avertissement peut être généré en raison de travail de la conformité du compilateur pour Visual C++ 2015 Update 2. Le code compilé avant Visual C++ 2015 Update 2 peut désormais générer C4868.
+Cet avertissement peut être généré en raison de travail de la conformité du compilateur pour Visual Studio 2015 Update 2. Le code compilé avant Visual Studio 2015 Update 2 peut désormais générer C4868.
 
 Cet avertissement est désactivé par défaut. Utilisez `/Wall` pour activer cet avertissement.
 

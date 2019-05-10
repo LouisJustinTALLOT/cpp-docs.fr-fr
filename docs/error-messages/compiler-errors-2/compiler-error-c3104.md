@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 3b2737bd67798fd467649be175d581ca551e1331
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fee023809246634f2f3da266a718e45861eae76e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404167"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447834"
 ---
 # <a name="compiler-error-c3104"></a>Erreur du compilateur C3104
 
@@ -21,7 +21,7 @@ Vous avez spécifié un argument non valide pour un attribut.
 
 Consultez [Types de paramètre d’attribut](../../extensions/attribute-parameter-types-cpp-component-extensions.md) pour plus d’informations.
 
-Cette erreur peut être due à la mise en conformité du compilateur pour Visual C++ 2005 : lors du passage de tableaux managés à des attributs personnalisés, le type du tableau n’est plus déduit à partir de la liste d’initialisation d’agrégats. Le compilateur requiert désormais vous permettent de spécifier le type de tableau ainsi que la liste d’initialiseurs.
+Cette erreur peut être due à la mise en conformité du compilateur pour Visual Studio 2005 : lors du passage de tableaux managés à des attributs personnalisés, le type du tableau n’est plus déduit à partir de la liste d’initialisation d’agrégats. Le compilateur requiert désormais vous permettent de spécifier le type de tableau ainsi que la liste d’initialiseurs.
 
 ## <a name="example"></a>Exemple
 
