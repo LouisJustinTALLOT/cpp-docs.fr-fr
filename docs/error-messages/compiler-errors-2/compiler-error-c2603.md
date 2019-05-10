@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2603
 ms.assetid: 9ca520d0-f082-4b65-933d-17c3bcf8b02c
-ms.openlocfilehash: 5391aed09b7fd448a9d72ea7cc17cd5c26fc5f04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4540180058c890a1dec9c4060f796f1f044c934
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215399"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447998"
 ---
 # <a name="compiler-error-c2603"></a>Erreur du compilateur C2603
 
 > «*fonction*» : Trop d’objets static de portée de bloc avec constructeur/destructeurs dans la fonction
 
-Dans les versions du compilateur Visual C++ avant Visual Studio 2015, ou lorsque le [/Zc:threadSafeInit-](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) option du compilateur est spécifiée, il existe une limite de 31 sur le nombre d’objets statiques, vous pouvez avoir dans une fonction inline visible de l’extérieur .
+Dans les versions de Microsoft C++ compilateur avant Visual Studio 2015, ou lorsque le [/Zc:threadSafeInit-](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) option du compilateur est spécifiée, il existe une limite de 31 sur le nombre d’objets statiques, vous pouvez avoir dans extérieurement visible fonction inline.
 
-Pour résoudre ce problème, nous vous recommandons adoptez une version plus récente de l’ensemble d’outils du compilateur Visual C++, ou, si possible, supprimez l’option de compilateur /Zc:threadSafeInit-. Si ce n’est pas possible, envisagez de combiner vos objets statiques. Si les objets sont du même type, envisagez d’utiliser un tableau statique unique de ce type et référencer des membres individuels en fonction des besoins.
+Pour résoudre ce problème, nous vous recommandons d’adopter une version plus récente de Microsoft C++ ensemble d’outils du compilateur, ou, si possible, supprimez l’option de compilateur /Zc:threadSafeInit-. Si ce n’est pas possible, envisagez de combiner vos objets statiques. Si les objets sont du même type, envisagez d’utiliser un tableau statique unique de ce type et référencer des membres individuels en fonction des besoins.
 
 ## <a name="example"></a>Exemple
 

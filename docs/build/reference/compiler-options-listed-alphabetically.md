@@ -1,14 +1,14 @@
 ---
 title: Options du compilateur classées par ordre alphabétique
-ms.date: 04/08/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ba4357f4c14e5cca9363ad2029374ede93529a2a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272332"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221767"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Options du compilateur classées par ordre alphabétique
 
@@ -34,7 +34,7 @@ Le tableau suivant dresse la liste complète des options du compilateur classée
 |[/E](e-preprocess-to-stdout.md)|Copie la sortie du préprocesseur vers une sortie standard.|
 |[/EH](eh-exception-handling-model.md)|Spécifie le modèle de gestion des exceptions.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Copie la sortie du préprocesseur vers une sortie standard.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Vous permet de signaler les erreurs internes du compilateur (ICE) directement à l'équipe Visual C++.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|Permet de fournir les informations d’erreur (ICE) interne du compilateur directement à Microsoft C++ équipe.|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|Définir le jeu de caractères d’exécution.|
 |[/F](f-set-stack-size.md)|Définit la taille de la pile.|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Génère du code qui est optimisé pour un x64 spécifique architecture ou pour les caractéristiques des micro-architectures dans les AMD64 Extended Memory 64 Technology (EM64T) architectures et.|
@@ -153,7 +153,7 @@ Le tableau suivant dresse la liste complète des options du compilateur classée
 |[/Zc](zc-conformance.md)|Spécifie le comportement standard sous [/Ze](za-ze-disable-language-extensions.md).[ / Za, /Ze (désactiver les Extensions de langage)](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|Obsolète. Active les extensions de langage.|
 |[/Zf](zf.md)|Améliore les temps de génération dans les builds parallèles PDB.|
-|[/Zg](zg-generate-function-prototypes.md)|Supprimé dans Visual C++ 2015. Génère des prototypes de fonction.|
+|[/Zg](zg-generate-function-prototypes.md)|Supprimée dans Visual Studio 2015. Génère des prototypes de fonction.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Inclut des informations de débogage dans une base de données du programme compatible avec Modifier & Continuer.|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Génère des informations de débogage complètes.|
 |[/Zl](zl-omit-default-library-name.md)|Supprime le nom de la bibliothèque par défaut dans le fichier .obj (x86 uniquement).|

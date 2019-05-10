@@ -1,18 +1,18 @@
 ---
 title: Unions
-ms.date: 11/19/2018
+ms.date: 05/06/2019
 f1_keywords:
 - union_cpp
 helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: f14f1197c4c835e9dfb753b1396e12e2d2f12772
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 58f4940d209b783b00c7167265ff1a2a733c947c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312173"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222342"
 ---
 # <a name="unions"></a>Unions
 
@@ -64,7 +64,6 @@ int main()
 Dans l'exemple précédent, tout code qui accède à l'union doit connaître le membre qui détient les données. La solution la plus courante à ce problème consiste à placer l'union dans un struct avec un membre enum supplémentaire qui indique le type de données actuellement stockées dans l'union. Il s’agit une *union discriminée* et l’exemple suivant montre le modèle de base.
 
 ```cpp
-#include "stdafx.h"
 #include <queue>
 
 using namespace std;

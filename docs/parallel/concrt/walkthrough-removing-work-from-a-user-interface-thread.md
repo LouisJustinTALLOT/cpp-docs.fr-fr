@@ -1,16 +1,16 @@
 ---
 title: 'Procédure pas à pas : Suppression de travail d’un Thread d’Interface utilisateur'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3bd41b1815737730067929c4728b32181cb2fc03
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407802"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857001"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Procédure pas à pas : Suppression de travail d’un Thread d’Interface utilisateur
 
@@ -54,9 +54,9 @@ Cette section décrit comment créer l’application MFC de base.
 
 ### <a name="to-create-a-visual-c-mfc-application"></a>Pour créer une application MFC Visual C++
 
-1. Dans le menu **Fichier** , cliquez sur **Nouveau**, puis sur **Projet**.
+1. Utilisez le **Assistant Application MFC** pour créer une application MFC avec tous les paramètres par défaut. Consultez [Procédure pas à pas : À l’aide de nouveaux contrôles d’environnement MFC](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) pour obtenir des instructions sur la façon d’ouvrir l’Assistant pour votre version de Visual Studio.
 
-1. Dans le **nouveau projet** boîte de dialogue le **modèles installés** volet, sélectionnez **Visual C++**, puis, dans le **modèles** volet, sélectionnez **Application MFC**. Tapez un nom pour le projet, par exemple, `Mandelbrot`, puis cliquez sur **OK** pour afficher le **Assistant Application MFC**.
+1. Tapez un nom pour le projet, par exemple, `Mandelbrot`, puis cliquez sur **OK** pour afficher le **Assistant Application MFC**.
 
 1. Dans le **Type d’Application** volet, sélectionnez **monodocument**. Vérifiez que le **support de l’architecture Document/vue** case à cocher est désactivée.
 

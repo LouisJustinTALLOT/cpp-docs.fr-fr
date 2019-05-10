@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4206dd9c675325d3141a56b0e57f6cf67dc5693d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404635"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448146"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Thread et Marshaling (C++/CX)
 
@@ -35,7 +35,7 @@ Lorsque vous créez une application de plateforme Windows universelle, vous pouv
 
 ### <a name="compiler-warning-c4451-when-consuming-non-agile-classes"></a>Avertissement C4451 lors de l’utilisation des classes non agiles
 
-Pour différentes raisons, certaines classes ne peuvent pas être agiles. Si vous accédez à des instances de classes non agiles depuis un thread d'interface utilisateur et un thread d'arrière-plan, vérifiez avec le plus grand soin que le comportement est correct au moment de l'exécution. Le compilateur Visual C++ émet des avertissements lorsque vous instanciez une classe d'exécution non agile dans votre application au niveau de la portée globale ou que vous déclarez un type non agile comme membre de classe d'une classe ref elle-même marquée comme agile.
+Pour différentes raisons, certaines classes ne peuvent pas être agiles. Si vous accédez à des instances de classes non agiles depuis un thread d'interface utilisateur et un thread d'arrière-plan, vérifiez avec le plus grand soin que le comportement est correct au moment de l'exécution. Microsoft C++ compilateur émet des avertissements lorsque vous instanciez une classe d’exécution non agile dans votre application avec une portée globale ou que vous déclarez un type non agile comme un membre de classe dans une classe ref elle-même est marqué comme agile.
 
 Parmi les classes non agiles, les plus faciles à gérer sont celles qui ont `ThreadingModel`=Both et `MarshallingType`=Standard.  Pour rendre ces classes agiles, il suffit d'utiliser la classe d'assistance `Agile<T>` .   L'exemple ci-dessous montre une déclaration d'un objet non agile de type `Windows::Security::Credentials::UI::CredentialPickerOptions^`et l'avertissement du compilateur qui est alors émis.
 

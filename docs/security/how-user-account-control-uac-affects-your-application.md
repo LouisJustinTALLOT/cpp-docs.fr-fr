@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-ms.openlocfilehash: 3702462ec892025cfb4f24d9c91e6db705b1b9a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3818b0ff7d4e4c551c41726dd44935beb5d32842
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179243"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448476"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Répercussions du contrôle de compte utilisateur sur votre application
 
@@ -22,7 +22,7 @@ Le contrôle de compte d'utilisateur (UAC) est une fonctionnalité de Windows Vi
 
 ## <a name="building-projects-after-enabling-uac"></a>Génération de projets après l'activation du contrôle de compte d'utilisateur
 
-Si vous générez un projet Visual C++ sur Windows Vista avec le contrôle de compte d'utilisateur désactivé et que vous activez ultérieurement le contrôle de compte d'utilisateur, vous devez nettoyer et régénérer le projet pour qu'il fonctionne correctement.
+Si vous générez un Visual Studio C++ projet sur Vista Windows avec l’UAC est désactivée et que vous activez ultérieurement le compte d’utilisateur, vous devez nettoyer et régénérer le projet pour qu’il fonctionne correctement.
 
 ## <a name="applications-that-require-administrative-privileges"></a>Applications qui requièrent des privilèges d'administrateur
 

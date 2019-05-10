@@ -8,18 +8,18 @@ helpviewer_keywords:
 - assembler [C++], instruction set
 - instruction set [C++]
 ms.assetid: a45b5b22-9b5f-4545-81ec-70eb8ea2ef9b
-ms.openlocfilehash: 5d73b70603c3a3f51944a95fe54af11ecb50a9c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 97794261c0dc77ca41d543aa34a1fc2111c83619
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166930"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445912"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>Jeu d'instructions pour l'assembly inline
 
 **Section spécifique à Microsoft**
 
-Le compilateur Visual C++ prend en charge tous les opcodes via les processeurs Pentium 4 et AMD Athlon. Instructions supplémentaires prises en charge par le processeur cible peuvent être créées avec le [pseudo-instruction _emit](../../assembler/inline/emit-pseudoinstruction.md).
+Microsoft C++ compilateur prend en charge tous les opcodes via les processeurs Pentium 4 et AMD Athlon. Instructions supplémentaires prises en charge par le processeur cible peuvent être créées avec le [pseudo-instruction _emit](../../assembler/inline/emit-pseudoinstruction.md).
 
 **FIN de la section spécifique à Microsoft**
 

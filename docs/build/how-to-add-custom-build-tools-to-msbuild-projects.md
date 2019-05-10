@@ -1,17 +1,15 @@
 ---
 title: 'Procédure : Ajouter des outils de génération personnalisée à des projets MSBuild'
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.addcustombuildtools
 helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
-ms.openlocfilehash: 05f160e650c0dd717d7ce0f29259f866d751fdba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 812932d9e668ab5ee0eb75eadbf75be3d791cddb
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188897"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220722"
 ---
 # <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Procédure : Ajouter des outils de génération personnalisée à des projets MSBuild
 
@@ -50,6 +48,6 @@ Pour spécifier quand l’outil de génération personnalisée s’exécute, uti
 
 ## <a name="see-also"></a>Voir aussi
 
-[Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Procédure pas à pas : Utilisation de MSBuild pour créer un projet C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [Guide pratique pour utiliser des événements de génération dans des projets MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
 [Guide pratique pour ajouter une étape de génération personnalisée à des projets MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)

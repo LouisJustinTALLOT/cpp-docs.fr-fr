@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2299
 ms.assetid: d001c2bc-f6fd-47aa-8e42-0eb824d6441d
-ms.openlocfilehash: 4776ddede31dbcebe56a5919fd111f4df7248215
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39659baebf7dc1859a69021f60ed452964ae61af
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182689"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447956"
 ---
 # <a name="compiler-error-c2299"></a>Erreur du compilateur C2299
 
 'fonction' : changement de comportement : une spécialisation explicite ne peut pas être un constructeur de copie ou l’opérateur d’assignation de copie
 
-Cette erreur peut également être due à la mise en conformité du compilateur pour Visual C++ 2005 : les versions précédentes de Visual C++ autorisaient les spécialisations explicites pour un constructeur de copie ou un opérateur d’assignation de copie.
+Cette erreur peut également être due à la mise en conformité du compilateur pour Visual Studio 2005 : les versions précédentes de Visual C++ autorisaient les spécialisations explicites pour un constructeur de copie ou un opérateur d’assignation de copie.
 
 Pour résoudre C2299, ne faites pas le constructeur de copie ou opérateur d’assignation une fonction de modèle, mais plutôt une fonction sans modèle qui prend un type de classe. Tout code qui appelle le constructeur de copie ou l’opérateur d’assignation en spécifiant explicitement les arguments template doit supprimer les arguments template.
 

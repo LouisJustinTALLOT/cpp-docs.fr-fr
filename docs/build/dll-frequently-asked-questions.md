@@ -1,17 +1,17 @@
 ---
 title: Questions fréquentes sur les DLL MFC
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - troubleshooting [C++], DLLs
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 9108aaf3fcface847b0391455a2aecd4d45658c4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274116"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220937"
 ---
 # <a name="dll-frequently-asked-questions"></a>Forum Aux Questions à propos des DLL
 
@@ -41,11 +41,7 @@ Une DLL MFC qui crée un nouveau thread MFC lors du démarrage cesse de répondr
 
 ## <a name="mfc_multithreaded_2"></a> Une application multithread peut accéder à une DLL MFC dans différents threads ?
 
-Les applications multithread peuvent accéder à des DLL MFC normales liées de manière dynamique aux MFC et DLL d’extension MFC à partir de différents threads. Et, à compter de Visual C++ version 4.2, une application peut accéder à des DLL MFC normales liées de manière statique aux MFC à partir de plusieurs threads créés dans l’application.
-
-Avant la version 4.2, un seul thread externe peut attacher à une DLL MFC normale liée de manière statique aux MFC.
-
-Notez que le terme USRDLL n’est plus utilisé dans la documentation de Visual C++. Une DLL MFC normale liée de manière statique aux MFC possède les mêmes caractéristiques que l’ancienne USRDLL.
+Les applications multithread peuvent accéder à des DLL MFC normales liées de manière dynamique aux MFC et DLL d’extension MFC à partir de différents threads. Une application peut accéder à des DLL MFC normales liées de manière statique aux MFC à partir de plusieurs threads créés dans l’application.
 
 ## <a name="mfc_prohibited_classes"></a> Existe-t-il des classes MFC ou des fonctions qui ne peut pas être utilisées dans une DLL MFC ?
 
@@ -69,4 +65,4 @@ Une des causes possibles de la fuite de mémoire est que MFC crée des objets te
 
 ## <a name="see-also"></a>Voir aussi
 
-[DLL dans Visual C++](dlls-in-visual-cpp.md)
+[Créer des DLL C/C++ dans Visual Studio](dlls-in-visual-cpp.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ce38c2f3f4effa993dfa32221d82bece65096dd
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305513"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448529"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035 : À l’aide de plusieurs fichiers de ressources et les fichiers d’en-tête avec Visual C++
 
@@ -204,7 +204,7 @@ RESOURCE.H     AFXRES.H
     AFXPRINT.RC
 ```
 
-À l’aide de directives au moment de la compilation, vous pouvez organiser vos ressources modifiables et non modifiables dans Visual C++ en plusieurs fichiers .RC, où le MYAPP.RC « Maître » ne fait rien d’autre que d’inclure les autres fichiers .RC. Si vous utilisez un fichier .MAK de projet Visual C++, vous devez inclure le fichier .RC « Maître » dans le projet afin que toutes les ressources incluses soient compilées avec votre application.
+À l’aide de directives au moment de la compilation, vous pouvez organiser vos ressources modifiables et non modifiables dans Visual C++ en plusieurs fichiers .RC, où le MYAPP.RC « Maître » ne fait rien d’autre que d’inclure les autres fichiers .RC. Si vous utilisez Visual Studio C++ projet. Fichier de clé MAK, puis vous devez inclure le « master ». RC de fichiers dans le projet ainsi que tous les le # inclus les ressources sont compilées avec votre application.
 
 **Mise en œuvre des fichiers de Visual C++ non modifiables**
 

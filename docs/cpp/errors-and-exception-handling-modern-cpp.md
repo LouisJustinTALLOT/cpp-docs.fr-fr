@@ -1,14 +1,14 @@
 ---
 title: Gestion des erreurs et des exceptions (Modern C++)
-ms.date: 09/17/2018
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bb27a92347b327e22afc4f6bb2fb248c12290cae
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398912"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222144"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Gestion des erreurs et des exceptions (Modern C++)
 
@@ -90,13 +90,13 @@ Exceptions et les assertions sont deux mécanismes distincts pour la détection 
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Exceptions C++ et des exceptions SEH de Windows
 
-Les programmes C et C++ peuvent utiliser la mécanisme (SEH) dans le système d’exploitation Windows structurée des exceptions. Les concepts de gestion des exceptions structurées ressemblent à celles des C++ exceptions, sauf que SEH utilise le **__try**, **__except**, et **__finally** construit au lieu de **essayez**  et **catch**. Dans Visual C++, les exceptions C++ sont implémentées pour SEH. Toutefois, lorsque vous écrivez du code C++, utilisez la syntaxe d’exception C++.
+Les programmes C et C++ peuvent utiliser la mécanisme (SEH) dans le système d’exploitation Windows structurée des exceptions. Les concepts de gestion des exceptions structurées ressemblent à celles des C++ exceptions, sauf que SEH utilise le **__try**, **__except**, et **__finally** construit au lieu de **essayez**  et **catch**. Dans Microsoft C++ compilateur (MSVC), C++ les exceptions sont implémentées pour SEH. Toutefois, lorsque vous écrivez du code C++, utilisez la syntaxe d’exception C++.
 
 Pour plus d’informations sur la gestion structurée des exceptions, consultez [structurée des exceptions (C/C++)](../cpp/structured-exception-handling-c-cpp.md).
 
 ## <a name="exception-specifications-and-noexcept"></a>Spécifications d’exception et noexcept
 
-Les spécifications d’exceptions ont été introduites dans C++ qui permet de spécifier les exceptions qu’une fonction peut lever. Toutefois, les spécifications d’exceptions se sont révélées problématiques dans la pratique et sont déconseillées dans la norme C ++ 11 brouillon. Nous vous recommandons de ne pas utiliser les spécifications d’exceptions à l’exception de `throw()`, ce qui indique que la fonction n’autorise aucune exception d’échapper. Si vous devez utiliser des spécifications d’exception du type `throw(` *type*`)`, n’oubliez pas que Visual C++ s’éloigne de la norme de certaines façons. Pour plus d’informations, consultez [spécifications d’Exception (throw)](../cpp/exception-specifications-throw-cpp.md). Le `noexcept` spécificateur est introduit dans C ++ 11 en tant que l’alternative recommandée à `throw()`.
+Les spécifications d’exceptions ont été introduites dans C++ qui permet de spécifier les exceptions qu’une fonction peut lever. Toutefois, les spécifications d’exceptions se sont révélées problématiques dans la pratique et sont déconseillées dans la norme C ++ 11 brouillon. Nous vous recommandons de ne pas utiliser les spécifications d’exceptions à l’exception de `throw()`, ce qui indique que la fonction n’autorise aucune exception d’échapper. Si vous devez utiliser des spécifications d’exception du type `throw(` *type*`)`, n’oubliez pas que MSVC s’éloigne de la norme de certaines façons. Pour plus d’informations, consultez [spécifications d’Exception (throw)](../cpp/exception-specifications-throw-cpp.md). Le `noexcept` spécificateur est introduit dans C ++ 11 en tant que l’alternative recommandée à `throw()`.
 
 ## <a name="see-also"></a>Voir aussi
 

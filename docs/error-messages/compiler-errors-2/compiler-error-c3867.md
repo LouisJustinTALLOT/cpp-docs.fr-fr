@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9308e238c86c7b8a957720228a823688fac289d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242875"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447189"
 ---
 # <a name="compiler-error-c3867"></a>Erreur du compilateur C3867
 
@@ -19,7 +19,7 @@ ms.locfileid: "62242875"
 
 Vous avez essayé de prendre l'adresse d'une fonction membre sans qualifier la fonction membre avec son nom de classe et l'opérateur d'adresse.
 
-Cette erreur peut également être due à la mise en conformité du compilateur pour Visual C++ 2005 : conformité pointeur vers membre améliorée. Le code compilé avant Visual C++ 2005 génère désormais l'erreur C3867.
+Cette erreur peut également être due à la mise en conformité du compilateur pour Visual Studio 2005 : conformité pointeur vers membre améliorée. Le code compilé avant Visual Studio 2005 génère désormais l’erreur C3867.
 
 ## <a name="example"></a>Exemple
 

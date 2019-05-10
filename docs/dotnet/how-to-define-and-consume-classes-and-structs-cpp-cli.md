@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387478"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447298"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Procédure : Définir et consommer des Classes et Structs (C++ / c++ / CLI)
 
@@ -127,7 +127,7 @@ Vous pouvez contrôler la visibilité des types common language runtime (CLR) de
 
 `public` Indique qu’un type est visible dans tout fichier source qui contienne un `#using` directive pour l’assembly qui contient le type.  `private` Indique qu’un type n’est pas visible aux fichiers sources qui contiennent un `#using` directive pour l’assembly qui contient le type. Toutefois, les types privés sont visibles dans le même assembly. Par défaut, la visibilité d’une classe est `private`.
 
-Par défaut avant Visual C++ 2005, les types natifs avaient une accessibilité publique en dehors de l’assembly. Activer [Avertissement du compilateur (niveau 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) pour vous aider à voir où les types natifs privés sont utilisés correctement. Utilisez le [make_public](../preprocessor/make-public.md) pragma pour donner une accessibilité publique à un type natif dans un fichier de code source que vous ne pouvez pas modifier.
+Par défaut avant Visual Studio 2005, les types natifs avaient une accessibilité publique en dehors de l’assembly. Activer [Avertissement du compilateur (niveau 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) pour vous aider à voir où les types natifs privés sont utilisés correctement. Utilisez le [make_public](../preprocessor/make-public.md) pragma pour donner une accessibilité publique à un type natif dans un fichier de code source que vous ne pouvez pas modifier.
 
 Pour plus d’informations, consultez [#using, directive](../preprocessor/hash-using-directive-cpp.md).
 
@@ -588,7 +588,7 @@ int main() {
 Base::Test
 ```
 
-L’exemple suivant montre que le compilateur Visual C++ appelle une fonction dans la classe la plus dérivée, même si une conversion doit correspondre à un ou plusieurs des paramètres et pas appeler une fonction dans une classe de base qui est une meilleure correspondance pour l’appel de fonction.
+L’exemple suivant montre que Microsoft C++ compilateur appelle une fonction de la classe la plus dérivée, même si une conversion doit correspondre à un ou plusieurs des paramètres et pas appeler une fonction dans une classe de base qui est une meilleure correspondance pour l’appel de fonction.
 
 ```cpp
 // compile with: /clr
@@ -736,7 +736,7 @@ Le garbage collector CLR supprime les objets managés inutilisés et libère leu
 
 Un finaliseur Visual C++ n’est pas le même que le <xref:System.Object.Finalize%2A> (méthode). (Documentation du CLR utilise le finaliseur et la <xref:System.Object.Finalize%2A> méthode synonymes). Le <xref:System.Object.Finalize%2A> méthode est appelée par le garbage collector, qui appelle chaque finaliseur dans une chaîne d’héritage de classe. Contrairement aux destructeurs Visual C++, un appel de la classe dérivée de finaliseur n’entraîne pas le compilateur appeler le finaliseur dans toutes les classes de base.
 
-Étant donné que le compilateur Visual C++ prend en charge la mise en production déterministe des ressources, n’essayez pas d’implémenter le <xref:System.IDisposable.Dispose%2A> ou <xref:System.Object.Finalize%2A> méthodes. Toutefois, si vous êtes familiarisé avec ces méthodes, voici comment un finaliseur de Visual C++ et un destructeur qui appelle le finaliseur mappent à la <xref:System.IDisposable.Dispose%2A> modèle :
+Étant donné que Microsoft C++ compilateur prend en charge la mise en production déterministe des ressources, n’essayez pas d’implémenter le <xref:System.IDisposable.Dispose%2A> ou <xref:System.Object.Finalize%2A> méthodes. Toutefois, si vous êtes familiarisé avec ces méthodes, voici comment un finaliseur de Visual C++ et un destructeur qui appelle le finaliseur mappent à la <xref:System.IDisposable.Dispose%2A> modèle :
 
 ```cpp
 // Visual C++ code
@@ -757,7 +757,7 @@ void Dispose(bool disposing) {
 
 Un type managé peut également utiliser les ressources managées que vous préférez pour libérer de manière déterministe et pas laisser le garbage collector pour libérer de manière non déterministe à un moment donné une fois que l’objet n’est plus nécessaire. La mise en production déterministe des ressources peut améliorer considérablement les performances.
 
-Le compilateur Visual C++ permet la définition d’un destructeur pour nettoyer de façon déterministe les objets. Utilisez le destructeur pour libérer toutes les ressources que vous souhaitez libérer de façon déterministe.  Si un finaliseur est présent, appelez-le à partir du destructeur, pour éviter la duplication de code.
+Microsoft C++ compilateur permet la définition d’un destructeur pour nettoyer de façon déterministe les objets. Utilisez le destructeur pour libérer toutes les ressources que vous souhaitez libérer de façon déterministe.  Si un finaliseur est présent, appelez-le à partir du destructeur, pour éviter la duplication de code.
 
 ```cpp
 // compile with: /clr /c

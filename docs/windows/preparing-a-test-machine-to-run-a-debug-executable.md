@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 9598d7a0480ee762892d1026a1eb64dcc5c64399
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d7e9c2e0a29c2871fd86922151f2226dd9078fc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362307"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448444"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Préparation d'un ordinateur de test pour lancer un exécutable de débogage
 
@@ -25,7 +25,7 @@ Il existe trois façons de déployer les versions debug des DLL de la bibliothè
 - Utilisez le déploiement local pour installer une version debug d’une DLL Visual C++ particulière dans le répertoire d’installation de l’application en utilisant les fichiers fournis dans le répertoire Program Files ou Program Files (x86) sous \Microsoft Visual Studio \<version>\VC\redist\Debug_NonRedist\\.
 
     > [!NOTE]
-    >  Pour le débogage distant de votre application développée en Visual C++ 2005 ou Visual C++ 2008 sur un autre ordinateur, vous devez déployer les versions debug des DLL de la bibliothèque Visual C++ en tant qu'assemblys côte à côte partagés. Vous pouvez utiliser un projet d'installation ou Windows Installer pour installer les modules de fusion correspondants.
+    >  Pour le débogage distant de votre application générée à l’aide de Visual Studio 2005 ou Visual Studio 2008 sur un autre ordinateur, vous devez déployer les versions debug de visuel C++ bibliothèque DLL en tant qu’assemblys côte à côte partagés. Vous pouvez utiliser un projet d'installation ou Windows Installer pour installer les modules de fusion correspondants.
 
 - Utilisez l’option _**Déployer** dans la boîte de dialogue **Gestionnaire de configurations** de Visual Studio pour copier la sortie du projet et d’autres fichiers sur l’ordinateur distant.
 

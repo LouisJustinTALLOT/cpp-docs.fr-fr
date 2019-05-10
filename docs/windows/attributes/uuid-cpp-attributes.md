@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: 8d9d55fc2a340165480cab4036ad1e5323e6b625
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eae79f9a4d0af6375834c0792c4004f52a16e07e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407196"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448926"
 ---
 # <a name="uuid-c-attributes"></a>uuid (attributs C++)
 
@@ -32,7 +32,7 @@ Identificateur unique de 128 bits.
 
 ## <a name="remarks"></a>Notes
 
-Si la définition d’une interface ou une classe ne spécifie pas le **uuid** attribut C++, puis le compilateur Visual C++ fournit un. Lorsque vous spécifiez un **uuid**, vous devez inclure les guillemets.
+Si la définition d’une interface ou une classe ne spécifie pas le **uuid** C++ attribut, puis Microsoft C++ compilateur fournira une. Lorsque vous spécifiez un **uuid**, vous devez inclure les guillemets.
 
 Si vous ne spécifiez pas **uuid**, le compilateur génère le même GUID pour les interfaces ou classes portant le même nom dans les projets d’attributs différentes sur un ordinateur.
 
@@ -52,8 +52,8 @@ Consultez le [peut être liée](bindable.md) exemple pour un exemple d’utilisa
 |-|-|
 |**S'applique à**|**class**, **struct**, **interface**, **union**, **enum**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

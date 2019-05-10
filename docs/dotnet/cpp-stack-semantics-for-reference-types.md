@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4d9aaa493eab39199ac75b6b9fe888c3e103f115
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209152"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448070"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Sémantique de pile C++ pour les types de référence
 
-Avant Visual C++ 2005, une instance d'un type de référence pouvait être créée à l'aide de l'opérateur `new`, qui a créé l'objet sur le tas du garbage collector. Toutefois, vous pouvez à présent créer une instance d'un type de référence en utilisant la même syntaxe que vous devriez utiliser pour créer une instance d'un type natif dans la pile. Par conséquent, vous n’avez pas besoin d’utiliser [gcnew nouvelle, ref](../extensions/ref-new-gcnew-cpp-component-extensions.md) pour créer un objet d’un type référence. Et lorsque l'objet est hors de portée, le compilateur appelle le destructeur de l'objet.
+Avant Visual Studio 2005, une instance d’un type référence peut uniquement être créée à l’aide de la `new` tas d’opérateur, qui a créé l’objet sur le garbage collector. Toutefois, vous pouvez à présent créer une instance d'un type de référence en utilisant la même syntaxe que vous devriez utiliser pour créer une instance d'un type natif dans la pile. Par conséquent, vous n’avez pas besoin d’utiliser [gcnew nouvelle, ref](../extensions/ref-new-gcnew-cpp-component-extensions.md) pour créer un objet d’un type référence. Et lorsque l'objet est hors de portée, le compilateur appelle le destructeur de l'objet.
 
 ## <a name="remarks"></a>Notes
 

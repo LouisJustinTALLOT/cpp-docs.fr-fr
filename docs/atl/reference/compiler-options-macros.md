@@ -1,6 +1,6 @@
 ---
 title: Macros d’Options de compilateur
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - _ATL_ALL_WARNINGS
 - _ATL_APARTMENT_THREADED
@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e1d0f6e068989179dd9498e399ca5304a2b378b8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278421"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221114"
 ---
 # <a name="compiler-options-macros"></a>Macros d’Options de compilateur
 
@@ -32,11 +32,11 @@ Ces macros contrôlent les fonctionnalités de compilateur spécifique.
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Un symbole qui active les erreurs dans les projets convertis à partir de versions précédentes de l’ATL.|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Définir si un ou plusieurs de vos objets utilisent le cloisonnement des threads.|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Permet de s’assurer `CString` constructeurs explicites, empêchant toute conversion involontaire.|
-|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Définir cette macro pour pouvoir utiliser C++ conforme syntaxe standard, ce qui génère l’erreur du compilateur C4867 lorsqu’une syntaxe non standard est utilisée pour initialiser un pointeur vers une fonction membre.|
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Définir cette macro pour pouvoir utiliser C++ syntaxe conforme standard, ce qui génère l’erreur du compilateur C4867 lorsqu’une syntaxe non standard est utilisée pour initialiser un pointeur vers une fonction membre.|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|Définir si un ou plusieurs de vos objets utilisent de thread libre ou neutre.|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Un symbole qui indique le projet aura des objets qui sont marqués comme à la fois, gratuit ou neutre. La macro [_ATL_FREE_THREADED](#_atl_free_threaded) doit être utilisé à la place.|
 |[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Un symbole qui empêche l’utilisation de la valeur par défaut de l’espace de noms comme ATL.|
-|[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Un symbole qui empêche que code lié à COM qui est compilé avec votre projet.|
+|[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Un symbole qui empêche le code lié à COM qui est compilé avec votre projet.|
 |[ATL_NO_VTABLE](#atl_no_vtable)|Un symbole qui empêche le pointeur vtable ne soit initialisé dans le constructeur et le destructeur de la classe.|
 |[ATL_NOINLINE](#atl_noinline)|Un symbole qui indique une fonction ne doit pas être inline.|
 |[_ATL_SINGLE_THREADED](#_atl_single_threaded)|Définir si tous vos objets utilisent le modèle de thread unique.|
@@ -63,7 +63,7 @@ Avant Visual C++ .NET 2002, ATL désactivé d’un grand nombre d’avertissemen
 
 - C4291 'déclaration' : opérateur delete correspondant est trouvé ; mémoire ne sera pas libérée si l’initialisation lève une exception
 
-- C4268 'identificateur' : 'const' données static/global initialisées avec le constructeur de valeur par défaut généré par le compilateur remplissent l’objet de zéros non significatifs
+- C4268 'identificateur' : les données statique/globale 'const' initialisées avec le constructeur par défaut de généré par le compilateur remplissent l’objet de zéros non significatifs
 
 - Code inaccessible C4702
 
@@ -113,7 +113,7 @@ Définir cette macro afin de forcer l’utilisation de la syntaxe compatible ave
 
 ### <a name="remarks"></a>Notes
 
-Les bibliothèques ATL et MFC ont été modifiés pour correspondre à la conformité de C++ standard améliorée du compilateur Visual C++. Selon la norme ANSI C++, la syntaxe d’un pointeur vers une fonction membre de classe doit être `&CMyClass::MyFunc`.
+Les bibliothèques ATL et MFC ont été modifiés pour correspondre à Microsoft C++ standard améliorée du compilateur C++ conformité. Selon la norme ANSI C++, la syntaxe d’un pointeur vers une fonction membre de classe doit être `&CMyClass::MyFunc`.
 
 Lorsque [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) n’est pas défini (le cas par défaut), ATL/MFC désactive l’erreur C4867 dans les mappages de macro (notamment message mappe) afin que le code qui a été créé dans les versions antérieures permettre continuer à créer comme avant. Si vous définissez **_ATL_ENABLE_PTM_WARNING**, votre code doit être C++ conforme à la norme.
 
@@ -165,7 +165,7 @@ Si ce symbole n’est pas défini, y compris atlbase.h effectue **à l’aide de
 
 ##  <a name="_atl_no_com_support"></a>  _ATL_NO_COM_SUPPORT
 
-Un symbole qui empêche que code lié à COM qui est compilé avec votre projet.
+Un symbole qui empêche le code lié à COM qui est compilé avec votre projet.
 
 ```
 _ATL_NO_COM_SUPPORT

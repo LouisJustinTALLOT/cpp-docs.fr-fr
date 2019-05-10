@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5f18a7faa4e77571a87cc0d76a43240aaf1fd52c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384684"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447224"
 ---
 # <a name="reflection-ccli"></a>Réflexion (C++/CLI)
 
@@ -34,7 +34,7 @@ Notez que le nom de l’assembly fourni est le nom fort (consultez [création et
 La méthode la plus courante pour accéder aux fonctionnalités de réflexion consiste à utiliser le <xref:System.Object.GetType%2A> (méthode). Cette méthode est fournie par <xref:System.Object?displayProperty=nameWithType>, à partir de laquelle dérivent toutes les classes de garbage collection.
 
 > [!NOTE]
-> Réflexion sur un .exe générées avec le compilateur Visual C++ est uniquement autorisée si le fichier .exe est générée avec le **/CLR : pure** ou **/CLR : safe** options du compilateur. Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non disponible dans Visual Studio 2017. Consultez [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) pour plus d’informations.
+> Réflexion sur un .exe généré avec Microsoft C++ compilateur est uniquement autorisé si le fichier .exe est générée avec le **/CLR : pure** ou **/CLR : safe** options du compilateur. Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non disponible dans Visual Studio 2017. Consultez [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) pour plus d’informations.
 
 Pour plus d'informations, consultez <xref:System.Reflection>
 
@@ -181,7 +181,7 @@ Si le code ci-dessus est compilé dans une DLL appelée vcpp_reflection_6.dll, v
 
 Une fois le système de réflexion l’assembly, un tableau de **Type** objets est récupérée avec la <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> (fonction). Chaque élément du tableau contient des informations sur un autre type, bien que dans ce cas, une seule classe est définie. À l’aide d’une boucle, chaque **Type** dans ce tableau est interrogé sur les membres de type à l’aide de la **Type::GetMembers** (fonction). Cette fonction retourne un tableau de **MethodInfo** objets, chaque objet contenant des informations sur la fonction membre, le membre de données ou la propriété dans le type.
 
-Notez que la liste des méthodes inclut les fonctions explicitement définies dans **TestClass** et les fonctions héritent implicitement de la **System::Object** classe. En tant qu’elles sont décrites dans .NET plutôt que de la syntaxe Visual C++, les propriétés s’affichent en tant que les données membres sous-jacentes auxquelles accédé les fonctions get/set. Les fonctions get/set apparaissent dans cette liste en tant que méthodes régulières. La réflexion est prise en charge par le common language runtime, pas par le compilateur Visual C++.
+Notez que la liste des méthodes inclut les fonctions explicitement définies dans **TestClass** et les fonctions héritent implicitement de la **System::Object** classe. En tant qu’elles sont décrites dans .NET plutôt que de la syntaxe Visual C++, les propriétés s’affichent en tant que les données membres sous-jacentes auxquelles accédé les fonctions get/set. Les fonctions get/set apparaissent dans cette liste en tant que méthodes régulières. La réflexion est prise en charge par le common language runtime, pas par Microsoft C++ compilateur.
 
 Bien que vous avez utilisé ce code pour inspecter un assembly que vous avez définie, vous pouvez également utiliser ce code pour inspecter les assemblys .NET. Par exemple, si vous modifiez TestAssembly à mscorlib, puis vous verrez une liste de chaque type et une méthode définie dans mscorlib.dll.
 

@@ -1,17 +1,15 @@
 ---
 title: 'Procédure : Ajoutez une étape de génération personnalisée à des projets MSBuild'
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.addcustombuildstep
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: 4c64c6875d82000d6a0ac880b103b5e220015cb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d70f145a9d43463266a9c0bbff68e8e7f36ef2c6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188923"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220727"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Procédure : Ajoutez une étape de génération personnalisée à des projets MSBuild
 
@@ -27,7 +25,7 @@ Spécifiez le `CustomBuildBeforeTargets` élément pour exécuter l’étape de 
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Pour définir ce qui est exécuté par l’étape de génération personnalisée
 
-1. Ajouter un groupe de propriétés au fichier projet. Dans ce groupe de propriétés, spécifiez la commande, ses entrées et sorties et un message, comme indiqué dans l’exemple suivant. Cet exemple crée un fichier .cab à partir du fichier main.cpp que vous avez créé dans [procédure pas à pas : Utilisation de MSBuild pour créer un projet Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+1. Ajouter un groupe de propriétés au fichier projet. Dans ce groupe de propriétés, spécifiez la commande, ses entrées et sorties et un message, comme indiqué dans l’exemple suivant. Cet exemple crée un fichier .cab à partir du fichier main.cpp que vous avez créé dans [procédure pas à pas : Utilisation de MSBuild pour créer un C++ projet](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
 
     ```
     <ItemDefinitionGroup>
@@ -52,6 +50,6 @@ Spécifiez le `CustomBuildBeforeTargets` élément pour exécuter l’étape de 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Procédure pas à pas : Utilisation de MSBuild pour créer un projet C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [Guide pratique pour utiliser des événements de génération dans des projets MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
 [Guide pratique pour ajouter des outils de génération personnalisée à des projets MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)

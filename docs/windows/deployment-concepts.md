@@ -8,12 +8,12 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-ms.openlocfilehash: ec472e506e78a57b65186bf6a5b801419fb141fb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ac3565b4ec465ec60672d2238fbe81b71613a6c1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346401"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449045"
 ---
 # <a name="deployment-concepts"></a>Concepts relatifs au déploiement
 
@@ -21,7 +21,7 @@ Cette section présente les principales considérations relatives au déploiemen
 
 ## <a name="windows-installer-deployment-in-c"></a>Déploiement avec Windows Installer dans C++
 
-Les projets Visual C++ utilisent en général pour le déploiement une installation traditionnelle avec Windows Installer. Pour préparer un déploiement Windows Installer, vous empaquetez votre application dans un fichier setup.exe et vous distribuez ce fichier, ainsi qu’un package d’installation (.msi). Les utilisateurs exécutent ensuite setup.exe pour installer votre application.
+Visual Studio C++ projets utilisent en général l’installation traditionnelle par Windows Installer pour le déploiement. Pour préparer un déploiement Windows Installer, vous empaquetez votre application dans un fichier setup.exe et vous distribuez ce fichier, ainsi qu’un package d’installation (.msi). Les utilisateurs exécutent ensuite setup.exe pour installer votre application.
 
 Vous empaquetez votre application en ajoutant un projet d’installation à votre solution ; lors de la génération, il crée le fichier d’installation et le package d’installation que vous distribuez aux utilisateurs. Pour plus d’informations, consultez [Choix d’une méthode de déploiement](choosing-a-deployment-method.md).
 

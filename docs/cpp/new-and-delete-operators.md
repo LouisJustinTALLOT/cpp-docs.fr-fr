@@ -1,20 +1,19 @@
 ---
 title: Opérateurs new et delete
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - delete_cpp
 - new
 helpviewer_keywords:
-- new keyword [C++], dynamic allocation of objects
-- nothrownew.obj
-- delete keyword [C++], syntax
+- new keyword [C++]
+- delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 8dd5e6a555872c443e32e9ea464ea49d4ae18f99
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345897"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222368"
 ---
 # <a name="new-and-delete-operators"></a>Opérateurs new et delete
 
@@ -85,9 +84,7 @@ L’argument fourni entre parenthèses à **nouveau** est passé à `Blanks::ope
 Blanks *SomeBlanks = new Blanks;
 ```
 
-Dans Visual C++ 5.0 et versions antérieures, les types et tous les tableaux (quel que soit qu’il s’agisse de **classe** type) alloué à l’aide la **nouveau** opérateur toujours utilisé global **opérateur new** (fonction).
-
-À compter de Visual C++ 5.0, le compilateur prend en charge de tableau de membres **nouveau** et **supprimer** opérateurs dans une déclaration de classe. Exemple :
+Le compilateur prend en charge le tableau de membres **nouveau** et **supprimer** opérateurs dans une déclaration de classe. Exemple :
 
 ```cpp
 // spec1_the_operator_new_function2.cpp
@@ -203,7 +200,7 @@ int main( int argc, char *argv[] ) {
 
 Le code précédent peut être utilisé pour détecter les fuites de mémoire, c'est-à-dire la mémoire qui est allouée sur le magasin libre mais jamais récupérée. Pour effectuer cette détection, globale **nouveau** et **supprimer** opérateurs sont redéfinis pour compter l’allocation et désallocation de mémoire.
 
-À compter de Visual C++ 5.0, le compilateur prend en charge de tableau de membres **nouveau** et **supprimer** opérateurs dans une déclaration de classe. Exemple :
+Le compilateur prend en charge le tableau de membres **nouveau** et **supprimer** opérateurs dans une déclaration de classe. Exemple :
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

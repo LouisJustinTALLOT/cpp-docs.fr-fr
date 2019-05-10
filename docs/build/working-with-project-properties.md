@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a8c15de43a3843b8ff12cb4ad3d951d76b90c039
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314092"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446185"
 ---
 # <a name="set-compiler-and-build-properties"></a>Définir un compilateur et les propriétés de build
 
@@ -23,7 +23,7 @@ Dans l’IDE, toutes les informations nécessaires pour générer un projet sont
 
 Quand vous créez un projet, le système attribue des valeurs à différentes propriétés. Les valeurs par défaut varient légèrement en fonction du type de projet et des options que vous choisissez dans l’Assistant Application. Par exemple, un projet ATL a des propriétés relatives aux fichiers MIDL, mais elles sont absentes dans une application console de base. Les propriétés par défaut sont affichées dans le volet Général des pages de propriétés :
 
-![Paramètres par défaut des projets Visual C&#43;&#43;](media/visual-c---project-defaults.png "Paramètres par défaut des projets Visual C++")
+![Visual C&#43; &#43; projet par défaut est](media/visual-c---project-defaults.png "Visual C++ valeurs par défaut du projet")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Application des propriétés pour créer des configurations et plateformes cibles
 
@@ -61,7 +61,7 @@ Le **Pages de propriétés** boîte de dialogue affiche uniquement les pages de 
 
 MSBuild prend en charge l’utilisation de constantes de compilation appelés « macros » pour certaines valeurs de chaîne incluent les répertoires et les chemins d’accès. Ceux-ci sont exposés dans les pages de propriétés, où vous pouvez faire référence à et les modifier à l’aide de la [éditeur de la propriété](#property_editor). 
 
-L’illustration suivante montre les pages de propriétés d’un projet Visual C++. Dans le volet gauche, la **règle** *Répertoires VC++* est sélectionnée et le volet droit répertorie les propriétés associées à cette règle. Le `$(...)` valeurs sont appelées *macros*. Une *macro* est une constante de compilation qui peut référencer une valeur définie par Visual Studio ou le système MSBuild, ou une valeur définie par l’utilisateur. À l’aide de macros au lieu de codées en dur les valeurs telles que les chemins d’accès de répertoire, vous pouvez partager plus facilement les paramètres de propriété entre les machines et entre les versions de Visual Studio, et vous pouvez mieux garantir que vos paramètres de projet participent correctement dans [ l’héritage de propriété](project-property-inheritance.md). 
+L’illustration suivante montre les pages de propriétés pour un Visual Studio C++ projet. Dans le volet gauche, la **règle** *Répertoires VC++* est sélectionnée et le volet droit répertorie les propriétés associées à cette règle. Le `$(...)` valeurs sont appelées *macros*. Une *macro* est une constante de compilation qui peut référencer une valeur définie par Visual Studio ou le système MSBuild, ou une valeur définie par l’utilisateur. À l’aide de macros au lieu de codées en dur les valeurs telles que les chemins d’accès de répertoire, vous pouvez partager plus facilement les paramètres de propriété entre les machines et entre les versions de Visual Studio, et vous pouvez mieux garantir que vos paramètres de projet participent correctement dans [ l’héritage de propriété](project-property-inheritance.md). 
 
 ![Pages de propriétés de projet](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 

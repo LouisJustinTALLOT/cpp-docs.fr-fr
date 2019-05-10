@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
-- Visual C++ projects
+- Visual Studio C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0784e6f202750e846c75434eef62a12dab3952f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387452"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448109"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Comment : créer des projets C++ vérifiables (C++ / c++ / CLI)
 
@@ -20,7 +20,7 @@ Les Assistants application Visual C++ ne créent pas de projets vérifiables.
 > [!IMPORTANT]
 > Déconseillé de Visual Studio 2015 et Visual Studio 2017 ne prend pas en charge la **/CLR : pure** et **/CLR : safe** la création de projets vérifiables. Si vous avez besoin du code vérifiable, nous vous recommandons de que vous traduisez votre code en c#.
 
-Toutefois, si vous utilisez une version antérieure de l’ensemble d’outils du compilateur Visual C++ qui prend en charge **/CLR : pure** et **/CLR : safe**, projets peuvent être convertis pour être vérifiable. Cette rubrique décrit comment définir des propriétés du projet et modifier les fichiers sources du projet pour transformer vos projets Visual C++ pour produire des applications vérifiables.
+Toutefois, si vous utilisez une version antérieure de Microsoft C++ ensemble d’outils du compilateur qui prend en charge **/CLR : pure** et **/CLR : safe**, projets peuvent être convertis pour être vérifiable. Cette rubrique décrit comment définir les propriétés du projet et modifier les fichiers sources du projet pour transformer votre Visual Studio C++ projets pour produire des applications vérifiables.
 
 ## <a name="compiler-and-linker-settings"></a>Paramètres du compilateur et éditeur de liens
 

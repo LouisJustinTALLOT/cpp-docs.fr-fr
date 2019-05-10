@@ -1,15 +1,15 @@
 ---
 title: 'Procédure pas à pas : À l’aide de nouveaux contrôles d’environnement MFC'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: ef0e4856a844503f8d13b7b6ed37318b76b6af69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b75568c0207dc004bbdb919427e4f3f6860c4a81
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358175"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558135"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Procédure pas à pas : À l’aide de nouveaux contrôles d’environnement MFC
 
@@ -17,31 +17,71 @@ Dans cette procédure pas à pas, vous allez créer une application qui ressembl
 
 ## <a name="prerequisites"></a>Prérequis
 
-Cette procédure pas à pas suppose que vous avez configuré Visual Studio à utiliser **paramètres de développement généraux**. Si vous utilisez un paramètre de développement différent, certaines fenêtres de Visual Studio que nous utilisons dans cette procédure pas à pas ne peuvent pas affichés par défaut.
+- Dans Visual Studio 2017 et versions ultérieures, la prise en charge MFC est un composant facultatif. Pour l’installer, ouvrez Visual Studio Installer à partir du menu Démarrer de Windows. Rechercher la version de Visual Studio que vous utilisez et que vous choisissez la **modifier** bouton. Assurez-vous que le **développement Desktop en C++**  vignette est activée. Sous **composants facultatifs**, vérifiez le **prise en charge MFC** bouton.
 
-### <a name="to-create-a-new-mfc-application-by-using-the-mfc-application-wizard"></a>Pour créer une nouvelle application MFC à l’aide de l’Assistant Application MFC
+- Cette procédure pas à pas suppose que vous avez configuré Visual Studio à utiliser **paramètres de développement généraux**. Si vous utilisez un paramètre de développement différent, certaines fenêtres de Visual Studio que nous utilisons dans cette procédure pas à pas ne peuvent pas affichés par défaut.
+
+## <a name="to-create-a-new-mfc-application-by-using-the-mfc-application-wizard"></a>Pour créer une nouvelle application MFC à l’aide de l’Assistant Application MFC
+
+Ces étapes varient selon la version de Visual Studio que vous utilisez. Vérifiez que le sélecteur de version dans le coin supérieur gauche de cette page est défini correctement.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-an-mfc-project-in-visual-studio-2019"></a>Pour créer un projet MFC dans Visual Studio 2019
+
+1. Dans le menu principal, choisissez **fichier** > **New** > **projet** pour ouvrir le **créer un nouveau projet** boîte de dialogue zone.
+
+1. Dans la zone de recherche en haut, tapez **MFC** , puis **application MFC** à partir de la liste des résultats. 
+
+1. Cliquez sur **Suivant**. Dans la page suivante, entrez un nom pour le projet et spécifier l’emplacement du projet si vous le souhaitez.
+
+1. Choisissez le **créer** bouton pour créer le projet.
+
+   Après avoir **Assistant Application MFC** affiche, utilisez les options suivantes :
+ 
+   1. Choisissez **Type d’Application** sur la gauche. Puis sélectionnez **monodocument** et sélectionnez **support de l’architecture Document/vue**. Sous **projet style**, sélectionnez **Visual Studio**et à partir de la **style visuel et couleurs** liste déroulante liste, sélectionnez **Office 2007 (thème Blue)**.
+
+   1. Sur le **prise en charge des documents composés** volet, sélectionnez **aucun**.
+
+   1. N’apportez aucune modification à la **propriétés du modèle de Document** volet.
+
+   1. Sur le **fonctionnalités d’Interface utilisateur** volet, assurez-vous que le **utiliser une barre de menus et la barre d’outils** option est sélectionnée. Laissez toutes les autres options telles quelles.
+
+   1. Sur le **fonctionnalités avancées** volet, sélectionnez **contrôles ActiveX**, **le manifeste de contrôle courants**, et **volet de Navigation** option. Laisser tout le reste en l’état. Le **volet de Navigation** option entraîne l’Assistant créer le volet à gauche de la fenêtre avec un `CMFCShellTreeCtrl` déjà incorporées.
+
+   1. Nous n’allons pas apporter des modifications à la **Classes générées par** volet, cliquez sur **Terminer** pour créer votre projet MFC.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-an-mfc-project-in-visual-studio-2017-or-earlier"></a>Pour créer un projet MFC dans Visual Studio 2017 ou une version antérieure
 
 1. Utilisez le **Assistant Application MFC** pour créer une application MFC. Pour exécuter l’Assistant, à partir de la **fichier** menu, sélectionnez **New**, puis sélectionnez **projet**. Le **nouveau projet** boîte de dialogue s’affiche.
 
-1. Dans le **nouveau projet** boîte de dialogue, développez le **Visual C++** nœud dans le **types de projets** volet et sélectionnez **MFC**. Ensuite, dans le **modèles** volet, sélectionnez **Application MFC**. Tapez un nom pour le projet, tel que `MFCShellControls` et cliquez sur **OK**. Après avoir **Assistant Application MFC** affiche, utilisez les options suivantes :
+1. Dans le **nouveau projet** boîte de dialogue, développez le **Visual C++** nœud dans le **types de projets** volet et sélectionnez **MFC**. Ensuite, dans le **modèles** volet, sélectionnez **Application MFC**. Tapez un nom pour le projet, tel que `MFCShellControls` et cliquez sur **OK**. 
 
-    1. Sur le **Type d’Application** volet, sous **type d’Application**, désactivez le **documents avec onglet** option. Ensuite, sélectionnez **monodocument** et sélectionnez **support de l’architecture Document/vue**. Sous **projet style**, sélectionnez **Visual Studio**et à partir de la **style visuel et couleurs** liste déroulante liste, sélectionnez **Office 2007 (thème Blue)**.
+   Après avoir **Assistant Application MFC** affiche, utilisez les options suivantes :
 
-    1. Sur le **prise en charge des documents composés** volet, sélectionnez **aucun**.
+   1. Sur le **Type d’Application** volet, sous **type d’Application**, désactivez le **documents avec onglet** option. Ensuite, sélectionnez **monodocument** et sélectionnez **support de l’architecture Document/vue**. Sous **projet style**, sélectionnez **Visual Studio**et à partir de la **style visuel et couleurs** liste déroulante liste, sélectionnez **Office 2007 (thème Blue)**.
 
-    1. N’apportez aucune modification à la **chaînes modèles de Document** volet.
+   1. Sur le **prise en charge des documents composés** volet, sélectionnez **aucun**.
 
-    1. Sur le **prise en charge de la base de données** volet (Visual Studio 2015 et versions antérieure), sélectionnez **aucun** , car l’application n’utilise pas une base de données.
+   1. N’apportez aucune modification à la **chaînes modèles de Document** volet.
 
-    1. Sur le **fonctionnalités d’Interface utilisateur** volet, assurez-vous que le **utiliser une barre de menus et la barre d’outils** option est sélectionnée. Laissez toutes les autres options telles quelles.
+   1. Sur le **prise en charge de la base de données** volet (Visual Studio 2015 et versions antérieure), sélectionnez **aucun** , car l’application n’utilise pas une base de données.
 
-    1. Sur le **fonctionnalités avancées** volet, sous **fonctionnalités avancées**, sélectionnez uniquement **contrôles ActiveX** et **le manifeste de contrôle commun**. Sous **avancé des fenêtres frames**, sélectionnez uniquement le **volet de Navigation** option. Cela entraînera l’Assistant créer le volet à gauche de la fenêtre avec un `CMFCShellTreeCtrl` déjà incorporées.
+   1. Sur le **fonctionnalités d’Interface utilisateur** volet, assurez-vous que le **utiliser une barre de menus et la barre d’outils** option est sélectionnée. Laissez toutes les autres options telles quelles.
 
-    1. Nous n’allons pas apporter des modifications à la **Classes générées par** volet, cliquez sur **Terminer** pour créer votre projet MFC.
+   1. Sur le **fonctionnalités avancées** volet, sous **fonctionnalités avancées**, sélectionnez uniquement **contrôles ActiveX** et **le manifeste de contrôle commun**. Sous **avancé des fenêtres frames**, sélectionnez uniquement le **volet de Navigation** option. Cela entraînera l’Assistant créer le volet à gauche de la fenêtre avec un `CMFCShellTreeCtrl` déjà incorporées.
 
-1. Vérifiez que l’application a été créée avec succès en créant et son exécution. Pour générer l’application, à partir de la **Build** menu, sélectionnez **générer la Solution**. Si l’application est générée avec succès, exécutez l’application en sélectionnant **démarrer le débogage** à partir de la **déboguer** menu.
+   1. Nous n’allons pas apporter des modifications à la **Classes générées par** volet, cliquez sur **Terminer** pour créer votre projet MFC.
 
-   L’Assistant crée automatiquement une application qui a une barre de menus standard, une barre d’outils standard, une barre d’état standard et une barre Outlook à gauche de la fenêtre avec un **dossiers** vue et un **calendrier** vue .
+::: moniker-end
+
+Vérifiez que l’application a été créée avec succès en créant et son exécution. Pour générer l’application, à partir de la **Build** menu, sélectionnez **générer la Solution**. Si l’application est générée avec succès, exécutez l’application en sélectionnant **démarrer le débogage** à partir de la **déboguer** menu.
+
+L’Assistant crée automatiquement une application qui a une barre de menus standard, une barre d’outils standard, une barre d’état standard et une barre Outlook à gauche de la fenêtre avec un **dossiers** vue et un **calendrier** vue .
 
 ### <a name="to-add-the-shell-list-control-to-the-document-view"></a>Pour ajouter le contrôle de liste de shell en mode document
 
@@ -90,7 +130,7 @@ Cette procédure pas à pas suppose que vous avez configuré Visual Studio à ut
 
 1. Maintenant nous mettons à jour le `CMFCShellControlsView` classe pour gérer le `WM_CREATE` message windows. Ouvrez le **affichage de classes** fenêtre et sélectionnez le `CMFCShellControlsView` classe. Avec le bouton droit et sélectionnez **propriétés**.
 
-    Ensuite, dans le **propriétés** fenêtre, cliquez sur le **Messages** icône. Défiler vers le bas jusqu'à ce que vous trouviez le `WM_CREATE` message. Dans la liste déroulante liste en regard `WM_CREATE`, sélectionnez  **\<Ajouter > OnCreate**. La commande crée un gestionnaire de messages pour nous et met automatiquement à jour la table des messages MFC.
+   Ensuite, dans le **propriétés** fenêtre, cliquez sur le **Messages** icône. Défiler vers le bas jusqu'à ce que vous trouviez le `WM_CREATE` message. Dans la liste déroulante liste en regard `WM_CREATE`, sélectionnez  **\<Ajouter > OnCreate**. La commande crée un gestionnaire de messages pour nous et met automatiquement à jour la table des messages MFC.
 
    Dans le `OnCreate` (méthode), nous allons maintenant créer notre `CMFCShellListCtrl` objet. Rechercher le `OnCreate` définition de méthode dans le MFCShellControlsView.cpp de source de fichier et remplacez son implémentation par le code suivant :
 

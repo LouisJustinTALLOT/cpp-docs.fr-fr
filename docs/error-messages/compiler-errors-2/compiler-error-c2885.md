@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: 8174faed09bdffbdc6974390cceb7c17661eab4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388772"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447700"
 ---
 # <a name="compiler-error-c2885"></a>Erreur du compilateur C2885
 
@@ -21,7 +21,7 @@ Vous avez utilisé un [à l’aide de](../../cpp/using-declaration.md) déclarat
 
 ## <a name="example"></a>Exemple
 
-Cette erreur peut être due à la mise en conformité du compilateur pour Visual C++ 2005 : il n’est plus valide pour avoir un `using` déclaration pour un type imbriqué ; vous devez explicitement qualifier chaque référence au type imbriqué, placer le type dans un nom l’espace, ou créer un typedef.
+Cette erreur peut être due à la mise en conformité du compilateur pour Visual Studio 2005 : il n’est plus valide pour avoir un `using` déclaration pour un type imbriqué ; vous devez explicitement qualifier chaque référence au type imbriqué, placer le type dans un n \\espace_de_noms, ou créer un typedef.
 
 L’exemple suivant génère C2885.
 

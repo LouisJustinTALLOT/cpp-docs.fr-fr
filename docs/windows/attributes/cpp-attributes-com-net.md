@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b985799849a268010dff63f9f7bc25e474b365e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148321"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448512"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Attributs de C++ pour COM et .NET
 
@@ -34,7 +34,7 @@ Attributs étendent C++ dans les directions n’est pas actuellement possibles s
 
 - Remplace la grande quantité de code IDL requis par un composant COM avec quelques attributs simples.
 
-Par exemple, pour implémenter un récepteur d’événements simple pour une classe ATL générique, vous pouvez appliquer le [event_receiver](event-receiver.md) attribut sur une classe spécifique, tel que `CMyReceiver`. Le `event_receiver` attribut est ensuite compilé par le compilateur Visual C++, qui insère le code approprié dans le fichier objet.
+Par exemple, pour implémenter un récepteur d’événements simple pour une classe ATL générique, vous pouvez appliquer le [event_receiver](event-receiver.md) attribut sur une classe spécifique, tel que `CMyReceiver`. Le `event_receiver` attribut est ensuite compilé par Microsoft C++ compilateur, qui insère le code approprié dans le fichier objet.
 
 ```cpp
 [event_receiver(com)]
@@ -49,7 +49,7 @@ Vous pouvez ensuite configurer le `CMyReceiver` méthodes `handler1` et `handler
 
 ## <a name="basic-mechanics-of-attributes"></a>Mécanismes de base des attributs
 
-Il existe trois façons d’insérer des attributs dans votre projet. Tout d’abord, vous pouvez les insérer manuellement dans votre code source. Ensuite, vous pouvez insérer à l’aide de la grille des propriétés d’un objet dans votre projet. Enfin, vous pouvez insérer à l’aide de différents Assistants. Pour plus d’informations sur l’utilisation de la **propriétés** fenêtre et les différents Assistants, consultez [création et gestion de projets Visual C++](../../build/creating-and-managing-visual-cpp-projects.md).
+Il existe trois façons d’insérer des attributs dans votre projet. Tout d’abord, vous pouvez les insérer manuellement dans votre code source. Ensuite, vous pouvez insérer à l’aide de la grille des propriétés d’un objet dans votre projet. Enfin, vous pouvez insérer à l’aide de différents Assistants. Pour plus d’informations sur l’utilisation de la **propriétés** fenêtre et les différents Assistants, consultez [des projets Visual Studio - C++ ](../../build/creating-and-managing-visual-cpp-projects.md).
 
 Comme précédemment, lorsque le projet est généré, le compilateur analyse chaque fichier source C++, produit un fichier objet. Toutefois, lorsque le compilateur rencontre un attribut, il est analysé et sa syntaxe est vérifiée. Le compilateur appelle ensuite dynamiquement un fournisseur d’attributs pour insérer du code ou apporter d’autres modifications à la compilation. L’implémentation du fournisseur diffère selon le type d’attribut. Par exemple, les attributs liés à ATL sont implémentés par Atlprov.dll.
 
@@ -64,7 +64,7 @@ Comme la plupart des constructions C++, les attributs ont un ensemble de caract�
 
 ## <a name="building-an-attributed-program"></a>Générer un programmes par attributs
 
-Une fois que vous placez des attributs Visual C++ dans votre code source, vous souhaiterez peut-être le compilateur Visual C++ pour générer un fichier de bibliothèque et .idl de type pour vous. Des options de l’éditeur de liens suivant vous aident à générer des fichiers .tlb et .idl :
+Après avoir placé Visual C++ attributs dans votre code source, vous souhaiterez peut-être Microsoft C++ compilateur pour générer un fichier de bibliothèque et .idl de type pour vous. Des options de l’éditeur de liens suivant vous aident à générer des fichiers .tlb et .idl :
 
 - [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
 

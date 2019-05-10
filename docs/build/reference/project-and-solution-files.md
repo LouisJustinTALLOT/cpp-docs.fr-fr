@@ -1,8 +1,6 @@
 ---
 title: Fichiers projet et solution
-ms.date: 11/04/2016
-f1_keywords:
-- vc.files.projectandsolution
+ms.date: 05/06/2019
 helpviewer_keywords:
 - project files [C++]
 - file types [C++], makefiles
@@ -11,12 +9,12 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-ms.openlocfilehash: b4b82aa3837558b2c325fb6cba6819422c0db7ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 153480331d3300555c78a3489ca603d854893f5b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319575"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446589"
 ---
 # <a name="project-and-solution-files"></a>Fichiers projet et solution
 
@@ -26,7 +24,7 @@ Les fichiers suivants sont créés en même temps que vous créez un projet dans
 |--------------|------------------------|--------------------------------|-----------------|
 |*Solname*.sln|*Projname*|Non affiché dans l'Explorateur de solutions|Fichier *solution*. Permet d'organiser tous les éléments d'un ou plusieurs projets dans une même solution.|
 |*Projname*.suo|*Projname*|Non affiché dans l'Explorateur de solutions|Fichier *d’options de solution*. Permet de stocker les personnalisations de la solution pour que chaque fois que vous ouvrez un projet ou un fichier de la solution, il ait l'apparence et le comportement que vous attendez.|
-|*Projname*.vcxproj|*Projname*|Non affiché dans l'Explorateur de solutions|Fichier *projet*. Permet de stocker les informations propres à chaque projet. (Dans les versions antérieures, ce fichier s’appelait *Projname*.vcproj ou *Projname*.dsp.) Pour obtenir un exemple de fichier projet Visual C++, consultez [Fichiers projet](project-files.md).|
+|*Projname*.vcxproj|*Projname*|Non affiché dans l'Explorateur de solutions|Fichier *projet*. Permet de stocker les informations propres à chaque projet. (Dans les versions antérieures, ce fichier s’appelait *Projname*.vcproj ou *Projname*.dsp.) Pour obtenir un exemple d’un C++ (.vcxproj) de fichier de projet, consultez [fichiers projet](project-files.md).|
 |*Nomproj*.vcxitems|*Projname*|Non affiché dans l'Explorateur de solutions|Fichier *projet d’éléments partagés*. Le projet n’est pas généré.  À la place, le projet peut être référencé par un autre projet C++ et ses fichiers font partie du processus de génération du projet de référence. C’est un moyen de partager le code commun avec les projets C++ multiplateformes.|
 |*Projname*.sdf|*Projname*|Non affiché dans l'Explorateur de solutions|Fichier de *base de données de navigation*. Prend en charge les fonctionnalités de navigation comme **Atteindre la définition**, **Rechercher toutes les références** et **Affichage de classes**. Il est généré en analysant les fichiers d'en-tête.|
 |*Projname*.vcxproj.filters|*Projname*|Non affiché dans l'Explorateur de solutions|Fichier de *filtres*. Permet de spécifier l'emplacement d'un fichier ajouté à la solution. Par exemple, un fichier .h est placé dans le nœud **Fichiers d’en-tête**.|
@@ -36,4 +34,4 @@ Les fichiers suivants sont créés en même temps que vous créez un projet dans
 
 ## <a name="see-also"></a>Voir aussi
 
-[Types de fichiers créés pour les projets Visual C++](file-types-created-for-visual-cpp-projects.md)
+[Types de fichiers créés pour Visual C++ projets](file-types-created-for-visual-cpp-projects.md)

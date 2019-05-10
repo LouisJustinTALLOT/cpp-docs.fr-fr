@@ -1,6 +1,6 @@
 ---
 title: CComSafeArray, classe
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArray
 - ATLSAFE/ATL::CComSafeArray
@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dec6bbad0aa4a8409b9f3d24476dcc94b8eaefe3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259441"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221160"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray, classe
 
@@ -318,7 +318,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Un `CComSafeArray` objet peut être créé à partir d’un existant `SAFEARRAYBOUND` structure et le nombre de dimensions ou en spécifiant le nombre d’éléments du tableau et la limite inférieure. Si le tableau est accessible à partir de Visual C++, la limite inférieure doit être 0. Autres langages peuvent autoriser d’autres valeurs de la limite inférieure (par exemple, les tableaux Visual prend en charge de base avec des éléments avec une plage comme -10 à 10).
+Un `CComSafeArray` objet peut être créé à partir d’un existant `SAFEARRAYBOUND` structure et le nombre de dimensions ou en spécifiant le nombre d’éléments du tableau et la limite inférieure. Si le tableau est accessible à partir de C++, la limite inférieure doit être 0. Autres langages peuvent autoriser d’autres valeurs de la limite inférieure (par exemple, les tableaux Visual prend en charge de base avec des éléments avec une plage comme -10 à 10).
 
 ##  <a name="destroy"></a>  CComSafeArray::Destroy
 

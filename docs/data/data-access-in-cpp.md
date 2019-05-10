@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: 142d067b6fbc9e2357ff8fc23fd931a1194477e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a68c4a9df3b439ae641c5e4cbe6f3fbc8b8e6355
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398067"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222534"
 ---
 # <a name="data-access-in-visual-c"></a>Accès aux données dans Visual C++
 
@@ -40,11 +40,11 @@ Connectez-vous à la base de données SQL Azure à partir d’applications C ou 
 [Bibliothèque cliente de stockage Microsoft Azure pour C++](https://github.com/Azure/azure-storage-cpp)<br/>
 Le service [Stockage Azure](/azure/storage/storage-introduction) est une solution de stockage cloud pour les applications modernes qui s’appuient sur la durabilité, la disponibilité et la scalabilité afin de répondre aux besoins de leurs clients. Connectez-vous au service Stockage Azure à partir de C++ à l’aide de la bibliothèque cliente de stockage Azure pour C++.
 
-[Pilote ODBC 13.1 pour SQL Server - Windows publié](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-Le dernier pilote ODBC fournit un accès fiable aux données de Microsoft SQL Server 2016 et Microsoft Azure SQL Database pour les applications C/C++. Fournit la prise en charge des fonctionnalités, notamment est toujours chiffré, Azure Active Directory et les groupes de disponibilité AlwaysOn. Également disponible pour Mac OS et Linux.
+[Pilote ODBC pour SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
+Le dernier pilote ODBC fournit l’accès aux données robuste pour Microsoft SQL Server et Microsoft Azure SQL Database pour C /C++ en fonction des applications. Fournit la prise en charge des fonctionnalités, notamment est toujours chiffré, Azure Active Directory et les groupes de disponibilité AlwaysOn. Également disponible pour Mac OS et Linux.
 
-[SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
-SQL Server Native Client est une interface de programmation d’application (API) d’accès aux données autonome, utilisée pour OLE DB et ODBC, qui prend en charge les versions SQL Server 2005 à SQL Server 2014. Les nouvelles applications doivent utiliser le pilote ODBC 13.1 pour SQL Server.
+[OLE DB Driver pour SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
+Le dernier pilote OLE DB est une données autonome accès application interface de programmation (API) qui prend en charge de Microsoft SQL Server et Microsoft Azure SQL Database.
 
 [Microsoft Azure C et C++ Developer Center](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure facilite la création d’applications C++ avec plus de souplesse, de scalabilité et de fiabilité à l’aide des outils que vous aimez.

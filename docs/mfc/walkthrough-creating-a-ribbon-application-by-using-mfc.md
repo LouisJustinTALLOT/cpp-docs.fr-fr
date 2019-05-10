@@ -1,16 +1,16 @@
 ---
 title: 'Procédure pas à pas : Création d’une Application de ruban à l’aide de MFC'
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a45df5258a16885b50e11d4cca8ba99eb4b3d458
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358305"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558228"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procédure pas à pas : Création d’une Application de ruban à l’aide de MFC
 
@@ -22,9 +22,7 @@ Cette procédure pas à pas suppose que vous avez défini Visual Studio à utili
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Pour créer une application MFC comportant un ruban
 
-1. Utilisez le **Assistant Application MFC** pour créer une application MFC comportant un ruban. Pour exécuter l’Assistant, dans le **fichier** menu, pointez sur **New**, puis cliquez sur **projet**.
-
-1. Dans le **nouveau projet** boîte de dialogue, développez le **Visual C++** nœud sous **modèles installés**, sélectionnez **MFC**, puis sélectionnez  **Application MFC**. Tapez un nom pour le projet, par exemple, *MFCRibbonApp*, puis cliquez sur **OK**.
+1. Utilisez le **Assistant Application MFC** pour créer une application MFC comportant un ruban. Consultez [Procédure pas à pas : À l’aide de nouveaux contrôles d’environnement MFC](walkthrough-using-the-new-mfc-shell-controls.md) pour obtenir des instructions sur la façon d’ouvrir l’Assistant pour votre version de Visual Studio.
 
 1. Définir les options suivantes le **Assistant Application MFC**:
 
@@ -34,7 +32,7 @@ Cette procédure pas à pas suppose que vous avez défini Visual Studio à utili
 
     1. Dans le **propriétés du modèle de Document** section, dans le **extension de fichier** , tapez une extension de nom de fichier pour les documents créés par cette application, par exemple, *mfcrbnapp*.
 
-    1. Dans le **prise en charge de la base de données** section, assurez-vous que l’option **aucun** est sélectionné.
+    1. Dans le **prise en charge de la base de données** section (Visual Studio 2015 uniquement), assurez-vous que l’option **aucun** est sélectionné.
 
     1. Dans le **fonctionnalités d’Interface utilisateur** section, assurez-vous que l’option **utiliser un ruban** est sélectionné.
 

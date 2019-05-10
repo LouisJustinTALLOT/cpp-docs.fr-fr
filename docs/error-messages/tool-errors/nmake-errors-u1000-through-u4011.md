@@ -5,11 +5,11 @@ f1_keywords:
 - nmake
 ms.assetid: 9dbe2e12-88ca-4df4-b935-17756112bb79
 ms.openlocfilehash: 230389215525871578cad1a1a676995588bdd5ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378542"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856968"
 ---
 # <a name="nmake-errors-and-warnings-uxxxx"></a>Erreurs et avertissements NMAKE (Uxxxx)
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2f118c11aab9fb2bbdd6cfa4f23425077b382b23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: fd048bedc45b14bdc7b83120ad039296b54aa850
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216419"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222049"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Opérateurs de décalage vers la gauche et droit (&gt; &gt; et &lt; &lt;)
 
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-Si vous décalez vers la gauche un nombre signé de manière à affecter le bit de signe, le résultat n'est pas défini. L'exemple suivant montre ce qui se produit dans Visual C++ lorsqu'un bit 1 est décalé vers la gauche dans la position du bit de signe.
+Si vous décalez vers la gauche un nombre signé de manière à affecter le bit de signe, le résultat n'est pas défini. L’exemple suivant montre que se passe-t-il quand un bit 1 est décalée vers la gauche dans la position de bit de signe.
 
 ```cpp
 #include <iostream>
@@ -89,7 +89,7 @@ int main() {
 L’opérateur de décalage vers la droite provoque le modèle binaire de *shift-expression* être décalés vers la droite par le nombre de positions spécifié par *additive-expression*. Pour les nombres non signés, les positions de bit qui ont été libérées par l'opération de décalage sont remplies de zéros. Pour les nombres signés, le bit de signe est utilisé pour remplir les positions de bit libérées. En d'autres termes, si le nombre est positif, 0 est utilisé, et si le nombre est négatif, 1 est utilisé.
 
 > [!IMPORTANT]
-> Le résultat d'un décalage vers la droite d'une nombre négatif signé dépend de l'implémentation. Bien que Visual C++ utilise le bit de signe pour remplir les positions du bit libérées, il n'y a aucune garantie que d'autres implémentations puissent également le faire.
+> Le résultat d'un décalage vers la droite d'une nombre négatif signé dépend de l'implémentation. Bien que Microsoft C++ compilateur utilise le bit de signe pour remplir les positions de bit libérées, il n’existe aucune garantie que d’autres implémentations également le faire.
 
 Cet exemple illustre les opérations de décalage vers la droite à l'aide de nombres non signés :
 
