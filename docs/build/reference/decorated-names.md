@@ -6,18 +6,21 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e3950f79c4c88d031e04d0d145e0a03c9ebc0a37
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293899"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221792"
 ---
 # <a name="decorated-names"></a>Noms décorés
 
 Les fonctions, les données et les objets dans les programmes C et C++ sont représentés en interne par leurs noms décorés. Un *nom décoré* est une chaîne encodée créée par le compilateur pendant la compilation d’un objet, données ou définition de fonction. Il enregistre les conventions d'appel, les types, les paramètres de fonction et d'autres informations avec le nom. Cette décoration de nom, également appelée *troncage*, permet à l’éditeur de liens de trouver les fonctions et objets lors de la liaison d’un fichier exécutable.
 
-Les conventions d'affectation de noms décorés ont changé dans les différentes versions de Visual C++ et peuvent également différer selon l'architecture cible. Pour créer correctement des liens avec les fichiers sources créés à l'aide de Visual C++, les bibliothèques et DLL C et C++ doivent être compilées à l'aide des mêmes indicateurs, ensemble d'outils de compilateur et architecture cible.
+Les conventions d’affectation de noms décorées ont changé dans différentes versions de Visual Studio et peuvent également être différentes selon l’architecture cible. Pour être lié correctement aux fichiers sources créés à l’aide de Visual Studio, C et C++ bibliothèques et DLL doivent être compilés en utilisant le même ensemble d’outils du compilateur, indicateurs et architecture cible. 
+
+> [!NOTE]
+> Bibliothèques générées avec Visual Studio 2015 peuvent être utilisées par les applications créées avec Visual Studio 2017 ou Visual Studio 2019.
 
 ##  <a name="Using"></a> À l’aide des noms décorés
 
@@ -25,7 +28,7 @@ Normalement, vous n'êtes pas tenu de connaître le nom décoré pour écrire du
 
 Si vous modifiez le nom de la fonction, la classe, la convention d'appel, le type de retour ou n'importe quel paramètre, le nom décoré change également. Dans ce cas, vous devez obtenir le nouveau nom décoré et l'utiliser partout où le nom décoré est spécifié.
 
-La décoration des noms est également importante lors de la liaison à du code écrit dans d'autres langages de programmation ou à l'aide d'autres compilateurs. Des compilateurs différents utilisent des conventions différentes de décoration des noms. Quand votre fichier exécutable est lié à du code écrit dans un autre langage, il convient d’apporter un soin particulier pour mettre en correspondance les noms exportés et importés et les conventions d’appel. Le code en langage assembleur doit utiliser les noms décorés et les conventions d'appel Visual C++ pour créer un lien avec le code source écrit à l'aide de Visual C++.
+La décoration des noms est également importante lors de la liaison à du code écrit dans d'autres langages de programmation ou à l'aide d'autres compilateurs. Des compilateurs différents utilisent des conventions différentes de décoration des noms. Quand votre fichier exécutable est lié à du code écrit dans un autre langage, il convient d’apporter un soin particulier pour mettre en correspondance les noms exportés et importés et les conventions d’appel. Code en langage assembleur doit utiliser les noms MSVC décoré et les conventions d’appel à lier au code source écrit à l’aide de MSVC.
 
 ##  <a name="Format"></a> Format de C++ nom décoré
 

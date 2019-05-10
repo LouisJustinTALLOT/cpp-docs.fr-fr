@@ -1,15 +1,15 @@
 ---
 title: Options du compilateur classées par catégorie
-ms.date: 11/12/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0d12c0f82d3595ee6b61edcd21fb01dd7f49163b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294159"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221758"
 ---
 # <a name="compiler-options-listed-by-category"></a>Options du compilateur classées par catégorie
 
@@ -153,7 +153,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Augmente le nombre de sections adressables dans un fichier .obj.|
 |[/c](c-compile-without-linking.md)|Compile sans liaison.|
 |[/cgthreads](cgthreads-code-generation-threads.md)|Spécifie le nombre de threads de cl.exe à utiliser pour l'optimisation et la génération de code.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Vous permet de signaler les erreurs internes du compilateur (ICE) directement à l'équipe Visual C++.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|Vous permet de fournir les informations d’erreur (ICE) interne du compilateur directement à Microsoft C++ équipe.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Affiche le chemin d'accès complet des fichiers de code source passés à cl.exe dans un texte de diagnostic.|
 |[/FS](fs-force-synchronous-pdb-writes.md)|Force la sérialisation des écritures dans le fichier de base de données de programme (PDB) via MSPDBSRV.EXE.|
 |[/H](h-restrict-length-of-external-names.md)|Obsolète. Limite la longueur des noms externes (publics).|
@@ -213,7 +213,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/Yd](yd-place-debug-information-in-object-file.md)|Obsolète. Place des informations de débogage complètes dans tous les fichiers objets. Utilisez [/Zi](z7-zi-zi-debug-information-format.md) à la place.|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|Obsolète. Désactive la conformité dans la portée d’une boucle for.|
 |[/Ze](za-ze-disable-language-extensions.md)|Obsolète. Active les extensions de langage.|
-|[/Zg](zg-generate-function-prototypes.md)|Supprimé dans Visual C++ 2015. Génère des prototypes de fonction.|
+|[/Zg](zg-generate-function-prototypes.md)|Supprimée dans Visual Studio 2015. Génère des prototypes de fonction.|
 
 ## <a name="see-also"></a>Voir aussi
 

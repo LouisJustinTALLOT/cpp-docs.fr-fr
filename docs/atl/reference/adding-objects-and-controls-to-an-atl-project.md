@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 94478f01655ff68b6b8067771eb3fdab42d1af01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d16e9a9e7b92d2a98f8994227c5641994677fdda
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249084"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221210"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Ajout d’objets et des contrôles à un projet ATL
 
@@ -47,7 +47,7 @@ Vous pouvez utiliser un des Assistants code ATL pour ajouter un objet ou un cont
 ## <a name="see-also"></a>Voir aussi
 
 [Assistant Projet ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[Types de projets Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
+[C++types de projets dans Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programmation avec ATL et le code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Configurations de projet ATL par défaut](../../atl/reference/default-atl-project-configurations.md)

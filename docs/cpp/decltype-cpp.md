@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0a4e9eb015df056dfe2a35da18cfa50875ced432
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399081"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222459"
 ---
 # <a name="decltype--c"></a>decltype  (C++)
 
@@ -38,7 +38,7 @@ Le type de la *expression* paramètre.
 
 ## <a name="remarks"></a>Notes
 
-Le **decltype** spécificateur de type est pris en charge dans Visual C++ 2010 ou versions ultérieures et peut être utilisé avec le code natif ou managé. `decltype(auto)` (C++14) est pris en charge dans Visual Studio 2015 et versions ultérieures.
+Le **decltype** spécificateur de type est pris en charge dans Visual Studio 2010 ou versions ultérieures et peut être utilisé avec le code natif ou managé. `decltype(auto)` (C++14) est pris en charge dans Visual Studio 2015 et versions ultérieures.
 
 Le compilateur utilise les règles suivantes pour déterminer le type de la *expression* paramètre.
 
@@ -204,6 +204,6 @@ static_assert(test2, "PASS2");
 
 ## <a name="requirements"></a>Configuration requise
 
-Visual C++ 2010 ou versions ultérieures.
+Visual Studio 2010 ou versions ultérieures.
 
 `decltype(auto)` nécessite Visual Studio 2015 ou version ultérieure.

@@ -1,15 +1,15 @@
 ---
 title: Fichiers de règles XML des pages de propriétés
-ms.date: 04/27/2017
+ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 17b89f00b2e51c960ed7d3219427b56d92851b81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 610dc7341a35845b35d8ed80f52b421d1c2fb5d1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319466"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217717"
 ---
 # <a name="property-page-xml-rule-files"></a>Fichiers de règles XML des pages de propriétés
 
@@ -19,7 +19,7 @@ Les seuls scénarios dans lesquels vous devez comprendre que le fonctionnement i
 
 Nous allons d’abord ouvrir les pages de propriétés pour un projet (cliquez avec le bouton droit sur le nœud du projet dans **l’Explorateur de solutions** et choisissez Propriétés) :
 
-![Propriétés de projet Visual C++](../media/cpp-property-page-2017.png)
+![Visual Studio C++ propriétés de projet](../media/cpp-property-page-2017.png)
 
 Chaque nœud sous **Propriétés de configuration** est appelé une règle. Une règle représente parfois un seul outil comme le compilateur, mais en général, le terme fait référence à un élément qui a des propriétés, qui s’exécute et qui peut produire une sortie. Chaque règle est constituée à partir d’un fichier XML dans le dossier VCTargets. Par exemple, la règle C/C++ qui est montrée ci-dessus est constituée à partir de « cl.xml ».
 

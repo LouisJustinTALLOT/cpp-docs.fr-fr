@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-ms.openlocfilehash: 5b6620b73713886301e4efc29754cf407d9576f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 812245133b4b3b870c0c763eabcda0ec8d26e028
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276240"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221044"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>Spécification de l’optimisation du compilateur pour un projet ATL
 
@@ -54,7 +54,7 @@ Dans stdafx.h, fichiers d’en-tête sont incluses avant tous les autres ATL.
 ## <a name="see-also"></a>Voir aussi
 
 [Assistant Projet ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[Types de projets Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
+[C++types de projets dans Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Programmation avec ATL et le code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [novtable](../../cpp/novtable.md)<br/>

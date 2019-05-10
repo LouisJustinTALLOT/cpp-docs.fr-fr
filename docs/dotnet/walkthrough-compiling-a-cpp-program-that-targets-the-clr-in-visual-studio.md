@@ -1,43 +1,76 @@
 ---
 title: Compiler un C + c++ / CLI programme qui cible le CLR
-ms.date: 09/17/2018
+description: Utiliser Microsoft C++ pour créer des bibliothèques qui peuvent se connecter et les programmes natifs C++ code et des programmes .NET.
+ms.date: 04/23/2019
 helpviewer_keywords:
 - command-line applications [C++], managed code
 - compiling programs [C++]
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8462b2b031bdcdebf65d58974c521d80e57d856d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384398"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221806"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Procédure pas à pas : Compiler un C + c++ / CLI programme qui cible le CLR dans Visual Studio
 
-À l’aide de C++ / c++ / extensions de langage CLI vous pouvez créer des programmes C++ qui utilisent des classes .NET et les compiler à l’aide de l’environnement de développement Visual Studio.
+À l’aide de C++/CLI, vous pouvez créer C++ programmes qui utilisent des classes .NET, mais aussi natif C++ types. C++/ CLI est conçue pour une utilisation dans les applications console et dans les DLL qui encapsulent native C++ de code et la rendre accessible à partir de programmes .NET. Pour créer une interface utilisateur de Windows basée sur .NET, utilisez C# ou Visual Basic. 
 
 Pour cette procédure, vous pouvez taper votre propre programme C++ ou utiliser un des exemples de programmes. L’exemple de programme que nous utilisons dans cette procédure crée un fichier texte nommé textfile.txt et l’enregistre dans le répertoire du projet.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Ces rubriques partent du principe que vous avez des notions de base du langage C++.
+- Une connaissance des notions de base du langage C++.
+- Dans Visual Studio 2017 et versions ultérieures, C++/prise en charge de l’interface CLI est un composant facultatif. Pour l’installer, ouvrez le **le programme d’installation de Visual Studio** à partir du menu Démarrer de Windows. Assurez-vous que le **développement Desktop en C++**  vignette est activée, puis, dans le **facultatif** section components, également cocher  **C++prise en charge de l’interface CLI**.
 
-### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>Pour créer un projet dans Visual Studio et ajouter un nouveau fichier source
+## <a name="create-a-new-project"></a>Créer un nouveau projet
+
+Les étapes suivantes varient selon la version de Visual Studio que vous utilisez. Vérifiez que le sélecteur de version dans le coin supérieur gauche de cette page est défini correctement.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>Pour créer un C++projet /CLI dans Visual Studio 2019
+
+1. Dans **l’Explorateur de solutions**, avec le bouton droit sur le haut pour ouvrir le **créer un nouveau projet** boîte de dialogue.
+
+1. En haut de la boîte de dialogue, tapez **CLR** dans la recherche et puis sélectionnez **projet vide CLR** à partir de la liste des résultats. 
+
+1. Choisissez le **créer** bouton pour créer le projet.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>Pour créer un C++projet /CLI dans Visual Studio 2017
 
 1. Créer un nouveau projet. Dans le menu **Fichier** , pointez sur **Nouveau**, puis cliquez sur **Projet**.
 
 1. Dans les types de projets Visual C++, cliquez sur **CLR**, puis sur **Projet vide CLR**.
 
-   > [!NOTE]
-   > Si le type **Projet vide CLR** est manquant (Visual Studio 2017 uniquement), sélectionnez **Ouvrir Visual Studio Installer** dans le volet gauche de la boîte de dialogue **Nouveau projet**. Installez l’option située sous **Développement Desktop en C++** dans la section des composants **Facultatifs**, nommée **Prise en charge de C++/CLI**.<br/>
+1. Tapez un nom de projet. Par défaut, la solution qui contient le projet porte le même nom que le nouveau projet, mais vous pouvez entrer un autre nom. Si vous le souhaitez, vous pouvez indiquer un emplacement différent pour le projet.
 
-1. Tapez un nom de projet.
+1. Cliquez sur **OK** pour créer le projet.
 
-   Par défaut, la solution qui contient le projet porte le même nom que le nouveau projet, mais vous pouvez entrer un autre nom. Si vous le souhaitez, vous pouvez indiquer un emplacement différent pour le projet.
+::: moniker-end
 
-   Cliquez sur **OK** pour créer le projet.
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>Pour créer un C++projet /CLI dans Visual Studio 2015
+
+1. Créer un nouveau projet. Dans le menu **Fichier** , pointez sur **Nouveau**, puis cliquez sur **Projet**.
+
+1. Dans les types de projets Visual C++, cliquez sur **CLR**, puis sur **Projet vide CLR**.
+
+1. Tapez un nom de projet. Par défaut, la solution qui contient le projet porte le même nom que le nouveau projet, mais vous pouvez entrer un autre nom. Si vous le souhaitez, vous pouvez indiquer un emplacement différent pour le projet.
+
+1. Cliquez sur **OK** pour créer le projet.
+
+::: moniker-end
+
+## <a name="add-a-source-file"></a>Ajoutez un fichier source
 
 1. Si **l’Explorateur de solutions** n’est pas visible, cliquez sur **Explorateur de solutions** dans le menu **Affichage**.
 
@@ -57,7 +90,7 @@ Ces rubriques partent du principe que vous avez des notions de base du langage C
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   Pour plus d’informations sur la nouvelle syntaxe Visual C++, consultez [Extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md).
+   Pour plus d’informations sur C++syntaxe /CLI, consultez [Extensions du composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md).
 
 1. Dans le menu **Générer** , cliquez sur **Générer la solution**.
 
