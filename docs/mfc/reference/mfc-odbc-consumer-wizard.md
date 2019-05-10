@@ -1,23 +1,25 @@
 ---
 title: Consommateur ODBC MFC (Assistant)
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.mfc.consumer.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: b6009a1e6b6100eabaa2ed05404217c0d2906be0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20357646bbb7aa4fe00db43d8e77f9bf0b95c9b5
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310309"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525364"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Consommateur ODBC MFC (Assistant)
 
-> [!WARNING]
-> Dans Visual Studio 2017 version 15.9, cet Assistant Code est déprécié et sera supprimé dans une version ultérieure de Visual Studio. Cet Assistant est rarement utilisé. La prise en charge générale d’ATL et MFC n’est pas affectée par la suppression de cet Assistant. Si vous souhaitez partager vos commentaires sur cette dépréciation, veuillez remplir [cette enquête](https://www.surveymonkey.com/r/QDWKKCN). Vos commentaires sont précieux pour nous.
+::: moniker range="vs-2019"
+
+Cet Assistant n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Cet Assistant définit une classe de jeu d’enregistrements ODBC et les liaisons de données nécessaire pour accéder à la source de données spécifié.
 
@@ -73,6 +75,8 @@ Cet Assistant définit une classe de jeu d’enregistrements ODBC et les liaison
 - **Lier toutes les colonnes**
 
    Spécifie si toutes les colonnes dans la table sélectionnée sont liées. Si vous activez cette case (valeur par défaut), toutes les colonnes sont liées ; Si vous ne sélectionnez pas cette case, aucune colonne n’est liés, et vous devez les lier manuellement dans la classe de jeu d’enregistrements.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94ed75ffd59294d5beb076ef4d66e57ef763f10e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323112"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525457"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Prise en charge des bases de données, Assistant Application MFC
 
@@ -46,15 +46,15 @@ Cette page fournit des options qui vous permettent de spécifier le niveau de ba
 
 - **Source de données**
 
+   > [!NOTE]
+   > L’Assistant Consommateur OLE DB ATL et l’Assistant de consommateur ODBC MFC ne sont pas disponibles dans Visual Studio 2019 et versions ultérieures. Vous pouvez toujours ajouter la fonctionnalité manuellement. Pour plus d’informations, consultez [création d’un consommateur sans utiliser un Assistant](../../data/oledb/creating-a-consumer-without-using-a-wizard.md).
+
    Cliquez sur le **Source de données** bouton pour définir une source de données à l’aide du pilote spécifié ou le fournisseur et la base de données. Si vous avez sélectionné OLE DB dans le **type Client** option, ce bouton affiche la **propriétés des liaisons de données** boîte de dialogue. Si vous avez sélectionné ODBC dans le **type Client** option, ce bouton fournit le **sélectionner une Source de données** boîte de dialogue. Cette option est disponible uniquement si vous choisissez d’inclure une vue de base de données dans votre application.
 
    |Option|Description|
    |------------|-----------------|
    |**Propriétés de liaison de données** (OLE DB)|Établit la source de données spécifiée à l’aide du fournisseur OLE DB spécifié. Vous devez spécifier le fournisseur OLE DB, l’emplacement des données, la source de données, les ID d’ouverture de session et (éventuellement) un mot de passe. Pour plus d’informations sur cette boîte de dialogue, consultez **source de données** dans [Assistant Consommateur OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md).|
    |**Sélectionnez la Source de données** (ODBC)|Établit la source de données spécifiée à l’aide du pilote ODBC spécifié. Vous devez sélectionner un nom de source de données pour choisir une table pour la source de données. L’Assistant lie toutes les colonnes de la table aux variables membres d’un `CRecordset`-classe dérivée. Pour plus d’informations sur cette boîte de dialogue, consultez **source de données** dans [Assistant Consommateur ODBC MFC](../../mfc/reference/mfc-odbc-consumer-wizard.md).|
-
-   > [!NOTE]
-   > Dans les versions précédentes, en cliquant sur la touche MAJ enfoncée la **Source de données** bouton ouverte une boîte de dialogue Ouvrir le fichier afin que vous puissiez sélectionner un fichier Data Link (.udl). Cette fonctionnalité n’est plus pris en charge.
 
 - **Générer la classe de base de données avec attributs**
 
