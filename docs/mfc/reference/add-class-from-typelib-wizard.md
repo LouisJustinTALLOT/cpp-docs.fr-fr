@@ -1,25 +1,27 @@
 ---
 title: Assistant Ajout de classes d'une Typelib
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.typelib
+ms.date: 05/09/2019
 helpviewer_keywords:
-- Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 794df6c207c2f2e93cdcc63a6b83cd3434764e87
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297006"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525476"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Assistant Ajout de classes d'une Typelib
 
-Utilisez cet Assistant pour ajouter une classe MFC à partir d’une bibliothèque de types disponibles. L’Assistant crée une classe pour chaque interface que vous ajoutez à partir de la bibliothèque de types sélectionnée.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> Dans Visual Studio 2017 version 15.9, cet Assistant Code est déprécié et sera supprimé dans une version ultérieure de Visual Studio. Cet Assistant est rarement utilisé. La prise en charge générale d’ATL et MFC n’est pas affectée par la suppression de cet Assistant. Si vous souhaitez partager vos commentaires sur cette dépréciation, veuillez remplir [cette enquête](https://www.surveymonkey.com/r/QDWKKCN). Vos commentaires sont précieux pour nous.
+Cet Assistant n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Utilisez cet Assistant pour ajouter une classe MFC à partir d’une bibliothèque de types disponibles. L’Assistant crée une classe pour chaque interface que vous ajoutez à partir de la bibliothèque de types sélectionnée.
 
 - **Ajouter une classe à partir de**
 
@@ -66,6 +68,8 @@ Utilisez cet Assistant pour ajouter une classe MFC à partir d’une bibliothèq
    Définit le nom du fichier d’en-tête de la nouvelle classe. Par défaut, ce nom est basé sur celui fourni dans **Classes générées**. Cliquez sur le bouton de sélection pour enregistrer le fichier à l’emplacement de votre choix ou pour ajouter la déclaration de classe à un fichier existant. Si vous choisissez un fichier existant, l’Assistant attend que vous cliquiez sur **Terminer** pour l’enregistrer à l’emplacement sélectionné.
 
    L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si la déclaration de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Voir aussi
 

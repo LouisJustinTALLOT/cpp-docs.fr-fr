@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: 4075051ec07fc1331d815534a715c0411160fe14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35bcd4d951ee0340709976807de3a1d5e984cf29
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405636"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524825"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view, classe
 
@@ -121,7 +121,7 @@ accelerator_view( const accelerator_view & other );
 *other*<br/>
 Le `accelerator_view` objet à copier.
 
-## <a name="createmarker"></a>create_marker
+## <a name="create_marker"></a>create_marker
 
 Renvoie un futur pour suivre la fin de toutes les commandes soumises jusqu’alors à ce `accelerator_view` objet.
 
@@ -149,7 +149,7 @@ void flush();
 
 Retourne `void`.
 
-## <a name="getaccelerator"></a>get_accelerator
+## <a name="get_accelerator"></a>get_accelerator
 
 Retourne l’objet d’accélérateur pour l’objet accelerator_view.
 ### <a name="syntax"></a>Syntaxe
@@ -162,7 +162,7 @@ accelerator get_accelerator() const;
 
 L’objet accélérateur pour l’objet accelerator_view.
 
-## <a name="getisautoselection"></a>get_is_auto_selection
+## <a name="get_is_auto_selection"></a>get_is_auto_selection
 
 Retourne une valeur booléenne qui indique si le runtime sélectionne automatiquement un accélérateur approprié lorsque l’accelerator_view est passé à un [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).
 
@@ -176,7 +176,7 @@ bool get_is_auto_selection() const;
 
 **true** si le runtime sélectionne automatiquement un accélérateur approprié ; sinon, **false**.
 
-## <a name="getisdebug"></a>get_is_debug
+## <a name="get_is_debug"></a> get_is_debug
 
 Retourne une valeur booléenne qui indique si l’objet accelerator_view a la couche DEBUG activée pour le rapport d’erreurs étendu.
 
@@ -190,7 +190,7 @@ bool get_is_debug() const;
 
 Valeur booléenne qui indique si le `accelerator_view` objet a la couche DEBUG activée pour le rapport d’erreurs étendu.
 
-## <a name="getqueuingmode"></a>get_queuing_mode
+## <a name="get_queuing_mode"></a>get_queuing_mode
 
 Retourne le mode de file d’attente pour l’objet accelerator_view.
 
@@ -204,7 +204,7 @@ queuing_mode get_queuing_mode() const;
 
 Le mode de file d’attente pour le `accelerator_view` objet.
 
-## <a name="getversion"></a>get_version
+## <a name="get_version"></a>get_version
 
 Retourne la version de l’accelerator_view.
 
@@ -218,7 +218,7 @@ unsigned int get_version() const;
 
 La version de la `accelerator_view`.
 
-## <a name="isautoselection"></a>is_auto_selection
+## <a name="is_auto_selection"></a>is_auto_selection
 
 Obtient une valeur booléenne qui indique si le runtime sélectionne automatiquement un accélérateur approprié lorsque l’accelerator_view est passé à un [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).
 
@@ -228,7 +228,7 @@ Obtient une valeur booléenne qui indique si le runtime sélectionne automatique
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 ```
 
-## <a name="isdebug"></a>is_debug
+## <a name="is_debug"></a>is_debug
 
 Obtient une valeur booléenne qui indique si l’objet accelerator_view a la couche DEBUG activée pour le rapport d’erreurs étendu.
 
@@ -295,7 +295,7 @@ Le `accelerator_view` objet à comparer avec celle-ci.
 
 **true** si les deux objets sont identiques ; sinon, **false**.
 
-## <a name="queuingmode"></a>queuing_mode
+## <a name="queuing_mode"></a>queuing_mode
 
 Obtient le mode de file d’attente pour l’objet accelerator_view.
 
