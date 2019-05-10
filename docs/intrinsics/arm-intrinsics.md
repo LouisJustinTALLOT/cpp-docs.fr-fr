@@ -1931,24 +1931,24 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8590f6ac056bf561960f9c02ff4a4cc6a4d3bfa0
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264294"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447722"
 ---
 # <a name="arm-intrinsics"></a>Fonctions ARM intrinsèques
 
-Le compilateur Visual C++ rend les intrinsèques suivantes disponibles sur l'architecture ARM. Pour plus d’informations sur ARM, consultez le [manuels de référence d’Architecture ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) et [Guide des outils assembleur ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) sur le site Web Centre d’informations ARM.
+Microsoft C++ compilateur (MSVC) rend les intrinsèques suivantes disponibles sur l’architecture ARM. Pour plus d’informations sur ARM, consultez le [manuels de référence d’Architecture ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) et [Guide des outils assembleur ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) sur le site Web Centre d’informations ARM.
 
 ##  <a name="top"></a> NEON
 
 Les extensions du jeu d'instructions vectorielles NEON pour ARM fournissent des capacités SIMD (Single Instruction Multiple Data) qui ressemblent à celles des jeux d'instructions vectorielles MMX et SSE, qui sont communes aux processeurs d'architecture x86 et x64.
 
-Les intrinsèques NEON sont prises en charge telles qu'elles sont fournies dans le fichier d'en-tête `arm_neon.h`. La prise en charge du compilateur Visual C++ pour les intrinsèques NEON ressemble à celle du compilateur ARM, qui est décrite dans l’annexe G de la [chaîne d’outils du compilateur ARM, Version 4.1 du compilateur référence](http://go.microsoft.com/fwlink/p/?LinkId=251083) sur le site Web Centre d’informations ARM.
+Les intrinsèques NEON sont prises en charge telles qu'elles sont fournies dans le fichier d'en-tête `arm_neon.h`. La prise en charge MSVC pour les intrinsèques NEON ressemble à celle du compilateur ARM, qui est décrite dans l’annexe G de la [chaîne d’outils du compilateur ARM, Version 4.1 du compilateur référence](http://go.microsoft.com/fwlink/p/?LinkId=251083) sur le site Web Centre d’informations ARM.
 
-La principale différence entre le compilateur Visual C++ et le compilateur ARM est que le compilateur Visual C++ ajoute des variantes `_ex` des instructions de chargement et de stockage vectoriel `vldX` et `vstX`. Les variantes `_ex` prennent un paramètre supplémentaire qui spécifie l'alignement de l'argument pointeur. À part cette différence, elles sont identiques à leurs équivalents non-`_ex`.
+La principale différence entre MSVC et le compilateur ARM est que le MSVC ajoute `_ex` variantes de la `vldX` et `vstX` vector, charge et de stocker les instructions. Les variantes `_ex` prennent un paramètre supplémentaire qui spécifie l'alignement de l'argument pointeur. À part cette différence, elles sont identiques à leurs équivalents non-`_ex`.
 
 ##  <a name="A"></a> Liste des intrinsèques ARM spécifiques
 
@@ -2398,15 +2398,15 @@ Le tableau suivant résume la prise en charge ARM des intrinsèques à blocage s
 
 ||8|16|32|64|P|
 |-|-------|--------|--------|--------|-------|
-|Ajouter|Aucun.|Aucun.|Complète|Complète|Aucun.|
-|and|Complète|Complète|Complète|Complète|Aucun.|
+|Ajouter|None|None|Complète|Complète|None|
+|and|Complète|Complète|Complète|Complète|None|
 |CompareExchange|Complète|Complète|Complète|Complète|Complète|
-|Décrémentation|Aucun.|Complète|Complète|Complète|Aucun.|
+|Décrémentation|None|Complète|Complète|Complète|None|
 |Exchange|Partial|Partial|Partial|Partial|Partial|
-|ExchangeAdd|Complète|Complète|Complète|Complète|Aucun.|
-|Incrémentation|Aucun.|Complète|Complète|Complète|Aucun.|
-|Ou|Complète|Complète|Complète|Complète|Aucun.|
-|Xor|Complète|Complète|Complète|Complète|Aucun.|
+|ExchangeAdd|Complète|Complète|Complète|Complète|None|
+|Incrémentation|None|Complète|Complète|Complète|None|
+|Ou|Complète|Complète|Complète|Complète|None|
+|Xor|Complète|Complète|Complète|Complète|None|
 
 Clé :
 

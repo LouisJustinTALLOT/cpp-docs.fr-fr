@@ -1,14 +1,14 @@
 ---
 title: Conversions de types et sécurité de type (Modern C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e06ea3f9c3ea427f205764c35988ea3316c3794a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404687"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221864"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversions de types et sécurité de type (Modern C++)
 
@@ -84,7 +84,7 @@ Le compilateur n’avertit pas sur les conversions implicites entre types intég
 
 ### <a name="pointer-conversions"></a>Conversions de pointeurs
 
-Dans beaucoup d’expressions, un tableau de style C est implicitement converti en un pointeur vers le premier élément du tableau et conversions de constantes peuvent se produire en mode silencieux. Bien que cela est pratique, il est également sujette aux erreurs. Par exemple, l’exemple de code mal conçu suivant semble absurde et encore, il sera compilé dans Visual C++ et produit un résultat de « p ». Tout d’abord, le littéral de constante de chaîne « Help » est converti en un `char*` qui pointe vers le premier élément du tableau ; ce pointeur est ensuite incrémenté de trois éléments afin qu’elle pointe vers la dernière élément « p ».
+Dans beaucoup d’expressions, un tableau de style C est implicitement converti en un pointeur vers le premier élément du tableau et conversions de constantes peuvent se produire en mode silencieux. Bien que cela est pratique, il est également sujette aux erreurs. Par exemple, l’exemple de code mal conçu suivant semble absurde et encore il compile et produit un résultat de « p ». Tout d’abord, le littéral de constante de chaîne « Help » est converti en un `char*` qui pointe vers le premier élément du tableau ; ce pointeur est ensuite incrémenté de trois éléments afin qu’elle pointe vers la dernière élément « p ».
 
 ```cpp
 char* s = "Help" + 3;

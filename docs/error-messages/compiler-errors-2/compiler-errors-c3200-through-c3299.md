@@ -35,11 +35,11 @@ helpviewer_keywords:
 - C3294
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
 ms.openlocfilehash: 6965fcde5f7cc93464593e83f787d0a5838398dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281493"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856965"
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>Erreurs du compilateur C3200 à C3299
 

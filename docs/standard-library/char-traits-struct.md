@@ -1,6 +1,6 @@
 ---
 title: char_traits, struct
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - iosfwd/std::char_traits
 - iosfwd/std::char_traits::char_type
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 541f468071e315b205abb8f7b9c865f045c510fe
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379439"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220523"
 ---
 # <a name="chartraits-struct"></a>char_traits, struct
 
@@ -384,7 +384,7 @@ Caractère EOF.
 
 Une valeur qui représente la fin du fichier (par exemple, EOF ou WEOF).
 
-La norme C++ stipule que cette valeur ne doit pas correspondre à une valeur `char_type` valide. L’élément visuel C++ compilateur applique cette contrainte de type **char**, mais pas pour le type **wchar_t**. C'est ce qu'illustre l'exemple ci-dessous.
+La norme C++ stipule que cette valeur ne doit pas correspondre à une valeur `char_type` valide. Microsoft C++ compilateur applique cette contrainte de type **char**, mais pas pour le type **wchar_t**. C'est ce qu'illustre l'exemple ci-dessous.
 
 ### <a name="example"></a>Exemple
 

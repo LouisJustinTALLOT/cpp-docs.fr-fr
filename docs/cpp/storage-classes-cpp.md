@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: e50e5da5ea24d59131f123bb0c772897f9a30218
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 92435b2bab670dd366f26c981443e98e4a4e3c29
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266931"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221984"
 ---
 # <a name="storage-classes-c"></a>Classes de stockage (C++)
 
@@ -24,7 +24,7 @@ Un *classe de stockage* dans le contexte de C++, déclarations de variable est u
 
 1. Le [mutable](../cpp/mutable-data-members-cpp.md) mot clé peut être considéré comme un spécificateur de classe de stockage. Toutefois, il est uniquement disponible dans la liste des membres d'une définition de classe.
 
-1. **Visual C++ 2010 et versions ultérieures :** Le **automatique** mot clé n’est plus un spécificateur de classe de stockage C++ et le **inscrire** mot clé est déconseillé. **Visual Studio 2017 version 15.7 et ultérieure :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Le **inscrire** mot clé est supprimé du langage C++.
+1. **Visual Studio 2010 et versions ultérieur :** Le **automatique** mot clé n’est plus un spécificateur de classe de stockage C++ et le **inscrire** mot clé est déconseillé. **Visual Studio 2017 version 15.7 et ultérieure :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Le **inscrire** mot clé est supprimé du langage C++.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

@@ -1,6 +1,6 @@
 ---
 title: volatile (C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - volatile_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 73243841b2ad02bcc165b2910ac54283028e6cf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2396b5afaed09a28fd83f22fccde0be04e3d7790
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243937"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221875"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -50,7 +50,7 @@ Objets qui sont déclarés comme **volatile** ne sont pas utilisés dans certain
 
 ## <a name="iso-compliant"></a>Conformité ISO
 
-Si vous êtes familiarisé avec le mot-clé volatil c# ou familiarisé avec le comportement de **volatile** dans les versions antérieures de Visual C++, n’oubliez pas que la norme C ++ 11 ISO **volatile** mot clé est différente et est prise en charge dans Visual Studio lorsque le [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) option du compilateur est spécifiée. (Pour ARM, elle est spécifiée par défaut). Le **volatile** mot clé dans le code Standard ISO C ++ 11 doit être utilisé uniquement pour l’accès matériel ; ne l’utilisez pas pour la communication entre threads. Pour la communication entre threads, utilisez des mécanismes tels que [std::atomic\<T >](../standard-library/atomic.md) à partir de la [bibliothèque Standard C++](../standard-library/cpp-standard-library-reference.md).
+Si vous êtes familiarisé avec le C# mot clé volatile ou familiarisés avec le comportement de **volatile** dans les versions antérieures de Microsoft C++ compilateur (MSVC), n’oubliez pas que la norme C ++ 11 ISO **volatile** mot clé est différente et est pris en charge dans MSVC lorsque le [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) option du compilateur est spécifiée. (Pour ARM, elle est spécifiée par défaut). Le **volatile** mot clé dans le code Standard ISO C ++ 11 doit être utilisé uniquement pour l’accès matériel ; ne l’utilisez pas pour la communication entre threads. Pour la communication entre threads, utilisez des mécanismes tels que [std::atomic\<T >](../standard-library/atomic.md) à partir de la [bibliothèque Standard C++](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="end-of-iso-compliant"></a>Fin de la conformité ISO
 

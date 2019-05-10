@@ -53,11 +53,11 @@ helpviewer_keywords:
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
 ms.openlocfilehash: 5ffa1a2633877c8a16eb424f1ddc100bfd6142b8
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344848"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857392"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Erreurs irrécupérables du compilateur C999 à C1999
 

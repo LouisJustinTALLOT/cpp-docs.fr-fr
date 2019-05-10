@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: c9b0eae9c0a1e074fb4f3f12ac38a737ef14c644
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e6d418c1668a0757349c7e5c3bb38f7cda801223
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270898"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446564"
 ---
 # <a name="general-property-page-project"></a>Général, page de propriétés (Projet)
 
@@ -98,7 +98,7 @@ Les propriétés de la section Général affectent l’emplacement des fichiers 
 
 - **Ensemble d’outils de plateforme**
 
-   Permet au projet de cibler une version différente des bibliothèques Visual C++ et du compilateur. Les projets Visual C++ peuvent cibler l’ensemble d’outils par défaut installé par Visual Studio ou les ensembles d’outils installés par plusieurs versions précédentes de Visual Studio, notamment ceux qui créent des exécutables pouvant s’exécuter sur Windows XP. Pour plus d’informations sur la modification de l’ensemble d’outils de plateforme, consultez [Comment : modifier le framework cible et l’ensemble d’outils de plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permet au projet de cibler une version différente des bibliothèques Visual C++ et du compilateur. Visual Studio C++ projets peuvent cibler soit l’ensemble d’outils de valeur par défaut installé par Visual Studio, ou l’un des ensembles d’outils installés par plusieurs versions précédentes de Visual Studio, y compris les ensembles d’outils qui créent des fichiers exécutables pouvant s’exécuter sur Windowx XP. Pour plus d’informations sur la modification de l’ensemble d’outils de plateforme, consultez [Comment : modifier le framework cible et l’ensemble d’outils de plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Activer la build incrémentielle managée**
 

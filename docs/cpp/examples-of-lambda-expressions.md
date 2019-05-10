@@ -1,15 +1,15 @@
 ---
 title: Exemples d’expressions lambda
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392191"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222091"
 ---
 # <a name="examples-of-lambda-expressions"></a>Exemples d’expressions lambda
 
@@ -61,7 +61,7 @@ Bien que les expressions lambda soient le plus souvent déclarées dans le corps
 
 ### <a name="example-2"></a>Exemple 2
 
-Le compilateur Visual C++ lie une expression lambda à ses variables capturées lorsque l'expression est déclarée plutôt que lorsque l'expression est appelée. L’exemple suivant montre une expression lambda qui capture la variable locale `i` par valeur et la variable locale `j` par référence. Puisque l'expression lambda capture `i` par valeur, la réaffectation de `i` ultérieurement dans le programme n'affecte pas le résultat de l'expression. Toutefois, puisque l’expression lambda enregistre `j` par référence, la réaffectation de `j` influence le résultat de l’expression.
+Microsoft C++ compilateur lie une expression lambda à ses variables capturées lorsque l’expression est déclarée plutôt que lorsque l’expression est appelée. L’exemple suivant montre une expression lambda qui capture la variable locale `i` par valeur et la variable locale `j` par référence. Puisque l'expression lambda capture `i` par valeur, la réaffectation de `i` ultérieurement dans le programme n'affecte pas le résultat de l'expression. Toutefois, puisque l’expression lambda enregistre `j` par référence, la réaffectation de `j` influence le résultat de l’expression.
 
 ### <a name="code"></a>Code
 

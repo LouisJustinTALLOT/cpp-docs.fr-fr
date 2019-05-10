@@ -5,12 +5,12 @@ f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: a22b31f1ac3226271ed7ff03b5be7dad7fff6b93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2839494232e7b57325b6f7abb960a258ba13078
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298865"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446952"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Erreur des outils Éditeur de liens LNK2038
 
@@ -24,9 +24,9 @@ Cette erreur peut se produire lorsqu'un fichier objet de votre projet est obsol�
 
 Visual Studio définit les symboles ci-dessous pour empêcher la liaison du code incompatible, qui peut provoquer des erreurs d'exécution ou d'autres comportements inattendus.
 
-- `_MSC_VER` Indique les numéros de version majeure et mineure du compilateur Visual C++ qui permet de générer une application ou une bibliothèque. Le code compilé à l'aide d'une version du compilateur Visual C++ est incompatible avec le code compilé à l'aide d'une version comportant des numéros de version principale et secondaire différents. Pour plus d’informations, consultez `_MSC_VER` dans [Macros prédéfinies](../../preprocessor/predefined-macros.md).
+- `_MSC_VER` Indique les numéros de version majeure et mineure de Microsoft C++ compilateur (MSVC) qui est utilisé pour générer une application ou une bibliothèque. Le code est compilé à l’aide d’une version de la MSVC est incompatible avec le code est compilé à l’aide d’une version comportant des numéros de version principale et secondaire différents. Pour plus d’informations, consultez `_MSC_VER` dans [Macros prédéfinies](../../preprocessor/predefined-macros.md).
 
-   Si vous créez un lien vers une bibliothèque qui n’est pas compatible avec la version du compilateur Visual C++ que vous utilisez, et vous ne pouvez pas acquérir ou générer une version compatible de la bibliothèque, vous pouvez utiliser une version antérieure du compilateur pour générer votre projet : modifier le **ensemble d’outils de plateforme** propriété du projet à l’ensemble d’outils antérieures. Pour plus d'informations, voir [Procédure : modifier le framework cible et l’ensemble d’outils de plateforme](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+   Si vous créez un lien vers une bibliothèque qui n’est pas compatible avec la version de la MSVC que vous utilisez, et vous ne pouvez pas acquérir ou générer une version compatible de la bibliothèque, vous pouvez utiliser une version antérieure du compilateur pour générer votre projet : modifier le  **Ensemble d’outils de plateforme** propriété du projet à l’ensemble d’outils antérieures. Pour plus d'informations, voir [Procédure : modifier le framework cible et l’ensemble d’outils de plateforme](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - `_ITERATOR_DEBUG_LEVEL` Indique le niveau de sécurité et de fonctionnalités de débogage qui sont activées dans la bibliothèque C++ Standard. Ces fonctionnalités peuvent modifier la représentation de certains objets de la bibliothèque C++ standard et ainsi les rendre incompatibles avec ceux qui utilisent d’autres fonctionnalités de sécurité et de débogage. Pour plus d’informations, consultez [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 

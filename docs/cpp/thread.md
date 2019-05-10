@@ -1,6 +1,6 @@
 ---
 title: thread
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 59a1af8a7eb73207f84ddf2194d5fe9e77d7d46a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330516"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221962"
 ---
 # <a name="thread"></a>thread
 
@@ -40,7 +40,7 @@ Lorsque vous utilisez des variables locales de thread dans les bibliothèques ch
 
 1. Si la variable est initialisée avec un appel de fonction (y compris les constructeurs), cette fonction sera uniquement être appelée pour le thread qui a provoqué la binaire/DLL à charger dans le processus et pour les threads qui ont démarré après que le fichier binaire/DLL a été chargée. Les fonctions d’initialisation ne sont pas appelées pour n’importe quel autre thread qui a été déjà en cours d’exécution lors du chargement de la DLL. L’initialisation dynamique produit sur l’appel de DllMain pour DLL_THREAD_ATTACH, mais la DLL jamais Obtient le message si la DLL n’est pas dans le processus lorsque le thread ne démarre.
 
-1. Les variables locales de thread qui sont initialisés de façon statique avec des valeurs constantes sont généralement initialisés correctement sur tous les threads. Toutefois, à compter de décembre 2017 existe un problème connu de la conformité dans le compilateur Microsoft Visual C++ dans lequel les variables de constexpr de réception dynamique au lieu de l’initialisation statique.
+1. Les variables locales de thread qui sont initialisés de façon statique avec des valeurs constantes sont généralement initialisés correctement sur tous les threads. Toutefois, à compter de décembre 2017 il existe un problème de conformité connus dans Microsoft C++ compilateur par lequel les variables de constexpr de réception dynamique au lieu de l’initialisation statique.
 
    Remarque : Ces deux problèmes sont supposées être corrigé dans les prochaines mises à jour du compilateur.
 

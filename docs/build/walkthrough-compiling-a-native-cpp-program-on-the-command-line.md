@@ -1,23 +1,24 @@
 ---
 title: 'Procédure pas à pas : Compilation d’un programme C++ natif sur la ligne de commande'
+description: Utiliser Microsoft C++ compilateur à partir d’une invite de commandes.
 ms.custom: conceptual
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - native code [C++]
 - Visual C++, native code
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: d7b5bc88966f7edbb7179c36398b1dd95afb971f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 64300c8683dd5d1c40638ba7d50acfca6abc40c0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313881"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217714"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procédure pas à pas : Compilation d’un programme C++ natif sur la ligne de commande
 
-Visual C++ inclut un compilateur C++ en ligne de commande que vous pouvez utiliser pour créer toutes sortes d’applications de console de base pour les applications de plateforme Windows universelle, les applications de bureau, les pilotes de périphériques et les composants .NET.
+Visual Studio inclut une ligne de commande C++ compilateur que vous pouvez utiliser pour créer toutes sortes d’applications de console de base pour les applications de plateforme Windows universelle, les applications de bureau, les pilotes de périphériques et les composants .NET.
 
 Dans cette procédure pas à pas, vous allez créer une base « Hello, World »-du style programme C++ à l’aide d’un texte de l’éditeur et puis le compiler sur la ligne de commande. Si vous souhaitez essayer de l’IDE de Visual Studio au lieu d’utiliser la ligne de commande, consultez [procédure pas à pas : Utilisation de projets et Solutions (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) ou [à l’aide de l’IDE Visual Studio pour le développement de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
@@ -29,7 +30,7 @@ Pour effectuer cette procédure pas à pas, vous devez avoir installé Visual St
 
 Visual Studio est un environnement puissant de développement intégré (IDE) qui prend en charge d’un éditeur complet, les gestionnaires de ressources, les débogueurs et les compilateurs pour plusieurs langages et plateformes. Pour plus d’informations sur la façon de télécharger et installer Visual Studio, y compris l’édition de Visual Studio Community gratuite et pour inclure la prise en charge pour le développement C/C++, consultez [prise en charge de l’installation de C++ dans Visual Studio](vscpp-step-0-installation.md).
 
-Les outils de génération pour Visual Studio installe uniquement les compilateurs de ligne de commande, les outils et les bibliothèques que nécessaires pour générer des programmes C et C++. Il est idéal pour les laboratoires de conception ou de la classe teste et installe relativement rapidement. Pour installer uniquement les outils de ligne de commande, téléchargez [Build Tools pour Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721).
+Les outils de génération pour Visual Studio installe uniquement les compilateurs de ligne de commande, les outils et les bibliothèques que nécessaires pour générer des programmes C et C++. Il est idéal pour les laboratoires de conception ou de la classe teste et installe relativement rapidement. Pour installer uniquement les outils de ligne de commande, recherchez Build Tools pour Visual Studio sur le [téléchargements Visual Studio](https://visualstudio.microsoft.com/downloads/) page.
 
 Avant de pouvoir créer un programme C ou C++ sur la ligne de commande, vous devez vérifier que les outils sont installés, et que vous pouvez y accéder à partir de la ligne de commande. Visual C++ a des exigences complexes pour l’environnement de ligne de commande Rechercher les outils, les en-têtes et les bibliothèques qu’elle utilise. **Vous ne pouvez pas utiliser Visual C++ dans une fenêtre d’invite de commandes standard** sans effectuer certaines tâches de préparation. Heureusement, Visual C++ installe des raccourcis pour lancer une invite de commandes développeur qui a l’environnement configuré pour les builds de ligne de commande. Malheureusement, les noms des raccourcis d’invite de commandes de développeur et où ils se trouvent sont différents dans presque toutes les versions de Visual C++ et sur différentes versions de Windows. Votre première tâche de la procédure pas à pas consiste à trouver celui qui convient à utiliser.
 
@@ -38,11 +39,11 @@ Avant de pouvoir créer un programme C ou C++ sur la ligne de commande, vous dev
 
 ### <a name="open-a-developer-command-prompt"></a>Ouvrez une invite de commandes développeur
 
-1. Si vous avez installé Visual Studio 2017 sur Windows 10, ouvrez le menu Démarrer et choisissez **toutes les applications**. Faites défiler vers le bas et ouvrez le **Visual Studio 2017** dossier (et pas l’application de Visual Studio 2017). Choisissez **invite de commandes développeur pour VS 2017** pour ouvrir la fenêtre d’invite de commandes.
+1. Si vous avez installé Visual Studio 2017 ou version ultérieure sur Windows 10, ouvrez le menu Démarrer et choisissez **toutes les applications**. Faites défiler vers le bas et ouvrez le **Visual Studio** dossier (et pas l’application de Visual Studio). Choisissez **invite de commandes développeur pour VS** pour ouvrir la fenêtre d’invite de commandes.
 
    Si vous avez installé Microsoft Visual C++ Build Tools 2015 sur Windows 10, ouvrez le **Démarrer** menu et choisissez **toutes les applications**. Faites défiler vers le bas et ouvrez le **Visual C++ Build Tools** dossier. Choisissez **invite de commandes outils natifs Visual C++ 2015 x86** pour ouvrir la fenêtre d’invite de commandes.
 
-   Si vous utilisez une autre version de Visual Studio ou exécutez une version différente de Windows, recherchez dans votre menu Démarrer ou page pour un dossier d’outils de Visual Studio qui contient un raccourci d’invite de commandes développeur de démarrage. Vous pouvez également utiliser la fonction de recherche de Windows pour rechercher « invite de commande développeur » et choisissez celui qui correspond à votre version installée de Visual Studio. Utilisez le raccourci pour ouvrir la fenêtre d’invite de commandes.
+   Vous pouvez également utiliser la fonction de recherche de Windows pour rechercher « invite de commande développeur » et choisissez celui qui correspond à votre version installée de Visual Studio. Utilisez le raccourci pour ouvrir la fenêtre d’invite de commandes.
 
 1. Ensuite, vérifiez que l’invite de commandes développeur Visual C++ est correctement configuré. Dans la fenêtre d’invite de commandes, entrez `cl` et vérifiez que la sortie ressemble à ceci :
 
@@ -87,7 +88,7 @@ Avant de pouvoir créer un programme C ou C++ sur la ligne de commande, vous dev
 
 1. Enregistrez votre travail. Dans le Bloc-notes, dans le menu **Fichier** , choisissez **Enregistrer**.
 
-   Félicitations, vous avez créé un fichier source Visual C++, hello.cpp, qui est prêt pour la compilation.
+   Félicitations, vous avez créé un C++ fichier source, hello.cpp, qui est prêt pour la compilation.
 
 1. Revenez à la fenêtre d’invite de commandes développeur. Entrez `dir` à l’invite de commande pour répertorier le contenu du répertoire c:\hello. Vous devez voir le hello.cpp du fichier source dans la liste des répertoires, qui ressemble à quelque chose comme :
 

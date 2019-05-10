@@ -1,6 +1,6 @@
 ---
 title: Identificateurs (C++)
-ms.date: 09/12/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - decorated names
 - decorated names, about decorated names
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 61ca021a8f41074dcef6bf9df2e5683ede98deee
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184599"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222434"
 ---
 # <a name="identifiers-c"></a>Identificateurs (C++)
 
@@ -70,7 +70,7 @@ Seuls les 2 048 premiers caractères des identificateurs Microsoft C++ sont sign
 
 - Le nombre d'arguments d'une fonction.
 
-Le signe dollar `$` est un caractère d’identificateur valide en Visual C++. Visual C++ vous permet également d’utiliser les caractères effectifs représentés par les plages autorisées des noms de caractères universels dans les identificateurs. Pour utiliser ces caractères, vous devez enregistrer le fichier à l’aide d’une page de codes d’encodage de fichier qui les inclut.  Cet exemple montre comment utiliser les caractères étendus et les noms de caractères universels de manière interchangeable dans votre code.
+Le signe dollar `$` est un caractère d’identificateur valide dans le Microsoft C++ compilateur (MSVC). MSVC vous permet également d’utiliser les caractères effectifs représentés par les plages autorisées des noms de caractères universels dans les identificateurs. Pour utiliser ces caractères, vous devez enregistrer le fichier à l’aide d’une page de codes d’encodage de fichier qui les inclut.  Cet exemple montre comment utiliser les caractères étendus et les noms de caractères universels de manière interchangeable dans votre code.
 
 ```cpp
 // extended_identifier.cpp

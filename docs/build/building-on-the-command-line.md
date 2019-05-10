@@ -2,7 +2,7 @@
 title: Utiliser l’ensemble d’outils MSVC à partir de la ligne de commande - Visual Studio
 description: Utilisez le Microsoft C++ du compilateur chaîne d’outils (MSVC) à partir de la ligne de commande en dehors de l’IDE Visual Studio.
 ms.custom: conceptual
-ms.date: 12/10/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 5f9ac1e4753fdba412af26bcc45022dee354cacf
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342166"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877123"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>Utiliser l’ensemble d’outils MSVC à partir de la ligne de commande
 
-Vous pouvez créer des applications C et C++ sur la ligne de commande à l’aide des outils qui sont inclus dans Visual Studio. Vous pouvez également télécharger l’ensemble d’outils du compilateur sous forme de package autonome à partir de [Build Tools pour Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721).
+Vous pouvez créer des applications C et C++ sur la ligne de commande à l’aide des outils qui sont inclus dans Visual Studio. Vous pouvez également télécharger l’ensemble d’outils du compilateur sous forme de package autonome à partir de la [téléchargements Visual Studio](https://visualstudio.microsoft.com/downloads/) page. Il fait partie de la **Build Tools pour Visual Studio** package ; vous pouvez choisir de télécharger uniquement les outils que vous avez besoin pour C++ développement.
 
 ## <a name="how-to-use-the-command-line-tools"></a>Comment utiliser les outils de ligne de commande
 
@@ -43,13 +43,11 @@ Les raccourcis d’invite de commande sont installés dans un dossier de Visual 
 - **Invite de commande des outils Cross x86_x64** -définit l’environnement à utiliser les outils 32 bits, natif x86 pour générer du code 64 bits, natif x64.
 - **Invite de commande des outils Cross x64_x86** -définit l’environnement à utiliser les outils 64 bits, natif x64 pour générer du code 32 bits, natif x86.
 
-Les véritable Start menu contextuel noms des dossiers et varient selon la version de Visual Studio que vous avez installée et la surnom de l’installation si vous définissez une. Par exemple, si vous avez Visual Studio 2017 est installé et que vous avez étant donné qu’elle une installation de surnom de *aperçu*, le raccourci d’invite de commandes développeur est nommé **invite de commandes développeur pour VS 2017 (version préliminaire)**, dans un dossier nommé **Visual Studio 2017**.
-
-Si vous avez installé le [Build Tools pour Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (qui inclut également l’ensemble d’outils du compilateur de Visual Studio 2015 Update 3), uniquement les spécifique de l’architecture native entre différents outils ou invite de commandes développeur options sont installées. et pas le général **invite de commandes développeur** raccourci.
+Les véritable Start menu contextuel noms des dossiers et varient selon la version de Visual Studio que vous avez installée et la surnom de l’installation si vous définissez une. Par exemple, si vous avez Visual Studio 2017 est installé et que vous avez étant donné qu’elle une installation de surnom de *aperçu*, le raccourci d’invite de commandes développeur est nommé **invite de commandes développeur pour VS 2019**, dans un dossier nommé **Visual Studio 2019**.
 
 ## <a name="developer_command_prompt"></a> Pour ouvrir une fenêtre d’invite de commandes développeur
 
-1. Sur le bureau, ouvrez le Windows **Démarrer** menu, puis faites défiler pour rechercher et ouvrir le dossier correspondant à votre version de Visual Studio, par exemple, **Visual Studio 2017**. Dans certaines versions antérieures de Visual Studio, les raccourcis sont dans un sous-dossier appelé **Visual Studio Tools**.
+1. Sur le bureau, ouvrez le Windows **Démarrer** menu, puis faites défiler pour rechercher et ouvrir le dossier correspondant à votre version de Visual Studio, par exemple, **Visual Studio 2019**. Dans certaines versions antérieures de Visual Studio, les raccourcis sont dans un sous-dossier appelé **Visual Studio Tools**.
 
 1. Dans le dossier, choisissez le **invite de commandes développeur** pour votre version de Visual Studio. Ce raccourci démarre une fenêtre d’invite de commandes de développeur qui utilise l’architecture de build par défaut d’outils 32 bits, natif x86 pour générer du code 32 bits, natif x86. Si vous préférez une architecture de build de celle par défaut, choisissez une des natif ou pour spécifier l’architecture hôte et cible des invites de commandes des outils croisés.
 
@@ -57,11 +55,11 @@ Un moyen encore plus rapide pour ouvrir une fenêtre d’invite de commandes dé
 
 ## <a name="developer_command_file_locations"></a> Emplacements de fichiers de commandes développeur
 
-Si vous préférez définir l’environnement d’architecture de génération dans une fenêtre d’invite de commande existante, vous pouvez utiliser un des fichiers de commande (fichiers de commandes) créé par le programme d’installation pour définir l’environnement requis. Nous vous recommandons de seulement faire cela dans une nouvelle fenêtre d’invite de commandes, et nous déconseillons vous basculez vers les environnements plus loin dans la même fenêtre de commande. L’emplacement de ces fichiers dépend de la version de Visual Studio que vous avez installée et sur l’emplacement et d’affectation de noms des choix effectués lors de l’installation. Pour Visual Studio 2017, l’installation par défaut sur un ordinateur 64 bits se trouve dans \Program fichiers (x86) \Microsoft Visual Studio\2017\\*édition*, où *édition* peut-être la Communauté, Professionnel, entreprise, BuildTools ou un autre nom que vous avez fournies. Pour Visual Studio 2015, l’installation par défaut se trouve dans \Program Files (x86) \Microsoft Visual Studio 14.0.
+Si vous préférez définir l’environnement d’architecture de génération dans une fenêtre d’invite de commande existante, vous pouvez utiliser un des fichiers de commande (fichiers de commandes) créé par le programme d’installation pour définir l’environnement requis. Nous vous recommandons de seulement faire cela dans une nouvelle fenêtre d’invite de commandes, et nous déconseillons vous basculez vers les environnements plus loin dans la même fenêtre de commande. L’emplacement de ces fichiers dépend de la version de Visual Studio que vous avez installée et sur l’emplacement et d’affectation de noms des choix effectués lors de l’installation. Pour Visual Studio 2019, l’emplacement d’installation par défaut sur un ordinateur 64 bits est \Program fichiers (x86) \Microsoft Visual Studio\2019\\*édition*, où *édition* peut-être la Communauté, Professionnel, entreprise, BuildTools ou un autre nom que vous avez fournies. L’emplacement de Visual Studio 2017 est similaire. Pour Visual Studio 2015, l’installation par défaut se trouve dans \Program Files (x86) \Microsoft Visual Studio 14.0.
 
 Le fichier de commandes d’invite de commandes développeur principal, VsDevCmd.bat, se trouve dans le sous-répertoire Common7\Tools du répertoire d’installation. Lorsque aucun paramètre n’est spécifié, il définit l’environnement et l’hôte et la cible build architecture pour utiliser les outils de x86 natif de 32 bits pour générer des 32 bits x86 code.
 
-Fichiers de commandes supplémentaires sont disponibles pour configurer des architectures de build spécifique, en fonction de votre architecture de processeur et les charges de travail de Visual Studio et les options que vous avez installé. Dans Visual Studio 2017, ceux-ci sont situés dans le sous-répertoire VC\Auxiliary\Build du répertoire d’installation de Visual Studio. Dans Visual Studio 2015, ceux-ci sont situés dans le VC, VC\bin ou VC\bin\\*architectures* sous-répertoires du répertoire d’installation, où *architectures* est un des natif ou options du compilateur croisé. Ces fichiers de commande de définir les paramètres par défaut et appellent VsDevCmd.bat pour configurer l’environnement d’architecture de build spécifiée. Une installation classique peut inclure ces fichiers de commandes :
+Fichiers de commandes supplémentaires sont disponibles pour configurer des architectures de build spécifique, en fonction de votre architecture de processeur et les charges de travail de Visual Studio et les options que vous avez installé. Dans Visual Studio 2017 et Visual Studio 2019, ceux-ci sont situés dans le sous-répertoire VC\Auxiliary\Build du répertoire d’installation de Visual Studio. Dans Visual Studio 2015, ceux-ci sont situés dans le VC, VC\bin ou VC\bin\\*architectures* sous-répertoires du répertoire d’installation, où *architectures* est un des natif ou options du compilateur croisé. Ces fichiers de commande de définir les paramètres par défaut et appellent VsDevCmd.bat pour configurer l’environnement d’architecture de build spécifiée. Une installation classique peut inclure ces fichiers de commandes :
 
 |Fichier de commandes|Architectures d’hôte et cible|
 |---|---|
@@ -107,28 +105,28 @@ Cet argument facultatif vous permet de spécifier **stocker** ou **uwp** en tant
 Spécifie éventuellement la version du SDK Windows à utiliser. Par défaut, le kit SDK Windows installée plus récente est utilisé. Pour spécifier la version du SDK Windows, vous pouvez utiliser un nombre de Windows 10 SDK complet, tel que **10.0.10240.0**, ou spécifiez **8.1** pour utiliser le SDK de Windows 8.1.
 
 *vcversion*<br/>
-Spécifie éventuellement l’ensemble d’outils du compilateur de Visual Studio à utiliser. Par défaut, l’environnement est défini pour utiliser l’ensemble d’outils du compilateur de Visual Studio 2017 en cours. Utilisez **-vcvars_ver = 14.0** pour spécifier l’ensemble d’outils du compilateur de Visual Studio 2015.
+Spécifie éventuellement l’ensemble d’outils du compilateur de Visual Studio à utiliser. Par défaut, l’environnement est défini pour utiliser l’ensemble d’outils du compilateur de Visual Studio en cours. Utilisez **-vcvars_ver = 14.0** pour spécifier l’ensemble d’outils du compilateur de Visual Studio 2015 ou **-vcvars_ver = 15.0** pour spécifier l’ensemble d’outils du compilateur de Visual Studio 2017.
 
 <a name="vcvarsall"></a>
 #### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>Pour configurer l’environnement de génération dans une fenêtre d’invite de commandes existante
 
-1. À l’invite de commandes, utilisez la commande CD pour remplacer dans le répertoire d’installation de Visual Studio. Ensuite, utilisez des CD à nouveau vers le sous-répertoire du répertoire qui contient les fichiers de commandes de configuration spécifiques. Pour Visual Studio 2017, il s’agit du sous-répertoire VC\Auxiliary\Build. Pour Visual Studio 2015, utilisez le sous-répertoire VC.
+1. À l’invite de commandes, utilisez la commande CD pour remplacer dans le répertoire d’installation de Visual Studio. Ensuite, utilisez des CD à nouveau vers le sous-répertoire du répertoire qui contient les fichiers de commandes de configuration spécifiques. Pour Visual Studio 2017 et 2019, il s’agit du sous-répertoire VC\Auxiliary\Build. Pour Visual Studio 2015, utilisez le sous-répertoire VC.
 
-1. Entrez la commande pour votre environnement de développement préféré. Par exemple, pour générer le code d’ARM pour UWP sur une plateforme 64 bits à l’aide de la dernière version du SDK de Windows et l’ensemble d’outils du compilateur Visual Studio 2017 RTM, vous devez utiliser cette ligne de commande :
+1. Entrez la commande pour votre environnement de développement préféré. Par exemple, pour générer le code d’ARM pour UWP sur une plateforme 64 bits à l’aide de la dernière version du SDK de Windows et l’ensemble d’outils du compilateur de Visual Studio 2019, utilisez cette ligne de commande :
 
-   `vcvarsall.bat amd64_arm uwp -vcvars_ver=14.10`
+   `vcvarsall.bat amd64_arm uwp`
 
 ## <a name="create-your-own-command-prompt-shortcut"></a>Créer votre propre raccourci d’invite de commandes
 
-Si vous ouvrez la boîte de dialogue Propriétés de l’un des raccourcis d’invite de commandes de développeur existant, vous pouvez voir la cible de commande utilisée. Par exemple, la cible pour le **x64 invite de commandes des outils natifs pour VS 2017** raccourci est quelque chose de similaire à :
+Si vous ouvrez la boîte de dialogue Propriétés de l’un des raccourcis d’invite de commandes de développeur existant, vous pouvez voir la cible de commande utilisée. Par exemple, la cible pour le **x64 invite de commandes des outils natifs pour VS 2019** raccourci est quelque chose de similaire à :
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
-Ensemble des fichiers du lot spécifique de l’architecture la *architecture* vcvarsall.bat de paramètre et d’appel. Vous pouvez passer les mêmes options supplémentaires à ces fichiers de commandes que vous transmettriez à vcvarsall.bat, ou vous pouvez simplement appeler directement les vcvarsall.bat. Pour spécifier des paramètres pour votre propre raccourci de la commande, ajoutez-les à la fin de la commande dans des guillemets doubles. Par exemple, pour définir un raccourci pour générer le code ARM pour UWP sur une plateforme 64 bits à l’aide de la dernière version du SDK de Windows et l’ensemble d’outils du compilateur Visual Studio 2017 RTM, utiliser quelque chose comme cible de cette commande dans votre raccourci :
+Ensemble des fichiers du lot spécifique de l’architecture la *architecture* vcvarsall.bat de paramètre et d’appel. Vous pouvez passer les mêmes options supplémentaires à ces fichiers de commandes que vous transmettriez à vcvarsall.bat, ou vous pouvez simplement appeler directement les vcvarsall.bat. Pour spécifier des paramètres pour votre propre raccourci de la commande, ajoutez-les à la fin de la commande dans des guillemets doubles. Par exemple, pour définir un raccourci pour générer le code ARM pour UWP sur une plateforme 64 bits à l’aide de la dernière version du SDK de Windows et un ensemble d’outils du compilateur qui est antérieure à la version actuelle, vous devez spécifier le numéro de version. Utilisez quelque chose comme cible de cette commande dans votre raccourci :
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=14.10"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=15.0"`
 
-Vous devez ajuster le chemin d’accès pour refléter votre répertoire d’installation de Visual Studio.
+Vous devez ajuster le chemin d’accès pour refléter votre répertoire d’installation de Visual Studio. Le fichier vcvarsall.bat comporte des informations supplémentaires sur les numéros de version spécifique.
 
 ## <a name="command-line-tools"></a>Outils de ligne de commande
 

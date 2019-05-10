@@ -99,11 +99,11 @@ helpviewer_keywords:
 - C3497
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
 ms.openlocfilehash: 587b28cedb0ab8b11c244be4278c7dc17d1f4247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281385"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857381"
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>Erreurs du compilateur C3400 à C3499
 

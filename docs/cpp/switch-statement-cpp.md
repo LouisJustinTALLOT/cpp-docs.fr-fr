@@ -1,6 +1,6 @@
 ---
 title: switch, instruction (C++)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267087"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221937"
 ---
 # <a name="switch-statement-c"></a>switch, instruction (C++)
 
@@ -78,7 +78,7 @@ int main() {
 
 Dans l'exemple ci-dessus, `capa` est incrémenté si `c` est un `A` majuscule. Le **saut** instruction après `capa++` termine l’exécution de la **basculer** corps d’instruction et le contrôle passe à la **tandis que** boucle. Sans le **saut** instruction, l’exécution serait « passer » à l’instruction étiquetée suivante, afin que `lettera` et `nota` seraient également incrémentés. Un objectif similaire est pris en charge par le **saut** instruction pour `case 'a'`. Si `c` est une minuscule `a`, `lettera` est incrémentée et le **saut** instruction met fin à la **basculer** corps de l’instruction. Si `c` n’est pas un `a` ou `A`, le **par défaut** instruction est exécutée.
 
-**Visual Studio 2017 et versions ultérieur :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) le `[[fallthrough]]` attribut est spécifié dans la norme C ++ 17. Il peut être utilisé dans un **basculer** instruction en tant qu’indicateur du compilateur (ou à toute personne lisant le code) ce comportement FallThrough est prévu. Le compilateur Visual C++ n’avertit actuellement pas sur le comportement fallthrough, cet attribut n’a aucun effet sur le comportement du compilateur. Notez que l’attribut est appliqué à une instruction vide au sein de l’instruction étiquetée ; en d’autres termes, le point-virgule est nécessaire.
+**Visual Studio 2017 et versions ultérieur :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) le `[[fallthrough]]` attribut est spécifié dans la norme C ++ 17. Il peut être utilisé dans un **basculer** instruction en tant qu’indicateur du compilateur (ou à toute personne lisant le code) ce comportement FallThrough est prévu. Microsoft C++ compilateur actuellement n’avertit pas sur le comportement fallthrough, cet attribut n’a aucun effet sur le comportement du compilateur. Notez que l’attribut est appliqué à une instruction vide au sein de l’instruction étiquetée ; en d’autres termes, le point-virgule est nécessaire.
 
 ```cpp
 int main()

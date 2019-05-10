@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 043390a2ebefcadac300b7fb0b05ae7f5ed411f3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384853"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447286"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Assemblys mixtes (natifs et managés)
 
@@ -27,7 +27,7 @@ Par exemple, une bibliothèque existante entièrement composée de code C++ nati
 
 Visual C++ prend uniquement en charge la génération d’assemblys managés mixtes à l’aide de la **/CLR** option du compilateur. Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017. Si vous avez besoin des assemblys managés purs et vérifiables, nous vous recommandons de que les créer à l’aide de c#.
 
-Les versions antérieures de l’ensemble d’outils du compilateur Visual C++ pris en charge la génération de trois types distincts d’assemblys managés : mixte, pure et vérifiable. Les deux derniers sont traités dans [Code pur et vérifiable (C++ / c++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Les versions antérieures de Microsoft C++ ensemble d’outils du compilateur pris en charge la génération de trois types distincts d’assemblys managés : mixte, pure et vérifiable. Les deux derniers sont traités dans [Code pur et vérifiable (C++ / c++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 ## <a name="in-this-section"></a>Dans cette section
 

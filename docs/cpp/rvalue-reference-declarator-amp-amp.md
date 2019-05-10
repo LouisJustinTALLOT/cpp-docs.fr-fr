@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 185c2de5dc21dd305a2792d4ee8e6baf69c35b28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 663b639dbfecf9253547e1dd3b4e40480c27b470
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331088"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222046"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Déclarateur de référence rvalue : &amp;&amp;
 
@@ -35,7 +35,7 @@ Références rvalue prennent en charge l’implémentation de *la sémantique de
 
 Pour implémenter la sémantique de déplacement, vous fournissez généralement un *constructeur de déplacement,* et éventuellement un opérateur d’assignation déplacement (**opérateur =**), à votre classe. Les opérations de copie et d'assignation dont les sources sont des rvalues profitent ensuite automatiquement de la sémantique de déplacement. Contrairement au constructeur de copie par défaut, le compilateur ne fournit pas de constructeur de déplacement par défaut. Pour plus d’informations sur la façon d’écrire un constructeur de déplacement et comment l’utiliser dans votre application, consultez [constructeurs de déplacement et opérateurs d’assignation déplacer (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
-Vous pouvez aussi surcharger des fonctions et des opérateurs ordinaires pour tirer parti de la sémantique de déplacement. Visual C++ 2010 introduit la sémantique de déplacement dans la bibliothèque C++ Standard. Par exemple, la classe `string` implémente des opérations qui exécutent la sémantique de déplacement. Prenons l'exemple suivant qui concatène plusieurs chaînes et affiche le résultat :
+Vous pouvez aussi surcharger des fonctions et des opérateurs ordinaires pour tirer parti de la sémantique de déplacement. Visual Studio 2010 introduit la sémantique de déplacement dans le C++ bibliothèque Standard. Par exemple, la classe `string` implémente des opérations qui exécutent la sémantique de déplacement. Prenons l'exemple suivant qui concatène plusieurs chaînes et affiche le résultat :
 
 ```cpp
 // string_concatenation.cpp
@@ -51,15 +51,15 @@ int main()
 }
 ```
 
-Avant Visual C++ 2010, chaque appel à **opérateur +** alloue et retourne un nouveau temporaire `string` objet (une rvalue). **operator +** Impossible d’ajouter une chaîne à l’autre, car il ne sait pas si les chaînes sources sont des lvalues ou rvalues. Si les chaînes sources sont toutes les deux des lvalues, elles peuvent être référencées ailleurs dans le programme et ne doivent donc pas être modifiées. À l’aide des références rvalue, **opérateur +** peut être modifiée pour accepter des rvalues, qui ne peut pas être référencées ailleurs dans le programme. Par conséquent, **opérateur +** peuvent maintenant ajouter une chaîne à un autre. Cela peut réduire considérablement le nombre d'allocations dynamiques de la mémoire que la classe `string` doit exécuter. Pour plus d’informations sur la `string` de classe, consultez [basic_string, classe](../standard-library/basic-string-class.md).
+Avant Visual Studio 2010, chaque appel à **opérateur +** alloue et retourne un nouveau temporaire `string` objet (une rvalue). **operator +** Impossible d’ajouter une chaîne à l’autre, car il ne sait pas si les chaînes sources sont des lvalues ou rvalues. Si les chaînes sources sont toutes les deux des lvalues, elles peuvent être référencées ailleurs dans le programme et ne doivent donc pas être modifiées. À l’aide des références rvalue, **opérateur +** peut être modifiée pour accepter des rvalues, qui ne peut pas être référencées ailleurs dans le programme. Par conséquent, **opérateur +** peuvent maintenant ajouter une chaîne à un autre. Cela peut réduire considérablement le nombre d'allocations dynamiques de la mémoire que la classe `string` doit exécuter. Pour plus d’informations sur la `string` de classe, consultez [basic_string, classe](../standard-library/basic-string-class.md).
 
-La sémantique de déplacement est également utile lorsque le compilateur ne peut pas utiliser l'optimisation de la valeur de retour (RVO) ou l'optimisation de la valeur de retour nommée (NRVO). Dans ces cas-là, le compilateur appelle le constructeur de déplacement si le type le définit. Pour plus d’informations sur l’optimisation de valeur de retour nommée, consultez [l’optimisation de la valeur de retour nommée dans Visual C++ 2005](https://msdn.microsoft.com/library/ms364057.aspx).
+La sémantique de déplacement est également utile lorsque le compilateur ne peut pas utiliser l'optimisation de la valeur de retour (RVO) ou l'optimisation de la valeur de retour nommée (NRVO). Dans ces cas-là, le compilateur appelle le constructeur de déplacement si le type le définit. Pour plus d’informations sur l’optimisation de valeur de retour nommée, consultez [l’optimisation de la valeur de retour nommée dans Visual Studio 2005](https://msdn.microsoft.com/library/ms364057.aspx).
 
 Pour mieux comprendre la sémantique de déplacement, prenez comme exemple l'insertion d'un élément dans un objet `vector`. Si la capacité de l'objet `vector` est dépassée, l'objet `vector` doit réallouer de la mémoire pour ses éléments puis copier chaque élément vers un autre emplacement de mémoire pour libérer de l'espace pour l'élément inséré. Lorsqu'une opération d'insertion copie un élément, elle crée un nouvel élément, appelle le constructeur de copie pour copier les données de l'élément précédent dans le nouvel élément, puis supprime l'élément précédent. La sémantique de déplacement vous permet de déplacer directement des objets sans qu'il soit nécessaire d'exécuter des opérations d'allocation de mémoire et de copie coûteuses.
 
 Pour tirer parti de la sémantique de déplacement dans l'exemple `vector`, vous pouvez écrire un constructeur de déplacement pour déplacer des données d'un objet vers un autre.
 
-Pour plus d’informations sur l’introduction de la sémantique de déplacement dans la bibliothèque Standard C++ dans Visual C++ 2010, consultez [bibliothèque Standard C++](../standard-library/cpp-standard-library-reference.md).
+Pour plus d’informations sur l’introduction de la sémantique de déplacement dans le C++ bibliothèque Standard dans Visual Studio 2010, consultez [ C++ bibliothèque Standard](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="perfect-forwarding"></a>Transfert parfait
 

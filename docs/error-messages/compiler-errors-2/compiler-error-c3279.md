@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3279
 ms.assetid: 639afc20-984c-4a95-be35-8bf9409f02d5
-ms.openlocfilehash: 5f39510ee9ec0e717d675aa8b396405bc33b4ea1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72646d7611163748fe7e27ea6c78cd38426eb6ad
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381947"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447815"
 ---
 # <a name="compiler-error-c3279"></a>Erreur du compilateur C3279
 
 les spécialisations partielles et explicites, ainsi que les instanciations explicites des modèles de classe déclarés dans l'espace de noms cli sont interdites
 
-L’espace de noms `cli` est défini par Microsoft et contient des pseudo-modèles. Le compilateur Visual C++ n’autorise pas les spécialisations partielles et explicites définies par l’utilisateur, ni les instanciations de modèles de classe dans cet espace de noms.
+L’espace de noms `cli` est défini par Microsoft et contient des pseudo-modèles. Microsoft C++ compilateur n’autorise pas les spécialisations définies par l’utilisateur, partielles et explicites et que les instanciations explicites des modèles de classe dans cet espace de noms.
 
 L’exemple suivant génère l’erreur C3279 :
 
