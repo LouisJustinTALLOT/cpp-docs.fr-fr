@@ -1,17 +1,15 @@
 ---
 title: Services du modèle objet au moment de l'exécution
 ms.date: 03/27/2019
-f1_keywords:
-- vc.mfc.macros
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 59f5be1d8bb38295b50732583fea47924160cecf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ea7900df8d71157a7ea77dd27a8ba83dfe259a1
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310030"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611746"
 ---
 # <a name="run-time-object-model-services"></a>Services du modèle objet au moment de l'exécution
 
