@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: b86536cb6177390ab89d235ecb8e093006dd8cff
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: a434a329febc38d6a46881dcabba6b05a402fbca
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448565"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708051"
 ---
 # <a name="windows-desktop-wizard"></a>Assistant Windows Desktop
 
@@ -83,7 +83,7 @@ Une fois que vous avez créé une application de bureau Windows, vous pouvez ajo
 > [!NOTE]
 > Vous ne pouvez pas ajouter de classes ATL. En outre, vous ne pouvez ajouter de classes MFC qu’aux types d’application de bureau Windows qui prennent en charge MFC (consultez le tableau précédent).
 
-Vous pouvez afficher les fichiers que l’Assistant a créés pour votre projet dans **l’Explorateur de solutions**. Pour plus d’informations sur les fichiers que l’Assistant crée pour votre projet, consultez le fichier projet généré, `ReadMe.txt`. Pour plus d’informations sur les types de fichiers, [Types de fichiers créés pour Visual C++ projets](../build/reference/file-types-created-for-visual-cpp-projects.md).
+Vous pouvez afficher les fichiers que l’Assistant a créés pour votre projet dans **l’Explorateur de solutions**. Pour plus d’informations sur les fichiers que l’Assistant crée pour votre projet, consultez le fichier projet généré, `ReadMe.txt`. Pour plus d’informations sur les types de fichiers, [Types de fichiers créés pour Visual Studio C++ projets](../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Voir aussi
 
