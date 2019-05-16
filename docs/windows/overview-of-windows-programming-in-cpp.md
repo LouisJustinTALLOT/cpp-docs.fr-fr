@@ -2,12 +2,12 @@
 title: Vue d'ensemble de la programmation Windows en C++
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 40028794a6df30db619965181f2e31d7c9a2745c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: f2cdb0d0225b47391ee18c398b7789ab42ca8f40
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221325"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708207"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Vue d'ensemble de la programmation Windows en C++
 
@@ -116,7 +116,7 @@ Visual Studio inclut un débogueur puissant pour le code natif, des outils d’a
 
 |Titre|Description|
 |-----------|-----------------|
-|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Rubrique parente pour le contenu destiné aux développeurs Visual C++.|
+|[C++ dans Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Rubrique parente pour le contenu destiné aux développeurs Visual C++.|
 [Développement .NET avec C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Créer des wrappers pour les bibliothèques C++ natives qui permettent de communication avec les applications et composants .NET.|
 |[Extensions de composants pour .NET et UWP](../extensions/component-extensions-for-runtime-platforms.md)|Référence pour les éléments de syntaxe partagés par C / c++ / CX et c++ / CLI.|
 |[Applications de plateforme Windows universelle (C++)](universal-windows-apps-cpp.md)|Écrire des applications UWP à l’aide de C++ / c++ / CX ou la bibliothèque de modèles Windows Runtime (WRL).|

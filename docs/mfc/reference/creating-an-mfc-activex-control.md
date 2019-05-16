@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: 27b82fb7a688c8cc7a3df734a7e60a17f7ffa184
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: c67f925773854258111b3a2aa1967f51de4df127
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446760"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708252"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Création d'un contrôle ActiveX MFC
 
@@ -36,7 +36,7 @@ Le moyen le plus simple de créer un contrôle ActiveX MFC consiste à utiliser 
 
 1. Cliquez sur **Terminer** pour fermer l’Assistant et ouvrir votre nouveau projet dans l’environnement de développement.
 
-Une fois que vous avez créé votre projet, vous pouvez afficher les fichiers créés dans **l’Explorateur de solutions**. Pour plus d'informations sur les fichiers créés par l'Assistant pour votre projet, consultez le fichier Readme.txt généré pour le projet. Pour plus d’informations sur les types de fichiers, consultez [Types de fichiers créés pour Visual C++ projets](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Une fois que vous avez créé votre projet, vous pouvez afficher les fichiers créés dans **l’Explorateur de solutions**. Pour plus d'informations sur les fichiers créés par l'Assistant pour votre projet, consultez le fichier Readme.txt généré pour le projet. Pour plus d’informations sur les types de fichiers, consultez [Types de fichiers créés pour Visual Studio C++ projets](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 Une fois que vous avez créé votre projet, vous pouvez utiliser les Assistants de code pour ajouter [fonctions](../../ide/add-member-function-wizard.md), [variables](../../ide/add-member-variable-wizard.md), [événements](../../ide/add-event-wizard.md), [propriétés](../../ide/names-add-property-wizard.md), et [méthodes](../../ide/add-method-wizard.md). Pour plus d’informations sur la personnalisation de votre contrôle ActiveX, consultez [contrôles ActiveX MFC](../../mfc/mfc-activex-controls.md).
 
