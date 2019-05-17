@@ -1,36 +1,43 @@
 ---
 title: Implémentation d'un consommateur simple
-ms.date: 10/12/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
-- clients, creating
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 9067e8645fac9a06bd85ca5ef18fbaff45d16aae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 67bce55a19a2aaaf3a8cbb62d7db228513e93c91
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390800"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707534"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implémentation d'un consommateur simple
 
-Les rubriques suivantes montrent comment modifier les fichiers créés par le **Assistant Application MFC** et **Assistant Consommateur OLE DB ATL** pour créer un consommateur simple. Cet exemple comporte les parties suivantes :
+::: moniker range="vs-2019"
+
+L’Assistant Consommateur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et les versions ultérieures. Vous pouvez toujours ajouter la fonctionnalité manuellement. Pour plus d’informations, consultez [Création d’un consommateur sans utiliser l’Assistant](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Les rubriques suivantes montrent comment modifier les fichiers créés par l’**Assistant Application MFC** et l’**Assistant Consommateur OLE DB ATL** pour créer un consommateur simple. Cet exemple comporte les parties suivantes :
 
 - [Récupération des données avec le consommateur](#retrieve) montre comment implémenter le code dans le consommateur qui lit toutes les données, ligne par ligne, à partir d’une table de base de données.
 
-- [Ajout de la prise en charge de signet au consommateur](#bookmark) montre comment ajouter la prise en charge de signet au consommateur.
+- [Ajout de la prise en charge de signet au consommateur](#bookmark) montre comment ajouter la prise en charge des signets au consommateur.
 
 > [!NOTE]
-> Vous pouvez utiliser l’application consommateur décrite dans cette section pour tester le `MyProv` et `Provider` exemples de fournisseurs.
+> Vous pouvez utiliser l’application consommateur décrite dans cette section pour tester les exemples de fournisseur `MyProv` et `Provider`.
 
 > [!NOTE]
-> Pour générer une application consommateur pour tester `MyProv` (le même fournisseur décrit dans [amélioration le fournisseur Simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md)), vous devez inclure la prise en charge de signet comme décrit dans [Ajout de la prise en charge de signet à la Consommateur](#bookmark).
+> Pour générer une application consommateur pour tester `MyProv` (le même fournisseur que celui décrit dans [Amélioration du fournisseur simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md)), vous devez inclure la prise en charge des signets comme décrit dans [Ajout de la prise en charge de signet au consommateur](#bookmark).
 
 ## <a name="retrieve" ></a> Récupération des données avec le consommateur
 
-### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Pour modifier l’application de console pour utiliser le consommateur OLE DB
+### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Pour modifier l’application de console afin d’utiliser le consommateur OLE DB
 
-1. Dans `MyCons.cpp`, modifiez le code principal en insérant le texte en gras comme suit :
+1. Dans `MyCons.cpp`, modifiez le code principal en insérant le texte en gras comme suit :
 
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
@@ -59,30 +66,30 @@ Les rubriques suivantes montrent comment modifier les fichiers créés par le **
 
 ## <a name="bookmark" ></a> Ajout de prise en charge de signet au consommateur
 
-Un signet est une colonne qui identifie de façon unique les lignes dans la table. En général, c’est la colonne clé, mais pas toujours ; Il est spécifique au fournisseur. Cette section vous montre comment ajouter la prise en charge du signet. Pour ce faire, vous devez effectuer les étapes suivantes dans la classe d’enregistrement utilisateur :
+Un signet est une colonne qui identifie de façon unique les lignes dans le tableau. Il s’agit en général la colonne clé, mais ce n’est pas toujours le cas (ce point est spécifique au fournisseur). Cette section vous montre comment ajouter la prise en charge des signets. Pour ce faire, vous devez effectuer les étapes suivantes dans la classe d’enregistrement utilisateur :
 
 - Instanciez les signets. Il s’agit d’objets de type [CBookmark](../../data/oledb/cbookmark-class.md).
 
-- Demander une colonne de signet à partir du fournisseur en définissant le `DBPROP_IRowsetLocate` propriété.
+- Demandez une colonne de signet à partir du fournisseur en définissant la propriété `DBPROP_IRowsetLocate`.
 
-- Ajouter une entrée de signet dans le mappage de colonnes à l’aide de la [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) macro.
+- Ajoutez une entrée de signet dans le mappage de colonnes à l’aide de la macro [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
 
-Les étapes précédentes vous donnent de prise en charge du signet et un objet signet avec lequel travailler. Cet exemple de code montre un signet comme suit :
+Grâce aux étapes précédentes, vous disposez de la prise en charge des signets et d’un objet signet avec lequel vous pouvez travailler. Cet exemple de code montre un signet comme suit :
 
 - Ouvrez un fichier en écriture.
 
-- Données d’ensemble de lignes de sortie dans le fichier ligne par ligne.
+- Sortez les données d’ensemble de lignes dans le fichier ligne par ligne.
 
-- Déplacer le curseur de l’ensemble de lignes vers le signet en appelant [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
+- Déplacez le curseur de l’ensemble de lignes vers le signet en appelant [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
 
-- La ligne marquée par un signet, ajouter à la fin du fichier de sortie.
+- Sortez la ligne marquée par un signet et ajoutez-la à la fin du fichier.
 
 > [!NOTE]
-> Si vous utilisez cette application consommateur pour tester le `Provider` exemple d’application de fournisseur, laissez la prise en charge de signet décrites dans cette section.
+> Si vous utilisez cette application consommateur pour tester l’exemple d’application de fournisseur `Provider`, ignorez la prise en charge de signet décrite dans cette section.
 
 ### <a name="to-instantiate-the-bookmark"></a>Pour instancier le signet
 
-1. L’accesseur doit contenir un objet de type [CBookmark](../../data/oledb/cbookmark-class.md). Le *nSize* paramètre spécifie la taille de la mémoire tampon de signet en octets (généralement, 4 pour les plateformes 32 bits) et 8 pour les plateformes 64 bits. Ajoutez la déclaration suivante pour les membres de données de colonne dans la classe d’enregistrement utilisateur :
+1. L’accesseur doit contenir un objet de type [CBookmark](../../data/oledb/cbookmark-class.md). Le paramètre *nSize* spécifie la taille de la mémoire tampon du signet en octets (généralement 4 pour les plateformes 32 bits et 8 pour les plateformes 64 bits). Ajoutez la déclaration suivante pour les membres de données de colonne dans la classe d’enregistrement utilisateur :
 
     ```cpp
     //////////////////////////////////////////////////////////////////////
@@ -97,7 +104,7 @@ Les étapes précédentes vous donnent de prise en charge du signet et un objet 
 
 ### <a name="to-request-a-bookmark-column-from-the-provider"></a>Pour demander une colonne de signet à partir du fournisseur
 
-1. Ajoutez le code suivant dans le `GetRowsetProperties` méthode dans la classe d’enregistrement utilisateur :
+1. Ajoutez le code suivant dans la classe d’enregistrement utilisateur en suivant la méthode `GetRowsetProperties` :
 
     ```cpp
     // Set the DBPROP_IRowsetLocate property.
@@ -111,7 +118,7 @@ Les étapes précédentes vous donnent de prise en charge du signet et un objet 
 
 ### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Pour ajouter une entrée de signet dans le mappage de colonnes
 
-1. Ajoutez l’entrée suivante au mappage de colonnes dans la classe d’enregistrement utilisateur :
+1. Ajoutez l’entrée suivante au mappage de colonne dans la classe d’enregistrement :
 
     ```cpp
     // Set a bookmark entry in the column map.
@@ -125,7 +132,7 @@ Les étapes précédentes vous donnent de prise en charge du signet et un objet 
 
 ### <a name="to-use-a-bookmark-in-your-main-code"></a>Pour ajouter un signet dans votre code principal
 
-1. Dans le `MyCons.cpp` fichier à partir de l’application de console vous précédemment créées, modifiez le code principal comme suit. Pour utiliser des signets, le code principal doit instancier son propre objet signet (`myBookmark`) ; il s’agit d’un signet différent de celui de l’accesseur (`m_bookmark`).
+1. Dans le fichier `MyCons.cpp` de l’application de console que vous avez créée précédemment, modifiez le code principal comme suit. Pour utiliser des signets, le code principal doit instancier son propre objet signet (`myBookmark`). Il s’agit d’un signet différent de celui de l’accesseur (`m_bookmark`).
 
     ```cpp
     ///////////////////////////////////////////////////////////////////////
@@ -194,7 +201,9 @@ Les étapes précédentes vous donnent de prise en charge du signet et un objet 
     }
     ```
 
-Pour plus d’informations sur les signets, consultez [à l’aide de signets](../../data/oledb/using-bookmarks.md). Exemples de signets sont également affichées dans [ensembles de lignes de la mise à jour](../../data/oledb/updating-rowsets.md).
+Pour plus d’informations sur les signets, consultez [Utilisation des signets](../../data/oledb/using-bookmarks.md). Des exemples de signets sont également affichés dans [Mise à jour des ensembles de lignes](../../data/oledb/updating-rowsets.md).
+
+::: moniker-end
 
 ## <a name="see-also"></a>Voir aussi
 
