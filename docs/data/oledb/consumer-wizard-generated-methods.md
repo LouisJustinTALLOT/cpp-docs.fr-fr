@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 409d339acb37bd09ae10eabba16e19d5df0aae63
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 5d5c7aa680ca6b764e2ee9710e46cf6fa3af1c89
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525031"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707726"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Méthodes de consommateur générées par l'Assistant
 
@@ -19,7 +19,7 @@ L’Assistant Consommateur OLE DB ATL n’est pas disponible dans Visual Studio 
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 L’**Assistant Consommateur OLE DB ATL** et l’**Assistant Application MFC** génèrent certaines fonctions que vous devriez connaître. Certaines méthodes sont implémentées différemment dans les projets avec attributs et présentent donc quelques risques à prendre en compte. Chaque cas est expliqué ci-après. Pour plus d’informations sur l’affichage de code injecté, consultez [Débogage de code injecté](/visualstudio/debugger/how-to-debug-injected-code).
 
