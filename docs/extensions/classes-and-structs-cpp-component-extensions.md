@@ -1,19 +1,21 @@
 ---
 title: classe ref et struct ref (C++/CLI et C++/CX)
-ms.date: 10/12/2018
+ms.date: 05/16/2019
 ms.topic: reference
+f1_keywords:
+- ref class
 helpviewer_keywords:
 - ref class keyword [C++]
 - value class keyword [C++]
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: fcc50109ce521e005e32a8c19b13aabe2230989b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c993b134d6d359d0bc756f5e79d2f9cc137c9cf
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516184"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65788785"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>classe ref et struct ref (C++/CLI et C++/CX)
 

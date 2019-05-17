@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
-ms.openlocfilehash: c0f31818002ce4611926d942b3bc556e31c1ae6f
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 466530cb8c2ebca7f1c87370389309d3a0486e26
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524710"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707620"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Création d'un fournisseur simple accessible en lecture seule
 
@@ -20,7 +20,7 @@ L’Assistant Fournisseur OLE DB ATL n’est pas disponible dans Visual Studio 2
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Lorsque vous avez créé un fournisseur OLE DB à l’aide de l’**Assistant Projet ATL** et de l’**Assistant Fournisseur OLE DB ATL**, vous pouvez ajouter d’autres fonctionnalités que vous souhaitez prendre en charge. Commencez la conception de votre fournisseur en examinant le type de données que vous prévoyez d’envoyer au consommateur et dans quelles conditions. Il est particulièrement important de déterminer si vous avez besoin de prendre en charge les commandes, les transactions et d’autres objets facultatifs. Une bonne conception en amont permet d’accélérer l’implémentation et les tests.
 
