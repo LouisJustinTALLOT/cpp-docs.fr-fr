@@ -1,90 +1,92 @@
 ---
 title: Assistant Fournisseur OLEDB ATL
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.atl.provider.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 3f8ff69fd80056bc2ac5a52cf3f42c69f8e8c543
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 91384d6c61368ee56ed303622e5c1bdfad09bd8a
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248261"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706965"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Assistant Fournisseur OLEDB ATL
 
-Cet Assistant crée les classes qui composent un fournisseur OLE DB.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> Dans Visual Studio 2017 version 15.9, cet Assistant Code est déprécié et sera supprimé dans une version ultérieure de Visual Studio. Cet Assistant est rarement utilisé. La prise en charge générale d’ATL et MFC n’est pas affectée par la suppression de cet Assistant. Si vous souhaitez partager vos commentaires sur cette dépréciation, veuillez remplir [cette enquête](https://www.surveymonkey.com/r/QDWKKCN). Vos commentaires sont précieux pour nous.
+Cet Assistant n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
 
-## <a name="remarks"></a>Notes
+::: moniker-end
 
-À compter de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrira ses composants COM sous **HKEY_CURRENT_USER** au lieu de **HKEY_LOCAL_MACHINE**. Pour modifier ce comportement, définissez la **inscrire le composant pour tous les utilisateurs** option de l’Assistant ATL.
+::: moniker range="<=vs-2017"
 
-Le tableau suivant décrit les options de l’Assistant fournisseur OLE DB ATL :
+## <a name="remarks"></a>Remarques
+
+À partir de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrit ses composants COM sous **HKEY_CURRENT_USER** et non plus **HKEY_LOCAL_MACHINE**. Pour modifier ce comportement, définissez l’option **Inscrire le composant pour tous les utilisateurs** de l’Assistant ATL.
+
+Le tableau suivant décrit les options de l’Assistant Fournisseur OLE DB ATL :
 
 - **Nom court**
 
-   Tapez le nom court du fournisseur à créer. Les autres zones d’édition dans l’Assistant se rempliront automatiquement en fonction de ce que vous tapez ici. Vous pouvez modifier les autres zones de nom si vous le souhaitez.
+   Tapez le nom court du fournisseur à créer. Les autres champs de modification dans l’Assistant se rempliront automatiquement en fonction de ce que vous tapez ici. Vous pouvez modifier les autres champs de nom si vous le souhaitez.
 
-- **Coclass**
+- **CoClasse**
 
-   Le nom de la coclasse. Le nom du ProgID sera modifié pour correspondre à ce nom.
+   Nom de la coclasse. Le nom du ProgID sera modifié pour correspondre à ce nom.
 
-- **Attribué**
+- **Avec attributs**
 
-   Cette option spécifie si l’Assistant va créer les classes de fournisseur à l’aide d’attributs ou déclarations de modèle. Lorsque vous sélectionnez cette option, l’Assistant utilise les attributs au lieu de déclarations de modèle (il s’agit de l’option par défaut si vous avez créé un projet avec attributs). Lorsque vous désactivez cette option, l’Assistant utilise des déclarations de modèle au lieu d’attributs (il s’agit de l’option par défaut si vous avez créé un projet sans attributs).
+   Cette option spécifie si l’Assistant va créer des classes de fournisseur à l’aide d’attributs ou de déclarations de modèle. Lorsque vous sélectionnez cette option, l’Assistant utilise des attributs plutôt que des déclarations de modèle (il s’agit de l’option par défaut si vous avez créé un projet avec attributs). Lorsque vous désélectionnez cette option, l’Assistant utilise des déclarations de modèle plutôt que des attributs (il s’agit de l’option par défaut si vous avez créé un projet sans attributs).
 
-   Si vous sélectionnez cette option lorsque vous avez créé un projet sans attributs, l’Assistant vous avertit que le projet sera converti en un projet avec attributs et vous demande s’il faut continuer ou non.
+   Si vous sélectionnez cette option lorsque vous avez créé un projet sans attributs, l’Assistant vous avertit que le projet sera converti en un projet avec attributs et vous demande si vous souhaitez continuer.
 
 - **ProgID**
 
-   Le ProgID, ou identificateur programmatique, est une chaîne de texte que votre application peut utiliser au lieu d’un GUID. Le nom du ProgID présente sous la forme *NomProjet.NomCoclasse*.
+   Le progID, ou identificateur programmatique, est une chaîne de texte que votre application peut utiliser à la place d’un GUID. Le nom du ProgID est au format *NomProjet.NomCoclasse*.
 
 - **Version**
 
-   Le numéro de version de votre fournisseur. La valeur par défaut est 1.
+   Numéro de version de votre fournisseur. La valeur par défaut est 1.
 
-- **Classe de source de données**
+- **DataSource class** (Classe DataSource)
 
-   Le nom de la classe de source de données, sous la forme C*Shortname*Source.
+   Nom de la classe data source, au format C*Nomcourt*Source.
 
-- **Fichier .h de source de données**
+- **DataSource .h file** (Fichier .h DataSource)
 
-   Le fichier d’en-tête pour la classe de source de données. Vous pouvez modifier le nom de ce fichier ou sélectionner un fichier d’en-tête existant.
+   Fichier d’en-tête de la classe data source. Vous pouvez modifier le nom de ce fichier ou sélectionner un fichier d’en-tête existant.
 
-- **Classe de session**
+- **Session class** (Classe Session)
 
-   Le nom de la classe session, sous la forme C*Shortname*Session.
+   Nom de la classe session, au format C*Nomcourt*Session.
 
-- **Fichier .h de session**
+- **Session .h file** (Fichier .h Session)
 
-   Le fichier d’en-tête pour la classe session. Vous pouvez modifier le nom de ce fichier ou sélectionner un fichier d’en-tête existant.
+   Fichier d’en-tête pour la classe session. Vous pouvez modifier le nom de ce fichier ou sélectionner un fichier d’en-tête existant.
 
-- **Classe de commande**
+- **Classe Command**
 
-   Le nom de la classe de commande, sous la forme C*Shortname*commande.
+   Nom de la classe command, au format C*Nomcourt*Command.
 
-- **Fichier .h de commande**
+- **Command .h file** (Fichier .h Command)
 
-   Le fichier d’en-tête pour la classe de commande. Ce nom ne peut pas être modifié et dépend du nom de l’ensemble de lignes du fichier d’en-tête.
+   Fichier d’en-tête pour la classe command. Ce nom ne peut pas être modifié et dépend du nom du fichier d’en-tête rowset.
 
-- **Classe de l’ensemble de lignes**
+- **Rowset class** (Classe Rowset)
 
-   Le nom de la classe rowset, sous la forme C*Shortname*ensemble de lignes.
+   Nom de la classe Rowset, au format C*Nomcourt*Rowset.
 
-- **Fichier .h de jeu de lignes**
+- **Rowset .h file** (Fichier .h Rowset)
 
-   Le fichier d’en-tête pour la classe rowset. Vous pouvez modifier le nom de ce fichier ou sélectionner un fichier d’en-tête existant.
+   Fichier d’en-tête pour la classe rowset. Vous pouvez modifier le nom de ce fichier ou sélectionner un fichier d’en-tête existant.
 
-- **Fichier .cpp de jeu de lignes**
+- **Rowset .cpp file** (Fichier .cpp Rowset)
 
    Fichier d’implémentation du fournisseur. Vous pouvez modifier le nom de ce fichier ou sélectionner un fichier d’implémentation existant.
 
+::: moniker-end
+
 ## <a name="see-also"></a>Voir aussi
 
-[Fournisseur OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)
+[Ajout d’un fournisseur OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)
