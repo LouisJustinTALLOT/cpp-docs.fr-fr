@@ -1,27 +1,36 @@
 ---
 title: Options, Assistant Page de propriétés ATL
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.ppg.options
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: c92c7a3f03c3ddedbea02647e2317d77a7655609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c883b3e79bd857bb457da0a1bd540a08ddddf017
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275397"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524539"
 ---
 # <a name="options-atl-property-page-wizard"></a>Options, Assistant Page de propriétés ATL
 
-Utilisez cette page de l’Assistant pour définir le niveau d’agrégation et le modèle de thread de page de propriétés que vous créez.
+
+::: moniker range="vs-2019"
+
+L’Assistant Page de propriétés ATL n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Utilisez cette page de l’Assistant pour définir le modèle de thread et le niveau d’agrégation de la page de propriétés que vous créez.
 
 - **Modèle de thread**
 
    Spécifie le modèle de thread utilisé par la page de propriétés.
 
-   Consultez [en spécifiant le modèle de thread du projet](../../atl/specifying-the-threading-model-for-a-project-atl.md) pour plus d’informations.
+   Consultez [Spécification du modèle de thread du projet](../../atl/specifying-the-threading-model-for-a-project-atl.md) pour plus d’informations.
 
    |Option|Description|
    |------------|-----------------|
@@ -30,13 +39,15 @@ Utilisez cette page de l’Assistant pour définir le niveau d’agrégation et 
 
 - **Aggregation**
 
-   Ajoute la prise en charge de l’agrégation de la page de propriétés que vous créez. Consultez [agrégation](../../atl/aggregation.md) pour plus d’informations.
+   Ajoute la prise en charge de l’agrégation pour la page de propriétés que vous créez. Consultez [Agrégation](../../atl/aggregation.md) pour plus d’informations.
 
    |Option|Description|
    |------------|-----------------|
-   |**Oui**|Créer une page de propriétés qui peut être agrégée.|
-   |**Non**|Créer une page de propriétés qui ne peut pas être agrégée.|
-   |**Only**|Créer une page de propriétés qui ne peut être instanciée par le biais d’agrégation.|
+   |**Oui**|Créez une page de propriétés qui peut être agrégée.|
+   |**Non**|Créez une page de propriétés qui ne peut pas être agrégée.|
+   |**Uniquement**|Créez une page de propriétés qui peut être uniquement instanciée via l’agrégation.|
+
+::: moniker-end
 
 ## <a name="see-also"></a>Voir aussi
 

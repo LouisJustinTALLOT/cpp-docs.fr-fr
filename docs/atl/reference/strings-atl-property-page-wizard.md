@@ -1,33 +1,43 @@
 ---
 title: Chaînes, Assistant Page de propriétés ATL
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.ppg.strings
 helpviewer_keywords:
 - ATL Property Page Wizard, strings
 ms.assetid: 00547db6-911f-49eb-92e1-2ba67079d4df
-ms.openlocfilehash: 199c6969535afdd668440ea31d004aecc507ba42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 04178c435bbd0ca80e412efc39a1b736062d95e7
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276172"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706769"
 ---
 # <a name="strings-atl-property-page-wizard"></a>Chaînes, Assistant Page de propriétés ATL
+
+::: moniker range="vs-2019"
+
+L’Assistant Page de propriétés ATL n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 Fournit le texte associé à la page de propriétés.
 
 - **Titre**
 
-   Définit le texte qui apparaît sous l’onglet de la page de propriétés.
+   Définit le texte qui apparaît sur l’onglet de la page de propriétés.
 
 - **Chaîne doc**
 
-   Définit une chaîne de texte décrivant la page. Cette chaîne peut être affichée dans la boîte de dialogue de feuille de propriétés. Le frame de propriété peut utiliser la description dans une info-bulle état ligne ou outil. Actuellement, le frame de propriété standard n’utilise pas cette chaîne.
+   Définit une chaîne de texte décrivant la page. Cette chaîne peut être affichée dans la boîte de dialogue de la feuille de propriétés. Le cadre de propriété peut se servir de la description dans une ligne de statut ou une astuce. Actuellement, le cadre de propriété standard n’utilise pas cette chaîne.
 
 - **Fichier d’aide**
 
-   Définit le nom du fichier d’aide qui décrit l’utilisation de la page de propriétés. Ce nom ne doit pas inclure un chemin d’accès. Lorsque l’utilisateur appuie sur **aide**, le frame ouvre le fichier d’aide dans le répertoire nommé dans la valeur de la clé HelpDir dans les entrées de Registre de page de propriété sous son CLSID.
+   Définit le nom du fichier d’aide qui décrit comment utiliser la page de propriétés. Le nom ne doit pas comprendre de chemin d’accès. Lorsque l’utilisateur appuie sur **Aide**, le cadre ouvre le fichier d’aide dans le répertoire nommé dans la valeur de la clé HelpDir des entrées du registre de la page de propriétés sous son CLSID.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Voir aussi
 
