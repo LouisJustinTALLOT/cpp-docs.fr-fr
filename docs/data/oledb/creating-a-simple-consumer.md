@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: f72363478696baccb0473e37104427b1516b39c3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: cc24df1f15d43c384e6bf3853766fad82cf51255
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524997"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707714"
 ---
 # <a name="creating-a-simple-consumer"></a>Création d'un consommateur simple
 
@@ -19,7 +19,7 @@ L’Assistant Consommateur OLE DB ATL n’est pas disponible dans Visual Studio 
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Utilisez **l’Assistant Projet ATL** et **l’Assistant Consommateur OLE DB ATL** pour générer un consommateur de modèles OLE DB.
 
