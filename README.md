@@ -1,10 +1,18 @@
+---
+ms.openlocfilehash: 279d5c5cbc86297df51ad3862a2e32d5e7bae5d2
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934199"
+---
 # <a name="visual-studio-2017-documentation-for-visual-c"></a>Documentation de Visual Studio 2017 pour Visual C++
 
 Bienvenue ! Ce dépôt contient des fichiers sources associés à la documentation technique de Visual C++ en cours d’élaboration. Les rubriques sont publiées sur le [site de la documentation de Visual C++](https://docs.microsoft.com/cpp).
 
 Ce dépôt a été déplacé de Microsoft/vcppdocs vers MicrosoftDocs/cpp-docs-pr le 23 juin 2017.
 
-La documentation de Visual Basic et Visual C# se trouve dans un dépôt distinct sur [http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs), tandis que la documentation de Visual Studio 2017 se trouve dans le dépôt sur [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs).
+La documentation de Visual Basic et Visual C# se trouve dans un dépôt distinct sur [https://github.com/dotnet/core-docs](https://github.com/dotnet/core-docs), tandis que la documentation de Visual Studio 2017 se trouve dans le dépôt sur [https://github.com/Microsoft/visualstudio-docs](https://github.com/Microsoft/visualstudio-docs).
 
 ## <a name="contributing-to-the-documentation"></a>Contribution à la documentation
 

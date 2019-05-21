@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 8fdd48c026485e55db01f6f70b0dde3c1e68d847
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: a897f3b6154368c7381f1cac8e51ed5acfac5d32
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58782244"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708167"
 ---
 # <a name="visual-c-help-and-community"></a>Aide et communauté Visual C++
 
@@ -26,7 +26,7 @@ Voici comment obtenir des informations sur l’écriture de code C++ et l’util
 
 |Titre|Description|
 |-----------|-----------------|
-|[Visual C++](visual-cpp-in-visual-studio.md)|Contient une documentation de référence et conceptuelle sur Visual C++. Fait partie de MSDN Library.|
+|[C++ dans Visual Studio](visual-cpp-in-visual-studio.md)|Contient une documentation de référence et conceptuelle sur Visual C++. Fait partie de MSDN Library.|
 |[Centre de développement Windows](https://developer.microsoft.com/windows/)|Contient des informations sur l’utilisation de C++ et d’autres langages dans le but de développer des applications pour Windows 10. Fait partie du Centre de développement Windows. Le contenu C++ se trouve sous le nœud Documentation > Référence du langage.|
 
 ### <a name="online-and-offline-documentation"></a>Documentation en ligne et hors connexion
