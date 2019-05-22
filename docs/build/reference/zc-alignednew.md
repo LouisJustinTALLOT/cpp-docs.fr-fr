@@ -1,36 +1,38 @@
 ---
-title: /Zc:alignedNew (c ++ 17 suralignés allocation)
-ms.date: 02/28/2018
+title: /Zc:alignedNew (allocation de types suralignés C++17)
+ms.date: 05/18/2019
 f1_keywords:
 - /Zc:alignedNew
 helpviewer_keywords:
 - /Zc:alignedNew
 - Zc:alignedNew
 - -Zc:alignedNew
-ms.openlocfilehash: e0d850d54611579288b81a334af4abdfab6e411c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dfcc4982e1b5f67b5a01d5a0d09d4fd9279deacf
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315795"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934187"
 ---
-# <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (c ++ 17 suralignés allocation)
+# <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (allocation de types suralignés C++17)
 
-Activer la prise en charge de C ++ 17 sur-alignés **nouveau**, allocation de mémoire dynamique alignée sur les limites supérieures à la valeur par défaut pour la taille maximale standard type aligné, **max\_aligner\_t**.
+Activez la prise en charge de la **nouvelle** allocation de mémoire dynamique suralignée C++17, alignée sur les limites supérieures à la valeur par défaut de la taille maximale des types alignés standard, **max\_align\_t**.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Zc:alignedNew**[-]
+> **/Zc:alignedNew**\[-]
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Visual Studio version 15.5 permet de compilateur et prise en charge de la bibliothèque de C ++ 17 standard suralignés allocation de mémoire dynamique. Lorsque le **/Zc:alignedNew** option est spécifiée, une allocation dynamique comme `new Example;` respecte l’alignement de *exemple* même si elle est supérieure à `max_align_t`, le plus grand alignement obligatoire pour n’importe quel type fondamental. Lorsque l’alignement du type alloué ne dépasse pas assuré par l’opérateur d’origine **nouveau**, disponible en tant que la valeur de la macro prédéfinie  **\_ \_STDCPP\_par défaut \_NEW\_alignement\_\_**, l’instruction `new Example;` entraîne un appel à `::operator new(size_t)` comme elle le faisait dans C ++ 14. Lorsque l’alignement est supérieur à  **\_ \_STDCPP\_par défaut\_NEW\_alignement\_\_**, l’implémentation obtient à la place la mémoire à l’aide de `::operator new(size_t, align_val_t)`. De même, la suppression de types suralignés appelle `::operator delete(void*, align_val_t)` ou la taille supprimer signature `::operator delete(void*, size_t, align_val_t)`.
+La bibliothèque et le compilateur MSVC prennent en charge l’allocation de mémoire dynamique suralignée standard C++17. Quand l’option **/Zc:alignedNew** est spécifiée, une allocation dynamique comme `new Example;` respecte l’alignement de *Exemple* même s’il est supérieur à `max_align_t`, le plus grand alignement requis pour tous les types fondamentaux. Lorsque l’alignement du type alloué ne dépasse pas l’alignement garanti par l’opérateur d’origine **new**, disponible en tant que valeur de la macro prédéfinie  **\_\_STDCPP\_DEFAULT\_NEW\_ALIGNMENT\_\_**, l’instruction `new Example;` aboutit à un appel à `::operator new(size_t)` comme elle le faisait dans C++14. Lorsque l’alignement est supérieur à **\_\_STDCPP\_DEFAULT\_NEW\_ALIGNMENT\_\_**, l’implémentation obtient la mémoire en utilisant `::operator new(size_t, align_val_t)` à la place. De même, la suppression de types suralignés appelle `::operator delete(void*, align_val_t)` ou la signature de suppression dimensionnée `::operator delete(void*, size_t, align_val_t)`.
 
-Le **/Zc:alignedNew** option est disponible uniquement lorsque [/std : c ++ 17](std-specify-language-standard-version.md) ou [/std : c ++ dernière](std-specify-language-standard-version.md) est activé. Sous **/std : c ++ 17** ou **/std : c ++ dernière**, **/Zc:alignedNew** est activée par défaut pour être conforme à la norme ISO C ++ 17 standard. Si la seule raison vous implémenter opérateur **nouveau** et **supprimer** doit prendre en charge les allocations suralignées, vous devrez peut-être n’est plus ce code en mode C ++ 17. Pour désactiver cette option et revenir à l’interface C ++ 14 de **nouveau** et **supprimer** lorsque **/std::c ++ 17** ou **/std : c ++ dernière** est spécifié, Spécifiez **/Zc:alignedNew-**. Si vous implémentez opérateur **nouveau** et **supprimer** , mais vous n’êtes pas prêt à implémenter l’opérateur suraligné **nouveau** et **supprimer** surcharges ayant le `align_val_t` paramètre, utilisez le **/Zc:alignedNew-** option permettant d’empêcher le compilateur et la bibliothèque Standard à partir de la génération d’appels aux surcharges suralignés. Le [/ permissive-](permissive-standards-conformance.md) option ne change pas le paramètre par défaut **/Zc:alignedNew**.
+L’option **/Zc:alignedNew** est disponible uniquement quand [/std:c++17](std-specify-language-standard-version.md) ou [/std:c++latest](std-specify-language-standard-version.md) est activé. Sous **/std:c++17** ou **/std:c++latest**, **/Zc:alignedNew** est activé par défaut pour être conforme à la norme ISO C++17 standard. Si la seule raison de votre implémentation des opérateurs **new** et **delete** est la prise en charge des allocations suralignées, vous n’aurez peut-être plus besoin de ce code en mode C++17. Pour désactiver cette option et revenir au comportement de C++14 de **new** et **delete** quand vous utilisez **/std::c ++17** ou **/std:c ++latest**, spécifiez **/Zc:alignedNew-**. Si vous implémentez l’opérateur **new** et **delete** alors que vous n’êtes pas prêt à implémenter les surcharges suralignées de l’opérateur **new** et **delete** ayant le paramètre `align_val_t`, utilisez l’option **/Zc:alignedNew-** pour empêcher le compilateur et la bibliothèque Standard de générer des appels aux surcharges suralignées. L’option [/permissive-](permissive-standards-conformance.md) ne change pas le paramètre par défaut de **/Zc:alignedNew**.
+
+La prise en charge de **/Zc:alignedNew** est disponible à partir de Visual Studio 2017 version 15.5.
 
 ## <a name="example"></a>Exemple
 
-Cet exemple montre comment opérateur **nouveau** et opérateur **supprimer** comporte quand le **/Zc:alignedNew** option est définie.
+Cet exemple montre comment l’opérateur **new** et l’opérateur **delete** se comportent quand l’option **/Zc:alignedNew** est définie.
 
 ```cpp
 // alignedNew.cpp
@@ -84,7 +86,7 @@ int main() {
 }
 ```
 
-Cette sortie est généralement utilisée pour les versions 32 bits. Le pointeur de valeurs varient selon où votre application s’exécute en mémoire.
+Cette sortie est généralement pour les builds 32 bits. Les valeurs de pointeur varient selon l’endroit où votre application s’exécute dans la mémoire.
 
 ```Output
 unaligned new(4) = 009FD0D0
@@ -93,15 +95,15 @@ aligned new(256, 256) = 009FE800
 aligned sized delete(009FE800, 256, 256)
 ```
 
-Pour plus d’informations sur les problèmes de conformité dans Visual C++, consultez [comportement non standard](../../cpp/nonstandard-behavior.md).
+Pour des informations sur les problèmes de conformité dans Visual C++, consultez [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour des informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
+1. Sélectionnez la page de propriétés **Propriétés de configuration** > **C/C++** > **Ligne de commande**.
 
-1. Modifier le **des Options supplémentaires** propriété à inclure **/Zc:alignedNew** ou **/Zc:alignedNew-** , puis **OK**.
+1. Modifiez la propriété **Options supplémentaires** pour inclure **/Zc:alignedNew** ou **/Zc:alignedNew-**, puis choisissez **OK**.
 
 ## <a name="see-also"></a>Voir aussi
 

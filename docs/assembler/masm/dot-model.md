@@ -6,43 +6,43 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: c3917fea0f13e54d5f8f73599a2d28482bb6d259
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c409bf10a2f863c380cda6b4822583ffb3787da6
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204095"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934089"
 ---
 # <a name="model"></a>.MODEL
 
-Initialise le modèle de mémoire programme.
+Initialise le modèle de mémoire du programme.
 
 ## <a name="syntax"></a>Syntaxe
 
-> . MODÈLE memorymodel [[, langtype]] [[, stackoption]]
+> .MODEL memorymodel [[, langtype]] [[, stackoption]]
 
 ### <a name="parameters"></a>Paramètres
 
 *memorymodel*<br/>
-Paramètre obligatoire qui détermine la taille des pointeurs de code et les données.
+Paramètre obligatoire qui détermine la taille des pointeurs du code et des données.
 
 *langtype*<br/>
-Paramètre facultatif qui définit les conventions d’appel et d’affectation de noms pour les procédures et les symboles publics.
+Paramètre facultatif qui définit les conventions d’appel et de nommage pour les procédures et les symboles publics.
 
 *stackoption*<br/>
 Paramètre facultatif.
 
 *stackoption* n’est pas utilisé si *memorymodel* est `FLAT`.
 
-Spécification `NEARSTACK` regroupe le segment de pile dans un seul segment physique (`DGROUP`), ainsi que des données. Le Registre de segment de pile (`SS`) est supposée pour contenir la même adresse que le Registre de segment de données (`DS`). `FARSTACK` ne regroupe pas de la pile avec `DGROUP`; par conséquent `SS` n’est pas égal `DS`.
+La spécification de `NEARSTACK` regroupe le segment de pile dans un seul segment physique (`DGROUP`) avec les données. Le registre de segments de pile (`SS`) est supposé détenir la même adresse que le registre de segments de données (`DS`). `FARSTACK` ne regroupe pas la pile avec `DGROUP`, donc `SS` n’est pas égal à `DS`.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 .`MODEL` n’est pas utilisé dans [MASM pour x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
-Le tableau suivant répertorie les valeurs possibles pour chaque paramètre lors du ciblage de plateformes 16 bits et 32 bits :
+Le tableau suivant liste les valeurs possibles pour chaque paramètre lors du ciblage des plateformes 16 bits et 32 bits :
 
-|Paramètre|valeurs 32 bits|valeurs 16 bits (prise en charge pour le développement de 16 bits antérieures)|
+|Paramètre|Valeurs 32 bits|Valeurs 16 bits (prise en charge du développement en 16 bits antérieur)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
 |*langtype*|`C`, `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
@@ -50,9 +50,9 @@ Le tableau suivant répertorie les valeurs possibles pour chaque paramètre lors
 
 ## <a name="code"></a>Code
 
-Pour obtenir des exemples liés à MASM, télécharger les exemples de compilateur à [exemples Visual C++ et sa Documentation pour Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749).
+Pour des exemples liés à MASM, téléchargez les exemples de compilateur dans [Exemples Visual C++ et documentation associée pour Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
 
-L’exemple suivant illustre l’utilisation de la `.MODEL` directive.
+L’exemple suivant montre l’utilisation de la directive `.MODEL`.
 
 ## <a name="example"></a>Exemple
 
