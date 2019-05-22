@@ -5,16 +5,16 @@ ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6a0e296e4a5542c1aad848c55d35d3e40244478d
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.openlocfilehash: 726d9f6573b4a3457205001875dac80b3a2997d7
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899445"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934161"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Améliorations de la conformité de C++ dans Visual Studio 2017 versions 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#improvements_159)
 
-Avec la prise en charge des expressions constexpr généralisées et de NSDMI pour les agrégats, le compilateur Microsoft Visual C++ est désormais complet pour les fonctionnalités ajoutées à la norme C++14. Notez que le compilateur ne dispose pas encore de certaines fonctionnalités des normes C++11 et C++98. Consultez [Conformité du langage Visual C++](../visual-cpp-language-conformance.md) pour obtenir un tableau affichant l’état actuel du compilateur.
+Avec la prise en charge des expressions constexpr généralisées et de NSDMI pour les agrégats, le compilateur Microsoft C++ est désormais complet pour les fonctionnalités ajoutées à la norme C++14. Notez que le compilateur ne dispose pas encore de certaines fonctionnalités des normes C++11 et C++98. Consultez [Conformité du langage Visual C++](../visual-cpp-language-conformance.md) pour obtenir un tableau affichant l’état actuel du compilateur.
 
 ## <a name="c11"></a>C++11
 
@@ -70,7 +70,7 @@ Nouvelle syntaxe pour activer uniquement un seul identificateur d’espace de no
 
 ### <a name="structured-bindings"></a>Liaisons structurées
 
-Il est désormais possible dans une déclaration unique de stocker une valeur avec des noms individuels pour ses composants, lorsque la valeur est un tableau, un std::tuple ou std::pair, ou contient uniquement des membres de données non statiques publiques. Pour plus d’informations, consultez [Liaisons structurées](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) et [Retour de plusieurs valeurs à partir d’une fonction](../../cpp/functions-cpp.md#multi_val).
+Il est désormais possible dans une déclaration unique de stocker une valeur avec des noms individuels pour ses composants, lorsque la valeur est un tableau, un `std::tuple` ou un `std::pair`, ou contient uniquement des membres de données non statiques publiques. Pour plus d’informations, consultez [Liaisons structurées](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) et [Retour de plusieurs valeurs à partir d’une fonction](../../cpp/functions-cpp.md#multi_val).
 
 ### <a name="construction-rules-for-enum-class-values"></a>Règles de construction pour les valeurs de classe enum
 
@@ -955,7 +955,7 @@ L’avertissement est exclu sous **/Wv:18** et est activé par défaut sous le n
 
 ### <a name="stdisconvertible-for-array-types"></a>std::is_convertible pour les types tableau
 
-Les versions précédentes du compilateur ont donné des résultats incorrects avec [std::is_convertible](../../standard-library/is-convertible-class.md) pour les types tableau. Cela obligeait les auteurs de bibliothèques à particulariser le compilateur Microsoft Visual C++ lors de l’utilisation du trait de type `std::is_convertible<...>`. Dans l’exemple suivant, les assertions statiques passent dans les versions antérieures de Visual Studio, mais échouent dans Visual Studio 2017 version 15.3 :
+Les versions précédentes du compilateur ont donné des résultats incorrects avec [std::is_convertible](../../standard-library/is-convertible-class.md) pour les types tableau. Cela obligeait les auteurs de bibliothèques à particulariser le compilateur Microsoft C++ lors de l’utilisation d’une caractéristique de type `std::is_convertible<...>`. Dans l’exemple suivant, les assertions statiques passent dans les versions antérieures de Visual Studio, mais échouent dans Visual Studio 2017 version 15.3 :
 
 ```cpp
 #include <type_traits>

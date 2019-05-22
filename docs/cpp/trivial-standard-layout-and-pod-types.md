@@ -1,33 +1,33 @@
 ---
-title: Trivial, disposition standard et types de littéral POD
+title: Types triviaux, à disposition standard, POD et littéraux
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-ms.openlocfilehash: c742f4c84a1b2ba558b790d7eea7760902da7818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2745302b3ebd7927e9d839e4661e884a2bd91042
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266762"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934216"
 ---
-# <a name="trivial-standard-layout-pod-and-literal-types"></a>Trivial, disposition standard et types de littéral POD
+# <a name="trivial-standard-layout-pod-and-literal-types"></a>Types triviaux, à disposition standard, POD et littéraux
 
-Le terme *disposition* fait référence à la façon dont les membres d’un objet de classe, un struct ou union type sont disposés en mémoire. Dans certains cas, la mise en page est défini par la spécification du langage. Mais lorsqu’une classe ou un struct contient certaines fonctionnalités du langage C++ telles que les classes de base virtuelles, les fonctions virtuelles, les membres avec le contrôle d’accès différents, le compilateur est libre de choisir une disposition. Cette disposition peut varier selon les optimisations sont effectuées et dans de nombreux cas objet peut occuper pas même une zone contiguë de mémoire. Par exemple, si une classe possède des fonctions virtuelles, toutes les instances de cette classe susceptibles de partager une table de fonction virtuelle unique. Ces types sont bien entendu très utiles, mais ils présentent également des limitations. Étant donné que la mise en page n’est pas défini qu’ils ne peuvent pas être passés aux programmes écrits dans d’autres langages, tels que C, et car ils peuvent être non contigus qu’ils ne peut pas être fiable copiés avec des fonctions rapides de bas niveau tels que `memcopy` ou sérialisé sur un réseau.
+Le terme *disposition* fait référence à la façon dont les membres d’un objet de classe, d’un struct ou d’un type union sont organisés dans la mémoire. Dans certains cas, la disposition est bien définie par la spécification du langage. Toutefois, quand une classe ou un struct contiennent certaines fonctionnalités du langage C++, comme des classes de base virtuelles, des fonctions virtuelles, des membres avec un contrôle d’accès différent, le compilateur est libre de choisir une disposition. Cette disposition peut varier selon les optimisations qui sont apportées. Dans de nombreux cas, l’objet peut même ne pas occuper une zone contiguë de mémoire. Par exemple, si une classe a des fonctions virtuelles, toutes les instances de cette classe partagent probablement une seule table de fonctions virtuelles. Ces types sont très utiles, mais ils présentent également des limites. Étant donné que la disposition n’est pas définie, ils ne peuvent pas être passés aux programmes écrits dans d’autres langages, comme C, et parce qu’ils risquent de ne pas être contigus, ils ne peuvent pas non plus être copiés de façon fiable avec des fonctions rapides de bas niveau comme `memcopy`, ni sérialisés sur un réseau.
 
-Pour activer metaprograms de raisonner sur la pertinence de tout type donné pour les opérations qui dépendent d’une disposition de mémoire particulière ainsi que les programmes C++ et les compilateurs, C ++ 14 introduit trois catégories de simples classes et structs : *trivial*, *disposition standard*, et *POD* ou Plain Old Data. La bibliothèque Standard contient les modèles de fonction `is_trivial<T>`, `is_standard_layout<T>` et `is_pod<T>` qui déterminent si un type donné appartient à une catégorie donnée.
+Pour activer les compilateurs, ainsi que les programmes et métaprogrammes C++, afin qu’un type donné reste adapté aux opérations qui dépendent d’une disposition de mémoire particulière, C++14 a introduit trois catégories de classes et de structs simples : *trivial*, *disposition standard* et *POD* ou Plain Old Data. La bibliothèque Standard contient les modèles de fonction `is_trivial<T>`, `is_standard_layout<T>` et `is_pod<T>` qui déterminent si un type donné appartient à une catégorie donnée.
 
 ## <a name="trivial-types"></a>Types triviaux
 
-Quand une classe ou struct en C++ fournie par le compilateur soit explicitement défini par défaut les fonctions membres spéciales, il est un type trivial. Il occupe une zone de mémoire contigus. Il peut avoir des membres avec les spécificateurs d’accès différents. En C++, le compilateur est libre de choisir comment classer les membres dans cette situation. Par conséquent, vous pouvez memcopy ces objets, mais vous ne pouvez pas les utiliser fiable à partir d’un programme C. Un type trivial T peut être copié dans un tableau de char ou unsigned char et copié dans une variable T. Notez qu’en raison des exigences d’alignement, il peut y avoir des octets de remplissage entre les membres de type.
+Quand une classe ou un struct dans C++ a des fonctions membres spéciales définies explicitement par défaut ou fournies par le compilateur, il s’agit d’un type trivial. Il occupe une zone de mémoire contiguë. Il peut avoir des membres avec des spécificateurs d’accès différents. Dans C++, le compilateur est libre de choisir comment classer les membres dans ce cas. Par conséquent, vous pouvez utiliser memcopy pour copier ces objets, mais vous ne pouvez pas les consommer de façon fiable dans un programme C. Un type trivial T peut être copié dans un tableau de caractères ou de caractères non signés, puis copié sans problème dans une variable T. Notez qu’en raison des conditions d’alignement, il peut y avoir des octets de remplissage entre les membres de type.
 
-Les types triviaux ont un constructeur par défaut trivial constructeur de copie trivial, opérateur d’assignation de copie triviaux et destructeur trivial. Dans chaque cas, *trivial* signifie que le constructeur/opérateur/destructeur n’est pas fourni par l’utilisateur et appartient à une classe a
+Les types triviaux ont un constructeur par défaut trivial, un constructeur de copie trivial, un opérateur d’attribution de copie trivial et un destructeur trivial. Dans chaque cas, *trivial* signifie que le constructeur/opérateur/destructeur n’est pas fourni par l’utilisateur et appartient à une classe qui n’a
 
-- aucune des fonctions virtuelles ou les classes de base virtuelles,
+- aucune fonction virtuelle, aucune classe de base virtuelle,
 
-- aucune classe de base avec un correspondant destructeur non trivial constructeur/opérateur /
+- aucune classe de base avec un constructeur/opérateur/destructeur non trivial correspondant
 
-- Aucun membre de données de type de classe possédant un correspondant destructeur non trivial constructeur/opérateur /
+- aucun membre de données de type de classe avec un constructeur/opérateur/destructeur non trivial correspondant
 
-Les exemples suivants montrent les types triviaux. Dans Trivial2, la présence de la `Trivial2(int a, int b)` constructeur requiert que vous fournissez un constructeur par défaut. Pour le type être considérée comme triviale, vous devez explicitement ce un constructeur par défaut.
+Les exemples suivants montrent des types triviaux. Dans Trivial2, la présence du constructeur `Trivial2(int a, int b)` vous demande de fournir un constructeur par défaut. Pour que le type soit considéré comme trivial, vous devez définir explicitement ce constructeur comme constructeur par défaut.
 
 ```cpp
 struct Trivial
@@ -47,27 +47,27 @@ struct Trivial2
 };
 ```
 
-## <a name="standard-layout-types"></a>Types de mise en forme standard
+## <a name="standard-layout-types"></a>Types de disposition standard
 
-Lorsqu’une classe ou un struct ne contient-elle pas de certaines fonctionnalités du langage C++ telles que les fonctions virtuelles qui ne figurent pas dans le langage C, et tous les membres ont le même contrôle d’accès, c’est un type de disposition standard. Il est en mesure de memcopy et la mise en page est suffisamment défini qu’il peut être consommé par des programmes C. Les types de disposition standard peuvent avoir des fonctions membres spéciales définies par l’utilisateur. En outre, les types de disposition standard possèdent ces caractéristiques :
+Quand une classe ou un struct ne contiennent pas certaines fonctionnalités du langage C++ (comme des fonctions virtuelles) qui ne figurent pas dans le langage C, et que tous les membres ont le même contrôle d’accès, il s’agit d’un type à disposition standard. Il peut utiliser memcopy et la disposition est suffisamment définie pour être consommée par des programmes C. Les types de disposition standard peuvent avoir des fonctions membres spéciales définies par l’utilisateur. Par ailleurs, les types de disposition standard ont ces caractéristiques :
 
-- aucune des fonctions virtuelles ou les classes de base virtuelles
+- aucune fonction virtuelle ni aucune classe de base virtuelle
 
 - tous les membres de données non statiques ont le même contrôle d’accès
 
-- tous les membres non statiques de type de classe sont disposition standard
+- tous les membres non statiques de type de classe sont à disposition standard
 
-- classes de base sont disposition standard
+- toutes les classes de base sont à disposition standard
 
-- ne dispose d’aucune classe de base du même type que le premier membre de données non statiques.
+- aucune classe de base du même type que le premier membre de données non statique.
 
-- remplit une des conditions suivantes :
+- remplit l’une des conditions suivantes :
 
-  - Aucun membre de données non statiques dans la classe la plus dérivée et pas plus d’une classe de base avec les membres de données non statiques, ou
+  - aucun membre de données non statique dans la classe la plus dérivée et pas plus d’une classe de base avec des membres de données non statiques, ou
 
-  - ne dispose d’aucune classe de base avec des données membres non static
+  - aucune classe de base avec des membres de données non statiques
 
-Le code suivant illustre un exemple d’un type de disposition standard :
+Le code suivant montre un exemple d’un type à disposition standard :
 
 ```cpp
 struct SL
@@ -79,7 +79,7 @@ struct SL
 };
 ```
 
-Les deux dernières exigences peuvent éventuellement être mieux illustrés par code. Dans l’exemple suivant, même si Base est disposition standard, `Derived` n’est pas mise en forme standard, car les deux (la classe la plus dérivée) de l’informatique et `Base` ont des membres de données non statiques :
+Les deux dernières conditions peuvent éventuellement être mieux illustrées avec du code. Dans l’exemple suivant, même si Base est à disposition standard, `Derived` n’est pas à disposition standard, car les deux (la classe la plus dérivée) et `Base` ont des membres de données non statiques :
 
 ```cpp
 struct Base
@@ -96,7 +96,7 @@ struct Derived : public Base
 };
 ```
 
-Dans cet exemple `Derived` est disposition standard, car `Base` ne possède aucun membre de données non statiques :
+Dans cet exemple, `Derived` est à disposition standard, car `Base` n’a aucun membre de données non statique :
 
 ```cpp
 struct Base
@@ -112,15 +112,15 @@ struct Derived : public Base
 };
 ```
 
-Dérivée serait également disposition standard si `Base` avait les membres de données et `Derived` avait uniquement des fonctions membres.
+Derived serait également à disposition standard si `Base` avait des membres de données et si `Derived` avait uniquement des fonctions membres.
 
 ## <a name="pod-types"></a>Types POD
 
-Lorsqu’une classe ou un struct est trivial et disposition standard, il est un type POD (Plain Old Data). La disposition de mémoire des types POD est par conséquent contiguë et chaque membre possède une adresse supérieure que le membre qui a été déclaré avant lui, afin que la copie de l’octet par octet et les e/s binaires peuvent être effectuées sur ces types.  Types scalaires tels qu’int sont également des types POD. Les types POD qui sont des classes peuvent avoir uniquement des types POD en tant que membres de données non statiques.
+Quand une classe ou un struct sont à la fois triviaux et à disposition standard, il s’agit d’un type POD (Plain Old Data). La disposition en mémoire des types POD est par conséquent contiguë et chaque membre a une adresse supérieure à celle du membre qui a été déclaré avant lui, afin que les copies octet pour octet et les E/S binaires puissent être effectuées sur ces types.  Les types scalaires comme int sont également des types POD. Les types POD qui sont des classes peuvent avoir uniquement des types POD comme membres de données non statiques.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre les différences entre triviale, disposition standard et les types POD :
+L’exemple suivant montre les différences entre les types triviaux, à disposition standard et POD :
 
 ```cpp
 #include <type_traits>
@@ -183,7 +183,7 @@ int main()
 }
 ```
 
-## <a name="literal_types"></a> Types de littéral
+## <a name="literal_types"></a> Types littéraux
 
 Un type de littéral est un type dont la disposition peut être déterminée au moment de la compilation. Voici les types de littéral disponibles :
 
