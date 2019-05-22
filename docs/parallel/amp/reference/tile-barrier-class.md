@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: f0e742a0cc1a0809fc08b3862cadb7e3deb36fa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89e6d972fbecb2674e6343bf6d11f9972c25c63d
+ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351506"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65975036"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier, classe
 
@@ -82,7 +82,7 @@ Indique à tous les threads dans le groupe de threads (mosaïque) pour arrêter 
 void wait() const restrict(amp);
 ```
 
-## <a name="waitwithallmemoryfence"></a>wait_with_all_memory_fence
+## <a name="wait_with_all_memory_fence"></a> wait_with_all_memory_fence
 
 Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que tous les threads dans une mosaïque aient atteint cet appel. Cela garantit que tous les accès mémoire sont visibles à d’autres threads dans la mosaïque de threads et ont été exécutés dans l’ordre du programme.
 
@@ -92,7 +92,7 @@ Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que tou
 void wait_with_all_memory_fence() const restrict(amp);
 ```
 
-## <a name="waitwithglobalmemoryfence"></a>wait_with_global_memory_fence
+## <a name="a-namewaitwithglobalmemoryfence-waitwithglobalmemoryfence"></a><a name="wait_with_global_memory_fence"> wait_with_global_memory_fence
 
 Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que tous les threads dans une mosaïque aient atteint cet appel. Cela garantit que tous les accès mémoire globaux sont visibles à d’autres threads dans la mosaïque de threads et ont été exécutés dans l’ordre du programme.
 
@@ -102,7 +102,7 @@ Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que tou
 void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
-## <a name="waitwithtilestaticmemoryfence"></a>wait_with_tile_static_memory_fence
+## <a name="a-namewaitwithtilestaticmemoryfence-waitwithtilestaticmemoryfence"></a><a name="wait_with_tile_static_memory_fence"> wait_with_tile_static_memory_fence
 
 Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que tous les threads dans une mosaïque aient atteint cet appel. Cela garantit que `tile_static` mémoire les accès sont visibles à d’autres threads dans la mosaïque de threads et ont été exécutés dans l’ordre du programme.
 
