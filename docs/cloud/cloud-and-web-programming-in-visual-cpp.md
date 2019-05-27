@@ -1,25 +1,21 @@
 ---
 title: Cloud et programmation Web dans Visual C++
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 3d71e36b6209c693940f2ebe6b5e9c73bc0c9d9d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708045"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65790358"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Cloud et programmation Web dans Visual C++
 
 En C++, vous disposez de plusieurs options de connexion web et cloud.
 
-## <a name="cloud-programming-options"></a>Options de programmation cloud
+## <a name="microsoft-azure-sdks-and-rest-services"></a>Services REST et Kits de développement logiciel (SDK) Microsoft Azure
 
-- [Microsoft Azure Mobile Services](http://www.windowsazure.com/develop/mobile/)
-
-  Fournit des API natives que vous pouvez utiliser dans les applications UWP ou Windows Desktop pour vous connecter à Microsoft Azure Mobile Services. Bien que la plupart des exemples présentés sur le site web soient en C#, vous pouvez aussi utiliser C++. Pour plus d’informations, consultez [Démarrage rapide : Ajout d’un service mobile avec C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
-
-- [Microsoft Azure Storage Client Library for C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
+- [Bibliothèque cliente Stockage Microsoft Azure pour C++](https://azure.github.io/azure-storage-cpp/)
 
   La bibliothèque cliente Stockage Azure pour C++ fournit une API complète pour l’utilisation de Stockage Azure, avec notamment les possibilités suivantes :
 
@@ -29,11 +25,15 @@ En C++, vous disposez de plusieurs options de connexion web et cloud.
   - Placer et extraire des messages dans une file d’attente Azure.
   - Lister en différé des conteneurs, des objets blob, des tables et des files d’attente, et interroger en différé des entités
 
-- [API OneDrive](https://dev.onedrive.com/README.htm)
+- La norme ANSI C99 [Kits de développement logiciel (SDK) Azure IoT Hub](/azure/iot-hub/iot-hub-devguide-sdks) concernant l’Internet des objets autorise les applications IoT à s’exécuter sur l’appareil ou sur le serveur principal.
+
+- [OneDrive et SharePoint dans Microsoft Graph](https://dev.onedrive.com/README.htm)
 
   L’API OneDrive fournit un ensemble de services HTTP pour connecter votre application à des fichiers et des dossiers dans Office 365 et SharePoint Server 2016.
 
-- [SDK C++ REST (nom de code Casablanca)](https://github.com/Microsoft/cpprestsdk)
+## <a name="windows-and-cross-platform-networking-apis"></a>API réseau Windows et multiplateformes
+
+- [Kit de développement logiciel (SDK) C++ REST (nom de code Casablanca)](https://github.com/Microsoft/cpprestsdk)
 
   Fournit une API moderne, multiplateforme et asynchrone permettant d’interagir avec les services REST.
 
@@ -59,4 +59,5 @@ En C++, vous disposez de plusieurs options de connexion web et cloud.
 ## <a name="see-also"></a>Voir aussi
 
 [C++ dans Visual Studio](../overview/visual-cpp-in-visual-studio.md) <br/>
-[Réseaux et services web](/windows/uwp/networking/)
+[Centre de développement Microsoft Azure C et C++](https://azure.microsoft.com/develop/cpp/) <br/>
+[Réseaux et services web (plateforme Windows universelle)](/windows/uwp/networking/)
