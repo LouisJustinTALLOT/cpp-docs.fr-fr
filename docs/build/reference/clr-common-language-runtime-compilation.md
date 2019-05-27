@@ -1,6 +1,6 @@
 ---
 title: /clr (Compilation pour le Common Language Runtime)
-ms.date: 09/18/2018
+ms.date: 05/16/2019
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: ea4a878afea4453796277486da88b85e7f74883c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: fa2be3d3ce17df104cda121e4869c975ec6dd440
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446525"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837311"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilation pour le Common Language Runtime)
 
@@ -26,7 +26,7 @@ Permet aux applications et aux composants d’utiliser les fonctionnalités du C
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/clr**[**:**_options_]
+> **/clr**[ **:** _options_]
 
 ## <a name="arguments"></a>Arguments
 
@@ -35,35 +35,35 @@ Un ou plusieurs des commutateurs suivants, séparés par des virgules.
 
 - none
 
-   Aucune option, **/CLR** crée les métadonnées pour l’application. Ces métadonnées peuvent être utilisées par d'autres applications CLR et permettent à votre application d'utiliser les types et données des métadonnées appartenant à d'autres composants CLR. Pour plus d’informations, consultez [assemblys mixtes (natif et managé)](../../dotnet/mixed-native-and-managed-assemblies.md).
+   Sans option, **/clr** crée des métadonnées pour l’application. Ces métadonnées peuvent être utilisées par d'autres applications CLR et permettent à votre application d'utiliser les types et données des métadonnées appartenant à d'autres composants CLR. Pour plus d’informations, consultez [Assemblys mixtes (natif et managé)](../../dotnet/mixed-native-and-managed-assemblies.md).
 
 - **pure**
 
-   **/ CLR : pure est déconseillé**. L’option est supprimée dans Visual Studio 2017. Nous vous recommandons de porter vers C# du code devant être écrit en MSIL pur.
+   **/clr:pure est déprécié**. L’option est supprimée dans Visual Studio 2017 et ultérieur. Nous vous recommandons de porter vers C# du code devant être écrit en MSIL pur.
 
 - **safe**
 
-   **/ CLR : safe est déconseillé**. L’option est supprimée dans Visual Studio 2017. Nous vous recommandons de porter le code qui doit être MSIL sécurisé en c#.
+   **/clr:safe est déprécié**. L’option est supprimée dans Visual Studio 2017 et ultérieur. Nous vous recommandons de porter sur C# du code devant être écrit en MSIL sécurisé.
 
 - **noAssembly**
 
-   **/ CLR : noAssembly est déconseillée**. Utilisez plutôt [/LN (Create MSIL Module)](ln-create-msil-module.md) .
+   **/clr:noAssembly est déprécié**. Utilisez plutôt [/LN (Create MSIL Module)](ln-create-msil-module.md) .
 
    Indique qu'un manifeste d'assembly ne doit pas être inséré dans le fichier de sortie. Par défaut, l’option **noAssembly** n’est pas activée.
 
    Un programme managé qui ne possède pas de métadonnées d'assembly dans le manifeste est appelé *module*. L’option **noAssembly** peut être utilisée uniquement pour produire un module. Si vous compilez en utilisant [/c](c-compile-without-linking.md) et **/clr:noAssembly**, spécifiez l’option [/NOASSEMBLY](noassembly-create-a-msil-module.md) dans la phase de l’éditeur de liens pour créer un module.
 
-   Avant Visual Studio 2005, **/CLR : noAssembly** requis **/LD**. **/LD** est désormais implicite quand vous spécifiez **/clr:noAssembly**.
+   Avant Visual Studio 2005, **/clr:noAssembly** nécessitait l’option **/LD**. **/LD** est désormais implicite quand vous spécifiez **/clr:noAssembly**.
 
 - **initialAppDomain**
 
-   Permet à une application Visual C++ à exécuter sur la version 1 du CLR.  Une application compilée en utilisant **initialAppDomain** ne doit pas être utilisée par une application qui utilise ASP.NET car elle n’est pas prise en charge dans la version 1 du CLR.
+   Permet à une application Visual C++ de s’exécuter sur la version 1 du CLR.  Une application compilée en utilisant **initialAppDomain** ne doit pas être utilisée par une application qui utilise ASP.NET car elle n’est pas prise en charge dans la version 1 du CLR.
 
 - **nostdlib**
 
    Indique au compilateur d'ignorer le répertoire \clr par défaut. Le compilateur produit des erreurs si vous incluez plusieurs versions d'une DLL telle que System.dll. Cette option vous permet de spécifier l'infrastructure spécifique à utiliser pendant la compilation.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Le code managé est du code qui peut être inspecté et géré par le CLR. Le code managé peut accéder aux objets managés. Pour plus d'informations, consultez [/clr Restrictions](clr-restrictions.md).
 
@@ -73,17 +73,17 @@ Une application compilée en utilisant **/clr** peut contenir ou non des donnée
 
 Pour activer le débogage sur une application managée, consultez [/ASSEMBLYDEBUG (Ajouter DebuggableAttribute)](assemblydebug-add-debuggableattribute.md).
 
-Seuls les types CLR seront instanciés sur le tas récupéré par le garbage collector. Pour plus d’informations, consultez [les Classes et Structs](../../extensions/classes-and-structs-cpp-component-extensions.md). Pour compiler une fonction en code natif, utilisez le pragma `unmanaged` . Pour plus d’informations, consultez [managed, unmanaged](../../preprocessor/managed-unmanaged.md).
+Seuls les types CLR seront instanciés sur le tas récupéré par le garbage collector. Pour plus d’informations, consultez [Classes et structs](../../extensions/classes-and-structs-cpp-component-extensions.md). Pour compiler une fonction en code natif, utilisez le pragma `unmanaged` . Pour plus d’informations, consultez [managé, non managé](../../preprocessor/managed-unmanaged.md).
 
 Par défaut, l’option **/clr** n’est pas activée. Quand l’option **/clr** est activée, **/MD** l’est également. Pour plus d’informations, consultez l’article [/MD, /MT, /LD (Utiliser la bibliothèque Runtime)](md-mt-ld-use-run-time-library.md). **/MD** garantit que les versions multithreads dynamiquement liées des routines d’exécution sont sélectionnées à partir des fichiers d’en-tête standard (.h). Le multithreading est requis pour la programmation managée, car le garbage collector CLR exécute les finaliseurs dans un thread auxiliaire.
 
-Si vous compilez à l’aide de **/c**, vous pouvez spécifier le type CLR de fichier de sortie résultant avec [CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md).
+Si vous effectuez la compilation en utilisant **/c**, vous pouvez spécifier le type CLR du fichier de sortie résultant avec [/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md).
 
 **/clr** implique **/EHa**et aucune autre option **/EH** n’est prise en charge pour **/clr**. Pour plus d’informations, consultez l’article [/EH (Modèle de gestion des exceptions)](eh-exception-handling-model.md).
 
 Pour plus d’informations sur la façon de déterminer le type d’image CLR d’un fichier, consultez [/CLRHEADER](clrheader.md).
 
-Tous les modules passés à un appel donné de l’éditeur de liens doivent être compilés avec la même option du compilateur de la bibliothèque Runtime (**/MD** ou **/LD**).
+Tous les modules passés à un appel donné de l’éditeur de liens doivent être compilés avec la même option du compilateur de la bibliothèque Runtime ( **/MD** ou **/LD**).
 
 Utilisez l'option de l'éditeur de liens [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md) pour incorporer une ressource dans un assembly. Les options[/DELAYSIGN](delaysign-partially-sign-an-assembly.md), [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)et [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) de l'éditeur de liens vous permettent également de personnaliser la façon dont un assembly est créé.
 

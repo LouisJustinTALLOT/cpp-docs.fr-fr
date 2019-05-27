@@ -3,7 +3,7 @@
 # [Procédure pas à pas : Création d’applications de bureau Windows](walkthrough-creating-windows-desktop-applications-cpp.md)
 # [Assistant Windows Desktop](win32-application-wizard.md)
 # [Bibliothèque ATL (Active Template Library)](../atl/atl-com-desktop-components.md)
-# [Microsoft Foundation Classes (MFC)](../mfc/TOC.md)
+# [Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)
 # [Classes partagées ATL et  MFC](../atl-mfc-shared/TOC.md)
 # [Accès aux données](../data/data-access-in-cpp.md)
 # [Texte et chaînes](../text/text-and-strings-in-visual-cpp.md)

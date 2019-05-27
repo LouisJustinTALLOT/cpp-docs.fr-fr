@@ -1,37 +1,40 @@
 ---
 title: Sélection et manipulation d'enregistrements
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - records, selecting
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: fa8b63dab24c921804c474df73f6b6da192a4cd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 745c0c35e42426242d92d720d5dcd3de631fb17b
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329944"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707806"
 ---
 # <a name="selecting-and-manipulating-records"></a>Sélection et manipulation d'enregistrements
 
-Normalement lorsque vous sélectionnez des enregistrements à partir d’une source de données à l’aide d’une instance SQL **sélectionnez** instruction, vous obtenez un jeu de résultats, qui est un ensemble d’enregistrements à partir d’une table ou une requête. Avec les classes de base de données, vous utilisez un objet recordset pour sélectionner et accéder à l’ensemble de résultats. Il s’agit d’un objet d’une classe spécifique à l’application que vous dérivez de la classe [CRecordset](../../mfc/reference/crecordset-class.md). Lorsque vous définissez une classe de jeu d’enregistrements, vous spécifiez la source de données à associer à la table à utiliser et les colonnes de la table. L’Assistant Application MFC ou **ajouter une classe** (comme décrit dans [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) crée une classe avec une connexion à une source de données spécifique. Les Assistants écrivent le [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) fonction membre de classe `CRecordset` pour retourner le nom de table. Pour plus d’informations sur l’utilisation des Assistants pour créer des classes de jeu d’enregistrements, consultez [prise en charge de la base de données, Assistant Application MFC](../../mfc/reference/database-support-mfc-application-wizard.md) et [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
+> [!NOTE] 
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toujours créer un consommateur manuellement.
 
-À l’aide un [CRecordset](../../mfc/reference/crecordset-class.md) de l’objet en cours d’exécution, vous pouvez :
+Normalement, quand vous sélectionnez des enregistrements d’une source de données à l’aide d’une instruction SQL **SELECT**, vous obtenez un jeu de résultats, qui est un jeu d’enregistrements issus d’une table ou d’une requête. Avec les classes de base de données, vous utilisez un objet recordset pour sélectionner le jeu de résultats et y accéder. Il s’agit d’un objet d’une classe propre à l’application que vous dérivez de la classe [CRecordset](../../mfc/reference/crecordset-class.md). Quand vous définissez une classe recordset, vous spécifiez la source de données à lui associer, la table à utiliser et les colonnes de la table. L’Assistant Application MFC ou **Ajouter une classe** (comme décrit dans [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) crée une classe avec une connexion à une source de données spécifique. Les Assistants écrivent la fonction membre [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) de la classe `CRecordset` pour retourner le nom de table.
 
-- Examinez les champs de données de l’enregistrement en cours.
+À l’aide d’un objet [CRecordset](../../mfc/reference/crecordset-class.md) au moment de l’exécution, vous pouvez :
 
-- Filtrer ou trier le jeu d’enregistrements.
+- Examiner les champs de données de l’enregistrement actuel.
 
-- Personnaliser la valeur par défaut SQL **sélectionnez** instruction.
+- Filtrer ou trier le recordset.
 
-- Faites défiler les enregistrements sélectionnés.
+- Personnaliser l’instruction SQL **SELECT** par défaut.
 
-- Ajouter, mettre à jour ou supprimer des enregistrements (si la source de données et le jeu d’enregistrements sont modifiables).
+- Faire défiler les enregistrements sélectionnés.
 
-- Tester si le jeu d’enregistrements permet d’effectuer de nouvelles requêtes et actualiser le contenu du recordset.
+- Ajouter, mettre à jour ou supprimer des enregistrements (si la source de données et le recordset sont modifiables).
 
-Lorsque vous avez terminé à l’aide de l’objet recordset, fermez et détruire. Pour plus d’informations sur les jeux d’enregistrements, consultez [Recordset (ODBC)](../../data/odbc/recordset-odbc.md).
+- Tester si le recordset permet de réinterroger et d’actualiser son contenu.
+
+Quand vous avez fini d’utiliser l’objet recordset, vous le fermez et le détruisez. Pour plus d’informations sur les recordsets, consultez [Recordset (ODBC)](../../data/odbc/recordset-odbc.md).
 
 ## <a name="see-also"></a>Voir aussi
 

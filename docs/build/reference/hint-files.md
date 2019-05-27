@@ -11,16 +11,16 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 919cbedd0c0d7c610273d597328979d1fb449f8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446309"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707112"
 ---
 # <a name="hint-files"></a>Fichiers hint
 
-Un *fichier hint* contient des macros qui sinon entraîneraient l’omission de régions de code par l’Analyseur de base de données de navigation C++. Lorsque vous ouvrez Visual Studio C++ projet, l’analyseur analyse le code dans chaque fichier source dans le projet et génère une base de données avec des informations sur chaque identificateur. L’IDE utilise ces informations pour prendre en charge les fonctionnalités de navigation de code, comme le navigateur **Affichage de classes** et la **Barre de navigation**.
+Un *fichier hint* contient des macros qui sinon entraîneraient l’omission de régions de code par l’Analyseur de base de données de navigation C++. Quand vous ouvrez un projet Visual Studio C++, l’analyseur analyse le code de chaque fichier source du projet et crée une base de données avec des informations sur chaque identificateur. L’IDE utilise ces informations pour prendre en charge les fonctionnalités de navigation de code, comme le navigateur **Affichage de classes** et la **Barre de navigation**.
 
 L’Analyseur de base de données de navigation C++ est un analyseur approximatif qui peut analyser de grandes quantités de code dans un court laps de temps. Il est rapide en partie parce qu’il ignore le contenu des blocs. Par exemple, il enregistre uniquement l’emplacement et les paramètres d’une fonction et ignore son contenu. Certaines macros peuvent entraîner des problèmes de l’heuristique utilisée pour déterminer le début et la fin d’un bloc. Ces problèmes entraînent un enregistrement incorrect des régions de code.
 
@@ -118,7 +118,7 @@ Le système d’analyse recherche les fichiers hint dans les répertoires selon 
 
 - Le répertoire qui contient le package d’installation pour Visual C++ (**vcpackages**). Ce répertoire contient un fichier hint intégré qui décrit les symboles des fichiers système fréquemment utilisés, comme **windows.h**. Par conséquent, votre projet hérite automatiquement de la plupart des indicateurs dont il a besoin.
 
-- Chemin depuis le répertoire racine d’un fichier source au répertoire qui contient le fichier source lui-même. Dans Visual Studio standard C++ projet, le répertoire racine contient le fichier projet ou solution.
+- Chemin depuis le répertoire racine d’un fichier source au répertoire qui contient le fichier source lui-même. Dans un projet Visual Studio C++ classique, le répertoire racine contient le fichier projet ou solution.
 
    L’exception à cette règle est le cas où un *fichier stop* se trouve dans le chemin vers le fichier source. Un fichier stop est tout fichier appelé **cpp.stop**. Un fichier stop offre un contrôle supplémentaire sur l’ordre de recherche. Au lieu de démarrer du répertoire racine, le système d’analyse recherche à partir du répertoire qui contient le fichier stop jusqu’au répertoire qui contient le fichier source. Dans un projet classique, vous n’avez pas besoin d’un fichier stop.
 
@@ -162,7 +162,7 @@ Les indicateurs utilisent cette syntaxe :
 
 Cet exemple illustre la façon dont les indicateurs sont accumulés à partir de fichiers hint. Cet exemple n’utilise pas de fichiers stop.
 
-L’illustration montre certaines des répertoires physiques dans un Visual Studio C++ projet. Des fichiers hint se trouvent dans les répertoires `vcpackages`, `Debug`, `A1` et `A2`.
+L’illustration montre certains des répertoires physiques d’un projet Visual Studio C++. Des fichiers hint se trouvent dans les répertoires `vcpackages`, `Debug`, `A1` et `A2`.
 
 ### <a name="hint-file-directories"></a>Répertoires des fichiers hint
 
@@ -244,7 +244,7 @@ Ces remarques s’appliquent à la liste précédente :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Types de fichiers créés pour Visual C++ projets](file-types-created-for-visual-cpp-projects.md)<br>
+[Types de fichiers créés pour les projets Visual Studio C++](file-types-created-for-visual-cpp-projects.md)<br>
 [#define, directive (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef, directive (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Annotations SAL](../../c-runtime-library/sal-annotations.md)<br>

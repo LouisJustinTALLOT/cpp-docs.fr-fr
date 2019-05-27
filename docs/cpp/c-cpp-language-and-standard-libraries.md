@@ -1,15 +1,15 @@
 ---
-title: Langage C/C++ et bibliothèques Standard
+title: Langage C++ et bibliothèques standard
 ms.date: 11/04/2016
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-ms.openlocfilehash: 8e7a51fc18b24475c5545fa912e376cc49645d94
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: d425d142b52b7d7a86e84a1dbbd648673223165a
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222225"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708018"
 ---
-# <a name="cc-language-and-standard-libraries"></a>Langage C/C++ et bibliothèques Standard
+# <a name="cc-language-and-standard-libraries"></a>Langage C++ et bibliothèques standard
 
 Cette section de la documentation inclut des instructions et du contenu de référence pour l’implémentation Microsoft des normes ISO pour C et C++.
 
@@ -17,12 +17,12 @@ Cette section de la documentation inclut des instructions et du contenu de réf�
 
 |Titre|Description|
 |-----------|-----------------|
-|[Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)|Décrit les éléments de programmation C++ modernes et des meilleures pratiques.|
-|[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)|Contenu de référence pour les langages C++.|
-|[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)|Contenu de référence pour l’implémentation Microsoft de la bibliothèque Standard C++.|
-|[Informations de référence sur le langage C](../c-language/c-language-reference.md)|Contenu de référence pour l’implémentation Microsoft du langage C.|
-|[Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)|Contenu de référence pour l’implémentation Microsoft du runtime C (CRT).|
+|[Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)|Décrit les idiomes et les bonnes pratiques de programmation modernes en C++.|
+|[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)|Contenu de référence sur les langages C++.|
+|[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)|Contenu de référence pour l’implémentation Microsoft de la bibliothèque C++ Standard.|
+|[Informations de référence sur le langage C](../c-language/c-language-reference.md)|Contenu de référence pour l’implémentation Microsoft de la bibliothèque C Standard.|
+|[Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)|Contenu de référence pour l’implémentation Microsoft du runtime C.|
 |[Bibliothèque SafeInt](../safeint/safeint-library.md)|Contenu de référence pour une bibliothèque portable de fonctions qui gèrent les entiers sans risque de dépassement de capacité.|
-|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Décrit les principales fonctionnalités de C++ dans Visual Studio et des liens vers le reste de Visual Studio C++ documentation.|
-|[Présentation du développement C++ dans Visual Studio](../overview/overview-of-cpp-development.md)|Liens vers d’autres articles qui contiennent des informations sur l’utilisation de Visual Studio et ses outils pour créer, générer et déployer des applications C++.|
-|[Nouveautés de Visual C++](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Décrit les nouvelles fonctionnalités et améliorations dans cette version.|
+|[C++ dans Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Décrit les principales fonctionnalités de C++ dans Visual Studio et fournit un lien vers le reste de la documentation Visual Studio C++.|
+|[Présentation du développement C++ dans Visual Studio](../overview/overview-of-cpp-development.md)|Liens vers d’autres articles qui contiennent des informations sur l’utilisation de Visual Studio et de ses outils associés pour créer, générer et déployer des applications C++.|
+|[Nouveautés de Visual C++](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Décrit les nouvelles fonctionnalités et améliorations de cette version.|

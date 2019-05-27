@@ -1,6 +1,6 @@
 ---
 title: _open_osfhandle
-ms.date: 05/29/2018
+ms.date: 05/21/2019
 apiname:
 - _open_osfhandle
 apilocation:
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8527dade37f20b7341d5a26f5752ece668ab7fc9
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156100"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174801"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -56,22 +56,22 @@ Types d’opération autorisés.
 
 En cas de réussite, **_open_osfhandle** retourne un descripteur de fichier Runtime C. Sinon, elle retourne -1.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Le **_open_osfhandle** fonction alloue un descripteur de fichier Runtime C et associe le handle de fichier de système d’exploitation spécifié par *osfhandle*. Pour éviter un avertissement du compilateur, effectuer un cast du *osfhandle* argument à partir de **gérer** à **intptr_t**. Le *indicateurs* argument est une expression d’entier formée à partir d’une ou plusieurs des constantes manifestes définies dans \<fcntl.h >. Quand deux ou plusieurs constantes manifestes sont utilisées pour former le *indicateurs* argument, les constantes sont combinées avec l’opérateur OR au niveau du bit ( **&#124;** ).
+La fonction **_open_osfhandle** alloue un descripteur de fichier Runtime C et l’associe au descripteur de fichier du système d’exploitation spécifié par *osfhandle*. Pour éviter un avertissement du compilateur, castez l’argument *osfhandle* de **HANDLE** en **intptr_t**. L’argument *flags* est une expression d’entier formée à partir d’une ou plusieurs des constantes de manifeste définies dans \<fcntl.h>. Quand plusieurs constantes de manifeste sont utilisées pour former l’argument *flags*, les constantes sont combinées avec l’opérateur OR au niveau du bit ( **&#124;** ).
 
-Ces constantes manifestes sont définis dans \<fcntl.h > :
+Les constantes de manifeste sont définies dans \<fcntl.h> :
 
 |||
 |-|-|
 | **\_O\_APPEND** | Positionne un pointeur de fichier à la fin du fichier avant chaque opération d’écriture. |
 | **\_O\_RDONLY** | Ouvre le fichier pour un accès en lecture uniquement. |
-| **\_O\_TEXTE** | Ouvre le fichier en mode texte (traduit). |
+| **\_O\_TEXT** | Ouvre le fichier en mode texte (traduit). |
 | **\_O\_WTEXT** | Ouvre le fichier en mode Unicode (UTF-16 traduit). |
 
-Le **_open_osfhandle** appel transfère la propriété du handle de fichier Win32 pour le descripteur de fichier. Pour fermer un fichier ouvert avec **_open_osfhandle**, appelez [ \_fermer](close.md). Le handle de fichier du système d’exploitation sous-jacent étant aussi fermé par un appel à **_close**, donc il n’est pas nécessaire d’appeler la fonction Win32 **CloseHandle** sur le handle d’origine. Si le descripteur de fichier est détenu par un **fichier &#42;**  flux, puis en appelant [fclose](fclose-fcloseall.md) sur qui **fichier &#42;**  flux ferme également les deux le descripteur de fichier et le handle sous-jacent. Dans ce cas, n’appelez pas **_close** sur le descripteur de fichier.
+L’appel de **_open_osfhandle** transfère la propriété du handle de fichier Win32 au descripteur de fichier. Pour fermer un fichier ouvert avec **_open_osfhandle**, appelez [\_close](close.md). Le handle de fichier du système d’exploitation sous-jacent est également fermé par un appel à **_close**. N’appelez pas la fonction Win32 **CloseHandle** sur le handle d’origine. Si le descripteur de fichier est détenu par un flux **FILE &#42;** , un appel à [fclose](fclose-fcloseall.md) sur ce flux **FILE &#42;** ferme le descripteur de fichier et le handle sous-jacent. Dans ce cas, n’appelez pas **_close** sur le descripteur de fichier ou **CloseHandle** sur le handle d’origine.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
