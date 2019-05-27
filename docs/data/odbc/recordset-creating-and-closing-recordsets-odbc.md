@@ -1,6 +1,6 @@
 ---
-title: 'Recordset : Création et fermeture de Recordsets (ODBC)'
-ms.date: 11/04/2016
+title: 'Recordset : Création et fermeture de recordsets (ODBC)'
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, creating
 - recordsets, creating
@@ -9,58 +9,61 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b4896dff711d87db05334afc0345c15da2fa23e6
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395584"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707986"
 ---
-# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset : Création et fermeture de Recordsets (ODBC)
+# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset : Création et fermeture de recordsets (ODBC)
+
+> [!NOTE] 
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toujours créer un consommateur manuellement.
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
-Pour utiliser un jeu d’enregistrements, construisez un objet recordset et appelez sa `Open` fonction membre pour exécuter la requête du recordset et sélectionner des enregistrements. Lorsque vous avez terminé avec le jeu d’enregistrements, fermez et détruire l’objet.
+Pour utiliser un recordset, construisez un objet recordset et appelez sa fonction membre `Open` pour exécuter la requête du recordset et sélectionner des enregistrements. Quand vous n’avez plus besoin du recordset, fermez et détruisez l’objet.
 
 Cette rubrique explique :
 
 - [Quand et comment créer un objet recordset](#_core_creating_recordsets_at_run_time).
 
-- [Quand et comment vous pouvez qualifier le comportement du recordset en paramétrant, le filtrage, de tri ou le verrouillant](#_core_setting_recordset_options).
+- [Quand et comment qualifier le comportement du recordset en le paramétrant, le filtrant, le triant ou le verrouillant](#_core_setting_recordset_options).
 
 - [Quand et comment fermer un objet recordset](#_core_closing_a_recordset).
 
-##  <a name="_core_creating_recordsets_at_run_time"></a> Création de jeux d’enregistrements en cours d’exécution
+##  <a name="_core_creating_recordsets_at_run_time"></a> Création de recordsets au moment de l’exécution
 
-Avant de pouvoir créer des objets de jeu d’enregistrements dans votre programme, vous écrivez généralement les classes de jeu d’enregistrements spécifiques à l’application. Pour plus d’informations sur cette étape préliminaire, consultez [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
+Pour pouvoir créer des objets recordset dans votre programme, vous écrivez généralement des classes recordset propres à l’application. Pour plus d’informations sur cette étape préliminaire, consultez [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
 
-Ouvrir un objet de feuille de réponse dynamique ou instantané lorsque vous avez besoin sélectionner des enregistrements à partir d’une source de données. Le type d’objet à créer dépend de ce que vous devez faire avec les données dans votre application et sur quels votre pilote ODBC prend en charge. Pour plus d’informations, consultez [Dynaset](../../data/odbc/dynaset.md) et [instantané](../../data/odbc/snapshot.md).
+Ouvrez un objet de feuille de réponse dynamique ou d’instantané quand vous avez besoin de sélectionner des enregistrements d’une source de données. Le type d’objet à créer dépend de ce que vous devez faire avec les données de votre application et de ce que votre pilote ODBC prend en charge. Pour plus d’informations, consultez [Feuille de réponse dynamique](../../data/odbc/dynaset.md) et [Instantané](../../data/odbc/snapshot.md).
 
-#### <a name="to-open-a-recordset"></a>Pour ouvrir un jeu d’enregistrements
+#### <a name="to-open-a-recordset"></a>Pour ouvrir un recordset
 
-1. Construisez un objet de votre `CRecordset`-classe dérivée.
+1. Construisez un objet de votre classe dérivée `CRecordset`.
 
    Vous pouvez construire l’objet sur le tas ou sur le frame de pile d’une fonction.
 
-1. Vous pouvez éventuellement modifier le comportement de jeu d’enregistrements par défaut. Pour les options disponibles, consultez [définition des Options de jeu d’enregistrements](#_core_setting_recordset_options).
+1. Vous pouvez éventuellement modifier le comportement du recordset par défaut. Pour connaître les options disponibles, consultez [Définition des options de recordset](#_core_setting_recordset_options).
 
-1. Appeler l’objet [Open](../../mfc/reference/crecordset-class.md#open) fonction membre.
+1. Appelez la fonction membre [Open](../../mfc/reference/crecordset-class.md#open) de l’objet.
 
-Dans le constructeur, passez un pointeur vers un `CDatabase` de l’objet ou passer NULL pour utiliser un objet de base de données temporaire que l’infrastructure construit et ouvre en fonction de la chaîne de connexion retournée par la [GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) fonction membre. Le `CDatabase` objet peut déjà être connecté à une source de données.
+Dans le constructeur, passez un pointeur à un objet `CDatabase` ou passez NULL pour utiliser un objet de base de données temporaire que le framework construit et ouvre en fonction de la chaîne de connexion retournée par la fonction membre [GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect). L’objet `CDatabase` est peut-être déjà connecté à une source de données.
 
-L’appel à `Open` utilise SQL pour sélectionner des enregistrements à partir de la source de données. Le premier enregistrement sélectionné (le cas échéant) est l’enregistrement actif. Les valeurs des champs de cet enregistrement sont stockées dans les membres de données de champ de l’objet recordset. Si tous les enregistrements ont été sélectionnés, à la fois le `IsBOF` et `IsEOF` fonctions membres retournent 0.
+L’appel à `Open` utilise SQL pour sélectionner des enregistrements de la source de données. Le premier enregistrement sélectionné (le cas échéant) est l’enregistrement actuel. Les valeurs des champs de cet enregistrement sont stockées dans les membres de données de champ de l’objet recordset. Si tous les enregistrements ont été sélectionnés, les fonctions membres `IsBOF` et `IsEOF` retournent toutes les deux 0.
 
-Dans votre [Open](../../mfc/reference/crecordset-class.md#open) appel, vous pouvez :
+Dans votre appel à [Open](../../mfc/reference/crecordset-class.md#open), vous pouvez :
 
-- Spécifiez si le recordset est une feuille de réponse dynamique ou un instantané. Par défaut, les jeux d’enregistrements sont ouverts en tant que captures instantanées. Ou bien, vous pouvez spécifier un jeu d’enregistrements avant uniquement, ce qui ne permet que le défilement avant, un seul enregistrement à la fois.
+- Spécifiez si le recordset est une feuille de réponse dynamique ou un instantané. Par défaut, les recordsets s’ouvrent comme des instantanés. Sinon, vous pouvez spécifier un recordset de type avant uniquement, ce qui permet uniquement le défilement avant, un seul enregistrement à la fois.
 
-   Par défaut, un jeu d’enregistrements utilise le type par défaut stocké dans le `CRecordset` membre de données `m_nDefaultType`. Assistants écrivent du code pour initialiser `m_nDefaultType` pour le type de jeu d’enregistrements que vous choisissez dans l’Assistant. Au lieu d’accepter cette valeur par défaut, vous pouvez remplacer un autre type de jeu d’enregistrements.
+   Par défaut, un recordset utilise le type par défaut stocké dans le membre de données `m_nDefaultType` de `CRecordset`. Les Assistants écrivent du code pour initialiser `m_nDefaultType` sur le type de recordset que vous choisissez dans l’Assistant. Au lieu d’accepter cette valeur par défaut, vous pouvez la remplacer par un autre type de recordset.
 
-- Spécifiez une chaîne pour remplacer la valeur par défaut SQL **sélectionnez** instruction construit le jeu d’enregistrements.
+- Spécifiez une chaîne pour remplacer l’instruction SQL **SELECT** par défaut construite par le recordset.
 
-- Spécifiez si le jeu d’enregistrements est en lecture seule ou en mode append-only. Autorise les jeux d’enregistrements complet de la mise à jour par défaut, mais vous pouvez limiter que pour l’ajout de nouveaux enregistrements uniquement ou vous pouvez interdire toutes les mises à jour.
+- Spécifiez si le recordset est en lecture seule ou en ajout uniquement. Les recordsets autorisent une mise à jour complète par défaut, mais vous pouvez limiter la mise à jour à l’ajout de nouveaux enregistrements uniquement ou vous pouvez interdire toutes les mises à jour.
 
-L’exemple suivant montre comment ouvrir un objet instantané en lecture seule de la classe `CStudentSet`, une classe spécifique à l’application :
+L’exemple suivant montre comment ouvrir un objet d’instantané en lecture seule de la classe `CStudentSet`, une classe propre à l’application :
 
 ```cpp
 // Construct the snapshot object
@@ -71,41 +74,41 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-Après avoir appelé `Open`, utilisez les membres de données et des fonctions de membre de l’objet pour travailler avec les enregistrements. Dans certains cas, vous souhaiterez actualiser ou actualiser le jeu d’enregistrements pour inclure les modifications qui se sont produites sur la source de données. Pour plus d’informations, consultez [jeu d’enregistrements : Actualisation d’un jeu d’enregistrements (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+Après avoir appelé `Open`, utilisez les fonctions membres et les membre de données de l’objet pour utiliser les enregistrements. Dans certains cas, vous pouvez réinterroger ou actualiser le recordset pour introduire les changements qui se sont produits au niveau de la source de données. Pour plus d’informations, consultez [Recordset : Lancement d’une nouvelle requête sur un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
->  La chaîne de connexion que vous utilisez pendant le développement n’est peut-être pas la même chaîne de connexion nécessitant les utilisateurs finaux. Pour trouver des idées sur la généralisation de votre application à cet égard, consultez [Source de données : Gestion des connexions (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+>  La chaîne de connexion que vous utilisez pendant le développement peut ne pas être la même que celle dont vos utilisateurs finaux ont besoin. Pour trouver des idées sur la généralisation de votre application à cet égard, consultez [Source de données : Gestion des connexions (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
-##  <a name="_core_setting_recordset_options"></a> Définition des Options de jeu d’enregistrements
+##  <a name="_core_setting_recordset_options"></a> Définition des options de recordset
 
-Après avoir construit votre objet recordset, mais avant d’appeler `Open` pour sélectionner des enregistrements, vous souhaiterez peut-être définir des options pour contrôler le comportement du recordset. Pour tous les jeux d’enregistrements, vous pouvez :
+Après avoir construit votre objet recordset, mais avant d’appeler `Open` pour sélectionner des enregistrements, vous pouvez définir des options pour contrôler le comportement du recordset. Pour tous les recordsets, vous pouvez :
 
-- Spécifiez un [filtre](../../data/odbc/recordset-filtering-records-odbc.md) pour contraindre la sélection d’enregistrement.
+- Spécifier un [filtre](../../data/odbc/recordset-filtering-records-odbc.md) pour contraindre la sélection d’enregistrement.
 
-- Spécifiez un [tri](../../data/odbc/recordset-sorting-records-odbc.md) afin que les enregistrements.
+- Spécifier un ordre de [tri](../../data/odbc/recordset-sorting-records-odbc.md) pour les enregistrements.
 
-- Spécifiez [paramètres](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) afin de pouvoir sélectionner des enregistrements à l’aide des informations fournies ou calculées au moment de l’exécution.
+- Spécifier des [paramètres](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) afin de pouvoir sélectionner des enregistrements à l’aide des informations fournies ou calculées au moment de l’exécution.
 
-Vous pouvez également définir l’option suivante si certaines conditions sont remplies :
+Vous pouvez également définir l’option suivante si les conditions sont remplies :
 
-- Si le jeu d’enregistrements est modifiable et prend en charge les options de verrouillage, spécifiez la [verrouillage](../../data/odbc/recordset-locking-records-odbc.md) méthode utilisée pour les mises à jour.
+- Si le recordset est modifiable et prend en charge les options de verrouillage, spécifiez la méthode de [verrouillage](../../data/odbc/recordset-locking-records-odbc.md) utilisée pour les mises à jour.
 
 > [!NOTE]
->  Pour affecter la sélection d’enregistrement, vous devez définir ces options avant d’appeler le `Open` fonction membre.
+>  Pour affecter la sélection d’enregistrements, vous devez définir ces options avant d’appeler la fonction membre `Open`.
 
-##  <a name="_core_closing_a_recordset"></a> Fermeture d’un Recordset
+##  <a name="_core_closing_a_recordset"></a> Fermeture d’un recordset
 
-Lorsque vous avez terminé avec votre jeu d’enregistrements, vous devez supprimer et désallouer sa mémoire.
+Quand vous n’avez plus besoin de votre recordset, vous devez le supprimer et désallouer sa mémoire.
 
-#### <a name="to-close-a-recordset"></a>Pour fermer un jeu d’enregistrements
+#### <a name="to-close-a-recordset"></a>Pour fermer un recordset
 
-1. Appeler son [fermer](../../mfc/reference/crecordset-class.md#close) fonction membre.
+1. Appelez sa fonction membre [Close](../../mfc/reference/crecordset-class.md#close).
 
-1. Détruire l’objet recordset.
+1. Détruisez l’objet recordset.
 
-   Si vous l’avez déclarée sur le frame de pile d’une fonction, l’objet est détruit automatiquement lorsque l’objet est hors de portée. Sinon, utilisez le **supprimer** opérateur.
+   Si vous l’avez déclaré sur le frame de pile d’une fonction, l’objet est détruit automatiquement quand il est hors de portée. Sinon, utilisez l’opérateur **delete**.
 
-`Close` Libère le jeu d’enregistrements `HSTMT` gérer. Elle ne supprime pas l’objet C++.
+`Close` libère le handle `HSTMT` du recordset. Il ne détruit pas l’objet C++.
 
 ## <a name="see-also"></a>Voir aussi
 

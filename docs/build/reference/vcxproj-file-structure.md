@@ -1,19 +1,19 @@
 ---
 title: Structure des fichiers .vcxproj et .props
-ms.date: 09/18/2018
+ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446504"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837514"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Structure des fichiers .vcxproj et .props
 
-[MSBuild](../msbuild-visual-cpp.md) est le système de projet par défaut dans Visual Studio. Quand vous choisissez **Fichier** > **Nouveau projet** dans Visual C++, vous créez un projet MSBuild dont les paramètres sont stockés dans un fichier projet XML portant l’extension `.vcxproj`. Le fichier projet peut également importer des fichiers .props et .targets dans lesquels des paramètres peuvent être stockés. Dans la plupart des cas, il est inutile de modifier manuellement le fichier projet. Toute modification manuelle est même déconseillée, sauf si connaissez bien MSBuild. Si possible, vous devez utiliser les pages de propriétés Visual Studio pour modifier les paramètres de projet (consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md). Toutefois, dans certains cas, vous pouvez être amené à modifier manuellement un fichier projet ou une feuille de propriétés. Si cela vous concerne, cet article contient des informations de base sur la structure du fichier.
+[MSBuild](../msbuild-visual-cpp.md) est le système de projet par défaut dans Visual Studio. Quand vous choisissez **Fichier** > **Nouveau projet** dans Visual C++, vous créez un projet MSBuild dont les paramètres sont stockés dans un fichier projet XML portant l’extension `.vcxproj`. Le fichier projet peut également importer des fichiers .props et .targets dans lesquels des paramètres peuvent être stockés. Dans la plupart des cas, il est inutile de modifier manuellement le fichier projet. Toute modification manuelle est même déconseillée, sauf si connaissez bien MSBuild. Utilisez dans la mesure du possible les pages de propriétés de Visual Studio pour modifier les paramètres d’un projet (consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md)). Toutefois, dans certains cas, vous pouvez être amené à modifier manuellement un fichier projet ou une feuille de propriétés. Si cela vous concerne, cet article contient des informations de base sur la structure du fichier.
 
 **Important :**
 
@@ -21,13 +21,13 @@ Si vous choisissez de modifier manuellement un fichier .vcxproj, tenez compte de
 
 1. La structure du fichier doit suivre un formulaire prescrit qui est décrit dans cet article.
 
-1. Visual Studio C++ système de projet actuellement ne prend pas en charge des caractères génériques dans les éléments de projet. L’exemple suivant n’est pas pris en charge :
+1. Le système de projet Visual Studio C++ ne prend pas actuellement en charge les caractères génériques dans les éléments de projet. L’exemple suivant n’est pas pris en charge :
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. Visual Studio C++ système de projet actuellement ne prend pas en charge les macros dans les chemins d’élément de projet. L’exemple suivant n’est pas pris en charge :
+1. Le système de projet Visual Studio C++ ne prend pas actuellement en charge les macros dans les chemins d’éléments de projet. L’exemple suivant n’est pas pris en charge :
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -47,7 +47,7 @@ Si vous choisissez de modifier manuellement un fichier .vcxproj, tenez compte de
 
 Vous pouvez inspecter le contenu d’un fichier .vcxproj à l’aide d’un éditeur de texte ou XML. Pour l’afficher dans Visual Studio, cliquez avec le bouton sur le projet dans l’Explorateur de solutions, choisissez **Décharger le projet**, puis **Modifier Foo.vcxproj**.
 
-Vous pouvez tout de suite remarquer que les éléments de niveau supérieur s’affichent dans un ordre particulier. Exemple :
+Vous pouvez tout de suite remarquer que les éléments de niveau supérieur s’affichent dans un ordre particulier. Par exemple :
 
 - La plupart des groupes de propriétés et des groupes de définitions d’éléments se trouvent après l’importation de Microsoft.Cpp.Default.props.
 
@@ -104,7 +104,7 @@ Le groupe d’éléments `ProjectConfigurations` n’est pas utilisé au moment 
 
 ### <a name="projectconfiguration-elements"></a>Éléments ProjectConfiguration
 
-L’extrait suivant montre une configuration de projet. Dans cet exemple, "Debug|x64" est le nom de la configuration. Le nom de la configuration du projet doit être au format $(Configuration)|$(Platform). Un nœud de Configuration de projet peut avoir deux propriétés : Configuration et la plateforme. Ces propriétés sont automatiquement définies avec les valeurs spécifiées ici quand la configuration est active.
+L’extrait suivant montre une configuration de projet. Dans cet exemple, "Debug|x64" est le nom de la configuration. Le nom de la configuration du projet doit être au format $(Configuration)|$(Platform). Un nœud ProjectConfiguration peut avoir deux propriétés : Configuration et Platform. Ces propriétés sont automatiquement définies avec les valeurs spécifiées ici quand la configuration est active.
 
 ```xml
 <ProjectConfiguration Include="Debug|x64">
@@ -213,7 +213,7 @@ Contient les définitions d’éléments. Celles-ci doivent suivre les mêmes r�
 
 Contient les éléments (fichiers sources, etc.) dans le projet. Les conditions ne sont pas prises en charge pour les éléments de projet (à savoir les types d’éléments qui sont considérés comme des éléments de projet par les définitions de règles).
 
-Les métadonnées doivent avoir des conditions de configuration pour chaque configuration, même si elles sont identiques. Exemple :
+Les métadonnées doivent avoir des conditions de configuration pour chaque configuration, même si elles sont identiques. Par exemple :
 
 ```xml
 <ItemGroup>
@@ -224,7 +224,7 @@ Les métadonnées doivent avoir des conditions de configuration pour chaque conf
 </ItemGroup>
 ```
 
-Visual Studio C++ système de projet actuellement ne prend pas en charge des caractères génériques dans les éléments de projet.
+Le système de projet Visual Studio C++ ne prend pas actuellement en charge les caractères génériques dans les éléments de projet.
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ Visual Studio C++ système de projet actuellement ne prend pas en charge des car
 </ItemGroup>
 ```
 
-Visual Studio C++ système de projet actuellement ne prend pas en charge les macros dans les éléments de projet.
+Le système de projet Visual Studio C++ ne prend pas actuellement en charge les macros dans les éléments de projet.
 
 ```xml
 <ItemGroup>
@@ -272,7 +272,7 @@ Même l’expérience au moment du design dans l’IDE dépend dans une certaine
 
 ## <a name="how-the-ide-uses-element-labels"></a>Comment l’IDE utilise les étiquettes d’élément
 
-Dans l’IDE, quand vous définissez la propriété **UseOfAtl** dans la page de propriétés Général, elle est écrite pour le groupe de propriétés Configuration dans le fichier projet, tandis que la propriété **TargetName** dans la même page de propriétés est écrite dans le groupe de propriétés par configuration sans étiquette. Visual Studio examine le fichier XML de la page de propriétés pour obtenir des informations sur les emplacements où il doit écrire chaque propriété. Dans la page de propriétés **Général** de Visual Studio Enterprise Edition, ce fichier se trouve à l’emplacement suivant : `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`. Le fichier de règle XML de la page de propriétés définit les informations statiques sur une règle et toutes ses propriétés. Ces informations comprennent notamment la position préférée d’une propriété Rule dans le fichier de destination (le fichier où sa valeur sera écrite). La position préférée est spécifiée par l’attribut Label sur les éléments du fichier projet.
+Dans l’IDE, quand vous définissez la propriété **UseOfAtl** dans la page de propriétés Général, elle est écrite pour le groupe de propriétés Configuration dans le fichier projet, tandis que la propriété **TargetName** dans la même page de propriétés est écrite dans le groupe de propriétés par configuration sans étiquette. Visual Studio examine le fichier XML de la page de propriétés pour obtenir des informations sur les emplacements où il doit écrire chaque propriété. Dans la page de propriétés **Général** de Visual Studio 2019 Enterprise Edition, ce fichier se trouve à l’emplacement suivant : `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`. Le fichier de règle XML de la page de propriétés définit les informations statiques sur une règle et toutes ses propriétés. Ces informations comprennent notamment la position préférée d’une propriété Rule dans le fichier de destination (le fichier où sa valeur sera écrite). La position préférée est spécifiée par l’attribut Label sur les éléments du fichier projet.
 
 ## <a name="property-sheet-layout"></a>Disposition de la feuille de propriétés
 
@@ -288,7 +288,7 @@ L’extrait XML suivant est une disposition minimale d’un fichier de feuille d
 </Project>
 ```
 
-Pour créer votre propre feuille de propriétés, copiez l’un des fichiers .props dans le dossier VCTargets et modifiez-le selon vos besoins. Dans Visual Studio 2017 Enterprise, le chemin par défaut de VCTargets est le suivant : `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets`.
+Pour créer votre propre feuille de propriétés, copiez l’un des fichiers .props dans le dossier VCTargets et modifiez-le selon vos besoins. Dans Visual Studio 2019 Enterprise, le chemin par défaut de VCTargets est le suivant : `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets`.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], HTML Help files
 ms.assetid: d30a1b1b-318f-4a78-8b60-93da53a224a8
-ms.openlocfilehash: 7fbac8bfa0427e8d6c60e88da92a525e62fb1a24
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 2b856defdac51c978aa07cd13ef8df153c9c3f5f
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446280"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707022"
 ---
 # <a name="help-files-html-help"></a>Fichiers d'aide (aide HTML)
 
@@ -27,4 +27,4 @@ Les fichiers suivants sont créés quand vous ajoutez la prise en charge de l’
 
 ## <a name="see-also"></a>Voir aussi
 
-[Types de fichiers créés pour Visual C++ projets](file-types-created-for-visual-cpp-projects.md)
+[Types de fichiers créés pour les projets Visual Studio C++](file-types-created-for-visual-cpp-projects.md)

@@ -1,6 +1,6 @@
 ---
-title: Création de Scripts pour ATL (inscription)
-ms.date: 11/04/2016
+title: Création de scripts pour l’enregistreur ATL
+ms.date: 05/14/2014
 helpviewer_keywords:
 - scripting, registry scripting
 - ATL, registry
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - scripts, creating
 ms.assetid: cbd5024b-8061-4a71-be65-7fee90374a35
-ms.openlocfilehash: e1a0b66e673fcefd0b75683ef75247a388217361
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f32606701ea08736985f0b0dd2ed82712040a049
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250844"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707058"
 ---
-# <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
+# <a name="creating-registrar-scripts"></a>Création de scripts d’enregistreur
 
-Un script de bureau d’enregistrement fournit l’accès piloté par les données, plutôt que de piloté par les API, dans le Registre système. Accès piloté par les données est généralement plus efficace, car il accepte uniquement une ou deux lignes dans un script pour ajouter une clé au Registre.
+Un script d’enregistreur fournit un accès basé sur les données (et non sur les API) au Registre système. L’accès basé sur les données est généralement plus efficace, car seulement une ou deux lignes sont nécessaires dans un script pour ajouter une clé au Registre.
 
-Le [Assistant contrôle ATL](../atl/reference/atl-control-wizard.md) génère automatiquement un script de bureau d’enregistrement de votre serveur COM. Vous trouverez ce script dans le fichier .rgs associé à votre objet.
+L’[Assistant Contrôle ATL](../atl/reference/atl-control-wizard.md) génère automatiquement un script d’enregistreur pour votre serveur COM. Vous trouverez ce script dans le fichier .rgs associé à votre objet.
 
-Moteur de Script d’inscription ATL traite votre script de bureau d’enregistrement en cours d’exécution. ATL appelle automatiquement le moteur de Script pendant l’installation du serveur.
+Le moteur de script de l’enregistreur ATL traite votre script d’enregistreur au moment de l’exécution. ATL appelle automatiquement le moteur de script lors de l’installation du serveur.
 
-Cet article traite des rubriques suivantes liées aux scripts de bureau d’enregistrement :
+Cet article traite des sujets suivants associés aux scripts d’enregistreur :
 
-- [Présentation de la syntaxe BNF (Backus Nauer Form)](../atl/understanding-backus-nauer-form-bnf-syntax.md)
+- [Présentation de la syntaxe BNF (Backus Nauer Form)](../atl/understanding-backus-naur-form-bnf-syntax.md)
 
 - [Présentation des arborescences d’analyse](../atl/understanding-parse-trees.md)
 
@@ -37,4 +37,4 @@ Cet article traite des rubriques suivantes liées aux scripts de bureau d’enre
 
 ## <a name="see-also"></a>Voir aussi
 
-[Composant de Registre (inscription)](../atl/atl-registry-component-registrar.md)
+[Composant du Registre (enregistreur)](../atl/atl-registry-component-registrar.md)

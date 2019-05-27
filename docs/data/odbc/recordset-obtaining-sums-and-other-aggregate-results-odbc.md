@@ -1,5 +1,5 @@
 ---
-title: 'Recordset : Calculs de totaux et autres résultats de regroupement (ODBC)'
+title: 'Recordset : calcul de totaux et obtention d’autres résultats d’agrégation (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - SQL, retrieving aggregate values from recordsets
@@ -10,56 +10,59 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: e10f2e1574dae234d98d210784d4a8ddef3bb57e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 29906366e6e9a5a852fcf40d9e7ecc8593d1b0b0
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397781"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707843"
 ---
-# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset : Calculs de totaux et autres résultats de regroupement (ODBC)
+# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset : calcul de totaux et obtention d’autres résultats d’agrégation (ODBC)
+
+> [!NOTE] 
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toutefois créer un consommateur manuellement.
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
-Cette rubrique explique comment obtenir des résultats de regroupement à l’aide de ce qui suit [SQL](../../data/odbc/sql.md) mots clés :
+Cette rubrique explique comment obtenir les résultats d’agrégation avec les mots clés [SQL](../../data/odbc/sql.md) suivants :
 
-- **SOMME** calcule le total des valeurs dans une colonne avec un type de données numérique.
+- **SUM** calcule le total des valeurs dans une colonne ayant un type de données numérique.
 
-- **MIN** extrait la plus petite valeur dans une colonne avec un type de données numérique.
+- **MIN** extrait la plus petite valeur dans une colonne ayant un type de données numérique.
 
-- **MAX** extrait la plus grande valeur dans une colonne avec un type de données numérique.
+- **MAX** extrait la plus grande valeur dans une colonne ayant un type de données numérique.
 
-- **AVG** calcule une valeur moyenne de toutes les valeurs dans une colonne avec un type de données numérique.
+- **AVG** calcule une valeur moyenne de toutes les valeurs dans une colonne ayant un type de données numérique.
 
-- **NOMBRE** comptabilise le nombre d’enregistrements dans une colonne de n’importe quel type de données.
+- **COUNT** comptabilise le nombre d’enregistrements dans une colonne de n’importe quel type de données.
 
-Vous utilisez ces fonctions SQL pour obtenir des informations statistiques sur les enregistrements dans une source de données plutôt que pour extraire des enregistrements à partir de la source de données. Le jeu d’enregistrements qui est généralement créée se compose d’un seul enregistrement (si toutes les colonnes sont des agrégats) qui contient une valeur. (Il peut y avoir plusieurs enregistrements si vous avez utilisé un **GROUP BY** clause.) Cette valeur est le résultat du calcul ou d’extraction effectuée par la fonction SQL.
+Ces fonctions SQL s’utilisent pour obtenir des informations statistiques sur les enregistrements contenus dans une source de données plutôt que pour extraire des enregistrements de la source de données. Le recordset créé se compose généralement d’un seul enregistrement (si toutes les colonnes sont des agrégats) contenant une valeur. (Il peut y avoir plusieurs enregistrements si vous avez utilisé une clause **GROUP BY**.) Cette valeur est le résultat de l’opération de calcul ou d’extraction effectuée par la fonction SQL.
 
 > [!TIP]
->  Pour ajouter une instance SQL **GROUP BY** clause (et éventuellement un **HAVING** clause) à votre instruction SQL, ajoutez-le à la fin de `m_strFilter`. Exemple :
+>  Quand vous ajoutez une clause SQL **GROUP BY** (et éventuellement une clause **HAVING**) à l’instruction SQL, placez-la à la fin de `m_strFilter`. Par exemple :
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 ```
 
-Vous pouvez limiter le nombre d’enregistrements qui que vous permet d’obtenir des résultats de regroupement en filtrant et en triant les colonnes.
+Vous pouvez limiter le nombre d’enregistrements utilisés pour obtenir des résultats d’agrégation en filtrant et en triant les colonnes.
 
 > [!CAUTION]
->  Certains opérateurs d’agrégation retournent un autre type de données à partir des colonnes sur lesquelles ils sont regroupés.
+>  Certains opérateurs d’agrégation retournent un type de données différent des colonnes sur lesquelles porte l’agrégation.
 
-- **SOMME** et **AVG** peut retourner le type de données immédiatement supérieur (par exemple, l’appel avec `int` retourne **LONG** ou **double**).
+- **SUM** et **AVG** peuvent retourner un type de données de longueur immédiatement supérieure (par exemple, l’appel avec `int` retourne le type **LONG** ou **double**).
 
-- **NOMBRE** retourne généralement **LONG** , quel que soit le type de colonne cible.
+- **COUNT** retourne généralement le type **LONG** indépendamment du type de la colonne cible.
 
 - **MAX** et **MIN** retournent le même type de données que les colonnes utilisées pour le calcul.
 
-     Par exemple, le **ajouter une classe** Assistant crée `long` `m_lSales` pour prendre en charge de la colonne Sales, mais vous devez remplacer ceci avec un `double m_dblSumSales` membre de données pour prendre en charge le résultat du regroupement. Lisez l'exemple suivant.
+     Par exemple, l’Assistant **Ajouter une classe** crée `long` `m_lSales` dans le cas d’une colonne Sales, mais vous devez le remplacer par un membre de données `double m_dblSumSales` pouvant contenir le résultat de l’agrégation. Lisez l'exemple suivant.
 
-#### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Pour obtenir un résultat d’agrégation pour un jeu d’enregistrements
+#### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Pour obtenir un résultat d’agrégation à partir d’un recordset
 
-1. Créer un jeu d’enregistrements, comme décrit dans [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) contenant les colonnes à partir de laquelle vous souhaitez obtenir des résultats de regroupement.
+1. En suivant les étapes décrites dans [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md), créez un recordset contenant les colonnes à partir desquelles vous souhaitez obtenir un résultat d’agrégation.
 
-1. Modifier le [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) (fonction) pour le jeu d’enregistrements. Remplacez la chaîne représentant le nom de colonne (le deuxième argument de la [RFX](../../data/odbc/record-field-exchange-using-rfx.md) appels de fonction) avec une chaîne qui représente la fonction d’agrégation sur la colonne. Par exemple, remplacez :
+1. Modifiez la fonction [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) pour le recordset. Remplacez la chaîne représentant le nom de colonne (le deuxième argument dans les appels de fonction [RFX](../../data/odbc/record-field-exchange-using-rfx.md)) par une chaîne représentant la fonction d’agrégation appliquée sur la colonne. Par exemple, remplacez :
 
     ```
     RFX_Long(pFX, "Sales", m_lSales);
@@ -71,12 +74,12 @@ Vous pouvez limiter le nombre d’enregistrements qui que vous permet d’obteni
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)
     ```
 
-1. Ouvrez le jeu d’enregistrements. Le résultat de l’opération d’agrégation est conservé dans `m_dblSumSales`.
+1. Ouvrez le recordset. Le résultat de l’opération d’agrégation est conservé dans `m_dblSumSales`.
 
 > [!NOTE]
->  En fait, l’Assistant attribue des noms de membre de données sans préfixes Hongrois. Par exemple, l’Assistant génère `m_Sales` pour la colonne Sales, plutôt que `m_lSales` nom utilisé précédemment à titre d’illustration.
+>  En fait, l’Assistant attribue des noms sans préfixe hongrois aux membres de données. Par exemple, l’Assistant génère le nom `m_Sales` pour la colonne Sales à la place du nom `m_lSales` utilisé précédemment à titre d’illustration.
 
-Si vous utilisez un [CRecordView](../../mfc/reference/crecordview-class.md) pour afficher les données de classe, vous devez modifier l’appel de fonction DDX pour afficher la nouvelle valeur du membre de données ; dans ce cas, sa modification de :
+Si vous utilisez une classe [CRecordView](../../mfc/reference/crecordview-class.md) pour afficher les données, vous devez modifier l’appel de fonction DDX pour afficher la nouvelle valeur du membre de données, qui ici a changé de :
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);

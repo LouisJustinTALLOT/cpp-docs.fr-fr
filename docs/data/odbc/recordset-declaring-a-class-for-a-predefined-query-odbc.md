@@ -1,6 +1,6 @@
 ---
-title: 'Recordset : Déclaration de la classe d’une requête prédéfinie (ODBC)'
-ms.date: 11/04/2016
+title: 'Recordset : déclaration de la classe d’une requête prédéfinie (ODBC)'
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, queries
 - predefined queries and recordsets
@@ -8,40 +8,43 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: d4ae9f21c4bd53a8050d6f8c3765bb9823d077ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 9ef95f4a2ebbc1bdf52e5631389f65391ce7cf8f
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395597"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707964"
 ---
-# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Recordset : Déclaration de la classe d’une requête prédéfinie (ODBC)
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Recordset : déclaration de la classe d’une requête prédéfinie (ODBC)
+
+> [!NOTE] 
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toutefois créer un consommateur manuellement.
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
-Cette rubrique explique comment créer une classe de recordset pour une requête prédéfinie (parfois appelée une procédure stockée, comme dans Microsoft SQL Server).
+Cette rubrique explique comment créer une classe de recordset pour une requête prédéfinie (parfois appelée procédure stockée, comme dans Microsoft SQL Server).
 
 > [!NOTE]
->  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si l’extraction de lignes en bloc est implémentée, le processus est très similaire. Pour comprendre les différences entre les jeux d’enregistrements qui implémentent l’extraction de lignes en bloc et ceux qui ne le faites pas, consultez [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Cette rubrique s’applique aux objets dérivés de `CRecordset` où la récupération de lignes en bloc n’a pas été implémentée. Si la récupération de lignes en bloc est implémentée, le processus est très similaire. Pour comprendre les différences entre les recordsets qui implémentent la récupération de lignes en bloc et ceux qui ne l’implémentent pas, consultez [Recordset : récupération d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Certains systèmes de gestion de base de données (SGBD) permettent de créer une requête prédéfinie et appelez-la à partir de votre programme comme une fonction. La requête a un nom, peut prendre des paramètres et peut retourner des enregistrements. La procédure décrite dans cette rubrique décrit comment appeler une requête prédéfinie qui retourne des enregistrements (et accepte des paramètres).
+Certains systèmes de gestion de base de données (SGBD) vous permettent de créer une requête prédéfinie et de l’appeler de votre programme comme une fonction. La requête a toujours un nom, et elle peut éventuellement prendre des paramètres et retourner des enregistrements. La procédure dans cette rubrique décrit comment appeler une requête prédéfinie qui retourne des enregistrements (et prend éventuellement des paramètres).
 
-Les classes de base de données ne prennent pas en charge la mise à jour des requêtes prédéfinies. La différence entre une requête prédéfinie instantané et une requête prédéfinie feuille de réponse dynamique n’est pas mise à jour, mais si les modifications apportées par d’autres utilisateurs (ou d’autres jeux d’enregistrements dans votre programme) sont visibles dans le jeu d’enregistrements.
+Les classes de base de données ne prennent pas en charge la mise à jour des requêtes prédéfinies. La différence entre une requête prédéfinie instantanée et une requête prédéfinie dynamique n’est pas la possibilité de mise à jour, mais plutôt la possibilité de voir dans le recordset les modifications apportées par d’autres utilisateurs (ou d’autres recordsets dans votre programme).
 
 > [!TIP]
->  Vous n’avez pas besoin d’un jeu d’enregistrements pour appeler une requête prédéfinie qui ne retourne pas d’enregistrements. Préparer l’instruction SQL comme décrit ci-dessous, mais exécutez-la en appelant le `CDatabase` fonction membre [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).
+>  L’utilisation d’un recordset n’est pas nécessaire pour appeler une requête prédéfinie qui ne retourne pas d’enregistrements. Préparez l’instruction SQL comme cela est décrit ci-dessous, mais exécutez-la en appelant la fonction membre `CDatabase` [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).
 
-Vous pouvez créer une seule classe de recordset pour gérer l’appel d’une requête prédéfinie, mais vous devez faire partie du travail par vous-même. Les Assistants ne prennent pas en charge la création d’une classe spécialement à cet effet.
+Vous pouvez créer une seule classe de recordset pour gérer l’appel d’une requête prédéfinie, mais vous devez alors faire une partie du travail manuellement. Les Assistants ne prennent pas en charge la création d’une classe spécialement conçue à cet effet.
 
-#### <a name="to-create-a-class-for-calling-a-predefined-query-stored-procedure"></a>Pour créer une classe pour l’appel d’une requête prédéfinie (procédure stockée)
+#### <a name="to-create-a-class-for-calling-a-predefined-query-stored-procedure"></a>Pour créer une classe permettant d’appeler une requête prédéfinie (procédure stockée)
 
-1. Utilisez le [Assistant Consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) de **ajouter une classe** pour créer une classe de jeu d’enregistrements pour la table qui contribue le plus les colonnes retournées par la requête. Cela vous donne un point de départ.
+1. Utilisez l’[Assistant Consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) **Ajouter une classe** afin de créer une classe de recordset pour la table dont proviennent la plupart des colonnes retournées par la requête. Cela vous permet de démarrer rapidement.
 
-1. Ajoutez manuellement les membres de données de champ pour toutes les colonnes de toutes les tables retournées par la requête mais que l’Assistant n’a pas été créé pour vous.
+1. Ajoutez manuellement les membres de données de champ pour toutes les colonnes de tables qui sont retournées par la requête mais que l’Assistant n’a pas créées pour vous.
 
-   Par exemple, si la requête retourne trois colonnes de deux tables supplémentaires, ajoutez six membres de données de champ (les types de données appropriés) à la classe.
+   Par exemple, si la requête retourne trois colonnes de deux tables supplémentaires, ajoutez six membres de données de champ (des types de données appropriés) à la classe.
 
-1. Ajouter manuellement des [RFX](../../data/odbc/record-field-exchange-rfx.md) appels de fonction dans le [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) fonction membre de la classe, un correspondant au type de données de chaque ajouté des membres de données de champ.
+1. Ajoutez manuellement les appels de fonction [RFX](../../data/odbc/record-field-exchange-rfx.md) dans la fonction membre [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) de la classe, correspondant chacun au type de données de chaque membre de données de champ ajouté.
 
     ```cpp
     Immediately before these RFX calls, call <MSHelp:link keywords="_mfc_CFieldExchange.3a3a.SetFieldType" TABINDEX="0">SetFieldType</MSHelp:link>, as shown here:
@@ -49,39 +52,39 @@ Vous pouvez créer une seule classe de recordset pour gérer l’appel d’une r
     ```
 
     > [!NOTE]
-    >  Vous devez connaître les types de données et l’ordre des colonnes retournées dans le résultat défini. L’ordre de la fonction RFX appelle `DoFieldExchange` doit correspondre à l’ordre des colonnes de jeu de résultats.
+    >  Vous devez connaître les types de données et l’ordre des colonnes retournées dans le jeu de résultats. L’ordre des appels de fonction RFX dans `DoFieldExchange` doit correspondre à l’ordre des colonnes du jeu de résultats.
 
-1. Ajoutez manuellement les initialisations pour les nouveaux membres de données de champ dans le constructeur de classe de jeu d’enregistrements.
+1. Ajoutez manuellement des initialisations pour les nouveaux membres de données de champ dans le constructeur de classe de recordset.
 
-   Vous devez également incrémenter la valeur d’initialisation pour le [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) membre de données. L’Assistant écrit l’initialisation, mais elle couvre uniquement les données membres de champ qu’il ajoute automatiquement. Exemple :
+   Vous devez également incrémenter la valeur d’initialisation pour le membre de données [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). L’Assistant écrit l’initialisation, mais uniquement pour les membres de données de champ qu’il ajoute automatiquement. Par exemple :
 
     ```cpp
     m_nFields += 6;
     ```
 
-   Certains types de données ne doivent pas être initialisés ici, par exemple, `CLongBinary` ou des tableaux d’octets.
+   Certains types de données ne doivent pas être initialisés ici, comme `CLongBinary` ou les tableaux d’octets.
 
-1. Si la requête accepte des paramètres, ajoutez un membre de données de paramètre pour chaque paramètre, un appel de fonctions RFX et une initialisation pour chacun.
+1. Si la requête prend des paramètres, ajoutez un membre de données de paramètre pour chaque paramètre, ainsi qu’un appel de fonction RFX et une initialisation pour chacun.
 
-1. Vous devez incrémenter `m_nParams` pour chaque paramètre ajouté, comme vous le faisiez `m_nFields` pour les champs ajoutés à l’étape 4 de cette procédure. Pour plus d’informations, consultez [jeu d’enregistrements : Paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Vous devez incrémenter `m_nParams` pour chaque paramètre ajouté, comme vous avez incrémenté `m_nFields` pour les champs ajoutés à l’étape 4 de cette procédure. Pour plus d’informations, consultez [Recordset : paramétrage d’un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-1. Écrire manuellement une chaîne d’instruction SQL avec la forme suivante :
+1. Ajoutez manuellement une chaîne d’instruction SQL au format suivant :
 
     ```
     {CALL proc-name [(? [, ?]...)]}
     ```
 
-   où **appeler** est un mot clé ODBC, **nom de la procédure** est le nom de la requête tel qu’il est connu sur la source de données et le « ? » éléments sont des espaces réservés pour les valeurs de paramètre que vous fournissez pour le jeu d’enregistrements en cours d’exécution (le cas échéant) . L’exemple suivant prépare un espace réservé pour un seul paramètre :
+   où **CALL** est un mot clé ODBC, **proc-name** est le nom de la requête tel qu’il est connu dans la source de données, et les éléments « ? » sont des espaces réservés pour les valeurs de paramètre que vous fournissez au recordset au moment de l’exécution (le cas échéant). L’exemple suivant prépare un espace réservé pour un seul paramètre :
 
     ```
     CString mySQL = "{CALL Delinquent_Accts (?)}";
     ```
 
-1. Dans le code qui ouvre le recordset, définissez les valeurs du paramètre de jeu d’enregistrements de membres de données, puis appelez le `Open` fonction membre, en passant votre chaîne SQL pour le *lpszSQL* paramètre. Ou au lieu de cela, remplacez la chaîne retournée par la `GetDefaultSQL` fonction membre dans votre classe.
+1. Dans le code qui ouvre le recordset, définissez les valeurs des membres de données de paramètre du recordset, puis appelez la fonction membre `Open`, en passant la chaîne SQL pour le paramètre *lpszSQL*. Ou bien, remplacez la chaîne retournée par la fonction membre `GetDefaultSQL` dans votre classe.
 
-Les exemples suivants montrent la procédure d’appel d’une requête prédéfinie, nommée `Delinquent_Accts`, qui accepte un paramètre pour un nombre de secteur de vente. Cette requête retourne trois colonnes : `Acct_No`, `L_Name`, `Phone`. Toutes les colonnes sont de la table Customers.
+Les exemples suivants montrent la procédure d’appel d’une requête prédéfinie, nommée `Delinquent_Accts`, qui prend un paramètre correspondant au numéro du secteur de vente. Cette requête retourne trois colonnes : `Acct_No`, `L_Name` et `Phone`. Toutes les colonnes proviennent de la table Customers.
 
-Le jeu d’enregistrements suivant spécifie les membres de données de champ pour les colonnes de la requête retourne et un paramètre pour les ventes numéro de secteur demandé au moment de l’exécution.
+Le recordset suivant spécifie les membres de données de champ pour les colonnes retournées par la requête ainsi qu’un paramètre correspondant au numéro de secteur de vente demandé au moment de l’exécution.
 
 ```cpp
 class CDelinquents : public CRecordset
@@ -95,9 +98,9 @@ class CDelinquents : public CRecordset
 };
 ```
 
-Cette déclaration de classe est telle que l’Assistant, à l’exception de la `m_lDistParam` membre ajouté manuellement. Autres membres ne sont pas affichés ici.
+Cette déclaration de classe est telle qu’elle a été écrite par l’Assistant, à l’exception du membre `m_lDistParam` ajouté manuellement. Les autres membres ne sont pas présentés ici.
 
-L’exemple suivant illustre les initialisations des membres de données dans le `CDelinquents` constructeur.
+L’exemple suivant montre les initialisations pour les membres de données dans le constructeur `CDelinquents`.
 
 ```cpp
 CDelinquents::CDelinquents(CDatabase* pdb)
@@ -114,9 +117,9 @@ CDelinquents::CDelinquents(CDatabase* pdb)
 }
 ```
 
-Remarquez les initialisations de [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) et [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams). L’Assistant initialise `m_nFields`; vous initialisez `m_nParams`.
+Notez la présence des initialisations pour [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) et [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams). L’Assistant initialise `m_nFields` et vous, vous initialisez `m_nParams`.
 
-L’exemple suivant montre les fonctions RFX dans `CDelinquents::DoFieldExchange`:
+L’exemple suivant montre les fonctions RFX dans `CDelinquents::DoFieldExchange` :
 
 ```cpp
 void CDelinquents::DoFieldExchange(CFieldExchange* pFX)
@@ -130,9 +133,9 @@ void CDelinquents::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-Outre les appels RFX pour les trois colonnes retournées, ce code gère la liaison du paramètre que vous passez au moment de l’exécution. Ce paramètre est la clé pour la `Dist_No` colonne (district number).
+Ce code effectue les appels de fonction RFX pour les trois colonnes retournées et il gère la liaison du paramètre que vous passez au moment de l’exécution. Ce paramètre est associé à la colonne `Dist_No` (numéro du secteur).
 
-L’exemple suivant montre comment définir la chaîne SQL et comment l’utiliser pour ouvrir le jeu d’enregistrements.
+L’exemple suivant montre comment définir la chaîne SQL et comment l’utiliser pour ouvrir le recordset.
 
 ```cpp
 // Construct a CDelinquents recordset object
@@ -145,10 +148,10 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
     // Use the recordset ...
 ```
 
-Ce code construit un instantané, il passe un paramètre obtenu précédemment à partir de l’utilisateur et appelle la requête prédéfinie. Lorsque la requête s’exécute, elle renvoie les enregistrements pour le secteur de vente spécifié. Chaque enregistrement contient des colonnes pour le numéro de compte et nom du numéro de téléphone du client.
+Ce code construit un instantané, passe à cet instantané un paramètre obtenu précédemment de l’utilisateur et appelle la requête prédéfinie. À l’exécution de la requête, il retourne les enregistrements correspondant au secteur de vente spécifié. Chaque enregistrement contient les colonnes pour le numéro de compte, le nom du client et le numéro de téléphone du client.
 
 > [!TIP]
->  Vous souhaiterez peut-être gérer une valeur de retour (paramètre de sortie) à partir d’une procédure stockée. Pour plus d’informations et un exemple, consultez [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
+>  Vous pouvez avoir besoin de gérer une valeur (paramètre de sortie) retournée par une procédure stockée. Pour plus d’informations et obtenir un exemple, consultez [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,23 +1,22 @@
 ---
 title: Fichiers de ressources (C++)
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 helpviewer_keywords:
 - resource files
 - resources [C++]
-- file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-ms.openlocfilehash: f1e32ba4776f3e975dc0fbc72334a85d6c793c93
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 20e57aa51cff8c4e3392c313645468387c2a4244
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446341"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707405"
 ---
 # <a name="resource-files-c"></a>Fichiers de ressources (C++)
 
-Les ressources sont des éléments d’interface qui fournissent des informations à l’utilisateur. Les bitmaps, les icônes, les barres d’outils et les curseurs sont tous des ressources. Certaines ressources peuvent être manipulées afin d’effectuer une action spécifique, telle que la sélection d’une commande dans un menu ou la saisie de données dans une boîte de dialogue.
+Les ressources sont des éléments d’interface qui fournissent des informations à l’utilisateur. Les bitmaps, les icônes, les barres d’outils et les curseurs sont tous des ressources. Certaines ressources peuvent effectuer une action comme sélectionner une commande dans un menu ou entrer des données dans une boîte de dialogue.
 
-Pour plus d’informations, consultez [Utilisation de ressources](../../windows/working-with-resource-files.md).
+ Pour plus d’informations, consultez [Utilisation des ressources](../../windows/working-with-resource-files.md).
 
 |Nom de fichier|Emplacement du répertoire|Emplacement dans l'Explorateur de solutions|Description|
 |---------------|------------------------|--------------------------------|-----------------|
@@ -32,4 +31,4 @@ Pour plus d’informations, consultez [Utilisation de ressources](../../windows/
 
 ## <a name="see-also"></a>Voir aussi
 
-[Types de fichiers créés pour Visual C++ projets](file-types-created-for-visual-cpp-projects.md)
+[Types de fichiers créés pour les projets Visual Studio C++](file-types-created-for-visual-cpp-projects.md)

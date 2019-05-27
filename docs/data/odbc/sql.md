@@ -1,83 +1,86 @@
 ---
 title: SQL
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - database classes [C++], SQL statements
 - SQL [C++]
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 68c01623ef97e89623dff3f46a952c75ea31a774
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329885"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707819"
 ---
 # <a name="sql"></a>SQL
 
-SQL (Structured Query Language) est un moyen pour communiquer avec une base de données relationnelle qui vous permet de définir, interroger, de modifier et de contrôler les données. À l’aide de la syntaxe SQL, vous pouvez construire une instruction qui extrait des enregistrements en fonction des critères que vous spécifiez.
+SQL (Structured Query Language) est un moyen de communiquer avec une base de données relationnelle qui vous permet de définir, d’interroger, de modifier et de contrôler les données. À l’aide de la syntaxe SQL, vous pouvez construire une instruction qui extrait des enregistrements en fonction de critères que vous spécifiez.
 
 > [!NOTE]
->  Ces informations s’appliquent aux classes ODBC MFC. Si vous travaillez avec les classes DAO MFC, consultez la rubrique Comparaison de Microsoft Jet Database Engine SQL et ANSI SQL dans l’aide de DAO.
+>  Ces informations s’appliquent aux classes ODBC MFC. Si vous utilisez les classes DAO MFC, consultez la rubrique Comparaison SQL entre le moteur de base de données Microsoft Jet et ANSI dans l’aide de DAO.
 
-Les instructions SQL commencent par un mot réservé tel que **créer** ou **sélectionnez**. SQL est un langage très puissant ; une seule instruction peut affecter une table entière.
+Les instructions SQL commencent par un verbe mot clé de type **CREATE** ou **SELECT**. SQL est un langage très puissant : une seule instruction peut affecter une table entière.
 
-Il existe autant de versions de SQL, chacun développé avec un SGBD particulier. Les classes de base de données MFC reconnaissent un ensemble d’instructions SQL qui correspond à X / Open et SQL de SQL Access groupe commun Applications environnement (IAO) le projet de spécification (1991). Pour plus d’informations sur la syntaxe de ces instructions, consultez l’annexe C dans le *ODBC SDK* *de référence du programmeur* sur le CD MSDN Library.
+Il existe de nombreuses versions de SQL, chacune développée avec un SGBD particulier. Les classes de base de données MFC reconnaissent un ensemble d’instructions SQL qui correspondent au projet de spécification SQL CAE (Common Applications Environment) de X/Open et SQL Access Group (1991). Pour plus d’informations sur la syntaxe de ces instructions, consultez l’annexe C dans les *Informations de référence du programmeur* du *SDK ODBC* sur le CD MSDN Library.
 
 Cette rubrique explique :
 
 - [La relation entre ODBC et SQL](#_core_open_database_connectivity_.28.odbc.29).
 
-- [Les mots clés SQL plus couramment utilisées par les classes de base de données](#_core_the_database_classes).
+- [Les mots clés SQL les plus couramment utilisés par les classes de base de données](#_core_the_database_classes).
 
-- [Utilisent de SQL par les classes de base de données](#_core_how_the_database_classes_use_sql).
+- [Comment les classes de base de données utilisent SQL](#_core_how_the_database_classes_use_sql).
 
 ##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity (ODBC)
 
-Les classes de base de données sont implémentées avec ODBC, qui utilise SQL dans une interface de niveau d’appel, plutôt que d’intégrer des commandes SQL dans le code. ODBC utilise SQL pour communiquer avec un [source de données](../../data/odbc/data-source-odbc.md) via les pilotes ODBC. Ces pilotes interprètent le langage SQL et la traduisent, si nécessaire, pour une utilisation avec un format de base de données particulière, telle que Microsoft Access. Pour plus d’informations sur l’utilisation de SQL par ODBC, consultez [ODBC](../../data/odbc/odbc-basics.md) et le SDK ODBC *de référence du programmeur* sur le CD MSDN Library.
+Les classes de base de données sont implémentées avec ODBC, qui utilise SQL dans une interface CLI au lieu d’incorporer des commandes SQL dans le code. ODBC utilise SQL pour communiquer avec une [source de données](../../data/odbc/data-source-odbc.md) par le biais de pilotes ODBC. Ces pilotes interprètent le langage SQL et le traduisent, si nécessaire, pour pouvoir l’utiliser avec un format de base de données particulier, comme Microsoft Access. Pour plus d’informations sur l’utilisation de SQL par ODBC, consultez [ODBC](../../data/odbc/odbc-basics.md) et les *Informations de référence du programmeur* du SDK ODBC sur le CD MSDN Library.
 
 ##  <a name="_core_the_database_classes"></a> Classes de base de données
 
-Les classes de base de données sont conçues pour vous permettre de manipuler et mettre à jour des données dans une existante [source de données](../../data/odbc/data-source-odbc.md). Le [Assistant Application MFC](../../mfc/reference/database-support-mfc-application-wizard.md), le [Assistant Consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (accessibles via **ajouter une classe**), et les classes de base de données construisent la plupart des instructions SQL pour vous.
+> [!NOTE] 
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toujours créer un consommateur manuellement.
 
-Les classes de base de données utilisent une partie de SQL connu en tant que le langage DML (Data Manipulation). Ces commandes vous permettent de travailler avec tout ou partie de la source de données, ajouter de nouveaux enregistrements, modifier des enregistrements et supprimer des enregistrements. Le tableau suivant répertorie les mots clés SQL courants et les façons les classes de base de données utilisent.
+Les classes de base de données sont conçues pour vous permettre de manipuler et mettre à jour des données dans une [source de données](../../data/odbc/data-source-odbc.md) existante. L’[Assistant Application MFC](../../mfc/reference/database-support-mfc-application-wizard.md), l’[Assistant Consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (accessibles via **Ajouter une classe**) et les classes de base de données construisent la plupart des instructions SQL pour vous.
 
-### <a name="some-common-sql-keywords"></a>Certains mots clés SQL courants
+Les classes de base de données utilisent une partie de SQL connue sous le nom de langage de manipulation de données (DML). Ces commandes vous permettent d’utiliser tout ou partie de la source de données, d’ajouter de nouveaux enregistrements, de modifier des enregistrements et de supprimer des enregistrements. Le tableau suivant liste les mots clés SQL les plus courants et la façon dont les classes de base de données les utilisent.
 
-|Mot clé SQL|Utilisent les Assistants et les classes de base de données|
+### <a name="some-common-sql-keywords"></a>Quelques mots clés SQL courants
+
+|Mot clé SQL|Les Assistants et les classes de base de données l’utilisent|
 |-----------------|---------------------------------------------|
-|**SELECT**|Pour identifier les tables et les colonnes dans la source de données doivent être utilisées.|
-|**WHERE**|Pour appliquer un filtre qui restreint la sélection.|
-|**ORDER BY**|Pour appliquer un ordre de tri pour le jeu d’enregistrements.|
-|**INSERT**|Pour ajouter de nouveaux enregistrements à un jeu d’enregistrements.|
-|**SUPPRIMER**|Pour supprimer des enregistrements à partir d’un jeu d’enregistrements.|
+|**SELECT**|Pour identifier les tables et les colonnes de la source de données qui doivent être utilisées.|
+|**WHERE**|Pour appliquer un filtre qui réduit la sélection.|
+|**ORDER BY**|Pour appliquer un ordre de tri au recordset.|
+|**INSERT**|Pour ajouter de nouveaux enregistrements à un recordset.|
+|**DELETE**|Pour supprimer des enregistrements dans un recordset.|
 |**UPDATE**|Pour modifier les champs d’un enregistrement.|
 
-En outre, les classes de base de données reconnaissent ODBC **appeler** les instructions, vous pouvez utiliser pour appeler une requête prédéfinie (ou procédure stockée) sur certaines sources de données. Le pilote de base de données ODBC interprète les instructions et les remplace par la commande appropriée pour chaque SGBD.
+Par ailleurs, comme les classes de base de données reconnaissent les instructions **CALL** ODBC, vous pouvez les utiliser pour appeler une requête prédéfinie (ou procédure stockée) sur certaines sources de données. Le pilote de base de données ODBC interprète ces instructions et les remplace par la commande appropriée pour chaque SGBD.
 
 > [!NOTE]
->  Prise en charge pas toutes des SGBD **appeler** instructions.
+>  Les SGBD ne prennent pas tous en charge les instructions **CALL**.
 
-Si les classes ne peut pas reconnaître une instruction fournie par l’utilisateur dans `CRecordset::Open`, il est interprété comme un nom de table.
+Si les classes ne peuvent pas reconnaître une instruction fournie par l’utilisateur dans `CRecordset::Open`, elle est interprétée comme un nom de table.
 
-Pour obtenir une explication de la façon dont le framework construit des instructions SQL, consultez [jeu d’enregistrements : La sélection de jeux d’enregistrements d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) et [SQL : Personnalisation de l’instruction SQL du Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Pour avoir une explication de la façon dont le framework construit des instructions SQL, consultez [Recordset : Sélection d’enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) et [SQL : Personnalisation de l’instruction SQL du recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-Bases de données SQL utilisent des types de données similaires à ceux utilisés dans C et C++. Pour une description de ces similitudes, consultez [SQL : SQL et les Types de données C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
+Les bases de données SQL utilisent des types de données similaires à ceux utilisés en C et C++. Pour une description de ces similitudes, consultez [SQL : Types de données SQL et C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
-Vous trouverez plus d’informations sur SQL, y compris une liste des instructions SQL prises en charge, les types de données, grammaire SQL principale et une liste de lecture de publications recommandées sur SQL, dans le *ODBC SDK* *de référence du programmeur*  sur le CD MSDN Library.
+Plus d’informations sur SQL, y compris une liste des instructions SQL prises en charge, les types de données, la grammaire SQL principale et une liste de lecture de publications recommandées sur SQL, sont disponibles dans les *Informations de référence du programmeur* du *SDK ODBC* sur le CD MSDN Library.
 
-##  <a name="_core_how_the_database_classes_use_sql"></a> Utilisent de SQL par les Classes de base de données
+##  <a name="_core_how_the_database_classes_use_sql"></a> Comment les classes de base de données utilisent SQL
 
-Les jeux d’enregistrements que vous dérivez à partir des classes de base de données utilise ODBC pour communiquer avec une source de données et ODBC extrait les enregistrements à partir de la source de données en envoyant des instructions SQL. Cette rubrique explique la relation entre les classes de base de données et SQL.
+Les recordsets que vous dérivez des classes de base de données utilisent ODBC pour communiquer avec une source de données, et ODBC récupère les enregistrements de la source de données en envoyant des instructions SQL. Cette rubrique explique la relation entre les classes de base de données et SQL.
 
-Un jeu d’enregistrements crée une instruction SQL en ajoutant les éléments d’une instruction SQL dans un `CString`. La chaîne est construite comme un **sélectionnez** instruction, qui retourne un jeu d’enregistrements.
+Un recordset construit une instruction SQL en rassemblant les éléments d’une instruction SQL dans un `CString`. La chaîne est construite comme une instruction **SELECT**, qui retourne un jeu d’enregistrements.
 
-Lorsque le jeu d’enregistrements appelle ODBC pour envoyer une instruction SQL à la source de données, le Gestionnaire de pilotes ODBC transmet l’instruction au pilote ODBC et le pilote envoie au SGBD sous-jacent. Le SGBD renvoie un jeu de résultats d’enregistrements et le pilote ODBC retourne les enregistrements à l’application. Les classes de base de données permettent à vos programmes par le jeu de résultats dans une classe C++ de type sécurisé dérivé `CRecordset`.
+Quand le recordset appelle ODBC pour envoyer une instruction SQL à la source de données, le Gestionnaire de pilotes ODBC transmet l’instruction au pilote ODBC, et le pilote l’envoie au SGBD sous-jacent. Le SGBD retourne le jeu d’enregistrements qui en résulte et le pilote ODBC retourne les enregistrements à l’application. Les classes de base de données permettent à votre programme d’accéder au jeu de résultats dans une classe C++ de type sécurisé à partir de `CRecordset`.
 
-Les rubriques suivantes fournissent plus d’informations sur l’utilisent de SQL par les classes de base de données :
+Les rubriques suivantes fournissent plus d’informations sur la façon dont les classes de base de données utilisent SQL :
 
-- [SQL : Personnalisation de l’instruction SQL du Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [SQL : Personnalisation de l’instruction SQL du recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
 - [SQL : Types de données SQL et C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 

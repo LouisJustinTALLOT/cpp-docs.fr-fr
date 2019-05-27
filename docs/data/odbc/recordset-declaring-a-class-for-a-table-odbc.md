@@ -1,28 +1,31 @@
 ---
-title: 'Recordset : Déclaration de la classe d’une Table (ODBC)'
-ms.date: 11/04/2016
+title: 'Recordset : Déclaration d’une classe pour une table (ODBC)'
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: 17adc6e26dcbb39453d9009d82843d213271cc78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ea17f131552fe7f71d9106a8979bb661955fe850
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397872"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707951"
 ---
-# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Recordset : Déclaration de la classe d’une Table (ODBC)
+# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Recordset : Déclaration d’une classe pour une table (ODBC)
+
+> [!NOTE] 
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toujours créer un consommateur manuellement.
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
-La classe de recordset plus courante ouvre une seule table. Pour déclarer une classe de recordset pour une seule table, utilisez le [Assistant Consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) de **ajouter une classe** et choisissez chaque colonne souhaitée en nommant un membre de données de champ de recordset correspondant.
+La classe recordset la plus courante ouvre une seule table. Afin de déclarer une classe recordset pour une seule table, utilisez l’[Assistant Consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) depuis **Ajouter une classe** et choisissez chaque colonne en nommant un membre de données de champ recordset correspondant.
 
-Autres utilisations pour les jeux d’enregistrements :
+Voici d’autres utilisations possibles des recordsets :
 
-- Jointure de deux ou plusieurs tables.
+- Joindre deux ou plusieurs tables.
 
-- Contenant les résultats d’une requête prédéfinie.
+- Contenir les résultats d’une requête prédéfinie.
 
 ## <a name="see-also"></a>Voir aussi
 
