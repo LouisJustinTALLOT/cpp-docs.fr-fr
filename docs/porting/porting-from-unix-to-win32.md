@@ -1,6 +1,6 @@
 ---
 title: Portage d'UNIX vers Win32
-ms.date: 08/02/2018
+ms.date: 05/02/2019
 helpviewer_keywords:
 - APIs [C++], porting to Win32
 - Windows API [C++], migrating from UNIX
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 3146c94879532a5c58208369bb6d131a3a027c33
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 66ac5b478929a42b37d6d0b712063552cfae9104
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278474"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449028"
 ---
 # <a name="porting-from-unix-to-win32"></a>Portage d'UNIX vers Win32
 
@@ -39,17 +39,9 @@ Le manuel [UNIX Custom Application Migration Guide](https://technet.microsoft.co
 
 Le manuel [Unix Migration Project Guide](https://technet.microsoft.com/library/bb656287.aspx) vient compléter le manuel « UNIX Custom Application Migration Guide » en proposant une aide détaillée sur la migration de projets majeurs d'UNIX vers Win32. Ce guide fournit des conseils relatifs aux problèmes susceptibles de se produire aux différentes étapes de la migration d'un projet.
 
-### <a name="interopsystemscom"></a>InteropSystems.com
-
-[http://www.interopsystems.com/](http://www.interopsystems.com/)
-
-Il s'agit du site d'une société tierce qui fournit des solutions logicielles de prise en charge du portage d'UNIX vers Win32.
-
 ### <a name="c-boost-web-site"></a>Site web C++ Boost
 
-[http://boost.sourceforge.net/regression-logs/](http://boost.sourceforge.net/regression-logs/)
-
-[http://boost.sourceforge.net/boost-build2/](http://boost.sourceforge.net/boost-build2/)
+[https://www.boost.org/](https://www.boost.org/)
 
 ## <a name="porting-unix-applications-directly-to-win32"></a>Portage d'applications UNIX directement vers Win32
 

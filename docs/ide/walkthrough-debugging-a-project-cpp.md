@@ -1,17 +1,17 @@
 ---
 title: 'Procédure pas à pas : Déboguer un projet (C++)'
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - projects [C++], debugging
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 0a1ceddca3234ead7d10cc839d41a6d644ec1866
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 55124bc2f240499cc163fca6d0004a79047060a4
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57812029"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857249"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Procédure pas à pas : Déboguer un projet (C++)
 
@@ -31,7 +31,7 @@ Dans cette procédure pas à pas, vous modifiez le programme pour résoudre le p
 
    Dans la fenêtre **Affichage de classes**, développez l’arborescence du projet **Game** et sélectionnez la classe **Cardgame** pour afficher les membres de classe et les méthodes.
 
-   Ouvrez le menu contextuel du destructeur **~Cardgame(void)**, puis choisissez **Atteindre la définition**.
+   Ouvrez le menu contextuel du destructeur **~Cardgame(void)** , puis choisissez **Atteindre la définition**.
 
 1. Pour réduire la valeur de `totalParticipants` quand un Cardgame se termine, ajoutez le code suivant entre les accolades du destructeur `Cardgame::~Cardgame`.
 

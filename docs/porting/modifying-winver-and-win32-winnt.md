@@ -2,15 +2,15 @@
 title: Modification de WINVER et _WIN32_WINNT
 ms.date: 09/04/2017
 helpviewer_keywords:
-- WINVER in an upgraded Visual C++ project
-- _WIN32_WINNT in an upgraded Visual C++ project
+- WINVER in an upgraded Visual Studio C++ project
+- _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: a936a54620590d4dc21f43acd50abdc49d77ffa8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: a624118bdd192c5ec677be81f0b410d2392e62e9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748734"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449073"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Modification de WINVER et _WIN32_WINNT
 
