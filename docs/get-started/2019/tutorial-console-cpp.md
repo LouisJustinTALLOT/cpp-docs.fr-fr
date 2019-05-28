@@ -7,11 +7,11 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: f1e6b06c3212ae3ff192fdf402c0167575161656
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59430746"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "66182819"
 ---
 # <a name="create-a-c-console-app-project"></a>Créer un projet d’application console C++
 
@@ -120,7 +120,7 @@ Maintenant, nous allons transformer le code de ce modèle en application de calc
 
    > Explication du code :
    >
-   > - Les instructions `#include` vous permettent de référencer le code situé dans d’autres fichiers. Parfois, vous pouvez voir un nom de fichier entouré de crochets pointus (**\<\>**) et parfois, entouré de guillemets doubles (**" "**). En règle générale, les crochets pointus sont utilisés lors du référencement de la bibliothèque C++ standard. Les guillemets doubles sont utilisés pour les autres fichiers.
+   > - Les instructions `#include` vous permettent de référencer le code situé dans d’autres fichiers. Parfois, vous pouvez voir un nom de fichier entouré de crochets pointus ( **\<\>** ) et parfois, entouré de guillemets doubles ( **" "** ). En règle générale, les crochets pointus sont utilisés lors du référencement de la bibliothèque C++ standard. Les guillemets doubles sont utilisés pour les autres fichiers.
    > - La ligne `using namespace std;` indique au compilateur qu’il doit s’attendre à ce que des éléments de la bibliothèque C++ standard soient utilisés dans ce fichier. Sans cette ligne, chaque mot clé de la bibliothèque devrait être précédé d’un `std::`, pour indiquer sa portée. Par exemple, sans cette ligne, chaque référence à `cout` devrait être écrite ainsi : `std::cout`. L’instruction `using` est ajoutée pour rendre le code plus clair.
    > - Le mot clé `cout` est utilisé pour afficher la sortie standard en C++. L’opérateur **\<\<** indique au compilateur d’envoyer tout ce qui est à sa droite vers la sortie standard.
    > - Le mot clé **endl** est similaire à la touche Entrée. Il indique la fin de la ligne et déplace le curseur à la ligne suivante. Il est préférable de placer un `\n` à l’intérieur de la chaîne (entre "") pour faire de même, car `endl` vide toujours la mémoire tampon et peut nuire aux performances du programme. Toutefois, comme il s’agit d’une toute petite application, `endl` est utilisé pour une meilleure lisibilité.
