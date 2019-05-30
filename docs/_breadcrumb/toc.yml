@@ -93,7 +93,8 @@
                   tocHref: /cpp/ide/
                   topicHref: /cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development
             - name: "Génération de projets\_C/C++"
-              tocHref: /cpp/build/building-c-cpp-programs
+              tocHref: /cpp/build/
+              topicHref: /cpp/build/building-c-cpp-programs
               items:
                 - name: Informations de référence sur les builds
                   tocHref: /cpp/build/reference/
