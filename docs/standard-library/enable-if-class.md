@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 450664f71851778cc40160e55cbb80bcb51330d5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413760"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451253"
 ---
 # <a name="enableif-class"></a>enable_if, classe
 
@@ -46,7 +46,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```
 
-En C++, l’échec du remplacement des paramètres de modèle n’est pas une erreur en soi : il est désigné sous le nom de *SFINAE* (Substitution Failure Is Not An Error). En règle générale, `enable_if` permet de supprimer des candidats de la résolution de surcharge (autrement dit, elle trie l'ensemble des surcharges) pour qu'une définition puisse être rejetée en faveur d'une autre. Cette opération est conforme au comportement SFINAE. Pour plus d’informations sur SFINAE, consultez [Substitution failure is not an error](http://go.microsoft.com/fwlink/p/?linkid=394798) (l’échec du remplacement n’est pas une erreur) sur Wikipedia.
+En C++, l’échec du remplacement des paramètres de modèle n’est pas une erreur en soi : il est désigné sous le nom de *SFINAE* (Substitution Failure Is Not An Error). En règle générale, `enable_if` permet de supprimer des candidats de la résolution de surcharge (autrement dit, elle trie l'ensemble des surcharges) pour qu'une définition puisse être rejetée en faveur d'une autre. Cette opération est conforme au comportement SFINAE. Pour plus d’informations sur SFINAE, consultez [Substitution failure is not an error](https://go.microsoft.com/fwlink/p/?linkid=394798) (l’échec du remplacement n’est pas une erreur) sur Wikipedia.
 
 Voici quatre exemples de scénarios :
 

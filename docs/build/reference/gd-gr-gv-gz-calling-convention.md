@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 4e3da750b174fa92e28c1d0d5a8cbc035738ee51
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 72d65ce7471ed047ab8347a45c58a6b8a9f39a7a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837277"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450845"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Convention d'appel)
 
@@ -39,7 +39,7 @@ Ces options déterminent l’ordre dans lequel les arguments de fonction sont en
 > **/Gv**<br/>
 > **/Gz**<br/>
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 **/Gd**, le paramètre par défaut, spécifie la convention d’appel [__cdecl](../../cpp/cdecl.md) pour toutes les fonctions hormis les fonctions membres C++ et les fonctions marquées [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md) ou [__vectorcall](../../cpp/vectorcall.md).
 
@@ -47,7 +47,7 @@ Ces options déterminent l’ordre dans lequel les arguments de fonction sont en
 
 **/Gz** spécifie la convention d’appel `__stdcall` pour toutes les fonctions hormis les fonctions membres C++, les fonctions nommées `main` et les fonctions marquées `__cdecl`, `__fastcall` ou `__vectorcall`. Toutes les fonctions `__stdcall` doivent avoir des prototypes. Cette convention d’appel est uniquement disponible dans les compilateurs qui ciblent x86 et est ignorée par les compilateurs qui ciblent d’autres architectures.
 
-**/Gv** spécifie la convention d’appel `__vectorcall` pour toutes les fonctions hormis les fonctions membres C++, les fonctions nommées main, les fonctions avec une liste d’arguments de variables `vararg` ou les fonctions qui sont marquées avec un attribut `__cdecl`, `__stdcall`, ou `__fastcall` en conflit. Cette convention d’appel est disponible uniquement sur les architectures x86 et x64 qui prennent en charge/arch:SSE2 et ultérieur, et est ignorée par les compilateurs qui ciblent l’architecture ARM.
+**GV** Spécifie le `__vectorcall` convention d’appel pour toutes les fonctions hormis C++ fonctions membres, des fonctions nommées `main`, fonctions avec un `vararg` liste d’arguments variables ou fonctions qui sont marquées avec un conflit lié à `__cdecl`, `__stdcall`, ou `__fastcall` attribut. Cette convention d’appel est disponible uniquement sur les architectures x86 et x64 qui prennent en charge/arch:SSE2 et ultérieur, et est ignorée par les compilateurs qui ciblent l’architecture ARM.
 
 Les fonctions qui prennent un nombre variable d’arguments doivent être marquées `__cdecl`.
 
@@ -101,7 +101,7 @@ Pour C, la convention de nommage `__vectorcall` utilise le nom de fonction suiv
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés **C/C++** > **Avancé**.
+1. Sélectionnez la page de propriétés **C/C++**  > **Avancé**.
 
 1. Modifiez la propriété **Convention d’appel**.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: bc6305ab2e96496aa212004e186150d4a51cf3fc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: fcd3c06ae2db5c43aacbf781800870a83d2d77c1
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446969"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451134"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Erreur des outils Éditeur de liens LNK1104
 
@@ -81,7 +81,7 @@ Lorsque vous spécifiez des bibliothèques dans le **dépendances supplémentair
 
 Vous pouvez voir cette erreur lorsque le chemin d’accès pour *filename* s’étend sur plus de 260 caractères. Modifier les noms ou réorganiser votre structure de répertoire si nécessaire pour raccourcir les chemins d’accès aux fichiers requis.
 
-Cette erreur peut se produire, car le fichier est trop volumineux. Bibliothèques ou objet fichiers plus qu’un gigaoctet taille peut provoquer des problèmes pour l’éditeur de liens 32 bits. Un correctif possible pour ce problème consiste à utiliser l’ensemble d’outils 64 bits. Pour plus d’informations sur la façon de procéder à la ligne de commande, consultez [Comment : Activer un 64 bits Visual C++ ensemble d’outils sur la ligne de commande](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Pour plus d’informations sur la façon de procéder dans l’IDE, consultez [à l’aide de MSBuild avec le compilateur 64 bits et les outils](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) et ce post Stack Overflow : [Comment Visual Studio utiliser la chaîne d’outils native amd64](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
+Cette erreur peut se produire, car le fichier est trop volumineux. Bibliothèques ou objet fichiers plus qu’un gigaoctet taille peut provoquer des problèmes pour l’éditeur de liens 32 bits. Un correctif possible pour ce problème consiste à utiliser l’ensemble d’outils 64 bits. Pour plus d’informations sur la façon de procéder à la ligne de commande, consultez [Comment : Activer un 64 bits Visual C++ ensemble d’outils sur la ligne de commande](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Pour plus d’informations sur la façon de procéder dans l’IDE, consultez [à l’aide de MSBuild avec le compilateur 64 bits et les outils](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) et ce post Stack Overflow : [Comment Visual Studio utiliser la chaîne d’outils native amd64](https://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
 
 Cette erreur peut se produire si vous disposez des autorisations de fichiers sont insuffisantes pour accéder à *filename*. Cela peut se produire si vous utilisez un compte d’utilisateur ordinaire et une tentative d’accéder aux fichiers de bibliothèque dans les répertoires protégés du système ou utilisez des fichiers copiés à partir d’autres utilisateurs qui ont leurs autorisations d’origine définie. Pour résoudre ce problème, déplacez le fichier vers un répertoire de projet accessible en écriture. Si le fichier se trouve dans un répertoire accessible en écriture, mais il possède les autorisations sont inaccessibles, vous pouvez utiliser une invite de commandes administrateur et exécutez la commande takeown.exe de prendre possession du fichier.
 

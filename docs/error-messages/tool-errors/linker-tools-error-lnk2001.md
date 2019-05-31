@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 916c37e3283f40ff5ded865a573ff45839de6e2a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161015"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449619"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Erreur des outils Éditeur de liens LNK2001
 
@@ -71,7 +71,7 @@ Cette erreur peut se produire si votre code fait référence à un symbole d’u
 
 Il n’existe actuellement aucune norme pour [d’affectation de noms C++](../../error-messages/tool-errors/name-decoration.md) entre les éditeurs de compilateurs ou même entre différentes versions d’un compilateur. Par conséquent, la liaison de fichiers objets compilés avec d’autres compilateurs ne peut pas produire le même schéma d’affectation de noms et donc causer l’erreur LNK2001.
 
-[Options de compilation de mixage inline et non inline](../../error-messages/tool-errors/function-inlining-problems.md) sur différents modules peut causer l’erreur LNK2001. Si une bibliothèque C++ est créée avec la fonctionnalité inline activée (**/Ob1** ou **/Ob2**), mais le fichier d’en-tête correspondant décrivant les fonctions a désactivé cette fonctionnalité (aucun `inline` mot clé), cette erreur se produit. Pour résoudre ce problème, définissez les fonctions `inline` dans le fichier d’en-tête que vous incluez dans d’autres fichiers de code source.
+[Options de compilation de mixage inline et non inline](../../error-messages/tool-errors/function-inlining-problems.md) sur différents modules peut causer l’erreur LNK2001. Si une bibliothèque C++ est créée avec la fonctionnalité inline activée ( **/Ob1** ou **/Ob2**), mais le fichier d’en-tête correspondant décrivant les fonctions a désactivé cette fonctionnalité (aucun `inline` mot clé), cette erreur se produit. Pour résoudre ce problème, définissez les fonctions `inline` dans le fichier d’en-tête que vous incluez dans d’autres fichiers de code source.
 
 Si vous utilisez le `#pragma inline_depth` Assurez-vous directive du compilateur que vous avez un [valeur égale ou supérieure à 2](../../error-messages/tool-errors/function-inlining-problems.md)et vérifiez que vous utilisez également le [/Ob1](../../build/reference/ob-inline-function-expansion.md) ou [/Ob2](../../build/reference/ob-inline-function-expansion.md) option du compilateur.
 
@@ -101,5 +101,5 @@ Dans certains cas, l’éditeur de liens peut uniquement indiquer le nom décor�
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-Pour plus d’informations sur les causes et solutions pour LNK2001, consultez la question à Stack Overflow [qu’est une erreur de symbole externe non défini référence/non résolu et comment le corriger ?](http://stackoverflow.com/q/12573816/2002113).
+Pour plus d’informations sur les causes et solutions pour LNK2001, consultez la question à Stack Overflow [qu’est une erreur de symbole externe non défini référence/non résolu et comment le corriger ?](https://stackoverflow.com/q/12573816/2002113).
 

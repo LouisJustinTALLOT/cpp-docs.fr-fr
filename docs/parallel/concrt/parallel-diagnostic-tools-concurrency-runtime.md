@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 2af1898312a4f448d618fcfc4e43ea93f5f0bc76
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 182171bfcfbaf1476cc25fe3160114bc1d96ca7e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346316"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449248"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Outils de diagnostic parallèles (runtime d'accès concurrentiel)
 
@@ -27,7 +27,7 @@ Les outils de profilage fournissent trois vues de données qui affichent des inf
 
 Le Runtime d’accès concurrentiel utilise [suivi d’événements pour Windows](/windows/desktop/ETW/event-tracing-portal) (ETW) pour informer les outils d’instrumentation, tels que les profileurs, lorsque certains événements se produisent. Ces événements incluent un planificateur est activé ou désactivé, lorsqu’un contexte commence, se termine, bloque, débloque ou cède, et lorsqu’un algorithme parallèle commence ou se termine.
 
-Des outils tels que le [visualiseur concurrentiel](/visualstudio/profiling/concurrency-visualizer) utilisent cette fonctionnalité ; par conséquent, en général pas avoir à travailler directement avec ces événements. Toutefois, ces événements sont utiles lorsque vous développez un profileur personnalisé ou lorsque vous utilisez comme outils de suivi d’événements [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).
+Des outils tels que le [visualiseur concurrentiel](/visualstudio/profiling/concurrency-visualizer) utilisent cette fonctionnalité ; par conséquent, en général pas avoir à travailler directement avec ces événements. Toutefois, ces événements sont utiles lorsque vous développez un profileur personnalisé ou lorsque vous utilisez comme outils de suivi d’événements [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628).
 
 Le Runtime d’accès concurrentiel déclenche ces événements uniquement lorsque le traçage est activé. Appelez le [concurrency::EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) (fonction) pour activer le suivi d’événements et le [concurrency::DisableTracing](reference/concurrency-namespace-functions.md#disabletracing) (fonction) pour désactiver le suivi.
 

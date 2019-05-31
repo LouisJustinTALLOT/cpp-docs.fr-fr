@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220357"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451230"
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 
@@ -1652,7 +1652,7 @@ void BringWindowToTop();
 
 En outre, `BringWindowToTop` active les fenêtres contextuelles, les fenêtres de niveau supérieur et les fenêtres enfants MDI. La fonction membre `BringWindowToTop` doit être utilisée pour déterminer les fenêtres qui sont partiellement ou totalement masquées par d'autres fenêtres.
 
-Cette fonction appelle simplement Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) (fonction). Appelez le [SetWindowPos](#setwindowpos) (fonction) pour modifier la position d’une fenêtre dans l’ordre de plan. La fonction `BringWindowToTop` ne modifie pas le style de la fenêtre pour en faire une fenêtre de niveau supérieur. Pour plus d’informations, consultez [quelle est la différence entre HWND_TOP et HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Cette fonction appelle simplement Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) (fonction). Appelez le [SetWindowPos](#setwindowpos) (fonction) pour modifier la position d’une fenêtre dans l’ordre de plan. La fonction `BringWindowToTop` ne modifie pas le style de la fenêtre pour en faire une fenêtre de niveau supérieur. Pour plus d’informations, consultez [quelle est la différence entre HWND_TOP et HWND_TOPMOST](https://devblogs.microsoft.com/oldnewthing/?p=33263)
 
 ### <a name="example"></a>Exemple
 
@@ -2455,7 +2455,7 @@ Le *lpPathSpec* paramètre a la forme suivante :
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-Dans cet exemple, *lecteur* est une lettre de lecteur, *directory* est un nom de répertoire valide, et *filename* est un nom de fichier valide doit contenir au moins un caractère générique. Les caractères génériques sont un point d’interrogation (**?**), ce qui signifie que correspond à n’importe quel caractère et un astérisque (<strong>\*</strong>), ce qui signifie que n’importe quel nombre de caractères.
+Dans cet exemple, *lecteur* est une lettre de lecteur, *directory* est un nom de répertoire valide, et *filename* est un nom de fichier valide doit contenir au moins un caractère générique. Les caractères génériques sont un point d’interrogation ( **?** ), ce qui signifie que correspond à n’importe quel caractère et un astérisque (<strong>\*</strong>), ce qui signifie que n’importe quel nombre de caractères.
 
 Si vous spécifiez une chaîne de longueur 0 pour *lpPathSpec*, ou si vous spécifiez uniquement un nom de répertoire mais que vous n’incluez pas de spécification de fichier, la chaîne est remplacée par «\*.\*».
 
@@ -2523,7 +2523,7 @@ Le *lpPathSpec* paramètre a la forme suivante :
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-Dans cet exemple, *lecteur* est une lettre de lecteur, *directory* est un nom de répertoire valide, et *filename* est un nom de fichier valide doit contenir au moins un caractère générique. Les caractères génériques sont un point d’interrogation (**?**), ce qui signifie que correspond à n’importe quel caractère et un astérisque (<strong>\*</strong>), ce qui signifie que n’importe quel nombre de caractères.
+Dans cet exemple, *lecteur* est une lettre de lecteur, *directory* est un nom de répertoire valide, et *filename* est un nom de fichier valide doit contenir au moins un caractère générique. Les caractères génériques sont un point d’interrogation ( **?** ), ce qui signifie que correspond à n’importe quel caractère et un astérisque (<strong>\*</strong>), ce qui signifie que n’importe quel nombre de caractères.
 
 Si vous spécifiez une chaîne de longueur nulle pour *lpPathSpec*, le répertoire actuel est utilisé et *lpPathSpec* ne sera pas modifié. Si vous spécifiez uniquement un nom de répertoire mais que vous n’incluez pas de spécification de fichier, la chaîne est remplacée par «\*».
 

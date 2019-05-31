@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2428c94eaa5dd371d58680f6317173709f684507
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323633"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449576"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -375,7 +375,7 @@ Différent de zéro en cas de réussite sinon 0.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus de Windows, spécifiés par la préface de style étendu Windows **WS_EX_**.
+Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus de Windows, spécifiés par la préface de style étendu Windows **WS_EX_** .
 
 ##  <a name="createdragimage"></a>  CTreeCtrl::CreateDragImage
 
@@ -1505,7 +1505,7 @@ Le handle à un élément d’arborescence ( `HTREEITEM`) qui correspond à la *
 
 ### <a name="remarks"></a>Notes
 
-Les options d’accessibilité sont les applications qui aident les personnes handicapées utilisent des ordinateurs. Un identificateur de l’accessibilité est utilisé par le `IAccessible` interface pour spécifier de manière unique un élément dans une fenêtre. Pour plus d’informations sur les identificateurs d’accessibilité, recherchez la rubrique « Sur Active Accessibility Support » au [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Les options d’accessibilité sont les applications qui aident les personnes handicapées utilisent des ordinateurs. Un identificateur de l’accessibilité est utilisé par le `IAccessible` interface pour spécifier de manière unique un élément dans une fenêtre. Pour plus d’informations sur les identificateurs d’accessibilité, recherchez la rubrique « Sur Active Accessibility Support » au [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Cette méthode envoie le [TVM_MAPACCIDTOHTREEITEM](/windows/desktop/Controls/tvm-mapaccidtohtreeitem) message, qui est décrite dans le SDK Windows.
 
@@ -1541,7 +1541,7 @@ L’identificateur d’accessibilité qui correspond à la *hItem* paramètre.
 
 ### <a name="remarks"></a>Notes
 
-Les options d’accessibilité sont les applications qui aident les personnes handicapées utilisent des ordinateurs. Un identificateur de l’accessibilité est utilisé par le `IAccessible` interface pour spécifier de manière unique un élément dans une fenêtre. Pour plus d’informations sur les identificateurs d’accessibilité, recherchez la rubrique « Sur Active Accessibility Support » au [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Les options d’accessibilité sont les applications qui aident les personnes handicapées utilisent des ordinateurs. Un identificateur de l’accessibilité est utilisé par le `IAccessible` interface pour spécifier de manière unique un élément dans une fenêtre. Pour plus d’informations sur les identificateurs d’accessibilité, recherchez la rubrique « Sur Active Accessibility Support » au [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Cette méthode envoie le [TVM_MAPHTREEITEMTOACCID](/windows/desktop/Controls/tvm-maphtreeitemtoaccid) message, qui est décrite dans le SDK Windows.
 
@@ -2281,7 +2281,7 @@ void ShowInfoTip(HTREEITEM hItem);
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur la différence entre les info-bulles et des info-bulles, recherchez la rubrique « Info-bulles et info-bulles » à l’adresse [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Pour plus d’informations sur la différence entre les info-bulles et des info-bulles, recherchez la rubrique « Info-bulles et info-bulles » à l’adresse [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Cette méthode envoie le [TVM_SHOWINFOTIP](/windows/desktop/Controls/tvm-showinfotip) message, qui est décrite dans le SDK Windows.
 

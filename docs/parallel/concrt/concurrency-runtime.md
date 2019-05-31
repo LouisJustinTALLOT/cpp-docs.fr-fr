@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa64e2536fd1697e839f1b4921a290e1b7a30a35
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414007"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449682"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 
@@ -63,7 +63,7 @@ Pour la documentation de référence, consultez [référence](../../parallel/con
 |-|-|
 |[Création d’opérations asynchrones dans C++ pour les applications UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Décrit certains des points clés à prendre en compte lorsque vous utilisez le Runtime d’accès concurrentiel pour effectuer des opérations asynchrones dans une application UWP.|
 |[Procédure pas à pas : connexion à l’aide de tâches et de requêtes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Montre comment combiner les tâches de la bibliothèque de modèles parallèles avec le `IXMLHTTPRequest2` et `IXMLHTTPRequest2Callback` interfaces pour envoyer des demandes HTTP GET et POST à un service web dans une application UWP.|
-|[Exemples d’applications Windows Runtime](http://code.msdn.microsoft.com/windowsapps)|Contient des exemples de code téléchargeable et démonstration des applications pour Windows 8.x. Les exemples C++ utilisent les caractéristiques du runtime d'accès concurrentiel comme les tâches PPL pour traiter les données en arrière plan et garder l'UX réactive.|
+|[Exemples d’applications Windows Runtime](https://code.msdn.microsoft.com/windowsapps)|Contient des exemples de code téléchargeable et démonstration des applications pour Windows 8.x. Les exemples C++ utilisent les caractéristiques du runtime d'accès concurrentiel comme les tâches PPL pour traiter les données en arrière plan et garder l'UX réactive.|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programmation de flux de données dans la bibliothèque des agents asynchrones
 
@@ -99,8 +99,8 @@ Pour la documentation de référence, consultez [référence](../../parallel/con
 |||
 |-|-|
 |[Modèles de programmation asynchrones et conseils dans Hilo (applications du Windows Store utilisant C++ et XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Découvrez comment nous avons utilisé le Runtime d’accès concurrentiel pour implémenter des opérations asynchrones dans Hilo, une application Windows Runtime en C++ et XAML.|
-|[Blog Programmation parallèle en code natif](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fournit des articles de blog détaillés supplémentaires sur la programmation parallèle dans le runtime d'accès concurrentiel.|
-|[Forum Informatique parallèle en C++ et en code natif](http://go.microsoft.com/fwlink/p/?linkid=183874)|Vous permet de participer à des discussions de la communauté sur le runtime d'accès concurrentiel.|
+|[Blog Programmation parallèle en code natif](https://go.microsoft.com/fwlink/p/?linkid=183873)|Fournit des articles de blog détaillés supplémentaires sur la programmation parallèle dans le runtime d'accès concurrentiel.|
+|[Forum Informatique parallèle en C++ et en code natif](https://go.microsoft.com/fwlink/p/?linkid=183874)|Vous permet de participer à des discussions de la communauté sur le runtime d'accès concurrentiel.|
 |[Programmation parallèle](/dotnet/standard/parallel-programming/index)|Vous enseigne sur le modèle de programmation parallèle qui est disponible dans le .NET Framework.|
 
 ## <a name="see-also"></a>Voir aussi

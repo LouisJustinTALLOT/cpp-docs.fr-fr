@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3283e974dc2b933049599fba0b6cf51c32a18ef3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348690"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450836"
 ---
 # <a name="cbutton-class"></a>CButton, classe
 
@@ -153,7 +153,7 @@ Si vous souhaitez gérer les messages de notification Windows envoyés par un co
 
 Chaque entrée de table des messages prend la forme suivante :
 
-**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
+**ON\_** _Notification_ **(** _id_, _memberFxn_ **)**
 
 où *id* Spécifie l’ID de fenêtre enfant du contrôle qui envoie la notification et *memberFxn* est le nom de la fonction de membre parent que vous avez écrit pour gérer les notifications.
 
@@ -430,7 +430,7 @@ BOOL GetNote(
 
 Dans la première surcharge, un [CString](../../atl-mfc-shared/using-cstring.md) objet qui contient le texte de note associé au contrôle de lien de commande actuelle.
 
-- ou -
+ou
 
 Dans la seconde surcharge, TRUE si cette méthode a réussi ; Sinon, FALSE.
 
@@ -808,7 +808,7 @@ TRUE si cette méthode a réussi ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Si un contrôle de lien de bouton ou la commande nécessite une autorisation de sécurité avec élévation de privilèges pour exécuter une action, la valeur est le contrôle `elevation required` état. Par la suite, Windows affiche l’icône de bouclier du contrôle de compte utilisateur (UAC) sur le contrôle. Pour plus d’informations, consultez « Contrôle de compte d’utilisateur » à l’adresse [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).
+Si un contrôle de lien de bouton ou la commande nécessite une autorisation de sécurité avec élévation de privilèges pour exécuter une action, la valeur est le contrôle `elevation required` état. Par la suite, Windows affiche l’icône de bouclier du contrôle de compte utilisateur (UAC) sur le contrôle. Pour plus d’informations, consultez « Contrôle de compte d’utilisateur » à l’adresse [MSDN](https://go.microsoft.com/fwlink/p/?linkid=18507).
 
 Cette méthode envoie le [BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield) message, qui est décrite dans le SDK Windows.
 

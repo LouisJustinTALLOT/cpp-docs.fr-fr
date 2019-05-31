@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d7653e61e6aada9205f599cf7a7ca6187dd139d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373279"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450560"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Paramètres du contrôle, Assistant Contrôle ActiveX MFC
 
@@ -57,7 +57,7 @@ Pour plus d’informations sur la sélection des options de cette page pour opti
    Spécifie que le contrôle a le Windows standard **sur** boîte de dialogue qui affiche le numéro de version et les informations de copyright.
 
    > [!NOTE]
-   > Comment l’utilisateur accède à l’aide du contrôle dépend de la façon dont vous avez implémenté l’aide et si vous avez intégré à l’aide du contrôle à l’aide du conteneur. Pour plus d’informations sur l’intégration de l’aide, sur le [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) site Web, recherchez « Ajout contextuels permettent à un contrôle ActiveX MFC ».
+   > Comment l’utilisateur accède à l’aide du contrôle dépend de la façon dont vous avez implémenté l’aide et si vous avez intégré à l’aide du contrôle à l’aide du conteneur. Pour plus d’informations sur l’intégration de l’aide, sur le [MSDN Library](https://go.microsoft.com/fwlink/p/?linkid=150542) site Web, recherchez « Ajout contextuels permettent à un contrôle ActiveX MFC ».
 
    Lorsque vous sélectionnez cette option, elle insère la `AboutBox` méthode dans la classe de contrôle de projet de contrôle (C*ProjName*Ctrl.cpp) et ajoute AboutBox dans la table de dispatch du projet. Cette option est activée par défaut.
 
@@ -87,7 +87,7 @@ Pour plus d’informations sur la sélection des options de cette page pour opti
 
 - **Agit comme un simple contrôle frame**
 
-   Spécifie que le contrôle est un conteneur pour d’autres contrôles en définissant le bit OLEMISC_SIMPLEFRAME pour le contrôle. Pour plus d’informations sur la [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) site Web, recherchez « Simple Frame Site relation contenant-contenu ».
+   Spécifie que le contrôle est un conteneur pour d’autres contrôles en définissant le bit OLEMISC_SIMPLEFRAME pour le contrôle. Pour plus d’informations sur la [MSDN Library](https://go.microsoft.com/fwlink/p/?linkid=150542) site Web, recherchez « Simple Frame Site relation contenant-contenu ».
 
 - **Charge les propriétés de façon asynchrone**
 
