@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3873
 ms.assetid: e68fd3be-2391-492b-ac3f-d2428901b2e9
-ms.openlocfilehash: eb2a6935073c3b4a2b9eb3d9b099b372cfa34303
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca70af12ef3223c8c5950f0fa98b1c63a2dd3a4c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385639"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450825"
 ---
 # <a name="compiler-error-c3873"></a>Erreur du compilateur C3873
 
@@ -19,7 +19,7 @@ ms.locfileid: "62385639"
 
 Le compilateur C++ suit la norme C++11 sur les caractères autorisés dans un identificateur. Seules certaines plages de caractères et certains noms de caractères universels sont autorisés dans un identificateur. Des restrictions supplémentaires s’appliquent au premier caractère d’un identificateur. Pour plus d’informations et une liste des caractères et des plages de noms de caractère universel autorisés, consultez [Identifiers](../../cpp/identifiers-cpp.md).
 
-La plage de caractères autorisés dans un identificateur est moins restrictive lors de la compilation de code C++/CLI. Les identificateurs dans le code compilé à l’aide de /clr doivent suivre [ECMA-335 Standard : Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+La plage de caractères autorisés dans un identificateur est moins restrictive lors de la compilation de code C++/CLI. Les identificateurs dans le code compilé à l’aide de /clr doivent suivre [ECMA-335 Standard : Common Language Infrastructure (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 L’exemple suivant génère l’erreur C3873 :
 

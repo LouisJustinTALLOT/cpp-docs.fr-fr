@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-ms.openlocfilehash: 93db20d14d3477734e35d33111246f9459310b90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45d6492c87b7543a54d031f02dcf09e319150131
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317157"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449742"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (générer des métadonnées Windows)
 
 Active la génération d’un fichier de métadonnées de Runtime Windows (.winmd).
 
-> **/ WINMD**\[**:**{**NON**\|**UNIQUEMENT**}]
+> **/ WINMD**\[ **:** {**NON**\|**UNIQUEMENT**}]
 
 ## <a name="arguments"></a>Arguments
 
@@ -30,13 +30,13 @@ L’éditeur de liens génère uniquement le fichier .winmd, mais pas le fichier
 
 ## <a name="remarks"></a>Notes
 
-Le **/WINMD** option de l’éditeur de liens est utilisée pour les applications UWP et de composants Windows runtime pour contrôler la création d’un fichier de métadonnées (.winmd) Windows Runtime. Un fichier .winmd est un type de DLL qui contient les métadonnées pour les types de runtime Windows et, dans le cas de composants d’exécution, les implémentations de ces types. Les métadonnées suivent le [ECMA-335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) standard.
+Le **/WINMD** option de l’éditeur de liens est utilisée pour les applications UWP et de composants Windows runtime pour contrôler la création d’un fichier de métadonnées (.winmd) Windows Runtime. Un fichier .winmd est un type de DLL qui contient les métadonnées pour les types de runtime Windows et, dans le cas de composants d’exécution, les implémentations de ces types. Les métadonnées suivent le [ECMA-335](https://www.ecma-international.org/publications/standards/Ecma-335.htm) standard.
 
 Par défaut, le nom de fichier de sortie présente sous la forme *binaryname*.winmd. Pour spécifier un autre nom de fichier, utilisez le [/WINMDFILE](winmdfile-specify-winmd-file.md) option.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **Windows métadonnées** page de propriétés.
 

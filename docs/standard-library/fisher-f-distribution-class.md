@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: cff7883c0b563e7d6a377bffcd0e48192dc01071
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 643c564d7407a79bd9e2e776946c4b8df37a2974
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159806"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449916"
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution, classe
 
@@ -96,7 +96,7 @@ Les fonctions membres `operator()` retournent la valeur générée suivante d’
 
 Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).
 
-Pour plus d’informations sur la loi de Fisher, consultez l’article de Wolfram MathWorld [-Distribution](http://go.microsoft.com/fwlink/p/?linkid=400899).
+Pour plus d’informations sur la loi de Fisher, consultez l’article de Wolfram MathWorld [-Distribution](https://go.microsoft.com/fwlink/p/?linkid=400899).
 
 ## <a name="example"></a>Exemple
 

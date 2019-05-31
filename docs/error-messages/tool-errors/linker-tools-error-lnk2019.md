@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: eb28ff3673c054b8ac1876d8ba736ceddfa5fd1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447706"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449613"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Erreur des outils Éditeur de liens LNK2019
 
@@ -213,9 +213,9 @@ int main() {
 }
 ```
 
-Pour corriger cette erreur, modifiez `unsigned short` à `wchar_t` ou `WCHAR`, ou compilez LNK2019g.cpp en utilisant **/Zc :wchar_t-)**.
+Pour corriger cette erreur, modifiez `unsigned short` à `wchar_t` ou `WCHAR`, ou compilez LNK2019g.cpp en utilisant **/Zc :wchar_t-)** .
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-Pour plus d’informations sur les causes et solutions pour LNK2001, consultez la question à Stack Overflow [qu’est une erreur de symbole externe non défini référence/non résolu et comment le corriger ?](http://stackoverflow.com/q/12573816/2002113).
+Pour plus d’informations sur les causes et solutions pour LNK2001, consultez la question à Stack Overflow [qu’est une erreur de symbole externe non défini référence/non résolu et comment le corriger ?](https://stackoverflow.com/q/12573816/2002113).
 

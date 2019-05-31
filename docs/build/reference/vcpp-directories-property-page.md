@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 3822a3c751ac06154e4b13a12f449e7f0ff2cc07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e739ea99df424f44dc43a28e3dc01c3529bb0c1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316857"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450718"
 ---
 # <a name="vc-directories-property-page-windows"></a>Répertoires VC++, page de propriétés (Windows)
 
@@ -30,7 +30,7 @@ Pour accéder à la page de propriétés **Répertoires VC++** :
 
 1. Si la fenêtre **Explorateur de solutions** n’est pas visible, choisissez **Affichage** > **Explorateur de solutions** dans le menu principal.
 1. Cliquez avec le bouton droit sur un nœud de projet (pas la solution de niveau supérieur), puis choisissez **Propriétés**.
-1. Dans le volet gauche de la boîte de dialogue **Pages de propriétés**, sélectionnez **Propriétés de configuration** > **Répertoires VC++**.
+1. Dans le volet gauche de la boîte de dialogue **Pages de propriétés**, sélectionnez **Propriétés de configuration** > **Répertoires VC++** .
 
 Les propriétés des répertoires VC++ s’appliquent à un projet, et non au nœud de la solution de niveau supérieur. Si vous ne voyez pas **Répertoires VC++** sous **Propriétés de configuration**, sélectionnez un nœud de projet C++ dans la fenêtre **Explorateur de solutions** :
 
@@ -44,7 +44,7 @@ Les paramètres par défaut des propriétés **Répertoires VC++** varient selon
 
 Pour afficher les valeurs d’un des répertoires :
 
-1. Sélectionnez l’une des propriétés dans la page **Répertoires VC++**. Par exemple, choisissez **Répertoires de bibliothèques**.
+1. Sélectionnez l’une des propriétés dans la page **Répertoires VC++** . Par exemple, choisissez **Répertoires de bibliothèques**.
 1. Choisissez le bouton avec une flèche vers le bas situé à la fin du champ de valeur de la propriété.
 1. Dans le menu déroulant, choisissez **Modifier**.
 
@@ -74,7 +74,7 @@ Pour définir vos propres macros, deux options s’offrent à vous :
 
 - Définissez des macros utilisateur dans un fichier .props. Pour plus d’informations, consultez [Macros des pages de propriétés](../working-with-project-properties.md).
 
-Pour plus d’informations, consultez ces billets de blog : [Répertoires VC ++](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [héritée et feuilles de propriétés](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), et [Guide de mise à niveau de projet Visual Studio 2010 C++](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).
+Pour plus d’informations, consultez ces billets de blog : [Répertoires VC ++](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [héritée et feuilles de propriétés](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), et [Guide de mise à niveau de projet Visual Studio 2010 C++](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
 
 ## <a name="directory-types"></a>Types de répertoires
 
@@ -103,4 +103,4 @@ Avant chaque compilation, Visual Studio interroge l’horodatage sur tous les fi
 
 ## <a name="sharing-the-settings"></a>Partage des paramètres
 
-Vous pouvez partager des paramètres de projet avec d'autres utilisateurs ou sur plusieurs ordinateurs. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+Vous pouvez partager des paramètres de projet avec d'autres utilisateurs ou sur plusieurs ordinateurs. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 814e63272058200850424e9d5355637111527e1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eee045e198f61c088e302c40deb2de406adab428
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239131"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449725"
 ---
 # <a name="mfc-internet-programming-basics"></a>Éléments fondamentaux relatifs à la programmation Internet MFC
 
@@ -70,11 +70,11 @@ MFC fournit des classes qui prennent en charge la programmation Internet. Vous p
 
 ##  <a name="_core_web_sites_for_more_information"></a> Sites Web pour plus d’informations
 
-Pour plus d’informations sur la technologie Internet de Microsoft, consultez le [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) site Web. (Liens peuvent changer sans préavis.)
+Pour plus d’informations sur la technologie Internet de Microsoft, consultez le [Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322) site Web. (Liens peuvent changer sans préavis.)
 
 Ce site Web pour les développeurs contient des informations sur l’utilisation des outils de développement Microsoft et des technologies et des témoignages sur les conférences récents et à venir. À partir de cette page, vous pouvez passer à de nombreux sites connexes pour les développeurs, y compris .NET, les centres de développement XML. Vous pouvez également télécharger des exemples et kits de développement logiciel bêta.
 
-Le [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) publie des spécifications pour HTML, HTTP, CGI et autres technologies du World Wide Web.
+Le [World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) publie des spécifications pour HTML, HTTP, CGI et autres technologies du World Wide Web.
 
 ##  <a name="_core_more_internet_help"></a> Mieux à Internet
 

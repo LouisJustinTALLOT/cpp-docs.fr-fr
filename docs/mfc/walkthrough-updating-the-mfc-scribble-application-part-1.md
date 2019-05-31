@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: cba28039cb7755149b35a47ddee82b6274fe4c72
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: a12c2bd2c1c1963630a1bd74b56f2c832573cc94
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558212"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450514"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procédure pas à pas : La mise à jour de l’Application de Scribble MFC (partie 1)
 
@@ -24,7 +24,7 @@ Cette procédure pas à pas modifie l’exemple Scribble des MFC 1.0 classic qui
 
 ## <a name="prerequisites"></a>Prérequis
 
-Le [exemple Scribble des MFC 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Pour obtenir de l’aide sur la conversion vers Visual Studio 2017 ou version ultérieure, consultez [Guide du portage : Scribble MFC](../porting/porting-guide-mfc-scribble.md).
+Le [exemple Scribble des MFC 1.0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Pour obtenir de l’aide sur la conversion vers Visual Studio 2017 ou version ultérieure, consultez [Guide du portage : Scribble MFC](../porting/porting-guide-mfc-scribble.md).
 
 ##  <a name="top"></a> Sections
 
@@ -171,7 +171,7 @@ Un ruban comporte la **Application** bouton, ce qui est le grand bouton sur le c
 
 1. Dans la vue conception, cliquez sur le **Application** bouton pour afficher ses propriétés. Modifier les valeurs des propriétés comme suit : **Image** à `IDB_RIBBON_MAIN`, **invite** à `File`, **clés** à `f`, **grandes Images** à `IDB_RIBBON_FILELARGE`et **Petites Images** à `IDB_RIBBON_FILESMALL`.
 
-1. Les modifications suivantes créer le menu qui s’affiche lorsque l’utilisateur clique sur le **Application** bouton. Cliquez sur le bouton de sélection (**...** ) à côté **Main éléments** pour ouvrir le **Éditeur d’éléments**.
+1. Les modifications suivantes créer le menu qui s’affiche lorsque l’utilisateur clique sur le **Application** bouton. Cliquez sur le bouton de sélection ( **...** ) à côté **Main éléments** pour ouvrir le **Éditeur d’éléments**.
 
    1. Avec le **élément** type **bouton** sélectionnée, cliquez sur **ajouter** pour ajouter un bouton. Modification **légende** à `&New`, **ID** à `ID_FILE_NEW`, **Image** à `0`, **grande Image** à `0`.
 
@@ -199,7 +199,7 @@ Un ruban comporte la **Application** bouton, ce qui est le grand bouton sur le c
 
 1. La modification suivante crée un bouton Quitter qui s’affiche en bas de la **Application** menu du bouton.
 
-   1. Dans le **propriétés** fenêtre, cliquez sur le bouton de sélection (**...** ) à côté **bouton** pour ouvrir le **Éditeur d’éléments**.
+   1. Dans le **propriétés** fenêtre, cliquez sur le bouton de sélection ( **...** ) à côté **bouton** pour ouvrir le **Éditeur d’éléments**.
 
    1. Avec le **élément** type **bouton** sélectionnée, cliquez sur **ajouter** pour ajouter un bouton. Modification **légende** à `E&xit`, **ID** à `ID_APP_EXIT`, **Image** à `8`.
 

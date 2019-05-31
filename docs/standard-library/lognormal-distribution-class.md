@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: bd57b45ec08d044719caa60635f731276794d407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb92844ae1af36b9f4f7146e378fed1832c0b4f9
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413071"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449792"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution, classe
 
@@ -92,7 +92,7 @@ Les fonctions membres `operator()` retournent la valeur générée suivante d’
 
 Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).
 
-Pour plus d’informations sur la distribution suivant une loi log-normale, consultez l’article de Wolfram MathWorld [LogNormal Distribution](http://go.microsoft.com/fwlink/p/?linkid=400917).
+Pour plus d’informations sur la distribution suivant une loi log-normale, consultez l’article de Wolfram MathWorld [LogNormal Distribution](https://go.microsoft.com/fwlink/p/?linkid=400917).
 
 ## <a name="example"></a>Exemple
 

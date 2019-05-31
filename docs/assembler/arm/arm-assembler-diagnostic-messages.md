@@ -20,12 +20,12 @@ helpviewer_keywords:
 - A4508
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
-ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72c1ea64501ef8104fee9bdf914a1464c07c3b76
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167841"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449211"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Messages de diagnostic assembleur ARM
 
@@ -33,13 +33,13 @@ L’assembleur Microsoft ARM (*armasm*) émet des erreurs et avertissements de d
 
 ## <a name="syntax"></a>Syntaxe
 
-> <em>nom de fichier</em>**(**<em>numéro de ligne</em>**) :** \[ **erreur**|**avertissement** ] **A**<em>nombre</em>**:** *message*
+> <em>nom de fichier</em> **(** <em>numéro de ligne</em> **) :** \[ **erreur**|**avertissement** ] **A**<em>nombre</em> **:** *message*
 
 ## <a name="diagnostic-messages---errors"></a>Messages de diagnostic - erreurs
 
 > A2193 : cette instruction génère un comportement imprévisible
 
-L’architecture ARM ne peut pas garantir que se passe-t-il lorsque cette instruction est exécutée.  Pour plus d’informations sur les formes bien définis de cette instruction, consultez la [manuel de référence d’Architecture ARM](http://go.microsoft.com/fwlink/p/?linkid=246464).
+L’architecture ARM ne peut pas garantir que se passe-t-il lorsque cette instruction est exécutée.  Pour plus d’informations sur les formes bien définis de cette instruction, consultez la [manuel de référence d’Architecture ARM](https://go.microsoft.com/fwlink/p/?linkid=246464).
 
 ```asm
     ADD r0, r8, pc         ; A2193: this instruction generates unpredictable behavior
@@ -115,7 +115,7 @@ Dans le mode ARM, il existe une autre syntaxe pour la spécification de constant
 
 > A4509 : Cette forme d’une instruction conditionnelle est déconseillée.
 
-Cette forme d’une instruction conditionnelle a été déconseillée par ARM dans l’architecture ARMv8. Nous vous recommandons de modifier le code pour utiliser des branches conditionnelles. Pour consulter les instructions conditionnelles sont toujours gérées, consultez le [manuel de référence d’Architecture ARM](http://go.microsoft.com/fwlink/p/?linkid=246464).
+Cette forme d’une instruction conditionnelle a été déconseillée par ARM dans l’architecture ARMv8. Nous vous recommandons de modifier le code pour utiliser des branches conditionnelles. Pour consulter les instructions conditionnelles sont toujours gérées, consultez le [manuel de référence d’Architecture ARM](https://go.microsoft.com/fwlink/p/?linkid=246464).
 
 Cet avertissement n’est pas émis lorsque le **- oldit** commutateur de ligne de commande est utilisé.
 

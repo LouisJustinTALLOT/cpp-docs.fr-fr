@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e67ec57c3a8d74fdd97a94ed04c29cad53af1ea5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317716"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450727"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -43,7 +43,7 @@ Application en mode caractères de Windows. Le système d'exploitation fournit u
 **EFI_RUNTIME_DRIVER**<br/>
 Image EFI (Extensible Firmware Interface)
 
-Les options du sous-système EFI (Extensible Firmware Interface) décrivent les images exécutables qui s'exécutent dans l'environnement EFI. Cet environnement est généralement fourni avec le matériel et s'exécute avant que le système d'exploitation soit chargé. Les principales différences entre les types d'image EFI correspondent à l'emplacement de mémoire dans lequel l'image est chargée et l'action entreprise quand l'appel de l'image est retourné. Une image EFI_APPLICATION est déchargée quand le contrôle est retourné. Un EFI_BOOT_SERVICE_DRIVER ou un EFI_RUNTIME_DRIVER est déchargé uniquement si le contrôle est retourné avec un code d'erreur. Une image EFI_ROM est exécutée à partir de la mémoire ROM. Pour plus d’informations, consultez les spécifications sur le [Unified EFI Forum](http://www.uefi.org/) site Web.
+Les options du sous-système EFI (Extensible Firmware Interface) décrivent les images exécutables qui s'exécutent dans l'environnement EFI. Cet environnement est généralement fourni avec le matériel et s'exécute avant que le système d'exploitation soit chargé. Les principales différences entre les types d'image EFI correspondent à l'emplacement de mémoire dans lequel l'image est chargée et l'action entreprise quand l'appel de l'image est retourné. Une image EFI_APPLICATION est déchargée quand le contrôle est retourné. Un EFI_BOOT_SERVICE_DRIVER ou un EFI_RUNTIME_DRIVER est déchargé uniquement si le contrôle est retourné avec un code d'erreur. Une image EFI_ROM est exécutée à partir de la mémoire ROM. Pour plus d’informations, consultez les spécifications sur le [Unified EFI Forum](https://www.uefi.org/) site Web.
 
 **NATIF**<br/>
 Code qui s'exécute sans environnement de sous-système. Par exemple, des pilotes de périphérique en mode noyau et des processus système natifs. Cette option est généralement réservée aux fonctionnalités système de Windows.

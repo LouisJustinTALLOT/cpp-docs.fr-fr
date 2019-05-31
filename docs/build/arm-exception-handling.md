@@ -2,12 +2,12 @@
 title: Gestion des exceptions ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4e56284ce8db18ec76b0143253ee1e25f3fd82c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195353"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450481"
 ---
 # <a name="arm-exception-handling"></a>Gestion des exceptions ARM
 
@@ -21,7 +21,7 @@ L'interface EABI (Embedded Application Binary Interface) ARM spécifie un modèl
 
 ### <a name="assumptions"></a>Assumptions (Hypothèses)
 
-Les images exécutables pour Windows on ARM utilisent le format PE (Portable Executable). Pour plus d’informations, consultez [spécification Microsoft PE et COFF](http://go.microsoft.com/fwlink/p/?linkid=84140). Les informations de gestion des exceptions sont stockées dans les sections .pdata et .xdata de l'image.
+Les images exécutables pour Windows on ARM utilisent le format PE (Portable Executable). Pour plus d’informations, consultez [spécification Microsoft PE et COFF](https://go.microsoft.com/fwlink/p/?linkid=84140). Les informations de gestion des exceptions sont stockées dans les sections .pdata et .xdata de l'image.
 
 Le mécanisme de gestion des exceptions établit certaines hypothèses concernant le code qui suit l'interface ABI pour Windows on ARM :
 

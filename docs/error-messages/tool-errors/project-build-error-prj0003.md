@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 00d101e62d49078ebfcfff9455497f30224b84fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e30a63ba48434196478b52283880864d3e4ae6ea
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359694"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450759"
 ---
 # <a name="project-build-error-prj0003"></a>Erreur de génération de projet PRJ0003
 
@@ -21,7 +21,7 @@ Le *ligne de commande* commande formée à partir de l’entrée dans le **Pages
 
 Les raisons possibles de cette erreur sont les suivantes :
 
-- Votre projet dépend d’ATL Server. À compter de Visual Studio 2008, ATL Server n’est plus inclus dans le cadre de Visual Studio, mais a été publié comme projet source partagé sur CodePlex. Pour télécharger les outils et le code source ATL Server, accédez à [outils et la bibliothèque ATL Server](http://go.microsoft.com/fwlink/p/?linkid=81979).
+- Votre projet dépend d’ATL Server. À compter de Visual Studio 2008, ATL Server n’est plus inclus dans le cadre de Visual Studio, mais a été publié comme projet source partagé sur CodePlex. Pour télécharger les outils et le code source ATL Server, accédez à [outils et la bibliothèque ATL Server](https://go.microsoft.com/fwlink/p/?linkid=81979).
 
 - Ressources système faibles. Fermez certaines applications pour résoudre ce problème.
 

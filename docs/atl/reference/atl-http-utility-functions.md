@@ -2,12 +2,12 @@
 title: Fonctions utilitaires ATL HTTP
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: ed01253c579cb6bb529c65e65b7e5ce8686e0b27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f26a23190f9358ff8913e35f5ed7274c8b274ea
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260868"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449964"
 ---
 # <a name="atl-http-utility-functions"></a>Fonctions utilitaires ATL HTTP
 
@@ -279,7 +279,7 @@ inline void SystemTimeToHttpDate(
 L’heure système à être obtenus sous forme d’une chaîne de format HTTP.
 
 *strTime*<br/>
-Une référence à une variable chaîne à l’heure de réception HTTP date tel que défini dans RFC 2616 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) et la norme RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt)).
+Une référence à une variable chaîne à l’heure de réception HTTP date tel que défini dans RFC 2616 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) et la norme RFC 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -5,12 +5,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: c3d6b50a57cab9cc63657949fceccebf4ea6b8c9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: b2cf5ac5c6a339917b87a25001be568a7caa2247
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220674"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450737"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Procédure : Modifier le Framework cible et un ensemble d’outils de plateforme
 
@@ -22,7 +22,7 @@ Vous pouvez modifier Visual Studio C++ paramètres ciblent des versions différe
 Lorsque vous changez le Framework cible, remplacez également l'ensemble d'outils de plateforme par une version qui prend en charge ce Framework. Par exemple, pour cibler le .NET Framework 4.5, vous devez utiliser un ensemble d’outils de plateforme compatible, comme Visual Studio 2015 (v140), Visual Studio 2013 (v120) ou Visual Studio 2012 (v110). Vous pouvez utiliser l'ensemble d'outils de plateforme **Windows7.1SDK** pour cibler les .NET Framework 2.0, 3.0, 3.5 et 4 et les plateformes x86, Itanium et x64.
 
 > [!NOTE]
->  Pour modifier l'ensemble d'outils de la plateforme cible, la version associée de Visual Studio ou le Kit de développement logiciel (SDK) Windows Platform doit être installé sur votre ordinateur. Par exemple, pour cibler la plateforme Itanium avec l’ensemble d’outils de plateforme **Kit de développement logiciel (SDK) Windows 7.1** , vous devez avoir installé [Microsoft Windows SDK pour Windows 7 et .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) . Vous pouvez cependant utiliser une autre version compatible de Visual Studio pour effectuer votre travail de développement, à condition de cibler la version du .NET Framework et l’ensemble d’outils de plateforme corrects.
+>  Pour modifier l'ensemble d'outils de la plateforme cible, la version associée de Visual Studio ou le Kit de développement logiciel (SDK) Windows Platform doit être installé sur votre ordinateur. Par exemple, pour cibler la plateforme Itanium avec l’ensemble d’outils de plateforme **Kit de développement logiciel (SDK) Windows 7.1** , vous devez avoir installé [Microsoft Windows SDK pour Windows 7 et .NET Framework 4 SP1](https://www.microsoft.com/download/details.aspx?id=8279) . Vous pouvez cependant utiliser une autre version compatible de Visual Studio pour effectuer votre travail de développement, à condition de cibler la version du .NET Framework et l’ensemble d’outils de plateforme corrects.
 
 Vous pouvez étendre davantage la plateforme cible en créant un ensemble d'outils de plateforme personnalisé. Pour plus d’informations, consultez [Multiciblage natif C++](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) sur le blog de Visual C++.
 
@@ -59,4 +59,4 @@ Vous pouvez étendre davantage la plateforme cible en créant un ensemble d'outi
 
 ## <a name="see-also"></a>Voir aussi
 
-[MSBuild sur la ligne de commande - C++](msbuild-visual-cpp.md)
+[MSBuild sur la ligne de commande – C++](msbuild-visual-cpp.md)
