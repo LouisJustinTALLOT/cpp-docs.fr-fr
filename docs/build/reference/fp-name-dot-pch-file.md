@@ -1,6 +1,7 @@
 ---
-title: /Fp (Nom de fichier .pch)
-ms.date: 11/04/2016
+title: /Fp (nom &period;fichier pch)
+description: Utilisez l’option de compilateur/FP pour spécifier le nom de fichier d’en-tête précompilé.
+ms.date: 05/31/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.PrecompiledHeaderFile
 - /fp
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-ms.openlocfilehash: 95506e17dff47e51cb7a3d83b629880f63422d26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e7faa934d14acb5d129173c5e0c7ee67d6caf2b
+ms.sourcegitcommit: 540fa2f5015de1adfa7b6bf823f6eb4ed5a6a4bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270990"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66460876"
 ---
-# <a name="fp-name-pch-file"></a>/Fp (Nom de fichier .pch)
+# <a name="fp-name-periodpch-file"></a>/Fp (nom &period;fichier pch)
 
 Fournit un nom de chemin d’accès pour un en-tête précompilé au lieu d’utiliser le nom de chemin d’accès par défaut.
 
@@ -32,39 +33,33 @@ Fournit un nom de chemin d’accès pour un en-tête précompilé au lieu d’ut
 
 ## <a name="remarks"></a>Notes
 
-Utilisez cette option avec [/Yc (créer un fichier d’en-tête précompilé)](yc-create-precompiled-header-file.md) ou [/Yu (utiliser un en-tête précompilé)](yu-use-precompiled-header-file.md) pour fournir un nom de chemin d’accès pour un en-tête précompilé au lieu d’utiliser le nom de chemin d’accès par défaut. Vous pouvez également utiliser **/FP** avec **/Yc** pour spécifier l’utilisation d’un fichier d’en-tête précompilé qui diffère la **/Yc**<em>filename</em> argument et le nom de base du fichier source.
+Utilisez le **/FP** option avec [/Yc (créer un fichier d’en-tête précompilé)](yc-create-precompiled-header-file.md) ou [/Yu (utiliser un en-tête précompilé)](yu-use-precompiled-header-file.md) pour spécifier le chemin d’accès et le nom de l’en-tête précompilé (PCH) fichier. Par défaut, le **/Yc** option permet de créer un nom de fichier d’en-tête Précompilé en utilisant le nom de base du fichier source et un *pch* extension.
 
-Si vous ne spécifiez pas une extension en tant que partie du nom de chemin d’accès, une extension .pch est supposée. Si vous spécifiez un répertoire sans nom de fichier, le nom de fichier par défaut est VC*x*0.pch, où *x* est la version principale de Visual C++ en cours d’utilisation.
-
-Vous pouvez également utiliser le **/FP** option avec **/Yu**.
+Si vous ne spécifiez pas une extension dans le cadre de la *pathname*, une extension de *pch* est supposé. Lorsque vous spécifiez un nom de répertoire à l’aide d’une barre oblique ( **/** ) à la fin de *pathname*, le nom de fichier par défaut est vc*version*0.pch, où  *version* est la version principale de l’ensemble d’outils de Visual Studio. Ce répertoire doit exister, ou erreur C1083 est générée.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Cliquez sur le dossier **C/C++** .
+1. Ouvrez le **propriétés de Configuration** > **C /C++**  > **en-têtes précompilés** page de propriétés.
 
-1. Cliquez sur le **en-têtes précompilés** page de propriétés.
-
-1. Modifier le **fichier d’en-tête précompilé** propriété.
+1. Modifier le **fichier de sortie d’en-tête précompilé** propriété.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 
-- Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>.
+- Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
-Si vous souhaitez créer un fichier d’en-tête précompilé pour une version de débogage de votre programme et que vous compilez les fichiers d’en-tête et le code source, vous pouvez spécifier une commande telles que :
+Pour créer un distinct nommé version du fichier d’en-tête précompilé pour la version debug de votre programme, vous pouvez spécifier une commande telle que :
 
-```
+```CMD
 CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP
 ```
 
-## <a name="example"></a>Exemple
+La commande suivante spécifie l’utilisation d’un fichier d’en-tête précompilé nommé MYPCH.pch. Le compilateur précompile le code source dans PROG.cpp jusqu'à la fin de MYAPP.h et place le code précompilé dans MYPCH.pch. Il utilise le contenu de MYPCH.pch et compile le reste de PROG.cpp pour créer un fichier .obj. La sortie de cet exemple est un fichier nommé PROG.exe.
 
-La commande suivante spécifie l’utilisation d’un fichier d’en-tête précompilé nommé MYPCH.pch. Le compilateur suppose que le code source dans PROG.cpp a été précompilé par MYAPP.h et que le code précompilé réside dans MYPCH.pch. Il utilise le contenu de MYPCH.pch et compile le reste de PROG.cpp pour créer un fichier .obj. La sortie de cet exemple est un fichier nommé PROG.exe.
-
-```
+```CMD
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 ```
 
