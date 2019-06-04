@@ -2,12 +2,12 @@
 title: Configurer un projet Linux C++ dans Visual Studio
 ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 84b9242ad5af79ed48d716fb5a35db56428e9a98
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 8e8bf2b12462a18c8a0e6c1c4d6677f18e2f0f34
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57808363"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451152"
 ---
 # <a name="configure-a-linux-project"></a>Configurer un projet Linux
 
@@ -31,7 +31,7 @@ Pour changer les paramètres relatifs à l’ordinateur Linux distant, configure
 
 - L’entrée **Répertoire racine de build distant** définit l’emplacement racine de l’endroit où le projet est généré sur l’ordinateur Linux distant.  Par défaut et en l’absence de modification, il s’agit de **~/projects**.
 
-- L’entrée **Répertoire de projet de build distant** définit l’emplacement où ce projet spécifique est généré sur l’ordinateur Linux distant.  Par défaut, il s’agit de **$(RemoteRootDir)/$(ProjectName)**, qui se développe jusqu’à un répertoire nommé d’après le projet actuel, sous le répertoire racine défini ci-dessus.
+- L’entrée **Répertoire de projet de build distant** définit l’emplacement où ce projet spécifique est généré sur l’ordinateur Linux distant.  Par défaut, il s’agit de **$(RemoteRootDir)/$(ProjectName)** , qui se développe jusqu’à un répertoire nommé d’après le projet actuel, sous le répertoire racine défini ci-dessus.
 
 > [!NOTE]
 > Pour changer les compilateurs C et C++ par défaut, ou l’éditeur de liens et le programme d’archivage utilisés pour générer le projet, utilisez les entrées appropriées dans les sections **C/C++ > Général** et **Éditeur de liens > Général**.  Vous pouvez les définir pour utiliser une version spécifique de GCC ou même le compilateur Clang, par exemple. Pour plus d’informations, consultez [C/C++, propriétés (Linux C++)](prop-pages/c-cpp-linux.md) et [Éditeur de liens, propriétés (Linux C++)](prop-pages/linker-linux.md).
@@ -40,7 +40,7 @@ Pour changer les paramètres relatifs à l’ordinateur Linux distant, configure
 
 **Visual Studio 2017 version 15.6 et antérieures :**<br/>
 Par défaut, Visual Studio n’inclut aucun fichier Include au niveau système de l’ordinateur Linux.  Par exemple, les éléments dans le répertoire **/usr/include** ne sont pas présents dans Visual Studio.
-Pour une prise en charge [IntelliSense](/visualstudio/ide/using-intellisense) complète, vous devez copier ces fichiers au même emplacement sur votre ordinateur de développement et faire pointer Visual Studio vers celui-ci.  Une option consiste à utiliser SCP (Secure Copy) pour copier les fichiers.  Sur Windows 10, vous pouvez utiliser [Bash sur Windows](https://msdn.microsoft.com/commandline/wsl/about) pour exécuter SCP.  Pour les versions précédentes de Windows, vous pouvez employer un outil tel que [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+Pour une prise en charge [IntelliSense](/visualstudio/ide/using-intellisense) complète, vous devez copier ces fichiers au même emplacement sur votre ordinateur de développement et faire pointer Visual Studio vers celui-ci.  Une option consiste à utiliser SCP (Secure Copy) pour copier les fichiers.  Sur Windows 10, vous pouvez utiliser [Bash sur Windows](https://msdn.microsoft.com/commandline/wsl/about) pour exécuter SCP.  Pour les versions précédentes de Windows, vous pouvez employer un outil tel que [PSCP (PuTTY Secure Copy)](https://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 Vous pouvez copier les fichiers en utilisant une commande semblable à la suivante :
 

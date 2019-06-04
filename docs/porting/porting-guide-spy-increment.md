@@ -2,12 +2,12 @@
 title: 'Guide du portage : Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bca5e912d28124e8d5d6e56cc234ef7bf9bceb89
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751372"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451126"
 ---
 # <a name="porting-guide-spy"></a>Guide du portage : Spy++
 
@@ -39,7 +39,7 @@ verstamp.h est l'un des fichiers qui n'a pas été trouvé dans Spy++. En effect
 1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\common.ver(212): error RC2104: undefined keyword or key name: VER_FILEFLAGSMASK
 ```
 
-Pour rechercher un symbole dans les fichiers Include disponibles, le plus simple est d’utiliser la commande **Rechercher dans les fichiers** (**Ctrl**+**Maj**+**F**) et de choisir **Dossiers Include Visual C++**. Nous avons trouvé le symbole dans ntverp.h. Nous avons remplacé le fichier include verstamp.h par ntverp.h, ce qui a résolu l'erreur.
+Pour rechercher un symbole dans les fichiers Include disponibles, le plus simple est d’utiliser la commande **Rechercher dans les fichiers** (**Ctrl**+**Maj**+**F**) et de choisir **Dossiers Include Visual C++** . Nous avons trouvé le symbole dans ntverp.h. Nous avons remplacé le fichier include verstamp.h par ntverp.h, ce qui a résolu l'erreur.
 
 ##  <a name="linker_output_settings"></a> Étape 3. Paramètre OutputFile de l'éditeur de liens
 
@@ -51,7 +51,7 @@ MSBuild signale que la propriété **Link.OutputFile** ne correspond pas aux val
 warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not match the Linker's OutputFile property value (...\spyxx\Debug\SpyHk55.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).warning MSB8012: TargetName(SpyxxHk) does not match the Linker's OutputFile property value (SpyHk55). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 ```
 
-**Link.OutputFile** est la sortie de build (EXE ou DLL, par exemple). Sa valeur est généralement construite à partir de `$(TargetDir)$(TargetName)$(TargetExt)`, qui indique respectivement le chemin, le nom de fichier et l’extension. C'est une erreur courante lors de la migration de projets de l'ancien outil de génération de projets Visual C++ (vcbuild.exe) vers le nouvel outil de génération (MSBuild.exe). Étant donné que ce nouvel outil de génération a été introduit dans Visual Studio 2010, vous risquez de rencontrer ce problème quand vous migrez un projet d'une version antérieure à 2010 vers la version 2010 ou ultérieure. Le principal problème est que l’Assistant Migration de projet ne met pas à jour la valeur **Link.OutputFile**, car il n’est pas toujours possible de déterminer cette valeur en fonction des autres paramètres du projet. Par conséquent, vous devez généralement la définir manuellement. Pour plus d’informations, consultez ce [billet](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx) du blog Visual C++.
+**Link.OutputFile** est la sortie de build (EXE ou DLL, par exemple). Sa valeur est généralement construite à partir de `$(TargetDir)$(TargetName)$(TargetExt)`, qui indique respectivement le chemin, le nom de fichier et l’extension. C'est une erreur courante lors de la migration de projets de l'ancien outil de génération de projets Visual C++ (vcbuild.exe) vers le nouvel outil de génération (MSBuild.exe). Étant donné que ce nouvel outil de génération a été introduit dans Visual Studio 2010, vous risquez de rencontrer ce problème quand vous migrez un projet d'une version antérieure à 2010 vers la version 2010 ou ultérieure. Le principal problème est que l’Assistant Migration de projet ne met pas à jour la valeur **Link.OutputFile**, car il n’est pas toujours possible de déterminer cette valeur en fonction des autres paramètres du projet. Par conséquent, vous devez généralement la définir manuellement. Pour plus d’informations, consultez ce [billet](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) du blog Visual C++.
 
 Dans cet exemple, la propriété **Link.OutputFile** dans le projet converti avait la valeur .\Debug\Spyxx.exe et la valeur .\Release\Spyxx.exe pour le projet Spy++, selon la configuration choisie. La meilleure solution consiste simplement à remplacer ces valeurs codées en dur par `$(TargetDir)$(TargetName)$(TargetExt)` pour **toutes les configurations**. Si cela ne résout pas le problème, vous pouvez personnaliser les valeurs à partir de là, ou modifier les propriétés **Répertoire de sortie**, **Nom cible** et **Extension cible** dans la section **Général** où ces valeurs sont définies. N’oubliez pas que, si la propriété que vous affichez utilise des macros, vous pouvez choisir **Modifier** dans la liste déroulante pour afficher une boîte de dialogue qui montre la chaîne finale obtenue après les substitutions de macros. Vous pouvez afficher toutes les macros disponibles et leurs valeurs actuelles en sélectionnant le bouton **Macros**.
 
@@ -241,7 +241,7 @@ La macro MOUT se résout en `*g_pmout`, qui est un objet de type `mstream`. La c
 1>  winmsgs.cpp(4612): note: while trying to match the argument list '(CMsgStream, const wchar_t [10])'
 ```
 
-Face à une telle quantité de définitions **d’opérateur <<**, ce type d’erreur peut être déroutant. En examinant plus attentivement les surcharges disponibles, nous nous rendons compte que la plupart d'entre elles ne sont pas utiles et, en regardant de plus près la définition de la classe `mstream`, nous déterminons que c'est la fonction suivante qui devrait être appelée ici.
+Face à une telle quantité de définitions **d’opérateur <<** , ce type d’erreur peut être déroutant. En examinant plus attentivement les surcharges disponibles, nous nous rendons compte que la plupart d'entre elles ne sont pas utiles et, en regardant de plus près la définition de la classe `mstream`, nous déterminons que c'est la fonction suivante qui devrait être appelée ici.
 
 ```cpp
 mstream& operator<<(LPTSTR psz)
