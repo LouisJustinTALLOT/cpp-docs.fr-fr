@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edad2ca391639868e7af1db6e13aaec66733f383
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160313"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503862"
 ---
 # <a name="colecontrol-class"></a>COleControl (classe)
 
@@ -1184,7 +1184,7 @@ Un descripteur pour les types de paramètres de l’événement.
 
 En général cette fonction ne doit pas appelée directement. Au lieu de cela, vous appellerez les fonctions de déclenchement d’événement dans la section de mappage d’événement de déclaration de classe de votre contrôle.
 
-Le *pbParams* argument est une liste séparée par des espaces de **VTS_**. Une ou plusieurs de ces valeurs, séparées par des espaces (et non par des virgules), spécifient la liste des paramètres de la fonction. Les valeurs possibles sont les suivantes :
+Le *pbParams* argument est une liste séparée par des espaces de **VTS_** . Une ou plusieurs de ces valeurs, séparées par des espaces (et non par des virgules), spécifient la liste des paramètres de la fonction. Les valeurs possibles sont les suivantes :
 
 |Symbole|Type de paramètre|
 |------------|--------------------|
@@ -2811,7 +2811,7 @@ DWORD qui décrit quel formulaire ou un aspect, d’un objet doit être affiché
 - Rectangle DVASPECT_TRANSPARENT couvrant toutes les parties transparentes ou irréguliers.
 
 *pRect*<br/>
-Pointe vers le [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) structure qui spécifie le rectangle dans lequel l’objet doit être dessiné. Ce paramètre contrôle le positionnement et l’étirement de l’objet.
+Pointe vers le [RECTL](/previous-versions/dd162907\(v=vs.85\)) structure qui spécifie le rectangle dans lequel l’objet doit être dessiné. Ce paramètre contrôle le positionnement et l’étirement de l’objet.
 
 ### <a name="return-value"></a>Valeur de retour
 

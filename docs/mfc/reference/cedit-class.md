@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 295a58a86f35fca3b8d25706857162facc9cb3ea
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164070"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503744"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,7 +181,7 @@ Si vous souhaitez gérer les messages de notification Windows envoyés par un co
 
 Chaque entrée de table des messages prend la forme suivante :
 
-  **ON_**_NOTIFICATION_**(** _id_**,** _memberFxn_ **)**
+  **ON_** _NOTIFICATION_ **(** _id_ **,** _memberFxn_ **)**
 
 où `id` Spécifie l’ID de fenêtre enfant du contrôle d’édition envoie la notification, et `memberFxn` est le nom de la fonction de membre parent que vous avez écrit pour gérer les notifications.
 
@@ -708,7 +708,7 @@ Spécifie le caractère à afficher au lieu du caractère saisi par l’utilisat
 
 ### <a name="remarks"></a>Notes
 
-Si vous créez le contrôle d’édition avec le style ES_PASSWORD, la DLL qui prend en charge le contrôle détermine le caractère de mot de passe par défaut. Le manifeste ou la [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) méthode détermine les DLL prend en charge le contrôle d’édition. Si user32.dll prend en charge le contrôle d’édition, le caractère de mot de passe par défaut est astérisque (« * », U + 002 a). Si le fichier comctl32.dll version 6 prend en charge le contrôle d’édition, le caractère par défaut est cercle noir (« ● », U + 25CF). Pour plus d’informations sur les DLL et la version prenant en charge les contrôles communs, consultez [interpréteur de commandes et les Versions de contrôles courants](https://msdn.microsoft.com/library/windows/desktop/bb776779).
+Si vous créez le contrôle d’édition avec le style ES_PASSWORD, la DLL qui prend en charge le contrôle détermine le caractère de mot de passe par défaut. Le manifeste ou la [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) méthode détermine les DLL prend en charge le contrôle d’édition. Si user32.dll prend en charge le contrôle d’édition, le caractère de mot de passe par défaut est astérisque (« * », U + 002 a). Si le fichier comctl32.dll version 6 prend en charge le contrôle d’édition, le caractère par défaut est cercle noir (« ● », U + 25CF). Pour plus d’informations sur les DLL et la version prenant en charge les contrôles communs, consultez [interpréteur de commandes et les Versions de contrôles courants](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\)).
 
 Cette méthode envoie le [EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar) message, qui est décrite dans le SDK Windows.
 
@@ -867,7 +867,7 @@ L’index de caractère est le nombre de caractères à partir du début du cont
 
 Cette fonction membre est traitée seulement par les contrôles d’édition de plusieurs lignes.
 
-Pour plus d’informations, consultez [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 

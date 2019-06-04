@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d386072b67568ecf58afd0853df2d7fbaeac68d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310434"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504566"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer, classe
 
@@ -473,7 +473,7 @@ L’identificateur du contrôle.
 Pointeur vers une variable booléenne qui reçoit une valeur de réussite/échec (fonction) (la valeur TRUE indique la réussite, FALSE indique un échec).
 
 *bSigned*<br/>
-Spécifie si la fonction doit examiner le texte pour un signe moins au début et à retourner une valeur entière signée, s’il en trouve. Si le *bSigned* paramètre a la valeur TRUE, en spécifiant que la valeur à récupérer est une valeur entière signée, convertir la valeur de retour pour une **int** type. Pour obtenir les informations d’erreur étendues, appelez [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Spécifie si la fonction doit examiner le texte pour un signe moins au début et à retourner une valeur entière signée, s’il en trouve. Si le *bSigned* paramètre a la valeur TRUE, en spécifiant que la valeur à récupérer est une valeur entière signée, convertir la valeur de retour pour une **int** type. Pour obtenir les informations d’erreur étendues, appelez [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -515,7 +515,7 @@ Spécifie la longueur maximale, en caractères, de la chaîne à copier vers la 
 
 Si la fonction réussit, la valeur de retour Spécifie le nombre de caractères copiés vers la mémoire tampon, non compris le caractère null de fin.
 
-Si la fonction échoue, la valeur de retour est égale à zéro. Pour obtenir les informations d’erreur étendues, appelez [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Si la fonction échoue, la valeur de retour est égale à zéro. Pour obtenir les informations d’erreur étendues, appelez [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus
 

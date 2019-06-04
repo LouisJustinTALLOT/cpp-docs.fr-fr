@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-ms.openlocfilehash: 6c8976c013d0114a3115d3b0bc38fa4bc6acb5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e594360cc6752a60bf2e07a1fb1d02041604d959
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261655"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503003"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Modification du contrôle ATL DHTML
 
@@ -35,7 +35,7 @@ L’Assistant contrôle ATL fournit un code de démarrage, vous pouvez générer
 
    [!code-cpp[NVC_ATL_COM#6](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_2.cpp)]
 
-1. Ajoutez une troisième méthode, `GoToURL`, à l’interface qui ne se termine pas dans « L’interface utilisateur. » Implémentez cette méthode en appelant [IWebBrowser2::Navigate](https://msdn.microsoft.com/library/aa752133.aspx), comme suit :
+1. Ajoutez une troisième méthode, `GoToURL`, à l’interface qui ne se termine pas dans « L’interface utilisateur. » Implémentez cette méthode en appelant [IWebBrowser2::Navigate](/previous-versions//aa752133\(v=vs.85\)), comme suit :
 
    [!code-cpp[NVC_ATL_COM#7](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_3.cpp)]
 

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8439e973c935108d645076bb7e2bfae7207e65d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245580"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503344"
 ---
 # <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY
 
@@ -39,7 +39,7 @@ Ces macros entrer des interfaces d’un objet dans son mappage COM afin qu’ils
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Identique à [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), sauf que le transfert de la requête recherchant les IID entraîne *punk*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Identique à [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), sauf si *punk* est NULL, il crée automatiquement l’agrégat décrit par le *clsid*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Identique à [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), sauf que le transfert de la requête recherchant les IID entraîne *punk*et si *punk* est NULL, créant automatiquement l’agrégat décrit par le *clsid*.|
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Entraîne l’appel de votre programme [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) lorsque l’interface spécifiée est interrogée pour.|
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Entraîne l’appel de votre programme [DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak) lorsque l’interface spécifiée est interrogée pour.|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Enregistre les données spécifiques à l’interface pour chaque instance.|
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Expose vos interfaces détachables.|
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Traite le mappage COM de la classe de base lorsque le traitement atteint cette entrée dans le mappage COM.|
@@ -243,7 +243,7 @@ Si la requête de l’interface échoue, le traitement de mappage COM continue.
 
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK
 
-Entraîne l’appel de votre programme [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) lorsque l’interface spécifiée est interrogée pour.
+Entraîne l’appel de votre programme [DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak) lorsque l’interface spécifiée est interrogée pour.
 
 ```
 COM_INTERFACE_ENTRY_BREAK(x)
@@ -328,7 +328,7 @@ Par exemple, dans le code suivant :
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-Notez que la première entrée de mappage COM doit être une interface sur l’objet contenant le mappage COM. Par conséquent, ne peut pas commencer vos entrées de mappage COM avec COM_INTERFACE_ENTRY_CHAIN, ce qui provoque le mappage COM d’un autre objet à rechercher au point où **COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** s’affiche dans le mappage COM de l’objet. Si vous souhaitez rechercher le mappage d’un autre objet COM tout d’abord, ajoutez une entrée de l’interface pour `IUnknown` à votre mappage COM, puis chaîner mappage COM de l’autre objet. Exemple :
+Notez que la première entrée de mappage COM doit être une interface sur l’objet contenant le mappage COM. Par conséquent, ne peut pas commencer vos entrées de mappage COM avec COM_INTERFACE_ENTRY_CHAIN, ce qui provoque le mappage COM d’un autre objet à rechercher au point où **COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **)** s’affiche dans le mappage COM de l’objet. Si vous souhaitez rechercher le mappage d’un autre objet COM tout d’abord, ajoutez une entrée de l’interface pour `IUnknown` à votre mappage COM, puis chaîner mappage COM de l’autre objet. Exemple :
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 

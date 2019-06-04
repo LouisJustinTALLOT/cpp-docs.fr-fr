@@ -1,5 +1,5 @@
 ---
-title: / vmb, /vmg-(méthode de représentation)
+title: /vmb, /vmg (Méthode de représentation)
 ms.date: 11/04/2016
 f1_keywords:
 - /vmb
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - representation method compiler options [C++]
 - /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
-ms.openlocfilehash: eac41de04ec883e7b5acf26596647f912b0b1d20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25d24d7f92537f16e36213b8a8fd7b945fda7f5a
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316741"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504298"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (Méthode de représentation)
 
@@ -41,7 +41,7 @@ Vous pouvez également utiliser [pointers_to_members](../../preprocessor/pointer
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 

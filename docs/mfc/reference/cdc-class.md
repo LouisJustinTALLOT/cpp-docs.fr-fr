@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a6b6c872963dbbdf991d013cceba66ffd20bac5c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222572"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504398"
 ---
 # <a name="cdc-class"></a>CDC (classe)
 
@@ -3220,7 +3220,7 @@ En cas de réussite, retourne le mode graphique actuel. Pour obtenir la liste de
 
 Retourne 0 en cas d’échec.
 
-Pour obtenir les informations d’erreur étendues, appelez [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Pour obtenir les informations d’erreur étendues, appelez [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Notes
 
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, la disposition des indicateurs pour le contexte de périphérique en cours. Sinon, GDI_ERROR. Pour des informations d’erreur étendues, appelez [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Pour obtenir la liste des indicateurs de mise en page, consultez [CDC::SetLayout](#setlayout).
+En cas de réussite, la disposition des indicateurs pour le contexte de périphérique en cours. Sinon, GDI_ERROR. Pour des informations d’erreur étendues, appelez [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Pour obtenir la liste des indicateurs de mise en page, consultez [CDC::SetLayout](#setlayout).
 
 ### <a name="remarks"></a>Notes
 
@@ -4012,7 +4012,7 @@ En cas de réussite, retourne une valeur différente de zéro.
 
 Retourne 0 en cas d’échec.
 
-Pour obtenir les informations d’erreur étendues, appelez [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Pour obtenir les informations d’erreur étendues, appelez [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Notes
 
@@ -4459,7 +4459,7 @@ En cas de réussite, retourne une valeur différente de zéro.
 
 Retourne 0 en cas d’échec.
 
-Pour obtenir les informations d’erreur étendues, appelez [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Pour obtenir les informations d’erreur étendues, appelez [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Notes
 
@@ -6003,7 +6003,7 @@ Spécifie le mode graphique. Pour obtenir la liste des valeurs que ce paramètre
 
 En cas de réussite, retourne l’ancien mode de graphiques.
 
-Retourne 0 en cas d’échec. Pour obtenir les informations d’erreur étendues, appelez [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Retourne 0 en cas d’échec. Pour obtenir les informations d’erreur étendues, appelez [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Notes
 
@@ -6032,7 +6032,7 @@ Indicateurs de contrôle de disposition de contexte de périphérique et de la b
 
 En cas de réussite, la disposition précédente du contexte de périphérique.
 
-En cas d’échec, GDI_ERROR. Pour obtenir les informations d’erreur étendues, appelez [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+En cas d’échec, GDI_ERROR. Pour obtenir les informations d’erreur étendues, appelez [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Notes
 
@@ -6657,7 +6657,7 @@ En cas de réussite, retourne une valeur différente de zéro.
 
 Retourne 0 en cas d’échec.
 
-Pour obtenir les informations d’erreur étendues, appelez [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Pour obtenir les informations d’erreur étendues, appelez [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Notes
 

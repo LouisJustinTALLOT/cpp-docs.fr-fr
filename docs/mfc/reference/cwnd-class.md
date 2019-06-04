@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451230"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504263"
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 
@@ -5607,7 +5607,7 @@ Valeur différente de zéro si la fonction aboutit. Il est 0 si une défaillance
 
 Une fenêtre verrouillée ne peut pas être déplacée. Une seule fenêtre peut être verrouillée à la fois. Pour déverrouiller une fenêtre verrouillée avec `LockWindowUpdate`, appelez [UnlockWindowUpdate](#unlockwindowupdate).
 
-Si une application avec une fenêtre verrouillée (ou toutes les fenêtres enfants verrouillé) appelle le [GetDC,](https://msdn.microsoft.com/library/windows/desktop/dd144871) [GetDCEx,](https://msdn.microsoft.com/library/windows/desktop/dd144873) ou [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) fonction Windows, la fonction appelée retourne un appareil contexte dont la région visible est vide. Cela se produit jusqu'à ce que l’application déverrouille la fenêtre en appelant le `UnlockWindowUpdate` fonction membre.
+Si une application avec une fenêtre verrouillée (ou toutes les fenêtres enfants verrouillé) appelle le [GetDC,](/windows/desktop/api/winuser/nf-winuser-getdc) [GetDCEx,](/windows/desktop/api/winuser/nf-winuser-getdcex) ou [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) fonction Windows, la fonction appelée retourne un appareil contexte dont la région visible est vide. Cela se produit jusqu'à ce que l’application déverrouille la fenêtre en appelant le `UnlockWindowUpdate` fonction membre.
 
 Bien que les mises à jour de la fenêtre sont verrouillés, le système effectue le suivi de rectangle englobant des opérations de dessins dans des contextes de périphérique associés à une fenêtre verrouillée. Lorsque le dessin est réactivé, ce rectangle englobant est invalidé dans la fenêtre verrouillée et de ses fenêtres enfants pour forcer une éventuelle [WM_PAINT](/windows/desktop/gdi/wm-paint) message pour mettre à jour de l’écran. Si aucun dessin se n’est produite pendant que les mises à jour de la fenêtre ont été verrouillés, aucune zone n’est invalidé.
 
@@ -10038,7 +10038,7 @@ afx_msg void OnUserChanged();
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode reçoit le [WM_USERCHANGED](https://msdn.microsoft.com/library/windows/desktop/ms632651) message de notification, qui est décrit dans le SDK Windows. Lorsque l’utilisateur ouvre ou ferme, le système d’exploitation met à jour les paramètres spécifiques à l’utilisateur. Le système envoie ce message immédiatement après la mise à jour les paramètres.
+Cette méthode reçoit le [WM_USERCHANGED](/windows/desktop/winmsg/wm-userchanged) message de notification, qui est décrit dans le SDK Windows. Lorsque l’utilisateur ouvre ou ferme, le système d’exploitation met à jour les paramètres spécifiques à l’utilisateur. Le système envoie ce message immédiatement après la mise à jour les paramètres.
 
 > [!NOTE]
 > Cette fonction membre est appelée par l’infrastructure pour permettre à votre application de traiter un message Windows. Les paramètres passés à votre fonction reflètent les paramètres reçus par l’infrastructure au moment où le message a été reçu. Si vous appelez l’implémentation de classe de base de cette fonction, cette implémentation utilise les paramètres passés initialement avec le message et non les paramètres que vous fournissez à la fonction.

@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcb2f354314a0b0d1220a1ecb1c0fa2b8a913d5e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372099"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504733"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl (classe)
 
@@ -503,7 +503,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez `CreateEx` au lieu de `Create` pour appliquer des styles étendus de Windows, spécifiés par la préface de style étendu Windows **WS_EX_**.
+Utilisez `CreateEx` au lieu de `Create` pour appliquer des styles étendus de Windows, spécifiés par la préface de style étendu Windows **WS_EX_** .
 
 ##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl
 
@@ -1122,7 +1122,7 @@ Dépend de la forme :
 
 ### <a name="remarks"></a>Notes
 
-Si vous utilisez la première forme, **fonction membre GetSelText (** `lpBuf` **)**, vous devez vous assurer que la mémoire tampon est suffisamment grande pour le texte qu’il reçoit. Appelez [fonction membre GetSel](#getsel) pour déterminer le nombre de caractères dans la sélection actuelle.
+Si vous utilisez la première forme, **fonction membre GetSelText (** `lpBuf` **)** , vous devez vous assurer que la mémoire tampon est suffisamment grande pour le texte qu’il reçoit. Appelez [fonction membre GetSel](#getsel) pour déterminer le nombre de caractères dans la sélection actuelle.
 
 Pour plus d’informations, consultez [EM_GETSELTEXT](/windows/desktop/Controls/em-getseltext) dans le SDK Windows.
 
@@ -1354,7 +1354,7 @@ L’index de caractère de la ligne spécifiée dans *nLigne* ou -1 si le numér
 
 L’index de caractère est le nombre de caractères à partir du début du contrôle RichEdit de la ligne spécifiée.
 
-Pour plus d’informations, consultez [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 

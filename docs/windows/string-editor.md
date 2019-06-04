@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: 47d5835356863383b32baffc4475e01a652e9856
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e596aa475f0fb08609a0772ecc3f8a302e849275
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387927"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504808"
 ---
 # <a name="string-editor-c"></a>Éditeur de chaînes (C++)
 
@@ -171,7 +171,6 @@ Win32
 ## <a name="see-also"></a>Voir aussi
 
 [Éditeurs de ressources](../windows/resource-editors.md)
-<!--
-[Strings](https://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)<br/>
-[About Strings](/windows/desktop/menurc/about-strings)<br/>
-[Customizing window layouts](/visualstudio/ide/customizing-window-layouts-in-visual-studio)-->
+[chaînes](/windows/desktop/menurc/strings)<br/>
+[À propos des chaînes](/windows/desktop/menurc/about-strings)<br/>
+[Personnalisation des dispositions de fenêtres](/visualstudio/ide/customizing-window-layouts-in-visual-studio)
