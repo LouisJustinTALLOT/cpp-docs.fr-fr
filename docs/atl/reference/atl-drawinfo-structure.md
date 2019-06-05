@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 70329d3b2c18c8cd8e94854f40ff971c0b39a8f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77ef56f73be1ed9ddfc63c459b6bab3ad4decb3f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261063"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503417"
 ---
 # <a name="atldrawinfo-structure"></a>Atl_drawinfo, Structure
 
@@ -60,7 +60,7 @@ Contexte d’informations pour l’appareil cible vers lequel pointe `ptd` à pa
 Le contexte de périphérique sur lequel dessiner. Pour un objet sans fenêtre, le `hdcDraw` membre ne figure dans la `MM_TEXT` mode de mappage avec ses coordonnées logiques mise en correspondance les coordonnées clientes de la fenêtre conteneur. En outre, le contexte de périphérique doit être dans le même état que celui normalement passé par un `WM_PAINT` message.
 
 `prcBounds`<br/>
-Pointeur vers un [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) structure qui spécifie le rectangle sur `hdcDraw` et dans lequel l’objet doit être dessiné. Ce membre contrôle le positionnement et l’étirement de l’objet. Ce membre doit être NULL pour dessiner un objet actif sur place sans fenêtre. Dans tous les autres cas, la valeur NULL n’est pas une valeur autorisée et doit aboutir à un `E_INVALIDARG` code d’erreur. Si le conteneur passe une valeur non NULL à un objet sans fenêtre, l’objet doit restituer l’aspect demandée dans le contexte de périphérique spécifié et le rectangle. Un conteneur peut demander ce à partir d’un objet sans fenêtre pour restituer une vue deuxième, non actif de l’objet ou pour imprimer l’objet.
+Pointeur vers un [RECTL](/previous-versions//dd162907\(v=vs.85\)) structure qui spécifie le rectangle sur `hdcDraw` et dans lequel l’objet doit être dessiné. Ce membre contrôle le positionnement et l’étirement de l’objet. Ce membre doit être NULL pour dessiner un objet actif sur place sans fenêtre. Dans tous les autres cas, la valeur NULL n’est pas une valeur autorisée et doit aboutir à un `E_INVALIDARG` code d’erreur. Si le conteneur passe une valeur non NULL à un objet sans fenêtre, l’objet doit restituer l’aspect demandée dans le contexte de périphérique spécifié et le rectangle. Un conteneur peut demander ce à partir d’un objet sans fenêtre pour restituer une vue deuxième, non actif de l’objet ou pour imprimer l’objet.
 
 `prcWBounds`<br/>
 Si `hdcDraw` est un contexte de périphérique de métafichier (consultez [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) dans le SDK Windows), il s’agit d’un pointeur vers un `RECTL` structure qui spécifie le rectangle englobant dans le métafichier sous-jacent. La structure rectangle contient l’étendue de la fenêtre et l’origine de la fenêtre. Ces valeurs sont utiles pour dessiner des métafichiers. Le rectangle indiqué par `prcBounds` est imbriqué au sein de cet `prcWBounds` rectangle ; elles se trouvent dans le même espace de coordonnées.

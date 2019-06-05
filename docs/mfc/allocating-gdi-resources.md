@@ -1,24 +1,24 @@
 ---
 title: Allocation de ressources GDI
-ms.date: 11/04/2016
+ms.date: 06/03/2019
 helpviewer_keywords:
 - resources [MFC], printing
 - GDI objects [MFC], allocating during printing
 - printing [MFC], allocating GDI resources
 ms.assetid: cef7e94d-5a27-4aea-a9ee-8369fc895d3a
-ms.openlocfilehash: 5f5f6c6585217393a6008fafa875a83e67ab8016
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: adfd8b19f683b82eec213890c8e1345e070ff3ec
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305001"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504632"
 ---
 # <a name="allocating-gdi-resources"></a>Allocation de ressources GDI
 
 Cet article explique comment allouer et libérer les objets GDI (Graphics Device Interface) Windows pour l'impression.
 
 > [!NOTE]
->  Pour plus d’informations, consultez la documentation du Kit de développement logiciel GDI + à : [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).
+>  Pour plus d’informations, consultez le [documentation du SDK GDI +](/windows/desktop/gdiplus/-gdiplus-gdi-start).
 
 Supposons que vous avez besoin d'utiliser des polices, des stylets ou d'autres objets GDI pour l'impression, mais pas pour l'affichage à l'écran. Compte tenu de la mémoire qu'ils demandent, il n'est pas judicieux d'allouer ces objets au démarrage de l'application. Quand l'application n'imprime pas un document, cette mémoire peut être utile à d'autres tâches. Il est préférable de les allouer au début de l'impression, puis de les supprimer à la fin.
 

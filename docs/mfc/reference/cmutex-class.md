@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c55da8a7692982fc18589fa69e9e2b0749cb6eb
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373635"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504189"
 ---
 # <a name="cmutex-class"></a>CMutex, classe
 
@@ -77,14 +77,14 @@ Spécifie si le thread créant la `CMutex` objet a initialement accès à la res
 Nom de l'objet `CMutex`. Si le mutex une autre portant le même nom existe, *le caractère* doit être fourni si l’objet doit être utilisé au-delà des limites de processus. Si **NULL**, le mutex sera sans nom. Si le nom correspond à un mutex existant, le constructeur crée quand même un `CMutex` objet qui fait référence à l’exclusion mutuelle de ce nom. Si le nom correspond à un objet de synchronisation existant qui n’est pas un mutex, la construction échoue.
 
 *lpsaAttribute*<br/>
-Attributs de sécurité de l’objet mutex. Pour obtenir une description complète de cette structure, consultez [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) dans le SDK Windows.
+Attributs de sécurité de l’objet mutex. Pour obtenir une description complète de cette structure, consultez [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) dans le SDK Windows.
 
 ### <a name="remarks"></a>Notes
 
 Pour accéder à ou libérer un `CMutex` d’objet, de créer un [CMultiLock](../../mfc/reference/cmultilock-class.md) ou [CSingleLock](../../mfc/reference/csinglelock-class.md) objet et appelez ses [verrou](../../mfc/reference/csinglelock-class.md#lock) et [Unlock](../../mfc/reference/csinglelock-class.md#unlock) fonctions membres. Si le `CMutex` objet est en cours d’utilisation autonome, appeler ses `Unlock` fonction membre pour le libérer.
 
 > [!IMPORTANT]
->  Après avoir créé le `CMutex` de l’objet, utilisez [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pour vous assurer que le mutex n’existait pas. Si le mutex n’existait inattendu, cela peut indiquer un processus non fiable est l’occupation et peut être ayant l’intention d’utiliser le mutex à des fins malveillantes. Dans ce cas, la procédure en termes de sécurité recommandée consiste à fermer le handle et continuer comme si une défaillance s’est produite lors de la création de l’objet.
+>  Après avoir créé le `CMutex` de l’objet, utilisez [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) pour vous assurer que le mutex n’existait pas. Si le mutex n’existait inattendu, cela peut indiquer un processus non fiable est l’occupation et peut être ayant l’intention d’utiliser le mutex à des fins malveillantes. Dans ce cas, la procédure en termes de sécurité recommandée consiste à fermer le handle et continuer comme si une défaillance s’est produite lors de la création de l’objet.
 
 ## <a name="see-also"></a>Voir aussi
 

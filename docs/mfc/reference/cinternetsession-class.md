@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d6d319a963fbc24e89bf8c4c0858cd80ec5a9d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345589"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503459"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession, classe
 
@@ -156,7 +156,7 @@ Indique les différentes options de mise en cache. La valeur par défaut est dé
 
 - Faire INTERNET_FLAG_DONT_CACHE met pas en cache les données, localement ou dans des serveurs de passerelle.
 
-- Télécharger INTERNET_FLAG_OFFLINE les opérations sont satisfaites via le cache persistant uniquement. Si l’élément n’existe pas dans le cache, un code d’erreur approprié est retourné. Cet indicateur peut être combiné avec l’opérateur de bits **ou** ( **&#124;**) opérateur.
+- Télécharger INTERNET_FLAG_OFFLINE les opérations sont satisfaites via le cache persistant uniquement. Si l’élément n’existe pas dans le cache, un code d’erreur approprié est retourné. Cet indicateur peut être combiné avec l’opérateur de bits **ou** ( **&#124;** ) opérateur.
 
 ### <a name="remarks"></a>Notes
 
@@ -258,7 +258,7 @@ La variable en spécifiant la taille de la *pstrCookieData* mémoire tampon. Si 
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne TRUE en cas de réussite, ou FALSE dans le cas contraire. Si l’appel échoue, appelez la fonction Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pour déterminer la cause de l’erreur. Les valeurs d’erreur suivants s’appliquent :
+Retourne TRUE en cas de réussite, ou FALSE dans le cas contraire. Si l’appel échoue, appelez la fonction Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) pour déterminer la cause de l’erreur. Les valeurs d’erreur suivants s’appliquent :
 
 - ERROR_NO_MORE_ITEMS il n’existe aucun cookie pour l’URL spécifiée et tous ses parents.
 
@@ -536,7 +536,7 @@ Le pointeur qui `OpenURL` retourne dépend *pstrURL*du type de service. Le table
 
 ### <a name="remarks"></a>Notes
 
-Le paramètre *dwFlags* doit inclure INTERNET_FLAG_TRANSFER_ASCII ou INTERNET_FLAG_TRANSFER_BINARY, mais pas les deux. Les indicateurs restants peuvent être combinés avec l’opérateur de bits **ou** opérateur ( **&#124;**).
+Le paramètre *dwFlags* doit inclure INTERNET_FLAG_TRANSFER_ASCII ou INTERNET_FLAG_TRANSFER_BINARY, mais pas les deux. Les indicateurs restants peuvent être combinés avec l’opérateur de bits **ou** opérateur ( **&#124;** ).
 
 `OpenURL`, qui encapsule la fonction Win32 `InternetOpenURL`, permet de téléchargement uniquement, récupérer et lire les données à partir d’un serveur Internet. `OpenURL` n’autorisant aucune manipulation de fichier sur un emplacement distant, il ne nécessite aucune [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) objet.
 
@@ -616,11 +616,11 @@ Indique les différentes options de mise en cache. La valeur par défaut est dé
 
 - Faire INTERNET_FLAG_DONT_CACHE met pas en cache les données, localement ou dans des serveurs de passerelle.
 
-- Télécharger INTERNET_FLAG_OFFLINE les opérations sont satisfaites via le cache persistant uniquement. Si l’élément n’existe pas dans le cache, un code d’erreur approprié est retourné. Cet indicateur peut être combiné avec l’opérateur de bits **ou** ( **&#124;**) opérateur.
+- Télécharger INTERNET_FLAG_OFFLINE les opérations sont satisfaites via le cache persistant uniquement. Si l’élément n’existe pas dans le cache, un code d’erreur approprié est retourné. Cet indicateur peut être combiné avec l’opérateur de bits **ou** ( **&#124;** ) opérateur.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si l’opération a réussi, la valeur TRUE est retournée. Si une erreur s’est produite, la valeur FALSE est retournée. Si l’appel échoue, la fonction Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelée pour déterminer la cause de l’erreur.
+Si l’opération a réussi, la valeur TRUE est retournée. Si une erreur s’est produite, la valeur FALSE est retournée. Si l’appel échoue, la fonction Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) peut être appelée pour déterminer la cause de l’erreur.
 
 ## <a name="see-also"></a>Voir aussi
 

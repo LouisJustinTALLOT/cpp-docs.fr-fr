@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-ms.openlocfilehash: 800c38c15e4ec8028fba9188d75e49be7ca51146
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 569a24fd08801de952e998f772afbc3478096628
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274891"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503146"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>Ipersistpropertybagimpl, classe
 
@@ -50,9 +50,9 @@ Votre classe, dérivée de `IPersistPropertyBagImpl`.
 
 ## <a name="remarks"></a>Notes
 
-Le [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) interface permet à un objet enregistrer ses propriétés dans un sac de propriétés fourni par le client. Classe `IPersistPropertyBagImpl` fournit une implémentation par défaut de cette interface et implémente `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.
+Le [IPersistPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768205\(v=vs.85\)) interface permet à un objet enregistrer ses propriétés dans un sac de propriétés fourni par le client. Classe `IPersistPropertyBagImpl` fournit une implémentation par défaut de cette interface et implémente `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.
 
-`IPersistPropertyBag` fonctionne en association avec [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) et [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Ces deux interfaces ce dernier doivent être implémentées par le client. Via `IPropertyBag`, le client enregistre et charge les propriétés individuelles de l’objet. Via `IErrorLog`, l’objet et le client peuvent signaler toutes les erreurs rencontrées.
+`IPersistPropertyBag` fonctionne en association avec [IPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768196\(v=vs.85\)) et [IErrorLog](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768231\(v=vs.85\)). Ces deux interfaces ce dernier doivent être implémentées par le client. Via `IPropertyBag`, le client enregistre et charge les propriétés individuelles de l’objet. Via `IErrorLog`, l’objet et le client peuvent signaler toutes les erreurs rencontrées.
 
 **Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)
 
@@ -92,7 +92,7 @@ Retourne S_OK.
 
 ### <a name="remarks"></a>Notes
 
-Consultez [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) dans le Kit de développement logiciel Windows.
+Consultez [IPersistPropertyBag::InitNew](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768204\(v=vs.85\)) dans le Kit de développement logiciel Windows.
 
 ##  <a name="load"></a>  IPersistPropertyBagImpl::Load
 
@@ -106,7 +106,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 
 ATL utilise le mappage des propriétés de l’objet à récupérer ces informations.
 
-Consultez [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) dans le Kit de développement logiciel Windows.
+Consultez [IPersistPropertyBag::Load](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768206\(v=vs.85\)) dans le Kit de développement logiciel Windows.
 
 ##  <a name="save"></a>  IPersistPropertyBagImpl::Save
 
@@ -123,7 +123,7 @@ STDMETHOD(Save)(
 
 ATL utilise le mappage des propriétés de l’objet pour stocker ces informations. Par défaut, cette méthode enregistre toutes les propriétés, quelle que soit la valeur de *fSaveAllProperties*.
 
-Consultez [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) dans le Kit de développement logiciel Windows.
+Consultez [IPersistPropertyBag::Save](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768207\(v=vs.85\)) dans le Kit de développement logiciel Windows.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe4994b91813e2965972b47c838ddaf5333cc5f0
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385363"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503772"
 ---
 # <a name="cfiledialog-class"></a>Classe CFileDialog
 
@@ -512,7 +512,7 @@ void ApplyOFNToShellDialog();
 
 ### <a name="remarks"></a>Notes
 
-Dans les versions de Windows avant Windows Vista, le membre [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) structure de données a été soit constamment synchronisée avec l’état de la `CFileDialog`. Toute modification apportée à la [m_ofn](#m_ofn) variable de membre ont été immédiatement répercutées dans l’état de la boîte de dialogue. En outre, les modifications apportées à l’état de la boîte de dialogue Mettre à jour immédiatement la `m_ofn` variable membre.
+Dans les versions de Windows avant Windows Vista, le membre [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) structure de données a été soit constamment synchronisée avec l’état de la `CFileDialog`. Toute modification apportée à la [m_ofn](#m_ofn) variable de membre ont été immédiatement répercutées dans l’état de la boîte de dialogue. En outre, les modifications apportées à l’état de la boîte de dialogue Mettre à jour immédiatement la `m_ofn` variable membre.
 
 Dans Windows Vista ou version ultérieure, les valeurs dans le `m_ofn` variable de membre et l’état de la `CFileDialog` n’est pas garanti pour être synchronisé. Cette fonction force l’état de la `CFileDialog` à mettre à jour pour correspondre à la `m_ofn` structure. Windows appelle cette fonction automatiquement lors de la [CFileDialog::DoModal](#domodal).
 
@@ -1626,7 +1626,7 @@ void UpdateOFNFromShellDialog();
 
 ### <a name="remarks"></a>Notes
 
-Dans les versions de Windows avant Windows Vista, le membre [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) structure de données a été soit constamment synchronisée avec l’état de la `CFileDialog`. Toute modification apportée à la [m_ofn](#m_ofn) variable membre directement affecté l’état de la boîte de dialogue. En outre, les modifications apportées à l’état de la boîte de dialogue immédiatement mise à jour la variable de membre m_ofn.
+Dans les versions de Windows avant Windows Vista, le membre [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) structure de données a été soit constamment synchronisée avec l’état de la `CFileDialog`. Toute modification apportée à la [m_ofn](#m_ofn) variable membre directement affecté l’état de la boîte de dialogue. En outre, les modifications apportées à l’état de la boîte de dialogue immédiatement mise à jour la variable de membre m_ofn.
 
 Dans Windows Vista ou version ultérieure, le `m_ofn` structure de données n’est pas automatiquement mis à jour. Pour garantir l’exactitude des données dans le `m_ofn` variable de membre, vous devez appeler la `UpdateOFNFromShellDialog` (fonction) avant d’accéder aux données. Windows appelle cette fonction automatiquement lors du traitement de [IFileDialog::OnFileOK](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
 

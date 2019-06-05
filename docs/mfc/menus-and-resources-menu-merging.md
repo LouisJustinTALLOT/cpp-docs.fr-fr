@@ -10,12 +10,12 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f7af7007e72cb8e01022c81a244fc70ba52a5cc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225537"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504820"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menus et ressources : Fusion de menus
 
@@ -29,9 +29,7 @@ Les sujets abordés dans cet article sont les suivantes :
 
 ##  <a name="_core_menu_layouts"></a> Disposition des menus
 
-La première étape consiste à coordonner la disposition des menus. Pour plus d’informations, consultez le **la création du Menu** section [considérations sur la programmation Menu](https://msdn.microsoft.com/library/ms647557.aspx) dans le SDK Windows.
-
-Applications de conteneur doivent créer un nouveau menu à être utilisé uniquement quand des éléments incorporés sont activés sur place. Au minimum, ce menu doit être composé des éléments suivants, dans l’ordre indiqué :
+La première étape consiste à coordonner la disposition des menus. Applications de conteneur doivent créer un nouveau menu à être utilisé uniquement quand des éléments incorporés sont activés sur place. Au minimum, ce menu doit être composé des éléments suivants, dans l’ordre indiqué :
 
 1. Menu fichier identique à celui utilisé lorsque les fichiers sont ouverts. (Généralement aucun autre élément de menu n’est placés avant l’élément suivant.)
 

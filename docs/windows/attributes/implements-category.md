@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: beca804fae8d6e82b4664102b39d76a23e66ca59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbd859018210d3c972ae9d4b0e9f659d96d95aab
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409406"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504219"
 ---
 # <a name="implementscategory"></a>implements_category
 
@@ -30,7 +30,7 @@ L’ID de la catégorie implémentée.
 
 ## <a name="remarks"></a>Notes
 
-Le **implements_category** C++ attribut spécifie les catégories de composant implémentés par la classe cible. Pour cela, la création d’un mappage de catégorie et en ajoutant des entrées distinctes spécifiées par le **implements_category** attribut. Pour plus d’informations, consultez [quelles sont les catégories de composants et comment faire leur travail ?](https://msdn.microsoft.com/library/windows/desktop/ms694322).
+Le **implements_category** C++ attribut spécifie les catégories de composant implémentés par la classe cible. Pour cela, la création d’un mappage de catégorie et en ajoutant des entrées distinctes spécifiées par le **implements_category** attribut. Pour plus d’informations, consultez [catégories de composants and How They Work](/windows/desktop/com/component-categories-and-how-they-work).
 
 Cet attribut exige que l’attribut [coclass](coclass.md), [progid](progid.md)ou [vi_progid](vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliquée, `vi_progid` et `coclass` sont également appliquées.
 
@@ -60,7 +60,7 @@ class CMyClass {};
 |**S'applique à**|**class**, **struct**|
 |**Renouvelable**|Oui|
 |**Attributs requis**|Une des opérations suivantes : `coclass`, `progid`, ou `vi_progid`|
-|**Attributs non valides**|Aucun.|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

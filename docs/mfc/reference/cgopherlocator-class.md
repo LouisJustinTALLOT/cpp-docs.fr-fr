@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CGopherLocator [MFC], CGopherLocator
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
-ms.openlocfilehash: 79adbf126438c7d9f2884987c53b573991f92cf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f25273f1d982092adc8b8010cc60818e7c0e24a2
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205981"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503669"
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator, classe
 
@@ -102,7 +102,7 @@ Une référence à une valeur DWORD qui recevra le type de localisateur. Consult
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelée pour déterminer la cause de l’erreur.
+Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) peut être appelée pour déterminer la cause de l’erreur.
 
 ### <a name="remarks"></a>Notes
 

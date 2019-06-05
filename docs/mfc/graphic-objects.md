@@ -41,19 +41,19 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: 58ecf680d64f39ab61589a0ad668c15d1a9cd68c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3058bc5793a7766b0a6849ba77f0533f0bbbcef6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359060"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503805"
 ---
 # <a name="graphic-objects"></a>Objets graphiques
 
 Windows propose divers outils de dessin à utiliser dans des contextes de périphériques. On trouve des stylets pour tracer des lignes, des pinceaux pour remplir des intérieurs et des polices pour dessiner du texte. MFC propose des classes d'objets graphiques équivalentes aux outils de dessin de Windows. Le tableau ci-dessous présente les classes disponibles et les types de handle GDI (Graphics Device Interface) Windows équivalents.
 
 > [!NOTE]
->  Pour plus d’informations, consultez la documentation du Kit de développement logiciel GDI + à : [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).
+>  Pour plus d’informations, consultez le [documentation du SDK GDI +](/windows/desktop/gdiplus/-gdiplus-gdi-start).
 
 Cet article explique l'utilisation de ces classes d'objets graphiques :
 

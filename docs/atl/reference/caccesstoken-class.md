@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: 0b98df740b751d019c9b2852d682f61a51384818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce5c29c2399fd47bdb1ad0135257b41617094aa9
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260725"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503383"
 ---
 # <a name="caccesstoken-class"></a>Caccesstoken, classe
 
@@ -246,7 +246,7 @@ Pointeur vers le nouveau `CAccessToken` objet.
 Spécifie les droits d’accès demandé pour le nouveau jeton. La valeur par défaut, MAXIMUM_ALLOWED, demande tous les droits d’accès qui sont valides pour l’appelant. Consultez [droits d’accès et des masques d’accès](/windows/desktop/SecAuthZ/access-rights-and-access-masks) plus on droits d’accès.
 
 *pTokenAttributes*<br/>
-Pointeur vers un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui spécifie un descripteur de sécurité pour le nouveau jeton et détermine si les processus enfants peuvent hériter du jeton. Si *pTokenAttributes* est NULL, le jeton Obtient un descripteur de sécurité par défaut et le handle ne peut pas être hérité.
+Pointeur vers un [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) structure qui spécifie un descripteur de sécurité pour le nouveau jeton et détermine si les processus enfants peuvent hériter du jeton. Si *pTokenAttributes* est NULL, le jeton Obtient un descripteur de sécurité par défaut et le handle ne peut pas être hérité.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -295,10 +295,10 @@ Spécifie des indicateurs supplémentaires qui contrôlent la classe de priorit�
 Si la valeur est TRUE, le profil utilisateur est chargé avec [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
 
 *pProcessAttributes*<br/>
-Pointeur vers un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui spécifie un descripteur de sécurité pour le nouveau processus et détermine si les processus enfants peuvent hériter le handle retourné. Si *pProcessAttributes* est NULL, le processus obtient un descripteur de sécurité par défaut et le handle ne peut pas être hérité.
+Pointeur vers un [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) structure qui spécifie un descripteur de sécurité pour le nouveau processus et détermine si les processus enfants peuvent hériter le handle retourné. Si *pProcessAttributes* est NULL, le processus obtient un descripteur de sécurité par défaut et le handle ne peut pas être hérité.
 
 *pThreadAttributes*<br/>
-Pointeur vers un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui spécifie un descripteur de sécurité pour le nouveau thread et détermine si les processus enfants peuvent hériter le handle retourné. Si *pThreadAttributes* est NULL, le thread obtient un descripteur de sécurité par défaut et le handle ne peut pas être hérité.
+Pointeur vers un [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) structure qui spécifie un descripteur de sécurité pour le nouveau thread et détermine si les processus enfants peuvent hériter le handle retourné. Si *pThreadAttributes* est NULL, le thread obtient un descripteur de sécurité par défaut et le handle ne peut pas être hérité.
 
 *bInherit*<br/>
 Indique si le nouveau processus hérite des handles du processus appelant. Si la valeur est TRUE, chaque handle ouvert peut être hérité dans le processus appelant est héritée par le nouveau processus. Handles hérités ont les mêmes privilèges d’accès et la valeur en tant que les handles d’origine.

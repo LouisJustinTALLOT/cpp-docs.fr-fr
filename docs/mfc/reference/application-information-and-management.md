@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 84d11b5c2d456a55e09b8512a3c0af06409939e8
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: b106a8874d1b0243f408a6c6c7311a9ce791e019
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612284"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504494"
 ---
 # <a name="application-information-and-management"></a>Informations sur l'application et gestion
 
@@ -98,7 +98,7 @@ Spécifie un indicateur supplémentaire qui contrôle la création du thread. Ce
 - **0** démarrer le thread immédiatement après sa création.
 
 *lpSecurityAttrs*<br/>
-Pointe vers un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui spécifie les attributs de sécurité pour le thread. Si NULL, les mêmes attributs de sécurité que le thread de création seront utilisés. Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.
+Pointe vers un [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) structure qui spécifie les attributs de sécurité pour le thread. Si NULL, les mêmes attributs de sécurité que le thread de création seront utilisés. Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -110,7 +110,7 @@ La première forme de `AfxBeginThread` crée un thread de travail. Le deuxième 
 
 `AfxBeginThread` Crée un `CWinThread` objet, appelle sa [CreateThread](../../mfc/reference/cwinthread-class.md#createthread) pour démarrer l’exécution du thread de fonction et retourne un pointeur vers le thread. S’assurer que tous les objets sont libérés correctement doit échouer de n’importe quelle partie de la création, les vérifications sont effectuées tout au long de la procédure. Pour terminer le thread, appelez [AfxEndThread](#afxendthread) à partir de dans le thread ou le retour de la fonction de contrôle du thread actif.
 
-Le multithreading doit être activé par l’application ; Sinon, cette fonction échoue. Pour plus d’informations sur l’activation du multithreading, consultez [/MD, / MT, /LD (utiliser la bibliothèque Runtime)](../../build/reference/md-mt-ld-use-run-time-library.md) sous *Options du compilateur Visual C++*.
+Le multithreading doit être activé par l’application ; Sinon, cette fonction échoue. Pour plus d’informations sur l’activation du multithreading, consultez [/MD, / MT, /LD (utiliser la bibliothèque Runtime)](../../build/reference/md-mt-ld-use-run-time-library.md) sous *Options du compilateur Visual C++* .
 
 Pour plus d’informations sur `AfxBeginThread`, consultez les articles [Multithreading : Création de Threads de travail](../../parallel/multithreading-creating-worker-threads.md) et [Multithreading : Création de Threads d’Interface utilisateur](../../parallel/multithreading-creating-user-interface-threads.md).
 
@@ -648,7 +648,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Paramètres
 
 *nClassStyle*<br/>
-Spécifie le style de classe Windows ou une combinaison de styles, créée à l’aide de l’opération de bits OR ( **&#124;**) opérateur, pour la classe de fenêtre. Pour obtenir la liste des styles de classe, consultez le [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) structure dans le SDK Windows. Si NULL, les valeurs par défaut seront définies comme suit :
+Spécifie le style de classe Windows ou une combinaison de styles, créée à l’aide de l’opération de bits OR ( **&#124;** ) opérateur, pour la classe de fenêtre. Pour obtenir la liste des styles de classe, consultez le [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) structure dans le SDK Windows. Si NULL, les valeurs par défaut seront définies comme suit :
 
 - Définit le style de la souris sur CS_DBLCLKS, qui envoie des messages à la procédure de fenêtre de double lorsque l’utilisateur double-clique sur la souris.
 

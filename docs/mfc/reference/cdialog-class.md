@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23d170cf023374fe61e13d907e3c3466c0352fe6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168321"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504440"
 ---
 # <a name="cdialog-class"></a>CDialog (classe)
 
@@ -276,7 +276,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un **int** valeur qui spécifie la valeur de la *%nrésultat* paramètre qui a été transmis à la [CDialog::EndDialog](#enddialog) fonction membre, ce qui est utilisée pour fermer la boîte de dialogue. La valeur de retour est -1 si la fonction Impossible de créer la boîte de dialogue, ou IDABORT si une autre erreur s’est produite, auquel cas la fenêtre de sortie contiendra des informations d’erreur à partir de [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Un **int** valeur qui spécifie la valeur de la *%nrésultat* paramètre qui a été transmis à la [CDialog::EndDialog](#enddialog) fonction membre, ce qui est utilisée pour fermer la boîte de dialogue. La valeur de retour est -1 si la fonction Impossible de créer la boîte de dialogue, ou IDABORT si une autre erreur s’est produite, auquel cas la fenêtre de sortie contiendra des informations d’erreur à partir de [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Notes
 

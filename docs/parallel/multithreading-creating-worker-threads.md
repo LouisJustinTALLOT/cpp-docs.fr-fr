@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-ms.openlocfilehash: f36e02d1ba6074a7ec8203bea761b3528a120162
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38757337b1bfe5c7994f9a9f26aad2526aa0279c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212825"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504576"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>Multithreading : Création de Threads de travail dans MFC
 
@@ -43,7 +43,7 @@ Il existe deux versions surchargées de `AfxBeginThread`: un qui peut seulement 
 
 - (Facultatif) CREATE_SUSPENDED si vous souhaitez que le thread peut être créé dans un état suspendu. La valeur par défaut est 0, ou démarrez le thread normalement.
 
-- (Facultatif) Les attributs de sécurité souhaité. La valeur par défaut est le même accès que le thread parent. Pour plus d’informations sur le format de ces informations de sécurité, consultez [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) dans le SDK Windows.
+- (Facultatif) Les attributs de sécurité souhaité. La valeur par défaut est le même accès que le thread parent. Pour plus d’informations sur le format de ces informations de sécurité, consultez [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) dans le SDK Windows.
 
 `AfxBeginThread` Crée et initialise un `CWinThread` objet pour vous, il démarre et retourne son adresse afin de vous y référer ultérieurement. S’assurer que tous les objets sont libérés correctement doit échouer de n’importe quelle partie de la création, les vérifications sont effectuées tout au long de la procédure.
 
