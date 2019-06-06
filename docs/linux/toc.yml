@@ -1,0 +1,41 @@
+- name: Documentation de Linux avec Visual Studio C++
+  href: index.md
+- name: 'Télécharger, installer et configurer la charge de travail Développement Linux'
+  href: download-install-and-setup-the-linux-development-workload.md
+- name: Configurer un projet Linux
+  href: configure-a-linux-project.md
+- name: Configurer un projet CMake Linux
+  href: cmake-linux-project.md
+- name: Créer un projet Linux
+  href: create-a-new-linux-project.md
+- name: Se connecter à un ordinateur Linux distant
+  href: connect-to-your-remote-linux-computer.md
+- name: 'Déployer, exécuter et déboguer un projet Linux'
+  href: deploy-run-and-debug-your-linux-project.md
+- name: "Tutoriel\_: Créer des projets multiplateformes C++ dans Visual Studio"
+  href: ../build/get-started-linux-cmake.md
+- name: Informations de référence sur les pages de propriétés d’un projet Linux
+  expanded: false
+  items:
+    - name: Informations de référence sur les pages de propriétés d’un projet Linux
+      href: prop-pages-linux.md
+    - name: 'Général, propriétés (Linux)'
+      href: prop-pages/general-linux.md
+    - name: 'Débogage, propriétés (Linux)'
+      href: prop-pages/debugging-linux.md
+    - name: 'Répertoires VC++, propriétés (Linux)'
+      href: prop-pages/directories-linux.md
+    - name: 'Copier les sources, propriétés (Linux)'
+      href: prop-pages/copy-sources-project.md
+    - name: 'C/C++, propriétés (Linux)'
+      href: prop-pages/c-cpp-linux.md
+    - name: 'Éditeur de liens, propriétés (Linux)'
+      href: prop-pages/linker-linux.md
+    - name: 'Événement de build, propriétés (Linux)'
+      href: prop-pages/build-events-linux.md
+    - name: 'Étape de build personnalisée, propriétés (Linux)'
+      href: prop-pages/custom-build-step-linux.md
+    - name: 'Projet Makefile, propriétés (Linux)'
+      href: prop-pages/makefile-linux.md
+    - name: 'Archive distante, propriétés (Linux)'
+      href: prop-pages/remote-ar-linux.md
