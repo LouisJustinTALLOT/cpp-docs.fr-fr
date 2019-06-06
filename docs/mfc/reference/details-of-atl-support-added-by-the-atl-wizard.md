@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
-ms.openlocfilehash: 0b849ffb585ef99512cc68e1c734dc5b3a87d507
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2651a83c50b03dfffd1ac0238b6c6d0a61888c88
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323318"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741558"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Détails de la prise en charge ATL ajoutée par l'Assistant ATL
 
@@ -37,4 +37,4 @@ Lorsque vous ajoutez la prise en charge ATL à un projet DLL MFC, vous verrez de
 [Ajout d’une variable membre](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Substitution d’une fonction virtuelle](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestionnaire de messages MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Parcours de la structure de classe](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Parcours de la structure de classe](../../ide/navigate-code-cpp.md)
