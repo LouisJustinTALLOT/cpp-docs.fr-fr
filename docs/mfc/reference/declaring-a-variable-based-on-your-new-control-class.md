@@ -8,12 +8,12 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-ms.openlocfilehash: b3b1a168619c1c111db3e71e1a9562d441cc710d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d550b80beb124f3d8ec36ba81dad1a9ca7e9fa15
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323006"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741619"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Déclaration d'une variable basée sur votre nouvelle classe de contrôle
 
@@ -52,4 +52,4 @@ Une fois que vous avez créé une classe de contrôle MFC, vous pouvez déclarer
 [Ajout d’une variable membre](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Substitution d’une fonction virtuelle](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestionnaire de messages MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Parcours de la structure de classe](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Parcours de la structure de classe](../../ide/navigate-code-cpp.md)

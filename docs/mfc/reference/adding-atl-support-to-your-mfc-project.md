@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 2870bf70492dc09d1a0af3664d1a819aec354b92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f75ffd09da1502e5f1488dbce0d8d2b9623d396
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296707"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741727"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>Ajout de la prise en charge ATL à votre projet MFC
 
@@ -28,7 +28,7 @@ Si vous avez déjà créé une application basée sur MFC, puis vous pouvez ajou
 
 1. Dans l’Explorateur de solutions, cliquez sur le projet auquel vous souhaitez ajouter la prise en charge ATL.
 
-1. Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **ajouter une classe**.
+1. Dans le menu contextuel, cliquez sur **Ajouter**, puis cliquez sur **Ajouter une classe**.
 
 1. Sélectionnez le **ajouter la prise en charge ATL au projet MFC** icône.
 
@@ -47,4 +47,4 @@ Pour plus d’informations sur la façon dont l’ajout de prise en charge ATL m
 [Ajout d’une variable membre](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Substitution d’une fonction virtuelle](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestionnaire de messages MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Parcours de la structure de classe](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Parcours de la structure de classe](../../ide/navigate-code-cpp.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - messages [MFC], reflected
 - message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
-ms.openlocfilehash: 250d1a838787d1ace682c084bdceeb0e1e6d3c92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 970dd7072cb8391d76d39536e442d5aab8e0f61d
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322993"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741597"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Définition d'un gestionnaire de messages pour un message réfléchi
 
@@ -56,4 +56,4 @@ Pour créer un [contrôle ActiveX](../../mfc/activex-controls-on-the-internet.md
 [Ajout d’une variable membre](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Substitution d’une fonction virtuelle](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestionnaire de messages MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Parcours de la structure de classe](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Parcours de la structure de classe](../../ide/navigate-code-cpp.md)
