@@ -49,7 +49,7 @@ où :
 
   - **\[db_column]** lie chacune des variables de membres à une colonne dans un ensemble de lignes.
 
-  - **\[bindto]** (same as **\[db_column]**).
+  - **\[bindto]** (same as **\[db_column]** ).
 
   - **\[dans]** lie les variables de membre en tant que paramètres d’entrée.
 
@@ -97,7 +97,7 @@ TCHAR m_state[3] = 'CA';
 
 Si vous spécifiez une valeur pour *liaisons*, **db_command** analysera la valeur associée et n’analyse pas le \[ *bindtype*] paramètre. Cette utilisation vous permet d’utiliser la syntaxe du fournisseur OLE DB. Pour désactiver l’analyse, sans paramètres de liaison, spécifiez `Bindings=""`.
 
-Si vous ne spécifiez pas une valeur pour *liaisons*, **db_command** analyse le bloc de paramètres de liaison, recherchez «**(**», suivi par **\[** _bindtype_**]** entre crochets, suivi d’un ou plus précédemment déclaré C++ variables membres, suivies de «**)**». Tout le texte entre parenthèses est supprimé de la commande obtenue, et ces paramètres sont utilisés pour construire des liaisons de colonnes et de paramètres pour cette commande.
+Si vous ne spécifiez pas une valeur pour *liaisons*, **db_command** analyse le bloc de paramètres de liaison, recherchez ' **(** ', suivi par **\[** _bindtype_ **]** entre crochets, suivi d’un ou plus précédemment déclaré C++ variables membres, suivies de ' **)** '. Tout le texte entre parenthèses est supprimé de la commande obtenue, et ces paramètres sont utilisés pour construire des liaisons de colonnes et de paramètres pour cette commande.
 
 *bulk_fetch*<br/>
 (Facultatif) Valeur entière qui spécifie le nombre de lignes à extraire.

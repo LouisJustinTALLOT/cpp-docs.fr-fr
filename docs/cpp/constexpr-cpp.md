@@ -21,8 +21,8 @@ Pour limiter la complexité des calculs de constante de compilation et leur impa
 
 ## <a name="syntax"></a>Syntaxe
 
-> **constexpr** *type de littéral* *identificateur* ** = ** *expression constante* **;** 
->  **constexpr** *type de littéral* *identificateur* **{** *expression constante * **}** **;** 
+> **constexpr** *type de littéral* *identificateur* **=** *expression constante* **;** 
+>  **constexpr** *type de littéral* *identificateur* **{** *expression constante* **}** **;** 
 >  **constexpr** *type de littéral* *identificateur* **(** *params* **)** **;** 
 >  **constexpr** *ctor* **(** *params* **)** **;**
 
