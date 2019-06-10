@@ -1,25 +1,22 @@
 ---
 title: Créer une interface COM
-ms.date: 11/12/2018
-f1_keywords:
-- vc.codewiz.com.creating.interfaces
-- vc.codewiz.com.editing.interfaces
+ms.date: 05/14/2019
 helpviewer_keywords:
 - COM interfaces, creating
 - methods [C++], adding to COM interfaces
 - COM interfaces, editing
 - properties [C++], adding to COM interfaces
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
-ms.openlocfilehash: dfc4b09f4fa42b179bdef91877e0a004caa69187
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 09ddc113450fadb208e4f8471bc9aacf596a53f1
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693699"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182609"
 ---
 # <a name="create-a-com-interface"></a>Créer une interface COM
 
-Visual C++ propose des Assistants et modèles permettant de créer des projets qui utilisent des interfaces de définition COM et des dispinterfaces pour vos objets COM et classes Automation.
+Visual Studio propose des Assistants et des modèles permettant de créer des projets qui utilisent des interfaces de définition COM et des dispinterfaces pour vos objets COM et vos classes Automation.
 
 Vous pouvez utiliser ces Assistants pour effectuer les trois tâches courantes ci-dessous :
 
@@ -74,7 +71,7 @@ Dans l’affichage de classes et ses menus contextuels, vous pouvez utiliser les
 
 ## <a name="edit-a-com-interface"></a>Modifier une interface COM
 
-À l’aide des commandes du menu Affichage de classes, vous pouvez définir de nouvelles méthodes et propriétés pour les interfaces COM dans vos projets Visual C++. Dans la boîte à outils, vous pouvez aussi définir des événements pour les contrôles ActiveX.
+À l’aide des commandes du menu Affichage de classes, vous pouvez définir de nouvelles méthodes et propriétés pour les interfaces COM de vos projets Visual Studio C++. Dans la boîte à outils, vous pouvez aussi définir des événements pour les contrôles ActiveX.
 
 Pour les classes d’objets COM basées sur ATL et MFC, vous pouvez modifier l’implémentation de classe en même temps que vous modifiez l’interface.
 

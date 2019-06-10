@@ -1,35 +1,39 @@
 ---
 title: Ajout de fonctionnalités à l’aide des Assistants Code (C++)
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.classes
+ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
-- wizards [C++], code
-- Visual C++ projects, adding functionality
-- projects [C++], adding functionality
-- class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 87c46be17c20bf9d592dd2b5c537897fa629e9c2
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 8c88936edcb9110fe7482281f483f11c542b83c1
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57822572"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182649"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Ajout de fonctionnalités à l’aide des Assistants Code (C++)
 
 Après avoir créé un projet, vous pouvez changer ses fonctionnalités ou en ajouter d’autres. Parmi les tâches que vous pouvez effectuer, citons la création de classes, l’ajout de nouvelles fonctions et variables membres, ou encore l’ajout de méthodes et de propriétés Automation. Les Assistants Code sont conçus pour vous permettre d’effectuer toutes ces tâches.
 
-> [!WARNING]
-> Plusieurs Assistants Code ATL et MFC sont désormais dépréciés et seront supprimés dans une version ultérieure de Visual Studio. Ces Assistants sont rarement utilisés. La prise en charge générale d’ATL et MFC n’est pas affectée par la suppression de ces Assistants. Si vous souhaitez partager vos commentaires sur cette dépréciation, veuillez remplir [cette enquête](https://www.surveymonkey.com/r/QDWKKCN). Vos commentaires sont précieux pour nous.
+> [!NOTE]
+> Les Assistants de code ci-dessous, qui sont rarement utilisés, ont été supprimés dans Visual Studio 2019. La prise en charge générale d’ATL et MFC n’est pas affectée par la suppression de ces Assistants. Les exemples de code pour ces technologies sont archivés dans Microsoft Docs et dans le dépôt GitHub VCSamples.
+
+- Assistant Composant COM+ 1.0 ATL
+- Assistant Composant ASP ATL
+- Assistant Fournisseur OLEDB ATL
+- Assistant Page de propriétés ATL
+- Assistant Consommateur OLEDB ATL
+- Consommateur ODBC MFC
+- Classe MFC à partir d’un contrôle ActiveX
+- Classe MFC à partir d’une bibliothèque de types.
+
 
 > [!NOTE]
 >  Vous pouvez à présent ajouter des gestionnaires de messages, mapper des messages à ceux-ci et substituer des fonctions virtuelles MFC à l’aide de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).
 
-## <a name="accessing-visual-c-code-wizards"></a>Accès aux Assistants Code Visual C++
+## <a name="accessing-c-code-wizards"></a>Accès aux Assistants de code C++
 
-Vous pouvez accéder aux Assistants Code Visual C++ de trois façons :
+Vous pouvez accéder aux Assistants de code C++ à partir de trois emplacements :
 
 - Dans le menu **Projet**, utilisez la commande **Ajouter un nouvel élément** pour ouvrir la boîte de dialogue `Add New Item`. Celle-ci vous permet d’ajouter de nouveaux fichiers à votre projet. Utilisez la commande **Ajouter une classe** pour afficher la boîte de dialogue [Ajouter une classe](../ide/add-class-dialog-box.md). Celle-ci ouvre des Assistants pour chaque type de classe que vous ajoutez à votre projet. Utilisez la commande **Ajouter une ressource** pour afficher la boîte de dialogue [Ajouter une ressource](../windows/add-resource-dialog-box.md). Celle-ci vous permet de créer ou de sélectionner une ressource à ajouter à votre projet.
 
@@ -73,5 +77,5 @@ Vous pouvez accéder aux Assistants Code Visual C++ de trois façons :
 
 [Substitution d’une fonction virtuelle](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [Parcours de la structure de classe](../ide/navigating-the-class-structure-visual-cpp.md)<br>
-[Types de projets Visual C++](../build/reference/visual-cpp-project-types.md)<br>
-[Types de fichiers créés pour les projets Visual C++](../build/reference/file-types-created-for-visual-cpp-projects.md)
+[Types de projets C++ dans Visual Studio](../build/reference/visual-cpp-project-types.md)<br>
+[Types de fichiers créés pour les projets Visual Studio C++](../build/reference/file-types-created-for-visual-cpp-projects.md)

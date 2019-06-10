@@ -2,12 +2,12 @@
 title: Guide du portage et de la mise à niveau de Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 5659ca362204c62ab8fb21a74dccf8e29f33912c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898789"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450380"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guide du portage et de la mise à niveau de Visual C++
 
@@ -53,7 +53,7 @@ Pour commencer la mise à niveau d'un projet ou d'une solution, ouvrez simplemen
 
 8. Erreurs d'exécution ou résultats inattendus dus à des changements de comportement.
 
-9. Erreurs elles-mêmes provoquées par des erreurs introduites dans les outils. Si vous rencontrez un problème, signalez-le à l’équipe Visual C++ via vos modes de contact du support technique habituels ou dans le [Centre des commentaires Visual Studio](http://connect.microsoft.com/VisualStudio/Feedback).
+9. Erreurs elles-mêmes provoquées par des erreurs introduites dans les outils. Si vous rencontrez un problème, signalez-le à l’équipe Visual C++ par le biais de vos modes de contact du support technique habituels ou de la page [Communauté de développeurs Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html).
 
 Certaines modifications sont inévitables pour résoudre les erreurs de compilateur, d'autres sont facultatives dans un processus de mise à niveau. Par exemple :
 
@@ -75,7 +75,7 @@ Ou bien, vous avez peut-être maintenant de nouvelles exigences à respecter, ou
 
 |Titre|Description|
 |-----------|-----------------|
-|[Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Explique comment utiliser des projets créés dans les versions antérieures de Visual C++.|
+|[Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Explique comment utiliser des projets créés dans les versions antérieures de Visual Studio.|
 |[Nouveautés du compilateur C++ dans Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Modifications de l’IDE et des outils par rapport à la version actuelle de Visual Studio|
 |[Améliorations de la conformité de C++ dans Visual Studio](../overview/cpp-conformance-improvements.md)|Améliorations de la conformité aux standards entre Visual Studio 2015 et Visual Studio|
 |[Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md)|Liste de toutes les modifications apportées aux bibliothèques Visual C++ et outils de génération entre Visual Studio 2003 et 2015 qui pourraient vous contraindre à modifier votre code.|
@@ -88,4 +88,4 @@ Ou bien, vous avez peut-être maintenant de nouvelles exigences à respecter, ou
 
 ## <a name="see-also"></a>Voir aussi
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md)
+[C++ dans Visual Studio](../overview/visual-cpp-in-visual-studio.md)

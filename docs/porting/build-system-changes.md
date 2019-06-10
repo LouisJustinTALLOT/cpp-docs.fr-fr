@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: 621e62379657da66d6eaec7a3ceff780fd610066
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: c3e51aa7e5a4346137e94191b551b0d53452e460
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828171"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449010"
 ---
 # <a name="build-system-changes"></a>Modifications du système de génération
 
-Le système MSBuild est utilisé pour générer des projets Visual C++. Toutefois, dans Visual Studio 2008 et les versions antérieures, c’est le système VCBuild qui était utilisé. Certains types de fichiers et concepts qui dépendaient de VCBuild n’existent pas ou sont représentés différemment dans le système actuel. Ce document présente les différences du système de génération actuel.
+Le système MSBuild est utilisé pour générer des projets Visual Studio C++. Toutefois, dans Visual Studio 2008 et les versions antérieures, c’est le système VCBuild qui était utilisé. Certains types de fichiers et concepts qui dépendaient de VCBuild n’existent pas ou sont représentés différemment dans le système actuel. Ce document présente les différences du système de génération actuel.
 
 ## <a name="vcproj-is-now-vcxproj"></a>.vcproj devient maintenant .vcxproj
 
@@ -37,7 +37,7 @@ Dans la version actuelle, l’extension de nom de fichier d’une feuille de pro
 
 ## <a name="custom-build-rules-and-rules-files"></a>Règles de génération personnalisées et fichiers .rules
 
-Dans les versions antérieures, un *fichier de règles* est un fichier XML qui porte une extension de nom de fichier .rules. Un fichier de règles permet de définir des règles de génération personnalisées et de les incorporer dans le processus de génération d’un projet Visual C++. Une règle de génération personnalisée, que vous pouvez associer à une ou plusieurs extensions de nom de fichier, vous permet de passer des fichiers d’entrée à un outil qui crée un ou plusieurs fichiers de sortie.
+Dans les versions antérieures, un *fichier de règles* est un fichier XML qui porte une extension de nom de fichier .rules. Un fichier de règles permet de définir des règles de génération personnalisées et de les incorporer dans le processus de génération d’un projet Visual Studio C++. Une règle de génération personnalisée, que vous pouvez associer à une ou plusieurs extensions de nom de fichier, vous permet de passer des fichiers d’entrée à un outil qui crée un ou plusieurs fichiers de sortie.
 
 Dans cette version, les règles de génération personnalisées sont représentées par trois types de fichiers, à savoir .xml, .props et .targets, au lieu d’un fichier .rules. Quand un fichier .rules créé à l’aide d’une version antérieure de Visual C++ migre vers la version actuelle, des fichiers .xml, .props et .targets équivalents sont créés et stockés dans votre projet avec le fichier .rules d’origine.
 
@@ -50,7 +50,7 @@ Dans les versions antérieures, la macro **$(Inherit)** spécifie l’ordre dans
 
 Dans la version actuelle, l’héritage est pris en charge en spécifiant la valeur d’une propriété sous forme de concaténation d’une ou plusieurs valeurs littérales et macros de propriété. Les macros **$(Inherit)** et **$(NoInherit)** ne sont pas prises en charge.
 
-Dans l’exemple suivant, une liste délimitée par des points-virgules est affectée à une propriété dans une page de propriétés. La liste est constituée de la concaténation du littéral de la *\<valeur>* et de la valeur de la propriété `MyProperty`, accessible à l’aide de la notation de macro, **$(**<em>MyProperty</em>**)**.
+Dans l’exemple suivant, une liste délimitée par des points-virgules est affectée à une propriété dans une page de propriétés. La liste est constituée de la concaténation du littéral de la *\<valeur>* et de la valeur de la propriété `MyProperty`, accessible à l’aide de la notation de macro, **$(** <em>MyProperty</em> **)** .
 
 ```
 Property=<value>;$(MyProperty)

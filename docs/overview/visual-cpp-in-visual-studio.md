@@ -1,25 +1,25 @@
 ---
 title: C++ dans Visual Studio
 description: Visual C++ est le nom employé pour le compilateur Microsoft C++, l’éditeur de code et les outils associés dans l’IDE Visual Studio. Utilisez Visual C++ pour développer des programmes pour Windows, Linux, Android et iOS.
-ms.date: 05/13/2019
+ms.date: 05/14/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 2706d232dba2a7971edd8d84da2b1d1399ed6e25
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: c2a38d13cd7b34880b64521af99103ed8192bfd0
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934148"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451200"
 ---
 # <a name="c-in-visual-studio"></a>C++ dans Visual Studio
 
 > [!NOTE]
 > Cette documentation pour les développeurs s’applique à Visual Studio 2015 et versions ultérieures. Utilisez le sélecteur de version figurant dans le coin supérieur gauche de la page pour le faire correspondre à votre version de Visual Studio.
 >
-> Si vous recherchez un package redistribuable Visual C++ pour pouvoir exécuter un programme, accédez au [Centre de téléchargement Microsoft](http://www.microsoft.com/download/) et entrez **Visual C++** dans la zone de recherche.
+> Si vous recherchez un package redistribuable Visual C++ pour pouvoir exécuter un programme, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/download/) et entrez **Visual C++** dans la zone de recherche.
 
 Microsoft Visual C++, généralement abrégé en Visual C++ ou MSVC, est le nom qui désigne les outils de développement C++, C et en langage assembleur et les bibliothèques disponibles dans le cadre de Visual Studio sur Windows. Ces outils et bibliothèques vous permettent de créer des applications de plateforme Windows universelle (UWP), des applications serveur et de bureau Windows natives, des bibliothèques multiplateformes et des applications qui s’exécutent sur Windows, Linux, Android et iOS, ainsi que des applications et des bibliothèques managées qui utilisent le .NET Framework. Vous pouvez utiliser Visual C++ pour écrire aussi bien des applications de console simples que des applications plus sophistiquées et complexes pour le Bureau Windows,des pilotes de périphériques et des composants de système d’exploitation que des jeux multiplateformes pour appareils mobiles, des très petits appareils IoT que des dispositifs HPC multiserveurs dans le cloud Azure.
 
@@ -45,10 +45,10 @@ Découvrez les modifications avec rupture introduites dans cette version.
 ## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>Installer Visual Studio et mettre à niveau à partir de versions antérieures
 
 [Installer la prise en charge de C++ dans Visual Studio](../build/vscpp-step-0-installation.md)<br/>
-Téléchargez Visual Studio 2015 ou Visual Studio 2017 et installez l’ensemble d’outils Visual C++.
+Téléchargez Visual Studio 2017 ou Visual Studio 2019, puis installez l’ensemble d’outils Visual C++.
 
 [Guide du portage et de la mise à niveau de Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
-Conseils pour le portage de code et la mise à niveau de projets vers Visual 2015 ou Visual Studio 2017, notamment le portage de code C++ vers Windows 10 et la plateforme universelle Windows.
+Conseils sur le portage de code et la mise à niveau des projets vers Visual Studio 2015 ou ultérieur en vue de bénéficier de la meilleure conformité du compilateur à la norme C++, ainsi que de temps de compilation et de fonctionnalités de sécurité grandement améliorés, comme l’atténuation Spectre.
 
 [Outils et fonctionnalités Visual C++ dans les éditions de Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 Découvrez les différentes éditions de Visual Studio.
@@ -59,9 +59,9 @@ Découvrez quelles plateformes sont prises en charge.
 ## <a name="learn-c"></a>Apprendre C++
 
 [Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-En savoir plus sur les techniques de programmation C++ basées sur C++11 et C++14 qui vous permettent d’écrire rapidement du code sécurisé et d’éviter la plupart des pièges de la programmation de style C.
+En savoir plus sur les techniques de programmation C++ basées sur C++11 et ultérieur qui vous permettent d’écrire rapidement du code sécurisé et d’éviter la plupart des pièges de la programmation de style C.
 
-[C++ standard](http://isocpp.org/)<br/>
+[C++ standard](https://isocpp.org/)<br/>
 Découvrez C++, obtenez une vue d’ensemble du langage C++ moderne et bénéficiez de liens vers des ouvrages, des articles, des entretiens et des événements.
 
 [Découvrir Visual C++](../build/vscpp-step-1-create.md)<br/>
@@ -79,7 +79,7 @@ Comment utiliser l’IDE Visual Studio pour créer des projets, modifier du code
 Guide pratique pour créer et configurer des projets Visual Studio C++, des projets CMake et d’autres types de projets avec des options de compilateur et d’éditeur de liens MSVC.
 
 [Écriture et refactorisation du code C++](../ide/writing-and-refactoring-code-cpp.md)<br/>
-Guide pratique pour utiliser les fonctionnalités de productivité dans l’éditeur C++ pour refactoriser, parcourir et écrire du code.
+Comment utiliser les fonctionnalités de productivité dans l’éditeur C++ pour refactoriser, parcourir, comprendre et écrire du code.
 
 [Débogage du code natif](/visualstudio/debugger/debugging-native-code)<br/>
 Utiliser le débogueur Visual Studio avec des projets C++.
@@ -117,7 +117,7 @@ Apprenez à protéger des applications contre un code malveillant et une utilisa
 En C++, vous disposez de plusieurs options de connexion web et cloud.
 
 [Accès aux données](../data/data-access-in-cpp.md)<br/>
-Connectez-vous aux bases de données à l’aide d’ODBC et d’autres technologies d’accès de base de données.
+Se connecter aux bases de données à l’aide d’ODBC et d’OLE DB.
 
 [Texte et chaînes](../text/text-and-strings-in-visual-cpp.md)<br/>
 En savoir plus sur l’utilisation de différents formats et encodages de texte et de chaîne pour un développement local et international.

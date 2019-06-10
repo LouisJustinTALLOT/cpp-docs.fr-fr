@@ -9,12 +9,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: b763361d2cdd732025e492a25ac63fc01f06c2b8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e9842d8c24089c7fbb33745c3bf5d4edb1d29343
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739742"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446788"
 ---
 # <a name="time-management"></a>Gestion du temps
 
@@ -47,7 +47,7 @@ Les routines **_ftime** et **localtime** utilisent la variable d’environnement
 > Dans toutes les versions de Microsoft C/C++ à l’exception de Microsoft C/C++ version 7.0, et dans toutes les versions de Visual C++, l’heure actuelle renvoyée par la fonction time correspond au nombre de secondes écoulées depuis le 1er janvier 1970 à minuit. Dans Microsoft C/C++ version 7.0, l’heure actuelle retournée par **time** est le nombre de secondes écoulées depuis le 31 décembre 1899 à minuit.
 
 > [!NOTE]
-> Dans les versions de Visual C++ et de Microsoft C/C++ antérieures à Visual C++ 2005, **time_t** était une valeur **long** **int** (32 bits) et ne pouvait donc pas être utilisé pour les dates postérieures au 19 janvier 2038 à 3:14:07 (heure UTC). **time_t** est maintenant équivalent à **__time64_t** par défaut. Toutefois, le fait de définir **_USE_32BIT_TIME_T** remplace **time_t** par **__time32_t** et force de nombreuses fonctions time à appeler les versions qui acceptent la valeur **time_t** 32 bits. Pour plus d’informations, consultez [Types standard](../c-runtime-library/standard-types.md) et les commentaires dans la documentation pour les fonctions de temps individuelles.
+> Dans les versions de Visual C++ et de Microsoft C/C++ antérieures à Visual Studio 2005, **time_t** était une valeur **long** **int** (32 bits) et ne pouvait donc pas être utilisé pour les dates postérieures au 19 janvier 2038 à 3:14:07 (heure UTC). **time_t** est maintenant équivalent à **__time64_t** par défaut. Toutefois, le fait de définir **_USE_32BIT_TIME_T** remplace **time_t** par **__time32_t** et force de nombreuses fonctions time à appeler les versions qui acceptent la valeur **time_t** 32 bits. Pour plus d’informations, consultez [Types standard](../c-runtime-library/standard-types.md) et les commentaires dans la documentation pour les fonctions de temps individuelles.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 980d94b29d31d8eea910fbdb171a0ae8df1dccca
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 03126b8fdf1c3824b114d822c269655c22e5ee9f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750034"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446688"
 ---
 # <a name="crt-initialization"></a>Initialisation du CRT
 
@@ -41,7 +41,7 @@ Une façon de déterminer cela consiste à définir un point d’arrêt dans `fu
 
 Lorsque vous parcourez les fonctions sur la pile, vous constaterez que la bibliothèque CRT effectue une boucle dans une liste de pointeurs de fonction et appelle chacun de ces fonctions lorsqu’il les rencontre. Ces fonctions sont similaires à `func()` ou aux constructeurs pour les instances de classe.
 
-La bibliothèque CRT obtient la liste des pointeurs de fonction du compilateur Visual C++. Lorsque le compilateur détecte un initialiseur global, il génère un initialiseur dynamique dans la section `.CRT$XCU` (où `CRT` est le nom de section et `XCU` est le nom du groupe). Pour obtenir une liste de ces initialiseurs dynamiques, exécutez la commande **dumpbin /all main.obj**, puis recherchez la section `.CRT$XCU` (lorsque main.cpp est compilé dans un fichier C++, et non un fichier C). Il sera semblable à ce qui suit :
+La bibliothèque CRT obtient la liste des pointeurs de fonction du compilateur Microsoft C++. Lorsque le compilateur détecte un initialiseur global, il génère un initialiseur dynamique dans la section `.CRT$XCU` (où `CRT` est le nom de section et `XCU` est le nom du groupe). Pour obtenir une liste de ces initialiseurs dynamiques, exécutez la commande **dumpbin /all main.obj**, puis recherchez la section `.CRT$XCU` (lorsque main.cpp est compilé dans un fichier C++, et non un fichier C). Il sera semblable à ce qui suit :
 
 ```
 SECTION HEADER #6
@@ -77,7 +77,7 @@ La bibliothèque CRT définit deux pointeurs :
 
 Les deux groupes n’ont pas d’autres symboles définis à l’exception de `__xc_a` et `__xc_z`.
 
-Maintenant, lorsque l’éditeur de liens lit différents groupes `.CRT`, il les regroupe dans une section et les trie par ordre alphabétique. Cela signifie que les initialiseurs globaux définis par l’utilisateur (que le compilateur Visual C++ place dans `.CRT$XCU`) viendront toujours après `.CRT$XCA` et avant `.CRT$XCZ`.
+Maintenant, lorsque l’éditeur de liens lit différents groupes `.CRT`, il les regroupe dans une section et les trie par ordre alphabétique. Cela signifie que les initialiseurs globaux définis par l’utilisateur (que le compilateur Microsoft C++ place dans `.CRT$XCU`) viendront toujours après `.CRT$XCA` et avant `.CRT$XCZ`.
 
 La section ressemble à ce qui suit :
 

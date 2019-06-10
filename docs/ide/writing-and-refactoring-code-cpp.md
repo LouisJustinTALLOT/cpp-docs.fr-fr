@@ -1,17 +1,18 @@
 ---
 title: Écriture et refactorisation du code (C++)
-ms.date: 04/30/2018
+description: Utilisez l’éditeur de code C++ dans Visual Studio pour mettre en forme, parcourir, comprendre et refactoriser votre code.
+ms.date: 05/14/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: bc839a759d2ff3f403ca001ab32702d3fe27833e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04f738cd6fdd456c432c334df42f37339e7fa49e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570428"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182629"
 ---
 # <a name="writing-and-refactoring-code-c"></a>Écriture et refactorisation du code (C++)
 
-L'IDE et l'éditeur de code Visual C++ fournissent de nombreux outils de codage. Certains sont propres à C++, alors que d'autres sont quasiment identiques pour tous les langages Visual Studio. Pour plus d’informations sur les fonctionnalités partagées, consultez [Écriture de code dans l’éditeur de code et de texte](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Les options pour l’activation et la configuration des fonctionnalités propres à C++ se trouvent sous **Outils &#124; Options &#124; Éditeur de texte &#124; C/C++**. Après avoir choisi l’option que vous voulez définir, vous pouvez obtenir de l’aide supplémentaire en appuyant sur la touche **F1** quand la boîte de dialogue a le focus. Pour les options générales de mise en forme du code, tapez `Editor C++` dans **Lancement rapide**.
+L’éditeur de code C++ et l’IDE Visual Studio vous aident de nombreuses façons quand vous développez. Certains sont propres à C++, alors que d'autres sont quasiment identiques pour tous les langages Visual Studio. Pour plus d’informations sur les fonctionnalités partagées, consultez [Écriture de code dans l’éditeur de code et de texte](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Les options pour l’activation et la configuration des fonctionnalités propres à C++ se trouvent sous **Outils &#124; Options &#124; Éditeur de texte &#124; C/C++** . Après avoir choisi l’option que vous voulez définir, vous pouvez obtenir de l’aide supplémentaire en appuyant sur la touche **F1** quand la boîte de dialogue a le focus. Pour les options générales de mise en forme du code, tapez `Editor C++` dans **Lancement rapide**.
 
 Des fonctionnalités expérimentales, qui peuvent ou non être incluses dans une version future de Visual Studio, se trouvent dans la boîte de dialogue [Éditeur de texte C++ expérimental](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental). Dans Visual Studio 2017, vous pouvez activer **IntelliSense prédictif** dans cette boîte de dialogue.
 
@@ -27,7 +28,7 @@ Pour définir les options de mise en forme comme les retraits, la complétion de
 
 ## <a name="intellisense"></a>IntelliSense
 
-IntelliSense est le nom d’un ensemble de fonctionnalités qui fournissent des informations inline sur les membres, les types et les surcharges de fonction. L'illustration suivante montre la liste déroulante des membres qui s'affiche quand vous commencez à taper. Vous pouvez appuyer sur la touche Tab pour entrer le texte de l'élément sélectionné dans votre fichier de code.
+IntelliSense est le nom d’un ensemble de fonctionnalités qui fournissent des informations inline sur les membres, les types et les surcharges de fonction. L’illustration suivante montre la liste déroulante des membres qui s’affiche quand vous commencez à taper. Vous pouvez appuyer sur la touche Tab pour entrer le texte de l'élément sélectionné dans votre fichier de code.
 
 ![Liste déroulante des membres, C&#43;&#43;](../ide/media/vs2015_cpp_statement_completion.png "vs2015_cpp_statement_completion")
 
@@ -91,7 +92,7 @@ Placez le curseur sur une déclaration de variable ou de fonction, cliquez avec 
 
 ## <a name="view-call-hierarchy"></a>Afficher la hiérarchie d'appels
 
-Cliquez avec le bouton droit sur un appel de fonction et affichez une liste récursive de toutes les fonctions qui sont appelées et de toutes les fonctions qui l'appellent. Chaque fonction de la liste peut être développée de la même façon. Pour plus d’informations, consultez [Hiérarchie d’appels](/visualstudio/ide/reference/call-hierarchy).
+Cliquez avec le bouton droit sur un appel de fonction pour afficher la liste récursive de toutes les fonctions qui sont appelées et de toutes les fonctions qui l’appellent. Chaque fonction de la liste peut être développée de la même façon. Pour plus d’informations, consultez [Hiérarchie d’appels](/visualstudio/ide/reference/call-hierarchy).
 
 ![Hiérarchie d’appels, Visual C&#43; &#43;](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
@@ -107,7 +108,7 @@ Cliquez avec le bouton droit n’importe où dans un fichier de code source et c
 
 ## <a name="scrollbar-map-mode"></a>Mode mappage pour la barre de défilement
 
-Le mode mappage pour la barre de défilement vous permet de faire défiler et parcourir un fichier de code rapidement, sans avoir à quitter votre emplacement actuel. Ou cliquez n’importe où sur la carte du code pour accéder directement à cet emplacement. Pour plus d’informations, consultez [Comment : suivre votre code en personnalisant la barre de défilement](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
+Le mode mappage pour la barre de défilement vous permet de faire défiler et parcourir un fichier de code rapidement, sans avoir à quitter votre emplacement actuel. Ou cliquez n'importe où sur la carte du code pour accéder directement à cet emplacement. Pour plus d'informations, voir [Procédure : Suivre votre code en personnalisant la barre de défilement](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
 
 ![Carte du code dans Visual C#&#43;&#43;](../ide/media/vs2015_cpp_code_map.png "vs2015_cpp_code_map")
 
