@@ -1531,14 +1531,20 @@
               href: build/reference/dot-xml-file-processing.md
             - name: Délimiteurs pour les étiquettes de documentation C++
               href: build/reference/delimiters-for-visual-cpp-documentation-tags.md
-- name: Écrire et refactoriser du code
+- name: Lire et écrire du code
   expanded: false
   items:
-    - name: Écrire et refactoriser du code
+    - name: Lire et écrire du code
       expanded: false
       items:
-        - name: Écrire et refactoriser du code
+        - name: Lire et comprendre du code C++
+          href: ide/read-and-understand-code-cpp.md
+        - name: Modifier et refactoriser du code C++
           href: ide/writing-and-refactoring-code-cpp.md
+        - name: Naviguer dans le code C++
+          href: ide/navigate-code-cpp.md
+        - name: Collaborer en utilisant Live Share pour C++
+          href: ide/live-share-cpp.md
         - name: Changer la signature
           href: ide/refactoring/change-signature.md
         - name: Convertir en littéral de chaîne brut
@@ -1597,8 +1603,6 @@
           href: ide/implementing-a-connection-point-visual-cpp.md
         - name: Implémenter une interface
           href: ide/implementing-an-interface-visual-cpp.md
-        - name: Parcourir la structure de classe
-          href: ide/navigating-the-class-structure-visual-cpp.md
         - name: Remplacer une fonction virtuelle
           href: ide/overriding-a-virtual-function-visual-cpp.md
 - name: Développement du Bureau Windows
