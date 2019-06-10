@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 4e7d63840f60c00f97b02825965cc247cddc38fd
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174814"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821685"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Procédure : Créer et utiliser des instances shared_ptr
 
@@ -108,7 +108,7 @@ Vous pouvez passer `shared_ptr` à une autre fonction des façons suivantes :
 
 - Si vous devez donner un accès à la fonction helper au pointeur sous-jacent, et que vous savez que cette fonction helper utilise simplement le pointeur et retourne avant la fonction appelante, cette fonction ne doit pas partager la propriété du pointeur sous-jacent. Elle doit simplement accéder au pointeur dans la durée de vie du `shared_ptr`de l'appelant. Dans ce cas, cela ne pose pas de problème de passer le `shared_ptr` par référence, ou de passer le pointeur brut ou une référence à l’objet sous-jacent. Passer de cette façon fournit un léger avantage en termes de performances et peut également vous aider à exprimer votre intention de programmation.
 
-- Parfois, par exemple dans un `std:vector<shared_ptr<T>>`, vous devrez peut-être passer chaque `shared_ptr` à une expression Lambda ou un objet fonction nommé. Si l’expression lambda ou la fonction ne stocke pas le pointeur, passez le `shared_ptr` par référence pour éviter d’appeler le constructeur de copie pour chaque élément.
+- Parfois, par exemple dans un `std::vector<shared_ptr<T>>`, vous devrez peut-être passer chaque `shared_ptr` à une expression Lambda ou un objet fonction nommé. Si l’expression lambda ou la fonction ne stocke pas le pointeur, passez le `shared_ptr` par référence pour éviter d’appeler le constructeur de copie pour chaque élément.
 
 ## <a name="example-6"></a>Exemple 6
 
