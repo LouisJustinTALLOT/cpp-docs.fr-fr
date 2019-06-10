@@ -1,18 +1,16 @@
 ---
 title: Implémenter un point de connexion
-ms.date: 11/12/2018
-f1_keywords:
-- vc.codewiz.impl.cp.overview
+ms.date: 05/14/2019
 helpviewer_keywords:
 - connection points [C++], implementing
 - implement connection point wizard [C++]
 ms.assetid: 5b37e4f9-73c9-4bef-b26d-365bc0662260
-ms.openlocfilehash: 7afa61246c5251936967e281f7237dc37e5be045
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 8a75a5fbbabd20f4591e3a119c175d68cdfb1f90
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693280"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182599"
 ---
 # <a name="implement-a-connection-point"></a>Implémenter un point de connexion
 
@@ -61,7 +59,7 @@ Un objet connectable (c’est-à-dire une source) peut afficher un point de conn
 
 ## <a name="implement-connection-point-wizard"></a>Assistant Implémentation d’un point de connexion
 
-Cet Assistant implémente un point de connexion pour un objet COM. Un objet connectable (c’est-à-dire une source) peut afficher un point de connexion pour son interface personnelle ou pour n’importe quelle interface sortante. Visual C++ et Windows proposent des bibliothèques de types avec des interfaces sortantes. Chaque interface sortante peut être implémentée par un client sur un objet (autrement dit, un récepteur).
+Cet Assistant implémente un point de connexion pour un objet COM. Un objet connectable (c’est-à-dire une source) peut afficher un point de connexion pour son interface personnelle ou pour n’importe quelle interface sortante. MSVC et Windows proposent des bibliothèques de types avec des interfaces sortantes. Chaque interface sortante peut être implémentée par un client sur un objet (autrement dit, un récepteur).
 
 Pour plus d’informations, consultez [ATL, points de connexion](../atl/atl-connection-points.md).
 

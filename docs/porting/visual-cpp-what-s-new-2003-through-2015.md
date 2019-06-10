@@ -2,16 +2,16 @@
 title: Nouveautés de Visual C++ entre 2003 et 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: ae21a81869bd68c5a2641dba47b89d7e10b67567
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 4bcf661284d447b18542bb158940d539ef9c0686
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898854"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449808"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Nouveautés de Visual C++ entre 2003 et 2015
 
-Cette page regroupe toutes les pages « Nouveautés » de toutes les versions de Visual C++ en commençant par Visual Studio 2015 et en remontant jusqu’à la version 2003. Ces informations sont fournies à des fins pratiques, car elles peuvent se révéler utiles lors d’une mise à niveau à partir de versions antérieures de Visual C++.
+Cette page regroupe toutes les pages « Nouveautés » de toutes les versions de Visual C++ en commençant par Visual Studio 2015 et en remontant jusqu’à la version 2003. Ces informations sont fournies à des fins pratiques, car elles peuvent se révéler utiles lors d’une mise à niveau à partir de versions antérieures de Visual Studio.
 
 > [!NOTE]
 > Pour plus d’informations sur la version actuelle de Visual Studio, consultez [Nouveautés de Visual C++ dans Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) et [Améliorations de la conformité de Visual C++ dans Visual Studio](../overview/cpp-conformance-improvements.md).
@@ -20,7 +20,7 @@ Cette page regroupe toutes les pages « Nouveautés » de toutes les versions de
 
 Dans Visual Studio 2015 et ultérieur, les améliorations continues de la conformité du compilateur peuvent parfois modifier la façon dont le compilateur comprend votre code source existant. Dans ce cas, vous pouvez être confronté à des erreurs nouvelles ou différentes pendant la génération, ou même à des différences de comportement dans le code qui auparavant était généré et paraissait s’exécuter correctement.
 
-Heureusement, ces différences n’ont que peu ou pas d’impact sur la plus grande partie de votre code source et, quand le code source ou d’autres modifications sont nécessaires pour résoudre ces différences, les corrections sont généralement mineures et simples. Nous avons inclus de nombreux exemples de code source précédemment acceptable qui devront peut-être être changés *(avant)* et les corrections pour les modifier *(après)*.
+Heureusement, ces différences n’ont que peu ou pas d’impact sur la plus grande partie de votre code source et, quand le code source ou d’autres modifications sont nécessaires pour résoudre ces différences, les corrections sont généralement mineures et simples. Nous avons inclus de nombreux exemples de code source précédemment acceptable qui devront peut-être être changés *(avant)* et les corrections pour les modifier *(après)* .
 
 Même si ces différences peuvent affecter votre code source ou d’autres artefacts de build, elles n’affectent pas la compatibilité binaire entre les mises à jour des versions de Visual C++. Type plus sérieux de modification, la *modification avec rupture* peut affecter la compatibilité binaire, mais ces types d’incompatibilités binaires se produisent uniquement entre les versions principales de Visual C++, par exemple entre Visual C++ 2013 et Visual C++ 2015. Pour plus d’informations sur les modifications avec rupture qui se sont produites entre Visual C++ 2013 et Visual C++ 2015, consultez [Historique des modifications de Visual C++ entre 2003 et 2015](../porting/visual-cpp-change-history-2003-2015.md).
 
@@ -75,7 +75,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     };
    ```
 
-   Les versions précédentes du compilateur Visual C++ acceptaient cela, mais le compilateur attribue désormais l'erreur suivante :
+   Les versions précédentes du compilateur Microsoft C++ acceptaient cela, mais le compilateur affiche désormais l’erreur suivante :
 
    ```Output
     error C2071: 'S::r': illegal storage class
@@ -253,7 +253,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - **Placement new et delete**
 
-   Une modification a été apportée à l’opérateur **delete** pour le rendre conforme à la norme C++14. Vous trouverez les détails relatifs au changement de normes sur la page décrivant la [libération dimensionnée C++](http://isocpp.org/files/papers/n3778.html). Les changements ajoutent une forme de l’opérateur **delete** global, qui accepte un paramètre de taille. Il s’agit d’un changement cassant pour la raison suivante : si vous utilisiez un opérateur **delete** avec la même signature (pour correspondre à un opérateur **placement new**), vous recevrez une erreur de compilation (C2956, qui se produit au point où l’opérateur **placement new** est utilisé, car il s’agit de la position dans le code où le compilateur tente d’identifier l’opérateur **delete** correspondant approprié).
+   Une modification a été apportée à l’opérateur **delete** pour le rendre conforme à la norme C++14. Vous trouverez les détails relatifs au changement de normes sur la page décrivant la [libération dimensionnée C++](https://isocpp.org/files/papers/n3778.html). Les changements ajoutent une forme de l’opérateur **delete** global, qui accepte un paramètre de taille. Il s’agit d’un changement cassant pour la raison suivante : si vous utilisiez un opérateur **delete** avec la même signature (pour correspondre à un opérateur **placement new**), vous recevrez une erreur de compilation (C2956, qui se produit au point où l’opérateur **placement new** est utilisé, car il s’agit de la position dans le code où le compilateur tente d’identifier l’opérateur **delete** correspondant approprié).
 
    La fonction `void operator delete(void *, size_t)` était un opérateur **placement delete** correspondant à la fonction **placement new** `void * operator new(size_t, size_t)` dans C++11. Avec la libération dimensionnée C++14, cette fonction **delete** est à présent une *fonction de libération habituelle* (opérateur **delete** global). Selon la norme, si l’utilisation d’un opérateur **placement new** recherche une fonction **delete** correspondante et trouve une fonction de libération habituelle, le programme est incorrect.
 
@@ -1516,7 +1516,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 #### <a name="compiler"></a>Compilateur
 
-Le compilateur Microsoft Visual C++ prend en charge les fonctionnalités de langage ISO C++11 suivantes :
+MSVC prend en charge les fonctionnalités de langage ISO C++11 suivantes :
 
 - Arguments template par défaut pour les modèles de fonction.
 - Constructeurs effectuant une délégation
@@ -1682,7 +1682,7 @@ Cette prise en charge améliorée des normes ISO C/C++ peut nécessiter des modi
 ### <a name="windows-runtime-app-development-support"></a>Prise en charge du développement d’applications Windows Runtime
 
 - **Modèle d’interface utilisateur XAML native**. Pour les applications Windows Runtime, vous pouvez utiliser le nouveau modèle d’interface utilisateur XAML native.
-- **Extensions de composant Visual C++**. Ces extensions simplifient la consommation d’objets Windows Runtime, qui sont indispensables pour les applications Windows Runtime. Pour plus d’informations, consultez [Feuille de route pour les applications Windows Runtime en C++](../windows/universal-windows-apps-cpp.md) et [Informations de référence du langage Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **Extensions de composant Visual C++** . Ces extensions simplifient la consommation d’objets Windows Runtime, qui sont indispensables pour les applications Windows Runtime. Pour plus d’informations, consultez [Feuille de route pour les applications Windows Runtime en C++](../windows/universal-windows-apps-cpp.md) et [Informations de référence du langage Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
 - **Jeux DirectX**. La nouvelle prise en charge de DirectX pour les applications Windows Runtime vous permet de développer des jeux captivants.
 - **Interopérabilité XAML/DirectX**. Les applications Windows Runtime qui utilisent aussi bien XAML et DirectX interagissent désormais efficacement.
 - **Développement de DLL de composant Windows Runtime**. Le développement de DLL de composant rend l’environnement Windows Runtime extensible.
@@ -1696,7 +1696,7 @@ Cette prise en charge améliorée des normes ISO C/C++ peut nécessiter des modi
 ### <a name="new-in-visual-studio-2012-update-1"></a>Nouveautés de Visual Studio 2012 Update 1
 
 Ciblez Windows XP quand vous générez votre code C++.
-Vous pouvez utiliser le compilateur et les bibliothèques Visual C++ pour cibler Windows XP et Windows Server 2003.
+Vous pouvez utiliser le compilateur et les bibliothèques Microsoft C++ pour cibler Windows XP et Windows Server 2003.
 
 #### <a name="parallel-programming-support"></a>Prise en charge de la programmation parallèle
 
@@ -1737,11 +1737,11 @@ En plus de la fenêtre **Tâches parallèles** et de la fenêtre **Piles parall�
 
 **Constructions de code C++.** Le code squelette est disponible pour les constructions switch, if-else, for loop et d’autres constructions de code de base dans la liste déroulante Liste des membres. Sélectionnez un élément de code dans la liste pour l’insérer dans votre code, puis remplissez la logique exigée. Vous pouvez également créer vos propres éléments de code personnalisés à utiliser dans l’éditeur.
 
-**Améliorations de la liste des membres.** La liste déroulante **Membres de la liste** s’affiche automatiquement au fur et à mesure que vous tapez du code dans l’éditeur de code. Les résultats sont filtrés pour que seuls les membres pertinents s’affichent à mesure que vous tapez. Dans la boîte de dialogue **Options**, sous **Éditeur de texte** > **C/C++** > **Avancé**, vous pouvez contrôler le genre de logique de filtrage utilisé par la liste des membres.
+**Améliorations de la liste des membres.** La liste déroulante **Membres de la liste** s’affiche automatiquement au fur et à mesure que vous tapez du code dans l’éditeur de code. Les résultats sont filtrés pour que seuls les membres pertinents s’affichent à mesure que vous tapez. Dans la boîte de dialogue **Options**, sous **Éditeur de texte** > **C/C++**  > **Avancé**, vous pouvez contrôler le genre de logique de filtrage utilisé par la liste des membres.
 
 **Colorisation sémantique.** Les types, les énumérations, les macros et les autres jetons C++ ont désormais une colorisation par défaut.
 
-**Mise en surbrillance des références.** La sélection d’un symbole met désormais en surbrillance toutes les instances du symbole dans le fichier actuel. Appuyez sur **Ctrl**+**Maj**+**Haut** ou **Ctrl**+**Maj**+**Bas** pour vous déplacer entre les références en surbrillance. Vous pouvez désactiver cette fonctionnalité dans la boîte de dialogue **Options**, sous **Éditeur de texte** > **C/C++** > **Avancé**.
+**Mise en surbrillance des références.** La sélection d’un symbole met désormais en surbrillance toutes les instances du symbole dans le fichier actuel. Appuyez sur **Ctrl**+**Maj**+**Haut** ou **Ctrl**+**Maj**+**Bas** pour vous déplacer entre les références en surbrillance. Vous pouvez désactiver cette fonctionnalité dans la boîte de dialogue **Options**, sous **Éditeur de texte** > **C/C++**  > **Avancé**.
 
 ### <a name="application-lifecycle-management-tools"></a>Outils de gestion du cycle de vie des applications
 
@@ -1787,7 +1787,7 @@ La couverture du code a été mise à jour pour instrumenter dynamiquement des b
 
 **Déclaration static_assert.** Une déclaration **static_assert** teste une assertion logicielle au moment de la compilation, contrairement à d’autres mécanismes d’assertion qui la testent au moment de l’exécution. Si l’assertion échoue, la compilation échoue aussi et un message d’erreur spécifié est émis.
 
-**Mots clés nullptr et __nullptr.** Le compilateur Visual C++ vous permet d’utiliser le mot clé **nullptr** avec du code natif ou du code managé. Le mot clé **nullptr** indique qu’un descripteur d’objet, un pointeur intérieur ou un type de pointeur natif ne pointe pas vers un objet. Le compilateur interprète **nullptr** comme du code managé quand vous utilisez l’option de compilateur `/clr`, et comme du code natif quand vous n’utilisez pas l’option `/clr`.
+**Mots clés nullptr et __nullptr.** MSVC vous permet d’utiliser le mot clé **nullptr** avec du code natif ou du code managé. Le mot clé **nullptr** indique qu’un descripteur d’objet, un pointeur intérieur ou un type de pointeur natif ne pointe pas vers un objet. Le compilateur interprète **nullptr** comme du code managé quand vous utilisez l’option de compilateur `/clr`, et comme du code natif quand vous n’utilisez pas l’option `/clr`.
 Le mot clé **__nullptr** spécifique à Microsoft a la même signification que **nullptr**, mais il s’applique uniquement au code natif. Si vous compilez du code natif C/C++ à l’aide de l’option de compilateur `/clr`, le compilateur ne peut pas déterminer si le mot clé **nullptr** est un terme natif ou managé. Pour que vos intentions soient claires pour le compilateur, utilisez le mot clé nullptr pour spécifier le terme managé et **__nullptr** pour spécifier le terme natif.
 
 **Option de compilateur /Zc:trigraphs.** Par défaut, la prise en charge des trigraphes est désactivée. Utilisez l’option de compilateur `/Zc:trigraphs` pour activer la prise en charge des trigraphes.
@@ -1801,9 +1801,9 @@ Un trigraphe se compose de deux points d’interrogation consécutifs (??) suivi
 
 **Intrinsèques XOP, intrinsèques FMA4 et intrinsèques LWP.** De nouvelles fonctions intrinsèques ont été ajoutées pour prendre en charge les intrinsèques XOP ajoutées pour Visual Studio 2010 SP1, les intrinsèques FMA4 ajoutées pour Visual Studio 2010 SP1 et les intrinsèques LWP ajoutées pour les technologies de processeur Visual Studio 2010 SP1. Utilisez __cpuid, __cpuidex pour déterminer quelles technologies de processeur sont prises en charge sur un ordinateur particulier.
 
-### <a name="visual-c-projects-and-the-build-system"></a>Projets Visual C++ et le système de génération
+### <a name="visual-studio-c-projects-and-the-build-system"></a>Projets Visual Studio C++ et le système de génération
 
-**MSBuild.** Les projets et solutions Visual C++ sont désormais générés à l’aide de MSBuild.exe, qui remplace VCBuild.exe. MSBuild est le même outil de génération XML flexible et extensible que celui utilisé par les autres types de projets et langages Visual Studio. En raison de cette modification, les fichiers projet Visual C++ utilisent désormais un format de fichier XML et portent l’extension de nom de fichier .vcxproj. Les fichiers projet Visual C++ des versions antérieures de Visual Studio sont automatiquement convertis dans le nouveau format de fichier.
+**MSBuild.** Les projets et solutions Visual C++ sont désormais générés à l’aide de MSBuild.exe, qui remplace VCBuild.exe. MSBuild est le même outil de génération XML flexible et extensible que celui utilisé par les autres types de projets et langages Visual Studio. En raison de cette modification, les fichiers projet Visual Studio C++ utilisent désormais un format de fichier XML et portent l’extension de nom de fichier .vcxproj. Les fichiers projet Visual Studio C++ des versions antérieures de Visual Studio sont automatiquement convertis dans le nouveau format de fichier.
 
 **Répertoires VC++.** Le paramètre Répertoires VC++ se trouve maintenant dans deux emplacements. Utilisez les pages de propriétés du projet pour définir des valeurs par projet pour les répertoires VC++. Utilisez le **Gestionnaire de propriétés** et une feuille de propriétés pour définir des valeurs globales par configuration pour les répertoires VC++.
 
@@ -1915,7 +1915,7 @@ L’ajout du type de données YMMWORD prend en charge les opérandes multimédia
 
 #### <a name="c-support-library"></a>bibliothèque de prise en charge C++
 
-- C++ introduit la bibliothèque de marshaling. La bibliothèque de marshaling fournit un moyen simple et optimisé de marshaler des données entre des environnements natifs et managés. La bibliothèque est une alternative à des approches moins efficaces et plus complexes telles que l’utilisation de PInvoke. Pour plus d’informations, consultez **Vue d’ensemble du marshaling dans C++**.
+- C++ introduit la bibliothèque de marshaling. La bibliothèque de marshaling fournit un moyen simple et optimisé de marshaler des données entre des environnements natifs et managés. La bibliothèque est une alternative à des approches moins efficaces et plus complexes telles que l’utilisation de PInvoke. Pour plus d’informations, consultez **Vue d’ensemble du marshaling dans C++** .
 
 #### <a name="atl-server"></a>ATL Server
 
@@ -1931,10 +1931,10 @@ L’ajout du type de données YMMWORD prend en charge les opérandes multimédia
 - Le compilateur prend en charge les builds incrémentielles managées. Quand vous spécifiez cette option, le compilateur ne recompile pas le code en cas de modification d’un assembly référencé. Au lieu de cela, il effectue une build incrémentielle. Les fichiers sont recompilés uniquement si les changements affectent le code dépendant.
 - Les attributs liés à ATL Server ne sont plus pris en charge. Le compilateur ne prend plus en charge plusieurs attributs qui étaient directement liés à ATL Server. Pour obtenir la liste complète des attributs supprimés, consultez Changements importants.
 - Le compilateur prend en charge la microarchitecture Intel Core. Le compilateur contient le paramétrage pour la microarchitecture Intel Core pendant la génération du code. Par défaut, ce paramétrage est activé et ne peut pas être désactivé car il sert également aux processeurs Pentium 4 et à d’autres processeurs.
-- Les intrinsèques prennent en charge les processeurs Intel et AMD plus récents. Plusieurs nouvelles instructions intrinsèques prennent en charge les fonctionnalités supérieures de processeurs Intel et AMD plus récents. Pour plus d’informations sur les nouveaux intrinsèques, consultez **Instructions SSE 3 (extensions Streaming SIMD 3 supplémentaires)**, **Instructions SSE 4 (extensions Streaming SIMD 4)**, **Intrinsèques de manipulation de bits avancés et SSE4A**, **Intrinsèques AES**, **_mm_clmulepi64_si128** et **__rdtscp**.
+- Les intrinsèques prennent en charge les processeurs Intel et AMD plus récents. Plusieurs nouvelles instructions intrinsèques prennent en charge les fonctionnalités supérieures de processeurs Intel et AMD plus récents. Pour plus d’informations sur les nouveaux intrinsèques, consultez **Instructions SSE 3 (extensions Streaming SIMD 3 supplémentaires)** , **Instructions SSE 4 (extensions Streaming SIMD 4)** , **Intrinsèques de manipulation de bits avancés et SSE4A**, **Intrinsèques AES**, **_mm_clmulepi64_si128** et **__rdtscp**.
 - La fonction `__cpuid` a été mise à jour. Les fonctions `__cpuid` et `__cpuidex` prennent désormais en charge plusieurs nouvelles fonctionnalités issues des dernières révisions des processeurs Intel et AMD. L’intrinsèque `__cpuidex` est nouveau et collecte davantage d’informations sur les processeurs récents.
 - L’option de compilateur `/MP` réduit la durée de génération totale. L’option `/MP` peut réduire considérablement la durée totale de compilation de plusieurs fichiers sources en créant plusieurs processus qui compilent les fichiers simultanément. Cette option est particulièrement utile sur les ordinateurs qui prennent en charge l’hyperthreading, plusieurs processeurs ou plusieurs cœurs.
-- L’option de compilateur `/Wp64` et le mot clé **__w64** sont dépréciés. L’option de compilateur `/Wp64` et le mot clé **__w64**, qui détectent les problèmes de portabilité 64 bits, sont dépréciés. Ils vont être supprimés dans une prochaine version du compilateur. Au lieu de cette option de compilateur et du mot clé, utilisez un compilateur Visual C++ qui cible une plateforme 64 bits.
+- L’option de compilateur `/Wp64` et le mot clé **__w64** sont dépréciés. L’option de compilateur `/Wp64` et le mot clé **__w64**, qui détectent les problèmes de portabilité 64 bits, sont dépréciés. Ils vont être supprimés dans une prochaine version du compilateur. Au lieu de cette option de compilateur et du mot clé, utilisez un MSVC qui cible une plateforme 64 bits.
 - `/Qfast_transcendentals` génère du code inline pour les fonctions transcendantes.
 - `/Qimprecise_fwaits` supprime les commandes fwait internes aux blocs try quand vous utilisez l’option de compilateur `/fp:except`.
 
@@ -1989,7 +1989,7 @@ Des changements importants ont été apportés au compilateur dans cette version
 - L’option de compilateur `/bigobj` a été ajoutée.
 - `/clr:pure`, `/clr:safe` et `/clr:oldSyntax` ont été ajoutés. (Déconseillée ultérieurement dans Visual Studio 2015 et supprimée dans Visual Studio 2017.)
 - Options de compilateur dépréciées : plusieurs options de compilateur ont été dépréciées dans cette version. Pour plus d’informations, consultez **Options de compilateur dépréciées**.
-- La double conversion de code dans le code `/clr` est réduite. Pour plus d’informations, consultez **Double conversion de code (thunking) (C++)**.
+- La double conversion de code dans le code `/clr` est réduite. Pour plus d’informations, consultez **Double conversion de code (thunking) (C++)** .
 - L’option `/EH` (Modèle de prise en charge des exceptions) ou `/EHs` ne peut plus être utilisée pour intercepter une exception levée par un autre élément qu’une clause throw. Utilisez `/EHa`.
 - L’option de compilateur `/errorReport` (Signaler les erreurs internes du compilateur) a été ajoutée.
 - L’option de compilateur `/favor` (Optimisation pour 64) a été ajoutée.
@@ -2032,7 +2032,7 @@ Des changements importants ont été apportés au compilateur dans cette version
 - L’option de compilateur `/YX` a été supprimée. Utilisez `/Yc` (Créer un fichier d’en-tête précompilé) ou `/Yu` (Utiliser un fichier d’en-tête précompilé) à la place. Si vous supprimez `/YX` de vos configurations de build sans le remplacer, cela peut produire des builds plus rapides.
 - `/Zc:forScope` est désormais activé par défaut.
 - `/Zc:wchar_t` est désormais activé par défaut.
-- L’option de compilateur `/Zd` a été supprimée. Les informations de débogage uniquement des numéros de ligne ne sont plus prises en charge. Utilisez `/Zi` à la place. (Pour plus d’informations, consultez **/Z7, /Zi, /ZI (Format des informations de débogage)**).
+- L’option de compilateur `/Zd` a été supprimée. Les informations de débogage uniquement des numéros de ligne ne sont plus prises en charge. Utilisez `/Zi` à la place. (Pour plus d’informations, consultez **/Z7, /Zi, /ZI (Format des informations de débogage)** ).
 - `/Zg` est désormais valide uniquement sur les fichiers de code source C, et non sur les fichiers de code source C++.
 - L’option de compilateur `/Zx` (Déboguer le code Itanium optimisé) a été ajoutée.
 

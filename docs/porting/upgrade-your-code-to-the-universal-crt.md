@@ -2,12 +2,12 @@
 title: Mettre à niveau votre code vers le CRT universel
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: bdf1615d47361654e9690977520d01c332098438
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898763"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448993"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Mettre à niveau votre code vers le CRT universel
 
@@ -19,7 +19,7 @@ Grâce à cette refactorisation, les noms ou les emplacements de nombreux fichie
 
 ## <a name="where-to-find-the-universal-crt-files"></a>Où trouver les fichiers du CRT universel
 
-En tant que composant Windows, les fichiers et en-têtes de la bibliothèque UCRT font désormais partie du SDK Windows. Quand vous installez Visual Studio, les parties du SDK Windows nécessaires pour utiliser l’UCRT sont également installées. Le programme d’installation de Visual Studio ajoute les emplacements des fichiers DLL, des bibliothèques et des en-têtes UCRT aux chemins par défaut utilisés par le système de génération de projet Visual Studio. Quand vous mettez à jour vos projets Visual C++, s’ils utilisent les paramètres de projet par défaut, l’IDE détecte automatiquement les nouveaux emplacements des fichiers d’en-tête, et l’éditeur de liens utilise automatiquement les nouvelles bibliothèques vcruntime et UCRT par défaut. De même, si vous utilisez une invite de commandes développeur pour effectuer des générations à partir d’une ligne de commande, les variables d’environnement qui contiennent des chemins d’en-têtes et de bibliothèques sont mises à jour et sont automatiquement opérationnelles.
+En tant que composant Windows, les fichiers et en-têtes de la bibliothèque UCRT font désormais partie du SDK Windows. Quand vous installez Visual Studio, les parties du SDK Windows nécessaires pour utiliser l’UCRT sont également installées. Le programme d’installation de Visual Studio ajoute les emplacements des fichiers DLL, des bibliothèques et des en-têtes UCRT aux chemins par défaut utilisés par le système de génération de projet Visual Studio. Quand vous mettez à jour vos projets Visual Studio C++, s’ils utilisent les paramètres de projet par défaut, l’IDE détecte automatiquement les nouveaux emplacements des fichiers d’en-tête, et l’éditeur de liens utilise automatiquement les nouvelles bibliothèques vcruntime et UCRT par défaut. De même, si vous utilisez une invite de commandes développeur pour effectuer des générations à partir d’une ligne de commande, les variables d’environnement qui contiennent des chemins d’en-têtes et de bibliothèques sont mises à jour et sont automatiquement opérationnelles.
 
 Les fichiers d’en-tête de la bibliothèque standard C se trouvent désormais dans le SDK Windows, au sein d’un dossier include rattaché à un répertoire spécifique à la version du SDK. Un emplacement standard pour les fichiers d’en-tête est le répertoire Program Files ou Program Files (x86) sous Windows Kits\\10\\Include\\_version_sdk_\\ucrt, où _version_sdk_ correspond à une version ou mise à jour Windows, par exemple, 10.0.14393.0 pour la mise à jour anniversaire Windows 10.
 
@@ -29,7 +29,7 @@ Les DLL UCRT commerciales et de débogage se trouvent dans des emplacements dist
 
 La bibliothèque de prise en charge du runtime spécifique au compilateur C et C++, **vcruntime**, contient le code nécessaire pour prendre en charge le démarrage du programme et les fonctionnalités telles que la gestion des exceptions et les intrinsèques. La bibliothèque et ses fichiers d’en-tête se trouvent toujours dans le dossier spécifique à la version Microsoft Visual Studio dans le répertoire Program Files ou Program files (x86). Dans Visual Studio 2017, les en-têtes se trouvent sous Microsoft Visual Studio\\2017\\_édition_\\VC\\Tools\\MSVC\\_version_bib_\\include, tandis que les bibliothèques de liens se trouvent sous Microsoft Visual Studio\\2017\\_édition_\\VC\\Tools\\MSVC\\_version_bib_\\lib\\_architecture_, où _édition_ est l’édition de Visual Studio installée, _version_bib_ la version des bibliothèques et _architecture_ l’architecture du processeur. Des bibliothèques de liens pour OneCore et Store sont également présentes dans le dossier des bibliothèques. Les versions commerciale et de débogage de la bibliothèque statique sont libvcruntime.lib et libvcruntimed.lib. Les bibliothèques stub commerciale et de débogage de liens dynamiques sont vcruntime.lib et vcruntimed.lib, respectivement.
 
-Quand vous mettez à jour vos projets Visual C++, si vous avez affecté à la propriété **Éditeur de liens** **Ignorer toutes les bibliothèques par défaut** du projet la valeur **Oui**, ou si vous utilisez l’option `/NODEFAULTLIB` de l’éditeur de liens sur la ligne de commande, vous devez mettre à jour votre liste de bibliothèques pour inclure les nouvelles bibliothèques refactorisées. Remplacez l’ancienne bibliothèque CRT, par exemple, libcmt.lib, libcmtd.lib, msvcrt.lib ou msvcrtd.lib, par les bibliothèques refactorisées équivalentes. Pour plus d’informations sur les bibliothèques spécifiques à utiliser, consultez [Fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md).
+Quand vous mettez à jour vos projets Visual Studio C++, si vous avez affecté à la propriété **Éditeur de liens** **Ignorer toutes les bibliothèques par défaut** du projet la valeur **Oui**, ou si vous utilisez l’option `/NODEFAULTLIB` de l’éditeur de liens sur la ligne de commande, vous devez mettre à jour votre liste de bibliothèques pour inclure les nouvelles bibliothèques refactorisées. Remplacez l’ancienne bibliothèque CRT, par exemple, libcmt.lib, libcmtd.lib, msvcrt.lib ou msvcrtd.lib, par les bibliothèques refactorisées équivalentes. Pour plus d’informations sur les bibliothèques spécifiques à utiliser, consultez [Fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md).
 
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>Déploiement et redistribution du CRT universel
 

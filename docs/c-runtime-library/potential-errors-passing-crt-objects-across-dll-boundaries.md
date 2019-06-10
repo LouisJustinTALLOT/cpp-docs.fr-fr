@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: 31f9d9aceba167b516c9d37724e240f1bc4586e1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 10fbb128698b6422779d09a15fe3c1d25e8de5b5
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749896"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446654"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Erreurs potentielles de passage d'objets CRT entre frontières DLL
 
@@ -23,7 +23,7 @@ HEAP[] : adresse non valide spécifiée dans RtlValidateHeap(#,#)
 
 ## <a name="causes"></a>Causes
 
-Chaque copie de la bibliothèque CRT a un état séparé et distinct, conservé dans le stockage local de thread par votre application ou dans une DLL. Ainsi, les objets CRT comme les descripteurs de fichiers, les variables d’environnement et les paramètres régionaux sont uniquement valides pour la copie de la bibliothèque CRT dans l’application ou la DLL dans laquelle ces objets sont alloués ou définis. Quand une DLL et ses clients d’application utilisent des copies différentes de la bibliothèque CRT, vous ne pouvez pas passer ces objets CRT sur la limite DLL et vous attendre à ce qu’ils soient récupérés correctement en sortie. Cela est particulièrement vrai pour les versions CRT antérieures au CRT universel dans Visual Studio 2015 et versions ultérieures. Une version spécifique de la bibliothèque CRT correspond à chaque version de Visual Studio créée avec Visual C++ 2013 ou version antérieure. Les détails de l’implémentation interne du CRT, par exemple, ses structures de données et les conventions de nommage, sont différents dans chaque version. La liaison dynamique du code compilé pour une version du CRT avec une version différente de la DLL CRT n’a jamais été prise en charge, bien qu’elle ait des chances de fonctionner (du fait du hasard et non de sa conception).
+Chaque copie de la bibliothèque CRT a un état séparé et distinct, conservé dans le stockage local de thread par votre application ou dans une DLL. Ainsi, les objets CRT comme les descripteurs de fichiers, les variables d’environnement et les paramètres régionaux sont uniquement valides pour la copie de la bibliothèque CRT dans l’application ou la DLL dans laquelle ces objets sont alloués ou définis. Quand une DLL et ses clients d’application utilisent des copies différentes de la bibliothèque CRT, vous ne pouvez pas passer ces objets CRT sur la limite DLL et vous attendre à ce qu’ils soient récupérés correctement en sortie. Cela est particulièrement vrai pour les versions CRT antérieures au CRT universel dans Visual Studio 2015 et versions ultérieures. Dans Visual Studio 2013 et antérieur, chaque version de Visual Studio avait sa propre bibliothèque CRT. Les détails de l’implémentation interne du CRT, par exemple, ses structures de données et les conventions de nommage, sont différents dans chaque version. La liaison dynamique du code compilé pour une version du CRT avec une version différente de la DLL CRT n’a jamais été prise en charge, bien qu’elle ait des chances de fonctionner (du fait du hasard et non de sa conception).
 
 En outre, étant donné que chaque copie de la bibliothèque CRT a son propre gestionnaire de tas, l'allocation de mémoire dans une bibliothèque CRT et le passage du pointeur sur une limite DLL à libérer par une autre copie de la bibliothèque CRT est une cause potentielle d'altération du tas. Si vous concevez votre DLL de sorte qu’elle passe des objets CRT sur la limite ou alloue de la mémoire, et souhaitez qu’elle soit libérée en dehors de la DLL, vous obligez les clients d’application de la DLL à utiliser la même copie de la bibliothèque CRT que la DLL. La DLL et ses clients utilisent normalement la même copie de la bibliothèque CRT uniquement si, au moment du chargement, ils sont tous deux liés à la même version de la DLL CRT. Comme la version DLL de la bibliothèque CRT universelle utilisée par Visual Studio 2015 et version ultérieure sur Windows 10 est désormais un composant Windows déployé de manière centralisée (ucrtbase.dll), il est identique pour les applications créées avec Visual Studio 2015 et versions ultérieures. Toutefois, même quand le code CRT est identique, vous ne pouvez pas transférer la mémoire allouée d’un tas vers un composant qui utilise un autre tas.
 

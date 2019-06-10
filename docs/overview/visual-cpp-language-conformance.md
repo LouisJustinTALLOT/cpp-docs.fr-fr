@@ -1,16 +1,16 @@
 ---
 title: Tableau de conformité du langage Microsoft C++
-ms.date: 05/19/2019
+ms.date: 05/20/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: c36256988e2698cb6f04e0ab71dbf6211b596033
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: 994878509c4fc1bf14390fad8ff4c112a4af8242
+ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934169"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65975166"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tableau de conformité du langage Microsoft C++
 
@@ -89,32 +89,33 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |----|---|
 |__Fonctionnalités du langage principal C++17 (rapport de défauts)__|__Prise en charge__|
 |&nbsp;&nbsp;[P0702R1 Résolution de la déduction d’argument de modèle de classe pour les ctors de la liste d’initialiseurs](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0588R1 Simplification de la capture lambda implicite](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Non|
 |&nbsp;&nbsp;[P0961R1 Assouplissement des règles de recherche d’un point de personnalisation de liaisons structurées](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0962R2 Assouplissement des règles de recherche d’un point de personnalisation de boucle range-for](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|Non|
 |&nbsp;&nbsp;[P0969R0 Autorisation des liaisons structurées aux membres accessibles](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0859R0 CWG 1581 : Quand les fonctions membres constexpr sont-elles définies ?](https://wg21.link/P0859R0)|Non|
+|&nbsp;&nbsp;[P0588R1 Simplification de la capture lambda implicite](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Non|
+|&nbsp;&nbsp;[P0962R2 Assouplissement des règles de recherche d’un point de personnalisation de boucle range-for](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|Non|
 |&nbsp;&nbsp;[P0929R2 Vérification des types de classe abstraite](https://wg21.link/P0929R2)|Non|
 |&nbsp;&nbsp;[P1009R2 Déduction de la taille du tableau des nouvelles expressions](https://wg21.link/P1009R2)|Non|
 |&nbsp;&nbsp;[P1286R2 Contra CWG DR1778](https://wg21.link/P1286R2)|Non|
-
 |Domaine de fonctionnalités| |
 |----|---|
 |__Fonctionnalités du langage principal C++20__|__Prise en charge__|
 |&nbsp;&nbsp;[P0704R1 Résolution des pointeurs const lvalue qualifiés ref vers des membres](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0972R0 noexcept pour \<chrono> zero(), min(), max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P1041R4 Transformer les littéraux de chaîne char16_t/char32_t en UTF-16/32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1330R0 Modification du membre actif d’une union à l’intérieur de constexpr](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0972R0 noexcept pour \<chrono> zero(), min(), max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0515R3 Opérateur de comparaison trilatérale (vaisseau spatial) <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P1008R1 Interdiction des agrégats avec les constructeurs déclarés par l’utilisateur](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0329R4 Initialisation désignée](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0409R2 Autorisation de capture lambda \[=, this\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0515R3 Opérateur de comparaison triple (spaceship) <=>](https://wg21.link/P0515R3) et [P0905R1 Symétrie pour le spaceship](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0905r1.html)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0515R3 Opérateur de comparaison trilatérale (vaisseau spatial) <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0941R2 Macros de test de fonctionnalité](https://wg21.link/P0941R2)|VS 2019 16.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1008R1 Interdiction des agrégats avec les constructeurs déclarés par l’utilisateur](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0846R0 Modèles ADL et de fonction qui ne sont pas visibles](https://wg21.link/P0846R0)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0641R2 Incompatibilité de const avec le constructeur de copie par défaut](https://wg21.link/P0641R2)|Partial|
-|&nbsp;&nbsp;[P0306R4 Ajout de \_\_VA_OPT\_\_ pour l’omission et la suppression de virgules](https://wg21.link/P0306R4) et [P1042R1 \_\_clarifications de la formulation\_\_ VA_OPT](https://wg21.link/P1042R1)|Non|
+|&nbsp;&nbsp;[P0306R4 Ajout de \_\_VA_OPT\_\_ pour l’omission de virgule et la suppression de virgule](https://wg21.link/P0306R4)|Non|
 |&nbsp;&nbsp;[P0315R4 Autorisation de lambdas dans des contextes non évalués](https://wg21.link/P0315R4)|Non|
 |&nbsp;&nbsp;[P0409R2 Autorisation de capture lambda \[=, this\]](https://wg21.link/P0409R2)|Non|
-|&nbsp;&nbsp;[P0428R2 Syntaxe de modèle familier pour les expressions lambda génériques](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|Non|
+|&nbsp;&nbsp;[P0428R2 Syntaxe de modèle familier pour les expressions lambda génériques](http://www.open-std.org/jtc1/sc22/wg21/docs/pa pers/2017/p0428r2.pdf)|Non|
 |&nbsp;&nbsp;[P0479R5 \[\[attributs\]\] probables \[\[ et \]\]peu probables](https://wg21.link/P0479R5)|Non|
 |&nbsp;&nbsp;[P0542R5 Contrats](https://wg21.link/P0542R5)|Non|
 |&nbsp;&nbsp;[P0614R1 Boucles range-based for avec initialiseurs](https://wg21.link/P0614R1)|Non|
@@ -133,7 +134,6 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[P0912R5 Coroutines](https://wg21.link/P0912R5)|Non|
 |&nbsp;&nbsp;[P0960R3 Autoriser l’initialisation d’agrégats à partir de la liste des valeurs entre parenthèses](https://wg21.link/P0960R3)|Non|
 |&nbsp;&nbsp;[P1002R1 Blocs try-catch des fonctions constexpr](https://wg21.link/P1002R1)|Non|
-|&nbsp;&nbsp;[P1041R4 Transformer les littéraux de chaîne char16_t/char32_t en UTF-16/32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1064R0 Autorisation d’appels de fonction virtuels dans les expressions constantes](https://wg21.link/P1064R0)|Non|
 |&nbsp;&nbsp;[P1073R3 Fonctions immédiates](https://wg21.link/P1073R3)|Non|
 |&nbsp;&nbsp;[P1084R2 Les exigencesde type de retour du jour sont insuffisantes](https://wg21.link/P1084R2)|Non|
@@ -156,12 +156,21 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |Domaine de fonctionnalités| |
 |---|---|
 |__Fonctionnalités de bibliothèque standard C++20__|__Prise en charge__|
+|&nbsp;&nbsp;[P0809R0 Comparaison de conteneurs non ordonnés](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0858R0 Exigences de l’itérateur constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0777R1 Prévention des dégradations inutiles](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0318R1 unwrap_reference, unwrap_ref_decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0318r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0457R2 starts_with()/ends_with() pour basic_string/basic_string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0458R2 contains() pour les conteneurs associatifs ordonnés et non ordonnés](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0458r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0646R1 list/forward_list remove()/remove_if()/unique() size_type de retour](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0646r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0769R2 shift_left(), shift_right()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0769r2.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0019R8 atomic_ref](https://wg21.link/P0019R8)|Non|
 |&nbsp;&nbsp;[P0020R6 atomic\<float>, atomic\<double>, atomic\<long double>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)|Non|
 |&nbsp;&nbsp;[P0053R7 \<syncstream>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br/>&nbsp;&nbsp;[P0753R2 Manipulateurs osyncstream](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|Non|
 |&nbsp;&nbsp;[P0122R7 \<span>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|Non|
 |&nbsp;&nbsp;[P0202R3 constexpr pour \<algorithm> et exchange()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|Non|
-|&nbsp;&nbsp;[P0318R1 unwrap_reference, unwrap_ref_decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0318r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0339R6 polymorphic_allocator<>](https://wg21.link/P0339R6)|Non|
 |&nbsp;&nbsp;[P0340R3 underlying_type compatible avec SFINAE](https://wg21.link/P0340R3)|Non|
 |&nbsp;&nbsp;[P0355R7 \<Calendriers et fuseaux horaires chrono>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|Non|
@@ -169,22 +178,18 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[P0357R3 Prise en charge de types incomplets dans reference_wrapper](https://wg21.link/P0357R3)|Non|
 |&nbsp;&nbsp;[P0415R1 constexpr pour \<complex> (à nouveau)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|Non|
 |&nbsp;&nbsp;[P0439R0 Classe enum memory_order](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|Non|
-|&nbsp;&nbsp;[P0457R2 starts_with()/ends_with() pour basic_string/basic_string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0458R2 contains() pour les conteneurs associatifs ordonnés et non ordonnés](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0458r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0463R1 endian](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|Non|
 |&nbsp;&nbsp;[P0475R1 Élision de copie garantie pour la construction par morceaux](https://wg21.link/P0475R1)|Non|
 |&nbsp;&nbsp;[P0476R2 <bit> bit_cast](https://wg21.link/P0476R2)|Non|
 |&nbsp;&nbsp;[P0482R6 char8_t : Un type pour les caractères et chaînes UTF-8](https://wg21.link/P0482R6)|Non|
 |&nbsp;&nbsp;[P0487R1 Opérateur de résolution>>(basic_istream &,CharT*)](https://wg21.link/P0487R1)|Non|
 |&nbsp;&nbsp;[P0528R3 Comparaison et échange atomique avec remplissage de Bits](https://wg21.link/P0528R3)|Non|
-|&nbsp;&nbsp;[P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0556R3 <bit> ispow2(), ceil2(), floor2(), log2p1()](https://wg21.link/P0556R3)|Non|
 |&nbsp;&nbsp;[P0591R4 Fonctions utilitaires pour la construction de Uses-Allocator](https://wg21.link/P0591R4)|Non|
 |&nbsp;&nbsp;[P0600R1 \[\[nodiscard\]\] pour STL (première partie)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)|Non|
 |&nbsp;&nbsp;[P0608R3 Amélioration du constructeur de conversion/opérateur d’assignation de variante](https://wg21.link/P0608R3)|Non|
 |&nbsp;&nbsp;[P0616R0 Utilisation de move() dans \<numeric>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0616r0.pdf)|Non|
 |&nbsp;&nbsp;[P0619R4 Suppression des fonctionnalités déconseillées de C++17 dans C++20](https://wg21.link/P0619R4)|Non|
-|&nbsp;&nbsp;[P0646R1 list/forward_list remove()/remove_if()/unique() size_type de retour](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0646r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|Non|
 |&nbsp;&nbsp;[P0655R1 visit<R>()](https://wg21.link/P0655R1)|Non|
 |&nbsp;&nbsp;[P0674R1 make_shared() pour tableaux](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|Non|
@@ -194,14 +199,9 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[P0758R1 is_nothrow_convertible](https://wg21.link/P0758R1)|Non|
 |&nbsp;&nbsp;[P0767R1 Dépréciation de is_pod](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|Non|
 |&nbsp;&nbsp;[P0768R1 Prise en charge des bibliothèques pour l’opérateur de comparaison spaceship \<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|Non|
-|&nbsp;&nbsp;[P0769R2 shift_left(), shift_right()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0769r2.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0771R1 noexcept pour le constructeur de déplacement de std::function](https://wg21.link/P0771R1)|Non|
-|&nbsp;&nbsp;[P0777R1 Prévention des dégradations inutiles](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0809R0 Comparaison de conteneurs non ordonnés](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0811R3 midpoint(), lerp()](https://wg21.link/P0811R3)|Non|
-|&nbsp;&nbsp;[P0858R0 Exigences de l’itérateur constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0879R0 constexpr pour les fonctions de permutation](https://wg21.link/P0879R0)|Non|
-|&nbsp;&nbsp;[P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0896R4 \<Plages\>](https://wg21.link/P0896R4)|Non|
 |&nbsp;&nbsp;[P0898R3 Concepts de bibliothèque standard](https://wg21.link/P0898R3)|Non|
 |&nbsp;&nbsp;[P0912R5 Prise en charge de la bibliothèque pour les coroutines](https://wg21.link/P0912R5)|Non|
@@ -215,7 +215,6 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[P1020R1 Création de pointeur intelligent avec initialisation par défaut](https://wg21.link/P1020R1)|Non|
 |&nbsp;&nbsp;[P1023R0 constexpr pour comparaisons std::array](https://wg21.link/P1023R0)|Non|
 |&nbsp;&nbsp;[P1032R1 constexpr divers](https://wg21.link/P1032R1)|Non|
-|&nbsp;&nbsp;[P1164R1 Rendre create_directory() intuitif (rapport)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1164r1.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P1165R1 Propagation cohérente d’état allocateurs dans l’opérateur+() de basic_string](https://wg21.link/P1165R1)|Non|
 |&nbsp;&nbsp;[P1209R0 erase_if(), erase()](https://wg21.link/P1209R0)|Non|
 |&nbsp;&nbsp;[P1227R2 std::ssize() signé, span::size non signé](https://wg21.link/P1227R2)|Non|
@@ -274,7 +273,7 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[P0185R1 is_swappable, is_nothrow_swappable](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0185r1.html)|VS 2015.3|
 |&nbsp;&nbsp;[P0209R2 make_from_tuple()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0209r2.pdf)|VS 2017 15.0|
 |&nbsp;&nbsp;[P0218R1 \<système de fichiers>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br/>&nbsp;&nbsp;[P0219R1 Chemins relatifs du système de fichiers](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br/>&nbsp;&nbsp;[P0317R1 Mise en cache de l’entrée d’annuaire pour le système de fichiers](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0317r1.html)<br/>&nbsp;&nbsp;[P0392R0 Prise en charge de string_view dans les chemins du système de fichiers](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br/>&nbsp;&nbsp;[P0430R2 Prise en charge des systèmes de fichiers non POSIX](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br/>&nbsp;&nbsp;[P0492R2 Résolution des commentaires NB pour le système de fichiers](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|VS 2017 15.7 <sup>[E](#note_E)</sup>|
-|&nbsp;&nbsp;[P0220R1 Spécification Library Fundamentals V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|VS 2017 15.6 <sup>[F](#note_F)</sup>|
+|&nbsp;&nbsp;[P0220R1 Spécification Library Fundamentals V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|VS 2017 15.6|
 |&nbsp;&nbsp;[P0226R1 Fonctions mathématiques spéciales](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|VS 2017 15.7|
 |&nbsp;&nbsp;[P0254R2 Intégration de string_view et std::string](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0254r2.pdf)|VS 2017 15.0|
 |&nbsp;&nbsp;[P0258R2 has_unique_object_representations](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0258r2.html)|VS 2017 15.3 <sup>[G](#note_G)</sup>|
@@ -362,15 +361,13 @@ L’option de compilateur [/Zc:noexceptTypes](../build/reference/zc-noexcepttype
 
 <a name="note_E"></a>__E__ Il s’agit d’une toute nouvelle implémentation, incompatible avec la version précédente de `std::experimental`, exigée par la prise en charge de symlink, les correctifs de bogues et les changements apportés à la norme. Actuellement, l’inclusion de \<filesystem> fournit le nouveau `std::filesystem` et le `std::experimental::filesystem` précédent, et l’inclusion de \<experimental/filesystem> fournit uniquement l’ancienne implémentation expérimentale. L’implémentation expérimentale sera supprimée de la prochaine version de rupture avec ABI des bibliothèques.
 
-<a name="note_F"></a>__F__ Les fonctionnalités qui n’ont pas été terminées dans Visual Studio 2015 sont indiquées autre part dans ce tableau.
-
 <a name="note_G"></a>__G__ Pris en charge par une fonction intrinsèque du compilateur.
 
 <a name="note_14"></a>__14__ Ces fonctionnalités C++17/20 sont toujours activées, même quand [/std:c++14](../build/reference/std-specify-language-standard-version.md) (valeur par défaut) est spécifié. Soit parce que la fonctionnalité a été implémentée avant l’introduction des options **/std**, soit parce que l’implémentation conditionnelle était trop complexe.
 
 <a name="note_17"></a>__17__ Ces fonctionnalités sont activées par l’option du compilateur [/std:c++17](../build/reference/std-specify-language-standard-version.md) (ou [/std:c++latest](../build/reference/std-specify-language-standard-version.md)).
 
-<a name="note_20"></a>__20__ Ces fonctionnalités sont activées par l’option du compilateur [/std:c++17](../build/reference/std-specify-language-standard-version.md). Lorsque l’implémentation C++20 est terminée, une nouvelle option de compilateur **/std : c ++ 20** sera ajoutée.
+<a name="note_20"></a>__20__ Ces fonctionnalités sont activées par l’option du compilateur [/std:c++17](../build/reference/std-specify-language-standard-version.md). Quand l’implémentation C++20 est terminée, une nouvelle option de compilateur **/std:c++20** est ajoutée, sous laquelle ces fonctionnalités seront également disponibles.
 
 <a name="note_byte"></a>__byte__ `std::byte` est activé par [/std:c++17](../build/reference/std-specify-language-standard-version.md) (ou [/std:c++latest](../build/reference/std-specify-language-standard-version.md)), mais étant donné qu’il peut entrer en conflit avec les en-têtes du SDK Windows dans certains cas, il comporte une macro d’annulation affinée. Il peut être désactivé en définissant `_HAS_STD_BYTE` sur `0`.
 

@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 2b0736bca9cc0b67f9ea8ac83dc18fadaeefdb3c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 17f8082ac0442f65b9195b37da18b04f795d3d66
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58780819"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448946"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introduction à Visual C++ pour les utilisateurs UNIX
 
@@ -43,13 +43,13 @@ Vous pouvez utiliser le compilateur C++ pour générer du code existant configur
 
 Vous pouvez créer des projets dans l'environnement de développement. Visual Studio propose de nombreux modèles qui fournissent du code standard pour différents projets courants. Vous pouvez utiliser les Assistants Application pour générer des projets à l'aide de schémas de code visant divers types d'application.
 
-Vous pouvez démarrer avec un projet vide dans l’**Assistant Application Console (Win32)**. Cochez la case **Projet vide**. Vous pourrez par la suite ajouter au projet de nouveaux fichiers et des fichiers existants.
+Vous pouvez démarrer avec un projet vide dans l’**Assistant Application Console (Win32)** . Cochez la case **Projet vide**. Vous pourrez par la suite ajouter au projet de nouveaux fichiers et des fichiers existants.
 
 Quand vous créez un projet, vous devez lui attribuer un nom. Par défaut, le nom du projet est celui de la bibliothèque de liens dynamiques (DLL) ou du fichier exécutable généré par le projet. Pour plus d’informations, consultez [Création de solutions et de projets](/visualstudio/ide/creating-solutions-and-projects).
 
 ## <a name="microsoft-specific-modifiers"></a>Modificateurs Microsoft spécifiques
 
-Le compilateur Microsoft Visual C++ implémente plusieurs extensions du langage de programmation C++ standard pour prendre en charge la programmation sur les systèmes d’exploitation Windows. Ces extensions servent à spécifier des attributs de classe de stockage, des conventions d'appel de fonction et des fonctions d'adressage, entre autres choses. Pour obtenir une liste complète de toutes les extensions C++ prises en charge, consultez [Modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).
+Le compilateur Microsoft C++ implémente plusieurs extensions du langage de programmation C++ standard pour prendre en charge la programmation sur les systèmes d’exploitation Windows. Ces extensions servent à spécifier des attributs de classe de stockage, des conventions d'appel de fonction et des fonctions d'adressage, entre autres choses. Pour obtenir une liste complète de toutes les extensions C++ prises en charge, consultez [Modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).
 
 Vous pouvez désactiver toutes les extensions spécifiques Microsoft pour C++ à l'aide de l'option `/Za` du compilateur. Cette option est recommandée si vous souhaitez écrire du code devant s'exécuter sur plusieurs plateformes. Pour plus d’informations sur l’option de compilateur `/Za`, consultez [/Za, /Ze (désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md). Pour plus d’informations sur la conformité du compilateur C++, consultez [Conformité du langage Visual C++](../overview/visual-cpp-language-conformance.md) et [Comportement non standard](../cpp/nonstandard-behavior.md).
 
