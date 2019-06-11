@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 06940bb72f9113e0a8148e15418504b35fc95099
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 79938cb5c762292c5e1802832477c3a568ae2fdb
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694255"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504475"
 ---
 # <a name="add-a-property"></a>Ajouter une propriété
 
@@ -191,5 +191,5 @@ Si vous ajoutez une propriété à une dispinterface MFC à l’aide de l’[Ass
 |`Font`|Retourne ou définit la police ambiante du contrôle. Null si le contrôle n’a pas de police.|
 |`ForeColor`|Retourne ou définit la propriété `ForeColor` ambiante du contrôle.|
 |`hWnd`|Retourne ou définit la propriété `hWnd` du contrôle. `hWnd` n’a pas de type d’implémentation **Variable membre**.|
-|`ReadyState`|Retourne ou définit la propriété `ReadyState` du contrôle. Un contrôle peut être non initialisé, initialisé, en cours de chargement, interactif ou complet. Pour plus d’informations, consultez [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) dans le *kit SDK Internet*.|
+|`ReadyState`|Retourne ou définit la propriété `ReadyState` du contrôle. Un contrôle peut être non initialisé, initialisé, en cours de chargement, interactif ou complet. Pour plus d’informations, consultez [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) dans le *kit SDK Internet*.|
 |`Text`|Retourne ou définit le texte présent dans un contrôle. `Text` n’a pas de type d’implémentation **Variable membre**.|
