@@ -2,16 +2,16 @@
 layout: LandingPage
 title: Documentation sur le développement Linux avec C++
 description: Créez et déboguez des applications exécutées sur Linux.
-ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f57777451e861a8ea0df1eb81fc97553c176ebec
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393140"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821637"
 ---
 # <a name="linux-development-with-c-documentation"></a>Documentation sur le développement Linux avec C++
 
-Utilisez Visual Studio 2017 pour créer et déboguer des applications exécutées sur Linux.
+Utilisez Visual Studio 2017 et versions ultérieures pour créer et déboguer des applications exécutées sur des ordinateurs distants Linux ou sur un sous-système Windows pour Linux.
 
 <ul class="panelContent cardsF">
     <li>
@@ -64,8 +64,8 @@ Utilisez Visual Studio 2017 pour créer et déboguer des applications exécuté
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual C++</a></h3>
-                        <p><a href="/cpp/overview-of-cpp-development">IDE et outils pour le développement Visual C++</a></p>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">C++ dans Visual Studio</a></h3>
+                        <p><a href="/cpp/overview-of-cpp-development">Présentation du développement C++ dans Visual Studio</a></p>
                     </div>
                 </div>
             </div>
