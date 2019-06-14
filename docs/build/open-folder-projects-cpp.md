@@ -4,24 +4,24 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 4f59781833a303ad2db837549eddca2f2ce291b1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 8856a5b1782c75c5a59dfdc93a8203627059ea12
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220497"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042723"
 ---
 # <a name="open-folder-projects-for-c"></a>Projets Dossier ouvert pour C++
 
 Dans Visual Studio 2017 et ultérieur, la fonctionnalité « Ouvrir un dossier » vous permet d’ouvrir un dossier de fichiers sources et de commencer immédiatement à coder en bénéficiant des avantages suivants : IntelliSense, navigation, refactorisation, débogage, etc. Aucun fichier .sln ou .vcxproj n’est chargé. Si nécessaire, vous pouvez spécifier des tâches personnalisées ou générer et lancer des paramètres par le biais de fichiers .json simples. Pour des informations générales sur la fonctionnalité Dossier ouvert, consultez [Développer du code dans Visual Studio sans projets ni solutions](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions).
 
-CMake est intégré à l’IDE de Visual Studio sous le nom « CMake Tools pour Visual Studio », un composant de la charge de travail desktop C++. Pour plus d’informations, consultez [Projets CMake dans Visual Studio](cmake-projects-in-visual-studio.md). Pour tout autre système de génération, vous pouvez utiliser la fonctionnalité Dossier ouvert. Cette dernière dissocie efficacement l’éditeur de code, le débogueur et les analyseurs du système de génération et de l’ensemble d’outils du compilateur. Vous pouvez utiliser l’éditeur de code C++ avec ses riches fonctionnalités IntelliSense, les analyseurs de code et le débogueur de Visual Studio avec n’importe quel système de génération, notamment CMake, Ninja, QMake (pour des projets Qt), gyp, SCons, Gradle, Buck, make, etc. Il fonctionne même avec un seul fichier ou une collection libre de fichiers sans aucun système de génération.
+CMake est intégré dans l’IDE Visual Studio en tant que composant de la C++ charge de travail de bureau. Pour plus d’informations, consultez [Projets CMake dans Visual Studio](cmake-projects-in-visual-studio.md). Pour tout autre système de génération, vous pouvez utiliser la fonctionnalité Dossier ouvert. Cette dernière dissocie efficacement l’éditeur de code, le débogueur et les analyseurs du système de génération et de l’ensemble d’outils du compilateur. Vous pouvez utiliser l’éditeur de code C++ avec ses riches fonctionnalités IntelliSense, les analyseurs de code et le débogueur de Visual Studio avec n’importe quel système de génération, notamment CMake, Ninja, QMake (pour des projets Qt), gyp, SCons, Gradle, Buck, make, etc. Il fonctionne même avec un seul fichier ou une collection libre de fichiers sans aucun système de génération.
 
 Pour utiliser Ouvrir un dossier, sélectionnez **Fichier | Ouvrir | Dossier** à partir du menu principal ou appuyez sur **Ctrl + Maj + Alt + O**. L’Explorateur de solutions affiche immédiatement tous les fichiers dans le dossier. Vous pouvez cliquer sur n’importe quel fichier pour le modifier. En arrière-plan, Visual Studio démarre l’indexation des fichiers pour activer les fonctionnalités IntelliSense, de navigation et de refactorisation. Au fil des modifications, créations, déplacements et suppressions de fichiers, Visual Studio effectue automatiquement le suivi des modifications et met à jour en permanence son index IntelliSense. 
 
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>Projets QMake qui ciblent le framework Qt
 
-Vous pouvez utiliser CMake Tools pour Visual Studio pour cibler Qt afin de générer des projets Qt, ou utiliser l’[extension Qt Visual Studio](https://download.qt.io/development_releases/vsaddin/) pour Visual Studio 2015 ou Visual Studio 2017.
+Vous pouvez utiliser CMake pour générer des projets de Qt, ou vous pouvez utiliser la [Qt Visual Studio Extension](https://download.qt.io/development_releases/vsaddin/) pour Visual Studio 2015 ou Visual Studio 2017.
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp, Cons, SCons, Buck, etc.
 
