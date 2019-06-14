@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 018a755aa4f3acde44fe1dbb33b07b49c8d1c223
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 0dcd05833af005807d874d71e8f6a07d4e738e8c
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837251"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042591"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Informations de référence sur le schéma CMakeSettings.json
 
@@ -121,7 +121,7 @@ Quand la configuration active spécifie un générateur Visual Studio, MSBuild.e
 
 - `remoteMachineName` : spécifie le nom de la machine Linux distante qui héberge CMake, les builds et le débogueur. Utilisez le gestionnaire de connexions pour l’ajout de nouvelles machines Linux. Les macros prises en charge incluent `${defaultRemoteMachineName}`.
 - `remoteCopySourcesOutputVerbosity` : spécifie le niveau de détail de l’opération de copie de la source vers la machine distante. Valeurs possibles : « Normal », « Détaillé » ou « Diagnostic ».
-- `remoteCopySourcesConcurrentCopies` : spécifie le nombre de copies simultanées utilisées durant la synchronisation des sources par rapport à la machine distante.
+- `remoteCopySourcesConcurrentCopies`: Spécifie le nombre de copies simultanées utilisées durant la synchronisation des sources pour l’ordinateur distant (sftp uniquement).
 - `remoteCopySourcesMethod` : spécifie la méthode de copie des fichiers sur la machine distante. Valeurs possibles : « rsync » ou « sftp ».
 - `remoteCMakeListsRoot` : spécifie le répertoire de la machine distante qui contient le projet CMake. Les macros prises en charge incluent `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `remoteBuildRoot` : spécifie le répertoire de la machine distante dans lequel CMake génère les scripts de génération pour le générateur choisi. Les macros prises en charge incluent `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
