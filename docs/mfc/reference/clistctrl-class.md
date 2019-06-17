@@ -1,6 +1,6 @@
 ---
 title: CListCtrl (classe)
-ms.date: 11/04/2016
+ms.date: 06/13/2019
 f1_keywords:
 - CListCtrl
 - AFXCMN/CListCtrl
@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 1cdc4bfacee4913d3a38aaa45aadf0a430e547ab
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 63668de8134267880b48a3406c552d06376ea4f7
+ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503440"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141680"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (classe)
 
@@ -522,8 +522,7 @@ Détermine la largeur et la hauteur requise pour afficher les éléments d’un 
 
 ```
 CSize ApproximateViewRect(
-    CSize sz = CSize(-1,
--1),
+    CSize sz = CSize(-1, -1),
     int iCount = -1) const;
 ```
 
@@ -683,7 +682,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus de Windows, spécifiés par la préface de style étendu Windows **WS_EX_** .
 
-`CreateEx` crée le contrôle avec les styles étendus de Windows spécifiés par *dwExStyle*. Pour définir des styles étendus spécifique à un contrôle, appelez [SetExtendedStyle](#setextendedstyle). Par exemple, utilisez `CreateEx` pour définir des styles de ce type en tant que WS_EX_CONTEXTHELP, mais utiliser `SetExtendedStyle` pour définir des styles de ce type comme LVS_EX_FULLROWSELECT. Pour plus d’informations, consultez les styles décrites dans la rubrique [Styles étendus de la vue liste](/windows/desktop/Controls/extended-list-view-styles) dans le SDK Windows.
+`CreateEx` crée le contrôle avec les styles étendus de Windows spécifiés par *dwExStyle*. Pour définir des styles étendus spécifique à un contrôle, appelez [SetExtendedStyle](#setextendedstyle). Par exemple, utilisez `CreateEx` pour définir des styles de ce type en tant que WS_EX_CONTEXTHELP, mais utiliser `SetExtendedStyle` pour définir des styles de ce type comme LVS_EX_FULLROWSELECT. Pour plus d’informations, consultez les styles décrits dans l’article [Styles étendus de la vue liste](/windows/desktop/Controls/extended-list-view-styles) dans le SDK Windows.
 
 ## <a name="createdragimage"></a>  CListCtrl::CreateDragImage
 
@@ -971,7 +970,7 @@ Une valeur 32 bits utilisée pour spécifier une couleur RVB.
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::SetBkColor](#setbkcolor).
+Consultez l’exemple de [CListCtrl::SetBkColor](#setbkcolor).
 
 ## <a name="getbkimage"></a>  CListCtrl::GetBkImage
 
@@ -1027,7 +1026,7 @@ Un élément de « rappel » est un élément de liste pour lequel l’applica
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::SetCallbackMask](#setcallbackmask).
+Consultez l’exemple de [CListCtrl::SetCallbackMask](#setcallbackmask).
 
 ## <a name="getcheck"></a>  CListCtrl::GetCheck
 
@@ -1052,7 +1051,7 @@ Cette fonction membre implémente le comportement de la macro Win32, [ListView_G
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::SetCheck](#setcheck).
+Consultez l’exemple de [CListCtrl::SetCheck](#setcheck).
 
 ## <a name="getcolumn"></a>  CListCtrl::GetColumn
 
@@ -1134,7 +1133,7 @@ Cette fonction membre implémente le comportement de la macro Win32, [ListView_G
             int  nColumnCount = pHeaderCtrl->GetItemCount();
             LPINT pnOrder = (LPINT) malloc(nColumnCount*sizeof(int));
             ASSERT(pnOrder != NULL);
-m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
+            m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
 
             int i, j, nTemp;
             for (i = 0, j = nColumnCount-1; i < j; i++, j--)
@@ -1188,7 +1187,7 @@ Le nombre d’éléments qui peuvent s’ajuster verticalement dans la zone visi
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetTopIndex](#gettopindex).
+Consultez l’exemple de [CListCtrl::GetTopIndex](#gettopindex).
 
 ## <a name="geteditcontrol"></a>  CListCtrl::GetEditControl
 
@@ -1243,7 +1242,7 @@ DWORD GetExtendedStyle();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une combinaison des styles étendus en cours d’utilisation par la liste de contrôle view. Pour obtenir une liste descriptive des ces styles étendus, consultez la [Styles étendus de la vue liste](/windows/desktop/Controls/extended-list-view-styles) rubrique dans le SDK Windows.
+Une combinaison des styles étendus en cours d’utilisation par la liste de contrôle view. Pour obtenir une liste descriptive des ces styles étendus, consultez la [Styles étendus de la vue liste](/windows/desktop/Controls/extended-list-view-styles) article dans le SDK Windows.
 
 ### <a name="remarks"></a>Notes
 
@@ -1251,7 +1250,7 @@ Cette fonction membre implémente le comportement de la macro Win32, [ListView_G
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::SetExtendedStyle](#setextendedstyle).
+Consultez l’exemple de [CListCtrl::SetExtendedStyle](#setextendedstyle).
 
 ## <a name="getfirstselecteditemposition"></a>  CListCtrl::GetFirstSelectedItemPosition
 
@@ -1381,7 +1380,7 @@ public:
 
 ### <a name="example"></a>Exemple
 
-L’exemple de code suivant montre le `GetGroupInfoByIndex` (méthode). Dans la section précédente de ce code exemple nous avons créé un contrôle de liste qui affiche deux colonnes intitulées « ClientID » et « Grade » dans une vue de rapport. L’exemple de code suivant récupère des informations sur le groupe dont l’index est 0, si un tel groupe existe.
+L’exemple de code suivant montre le `GetGroupInfoByIndex` (méthode). Dans la section précédente de cet exemple de code, nous avons créé un contrôle d’affichage de liste qui affiche deux colonnes intitulées « ClientID » et « Grade » dans une vue de rapport. L’exemple de code suivant récupère des informations sur le groupe dont l’index est 0, si un tel groupe existe.
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1528,7 +1527,7 @@ Cette fonction membre implémente le comportement de la macro Win32, [ListView_G
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).
+Consultez l’exemple de [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).
 
 ## <a name="gethotcursor"></a>  CListCtrl::GetHotCursor
 
@@ -1634,7 +1633,7 @@ Pointeur vers la liste d’images utilisée pour afficher les éléments de list
 
 ```cpp
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == NULL);
-m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
+        m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == &m_lcImageList);
 ```
 
@@ -1643,12 +1642,12 @@ m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
 Récupère la position actuelle de la marque d’insertion.
 
 ```
-BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
+BOOL GetInsertMark(LPLVINSERTMARK plvim) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*lvim*<br/>
+*plvim*<br/>
 Un pointeur vers un [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) structure contenant les informations de la marque d’insertion.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1735,7 +1734,7 @@ Le nombre d’éléments dans le contrôle list view.
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::DeleteItem](#deleteitem).
+Consultez l’exemple de [CListCtrl::DeleteItem](#deleteitem).
 
 ## <a name="getitemdata"></a>  CListCtrl::GetItemData
 
@@ -1905,7 +1904,7 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 void CListCtrlDlg::OnClick(NMHDR* pNMHDR, LRESULT* pResult)
 {
     UNREFERENCED_PARAMETER(pResult);
-LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
+    LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 
     // Get the current mouse location and convert it to client
     // coordinates.
@@ -1995,7 +1994,7 @@ Les indicateurs d’état pour la liste spécifiée afficher l’élément.
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetTopIndex](#gettopindex).
+Consultez l’exemple de [CListCtrl::GetTopIndex](#gettopindex).
 
 ## <a name="getitemtext"></a>  CListCtrl::GetItemText
 
@@ -2388,7 +2387,7 @@ Une valeur 32 bits utilisée pour spécifier une couleur RVB.
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::SetTextBkColor](#settextbkcolor).
+Consultez l’exemple de [CListCtrl::SetTextBkColor](#settextbkcolor).
 
 ## <a name="gettextcolor"></a>  CListCtrl::GetTextColor
 
@@ -2404,19 +2403,19 @@ Une valeur 32 bits utilisée pour spécifier une couleur RVB.
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::SetTextColor](#settextcolor).
+Consultez l’exemple de [CListCtrl::SetTextColor](#settextcolor).
 
 ## <a name="gettileinfo"></a>  CListCtrl::GetTileInfo
 
 Récupère des informations sur une vignette dans un contrôle list view.
 
 ```
-BOOL GetTileInfo(PLVTILEINFO pti) const;
+BOOL GetTileInfo(PLVTILEINFO plvti) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*pti*<br/>
+*plvti*<br/>
 Un pointeur vers un [LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo) structure qui reçoit les informations de la vignette.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2548,15 +2547,15 @@ Récupère les zones de travail en cours d’un contrôle list view.
 ```
 void GetWorkAreas(
     int nWorkAreas,
-    LPRECT prc) const;
+    LPRECT pRect) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *nWorkAreas*<br/>
-Le nombre de `RECT` structures contenues dans le *prc* tableau.
+Le nombre de `RECT` structures contenues dans le *pRect* tableau.
 
-*prc*<br/>
+*pRect*<br/>
 Un pointeur vers un tableau de `RECT` structures (ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objets) qui reçoivent les zones de travail de contrôle list view. Les valeurs dans ces structures sont dans les coordonnées clientes.
 
 ### <a name="remarks"></a>Notes
@@ -2565,7 +2564,7 @@ Cette fonction membre implémente le comportement de la macro Win32, [ListView_G
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas).
+Consultez l’exemple de [CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas).
 
 ## <a name="hasgroup"></a>  CListCtrl::HasGroup
 
@@ -2781,10 +2780,10 @@ Index de l’élément image ou I_IMAGECALLBACK si l’élément est un élémen
 Le *nMask* paramètre spécifie quel élément passés comme paramètres des attributs sont valides. Il peut prendre l’une ou plusieurs des valeurs de masque décrit dans [LVITEM Structure](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) dans le SDK Windows. Les valeurs valides peuvent être combinés avec l’opérateur OR au niveau du bit.
 
 *nState*<br/>
-Indique l’état de l’élément, l’image de l’état et image de superposition. Consultez les rubriques du Kit de développement logiciel Windows [LVITEM Structure](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) pour plus d’informations et [États d’affichage de liste élément](/windows/desktop/Controls/list-view-item-states) pour obtenir la liste d’indicateurs valides.
+Indique l’état de l’élément, l’image de l’état et image de superposition. Pour plus d’informations, consultez les rubriques du Kit de développement logiciel Windows [LVITEM Structure](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) et [États d’affichage de liste élément](/windows/desktop/Controls/list-view-item-states) pour obtenir la liste d’indicateurs valides.
 
 *nStateMask*<br/>
-Indique les bits du membre état seront récupérées ou modifiées. Consultez [LVITEM Structure](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) dans le SDK Windows pour plus d’informations.
+Indique les bits du membre état seront récupérées ou modifiées. Pour plus d’informations, consultez [LVITEM Structure](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) dans le SDK Windows.
 
 *lParam*<br/>
 Valeur 32 bits spécifique à l’application associée à l’élément. Si ce paramètre est spécifié, vous devez définir le *nMask* LVIF_PARAM d’attribut.
@@ -2828,7 +2827,7 @@ Récupère le point d’insertion le plus proche à un point spécifié.
 ```
 int InsertMarkHitTest(
     LPPOINT pPoint,
-    LPLVINSERTMARK lvim) const;
+    LPLVINSERTMARK plvim) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -2836,7 +2835,7 @@ int InsertMarkHitTest(
 *pPoint*<br/>
 Un pointeur vers un [POINT](/previous-versions/dd162805\(v=vs.85\)) coordonne la structure qui contient le test de positionnement, par rapport à la zone cliente du contrôle de liste.
 
-*lvim*<br/>
+*plvim*<br/>
 Un pointeur vers un [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) structure qui spécifie le point d’insertion le plus proche pour les coordonnées définies par le paramètre de point.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2879,7 +2878,7 @@ BOOL IsItemVisible(int index) const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’élément spécifié est visible ; sinon, FALSE.
+TRUE si l’élément spécifié est visible ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
 
@@ -3138,7 +3137,7 @@ Définit l’image d’arrière-plan d’un contrôle list view.
 BOOL SetBkImage(LVBKIMAGE* plvbkImage);
 
 BOOL SetBkImage(
-    HBITMAP hbm,
+    HBITMAP hBitmap,
     BOOL fTile = TRUE,
     int xOffsetPercent = 0,
     int yOffsetPercent = 0);
@@ -3155,7 +3154,7 @@ BOOL SetBkImage(
 *plvbkImage*<br/>
 Adresse d’un `LVBKIMAGE` structure, qui contient les nouvelles informations d’image d’arrière-plan.
 
-*hbm*<br/>
+*hBitmap*<br/>
 Handle vers une image bitmap.
 
 *pszUrl*<br/>
@@ -3181,7 +3180,7 @@ Retourne zéro en cas de réussite, ou zéro sinon.
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetBkImage](#getbkimage).
+Consultez l’exemple de [CListCtrl::GetBkImage](#getbkimage).
 
 ## <a name="setcallbackmask"></a>  CListCtrl::SetCallbackMask
 
@@ -3273,7 +3272,7 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetColumn](#getcolumn).
+Consultez l’exemple de [CListCtrl::GetColumn](#getcolumn).
 
 ## <a name="setcolumnorderarray"></a>  CListCtrl::SetColumnOrderArray
 
@@ -3303,7 +3302,7 @@ Cette fonction membre implémente le comportement de la macro Win32, [ListView_S
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).
+Consultez l’exemple de [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).
 
 ## <a name="setcolumnwidth"></a>  CListCtrl::SetColumnWidth
 
@@ -3424,7 +3423,7 @@ Le curseur à chaud, visible uniquement lorsque la sélection de pointage est ac
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetHotCursor](#gethotcursor).
+Consultez l’exemple de [CListCtrl::GetHotCursor](#gethotcursor).
 
 ## <a name="sethotitem"></a>  CListCtrl::SetHotItem
 
@@ -3449,7 +3448,7 @@ Cette fonction membre implémente le comportement de la macro Win32, [ListView_S
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetHotItem](#gethotitem).
+Consultez l’exemple de [CListCtrl::GetHotItem](#gethotitem).
 
 ## <a name="sethovertime"></a>  CListCtrl::SetHoverTime
 
@@ -3474,7 +3473,7 @@ Cette fonction membre implémente le comportement de la macro Win32, [ListView_S
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetHoverTime](#gethovertime).
+Consultez l’exemple de [CListCtrl::GetHoverTime](#gethovertime).
 
 ## <a name="seticonspacing"></a>  CListCtrl::SetIconSpacing
 
@@ -3544,7 +3543,7 @@ Pointeur vers la précédente liste d’images.
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetImageList](#getimagelist).
+Consultez l’exemple de [CListCtrl::GetImageList](#getimagelist).
 
 ## <a name="setinfotip"></a>  CListCtrl::SetInfoTip
 
@@ -3572,12 +3571,12 @@ Cette fonction membre émule la fonctionnalité de la [LVM_SETINFOTIP](/windows/
 Définit le point d’insertion à la position définie.
 
 ```
-BOOL SetInsertMark(LPLVINSERTMARK lvim);
+BOOL SetInsertMark(LPLVINSERTMARK plvim);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*lvim*<br/>
+*plvim*<br/>
 Un pointeur vers un [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) structure spécifiant où définir le point d’insertion.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3686,7 +3685,7 @@ Le `mask` membre de la `LVITEM` structure et le *nMask* paramètre spécifier qu
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::HitTest](#hittest).
+Consultez l’exemple de [CListCtrl::HitTest](#hittest).
 
 ## <a name="setitemcount"></a>  CListCtrl::SetItemCount
 
@@ -3868,7 +3867,7 @@ Si le contrôle list view a le style LVS_AUTOARRANGE, l’affichage de liste est
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetItemPosition](#getitemposition).
+Consultez l’exemple de [CListCtrl::GetItemPosition](#getitemposition).
 
 ## <a name="setitemstate"></a>  CListCtrl::SetItemState
 
@@ -3909,7 +3908,7 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetTopIndex](#gettopindex).
+Consultez l’exemple de [CListCtrl::GetTopIndex](#gettopindex).
 
 ## <a name="setitemtext"></a>  CListCtrl::SetItemText
 
@@ -3943,7 +3942,7 @@ Cette méthode n’est pas destinée à utiliser avec les contrôles contenant l
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::InsertItem](#insertitem).
+Consultez l’exemple de [CListCtrl::InsertItem](#insertitem).
 
 ## <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor
 
@@ -4010,7 +4009,7 @@ Cette fonction membre implémente le comportement de la macro Win32, [ListView_S
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetSelectionMark](#getselectionmark).
+Consultez l’exemple de [CListCtrl::GetSelectionMark](#getselectionmark).
 
 ## <a name="settextbkcolor"></a>  CListCtrl::SetTextBkColor
 
@@ -4070,12 +4069,12 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 Définit les informations pour une vignette de l’affichage de liste.
 
 ```
-BOOL SetTileInfo(PLVTILEINFO pti);
+BOOL SetTileInfo(PLVTILEINFO pTileInfo);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*pti*<br/>
+*pTileInfo*<br/>
 Un pointeur vers un [LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo) structure contenant les informations à définir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -4257,7 +4256,7 @@ int CALLBACK CListCtrlDlg::MyCompareProc(LPARAM lParam1, LPARAM lParam2,
     LPARAM lParamSort)
 {
     UNREFERENCED_PARAMETER(lParamSort);
-return (int)(lParam1 - lParam2);
+    return (int)(lParam1 - lParam2);
 }
 ```
 
@@ -4381,7 +4380,7 @@ Cette fonction membre implémente le comportement de la macro Win32, [ListView_S
 void CListCtrlDlg::OnDblClk(NMHDR* pNMHDR, LRESULT* pResult)
 {
     UNREFERENCED_PARAMETER(pResult);
-LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
+    LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
     LVHITTESTINFO lvhti;
 
     // Clear the subitem text the user clicked on.
@@ -4418,7 +4417,7 @@ Cette fonction permet également d’organiser le contrôle list view s’il a l
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CListCtrl::GetSelectedCount](#getselectedcount).
+Consultez l’exemple de [CListCtrl::GetSelectedCount](#getselectedcount).
 
 ## <a name="see-also"></a>Voir aussi
 
