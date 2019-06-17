@@ -1,6 +1,6 @@
 ---
-title: /VERBOSE (Imprimer les messages d'avancement)
-ms.date: 11/04/2016
+title: /VERBOSE (Afficher les messages de progression)
+ms.date: 06/13/2019
 f1_keywords:
 - /verbose
 - VC.Project.VCLinkerTool.ShowProgress
@@ -13,40 +13,42 @@ helpviewer_keywords:
 - dependencies [C++], dependency information in linker output
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
-ms.openlocfilehash: 7aed1e17034b40ffdad4da4136fc5a64361b3d77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbf7b5966c741535f26202979cbfd71f839cc537
+ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317300"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141669"
 ---
-# <a name="verbose-print-progress-messages"></a>/VERBOSE (Imprimer les messages d'avancement)
+# <a name="verbose-print-progress-messages"></a>/VERBOSE (Afficher les messages de progression)
 
-```
-/VERBOSE[:{ICF|INCR|LIB|REF|SAFESEH|UNUSEDLIBS}]
-```
+Affiche les messages de progression pendant le processus de liaison.
+
+## <a name="syntax"></a>Syntaxe
+
+> **/VERBOSE**\[ **:** {**CLR**|**ICF**|**INCR**|**LIB**|**REF**|**SAFESEH**|**UNUSEDDELAYLOAD**|**UNUSEDLIBS**}\]
 
 ## <a name="remarks"></a>Notes
 
 L’éditeur de liens envoie des informations sur la progression de la session de liaison à la **sortie** fenêtre. Sur la ligne de commande, les informations sont envoyées à la sortie standard et peuvent être redirigées vers un fichier.
 
-|Option|Description|
-|------------|-----------------|
-|/VERBOSE|Affiche des détails sur le processus de liaison.|
-|/ VERBOSE : LE PARE-FEU WINDOWS|Afficher des informations sur l’activité de l’éditeur de liens qui résulte de l’utilisation de [/OPT : ICF](opt-optimizations.md).|
-|/ VERBOSE : INCR|Affiche des informations sur le processus d’édition de liens incrémentielle.|
-|/ VERBOSE : LIB|Affiche des messages de progression indiquant uniquement les bibliothèques recherchées.<br /><br /> Les informations affichées incluant le processus de recherche de bibliothèque et répertorie chaque bibliothèque et nom d’objet (avec le chemin d’accès complet), le symbole est résolue à partir de la bibliothèque et une liste d’objets qui référencent le symbole.|
-|/ VERBOSE : REF|Affiche des informations sur l’activité de l’éditeur de liens qui résulte de l’utilisation de [/OPT : REF](opt-optimizations.md).|
-|/ VERBOSE : SAFESEH|Affiche des informations sur les modules qui ne sont pas compatibles avec sécurisée des exceptions lorsque [/SAFESEH](safeseh-image-has-safe-exception-handlers.md) n’est pas spécifié.|
-|/ VERBOSE : UNUSEDLIBS|Affiche des informations sur tous les fichiers de bibliothèque qui ne sont pas utilisés lors de la création de l’image.|
+| Option | Description |
+| ------------ | ----------------- |
+| /VERBOSE | Affiche des détails sur le processus de liaison. |
+| / VERBOSE : CLR | Affiche des informations sur l’activité de l’éditeur de liens spécifique aux objets et compilé à l’aide de métadonnées [/CLR](clr-common-language-runtime-compilation.md). |
+| / VERBOSE : LE PARE-FEU WINDOWS | Affiche des informations sur l’activité de l’éditeur de liens qui résulte de l’utilisation de [/OPT : ICF](opt-optimizations.md). |
+| / VERBOSE : INCR | Affiche des informations sur le processus d’édition de liens incrémentielle. |
+| / VERBOSE : LIB | Affiche des messages de progression indiquant uniquement les bibliothèques recherchées.<br/> Les informations affichées comprennent le processus de recherche de bibliothèque. Il répertorie chaque bibliothèque et nom d’objet (avec le chemin d’accès complet), le symbole est résolue à partir de la bibliothèque et une liste d’objets qui référencent le symbole. |
+| / VERBOSE : REF | Affiche des informations sur l’activité de l’éditeur de liens qui résulte de l’utilisation de [/OPT : REF](opt-optimizations.md). |
+| / VERBOSE : SAFESEH | Affiche des informations sur les modules qui ne sont pas compatibles avec safe structurée des exceptions quand [/SAFESEH](safeseh-image-has-safe-exception-handlers.md) n’est pas spécifié. |
+| / VERBOSE : UNUSEDDELAYLOAD | Affiche des informations sur tout retard DLL chargement ne dotées aucun symbole utilisé lors de la création de l’image. |
+| / VERBOSE : UNUSEDLIBS | Affiche des informations sur tous les fichiers de bibliothèque qui ne sont pas utilisés lors de la création de l’image. |
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Développez le **l’éditeur de liens** dossier.
-
-1. Sélectionnez le **ligne de commande** page de propriétés.
+1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **ligne de commande** page de propriétés.
 
 1. Ajoutez l’option à la **des Options supplémentaires** boîte.
 

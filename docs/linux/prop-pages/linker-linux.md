@@ -1,15 +1,23 @@
 ---
 title: Éditeur de liens, propriétés (Linux C++)
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 01e8a9e45272ff55db6bbf738b48c75f4e1f6c48
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678338"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821294"
 ---
 # <a name="linker-properties-linux-c"></a>Éditeur de liens, propriétés (Linux C++)
+
+::: moniker range="vs-2015"
+
+La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="general"></a>Général
 
@@ -55,3 +63,5 @@ Marquer les variables ReadOnly après le réadressage | Cette option marque les 
 Activer la liaison de fonction immédiate | Cette option marque l’objet pour une liaison de fonction immédiate.
 Ne pas exiger de pile exécutable | Cette option marque la sortie comme ne nécessitant pas de pile exécutable.
 Archive complète | L’archive complète utilise l’ensemble du code des sources et des dépendances supplémentaires.
+
+::: moniker-end

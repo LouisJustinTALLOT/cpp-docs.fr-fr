@@ -1,33 +1,46 @@
 ---
 title: Installer la charge de travail Linux C++ dans Visual Studio
 description: Décrit comment télécharger, installer et configurer la charge de travail Linux pour C++ dans Visual Studio.
-ms.date: 03/05/2019
+ms.date: 06/07/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 74155724abb3a0e02cc27dd8a8d144f142ee4b6f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: af4e3ec0ac21951163e92786555559cd02e8148f
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747720"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821584"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Télécharger, installer et configurer la charge de travail Linux
 
-Vous pouvez utiliser l’IDE Visual Studio 2017 dans Windows pour créer, modifier et déboguer des projets C++ qui s’exécutent sur un ordinateur physique ou une machine virtuelle Linux, ou sur le [sous-système Windows pour Linux](/windows/wsl/about). 
 
-Vous pouvez reprendre votre base de code existante qui utilise CMake ou tout autre système de build sans avoir à la convertir en projet Visual Studio. Si votre base de code est multiplateforme, vous pouvez cibler Windows et Linux à partir de Visual Studio. Par exemple, vous pouvez modifier, déboguer et profiler votre code sur Windows à l’aide de Visual Studio, puis recibler rapidement le projet pour Linux afin d’effectuer des tests supplémentaires. Les fichiers d’en-tête Linux sont automatiquement copiés sur votre machine locale où Visual Studio les utilise pour fournir des fonctionnalités IntelliSense complètes (Saisie semi-automatique des instructions, Atteindre la définition, etc.).
+::: moniker range=">=vs-2017"
+
+Vous pouvez utiliser l’IDE Visual Studio dans Windows pour créer, modifier et déboguer des projets C++ qui s’exécutent sur une machine virtuelle, un ordinateur physique Linux ou le [sous-système Windows pour Linux](/windows/wsl/about). 
+
+Vous pouvez reprendre votre base de code existante qui utilise CMake ou tout autre système de build sans avoir à la convertir en projet Visual Studio. Si votre base de code est multiplateforme, vous pouvez cibler Windows et Linux à partir de Visual Studio. Par exemple, vous pouvez modifier, déboguer et profiler votre code sur Windows à l’aide de Visual Studio, puis recibler rapidement le projet pour Linux afin d’effectuer des tests supplémentaires. Les fichiers d’en-tête Linux sont automatiquement copiés sur votre machine locale où Visual Studio les utilise pour fournir des fonctionnalités IntelliSense complètes (Saisie semi-automatique des instructions, Atteindre la définition, etc.). 
  
-Tous ces scénarios nécessitent la charge de travail de **développement Linux en C++**. 
+Tous ces scénarios nécessitent la charge de travail de **développement Linux en C++** . 
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Dans Visual Studio 2019, vous pouvez spécifier des cibles distinctes pour la génération et le débogage. Quand vous ciblez WSL, il n’est plus nécessaire d’ajouter une connexion à distance ou de configurer SSH.
+
+La prise en charge d’[AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) est intégrée à Visual Studio pour les projets Linux.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="visual-studio-setup"></a>Installation Visual Studio
 
 1. Tapez « Visual Studio Installer » dans la zone de recherche Windows : ![Zone de recherche Windows](media/visual-studio-installer-search.png)
-2. Recherchez le programme d’installation dans les résultats situés sous **Applications**, puis double-cliquez dessus. Quand le programme d’installation s’ouvre, choisissez **Modifier**, puis cliquez sur l’onglet **Charges de travail**. Faites défiler vers le bas jusqu’à **Autres ensembles d’outils** et sélectionnez la charge de travail **Développement Linux en C++**.
+2. Recherchez le programme d’installation dans les résultats situés sous **Applications**, puis double-cliquez dessus. Quand le programme d’installation s’ouvre, choisissez **Modifier**, puis cliquez sur l’onglet **Charges de travail**. Faites défiler vers le bas jusqu’à **Autres ensembles d’outils** et sélectionnez la charge de travail **Développement Linux en C++** .
 
    ![Charge de travail Visual C++ pour le développement sous Linux](media/linuxworkload.png)
 
-1. Si vous utilisez CMake ou que vous ciblez des plateformes incorporées ou IoT, accédez au volet **Détails de l’installation** à droite, sous **Développement Linux en C++**, développez **Composants facultatifs** et choisissez les composants dont vous avez besoin.
-
-    **Visual Studio 2017 15.4 et versions ultérieures**<br/>: Quand vous installez la charge de travail Linux C++ pour Visual Studio, la prise en charge de CMake pour Linux est sélectionnée par défaut.
+1. Si vous ciblez des plateformes incorporées ou IoT, accédez au volet **Détails de l’installation** à droite, sous **Développement Linux en C++** , développez **Composants facultatifs** et choisissez les composants dont vous avez besoin. La prise en charge de CMake pour Linux est sélectionnée par défaut.
 
 1. Cliquez sur **Modifier** pour continuer l’installation.
 
@@ -35,40 +48,90 @@ Tous ces scénarios nécessitent la charge de travail de **développement Linux 
 
 Si vous n’avez pas encore de machine Linux, vous pouvez créer une Machine virtuelle Linux sur Azure. Pour plus d’informations, consultez [Démarrage rapide : Créer une machine virtuelle Linux dans le portail Azure](/azure/virtual-machines/linux/quick-create-portal).
 
-Une autre option, sur Windows 10, consiste à activer le sous-système Windows pour Linux. Pour plus d’informations, consultez le [Guide d’installation de Windows 10](/windows/wsl/install-win10).
+Sur Windows 10, vous pouvez installer et cibler votre distribution Linux favorite sur le sous-système Windows pour Linux (WSL). Pour plus d’informations, consultez [Guide d’installation du sous-système Windows pour Linux pour Windows 10](/windows/wsl/install-win10). WSL est un environnement de console pratique mais n’est pas recommandé pour les applications graphiques. 
 
-## <a name="linux-setup-ubuntu"></a>Installation Linux : Ubuntu
+::: moniker-end
 
-**openssh-server**, **g++**, **gdb** et **gdbserver** doivent être installés sur l’ordinateur Linux cible et le démon ssh doit être en cours d’exécution. **zip** est obligatoire pour la synchronisation automatique des en-têtes distants avec votre ordinateur local pour la prise en charge d’Intellisense. Si ces applications ne sont pas déjà présentes, vous pouvez les installer comme suit :
+::: moniker range="vs-2019"
+
+## <a name="linux-setup-ubuntu-on-wsl"></a>Installation Linux : Ubuntu sur WSL
+
+Sur WSL, aucune connexion à distance n’est nécessaire. **zip** et **rsync** sont nécessaires pour la synchronisation automatique des en-têtes Linux avec Visual Studio en vue de la prise en charge d’Intellisense. Si les applications requises ne sont pas déjà présentes, vous pouvez les installer comme suit :
+
+```bash
+sudo g++ gdb make rsync zip
+```
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu sur les systèmes Linux distants
+
+**openssh-server**, **g++** , **gdb** et **gdbserver** doivent être installés sur le système Linux cible et le démon ssh doit être en cours d’exécution. **zip** est obligatoire pour la synchronisation automatique des en-têtes distants avec votre ordinateur local pour la prise en charge d’Intellisense. Si ces applications ne sont pas déjà présentes, vous pouvez les installer comme suit :
 
 1. À l’invite de commandes du shell sur votre ordinateur Linux, exécutez :
 
-   `sudo apt-get install openssh-server g++ gdb gdbserver zip`
+   ```bash
+   sudo apt-get install openssh-server g++ gdb gdbserver zip
+   ```
 
    Vous pouvez être invité à indiquer votre mot de passe racine en raison de la commande sudo.  Dans ce cas, entrez-la et continuez. Quand vous avez terminé, les outils et services obligatoires sont installés.
 
 1. Vérifiez que le service ssh est en cours d’exécution sur votre ordinateur Linux en exécutant :
 
-   `sudo service ssh start`
-
+   ```bash
+   sudo service ssh start
+   ```
    Vous démarrez ainsi le service qui s’exécute en arrière-plan, prêt à accepter des connexions.
 
-## <a name="linux-setup-fedora"></a>Installation Linux : Fedora
+::: moniker-end
 
-L’ordinateur cible exécutant Fedora utilise le programme d’installation de package **fnd**. Pour télécharger **openssh-server**, **g++**, **gdb**, **gdbserver** et **zip**, et redémarrer le démon ssh, suivez ces instructions :
+::: moniker range="vs-2019"
+
+## <a name="fedora-on-wsl"></a>Fedora sur WSL
+
+Fedora utilise le programme d’installation du package **dnf**. Pour télécharger **g++** , **gdb**, **rsync** et **zip**, exécutez :
+
+   ```bash
+   sudo dnf install gcc-g++ gdb rsync zip
+   ```
+
+**zip** et **rsync** sont nécessaires pour la synchronisation automatique des en-têtes Linux avec Visual Studio en vue de la prise en charge d’Intellisense.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+## <a name="fedora-on-remote-linux-systems"></a>Fedora sur les systèmes Linux distants
+
+L’ordinateur cible exécutant Fedora utilise le programme d’installation de package **fnd**. Pour télécharger **openssh-server**, **g++** , **gdb**, **gdbserver** et **zip**, et redémarrer le démon ssh, suivez ces instructions :
 
 1. À l’invite de commandes du shell sur votre ordinateur Linux, exécutez :
 
-   `sudo dnf install openssh-server gcc-g++ gdb gdb-gdbserver zip`
-
+   ```bash
+   sudo dnf install openssh-server gcc-g++ gdb gdb-gdbserver zip
+   ```
    Vous pouvez être invité à indiquer votre mot de passe racine en raison de la commande sudo.  Dans ce cas, entrez-la et continuez. Quand vous avez terminé, les outils et services obligatoires sont installés.
 
 1. Vérifiez que le service ssh est en cours d’exécution sur votre ordinateur Linux en exécutant :
 
-   `sudo systemctl start sshd`
+   ```bash
+   sudo systemctl start sshd
+   ```
 
    Vous démarrez ainsi le service qui s’exécute en arrière-plan, prêt à accepter des connexions.
 
-## <a name="ensure-you-have-cmake-38-on-the-remote-linux-machine"></a>Assurez-vous d’avoir installé CMake 3.8 sur la machine Linux distante
+::: moniker-end
 
-Votre distribution Linux peut avoir une version antérieure de CMake. La prise en charge de CMake dans Visual Studio nécessite la prise en charge du mode serveur qui a été introduit dans CMake 3.8. Pour une variante de CMake fournie par Microsoft, téléchargez les fichiers binaires prédéfinis les plus récents sur votre machine Linux à partir de [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
+::: moniker range="vs-2015"
+
+La prise en charge du développement C++ Linux est disponible dans Visual Studio versions 2017 et ultérieures.
+
+::: moniker-end
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Vous êtes maintenant prêt à créer ou ouvrir un projet Linux et à le configurer pour qu’il s’exécute sur le système cible. Pour plus d'informations, voir :
+
+- [Créer un projet Linux](create-a-new-linux-project.md)
+- [Configurer un projet CMake Linux](cmake-linux-project.md)

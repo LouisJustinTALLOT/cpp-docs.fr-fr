@@ -1,32 +1,59 @@
 ---
 title: Déployer, exécuter et déboguer votre projet Linux C++ dans Visual Studio
 description: Décrit comment compiler, exécuter et déboguer du code sur la cible distante au sein d’un projet Linux C++ dans Visual Studio.
-ms.date: 09/12/2018
+ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: cdafb064f8a6269c5ccae938e280b5f47bff3b00
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 707915a502aafefee47af7e84b534e06ba678b3d
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562885"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821615"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Déployer, exécuter et déboguer un projet Linux
 
+::: moniker range="vs-2015"
+
+La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
+
+::: moniker-end
+
 Une fois que vous avez créé un projet Linux C++ dans Visual Studio et que vous vous y êtes connecté par le biais du [Gestionnaire de connexions Linux](connect-to-your-remote-linux-computer.md), vous pouvez l’exécuter et le déboguer. Vous compilez, exécutez et déboguez le code sur la cible distante.
+
+::: moniker range="vs-2019"
+
+**Visual Studio 2019 version 16.1** vous pouvez cibler différents systèmes Linux pour le débogage et la génération. Spécifiez la machine de build dans la page de propriétés **Général** et la machine de débogage dans la page de propriétés **Débogage**.
+
+::: moniker-end
 
 Il existe plusieurs façons de manipuler et déboguer votre projet Linux.
 
 - Vous pouvez utiliser les fonctionnalités de débogage standard de Visual Studio, comme les points d’arrêt, les fenêtres Espion et le pointage sur une variable. Ces méthodes vous permettent de déboguer votre projet comme vous le faites habituellement pour d’autres types de projets.
 
-- Affichez la sortie de l’ordinateur cible dans une fenêtre de console Linux spécifique. Vous pouvez également utiliser la console pour envoyer les entrées à l’ordinateur cible.
+- Affichez la sortie de l’ordinateur cible dans la fenêtre de console Linux. Vous pouvez également utiliser la console pour envoyer les entrées à l’ordinateur cible.
 
 ## <a name="debug-your-linux-project"></a>Déboguer votre projet Linux
 
 1. Sélectionnez le mode de débogage dans la page de propriétés **Débogage**.
 
+   
+   
+   ::: moniker range="vs-2019"
+
+   GDB est utilisé pour déboguer les applications exécutées sur Linux. Lors du débogage sur un système distant (pas WSL), GDB peut s’exécuter dans deux modes différents, que vous pouvez sélectionner à partir de l’option **Mode de débogage** dans la page de propriétés **Débogage** du projet :
+
+   ![Options GDB](media/vs2019-debugger-settings.png)
+
+   ::: moniker-end
+
+   ::: moniker range="vs-2017"
+
    GDB est utilisé pour déboguer les applications exécutées sur Linux. GDB peut s’exécuter dans deux modes différents, que vous pouvez sélectionner à partir de l’option **Mode de débogage** dans la page de propriétés **Débogage** du projet :
 
-   ![Options GDB](media/settings_debugger.png)
+   ![Options GDB](media/vs2017-debugger-settings.png)
+
+   ::: moniker-end
+
 
    - En mode **gdbserver**, GDB s’exécute localement et se connecte à gdbserver sur le système distant.  Notez qu’il s’agit du seul mode que la fenêtre de console Linux prend en charge.
 
@@ -77,11 +104,30 @@ Il existe plusieurs façons de manipuler et déboguer votre projet Linux.
 
    `handle SIGILL nostop noprint`
 
+## <a name="debug-with-attach-to-process"></a>Déboguer avec Attacher au processus
+
+La page de propriétés [Débogage](prop-pages/debugging-linux.md) pour les projets Visual Studio et les paramètres **Launch.vs.json** pour les projets CMake ont des paramètres qui vous permettent d’effectuer un attachement à un processus en cours d’exécution. Si vous avez besoin d’un contrôle supplémentaire au-delà de celui fourni dans ces paramètres, vous pouvez placer un fichier nommé `Microsoft.MIEngine.Options.xml` à la racine de votre solution ou espace de travail. Voici un exemple simple :
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<SupplementalLaunchOptions>
+    <AttachOptions>
+      <AttachOptionsForConnection AdditionalSOLibSearchPath="/home/user/solibs">
+        <ServerOptions MIDebuggerPath="C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\VC\Linux\bin\gdb\7.9\x86_64-linux-gnu-gdb.exe"
+ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\ConsoleApplication17.out"/>
+        <SetupCommands>
+          <Command IgnoreFailures="true">-enable-pretty-printing</Command>
+        </SetupCommands>
+      </AttachOptionsForConnection>
+    </AttachOptions>
+</SupplementalLaunchOptions>
+```
+
+**AttachOptionsForConnection** contient une grande partie des attributs dont vous pouvez avoir besoin. L’exemple ci-dessus montre comment spécifier un emplacement pour rechercher des bibliothèques .so supplémentaires. L’élément enfant **ServerOptions** permet d’effectuer un attachement au processus distant avec gdbserver à la place. Pour ce faire, vous devez spécifier un client gdb local (celui fourni dans Visual Studio 2017 est indiqué ci-dessus) et une copie locale du binaire contenant les symboles. L’élément **SetupCommands** permet de transmettre des commandes directement à gdb. Vous pouvez trouver toutes les options disponibles dans le [schéma LaunchOptions.xsd](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) sur GitHub.
+
 ## <a name="next-steps"></a>Étapes suivantes
 
 - Pour déboguer des appareils ARM sur Linux, consultez ce billet de blog : [Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
-
-- Pour déboguer à l’aide de la commande **Attacher au processus**, consultez ce billet de blog : [Linux C++ Workload improvements to the Project System, Linux Console Window, rsync and Attach to Process](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
 
 ## <a name="see-also"></a>Voir aussi
 
