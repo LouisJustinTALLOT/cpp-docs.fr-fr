@@ -3,12 +3,12 @@ title: Informations de référence sur le schéma CppProperties.json
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: e80f4e8a189510a9a3e8860609d74121b7cbb0ef
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 8432b72deaef99ee20147505030cbc8a9a270869
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837055"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344401"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Informations de référence sur le schéma CppProperties.json
 
@@ -17,9 +17,9 @@ Les projets Dossier ouvert qui n’utilisent pas CMake peuvent stocker des param
 
 ## <a name="default-configurations"></a>Configurations par défaut
 
-Visual Studio fournit des configurations prédéfinies pour les versions x86 et x64 Debug et Release. Par défaut, votre projet a une configuration x86-Debug dans `CppProperties.json`. Pour ajouter une nouvelle configuration, cliquez avec le bouton droit sur le fichier `CppProperties.json` dans l’**Explorateur de solutions** et choisissez **Ajouter une configuration** :
+Visual Studio fournit des configurations prédéfinies pour les versions x86 et x64 Debug et Release. Par défaut, votre projet a une configuration x86-Debug dans `CppProperties.json`. Pour ajouter une nouvelle configuration, cliquez sur le `CppProperties.json` fichier **l’Explorateur de solutions** et choisissez **ajouter une Configuration**:
 
-![Ajouter une configuration Dossier ouvert](media/open-folder-add-config.png "Ajouter une nouvelle configuration Dossier ouvert")
+![Ouvrez le dossier - ajouter une nouvelle configuration](media/open-folder-add-config.png "ouvrir le dossier ajouter une nouvelle configuration")
 
 Les configurations par défaut sont indiquées ici :
 
@@ -115,9 +115,9 @@ Une configuration peut avoir l’une des propriétés suivantes :
 |`compilerSwitches`|Un ou plusieurs commutateurs supplémentaires pouvant influencer le comportement d’IntelliSense|
 |`forcedInclude`|En-tête à inclure automatiquement dans chaque unité de compilation (correspond à /FI dans MSVC ou -include dans clang)|
 |`undefines`|Liste des macros non définies (correspond à /U dans MSVC)|
-|`intelliSenseMode`|Moteur IntelliSense à utiliser Vous pouvez spécifier des variantes spécifiques à l’architecture pour MSVC, gcc ou Clang :<br/><br/>- windows-msvc-x86 (valeur par défaut)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+|`intelliSenseMode`|Moteur IntelliSense à utiliser Vous pouvez spécifier les variantes spécifique de l’architecture pour MSVC, gcc et Clang :<br/><br/>- windows-msvc-x86 (valeur par défaut)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
 
-Remarque : Les valeurs `msvc-x86` et `msvc-x64` sont prises en charge pour des raisons d’héritage uniquement. Utilisez les variantes `windows-msvc*`.
+Remarque : Les valeurs `msvc-x86` et `msvc-x64` sont prises en charge pour des raisons d’héritage uniquement. Utilisez le `windows-msvc-*` variantes à la place.
 
 ## <a name="custom-configurations"></a>Configurations personnalisées
 
@@ -208,7 +208,7 @@ Vous pouvez définir des variables d’environnement personnalisées dans `CppPr
 ```
 ## <a name="per-configuration-environment-variables"></a>Variables d’environnement par configuration
 
-Vous pouvez également définir une propriété **environments** à l’intérieur d’une configuration. Ainsi, elle ne s’applique qu’à cette configuration et remplace toutes les variables globales du même nom. Dans l’exemple suivant, la configuration x64 définit une variable **INCLUDE** locale qui remplace la valeur globale :
+Vous pouvez également définir un **environnements** propriété au sein d’une configuration. Il s’applique uniquement à cette configuration et remplace toutes les variables globales du même nom. Dans l’exemple suivant, la configuration x64 définit une variable **INCLUDE** locale qui remplace la valeur globale :
 
 ```json
 {
@@ -266,7 +266,7 @@ Vous avez accès aux macros intégrées suivantes à l’intérieur de `CppPrope
 |`${projectRoot}`| Chemin complet du dossier où `CppProperties.json` est placé|
 |`${vsInstallDir}`| Chemin complet du dossier où est installée l’instance en cours d’exécution de Visual Studio|
 
-Par exemple, si votre projet a un dossier include et comprend également windows.h et d’autres en-têtes courants du SDK Windows, il peut être judicieux de mettre à jour votre fichier de configuration `CppProperties.json` avec les include suivants :
+Par exemple, si votre projet a un dossier include et également windows.h et autres en-têtes communs à partir du SDK Windows, vous pouvez mettre à jour votre `CppProperties.json` inclut du fichier de configuration avec les éléments suivants :
 
 ```json
 {
@@ -294,6 +294,3 @@ Par exemple, si votre projet a un dossier include et comprend également windows
 ## <a name="troubleshoot-intellisense-errors"></a>Corriger les erreurs IntelliSense
 
 Pour résoudre les erreurs IntelliSense dues à l’absence de chemins include, ouvrez la **Liste d’erreurs** et filtrez sa sortie sur « IntelliSense uniquement » et sur le code d’erreur E1696 « Impossible d’ouvrir le fichier de code source... ».
-
-
-

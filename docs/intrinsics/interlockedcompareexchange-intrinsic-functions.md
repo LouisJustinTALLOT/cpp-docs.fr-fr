@@ -48,18 +48,18 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ac3ea1c97fe78cf2a145cd2ce62f7b3f198ab3c
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263735"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344451"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Fonctions intrinsèques _InterlockedCompareExchangePointer
 
 **Section spécifique à Microsoft**
 
-Effectue une comparaison et un échange verrouillés.
+Un verrouillées comparer et échanger.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -202,25 +202,25 @@ La valeur de retour est la valeur initiale du pointeur `Destination`.
 
 ## <a name="remarks"></a>Notes
 
-`_InterlockedCompareExchange` effectue une comparaison atomique de la valeur `Destination` à la valeur `Comparand`. Si la valeur `Destination` est égale à la valeur `Comparand`, la valeur `Exchange` est stockée dans l'adresse spécifiée par `Destination`. Dans le cas contraire, aucune opération n'est effectuée.
+`_InterlockedCompareExchange` effectue une comparaison atomique de la `Destination` valeur avec la `Comparand` valeur. Si la valeur `Destination` est égale à la valeur `Comparand`, la valeur `Exchange` est stockée dans l'adresse spécifiée par `Destination`. Sinon, n’a aucune opération.
 
 `_InterlockedCompareExchange` Fournit la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) (fonction).
 
-Il existe plusieurs variantes de `_InterlockedCompareExchange` qui varient selon les types de données qu’elles impliquent et l’utilisation d’une sémantique acquire ou release spécifique au processeur.
+Il existe plusieurs variantes de `_InterlockedCompareExchange` qui varient selon les types de données qu’ils impliquent et non spécifiques au processeur acquérir ou sémantiques release sont utilisées.
 
-La fonction `_InterlockedCompareExchange` opère sur les valeurs entières longues, `_InterlockedCompareExchange8` sur les valeurs entières de 8 bits, `_InterlockedCompareExchange16` sur les valeurs entières courtes et `_InterlockedCompareExchange64` sur les valeurs entières de 64 bits.
+Bien que le `_InterlockedCompareExchange` fonction opère sur les valeurs de type entier long, `_InterlockedCompareExchange8` opère sur les valeurs d’entier 8 bits, `_InterlockedCompareExchange16` opère sur les valeurs d’entier court, et `_InterlockedCompareExchange64` opère sur les valeurs d’entier 64 bits.
 
-Sur les plateformes ARM, utilisez les intrinsèques avec les suffixes `_acq` et `_rel` pour la sémantique Acquire et Release, comme au début et à la fin d'une section critique. Les fonctions intrinsèques ARM avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agissent pas comme une barrière mémoire.
+Sur les plateformes ARM, utilisez les intrinsèques avec les suffixes `_acq` et `_rel` pour la sémantique Acquire et Release, comme au début et à la fin d'une section critique. Les fonctions intrinsèques ARM avec un `_nf` suffixe de (« aucune isolation ») n’agissent comme une barrière de mémoire.
 
 Les fonctions intrinsèques avec un suffixe `_np` (pour « no prefetch », « pas de prérécupération ») empêchent l'insertion par le compilateur d'une possible opération de prérécupération.
 
-Sur les plateformes Intel qui prennent en charge les instructions HLE (Hardware Lock Elision), les fonctions intrinsèques avec les suffixes `_HLEAcquire` et `_HLERelease` comprennent une indication pour le processeur qui peut accélérer les performances en éliminant une étape d'écriture de verrou dans le matériel. Si ces fonctions intrinsèques sont appelées sur des plateformes qui ne prennent pas en charge HLE, l'indication est ignorée.
+Sur les plateformes Intel qui prennent en charge les instructions HLE (Hardware Lock Elision), les fonctions intrinsèques avec les suffixes `_HLEAcquire` et `_HLERelease` comprennent une indication pour le processeur qui peut accélérer les performances en éliminant une étape d'écriture de verrou dans le matériel. Si ces fonctions intrinsèques sont appelées sur des plateformes qui ne prennent pas en charge HLE, l’indicateur est ignoré.
 
 Ces routines sont disponibles seulement comme fonctions intrinsèques.
 
 ## <a name="example"></a>Exemple
 
-Dans l’exemple suivant, `_InterlockedCompareExchange` est utilisé pour la synchronisation simple des threads de bas niveau. L'approche a ses limites comme base pour la programmation multithread ; elle est présentée pour illustrer l'utilisation standard des intrinsèques verrouillées. Pour obtenir de meilleurs résultats, utilisez l'API Windows. Pour plus d’informations sur la programmation multithread, consultez [écrire un programme Win32 multithread](../parallel/writing-a-multithreaded-win32-program.md).
+Dans l’exemple suivant, `_InterlockedCompareExchange` est utilisé pour la synchronisation simple des threads de bas niveau. L’approche a ses limites comme base pour la programmation multithread ; Il est présenté pour illustrer l’utilisation standard des intrinsèques verrouillées. Pour obtenir de meilleurs résultats, utilisez l'API Windows. Pour plus d’informations sur la programmation multithread, consultez [écrire un programme Win32 multithread](../parallel/writing-a-multithreaded-win32-program.md).
 
 ```
 // intrinExample.cpp
@@ -248,7 +248,7 @@ using namespace std;
 //#define SKIP_LOCKING
 
 // A common way of locking using _InterlockedCompareExchange.
-// Please refer to other sources for a discussion of the many issues
+// Refer to other sources for a discussion of the many issues
 // involved. For example, this particular locking scheme performs well
 // when lock contention is low, as the while loop overhead is small and
 // locks are acquired very quickly, but degrades as many callers want

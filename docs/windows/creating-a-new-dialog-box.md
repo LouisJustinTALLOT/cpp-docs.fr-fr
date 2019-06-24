@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: c5f026683881ba8e608bd00089879e0e2a7b4af2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28ed6c8be262e0446b828cfa3e6e9fe2ba53672a
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223569"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344209"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Procédure : Créer une boîte de dialogue (C++)
 
 L’emplacement et la taille d’une boîte de dialogue C++ et que l’emplacement et la taille des contrôles qu’il contient, sont mesurés en unités de boîte de dialogue. Les valeurs pour les contrôles individuels et de la boîte de dialogue s’affichent dans le coin inférieur droit de l’état de Visual Studio barre lorsque vous les sélectionnez.
 
 > [!NOTE]
-> Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).
+> Si votre projet ne contient pas déjà un fichier .rc, consultez [création d’un fichier de Script de ressources](../windows/how-to-create-a-resource-script-file.md).
 
 ## <a name="how-to"></a>Comment
 
@@ -38,7 +38,7 @@ Le **boîte de dialogue Éditeur** vous permet de :
 
 1. Dans le **ajouter une ressource** boîte de dialogue, sélectionnez **boîte de dialogue** dans le **Type de ressource** liste, puis choisissez **New**.
 
-   Si un signe plus (**+**) apparaît en regard du **boîte de dialogue** type de ressource, cela signifie que les modèles de boîte de dialogue sont disponibles. Sélectionnez le signe plus pour développer la liste des modèles, sélectionnez un modèle et choisissez **New**.
+   Si un signe plus ( **+** ) apparaît en regard du **boîte de dialogue** type de ressource, cela signifie que les modèles de boîte de dialogue sont disponibles. Sélectionnez le signe plus pour développer la liste des modèles, sélectionnez un modèle et choisissez **New**.
 
    La nouvelle boîte de dialogue s’ouvre dans le **boîte de dialogue Éditeur**.
 
