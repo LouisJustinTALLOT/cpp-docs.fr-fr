@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 17ce5628dbf7c781cfc9d3ebdf348d003c863f76
-ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
+ms.openlocfilehash: 7dc5554b2d49e4c306aa64c32d7c9f8cc8a5bb6a
+ms.sourcegitcommit: 1acb6755e11379026a96f63facac4d33f4dc47ae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194784"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314280"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt;, fonctions
 
@@ -405,7 +405,7 @@ int main()
 ```
 
 ```Output
-L = ( 50 40 10 20 20 )
+li = ( 50 40 10 20 20 )
 All the elements are even numbers.
 ```
 
@@ -472,7 +472,7 @@ int main()
 ```
 
 ```Output
-L = ( 51 41 11 21 20 )
+li = ( 51 41 11 21 20 )
 There's an even element in li.
 ```
 
@@ -859,6 +859,35 @@ Retourne un itérateur de sortie indiquant où les éléments ont été copiés.
 ### <a name="remarks"></a>Notes
 
 La fonction de modèle évalue `*(dest + N) = *(first + N))` une fois pour chaque `N` dans la plage `[0, count)`, pour les valeurs strictement croissantes de `N` en commençant par la valeur la plus basse. Elle retourne ensuite `dest + N`. Si *dest* et *première* désignent des régions de stockage, *dest* ne doit pas être dans la plage `[first, last)`.
+
+### <a name="example"></a>Exemple
+
+```cpp
+// alg_copy_n.cpp
+// compile with: cl /EHsc /W4 alg_copy_n.cpp
+#include <algorithm>
+#include <iostream>
+#include <string>
+
+int main()
+{
+    using namespace std;
+    string s1{"dandelion"};
+    string s2{"badger"};
+
+    cout << s1 << " + " << s2 << " = ";
+    
+    // Copy the first 3 letters from s1 
+    // to the first 3 positions in s2
+    copy_n(s1.begin(), 3, s2.begin());
+
+    cout << s2 << endl;
+}
+```
+
+```Output
+dandelion + badger = danger
+```
 
 ## <a name="count"></a>  count
 
