@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01116116ad6bb455d3b0fd8966e65b2fec4c5a35
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390982"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344364"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Procédure : Ajouter, modifier, ou supprimer des contrôles (C++)
 
@@ -69,9 +69,9 @@ Le **boîte de dialogue Éditeur** onglet s’affiche dans le [fenêtre Boîte �
 
    - Sélectionnez la boîte de dialogue à l’emplacement où vous souhaitez placer le contrôle et le contrôle s’affiche où vous avez sélectionné.
 
-   - Faites glisser le contrôle à partir de la **boîte à outils** fenêtre à l’emplacement sur votre boîte de dialogue et vous pouvez ensuite déplacer les contrôles ou modifier leur taille et la forme.
+   - Faites glisser le contrôle à partir de la **boîte à outils** fenêtre à l’emplacement sur votre boîte de dialogue. Vous pouvez ensuite déplacer le contrôle autour ou modifier sa taille et la forme.
 
-   - Double-cliquez sur le contrôle dans le **boîte à outils** fenêtre et apparaît dans votre boîte de dialogue, puis repositionnez le contrôle à l’emplacement de votre choix.
+   - Double-cliquez sur le contrôle dans le **boîte à outils** fenêtre et apparaît dans votre boîte de dialogue. Repositionner le contrôle à l’emplacement de que votre choix.
 
 ### <a name="to-add-multiple-controls"></a>Pour ajouter plusieurs contrôles
 
@@ -87,7 +87,7 @@ Le **boîte de dialogue Éditeur** onglet s’affiche dans le [fenêtre Boîte �
 
 1. Placez votre curseur qui s’affiche sous forme de croix, où vous souhaitez le coin supérieur gauche du nouveau contrôle doivent se trouver sur votre boîte de dialogue.
 
-1. Sélectionnez et maintenez le bouton de la souris pour ancrer le coin supérieur gauche de votre contrôle sur la boîte de dialogue, puis faites glisser le curseur vers la droite et vers le bas jusqu'à ce que le contrôle est la taille voulue.
+1. Sélectionnez et maintenez le bouton de la souris pour ancrer le coin supérieur gauche de votre contrôle sur la boîte de dialogue. Faites glisser le curseur vers la droite et vers le bas, jusqu'à ce que le contrôle est la taille voulue.
 
    > [!NOTE]
    > Vous pouvez ancrer un des quatre coins du contrôle que vous dessinez. Cette procédure utilisé le coin supérieur gauche comme exemple.
@@ -99,7 +99,7 @@ Le **boîte de dialogue Éditeur** onglet s’affiche dans le [fenêtre Boîte �
 
 ### <a name="to-add-a-custom-control"></a>Pour ajouter un contrôle personnalisé
 
-Vous pouvez ajouter des contrôles personnalisés à la boîte de dialogue en sélectionnant le **contrôle personnalisé** icône dans le **boîte à outils** et faites-la glisser vers votre boîte de dialogue. Pour ajouter un **Syslink** contrôler, ajoutez un contrôle personnalisé, puis modifier le contrôle **classe** propriété **Syslink**. Cette action entraîne les propriétés actualiser et afficher le **Syslink** propriétés du contrôle. Pour plus d’informations sur la classe wrapper MFC, consultez [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
+Vous pouvez ajouter des contrôles personnalisés à la boîte de dialogue. Sélectionnez le **contrôle personnalisé** icône dans le **boîte à outils** et faites-le glisser vers votre boîte de dialogue. Pour ajouter un `Syslink` contrôler, ajoutez un contrôle personnalisé, puis modifier le contrôle **classe** propriété `Syslink`. Cette action entraîne les propriétés actualiser et afficher les `Syslink` propriétés du contrôle. Pour plus d’informations sur la classe wrapper MFC, consultez [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
 ## <a name="edit-controls"></a>Contrôles d’édition
 
@@ -139,7 +139,7 @@ Vous pouvez ajouter des contrôles personnalisés à la boîte de dialogue en s�
 > [!TIP]
 > Pour passer d'un contrôle de boîte de dialogue à son gestionnaire existant, double-cliquez sur le contrôle.
 
-Vous pouvez également utiliser le **Variables membres** onglet dans le [Assistant classe MFC](../mfc/reference/mfc-class-wizard.md) pour ajouter de nouvelles variables de membre pour une classe spécifiée et afficher les variables de membres qui ont déjà été définis.
+Vous pouvez également utiliser le **Variables membres** onglet dans le [Assistant classe MFC](../mfc/reference/mfc-class-wizard.md) pour ajouter de nouvelles variables de membre pour une classe spécifiée et afficher les variables de membre déjà défini.
 
 ## <a name="delete-controls"></a>Supprimer des contrôles
 
@@ -149,7 +149,7 @@ Dans la boîte de dialogue, sélectionnez le contrôle, puis appuyez sur la **su
 
 ### <a name="troubleshooting"></a>Résolution des problèmes
 
-Après avoir ajouté un contrôle commun ou un contrôle RichEdit une boîte de dialogue, elle ne s’affiche lorsque vous testez la boîte de dialogue ou de la boîte de dialogue n’apparaît, par exemple :
+Après avoir ajouté un contrôle commun ou un contrôle RichEdit à une boîte de dialogue, elle ne s’affiche lorsque vous testez la boîte de dialogue. Ou bien, la boîte de dialogue ne s’affiche. Exemple :
 
 1. Créez un projet Win32, en modifiant les paramètres d’application pour créer une application Windows (pas une application console).
 
@@ -196,7 +196,7 @@ Le **insérer un contrôle ActiveX** boîte de dialogue permet d’insérer des 
 |**Chemin d’accès**|Affiche le fichier dans lequel le contrôle ActiveX est trouvé.|
 
 > [!CAUTION]
-> Il se peut que la distribution de tous les contrôles ActiveX sur votre système ne soit pas autorisée juridiquement. Reportez-vous au contrat de licence du logiciel qui a installé les contrôles ou contactez l’éditeur du logiciel.
+> Il se peut que la distribution de tous les contrôles ActiveX sur votre système ne soit pas autorisée juridiquement. Reportez-vous au contrat de licence du logiciel qui a installé les contrôles ou contactez l’Éditeur du logiciel.
 
 #### <a name="to-add-an-activex-control"></a>Pour ajouter un contrôle ActiveX
 
@@ -215,7 +215,7 @@ Le **insérer un contrôle ActiveX** boîte de dialogue permet d’insérer des 
 
 #### <a name="to-edit-properties-for-an-activex-control"></a>Pour modifier les propriétés pour un contrôle ActiveX
 
-Contrôles ActiveX fournis par des fabricants indépendants peuvent sont équipés à leurs propriétés et leurs caractéristiques. Ces propriétés sont affichées dans le **propriétés** fenêtre, y compris toute propriété pages créées par les auteurs du contrôle ActiveX sont affichées dans le **Pages de propriétés** (permet d’afficher le  **Page de propriétés** pour un contrôle ActiveX spécifique, sélectionnez le **Page de propriétés** situé dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window)).
+Contrôles ActiveX fournis par des fabricants indépendants peuvent sont équipés à leurs propriétés et leurs caractéristiques. Ces propriétés sont affichées dans le **propriétés** fenêtre. Les pages de propriétés créées par les auteurs du contrôle ActiveX sont affichées dans le **Pages de propriétés** boîte de dialogue. (Pour afficher le **Page de propriétés** pour un contrôle ActiveX spécifique, sélectionnez le **Page de propriétés** situé dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window)).
 
 - Sélectionnez le **ActiveX** contrôler et accédez au menu **vue** > **Page de propriétés** pour afficher les propriétés. Apportez les modifications nécessaires dans la page de propriétés.
 
