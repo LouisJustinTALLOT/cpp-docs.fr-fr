@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: a8f13c32593d1cfef690d63d506faf14490de02d
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 1e33d62694fe782b1a1719fa3c5a36c6fb04670a
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837266"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400628"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Génération de code durant l'édition de liens)
 
@@ -26,11 +26,11 @@ Utilisez **/LTCG** pour effectuer une optimisation de l’ensemble du programme 
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/LTCG**[ **:** {**INCREMENTAL**|**NOSTATUS**|**STATUS**|**OFF**}]<br/>
+> **/LTCG**[ **:** {**INCREMENTAL**|**NOSTATUS**|**STATUS**|**OFF**}]
 
 Ces options sont dépréciées à partir de Visual Studio 2015 :
 
-> **/LTCG:** {**PGINSTRUMENT**|**PGOPTIMIZE**|**PGUPDATE**}<br/>
+> **/LTCG:** {**PGINSTRUMENT**|**PGOPTIMIZE**|**PGUPDATE**}
 
 ### <a name="arguments"></a>Arguments
 
@@ -52,7 +52,7 @@ Ces options sont dépréciées à partir de Visual Studio 2015 :
 **PGUPDATE**<br/>
 (Facultatif) Cette option est dépréciée à partir de Visual Studio 2015. Au lieu de cela, utilisez **/LTCG** et **/USEPROFILE** pour regénérer une image optimisée. Pour plus d’informations, consultez [Optimisations guidées par profil](../profile-guided-optimizations.md). La forme abrégée de cette option est **/LTCG:PGU**.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’option **/LTCG** indique à l’éditeur de liens d’appeler le compilateur et d’effectuer une optimisation de l’ensemble du programme. Vous pouvez également effectuer l’optimisation guidée par profil. Pour plus d’informations, consultez [Optimisations guidées par profil](../profile-guided-optimizations.md).
 

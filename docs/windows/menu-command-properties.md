@@ -17,12 +17,12 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1010e4d1c11c9408ef73f4db0a449314b36059a7
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376716"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400767"
 ---
 # <a name="menu-commands-c"></a>Commandes de menu (C++)
 
@@ -55,7 +55,7 @@ Bien souvent, vous souhaitez qu’une commande de menu et une combinaison de tou
 
    - À la suite de la légende de menu, tapez la séquence d’échappement d’une tabulation (\t) pour que toutes les touches accélérateurs du menu soient alignées à gauche.
 
-   - Tapez le nom de la touche de modification (**Ctrl**, **Alt**, ou **MAJ**) suivie d’un signe plus (**+**) et le nom, une lettre, ou symbole de l’autre touche.
+   - Tapez le nom de la touche de modification (**Ctrl**, **Alt**, ou **MAJ**) suivie d’un signe plus ( **+** ) et le nom, une lettre, ou symbole de l’autre touche.
 
    Par exemple, pour attribuer **Ctrl**+**O** à la **Open** commande sur le **fichier** menu, vous modifiez la commande de menu  **Légende** afin qu’il ressemble au texte suivant :
 
@@ -88,7 +88,7 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeur de menus](../windows/menu-editor.md)<br/>
+[Éditeur de menus](../windows/menu-editor.md)
 
 <!--
 [Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>-->
