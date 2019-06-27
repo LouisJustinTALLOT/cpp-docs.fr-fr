@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: d4e8d062685a543c428f0c86a22c17c8faf017ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bbdda07eacdb003515a40a93a232c0f8626ca89
+ms.sourcegitcommit: aed09c9c05e6b031c8a9f87a8d6bbdaf253485e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320173"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412239"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Favoriser la taille du code, Favoriser la vitesse du code)
 
@@ -39,7 +39,7 @@ Réduit ou l’agrandit la taille des fichiers exe et DLL.
 
 **/OS** (favoriser la taille du Code) réduit la taille des fichiers exe et DLL en demandant au compilateur de favoriser la taille par rapport à la vitesse. Le compilateur peut réduire de nombreuses constructions C et C++ en séquences similaires de code machine. Parfois, ces différences offrent des compromis taille / vitesse. Le **/Os** et **/Ot** options vous permettent de spécifier une préférence pour un par rapport à l’autre :
 
-**/OT** (favoriser la vitesse du Code) augmente la vitesse des fichiers .exe et .dll en demandant au compilateur de favoriser la vitesse par rapport à taille. (C’est la valeur par défaut). Le compilateur peut réduire de nombreuses constructions C et C++ en séquences similaires de code machine. Parfois, ces différences offrent des compromis taille / vitesse. L’option /Ot est déduite d’augmenter la vitesse ([/O2](o1-o2-minimize-size-maximize-speed.md)) option. Le **/O2** option combine plusieurs options pour produire un code très rapide.
+**/OT** (favoriser la vitesse du Code) augmente la vitesse des fichiers .exe et .dll en demandant au compilateur de favoriser la vitesse par rapport à taille. (C’est la valeur par défaut). Le compilateur peut réduire de nombreuses constructions C et C++ en séquences similaires de code machine. Parfois, ces différences offrent des compromis taille / vitesse. Le **/Ot** option est déduite d’augmenter la vitesse ([/O2](o1-o2-minimize-size-maximize-speed.md)) option. Le **/O2** option combine plusieurs options pour produire un code très rapide.
 
 Si vous utilisez **/Os** ou **/Ot**, vous devez également spécifier [/Og](og-global-optimizations.md) pour optimiser le code.
 
@@ -48,7 +48,7 @@ Si vous utilisez **/Os** ou **/Ot**, vous devez également spécifier [/Og](og-g
 
 **x86 spécifique**
 
-L’exemple de code suivant illustre la différence entre le Code petit favoriser (**/Os**) options et la favoriser la vitesse du Code (**/Ot**) option :
+L’exemple de code suivant illustre la différence entre le Code petit favoriser ( **/Os**) options et la favoriser la vitesse du Code ( **/Ot**) option :
 
 > [!NOTE]
 >  La section suivante décrit le comportement attendu lors de l’utilisation **/Os** ou **/Ot**. Toutefois, comportement du compilateur à partir d’une version à l’autre peut entraîner différentes optimisations pour le code ci-dessous.
@@ -65,14 +65,14 @@ int differ(int x)
 }
 ```
 
-Comme indiqué dans le fragment de code machine ci-dessous, quand DIFFER.c est compilé pour la taille (**/Os**), le compilateur implémente l’expression de multiplication dans l’instruction de retournée explicitement en tant qu’une multiplication afin de produire une séquence de code courte mais plus lente :
+Comme indiqué dans le fragment de code machine ci-dessous, quand DIFFER.c est compilé pour la taille ( **/Os**), le compilateur implémente l’expression de multiplication dans l’instruction de retournée explicitement en tant qu’une multiplication afin de produire une séquence de code courte mais plus lente :
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
 imul   eax, 71                  ; 00000047H
 ```
 
-Ou bien, quand DIFFER.c est compilé pour la vitesse (**/Ot**), le compilateur implémente l’expression de multiplication dans l’instruction return comme une série de MAJ et `LEA` obtenir des instructions pour produire une séquence de code rapide mais plus longue :
+Ou bien, quand DIFFER.c est compilé pour la vitesse ( **/Ot**), le compilateur implémente l’expression de multiplication dans l’instruction return comme une série de MAJ et `LEA` obtenir des instructions pour produire une séquence de code rapide mais plus longue :
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
@@ -86,7 +86,7 @@ sub    eax, ecx
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
