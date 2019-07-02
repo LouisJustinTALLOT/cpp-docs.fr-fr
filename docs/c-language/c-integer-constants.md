@@ -4,12 +4,12 @@ ms.date: 02/27/2018
 helpviewer_keywords:
 - integer constants
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
-ms.openlocfilehash: 4a3d6b945f3611b8e51029c0a5ec5dc77b2cbaa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48561599896bb8a6f9ee159630ff15df6c0454be
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620218"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400510"
 ---
 # <a name="c-integer-constants"></a>Constantes entières C
 
@@ -20,33 +20,33 @@ Une *constante entière* est un nombre décimal (base 10), octal (base 8) ou hex
 *integer-constant* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *integer-suffix*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *integer-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub>
 
 *decimal-constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*nonzero-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*
 
 *octal-constant* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *octal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *octal-digit*
 
 *hexadecimal-constant* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-prefix* *hexadecimal-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*
 
 *hexadecimal-prefix* : un des éléments suivants :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**
 
 *nonzero-digit* : un des éléments suivants :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**
 
 *octal-digit* : un des éléments suivants :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7**
 
 *hexadecimal-digit* : un des éléments suivants :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**a b c d e f**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F**
 
 *integer-suffix* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>opt</sub><br/>
@@ -54,23 +54,23 @@ Une *constante entière* est un nombre décimal (base 10), octal (base 8) ou hex
 &nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *64-bit-integer-suffix*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*long-long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*64-bit-integer-suffix*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*64-bit-integer-suffix*
 
 *unsigned-suffix* : un des éléments suivants :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**u U**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**u U**
 
 *long-suffix* : un des éléments suivants :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**l L**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**l L**
 
 *long-long-suffix* : un des éléments suivants :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**ll LL**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ll LL**
 
 *64-bit-integer-suffix* : un des éléments suivants :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**i64 I64**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**i64 I64**
 
 Les suffixes **i64** et **I64** sont spécifiques à Microsoft.
 
-Les constantes Integer sont positives, à moins d’être précédées du signe moins (**-**). Le signe moins est interprété comme l'opérateur de négation arithmétique unaire. Pour plus d’informations sur cet opérateur, consultez [Opérateurs arithmétiques unaires](../c-language/unary-arithmetic-operators.md).
+Les constantes Integer sont positives, à moins d’être précédées du signe moins ( **-** ). Le signe moins est interprété comme l'opérateur de négation arithmétique unaire. Pour plus d’informations sur cet opérateur, consultez [Opérateurs arithmétiques unaires](../c-language/unary-arithmetic-operators.md).
 
 Si une constante Integer commence par **0x** ou **0X**, elle est hexadécimale. Si elle commence par le chiffre **0**, elle est octale. Sinon, elle est supposée être décimale.
 
