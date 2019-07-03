@@ -23,9 +23,9 @@ L’implémentation de la bibliothèque runtime Microsoft C prend également en 
 
 |Chaîne de langue|Nom des paramètres régionaux équivalents|
 |---------------------|----------------------------|
-|american|fr-FR|
-|american english|fr-FR|
-|american-english|fr-FR|
+|american|en-US|
+|american english|en-US|
+|american-english|en-US|
 |australian|en-AU|
 |belgian|nl-BE|
 |canadian|en-CA|
@@ -37,7 +37,7 @@ L’implémentation de la bibliothèque runtime Microsoft C prend également en 
 |chinese-singapore|zh-SG|
 |chinese-traditional|zh-TW|
 |dutch-belgian|nl-BE|
-|english-american|fr-FR|
+|english-american|en-US|
 |english-aus|en-AU|
 |english-belize|en-BZ|
 |english-can|en-CA|
@@ -48,8 +48,8 @@ L’implémentation de la bibliothèque runtime Microsoft C prend également en 
 |english-south africa|en-ZA|
 |english-trinidad y tobago|en-TT|
 |english-uk|en-GB|
-|english-us|fr-FR|
-|english-usa|fr-FR|
+|english-us|en-US|
+|english-usa|en-US|
 |french-belgian|fr-BE|
 |french-canadian|fr-CA|
 |french-luxembourg|fr-LU|
@@ -86,8 +86,8 @@ L’implémentation de la bibliothèque runtime Microsoft C prend également en 
 |swedish-finland|sv-FI|
 |swiss|de-CH|
 |uk|en-GB|
-|us|fr-FR|
-|usa|fr-FR|
+|us|en-US|
+|usa|en-US|
 
 ## <a name="see-also"></a>Voir aussi
 
