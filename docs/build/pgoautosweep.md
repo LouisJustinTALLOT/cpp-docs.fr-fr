@@ -1,20 +1,20 @@
 ---
 title: PgoAutoSweep
-ms.date: 03/14/2018
+ms.date: 07/02/2019
 f1_keywords:
 - PgoAutoSweep
 - PogoAutoSweepA
 - PogoAutoSweepW
-ms.openlocfilehash: 2d9804e5ce90663d44ac389ab4f71d10290e6470
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57bcd1b2e9f0a3312867c4373fd1e50bcf91576e
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295331"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552240"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep` enregistre les informations du compteur profil actuel dans un fichier et réinitialise les compteurs. Utilisez la fonction au cours de formation pour écrire toutes les données de profil à partir du programme en cours d’exécution dans un fichier .pgc pour une utilisation ultérieure dans la génération de l’optimisation de l’optimisation guidée par profil.
+`PgoAutoSweep` enregistre les informations du compteur profil actuel dans un fichier et réinitialise les compteurs. Utilisez la fonction au cours de formation pour écrire toutes les données de profil à partir du programme en cours d’exécution à l’optimisation guidée par profil un `.pgc` fichier pour une utilisation ultérieure dans la génération de l’optimisation.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,7 +26,7 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 ### <a name="parameters"></a>Paramètres
 
 *name*<br/>
-Une chaîne d’identification pour le fichier .pgc enregistré.
+Une chaîne d’identification pour le texte enregistré `.pgc` fichier.
 
 ## <a name="remarks"></a>Notes
 
@@ -34,11 +34,11 @@ Vous pouvez appeler `PgoAutoSweep` à partir de votre application pour enregistr
 
 Les données de compteur de profil enregistré sont placées dans un fichier nommé *base_name*-*nom*! *valeur*.pgc, où *base_name* est le nom de base de l’exécutable, *nom* est le paramètre passé à `PgoAutoSweep`, et *valeur* est une valeur unique, généralement un nombre croissant, pour empêcher les collisions de nom de fichier.
 
-Les fichiers .pgc créés par `PgoAutoSweep` doivent être fusionnés dans un fichier .pgd à utiliser pour créer un fichier exécutable optimisé. Vous pouvez utiliser la [pgomgr](pgomgr.md) commande pour effectuer la fusion.
+Le `.pgc` fichiers créés par `PgoAutoSweep` doivent être fusionnés dans un `.pgd` fichier à utiliser pour créer un fichier exécutable optimisé. Vous pouvez utiliser la [pgomgr](pgomgr.md) commande pour effectuer la fusion.
 
-Vous pouvez passer le nom du fichier .pgd fusionnée à l’éditeur de liens lors de la génération de l’optimisation à l’aide de la **PGD =**_filename_ l’argument de la [/USEPROFILE](reference/useprofile.md) option de l’éditeur de liens, ou par à l’aide de déconseillées **/PGD** option de l’éditeur de liens. Si vous fusionnez les fichiers .pgc dans un fichier nommé *base_name*.pgd, il est inutile de spécifier le nom de fichier sur la ligne de commande, car l’éditeur de liens récupère ce nom de fichier par défaut.
+Vous pouvez passer le nom de l’élément fusionné `.pgd` fichier à l’éditeur de liens lors de la génération de l’optimisation à l’aide de la **PGD =** _filename_ l’argument de la [/USEPROFILE](reference/useprofile.md) l’éditeur de liens option ou en utilisant déconseillées **/PGD** option de l’éditeur de liens. Si vous fusionnez le `.pgc` fichiers dans un fichier nommé *base_name*.pgd, il est inutile de spécifier le nom de fichier sur la ligne de commande, car l’éditeur de liens récupère ce nom de fichier par défaut.
 
-Le `PgoAutoSweep` fonction tient à jour le paramètre de sécurité des threads spécifiées lorsque la génération instrumentée est créée. Si vous utilisez le paramètre par défaut ou spécifier le **NOEXACT** l’argument de la [/GENPROFILE ou /fastgenprofile.]() option de l’éditeur de liens, les appels à `PgoAutoSweep` ne sont pas thread-safe. Le **EXACT** argument crée un thread-safe et plus précis, mais plus lent, instrumenté exécutable.
+Le `PgoAutoSweep` fonction tient à jour le paramètre de sécurité des threads spécifiées lorsque la génération instrumentée est créée. Si vous utilisez le paramètre par défaut ou spécifier le **NOEXACT** l’argument de la [/GENPROFILE ou /fastgenprofile.](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) option de l’éditeur de liens, les appels à `PgoAutoSweep` ne sont pas thread-safe. Le **EXACT** argument crée un thread-safe et plus précis, mais plus lent, instrumenté exécutable.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -50,7 +50,7 @@ Le fichier exécutable doit inclure le fichier pgobootrun.lib dans les biblioth�
 
 ## <a name="example"></a>Exemple
 
-L’exemple ci-dessous utilise `PgoAutoSweep` pour créer deux. Fichiers PGC à différents moments pendant l’exécution. Le premier contient des données qui décrivent le comportement d’exécution jusqu'à ce que `count` est égal à 3, et le second contient les données collectées après ce point jusqu'à ce que juste avant la fin de l’application.
+L’exemple ci-dessous utilise `PgoAutoSweep` pour créer deux `.pgc` fichiers à différents moments pendant l’exécution. Le premier contient des données qui décrivent le comportement d’exécution jusqu'à ce que `count` est égal à 3, et le second contient les données collectées après ce point jusqu'à ce que juste avant la fin de l’application.
 
 ```cpp
 // pgoautosweep.cpp

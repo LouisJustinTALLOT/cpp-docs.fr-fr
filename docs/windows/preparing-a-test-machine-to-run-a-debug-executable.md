@@ -1,15 +1,15 @@
 ---
 title: Préparation d'un ordinateur de test pour lancer un exécutable de débogage
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 6d7e9c2e0a29c2871fd86922151f2226dd9078fc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 87d2bf434aef3a85bf7fa19f5886bec106515809
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448444"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552337"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Préparation d'un ordinateur de test pour lancer un exécutable de débogage
 
@@ -29,11 +29,11 @@ Il existe trois façons de déployer les versions debug des DLL de la bibliothè
 
 - Utilisez l’option _**Déployer** dans la boîte de dialogue **Gestionnaire de configurations** de Visual Studio pour copier la sortie du projet et d’autres fichiers sur l’ordinateur distant.
 
-Après avoir installé les DLL Visual C++, vous pouvez exécuter un débogueur distant sur un partage réseau. Pour plus d’informations sur le débogage distant, consultez [Débogage distant](/visualstudio/debugger/remote-debugging.md).
+Après avoir installé les DLL Visual C++, vous pouvez exécuter un débogueur distant sur un partage réseau. Pour plus d’informations sur le débogage distant, consultez [Débogage distant](/visualstudio/debugger/remote-debugging).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Déploiement dans Visual C++](deployment-in-visual-cpp.md)<br>
 [Options de ligne de commande de Windows Installer](/windows/desktop/Msi/command-line-options)<br>
 [Exemples de déploiement](deployment-examples.md)<br>
-[Remote Debugging](/visualstudio/debugger/remote-debugging.md)
+[Remote Debugging](/visualstudio/debugger/remote-debugging)

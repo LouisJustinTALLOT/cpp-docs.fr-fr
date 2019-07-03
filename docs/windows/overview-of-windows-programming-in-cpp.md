@@ -1,13 +1,13 @@
 ---
 title: Vue d'ensemble de la programmation Windows en C++
-ms.date: 05/06/2019
+ms.date: 07/02/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 585fda614acce85e286e25b807d0fda57d03758b
-ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
+ms.openlocfilehash: 1f49c9f8f78f83d6ae991b7427b28f7f5cbf7f0c
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355566"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552305"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Vue d'ensemble de la programmation Windows en C++
 
@@ -118,5 +118,5 @@ Visual Studio inclut un débogueur puissant pour le code natif, des outils d’a
 |[C++ dans Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Rubrique parente pour le contenu destiné aux développeurs Visual C++.|
 [Développement .NET avec C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Créer des wrappers pour les bibliothèques C++ natives qui permettent de communication avec les applications et composants .NET.|
 |[Extensions de composants pour .NET et UWP](../extensions/component-extensions-for-runtime-platforms.md)|Référence pour les éléments de syntaxe partagés par C / c++ / CX et c++ / CLI.|
-|[Applications de plateforme Windows universelle (C++)](universal-windows-apps-cpp.md)|Écrire des applications UWP à l’aide de C++ / c++ / CX ou la bibliothèque de modèles Windows Runtime (WRL).|
+|[Applications de plateforme Windows universelle (C++)](../cppcx/universal-windows-apps-cpp.md)|Écrire des applications UWP à l’aide de C++ / c++ / CX ou la bibliothèque de modèles Windows Runtime (WRL).|
 |[Attributs C++ pour COM et .NET](attributes/cpp-attributes-com-net.md)|Attributs non standards pour la programmation Windows uniquement à l’aide de .NET ou COM.|

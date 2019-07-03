@@ -1,13 +1,13 @@
 ---
 title: Exceptions (C++/CX)
-ms.date: 01/18/2018
+ms.date: 07/02/2019
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93a3c096c79140787a46dcbd0ae6ec7edc0bf2e4
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301524"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552177"
 ---
 # <a name="exceptions-ccx"></a>Exceptions (C++/CX)
 
@@ -63,7 +63,7 @@ Pour intercepter les exceptions levées pendant une opération asynchrone, utili
 
 ## <a name="unhandlederrordetected-event"></a>Événement UnhandledErrorDetected
 
-Dans Windows 8.1 vous pouvez vous abonner à la [Windows::ApplicationModel](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected) un événement statique, ce qui permet d’accéder aux erreurs non gérées qui sont sur le point d’interrompre le processus. Indépendamment de l’origine de l’erreur, il atteint ce gestionnaire en tant qu’objet [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) passé avec les arguments d’événement. Lorsque vous appelez `Propagate` sur l'objet, il crée et lève une exception `Platform::*Exception` dont le type correspond au code d'erreur. Dans les blocs catch, vous pouvez enregistrer l'état utilisateur, le cas échéant. Vous pouvez ensuite permettre au processus de se terminer en appelant `throw`, ou vous pouvez faire en sorte de restaurer le programme à un état connu. L'exemple suivant illustre le modèle de base :
+Dans Windows 8.1 vous pouvez vous abonner à la [Windows::ApplicationModel](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror.unhandlederrordetected) un événement statique, ce qui permet d’accéder aux erreurs non gérées qui sont sur le point d’interrompre le processus. Indépendamment de l’origine de l’erreur, il atteint ce gestionnaire en tant qu’objet [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) passé avec les arguments d’événement. Lorsque vous appelez `Propagate` sur l'objet, il crée et lève une exception `Platform::*Exception` dont le type correspond au code d'erreur. Dans les blocs catch, vous pouvez enregistrer l'état utilisateur, le cas échéant. Vous pouvez ensuite permettre au processus de se terminer en appelant `throw`, ou vous pouvez faire en sorte de restaurer le programme à un état connu. L'exemple suivant illustre le modèle de base :
 
 Dans app.xaml.h :
 

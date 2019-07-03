@@ -1,6 +1,6 @@
 ---
 title: Cmfctaskspane, classe
-ms.date: 11/19/2018
+ms.date: 07/02/2019
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eeb24a0a02d1a084c83e280705344a9e5c505724
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218674"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552284"
 ---
 # <a name="cmfctaskspane-class"></a>Cmfctaskspane, classe
 
@@ -294,7 +294,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::RemovePage](#removepage)|Supprime une page spécifiée du volet des tâches.|
 |[CMFCTasksPane::RemoveTask](#removetask)|Supprime une tâche d’un groupe de tâches.|
 |[CMFCTasksPane::SaveState](#savestate)|(Substitue [CDockablePane::SaveState](cdockablepane-class.md).)|
-|[CMFCTasksPane::Serialize](#serialize)|(Substitue [CDockablePane::Serialize]().)|
+|[CMFCTasksPane::Serialize](#serialize)|(Substitue [CDockablePane::Serialize](cdockablepane-class.md).)|
 |[CMFCTasksPane::SetActivePage](#setactivepage)|Active une page spécifiée dans le volet des tâches.|
 |[CMFCTasksPane::SetCaption](#setcaption)|Définit le nom de légende d'un volet de tâches.|
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|Définit la hauteur d'une légende de groupe.|
