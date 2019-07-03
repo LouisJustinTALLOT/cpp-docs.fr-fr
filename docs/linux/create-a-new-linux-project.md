@@ -1,13 +1,13 @@
 ---
 title: Créer un projet Linux C++ dans Visual Studio
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: e39e60c906901420a4809c22b4f4e71d3b621da1
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 0377e21177b29d998fc3e66bb1863dbc127c1fbe
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821636"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042705"
 ---
 # <a name="create-a-new-linux-project"></a>Créer un projet Linux
 
@@ -19,7 +19,7 @@ Les projets Linux sont disponibles dans Visual Studio 2017 et ultérieur.
 
 Tout d’abord, vérifiez que la **charge de travail de développement Linux** pour Visual Studio est installée. Pour plus d’informations, consultez [Télécharger, installer et configurer la charge de travail Linux](download-install-and-setup-the-linux-development-workload.md).
 
-Quand vous créez un projet C++ pour Linux dans Visual Studio, vous pouvez choisir de créer un projet Visual Studio ou un projet CMake. Cet article décrit comment créer un projet Visual Studio. Pour plus d’informations sur la façon de créer des projets CMake et d’utiliser des projets existants, consultez [Configurer un projet CMake Linux](cmake-linux-project.md).
+Quand vous créez un projet C++ pour Linux dans Visual Studio, vous pouvez choisir de créer un projet Visual Studio ou un projet CMake. Cet article décrit comment créer un projet Visual Studio. Pour plus d’informations sur la façon de créer des projets CMake et d’utiliser des projets existants, consultez [Créer et configurer un projet CMake Linux](cmake-linux-project.md).
 
 ## <a name="to-create-a-new-linux-project"></a>Pour créer un projet Linux
 
@@ -49,6 +49,12 @@ Pour créer un projet Linux dans Visual Studio, effectuez les étapes suivantes�
    | **Application console (Linux)** | Projet ciblé pour n’importe quel ordinateur Linux, avec un exemple de code qui fait sortir un texte vers la console |
    | **Projet vide (Linux)**       | Projet ciblé pour n’importe quel ordinateur Linux sans exemple de code |
    | **Projet Makefile (Linux)**    | Projet ciblé pour n’importe quel ordinateur Linux, généré à l’aide d’un système de génération Makefile standard |
+
+   ::: moniker range="vs-2019"
+
+   Visual Studio 2019 vous permet de créer un nouveau projet CMake. Pour plus d’informations, consultez [Créer et configurer un projet CMake Linux](cmake-linux-project.md).
+   
+   ::: moniker-end
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -3,12 +3,12 @@ title: Déployer, exécuter et déboguer votre projet Linux C++ dans Visual Stu
 description: Décrit comment compiler, exécuter et déboguer du code sur la cible distante au sein d’un projet Linux C++ dans Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 707915a502aafefee47af7e84b534e06ba678b3d
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 70770385bde859d47532b130463a1cc54e32a570
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821615"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042762"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Déployer, exécuter et déboguer un projet Linux
 
@@ -22,7 +22,7 @@ Une fois que vous avez créé un projet Linux C++ dans Visual Studio et que vous
 
 ::: moniker range="vs-2019"
 
-**Visual Studio 2019 version 16.1** vous pouvez cibler différents systèmes Linux pour le débogage et la génération. Spécifiez la machine de build dans la page de propriétés **Général** et la machine de débogage dans la page de propriétés **Débogage**.
+**Visual Studio 2019 version 16.1** vous pouvez cibler différents systèmes Linux pour le débogage et la génération. Par exemple, vous pouvez utiliser la compilation croisée sur x64 et déployer sur un appareil ARM lors du ciblage de scénarios IoT. Pour plus d’informations, consultez [Spécifier des machines différentes pour effectuer le build et déboguer](#separate_build_debug) plus loin dans cet article.
 
 ::: moniker-end
 
@@ -35,8 +35,6 @@ Il existe plusieurs façons de manipuler et déboguer votre projet Linux.
 ## <a name="debug-your-linux-project"></a>Déboguer votre projet Linux
 
 1. Sélectionnez le mode de débogage dans la page de propriétés **Débogage**.
-
-   
    
    ::: moniker range="vs-2019"
 
@@ -94,15 +92,19 @@ Il existe plusieurs façons de manipuler et déboguer votre projet Linux.
 
    ![Fenêtre de console Linux](media/consolewindow.png)
 
-## <a name="configure-other-debugging-options"></a>Configurer d’autres options de débogage
+## <a name="configure-other-debugging-options-msbuild-based-projects"></a>Configurer d’autres options de débogage (projets MSBuild)
 
 - Vous pouvez passer les arguments de ligne de commande à l’exécutable en utilisant l’élément **Arguments de programme** dans la page de propriétés **Débogage** du projet.
 
    ![Arguments de programme](media/settings_programarguments.png)
 
-- Vous pouvez passer des options de débogueur spécifiques à GDB à l’aide de l’entrée **Commandes de débogueur supplémentaires**.  Par exemple, il est conseillé d’ignorer les signaux d’instruction non conforme (SIGILL).  Vous pouvez utiliser la commande **handle** pour y parvenir  en ajoutant le code suivant à l’entrée **Commandes de débogueur supplémentaires** comme indiqué ci-dessus :
+- Vous pouvez passer des options de débogueur spécifiques à GDB à l’aide de l’entrée **Commandes de débogueur supplémentaires**.  Par exemple, il est conseillé d’ignorer les signaux d’instruction non conforme (SIGILL).  Vous pouvez utiliser la commande **handle** pour le faire en ajoutant ce qui suit à l’entrée **Commandes de débogueur supplémentaires** comme indiqué ci-dessus :
 
    `handle SIGILL nostop noprint`
+
+## <a name="configure-other-debugging-options-cmake-projects"></a>Configurer d’autres options de débogage (projets CMake)
+
+Vous pouvez spécifier des arguments de ligne de commande supplémentaires pour un projet CMake dans le fichier launch.vs.json. Pour plus d’informations, consultez [Déboguer le projet CMake](cmake-linux-project.md#debug_cmake_project)
 
 ## <a name="debug-with-attach-to-process"></a>Déboguer avec Attacher au processus
 
@@ -124,6 +126,72 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 ```
 
 **AttachOptionsForConnection** contient une grande partie des attributs dont vous pouvez avoir besoin. L’exemple ci-dessus montre comment spécifier un emplacement pour rechercher des bibliothèques .so supplémentaires. L’élément enfant **ServerOptions** permet d’effectuer un attachement au processus distant avec gdbserver à la place. Pour ce faire, vous devez spécifier un client gdb local (celui fourni dans Visual Studio 2017 est indiqué ci-dessus) et une copie locale du binaire contenant les symboles. L’élément **SetupCommands** permet de transmettre des commandes directement à gdb. Vous pouvez trouver toutes les options disponibles dans le [schéma LaunchOptions.xsd](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) sur GitHub.
+
+::: moniker range="vs-2019"
+
+## <a name="separate_build_debug"></a> Spécifier des machines différentes pour effectuer le build et déboguer
+
+Dans Visual Studio 2019 version 16.1, vous pouvez séparer votre machine de build distante de votre machine de débogage distante pour les projets Linux basés sur MSBuild et les projets CMake qui ciblent une machine Linux distante. Par exemple, vous pouvez maintenant utiliser la compilation croisée sur x64 et déployer sur un appareil ARM lors du ciblage de scénarios IoT.
+
+### <a name="msbuild-based-projects"></a>Projets MSBuild
+
+Par défaut, la machine de débogage distante est identique à celle de build distante (**Propriétés de configuration** > **Général** > **Machine de build distante**). Pour spécifier une nouvelle machine de débogage à distance, cliquez sur le projet dans **l’Explorateur de solutions** et accédez à **Propriétés de configuration** > **Débogage**  >  **Machine de débogage distante**.  
+
+![Machine de débogage Linux distante](media/linux-remote-debug-machine.png)
+
+Le menu déroulant pour **Machine de débogage distante** est renseigné avec toutes les connexions à distance établies. Pour ajouter une nouvelle connexion à distance, accédez à **Outils** > **Options** > **Multiplateforme** > **Gestionnaire de connexions** ou recherchez « Gestionnaire de connexions » dans **Lancement rapide**. Vous pouvez également spécifier un nouveau répertoire de déploiement distant dans les pages de propriétés du projet (**Propriétés de configuration** > **Général** > **Répertoire de déploiement distant**).
+
+Par défaut, seuls les fichiers nécessaires pour le processus à déboguer sont déployés sur la machine de débogage distante. Vous pouvez utiliser **l’Explorateur de solutions** pour configurer les fichiers source qui seront déployés sur la machine de débogage distante. Lorsque vous cliquez sur un fichier source, vous verrez un aperçu de ses propriétés de fichier directement en dessous de l’Explorateur de solutions.
+
+![Fichiers à déployer Linux](media/linux-deployable-content.png)
+
+La propriété **Contenu** spécifie si le fichier doit être déployé sur la machine de débogage distante. Vous pouvez désactiver le déploiement entièrement en accédant à **Pages de propriétés** > **Gestionnaire de configuration** puis en décochant **Déployer** pour la configuration souhaitée.
+
+Dans certains cas, vous pourriez avoir besoin de davantage de contrôle sur le déploiement de votre projet. Par exemple, si certains fichiers que vous souhaitez déployer peuvent se trouver en dehors de votre solution ou si vous souhaitez personnaliser votre répertoire de déploiement distant par fichier ou répertoire. Dans ce cas, ajoutez le ou les blocs de code suivants à votre fichier .vcxproj et remplacez « example.cpp » par les noms des fichiers que vous souhaitez utiliser :
+
+```xml
+
+<ItemGroup>
+   <RemoteDeploy Include="__example.cpp">
+<!-- This is the source Linux machine, can be empty if DeploymentType is LocalRemote -->
+      <SourceMachine>$(RemoteTarget)</SourceMachine>
+      <TargetMachine>$(RemoteDebuggingTarget)</TargetMachine>
+      <SourcePath>~/example.cpp</SourcePath>
+      <TargetPath>~/example.cpp</TargetPath>
+<!-- DeploymentType can be LocalRemote, in which case SourceMachine will be empty and SourcePath is a local file on Windows -->
+      <DeploymentType>RemoteRemote</DeploymentType>
+<!-- Indicates whether the deployment contains executables -->
+      <Executable>true</Executable>
+   </RemoteDeploy>
+</ItemGroup>
+```
+
+### <a name="cmake-projects"></a>Projets CMake
+
+Pour les projets CMake qui ciblent une machine Linux distante, vous pouvez spécifier une nouvelle machine de débogage distante dans launch.vs.json. Par défaut, la valeur de « remoteMachineName » est synchronisée avec la propriété « remoteMachineName » dans CMakeSettings.json, qui correspond à votre machine de build distante. Ces propriétés n’ont plus besoin de correspondre, et la valeur de « remoteMachineName » dans launch.vs.json détermine la machine distante utilisée pour le déploiement et le débogage.
+
+![Machine de débogage CMake distante](media/cmake-remote-debug-machine.png)
+
+IntelliSense propose une liste de toutes les connexions à distance établies. Vous pouvez ajouter une nouvelle connexion à distance, accédez à **Outils** > **Options** > **Multiplateforme** > **Gestionnaire de connexions** ou recherchez « Gestionnaire de connexions » dans **Lancement rapide**.
+
+Si vous souhaitez avoir le contrôle total sur votre déploiement, vous pouvez ajouter le ou les blocs de code suivants au fichier launch.vs.json. N’oubliez pas de remplacer les valeurs d’espace réservé par de vraies valeurs :
+
+```json
+
+"disableDeploy": false,
+"deployDirectory": "~\foo",
+"deploy" : [
+   {
+      "sourceMachine": "127.0.0.1 (username=example1, port=22, authentication=Password)",
+      "targetMachine": "192.0.0.1 (username=example2, port=22, authentication=Password)",
+      "sourcePath": "~/example.cpp",
+      "targetPath": "~/example.cpp",
+      "executable": "false"
+   }
+]
+
+```
+::: moniker-end
 
 ## <a name="next-steps"></a>Étapes suivantes
 

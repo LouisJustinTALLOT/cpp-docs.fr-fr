@@ -1,13 +1,13 @@
 ---
 title: Configurer un projet Linux C++ dans Visual Studio
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5acd9edeef8f09f86c394c39939d8408821dd691
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821571"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042635"
 ---
 # <a name="configure-a-linux-project"></a>Configurer un projet Linux
 
@@ -37,7 +37,7 @@ Pour afficher les options de configuration, sélectionnez le menu **Projet > Pr
 
 ![Configuration générale](media/settings_general.png)
 
-Par défaut, un fichier exécutable (.out) est créé avec l’outil. Pour générer une bibliothèque statique ou dynamique, ou utiliser un fichier makefile existant, utilisez le paramètre **Type de configuration**.
+Par défaut, un fichier exécutable (.out) est généré. Pour générer une bibliothèque statique ou dynamique, ou utiliser un fichier makefile existant, utilisez le paramètre **Type de configuration**.
 
 Pour plus d’informations sur les paramètres dans les pages de propriétés, consultez [Informations de référence sur les pages de propriétés dans un projet Linux](prop-pages-linux.md).
 
@@ -105,7 +105,7 @@ Quand vous ajoutez une nouvelle connexion dans le **Gestionnaire de connexions**
 Cette fonctionnalité nécessite l’installation de zip sur l’ordinateur Linux. Pour installer zip, utilisez cette commande apt-get :
 
 ```cmd
-apt install zip
+sudo apt install zip
 ```
 
 Pour gérer votre cache d’en-têtes, accédez à **Outils > Options, Multiplateforme > Gestionnaire de connexions > Gestionnaire IntelliSense des en-têtes distants**. Pour mettre à jour le cache d’en-têtes après avoir effectué des changements sur votre ordinateur Linux, sélectionnez la connexion à distance, puis sélectionnez **Mettre à jour**. Sélectionnez **Supprimer** pour supprimer les en-têtes tout en conservant la connexion. Sélectionnez **Explorer** pour ouvrir le répertoire local dans **l’Explorateur de fichiers**. Traitez ce dossier en lecture seule. Pour télécharger les en-têtes d’une connexion existante créée avant Visual Studio 2017 version 15.3, sélectionnez la connexion, puis **Télécharger**.
