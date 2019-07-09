@@ -1,6 +1,6 @@
 ---
 title: 'Syntaxe de spécification de format : fonctions printf et wprintf'
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: bccbe435d926a75990a4ca35b98c9b352dd40e8b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 07565da17eb53274e0c3203abbc8cddb9e61da90
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740320"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552250"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntaxe de spécification de format : fonctions printf et wprintf
 
@@ -22,7 +22,7 @@ Les différentes fonctions `printf` et `wprintf` acceptent une chaîne de format
 
 Une spécification de conversion se compose de champs facultatifs et obligatoires mis en forme comme suit :
 
-**%**[[*flags*](#flags)][[*width*](#width)][.[*precision*](#precision)][[*size*](#size)][*type*](#type)
+**%** [[*flags*](#flags)][[*width*](#width)][.[*precision*](#precision)][[*size*](#size)][*type*](#type)
 
 Chaque champ de la spécification de conversion est un caractère ou un nombre qui représente un spécificateur d’option ou de conversion de format particulier. Le champ obligatoire *type* spécifie le genre de conversion à appliquer à un argument. Les champs facultatifs *flags*, *width* et *precision* contrôlent d’autres aspects du format, notamment les espaces ou les zéros de début, la justification et la précision affichée. Le champ *size* spécifie la taille de l’argument consommé et converti.
 
@@ -64,7 +64,7 @@ Les types entier tels que `short`, `int`, `long`, `long long`, ainsi que leurs v
 |**X**|Entier|Entier hexadécimal non signé ; utilise « ABCDEF ».|
 |**e**|Virgule flottante|Valeur signée se présentant sous la forme [-]*d.dddd*__e±__*dd*[*d*] où *d* correspond à un chiffre décimal, *dddd* à un ou plusieurs chiffres décimaux selon la précision spécifiée (ou six par défaut), et *dd*[*d*] à deux ou trois chiffres décimaux, selon le [format de sortie](../c-runtime-library/set-output-format.md) et la taille de l’exposant.|
 |**E**|Virgule flottante|Identique au format **e** sauf que l’exposant est introduit par **E** et non par **e**.|
-|**f**|Virgule flottante|Valeur signée se présentant sous la forme [-]*dddd*__.__*dddd*, où *dddd* correspond à un ou plusieurs chiffres décimaux. Le nombre de chiffres avant la virgule décimale dépend de l’ampleur du nombre, et le nombre de chiffres après la virgule décimale dépend de la précision demandée (ou six par défaut).|
+|**f**|Virgule flottante|Valeur signée se présentant sous la forme [-]*dddd* __.__ *dddd*, où *dddd* correspond à un ou plusieurs chiffres décimaux. Le nombre de chiffres avant la virgule décimale dépend de l’ampleur du nombre, et le nombre de chiffres après la virgule décimale dépend de la précision demandée (ou six par défaut).|
 |**F**|Virgule flottante|Identique au format **f**, sauf que la sortie de l’infini et NAN est en majuscules.|
 |**g**|Virgule flottante|Les valeurs signées sont affichées au format **f** ou **e**, selon celui qui est le plus compact pour la valeur et la précision en question. Le format **e** est utilisé uniquement quand l’exposant de la valeur est inférieur à -4 ou supérieur ou égal à l’argument *precision*. Les zéros de droite sont tronqués et la virgule décimale apparaît uniquement si elle est suivie d'un ou plusieurs chiffres.|
 |**G**|Virgule flottante|Identique au format **g**, sauf que l’exposant est introduit par **E** et non par **e** (selon le cas).|
@@ -74,7 +74,7 @@ Les types entier tels que `short`, `int`, `long`, `long long`, ainsi que leurs v
 |**p**|Type de pointeur|Affiche l’argument sous forme d’adresse composée de chiffres hexadécimaux.|
 |**s**|Chaîne|Quand il est utilisé avec les fonctions `printf`, spécifie une chaîne de caractères codés sur un octet ou multioctets ; quand il est utilisé avec les fonctions `wprintf`, spécifie une chaîne de caractères larges. Les caractères s’affichent jusqu’au premier caractère Null ou jusqu’à ce que la valeur de *precision* soit atteinte.|
 |**S**|Chaîne|Quand il est utilisé avec les fonctions `printf`, spécifie une chaîne de caractères larges ; quand il est utilisé avec les fonctions `wprintf`, spécifie une chaîne de caractères codés sur un octet ou multioctets. Les caractères s’affichent jusqu’au premier caractère Null ou jusqu’à ce que la valeur de *precision* soit atteinte.|
-|**Z**|Structure `ANSI_STRING` ou `UNICODE_STRING`|Quand l’adresse d’une structure [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) ou [UNICODE_STRING](/windows-hardware/drivers/ddi/content/wudfwdm/ns-wudfwdm-_unicode_string) est passée comme argument, affiche la chaîne contenue dans la mémoire tampon désignée par le champ `Buffer` de la structure. Utilisez un préfixe de modificateur de *size* égal à **w** pour spécifier un argument `UNICODE_STRING`, par exemple `%wZ`. Le champ `Length` de la structure doit indiquer la longueur, en octets, de la chaîne. Le champ `MaximumLength` de la structure doit indiquer la longueur, en octets, de la mémoire tampon.<br /><br /> En règle générale, le caractère de type **Z** est utilisé uniquement dans les fonctions de débogage de pilote qui utilisent une spécification de conversion, comme `dbgPrint` et `kdPrint`.|
+|**Z**|Structure `ANSI_STRING` ou `UNICODE_STRING`|Quand l’adresse d’une structure [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) ou [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) est passée comme argument, affiche la chaîne contenue dans la mémoire tampon désignée par le champ `Buffer` de la structure. Utilisez un préfixe de modificateur de *size* égal à **w** pour spécifier un argument `UNICODE_STRING`, par exemple `%wZ`. Le champ `Length` de la structure doit indiquer la longueur, en octets, de la chaîne. Le champ `MaximumLength` de la structure doit indiquer la longueur, en octets, de la mémoire tampon.<br /><br /> En règle générale, le caractère de type **Z** est utilisé uniquement dans les fonctions de débogage de pilote qui utilisent une spécification de conversion, comme `dbgPrint` et `kdPrint`.|
 
 À compter de Visual Studio 2015, si l’argument qui correspond à un spécificateur de conversion de valeurs à virgule flottante (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) est infini, indéfini ou NaN, la sortie mise en forme est conforme à la norme C99. Ce tableau répertorie les sorties mises en forme :
 
@@ -129,7 +129,7 @@ Dans une spécification de conversion, le premier champ facultatif contient des 
 
 ## <a name="width-specification"></a>Spécification de largeur
 
-Dans une spécification de conversion, le champ facultatif de spécification de largeur apparaît après n’importe quel caractère d’*indicateur*. L’argument *width* est un entier décimal non négatif qui contrôle le nombre minimal de caractères qui sont générés. Si le nombre de caractères dans la valeur de sortie est inférieur à la longueur spécifiée, des espaces sont ajoutés à gauche ou à droite des valeurs, selon que l’indicateur d’alignement à gauche (**-**) est spécifié ou non, jusqu’à ce que la largeur minimale soit atteinte. Si *width* est préfixé par 0, des zéros non significatifs sont ajoutés aux conversions en entiers ou en nombres à virgule flottante jusqu’à ce que la largeur minimale soit atteinte, sauf en cas de conversion en valeur infinie ou NaN.
+Dans une spécification de conversion, le champ facultatif de spécification de largeur apparaît après n’importe quel caractère d’*indicateur*. L’argument *width* est un entier décimal non négatif qui contrôle le nombre minimal de caractères qui sont générés. Si le nombre de caractères dans la valeur de sortie est inférieur à la longueur spécifiée, des espaces sont ajoutés à gauche ou à droite des valeurs, selon que l’indicateur d’alignement à gauche ( **-** ) est spécifié ou non, jusqu’à ce que la largeur minimale soit atteinte. Si *width* est préfixé par 0, des zéros non significatifs sont ajoutés aux conversions en entiers ou en nombres à virgule flottante jusqu’à ce que la largeur minimale soit atteinte, sauf en cas de conversion en valeur infinie ou NaN.
 
 La spécification de largeur ne provoque jamais la troncature d’une valeur. Si le nombre de caractères dans la valeur de sortie est supérieur à la largeur spécifiée, ou si *width* n’est pas spécifié, tous les caractères de la valeur sont générés, conformément à la spécification *precision*.
 
