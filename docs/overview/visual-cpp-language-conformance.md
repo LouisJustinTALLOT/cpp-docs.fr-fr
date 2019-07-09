@@ -1,16 +1,16 @@
 ---
 title: Tableau de conformité du langage Microsoft C++
-ms.date: 05/20/2019
+ms.date: 07/02/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 17d6a1b0685d6981c7df79e76ecc5142083e14c7
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 2b5d7774734eae992935af9bd4abd408dd387d7d
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400903"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552363"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tableau de conformité du langage Microsoft C++
 
@@ -115,7 +115,7 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[P0306R4 Ajout de \_\_VA_OPT\_\_ pour l’omission de virgule et la suppression de virgule](https://wg21.link/P0306R4)|Non|
 |&nbsp;&nbsp;[P0315R4 Autorisation de lambdas dans des contextes non évalués](https://wg21.link/P0315R4)|Non|
 |&nbsp;&nbsp;[P0409R2 Autorisation de capture lambda \[=, this\]](https://wg21.link/P0409R2)|Non|
-|&nbsp;&nbsp;[P0428R2 Syntaxe de modèle familier pour les expressions lambda génériques](http://www.open-std.org/jtc1/sc22/wg21/docs/pa pers/2017/p0428r2.pdf)|Non|
+|&nbsp;&nbsp;[P0428R2 Syntaxe de modèle familier pour les expressions lambda génériques](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|Non|
 |&nbsp;&nbsp;[P0479R5 \[\[attributs\]\] probables \[\[ et \]\]peu probables](https://wg21.link/P0479R5)|Non|
 |&nbsp;&nbsp;[P0542R5 Contrats](https://wg21.link/P0542R5)|Non|
 |&nbsp;&nbsp;[P0614R1 Boucles range-based for avec initialiseurs](https://wg21.link/P0614R1)|Non|
