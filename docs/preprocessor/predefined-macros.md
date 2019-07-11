@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: dedcab9b0addd3696749b50fef92b70081981c03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf74bc3b5293cba018c07b6b5c56c85695db7635
+ms.sourcegitcommit: 6cb0670ca7d40e8ec55f162b8ce2847f5ae15f5c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179904"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67787365"
 ---
 # <a name="predefined-macros"></a>Macros prédéfinies
 
@@ -186,7 +186,7 @@ Le compilateur prend en charge ces macros prédéfinies spécifiés par la norme
 
 - **&#95;&#95;STDCPP&#95;THREADS&#95; &#95;**  la valeur 1 si et seulement si un programme peut avoir plusieurs threads d’exécution et compilé en C++. Sinon, non défini.
 
-- **&#95;&#95;TEMPS&#95; &#95;**  l’heure de la traduction de l’unité de traduction prétraité. Le temps est une chaîne de caractères littérale du formulaire *hh : mm :*, identique à l’heure retournée par la bibliothèque CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md) (fonction). Cette macro est toujours définie.
+- **&#95;&#95;TEMPS&#95; &#95;**  l’heure de la traduction de l’unité de traduction prétraité. Le temps est une chaîne de caractères littérale du formulaire *hh : mm :* , identique à l’heure retournée par la bibliothèque CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md) (fonction). Cette macro est toujours définie.
 
 ## <a name="microsoft-specific-predefined-macros"></a>Macros prédéfinies spécifiques à Microsoft
 
@@ -364,14 +364,14 @@ MSVC prend en charge ces macros prédéfinies supplémentaires.
 
    |Version de Visual Studio|**&#95;MSC&#95;VER**|
    |-|-|
-   |Visual Studio 6.0|1200|
+   |Visual Studio 6.0|1 200|
    |Visual Studio .NET 2002 (7.0)|1300|
    |Visual Studio .NET 2003 (7.1)|1310|
    |Visual Studio 2005 (8.0)|1400|
-   |Visual Studio 2008 (9.0)|1500|
+   |Visual Studio 2008 (9.0)|1 500|
    |Visual Studio 2010 (10.0)|1600|
    |Visual Studio 2012 (11.0)|1700|
-   |Visual Studio 2013 (12.0)|1800|
+   |Visual Studio 2013 (12.0)|1 800|
    |Visual Studio 2015 (14.0)|1900|
    |Visual Studio 2017 RTW (15.0)|1910|
    |Visual Studio 2017 version 15.3|1911|
@@ -381,6 +381,9 @@ MSVC prend en charge ces macros prédéfinies supplémentaires.
    |Visual Studio 2017 version 15.8|1915|
    |Visual Studio 2017 version 15.9|1916|
    |Visual Studio 2019 RTW (16.0)|1920|
+   |Visual Studio 2019 version 16.1|1921|
+   |Visual Studio 2019 version 16.2|1922|
+   |Visual Studio 2019 version 16.3|1923|
 
    Pour tester les versions du compilateur ou mises à jour dans une version donnée de Visual Studio, ou après, utilisez le **>=** opérateur. Vous pouvez l’utiliser dans une directive conditionnelle pour comparer  **&#95;MSC&#95;VER** par rapport à cette version connue. Si vous avez plusieurs versions mutuellement à comparer, commander des comparaisons dans l’ordre décroissant de numéro de version. Par exemple, ce code vérifie les compilateurs publiés dans Visual Studio 2017 et versions ultérieures. Ensuite, il recherche des compilateurs publiés dans ou après Visual Studio 2015. Puis il vérifie tous les compilateurs publiées avant Visual Studio 2015 :
 

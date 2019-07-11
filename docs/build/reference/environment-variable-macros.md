@@ -6,12 +6,12 @@ helpviewer_keywords:
 - environment variables, macros in NMAKE
 - macros, environment-variable
 ms.assetid: f8e96635-0906-47b0-9f56-12a6fdf5e347
-ms.openlocfilehash: 7f7f8a05545658142001b75ac78975251185a033
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a96b2de8469ace971d7fbc2707d3f786e873bb26
+ms.sourcegitcommit: 6cb0670ca7d40e8ec55f162b8ce2847f5ae15f5c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272609"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67787338"
 ---
 # <a name="environment-variable-macros"></a>Macros de variables d'environnement
 
@@ -19,13 +19,13 @@ NMAKE hérite des définitions de macros pour les variables d’environnement qu
 
 Macros de variables d’environnement peuvent être redéfinis dans la session, et cela modifie la variable d’environnement correspondante. Vous pouvez également modifier les variables d’environnement avec la commande SET. Pour modifier une variable d’environnement dans une session à l’aide de la commande SET ne modifie pas la macro correspondante, toutefois.
 
-Exemple :
+Par exemple :
 
 ```
 PATH=$(PATH);\nonesuch
 
 all:
-    echo %PATH%
+    echo %%PATH%%
 ```
 
 Dans cet exemple, la modification `PATH` modifie la variable d’environnement correspondante `PATH`; il ajoute `\nonesuch` à votre chemin d’accès.
