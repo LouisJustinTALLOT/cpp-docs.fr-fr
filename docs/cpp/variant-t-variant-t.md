@@ -208,7 +208,7 @@ Un **unsigned __int64** valeur doit être copié dans le nouveau `_variant_t` ob
 
 - **_variant_t (VARIANT &** *varSrc* **, bool**`fCopy` **)** construit un `_variant_t` objet depuis une `VARIANT` objet. Si *fCopy* est **false**, le **VARIANT** objet est attaché au nouvel objet sans avoir à effectuer une copie.
 
-- **_variant_t (short***sSrc* **, VARTYPE**`vtSrc` **= VT_I2)** construit un `_variant_t` objet de type VT_I2 ou VT_BOOL à partir d’un **court** valeur entière. N’importe quel autre `VARTYPE` entraîne une erreur E_INVALIDARG.
+- **_variant_t (short**  *sSrc* **, VARTYPE**  `vtSrc`  **= VT_I2)** construit un `_variant_t` objet de type VT_I2 ou VT_BOOL à partir d’un **court** valeur entière. N’importe quel autre `VARTYPE` entraîne une erreur E_INVALIDARG.
 
 - **_variant_t (long** `lSrc` **, VARTYPE**`vtSrc` **= VT_I4)** construit un `_variant_t` objet de type VT_I4, VT_BOOL ou VT_ERROR à partir d’un **long**  valeur entière. N’importe quel autre `VARTYPE` entraîne une erreur E_INVALIDARG.
 

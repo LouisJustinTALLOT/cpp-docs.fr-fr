@@ -121,7 +121,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |**vfprintf_s**, **_vfprintf_s_l**|\<stdio.h> et \<stdarg.h>|\<varargs.h>*|
 |**vfwprintf_s**, **_vfwprintf_s_l**|\<stdio.h> ou \<wchar.h> et \<stdarg.h>|\<varargs.h>*|
 
-\** Nécessaire pour la compatibilité avec UNIX V.
+\* Nécessaire pour la compatibilité avec UNIX V.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
