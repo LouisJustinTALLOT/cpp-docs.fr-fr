@@ -168,7 +168,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**vsprintf**, **_vsprintf_l**|\<stdio.h> et \<stdarg.h>|\<varargs.h>*|
 |**vswprintf**, **_vswprintf_l**|\<stdio.h> ou \<wchar.h> et \<stdarg.h>|\<varargs.h>*|
 
-\** Nécessaire pour la compatibilité avec UNIX V.
+\* Nécessaire pour la compatibilité avec UNIX V.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

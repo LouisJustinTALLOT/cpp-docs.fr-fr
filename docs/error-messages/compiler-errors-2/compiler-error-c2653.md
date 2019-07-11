@@ -25,7 +25,7 @@ C2653 est également possible si vous essayez de définir un *espace de noms com
 
 ## <a name="examples"></a>Exemples
 
-Cet exemple génère l’erreur C2653, car un nom de l’étendue est utilisé mais non déclaré. Le compilateur attend un nom de classe, structure, union ou espace de noms avant un opérateur de portée ( :).
+Cet exemple génère l’erreur C2653, car un nom de l’étendue est utilisé mais non déclaré. Le compilateur attend un nom de classe, structure, union ou espace de noms avant un opérateur de portée (::).
 
 ```cpp
 // C2653.cpp
