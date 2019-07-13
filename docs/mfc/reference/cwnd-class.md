@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: b846a065b02a73bfca8f548097101f73008b33d3
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504263"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861061"
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 
@@ -1088,7 +1088,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CWnd::Default](#default)|Appelle la procédure de fenêtre par défaut, qui assure le traitement par défaut des messages de fenêtre qu'une application ne traite pas.|
 |[CWnd::DefWindowProc](#defwindowproc)|Appelle la procédure de fenêtre par défaut, qui assure le traitement par défaut des messages de fenêtre qu'une application ne traite pas.|
@@ -1259,7 +1259,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CWnd::operator HWND](#operator_hwnd)|Appelé pour obtenir un handle de fenêtre.|
 |[CWnd::operator !=](#operator_neq)|Détermine si une fenêtre n’est pas identique à la fenêtre dont le handle est [m_hWnd](#m_hwnd).|
@@ -1525,7 +1525,7 @@ Spécifie un handle vers une fenêtre Windows.
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Cet exemple montre comment utiliser l’attachement et détachement pour mapper à la fenêtre du client MDI.
 
@@ -1568,7 +1568,7 @@ La région de mise à jour est définie par le [Invalidate](#invalidate), [Inval
 
 N’appelez pas la `BeginPaint` fonction membre, à l’exception en réponse à une [WM_PAINT](#onpaint) message. Chaque appel à la `BeginPaint` fonction membre doit avoir un appel correspondant à la [EndPaint](#endpaint) fonction membre. Si le signe insertion se trouve dans la zone à peindre, le `BeginPaint` fonction membre masque automatiquement le signe insertion pour l’empêcher d’être effacé.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#70](../../mfc/reference/codesnippet/cpp/cwnd-class_5.cpp)]
 
@@ -1602,13 +1602,11 @@ Points à la fenêtre de ce contrôle héberge la source de données auquel la p
 
 Le `CWnd` objet sur lequel vous appelez cette fonction doit être un contrôle lié aux données.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 `BindDefaultProperty` peut être utilisée dans le contexte suivant :
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#2](../../mfc/reference/codesnippet/cpp/cwnd-class_7.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="bindproperty"></a>  CWnd::BindProperty
 
@@ -1636,9 +1634,7 @@ Le `CWnd` objet sur lequel vous appelez cette fonction doit être un contrôle l
 
 `BindProperty` peut être utilisée dans le contexte suivant :
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#4](../../mfc/reference/codesnippet/cpp/cwnd-class_9.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="bringwindowtotop"></a>  CWnd::BringWindowToTop
 
@@ -1798,7 +1794,7 @@ Spécifie l’identificateur entier de la case à vérifier.
 
 Le `CheckRadioButton` fonction envoie un [BM_SETCHECK](/windows/desktop/Controls/bm-setcheck) message à la case d’option spécifié.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#76](../../mfc/reference/codesnippet/cpp/cwnd-class_15.cpp)]
 
@@ -1822,7 +1818,7 @@ Spécifie les coordonnées clientes du point à tester.
 *nflags*<br/>
 Spécifie les fenêtres enfants à ignorer. Ce paramètre peut être une combinaison des valeurs suivantes :
 
-|Value|Signification|
+|`Value`|Signification|
 |-----------|-------------|
 |CWP_ALL|N’ignorez pas toutes les fenêtres enfants|
 |CWP_SKIPINVISIBLE|Ignorer les fenêtres enfants invisibles|
@@ -1970,7 +1966,7 @@ virtual HRESULT CreateAccessibleProxy(
 *wParam*<br/>
 Identifie l’objet accédé par le proxy Active Accessibility. Peut prendre l’une des valeurs suivantes
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |OBJID_CLIENT|Fait référence à la zone cliente de la fenêtre.|
 
@@ -2107,7 +2103,7 @@ Seul un sous-ensemble de la Windows *dwStyle* indicateurs sont pris en charge po
 
 - WS_TABSTOP spécifie un contrôle qui peut recevoir le focus clavier lorsque l’utilisateur appuie sur la touche TAB. En appuyant sur la touche TAB modifie le focus clavier au contrôle suivant du style WS_TABSTOP.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#81](../../mfc/reference/codesnippet/cpp/cwnd-class_20.h)]
 
@@ -2237,7 +2233,7 @@ Le `CreateGrayCaret` fonction membre détruit automatiquement la forme de signe 
 
 Le signe insertion est une ressource partagée. `CWnd` doit de créer un point d’insertion uniquement quand elle a le focus d’entrée, soit active. Il doit détruire le signe insertion avant qu’il perd le focus d’entrée ou devient inactif.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#83](../../mfc/reference/codesnippet/cpp/cwnd-class_22.cpp)]
 
@@ -2303,7 +2299,7 @@ Varie selon le message envoyé.
 
 La procédure de fenêtre par défaut fournit le traitement par défaut pour n’importe quel message de fenêtre, une application ne traite pas. Cette fonction membre garantit que chaque message est traité.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#85](../../mfc/reference/codesnippet/cpp/cwnd-class_24.cpp)]
 
@@ -2349,7 +2345,7 @@ static void PASCAL DeleteTempMap();
 
 Supprime tout temporaire `CWnd` objets créés par le `FromHandle` fonction membre.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#86](../../mfc/reference/codesnippet/cpp/cwnd-class_25.cpp)]
 
@@ -2379,7 +2375,7 @@ Le `DestroyWindow` fonction membre détruit également des boîtes de dialogue n
 
 Si le `CWnd` en cours de destruction est une fenêtre enfant et n’a pas la [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) style ensemble, puis le [WM_PARENTNOTIFY ](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) message est envoyé au parent.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]
 
@@ -2937,7 +2933,7 @@ Par défaut, une fenêtre est activée lors de sa création. Une application peu
 
 Une application peut utiliser cette fonction pour activer ou désactiver un contrôle dans une boîte de dialogue. Un contrôle désactivé ne peut pas recevoir le focus d’entrée, ni un utilisateur accessible.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#93](../../mfc/reference/codesnippet/cpp/cwnd-class_32.cpp)]
 
@@ -3126,7 +3122,7 @@ Le *bInvert* paramètre doit être FALSE uniquement lorsque la fenêtre reçoit 
 
 Cette fonction retourne toujours différente de zéro pour les fenêtres réduites. Si la fenêtre est réduite, `FlashWindow` simplement clignote en icône de la fenêtre ; *bInvert* est ignoré pour les fenêtres réduites.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#95](../../mfc/reference/codesnippet/cpp/cwnd-class_34.cpp)]
 
@@ -4063,11 +4059,9 @@ Pointeur vers un curseur qui est défini par un contrôle de source de données.
 
 Utilisez le pointeur retourné pour définir la propriété ICursor d’un contrôle lié aux données complexe, tels que le contrôle de grille liée aux données. Un contrôle de source de données ne devient actif jusqu'à ce que le contrôle lié première demande son curseur. Cela peut se produire soit explicitement par un appel à `GetDSCCursor` ou implicitement par le Gestionnaire de liaisons MFC. Dans les deux cas, vous pouvez forcer un contrôle de source de données deviennent actifs en appelant `GetDSCCursor` , puis en appelant `Release` sur le pointeur retourné à `IUnknown`. L’activation entraîne le contrôle de source de données essayer de se connecter à la source de données sous-jacente. Le pointeur retourné peut être utilisé dans le contexte suivant :
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#5](../../mfc/reference/codesnippet/cpp/cwnd-class_37.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="getdynamiclayout"></a>  CWnd::GetDynamicLayout
 
@@ -4232,7 +4226,7 @@ Le pointeur retourné peut être temporaire et ne doit pas être stocké pour un
 
 Cette fonction ne doit pas être utilisée pour les fenêtres enfants, car ils n’ont pas d’un menu.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#98](../../mfc/reference/codesnippet/cpp/cwnd-class_38.cpp)]
 
@@ -4517,7 +4511,7 @@ HWND GetSafeHwnd() const;
 
 Retourne le handle de fenêtre pour une fenêtre. Retourne NULL si le `CWnd` n’est pas attaché à une fenêtre ou si elle est utilisée avec une valeur NULL `CWnd` pointeur.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
   Consultez l’exemple de [CWnd::SubclassWindow](#subclasswindow).
 
@@ -5158,7 +5152,7 @@ Si `CWnd` est un contrôle, le `GetWindowTextLength` fonction membre retourne la
 
 Cette fonction membre provoque la [WM_GETTEXTLENGTH](/windows/desktop/winmsg/wm-gettextlength) message à envoyer à la `CWnd` objet.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
   Consultez l’exemple de [CWnd::SetWindowText](#setwindowtext).
 
@@ -5529,7 +5523,7 @@ Une fenêtre possède un état de visibilité spécifié par le bit de style WS_
 
 Un dessin à une fenêtre qui a le style WS_VISIBLE n’apparaîtra pas si la fenêtre est couvert par d’autres fenêtres ou est découpée par sa fenêtre parente.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#103](../../mfc/reference/codesnippet/cpp/cwnd-class_43.cpp)]
 
@@ -5788,7 +5782,7 @@ Si *nIndicateurs* est différent de zéro, `ModifyStyleEx` appelle la fonction W
 
 Pour modifier à l’aide de styles de fenêtre standard de windows, consultez [ModifyStyle](#modifystyle).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#106](../../mfc/reference/codesnippet/cpp/cwnd-class_46.cpp)]
 
@@ -6127,7 +6121,7 @@ Contient le nombre de répétitions, le nombre de fois que la séquence de touch
 *nFlags*<br/>
 Contient le code d’analyse de code de transition de la clé, état de la clé précédente et code de contexte, comme indiqué dans la liste suivante :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |0-15|Spécifie le nombre de répétitions. La valeur est le nombre de fois que la séquence de touches est répété à la suite de l’utilisateur de maintenir la touche enfoncée.|
 |16-23|Spécifie le code d’analyse. La valeur varie selon le fabricant (OEM)|
@@ -6344,7 +6338,7 @@ Contient un pointeur long désignant un [COMPAREITEMSTRUCT](/windows/desktop/api
 
 Indique la position relative des deux éléments. Il peut être une des valeurs suivantes :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |-1|Élément 1 est trié avant l’élément 2.|
 |0|Article 1 et article 2 trient les mêmes.|
@@ -6542,7 +6536,7 @@ Spécifie le nombre de répétitions.
 *nFlags*<br/>
 Spécifie le code d’analyse de code de transition de la clé, état de la clé précédente et code de contexte, comme indiqué dans la liste suivante :
 
-|Value|Description|
+|`Value`|Description|
 |-----------|-----------------|
 |0-7|Analyse le code (valeur dépendant des OEM). Octet de poids faible de mot de poids fort.|
 |8|Clé d’étendue, telle qu’une touche de fonction ou une clé sur le pavé numérique (1 s’il s’agit d’une clé étendue ; sinon 0).|
@@ -7386,7 +7380,7 @@ Répétition (le nombre de fois où que la séquence de touches est répété à
 *nFlags*<br/>
 Spécifie le code d’analyse de code de transition de la clé, état de la clé précédente et code de contexte, comme indiqué dans la liste suivante :
 
-|Value|Description|
+|Valeur|Description|
 |-----------|-----------------|
 |0-7|Analyse le code (valeur dépendant des OEM).|
 |8|Clé d’étendue, comme une clé de fonction ou une clé sur le pavé numérique (1 s’il s’agit d’une clé étendue).|
@@ -7431,7 +7425,7 @@ Répétition (le nombre de fois où que la séquence de touches est répété à
 *nFlags*<br/>
 Spécifie le code d’analyse de code de transition de la clé, état de la clé précédente et code de contexte, comme indiqué dans la liste suivante :
 
-|Value|Description|
+|`Value`|Description|
 |-----------|-----------------|
 |0-7|Analyse le code (valeur dépendant des OEM). Octet de poids faible de mot de poids fort.|
 |8|Clé d’étendue, telle qu’une touche de fonction ou une clé sur le pavé numérique (1 s’il s’agit d’une clé étendue ; sinon 0).|
@@ -7757,7 +7751,7 @@ Contient un pointeur vers le texte sélectionné `CMenu`. Le pointeur peut être
 
 Le mot de poids fort de la valeur de retour doit contenir un des codes de commande suivantes :
 
-|Value|Description|
+|Valeur|Description|
 |-----------|-----------------|
 |0|Indique à Windows à ignorer les caractères que l’utilisateur enfoncé et crée un signal sonore court sur le haut-parleur du système.|
 |1|Indique à Windows pour fermer le menu en cours.|
@@ -7945,7 +7939,7 @@ Pour obtenir une description des codes de zone de test de positionnement individ
 > [!NOTE]
 > Cette fonction membre est appelée par l’infrastructure pour permettre à votre application de traiter un message Windows. Les paramètres passés à votre fonction reflètent les paramètres reçus par l’infrastructure au moment où le message a été reçu. Si vous appelez l’implémentation de classe de base de cette fonction, cette implémentation utilise les paramètres passés initialement avec le message et non les paramètres que vous fournissez à la fonction.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCAxCtl#9](../../mfc/reference/codesnippet/cpp/cwnd-class_49.cpp)]
 
@@ -9524,7 +9518,7 @@ Spécifie le nombre de répétitions (le nombre de fois où que la séquence de 
 *nFlags*<br/>
 Le *nIndicateurs* paramètre peut avoir les valeurs suivantes :
 
-|Value|Signification|
+|`Value`|Signification|
 |-----------|-------------|
 |0-15|Spécifie le nombre de répétitions. La valeur est le nombre de fois que la séquence de touches est répété à la suite de l’utilisateur enfoncée la touche...|
 |16-23|Spécifie le code d’analyse. La valeur varie selon le fabricant (OEM)|
@@ -9648,7 +9642,7 @@ Spécifie le nombre de répétitions.
 *nFlags*<br/>
 Spécifie le code d’analyse de code de transition de la clé, état de la clé précédente et code de contexte, comme indiqué dans la liste suivante :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |0-7|Analyse le code (valeur dépendant des OEM). Octet de poids faible de mot de poids fort.|
 |8|Clé d’étendue, telle qu’une touche de fonction ou une clé sur le pavé numérique (1 s’il s’agit d’une clé étendue ; sinon 0).|
@@ -9687,7 +9681,7 @@ Spécifie le nombre de répétitions.
 *nFlags*<br/>
 Spécifie le code d’analyse de code de transition de la clé, état de la clé précédente et code de contexte, comme indiqué dans la liste suivante :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |0-7|Analyse le code (valeur dépendant des OEM). Octet de poids faible de mot de poids fort.|
 |8|Clé d’étendue, telle qu’une touche de fonction ou une clé sur le pavé numérique (1 s’il s’agit d’une clé étendue ; sinon 0).|
@@ -9734,7 +9728,7 @@ Spécifie le nombre de répétitions.
 *nFlags*<br/>
 Spécifie le code d’analyse de code de transition de la clé, état de la clé précédente et code de contexte, comme indiqué dans la liste suivante :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |0-7|Analyse le code (valeur dépendant des OEM). Octet de poids faible de mot de poids fort.|
 |8|Clé d’étendue, telle qu’une touche de fonction ou une clé sur le pavé numérique (1 s’il s’agit d’une clé étendue ; sinon 0).|
@@ -10948,7 +10942,7 @@ Pointe vers un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [
 
 Le `ScreenToClient` fonction membre remplace les coordonnées d’écran figurant *lpPoint* ou *lpRect* avec les coordonnées clientes. Les nouvelles coordonnées sont exprimées par rapport à l’angle supérieur gauche de la `CWnd` zone cliente.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
   Consultez l’exemple de [CListCtrl::GetItemRect](../../mfc/reference/clistctrl-class.md#getitemrect).
 
@@ -11141,7 +11135,7 @@ Le résultat du traitement du message ; sa valeur dépend du message envoyé.
 
 Le `SendMessage` fonction membre appelle la procédure de fenêtre directement et ne retourne pas jusqu'à ce que cette procédure de fenêtre ait traité le message. Il s’agit Contrairement à la [PostMessage](#postmessage) fonction membre, ce qui place le message dans la file d’attente de messages de la fenêtre et retourne immédiatement.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#101](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]
 
@@ -11367,7 +11361,7 @@ Pointe vers un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objet
 
 `SetDlgItemText` envoie un [WM_SETTEXT](/windows/desktop/winmsg/wm-settext) message pour le contrôle donné.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#116](../../mfc/reference/codesnippet/cpp/cwnd-class_57.cpp)]
 
@@ -11459,7 +11453,7 @@ Un handle d’une icône.
 
 Lorsque la classe de fenêtre est inscrit, il sélectionne une icône.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
   Consultez l’exemple de [CWnd::GetSystemMenu](#getsystemmenu).
 
@@ -11607,7 +11601,7 @@ Spécifie l’état de l’indicateur de renouvellement. Si ce paramètre est TR
 
 Cette fonction membre définit ou efface l’indicateur de renouvellement. Alors que l’indicateur de renouvellement est désactivé, le contenu ne sera pas mis à jour après chaque modification et ne sera pas redessiné jusqu'à ce que l’indicateur de renouvellement est défini. Par exemple, une application qui doit ajouter plusieurs éléments dans une zone de liste peut effacer l’indicateur de renouvellement, ajouter les éléments, puis définissez l’indicateur de renouvellement. Enfin, l’application peut appeler le [Invalidate](#invalidate) ou [InvalidateRect](#invalidaterect) fonction membre pour provoquer la zone de liste à être redessinée.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#117](../../mfc/reference/codesnippet/cpp/cwnd-class_58.cpp)]
 
@@ -11992,7 +11986,7 @@ Masquer le signe insertion est cumulative. Si le [HideCaret](#hidecaret) fonctio
 
 Le signe insertion est une ressource partagée. La fenêtre doit afficher le signe insertion uniquement quand elle a le focus d’entrée, soit active.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
   Consultez l’exemple de [CWnd::CreateCaret](#createcaret).
 

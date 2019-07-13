@@ -1,6 +1,6 @@
 ---
 title: __rdtscp
-ms.date: 11/04/2016
+ms.date: 07/11/2019
 f1_keywords:
 - __rdtscp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: b28052fbe0a1ab0e1a6f037ce61f43abea5cf771
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a31c6d19cd171cbe909c75a27c2389866bd578
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263059"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861108"
 ---
 # <a name="rdtscp"></a>__rdtscp
 
@@ -42,7 +42,7 @@ Un nombre de cycles d’entier non signé 64 bits.
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
-|`__rdtscp`|AMD NPT famille 0Fh ou versions ultérieures|
+|`__rdtscp`|x86, x64|
 
 **Fichier d’en-tête** \<intrin.h >
 
@@ -50,25 +50,22 @@ Un nombre de cycles d’entier non signé 64 bits.
 
 Cet intrinsèque génère le `rdtscp` instruction. Pour déterminer la prise en charge matérielle pour cette instruction, appelez le `__cpuid` intrinsèque avec `InfoType=0x80000001` et vérifiez le bit 27 de `CPUInfo[3] (EDX)`. Ce bit est 1 si l’instruction est pris en charge et 0 dans le cas contraire.  Si vous exécutez le code qui utilise cet intrinsèque sur du matériel qui ne prend pas en charge la `rdtscp` instruction, les résultats sont imprévisibles.
 
-> [!CAUTION]
->  Contrairement aux `rdtsc`, `rdtscp` est une instruction de sérialisation ; néanmoins, le compilateur peut déplacer le code de contourner ce problème intrinsèque.
-
-L’interprétation de la valeur TSC dans cette génération de matériel diffère de celui des versions précédentes de x64.  Consultez les manuels de matériel pour plus d’informations.
+Cette instruction attend jusqu'à ce que toutes les instructions précédentes ont exécutées et tous les chargements précédentes sont visibles dans le monde entier. Toutefois, il n’est pas une instruction de sérialisation. Consultez les manuels d’Intel et AMD pour plus d’informations.
 
 La signification de la valeur dans `TSC_AUX[31:0]` dépend du système d’exploitation.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 #include <intrin.h>
 #include <stdio.h>
 int main()
 {
-unsigned __int64 i;
-unsigned int ui;
-i = __rdtscp(&ui);
-printf_s("%I64d ticks\n", i);
-printf_s("TSC_AUX was %x\n", ui);
+    unsigned __int64 i;
+    unsigned int ui;
+    i = __rdtscp(&ui);
+    printf_s("%I64d ticks\n", i);
+    printf_s("TSC_AUX was %x\n", ui);
 }
 ```
 
@@ -79,7 +76,6 @@ TSC_AUX was 0
 
 **FIN de la section spécifique à Microsoft**
 
-Copyright 2007 par avancées Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Voir aussi
 
