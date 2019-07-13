@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2588a4fe9903de624cbd3517c290a5439fe284a
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252943"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860978"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -348,12 +348,12 @@ Le tableau suivant décrit les valeurs que vous pouvez spécifier pour le *style
 
 Le tableau suivant répertorie les valeurs que vous pouvez spécifier pour le *emplacement* paramètre.
 
-|Emplacement|Description|
+|Lieu|Description|
 |--------------|-----------------|
 |LOCATION_BOTTOM|Onglets sont situés en bas du contrôle onglet.|
 |LOCATION_TOP|Onglets sont situés en haut du contrôle onglet.|
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 L’exemple suivant montre comment utiliser le `Create` méthode dans la `CMFCTabCtrl` classe. Cet exemple fait partie de la [échantillon de collecte de l’état](../../overview/visual-cpp-samples.md).
 
@@ -1139,6 +1139,5 @@ Cette méthode affecte uniquement un contrôle onglet qui affiche les onglets pl
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane, classe](../../mfc/reference/cdockablepane-class.md)<br/>
 [CDockablePane, classe](../../mfc/reference/cdockablepane-class.md)<br/>
 [CMFCBaseTabCtrl, classe](../../mfc/reference/cmfcbasetabctrl-class.md)

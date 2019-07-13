@@ -3,12 +3,12 @@ title: Création du projet (Didacticiel ATL, Partie 1)
 ms.custom: get-started-article
 ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0df793b23aaec57835774252eeac21b092f8a9e9
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221406"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861022"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Création du projet (Didacticiel ATL, Partie 1)
 
@@ -44,15 +44,10 @@ Ce didacticiel vous guide pas à pas dans un projet ATL sans attributs qui crée
 
     L’emplacement pour le code source est généralement par défaut \Users\\\<nom d’utilisateur > \source\repos et un nouveau dossier seront créé automatiquement.
 
-1. Cliquez sur **OK** et **projet ATL** Assistant s’ouvre.
+1. Dans Visual Studio 2019, acceptez les valeurs par défaut et cliquez sur **OK**. 
+   Dans Visual Studio 2017, cliquez sur **OK** pour ouvrir le **projet ATL** Assistant. Cliquez sur **paramètres d’Application** pour afficher les options disponibles. Étant donné que ce projet crée un contrôle et un contrôle doit être un serveur in-process, laisser le **type d’Application** en tant que DLL. Cliquez sur **OK**.
 
-1. Cliquez sur **paramètres d’Application** pour afficher les options disponibles.
-
-1. Lorsque vous créez un contrôle, et un contrôle doit être un serveur in-process, laissez le **type d’Application** en tant que DLL.
-
-1. Conservez les autres options leurs valeurs par défaut, puis cliquez sur **OK**.
-
-Le **Assistant Projet ATL** créera le projet en générant plusieurs fichiers. Vous pouvez afficher ces fichiers dans **l’Explorateur de solutions** en développant le `Polygon` objet. Les fichiers sont répertoriés ci-dessous.
+Visual Studio crée le projet en générant plusieurs fichiers. Vous pouvez afficher ces fichiers dans **l’Explorateur de solutions** en développant le `Polygon` objet. Les fichiers sont répertoriés ci-dessous.
 
 |Fichier|Description|
 |----------|-----------------|
@@ -66,7 +61,7 @@ Le **Assistant Projet ATL** créera le projet en générant plusieurs fichiers. 
 |stdafx.cpp|Le fichier sera `#include` les fichiers d’implémentation ATL.|
 |stdafx.h|Le fichier sera `#include` les fichiers d’en-tête ATL.|
 
-1. Dans **l’Explorateur de solutions**, avec le bouton droit le `Polygon` projet.
+1. Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le projet `Polygon`.
 
 1. Dans le menu contextuel, cliquez sur **propriétés**.
 

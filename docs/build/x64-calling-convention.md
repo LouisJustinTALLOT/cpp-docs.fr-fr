@@ -1,16 +1,16 @@
 ---
-title: convention d’appel de x64
+title: Convention d’appel x64
 description: Détails de la convention d’appel par défaut x64 ABI.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313614"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861166"
 ---
-# <a name="x64-calling-convention"></a>convention d’appel de x64
+# <a name="x64-calling-convention"></a>Convention d’appel x64
 
 Cette section décrit les processus standards et les conventions utilisées par une fonction (l’appelant) pour effectuer des appels dans une autre fonction (l’appelé) dans x64 code.
 
@@ -142,12 +142,12 @@ Struct2 func4(int a, double b, int c, float d);
 
 ## <a name="callercallee-saved-registers"></a>Registres enregistrés des appelants/appelés
 
-Les registres RAX, RCX, RDX, R8, R9, R10, R11 sont considérés comme volatile et doit être considéré comme détruit lors des appels de fonction (sauf si sinon sécurité-démontrables par analyse telles que de l’optimisation de l’ensemble du programme).
+Les registres RAX, RCX, RDX, R8, R9, R10, R11, XMM0-5 et les parties supérieures de YMM0-15 et ZMM0-15 sont considérés comme volatile et doivent être considéré comme détruit lors des appels de fonction (sauf si sinon sécurité-démontrables par analyse telles que de l’optimisation de l’ensemble du programme). Sur AVX512VL, les registres XMM ZMM et YMM 16-31 sont volatiles.
 
-Les registres RBX, RBP, RDI, RSI, RSP, R12, R13, R14 et R15 sont considérés comme non volatile et doivent être enregistrés et restauré par une fonction qui les utilise.
+Les registres RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15 et XMM6-15 sont considérés comme non volatile et doivent être enregistrés et restauré par une fonction qui les utilise.
 
 ## <a name="function-pointers"></a>Pointeurs fonction
-
+ 
 Les pointeurs fonction sont simplement des pointeurs vers l’étiquette de la fonction correspondante. Il n’y a aucune table des exigences de contenu (table des matières) pour les pointeurs de fonction.
 
 ## <a name="floating-point-support-for-older-code"></a>Prise en charge à virgule flottante pour le code plus ancien

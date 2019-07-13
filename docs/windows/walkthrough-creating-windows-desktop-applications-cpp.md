@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 0bc9ef82863fde361964234cca54f12aac1e2abe
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 2cf9928d56c564edc0e3bda1935eb11004000985
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877391"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861114"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procédure pas à pas : Créer une application de bureau de Windows traditionnelle (C++)
 
@@ -24,15 +24,15 @@ L’API Windows (également appelé l’API Win32, API de bureau Windows et API 
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Un ordinateur qui exécute Microsoft Windows 7 ou versions ultérieures. Nous recommandons Windows 10 pour la meilleure expérience de développement.
+- Un ordinateur qui exécute Microsoft Windows 7 ou versions ultérieures. Nous recommandons Windows 10 pour une expérience de développement optimale.
 
-- Une copie de Visual Studio. Pour plus d’informations sur la façon de télécharger et installer Visual Studio, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio). Lorsque vous exécutez le programme d’installation, assurez-vous que le **développement Desktop en C++** charge de travail est activée. Ne vous inquiétez pas si vous n’avez pas installé cette charge de travail lorsque vous avez installé Visual Studio. Vous pouvez réexécuter le programme d’installation et l’installer maintenant.
+- Une copie de Visual Studio. Pour plus d’informations sur le téléchargement et l’installation de Visual Studio, consultez [Installer Visual Studio](/visualstudio/install/install-visual-studio). Lorsque vous exécutez le programme d’installation, assurez-vous que la charge de travail **développement Desktop en C++** est activée. Ne vous inquiétez pas si vous n’avez pas installé cette charge de travail en même temps que Visual Studio. Vous pouvez réexécuter le programme d’installation et l’installer maintenant.
 
-   ![Développement Desktop en C++](../build/media/desktop-development-with-cpp.png "développement Desktop en C++")
+   ![Développement Desktop en C++](../build/media/desktop-development-with-cpp.png "Développement Desktop en C++")
 
-- Une compréhension des principes fondamentaux de l’utilisation de l’IDE Visual Studio. Si vous avez utilisé des applications de bureau Windows avant, vous pouvez probablement vous tenir. Pour une introduction, consultez [visite guidée des fonctionnalités IDE de Visual Studio](/visualstudio/ide/visual-studio-ide).
+- Une compréhension des principes fondamentaux de l’utilisation de l’IDE Visual Studio. Si vous avez déjà utilisé des applications de bureau Windows, vous n’aurez probablement aucun mal à suivre. Pour une introduction, consultez [Visite guidée des fonctionnalités de l’IDE Visual Studio](/visualstudio/ide/visual-studio-ide).
 
-- Comprendre suffisamment les principes fondamentaux du langage C++ pour suivre la procédure. Ne vous inquiétez pas, nous ne font rien trop compliqué.
+- Une compréhension de suffisamment de notions de base du langage C++ pour pouvoir suivre. Ne vous inquiétez pas, nous ne faisons rien de bien compliqué.
 
 ## <a name="create-a-windows-desktop-project"></a>Créez un projet de bureau Windows
 
@@ -42,21 +42,21 @@ Suivez ces étapes pour créer votre premier projet de bureau Windows et entrez 
 
 ### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>Pour créer un projet de bureau Windows dans Visual Studio 2019
 
-1. Dans le menu principal, choisissez **fichier** > **New** > **projet** pour ouvrir le **créer un nouveau projet** boîte de dialogue zone.
+1. Dans le menu principal, choisissez **Fichier** > **Nouveau** > **Projet** pour ouvrir la boîte de dialogue **Créer un projet**.
 
-1. En haut de la boîte de dialogue, définissez **langage** à **C++**, affectez la valeur **plateforme** à **Windows**et définissez **detypedeprojet** à **Desktop**. 
+1. En haut de la boîte de dialogue, définissez **langage** à **C++** , affectez la valeur **plateforme** à **Windows**et définissez **detypedeprojet** à **Desktop**. 
 
 1. Dans la liste filtrée des types de projets, choisissez **Windows Desktop Assistant** puis choisissez **suivant**. Dans la page suivante, entrez un nom pour le projet et spécifier l’emplacement du projet si vous le souhaitez.
 
-1. Choisissez le **créer** bouton pour créer le projet.
+1. Choisissez le bouton **Créer** pour créer le projet.
 
-1. Le **projet de bureau Windows** boîte de dialogue apparaît maintenant. Sous **type d’Application**, sélectionnez **application Windows (.exe)**. Sous **Options supplémentaires**, sélectionnez **Projet vide**. Choisissez **OK** pour créer le projet.
+1. Le **projet de bureau Windows** boîte de dialogue apparaît maintenant. Sous **type d’Application**, sélectionnez **application Windows (.exe)** . Sous **Options supplémentaires**, sélectionnez **Projet vide**. Choisissez **OK** pour créer le projet.
 
 1. Dans **l’Explorateur de solutions**, avec le bouton droit le **DesktopApp** de projet, choisissez **ajouter**, puis choisissez **un nouvel élément**.
 
    ![Ajouter un nouvel élément au projet de DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "ajouter un nouvel élément au projet de DesktopApp")
 
-1. Dans la boîte de dialogue **Ajouter un nouvel élément** , sélectionnez **Fichier C++ (.cpp)**. Dans le **nom** , tapez un nom pour le fichier, par exemple, *HelloWindowsDesktop.cpp*. Sélectionnez **Ajouter**.
+1. Dans la boîte de dialogue **Ajouter un nouvel élément** , sélectionnez **Fichier C++ (.cpp)** . Dans le **nom** , tapez un nom pour le fichier, par exemple, *HelloWindowsDesktop.cpp*. Sélectionnez **Ajouter**.
 
    ![Ajouter un fichier .cpp au projet de DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "ajouter un fichier .cpp à DesktopApp projet")
 
@@ -70,13 +70,13 @@ Votre projet est maintenant créé et votre fichier source s’ouvre dans l’é
 
 1. Dans le menu **Fichier**, choisissez **Nouveau**, puis **Projet**.
 
-1. Dans le **nouveau projet** boîte de dialogue, dans le volet gauche, développez **installé** > **Visual C++**, puis sélectionnez **Windows Desktop**. Dans le volet central, sélectionnez **Windows Desktop Assistant**.
+1. Dans le **nouveau projet** boîte de dialogue, dans le volet gauche, développez **installé** > **Visual C++** , puis sélectionnez **Windows Desktop**. Dans le volet central, sélectionnez **Windows Desktop Assistant**.
 
    Dans le **nom** , tapez un nom pour le projet, par exemple, *DesktopApp*. Cliquez sur **OK**.
 
    ![Nommez le projet DesktopApp](../build/media/desktop-app-new-project-name-153.png "nommez le projet DesktopApp")
 
-1. Dans le **projet de bureau Windows** boîte de dialogue, sous **type d’Application**, sélectionnez **application Windows (.exe)**. Sous **Options supplémentaires**, sélectionnez **Projet vide**. Choisissez **OK** pour créer le projet.
+1. Dans le **projet de bureau Windows** boîte de dialogue, sous **type d’Application**, sélectionnez **application Windows (.exe)** . Sous **Options supplémentaires**, sélectionnez **Projet vide**. Choisissez **OK** pour créer le projet.
 
    ![Créer DesktopApp dans l’Assistant de projet de bureau Windows](../build/media/desktop-app-new-project-wizard-153.png "créer DesktopApp dans l’Assistant de projet de bureau Windows")
 
@@ -84,7 +84,7 @@ Votre projet est maintenant créé et votre fichier source s’ouvre dans l’é
 
    ![Ajouter un nouvel élément au projet de DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "ajouter un nouvel élément au projet de DesktopApp")
 
-1. Dans la boîte de dialogue **Ajouter un nouvel élément** , sélectionnez **Fichier C++ (.cpp)**. Dans le **nom** , tapez un nom pour le fichier, par exemple, *HelloWindowsDesktop.cpp*. Sélectionnez **Ajouter**.
+1. Dans la boîte de dialogue **Ajouter un nouvel élément** , sélectionnez **Fichier C++ (.cpp)** . Dans le **nom** , tapez un nom pour le fichier, par exemple, *HelloWindowsDesktop.cpp*. Sélectionnez **Ajouter**.
 
    ![Ajouter un fichier .cpp au projet de DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "ajouter un fichier .cpp à DesktopApp projet")
 
@@ -98,7 +98,7 @@ Votre projet est maintenant créé et votre fichier source s’ouvre dans l’é
 
 1. Dans le menu **Fichier**, choisissez **Nouveau**, puis **Projet**.
 
-1. Dans le **nouveau projet** boîte de dialogue, dans le volet gauche, développez **installé** > **modèles** > **Visual C++**, puis sélectionnez **Win32**. Dans le volet central, sélectionnez **Projet Win32**.
+1. Dans le **nouveau projet** boîte de dialogue, dans le volet gauche, développez **installé** > **modèles** > **Visual C++** , puis sélectionnez **Win32**. Dans le volet central, sélectionnez **Projet Win32**.
 
    Dans le **nom** , tapez un nom pour le projet, par exemple, *DesktopApp*. Cliquez sur **OK**.
 
@@ -116,7 +116,7 @@ Votre projet est maintenant créé et votre fichier source s’ouvre dans l’é
 
    ![Ajouter un nouvel élément au projet de DesktopApp](../build/media/desktop-app-project-add-new-item-150.gif "ajouter un nouvel élément au projet de DesktopApp")
 
-1. Dans la boîte de dialogue **Ajouter un nouvel élément** , sélectionnez **Fichier C++ (.cpp)**. Dans le **nom** , tapez un nom pour le fichier, par exemple, *HelloWindowsDesktop.cpp*. Sélectionnez **Ajouter**.
+1. Dans la boîte de dialogue **Ajouter un nouvel élément** , sélectionnez **Fichier C++ (.cpp)** . Dans le **nom** , tapez un nom pour le fichier, par exemple, *HelloWindowsDesktop.cpp*. Sélectionnez **Ajouter**.
 
    ![Ajouter un fichier .cpp au projet de DesktopApp](../build/media/desktop-app-add-cpp-file-150.png "ajouter un fichier .cpp à DesktopApp projet")
 
@@ -589,7 +589,7 @@ Comme annoncé, voici le code complet pour l’application fonctionnelle.
 
 1. Pour exécuter l’application, appuyez sur **F5**. Une fenêtre qui contient le texte « Hello, bureau de Windows ! » doit apparaître dans le coin supérieur gauche de l’affichage.
 
-   ![Exécutez le projet DesktopApp](../build/media/desktop-app-project-run-157.png "exécuter le projet DesktopApp")
+   ![Exécutez le projet DesktopApp](../build/media/desktop-app-project-run-157.PNG "exécuter le projet DesktopApp")
 
 Félicitations ! Vous avez terminé cette procédure pas à pas et créé une application de bureau Windows traditionnelle.
 

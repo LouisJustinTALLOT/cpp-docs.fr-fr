@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: e739ea99df424f44dc43a28e3dc01c3529bb0c1a
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: aff143fca47cb5958b90e4a3f4c7ec284f2129f5
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450718"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861042"
 ---
 # <a name="vc-directories-property-page-windows"></a>Répertoires VC++, page de propriétés (Windows)
 
-Utilisez cette page de propriétés pour indiquer à Visual Studio les répertoires à utiliser durant la génération du projet sélectionné. Pour définir les répertoires pour plusieurs projets dans une solution, utilisez une feuille de propriétés personnalisées, comme décrit dans [les paramètres de projet de Visual Studio C++ partage ou resuse](../create-reusable-property-configurations.md).
+Utilisez cette page de propriétés pour indiquer à Visual Studio les répertoires à utiliser durant la génération du projet sélectionné. Pour définir les répertoires pour plusieurs projets dans une solution, utilisez une feuille de propriétés personnalisées, comme décrit dans [partage ou réutilisation Visual Studio C++ paramètres du projet](../create-reusable-property-configurations.md).
 
 Pour accéder à la version Linux de cette page, consultez [Répertoires VC++ (Linux C++)](../../linux/prop-pages/directories-linux.md).
 
@@ -54,7 +54,7 @@ Une boîte de dialogue similaire à celle-ci s’affiche :
 
 ![Afficher les répertoires de bibliothèques](../media/vcppdir_libdir.png "Boîte de dialogue permettant d’ajouter ou de supprimer des chemins de bibliothèques")
 
-Utilisez cette boîte de dialogue pour afficher les répertoires actifs. Toutefois, si vous souhaitez changer ou ajouter un répertoire, il est préférable d’utiliser le **Gestionnaire de propriétés** pour créer une feuille de propriétés ou modifier la feuille de propriétés d’utilisateur par défaut. Pour plus d’informations, consultez [les paramètres de projet de Visual Studio C++ partage ou resuse](../create-reusable-property-configurations.md).
+Utilisez cette boîte de dialogue pour afficher les répertoires actifs. Toutefois, si vous souhaitez changer ou ajouter un répertoire, il est préférable d’utiliser le **Gestionnaire de propriétés** pour créer une feuille de propriétés ou modifier la feuille de propriétés d’utilisateur par défaut. Pour plus d’informations, consultez [partage ou réutilisation Visual Studio C++ paramètres du projet](../create-reusable-property-configurations.md).
 
 Comme indiqué ci-dessus, la plupart des chemins hérités sont fournis sous forme de macros.  Pour examiner la valeur actuelle d’une macro, choisissez le bouton **Macros** dans le coin inférieur droit de la boîte de dialogue. Notez que de nombreuses macros dépendent du type de configuration. Deux macros identiques dans une build Debug et une build Release peuvent correspondre à un chemin différent.
 
