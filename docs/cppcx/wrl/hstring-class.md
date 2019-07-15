@@ -1,6 +1,6 @@
 ---
 title: HString, classe
-ms.date: 09/24/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString
@@ -8,6 +8,7 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HString::Detach
 - corewrappers/Microsoft::WRL::Wrappers::HString::Get
+- corewrappers/Microsoft::WRL::Wrappers::HString::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
 - corewrappers/Microsoft::WRL::Wrappers::HString::HString
 - corewrappers/Microsoft::WRL::Wrappers::HString::IsValid
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 884efb2a69b05589ad9458148409533880073878
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894405"
 ---
 # <a name="hstring-class"></a>HString, classe
 
@@ -76,6 +77,7 @@ Nom                                     | Description
 [HString::Detach](#detach)               | Dissocie spécifié `HString` objet à partir de sa valeur sous-jacente.
 [HString::Get](#get)                     | Récupère la valeur du handle HSTRING sous-jacent.
 [HString::GetAddressOf](#getaddressof)   | Récupère un pointeur vers le handle HSTRING sous-jacent.
+[HString::GetRawBuffer](#getrawbuffer)   | Récupère un pointeur vers les données de chaîne sous-jacentes.
 [HString::IsValid](#isvalid)             | Indique si l’actuel `HString` objet est valide.
 [HString::MakeReference](#makereference) | Crée un `HStringReference` objet à partir d’un paramètre de chaîne spécifiée.
 [HString::Release](#release)             | Supprime la valeur de chaîne sous-jacente et initialise actuel `HString` objet à une valeur vide.
@@ -83,7 +85,7 @@ Nom                                     | Description
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-Nom                                         | Description
+Name                                         | Description
 -------------------------------------------- | ----------------------------------------------------------------------------
 [HString::operator=](#operator-assign)       | Déplace la valeur d’un autre `HString` objet actuel `HString` objet.
 [HString::operator==](#operator-equality)    | Indique si les deux paramètres sont égaux.
@@ -181,6 +183,22 @@ Pointeur vers le handle HSTRING sous-jacent.
 ### <a name="remarks"></a>Notes
 
 Après cette opération, la valeur de chaîne du handle HSTRING sous-jacent est détruite.
+
+## <a name="getrawbuffer"></a>HString::GetRawBuffer
+
+Récupère un pointeur vers les données de chaîne sous-jacentes.
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>Paramètres
+
+*longueur* pointeur vers un **int** variable qui reçoit la longueur des données.
+
+### <a name="return-value"></a>Valeur de retour
+
+Un **const** pointeur vers les données de chaîne sous-jacentes.
+
 
 ## <a name="hstring"></a>HString::HString
 

@@ -1,6 +1,6 @@
 ---
 title: CWinApp (classe)
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CWinApp
 - AFXWIN/CWinApp
@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ec6c976b6611563eb95cce1173d7c77c3b5ef0
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894496"
 ---
 # <a name="cwinapp-class"></a>CWinApp (classe)
 
@@ -287,7 +287,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CWinApp::EnableShellOpen](#enableshellopen)|Permet à l’utilisateur ouvrir des fichiers de données à partir du Gestionnaire de fichiers Windows.|
 |[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|Norme de charges. Fonctionnalité de liste de fichiers de paramètres du fichier INI et Active la liste des fichiers récents.|
@@ -306,7 +306,7 @@ class CWinApp : public CWinThread
 
 ### <a name="public-data-members"></a>Membres de données publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CWinApp::m_bHelpMode](#m_bhelpmode)|Indique si l’utilisateur est en mode de contexte d’aide (généralement appelé avec MAJ + F1).|
 |[CWinApp::m_eHelpType](#m_ehelptype)|Spécifie le type d’aide utilisé par l’application.|
@@ -323,7 +323,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|Indicateurs qui déterminent comment le Gestionnaire de redémarrage se comporte.|
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|La longueur de la durée en millisecondes entre enregistre automatiquement.|
@@ -586,7 +586,7 @@ Bien que vous n’appelez pas normalement `DoWaitCursor` directement, vous pourr
 
 Pour un moyen plus facile, plus simple d’implémenter un curseur d’attente, utilisez `CWaitCursor`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#37](../../mfc/reference/codesnippet/cpp/cwinapp-class_3.cpp)]
 
@@ -860,7 +860,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Récupère les valeurs par défaut imprimante actuelle à partir de la Windows. Fichier INI comme nécessaire, ou utilise la dernière configuration de l’imprimante définie par l’utilisateur dans la configuration de l’impression.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#40](../../mfc/reference/codesnippet/cpp/cwinapp-class_6.cpp)]
 
@@ -899,7 +899,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 Cette fonction membre n’est pas en respectant la casse, par conséquent, les chaînes dans le *lpszSection* et *lpszEntry* paramètres peuvent différer dans les cas.
 
 > [!NOTE]
-> `GetProfileBinary` alloue une mémoire tampon et retourne son adresse dans \* *ppData*. L’appelant est chargé de libérer la mémoire tampon à l’aide **delete []**.
+> `GetProfileBinary` alloue une mémoire tampon et retourne son adresse dans \* *ppData*. L’appelant est chargé de libérer la mémoire tampon à l’aide **delete []** .
 
 > [!IMPORTANT]
 > Les données retournées par cette fonction ne sont pas nécessairement NULL s’est arrêté, et l’appelant doit exécuter une validation. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
@@ -982,7 +982,7 @@ La valeur de retour est la chaîne à partir de l’application. Fichier INI ou 
 > [!IMPORTANT]
 > Les données retournées par cette fonction ne sont pas nécessairement NULL s’est arrêté, et l’appelant doit exécuter une validation. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#43](../../mfc/reference/codesnippet/cpp/cwinapp-class_9.cpp)]
 
@@ -1033,10 +1033,10 @@ virtual void HtmlHelp(
 ### <a name="parameters"></a>Paramètres
 
 *dwData*<br/>
-Spécifie les données supplémentaires. La valeur utilisée varie selon la valeur de la *nCmd* paramètre.
+Spécifie les données supplémentaires. La valeur utilisée varie selon la valeur de la *nCmd* paramètre. Valeur par défaut est `0x000F` ce qui signifie que [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command).
 
 *nCmd*<br/>
-Spécifie le type d’aide demandée. Pour obtenir la liste de valeurs possibles et comment elles affectent le *dwData* paramètre, consultez le *uCommand* paramètre décrit dans sur l’API fonction HTMLHelp dans le SDK Windows.
+Spécifie le type d’aide demandée. Pour obtenir la liste de valeurs possibles et comment elles affectent le *dwData* paramètre, consultez le *uCommand* paramètre décrit dans le [HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw) ou [HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa) Fonctions d’API dans le SDK Windows.  
 
 ### <a name="remarks"></a>Notes
 
@@ -1065,7 +1065,7 @@ Substituer `InitInstance` pour initialiser chaque nouvelle instance de votre app
 > [!NOTE]
 > Les applications MFC doivent être initialisées en tant que thread unique cloisonné (STA). Si vous appelez [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) dans votre `InitInstance` substituer, spécifiez COINIT_APARTMENTTHREADED (plutôt que COINIT_MULTITHREADED).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCListView#9](../../atl/reference/codesnippet/cpp/cwinapp-class_10.cpp)]
 
@@ -1111,7 +1111,7 @@ Un handle à un curseur en cas de réussite ; Sinon, NULL.
 
 Utilisez le [LoadStandardCursor](#loadstandardcursor) ou [LoadOEMCursor](#loadoemcursor) fonction membre pour accéder aux curseurs Windows prédéfinis.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#44](../../mfc/reference/codesnippet/cpp/cwinapp-class_11.cpp)]
 
@@ -1165,7 +1165,7 @@ Un handle à un curseur en cas de réussite ; Sinon, NULL.
 
 Utilisez le `LoadOEMCursor` ou [LoadStandardCursor](#loadstandardcursor) fonction membre pour accéder aux curseurs Windows prédéfinis.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#45](../../mfc/reference/codesnippet/cpp/cwinapp-class_12.h)]
 
@@ -1352,7 +1352,7 @@ HINSTANCE m_hInstance;
 
 Le `m_hInstance` membre de données est un handle vers l’instance actuelle de l’application s’exécutant sous Windows. Celui-ci est renvoyé par la fonction globale [AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle). `m_hInstance` est une variable publique de type HINSTANCE.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#55](../../mfc/reference/codesnippet/cpp/cwinapp-class_15.cpp)]
 
@@ -1396,7 +1396,7 @@ int m_nCmdShow;
 
 Vous devez passer `m_nCmdShow` en tant qu’argument lorsque vous appelez [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) pour la fenêtre principale de votre application. `m_nCmdShow` est une variable publique de type **int**.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#56](../../mfc/reference/codesnippet/cpp/cwinapp-class_17.cpp)]
 
@@ -1437,11 +1437,11 @@ Le nom de l’application peut provenir du paramètre transmis à la [CWinApp](#
 Retourné par la fonction globale [AfxGetAppName](application-information-and-management.md#afxgetappname). `m_pszAppName` est une variable publique de type **const char**<strong>\*</strong>.
 
 > [!NOTE]
-> Si vous affectez une valeur à `m_pszAppName`, elle doit être allouée de façon dynamique sur le tas. Le `CWinApp` appels de destructeur **gratuit**() avec ce pointeur. Vous pouvez utiliser le `_tcsdup`fonction de bibliothèque du run-time () pour effectuer l’allocation. En outre, libérer la mémoire associée le pointeur actuel avant de lui assigner une nouvelle valeur. Exemple :
+> Si vous affectez une valeur à `m_pszAppName`, elle doit être allouée de façon dynamique sur le tas. Le `CWinApp` appels de destructeur **gratuit**() avec ce pointeur. Vous pouvez utiliser le `_tcsdup`fonction de bibliothèque du run-time () pour effectuer l’allocation. En outre, libérer la mémoire associée le pointeur actuel avant de lui assigner une nouvelle valeur. Par exemple :
 
 [!code-cpp[NVC_MFCWindowing#57](../../mfc/reference/codesnippet/cpp/cwinapp-class_18.cpp)]
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#65](../../mfc/reference/codesnippet/cpp/cwinapp-class_19.cpp)]
 
@@ -1458,7 +1458,7 @@ LPCTSTR m_pszExeName;
 Contrairement aux [m_pszAppName](#m_pszappname), ce nom ne peut pas contenir d’espaces. `m_pszExeName` est une variable publique de type **const char**<strong>\*</strong>.
 
 > [!NOTE]
-> Si vous affectez une valeur à `m_pszExeName`, elle doit être allouée de façon dynamique sur le tas. Le `CWinApp` appels de destructeur **gratuit**() avec ce pointeur. Vous pouvez utiliser le `_tcsdup`fonction de bibliothèque du run-time () pour effectuer l’allocation. En outre, libérer la mémoire associée le pointeur actuel avant de lui assigner une nouvelle valeur. Exemple :
+> Si vous affectez une valeur à `m_pszExeName`, elle doit être allouée de façon dynamique sur le tas. Le `CWinApp` appels de destructeur **gratuit**() avec ce pointeur. Vous pouvez utiliser le `_tcsdup`fonction de bibliothèque du run-time () pour effectuer l’allocation. En outre, libérer la mémoire associée le pointeur actuel avant de lui assigner une nouvelle valeur. Par exemple :
 
 [!code-cpp[NVC_MFCWindowing#58](../../mfc/reference/codesnippet/cpp/cwinapp-class_20.cpp)]
 
@@ -1475,7 +1475,7 @@ LPCTSTR m_pszHelpFilePath;
 Par défaut, le framework initialise `m_pszHelpFilePath` au nom de l’application avec ». HLP » ajouté. Pour modifier le nom du fichier d’aide, définissez `m_pszHelpFilePath` pour pointer vers une chaîne qui contient le nom complet du fichier d’aide souhaitée. Pour cela est pratique dans l’application [InitInstance](#initinstance) (fonction). `m_pszHelpFilePath` est une variable publique de type **const char**<strong>\*</strong>.
 
 > [!NOTE]
-> Si vous affectez une valeur à `m_pszHelpFilePath`, elle doit être allouée de façon dynamique sur le tas. Le `CWinApp` appels de destructeur **gratuit**() avec ce pointeur. Vous pouvez utiliser le `_tcsdup`fonction de bibliothèque du run-time () pour effectuer l’allocation. En outre, libérer la mémoire associée le pointeur actuel avant de lui assigner une nouvelle valeur. Exemple :
+> Si vous affectez une valeur à `m_pszHelpFilePath`, elle doit être allouée de façon dynamique sur le tas. Le `CWinApp` appels de destructeur **gratuit**() avec ce pointeur. Vous pouvez utiliser le `_tcsdup`fonction de bibliothèque du run-time () pour effectuer l’allocation. En outre, libérer la mémoire associée le pointeur actuel avant de lui assigner une nouvelle valeur. Par exemple :
 
 [!code-cpp[NVC_MFCWindowing#59](../../mfc/reference/codesnippet/cpp/cwinapp-class_21.cpp)]
 
@@ -1492,7 +1492,7 @@ LPCTSTR m_pszProfileName;
 `m_pszProfileName` est une variable publique de type **const char**<strong>\*</strong>.
 
 > [!NOTE]
-> Si vous affectez une valeur à `m_pszProfileName`, elle doit être allouée de façon dynamique sur le tas. Le `CWinApp` appels de destructeur **gratuit**() avec ce pointeur. Vous pouvez utiliser le `_tcsdup`fonction de bibliothèque du run-time () pour effectuer l’allocation. En outre, libérer la mémoire associée le pointeur actuel avant de lui assigner une nouvelle valeur. Exemple :
+> Si vous affectez une valeur à `m_pszProfileName`, elle doit être allouée de façon dynamique sur le tas. Le `CWinApp` appels de destructeur **gratuit**() avec ce pointeur. Vous pouvez utiliser le `_tcsdup`fonction de bibliothèque du run-time () pour effectuer l’allocation. En outre, libérer la mémoire associée le pointeur actuel avant de lui assigner une nouvelle valeur. Par exemple :
 
 [!code-cpp[NVC_MFCWindowing#60](../../mfc/reference/codesnippet/cpp/cwinapp-class_22.cpp)]
 
@@ -1510,7 +1510,7 @@ Normalement, ce membre de données est traité comme étant en lecture seule.
 
 - La valeur est stockée à une clé de Registre. Le nom pour le paramètre de profil d’application est ajouté à la clé de Registre suivante : HKEY_CURRENT_USER / / LocalAppWizard générées par les logiciels /.
 
-Si vous affectez une valeur à `m_pszRegistryKey`, elle doit être allouée de façon dynamique sur le tas. Le `CWinApp` appels de destructeur **gratuit**() avec ce pointeur. Vous pouvez utiliser le `_tcsdup`fonction de bibliothèque du run-time () pour effectuer l’allocation. En outre, libérer la mémoire associée le pointeur actuel avant de lui assigner une nouvelle valeur. Exemple :
+Si vous affectez une valeur à `m_pszRegistryKey`, elle doit être allouée de façon dynamique sur le tas. Le `CWinApp` appels de destructeur **gratuit**() avec ce pointeur. Vous pouvez utiliser le `_tcsdup`fonction de bibliothèque du run-time () pour effectuer l’allocation. En outre, libérer la mémoire associée le pointeur actuel avant de lui assigner une nouvelle valeur. Par exemple :
 
 [!code-cpp[NVC_MFCWindowing#61](../../mfc/reference/codesnippet/cpp/cwinapp-class_23.cpp)]
 
@@ -1577,7 +1577,7 @@ Vous devez ajouter un `ON_COMMAND( ID_FILE_NEW, OnFileNew )` instruction à votr
 
 Consultez [Note technique 22](../../mfc/tn022-standard-commands-implementation.md) pour plus d’informations sur le comportement par défaut et des conseils sur la façon de remplacer cette fonction membre.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#49](../../mfc/reference/codesnippet/cpp/cwinapp-class_25.cpp)]
 
@@ -1617,7 +1617,7 @@ Vous devez ajouter un `ON_COMMAND( ID_FILE_PRINT_SETUP, OnFilePrintSetup )` inst
 
 Pour plus d’informations sur le comportement par défaut et des conseils sur la façon de remplacer cette fonction membre, consultez [Note technique 22](../../mfc/tn022-standard-commands-implementation.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#49](../../mfc/reference/codesnippet/cpp/cwinapp-class_25.cpp)]
 
@@ -2302,7 +2302,7 @@ Contient le nombre d’octets à écrire.
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Cet exemple utilise `CWinApp* pApp = AfxGetApp();` pour obtenir la classe CWinApp illustrant une manière qui `WriteProfileBinary` et `GetProfileBinary` peut être utilisée à partir de n’importe quelle fonction dans une application MFC.
 
@@ -2395,4 +2395,4 @@ Spécifie l’ID de modèle d’Application utilisateur.
 
 [CWinThread, classe](../../mfc/reference/cwinthread-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[Guide pratique pour Ajouter la prise en charge du Gestionnaire de redémarrage](../../mfc/how-to-add-restart-manager-support.md)
+[Guide pratique : Ajouter la prise en charge du Gestionnaire de redémarrage](../../mfc/how-to-add-restart-manager-support.md)

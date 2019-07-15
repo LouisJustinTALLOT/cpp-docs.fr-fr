@@ -1,11 +1,12 @@
 ---
 title: HStringReference, classe
-ms.date: 09/25/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::Get
+- corewrappers/Microsoft::WRL::Wrappers::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::HStringReference
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator=
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator==
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-ms.openlocfilehash: b9d2e49d0a7e1321e2259c06e1313a90d55dc90e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c17a9df8fcc7d849bbbd4f613bf5dce6dae8983
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398275"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894390"
 ---
 # <a name="hstringreference-class"></a>HStringReference, classe
 
@@ -56,10 +57,11 @@ Membre                              | Description
 ----------------------------------- | ------------------------------------------------------------------
 [HStringReference::CopyTo](#copyto) | Copie en cours `HStringReference` objet dans un objet HSTRING.
 [HStringReference::Get](#get)       | Récupère la valeur du handle HSTRING sous-jacent.
+[HStringReference::GetRawBuffer](#getrawbuffer) | Récupère un pointeur vers les données de chaîne sous-jacentes.
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-Nom                                                  | Description
+Name                                                  | Description
 ----------------------------------------------------- | ----------------------------------------------------------------------------------------------
 [HStringReference::operator=](#operator-assign)       | Déplace la valeur d’un autre `HStringReference` objet actuel `HStringReference` objet.
 [HStringReference::operator==](#operator-equality)    | Indique si les deux paramètres sont égaux.
@@ -106,6 +108,21 @@ HSTRING Get() const throw()
 ### <a name="return-value"></a>Valeur de retour
 
 La valeur du handle HSTRING sous-jacent.
+
+## <a name="getrawbuffer"></a>HStringReference::GetRawBuffer
+
+Récupère un pointeur vers les données de chaîne sous-jacentes.
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>Paramètres
+
+*longueur* pointeur vers un **int** variable qui reçoit la longueur des données.
+
+### <a name="return-value"></a>Valeur de retour
+
+Un **const** pointeur vers les données de chaîne sous-jacentes.
 
 ## <a name="hstringreference"></a>HStringReference::HStringReference
 
