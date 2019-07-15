@@ -1,17 +1,17 @@
 ---
 title: Modèles de fonctions
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 helpviewer_keywords:
 - function templates
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: 77f3d1ee704c8094fd3bd94597311976e54ba6a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d430ad7650ffa47f0d6334a827b416cfb05ae6c2
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894359"
 ---
 # <a name="function-templates"></a>Modèles de fonctions
 
@@ -44,7 +44,7 @@ MySwap( j, Hello );      //error
 
 Le deuxième appel `MySwap` déclenche une erreur au moment de la compilation, car le compilateur ne peut pas générer de fonction `MySwap` avec des paramètres de types différents. Si des pointeurs void étaient utilisés, les deux appels de fonction se compileraient correctement, mais la fonction ne fonctionnerait pas correctement au moment de l'exécution.
 
-Il est autorisé de spécifier explicitement les arguments template d'un modèle de fonction. Exemple :
+Il est autorisé de spécifier explicitement les arguments template d'un modèle de fonction. Par exemple :
 
 ```cpp
 // function_templates2.cpp
@@ -55,7 +55,7 @@ int main(int j) {
 }
 ```
 
-Lorsque l’argument template est spécifié explicitement, les conversions implicites normales sont effectuées pour convertir l’argument de fonction vers le type des paramètres de modèle de fonction correspondants. Dans l’exemple ci-dessus, le compilateur convertit `char j` à taper **int**.
+Lorsque l’argument template est spécifié explicitement, les conversions implicites normales sont effectuées pour convertir l’argument de fonction vers le type des paramètres de modèle de fonction correspondants. Dans l’exemple ci-dessus, le compilateur convertit `j` à taper **char**.
 
 ## <a name="see-also"></a>Voir aussi
 

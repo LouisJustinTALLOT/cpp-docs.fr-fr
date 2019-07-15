@@ -1,6 +1,6 @@
 ---
 title: Détermination des DLL à redistribuer
-ms.date: 03/25/2019
+ms.date: 07/15/2019
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: 4e4b53745c76a8e5b630bdd92633779e84262188
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 82fb582cae129b517a96deb3d4a9572ef8370a9d
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894478"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Détermination des DLL à redistribuer
 
 Quand vous créez une application qui utilise les DLL de bibliothèque fournies par Visual Studio, ces mêmes DLL doivent aussi être présentes sur les ordinateurs des utilisateurs de votre application pour que celle-ci puisse s’exécuter. Comme il est probable que la plupart des utilisateurs n'ont pas installé Visual Studio, vous devez les leur fournir. Visual Studio met à disposition ces DLL sous forme de *fichiers redistribuables* que vous pouvez inclure dans le programme d’installation de votre application.
 
-Pour qu’il vous soit plus facile d’inclure les DLL redistribuables dans votre programme d’installation, elles sont aussi disponibles sous forme de *packages redistribuables* autonomes. Il s’agit d’exécutables propres à l’architecture qui utilisent un déploiement central pour installer les fichiers redistribuables sur l’ordinateur d’un utilisateur. Par exemple, vcredist\_x86.exe installe les bibliothèques de 32 bits pour x86 ordinateurs, vcredist\_x64.exe installe les bibliothèques de 64 bits pour x64 ordinateurs et vcredist\_ARM.exe installe les bibliothèques pour les ordinateurs ARM. Nous recommandons un déploiement central, car Microsoft peut utiliser le service Windows Update pour mettre à jour ces bibliothèques indépendamment. En plus de la copie dans votre installation de Visual Studio, les packages redistribuables actuels sont disponibles au téléchargement. Pour afficher des liens vers les packages redistribuables les plus récents pris en charge pour les ensembles d’outils actuels et plus anciens, consultez [Derniers téléchargements pris en charge de Visual C++](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). Vous trouverez des versions antérieures spécifiques des packages redistribuables en recherchant « Packages redistribuables Visual C++ » dans le [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=158431).
+Pour qu’il vous soit plus facile d’inclure les DLL redistribuables dans votre programme d’installation, elles sont aussi disponibles sous forme de *packages redistribuables* autonomes. Il s’agit d’exécutables propres à l’architecture qui utilisent un déploiement central pour installer les fichiers redistribuables sur l’ordinateur d’un utilisateur. Par exemple, vcredist\_x86.exe installe les bibliothèques de 32 bits pour les ordinateurs x x86 et x64, vcredist\_x64.exe installe les bibliothèques de 64 bits pour x64 ordinateurs et vcredist\_ARM.exe installe les bibliothèques pour ARM ordinateurs. Nous recommandons un déploiement central, car Microsoft peut utiliser le service Windows Update pour mettre à jour ces bibliothèques indépendamment. En plus de la copie dans votre installation de Visual Studio, les packages redistribuables actuels sont disponibles au téléchargement. Pour afficher des liens vers les packages redistribuables les plus récents pris en charge pour les ensembles d’outils actuels et plus anciens, consultez [Derniers téléchargements pris en charge de Visual C++](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). Vous trouverez des versions antérieures spécifiques des packages redistribuables en recherchant « Packages redistribuables Visual C++ » dans le [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=158431).
 
 Le numéro de la version principale du package redistribuable que vous déployez doit correspondre à la version de l’ensemble d’outils Visual Studio qui a servi à créer votre application et la version secondaire doit être identique ou supérieure. Visual Studio 2017 et Visual Studio 2015 ont des numéros de version d’ensemble d’outils compatibles, ce qui signifie que les fichiers redistribuables Visual Studio 2017 peuvent être utilisés par des applications générées à l’aide de l’ensemble d’outils 2015. Même s’ils peuvent être compatibles, nous ne prenons pas en charge l’utilisation des fichiers redistribuables 2015 dans les applications générées à l’aide de l’ensemble d’outils 2017. Nous prenons uniquement en charge l’utilisation d’un package redistribuable qui est identique ou plus récent que la version de votre ensemble d’outils.
 

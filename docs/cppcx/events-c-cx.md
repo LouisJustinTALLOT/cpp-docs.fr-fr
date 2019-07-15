@@ -1,13 +1,13 @@
 ---
 title: Événements (C++/CX)
-ms.date: 01/22/2017
+ms.date: 07/15/2019
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0a3ab01628487dcca081eb300470cbd1bf3bb83
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894455"
 ---
 # <a name="events-ccx"></a>Événements (C++/CX)
 
@@ -15,7 +15,7 @@ Un Runtime Windows type peut déclarer (qui est, publier) événements, le code 
 
 ## <a name="consuming-events-in-windows-components"></a>Utilisation d'événements dans les composants Windows
 
-De nombreux composants dans le Runtime Windows exposent des événements. Par exemple, un objet LightSensor déclenche un événement ReadingChanged lorsque le capteur signale une nouvelle valeur de luminescence. Lorsque vous utilisez un objet LightSensor dans votre programme, vous pouvez définir une méthode qui est appelée lorsque l'événement ReadingChanged se déclenche. La méthode peut faire tout ce que vous voulez faire ; la seule exigence est que sa signature doit correspondre à la signature du délégué qui est pour plus d’informations sur la façon de créer un gestionnaire d’événements délégué et s’abonner à un événement, consultez [délégués](../cppcx/delegates-c-cx.md).
+De nombreux composants dans le Runtime Windows exposent des événements. Par exemple, un objet LightSensor déclenche un événement ReadingChanged lorsque le capteur signale une nouvelle valeur de luminescence. Lorsque vous utilisez un objet LightSensor dans votre programme, vous pouvez définir une méthode qui est appelée lorsque l'événement ReadingChanged se déclenche. La méthode peut faire tout ce que vous voulez faire ; la seule exigence est que sa signature doit correspondre à la signature du délégué qui est appelé. Pour plus d’informations sur la façon de créer un gestionnaire d’événements délégué et s’abonner à un événement, consultez [délégués](../cppcx/delegates-c-cx.md).
 
 ## <a name="creating-custom-events"></a>Création d'événements personnalisés
 
@@ -27,7 +27,7 @@ L'exemple suivant montre comment déclarer et déclencher un événement : Notez
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>Utilisation
+### <a name="usage"></a>Usage
 
 L'exemple suivant montre comment une classe d'abonnement utilise l'opérateur `+=` pour s'abonner à l'événement et fournir un gestionnaire d'événements à appeler lorsque l'événement se déclenche. Notez que la fonction qui est fournie correspond à la signature du délégué défini côté serveur de publication dans l'espace de noms `EventTest` .
 
