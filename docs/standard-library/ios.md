@@ -7,28 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 1566f9105a61b1c037e86fd2e4b280ed6dd2020e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385217"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245233"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
 Définit plusieurs types et fonctions de base pour l'opération d'iostreams. Cet en-tête est généralement inclus pour vous par un autre en-tête iostream ; vous l'incluez rarement directement.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Configuration requise
 
-```cpp
-#include <ios>
-```
+**En-tête**: \<ios >
+
+**Espace de noms :** std
+
+> [!NOTE]
+> Le \<ios > bibliothèque utilise la `#include <iosfwd>` instruction.
 
 ## <a name="remarks"></a>Notes
 
 Un grand nombre de fonctions sont des manipulateurs. Un manipulateur déclaré dans \<ios> modifie les valeurs stockées dans son objet d’argument de classe [ios_base](../standard-library/ios-base-class.md). D’autres manipulateurs effectuent des actions sur des flux contrôlés par des objets d’un type dérivé de cette classe, comme une spécialisation de l’une des classes de modèle [basic_istream](../standard-library/basic-istream-class.md) ou [basic_ostream](../standard-library/basic-ostream-class.md). Par exemple, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) efface l’indicateur de format `ios_base::skipws` dans l’objet `str`, ce qui peut être l’une de ces types.
 
-Vous pouvez également appeler un manipulateur en l'insérant dans un flux de sortie ou en l'extrayant d'un flux d'entrée, grâce à des opérations d'insertion et d'extraction spéciales fournies pour les classes dérivées de `ios_base`. Exemple :
+Vous pouvez également appeler un manipulateur en l'insérant dans un flux de sortie ou en l'extrayant d'un flux d'entrée, grâce à des opérations d'insertion et d'extraction spéciales fournies pour les classes dérivées de `ios_base`. Par exemple :
 
 ```cpp
 istr>> noskipws;
@@ -36,9 +39,11 @@ istr>> noskipws;
 
 appelle [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
+## <a name="members"></a>Membres
+
 ### <a name="typedefs"></a>Typedef
 
-|Nom de type|Description|
+|||
 |-|-|
 |[ios](../standard-library/ios-typedefs.md#ios)|Prend en charge la classe ios de l'ancienne bibliothèque iostream.|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|Prend en charge les opérations internes.|
@@ -56,6 +61,7 @@ appelle [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Configure les indicateurs d'un objet `ios_base` pour utiliser un format d'affichage par défaut pour les valeurs de type float.|
 |[fixed](../standard-library/ios-functions.md#fixed)|Indique qu'un nombre à virgule flottante est affiché en notation décimale fixe.|
 |[hex](../standard-library/ios-functions.md#hex)|Indique que les variables de type entier sont affichées en notation de base 16.|
+|[hexadécimaux à virgule flottante](../standard-library/ios-functions.md#hexfloat)|
 |[internal](../standard-library/ios-functions.md#internal)|Aligne à gauche le signe d'un nombre et aligne à droite le nombre.|
 |[left](../standard-library/ios-functions.md#left)|Fait en sorte que le texte qui n'est pas aussi large que la largeur de sortie apparaisse dans le flux aligné avec la marge de gauche.|
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Indique que les variables de type [bool](../cpp/bool-cpp.md) apparaissent comme 1 ou 0 dans le flux.|
@@ -75,9 +81,19 @@ appelle [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |[unitbuf](../standard-library/ios-functions.md#unitbuf)|Fait en sorte que la sortie soit traitée quand la mémoire tampon n'est pas vide.|
 |[uppercase](../standard-library/ios-functions.md#uppercase)|Spécifie que les chiffres hexadécimaux et l'exposant en notation scientifique apparaissent en majuscules.|
 
+### <a name="error-reporting"></a>Rapport d’erreurs
+
+|||
+|-|-|
+|[io_errc](../standard-library/ios-functions.md#io_errc)||
+|[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
+|[iostream_category](../standard-library/ios-functions.md#iostream_category)||
+|[make_error_code](../standard-library/ios-functions.md#make_error_code)||
+|[make_error_condition](../standard-library/ios-functions.md#make_error_condition)||
+
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|||
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|La classe de modèle décrit les fonctions membres et de stockage communes aux flux d’entrée (de classe de modèle [basic_istream](../standard-library/basic-istream-class.md)) et de sortie (de classe de modèle [basic_ostream](../standard-library/basic-ostream-class.md)) qui dépendent des paramètres du modèle.|
 |[fpos](../standard-library/fpos-class.md)|La classe de modèle décrit un objet qui peut stocker toutes les informations nécessaires à la restauration d'un indicateur de position de fichier arbitraire dans n'importe quel flux.|

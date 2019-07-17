@@ -9,21 +9,16 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 1f0ff93c22263ca4b35377b5d9af089816e8895a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0fd73cc53c5d538469cb957b7b4c4ec56783ade
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159260"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245280"
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;ios&gt;, typedefs
 
-||||
-|-|-|-|
-|[ios](#ios)|[streamoff](#streamoff)|[streampos](#streampos)|
-|[streamsize](#streamsize)|[wios](#wios)|[wstreampos](#wstreampos)|
-
-## <a name="ios"></a>  ios
+## <a name="ios"></a> IOS
 
 Prend en charge la classe ios de l'ancienne bibliothèque iostream.
 
@@ -35,7 +30,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 Le type est un synonyme de la classe de modèle [basic_ios](../standard-library/basic-ios-class.md), spécialisé pour les éléments de type **char** ayant les caractéristiques par défaut.
 
-## <a name="streamoff"></a>  streamoff
+## <a name="streamoff"></a> streamoff
 
 Prend en charge les opérations internes.
 
@@ -51,7 +46,7 @@ Prend en charge les opérations internes.
 
 Le type est un entier signé qui décrit un objet capable de stocker un décalage d’octet impliqué dans différentes opérations de positionnement de flux. Sa représentation a au moins 32 bits de valeur. Elle n’est pas nécessairement assez grande pour représenter une position d’octet arbitraire dans un flux. La valeur `streamoff(-1)` indique généralement un décalage erroné.
 
-## <a name="streampos"></a>  streampos
+## <a name="streampos"></a> streampos
 
 Contient la position actuelle du pointeur de mémoire tampon ou du pointeur de fichier.
 
@@ -134,7 +129,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 Le type est un synonyme de la classe de modèle [basic_ios](../standard-library/basic-ios-class.md), spécialisé pour les éléments de type **wchar_t** ayant les caractéristiques par défaut.
 
-## <a name="wstreampos"></a>  wstreampos
+## <a name="wstreampos"></a> wstreampos
 
 Contient la position actuelle du pointeur de mémoire tampon ou du pointeur de fichier.
 
@@ -167,7 +162,3 @@ int main( )
 ```Output
 7
 ```
-
-## <a name="see-also"></a>Voir aussi
-
-[\<ios>](../standard-library/ios.md)<br/>

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: e2efb5d534ad43e2492ac4fb0bf76db402dca272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e491c376f110f48b0b02a30fc39f6c6da1a5ab02
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410852"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240906"
 ---
 # <a name="weakptr-class"></a>weak_ptr, classe
 
@@ -57,17 +57,18 @@ public:
       weak_ptr& operator=(const weak_ptr<Other>&);
    template <class Other>
       weak_ptr& operator=(shared_ptr<Other>&);
+      
    void swap(weak_ptr&);
    void reset();
    long use_count() const;
    bool expired() const;
    shared_ptr<Ty> lock() const;
-   };
+};
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*<br/>
+*Ty*\
 Type contrôlé par le pointeur faible.
 
 ## <a name="remarks"></a>Notes
@@ -84,7 +85,7 @@ Un cycle se produit quand plusieurs ressources contrôlées par des objets `shar
 
 ### <a name="constructors"></a>Constructeurs
 
-|Constructeur|Description|
+|||
 |-|-|
 |[weak_ptr](#weak_ptr)|Construit un objet `weak_ptr`.|
 
@@ -102,17 +103,11 @@ Un cycle se produit quand plusieurs ressources contrôlées par des objets `shar
 
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|||
 |-|-|
 |[operator=](#op_eq)|Remplace la ressource détenue.|
 
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<memory>
-
-**Espace de noms :** std
-
-## <a name="element_type"></a>  element_type
+### <a name="element_type"></a> ELEMENT_TYPE
 
 Type de l'élément.
 
@@ -120,11 +115,11 @@ Type de l'élément.
 typedef Ty element_type;
 ```
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Le type est un synonyme du paramètre de modèle `Ty`.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemples
 
 ```cpp
 // std__memory__weak_ptr_element_type.cpp
@@ -148,7 +143,7 @@ int main()
 *wp0.lock() == 5
 ```
 
-## <a name="expired"></a>  expired
+### <a name="expired"></a> expiré
 
 Teste si la propriété a expiré.
 
@@ -156,11 +151,11 @@ Teste si la propriété a expiré.
 bool expired() const;
 ```
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La fonction membre retourne **true** si `*this` a expiré, sinon **false**.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // std__memory__weak_ptr_expired.cpp
@@ -205,7 +200,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="lock"></a>  lock
+### <a name="lock"></a> Verrou
 
 Obtient la propriété exclusive d'une ressource.
 
@@ -213,11 +208,11 @@ Obtient la propriété exclusive d'une ressource.
 shared_ptr<Ty> lock() const;
 ```
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La fonction membre retourne un objet shared_ptr vide si `*this` a expiré ; sinon, elle retourne un [shared_ptr, classe](../standard-library/shared-ptr-class.md)\<Ty > objet qui détient la ressource qui `*this` pointe vers.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // std__memory__weak_ptr_lock.cpp
@@ -262,7 +257,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="op_eq"></a>  operator=
+### <a name="op_eq"></a> opérateur =
 
 Remplace la ressource détenue.
 
@@ -270,28 +265,28 @@ Remplace la ressource détenue.
 weak_ptr& operator=(const weak_ptr& wp);
 
 template <class Other>
-weak_ptr& operator=(const weak_ptr<Other>& wp);
+    weak_ptr& operator=(const weak_ptr<Other>& wp);
 
 template <class Other>
-weak_ptr& operator=(const shared_ptr<Other>& sp);
+    weak_ptr& operator=(const shared_ptr<Other>& sp);
 ```
 
-### <a name="parameters"></a>Paramètres
+#### <a name="parameters"></a>Paramètres
 
-*Autre*<br/>
+*Autres*\
 Type contrôlé par le pointeur partagé/faible d’argument.
 
-*wp*<br/>
+*WP*\
 Pointeur faible à copier.
 
-*sp*<br/>
+*SP*\
 Pointeur partagé à copier.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Tous les opérateurs libèrent la ressource sur laquelle `*this` pointe actuellement, et assignent la propriété de la ressource nommée par la séquence d’opérandes à `*this`. Si un opérateur échoue, il laisse `*this` inchangé.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // std__memory__weak_ptr_operator_as.cpp
@@ -323,28 +318,28 @@ int main()
 *wp1.lock() == 10
 ```
 
-## <a name="owner_before"></a>  owner_before
+### <a name="owner_before"></a> owner_before
 
 Retourne **true** si ce `weak_ptr` est classé avant (ou inférieur à) le pointeur fourni.
 
 ```cpp
 template <class Other>
-bool owner_before(const shared_ptr<Other>& ptr);
+    bool owner_before(const shared_ptr<Other>& ptr);
 
 template <class Other>
-bool owner_before(const weak_ptr<Other>& ptr);
+    bool owner_before(const weak_ptr<Other>& ptr);
 ```
 
-### <a name="parameters"></a>Paramètres
+#### <a name="parameters"></a>Paramètres
 
-*ptr*<br/>
+*PTR*\
 Référence `lvalue` à un `shared_ptr` ou à un `weak_ptr`.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La fonction membre de modèle retourne **true** si `*this` est `ordered before` `ptr`.
 
-## <a name="reset"></a>  reset
+### <a name="reset"></a> Réinitialiser
 
 Libère la ressource détenue.
 
@@ -352,11 +347,11 @@ Libère la ressource détenue.
 void reset();
 ```
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La fonction membre libère la ressource sur laquelle `*this` pointe et convertit `*this` en un objet weak_ptr vide.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // std__memory__weak_ptr_reset.cpp
@@ -386,7 +381,7 @@ wp.expired() == false
 wp.expired() == true
 ```
 
-## <a name="swap"></a>  swap
+### <a name="swap"></a> échange
 
 Échange deux objets `weak_ptr`.
 
@@ -394,16 +389,23 @@ wp.expired() == true
 void swap(weak_ptr& wp);
 ```
 
-### <a name="parameters"></a>Paramètres
+Inclut également la spécialisation.
 
-*wp*<br/>
+```cpp
+template<class T>
+    void swap(weak_ptr<T>& a, weak_ptr<T>& b) noexcept;
+```
+
+#### <a name="parameters"></a>Paramètres
+
+*WP*\
 Pointeur faible à échanger.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La fonction membre laisse la ressource à l’origine vers lequel pointée `*this` par la suite vers lequel pointe *wp*et la ressource à l’origine vers lequel pointé *wp* par la suite vers lequel pointe `*this`. La fonction ne change pas les décomptes de références pour les deux ressources, et ne lève aucune exception.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemples
 
 ```cpp
 // std__memory__weak_ptr_swap.cpp
@@ -456,7 +458,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="use_count"></a>  use_count
+### <a name="use_count"></a> use_count
 
 Compte le nombres d'objets `shared_ptr` désignés.
 
@@ -464,11 +466,11 @@ Compte le nombres d'objets `shared_ptr` désignés.
 long use_count() const;
 ```
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La fonction membre retourne le nombre d’objets `shared_ptr` qui détiennent la ressource désignée par `*this`.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // std__memory__weak_ptr_use_count.cpp
@@ -496,9 +498,9 @@ wp.use_count() == 1
 wp.use_count() == 2
 ```
 
-## <a name="weak_ptr"></a>  weak_ptr
+### <a name="weak_ptr"></a> weak_ptr
 
-Construit un objet `weak_ptr`.
+Construit un objet `weak_ptr`. Inclut également un destructeur.
 
 ```cpp
 weak_ptr();
@@ -506,28 +508,30 @@ weak_ptr();
 weak_ptr(const weak_ptr& wp);
 
 template <class Other>
-weak_ptr(const weak_ptr<Other>& wp);
+    weak_ptr(const weak_ptr<Other>& wp);
 
 template <class Other>
-weak_ptr(const shared_ptr<Other>& sp);
+    weak_ptr(const shared_ptr<Other>& sp);
+
+~weak_ptr();
 ```
 
-### <a name="parameters"></a>Paramètres
+#### <a name="parameters"></a>Paramètres
 
-*Autre*<br/>
+*Autres*\
 Type contrôlé par le pointeur partagé/faible d’argument.
 
-*wp*<br/>
+*WP*\
 Pointeur faible à copier.
 
-*sp*<br/>
+*SP*\
 Pointeur partagé à copier.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Chaque constructeur construit un objet qui pointe vers la ressource nommée par la séquence d’opérandes.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemples
 
 ```cpp
 // std__memory__weak_ptr_construct.cpp
@@ -559,7 +563,3 @@ wp0.expired() == true
 *wp1.lock() == 5
 *wp2.lock() == 5
 ```
-
-## <a name="see-also"></a>Voir aussi
-
-[shared_ptr, classe](../standard-library/shared-ptr-class.md)<br/>

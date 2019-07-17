@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: 1b0d3282075246f3b217f0c8acac19ed8ece79cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f859c2e11d8a800c44b93e69e4b862300c6d3a13
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224088"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245766"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
 Définit les primitives des itérateurs, les itérateurs prédéfinis et les itérateurs de flux, ainsi que plusieurs modèles de prise en charge. Les itérateurs prédéfinis incluent des adaptateurs d'insertion et d'inversion. Il existe trois classes d'adaptateurs d'itérateur d'insertion : avant, arrière et général. Ils fournissent une sémantique d'insertion, différente de la sémantique de remplacement que les itérateurs de fonctions membres de conteneurs fournissent.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Configuration requise
 
-```cpp
-#include <iterator>
-```
+**En-tête :** \<iterator>
+
+**Espace de noms :** std
 
 ## <a name="remarks"></a>Notes
 
@@ -42,17 +42,23 @@ Les itérateurs qui ont des exigences supérieures et disposent d'un accès plus
 
 Visual Studio ajoute des extensions aux itérateurs de la bibliothèque C++ standard pour prendre en charge diverses situations en mode débogage pour les itérateurs vérifiés et non vérifiés. Pour plus d’informations, consultez [bibliothèques sécurisées : C++Bibliothèque standard](../standard-library/safe-libraries-cpp-standard-library.md).
 
+## <a name="members"></a>Membres
+
 ### <a name="functions"></a>Fonctions
 
-|Fonction|Description|
+|||
 |-|-|
 |[advance](../standard-library/iterator-functions.md#advance)|Incrémente un itérateur d'un nombre spécifié de positions.|
 |[back_inserter](../standard-library/iterator-functions.md#back_inserter)|Crée un itérateur qui peut insérer des éléments à la fin d'un conteneur spécifié.|
 |[begin](../standard-library/iterator-functions.md#begin)|Récupère un itérateur sur le premier élément d'un conteneur spécifié.|
 |[cbegin](../standard-library/iterator-functions.md#cbegin)|Récupère un itérateur constant sur le premier élément d'un conteneur spécifié.|
 |[cend](../standard-library/iterator-functions.md#cend)|Récupère un itérateur constant sur l'élément qui suit le dernier élément dans le conteneur spécifié.|
+|[crbegin](../standard-library/iterator-functions.md#crbegin)||
+|[crend](../standard-library/iterator-functions.md#crend)||
+|[data](../standard-library/iterator-functions.md#data)||
 |[distance](../standard-library/iterator-functions.md#distance)|Détermine le nombre d'incréments entre les positions traitées par deux itérateurs.|
 |[end](../standard-library/iterator-functions.md#end)|Récupère un itérateur de l'élément qui suit le dernier élément dans le conteneur spécifié.|
+|[empty](../standard-library/iterator-functions.md#empty)||
 |[front_inserter](../standard-library/iterator-functions.md#front_inserter)|Crée un itérateur qui peut insérer des éléments à l'avant d'un conteneur spécifié.|
 |[inserter](../standard-library/iterator-functions.md#inserter)|Adaptateur d'itérateur qui ajoute un nouvel élément à un conteneur à un point d'insertion donné.|
 |[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|Crée un [checked_array_iterator](../standard-library/checked-array-iterator-class.md) qui peut être utilisé par d’autres algorithmes. **Remarque :**  Cette fonction est une extension Microsoft de la bibliothèque standard C++. Le code implémenté à l’aide de cette fonction ne peut pas être utilisé dans les environnements de build C++ standard qui ne prennent pas en charge cette extension Microsoft.|
@@ -60,10 +66,13 @@ Visual Studio ajoute des extensions aux itérateurs de la bibliothèque C++ stan
 |[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|Crée un [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) qui peut être utilisé par d’autres algorithmes. **Remarque :**  Cette fonction est une extension Microsoft de la bibliothèque standard C++. Le code implémenté à l’aide de cette fonction ne peut pas être utilisé dans les environnements de build C++ standard qui ne prennent pas en charge cette extension Microsoft.|
 |[next](../standard-library/iterator-functions.md#next)|Itère un nombre de fois donné et retourne la nouvelle position de l'itérateur.|
 |[prev](../standard-library/iterator-functions.md#prev)|Itère en sens inverse un nombre de fois donné et retourne la nouvelle position de l'itérateur.|
+|[rbegin](../standard-library/iterator-functions.md#rbegin)||
+|[rend](../standard-library/iterator-functions.md#rend)||
+|[size](../standard-library/iterator-functions.md#size)||
 
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|||
 |-|-|
 |[!=, opérateur](../standard-library/iterator-operators.md#op_neq)|Teste si l'objet itérateur situé à gauche de l'opérateur n'est pas égal à l'objet itérateur situé à droite.|
 |[operator==](../standard-library/iterator-operators.md#op_eq_eq)|Teste si l'objet itérateur situé à gauche de l'opérateur est égal à l'objet itérateur situé à droite.|
@@ -76,7 +85,7 @@ Visual Studio ajoute des extensions aux itérateurs de la bibliothèque C++ stan
 
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|||
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|Cette classe de modèle décrit un objet itérateur de sortie. Elle insère des éléments dans un conteneur de type `Container`, auquel elle accède via l’élément protégé `pointer` objet qu’elle stocke appelé conteneur.|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Une classe qui fournit un type de retour pour une `iterator_category` fonction qui représente un itérateur bidirectionnel.|

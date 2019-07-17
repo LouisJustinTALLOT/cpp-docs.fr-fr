@@ -7,12 +7,12 @@ helpviewer_keywords:
 - bad_weak_ptr
 - bad_weak_ptr class
 ms.assetid: a09336d5-7237-4480-ab6b-3787e0e6025e
-ms.openlocfilehash: 78438ef3378e5002396eecb32b9b7a76d5b50325
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ea29f12a8a86bd6b58c5051645182d69ff43389
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377489"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246185"
 ---
 # <a name="badweakptr-class"></a>bad_weak_ptr, classe
 
@@ -23,7 +23,6 @@ Signale une exception weak_ptr incorrecte.
 ```cpp
 class bad_weak_ptr : public std::exception
 {
-public:
     bad_weak_ptr();
     const char *what() throw();
 };
@@ -33,7 +32,7 @@ public:
 
 La classe décrit une exception qui peut être levée à partir du constructeur de [classe shared_ptr](../standard-library/shared-ptr-class.md) qui accepte un argument de type [classe weak_ptr](../standard-library/weak-ptr-class.md). La fonction membre `what` retourne `"bad_weak_ptr"`.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // std__memory__bad_weak_ptr.cpp
@@ -70,12 +69,6 @@ int main()
 ```Output
 bad weak pointer
 ```
-
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<memory>
-
-**Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 

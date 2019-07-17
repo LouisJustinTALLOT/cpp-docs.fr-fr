@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9c4efa145455240c4420a51c4a01662a30dc0761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bf5f0231fbc5b694c1f4ae507feb82b0d19d600
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405129"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240755"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt;, énumérations
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valeurs
 
-|Nom|Value|Description|
+|Nom|`Value`|Description|
 |----------|-----------|-----------------|
 |`not_found`|-1|Représente un fichier qui n'existe pas.|
 |`none`|0|Représente un fichier qui n'a aucun attribut de type. (Non pris en charge.)|
@@ -115,10 +115,18 @@ enum class file_type {
 |`directory`|2|Représente un répertoire.|
 |`symlink`|3|Représente un lien symbolique. (Non pris en charge.)|
 |`block`|4|Représente un fichier spécial de bloc sur les systèmes UNIX. (Non pris en charge.)|
-|`character`|5|Représente un fichier spécial de caractères sur les systèmes UNIX. (Non pris en charge.)|
-|`fifo`|6|Représente un fichier FIFO sur les systèmes UNIX. (Non pris en charge.)|
+|`character`|5\.|Représente un fichier spécial de caractères sur les systèmes UNIX. (Non pris en charge.)|
+|`fifo`|6\.|Représente un fichier FIFO sur les systèmes UNIX. (Non pris en charge.)|
 |`socket`|7|Représente un socket sur les systèmes UNIX. (Non pris en charge.)|
 |`unknown`|8|Représente un fichier dont l'état ne peut pas être déterminé.|
+
+## <a name="perm_options"></a>  perm_options
+
+Inclut les valeurs `replace`, `add`, `remove`, et `nofollow`.
+
+```cpp
+enum class perm_options;
+```
 
 ## <a name="perms"></a>  perms
 

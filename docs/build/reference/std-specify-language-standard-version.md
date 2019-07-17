@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 0f45727c61d55ff57befc7ff23a3d434e86673bc
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 9bdeb92e03b3ae00258ac48a29cec42ef7e18e81
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837528"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241213"
 ---
 # <a name="std-specify-language-standard-version"></a>/std (Spécifier la version de la norme du langage)
 
@@ -21,9 +21,9 @@ Activez les fonctionnalités du langage C++ prises en charge dans la version sp�
 
 > /std:\[c++14\|c++17\|c++latest]
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
-L’option **/std** est disponible dans Visual Studio 2017 et ultérieur. Elle sert à contrôler les fonctionnalités de la norme du langage de programmation C++ spécifiques à une version ISO qui sont activées durant la compilation de votre code. Cette option vous permet de désactiver la prise en charge de certaines nouvelles fonctionnalités de langage et de bibliothèque susceptibles de casser votre code existant si celui-ci est conforme à une version particulière de la norme du langage. Spécifiée par défaut, l’option **/std:c++14** désactive les fonctionnalités de langage et de bibliothèque standard présentes dans les versions ultérieures de la norme du langage C++. Utilisez **/std:c++17** pour activer les fonctionnalités et le comportement spécifiques à la norme C++17. Pour activer explicitement les fonctionnalités de compilateur et de bibliothèque standard actuellement implémentées et figurant dans le prochain brouillon de la norme, utilisez **/std:c++latest**. Toutes les fonctionnalités C++20 nécessitent **/std:latest** ; une fois l’implémentation terminée, une nouvelle option **/std:c++20** est activée.
+L’option **/std** est disponible dans Visual Studio 2017 et ultérieur. Elle sert à contrôler les fonctionnalités de la norme du langage de programmation C++ spécifiques à une version ISO qui sont activées durant la compilation de votre code. Cette option vous permet de désactiver la prise en charge de certaines nouvelles fonctionnalités de langage et de bibliothèque susceptibles de casser votre code existant si celui-ci est conforme à une version particulière de la norme du langage. Spécifiée par défaut, l’option **/std:c++14** désactive les fonctionnalités de langage et de bibliothèque standard présentes dans les versions ultérieures de la norme du langage C++. Utilisez **/std:c++17** pour activer les fonctionnalités et le comportement spécifiques à la norme C++17. Pour activer explicitement les fonctionnalités de compilateur et de bibliothèque standard actuellement implémentées et figurant dans le prochain brouillon de la norme, utilisez **/std:c++latest**. Nécessitent des fonctionnalités C ++ 20 tous les **/std : c ++ dernière**; lorsque l’implémentation est terminée, un nouveau **/std : c ++ 20** option est activée.
 
 L’option par défaut **/std:c++14** active l’ensemble des fonctionnalités C++14 implémentées par le compilateur MSVC. Cette option désactive la prise en charge par le compilateur et la bibliothèque standard des fonctionnalités qui ont été changées ou introduites dans les versions plus récentes de la norme du langage, à l’exception de certaines fonctionnalités C++17 déjà implémentées dans les versions précédentes du compilateur MSVC. Pour éviter que les utilisateurs ayant déjà créé des dépendances sur les fonctionnalités disponibles à compter de Visual Studio 2015 Update 2 ne subissent de changements cassants, ces fonctionnalités restent activées quand l’option **/std:c++14** est spécifiée :
 
@@ -57,9 +57,9 @@ Les options **/std:c++14** et **/std:c++latest** sont disponibles à compter de 
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour obtenir des informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez **Propriétés de configuration**, **C/C++**, **Langage**.
+1. Sélectionnez **Propriétés de configuration**, **C/C++** , **Langage**.
 
-1. Dans **Norme du langage C++**, choisissez la norme de langage à prendre en charge dans le contrôle déroulant, puis choisissez **OK** or **Appliquer** pour enregistrer vos changements.
+1. Dans **Norme du langage C++** , choisissez la norme de langage à prendre en charge dans le contrôle déroulant, puis choisissez **OK** or **Appliquer** pour enregistrer vos changements.
 
 ## <a name="see-also"></a>Voir aussi
 

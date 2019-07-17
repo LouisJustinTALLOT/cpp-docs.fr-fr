@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C++], bad_cast
 - bad_cast keyword [C++]
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
-ms.openlocfilehash: 028fa8cc90b33aca6a37fb3b7f58b8c5fad81bd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b40f64671e7c259b7dc04b31a11d20d0fc76c5c4
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284771"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68242392"
 ---
 # <a name="badcast-exception"></a>bad_cast, exception
 
@@ -31,12 +31,7 @@ catch (bad_cast)
 L’interface pour **bad_cast** est :
 
 ```cpp
-class bad_cast : public exception {
-public:
-   bad_cast(const char * _Message = "bad cast");
-   bad_cast(const bad_cast &);
-   virtual ~bad_cast();
-};
+class bad_cast : public exception
 ```
 
 Le code suivant contient un exemple d’un échec **dynamic_cast** qui lève la **bad_cast** exception.
@@ -81,6 +76,49 @@ Puis changez le sens du cast dans le **essayez** bloquer comme suit :
 
 ```cpp
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
+```
+
+## <a name="members"></a>Membres
+
+### <a name="constructors"></a>Constructeurs
+
+|Constructeur|Description|
+|-|-|
+|[bad_cast](#bad_cast)|Constructeur des objets de type `bad_cast`.|
+
+### <a name="functions"></a>Fonctions
+
+|Fonction|Description|
+|-|-|
+|[what](#what)|TBD|
+
+### <a name="operators"></a>Opérateurs
+
+|Opérateur|Description|
+|-|-|
+|[operator=](#op_eq)|Un opérateur d’assignation qui assigne un `bad_cast` objet vers un autre.|
+
+## <a name="bad_cast"></a> bad_cast
+
+Constructeur des objets de type `bad_cast`.
+
+```cpp
+bad_cast(const char * _Message = "bad cast");
+bad_cast(const bad_cast &);
+```
+
+## <a name="op_eq"></a> opérateur =
+
+Un opérateur d’assignation qui assigne un `bad_cast` objet vers un autre.
+
+```cpp
+bad_cast& operator=(const bad_cast&) noexcept;
+```
+
+## <a name="what"></a> ce que
+
+```cpp
+const char* what() const noexcept override;
 ```
 
 ## <a name="see-also"></a>Voir aussi

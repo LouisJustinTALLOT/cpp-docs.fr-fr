@@ -7,12 +7,12 @@ helpviewer_keywords:
 - logical_or class
 - logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
-ms.openlocfilehash: d9a4bf5b72a134bf166fe9297aaa41610718aa8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec3637c1d5a2d0d916aec012783cecd37a179468
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413084"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246450"
 ---
 # <a name="logicalor-struct"></a>logical_or (struct)
 
@@ -39,12 +39,13 @@ struct logical_or<void>
 
 ### <a name="parameters"></a>Paramètres
 
-*Type*, *T*, *U* n’importe quel type qui prend en charge un `operator||` qui accepte des opérandes des types spécifiés ou inférés.
+*Type*, *T*, *U*\
+Tout type qui prend en charge un `operator||` qui accepte des opérandes des types spécifiés ou inférés.
 
-*Gauche*<br/>
+*Gauche*\
 Opérande gauche de l’opération de disjonction logique. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
 
-*Droite*<br/>
+*Oui*\
 Opérande droit de l’opération de disjonction logique. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -104,23 +105,13 @@ int main( )
       cout << *iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 Original deque:
 d1 = ( true true false false true false false )
 Original deque:
 d2 = ( false false false true true true true )
 The deque which is the disjuction of d1 & d2 is:
 d3 = ( true true false true true true true )
-*/
 ```
-
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<functional>
-
-**Espace de noms :** std
-
-## <a name="see-also"></a>Voir aussi
-
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

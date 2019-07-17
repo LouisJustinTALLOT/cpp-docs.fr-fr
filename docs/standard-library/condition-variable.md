@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: 3ce9125a13f0dd2f2e4f98a217c4373f2be2f8a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed98966f651df76078fa47b05f5a2d8ae1b71d05
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212064"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244576"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -17,11 +17,11 @@ Définit les classes [condition_variable](../standard-library/condition-variable
 
 Cet en-tête utilise le runtime d’accès concurrentiel (ConcRT) pour pouvoir l’utiliser avec d’autres mécanismes ConcRT. Pour plus d’informations sur ConcRT, consultez [Runtime d’accès concurrentiel](../parallel/concrt/concurrency-runtime.md).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Configuration requise
 
-```cpp
-#include <condition_variable>
-```
+**En-tête :** \<condition_variable >
+
+**Espace de noms :** std
 
 > [!NOTE]
 > Dans le code est compilé à l’aide de **/CLR**, cet en-tête est bloqué.
@@ -56,6 +56,14 @@ Chaque classe a également deux méthodes sont utilisées pour informer une vari
 - `notify_one` éveille un des threads en attente de la variable conditionnelle.
 
 - `notify_all` éveille tous les threads en attente de la variable conditionnelle.
+
+## <a name="functions-and-enums"></a>Fonctions et des énumérations
+
+```cpp
+void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
+
+enum class cv_status { no_timeout, timeout };
+```
 
 ## <a name="see-also"></a>Voir aussi
 

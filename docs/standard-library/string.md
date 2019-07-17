@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 3d84f4707af33f44a930f7f67b7f751e2ead627c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f3874b1d439326c97b015007ad8d5ede06341f7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412304"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245390"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -61,6 +61,7 @@ Le langage C++ et la bibliothèque standard C++ prennent en charge deux types de
 
 |||
 |-|-|
+|[hash]()||
 |[swap](../standard-library/string-functions.md#swap)|Échange les tableaux de caractères de deux chaînes.|
 |[stod](../standard-library/string-functions.md#stod)|Convertit une séquence de caractères à un **double**.|
 |[stof](../standard-library/string-functions.md#stof)|Convertit une séquence de caractères à un **float**.|

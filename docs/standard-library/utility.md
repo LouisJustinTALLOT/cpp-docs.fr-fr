@@ -6,51 +6,72 @@ f1_keywords:
 helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-ms.openlocfilehash: 3e3904bda2a20392724f86df2443cd71a14a1ad6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76b04c3c26f6ec49f1d816feaeec7e21312d79a9
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168256"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246279"
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
 
 Définit des types, des fonctions et des opérateurs de la bibliothèque standard C++ qui aident à construire et à gérer des paires d’objets qui sont utiles quand deux objets doivent être traités comme s’ils n’en étaient qu’un seul.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Configuration requise
 
-```cpp
-#include <utility>
-```
+**En-tête :** \<utility>
+
+**Espace de noms :** std
 
 ## <a name="remarks"></a>Notes
 
 Les paires sont largement utilisées dans la bibliothèque standard C++. Elles sont nécessaires comme arguments et valeurs de retour pour diverses fonctions et comme types d’éléments pour des conteneurs tels que la [classe map](../standard-library/map-class.md) et la [classe multimap](../standard-library/multimap-class.md). L’en-tête \<utility> est inclus automatiquement par \<map> pour aider à gérer leurs éléments de type paire clé/valeur.
 
+> [!NOTE]
+> Le \<utilitaire > en-tête utilise l’instruction `#include <initializer_list>`. Il fait également référence aux `class tuple` tel que défini dans \<tuple >.
+
+## <a name="members"></a>Membres
+
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|||
 |-|-|
+|[chars_format](../standard-library/chars-format-class.md)|Format à virgule flottante pour la conversion numérique primitive.|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|Classe qui encapsule le type d'un élément `pair`.|
 |[tuple_size](../standard-library/tuple-size-class-tuple.md)|Classe qui encapsule le nombre d'éléments `pair`.|
 
+### <a name="objects"></a>Objets
+
+|||
+|-|-|
+|[index_sequence](../standard-library/utility-functions.md#index_sequence)||
+|[index_sequence_for](../standard-library/utility-functions.md#index_sequence_for)||
+|[make_index_sequence](../standard-library/utility-functions.md#make_index_sequence)||
+|[make_integer_sequence](../standard-library/utility-functions.md#make_integer_sequence)||
+
 ### <a name="functions"></a>Fonctions
 
-|Fonction|Description|
+|||
 |-|-|
+|[as_const](../standard-library/utility-functions.md#asconst)|Retourne le type.|
+|[declval](../standard-library/utility-functions.md#declval)|Évaluation de l’expression abrégée.|
+|[exchange](../standard-library/utility-functions.md#exchange)|Assigne une nouvelle valeur à un objet et retourne son ancienne valeur.|
 |[forward](../standard-library/utility-functions.md#forward)|Empêche que le type de référence (`lvalue` ou `rvalue`) de l'argument ne soit masqué par le transfert parfait.|
+|[from_chars](../standard-library/utility-functions.md#from_chars)||
 |[get](../standard-library/utility-functions.md#get)|Fonction qui obtient un élément d'un objet `pair`.|
 |[make_pair](../standard-library/utility-functions.md#make_pair)|Fonction d'assistance de modèle qui sert à construire des objets de type `pair`, où les types de composants sont basés sur les types de données passés comme paramètres.|
 |[move](../standard-library/utility-functions.md#move)|Retourne l'argument passé comme référence `rvalue`.|
+|[move_if_noexcept](../standard-library/utility-functions.md#moveif)||
 |[swap](../standard-library/utility-functions.md#swap)|Échange les éléments de deux objets `pair`.|
+|[to_chars](../standard-library/utility-functions.md#to_chars)|Convertit la valeur dans une chaîne de caractères.|
 
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|||
 |-|-|
 |[!=, opérateur](../standard-library/utility-operators.md#op_neq)|Teste si l'objet pair situé à gauche de l'opérateur n'est pas égal à l'objet pair situé à droite.|
 |[operator==](../standard-library/utility-operators.md#op_eq_eq)|Teste si l'objet pair situé à gauche de l'opérateur est égal à l'objet pair situé à droite.|
-|[operator<](../standard-library/utility-operators.md#op_lt)|Teste si l'objet pair situé à gauche de l'opérateur est inférieur à l'objet pair situé à droite.|
+|[operator\<](../standard-library/utility-operators.md#op_lt)|Teste si l'objet pair situé à gauche de l'opérateur est inférieur à l'objet pair situé à droite.|
 |[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|Teste si l'objet pair situé à gauche de l'opérateur est inférieur ou égal à l'objet pair situé à droite.|
 |[operator>](../standard-library/utility-operators.md#op_gt)|Teste si l'objet pair situé à gauche de l'opérateur est supérieur à l'objet pair situé à droite.|
 |[operator>=](../standard-library/utility-operators.md#op_gt_eq)|Teste si l'objet pair situé à gauche de l'opérateur est supérieur ou égal à l'objet pair situé à droite.|
@@ -59,8 +80,13 @@ Les paires sont largement utilisées dans la bibliothèque standard C++. Elles s
 
 |||
 |-|-|
-|[identity](../standard-library/identity-structure.md)||
+|[from_chars_result](../standard-library/from-chars-result-structure.md)|Un struct utilisé pour `from_chars`.|
+|[identity](../standard-library/identity-structure.md)|Struct qui fournit une définition de type comme paramètre de modèle.|
+|[in_place_t](../standard-library/in-place-t-struct.md)|Inclut également des structs `in_place_type_t` et `in_place_index_t`.|
+|[integer_sequence](../standard-library/integer-sequence-class.md)|Représente une séquence d'entiers.|
 |[pair](../standard-library/pair-structure.md)|Struct qui permet de traiter deux objets comme s'il s'agissait d'un objet unique.|
+|[piecewise_construct_t](../standard-library/piecewise-construct-t-structure.md)|Un type utilisé pour conserver le constructeur distinct et la surcharge de fonction.|
+|[to_chars_result](../standard-library/to-chars-result-structure.md)|Un struct utilisé pour `to_chars`.|
 
 ## <a name="see-also"></a>Voir aussi
 

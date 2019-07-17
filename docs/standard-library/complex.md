@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d4330f8b0fcbce940f6647ebb8920f0b1969b6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212090"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244686"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
 Définit la classe de modèle de conteneur `complex` et ses modèles de prise en charge.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Configuration requise
 
-```cpp
-#include <complex>
-```
+**En-tête** : \<complex>
+
+**Espace de noms :** std
 
 ## <a name="remarks"></a>Notes
 
@@ -42,9 +42,9 @@ L'ensemble de nombres complexes avec les opérations d'addition complexe et de m
 
    (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
 
-En représentant un nombre complexe *z* = (*un*, *b*) sous la forme *z* = *un*  +  *bi*, où *je*<sup>2</sup> = -1, les règles pour l’algèbre de l’ensemble de nombres réels peut être appliquée à l’ensemble de nombres complexes et à leurs composants. Exemple :
+En représentant un nombre complexe *z* = (*un*, *b*) sous la forme *z* = *un*  +  *bi*, où *je*<sup>2</sup> = -1, les règles pour l’algèbre de l’ensemble de nombres réels peut être appliquée à l’ensemble de nombres complexes et à leurs composants. Par exemple :
 
-   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2 - 6) + (3 + 4)*i* = -4 + 7*i*
+   (1 + 2*je*) \* (2 + 3*je*) = 1 \* (2 + 3*je*) + 2*je* \* (2 + 3*i*) = (2 + 3*je*) + (4*je* + 6*je*<sup>2</sup>) = (2-6) + (3 + 4)*je* = -4 + 7*je*
 
 Le système des nombres complexes est un domaine, mais il n'est pas un domaine ordonné. Il n’existe aucun classement de nombres complexes qu’il existe pour le champ de nombres réels et ses sous-ensembles, donc les inégalités ne peuvent pas être appliquées aux nombres complexes, tels qu’ils sont en nombres réels.
 
@@ -68,12 +68,20 @@ Les termes utilisés dans ces représentations standard d'un nombre complexe s'e
 
 Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs sont requises pour retourner une valeur principale pour leurs arguments supérieur à - π et inférieur à ou égal à + π laissez-les unique table. Tous les angles doivent être exprimées en radians, où il n’y 2π radians (360 degrés) dans un cercle.
 
+## <a name="members"></a>Membres
+
 ### <a name="functions"></a>Fonctions
 
-|Fonction|Description|
+|||
 |-|-|
 |[abs](../standard-library/complex-functions.md#abs)|Calcule le module d'un nombre complexe.|
+|[acos](../standard-library/complex-functions.md#acos)||
+|[acosh](../standard-library/complex-functions.md#acosh)||
 |[arg](../standard-library/complex-functions.md#arg)|Extrait l’argument d’un nombre complexe.|
+|[asin](../standard-library/complex-functions.md#asin)||
+|[asinh](../standard-library/complex-functions.md#asinh)||
+|[atan](../standard-library/complex-functions.md#atan)||
+|[atanh](../standard-library/complex-functions.md#atanh)||
 |[conj](../standard-library/complex-functions.md#conj)|Retourne le conjugué complexe d'un nombre complexe.|
 |[cos](../standard-library/complex-functions.md#cos)|Retourne le cosinus d'un nombre complexe.|
 |[cosh](../standard-library/complex-functions.md#cosh)|Retourne le cosinus hyperbolique d'un nombre complexe.|
@@ -84,6 +92,7 @@ Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs
 |[norm](../standard-library/complex-functions.md#norm)|Extrait la norme d'un nombre complexe.|
 |[polar](../standard-library/complex-functions.md#polar)|Retourne le nombre complexe qui correspond à un module et à un argument spécifiés, au format cartésien.|
 |[pow](../standard-library/complex-functions.md#pow)|Évalue le nombre complexe obtenu en élevant une base qui est un nombre complexe à la puissance d'un autre nombre complexe.|
+|[proj](../standard-library/complex-functions.md#proj)||
 |[real](../standard-library/complex-functions.md#real)|Extrait le composant réel d'un nombre complexe.|
 |[sin](../standard-library/complex-functions.md#sin)|Retourne le sinus d'un nombre complexe.|
 |[sinh](../standard-library/complex-functions.md#sinh)|Retourne le sinus hyperbolique d'un nombre complexe.|
@@ -93,7 +102,7 @@ Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs
 
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|||
 |-|-|
 |[!=, opérateur](../standard-library/complex-operators.md#op_neq)|Vérifie l'inégalité entre deux nombres complexes, l'un d'entre eux ou les deux pouvant appartenir au sous-ensemble du type pour les parties réelles et imaginaires.|
 |[operator*](../standard-library/complex-operators.md#op_star)|Multiplie deux nombres complexes, l'un d'entre eux ou les deux pouvant appartenir au sous-ensemble du type pour les parties réelles et imaginaires.|
@@ -106,7 +115,7 @@ Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs
 
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|||
 |-|-|
 |[complex\<double>](../standard-library/complex-double.md)|La classe de modèle explicitement spécialisée décrit un objet qui stocke une paire ordonnée d’objets, tous deux de type **double**, où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
 |[complex\<float>](../standard-library/complex-float.md)|La classe de modèle explicitement spécialisée décrit un objet qui stocke une paire ordonnée d’objets, tous deux de type **float**, où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|

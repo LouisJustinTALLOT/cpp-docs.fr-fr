@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: b8b50e04e530e2d21b7a4e042d9feb2984e639db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0836ed683b398981e95e401a73ded6367c7ab472
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411862"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241817"
 ---
 # <a name="tupleelement-class"></a>tuple_element, classe
 
@@ -56,22 +56,22 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Paramètres
 
-*Index*<br/>
+*Index*\
 Index de l’élément désigné.
 
-*Tuple*<br/>
+*Tuple*\
 Type du tuple.
 
-*Elem*<br/>
+*Elem*\
 Type d’un élément de tableau.
 
-*Taille*<br/>
+*Taille*\
 Taille du tableau.
 
-*T1*<br/>
+*T1*\
 Le type du premier élément dans une paire.
 
-*T2*<br/>
+*T2*\
 Le type du second élément d’une paire.
 
 ## <a name="remarks"></a>Notes
@@ -86,7 +86,7 @@ Les spécialisations de modèle pour les types `pair` fournissent chacune un typ
 
 Utilisez le [get, fonction &lt;utilitaire&gt; ](../standard-library/utility-functions.md#get) pour retourner l’élément à une position spécifiée, ou d’un type spécifié.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 #include <tuple>
@@ -111,7 +111,7 @@ int main() {
 0 1.5 Tail
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 #include <array>
@@ -181,7 +181,3 @@ int main() {
 **En-tête :** \<utilitaire > (pour les spécialisations de paire)
 
 **Espace de noms :** std
-
-## <a name="see-also"></a>Voir aussi
-
-[tuple ](../standard-library/tuple-class.md)<br/>

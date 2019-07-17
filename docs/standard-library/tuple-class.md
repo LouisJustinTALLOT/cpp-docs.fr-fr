@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 7e85ad445743cc02ba078eb3c09342f69915c09c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aca5cc90566fb1fa602b96568d4cda9dd5ab26b9
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279051"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241824"
 ---
 # <a name="tuple-class"></a>tuple, classe
 
@@ -22,7 +22,6 @@ Encapsule une séquence d’éléments de longueur fixe.
 
 ```
 class tuple {
-public:
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
    tuple(const tuple&);
@@ -37,19 +36,19 @@ public:
       tuple& operator=(const tuple<U1, U2, ..., UN>&);
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
-   };
+};
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*TN*<br/>
+*TN*\
 Type du Nième élément de tuple.
 
 ## <a name="remarks"></a>Notes
 
 La classe de modèle décrit un objet qui stocke des objets de N de types `T1`, `T2`,..., `TN`, respectivement, où `0 <= N <= Nmax`. L’étendue d’une instance de tuple `tuple<T1, T2, ..., TN>` correspond au nombre `N` de ses arguments template. L’index de l’argument template `Ti` et de la valeur stockée correspondante de ce type est `i - 1`. Par conséquent, pendant que nous numéroter les types à partir de 1 à N dans cette documentation, l’index correspondant les valeurs comprises entre 0 et N - 1.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // tuple.cpp
@@ -117,13 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<tuple>
-
-**Espace de noms :** std
-
-## <a name="op_eq"></a>  tuple::operator=
+## <a name="op_eq"></a> opérateur =
 
 Assigne un objet `tuple`.
 
@@ -144,10 +137,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Paramètres
 
-*ANNULER*<br/>
+*ANNULER*\
 Type du Nième élément de tuple copié.
 
-*right*<br/>
+*Oui*\
 Tuple à partir duquel effectuer la copie.
 
 ### <a name="remarks"></a>Notes
@@ -156,7 +149,7 @@ Les deux premiers opérateurs membres assignent les éléments de *droit* aux é
 
 Les opérateurs membres restants sont analogues aux précédents, mais avec le [déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // std__tuple__tuple_operator_as.cpp
@@ -196,7 +189,7 @@ int main()
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -205,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a>  tuple:swap
+## <a name="tuple_swap"></a> échange
 
 Échange les éléments de deux tuples.
 
@@ -216,16 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*left*|Un tuple dont les éléments doivent être échangés avec ceux du tuple *droit*.|
-|*right*|Un tuple dont les éléments doivent être échangés avec ceux du tuple *gauche*.|
+*Gauche*\
+Un tuple dont les éléments doivent être échangés avec ceux du tuple *droit*.
+
+*Oui*\
+Un tuple dont les éléments doivent être échangés avec ceux du tuple *gauche*.
 
 ### <a name="remarks"></a>Notes
 
 La fonction exécute `left.swap(right)`.
 
-## <a name="tuple"></a>  tuple::tuple
+## <a name="tuple"></a> Tuple
 
 Construit un objet `tuple`.
 
@@ -252,10 +246,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Paramètres
 
-*ANNULER*<br/>
+*ANNULER*\
 Type du Nième élément de tuple copié.
 
-*right*<br/>
+*Oui*\
 Tuple à partir duquel effectuer la copie.
 
 ### <a name="remarks"></a>Notes
@@ -338,8 +332,3 @@ x 4
 0 1 2 3
 4 5 6 7
 ```
-
-## <a name="see-also"></a>Voir aussi
-
-[\<tuple>](../standard-library/tuple.md)<br/>
-[make_tuple](../standard-library/tuple-functions.md#make_tuple)<br/>

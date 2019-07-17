@@ -9,22 +9,22 @@ helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: 317344db856a7a0568aca422ecfe8280b80db097
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a72941c7b8c351f7b4fb8fa0e40afb809ea7cbe
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159416"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243759"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
 Définit les fonctions de bibliothèque C++ Standard qui aident à construire *objets de fonction*, également appelé *functors*et leurs binders. Un objet de fonction est un objet d'un type qui définit `operator()`. Un objet de fonction peut être un pointeur fonction, mais en général il sert à stocker des informations supplémentaires accessibles pendant un appel de fonction.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Configuration requise
 
-```cpp
-#include <functional>
-```
+**En-tête :** \<functional>
+
+**Espace de noms :** std
 
 ## <a name="remarks"></a>Notes
 
@@ -72,18 +72,23 @@ Si un wrapper d’appel a un *type de résultat faible*, le type de son type mem
 
 Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de copie. Un *wrapper d’appel simple* est un wrapper d’appel qui a un opérateur d’assignation et dont le constructeur de copie, le constructeur de déplacement et l’opérateur d’assignation ne lèvent pas d’exceptions. Un *wrapper d’appel de transfert* est un wrapper d’appel qui peut être appelé à l’aide d’une liste d’arguments arbitraires et qui remet les arguments à l’objet pouvant être appelé inclus dans un wrapper comme références. Tous les arguments rvalue sont remis en tant que références rvalue et les arguments lvalue sont remis en tant que références lvalue.
 
-## <a name="classes"></a>Classes
+## <a name="members"></a>Membres
 
-|Classe|Description|
+### <a name="classes"></a>Classes
+
+|||
 |-|-|
 |[bad_function_call](../standard-library/bad-function-call-class.md)|Classe qui décrit une exception levée pour indiquer qu’un appel à `operator()` sur un objet [function](../standard-library/function-class.md) a échoué car l’objet est vide.|
 |[binary_negate](../standard-library/binary-negate-class.md)|Classe de modèle fournissant une fonction membre qui inverse la valeur de retour d'une fonction binaire spécifiée.<br/> (Déconseillé dans C ++ 17). |
 |[binder1st](../standard-library/binder1st-class.md)|Classe de modèle fournissant un constructeur qui convertit un objet de fonction binaire en objet de fonction unaire en liant le premier argument de la fonction binaire à une valeur spécifiée.<br/> (Déconseillé dans C ++ 11, est supprimée dans C ++ 17). |
 |[binder2nd](../standard-library/binder2nd-class.md)|Classe de modèle fournissant un constructeur qui convertit un objet de fonction binaire en objet de fonction unaire en liant le second argument de la fonction binaire à une valeur spécifiée.<br/> (Déconseillé dans C ++ 11, est supprimée dans C ++ 17). |
+|[boyer_moore_horspool_searcher](../standard-library/boyer-moore-horspool-searcher-class.md)||
+|[boyer_moore_searcher](../standard-library/boyer-moore-searcher-class.md)||
 |[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|Classe d’adaptateur qui permet à une fonction membre const qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de référence.<br/> (Déconseillé dans C ++ 11, est supprimée dans C ++ 17). |
 |[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|Classe d’adaptateur qui permet à une fonction membre const qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de pointeur.<br/> (Déconseillé dans C ++ 11, est supprimée dans C ++ 17). |
 |[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|Classe d’adaptateur qui permet à une fonction membre const qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de référence.<br/> (Déconseillé dans C ++ 11, est supprimée dans C ++ 17). |
 |[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|Classe d’adaptateur qui permet à une fonction membre const qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de pointeur.<br/> (Déconseillé dans C ++ 11, est supprimée dans C ++ 17). |
+|[default_searcher](../standard-library/default-searcher-class.md)||
 |[function](../standard-library/function-class.md)|Classe qui encapsule un objet pouvant être appelé.|
 |[hash](../standard-library/hash-class.md)|Classe qui calcule un code de hachage pour une valeur.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|Classe qui teste si un type particulier est généré en appelant `bind`.|
@@ -97,9 +102,9 @@ Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de c
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Classe qui encapsule une référence.|
 |[unary_negate](../standard-library/unary-negate-class.md)|Classe de modèle fournissant une fonction membre qui inverse la valeur de retour d'une fonction unaire spécifiée.<br/> (Déconseillé dans C ++ 17).  |
 
-## <a name="functions"></a>Fonctions
+### <a name="functions"></a>Fonctions
 
-|Fonction|Description|
+|||
 |-|-|
 |[bind](../standard-library/functional-functions.md#bind)|Lie des arguments à un objet pouvant être appelé.|
 |[bind1st](../standard-library/functional-functions.md#bind1st)|Classe de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire en liant le premier argument de la fonction binaire à une valeur spécifiée.<br/> (Déconseillé dans C ++ 11, est supprimée dans C ++ 17). |
@@ -109,6 +114,7 @@ Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de c
 |[bit_or](../standard-library/functional-functions.md#bit_or)|Retourne le résultat de l’opération OR logique au niveau du bit (opérateur &#124;) des deux paramètres.|
 |[bit_xor](../standard-library/functional-functions.md#bit_xor)|Retourne le résultat de l'opération XOR logique au niveau du bit (opérateur ^) des deux paramètres.|
 |[cref](../standard-library/functional-functions.md#cref)|Construit un `reference_wrapper` const à partir d'un argument.|
+|[invoke](../standard-library/functional-functions.md#invoke)||
 |[mem_fn](../standard-library/functional-functions.md#mem_fn)|Génère un wrapper d'appel simple.|
 |[mem_fun](../standard-library/functional-functions.md#mem_fun)|Fonctions de modèle d’assistance utilisées pour construire des adaptateurs d’objets de fonction pour des fonctions membres en cas d’initialisation avec des arguments de pointeur.<br/> (Déconseillé dans C ++ 11, est supprimée dans C ++ 17). |
 |[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Fonction de modèle d’assistance utilisée pour construire des adaptateurs d’objets de fonction pour des fonctions membres en cas d’initialisation avec des arguments de référence.|
@@ -119,9 +125,9 @@ Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de c
 |[ref](../standard-library/functional-functions.md#ref)|Construit un `reference_wrapper` à partir d'un argument.|
 |[swap](../standard-library/functional-functions.md#swap)|Échange deux objets `function`.|
 
-## <a name="structs"></a>Structs
+### <a name="structs"></a>Structs
 
-|Struct|Description|
+|||
 |-|-|
 |[binary_function](../standard-library/binary-function-struct.md)|Classe de base vide qui définit des types qui peuvent être héritées par une classe dérivée qui fournit un objet de fonction binaire.<br/> (Déconseillé dans C ++ 11, est supprimée dans C ++ 17). |
 |[divides](../standard-library/divides-struct.md)|La classe fournit un objet de fonction prédéfini qui effectue l'opération arithmétique de division sur des éléments d'un type valeur spécifié.|
@@ -141,15 +147,15 @@ Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de c
 |[plus](../standard-library/plus-struct.md)|La classe fournit un objet de fonction prédéfini qui effectue l'opération arithmétique d'addition sur des éléments d'un type valeur spécifié.|
 |[unary_function](../standard-library/unary-function-struct.md)|Classe de base vide qui définit des types qui peuvent être héritées par une classe dérivée qui fournit un objet de fonction unaire.<br/> (Déconseillé dans C ++ 11, est supprimée dans C ++ 17). |
 
-## <a name="objects"></a>Objets
+### <a name="objects"></a>Objets
 
-|Object|Description|
+|||
 |-|-|
 |[_1.._M](../standard-library/1-object.md)|Espaces réservés pour les arguments remplaçables.|
 
-## <a name="operators"></a>Opérateurs
+### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|||
 |-|-|
 |[operator==](../standard-library/functional-operators.md#op_eq_eq)|N'autorise pas la comparaison d'égalité d'objets pouvant être appelés.|
 |[!=, opérateur](../standard-library/functional-operators.md#op_neq)|N'autorise pas la comparaison d'inégalité d'objets pouvant être appelés.|

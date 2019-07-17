@@ -6,16 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 089c4fc9a9bc33809f20ad6c13048a8740c95fe0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15d13a3af35cb41950df8aeba0c86d779e701ddb
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394258"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244444"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-Inclut l’en-tête \<stddef.h> de la bibliothèque C Standard et ajoute les noms associés à l’espace de noms `std`.
+Inclut l’en-tête de la bibliothèque standard C \<stddef.h > et ajoute les noms associés à la `std` espace de noms. Inclusion de cet en-tête garantit également que les noms déclarés à l’aide d’une liaison externe dans l’en-tête de la bibliothèque standard C sont déclarés dans le `std` espace de noms.
+
+> [!NOTE]
+> \<cstddef > inclut le type **octets** et n’inclut pas type **wchar_t**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,9 +26,56 @@ Inclut l’en-tête \<stddef.h> de la bibliothèque C Standard et ajoute les no
 #include <cstddef>
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="namespace-and-macros"></a>Namespace et Macros
 
-L'inclusion de cet en-tête garantit également que les noms déclarés à l'aide d'une liaison externe dans l'en-tête de la bibliothèque C standard soient déclarés dans l'espace de noms `std`.
+```cpp
+namespace std {
+    using ptrdiff_t = see definition;
+    using size_t = see definition;
+    using max_align_t = see definition;
+    using nullptr_t = decltype(nullptr);
+}
+
+#define NULL  // an implementation-defined null pointer constant
+#define offsetof(type, member-designator)
+```
+
+### <a name="parameters"></a>Paramètres
+
+*ptrdiff_t*\
+Un défini par l’implémentation d’un type entier qui peut contenir la différence entre deux indices dans un objet tableau signé.
+
+*size_t*\
+Un type défini par l’implémentation d’entier non signé qui est assez grand pour contenir la taille en octets d’un objet.
+
+*max_align_t*\
+Un type POD dont spécification d’alignement est au moins aussi grande que celle de tous les types scalaires et spécification d’alignement est pris en charge dans tous les contextes.
+
+*nullptr_t*\
+Un synonyme du type d’un **nullptr** expression. Bien qu’un **nullptr** adresse ne peut pas être effectuée, l’adresse d’un autre *nullptr_t* objet qui est une lvalue peut être effectuée.
+
+## <a name="byte-class"></a>octet, classe
+
+```cpp
+enum class byte : unsigned char {};
+
+template <class IntType>
+    constexpr byte& operator<<=(byte& b, IntType shift) noexcept;
+    constexpr byte operator<<(byte b, IntType shift) noexcept;
+    constexpr byte& operator>>=(byte& b, IntType shift) noexcept;
+    constexpr byte operator>>(byte b, IntType shift) noexcept;
+
+constexpr byte& operator|=(byte& left, byte right) noexcept;
+constexpr byte operator|(byte left, byte right) noexcept;
+constexpr byte& operator&=(byte& left, byte right) noexcept;
+constexpr byte operator&(byte left, byte right) noexcept;
+constexpr byte& operator^=(byte& left, byte right) noexcept;
+constexpr byte operator^(byte left, byte right) noexcept;
+constexpr byte operator~(byte b) noexcept;
+
+template <class IntType>
+    IntType to_integer(byte b) noexcept;
+```
 
 ## <a name="see-also"></a>Voir aussi
 

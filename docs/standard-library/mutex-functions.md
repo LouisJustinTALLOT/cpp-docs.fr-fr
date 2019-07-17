@@ -14,21 +14,16 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: b375aec0bee4183563b8cd55e4e8a27f79e7cd3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6bd6a86e91c2d59fec2083dcf0ec6314d7c41ab
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326324"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240565"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt;, fonctions et variables
 
-||||
-|-|-|-|
-|[adopt_lock](#adopt_lock)|[call_once](#call_once)|[defer_lock](#defer_lock)|
-|[lock](#lock)|[try_to_lock](#try_to_lock)|
-
-## <a name="adopt_lock"></a> adopt_lock, variable
+## <a name="adopt_lock"></a> adopt_lock
 
 Représente un objet pouvant être passé aux constructeurs pour [lock_guard](../standard-library/lock-guard-class.md) et [unique_lock](../standard-library/unique-lock-class.md) afin d’indiquer que l’objet mutex qui est également passé au constructeur est verrouillé.
 
@@ -36,7 +31,7 @@ Représente un objet pouvant être passé aux constructeurs pour [lock_guard](..
 const adopt_lock_t adopt_lock;
 ```
 
-## <a name="call_once"></a>  call_once
+## <a name="call_once"></a> call_once
 
 Fournit un mécanisme permettant d'appeler un objet spécifique pouvant être appelé une seule fois durant l'exécution.
 
@@ -48,20 +43,20 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>Paramètres
 
-*Marquer*<br/>
+*Indicateur*\
 Objet [once_flag](../standard-library/once-flag-structure.md) qui permet de s’assurer que l’objet pouvant être appelé n’est appelé qu’une seule fois.
 
-*F*<br/>
+*F*\
 Objet pouvant être appelé.
 
-*A*<br/>
+*A*\
 Liste d’arguments.
 
 ### <a name="remarks"></a>Notes
 
 Si *indicateur* n’est pas valide, la fonction lève un [system_error](../standard-library/system-error-class.md) avec le code d’erreur `invalid_argument`. Sinon, la fonction de modèle utilise son *indicateur* argument pour vous assurer qu’elle appelle `F(A...)` correctement exactement une fois, quel que soit le nombre de fois où la fonction de modèle est appelée. Si `F(A...)` se termine en levant une exception, l’appel n’a pas réussi.
 
-## <a name="defer_lock"></a>  defer_lock, variable
+## <a name="defer_lock"></a> defer_lock
 
 Représente un objet qui peut être passé au constructeur pour [unique_lock](../standard-library/unique-lock-class.md). Cela indique que le constructeur ne doit pas verrouiller l’objet mutex qui lui est également passé.
 
@@ -69,7 +64,7 @@ Représente un objet qui peut être passé au constructeur pour [unique_lock](..
 const defer_lock_t defer_lock;
 ```
 
-## <a name="lock"></a>  lock
+## <a name="lock"></a> Verrou
 
 Tente de verrouiller tous les arguments sans interblocage.
 
@@ -84,14 +79,23 @@ Les arguments de la fonction de modèle doivent être des *types mutex*, sauf qu
 
 La fonction verrouille tous ses arguments sans blocage par des appels à `lock`, `try_lock` et `unlock`. Si un appel à `lock` ou `try_lock` lève une exception, la fonction appelle `unlock` sur l’un des objets mutex qui ont été correctement verrouillés avant de relever l’exception.
 
-## <a name="try_to_lock"></a>  try_to_lock, variable
+## <a name="swap"></a> échange
+
+```cpp
+template <class Mutex>
+void swap(unique_lock<Mutex>& x, unique_lock<Mutex>& y) noexcept;
+```
+
+## <a name="try_lock"></a> try_lock
+
+```cpp
+template <class L1, class L2, class... L3> int try_lock(L1&, L2&, L3&...);
+```
+
+## <a name="try_to_lock"></a> try_to_lock
 
 Représente un objet pouvant être passé au constructeur pour [unique_lock](../standard-library/unique-lock-class.md), afin d’indiquer que le constructeur doit essayer de déverrouiller le `mutex` qui lui est également passé sans blocage.
 
 ```cpp
 const try_to_lock_t try_to_lock;
 ```
-
-## <a name="see-also"></a>Voir aussi
-
-[\<mutex>](../standard-library/mutex.md)<br/>

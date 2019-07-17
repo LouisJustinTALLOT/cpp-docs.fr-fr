@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1448ad2b703aa6dcf26fad2e4adcbeb2aec2c956
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450793"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240418"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
 Définit des fonctions pour la génération de nombres aléatoires, ce qui permet la création de nombres aléatoires distribués de manière uniforme.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Configuration requise
 
-```cpp
-#include <random>
-```
+**En-tête**: \<aléatoire >
+
+**Espace de noms :** std
+
+> [!NOTE]
+> Le \<aléatoire > bibliothèque utilise la ' #include < initializer_list >' instruction.
 
 ## <a name="summary"></a>Récapitulatif
 

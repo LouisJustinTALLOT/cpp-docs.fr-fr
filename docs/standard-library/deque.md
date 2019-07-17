@@ -6,26 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 4c9746a0ffee654bb783e30e9a98e708b68048cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 167bdc324a67d8b1379f279e8fcc363ee6b0fca2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393985"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246734"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
 Définit la classe de modèle de conteneur deque et plusieurs modèles de prise en charge.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Configuration requise
 
-```cpp
-#include <deque>
-```
+**En-tête** : \<deque>
+
+> [!NOTE]
+> Le \<deque > bibliothèque utilise également la `#include <initializer_list>` instruction.
+
+## <a name="members"></a>Membres
 
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|||
 |-|-|
 |[!=, opérateur](../standard-library/deque-operators.md#op_neq)|Teste si l'objet deque situé à gauche de l'opérateur n'est pas égal à l'objet deque situé à droite.|
 |[operator<](../standard-library/deque-operators.md#op_lt)|Teste si l'objet deque situé à gauche de l'opérateur est inférieur à l'objet deque situé à droite.|
@@ -36,13 +39,13 @@ Définit la classe de modèle de conteneur deque et plusieurs modèles de prise 
 
 ### <a name="functions"></a>Fonctions
 
-|Fonction|Description|
+|||
 |-|-|
 |[swap](../standard-library/deque-functions.md#swap)|Échange les éléments de deux classes deque.|
 
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|||
 |-|-|
 |[deque, classe](../standard-library/deque-class.md)|Classe de modèle de conteneurs de séquence qui organisent les éléments d'un type donné dans une disposition linéaire et, comme les vecteurs, autorisent un accès aléatoire rapide à n'importe quel élément et une insertion et une suppression efficaces à l'arrière du conteneur.|
 

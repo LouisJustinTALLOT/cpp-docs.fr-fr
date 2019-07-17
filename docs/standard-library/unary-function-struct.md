@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
-ms.openlocfilehash: aaca8d48171ebb4043e9c8f0ea66316feb73d39c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: deb142bb263af51bee515e445ea705bf248461b5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399393"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243484"
 ---
 # <a name="unaryfunction-struct"></a>unary_function, structure
 
@@ -29,7 +29,7 @@ struct unary_function
 
 ## <a name="remarks"></a>Notes
 
-Le struct de modèle sert de base pour les classes qui définissent une fonction membre de la forme **result_type**`operator()`(**constargument_type&**) **const**.
+Le struct de modèle sert de base pour les classes qui définissent une fonction membre de la forme **result_type**`operator()`(**constargument_type&** ) **const**.
 
 Toutes ces fonctions unaires ainsi dérivées peuvent faire référence à leur type d’argument unique en tant que **argument_type** et à leur type de retour en tant que **result_type**.
 
@@ -77,19 +77,9 @@ int main()
     cout << "The number of elements in v1 greater than 10 is: "
          << result1 << "." << endl;
 }
-/* Output:
-The vector v1 = ( 0 5 10 15 20 25 )
-The number of elements in v1 greater than 10 is: 3.
-*/
 ```
 
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<functional>
-
-**Espace de noms :** std
-
-## <a name="see-also"></a>Voir aussi
-
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+```Output
+The vector v1 = ( 0 5 10 15 20 25 )
+The number of elements in v1 greater than 10 is: 3.
+```

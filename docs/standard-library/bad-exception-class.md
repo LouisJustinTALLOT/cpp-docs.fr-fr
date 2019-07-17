@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 94d1104b66fc6bd84e209caa23ce309cffd9fa85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1795a44d2d31cfbad964b41ef03e4bf65b401352
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377816"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246206"
 ---
 # <a name="badexception-class"></a>bad_exception, classe
 
@@ -20,7 +20,12 @@ La classe décrit une exception pouvant être levée à partir d’un gestionnai
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-class bad_exception    : public exception {};
+class bad_exception : public exception {};
+
+bad_exception();
+bad_exception(const bad_exception&);
+bad_exception& operator=(const bad_exception&);
+const char* what() const override;
 ```
 
 ## <a name="remarks"></a>Notes
@@ -34,14 +39,3 @@ Pour obtenir la liste des membres hérités par la classe `bad_exception`, consu
 ## <a name="example"></a>Exemple
 
 Consultez [set_unexpected](../standard-library/exception-functions.md#set_unexpected) pour obtenir un exemple d’utilisation de la fonction [unexpected](../standard-library/exception-functions.md#unexpected) levant un `bad_exception`.
-
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<exception>
-
-**Espace de noms :** std
-
-## <a name="see-also"></a>Voir aussi
-
-[exception, classe](../standard-library/exception-class.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
