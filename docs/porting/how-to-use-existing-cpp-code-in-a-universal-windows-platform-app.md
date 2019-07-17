@@ -2,12 +2,12 @@
 title: 'Procédure : utiliser le code C++ existant dans une application de plateforme Windows universelle'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: b46cbdc088908f59d6cbdc0ecd7cd6475da370d8
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59424194"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861132"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procédure : utiliser le code C++ existant dans une application de plateforme Windows universelle
 
@@ -135,7 +135,7 @@ La procédure suivante s’applique quand vous avez une DLL native qui expose de
 
 2. Ouvrez les **Propriétés du projet** de DLL, puis affectez la valeur **Toutes les configurations** à **Configuration**.
 
-3. Dans les **Propriétés du projet**, sous **C/C++** > onglet **Général**, affectez la valeur **Oui (/ZW)** à **Consommer l’extension Windows Runtime**. Cette opération active les extensions du composant (C++/CX).
+3. Dans les **Propriétés du projet**, sous **C/C++**  > onglet **Général**, affectez la valeur **Oui (/ZW)** à **Consommer l’extension Windows Runtime**. Cette opération active les extensions du composant (C++/CX).
 
 4. Dans l’**Explorateur de solutions**, sélectionnez le nœud du projet, ouvrez le menu contextuel et choisissez **Décharger le projet**. Ensuite, ouvrez le menu contextuel sur le nœud du projet déchargé et choisissez de modifier le fichier projet. Localisez l’élément `WindowsTargetPlatformVersion`, et remplacez-le par les éléments suivants.
 
@@ -193,9 +193,9 @@ Toutefois, vous pouvez utiliser une bibliothèque statique dans une application 
 
 ### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>Pour utiliser une bibliothèque statique C++ native dans un projet UWP
 
-1. Dans les propriétés du projet UWP, dans la section **Éditeur de liens**, ajoutez le chemin à la bibliothèque dans la propriété **Entrée**. Par exemple, pour une bibliothèque dans le projet qui place sa sortie dans *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, ajoutez le chemin d’accès relatif `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
+1. Dans les propriétés du projet UWP, choisissez **Propriétés de configuration** > **Éditeur de liens** > **Entrée** dans le volet gauche. Dans le volet droit, ajoutez le chemin d’accès à la bibliothèque dans la propriété **Dépendances supplémentaires**. Par exemple, pour une bibliothèque dans le projet qui place sa sortie dans *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, ajoutez le chemin d’accès relatif `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
 
-2. Ajoutez une instruction include pour référencer le fichier d’en-tête à votre fichier pch.h dans le projet UWP, puis commencez à ajouter du code qui utilise la bibliothèque.
+2. Ajoutez une instruction include pour référencer le fichier d’en-tête à votre fichier pch.h (le cas échéant), ou dans n’importe quel fichier .cpp, puis commencez à ajouter du code qui utilise la bibliothèque.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -221,7 +221,7 @@ Si vous souhaitez consommer des API natives dans une bibliothèque statique à p
 
 6. Il est possible que vous vous retrouviez avec du code dupliqué. Si vous disposez de plusieurs en-têtes précompilés (par exemple, stdafx.h et pch.h), choisissez-en un. Copiez tout le code requis, comme les instructions include, dans celui que vous souhaitez conserver. Supprimez ensuite l’autre et, dans les propriétés du projet, sous **En-têtes précompilés**, vérifiez que le nom du fichier d’en-tête est correct.
 
-   Si vous avez modifié le fichier à utiliser comme en-tête précompilé, assurez-vous que les options des en-têtes précompilés sont correctes pour chaque fichier. Sélectionnez un à un les fichiers .cpp, ouvrez la fenêtre de propriétés de chacun d’eux et vérifiez que toutes les propriétés ont la valeur **Utiliser (/Yu)**, à l’exception de l’en-tête précompilé voulu qui doit avoir la valeur **Créer (/Yc)**.
+   Si vous avez modifié le fichier à utiliser comme en-tête précompilé, assurez-vous que les options des en-têtes précompilés sont correctes pour chaque fichier. Sélectionnez un à un les fichiers .cpp, ouvrez la fenêtre de propriétés de chacun d’eux et vérifiez que toutes les propriétés ont la valeur **Utiliser (/Yu)** , à l’exception de l’en-tête précompilé voulu qui doit avoir la valeur **Créer (/Yc)** .
 
 7. Générez le projet et corrigez les erreurs. Ces erreurs peuvent être causées par l’utilisation de l’option `/ZW` ou par une nouvelle version du kit SDK Windows. Elles peuvent aussi refléter des dépendances, comme la dépendance de votre bibliothèque vis-à-vis des fichiers d’en-tête, ou des différences au niveau des paramètres entre votre ancien projet et le nouveau.
 
