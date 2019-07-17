@@ -23,16 +23,16 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 18ee500d7b884d1934c29dc91d9bcb03d507680d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23eb4e9016666567771832cefed686cb9197b02f
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356548"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299709"
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 
-Définissez une fonction de rappel par thread pour traduire les exceptions Win32 (exceptions structurées C) en code C++ des exceptions typées.
+Définissez une fonction de rappel par thread pour traduire des exceptions Win32 (exceptions structurées C C++ ) en exceptions typées.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,29 +49,29 @@ Pointeur vers une fonction de traduction d'exceptions structurées C que vous �
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers la précédente fonction inscrite par **_set_se_translator**, de sorte que la fonction précédente peut être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **nullptr**.
+Retourne un pointeur vers la précédente fonction de traduction enregistrée par _ **set_se_translator**, afin que la fonction précédente puisse être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut; Cette valeur peut être **nullptr**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_set_se_translator** fonction fournit un moyen de gérer les exceptions Win32 (exceptions structurées C) en tant que C++ exceptions typées. Pour autoriser chaque exception C à être gérées par un C++ **catch** gestionnaire, définissez d’abord une classe de wrapper d’exception C qui peut être utilisée ou dérivée, pour attribuer un type de classe spécifique à une exception C. Pour utiliser cette classe, installez une fonction de traduction d'exception C personnalisée appelée par le mécanisme de gestion des exceptions interne chaque fois qu'une exception C est levée. Dans votre fonction de traduction, vous pouvez lever toute exception typée qui peut être interceptée par une correspondance C++ **catch** gestionnaire.
+La fonction _ **set_se_translator** fournit un moyen de gérer les exceptions Win32 (exceptions structurées C++ C) en tant qu’exceptions typées. Pour que chaque exception c soit gérée par un C++ gestionnaire **catch** , définissez d’abord une classe wrapper d’exceptions c qui peut être utilisée, ou dérivée de, pour attribuer un type de classe spécifique à une exception c. Pour utiliser cette classe, installez une fonction de traduction d'exception C personnalisée appelée par le mécanisme de gestion des exceptions interne chaque fois qu'une exception C est levée. Dans votre fonction de traduction, vous pouvez lever n’importe quelle exception typée qui peut être C++ interceptée par un gestionnaire **catch** correspondant.
 
-Vous devez utiliser [/EHa](../../build/reference/eh-exception-handling-model.md) lors de l’utilisation **_set_se_translator**.
+Vous devez utiliser [/EHa](../../build/reference/eh-exception-handling-model.md) lors de l’utilisation de _ **set_se_translator**.
 
-Pour spécifier une fonction de traduction personnalisée, appelez **_set_se_translator** en utilisant le nom de votre fonction de traduction comme argument. La fonction de traduction que vous écrivez est appelée une fois pour chaque appel de fonction sur la pile a **essayez** blocs. Il n'existe aucune fonction de traduction par défaut.
+Pour spécifier une fonction de traduction personnalisée, appelez _ **set_se_translator** en utilisant le nom de votre fonction de traduction comme argument. La fonction de traduction que vous écrivez est appelée une fois pour chaque appel de fonction sur la pile qui a des blocs **try** . Il n'existe aucune fonction de traduction par défaut.
 
 Votre fonction de traduction se contente de lever une exception typée C++. Si elle effectue d'autres actions (écrire dans un fichier journal, par exemple), votre programme risque de ne pas se comporter comme prévu, car le nombre de fois où la fonction de traduction est appelée dépend de la plateforme.
 
-Dans un environnement multithread, les fonctions de traduction sont gérées séparément pour chaque thread. Chaque nouveau thread doit installer sa propre fonction de traduction. Par conséquent, chaque thread est responsable de sa propre gestion de traduction. **_set_se_translator** est spécifique à un thread ; une autre DLL peut installer une fonction de traduction différente.
+Dans un environnement multithread, les fonctions de traduction sont gérées séparément pour chaque thread. Chaque nouveau thread doit installer sa propre fonction de traduction. Par conséquent, chaque thread est responsable de sa propre gestion de traduction. _ **set_se_translator** est spécifique à un thread; une autre DLL peut installer une fonction de traduction différente.
 
-Le *seTransFunction* fonction que vous écrivez doit être compilé nativement (ne pas compilée avec/CLR). Il doit prendre un entier non signé et un pointeur vers un Win32 **_EXCEPTION_POINTERS** structure en tant qu’arguments. Les arguments sont des valeurs de retour des appels à l’API Win32 **GetExceptionCode** et **GetExceptionInformation** fonctions, respectivement.
+La fonction *seTransFunction* que vous écrivez doit être une fonction compilée native (non compilée avec/CLR). Il doit prendre un entier non signé et un pointeur vers une structure **_EXCEPTION_POINTERS** Win32 comme arguments. Les arguments sont les valeurs de retour des appels aux fonctions API Win32 **GetExceptionCode** et **GetExceptionInformation** , respectivement.
 
 ```cpp
 typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );
 ```
 
-Pour **_set_se_translator**, il existe des implications lors de la liaison dynamique vers le CRT ; une autre DLL dans le processus peut appeler **_set_se_translator** et remplacer votre gestionnaire avec sa propre.
+Pour _ **set_se_translator**, il y a des implications lors de la liaison dynamique au CRT; une autre DLL du processus peut appeler _ **set_se_translator** et remplacer votre gestionnaire par le sien.
 
-Lorsque vous utilisez **_set_se_translator** à partir du code managé (code compilé avec/CLR) ou mixte du code natif et managé, n’oubliez pas que le traducteur affecte les exceptions générées en code natif uniquement. Les exceptions managées générées en code managé (par exemple, en déclenchant `System::Exception`) ne sont pas acheminées par le biais de la fonction de traduction. Les exceptions levées dans le code managé à l’aide de la fonction Win32 **RaiseException** ou provoquée par une exception de système comme une exception de division par zéro sont acheminées via le traducteur.
+Lorsque vous utilisez _ **set_se_translator** à partir du code managé (code compilé avec/CLR) ou du code natif et managé mixte, sachez que le traducteur affecte les exceptions générées uniquement en code natif. Les exceptions managées générées en code managé (par exemple, en déclenchant `System::Exception`) ne sont pas acheminées par le biais de la fonction de traduction. Les exceptions levées dans le code managé à l’aide de la fonction Win32 **RaiseException** ou provoquées par une exception système telle qu’une exception de division par zéro sont acheminées via le traducteur.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -82,6 +82,8 @@ Lorsque vous utilisez **_set_se_translator** à partir du code managé (code com
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
+
+Cet exemple encapsule les appels pour définir un traducteur d’exceptions structurées et pour restaurer l’ancien dans une classe RAII `Scoped_SE_Translator`,. Cette classe vous permet d’introduire un traducteur spécifique à l’étendue comme une déclaration unique. Le destructeur de classe restaure le convertisseur d’origine lorsque le contrôle quitte l’étendue.
 
 ```cpp
 // crt_settrans.cpp
@@ -94,11 +96,21 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 class SE_Exception : public std::exception
 {
 private:
-    unsigned int nSE;
+    const unsigned int nSE;
 public:
-    SE_Exception() : nSE{ 0 } {}
-    SE_Exception( unsigned int n ) : nSE{ n } {}
-    unsigned int getSeNumber() { return nSE; }
+    SE_Exception() noexcept : SE_Exception{ 0 } {}
+    SE_Exception( unsigned int n ) noexcept : nSE{ n } {}
+    unsigned int getSeNumber() const noexcept { return nSE; }
+};
+
+class Scoped_SE_Translator
+{
+private:
+    const _se_translator_function old_SE_translator;
+public:
+    Scoped_SE_Translator( _se_translator_function new_SE_translator ) noexcept
+        : old_SE_translator{ _set_se_translator( new_SE_translator ) } {}
+    ~Scoped_SE_Translator() noexcept { _set_se_translator( old_SE_translator ); }
 };
 
 void SEFunc()
@@ -117,23 +129,22 @@ void SEFunc()
     }
 }
 
-void trans_func(unsigned int u, EXCEPTION_POINTERS*)
+void trans_func( unsigned int u, EXCEPTION_POINTERS* )
 {
-    throw SE_Exception(u);
+    throw SE_Exception( u );
 }
 
 int main()
 {
-    auto original = _set_se_translator(trans_func);
+    Scoped_SE_Translator scoped_se_translator{ trans_func };
     try
     {
         SEFunc();
     }
-    catch(SE_Exception& e)
+    catch( const SE_Exception& e )
     {
-        printf("Caught a __try exception, error %8.8x.\n", e.getSeNumber());
+        printf( "Caught a __try exception, error %8.8x.\n", e.getSeNumber() );
     }
-    _set_se_translator(original);
 }
 ```
 
@@ -145,60 +156,70 @@ Caught a __try exception, error c0000094.
 
 ## <a name="example"></a>Exemple
 
-Bien que les fonctionnalités fournies par **_set_se_translator** est non disponible dans le code managé, il est possible d’utiliser ce mappage en code natif, même si ce code natif se trouve dans une compilation sous le **/CLR** basculer, tant que le code natif est indiqué à l’aide de `#pragma unmanaged`. Si une exception structurée est levée dans le code managé qui doit être mappé, le code qui génère et gère l’exception doit être marqué `#pragma unmanaged`. Le code suivant illustre une utilisation possible. Pour plus d’informations, consultez [Directives pragma et mot clé __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Bien que les fonctionnalités fournies par _ **set_se_translator** ne soient pas disponibles dans le code managé, il est possible d’utiliser ce mappage en code natif, même si ce code natif se trouve dans une compilation sous le commutateur **/CLR** , tant que le code natif est indiqué à `#pragma unmanaged`l’aide de. Si une exception structurée est levée dans le code managé qui doit être mappé, le code qui génère et gère l’exception doit être marqué `#pragma unmanaged`. Le code suivant illustre une utilisation possible. Pour plus d’informations, consultez [Directives pragma et mot clé __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ```cpp
 // crt_set_se_translator_clr.cpp
 // compile with: cl /W4 /clr crt_set_se_translator_clr.cpp
 #include <windows.h>
 #include <eh.h>
-#include <assert.h>
 #include <stdio.h>
 #include <exception>
 
-int thrower_func(int i) {
+int thrower_func( int i ) {
    int y = 0;
    int *p = &y;
    *p = i / *p;
    return 0;
 }
 
-class SE_Exception : public std::exception {
+class SE_Exception : public std::exception
+{
 private:
-    unsigned int nSE;
+    const unsigned int nSE;
 public:
-    SE_Exception() : nSE{ 0 } {}
-    SE_Exception(unsigned int n) : nSE{ n } {}
-    unsigned int getSeNumber() { return nSE; }
+    SE_Exception() noexcept : SE_Exception{ 0 } {}
+    SE_Exception( unsigned int n ) noexcept : nSE{ n } {}
+    unsigned int getSeNumber() const noexcept { return nSE; }
+};
+
+class Scoped_SE_Translator
+{
+private:
+    const _se_translator_function old_SE_translator;
+public:
+    Scoped_SE_Translator( _se_translator_function new_SE_translator ) noexcept
+        : old_SE_translator{ _set_se_translator( new_SE_translator ) } {}
+    ~Scoped_SE_Translator() noexcept { _set_se_translator( old_SE_translator ); }
 };
 
 #pragma unmanaged
-void my_trans_func(unsigned int u, PEXCEPTION_POINTERS)
+void my_trans_func( unsigned int u, PEXCEPTION_POINTERS )
 {
-    throw SE_Exception(u);
+    throw SE_Exception( u );
 }
 
 void DoTest()
 {
     try
     {
-        thrower_func(10);
+        thrower_func( 10 );
     }
-    catch(SE_Exception& e)
+    catch( const SE_Exception& e )
     {
-        printf("Caught SE_Exception, error %8.8x\n", e.getSeNumber());
+        printf( "Caught SE_Exception, error %8.8x\n", e.getSeNumber() );
     }
     catch(...)
     {
-        printf("Caught unexpected SEH exception.\n");
+        printf( "Caught unexpected SEH exception.\n" );
     }
 }
 #pragma managed
 
 int main() {
-    auto original = _set_se_translator(my_trans_func);
+    Scoped_SE_Translator scoped_se_translator{ my_trans_func };
+
     DoTest();
-    _set_se_translator(original);
 }
 ```
 
