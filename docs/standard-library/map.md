@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 0ea47a28599df543987831ee13a2c645f72a0113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96ca19b2562c3f145555c3c1b1d8db4fc700ed91
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412993"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243309"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
 Définit les classes de modèle de conteneur map et multimap et leurs modèles de prise en charge.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Configuration requise
 
-```cpp
-#include <map>
-```
+**En-tête :** \<map>
+
+**Espace de noms :** std
+
+> [!NOTE]
+> Le \<map > bibliothèque utilise également la `#include <initializer_list>` instruction.
 
 ## <a name="members"></a>Membres
 
@@ -44,7 +47,7 @@ Définit les classes de modèle de conteneur map et multimap et leurs modèles d
 
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|||
 |-|-|
 |[value_compare, classe](../standard-library/value-compare-class-map.md)|Fournit un objet de fonction qui peut comparer les éléments d'un map en comparant les valeurs de leurs clés pour déterminer leur ordre relatif dans le map.|
 |[map, classe](../standard-library/map-class.md)|Sert au stockage et à la récupération des données d’une collection dans laquelle chacun des éléments a une clé unique avec laquelle les données sont automatiquement triées.|

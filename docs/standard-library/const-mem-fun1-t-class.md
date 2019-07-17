@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: df984d90f8b632f8e3e3b183943343952d45b8be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ccd9d7e58b9cadec83b64df5553564db20a5745
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211973"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244526"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t, classe
 
@@ -30,13 +30,13 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ### <a name="parameters"></a>Paramètres
 
-*member_ptr*<br/>
+*member_ptr*\
 Pointeur vers la fonction membre de la classe `Type` à convertir en objet de fonction.
 
-*left*<br/>
+*Gauche*\
 Le **const** de l’objet qui le *member_ptr* fonction membre est appelée sur.
 
-*right*<br/>
+*Oui*\
 L’argument donné à *member_ptr*.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -50,14 +50,3 @@ La classe de modèle stocke une copie de *member_ptr*, qui doit être un pointeu
 ## <a name="example"></a>Exemple
 
 Le constructeur de `const_mem_fun1_t` est rarement utilisé directement. `mem_fn` est utilisé pour adapter les fonctions membres. Consultez [mem_fn](../standard-library/functional-functions.md#mem_fn) pour obtenir un exemple montrant comment utiliser les adaptateurs de fonction membre.
-
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<functional>
-
-**Espace de noms :** std
-
-## <a name="see-also"></a>Voir aussi
-
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

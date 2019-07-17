@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-ms.openlocfilehash: 88d38be258c6ceb1054e0d31cc52e4d8d25186ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcc643d7569bd4f71b11249babdb49ef1362dc8b
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370317"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240491"
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function, classe
 
@@ -25,7 +25,6 @@ template <class Arg1, class Arg2, class Result>
 class pointer_to_binary_function
     : public binary_function <Arg1, Arg2, Result>
 {
-public:
     explicit pointer_to_binary_function(
         Result(*pfunc)(Arg1, Arg2));
     Result operator()(Arg1 left, Arg2 right) const;
@@ -34,13 +33,13 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*pfunc*<br/>
+*pfunc*\
 Fonction binaire à convertir.
 
-*left*<br/>
+*Gauche*\
 Objet left sur lequel la fonction *\*pfunc* est appelée.
 
-*right*<br/>
+*Oui*\
 Objet right sur lequel la fonction *\*pfunc* est appelée.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -54,13 +53,3 @@ Un pointeur de fonction binaire est un objet de fonction. Il peut être passé �
 ## <a name="example"></a>Exemple
 
 Le constructeur de `pointer_to_binary_function` est rarement utilisé directement. Consultez la fonction d’assistance [ptr_fun](../standard-library/functional-functions.md#ptr_fun) pour obtenir un exemple montrant comment déclarer et utiliser le prédicat de l’adaptateur `pointer_to_binary_function`.
-
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<functional>
-
-**Espace de noms :** std
-
-## <a name="see-also"></a>Voir aussi
-
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

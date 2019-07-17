@@ -70,12 +70,12 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: 861850f192281d64ef02ec4a241315c05cd3318f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc9f9bd1157af96ced3c901309f19dcaa5dadab3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371514"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246710"
 ---
 # <a name="numericlimits-class"></a>numeric_limits (classe)
 
@@ -85,13 +85,13 @@ La classe de modèle décrit les propriétés arithmétiques des types numériqu
 
 ```cpp
 template <class Type>
-class numeric_limits
+    class numeric_limits
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Type*<br/>
-Type de données fondamental des éléments dont les propriétés sont testées, interrogées ou définies.
+*Type*\
+Type de données fondamental des éléments dont les propriétés sont testées, interrogées ou définies. *Type* peuvent également être déclarées **const**, **volatile**, ou **volatile const**.
 
 ## <a name="remarks"></a>Notes
 
@@ -99,7 +99,7 @@ L’en-tête définit des spécialisations explicites pour les types **wchar_t**
 
 Pour une spécialisation arbitraire, aucun membre n'a de valeur significative. Un objet de membre qui n’a pas de valeur significative stocke zéro (ou **false**) et une fonction membre qui ne retourne pas de valeur significative retourne `Type(0)`.
 
-### <a name="static-functions-and-constants"></a>Fonctions statiques et constantes
+## <a name="static-functions-and-constants"></a>Fonctions statiques et constantes
 
 |||
 |-|-|
@@ -110,7 +110,7 @@ Pour une spécialisation arbitraire, aucun membre n'a de valeur significative. U
 |[has_denorm](#has_denorm)|Teste si un type autorise les valeurs dénormalisées.|
 |[has_denorm_loss](#has_denorm_loss)|Teste si une perte de précision est détectée comme une perte de dénormalisation et non pas comme un résultat inexact.|
 |[has_infinity](#has_infinity)|Teste si un type a une représentation pour l'infini positif.|
-|[has_quiet_NaN](#has_quiet_nan)|Teste si un type a une représentation pour un NaN (n'est pas un nombre) silencieux, qui ne fait pas de signalement.|
+|[has_quiet_NaN](#has_quiet_nan)|Teste si un type a une représentation pour un quiet pas un nombre (NAN), qui est non-signalisation.|
 |[has_signaling_NaN](#has_signaling_nan)|Teste si un type a une représentation pour signaler un NaN (n'est pas un nombre).|
 |[infinity](#infinity)|Représentation de l'infini positif pour un type, si elle est disponible.|
 |[is_bounded](#is_bounded)|Teste si l'ensemble des valeurs qu'un type peut représenter est fini.|
@@ -136,13 +136,7 @@ Pour une spécialisation arbitraire, aucun membre n'a de valeur significative. U
 |[tinyness_before](#tinyness_before)|Teste si un type peut déterminer qu'une valeur est trop petite pour être représentée sous la forme d'une valeur normalisée avant d'être arrondie.|
 |[traps](#traps)|Teste si les interceptions qui signalent des exceptions arithmétiques sont implémentées pour un type.|
 
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<limits>
-
-**Espace de noms :** std
-
-## <a name="denorm_min"></a>  numeric_limits::denorm_min
+### <a name="denorm_min"></a> denorm_min
 
 Retourne la plus petite valeur dénormalisée différente de zéro.
 
@@ -150,17 +144,17 @@ Retourne la plus petite valeur dénormalisée différente de zéro.
 static constexpr Type denorm_min() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Plus petite valeur dénormalisée différente de zéro.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 **long double** est identique à **double** pour le compilateur C++.
 
 La fonction retourne la valeur minimale pour le type, qui est le même en tant que [min](#min) si [has_denorm](#has_denorm) n’est pas égal à `denorm_present`.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_denorm_min.cpp
@@ -201,7 +195,7 @@ for long double objects is: 4.94066e-324
 0
 ```
 
-## <a name="digits"></a>  numeric_limits::digits
+### <a name="digits"></a> chiffres
 
 Retourne le nombre de chiffres de base que le type peut représenter sans perte de précision.
 
@@ -209,15 +203,15 @@ Retourne le nombre de chiffres de base que le type peut représenter sans perte 
 static constexpr int digits = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Nombre de chiffres de base que le type peut représenter sans perte de précision.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Le membre stocke le nombre de chiffres de base que le type peut représenter sans modification. Ce nombre est le nombre de bits autres qu’un bit de signe pour un type entier prédéfini ou le nombre de chiffres en mantisse pour un type à virgule flottante prédéfini.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_digits_min.cpp
@@ -245,7 +239,7 @@ int main( )
 63
 ```
 
-## <a name="digits10"></a>  numeric_limits::digits10
+### <a name="digits10"></a> digits10
 
 Retourne le nombre de chiffres décimaux que le type peut représenter sans perte de précision.
 
@@ -253,11 +247,11 @@ Retourne le nombre de chiffres décimaux que le type peut représenter sans pert
 static constexpr int digits10 = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Nombre de chiffres décimaux que le type peut représenter sans perte de précision.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_digits10.cpp
@@ -289,7 +283,7 @@ int main( )
 The float is; 100000000
 ```
 
-## <a name="epsilon"></a>  numeric_limits::epsilon
+### <a name="epsilon"></a> EPSILON
 
 La fonction retourne la différence entre 1 et la plus petite valeur supérieure à 1 qui peut être représentée pour le type de données.
 
@@ -297,15 +291,15 @@ La fonction retourne la différence entre 1 et la plus petite valeur supérieur
 static constexpr Type epsilon() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Différence entre 1 et la plus petite valeur supérieure à 1 pouvant être représentée pour le type de données.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La valeur est FLT_EPSILON pour le type **float**. `epsilon` pour un type est le plus petit nombre à virgule flottante positif *N* tel que *N* + `epsilon` + *N* peut être représenté.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_epsilon.cpp
@@ -341,7 +335,7 @@ The difference between 1 and the smallest value greater than 1
 for long double objects is: 2.22045e-016
 ```
 
-## <a name="has_denorm"></a>  numeric_limits::has_denorm
+### <a name="has_denorm"></a> has_denorm
 
 Teste si un type autorise les valeurs dénormalisées.
 
@@ -349,15 +343,15 @@ Teste si un type autorise les valeurs dénormalisées.
 static constexpr float_denorm_style has_denorm = denorm_absent;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Valeur d’énumération de type **const**`float_denorm_style`, qui indique si le type accepte les valeurs dénormalisées.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La membre stocke `denorm_present` pour un type à virgule flottante est dénormalisé des valeurs, en fait un nombre variable de bits d’exposant.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemples
 
 ```cpp
 // numeric_limits_has_denorm.cpp
@@ -387,7 +381,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0
 ```
 
-## <a name="has_denorm_loss"></a>  numeric_limits::has_denorm_loss
+### <a name="has_denorm_loss"></a> has_denorm_loss
 
 Teste si une perte de précision est détectée comme une perte de dénormalisation et non pas comme un résultat inexact.
 
@@ -395,15 +389,15 @@ Teste si une perte de précision est détectée comme une perte de dénormalisat
 static constexpr bool has_denorm_loss = false;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 **true** si la perte de précision est détectée comme une perte de dénormalisation. **false** dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Le membre stocke la valeur true pour un type qui détermine si une valeur a perdu en précision parce qu’elle est fournie sous forme de résultat dénormalisé (trop petit pour être représenté en valeur normalisée) ou parce qu’elle est inexacte (différente d’un résultat qui n’est pas soumis aux limitations de la précision et d’une plage d’exposants), une option avec des représentations à virgule flottante IEC 559 pouvant affecter certains résultats.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemples
 
 ```cpp
 // numeric_limits_has_denorm_loss.cpp
@@ -433,7 +427,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0
 ```
 
-## <a name="has_infinity"></a>  numeric_limits::has_infinity
+### <a name="has_infinity"></a> has_infinity
 
 Teste si un type a une représentation pour l'infini positif.
 
@@ -441,15 +435,15 @@ Teste si un type a une représentation pour l'infini positif.
 static constexpr bool has_infinity = false;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 **true** si le type a une représentation de l’infini positif. **false** dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Le membre retourne **true** si [is_iec559](#is_iec559) est **true**.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemples
 
 ```cpp
 // numeric_limits_has_infinity.cpp
@@ -479,7 +473,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0
 ```
 
-## <a name="has_quiet_nan"></a>  numeric_limits::has_quiet_NaN
+### <a name="has_quiet_nan"></a> has_quiet_NaN
 
 Teste si un type a une représentation pour un NaN (n'est pas un nombre) silencieux, qui ne fait pas de signalement.
 
@@ -487,15 +481,15 @@ Teste si un type a une représentation pour un NaN (n'est pas un nombre) silenci
 static constexpr bool has_quiet_NaN = false;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 **true** si le **type** a une représentation pour un NAN silencieux. **false** dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Un NAN silencieux représente une valeur qui n’est pas un nombre et qui ne signale pas sa présence dans une expression. La valeur de retour est **true** si [is_iec559](#is_iec559) est true.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemples
 
 ```cpp
 // numeric_limits_has_quiet_nan.cpp
@@ -525,7 +519,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0
 ```
 
-## <a name="has_signaling_nan"></a>  numeric_limits::has_signaling_NaN
+### <a name="has_signaling_nan"></a> has_signaling_NaN
 
 Teste si un type a une représentation pour signaler un NaN (n'est pas un nombre).
 
@@ -533,15 +527,15 @@ Teste si un type a une représentation pour signaler un NaN (n'est pas un nombre
 static constexpr bool has_signaling_NaN = false;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 **true** si le type a une représentation pour signaler un NaN. **false** dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Un NAN de signalisation représente une valeur qui n’est pas un nombre et qui signale sa présence dans une expression. La valeur de retour est **true** si [is_iec559](#is_iec559) est true.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_has_signaling_nan.cpp
@@ -571,7 +565,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0
 ```
 
-## <a name="infinity"></a>  numeric_limits::infinity
+### <a name="infinity"></a> infini
 
 Représentation de l’infini positif pour un type, si elle est disponible.
 
@@ -579,15 +573,15 @@ Représentation de l’infini positif pour un type, si elle est disponible.
 static constexpr Type infinity() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Représentation de l’infini positif pour un type, si elle est disponible.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La valeur de retour est significative uniquement si [has_infinity](#has_infinity) est **true**.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemples
 
 ```cpp
 // numeric_limits_infinity.cpp
@@ -625,7 +619,7 @@ The representation of infinity for type double is: inf
 The representation of infinity for type long double is: inf
 ```
 
-## <a name="is_bounded"></a>  numeric_limits::is_bounded
+### <a name="is_bounded"></a> is_bounded
 
 Teste si l'ensemble des valeurs qu'un type peut représenter est fini.
 
@@ -633,15 +627,15 @@ Teste si l'ensemble des valeurs qu'un type peut représenter est fini.
 static constexpr bool is_bounded = false;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 **true** si le type a un ensemble délimité de valeurs pouvant être représentées. **false** dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Tous les types prédéfinis ont un ensemble délimité de valeurs pouvant être représentées et retournent **true**.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemples
 
 ```cpp
 // numeric_limits_is_bounded.cpp
@@ -679,7 +673,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1
 ```
 
-## <a name="is_exact"></a>  numeric_limits::is_exact
+### <a name="is_exact"></a> is_exact
 
 Teste si les calculs effectués sur un type ne comportent pas d'erreurs d'arrondi.
 
@@ -687,15 +681,15 @@ Teste si les calculs effectués sur un type ne comportent pas d'erreurs d'arrond
 static constexpr bool is_exact = false;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 **true** si les calculs ne comportent pas d’erreurs d’arrondi. **false** dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Tous les types d’entiers prédéfinis ont des représentations exactes de leurs valeurs et retournent **false**. Une représentation rationnelle ou à virgule fixe est également considérée comme exacte, mais ce n’est pas le cas d’une représentation à virgule flottante.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_is_exact.cpp
@@ -733,7 +727,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1
 ```
 
-## <a name="is_iec559"></a>  numeric_limits::is_iec559
+### <a name="is_iec559"></a> is_iec559
 
 Teste si un type est conforme aux normes IEC 559.
 
@@ -741,15 +735,15 @@ Teste si un type est conforme aux normes IEC 559.
 static constexpr bool is_iec559 = false;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 **true** si le type est conforme à la norme IEC 559. **false** dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La norme IEC 559 est une norme internationale pour représenter les valeurs à virgule flottante. Elle est également appelée IEEE 754 aux États-Unis.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_is_iec559.cpp
@@ -783,7 +777,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0
 ```
 
-## <a name="is_integer"></a>  numeric_limits::is_integer
+### <a name="is_integer"></a> is_integer
 
 Teste si un type a une représentation des entiers.
 
@@ -791,15 +785,15 @@ Teste si un type a une représentation des entiers.
 static constexpr bool is_integer = false;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 **true** si le type a une représentation des entiers. **false** dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Tous les types d’entiers prédéfinis ont une représentation des entiers.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemples
 
 ```cpp
 // numeric_limits_is_integer.cpp
@@ -833,7 +827,7 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1
 ```
 
-## <a name="is_modulo"></a>  numeric_limits::is_modulo
+### <a name="is_modulo"></a> is_modulo
 
 Teste si un **type** a une représentation du modulo.
 
@@ -841,15 +835,15 @@ Teste si un **type** a une représentation du modulo.
 static constexpr bool is_modulo = false;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 **true** si le type a une représentation du modulo. **false** dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Une représentation du modulo est une représentation où tous les résultats sont une réduction modulo d’une certaine valeur. Tous les types d’entiers non signés prédéfinis ont une représentation du modulo.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_is_modulo.cpp
@@ -883,7 +877,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1
 ```
 
-## <a name="is_signed"></a>  numeric_limits::is_signed
+### <a name="is_signed"></a> is_signed
 
 Teste si un type a une représentation signée.
 
@@ -891,15 +885,15 @@ Teste si un type a une représentation signée.
 static constexpr bool is_signed = false;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 **true** si le type a une représentation signée. **false** dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Le membre stocke la valeur true pour un type qui a une représentation signée, ce qui est le cas pour tous les types d’entiers signés et types à virgule flottante prédéfinis.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_is_signaled.cpp
@@ -933,7 +927,7 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0
 ```
 
-## <a name="is_specialized"></a>  numeric_limits::is_specialized
+### <a name="is_specialized"></a> is_specialized
 
 Teste si un type a une spécialisation explicite définie dans la classe de modèle `numeric_limits`.
 
@@ -941,15 +935,15 @@ Teste si un type a une spécialisation explicite définie dans la classe de mod�
 static constexpr bool is_specialized = false;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 **true** si le type a une spécialisation explicite définie dans la classe de modèle. **false** dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Tous les types scalaires autres que les pointeurs ont une spécialisation explicite définie dans la classe de modèle `numeric_limits`.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_is_specialized.cpp
@@ -987,7 +981,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0
 ```
 
-## <a name="lowest"></a>  numeric_limits::lowest
+### <a name="lowest"></a> la plus basse
 
 Retourne la plus grande valeur finie négative.
 
@@ -995,15 +989,15 @@ Retourne la plus grande valeur finie négative.
 static constexpr Type lowest() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Retourne la plus grande valeur finie négative.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Retourne la valeur finie plus négative pour le type (ce qui est généralement `min()` pour les types entiers et `-max()` pour les types à virgule flottante). La valeur de retour est significative si `is_bounded` est **true**.
 
-## <a name="max"></a>  numeric_limits::max
+### <a name="max"></a> max
 
 Retourne la valeur finie maximale pour un type.
 
@@ -1011,15 +1005,15 @@ Retourne la valeur finie maximale pour un type.
 static constexpr Type max() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Valeur finie maximale pour un type.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La valeur finie maximale est INT_MAX pour le type **int** et FLT_MAX pour le type **float**. La valeur de retour est significative si [is_bounded](#is_bounded) est **true**.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_max.cpp
@@ -1045,7 +1039,7 @@ int main() {
 }
 ```
 
-## <a name="max_digits10"></a>  numeric_limits::max_digits10
+### <a name="max_digits10"></a> max_digits10
 
 Retourne le nombre de chiffres décimaux nécessaires pour s'assurer que deux valeurs distinctes du type ont des représentations décimales distinctes.
 
@@ -1053,15 +1047,15 @@ Retourne le nombre de chiffres décimaux nécessaires pour s'assurer que deux va
 static constexpr int max_digits10 = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Retourne le nombre de chiffres décimaux nécessaires pour s'assurer que deux valeurs distinctes du type ont des représentations décimales distinctes.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Le membre stocke retourne le nombre de chiffres décimaux nécessaires pour s'assurer que deux valeurs distinctes du type ont des représentations décimales distinctes.
 
-## <a name="max_exponent"></a>  numeric_limits::max_exponent
+### <a name="max_exponent"></a> max_exponent
 
 Retourne l'exposant entier positif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand un nombre exprimé dans une base de base (radix) est élevé à cette puissance.
 
@@ -1069,15 +1063,15 @@ Retourne l'exposant entier positif maximal que le type à virgule flottante peut
 static constexpr int max_exponent = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Exposant de base entier maximal qui peut être représenté par le type.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La valeur retournée par la fonction membre est significative uniquement pour les types à virgule flottante. `max_exponent` est la valeur FLT_MAX_EXP pour le type **float**.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_max_exponent.cpp
@@ -1107,7 +1101,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024
 ```
 
-## <a name="max_exponent10"></a>  numeric_limits::max_exponent10
+### <a name="max_exponent10"></a> max_exponent10
 
 Retourne l'exposant entier positif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand une base 10 est élevée à cette puissance.
 
@@ -1115,15 +1109,15 @@ Retourne l'exposant entier positif maximal que le type à virgule flottante peut
 static constexpr int max_exponent10 = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Exposant entier maximal de base 10 qui peut être représenté par le type.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La valeur retournée par la fonction membre est significative uniquement pour les types à virgule flottante. `max_exponent` est la valeur FLT_MAX_10 pour le type **float**.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_max_exponent10.cpp
@@ -1153,7 +1147,7 @@ The maximum base 10 exponent for type double is:  308
 The maximum base 10 exponent for type long double is:  308
 ```
 
-## <a name="min"></a>  numeric_limits::min
+### <a name="min"></a> min
 
 Retourne la valeur normalisée minimale pour un type.
 
@@ -1161,15 +1155,15 @@ Retourne la valeur normalisée minimale pour un type.
 static constexpr Type min() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Valeur normalisée minimale pour le type.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La valeur normalisée minimale est INT_MIN pour le type **int** et FLT_MIN pour le type **float**. La valeur de retour est significative si [is_bounded](#is_bounded) est **true** ou si [is_signed](#is_signed) est **false**.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_min.cpp
@@ -1203,7 +1197,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768
 ```
 
-## <a name="min_exponent"></a>  numeric_limits::min_exponent
+### <a name="min_exponent"></a> min_exponent
 
 Retourne l'exposant entier négatif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand un nombre exprimé dans une base de base (radix) est élevé à cette puissance.
 
@@ -1211,15 +1205,15 @@ Retourne l'exposant entier négatif maximal que le type à virgule flottante peu
 static constexpr int min_exponent = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Exposant de base entier minimal qui peut être représenté par le type.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La fonction membre est significative uniquement pour les types à virgule flottante. `min_exponent` est la valeur FLT_MIN_EXP pour le type **float**.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_min_exponent.cpp
@@ -1249,7 +1243,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021
 ```
 
-## <a name="min_exponent10"></a>  numeric_limits::min_exponent10
+### <a name="min_exponent10"></a> min_exponent10
 
 Retourne l'exposant entier négatif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand une base 10 est élevée à cette puissance.
 
@@ -1257,15 +1251,15 @@ Retourne l'exposant entier négatif maximal que le type à virgule flottante peu
 static constexpr int min_exponent10 = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Exposant entier minimal de base 10 qui peut être représenté par le type.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La fonction membre est significative uniquement pour les types à virgule flottante. `min_exponent10` est la valeur FLT_MIN_10_EXP pour le type **float**.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_min_exponent10.cpp
@@ -1295,7 +1289,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307
 ```
 
-## <a name="quiet_nan"></a>  numeric_limits::quiet_NaN
+### <a name="quiet_nan"></a> quiet_NaN
 
 Retourne la représentation d'un NaN (n'est pas un nombre) silencieux pour le type.
 
@@ -1303,15 +1297,15 @@ Retourne la représentation d'un NaN (n'est pas un nombre) silencieux pour le ty
 static constexpr Type quiet_NaN() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Représentation d’un NaN silencieux pour le type.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La valeur de retour est significative uniquement si [has_quiet_NaN](#has_quiet_nan) est **true**.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_quiet_nan.cpp
@@ -1341,7 +1335,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN
 ```
 
-## <a name="radix"></a>  numeric_limits::radix
+### <a name="radix"></a> base
 
 Retourne la base entière, appelée base (radix), utilisée pour la représentation d'un type.
 
@@ -1349,15 +1343,15 @@ Retourne la base entière, appelée base (radix), utilisée pour la représentat
 static constexpr int radix = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Base entière utilisée pour la représentation du type.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La base utilisée est la base 2 pour les types entiers prédéfinis, et la base à laquelle l’exposant est élevé, ou FLT_RADIX, pour les types à virgule flottante prédéfinis.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_radix.cpp
@@ -1387,7 +1381,7 @@ The base for type int is:  2
 The base for type long double is:  2
 ```
 
-## <a name="round_error"></a>  numeric_limits::round_error
+### <a name="round_error"></a> round_error
 
 Retourne l'erreur d'arrondi maximale pour le type.
 
@@ -1395,11 +1389,11 @@ Retourne l'erreur d'arrondi maximale pour le type.
 static constexpr Type round_error() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Erreur d’arrondi maximale pour le type.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_round_error.cpp
@@ -1429,7 +1423,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5
 ```
 
-## <a name="round_style"></a>  numeric_limits::round_style
+### <a name="round_style"></a> round_style
 
 Retourne une valeur qui décrit les différentes méthodes qu'une implémentation peut choisir pour arrondir une valeur à virgule flottante en valeur entière.
 
@@ -1437,17 +1431,17 @@ Retourne une valeur qui décrit les différentes méthodes qu'une implémentatio
 static constexpr float_round_style round_style = round_toward_zero;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Valeur retournée par l’énumération `float_round_style` qui décrit le style d’arrondi.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Le membre stocke une valeur qui décrit les différentes méthodes qu’une implémentation peut choisir pour arrondir une valeur à virgule flottante en valeur entière.
 
 Le style d’arrondi est codé en dur dans cette implémentation. Même si le programme démarre avec un mode d’arrondi différent, cette valeur ne change donc pas.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_round_style.cpp
@@ -1476,7 +1470,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0
 ```
 
-## <a name="signaling_nan"></a>  numeric_limits::signaling_NaN
+### <a name="signaling_nan"></a> signaling_NaN
 
 Retourne la représentation d'un NaN (n'est pas un nombre) avec signalement pour le type.
 
@@ -1484,15 +1478,15 @@ Retourne la représentation d'un NaN (n'est pas un nombre) avec signalement pour
 static constexpr Type signaling_NaN() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 Représentation d’un NaN avec signalement pour le type.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 La valeur de retour est significative uniquement si [has_signaling_NaN](#has_signaling_nan) est **true**.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_signaling_nan.cpp
@@ -1516,7 +1510,7 @@ int main( )
 }
 ```
 
-## <a name="tinyness_before"></a>  numeric_limits::tinyness_before
+### <a name="tinyness_before"></a> tinyness_before
 
 Teste si un type peut déterminer qu'une valeur est trop petite pour être représentée sous la forme d'une valeur normalisée avant d'être arrondie.
 
@@ -1524,15 +1518,15 @@ Teste si un type peut déterminer qu'une valeur est trop petite pour être repr�
 static constexpr bool tinyness_before = false;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 **true** si le type peut détecter des valeurs très petites avant d’être arrondie ; **false** s’il ne peut pas.
 
-### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Notes
 
 Les types qui peuvent détecter les valeurs très petites étaient inclus en option avec les représentations à virgule flottante IEC 559. Leur implémentation peut affecter certains résultats.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_tinyness_before.cpp
@@ -1566,7 +1560,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0
 ```
 
-## <a name="traps"></a>  numeric_limits::traps
+### <a name="traps"></a> interruptions
 
 Teste si les interceptions qui signalent des exceptions arithmétiques sont implémentées pour un type.
 
@@ -1574,11 +1568,11 @@ Teste si les interceptions qui signalent des exceptions arithmétiques sont impl
 static constexpr bool traps = false;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur de retour
 
 **true** si les interceptions sont implémentées pour le type. **false** dans le cas contraire.
 
-### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemple
 
 ```cpp
 // numeric_limits_traps.cpp
@@ -1611,7 +1605,3 @@ Whether double types have implemented trapping: 1
 Whether long int types have implemented trapping: 0
 Whether unsigned char types have implemented trapping: 0
 ```
-
-## <a name="see-also"></a>Voir aussi
-
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: cc18a62db3f39bc85c0a3bb7e84e6a27011c2b5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36074f75830f92ba3fb9e5edb4e1507aa5ae1407
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412434"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241063"
 ---
 # <a name="stack-class"></a>stack, classe
 
@@ -40,11 +40,11 @@ class stack
 
 ### <a name="parameters"></a>Paramètres
 
-*Type*<br/>
+*Type*\
 Type de données des éléments à stocker dans la pile.
 
-*Conteneur*<br/>
-Type du conteneur sous-jacent utilisé pour implémenter la pile. La valeur par défaut est la classe `deque`*\<Type>*.
+*Conteneur*\
+Type du conteneur sous-jacent utilisé pour implémenter la pile. La valeur par défaut est la classe `deque` *\<Type>* .
 
 ## <a name="remarks"></a>Notes
 
@@ -60,23 +60,25 @@ Les objets stack sont comparables à l’égalité si et seulement si les élém
 
 - La [classe priority_queue](../standard-library/priority-queue-class.md) trie ses éléments pour que l’élément le plus grand soit toujours en haut. Elle prend en charge l'insertion d'un élément, et l'inspection et la suppression de l'élément du haut. Une bonne analogie à avoir à l'esprit est celle de personnes faisant la file, classées selon leur âge, leur taille ou un autre critère.
 
+## <a name="members"></a>Membres
+
 ### <a name="constructors"></a>Constructeurs
 
-|Constructeur|Description|
+|||
 |-|-|
 |[stack](#stack)|Construit un objet `stack` qui est vide ou qui est une copie de l'objet conteneur de base.|
 
 ### <a name="typedefs"></a>Typedef
 
-|Nom de type|Description|
+|||
 |-|-|
 |[container_type](#container_type)|Type qui fournit le conteneur de base à adapter par un objet `stack`.|
 |[size_type](#size_type)|Type entier non signé qui peut représenter le nombre d'éléments dans un `stack`.|
 |[value_type](#value_type)|Type qui représente le type d'objet stocké en tant qu'élément dans un objet `stack`.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="functions"></a>Fonctions
 
-|Fonction membre|Description|
+|||
 |-|-|
 |[empty](#empty)|Vérifie si l'objet `stack` est vide.|
 |[pop](#pop)|Supprime l'élément du haut de l'objet `stack`.|
@@ -84,13 +86,7 @@ Les objets stack sont comparables à l’égalité si et seulement si les élém
 |[size](#size)|Retourne le nombre d'éléments d'un `stack`.|
 |[top](#top)|Retourne une référence à un élément en haut de l'objet la`stack`.|
 
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<stack>
-
-**Espace de noms :** std
-
-## <a name="container_type"></a>  stack::container_type
+## <a name="container_type"></a> container_type
 
 Type qui fournit le conteneur de base à adapter.
 
@@ -108,7 +104,7 @@ Pour plus d’informations sur `Container`, consultez la section Notes de la rub
 
 Pour savoir comment déclarer et utiliser `container_type`, consultez l’exemple [stack::stack](#stack).
 
-## <a name="empty"></a>  stack::empty
+## <a name="empty"></a> vide
 
 Vérifie si un objet stack est vide.
 
@@ -153,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a>  stack::pop
+## <a name="pop"></a> POP
 
 Supprime l’élément du haut de l’objet stack.
 
@@ -165,7 +161,7 @@ void pop();
 
 L’objet stack ne doit pas être vide pour appliquer la fonction membre. Le haut de l’objet stack correspond à la position occupée par l’élément ajouté le plus récemment et au dernier élément à la fin du conteneur.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // stack_pop.cpp
@@ -209,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a>  stack::push
+## <a name="push"></a> push
 
 Ajoute un élément vers le haut de la pile.
 
@@ -219,14 +215,14 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*val*<br/>
+*Val*\
 Élément ajouté en haut de l’objet stack.
 
 ### <a name="remarks"></a>Notes
 
 Le haut de l’objet stack correspond à la position occupée par l’élément ajouté le plus récemment et au dernier élément à la fin du conteneur.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // stack_push.cpp
@@ -258,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a>  stack::size
+## <a name="size"></a> Taille
 
 Retourne le nombre d’éléments figurant dans l’objet stack.
 
@@ -299,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a>  stack::size_type
+## <a name="size_type"></a> size_type
 
 Type entier non signé qui peut représenter le nombre d’éléments dans un objet stack.
 
@@ -315,7 +311,7 @@ Le type est un synonyme de `size_type` pour le conteneur de base adapté par la 
 
 Pour savoir comment déclarer et utiliser `size_type`, consultez l’exemple [size](#size).
 
-## <a name="stack"></a>  stack::stack
+## <a name="stack"></a> Pile
 
 Construit un objet stack qui est vide ou qui est une copie d’une classe de conteneur de base.
 
@@ -327,7 +323,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 Conteneur dont l’objet stack construit doit être une copie.
 
 ### <a name="example"></a>Exemple
@@ -369,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a>  stack::top
+## <a name="top"></a> Retour au début
 
 Retourne une référence à un élément en haut de l’objet stack.
 
@@ -420,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a>  stack::value_type
+## <a name="value_type"></a> Value_type
 
 Type qui représente le type d’objet stocké comme élément dans une classe stack.
 
@@ -432,7 +428,7 @@ typedef typename Container::value_type value_type;
 
 Le type est un synonyme de `value_type` pour le conteneur de base adapté par la classe stack.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // stack_value_type.cpp

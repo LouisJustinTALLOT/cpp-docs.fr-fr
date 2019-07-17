@@ -6,38 +6,45 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9154f15500863d815f56438090662416b9b6fe7f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365414"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246657"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
 Définit la classe de modèle valarray et de nombreuses fonctions et classes de modèle de prise en charge.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Configuration requise
 
-```cpp
-#include <valarray>
-```
+**En-tête :** \<valarray>
+
+**Espace de noms :** std
+
+> [!NOTE]
+> Le \<valarray > bibliothèque utilise la ' #include < initializer_list >' instruction.
 
 ## <a name="remarks"></a>Notes
 
 Une latitude inhabituelle est accordée à ces fonctions et classes de modèle afin d'améliorer les performances. En particulier, n’importe quelle fonction qui retourne le type `valarray<T1>` peut retourner un objet d’un autre type T2. Dans ce cas, toute fonction qui accepte un ou plusieurs arguments de type `valarray<T2>` doit avoir des surcharges qui acceptent des combinaisons arbitraires de ces arguments, chacun remplacés par un argument de type T2.
 
+## <a name="members"></a>Membres
+
 ### <a name="functions"></a>Fonctions
 
-|Fonction|Description|
+|||
 |-|-|
 |[abs](../standard-library/valarray-functions.md#abs)|Opère sur les éléments d'un valarray d'entrée, en retournant un valarray dont les éléments sont égaux à la valeur absolue des éléments du valarray d'entrée.|
 |[acos](../standard-library/valarray-functions.md#acos)|Opère sur les éléments d'un valarray d'entrée, en retournant un valarray dont les éléments sont égaux à l'arccosinus des éléments du valarray d'entrée.|
 |[asin](../standard-library/valarray-functions.md#asin)|Opère sur les éléments d'un valarray d'entrée, en retournant un valarray dont les éléments sont égaux à l'arcsinus des éléments du valarray d'entrée.|
 |[atan](../standard-library/valarray-functions.md#atan)|Opère sur les éléments d'un valarray d'entrée, en retournant un valarray dont les éléments sont égaux à la valeur principale de l'arctangente des éléments du valarray d'entrée.|
 |[atan2](../standard-library/valarray-functions.md#atan2)|Retourne un valarray dont les éléments sont égaux à l'arctangente des composants cartésiens spécifiés par une combinaison de constantes et d'éléments de valarrays.|
+|[begin](../standard-library/valarray-functions.md#begin)||
 |[cos](../standard-library/valarray-functions.md#cos)|Opère sur les éléments d'un valarray d'entrée, en retournant un valarray dont les éléments sont égaux au cosinus des éléments du valarray d'entrée.|
 |[cosh](../standard-library/valarray-functions.md#cosh)|Opère sur les éléments d'un valarray d'entrée, en retournant un valarray dont les éléments sont égaux au cosinus hyperbolique des éléments du valarray d'entrée.|
+|[end](../standard-library/valarray-functions.md#end)||
 |[exp](../standard-library/valarray-functions.md#exp)|Opère sur les éléments d'un valarray d'entrée, en retournant un valarray dont les éléments sont égaux à l'exponentiel naturel des éléments du valarray d'entrée.|
 |[log](../standard-library/valarray-functions.md#log)|Opère sur les éléments d'un valarray d'entrée, en retournant un valarray dont les éléments sont égaux au logarithme naturel des éléments du valarray d'entrée.|
 |[log10](../standard-library/valarray-functions.md#log10)|Opère sur les éléments d'un valarray d'entrée, en retournant un valarray dont les éléments sont égaux au logarithme commun ou en base 10 des éléments du valarray d'entrée.|
@@ -51,7 +58,7 @@ Une latitude inhabituelle est accordée à ces fonctions et classes de modèle a
 
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|||
 |-|-|
 |[!=, opérateur](../standard-library/valarray-operators.md#op_neq)|Teste si les éléments correspondants de deux valarrays de taille égale sont inégaux ou si tous les éléments d'un valarray sont inégaux à une valeur spécifiée du type d'élément du valarray.|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|Obtient le reste de la division des éléments correspondants de deux valarrays de taille égale ou de la division d'un valarray par une valeur spécifiée du type d'élément du valarray ou de la division d'une valeur spécifiée par un valarray.|
@@ -74,7 +81,7 @@ Une latitude inhabituelle est accordée à ces fonctions et classes de modèle a
 
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|||
 |-|-|
 |[gslice, classe](../standard-library/gslice-class.md)|Classe utilitaire de valarray qui sert à définir des secteurs multidimensionnels d'un valarray.|
 |[gslice_array, classe](../standard-library/gslice-array-class.md)|Classe de modèle interne auxiliaire qui prend en charge les objets de secteurs généraux en fournissant des opérations entre des tableaux de sous-ensembles définis par le secteur général d'un valarray.|

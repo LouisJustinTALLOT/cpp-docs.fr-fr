@@ -1,41 +1,38 @@
 ---
-title: '&lt;new&gt;, opérateurs'
+title: '&lt;nouvelle&gt; opérateurs et énumérations'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
-ms.openlocfilehash: 87f7b6cfd6a06ab03b27ebe6aa4dd41b0b900673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3fd5b825fe1eaf3a07d9d001f03b9d0c64ffa31
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223686"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243680"
 ---
-# <a name="ltnewgt-operators"></a>&lt;new&gt;, opérateurs
+# <a name="ltnewgt-operators-and-enums"></a>&lt;nouvelle&gt; opérateurs et énumérations
 
-||||
-|-|-|-|
-|[operator delete](#op_delete)|[operator delete[]](#op_delete_arr)|[operator new](#op_new)|
-|[operator new[]](#op_new_arr)|
+## <a name="op_align_val_t"></a> enum align_val_t
 
-## <a name="op_delete"></a>  operator delete
+```cpp
+enum class align_val_t : size_t {};
+```
 
-Fonction appelée par une expression delete pour libérer le stockage pour des objets distincts.
+## <a name="op_delete"></a> opérateur delete
+
+La fonction appelée par une expression delete pour annuler l’allocation de stockage pour des objets.
 
 ```cpp
 void operator delete(void* ptr) throw();
-
-void operator delete(void *,
-    void*) throw();
-
-void operator delete(void* ptr,
-    const std::nothrow_t&) throw();
+void operator delete(void *, void*) throw();
+void operator delete(void* ptr, const std::nothrow_t&) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*ptr*<br/>
+*PTR*\
 Pointeur dont la valeur doit être rendue non valide par la suppression.
 
 ### <a name="remarks"></a>Notes
@@ -46,29 +43,25 @@ Le comportement par défaut d’une valeur null de *ptr* consiste à ne rien fai
 
 La deuxième fonction est appelée par une expression delete de positionnement correspondant à une expression de la forme **new**( **std::size_t**). Elle ne fait rien.
 
-La troisième fonction est appelée par une expression delete de positionnement correspondant à une expression new de la forme **new**( **std::size_t**, **conststd::nothrow_t&**). Le programme peut définir une fonction avec cette signature de fonction qui remplace la version par défaut définie par la bibliothèque standard C++. Le comportement exigé consiste à accepter une valeur de `ptr` qui est Null ou qui a été retournée par un appel précédent à `operator new`( **size_t**). Le comportement par défaut consiste à évaluer **supprimer**(`ptr`).
+La troisième fonction est appelée par une expression delete de positionnement correspondant à une expression new de la forme **new**( **std::size_t**, **conststd::nothrow_t&** ). Le programme peut définir une fonction avec cette signature de fonction qui remplace la version par défaut définie par la bibliothèque standard C++. Le comportement exigé consiste à accepter une valeur de `ptr` qui est Null ou qui a été retournée par un appel précédent à `operator new`( **size_t**). Le comportement par défaut consiste à évaluer **supprimer**(`ptr`).
 
 ### <a name="example"></a>Exemple
 
 Consultez [opérateur new](../standard-library/new-operators.md#op_new) pour obtenir un exemple qui utilisent **opérateur delete**.
 
-## <a name="op_delete_arr"></a>  operator delete[]
+## <a name="op_delete_arr"></a> opérateur delete]
 
 Fonction appelée par une expression delete pour libérer le stockage pour un tableau d'objets.
 
 ```cpp
 void operator delete[](void* ptr) throw();
-
-void operator delete[](void *,
-    void*) throw();
-
-void operator delete[](void* ptr,
-    const std::nothrow_t&) throw();
+void operator delete[](void *, void*) throw();
+void operator delete[](void* ptr, const std::nothrow_t&) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*ptr*<br/>
+*PTR*\
 Pointeur dont la valeur doit être rendue non valide par la suppression.
 
 ### <a name="remarks"></a>Notes
@@ -77,32 +70,28 @@ La première fonction est appelée par un `delete[]` expression pour rendre la v
 
 La deuxième fonction est appelée par un positionnement `delete[]` expression correspondant à un `new[]` expression sous la forme `new[]`(**std::size_t**). Elle ne fait rien.
 
-La troisième fonction est appelée par une expression delete de positionnement correspondant à une expression `new[]` de la forme `new[]`( **std::size_t**, **const std::nothrow_t&**). Le programme peut définir une fonction avec cette signature de fonction qui remplace la version par défaut définie par la bibliothèque standard C++. Le comportement exigé consiste à accepter une valeur de *ptr* qui est null ou qui a été retournée par un appel précédent à l’opérateur `new[]`(**size_t**). Le comportement par défaut consiste à évaluer `delete[]`( `ptr`).
+La troisième fonction est appelée par une expression delete de positionnement correspondant à une expression `new[]` de la forme `new[]`( **std::size_t**, **const std::nothrow_t&** ). Le programme peut définir une fonction avec cette signature de fonction qui remplace la version par défaut définie par la bibliothèque standard C++. Le comportement exigé consiste à accepter une valeur de *ptr* qui est null ou qui a été retournée par un appel précédent à l’opérateur `new[]`(**size_t**). Le comportement par défaut consiste à évaluer `delete[]`( `ptr`).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Pour obtenir des exemples d’utilisation de `operator delete[]`, consultez [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr).
 
-## <a name="op_new"></a>  operator new
+## <a name="op_new"></a> opérateur new
 
 Fonction appelée par une expression new pour allouer le stockage pour des objets distincts.
 
 ```cpp
 void* operator new(std::size_t count) throw(bad_alloc);
-
-void* operator new(std::size_t count,
-    const std::nothrow_t&) throw();
-
-void* operator new(std::size_t count,
-    void* ptr) throw();
+void* operator new(std::size_t count, const std::nothrow_t&) throw();
+void* operator new(std::size_t count, void* ptr) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*count*<br/>
+*Nombre*\
 Nombre d’octets de stockage à allouer.
 
-*ptr*<br/>
+*PTR*\
 Pointeur à retourner.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -137,9 +126,9 @@ La troisième fonction est appelée par une expression **new** de positionnement
 
 Pour libérer le stockage alloué par **opérateur new**, appelez [opérateur delete](../standard-library/new-operators.md#op_delete).
 
-Pour plus d’informations sur le comportement de levée de new, consultez [Opérateurs new et delete](../cpp/new-and-delete-operators.md).
+Pour plus d’informations sur la levée ou non lever le comportement de new, consultez [le nouveau et supprimer des opérateurs](../cpp/new-and-delete-operators.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // new_op_new.cpp
@@ -182,26 +171,22 @@ int main( )
 }
 ```
 
-## <a name="op_new_arr"></a>  operator new[]
+## <a name="op_new_arr"></a> opérateur new]
 
 Fonction d’allocation appelée par une expression new pour allouer le stockage pour un tableau d’objets.
 
 ```cpp
 void* operator new[](std::size_t count) throw(std::bad_alloc);
-
-void* operator new[](std::size_t count,
-    const std::nothrow_t&) throw();
-
-void* operator new[](std::size_t count,
-    void* ptr) throw();
+void* operator new[](std::size_t count, const std::nothrow_t&) throw();
+void* operator new[](std::size_t count, void* ptr) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*count*<br/>
+*Nombre*\
 Nombre d’octets de stockage à allouer pour l’objet tableau.
 
-*ptr*<br/>
+*PTR*\
 Pointeur à retourner.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -260,7 +245,3 @@ int main() {
    delete[ ] fPtr3;
 }
 ```
-
-## <a name="see-also"></a>Voir aussi
-
-[\<new>](../standard-library/new.md)<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 042523cddf640e7cf6fd7f9a1dac9f3adbc360b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36dfca8418cbbabd7dcfb30b2cece483406a5667
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411147"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245957"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -24,6 +24,9 @@ Définit les fonctions de modèle du conteneur de bibliothèque C++ Standard qui
 ```cpp
 (see relevant links below for specific algorithm syntax)
 ```
+
+> [!NOTE]
+> Le \<algorithme > bibliothèque utilise également la `#include <initializer_list>` instruction.
 
 ## <a name="remarks"></a>Notes
 
@@ -41,14 +44,15 @@ Les algorithmes de la bibliothèque C++ Standard sont souvent classés par group
 
 Les algorithmes numériques de la bibliothèque C++ Standard fournis pour le traitement numérique ont leur propre fichier d’en-tête [\<numeric>](../standard-library/numeric.md). Les objets de fonction et les adaptateurs, quant à eux, sont définis dans l’en-tête [\<functional>](../standard-library/functional.md). Les objets de fonction qui retournent des valeurs booléennes sont appelés prédicats. Le prédicat binaire par défaut est le `operator<` de comparaison. En général, les éléments qui sont triés ne doivent pas être équivalents, afin que, avec deux éléments quelconques donnés, il soit possible de déterminer qu'ils sont équivalents (dans le sens où l'un n'est pas inférieur à l'autre) ou que l'un est inférieur à l'autre. Cela entraîne un tri des éléments non équivalents.
 
-### <a name="function-templates"></a>Modèles de fonction
+### <a name="function-templates"></a>Modèles de fonctions
 
-|Modèle de fonction|Description|
+|||
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|Recherche deux éléments adjacents qui ont la même valeur ou qui répondent à une condition spécifiée.|
 |[all_of](../standard-library/algorithm-functions.md#all_of)|Retourne **true** lorsqu’une condition est remplie pour chaque élément dans la plage donnée.|
 |[any_of](../standard-library/algorithm-functions.md#any_of)|Retourne **true** lorsqu’une condition est remplie au moins une fois dans la plage d’éléments spécifiée.|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|Teste si un élément d’une plage triée est égal à une valeur spécifiée ou équivalent, selon une condition spécifiée par un prédicat binaire.|
+|[clamp](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions, du haut vers le bas.|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions vers le haut.|
 |[copy_if](../standard-library/algorithm-functions.md#copy_if)|Copie tous les éléments dans une plage donnée qui testent **true** pour une condition spécifiée|
@@ -65,6 +69,7 @@ Les algorithmes numériques de la bibliothèque C++ Standard fournis pour le tra
 |[find_if](../standard-library/algorithm-functions.md#find_if)|Recherche la position de la première occurrence d'un élément d'une plage qui répond à une condition spécifiée.|
 |[find_if_not](../standard-library/algorithm-functions.md#find_if_not)|Retourne le premier élément d'une plage spécifiée qui ne répond pas à une condition.|
 |[for_each](../standard-library/algorithm-functions.md#for_each)|Applique un objet de fonction spécifié à chaque élément d'une plage, du haut vers le bas, et retourne l'objet de la fonction.|
+|[for_each_n](../standard-library/algorithm-functions.md#for_each_n)||
 |[generate](../standard-library/algorithm-functions.md#generate)|Assigne les valeurs générées par un objet de fonction à chaque élément d'une plage.|
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|Assigne les valeurs générées par un objet de fonction à un nombre spécifié d'éléments d'une plage, et retourne à la position située juste après la dernière valeur assignée.|
 |[includes](../standard-library/algorithm-functions.md#includes)|Teste si une plage triée contient tous les éléments d’une autre plage triée. Le critère de tri ou d’équivalence entre les éléments peut être spécifié par un prédicat binaire.|
@@ -113,6 +118,7 @@ Les algorithmes numériques de la bibliothèque C++ Standard fournis pour le tra
 |[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)|Inverse l'ordre des éléments d'une plage source, tout en les copiant dans une plage de destination.|
 |[rotate](../standard-library/algorithm-functions.md#rotate)|Échange les éléments de deux plages adjacentes.|
 |[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|Échange les éléments de deux plages adjacentes au sein d'une plage source et copie le résultat dans une plage de destination.|
+|[sample](../standard-library/algorithm-functions.md#sample)||
 |[search](../standard-library/algorithm-functions.md#search)|Recherche la première occurrence d’une séquence au sein d’une plage cible dont les éléments sont égaux à ceux d’une séquence d’éléments donnée ou dont les éléments sont équivalents à ceux d’une séquence donnée, selon un prédicat binaire spécifié.|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|Recherche la première sous-séquence d’une plage dont un nombre spécifié d’éléments ont une valeur particulière ou une relation à cette valeur, selon un prédicat binaire spécifié.|
 |[set_difference](../standard-library/algorithm-functions.md#set_difference)|Regroupe tous les éléments qui appartiennent à une plage source triée, mais pas à une autre plage source triée, en une même plage de destination triée. Un critère de tri peut être spécifié par un prédicat binaire.|

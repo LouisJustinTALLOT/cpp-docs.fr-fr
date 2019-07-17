@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ctime header
 ms.assetid: c1f7d4a4-4bfe-4e35-92cb-f63dbd3c39a8
-ms.openlocfilehash: ab48007f1dd41d4d28dd199a43121f08219a0221
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 647e9e65c7dae3686c5e84c58169d2a490c1e084
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394199"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246596"
 ---
 # <a name="ltctimegt"></a>&lt;ctime&gt;
 
@@ -27,6 +27,42 @@ Inclut l’en-tête \<time.h> de la bibliothèque C Standard et ajoute les noms
 ## <a name="remarks"></a>Notes
 
 L'inclusion de cet en-tête garantit également que les noms déclarés à l'aide d'une liaison externe dans l'en-tête de la bibliothèque C standard soient déclarés dans l'espace de noms `std`.
+
+## <a name="constants"></a>Constantes
+
+```cpp
+#define NULL
+#define CLOCKS_PER_SEC
+#define TIME_UTC
+
+namespace std {
+    using size_t = see below;
+    using clock_t = see below ;
+    using time_t = see below ;
+}
+```
+    
+## <a name="structures"></a>Structures
+    
+```cpp
+struct timespec;
+struct tm;
+```
+    
+## <a name="functions"></a>Fonctions
+
+```cpp
+clock_t clock();
+double difftime(time_t time1, time_t time0);
+time_t mktime(struct tm* timeptr);
+time_t time(time_t* timer);
+int timespec_get(timespec* ts, int base);
+char* asctime(const struct tm* timeptr);
+char* ctime(const time_t* timer);
+struct tm* gmtime(const time_t* timer);
+struct tm* localtime(const time_t* timer);
+size_t strftime(char* s, size_t maxsize, const char* format, const struct tm* timeptr);
+```
 
 ## <a name="see-also"></a>Voir aussi
 

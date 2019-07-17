@@ -7,40 +7,36 @@ f1_keywords:
 helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
-ms.openlocfilehash: 6fd4e25b3ca7b56e2221cb99b64f7c8e109bf452
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159551"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243774"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;functional&gt;, opérateurs
 
-|||
-|-|-|
-|[!=, opérateur](#op_neq)|[operator==](#op_eq_eq)|
-
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Teste si l'objet pouvant être appelé est vide.
 
 ```cpp
 template <class Fty>
-bool operator==(const function<Fty>& f, null_ptr_type npc);
+    bool operator==(const function<Fty>& f, null_ptr_type npc);
 
 template <class Fty>
-bool operator==(null_ptr_type npc, const function<Fty>& f);
+    bool operator==(null_ptr_type npc, const function<Fty>& f);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Fty*<br/>
+*Fty*\
 Type de fonction à encapsuler.
 
-*f*<br/>
+*F*\
 Objet de function.
 
-*npc*<br/>
+*NPC*\
 Pointeur null.
 
 ### <a name="remarks"></a>Notes
@@ -79,34 +75,34 @@ empty == true
 empty == false
 ```
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> opérateur ! =
 
 Vérifie si l’objet pouvant être appelé n’est pas vide.
 
 ```cpp
 template <class Fty>
-bool operator!=(const function<Fty>& f, null_ptr_type npc);
+    bool operator!=(const function<Fty>& f, null_ptr_type npc);
 
 template <class Fty>
-bool operator!=(null_ptr_type npc, const function<Fty>& f);
+    bool operator!=(null_ptr_type npc, const function<Fty>& f);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Fty*<br/>
+*Fty*\
 Type de fonction à encapsuler.
 
-*f*<br/>
+*F*\
 Objet de function.
 
-*npc*<br/>
+*NPC*\
 Pointeur null.
 
 ### <a name="remarks"></a>Notes
 
 Les opérateurs prennent tous deux un argument qui est une référence à un objet `function` et un argument qui est une constante de pointeur null. Tous deux retournent la valeur true uniquement si l’objet `function` n’est pas vide.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // std__functional__operator_ne.cpp
@@ -137,7 +133,3 @@ int main()
 not empty == false
 not empty == true
 ```
-
-## <a name="see-also"></a>Voir aussi
-
-[\<functional>](../standard-library/functional.md)<br/>

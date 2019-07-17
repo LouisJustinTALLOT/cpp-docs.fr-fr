@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - climits header
 ms.assetid: 7ca8a539-aa45-4ac3-86e8-74513be3f07e
-ms.openlocfilehash: 09989f5181e45867b5c74bb96f7d8a4891fc537c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67cddab4f42d10c4d1c78762c32ed1e4fd1e6175
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386224"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244799"
 ---
 # <a name="ltclimitsgt"></a>&lt;climits&gt;
 
-Inclut l’en-tête \<limits.h> de la bibliothèque C Standard et ajoute les noms associés à l’espace de noms `std`.
+Inclut l’en-tête de la bibliothèque standard C \<limits.h > et ajoute les noms associés à la `std` espace de noms. Inclusion de cet en-tête garantit également que les noms déclarés à l’aide d’une liaison externe dans l’en-tête de la bibliothèque standard C sont déclarés dans le `std` espace de noms.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,9 +23,29 @@ Inclut l’en-tête \<limits.h> de la bibliothèque C Standard et ajoute les no
 #include <climits>
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="macros"></a>Macros
 
-L'inclusion de cet en-tête garantit également que les noms déclarés à l'aide d'une liaison externe dans l'en-tête de la bibliothèque C standard soient déclarés dans l'espace de noms `std`.
+```cpp
+#define CHAR_BIT
+#define SCHAR_MIN
+#define SCHAR_MAX
+#define UCHAR_MAX
+#define CHAR_MIN
+#define CHAR_MAX
+#define MB_LEN_MAX
+#define SHRT_MIN
+#define SHRT_MAX
+#define USHRT_MAX
+#define INT_MIN
+#define INT_MAX
+#define UINT_MAX
+#define LONG_MIN
+#define LONG_MAX
+#define ULONG_MAX
+#define LLONG_MIN
+#define LLONG_MAX
+#define ULLONG_MAX
+```
 
 ## <a name="see-also"></a>Voir aussi
 

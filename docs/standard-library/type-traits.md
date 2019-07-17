@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83949a2c74447735f6863c5f1af68b4dfe2ee4e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278980"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243523"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -110,6 +110,7 @@ Propriétés de type
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|Teste si le type est une classe polymorphe.|
 |[is_abstract](../standard-library/is-abstract-class.md)|Teste si le type est une classe abstraite.|
 |[is_final](../standard-library/is-final-class.md)|Teste si le type est un type de classe marqué `final`.|
+|[is_aggregate](../standard-library/is-aggregate-class.md)||
 |[is_signed](../standard-library/is-signed-class.md)|Teste si le type est un entier signé.|
 |[is_unsigned](../standard-library/is-unsigned-class.md)|Teste si le type est un entier non signé.|
 |[is_constructible](../standard-library/is-constructible-class.md)|Teste si le type est constructible à l’aide des types d’argument spécifiés.|
@@ -119,6 +120,8 @@ Propriétés de type
 |[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|Teste si le premier type peut se voir assigner une valeur du second type.|
 |[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|Teste si un type peut se voir assigner une valeur de référence const du type.|
 |[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|Teste si un type peut se voir assigner une référence rvalue du type.|
+|[is_swappable](../standard-library/type-traits-functions.md#is_swappable)||
+|[is_swappable_with](../standard-library/type-traits-functions.md#is_swappable_with)||
 |[is_destructible](../standard-library/is-destructible-class.md)|Teste si le type est destructible.|
 |[is_trivially_constructible](../standard-library/is-trivially-constructible-class.md)|Teste si le type n’utilise aucune opération non triviale lorsqu’il est construit à l’aide des types spécifiés.|
 |[is_trivially_default_constructible](../standard-library/is-trivially-default-constructible-class.md)|Teste si le type n’utilise aucune opération non triviale lorsqu’il est construit par défaut.|
@@ -135,8 +138,11 @@ Propriétés de type
 |[is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)|Teste si le type peut être assigné à l’aide du type spécifié et si l’assignation est connue comme ne levant pas d’exception.|
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Teste si le type peut être assigné par copie et si l’assignation est connue comme ne levant pas d’exception.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Teste si le type peut être assigné par déplacement et si l’assignation est connue comme ne levant pas d’exception.|
+|[is_nothrow_swappable](../standard-library/type-traits-functions.md#is_nothrow_swappable)||
+|[is_nothrow_swappable_with](../standard-library/type-traits-functions.md#is_nothrow_swappable_with)||
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Teste si le type est destructible et si le destructeur est connu comme ne levant pas d’exception.|
 |`has_virtual_destructor`|Teste si le type a un destructeur virtuel.|
+|`has_unique_object_representations`||
 | [is_invocable](is-invocable-classes.md) | Teste si un type pouvant être appelé peut être appelé à l’aide des types d’arguments spécifiés.<br/> Ajouté dans C ++ 17. |
 | [is_invocable_r](is-invocable-classes.md) | Teste si un type pouvant être appelé peut être appelé à l’aide des types d’arguments spécifiés et le résultat est convertible en type spécifié.<br/> Ajouté dans C ++ 17. |
 | [is_nothrow_invocable](is-invocable-classes.md) | Teste si un type pouvant être appelé peut être appelé à l’aide de l’argument spécifié de types et ne connaît ne pas lever d’exceptions.<br/> Ajouté dans C ++ 17. |
@@ -211,6 +217,14 @@ Autres transformations
 |[invoke_result](invoke-result-class.md)|Détermine le type de retour du type pouvant être appelé qui accepte les types d’argument spécifiés. <br/>Ajouté dans C ++ 17. |
 |[result_of](../standard-library/result-of-class.md)|Détermine le type de retour du type pouvant être appelé qui accepte les types d’argument spécifiés. <br/>Ajouté dans C ++ 14, déconseillées dans C ++ 17. |
 |[underlying_type](../standard-library/underlying-type-class.md)|Génère le type intégral sous-jacent pour un type d’énumération.|
+
+Caractéristiques de l’opérateur logique
+
+|||
+|-|-|
+|[conjonction](../standard-library/conjunction-class.md)||
+|[disjonction](../standard-library/disjunction-class.md)||
+|[Négation](../standard-library/negation-class.md)||
 
 ## <a name="see-also"></a>Voir aussi
 

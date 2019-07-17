@@ -7,12 +7,12 @@ helpviewer_keywords:
 - greater_equal struct
 - greater_equal function
 ms.assetid: a8ba911b-7af8-4653-b972-d8618f4df7d5
-ms.openlocfilehash: 91d8265fa699bbaafe946c44a55dd63c13f44b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f09364203c905407d8ce4607f527d58108eec778
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159351"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243741"
 ---
 # <a name="greaterequal-struct"></a>greater_equal (struct)
 
@@ -39,12 +39,13 @@ struct greater_equal<void>
 
 ### <a name="parameters"></a>Paramètres
 
-*Type*, *T*, *U* n’importe quel type qui prend en charge un `operator>=` qui accepte des opérandes des types spécifiés ou inférés.
+*Type*, *T*, *U*\
+Tout type qui prend en charge un `operator>=` qui accepte des opérandes des types spécifiés ou inférés.
 
-*Gauche*<br/>
+*Gauche*\
 Opérande gauche de l’opération Supérieur ou égal à. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
 
-*Droite*<br/>
+*Oui*\
 Opérande droit de l’opération Supérieur ou égal à. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -53,7 +54,7 @@ Résultat de `Left >= Right`. Le modèle spécialisé effectue un transfert parf
 
 ## <a name="remarks"></a>Notes
 
-Le prédicat binaire `greater_equal` <  `Type`> fournit un ordre faible strict d’un ensemble de valeurs d’éléments de type *Type* dans des classes d’équivalence, si et seulement si ce type remplit la norme mathématique configuration requise pour donc classées. Les spécialisations de tout type pointeur produisent un ordre total des éléments, dans le sens où tous les éléments de valeurs distinctes sont ordonnés les uns par rapport aux autres.
+Le prédicat binaire `greater_equal` < `Type`> fournit un ordre faible strict d’un ensemble de valeurs d’éléments de type *Type* dans des classes d’équivalence, si et seulement si ce type remplit la norme mathématique configuration requise pour donc classées. Les spécialisations de tout type pointeur produisent un ordre total des éléments, dans le sens où tous les éléments de valeurs distinctes sont ordonnés les uns par rapport aux autres.
 
 ## <a name="example"></a>Exemple
 
@@ -108,13 +109,3 @@ Original vector v1 = (6262 6262 41 18467 6334 26500 19169)
 Sorted vector v1 = (41 6262 6262 6334 18467 19169 26500)
 Resorted vector v1 = (26500 19169 18467 6334 6262 6262 41)
 ```
-
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<functional>
-
-**Espace de noms :** std
-
-## <a name="see-also"></a>Voir aussi
-
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

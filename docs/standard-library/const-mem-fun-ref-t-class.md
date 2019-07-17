@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_ref_t class
 ms.assetid: 316ddbaa-9f46-4931-8eba-ea4ca66360ef
-ms.openlocfilehash: 16025764cdcf28900c30ef53dced871998f8bd07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e208364e2cac0e0d4e020dc865b299fbd2bde2c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212051"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244560"
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t, classe
 
@@ -21,7 +21,7 @@ Classe d’adaptateur qui permet à une fonction membre **const** qui n’accept
 
 ```cpp
 template <class Result, class Type>
-class const_mem_fun_ref_t
+    class const_mem_fun_ref_t
 : public unary_function<Type, Result>
 {
     explicit const_mem_fun_t(Result (Type::* Pm)() const);
@@ -31,10 +31,10 @@ class const_mem_fun_ref_t
 
 ### <a name="parameters"></a>Paramètres
 
-*Pm*<br/>
+*PM*\
 Pointeur vers la fonction membre de la classe `Type` à convertir en objet de fonction.
 
-*left*<br/>
+*Gauche*\
 L’objet qui le *Pm* fonction membre est appelée sur.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -43,19 +43,8 @@ Fonction unaire adaptable.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie de *Pm*, qui doit être un pointeur vers une fonction membre de classe `Type`, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant ( **gauche**.\* `Pm`) () **const**.
+La classe de modèle stocke une copie de *Pm*, qui doit être un pointeur vers une fonction membre de classe `Type`, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant (**gauche**.\* `Pm`) () **const**.
 
 ## <a name="example"></a>Exemple
 
 Le constructeur de `const_mem_fun_ref_t` n’est généralement pas utilisé directement ; la fonction d’assistance `mem_fun_ref` est utilisée pour adapter les fonctions membres. Pour obtenir un exemple d’utilisation des adaptateurs de fonction membre, consultez [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).
-
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<functional>
-
-**Espace de noms :** std
-
-## <a name="see-also"></a>Voir aussi
-
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

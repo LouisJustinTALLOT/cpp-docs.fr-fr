@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: cbde6268be0f501a220721cae498254dd0588eb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d20c5b83e0ce00c7634d32e6b63c92242c24d1b2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159377"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240653"
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
 
 Définit la classe de modèle de conteneur forward_list et plusieurs modèles de prise en charge.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Configuration requise
 
-```cpp
-#include <forward_list>
-```
+**En-tête :** \<forward_list>
+
+**Espace de noms :** std
+
+> [!NOTE]
+> Le \<forward_list > bibliothèque utilise également la `#include <initializer_list>` instruction.
+
+## <a name="members"></a>Membres
 
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|||
 |-|-|
 |[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur est égal à l’objet de liste forward_list situé à droite.|
 |[!=, opérateur](../standard-library/forward-list-operators.md#op_neq)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur n’est pas égal à l’objet de liste forward_list situé à droite.|
@@ -36,13 +41,13 @@ Définit la classe de modèle de conteneur forward_list et plusieurs modèles de
 
 ### <a name="functions"></a>Fonctions
 
-|Fonction|Description|
+|||
 |-|-|
 |[swap](../standard-library/forward-list-functions.md#swap)|Échange les éléments de deux forward_list.|
 
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|||
 |-|-|
 |[forward_list](../standard-library/forward-list-class.md)|Décrit un objet qui contrôle une séquence de longueur variable constituée d'éléments. La séquence est stockée sous forme de liste d’éléments à liaison unique, chacun contenant un membre de type `Type`.|
 

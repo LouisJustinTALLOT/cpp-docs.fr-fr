@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 8c1ed74da939c5f5cc83a2a109d32b43b5ac7f41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f59887e6c9d2965a6c8680f17a40c5bd93869c0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414046"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243357"
 ---
 # <a name="binder2nd-class"></a>binder2nd, classe
 
@@ -25,7 +25,6 @@ class binder2nd
     : public unaryFunction <typename Operation::first_argument_type,
     typename Operation::result_type>
 {
-public:
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder2nd(
@@ -34,22 +33,18 @@ public:
 
     result_type operator()(const argument_type& left) const;
     result_type operator()(argument_type& left) const;
-
-protected:
-    Operation op;
-    typename Operation::second_argument_type value;
 };
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Func*<br/>
+*Func*\
 Objet de fonction binaire à convertir en un objet de fonction unaire.
 
-*right*<br/>
+*Oui*\
 Valeur à laquelle le deuxième argument de l’objet de fonction binaire doit être lié.
 
-*left*<br/>
+*Gauche*\
 Valeur de l’argument que l’objet binaire adapté compare à la valeur fixe du deuxième argument.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -58,9 +53,9 @@ L’objet de fonction unaire qui résulte de la liaison le deuxième argument de
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie d’un objet de fonction binaire _ *Func* dans `op`et une copie de *droit* dans `value`. Elle définit sa fonction membre `operator()` comme retournant **op**( `left` **value**).
+La classe de modèle stocke une copie d’un objet de fonction binaire _ *Func* dans `op`et une copie de *droit* dans `value`. Elle définit sa fonction membre `operator()` comme retournant **op**(`left`, **valeur**).
 
-Si `Func` est un objet de type `Operation` et c est une constante, puis [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) est équivalente à la `binder2nd` constructeur de classe `binder2nd` \<  **Opération**> ( `Func`, `c` ) et plus pratique.
+Si `Func` est un objet de type `Operation` et c est une constante, puis [bind2nd](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) est équivalente à la `binder2nd` constructeur de classe `binder2nd` \<  **Opération**> (`Func`, `c`) et plus pratique.
 
 ## <a name="example"></a>Exemple
 
@@ -105,20 +100,10 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "
          << result2 << "." << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
 The number of elements in v1 less than 10 is: 2.
-*/
 ```
-
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<functional>
-
-**Espace de noms :** std
-
-## <a name="see-also"></a>Voir aussi
-
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

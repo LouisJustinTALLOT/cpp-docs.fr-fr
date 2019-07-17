@@ -5,20 +5,16 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: a6e005918730a2ca1f52469130e2ea2cf1547fc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f34d818c1829baba1740bf2776b2d47a8808bf68
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376992"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243436"
 ---
 # <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt;, fonctions
 
-|||
-|-|-|
-|[swap (set)](#swap)|[swap (unordered_multiset)](#swap_unordered_multiset)|
-
-## <a name="swap"></a>  swap (unordered_set)
+## <a name="swap"></a> swap (unordered_set)
 
 Échange le contenu de deux conteneurs.
 
@@ -32,22 +28,22 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*Key*<br/>
+*Clé*\
 Type de clé.
 
-*hachage*<br/>
+*hachage*\
 Type d'objet de la fonction de hachage.
 
-*Pred*<br/>
+*Pred*\
 Type d’objet de fonction de comparaison d’égalité.
 
-*Alloc*<br/>
+*Alloc*\
 Classe allocator.
 
-*left*<br/>
+*Gauche*\
 Premier conteneur à échanger.
 
-*right*<br/>
+*Oui*\
 Second conteneur à échanger.
 
 ### <a name="remarks"></a>Notes
@@ -102,18 +98,16 @@ return (0);
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a>  swap (unordered_multiset)
+## <a name="swap_unordered_multiset"></a> swap (unordered_multiset)
 
 Échange le contenu de deux conteneurs.
 
 ```
-
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
@@ -122,22 +116,22 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*Key*<br/>
+*Clé*\
 Type de clé.
 
-*hachage*<br/>
+*hachage*\
 Type d'objet de la fonction de hachage.
 
-*Pred*<br/>
+*Pred*\
 Type d’objet de fonction de comparaison d’égalité.
 
-*Alloc*<br/>
+*Alloc*\
 Classe allocator.
 
-*left*<br/>
+*Gauche*\
 Premier conteneur à échanger.
 
-*right*<br/>
+*Oui*\
 Second conteneur à échanger.
 
 ### <a name="remarks"></a>Notes
@@ -194,12 +188,7 @@ int main()
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
-
-## <a name="see-also"></a>Voir aussi
-
-[<unordered_set>](../standard-library/unordered-set.md)<br/>

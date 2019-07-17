@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: 8915a652fe442af84f2582b9b9d47a243f416eeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fce204e3873151eafa0c4fa9c2b1e0af9971cfae
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377242"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243882"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
 Définit la classe de modèle de conteneur **tableau** et plusieurs modèles de prise en charge.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Configuration requise
 
-```cpp
-#include <array>
-```
+**En-tête :** \<array>
+
+**Espace de noms :** std
+
+> [!NOTE]
+> Le \<tableau > bibliothèque utilise également la `#include <initializer_list>` instruction.
+
+## <a name="members"></a>Membres
 
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|||
 |-|-|
 |[array](../standard-library/array-class-stl.md)|Stocke une séquence d’éléments de longueur fixe.|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|Encapsule le type d’un élément array.|
@@ -33,7 +38,7 @@ Définit la classe de modèle de conteneur **tableau** et plusieurs modèles de 
 
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|||
 |-|-|
 |[operator==](../standard-library/array-operators.md#op_eq_eq)|comparaison de tableaux, égal à|
 |[!=, opérateur](../standard-library/array-operators.md#op_neq)|comparaison de tableaux, non égal à|
@@ -44,7 +49,7 @@ Définit la classe de modèle de conteneur **tableau** et plusieurs modèles de 
 
 ### <a name="functions"></a>Fonctions
 
-|Fonction|Description|
+|||
 |-|-|
 |[get](../standard-library/array-functions.md#get)|Obtenir l’élément de tableau spécifié.|
 |[swap](../standard-library/array-functions.md#swap)|Échange le contenu d’un tableau avec celui d’un autre tableau.|

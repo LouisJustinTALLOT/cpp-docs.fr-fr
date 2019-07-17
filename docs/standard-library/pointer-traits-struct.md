@@ -14,12 +14,12 @@ f1_keywords:
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-ms.openlocfilehash: b661d4b36ce48a08faba6638c5114f3f4e6981a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 109e51ad9eba54f31b90da9b8b85bec105c7dce6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370383"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240420"
 ---
 # <a name="pointertraits-struct"></a>pointer_traits, struct
 
@@ -29,7 +29,7 @@ Fournit les informations requises par un objet de la classe de modèle `allocato
 
 ```cpp
 template <class Ptr>
-struct pointer_traits;
+    struct pointer_traits;
 ```
 
 ## <a name="remarks"></a>Notes
@@ -38,52 +38,42 @@ Le pointeur Ptr peut être un pointeur brut du type `Ty *` ou une classe ayant l
 
 ```cpp
 struct Ptr
-   { // describes a pointer type usable by allocators
+{ // describes a pointer type usable by allocators
    typedef Ptr pointer;
    typedef T1 element_type; // optional
    typedef T2 difference_type; // optional
    template <class Other>
    using rebind = typename Ptr<Other, Rest...>; // optional
-   static pointer pointer_to(element_type& obj);
-   // optional
-   };
+   static pointer pointer_to(element_type& obj); // optional
+};
 ```
+
+## <a name="members"></a>Membres
 
 ### <a name="typedefs"></a>Typedef
 
-|Nom|Description|
-|----------|-----------------|
+|||
+|-|-|
 |`typedef T2 difference_type`|Le type `T2` est `Ptr::difference_type` si ce type existe. Sinon, le type est `ptrdiff_t`. Si `Ptr` est un pointeur brut, le type est `ptrdiff_t`.|
 |`typedef T1 element_type`|Le type `T1` est `Ptr::element_type` si ce type existe. Sinon, le type est `Ty`. Si `Ptr` est un pointeur brut, le type est `Ty`.|
 |`typedef Ptr pointer`|Le type est `Ptr`.|
 
 ### <a name="structs"></a>Structs
 
-|Nom|Description|
-|----------|-----------------|
-|`pointer_traits::rebind`|Tente de convertir le type de pointeur sous-jacent en un type spécifié.|
+|||
+|-|-|
+|`rebind`|Tente de convertir le type de pointeur sous-jacent en un type spécifié.|
 
 ### <a name="methods"></a>Méthodes
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[pointer_to](#pointer_to)|Convertit une référence arbitraire à un objet de la classe `Ptr`.|
 
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<memory>
-
-**Espace de noms :** std
-
-## <a name="pointer_to"></a>  pointer_to
+### <a name="pointer_to"></a> pointer_to
 
 Méthode statique qui retourne `Ptr::pointer_to(obj)`, si cette fonction existe. Sinon, il n’est pas possible de convertir une référence arbitraire à un objet de la classe `Ptr`. Si `Ptr` est un pointeur brut, cette méthode retourne `addressof(obj)`.
 
 ```cpp
 static pointer pointer_to(element_type& obj);
 ```
-
-## <a name="see-also"></a>Voir aussi
-
-[\<memory>](../standard-library/memory.md)<br/>
-[allocator_traits, classe](../standard-library/allocator-traits-class.md)<br/>

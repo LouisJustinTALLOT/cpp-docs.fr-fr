@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun1_ref_t class
 ms.assetid: 7d6742f6-19ba-4523-b3c8-0e5b8f11464f
-ms.openlocfilehash: d4f0f2064ac6771e2c351b70097137fed12c8262
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88ab2c436b3dd3b5a289124e73b6f1b5d21f96a5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412876"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243867"
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t, classe
 
@@ -28,19 +28,18 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
     Result operator()(
     Type& left,
     Arg right) const;
-
 };
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*_Pm*<br/>
+*_Pm*\
 Pointeur vers la fonction membre de la classe `Type` à convertir en objet de fonction.
 
-*left*<br/>
+*Gauche*\
 L’objet qui le *_Pm* fonction membre est appelée sur.
 
-*right*<br/>
+*Oui*\
 L’argument donné à *_Pm*.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -49,19 +48,8 @@ Fonction binaire adaptable.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie de *_Pm*, qui doit être un pointeur vers une fonction membre de classe `Type`, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant ( **gauche**.\* `_Pm`) ( **droit**).
+La classe de modèle stocke une copie de *_Pm*, qui doit être un pointeur vers une fonction membre de classe `Type`, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant (**gauche**.\* `_Pm`) (**droit**).
 
 ## <a name="example"></a>Exemple
 
 Le constructeur de `mem_fun1_ref_t` n’est généralement pas utilisé directement ; la fonction d’assistance `mem_fun_ref` est utilisée pour adapter les fonctions membres. Pour obtenir un exemple d’utilisation des adaptateurs de fonction membre, consultez [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).
-
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<functional>
-
-**Espace de noms :** std
-
-## <a name="see-also"></a>Voir aussi
-
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

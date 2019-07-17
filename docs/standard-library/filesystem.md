@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 0f397d8b0c39769fde20b6aa50412c979237f70a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220375"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240696"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -33,7 +33,7 @@ using namespace std::experimental::filesystem::v1;
 
 Cet en-tête prend en charge les systèmes de fichiers pour l’une des deux grandes classes de systèmes d’exploitation : Microsoft Windows et Posix.
 
-Bien que la plupart des fonctionnalités soit communes aux deux systèmes d’exploitation, ce document met l’accent sur les différences. Exemple :
+Bien que la plupart des fonctionnalités soit communes aux deux systèmes d’exploitation, ce document met l’accent sur les différences. Par exemple :
 
 - Windows prend en charge plusieurs noms de racines, par exemple, c: ou \\\nom_réseau. Un système de fichiers se compose d’une forêt d’arborescences, chacune ayant son propre répertoire racine, par exemple, c:\ ou \\\nom_réseau\\, et chacune ayant son propre répertoire actif pour compléter un chemin relatif (le contraire d’un chemin absolu).
 
@@ -89,10 +89,12 @@ Enfin, les objets path ont une fonctionnalité importante : vous pouvez les uti
 
 Pour plus d’informations et pour obtenir des exemples de code, consultez [Navigation dans le système de fichiers (C++)](../standard-library/file-system-navigation.md).
 
-## <a name="classes"></a>Classes
+## <a name="members"></a>Membres
 
-|Nom|Description|
-|----------|-----------------|
+### <a name="classes"></a>Classes
+
+|||
+|-|-|
 |[directory_entry, classe](../standard-library/directory-entry-class.md)|Décrit un objet retourné par un `directory_iterator` ou un `recursive_directory_iterator` et contient un chemin.|
 |[directory_iterator, classe](../standard-library/directory-iterator-class.md)|Décrit un itérateur d'entrée qui parcourt les noms de fichiers dans un répertoire de système de fichiers.|
 |[filesystem_error, classe](../standard-library/filesystem-error-class.md)|Classe de base pour les exceptions qui sont levées pour signaler un dépassement de capacité du système de bas niveau.|
@@ -100,10 +102,10 @@ Pour plus d’informations et pour obtenir des exemples de code, consultez [Navi
 |[recursive_directory_iterator, classe](../standard-library/recursive-directory-iterator-class.md)|Décrit un itérateur d'entrée qui parcourt les noms de fichiers dans un répertoire de système de fichiers. L'itérateur peut également descendre dans des sous-répertoires.|
 |[file_status, classe](../standard-library/file-status-class.md)|Encapsule un `file_type`.|
 
-## <a name="structs"></a>Structs
+### <a name="structs"></a>Structs
 
-|Nom|Description|
-|----------|-----------------|
+|||
+|-|-|
 |[space_info, structure](../standard-library/space-info-structure.md)|Contient des informations sur un volume.|
 
 ## <a name="functions"></a>Fonctions
@@ -116,13 +118,14 @@ Pour plus d’informations et pour obtenir des exemples de code, consultez [Navi
 
 ## <a name="enumerations"></a>Énumérations
 
-|Nom|Description|
-|----------|-----------------|
+|||
+|-|-|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) et qui détermine le comportement si un fichier de destination existe déjà.|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) et qui détermine le comportement si un fichier de destination existe déjà.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Énumération qui spécifie les options pour les itérateurs de répertoire.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Énumération pour les types de fichiers.|
-|[perms](../standard-library/filesystem-enumerations.md#perms)|Type de masque de bits utilisé pour transmettre les autorisations et les options des autorisations|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
+|[Perms](../standard-library/filesystem-enumerations.md#perms)|Type de masque de bits utilisé pour transmettre les autorisations et les options des autorisations|
 
 ## <a name="see-also"></a>Voir aussi
 

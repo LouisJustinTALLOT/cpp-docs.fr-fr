@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: 2b7f2b736d24961376db4317d6d53e06153283c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f372ae036ff4843532efa18c3d518820b5f06111
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370643"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244418"
 ---
 # <a name="pair-structure"></a>pair, structure
 
@@ -27,6 +27,8 @@ struct pair
     T1 first;
     T2 second;
     constexpr pair();
+    pair(const pair&) = default;
+    pair(pair&&) = default;
     constexpr pair(
         const T1& Val1,
         const T2& Val2);
@@ -39,18 +41,31 @@ struct pair
 
     template <class Other1, class Other2>
     constexpr pair(Other1&& Val1, Other2&& Val2);
+
+    template <class... Args1, class... Args2>
+    pair(piecewise_construct_t, tuple<Args1...> first_args, tuple<Args2...> second_args);
+
+    pair& operator=(const pair& p);
+    template<class U1, class U2> pair& operator=(const pair<U1, U2>& p);
+    pair& operator=(pair&& p) noexcept(see below );
+    template<class U1, class U2> pair& operator=(pair<U1, U2>&& p);
+
+    void swap(pair& p) noexcept(see below );
 };
+
+template<class T1, class T2>
+    pair(T1, T2) -> pair<T1, T2>;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Val1*<br/>
+*Val1*\
 Valeur initialisant le premier élément de `pair`.
 
-*Val2*<br/>
+*Val2*\
 Valeur initialisant le second élément de `pair`.
 
-*Droite*<br/>
+*Oui*\
 Paire dont les valeurs doivent être utilisées pour initialiser les éléments d'une autre paire.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -67,7 +82,7 @@ Le quatrième constructeur initialise le premier élément de la paire à *Val1*
 
 Le struct de modèle stocke une paire d’objets de type `T1` et `T2`, respectivement. Le type `first_type` est le même que le paramètre de modèle `T1` et le type `second_type` est le même que le paramètre de modèle `T2`. `T1` et `T2` doivent chacun fournir uniquement un constructeur par défaut, un constructeur à argument unique et un destructeur. Tous les membres du type `pair` sont publics, car le type est déclaré comme un `struct` plutôt que comme une **classe**. Les deux utilisations les plus courantes pour une paire sont en tant que types de retour pour des fonctions qui retournent deux valeurs et en tant qu’éléments pour les classes de conteneurs associatifs ([classe map](../standard-library/map-class.md) et [classe multimap](../standard-library/multimap-class.md)) qui ont à la fois une clé et un type de valeur associés à chaque élément. Cette dernière satisfait à l’exigence relative à un conteneur associatif de paires et a un type de valeur de la forme `pair`< **const**`key_type`, `mapped_type`>.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // utility_pair.cpp
@@ -144,7 +159,9 @@ int main( )
            << " is already in m1,\n so the insertion failed." << endl;
    }
 }
-/* Output:
+```
+
+```Output
 The pair p1 is: ( 10, 0.011 ).
 The pair p2 is: ( 10, 0.222 ).
 The pair p3 is: ( 10, 0.011 ).
@@ -153,15 +170,4 @@ The element (4,40) was inserted successfully in m1.
 The element with a key value of
 ( (pr2.first) -> first ) = 1 is already in m1,
 so the insertion failed.
-*/
 ```
-
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<utility>
-
-**Espace de noms :** std
-
-## <a name="see-also"></a>Voir aussi
-
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

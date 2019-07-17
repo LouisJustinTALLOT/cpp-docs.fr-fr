@@ -7,12 +7,12 @@ helpviewer_keywords:
 - not_equal_to function
 - not_equal_to struct
 ms.assetid: 333fce09-4f51-44e0-ba26-533bccffd485
-ms.openlocfilehash: 8dc0e5710790714bab2c0109db3a4aa41f0acbaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ee1ce120490b91a5f904109f49bf36d88e6261f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223595"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243541"
 ---
 # <a name="notequalto-struct"></a>not_equal_to (struct)
 
@@ -39,12 +39,13 @@ struct not_equal_to<void>
 
 ### <a name="parameters"></a>Paramètres
 
-*Type*, *T*, *U* n’importe quel type qui prend en charge un `operator!=` qui accepte des opérandes des types spécifiés ou inférés.
+*Type*, *T*, *U*\
+Tout type qui prend en charge un `operator!=` qui accepte des opérandes des types spécifiés ou inférés.
 
-*Gauche*<br/>
+*Gauche*\
 Opérande gauche de l’opération d’inégalité. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
 
-*Droite*<br/>
+*Oui*\
 Opérande droit de l’opération d’inégalité. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -106,20 +107,11 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 1 4 5 8 9 )
 The vector v2 = ( -0 1 -4 5 -8 9 )
 The result of the element-wise not_equal_to comparsion
 between v1 & v2 is: ( 0 0 1 0 1 0 )
-*/
 ```
-
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<functional>
-
-**Espace de noms :** std
-
-## <a name="see-also"></a>Voir aussi
-
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

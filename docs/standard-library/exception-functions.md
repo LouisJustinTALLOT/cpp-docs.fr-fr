@@ -24,23 +24,16 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 22c5b34f1c87d10b48a797229bc987305fca8f9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412655"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246056"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt;, fonctions
 
-||||
-|-|-|-|
-|[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|
-|[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate](#set_terminate)|
-|[set_unexpected](#set_unexpected)|[terminate](#terminate)|[uncaught_exception](#uncaught_exception)|
-|[unexpected](#unexpected)|
-
-## <a name="current_exception"></a>  current_exception
+## <a name="current_exception"></a> current_exception
 
 Obtient un pointeur intelligent vers l'exception actuelle.
 
@@ -62,18 +55,18 @@ Le destructeur de l’exception actuelle est appelé à la fin de la **catch** b
 
 Les appels successifs à la fonction `current_exception` retournent des objets `exception_ptr` qui font référence à des copies de l'exception actuelle. Par conséquent, les objets sont considérés comme inégaux car ils font référence à des copies, bien que les copies aient la même valeur binaire.
 
-## <a name="make_exception_ptr"></a>  make_exception_ptr
+## <a name="make_exception_ptr"></a> make_exception_ptr
 
 Crée un objet [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) qui contient une copie d’une exception.
 
 ```cpp
 template <class E>
-exception_ptr make_exception_ptr(E Except);
+    exception_ptr make_exception_ptr(E Except);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Except*<br/>
+*À l’exception*\
 Classe avec l'exception à copier. Généralement, vous spécifiez un objet de [classe exception](../standard-library/exception-class.md) comme argument pour la fonction `make_exception_ptr`, bien que tout objet de classe puisse être l’argument.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -86,7 +79,7 @@ L’appel de la fonction `make_exception_ptr` équivaut à lever une exception 
 
 En général, une application ne requiert pas la fonction `make_exception_ptr`, et son utilisation est d'ailleurs déconseillée.
 
-## <a name="rethrow_exception"></a>  rethrow_exception
+## <a name="rethrow_exception"></a> rethrow_exception
 
 Lève une exception passée comme paramètre.
 
@@ -96,14 +89,14 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>Paramètres
 
-*P*<br/>
+*P*\
 L'exception interceptée à lever de nouveau. Si *P* est une valeur null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), la fonction lève [std::bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Notes
 
 Après avoir enregistré une exception interceptée dans un objet `exception_ptr`, le thread principal peut traiter l'objet. Dans votre thread principal, appelez la fonction `rethrow_exception` avec l'objet `exception_ptr` en tant qu'argument. La fonction `rethrow_exception` extrait l'exception de l'objet `exception_ptr` puis lève l'exception dans le contexte du thread principal.
 
-## <a name="get_terminate"></a>  get_terminate
+## <a name="get_terminate"></a> get_terminate
 
 Obtient la fonction `terminate_handler` actuelle.
 
@@ -111,7 +104,7 @@ Obtient la fonction `terminate_handler` actuelle.
 terminate_handler get_terminate();
 ```
 
-## <a name="set_terminate"></a>  set_terminate
+## <a name="set_terminate"></a> set_terminate
 
 Génère un nouvel appel à `terminate_handler` à l'arrêt du programme.
 
@@ -121,7 +114,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*fnew*<br/>
+*fnew*\
 La fonction doit être appelée à la fin.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -160,7 +153,7 @@ int main()
 }
 ```
 
-## <a name="get_unexpected"></a>  get_unexpected
+## <a name="get_unexpected"></a> get_unexpected
 
 Obtient la fonction `unexpected_handler` actuelle.
 
@@ -168,7 +161,18 @@ Obtient la fonction `unexpected_handler` actuelle.
 unexpected_handler get_unexpected();
 ```
 
-## <a name="set_unexpected"></a>  set_unexpected
+## <a name="rethrow_if_nested"></a> rethrow_if_nested
+
+```cpp
+template <class E> 
+    void rethrow_if_nested(const E& e);
+```
+
+### <a name="remarks"></a>Notes
+
+Si pas un type de classe polymorphe, ou si `nested_exception` n’est pas accessible ou ambigu, n’a aucun effet. Sinon, effectue un cast dynamique.
+
+## <a name="set_unexpected"></a> set_unexpected
 
 Génère un nouveau `unexpected_handler` à appeler en cas d'exception inattendue.
 
@@ -178,7 +182,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*fnew*<br/>
+*fnew*\
 Fonction à appeler en cas d’exception inattendue.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -216,7 +220,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a>  terminate
+## <a name="terminate"></a> Mettre fin à
 
 Appelle un gestionnaire d'arrêt.
 
@@ -234,7 +238,18 @@ Un gestionnaire d’arrêt ne peut pas retourner à son appelant. Au démarrage 
 
 Consultez [set_unexpected](../standard-library/exception-functions.md#set_unexpected) pour obtenir un exemple d’utilisation de `terminate`.
 
-## <a name="uncaught_exception"></a>  uncaught_exception
+## <a name="throw_with_nested"></a> throw_with_nested
+
+```cpp
+template <class T> [[noreturn]]
+    void throw_with_nested(T&& t);
+```
+
+### <a name="remarks"></a>Notes
+
+Lève l’exception avec les exceptions imbriquées.
+
+## <a name="uncaught_exception"></a> uncaught_exception
 
 Retourne **true** uniquement si une exception levée est actuellement traitée.
 
@@ -299,7 +314,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## <a name="unexpected"></a>  unexpected
+## <a name="unexpected"></a> inattendue
 
 Appelle le gestionnaire d’exceptions inattendues.
 
@@ -326,7 +341,3 @@ Au démarrage du programme, le gestionnaire d’exceptions inattendues est une f
 ### <a name="example"></a>Exemple
 
 Consultez [set_unexpected](../standard-library/exception-functions.md#set_unexpected) pour obtenir un exemple d’utilisation de `unexpected`.
-
-## <a name="see-also"></a>Voir aussi
-
-[\<exception>](../standard-library/exception.md)<br/>

@@ -12,12 +12,12 @@ f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::operator<<
 - FILESYSTEM/std::experimental::filesystem::operator>>
 ms.assetid: 102c4833-aa3b-41a8-8998-f5003c546bfd
-ms.openlocfilehash: 378e5d7b8b36aa9b891a87662d432a451ac6bafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 819c91e707e50a190aa58eda62f8e07f3451b033
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159897"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240729"
 ---
 # <a name="ltfilesystemgt-operators"></a>&lt;filesystem&gt;, opérateurs
 
@@ -111,9 +111,3 @@ is>> str;
 pval = str;
 return (is);
 ```
-
-## <a name="see-also"></a>Voir aussi
-
-[Path, classe (bibliothèque C++ Standard)](../standard-library/path-class.md)<br/>
-[Navigation dans le système de fichiers (C++)](../standard-library/file-system-navigation.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>

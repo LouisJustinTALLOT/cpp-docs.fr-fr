@@ -7,12 +7,12 @@ helpviewer_keywords:
 - negate struct
 - negate class
 ms.assetid: 8a372686-786e-4262-b37c-ca13dc11e62f
-ms.openlocfilehash: d865577ed7052937b9fa2c2c1023b3a4befcb776
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb45f61323a407e90c2a455460a4d2cdd7b6720a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223754"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240550"
 ---
 # <a name="negate-struct"></a>negate (struct)
 
@@ -39,15 +39,15 @@ struct negate<void>
 
 ### <a name="parameters"></a>Paramètres
 
-*Type*<br/>
+*Type*\
 Tout type qui prend en charge un `operator-` qui accepte un opérande du type spécifié ou déduit.
 
-*Gauche*<br/>
+*Gauche*\
 Opérande à rendre négatif. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *Type*.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Résultat de `-Left.`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator-`.
+Résultat de `-Left`. Le modèle spécialisé effectue un transfert du résultat, qui a le type retourné par unaire parfait `operator-`.
 
 ## <a name="example"></a>Exemple
 
@@ -85,19 +85,9 @@ int main( )
       cout << *Iter2 << " ";
    cout << ")" << endl;
 }
-/* Output:
-The vector v1 = ( -10 -5 0 5 10 15 20 25 )
-The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
-*/
 ```
 
-## <a name="requirements"></a>Configuration requise
-
-**En-tête :** \<functional>
-
-**Espace de noms :** std
-
-## <a name="see-also"></a>Voir aussi
-
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+```Output
+The vector v1 = ( -10 -5 0 5 10 15 20 25 )
+The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
+```

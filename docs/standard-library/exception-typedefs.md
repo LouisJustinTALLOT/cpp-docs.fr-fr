@@ -6,18 +6,14 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 98a7e8197a0d729ab3a4e9ec0daf55a28cdaeb2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3904393096422a8986414a253d515342c7382f0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412642"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246044"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt;, typedefs
-
-||||
-|-|-|-|
-|[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|
 
 ## <a name="exception_ptr"></a>  exception_ptr
 
@@ -43,7 +39,7 @@ En dépit de son nom, un objet `exception_ptr` n'est pas lui-même un pointeur. 
 
 Vous pouvez utiliser les opérateurs Égal à (`==`) et Non égal à (`!=`) pour comparer deux objets `exception_ptr`. Les opérateurs ne comparent pas la valeur binaire (modèle binaire) des structures `EXCEPTION_RECORD` qui représentent les exceptions. À la place, les opérateurs comparent les adresses dans le domaine de référence d'exception des objets `exception_ptr`. Par conséquent, une exception `exception_ptr` null et la valeur NULL sont considérées comme égales.
 
-## <a name="terminate_handler"></a>  terminate_handler
+## <a name="terminate_handler"></a> terminate_handler
 
 Type qui décrit un pointeur vers une fonction appropriée pour une utilisation en tant que `terminate_handler`.
 
@@ -55,11 +51,11 @@ typedef void (*terminate_handler)();
 
 Le type décrit un pointeur vers une fonction appropriée devant être utilisée en tant que gestionnaire d'arrêt.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [set_terminate](../standard-library/exception-functions.md#set_terminate) pour obtenir un exemple d’utilisation de `terminate_handler`.
 
-## <a name="unexpected_handler"></a>  unexpected_handler
+## <a name="unexpected_handler"></a> unexpected_handler
 
 Le type décrit un pointeur vers une fonction pouvant être utilisée comme `unexpected_handler`.
 
@@ -70,7 +66,3 @@ typedef void (*unexpected_handler)();
 ### <a name="example"></a>Exemple
 
 Consultez [set_unexpected](../standard-library/exception-functions.md#set_unexpected) pour obtenir un exemple d’utilisation de `unexpected_handler`.
-
-## <a name="see-also"></a>Voir aussi
-
-[\<exception>](../standard-library/exception.md)<br/>

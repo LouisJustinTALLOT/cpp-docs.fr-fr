@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413175"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245410"
 ---
 # <a name="locale-class"></a>locale, classe
 
@@ -168,6 +168,7 @@ Les règles de mise en forme numérique pour les insertions suivantes dans `cout
 
 |Opérateur|Description|
 |-|-|
+|[operator=](#op_eq)|Affecte les paramètres régionaux.|
 |[!=, opérateur](#op_neq)|Vérifie l'inégalité de deux ensembles de paramètres régionaux.|
 |[operator( )](#op_call)|Compare deux objets `basic_string`.|
 |[operator==](#op_eq_eq)|Vérifie l'égalité de deux ensembles de paramètres régionaux.|
@@ -177,7 +178,7 @@ Les règles de mise en forme numérique pour les insertions suivantes dans `cout
 |Classe|Description|
 |-|-|
 |[facet](#facet_class)|Classe qui sert de classe de base pour toutes les facettes de paramètres régionaux.|
-|[ID](#id_class)|La classe membre fournit un ID unique de facette utilisé comme index pour rechercher les facettes de paramètres régionaux.|
+|[id](#id_class)|La classe membre fournit un ID unique de facette utilisé comme index pour rechercher les facettes de paramètres régionaux.|
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -241,7 +242,7 @@ Référence aux paramètres régionaux C.
 
 Les paramètres régionaux C classiques sont les paramètres régionaux ASCII États-Unis Anglais dans la bibliothèque C standard qui sont implicitement utilisés dans les programmes qui ne sont pas internationalisés.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // locale_classic.cpp
@@ -417,7 +418,7 @@ La classe membre décrit l’objet membre statique exigé par chaque facette de 
 
 ## <a name="locale"></a>  locale::locale
 
-Crée des paramètres régionaux, une copie de paramètres régionaux ou une copie de paramètres régionaux où une facette ou une catégorie a été remplacée par une facette, ou une catégorie provenant d'autres paramètres régionaux.
+Crée des paramètres régionaux, une copie de paramètres régionaux ou une copie de paramètres régionaux où une facette ou une catégorie a été remplacée par une facette, ou une catégorie provenant d'autres paramètres régionaux. Inclut également un destructeur.
 
 ```cpp
 locale();
@@ -430,6 +431,8 @@ locale(const locale& Loc, const char* Locname, category Cat);
 
 template <class Facet>
 locale(const locale& Loc, const Facet* Fac);
+
+~locale();
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -443,7 +446,7 @@ Paramètres régionaux qui doivent être copiés lors de la construction des nou
 *Autre*<br/>
 Paramètres régionaux à partir desquels sélectionner une catégorie.
 
-*Cat*<br/>
+*CAT*<br/>
 Catégorie à substituer dans les paramètres régionaux construits.
 
 *Fac*<br/>
@@ -548,6 +551,14 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
+## <a name="op_eq"></a>  locale::operator =
+
+Affecte les paramètres régionaux.
+
+```cpp
+const locale& operator=(const locale& other) noexcept;
+```
+
 ## <a name="op_neq"></a>  locale::operator!=
 
 Vérifie l'inégalité de deux ensembles de paramètres régionaux.
@@ -569,7 +580,7 @@ Valeur booléenne qui est **true** si les paramètres régionaux ne sont pas des
 
 Deux paramètres régionaux sont égaux s’ils s’agit des mêmes paramètres régionaux, si l’un est une copie de l’autre, ou s’ils ont des noms identiques.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // locale_op_ne.cpp
@@ -702,7 +713,7 @@ Valeur booléenne qui est **true** si les paramètres régionaux sont des copies
 
 Deux paramètres régionaux sont égaux s’ils s’agit des mêmes paramètres régionaux, si l’un est une copie de l’autre, ou s’ils ont des noms identiques.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // locale_op_eq.cpp

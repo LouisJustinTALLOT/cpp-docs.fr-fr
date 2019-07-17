@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cstdarg header
 ms.assetid: 639b4ef7-8408-4640-9343-41631f0ab663
-ms.openlocfilehash: 25a7cbdccf1287043659772b760a14fefd52e4ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8d2d3b886cfa46905e8f17f1e13b51881b80191
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394303"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244485"
 ---
 # <a name="ltcstdarggt"></a>&lt;cstdarg&gt;
 
-Inclut l’en-tête \<stdarg.h> de la bibliothèque C Standard et ajoute les noms associés à l’espace de noms `std`.
+Inclut l’en-tête de bibliothèque C Standard \<stdarg.h > et ajoute les noms associés à la `std` espace de noms. Inclusion de cet en-tête garantit également que les noms déclarés à l’aide d’une liaison externe dans l’en-tête de bibliothèque C Standard sont déclarés dans le `std` espace de noms.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,9 +23,18 @@ Inclut l’en-tête \<stdarg.h> de la bibliothèque C Standard et ajoute les no
 #include <cstdarg>
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="namespace-and-macros"></a>Namespace et Macros
 
-L'inclusion de cet en-tête garantit également que les noms déclarés à l'aide d'une liaison externe dans l'en-tête de la bibliothèque C standard soient déclarés dans l'espace de noms `std`.
+```cpp
+namespace std {
+    using va_list = see below;
+}
+
+#define va_arg(V, P)
+#define va_copy(VDST, VSRC)
+#define va_end(V)
+#define va_start(V, P)
+```
 
 ## <a name="see-also"></a>Voir aussi
 

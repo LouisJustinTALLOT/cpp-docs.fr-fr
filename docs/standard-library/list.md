@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: cfe6e8b4f75a3dbf824574654bfba83dcbbd8ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2c04bb73bfa379ea87ba4c950bf805931c16ba1
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413201"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245564"
 ---
 # <a name="ltlistgt"></a>&lt;liste&gt;
 
@@ -24,9 +24,14 @@ Définit la classe de modèle de conteneur list et plusieurs modèles de prise e
 #include <list>
 ```
 
+> [!NOTE]
+> Le \<liste > bibliothèque utilise également la `#include <initializer_list>` instruction.
+
+## <a name="members"></a>Membres
+
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|||
 |-|-|
 |[!=, opérateur](../standard-library/list-operators.md#op_neq)|Teste si l'objet de liste situé à gauche de l'opérateur n'est pas égal à l'objet de liste situé à droite.|
 |[operator<](../standard-library/list-operators.md#op_lt)|Teste si l'objet de liste situé à gauche de l'opérateur est inférieur à l'objet de liste situé à droite.|
@@ -35,9 +40,15 @@ Définit la classe de modèle de conteneur list et plusieurs modèles de prise e
 |[operator>](../standard-library/list-operators.md#op_gt)|Teste si l'objet de liste situé à gauche de l'opérateur est supérieur à l'objet de liste situé à droite.|
 |[operator>=](../standard-library/list-operators.md#op_gt_eq)|Teste si l'objet de liste situé à gauche de l'opérateur est supérieur ou égal à l'objet de liste situé à droite.|
 
+### <a name="functions"></a>Fonctions
+
+|||
+|-|-|
+|[swap](../standard-library/list-functions.md#swap)|Échange les éléments de deux listes.|
+
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|||
 |-|-|
 |[list, classe](../standard-library/list-class.md)|Classe de modèle de conteneurs de séquences. Ces derniers conservent leurs éléments dans une disposition linéaire, et permettent des insertions et des suppressions efficaces à n'importe quel emplacement de la séquence.|
 

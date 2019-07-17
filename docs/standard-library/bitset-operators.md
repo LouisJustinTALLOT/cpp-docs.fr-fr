@@ -12,21 +12,16 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 1c4c1b6f6c023514a1d3ae46f6670247e4bf99d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380193"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243332"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt;, opérateurs
 
-||||
-|-|-|-|
-|[operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator^](#op_xor)|[operator&#124;](#op_or)| |
-
-## <a name="op_amp"></a>  operator&amp;
+## <a name="op_amp"></a>, opérateur&amp;
 
 Exécute une opération `AND` au niveau du bit entre deux bitsets.
 
@@ -40,10 +35,10 @@ operator&(
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*Gauche*\
 Le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `AND` au niveau du bit.
 
-*right*<br/>
+*Oui*\
 Le deuxième des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `AND` au niveau du bit.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -78,7 +73,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="op_lt_lt"></a> Opérateur&lt;&lt;
 
 Insère une représentation textuelle de la séquence de bits dans le flux de sortie.
 
@@ -91,7 +86,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 Objet de type **bitset\<N>** qui doit être inséré dans le flux de sortie sous forme de chaîne.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -102,9 +97,9 @@ Une représentation textuelle de la séquence de bits dans `ostr`.
 
 Les surcharges de fonction de modèle `operator<<`, ce qui permet d’être écrit sans conversion en une chaîne d’un bitset. La fonction de modèle est exécutée :
 
-**ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )
+**ostr** << _*droite*. [to_string](bitset-class.md) <**CharType**, **Traits**, **allocateur**\<**CharType**>> ()
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // bitset_op_insert.cpp
@@ -135,7 +130,7 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="op_gt_gt"></a> Opérateur&gt;&gt;
 
 Lit une chaîne de bits dans un bitset.
 
@@ -150,10 +145,10 @@ _Istr,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Istr*<br/>
+*_Istr*\
 Chaîne entrée dans le flux d’entrée à insérer dans le bitset.
 
-*right*<br/>
+*Oui*\
 Bitset qui reçoit les bits du flux d’entrée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -221,7 +216,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a>  operator^
+## <a name="op_xor"></a> opérateur ^
 
 Exécute une opération `EXCLUSIVE-OR` au niveau du bit entre deux bitsets.
 
@@ -235,17 +230,17 @@ operator^(
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*Gauche*\
 Le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `EXCLUSIVE-OR` au niveau du bit.
 
-*right*<br/>
+*Oui*\
 Le deuxième des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `EXCLUSIVE-OR` au niveau du bit.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Un bitset dont les éléments sont le résultat de l’exécution le `EXCLUSIVE-OR` opération sur les éléments correspondants de *gauche* et *droit*.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // bitset_xor.cpp
@@ -273,7 +268,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a>  operator&#124;
+## <a name="op_or"></a> opérateur&#124;
 
 Exécute une opération `OR` au niveau du bit entre deux bitsets.
 
@@ -287,10 +282,10 @@ operator|(
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*Gauche*\
 Le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `OR` au niveau du bit.
 
-*right*<br/>
+*Oui*\
 Le deuxième des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `OR` au niveau du bit.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -324,7 +319,3 @@ bitset 1: 0101
 bitset 2: 0011
 bitset 3: 0111
 ```
-
-## <a name="see-also"></a>Voir aussi
-
-[\<bitset>](../standard-library/bitset.md)<br/>

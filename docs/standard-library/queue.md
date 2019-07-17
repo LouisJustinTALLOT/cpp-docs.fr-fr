@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: ed1960dffa4bfe8b1ae4105f9f31943fa7a30212
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 641ab1bfe99360320509b806149fcedfe1068879
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369863"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240361"
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
 
 Définit les classes de modèle priority_queue et queue et plusieurs modèles de prise en charge.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Configuration requise
 
-```cpp
-#include <queue>
-```
+**En-tête :** \<queue>
+
+**Espace de noms :** std
+
+> [!NOTE]
+> Le \<file d’attente > bibliothèque utilise également la `#include <initializer_list>` instruction.
+
+## <a name="members"></a>Membres
 
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|||
 |-|-|
 |[!=, opérateur](../standard-library/queue-operators.md#op_neq)|Teste si l'objet de file d'attente situé à gauche de l'opérateur n'est pas égal à l'objet de file d'attente situé à droite.|
 |[operator<](../standard-library/queue-operators.md#op_lt)|Teste si l'objet de file d'attente situé à gauche de l'opérateur est inférieur à l'objet de file d'attente situé à droite.|
@@ -34,9 +39,15 @@ Définit les classes de modèle priority_queue et queue et plusieurs modèles de
 |[operator>](../standard-library/queue-operators.md#op_gt)|Teste si l'objet de file d'attente situé à gauche de l'opérateur est supérieur à l'objet de file d'attente situé à droite.|
 |[operator>=](../standard-library/queue-operators.md#op_gt_eq)|Teste si l'objet de file d'attente situé à gauche de l'opérateur est supérieur ou égal à l'objet de file d'attente situé à droite.|
 
+### <a name="functions"></a>Fonctions
+
+|||
+|-|-|
+|[swap]()||
+
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|||
 |-|-|
 |[queue, classe](../standard-library/queue-class.md)|Classe d'adaptateur de conteneur de modèle qui fournit une restriction de fonctionnalité limitant l'accès aux premier et dernier éléments d'un certain type de conteneur sous-jacent.|
 |[priority_queue, classe](../standard-library/priority-queue-class.md)|Classe d'adaptateur de conteneur de modèle qui fournit une restriction de fonctionnalité limitant l'accès à l'élément supérieur d'un certain type de conteneur sous-jacent, qui est toujours le plus grand.|
