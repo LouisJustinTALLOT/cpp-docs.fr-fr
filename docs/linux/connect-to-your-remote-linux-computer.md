@@ -3,12 +3,12 @@ title: Connexion à votre système Linux cible dans Visual Studio
 description: Comment se connecter à un ordinateur Linux distant ou WSL à partir d’un projet C++ Visual Studio.
 ms.date: 06/19/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 7fa09c49df3da39084edb6735a7a2ccc724c34d3
-ms.sourcegitcommit: 3ae8025df7fd50f5f56a0a2b5396533218bcc7dc
+ms.openlocfilehash: 00d7facca2857efb0b8b43b5aaf38edce348a511
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285260"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861150"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Connexion à votre système Linux cible dans Visual Studio
 
