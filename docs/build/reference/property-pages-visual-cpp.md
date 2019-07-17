@@ -1,6 +1,6 @@
 ---
-title: Référence de page de la propriété du projet C++ - Visual Studio
-ms.date: 05/06/2019
+title: C++Référence de la page de propriétés du projet-Visual Studio
+ms.date: 07/16/2019
 f1_keywords:
 - VC.Project.NotAProp.Edit
 helpviewer_keywords:
@@ -14,22 +14,30 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 7b10e3c7eef846d72220545b89a217da7a4bb9a1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217787"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299726"
 ---
-# <a name="c-project-property-page-reference"></a>Référence de page de propriété de projet C++
+# <a name="c-project-property-page-reference"></a>C++Référence de la page de propriétés du projet
 
-Les pages de propriétés vous permettent de spécifier les paramètres des projets Visual Studio. Pour ouvrir la boîte de dialogue **Pages de propriétés** d’un projet Visual Studio, dans le menu **Projet**, choisissez **Propriétés**. Pour plus d’informations sur les propriétés du projet, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+Dans Visual Studio, vous spécifiez les options du compilateur et de l’éditeur de liens, les chemins d’accès aux fichiers et d’autres paramètres de génération via les pages de propriétés du projet. Pour ouvrir les **pages de propriétés**, choisissez**Propriétés** du **projet** > dans le menu principal, ou cliquez avec le bouton droit sur le nœud du projet dans **Explorateur de solutions** et choisissez **Propriétés**. Pour plus d’informations sur les propriétés de projet, consultez [définir C++ des propriétés de compilation et de compilation dans Visual Studio](../working-with-project-properties.md).
 
-Pages de propriétés dans les projets non Windows, consultez [référence de Page de propriété Linux C++](../../linux/prop-pages-linux.md).
+Pour les pages de propriétés dans les projets Linux, consultez Référence de la [page de propriétés Linux C++ ](../../linux/prop-pages-linux.md).
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Avancé, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de \<NomProjet>](advanced-manifest-tool.md)
+[Général, page de propriétés (Projet)](general-property-page-project.md)
+
+[Répertoires VC++, page de propriétés](vcpp-directories-property-page.md)
+
+[Outil manifeste,](general-manifest-tool-configuration-properties.md)
+[outil manifeste général, outil manifeste d’entrée et de sortie](input-and-output-manifest-tool.md)
+, outil manifeste[com](isolated-com-manifest-tool.md)
+isolé[, avancé](advanced-manifest-tool.md)
+
 
 [Ligne de commande, pages de propriétés](command-line-property-pages.md)
 
@@ -39,9 +47,9 @@ Pages de propriétés dans les projets non Windows, consultez [référence de Pa
 
 [Général, page de propriétés (Fichier)](general-property-page-file.md)
 
-[Général, page de propriétés (Projet)](general-property-page-project.md)
 
-[Général, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de \<NomProjet>](general-manifest-tool-configuration-properties.md)
+
+
 
 [HLSL, page de propriétés](hlsl-property-pages.md)
 
@@ -51,9 +59,9 @@ Pages de propriétés dans les projets non Windows, consultez [référence de Pa
 
 [HLSL, page de propriétés : Fichiers de sortie](hlsl-property-pages-output-files.md)
 
-[Entrée et sortie, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de \<NomProjet>](input-and-output-manifest-tool.md)
 
-[COM isolé, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de \<NomProjet>](isolated-com-manifest-tool.md)
+
+
 
 [Éditeur de liens, page de propriétés](linker-property-pages.md)
 
@@ -73,7 +81,7 @@ Pages de propriétés dans les projets non Windows, consultez [référence de Pa
 
 [Ressources, page de propriétés](resources-property-pages.md)
 
-[Répertoires VC++, page de propriétés](vcpp-directories-property-page.md)
+
 
 [Références web, page de propriétés](web-references-property-page.md)
 
@@ -84,4 +92,4 @@ Pages de propriétés dans les projets non Windows, consultez [référence de Pa
 ## <a name="see-also"></a>Voir aussi
 
 [Guide pratique pour créer et supprimer les dépendances d’un projet](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
-[Guide pratique pour créer et modifier des configurations](/visualstudio/ide/how-to-create-and-edit-configurations)
+[Guide pratique : créer et modifier des configurations](/visualstudio/ide/how-to-create-and-edit-configurations)

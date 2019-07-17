@@ -1,6 +1,6 @@
 ---
-title: Définir le compilateur C++ et générer des propriétés dans Visual Studio
-description: Utilisez l’IDE Visual Studio pour modifier les options du compilateur et éditeur de liens C++ et autres paramètres de build.
+title: Définir le compilateur C++ et les propriétés de build dans Visual Studio
+description: Utilisez l’IDE de Visual Studio pour C++ modifier les options du compilateur et de l’éditeur de liens, ainsi que d’autres paramètres de génération.
 ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], modifying
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: a8c15de43a3843b8ff12cb4ad3d951d76b90c039
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 896587aea65d7aec24d3a11ff7d3e757937c2632
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446185"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299695"
 ---
-# <a name="set-compiler-and-build-properties"></a>Définir un compilateur et les propriétés de build
+# <a name="set-compiler-and-build-properties"></a>Définir les propriétés du compilateur et de la Build
 
-Dans l’IDE, toutes les informations nécessaires pour générer un projet sont exposées sous forme de *propriétés*. Ces informations comprennent le nom de l’application, l’extension (par exemple, DLL, LIB, EXE), les options de compilateur, les options de l’éditeur de liens, les paramètres de débogueur, les étapes de génération personnalisée et bien d’autres choses. En général, vous utilisez les *pages de propriétés* (**Projet &#124; Propriétés**) pour voir et modifier ces propriétés. Pour accéder aux pages de propriétés, choisissez **projet > \<nom du projet > Propriétés** à partir du menu principal, ou avec le bouton droit sur le nœud de projet dans **l’Explorateur de solutions** et choisissez **Propriétés**.
+Dans l’IDE, toutes les informations nécessaires pour générer un projet sont exposées sous forme de *propriétés*. Ces informations comprennent le nom de l’application, l’extension (par exemple, DLL, LIB, EXE), les options de compilateur, les options de l’éditeur de liens, les paramètres de débogueur, les étapes de génération personnalisée et bien d’autres choses. En général, vous utilisez les *pages de propriétés* (**Projet &#124; Propriétés**) pour voir et modifier ces propriétés. Pour accéder aux pages de propriétés, choisissez **projet \<> nom du projet > Propriétés** dans le menu principal, ou cliquez avec le bouton droit sur le nœud du projet dans **Explorateur de solutions** et choisissez **Propriétés**.
 
 ## <a name="default-properties"></a>Propriétés par défaut
 
 Quand vous créez un projet, le système attribue des valeurs à différentes propriétés. Les valeurs par défaut varient légèrement en fonction du type de projet et des options que vous choisissez dans l’Assistant Application. Par exemple, un projet ATL a des propriétés relatives aux fichiers MIDL, mais elles sont absentes dans une application console de base. Les propriétés par défaut sont affichées dans le volet Général des pages de propriétés :
 
-![Visual C&#43; &#43; projet par défaut est](media/visual-c---project-defaults.png "Visual C++ valeurs par défaut du projet")
+![&#43; &#43; ]Valeurs par défaut du projet Visual C(media/visual-c---project-defaults.png " C++ ") par défaut
 
-## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Application des propriétés pour créer des configurations et plateformes cibles
+## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Application de propriétés aux configurations de build et aux plateformes cibles
 
 Certaines propriétés, comme le nom de l’application, s’appliquent à toutes les variations de build, quelle que soit la plateforme cible, ou qu’il s’agisse d’une build debug ou release. Toutefois, la plupart des propriétés dépendent de la configuration. C’est parce que le compilateur doit connaître la plateforme sur laquelle le programme va s’exécuter ainsi que les options de compilateur à utiliser pour générer le code approprié. Par conséquent, quand vous définissez une propriété, faites bien attention à la configuration et à la plateforme auxquelles la nouvelle valeur doit s’appliquer. Doit-elle s’appliquer uniquement aux builds Debug Win32 ou aussi à Debug ARM et Debug x64 ? Par exemple, la propriété **Optimisation** est définie par défaut sur **Augmenter la vitesse (/O2)** dans une configuration Release, mais est désactivée dans la configuration Debug.
 
@@ -43,25 +43,24 @@ L’illustration suivante montre la même page de propriétés de projet, mais l
 
 La valeur de plateforme cible **N’importe quelle UC** que vous pouvez voir dans le **Gestionnaire de configuration** n’a aucun effet sur les projets C++ natifs, elle concerne les projets C++/ CLI et d’autres types de projet .NET. Pour plus d’informations, consultez l’article [/CLRIMAGETYPE (Spécifier le type d’une image CLR)](reference/clrimagetype-specify-type-of-clr-image.md).
 
-
-Pour plus d’informations sur la définition des propriétés pour une version Debug, consultez :
+Pour plus d’informations sur la définition des propriétés d’une version Debug, consultez:
 
 - [Paramètres de projet pour une configuration Debug C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)
 - [Paramètres et préparation du débogueur](/visualstudio/debugger/debugger-settings-and-preparation)
-- [Préparation du débogage : Types de projet Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
+- [Préparation du débogage: Types C++ de projets visuels](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
 - [Spécifiez les fichiers de symbole (.pdb) et les fichiers source dans le débogueur Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)
 
-## <a name="c-compiler-and-linker-options"></a>Options du compilateur et éditeur de liens C++
+## <a name="c-compiler-and-linker-options"></a>C++options du compilateur et de l’éditeur de liens
 
-Les options du compilateur et éditeur de liens C++ se trouvent sous le **C/C++** et **l’éditeur de liens** nœuds dans le volet gauche sous **propriétés de Configuration**. Cela se traduit directement dans les options de ligne de commande qui seront passées au compilateur. Pour lire la documentation sur une option spécifique, sélectionnez l’option dans le volet central et appuyez sur **F1**. Ou, vous pouvez parcourir la documentation pour toutes les options à [Options du compilateur MSVC](reference/compiler-options.md) et [Options de l’éditeur de liens MSVC](reference/linker-options.md). 
+C++les options du compilateur et de l’éditeur de liens se trouvent sous les nœuds **CC++ /** et **éditeur de liens** dans le volet gauche sous propriétés de **configuration**. Celles-ci se traduisent directement par des options de ligne de commande qui seront passées au compilateur. Pour lire la documentation relative à une option spécifique, sélectionnez l’option dans le volet central et appuyez sur **F1**. Ou, vous pouvez parcourir la documentation de toutes les options disponibles dans [Options du compilateur MSVC](reference/compiler-options.md) et options de l' [éditeur de liens MSVC](reference/linker-options.md). 
 
-Le **Pages de propriétés** boîte de dialogue affiche uniquement les pages de propriétés qui sont pertinents pour le projet actuel. Par exemple, si le projet n'a pas de fichier .idl, la page de propriétés MIDL n'est pas affichée. Pour plus d’informations sur le paramètre sur les pages de chaque propriété, consultez [Property Pages (C++)](reference/property-pages-visual-cpp.md). 
+La boîte de dialogue **pages de propriétés** affiche uniquement les pages de propriétés pertinentes pour le projet actuel. Par exemple, si le projet n'a pas de fichier .idl, la page de propriétés MIDL n'est pas affichée. Pour plus d’informations sur le paramètre de chaque page de propriétés, consultez [pagesC++de propriétés ()](reference/property-pages-visual-cpp.md). 
 
-## <a name="directory-and-path-values"></a>Valeurs de répertoire et le chemin d’accès
+## <a name="directory-and-path-values"></a>Valeurs de répertoire et de chemin d’accès
 
-MSBuild prend en charge l’utilisation de constantes de compilation appelés « macros » pour certaines valeurs de chaîne incluent les répertoires et les chemins d’accès. Ceux-ci sont exposés dans les pages de propriétés, où vous pouvez faire référence à et les modifier à l’aide de la [éditeur de la propriété](#property_editor). 
+MSBuild prend en charge l’utilisation de constantes au moment de la compilation appelées «macros» pour certaines valeurs de chaîne, notamment les répertoires et les chemins d’accès. Celles-ci sont exposées dans les pages de propriétés, où vous pouvez vous y référer et les modifier à l’aide de l' [éditeur de propriétés](#property_editor). 
 
-L’illustration suivante montre les pages de propriétés pour un Visual Studio C++ projet. Dans le volet gauche, la **règle** *Répertoires VC++* est sélectionnée et le volet droit répertorie les propriétés associées à cette règle. Le `$(...)` valeurs sont appelées *macros*. Une *macro* est une constante de compilation qui peut référencer une valeur définie par Visual Studio ou le système MSBuild, ou une valeur définie par l’utilisateur. À l’aide de macros au lieu de codées en dur les valeurs telles que les chemins d’accès de répertoire, vous pouvez partager plus facilement les paramètres de propriété entre les machines et entre les versions de Visual Studio, et vous pouvez mieux garantir que vos paramètres de projet participent correctement dans [ l’héritage de propriété](project-property-inheritance.md). 
+L’illustration suivante montre les pages de propriétés d’un projet C++ Visual Studio. Dans le volet gauche, la **règle** *Répertoires VC++* est sélectionnée et le volet droit répertorie les propriétés associées à cette règle. Les `$(...)` valeurs sont appelées *macros*. Une *macro* est une constante de compilation qui peut référencer une valeur définie par Visual Studio ou le système MSBuild, ou une valeur définie par l’utilisateur. En utilisant des macros au lieu de valeurs codées en dur telles que les chemins d’accès aux répertoires, vous pouvez partager plus facilement les paramètres des propriétés entre les ordinateurs et entre les versions de Visual Studio, et vous pouvez mieux vous assurer que les paramètres de votre projet participent correctement à la [propriété. héritage](project-property-inheritance.md). 
 
 ![Pages de propriétés de projet](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
@@ -77,9 +76,9 @@ Possède la syntaxe `%(name)`. Pour un fichier, une macro d'élément s'applique
 
 ### <a name="user-defined-macros"></a>macros définies par l'utilisateur
 
-Vous pouvez créer des *macros définies par l’utilisateur* à utiliser comme variables dans les générations de projet. Par exemple, vous pouvez créer une macro définie par l'utilisateur qui fournit une valeur pour une étape de génération personnalisée ou un outil de génération personnalisée. Une macro définie par l'utilisateur est une paire nom/valeur. Dans un fichier projet, utilisez la notation **$(**<em>nom</em>**)** pour accéder à la valeur.
+Vous pouvez créer des *macros définies par l’utilisateur* à utiliser comme variables dans les générations de projet. Par exemple, vous pouvez créer une macro définie par l'utilisateur qui fournit une valeur pour une étape de génération personnalisée ou un outil de génération personnalisée. Une macro définie par l'utilisateur est une paire nom/valeur. Dans un fichier projet, utilisez la notation **$(** <em>nom</em> **)** pour accéder à la valeur.
 
-Une macro définie par l’utilisateur est stockée dans une feuille de propriétés. Si votre projet ne contient pas déjà une feuille de propriétés, vous pouvez en créer un en suivant les étapes sous [partage ou réutilisation des paramètres du projet Visual Studio](create-reusable-property-configurations.md).
+Une macro définie par l’utilisateur est stockée dans une feuille de propriétés. Si votre projet ne contient pas encore de feuille de propriétés, vous pouvez en créer un en suivant les étapes décrites dans [partager ou réutiliser des paramètres de projet Visual Studio](create-reusable-property-configurations.md).
 
 #### <a name="to-create-a-user-defined-macro"></a>Pour créer une macro définie par l’utilisateur
 
@@ -91,7 +90,7 @@ Une macro définie par l’utilisateur est stockée dans une feuille de proprié
 
 ## <a name="property_editor">Éditeur de propriétés</a>
 
-Vous pouvez utiliser l'Éditeur de propriétés pour modifier certaines propriétés de type chaîne et sélectionner des macros comme valeurs. Pour accéder à l'Éditeur de propriétés, sélectionnez une propriété dans une page de propriétés, puis cliquez sur la flèche vers le bas située à droite. Si la liste déroulante contient **\<Modifier>**, vous pouvez choisir cette option pour afficher l’Éditeur de propriétés pour cette propriété.
+Vous pouvez utiliser l'Éditeur de propriétés pour modifier certaines propriétés de type chaîne et sélectionner des macros comme valeurs. Pour accéder à l'Éditeur de propriétés, sélectionnez une propriété dans une page de propriétés, puis cliquez sur la flèche vers le bas située à droite. Si la liste déroulante contient **\<Modifier>** , vous pouvez choisir cette option pour afficher l’Éditeur de propriétés pour cette propriété.
 
 ![Property&#95;Editor&#95;Dropdown](media/property_editor_dropdown.png "Property_Editor_Dropdown")
 
@@ -99,11 +98,11 @@ Dans l’Éditeur de propriétés, vous pouvez choisir le bouton **Macros** pour
 
 ![Éditeur de propriétés, Visual C#&#43;&#43;](media/propertyeditorvc.png "PropertyEditorVC")
 
-## <a name="add-an-include-directory-to-the-set-of-default-directories"></a>Ajouter un répertoire include à l’ensemble de répertoires par défaut
+## <a name="add-an-include-directory-to-the-set-of-default-directories"></a>Ajouter un répertoire include au jeu de répertoires par défaut
 
 Lorsque vous ajoutez un répertoire Include à un projet, il est important de ne pas remplacer tous les répertoires par défaut. La méthode appropriée pour ajouter un répertoire est d’ajouter le nouveau chemin, par exemple, "C:\MyNewIncludeDir\", puis la macro **$(IncludePath)** à la valeur de propriété.
 
-## <a name="quickly-browse-and-search-all-properties"></a>Parcourir et rechercher toutes les propriétés rapidement
+## <a name="quickly-browse-and-search-all-properties"></a>Parcourir et rechercher rapidement toutes les propriétés
 
 La page de propriétés **Toutes les options** (sous le nœud **Propriétés de configuration &#124; C/C++** dans la boîte de dialogue **Pages de propriétés**) offre un mode de navigation et de recherche rapide dans les propriétés disponibles au sein du contexte actuel. Elle comporte une zone de recherche spéciale et possède une syntaxe simple pour aider à filtrer les résultats :
 
@@ -118,7 +117,7 @@ Effectuer une recherche uniquement dans les valeurs (la sous-chaîne ne respecte
 
 ## <a name="set-environment-variables-for-a-build"></a>Définir des variables d’environnement pour une build
 
-Le compilateur MSVC (cl.exe) reconnaît certaines variables d’environnement, en particulier les LIB, LIBPATH, PATH et INCLUDE. Quand vous effectuez une génération avec l’IDE, les propriétés définies dans la page de propriétés [Page de propriétés, Répertoires VC++](reference/vcpp-directories-property-page.md) sont utilisées pour définir ces variables d’environnement. Si les valeurs LIB, LIBPATH et INCLUDE ont déjà été définies, par exemple par une invite de commandes développeur, elles sont remplacées par les valeurs des propriétés MSBuild correspondantes. La génération ajoute ensuite la valeur de la propriété de répertoires d'exécutables Répertoires VC++ à PATH. Vous pouvez définir une variable d’environnement définie par l’utilisateur en créant une macro définie par l’utilisateur et en cochant la case **Définir cette macro comme variable d’environnement dans l’environnement de génération**.
+Le compilateur MSVC (cl. exe) reconnaît certaines variables d’environnement, plus spécifiquement LIB, LIBPATH, PATH et INCLUDe. Quand vous effectuez une génération avec l’IDE, les propriétés définies dans la page de propriétés [Page de propriétés, Répertoires VC++](reference/vcpp-directories-property-page.md) sont utilisées pour définir ces variables d’environnement. Si les valeurs LIB, LIBPATH et INCLUDE ont déjà été définies, par exemple par une invite de commandes développeur, elles sont remplacées par les valeurs des propriétés MSBuild correspondantes. La génération ajoute ensuite la valeur de la propriété de répertoires d'exécutables Répertoires VC++ à PATH. Vous pouvez définir une variable d’environnement définie par l’utilisateur en créant une macro définie par l’utilisateur et en cochant la case **Définir cette macro comme variable d’environnement dans l’environnement de génération**.
 
 ## <a name="set-environment-variables-for-a-debugging-session"></a>Définir des variables d’environnement pour une session de débogage
 
@@ -129,10 +128,10 @@ Dans le volet droit, modifiez les paramètres de projet **Environnement** ou **F
 ## <a name="in-this-section"></a>Dans cette section
 
 [Partager ou réutiliser les paramètres de projet Visual Studio](create-reusable-property-configurations.md)<br/>
-Comment créer un fichier .props avec les paramètres de génération personnalisée qui peuvent être partagés ou resused.
+Comment créer un fichier. props avec des paramètres de build personnalisés qui peuvent être partagés ou réutilisés.
 
 [Héritage de propriétés de projet](project-property-inheritance.md)<br/>
-Décrit l’ordre d’évaluation pour les variables d’environnement dans le processus de génération, .targets, fichiers .vcxproj et .props.
+Décrit l’ordre d’évaluation des fichiers. props,. targets,. vcxproj et des variables d’environnement dans le processus de génération.
 
 [Modifier les propriétés et les cibles sans changer le fichier projet](modify-project-properties-without-changing-project-file.md)<br/>
 Comment créer des paramètres de build temporaires sans avoir à modifier un fichier projet. 
