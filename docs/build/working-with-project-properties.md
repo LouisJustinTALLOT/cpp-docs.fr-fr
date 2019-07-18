@@ -1,23 +1,23 @@
 ---
 title: Définir le compilateur C++ et les propriétés de build dans Visual Studio
 description: Utilisez l’IDE de Visual Studio pour C++ modifier les options du compilateur et de l’éditeur de liens, ainsi que d’autres paramètres de génération.
-ms.date: 03/27/2019
+ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 896587aea65d7aec24d3a11ff7d3e757937c2632
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 436c9c47d7e08176860144ce62cc874919351029
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299695"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313449"
 ---
 # <a name="set-compiler-and-build-properties"></a>Définir les propriétés du compilateur et de la Build
 
-Dans l’IDE, toutes les informations nécessaires pour générer un projet sont exposées sous forme de *propriétés*. Ces informations comprennent le nom de l’application, l’extension (par exemple, DLL, LIB, EXE), les options de compilateur, les options de l’éditeur de liens, les paramètres de débogueur, les étapes de génération personnalisée et bien d’autres choses. En général, vous utilisez les *pages de propriétés* (**Projet &#124; Propriétés**) pour voir et modifier ces propriétés. Pour accéder aux pages de propriétés, choisissez **projet \<> nom du projet > Propriétés** dans le menu principal, ou cliquez avec le bouton droit sur le nœud du projet dans **Explorateur de solutions** et choisissez **Propriétés**.
+Dans l’IDE, toutes les informations nécessaires pour générer un projet sont exposées sous forme de *propriétés*. Ces informations comprennent le nom de l’application, l’extension (par exemple, DLL, LIB, EXE), les options de compilateur, les options de l’éditeur de liens, les paramètres de débogueur, les étapes de génération personnalisée et bien d’autres choses. En général, vous utilisez les *pages de propriétés* pour afficher et modifier ces propriétés. Pour accéder aux pages de propriétés, choisissez Propriétés du **projet** >  **_ProjectName_**  dans le menu principal, ou cliquez avec le bouton droit sur le nœud du projet dans **Explorateur de solutions** et choisissez **Propriétés**.
 
 ## <a name="default-properties"></a>Propriétés par défaut
 
@@ -82,7 +82,7 @@ Une macro définie par l’utilisateur est stockée dans une feuille de proprié
 
 #### <a name="to-create-a-user-defined-macro"></a>Pour créer une macro définie par l’utilisateur
 
-1. Dans la fenêtre **Gestionnaire de propriétés** (dans la barre de menus, choisissez **Affichage**, **Gestionnaire de propriétés**), ouvrez le menu contextuel d’une feuille de propriétés (son nom se termine par .user), puis choisissez Propriétés. La boîte de dialogue **Pages de propriétés** pour cette feuille de propriétés s’ouvre.
+1. Ouvrez la fenêtre **Gestionnaire de propriétés** . (Dans la barre de menus, choisissez **Afficher** > **Gestionnaire de propriétés** ou **Afficher** > d'**autres** > **Gestionnaire de propriétés**Windows.) Ouvrez le menu contextuel d’une feuille de propriétés (son nom se termine par. User), puis choisissez **Propriétés**. La boîte de dialogue **Pages de propriétés** pour cette feuille de propriétés s’ouvre.
 
 1. Dans le volet gauche de la boîte de dialogue, sélectionnez **Macros utilisateur**. Dans le volet droit, choisissez le bouton **Ajouter une macro** pour ouvrir la boîte de dialogue **Ajouter une macro utilisateur**.
 
