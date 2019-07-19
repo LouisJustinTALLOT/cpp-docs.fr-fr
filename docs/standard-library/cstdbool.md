@@ -1,33 +1,38 @@
 ---
 title: '&lt;cstdbool&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
+f1_keywords:
+- <cstdbool>
+- cstdbool
+helpviewer_keywords:
+- cstdbool header
 ms.assetid: 44ccb8b2-d808-4715-8097-58ba09ab33ed
-ms.openlocfilehash: 0bc21753b108dbdbfee86ea1319223e49753b8dc
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: ed780e059a5e456731fd6a4f651639e282016f5e
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244503"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341102"
 ---
 # <a name="ltcstdboolgt"></a>&lt;cstdbool&gt;
 
-Inclut l’en-tête \<stdbool.h> de la bibliothèque C Standard et ajoute les noms associés à l’espace de noms `std`.
+Inclut l’en-tête \<Stdbool. > h de la bibliothèque standard C et ajoute les noms associés à l' `std` espace de noms.
 
 > [!NOTE]
-> Cet en-tête a été déconseillé dans C++ 17.
+> Étant donné \<que l’en-tête Stdbool. h > définit des macros qui sont des mots clés dans C++, y compris il n’a aucun effet. L' \<en-tête Stdbool. h > est déconseillé C++dans. L' \<en-tête > cstdbool est déconseillé dans c++ 17 et supprimé dans le brouillon c++ 20 standard.
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<cstdbool >
+**En-tête:** \<cstdbool >
 
 **Espace de noms :** std
 
 ## <a name="remarks"></a>Notes
 
-L'inclusion de cet en-tête garantit également que les noms déclarés à l'aide d'une liaison externe dans l'en-tête de la bibliothèque C standard soient déclarés dans l'espace de noms `std`.
+L’inclusion de cet en-tête garantit que les noms déclarés à l’aide de la liaison externe dans l' `std` en-tête de la bibliothèque standard C sont déclarés dans l’espace de noms.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Référence des fichiers d’en-tête](cpp-standard-library-header-files.md)\
+[C++vue d’ensemble de la bibliothèque standard](cpp-standard-library-overview.md)\
+[Sécurité des threads C++ dans la bibliothèque standard](thread-safety-in-the-cpp-standard-library.md)
