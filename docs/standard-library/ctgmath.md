@@ -1,34 +1,40 @@
 ---
 title: '&lt;ctgmath&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
+f1_keywords:
+- <ctgmath>
+- ctgmath
+helpviewer_keywords:
+- ctgmath header
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: 85099f3cb206dd791aade59bf9a531a714e68ac3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 30eca273ac41139251c024c27c16d4adefe7f784
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246606"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341109"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
-En effet, inclut la C++ en-têtes de bibliothèque Standard \<complexe > et \<cmath >, qui fournissent des macros mathématiques de type générique équivalentes à \<tgmath.h >.
+En effet, comprend les C++ en-têtes \<de bibliothèque standard complex \<> et cmath >, qui fournissent des macros mathématiques de type \<générique équivalentes à tgmath. h >.
+
+> [!NOTE]
+> La \<bibliothèque standard C tgmath. h > en-tête n' \<est pas inclus par ctgmath >, car elle est effectivement remplacée par les surcharges \<dans les > complexes et les C++ >s de \<cmath. Cela rend l' \<en-tête > ctgmath redondant. L' \<en-tête tgmath. h > est déconseillé C++dans. L' \<en-tête > ctgmath est déconseillé dans c++ 17 et supprimé dans le brouillon c++ 20 standard.
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<ctgmath >
+**En-tête:** \<ctgmath >
 
 **Espace de noms :** std
 
 ## <a name="remarks"></a>Notes
 
-Les fonctionnalités de l’en-tête de la bibliothèque C Standard \<tgmath.h > est fournie par les surcharges dans \<complexe > et \<cmath >.
-
-L'inclusion de cet en-tête garantit également que les noms déclarés à l'aide d'une liaison externe dans l'en-tête de la bibliothèque C standard soient déclarés dans l'espace de noms `std`.
+Les fonctionnalités de l’en-tête \<tgmath. > h de la bibliothèque standard C sont fournies par les surcharges dans \<les > complexes et \<les > cmath.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<ccomplex>](../standard-library/ccomplex.md)<br/>
-[\<cmath>](../standard-library/cmath.md)<br/>
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<> complexe](complex.md)\
+[\<cmath>](cmath.md)\
+[Référence des fichiers d’en-tête](cpp-standard-library-header-files.md)\
+[C++vue d’ensemble de la bibliothèque standard](cpp-standard-library-overview.md)\
+[Sécurité des threads C++ dans la bibliothèque standard](thread-safety-in-the-cpp-standard-library.md)
