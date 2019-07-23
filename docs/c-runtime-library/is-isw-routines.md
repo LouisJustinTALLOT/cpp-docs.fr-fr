@@ -16,12 +16,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 961ad52070928ba755625747546c8dc7b1c215ba
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 1550f8f012802e03e9228e67c381915b1b4e1d64
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750818"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376033"
 ---
 # <a name="is-isw-routines"></a>is, isw, routines
 
@@ -164,7 +164,7 @@ Caractère large en lettre majuscule ou qui fait partie d’un jeu de caractère
 `iswxdigit`<br/>
 Caractère large qui correspond à un caractère numérique hexadécimal.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_isfam.c
