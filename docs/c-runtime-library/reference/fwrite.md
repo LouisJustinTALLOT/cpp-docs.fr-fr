@@ -22,12 +22,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: b4d6b9ce4fb66ee545f52946e28e4984d9e4f924
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f05e39390f3a2d0ad41627f6aed1aecd77b57cca
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287545"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376063"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -60,15 +60,15 @@ Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**fwrite** retourne le nombre d’intégral éléments réellement écrits, ce qui peut être inférieur à *nombre* si une erreur se produit. De même, en cas d'erreur, il est impossible de déterminer l'indicateur de position de fichier. Si *flux* ou *tampon* est un pointeur null, ou si un nombre impair d’octets à écrire est spécifié en mode Unicode, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne 0.
+**fwrite** retourne le nombre d’éléments complets réellement écrits, qui peut être inférieur à *Count* si une erreur se produit. De même, en cas d'erreur, il est impossible de déterminer l'indicateur de position de fichier. Si *Stream* ou *buffer* est un pointeur null, ou si un nombre impair d’octets à écrire est spécifié en mode Unicode, la fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne 0.
 
 ## <a name="remarks"></a>Notes
 
-Le **fwrite** fonction écrit jusqu'à *nombre* éléments, de *taille* longueur chaque, à partir de *tampon* à la sortie *flux*. Le pointeur de fichier associé *flux* (le cas échéant) est incrémenté par le nombre d’octets réellement écrits. Si *flux* est ouvert en mode texte, chaque saut de ligne est remplacé par un retour chariot - saut de ligne paire. Le remplacement n'a aucun effet sur la valeur de retour.
+La **fonction fwrite** écrit dans le *flux*de sortie jusqu’au *nombre* d’éléments, de longueur de *taille* chacun, de la *mémoire tampon* . Le pointeur de fichier associé au *flux* (le cas échéant) est incrémenté du nombre d’octets réellement écrits. Si le *flux* est ouvert en mode texte, chaque saut de ligne est remplacé par une paire retour chariot-saut de ligne. Le remplacement n'a aucun effet sur la valeur de retour.
 
-Lorsque *flux* est ouvert en mode de traduction Unicode, par exemple, si *flux* est ouverte en appelant **fopen** et à l’aide d’un paramètre de mode qui inclut **ccs = UNICODE**, **ccs = UTF-16LE**, ou **ccs = UTF-8**, ou si le mode est modifié pour un mode de traduction Unicode à l’aide de **_setmode** et un mode paramètre qui inclut **_O_WTEXT**, **_O_U16TEXT**, ou **_O_U8TEXT**—*tampon* est interprété comme un pointeur vers un tableau de **wchar_t** qui contient les données UTF-16. Toute tentative d’écriture d’une quantité impaire d’octets dans ce mode provoque une erreur de validation de paramètre.
+Lorsque le *flux* est ouvert en mode de traduction Unicode, par exemple, si le *flux* est ouvert en appelant **fopen** et en utilisant un paramètre de mode qui comprend **CCS = Unicode**, **CCS = UTF-16LE**ou **CCS = UTF-8**, ou si le mode est changé en mode de traduction Unicode à l’aide de **_setmode** et d’un paramètre de mode qui inclut **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**: la*mémoire tampon* est interprétée comme un pointeur vers un tableau de **wchar_t** qui contient Données UTF-16. Toute tentative d’écriture d’une quantité impaire d’octets dans ce mode provoque une erreur de validation de paramètre.
 
-Comme cette fonction verrouille le thread appelant, il est thread-safe. Pour obtenir une version sans verrouillage, consultez **_fwrite_nolock**.
+Comme cette fonction verrouille le thread appelant, il est thread-safe. Pour une version sans verrouillage, consultez **_fwrite_nolock**.
 
 ## <a name="requirements"></a>Configuration requise
 

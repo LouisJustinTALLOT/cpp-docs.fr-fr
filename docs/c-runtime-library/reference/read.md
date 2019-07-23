@@ -26,12 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 40f52ea37ae5419fe986aa505aad4fddfe8403ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4dd599f227192b8c3ce17a0321d6399319e1925
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357653"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376305"
 ---
 # <a name="read"></a>_read
 
@@ -60,19 +60,19 @@ Nombre maximal d’octets à lire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_read** retourne le nombre d’octets lus, qui peut être inférieur à *buffer_size* si il y a moins de *buffer_size* octets restant dans le fichier, ou si le fichier a été ouvert en mode texte. En mode texte, chaque retour chariot-ligne flux paire `\r\n` est remplacé par un caractère de saut de ligne unique `\n`. Seul le caractère de saut de ligne unique est comptabilisé dans la valeur de retour. Le remplacement n’a pas de conséquence sur le pointeur de fichier.
+_ **Read** retourne le nombre d’octets lus, qui peut être inférieur à *buffer_size* s’il reste moins de *buffer_size* octets dans le fichier, ou si le fichier a été ouvert en mode texte. En mode texte, chaque paire `\r\n` retour chariot-saut de ligne est remplacée par un caractère `\n`de saut de ligne unique. Seul le caractère de saut de ligne unique est compté dans la valeur de retour. Le remplacement n’a pas de conséquence sur le pointeur de fichier.
 
-Si la fonction tente de lire à la fin du fichier, elle retourne 0. Si *fd* est non valide, le fichier n’est pas ouvert pour la lecture, ou le fichier est verrouillé, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et affecte **errno** à **EBADF**.
+Si la fonction tente de lire à la fin du fichier, elle retourne 0. Si *FD* n’est pas valide, que le fichier n’est pas ouvert pour la lecture ou que le fichier est verrouillé, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne-1 et définit **errno** sur **EBADF**.
 
-Si *tampon* est **NULL**, ou si *buffer_size* > **INT_MAX**, le Gestionnaire de paramètre non valide est appelé. Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et **errno** a la valeur **EINVAL**.
+Si *buffer* a la **valeur null**ou si *buffer_size* > **INT_MAX**, le gestionnaire de paramètre non valide est appelé. Si l’exécution est autorisée à se poursuivre, la fonction retourne-1 et **errno** a la valeur **EINVAL**.
 
 Pour plus d’informations sur ce code de retour et sur les autres codes, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_read** fonction lit un maximum de *buffer_size* octets dans *tampon* à partir du fichier associé *fd*. L’opération de lecture commence à la position actuelle du pointeur de fichier associé au fichier donné. À la fin de la l’opération de lecture, le pointeur de fichier pointe vers le caractère non lu suivant.
+La fonction _ **Read** lit un maximum de *buffer_size* octets dans le *tampon* à partir du fichier associé à *FD*. L’opération de lecture commence à la position actuelle du pointeur de fichier associé au fichier donné. À la fin de la l’opération de lecture, le pointeur de fichier pointe vers le caractère non lu suivant.
 
-Si le fichier a été ouvert en mode texte, la lecture termine quand **_read** rencontre un caractère CTRL + Z, qui est traité comme un indicateur de fin de fichier. Utilisez [_lseek](lseek-lseeki64.md) pour effacer l’indicateur de fin de fichier.
+Si le fichier a été ouvert en mode texte, la lecture se termine lorsque _ **Read** rencontre un caractère Ctrl + Z, qui est traité comme un indicateur de fin de fichier. Utilisez [_lseek](lseek-lseeki64.md) pour effacer l’indicateur de fin de fichier.
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -20,12 +20,12 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1adc999d37025392f03a11daebfffdeeb637d92b
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287809"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376134"
 ---
 # <a name="freads"></a>fread_s
 
@@ -62,13 +62,13 @@ Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**fread_s** retourne le nombre de (entier) d’éléments qui ont été lus dans la mémoire tampon, ce qui peut être inférieur à *nombre* si une erreur de lecture ou à la fin du fichier est rencontrée avant *nombre* est atteinte. Utilisez le **feof** ou **ferror** fonction permettant de distinguer une erreur d’une condition de fin de fichier. Si *taille* ou *nombre* est 0, **fread_s** retourne 0 et le contenu de la mémoire tampon est identiques. Si *flux* ou *tampon* est un pointeur null, **fread_s** appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne 0.
+**fread_s** retourne le nombre d’éléments (entiers) qui ont été lus dans la mémoire tampon, ce qui peut être inférieur à *Count* si une erreur de lecture ou la fin du fichier est rencontrée avant que le *nombre* soit atteint. Utilisez la fonction **feof** ou **ferror** pour distinguer une erreur d’une condition de fin de fichier. Si la *taille* ou le *nombre* est égal à 0, **fread_s** retourne 0 et le contenu de la mémoire tampon n’est pas modifié. Si *Stream* ou *buffer* est un pointeur null, **fread_s** appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne 0.
 
 Pour plus d’informations sur les codes d’erreur, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **fread_s** fonction lit jusqu'à *nombre* éléments de *elementSize* octets à partir de l’entrée *flux* et les stocke dans *tampon*.  Le pointeur de fichier qui est associé avec *flux* (le cas échéant) est augmenté le nombre d’octets réellement lus. Si le flux donné est ouvert en mode texte, paires de sauts de ligne de chariot sont remplacées par les caractères de saut de ligne unique. Le remplacement n’a aucun effet sur le pointeur de fichier ou la valeur de retour. La position du pointeur de fichier est indéterminée si une erreur se produit. La valeur d’un élément partiellement lu ne peut pas être déterminée.
+La fonction **fread_s** lit jusqu’à *compter* les éléments de l' *élément d’éléments* du *flux* d’entrée et les stocke dans la *mémoire tampon*.  Le pointeur de fichier associé au *flux* (le cas échéant) est augmenté du nombre d’octets réellement lus. Si le flux donné est ouvert en mode texte, les paires retour chariot-saut de ligne sont remplacées par des caractères de saut de ligne simples. Le remplacement n’a aucun effet sur le pointeur de fichier ou la valeur de retour. La position du pointeur de fichier est indéterminée si une erreur se produit. La valeur d’un élément partiellement lu ne peut pas être déterminée.
 
 Cette fonction verrouille les autres threads. Si vous avez besoin d’une version sans verrouillage, utilisez **_fread_nolock**.
 
@@ -80,7 +80,7 @@ Cette fonction verrouille les autres threads. Si vous avez besoin d’une versio
 
 Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // crt_fread_s.c
