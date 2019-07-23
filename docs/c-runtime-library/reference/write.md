@@ -23,12 +23,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: b3fa53b21d4ea23c5f8e59de673f4074deedb505
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 032bf332caee09fbe17d58eeae16ab44b98402d3
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383410"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376294"
 ---
 # <a name="write"></a>_write
 
@@ -57,19 +57,19 @@ Nombre d'octets.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **_write** retourne le nombre d’octets réellement écrits. Si l’espace effectif restant sur le disque est inférieure à la taille de la mémoire tampon de la fonction tente d’écrire sur le disque, **_write** échoue et ne pas vidé du contenu de la mémoire tampon sur le disque. Une valeur de retour de -1 indique une erreur. Si des paramètres non valides sont passés, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et **errno** est définie à une des trois valeurs suivantes : **EBADF**, ce qui signifie que le descripteur de fichier n’est pas valide ou le fichier n’est pas ouvert pour écriture ; **ENOSPC**, ce qui signifie que ne comporte pas suffisamment d’espace disponible sur le périphérique de l’opération ; ou **EINVAL**, ce qui signifie que *tampon* était un pointeur null ou qui irrégulière *nombre* d’octets a été passé à écrire dans un fichier en mode Unicode.
+En cas de réussite, _ **Write** retourne le nombre d’octets écrits. Si l’espace réel restant sur le disque est inférieur à la taille de la mémoire tampon que la fonction essaie d’écrire sur le disque, _ **Write** échoue et n’efface pas le contenu de la mémoire tampon sur le disque. Une valeur de retour de-1 indique une erreur. Si des paramètres non valides sont passés, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne-1 et **errno** est défini sur l’une des trois valeurs suivantes: **EBADF**, ce qui signifie que le descripteur de fichier n’est pas valide ou que le fichier n’est pas ouvert en écriture; **ENOSPC**, ce qui signifie que l’espace restant sur l’appareil est insuffisant pour l’opération; ou **EINVAL**, ce qui signifie que la *mémoire tampon* était un pointeur null ou qu’un *nombre* impair d’octets était passé à être écrit dans un fichier en mode Unicode.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Si le fichier est ouvert en mode texte, chaque caractère de saut de ligne est remplacé par un retour chariot - paire de saut de ligne dans la sortie. Le remplacement n'a pas de conséquence sur la valeur de retour.
+Si le fichier est ouvert en mode texte, chaque caractère de saut de ligne est remplacé par une paire retour chariot-saut de ligne dans la sortie. Le remplacement n’affecte pas la valeur de retour.
 
-Quand le fichier est ouvert en mode de traduction Unicode, par exemple, si *fd* est ouvert en utilisant **_open** ou **_sopen** et un paramètre de mode qui inclut **_O_ WTEXT**, **_O_U16TEXT**, ou **_O_U8TEXT**, ou s’il est ouvert à l’aide de **fopen** et un paramètre de mode qui inclut **ccs = UNICODE**, **ccs = UTF-16LE**, ou **ccs = UTF-8**, ou si le mode est modifié pour un mode de traduction Unicode à l’aide de **_setmode**:*tampon* est interprété comme un pointeur vers un tableau de **wchar_t** contenant **UTF-16** données. Toute tentative d’écriture d’une quantité impaire d’octets dans ce mode provoque une erreur de validation de paramètre.
+Lorsque le fichier est ouvert en mode de traduction Unicode, par exemple, si *FD* est ouvert à l’aide de **_open** ou **_sopen** et d’un paramètre de mode qui comprend **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, ou s’il est ouvert à l’aide de **fopen** et un paramètre de mode qui comprend **CCS = Unicode**, **CCS = UTF-16LE**ou **CCS = UTF-8**, ou si le mode est modifié en mode de traduction Unicode à l’aide de **_setmode**, la*mémoire tampon* est interprétée comme un pointeur vers un Tableau de **wchar_t** qui contient des données **UTF-16** . Toute tentative d’écriture d’une quantité impaire d’octets dans ce mode provoque une erreur de validation de paramètre.
 
 ## <a name="remarks"></a>Notes
 
-Le **_write** fonction écritures *nombre* octets à partir de *tampon* dans le fichier associé *fd*. L'opération d'écriture commence à la position actuelle du pointeur de fichier (le cas échéant) associé au fichier donné. Si le fichier est ouvert pour ajout, l'opération commence à la fin actuelle du fichier. Après l'opération d'écriture, le pointeur de fichier est augmenté du nombre d'octets réellement écrits.
+La fonction _ **Write** écrit le *nombre* d’octets de la *mémoire tampon* dans le fichier associé à *FD*. L'opération d'écriture commence à la position actuelle du pointeur de fichier (le cas échéant) associé au fichier donné. Si le fichier est ouvert pour ajout, l'opération commence à la fin actuelle du fichier. Après l’opération d’écriture, le pointeur de fichier est augmenté du nombre d’octets écrits.
 
-Lors de l’écriture de fichiers ouverts en mode texte, **_write** traite un caractère CTRL + Z comme la fin du fichier logique. Lors de l’écriture sur un appareil, **_write** traite un caractère CTRL + Z dans la mémoire tampon comme un terminateur de sortie.
+Lors de l’écriture dans des fichiers ouverts en mode texte, _ **Write** traite un caractère Ctrl + Z comme la fin logique du fichier. Lors de l’écriture sur un appareil, _ **Write** traite un caractère Ctrl + Z dans la mémoire tampon comme un terminateur de sortie.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -79,7 +79,7 @@ Lors de l’écriture de fichiers ouverts en mode texte, **_write** traite un ca
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt__write.c

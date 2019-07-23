@@ -1,20 +1,20 @@
 ---
-title: 'Erreur irrécupérable RC1004 du compilateur de ressources '
+title: Erreur irrécupérable RC1004 du compilateur de ressources
 ms.date: 11/04/2016
 f1_keywords:
 - RC1004
 helpviewer_keywords:
 - RC1004
 ms.assetid: f9b703d4-6767-4721-9450-37079bcc7152
-ms.openlocfilehash: e7a91d7caeffd45ff77a76935e3d0a01e1d9f2cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c3792b7d6f266efd239cd693750a3c1a6b747c5
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297786"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375911"
 ---
-# <a name="resource-compiler-fatal-error-rc1004"></a>Erreur irrécupérable RC1004 du compilateur de ressources 
+# <a name="resource-compiler-fatal-error-rc1004"></a>Erreur irrécupérable RC1004 du compilateur de ressources
 
-fin de fichier inattendue
+fin de fichier inattendue trouvée
 
-Cette erreur peut être dû à l’absence de saut de ligne et les caractères de retour chariot sur la dernière ligne d’un fichier texte.
+Cette erreur peut être due à l’absence de caractères de saut de ligne et de retour chariot sur la dernière ligne d’un fichier texte.
