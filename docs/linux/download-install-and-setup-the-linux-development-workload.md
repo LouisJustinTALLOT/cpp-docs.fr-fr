@@ -3,12 +3,12 @@ title: Installer la charge de travail Linux C++ dans Visual Studio
 description: Décrit comment télécharger, installer et configurer la charge de travail Linux pour C++ dans Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: d5c099794f781fa9e6217f3796d24d1a63fd7b53
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 5df7b323d202f398059e92abaeeeedbf73439fa4
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042747"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299795"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Télécharger, installer et configurer la charge de travail Linux
 
@@ -31,8 +31,6 @@ Tous ces scénarios nécessitent la charge de travail de **développement Linux 
 ::: moniker range="vs-2019"
 
 Dans Visual Studio 2019, vous pouvez spécifier des cibles distinctes pour la génération et le débogage. Quand vous ciblez WSL, il n’est plus nécessaire d’ajouter une connexion à distance ou de configurer SSH.
-
-La prise en charge d’[AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) est intégrée à Visual Studio pour les projets Linux.
 
 ::: moniker-end
 
