@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - value_compare class
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
-ms.openlocfilehash: 4b7fff1bef091a9d47e6ea4dc0e53e86ce39ad7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e057a6229c903402a51b34a8f4e844e80ace187
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365287"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452367"
 ---
 # <a name="valuecompare-class"></a>value_compare, classe
 
@@ -39,7 +39,7 @@ protected:
 
 ## <a name="remarks"></a>Notes
 
-Les critères de comparaison fournis par value_compare entre `value_types` d’éléments entiers contenus par un objet hash_map est induit à partir d’une comparaison entre les clés des éléments respectifs par la construction de classe auxiliaire. L’opérateur de fonction membre utilise l’objet `comp` de type `key_compare` stockées dans l’objet de fonction fourni par value_compare pour comparer les composants de la clé de tri de deux éléments.
+Les critères de comparaison fournis par value_compare `value_types` entre les éléments entiers contenus par un hash_map sont induits d’une comparaison entre les clés des éléments respectifs par la construction de la classe auxiliaire. L’opérateur de fonction membre utilise l' `comp` objet de `key_compare` type stocké dans l’objet de fonction fourni par value_compare pour comparer les composants de clé de tri de deux éléments.
 
 Pour les objets hash_set et hash_multiset, qui sont des conteneurs simples dans lesquels les valeurs de clé sont identiques aux valeurs d’élément, value_compare équivaut à `key_compare` ; pour les objets hash_map et hash_multimap, ce n’est pas le cas, car la valeur des éléments `pair` de type n’est pas identique à la valeur de la clé de l’élément.
 
@@ -55,6 +55,6 @@ Consultez l’exemple [hash_map::value_comp](../standard-library/hash-map-class.
 
 ## <a name="see-also"></a>Voir aussi
 
-[binary_function, struct](../standard-library/binary-function-struct.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[binary_function, struct](../standard-library/binary-function-struct.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
