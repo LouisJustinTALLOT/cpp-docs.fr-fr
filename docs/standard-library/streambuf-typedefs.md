@@ -5,12 +5,12 @@ f1_keywords:
 - iosfwd/std::streambuf
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
-ms.openlocfilehash: 505739861771a05dd39741f432579a6e9b2d0c26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 178b489d92a4ed7340084490329fdf8fa16c2aa7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412382"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449586"
 ---
 # <a name="ltstreambufgt-typedefs"></a>&lt;streambuf&gt;, typedefs
 
@@ -20,7 +20,7 @@ ms.locfileid: "62412382"
 
 ## <a name="streambuf"></a>  streambuf
 
-Une spécialisation de `basic_streambuf` qui utilise **char** en tant que les paramètres du modèle.
+Spécialisation de `basic_streambuf` qui utilise **char** comme paramètres de modèle.
 
 ```cpp
 typedef basic_streambuf<char, char_traits<char>> streambuf;
@@ -28,11 +28,11 @@ typedef basic_streambuf<char, char_traits<char>> streambuf;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_streambuf](../standard-library/basic-streambuf-class.md), spécialisé pour les éléments de type **char** ayant les caractéristiques par défaut.
+Le type est un synonyme de la classe de modèle [basic_streambuf](../standard-library/basic-streambuf-class.md), spécialisé pour les éléments de type **char** avec des caractéristiques de caractère par défaut.
 
 ## <a name="wstreambuf"></a>  wstreambuf
 
-Une spécialisation de `basic_streambuf` qui utilise **wchar_t** en tant que les paramètres du modèle.
+Spécialisation de `basic_streambuf` qui utilise **wchar_t** comme paramètres de modèle.
 
 ```cpp
 typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
@@ -40,8 +40,8 @@ typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_streambuf](../standard-library/basic-streambuf-class.md), spécialisé pour les éléments de type **wchar_t** ayant les caractéristiques par défaut.
+Le type est un synonyme de la classe de modèle [basic_streambuf](../standard-library/basic-streambuf-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<streambuf>](../standard-library/streambuf.md)<br/>
+[\<streambuf>](../standard-library/streambuf.md)
