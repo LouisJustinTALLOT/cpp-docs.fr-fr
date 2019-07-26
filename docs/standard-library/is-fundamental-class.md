@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_fundamental class
 - is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
-ms.openlocfilehash: d16dfeebabd5909212425fcc27b355110e891d89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5643aa6a2d4bbfaafc86cba4251df162b59b4692
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348443"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456258"
 ---
 # <a name="isfundamental-class"></a>is_fundamental, classe
 
@@ -27,12 +27,12 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*<br/>
+*Ty*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *Ty* est un type fondamental, autrement dit, **void**, un type intégral, un flottante type à virgule ou un `cv-qualified` forme d’un d’eux, sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un type fondamental, autrement dit, **void**, un type intégral, un type à virgule flottante `cv-qualified` ou une forme de l’un d’eux. sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -77,5 +77,5 @@ is_fundamental<void> == true
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound, classe](../standard-library/is-compound-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_compound, classe](../standard-library/is-compound-class.md)

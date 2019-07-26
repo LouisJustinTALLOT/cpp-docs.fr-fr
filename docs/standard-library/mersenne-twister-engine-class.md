@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: 9949d1cab5a97b30df0b156289dff2dfbe15d851
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ed5380e36e71d7366d2b4b84528bbd35b87cc775
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449679"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451865"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine, classe
 
@@ -29,31 +29,31 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Paramètres
 
-*UIntType*<br/>
+*UIntType*\
 Type des résultats entiers non signés. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*W*<br/>
+*S*\
 **Taille de mot**. Taille de chaque mot, en bits, de la séquence d'état. **Condition préalable** : `2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N*<br/>
+*N*\
 **Taille de l’état**. Nombre d'éléments (valeurs) dans la séquence d'état.
 
-*M*<br/>
+*LECTEUR*\
 **Taille de décalage**. Nombre d'éléments à ignorer pendant chaque torsion. **Condition préalable** : `0 < M ≤ N`
 
-*R*<br/>
+*R*\
 **Bits du masque**. **Condition préalable** : `R ≤ W`
 
-*A*<br/>
+*UN*\
 **Masque XOR**. **Condition préalable** : `A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *L*<br/>
+*U*, *S*, *T*, *L*\
 **Paramètres de décalage d’altération**. Utilisés comme valeurs de décalage pendant le brouillage (altération). Condition préalable :`U,S,T,L ≤ W`
 
-*D*, *B*, *C*<br/>
+*D*, *B*, *C*\
 **Paramètres de masque de bits d’altération**. Utilisés comme valeurs de masque de bits pendant le brouillage (altération). Condition préalable :`D,B,C ≤ (1u<<W) - 1u`
 
-*F*<br/>
+*FA*\
 **Multiplicateur d’initialisation**. Aide à l'initialisation de la séquence. Condition préalable :`F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Membres
@@ -69,9 +69,9 @@ Pour plus d’informations sur les membres moteurs, consultez [\<random>](../sta
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle décrit un moteur de nombres aléatoires, avec retour de valeurs sur l’intervalle fermé [ `0`, `2`<sup>W</sup> - `1`]. Il contient une valeur intégrale élevée avec `W * (N - 1) + R` bits. Elle extrait *W* bits à la fois à partir de cette valeur élevée, et quand il a utilisé tous les bits il déforme la valeur élevée en décalant et en combinant les bits afin qu’il dispose d’un nouvel ensemble de bits pour extraire. L’état du moteur est le dernier `N` `W`-bit des valeurs utilisées si `operator()` a été appelé au moins *N* fois, sinon le `M` `W`-bit des valeurs qui ont été utilisés et la dernière `N - M` les valeurs de la valeur initiale.
+Cette classe de modèle décrit un moteur de nombres aléatoires, avec retour de valeurs sur l’intervalle fermé [ `0`, `2`<sup>W</sup> - `1`]. Il contient une valeur intégrale élevée avec `W * (N - 1) + R` bits. Il extrait *W* bits à la fois de cette valeur élevée et, quand il a utilisé tous les bits, il déforme la valeur élevée en décalant et en combinant les bits afin qu’il dispose d’un nouvel ensemble de bits à extraire. L’état du moteur est les valeurs `N` de dernier `W`bit utilisées si `operator()` a été appelé au moins *N* fois, sinon les `M` `W`valeurs de bits utilisées et les dernières `N - M` valeurs de initiales.
 
-Le générateur déforme la valeur élevée qu’il contient en utilisant un Registre à décalage de commentaires généralisés déformés défini par les valeurs de décalage *N* et *M*, une valeur de torsion *R*et un masque XOR conditionnel *A*. En outre, les bits du Registre à décalage brut sont brouillés (altérés) selon une matrice de brouillage des bits définie par les valeurs *U*, *D*, *S*, *B* , *T*, *C*, et *L*.
+Le générateur déforme la valeur élevée qu’il contient à l’aide d’un registre de décalage de commentaires généralisés, défini par les valeurs de décalage *N* et *M*, une valeur de torsion *R*et un masque XOR conditionnel *a*. En outre, les bits du Registre à décalage brut sont brouillés (tempérés) selon une matrice de brouillage des bits définie par les valeurs *U*, *D*, *S*, *B*, *T*, *C*et *L*.
 
 L’argument de modèle `UIntType` doit être assez volumineux pour contenir des valeurs jusqu’à `2`<sup>W</sup> - `1`. Les valeurs des autres arguments de modèle doivent être conformes aux spécifications suivantes : `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 
@@ -113,4 +113,4 @@ Pour obtenir un exemple de code, consultez [\<random>](../standard-library/rando
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

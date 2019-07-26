@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_assignable
 ms.assetid: baa8abd6-4f53-489f-abba-8d5d5c53bbbc
-ms.openlocfilehash: bb3aca47b61bdcc5b28eeedc1a6b4edefc303c4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 330c97cd945e161d2bf47deb377dd732bf53b3c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383592"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455979"
 ---
 # <a name="isnothrowcopyassignable-class"></a>is_nothrow_copy_assignable, classe
 
@@ -26,12 +26,12 @@ struct is_nothrow_copy_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type contienne la valeur true pour un type référençable *T* où `is_nothrow_assignable<T&, const T&>` contient true ; sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true pour un type référencé *T* où `is_nothrow_assignable<T&, const T&>` contient la valeur true; sinon, sa valeur est false.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -41,5 +41,5 @@ Une instance du prédicat de type contienne la valeur true pour un type référe
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_nothrow_assignable, classe](../standard-library/is-nothrow-assignable-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_nothrow_assignable, classe](../standard-library/is-nothrow-assignable-class.md)

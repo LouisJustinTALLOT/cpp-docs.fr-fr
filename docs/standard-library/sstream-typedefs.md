@@ -11,12 +11,12 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-ms.openlocfilehash: 12eb7a23c2986223de38ccb0fe763ff42c5e48b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27aed1d92b4893e054d7416dc5933ab23b843297
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412486"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451825"
 ---
 # <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt;, typedefs
 
@@ -28,7 +28,7 @@ ms.locfileid: "62412486"
 
 ## <a name="istringstream"></a>  istringstream
 
-Crée un type `basic_istringstream` spécialisé sur un **char** paramètre de modèle.
+Crée un type `basic_istringstream` spécialisé sur un paramètre de modèle **char** .
 
 ```cpp
 typedef basic_istringstream<char> istringstream;
@@ -40,7 +40,7 @@ Le type est un synonyme de la classe de modèle [basic_istringstream](../standar
 
 ## <a name="ostringstream"></a>  ostringstream
 
-Crée un type `basic_ostringstream` spécialisé sur un **char** paramètre de modèle.
+Crée un type `basic_ostringstream` spécialisé sur un paramètre de modèle **char** .
 
 ```cpp
 typedef basic_ostringstream<char> ostringstream;
@@ -52,7 +52,7 @@ Le type est un synonyme de la classe de modèle [basic_ostringstream](../standar
 
 ## <a name="stringbuf"></a>  stringbuf
 
-Crée un type `basic_stringbuf` spécialisé sur un **char** paramètre de modèle.
+Crée un type `basic_stringbuf` spécialisé sur un paramètre de modèle **char** .
 
 ```cpp
 typedef basic_stringbuf<char> stringbuf;
@@ -64,7 +64,7 @@ Le type est un synonyme de la classe de modèle [basic_stringbuf](../standard-li
 
 ## <a name="stringstream"></a>  stringstream
 
-Crée un type `basic_stringstream` spécialisé sur un **char** paramètre de modèle.
+Crée un type `basic_stringstream` spécialisé sur un paramètre de modèle **char** .
 
 ```cpp
 typedef basic_stringstream<char> stringstream;
@@ -76,7 +76,7 @@ Le type est un synonyme de la classe de modèle [basic_stringstream](../standard
 
 ## <a name="wistringstream"></a>  wistringstream
 
-Crée un type `basic_istringstream` spécialisé sur un **wchar_t** paramètre de modèle.
+Crée un type `basic_istringstream` spécialisé sur un paramètre de modèle **wchar_t** .
 
 ```cpp
 typedef basic_istringstream<wchar_t> wistringstream;
@@ -88,7 +88,7 @@ Le type est un synonyme de la classe de modèle [basic_istringstream](../standar
 
 ## <a name="wostringstream"></a>  wostringstream
 
-Crée un type `basic_ostringstream` spécialisé sur un **wchar_t** paramètre de modèle.
+Crée un type `basic_ostringstream` spécialisé sur un paramètre de modèle **wchar_t** .
 
 ```cpp
 typedef basic_ostringstream<wchar_t> wostringstream;
@@ -100,7 +100,7 @@ Le type est un synonyme de la classe de modèle [basic_ostringstream](../standar
 
 ## <a name="wstringbuf"></a>  wstringbuf
 
-Crée un type `basic_stringbuf` spécialisé sur un **wchar_t** paramètre de modèle.
+Crée un type `basic_stringbuf` spécialisé sur un paramètre de modèle **wchar_t** .
 
 ```cpp
 typedef basic_stringbuf<wchar_t> wstringbuf;
@@ -112,7 +112,7 @@ Le type est un synonyme de la classe de modèle [basic_stringbuf](../standard-li
 
 ## <a name="wstringstream"></a>  wstringstream
 
-Crée un type `basic_stringstream` spécialisé sur un **wchar_t** paramètre de modèle.
+Crée un type `basic_stringstream` spécialisé sur un paramètre de modèle **wchar_t** .
 
 ```cpp
 typedef basic_stringstream<wchar_t> wstringstream;
@@ -124,4 +124,4 @@ Le type est un synonyme de la classe de modèle [basic_stringstream](../standard
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<sstream>](../standard-library/sstream.md)<br/>
+[\<sstream>](../standard-library/sstream.md)

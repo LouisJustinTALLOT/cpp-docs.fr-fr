@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 41ce5590476a8327c9449ece5e3173146a04760f
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: f5b448fbf158cf9e9cfb8331c6ec7a228859fffc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449890"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447589"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine, classe
 
@@ -45,16 +45,16 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Paramètres
 
-*UIntType*<br/>
+*UIntType*\
 Type des résultats entiers non signés. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*A*<br/>
+*UN*\
 **Multiplier**. **Condition préalable**: Consultez la section Notes.
 
-*C*<br/>
+*SECTEUR*\
 **Increment**. **Condition préalable**: Consultez la section Notes.
 
-*M*<br/>
+*LECTEUR*\
 **Modulus**. **Condition préalable**: Consultez la section Notes.
 
 ## <a name="members"></a>Membres
@@ -74,9 +74,9 @@ La classe de modèle `linear_congruential_engine` est le moteur de générateur 
 
 Ce moteur produit des valeurs d’un type intégral non signé spécifié par l’utilisateur à l’aide de la relation de périodicité ( *period*) `x(i) = (A * x(i-1) + C) mod M`.
 
-Si *M* est égal à zéro, la valeur utilisée pour cette opération modulo est `numeric_limits<result_type>::max() + 1`. L'état du moteur est représenté par la dernière valeur retournée ou la valeur initiale si aucun appel n'a été passé à `operator()`.
+Si *M* est égal à zéro, la valeur utilisée pour cette opération `numeric_limits<result_type>::max() + 1`de modulo est. L'état du moteur est représenté par la dernière valeur retournée ou la valeur initiale si aucun appel n'a été passé à `operator()`.
 
-Si *M* est ne pas égal à zéro, les valeurs des arguments template *A* et *C* doit être inférieur à *M*.
+Si *M* n’est pas égal à zéro, les valeurs des arguments template *A* et *C* doivent être inférieures à *M*.
 
 Bien que vous puissiez construire un générateur directement à partir de ce moteur, vous pouvez aussi utiliser l’un des typedefs prédéfinis suivants.
 
@@ -102,4 +102,4 @@ Pour plus d’informations sur l’algorithme du moteur congruentiel linéaire, 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

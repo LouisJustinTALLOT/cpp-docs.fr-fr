@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - overflow_error class
 ms.assetid: bae7128d-e36b-4a45-84f1-2f89da441d20
-ms.openlocfilehash: 33819d9f57c9ee29b82c24d7919f68a97e50d98e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1faad62dc8e564d97170b5244b6406ae8e1dee6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370773"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450144"
 ---
 # <a name="overflowerror-class"></a>overflow_error, classe
 
@@ -72,5 +72,5 @@ Type class std::overflow_error
 
 ## <a name="see-also"></a>Voir aussi
 
-[runtime_error, classe](../standard-library/runtime-error-class.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[runtime_error, classe](../standard-library/runtime-error-class.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

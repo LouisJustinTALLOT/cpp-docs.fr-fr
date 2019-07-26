@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: 05b10c27d8e0cf4c0300bb307d8b7ceda43ddb2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c10692194c80051b10ecbe776c7d23a03860d508
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413305"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447784"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt;, opérateurs
 
@@ -56,16 +56,16 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ch*<br/>
+*Cascade*\
 Un caractère.
 
-*Istr*<br/>
+*ISTR*\
 Un flux.
 
-*str*<br/>
+*Str*\
 Chaîne.
 
-*val*<br/>
+*multiples*\
 Type.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -84,9 +84,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-extrait jusqu’à *N* - 1 éléments et les stocke dans le tableau en commençant à _ *Str*. Si `Istr`. [width](../standard-library/ios-base-class.md#width) est supérieure à zéro, *N* est `Istr`. **largeur**; sinon, elle est la taille de la plus grande quantité de `Elem` qui peut être déclaré. La fonction stocke toujours la valeur `Elem()` après les éléments qu’elle stocke extraits. L’extraction s’arrête dès la fin du fichier, sur un caractère avec la valeur **Elem**(0) (qui n’est pas extrait), ou sur tout élément (qui n’est pas extrait) qui serait ignoré par [ws](../standard-library/istream-functions.md#ws). Si la fonction n’extrait aucun élément, elle appelle `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). Dans tous les cas, elle appelle `Istr`. **largeur**(0) et retourne *Istr*.
+extrait jusqu’à *N* - 1 éléments et les stocke dans le tableau en commençant à _ *Str*. Si `Istr`. [width](../standard-library/ios-base-class.md#width) est supérieure à zéro, *N* est `Istr`. **largeur**; dans le cas contraire, il s’agit de la taille `Elem` du plus grand tableau de qui peut être déclaré. La fonction stocke toujours la `Elem()` valeur après tous les éléments extraits qu’elle stocke. L’extraction s’arrête dès la fin du fichier, sur un caractère avec la valeur **Elem**(0) (qui n’est pas extrait), ou sur tout élément (qui n’est pas extrait) qui serait ignoré par [ws](../standard-library/istream-functions.md#ws). Si la fonction n’extrait aucun élément, elle appelle `Istr`. [SetState](../standard-library/basic-ios-class.md#setstate) (**failbit**). Dans tous les cas, elle appelle `Istr`. **largeur** (0) et retourne *ISTR*.
 
-**Note de sécurité** la chaîne se terminant par null qui est extraite du flux d’entrée ne doit pas dépasser la taille de la mémoire tampon de destination *str*. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Note de sécurité** La chaîne terminée par le caractère null qui est extraite du flux d’entrée ne doit pas dépasser la taille de la chaîne de *la mémoire tampon*de destination. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 La fonction de modèle
 
@@ -96,7 +96,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-extrait un élément, s’il est possible et le stocke dans *Ch*. Sinon, elle appelle **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). Dans tous les cas, elle retourne *Istr*.
+extrait un élément, si possible, et le stocke dans *ch*. Sinon, elle appelle **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). Dans tous les cas, elle retourne *ISTR*.
 
 La fonction de modèle
 
@@ -147,7 +147,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-Retourne `Istr >> val` (et convertit une référence rvalue à `Istr` en lvalue dans le processus).
+retourne `Istr >> val` (et convertit une référence rvalue `Istr` en valeur Lvalue dans le processus).
 
 ### <a name="example"></a>Exemple
 
@@ -170,4 +170,4 @@ int main( )
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<istream>](../standard-library/istream.md)<br/>
+[\<istream>](../standard-library/istream.md)

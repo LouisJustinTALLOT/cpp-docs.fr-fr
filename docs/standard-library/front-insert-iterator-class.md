@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-ms.openlocfilehash: 322b513dc648bf10fe593d9541560c4d22da21fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 176fac8053d352d6a7a72ce62d5a8ee7a64b9811
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159585"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454121"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator, classe
 
@@ -30,7 +30,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Paramètres
 
-*Conteneur*<br/>
+*Conteneur*\
 Type de conteneur au début duquel des éléments doivent être insérés par un `front_insert_iterator`.
 
 ## <a name="remarks"></a>Notes
@@ -54,9 +54,9 @@ Le conteneur doit répondre aux exigences d’une insertion de début de séquen
 
 |Opérateur|Description|
 |-|-|
-|[operator*](#op_star)|Opérateur de déréférencement permettent d’implémenter l’expression d’itérateur de sortie \* `i`  =  `x` pour une insertion de début.|
+|[operator*](#op_star)|Opérateur de suppression de référence utilisé pour implémenter l' \* expression `i`  =  `x` d’itérateur de sortie pour une insertion de début.|
 |[operator++](#op_add_add)|Incrémente le `front_insert_iterator` à l'emplacement suivant où une valeur peut être stockée.|
-|[operator=](#op_eq)|Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de sortie \* `i`  =  `x` pour une insertion de début.|
+|[operator=](#op_eq)|Opérateur d’assignation utilisé pour implémenter l’expression \* `i`  =  `x` d’itérateur de sortie pour une insertion devant.|
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -116,14 +116,14 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Cont*<br/>
+*_Cont*\
 Objet de conteneur dans lequel `front_insert_iterator` doit insérer des éléments.
 
 ### <a name="return-value"></a>Valeur de retour
 
 `front_insert_iterator` pour l’objet conteneur du paramètre.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // front_insert_iterator_front_insert_iterator.cpp
@@ -183,7 +183,7 @@ La fonction membre retourne la valeur de l’élément ciblé.
 
 ### <a name="remarks"></a>Notes
 
-Utilisé pour implémenter l’expression d’itérateur de sortie **\*Iter** = **value**. Si `Iter` est un itérateur qui traite un élément dans une séquence, puis  **\*Iter** = **valeur** remplace cet élément par valeur et ne modifie pas le nombre total de éléments de la séquence.
+Utilisé pour implémenter l’expression d’itérateur de sortie **\*Iter** = **value**. Si `Iter` est un itérateur qui traite un élément dans une séquence  **\*** , la**valeur** d’ITER = remplace cet élément par la valeur et ne modifie pas le nombre total d’éléments dans la séquence.
 
 ### <a name="example"></a>Exemple
 
@@ -293,7 +293,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Paramètres
 
-*val*<br/>
+*multiples*\
 Valeur à assigner au conteneur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -306,7 +306,7 @@ Le premier opérateur membre évalue `container.push_front( val)`, puis retourne
 
 Le deuxième opérateur membre évalue
 
-`container->push_front((typename Container::value_type&&) val)`,
+`container->push_front((typename Container::value_type&&) val)`
 
 puis retourne `*this`.
 
@@ -351,7 +351,7 @@ Type qui fournit une référence à un élément dans une séquence contrôlée 
 typedef typename Container::reference reference;
 ```
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // front_insert_iterator_reference.cpp
@@ -389,6 +389,6 @@ The first element in the list L is: 30.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

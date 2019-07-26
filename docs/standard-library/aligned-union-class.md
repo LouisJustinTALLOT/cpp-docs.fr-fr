@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aligned_union
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
-ms.openlocfilehash: 1a26675879c50440a4955989aca178dbe5049fdf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9ffb4aff4d4d5667ab8d626ea13a21da94ca0c1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411108"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456464"
 ---
 # <a name="alignedunion-class"></a>aligned_union, classe
 
@@ -29,17 +29,17 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Paramètres
 
-*Len*<br/>
+*Len*\
 Valeur d'alignement pour le plus grand type dans l'union.
 
-*Types*<br/>
+*Types*\
 Types distincts dans l'union sous-jacente.
 
 ## <a name="remarks"></a>Notes
 
-Utilisez la classe de modèle pour obtenir l’alignement et la taille nécessaires pour stocker une union dans un stockage non initialisé. Le typedef de membre `type` nomme un type POD adaptés au stockage d’un type énuméré dans *Types*; la taille minimale est *Len*. Le membre statique `alignment_value` de type `std::size_t` contient l’alignement le plus strict nécessaire de tous les types répertoriés dans *Types*.
+Utilisez la classe de modèle pour obtenir l’alignement et la taille nécessaires pour stocker une union dans un stockage non initialisé. Le typedef `type` de membre nomme un type Pod adapté au stockage de n’importe quel type listé dans *types*; la taille minimale est *Len*. Le membre `alignment_value` statique de type `std::size_t` contient l’alignement le plus strict requis de tous les types listés dans *types*.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 L’exemple suivant montre comment utiliser `aligned_union` pour allouer une mémoire tampon de pile alignée afin de placer une union.
 
@@ -85,5 +85,5 @@ value of u->i is 1065353216
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[alignment_of, classe](../standard-library/alignment-of-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[alignment_of, classe](../standard-library/alignment-of-class.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
-ms.openlocfilehash: c59c3623f9c9548a7b7e59d0c56a2acd4d3883a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ee8b5f97c92b6eb378db40f93696e5e6c554205
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383618"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456019"
 ---
 # <a name="isnothrowassignable-class"></a>is_nothrow_assignable, classe
 
-Teste si une valeur de *de* type peut être affecté à *à* type et l’affectation ne connaît ne pas lever.
+Teste si une valeur de *de type peut* être assignée à *un type et* que l’assignation est connue comme ne levant pas d’exception.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*To*<br/>
+*À*\
 Type de l'objet qui reçoit l'assignation.
 
-*From*<br/>
+*De*\
 Type de l'objet qui fournit la valeur.
 
 ## <a name="remarks"></a>Notes
 
-L’expression `declval<To>() = declval<From>()` doit être bien formée et le compilateur doit savoir qu’elle ne lève pas d’exception. Les deux *de* et *à* doivent être des types complets, **void**, ou des tableaux de limite inconnue.
+L’expression `declval<To>() = declval<From>()` doit être bien formée et le compilateur doit savoir qu’elle ne lève pas d’exception. *From* et *to* doivent tous deux être des types complets, **void**ou des tableaux de limites inconnues.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -44,4 +44,4 @@ L’expression `declval<To>() = declval<From>()` doit être bien formée et le c
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

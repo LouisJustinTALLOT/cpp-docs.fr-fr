@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivial
 ms.assetid: 6beb11d4-2f38-4c7e-9959-ca5d26250df7
-ms.openlocfilehash: 609fdd9c3d0d00eea607db4aefd31163234a9a00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d218848fd65ca68022e3e66df02201582626711
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413513"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457421"
 ---
 # <a name="istrivial-class"></a>is_trivial, classe
 
@@ -26,12 +26,12 @@ struct is_trivial;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *T* est un type trivial, sinon, sa valeur est false. Les types triviaux sont les types scalaires, les types de classes pouvant être copiés de façon triviale, les tableaux de ces types et les versions cv-qualified de ces types.
+Une instance du prédicat de type a la valeur true si le type *T* est un type trivial. sinon, sa valeur est false. Les types triviaux sont les types scalaires, les types de classes pouvant être copiés de façon triviale, les tableaux de ces types et les versions cv-qualified de ces types.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -41,4 +41,4 @@ Une instance du prédicat de type a la valeur true si le type *T* est un type tr
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

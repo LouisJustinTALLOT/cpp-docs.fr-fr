@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-ms.openlocfilehash: be81a1bc32f2f86f1d79970868933bddb8dc3620
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8f0f69cc1e4f6966bc9ccb63fe529436295badd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212103"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457321"
 ---
 # <a name="conditional-class"></a>conditional, classe
 
@@ -30,18 +30,18 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>Paramètres
 
-*B*<br/>
+*P*\
 Valeur qui détermine le type sélectionné.
 
-*T1*<br/>
+*T1*\
 Résultat de type quand B a la valeur true.
 
-*T2*<br/>
+*H2*\
 Résultat de type quand B a la valeur false.
 
 ## <a name="remarks"></a>Notes
 
-Le typedef de membre de modèle `conditional<B, T1, T2>::type` prend la valeur *T1* lorsque *B* prend la valeur **true**et prend la valeur *T2* lorsque  *B* prend la valeur **false**.
+Le `conditional<B, T1, T2>::type` typedef de membre de modèle prend la valeur *T1* lorsque *b* prend la **valeur true**et prend la valeur *T2* lorsque *b* prend la **valeur false**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -51,4 +51,4 @@ Le typedef de membre de modèle `conditional<B, T1, T2>::type` prend la valeur *
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

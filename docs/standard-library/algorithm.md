@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 36dfca8418cbbabd7dcfb30b2cece483406a5667
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 0b9b259d49808002442492ce2912b4f9aa96d2b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245957"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456500"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -26,7 +26,7 @@ Définit les fonctions de modèle du conteneur de bibliothèque C++ Standard qui
 ```
 
 > [!NOTE]
-> Le \<algorithme > bibliothèque utilise également la `#include <initializer_list>` instruction.
+> La \<bibliothèque d' > d’algorithme `#include <initializer_list>` utilise également l’instruction.
 
 ## <a name="remarks"></a>Notes
 
@@ -40,7 +40,7 @@ Les algorithmes de la bibliothèque C++ Standard étendent les actions prises en
 
 - Le suffixe _copy indique que l'algorithme manipule les valeurs des éléments, mais copie également les valeurs modifiées dans une plage de destination. L'algorithme `reverse` inverse l'ordre des éléments d'une plage, et l'algorithme `reverse_copy` copie également le résultat dans une plage de destination.
 
-Les algorithmes de la bibliothèque C++ Standard sont souvent classés par groupes selon leur usage ou leurs exigences. Il s'agit notamment des algorithmes de modification qui changent la valeur des éléments, contrairement aux autres algorithmes. Les algorithmes de mutation modifient l'ordre des éléments, mais pas leurs valeurs. Les algorithmes de suppression peuvent éliminer les éléments d'une plage ou d'une copie d'une plage. Algorithmes de tri réorganiser les éléments dans une plage de différentes manières et algorithmes de plage triée agissent uniquement sur les plages dont les éléments ont été triés d’une façon particulière.
+Les algorithmes de la bibliothèque C++ Standard sont souvent classés par groupes selon leur usage ou leurs exigences. Il s'agit notamment des algorithmes de modification qui changent la valeur des éléments, contrairement aux autres algorithmes. Les algorithmes de mutation modifient l'ordre des éléments, mais pas leurs valeurs. Les algorithmes de suppression peuvent éliminer les éléments d'une plage ou d'une copie d'une plage. Les algorithmes de tri réorganisent les éléments d’une plage de différentes façons et les algorithmes de plages triées agissent uniquement sur les plages dont les éléments ont été triés d’une manière particulière.
 
 Les algorithmes numériques de la bibliothèque C++ Standard fournis pour le traitement numérique ont leur propre fichier d’en-tête [\<numeric>](../standard-library/numeric.md). Les objets de fonction et les adaptateurs, quant à eux, sont définis dans l’en-tête [\<functional>](../standard-library/functional.md). Les objets de fonction qui retournent des valeurs booléennes sont appelés prédicats. Le prédicat binaire par défaut est le `operator<` de comparaison. En général, les éléments qui sont triés ne doivent pas être équivalents, afin que, avec deux éléments quelconques donnés, il soit possible de déterminer qu'ils sont équivalents (dans le sens où l'un n'est pas inférieur à l'autre) ou que l'un est inférieur à l'autre. Cela entraîne un tri des éléments non équivalents.
 
@@ -49,13 +49,13 @@ Les algorithmes numériques de la bibliothèque C++ Standard fournis pour le tra
 |||
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|Recherche deux éléments adjacents qui ont la même valeur ou qui répondent à une condition spécifiée.|
-|[all_of](../standard-library/algorithm-functions.md#all_of)|Retourne **true** lorsqu’une condition est remplie pour chaque élément dans la plage donnée.|
-|[any_of](../standard-library/algorithm-functions.md#any_of)|Retourne **true** lorsqu’une condition est remplie au moins une fois dans la plage d’éléments spécifiée.|
+|[all_of](../standard-library/algorithm-functions.md#all_of)|Retourne la **valeur true** lorsqu’une condition est présente à chaque élément d’une plage donnée.|
+|[any_of](../standard-library/algorithm-functions.md#any_of)|Retourne la **valeur true** lorsqu’une condition est présente au moins une fois dans la plage d’éléments spécifiée.|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|Teste si un élément d’une plage triée est égal à une valeur spécifiée ou équivalent, selon une condition spécifiée par un prédicat binaire.|
 |[clamp](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions, du haut vers le bas.|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions vers le haut.|
-|[copy_if](../standard-library/algorithm-functions.md#copy_if)|Copie tous les éléments dans une plage donnée qui testent **true** pour une condition spécifiée|
+|[copy_if](../standard-library/algorithm-functions.md#copy_if)|Copier tous les éléments d’une plage donnée qui testent la **valeur true** pour une condition spécifiée|
 |[copy_n](../standard-library/algorithm-functions.md#copy_n)|Copie un nombre spécifié d'éléments.|
 |[count](../standard-library/algorithm-functions.md#count)|Retourne le nombre d'éléments d'une plage dont les valeurs correspondent à une valeur spécifiée.|
 |[count_if](../standard-library/algorithm-functions.md#count_if)|Retourne le nombre d'éléments d'une plage dont les valeurs correspondent à une condition spécifiée.|
@@ -74,12 +74,12 @@ Les algorithmes numériques de la bibliothèque C++ Standard fournis pour le tra
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|Assigne les valeurs générées par un objet de fonction à un nombre spécifié d'éléments d'une plage, et retourne à la position située juste après la dernière valeur assignée.|
 |[includes](../standard-library/algorithm-functions.md#includes)|Teste si une plage triée contient tous les éléments d’une autre plage triée. Le critère de tri ou d’équivalence entre les éléments peut être spécifié par un prédicat binaire.|
 |[inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)|Regroupe les éléments de deux plages triées consécutives au sein d’une même plage triée. Le critère de tri peut être spécifié par un prédicat binaire.|
-|[is_heap](../standard-library/algorithm-functions.md#is_heap)|Retourne **true** si les éléments dans la plage spécifiée forment un segment de mémoire.|
-|[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)|Retourne **true** si la plage spécifiée forme un tas jusqu’au dernier élément.|
-|[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|Retourne **true** si tous les éléments dans la plage donnée qui testent **true** pour une condition se trouvent avant les éléments qui testent **false**.|
+|[is_heap](../standard-library/algorithm-functions.md#is_heap)|Retourne la **valeur true** si les éléments de la plage spécifiée forment un segment de mémoire.|
+|[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)|Retourne la **valeur true** si la plage spécifiée forme un tas jusqu’au dernier élément.|
+|[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|Retourne la **valeur true** si tous les éléments d’une plage donnée qui testent la **valeur true** pour une condition précèdent tous les éléments qui testent **false**.|
 |[is_permutation](../standard-library/algorithm-functions.md#is_permutation)|Détermine si les éléments d'une plage donnée forment une permutation valide.|
-|[is_sorted](../standard-library/algorithm-functions.md#is_sorted)|Retourne **true** si les éléments dans la plage spécifiée sont dans un ordre trié.|
-|[is_sorted_until](../standard-library/algorithm-functions.md#is_sorted_until)|Retourne **true** si les éléments dans la plage spécifiée sont dans un ordre trié.|
+|[is_sorted](../standard-library/algorithm-functions.md#is_sorted)|Retourne la **valeur true** si les éléments de la plage spécifiée sont triés.|
+|[is_sorted_until](../standard-library/algorithm-functions.md#is_sorted_until)|Retourne la **valeur true** si les éléments de la plage spécifiée sont triés.|
 |[iter_swap](../standard-library/algorithm-functions.md#iter_swap)|Échange deux valeurs référencées par une paire d'itérateurs spécifiés.|
 |[lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)|Compare deux séquences, élément par élément, pour déterminer lequel est inférieur à l'autre.|
 |[lower_bound](../standard-library/algorithm-functions.md#lower_bound)|Recherche la position du premier élément d’une plage triée dont la valeur est supérieure ou équivalente à une valeur spécifiée. Le critère de tri peut être spécifié par un prédicat binaire.|
@@ -95,12 +95,12 @@ Les algorithmes numériques de la bibliothèque C++ Standard fournis pour le tra
 |[&lt;alg&gt; move](../standard-library/algorithm-functions.md#alg_move)|Déplace les éléments associés à une plage spécifiée.|
 |[move_backward](../standard-library/algorithm-functions.md#move_backward)|Déplace les éléments d'un itérateur vers un autre. Le déplacement commence par le dernier élément d'une plage spécifiée, et se termine par le premier élément de cette plage.|
 |[next_permutation](../standard-library/algorithm-functions.md#next_permutation)|Réorganise les éléments d’une plage, de sorte que le tri d’origine soit remplacé par la prochaine permutation plus élevée d’un point de vue lexicographique (s’il en existe une). La notion de "prochaine" peut être définie à l’aide d’un prédicat binaire.|
-|[none_of](../standard-library/algorithm-functions.md#none_of)|Retourne **true** lorsqu’une condition n’est jamais présente entre les éléments dans la plage donnée.|
+|[none_of](../standard-library/algorithm-functions.md#none_of)|Retourne la **valeur true** lorsqu’une condition n’est jamais présente parmi les éléments de la plage donnée.|
 |[nth_element](../standard-library/algorithm-functions.md#nth_element)|Partitionne une plage d’éléments, en recherchant le *n*-ième élément de la séquence dans la plage, de sorte que tous les éléments qui le précèdent sont inférieurs ou égaux, et que tous les éléments qui le suivent sont supérieurs ou égaux.|
 |[partial_sort](../standard-library/algorithm-functions.md#partial_sort)|Réorganise un nombre spécifié d’éléments plus petits au sein d’une plage, dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire.|
 |[partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)|Copie les éléments d’une plage source dans une plage de destination. Les éléments sources sont triés par ordre croissant ou selon un autre prédicat binaire spécifié.|
 |[partition](../standard-library/algorithm-functions.md#partition)|Répartit les éléments d’une plage en deux ensembles disjoints. Les éléments qui répondent à un prédicat unaire doivent précéder ceux qui n’y répondent pas.|
-|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|Copie les éléments pour lesquels une condition est **true** vers une destination, et pour lesquelles la condition est **false** vers un autre. Les éléments doivent provenir d'une plage spécifiée.|
+|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|Copie les éléments pour lesquels une condition a la **valeur true** pour une destination, et pour laquelle  la condition est false à une autre. Les éléments doivent provenir d'une plage spécifiée.|
 |[partition_point](../standard-library/algorithm-functions.md#partition_point)|Retourne le premier élément d'une plage donnée qui ne répond pas à une condition. Les éléments sont triés de sorte que ceux qui répondent à la condition précèdent ceux qui n'y répondent pas.|
 |[pop_heap](../standard-library/algorithm-functions.md#pop_heap)|Retire le plus grand élément du début du tas et le place à l'avant-dernière position de la plage, puis forme un nouveau tas à partir des éléments restants.|
 |[prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)|Réorganise les éléments d’une plage, de sorte que le tri d’origine soit remplacé par la prochaine permutation plus élevée d’un point de vue lexicographique (s’il en existe une). La notion de "prochaine" peut être définie à l’aide d’un prédicat binaire.|
@@ -139,6 +139,6 @@ Les algorithmes numériques de la bibliothèque C++ Standard fournis pour le tra
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

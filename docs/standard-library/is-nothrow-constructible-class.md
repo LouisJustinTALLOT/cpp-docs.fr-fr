@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_constructible
 ms.assetid: 8be3f927-283e-4d67-95a5-8bf5dc4e7a3d
-ms.openlocfilehash: 9ea11d54d49bf8f6ae6416f9663c2593cc66ea3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ec4fc3ef5d9a799d5d77124870fbb337061c94c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383605"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455993"
 ---
 # <a name="isnothrowconstructible-class"></a>is_nothrow_constructible, classe
 
@@ -26,15 +26,15 @@ struct is_nothrow_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type à interroger.
 
-*Args*<br/>
-Les types d’arguments à faire correspondre dans un constructeur de *T*.
+*Attend*\
+Types d’arguments à faire correspondre dans un constructeur de *T*.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *T* est constructible en utilisant les types d’arguments dans *Args*et le constructeur est connu par le compilateur ne pas lever ; sinon, sa valeur est false. Type *T* est constructible si la définition de variable `T t(std::declval<Args>()...);` est bien formée. Les deux *T* et tous les types dans *Args* doivent être des types complets, **void**, ou des tableaux de limite inconnue.
+Une instance du prédicat de type a la valeur true si le type *T* est constructible à l’aide des types d’arguments dans *args*, et que le constructeur est connu du fait que le compilateur ne lève pas d’exception. Sinon, sa valeur est false. Le type *T* est constructible si la définition `T t(std::declval<Args>()...);` de la variable est bien formée. *T* et tous les types dans *args* doivent tous deux être des types complets, **void**ou des tableaux de limites inconnues.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -44,4 +44,4 @@ Une instance du prédicat de type a la valeur true si le type *T* est constructi
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

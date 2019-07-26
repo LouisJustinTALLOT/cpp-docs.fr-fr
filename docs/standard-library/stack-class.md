@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: 36074f75830f92ba3fb9e5edb4e1507aa5ae1407
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d282d3ea54528b422509f4259e2d9a191f88e091
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241063"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453790"
 ---
 # <a name="stack-class"></a>stack, classe
 
@@ -48,11 +48,11 @@ Type du conteneur sous-jacent utilisé pour implémenter la pile. La valeur par 
 
 ## <a name="remarks"></a>Notes
 
-Les éléments de classe `Type` stipulés dans le modèle de paramètre d’un objet stack sont synonymes de [value_type](#value_type) et doit correspondre au type d’élément de la classe de conteneur sous-jacent `Container` stipulé par le deuxième paramètre de modèle. Le `Type` doit être assignable, afin qu’il soit possible de copier des objets de ce type et d’affecter des valeurs aux variables de ce type.
+Les éléments de la `Type` classe stipulés dans le premier paramètre de modèle d’un objet Stack sont synonymes de [Value_type](#value_type) et doivent correspondre au type d’élément dans la `Container` classe de conteneur sous-jacente stipulée par le second modèle paramètre. `Type` Doit être assignable, afin qu’il soit possible de copier des objets de ce type et d’assigner des valeurs aux variables de ce type.
 
-Classes de conteneur sous-jacent appropriées pour stack incluent [deque](../standard-library/deque-class.md), [list, classe](../standard-library/list-class.md), et [vector, classe](../standard-library/vector-class.md), ou tout autre conteneur de séquence qui prend en charge les opérations de `back`, `push_back`, et `pop_back`. La classe de conteneur sous-jacent est encapsulée dans l'adaptateur de conteneur, qui expose seulement l'ensemble limité de fonctions membres du conteneur de séquence comme une interface publique.
+Les classes de conteneur sous-jacentes appropriées pour la pile incluent [deque](../standard-library/deque-class.md), la [classe List](../standard-library/list-class.md)et la [classe Vector](../standard-library/vector-class.md), ou tout autre conteneur `back`de séquences `pop_back`qui prend en charge les opérations de, `push_back`et. La classe de conteneur sous-jacent est encapsulée dans l'adaptateur de conteneur, qui expose seulement l'ensemble limité de fonctions membres du conteneur de séquence comme une interface publique.
 
-Les objets stack sont comparables à l’égalité si et seulement si les éléments de classe `Type` l’égalité ne sont comparables, et ils inférieur-que comparable si et seulement si les éléments de classe `Type` sont inférieurs-que comparable.
+Les objets Stack sont comparables si et seulement si les éléments de la `Type` classe sont comparables à l’égalité et sont moins comparables si et seulement si les `Type` éléments de la classe sont moins comparables.
 
 - La classe stack prend en charge une structure de données LIFO (dernier entré, premier sorti). Une bonne analogie à avoir à l'esprit est celle d'une pile d'assiettes. Les éléments (les assiettes) peuvent être insérés, inspectés ou supprimés seulement à partir du haut de la pile, qui est le dernier élément à la fin du conteneur de base. La restriction qui fait que seul l'élément du haut est accessible est la raison de l'utilisation de la classe stack.
 
@@ -86,7 +86,7 @@ Les objets stack sont comparables à l’égalité si et seulement si les élém
 |[size](#size)|Retourne le nombre d'éléments d'un `stack`.|
 |[top](#top)|Retourne une référence à un élément en haut de l'objet la`stack`.|
 
-## <a name="container_type"></a> container_type
+## <a name="container_type"></a>container_type
 
 Type qui fournit le conteneur de base à adapter.
 
@@ -104,7 +104,7 @@ Pour plus d’informations sur `Container`, consultez la section Notes de la rub
 
 Pour savoir comment déclarer et utiliser `container_type`, consultez l’exemple [stack::stack](#stack).
 
-## <a name="empty"></a> vide
+## <a name="empty"></a>vidé
 
 Vérifie si un objet stack est vide.
 
@@ -116,7 +116,7 @@ bool empty() const;
 
 **true** si l’objet stack est vide. **false** s’il n’est pas vide.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // stack_empty.cpp
@@ -149,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a> POP
+## <a name="pop"></a>roulant
 
 Supprime l’élément du haut de l’objet stack.
 
@@ -161,7 +161,7 @@ void pop();
 
 L’objet stack ne doit pas être vide pour appliquer la fonction membre. Le haut de l’objet stack correspond à la position occupée par l’élément ajouté le plus récemment et au dernier élément à la fin du conteneur.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // stack_pop.cpp
@@ -205,9 +205,9 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a> push
+## <a name="push"></a>souleve
 
-Ajoute un élément vers le haut de la pile.
+Ajoute un élément en haut de la pile.
 
 ```cpp
 void push(const Type& val);
@@ -215,7 +215,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*\
+*multiples*\
 Élément ajouté en haut de l’objet stack.
 
 ### <a name="remarks"></a>Notes
@@ -254,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a> Taille
+## <a name="size"></a>corps
 
 Retourne le nombre d’éléments figurant dans l’objet stack.
 
@@ -295,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 Type entier non signé qui peut représenter le nombre d’éléments dans un objet stack.
 
@@ -311,7 +311,7 @@ Le type est un synonyme de `size_type` pour le conteneur de base adapté par la 
 
 Pour savoir comment déclarer et utiliser `size_type`, consultez l’exemple [size](#size).
 
-## <a name="stack"></a> Pile
+## <a name="stack"></a>empilé
 
 Construit un objet stack qui est vide ou qui est une copie d’une classe de conteneur de base.
 
@@ -326,7 +326,7 @@ explicit stack(const container_type& right);
 *Oui*\
 Conteneur dont l’objet stack construit doit être une copie.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // stack_stack.cpp
@@ -365,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a> Retour au début
+## <a name="top"></a>Retour au début
 
 Retourne une référence à un élément en haut de l’objet stack.
 
@@ -383,9 +383,9 @@ Référence au dernier élément dans le conteneur en haut de l’objet stack.
 
 L’objet stack ne doit pas être vide pour appliquer la fonction membre. Le haut de l’objet stack correspond à la position occupée par l’élément ajouté le plus récemment et au dernier élément à la fin du conteneur.
 
-Si la valeur de retour de `top` est affecté à un `const_reference`, l’objet de pile ne peut pas être modifié. Si la valeur de retour de `top` est affecté à un `reference`, l’objet de pile peut être modifié.
+Si la valeur de retour `top` de est assignée `const_reference`à, l’objet de pile ne peut pas être modifié. Si la valeur de retour `top` de est assignée `reference`à, l’objet de pile peut être modifié.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // stack_top.cpp
@@ -416,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a> Value_type
+## <a name="value_type"></a>value_type
 
 Type qui représente le type d’objet stocké comme élément dans une classe stack.
 
@@ -428,7 +428,7 @@ typedef typename Container::value_type value_type;
 
 Le type est un synonyme de `value_type` pour le conteneur de base adapté par la classe stack.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // stack_value_type.cpp
@@ -459,5 +459,5 @@ The element at the top of the stack is 69.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

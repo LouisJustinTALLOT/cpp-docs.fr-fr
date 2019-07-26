@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: fce204e3873151eafa0c4fa9c2b1e0af9971cfae
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 4c35d34c9c51c8ebd6885b1a1cd07c28bcb61d1b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243882"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456751"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
-Définit la classe de modèle de conteneur **tableau** et plusieurs modèles de prise en charge.
+Définit le **tableau** de la classe de modèle de conteneur et plusieurs modèles de prise en charge.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -24,7 +24,7 @@ Définit la classe de modèle de conteneur **tableau** et plusieurs modèles de 
 **Espace de noms :** std
 
 > [!NOTE]
-> Le \<tableau > bibliothèque utilise également la `#include <initializer_list>` instruction.
+> La \<bibliothèque de > de tableau utilise `#include <initializer_list>` également l’instruction.
 
 ## <a name="members"></a>Membres
 
@@ -56,5 +56,5 @@ Définit la classe de modèle de conteneur **tableau** et plusieurs modèles de 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<tuple>](../standard-library/tuple.md)<br/>
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
+[\<tuple>](../standard-library/tuple.md)\
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)

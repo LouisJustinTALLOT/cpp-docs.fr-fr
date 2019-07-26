@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_copy_assignable
 ms.assetid: 3ae6bca1-85fb-4829-9ee9-0183b081ff50
-ms.openlocfilehash: 75e0e8d995fbb3c6bfb1af3142a98651d7a29e96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fedd32f026828e49ea29cb2975a2529ca28c862
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336749"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452837"
 ---
 # <a name="iscopyassignable-class"></a>is_copy_assignable, classe
 
@@ -26,12 +26,12 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*<br/>
+*Ty*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un copie opérateur d’assignation, sinon, sa valeur est false. Équivaut à is_assignable\<Ty&, const Ty&>.
+Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un opérateur d’assignation de copie. sinon, sa valeur est false. Équivaut à is_assignable\<Ty&, const Ty&>.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -41,4 +41,4 @@ Une instance du prédicat de type a la valeur true si le type *Ty* est une class
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

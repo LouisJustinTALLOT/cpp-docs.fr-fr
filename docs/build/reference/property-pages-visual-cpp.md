@@ -14,12 +14,12 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 9f0dbe31325ec894add3d2577eb977a0c6dd7c41
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299726"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492132"
 ---
 # <a name="c-project-property-page-reference"></a>C++Référence de la page de propriétés du projet
 
@@ -47,21 +47,7 @@ isolé[, avancé](advanced-manifest-tool.md)
 
 [Général, page de propriétés (Fichier)](general-property-page-file.md)
 
-
-
-
-
 [HLSL, page de propriétés](hlsl-property-pages.md)
-
-[HLSL, page de propriétés : Avancé](hlsl-property-pages-advanced.md)
-
-[HLSL, page de propriétés : Général](hlsl-property-pages-general.md)
-
-[HLSL, page de propriétés : Fichiers de sortie](hlsl-property-pages-output-files.md)
-
-
-
-
 
 [Éditeur de liens, page de propriétés](linker-property-pages.md)
 
@@ -71,17 +57,9 @@ isolé[, avancé](advanced-manifest-tool.md)
 
 [MIDL, page de propriétés](midl-property-pages.md)
 
-[MIDL, page de propriétés : Avancé](midl-property-pages-advanced.md)
-
-[MIDL, page de propriétés : Général](midl-property-pages-general.md)
-
-[MIDL, page de propriétés : Sortie](midl-property-pages-output.md)
-
 [NMake, page de propriétés](nmake-property-page.md)
 
 [Ressources, page de propriétés](resources-property-pages.md)
-
-
 
 [Références web, page de propriétés](web-references-property-page.md)
 
@@ -92,4 +70,4 @@ isolé[, avancé](advanced-manifest-tool.md)
 ## <a name="see-also"></a>Voir aussi
 
 [Guide pratique pour créer et supprimer les dépendances d’un projet](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
-[Guide pratique : créer et modifier des configurations](/visualstudio/ide/how-to-create-and-edit-configurations)
+[Guide pratique pour créer et modifier des configurations](/visualstudio/ide/how-to-create-and-edit-configurations)

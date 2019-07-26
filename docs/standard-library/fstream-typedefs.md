@@ -11,12 +11,12 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-ms.openlocfilehash: d5a4b0e2d671bb787501767d4321bd3ed61deb88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6144826254c6acc509db2c0285b21811fe37bd4e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159533"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454044"
 ---
 # <a name="ltfstreamgt-typedefs"></a>&lt;fstream&gt;, typedefs
 
@@ -28,7 +28,7 @@ ms.locfileid: "62159533"
 
 ## <a name="filebuf"></a>  filebuf
 
-Un type `basic_filebuf` spécialisé sur **char** paramètres de modèle.
+Type `basic_filebuf` spécialisé sur les paramètres de modèle **char** .
 
 ```cpp
 typedef basic_filebuf<char, char_traits<char>> filebuf;
@@ -36,11 +36,11 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_filebuf](../standard-library/basic-filebuf-class.md), spécialisé pour les éléments de type **char** ayant les caractéristiques par défaut.
+Le type est un synonyme de la classe de modèle [basic_filebuf](../standard-library/basic-filebuf-class.md), spécialisé pour les éléments de type **char** avec des caractéristiques de caractère par défaut.
 
 ## <a name="fstream"></a>  fstream
 
-Un type `basic_fstream` spécialisé sur **char** paramètres de modèle.
+Type `basic_fstream` spécialisé sur les paramètres de modèle **char** .
 
 ```cpp
 typedef basic_fstream<char, char_traits<char>> fstream;
@@ -48,13 +48,13 @@ typedef basic_fstream<char, char_traits<char>> fstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_fstream](../standard-library/basic-fstream-class.md), spécialisé pour les éléments de type **char** ayant les caractéristiques par défaut.
+Le type est un synonyme de la classe de modèle [basic_fstream](../standard-library/basic-fstream-class.md), spécialisé pour les éléments de type **char** avec des caractéristiques de caractère par défaut.
 
 ## <a name="ifstream"></a>  ifstream
 
-Définit un flux à utiliser pour lire les données codées sur un octet de façon séquentielle dans un fichier. `ifstream` est un typedef qui spécialise la classe de modèle `basic_ifstream` pour **char**.
+Définit un flux à utiliser pour lire les données codées sur un octet de façon séquentielle dans un fichier. `ifstream`est un typedef qui spécialise la classe `basic_ifstream` de modèle pour **char**.
 
-Il existe également `wifstream`, un typedef qui spécialise `basic_ifstream` lire **wchar_t** caractères double largeur. Pour plus d’informations, consultez [wifstream](../standard-library/fstream-typedefs.md#wifstream).
+Il existe également `wifstream`un typedef qui `basic_ifstream` spécialise la lecture des caractères à double larges **wchar_t** . Pour plus d’informations, consultez [wifstream](../standard-library/fstream-typedefs.md#wifstream).
 
 ```cpp
 typedef basic_ifstream<char, char_traits<char>> ifstream;
@@ -62,7 +62,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_ifstream](../standard-library/basic-ifstream-class.md), spécialisé pour les éléments de type char ayant les caractéristiques par défaut. Voici un exemple :
+Le type est un synonyme de la classe de modèle [basic_ifstream](../standard-library/basic-ifstream-class.md), spécialisé pour les éléments de type char avec des caractéristiques de caractère par défaut. Voici un exemple :
 
 ```cpp
 using namespace std;
@@ -78,7 +78,7 @@ if (!infile.bad())
 
 ## <a name="ofstream"></a>  ofstream
 
-Un type `basic_ofstream` spécialisé sur **char** paramètres de modèle.
+Type `basic_ofstream` spécialisé sur les paramètres de modèle **char** .
 
 ```cpp
 typedef basic_ofstream<char, char_traits<char>> ofstream;
@@ -86,11 +86,11 @@ typedef basic_ofstream<char, char_traits<char>> ofstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_ofstream](../standard-library/basic-ofstream-class.md), spécialisé pour les éléments de type **char** ayant les caractéristiques par défaut.
+Le type est un synonyme de la classe de modèle [basic_ofstream](../standard-library/basic-ofstream-class.md), spécialisé pour les éléments de type **char** avec des caractéristiques de caractère par défaut.
 
 ## <a name="wfstream"></a>  wfstream
 
-Un type `basic_fstream` spécialisé sur **wchar_t** paramètres de modèle.
+Type `basic_fstream` spécialisé sur les paramètres de modèle **wchar_t** .
 
 ```cpp
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
@@ -98,11 +98,11 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_fstream](../standard-library/basic-fstream-class.md), spécialisé pour les éléments de type **wchar_t** ayant les caractéristiques par défaut.
+Le type est un synonyme de la classe de modèle [basic_fstream](../standard-library/basic-fstream-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
 
 ## <a name="wifstream"></a>  wifstream
 
-Un type `basic_ifstream` spécialisé sur **wchar_t** paramètres de modèle.
+Type `basic_ifstream` spécialisé sur les paramètres de modèle **wchar_t** .
 
 ```cpp
 typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
@@ -110,11 +110,11 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_ifstream](../standard-library/basic-ifstream-class.md), spécialisé pour les éléments de type **wchar_t** ayant les caractéristiques par défaut.
+Le type est un synonyme de la classe de modèle [basic_ifstream](../standard-library/basic-ifstream-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
 
 ## <a name="wofstream"></a>  wofstream
 
-Un type `basic_ofstream` spécialisé sur **wchar_t** paramètres de modèle.
+Type `basic_ofstream` spécialisé sur les paramètres de modèle **wchar_t** .
 
 ```cpp
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
@@ -122,11 +122,11 @@ typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_ofstream](../standard-library/basic-ofstream-class.md), spécialisé pour les éléments de type **wchar_t** ayant les caractéristiques par défaut.
+Le type est un synonyme de la classe de modèle [basic_ofstream](../standard-library/basic-ofstream-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
 
 ## <a name="wfilebuf"></a>  wfilebuf
 
-Un type `basic_filebuf` spécialisé sur **wchar_t** paramètres de modèle.
+Type `basic_filebuf` spécialisé sur les paramètres de modèle **wchar_t** .
 
 ```cpp
 typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
@@ -134,8 +134,8 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_filebuf](../standard-library/basic-filebuf-class.md), spécialisé pour les éléments de type **wchar_t** ayant les caractéristiques par défaut.
+Le type est un synonyme de la classe de modèle [basic_filebuf](../standard-library/basic-filebuf-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<fstream>](../standard-library/fstream.md)<br/>
+[\<fstream>](../standard-library/fstream.md)

@@ -6,18 +6,18 @@ f1_keywords:
 - future/std::future_status
 - future/std::launch
 ms.assetid: 8c675645-db47-4cab-bc0e-7b87f8a302df
-ms.openlocfilehash: 1e487128d4af5c6f9b3f29f5c71e52f616e1807a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5bcebd80b296a0b8416580aa03acc59ce3750cd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159520"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448219"
 ---
 # <a name="ltfuturegt-enums"></a>&lt;future&gt;, énumérations
 
 ||||
 |-|-|-|
-|[future_errc](#future_errc)|[future_status](#future_status)|[launch](#launch)|
+|[future_errc](#future_errc)|[future_status](#future_status)|[lancer](#launch)|
 
 ## <a name="future_errc"></a>  future_errc, énumération
 
@@ -57,4 +57,4 @@ class launch{
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<future>](../standard-library/future.md)<br/>
+[\<future>](../standard-library/future.md)

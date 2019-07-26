@@ -88,12 +88,12 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-ms.openlocfilehash: ef01b7872f94694d0bc22f89c51f12bfc1f4f080
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d78bbc6e66fe97af1049fa6976ac8c5fa806ef43
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244430"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448559"
 ---
 # <a name="deque-class"></a>deque, classe
 
@@ -112,7 +112,7 @@ class deque
 Type de données de l'élément à stocker dans la file d'attente à deux extrémités.
 
 *Allocateur*\
-Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la file d'attente à deux extrémités. Cet argument est facultatif et la valeur par défaut est **allocateur\<Type >** .
+Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la file d'attente à deux extrémités. Cet argument est facultatif et sa valeur par défaut est **\<Allocator type >** .
 
 ## <a name="remarks"></a>Notes
 
@@ -138,7 +138,7 @@ Dans le cas contraire, l'insertion ou la suppression d'un élément invalide tou
 
 |||
 |-|-|
-|[deque](#deque)|Construit un objet `deque`. Plusieurs constructeurs sont fournis pour configurer le contenu de la nouvelle `deque` de différentes façons : vide ; chargé avec un nombre spécifié d’éléments vides ; contenu déplacé ou copié à partir d’un autre `deque`; contenu copié ou déplacé à l’aide d’un itérateur ; et un élément copié dans le `deque` `count` fois. Certains constructeurs permettent l'utilisation d'un `allocator` personnalisé pour créer des éléments.|
+|[deque](#deque)|Construit un objet `deque`. Plusieurs constructeurs sont fournis pour configurer le contenu du nouveau `deque` de différentes façons: vide; chargé avec un nombre spécifié d’éléments vides; contenu déplacé ou copié à partir d’un autre `deque`; contenu copié ou déplacé à l’aide d’un itérateur; et un élément copié dans les `deque` `count` heures. Certains constructeurs permettent l'utilisation d'un `allocator` personnalisé pour créer des éléments.|
 
 ### <a name="typedefs"></a>Typedef
 
@@ -148,7 +148,7 @@ Dans le cas contraire, l'insertion ou la suppression d'un élément invalide tou
 |[const_iterator](#const_iterator)|Type qui fournit un itérateur à accès aléatoire qui peut accéder à et lire des éléments dans la `deque` en tant que `const`.|
 |[const_pointer](#const_pointer)|Type qui fournit un pointeur vers un élément d'une `deque` en tant que `const.`.|
 |[const_reference](#const_reference)|Type qui fournit une référence à un élément d'une  `deque` pour la lecture et d'autres opérations en tant que `const.`.|
-|[const_reverse_iterator](#const_reverse_iterator)|Type qui fournit un itérateur à accès aléatoire qui peut accéder et lire des éléments dans le `deque` comme **const**. La file d'attente à deux extrémités est affichée dans l'ordre inverse. Pour plus d’informations, consultez [reverse_iterator, classe](../standard-library/reverse-iterator-class.md)|
+|[const_reverse_iterator](#const_reverse_iterator)|Type qui fournit un itérateur à accès aléatoire qui peut accéder aux éléments et les `deque` lire dans en tant que **const**. La file d'attente à deux extrémités est affichée dans l'ordre inverse. Pour plus d’informations, consultez [reverse_iterator, classe](../standard-library/reverse-iterator-class.md)|
 |[difference_type](#difference_type)|Type qui fournit la différence entre deux itérateurs à accès aléatoire qui référencent des éléments de la même `deque`.|
 |[iterator](#iterator)|Type qui fournit un itérateur à accès aléatoire qui peut lire ou modifier tout élément d'une `deque`.|
 |[pointer](#pointer)|Type qui fournit un pointeur vers un élément d'un objet `deque`.|
@@ -166,14 +166,14 @@ Dans le cas contraire, l'insertion ou la suppression d'un élément invalide tou
 |[back](#back)|Retourne une référence au dernier élément de la `deque`.|
 |[begin](#begin)|Retourne un itérateur à accès aléatoire pointant vers le premier élément de la `deque`.|
 |[cbegin](#cbegin)|Retourne un itérateur const vers le premier élément de la `deque`.|
-|[cend](#cend)|Retourne un accès aléatoire **const** itérateur qui pointe juste après la fin de la `deque`.|
+|[cend](#cend)|Retourne un itérateur const  à accès aléatoire qui pointe juste après la fin de `deque`.|
 |[clear](#clear)|Efface tous les éléments d'un `deque`.|
 |[crbegin](#crbegin)|Retourne un itérateur const à accès aléatoire pointant vers le premier élément d'une `deque` affichée en ordre inverse.|
 |[crend](#crend)|Retourne un itérateur const à accès aléatoire pointant vers le premier élément d'une `deque` affichée en ordre inverse.|
 |[emplace](#emplace)|Insère un élément construit sur place à la position spécifiée dans la `deque`.|
 |[emplace_back](#emplace_back)|Ajoute un élément construit sur place à la fin de la `deque`.|
 |[emplace_front](#emplace_front)|Ajoute un élément construit sur place au début de la `deque`.|
-|[empty](#empty)|Retourne **true** si le `deque` contient zéro élément et **false** si elle contient un ou plusieurs éléments.|
+|[empty](#empty)|Retourne la **valeur true** si ne contient aucun élément et la `deque` **valeur false** s’il contient un ou plusieurs éléments.|
 |[end](#end)|Retourne un itérateur à accès aléatoire qui pointe juste après la fin de la `deque`.|
 |[erase](#erase)|Supprime un élément ou une plage d'éléments aux positions spécifiées d'une `deque`.|
 |[front](#front)|Retourne une référence au premier élément d'une `deque`.|
@@ -198,7 +198,7 @@ Dans le cas contraire, l'insertion ou la suppression d'un élément invalide tou
 |[operator&#91;&#93;](#op_at)|Retourne une référence à l'élément d'un objet `deque` à une position spécifiée.|
 |[operator=](#op_eq)|Remplace les éléments de l'objet `deque` par une copie d'un autre objet `deque`.|
 
-## <a name="allocator_type"></a> allocator_type
+## <a name="allocator_type"></a>allocator_type
 
 Type représentant la classe allocator pour l’objet de file d’attente à deux extrémités.
 
@@ -210,11 +210,11 @@ typedef Allocator allocator_type;
 
 `allocator_type` est un synonyme du paramètre de modèle `Allocator`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez l’exemple relatif à [get_allocator](#get_allocator).
 
-## <a name="assign"></a> Affecter
+## <a name="assign"></a>assignés
 
 Efface les éléments d’une file d’attente à deux extrémités et copie un nouvel ensemble d’éléments dans la file d’attente à deux extrémités cible.
 
@@ -236,13 +236,13 @@ void assign(initializer_list<Type> IList);
 *Premier*\
 Position du premier élément de la plage d’éléments à copier à partir de la file d’attente à deux extrémités de l’argument.
 
-*Dernière*\
+*Famille*\
 Position du premier élément après la plage d’éléments à copier à partir de la file d’attente à deux extrémités de l’argument.
 
-*Nombre*\
+*Saut*\
 Nombre de copies d’un élément inséré dans la file d’attente à deux extrémités.
 
-*Val*\
+*Multiples*\
 Valeur de l’élément inséré dans la file d’attente à deux extrémités.
 
 *IList*\
@@ -306,7 +306,7 @@ int main()
 d1 = 5678c1 =102030c1 =5060c1 =4444444
 ```
 
-## <a name="at"></a> à
+## <a name="at"></a>à
 
 Retourne une référence à l’élément à un emplacement spécifié dans la file d’attente à deux extrémités.
 
@@ -318,18 +318,18 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*\
+*imprim*\
 Indice (ou numéro de position) de l’élément à référencer dans la file d’attente à deux extrémités.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si *pos* est supérieure à la taille de la deque, `at` lève une exception.
+Si *pos* est supérieur à la taille de deque, `at` lève une exception.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Si la valeur de retour de `at` est assignée à `const_reference`, l’objet de file d’attente à deux extrémités ne peut pas être modifié. Si la valeur de retour de `at` est assignée à `reference`, l’objet de file d’attente à deux extrémités peut être modifié.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // deque_at.cpp
@@ -357,7 +357,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="back"></a> Précédent
+## <a name="back"></a>Précédent
 
 Retourne une référence au dernier élément de la file d’attente à deux extrémités.
 
@@ -406,7 +406,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a> commencer
+## <a name="begin"></a>commencer
 
 Retourne un itérateur ciblant le premier élément de la file d’attente à deux extrémités.
 
@@ -421,9 +421,9 @@ Itérateur d’accès aléatoire ciblant le premier élément dans la file d’a
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur de retour de `begin` est assignée à `const_iterator`, l’objet de file d’attente à deux extrémités ne peut pas être modifié. Si la valeur de retour de `begin` est affecté à un `iterator`, l’objet deque peut être modifié.
+Si la valeur de retour de `begin` est assignée à `const_iterator`, l’objet de file d’attente à deux extrémités ne peut pas être modifié. Si la valeur de retour `begin` de est assignée `iterator`à, l’objet deque peut être modifié.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // deque_begin.cpp
@@ -458,9 +458,9 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a> cbegin
+## <a name="cbegin"></a>cbegin
 
-Retourne un **const** itérateur qui traite le premier élément dans la plage.
+Retourne un  itérateur const qui traite le premier élément de la plage.
 
 ```cpp
 const_iterator cbegin() const;
@@ -468,7 +468,7 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un **const** itérateur à accès aléatoire qui pointe vers le premier élément de la plage ou l’emplacement juste après la fin d’une plage vide (pour une plage vide, `cbegin() == cend()`).
+Itérateur **const** à accès aléatoire qui pointe vers le premier élément de la plage, ou vers l’emplacement situé juste après la fin d’une plage vide (pour une plage vide `cbegin() == cend()`,).
 
 ### <a name="remarks"></a>Notes
 
@@ -484,9 +484,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a> cend
+## <a name="cend"></a>CEND
 
-Retourne un **const** itérateur qui traite l’emplacement juste après le dernier élément dans une plage.
+Retourne un  itérateur const qui traite l’emplacement juste après le dernier élément d’une plage.
 
 ```cpp
 const_iterator cend() const;
@@ -500,7 +500,7 @@ Itérateur d'accès aléatoire qui pointe juste après la fin de la plage.
 
 `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` à être modifiable (non - **const**) conteneur quelconque qui prend en charge `end()` et `cend()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l' `Container` exemple, considérez qu’il s’agit d’un conteneur modifiable (non **const**) de tout `end()` type `cend()`qui prend en charge et.
 
 ```cpp
 auto i1 = Container.end();
@@ -512,7 +512,7 @@ auto i2 = Container.cend();
 
 La valeur retournée par `cend` ne doit pas être déréférencée.
 
-## <a name="clear"></a> Effacer
+## <a name="clear"></a>effacé
 
 Efface tous les éléments d’une file d’attente à deux extrémités.
 
@@ -548,7 +548,7 @@ The size of the deque is initially 3
 The size of the deque after clearing is 0
 ```
 
-## <a name="const_iterator"></a> const_iterator
+## <a name="const_iterator"></a>const_iterator
 
 Type qui fournit un itérateur d’accès aléatoire pouvant accéder à un élément **const** et le lire dans la file d’attente à deux extrémités.
 
@@ -564,9 +564,9 @@ Un type `const_iterator` ne peut pas être utilisé pour changer la valeur d'un 
 
 Consultez l’exemple relatif à [back](#back).
 
-## <a name="const_pointer"></a> const_pointer
+## <a name="const_pointer"></a>const_pointer
 
-Fournit un pointeur vers un **const** élément dans un deque.
+Fournit un pointeur vers un  élément const dans un deque.
 
 ```cpp
 typedef typename Allocator::const_pointer const_pointer;
@@ -576,7 +576,7 @@ typedef typename Allocator::const_pointer const_pointer;
 
 Un type `const_pointer` ne peut pas être utilisé pour changer la valeur d'un élément. Un [itérateur](#iterator) est généralement utilisé pour accéder à un élément d’une file d’attente à deux extrémités.
 
-## <a name="const_reference"></a> const_reference
+## <a name="const_reference"></a>const_reference
 
 Type qui fournit une référence à un élément **const** stocké dans une file d’attente à deux extrémités pour la lecture et l’exécution des opérations **const**.
 
@@ -588,7 +588,7 @@ typedef typename Allocator::const_reference const_reference;
 
 Un type `const_reference` ne peut pas être utilisé pour changer la valeur d'un élément.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // deque_const_ref.cpp
@@ -620,7 +620,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a> const_reverse_iterator
+## <a name="const_reverse_iterator"></a>const_reverse_iterator
 
 Type qui fournit un itérateur d’accès aléatoire pouvant lire tout élément **const** dans la file d’attente à deux extrémités.
 
@@ -632,11 +632,11 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 Un type `const_reverse_iterator` ne peut pas modifier la valeur d’un élément. Il sert à itérer au sein de la file d’attente à deux extrémités dans l’ordre inverse.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [rbegin](#rbegin) pour savoir comment déclarer et utiliser un itérateur.
 
-## <a name="crbegin"></a> crbegin
+## <a name="crbegin"></a>crbegin
 
 Retourne un itérateur const vers le premier élément d’une file d’attente à deux extrémités inversée.
 
@@ -685,7 +685,7 @@ The first element of deque is 1.
 The first element of the reversed deque is 2.
 ```
 
-## <a name="crend"></a> crend
+## <a name="crend"></a>crend
 
 Retourne un itérateur const qui cible l’emplacement qui suit le dernier élément d’une file d’attente à deux extrémités inversée.
 
@@ -734,7 +734,7 @@ int main( )
 1
 ```
 
-## <a name="deque"></a> deque
+## <a name="deque"></a>deque
 
 Construit une file d’attente à deux extrémités de taille spécifique ou contenant des éléments de valeur spécifique, ou contenant un allocateur spécifique, ou comme copie complète ou partielle d’une autre file d’attente à deux extrémités.
 
@@ -766,13 +766,13 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 
 ### <a name="parameters"></a>Paramètres
 
-*Al*\
+*&* \
 Classe allocator à utiliser avec cet objet.
 
-*Nombre*\
+*Saut*\
 Nombre d’éléments de la file d’attente à deux extrémités construite.
 
-*Val*\
+*Multiples*\
 Valeur des éléments de la file d’attente à deux extrémités construite.
 
 *Oui*\
@@ -781,7 +781,7 @@ File d’attente à deux extrémités dont la file d’attente à deux extrémit
 *Premier*\
 Position du premier élément dans la plage d'éléments à copier.
 
-*Dernière*\
+*Famille*\
 Position du premier élément suivant la fin de la plage d'éléments à copier.
 
 *IList*\
@@ -789,25 +789,25 @@ Initializer_list à copier.
 
 ### <a name="remarks"></a>Notes
 
-Tous les constructeurs stockent un objet allocateur (*Al*) et d’initialiser la deque.
+Tous les constructeurs stockent un objet allocateur (*al*) et initialisent le deque.
 
-Les deux premiers constructeurs spécifient un deque initiale vide ; le deuxième spécifie aussi le type d’allocateur (`_Al`) à utiliser.
+Les deux premiers constructeurs spécifient un deque initial vide; le deuxième spécifie également le type d’allocateur`_Al`() à utiliser.
 
 Le troisième constructeur spécifie une répétition d'un nombre donné (`count`) d'éléments de la valeur par défaut pour la classe `Type`.
 
-Les quatrième et cinquième constructeurs spécifient une répétition des (*nombre*) éléments ayant la valeur `val`.
+Les quatrième et cinquième constructeurs spécifient une répétition des éléments (*Count*) de la valeur `val`.
 
-Le sixième constructeur spécifie une copie de la deque *droite*.
+Le sixième constructeur spécifie une copie du *droit*deque.
 
 Les septième et huitième constructeurs copient la plage `[First, Last)` d’une file d’attente à deux extrémités.
 
-Le septième constructeur déplace la deque *droite*.
+Le septième constructeur déplace le deque vers la *droite*.
 
 Le huitième constructeur copie le contenu d’un initializer_list.
 
 Aucun des constructeurs n'effectue de réallocations temporaires.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 / compile with: /EHsc
@@ -1011,7 +1011,7 @@ int main( )
 }
 ```
 
-## <a name="difference_type"></a> difference_type
+## <a name="difference_type"></a>difference_type
 
 Type qui fournit la différence entre deux itérateurs qui font référence aux éléments d’une même file d’attente à deux extrémités.
 
@@ -1023,7 +1023,7 @@ typedef typename Allocator::difference_type difference_type;
 
 Un `difference_type` peut également représenter le nombre d'éléments entre deux pointeurs.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // deque_diff_type.cpp
@@ -1066,7 +1066,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a> emplace
+## <a name="emplace"></a>emplace
 
 Insère un élément construit sur place à la position spécifiée dans la file d’attente à deux extrémités.
 
@@ -1078,10 +1078,10 @@ iterator emplace(
 
 ### <a name="parameters"></a>Paramètres
 
-*_WHERE*\
+*_Where*\
 Position dans la classe [deque](../standard-library/deque-class.md) où le premier élément est inséré.
 
-*Val*\
+*multiples*\
 Valeur de l'élément inséré dans le `deque`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1092,7 +1092,7 @@ La fonction retourne un itérateur qui pointe vers la position où le nouvel él
 
 Une opération d’insertion peut s’avérer coûteuse. Consultez `deque` pour en savoir plus sur les performances de `deque`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // deque_emplace.cpp
@@ -1134,7 +1134,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30
 ```
 
-## <a name="emplace_back"></a> emplace_back
+## <a name="emplace_back"></a>emplace_back
 
 Ajoute un élément construit sur place à la fin de la file d’attente à deux extrémités.
 
@@ -1144,10 +1144,10 @@ void emplace_back(Type&& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*\
+*multiples*\
 Élément ajouté à la fin de la classe [deque](../standard-library/deque-class.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // deque_emplace_back.cpp
@@ -1183,7 +1183,7 @@ New last element: 2
 Moved last element: 2
 ```
 
-## <a name="emplace_front"></a> emplace_front
+## <a name="emplace_front"></a>emplace_front
 
 Ajoute un élément construit sur place à la fin de la file d’attente à deux extrémités.
 
@@ -1193,7 +1193,7 @@ void emplace_front(Type&& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*\
+*multiples*\
 Élément ajouté au début de la classe [deque](../standard-library/deque-class.md).
 
 ### <a name="example"></a>Exemple
@@ -1232,7 +1232,7 @@ New last element: 2
 Moved last element: 2
 ```
 
-## <a name="empty"></a> vide
+## <a name="empty"></a>vidé
 
 Vérifie si une file d’attente à deux extrémités est vide.
 
@@ -1269,7 +1269,7 @@ int main( )
 The deque is not empty.
 ```
 
-## <a name="end"></a> fin
+## <a name="end"></a>effet
 
 Retourne un itérateur qui cible l’emplacement suivant le dernier élément d’une file d’attente à deux extrémités.
 
@@ -1285,7 +1285,7 @@ Itérateur d’accès aléatoire qui cible l’emplacement suivant le dernier é
 
 ### <a name="remarks"></a>Notes
 
-`end` est utilisé pour tester si un itérateur a atteint la fin de son deque.
+`end`est utilisé pour déterminer si un itérateur a atteint la fin de son deque.
 
 ### <a name="example"></a>Exemple
 
@@ -1329,7 +1329,7 @@ The new next-to-last integer of c1 is 400
 The deque is now: 10 400 30
 ```
 
-## <a name="erase"></a> effacement
+## <a name="erase"></a>effacer
 
 Supprime un élément ou une plage d’éléments d’une file d’attente à deux extrémités, aux positions spécifiées.
 
@@ -1341,13 +1341,13 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Paramètres
 
-*_WHERE*\
+*_Where*\
 Position de l’élément à supprimer de la file d’attente à deux extrémités.
 
-*Premier*\
+*premier*\
 Position du premier élément supprimé de la file d’attente à deux extrémités.
 
-*Dernière*\
+*famille*\
 Position juste après le dernier élément supprimé de la file d’attente à deux extrémités.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1402,7 +1402,7 @@ After erasing the first element, the deque becomes:  20 30 40 50
 After erasing all elements but the first, deque becomes: 20
 ```
 
-## <a name="front"></a> front
+## <a name="front"></a>frontal
 
 Retourne une référence au premier élément d’une file d’attente à deux extrémités.
 
@@ -1422,7 +1422,7 @@ Si la valeur de retour de `front` est assignée à `const_reference`, l’objet 
 
 En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément d’une file d’attente à deux extrémités vide.  Consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md) pour plus d’informations.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // deque_front.cpp
@@ -1491,7 +1491,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a> INSERT
+## <a name="insert"></a>Insérer
 
 Insère un élément, un nombre d’éléments ou une plage d’éléments dans la file d’attente à deux extrémités à la position spécifiée.
 
@@ -1522,19 +1522,19 @@ IList);
 
 ### <a name="parameters"></a>Paramètres
 
-*Où*\
+*Cela*\
 Position dans la file d’attente à deux extrémités cible où le premier élément est inséré.
 
-*Val*\
+*Multiples*\
 Valeur de l’élément inséré dans la file d’attente à deux extrémités.
 
-*Nombre*\
+*Saut*\
 Nombre d’éléments insérés dans la file d’attente à deux extrémités.
 
 *Premier*\
 Position du premier élément de la plage d’éléments dans la file d’attente à deux extrémités de l’argument à copier.
 
-*Dernière*\
+*Famille*\
 Position du premier élément après la plage d’éléments dans la file d’attente à deux extrémités de l’argument à copier.
 
 *IList*\
@@ -1548,7 +1548,7 @@ Les deux premières fonctions d’insertion retournent un itérateur qui pointe 
 
 Une opération d’insertion peut être coûteuse.
 
-## <a name="iterator"></a> itérateur
+## <a name="iterator"></a>répétiteur
 
 Type qui fournit un itérateur d’accès aléatoire pour lire ou modifier un élément dans une file d’attente à deux extrémités.
 
@@ -1564,7 +1564,7 @@ Un type `iterator` peut être utilisé pour modifier la valeur d’un élément.
 
 Consultez l’exemple de [begin](#begin).
 
-## <a name="max_size"></a> max_size
+## <a name="max_size"></a>max_size
 
 Retourne la longueur maximale de la file d’attente à deux extrémités.
 
@@ -1595,7 +1595,7 @@ int main( )
 }
 ```
 
-## <a name="op_at"></a> operator]
+## <a name="op_at"></a>[], opérateur
 
 Retourne une référence à l’élément d’une file d’attente à deux extrémités à une position spécifiée.
 
@@ -1607,7 +1607,7 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*\
+*imprim*\
 Position de l’élément de file d’attente à deux extrémités à référencer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1620,7 +1620,7 @@ Si la valeur de retour de `operator[]` est assignée à `const_reference`, l’o
 
 En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément en dehors des limites de la file d’attente à deux extrémités.  Pour plus d'informations, voir [Checked Iterators](../standard-library/checked-iterators.md) .
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // deque_op_ref.cpp
@@ -1646,7 +1646,7 @@ The first integer of c1 is 10
 The second integer of c1 is 20
 ```
 
-## <a name="op_eq"></a> opérateur =
+## <a name="op_eq"></a>opérateur =
 
 Remplace les éléments de cette file d’attente à deux extrémités par les éléments d’une autre file d’attente à deux extrémités.
 
@@ -1663,11 +1663,11 @@ File d’attente à deux extrémités qui fournit le nouveau contenu.
 
 ### <a name="remarks"></a>Notes
 
-Le premier remplacement copie des éléments dans cette deque à partir de *droit*, la source de l’assignation. Le deuxième remplacement déplace des éléments vers cette deque à partir de *droit*.
+La première substitution copie les éléments vers ce deque à partir de la *droite*, la source de l’assignation. Le deuxième remplacement déplace les éléments vers ce deque à partir de la *droite*.
 
 Les éléments contenus dans cette file d’attente à deux extrémités avant l’exécution de l’opérateur sont supprimés.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // deque_operator_as.cpp
@@ -1720,7 +1720,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a> pointeur
+## <a name="pointer"></a>dirigé
 
 Fournit un pointeur vers un élément dans une classe [deque](../standard-library/deque-class.md).
 
@@ -1732,7 +1732,7 @@ typedef typename Allocator::pointer pointer;
 
 Un type `pointer` peut être utilisé pour modifier la valeur d’un élément. Un [itérateur](#iterator) est généralement utilisé pour accéder à un élément d’une file d’attente à deux extrémités.
 
-## <a name="pop_back"></a> pop_back
+## <a name="pop_back"></a>pop_back
 
 Supprime l’élément à la fin de la file d’attente à deux extrémités.
 
@@ -1744,7 +1744,7 @@ void pop_back();
 
 Le dernier élément ne doit pas être vide. `pop_back` ne lève jamais d’exception.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // deque_pop_back.cpp
@@ -1774,7 +1774,7 @@ The last element is: 2
 After deleting the element at the end of the deque, the last element is: 1
 ```
 
-## <a name="pop_front"></a> pop_front
+## <a name="pop_front"></a>pop_front
 
 Supprime l’élément au début de la file d’attente à deux extrémités.
 
@@ -1786,7 +1786,7 @@ void pop_front();
 
 Le premier élément ne doit pas être vide. `pop_front` ne lève jamais d’exception.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // deque_pop_front.cpp
@@ -1816,7 +1816,7 @@ The second element is: 2
 After deleting the element at the beginning of the deque, the first element is: 2
 ```
 
-## <a name="push_back"></a> push_back
+## <a name="push_back"></a>push_back
 
 Ajoute un élément à la fin de la file d’attente à deux extrémités.
 
@@ -1828,14 +1828,14 @@ void push_back(Type&& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*\
+*multiples*\
 Élément ajouté à la fin de la file d’attente à deux extrémités.
 
 ### <a name="remarks"></a>Notes
 
 Si une exception est levée, la file d’attente à deux extrémités n’est pas modifiée et l’exception est levée de nouveau.
 
-## <a name="push_front"></a> push_front
+## <a name="push_front"></a>push_front
 
 Ajoute un élément au début de la file d’attente à deux extrémités.
 
@@ -1846,14 +1846,14 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*\
+*multiples*\
 Élément ajouté au début de la file d’attente à deux extrémités.
 
 ### <a name="remarks"></a>Notes
 
 Si une exception est levée, la file d’attente à deux extrémités n’est pas modifiée et l’exception est levée de nouveau.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // deque_push_front.cpp
@@ -1890,7 +1890,7 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a> rbegin
+## <a name="rbegin"></a>rbegin
 
 Retourne un itérateur vers le premier élément d’une file d’attente à deux extrémités inversée.
 
@@ -1966,7 +1966,7 @@ The reversed deque is: 30 20 10
 Last element in deque is now 40.
 ```
 
-## <a name="reference"></a> Référence
+## <a name="reference"></a>faire
 
 Type qui fournit une référence à un élément stocké dans une file d’attente à deux extrémités.
 
@@ -2002,7 +2002,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="rend"></a> rend
+## <a name="rend"></a>rend
 
 Retourne un itérateur qui cible l’emplacement suivant le dernier élément d’une file d’attente à deux extrémités inversée.
 
@@ -2026,7 +2026,7 @@ Si la valeur de retour de `rend` est assignée à `const_reverse_iterator`, l’
 
 La valeur retournée par `rend` ne doit pas être déréférencée.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // deque_rend.cpp
@@ -2087,7 +2087,7 @@ The reversed deque is: 30 20 10
 The modified reversed deque is: 30 20 40
 ```
 
-## <a name="resize"></a> redimensionner
+## <a name="resize"></a>redimensionner
 
 Spécifie une nouvelle taille pour une file d’attente à deux extrémités.
 
@@ -2102,14 +2102,14 @@ void resize(size_type _Newsize, Type val);
 *_Newsize*\
 Nouvelle taille de la file d’attente à deux extrémités.
 
-*Val*\
+*multiples*\
 Valeur des nouveaux éléments à ajouter à la file d’attente à deux extrémités si la nouvelle taille est supérieure à la taille d’origine. Si la valeur est omise, la valeur par défaut pour la classe est assignée aux nouveaux éléments.
 
 ### <a name="remarks"></a>Notes
 
-Si la taille de la deque est inférieure à la taille demandée, *_Newsize*, éléments sont ajoutés à la deque jusqu'à ce qu’il atteigne la taille demandée.
+Si la taille du deque est inférieure à la taille demandée, *_Newsize*, les éléments sont ajoutés au deque jusqu’à ce qu’il atteigne la taille demandée.
 
-Si la taille de la deque est supérieure à la taille demandée, les éléments les plus proches à la fin de la deque sont supprimés jusqu'à ce que celle-ci atteigne la taille *_Newsize*.
+Si la taille de deque est supérieure à la taille demandée, les éléments les plus proches de la fin du deque sont supprimés jusqu’à ce que le deque atteigne la taille *_Newsize*.
 
 Si la taille actuelle de la file d’attente à deux extrémités est égale à la taille demandée, aucune action n’est effectuée.
 
@@ -2155,7 +2155,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse_iterator"></a> reverse_iterator
+## <a name="reverse_iterator"></a>reverse_iterator
 
 Type qui fournit un itérateur d’accès aléatoire pour lire ou modifier un élément d’une file d’attente à deux extrémités inversée.
 
@@ -2171,7 +2171,7 @@ Un type `reverse_iterator` est utilisé pour itérer au sein de la file d’atte
 
 Consultez l’exemple relatif à rbegin.
 
-## <a name="shrink_to_fit"></a> shrink_to_fit
+## <a name="shrink_to_fit"></a>shrink_to_fit
 
 Ignore la capacité excédentaire.
 
@@ -2212,7 +2212,7 @@ Current size of v1 = 1
 Current size of v1 = 1
 ```
 
-## <a name="size"></a> Taille
+## <a name="size"></a>corps
 
 Retourne le nombre d’éléments de la file d’attente à deux extrémités.
 
@@ -2224,7 +2224,7 @@ size_type size() const;
 
 Longueur actuelle de la file d’attente à deux extrémités.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // deque_size.cpp
@@ -2253,7 +2253,7 @@ The deque length is 1.
 The deque length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 Type qui compte le nombre d’éléments dans une file d’attente à deux extrémités.
 
@@ -2265,7 +2265,7 @@ typedef typename Allocator::size_type size_type;
 
 Consultez l’exemple relatif à [size](#size).
 
-## <a name="swap"></a> échange
+## <a name="swap"></a>échange
 
 Échange les éléments de deux classes deque.
 
@@ -2281,10 +2281,10 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 *Oui*\
 File d’attente à deux extrémités qui fournit les éléments à échanger ou file d’attente à deux extrémités dont les éléments doivent être échangés avec ceux de la file d’attente à deux extrémités `left`.
 
-*Gauche*\
-Un deque dont les éléments doivent être échangés avec ceux de la deque *droit*.
+*gauche*\
+Deque dont les éléments doivent être échangés avec ceux du *droit*deque.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // deque_swap.cpp
@@ -2339,7 +2339,7 @@ After swapping with c3, deque c1 is: 100
 After swapping with c2, deque c1 is: 1 2 3
 ```
 
-## <a name="value_type"></a> Value_type
+## <a name="value_type"></a>value_type
 
 Type qui représente le type de données stocké dans une file d’attente à deux extrémités.
 
@@ -2351,7 +2351,7 @@ typedef typename Allocator::value_type value_type;
 
 `value_type` est un synonyme du paramètre de modèle `Type`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // deque_value_type.cpp
@@ -2373,5 +2373,5 @@ int main( )
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-ms.openlocfilehash: b9c6f8db26cdc67d3a1bc752b9b5eb31f7dc220b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73f4cdd0028164ce5f8215258c517c2e59eb7538
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411927"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459945"
 ---
 # <a name="timeput-class"></a>time_put, classe
 
@@ -35,10 +35,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType*<br/>
+*CharType*\
 Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
-*OutputIterator*<br/>
+*OutputIterator*\
 Type d'itération dans lequel les fonctions put temporelles enregistrent leur sortie.
 
 ## <a name="remarks"></a>Notes
@@ -98,19 +98,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Paramètres
 
-*next*<br/>
+*Situé*\
 Itérateur de sortie indiquant où la séquence de caractères représentant la date et l’heure doivent être insérés.
 
-*_Iosbase*<br/>
+*_Iosbase*\
 Non utilisé.
 
-*_Pt*<br/>
+*_Pt*\
 Les informations de date et d’heure fournies en sortie.
 
-*_Fmt*<br/>
+*_Fmt*\
 Le format de la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
-*_Mod*<br/>
+*_Mod*\
 Un modificateur du format. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -119,11 +119,11 @@ Un itérateur pour la première position après le dernier élément inséré.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée virtuelle génère des éléments séquentiels en commençant à `next` à partir de valeurs d’heure stockées dans l’objet \* `_Pt`, de type `tm`. La fonction retourne un itérateur désignant l’emplacement suivant où insérer un élément au-delà de la sortie générée.
+La fonction membre protégée virtuelle génère des éléments séquentiels `next` en commençant à à partir des valeurs \* d’heure stockées `tm`dans l’objet `_Pt`, de type. La fonction retourne un itérateur désignant l’emplacement suivant où insérer un élément au-delà de la sortie générée.
 
-La sortie est générée par les mêmes règles utilisées par `strftime`, avec un dernier argument *_Pt*, pour la génération d’une série de **char** éléments dans un tableau. Chacun de ces **char** élément est supposé être mappé à un élément équivalent de type `CharType` par un simple mappage un à un. Si *_Mod* est égal à zéro, le format efficace est « %f », où F est remplacé par *_Fmt*. Sinon, le format efficace est « %MF », où M est remplacé par *_Mod*.
+La sortie est générée par les mêmes règles que celles `strftime`utilisées par, avec le dernier argument de *_Pt*, pour la génération d’une série d’éléments **char** dans un tableau. Chacun de ces éléments **char** est supposé être mappé à un élément équivalent de `CharType` type par un simple mappage un-à-un. Si *_Mod* est égal à zéro, le format effectif est «% F», où F est remplacé par *_Fmt*. Dans le cas contraire, le format effectif est «% MF», où M est remplacé par *_Mod*.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez l’exemple relatif à [put](#put), qui appelle `do_put`.
 
@@ -161,28 +161,28 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>Paramètres
 
-*next*<br/>
+*Situé*\
 Itérateur de sortie indiquant où la séquence de caractères représentant la date et l’heure doivent être insérés.
 
-*_Iosbase*<br/>
+*_Iosbase*\
 Non utilisé.
 
-*_Fill*<br/>
-Le caractère de type `CharType` utilisé pour l’espacement.
+*_Fill*\
+Caractère de type `CharType` utilisé pour l’espacement.
 
-*_Pt*<br/>
+*_Pt*\
 Les informations de date et d’heure fournies en sortie.
 
-*_Fmt*<br/>
+*_Fmt*\
 Le format de la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
-*_Mod*<br/>
+*_Mod*\
 Un modificateur du format. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
-*first*<br/>
+*premier*\
 Le début de la chaîne de mise en forme pour la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
-*last*<br/>
+*famille*\
 La fin de la chaîne de mise en forme pour la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -193,7 +193,7 @@ Un itérateur pour la première position après le dernier élément inséré.
 
 La première fonction membre retourne [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`). La seconde fonction membre copie dans \* `next` ++ n’importe quel élément figurant dans l’intervalle [ `first`, `last`) autre qu’un pour cent (%). Pour un pour cent suivi d’un caractère *C* dans l’intervalle [ `first`, `last`), la fonction évalue à la place `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) et ignore *C*. Si, toutefois, *C* est un caractère de qualificateur issu de l’ensemble QEC#, suivi d’un caractère `C2` dans l’intervalle [ `first`, `last`), la fonction évalue à la place `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) et ignore `C2`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // time_put_put.cpp
@@ -247,23 +247,23 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs*<br/>
+*_Refs*\
 Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
+Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes:
 
-- 0: La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0 : La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
 - 1 : La durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1: Ces valeurs ne sont pas définies.
+- \>1: Ces valeurs ne sont pas définies.
 
-Le constructeur initialise son objet de base avec [locale::facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
+Le constructeur initialise son objet de base avec [locale:: facette](../standard-library/locale-class.md#facet_class)( *_Refs*).
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<locale>](../standard-library/locale.md)<br/>
-[time_base, classe](../standard-library/time-base-class.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[time_base, classe](../standard-library/time-base-class.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

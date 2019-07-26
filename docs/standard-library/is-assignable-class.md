@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_assignable
 ms.assetid: 53444287-c8be-4ad2-9487-a85c066a4f84
-ms.openlocfilehash: b1357bf8c5ad4dfd5035855e34a8fd6a7ed73d15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33b0ce6112119c935ff70e5d619b284acc6ee8c2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391008"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456666"
 ---
 # <a name="isassignable-class"></a>is_assignable, classe
 
@@ -26,15 +26,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*To*<br/>
+*À*\
 Type de l'objet qui reçoit l'assignation.
 
-*From*<br/>
+*De*\
 Type de l'objet qui fournit la valeur.
 
 ## <a name="remarks"></a>Notes
 
-L’expression non évaluée `declval<To>() = declval<From>()` doit être bien formée. Les deux `From` et `To` doivent être des types complets, **void**, ou des tableaux de limite inconnue.
+L’expression non évaluée `declval<To>() = declval<From>()` doit être bien formée. Et doivent être des types complets, void ou des tableaux de limites inconnues.  `From` `To`
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -44,4 +44,4 @@ L’expression non évaluée `declval<To>() = declval<From>()` doit être bien f
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

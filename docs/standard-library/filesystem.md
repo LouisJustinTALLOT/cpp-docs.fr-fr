@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240696"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457019"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,9 +29,9 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Depuis la version finale de Visual Studio 2017, le \<filesystem > en-tête n’était pas encore une norme C++. C++dans Visual Studio 2017 (v141 MSVC) implémente la norme brouillon final, trouvé dans [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> Depuis la sortie de Visual Studio 2017, l' \<en-tête de > FileSystem n’était pas encore une C++ norme. C++dans Visual Studio 2017 (MSVC V141) implémente la norme préliminaire finale, trouvée dans [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
-Cet en-tête prend en charge les systèmes de fichiers pour l’une des deux grandes classes de systèmes d’exploitation : Microsoft Windows et Posix.
+Cet en-tête prend en charge les systèmes de fichiers pour l’une des deux grandes classes de systèmes d’exploitation hôtes: Microsoft Windows et POSIX.
 
 Bien que la plupart des fonctionnalités soit communes aux deux systèmes d’exploitation, ce document met l’accent sur les différences. Par exemple :
 
@@ -125,8 +125,8 @@ Pour plus d’informations et pour obtenir des exemples de code, consultez [Navi
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Énumération qui spécifie les options pour les itérateurs de répertoire.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Énumération pour les types de fichiers.|
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
-|[Perms](../standard-library/filesystem-enumerations.md#perms)|Type de masque de bits utilisé pour transmettre les autorisations et les options des autorisations|
+|[perms](../standard-library/filesystem-enumerations.md#perms)|Type de masque de bits utilisé pour transmettre les autorisations et les options des autorisations|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)

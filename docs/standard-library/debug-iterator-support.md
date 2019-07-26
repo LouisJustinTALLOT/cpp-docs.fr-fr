@@ -11,12 +11,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 9042093bb073807e9bb1476ab514c82010aeab70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394053"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450588"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -54,7 +54,7 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>À l’aide de _ITERATOR_DEBUG_LEVEL
+## <a name="using-iteratordebuglevel"></a>Utilisation de _ITERATOR_DEBUG_LEVEL
 
 Vous pouvez utiliser la macro de préprocesseur [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) pour désactiver la fonctionnalité de débogage des itérateurs dans une version Debug. Ce programme n’effectue pas d’assertion, mais déclenche un comportement non défini.
 
@@ -104,7 +104,7 @@ int main() {
 }
 ```
 
-## <a name="incompatible-iterators"></a>Itérateurs incompatibles
+## <a name="incompatible-iterators"></a>Itérateurs non compatibles
 
 L’exemple de code suivant provoque une assertion, car les deux itérateurs vers l’algorithme [for_each](../standard-library/algorithm-functions.md#for_each) ne sont pas compatibles. Les algorithmes vérifient si les itérateurs qui leur sont fournis référencent le même conteneur.
 
@@ -128,9 +128,9 @@ int main()
 
 Notez que cet exemple utilise l’expression lambda `[] (int& elem) { elem *= 2; }` au lieu d’un foncteur. Bien que ce choix n’ait aucune incidence sur l’échec de l’assertion (un foncteur similaire entraîne un échec de la même façon), les expressions lambda sont un moyen très utile d’accomplir des tâches d’objet de fonction compact. Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="iterators-going-out-of-scope"></a>Itérateurs doivent passer hors de portée
+## <a name="iterators-going-out-of-scope"></a>Itérateurs hors de portée
 
-Vérification des itérateur de débogage provoque également une variable d’itérateur qui est déclarée dans un **pour** boucle comme étant hors de l’étendue lorsque le **pour** boucle se termine de portée.
+Les contrôles d’itérateur de débogage entraînent également la non-portée d’une variable d’itérateur déclarée dans une boucle **for** lorsque l’étendue de la boucle **for** se termine.
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -148,7 +148,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>Destructeurs pour les itérateurs de débogage
 
-Les itérateurs de débogage ont des destructeurs non triviaux. Si un destructeur ne s’exécute pas, mais la mémoire de l’objet est libérée, accès violations et les données soient endommagées. Considérez cet exemple :
+Les itérateurs de débogage ont des destructeurs non triviaux. Si un destructeur ne s’exécute pas mais que la mémoire de l’objet est libérée, des violations d’accès et une altération des données peuvent se produire. Considérez cet exemple :
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -175,4 +175,4 @@ struct derived : base {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstdlib header
 ms.assetid: 0a6aaebf-84e9-4b60-ae90-17e11981cf54
-ms.openlocfilehash: 70e05ad734fa49ba8cb96e4bf83bc05b99c5f55c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 298d6a512b2863a326bda0670f33fe8f1bda0688
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246529"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449410"
 ---
 # <a name="ltcstdlibgt"></a>&lt;cstdlib&gt;
 
-Inclut l’en-tête de bibliothèque C Standard \<stdlib.h > et ajoute les noms associés à la `std` espace de noms. Inclusion de cet en-tête garantit également que les noms déclarés à l’aide d’une liaison externe dans l’en-tête de la bibliothèque standard C sont déclarés dans le `std` espace de noms.
+Inclut l’en-tête \<stdlib. > h de la bibliothèque standard C et ajoute les noms associés à l' `std` espace de noms. L’inclusion de cet en-tête garantit que les noms déclarés à l’aide de la liaison externe dans l' `std` en-tête de la bibliothèque standard C sont déclarés dans l’espace de noms.
 
 > [!NOTE]
-> \<STDLIB.h > n’inclut pas le type **wchar_t**.
+> \<stdlib. h > n’inclut pas le type **wchar_t**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -26,7 +26,7 @@ Inclut l’en-tête de bibliothèque C Standard \<stdlib.h > et ajoute les noms 
 
 **Espace de noms :** std
 
-## <a name="namespace-and-macros"></a>Namespace et Macros
+## <a name="namespace-and-macros"></a>Espace de noms et macros
 
 ```cpp
 namespace std {
@@ -43,7 +43,7 @@ namespace std {
 #define MB_CUR_MAX
 ```
 
-## <a name="exposition-only-functions"></a>Seules les fonctions démonstration
+## <a name="exposition-only-functions"></a>Exposition uniquement les fonctions
 
 ```cpp
 extern "C" using c-atexit-handler = void();
@@ -52,20 +52,20 @@ extern "C" using c-compare-pred = int(const void*, const void*);
 extern "C++" using compare-pred = int(const void*, const void*);
 ```
 
-## <a name="start-and-termination-functions"></a>Fonctions de démarrage et arrêt
+## <a name="start-and-termination-functions"></a>Fonctions de démarrage et d’arrêt
 
 |Fonction|Description|
 |-|-|
-|[_Exit](#_exit)|Met fin au programme sans utiliser de destructeurs ou fonctions inscrites.|
-|[abort](#abort)|Met fin au programme sans utilisation de destructeurs.|
-|[atexit](#atexit)|Fonction de registres pour l’arrêt du programme.|
-|[exit](#exit)|Détruit les objets avec thread et de stockage statique, puis retourne le contrôle.|
-|[at_quick_exit](#at_quick_exit)|Fonction de registres sans arguments pour l’arrêt du programme.|
-|[quick_exit](#quick_exit)|Fonction de registres avec les objets conservés pour l’arrêt du programme.|
-|[getenv](#getenv)|Consultez la référence de la bibliothèque standard C.|
-|[system](#system)|Consultez la référence de la bibliothèque standard C.|
+|[_Exit](#_exit)|Termine le programme sans utiliser de destructeurs ou de fonctions inscrites.|
+|[abort](#abort)|Termine le programme sans utiliser de destructeurs.|
+|[atexit](#atexit)|Inscrit la fonction pour l’arrêt du programme.|
+|[exit](#exit)|Détruit les objets avec le stockage statique et le thread, puis retourne le contrôle.|
+|[at_quick_exit](#at_quick_exit)|Inscrit la fonction sans arguments pour l’arrêt du programme.|
+|[quick_exit](#quick_exit)|Inscrit la fonction avec des objets conservés pour l’arrêt du programme.|
+|[getenv](#getenv)|Consultez Référence de la bibliothèque standard C.|
+|[system](#system)|Consultez Référence de la bibliothèque standard C.|
 
-### <a name="_exit"></a> _Exit
+### <a name="_exit"></a>_Exit
 
 ```cpp
 [[noreturn]] void _Exit(int status) noexcept;
@@ -73,9 +73,9 @@ extern "C++" using compare-pred = int(const void*, const void*);
 
 #### <a name="remarks"></a>Notes
 
-Le programme se termine sans exécuter les destructeurs des objets automatique, le thread ou une durée de stockage statique et sans appel de fonctions passées à `atexit()`. La fonction `_Exit` est signal-safe.
+Le programme est arrêté sans exécuter de destructeurs pour les objets de durée de stockage automatique, de thread ou statique et sans appel de fonctions `atexit()`passé à. La fonction `_Exit` est signal-safe.
 
-### <a name="abort"></a> Abandonner
+### <a name="abort"></a>arrêté
 
 ```cpp
 [[noreturn]] void abort() noexcept;
@@ -83,9 +83,9 @@ Le programme se termine sans exécuter les destructeurs des objets automatique, 
 
 #### <a name="remarks"></a>Notes
 
-Le programme se termine sans exécuter les destructeurs des objets automatique, le thread ou une durée de stockage statique et sans appel de fonctions passées à `atexit()`. La fonction `abort` est signal-safe.
+Le programme est arrêté sans exécuter de destructeurs pour les objets de durée de stockage automatique, de thread ou statique et sans appel de fonctions `atexit()`passé à. La fonction `abort` est signal-safe.
 
-### <a name="at_quick_exit"></a> at_quick_exit
+### <a name="at_quick_exit"></a>at_quick_exit
 
 ```cpp
 int at_quick_exit(c-atexit-handler * func) noexcept;
@@ -94,13 +94,13 @@ int at_quick_exit(atexit-handler * func) noexcept;
 
 #### <a name="return-value"></a>Valeur de retour
 
-Zéro si l’inscription réussit, zéro en cas d’échec.
+Zéro si l’inscription réussit, valeur différente de zéro en cas d’échec.
 
 #### <a name="remarks"></a>Notes
 
-Le `at_quick_exit()` fonctions inscrire la fonction vers laquelle pointée *func* à être appelé sans arguments lorsque `quick_exit` est appelée. Il a n’est pas spécifié si un appel à `at_quick_exit()` qui ne se produit avant tous les appels à `quick_exit` réussit et le `at_quick_exit()` fonctions n’introduisent pas une concurrence de données. L’ordre de l’inscription peut être indéterminé si `at_quick_exit` a été appelée à partir de plus qu’un seul thread et depuis `at_quick_exit` inscriptions sont distinctes de la `atexit` inscriptions, applications devront peut-être appeler les deux fonctions d’inscription avec le même d’argument. L’implémentation doit prendre en charge l’inscription de fonctions au moins 32.
+Les `at_quick_exit()` fonctions inscrivent la fonction vers laquelle *pointe doit être* appelée sans arguments quand `quick_exit` est appelé. Il n’est pas spécifié si un appel `at_quick_exit()` à n’a pas lieu avant que `quick_exit` tous les appels à `at_quick_exit()` n’aboutissent et que les fonctions n’introduisent pas de concurrence de données. L’ordre d’enregistrement peut être indéterminé si `at_quick_exit` a été appelé à partir de plusieurs threads `at_quick_exit` et dans la mesure où les `atexit` inscriptions sont distinctes des inscriptions, les applications devront peut-être appeler les deux fonctions d’inscription avec le même argument. L’implémentation prend en charge l’inscription d’au moins 32 fonctions.
 
-### <a name="atexit"></a> atexit
+### <a name="atexit"></a>ATEX
 
 ```cpp
 int atexit(c-atexit-handler * func) noexcept;
@@ -109,13 +109,13 @@ int atexit(atexit-handler * func) noexcept;
 
 #### <a name="remarks"></a>Notes
 
-Le `atexit()` fonctions inscrire la fonction vers laquelle pointée *func* à être appelé sans arguments au niveau de l’arrêt normal du programme. Il a n’est pas spécifié si un appel à `atexit()` qui ne se produit avant un appel à `exit()` réussit et le `atexit()` fonctions n’introduisent pas une concurrence de données. L’implémentation doit prendre en charge l’inscription de fonctions au moins 32.
+Les `atexit()` fonctions inscrivent la fonction désignée par *Func* pour être appelées sans arguments à l’arrêt normal du programme. Il n’est pas spécifié si un appel `atexit()` à n’a pas lieu avant la `exit()` fin d’un appel `atexit()` à, et les fonctions n’introduisent pas de concurrence de données. L’implémentation prend en charge l’inscription d’au moins 32 fonctions.
 
 #### <a name="return-value"></a>Valeur de retour
 
 Retourne zéro si l’inscription réussit, différente de zéro en cas d’échec.
 
-### <a name="exit"></a> quitter
+### <a name="exit"></a>terminer
 
 ```cpp
 [[noreturn]] void exit(int status);
@@ -123,21 +123,21 @@ Retourne zéro si l’inscription réussit, différente de zéro en cas d’éch
 
 #### <a name="remarks"></a>Notes
 
-Tout d’abord, objets avec une durée de stockage de thread et associé actuel thread sont détruits.
+Tout d’abord, les objets avec une durée de stockage de thread et associés au thread actuel sont détruits.
 
-Ensuite, avec une durée de stockage statique, les objets sont détruits et fonctions enregistrées en appelant `atexit` sont appelées. Objets automatiques ne sont pas détruits suite à l’appel `exit()`. Si le contrôle quitte une fonction inscrite, appelée par `exit` , car la fonction ne fournit pas un gestionnaire pour une exception levée, `std::terminate()` doit être appelée. Une fonction est appelée pour chaque fois qu’il est inscrit. Les objets avec une durée de stockage automatique sont détruits dans un programme dont la fonction principale ne contient aucun objet automatique et exécute l’appel à `exit()`. Contrôle peut être transféré directement à une telle fonction principale en levant une exception est interceptée dans la fonction main.
+Ensuite, les objets avec une durée de stockage statique sont détruits et `atexit` les fonctions inscrites par l’appel de sont appelées. Les objets automatiques ne sont pas détruits à `exit()`la suite de l’appel de. Si le contrôle quitte une fonction inscrite `exit` appelée par, car la fonction ne fournit pas de gestionnaire pour `std::terminate()` une exception levée, doit être appelé. Une fonction est appelée pour chaque fois qu’elle est inscrite. Les objets avec une durée de stockage automatique sont tous détruits dans un programme dont la fonction principale ne contient pas d’objets `exit()`automatiques et exécute l’appel à. Le contrôle peut être transféré directement à une telle fonction principale en levant une exception interceptée dans main.
 
-Ensuite, tous les ouverts C flux (comme atténuées par les signatures de fonction déclarés dans <cstdio>) avec les données mises en mémoire tampon qui sont vidé, ouvrez tous les flux de C sont fermés et tous les fichiers créés en appelant `tmpfile()` sont supprimés.
+Ensuite, tous les flux c ouverts (tels que les signatures de fonctions déclarées <cstdio>dans) avec des données mises en mémoire tampon non écrites sont vidés, tous les flux c ouverts sont fermés, et `tmpfile()` tous les fichiers créés par l’appel à sont supprimés.
 
-Enfin, le contrôle est retourné à l’environnement hôte. Si l’état est égal à zéro ou EXIT_SUCCESS, un formulaire défini par l’implémentation de l’arrêt de réussite d’état est retourné. Si l’état est EXIT_FAILURE, un formulaire défini par l’implémentation de l’arrêt échoue d’état est retourné. Sinon, l’état retourné est défini par l’implémentation.
+Enfin, le contrôle est retourné à l’environnement hôte. Si Status est égal à zéro ou EXIT_SUCCESS, une forme définie par l’implémentation de l’état d’arrêt réussi est retournée. Si l’État est EXIT_FAILURE, une forme définie par l’implémentation de l’état d’arrêt non réussi est retournée. Dans le cas contraire, l’état retourné est défini par l’implémentation.
 
-### <a name="getenv"></a> getenv
+### <a name="getenv"></a>getenv
 
 ```cpp
 char* getenv(const char* name);
 ```
 
-### <a name="quick_exit"></a> quick_exit
+### <a name="quick_exit"></a>quick_exit
 
 ```cpp
 [[noreturn]] void quick_exit(int status) noexcept;
@@ -145,9 +145,9 @@ char* getenv(const char* name);
 
 #### <a name="remarks"></a>Notes
 
-Fonctions enregistrées par des appels à `at_quick_exit` sont appelés dans l’ordre inverse de leur inscription, sauf qu’une fonction doit être appelée une fois que les inscrit précédemment des fonctions qui avaient déjà été appelées au moment où elle a été inscrite. Les objets ne sont pas détruits suite à l’appel `quick_exit`. Si le contrôle quitte une fonction inscrite, appelée par `quick_exit` , car la fonction ne fournit pas un gestionnaire pour une exception levée, `std::terminate()` doit être appelée. Une fonction enregistrée par le biais de `at_quick_exit` est appelé par le thread qui appelle `quick_exit`, ce qui peut être un autre thread que celui qui inscrit, inscrit par conséquent, les fonctions ne doivent pas s’appuient sur l’identité des objets avec une durée de stockage de thread. Après l’appel de fonctions inscrites, `quick_exit` appellera `_Exit(status)`. Les mémoires tampons de fichier standard ne sont pas vidées. La fonction `quick_exit` est signal sécurisé lorsque les fonctions enregistré avec `at_quick_exit` sont.
+Les fonctions inscrites par `at_quick_exit` les appels à sont appelées dans l’ordre inverse de leur inscription, à ceci près qu’une fonction sera appelée après toutes les fonctions précédemment inscrites qui avaient déjà été appelées au moment de son inscription. Les objets ne seront pas détruits à la suite `quick_exit`de l’appel de. Si le contrôle quitte une fonction inscrite `quick_exit` appelée par, car la fonction ne fournit pas de gestionnaire pour `std::terminate()` une exception levée, doit être appelé. Une fonction inscrite `at_quick_exit` via est appelée par le thread qui appelle `quick_exit`, qui peut être un thread différent de celui qui l’a inscrit. les fonctions inscrites ne doivent donc pas reposer sur l’identité des objets avec une durée de stockage de thread. Après avoir appelé des fonctions `quick_exit` inscrites `_Exit(status)`, appellera. Les mémoires tampons de fichier standard ne sont pas vidées. La fonction `quick_exit` est signalée comme étant sécurisée lorsque les `at_quick_exit` fonctions inscrites auprès de sont.
 
-### <a name="system"></a> Système
+### <a name="system"></a>requise
 
 ```cpp
 int system(const char* string);
@@ -178,7 +178,7 @@ unsigned long long int strtoull(const char* nptr, char** endptr, int base);
 
 Ces fonctions ont la sémantique spécifiée dans la bibliothèque standard C.
 
-##  <a name="multibyte--wide-string-and-character-conversion-functions"></a>Chaîne multioctet / large et les fonctions de conversion de caractère
+##  <a name="multibyte--wide-string-and-character-conversion-functions"></a>Fonctions de conversion de caractères et de chaînes multioctets/larges
 
 ```cpp
 int mblen(const char* s, size_t n);
@@ -205,7 +205,7 @@ void qsort(void* base, size_t nmemb, size_t size, compare-pred * compar);
 
 Ces fonctions ont la sémantique spécifiée dans la bibliothèque standard C.
 
-## <a name="low-quality-random-number-generation-functions"></a>Fonctions de génération de nombres aléatoires basse qualité
+## <a name="low-quality-random-number-generation-functions"></a>Fonctions de génération de nombres aléatoires de faible qualité
 
 ```cpp
 int rand();
@@ -251,6 +251,6 @@ void qsort(void* base, size_t nmemb, size_t size, compare-pred * compar);
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

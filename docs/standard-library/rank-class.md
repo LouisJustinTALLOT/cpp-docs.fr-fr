@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rank class
 - rank
 ms.assetid: bc9f1b8f-800f-46ca-b6f4-d8579ed5406a
-ms.openlocfilehash: a0658d7278ef31d01d371eff11aec09c19c8011e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cab8d4bb782c7e02df62874a40db14479558da99
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369746"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458179"
 ---
 # <a name="rank-class"></a>rank, classe
 
@@ -27,12 +27,12 @@ struct rank;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*<br/>
+*Ty*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-La requête de type conserve la valeur du nombre de dimensions du type tableau *Ty*, ou 0 si *Ty* n’est pas un type tableau.
+La requête de type contient la valeur du nombre de dimensions du type de tableau *Ty*, ou 0 si *Ty* n’est pas un type tableau.
 
 ## <a name="example"></a>Exemple
 
@@ -69,5 +69,5 @@ rank<int[5][10]> == 2
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[extent, classe](../standard-library/extent-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[extent, classe](../standard-library/extent-class.md)

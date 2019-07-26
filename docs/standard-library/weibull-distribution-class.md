@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: bbcfa23ae84d0a035d4b00d1c154da4b4281be32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3c5a2a3d8e4b5f2c8a13ef7525b29683b94acc4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410835"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459621"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution, classe
 
@@ -70,12 +70,12 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType*<br/>
-Par défaut est le type de résultat à virgule flottante, **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType*\
+Le type de résultat à virgule flottante, par défaut, est **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d’une virgule flottante spécifié par l’utilisateur type ou type **double** si aucun n’est fourni, distribuées selon la Distribution de Weibull. Le tableau suivant contient des liens vers des articles sur différents membres.
+La classe de modèle décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la Loi de Weibull. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -222,13 +222,13 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*a*<br/>
+*un*\
 Paramètre de distribution `a`.
 
-*b*<br/>
+*p*\
 Paramètre de distribution `b`.
 
-*parm*<br/>
+*Parm*\
 Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -257,13 +257,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*a*<br/>
+*un*\
 Paramètre de distribution `a`.
 
-*b*<br/>
+*p*\
 Paramètre de distribution `b`.
 
-*right*<br/>
+*Oui*\
 Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes
@@ -274,4 +274,4 @@ Cette structure peut être passée au constructeur de classe de la distribution 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-ms.openlocfilehash: fb18c67b6e7949486c33e95c7daf6bc6868d0baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404884"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447661"
 ---
 # <a name="insertiterator-class"></a>insert_iterator, classe
 
@@ -30,12 +30,12 @@ class insert_iterator;
 
 ### <a name="parameters"></a>Paramètres
 
-*Conteneur*<br/>
+*Conteneur*\
 Type de conteneur dans lequel des éléments doivent être insérés par un `insert_iterator`.
 
 ## <a name="remarks"></a>Notes
 
-Le conteneur de type `Container` doit répondre aux exigences d’un conteneur de taille variable et une fonction de membre d’insertion de deux arguments dont les paramètres sont de type `Container::iterator` et `Container::value_type` et qui retourne un type `Container::iterator`. La séquence de bibliothèque standard C++ et les conteneurs associatifs triés sont conformes à ces exigences et peuvent être adaptés pour être utilisés avec des objets `insert_iterator`. Pour les conteneurs associatifs, l’argument de position est traité comme un indice, lequel peut améliorer ou dégrader les performances selon sa qualité. Un `insert_iterator` doit toujours être initialisé avec son conteneur.
+Le conteneur de type `Container` doit satisfaire les exigences d’un conteneur de taille variable et avoir une fonction membre Insert à deux arguments, où les paramètres sont de `Container::iterator` type `Container::value_type` et et qui retourne un `Container::iterator`type. La séquence de bibliothèque standard C++ et les conteneurs associatifs triés sont conformes à ces exigences et peuvent être adaptés pour être utilisés avec des objets `insert_iterator`. Pour les conteneurs associatifs, l’argument de position est traité comme un indice, lequel peut améliorer ou dégrader les performances selon sa qualité. Un `insert_iterator` doit toujours être initialisé avec son conteneur.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -76,7 +76,7 @@ typedef Container container_type;
 
 Le type est un synonyme du paramètre de modèle *Container*.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // insert_iterator_container_type.cpp
@@ -116,10 +116,10 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Cont*<br/>
+*_Cont*\
 Conteneur dans lequel `insert_iterator` doit insérer des éléments.
 
-*_It*<br/>
+*_It*\
 Position de l’insertion.
 
 ### <a name="remarks"></a>Notes
@@ -186,7 +186,7 @@ La fonction membre retourne la valeur de l’élément ciblé.
 
 ### <a name="remarks"></a>Notes
 
-Utilisé pour implémenter l’expression d’itérateur de sortie **\*Iter** = **value**. Si `Iter` est un itérateur qui traite un élément dans une séquence, puis  **\*Iter** = **valeur** remplace cet élément par valeur et ne modifie pas le nombre total de éléments de la séquence.
+Utilisé pour implémenter l’expression d’itérateur de sortie **\*Iter** = **value**. Si `Iter` est un itérateur qui traite un élément dans une séquence  **\*** , la**valeur** d’ITER = remplace cet élément par la valeur et ne modifie pas le nombre total d’éléments dans la séquence.
 
 ### <a name="example"></a>Exemple
 
@@ -250,7 +250,7 @@ insert_iterator<Container> operator++(int);
 
 Les opérateurs de préincrémentation et de postincrémentation retournent le même résultat.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // insert_iterator_op_incr.cpp
@@ -310,7 +310,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>Paramètres
 
-*val*<br/>
+*multiples*\
 Valeur à assigner au conteneur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -429,6 +429,6 @@ The first element in the list L is: 10.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

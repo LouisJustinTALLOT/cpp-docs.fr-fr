@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - csignal header
 ms.assetid: d18bcf82-a89a-476c-a6bf-726af956f7c0
-ms.openlocfilehash: 298aa14c4e41f1473cac72fc79aa3e180dfe183f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2e82877a54c433b9db638b908be290535b1cc857
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243556"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452331"
 ---
 # <a name="ltcsignalgt"></a>&lt;csignal&gt;
 
-Inclut l’en-tête de bibliothèque C Standard \<signal.h > et ajoute les noms associés à la `std` espace de noms. L'inclusion de cet en-tête garantit également que les noms déclarés à l'aide d'une liaison externe dans l'en-tête de la bibliothèque C standard soient déclarés dans l'espace de noms `std`.
+Inclut l’en-tête \<signal. > h de la bibliothèque standard C et ajoute les noms associés à l' `std` espace de noms. L'inclusion de cet en-tête garantit également que les noms déclarés à l'aide d'une liaison externe dans l'en-tête de la bibliothèque C standard soient déclarés dans l'espace de noms `std`.
 
 
 ## <a name="syntax"></a>Syntaxe
@@ -24,7 +24,7 @@ Inclut l’en-tête de bibliothèque C Standard \<signal.h > et ajoute les noms 
 #include <csignal>
 ```
 
-## <a name="namespace-and-macros"></a>Namespace et Macros
+## <a name="namespace-and-macros"></a>Espace de noms et macros
 
 ```cpp
 namespace std {
@@ -53,6 +53,6 @@ int raise(int sig);
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

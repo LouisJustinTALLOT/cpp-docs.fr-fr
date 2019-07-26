@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411069"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456436"
 ---
 # <a name="allocatorbase-class"></a>allocator_base, classe
 
@@ -61,7 +61,7 @@ class allocator_base
 |Paramètre|Description|
 |---------------|-----------------|
 |*Type*|Type des éléments alloués par l'allocateur.|
-|*Sync*|Stratégie de synchronisation de l’allocateur, qui est la classe [sync_none](../standard-library/sync-none-class.md), [sync_per_container](../standard-library/sync-per-container-class.md), [sync_per_thread](../standard-library/sync-per-thread-class.md) ou [sync_shared](../standard-library/sync-shared-class.md).|
+|*Synchronisation*|Stratégie de synchronisation de l’allocateur, qui est la classe [sync_none](../standard-library/sync-none-class.md), [sync_per_container](../standard-library/sync-per-container-class.md), [sync_per_thread](../standard-library/sync-per-thread-class.md) ou [sync_shared](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -85,8 +85,8 @@ class allocator_base
 
 |Fonction membre|Description|
 |-|-|
-|[_Charalloc](#charalloc)|Alloue du stockage pour un tableau de type **char**.|
-|[_Chardealloc](#chardealloc)|Libère du stockage pour le tableau contenant les éléments de type **char**.|
+|[_Charalloc](#charalloc)|Alloue le stockage pour un tableau de type **char**.|
+|[_Chardealloc](#chardealloc)|Libère le stockage pour le tableau contenant des éléments de type **char**.|
 |[address](#address)|Recherche l'adresse d'un objet dont la valeur est spécifiée.|
 |[allocate](#allocate)|Alloue un bloc de mémoire suffisamment grand pour stocker au moins un nombre spécifié d'éléments.|
 |[construct](#construct)|Construit un type d'objet spécifique à une adresse spécifiée qui est initialisée avec une valeur spécifiée.|
@@ -102,7 +102,7 @@ class allocator_base
 
 ## <a name="charalloc"></a>  allocator_base::_Charalloc
 
-Alloue du stockage pour un tableau de type **char**.
+Alloue le stockage pour un tableau de type **char**.
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -124,7 +124,7 @@ Cette fonction membre est utilisée par les conteneurs quand la compilation s’
 
 ## <a name="chardealloc"></a>  allocator_base::_Chardealloc
 
-Libère du stockage pour le tableau contenant les éléments de type **char**.
+Libère le stockage pour le tableau contenant des éléments de type **char**.
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Paramètres
 
-*val*<br/>
+*multiples*\
 Valeur const ou nonconst de l’objet dont l’adresse est recherchée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -341,4 +341,4 @@ typedef Type value_type;
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

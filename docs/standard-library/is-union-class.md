@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_union class
 - is_union
 ms.assetid: 80eda256-40b8-4db5-9ac1-d58bb8032a3e
-ms.openlocfilehash: 511dfba92629cfbf71c805a9ea50b8e27f775c54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b4383fd96c359661d225433dbe9e7dd8b7f939f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413370"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458896"
 ---
 # <a name="isunion-class"></a>is_union, classe
 
@@ -27,12 +27,12 @@ struct is_union;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*<br/>
+*Ty*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *Ty* est un type d’union ou un `cv-qualified` forme d’un type d’union, sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un type Union ou `cv-qualified` une forme d’un type Union. sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -80,5 +80,5 @@ is_union<ints> == true
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_class, classe](../standard-library/is-class-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_class, classe](../standard-library/is-class-class.md)

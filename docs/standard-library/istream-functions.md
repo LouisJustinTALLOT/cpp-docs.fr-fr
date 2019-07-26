@@ -5,12 +5,12 @@ f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: b590559b01bb8f5db21fca9f78d220d8bad5c27e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413331"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458765"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt;, fonction
 
@@ -36,10 +36,10 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Un flux.
 
-*right*<br/>
+*Oui*\
 Un flux.
 
 ## <a name="ws"></a>  ws
@@ -52,7 +52,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="parameters"></a>Paramètres
 
-*_Istr*<br/>
+*_Istr*\
 Un flux.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -71,4 +71,4 @@ Pour obtenir un exemple d’utilisation de `ws`, consultez [operator>>](../stand
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<istream>](../standard-library/istream.md)<br/>
+[\<istream>](../standard-library/istream.md)

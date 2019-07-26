@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 70e71ac5a6fd523f0b7589625f4e88fdb41ee0e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59b69d3f862715840e1557a10d6087350488a3c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224271"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448073"
 ---
 # <a name="istrstream-class"></a>istrstream, classe
 
@@ -72,15 +72,15 @@ istrstream(
 
 ### <a name="parameters"></a>Paramètres
 
-*count*<br/>
-La longueur de la mémoire tampon (*ptr*).
+*saut*\
+Longueur de la mémoire tampon (*ptr*).
 
-*ptr*<br/>
+*effectués*\
 Contenu avec lequel la mémoire tampon est initialisée.
 
 ### <a name="remarks"></a>Notes
 
-Tous les constructeurs initialisent la classe de base en appelant [istream](../standard-library/istream-typedefs.md#istream)(**sb**), où `sb` est l’objet stocké de classe [strstreambuf](../standard-library/strstreambuf-class.md). Les deux premiers constructeurs initialisent également `sb` en appelant `strstreambuf`(( **const** `char` \*) `ptr`, 0). Les deux autres constructeurs appellent plutôt `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).
+Tous les constructeurs initialisent la classe de base en appelant [IStream](../standard-library/istream-typedefs.md#istream)(**SB**), où `sb` est l’objet stocké de la classe [strstreambuf](../standard-library/strstreambuf-class.md). Les deux premiers constructeurs s' `sb` initialisent également en appelant `strstreambuf`(( **const** `char` \*) `ptr`, 0). Les deux autres constructeurs appellent plutôt `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).
 
 ## <a name="rdbuf"></a>  istrstream::rdbuf
 
@@ -98,7 +98,7 @@ Un pointeur vers l’objet strstreambuf associé au flux.
 
 La fonction membre retourne l’adresse de la mémoire tampon de flux stockée de type pointeur vers [strstreambuf](../standard-library/strstreambuf-class.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Pour obtenir un exemple qui utilise `rdbuf`, consultez [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount).
 
@@ -118,13 +118,13 @@ Pointeur vers le début de la séquence contrôlée.
 
 La fonction membre retourne [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-Consultez [strstream::str](../standard-library/strstreambuf-class.md#str) pour obtenir un exemple qui utilise `str`.
+Consultez [strstream:: Str](../standard-library/strstreambuf-class.md#str) pour obtenir un exemple qui `str`utilise.
 
 ## <a name="see-also"></a>Voir aussi
 
-[istream](../standard-library/istream-typedefs.md#istream)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream, programmation](../standard-library/iostream-programming.md)<br/>
-[iostreams, conventions](../standard-library/iostreams-conventions.md)<br/>
+[istream](../standard-library/istream-typedefs.md#istream)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream, programmation](../standard-library/iostream-programming.md)\
+[iostreams, conventions](../standard-library/iostreams-conventions.md)

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: b1ffe9e5294e4b945f81dbecbabba64c15c188a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c5d81aecb5e78a8fd3c3f32da82f6048ae4fac8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413162"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453564"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt;, fonctions
 
@@ -62,7 +62,7 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Paramètres
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux pour lesquels tester la présence d’une facette.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -105,10 +105,10 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*Ch*<br/>
+*Cascade*\
 Élément alphanumérique à tester.
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux contenant l’élément alphanumérique à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -172,10 +172,10 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*Ch*<br/>
+*Cascade*\
 Élément à tester.
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux contenant l’élément alphabétique à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -237,10 +237,10 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*Ch*<br/>
+*Cascade*\
 Élément à tester.
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -302,10 +302,10 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*Ch*<br/>
+*Cascade*\
 Élément à tester.
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -316,7 +316,7 @@ Paramètres régionaux contenant l’élément à tester.
 
 La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // locale_is_digit.cpp
@@ -367,10 +367,10 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*Ch*<br/>
+*Cascade*\
 Élément à tester.
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -432,10 +432,10 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*Ch*<br/>
+*Cascade*\
 Élément à tester.
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -497,10 +497,10 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*Ch*<br/>
+*Cascade*\
 Élément à tester.
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -561,10 +561,10 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*Ch*<br/>
+*Cascade*\
 Élément à tester.
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -575,7 +575,7 @@ Paramètres régionaux contenant l’élément à tester.
 
 La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // locale_ispunct.cpp
@@ -626,10 +626,10 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*Ch*<br/>
+*Cascade*\
 Élément à tester.
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -691,10 +691,10 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*Ch*<br/>
+*Cascade*\
 Élément à tester.
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -756,10 +756,10 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*Ch*<br/>
+*Cascade*\
 Élément à tester.
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -823,10 +823,10 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*Ch*<br/>
+*Cascade*\
 Caractère à convertir en minuscule.
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux contenant le caractère à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -872,10 +872,10 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*Ch*<br/>
+*Cascade*\
 Caractère à convertir en majuscule.
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux contenant le caractère à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -886,7 +886,7 @@ Caractère converti en majuscules.
 
 La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // locale_toupper.cpp
@@ -921,7 +921,7 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Paramètres
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux const contenant le type de facette référencé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -932,7 +932,7 @@ Référence à la facette de classe `Facet` contenue dans les paramètres régio
 
 La référence à la facette retournée par la fonction de modèle reste valide tant qu’il existe une copie des paramètres régionaux contenants. Si aucun objet facette de classe `Facet` de ce type n’est répertorié dans les paramètres régionaux d’argument, la fonction lève une exception `bad_cast`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // locale_use_facet.cpp
@@ -973,4 +973,4 @@ The character '!' in locale loc2 is not alphabetic.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<locale>](../standard-library/locale.md)<br/>
+[\<locale>](../standard-library/locale.md)

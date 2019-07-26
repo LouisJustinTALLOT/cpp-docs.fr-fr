@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-ms.openlocfilehash: 1485b68f29651c0c42048fea02a8320ced8748aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c54d09fdfe920c832c4baa7984fee4e090d04a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159550"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448919"
 ---
 # <a name="gslicearray-class"></a>gslice_array, classe
 
@@ -54,15 +54,15 @@ public:
 
 ## <a name="remarks"></a>Notes
 
-La classe décrit un objet qui stocke une référence à un objet `va` de classe [valarray](../standard-library/valarray-class.md)**\<Type >**, ainsi qu’un objet `gs` de classe [ gslice](../standard-library/gslice-class.md) qui décrit la séquence d’éléments à sélectionner à partir de la `valarray<Type>` objet.
+La classe décrit un objet qui stocke une référence à un `va` objet de classe [valarray](../standard-library/valarray-class.md) **\<de type >** , ainsi qu' `gs` un objet de classe [GSlice](../standard-library/gslice-class.md) qui décrit la séquence d’éléments à sélectionner. `valarray<Type>` objet.
 
-Vous construisez un `gslice_array<Type>` objet uniquement en écrivant une expression sous la forme [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). Les fonctions membres de la classe gslice_array se comportent ensuite comme les signatures de fonction correspondantes définies pour `valarray<Type>`, sauf que seule la séquence d’éléments sélectionnée est affectée.
+Vous construisez `gslice_array<Type>` un objet uniquement en écrivant une expression de la forme [va&#91;GS&#93;](../standard-library/valarray-class.md#op_at). Les fonctions membres de la classe gslice_array se comportent ensuite comme les signatures `valarray<Type>`de fonctions correspondantes définies pour, sauf que seule la séquence d’éléments sélectionnés est affectée.
 
 La classe de modèle est créée indirectement par certaines opérations valarray et ne peut pas être utilisée directement dans le programme. Une classe de modèle interne auxiliaire est utilisée à la place par l’opérateur d’indice slice :
 
-`gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&**).
+`gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&** ).
 
-Vous construisez un `gslice_array<Type>` objet uniquement en écrivant une expression sous la forme `va[gsl]`, pour une tranche `gsl` de valarray `va`. Les fonctions membres de la classe gslice_array se comportent ensuite comme les signatures de fonction correspondantes définies pour `valarray<Type>`, sauf que seule la séquence d’éléments sélectionnée est affectée. La séquence contrôlée par le gslice_array est définie par les trois paramètres du constructeur slice, l’index du premier élément de la première section, le nombre d’éléments dans chaque section et la distance entre les éléments de chaque section.
+Vous construisez `gslice_array<Type>` un objet uniquement en écrivant une expression sous `va[gsl]`la forme, pour `gsl` une tranche `va`de valarray. Les fonctions membres de la classe gslice_array se comportent ensuite comme les signatures `valarray<Type>`de fonctions correspondantes définies pour, sauf que seule la séquence d’éléments sélectionnés est affectée. La séquence contrôlée par le gslice_array est définie par les trois paramètres du constructeur slice, l’index du premier élément de la première section, le nombre d’éléments dans chaque section et la distance entre les éléments de chaque section.
 
 Dans l’exemple suivant :
 
@@ -77,7 +77,7 @@ const valarray<size_t> len(lv, 2), str(dv, 2);
 
 Les index doivent être valides pour que la procédure soit valide.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Consultez l’exemple relatif à [gslice::gslice](../standard-library/gslice-class.md#gslice) pour savoir comment déclarer et utiliser un slice_array.
 
@@ -89,4 +89,4 @@ Consultez l’exemple relatif à [gslice::gslice](../standard-library/gslice-cla
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: c83949a2c74447735f6863c5f1af68b4dfe2ee4e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 703038ed435de36d60fcf97aa5100197602e7130
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243523"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455047"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
-Définit des modèles pour les constantes de compilation qui fournissent des informations sur les propriétés de leurs arguments de type ou produisent des types transformés.
+Définit des modèles pour les constantes au moment de la compilation qui fournissent des informations sur les propriétés de leurs arguments de type, ou produisent des types transformés.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,22 +26,22 @@ Définit des modèles pour les constantes de compilation qui fournissent des inf
 
 ## <a name="remarks"></a>Notes
 
-Les classes et les modèles dans \<type_traits > sont utilisés pour prendre en charge l’inférence de type, la classification et la transformation au moment de la compilation. Ils sont également utilisés pour détecter les erreurs liées au type et pour vous aider à optimiser votre code générique. Caractéristiques de type décrivent une propriété d’un type, une relation entre les types décrivent les caractéristiques de type binaire et caractéristiques de transformation modifient une propriété d’un type.
+Les classes et les modèles \<dans type_traits > sont utilisés pour prendre en charge l’inférence de type, la classification et la transformation au moment de la compilation. Ils sont également utilisés pour détecter les erreurs liées au type et pour vous aider à optimiser votre code générique. Les caractéristiques de type unaire décrivent une propriété d’un type, les caractéristiques de type binaire décrivent une relation entre les types et les caractéristiques de transformation modifient une propriété d’un type.
 
-La classe d’assistance `integral_constant` et ses spécialisations de modèle `true_type` et `false_type` forment les classes de base pour les prédicats de type. Un *prédicat de type* est un modèle qui accepte un ou plusieurs arguments de type. Quand un prédicat de type *vaut*, il est publiquement dérivé, directement ou indirectement, à partir de [true_type](../standard-library/type-traits-typedefs.md#true_type). Quand un prédicat de type *sa valeur est false*, il est publiquement dérivé, directement ou indirectement, à partir de [false_type](../standard-library/type-traits-typedefs.md#false_type).
+La classe `integral_constant` d’assistance et ses `true_type` spécialisations de modèle `false_type` et constituent les classes de base pour les prédicats de type. Un *prédicat de type* est un modèle qui accepte un ou plusieurs arguments de type. Lorsqu’un prédicat de type a la *valeur true*, il est publiquement dérivé, directement ou indirectement, de [true_type](../standard-library/type-traits-typedefs.md#true_type). Lorsqu’un prédicat de type a la *valeur false*, il est publiquement dérivé, directement ou indirectement, de [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
 Un *modificateur de type* ou une *caractéristique de transformation* est un modèle qui accepte un ou plusieurs arguments de modèle et possède un seul membre `type`, qui est un synonyme du type modifié.
 
 ### <a name="alias-templates"></a>Modèles d'alias
 
-Pour simplifier les expressions de caractéristiques de type, [modèles d’alias](../cpp/aliases-and-typedefs-cpp.md) pour `typename some_trait<T>::type` sont fournis, où *some_trait* est le nom de classe de modèle. Par exemple, [add_const](../standard-library/add-const-class.md) a un modèle d’alias pour son type, `add_const_t`, défini comme suit :
+Pour simplifier les expressions de traits de type, les `typename some_trait<T>::type` modèles d' [alias](../cpp/aliases-and-typedefs-cpp.md) pour sont fournis, où *some_trait* est le nom de la classe de modèle. Par exemple, [add_const](../standard-library/add-const-class.md) a un modèle d’alias pour son type, `add_const_t`, défini comme suit :
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-Il s’agit de l’alias fournis pour le `type` membres :
+Il s’agit des alias fournis pour les `type` membres:
 
 ||||
 |-|-|-|
@@ -99,8 +99,8 @@ Propriétés de type
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|Teste si le type est **const**.|
-|[is_volatile](../standard-library/is-volatile-class.md)|Teste si le type est **volatile**.|
+|[is_const](../standard-library/is-const-class.md)|Teste si le type est const.|
+|[is_volatile](../standard-library/is-volatile-class.md)|Teste si le type est volatile.|
 |[is_trivial](../standard-library/is-trivial-class.md)|Teste si le type est trivial.|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Teste si le type peut être copié de façon triviale.|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|Teste si le type est un type de disposition standard.|
@@ -143,10 +143,10 @@ Propriétés de type
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Teste si le type est destructible et si le destructeur est connu comme ne levant pas d’exception.|
 |`has_virtual_destructor`|Teste si le type a un destructeur virtuel.|
 |`has_unique_object_representations`||
-| [is_invocable](is-invocable-classes.md) | Teste si un type pouvant être appelé peut être appelé à l’aide des types d’arguments spécifiés.<br/> Ajouté dans C ++ 17. |
-| [is_invocable_r](is-invocable-classes.md) | Teste si un type pouvant être appelé peut être appelé à l’aide des types d’arguments spécifiés et le résultat est convertible en type spécifié.<br/> Ajouté dans C ++ 17. |
-| [is_nothrow_invocable](is-invocable-classes.md) | Teste si un type pouvant être appelé peut être appelé à l’aide de l’argument spécifié de types et ne connaît ne pas lever d’exceptions.<br/> Ajouté dans C ++ 17. |
-| [is_nothrow_invocable_r](is-invocable-classes.md) | Teste si un type pouvant être appelé peut être appelé à l’aide de l’argument spécifié de types et ne connaît ne pas lever d’exceptions et le résultat est convertible en type spécifié.<br/> Ajouté dans C ++ 17. |
+| [is_invocable](is-invocable-classes.md) | Teste si un type pouvant être appelé peut être appelé à l’aide des types d’arguments spécifiés.<br/> Ajouté en C++ 17. |
+| [is_invocable_r](is-invocable-classes.md) | Teste si un type pouvant être appelé peut être appelé à l’aide des types d’arguments spécifiés et que le résultat peut être converti dans le type spécifié.<br/> Ajouté en C++ 17. |
+| [is_nothrow_invocable](is-invocable-classes.md) | Teste si un type pouvant être appelé peut être appelé à l’aide des types d’arguments spécifiés et s’il est connu de ne pas lever d’exceptions.<br/> Ajouté en C++ 17. |
+| [is_nothrow_invocable_r](is-invocable-classes.md) | Teste si un type pouvant être appelé peut être appelé à l’aide des types d’arguments spécifiés et s’il est connu de ne pas lever d’exceptions, et le résultat peut être converti dans le type spécifié.<br/> Ajouté en C++ 17. |
 
 Requêtes de propriétés de type
 
@@ -168,9 +168,9 @@ Modifications const-volatile
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|Génère un **const** type à partir du type.|
-|[add_volatile](../standard-library/add-volatile-class.md)|Génère un **volatile** type à partir du type.|
-|[add_cv](../standard-library/add-cv-class.md)|Génère un **volatile const** type à partir du type.|
+|[add_const](../standard-library/add-const-class.md)|Produit un  type const à partir d’un type.|
+|[add_volatile](../standard-library/add-volatile-class.md)|Produit un  type volatile à partir d’un type.|
+|[add_cv](../standard-library/add-cv-class.md)|Produit un  type volatile const à partir d’un type.|
 |[remove_const](../standard-library/remove-const-class.md)|Génère un type non const à partir d’un type.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|Génère un type non volatile à partir d’un type.|
 |[remove_cv](../standard-library/remove-cv-class.md)|Génère un type non const non volatile à partir d’un type.|
@@ -214,18 +214,18 @@ Autres transformations
 |[conditional](../standard-library/conditional-class.md)|Si la condition est true, génère le premier type spécifié, sinon le second type spécifié.|
 |[decay](../standard-library/decay-class.md)|Génère le type comme passé par la valeur. Crée un type non-référence, non const ou non volatile, ou crée un pointeur vers un type.|
 |[enable_if](../standard-library/enable-if-class.md)|Si la condition est true, génère le type spécifié, sinon ne génère aucun type.|
-|[invoke_result](invoke-result-class.md)|Détermine le type de retour du type pouvant être appelé qui accepte les types d’argument spécifiés. <br/>Ajouté dans C ++ 17. |
-|[result_of](../standard-library/result-of-class.md)|Détermine le type de retour du type pouvant être appelé qui accepte les types d’argument spécifiés. <br/>Ajouté dans C ++ 14, déconseillées dans C ++ 17. |
+|[invoke_result](invoke-result-class.md)|Détermine le type de retour du type pouvant être appelé qui accepte les types d’argument spécifiés. <br/>Ajouté en C++ 17. |
+|[result_of](../standard-library/result-of-class.md)|Détermine le type de retour du type pouvant être appelé qui accepte les types d’argument spécifiés. <br/>Ajouté en C++ 14, déconseillé dans C++ 17. |
 |[underlying_type](../standard-library/underlying-type-class.md)|Génère le type intégral sous-jacent pour un type d’énumération.|
 
 Caractéristiques de l’opérateur logique
 
 |||
 |-|-|
-|[conjonction](../standard-library/conjunction-class.md)||
+|[Association](../standard-library/conjunction-class.md)||
 |[disjonction](../standard-library/disjunction-class.md)||
-|[Négation](../standard-library/negation-class.md)||
+|[négation](../standard-library/negation-class.md)||
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<functional>](../standard-library/functional.md)<br/>
+[\<functional>](../standard-library/functional.md)

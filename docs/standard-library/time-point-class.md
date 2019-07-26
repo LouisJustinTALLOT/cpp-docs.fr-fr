@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: 99477f57dc44d63f663a6db38250cc0620151ec9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4511c7b2d8629f1a052137c7997daf5913c976ab
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411992"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459986"
 ---
 # <a name="timepoint-class"></a>time_point, classe
 
@@ -63,7 +63,7 @@ class time_point;
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<chrono >
+**En-tête:** \<Chrono >
 
 **Espace de noms :** std::chrono
 
@@ -101,7 +101,7 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Paramètres
 
-*Dur*<br/>
+*Dur*\
 Objet `duration`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -118,7 +118,7 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Paramètres
 
-*Dur*<br/>
+*Dur*\
 Objet `duration`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -140,17 +140,17 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Paramètres
 
-*Dur*<br/>
+*Dur*\
 Objet [duration](../standard-library/duration-class.md).
 
-*Tp*<br/>
+*PM*\
 Objet `time_point`.
 
 ### <a name="remarks"></a>Notes
 
 Le premier constructeur construit un objet dont la valeur `duration` stockée est égale à [duration::zero](../standard-library/duration-class.md#zero).
 
-Le deuxième constructeur construit un objet dont la valeur Durée stockée est égale à *durée*. À moins que `is_convertible<Duration2, duration>` a la valeur true, le deuxième constructeur ne participe pas à la résolution de surcharge. Pour plus d’informations, consultez [<type_traits>](../standard-library/type-traits.md).
+Le deuxième constructeur construit un objet dont la *valeur de durée*stockée est égale à. À `is_convertible<Duration2, duration>` moins que ne contienne la valeur true, le deuxième constructeur ne participe pas à la résolution de surcharge. Pour plus d’informations, consultez [<type_traits>](../standard-library/type-traits.md).
 
 Le deuxième constructeur initialise sa valeur `duration` à l'aide de `Tp.time_since_epoch()`.
 
@@ -164,5 +164,5 @@ constexpr duration time_since_epoch() const;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

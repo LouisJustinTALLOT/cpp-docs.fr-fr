@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char16_t> class
 ms.assetid: 5daf3b62-dd6e-451f-b189-0350a04ff966
-ms.openlocfilehash: def0023b259a7b4816bdda29684c1dd9853d5f5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d83f5278c2c4f8344334bfce40946612e9ca3e56
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379530"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448962"
 ---
 # <a name="chartraitsltchar16tgt-struct"></a>char_traits&lt;char16_t&gt;, struct
 
@@ -37,6 +37,6 @@ La spécialisation permet au struct de tirer parti des fonctions de bibliothèqu
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<string>](../standard-library/string.md)<br/>
-[char_traits, struct](../standard-library/char-traits-struct.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<string>](../standard-library/string.md)\
+[char_traits, struct](../standard-library/char-traits-struct.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

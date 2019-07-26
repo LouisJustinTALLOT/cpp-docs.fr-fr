@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
-ms.openlocfilehash: b5f24033d8da0933b8252fdace60fb419ef2e605
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9e9e7531733ac40022b477980297c80ac488221
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370825"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453446"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Autres manipulateurs de flux de sortie à un argument
 
-L’exemple suivant utilise une classe `money`, qui est un **long** type. Le manipulateur `setpic` attache une chaîne « image » mise en forme à la classe qui peut être utilisée par l’opérateur d’insertion de flux surchargé de la classe `money`. La chaîne image est stockée comme variable statique dans la classe `money` au lieu d’être stockée comme membre d’une classe stream. Vous n’avez donc pas à dériver une nouvelle classe output stream.
+L’exemple suivant utilise une classe `money`, qui est de type **long** . Le manipulateur `setpic` attache une chaîne « image » mise en forme à la classe qui peut être utilisée par l’opérateur d’insertion de flux surchargé de la classe `money`. La chaîne image est stockée comme variable statique dans la classe `money` au lieu d’être stockée comme membre d’une classe stream. Vous n’avez donc pas à dériver une nouvelle classe output stream.
 
 ## <a name="example"></a>Exemple
 
@@ -77,4 +77,4 @@ int main( )
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulateurs personnalisés avec arguments](../standard-library/custom-manipulators-with-arguments.md)<br/>
+[Manipulateurs personnalisés avec arguments](../standard-library/custom-manipulators-with-arguments.md)

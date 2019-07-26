@@ -7,12 +7,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: d2776e658b511208d9a295cd84a961d7691d29e0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246810"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451885"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -32,7 +32,7 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 |-|-|
 |[addressof](../standard-library/memory-functions.md#addressof)|Obtient l'adresse exacte d'un objet.|
 |[align](../standard-library/memory-functions.md#align)|Retourne un pointeur vers une plage d'une taille donnée, en fonction de l'alignement et de l'adresse de départ.|
-|[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Crée un `shared_ptr` aux objets qui sont alloués et construits pour un type donné avec un allocateur spécifié.|
+|[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Crée un `shared_ptr` objet aux objets qui sont alloués et construits pour un type donné avec un allocateur spécifié.|
 |[atomic_compare_exchange_strong](../standard-library/memory-functions.md#atomic_compare_exchange_strong)||
 |[atomic_compare_exchange_weak](../standard-library/memory-functions.md#atomic_compare_exchange_weak)||
 |[atomic_compare_exchange_strong_explicit](../standard-library/memory-functions.md#atomic_compare_exchange_strong_explicit)||
@@ -48,9 +48,9 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 |[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|Informe un récupérateur de mémoire que les caractères à partir d'une adresse spécifiée et compris dans la taille de bloc indiquée ne contiennent aucun pointeur traçable.|
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|Informe une opération garbage collection que l’adresse indiquée est dédiée au stockage alloué et est accessible.|
 |[default_delete](../standard-library/memory-functions.md#default_delete)|Supprime les objets alloués avec `operator new`. Fonction pouvant être utilisée avec `unique_ptr`.|
-|[destroy_at](../standard-library/memory-functions.md#destroy_at)|Raccourci `destroy` (méthode).|
-|[destroy](../standard-library/memory-functions.md#destroy)|Raccourci `destroy` (méthode).|
-|[destroy_n](../standard-library/memory-functions.md#destroy_n)|Raccourci `destroy` (méthode).|
+|[destroy_at](../standard-library/memory-functions.md#destroy_at)|Méthode `destroy` sténographique.|
+|[destroy](../standard-library/memory-functions.md#destroy)|Méthode `destroy` sténographique.|
+|[destroy_n](../standard-library/memory-functions.md#destroy_n)|Méthode `destroy` sténographique.|
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|Cast dynamique vers `shared_ptr`.|
 |[get_deleter](../standard-library/memory-functions.md#get_deleter)|Obtient une suppression à partir de `shared_ptr`.|
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|Retourne le type de sécurité de pointeur supposé par tout récupérateur de mémoire.|
@@ -65,14 +65,14 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|Informe un objet `garbage_collector` qu'un emplacement de mémoire spécifié n'est pas accessible.|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|Copie les objets à partir d'une plage d'entrée spécifiée dans une plage de destination non initialisée.|
 |[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|Crée une copie d'un nombre spécifié d'éléments à partir d'un itérateur d'entrée. Les copies sont placées dans un itérateur forward.|
-|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|Raccourci `uninitialized_default_construct` (méthode).|
-|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|Raccourci `uninitialized_construct` (méthode).|
+|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|Méthode `uninitialized_default_construct` sténographique.|
+|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|Méthode `uninitialized_construct` sténographique.|
 |[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|Copie les objets d'une valeur spécifiée dans une plage de destination non initialisée.|
 |[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|Copie les objets d'une valeur spécifiée dans un nombre spécifié d'éléments d'une plage de destination non initialisée.|
-|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|Raccourci `uninitialized_move` (méthode).|
-|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|Raccourci `uninitialized_move` (méthode).|
-|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|Raccourci `uninitialized_value_construct` (méthode).|
-|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|Raccourci `uninitialized_value_construct` (méthode).|
+|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|Méthode `uninitialized_move` sténographique.|
+|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|Méthode `uninitialized_move` sténographique.|
+|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|Méthode `uninitialized_value_construct` sténographique.|
+|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|Méthode `uninitialized_value_construct` sténographique.|
 |[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
 ### <a name="operators"></a>Opérateurs
@@ -93,7 +93,7 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Cette classe de modèle décrit un objet qui gère l’allocation et la libération de stockage pour des tableaux d’objets de type **Type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Décrit un objet qui détermine toutes les informations qui sont requises par un conteneur activé par allocateur.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|La classe de modèle décrit un objet qui stocke un pointeur vers un objet alloué du type **Type** <strong>\*</strong> qui garantit que l’objet vers lequel il pointe est supprimé lorsque son auto_ptr englobant Obtient détruit.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|La classe de modèle décrit un objet qui stocke un pointeur vers un objet alloué de <strong>\*</strong> type type qui garantit que l’objet vers lequel il pointe est supprimé lorsque son auto_ptr englobant est détruit.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Signale une exception weak_ptr incorrecte.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Aide à générer un `shared_ptr`.|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|Fournit les informations requises par un objet de la classe de modèle `allocator_traits` pour décrire un allocateur avec le type pointeur `Ptr`.|
@@ -120,5 +120,5 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

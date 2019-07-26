@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: bc873f278461fcdc6dbb42e7c968c691e3dc7f73
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243547"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457691"
 ---
 # <a name="ltnewgt"></a>&lt;nouveau&gt;
 
@@ -33,7 +33,7 @@ Certaines des fonctions déclarées dans cet en-tête sont remplaçables. L'impl
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|Fournit un objet à utiliser en tant qu’argument pour le **nothrow** versions de **nouveau** et **supprimer**.|
+|[nothrow](../standard-library/new-functions.md#nothrow)|Fournit un objet à utiliser comme argument pour les versions **nothrow** de **New** et **Delete**.|
 
 ### <a name="typedefs"></a>Typedef
 
@@ -48,7 +48,7 @@ Certaines des fonctions déclarées dans cet en-tête sont remplaçables. L'impl
 |||
 |-|-|
 |[get_new_handler](../standard-library/new-functions.md#get_new_handler)||
-|[blanchiment](../standard-library/new-functions.md#launder)||
+|[blanchi](../standard-library/new-functions.md#launder)||
 |[set_new_handler](../standard-library/new-functions.md#set_new_handler)|Installe une fonction utilisateur appelée quand new échoue dans sa tentative d'allocation de mémoire.|
 
 ### <a name="operators"></a>Opérateurs
@@ -76,5 +76,5 @@ Certaines des fonctions déclarées dans cet en-tête sont remplaçables. L'impl
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

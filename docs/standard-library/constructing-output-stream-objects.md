@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output stream objects
 ms.assetid: 93c8eab6-610c-4f48-b76d-1d960cac7641
-ms.openlocfilehash: 7da7d9dd0fae3ce3fa21ecd774f88643dca49c26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7bec211f30986deccc869a879dd5155ea70996b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211999"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457288"
 ---
 # <a name="constructing-output-stream-objects"></a>Construction d'objets de flux de sortie
 
@@ -57,4 +57,4 @@ Le « manipulateur » `ends` ajoute le caractère null de fin nécessaire à l
 
 ## <a name="see-also"></a>Voir aussi
 
-[Flux de sortie](../standard-library/output-streams.md)<br/>
+[Flux de sortie](../standard-library/output-streams.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: f7b9217560bc94c536a7c819276266fd16fa4b07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c85da1f3be7821f8d82cd2b19dab2a5864426a5a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404869"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452043"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant, classe, bool_constant, classe
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type de la constante.
 
-*v*<br/>
+*v*\
 Valeur de la constante.
 
 ## <a name="remarks"></a>Notes
 
 La classe de modèle `integral_constant`, quand elle est spécialisée avec un type intégral *T* et une valeur *v* de ce type, représente un objet qui contient une constante de ce type intégral avec la valeur spécifiée. Le membre nommé `type` est un alias pour le type de spécialisation de modèle généré, et le membre `value` contient la valeur *v* servant à créer la spécialisation.
 
-Le `bool_constant` classe de modèle est une spécialisation partielle explicite de `integral_constant` qui utilise **bool** en tant que le *T* argument.
+La `bool_constant` classe de modèle est une spécialisation partielle `integral_constant` explicite de qui utilise **bool** comme argument *T* .
 
 ## <a name="example"></a>Exemple
 
@@ -80,6 +80,6 @@ integral_constant<bool, false> == false
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[false_type](../standard-library/type-traits-typedefs.md#false_type)<br/>
-[true_type](../standard-library/type-traits-typedefs.md#true_type)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[false_type](../standard-library/type-traits-typedefs.md#false_type)\
+[true_type](../standard-library/type-traits-typedefs.md#true_type)

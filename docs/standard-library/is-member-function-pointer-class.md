@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_member_function_pointer class
 - is_member_function_pointer
 ms.assetid: 02e372c4-2714-40f2-b376-2e10ca91c8ed
-ms.openlocfilehash: 0eb758977abf889a7d5ec8cdec9213980493ba2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f51c389e86f2d0550a6418d04080f40f4bf4204
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351928"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456183"
 ---
 # <a name="ismemberfunctionpointer-class"></a>is_member_function_pointer, classe
 
@@ -27,14 +27,14 @@ struct is_member_function_pointer;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*<br/>
+*Ty*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *Ty* est un pointeur vers une fonction membre ou un `cv-qualified` pointeur vers fonction membre, sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un pointeur vers une fonction membre `cv-qualified` ou un pointeur vers une fonction membre. sinon, sa valeur est false.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // std__type_traits__is_member_function_pointer.cpp
@@ -85,5 +85,5 @@ is_member_function_pointer<int (functional::*)()> == true
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_pointer, classe](../standard-library/is-member-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_member_pointer, classe](../standard-library/is-member-pointer-class.md)

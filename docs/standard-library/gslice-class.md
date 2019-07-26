@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-ms.openlocfilehash: bee6fec3e09f7c5758112ba8b0c171a300797f9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159468"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448899"
 ---
 # <a name="gslice-class"></a>gslice, classe
 
@@ -25,13 +25,13 @@ Classe utilitaire de valarray qui sert à définir des sous-ensembles multidimen
 
 ## <a name="remarks"></a>Notes
 
-La classe stocke les paramètres qui caractérisent un objet de type [gslice_array](../standard-library/gslice-array-class.md). Le sous-ensemble d’un valarray est construit indirectement quand un objet de classe gslice apparaît comme argument pour un objet de classe [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. Les valeurs stockées qui spécifient le sous-ensemble sélectionné à partir du valarray parent sont les suivantes :
+La classe stocke les paramètres qui caractérisent un objet de type [gslice_array](../standard-library/gslice-array-class.md). Le sous-ensemble d’un valarray est construit indirectement quand un objet de classe gslice apparaît comme argument pour un objet de classe [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . Les valeurs stockées qui spécifient le sous-ensemble sélectionné à partir du valarray parent sont les suivantes :
 
 - un index de départ ;
 
-- Un vecteur de longueur de la classe `valarray<size_t>`.
+- Vecteur de longueur de classe `valarray<size_t>`.
 
-- Un vecteur de stride de classe `valarray<size_t>`.
+- Vecteur Stride de classe `valarray<size_t>`.
 
 Les deux vecteurs doivent avoir la même longueur.
 
@@ -74,22 +74,22 @@ gslice(
 
 ### <a name="parameters"></a>Paramètres
 
-*_StartIndex*<br/>
+*_StartIndex*\
 Index valarray du premier élément dans le sous-ensemble.
 
-*_LenArray*<br/>
+*_LenArray*\
 Tableau spécifiant le nombre d’éléments dans chaque section.
 
-*_IncArray*<br/>
+*_IncArray*\
 Tableau spécifiant le stride de chaque section.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le constructeur par défaut stocke zéro pour l’index de départ et les vecteurs de longueur nulle pour les vecteurs de longueur et stride. Le deuxième constructeur stocke *_StartIndex* pour l’index de départ, *_LenArray* pour le tableau de longueur et *_IncArray* pour le tableau stride.
+Le constructeur par défaut stocke zéro pour l’index de départ et les vecteurs de longueur nulle pour les vecteurs de longueur et stride. Le deuxième constructeur stocke *_StartIndex* pour l’index de départ, *_LenArray* pour le tableau de longueur et *_IncArray* pour le tableau Stride.
 
 ### <a name="remarks"></a>Notes
 
-**gslice** définit un sous-ensemble d’un valarray qui se compose de plusieurs sections du valarray, chacune commençant au même élément spécifié. La possibilité d’utiliser des tableaux pour définir plusieurs sections est la seule différence entre `gslice` et [slice::slice](../standard-library/slice-class.md#slice). La première section a un premier élément avec un index de *_StartIndex*, un nombre d’éléments spécifié par le premier élément de *_LenArray*et un stride donné par le premier élément de *_IncArray* . L’ensemble de sections orthogonales suivant a ses premiers éléments donnés par la première section. Le deuxième élément de *_LenArray* Spécifie le nombre d’éléments. Le stride est fourni par le deuxième élément de *_IncArray*. Une troisième dimension de sections prend les éléments du tableau à deux dimensions comme éléments de départ et procède de la même façon
+**gslice** définit un sous-ensemble d’un valarray qui se compose de plusieurs sections du valarray, chacune commençant au même élément spécifié. La possibilité d’utiliser des tableaux pour définir plusieurs sections est la seule différence entre `gslice` et [slice::slice](../standard-library/slice-class.md#slice). La première tranche a un premier élément avec un index *_StartIndex*, un nombre d’éléments spécifié par le premier élément de *_LenArray*, et une valeur Stride donnée par le premier élément de *_IncArray*. L’ensemble de sections orthogonales suivant a ses premiers éléments donnés par la première section. Le deuxième élément de *_LenArray* spécifie le nombre d’éléments. La Stride est donnée par le deuxième élément de *_IncArray*. Une troisième dimension de sections prend les éléments du tableau à deux dimensions comme éléments de départ et procède de la même façon
 
 ### <a name="example"></a>Exemple
 
@@ -228,7 +228,7 @@ size_t start() const;
 
 Index de départ d’une section générale d’un valarray.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // gslice_start.cpp
@@ -349,4 +349,4 @@ vaGSlice.stride ( ) = ( 7 4 ).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,5 +1,5 @@
 ---
-title: is_invocable, is_invocable_r, is_nothrow_invocable, classes d’is_nothrow_invocable_r
+title: is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r, classes
 ms.date: 02/21/2019
 f1_keywords:
 - type_traits/std::is_invocable
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: bb5e75a897029ded2e00e491d93d2df41a3e115b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20fec55fc3ad1924ee85db3b2f78812e4847f447
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336229"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456231"
 ---
-# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>is_invocable, is_invocable_r, is_nothrow_invocable, classes d’is_nothrow_invocable_r
+# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r, classes
 
-Ces modèles déterminent si un type peut être appelé avec les types d’arguments spécifiés. `is_invocable_r` et `is_nothrow_invocable_r` également déterminer si le résultat de l’appel est convertible en un type spécifique. `is_nothrow_invocable` et `is_nothrow_invocable_r` également déterminer si l’appel ne connaît ne pas lever d’exceptions. Ajouté dans C ++ 17.
+Ces modèles déterminent si un type peut être appelé avec les types d’arguments spécifiés. `is_invocable_r`et `is_nothrow_invocable_r` déterminent également si le résultat de l’appel est convertible en un type spécifique. `is_nothrow_invocable`et `is_nothrow_invocable_r` déterminent également si l’appel est connu pour ne pas lever d’exceptions. Ajouté en C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,28 +61,28 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>Paramètres
 
-*Callable*<br/>
+*Pouvant être appelé*\
 Type pouvant être appelé à interroger.
 
-*Args*<br/>
-Les types d’arguments à interroger.
+*Attend*\
+Types d’arguments à interroger.
 
-*Convertible*<br/>
-Le type du résultat de *joignable* doit être convertible en.
+*Implicit*\
+Le type du résultat de *Callable* doit pouvoir être converti en.
 
 ## <a name="remarks"></a>Notes
 
-Le `is_invocable` prédicat de type a la valeur true si le type pouvant être appelé *joignable* peuvent être appelées à l’aide des arguments *Args* dans un contexte non évalué.
+Le `is_invocable` prédicat de type a la valeur true si le type pouvant être *appelé peut être* appelé à l’aide des arguments *args* dans un contexte non évalué.
 
-Le `is_invocable_r` prédicat de type a la valeur true si le type pouvant être appelé *joignable* peuvent être appelées à l’aide des arguments *Args* dans un contexte non évalué pour produire un résultat type convertibles en  *Convertible*.
+Le `is_invocable_r` prédicat de type a la valeur true si le type pouvant être *appelé peut être* appelé à l’aide des arguments *args* dans un contexte non évalué pour produire un type de résultat convertible en *convertible*.
 
-Le `is_nothrow_invocable` prédicat de type a la valeur true si le type pouvant être appelé *joignable* peuvent être appelées à l’aide des arguments *Args* dans un contexte non évalué et qu’un tel appel ne connaît ne pas lever une exception.
+Le `is_nothrow_invocable` prédicat de type a la valeur true si le type pouvant être *appelé peut être* appelé à l’aide des arguments *args* dans un contexte non évalué, et que ce type d’appel est connu comme ne levant pas d’exception.
 
-Le `is_nothrow_invocable_r` prédicat de type a la valeur true si le type pouvant être appelé *joignable* peuvent être appelées à l’aide des arguments *Args* dans un contexte non évalué pour produire un résultat type convertibles en  *Convertible*, et que cet appel ne connaît ne pas lever une exception.
+Le `is_nothrow_invocable_r` prédicat de type a la valeur true si le type pouvant être *appelé peut être* appelé à l’aide des arguments *args* dans un contexte non évalué pour produire un type de résultat convertible en *convertible*, et qu’il est connu comme ne levant pas d’appel exception.
 
-Chacun des types *Convertible*, *joignable*et les types dans le package de paramètres *Args* doit être un type complet, un tableau de limite inconnue ou un éventuellementqualifiédecv**void**. Sinon, le comportement du prédicat est indéfini.
+Chacun des types *convertibles*, *pouvant être appelés*et les types dans les *arguments* de package de paramètres doivent être un type complet, un tableau de limite inconnue ou une **void**potentiellement qualifiée de CV. Sinon, le comportement du prédicat n’est pas défini.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // std__type_traits__is_invocable.cpp
@@ -122,5 +122,5 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[invoke](functional-functions.md#invoke)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[invoke](functional-functions.md#invoke)

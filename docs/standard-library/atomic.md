@@ -48,12 +48,12 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c46eb2b9bea30bf37800b33ce0dcf44c0d807f0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376599"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456724"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -68,7 +68,7 @@ Définit les classes et les classes de modèle à utiliser pour créer des types
 ## <a name="remarks"></a>Notes
 
 > [!NOTE]
-> Dans le code est compilé à l’aide de **/CLR**, cet en-tête est bloqué.
+> Dans le code compilé à l’aide de **/CLR**, cet en-tête est bloqué.
 
 Une opération atomique a deux propriétés clés qui vous aident à utiliser plusieurs threads pour manipuler correctement un objet sans utiliser de verrous mutex.
 
@@ -78,9 +78,9 @@ Une opération atomique a deux propriétés clés qui vous aident à utiliser pl
 
 Sur certaines plateformes, il n’est pas possible d’implémenter efficacement des opérations atomiques pour certains types sans utiliser de verrous `mutex`. Un type atomique est *sans verrou* si aucune opération atomique sur ce type utilise un verrou.
 
-**C ++ 11**: Dans les gestionnaires de signal, vous pouvez effectuer des opérations atomiques sur un objet `obj` si `obj.is_lock_free()` ou `atomic_is_lock_free(x)` sont remplies.
+**C++ 11**: Dans les gestionnaires de signal, vous pouvez effectuer des opérations atomiques `obj` sur `obj.is_lock_free()` un `atomic_is_lock_free(x)` objet si ou a la valeur true.
 
-La classe [atomic_flag](../standard-library/atomic-flag-structure.md) fournit un type atomique minimal qui contient un **bool** indicateur. Ses opérations sont toujours sans verrou.
+La classe [atomic_flag](../standard-library/atomic-flag-structure.md) fournit un type atomique minimal qui contient un indicateur **bool** . Ses opérations sont toujours sans verrou.
 
 La classe de modèle `atomic<T>` stocke un objet de son type d’argument `T` et fournit un accès atomique à cette valeur stockée. Vous pouvez l’instancier à l’aide de tout type pouvant être copié à l’aide de [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) et dont l’égalité est vérifiée à l’aide de [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). En particulier, vous pouvez l’utiliser avec les types définis par l’utilisateur qui répondent à ces exigences et, dans de nombreux cas, avec les types à virgule flottante.
 
@@ -101,7 +101,7 @@ Pour chacun des types intégraux, il existe un type d’atomique nommé correspo
 |Type de `atomic_integral`|Type intégral|Macro `atomic_is_lock_free`|
 |----------------------------|-------------------|---------------------------------|
 |`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_schar`|**char signé**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**caractère signé**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
 |`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
@@ -113,7 +113,7 @@ Pour chacun des types intégraux, il existe un type d’atomique nommé correspo
 |`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
-|`atomic_ullong`|**unsigned long long**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**long long non signé**|ATOMIC_LLONG_LOCK_FREE|
 
 Des noms typedef existent pour les spécialisations du modèle atomique pour certains types qui sont définis dans l’en-tête \<inttypes.h>.
 
@@ -155,7 +155,7 @@ Des noms typedef existent pour les spécialisations du modèle atomique pour cer
 |Nom|Description|
 |----------|-----------------|
 |[atomic, structure](../standard-library/atomic-structure.md)|Décrit un objet qui effectue des opérations atomiques sur une valeur stockée.|
-|[atomic_flag, structure](../standard-library/atomic-flag-structure.md)|Décrit un objet qui définit et efface atomiquement un **bool** indicateur.|
+|[atomic_flag, structure](../standard-library/atomic-flag-structure.md)|Décrit un objet qui définit et efface atomiquement un indicateur **bool** .|
 
 ## <a name="enums"></a>Enums
 
@@ -185,10 +185,10 @@ Dans la liste suivante, les fonctions qui ne se terminent pas par `_explicit` on
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Soustrait une valeur spécifiée de la valeur stockée existante.|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Effectue une opération `exclusive or` au niveau du bit sur une valeur spécifiée et une valeur stockée existante.|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Effectue une opération `exclusive or` au niveau du bit sur une valeur spécifiée et une valeur stockée existante.|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Définit l’indicateur dans un `atomic_flag` objet **false**.|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Définit l’indicateur dans un `atomic_flag` objet **false**.|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Définit l’indicateur dans un `atomic_flag` objet **true**.|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Définit l’indicateur dans un `atomic_flag` objet **true**.|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Affecte la `atomic_flag` **valeur false**à l’indicateur dans un objet.|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Affecte la `atomic_flag` **valeur false**à l’indicateur dans un objet.|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Affecte la **valeur true**à `atomic_flag` l’indicateur dans un objet.|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Affecte la **valeur true**à `atomic_flag` l’indicateur dans un objet.|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Définit la valeur stockée dans un objet `atomic`.|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Spécifie si les opérations atomiques sur un objet spécifié sont sans verrou.|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Récupère une valeur de manière atomique.|
@@ -201,5 +201,5 @@ Dans la liste suivante, les fonctions qui ne se terminent pas par `_explicit` on
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Informations de référence sur la bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)

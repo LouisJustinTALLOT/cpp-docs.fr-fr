@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245233"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449130"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,16 +20,16 @@ Définit plusieurs types et fonctions de base pour l'opération d'iostreams. Cet
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête**: \<ios >
+**En-tête**: \<iOS >
 
 **Espace de noms :** std
 
 > [!NOTE]
-> Le \<ios > bibliothèque utilise la `#include <iosfwd>` instruction.
+> La \<bibliothèque de > iOS utilise `#include <iosfwd>` l’instruction.
 
 ## <a name="remarks"></a>Notes
 
-Un grand nombre de fonctions sont des manipulateurs. Un manipulateur déclaré dans \<ios> modifie les valeurs stockées dans son objet d’argument de classe [ios_base](../standard-library/ios-base-class.md). D’autres manipulateurs effectuent des actions sur des flux contrôlés par des objets d’un type dérivé de cette classe, comme une spécialisation de l’une des classes de modèle [basic_istream](../standard-library/basic-istream-class.md) ou [basic_ostream](../standard-library/basic-ostream-class.md). Par exemple, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) efface l’indicateur de format `ios_base::skipws` dans l’objet `str`, ce qui peut être l’une de ces types.
+Un grand nombre de fonctions sont des manipulateurs. Un manipulateur déclaré dans \<ios> modifie les valeurs stockées dans son objet d’argument de classe [ios_base](../standard-library/ios-base-class.md). D’autres manipulateurs effectuent des actions sur des flux contrôlés par des objets d’un type dérivé de cette classe, comme une spécialisation de l’une des classes de modèle [basic_istream](../standard-library/basic-istream-class.md) ou [basic_ostream](../standard-library/basic-ostream-class.md). Par exemple, [noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) efface l’indicateur `ios_base::skipws` de format dans l’objet `str`, qui peut être de l’un de ces types.
 
 Vous pouvez également appeler un manipulateur en l'insérant dans un flux de sortie ou en l'extrayant d'un flux d'entrée, grâce à des opérations d'insertion et d'extraction spéciales fournies pour les classes dérivées de `ios_base`. Par exemple :
 
@@ -61,7 +61,7 @@ appelle [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Configure les indicateurs d'un objet `ios_base` pour utiliser un format d'affichage par défaut pour les valeurs de type float.|
 |[fixed](../standard-library/ios-functions.md#fixed)|Indique qu'un nombre à virgule flottante est affiché en notation décimale fixe.|
 |[hex](../standard-library/ios-functions.md#hex)|Indique que les variables de type entier sont affichées en notation de base 16.|
-|[hexadécimaux à virgule flottante](../standard-library/ios-functions.md#hexfloat)|
+|[hexfloat](../standard-library/ios-functions.md#hexfloat)|
 |[internal](../standard-library/ios-functions.md#internal)|Aligne à gauche le signe d'un nombre et aligne à droite le nombre.|
 |[left](../standard-library/ios-functions.md#left)|Fait en sorte que le texte qui n'est pas aussi large que la largeur de sortie apparaisse dans le flux aligné avec la marge de gauche.|
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Indique que les variables de type [bool](../cpp/bool-cpp.md) apparaissent comme 1 ou 0 dans le flux.|
@@ -101,7 +101,7 @@ appelle [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream, programmation](../standard-library/iostream-programming.md)<br/>
-[iostreams, conventions](../standard-library/iostreams-conventions.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream, programmation](../standard-library/iostream-programming.md)\
+[iostreams, conventions](../standard-library/iostreams-conventions.md)

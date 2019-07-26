@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: dbd5229e8b8a2c2b368688635d9d596a8538356b
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: faadc99b6351af884331e6658e1e11de8def2195
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450863"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447770"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution, classe
 
@@ -66,8 +66,8 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*GÉNÉRATEUR URNG*<br/>
-L’uniform Générateur moteur de nombres aléatoires. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*GÉNÉRATEUR URNG*\
+Moteur de générateur de nombres aléatoires uniformes. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -169,10 +169,10 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*p*<br/>
+*p*\
 Paramètre de distribution `p` stocké.
 
-*parm*<br/>
+*Parm*\
 Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -193,7 +193,7 @@ struct param_type { typedef bernoulli_distribution distribution_type; param_type
 
 ### <a name="parameters"></a>Paramètres
 
-*p*<br/>
+*p*\
 Paramètre de distribution `p` stocké.
 
 ### <a name="remarks"></a>Notes
@@ -204,4 +204,4 @@ Cette structure peut être passée au constructeur de classe de la distribution 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

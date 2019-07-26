@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c506a6a2e1e2c0610f8a6129d2bfb42f762e998a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405168"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458600"
 ---
 # <a name="collate-class"></a>collate, classe
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType*<br/>
+*CharType*\
 Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
 ## <a name="remarks"></a>Notes
@@ -108,23 +108,23 @@ const char* _Locname,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs*<br/>
+*_Refs*\
 Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
-*_Locname*<br/>
+*_Locname*\
 Nom des paramètres régionaux.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
+Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes:
 
-- 0: La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0 : La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
 - 1 : La durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1: Ces valeurs ne sont pas définies.
+- \>1: Ces valeurs ne sont pas définies.
 
-Le constructeur initialise son objet de base avec **paramètres régionaux ::**[facette](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Le constructeur initialise son objet de base avec **locale::** [facette](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="compare"></a>  collate::compare
 
@@ -139,16 +139,16 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Paramètres
 
-*first1*<br/>
+*First1*\
 Pointeur vers le premier élément de la première séquence à comparer.
 
-*last1*<br/>
+*last1*\
 Pointeur vers le dernier élément de la première séquence à comparer.
 
-*first2*<br/>
+*First2*\
 Pointeur vers le premier élément de la deuxième séquence à comparer.
 
-*last2*<br/>
+*last2*\
 Pointeur vers le dernier élément de la deuxième séquence à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -205,16 +205,16 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Paramètres
 
-*first1*<br/>
+*First1*\
 Pointeur vers le premier élément de la première séquence à comparer.
 
-*last1*<br/>
+*last1*\
 Pointeur vers le dernier élément de la première séquence à comparer.
 
-*first2*<br/>
+*First2*\
 Pointeur vers le premier élément de la deuxième séquence à comparer.
 
-*last2*<br/>
+*last2*\
 Pointeur vers le dernier élément de la deuxième séquence à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -229,9 +229,9 @@ La fonction membre retourne :
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre virtuelle protégée compare la séquence à [* first1, Last1) * avec la séquence à *[first2, last2*). Il compare les valeurs en appliquant `operator<` entre les paires d’éléments correspondants de type `CharType`. La première séquence est inférieure si elle a le plus petit élément dans la première paire inégale des séquences ou si aucune paire inégale n’existe, mais que la première séquence est plus courte.
+La fonction membre virtuelle protégée compare la séquence à [* First1, Last1) * à la séquence à *[First2, last2*). Il compare les valeurs en `operator<` appliquant entre les paires d’éléments `CharType`correspondants de type. La première séquence est inférieure si elle a le plus petit élément dans la première paire inégale des séquences ou si aucune paire inégale n’existe, mais que la première séquence est plus courte.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez l’exemple relatif à [collate::compare](#compare), qui appelle `do_compare`.
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*first*<br/>
+*premier*\
 Pointeur vers le premier caractère de la séquence dont la valeur doit être déterminée.
 
-*last*<br/>
+*famille*\
 Pointeur vers le dernier caractère de la séquence dont la valeur doit être déterminée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -259,7 +259,7 @@ Valeur de hachage de type **long** pour la séquence.
 
 Une valeur de hachage peut être utile, par exemple, dans la répartition des séquences de manière pseudo-aléatoire sur un tableau de listes.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez l’exemple relatif à [hash](#hash), qui appelle `do_hash`.
 
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Paramètres
 
-*first*<br/>
+*premier*\
 Pointeur vers le premier caractère de la séquence à convertir.
 
-*last*<br/>
+*famille*\
 Pointeur vers le dernier caractère de la séquence à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*first*<br/>
+*premier*\
 Pointeur vers le premier caractère de la séquence dont la valeur doit être déterminée.
 
-*last*<br/>
+*famille*\
 Pointeur vers le dernier caractère de la séquence dont la valeur doit être déterminée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -317,7 +317,7 @@ La fonction membre retourne [do_hash](#do_hash)( `first`, `last`).
 
 Une valeur de hachage peut être utile, par exemple, dans la répartition des séquences de manière pseudo-aléatoire sur un tableau de listes.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // collate_hash.cpp
@@ -357,7 +357,7 @@ typedef basic_string<CharType> string_type;
 
 Le type décrit une spécialisation de la classe de modèle [basic_string](../standard-library/basic-string-class.md) dont les objets peuvent stocker des copies de la séquence source.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Pour savoir comment déclarer et utiliser `string_type`, consultez [transform](#transform).
 
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*first*<br/>
+*premier*\
 Pointeur vers le premier caractère de la séquence à convertir.
 
-*last*<br/>
+*famille*\
 Pointeur vers le dernier caractère de la séquence à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -429,5 +429,5 @@ int main( )
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

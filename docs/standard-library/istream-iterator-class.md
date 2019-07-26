@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: f8fc1593db8ddacefb4a231be76ca6d7cbd30849
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413318"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447758"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator, classe
 
@@ -36,16 +36,16 @@ class istream_iterator
 
 ### <a name="parameters"></a>Paramètres
 
-*Type*<br/>
+*Type*\
 Type de l'objet à extraire du flux d'entrée.
 
-*CharType*<br/>
-Type qui représente le type de caractère de `istream_iterator`. Cet argument est facultatif et la valeur par défaut est **char**.
+*CharType*\
+Type qui représente le type de caractère de `istream_iterator`. Cet argument est facultatif et sa valeur par défaut est **char**.
 
-*Caractéristiques*<br/>
+*Caractéristiques*\
 Type qui représente le type de caractère de `istream_iterator`. Cet argument est facultatif et sa valeur par défaut est `char_traits`< `CharType`>.
 
-*Distance*<br/>
+*Distance*\
 Type intégral signé qui représente le type de différence de `istream_iterator`. Cet argument est facultatif et sa valeur par défaut est `ptrdiff_t`.
 
 Après avoir construit ou incrémenté un objet de classe istream_iterator avec un pointeur non null stocké, l'objet tente d'extraire et de stocker un objet de type `Type` à partir du flux d'entrée associé. Si l'extraction échoue, l'objet remplace le pointeur stocké par un pointeur null, créant ainsi un indicateur de fin de séquence.
@@ -138,12 +138,12 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Istr*<br/>
+*_Istr*\
 Flux d’entrée à lire pour initialiser le `istream_iterator`.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise le pointeur de flux d’entrée avec un pointeur Null et crée un itérateur de fin de flux. Le deuxième constructeur initialise le pointeur de flux d’entrée avec *& _Istr*, puis tente d’extraire et stocker un objet de type `Type`.
+Le premier constructeur initialise le pointeur de flux d’entrée avec un pointeur Null et crée un itérateur de fin de flux. Le deuxième constructeur initialise le pointeur de flux d’entrée avec *& _Istr*, puis tente d’extraire et de stocker un objet `Type`de type.
 
 Vous pouvez utiliser l’itérateur de fin de flux pour tester si un `istream_iterator` a atteint la fin d’un flux.
 
@@ -193,7 +193,7 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 Le type est un synonyme de `basic_istream`\< **CharType**, **Traits**>.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Pour découvrir comment déclarer et utiliser `istream_type`, consultez l’exemple relatif à [istream_iterator](#istream_iterator).
 
@@ -207,7 +207,7 @@ const Type& operator*() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’objet stocké de type `Type`.
+Objet stocké de type `Type`.
 
 ### <a name="example"></a>Exemple
 
@@ -255,7 +255,7 @@ Valeur d’un membre, le cas échéant.
 
 ### <a name="remarks"></a>Notes
 
-`i->m` équivaut à `(*i).m`
+`i->m`équivaut à`(*i).m`
 
 L'opérateur retourne `&*this`.
 
@@ -303,9 +303,9 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le premier opérateur membre retourne une référence à l’objet incrémenté de type `Type` extrait à partir du flux d’entrée et la deuxième fonction de membre retourne une copie de l’objet.
+Le premier opérateur membre retourne une référence à l’objet incrémenté de type `Type` extrait à partir du flux d’entrée et la deuxième fonction membre retourne une copie de l’objet.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // istream_iterator_operator_incr.cpp
@@ -386,8 +386,8 @@ int main( )
 
 ## <a name="see-also"></a>Voir aussi
 
-[input_iterator_tag, struct](../standard-library/input-iterator-tag-struct.md)<br/>
-[iterator, struct](../standard-library/iterator-struct.md)<br/>
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[input_iterator_tag, struct](../standard-library/input-iterator-tag-struct.md)\
+[iterator, struct](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

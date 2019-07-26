@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 5e37f21e19be730d3437507e83f2417fa2dc020a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1307f64fb5f92b59337665d108d950b28c6ff63e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348170"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454955"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution, classe
 
@@ -71,8 +71,8 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType*<br/>
-Le type de résultat entier, valeur par défaut est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*IntType*\
+Le type de résultat entier, par défaut, est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -95,7 +95,7 @@ Les fonctions membres `operator()` retournent la valeur générée suivante d’
 
 Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // compile with: /EHsc /W4
@@ -191,20 +191,20 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*a*<br/>
+*un*\
 Limite inférieure pour les valeurs aléatoires, valeur comprise.
 
-*b*<br/>
+*p*\
 Limite supérieure pour les valeurs aléatoires, valeur comprise.
 
-*parm*<br/>
+*Parm*\
 Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
 **Condition préalable :** `a ≤ b`
 
-Le premier constructeur construit un objet dont stockée *un* valeur conserve la valeur *un* et dont stockée *b* valeur conserve la valeur *b*.
+Le premier constructeur construit un objet dont la valeur *stockée* contient la valeur *a* et dont la valeur *b* stockée contient la valeur *b*.
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*a*<br/>
+*un*\
 Limite inférieure pour les valeurs aléatoires, valeur comprise.
 
-*b*<br/>
+*p*\
 Limite supérieure pour les valeurs aléatoires, valeur comprise.
 
-*right*<br/>
+*Oui*\
 Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes
@@ -244,4 +244,4 @@ Cette structure peut être passée au constructeur de classe de la distribution 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

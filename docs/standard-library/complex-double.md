@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-ms.openlocfilehash: 7cb516363df7267c2870d2188a14208f54f7ffe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 565a2e6b5ee4eb495cb4cc3241bb8ce72de538a2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148404"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453153"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
@@ -36,14 +36,14 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ### <a name="parameters"></a>Paramètres
 
-*RealVal*<br/>
+*RealVal*\
 Valeur de type **double** pour la partie réelle du nombre complexe en cours de construction.
 
-*ImagVal*<br/>
+*ImagVal*\
 Valeur de type **double** pour la partie imaginaire du nombre complexe en cours de construction.
 
-*complexNum*<br/>
-Nombre complexe de type **float** ou de type **long double** dont les parties réelles et imaginaires sont utilisées pour initialiser un nombre complexe de type **double** en cours de construction.
+*complexNum*\
+Nombre complexe de type **float** ou de type **long double** dont les parties réelle et imaginaire sont utilisées pour initialiser un nombre complexe de type **double** en cours de construction.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -51,11 +51,11 @@ Nombre complexe de type **double**.
 
 ## <a name="remarks"></a>Notes
 
-La spécialisation explicite de la classe de modèle complex en classe complex de type **double** diffère de la classe de modèle seulement par les constructeurs qu’elle définit. La conversion de **float** à **double** est autorisé à être implicite, mais la conversion de **long double** à **double** doit être **explicite**. L’utilisation d’**explicit** exclut l’initialisation avec la conversion de type à l’aide de la syntaxe d’assignation.
+La spécialisation explicite de la classe de modèle complex en classe complex de type **double** diffère de la classe de modèle seulement par les constructeurs qu’elle définit. La conversion de **float** en **double** peut être implicite, mais la conversion de **long double** en **double** doit être **explicite**. L’utilisation d’**explicit** exclut l’initialisation avec la conversion de type à l’aide de la syntaxe d’assignation.
 
 Pour plus d’informations sur la classe de modèle `complex`, consultez [complex, classe](../standard-library/complex-class.md). Pour obtenir la liste des membres de la classe de modèle `complex`, consultez .
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // complex_comp_dbl.cpp
@@ -118,5 +118,5 @@ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 
 ## <a name="see-also"></a>Voir aussi
 
-[complex, classe](../standard-library/complex-class.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[complex, classe](../standard-library/complex-class.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

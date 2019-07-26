@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_default_constructible
 ms.assetid: dd8f1c44-dae5-4258-891f-c5e048d94092
-ms.openlocfilehash: 7fc1c70a1244688888174b834fe653d5d6d2497b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 451f43435132876fcfbbabe37c613d3c9efef30e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336664"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452784"
 ---
 # <a name="isdefaultconstructible-class"></a>is_default_constructible, classe
 
@@ -26,12 +26,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *T* est un type de classe qui a un constructeur par défaut, sinon, sa valeur est false. Cela est équivalent au prédicat `is_constructible<T>`. Type *T* doit être un type complet, **void**, ou un tableau de limite inconnue.
+Une instance du prédicat de type a la valeur true si le type *T* est un type de classe qui a un constructeur par défaut. sinon, sa valeur est false. Cela est équivalent au prédicat `is_constructible<T>`. Le type *T* doit être un type complet, **void**ou un tableau de limites inconnues.
 
 ## <a name="example"></a>Exemple
 
@@ -75,4 +75,4 @@ is_default_constructible<Simple2> == false
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

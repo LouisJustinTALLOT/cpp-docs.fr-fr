@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - iomanip header
 ms.assetid: 3681c346-4763-4037-bba4-cf0dc3447974
-ms.openlocfilehash: 983fbc190fb83b81534e3888c748c0bf9c235638
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9da0de64bbb0ef48a6a9741ff941e6abda0e705
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404934"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449212"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-Inclure le `iostreams` en-tête standard \<iomanip > pour définir plusieurs manipulateurs qui acceptent chacun un argument unique.
+Incluez `iostreams` l’en \<-tête standard iomanip > pour définir plusieurs manipulateurs qui acceptent chacun un argument unique.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,7 +26,7 @@ Inclure le `iostreams` en-tête standard \<iomanip > pour définir plusieurs man
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces manipulateurs retourne un type non spécifié, appelé `T1` via `T10`, qui surcharge à la fois `basic_istream` \< **Elem**, **Tr** > `::` [opérateur >>](../standard-library/istream-operators.md#op_gt_gt) et `basic_ostream` \< **Elem**, **Tr** > `::` [opérateur <<](../standard-library/ostream-operators.md#op_lt_lt).
+Chacun de ces manipulateurs retourne un type non spécifié, appelé `T1` via `T10`, qui surcharge à la fois `basic_istream` \< **elem**, **TR**>`::`[operator > >](../standard-library/istream-operators.md#op_gt_gt) et `basic_ostream` **Elem**, TR,>opérateur[< <](../standard-library/ostream-operators.md#op_lt_lt). \<`::`
 
 ### <a name="manipulators"></a>Manipulateurs
 
@@ -46,7 +46,7 @@ Chacune de ces manipulateurs retourne un type non spécifié, appelé `T1` via `
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream, programmation](../standard-library/iostream-programming.md)<br/>
-[iostreams, conventions](../standard-library/iostreams-conventions.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream, programmation](../standard-library/iostream-programming.md)\
+[iostreams, conventions](../standard-library/iostreams-conventions.md)

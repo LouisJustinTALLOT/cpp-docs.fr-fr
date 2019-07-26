@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 0c990953f0cda81366ff2645d3cdf1065850abbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370396"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455243"
 ---
 # <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution, classe
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType*<br/>
-Type de résultat, valeur par défaut est de virgule flottante **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType*\
+Le type de résultat à virgule flottante, par défaut, est **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -248,31 +248,31 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*firstI*<br/>
+*premieri*\
 Itérateur d'entrée du premier élément de la plage de distribution.
 
-*lastI*<br/>
+*dernier*\
 Itérateur d'entrée du dernier élément de la plage de distribution.
 
-*firstW*<br/>
+*firstW*\
 Itérateur d'entrée du premier élément de la plage de poids.
 
-*intervals*<br/>
+*intervalles*\
 Un [initializer_list](../cpp/initializers.md) avec les intervalles de la distribution.
 
-*count*<br/>
+*saut*\
 Nombre d'éléments dans la plage de distribution.
 
-*xmin*<br/>
+*xmin*\
 Valeur la plus faible de la plage de distribution.
 
-*xmax*<br/>
+*XMAX*\
 Valeur la plus élevée de la plage de distribution. Doit être supérieure à *xmin*.
 
-*weightfunc*<br/>
+*weightfunc*\
 Objet représentant la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent être convertibles en **double**.
 
-*parm*<br/>
+*Parm*\
 Structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -296,7 +296,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-Construit un objet de distribution avec des intervalles à partir de la liste d’initialiseurs *intervalles* et poids générés à partir de la fonction *weightfunc*.
+construit un objet de distribution avec des intervalles à partir des *intervalles* de la liste d’initialiseurs et des poids générés à partir de la fonction *weightfunc*.
 
 Le constructeur défini en tant que
 ```cpp
@@ -305,14 +305,14 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-Construit un objet de distribution avec *nombre* intervalles distribués uniformément sur [ `xmin,xmax`], assignant à chaque intervalle des poids d’après la fonction *weightfunc*, et  *weightfunc* doit accepter un paramètre et avoir une valeur de retournée, qui sont tous deux convertibles en `double`. **Condition préalable :** `xmin < xmax`
+construit un objet de distribution avec des intervalles de *nombre* répartis uniformément sur `xmin,xmax`[], en assignant chaque pondération d’intervalle conformément à la fonction *weightfunc*, et *weightfunc* doit accepter un paramètre et avoir un retour valeur, qui sont convertibles en `double`. **Condition préalable :** `xmin < xmax`
 
 Le constructeur défini en tant que
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-Construit un objet de distribution à l’aide *parm* en tant que structure de paramètre stockée.
+construit un objet de distribution à l’aide de *param* comme structure de paramètre stockée.
 
 ## <a name="param_type"></a>  piecewise_constant_distribution::param_type
 
@@ -346,5 +346,5 @@ Cette structure peut être passée au constructeur de classe de la distribution 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)<br/>
-[piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)<br/>
+[\<random>](../standard-library/random.md)\
+[piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

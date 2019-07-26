@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-ms.openlocfilehash: 3dff4650cf0337a5ff54065d3b1644e11008ecfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1249e9a3689d4b91334e545ba294c28984898035
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413617"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455764"
 ---
 # <a name="ispod-class"></a>is_pod, classe
 
@@ -27,12 +27,12 @@ struct is_pod;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-`is_pod<T>::value` est **true** si le type *T* est Plain Old Data (POD). Sinon, il est **false**.
+`is_pod<T>::value`a la **valeur true** si le type *T* est Plain Old Data (Pod). Dans le cas contraire, la **valeur**est false.
 
 Les types arithmétiques, les types énumération, les types pointeur et les pointeurs vers des types de membres sont des types POD.
 
@@ -102,4 +102,4 @@ is_pod<throws> == false
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

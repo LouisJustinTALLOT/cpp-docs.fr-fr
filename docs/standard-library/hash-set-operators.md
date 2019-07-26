@@ -5,12 +5,12 @@ f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 901070731d372904ae297a5360ec0da78d179468
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405025"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452030"
 ---
 # <a name="lthashsetgt-operators"></a>&lt;hash_set&gt;, opérateurs
 
@@ -32,10 +32,10 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Objet de type `hash_set`.
 
-*right*<br/>
+*Oui*\
 Objet de type `hash_set`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -46,9 +46,9 @@ Objet de type `hash_set`.
 
 La comparaison entre les objets hash_set est basée sur une comparaison par paire de leurs éléments. Deux hash_sets sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.
 
-Membres de la [< hash_map >](../standard-library/hash-map.md) et [< hash_set >](../standard-library/hash-set.md) sont des fichiers d’en-tête dans le [stdext Namespace](../standard-library/stdext-namespace.md).
+Les membres des fichiers d’en-tête [< hash_map >](../standard-library/hash-map.md) et [< hash_set >](../standard-library/hash-set.md) se trouvent dans l' [espace de noms stdext](../standard-library/stdext-namespace.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // hash_set_op_ne.cpp
@@ -100,10 +100,10 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Objet de type `hash_set`.
 
-*right*<br/>
+*Oui*\
 Objet de type `hash_set`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -114,7 +114,7 @@ Objet de type `hash_set`.
 
 La comparaison entre les objets hash_set est basée sur une comparaison par paire de leurs éléments. Deux hash_sets sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // hash_set_op_eq.cpp
@@ -166,10 +166,10 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Objet de type `hash_multiset`.
 
-*right*<br/>
+*Oui*\
 Objet de type `hash_multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -232,10 +232,10 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Objet de type `hash_multiset`.
 
-*right*<br/>
+*Oui*\
 Objet de type `hash_multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -246,7 +246,7 @@ Objet de type `hash_multiset`.
 
 La comparaison entre les objets hash_multiset est basée sur une comparaison par paire de leurs éléments. Deux hash_multisets sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // hash_multiset_op_eq.cpp
@@ -287,4 +287,4 @@ The hash_multisets s1 and s2 are equal.
 
 ## <a name="see-also"></a>Voir aussi
 
-[<hash_set>](../standard-library/hash-set.md)<br/>
+[<hash_set>](../standard-library/hash-set.md)

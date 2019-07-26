@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: 3e2e62946325c082e761b6997ae584419175f8fe
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 4a173ea022f21c454d8edd66f94d2d9b14faa4e1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346196"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460219"
 ---
 # <a name="moveiterator-class"></a>move_iterator, classe
 
@@ -54,9 +54,9 @@ Un `move_iterator` peut être capable d'effectuer des opérations qui ne sont pa
 |Nom de type|Description|
 |-|-|
 |[iterator_type](#iterator_type)|Synonyme pour le paramètre du modèle `RandomIterator`.|
-|[iterator_category](#iterator_category)|Un synonyme pour une plus longue **typename** expression du même nom, `iterator_category` identifie les fonctionnalités générales de l’itérateur.|
-|[value_type](#value_type)|Un synonyme pour une plus longue **typename** expression du même nom, `value_type` décrit le type de l’itérateur sont des éléments.|
-|[difference_type](#difference_type)|Un synonyme pour une plus longue **typename** expression du même nom, `difference_type` décrit le type intégral requis aux valeurs d’exprimer des différences entre les éléments.|
+|[iterator_category](#iterator_category)|Synonyme d’une expression **TypeName** plus longue du même nom, `iterator_category` qui identifie les capacités générales de l’itérateur.|
+|[value_type](#value_type)|Synonyme d’une expression **TypeName** plus longue du même nom, `value_type` décrit le type des éléments Iterator.|
+|[difference_type](#difference_type)|Synonyme d’une expression **TypeName** plus longue du même nom, `difference_type` décrit le type intégral requis pour exprimer les valeurs de différence entre les éléments.|
 |[pointer](#pointer)|Synonyme du paramètre de modèle `RandomIterator`.|
 |[reference](#reference)|Synonyme de la référence `rvalue` `value_type&&`.|
 
@@ -147,7 +147,7 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 Itérateur à utiliser comme itérateur stocké.
 
 ### <a name="remarks"></a>Notes
@@ -164,7 +164,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off*<br/>
+*_Off*\
 Offset à ajouter à la position actuelle pour déterminer la nouvelle position actuelle.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -173,7 +173,7 @@ Retourne le nouvel élément actif.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur ajoute *_Off* à l’itérateur stocké. Il retourne ensuite `*this`.
+L’opérateur ajoute *_OFF* à l’itérateur stocké. Il retourne ensuite `*this`.
 
 ## <a name="operator-_eq"></a>  move_iterator::operator-=
 
@@ -291,7 +291,7 @@ L'opérateur retourne `&**this`.
 
 ## <a name="pointer"></a>  move_iterator::pointer
 
-Le type `pointer` est un **typedef** en fonction de l’itérateur aléatoire `RandomIterator` pour `move_iterator`et peuvent être utilisées indifféremment.
+Le type `pointer` est un **typedef** basé sur l’itérateur `RandomIterator` aléatoire pour `move_iterator`et peut être utilisé de manière interchangeable.
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -303,7 +303,7 @@ Le type est un synonyme de `RandomIterator`.
 
 ## <a name="reference"></a>  move_iterator::reference
 
-Le type `reference` est un **typedef** selon `value_type&&` pour `move_iterator`et peuvent être utilisées indifféremment avec `value_type&&`.
+Le type `reference` est un **typedef** basé sur `value_type&&` pour `move_iterator`et peut être utilisé de façon interchangeable `value_type&&`avec.
 
 ```cpp
 typedef value_type&& reference;
@@ -327,7 +327,7 @@ Le type est un synonyme de la caractéristique d'itérateur `typename iterator_t
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Lvalues et Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
-[Constructeurs de déplacement et opérateurs d’assignation de déplacement (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Lvalues et Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)\
+[Constructeurs de déplacement et opérateurs d’assignation de déplacement (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

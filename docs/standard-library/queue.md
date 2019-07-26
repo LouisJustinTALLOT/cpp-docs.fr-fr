@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: 641ab1bfe99360320509b806149fcedfe1068879
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d7a13b98ba8cff78839b2afb98371ffba5ced461
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240361"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458337"
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
 
@@ -24,7 +24,7 @@ Définit les classes de modèle priority_queue et queue et plusieurs modèles de
 **Espace de noms :** std
 
 > [!NOTE]
-> Le \<file d’attente > bibliothèque utilise également la `#include <initializer_list>` instruction.
+> La \<bibliothèque de > de file d' `#include <initializer_list>` attente utilise également l’instruction.
 
 ## <a name="members"></a>Membres
 
@@ -54,6 +54,6 @@ Définit les classes de modèle priority_queue et queue et plusieurs modèles de
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

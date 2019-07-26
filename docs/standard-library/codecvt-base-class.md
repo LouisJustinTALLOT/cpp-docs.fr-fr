@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 6f957c39f9c78fd182b7ba2a14bdab7f27db56ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405298"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459387"
 ---
 # <a name="codecvtbase-class"></a>codecvt_base, classe
 
-Une classe de base pour la classe codecvt qui sert à définir un type d’énumération appelé `result`, utilisé comme type de retour pour les fonctions membres de facette pour indiquer le résultat d’une conversion.
+Classe de base pour la classe codecvt utilisée pour définir un type énumération appelé `result`, utilisé comme type de retour pour les fonctions membres de facette pour indiquer le résultat d’une conversion.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,11 +40,11 @@ protected:
 
 Cette classe décrit une énumération commune à toutes les spécialisations de la classe de modèle [codecvt](../standard-library/codecvt-class.md). Le résultat de l’énumération décrit les valeurs de retour possibles de [do_in](../standard-library/codecvt-class.md#do_in) ou [do_out](../standard-library/codecvt-class.md#do_out) :
 
-- `ok` Si la conversion entre les encodages de caractères internes et externes réussit.
+- `ok`Si la conversion entre les encodages de caractères internes et externes est réussie.
 
-- `partial` Si la destination n’est pas assez grande pour que la conversion réussisse.
+- `partial`Si la destination n’est pas assez grande pour que la conversion aboutisse.
 
-- `error` Si la séquence source est malade formée.
+- `error`Si la séquence source est incorrecte.
 
 - `noconv` si la fonction n’exécute aucune conversion.
 
@@ -56,4 +56,4 @@ Cette classe décrit une énumération commune à toutes les spécialisations de
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

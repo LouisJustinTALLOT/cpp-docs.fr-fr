@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-ms.openlocfilehash: ce6e005990d05676fb20752b5808d32ec88dd7b3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: a391a77ea65a203a7eddde12046c5df89a77194a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241536"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447165"
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 
@@ -45,12 +45,12 @@ Définit un modèle `tuple` dont les instances détiennent des objets de types v
 
 |||
 |-|-|
-|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|Comparaison de `tuple` objets, égal.|
-|[!=, opérateur](../standard-library/tuple-operators.md#op_neq)|Comparaison de `tuple` objets, non égales.|
-|[operator<](../standard-library/tuple-operators.md#op_lt)|Comparaison de `tuple` objets, inférieur à.|
-|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|Comparaison de `tuple` des objets, inférieur ou égal.|
-|[operator>](../standard-library/tuple-operators.md#op_gt)|Comparaison de `tuple` objets, supérieur à.|
-|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|Comparaison de `tuple` objets, supérieurs ou égales.|
+|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|Comparaison d' `tuple` objets, EQUAL.|
+|[!=, opérateur](../standard-library/tuple-operators.md#op_neq)|Comparaison d' `tuple` objets, non égal à.|
+|[operator<](../standard-library/tuple-operators.md#op_lt)|Comparaison d' `tuple` objets, inférieur à.|
+|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|Comparaison d' `tuple` objets, inférieur ou égal à.|
+|[operator>](../standard-library/tuple-operators.md#op_gt)|Comparaison d' `tuple` objets, supérieur à.|
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|Comparaison d' `tuple` objets, supérieur ou égal à.|
 
 ### <a name="functions"></a>Fonctions
 
@@ -59,12 +59,12 @@ Définit un modèle `tuple` dont les instances détiennent des objets de types v
 |[apply](../standard-library/tuple-functions.md#apply)|Appelle une fonction avec un tuple.|
 |[forward_as_tuple](../standard-library/tuple-functions.md#forward)|Construit un tuple de références.|
 |[get](../standard-library/tuple-functions.md#get)|Obtient un élément auprès d'un objet `tuple`.|
-|[make_from_tuple](../standard-library/tuple-functions.md#make_from_tuple)|Raccourci pour rendre un `tuple`.|
+|[make_from_tuple](../standard-library/tuple-functions.md#make_from_tuple)|Raccourci pour créer un `tuple`.|
 |[make_tuple](../standard-library/tuple-functions.md#make_tuple)|Crée un `tuple` à partir des valeurs de l’élément.|
 |[swap](../standard-library/tuple-functions.md#swap)||
 |[tie](../standard-library/tuple-functions.md#tie)|Crée un `tuple` à partir des références d’élément.|
-|[tuple_cat](../standard-library/tuple-functions.md#tuple_cat)|Construit un objet de tuple avec une plage d’éléments de type.|
+|[tuple_cat](../standard-library/tuple-functions.md#tuple_cat)|Construit un objet Tuple avec une plage des éléments de type.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

@@ -4,12 +4,12 @@ ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::tr2::sys::space_info
 ms.assetid: f2b35b42-06ff-45bd-8617-39a0f5358a54
-ms.openlocfilehash: b6998f4ac7ced2d85063186edbd47227b6d24ca5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a9856746a8bbc796871663a81bd8911d34dcd4a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399445"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457558"
 ---
 # <a name="spaceinfo-structure"></a>space_info, structure
 
@@ -38,12 +38,12 @@ struct space_info
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<filesystem >
+**En-tête:** \<> de système de fichiers
 
 **Espace de noms :** std::experimental::filesystem
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
-[Navigation dans le système de fichiers (C++)](../standard-library/file-system-navigation.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)\
+[Navigation dans le système de fichiers (C++)](../standard-library/file-system-navigation.md)

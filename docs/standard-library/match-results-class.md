@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72a948c7f8422b36b94a16cdb2c815bca92d20c7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412967"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456385"
 ---
 # <a name="matchresults-class"></a>match_results, classe
 
@@ -26,10 +26,10 @@ class match_results
 
 ## <a name="parameters"></a>Paramètres
 
-*BidIt*<br/>
+*BidIt*\
 Type d'itérateur pour les sous-correspondances.
 
-*Alloc*<br/>
+*Utilis*\
 Type d'un allocateur pour la gestion du stockage.
 
 ## <a name="remarks"></a>Notes
@@ -298,21 +298,21 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Paramètres
 
-*OutIt*<br/>
+*Outlt*\
 Type d'itérateur de sortie.
 
-*out*<br/>
+*out*\
 Flux de sortie dans lequel écrire.
 
-*fmt*<br/>
+*fmt*\
 Chaîne de format.
 
-*flags*<br/>
+*père*\
 Indicateurs de format.
 
 ### <a name="remarks"></a>Notes
 
-Chaque fonction membre génère du texte mis en forme sous le contrôle du format *fmt*. La première fonction membre écrit le texte mis en forme dans la séquence définie par son argument *out* et retourne *out*. La deuxième fonction membre retourne un objet chaîne contenant une copie du texte mis en forme.
+Chaque fonction membre génère du texte mis en forme sous le contrôle du format *fmt*. La première fonction membre écrit le texte mis en forme dans la séquence définie par  son argument out *et retourne.* La deuxième fonction membre retourne un objet chaîne contenant une copie du texte mis en forme.
 
 Pour générer du texte mis en forme, le texte littéral dans la chaîne de format est habituellement copié dans la séquence cible. Chaque séquence d'échappement dans la chaîne de format est remplacée par le texte qu'elle représente. Les détails de la copie et du remplacement sont contrôlés par les indicateurs de format transmis à la fonction.
 
@@ -350,7 +350,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*sub*<br/>
+*indice*\
 Index de la sous-correspondance.
 
 ### <a name="remarks"></a>Notes
@@ -369,15 +369,15 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*alloc*<br/>
+*utilis*\
 Objet allocateur à stocker.
 
-*right*<br/>
+*Oui*\
 Objet match_results à copier.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur construit un objet `match_results` qui ne contient aucune sous-correspondance. Le deuxième constructeur construit un `match_results` objet qui est une copie de *droit*.
+Le premier constructeur construit un objet `match_results` qui ne contient aucune sous-correspondance. Le deuxième constructeur construit un `match_results` objet qui est une copie de *droite*.
 
 ## <a name="max_size"></a>  match_results::max_size
 
@@ -401,12 +401,12 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 Objet match_results à copier.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur membre remplace la séquence contrôlée par `*this` avec une copie de la séquence contrôlée par *droit*.
+L’opérateur membre remplace la séquence contrôlée par `*this` par une copie de la séquence contrôlée par *Right*.
 
 ## <a name="op_at"></a>  match_results::operator[]
 
@@ -418,12 +418,12 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*n*<br/>
+*n*\
 Index de la sous-correspondance.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne une référence à l’élément *n* de la séquence contrôlée, ou une référence à vide `sub_match` si l’objet `size() <= n` ou si le groupe de capture *n* ne faisait pas partie de la correspondance.
+La fonction membre retourne une référence à l’élément *n* de la séquence contrôlée, ou une référence à un `sub_match` objet vide `size() <= n` si ou si le groupe de capture *n* ne fait pas partie de la correspondance.
 
 ## <a name="position"></a>  match_results::position
 
@@ -435,7 +435,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*sub*<br/>
+*indice*\
 Index de la sous-correspondance.
 
 ### <a name="remarks"></a>Notes
@@ -500,7 +500,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*sub*<br/>
+*indice*\
 Index de la sous-correspondance.
 
 ### <a name="remarks"></a>Notes
@@ -541,12 +541,12 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 Objet match_results à échanger.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre échange le contenu de `*this` et *droit* en temps constant et ne lève pas d’exceptions.
+La fonction membre échange le contenu de `*this` et de *droite* en temps constant et ne lève pas d’exceptions.
 
 ## <a name="value_type"></a>  match_results::value_type
 
@@ -562,4 +562,4 @@ Le typedef est un synonyme du type `sub_match<BidIt>`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<regex>](../standard-library/regex.md)<br/>
+[\<regex>](../standard-library/regex.md)

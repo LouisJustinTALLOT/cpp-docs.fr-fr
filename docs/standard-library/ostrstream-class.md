@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-ms.openlocfilehash: 2d4a7a780f1a7db27bcb600c13430deaa0dc35cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c73ab13d3cb2531ff3d741766bc86f8354a0be9d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370866"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458061"
 ---
 # <a name="ostrstream-class"></a>ostrstream, classe
 
@@ -67,8 +67,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Freezeit*<br/>
-Un **bool** indiquant si vous souhaitez que le flux soit gelé.
+*_Freezeit*\
+Valeur **booléenne** indiquant si vous souhaitez que le flux soit figé.
 
 ### <a name="remarks"></a>Notes
 
@@ -76,7 +76,7 @@ La fonction membre appelle [rdbuf](#rdbuf) -> [freeze](../standard-library/strst
 
 ### <a name="example"></a>Exemple
 
-Consultez [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) pour obtenir un exemple qui utilise `freeze`.
+Consultez [strstream:: Freeze](../standard-library/strstreambuf-class.md#freeze) pour obtenir un exemple qui `freeze`utilise.
 
 ## <a name="ostrstream"></a>  ostrstream::ostrstream
 
@@ -92,22 +92,22 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Paramètres
 
-*ptr*<br/>
+*effectués*\
 Mémoire tampon.
 
-*count*<br/>
+*saut*\
 Taille de la mémoire tampon en octets.
 
-*_Mode*<br/>
+*_Mode*\
 Mode d’entrée et de sortie de la mémoire tampon. Pour plus d’informations, consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="remarks"></a>Notes
 
-Les deux constructeurs initialisent la classe de base en appelant [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**), où `sb` est l’objet stocké de classe [strstreambuf](../standard-library/strstreambuf-class.md). Le premier constructeur initialise également `sb` en appelant `strstreambuf`. Le deuxième constructeur initialise la classe de base d’une des deux façons suivantes :
+Les deux constructeurs initialisent la classe de base en appelant [ostream](../standard-library/ostream-typedefs.md#ostream)(**SB**), `sb` où est l’objet stocké de la classe [strstreambuf](../standard-library/strstreambuf-class.md). Le premier constructeur initialise `sb` également en appelant. `strstreambuf` Le deuxième constructeur initialise la classe de base d’une des deux façons suivantes :
 
-- Si `_Mode`  &  **ios_base::app**== 0, puis `ptr` doit désigner le premier élément d’un tableau de `count` éléments et le constructeur appelle `strstreambuf`(`ptr`, `count`, `ptr`).
+- Si `_Mode` **ios_base::** `count` `strstreambuf` `count``ptr`app = = 0, doitdésignerlepremierélémentd’untableaud’éléments,etleconstructeurappelle(,,`ptr`  &  `ptr`).
 
-- Sinon, `ptr` doit désigner le premier élément d’un tableau d’éléments count qui contient une chaîne C dont le premier élément est désigné par `ptr`et le constructeur appelle `strstreambuf`(`ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
+- Sinon, `ptr` doit désigner le premier élément d’un tableau d’éléments Count qui contient une chaîne C dont le premier élément est désigné `ptr`par, et le constructeur `strstreambuf`appelle`ptr`( `count`,, `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="pcount"></a>  ostrstream::pcount
 
@@ -145,7 +145,7 @@ Un pointeur vers l’objet strstreambuf associé au flux.
 
 La fonction membre retourne l’adresse de la mémoire tampon de flux stockée de type `pointer` à [strstreambuf](../standard-library/strstreambuf-class.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Pour obtenir un exemple qui utilise `rdbuf`, consultez [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount).
 
@@ -165,13 +165,13 @@ Pointeur vers le début de la séquence contrôlée.
 
 La fonction membre retourne [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-Consultez [strstream::str](../standard-library/strstreambuf-class.md#str) pour obtenir un exemple qui utilise `str`.
+Consultez [strstream:: Str](../standard-library/strstreambuf-class.md#str) pour obtenir un exemple qui `str`utilise.
 
 ## <a name="see-also"></a>Voir aussi
 
-[ostream](../standard-library/ostream-typedefs.md#ostream)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream, programmation](../standard-library/iostream-programming.md)<br/>
-[iostreams, conventions](../standard-library/iostreams-conventions.md)<br/>
+[ostream](../standard-library/ostream-typedefs.md#ostream)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream, programmation](../standard-library/iostream-programming.md)\
+[iostreams, conventions](../standard-library/iostreams-conventions.md)

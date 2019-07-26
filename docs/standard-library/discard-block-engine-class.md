@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: a0df754f53b52c134b9eb1126f90882ceaaf1e2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76a78a2f47bd160c6b2b981b1ccdda2ef3a90575
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386198"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454396"
 ---
 # <a name="discardblockengine-class"></a>discard_block_engine, classe
 
@@ -26,14 +26,14 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>Paramètres
 
-*Moteur*<br/>
+*Rotation*\
 Type de moteur de base.
 
-*P*<br/>
+*P*\
 **Taille de bloc**. Nombre de valeurs dans chaque bloc.
 
-*R*<br/>
-**Bloc utilisé**. Nombre de valeurs dans chaque bloc qui sont utilisées. Les autres sont ignorées (`P` - `R`). **Condition préalable** : `0 < R ≤ P`
+*R*\
+**Bloc utilisé**. Nombre de valeurs dans chaque bloc qui sont utilisées. Les autres sont ignorés (`P` - `R`). **Condition préalable** : `0 < R ≤ P`
 
 ## <a name="members"></a>Membres
 
@@ -56,4 +56,4 @@ Cette classe de modèle décrit un adaptateur de moteur qui produit des valeurs 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

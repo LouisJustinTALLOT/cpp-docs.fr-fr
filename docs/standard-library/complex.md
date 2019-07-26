@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: e3d4330f8b0fcbce940f6647ebb8920f0b1969b6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 585f970f1a3482412ff225454b7acce9060e2d7c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244686"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449432"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-Définit la classe de modèle de conteneur `complex` et ses modèles de prise en charge.
+Définit la classe `complex` de modèle de conteneur et ses modèles de prise en charge.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -28,33 +28,33 @@ Définit la classe de modèle de conteneur `complex` et ses modèles de prise en
 
 Un nombre complexe est une paire ordonnée de nombres réels. En termes purement géométriques, le plan complexe est le plan réel à deux dimensions. Les qualités spéciales du plan complexe qui le distinguent du plan réel sont dues au fait qu'il a une structure algébrique supplémentaire. Cette structure algébrique a deux opérations fondamentales :
 
-- Addition, définie comme (*un*, *b*) + (*c*, *d*) = (*un* + *c* , *b* + *d*)
+- Addition définie comme (*a*, *b*) + (*c*, *d*) = (*a* + *c*, *b* + *d*)
 
-- Multiplication, définie comme (*un*, *b*) \* (*c*, *d*) = (*ac*  -  *bd*, *ad* + *bc*)
+- Multiplication définie comme (*a*, *b*) \* (*c*, *d*) = (*AC* - *BD*, *ad* + *BC*)
 
 L'ensemble de nombres complexes avec les opérations d'addition complexe et de multiplication complexe est un domaine au sens algébrique standard :
 
 - Les opérations d'addition et multiplication sont commutatives et associatives, et la multiplication se distribue sur l'addition exactement comme elle le fait avec l'addition et la multiplication de réels sur le domaine des nombres réels.
 
-- Nombre complexe (0, 0) est l’identité additive et (1, 0) est l’identité multiplicative.
+- Le nombre complexe (0, 0) est l’identité additive et (1, 0) est l’identité multiplicative.
 
-- L’inverse additif d’un nombre complexe (*un*, *b*) est (-*un*, -*b*) et l’inverse multiplicatif pour tous les nombres complexes à l’exception (0, 0) est
+- L’inverse additif pour un nombre complexe (*a*, *b*) est (-*a*,-*b*) et l’inverse multiplicatif pour tous les nombres complexes, à l’exception de (0, 0) est
 
    (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
 
-En représentant un nombre complexe *z* = (*un*, *b*) sous la forme *z* = *un*  +  *bi*, où *je*<sup>2</sup> = -1, les règles pour l’algèbre de l’ensemble de nombres réels peut être appliquée à l’ensemble de nombres complexes et à leurs composants. Par exemple :
+En représentant un nombre complexe *z* = (*a*, *b*) sous la forme *z* = *a* + *bi*, où *i*<sup>2</sup> =-1, les règles de l’algèbre de l’ensemble des nombres réels peuvent être appliquées au ensemble de nombres complexes et à leurs composants. Par exemple :
 
-   (1 + 2*je*) \* (2 + 3*je*) = 1 \* (2 + 3*je*) + 2*je* \* (2 + 3*i*) = (2 + 3*je*) + (4*je* + 6*je*<sup>2</sup>) = (2-6) + (3 + 4)*je* = -4 + 7*je*
+   (1 + 2*i*)  \* \* <sup></sup>    (2 + 3 i) = 1 (2 + 3 i) + 2 i (2 + 3 i) = (2 + 3 i) + (4 i + 6 i 2) = (2-6) + (3 + 4) i =-4 + 7 i \*
 
-Le système des nombres complexes est un domaine, mais il n'est pas un domaine ordonné. Il n’existe aucun classement de nombres complexes qu’il existe pour le champ de nombres réels et ses sous-ensembles, donc les inégalités ne peuvent pas être appliquées aux nombres complexes, tels qu’ils sont en nombres réels.
+Le système des nombres complexes est un domaine, mais il n'est pas un domaine ordonné. Il n’y a pas d’ordre des nombres complexes, en ce qui concerne le champ des nombres réels et de ses sous-ensembles. les inégalités ne peuvent donc pas être appliquées aux nombres complexes comme c’est le cas des nombres réels.
 
 Il existe trois formes courantes de représentation d’un nombre complexe *z* :
 
-- Cartésienne : *z* = *un* + *bi*
+- Cartésien: *z* = a*bi*  + 
 
-- Polaire : *z* = *r* (cos *p* + *je* sin *p*)
+- Polaire: *z* = *r* (COS *p* + *i* Sin *p*)
 
-- Exponentielle : *z* = *r* \* *e*<sup>*ip*</sup>
+- Exponentiel: *z* = *r* \* *e*<sup>*IP*</sup>
 
 Les termes utilisés dans ces représentations standard d'un nombre complexe s'entendent comme suit :
 
@@ -62,11 +62,11 @@ Les termes utilisés dans ces représentations standard d'un nombre complexe s'e
 
 - Le composant cartésien imaginaire ou la partie imaginaire *b*.
 
-- Le module ou la valeur absolue d’un nombre complexe *r*.
+- Le modulo ou la valeur absolue d’un nombre complexe *r*.
 
-- L’argument ou angle de phase *p* en radians.
+- Argument ou angle de phase *p* en radians.
 
-Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs sont requises pour retourner une valeur principale pour leurs arguments supérieur à - π et inférieur à ou égal à + π laissez-les unique table. Tous les angles doivent être exprimées en radians, où il n’y 2π radians (360 degrés) dans un cercle.
+Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs sont requises pour retourner une valeur principale pour leurs arguments supérieur à-π et inférieure ou égale à + π pour les conserver à valeur unique. Tous les angles doivent être exprimés en radians, où il y a 2π radians (360 degrés) dans un cercle.
 
 ## <a name="members"></a>Membres
 
@@ -128,11 +128,11 @@ L’en-tête \<complex> définit les [littéraux définis par l’utilisateur](.
 
 |||
 |-|-|
-|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Retourne : `complex<long double>{0.0L, static_cast<long double>(d)}`|
-|`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|Retourne : `complex<double>{0.0, static_cast<double>(d)}`.|
-|`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|Retourne : `complex<float>{0.0f, static_cast<float>(d)}`.|
+|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Cette`complex<long double>{0.0L, static_cast<long double>(d)}`|
+|`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|Retourne : `complex<double>{0.0, static_cast<double>(d)}`.|
+|`constexpr complex<float> operator""if(long double d)`<br />`constexpr complex<float> operator""if(unsigned long long d)`|Retourne : `complex<float>{0.0f, static_cast<float>(d)}`.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

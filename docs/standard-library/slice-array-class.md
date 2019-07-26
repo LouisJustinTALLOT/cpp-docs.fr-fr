@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
-ms.openlocfilehash: 9577447b2201c1c9e53192b99abad1979f45d15f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf33c5f627a88698c84947f9b803edaebccf5566
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412538"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450401"
 ---
 # <a name="slicearray-class"></a>slice_array, classe
 
@@ -42,15 +42,15 @@ public:
 
 ## <a name="remarks"></a>Notes
 
-La classe décrit un objet qui stocke une référence à un objet de la classe [valarray](../standard-library/valarray-class.md)**\<Type>**, ainsi qu’un objet de la classe [slice](../standard-library/slice-class.md), qui décrit la séquence d’éléments à sélectionner à partir de l’objet **valarray\<Type>**.
+La classe décrit un objet qui stocke une référence à un objet de la classe [valarray](../standard-library/valarray-class.md) **\<Type>** , ainsi qu’un objet de la classe [slice](../standard-library/slice-class.md), qui décrit la séquence d’éléments à sélectionner à partir de l’objet **valarray\<Type>** .
 
 La classe de modèle est créée indirectement par certaines opérations valarray. Elle ne peut pas être utilisée directement dans le programme. Classe de modèle interne auxiliaire qui est utilisée par l’opérateur slice subscript :
 
 `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`).
 
-Vous construisez un `slice_array<Type>` objet uniquement en écrivant une expression sous la forme [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at), pour une tranche `sl` de valarray `va`. Les fonctions membres de la classe slice_array se comportent ensuite comme les signatures de fonction correspondantes définies pour `valarray<Type>`, sauf que seule la séquence d’éléments sélectionnée est affectée. La séquence contrôlée par le slice_array est définie par les trois paramètres du constructeur slice, l’index du premier élément dans la section (slice), le nombre d’éléments et la distance entre les éléments. Un slice_array coupé du valarray `va` déclarées par **va**[ `slice`(2, 5, 3)] sélectionne des éléments avec des index 2, 5, 8, 11 et 14 à partir de `va`. Les index doivent être valides pour que la procédure soit valide.
+Vous construisez `slice_array<Type>` un objet uniquement en écrivant une expression de la forme [va&#91;SL&#93;](../standard-library/valarray-class.md#op_at), pour `sl` une tranche `va`de valarray. Les fonctions membres de la classe slice_array se comportent ensuite comme les signatures `valarray<Type>`de fonctions correspondantes définies pour, sauf que seule la séquence d’éléments sélectionnés est affectée. La séquence contrôlée par le slice_array est définie par les trois paramètres du constructeur slice, l’index du premier élément dans la section (slice), le nombre d’éléments et la distance entre les éléments. Un slice_array Cut from valarray `va` déclaré par **va**[ `slice`(2, 5, 3)] sélectionne les éléments avec les index 2, 5, 8, 11 et 14 de. `va` Les index doivent être valides pour que la procédure soit valide.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Consultez l’exemple [slice::slice](../standard-library/slice-class.md#slice) pour savoir comment déclarer et utiliser un slice_array.
 
@@ -62,4 +62,4 @@ Consultez l’exemple [slice::slice](../standard-library/slice-class.md#slice) p
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

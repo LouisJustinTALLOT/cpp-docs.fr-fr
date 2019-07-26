@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.openlocfilehash: 9ca18e62038d93a50b592868f71223962a22857d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1519fa105f2cd73c1165bb30264828aa987fbd35
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159325"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458458"
 ---
 # <a name="future-class"></a>future, classe
 
@@ -63,13 +63,13 @@ Chaque *fournisseur asynchrone* standard retourne un objet dont le type est une 
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[future::operator=](#op_eq)|Transfère l’état asynchrone associé d’un objet spécifié.|
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<future >
+**En-tête:** \<> à venir
 
 **Espace de noms :** std
 
@@ -84,14 +84,14 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Autre*<br/>
+*Autres*\
 Objet `future`.
 
 ### <a name="remarks"></a>Notes
 
 Le premier constructeur construit un objet `future` sans état asynchrone associé.
 
-Le deuxième constructeur construit un `future` de l’objet et transfère l’état asynchrone associé à partir de *autres*. *Autres* n’a plus d’état asynchrone associé.
+Le deuxième constructeur construit un `future` objet et transfère l’état asynchrone associé à partir d' *autres*. D' *autres* n’ont plus d’état asynchrone associé.
 
 ## <a name="get"></a>  future::get
 
@@ -111,7 +111,7 @@ Avant de récupérer le résultat, cette méthode bloque le thread actuel jusqu�
 
 Pour la spécialisation partielle `future<Ty&>`, la valeur stockée est une référence à l’objet qui a été passé au fournisseur asynchrone comme valeur de retour.
 
-Car il n’existe aucune valeur stockée pour la spécialisation `future<void>`, la méthode retourne **void**.
+Étant donné qu’il n’existe aucune valeur `future<void>`stockée pour la spécialisation, la méthode retourne **void**.
 
 Dans d’autres spécialisations, la méthode déplace sa valeur de retour à partir de la valeur stockée. Par conséquent, n’appelez cette méthode qu’une seule fois.
 
@@ -125,7 +125,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Droite*<br/>
+*Oui*\
 Objet `future`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -134,7 +134,7 @@ Objet `future`.
 
 ### <a name="remarks"></a>Notes
 
-Après le transfert, *droite* n’a plus d’état asynchrone associé.
+Après le *transfert, ne* possède plus d’état asynchrone associé.
 
 ## <a name="share"></a>  future::share
 
@@ -158,7 +158,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet a un état asynchrone associé ; sinon, **false**.
+**true** si l’objet a un état asynchrone associé; Sinon, **false**.
 
 ## <a name="wait"></a>  future::wait
 
@@ -183,7 +183,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Rel_time*<br/>
+*Rel_time*\
 Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie un intervalle de temps maximal pour le blocage du thread.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -205,7 +205,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>Paramètres
 
-*Abs_time*<br/>
+*Abs_time*\
 Objet [chrono::time_point](../standard-library/time-point-class.md) qui spécifie un point dans le temps après lequel le thread peut être débloqué.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -218,5 +218,5 @@ Un état asynchrone associé est *prêt* uniquement si son fournisseur asynchron
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

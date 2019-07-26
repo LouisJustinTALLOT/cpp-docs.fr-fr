@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b08a1341ed450dd5d5cee93cdfcbab57f8d6760
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412603"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450490"
 ---
 # <a name="sharedfuture-class"></a>shared_future, classe
 
@@ -62,13 +62,13 @@ Les objets `shared_future` ne sont pas synchronisés. L’appel de méthodes sur
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[shared_future::operator=](#op_eq)|Assigne un nouvel état asynchrone associé.|
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<future >
+**En-tête:** \<> à venir
 
 **Espace de noms :** std
 
@@ -92,7 +92,7 @@ Avant de récupérer le résultat, cette méthode bloque le thread actuel jusqu�
 
 Pour la spécialisation partielle `shared_future<Ty&>`, la valeur stockée est une référence à l’objet qui a été passé au *fournisseur asynchrone* comme valeur de retour.
 
-Car il n’existe aucune valeur stockée pour la spécialisation `shared_future<void>`, la méthode retourne **void**.
+Étant donné qu’il n’existe aucune valeur `shared_future<void>`stockée pour la spécialisation, la méthode retourne **void**.
 
 ## <a name="op_eq"></a>  shared_future::operator=
 
@@ -105,7 +105,7 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Droite*<br/>
+*Oui*\
 Objet `shared_future`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -114,9 +114,9 @@ Objet `shared_future`.
 
 ### <a name="remarks"></a>Notes
 
-Pour le premier opérateur *droite* n’a plus d’état asynchrone associé après l’opération.
+Pour le premier opérateur, *Right* n’a plus d’état asynchrone associé après l’opération.
 
-Pour la deuxième méthode, *droite* conserve son état asynchrone associé.
+Pour la deuxième méthode, *Right* conserve son état asynchrone associé.
 
 ## <a name="shared_future"></a>  shared_future::shared_future, constructeur
 
@@ -131,16 +131,16 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Droite*<br/>
+*Oui*\
 Objet [future](../standard-library/future-class.md) ou `shared_future`.
 
 ### <a name="remarks"></a>Notes
 
 Le premier constructeur construit un objet `shared_future` sans *état asynchrone associé*.
 
-Les deuxième et troisième constructeurs construisent un `shared_future` de l’objet et transférer l’état asynchrone associé à partir de *droite*. *Droite* n’a plus d’état asynchrone associé.
+Les deuxième et troisième constructeurs construisent un `shared_future` objet et transfèrent l’état asynchrone associé à partir de la *droite*. *Right* n’a plus d’état asynchrone associé.
 
-Le quatrième constructeur construit un `shared_future` objet ayant le même état asynchrone associé que *droite*.
+Le quatrième constructeur construit un `shared_future` objet qui a le même état asynchrone associé qu’à *droite*.
 
 ## <a name="valid"></a>  shared_future::valid
 
@@ -152,7 +152,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet a un état asynchrone associé ; sinon, **false**.
+**true** si l’objet a un état asynchrone associé; Sinon, **false**.
 
 ## <a name="wait"></a>  shared_future::wait
 
@@ -178,7 +178,7 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rel_time*<br/>
+*Rel_time*\
 Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie un intervalle de temps maximal pour le blocage du thread.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -201,7 +201,7 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Paramètres
 
-*Abs_time*<br/>
+*Abs_time*\
 Objet [chrono::time_point](../standard-library/time-point-class.md) qui spécifie un point dans le temps après lequel le thread peut être débloqué.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -214,5 +214,5 @@ Un état asynchrone associé est prêt uniquement si son fournisseur asynchrone 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383579"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449936"
 ---
 # <a name="messages-class"></a>messages, classe
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType*<br/>
+*CharType*\
 Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
 ## <a name="remarks"></a>Notes
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval*<br/>
+*_Catval*\
 Catalogue à fermer.
 
 ### <a name="remarks"></a>Notes
@@ -122,7 +122,7 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval*<br/>
+*_Catval*\
 Catalogue à fermer.
 
 ### <a name="remarks"></a>Notes
@@ -149,25 +149,25 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval*<br/>
+*_Catval*\
 Valeur d’identification spécifiant le catalogue de messages dans lequel rechercher.
 
-*_Set*<br/>
+*Écart*\
 Premier identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*_Message*<br/>
+*Corps*\
 Deuxième identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*_Dfault*<br/>
+*_Dfault*\
 Chaîne à retourner en cas d’échec.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Il retourne une copie de *_Dfault* en cas d’échec. Sinon, retourne une copie de la séquence de message spécifiée.
+Elle retourne une copie de *_Dfault* en cas d’échec. Sinon, retourne une copie de la séquence de message spécifiée.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée tente d’obtenir une séquence de message à partir du catalogue de message *_Catval*. Il peut s’utiliser de *_Définir*, *_Message*, et *_Dfault* lors de cette opération.
+La fonction membre protégée tente d’obtenir une séquence de messages à partir du catalogue de messages *_Catval*. Elle peut utiliser *_ _* , *corps*et *_Dfault* .
 
 ### <a name="example"></a>Exemple
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catname*<br/>
+*_Catname*\
 Nom du catalogue dans lequel rechercher.
 
-*_Loc*<br/>
+*_Loc*\
 Paramètres régionaux recherchés dans le catalogue.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -197,11 +197,11 @@ Retourne une valeur inférieure à zéro en cas d’échec. Dans le cas contrair
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée tente d’ouvrir un catalogue de messages dont le nom est *_Catname*. Il peut s’utiliser des paramètres régionaux *_Loc* faisant
+La fonction membre protégée tente d’ouvrir un catalogue de messages dont le nom est *_Catname*. Elle peut utiliser les paramètres régionaux *_Loc* .
 
 La valeur de retour doit être utilisée comme argument lors d’un appel ultérieur à [close](#close).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez l’exemple relatif à [open](#open), qui appelle `do_open`.
 
@@ -219,21 +219,21 @@ string_type get(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval*<br/>
+*_Catval*\
 Valeur d’identification spécifiant le catalogue de messages dans lequel rechercher.
 
-*_Set*<br/>
+*Écart*\
 Premier identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*_Message*<br/>
+*Corps*\
 Deuxième identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*_Dfault*<br/>
+*_Dfault*\
 Chaîne à retourner en cas d’échec.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Il retourne une copie de *_Dfault* en cas d’échec. Sinon, retourne une copie de la séquence de message spécifiée.
+Elle retourne une copie de *_Dfault* en cas d’échec. Sinon, retourne une copie de la séquence de message spécifiée.
 
 ### <a name="remarks"></a>Notes
 
@@ -254,25 +254,25 @@ protected: messages(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs*<br/>
+*_Refs*\
 Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
-*_Locname*<br/>
+*_Locname*\
 Nom des paramètres régionaux.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
+Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes:
 
-- 0: La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0 : La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
 - 1 : La durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1: Ces valeurs ne sont pas définies.
+- \>1: Ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
-Le constructeur initialise son objet de base avec **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
+Le constructeur initialise son objet de base avec **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
 ## <a name="open"></a>  messages::open
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catname*<br/>
+*_Catname*\
 Nom du catalogue dans lequel rechercher.
 
-*_Loc*<br/>
+*_Loc*\
 Paramètres régionaux recherchés dans le catalogue.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -314,6 +314,6 @@ Le type décrit une spécialisation de la classe de modèle [basic_string](../st
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<locale>](../standard-library/locale.md)<br/>
-[messages_base, classe](../standard-library/messages-base-class.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[messages_base, classe](../standard-library/messages-base-class.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

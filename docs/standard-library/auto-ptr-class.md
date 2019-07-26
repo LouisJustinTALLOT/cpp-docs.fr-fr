@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: c64865c98f52f68fcb6d38160ac885657a7b8916
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 14841662235f075d74120673208dd54531763c09
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244006"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456714"
 ---
 # <a name="autoptr-class"></a>auto_ptr, classe
 
@@ -58,12 +58,12 @@ class auto_ptr {
 *Oui*\
 `auto_ptr` à partir duquel obtenir une ressource existante.
 
-*PTR*\
+*effectués*\
 Pointeur spécifié pour remplacer le pointeur stocké.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit un pointeur intelligent, appelé un `auto_ptr`, dans un objet alloué. Le pointeur doit avoir la valeur null ou désigner un objet alloué par **nouveau**. Le `auto_ptr` transfère la propriété si sa valeur stockée est assignée à un autre objet. (Il remplace la valeur stockée après un transfert avec un pointeur null.) Le destructeur de `auto_ptr<Type>` supprime l'objet alloué. Le `auto_ptr<Type>` garantit qu'un objet alloué est supprimé automatiquement quand le contrôle quitte un bloc, même suite à la levée d'une exception. Vous ne devez pas construire deux objets `auto_ptr<Type>` qui possèdent le même objet.
+La classe de modèle décrit un pointeur intelligent, appelé `auto_ptr`un, à un objet alloué. Le pointeur doit avoir la valeur null ou désigner un objet alloué par **New**. Le `auto_ptr` transfère la propriété si sa valeur stockée est assignée à un autre objet. (Il remplace la valeur stockée après un transfert avec un pointeur null.) Le destructeur de `auto_ptr<Type>` supprime l'objet alloué. Le `auto_ptr<Type>` garantit qu'un objet alloué est supprimé automatiquement quand le contrôle quitte un bloc, même suite à la levée d'une exception. Vous ne devez pas construire deux objets `auto_ptr<Type>` qui possèdent le même objet.
 
 Vous pouvez passer un objet `auto_ptr<Type>` par valeur en tant qu'argument à un appel de fonction. Un `auto_ptr` ne peut pas être un élément d'un conteneur de bibliothèque STL. Vous ne pouvez pas gérer de manière fiable une séquence d’objets `auto_ptr<Type>` avec un conteneur de bibliothèque C++ Standard.
 
@@ -99,7 +99,7 @@ Vous pouvez passer un objet `auto_ptr<Type>` par valeur en tant qu'argument à u
 |[operator auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|Effectue un cast d'un type de `auto_ptr` vers un autre type de `auto_ptr`.|
 |[operator auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|Effectue un cast d'un `auto_ptr` vers un `auto_ptr_ref`.|
 
-### <a name="auto_ptr"></a> auto_ptr
+### <a name="auto_ptr"></a>auto_ptr
 
 Constructeur des objets de type `auto_ptr`.
 
@@ -116,7 +116,7 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 #### <a name="parameters"></a>Paramètres
 
-*PTR*\
+*effectués*\
 Pointeur vers l’objet que `auto_ptr` encapsule.
 
 *Oui*\
@@ -124,11 +124,11 @@ L’objet `auto_ptr` doit être copié par le constructeur.
 
 #### <a name="remarks"></a>Notes
 
-Le premier constructeur stocke *ptr* dans `myptr`, le pointeur stocké vers l’objet alloué. Le deuxième constructeur transfère la propriété du pointeur stocké dans *droit*, en stockant *droit*. [mise en production](#release) dans `myptr`.
+Le premier constructeur stocke *ptr* dans `myptr`, le pointeur stocké vers l’objet alloué. Le deuxième constructeur transfère la propriété du pointeur stocké à *droite*, en stockant *Right*. [version](#release) de `myptr`.
 
-Le troisième constructeur comporte comme la seconde, à ceci près qu’il stocke `right`. `ref`. `release` dans `myptr`, où `ref` est la référence stockée dans `right`.
+Le troisième constructeur se comporte de la même façon que le second, sauf qu’il `right`stocke. `ref`. `release`dans `myptr`, où `ref` est la référence stockée `right`dans.
 
-Le constructeur de modèle comporte comme le deuxième constructeur, à condition qu’un pointeur vers `Other` peut être implicitement converti en un pointeur vers `Type`.
+Le constructeur de modèle se comporte de la même façon que le deuxième constructeur, à condition qu' `Other` un pointeur vers puisse être converti implicitement en `Type`pointeur vers.
 
 #### <a name="example"></a>Exemple
 
@@ -189,7 +189,7 @@ Constructing 00311AF8
 Destructing 00311AF8
 ```
 
-### <a name="element_type"></a> ELEMENT_TYPE
+### <a name="element_type"></a>element_type
 
 Le type est un synonyme du paramètre de modèle `Type`.
 
@@ -197,7 +197,7 @@ Le type est un synonyme du paramètre de modèle `Type`.
 typedef Type element  _type;
 ```
 
-### <a name="get"></a> Télécharger
+### <a name="get"></a>Télécharger
 
 La fonction membre retourne le pointeur stocké `myptr`.
 
@@ -207,7 +207,7 @@ Type *get() const throw();
 
 #### <a name="return-value"></a>Valeur de retour
 
-Le pointeur stocké `myptr`.
+Pointeur `myptr`stocké.
 
 #### <a name="example"></a>Exemple
 
@@ -256,7 +256,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="op_eq"></a> opérateur =
+### <a name="op_eq"></a>opérateur =
 
 Opérateur d'assignation qui transfère la propriété d'un objet `auto_ptr` à un autre.
 
@@ -278,13 +278,13 @@ Référence à un objet de type `auto_ptr<Type>`.
 
 #### <a name="remarks"></a>Notes
 
-L’assignation évalue l’expression `delete myptr`, mais uniquement si le pointeur stocké `myptr` modifications suite à l’affectation. Il transfère ensuite la propriété du pointeur stocké dans *droit*, en stockant *droit*.[ mise en production](#release) dans `myptr`. La fonction retourne __\*this__.
+L’assignation évalue l’expression `delete myptr`, mais uniquement si le pointeur `myptr` stocké change à la suite de l’assignation. Il transfère ensuite la propriété du pointeur stocké à *droite*, en stockant *Right*. [version](#release) de `myptr`. La fonction retourne __\*this__.
 
-#### <a name="example"></a>Exemples
+#### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de l’opérateur de membre, consultez [auto_ptr](#auto_ptr).
+Pour obtenir un exemple d’utilisation de l’opérateur membre, consultez [auto_ptr](#auto_ptr).
 
-### <a name="op_star"></a> opérateur *
+### <a name="op_star"></a>and
 
 Opérateur de déréférencement pour les objets de type `auto_ptr`.
 
@@ -294,7 +294,7 @@ Type& operator*() const throw();
 
 #### <a name="return-value"></a>Valeur de retour
 
-Une référence à un objet de type `Type` qui possède le pointeur.
+Référence à un objet de type `Type` dont le pointeur est propriétaire.
 
 #### <a name="remarks"></a>Notes
 
@@ -302,9 +302,9 @@ L’opérateur d’indirection retourne `*`[get](#get). Par conséquent, le poin
 
 #### <a name="example"></a>Exemple
 
-Pour obtenir un exemple montrant comment utiliser la fonction membre, consultez [auto_ptr](#auto_ptr).
+Pour obtenir un exemple d’utilisation de la fonction membre, consultez [auto_ptr](#auto_ptr).
 
-### <a name="op_arrow"></a> operator-&gt;
+### <a name="op_arrow"></a>and&gt;
 
 Opérateur pour autoriser l'accès aux membres.
 
@@ -314,17 +314,17 @@ Type * operator->() const throw();
 
 #### <a name="return-value"></a>Valeur de retour
 
-Un membre de l’objet qui `auto_ptr` possède.
+Membre de l’objet qui `auto_ptr` possède.
 
 #### <a name="remarks"></a>Notes
 
-L’opérateur de sélection retourne [get](#get)`( )` de sorte que l’expression *ap*-> **member** se comporte comme (*ap*. **get**( ) )-> **member**, où *ap* est un objet de classe `auto_ptr`\< **Type**>. Par conséquent, le pointeur stocké ne doit pas être null, et `Type` doit être une classe, un struct ou un type d’union avec un `member` membre.
+L’opérateur de sélection retourne [get](#get)`( )` de sorte que l’expression *ap*-> **member** se comporte comme (*ap*. **get**( ) )-> **member**, où *ap* est un objet de classe `auto_ptr`\< **Type**>. Par conséquent, le pointeur stocké ne doit pas avoir `Type` la valeur null et doit être une classe, un struct ou `member` un type d’Union avec un membre.
 
 #### <a name="example"></a>Exemple
 
-Pour obtenir un exemple montrant comment utiliser la fonction membre, consultez [auto_ptr](#auto_ptr).
+Pour obtenir un exemple d’utilisation de la fonction membre, consultez [auto_ptr](#auto_ptr).
 
-### <a name="op_auto_ptr_lt_other_gt"></a> opérateur auto_ptr&lt;autres&gt;
+### <a name="op_auto_ptr_lt_other_gt"></a>auto_ptr&lt;, autre opérateur&gt;
 
 Effectue un cast d'un type de `auto_ptr` vers un autre type de `auto_ptr`.
 
@@ -354,7 +354,7 @@ int main()
 }
 ```
 
-### <a name="op_auto_ptr_ref_lt_other_gt"></a> opérateur auto_ptr_ref&lt;autres&gt;
+### <a name="op_auto_ptr_ref_lt_other_gt"></a>auto_ptr_ref&lt;, autre opérateur&gt;
 
 Effectue un cast d'un `auto_ptr` vers un `auto_ptr_ref`.
 
@@ -415,7 +415,7 @@ main exiting
 ~C:  1
 ```
 
-### <a name="release"></a> Mise en production
+### <a name="release"></a>3/05
 
 Le membre remplace le pointeur stocké `myptr` par un pointeur null et il retourne le pointeur stocké précédemment.
 
@@ -431,7 +431,7 @@ Pointeur stocké précédemment.
 
 Le membre remplace le pointeur stocké `myptr` par un pointeur null et il retourne le pointeur stocké précédemment.
 
-#### <a name="example"></a>Exemple
+#### <a name="example"></a>Exemples
 
 ```cpp
 // auto_ptr_release.cpp
@@ -477,9 +477,9 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="reset"></a> Réinitialiser
+### <a name="reset"></a>initialisation
 
-La fonction membre évalue l’expression `delete myptr`, mais uniquement si la valeur de pointeur stocké `myptr` change à la suite d’un appel de fonction. Elle remplace ensuite le pointeur stocké par `ptr`.
+La fonction membre évalue l’expression `delete myptr`, mais uniquement si la valeur `myptr` de pointeur stocké change à la suite d’un appel de fonction. Elle remplace ensuite le pointeur stocké par `ptr`.
 
 ```cpp
 void reset(Type* ptr = 0);
@@ -487,10 +487,10 @@ void reset(Type* ptr = 0);
 
 #### <a name="parameters"></a>Paramètres
 
-*PTR*\
-Le pointeur spécifié pour remplacer le pointeur stocké `myptr`.
+*effectués*\
+Pointeur spécifié pour remplacer le pointeur `myptr`stocké.
 
-#### <a name="example"></a>Exemples
+#### <a name="example"></a>Exemple
 
 ```cpp
 // auto_ptr_reset.cpp
@@ -539,4 +539,4 @@ Destructing 00311B88 Value: 6
 
 ## <a name="see-also"></a>Voir aussi
 
-[unique_ptr, classe](../standard-library/unique-ptr-class.md)<br/>
+[unique_ptr, classe](../standard-library/unique-ptr-class.md)

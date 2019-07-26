@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - stdext::unchecked_array_iterator
 ms.assetid: 693b3b30-4e3a-465b-be06-409700bc50b1
-ms.openlocfilehash: 9b3db474bedca50922334bd4dbd09c71d4e6e987
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5344a108f32b694b9dafac78dbb8eb7064cdf4cc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399341"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455005"
 ---
 # <a name="uncheckedarrayiterator-class"></a>unchecked_array_iterator, classe
 
@@ -39,5 +39,5 @@ Il s’agit de la version non vérifiée de la [classe checked_array_iterator](.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

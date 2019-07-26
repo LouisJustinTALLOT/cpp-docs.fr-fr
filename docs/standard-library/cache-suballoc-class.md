@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 06d0ef390e6ae1980b9ab20b8ceb67213837148b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380115"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449654"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc, classe
 
@@ -32,13 +32,13 @@ class cache_suballoc
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*Sz*|Nombre d’éléments du tableau à allouer.|
+|*SZ*|Nombre d’éléments du tableau à allouer.|
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle cache_suballoc stocke les blocs de mémoire désalloués dans une liste de libération avec une longueur illimitée, à l’aide de `freelist<sizeof(Type), max_unbounded>`et sous-alloue des blocs de mémoire à partir d’un segment plus grand alloué avec **opérateur new** lorsque la liste de libération est vide.
+La classe de modèle cache_suballoc stocke les blocs de mémoire désalloués dans une liste libre avec une `freelist<sizeof(Type), max_unbounded>`longueur illimitée, à l’aide de et sous-alloue des blocs de mémoire à partir d’un plus grand segment alloué avec l' **opérateur New** lorsque la liste libre est vide.
 
-Chaque segment contient `Sz * Nelts` octets de mémoire utilisable et les données qui **opérateur new** et **opérateur delete** nécessitent. Les segments alloués ne sont jamais libérés.
+Chaque bloc contient `Sz * Nelts` des octets de mémoire utilisable et les données que l’opérateur **New** et l' **opérateur delete** requièrent. Les segments alloués ne sont jamais libérés.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -108,4 +108,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

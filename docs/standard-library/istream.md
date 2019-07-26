@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 2e39c0de5b11c9aa0a4c69f0142841469ef798c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ad27bf849e8d4b9188868b9a29bf423b4cafafa
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413279"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458743"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -29,8 +29,8 @@ Définit la classe de modèle basic_istream, qui sert d'intermédiaire pour l'ex
 
 |Nom de type|Description|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|Un type `basic_iostream` spécialisé sur **char**.|
-|[istream](../standard-library/istream-typedefs.md#istream)|Un type `basic_istream` spécialisé sur **char**.|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|Type `basic_iostream` spécialisé sur **char**.|
+|[istream](../standard-library/istream-typedefs.md#istream)|Type `basic_istream` spécialisé sur **char**.|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|Type `basic_iostream` spécialisé sur **wchar**.|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|Type `basic_istream` spécialisé sur **wchar**.|
 
@@ -52,10 +52,10 @@ Définit la classe de modèle basic_istream, qui sert d'intermédiaire pour l'ex
 |Classe|Description|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|Classe de flux qui peut effectuer à la fois l'entrée et la sortie.|
-|[basic_istream](../standard-library/basic-istream-class.md)|La classe de modèle décrit un objet qui contrôle l’extraction d’éléments et objets encodés à partir d’une mémoire tampon de flux avec des éléments de type `Elem`, également appelé [char_type](../standard-library/basic-ios-class.md#char_type), dont les caractéristiques sont déterminées par la classe `Tr`, également appelé [traits_type](../standard-library/basic-ios-class.md#traits_type).|
+|[basic_istream](../standard-library/basic-istream-class.md)|La classe de modèle décrit un objet qui contrôle l’extraction d’éléments et d’objets encodés à partir d’une mémoire `Elem`tampon de flux avec des éléments de type, également appelé [char_type](../standard-library/basic-ios-class.md#char_type), dont les `Tr`caractéristiques sont déterminées par la classe, également appelée [traits_type](../standard-library/basic-ios-class.md#traits_type).|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream, programmation](../standard-library/iostream-programming.md)<br/>
-[iostreams, conventions](../standard-library/iostreams-conventions.md)<br/>
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream, programmation](../standard-library/iostream-programming.md)\
+[iostreams, conventions](../standard-library/iostreams-conventions.md)

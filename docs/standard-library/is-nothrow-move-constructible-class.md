@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_move_constructible
 ms.assetid: d186d97b-7b89-470a-8d30-993046a83379
-ms.openlocfilehash: f1f98a6172e37bd72182ccc043ca4612b71675d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f1ccdba11f62fcbeaf54162f80f0717feaa2fa1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413647"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455859"
 ---
 # <a name="isnothrowmoveconstructible-class"></a>is_nothrow_move_constructible, classe
 
@@ -26,12 +26,12 @@ struct is_nothrow_move_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*<br/>
+*Ty*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *Ty* a un constructeur de déplacement nothrow, sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* a un constructeur de déplacement nothrow. sinon, sa valeur est false.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -41,4 +41,4 @@ Une instance du prédicat de type a la valeur true si le type *Ty* a un construc
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

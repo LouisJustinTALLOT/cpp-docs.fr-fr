@@ -15,12 +15,12 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: bf767c12a19e4ae47c34a8f01e1b1a2f1e028eb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 972ba83afb5478cd89314817ba823b8d5657c9c8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399432"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450417"
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine, classe
 
@@ -35,10 +35,10 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Paramètres
 
-*Moteur*<br/>
+*Rotation*\
 Type de moteur de base.
 
-*K*<br/>
+*DK*\
 **Taille de table**. Nombre d'éléments dans la mémoire tampon (table). **Condition préalable** : `0 < K`
 
 ## <a name="members"></a>Membres
@@ -52,7 +52,7 @@ Pour plus d’informations sur les membres moteurs, consultez [\<random>](../sta
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle décrit un *adaptateur de moteur* qui produit des valeurs en réordonnançant les valeurs retournées par son moteur de base. Chaque constructeur remplit la table interne avec *K* valeurs retournées par le moteur de base, et un élément aléatoire est sélectionné dans la table lorsqu’une valeur est demandée.
+Cette classe de modèle décrit un *adaptateur de moteur* qui produit des valeurs en réordonnançant les valeurs retournées par son moteur de base. Chaque constructeur remplit la table interne avec des valeurs *K* retournées par le moteur de base et un élément aléatoire est sélectionné à partir de la table quand une valeur est demandée.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -62,4 +62,4 @@ Cette classe de modèle décrit un *adaptateur de moteur* qui produit des valeur
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

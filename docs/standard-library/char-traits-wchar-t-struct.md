@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<wchar_t> class
 ms.assetid: 31f34072-04d6-4871-88fe-48e17d473484
-ms.openlocfilehash: ef40a34b5aa874c8bdf48aeb7657ae3496160eec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2f8a882020ddb3d87436d08b3d85ea9407b1c08
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379218"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458978"
 ---
 # <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt;, struct
 
@@ -37,5 +37,5 @@ La spécialisation permet au struct de tirer parti des fonctions de bibliothèqu
 
 ## <a name="see-also"></a>Voir aussi
 
-[char_traits, struct](../standard-library/char-traits-struct.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[char_traits, struct](../standard-library/char-traits-struct.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_literal_type
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
-ms.openlocfilehash: 804ef0462308b967fc0c4c95d8dfa96476475aab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 450c32d050a18f64e71992bd7a30412ebafe93de
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336465"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456215"
 ---
 # <a name="isliteraltype-class"></a>is_literal_type, classe
 
@@ -26,12 +26,12 @@ struct is_literal_type;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *T* est un *type littéral*, sinon, sa valeur est false. Un type littéral est **void**, un type scalaire, un type référence, un tableau de type littéral ou un type de classe littéral. Un type de classe littéral est un type de classe qui a un destructeur trivial, est un type d’agrégation ou a au moins un constructeur `constexpr` sans déplacement et sans copie, et toutes ses classes de base et données membres non statiques sont des types littéraux non volatiles. Bien que le type d’un littéral soit toujours un type littéral, le concept de type littéral inclut tout ce que le compilateur peut évaluer en tant que `constexpr` au moment de la compilation.
+Une instance du prédicat de type a la valeur true si le type *T* est un *type littéral*; sinon, sa valeur est false. Un type littéral est **void**, un type scalaire, un type référence, un tableau de type littéral ou un type de classe littérale. Un type de classe littéral est un type de classe qui a un destructeur trivial, est un type d’agrégation ou a au moins un constructeur `constexpr` sans déplacement et sans copie, et toutes ses classes de base et données membres non statiques sont des types littéraux non volatiles. Bien que le type d’un littéral soit toujours un type littéral, le concept de type littéral inclut tout ce que le compilateur peut évaluer en tant que `constexpr` au moment de la compilation.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -41,4 +41,4 @@ Une instance du prédicat de type a la valeur true si le type *T* est un *type l
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

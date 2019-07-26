@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: 4365f0aaf8fdd4d43159b78acf6dcffa4fcbe428
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e6eef7152e45e8177c451fc25592fab85c58ccb5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246551"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449761"
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
 
-Incluez l’en-tête \<system_error > pour définir la classe d’exception `system_error` et les modèles associés pour le traitement des erreurs de système de bas niveau.
+Incluez l' \<en-tête system_error > pour définir `system_error` la classe d’exception et les modèles associés pour le traitement des erreurs système de bas niveau.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -71,4 +71,4 @@ Incluez l’en-tête \<system_error > pour définir la classe d’exception `sys
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)

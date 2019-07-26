@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_destructible
 ms.assetid: 3f7a787d-2448-40c5-ac51-a228318e02ce
-ms.openlocfilehash: 61d626c308338595a64031a45908ab299ae1a957
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a978b7cc32e6de3d4b1d811b9aa6f52cf0370d7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409770"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459638"
 ---
 # <a name="istriviallydestructible-class"></a>is_trivially_destructible, classe
 
@@ -26,12 +26,12 @@ struct is_trivially_destructible;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *T* est un type destructible et que le destructeur est connu au compilateur de n’utiliser aucune opération non triviale. Sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *T* est un type destructible et que le destructeur est connu du compilateur pour n’utiliser aucune opération non triviale. Sinon, sa valeur est false.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -41,4 +41,4 @@ Une instance du prédicat de type a la valeur true si le type *T* est un type de
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)
