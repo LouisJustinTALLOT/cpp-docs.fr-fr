@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 3f3874b1d439326c97b015007ad8d5ede06341f7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245390"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459192"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -32,14 +32,14 @@ Le langage C++ et la bibliothèque standard C++ prennent en charge deux types de
 
 - tableaux de caractères se terminant par un caractère Null et souvent appelés chaînes C ;
 
-- Objets de classe de modèle, de type `basic_string`, qui gèrent tous les **char**-comme arguments template.
+- Objets de classe de modèle, `basic_string`de type, qui gèrent tous les arguments de modèle de type **char**.
 
 ### <a name="typedefs"></a>Typedef
 
 |Nom de type|Description|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Un type qui décrit une spécialisation de la classe de modèle `basic_string` avec des éléments de type **char** comme un `string`.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Un type qui décrit une spécialisation de la classe de modèle `basic_string` avec des éléments de type **wchar_t** comme un `wstring`.|
+|[string](../standard-library/string-typedefs.md#string)|Type qui décrit une spécialisation de la classe `basic_string` de modèle avec des éléments de type  `string`char en tant que.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Type qui décrit une spécialisation de la classe `basic_string` de modèle avec des éléments de type  `wstring`wchar_t en tant que.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Type qui décrit une spécialisation de la classe de modèle `basic_string` basée sur des éléments de type `char16_t`.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Type qui décrit une spécialisation de la classe de modèle `basic_string` basée sur des éléments de type `char32_t`.|
 
@@ -63,13 +63,13 @@ Le langage C++ et la bibliothèque standard C++ prennent en charge deux types de
 |-|-|
 |[hash]()||
 |[swap](../standard-library/string-functions.md#swap)|Échange les tableaux de caractères de deux chaînes.|
-|[stod](../standard-library/string-functions.md#stod)|Convertit une séquence de caractères à un **double**.|
-|[stof](../standard-library/string-functions.md#stof)|Convertit une séquence de caractères à un **float**.|
+|[stod](../standard-library/string-functions.md#stod)|Convertit une séquence de caractères en valeur **double**.|
+|[stof](../standard-library/string-functions.md#stof)|Convertit une séquence de caractères en valeur **float**.|
 |[stoi](../standard-library/string-functions.md#stoi)|Convertit une séquence de caractères en entier.|
-|[stold](../standard-library/string-functions.md#stold)|Convertit une séquence de caractères à un **long double**.|
-|[stoll](../standard-library/string-functions.md#stoll)|Convertit une séquence de caractères à un **longue**.|
-|[stoul](../standard-library/string-functions.md#stoul)|Convertit une séquence de caractères à un **unsigned long**.|
-|[stoull](../standard-library/string-functions.md#stoull)|Convertit une séquence de caractères à un **unsigned long long**.|
+|[stold](../standard-library/string-functions.md#stold)|Convertit une séquence de caractères en **long double**.|
+|[stoll](../standard-library/string-functions.md#stoll)|Convertit une séquence de caractères en **longue**longue.|
+|[stoul](../standard-library/string-functions.md#stoul)|Convertit une séquence de caractères en un entier **long non signé**.|
+|[stoull](../standard-library/string-functions.md#stoull)|Convertit une séquence de caractères en une valeur unsigned **long long**.|
 |[to_string](../standard-library/string-functions.md#to_string)|Convertit une valeur en `string`.|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Convertit une valeur en `string` large.|
 
@@ -77,7 +77,7 @@ Le langage C++ et la bibliothèque standard C++ prennent en charge deux types de
 
 |Fonction|Description|
 |-|-|
-|[GetLine modèle](../standard-library/string-functions.md#getline)|Extrait des chaînes du flux d'entrée, ligne par ligne.|
+|[Modèle getline](../standard-library/string-functions.md#getline)|Extrait des chaînes du flux d'entrée, ligne par ligne.|
 
 ### <a name="classes"></a>Classes
 
@@ -103,5 +103,5 @@ Le langage C++ et la bibliothèque standard C++ prennent en charge deux types de
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

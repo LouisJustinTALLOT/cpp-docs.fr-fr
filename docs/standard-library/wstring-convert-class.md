@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: df3b003289dcd86e8033521d8cb0cacdbb7dfbd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35689f79f8987cb55c4578869369f35d8656faec
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410796"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450898"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert, classe
 
@@ -42,10 +42,10 @@ class wstring_convert
 
 ### <a name="parameters"></a>Paramètres
 
-*Codecvt*<br/>
+*Codecvt*\
 La facette [locale](../standard-library/locale-class.md) qui représente l’objet de conversion.
 
-*Elem*<br/>
+*Elem*\
 Type d'élément à caractères larges.
 
 ## <a name="remarks"></a>Notes
@@ -139,7 +139,7 @@ wide_string from_bytes(const char* first, const char* last);
 |---------------|-----------------|
 |*Byte*|Séquence d'octets à élément unique à convertir.|
 |*ptr*|Séquence de caractères de style C et se terminant par null à convertir.|
-|*Bstr*|[byte_string](#byte_string) à convertir.|
+|*BSTR*|[byte_string](#byte_string) à convertir.|
 |*first*|Premier caractère d'une plage de caractères à convertir.|
 |*last*|Dernier caractère d'une plage de caractères à convertir.|
 
@@ -149,7 +149,7 @@ Objet de chaîne étendue résultant de la conversion.
 
 ### <a name="remarks"></a>Notes
 
-Si le [état de la conversion](../standard-library/wstring-convert-class.md) objet a été *pas* construit avec une valeur explicite, il est défini sur sa valeur par défaut (l’état de conversion initial) avant le début de la conversion. Dans le cas contraire, il reste inchangé.
+Si l’objet d' [État de conversion](../standard-library/wstring-convert-class.md) n’a *pas* été construit avec une valeur explicite, il est défini sur sa valeur par défaut (l’état de conversion initial) avant le début de la conversion. Dans le cas contraire, il reste inchangé.
 
 Le nombre d'éléments d'entrée convertis correctement est stocké dans l'objet de compteur de conversions. Si aucune erreur de conversion ne se produit, la fonction membre retourne la chaîne étendue convertie. Sinon, si l'objet a été construit avec un initialiseur pour le message d'erreur de chaîne étendue, la fonction membre retourne l'objet de message d'erreur de chaîne étendue. Sinon, la fonction membre lève un objet de classe [range_error](../standard-library/range-error-class.md).
 
@@ -208,13 +208,13 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |---------------|-----------------|
 |*Char*|Caractère large à convertir.|
 |*Wptr*|Séquence de style C, se terminant par null et commençant à `wptr`, à convertir.|
-|*Wstr*|[wide_string](#wide_string) à convertir.|
+|*WSTR*|[wide_string](#wide_string) à convertir.|
 |*first*|Premier élément dans une plage d'éléments à convertir.|
 |*last*|Dernier élément dans une plage d'éléments à convertir.|
 
 ### <a name="remarks"></a>Notes
 
-Si le [état de la conversion](../standard-library/wstring-convert-class.md) objet a été *pas* construit avec une valeur explicite, il est défini sur sa valeur par défaut (l’état de conversion initial) avant le début de la conversion. Dans le cas contraire, il reste inchangé.
+Si l’objet d' [État de conversion](../standard-library/wstring-convert-class.md) n’a *pas* été construit avec une valeur explicite, il est défini sur sa valeur par défaut (l’état de conversion initial) avant le début de la conversion. Dans le cas contraire, il reste inchangé.
 
 Le nombre d'éléments d'entrée convertis correctement est stocké dans l'objet de compteur de conversions. Si aucune erreur de conversion ne se produit, la fonction membre retourne la chaîne d'octets convertie. Sinon, si l'objet a été construit avec un initialiseur pour le message d'erreur de chaîne d'octets, la fonction membre retourne l'objet de message d'erreur de chaîne d'octets. Sinon, la fonction membre lève un objet de classe [range_error](../standard-library/range-error-class.md).
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - streambuf header
 ms.assetid: 4365b25c-5831-488b-b9c2-867bfe961b89
-ms.openlocfilehash: 15bfa86a3c697442b66a5f77aa6ea7a9aba5643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87fb74f62abffdd62b8c0179b13f53d96439d6c6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412369"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449579"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
@@ -27,8 +27,8 @@ Incluez l’en-tête standard iostreams \<streambuf> pour définir la classe de 
 
 |Nom de type|Description|
 |-|-|
-|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Une spécialisation de `basic_streambuf` qui utilise **char** en tant que les paramètres du modèle.|
-|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Une spécialisation de `basic_streambuf` qui utilise **wchar_t** en tant que les paramètres du modèle.|
+|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Spécialisation de `basic_streambuf` qui utilise **char** comme paramètres de modèle.|
+|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Spécialisation de `basic_streambuf` qui utilise **wchar_t** comme paramètres de modèle.|
 
 ### <a name="classes"></a>Classes
 
@@ -38,7 +38,7 @@ Incluez l’en-tête standard iostreams \<streambuf> pour définir la classe de 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream, programmation](../standard-library/iostream-programming.md)<br/>
-[iostreams, conventions](../standard-library/iostreams-conventions.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream, programmation](../standard-library/iostream-programming.md)\
+[iostreams, conventions](../standard-library/iostreams-conventions.md)

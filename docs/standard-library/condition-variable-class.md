@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 69f356301ce5b546c8bebe9429ca64fa61eff404
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244624"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449462"
 ---
 # <a name="conditionvariable-class"></a>condition_variable, classe
 
@@ -56,7 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|Bloque un thread et définit un intervalle de temps après lequel le thread est débloqué.|
 |[wait_until](#wait_until)|Bloque un thread et définit un point dans le temps maximal auquel le thread est débloqué.|
 
-## <a name="condition_variable"></a> CONDITION_VARIABLE
+## <a name="condition_variable"></a>condition_variable
 
 Construit un objet `condition_variable`.
 
@@ -68,7 +68,7 @@ condition_variable();
 
 Si la mémoire disponible n’est pas suffisante, le constructeur lève un objet [system_error](../standard-library/system-error-class.md) avec le code d’erreur `not_enough_memory`. Si l’objet ne peut pas être construit, car une autre ressource n’est pas disponible, le constructeur lève un objet `system_error` avec le code d’erreur `resource_unavailable_try_again`.
 
-## <a name="native_handle"></a> native_handle
+## <a name="native_handle"></a>native_handle
 
 Retourne le type spécifique de l’implémentation qui représente le descripteur condition_variable.
 
@@ -80,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` est défini comme un pointeur vers les structures de données internes du runtime d’accès concurrentiel.
 
-## <a name="notify_all"></a> notify_all
+## <a name="notify_all"></a>notify_all
 
 Débloque tous les threads qui attendent l’objet `condition_variable`.
 
@@ -88,7 +88,7 @@ Débloque tous les threads qui attendent l’objet `condition_variable`.
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a> notify_one
+## <a name="notify_one"></a>notify_one
 
 Débloque un des threads qui attendent l’objet `condition_variable`.
 
@@ -96,7 +96,7 @@ Débloque un des threads qui attendent l’objet `condition_variable`.
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a> attente
+## <a name="wait"></a>qu'
 
 Bloque un thread.
 
@@ -109,10 +109,10 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Paramètres
 
-*Lck*\
+*LCK*\
 Objet [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Pred*\
+*Prédit*\
 Toute expression qui retourne **true** ou **false**.
 
 ### <a name="remarks"></a>Notes
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a> wait_for
+## <a name="wait_for"></a>wait_for
 
 Bloque un thread et définit un intervalle de temps après lequel le thread est débloqué.
 
@@ -145,24 +145,24 @@ bool wait_for(
 
 ### <a name="parameters"></a>Paramètres
 
-*Lck*\
+*LCK*\
 Objet [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
 *Rel_time*\
 Objet `chrono::duration` qui spécifie le délai avant l’éveil du thread.
 
-*Pred*\
+*Prédit*\
 Toute expression qui retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La première méthode retourne `cv_status::timeout` si l’attente termine quand *Rel_time* s’est écoulé. Dans le cas contraire, la méthode retourne `cv_status::no_timeout`.
+La première méthode retourne `cv_status::timeout` si l’attente se termine quand *Rel_time* s’est écoulé. Dans le cas contraire, la méthode retourne `cv_status::no_timeout`.
 
-La deuxième méthode retourne la valeur de *Pred*.
+La deuxième méthode retourne la valeur de *prédit*.
 
 ### <a name="remarks"></a>Notes
 
-La première méthode se bloque jusqu'à ce que le `condition_variable` objet est signalé par un appel à [notify_one](#notify_one) ou [notify_all](#notify_all) ou jusqu'à ce que l’intervalle de temps *Rel_time* s’est écoulé. Elle peut également s’éveiller sans motif.
+La première méthode se bloque `condition_variable` jusqu’à ce que l’objet soit signalé par un appel à [notify_one](#notify_one) ou [notify_all](#notify_all) ou jusqu’à ce que l’intervalle de temps *Rel_time* s’est écoulé. Elle peut également s’éveiller sans motif.
 
 La deuxième méthode exécute le code suivant.
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a> wait_until
+## <a name="wait_until"></a>wait_until
 
 Bloque un thread et définit un point dans le temps maximal auquel le thread est débloqué.
 
@@ -203,20 +203,20 @@ bool wait_until(
 
 ### <a name="parameters"></a>Paramètres
 
-*Lck*\
+*LCK*\
 Objet [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
 *Abs_time*\
 Objet [chrono::time_point](../standard-library/time-point-class.md).
 
-*Pred*\
+*Prédit*\
 Toute expression qui retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Les méthodes qui retournent un `cv_status` tapez retour `cv_status::timeout` si l’attente termine quand *Abs_time* s’écoule. Sinon, les méthodes retournent `cv_status::no_timeout`.
+Les méthodes qui retournent `cv_status::timeout` un `cv_status` type retournent si l’attente se termine lorsque *Abs_time* s’arrête. Sinon, les méthodes retournent `cv_status::no_timeout`.
 
-Les méthodes qui retournent un **bool** retournent la valeur de *Pred*.
+Les méthodes qui retournent un **bool** retournent la valeur de *prédit*.
 
 ### <a name="remarks"></a>Notes
 
@@ -236,5 +236,5 @@ Les troisième et quatrième méthodes utilisent un pointeur vers un objet de ty
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[<condition_variable>](../standard-library/condition-variable.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[<condition_variable>](../standard-library/condition-variable.md)

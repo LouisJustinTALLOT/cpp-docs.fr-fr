@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: ce195742605c3dd2e127c84ac2f4e1e696c75bd0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5862ddd812308c7bf81a5029249caf7e9b4a1168
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246697"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453554"
 ---
 # <a name="ltnumericgt"></a>&lt;numeric&gt;
 
@@ -19,7 +19,7 @@ Définit les fonctions de modèle de conteneur qui exécutent des algorithmes po
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête**: \<numérique >
+**En-tête**: \<Numeric >
 
 **Espace de noms :** std
 
@@ -38,19 +38,19 @@ Les algorithmes étendent les actions prises en charge par les opérations et le
 |[accumulate](../standard-library/numeric-functions.md#accumulate)|Calcule la somme de tous les éléments d'une plage spécifiée (y compris une valeur initiale) en calculant des sommes partielles successives, ou calcule le résultat de résultats partiels consécutifs qui sont obtenus en utilisant une opération binaire spécifiée au lieu de l'opération de somme.|
 |[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)|Détermine les différences successives entre chaque élément et son prédécesseur au sein d'une plage d'entrée et génère les résultats dans une plage de destination, ou calcule le résultat d'une procédure généralisée dans laquelle l'opération de différence est remplacée par une autre opération binaire spécifiée.|
 |[exclusive_scan](../standard-library/numeric-functions.md#exclusive_scan)||
-|[Gcd](../standard-library/numeric-functions.md#gcd)||
+|[GCD](../standard-library/numeric-functions.md#gcd)||
 |[inclusive_scan](../standard-library/numeric-functions.md#inclusive_scan)||
 |[inner_product](../standard-library/numeric-functions.md#inner_product)|Calcule la somme du produit d'éléments de deux plages et l'ajoute à une valeur initiale spécifiée, ou calcule le résultat d'une procédure généralisée dans laquelle les opérations de somme et de produit sont remplacées par d'autres opérations binaires spécifiées.|
 |[iota](../standard-library/numeric-functions.md#iota)|Stocke une valeur de départ, en commençant par le premier élément et en remplissant avec des incréments successifs de la valeur (`value++`) de chaque élément de l'intervalle `[first, last)`.|
-|[Gestionnaire de configuration local](../standard-library/numeric-functions.md#lcm)||
+|[LCM](../standard-library/numeric-functions.md#lcm)||
 |[partial_sum](../standard-library/numeric-functions.md#partial_sum)|Calcule une série de sommes dans une plage d’entrée à partir du premier élément jusqu’à l’élément numéro *i*, puis stocke le résultat de chaque somme dans l’élément numéro *i* d’une plage de destination, ou calcule le résultat d’une procédure généralisée où l’opération de somme est remplacée par une autre opération binaire spécifiée.|
-|[réduire](../standard-library/numeric-functions.md#reduce)||
+|[abaisse](../standard-library/numeric-functions.md#reduce)||
 |[transform_exclusive_scan](../standard-library/numeric-functions.md#transform_exclusive_scan)||
 |[transform_inclusive_scan](../standard-library/numeric-functions.md#transform_inclusive_scan)||
 |[transform_reduce](../standard-library/numeric-functions.md#transform_reduce)||
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

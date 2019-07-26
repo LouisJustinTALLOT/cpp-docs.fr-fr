@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_copy_constructible
 ms.assetid: 4274cef5-afdd-4f2d-bc83-7562e7944ddf
-ms.openlocfilehash: aa6d6b19ae2bd5d6967c57db61c5697c0c6153e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8c4026da424e77b57555dd4c342c9ac7a386591
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413435"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447991"
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible, classe
 
@@ -26,14 +26,14 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *T* est une classe qui a un constructeur de copie triviaux, sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *T* est une classe qui a un constructeur de copie trivial. sinon, sa valeur est false.
 
-Un constructeur de copie pour une classe *T* est trivial s’il est implicitement déclaré, la classe *T* n’a pas les fonctions virtuelles ni les bases virtuelles, toutes les bases directes de classe *T* ont constructeurs de copie triviaux, les classes de tous les membres de données non statiques de type de classe possèdent des constructeurs de copie triviaux, et les classes de tous les membres de données non statiques de type tableau de classe possèdent des constructeurs de copie trivial.
+Un constructeur de copie pour une classe *t* est trivial s’il est déclaré implicitement, la classe *t* n’a pas de fonctions virtuelles ou de bases virtuelles, toutes les bases directes de la classe *t* ont des constructeurs de copie trivial, les classes de tous les membres de données non statiques de type classe ont des constructeurs de copie trivial, et les classes de tous les membres de données non statiques de type tableau de classe ont des constructeurs de copie trivial.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -43,4 +43,4 @@ Un constructeur de copie pour une classe *T* est trivial s’il est implicitemen
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

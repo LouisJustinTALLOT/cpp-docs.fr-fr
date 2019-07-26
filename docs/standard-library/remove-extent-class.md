@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_extent class
 - remove_extent
 ms.assetid: b9320862-3891-49fc-80bc-571eb2c035cf
-ms.openlocfilehash: 1425de12158354c649ec355124f8c255255b29c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73af53d2b93d794e2479a33721bfeae71e531794
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368875"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451287"
 ---
 # <a name="removeextent-class"></a>remove_extent, classe
 
@@ -30,12 +30,12 @@ using remove_extent_t = typename remove_extent<T>::type;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Une instance de `remove_extent<T>` contient un type modifié qui est `T1` lorsque *T* est au format `T1[N]`, sinon *T*.
+Une instance de `remove_extent<T>` contient un type modifié qui est `T1` quand *t* se présente sous la forme `T1[N]`, sinon *t*.
 
 ## <a name="example"></a>Exemple
 
@@ -72,5 +72,5 @@ remove_extent_t<int[5][10]> == int [10]
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_all_extents, classe](../standard-library/remove-all-extents-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_all_extents, classe](../standard-library/remove-all-extents-class.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::mutex [C++], native_handle
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
-ms.openlocfilehash: 7766b063eb89a14a94eaa41ebfa17f3e4a1c102e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 099cf17db7b99f9cd1d953a603db70f75c33358e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158576"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457059"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex, classe (Bibliothèque standard C++)
 
@@ -53,7 +53,7 @@ class mutex;
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<mutex >
+**En-tête:** \<> mutex
 
 **Espace de noms :** std
 
@@ -111,7 +111,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la méthode obtient correctement la propriété de la `mutex`; sinon, **false**.
+**true** si la méthode obtient avec succès la propriété de `mutex`; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -131,5 +131,5 @@ Si le thread appelant ne possède pas `mutex`, le comportement est indéfini.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-ms.openlocfilehash: 1dd62a6141e690d3bd4dcad69aa107c126a0f386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64c9be76cb92d818e40714dd141ded3a8cc17c8a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224101"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455619"
 ---
 # <a name="iterator-struct"></a>iterator, struct
 
-Struct de base vide permettant de garantir qu’une classe d’itérateur définie par l’utilisateur fonctionne correctement avec `iterator_trait`s.
+Struct de base vide utilisé pour garantir qu’une classe d’itérateur définie par l’utilisateur fonctionne `iterator_trait`correctement avec les s.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,7 +47,7 @@ Le struct de modèle sert de type de base pour tous les itérateurs. Il définit
 
 - `reference` (synonyme du paramètre du modèle `Reference`).
 
-Notez que `value_type` ne doit pas être une constante de type, même lorsque `pointer` pointe vers un objet de **const** `Type` et référence désigne un objet de **const** `Type`.
+Notez que `value_type` ne doit pas être un type de constante `pointer` même si  `Type` les points d’un objet de const et de référence désignent un objet **const** `Type`.
 
 ## <a name="example"></a>Exemple
 
@@ -61,6 +61,6 @@ Pour obtenir un exemple montrant comment déclarer et utiliser les types de la c
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

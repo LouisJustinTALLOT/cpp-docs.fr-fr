@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: 389d7c96867ee0ca597330c1bee61b71e9777802
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 752226c9cacfdd36b93890502d62187f7b44a8da
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348937"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454937"
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution, classe
 
@@ -71,8 +71,8 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType*<br/>
-Par défaut est le type de résultat à virgule flottante, **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType*\
+Le type de résultat à virgule flottante, par défaut, est **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -189,20 +189,20 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*a*<br/>
+*un*\
 Limite inférieure pour les valeurs aléatoires, valeur comprise.
 
-*b*<br/>
+*p*\
 Limite supérieure pour les valeurs aléatoires, valeur non comprise.
 
-*parm*<br/>
+*Parm*\
 Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
 **Condition préalable :** `a < b`
 
-Le premier constructeur construit un objet dont stockée *un* valeur conserve la valeur *un* et dont stockée *b* valeur conserve la valeur *b*.
+Le premier constructeur construit un objet dont la valeur *stockée* contient la valeur *a* et dont la valeur *b* stockée contient la valeur *b*.
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
@@ -224,13 +224,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*a*<br/>
+*un*\
 Limite inférieure pour les valeurs aléatoires, valeur comprise.
 
-*b*<br/>
+*p*\
 Limite supérieure pour les valeurs aléatoires, valeur non comprise.
 
-*right*<br/>
+*Oui*\
 Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes
@@ -241,4 +241,4 @@ Cette structure peut être passée au constructeur de classe de la distribution 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mask_array class
 ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
-ms.openlocfilehash: 108c942bef33e44b515d46e953c9d99274e3ce8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9da5e3593288be02819330e11b60e306784054dc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412980"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460141"
 ---
 # <a name="maskarray-class"></a>mask_array (classe)
 
@@ -21,13 +21,13 @@ Classe de modèle interne auxiliaire qui prend en charge les objets qui sont des
 
 ## <a name="remarks"></a>Notes
 
-La classe décrit un objet qui stocke une référence à un objet `va` de classe [valarray](../standard-library/valarray-class.md)**\<Type >**, ainsi qu’un objet `ba` de classe [ valarray\<bool >](../standard-library/valarray-bool-class.md), qui décrit la séquence d’éléments à sélectionner à partir de la `valarray<Type>` objet.
+La classe décrit un objet qui stocke une référence à un `va` objet de classe [valarray](../standard-library/valarray-class.md) **\<de type >** , ainsi qu' `ba` un objet de classe [\<valarray bool >](../standard-library/valarray-bool-class.md), qui décrit le séquence d’éléments à sélectionner à partir `valarray<Type>` de l’objet.
 
-Vous construisez un `mask_array<Type>` objet uniquement en écrivant une expression sous la forme [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). Les fonctions membres de classe mask_array se comportent ensuite comme les signatures de fonction correspondantes définies pour `valarray<Type>`, sauf que seule la séquence d’éléments sélectionnée est affectée.
+Vous construisez `mask_array<Type>` un objet uniquement en écrivant une expression de la forme [va&#91;BA&#93;](../standard-library/valarray-class.md#op_at). Les fonctions membres de la classe mask_array se comportent ensuite comme les signatures `valarray<Type>`de fonctions correspondantes définies pour, sauf que seule la séquence d’éléments sélectionnés est affectée.
 
-La séquence se compose d’au plus `ba.size` éléments. Un élément *J* n’est inclus que si **ba**[ *J*] a la valeur true. Par conséquent, il existe autant d’éléments dans la séquence qu’il sont a des éléments true dans `ba`. Si `I` est l’index de l’élément true le plus bas dans `ba`, puis **va**[ `I`] est l’élément zéro dans la séquence sélectionnée.
+La séquence se compose de au `ba.size` plus d’éléments. Un élément *J* n’est inclus que si **ba**[ *J*] a la valeur true. Par conséquent, il y a autant d’éléments dans la séquence qu’il y a `ba`d’éléments vrais dans. Si `I` est l’index de l’élément true le plus `ba`bas dans , va `I`[] est l’élément zéro dans la séquence sélectionnée.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // mask_array.cpp
@@ -76,4 +76,4 @@ The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

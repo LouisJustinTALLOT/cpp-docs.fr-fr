@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_signed class
 - is_signed
 ms.assetid: 20ae44d9-22ad-4fbd-b26a-f18c62689451
-ms.openlocfilehash: eacc271697930bec64630c0a1be612bd89eeb91f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 153970412f324f070bb66ae4a1bb6a8c204a5886
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413527"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457505"
 ---
 # <a name="issigned-class"></a>is_signed, classe
 
@@ -27,14 +27,14 @@ struct is_signed;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*<br/>
+*Ty*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *Ty* est un type intégral signé ou un `cv-qualified` un type intégral signé, sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un type intégral signé ou `cv-qualified` un type intégral signé. sinon, sa valeur est false.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // std__type_traits__is_signed.cpp
@@ -77,5 +77,5 @@ is_signed<float> == true
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_unsigned, classe](../standard-library/is-unsigned-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_unsigned, classe](../standard-library/is-unsigned-class.md)

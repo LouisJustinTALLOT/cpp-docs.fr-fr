@@ -9,16 +9,16 @@ helpviewer_keywords:
 - stdext::allocators [C++], allocator_fixed_size
 - stdext::allocator_fixed_size
 ms.assetid: 138f3ef8-b0b3-49c3-9486-58f2213c172f
-ms.openlocfilehash: d050a127fe3e62bf8f4eb4ce56fe25e33f88c041
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ee506838ea723b82f04bba301c19c0149d986bf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411030"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451007"
 ---
 # <a name="allocatorfixedsize-class"></a>allocator_fixed_size, classe
 
-Décrit un objet qui gère l’allocation de stockage et la libération des objets de type *Type* à l’aide d’un cache de type [cache_freelist](../standard-library/cache-freelist-class.md) avec une longueur gérée par [max_fixed_size](../standard-library/max-fixed-size-class.md).
+Décrit un objet qui gère l’allocation et la libération de stockage pour les objets de type type *à l’aide* d’un cache de type [cache_freelist](../standard-library/cache-freelist-class.md) avec une longueur gérée par [max_fixed_size](../standard-library/max-fixed-size-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,7 +35,7 @@ class allocator_fixed_size;
 
 ## <a name="remarks"></a>Notes
 
-Le [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) macro transmet cette classe comme le *nom* paramètre dans l’instruction suivante : `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_fixed_size<10>), SYNC_DEFAULT, allocator_fixed_size);`
+La macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) transmet cette classe en tant que paramètre *Name* dans l’instruction suivante:`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_fixed_size<10>), SYNC_DEFAULT, allocator_fixed_size);`
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -45,4 +45,4 @@ Le [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

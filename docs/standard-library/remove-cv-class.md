@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_cv class
 - remove_cv
 ms.assetid: 8502602a-1c80-479c-84e0-33bd1d6496d6
-ms.openlocfilehash: dcabf9b4687d473898dea98f1001647299a40b76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbe21d8e9f0ed0dc7c72a19584f24ee1bce0803c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368901"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451326"
 ---
 # <a name="removecv-class"></a>remove_cv, classe
 
@@ -30,12 +30,12 @@ using remove_cv_t = typename remove_cv<T>::type;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Une instance de `remove_cv<T>` contient un type modifié qui est `T1` lorsque *T* est au format `const T1`, `volatile T1`, ou `const volatile T1`, sinon *T*.
+Une instance de `remove_cv<T>` contient un type modifié qui est `T1` quand *t* est de la `const T1`forme, `volatile T1`ou `const volatile T1`, sinon *t*.
 
 ## <a name="example"></a>Exemple
 
@@ -67,6 +67,6 @@ remove_cv_t<const volatile int> == int
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_const, classe](../standard-library/remove-const-class.md)<br/>
-[remove_volatile, classe](../standard-library/remove-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_const, classe](../standard-library/remove-const-class.md)\
+[remove_volatile, classe](../standard-library/remove-volatile-class.md)

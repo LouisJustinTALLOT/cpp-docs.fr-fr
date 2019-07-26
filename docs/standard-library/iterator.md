@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: f859c2e11d8a800c44b93e69e4b862300c6d3a13
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5faf55eebecf473f45074f862ef64929df6f4374
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245766"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452985"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -40,7 +40,7 @@ Les itérateurs sont une généralisation des pointeurs qui s’abstrait de leur
 
 Les itérateurs qui ont des exigences supérieures et disposent d'un accès plus performant aux éléments peuvent être utilisés à la place d'itérateurs ayant moins d'exigences. Par exemple, si un itérateur d'avance est appelé, alors un itérateur d'accès aléatoire peut être utilisé à la place.
 
-Visual Studio ajoute des extensions aux itérateurs de la bibliothèque C++ standard pour prendre en charge diverses situations en mode débogage pour les itérateurs vérifiés et non vérifiés. Pour plus d’informations, consultez [bibliothèques sécurisées : C++Bibliothèque standard](../standard-library/safe-libraries-cpp-standard-library.md).
+Visual Studio ajoute des extensions aux itérateurs de la bibliothèque C++ standard pour prendre en charge diverses situations en mode débogage pour les itérateurs vérifiés et non vérifiés. Pour plus d’informations, [consultez bibliothèques sécurisées: C++Bibliothèque](../standard-library/safe-libraries-cpp-standard-library.md)standard.
 
 ## <a name="members"></a>Membres
 
@@ -87,27 +87,27 @@ Visual Studio ajoute des extensions aux itérateurs de la bibliothèque C++ stan
 
 |||
 |-|-|
-|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|Cette classe de modèle décrit un objet itérateur de sortie. Elle insère des éléments dans un conteneur de type `Container`, auquel elle accède via l’élément protégé `pointer` objet qu’elle stocke appelé conteneur.|
-|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Une classe qui fournit un type de retour pour une `iterator_category` fonction qui représente un itérateur bidirectionnel.|
+|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|Cette classe de modèle décrit un objet itérateur de sortie. Elle insère des éléments dans un conteneur de type `Container`, auquel elle accède via l’objet protégé `pointer` qu’elle stocke sous le nom de conteneur.|
+|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Classe qui fournit un type de retour pour une `iterator_category` fonction qui représente un itérateur bidirectionnel.|
 |[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Classe qui accède à un tableau en utilisant un itérateur vérifié d'accès aléatoire. **Remarque :**  Cette classe est une extension Microsoft de la bibliothèque standard C++. Le code implémenté à l’aide de cette fonction ne peut pas être utilisé dans les environnements de build C++ standard qui ne prennent pas en charge cette extension Microsoft.|
-|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Une classe qui fournit un type de retour pour une `iterator_category` fonction qui représente un itérateur vers l’avant.|
-|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|Cette classe de modèle décrit un objet itérateur de sortie. Elle insère des éléments dans un conteneur de type `Container`, auquel elle accède via l’élément protégé `pointer` objet qu’elle stocke appelé conteneur.|
-|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Une classe qui fournit un type de retour pour une `iterator_category` fonction qui représente un itérateur d’entrée.|
-|[insert_iterator](../standard-library/insert-iterator-class.md)|Cette classe de modèle décrit un objet itérateur de sortie. Elle insère des éléments dans un conteneur de type `Container`, auquel elle accède via l’élément protégé `pointer` objet qu’elle stocke appelé conteneur. Il stocke également l’élément protégé `iterator` objet, de la classe `Container::iterator`, appelée `iter`.|
-|[istream_iterator](../standard-library/istream-iterator-class.md)|Cette classe de modèle décrit un objet itérateur d'entrée. Elle extrait des objets de classe `Ty` à partir d’un flux d’entrée, auquel elle accède via un objet qu’elle stocke, de type pointeur vers `basic_istream` \< **Elem**, **Tr**>.|
-|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|Cette classe de modèle décrit un objet itérateur d'entrée. Elle insère des éléments de classe `Elem` dans un tampon de flux de sortie, auquel elle accède via un objet qu’elle stocke, de type `pointer` à `basic_streambuf` \< **Elem**, **Tr** >.|
+|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Classe qui fournit un type de retour pour une `iterator_category` fonction qui représente un itérateur vers l’avant.|
+|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|Cette classe de modèle décrit un objet itérateur de sortie. Elle insère des éléments dans un conteneur de type `Container`, auquel elle accède via l’objet protégé `pointer` qu’elle stocke sous le nom de conteneur.|
+|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Classe qui fournit un type de retour pour une `iterator_category` fonction qui représente un itérateur d’entrée.|
+|[insert_iterator](../standard-library/insert-iterator-class.md)|Cette classe de modèle décrit un objet itérateur de sortie. Elle insère des éléments dans un conteneur de type `Container`, auquel elle accède via l’objet protégé `pointer` qu’elle stocke sous le nom de conteneur. Il stocke également l' `iterator` objet protégé, de `Container::iterator`la classe `iter`, appelé.|
+|[istream_iterator](../standard-library/istream-iterator-class.md)|Cette classe de modèle décrit un objet itérateur d'entrée. Elle extrait des objets de classe `Ty` d’un flux d’entrée, auquel elle accède via un objet qu’elle stocke, de type `basic_istream`pointeur \<vers **elem**, **TR**>.|
+|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|Cette classe de modèle décrit un objet itérateur d'entrée. Elle insère des éléments de classe `Elem` dans une mémoire tampon de flux de sortie, à laquelle elle accède via un objet qu’elle `pointer` stocke, de type \< `basic_streambuf`à **elem**, **TR**>.|
 |[iterator](../standard-library/iterator-struct.md)|Cette classe de modèle est utilisée comme type de base pour tous les itérateurs.|
 |[iterator_traits](../standard-library/iterator-traits-struct.md)|Classe d'assistance de modèle fournissant des types critiques qui sont associés à différents types d'itérateur afin de pouvoir être référencés de la même façon.|
 |[move_iterator](../standard-library/move-iterator-class.md)|Un objet `move_iterator` stocke un itérateur d'accès aléatoire de type `RandomIterator`. Il se comporte comme un itérateur d'accès aléatoire, sauf lorsqu'il est déréférencé. Le résultat de `operator*` est implicitement casté en `value_type&&:` pour créer une `rvalue reference`.|
-|[ostream_iterator](../standard-library/ostream-iterator-class.md)|Cette classe de modèle décrit un objet itérateur de sortie. Elle insère des objets de classe `Type` dans un flux de sortie, auquel elle accède via un objet qu’elle stocke, de type `pointer` à `basic_ostream` \< **Elem**, **Tr**>.|
-|[ostreambuf_iterator, classe](../standard-library/ostreambuf-iterator-class.md)|Cette classe de modèle décrit un objet itérateur de sortie. Elle insère des éléments de classe `Elem` dans un tampon de flux de sortie, auquel elle accède via un objet qu’elle stocke, de type pointeur vers `basic_streambuf` \< **Elem**, **Tr**>.|
-|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Une classe qui fournit un type de retour pour `iterator_category` (fonction) qui représente un itérateur de sortie.|
-|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Une classe qui fournit un type de retour pour `iterator_category` fonction représentant un itérateur à accès aléatoire.|
+|[ostream_iterator](../standard-library/ostream-iterator-class.md)|Cette classe de modèle décrit un objet itérateur de sortie. Elle insère des objets de classe `Type` dans un flux de sortie, auquel elle accède via un objet qu’elle stocke, `pointer` de `basic_ostream`type \<à **elem**, **TR**>.|
+|[ostreambuf_iterator, classe](../standard-library/ostreambuf-iterator-class.md)|Cette classe de modèle décrit un objet itérateur de sortie. Elle insère des éléments de classe `Elem` dans une mémoire tampon de flux de sortie, à laquelle elle accède via un objet qu’elle stocke `basic_streambuf`, de type pointeur \<vers **elem**, **TR**>.|
+|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Classe qui fournit un type de retour pour `iterator_category` une fonction qui représente un itérateur de sortie.|
+|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Classe qui fournit un type de retour pour `iterator_category` une fonction qui représente un itérateur à accès aléatoire.|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|Cette classe de modèle décrit un objet qui se comporte comme un itérateur d'accès aléatoire, mais en sens inverse.|
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Classe qui accède à un tableau en utilisant un itérateur non vérifié d'accès aléatoire. **Remarque :**  Cette classe est une extension Microsoft de la bibliothèque standard C++. Le code implémenté à l’aide de cette fonction ne peut pas être utilisé dans les environnements de build C++ standard qui ne prennent pas en charge cette extension Microsoft.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.openlocfilehash: 991df549168456112afe27bed6f4991a7ccfb88e
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 560339dee5b13ddc13ff2f8af8283ea8615d804a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400873"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458358"
 ---
 # <a name="promise-class"></a>promise, classe
 
@@ -44,7 +44,7 @@ class promise;
 
 |Nom|Description|
 |----------|-----------------|
-|[promise](#promise)|Construit un objet `promise`.|
+|[affectés](#promise)|Construit un objet `promise`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -65,11 +65,11 @@ class promise;
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
-*promise*
+*affectés*
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<future >
+**En-tête:** \<> à venir
 
 **Espace de noms :** std
 
@@ -97,7 +97,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Autre*<br/>
+*Autres*\
 Objet `promise`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -106,7 +106,7 @@ Objet `promise`.
 
 ### <a name="remarks"></a>Notes
 
-Cet opérateur transfère l’état asynchrone associé à partir de *autres*. Après le transfert, *autres* est *vide*.
+Cet opérateur transfère l’état asynchrone associé d’un *autre*. Après le transfert, *other* est *vide*.
 
 ## <a name="promise"></a>  promise::promise, constructeur
 
@@ -121,19 +121,19 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Al*<br/>
+*&* \
 Allocateur de mémoire. Pour plus d’informations, consultez [\<allocators>](../standard-library/allocators-header.md).
 
-*Autre*<br/>
+*Autres*\
 Objet `promise`.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur construit un *vide* `promise` objet.
+Le premier constructeur construit un objet *vide* `promise` .
 
-Le deuxième constructeur construit un vide `promise` objet et utilise *Al* pour l’allocation de mémoire.
+Le deuxième constructeur construit un objet vide `promise` et utilise *al* pour l’allocation de mémoire.
 
-Le troisième constructeur construit un `promise` de l’objet et transfère l’état asynchrone associé à partir de *autres*et laisse *autres* vide.
+Le troisième constructeur construit un `promise` objet et transfère l’état asynchrone associé à partir d' *autres*, et laisse d' *autres* vides.
 
 ## <a name="set_exception"></a>  promise::set_exception
 
@@ -145,7 +145,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Paramètres
 
-*Exc*<br/>
+*Exc*\
 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) qui est stocké par cette méthode comme résultat de l’exception.
 
 ### <a name="remarks"></a>Notes
@@ -166,7 +166,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Paramètres
 
-*Exc*<br/>
+*Exc*\
 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) qui est stocké par cette méthode comme résultat de l’exception.
 
 ### <a name="remarks"></a>Notes
@@ -190,7 +190,7 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*<br/>
+*Multiples*\
 Valeur à stocker comme résultat.
 
 ### <a name="remarks"></a>Notes
@@ -201,11 +201,11 @@ Si la méthode [set_exception](#set_exception), [set_exception_at_thread_exit](#
 
 Cette méthode libère tous les threads qui sont bloqués sur l’état asynchrone associé.
 
-La première méthode lève également toute exception qui est levée lorsque *Val* est copié dans l’état asynchrone associé. Dans ce cas, l’état asynchrone associé n’est pas défini sur ready.
+La première méthode lève également toute exception levée lorsque *Val* est copié dans l’état asynchrone associé. Dans ce cas, l’état asynchrone associé n’est pas défini sur ready.
 
-La deuxième méthode lève également toute exception qui est levée lorsque *Val* est déplacé vers l’état asynchrone associé. Dans ce cas, l’état asynchrone associé n’est pas défini sur ready.
+La deuxième méthode lève également toute exception levée lorsque *Val* est déplacé dans l’état asynchrone associé. Dans ce cas, l’état asynchrone associé n’est pas défini sur ready.
 
-Pour la spécialisation partielle `promise<Ty&>`, la valeur stockée est en vigueur une référence à *Val*.
+Pour la spécialisation `promise<Ty&>`partielle, la valeur stockée est en fait une référence à *Val*.
 
 Pour la spécialisation `promise<void>`, aucune valeur stockée n’existe.
 
@@ -222,7 +222,7 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*<br/>
+*Multiples*\
 Valeur à stocker comme résultat.
 
 ### <a name="remarks"></a>Notes
@@ -233,11 +233,11 @@ Si la méthode [set_exception](#set_exception), [set_exception_at_thread_exit](#
 
 Contrairement à `set_value`, l’état asynchrone associé n’est pas défini sur ready tant que les objets locaux de thread dans le thread actuel n’ont pas tous été détruits. En règle générale, les threads qui sont bloqués sur l’état asynchrone associé sont libérés seulement au moment de la sortie du thread actuel.
 
-La première méthode lève également toute exception qui est levée lorsque *Val* est copié dans l’état asynchrone associé.
+La première méthode lève également toute exception levée lorsque *Val* est copié dans l’état asynchrone associé.
 
-La deuxième méthode lève également toute exception qui est levée lorsque *Val* est déplacé vers l’état asynchrone associé.
+La deuxième méthode lève également toute exception levée lorsque *Val* est déplacé dans l’état asynchrone associé.
 
-Pour la spécialisation partielle `promise<Ty&>`, la valeur stockée est une référence à *Val*.
+Pour la spécialisation `promise<Ty&>`partielle, la valeur stockée est effectivement une référence à *Val*.
 
 Pour la spécialisation `promise<void>`, aucune valeur stockée n’existe.
 
@@ -251,9 +251,9 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Autre*<br/>
+*Autres*\
 Objet `promise`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)

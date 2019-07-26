@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 1448ad2b703aa6dcf26fad2e4adcbeb2aec2c956
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5738a1ea5ab950466f347090649e72471edf5608
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240418"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458296"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -19,12 +19,12 @@ Définit des fonctions pour la génération de nombres aléatoires, ce qui perme
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête**: \<aléatoire >
+**En-tête**: \<Random >
 
 **Espace de noms :** std
 
 > [!NOTE]
-> Le \<aléatoire > bibliothèque utilise la ' #include < initializer_list >' instruction.
+> La \<bibliothèque de > aléatoires utilise l’instruction «#include < initializer_list >».
 
 ## <a name="summary"></a>Récapitulatif
 
@@ -42,7 +42,7 @@ Ces liens permettent d'accéder aux principales sections de cet article :
 
 ### <a name="quick-tips"></a>Conseils rapides
 
-Voici quelques conseils à prendre en compte lors de l’utilisation \<aléatoire > :
+Voici quelques conseils à prendre en compte lors de l' \<utilisation de > aléatoires:
 
 - Dans la plupart des cas, les générateurs URNG produisent des bits bruts qui doivent être mis en forme par les distributions. ([std::shuffle()](../standard-library/algorithm-functions.md#shuffle) est une exception notable, car il utilise directement un générateur URNG.)
 
@@ -52,7 +52,7 @@ Voici quelques conseils à prendre en compte lors de l’utilisation \<aléatoir
 
 - Pour la plupart des applications, l’association la plus utile est le moteur `mt19937` avec `uniform_int_distribution`, comme illustré dans l’[exemple de code](#code) plus loin dans cet article.
 
-Il existe de nombreuses options à choisir dans le \<aléatoire > en-tête et une d'entre elles est préférable à la fonction C Runtime obsolète `rand()`. Pour savoir quel est le problème avec `rand()` et comment \<aléatoire > aborde ces problèmes, consultez [cette vidéo](https://go.microsoft.com/fwlink/p/?linkid=397615).
+Il existe de nombreuses options à choisir dans l' \<en-tête de > aléatoire, et l’une d’entre elles est préférable à la fonction `rand()`du runtime C obsolète. Pour plus d’informations sur les problèmes `rand()` avec et \<sur la façon dont les > aléatoires corrigent ces lacunes, consultez [cette vidéo](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Exemples
 
@@ -215,13 +215,13 @@ Ce code illustre deux randomisations différentes (rendre aléatoire un vecteur 
 
 Les générateurs URNG sont souvent décrits sous l'angle des propriétés suivantes :
 
-1. **Longueur de période**: Le nombre d’itérations nécessaires pour répéter la séquence des nombres générés. Plus la période est longue, mieux c'est.
+1. **Longueur**de la période: Nombre d’itérations nécessaires pour répéter la séquence des nombres générés. Plus la période est longue, mieux c'est.
 
 2. **Performances**: La vitesse à laquelle les nombres peuvent être générés et la quantité de mémoire nécessaire. Plus la valeur est faible, mieux c'est.
 
-3. **Qualité**: La proximité des nombres véritablement aléatoires est la séquence générée. Cette propriété est souvent appelée *caractère aléatoire*.
+3. **Qualité**: La façon dont la séquence générée est proche des nombres aléatoires véritables. Cette propriété est souvent appelée *caractère aléatoire*.
 
-Les sections suivantes répertorient les uniformes générateurs de nombres aléatoires (Urng) fournis dans le \<aléatoire > en-tête.
+Les sections suivantes répertorient les générateurs de nombres aléatoires uniformes (générateurs URNG) \<fournis dans l’en-tête de > aléatoire.
 
 ####  <a name="rd"></a> Générateur non déterministe
 
@@ -281,7 +281,7 @@ Pour l'instanciation des moteurs et adaptateurs de moteurs. Pour plus d’inform
         43, 6364136223846793005ULL> mt19937_64;
     ```
 
-- `ranlux24` moteur RANLUX 24 bits (Martin Lüscher et Fred James, 1994).
+- `ranlux24`moteur RANLUX 24 bits (Martin Lüscher et Fred James, 1994).
 
     ```cpp
     typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
@@ -293,7 +293,7 @@ Pour l'instanciation des moteurs et adaptateurs de moteurs. Pour plus d’inform
     typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
     ```
 
-- `ranlux48` moteur RANLUX de 48 bits (Martin Lüscher et Fred James, 1994).
+- `ranlux48`moteur RANLUX de 48 bits (Martin Lüscher et Fred James, 1994).
 
     ```cpp
     typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
@@ -329,7 +329,7 @@ Les adaptateurs de moteurs sont des modèles qui adaptent d'autres moteurs (de b
 
 ###  <a name="distributions"></a> Distributions de nombres aléatoires
 
-Les sections suivantes répertorient les distributions fournies dans le \<aléatoire > en-tête. Les distributions sont un mécanisme de post-traitement qui utilise généralement la sortie de générateur URNG comme entrée et distribue la sortie selon une fonction de densité de probabilité statistique définie. Pour plus d’informations, consultez la section [Moteurs et distributions](#engdist).
+Les sections suivantes répertorient les distributions fournies dans \<l’en-tête de > aléatoire. Les distributions sont un mécanisme de post-traitement qui utilise généralement la sortie de générateur URNG comme entrée et distribue la sortie selon une fonction de densité de probabilité statistique définie. Pour plus d’informations, consultez la section [Moteurs et distributions](#engdist).
 
 #### <a name="uniform-distributions"></a>Distributions uniformes
 
@@ -345,7 +345,7 @@ Les sections suivantes répertorient les distributions fournies dans le \<aléat
 
 |||
 |-|-|
-|[bernoulli_distribution, classe](../standard-library/bernoulli-distribution-class.md)|Produit une distribution de Bernoulli de **bool** valeurs.|
+|[bernoulli_distribution, classe](../standard-library/bernoulli-distribution-class.md)|Produit une distribution de Bernoulli de valeurs **bool** .|
 |[binomial_distribution, classe](../standard-library/binomial-distribution-class.md)|Produit une distribution binomiale de valeurs entières.|
 |[geometric_distribution, classe](../standard-library/geometric-distribution-class.md)|Produit une distribution géométrique de valeurs entières.|
 |[negative_binomial_distribution, classe](../standard-library/negative-binomial-distribution-class.md)|Produit une distribution négative binomiale de valeurs entières.|
@@ -358,7 +358,7 @@ Les sections suivantes répertorient les distributions fournies dans le \<aléat
 |-|-|
 |[cauchy_distribution, classe](../standard-library/cauchy-distribution-class.md)|Produit une distribution suivant une loi de Cauchy de valeurs (à virgule flottante) réelles.|
 |[chi_squared_distribution, classe](../standard-library/chi-squared-distribution-class.md)|Produit une distribution suivant la loi unilatérale du Khi-deux de valeurs (à virgule flottante) réelles.|
-|[fisher_f_distribution, classe](../standard-library/fisher-f-distribution-class.md)|Produit une distribution F (également appelée distribution de F de Snedecor ou la distribution de Fisher-Snedecor) de valeurs réelles (à virgule flottante).|
+|[fisher_f_distribution, classe](../standard-library/fisher-f-distribution-class.md)|Produit une distribution F (également appelée distribution F de Snedecor ou la distribution de Fisher-Snedecor) de valeurs réelles (à virgule flottante).|
 |[lognormal_distribution, classe](../standard-library/lognormal-distribution-class.md)|Produit une distribution suivant une loi log-normale de valeurs (à virgule flottante) réelles.|
 |[normal_distribution, classe](../standard-library/normal-distribution-class.md)|Produit une distribution normale (loi gaussienne) de valeurs (à virgule flottante) réelles.|
 |[student_t_distribution, classe](../standard-library/student-t-distribution-class.md)|Produit une distribution de valeurs à virgule flottante réelles suivant une loi *T* de Student.|
@@ -389,7 +389,7 @@ Les sections suivantes répertorient les distributions fournies dans le \<aléat
 
 ### <a name="utility-functions"></a>Fonctions utilitaires
 
-Cette section répertorie les fonctions utilitaires générales fournies dans le \<aléatoire > en-tête.
+Cette section répertorie les fonctions utilitaires générales fournies dans \<l’en-tête de > aléatoire.
 
 |||
 |-|-|
@@ -397,7 +397,7 @@ Cette section répertorie les fonctions utilitaires générales fournies dans le
 
 ### <a name="operators"></a>Opérateurs
 
-Cette section répertorie les opérateurs fournis dans le \<aléatoire > en-tête.
+Cette section répertorie les opérateurs fournis dans \<l’en-tête de > aléatoire.
 
 |||
 |-|-|
@@ -408,13 +408,13 @@ Cette section répertorie les opérateurs fournis dans le \<aléatoire > en-têt
 
 ## <a name="engdist"></a> Moteurs et distributions
 
-Reportez-vous aux sections suivantes pour plus d’informations sur chacune de ces catégories de classe de modèle définis dans \<aléatoire >. Ces deux catégories de classes de modèles acceptent un type comme argument et utilisent des noms de paramètres de modèles partagés pour décrire les propriétés du type qui sont autorisées en tant que type d'argument réel, comme suit :
+Reportez-vous aux sections suivantes pour plus d’informations sur chacune de ces \<catégories de classe de modèle définies dans des > aléatoires. Ces deux catégories de classes de modèles acceptent un type comme argument et utilisent des noms de paramètres de modèles partagés pour décrire les propriétés du type qui sont autorisées en tant que type d'argument réel, comme suit :
 
-- `IntType` Indique un **court**, **int**, **long**, **longue**, **unsigned short**,  **unsigned int**, **long non signé**, ou **unsigned long long**.
+- `IntType`indique un **short**, **int**, **long**, **long long**, **unsigned short**, **unsigned int**, unsigned **long**ou unsigned **long**long.
 
-- `UIntType` indique **unsigned short**, **unsigned int**, **long non signé**, ou **unsigned long long**.
+- `UIntType`indique **unsigned short**, **unsigned int**, unsigned **long**ou unsigned **long long**.
 
-- `RealType` Indique un **float**, **double**, ou **long double**.
+- `RealType`indique une valeur de type **float**, **double**ou **long double**.
 
 ### <a name="engines"></a>Moteurs
 
@@ -509,4 +509,4 @@ Par définition, les résultats `random_device` ne peuvent pas être reproduits 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)

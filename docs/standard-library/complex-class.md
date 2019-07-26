@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: db04569d3938c673653ac36eeebdabc9cb725c1e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 44d44d48f66c9bdbf03d4e36e752ea3dee5ff9c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244726"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453174"
 ---
 # <a name="complex-class"></a>complexe, classe
 
-La classe de modèle décrit un objet qui stocke deux objets de type `Type`, un qui représente la partie réelle d’un nombre complexe et un objet représentant la partie imaginaire.
+La classe de modèle décrit un objet qui stocke deux objets `Type`de type, un qui représente la partie réelle d’un nombre complexe et un qui représente la partie imaginaire.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,7 +30,7 @@ class complex
 
 ## <a name="remarks"></a>Notes
 
-Un objet de classe `Type`:
+Objet de classe `Type`:
 
 - A un constructeur public par défaut, un destructeur, un constructeur de copie et un opérateur d’assignation avec un comportement conventionnel.
 
@@ -38,9 +38,9 @@ Un objet de classe `Type`:
 
 - Définit les opérateurs arithmétiques et les fonctions mathématiques, selon les besoins, qui sont définis pour les types à virgule flottante avec un comportement conventionnel.
 
-En particulier, aucune différence même minime ne peut exister entre la construction de copie et la construction par défaut suivie de l'affectation. Aucune des opérations sur les objets de classe `Type` peuvent lever des exceptions.
+En particulier, aucune différence même minime ne peut exister entre la construction de copie et la construction par défaut suivie de l'affectation. Aucune des opérations sur les objets de la `Type` classe ne peut lever des exceptions.
 
-Des spécialisations explicites de la classe de modèle complex existent pour les trois types à virgule flottante. Dans cette implémentation, une valeur d’un autre type `Type` est convertie en **double** pour les calculs réels, avec le **double** résultat affecté à l’objet stocké de type `Type`.
+Des spécialisations explicites de la classe de modèle complex existent pour les trois types à virgule flottante. Dans cette implémentation, une valeur de tout autre type `Type` est convertie en **double** pour les calculs réels, avec le résultat **double** affecté à l’objet stocké de type `Type`.
 
 ## <a name="members"></a>Membres
 
@@ -75,7 +75,7 @@ Des spécialisations explicites de la classe de modèle complex existent pour le
 
 
 
-## <a name="complex"></a> complexes
+## <a name="complex"></a>complexe
 
 Construit un nombre complexe à l'aide de la partie réelle et de la partie imaginaire spécifiées ou en tant que copie d'un autre nombre complexe.
 
@@ -102,7 +102,7 @@ Nombre complexe dont la partie réelle et la partie imaginaire sont utilisées p
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise le stockée partie réelle à  *\_RealVal* et la partie imaginaire stockée à  *\_Imagval*. Le deuxième constructeur initialise le stockée partie réelle à `complexNum.real()` et la partie imaginaire stockée à `complexNum.imag()`.
+Le premier constructeur initialise la partie réelle stockée sur  *\_RealVal* et la partie imaginaire stockée sur  *\_Imagval*. Le deuxième constructeur initialise la partie réelle stockée à `complexNum.real()` et la partie imaginaire stockée à `complexNum.imag()`.
 
 Dans cette implémentation, si un convertisseur ne prend pas en charge les fonctions de modèle membres, le modèle :
 
@@ -119,7 +119,7 @@ complex(const complex& right);
 
 qui est le constructeur de copie.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // complex_complex.cpp
@@ -159,7 +159,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a> Imag
+## <a name="imag"></a>imag
 
 Extrait le composant imaginaire d'un nombre complexe.
 
@@ -180,7 +180,7 @@ Partie imaginaire du nombre complexe.
 
 ### <a name="remarks"></a>Notes
 
-Pour un nombre complexe *a + bi*, la partie imaginaire ou le composant est *Im(a + BI) = b*.
+Pour un nombre complexe *a + bi*, la partie ou le composant imaginaire est *im (a + bi) = b*.
 
 ### <a name="example"></a>Exemple
 
@@ -213,7 +213,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="op_star_eq"></a> opérateur * =
+## <a name="op_star_eq"></a>opérateur * =
 
 Multiplie un nombre complexe cible par un facteur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.
 
@@ -239,7 +239,7 @@ Nombre complexe qui a été multiplié par le nombre spécifié comme paramètre
 
 L’opération est surchargée pour permettre l’exécution d’opérations d’arithmétique simples sans convertir les données dans un format particulier.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // complex_op_me.cpp
@@ -298,7 +298,7 @@ int main()
 }
 ```
 
-## <a name="op_add_eq"></a> opérateur +=
+## <a name="op_add_eq"></a>opérateur + =
 
 Ajoute un nombre à un nombre complexe cible, où le nombre ajouté peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.
 
@@ -401,7 +401,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-_eq"></a> opérateur =
+## <a name="operator-_eq"></a>opérateur =
 
 Soustrait un nombre d’un nombre complexe cible, où le nombre soustrait peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.
 
@@ -430,7 +430,7 @@ Nombre complexe duquel le nombre spécifié comme paramètre est soustrait.
 
 L’opération est surchargée pour permettre l’exécution d’opérations d’arithmétique simples sans convertir les données dans un format particulier.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // complex_op_se.cpp
@@ -509,7 +509,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a> / =, opérateur
+## <a name="op_div_eq"></a>opérateur/=
 
 Divise un nombre complexe cible par un diviseur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.
 
@@ -538,7 +538,7 @@ Nombre complexe qui a été divisé par le nombre spécifié comme paramètre.
 
 L’opération est surchargée pour permettre l’exécution d’opérations d’arithmétique simples sans convertir les données dans un format particulier.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // complex_op_de.cpp
@@ -613,7 +613,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a> opérateur =
+## <a name="op_eq"></a>opérateur =
 
 Assigne un nombre à un nombre complexe cible, où le nombre assigné peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est assigné.
 
@@ -691,7 +691,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a> réel
+## <a name="real"></a>non
 
 Extrait ou définit le composant réel d'un nombre complexe.
 
@@ -712,9 +712,9 @@ Partie réelle du nombre complexe.
 
 ### <a name="remarks"></a>Notes
 
-Pour un nombre complexe *a + bi*, la partie réelle ou le composant est *Re(a + BI) = un*.
+Pour un nombre complexe *a + bi*, la partie ou le composant réel est *re (a + bi) = a*.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // complex_class_real.cpp
@@ -745,7 +745,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a> Value_type
+## <a name="value_type"></a>value_type
 
 Type qui représente le type de données utilisé pour représenter les parties imaginaire et réelle d’un nombre complexe.
 
@@ -755,7 +755,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Notes
 
-`value_type` est un synonyme de la classe complexes `Type` paramètre de modèle.
+`value_type`est un synonyme du paramètre de modèle `Type` complexe de classe.
 
 ### <a name="example"></a>Exemple
 
@@ -784,4 +784,4 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

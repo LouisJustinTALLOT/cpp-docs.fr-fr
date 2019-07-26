@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17091e33c504df60c0b6b8e346d2a6fd3893679c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412187"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447416"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine, classe
 
@@ -36,16 +36,16 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Paramètres
 
-*UIntType*<br/>
+*UIntType*\
 Type des résultats entiers non signés. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*W*<br/>
+*S*\
 **Taille de mot**. Taille de chaque mot, en bits, de la séquence d'état. **Condition préalable** : `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*<br/>
+*X*\
 **Décalage court**. Nombre de valeurs entières. **Condition préalable** : `0 < S < R`
 
-*R*<br/>
+*R*\
 **Décalage long**. Détermine la périodicité dans la série générée.
 
 ## <a name="members"></a>Membres
@@ -62,7 +62,7 @@ Pour plus d’informations sur les membres moteurs, consultez [\<random>](../sta
 
 La classe de modèle `substract_with_carry_engine` est une version améliorée du [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Aucun de ces moteurs n’est aussi rapide ni ne produit des résultats d’aussi bonne qualité que [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Ce moteur produit des valeurs d’un type intégral non signé, spécifié par l’utilisateur, à l’aide de la relation de périodicité ( *période*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, où `cy(i)` a la valeur `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`, sinon `0`, et `M` a la valeur `2`<sup>W</sup>. L’état du moteur est un carry indicateur plu *R* valeurs. Ces valeurs sont constituées de la dernière *R* valeurs retournées si `operator()` a été appelé au moins *R* fois, sinon le `N` les valeurs qui ont été retournés et la dernière `R - N` valeurs de la valeur de départ.
+Ce moteur produit des valeurs d’un type intégral non signé, spécifié par l’utilisateur, à l’aide de la relation de périodicité ( *période*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, où `cy(i)` a la valeur `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`, sinon `0`, et `M` a la valeur `2`<sup>W</sup>. L’état du moteur est un indicateur de transport plus des valeurs *R* . Ces valeurs sont constituées des dernières valeurs *r* retournées si `operator()` a été appelé au moins une fois `N` *r* , sinon les valeurs qui ont été retournées et les dernières `R - N` valeurs de la valeur initiale.
 
 L'argument de modèle `UIntType` doit être assez volumineux pour contenir des valeurs jusqu'à `M - 1`.
 
@@ -84,4 +84,4 @@ Pour plus d’informations sur l’algorithme du moteur Substract With Carry, co
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

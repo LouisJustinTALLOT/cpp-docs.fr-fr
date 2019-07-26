@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_same class
 - is_same
 ms.assetid: d9df6c1d-c270-4ec2-802a-af275648dd1d
-ms.openlocfilehash: 5bb306ec29da225293affd0207f67271f59ec599
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4e4babeef89960762ebb2ccf0f733f60eadfa47
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413552"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450060"
 ---
 # <a name="issame-class"></a>is_same, classe
 
@@ -27,15 +27,15 @@ struct is_same;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty1*<br/>
+*Ty1*\
 Premier type à interroger.
 
-*Ty2*<br/>
+*Ty2*\
 Deuxième type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si les types *Ty1* et *Ty2* sont du même type, sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si les types *Ty1* et *Ty2* sont du même type. sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -88,6 +88,6 @@ is_same<int, const int> == false
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_convertible, classe](../standard-library/is-convertible-class.md)<br/>
-[is_base_of, classe](../standard-library/is-base-of-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_convertible, classe](../standard-library/is-convertible-class.md)\
+[is_base_of, classe](../standard-library/is-base-of-class.md)

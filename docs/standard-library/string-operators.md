@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb66e7c0120da9f140ce33da7ecc61299a4d2867
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412356"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459260"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt;, opérateurs
 
@@ -103,10 +103,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Chaîne de style C ou objet de type `basic_string` à concaténer.
 
-*right*<br/>
+*Oui*\
 Chaîne de style C ou objet de type `basic_string` à concaténer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -115,7 +115,7 @@ Chaîne qui est la concaténation des chaînes d'entrée.
 
 ### <a name="remarks"></a>Notes
 
-Les fonctions surchargent toutes `operator+` pour concaténer deux objets de classe de modèle [basic_string](../standard-library/basic-string-class.md). Retournent toutes `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Pour plus d’informations, consultez [ajouter](../standard-library/basic-string-class.md#append).
+Les fonctions surchargent toutes `operator+` pour concaténer deux objets de classe de modèle [basic_string](../standard-library/basic-string-class.md). Tout retourne `basic_string< CharType, Traits, Allocator>(Left).append(right)`effectivement. Pour plus d’informations, consultez [Append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Exemple
 
@@ -192,10 +192,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-*right*<br/>
+*Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -283,10 +283,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-*right*<br/>
+*Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -297,7 +297,7 @@ Chaîne de style C ou objet de type `basic_string` à comparer.
 
 La comparaison entre les objets string est basée sur une comparaison lexicographique par paire de leurs caractères. Deux chaînes sont égales si elles ont le même nombre de caractères et que les valeurs respectives de leurs caractères sont identiques. Sinon, elles sont inégales.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // string_op_eq.cpp
@@ -374,10 +374,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-*right*<br/>
+*Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -394,7 +394,7 @@ Une comparaison lexicographique entre des chaînes les compare caractère par ca
 
 - Elle ne trouve aucune inégalité et les chaînes ont le même nombre de caractères, si bien que les chaînes sont égales.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // string_op_lt.cpp
@@ -470,10 +470,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-*right*<br/>
+*Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -563,10 +563,10 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ostr*<br/>
+*_Ostr*\
 Flux de sortie dans lequel s’effectue l’écriture.
 
-*str*<br/>
+*Str*\
 Chaîne à entrer dans le flux de sortie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -575,7 +575,7 @@ Chaîne à entrer dans le flux de sortie.
 
 ### <a name="remarks"></a>Notes
 
-Les surcharges de fonction de modèle **opérateur <<** pour insérer un objet *str* de classe de modèle [basic_string](../standard-library/basic-string-class.md) dans le flux  *\_ Ostr*. La fonction retourne effectivement `_Ostr.write( str.c_str, str.size )`.
+L’opérateur de fonction de modèle Overloads **< <** pour insérer un objet *Str* de la classe de modèle [basic_string](../standard-library/basic-string-class.md) dans le  *\_OSTR*de flux. La fonction retourne effectivement `_Ostr.write( str.c_str, str.size )`la valeur.
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -600,10 +600,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-*right*<br/>
+*Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -703,10 +703,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-*right*<br/>
+*Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -796,21 +796,21 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Istr*<br/>
+*_Istr*\
 Le flux d’entrée utilisé pour extraire la séquence.
 
-*right*<br/>
+*Oui*\
 La chaîne qui est extraite du flux d’entrée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Lit la valeur de la chaîne spécifiée à partir de *_Istr* et le retourne dans *droit*.
+Lit la valeur de la chaîne spécifiée à partir de *_Istr* et la retourne à *droite*.
 
 ### <a name="remarks"></a>Notes
 
 L’opérateur ignore les espaces blancs de début à moins que l’indicateur `skipws` soit défini. Il lit tous les caractères suivants jusqu’à ce que le caractère suivant soit un espace blanc ou que la fin du fichier soit atteinte.
 
-Les surcharges de fonction de modèle **opérateur >>** pour remplacer la séquence contrôlée par *droit* avec une séquence d’éléments extraits à partir du flux *_Istr*. L’extraction s’arrête :
+L’opérateur de surcharge de fonction de modèle **> >** pour remplacer la séquence contrôlée par *Right* par une séquence d’éléments extraits du flux *_Istr*. L’extraction s’arrête :
 
 - À la fin du fichier.
 
@@ -820,7 +820,7 @@ Une fois que la fonction a extrait `_Istr`. [max_size](../standard-library/basic
 
 - Une fois que la fonction a extrait un élément *ch* pour lequel [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) a la valeur true, auquel cas le caractère est replacé.
 
-Si la fonction n’extrait aucun élément, elle appelle [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). Dans tous les cas, elle appelle **istr**. **width**(0) et retourne \* **this**.
+Si la fonction n’extrait aucun élément, elle appelle [SetState](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). Dans tous les cas, elle appelle **istr**. **width**(0) et retourne \* **this**.
 
 ### <a name="example"></a>Exemple
 
@@ -843,4 +843,4 @@ int main( )
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<string>](../standard-library/string.md)<br/>
+[\<string>](../standard-library/string.md)

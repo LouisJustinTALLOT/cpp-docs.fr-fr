@@ -15,16 +15,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: f7663987b2759c762d1f6c1604923478915f5726
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4ae53f9a14f04d5656a13c32e75494688c5cdd0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364998"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452267"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt;, classe
 
-Le `vector<bool>` classe est une spécialisation partielle de [vecteur](../standard-library/vector-class.md) pour les éléments de type **bool**. Elle possède un allocateur pour le type sous-jacent qui est utilisé par la spécialisation, qui fournit l’optimisation de l’espace en stockant une **bool** valeur par bit.
+La `vector<bool>` classe est une spécialisation partielle de [Vector](../standard-library/vector-class.md) pour les éléments de type **bool**. Il possède un allocateur pour le type sous-jacent utilisé par la spécialisation, qui permet l’optimisation de l’espace en stockant une valeur **bool** par bit.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,7 +37,7 @@ class vector<bool, Allocator>
 
 Le comportement de cette spécialisation de modèle de classe est identique à celui de vector, à l’exception de quelques différences expliquées dans cet article.
 
-Opérations qui gèrent le **bool** type correspondent aux valeurs dans le conteneur de stockage. `allocator_traits::construct` n'est pas utilisé pour créer ces valeurs.
+Les opérations qui gèrent le type **bool** correspondent aux valeurs dans le stockage de conteneur. `allocator_traits::construct` n'est pas utilisé pour créer ces valeurs.
 
 ### <a name="typedefs"></a>Typedef
 
@@ -142,7 +142,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |Paramètre|Description|
 |-|-|
-|*Pos*|Position de l'élément `vector<bool>`.|
+|*Imprim*|Position de l'élément `vector<bool>`.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -152,7 +152,7 @@ Si la position spécifiée est supérieure ou égale à la taille du conteneur, 
 
 ### <a name="remarks"></a>Notes
 
-Si vous compilez avec _ITERATOR_DEBUG_LEVEL ensemble, une erreur d’exécution se produit si vous tentez d’accéder à un élément en dehors des limites du vecteur.  Pour plus d'informations, consultez [Checked Iterators](../standard-library/checked-iterators.md).
+Si vous compilez avec _ITERATOR_DEBUG_LEVEL défini, une erreur d’exécution se produit si vous tentez d’accéder à un élément en dehors des limites du vecteur.  Pour plus d'informations, consultez [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Exemple
 
@@ -257,7 +257,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool
 
-Fournit une conversion implicite de `vector<bool>::reference` à **bool**.
+Fournit une conversion implicite `vector<bool>::reference` de en **bool**.
 
 ```cpp
 operator bool() const;
@@ -282,10 +282,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Droite*<br/>
+*Oui*\
 Référence d'élément dont la valeur doit être assignée au bit.
 
-*Val*<br/>
+*Multiples*\
 Valeur booléenne à assigner au bit.
 
 #### <a name="example"></a>Exemple
@@ -371,11 +371,11 @@ static void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*<br/>
-L’élément à être échangés avec le *droite* élément.
+*Gauche*\
+Élément à échanger avec l’élément *approprié* .
 
-*Droite*<br/>
-L’élément à être échangés avec le *gauche* élément.
+*Oui*\
+Élément à échanger avec l’élément de *gauche* .
 
 ### <a name="remarks"></a>Notes
 
@@ -383,5 +383,5 @@ Cette surcharge prend en charge les spécifications spéciales de proxy de `vect
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

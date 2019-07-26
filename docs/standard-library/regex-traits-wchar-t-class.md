@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - regex_traits<wchar_t> class
 ms.assetid: 288d6fdb-fb8e-4a4d-904a-53916be7f95b
-ms.openlocfilehash: cba5a7a036806f244f45a2d3b7a6317393f7a196
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a1f08509a20b5a0eabb26b715e22bf7c6de544c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369083"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451476"
 ---
 # <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt;, classe
 
-Spécialisation de `regex_traits` pour **wchar_t**.
+Spécialisation `regex_traits` de pour **wchar_t**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,12 +36,12 @@ La classe est une spécialisation explicite de la classe de modèle [regex_trait
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants, classe](../standard-library/regex-constants-class.md)<br/>
-[regex_error, classe](../standard-library/regex-error-class.md)<br/>
-[\<regex>, fonctions](../standard-library/regex-functions.md)<br/>
-[regex_iterator, classe](../standard-library/regex-iterator-class.md)<br/>
-[\<regex>, opérateurs](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator, classe](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits, classe](../standard-library/regex-traits-class.md)<br/>
-[\<regex>, typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_constants, classe](../standard-library/regex-constants-class.md)\
+[regex_error, classe](../standard-library/regex-error-class.md)\
+[\<fonctions Regex >](../standard-library/regex-functions.md)\
+[regex_iterator, classe](../standard-library/regex-iterator-class.md)\
+[\<opérateurs > Regex](../standard-library/regex-operators.md)\
+[regex_token_iterator, classe](../standard-library/regex-token-iterator-class.md)\
+[regex_traits, classe](../standard-library/regex-traits-class.md)\
+[\<regex>, typedefs](../standard-library/regex-typedefs.md)

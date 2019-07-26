@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_reference class
 - remove_reference
 ms.assetid: 294e1965-3ae3-46ee-bc42-4fdf60c24717
-ms.openlocfilehash: 76f700b488d78af77e39ec91c7328604d18931fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f185994f943b2419a67fe86ce957751dc4031cbe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186034"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451271"
 ---
 # <a name="removereference-class"></a>remove_reference, classe
 
@@ -30,12 +30,12 @@ using remove_reference_t = typename remove_reference<T>::type;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Une instance de `remove_reference<T>` contient un type modifié qui est `T1` lorsque *T* est au format `T1&`, sinon *T*.
+Une instance de `remove_reference<T>` contient un type modifié qui est `T1` quand *t* se présente sous la forme `T1&`, sinon *t*.
 
 ## <a name="example"></a>Exemple
 
@@ -67,5 +67,5 @@ remove_reference_t<int&> == int
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_lvalue_reference, classe](../standard-library/add-lvalue-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_lvalue_reference, classe](../standard-library/add-lvalue-reference-class.md)

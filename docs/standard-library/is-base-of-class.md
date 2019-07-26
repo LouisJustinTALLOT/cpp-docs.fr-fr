@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_base_of class
 - is_base_of
 ms.assetid: 436f6213-1d4c-4ffc-a588-fc7c4887dd86
-ms.openlocfilehash: 345301b5eeed7b66f18a54e56b9bee6346078634
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d56222f218033d00583e5e3def9790720ef7bb94
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383670"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456625"
 ---
 # <a name="isbaseof-class"></a>is_base_of, classe
 
@@ -27,17 +27,17 @@ struct is_base_of;
 
 ### <a name="parameters"></a>Paramètres
 
-*Base*<br/>
+*Base*\
 Classe de base à tester.
 
-*DÉRIVÉS*<br/>
+*Issue*\
 Type dérivé à tester.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *Base* est une classe de base du type *dérivé*, sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type de *base* est une classe de base du type *dérivé*. sinon, sa valeur est false.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 #include <type_traits>
@@ -80,5 +80,5 @@ is_base_of<derived, base> == false
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_convertible, classe](../standard-library/is-convertible-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_convertible, classe](../standard-library/is-convertible-class.md)

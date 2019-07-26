@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char32_t> class
 ms.assetid: c0315466-45d0-4a99-b83e-3b1dbfbfbbc3
-ms.openlocfilehash: 12fc36a9256a8a744e789fc95bb8603ee6cbf3d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a5cf2eb7734a20d04ec5c47ae71e80180a7b29d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379491"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459053"
 ---
 # <a name="chartraitsltchar32tgt-struct"></a>char_traits&lt;char32_t&gt;, struct
 
@@ -37,5 +37,5 @@ La spécialisation permet au struct de tirer parti des fonctions de bibliothèqu
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<string>](../standard-library/string.md)<br/>
-[char_traits, struct](../standard-library/char-traits-struct.md)<br/>
+[\<string>](../standard-library/string.md)\
+[char_traits, struct](../standard-library/char-traits-struct.md)

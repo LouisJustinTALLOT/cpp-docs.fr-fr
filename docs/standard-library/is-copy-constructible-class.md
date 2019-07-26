@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_copy_constructible
 ms.assetid: d8db9d4c-21ed-4884-bead-0b0b562de007
-ms.openlocfilehash: c85d036efda2509885a079cf59a130a63c0389bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70de134fa0cb3e9d6b0259135372f37b9c017e92
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336629"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452793"
 ---
 # <a name="iscopyconstructible-class"></a>is_copy_constructible, classe
 
@@ -26,12 +26,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*<br/>
+*Ty*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un constructeur de copie, sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un constructeur de copie. sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -75,4 +75,4 @@ is_copy_constructible<NotCopyable > == false
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

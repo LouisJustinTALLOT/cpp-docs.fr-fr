@@ -10,12 +10,12 @@ helpviewer_keywords:
 - library headers
 - C++ Standard Library, headers
 ms.assetid: a36e889e-1af2-4cd9-a211-bfc7a3fd8e85
-ms.openlocfilehash: b9841d1045a6d2d1126414f1ce4cfc93f9667eef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cc0bb51b159f6668adad05ebd2d386364ae2f81
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362359"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450072"
 ---
 # <a name="using-c-library-headers"></a>Utilisation des en-têtes de bibliothèque C++
 
@@ -31,11 +31,11 @@ Un en-tête de bibliothèque C++ inclut tous les autres en-têtes de bibliothèq
 
 Chaque fonction de la bibliothèque est déclarée dans un en-tête standard. Contrairement au langage C standard, l’en-tête standard ne fournit jamais de macro de masquage du même nom que la fonction qui masque la déclaration de fonction et permet d’obtenir le même effet. Pour plus d’informations sur les macros de masquage, consultez [Conventions de la bibliothèque C++](../standard-library/cpp-library-conventions.md).
 
-Tous les noms autres que **opérateur delete** et **opérateur new** dans la bibliothèque C++ en-têtes sont définis dans le `std` espace de noms, ou dans un espace de noms imbriqué dans le `std` espace de noms. Vous faites référence au nom `cin`, par exemple, en tant que `std::cin`. Notez, cependant, que les noms des macros ne sont pas soumis à la qualification d’espace de noms. Par conséquent, vous écrivez toujours `__STD_COMPLEX` sans qualificateur d’espace de noms.
+Tous les noms autres que l' **opérateur delete** et **operator new** dans les C++ en-têtes de bibliothèque `std` sont définis dans l’espace de noms, ou dans `std` un espace de noms imbriqué dans l’espace de noms. Vous faites référence au nom `cin`, par exemple, en tant que `std::cin`. Notez, cependant, que les noms des macros ne sont pas soumis à la qualification d’espace de noms. Par conséquent, vous écrivez toujours `__STD_COMPLEX` sans qualificateur d’espace de noms.
 
-Dans certains environnements de traduction, notamment un en-tête de bibliothèque C++ peut hausser les noms externes déclarés dans le `std` espace de noms dans l’espace de noms global, avec personne **à l’aide de** déclarations pour chacun de ces noms. Sinon, l’en-tête n’introduit *aucun* nom de bibliothèque dans l’espace de noms actuel.
+Dans certains environnements de traduction, y C++ compris un en-tête de bibliothèque peut également `std` détourer les noms externes déclarés dans l’espace de noms dans l’espace de noms global, avec des déclarations **using** individuelles pour chacun des noms. Sinon, l’en-tête n’introduit *aucun* nom de bibliothèque dans l’espace de noms actuel.
 
-La norme C++ nécessite que les en-têtes Standard C déclarent tous les noms externes dans l’espace de noms `std`, puis les haussent vers l’espace de noms global avec personne **à l’aide de** déclarations pour chacun de ces noms. Mais, dans certains environnements de traduction, les en-têtes du standard C n’incluent aucune déclaration d’espace de noms, déclarant tous les noms directement dans l’espace de noms global. Par conséquent, la façon la plus portable de traiter les espaces de noms consiste à suivre deux règles :
+La C++ norme exige que les en-têtes standard C déclarent tous les noms `std`externes dans l’espace de noms, puis les relevages dans l’espace de noms global avec des déclarations **using** individuelles pour chacun des noms. Mais, dans certains environnements de traduction, les en-têtes du standard C n’incluent aucune déclaration d’espace de noms, déclarant tous les noms directement dans l’espace de noms global. Par conséquent, la façon la plus portable de traiter les espaces de noms consiste à suivre deux règles :
 
 - Pour déclarer sans faute dans l’espace de noms `std` un nom externe traditionnellement déclaré dans \<stdlib.h> par exemple, incluez l’en-tête \<cstdlib>. Sachez que le nom peut également être déclaré dans l’espace de noms global.
 
@@ -55,5 +55,5 @@ Sauf indication contraire spécifique, vous ne pouvez pas définir les noms dans
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

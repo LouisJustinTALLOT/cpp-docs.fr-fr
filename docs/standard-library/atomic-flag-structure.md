@@ -6,16 +6,16 @@ f1_keywords:
 - atomic/std::atomic_flag::clear
 - atomic/std::atomic_flag::test_and_set
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
-ms.openlocfilehash: 13af0c26b765aa7ebbbd1ec22b5a0ed1b8cce0ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36944c3c3bdc58272d87bbcdfb119d1c52c43995
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377255"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447404"
 ---
 # <a name="atomicflag-structure"></a>atomic_flag, structure
 
-Décrit un objet qui définit et efface atomiquement un **bool** indicateur. Les opérations sur les indicateurs atomiques sont toujours sans verrou.
+Décrit un objet qui définit et efface atomiquement un indicateur **bool** . Les opérations sur les indicateurs atomiques sont toujours sans verrou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,8 +29,8 @@ struct atomic_flag;
 
 |Nom|Description|
 |----------|-----------------|
-|[clear](#clear)|Définit l’indicateur stockée avec **false**.|
-|[test_and_set](#test_and_set)|Définit l’indicateur stockée avec **true** et retourne la valeur d’indicateur initial.|
+|[clear](#clear)|Définit l’indicateur stocké sur false.|
+|[test_and_set](#test_and_set)|Définit l’indicateur stocké sur **true** et retourne la valeur de l’indicateur initial.|
 
 ## <a name="remarks"></a>Notes
 
@@ -38,13 +38,13 @@ Les objets `atomic_flag` peuvent être passés aux fonctions non-membres [atomic
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<atomic >
+**En-tête:** \<> atomiques
 
 **Espace de noms :** std
 
 ## <a name="clear"></a>  atomic_flag::clear
 
-Définit le **bool** indicateur qui est stocké dans `*this` à **false**, dans le texte spécifié [memory_order](../standard-library/atomic-enums.md#memory_order_enum) contraintes.
+Définit l’indicateur **bool** qui est stocké `*this` dans sur **false**, dans les contraintes [memory_order](../standard-library/atomic-enums.md#memory_order_enum) spécifiées.
 
 ```cpp
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -53,12 +53,12 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Order*<br/>
+*Ordre*\
 Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="test_and_set"></a>  atomic_flag::test_and_set
 
-Définit le **bool** indicateur qui est stocké dans `*this` à **true**, dans le texte spécifié [memory_order](../standard-library/atomic-enums.md#memory_order_enum) contraintes.
+Affecte à l’indicateur **bool** stocké dans `*this` la **valeur true**, dans les contraintes [memory_order](../standard-library/atomic-enums.md#memory_order_enum) spécifiées.
 
 ```cpp
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -67,7 +67,7 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>Paramètres
 
-*Order*<br/>
+*Ordre*\
 Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -76,4 +76,4 @@ La valeur initiale de l’indicateur est stockée dans `*this`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<atomic>](../standard-library/atomic.md)<br/>
+[\<atomic>](../standard-library/atomic.md)

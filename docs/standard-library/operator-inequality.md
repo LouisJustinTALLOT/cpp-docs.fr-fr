@@ -13,17 +13,17 @@ helpviewer_keywords:
 - operator!=
 - operator !=
 ms.assetid: ef2be7f0-1c94-4edc-b65c-731fddd519f4
-ms.openlocfilehash: e29088b64b46e3aa907f4a09ec131c6f9b68a74b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 1214dd7d5034b80b14f8dd1422aa1a3b8a253023
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220499"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447647"
 ---
 # <a name="operator"></a>!=, opérateur
 
 > [!NOTE]
-> Cette rubrique se trouve dans le Microsoft C++ documentation comme exemple non fonctionnel de conteneurs utilisés dans le C++ bibliothèque Standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
+> Cette rubrique se trouve dans la C++ documentation de Microsoft comme un exemple non fonctionnel de conteneurs utilisés dans C++ la bibliothèque standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
 
 Surcharge `operator!=` pour comparer deux objets de la classe de modèle [Container](../standard-library/sample-container-class.md).
 
@@ -42,4 +42,4 @@ Retourne `!(left == right)`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<sample container>](../standard-library/sample-container.md)<br/>
+[\<sample container>](../standard-library/sample-container.md)

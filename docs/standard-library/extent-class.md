@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extent class
 - extent
 ms.assetid: 6d16263d-90b2-4330-9ec7-b59ed898792d
-ms.openlocfilehash: 7463b424d15ee86f851b7d81953abf3fe1c98fee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cd53ba8537e706a68ffdcf08df998108266ad20
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393972"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457795"
 ---
 # <a name="extent-class"></a>extent, classe
 
@@ -27,15 +27,15 @@ struct extent;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*<br/>
+*Ty*\
 Type à interroger.
 
-*I*<br/>
+*CLIQU*\
 Tableau lié à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Si *Ty* est un type de tableau qui possède au moins *je* dimensions, la requête de type contient le nombre d’éléments dans la dimension spécifiée par *je*. Si *Ty* n’est pas un type tableau ou son rang est inférieur à *je*, ou si *je* est égal à zéro et *Ty* est de type « tableau inconnu lié de `U` «, la requête de type conserve la valeur 0.
+Si *Ty* est un type tableau qui possède au moins *I* dimensions, la requête de type contient le nombre d’éléments dans la dimension spécifiée par *I*. Si *Ty* n’est pas un type tableau ou si son rang est inférieur à *i*, ou si *i* est égal à zéro et que *Ty* est de type « `U`tableau de limite inconnue de», la requête de type contient la valeur 0.
 
 ## <a name="example"></a>Exemple
 
@@ -69,6 +69,6 @@ extent 1 == 10
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_all_extents, classe](../standard-library/remove-all-extents-class.md)<br/>
-[remove_extent, classe](../standard-library/remove-extent-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_all_extents, classe](../standard-library/remove-all-extents-class.md)\
+[remove_extent, classe](../standard-library/remove-extent-class.md)

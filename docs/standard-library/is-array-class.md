@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_array class
 - is_array
 ms.assetid: 61fb2201-8de3-4746-9721-617f02df170f
-ms.openlocfilehash: daaa4faa82dba7f98a6636cc06b2637534cfc99b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c54664ed5f56411929c60a0f15ae3c4f0e4581ce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252712"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456660"
 ---
 # <a name="isarray-class"></a>is_array, classe
 
@@ -27,14 +27,14 @@ struct is_array;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*<br/>
+*Ty*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *Ty* est un type tableau, sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un type tableau. sinon, sa valeur est false.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // std__type_traits__is_array.cpp
@@ -74,6 +74,6 @@ is_array<int[5]> == true
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[extent, classe](../standard-library/extent-class.md)<br/>
-[rank, classe](../standard-library/rank-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[extent, classe](../standard-library/extent-class.md)\
+[rank, classe](../standard-library/rank-class.md)

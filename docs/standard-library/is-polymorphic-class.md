@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_polymorphic class
 - is_polymorphic
 ms.assetid: 4e1704db-d6f9-4154-a100-0ba02a373f20
-ms.openlocfilehash: 8d9846f03db60cdad88fccc04ba520eeb935dc33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 662d68d13e076733e9923d0fad7e9272cd01b559
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413578"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455726"
 ---
 # <a name="ispolymorphic-class"></a>is_polymorphic, classe
 
@@ -27,14 +27,14 @@ struct is_polymorphic;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*<br/>
+*Ty*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui déclare ou hérite d’une fonction virtuelle, sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui déclare ou hérite d’une fonction virtuelle. sinon, sa valeur est false.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // std__type_traits__is_polymorphic.cpp
@@ -92,5 +92,5 @@ is_polymorphic<throws> == true
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_abstract, classe](../standard-library/is-abstract-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_abstract, classe](../standard-library/is-abstract-class.md)

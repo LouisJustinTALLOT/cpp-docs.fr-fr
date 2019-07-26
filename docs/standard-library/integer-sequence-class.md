@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: c996fdc2756ee489dc3b0abf9321a1d9ce47aded
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca923933ac7a401f6a3ef14f821ceb04b844797b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404947"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451019"
 ---
 # <a name="integersequence-class"></a>integer_sequence, classe
 
@@ -34,10 +34,10 @@ struct integer_sequence
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type des valeurs ; doit être un type intégral : bool, char, char16_t, char32_t, wchar_t, ou des types entiers signés ou non signés.
 
-*Ourbes*<br/>
+*Vals*\
 Pack de paramètre sans type qui représente une séquence de valeurs de type intégral T.
 
 ## <a name="members"></a>Membres
@@ -51,13 +51,13 @@ Pack de paramètre sans type qui représente une séquence de valeurs de type in
 
 Un pack de paramètres transmis directement à une fonction peut être décompressé sans aucun programme d'assistance de bibliothèque spécial. Quand un pack de paramètres fait partie d'un type qui est passé à une fonction et que vous avez besoin d'index pour accéder aux éléments, le moyen le plus simple de le décompresser consiste à utiliser `integer_sequence` et ses alias de types connexes `make_integer_sequence`, `index_sequence`, `make_index_sequence` et `index_sequence_for`.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 L’exemple suivant est basé sur la proposition d’origine [N3658](http://open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3658.html). Il montre comment utiliser un `integer_sequence` pour créer un `std::tuple` à partir d'un `std::array<T,N>` et comment utiliser un `integer_sequence` pour accéder aux membres de tuple.
 
 Dans la fonction `a2t`, un `index_sequence` est un alias de `integer_sequence` basé sur le type intégral `size_t`. `make_index_sequence` est un alias qui, au moment de la compilation, crée un `index_sequence` de base zéro avec le même nombre d'éléments que le tableau qui est passé par l'appelant. `a2t` transmet le `index_sequence` par valeur à `a2t_`, où l'expression `a[I]...` décompresse `I`, puis les éléments sont transmis à `make_tuple`, qui les consomme en tant qu'arguments individuels. Par exemple, si la séquence contient trois éléments, `make_tuple` est appelé comme make_tuple(a[0], a[1], a[2]). Les éléments du tableau proprement dits peuvent bien entendu être de n'importe quel type.
 
-La fonction apply accepte un [std::tuple](../standard-library/tuple-class.md)et produit un `integer_sequence` à l’aide de la `tuple_size` classe d’assistance. Notez que [std::decay_t](../standard-library/decay-class.md) est nécessaire, car [tuple_size](../standard-library/tuple-size-class-tuple.md) ne fonctionne pas avec les types référence. La fonction `apply_` décompresse les membres de tuple et les transmet en tant qu'arguments séparés à un appel de fonction. Dans cet exemple, la fonction est une expression lambda simple qui imprime les valeurs.
+La fonction Apply accepte un [std:: tuple](../standard-library/tuple-class.md)et produit un `integer_sequence` à l’aide de `tuple_size` la classe d’assistance. Notez que [std::d ecay_t](../standard-library/decay-class.md) est nécessaire car [tuple_size](../standard-library/tuple-size-class-tuple.md) ne fonctionne pas avec les types référence. La fonction `apply_` décompresse les membres de tuple et les transmet en tant qu'arguments séparés à un appel de fonction. Dans cet exemple, la fonction est une expression lambda simple qui imprime les valeurs.
 
 ```cpp
 #include <stddef.h>
@@ -119,10 +119,10 @@ Pour créer un `index_sequence` pour un pack de paramètres, utilisez `index_seq
 
 ## <a name="requirements"></a>Configuration requise
 
-En-tête : \<type_traits\>
+En- \<tête: type_traits\>
 
 Espace de noms : std
 
 ## <a name="see-also"></a>Voir aussi
 
-[Ellipses et modèles variadiques](../cpp/ellipses-and-variadic-templates.md)<br/>
+[Ellipses et modèles variadiques](../cpp/ellipses-and-variadic-templates.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
-ms.openlocfilehash: 80aad69f05b7473b508447d6f69f1d92edbeeca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 052271e2e2cc929875489e27abde2147bc5c070a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400641"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460084"
 ---
 # <a name="basiciostream-class"></a>basic_iostream, classe
 
@@ -75,10 +75,10 @@ basic_iostream();
 
 ### <a name="parameters"></a>Paramètres
 
-*strbuf*<br/>
+*strbuf*\
 Objet `basic_streambuf` existant.
 
-*right*<br/>
+*Oui*\
 Objet `basic_iostream` existant utilisé pour construire un nouveau `basic_iostream`.
 
 ### <a name="remarks"></a>Notes
@@ -97,7 +97,7 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 Référence `rvalue` à un objet `basic_iostream` à partir duquel effectuer l'assignation.
 
 ### <a name="remarks"></a>Notes
@@ -114,7 +114,7 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 Objet `basic_iostream` à échanger.
 
 ### <a name="remarks"></a>Notes
@@ -123,6 +123,6 @@ La fonction membre appelle `swap(right)`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream, programmation](../standard-library/iostream-programming.md)<br/>
-[iostreams, conventions](../standard-library/iostreams-conventions.md)<br/>
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream, programmation](../standard-library/iostream-programming.md)\
+[iostreams, conventions](../standard-library/iostreams-conventions.md)

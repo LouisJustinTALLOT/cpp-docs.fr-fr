@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::strstream [C++], rdbuf
 - std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
-ms.openlocfilehash: 9494f7ee2508df1971d56c94b929a7212bedb254
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53baa350121796d5198211e1fdb08f4341df6b80
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412291"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459102"
 ---
 # <a name="strstream-class"></a>strstream, classe
 
@@ -67,8 +67,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Freezeit*<br/>
-Un **bool** indiquant si vous souhaitez que le flux soit gelé.
+*_Freezeit*\
+Valeur **booléenne** indiquant si vous souhaitez que le flux soit figé.
 
 ### <a name="remarks"></a>Notes
 
@@ -76,7 +76,7 @@ La fonction membre appelle [rdbuf](#rdbuf) -> [freeze](../standard-library/strst
 
 ### <a name="example"></a>Exemple
 
-Consultez [strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze) pour obtenir un exemple qui utilise `freeze`.
+Consultez [strstreambuf:: Freeze](../standard-library/strstreambuf-class.md#freeze) pour obtenir un exemple qui `freeze`utilise.
 
 ## <a name="pcount"></a>  strstream::pcount
 
@@ -114,7 +114,7 @@ Un pointeur vers l’objet strstreambuf associé au flux.
 
 La fonction membre retourne l’adresse de la mémoire tampon de flux stockée de type `pointer` à [strstreambuf](../standard-library/strstreambuf-class.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Pour obtenir un exemple qui utilise `rdbuf`, consultez [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount).
 
@@ -136,7 +136,7 @@ La fonction membre retourne [rdbuf](#rdbuf) -> [str](../standard-library/strstre
 
 ### <a name="example"></a>Exemple
 
-Consultez [strstreambuf::str](../standard-library/strstreambuf-class.md#str) pour obtenir un exemple qui utilise `str`.
+Consultez [strstreambuf:: Str](../standard-library/strstreambuf-class.md#str) pour obtenir un exemple qui `str`utilise.
 
 ## <a name="strstream"></a>  strstream::strstream
 
@@ -152,26 +152,26 @@ strstream(char* ptr,
 
 ### <a name="parameters"></a>Paramètres
 
-*count*<br/>
+*saut*\
 Taille de la mémoire tampon.
 
-*_Mode*<br/>
+*_Mode*\
 Mode d’entrée et de sortie de la mémoire tampon. Pour plus d’informations, consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*ptr*<br/>
+*effectués*\
 Mémoire tampon.
 
 ### <a name="remarks"></a>Notes
 
-Les deux constructeurs initialisent la classe de base en appelant [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**), où `sb` est l’objet stocké de classe [strstreambuf](../standard-library/strstreambuf-class.md). Le premier constructeur initialise également `sb` en appelant [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf). Le deuxième constructeur initialise la classe de base d’une des deux façons suivantes :
+Les deux constructeurs initialisent la classe de base en appelant [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **SB**), `sb` où est l’objet stocké de la classe [strstreambuf](../standard-library/strstreambuf-class.md). Le premier constructeur initialise `sb` également en appelant [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf). Le deuxième constructeur initialise la classe de base d’une des deux façons suivantes :
 
-- Si `_Mode`  &  **ios_base::app**== 0, puis *ptr* doit désigner le premier élément d’un tableau de `count` éléments et le constructeur appelle `strstreambuf`( `ptr`, `count`, `ptr`).
+- Si `_Mode` `strstreambuf` `ptr` `count` `count` `ptr`  ios_base:: app = = 0, PTR doit désigner le premier élément d’un tableau d’éléments, et le constructeur appelle (,,)  &  .
 
-- Sinon, *ptr* doit désigner le premier élément d’un tableau d’éléments count qui contient une chaîne C dont le premier élément est désigné par *ptr*et le constructeur appelle `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
+- Sinon, *ptr* doit désigner le premier élément d’un tableau d’éléments Count qui contient une chaîne C dont le premier élément est désigné par *ptr*, et le constructeur `strstreambuf`appelle `ptr`( `count`, `ptr` ,  +  `strlen`( `ptr`) ).
 
 ## <a name="see-also"></a>Voir aussi
 
-[iostream](../standard-library/istream-typedefs.md#iostream)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream, programmation](../standard-library/iostream-programming.md)<br/>
-[iostreams, conventions](../standard-library/iostreams-conventions.md)<br/>
+[iostream](../standard-library/istream-typedefs.md#iostream)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream, programmation](../standard-library/iostream-programming.md)\
+[iostreams, conventions](../standard-library/iostreams-conventions.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf8 class
 ms.assetid: 2a87478f-e2d4-4b8d-ad9c-00add01d1bb0
-ms.openlocfilehash: 3e3ddeccac2c18eedb96746f1c442c6b42349783
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcbb34c300d7c15f89c4a882275be0efd68359dc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405245"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458714"
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
 
@@ -24,13 +24,13 @@ class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Paramètres
 
-*Elem*<br/>
+*Elem*\
 Type d'élément à caractères larges.
 
-*Maxcode*<br/>
+*Maxcode*\
 Nombre maximal de caractères pour la facette de paramètres régionaux.
 
-*Mode*<br/>
+*Mode*\
 Informations de configuration pour les facettes de paramètres régionaux.
 
 ## <a name="remarks"></a>Notes
@@ -39,6 +39,6 @@ Le flux d’octets peut être écrit dans un fichier binaire ou un fichier texte
 
 ## <a name="requirements"></a>Configuration requise
 
-En-tête : \<codecvt > \
+En- \<tête: codecvt >
 
-Namespace : std
+Espace de noms: STD

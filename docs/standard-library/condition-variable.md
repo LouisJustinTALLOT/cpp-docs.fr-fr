@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: ed98966f651df76078fa47b05f5a2d8ae1b71d05
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e63dc5a494f471997c28be8b2cd237aba45a6fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244576"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457384"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -19,12 +19,12 @@ Cet en-tête utilise le runtime d’accès concurrentiel (ConcRT) pour pouvoir l
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<condition_variable >
+**En-tête:** \<CONDITION_VARIABLE >
 
 **Espace de noms :** std
 
 > [!NOTE]
-> Dans le code est compilé à l’aide de **/CLR**, cet en-tête est bloqué.
+> Dans le code compilé à l’aide de **/CLR**, cet en-tête est bloqué.
 
 ### <a name="remarks"></a>Notes
 
@@ -49,15 +49,15 @@ Les classes `condition_variable_any` et `condition_variable` ont chacune trois m
 
 - `wait_for` attend pendant une valeur `time interval` spécifiée.
 
-Chacune de ces méthodes a deux versions surchargées. L’une se contente d’attendre et peut s’éveiller sans motif. L’autre accepte un argument de modèle supplémentaire qui définit un prédicat. La méthode ne retourne pas jusqu'à ce que le prédicat est **true**.
+Chacune de ces méthodes a deux versions surchargées. L’une se contente d’attendre et peut s’éveiller sans motif. L’autre accepte un argument de modèle supplémentaire qui définit un prédicat. La méthode ne retourne pas de valeur tant que le prédicat n’a pas la **valeur true**.
 
-Chaque classe a également deux méthodes sont utilisées pour informer une variable conditionnelle que sa condition est **true**.
+Chaque classe a également deux méthodes qui sont utilisées pour notifier une variable de condition que sa condition est **true**.
 
 - `notify_one` éveille un des threads en attente de la variable conditionnelle.
 
 - `notify_all` éveille tous les threads en attente de la variable conditionnelle.
 
-## <a name="functions-and-enums"></a>Fonctions et des énumérations
+## <a name="functions-and-enums"></a>Fonctions et énumérations
 
 ```cpp
 void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
@@ -67,6 +67,6 @@ enum class cv_status { no_timeout, timeout };
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[condition_variable, classe](../standard-library/condition-variable-class.md)<br/>
-[condition_variable_any, classe](../standard-library/condition-variable-any-class.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[condition_variable, classe](../standard-library/condition-variable-class.md)\
+[condition_variable_any, classe](../standard-library/condition-variable-any-class.md)

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::value_compare
 ms.assetid: ea97c1d0-04b2-4d42-8d96-23522c04cc41
-ms.openlocfilehash: 69b484944c9ce30dc28fceacfb082051da31c053
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d098e947aec1ea543f29c168a632d1f4c9412e82
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365012"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448326"
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare, classe (&lt;map&gt;)
 
@@ -35,7 +35,7 @@ protected:
 
 ## <a name="remarks"></a>Notes
 
-Le critère de comparaison fourni par `value_compare` entre `value_types` d’éléments entiers contenus par un mappage est induit à partir d’une comparaison entre les clés des éléments respectifs par la construction de classe auxiliaire. L’opérateur de fonction membre utilise l’objet `comp` de type `key_compare` stockées dans l’objet de fonction fourni par `value_compare` pour comparer les composants de la clé de tri de deux éléments.
+Le critère de comparaison fourni `value_compare` par `value_types` entre les éléments entiers contenus dans un mappage est induit à partir d’une comparaison entre les clés des éléments respectifs par la construction de la classe auxiliaire. L’opérateur de fonction membre utilise l' `comp` objet de `key_compare` type stocké dans l’objet de `value_compare` fonction fourni par pour comparer les composants de clé de tri de deux éléments.
 
 Pour les jeux et multijeux, qui sont des conteneurs simples dans lesquels les valeurs de clé sont identiques aux valeurs d’élément, `value_compare` équivaut à `key_compare` ; pour les objets map et multimap, ce n’est pas le cas, car la valeur des éléments `pair` de type n’est pas identique à la valeur de la clé de l’élément.
 
@@ -51,6 +51,6 @@ Consultez l’exemple relatif à [value_comp](../standard-library/map-class.md#v
 
 ## <a name="see-also"></a>Voir aussi
 
-[binary_function, struct](../standard-library/binary-function-struct.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[binary_function, struct](../standard-library/binary-function-struct.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

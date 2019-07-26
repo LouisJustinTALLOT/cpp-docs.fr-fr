@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bb04b84b723f239c338c02befa8cd3468cec3f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370669"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450081"
 ---
 # <a name="packagedtask-class"></a>packaged_task, classe
 
@@ -67,7 +67,7 @@ class packaged_task;
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<future >
+**En-tête:** \<> à venir
 
 **Espace de noms :** std
 
@@ -113,7 +113,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Droite*<br/>
+*Oui*\
 Objet `packaged_task`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -122,7 +122,7 @@ Objet `packaged_task`.
 
 ### <a name="remarks"></a>Notes
 
-Après l’opération, *droite* n’a plus d’état asynchrone associé.
+Après l’opération, *le droit* n’est plus associé à un état asynchrone.
 
 ## <a name="op_call"></a>  packaged_task::operator()
 
@@ -150,7 +150,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet a un état asynchrone associé ; sinon, **false**.
+**true** si l’objet a un état asynchrone associé; Sinon, **false**.
 
 ## <a name="packaged_task"></a>  packaged_task::packaged_task, constructeur
 
@@ -169,24 +169,24 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>Paramètres
 
-*Droite*<br/>
+*Oui*\
 Objet `packaged_task`.
 
-*alloc*<br/>
+*utilis*\
 Allocateur de mémoire. Pour plus d’informations, consultez [\<allocators>](../standard-library/allocators-header.md).
 
-*fn*<br/>
+*FN*\
 Objet de fonction.
 
 ### <a name="remarks"></a>Notes
 
 Le premier constructeur construit un objet `packaged_task` sans *état asynchrone associé*.
 
-Le deuxième constructeur construit un `packaged_task` de l’objet et transfère l’état asynchrone associé à partir de *droite*. Après l’opération, *droite* n’a plus d’état asynchrone associé.
+Le deuxième constructeur construit un `packaged_task` objet et transfère l’état asynchrone associé à partir de la *droite*. Après l’opération, *le droit* n’est plus associé à un état asynchrone.
 
-Le troisième constructeur construit un `packaged_task` objet qui possède une copie de *fn* stockées dans son état asynchrone associé.
+Le troisième constructeur construit un `packaged_task` objet qui a une copie de *FN* stockée dans son état asynchrone associé.
 
-Le quatrième constructeur construit un `packaged_task` objet qui possède une copie de *fn* stockée dans son état asynchrone associé et utilise `alloc` pour l’allocation de mémoire.
+Le quatrième constructeur construit un `packaged_task` objet qui a une copie de *FN* stockée dans son état asynchrone associé et utilise `alloc` pour l’allocation de mémoire.
 
 ## <a name="dtorpackaged_task_destructor"></a>  packaged_task::~packaged_task, destructeur
 
@@ -222,7 +222,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Droite*<br/>
+*Oui*\
 Objet `packaged_task`.
 
 ## <a name="valid"></a>  packaged_task::valid
@@ -235,9 +235,9 @@ bool valid() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet a un état asynchrone associé ; sinon, **false**.
+**true** si l’objet a un état asynchrone associé; Sinon, **false**.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

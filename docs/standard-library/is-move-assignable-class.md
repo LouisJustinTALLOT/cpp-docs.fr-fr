@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_move_assignable
 ms.assetid: f33137f2-0639-4912-8745-bc0f9fd18d28
-ms.openlocfilehash: da4734507bac14ecf0278117deb7668518305be0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8563db51eeb1988697b3e07a1a8673a777783e38
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351064"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456129"
 ---
 # <a name="ismoveassignable-class"></a>is_move_assignable, classe
 
@@ -26,7 +26,7 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
@@ -41,4 +41,4 @@ Un type est assignable par déplacement si une référence rvalue au type peut �
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

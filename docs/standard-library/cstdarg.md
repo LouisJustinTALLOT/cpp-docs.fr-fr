@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cstdarg header
 ms.assetid: 639b4ef7-8408-4640-9343-41631f0ab663
-ms.openlocfilehash: f8d2d3b886cfa46905e8f17f1e13b51881b80191
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 0b45d5f591c5394ffa861e75169dce70f53b1baf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244485"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448025"
 ---
 # <a name="ltcstdarggt"></a>&lt;cstdarg&gt;
 
-Inclut l’en-tête de bibliothèque C Standard \<stdarg.h > et ajoute les noms associés à la `std` espace de noms. Inclusion de cet en-tête garantit également que les noms déclarés à l’aide d’une liaison externe dans l’en-tête de bibliothèque C Standard sont déclarés dans le `std` espace de noms.
+Inclut l’en-tête \<stdarg. > h de la bibliothèque standard C et ajoute les noms associés à l' `std` espace de noms. L’inclusion de cet en-tête garantit que les noms déclarés à l’aide de la liaison externe dans l' `std` en-tête de la bibliothèque standard C sont déclarés dans l’espace de noms.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,7 +23,7 @@ Inclut l’en-tête de bibliothèque C Standard \<stdarg.h > et ajoute les noms 
 #include <cstdarg>
 ```
 
-## <a name="namespace-and-macros"></a>Namespace et Macros
+## <a name="namespace-and-macros"></a>Espace de noms et macros
 
 ```cpp
 namespace std {
@@ -38,6 +38,6 @@ namespace std {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reverse_iterator method
 ms.assetid: 1d190c41-56b1-462e-b564-793b2a883c26
-ms.openlocfilehash: f1f212b949ff08635c44c5e5bc54c5baec9b3417
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: ab5aeacdf9f7499876a53d3e0bedf7589ff1eb0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221552"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450792"
 ---
 # <a name="container-classreverseiterator"></a>Conteneur Class::reverse_iterator
 
 > [!NOTE]
-> Cette rubrique se trouve dans le Microsoft C++ documentation comme exemple non fonctionnel de conteneurs utilisés dans le C++ bibliothèque Standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
+> Cette rubrique se trouve dans la C++ documentation de Microsoft comme un exemple non fonctionnel de conteneurs utilisés dans C++ la bibliothèque standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
 
 Décrit un objet pouvant servir d’itérateur inverse pour la séquence contrôlée.
 
@@ -27,8 +27,8 @@ typedef T7 reverse_iterator;
 
 ## <a name="remarks"></a>Notes
 
-Il est décrit ici comme un synonyme du type non spécifié `T7` (généralement `reverse_iterator` **\<** [itérateur](../standard-library/container-class-iterator.md)**>**).
+Il est décrit ici comme un synonyme du type `T7` non spécifié (en général `reverse_iterator` **\<** , [iterator](../standard-library/container-class-iterator.md) **>** ).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sample Container, classe](../standard-library/sample-container-class.md)<br/>
+[Sample Container, classe](../standard-library/sample-container-class.md)

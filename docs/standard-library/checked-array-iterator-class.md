@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 688b93902da5b4492812b4715a248db9561ec258
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68ee602c44a8515e1d41f04a4bd0fbb7edc924b7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379192"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452307"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator, classe
 
@@ -91,7 +91,7 @@ int main() {
 */
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Pour ne pas avoir besoin de la classe `checked_array_iterator` quand vous utilisez des algorithmes de bibliothèque C++ Standard, utilisez un `vector` au lieu d’un tableau alloué dynamiquement. L'exemple suivant illustre la procédure à suivre pour réaliser cette opération.
 
@@ -243,13 +243,13 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>Paramètres
 
-*ptr*<br/>
+*effectués*\
 Pointeur vers le tableau.
 
-*size*<br/>
+*corps*\
 Taille du tableau.
 
-*index*<br/>
+*évaluer*\
 (Facultatif) Un élément du tableau, pour initialiser l’itérateur.  Par défaut, l’itérateur est initialisé au niveau du premier élément du tableau.
 
 ### <a name="remarks"></a>Notes
@@ -318,14 +318,14 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 `checked_array_iterator` par rapport auquel vérifier l’égalité.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations, consultez [Checked Iterators](../standard-library/checked-iterators.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // checked_array_iterators_opeq.cpp
@@ -374,14 +374,14 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 `checked_array_iterator` par rapport auquel vérifier l’inégalité.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations, consultez [Checked Iterators](../standard-library/checked-iterators.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // checked_array_iterators_opneq.cpp
@@ -430,7 +430,7 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 `checked_array_iterator` par rapport auquel vérifier l’inégalité.
 
 ### <a name="remarks"></a>Notes
@@ -486,7 +486,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 `checked_array_iterator` avec lequel effectuer la comparaison.
 
 ### <a name="remarks"></a>Notes
@@ -505,7 +505,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 `checked_array_iterator` avec lequel effectuer la comparaison.
 
 ### <a name="remarks"></a>Notes
@@ -524,7 +524,7 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 `checked_array_iterator` avec lequel effectuer la comparaison.
 
 ### <a name="remarks"></a>Notes
@@ -586,7 +586,7 @@ Valeur de l’élément ciblé par le `checked_array_iterator`.
 
 Pour plus d'informations, consultez [Checked Iterators](../standard-library/checked-iterators.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // checked_array_iterator_pointer.cpp
@@ -715,7 +715,7 @@ Le premier opérateur retourne le `checked_array_iterator` prédécrémenté et 
 
 Pour plus d'informations, consultez [Checked Iterators](../standard-library/checked-iterators.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // checked_array_iterators_op_minus_minus.cpp
@@ -755,7 +755,7 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off*<br/>
+*_Off*\
 Décalage d’incrémentation de l’itérateur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -803,7 +803,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off*<br/>
+*_Off*\
 Décalage à ajouter à `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -851,7 +851,7 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off*<br/>
+*_Off*\
 Décalage d’incrémentation de l’itérateur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -862,7 +862,7 @@ Référence vers l’élément ciblé par le `checked_array_iterator`.
 
 Pour plus d'informations, consultez [Checked Iterators](../standard-library/checked-iterators.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // checked_array_iterators_op_minus_eq.cpp
@@ -902,7 +902,7 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off*<br/>
+*_Off*\
 Décalage à décrémenter du `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -923,7 +923,7 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off*<br/>
+*_Off*\
 Décalage par rapport au `checked_array_iterator` traité.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -993,5 +993,5 @@ Pour plus d'informations, consultez [Checked Iterators](../standard-library/chec
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

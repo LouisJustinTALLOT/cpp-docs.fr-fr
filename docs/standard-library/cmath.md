@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cmath header
 ms.assetid: 80df1dba-60ca-4918-9c2e-fbf446eaa7d6
-ms.openlocfilehash: 1b581e19d53be6faddb983f12d739f2a199b2e9c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d01b02d8fa169aa7fddbc3e51d75e5328b400d2b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244744"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459269"
 ---
 # <a name="ltcmathgt"></a>&lt;cmath&gt;
 
@@ -23,7 +23,7 @@ Inclut l’en-tête \<math.h> de la bibliothèque C Standard et ajoute les noms
 #include <cmath>
 ```
 
-## <a name="constants-and-types"></a>Constantes et Types
+## <a name="constants-and-types"></a>Constantes et types
 
 ```cpp
 namespace std {
@@ -217,7 +217,7 @@ float hypotf(float x, float y);
 long double hypotl(long double x, long double y);
 ```
 
-## <a name="three-dimensional-hypotenuse"></a>Hypoténuse en trois dimensions
+## <a name="three-dimensional-hypotenuse"></a>Hypoténuse tridimensionnel
 
 ```cpp
 float hypot(float x, float y, float z);
@@ -358,7 +358,7 @@ float fmaf(float x, float y, float z);
 long double fmal(long double x, long double y, long double z);
 ```
 
-## <a name="classification--comparison-functions"></a>Classification / fonctions de comparaison
+## <a name="classification--comparison-functions"></a>Fonctions de classification/comparaison
 
 ```cpp
 int fpclassify(float x);
@@ -401,7 +401,7 @@ int isunordered(long double x, long double y);
 
 ## <a name="mathematical-special-functions"></a>Fonctions mathématiques spéciales
 
-### <a name="associated-laguerre-polynomials"></a>Associé Laguerre POLYNÔMES
+### <a name="associated-laguerre-polynomials"></a>Polynômes Laguerre associées
 
 ```cpp
 double assoc_laguerre(unsigned n, unsigned m, double x);
@@ -417,7 +417,7 @@ float assoc_legendref(unsigned l, unsigned m, float x);
 long double assoc_legendrel(unsigned l, unsigned m, long double x);
 ```
 
-### <a name="beta-function"></a>Fonction Beta
+### <a name="beta-function"></a>Fonction bêta
 
 ```cpp
 double beta(double x, double y);
@@ -425,7 +425,7 @@ float betaf(float x, float y);
 long double betal(long double x, long double y);
 ```
 
-### <a name="complete-elliptic-integral-of-the-first-kind"></a>Intégrale elliptique complète du premier type
+### <a name="complete-elliptic-integral-of-the-first-kind"></a>Terminer l’intégrale elliptique du premier type
 
 ```cpp
 double comp_ellint_1(double k);
@@ -433,7 +433,7 @@ float comp_ellint_1f(float k);
 long double comp_ellint_1l(long double k);
 ```
 
-### <a name="complete-elliptic-integral-of-the-second-kind"></a>Intégrale elliptique complète de deuxième espèce
+### <a name="complete-elliptic-integral-of-the-second-kind"></a>Terminer l’intégrale elliptique du deuxième genre
 
 ```cpp
 double comp_ellint_2(double k);
@@ -441,7 +441,7 @@ float comp_ellint_2f(float k);
 long double comp_ellint_2l(long double k);
 ```
 
-### <a name="complete-elliptic-integral-of-the-third-kind"></a>Intégrale elliptique complète de la troisième type
+### <a name="complete-elliptic-integral-of-the-third-kind"></a>Compléter l’intégrale elliptique du troisième type
 
 ```cpp
 double comp_ellint_3(double k, double nu);
@@ -449,7 +449,7 @@ float comp_ellint_3f(float k, float nu);
 long double comp_ellint_3l(long double k, long double nu);
 ```
 
-### <a name="regular-modified-cylindrical-bessel-functions"></a>Regular modifié les fonctions de Bessel cylindriques
+### <a name="regular-modified-cylindrical-bessel-functions"></a>Fonctions de Bessel cylindriques modifiées régulières
 
 ```cpp
 double cyl_bessel_i(double nu, double x);
@@ -457,7 +457,7 @@ float cyl_bessel_if(float nu, float x);
 long double cyl_bessel_il(long double nu, long double x);
 ```
 
-### <a name="cylindrical-bessel-functions-of-the-first-kind"></a>Cylindriques fonctions de Bessel de première espèce
+### <a name="cylindrical-bessel-functions-of-the-first-kind"></a>Fonctions de Bessel cylindriques du premier genre
 
 ```cpp
 double cyl_bessel_j(double nu, double x);
@@ -465,7 +465,7 @@ float cyl_bessel_jf(float nu, float x);
 long double cyl_bessel_jl(long double nu, long double x);
 ```
 
-### <a name="irregular-modified-cylindrical-bessel-functions"></a>Anormale modifié les fonctions de Bessel cylindriques
+### <a name="irregular-modified-cylindrical-bessel-functions"></a>Fonctions de Bessel cylindriques modifiées irrégulières
 
 ```cpp
 double cyl_bessel_k(double nu, double x);
@@ -489,7 +489,7 @@ float ellint_1f(float k, float phi);
 long double ellint_1l(long double k, long double phi);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-second-kind"></a>Intégrale elliptique incomplète de deuxième espèce
+### <a name="incomplete-elliptic-integral-of-the-second-kind"></a>Entier elliptique incomplet du deuxième genre
 
 ```cpp
 double ellint_2(double k, double phi);
@@ -505,7 +505,7 @@ float ellint_3f(float k, float nu, float phi);
 long double ellint_3l(long double k, long double nu, long double phi);
 ```
 
-### <a name="exponential-integral"></a>Intégrale exponentielle
+### <a name="exponential-integral"></a>Intégral exponentiel
 
 ```cpp
 double expint(double x);
@@ -513,7 +513,7 @@ float expintf(float x);
 long double expintl(long double x);
 ```
 
-### <a name="hermite-polynomials"></a>POLYNÔMES de Hermite
+### <a name="hermite-polynomials"></a>Polynomials Hermite
 
 ```cpp
 double hermite(unsigned n, double x);
@@ -521,7 +521,7 @@ float hermitef(unsigned n, float x);
 long double hermitel(unsigned n, long double x);
 ```
 
-### <a name="laguerre-polynomials"></a>LAGUERRE POLYNÔMES
+### <a name="laguerre-polynomials"></a>Polynomials Laguerre
 
 ```cpp
 double laguerre(unsigned n, double x);
@@ -529,7 +529,7 @@ float laguerref(unsigned n, float x);
 long double laguerrel(unsigned n, long double x);
 ```
 
-### <a name="legendre-polynomials"></a>POLYNÔMES de Legendre
+### <a name="legendre-polynomials"></a>Polynomials Legendre
 
 ```cpp
 double legendre(unsigned l, double x);
@@ -537,7 +537,7 @@ float legendref(unsigned l, float x);
 long double legendrel(unsigned l, long double x);
 ```
 
-### <a name="riemann-zeta-function"></a>Fonction zeta de Reimann
+### <a name="riemann-zeta-function"></a>Reimann zêta, fonction
 
 ```cpp
 double riemann_zeta(double x);
@@ -545,7 +545,7 @@ float riemann_zetaf(float x);
 long double riemann_zetal(long double x);
 ```
 
-### <a name="spherical-bessel-functions-of-the-first-kind"></a>Fonctions de Bessel sphériques de première espèce
+### <a name="spherical-bessel-functions-of-the-first-kind"></a>Fonctions de Bessel sphériques du premier genre
 
 ```cpp
 double sph_bessel(unsigned n, double x);
@@ -553,7 +553,7 @@ float sph_besself(unsigned n, float x);
 long double sph_bessell(unsigned n, long double x);
 ```
 
-### <a name="spherical-associated-legendre-functions"></a>Sphériques fonctions Legendre associées
+### <a name="spherical-associated-legendre-functions"></a>Fonctions Legendre associées sphériques
 
 ```cpp
 double sph_legendre(unsigned l, unsigned m, double theta);
@@ -575,6 +575,6 @@ L'inclusion de cet en-tête garantit également que les noms déclarés à l'aid
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

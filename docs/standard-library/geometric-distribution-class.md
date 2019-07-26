@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 115d1c6f3298ea08b7c97061d37d4e27829247ea
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ead6382e61066a72f97eacea91bba5b38aa00677
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450671"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453932"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution, classe
 
@@ -66,11 +66,11 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType*<br/>
-Le type de résultat entier, valeur par défaut est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*IntType*\
+Le type de résultat entier, par défaut, est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*GÉNÉRATEUR URNG*<br/>
-L’uniform Générateur moteur de nombres aléatoires. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*GÉNÉRATEUR URNG*\
+Moteur de générateur de nombres aléatoires uniformes. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*p*<br/>
+*p*\
 Paramètre de distribution `p`.
 
-*parm*<br/>
+*Parm*\
 Structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -251,10 +251,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*p*<br/>
+*p*\
 Paramètre de distribution `p`.
 
-*right*<br/>
+*Oui*\
 Instance `param_type` à comparer.
 
 ### <a name="remarks"></a>Notes
@@ -265,4 +265,4 @@ Cette structure peut être passée au constructeur de classe de la distribution 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

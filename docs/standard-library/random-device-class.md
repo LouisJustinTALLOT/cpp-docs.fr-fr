@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: 783b8f587094c6d603cc02f41b516ebd7b1e9a08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 184513bc63975bd8eaaf0e53300e5a6be7986389
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369889"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448537"
 ---
 # <a name="randomdevice-class"></a>random_device, classe
 
@@ -146,4 +146,4 @@ Retourne des valeurs distribuées uniformément dans l’intervalle fermé [`min
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

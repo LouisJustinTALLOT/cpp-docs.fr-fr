@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c537b7dfdd23ba641438e0caf6306cf5549b2d7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413799"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454303"
 ---
 # <a name="duration-class"></a>duration, classe
 
@@ -41,7 +41,7 @@ L’argument de modèle `Rep` décrit le type utilisé pour contenir le nombre d
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |duration::period, typedef|Représente un synonyme du paramètre de modèle `Period`.|
 |duration::rep, typedef|Représente un synonyme du paramètre de modèle `Rep`.|
@@ -63,7 +63,7 @@ L’argument de modèle `Rep` décrit le type utilisé pour contenir le nombre d
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[duration::operator-](#operator-)|Retourne une copie de l’objet `duration` avec un nombre de battements négatifs.|
 |[duration::operator--](#operator--)|Décrémente le nombre de battements stocké.|
@@ -77,7 +77,7 @@ L’argument de modèle `Rep` décrit le type utilisé pour contenir le nombre d
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<chrono >
+**En-tête:** \<Chrono >
 
 **Espace de noms :** std::chrono
 
@@ -109,29 +109,29 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Paramètres
 
-*Rep2*<br/>
+*Rep2*\
 Type arithmétique pour représenter le nombre de battements.
 
-*Period2*<br/>
+*Period2*\
 Spécialisation de modèle `std::ratio` pour représenter la période de battements en unités de secondes.
 
-*R*<br/>
+*R*\
 Nombre de battements de la période par défaut.
 
-*Dur*<br/>
-Le nombre de graduations de la période spécifiée par *Period2*.
+*Dur*\
+Nombre de graduations de la période spécifiée par *Period2*.
 
 ### <a name="remarks"></a>Notes
 
 Le constructeur par défaut crée un objet qui n’est pas initialisé. L’initialisation de valeurs à l’aide d’accolades vides initialise un objet qui représente un intervalle de temps de zéro battement d’horloge.
 
-La seconde, un argument de modèle constructeur construit un objet qui représente un intervalle de temps de *R* à l’aide d’une période de battements d’horloge `std::ratio<1>`. Pour éviter l’arrondi des nombres de battements, c’est une erreur pour construire un objet de durée à partir d’un type de représentation *Rep2* qui peut être traité comme un à virgule flottante type quand `duration::rep` ne peut pas être traité comme un type à virgule flottante.
+Le deuxième constructeur d’argument de modèle construit un objet qui représente un intervalle de temps de battements d’horloge *R* à l’aide d' `std::ratio<1>`une période par défaut de. Pour éviter l’arrondi des nombres de battements, il ne faut pas construire un objet de durée à partir d’un type de représentation *Rep2* qui peut être traité comme un type `duration::rep` à virgule flottante quand ne peut pas être traité comme un type à virgule flottante.
 
-La troisième, deux constructeur à argument modèle construit un objet qui représente un intervalle de temps dont la longueur est l’intervalle de temps spécifié par *durée*. Pour éviter la troncation du nombre de battements, il ne faut pas construire un objet de durée à partir d’un autre objet de durée dont le type est *incommensurable* avec le type cible.
+Le troisième constructeur d’argument de modèle construit un objet qui représente un intervalle de temps dont la longueur est l’intervalle de temps *spécifié par la*durée. Pour éviter la troncation du nombre de battements, il ne faut pas construire un objet de durée à partir d’un autre objet de durée dont le type est *incommensurable* avec le type cible.
 
 Un type de durée `D1` est *incommensurable* avec un autre type de durée `D2` si `D2` ne peut pas être traité comme un type à virgule flottante et que [ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md) n’est pas égal à 1.
 
-À moins que *Rep2* est implicitement convertible en `rep` et `treat_as_floating_point<rep>` *vaut* ou `treat_as_floating_point<Rep2>` *sa valeur est false*, le deuxième constructeur ne participe pas à la résolution de surcharge. Pour plus d’informations, consultez [<type_traits>](../standard-library/type-traits.md).
+Sauf si *Rep2* est implicitement convertible `rep` en et `treat_as_floating_point<rep>`qu’il *contient true* ou `treat_as_floating_point<Rep2>`qu’il *contient false*, le deuxième constructeur ne participe pas à la résolution de surcharge. Pour plus d’informations, consultez [<type_traits>](../standard-library/type-traits.md).
 
 À moins qu’aucun dépassement ne soit induit dans la conversion et que `treat_as_floating_point<rep>`*contienne la valeur true*, ou que `ratio_divide<Period2, period>::den` soit égal à 1 et que `treat_as_floating_point<Rep2>`*contienne la valeur false*, le troisième constructeur ne participe pas à la résolution de surcharge. Pour plus d’informations, consultez [<type_traits>](../standard-library/type-traits.md).
 
@@ -195,8 +195,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Paramètres
 
-*Div*<br/>
-Pour la première méthode, *Div* représente un nombre de battements. Pour la deuxième méthode, *Div* est un `duration` objet qui contient un nombre de battements.
+*Div*\
+Pour la première méthode, *div* représente un nombre de cycles. Pour la deuxième méthode, *div* est un `duration` objet qui contient un nombre de cycles.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -212,7 +212,7 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Paramètres
 
-*Mult*<br/>
+*Mult*\
 Valeur du type spécifié par `duration::rep`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -229,7 +229,7 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Paramètres
 
-*Div*<br/>
+*Div*\
 Valeur du type spécifié par `duration::rep`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -270,7 +270,7 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Paramètres
 
-*Dur*<br/>
+*Dur*\
 Objet `duration`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -287,7 +287,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Paramètres
 
-*Dur*<br/>
+*Dur*\
 Objet `duration`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -312,7 +312,7 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Paramètres
 
-*Div*<br/>
+*Div*\
 Diviseur, qui est un objet duration ou une valeur représentant le nombre de cycles.
 
 ### <a name="remarks"></a>Notes
@@ -321,6 +321,6 @@ La première fonction membre réduit le nombre de cycles stocké modulo Div et r
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[duration_values, structure](../standard-library/duration-values-structure.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)\
+[duration_values, structure](../standard-library/duration-values-structure.md)

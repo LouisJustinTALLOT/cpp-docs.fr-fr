@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-ms.openlocfilehash: f2c054626b36083d67f9dbc4c87cf6283c12f001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412525"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450358"
 ---
 # <a name="slice-class"></a>slice, classe
 
@@ -25,7 +25,7 @@ Classe utilitaire de valarray qui sert à définir des sous-ensembles unidimensi
 
 ## <a name="remarks"></a>Notes
 
-La classe stocke les paramètres qui caractérisent un objet de type [slice_array](../standard-library/slice-array-class.md). Le sous-ensemble d’un valarray est construit indirectement quand un objet de la classe slice apparaît en tant qu’argument pour un objet de la classe [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. Les valeurs stockées qui spécifient le sous-ensemble sélectionné à partir du valarray parent sont les suivantes :
+La classe stocke les paramètres qui caractérisent un objet de type [slice_array](../standard-library/slice-array-class.md). Le sous-ensemble d’un valarray est construit indirectement quand un objet de la classe slice apparaît en tant qu’argument pour un objet de la classe [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . Les valeurs stockées qui spécifient le sous-ensemble sélectionné à partir du valarray parent sont les suivantes :
 
 - un index de départ dans le valarray ;
 
@@ -136,18 +136,18 @@ slice(
 
 ### <a name="parameters"></a>Paramètres
 
-*_StartIndex*<br/>
+*_StartIndex*\
 Index valarray du premier élément dans le sous-ensemble.
 
-*_Len*<br/>
+*_Len*\
 Nombre d’éléments dans le sous-ensemble.
 
-*stride*<br/>
+*progrès*\
 Distance entre les éléments dans le sous-ensemble.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le constructeur par défaut stocke des zéros pour l’index de départ, la longueur totale et le stride. Le deuxième constructeur stocke *_StartIndex* pour l’index de départ, *_Len* pour la longueur totale, et *stride* pour le stride.
+Le constructeur par défaut stocke des zéros pour l’index de départ, la longueur totale et le stride. Le deuxième constructeur stocke *_StartIndex* pour l’index de départ, *_Len* pour la longueur totale et *Stride* pour Stride.
 
 ### <a name="remarks"></a>Notes
 
@@ -206,7 +206,7 @@ size_t start() const;
 
 Index de départ d’une section d’un valarray.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // slice_start.cpp
@@ -312,4 +312,4 @@ The stride of slice vaSlice is: 3.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

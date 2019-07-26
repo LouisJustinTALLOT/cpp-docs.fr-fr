@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 310d846285612ad94ec9d66672fcb996557b07e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4df8096603b53d05e050750a860c76528a44b28c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159364"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454072"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Objets de fonction dans la bibliothèque C++ Standard
 
@@ -43,7 +43,7 @@ int main()
 }
 ```
 
-La dernière ligne de la fonction `main` montre comment vous appelez l’objet de fonction. Cet appel ressemble à un appel à une fonction, mais que son appelant réellement operator() du type Functor. Cette similarité entre appeler un objet de fonction et la fonction, est comment le terme objet de fonction agit.
+La dernière ligne de la fonction `main` montre comment vous appelez l’objet de fonction. Cet appel ressemble à un appel à une fonction, mais il appelle en fait l’opérateur () du type functor. Cette similarité entre appeler un objet de fonction et la fonction, est comment le terme objet de fonction agit.
 
 ## <a name="function-objects-and-containers"></a>Objets de fonction et conteneurs
 
@@ -56,7 +56,7 @@ template <class Key,
 class set
 ```
 
-Le deuxième argument du modèle est l’objet de fonction `less`. Retourne cet objet de fonction **true** si le premier paramètre est inférieur au second paramètre. Étant donné que certains conteneurs trient leurs éléments, le conteneur a besoin d’un moyen de comparer deux éléments. La comparaison est effectuée à l’aide de l’objet de fonction. Vous pouvez définir vos propres critères de tri pour les conteneurs en créant un objet de fonction et en le spécifiant dans la liste des modèles pour le conteneur.
+Le deuxième argument du modèle est l’objet de fonction `less`. Cet objet de fonction retourne la **valeur true** si le premier paramètre est inférieur au second paramètre. Comme certains conteneurs trient leurs éléments, le conteneur a besoin d’un moyen de comparer deux éléments. La comparaison est effectuée à l’aide de l’objet de fonction. Vous pouvez définir vos propres critères de tri pour les conteneurs en créant un objet de fonction et en le spécifiant dans la liste des modèles pour le conteneur.
 
 ## <a name="function-objects-and-algorithms"></a>Objets de fonction et algorithmes
 
@@ -70,8 +70,8 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-Le dernier argument de `remove_if` est un objet de fonction qui retourne une valeur booléenne (un *prédicat*). Si le résultat de l’objet de fonction est **true**, puis l’élément est supprimé du conteneur accédé par les itérateurs `first` et `last`. Vous pouvez utiliser n’importe lequel des objets de fonction déclarés dans l’en-tête [\<functional>](../standard-library/functional.md) pour l’argument `pred` ou vous pouvez créer votre propre objet.
+Le dernier argument de `remove_if` est un objet de fonction qui retourne une valeur booléenne (un *prédicat*). Si le résultat de l’objet de fonction a la **valeur true**, l’élément est supprimé du conteneur auquel accèdent les `first` itérateurs et `last`. Vous pouvez utiliser n’importe lequel des objets de fonction déclarés dans l’en-tête [\<functional>](../standard-library/functional.md) pour l’argument `pred` ou vous pouvez créer votre propre objet.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

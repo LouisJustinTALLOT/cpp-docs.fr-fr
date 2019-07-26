@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: 4279aa75bf4e9b8a0c7a86f102f70164bbb620e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369629"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458164"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -48,7 +48,7 @@ La structure ratio fournit l’en-tête standard \<ratio> qui permet de définir
 #include <ratio>
 ```
 
-### <a name="ratio-template"></a>Modèle de rapport
+### <a name="ratio-template"></a>Modèle de ratio
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-Le modèle `ratio` définit les constantes statiques `num` et `den` telles que `num`  /  `den` == Numérateur / Dénominateur et `num` et `den` n’ont aucuns facteurs communs. `num` / `den` est la valeur qui est représentée par la classe de modèle. Par conséquent, `type` désigne l’instanciation `ratio<num, den>`.
+Le modèle `ratio` définit les `num` constantes statiques `den` et, `num` par exemple  /  `den` , = = numérateur `num` / `den` dénominateur et n’a aucun facteur commun. `num` / `den`est la valeur représentée par la classe de modèle. Par conséquent `type` , désigne l’instanciation. `ratio<num, den>`
 
 ### <a name="specializations"></a>Spécialisations
 
@@ -85,7 +85,7 @@ Chaque spécialisation prend deux paramètres de modèle qui doivent également 
 
 ### <a name="typedefs"></a>typedefs
 
-Pour plus de commodité, l’en-tête définit des rapports pour les préfixes SI standards :
+Pour plus de commodité, l’en-tête définit les ratios pour les préfixes SI standard:
 
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;
@@ -108,4 +108,4 @@ typedef ratio<1000000000000000000, 1> exa;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)

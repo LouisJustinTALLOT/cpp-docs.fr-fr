@@ -45,18 +45,18 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 97d77399357030feaa90228a1b0cdeb80d48034c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dd72550bc8658158b399e88573526269202f8f4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412564"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450434"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
-Le &lt;shared_mutex > en-tête fournit des primitives de synchronisation pour la protection des données partagées qui sont accessibles par plusieurs threads. En plus du contrôle d’accès exclusif fourni par les classes mutex, les classes mutex partagé prennent en charge la propriété partagée par plusieurs threads pour permettre un accès non exclusif. Les mutex partagés s’utilisent pour contrôler les ressources qui peuvent être lues par plusieurs threads sans provoquer de condition critique, mais qui doivent être écrites en mode exclusif par un seul thread.
+L' &lt;en-tête > shared_mutex fournit des primitives de synchronisation pour la protection des données partagées accessibles par plusieurs threads. En plus du contrôle d’accès exclusif fourni par les classes mutex, les classes mutex partagé prennent en charge la propriété partagée par plusieurs threads pour permettre un accès non exclusif. Les mutex partagés s’utilisent pour contrôler les ressources qui peuvent être lues par plusieurs threads sans provoquer de condition critique, mais qui doivent être écrites en mode exclusif par un seul thread.
 
-L’en-tête &lt;shared_mutex > définit les classes `shared_mutex` et `shared_timed_mutex`, la classe de modèle `shared_lock`et la fonction de modèle `swap` pour partagé prise en charge de mutex.
+L’en &lt;-tête shared_mutex > définit `shared_mutex` les `shared_timed_mutex`classes et, la `shared_lock`classe de modèle et la `swap` fonction de modèle pour la prise en charge des mutex partagés.
 
 |Classes|Description|
 |-------------|-----------------|
@@ -91,20 +91,20 @@ Le type mutex partagé prend en charge les méthodes supplémentaires `lock_shar
 
 - La méthode `unlock_shared` libère la propriété partagée du mutex détenu par le thread appelant.
 
-- La méthode `try_lock_shared` tente d’obtenir la propriété partagée du mutex sans bloquer le thread. Son type de retour est convertible en **bool** et est **true** si la méthode obtient la propriété, mais est sinon **false**.
+- La méthode `try_lock_shared` tente d’obtenir la propriété partagée du mutex sans bloquer le thread. Son type de retour est convertible en **bool** et a la **valeur true** si la méthode obtient la propriété, mais **false**dans le cas contraire.
 
 La classe `shared_timed_mutex` est du *type mutex temporisé partagé*. Ce type remplit les conditions à la fois du type mutex partagé et du type mutex temporisé.
 
 Le type mutex temporisé partagé prend en charge les méthodes supplémentaires `try_lock_shared_for` et `try_lock_shared_until` :
 
-- La méthode `try_lock_shared_for` tente d’obtenir la propriété partagée du mutex jusqu’à ce que la durée spécifiée par le paramètre soit écoulée. Si la durée n’est pas positive, la méthode est équivalente à `try_lock_shared`. La méthode ne retourne pas de valeur dans la durée spécifiée, sauf si elle obtient la propriété partagée. Sa valeur de retour est **true** si la méthode obtient la propriété, mais est sinon **false**.
+- La méthode `try_lock_shared_for` tente d’obtenir la propriété partagée du mutex jusqu’à ce que la durée spécifiée par le paramètre soit écoulée. Si la durée n’est pas positive, la méthode est équivalente à `try_lock_shared`. La méthode ne retourne pas de valeur dans la durée spécifiée, sauf si elle obtient la propriété partagée. Sa valeur de retour est **true** si la méthode obtient la propriété, mais **false**dans le cas contraire.
 
-- La méthode `try_lock_shared_until` tente d’obtenir la propriété partagée du mutex jusqu’à ce que le temps absolu spécifié soit écoulé. Si le temps spécifié est écoulé, la méthode est équivalente à `try_lock_shared`. La méthode ne retourne pas de valeur avant le temps spécifié, sauf si elle obtient la propriété partagée. Sa valeur de retour est **true** si la méthode obtient la propriété, mais est sinon **false**.
+- La méthode `try_lock_shared_until` tente d’obtenir la propriété partagée du mutex jusqu’à ce que le temps absolu spécifié soit écoulé. Si le temps spécifié est écoulé, la méthode est équivalente à `try_lock_shared`. La méthode ne retourne pas de valeur avant le temps spécifié, sauf si elle obtient la propriété partagée. Sa valeur de retour est **true** si la méthode obtient la propriété, mais **false**dans le cas contraire.
 
 La classe de modèle `shared_lock` étend la prise en charge du verrouillage temporisé et du transfert de propriété à un mutex partagé. La propriété du mutex peut être obtenue au moment ou après la construction, et être transférée à un autre objet `shared_lock`. Les objets de type `shared_lock` peuvent être déplacés, mais pas copiés.
 
 > [!WARNING]
-> À compter de Visual Studio 2015, les types de synchronisation de bibliothèque C++ Standard sont basés sur les primitives de synchronisation Windows et n’utilisent plus ConcRT (sauf si la plateforme cible est Windows XP). Les types définis dans &lt;shared_mutex > ne doit pas être utilisé avec des fonctions ou types ConcRT.
+> À compter de Visual Studio 2015, C++ les types de synchronisation de la bibliothèque standard sont basés sur les primitives de synchronisation Windows et n’utilisent plus ConcRT (sauf si la plateforme cible est Windows XP). Les types définis dans &lt;shared_mutex > ne doivent pas être utilisés avec des fonctions ou des types concrt.
 
 ## <a name="classes"></a>Classes
 
@@ -215,7 +215,7 @@ private:
 
 ## <a name="functions"></a>Fonctions
 
-###  <a name="function_swap"></a> swap
+###  <a name="function_swap"></a>échange
 
 Échange les objets `shared_lock`.
 
@@ -234,5 +234,5 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
 [&lt;mutex>](../standard-library/mutex.md)

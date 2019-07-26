@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_abstract class
 - is_abstract
 ms.assetid: 8867f660-3434-404c-ba90-c26607a5e0d2
-ms.openlocfilehash: 02863f5694f519e8cca54d07622a185f69de82d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57b2413e673f92e5258bee5711db2870e2b58a11
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404817"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448986"
 ---
 # <a name="isabstract-class"></a>is_abstract, classe
 
@@ -27,12 +27,12 @@ struct is_abstract;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*<br/>
+*Ty*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a au moins une fonction virtuelle pure, sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a au moins une fonction virtuelle pure. sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -76,5 +76,5 @@ is_abstract<abstract> == true
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_polymorphic, classe](../standard-library/is-polymorphic-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_polymorphic, classe](../standard-library/is-polymorphic-class.md)

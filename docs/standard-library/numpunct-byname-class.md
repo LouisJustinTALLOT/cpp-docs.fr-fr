@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - numpunct_byname class
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
-ms.openlocfilehash: 64e8918b052b05088ff48aefb0f0f9ab8c6df586
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c9eb565c2dbf54da449411aa11a4c5661debf1d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371490"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452320"
 ---
 # <a name="numpunctbyname-class"></a>numpunct_byname, classe
 
@@ -49,4 +49,4 @@ Son comportement est déterminé par les paramètres régionaux [nommés](../sta
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

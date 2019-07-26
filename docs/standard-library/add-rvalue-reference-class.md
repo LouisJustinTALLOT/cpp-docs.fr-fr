@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: e5e658f16657c0021b78175e87d122a3accd11eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64694f2428c1dd536df4d242a17f3f011cfb290c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411164"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456539"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference, classe
 
@@ -29,16 +29,16 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*T*\
 Type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Le `add_rvalue_reference` classe a un membre nommé `type`, qui est un alias pour le type d’une référence rvalue au paramètre de modèle *T*. La sémantique de réduction de références implique que, pour les types non-object et non-fonction *T*, `T&&` est un *T*. Par exemple, lorsque *T* est un type de référence lvalue, `add_rvalue_reference<T>::type` est le type de référence lvalue, pas une référence rvalue.
+La `add_rvalue_reference` classe a un membre nommé `type`, qui est un alias pour le type d’une référence rvalue au paramètre de modèle *T*. La sémantique de réduction de référence implique que, pour les types non-objet et non-fonction *t*, `T&&` est un *t*. Par exemple, quand *T* est un type de référence lvalue `add_rvalue_reference<T>::type` , est le type de référence lvalue, et non une référence rvalue.
 
-Pour des raisons pratiques, \<type_traits > définit un modèle d’assistance, `add_rvalue_reference_t`, cet alias le `type` membre de `add_rvalue_reference`.
+Pour plus de \<commodité, type_traits > définit un modèle d' `add_rvalue_reference_t`assistance,, qui aliase le `add_rvalue_reference` `type` membre de.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Cet exemple de code utilise static_assert pour montrer comment les types de référence rvalue sont créés à l’aide de `add_rvalue_reference` et `add_rvalue_reference_t`, et comment le résultat de `add_rvalue_reference` sur un type de référence lvalue n’est pas une référence rvalue, mais est réduit au type de référence lvalue.
 
@@ -71,12 +71,12 @@ All static_assert tests of add_rvalue_reference passed.
 
 ## <a name="requirements"></a>Configuration requise
 
-En-tête : \<type_traits >
+En- \<tête: type_traits >
 
-Namespace : std
+Espace de noms: STD
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_lvalue_reference, classe](../standard-library/add-lvalue-reference-class.md)<br/>
-[is_rvalue_reference, classe](../standard-library/is-rvalue-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_lvalue_reference, classe](../standard-library/add-lvalue-reference-class.md)\
+[is_rvalue_reference, classe](../standard-library/is-rvalue-reference-class.md)

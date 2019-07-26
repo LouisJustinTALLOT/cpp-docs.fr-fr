@@ -7,12 +7,12 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 6fe9e2d576afcacc7d014d4f5c920ecab3a83fc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224036"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455578"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits, struct
 
@@ -41,13 +41,13 @@ Le struct de modèle définit les types de membres
 
 - `difference_type`: synonyme de `Iterator::difference_type`.
 
-- `distance_type`: synonyme de `Iterator::difference_type.`
+- `distance_type`: synonyme de`Iterator::difference_type.`
 
 - `pointer`: synonyme de `Iterator::pointer`.
 
 - `reference`: synonyme de `Iterator::reference`.
 
-Les spécialisations partielles déterminent les types critiques associés à un pointeur d’objet de type **Type** <strong>\*</strong> ou **Type const**  <strong>\*</strong>.
+Les spécialisations partielles déterminent les types critiques associés à un pointeur d'  <strong>\*</strong> objet de type type ou **const type** <strong>\*</strong>.
 
 Dans cette implémentation, vous pouvez également utiliser plusieurs fonctions de modèle qui n’utilisent pas de spécialisation partielle :
 
@@ -124,6 +124,6 @@ struct std::bidirectional_iterator_tag
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

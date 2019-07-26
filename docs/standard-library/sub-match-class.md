@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: e0edfbc69d6cba6ee352a34406860e4c999dc3a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412213"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447426"
 ---
 # <a name="submatch-class"></a>sub_match, classe
 
@@ -41,7 +41,7 @@ class sub_match
 
 ## <a name="parameters"></a>Paramètres
 
-*BidIt*<br/>
+*BidIt*\
 Type d'itérateur pour les sous-correspondances.
 
 ## <a name="remarks"></a>Notes
@@ -50,7 +50,7 @@ La classe de modèle décrit un objet qui désigne une séquence de caractères 
 
 Si le groupe de capture n’a aucune correspondance, le membre de données `matched` de l’objet a la valeur false, et les deux itérateurs `first` et `second` (hérités du `std::pair`de base) sont égaux. Si le groupe de capture a une correspondance, `matched` a la valeur true et l’itérateur `first` pointe vers le premier caractère de la séquence cible correspondant au groupe de capture. En outre, l’itérateur `second` pointe vers la position située après le dernier caractère de la séquence cible correspondant au groupe de capture. Notez que pour une correspondance de longueur nulle, le membre `matched` a la valeur true. Par ailleurs, les deux itérateurs sont égaux et pointent vers la position de la correspondance.
 
-Une correspondance de longueur nulle peut se produire quand un groupe de capture se compose uniquement d’une assertion, ou d’une répétition n’autorisant aucune répétition. Exemple :
+Une correspondance de longueur nulle peut se produire quand un groupe de capture se compose uniquement d’une assertion, ou d’une répétition n’autorisant aucune répétition. Par exemple :
 
 « ^ » correspond à la séquence cible « a ». L’objet `sub_match` correspondant au groupe de capture 0 contient les itérateurs qui pointent vers le premier caractère de la séquence.
 
@@ -70,16 +70,16 @@ Une correspondance de longueur nulle peut se produire quand un groupe de capture
 |-|-|
 |[compare](#compare)|Comparer une sous-correspondance à une séquence.|
 |[length](#length)|Retourne la longueur d'une sous-correspondance.|
-|[matched](#matched)|Indique si la correspondance a réussi.|
+|[mis en correspondance](#matched)|Indique si la correspondance a réussi.|
 |[str](#str)|Convertit la sous-correspondance en chaîne.|
 
 ### <a name="operators"></a>Opérateurs
 
 |Opérateur|Description|
 |-|-|
-|[operator basic_string<value_type>](#op_basic_string_lt_value_type_gt)|Effectue un cast de la sous-correspondance en chaîne.|
+|[opérateur basic_string < Value_type >](#op_basic_string_lt_value_type_gt)|Effectue un cast de la sous-correspondance en chaîne.|
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // std__regex__sub_match.cpp
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 Sous-correspondance avec laquelle effectuer la comparaison.
 
-*str*<br/>
+*Str*\
 Chaîne de comparaison.
 
-*ptr*<br/>
+*effectués*\
 Séquence terminée par un caractère null avec laquelle effectuer la comparaison.
 
 ### <a name="remarks"></a>Notes
@@ -216,7 +216,7 @@ bool matched;
 
 ### <a name="remarks"></a>Notes
 
-Le membre contient **true** uniquement si le groupe de capture associé `*this` faisait partie de la correspondance d’expression régulière.
+Le membre `*this` a la **valeur true** uniquement si le groupe de capture associé à faisait partie de la correspondance d’expression régulière.
 
 ## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
 
@@ -256,5 +256,5 @@ Le typedef est un synonyme de `iterator_traits<BidIt>::value_type`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<regex>](../standard-library/regex.md)<br/>
-[sub_match](../standard-library/sub-match-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[sub_match](../standard-library/sub-match-class.md)

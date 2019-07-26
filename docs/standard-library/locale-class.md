@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 495e82d54a2d3b010e40403271713cd799b9b8ac
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245410"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453539"
 ---
 # <a name="locale-class"></a>locale, classe
 
@@ -168,7 +168,7 @@ Les règles de mise en forme numérique pour les insertions suivantes dans `cout
 
 |Opérateur|Description|
 |-|-|
-|[operator=](#op_eq)|Affecte les paramètres régionaux.|
+|[operator=](#op_eq)|Assigne des paramètres régionaux.|
 |[!=, opérateur](#op_neq)|Vérifie l'inégalité de deux ensembles de paramètres régionaux.|
 |[operator( )](#op_call)|Compare deux objets `basic_string`.|
 |[operator==](#op_eq_eq)|Vérifie l'égalité de deux ensembles de paramètres régionaux.|
@@ -204,7 +204,7 @@ static const int none = 0;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme pour un **int** tapez local à la classe de type qui peut représenter un groupe d’éléments distincts d’un masque de bits ou peut être utilisé pour représenter les catégories de paramètres régionaux C correspondantes. Les éléments sont :
+Le type est un synonyme d’un type **int** qui peut représenter un groupe d’éléments distincts d’un type de masque de masque local aux paramètres régionaux de classe ou qui peut être utilisé pour représenter l’une des catégories de paramètres régionaux C correspondants. Les éléments sont :
 
 - `collate`, correspondant à la catégorie C LC_COLLATE
 
@@ -216,15 +216,15 @@ Le type est un synonyme pour un **int** tapez local à la classe de type qui peu
 
 - `time`, correspondant à la catégorie C LC_TIME
 
-- `messages`, correspondant à la catégorie Posix LC_MESSAGES
+- `messages`, correspondant à la catégorie POSIX LC_MESSAGES
 
 En outre, les deux valeurs suivantes sont utiles :
 
-- `none`, correspondant à aucune des catégories C
+- `none`, qui correspond à aucune des catégories C
 
-- `all`, correspondant à l’union C de toutes les catégories LC_ALL
+- `all`, qui correspond à l’Union C de toutes les catégories LC_ALL
 
-Vous pouvez représenter un groupe arbitraire de catégories à l’aide de `OR` avec ces constantes, comme dans `monetary` &#124; `time`.
+Vous pouvez représenter un groupe arbitraire de catégories à l' `OR` aide de avec ces constantes, `monetary` comme dans &#124; `time`.
 
 ## <a name="classic"></a>  locale::classic
 
@@ -292,14 +292,14 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux contenant la facette à insérer dans les paramètres régionaux cibles.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La fonction membre retourne un objet de paramètres régionaux qui remplace ou ajoute à  **\*cela** la facette `Facet` répertoriés dans *Loc*.
+La fonction membre retourne un objet de paramètres régionaux qui remplace ou ajoute à  **\*cette** facette `Facet` indiquée dans *loc*.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // locale_combine.cpp
@@ -361,7 +361,7 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Paramètres
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux à utiliser comme paramètres régionaux par défaut par le programme.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -414,11 +414,11 @@ class id
 ```
 ### <a name="remarks"></a>Notes
 
-La classe membre décrit l’objet membre statique exigé par chaque facette de paramètres régionaux unique. Notez que vous ne pouvez pas copier ou assigner un objet de classe `id`.
+La classe membre décrit l’objet membre statique exigé par chaque facette de paramètres régionaux unique. Notez que vous ne pouvez pas copier ou assigner `id`un objet de classe.
 
 ## <a name="locale"></a>  locale::locale
 
-Crée des paramètres régionaux, une copie de paramètres régionaux ou une copie de paramètres régionaux où une facette ou une catégorie a été remplacée par une facette, ou une catégorie provenant d'autres paramètres régionaux. Inclut également un destructeur.
+Crée des paramètres régionaux, une copie de paramètres régionaux ou une copie de paramètres régionaux où une facette ou une catégorie a été remplacée par une facette, ou une catégorie provenant d'autres paramètres régionaux. Comprend également un destructeur.
 
 ```cpp
 locale();
@@ -437,40 +437,40 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Paramètres
 
-*Locname*<br/>
+*Locname*\
 Nom de paramètres régionaux.
 
-*Loc*<br/>
+*Loc*\
 Paramètres régionaux qui doivent être copiés lors de la construction des nouveaux paramètres régionaux.
 
-*Autre*<br/>
+*Autres*\
 Paramètres régionaux à partir desquels sélectionner une catégorie.
 
-*CAT*<br/>
+*Chats*\
 Catégorie à substituer dans les paramètres régionaux construits.
 
-*Fac*<br/>
+*FAC*\
 Facette à substituer dans les paramètres régionaux construits.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise l’objet pour qu’il corresponde aux paramètres régionaux globaux. Les deuxième et troisième constructeurs initialisent toutes les catégories de paramètres régionaux pour avoir un comportement cohérent avec le nom des paramètres régionaux *Locname*. Les autres constructeurs copient *Loc*, avec les exceptions notées :
+Le premier constructeur initialise l’objet pour qu’il corresponde aux paramètres régionaux globaux. Les deuxième et troisième constructeurs initialisent toutes les catégories de paramètres régionaux pour que le comportement soit cohérent avec le nom de paramètres régionaux *Locname*. Les constructeurs restants copient la *loc*, avec les exceptions notées:
 
 `locale(const locale& Loc, const locale& Other, category Cat);`
 
-remplace dans *autres* les facettes correspondant à une catégorie C pour lesquelles C & *Cat* est différent de zéro.
+remplace les *autres* facettes correspondant à une catégorie c pour laquelle le & *Cat* est différent de zéro.
 
 `locale(const locale& Loc, const char* Locname, category Cat);`
 
 `locale(const locale& Loc, const string& Locname, category Cat);`
 
-remplace dans `locale(Locname, _All)` les facettes correspondant à une catégorie C pour lesquelles C & *Cat* est différent de zéro.
+remplace les facettes correspondant à une catégorie c pour laquelle le & cat est différent de zéro.  `locale(Locname, _All)`
 
 `template<class Facet> locale(const locale& Loc, Facet* Fac);`
 
-remplace dans (ou ajoute à) *Loc* la facette *Fac*si *Fac* n’est pas un pointeur null.
+remplace dans (ou ajoute à) *loc* la facette *FAC*, si *FAC* n’est pas un pointeur null.
 
-Si un nom de paramètres régionaux *Locname* est un pointeur null ou non valides, la fonction lève [runtime_error](../standard-library/runtime-error-class.md).
+Si le nom des paramètres régionaux *Locname* est un pointeur null ou n’est pas valide, la fonction lève [runtime_error](../standard-library/runtime-error-class.md).
 
 ### <a name="example"></a>Exemple
 
@@ -551,9 +551,9 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
-## <a name="op_eq"></a>  locale::operator =
+## <a name="op_eq"></a>locale:: Operator =
 
-Affecte les paramètres régionaux.
+Assigne des paramètres régionaux.
 
 ```cpp
 const locale& operator=(const locale& other) noexcept;
@@ -569,7 +569,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 L’un des paramètres régionaux dont l’inégalité doit être testée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -633,10 +633,10 @@ bool operator()(
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Chaîne de gauche.
 
-*right*<br/>
+*Oui*\
 Chaîne de droite.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -702,7 +702,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 L’un des paramètres régionaux dont l’égalité doit être testée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -713,7 +713,7 @@ Valeur booléenne qui est **true** si les paramètres régionaux sont des copies
 
 Deux paramètres régionaux sont égaux s’ils s’agit des mêmes paramètres régionaux, si l’un est une copie de l’autre, ou s’ils ont des noms identiques.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // locale_op_eq.cpp
@@ -759,7 +759,7 @@ and loc3 (English_United States.1252) are not equal.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Pages de codes](../c-runtime-library/code-pages.md)<br/>
-[Chaînes relatives aux noms des paramètres régionaux, aux langues et au pays/à la région](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Pages de code](../c-runtime-library/code-pages.md)\
+[Chaînes relatives aux noms, aux langues, au pays et à la région des paramètres régionaux](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

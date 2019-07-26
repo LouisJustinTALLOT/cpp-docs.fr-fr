@@ -5,12 +5,12 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: ba84f476c712f64e7782f0ea476bbb65a35dc14a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405051"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448727"
 ---
 # <a name="lthashmapgt-operators"></a>&lt;hash_map&gt;, opérateurs
 
@@ -32,10 +32,10 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Objet de type `hash_map`.
 
-*right*<br/>
+*Oui*\
 Objet de type `hash_map`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -46,9 +46,9 @@ Objet de type `hash_map`.
 
 La comparaison entre les objets hash_map est basée sur une comparaison par paire de leurs éléments. Deux hash_map sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.
 
-Membres de la [< hash_map >](hash-map.md) et [< hash_set >](hash-set.md) fichiers d’en-tête dans le [ stdext Namespace](stdext-namespace.md).
+Les membres des fichiers d’en-tête [< hash_map >](hash-map.md) et [< hash_set >](hash-set.md) dans l' [espace de noms stdext](stdext-namespace.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // hash_map_op_ne.cpp
@@ -101,10 +101,10 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Objet de type `hash_map`.
 
-*right*<br/>
+*Oui*\
 Objet de type `hash_map`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -115,7 +115,7 @@ Objet de type `hash_map`.
 
 La comparaison entre les objets hash_map est basée sur une comparaison par paire de leurs éléments. Deux hash_map sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // hash_map_op_eq.cpp
@@ -168,10 +168,10 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Objet de type `hash_multimap`.
 
-*right*<br/>
+*Oui*\
 Objet de type `hash_multimap`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -182,7 +182,7 @@ Objet de type `hash_multimap`.
 
 La comparaison entre les objets hash_multimap est basée sur une comparaison par paire de leurs éléments. Deux hash_multimaps sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // hash_multimap_op_ne.cpp
@@ -235,10 +235,10 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*\
 Objet de type `hash_multimap`.
 
-*right*<br/>
+*Oui*\
 Objet de type `hash_multimap`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -291,4 +291,4 @@ The hash_multimaps hm1 and hm3 are equal.
 
 ## <a name="see-also"></a>Voir aussi
 
-[<hash_map>](hash-map.md)<br/>
+[<hash_map>](hash-map.md)

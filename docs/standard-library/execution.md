@@ -1,19 +1,19 @@
 ---
-title: '&lt;Exécution&gt;'
+title: '&lt;production&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: 3bce34019f9ed4880d72a9d16c3c8b78dde0e0e3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3b0ccd540c56500c2f265aa6192a12fc2d5078b0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268421"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457965"
 ---
-# <a name="ltexecutiongt"></a>&lt;Exécution&gt;
+# <a name="ltexecutiongt"></a>&lt;production&gt;
 
 Décrit les stratégies d’exécution pour les algorithmes parallèles.
 
@@ -33,19 +33,19 @@ namespace std::execution {
 
 |||
 |-|-|
-|[is_execution_policy Struct](is-execution-policy-struct.md)|Détecte les stratégies d’exécution pour les besoins à l’exclusion des signatures de fonction de la participation de résolution de surcharge ambiguë dans le cas contraire.|
-|[parallel_policy, classe](parallel-policy-class.md)|Utilisé comme un type unique pour lever l’ambiguïté de surcharge de l’algorithme parallèle et d’indiquer que l’exécution d’un algorithme parallèle peut être parallélisée.|
-|[parallel_unsequenced_policy, classe](parallel-unsequenced-policy-class.md)|Utilisé comme un type unique pour lever l’ambiguïté de surcharge de l’algorithme parallèle et d’indiquer que l’exécution d’un algorithme parallèle peut être parallélisée et vectorisée.|
-|[sequenced_policy, classe](sequenced-policy-class.md)|Utilisé comme un type unique pour lever l’ambiguïté de surcharge de l’algorithme parallèle et nécessitent que l’exécution d’un algorithme parallèle ne peut pas être parallélisée.|
+|[Struct is_execution_policy](is-execution-policy-struct.md)|Détecte les stratégies d’exécution pour l’exclusion des signatures de fonction de la participation à la résolution de surcharge ambiguë.|
+|[parallel_policy, classe](parallel-policy-class.md)|Utilisé comme type unique pour lever l’ambiguïté de la surcharge de l’algorithme parallèle et indiquer que l’exécution d’un algorithme parallèle peut être parallélisée.|
+|[parallel_unsequenced_policy, classe](parallel-unsequenced-policy-class.md)|Utilisé comme type unique pour lever l’ambiguïté de la surcharge de l’algorithme parallèle et indiquer que l’exécution d’un algorithme parallèle peut être parallélisée et vectorisé.|
+|[sequenced_policy, classe](sequenced-policy-class.md)|Utilisé comme type unique pour lever l’ambiguïté de la surcharge de l’algorithme parallèle et exiger que l’exécution d’un algorithme parallèle ne soit pas parallélisée.|
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<exécution >
+**En-tête:** \<> d’exécution
 
 **Espace de noms :** stdext
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](cpp-standard-library-header-files.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](thread-safety-in-the-cpp-standard-library.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](thread-safety-in-the-cpp-standard-library.md)\
 [Informations de référence sur la bibliothèque standard C++](cpp-standard-library-reference.md)

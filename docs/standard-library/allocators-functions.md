@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 736e587a41fa1006801dcf6930b33ee434c9a5ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10cd1d51c2cd6053dcbaa0f5bf1548f80ed01659
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179209"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448240"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt;, macros
 
@@ -112,4 +112,4 @@ Si un compilateur prend en charge la compilation d’applications monothread et 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

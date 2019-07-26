@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: b0c77b523dbe31bc5b07ae3d736441880fe04546
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b19635cf4d2cce58ec50226c463a075cfac5b0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383566"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455568"
 ---
 # <a name="moneybase-class"></a>money_base, classe
 
@@ -28,17 +28,17 @@ struct pattern
 
 ## <a name="remarks"></a>Notes
 
-L’énumération `part` décrit les valeurs possibles dans les éléments du champ de tableau dans le modèle de structure. Les valeurs de `part` sont :
+L’énumération `part` décrit les valeurs possibles dans les éléments du champ de tableau dans le modèle de structure. Les valeurs de `part` sont les suivantes:
 
-- `none` Pour faire correspondre zéro ou plusieurs espaces ou ne rien générer.
+- `none`pour faire correspondre zéro, un ou plusieurs espaces ou générer Nothing.
 
-- `sign` Pour faire correspondre ou générer un signe positif ou négatif.
+- `sign`pour faire correspondre ou générer un signe positif ou négatif.
 
-- `space` Pour faire correspondre zéro ou plusieurs espaces ou générer un espace.
+- `space`pour faire correspondre zéro, un ou plusieurs espaces ou générer un espace.
 
-- `symbol` Pour faire correspondre ou générer un symbole monétaire.
+- `symbol`pour faire correspondre ou générer un symbole monétaire.
 
-- `value` Pour faire correspondre ou générer une valeur monétaire.
+- `value`pour faire correspondre ou générer une valeur monétaire.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -48,4 +48,4 @@ L’énumération `part` décrit les valeurs possibles dans les éléments du ch
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

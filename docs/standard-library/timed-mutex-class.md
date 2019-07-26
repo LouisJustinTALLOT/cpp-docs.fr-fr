@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 9aae1205866a0bf982ab7c41b792aac0f63ea149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b9785dc41791be63d585d18802953eade370b2a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411953"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459927"
 ---
 # <a name="timedmutex-class"></a>timed_mutex, classe
 
@@ -56,7 +56,7 @@ class timed_mutex;
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<mutex >
+**En-tête:** \<> mutex
 
 **Espace de noms :** std
 
@@ -102,7 +102,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la méthode obtient correctement la propriété de la `mutex`; sinon, **false**.
+**true** si la méthode obtient avec succès la propriété de `mutex`; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -119,12 +119,12 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Paramètres
 
-*Rel_time*<br/>
+*Rel_time*\
 Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la durée maximale pendant laquelle la méthode essaie d’obtenir la propriété du `mutex`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la méthode obtient correctement la propriété de la `mutex`; sinon, **false**.
+**true** si la méthode obtient avec succès la propriété de `mutex`; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -143,12 +143,12 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Paramètres
 
-*Abs_time*<br/>
+*Abs_time*\
 Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente plus d'obtenir la propriété du `mutex`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la méthode obtient correctement la propriété de la `mutex`; sinon, **false**.
+**true** si la méthode obtient avec succès la propriété de `mutex`; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -168,5 +168,5 @@ Si le thread appelant ne possède pas `mutex`, le comportement est indéfini.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

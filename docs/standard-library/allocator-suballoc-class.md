@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator_suballoc class
 ms.assetid: 50c6a5c0-d00d-4276-9285-d908fd4f6483
-ms.openlocfilehash: 9136a2ce744e19754b3a660e7bc9c15f05babbbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e5b69ef3f47a173ef768283bbae4f6e3b5f5190
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411004"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458145"
 ---
 # <a name="allocatorsuballoc-class"></a>allocator_suballoc, classe
 
-Décrit un objet qui gère l’allocation de stockage et la libération des objets de type *Type* à l’aide d’un cache de type [cache_suballoc](../standard-library/cache-suballoc-class.md).
+Décrit un objet qui gère l’allocation et la libération de stockage pour les objets de type *type à l'* aide d’un cache de type [cache_suballoc](../standard-library/cache-suballoc-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,7 +33,7 @@ class allocator_suballoc;
 
 ## <a name="remarks"></a>Notes
 
-Le [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) macro transmet cette classe comme le *nom* paramètre dans l’instruction suivante : `ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
+La macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) transmet cette classe en tant que paramètre *Name* dans l’instruction suivante:`ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -43,4 +43,4 @@ Le [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

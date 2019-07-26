@@ -27,12 +27,12 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: 541f468071e315b205abb8f7b9c865f045c510fe
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: ea5f53fd77545713dfcc6a969f1c172d89f8e460
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220523"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459020"
 ---
 # <a name="chartraits-struct"></a>char_traits, struct
 
@@ -47,12 +47,12 @@ struct char_traits;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType*<br/>
+*CharType*\
 Type de données de l'élément.
 
 ## <a name="remarks"></a>Notes
 
-Le struct de modèle décrit différentes caractéristiques du type `CharType`. La classe de modèle [basic_string](../standard-library/basic-string-class.md) , ainsi que plusieurs classes de modèle iostream, notamment [basic_ios](../standard-library/basic-ios-class.md), ces informations permettent de manipuler les éléments de type `CharType`. Un tel type d'élément ne doit pas requérir une construction ou une destruction explicite. Il doit fournir un constructeur par défaut, un constructeur de copie et un opérateur d'affectation avec la sémantique attendue. Une copie au niveau du bit doit avoir le même effet qu'une affectation. Aucune des fonctions membres de la structure char_traits ne peut lever des exceptions.
+Le struct de modèle décrit différentes caractéristiques de caractères pour `CharType`le type. La classe de modèle [basic_string](../standard-library/basic-string-class.md) ainsi que plusieurs classes de modèle iostream, y compris [basic_ios](../standard-library/basic-ios-class.md), utilisent ces informations pour manipuler des `CharType`éléments de type. Un tel type d'élément ne doit pas requérir une construction ou une destruction explicite. Il doit fournir un constructeur par défaut, un constructeur de copie et un opérateur d'affectation avec la sémantique attendue. Une copie au niveau du bit doit avoir le même effet qu'une affectation. Aucune des fonctions membres de la structure char_traits ne peut lever des exceptions.
 
 ### <a name="typedefs"></a>Typedef
 
@@ -70,7 +70,7 @@ Le struct de modèle décrit différentes caractéristiques du type `CharType`. 
 |-|-|
 |[assign](#assign)|Affecte la valeur d'un caractère à un autre.|
 |[compare](#compare)|Compare un nombre spécifié de caractères dans deux chaînes.|
-|[copy](#copy)|Copie un nombre spécifié de caractères d'une chaîne vers une autre. Obsolète. Utilisez [char_traits::_Copy_s](#copy_s) à la place.|
+|[copy](#copy)|Copie un nombre spécifié de caractères d'une chaîne vers une autre. Action déconseillée. Utilisez [char_traits::_Copy_s](#copy_s) à la place.|
 |[_Copy_s](#copy_s)|Copie un nombre spécifié de caractères d'une chaîne vers une autre.|
 |[eof](#eof)|Retourne le caractère de fin de fichier (EOF).|
 |[eq](#eq)|Teste si deux caractères `char_type` sont égaux.|
@@ -78,7 +78,7 @@ Le struct de modèle décrit différentes caractéristiques du type `CharType`. 
 |[find](#find)|Recherche la première occurrence d'un caractère spécifié dans une plage de caractères.|
 |[length](#length)|Retourne la longueur d'une chaîne.|
 |[lt](#lt)|Teste si un caractère est inférieur à un autre.|
-|[move](#move)|Copie un nombre spécifié de caractères d'une séquence vers une autre séquence qui la chevauche éventuellement. Obsolète. Utilisez [char_traits::_Move_s](#move_s) à la place.|
+|[move](#move)|Copie un nombre spécifié de caractères d'une séquence vers une autre séquence qui la chevauche éventuellement. Action déconseillée. Utilisez [char_traits::_Move_s](#move_s) à la place.|
 |[_Move_s](#move_s)|Copie un nombre spécifié de caractères d'une séquence vers une autre séquence qui la chevauche éventuellement.|
 |[not_eof](#not_eof)|Teste si un caractère est le caractère de fin de fichier (EOF).|
 |[to_char_type](#to_char_type)|Convertit un caractère `int_type` en caractère `char_type` correspondant et retourne le résultat.|
@@ -105,22 +105,22 @@ static char_type *assign(char_type* strTo,
 
 ### <a name="parameters"></a>Paramètres
 
-**_** *CharFrom* le caractère dont la valeur doit être affecté.
+**_** *CharFrom* Caractère dont la valeur doit être assignée.
 
-*_CharTo*<br/>
+*_CharTo*\
 Élément qui doit être auquel doit être affectée la valeur du caractère.
 
-*strTo*<br/>
+*strTo*\
 Tableau de chaînes ou de caractères dont les éléments initiaux doivent recevoir des valeurs de caractère.
 
-*_Num*<br/>
+*_Num*\
 Nombre d’éléments auxquels des valeurs vont être assignées.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La deuxième fonction membre retourne un pointeur vers la chaîne dont le premier *_Num* éléments ont reçu des valeurs de *_CharFrom*.
+La deuxième fonction membre retourne un pointeur vers la chaîne dont les premiers éléments *_Num* ont reçu des valeurs de *_CharFrom*.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // char_traits_assign.cpp
@@ -189,13 +189,13 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>Paramètres
 
-*str1*<br/>
+*str1*\
 Première de deux chaînes à comparer à l’autre.
 
-*str2*<br/>
+*répartition*\
 Deuxième de deux chaînes à comparer à l’autre.
 
-*_Num*<br/>
+*_Num*\
 Nombre d’éléments dans les chaînes à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -255,13 +255,13 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Paramètres
 
-*_To*<br/>
+*_To*\
 Élément au début du tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
-*_From*<br/>
+*Partir*\
 Élément au début du tableau source de chaînes ou de caractères à copier.
 
-*_Num*<br/>
+*_Num*\
 Nombre d’éléments à copier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -272,7 +272,7 @@ Premier élément copié dans le tableau de chaînes ou de caractères ciblé po
 
 Les séquences de caractères source et de destination ne doivent pas se chevaucher.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // char_traits_copy.cpp
@@ -317,16 +317,16 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*dest*<br/>
+*dest*\
 Tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
-*dest_size*<br/>
-La taille de *dest*. Si `char_type` est **char**, cette taille est exprimée en octets. Si `char_type` est **wchar_t**, cette taille est exprimée en mots.
+*dest_size*\
+La taille de *dest*. Si `char_type` est de **type char**, cette taille est en octets. Si `char_type` est **wchar_t**, cette taille est en mots.
 
-*_From*<br/>
+*Partir*\
 Tableau source de chaînes ou de caractères à copier.
 
-*count*<br/>
+*saut*\
 Nombre d’éléments à copier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -337,7 +337,7 @@ Tableau de chaînes ou de caractères ciblé pour recevoir la séquence de carac
 
 Les séquences de caractères source et de destination ne doivent pas se chevaucher.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // char_traits__Copy_s.cpp
@@ -382,9 +382,9 @@ Caractère EOF.
 
 ### <a name="remarks"></a>Notes
 
-Une valeur qui représente la fin du fichier (par exemple, EOF ou WEOF).
+Valeur qui représente la fin du fichier (par exemple, EOF ou WEOF).
 
-La norme C++ stipule que cette valeur ne doit pas correspondre à une valeur `char_type` valide. Microsoft C++ compilateur applique cette contrainte de type **char**, mais pas pour le type **wchar_t**. C'est ce qu'illustre l'exemple ci-dessous.
+La norme C++ stipule que cette valeur ne doit pas correspondre à une valeur `char_type` valide. Le compilateur C++ Microsoft applique cette contrainte pour le type **char**, mais pas pour le type **wchar_t**. C'est ce qu'illustre l'exemple ci-dessous.
 
 ### <a name="example"></a>Exemple
 
@@ -429,10 +429,10 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch1*<br/>
+*_Ch1*\
 Premier de deux caractères dont l’égalité est à vérifier.
 
-*_Ch2*<br/>
+*_Ch2*\
 Deuxième de deux caractères dont l’égalité est à vérifier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -489,10 +489,10 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch1*<br/>
-Le premier des deux caractères à tester pour égalité comme `int_type`s.
+*_Ch1*\
+Premier des deux caractères dont l’égalité doit être testée en `int_type`tant que s.
 
-*_Ch2*<br/>
+*_Ch2*\
 Deuxième de deux caractères dont l’égalité est à vérifier, représentés sous la forme d’un `int_type`s.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -576,20 +576,20 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
+*Str*\
 Premier caractère de la chaîne dans laquelle s’effectue la recherche.
 
-*_Num*<br/>
+*_Num*\
 Nombre de positions, à partir de la première, de la plage dans laquelle s’effectue la recherche.
 
-*_Ch*<br/>
+*_Ch*\
 Caractère à rechercher dans la plage.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Un pointeur vers la première occurrence du caractère spécifié dans la plage si une correspondance est trouvée ; sinon, un pointeur null.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // char_traits_find.cpp
@@ -641,7 +641,7 @@ typedef long int_type;
 
 ### <a name="remarks"></a>Notes
 
-Il doit être possible de taper une valeur de type de cast `CharType` à `int_type` puis à nouveau en `CharType` sans modifier la valeur d’origine.
+Il doit être possible de taper un cast d’une valeur `CharType` de `int_type` type pour revenir `CharType` à sans modifier la valeur d’origine.
 
 ### <a name="example"></a>Exemple
 
@@ -657,7 +657,7 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
+*Str*\
 Chaîne C dont la longueur doit être mesurée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -700,10 +700,10 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch1*<br/>
+*_Ch1*\
 Premier de deux caractères dont la relation Inférieur à est à vérifier.
 
-*_Ch2*<br/>
+*_Ch2*\
 Deuxième de deux caractères dont la relation Inférieur à est à vérifier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -763,18 +763,18 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Paramètres
 
-*_To*<br/>
+*_To*\
 Élément au début du tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
-*_From*<br/>
+*Partir*\
 Élément au début du tableau source de chaînes ou de caractères à copier.
 
-*_Num*<br/>
+*_Num*\
 Nombre d’éléments à copier à partir de la chaîne source.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le premier élément *_vers* copiées dans le tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
+Le premier élément *_To* copié dans le tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
 ### <a name="remarks"></a>Notes
 
@@ -840,21 +840,21 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*dest*<br/>
+*dest*\
 Élément au début du tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
-*dest_size*<br/>
-La taille de *dest*. Si `char_type` est **char**, est exprimée en octets. Si `char_type` est **wchar_t**, est exprimée en mots.
+*dest_size*\
+La taille de *dest*. Si `char_type` est de **type char**, il s’agit de bytes. Si `char_type` est **wchar_t**, il s’agit de mots.
 
-*_From*<br/>
+*Partir*\
 Élément au début du tableau source de chaînes ou de caractères à copier.
 
-*count*<br/>
+*saut*\
 Nombre d’éléments à copier à partir de la chaîne source.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le premier élément *dest* copiées dans le tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
+Le premier élément *dest* copié dans le tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
 ### <a name="remarks"></a>Notes
 
@@ -916,12 +916,12 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch*<br/>
+*_Ch*\
 Caractère représenté sous la forme d’un `int_type` à vérifier pour déterminer s’il est ou non le caractère EOF.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le `int_type` représentation du caractère vérifié, si le `int_type` du caractère n’est pas égale à celle du caractère EOF.
+Représentation du caractère testé, si le `int_type` du caractère n’est pas égal à celui du caractère EOF. `int_type`
 
 Si la valeur du caractère `int_type` est égale à la valeur du `int_type` EOF, **false**.
 
@@ -1024,14 +1024,14 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch*<br/>
+*_Ch*\
 Caractère `int_type` à représenter sous la forme d’un `char_type`.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Caractère `char_type` correspondant au caractère `int_type`.
 
-La valeur *_Ch* qui ne peut pas être représentée sous cette forme génère un résultat non spécifié.
+Une valeur de *_Ch* qui ne peut pas être représentée comme telle génère un résultat non spécifié.
 
 ### <a name="remarks"></a>Notes
 
@@ -1130,7 +1130,7 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch*<br/>
+*_Ch*\
 Caractère `char_type` à représenter sous la forme d’un `int_type`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1149,7 +1149,7 @@ pour tout `int_type` *x* et
 
 pour tout `char_type` *x*.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // char_traits_to_int_type.cpp
@@ -1225,4 +1225,4 @@ The recovered char_type of ch2 is equal to the original ch2.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

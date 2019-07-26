@@ -7,12 +7,12 @@ helpviewer_keywords:
 - streams [C++], in iostream classes
 - streams [C++]
 ms.assetid: a7e661e9-6cd1-4543-a9a4-c58ee9fd32f3
-ms.openlocfilehash: 9b8821861baed53880a00695204a4555994dccb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80f2d17d7de2ddca1ef1501cacdb44f41c06594b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410809"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450940"
 ---
 # <a name="what-a-stream-is"></a>Définition d'un flux
 
@@ -26,4 +26,4 @@ Au moyen de pilotes de périphérique, le système d’exploitation MS-DOS trait
 
 ## <a name="see-also"></a>Voir aussi
 
-[iostream, programmation](../standard-library/iostream-programming.md)<br/>
+[iostream, programmation](../standard-library/iostream-programming.md)

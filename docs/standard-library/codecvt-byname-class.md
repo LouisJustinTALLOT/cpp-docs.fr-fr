@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: 62aac6abca3dce45ff3cc875823df04c69618b10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62781d575d6b9dda3f3c1e2a744091221c6f9584
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405272"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459859"
 ---
 # <a name="codecvtbyname-class"></a>codecvt_byname, classe
 
@@ -43,10 +43,10 @@ protected:
 
 ### <a name="parameters"></a>Paramètres
 
-*_Locname*<br/>
+*_Locname*\
 Paramètres régionaux nommés.
 
-*_Refs*<br/>
+*_Refs*\
 Nombre initial de références.
 
 ## <a name="remarks"></a>Notes
@@ -63,4 +63,4 @@ Son comportement est déterminé par les paramètres régionaux nommés *_Locnam
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

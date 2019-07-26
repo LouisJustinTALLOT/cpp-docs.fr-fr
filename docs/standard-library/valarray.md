@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 9154f15500863d815f56438090662416b9b6fe7f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: c18b72017e4999e377bf8575f624f8fdda5b0caf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246657"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448334"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -24,11 +24,11 @@ Définit la classe de modèle valarray et de nombreuses fonctions et classes de 
 **Espace de noms :** std
 
 > [!NOTE]
-> Le \<valarray > bibliothèque utilise la ' #include < initializer_list >' instruction.
+> La \<bibliothèque de > valarray utilise l’instruction «#include < initializer_list >».
 
 ## <a name="remarks"></a>Notes
 
-Une latitude inhabituelle est accordée à ces fonctions et classes de modèle afin d'améliorer les performances. En particulier, n’importe quelle fonction qui retourne le type `valarray<T1>` peut retourner un objet d’un autre type T2. Dans ce cas, toute fonction qui accepte un ou plusieurs arguments de type `valarray<T2>` doit avoir des surcharges qui acceptent des combinaisons arbitraires de ces arguments, chacun remplacés par un argument de type T2.
+Une latitude inhabituelle est accordée à ces fonctions et classes de modèle afin d'améliorer les performances. Plus précisément, toute fonction qui `valarray<T1>` retourne un type peut retourner un objet d’un autre type T2. Dans ce cas, toute fonction qui accepte un ou plusieurs arguments de type `valarray<T2>` doit avoir des surcharges qui acceptent des combinaisons arbitraires de ces arguments, chacune remplacée par un argument de type T2.
 
 ## <a name="members"></a>Membres
 
@@ -89,15 +89,15 @@ Une latitude inhabituelle est accordée à ces fonctions et classes de modèle a
 |[mask_array, classe](../standard-library/mask-array-class.md)|Classe de modèle interne auxiliaire qui prend en charge les objets qui sont des sous-ensembles de valarrays parents, spécifiés avec une expression booléenne, en fournissant des opérations entre les tableaux de sous-ensembles.|
 |[slice, classe](../standard-library/slice-class.md)|Classe utilitaire de valarray qui sert à définir des sous-ensembles vectoriels unidimensionnels d'un valarray parent.|
 |[slice_array, classe](../standard-library/slice-array-class.md)|Classe de modèle interne auxiliaire qui prend en charge les objets de secteurs en fournissant des opérations entre des tableaux de sous-ensembles définis par le secteur d'un valarray.|
-|[valarray, classe](../standard-library/valarray-class.md)|La classe de modèle décrit un objet qui contrôle une séquence d’éléments de type `Type` qui sont stockés sous forme de tableau et conçu pour effectuer des opérations mathématiques très rapides, optimisées pour les performances de calcul.|
+|[valarray, classe](../standard-library/valarray-class.md)|La classe de modèle décrit un objet qui contrôle une séquence d’éléments de `Type` type qui sont stockés sous forme de tableau et conçus pour effectuer des opérations mathématiques à grande vitesse, optimisées pour les performances de calcul.|
 
 ### <a name="specializations"></a>Spécialisations
 
 |||
 |-|-|
-|[valarray\<bool>, classe](../standard-library/valarray-bool-class.md)|Une version spécialisée de la classe de modèle valarray\<**Type**> aux éléments de type **bool**.|
+|[valarray\<bool>, classe](../standard-library/valarray-bool-class.md)|Une version spécialisée de la classe de modèle\<valarray**type**> aux éléments de type **bool**.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

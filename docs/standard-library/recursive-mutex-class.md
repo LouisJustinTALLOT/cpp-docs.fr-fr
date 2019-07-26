@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 8be17c8ab361272678c25326464261e153da6a49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 448b4d03e4d38dc45621cddab7d8f5d03b805968
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369642"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451685"
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex, classe
 
@@ -50,7 +50,7 @@ class recursive_mutex;
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<mutex >
+**En-tête:** \<> mutex
 
 **Espace de noms :** std
 
@@ -96,11 +96,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la méthode obtient correctement la propriété de la `mutex` ou si le thread appelant possède déjà le `mutex**; otherwise, **false`.
+**true** si la méthode obtient avec succès la propriété du `mutex` ou si le thread appelant possède déjà le `mutex**; otherwise, **false`.
 
 ### <a name="remarks"></a>Notes
 
-Si le thread appelant possède déjà le `mutex`, la fonction retourne immédiatement **true**, et le verrou précédent reste en vigueur.
+Si le thread appelant possède déjà le `mutex`, la fonction retourne immédiatement **true**et le verrou précédent reste en vigueur.
 
 ## <a name="unlock"></a>  unlock
 
@@ -118,5 +118,5 @@ Si le thread appelant ne possède pas `mutex`, le comportement est indéfini.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

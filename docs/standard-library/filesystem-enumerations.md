@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9bf5f0231fbc5b694c1f4ae507feb82b0d19d600
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240755"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457713"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt;, énumérations
 
@@ -86,7 +86,7 @@ enum class directory_options {
 
 ## <a name="file_type"></a>  file_type
 
-Énumération pour les types de fichiers. Les valeurs prises en charge sont regular, directory, not_found et unknown.
+Énumération pour les types de fichiers. Les valeurs prises en charge sont Regular, Directory, NOT_FOUND et Unknown.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valeurs
 
-|Nom|`Value`|Description|
+|Nom|Valeur|Description|
 |----------|-----------|-----------------|
 |`not_found`|-1|Représente un fichier qui n'existe pas.|
 |`none`|0|Représente un fichier qui n'a aucun attribut de type. (Non pris en charge.)|
@@ -120,9 +120,9 @@ enum class file_type {
 |`socket`|7|Représente un socket sur les systèmes UNIX. (Non pris en charge.)|
 |`unknown`|8|Représente un fichier dont l'état ne peut pas être déterminé.|
 
-## <a name="perm_options"></a>  perm_options
+## <a name="perm_options"></a>perm_options
 
-Inclut les valeurs `replace`, `add`, `remove`, et `nofollow`.
+Comprend les `replace`valeurs `add` ,`remove`, et `nofollow`.
 
 ```cpp
 enum class perm_options;
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)

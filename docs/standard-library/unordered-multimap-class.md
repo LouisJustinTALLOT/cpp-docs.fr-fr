@@ -137,12 +137,12 @@ helpviewer_keywords:
 - std::unordered_multimap::size
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
-ms.openlocfilehash: ca080cfee9869985c322bf1311fabf8aff72383a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d278da5538e100b4b97320c8e1e4c9c4ad6c34ff
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362931"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454747"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap, classe
 
@@ -165,9 +165,9 @@ class unordered_multimap;
 |-|-|
 |*Key*|Type de clé.|
 |*Ty*|Type mappé.|
-|*hachage*|Type d'objet de la fonction de hachage.|
-|*Pred*|Type d’objet de fonction de comparaison d’égalité.|
-|*Alloc*|Classe allocator.|
+|*Format*|Type d'objet de la fonction de hachage.|
+|*Prédit*|Type d’objet de fonction de comparaison d’égalité.|
+|*Utilis*|Classe allocator.|
 
 ## <a name="members"></a>Membres
 
@@ -179,7 +179,7 @@ class unordered_multimap;
 |[const_pointer](#const_pointer)|Type d'un pointeur constant vers un élément.|
 |[const_reference](#const_reference)|Type d'une référence constante à un élément.|
 |[difference_type](#difference_type)|Type d'une distance signée entre deux éléments.|
-|[hasher](#hasher)|Type de la fonction de hachage.|
+|[Hasher](#hasher)|Type de la fonction de hachage.|
 |[iterator](#iterator)|Type d'un itérateur pour la séquence contrôlée.|
 |[key_equal](#key_equal)|Type de la fonction de comparaison.|
 |[key_type](#key_type)|Type d'une clé de tri.|
@@ -193,7 +193,7 @@ class unordered_multimap;
 |Fonction membre|Description|
 |-|-|
 |[begin](#begin)|Désigne le début de la séquence contrôlée.|
-|[bucket](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|
+|[plage](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|
 |[bucket_count](#bucket_count)|Obtient le nombre de compartiments.|
 |[bucket_size](#bucket_size)|Obtient la taille d'un compartiment.|
 |[cbegin](#cbegin)|Désigne le début de la séquence contrôlée.|
@@ -300,7 +300,7 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="remarks"></a>Notes
 
-Les deux premières fonctions membres retournent un itérateur vers l'avant qui pointe vers le premier élément de la séquence (ou juste après la fin d'une séquence vide). Les deux dernières fonctions membres retournent un itérateur vers l’avant qui pointe vers le premier élément du compartiment *nbucket* (ou juste après la fin d’un compartiment vide).
+Les deux premières fonctions membres retournent un itérateur vers l'avant qui pointe vers le premier élément de la séquence (ou juste après la fin d'une séquence vide). Les deux dernières fonctions membres retournent un itérateur vers l’avant qui pointe vers le premier élément d’un compartiment *nbucket* (ou juste après la fin d’un compartiment vide).
 
 ### <a name="example"></a>Exemple
 
@@ -356,12 +356,12 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyval*<br/>
+*keyval*\
 Valeur de clé à mapper.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne le numéro de compartiment correspondant actuellement à la valeur de clé *keyval*.
+La fonction membre retourne le numéro de compartiment correspondant actuellement à la valeur de clé *keyVal*.
 
 ### <a name="example"></a>Exemple
 
@@ -498,14 +498,14 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*nbucket*<br/>
+*nbucket*\
 Numéro de compartiment.
 
 ### <a name="remarks"></a>Notes
 
 Les fonctions membres retournent la taille du compartiment numéro *nbucket*.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // std__unordered_map__unordered_multimap_bucket_size.cpp
@@ -546,7 +546,7 @@ bucket_size(7) == 1
 
 ## <a name="cbegin"></a>  unordered_multimap::cbegin
 
-Retourne un **const** itérateur qui traite le premier élément dans la plage.
+Retourne un  itérateur const qui traite le premier élément de la plage.
 
 ```cpp
 const_iterator cbegin() const;
@@ -554,13 +554,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un **const** itérateur Forward qui pointe vers le premier élément de la plage ou l’emplacement juste après la fin d’une plage vide (pour une plage vide, `cbegin() == cend()`).
+Itérateur **const** Forward-Access qui pointe vers le premier élément de la plage, ou vers l’emplacement situé juste après la fin d’une plage vide (pour une plage vide `cbegin() == cend()`,).
 
 ### <a name="remarks"></a>Notes
 
 Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` à être modifiable (non - **const**) conteneur quelconque qui prend en charge `begin()` et `cbegin()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l' `Container` exemple, considérez qu’il s’agit d’un conteneur modifiable (non **const**) de tout `begin()` type `cbegin()`qui prend en charge et.
 
 ```cpp
 auto i1 = Container.begin();
@@ -572,7 +572,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  unordered_multimap::cend
 
-Retourne un **const** itérateur qui traite l’emplacement juste après le dernier élément dans une plage.
+Retourne un  itérateur const qui traite l’emplacement juste après le dernier élément d’une plage.
 
 ```cpp
 const_iterator cend() const;
@@ -580,13 +580,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un **const** itérateur Forward qui pointe juste après la fin de la plage.
+Itérateur **const** Forward-Access qui pointe juste après la fin de la plage.
 
 ### <a name="remarks"></a>Notes
 
 `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` à être modifiable (non - **const**) conteneur quelconque qui prend en charge `end()` et `cend()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l' `Container` exemple, considérez qu’il s’agit d’un conteneur modifiable (non **const**) de tout `end()` type `cend()`qui prend en charge et.
 
 ```cpp
 auto i1 = Container.end();
@@ -610,7 +610,7 @@ void clear();
 
 La fonction membre appelle [unordered_multimap::erase](#erase)`(` [unordered_multimap::begin](#begin)`(),` [unordered_multimap::end](#end)`())`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // std__unordered_map__unordered_multimap_clear.cpp
@@ -768,7 +768,7 @@ typedef Alloc::const_pointer const_pointer;
 
 Le type décrit un objet pouvant servir de pointeur constant à un élément de la séquence contrôlée.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // std__unordered_map__unordered_multimap_const_pointer.cpp
@@ -858,7 +858,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyval*<br/>
+*keyval*\
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -1174,12 +1174,12 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Paramètres
 
-*keyval*<br/>
+*keyval*\
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne une paire d’itérateurs `X` telles que `[X.first, X.second)` délimite uniquement les éléments de la séquence contrôlée qui ont un classement équivalent à *keyval*. Si aucun de ces éléments n’existe, les deux itérateurs sont `end()`.
+La fonction membre retourne une paire d’itérateurs `X` qui `[X.first, X.second)` délimite uniquement les éléments de la séquence contrôlée qui ont un classement équivalent avec *keyVal*. Si aucun de ces éléments n’existe, les deux itérateurs sont `end()`.
 
 ### <a name="example"></a>Exemple
 
@@ -1249,16 +1249,16 @@ size_type erase(
 
 ### <a name="parameters"></a>Paramètres
 
-*Where*<br/>
+*Cela*\
 Position de l’élément à supprimer.
 
-*First*<br/>
+*Premier*\
 Position du premier élément à supprimer.
 
-*Last*<br/>
+*Famille*\
 Position juste après le dernier élément à supprimer.
 
-*Key*<br/>
+*Essentiel*\
 Valeur de clé des éléments à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1281,7 +1281,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyval*<br/>
+*keyval*\
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -1487,11 +1487,11 @@ IList);
 
 |Paramètre|Description|
 |-|-|
-|*Val*|Valeur d'un élément à insérer dans la classe unordered_multimap.|
+|*Multiples*|Valeur d'un élément à insérer dans la classe unordered_multimap.|
 |*Where*|Emplacement où commencer à rechercher le point d'insertion correct.|
-|*ValTy*|Paramètre de modèle qui spécifie le type d’argument que la classe unordered_multimap peut utiliser pour construire un élément de [value_type](../standard-library/map-class.md#value_type)et effectue un transfert parfait *Val* en tant qu’argument.|
-|*First*|Position du premier élément à copier.|
-|*Last*|Position juste au-delà du dernier élément à copier.|
+|*ValTy*|Paramètre de modèle qui spécifie le type d’argument que le unordered_multimap peut utiliser pour construire un élément de [Value_type](../standard-library/map-class.md#value_type), et parfait-transfère la valeur *Val* en tant qu’argument.|
+|*Premier*|Position du premier élément à copier.|
+|*Famille*|Position juste au-delà du dernier élément à copier.|
 |*InputIterator*|Argument de fonction de modèle qui remplit les conditions requises par un [itérateur d’entrée](../standard-library/input-iterator-tag-struct.md) qui pointe vers des éléments d’un type pouvant servir à construire des objets [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|[initializer_list](../standard-library/initializer-list.md) à partir de laquelle copier les éléments.|
 
@@ -1509,7 +1509,7 @@ Durant l'insertion d'un seul élément, si une exception est levée mais qu'elle
 
 Le [value_type](../standard-library/map-class.md#value_type) d’un conteneur est un typedef qui appartient au conteneur et, pour la classe map, `map<K, V>::value_type` est `pair<const K, V>`. La valeur d'un élément est une paire ordonnée dans laquelle le premier composant est égal à la valeur de clé et le second composant est égal à la valeur de données de l'élément.
 
-La fonction membre de plage (5) insère la séquence de valeurs d’éléments dans une classe unordered_multimap qui correspond à chaque élément traité par un itérateur dans la plage `[First, Last)`; par conséquent, *dernière* n’est pas inséré. La fonction membre de conteneur `end()` fait référence à la position qui suit le dernier élément du conteneur. Par exemple, l'instruction `m.insert(v.begin(), v.end());` insère tous les éléments de `v` dans `m`.
+La fonction membre de plage (5) insère la séquence de valeurs d’éléments dans un unordered_multimap qui correspond à chaque élément traité par un itérateur dans la `[First, Last)`plage; par conséquent, *Last* n’est pas inséré. La fonction membre de conteneur `end()` fait référence à la position qui suit le dernier élément du conteneur. Par exemple, l'instruction `m.insert(v.begin(), v.end());` insère tous les éléments de `v` dans `m`.
 
 La fonction membre de liste d’initialiseurs (6) utilise un objet [initializer_list](../standard-library/initializer-list.md) pour copier des éléments dans l’objet unordered_multimap.
 
@@ -1529,7 +1529,7 @@ typedef T0 iterator;
 
 Le type décrit un objet pouvant servir d’itérateur forward pour la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T0`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // std__unordered_map__unordered_multimap_iterator.cpp
@@ -1612,7 +1612,7 @@ typedef Pred key_equal;
 
 Le type est un synonyme du paramètre de modèle `Pred`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // std__unordered_map__unordered_multimap_key_equal.cpp
@@ -1964,12 +1964,12 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Paramètres
 
-*factor*<br/>
+*factorisés*\
 Nouveau facteur de charge maximale.
 
 ### <a name="remarks"></a>Notes
 
-La première fonction membre retourne le facteur de charge maximale stockée. La deuxième fonction membre retourne le facteur de charge maximale stockée avec *facteur*.
+La première fonction membre retourne le facteur de charge maximale stockée. La deuxième fonction membre remplace le facteur de charge maximale stocké par *Factor*.
 
 ### <a name="example"></a>Exemple
 
@@ -2098,7 +2098,7 @@ unordered_multimap& operator=(unordered_multimap&& right);
 
 ### <a name="remarks"></a>Notes
 
-Après avoir supprimé les éléments existants dans un unordered_multimap, `operator=` copie ou déplace le contenu de *droit* dans la classe unordered_multimap.
+Après l’effacement des éléments existants dans un unordered_multimap `operator=` , copie ou déplace le contenu de *droite* dans le unordered_multimap.
 
 ### <a name="example"></a>Exemple
 
@@ -2195,7 +2195,7 @@ typedef Alloc::reference reference;
 
 Le type décrit un objet qui peut servir de référence à un élément de la séquence contrôlée.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // std__unordered_map__unordered_multimap_reference.cpp
@@ -2239,12 +2239,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Paramètres
 
-*nbuckets*<br/>
+*nbuckets*\
 Nombre de compartiments demandés.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre modifie le nombre de compartiments au moins *nbuckets* et reconstruit la table de hachage en fonction des besoins.
+La fonction membre modifie le nombre de compartiments pour qu’elle soit au moins *nbuckets* et reconstruit la table de hachage en fonction des besoins.
 
 ### <a name="example"></a>Exemple
 
@@ -2420,14 +2420,14 @@ void swap(unordered_multimap& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 Conteneur avec lequel faire l’échange.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre échange les séquences contrôlées entre `*this` et *droit*. Si [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`, elle le fait en un temps constant, elle lève une exception seulement dans le cas de la copie de l’objet traits stocké de type `Tr`, et n’invalide aucune référence, ni aucun pointeur ou itérateur, qui désigne des éléments dans les deux séquences contrôlées. Sinon, elle effectue un nombre d’affectations d’éléments et d’appels de constructeurs proportionnel au nombre d’éléments dans les deux séquences contrôlées.
+La fonction membre échange les séquences contrôlées entre `*this` et *Right*. Si [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`, elle le fait en un temps constant, elle lève une exception seulement dans le cas de la copie de l’objet traits stocké de type `Tr`, et n’invalide aucune référence, ni aucun pointeur ou itérateur, qui désigne des éléments dans les deux séquences contrôlées. Sinon, elle effectue un nombre d’affectations d’éléments et d’appels de constructeurs proportionnel au nombre d’éléments dans les deux séquences contrôlées.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // std__unordered_map__unordered_multimap_swap.cpp
@@ -2539,28 +2539,28 @@ unordered_multimap(
 |Paramètre|Description|
 |-|-|
 |*InputIterator*|Type d'itérateur.|
-|*Al*|Objet allocateur à stocker.|
-|*Comp*|Objet de fonction de comparaison à stocker.|
-|*hachage*|Objet de fonction de hachage à stocker.|
+|*&*|Objet allocateur à stocker.|
+|*Conformes*|Objet de fonction de comparaison à stocker.|
+|*Format*|Objet de fonction de hachage à stocker.|
 |*Bucket_count*|Nombre minimal de compartiments.|
 |*Droite*|Conteneur à copier.|
 |*IList*|Initializer_list depuis laquelle copier les éléments.|
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur spécifie une copie de la séquence contrôlée par *droite*. Le deuxième constructeur spécifie une séquence vide contrôlée. Le troisième constructeur Spécifie une copie de la séquence en déplaçant *droite*. Le quatrième, le cinquième, le sixième, le septième et le huitième constructeurs utilisent une initializer_list pour les membres. Le neuvième constructeur insère la séquence de valeurs d'éléments `[First, Last)`.
+Le premier constructeur spécifie une copie de la séquence contrôlée par *Right*. Le deuxième constructeur spécifie une séquence vide contrôlée. Le troisième constructeur spécifie une copie de la séquence en la déplaçant vers la *droite*. Le quatrième, le cinquième, le sixième, le septième et le huitième constructeurs utilisent une initializer_list pour les membres. Le neuvième constructeur insère la séquence de valeurs d'éléments `[First, Last)`.
 
-Tous les constructeurs initialisent également plusieurs valeurs stockées. Pour le constructeur de copie, les valeurs sont obtenues à partir de *droite*. Sinon :
+Tous les constructeurs initialisent également plusieurs valeurs stockées. Pour le constructeur de copie, les valeurs sont obtenues à partir de *Right*. Sinon :
 
-Le nombre minimal de compartiments est l’argument *Bucket_count*, si présent ; sinon c’est une valeur par défaut décrite ici comme la valeur définie par l’implémentation `N0`.
+Le nombre minimal de compartiments est l’argument *Bucket_count*, s’il est présent; dans le cas contraire, il s’agit d’une valeur par défaut décrite `N0`ici comme valeur définie par l’implémentation.
 
-l’objet de fonction de hachage est l’argument *hachage*, si présent ; sinon c’est `Hash()`.
+L’objet de fonction de hachage est le *hachage*d’argument, s’il existe; dans le cas `Hash()`contraire, il s’agit de.
 
-L’objet de fonction de comparaison est l’argument *Comp*, si présent ; sinon c’est `Pred()`.
+L’objet de fonction de comparaison est l’argument *COMP*, s’il est présent; dans le cas `Pred()`contraire, il s’agit de.
 
-L’objet allocateur est l’argument *Al*, si présent ; sinon, il est `Alloc()`.
+L’objet Allocator est l’argument *al*, s’il est présent; dans le cas contraire `Alloc()`, il s’agit de.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // std__unordered_map__unordered_multimap_construct.cpp
@@ -2740,7 +2740,7 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
-[Conteneurs](../cpp/containers-modern-cpp.md)<br/>
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)\
+[Conteneurs](../cpp/containers-modern-cpp.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

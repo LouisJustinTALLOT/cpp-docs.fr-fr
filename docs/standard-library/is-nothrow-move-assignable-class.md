@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_move_assignable
 ms.assetid: 000baa02-cbba-49de-9870-af730033348e
-ms.openlocfilehash: eb1ddcace7a68bf60154a15117a1c16a438d263d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8273be92a9c7e60e446b3c2b561a6020e70fb2f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148442"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455892"
 ---
 # <a name="isnothrowmoveassignable-class"></a>is_nothrow_move_assignable, classe
 
@@ -26,12 +26,12 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*<br/>
+*Ty*\
 Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *Ty* a un nothrow déplacement opérateur d’assignation, sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* contient un opérateur d’assignation de déplacement nothrow. sinon, sa valeur est false.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -41,4 +41,4 @@ Une instance du prédicat de type a la valeur true si le type *Ty* a un nothrow 
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

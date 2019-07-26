@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.openlocfilehash: 2cb6fe8588f4b81ae5c67533c4b9124ae8c9b252
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae61d17084cc744cac8819ac2c0ca48eb59add7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370071"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460119"
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex, classe
 
@@ -56,7 +56,7 @@ class recursive_timed_mutex;
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<mutex >
+**En-tête:** \<> mutex
 
 **Espace de noms :** std
 
@@ -102,11 +102,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la méthode a réussi à obtenir la propriété de la `mutex` ou si le thread appelant possède déjà le `mutex`; sinon, **false**.
+**true** si la méthode a obtenu la propriété du `mutex` ou si le thread appelant possède déjà le `mutex`; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
-Si le thread appelant possède déjà le `mutex`, la fonction retourne immédiatement **true**, et le verrou précédent reste en vigueur.
+Si le thread appelant possède déjà le `mutex`, la fonction retourne immédiatement **true**et le verrou précédent reste en vigueur.
 
 ## <a name="try_lock_for"></a>  try_lock_for
 
@@ -119,16 +119,16 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Paramètres
 
-*Rel_time*<br/>
+*Rel_time*\
 Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la durée maximale pendant laquelle la méthode essaie d’obtenir la propriété du `mutex`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la méthode obtient correctement la propriété de la `mutex` ou si le thread appelant possède déjà le `mutex`; sinon, **false**.
+**true** si la méthode obtient avec succès la propriété du `mutex` ou si le thread appelant possède déjà le `mutex`; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
-Si le thread appelant possède déjà le `mutex`, la méthode retourne immédiatement **true**, et le verrou précédent reste en vigueur.
+Si le thread appelant possède déjà le `mutex`, la méthode retourne immédiatement la **valeur true**et le verrou précédent reste en vigueur.
 
 ## <a name="try_lock_until"></a>  try_lock_until
 
@@ -143,16 +143,16 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Paramètres
 
-*Abs_time*<br/>
+*Abs_time*\
 Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente plus d'obtenir la propriété du `mutex`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la méthode obtient correctement la propriété de la `mutex` ou si le thread appelant possède déjà le `mutex`; sinon, **false**.
+**true** si la méthode obtient avec succès la propriété du `mutex` ou si le thread appelant possède déjà le `mutex`; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
-Si le thread appelant possède déjà le `mutex`, la méthode retourne immédiatement **true**, et le verrou précédent reste en vigueur.
+Si le thread appelant possède déjà le `mutex`, la méthode retourne immédiatement la **valeur true**et le verrou précédent reste en vigueur.
 
 ## <a name="unlock"></a>  unlock
 
@@ -170,5 +170,5 @@ Si le thread appelant ne possède pas `mutex`, le comportement est indéfini.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

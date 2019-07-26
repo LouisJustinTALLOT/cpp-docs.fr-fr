@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 8f6552d9f9b0b34b1cb721e726c95845210c8bb9
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 11e705629675903803f7230d540417846417cc77
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449266"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456958"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution, classe
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType*<br/>
-Le type de résultat entier, valeur par défaut est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*IntType*\
+Le type de résultat entier, par défaut, est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur type ou type **int** si aucun n’est fourni, distribuées selon la fonction de probabilité discrète de Distribution négative binomiale. Le tableau suivant contient des liens vers des articles sur différents membres.
+La classe de modèle décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou un type **int** si aucun n’est fourni, distribuées selon la fonction de probabilité discrète de distribution négative binomiale. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-Les membres de la propriété `k()` et `p()` retournent des valeurs de paramètre de la distribution stockée actuellement *k* et *p* respectivement.
+Les membres `k()` de propriété `p()` et retournent les valeurs de paramètre de distribution actuellement stockées, *k* et *p* , respectivement.
 
 Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.
 
@@ -95,7 +95,7 @@ Les fonctions membres `operator()` retournent la valeur générée suivante d’
 
 Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).
 
-Pour obtenir des informations détaillées sur la fonction de probabilité discrète de distribution binomiale négative, consultez l’article de Wolfram mathworld [Distribution négative binomiale](https://go.microsoft.com/fwlink/p/?linkid=400516).
+Pour plus d’informations sur la fonction de probabilité discrète de distribution négative binomiale, consultez l’article Wolfram MathWorld [distribution négative binomiale](https://go.microsoft.com/fwlink/p/?linkid=400516).
 
 ## <a name="example"></a>Exemple
 
@@ -232,13 +232,13 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*k*<br/>
+*DK*\
 Paramètre de distribution `k`.
 
-*p*<br/>
+*p*\
 Paramètre de distribution `p`.
 
-*parm*<br/>
+*Parm*\
 Structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -259,13 +259,13 @@ struct param_type { typedef negative_binomial_distribution`<`result_type> distri
 
 ### <a name="parameters"></a>Paramètres
 
-*k*<br/>
+*DK*\
 Paramètre de distribution `k`.
 
-*p*<br/>
+*p*\
 Paramètre de distribution `p`.
 
-*right*<br/>
+*Oui*\
 Structure `param_type` utilisée pour comparer.
 
 ### <a name="remarks"></a>Notes
@@ -276,4 +276,4 @@ Cette structure peut être passée au constructeur de classe de la distribution 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)
