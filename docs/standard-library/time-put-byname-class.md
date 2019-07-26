@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-ms.openlocfilehash: ffe7aa276e9380b6544a78c1c1735ab57765507a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2da2bf4ea1c709b820c1a82dc20e288634139a83
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411966"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460002"
 ---
 # <a name="timeputbyname-class"></a>time_put_byname, classe
 
@@ -40,15 +40,15 @@ protected:
 
 ### <a name="parameters"></a>Paramètres
 
-*_Locname*<br/>
+*_Locname*\
 Nom de paramètres régionaux.
 
-*_Refs*<br/>
+*_Refs*\
 Nombre initial de références.
 
 ## <a name="remarks"></a>Notes
 
-Son comportement est déterminé par le [nommé](../standard-library/locale-class.md#name) paramètres régionaux *_Locname*. Chaque constructeur initialise son objet de base avec [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
+Son comportement est déterminé par les [](../standard-library/locale-class.md#name) paramètres régionaux nommés *_Locname*. Chaque constructeur initialise son objet de base avec [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -58,4 +58,4 @@ Son comportement est déterminé par le [nommé](../standard-library/locale-clas
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

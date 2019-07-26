@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::basic_fstream [C++], rdbuf
 - std::basic_fstream [C++], swap
 ms.assetid: 8473817e-42a4-430b-82b8-b476c86bcf8a
-ms.openlocfilehash: 894ac0bf7703bf68c9125d11023dbc32cfbb5941
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d26d0fe0e4e4152cf05476f546b753650209dfe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400669"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459601"
 ---
 # <a name="basicfstream-class"></a>basic_fstream, classe
 
@@ -36,10 +36,10 @@ class basic_fstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>Paramètres
 
-*Elem*<br/>
+*Elem*\
 Élément de base de la mémoire tampon de fichier.
 
-*Tr*<br/>
+*TR*\
 Caractéristiques de l’élément de base de la mémoire tampon de fichier (généralement `char_traits`< `Elem`>).
 
 ## <a name="remarks"></a>Notes
@@ -49,7 +49,7 @@ L’objet stocke un objet de classe `basic_filebuf`< `Elem`, `Tr`>.
 > [!NOTE]
 > Les pointeurs get et put d’un objet fstream ne sont **PAS** indépendants l’un de l’autre. Si le pointeur get bouge, le pointeur put bouge aussi.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 L'exemple suivant montre comment créer un objet `basic_fstream` qui peut être lu et écrit.
 
@@ -127,20 +127,20 @@ basic_fstream(basic_fstream&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Filename*<br/>
+*Le nom*\
 Nom du fichier à ouvrir.
 
-*_Mode*<br/>
+*_Mode*\
 Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot*<br/>
-Le fichier par défaut ouverture de protection, équivalente à la *shflag* paramètre dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*\
+Protection d’ouverture de fichier par défaut, équivalente au paramètre *shflag* dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise la classe de base en appelant [basic_iostream](../standard-library/basic-iostream-class.md)(`sb`), où `sb` est l’objet stocké de classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, **Tr**>. Il initialise également `sb` en appelant `basic_filebuf` \< **Elem**, **Tr**>.
+Le premier constructeur initialise la classe de base en appelant [basic_iostream](../standard-library/basic-iostream-class.md)(`sb`), où `sb` est l’objet stocké de la classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **elem**, **TR**>. `sb` Elle s’initialise également en appelant `basic_filebuf` \< **elem**, **TR**>.
 
-Les deuxième et troisième constructeurs initialisent la classe de base en appelant `basic_iostream`( **sb**). Il initialise également `sb` en appelant `basic_filebuf` \< **Elem**, **Tr**>, puis **SB**[ouvrir](../standard-library/basic-filebuf-class.md#open)() _ *Filename*, `_Mode`). Si cette dernière fonction retourne un pointeur null, le constructeur appelle [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
+Les deuxième et troisième constructeurs initialisent la classe de base en appelant `basic_iostream`( **sb**). Elle s' `sb` initialise également en appelant `basic_filebuf`  `_Mode` [](../standard-library/basic-filebuf-class.md#open)  elem, TR >, puis SB. Open (_ fileName,). \< Si la dernière fonction retourne un pointeur null, le constructeur appelle [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 Le quatrième constructeur initialise l’objet avec le contenu de `right`, traité comme une référence rvalue.
 
@@ -158,7 +158,7 @@ void close();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle [rdbuf](#rdbuf)**->** [close](../standard-library/basic-filebuf-class.md#close).
+La fonction membre appelle [rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close).
 
 ### <a name="example"></a>Exemple
 
@@ -178,7 +178,7 @@ bool is_open() const;
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne [rdbuf](#rdbuf)**->**[is_open](../standard-library/basic-filebuf-class.md#is_open).
+La fonction membre retourne [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).
 
 ### <a name="example"></a>Exemple
 
@@ -210,22 +210,22 @@ void open(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Filename*<br/>
+*Le nom*\
 Nom du fichier à ouvrir.
 
-*_Mode*<br/>
+*_Mode*\
 Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot*<br/>
-Le fichier par défaut ouverture de protection, équivalente à la *shflag* paramètre dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*\
+Protection d’ouverture de fichier par défaut, équivalente au paramètre *shflag* dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Si cette fonction retourne un pointeur null, la fonction appelle [setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`).
+La fonction membre appelle [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Si cette fonction retourne un pointeur null, la fonction appelle [SetState](../standard-library/basic-ios-class.md#setstate)( `failbit`).
 
 ### <a name="example"></a>Exemple
 
-Consultez [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) pour obtenir un exemple montrant comment utiliser `open`.
+Pour obtenir un exemple d’utilisation `open`de, consultez [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) .
 
 ## <a name="op_eq"></a>  basic_fstream::operator=
 
@@ -237,7 +237,7 @@ basic_fstream& operator=(basic_fstream&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 Référence lvalue à un objet `basic_fstream`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -246,7 +246,7 @@ Retourne `*this`.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur membre remplace le contenu de l’objet en utilisant le contenu de *droit*, traité comme une référence rvalue.
+L’opérateur membre remplace le contenu de l’objet à l’aide du contenu de *droite*, traité comme une référence rvalue.
 
 ## <a name="rdbuf"></a>  basic_fstream::rdbuf
 
@@ -274,15 +274,15 @@ void swap(basic_fstream& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 Référence `lvalue` à un objet `basic_fstream`.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre échange le contenu de cet objet et le contenu de *droit*.
+La fonction membre échange le contenu de cet objet et le contenu de *Right*.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream, programmation](../standard-library/iostream-programming.md)<br/>
-[iostreams, conventions](../standard-library/iostreams-conventions.md)<br/>
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream, programmation](../standard-library/iostream-programming.md)\
+[iostreams, conventions](../standard-library/iostreams-conventions.md)

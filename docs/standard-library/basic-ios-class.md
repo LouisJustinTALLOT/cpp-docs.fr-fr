@@ -55,16 +55,16 @@ helpviewer_keywords:
 - std::basic_ios [C++], tie
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
-ms.openlocfilehash: c22e048d01665deed83a9474525f414dfd874fe0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2341dcc0f2f03fbfa212d1ea49993016e193638
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400654"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460104"
 ---
 # <a name="basicios-class"></a>basic_ios, classe
 
-La classe de modèle décrit les fonctions membres et de stockage communes aux flux d’entrée (de classe de modèle [basic_istream](../standard-library/basic-istream-class.md)) et de sortie (de classe de modèle [basic_ostream](../standard-library/basic-ostream-class.md)) qui dépendent des paramètres de modèle. (La classe [ios_base](../standard-library/ios-base-class.md) décrit ce qui est commun et non dépendant des paramètres de modèle.) Un objet de classe **basic_ios\<class Elem, class Traits >** permet de contrôler un flux avec des éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Traits`.
+La classe de modèle décrit les fonctions membres et de stockage communes aux flux d’entrée (de classe de modèle [basic_istream](../standard-library/basic-istream-class.md)) et de sortie (de classe de modèle [basic_ostream](../standard-library/basic-ostream-class.md)) qui dépendent des paramètres de modèle. (La classe [ios_base](../standard-library/ios-base-class.md) décrit ce qui est commun et non dépendant des paramètres de modèle.) Objet de classe **basic_ios\<classe elem, les caractéristiques de classe >** permettent de contrôler un flux avec des éléments `Elem`de type, dont les caractéristiques sont déterminées `Traits`par la classe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,19 +76,19 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>Paramètres
 
-*Elem*<br/>
+*Elem*\
 Type.
 
-*Caractéristiques*<br/>
+*Caractéristiques*\
 Variable de type `char_traits`.
 
 ## <a name="remarks"></a>Notes
 
 Un objet de classe **basic_ios\<class Elem, class Traits>** stocke :
 
-- Un pointeur de lien vers un objet de type [basic_istream](../standard-library/basic-istream-class.md)**\<Elem, Traits>**.
+- Un pointeur de lien vers un objet de type [basic_istream](../standard-library/basic-istream-class.md) **\<Elem, Traits>** .
 
-- Un pointeur de mémoire tampon de flux vers un objet de type [basic_streambuf](../standard-library/basic-streambuf-class.md)**\<Elem, Traits>**.
+- Un pointeur de mémoire tampon de flux vers un objet de type [basic_streambuf](../standard-library/basic-streambuf-class.md) **\<Elem, Traits>** .
 
 - Des [informations sur la mise en forme](../standard-library/ios-base-class.md).
 
@@ -140,7 +140,7 @@ Un objet de classe **basic_ios\<class Elem, class Traits>** stocke :
 
 |Opérateur|Description|
 |-|-|
-|[opérateur explicite bool](#op_bool)|Autorise l’utilisation d’un `basic_ios` de l’objet comme un **bool**. La conversion de type automatique est désactivée pour éviter des effets secondaires involontaires courants.|
+|[opérateur explicite bool](#op_bool)|Autorise l’utilisation d' `basic_ios` un objet en tant que **bool**. La conversion de type automatique est désactivée pour éviter des effets secondaires involontaires courants.|
 |[opérateur void *](#op_void_star)|Indique si le flux est toujours en bon état.|
 |[operator!](#op_not)|Indique si le flux n'est pas en mauvais état.|
 
@@ -160,11 +160,11 @@ bool bad() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si `rdstate & badbit` est différente de zéro ; sinon **false**.
+**true** si `rdstate & badbit` est différent de zéro; sinon, false.
 
 Pour plus d’informations sur `badbit`, consultez [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // basic_ios_bad.cpp
@@ -194,7 +194,7 @@ basic_ios();
 
 ### <a name="parameters"></a>Paramètres
 
-*sb*<br/>
+*aspirateur*\
 Mémoire tampon standard pour stocker les éléments d’entrée ou de sortie.
 
 ### <a name="remarks"></a>Notes
@@ -220,25 +220,25 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>Paramètres
 
-*state*<br/>
-(Facultatif) Les indicateurs à définir après l’effacement de tous les indicateurs. La valeur par défaut est `goodbit`.
+*Département*\
+Facultatif Indicateurs à définir après l’effacement de tous les indicateurs. La valeur par défaut est `goodbit`.
 
-*reraise*<br/>
-(Facultatif) Spécifie si l’exception doit être levée de nouveau. Valeur par défaut est **false** (ne sera pas levée de nouveau l’exception).
+*reraise*\
+Facultatif Spécifie si l’exception doit être levée à nouveau. La valeur par  défaut est false (ne déclenche pas à nouveau l’exception).
 
 ### <a name="remarks"></a>Notes
 
-Les indicateurs sont `goodbit`, `failbit`, `eofbit`, et `badbit`. Testez ces indicateurs avec [good](#good), [bad](#bad), [eof](#eof) et [fail](#fail)
+Les indicateurs sont `goodbit` `failbit` ,`eofbit`, et `badbit`. Testez ces indicateurs avec [good](#good), [bad](#bad), [eof](#eof) et [fail](#fail)
 
 La fonction membre remplace les informations d'état de flux stockées par :
 
 `state` &#124; `(`[rdbuf](#rdbuf) != 0 **goodbit** : **badbit**)
 
-Si `state`**&**[exceptions](#exceptions) est différent de zéro, un objet de la classe [failure](../standard-library/ios-base-class.md#failure) est levé.
+Si `state` **&** [exceptions](#exceptions) est différent de zéro, un objet de la classe [failure](../standard-library/ios-base-class.md#failure) est levé.
 
 ### <a name="example"></a>Exemple
 
-Consultez [rdstate](#rdstate) et [getline](../standard-library/string-functions.md#getline) pour obtenir des exemples à l’aide de `clear`.
+Pour obtenir des [](../standard-library/string-functions.md#getline) exemples d’utilisation `clear`de, consultez [rdstate](#rdstate) et getline.
 
 ## <a name="copyfmt"></a>  basic_ios::copyfmt
 
@@ -251,7 +251,7 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 Flux dont vous voulez copier les indicateurs.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -260,9 +260,9 @@ Objet **this** pour le flux dans lequel vous copiez les indicateurs.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre signale l’événement de rappel **effacer\_événement**. Elle copie ensuite *droit* dans  **\*cela** le caractère de remplissage, le pointeur de lien et les informations de mise en forme. Avant de modifier le masque d’exception, il signale l’événement de rappel `copyfmt_event`. Si, une fois que la copie est terminée, **state &**[exceptions](#exceptions) est différent de zéro, la fonction appelle [clear](#clear) avec l’argument [rdstate](#rdstate). Elle retourne ensuite **\*this**.
+La fonction membre signale l' **événement d'\_effacement**d’événement de rappel. Il copie ensuite de *droite* dans  **\*ce** caractère de remplissage, le pointeur de liaison et les informations de mise en forme. Avant de modifier le masque d’exception, il signale l' `copyfmt_event`événement de rappel. Si, une fois que la copie est terminée, **state &** [exceptions](#exceptions) est différent de zéro, la fonction appelle [clear](#clear) avec l’argument [rdstate](#rdstate). Elle retourne ensuite **\*this**.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // basic_ios_copyfmt.cpp
@@ -293,11 +293,11 @@ bool eof() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la fin du flux a été atteinte, **false** dans le cas contraire.
+**true** si la fin du flux a été atteinte; sinon  , false.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne **true** si [rdstate](#rdstate) `& eofbit` est différent de zéro. Pour plus d’informations sur `eofbit`, consultez [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
+La fonction membre retourne la **valeur true** si [rdstate](#rdstate) `& eofbit` est différent de zéro. Pour plus d’informations sur `eofbit`, consultez [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
 ### <a name="example"></a>Exemple
 
@@ -333,7 +333,7 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>Paramètres
 
-*Newexcept*<br/>
+*Newexcept*\
 Indicateurs pour lesquels vous voulez lever une exception.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -390,7 +390,7 @@ bool fail() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si [rdstate](#rdstate) `& (badbit|failbit)` est différent de zéro, sinon **false**.
+**true** si [rdstate](#rdstate) `& (badbit|failbit)` est différent de zéro; sinon, false.
 
 Pour plus d’informations sur `failbit`, consultez [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
@@ -421,7 +421,7 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>Paramètres
 
-*Char*<br/>
+*Char*\
 Caractère souhaité comme caractère de remplissage.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -430,9 +430,9 @@ Caractère de remplissage actuel.
 
 ### <a name="remarks"></a>Notes
 
-La première fonction membre retourne le caractère de remplissage stocké. La deuxième fonction membre stocke *Char* dans le caractère de remplissage et retourne sa précédente valeur stockée.
+La première fonction membre retourne le caractère de remplissage stocké. La deuxième fonction membre stocke *char* dans le caractère de remplissage et retourne sa valeur stockée précédente.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // basic_ios_fill.cpp
@@ -467,11 +467,11 @@ bool good() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si [rdstate](#rdstate) `== goodbit` (aucun indicateur d’état n’est définis), sinon, **false**.
+**true** si [rdstate](#rdstate) `== goodbit` (aucun indicateur d’État n’est défini); sinon, false.
 
 Pour plus d’informations sur `goodbit`, consultez [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [basic_ios::bad](#bad) pour obtenir un exemple d’utilisation de `good`.
 
@@ -485,7 +485,7 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Paramètres
 
-*Loc*<br/>
+*Loc*\
 Chaîne de paramètres régionaux.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -528,10 +528,10 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Sb*<br/>
+*_Sb*\
 Mémoire tampon standard pour stocker les éléments d’entrée ou de sortie.
 
-*_Isstd*<br/>
+*_Isstd*\
 Spécifie s’il s’agit d’un flux standard.
 
 ### <a name="remarks"></a>Notes
@@ -542,9 +542,9 @@ La fonction membre stocke les valeurs de tous les objets membres, afin que :
 
 - [tie](#tie) retourne un pointeur null.
 
-- [rdstate](#rdstate) retourne [goodbit](../standard-library/ios-base-class.md#iostate) si *_Sb* est différent de zéro ; sinon, elle retourne [badbit](../standard-library/ios-base-class.md#iostate).
+- [rdstate](#rdstate) retourne [goodbit](../standard-library/ios-base-class.md#iostate) si *_Sb* est différent de zéro; Sinon, elle retourne [badbit](../standard-library/ios-base-class.md#iostate).
 
-- [exceptions](#exceptions) retourne `goodbit`.
+- [](#exceptions) les exceptions `goodbit`sont retournées.
 
 - [flags](../standard-library/ios-base-class.md#flags) retourne [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [dec](../standard-library/ios-base-class.md#fmtflags).
 
@@ -576,12 +576,12 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 Objet `ios_base` à partir duquel déplacer les valeurs.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée déplace toutes les valeurs stockées dans *droit* à `*this` sauf stocké `stream buffer pointer`, ce qui n’est pas modifié dans *droit* et la valeur est un pointeur null dans `*this`. Stocké `tie pointer` est défini sur un pointeur null dans *droit*.
+La fonction membre protégée déplace toutes les valeurs stockées à *droite* vers `*this` , à l' `stream buffer pointer`exception de l’élément stocké, qui n’est pas modifié à *droite* et `*this`qui a la valeur d’un pointeur null dans. Le stocké `tie pointer` est défini sur un pointeur null à *droite*.
 
 ## <a name="narrow"></a>  basic_ios::narrow
 
@@ -593,19 +593,19 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Char*<br/>
-Le **char** à convertir.
+*Char*\
+**Caractère** à convertir.
 
-*Default*<br/>
-Le **char** à retourné si aucun équivalent n’est trouvé.
+*Default*\
+**Caractère** que vous souhaitez retourner si aucun équivalent n’est trouvé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’équivalent **char** à une donnée `char_type`.
+**Caractère** équivalent à un donné `char_type`.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne [use_facet](../standard-library/basic-filebuf-class.md#open)\<ctype\<E >> ( [getloc](../standard-library/ios-base-class.md#getloc)()).`narrow` ( `Char`, `Default`).
+La fonction membre retourne [use_facet](../standard-library/basic-filebuf-class.md#open)\<CType\<E > > ( [getloc](../standard-library/ios-base-class.md#getloc)()).`narrow` ( `Char`, `Default`).
 
 ### <a name="example"></a>Exemple
 
@@ -648,7 +648,7 @@ operator void *() const;
 
 L’opérateur retourne un pointeur null uniquement si [fail](#fail).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // basic_ios_opgood.cpp
@@ -698,7 +698,7 @@ int main( )
 
 ## <a name="op_bool"></a>  basic_ios::operator bool
 
-Autorise l’utilisation d’un `basic_ios` de l’objet comme un **bool**. La conversion de type automatique est désactivée pour éviter des effets secondaires involontaires courants.
+Autorise l’utilisation d' `basic_ios` un objet en tant que **bool**. La conversion de type automatique est désactivée pour éviter des effets secondaires involontaires courants.
 
 ```cpp
 explicit operator bool() const;
@@ -706,7 +706,7 @@ explicit operator bool() const;
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur retourne une valeur convertible en **false** uniquement si `fail()`. Le type de retour est convertible uniquement en **bool**et non en `void *` ou autre type scalaire connu.
+L’opérateur retourne une valeur convertible en **false** uniquement `fail()`si. Le type de retour est convertible uniquement en **bool**, pas `void *` en ou en un autre type scalaire connu.
 
 ## <a name="pos_type"></a>  basic_ios::pos_type
 
@@ -728,7 +728,7 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Sb*<br/>
+*_Sb*\
 Un flux.
 
 ### <a name="remarks"></a>Notes
@@ -737,7 +737,7 @@ La première fonction membre retourne le pointeur de mémoire tampon de flux sto
 
 La deuxième fonction membre stocke *_Sb* dans le pointeur de mémoire tampon de flux stocké et retourne la valeur précédemment stockée.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // basic_ios_rdbuf.cpp
@@ -820,14 +820,14 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Paramètres
 
-*_State*<br/>
+*_ State*\
 Indicateurs supplémentaires à définir.
 
 ### <a name="remarks"></a>Notes
 
 La fonction membre appelle [clear](#clear)(_ *State* &#124; [rdstate](#rdstate)).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // basic_ios_setstate.cpp
@@ -870,12 +870,12 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>Paramètres
 
-*strbuf*<br/>
+*strbuf*\
 Mémoire tampon de flux qui doit devenir la mémoire tampon de lecture.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée stocke *strbuf* dans le `stream buffer pointer`. Il n’appelle pas `clear`.
+La fonction membre protégée stocke *strbuf* dans `stream buffer pointer`le. Elle n’appelle `clear`pas.
 
 ## <a name="tie"></a>  basic_ios::tie
 
@@ -889,18 +889,18 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
+*Str*\
 Un flux.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La première fonction membre retourne le pointeur de lien stocké. La deuxième fonction membre stocke *str* dans le pointeur de lien et retourne sa précédente valeur stockée.
+La première fonction membre retourne le pointeur de lien stocké. La deuxième fonction membre stocke *Str* dans le pointeur de liaison et retourne sa valeur stockée précédente.
 
 ### <a name="remarks"></a>Notes
 
 `tie` entraîne la synchronisation de deux flux, de sorte que les opérations sur un flux se produisent après la fin des opérations sur l’autre flux.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Dans cet exemple, en liant cin à cout, vous garantissez que la chaîne « Entrer un nombre : » est transmise à la console avant que le nombre soit extrait de cin. De cette façon, vous évitez que la chaîne « Entrer un nombre : » reste dans la mémoire tampon pendant la lecture du nombre et vous êtes sûr que l’utilisateur est invité à répondre à des invites. Par défaut, cin et cout sont liés.
 
@@ -928,7 +928,7 @@ typedef Traits traits_type;
 
 ## <a name="widen"></a>  basic_ios::widen
 
-Recherche l’équivalent `char_type` à une donnée **char**.
+Recherche l’équivalent `char_type` d’un **caractère**donné.
 
 ```cpp
 char_type widen(char Char) const;
@@ -936,12 +936,12 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Char*<br/>
+*Char*\
 Caractère à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Recherche l’équivalent `char_type` à une donnée **char**.
+Recherche l’équivalent `char_type` d’un **caractère**donné.
 
 ### <a name="remarks"></a>Notes
 
@@ -977,15 +977,15 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*\
 Objet `basic_ios` utilisé pour échanger des valeurs.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée échange toutes les valeurs stockées dans *droit* avec `*this` sauf stocké `stream buffer pointer`.
+La fonction membre protégée échange toutes les valeurs stockées dans *Right* avec `*this` , à l' `stream buffer pointer`exception du stocké.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream, programmation](../standard-library/iostream-programming.md)<br/>
-[iostreams, conventions](../standard-library/iostreams-conventions.md)<br/>
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream, programmation](../standard-library/iostream-programming.md)\
+[iostreams, conventions](../standard-library/iostreams-conventions.md)
