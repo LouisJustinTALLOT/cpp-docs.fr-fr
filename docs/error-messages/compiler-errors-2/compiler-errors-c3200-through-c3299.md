@@ -57,7 +57,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3203](compiler-error-c3203.md)|«*identificateur*' : classe non spécialisée modèle/générique ne peut pas être utilisé comme un argument de modèle/générique pour le paramètre de modèle/générique '*paramètre*', type réel attendu|
 |[Erreur du compilateur C3204](compiler-error-c3204.md)|«*fonction*' ne peut pas être appelée à partir d’un bloc catch|
 |[Erreur du compilateur C3205](compiler-error-c3205.md)|liste d’arguments pour le paramètre de modèle '*identificateur*' est manquant|
-|[Erreur du compilateur C3206](compiler-error-c3206.md)|«*(fonction)*' : argument de modèle/générique non valide pour '*modèle*', liste d’arguments de modèle/générique manquante sur la classe modèle/générique '*type*»|
+|[Erreur du compilateur C3206](compiler-error-c3206.md)|« *(fonction)* ' : argument de modèle/générique non valide pour '*modèle*', liste d’arguments de modèle/générique manquante sur la classe modèle/générique '*type*»|
 |[Erreur du compilateur C3207](compiler-error-c3207.md)|«*fonction*' : argument template non valide pour '*paramètre*', modèle de classe attendu|
 |[Erreur du compilateur C3208](compiler-error-c3208.md)|«*fonction*' : liste de paramètres de modèle pour le modèle de classe '*modèle*'ne correspond pas à liste de paramètres de modèle pour le paramètre de modèle'*paramètre*»|
 |[Erreur du compilateur C3209](compiler-error-c3209.md)|«*type*' : classe générique doit être une classe gérée/WinRT|

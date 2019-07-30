@@ -157,7 +157,7 @@ Le `CLSID` d’une coclasse.
 Contexte d'exécution du code exécutable.
 
 *lpcStr*<br/>
-Une chaîne multioctet qui contient un `CLSID` (en commençant par «**{**») ou un `ProgID`.
+Une chaîne multioctet qui contient un `CLSID` (en commençant par " **{** ") ou un `ProgID`.
 
 *pOuter*<br/>
 Inconnu externe pour [agrégation](/windows/desktop/com/aggregation).

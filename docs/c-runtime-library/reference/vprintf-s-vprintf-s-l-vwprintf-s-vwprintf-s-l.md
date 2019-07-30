@@ -115,7 +115,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |**vprintf_s**, **_vprintf_s_l**|\<stdio.h> et \<stdarg.h>|\<varargs.h>*|
 |**vwprintf_s**, **_vwprintf_s_l**|\<stdio.h> ou \<wchar.h> et \<stdarg.h>|\<varargs.h>*|
 
-\** Nécessaire pour la compatibilité avec UNIX V.
+\* Nécessaire pour la compatibilité avec UNIX V.
 
 La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

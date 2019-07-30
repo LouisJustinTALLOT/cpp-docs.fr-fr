@@ -1,29 +1,29 @@
 ---
 title: if-else, instruction (C++)
-ms.date: 07/17/2017
+ms.date: 07/20/2019
+description: Utilisez les instructions if-else C++ dans pour contrôler la gestion des branches conditionnelles.
 f1_keywords:
 - else_cpp
 - if_cpp
 helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
-- if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: 16aa65ab64d9fd855ae3306da88f8eb14eec759c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183646"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661637"
 ---
 # <a name="if-else-statement-c"></a>if-else, instruction (C++)
 
-Contrôles création de branches conditionnelles. Les instructions dans le *bloc if* sont exécutés uniquement si la *-expression if* correspond à une valeur différente de zéro (ou la valeur TRUE). Si la valeur de *expression* est différent de zéro, *instruction1* et toutes les autres instructions dans le bloc sont exécutées et l’autre bloc, le cas échéant, est ignoré. Si la valeur de *expression* est égal à zéro, puis le bloc if est ignoré et l’autre bloc, le cas échéant, est exécuté. Sont des expressions qui correspondent à zéro
+Contrôle la branche conditionnelle. Les instructions du *bloc If* ne sont exécutées que si l' *expression if-expression* prend la valeur d’une valeur différente de zéro (ou true). Si la valeur de l' *expression* est différente de zéro, *instruction1* et toutes les autres instructions du bloc sont exécutées et le bloc Else, s’il est présent, est ignoré. Si la valeur de l' *expression* est égale à zéro, le bloc If est ignoré et le bloc Else, s’il est présent, est exécuté. Les expressions qui sont évaluées à une valeur différente de zéro sont
 
 - TRUE
-- un pointeur non null,
-- toute valeur arithmétique non nulle, ou
-- type d’un type de classe qui définit une conversion non ambiguë arithmétique, valeur booléenne ou pointeur. (Pour plus d’informations sur les conversions, consultez [Conversions Standard](../cpp/standard-conversions.md).)
+- pointeur non null,
+- toute valeur arithmétique différente de zéro, ou
+- type de classe qui définit une conversion non ambiguë en type arithmétique, booléen ou pointeur. (Pour plus d’informations sur les conversions, consultez Conversions [standard](../cpp/standard-conversions.md).)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,7 +39,7 @@ else  // optional
    ...
 }
 
-// Visual Studio 2017 version 15.3 and later:
+// C++17 - Visual Studio 2017 version 15.3 and later:
 if ( initialization; expression )
 {
    statement1;
@@ -51,7 +51,7 @@ else  // optional
    ...
 }
 
-// Visual Studio 2017 version 15.3 and later:
+// C++17 - Visual Studio 2017 version 15.3 and later:
 if constexpr (expression)
 {
     statement1;
@@ -64,7 +64,7 @@ else  // optional
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // if_else_statement.cpp
@@ -111,9 +111,9 @@ int main()
 }
 ```
 
-## <a name="if_with_init"></a> Si l’instruction avec un initialiseur
+## <a name="if_with_init"></a>instruction if avec un initialiseur
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Un **si** instruction peut également contenir une expression qui déclare et initialise une variable nommée. Utilisez cette forme de l’instruction if lorsque la variable est nécessaire uniquement dans la portée du bloc-if.
+**Visual Studio 2017 version 15,3 et versions ultérieures** (disponible avec [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Une instruction **If** peut également contenir une expression qui déclare et Initialise une variable nommée. Utilisez cette forme de l’instruction if si la variable est uniquement requise dans la portée du bloc If.
 
 ## <a name="example"></a>Exemple
 
@@ -159,13 +159,13 @@ int main()
 }
 ```
 
-Dans toutes les formes de la **si** instruction, *expression*, qui peut avoir n’importe quelle valeur sauf une structure, est évaluée, y compris tous les effets. Le contrôle passe à partir de la **si** instruction à l’instruction suivante dans le programme, sauf si un de la *instruction*s contient un [saut](../cpp/break-statement-cpp.md), [continuer](../cpp/continue-statement-cpp.md), ou [goto](../cpp/goto-statement-cpp.md).
+Dans toutes les formes de l’instruction **If** , *expression*, qui peut avoir n’importe quelle valeur à l’exception d’une structure, est évaluée, y compris tous les effets secondaires. Le contrôle passe de l’instruction **If** à l’instruction suivante dans le programme, sauf si l’une des *instructions*contient une instruction [break](../cpp/break-statement-cpp.md), [continue](../cpp/continue-statement-cpp.md)ou [goto](../cpp/goto-statement-cpp.md).
 
-Le **else** clause d’une `if...else` instruction est associée à la plus proche précédente **si** instruction dans la même étendue qui n’a pas un correspondant **else** instruction.
+La clause **else** d’une `if...else` instruction est associée à l’instruction **If** précédente la plus proche dans la même portée qui n’a pas d’instruction **else** correspondante.
 
-## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Si les instructions de constexpr
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr">Si les instructions constexpr
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Dans les modèles de fonction, vous pouvez utiliser un **si constexpr** instruction pour prendre des décisions de branches de compilation sans avoir recours à plusieurs surcharges de fonction. Par exemple, vous pouvez écrire une fonction unique ce paramètre de handles décompression (aucune surcharge de paramètre de zéro n’est nécessaire) :
+**Visual Studio 2017 version 15,3 et versions ultérieures** (disponible avec [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Dans les modèles de fonction, vous pouvez utiliser une instruction **If constexpr** pour prendre des décisions de création de branche au moment de la compilation sans avoir à recourir à plusieurs surcharges de fonction. Par exemple, vous pouvez écrire une seule fonction qui gère la décompression des paramètres (aucune surcharge de paramètre zéro n’est nécessaire):
 
 ```cpp
 template <class T, class... Rest>
