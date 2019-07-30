@@ -1507,7 +1507,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 [in] Un rectangle qui spécifie les limites des boutons de zoom sur le curseur de ruban.
 
 *bIsZoomOut*<br/>
-[in] TRUE si le framework doit dessiner le bouton gauche avec un « **-**» pour zoom out, ou FALSE si le framework doit être dessiné avec le bouton droit d’un « **+**» pour zoom dans.
+[in] TRUE si le framework doit dessiner le bouton gauche avec un « **-** » pour zoom out, ou FALSE si le framework doit être dessiné avec le bouton droit d’un « **+** » pour zoom dans.
 
 *bIsHighlighted*<br/>
 [in] Un paramètre booléen qui indique si le bouton est mis en surbrillance.

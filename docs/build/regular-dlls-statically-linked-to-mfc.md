@@ -36,7 +36,7 @@ Une DLL MFC normale, liées de manière statique aux MFC, présente les exigence
 
 - Ce type de DLL utilise le `DllMain` fournies par MFC. Placez tout le code d’initialisation des DLL dans le `InitInstance` code de fonction et d’arrêt de membre dans `ExitInstance` comme dans une application MFC normale.
 
-- Même si le terme USRDLL est obsolète, vous devez toujours définir «**_USRDLL**» sur la ligne de commande du compilateur. Cette définition détermine les déclarations qui sont extraites les fichiers d’en-tête MFC.
+- Même si le terme USRDLL est obsolète, vous devez toujours définir « **_USRDLL**» sur la ligne de commande du compilateur. Cette définition détermine les déclarations qui sont extraites les fichiers d’en-tête MFC.
 
 DLL MFC normales doit avoir un `CWinApp`-dérivée de classe et un seul objet de cette classe d’application, comme une application MFC. Toutefois, le `CWinApp` objet de la DLL n’a pas de pompe de messages principale, comme le fait le `CWinApp` objet d’une application.
 

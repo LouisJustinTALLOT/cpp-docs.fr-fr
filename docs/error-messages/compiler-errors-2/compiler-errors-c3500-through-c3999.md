@@ -322,7 +322,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3556](compiler-error-c3556.md)|«*expression*' : argument incorrect de 'decltype'|
 |Erreur du compilateur C3557|Obsolète.|
 |Erreur du compilateur C3558|Obsolète.|
-|Erreur du compilateur C3559|appel récursif de «*(fonction)*' : la récursivité est détectée lors de la compilation du graphique des appels pour Concurrency::parallel_for_each à l’emplacement : '*fonction*'|
+|Erreur du compilateur C3559|appel récursif de « *(fonction)* ' : la récursivité est détectée lors de la compilation du graphique des appels pour Concurrency::parallel_for_each à l’emplacement : '*fonction*'|
 |Erreur du compilateur C3560|«*fonction*» : IL n’est pas disponible lors de la compilation du graphique des appels pour Concurrency::parallel_for_each à l’emplacement : '*fonction*'|
 |Erreur du compilateur C3561|vignette d’opération de cloisonnement trouvée dans le flux de contrôle qui n’est pas uniforme de la vignette lors de la compilation du graphique des appels pour Concurrency::parallel_for_each à l’emplacement : '*fonction*'|
 |Erreur du compilateur C3562|fonction intrinsèque '*fonction*' est limité à n’ont pas plus de *nombre* paramètres|
@@ -363,7 +363,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur du compilateur C3597|«*paramètre*' : '*identificateur*' ne peut pas être capturées par valeur si l’expression lambda est restreinte à amp|
 |Erreur du compilateur C3598|instruction d’étiquette non pris en charge dans le code restreint amp|
 |Erreur du compilateur C3599|«*opérateur*' : Impossible d’effectuer des opérations arithmétiques de pointeur sur pointeur vers booléen dans le code restreint amp|
-|Erreur du compilateur C3600|'*(fonction)*' : utiliser de vignette\_mémoire statique détectée lors de la compilation du graphique des appels pour le concurrency::parallel non en mosaïque\_for_each à : '*fonction*'|
+|Erreur du compilateur C3600|' *(fonction)* ' : utiliser de vignette\_mémoire statique détectée lors de la compilation du graphique des appels pour le concurrency::parallel non en mosaïque\_for_each à : '*fonction*'|
 |Erreur du compilateur C3601|«*type*' : est de type d’argument non valide pour la fonction de diagnostic amp '*fonction*»|
 |Erreur du compilateur C3602|Non pris en charge des flux de contrôle détecté lors de la compilation du graphique des appels pour Concurrency::parallel_for_each à l’emplacement : '*fonction*'|
 |[Erreur du compilateur C3603](compiler-error-c3603.md)|«*symbole*' : type '*type*' ne sont pas encore pris en charge.|

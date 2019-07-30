@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: cf6c1267b1dea86c2cad62708192a4c0a1970ed8
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313394"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661539"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt;, fonctions
 
@@ -362,13 +362,13 @@ Condition à vérifier. Il s’agit d’un objet de fonction de prédicat défin
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la **valeur true** si la condition est détectée à chaque élément de la plage indiquée ou si la plage est  vide, et false dans le cas contraire.
+Retourne la **valeur true** si la condition est détectée à chaque élément de la plage indiquée ou si la plage est vide, et false dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
 La fonction de modèle retourne **true** uniquement si, pour `N` chaque de la `[0, last - first)`plage, le prédicat `pred(*(first + N))` a la **valeur true**.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_all_of.cpp
@@ -438,7 +438,7 @@ Condition à vérifier. Cette condition est fournie par un objet de fonction de 
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la **valeur true** si la condition est détectée au moins une fois dans  la plage indiquée, false si la condition n’est jamais détectée.
+Retourne la **valeur true** si la condition est détectée au moins une fois dans la plage indiquée, false si la condition n’est jamais détectée.
 
 ### <a name="remarks"></a>Notes
 
@@ -446,7 +446,7 @@ La fonction de modèle retourne **true** uniquement si, pour `N` une partie de l
 
 `[0, last - first)`, le prédicat `pred(*(first + N))` a la valeur true.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_any_of.cpp
@@ -529,7 +529,7 @@ Les types valeur des itérateurs vers l’avant doivent être comparables en ter
 
 La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec le nombre d'`last`étapes proportionnelles à ( - `first`).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_bin_srch.cpp
@@ -609,6 +609,14 @@ int main()
         cout << "There is not an element with a value equivalent to -3 "
         << "under mod_lesser." << endl;
 }
+```
+
+```Output
+List1 = ( 5 10 20 25 30 50 )
+There is an element in list List1 with a value equal to 10.
+There is an element in list List1 with a value greater than 10 under greater than.
+Ordered using mod_lesser, vector v1 = ( 0 -1 1 -2 2 3 4 )
+There is an element with a value equivalent to -3 under mod_lesser.
 ```
 
 ## <a name="clamp"></a>bride
@@ -794,7 +802,7 @@ Les algorithmes `copy_backward` et [move_backward](../standard-library/algorithm
 
 L'algorithme `copy_backward` modifie uniquement les valeurs sur lesquelles pointent les itérateurs, assignant de nouvelles valeurs aux éléments dans la plage de destination. Il ne peut pas être utilisé pour créer de nouveaux éléments et ne peut pas insérer directement d'éléments dans un conteneur vide.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_copy_bkwd.cpp
@@ -843,6 +851,13 @@ int main() {
         cout << *Iter2 << " ";
     cout << ")" << endl;
 }
+```
+
+```Output
+v1 = ( 0 10 20 30 40 50 )
+v2 = ( 0 3 6 9 12 15 18 21 24 27 30 )
+v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
+v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
 ```
 
 ## <a name="copy_if"></a>copy_if
@@ -895,6 +910,61 @@ La fonction de modèle évalue
 
 une fois pour chaque `N` de la plage `[0, last - first)`, pour les valeurs strictement croissantes de `N` en commençant par la valeur la plus petite. Si *dest* et désignent d' *abord* les régions de stockage, la *destination* ne `[ first, last )`doit pas être comprise dans la plage.
 
+### <a name="example"></a>Exemple
+
+```cpp
+// alg_copy_if.cpp
+// compile with: /EHsc
+#include <list>
+#include <algorithm>
+#include <iostream>
+
+void listlist(std::list<int> l)
+{
+    std::cout << "( ";
+    for (auto const& el : l)
+        std::cout << el << " ";
+    std::cout << ")" << std::endl;
+}
+
+int main()
+{
+    using namespace std;
+    list<int> li{ 46, 59, 88, 72, 79, 71, 60, 5, 40, 84 };
+    list<int> le(li.size()); // le = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    list<int> lo(li.size()); // lo = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+    cout << "li = ";
+    listlist(li);
+
+    // is_even checks if the element is even.
+    auto is_even = [](int const elem) { return !(elem % 2); };
+    // use copy_if to select only even elements from li 
+    // and copy them to le, starting from le's begin position
+    auto ec = copy_if(li.begin(),li.end(), le.begin(), is_even);
+    le.resize(std::distance(le.begin(), ec));  // shrink le to new size
+
+    cout << "Even numbers are le = ";
+    listlist(le);
+
+    // is_odd checks if the element is odd.
+    auto is_odd = [](int const elem) { return (elem % 2); };
+    // use copy_if to select only odd elements from li
+    // and copy them to lo, starting from lo's begin position
+    auto oc = copy_if(li.begin(), li.end(), lo.begin(), is_odd);
+    lo.resize(std::distance(lo.begin(), oc));  // shrink lo to new size
+
+    cout << "Odd numbers are lo = ";
+    listlist(lo);
+}
+```
+
+```Output
+li = ( 46 59 88 72 79 71 60 5 40 84 )
+Even numbers are le = ( 46 88 72 60 40 84 )
+Odd numbers are lo = ( 59 79 71 5 )
+```
+
 ## <a name="copy_n"></a>copy_n
 
 Copie un nombre spécifié d'éléments.
@@ -936,7 +1006,7 @@ Retourne un itérateur de sortie indiquant où les éléments ont été copiés.
 
 La fonction `*(dest + N) = *(first + N))` de modèle évalue une fois pour chaque `N` dans `[0, count)`la plage, pour les valeurs `N` strictement croissantes de à partir de la valeur la plus faible. Elle retourne ensuite `dest + N`. Si *dest* et désignent d' *abord* les régions de stockage, la *destination* ne `[first, last)`doit pas être comprise dans la plage.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_copy_n.cpp
@@ -1229,7 +1299,7 @@ Objet de fonction de prédicat défini par l'utilisateur qui définit la conditi
 
 La plage dans laquelle s'effectue la recherche doit être valide. Tous les itérateurs doivent pouvoir être déréférencés. Par ailleurs, la dernière position est accessible depuis la première par incrémentation.
 
-Si les deux plages sont de longueur égale, la complexité temporelle de l'algorithme est linéaire quant au nombre d'éléments contenus dans la plage. Dans le cas contraire, la fonction retourne immédiatement false.
+Si les deux plages sont de longueur égale, la complexité temporelle de l'algorithme est linéaire quant au nombre d'éléments contenus dans la plage. Dans le cas contraire,la fonction retourne immédiatement false.
 
 Ni le `operator==`, ni le prédicat défini par l'utilisateur ne doit obligatoirement imposer une relation d'équivalence qui est symétrique, réflexive et transitive entre ses opérandes.
 
@@ -1297,7 +1367,7 @@ Itérateur vers l'avant ciblant la position juste après le dernier élément de
 Valeur recherchée dans la plage ordonnée.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque  la valeur est satisfaite et false lorsqu’elle n’est pas satisfaite.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et false lorsqu’elle n’est pas satisfaite.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1874,7 +1944,7 @@ Itérateur vers l’avant qui traite la position du premier élément de la prem
 
 Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_find_first_of.cpp
@@ -2000,7 +2070,7 @@ Itérateur d'entrée qui traite la position du premier élément de la plage à 
 Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage à rechercher.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait  ou false s’il n’est pas respecté. La signature de *prédit* doit être `bool pred(const T& arg);`effectivement, où `T` est un type dans lequel `InputIterator` peut être converti implicitement lorsqu’il est déréférencé. Le  mot clé const s’affiche uniquement pour illustrer que l’objet de fonction ou l’expression lambda ne doit pas modifier l’argument.
+Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait ou false s’il n’est pas respecté. La signature de *prédit* doit être `bool pred(const T& arg);`effectivement, où `T` est un type dans lequel `InputIterator` peut être converti implicitement lorsqu’il est déréférencé. Le mot clé const s’affiche uniquement pour illustrer que l’objet de fonction ou l’expression lambda ne doit pas modifier l’argument.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2122,7 +2192,7 @@ Itérateur d'entrée qui traite la position du premier élément de la plage à 
 Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage à rechercher.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à ne pas satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait  ou false s’il n’est pas respecté. La signature de *prédit* doit être `bool pred(const T& arg);`effectivement, où `T` est un type dans lequel `InputIterator` peut être converti implicitement lorsqu’il est déréférencé. Le  mot clé const s’affiche uniquement pour illustrer que l’objet de fonction ou l’expression lambda ne doit pas modifier l’argument.
+Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à ne pas satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait ou false s’il n’est pas respecté. La signature de *prédit* doit être `bool pred(const T& arg);`effectivement, où `T` est un type dans lequel `InputIterator` peut être converti implicitement lorsqu’il est déréférencé. Le mot clé const s’affiche uniquement pour illustrer que l’objet de fonction ou l’expression lambda ne doit pas modifier l’argument.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2528,7 +2598,7 @@ Itérateur d’entrée ciblant la position du premier élément de la deuxième 
 Itérateur d’entrée ciblant la position juste après le dernier élément de la deuxième de deux plages sources triées consécutives à vérifier pour déterminer si tous les éléments de la deuxième sont contenus dans la première.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque  la valeur est satisfaite et false lorsqu’elle n’est pas satisfaite.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et false lorsqu’elle n’est pas satisfaite.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2913,7 +2983,7 @@ Condition à vérifier pour ordonner des éléments. Un prédicat de comparaison
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la **valeur true** si les éléments de la plage spécifiée forment un  tas, false dans le cas contraire.
+Retourne la **valeur true** si les éléments de la plage spécifiée forment un tas, false dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
@@ -3082,7 +3152,7 @@ La première fonction de modèle part du principe qu’il existe autant d’él�
 
 Les deuxième et quatrième fonctions avec modèle ont le même comportement, hormis le fait qu'elles remplacent `operator==(X, Y)` par `Pred(X, Y)`. Pour se comporter correctement, le prédicat doit être symétrique, réflexif et transitif.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 L'exemple suivant montre comment utiliser `is_permutation` :
 
@@ -3192,7 +3262,7 @@ La deuxième fonction de modèle `is_sorted_until( first, last , pred ) == last`
 
 Retourne un `ForwardIterator` défini sur le dernier élément qui se trouve dans l’ordre trié d’une plage spécifiée.
 
-La deuxième version vous permet de fournir un objet de fonction de comparaison qui retourne la **valeur true** lorsque deux éléments donnés sont  triés, et false dans le cas contraire.
+La deuxième version vous permet de fournir un objet de fonction de comparaison qui retourne la **valeur true** lorsque deux éléments donnés sont triés, et false dans le cas contraire.
 
 ```cpp
 template<class ForwardIterator>
@@ -3267,7 +3337,7 @@ Le deuxième des itérateurs vers l’avant dont la valeur est à échanger.
 
 Les types valeur des itérateurs vers l’avant/d’entrée doivent avoir la même valeur.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_iter_swap.cpp
@@ -3456,7 +3526,7 @@ Itérateur d’entrée ciblant la position du premier élément de la deuxième 
 Itérateur d’entrée ciblant la position juste après le dernier élément de la deuxième plage à comparer.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque  la valeur est satisfaite et false lorsqu’elle n’est pas satisfaite.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et false lorsqu’elle n’est pas satisfaite.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -3470,7 +3540,7 @@ Une comparaison lexicographique entre séquences les compare élément par élé
 
 - Aucune inégalité n’est trouvée, mais une séquence a plus d’éléments que l’autre et la séquence la plus courte est considérée comme inférieure à la séquence la plus longue.
 
-- Aucune inégalité n’est trouvée et les séquences ont le même nombre d’éléments. par conséquent, les séquences sont égales et le résultat de la comparaison est false.
+- Aucune inégalité n’est trouvée et les séquences ont le même nombre d’éléments. par conséquent, les séquences sont égales et le résultat dela comparaison est false.
 
 ### <a name="example"></a>Exemple
 
@@ -3616,7 +3686,7 @@ Les types valeur des itérateurs vers l’avant doivent être comparables en ter
 
 La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec le nombre d'`last - first`étapes proportionnelles à ().
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_lower_bound.cpp
@@ -3746,7 +3816,7 @@ Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires
 
 La complexité est linéaire, ce `3 * (last - first)` qui nécessite des comparaisons.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_make_heap.cpp
@@ -3833,7 +3903,7 @@ Le plus grand des deux objets, sauf si aucun n'est plus grand que l'autre ; dan
 
 L'algorithme `max` est inhabituel, dans la mesure où les objets sont passés comme paramètres. La plupart des algorithmes de la bibliothèque C++ Standard opèrent sur une plage d’éléments dont la position est spécifiée par des itérateurs passés comme paramètres. Si vous avez besoin d’une fonction qui opère sur une plage d’éléments, utilisez plutôt [max_element](../standard-library/algorithm-functions.md#max_element). Visual Studio 2017 active **constexpr** sur les surcharges qui prennent un initializer_list.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_max.cpp
@@ -4218,7 +4288,7 @@ Itérateur d’entrée ciblant la position située de suite après le dernier é
 Itérateur de sortie ciblant la position du premier élément de la plage de destination quand les deux plages sources doivent être regroupées au sein d’une même plage triée.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **true** lorsque le premier élément est inférieur au second, et false  dans le cas contraire.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **true** lorsque le premier élément est inférieur au second, et false dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -4240,7 +4310,7 @@ La complexité de l’algorithme est linéaire avec au `(last1 - first1) - (last
 
 La [classe list](../standard-library/list-class.md) fournit une fonction membre « merge » pour fusionner les éléments de deux listes.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_merge.cpp
@@ -4398,7 +4468,7 @@ Le plus petit des deux objets, sauf si aucun n’est plus petit que l’autre ;
 
 L'algorithme `min` est inhabituel, dans la mesure où les objets sont passés comme paramètres. La plupart des algorithmes de la bibliothèque C++ Standard opèrent sur une plage d’éléments dont la position est spécifiée par des itérateurs passés comme paramètres. Si vous avez besoin d’une fonction qui utilise une plage d’éléments, utilisez [min_element](../standard-library/algorithm-functions.md#min_element). [constexpr](../cpp/constexpr-cpp.md) a été activé sur `initializer_list` les surcharges dans Visual Studio 2017.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_min.cpp
@@ -4607,7 +4677,7 @@ Itérateur vers l’avant ciblant la position du premier élément de la plage d
 Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage dans laquelle rechercher l’élément le plus petit.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **true** lorsque le premier élément est inférieur au second, et false  dans le cas contraire.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **true** lorsque le premier élément est inférieur au second, et false dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -5150,7 +5220,7 @@ Le prédicat binaire par défaut est inférieur à et les éléments de la plage
 
 La complexité est linéaire avec au maximum `(last - first) / 2` permutations.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_next_perm.cpp
@@ -5338,7 +5408,7 @@ Itérateur d’accès aléatoire ciblant la position de l’élément à ordonne
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à partitionner.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque  la valeur est satisfaite et false lorsqu’elle n’est pas satisfaite.
+Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et false lorsqu’elle n’est pas satisfaite.
 
 ### <a name="remarks"></a>Notes
 
@@ -5451,7 +5521,7 @@ Condition à vérifier. Cette condition est fournie par un objet de fonction de 
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la **valeur true** si la condition n’est pas détectée au moins une fois dans  la plage indiquée, et false si la condition est détectée.
+Retourne la **valeur true** si la condition n’est pas détectée au moins une fois dans la plage indiquée, et false si la condition est détectée.
 
 ### <a name="remarks"></a>Notes
 
@@ -5656,7 +5726,7 @@ Les plages source et de destination ne doivent pas se chevaucher et doivent êtr
 
 Le prédicat binaire doit fournir un ordre faible strict pour que les éléments qui ne sont pas équivalents soient ordonnés, mais que ceux qui sont équivalents ne le soient pas. Deux éléments sont équivalents sous le prédicat Inférieur à, mais pas nécessairement égaux si aucun n’est inférieur à l’autre.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_partial_sort_copy.cpp
@@ -5773,9 +5843,9 @@ Itérateur bidirectionnel ciblant la position du premier élément de la plage q
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.
 
-Les éléments *a* et *b* sont équivalents, mais pas nécessairement égaux `pred( a, b )` , si a la valeur false et  `pred( b, a )` a la valeur false, où prédit est le prédicat spécifié par le paramètre. L' `partition` algorithme n’est pas stable et ne garantit pas que l’ordre relatif des éléments équivalents sera préservé. L’algorithme `stable_partition` conserve cet ordre d’origine.
+Les éléments *a* et *b* sont équivalents, mais pas nécessairement égaux `pred( a, b )` , si a la valeur false et `pred( b, a )` a la valeur false, où prédit est le prédicat spécifié par le paramètre. L' `partition` algorithme n’est pas stable et ne garantit pas que l’ordre relatif des éléments équivalents sera préservé. L’algorithme `stable_partition` conserve cet ordre d’origine.
 
-La complexité est linéaire: il existe `(last - first)` des applications  qui sont prédites `(last - first)/2` et au maximum.
+La complexité est linéaire: il existe `(last - first)` des applications qui sont prédites `(last - first)/2` et au maximum.
 
 ### <a name="example"></a>Exemple
 
@@ -5820,7 +5890,7 @@ int main()
 
 ## <a name="partition_copy"></a>partition_copy
 
-Copie les éléments pour lesquels une condition a la **valeur true** pour une destination, et pour laquelle  la condition est false à une autre. Les éléments doivent provenir d'une plage spécifiée.
+Copie les éléments pour lesquels une condition a la **valeur true** pour une destination, et pour laquelle la condition est false à une autre. Les éléments doivent provenir d'une plage spécifiée.
 
 ```cpp
 template<class InputIterator, class OutputIterator1, class OutputIterator2, class UnaryPredicate>
@@ -5942,7 +6012,7 @@ La plage qui exclut l’élément qui vient d’être ajouté à la fin doit êt
 
 La complexité est logarithmique et nécessite au maximum `log (last - first)` les comparaisons.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_pop_heap.cpp
@@ -6035,7 +6105,7 @@ Objet de fonction de prédicat défini par l’utilisateur qui définit le crit�
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le vue lexicographique de permutation précédent existe et a remplacé le classement d’origine de la plage; sinon , false, auquel cas le classement est transformé en permutation vue lexicographique la plus grande.
+**true** si le vue lexicographique de permutation précédent existe et a remplacé le classement d’origine de la plage; sinon, false, auquel cas le classement est transformé en permutation vue lexicographique la plus grande.
 
 ### <a name="remarks"></a>Notes
 
@@ -6226,7 +6296,7 @@ La plage qui exclut l’élément qui vient d’être ajouté à la fin doit êt
 
 La complexité est logarithmique et nécessite au maximum `log(last - first)` les comparaisons.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_push_heap.cpp
@@ -6346,7 +6416,7 @@ La complexité est linéaire; Il existe (`last` - )descomparaisonsd’égalité`
 
 La [classe List](../standard-library/list-class.md) a une version de fonction membre plus efficace `remove`de, qui relient également les pointeurs.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_remove.cpp
@@ -6447,7 +6517,7 @@ L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit 
 
 La complexité est linéaire; Il existe (`last` - `first` - ) des comparaisons d’égalité et au maximum`last`() assignations.`first`
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_remove_copy.cpp
@@ -6547,7 +6617,7 @@ La complexité est linéaire: il y a`last`( -  - `first`) des comparaisons d’�
 
 Pour plus d’informations sur le comportement de ces fonctions, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_remove_copy_if.cpp
@@ -7316,7 +7386,7 @@ Les plages référencées doivent être valides ; tous les pointeurs doivent pou
 
 La complexité est linéaire avec au maximum (`last` - `first`) des permutations.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_rotate.cpp
@@ -7439,7 +7509,7 @@ Les plages référencées doivent être valides ; tous les pointeurs doivent pou
 
 La complexité est linéaire avec au maximum (`last` - `first`) des permutations.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_rotate_copy.cpp
@@ -7925,7 +7995,7 @@ Les types de valeur des itérateurs d’entrée doivent être comparables en ter
 
 La complexité de l’algorithme est linéaire avec au `2 * ((last1 - first1) - (last2 - first2)) - 1` maximum les comparaisons pour les plages sources non vides.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_set_diff.cpp
@@ -8127,7 +8197,7 @@ Les types de valeur des itérateurs d’entrée doivent être comparables en ter
 
 La complexité de l’algorithme est linéaire avec au `2 * ((last1 - first1) + (last2 - first2)) - 1` maximum les comparaisons pour les plages sources non vides.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_set_intersection.cpp
@@ -8527,7 +8597,7 @@ Les types de valeur des itérateurs d’entrée doivent être comparables en ter
 
 La complexité de l’algorithme est linéaire avec au `2 * ((last1 - first1) - (last2 - first2)) - 1` maximum comparaisons.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_set_union.cpp
@@ -8725,7 +8795,7 @@ Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’e
 
 La moyenne d’une complexité de tri `O( N log N )`est, où *N* = pour la*dernière* - *fois*.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_sort.cpp
@@ -8819,7 +8889,7 @@ Itérateur d’accès aléatoire ciblant la position du premier élément du tas
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément du tas cible.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque  la valeur est satisfaite et false lorsqu’elle n’est pas satisfaite.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et false lorsqu’elle n’est pas satisfaite.
 
 ### <a name="remarks"></a>Notes
 
@@ -8924,7 +8994,7 @@ Itérateur bidirectionnel ciblant la position du premier élément de la plage �
 Itérateur bidirectionnel ciblant la position juste après le dernier élément de la plage à partitionner.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être classé. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait  ou false s’il n’est pas respecté.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être classé. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait ou false s’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -8934,9 +9004,9 @@ Itérateur bidirectionnel ciblant la position du premier élément de la plage q
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.
 
-Les éléments *a* et *b* sont équivalents, mais pas nécessairement égaux `pred( a, b )` , si a la valeur false et  `pred( b, a )` a la valeur false, où prédit est le prédicat spécifié par le paramètre. L' `stable_partition` algorithme est stable et garantit que l’ordre relatif des éléments équivalents sera préservé. L’algorithme `partition` ne préserve pas nécessairement ce classement d’origine.
+Les éléments *a* et *b* sont équivalents, mais pas nécessairement égaux `pred( a, b )` , si a la valeur false et `pred( b, a )` a la valeur false, où prédit est le prédicat spécifié par le paramètre. L' `stable_partition` algorithme est stable et garantit que l’ordre relatif des éléments équivalents sera préservé. L’algorithme `partition` ne préserve pas nécessairement ce classement d’origine.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_stable_partition.cpp
@@ -9129,7 +9199,7 @@ Pour le premier remplacement, deuxième objet dont le contenu est échangé. Pou
 
 La première surcharge est conçue pour traiter des objets individuels. La deuxième surcharge échange le contenu des objets entre deux tableaux.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_swap.cpp
@@ -9762,7 +9832,7 @@ Position juste après le dernier élément de la plage dans laquelle effectuer l
 Valeur dans la plage ordonnée qui doit être dépassée par la valeur de l’élément ciblé par l’itérateur retourné.
 
 *prédit*\
-Objet de fonction de prédicat de comparaison défini par l’utilisateur qui définit le sens dans lequel un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque  la valeur est satisfaite et false lorsqu’elle n’est pas satisfaite.
+Objet de fonction de prédicat de comparaison défini par l’utilisateur qui définit le sens dans lequel un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et false lorsqu’elle n’est pas satisfaite.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -9780,7 +9850,7 @@ Les types valeur des itérateurs vers l’avant doivent être comparables en ter
 
 La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec le nombre d'`last - first`étapes proportionnelles à ().
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_upper_bound.cpp
