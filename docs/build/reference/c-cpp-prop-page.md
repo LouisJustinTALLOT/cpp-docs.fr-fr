@@ -3,18 +3,16 @@ title: C/C++ propriétés du projet (Visual Studio)
 ms.date: 7/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bf457366f1818593e937d4c9e95651f48db64528
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
-ms.translationtype: HT
+ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
+ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68342260"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537561"
 ---
 # <a name="cc-property-pages"></a>C/C++ pages de propriétés
 
-Les pages de propriétés suivantes se trouvent sous propriétés du **projet** >  > **Propriétés** > de configuration**C/C++** :
+Les pages de propriétés suivantes se trouvent sous propriétés du **projet** > **Propriétés** > **de configuration** > **C/C++** :
 
 ## <a name="cc-general-properties"></a>Propriétés CC++ /General
 
@@ -436,7 +434,7 @@ Sélectionnez la Convention d’appel par défaut pour votre application (peut �
 **Choix**
 
 - **_ _ cdecl** -spécifie la Convention d’appel _ C++ _ cdecl pour toutes les fonctions, sauf les fonctions membres et les fonctions marquées _ _ stdcall ou _ _ fastcall
-- **_ _ fastcall** : spécifie la Convention d’appel _ C++ _ fastcall pour toutes les fonctions, à l’exception des sfunctions membres et des fonctions marqués _ _ cdecl ou _ _ Toutes les fonctions _ _ fastcall doivent avoir des prototypes.
+- **_ _ fastcall** -spécifie la Convention d’appel _ C++ _ fastcall pour toutes les fonctions, sauf les fonctions membres et les fonctions marquées _ _ cdecl ou _ _ StdCall Toutes les fonctions _ _ fastcall doivent avoir des prototypes.
 - **_ _ stdcall** : spécifie la Convention d’appel _ C++ _ STDCALL pour toutes les fonctions, sauf les fonctions membres et les fonctions marquées _ _ cdecl ou _ _ fastcall Toutes les fonctions _ _ stdcall doivent avoir des prototypes.
 - **__vectorcall** : spécifie la Convention d’appel __vectorcall pour toutes C++ les fonctions, à l’exception des fonctions membres et des fonctions marquées _ _ cdecl, _ _ fastcall ou _ _ StdCall. Toutes les fonctions __vectorcall doivent avoir des prototypes.
 
