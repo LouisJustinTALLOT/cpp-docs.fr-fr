@@ -122,7 +122,7 @@ Si *format* est un pointeur null, ou si la chaîne de format contient des caract
 |**_vprintf_p**, **_vprintf_p_l**|\<stdio.h> et \<stdarg.h>|\<varargs.h>*|
 |**_vwprintf_p**, **_vwprintf_p_l**|\<stdio.h> ou \<wchar.h> et \<stdarg.h>|\<varargs.h>*|
 
-\** Nécessaire pour la compatibilité avec UNIX V.
+\* Nécessaire pour la compatibilité avec UNIX V.
 
 La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
