@@ -1,21 +1,21 @@
 ---
 title: Tri partiel des modèles de fonction (C++)
-ms.date: 11/04/2016
+ms.date: 07/30/2019
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-ms.openlocfilehash: 9a3dc687f197770f7a11440699163787b1dc48ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c4f11b4b3e02504c4786ea34441362b542959d6
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183366"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682426"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Tri partiel des modèles de fonction (C++)
 
 Plusieurs modèles de fonction qui correspondent à la liste d’arguments d’un appel de fonction peuvent être disponibles. C++ définit un classement partiel des modèles de fonction pour spécifier quelle fonction doit être appelée. Le classement est partiel car certains modèles peuvent être considérés comme également spécialisés.
 
-Le compilateur sélectionne la fonction de modèle la plus spécialisée disponible parmi les correspondances possibles. Par exemple, si un modèle de fonction prend un type __T__et un autre modèle de fonction prenant __T\*__  est disponible, le __T\*__  version est dite pour être plus spécialisée et sont préférée générique __T__ version chaque fois que l’argument est un type pointeur, même si les deux serait autorisées correspondances.
+Le compilateur sélectionne la fonction de modèle la plus spécialisée disponible parmi les correspondances possibles. Par exemple, si un modèle de fonction prend un `T` type et qu’un autre modèle `T*` de fonction qui prend `T*` est disponible, la version est dite plus spécialisée. Il est préférable d’utiliser la `T` version générique chaque fois que l’argument est un type pointeur, même si les deux sont des correspondances autorisées.
 
 Utilisez le processus suivant pour déterminer si un candidat de modèle de fonction est plus spécialisé :
 
@@ -27,28 +27,27 @@ Utilisez le processus suivant pour déterminer si un candidat de modèle de fonc
 
 1. Répétez le même processus en inversant T1 et T2.
 
-1. Si un modèle est une liste d’arguments template valide pour l’autre modèle, mais que l’inverse n’est pas vrai, ce modèle est considéré comme moins spécialisé que l’autre modèle. Si les deux modèles à l’aide des précédente étape formulaire les arguments valides pour eux, puis ils sont considérés comme également spécialisés et entraîne un appel ambigu lorsque vous tentez d’utiliser.
+1. Si un modèle est une liste d’arguments template valide pour l’autre modèle, mais que l’inverse n’est pas vrai, ce modèle est considéré comme moins spécialisé que l’autre modèle. Si, à l’aide de l’étape précédente, les deux modèles forment des arguments valides l’un pour l’autre, ils sont considérés comme étant également spécialisés et un appel ambigu se produit lorsque vous tentez de les utiliser.
 
 1. Grâce à ces règles :
 
    1. Une spécialisation de modèle pour un type spécifique est plus spécialisée qu'une spécialisation acceptant un argument de type générique.
 
-   1. Un modèle en prenant uniquement __T\*__  est plus spécialisé qu’un prenant uniquement __T__, car un hypothétique tapez __X\*__  est un argument valid pour un __T__ argument de modèle, mais __X__ n’est pas un argument valide pour un __T\*__  argument template.
+   1. Un modèle acceptant `T*` uniquement est plus spécialisé qu’un modèle `T`acceptant uniquement, car `X*` un type hypothétique est un argument `T` valide pour un argument `X` template, mais n’est pas un argument valide pour un `T*`argument template.
 
-   1. __const T__ est plus spécialisé que __T__, car __const X__ est un argument valid pour un __T__ argument de modèle, mais __X__ est argument non valide pour un __const T__ argument template.
+   1. `const T`est plus spécialisé que `T`, car `const X` est un argument valide pour un `T` argument de modèle, `X` mais n’est pas un argument valide `const T` pour un argument de modèle.
 
-   1. __const T\*__  est plus spécialisé que __T\*__, car __const X\*__  est un argument valid pour un __T\*__  argument de modèle, mais __X\*__  n’est pas un argument valide pour un __const T\*__  argument template.
+   1. `const T*`est plus spécialisé que `T*`, car `const X*` est un argument valide pour un `T*` argument de modèle, `X*` mais n’est pas un argument valide `const T*` pour un argument de modèle.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-L’exemple suivant fonctionne comme indiqué dans la norme :
+L’exemple suivant fonctionne comme indiqué dans la norme:
 
 ```cpp
 // partial_ordering_of_function_templates.cpp
 // compile with: /EHsc
 #include <iostream>
 
-extern "C" int printf(const char*,...);
 template <class T> void f(T) {
    printf_s("Less specialized function called\n");
 }
