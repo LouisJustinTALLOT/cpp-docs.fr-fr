@@ -12,12 +12,12 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-ms.openlocfilehash: 720817b34326d822ef797351655e4ace907e4baf
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: d90d07c8f3cce6c443be0eb994db494746c00fcc
+ms.sourcegitcommit: 40ffe764244784c715b086c79626ac390b855d47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661628"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68711139"
 ---
 # <a name="stringizing-operator-"></a>Opérateur d'enchaînement (#)
 
@@ -28,7 +28,7 @@ Le signe dièse () ou l’opérateur «Stringing **#** » () convertit les param
 
 L'espace blanc qui précède le premier jeton de l'argument réel ou qui suit le dernier jeton de l'argument réel est ignoré. Tout espace blanc situé entre les jetons dans l’argument réel est réduit à un espace blanc unique dans le littéral de chaîne résultant. Ainsi, si un commentaire figure entre deux jetons de l’argument réel, il est réduit à un espace blanc unique. Le littéral de chaîne résultant est automatiquement concaténé avec tous les littéraux de chaîne adjacents dont il est séparé uniquement par un espace blanc.
 
-De plus, si un caractère inclus dans l’argument requiert généralement une séquence d’échappement lorsqu’il est utilisé dans un littéral de chaîne (par exemple, un guillemet ( **"** ) ou une barre oblique inverse ( **\\** )), la barre oblique inverse d’échappement requise est automatiquement insérée avant ce caractère.
+En outre, si un caractère contenu dans l’argument requiert généralement une séquence d’échappement lorsqu’il est utilisé dans un littéral de chaîne (par exemple, un guillemet (" **\\** ) ou une barre oblique inverse ()), la barre oblique inverse d’échappement requise est automatiquement insérée avant le caractère.
 
 L’opérateur C++ de chaîne visuelle ne se comporte pas correctement lorsqu’il est utilisé avec des chaînes qui incluent des séquences d’échappement. Dans ce cas, le compilateur génère une [Erreur du compilateur C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
 
@@ -47,12 +47,12 @@ int main() {
 }
 ```
 
-Ces appels sont développés pendant le prétraitement et génèrent le code suivant :
+Les `stringer` macros sont développées pendant le prétraitement, ce qui génère le code suivant:
 
 ```cpp
 int main() {
-   printf_s( "In quotes in the printf function call\n" "\n" );
-   printf_s( "\"In quotes when printed to the screen\"\n" "\n" );
+   printf_s( "In quotes in the printf function call" "\n" );
+   printf_s( "\"In quotes when printed to the screen\"" "\n" );
    printf_s( "\"This: \\\" prints an escaped double quote\"" "\n" );
 }
 ```
