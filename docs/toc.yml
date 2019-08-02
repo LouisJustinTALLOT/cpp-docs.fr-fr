@@ -8395,6 +8395,15 @@
                       href: standard-library/sync-per-thread-class.md
                     - name: 'sync_shared, classe'
                       href: standard-library/sync-shared-class.md
+                - name: <any>
+                  expanded: false
+                  items:
+                    - name: <any>
+                      href: standard-library/any.md
+                    - name: fonctions<any>
+                      href: standard-library/any-functions.md
+                    - name: 'any, classe (bibliothèque standard C++)'
+                      href: standard-library/any-class.md
                 - name: <array>
                   expanded: false
                   items:
@@ -8574,6 +8583,8 @@
                       href: standard-library/bad-exception-class.md
                     - name: 'exception, classe'
                       href: standard-library/exception-class.md
+                - name: <execution>
+                  href: standard-library/execution.md
                 - name: <filesystem>
                   expanded: false
                   items:
@@ -8987,6 +8998,17 @@
                       href: standard-library/unique-ptr-class.md
                     - name: 'weak_ptr, classe'
                       href: standard-library/weak-ptr-class.md
+                - name: <memory_resource>
+                  expanded: false
+                  items:
+                    - name: <memory_resource>
+                      href: standard-library/memory-resource.md
+                    - name: '<memory_resource>, fonctions'
+                      href: standard-library/memory-resource-functions.md
+                    - name: '<memory_resource>, opérateurs'
+                      href: standard-library/memory-resource-operators.md
+                    - name: 'memory_resource, classe'
+                      href: standard-library/memory-resource-class.md
                 - name: <mutex>
                   expanded: false
                   items:
@@ -9036,6 +9058,17 @@
                       href: standard-library/numeric.md
                     - name: fonctions<numeric>
                       href: standard-library/numeric-functions.md
+                - name: <optional>
+                  expanded: false
+                  items:
+                    - name: <optional>
+                      href: standard-library/optional.md
+                    - name: fonctions<optional>
+                      href: standard-library/optional-functions.md
+                    - name: '<optional>, opérateurs'
+                      href: standard-library/optional-operators.md
+                    - name: 'optional, classe'
+                      href: standard-library/optional-class.md
                 - name: <ostream>
                   expanded: false
                   items:
@@ -9604,6 +9637,17 @@
                       href: standard-library/valarray-class.md
                     - name: 'valarray<bool>, classe'
                       href: standard-library/valarray-bool-class.md
+                - name: <variant>
+                  expanded: false
+                  items:
+                    - name: <variant>
+                      href: standard-library/variant.md
+                    - name: fonctions<variant>
+                      href: standard-library/variant-functions.md
+                    - name: '<variant>, opérateurs'
+                      href: standard-library/variant-operators.md
+                    - name: 'variant, classe'
+                      href: standard-library/variant-class.md
                 - name: <vector>
                   expanded: false
                   items:
