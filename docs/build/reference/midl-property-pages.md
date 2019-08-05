@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 8174f6382ea2dab4ef2a49f5d30a6e27e8af3f5b
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: 0113fbd68d7687236b91b098ead2ac6b8338fee9
+ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492164"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787074"
 ---
 # <a name="midl-property-pages"></a>Pages de propriétés MIDL
 
@@ -129,15 +129,15 @@ Spécifie l’environnement à cibler ([/env](/windows/win32/midl/-env) Arm32 | 
 
 ### <a name="generate-stubless-proxies"></a>Générer des proxies avec stub
 
-Générez des stubs entièrement interprétés avec des extensions et des proxies sans stub pour les interfaces d’objet ([/Oicf](/windows/win32/midl/-Oicf), [/OIF](/windows/win32/midl/-Oif) ).
+Générez des stubs entièrement interprétés avec des extensions et des proxies sans stub pour les interfaces d’objet ([/Oicf](/windows/win32/midl/-oi), [/OIF](/windows/win32/midl/-oi) ).
 
 ### <a name="suppress-compiler-warnings"></a>Supprimer les avertissements du compilateur
 
-Supprimez les messages d’avertissement du compilateur ([/no_warn](/windows/win32/midl/-no_warn)).
+Supprimez les messages d’avertissement du compilateur ([/no_warn](/windows/win32/midl/-no-warn)).
 
 ### <a name="application-configuration-mode"></a>Mode de configuration de l’application
 
-Autorisez les attributs ACF sélectionnés dans le fichier IDL ([/app_config](/windows/win32/midl/-app_config)).
+Autorisez les attributs ACF sélectionnés dans le fichier IDL ([/app_config](/windows/win32/midl/-app-config)).
 
 ### <a name="locale-id"></a>ID de paramètres régionaux
 
@@ -187,7 +187,7 @@ Générer le fichier stub du client uniquement ([/client](/windows/win32/midl/-c
 
 **Choix**
 
-- Stub **-stub**
+- Stub-stub
 - **Aucun** -aucun
 
 ### <a name="generate-server-stub-files"></a>Générer des fichiers stub serveur
@@ -196,7 +196,7 @@ Générer le fichier stub du serveur uniquement ([/Server](/windows/win32/midl/-
 
 **Choix**
 
-- Stub **-stub**
+- Stub-stub
 - **Aucun** -aucun
 
 ### <a name="client-stub-file"></a>Fichier stub client
@@ -220,7 +220,7 @@ Spécifie le format de fichier de bibliothèque de types ([/oldtlb |/newtlb]).
 
 ### <a name="c-preprocess-options"></a>Options de prétraitement C
 
-Spécifie les commutateurs à passer au préprocesseur du compilateur C (commutateurs[/cpp_opt](/windows/win32/midl/-cpp_opt) ).
+Spécifie les commutateurs à passer au préprocesseur du compilateur C (commutateurs[/cpp_opt](/windows/win32/midl/-cpp-opt) ).
 
 ### <a name="undefine-preprocessor-definitions"></a>Annuler la définition de définitions de préprocesseur
 
@@ -258,15 +258,15 @@ Vérifiez que les pointeurs de référence sont non null ([/Error](/windows/win3
 
 ### <a name="prepend-with-abi-namespace"></a>Ajouter au début l’espace de noms’ABI'
 
-Ajoutez l’espace de noms’ABI’à tous les types.  ([/ns_prefix](/windows/win32/midl/-ns_prefix)).
+Ajoutez l’espace de noms’ABI’à tous les types.  ([/ns_prefix](/windows/win32/midl/-ns-prefix)).
 
 ### <a name="validate-parameters"></a>Valider les paramètres
 
-Générez des informations supplémentaires pour valider les paramètres ([/Robust](/windows/win32/midl/-robust) | [/Robust](/windows/win32/midl/-no_robust)).
+Générez des informations supplémentaires pour valider les paramètres ([/Robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
 
 ### <a name="struct-member-alignment"></a>Alignement des membres de la structure
 
-Spécifie le niveau de compression des structures dans le système cible ([/ZpN](/windows/win32/midl/-zpn)).
+Spécifie le niveau de compression des structures dans le système cible (/ZpN).
 
 **Choix**
 
