@@ -4,18 +4,18 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: e417de57292e4b21d81e8d6643ba77d8b169af07
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 07c2e8e9ff061e20f9a3bceaa3d12d051e975e1e
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448177"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821089"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avertissements du compilateur par version du compilateur
 
-Le compilateur peut supprimer les avertissements qui ont été introduites après une version que vous spécifiez à l’aide de la [/WV](../../build/reference/compiler-option-warning-level.md) option du compilateur. Cette option est utile pour la gestion de votre processus de génération lorsque vous introduisez une nouvelle version de l’ensemble d’outils et que vous souhaitez supprimer temporairement les avertissements de nouveau. Cette option supprime uniquement les avertissements, pas de nouveaux messages d’erreur. Ne pas supprimer tous les nouveaux avertissements définitivement ! Nous vous recommandons de vous compilez toujours au niveau avertissement régulière la plus élevé, `/W4`et supprimer la `/Wv` option dans votre build dès que possible.
+Le compilateur peut supprimer les avertissements qui ont été introduits après une version que vous spécifiez à l’aide de l’option du compilateur [/WV](../../build/reference/compiler-option-warning-level.md) . Cette option est utile pour gérer votre processus de génération lorsque vous introduisez une nouvelle version de l’ensemble d’outils et si vous souhaitez supprimer temporairement de nouveaux avertissements. Cette option supprime uniquement les avertissements, pas les nouveaux messages d’erreur. Ne supprimez pas définitivement tous les nouveaux avertissements. Nous vous recommandons de toujours compiler au niveau d’avertissement normal le `/W4`plus élevé, et `/Wv` de supprimer l’option dans votre Build dès que possible.
 
-Ces versions du compilateur a introduit de nouveaux avertissements :
+Ces versions du compilateur ont introduit de nouveaux avertissements:
 
 | Produit | Numéro de version du compilateur |
 |-|-|
@@ -26,28 +26,28 @@ Ces versions du compilateur a introduit de nouveaux avertissements :
 | Visual Studio 2010 | 16.00.40219.01 |
 | Visual Studio 2012 | 17.00.51106.1 |
 | Visual Studio 2013 | 18.00.21005.1 |
-| Visual Studio 2015 RTM | 19.00.23026.0 |
+| Version RTM de Visual Studio 2015 | 19.00.23026.0 |
 | Visual Studio 2015 Update 1 | 19.00.23506.0 |
 | Visual Studio 2015 Update 2 | 19.00.23918.0 |
 | Visual Studio 2015 Update 3 | 19.00.24215.1 |
-| Visual Studio 2017 RTM | 19.10.25017.0 |
+| Version RTM de Visual Studio 2017 | 19.10.25017.0 |
 | Visual Studio 2017 version 15.3 | 19.11.25506.0 |
 | Visual Studio 2017 version 15.5 | 19.12.25830.0 |
 | Visual Studio 2017 version 15.6 | 19.13.26128.0 |
 | Visual Studio 2017 version 15.7 | 19.14.26428.0 |
 | Visual Studio 2017 version 15.8 | 19.15.26726.0 |
-| Visual Studio 2017 version 15.9 | 19.16.26926.0 |
-| Visual Studio 2019 RTM | 19.20.27004.0 |
+| Visual Studio 2017 version 15,9 | 19.16.26926.0 |
+| Version RTM de Visual Studio 2019 | 19.20.27004.0 |
 
-Vous pouvez spécifier uniquement le numéro principal, les numéros major et minor ou major, minor et les numéros de build pour le `/Wv` option. Le compilateur signale tous les avertissements qui correspondent aux versions qui commencent par le nombre spécifié et supprime tous les avertissements pour les versions supérieures que le nombre spécifié. Par exemple, `/Wv:17` signale les avertissements introduits dans ou avant n’importe quelle version de Visual Studio 2012 et supprime les avertissements introduits par n’importe quel compilateur à partir de Visual Studio 2013 (version du 18) ou version ultérieure. Pour supprimer les avertissements introduits dans Visual Studio 2015 update 2 et versions ultérieures, vous pouvez utiliser `/Wv:19.00.23506`. Utilisez `/Wv:19.11` pour signaler les avertissements introduits dans n’importe quelle version de Visual Studio antérieures à Visual Studio 2017 version 15.5, mais supprimer les avertissements introduits dans Visual Studio 2017 version 15.5 et versions ultérieure.
+Vous pouvez spécifier uniquement le nombre principal, les nombres principaux et secondaires, ou les numéros principal, secondaire et de build de l' `/Wv` option. Le compilateur signale tous les avertissements qui correspondent aux versions qui commencent par le nombre spécifié et supprime tous les avertissements pour les versions supérieures au nombre spécifié. Par exemple, `/Wv:17` signale les avertissements introduits dans ou avant toute version de Visual Studio 2012 et supprime les avertissements introduits par n’importe quel compilateur de Visual Studio 2013 (version 18) ou ultérieure. Pour supprimer les avertissements introduits dans Visual Studio 2015 Update 2 et versions ultérieures `/Wv:19.00.23506`, vous pouvez utiliser. Utilisez `/Wv:19.11` pour signaler les avertissements introduits dans toutes les versions de Visual Studio antérieures à Visual Studio 2017 version 15,5, mais supprimez les avertissements introduits dans Visual Studio 2017 version 15,5 et ultérieure.
 
-Les sections suivantes répertorient les avertissements introduits par chaque version de Visual C++ que vous pouvez supprimer à l’aide de la `/Wv` option du compilateur. Le `/Wv` option ne peut pas supprimer les avertissements qui ne sont pas répertoriés, et qui sont antérieurs aux versions spécifiées du compilateur.
+Les sections suivantes répertorient les avertissements introduits par chaque version C++ de Visual que vous pouvez supprimer à `/Wv` l’aide de l’option du compilateur. L' `/Wv` option ne peut pas supprimer les avertissements qui ne sont pas listés, qui prédatent les versions spécifiées du compilateur.
 
 ::: moniker range=">= vs-2019"
 
 ## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Avertissements introduits dans Visual Studio 2019 RTW (version du compilateur 19.20.27004.0)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:19.15`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:19.15`de l’option du compilateur.
 
 |||
 |-|-|
@@ -57,9 +57,9 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 ::: moniker range=">= vs-2017"
 
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Avertissements introduits dans Visual Studio 2017 version 15.8 (version du compilateur 19.15.26726.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Avertissements introduits dans Visual Studio 2017 version 15,8 (compilateur version 19.15.26726.0)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:19.14`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:19.14`de l’option du compilateur.
 
 |||
 |-|-|
@@ -83,26 +83,26 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 | C5106 | `macro redefined with different parameter names` |
 | C5107 | `missing terminating 'char' character` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Avertissements introduits dans Visual Studio 2017 version 15.7 (version du compilateur 19.14.26428.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Avertissements introduits dans Visual Studio 2017 version 15,7 (compilateur version 19.14.26428.0)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:19.13`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:19.13`de l’option du compilateur.
 
 |||
 |-|-|
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Avertissements introduits dans Visual Studio 2017 version 15.6 (version du compilateur 19.13.26128.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Avertissements introduits dans Visual Studio 2017 version 15,6 (compilateur version 19.13.26128.0)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:19.12`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:19.12`de l’option du compilateur.
 
 |||
 |-|-|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Avertissements introduits dans Visual Studio 2017 version 15.5 (version du compilateur 19.12.25830.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Avertissements introduits dans Visual Studio 2017 version 15,5 (compilateur version 19.12.25830.0)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:19.11`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:19.11`de l’option du compilateur.
 
 |||
 |-|-|
@@ -114,9 +114,9 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 | C5042 | `'declaration': function declarations at block scope cannot be specified 'inline' in standard C++; remove 'inline' specifier` |
 | C5043 | `'specification': exception specification does not match previous declaration` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Avertissements introduits dans Visual Studio 2017 version 15.3 (version du compilateur 19.11.25506.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Avertissements introduits dans Visual Studio 2017 version 15,3 (compilateur version 19.11.25506.0)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:19.10`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:19.10`de l’option du compilateur.
 
 |||
 |-|-|
@@ -137,7 +137,7 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 
 ## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Avertissements introduits dans Visual Studio 2017 RTM (version du compilateur 19.10.25017.0)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:19.00`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:19.00`de l’option du compilateur.
 
 |||
 |-|-|
@@ -150,7 +150,7 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Avertissements introduits dans Visual Studio 2015 Update 3 (version du compilateur 19.00.24215.1)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:19.00.23918`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:19.00.23918`de l’option du compilateur.
 
 |||
 |-|-|
@@ -161,7 +161,7 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Avertissements introduits dans Visual Studio 2015 Update 2 (version du compilateur 19.00.23918.0)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:19.00.23506`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:19.00.23506`de l’option du compilateur.
 
 |||
 |-|-|
@@ -172,7 +172,7 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Avertissements introduits dans Visual Studio 2015 Update 1 (version du compilateur 19.00.23506.0)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:19.00.23026`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:19.00.23026`de l’option du compilateur.
 
 |||
 |-|-|
@@ -183,7 +183,7 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 
 ## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Avertissements introduits dans Visual Studio 2015 RTM (version du compilateur 19.00.23026.0)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:18`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:18`de l’option du compilateur.
 
 |||
 |-|-|
@@ -240,9 +240,9 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 | C5029 | `nonstandard extension used: alignment attributes in C++ apply to variables, data members and tag types only` |
 | C5030 | `attribute 'attribute' is not recognized` |
 
-## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Avertissements introduits dans Visual Studio 2013 (version du compilateur 18.00.21005.1)
+## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Avertissements introduits dans Visual Studio 2013 (compilateur version 18.00.21005.1)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:17`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:17`de l’option du compilateur.
 
 |||
 |-|-|
@@ -271,7 +271,7 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 
 ## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Avertissements introduits dans Visual Studio 2012 (version du compilateur 17.00.51106.1)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:16`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:16`de l’option du compilateur.
 
 |||
 |-|-|
@@ -304,7 +304,7 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 | C4703 | `potentially uninitialized local pointer variable 'name' used` |
 | C4728 | `/Yl- option ignored because PCH reference is required` |
 | C4745 | `volatile access of 'name' cannot be honored due to its size` |
-| C4746|accès volatile de 'name' est volatile : < iso | MS > configuration ; envisagez d’utiliser des fonctions intrinsèques __iso_volatile_load/store |
+| C4746|l’accès volatile de’name’est soumis à/volatile: < ISO | paramètre MS >; envisagez d’utiliser des fonctions intrinsèques __iso_volatile_load/Store |
 | C4872 | `floating point division by zero detected when compiling the call graph for the concurrency::parallel_for_each at: 'description'` |
 | C4880 | `casting from 'type' to 'type': casting away constness from a pointer or reference may result in undefined behavior in an amp restricted function` |
 | C4881 | `the constructor and/or the destructor will not be invoked for tile_static variable 'type'` |
@@ -314,7 +314,7 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 
 ## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Avertissements introduits dans Visual Studio 2010 (version du compilateur 16.00.40219.01)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:15`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:15`de l’option du compilateur.
 
 |||
 |-|-|
@@ -330,7 +330,7 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 
 ## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Avertissements introduits dans Visual Studio 2008 (version du compilateur 15.00.21022.08)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:14`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:14`de l’option du compilateur.
 
 |||
 |-|-|
@@ -345,7 +345,7 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 
 ## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Avertissements introduits dans Visual Studio 2005 (version du compilateur 14.00.50727.762)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:13`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:13`de l’option du compilateur.
 
 |||
 |-|-|
@@ -488,7 +488,7 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 
 ## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Avertissements introduits dans Visual Studio 2003 (version du compilateur 13.10.3077)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:13.00.9466`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:13.00.9466`de l’option du compilateur.
 
 |||
 |-|-|
@@ -524,7 +524,7 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 
 ## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Avertissements introduits dans Visual Studio 2002 (version du compilateur 13.00.9466)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur `/Wv:12`.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide `/Wv:12`de l’option du compilateur.
 
 |||
 |-|-|
@@ -667,14 +667,14 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 | C4945 | `'name': cannot import symbol from 'source': as 'declaration' has already been imported from another assembly 'source'` |
 | C4946 | `reinterpret_cast used between related classes: 'declaration' and 'declaration'` |
 | C4995 | `'name': name was marked as #pragma deprecated` |
-| C4996 | `'issue': description` |
+| C4996 | `'deprecated declaration': deprecation message (or "was declared deprecated")` |
 | C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
 | C4998 | `EXPECTATION FAILED: description(number)` |
 
 ## <a name="see-also"></a>Voir aussi
 
-[C /C++ compilateur et build erreurs et avertissements des outils](../compiler-errors-1/c-cpp-build-errors.md) \
-[Avertissements du compilateur C4000 - C5999](compiler-warnings-c4000-c5999.md) \
-[Option de compilateur/WV](../../build/reference/compiler-option-warning-level.md) \
+[Erreurs etC++ avertissements du compilateur C/du compilateur et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md) \
+[Avertissements du compilateur C4000-C5999](compiler-warnings-c4000-c5999.md) \
+[/WV (option du compilateur)](../../build/reference/compiler-option-warning-level.md) \
 [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
 [warning](../../preprocessor/warning.md)
