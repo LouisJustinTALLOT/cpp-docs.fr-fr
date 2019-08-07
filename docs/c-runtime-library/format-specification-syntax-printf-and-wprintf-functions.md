@@ -1,6 +1,6 @@
 ---
 title: 'Syntaxe de spécification de format : fonctions printf et wprintf'
-ms.date: 07/02/2019
+ms.date: 07/30/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 07565da17eb53274e0c3203abbc8cddb9e61da90
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 95573821ff2b213765184e7c121e693e1eb0ac0a
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552250"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682357"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntaxe de spécification de format : fonctions printf et wprintf
 
-Les différentes fonctions `printf` et `wprintf` acceptent une chaîne de format et des arguments facultatifs, et génèrent en sortie une séquence de caractères mise en forme. La chaîne de format contient zéro ou plusieurs *directives* qui sont soit des caractères littéraux pour la sortie, soit des *spécifications de conversion* codées qui décrivent comment mettre en forme un argument dans la sortie. Cette rubrique décrit la syntaxe utilisée pour encoder les spécifications de conversion dans la chaîne de format. Pour obtenir la liste de ces fonctions, consultez [E/S de flux](../c-runtime-library/stream-i-o.md).
+Les différentes fonctions `printf` et `wprintf` acceptent une chaîne de format et des arguments facultatifs, et génèrent en sortie une séquence de caractères mise en forme. La chaîne de format contient zéro ou plusieurs *directives* qui sont soit des caractères littéraux pour la sortie, soit des *spécifications de conversion* codées qui décrivent comment mettre en forme un argument dans la sortie. Cet article décrit la syntaxe utilisée pour encoder les spécifications de conversion dans la chaîne de format. Pour obtenir la liste de ces fonctions, consultez [E/S de flux](../c-runtime-library/stream-i-o.md).
 
 Une spécification de conversion se compose de champs facultatifs et obligatoires mis en forme comme suit :
 
@@ -62,7 +62,7 @@ Les types entier tels que `short`, `int`, `long`, `long long`, ainsi que leurs v
 |**u**|Entier|Entier décimal non signé.|
 |**x**|Entier|Entier hexadécimal non signé ; utilise « abcdef ».|
 |**X**|Entier|Entier hexadécimal non signé ; utilise « ABCDEF ».|
-|**e**|Virgule flottante|Valeur signée se présentant sous la forme [-]*d.dddd*__e±__*dd*[*d*] où *d* correspond à un chiffre décimal, *dddd* à un ou plusieurs chiffres décimaux selon la précision spécifiée (ou six par défaut), et *dd*[*d*] à deux ou trois chiffres décimaux, selon le [format de sortie](../c-runtime-library/set-output-format.md) et la taille de l’exposant.|
+|**e**|Virgule flottante|Valeur signée se présentant sous la forme [-]*d.dddd*__e±__*dd*\[*d*], où *d* correspond à un chiffre décimal, *dddd* à un ou plusieurs chiffres décimaux selon la précision spécifiée (ou six par défaut), et *dd*\[ *]* à deux ou trois chiffres décimaux, selon le [format de sortie](../c-runtime-library/set-output-format.md) et la taille de l’exposant.|
 |**E**|Virgule flottante|Identique au format **e** sauf que l’exposant est introduit par **E** et non par **e**.|
 |**f**|Virgule flottante|Valeur signée se présentant sous la forme [-]*dddd* __.__ *dddd*, où *dddd* correspond à un ou plusieurs chiffres décimaux. Le nombre de chiffres avant la virgule décimale dépend de l’ampleur du nombre, et le nombre de chiffres après la virgule décimale dépend de la précision demandée (ou six par défaut).|
 |**F**|Virgule flottante|Identique au format **f**, sauf que la sortie de l’infini et NAN est en majuscules.|
@@ -82,7 +82,7 @@ Les types entier tels que `short`, `int`, `long`, `long long`, ainsi que leurs v
 |-----------|------------|
 |infinity|`inf`|
 |NaN silencieux|`nan`|
-|Signalling NaN|`nan(snan)`|
+|NaN signalant|`nan(snan)`|
 |Indefinite NaN|`nan(ind)`|
 
 Ces valeurs peuvent toutes être précédées d’un signe. Si un caractère spécificateur de conversion de *type* virgule flottante est une lettre majuscule, la sortie est également en majuscules. Par exemple, si le spécificateur de format est `%F` et non `%f`, un nombre infini apparaît sous la forme `INF` et non sous la forme `inf`. Les fonctions `scanf` peuvent également analyser ces chaînes. Ces valeurs peuvent donc faire l’aller-retour par l’intermédiaire des fonctions `printf` et `scanf`.
@@ -96,7 +96,7 @@ Avant Visual Studio 2015, le CRT utilisait un autre format non standard pour la
 |Indéfini (identique à une valeur NaN silencieuse)|*chiffre* `.#IND` *chiffres aléatoires*|
 |NaN|*chiffre* `.#NAN` *chiffres aléatoires*|
 
-Toutes ces chaînes pouvaient être préfixées par un signe et mises en forme légèrement différemment en fonction de la précision et de la largeur du champ, parfois avec des effets inhabituels. Par exemple, `printf("%.2f\n", INFINITY)` affichait `1.#J`, car #INF était « arrondi » avec une précision de 2 chiffres.
+Toutes ces chaînes pouvaient être préfixées par un signe et mises en forme légèrement différemment en fonction de la précision et de la largeur du champ, parfois avec des effets inhabituels. Par exemple, `printf("%.2f\n", INFINITY)` afficherait `1.#J` parce que #INF serait « arrondi » avec une précision de 2 chiffres.
 
 > [!NOTE]
 > Si l’argument qui correspond à `%s` ou `%S`, ou le champ `Buffer` de l’argument qui correspond à `%Z`, est un pointeur Null, « (Null) » s’affiche.
@@ -135,7 +135,7 @@ La spécification de largeur ne provoque jamais la troncature d’une valeur. Si
 
 Si la spécification de la largeur est un astérisque (`*`), un argument `int` issu de la liste d’arguments fournit la valeur. L’argument *width* doit précéder la valeur mise en forme dans la liste des arguments, comme illustré dans l’exemple suivant :
 
-`printf("%0*f", 5, 3);  /* 00003 is output */`
+`printf("%0*d", 5, 3);  /* 00003 is output */`
 
 Une valeur *width* manquante ou petite dans une spécification de conversion n’entraîne pas la troncation d’une valeur de sortie. Si le résultat d’une conversion est plus large que la valeur *width*, le champ peut être développé pour contenir le résultat de la conversion.
 
@@ -171,7 +171,7 @@ Le caractère *type* détermine soit l’interprétation de *precision*, soit la
 
 ## <a name="argument-size-specification"></a>Spécification de taille d’argument
 
-Dans une spécification de conversion, le champ *size* est un modificateur de longueur d’argument pour le spécificateur de conversion *type*. Les préfixes de champ *size* du champ *type*, à savoir **hh**, **h**, **j**, **l** (L minuscule), **L**, **ll**, **t**, **w**, **z**, **I** (i majuscule), **I32** et **I64**, spécifient la « taille » de l’argument correspondant (long ou court, 32 bits ou 64 bits, caractère sur un octet ou large), selon le spécificateur de conversion qu’ils modifient. Ces préfixes de taille sont utilisés avec les caractères de *type* dans les familles `printf` et `wprintf` de fonctions pour spécifier l’interprétation des tailles d’argument, comme illustré dans le tableau suivant. Le champ *size* est facultatif pour certains types d’arguments. Si aucun préfixe de taille n’est spécifié, le formateur consomme les arguments d’entier (par exemple `char`, `short`, `int`, `long` signé ou non signé, ainsi que les types d’énumération) en tant que types `int` 32 bits, tandis que les arguments à virgule flottante `float`, `double` et `long double` sont consommés en tant que types `double` 64 bits. Cela correspond aux règles de promotion d’argument par défaut pour les listes d’arguments de variable. Pour plus d’informations sur la promotion d’argument, consultez Ellipses et arguments par défaut dans [Expressions de suffixe](../cpp/postfix-expressions.md). Sur les systèmes 32 bits et 64 bits, la spécification de conversion d’un argument d’entier 64 bits doit inclure un préfixe de taille **ll** ou **I64**. Sinon, le comportement du formateur n'est pas défini.
+Dans une spécification de conversion, le champ *size* est un modificateur de longueur d’argument pour le spécificateur de conversion *type*. Les préfixes de champ *size* du champ *type*, à savoir **hh**, **h**, **j**, **l** (L minuscule), **L**, **ll**, **t**, **w**, **z**, **I** (i majuscule), **I32** et **I64**, spécifient la « taille » de l’argument correspondant (long ou court, 32 bits ou 64 bits, caractère sur un octet ou large), selon le spécificateur de conversion qu’ils modifient. Ces préfixes de taille sont utilisés avec les caractères de *type* dans les familles `printf` et `wprintf` de fonctions pour spécifier l’interprétation des tailles d’argument, comme illustré dans le tableau suivant. Le champ *size* est facultatif pour certains types d’arguments. Si aucun préfixe de taille n’est spécifié, le formateur consomme les arguments d’entier (par exemple `char`, `short`, `int`, `long` signé ou non signé, ainsi que les types d’énumération) en tant que types `int` 32 bits, tandis que les arguments à virgule flottante `float`, `double` et `long double` sont consommés en tant que types `double` 64 bits. Ce comportement correspond aux règles de promotion d’argument par défaut pour les listes d’arguments de variable. Pour plus d’informations sur la promotion d’argument, consultez Ellipses et arguments par défaut dans [Expressions de suffixe](../cpp/postfix-expressions.md). Sur les systèmes 32 bits et 64 bits, la spécification de conversion d’un argument d’entier 64 bits doit inclure un préfixe de taille **ll** ou **I64**. Sinon, le comportement du formateur n'est pas défini.
 
 Certains types sont de tailles différentes en code 32 bits et 64 bits. Par exemple, la longueur de `size_t` est 32 bits dans le code compilé pour x86, contre 64 bits dans le code compilé pour x64. Pour créer un code de mise en forme indépendant de la plateforme pour les types de largeur variable, vous pouvez utiliser un modificateur de taille d’argument de largeur variable. Vous pouvez également utiliser un modificateur de taille d’argument 64 bits et promouvoir explicitement le type d’argument de largeur variable à 64 bits. Spécifique à Microsoft, le modificateur de taille d’argument **I** (i majuscule) gère les arguments entiers de largeur variable. Toutefois, nous vous recommandons d’utiliser les modificateurs **j**, **t** et **z** spécifiques au type à des fins de portabilité.
 
