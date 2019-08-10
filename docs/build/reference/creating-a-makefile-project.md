@@ -1,22 +1,21 @@
 ---
 title: Créer un projet Makefile C++ dans Visual Studio
-ms.date: 05/16/2019
+ms.date: 08/05/2019
 f1_keywords:
 - vc.appwiz.makefile.project
 helpviewer_keywords:
-- Makefile projects, creating
-- project files [C++], Makefile projects
+- Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: b460b16b3a64818501187b00e503ad0179d26443
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 861cd88440a697ce5a3abc83109526227ae42f8e
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837393"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866131"
 ---
 # <a name="create-a-c-makefile-project"></a>Créer un projet Makefile C++
 
-Un *makefile* est un fichier texte qui contient des instructions indiquant comment compiler et lier (ou *générer*) un ensemble de fichiers de code source C++. Un programme *make* lit le makefile et appelle un compilateur, un éditeur de liens et éventuellement d’autres programmes pour rendre un fichier exécutable. L’implémentation par Microsoft du programme *make* est appelée [NMAKE](nmake-reference.md) ;
+Un *makefile* est un fichier texte qui contient des instructions indiquant comment compiler et lier (ou *générer*) un ensemble de fichiers de code source C++. Un programme *make* lit le makefile et appelle un compilateur, un éditeur de liens et éventuellement d’autres programmes pour rendre un fichier exécutable. L’implémentation par Microsoft du programme *make* est appelée [NMAKE](nmake-reference.md).
 
 Si vous avez un projet makefile existant, ces choix vous sont proposés si vous voulez le coder et/ou le déboguer dans l’IDE Visual Studio :
 
@@ -25,7 +24,7 @@ Si vous avez un projet makefile existant, ces choix vous sont proposés si vous 
 - **Visual Studio 2017 et versions ultérieures** : Utilisez la fonctionnalité **Ouvrir un dossier** pour modifier et générer un projet Makefile en l’état sans aucune intervention du système MSBuild. Pour plus d’informations, consultez [Projets Dossier ouvert pour C++](../open-folder-projects-cpp.md).
 - **Visual Studio 2019 et ultérieur** : Créez un projet Makefile UNIX pour Linux.
 
-## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Pour créer un projet Makefile avec le modèle de projet Makefile
+## <a name="a-namecreate_a_makefile_project-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Pour créer un projet Makefile avec le modèle de projet Makefile
 
 Dans Visual Studio 2017 et les versions ultérieures, le modèle de projet Makefile est disponible quand la charge de travail de développement d’applications de bureau C++ est installée.
 
@@ -51,7 +50,7 @@ Le fichier de sortie que vous spécifiez dans le projet n'a pas d'incidence sur 
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2015-or-visual-studio-2017"></a>Pour créer un projet Makefile dans Visual Studio 2015 ou Visual Studio 2017
 
-1. Dans la page de démarrage de Visual Studio, tapez « makefile » dans la zone de recherche **Nouveau projet**. Ou dans la boîte de dialogue **Nouveau projet**, développez **Visual C++** > **Général** (Visual Studio 2015) ou **Autre** (Visual Studio 2017), puis sélectionnez **Projet Makefile** dans le volet Modèles pour ouvrir l’Assistant Projet.
+1. Dans la page de démarrage de Visual Studio, tapez « makefile » dans la zone de recherche **Nouveau projet**. Ou dans la boîte de dialogue **Nouveau projet**, développez **Visual C++**  > **Général** (Visual Studio 2015) ou **Autre** (Visual Studio 2017), puis sélectionnez **Projet Makefile** dans le volet Modèles pour ouvrir l’Assistant Projet.
 
 1. Dans la page **Paramètres de l’application**, indiquez les informations relatives à la ligne de commande, à la sortie, au nettoyage et à la regénération pour les builds Debug et Retail.
 
@@ -67,7 +66,7 @@ Une fois que vous avez créé un projet Makefile, vous pouvez afficher et modifi
 
 - **Ligne de commande Build :** Spécifie la ligne de commande à exécuter quand l’utilisateur sélectionne Générer dans le menu Générer. Cette option est affichée dans le champ Ligne de commande Build de la page Nmake de la page de propriétés du projet.
 
-- **Sortie :** Spécifie le nom du fichier qui doit contenir la sortie de la ligne de commande. Par défaut, cette option est basée sur le nom du projet. Cette option est affichée dans le champ Sortie de la page Nmake de la page de propriétés du projet.
+- **Output:** Spécifie le nom du fichier qui doit contenir la sortie de la ligne de commande. Par défaut, cette option est basée sur le nom du projet. Cette option est affichée dans le champ Sortie de la page Nmake de la page de propriétés du projet.
 
 - **Commandes de nettoyage :** Spécifie la ligne de commande à exécuter quand l’utilisateur sélectionne Nettoyer dans le menu Générer. Cette option est affichée dans le champ Ligne de commande Clean de la page Nmake de la page de propriétés du projet.
 

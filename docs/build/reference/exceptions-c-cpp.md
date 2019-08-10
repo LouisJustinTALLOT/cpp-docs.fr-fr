@@ -12,22 +12,22 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: f80b99943b103dcf90c05d59df3169e0e05d79f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf38af464f08e143ed9073befe30f6aeb8b913b6
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271630"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915458"
 ---
 # <a name="exceptions-cc"></a>Exceptions (C/C++)
 
-Deux codes d’exception peuvent être déclenchés lorsque des défaillances sont rencontrées :
+Deux codes d’exception peuvent être déclenchés lorsque des erreurs sont rencontrées:
 
-- Pour un **LoadLibrary** Échec
+- Pour une erreur **LoadLibrary**
 
-- Pour un **GetProcAddress** Échec
+- Pour un échec **GetProcAddress**
 
-Voici les informations sur l’exception :
+Les informations sur les exceptions sont les suivantes:
 
 ```
 //
@@ -37,11 +37,11 @@ Voici les informations sur l’exception :
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-Les codes d’exception levées sont les VcppException standard (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) et les valeurs de VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). L’exception passe un pointeur vers un **DelayLoadInfo** structure dans la valeur qui peut être récupérée par **GetExceptionInformation** dans le [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) structure, champ ExceptionInformation [0].
+Les codes d’exception générés sont les valeurs standard VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) et VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). L’exception passe un pointeur vers une structure **DelayLoadInfo** dans la valeur LPDWORD qui peut être récupérée par **GetExceptionInformation** dans le champ ExceptionInformation [0] de la structure [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-exception_record) .
 
-En outre, si les bits incorrects sont définis dans le champ grAttrs, l’exception ERROR_INVALID_PARAMETER est levée. Cette exception est, par tous les cas, irrécupérable.
+En outre, si les bits incorrects sont définis dans le champ grAttrs, l’exception ERROR_INVALID_PARAMETER est levée. Cette exception est, pour toutes les intentions et les objectifs, fatale.
 
-Consultez [définitions des structures et constantes](structure-and-constant-definitions.md) pour plus d’informations.
+Pour plus d’informations, consultez [définitions de structure et](structure-and-constant-definitions.md) de constantes.
 
 ## <a name="see-also"></a>Voir aussi
 

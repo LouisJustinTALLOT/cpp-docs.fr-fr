@@ -1,5 +1,5 @@
 ---
-title: CSecurityAttributes, classe
+title: Vue, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CSecurityAttributes
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: b26de7a2a3426ed2fe86bd7ef50f6c5410fa5364
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503194"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915725"
 ---
-# <a name="csecurityattributes-class"></a>CSecurityAttributes, classe
+# <a name="csecurityattributes-class"></a>Vue, classe
 
-Cette classe est un simple wrapper pour la structure d’attributs de sécurité.
+Cette classe est un wrapper léger pour la structure des attributs de sécurité.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+>  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,19 +35,19 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 |Nom|Description|
 |----------|-----------------|
-|[CSecurityAttributes::CSecurityAttributes](#csecurityattributes)|Constructeur.|
+|[Vue:: vue](#csecurityattributes)|Constructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CSecurityAttributes::Set](#set)|Appelez cette méthode pour définir les attributs de la `CSecurityAttributes` objet.|
+|[Vue:: Set](#set)|Appelez cette méthode pour définir les attributs de l' `CSecurityAttributes` objet.|
 
 ## <a name="remarks"></a>Notes
 
-Le `SECURITY_ATTRIBUTES` structure contient un [descripteur de sécurité](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) utilisée pour la création d’un objet et spécifie si le handle extrait en spécifiant cette structure peut être hérité.
+La `SECURITY_ATTRIBUTES` structure contient un descripteur de [sécurité](/windows/desktop/api/winnt/ns-winnt-security_descriptor) utilisé pour la création d’un objet et spécifie si le handle récupéré en spécifiant cette structure peut être hérité.
 
-Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
+Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -57,7 +57,7 @@ Pour une présentation du modèle de contrôle d’accès dans Windows, consulte
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlsecurity.h
+**En-tête:** ATLSecurity. h
 
 ##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes
 
@@ -78,7 +78,7 @@ Spécifie si le handle retourné est hérité quand un nouveau processus est cr�
 
 ##  <a name="set"></a>  CSecurityAttributes::Set
 
-Appelez cette méthode pour définir les attributs de la `CSecurityAttributes` objet.
+Appelez cette méthode pour définir les attributs de l' `CSecurityAttributes` objet.
 
 ```
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
@@ -94,12 +94,12 @@ Spécifie si le handle retourné est hérité quand un nouveau processus est cr�
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est utilisée par le constructeur pour initialiser le `CSecurityAttributes` objet.
+Cette méthode est utilisée par le constructeur pour initialiser l' `CSecurityAttributes` objet.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Exemple de sécurité](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[descripteur de sécurité](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[descripteur de sécurité](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)

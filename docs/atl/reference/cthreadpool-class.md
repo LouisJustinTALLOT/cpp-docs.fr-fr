@@ -1,5 +1,5 @@
 ---
-title: CThreadPool, classe
+title: CThreadPool (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - CThreadPool
@@ -20,14 +20,14 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 7d363de0d787ecc5015093005b39a379acd82e71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07fd470a6aeab0575f2733d72650bd695b8e2752
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277394"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915688"
 ---
-# <a name="cthreadpool-class"></a>CThreadPool, classe
+# <a name="cthreadpool-class"></a>CThreadPool (classe)
 
 Cette classe fournit un pool de threads de travail qui traitent une file d’attente d’éléments de travail.
 
@@ -40,11 +40,11 @@ class CThreadPool : public IThreadPoolConfig
 
 #### <a name="parameters"></a>Paramètres
 
-*Travail*<br/>
-La classe conforme à la [archétype de travail](../../atl/reference/worker-archetype.md) en fournissant le code utilisé pour traiter les éléments en file d’attente du pool de threads de travail.
+*Collabor*<br/>
+La classe conforme aux [archétype de travail](../../atl/reference/worker-archetype.md) qui fournissent le code utilisé pour traiter les éléments de travail mis en file d’attente dans le pool de threads.
 
 *ThreadTraits*<br/>
-La classe fournissant la fonction utilisée pour créer les threads dans le pool.
+Classe fournissant la fonction utilisée pour créer les threads dans le pool.
 
 ## <a name="members"></a>Membres
 
@@ -52,37 +52,37 @@ La classe fournissant la fonction utilisée pour créer les threads dans le pool
 
 |Nom|Description|
 |----------|-----------------|
-|[CThreadPool::CThreadPool](#cthreadpool)|Le constructeur pour le pool de threads.|
-|[CThreadPool::~CThreadPool](#dtor)|Le destructeur pour le pool de threads.|
+|[CThreadPool::CThreadPool](#cthreadpool)|Constructeur pour le pool de threads.|
+|[CThreadPool::~CThreadPool](#dtor)|Destructeur du pool de threads.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
 |[CThreadPool::AddRef](#addref)|Implémentation de `IUnknown::AddRef`.|
-|[CThreadPool::GetNumThreads](#getnumthreads)|Appelez cette méthode pour obtenir le nombre de threads dans le pool.|
-|[CThreadPool::GetQueueHandle](#getqueuehandle)|Appelez cette méthode pour obtenir le handle de port de terminaison d’e/s utilisé pour la file d’attente des éléments de travail.|
-|[CThreadPool::GetSize](#getsize)|Appelez cette méthode pour obtenir le nombre de threads dans le pool.|
-|[CThreadPool::GetTimeout](#gettimeout)|Appelez cette méthode pour obtenir la durée maximale en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter.|
+|[CThreadPool::GetNumThreads](#getnumthreads)|Appelez cette méthode pour connaître le nombre de threads dans le pool.|
+|[CThreadPool::GetQueueHandle](#getqueuehandle)|Appelez cette méthode pour récupérer le handle du port de terminaison d’e/s utilisé pour mettre en file d’attente les éléments de travail.|
+|[CThreadPool::GetSize](#getsize)|Appelez cette méthode pour connaître le nombre de threads dans le pool.|
+|[CThreadPool::GetTimeout](#gettimeout)|Appelez cette méthode pour obtenir la durée maximale en millisecondes pendant laquelle le pool de threads attendra qu’un thread s’arrête.|
 |[CThreadPool::Initialize](#initialize)|Appelez cette méthode pour initialiser le pool de threads.|
 |[CThreadPool::QueryInterface](#queryinterface)|Implémentation de `IUnknown::QueryInterface`.|
-|[CThreadPool::QueueRequest](#queuerequest)|Appelez cette méthode pour un élément de travail pour être géré par un thread dans le pool de la file d’attente.|
+|[CThreadPool::QueueRequest](#queuerequest)|Appelez cette méthode pour mettre en file d’attente un élément de travail à gérer par un thread dans le pool.|
 |[CThreadPool::Release](#release)|Implémentation de `IUnknown::Release`.|
 |[CThreadPool::SetSize](#setsize)|Appelez cette méthode pour définir le nombre de threads dans le pool.|
-|[CThreadPool::SetTimeout](#settimeout)|Appelez cette méthode pour définir le temps maximal en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter.|
+|[CThreadPool::SetTimeout](#settimeout)|Appelez cette méthode pour définir la durée maximale en millisecondes pendant laquelle le pool de threads attendra qu’un thread s’arrête.|
 |[CThreadPool::Shutdown](#shutdown)|Appelez cette méthode pour arrêter le pool de threads.|
 
 ## <a name="remarks"></a>Notes
 
-Threads du pool sont créés et détruits lorsque le pool est initialisé, redimensionné ou arrêté. Une instance de classe *Worker* va être créé sur la pile de chaque thread de travail dans le pool. Chaque instance se trouvera pour la durée de vie du thread.
+Les threads du pool sont créés et détruits lors de l’initialisation, du redimensionnement ou de l’arrêt du pool. Une instance de la classe Worker sera créée sur la pile de chaque thread de travail dans le pool. Chaque instance est active pendant la durée de vie du thread.
 
-Immédiatement après la création d’un thread, *Worker*::`Initialize` est appelée sur l’objet associé à ce thread. Immédiatement avant la destruction d’un thread, *Worker*::`Terminate` sera appelée. Les deux méthodes doivent accepter un **void** <strong>\*</strong> argument. La valeur de cet argument est passée au pool de threads par le biais du *pvWorkerParam* paramètre de [CThreadPool::Initialize](#initialize).
+Immédiatement après la création d’un thread, Worker`Initialize` :: sera appelé sur l’objet associé à ce thread. Juste avant la destruction d’un thread, Worker`Terminate` :: sera appelé. Les deux méthodes doivent accepter un argument **void** <strong>\*</strong> . La valeur de cet argument est passée au pool de threads par le biais du paramètre *pvWorkerParam* de [CThreadPool:: Initialize](#initialize).
 
-Lorsqu’il existe des éléments de travail dans les threads de la file d’attente et de travail disponibles pour le travail, un thread de travail extrait un élément au-delà de la file d’attente et appelez le `Execute` méthode de la *Worker* objet pour ce thread. Trois éléments sont ensuite transmis à la méthode : l’élément à partir de la file d’attente, le même `pvWorkerParam` passé à *Worker*:: `Initialize` et *Worker*:: `Terminate`et un pointeur vers le [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) structure utilisée pour la file d’attente du port de fin d’e/s.
+Lorsqu’il existe des éléments de travail dans la file d’attente et les threads de travail disponibles pour le travail, un thread de travail extrait `Execute` un élément de la file d’attente et appelle la méthode de l’objet *Worker* pour ce thread. Trois éléments sont ensuite passés à la méthode: l’élément de la file d’attente, `pvWorkerParam` le même passé à *Worker*:: `Initialize` et `Terminate` *Worker*::, et un pointeur vers la structure [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) utilisée pour la file d’attente du port de terminaison d’e/s .
 
-Le *Worker* classe déclare le type des éléments qui seront mises en attente sur le pool de threads en fournissant un typedef, *Worker*:: `RequestType`. Ce type doit être capable d’en cours de conversion vers et depuis un ULONG_PTR entière.
+La classe Worker déclare le type des éléments qui seront mis en file d’attente sur le pool de threads en fournissant un typedef, `RequestType` *Worker*::. Ce type doit pouvoir être casté vers et à partir d’un ULONG_PTR.
 
-Un exemple d’un *Worker* classe est [cnonstatelessworker, classe](../../atl/reference/cnonstatelessworker-class.md).
+La [classe CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)est un exemple de classe Worker.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -94,7 +94,7 @@ Un exemple d’un *Worker* classe est [cnonstatelessworker, classe](../../atl/re
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlutil.h
+**En-tête:** atlutil. h
 
 ##  <a name="addref"></a>  CThreadPool::AddRef
 
@@ -110,11 +110,11 @@ Retourne toujours 1.
 
 ### <a name="remarks"></a>Notes
 
-Cette classe n’implémente pas de contrôle de durée de vie à l’aide de comptage de références.
+Cette classe n’implémente pas le contrôle de durée de vie à l’aide du décompte de références.
 
 ##  <a name="cthreadpool"></a>  CThreadPool::CThreadPool
 
-Le constructeur pour le pool de threads.
+Constructeur pour le pool de threads.
 
 ```
 CThreadPool() throw();
@@ -122,11 +122,11 @@ CThreadPool() throw();
 
 ### <a name="remarks"></a>Notes
 
-Initialise la valeur de délai d’attente à ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT. La durée par défaut est de 36 secondes. Si nécessaire, vous pouvez définir votre propre valeur entière positive pour ce symbole avant d’inclure atlutil.h.
+Initialise la valeur de délai d’attente à ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT. L’heure par défaut est de 36 secondes. Si nécessaire, vous pouvez définir votre propre valeur entière positive pour ce symbole avant d’inclure atlutil. h.
 
 ##  <a name="dtor"></a>  CThreadPool::~CThreadPool
 
-Le destructeur pour le pool de threads.
+Destructeur du pool de threads.
 
 ```
 ~CThreadPool() throw();
@@ -134,11 +134,11 @@ Le destructeur pour le pool de threads.
 
 ### <a name="remarks"></a>Notes
 
-Appels [CThreadPool::Shutdown](#shutdown).
+Appelle [CThreadPool:: Shutdown](#shutdown).
 
 ##  <a name="getnumthreads"></a>  CThreadPool::GetNumThreads
 
-Appelez cette méthode pour obtenir le nombre de threads dans le pool.
+Appelez cette méthode pour connaître le nombre de threads dans le pool.
 
 ```
 int GetNumThreads() throw();
@@ -150,7 +150,7 @@ Retourne le nombre de threads dans le pool.
 
 ##  <a name="getqueuehandle"></a>  CThreadPool::GetQueueHandle
 
-Appelez cette méthode pour obtenir le handle de port de terminaison d’e/s utilisé pour la file d’attente des éléments de travail.
+Appelez cette méthode pour récupérer le handle du port de terminaison d’e/s utilisé pour mettre en file d’attente les éléments de travail.
 
 ```
 HANDLE GetQueueHandle() throw();
@@ -158,11 +158,11 @@ HANDLE GetQueueHandle() throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le handle de la file d’attente ou NULL si le pool de threads n’a pas été initialisé.
+Retourne le handle de file d’attente ou NULL si le pool de threads n’a pas été initialisé.
 
 ##  <a name="getsize"></a>  CThreadPool::GetSize
 
-Appelez cette méthode pour obtenir le nombre de threads dans le pool.
+Appelez cette méthode pour connaître le nombre de threads dans le pool.
 
 ```
 HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
@@ -171,7 +171,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 ### <a name="parameters"></a>Paramètres
 
 *pnNumThreads*<br/>
-[out] Adresse de la variable qui, en cas de réussite, reçoit le nombre de threads dans le pool.
+à Adresse de la variable qui, en cas de réussite, reçoit le nombre de threads dans le pool.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -179,7 +179,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ##  <a name="gettimeout"></a>  CThreadPool::GetTimeout
 
-Appelez cette méthode pour obtenir la durée maximale en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter.
+Appelez cette méthode pour obtenir la durée maximale en millisecondes pendant laquelle le pool de threads attendra qu’un thread s’arrête.
 
 ```
 HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
@@ -188,7 +188,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 ### <a name="parameters"></a>Paramètres
 
 *pdwMaxWait*<br/>
-[out] Adresse de la variable recevant, en cas de réussite, la durée maximale en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter.
+à Adresse de la variable qui, en cas de réussite, reçoit la durée maximale en millisecondes pendant laquelle le pool de threads attendra qu’un thread s’arrête.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -196,7 +196,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette valeur de délai d’attente est utilisée par [CThreadPool::Shutdown](#shutdown) si aucune autre valeur n’est fournie à cette méthode.
+Cette valeur de délai d’attente est utilisée par [CThreadPool:: Shutdown](#shutdown) si aucune autre valeur n’est fournie à cette méthode.
 
 ##  <a name="initialize"></a>  CThreadPool::Initialize
 
@@ -213,20 +213,20 @@ HRESULT Initialize(
 ### <a name="parameters"></a>Paramètres
 
 *pvWorkerParam*<br/>
-Le paramètre de travail à passer à l’objet de thread de travail `Initialize`, `Execute`, et `Terminate` méthodes.
+Paramètre Worker à passer aux méthodes, `Initialize` `Execute`et `Terminate` de l’objet thread de travail.
 
 *nNumThreads*<br/>
-Le nombre demandé de threads dans le pool.
+Nombre demandé de threads dans le pool.
 
-Si *nNumThreads* est négatif, sa valeur absolue sera multipliée par le nombre de processeurs sur l’ordinateur pour obtenir le nombre total de threads.
+Si *nNumThreads* est négatif, sa valeur absolue est multipliée par le nombre de processeurs de l’ordinateur pour connaître le nombre total de threads.
 
-Si *nNumThreads* est égal à zéro, ATLS_DEFAULT_THREADSPERPROC sera multiplié par le nombre de processeurs sur l’ordinateur pour obtenir le nombre total de threads.  La valeur par défaut est 2 threads par processeur. Si nécessaire, vous pouvez définir votre propre valeur entière positive pour ce symbole avant d’inclure atlutil.h.
+Si *nNumThreads* est égal à zéro, ATLS_DEFAULT_THREADSPERPROC est multiplié par le nombre de processeurs de l’ordinateur pour connaître le nombre total de threads.  La valeur par défaut est 2 threads par processeur. Si nécessaire, vous pouvez définir votre propre valeur entière positive pour ce symbole avant d’inclure atlutil. h.
 
 *dwStackSize*<br/>
-La taille de pile pour chaque thread dans le pool.
+Taille de la pile pour chaque thread dans le pool.
 
 *hCompletion*<br/>
-Le handle d’un objet à associer avec le port de terminaison.
+Handle d’un objet à associer au port de terminaison.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -242,11 +242,11 @@ HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void** ppv) throw();
 
 ### <a name="remarks"></a>Notes
 
-Objets de cette classe peuvent être interrogés pour la `IUnknown` et [interface IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md) interfaces.
+Les objets de cette classe peuvent être interrogés avec succès `IUnknown` pour les interfaces et [IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md) .
 
 ##  <a name="queuerequest"></a>  CThreadPool::QueueRequest
 
-Appelez cette méthode pour un élément de travail pour être géré par un thread dans le pool de la file d’attente.
+Appelez cette méthode pour mettre en file d’attente un élément de travail à gérer par un thread dans le pool.
 
 ```
 BOOL QueueRequest(Worker::RequestType request) throw();
@@ -255,15 +255,15 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 ### <a name="parameters"></a>Paramètres
 
 *request*<br/>
-La demande en file d’attente.
+Demande à mettre en file d’attente.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
+Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode ajoute un élément de travail à la file d’attente. Les threads dans le pool de choisir des éléments de la file d’attente dans l’ordre dans lequel ils sont reçus.
+Cette méthode ajoute un élément de travail à la file d’attente. Les threads du pool sélectionnent les éléments de la file d’attente dans l’ordre dans lequel ils sont reçus.
 
 ##  <a name="release"></a>  CThreadPool::Release
 
@@ -279,7 +279,7 @@ Retourne toujours 1.
 
 ### <a name="remarks"></a>Notes
 
-Cette classe n’implémente pas de contrôle de durée de vie à l’aide de comptage de références.
+Cette classe n’implémente pas le contrôle de durée de vie à l’aide du décompte de références.
 
 ##  <a name="setsize"></a>  CThreadPool::SetSize
 
@@ -292,11 +292,11 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 ### <a name="parameters"></a>Paramètres
 
 *nNumThreads*<br/>
-Le nombre demandé de threads dans le pool.
+Nombre demandé de threads dans le pool.
 
-Si *nNumThreads* est négatif, sa valeur absolue sera multipliée par le nombre de processeurs sur l’ordinateur pour obtenir le nombre total de threads.
+Si *nNumThreads* est négatif, sa valeur absolue est multipliée par le nombre de processeurs de l’ordinateur pour connaître le nombre total de threads.
 
-Si *nNumThreads* est égal à zéro, ATLS_DEFAULT_THREADSPERPROC sera multiplié par le nombre de processeurs sur l’ordinateur pour obtenir le nombre total de threads. La valeur par défaut est 2 threads par processeur. Si nécessaire, vous pouvez définir votre propre valeur entière positive pour ce symbole avant d’inclure atlutil.h.
+Si *nNumThreads* est égal à zéro, ATLS_DEFAULT_THREADSPERPROC est multiplié par le nombre de processeurs de l’ordinateur pour connaître le nombre total de threads. La valeur par défaut est 2 threads par processeur. Si nécessaire, vous pouvez définir votre propre valeur entière positive pour ce symbole avant d’inclure atlutil. h.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -304,11 +304,11 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Si le nombre de threads spécifié est inférieur au nombre de threads actuellement dans le pool, l’objet place un message d’arrêt sur la file d’attente pour être récupéré par un thread en attente. Lorsqu’un thread en attente extrait le message de la file d’attente, il avertit le pool de threads et quitte la procédure de thread. Ce processus est répété jusqu'à ce que le nombre de threads dans le pool atteint le nombre spécifié ou jusqu'à ce qu’aucun thread ne s’est arrêté pendant la période spécifiée par [GetTimeout](#gettimeout)/ [SetTimeout](#settimeout). Dans ce cas, la méthode retourne un HRESULT correspondant à WAIT_TIMEOUT et que le message d’arrêt en attente est annulé.
+Si le nombre de threads spécifiés est inférieur au nombre de threads actuellement dans le pool, l’objet place un message d’arrêt dans la file d’attente pour être récupéré par un thread en attente. Lorsqu’un thread en attente extrait le message de la file d’attente, il notifie le pool de threads et ferme la procédure de thread. Ce processus est répété jusqu’à ce que le nombre de threads dans le pool atteigne le nombre spécifié ou jusqu’à ce qu’aucun thread ne s’arrête dans la période spécifiée par [GetTimeout](#gettimeout)/ [setTimeout](#settimeout). Dans cette situation, la méthode retourne un HRESULT correspondant à WAIT_TIMEOUT et le message d’arrêt en attente est annulé.
 
 ##  <a name="settimeout"></a>  CThreadPool::SetTimeout
 
-Appelez cette méthode pour définir le temps maximal en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter.
+Appelez cette méthode pour définir la durée maximale en millisecondes pendant laquelle le pool de threads attendra qu’un thread s’arrête.
 
 ```
 HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
@@ -317,7 +317,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 ### <a name="parameters"></a>Paramètres
 
 *dwMaxWait*<br/>
-La durée maximale demandée en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter.
+Durée maximale demandée en millisecondes pendant laquelle le pool de threads attendra qu’un thread s’arrête.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -325,9 +325,9 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Le délai d’expiration est initialisée à ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT. La durée par défaut est de 36 secondes. Si nécessaire, vous pouvez définir votre propre valeur entière positive pour ce symbole avant d’inclure atlutil.h.
+Le délai d’attente est initialisé à ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT. L’heure par défaut est de 36 secondes. Si nécessaire, vous pouvez définir votre propre valeur entière positive pour ce symbole avant d’inclure atlutil. h.
 
-Notez que *dwMaxWait* est le délai d’attente pour un seul thread arrêter le pool. La durée maximale qui pourrait être prise pour supprimer plusieurs threads du pool peut être légèrement inférieure à *dwMaxWait* multiplié par le nombre de threads.
+Notez que *dwMaxWait* est la durée pendant laquelle le pool attend qu’un seul thread s’arrête. Le temps maximal qui peut être pris pour supprimer plusieurs threads du pool peut être légèrement inférieur à *dwMaxWait* multiplié par le nombre de threads.
 
 ##  <a name="shutdown"></a>  CThreadPool::Shutdown
 
@@ -340,11 +340,11 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 ### <a name="parameters"></a>Paramètres
 
 *dwMaxWait*<br/>
-La durée maximale demandée en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter. Si 0 ou aucune valeur n’est fournie, cette méthode utilise le délai défini par [CThreadPool::SetTimeout](#settimeout).
+Durée maximale demandée en millisecondes pendant laquelle le pool de threads attendra qu’un thread s’arrête. Si la valeur est 0 ou si aucune valeur n’est fournie, cette méthode utilise le délai d’attente défini par [CThreadPool:: setTimeout](#settimeout).
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode publie une demande d’arrêt à tous les threads dans le pool. Si le délai expire, cette méthode appelle [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) sur n’importe quel thread qui n’a pas été arrêté. Cette méthode est appelée automatiquement à partir du destructeur de la classe.
+Cette méthode publie une demande d’arrêt pour tous les threads du pool. Si le délai d’attente expire, cette méthode appellera [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) sur tout thread qui ne s’est pas arrêté. Cette méthode est appelée automatiquement à partir du destructeur de la classe.
 
 ## <a name="see-also"></a>Voir aussi
 
