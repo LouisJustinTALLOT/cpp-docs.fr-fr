@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: 379aa5607e459ad8acfd99c5899315afb84ac4a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1fc675b1014ab9a099e8310b52b7458f2bff65f
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392658"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916187"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase, classe
 
@@ -49,25 +49,25 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 
 |Nom|Description|
 |----------|-----------------|
-|[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|Construit le `CInterpolatorBase` objet.|
+|[CInterpolatorBase,:: CInterpolatorBase,](#cinterpolatorbase)|Construit l' `CInterpolatorBase` objet.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CInterpolatorBase::CreateInstance](#createinstance)|Crée une instance de `CInterpolatorBase` et stocke un pointeur à un interpolateur personnalisé, ce qui doit gérer les événements.|
-|[CInterpolatorBase::GetDependencies](#getdependencies)|Obtient les dépendances de l’interpolateur. (Substitue `CUIAnimationInterpolatorBase::GetDependencies`.)|
-|[CInterpolatorBase::GetDuration](#getduration)|Obtient la durée de l’interpolateur. (Substitue `CUIAnimationInterpolatorBase::GetDuration`.)|
-|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|Obtient la valeur finale à laquelle l’interpolateur. (Substitue `CUIAnimationInterpolatorBase::GetFinalValue`.)|
-|[CInterpolatorBase::InterpolateValue](#interpolatevalue)|Interpole la valeur à un offset donné (substitue `CUIAnimationInterpolatorBase::InterpolateValue`.)|
-|[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|Interpole la rapidité à un offset donné (substitue `CUIAnimationInterpolatorBase::InterpolateVelocity`.)|
-|[CInterpolatorBase::SetCustomInterpolator](#setcustominterpolator)|Stocke un pointeur à un interpolateur personnalisé, ce qui doit gérer les événements.|
-|[CInterpolatorBase::SetDuration](#setduration)|Définit la durée de l’interpolateur (substitue `CUIAnimationInterpolatorBase::SetDuration`.)|
-|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Définit la valeur initiale et la rapidité de l’interpolateur. (Substitue `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`.)|
+|[CInterpolatorBase::CreateInstance](#createinstance)|Crée une instance de `CInterpolatorBase` et stocke un pointeur vers l’interpolateur personnalisé, qui gère les événements.|
+|[CInterpolatorBase,:: GetDependencies](#getdependencies)|Obtient les dépendances de l’interpolateur. (Substitue `CUIAnimationInterpolatorBase::GetDependencies`.)|
+|[CInterpolatorBase,:: GetDuration](#getduration)|Obtient la durée de l’interpolateur. (Substitue `CUIAnimationInterpolatorBase::GetDuration`.)|
+|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|Obtient la valeur finale vers laquelle l’interpolateur dirige. (Substitue `CUIAnimationInterpolatorBase::GetFinalValue`.)|
+|[CInterpolatorBase::InterpolateValue](#interpolatevalue)|Interpole la valeur à un offset donné (substitutions `CUIAnimationInterpolatorBase::InterpolateValue`).|
+|[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|Interpole la vélocité à un décalage donné (substitutions `CUIAnimationInterpolatorBase::InterpolateVelocity`).|
+|[CInterpolatorBase::SetCustomInterpolator](#setcustominterpolator)|Stocke un pointeur vers l’interpolateur personnalisé, qui gère les événements.|
+|[CInterpolatorBase,:: SetDuration](#setduration)|Définit la durée de l’interpolateur (substitutions `CUIAnimationInterpolatorBase::SetDuration`).|
+|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Définit la valeur initiale et la vélocité de l’interpolateur. (Substitue `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`.)|
 
 ## <a name="remarks"></a>Notes
 
-Ce gestionnaire est créé et transmis à `IUIAnimationTransitionFactory::CreateTransition` lorsqu’un `CCustomTransition` objet est créé dans le cadre du processus d’initialisation de l’animation (démarré par `CAnimationController::AnimateGroup`). En général vous n’avez pas besoin d’utiliser cette classe directement, elle achemine simplement tous les événements dans un `CCustomInterpolator`-dont le pointeur est passé au constructeur de classe dérivée `CCustomTransition`.
+Ce gestionnaire est créé et passé à `IUIAnimationTransitionFactory::CreateTransition` lorsqu’un `CCustomTransition` objet est créé dans le cadre du processus d’initialisation d’animation (démarré par `CAnimationController::AnimateGroup`). En règle générale, vous n’avez pas besoin d’utiliser cette classe directement, elle achemine simplement `CCustomInterpolator`tous les événements vers une classe dérivée de, dont `CCustomTransition`le pointeur est passé au constructeur de.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -83,7 +83,7 @@ Ce gestionnaire est créé et transmis à `IUIAnimationTransitionFactory::Create
 
 ##  <a name="cinterpolatorbase"></a>  CInterpolatorBase::CInterpolatorBase
 
-Construit l’objet CInterpolatorBase.
+Construit l’objet CInterpolatorBase,.
 
 ```
 CInterpolatorBase();
@@ -91,7 +91,7 @@ CInterpolatorBase();
 
 ##  <a name="createinstance"></a>  CInterpolatorBase::CreateInstance
 
-Crée une instance de CInterpolatorBase et stocke un pointeur à un interpolateur personnalisé, ce qui doit gérer les événements.
+Crée une instance de CInterpolatorBase, et stocke un pointeur vers l’interpolateur personnalisé qui gère les événements.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -105,7 +105,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 Pointeur vers l’interpolateur personnalisé.
 
 *ppHandler*<br/>
-Sortie. Contient un pointeur vers une instance de CInterpolatorBase lorsque la fonction retourne.
+Sortie. Contient un pointeur vers l’instance de CInterpolatorBase, lorsque la fonction retourne.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -123,17 +123,17 @@ IFACEMETHOD(GetDependencies)(
 ### <a name="parameters"></a>Paramètres
 
 *initialValueDependencies*<br/>
-Sortie. Aspects de l’interpolateur qui dépendent de la valeur initiale est transmise à SetInitialValueAndVelocity.
+Sortie. Aspects de l’interpolation qui dépendent de la valeur initiale passée à SetInitialValueAndVelocity.
 
 *initialVelocityDependencies*<br/>
-Sortie. Aspects de l’interpolateur qui dépendent de la rapidité initiale transmise à SetInitialValueAndVelocity.
+Sortie. Aspects de l’interpolation qui dépendent de la rapidité initiale passée à SetInitialValueAndVelocity.
 
 *durationDependencies*<br/>
-Sortie. Aspects de l’interpolateur qui dépendent de la durée transmise à SetDuration.
+Sortie. Aspects de l’interpolation qui dépendent de la durée passée à SetDuration.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la méthode réussit, elle retourne S_OK. Retourne E_FAIL si CCustomInterpolator n’est pas défini, ou l’implémentation personnalisée retourne FALSE de la méthode GetDependencies.
+Si la méthode est réussie, elle retourne S_OK. Elle retourne E_FAIL si CCustomInterpolator, n’est pas défini, ou l’implémentation personnalisée retourne FALSe à partir de la méthode GetDependencies.
 
 ##  <a name="getduration"></a>  CInterpolatorBase::GetDuration
 
@@ -146,15 +146,15 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ### <a name="parameters"></a>Paramètres
 
 *duration*<br/>
-Sortie. La durée de la transition, en secondes.
+Sortie. Durée de la transition, en secondes.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la méthode réussit, elle retourne S_OK. Retourne E_FAIL si CCustomInterpolator n’est pas défini, ou l’implémentation personnalisée retourne FALSE de la méthode GetDuration.
+Si la méthode est réussie, elle retourne S_OK. Elle retourne E_FAIL si CCustomInterpolator, n’est pas défini, ou l’implémentation personnalisée retourne FALSe à partir de la méthode GetDuration.
 
 ##  <a name="getfinalvalue"></a>  CInterpolatorBase::GetFinalValue
 
-Obtient la valeur finale à laquelle l’interpolateur.
+Obtient la valeur finale vers laquelle l’interpolateur dirige.
 
 ```
 IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
@@ -163,59 +163,59 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ### <a name="parameters"></a>Paramètres
 
 *value*<br/>
-Sortie. La valeur finale d’une variable à la fin de la transition.
+Sortie. Valeur finale d’une variable à la fin de la transition.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la méthode réussit, elle retourne S_OK. Retourne E_FAIL si CCustomInterpolator n’est pas défini, ou l’implémentation personnalisée retourne FALSE de la méthode GetFinalValue.
+Si la méthode est réussie, elle retourne S_OK. Elle retourne E_FAIL si CCustomInterpolator, n’est pas défini, ou l’implémentation personnalisée retourne FALSe à partir de la méthode GetFinalValue.
 
 ##  <a name="interpolatevalue"></a>  CInterpolatorBase::InterpolateValue
 
-Interpole la valeur à un offset donné
+Interpole la valeur à un offset donné.
 
 ```
 IFACEMETHOD(InterpolateValue)(
-  __in UI_ANIMATION_SECONDS offset,
-  __out DOUBLE* value);
+    __in UI_ANIMATION_SECONDS offset,
+    __out DOUBLE* value);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *offset*<br/>
-Le décalage à partir du début de la transition. Le décalage est toujours supérieure ou égale à zéro et inférieur à la durée de la transition. Cette méthode n’est pas appelée si la durée de la transition est égal à zéro.
+Offset à partir du début de la transition. Le décalage est toujours supérieur ou égal à zéro et inférieur à la durée de la transition. Cette méthode n’est pas appelée si la durée de la transition est égale à zéro.
 
 *value*<br/>
-Sortie. La valeur interpolée.
+Sortie. Valeur interpolée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la méthode réussit, elle retourne S_OK. Retourne E_FAIL si CCustomInterpolator n’est pas défini, ou l’implémentation personnalisée retourne FALSE de la méthode InterpolateValue.
+Si la méthode est réussie, elle retourne S_OK. Elle retourne E_FAIL si CCustomInterpolator, n’est pas défini, ou l’implémentation personnalisée retourne FALSe à partir de la méthode InterpolateValue.
 
 ##  <a name="interpolatevelocity"></a>  CInterpolatorBase::InterpolateVelocity
 
-Interpole la rapidité à un offset donné
+Interpole la vélocité à un décalage donné.
 
 ```
 IFACEMETHOD(InterpolateVelocity)(
-  __in UI_ANIMATION_SECONDS offset,
-  __out DOUBLE* velocity);
+    __in UI_ANIMATION_SECONDS offset,
+    __out DOUBLE* velocity);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *offset*<br/>
-Le décalage à partir du début de la transition. Le décalage est toujours supérieure ou égale à zéro et inférieure ou égale à la durée de la transition. Cette méthode n’est pas appelée si la durée de la transition est égal à zéro.
+Offset à partir du début de la transition. Le décalage est toujours supérieur ou égal à zéro et inférieur ou égal à la durée de la transition. Cette méthode n’est pas appelée si la durée de la transition est égale à zéro.
 
 *velocity*<br/>
-Sortie. La rapidité de la variable à l’offset.
+Sortie. Vélocité de la variable à l’offset.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la méthode réussit, elle retourne S_OK. Retourne E_FAIL si CCustomInterpolator n’est pas défini, ou l’implémentation personnalisée retourne FALSE de la méthode InterpolateVelocity.
+Si la méthode est réussie, elle retourne S_OK. Elle retourne E_FAIL si CCustomInterpolator, n’est pas défini, ou l’implémentation personnalisée retourne FALSe à partir de la méthode InterpolateVelocity.
 
 ##  <a name="setcustominterpolator"></a>  CInterpolatorBase::SetCustomInterpolator
 
-Stocke un pointeur à un interpolateur personnalisé, ce qui doit gérer les événements.
+Stocke un pointeur vers l’interpolateur personnalisé, qui gère les événements.
 
 ```
 void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
@@ -237,33 +237,33 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ### <a name="parameters"></a>Paramètres
 
 *duration*<br/>
-La durée de la transition.
+Durée de la transition.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la méthode réussit, elle retourne S_OK. Retourne E_FAIL si CCustomInterpolator n’est pas défini, ou l’implémentation personnalisée retourne FALSE de la méthode SetDuration.
+Si la méthode est réussie, elle retourne S_OK. Elle retourne E_FAIL si CCustomInterpolator, n’est pas défini, ou l’implémentation personnalisée retourne FALSe à partir de la méthode SetDuration.
 
 ##  <a name="setinitialvalueandvelocity"></a>  CInterpolatorBase::SetInitialValueAndVelocity
 
-Définit la valeur initiale et la rapidité de l’interpolateur.
+Définit la valeur initiale et la vélocité de l’interpolateur.
 
 ```
 IFACEMETHOD(SetInitialValueAndVelocity)(
-  __in DOUBLE initialValue,
-  __in DOUBLE initialVelocity);
+    __in DOUBLE initialValue,
+    __in DOUBLE initialVelocity);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *initialValue*<br/>
-La valeur de la variable au début de la transition.
+Valeur de la variable au début de la transition.
 
 *initialVelocity*<br/>
-La rapidité de la variable au début de la transition.
+Rapidité de la variable au début de la transition.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la méthode réussit, elle retourne S_OK. Retourne E_FAIL si CCustomInterpolator n’est pas défini, ou l’implémentation personnalisée retourne FALSE de la méthode SetInitialValueAndVelocity.
+Si la méthode est réussie, elle retourne S_OK. Elle retourne E_FAIL si CCustomInterpolator, n’est pas défini, ou l’implémentation personnalisée retourne FALSe à partir de la méthode SetInitialValueAndVelocity.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: 7d77ca7dc55273e6084e919323ed71e55fa68a2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2eb899e66acbadbe45aae2c8adbb356bf4730191
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181845"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915248"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT, structure
 
-Écrit votre [Gestionnaire de notification d’info-bulle outil](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), vous devez utiliser le **TOOLTIPTEXT** structure. Les membres de la **TOOLTIPTEXT** structure sont :
+Lors de l’écriture de votre gestionnaire de notifications d' [info-bulle](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), vous devez utiliser la structure **ToolTipText** . Les membres de la structure **ToolTipText** sont:
 
 ```cpp
 typedef struct {
@@ -31,24 +31,24 @@ typedef struct {
 ```
 
 *hdr*<br/>
-Identifie l’outil qui a besoin de texte. Le seul membre de cette structure, que vous devrez peut-être est l’ID de commande. du contrôle ID de commande du contrôle sera dans le *idFrom* membre de la **NMHDR** structure, accédé avec la syntaxe `hdr.idFrom`. Consultez [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) pour une description des membres de la **NMHDR** structure.
+Identifie l’outil qui a besoin de texte. Le seul membre de cette structure dont vous pouvez avoir besoin est l’ID de commande du contrôle. L’ID de commande du contrôle se trouve dans le membre *idFrom* de la structure **NMHDR** , accessible à l' `hdr.idFrom`aide de la syntaxe. Consultez [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) pour une discussion sur les membres de la structure **NMHDR** .
 
 *lpszText*<br/>
-Adresse d’une chaîne qui recevra le texte pour un outil.
+Adresse d’une chaîne devant recevoir le texte d’un outil.
 
 *szText*<br/>
-Mémoire tampon qui reçoit le texte info-bulle. Une application peut copier le texte à cette mémoire tampon comme alternative à la spécification d’une adresse de la chaîne.
+Mémoire tampon qui reçoit le texte d’info-bulle. Une application peut copier le texte dans cette mémoire tampon en guise d’alternative à la spécification d’une adresse de chaîne.
 
 *hinst*<br/>
-Handle de l’instance qui contient une chaîne à utiliser en tant que le texte info-bulle. Si *lpszText* est l’adresse du texte info-bulle, ce membre a la valeur NULL.
+Handle de l’instance qui contient une chaîne à utiliser comme texte d’info-bulle. Si *lpszText* est l’adresse du texte d’info-bulle, ce membre est null.
 
-Lorsque vous gérez le `TTN_NEEDTEXT` notification de message, spécifiez la chaîne à afficher dans une des manières suivantes :
+Lorsque vous gérez le `TTN_NEEDTEXT` message de notification, spécifiez la chaîne à afficher de l’une des manières suivantes:
 
-- Copiez le texte dans la mémoire tampon spécifiée par le *szText* membre.
+- Copiez le texte dans la mémoire tampon spécifiée par le membre *szText* .
 
-- Copiez l’adresse de la mémoire tampon qui contient le texte à la *lpszText* membre.
+- Copiez l’adresse de la mémoire tampon qui contient le texte dans le membre *lpszText* .
 
-- Copiez l’identificateur de ressource de chaîne à la *lpszText* membre et copie le handle de l’instance qui contient la ressource à la *hinst* membre.
+- Copiez l’identificateur d’une ressource de type chaîne dans le membre *lpszText* et copiez le handle de l’instance qui contient la ressource dans le membre *HINST* .
 
 ## <a name="see-also"></a>Voir aussi
 

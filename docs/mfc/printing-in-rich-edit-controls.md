@@ -6,22 +6,22 @@ helpviewer_keywords:
 - rich edit controls [MFC], printing
 - CRichEditCtrl class [MFC], printing
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
-ms.openlocfilehash: 2ddc52e43da2e409117ccc5169442002ac27a315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae7212eaa8eed1088a507973c80311f169c7751
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238393"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916266"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Impression dans des contrôles RichEdit
 
-Vous pouvez indiquer à un contrôle rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) pour afficher sa sortie pour un périphérique spécifique, tel qu’une imprimante. Vous pouvez également spécifier le périphérique de sortie pour lequel un contrôle rich edit met en forme son texte.
+Vous pouvez demander à un contrôle Rich Edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) d’afficher sa sortie pour un périphérique spécifié, tel qu’une imprimante. Vous pouvez également spécifier le périphérique de sortie pour lequel un contrôle RichEdit met en forme son texte.
 
-Pour mettre en forme le contenu d’un contrôle RichEdit pour un périphérique spécifique, vous pouvez utiliser la [FormatRange](../mfc/reference/cricheditctrl-class.md#formatrange) fonction membre. Le [FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-_formatrange) structure utilisée avec cette fonction spécifie la plage de texte à mettre en forme, ainsi que le contexte de périphérique (DC) pour l’appareil cible.
+Pour mettre en forme une partie du contenu d’un contrôle Rich Edit pour un appareil spécifique, vous pouvez utiliser la fonction membre [FormatRange](../mfc/reference/cricheditctrl-class.md#formatrange) . La structure [FormatRange](/windows/desktop/api/richedit/ns-richedit-formatrange) utilisée avec cette fonction spécifie la plage de texte à mettre en forme, ainsi que le contexte de périphérique (DC) du périphérique cible.
 
-Après la mise en forme de texte pour un périphérique de sortie, vous pouvez envoyer la sortie à l’appareil à l’aide de la [DisplayBand](../mfc/reference/cricheditctrl-class.md#displayband) fonction membre. À l’aide de manière répétée `FormatRange` et `DisplayBand`, une application qui imprime le contenu d’un contrôle RichEdit peut implémenter de tranche. (Bandes concerne la division de la sortie en parties plus petites à des fins d’impression.)
+Après la mise en forme du texte pour un périphérique de sortie, vous pouvez envoyer la sortie à l’appareil à l’aide de la fonction membre [DisplayBand](../mfc/reference/cricheditctrl-class.md#displayband) . En utilisant `FormatRange` de façon répétée et `DisplayBand`, une application qui imprime le contenu d’un contrôle RichEdit peut implémenter des bandes. (Le regroupement est la Division de la sortie en plus petites parties à des fins d’impression.)
 
-Vous pouvez utiliser la [fonction membre SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice) fonction membre pour spécifier le périphérique cible pour lequel un contrôle rich edit met en forme son texte. Cette fonction est utile pour WYSIWYG (ce que vous voyez ce que vous obtenez) mise en forme, dans laquelle une application place le texte à l’aide de la métrique des polices de l’imprimante par défaut au lieu de l’écran.
+Vous pouvez utiliser la fonction membre [SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice) pour spécifier le périphérique cible pour lequel un contrôle RichEdit met en forme son texte. Cette fonction est utile pour la mise en forme WYSIWYG (ce que vous obtenez), dans laquelle une application positionne le texte en utilisant les mesures de police de l’imprimante par défaut à la place de l’écran.
 
 ## <a name="see-also"></a>Voir aussi
 

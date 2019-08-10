@@ -1,5 +1,5 @@
 ---
-title: Cpanedivider, classe
+title: CPaneDivider, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CPaneDivider
@@ -84,18 +84,18 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: 43cba977d50e161c58d3e240e1282049a415c88d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4888fbf2a95652b0a38adc8ecd059a7515636cb
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373100"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866115"
 ---
-# <a name="cpanedivider-class"></a>Cpanedivider, classe
+# <a name="cpanedivider-class"></a>CPaneDivider, classe
 
-Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
+Pour plus d’informations, consultez le code source situé dans le dossier **VC\\ATLMFC\\SRC\\MFC** de votre installation de Visual Studio.
 
-Le `CPaneDivider` classe divise deux volets, divise deux groupes de volets ou sépare un groupe de volets de la zone cliente de la fenêtre frame principale.
+La `CPaneDivider` classe divise deux volets, divise deux groupes de volets ou sépare un groupe de volets de la zone cliente de la fenêtre frame principale.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -119,10 +119,10 @@ class CPaneDivider : public CBasePane
 |[CPaneDivider::AddPane](#addpane)||
 |[CPaneDivider::AddRecentPane](#addrecentpane)||
 |[CPaneDivider::CalcExpectedDockedRect](#calcexpecteddockedrect)||
-|[CPaneDivider::CalcFixedLayout](#calcfixedlayout)|(Substitue [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
+|[CPaneDivider::CalcFixedLayout](#calcfixedlayout)|(Substitue [CBasePane:: CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
 |[CPaneDivider::CheckVisibility](#checkvisibility)||
-|[CPaneDivider::CreateEx](#createex)|(Substitue [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).)|
-|[CPaneDivider::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(Overrides [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
+|[CPaneDivider::CreateEx](#createex)|(Substitue [CBasePane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).)|
+|[CPaneDivider::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(Substitue [CBasePane::D oesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
 |[CPaneDivider::DoesContainFloatingPane](#doescontainfloatingpane)||
 |[CPaneDivider::FindPaneContainer](#findpanecontainer)||
 |[CPaneDivider::FindTabbedPane](#findtabbedpane)||
@@ -133,9 +133,9 @@ class CPaneDivider : public CBasePane
 |[CPaneDivider::GetWidth](#getwidth)||
 |[CPaneDivider::Init](#init)||
 |[CPaneDivider::InsertPane](#insertpane)||
-|[CPaneDivider::IsAutoHideMode](#isautohidemode)|(Substitue [CBasePane::IsAutoHideMode](../../mfc/reference/cbasepane-class.md#isautohidemode).)|
+|[CPaneDivider::IsAutoHideMode](#isautohidemode)|(Substitue [CBasePane:: IsAutoHideMode](../../mfc/reference/cbasepane-class.md#isautohidemode).)|
 |[CPaneDivider::IsDefault](#isdefault)||
-|[CPaneDivider::IsHorizontal](#ishorizontal)|(Substitue [CBasePane::IsHorizontal](../../mfc/reference/cbasepane-class.md#ishorizontal).)|
+|[CPaneDivider::IsHorizontal](#ishorizontal)|(Substitue [CBasePane:: IsHorizontal](../../mfc/reference/cbasepane-class.md#ishorizontal).)|
 |[CPaneDivider::Move](#move)||
 |[CPaneDivider::NotifyAboutRelease](#notifyaboutrelease)||
 |[CPaneDivider::OnShowPane](#onshowpane)||
@@ -154,41 +154,43 @@ class CPaneDivider : public CBasePane
 
 |Nom|Description|
 |----------|-----------------|
-|[CPaneDivider::GetPanes](#getpanes)|Retourne la liste des volets qui se trouvent dans le [cpanecontainer, classe](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour les diviseurs de volet par défaut.|
-|[CPaneDivider::GetPaneDividers](#getpanedividers)|Retourne la liste de diviseurs de volet qui résident dans le [cpanecontainer, classe](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour les diviseurs de volet par défaut.|
+|[CPaneDivider::GetPanes](#getpanes)|Retourne la liste des volets qui résident dans la [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour les diviseurs de volet par défaut.|
+|[CPaneDivider::GetPaneDividers](#getpanedividers)|Retourne la liste des diviseurs de volet qui résident dans la [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour les diviseurs de volet par défaut.|
 
 ### <a name="data-members"></a>Membres de données
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Spécifie la largeur par défaut en pixels de tous les diviseurs de volet dans l’application.|
-|[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Contient un pointeur vers les informations de classe runtime concernant un `CPaneDivider`-objet dérivé.|
+|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Spécifie la largeur par défaut en pixels de tous les diviseurs de volet de l’application.|
+|[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Contient un pointeur vers les informations de la classe Runtime `CPaneDivider`à propos d’un objet dérivé de.|
 
 ## <a name="remarks"></a>Notes
 
-L’infrastructure crée `CPaneDivider` objets automatiquement lorsqu’un volet est ancré.
+L’infrastructure crée `CPaneDivider` automatiquement des objets lorsqu’un volet est ancré.
 
-Il existe deux types de diviseurs de volet :
+Il existe deux types de diviseurs de volets:
 
-- un diviseur de volet par défaut est créé lorsqu’un groupe de volets est ancré à un côté de la fenêtre frame principale. Le diviseur de volet par défaut conserve un pointeur vers le [cpanecontainermanager, classe](../../mfc/reference/cpanecontainermanager-class.md) et redirige la plupart des opérations sur le groupe de volets (telles que le redimensionnement d’un volet ou d’ancrage d’un autre volet ou conteneur) pour le Gestionnaire de conteneur. Chaque volet d’ancrage conserve un pointeur vers son diviseur de volet par défaut.
+- un diviseur de volet par défaut est créé lorsqu’un groupe de volets est ancré à un côté de la fenêtre frame principale. Le diviseur de volet par défaut contient un pointeur vers la [classe CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) et redirige la plupart des opérations sur le groupe de volets (telles que le redimensionnement d’un volet ou l’ancrage d’un autre volet ou conteneur) au gestionnaire de conteneurs. Chaque volet d’ancrage conserve un pointeur vers son séparateur de volet par défaut.
 
-- Un diviseur de volet régulière divise juste deux volets dans un conteneur. Pour plus d’informations, consultez [cpanecontainer, classe](../../mfc/reference/cpanecontainer-class.md).
+- Un diviseur de volet normal divise simplement deux volets dans un conteneur. Pour plus d’informations, consultez [CPaneContainer, classe](../../mfc/reference/cpanecontainer-class.md).
 
 ## <a name="example"></a>Exemple
 
-L'exemple suivant montre comment obtenir un objet `CPaneDivider` à partir d'un objet `CWorkspaceBar`. Cet extrait de code fait partie de la [exemple de démonstration des onglets MDI](../../overview/visual-cpp-samples.md).
+L'exemple suivant montre comment obtenir un objet `CPaneDivider` à partir d'un objet `CWorkspaceBar`. Cet extrait de code fait partie de l' [exemple de démonstration MDI Tabs](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
-[CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
-
-[CBasePane](../../mfc/reference/cbasepane-class.md) [CPaneDivider](../../mfc/reference/cpanedivider-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CPaneDivider](../../mfc/reference/cpanedivider-class.md)
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxPaneDivider.h
+**En-tête:** afxPaneDivider. h
 
 ##  <a name="setautohidemode"></a>  CPaneDivider::SetAutoHideMode
 
@@ -198,7 +200,7 @@ void SetAutoHideMode(BOOL bMode);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bMode*<br/>
+dans *bMode*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -210,7 +212,7 @@ void SetPaneContainerManager(CPaneContainerManager* p);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *p*<br/>
+dans *p*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -222,7 +224,7 @@ virtual void AddPane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pBar*<br/>
+dans *pBar*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -241,10 +243,10 @@ virtual BOOL AddPaneContainer(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *barContainerManager*<br/>
-[in] *bOuterEdge*<br/>
-[in] *pTargetBar*<br/>
-[in] *dwAlignment*<br/>
+dans *barContainerManager*<br/>
+dans *bOuterEdge*<br/>
+dans *pTargetBar*<br/>
+dans *dwAlignment*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -258,7 +260,7 @@ virtual CDockablePane* AddRecentPane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pBar*<br/>
+dans *pBar*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -278,10 +280,10 @@ virtual void CalcExpectedDockedRect(
 ### <a name="parameters"></a>Paramètres
 
 [in] *pWndToDock*<br/>
-[in] *ptMouse*<br/>
-[in] *rectResult*<br/>
-[in] *bDrawTab*<br/>
-[in] *ppTargetBar*<br/>
+dans *ptMouse*<br/>
+dans *rectResult*<br/>
+dans *bDrawTab*<br/>
+dans *ppTargetBar*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -295,8 +297,8 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bStretch*<br/>
-[in] *bHorz*<br/>
+dans *bStretch*<br/>
+dans *bHorz*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -324,8 +326,8 @@ CPaneDivider(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bDefaultSlider*<br/>
-[in] *pParent*<br/>
+dans *bDefaultSlider*<br/>
+dans *pParent*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -345,12 +347,12 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *dwStyleEx*<br/>
-[in] *dwStyle*<br/>
-[in] *rect*<br/>
-[in] *pParentWnd*<br/>
-[in] *nID*<br/>
-[in] *pContext*<br/>
+dans *dwStyleEx*<br/>
+dans *dwStyle*<br/>
+dans *Rect*<br/>
+dans *pParentWnd*<br/>
+dans *nid*<br/>
+dans *pContext*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -386,8 +388,8 @@ CPaneContainer* FindPaneContainer(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pBar*<br/>
-[in] *bLeftBar*<br/>
+dans *pBar*<br/>
+dans *bLeftBar*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -401,7 +403,7 @@ CDockablePane* FindTabbedPane(UINT nID);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *nID*<br/>
+dans *nid*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -429,7 +431,7 @@ const CBasePane* GetFirstPane() const;
 
 ##  <a name="getpanedividers"></a>  CPaneDivider::GetPaneDividers
 
-Retourne la liste de diviseurs de volet qui résident dans le [cpanecontainer, classe](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour les diviseurs de volet par défaut.
+Retourne la liste des diviseurs de volet qui résident dans la [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour les diviseurs de volet par défaut.
 
 ```
 void GetPaneDividers(CObList& lstSliders);
@@ -438,11 +440,11 @@ void GetPaneDividers(CObList& lstSliders);
 ### <a name="parameters"></a>Paramètres
 
 *lstSliders*<br/>
-[out] Contient la liste de diviseurs de volet qui résident dans le conteneur de volet.
+à Contient la liste des diviseurs de volet qui se trouvent dans le conteneur du volet.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode doit être appelée pour diviseurs de volet par défaut uniquement. Un diviseur de volet par défaut est un séparateur qui redimensionne le conteneur de volet entière.
+Cette méthode doit être appelée uniquement pour les diviseurs de volet par défaut. Un diviseur de volet par défaut est un séparateur qui redimensionne le conteneur entier du volet.
 
 ##  <a name="getpanedividerstyle"></a>  CPaneDivider::GetPaneDividerStyle
 
@@ -456,7 +458,7 @@ DWORD GetPaneDividerStyle() const;
 
 ##  <a name="getpanes"></a>  CPaneDivider::GetPanes
 
-Retourne la liste des volets qui se trouvent dans le [cpanecontainer, classe](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour récupérer des diviseurs de volet par défaut.
+Retourne la liste des volets qui résident dans la [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Cette méthode doit être appelée uniquement pour récupérer les diviseurs de volet par défaut.
 
 ```
 void GetPanes(CObList& lstBars);
@@ -465,11 +467,11 @@ void GetPanes(CObList& lstBars);
 ### <a name="parameters"></a>Paramètres
 
 *lstBars*<br/>
-[out] Contient la liste des volets qui se trouvent dans le conteneur de volet.
+à Contient la liste des volets qui se trouvent dans le conteneur du volet.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode doit être appelée pour diviseurs de volet par défaut uniquement. Un diviseur de volet par défaut est un séparateur qui redimensionne le conteneur de volet entière.
+Cette méthode doit être appelée uniquement pour les diviseurs de volet par défaut. Un diviseur de volet par défaut est un séparateur qui redimensionne le conteneur entier du volet.
 
 ##  <a name="getrootcontainerrect"></a>  CPaneDivider::GetRootContainerRect
 
@@ -501,8 +503,8 @@ void Init(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bDefaultSlider*<br/>
-[in] *pParent*<br/>
+dans *bDefaultSlider*<br/>
+dans *pParent*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -518,10 +520,10 @@ virtual BOOL InsertPane(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pBarToInsert*<br/>
-[in] *pTargetBar*<br/>
-[in] *dwAlignment*<br/>
-[in] *lpRect*<br/>
+dans *pBarToInsert*<br/>
+dans *pTargetBar*<br/>
+dans *dwAlignment*<br/>
+dans *lpRect*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -559,7 +561,7 @@ BOOL IsHorizontal() const;
 
 ##  <a name="m_ndefaultwidth"></a>  CPaneDivider::m_nDefaultWidth
 
-Spécifie la largeur par défaut, en pixels, de tous les diviseurs de volet dans l’application.
+Spécifie la largeur par défaut, en pixels, de tous les diviseurs de volets de l’application.
 
 ```
 AFX_IMPORT_DATA static int m_nDefaultWidth;
@@ -575,14 +577,14 @@ virtual void Move(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *ptOffset*<br/>
-[in] *bAdjustLayout*<br/>
+dans *ptOffset*<br/>
+dans *bAdjustLayout*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="m_psliderrtc"></a>  CPaneDivider::m_pSliderRTC
 
-Contient un pointeur vers les informations de classe runtime concernant un `CPaneDivider`-objet dérivé.
+Contient un pointeur vers les informations de la classe `CPaneDivider`Runtime à propos d’un objet dérivé de.
 
 ```
 AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;
@@ -590,11 +592,11 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;
 
 ### <a name="remarks"></a>Notes
 
-Définissez cette variable de membre si vous créez un diviseur de volet personnalisé. Ainsi, l’infrastructure pour créer votre diviseur de volet lorsque le volet est dessiné.
+Définissez cette variable membre si vous créez un diviseur de volet personnalisé. Cela permet à l’infrastructure de créer votre séparateur de volets lorsque le volet est dessiné.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment définir le `m_pSliderRTC` variable membre :
+L’exemple suivant montre comment définir la `m_pSliderRTC` variable de membre:
 
 ```
 class CMySplitter : public CPaneDivider
@@ -623,8 +625,8 @@ virtual void OnShowPane(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pBar*<br/>
-[in] *bShow*<br/>
+dans *pBar*<br/>
+dans *bShow*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -644,7 +646,7 @@ virtual void RemovePane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pBar*<br/>
+dans *pBar*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -658,8 +660,8 @@ virtual BOOL ReplacePane(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pBarToReplace*<br/>
-[in] *pBarToReplaceWith*<br/>
+dans *pBarToReplace*<br/>
+dans *pBarToReplaceWith*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -675,8 +677,8 @@ virtual void RepositionPanes(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *rectNew*<br/>
-[in] *hdwp*<br/>
+dans *rectNew*<br/>
+dans *hdwp*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -688,7 +690,7 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *ar*<br/>
+dans *AR*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -700,7 +702,7 @@ void ShowWindow(int nCmdShow);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *nCmdShow*<br/>
+dans *nCmdShow*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -712,7 +714,7 @@ void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pBar*<br/>
+dans *pBar*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -726,8 +728,8 @@ void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDockingBar*<br/>
-[in] *pTabbedBar*<br/>
+dans *pDockingBar*<br/>
+dans *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Notes
 

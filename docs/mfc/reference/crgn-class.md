@@ -1,5 +1,5 @@
 ---
-title: CRgn (classe)
+title: CRgn, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CRgn
@@ -46,14 +46,14 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 54018c3d59fe3d7e3d7a5062cda9b40da4f5d586
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66721f34a8ac2b6dac6addcfa04a88b46a37ee60
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372139"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916828"
 ---
-# <a name="crgn-class"></a>CRgn (classe)
+# <a name="crgn-class"></a>CRgn, classe
 
 Encapsule une région GDI (Graphics Device Interface) Windows.
 
@@ -75,39 +75,39 @@ class CRgn : public CGdiObject
 
 |Nom|Description|
 |----------|-----------------|
-|[CRgn::CombineRgn](#combinergn)|Définit un `CRgn` objet afin qu’elle est équivalente à l’union de deux spécifié `CRgn` objets.|
-|[CRgn::CopyRgn](#copyrgn)|Définit un `CRgn` afin qu’il soit une copie d’un élément spécifié de l’objet `CRgn` objet.|
+|[CRgn::CombineRgn](#combinergn)|Définit un `CRgn` objet de manière à ce qu’il soit équivalent à l’Union `CRgn` de deux objets spécifiés.|
+|[CRgn::CopyRgn](#copyrgn)|Définit un `CRgn` objet afin qu’il s’agit d’une copie d' `CRgn` un objet spécifié.|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Initialise un `CRgn` objet avec une zone elliptique.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initialise un `CRgn` objet avec une zone elliptique définie par un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure.|
-|[CRgn::CreateFromData](#createfromdata)|Crée une région à partir de la région et la transformation donnée.|
-|[CRgn::CreateFromPath](#createfrompath)|Crée une région à partir du chemin qui est sélectionné dans le contexte de périphérique donné.|
-|[CRgn::CreatePolygonRgn](#createpolygonrgn)|Initialise un `CRgn` objet avec une zone polygonale. Le système ferme le polygone automatiquement, si nécessaire, en dessinant une ligne à partir du dernier sommet au premier.|
-|[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Initialise un `CRgn` objet avec une région consistant en une série de polygones fermés. Les polygones peuvent être disjoints ou ils peuvent se chevaucher.|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initialise un `CRgn` objet avec une zone elliptique définie par une structure [Rect](/windows/desktop/api/windef/ns-windef-tagrect) .|
+|[CRgn::CreateFromData](#createfromdata)|Crée une région à partir de la région donnée et des données de transformation.|
+|[CRgn::CreateFromPath](#createfrompath)|Crée une région à partir du chemin d’accès sélectionné dans le contexte de périphérique donné.|
+|[CRgn::CreatePolygonRgn](#createpolygonrgn)|Initialise un `CRgn` objet avec une région polygonale. Le système ferme automatiquement le polygone, si nécessaire, en dessinant une ligne du dernier vertex jusqu’au premier.|
+|[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Initialise un `CRgn` objet avec une zone composée d’une série de polygones fermés. Les polygones peuvent être disjoints ou se chevaucher.|
 |[CRgn::CreateRectRgn](#createrectrgn)|Initialise un `CRgn` objet avec une zone rectangulaire.|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Initialise un `CRgn` objet avec une zone rectangulaire définie par un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure.|
-|[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Initialise un `CRgn` objet avec une zone rectangulaire aux angles arrondis.|
-|[CRgn::EqualRgn](#equalrgn)|Contrôle deux `CRgn` objets pour déterminer s’ils sont équivalents.|
-|[CRgn::FromHandle](#fromhandle)|Retourne un pointeur vers un `CRgn` lorsqu’un handle vers une région de Windows de l’objet.|
-|[CRgn::GetRegionData](#getregiondata)|Remplit la mémoire tampon spécifiée avec les données décrivant la zone donnée.|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Initialise un `CRgn` objet avec une zone rectangulaire définie par une structure [Rect](/windows/desktop/api/windef/ns-windef-tagrect) .|
+|[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Initialise un `CRgn` objet avec une zone rectangulaire avec des angles arrondis.|
+|[CRgn::EqualRgn](#equalrgn)|Vérifie deux `CRgn` objets pour déterminer s’ils sont équivalents.|
+|[CRgn::FromHandle](#fromhandle)|Retourne un pointeur vers un `CRgn` objet en fonction d’un handle vers une région Windows.|
+|[CRgn::GetRegionData](#getregiondata)|Remplit la mémoire tampon spécifiée avec des données décrivant la région donnée.|
 |[CRgn::GetRgnBox](#getrgnbox)|Récupère les coordonnées du rectangle englobant d’un `CRgn` objet.|
-|[CRgn::OffsetRgn](#offsetrgn)|Déplace un `CRgn` objet par offsets spécifiés.|
-|[CRgn::PtInRegion](#ptinregion)|Détermine si un point spécifié se trouve dans la région.|
-|[CRgn::RectInRegion](#rectinregion)|Détermine si une partie d’un rectangle spécifié est dans les limites de la région.|
-|[CRgn::SetRectRgn](#setrectrgn)|Définit le `CRgn` objet dans la région rectangulaire spécifiée.|
+|[CRgn::OffsetRgn](#offsetrgn)|Déplace un `CRgn` objet selon les décalages spécifiés.|
+|[CRgn::P tInRegion](#ptinregion)|Détermine si un point spécifié se trouve dans la zone.|
+|[CRgn::RectInRegion](#rectinregion)|Détermine si une partie d’un rectangle spécifié se trouve dans les limites de la zone.|
+|[CRgn::SetRectRgn](#setrectrgn)|Définit l' `CRgn` objet sur la zone rectangulaire spécifiée.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CRgn::operator HRGN](#operator_hrgn)|Retourne le handle Windows contenu dans le `CRgn` objet.|
+|[CRgn:: Operator HRGN](#operator_hrgn)|Retourne le handle Windows contenu dans l' `CRgn` objet.|
 
 ## <a name="remarks"></a>Notes
 
-Une région est une zone polygonale ou ellipse dans une fenêtre. Pour utiliser les régions, vous utilisez les fonctions membres de classe `CRgn` avec les fonctions de découpage définies en tant que membres de classe `CDC`.
+Une région est une zone elliptique ou polygonale dans une fenêtre. Pour utiliser des régions, vous utilisez les fonctions membres de `CRgn` la classe avec les fonctions de découpage `CDC`définies en tant que membres de la classe.
 
-Les fonctions membres de `CRgn` créer, modifier et récupérer des informations sur l’objet de la région pour laquelle elles sont appelées.
+Les fonctions membres de `CRgn` créent, modifient et récupèrent des informations sur l’objet Region pour lequel elles sont appelées.
 
-Pour plus d’informations sur l’utilisation de `CRgn`, consultez [objets graphiques](../../mfc/graphic-objects.md).
+Pour plus d’informations sur `CRgn`l’utilisation de, consultez [objets graphiques](../../mfc/graphic-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -123,7 +123,7 @@ Pour plus d’informations sur l’utilisation de `CRgn`, consultez [objets grap
 
 ##  <a name="combinergn"></a>  CRgn::CombineRgn
 
-Crée une nouvelle région GDI en combinant les deux régions existantes.
+Crée une nouvelle région GDI en combinant deux régions existantes.
 
 ```
 int CombineRgn(
@@ -141,47 +141,47 @@ Identifie une région existante.
 Identifie une région existante.
 
 *nCombineMode*<br/>
-Spécifie l’opération à effectuer lors de la combinaison des régions deux sources. Il peut prendre l’une des valeurs suivantes :
+Spécifie l’opération à effectuer lors de la combinaison des deux régions sources. Il peut s’agir de l’une des valeurs suivantes:
 
-- RGN_AND utilise les zones des deux régions (intersection) qui se chevauchent.
+- RGN_AND utilise des zones qui se chevauchent des deux régions (intersection).
 
-- RGN_COPY crée une copie de la région 1 (identifié par *pRgn1*).
+- RGN_COPY crée une copie de la région 1 (identifiée par *pRgn1*).
 
-- RGN_DIFF crée une zone composée des zones de région 1 (identifié par *pRgn1*) qui ne sont pas partie de la région 2 (identifié par *pRgn2*).
+- RGN_DIFF crée une région composée des zones de la région 1 (identifiées par *pRgn1*) qui ne font pas partie de la région 2 (identifiée par *pRgn2*).
 
-- RGN_OR combine les deux régions dans leur intégralité (union).
+- RGN_OR combine les deux régions dans leur intégralité (Union).
 
 - RGN_XOR combine les deux régions, mais supprime les zones qui se chevauchent.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Spécifie le type de la région qui en résulte. Il peut prendre l’une des valeurs suivantes :
+Spécifie le type de la zone résultante. Il peut s’agir de l’une des valeurs suivantes:
 
-- COMPLEXREGION nouvelle région a chevauchement des bordures.
+- COMPLEXREGION nouvelle région a des bordures qui se chevauchent.
 
-- Erreur aucune nouvelle zone ne créée.
+- ERREUR: aucune nouvelle région créée.
 
 - NULLREGION nouvelle région est vide.
 
-- SIMPLEREGION nouvelle région n’a aucune bordure qui se chevauchent.
+- SIMPLEREGION nouvelle région n’a pas de bordures se chevauchant.
 
 ### <a name="remarks"></a>Notes
 
 Les régions sont combinées comme spécifié par *nCombineMode*.
 
-Les deux spécifiés régions sont combinées, et le handle résultant de la région est stocké dans le `CRgn` objet. Par conséquent, quelle que soit la région est stockée dans le `CRgn` objet est remplacé par la zone combinée.
+Les deux régions spécifiées sont combinées et le handle de la région qui en `CRgn` résulte est stocké dans l’objet. Ainsi, quelle que soit la région stockée dans l' `CRgn` objet est remplacée par la région combinée.
 
-La taille d’une région est limitée à 32 767 par 32 767 des unités logiques ou de 64 Ko de mémoire, plus petite étant retenue.
+La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 64 Ko de mémoire, la valeur la plus petite étant retenue.
 
-Utilisez [CopyRgn](#copyrgn) simplement copier une région dans une autre région.
+Utilisez [CopyRgn](#copyrgn) pour copier simplement une région dans une autre région.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]
 
 ##  <a name="copyrgn"></a>  CRgn::CopyRgn
 
-Copie la région définie par *pRgnSrc* dans le `CRgn` objet.
+Copie la région définie par *pRgnSrc* dans l' `CRgn` objet.
 
 ```
 int CopyRgn(CRgn* pRgnSrc);
@@ -194,27 +194,27 @@ Identifie une région existante.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Spécifie le type de la région qui en résulte. Il peut prendre l’une des valeurs suivantes :
+Spécifie le type de la zone résultante. Il peut s’agir de l’une des valeurs suivantes:
 
-- COMPLEXREGION nouvelle région a chevauchement des bordures.
+- COMPLEXREGION nouvelle région a des bordures qui se chevauchent.
 
-- Erreur aucune nouvelle zone ne créée.
+- ERREUR: aucune nouvelle région créée.
 
 - NULLREGION nouvelle région est vide.
 
-- SIMPLEREGION nouvelle région n’a aucune bordure qui se chevauchent.
+- SIMPLEREGION nouvelle région n’a pas de bordures se chevauchant.
 
 ### <a name="remarks"></a>Notes
 
-La nouvelle région remplace la région précédemment stockée dans le `CRgn` objet. Cette fonction est un cas spécial de la [CombineRgn](#combinergn) fonction membre.
+La nouvelle région remplace la région précédemment stockée dans `CRgn` l’objet. Cette fonction est un cas particulier de la fonction membre [CombineRgn](#combinergn) .
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-  Consultez l’exemple de [CRgn::CreateEllipticRgn](#createellipticrgn).
+  Consultez l’exemple de [CRgn:: CreateEllipticRgn](#createellipticrgn).
 
 ##  <a name="createellipticrgn"></a>  CRgn::CreateEllipticRgn
 
-Crée une zone elliptique.
+Crée une région elliptique.
 
 ```
 BOOL CreateEllipticRgn(
@@ -233,22 +233,22 @@ Spécifie la coordonnée x logique de l’angle supérieur gauche du rectangle e
 Spécifie la coordonnée y logique de l’angle supérieur gauche du rectangle englobant de l’ellipse.
 
 *x2*<br/>
-Spécifie la coordonnée x logique de l’angle inférieur droit du rectangle englobant de l’ellipse.
+Spécifie la coordonnée x logique du coin inférieur droit du rectangle englobant de l’ellipse.
 
 *y2*<br/>
-Spécifie la coordonnée y logique de l’angle inférieur droit du rectangle englobant de l’ellipse.
+Spécifie la coordonnée y logique du coin inférieur droit du rectangle englobant de l’ellipse.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’opération a réussi ; sinon 0.
+Valeur différente de zéro si l’opération a réussi; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-La région est définie par le rectangle englobant spécifié par *x1*, *y1*, *x2*, et *y2*. La région est stockée dans le `CRgn` objet.
+La région est définie par le rectangle englobant spécifié par *x1*, *Y1*, *x2*et *Y2*. La région est stockée dans `CRgn` l’objet.
 
-La taille d’une région est limitée à 32 767 par 32 767 des unités logiques ou de 64 Ko de mémoire, plus petite étant retenue.
+La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 64 Ko de mémoire, la valeur la plus petite étant retenue.
 
-Quand elle a fini à l’aide d’une région créée avec le `CreateEllipticRgn` (fonction), une application doit sélectionner la région hors du contexte de périphérique et utilisez le `DeleteObject` (fonction) pour le supprimer.
+Lorsqu’il a fini d’utiliser une région créée avec `CreateEllipticRgn` la fonction, une application doit sélectionner la région hors du contexte de périphérique et utiliser `DeleteObject` la fonction pour la supprimer.
 
 ### <a name="example"></a>Exemple
 
@@ -256,7 +256,7 @@ Quand elle a fini à l’aide d’une région créée avec le `CreateEllipticRgn
 
 ##  <a name="createellipticrgnindirect"></a>  CRgn::CreateEllipticRgnIndirect
 
-Crée une zone elliptique.
+Crée une région elliptique.
 
 ```
 BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
@@ -265,27 +265,27 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-Pointe vers un `RECT` structure ou un `CRect` objet qui contient les coordonnées logiques des angles supérieur gauche et inférieur droit du rectangle englobant de l’ellipse.
+Pointe vers une `RECT` structure ou un `CRect` objet qui contient les coordonnées logiques des angles supérieur gauche et inférieur droit du rectangle englobant de l’ellipse.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’opération a réussi ; sinon 0.
+Valeur différente de zéro si l’opération a réussi; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-La région est définie par la structure ou l’objet vers lequel pointé *lpRect* et est stocké dans le `CRgn` objet.
+La région est définie par la structure ou l’objet désigné par *lpRect* et est stockée dans `CRgn` l’objet.
 
-La taille d’une région est limitée à 32 767 par 32 767 des unités logiques ou de 64 Ko de mémoire, plus petite étant retenue.
+La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 64 Ko de mémoire, la valeur la plus petite étant retenue.
 
-Quand elle a fini à l’aide d’une région créée avec le `CreateEllipticRgnIndirect` (fonction), une application doit sélectionner la région hors du contexte de périphérique et utilisez le `DeleteObject` (fonction) pour le supprimer.
+Lorsqu’il a fini d’utiliser une région créée avec `CreateEllipticRgnIndirect` la fonction, une application doit sélectionner la région hors du contexte de périphérique et utiliser `DeleteObject` la fonction pour la supprimer.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-  Consultez l’exemple de [CRgn::CreateRectRgnIndirect](#createrectrgnindirect).
+  Consultez l’exemple de [CRgn:: CreateRectRgnIndirect](#createrectrgnindirect).
 
 ##  <a name="createfromdata"></a>  CRgn::CreateFromData
 
-Crée une région à partir de la région et la transformation donnée.
+Crée une région à partir de la région donnée et des données de transformation.
 
 ```
 BOOL CreateFromData(
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>Paramètres
 
 *lpXForm*<br/>
-Pointe vers une [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) structure de données qui définit la transformation doivent être effectuées sur la région. Si ce pointeur est NULL, la transformation d’identité est utilisée.
+Pointe vers une structure de données [XForm](/windows/desktop/api/wingdi/ns-wingdi-tagxform) qui définit la transformation à exécuter sur la région. Si ce pointeur est NULL, la transformation d’identité est utilisée.
 
 *nCount*<br/>
-Spécifie le nombre d’octets vers laquelle pointé *pRgnData*.
+Spécifie le nombre d’octets pointés par *pRgnData*.
 
 *pRgnData*<br/>
-Pointe vers un [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) structure de données qui contient les données de la région.
+Pointe vers une structure de données [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-rgndata) qui contient les données de la région.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -311,11 +311,11 @@ Une valeur différente de zéro si la fonction réussit ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Une application peut récupérer des données pour une région en appelant le `CRgn::GetRegionData` (fonction).
+Une application peut récupérer des données pour une région en appelant `CRgn::GetRegionData` la fonction.
 
 ##  <a name="createfrompath"></a>  CRgn::CreateFromPath
 
-Crée une région à partir du chemin qui est sélectionné dans le contexte de périphérique donné.
+Crée une région à partir du chemin d’accès sélectionné dans le contexte de périphérique donné.
 
 ```
 BOOL CreateFromPath(CDC* pDC);
@@ -324,7 +324,7 @@ BOOL CreateFromPath(CDC* pDC);
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-Identifie un contexte de périphérique qui contient une trajectoire fermée.
+Identifie un contexte de périphérique (Device Context) qui contient un chemin d’accès fermé.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -332,11 +332,11 @@ Une valeur différente de zéro si la fonction réussit ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Le contexte de périphérique identifié par le *pDC* paramètre doit contenir une trajectoire fermée. Après avoir `CreateFromPath` convertit un chemin d’accès dans une région, Windows ignore la trajectoire fermée à partir du contexte de périphérique.
+Le contexte de périphérique identifié par le paramètre *PDC* doit contenir un chemin d’accès fermé. Après `CreateFromPath` avoir converti un chemin d’accès en une région, Windows ignore le chemin d’accès fermé du contexte de périphérique.
 
 ##  <a name="createpolygonrgn"></a>  CRgn::CreatePolygonRgn
 
-Crée une zone polygonale.
+Crée une région polygonale.
 
 ```
 BOOL CreatePolygonRgn(
@@ -348,7 +348,7 @@ BOOL CreatePolygonRgn(
 ### <a name="parameters"></a>Paramètres
 
 *lpPoints*<br/>
-Pointe vers un tableau de `POINT` structures ou un tableau de `CPoint` objets. Chaque structure spécifie la coordonnée x et la coordonnée y d’un sommet du polygone. Le `POINT` structure a la forme suivante :
+Pointe vers un tableau de `POINT` structures ou un tableau d' `CPoint` objets. Chaque structure spécifie la coordonnée x et la coordonnée y d’un vertex du polygone. La `POINT` structure se présente sous la forme suivante:
 
 ```cpp
 typedef struct tagPOINT {
@@ -358,26 +358,26 @@ typedef struct tagPOINT {
 ```
 
 *nCount*<br/>
-Spécifie le nombre de `POINT` structures ou `CPoint` objets dans le tableau vers lequel pointe *lpPoints*.
+Spécifie le nombre `POINT` de structures `CPoint` ou d’objets dans le tableau pointé par *lpPoints*.
 
 *nMode*<br/>
-Spécifie le mode de remplissage pour la région. Ce paramètre peut être autre ou cachés.
+Spécifie le mode de remplissage pour la région. Il peut s’agir d’un paramètre alternatif ou d’un enroulement.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’opération a réussi ; sinon 0.
+Valeur différente de zéro si l’opération a réussi; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Le système ferme le polygone automatiquement, si nécessaire, en dessinant une ligne à partir du dernier sommet au premier. La région qui en résulte est stockée dans le `CRgn` objet.
+Le système ferme automatiquement le polygone, si nécessaire, en dessinant une ligne du dernier vertex jusqu’au premier. La région obtenue est stockée dans `CRgn` l’objet.
 
-La taille d’une région est limitée à 32 767 par 32 767 des unités logiques ou de 64 Ko de mémoire, plus petite étant retenue.
+La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 64 Ko de mémoire, la valeur la plus petite étant retenue.
 
-Lorsque le mode de remplissage de polygone est autre, le système remplit la zone entre les côtés d’un polygone impaires et paires sur chaque ligne de numérisation. Autrement dit, le système remplit la zone entre le côté de la première et deuxième, entre le troisième et quatrième et ainsi de suite.
+Lorsque le mode de remplissage polygone est alternatif, le système remplit la zone entre les côtés de polygones numérotés et pairs sur chaque ligne de numérisation. Autrement dit, le système remplit la zone entre le premier et le deuxième côté, entre le troisième et le quatrième côté, et ainsi de suite.
 
-Lorsque le mode de remplissage de polygone est enroulement, le système utilise la direction dans laquelle figure a été extraite pour déterminer s’il faut remplir une zone. Chaque segment de ligne dans un polygone est dessiné dans un sens ou aiguilles. Chaque fois qu’une ligne imaginaire dessinée à partir d’une zone fermée à l’extérieur d’une figure traverse un segment de ligne dans le sens horaire, un nombre est incrémenté. Lorsque la ligne passe par un segment de ligne dans le sens inverse, le nombre est décrémenté. La zone est remplie si le nombre est différent de zéro lorsque la ligne atteint l’extérieur de la figure.
+Lorsque le mode de remplissage de polygone est en cours d’enroulement, le système utilise la direction dans laquelle une figure a été dessinée pour déterminer s’il faut remplir une zone. Chaque segment de ligne d’un polygone est dessiné dans le sens horaire ou dans le sens inverse des aiguilles d’une montre. Chaque fois qu’une ligne imaginaire dessinée à partir d’une zone fermée à l’extérieur d’une figure passe par un segment de ligne dans le sens des aiguilles d’une montre, un nombre est incrémenté. Lorsque la ligne passe par un segment de ligne dans le sens inverse, le nombre est décrémenté. La zone est remplie si le nombre est différent de zéro lorsque la ligne atteint l’extérieur de la figure.
 
-Quand une application a terminé d’utiliser une région créée avec le `CreatePolygonRgn` (fonction), vous devez sélectionner la région hors du contexte de périphérique et utilisez le `DeleteObject` (fonction) pour le supprimer.
+Lorsqu’une application a fini d’utiliser une région créée à `CreatePolygonRgn` l’aide de la fonction, elle doit sélectionner la région hors du contexte de `DeleteObject` périphérique et utiliser la fonction pour la supprimer.
 
 ### <a name="example"></a>Exemple
 
@@ -385,7 +385,7 @@ Quand une application a terminé d’utiliser une région créée avec le `Creat
 
 ##  <a name="createpolypolygonrgn"></a>  CRgn::CreatePolyPolygonRgn
 
-Crée une zone composée d’une série de polygones fermés.
+Crée une région composée d’une série de polygones fermés.
 
 ```
 BOOL CreatePolyPolygonRgn(
@@ -398,7 +398,7 @@ BOOL CreatePolyPolygonRgn(
 ### <a name="parameters"></a>Paramètres
 
 *lpPoints*<br/>
-Pointe vers un tableau de `POINT` structures ou un tableau de `CPoint` objets qui définit les sommets du polygone. Chaque polygone doit être fermée explicitement, car le système ne les ferme pas automatiquement. Les polygones sont consécutifs spécifiés. Le `POINT` structure a la forme suivante :
+Pointe vers un tableau de `POINT` structures ou un tableau d' `CPoint` objets qui définit les vertex des polygones. Chaque polygone doit être explicitement fermé, car le système ne les ferme pas automatiquement. Les polygones sont spécifiés consécutivement. La `POINT` structure se présente sous la forme suivante:
 
 ```cpp
 typedef struct tagPOINT {
@@ -408,35 +408,35 @@ typedef struct tagPOINT {
 ```
 
 *lpPolyCounts*<br/>
-Pointe vers un tableau d’entiers. Le premier entier spécifie le nombre de vertex dans le premier polygone dans le *lpPoints* tableau, le second entier spécifie le nombre de vertex dans le polygone deuxième et ainsi de suite.
+Pointe vers un tableau d’entiers. Le premier entier spécifie le nombre de vertex dans le premier polygone dans le tableau *lpPoints* , le deuxième entier spécifie le nombre de vertex dans le deuxième polygone, et ainsi de suite.
 
 *nCount*<br/>
-Spécifie le nombre total d’entiers dans le *lpPolyCounts* tableau.
+Spécifie le nombre total d’entiers dans le tableau *lpPolyCounts* .
 
 *nPolyFillMode*<br/>
-Spécifie le mode de remplissage de polygones. Cette valeur peut être autre ou cachés.
+Spécifie le mode de remplissage du polygone. Cette valeur peut être alternative ou enroulement.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’opération a réussi ; sinon 0.
+Valeur différente de zéro si l’opération a réussi; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-La région qui en résulte est stockée dans le `CRgn` objet.
+La région obtenue est stockée dans `CRgn` l’objet.
 
-Les polygones peuvent être disjoints ou ils peuvent se chevaucher.
+Les polygones peuvent être disjoints ou se chevaucher.
 
-La taille d’une région est limitée à 32 767 par 32 767 des unités logiques ou de 64 Ko de mémoire, plus petite étant retenue.
+La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 64 Ko de mémoire, la valeur la plus petite étant retenue.
 
-Lorsque le mode de remplissage de polygone est autre, le système remplit la zone entre les côtés d’un polygone impaires et paires sur chaque ligne de numérisation. Autrement dit, le système remplit la zone entre le côté de la première et deuxième, entre le troisième et quatrième et ainsi de suite.
+Lorsque le mode de remplissage polygone est alternatif, le système remplit la zone entre les côtés de polygones numérotés et pairs sur chaque ligne de numérisation. Autrement dit, le système remplit la zone entre le premier et le deuxième côté, entre le troisième et le quatrième côté, et ainsi de suite.
 
-Lorsque le mode de remplissage de polygone est enroulement, le système utilise la direction dans laquelle figure a été extraite pour déterminer s’il faut remplir une zone. Chaque segment de ligne dans un polygone est dessiné dans un sens ou aiguilles. Chaque fois qu’une ligne imaginaire dessinée à partir d’une zone fermée à l’extérieur d’une figure traverse un segment de ligne dans le sens horaire, un nombre est incrémenté. Lorsque la ligne passe par un segment de ligne dans le sens inverse, le nombre est décrémenté. La zone est remplie si le nombre est différent de zéro lorsque la ligne atteint l’extérieur de la figure.
+Lorsque le mode de remplissage de polygone est en cours d’enroulement, le système utilise la direction dans laquelle une figure a été dessinée pour déterminer s’il faut remplir une zone. Chaque segment de ligne d’un polygone est dessiné dans le sens horaire ou dans le sens inverse des aiguilles d’une montre. Chaque fois qu’une ligne imaginaire dessinée à partir d’une zone fermée à l’extérieur d’une figure passe par un segment de ligne dans le sens des aiguilles d’une montre, un nombre est incrémenté. Lorsque la ligne passe par un segment de ligne dans le sens inverse, le nombre est décrémenté. La zone est remplie si le nombre est différent de zéro lorsque la ligne atteint l’extérieur de la figure.
 
-Quand une application a terminé d’utiliser une région créée avec le `CreatePolyPolygonRgn` (fonction), vous devez sélectionner la région hors du contexte de périphérique et utilisez le [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) fonction membre à supprimer.
+Lorsqu’une application a fini d’utiliser une région créée à `CreatePolyPolygonRgn` l’aide de la fonction, elle doit sélectionner la région hors du contexte de périphérique et utiliser la fonction membre [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour la supprimer.
 
 ##  <a name="createrectrgn"></a>  CRgn::CreateRectRgn
 
-Crée une zone rectangulaire qui est stockée dans le `CRgn` objet.
+Crée une zone rectangulaire qui est stockée dans `CRgn` l’objet.
 
 ```
 BOOL CreateRectRgn(
@@ -449,36 +449,36 @@ BOOL CreateRectRgn(
 ### <a name="parameters"></a>Paramètres
 
 *x1*<br/>
-Spécifie la coordonnée x logique de l’angle supérieur gauche de la région.
+Spécifie la coordonnée x logique de l’angle supérieur gauche de la zone.
 
 *y1*<br/>
-Spécifie la coordonnée y logique de l’angle supérieur gauche de la région.
+Spécifie la coordonnée y logique de l’angle supérieur gauche de la zone.
 
 *x2*<br/>
-Spécifie la coordonnée x logique de l’angle inférieur droit de la région.
+Spécifie la coordonnée x logique du coin inférieur droit de la zone.
 
 *y2*<br/>
-Spécifie la coordonnée y logique de l’angle inférieur droit de la région.
+Spécifie la coordonnée y logique du coin inférieur droit de la zone.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’opération a réussi ; sinon 0.
+Valeur différente de zéro si l’opération a réussi; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-La taille d’une région est limitée à 32 767 par 32 767 des unités logiques ou de 64 Ko de mémoire, plus petite étant retenue.
+La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 64 Ko de mémoire, la valeur la plus petite étant retenue.
 
-Quand elle a fini à l’aide d’une zone créée par `CreateRectRgn`, une application doit utiliser le [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) fonction membre à supprimer de la région.
+Lorsqu’il a fini d’utiliser une région créée `CreateRectRgn`par, une application doit utiliser la fonction membre [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour supprimer la région.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]
 
-Pour obtenir un exemple supplémentaire, consultez [CRgn::CombineRgn](#combinergn).
+Pour obtenir un exemple supplémentaire, consultez [CRgn:: CombineRgn](#combinergn).
 
 ##  <a name="createrectrgnindirect"></a>  CRgn::CreateRectRgnIndirect
 
-Crée une zone rectangulaire qui est stockée dans le `CRgn` objet.
+Crée une zone rectangulaire qui est stockée dans `CRgn` l’objet.
 
 ```
 BOOL CreateRectRgnIndirect(LPCRECT lpRect);
@@ -487,7 +487,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-Pointe vers un `RECT` structure ou `CRect` objet qui contient les coordonnées logiques des angles supérieur gauche et inférieur droit de la région. Le `RECT` structure a la forme suivante :
+Pointe vers une `RECT` structure ou `CRect` un objet qui contient les coordonnées logiques des angles supérieur gauche et inférieur droit de la zone. La `RECT` structure se présente sous la forme suivante:
 
 ```cpp
 typedef struct tagRECT {
@@ -500,21 +500,21 @@ typedef struct tagRECT {
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’opération a réussi ; sinon 0.
+Valeur différente de zéro si l’opération a réussi; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-La taille d’une région est limitée à 32 767 par 32 767 des unités logiques ou de 64 Ko de mémoire, plus petite étant retenue.
+La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 64 Ko de mémoire, la valeur la plus petite étant retenue.
 
-Quand elle a fini à l’aide d’une zone créée par `CreateRectRgnIndirect`, une application doit utiliser le [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) fonction membre à supprimer de la région.
+Lorsqu’il a fini d’utiliser une région créée `CreateRectRgnIndirect`par, une application doit utiliser la fonction membre [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour supprimer la région.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCDocView#148](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]
 
 ##  <a name="createroundrectrgn"></a>  CRgn::CreateRoundRectRgn
 
-Crée une zone rectangulaire aux angles arrondis qui est stocké dans le `CRgn` objet.
+Crée une zone rectangulaire avec des angles arrondis stockés dans l' `CRgn` objet.
 
 ```
 BOOL CreateRoundRectRgn(
@@ -529,32 +529,32 @@ BOOL CreateRoundRectRgn(
 ### <a name="parameters"></a>Paramètres
 
 *x1*<br/>
-Spécifie la coordonnée x logique de l’angle supérieur gauche de la région.
+Spécifie la coordonnée x logique de l’angle supérieur gauche de la zone.
 
 *y1*<br/>
-Spécifie la coordonnée y logique de l’angle supérieur gauche de la région.
+Spécifie la coordonnée y logique de l’angle supérieur gauche de la zone.
 
 *x2*<br/>
-Spécifie la coordonnée x logique de l’angle inférieur droit de la région.
+Spécifie la coordonnée x logique du coin inférieur droit de la zone.
 
 *y2*<br/>
-Spécifie la coordonnée y logique de l’angle inférieur droit de la région.
+Spécifie la coordonnée y logique du coin inférieur droit de la zone.
 
 *x3*<br/>
-Spécifie la largeur de l’ellipse utilisée pour créer des angles arrondis.
+Spécifie la largeur de l’ellipse utilisée pour créer les angles arrondis.
 
 *y3*<br/>
-Spécifie la hauteur de l’ellipse utilisée pour créer des angles arrondis.
+Spécifie la hauteur de l’ellipse utilisée pour créer les angles arrondis.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’opération a réussi ; sinon 0.
+Valeur différente de zéro si l’opération a réussi; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-La taille d’une région est limitée à 32 767 par 32 767 des unités logiques ou de 64 Ko de mémoire, plus petite étant retenue.
+La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 64 Ko de mémoire, la valeur la plus petite étant retenue.
 
-Quand une application a terminé d’utiliser une région créée avec le `CreateRoundRectRgn` (fonction), vous devez sélectionner la région hors du contexte de périphérique et utilisez le [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) fonction membre à supprimer.
+Lorsqu’une application a fini d’utiliser une région créée à `CreateRoundRectRgn` l’aide de la fonction, elle doit sélectionner la région hors du contexte de périphérique et utiliser la fonction membre [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour la supprimer.
 
 ### <a name="example"></a>Exemple
 
@@ -570,15 +570,15 @@ CRgn();
 
 ### <a name="remarks"></a>Notes
 
-Le `m_hObject` membre de données ne contient-elle pas une région Windows GDI valide jusqu'à ce que l’objet est initialisé avec un ou plusieurs des autres `CRgn` fonctions membres.
+Le `m_hObject` membre de données ne contient pas de région GDI Windows valide tant que l’objet n’est pas initialisé avec une ou plusieurs `CRgn` autres fonctions membres.
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CRgn::CreateRoundRectRgn](#createroundrectrgn).
+  Consultez l’exemple de [CRgn:: CreateRoundRectRgn](#createroundrectrgn).
 
 ##  <a name="equalrgn"></a>  CRgn::EqualRgn
 
-Détermine si la région donnée est équivalente à la région stockée dans le `CRgn` objet.
+Détermine si la région donnée équivaut à la région stockée dans l' `CRgn` objet.
 
 ```
 BOOL EqualRgn(CRgn* pRgn) const;
@@ -591,15 +591,15 @@ Identifie une région.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si les deux régions sont équivalentes ; sinon 0.
+Différent de zéro si les deux régions sont équivalentes; Sinon, 0.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCDocView#150](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]
 
 ##  <a name="fromhandle"></a>  CRgn::FromHandle
 
-Retourne un pointeur vers un `CRgn` lorsqu’un handle vers une région de Windows de l’objet.
+Retourne un pointeur vers un `CRgn` objet en fonction d’un handle vers une région Windows.
 
 ```
 static CRgn* PASCAL FromHandle(HRGN hRgn);
@@ -608,19 +608,19 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 ### <a name="parameters"></a>Paramètres
 
 *hRgn*<br/>
-Spécifie un handle vers une région de Windows.
+Spécifie un handle vers une région Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers un objet `CRgn` . Si la fonction n’a pas réussie, la valeur de retour est NULL.
+Pointeur vers un objet `CRgn` . Si la fonction n’a pas réussi, la valeur de retour est NULL.
 
 ### <a name="remarks"></a>Notes
 
-Si un `CRgn` objet n’est pas déjà attaché au handle, une table temporaire `CRgn` objet est créé et attaché. Ce fichier temporaire `CRgn` objet est valide uniquement jusqu'à ce que la prochaine fois que l’application possède les temps d’inactivité dans sa boucle de l’événement, alors graphique temporaire de tous les objets sont supprimés. Une autre façon de dire cela est que l’objet temporaire est valide uniquement pendant le traitement du message d’une fenêtre.
+Si un `CRgn` objet n’est pas déjà attaché au descripteur, `CRgn` un objet temporaire est créé et attaché. Cet objet `CRgn` temporaire est valide uniquement jusqu’à la prochaine période d’inactivité de l’application dans sa boucle d’événements, auquel cas tous les objets graphiques temporaires sont supprimés. En d’autres termes, l’objet temporaire n’est valide que pendant le traitement d’un message de fenêtre.
 
 ##  <a name="getregiondata"></a>  CRgn::GetRegionData
 
-Remplit la mémoire tampon spécifiée avec les données décrivant la zone.
+Remplit la mémoire tampon spécifiée avec des données décrivant la région.
 
 ```
 int GetRegionData(
@@ -631,22 +631,22 @@ int GetRegionData(
 ### <a name="parameters"></a>Paramètres
 
 *lpRgnData*<br/>
-Pointe vers un [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) structure de données qui reçoit les informations. Si ce paramètre est NULL, la valeur de retour contient le nombre d’octets nécessaires pour les données de la région.
+Pointe vers une structure de données [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-rgndata) qui reçoit les informations. Si ce paramètre a la valeur NULL, la valeur de retour contient le nombre d’octets nécessaires pour les données de la région.
 
 *nCount*<br/>
-Spécifie la taille, en octets, de la *lpRgnData* mémoire tampon.
+Spécifie la taille, en octets, de la mémoire tampon *lpRgnData* .
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la fonction réussit et *nCount* spécifie un nombre suffisant d’octets, la valeur de retour est toujours *nCount*. Si la fonction échoue, ou si *nCount* inférieur Spécifie qu’un nombre suffisant d’octets, la valeur de retour est 0 (erreur).
+Si la fonction est réussie et que *nCount* spécifie un nombre d’octets suffisant, la valeur de retour est toujours *nCount*. Si la fonction échoue, ou si *nCount* spécifie un nombre d’octets inférieur au nombre suffisant, la valeur de retour est 0 (erreur).
 
 ### <a name="remarks"></a>Notes
 
-Ces données incluent les dimensions des rectangles qui composent la région. Cette fonction est utilisée conjointement avec la `CRgn::CreateFromData` (fonction).
+Ces données incluent les dimensions des rectangles qui composent la région. Cette fonction est utilisée conjointement avec la `CRgn::CreateFromData` fonction.
 
 ##  <a name="getrgnbox"></a>  CRgn::GetRgnBox
 
-Récupère les coordonnées du rectangle englobant de la `CRgn` objet.
+Récupère les coordonnées du rectangle englobant de l' `CRgn` objet.
 
 ```
 int GetRgnBox(LPRECT lpRect) const;
@@ -655,7 +655,7 @@ int GetRgnBox(LPRECT lpRect) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-Pointe vers un `RECT` structure ou `CRect` objet devant recevoir les coordonnées du rectangle englobant. Le `RECT` structure a la forme suivante :
+Pointe vers une `RECT` structure ou `CRect` un objet pour recevoir les coordonnées du rectangle englobant. La `RECT` structure se présente sous la forme suivante:
 
 `typedef struct tagRECT {`
 
@@ -671,23 +671,23 @@ Pointe vers un `RECT` structure ou `CRect` objet devant recevoir les coordonnée
 
 ### <a name="return-value"></a>Valeur de retour
 
-Spécifie le type de la région. Il peut être une des valeurs suivantes :
+Spécifie le type de la région. Il peut s’agir de l’une des valeurs suivantes:
 
-- Région de COMPLEXREGION a chevauchement des bordures.
+- La région COMPLEXREGION a des bordures qui se chevauchent.
 
-- Région de NULLREGION est vide.
+- La région NULLREGION est vide.
 
-- ERREUR `CRgn` objet ne spécifie pas une région valide.
+- L' `CRgn` objet d’erreur ne spécifie pas une région valide.
 
-- Région de SIMPLEREGION n’a aucune bordure qui se chevauchent.
+- La région SIMPLEREGION n’a pas de bordures se chevauchant.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-  Consultez l’exemple de [CRgn::CreatePolygonRgn](#createpolygonrgn).
+  Consultez l’exemple de [CRgn:: CreatePolygonRgn](#createpolygonrgn).
 
 ##  <a name="offsetrgn"></a>  CRgn::OffsetRgn
 
-Déplace la région stockée dans le `CRgn` objet par offsets spécifiés.
+Déplace la région stockée dans `CRgn` l’objet selon les décalages spécifiés.
 
 ```
 int OffsetRgn(
@@ -700,39 +700,39 @@ int OffsetRgn(POINT point);
 ### <a name="parameters"></a>Paramètres
 
 *x*<br/>
-Spécifie le nombre d’unités à déplacer vers la gauche ou droite.
+Spécifie le nombre d’unités à déplacer vers la gauche ou vers la droite.
 
 *y*<br/>
-Spécifie le nombre d’unités à déplacer vers le haut ou vers le bas.
+Spécifie le nombre d’unités à déplacer vers le haut ou vers le haut.
 
 *point*<br/>
-La coordonnée x de *point* Spécifie le nombre d’unités à déplacer vers la gauche ou droite. La coordonnée y de *point* Spécifie le nombre d’unités à déplacer vers le haut ou vers le bas. Le *point* paramètre peut être un `POINT` structure ou un `CPoint` objet.
+La coordonnée x du *point* spécifie le nombre d’unités à déplacer vers la gauche ou vers la droite. La coordonnée y du *point* spécifie le nombre d’unités à déplacer vers le haut ou vers le haut. Le paramètre *point* peut être une `POINT` structure ou un `CPoint` objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Type de la nouvelle région. Il peut prendre l’une des valeurs suivantes :
+Type de la nouvelle région. Il peut s’agir de l’une des valeurs suivantes:
 
-- Région de COMPLEXREGION a chevauchement des bordures.
+- La région COMPLEXREGION a des bordures qui se chevauchent.
 
-- Descripteur régional d’erreur n’est pas valide.
+- Le descripteur de la région d’erreur n’est pas valide.
 
-- Région de NULLREGION est vide.
+- La région NULLREGION est vide.
 
-- Région de SIMPLEREGION n’a aucune bordure qui se chevauchent.
+- La région SIMPLEREGION n’a pas de bordures se chevauchant.
 
 ### <a name="remarks"></a>Notes
 
-La fonction déplace la région *x* unités sur l’axe x et *y* unités sur l’axe y.
+La fonction déplace les unités de la région *x* sur les unités de l’axe x et *y* le long de l’axe y.
 
-Les valeurs des coordonnées d’une région doivent être inférieure ou égale à 32 767 et supérieur ou égal à-32 768. Le *x* et *y* paramètres doivent être choisis avec soin afin d’éviter les coordonnées de la région non valide.
+Les valeurs de coordonnée d’une région doivent être inférieures ou égales à 32 767 et supérieures ou égales à-32 768. Les paramètres *x* et *y* doivent être choisis avec soin pour empêcher les coordonnées de région non valides.
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CRgn::CreateEllipticRgn](#createellipticrgn).
+  Consultez l’exemple de [CRgn:: CreateEllipticRgn](#createellipticrgn).
 
-##  <a name="operator_hrgn"></a>  CRgn::operator HRGN
+##  <a name="operator_hrgn"></a>CRgn:: Operator HRGN
 
-Utilisez cet opérateur pour obtenir le handle Windows GDI attaché de la `CRgn` objet.
+Utilisez cet opérateur pour récupérer le handle Windows GDI attaché de l' `CRgn` objet.
 
 ```
 operator HRGN() const;
@@ -740,17 +740,17 @@ operator HRGN() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si réussie, un handle vers l’objet de Windows GDI représenté par le `CRgn` de l’objet ; sinon, NULL.
+En cas de réussite, handle vers l’objet Windows GDI représenté par `CRgn` l’objet; sinon, null.
 
 ### <a name="remarks"></a>Notes
 
-Cet opérateur est un opérateur de cast, qui prend en charge l’utilisation directe d’un objet HRGN.
+Cet opérateur est un opérateur de cast qui prend en charge l’utilisation directe d’un objet HRGN.
 
-Pour plus d’informations sur l’utilisation des objets graphiques, consultez l’article [graphique objets](/windows/desktop/gdi/graphic-objects) dans le SDK Windows.
+Pour plus d’informations sur l’utilisation des objets graphiques, consultez l’article [objets graphiques](/windows/desktop/gdi/graphic-objects) dans le SDK Windows.
 
 ##  <a name="ptinregion"></a>  CRgn::PtInRegion
 
-Vérifie si le point de données par *x* et *y* se trouve dans la région stockée dans le `CRgn` objet.
+Vérifie si le point donné par *x* et *y* se trouve dans la région stockée `CRgn` dans l’objet.
 
 ```
 BOOL PtInRegion(
@@ -769,15 +769,15 @@ Spécifie la coordonnée x logique du point à tester.
 Spécifie la coordonnée y logique du point à tester.
 
 *point*<br/>
-Les coordonnées x et y de *point* spécifier les coordonnées x et y du point à tester la valeur de. Le *point* paramètre peut être un `POINT` structure ou un `CPoint` objet.
+Les coordonnées x et y du *point* spécifient les coordonnées x et y du point dont la valeur doit être testée. Le paramètre *point* peut être une `POINT` structure ou un `CPoint` objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le point se trouve dans la région ; sinon 0.
+Différent de zéro si le point se trouve dans la région; Sinon, 0.
 
 ##  <a name="rectinregion"></a>  CRgn::RectInRegion
 
-Détermine si une partie du rectangle spécifié par *lpRect* est dans les limites de la région stockées dans le `CRgn` objet.
+Détermine si une partie du rectangle spécifié par *lpRect* se trouve dans les limites de la région stockée dans `CRgn` l’objet.
 
 ```
 BOOL RectInRegion(LPCRECT lpRect) const;
@@ -786,7 +786,7 @@ BOOL RectInRegion(LPCRECT lpRect) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-Pointe vers un `RECT` structure ou `CRect` objet. Le `RECT` structure a la forme suivante :
+Pointe vers une `RECT` structure ou `CRect` un objet. La `RECT` structure se présente sous la forme suivante:
 
 ```cpp
 typedef struct tagRECT {
@@ -799,7 +799,7 @@ typedef struct tagRECT {
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si n’importe quelle partie du rectangle spécifié se trouve dans les limites de la région ; sinon 0.
+Valeur différente de zéro si une partie du rectangle spécifié se trouve dans les limites de la zone; Sinon, 0.
 
 ##  <a name="setrectrgn"></a>  CRgn::SetRectRgn
 
@@ -824,19 +824,19 @@ Spécifie la coordonnée x de l’angle supérieur gauche de la zone rectangulai
 Spécifie la coordonnée y de l’angle supérieur gauche de la zone rectangulaire.
 
 *x2*<br/>
-Spécifie la coordonnée x de l’angle inférieur droit de la zone rectangulaire.
+Spécifie la coordonnée x du coin inférieur droit de la zone rectangulaire.
 
 *y2*<br/>
-Spécifie la coordonnée y de l’angle inférieur droit de la zone rectangulaire.
+Spécifie la coordonnée y du coin inférieur droit de la zone rectangulaire.
 
 *lpRect*<br/>
-Spécifie la région rectangulaire. Peut être soit un pointeur vers un `RECT` structure ou un `CRect` objet.
+Spécifie la zone rectangulaire. Il peut s’agir d’un pointeur `RECT` vers une structure `CRect` ou un objet.
 
 ### <a name="remarks"></a>Notes
 
-Contrairement aux [CreateRectRgn](#createrectrgn), toutefois, il n’alloue pas de mémoire supplémentaire à partir du tas d’application Windows local. Au lieu de cela, il utilise l’espace alloué pour la région stockées dans le `CRgn` objet. Cela signifie que le `CRgn` objet doit déjà être initialisé avec une région de Windows valide avant d’appeler `SetRectRgn`. Les points de donnée par *x1*, *y1*, *x2*, et *y2* spécifier la taille minimale de l’espace alloué.
+Toutefois, contrairement à [CreateRectRgn](#createrectrgn), il n’alloue pas de mémoire supplémentaire à partir du tas de l’application Windows locale. Au lieu de cela, il utilise l’espace alloué pour la région `CRgn` stockée dans l’objet. Cela signifie que l' `CRgn` objet doit déjà avoir été initialisé avec une région Windows valide avant d’appeler `SetRectRgn`. Les points donnés par *x1*, *Y1*, *x2*et *Y2* spécifient la taille minimale de l’espace alloué.
 
-Utilisez cette fonction au lieu du `CreateRectRgn` fonction membre afin d’éviter les appels au Gestionnaire de mémoire locale.
+Utilisez cette fonction à la place `CreateRectRgn` de la fonction membre pour éviter les appels au gestionnaire de mémoire local.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbongallery, classe
+title: Cmfcribbongallery,, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonGallery
@@ -78,17 +78,17 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a723af1e32a7a2e78bfb099680dce3e9b710838
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236768"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866209"
 ---
-# <a name="cmfcribbongallery-class"></a>Cmfcribbongallery, classe
+# <a name="cmfcribbongallery-class"></a>Cmfcribbongallery,, classe
 
 Implémente les galeries de ruban de style Office 2007.
-Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
+Pour plus d’informations, consultez le code source situé dans le dossier **VC\\ATLMFC\\SRC\\MFC** de votre installation de Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -102,76 +102,77 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCRibbonGallery::CMFCRibbonGallery](#cmfcribbongallery)|Construit et initialise un objet `CMFCRibbonGallery`.|
+|[Cmfcribbongallery,:: Cmfcribbongallery,](#cmfcribbongallery)|Construit et initialise un objet `CMFCRibbonGallery`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCRibbonGallery::AddGroup](#addgroup)|Ajoute un nouveau groupe dans la galerie.|
-|[CMFCRibbonGallery::AddSubItem](#addsubitem)|Ajoute un nouvel élément de menu au menu de liste déroulante.|
-|[CMFCRibbonGallery::Clear](#clear)|Efface le contenu de la galerie.|
-|[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|Active ou désactive le redimensionnement du Panneau de menu.|
+|[CMFCRibbonGallery::AddGroup](#addgroup)|Ajoute un nouveau groupe à la Galerie.|
+|[CMFCRibbonGallery::AddSubItem](#addsubitem)|Ajoute un nouvel élément de menu au menu déroulant.|
+|[Cmfcribbongallery,:: Clear](#clear)|Efface le contenu de la Galerie.|
+|[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|Active ou désactive le redimensionnement du panneau de menu.|
 |[CMFCRibbonGallery::EnableMenuSideBar](#enablemenusidebar)|Active ou désactive la barre latérale à gauche du menu contextuel.|
-|[CMFCRibbonGallery::GetCompactSize](#getcompactsize)|(Substitue [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
-|[CMFCRibbonGallery::GetDroppedDown](#getdroppeddown)|(Substitue [CMFCRibbonBaseElement::GetDroppedDown](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown).)|
+|[Cmfcribbongallery,:: GetCompactSize](#getcompactsize)|(Substitue [CMFCRibbonButton:: GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
+|[CMFCRibbonGallery::GetDroppedDown](#getdroppeddown)|(Substitue [CMFCRibbonBaseElement:: GetDroppedDown](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown).)|
 |[CMFCRibbonGallery::GetGroupName](#getgroupname)|Retourne le nom du groupe qui se trouve à l’index spécifié.|
-|[CMFCRibbonGallery::GetGroupOffset](#getgroupoffset)||
-|[CMFCRibbonGallery::GetIconsInRow](#geticonsinrow)|Retourne le nombre d’éléments dans une ligne de la galerie du ruban.|
-|[CMFCRibbonGallery::GetItemToolTip](#getitemtooltip)|Retourne le texte d’info-bulle qui est associé à un élément dans la galerie.|
-|[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)|Retourne l’index du dernier élément dans la galerie sélectionné par l’utilisateur.|
-|[CMFCRibbonGallery::GetPaletteID](#getpaletteid)|Retourne l’ID de commande de la galerie en cours.|
-|[CMFCRibbonGallery::GetRegularSize](#getregularsize)|(Substitue [CMFCRibbonButton::GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
+|[Cmfcribbongallery,:: GetGroupOffset](#getgroupoffset)||
+|[Cmfcribbongallery,:: GetIconsInRow](#geticonsinrow)|Retourne le nombre d’éléments d’une ligne de la Galerie du ruban.|
+|[CMFCRibbonGallery::GetItemToolTip](#getitemtooltip)|Retourne le texte d’info-bulle associé à un élément dans la Galerie.|
+|[Cmfcribbongallery,:: GetLastSelectedItem](#getlastselecteditem)|Retourne l’index du dernier élément de la galerie que l’utilisateur a sélectionnée.|
+|[CMFCRibbonGallery::GetPaletteID](#getpaletteid)|Retourne l’ID de commande de la Galerie actuelle.|
+|[Cmfcribbongallery,:: GetRegularSize](#getregularsize)|(Substitue [CMFCRibbonButton:: GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
 |[CMFCRibbonGallery::GetSelectedItem](#getselecteditem)||
-|[CMFCRibbonGallery::HasMenu](#hasmenu)|(Substitue [CMFCRibbonButton::HasMenu](../../mfc/reference/cmfcribbonbutton-class.md#hasmenu).)|
-|[CMFCRibbonGallery::IsButtonMode](#isbuttonmode)|Spécifie si la galerie est contenue dans un bouton de la galerie.|
+|[CMFCRibbonGallery::HasMenu](#hasmenu)|(Substitue [CMFCRibbonButton:: HasMenu](../../mfc/reference/cmfcribbonbutton-class.md#hasmenu).)|
+|[Cmfcribbongallery,:: IsButtonMode](#isbuttonmode)|Spécifie si la Galerie est contenue dans un bouton de la Galerie.|
 |[CMFCRibbonGallery::IsMenuResizeEnabled](#ismenuresizeenabled)|Spécifie si le redimensionnement de menu est activé ou désactivé.|
 |[CMFCRibbonGallery::IsMenuResizeVertical](#ismenuresizevertical)||
-|[CMFCRibbonGallery::IsMenuSideBar](#ismenusidebar)|Spécifie si la barre latérale est activée ou désactivée.|
+|[Cmfcribbongallery,:: IsMenuSideBar](#ismenusidebar)|Spécifie si la barre latérale est activée ou désactivée.|
 |[CMFCRibbonGallery::OnAfterChangeRect](#onafterchangerect)|(Substitue `CMFCRibbonButton::OnAfterChangeRect`.)|
-|[CMFCRibbonGallery::OnDraw](#ondraw)|(Substitue [CMFCRibbonButton::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
-|[CMFCRibbonGallery::OnEnable](#onenable)|(Substitue `CMFCRibbonBaseElement::OnEnable`.)|
-|[CMFCRibbonGallery::OnRTLChanged](#onrtlchanged)|(Substitue [CMFCRibbonBaseElement::OnRTLChanged](../../mfc/reference/cmfcribbonbaseelement-class.md#onrtlchanged).)|
-|[CMFCRibbonGallery::RedrawIcons](#redrawicons)|Redessine la galerie.|
-|[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|Supprime les info-bulles de tous les éléments de la galerie.|
+|[Cmfcribbongallery,:: OnDraw](#ondraw)|(Substitue [CMFCRibbonButton:: OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
+|[Cmfcribbongallery,:: OnEnable](#onenable)|(Substitue `CMFCRibbonBaseElement::OnEnable`.)|
+|[Cmfcribbongallery,:: OnRTLChanged](#onrtlchanged)|(Substitue [CMFCRibbonBaseElement:: OnRTLChanged](../../mfc/reference/cmfcribbonbaseelement-class.md#onrtlchanged).)|
+|[CMFCRibbonGallery::RedrawIcons](#redrawicons)|Redessine la Galerie.|
+|[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|Supprime les info-bulles de tous les éléments de la Galerie.|
 |[CMFCRibbonGallery::SelectItem](#selectitem)||
-|[CMFCRibbonGallery::SetACCData](#setaccdata)|(Substitue [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
-|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|Spécifie s’il faut afficher la galerie du ruban, comme un bouton de liste déroulante ou comme une palette directement sur le ruban.|
+|[Cmfcribbongallery,:: SetACCData](#setaccdata)|(Substitue [CMFCRibbonButton:: SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
+|[Cmfcribbongallery,:: SetButtonMode](#setbuttonmode)|Spécifie s’il faut afficher la Galerie du ruban sous la forme d’un bouton déroulant ou d’une palette directement sur le ruban.|
 |[CMFCRibbonGallery::SetGroupName](#setgroupname)|Définit le nom d’un groupe.|
-|[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Définit le nombre d’éléments par ligne dans la galerie.|
-|[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|Définit le texte d’info-bulle pour un élément dans la galerie.|
-|[CMFCRibbonGallery::SetPalette](#setpalette)|Attache une palette dans une galerie de ruban.|
-|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Définit l’ID de commande qui est envoyé dans le message WM_COMMAND quand un élément de galerie a été sélectionné.|
+|[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Définit le nombre d’éléments par ligne dans la Galerie.|
+|[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|Définit le texte d’info-bulle pour un élément de la Galerie.|
+|[CMFCRibbonGallery::SetPalette](#setpalette)|Attache une palette à une galerie de ruban.|
+|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Définit l’ID de commande qui est envoyé dans le message WM_COMMAND lorsqu’un élément de la Galerie a été sélectionné.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Appelé par le framework lorsqu’une icône de la galerie est dessinée.|
+|[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Appelé par le Framework lorsqu’une icône de Galerie est dessinée.|
 
 ## <a name="remarks"></a>Notes
 
-Un bouton de la galerie se comporte comme un bouton de menu standard, à ceci près qu’il affiche une galerie lorsqu’un utilisateur l’ouvre. Lorsque vous sélectionnez un élément dans une galerie, le framework envoie le message WM_COMMAND avec l’ID de commande du bouton. Lorsque vous gérez le message, vous devez appeler [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) pour déterminer quel élément a été sélectionné à partir de la galerie.
+Un bouton de la Galerie se comporte comme un bouton de menu normal, à ceci près qu’il affiche une galerie lorsqu’un utilisateur l’ouvre. Lorsque vous sélectionnez un élément dans une galerie, l’infrastructure envoie le message WM_COMMAND avec l’ID de commande du bouton. Lorsque vous gérez le message, vous devez appeler [cmfcribbongallery,:: GetLastSelectedItem](#getlastselecteditem) pour déterminer quel élément a été sélectionné dans la Galerie.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonGallery` classe permettant de configurer un `CMFCRibbonGallery` objet. L’exemple montre comment spécifier le nombre d’éléments par ligne dans la galerie, activer le redimensionnement du Panneau de menu, la barre latérale à gauche du menu contextuel et afficher la galerie du ruban sous la forme d’une palette directement sur la barre du ruban. Cet extrait de code fait partie de l’ [exemple Draw Client](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes dans la `CMFCRibbonGallery` classe pour configurer un `CMFCRibbonGallery` objet. L’exemple montre comment spécifier le nombre d’éléments par ligne dans la Galerie, activer le redimensionnement du panneau de menu, activer la barre latérale à gauche du menu contextuel et afficher la Galerie du ruban sous la forme d’une palette directement sur la barre du ruban. Cet extrait de code fait partie de l’ [exemple Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
-[CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
-
-[CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[Cmfcribbongallery,](../../mfc/reference/cmfcribbongallery-class.md)
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxRibbonPaletteGallery.h
+**En-tête:** afxRibbonPaletteGallery. h
 
 ##  <a name="addgroup"></a>  CMFCRibbonGallery::AddGroup
 
-Ajoute un nouveau groupe dans la galerie.
+Ajoute un nouveau groupe à la Galerie.
 
 ```
 void AddGroup(
@@ -191,27 +192,27 @@ void AddGroup(
 ### <a name="parameters"></a>Paramètres
 
 *lpszGroupName*<br/>
-[in] Spécifie le nom du groupe.
+dans Spécifie le nom du groupe.
 
 *uiImagesPaletteResID*<br/>
-[in] Spécifie l’ID de ressource de la liste d’images qui contient les images pour le groupe.
+dans Spécifie l’ID de ressource de la liste d’images qui contient les images du groupe.
 
 *cxPaletteImage*<br/>
-[in] Spécifie la largeur en pixels d’une image.
+dans Spécifie la largeur en pixels d’une image.
 
 *imagesGroup*<br/>
-[in] Une référence à la liste d’images qui contient des images de groupe.
+dans Référence à une liste d’images qui contient des images de groupe.
 
 *nIconsNum*<br/>
-[in] Spécifie le nombre d’icônes dans le groupe. Ce paramètre doit être spécifié uniquement pour l’installation personnalisée (owner-drawn) groupes.
+dans Spécifie le nombre d’icônes dans le groupe. Ce paramètre doit être spécifié uniquement pour les groupes personnalisés (owner-drawn).
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez diviser les éléments sur une galerie de ruban en plusieurs groupes en appelant cette méthode. Chaque groupe peut avoir une légende.
+Vous pouvez diviser les éléments d’une galerie de ruban en plusieurs groupes en appelant cette méthode. Chaque groupe peut avoir une légende.
 
 ##  <a name="addsubitem"></a>  CMFCRibbonGallery::AddSubItem
 
-Ajoute un nouvel élément de menu au menu de liste déroulante.
+Ajoute un nouvel élément de menu au menu déroulant.
 
 ```
 void AddSubItem(
@@ -223,26 +224,26 @@ void AddSubItem(
 ### <a name="parameters"></a>Paramètres
 
 *pSubItem*<br/>
-[in] Pointeur vers l’élément à ajouter au menu.
+dans Pointeur vers l’élément à ajouter au menu.
 
 *nIndex*<br/>
-[in] Spécifie l’index de base zéro d’un emplacement où insérer l’élément.
+dans Spécifie l’index de base zéro d’un emplacement où insérer l’élément.
 
 *bOnTop*<br/>
-[in] TRUE pour spécifier que l’élément doit être inséré avant la galerie du ruban ; Sinon, FALSE.
+dans TRUE pour spécifier que l’élément doit être inséré avant la Galerie du ruban; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez combiner des galeries de fenêtre contextuelle avec les éléments de menu contextuel en appelant cette méthode. Éléments de menu peuvent être placés avant ou après la galerie.
+Vous pouvez combiner des galeries contextuelles avec des éléments de menu contextuel en appelant cette méthode. Les éléments de menu peuvent être placés avant ou après la Galerie.
 
-Pour insérer l’élément avant de la galerie, définissez *bOnTop* sur TRUE. Définissez *bOnTop* sur FALSE pour insérer l’élément au-dessous de la galerie.
+Pour insérer l’élément avant la Galerie, affectez à *bOnTop* la valeur true. Affectez à *bOnTop* la valeur false pour insérer l’élément sous la Galerie.
 
 > [!NOTE]
->  Le paramètre *nIndex* Spécifie l’index d’insertion à la fois en haut de la galerie et en bas de la galerie. Par exemple, si vous avez besoin d’insérer un élément d’une position avant de la galerie, définissez *nIndex* 1 et *bOnTop* sur TRUE. De même, si vous avez besoin d’insérer un élément d’une position au-dessous de la galerie, définissez *nIndex* 1 et *bOnTop* sur FALSE.
+>  Le paramètre *nIndex* spécifie l’index d’insertion en haut de la Galerie et en bas de la Galerie. Par exemple, si vous devez insérer un élément à une position avant la Galerie, affectez la valeur 1 à *nIndex* et la valeur true à *bOnTop* . De même, si vous devez insérer un élément à une position sous la Galerie, affectez la valeur 1 à *nIndex* et la valeur false à *bOnTop* .
 
 ##  <a name="clear"></a>  CMFCRibbonGallery::Clear
 
-Efface le contenu de la galerie.
+Efface le contenu de la Galerie.
 
 ```
 virtual void Clear();
@@ -250,11 +251,11 @@ virtual void Clear();
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour supprimer tout le contenu de la galerie du ruban. Ceci doit être fait avant d’attacher une nouvelle galerie du ruban ou un ensemble de groupes à la galerie du ruban.
+Appelez cette méthode pour supprimer tout le contenu de la Galerie du ruban. Pour ce faire, vous devez associer une nouvelle galerie de ruban ou un ensemble de groupes à la Galerie du ruban.
 
 ##  <a name="cmfcribbongallery"></a>  CMFCRibbonGallery::CMFCRibbonGallery
 
-Crée et initialise un [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md) objet.
+Construit et initialise un objet [cmfcribbongallery,](../../mfc/reference/cmfcribbongallery-class.md) .
 
 ```
 CMFCRibbonGallery (
@@ -285,7 +286,7 @@ CMFCRibbonGallery (
 ### <a name="parameters"></a>Paramètres
 
 *nID*<br/>
-Spécifie l’ID de commande de la commande à exécuter quand un utilisateur clique sur le bouton.
+Spécifie l’ID de commande de la commande à exécuter lorsqu’un utilisateur clique sur le bouton.
 
 *lpszText*<br/>
 Spécifie le texte à afficher sur le bouton.
@@ -297,28 +298,28 @@ Index de base zéro de la petite image à afficher sur le bouton.
 Index de base zéro de la grande image à afficher sur le bouton.
 
 *imagesPalette*<br/>
-Une référence à la [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) objet qui contient les images à afficher dans la galerie.
+Référence à l’objet [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) qui contient les images à afficher dans la Galerie.
 
 *uiImagesPaletteResID*<br/>
-L’ID de ressource de la liste des images à afficher dans la galerie.
+ID de ressource de la liste d’images à afficher dans la Galerie.
 
 *cxPaletteImage*<br/>
-Spécifie la largeur, en pixels, de l’image dans la galerie.
+Spécifie la largeur, en pixels, de l’image sur la Galerie.
 
 *sizeIcon*<br/>
-Spécifie la taille, en pixels, de l’image de galerie.
+Spécifie la taille, en pixels, de l’image de la Galerie.
 
 *nIconsNum*<br/>
-Spécifie le nombre d’icônes dans la galerie.
+Spécifie le nombre d’icônes dans la Galerie.
 
 *bDefaultButtonStyle*<br/>
-Spécifie s’il faut utiliser la valeur par défaut ou le style de bouton owner-drawn.
+Spécifie s’il faut utiliser le style de bouton par défaut ou owner-drawn.
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="enablemenuresize"></a>  CMFCRibbonGallery::EnableMenuResize
 
-Active ou désactive le redimensionnement du Panneau de menu.
+Active ou désactive le redimensionnement du panneau de menu.
 
 ```
 void EnableMenuResize(
@@ -329,14 +330,14 @@ void EnableMenuResize(
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-[in] TRUE pour activer le redimensionnement du menu ; Sinon, FALSE.
+dans TRUE pour activer le redimensionnement du menu; Sinon, FALSe.
 
 *bVertcalOnly*<br/>
-[in] TRUE pour spécifier que la galerie peut être redimensionnée uniquement verticalement ; FALSE pour indiquer que la galerie peut être redimensionnée verticalement et horizontalement.
+dans TRUE pour spécifier que la galerie ne peut être redimensionnée que verticalement; FALSe pour spécifier que la Galerie peut être redimensionnée à la fois verticalement et horizontalement.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour activer ou désactiver le redimensionnement de la galerie du ruban. Lorsque le redimensionnement est activé, la galerie du ruban affiche une barre de redimensionnement un utilisateur peut utiliser pour la redimensionner.
+Utilisez cette méthode pour activer ou désactiver le redimensionnement de la Galerie du ruban. Lorsque le redimensionnement est activé, la Galerie du ruban affiche une pince qu’un utilisateur peut utiliser pour le redimensionner.
 
 ##  <a name="enablemenusidebar"></a>  CMFCRibbonGallery::EnableMenuSideBar
 
@@ -349,13 +350,13 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-[in] TRUE pour spécifier que la barre latérale est activée ; Sinon, FALSE.
+dans TRUE pour spécifier que la barre latérale est activée; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour activer ou désactiver la barre latérale de style Office XP sur le côté gauche du menu.
+Appelez cette méthode pour activer ou désactiver la barre latérale du style Office XP sur le côté gauche du menu.
 
-##  <a name="getcompactsize"></a>  CMFCRibbonGallery::GetCompactSize
+##  <a name="getcompactsize"></a>Cmfcribbongallery,:: GetCompactSize
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -363,7 +364,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDC*<br/>
+dans *contrôleur de domaine principal*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -390,11 +391,11 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ### <a name="parameters"></a>Paramètres
 
 *nGroupIndex*<br/>
-[in] Spécifie l’index de base zéro pour le groupe dont vous souhaitez récupérer le nom.
+dans Spécifie l’index de base zéro pour le groupe dont vous souhaitez récupérer le nom.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nom du groupe situé à l’index spécifié. En passant un index non valide entraîne un échec d’assertion.
+Nom du groupe situé à l’index spécifié. Le passage d’un index non valide entraîne l’échec d’une assertion.
 
 ### <a name="remarks"></a>Notes
 
@@ -410,7 +411,7 @@ virtual int GetGroupOffset() const;
 
 ##  <a name="geticonsinrow"></a>  CMFCRibbonGallery::GetIconsInRow
 
-Retourne le nombre d’éléments dans une ligne de la galerie du ruban.
+Retourne le nombre d’éléments d’une ligne de la Galerie du ruban.
 
 ```
 int GetIconsInRow() const;
@@ -418,13 +419,13 @@ int GetIconsInRow() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre d’éléments dans une ligne.
+Nombre d’éléments dans une ligne.
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="getitemtooltip"></a>  CMFCRibbonGallery::GetItemToolTip
 
-Retourne le texte d’info-bulle qui est associé à un élément dans la galerie.
+Retourne le texte d’info-bulle associé à un élément dans la Galerie.
 
 ```
 LPCTSTR GetItemToolTip(int nItemIndex) const;
@@ -433,17 +434,17 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ### <a name="parameters"></a>Paramètres
 
 *nItemIndex*<br/>
-[in] Spécifie l’index de base zéro de l’élément pour lequel récupérer le texte d’info-bulle.
+dans Spécifie l’index de base zéro de l’élément dont le texte d’info-bulle doit être récupéré.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers la chaîne d’info-bulle assignée à un élément dans la galerie du ruban. Il peut être NULL si aucune info-bulle n’est affecté à cet élément.
+Pointeur vers la chaîne d’info-bulle assignée à un élément dans la Galerie du ruban. Elle peut avoir la valeur NULL si aucune info-bulle n’est assignée à cet élément.
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="getlastselecteditem"></a>  CMFCRibbonGallery::GetLastSelectedItem
 
-Retourne l’index du dernier élément dans la galerie du ruban sélectionné par l’utilisateur.
+Retourne l’index du dernier élément de la Galerie du ruban que l’utilisateur a sélectionnée.
 
 ```
 static int GetLastSelectedItem(UINT uiCmdID);
@@ -452,17 +453,17 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ### <a name="parameters"></a>Paramètres
 
 *uiCmdID*<br/>
-[in] Spécifie l’ID de commande de l’élément de menu qui a ouvert la galerie du ruban.
+dans Spécifie l’ID de commande de l’élément de menu qui a ouvert la Galerie du ruban.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Lorsque l’utilisateur sélectionne un élément dans la galerie du ruban, la bibliothèque envoie le message WM_COMMAND avec l’ID de commande du bouton de menu qui a ouvert la galerie du ruban.
+Lorsque l’utilisateur sélectionne un élément dans la Galerie du ruban, la bibliothèque envoie le message WM_COMMAND avec l’ID de commande du bouton de menu qui a ouvert la Galerie du ruban.
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="getpaletteid"></a>  CMFCRibbonGallery::GetPaletteID
 
-Retourne l’ID de commande de la palette en cours.
+Retourne l’ID de commande de la palette actuelle.
 
 ```
 int GetPaletteID() const;
@@ -470,11 +471,11 @@ int GetPaletteID() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’ID de commande de la palette actuellement sélectionnée.
+ID de commande de la palette actuellement sélectionnée.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getregularsize"></a>  CMFCRibbonGallery::GetRegularSize
+##  <a name="getregularsize"></a>Cmfcribbongallery,:: GetRegularSize
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -482,7 +483,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDC*<br/>
+dans *contrôleur de domaine principal*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -510,7 +511,7 @@ virtual BOOL HasMenu() const;
 
 ##  <a name="isbuttonmode"></a>  CMFCRibbonGallery::IsButtonMode
 
-Spécifie si la palette est contenue dans un bouton de la galerie.
+Spécifie si la palette est contenue dans un bouton de la Galerie.
 
 ```
 BOOL IsButtonMode() const;
@@ -518,7 +519,7 @@ BOOL IsButtonMode() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la palette est affichée comme un bouton de menu déroulant ; FALSE si la palette s’affiche directement sur le ruban.
+TRUE si la palette est affichée sous la forme d’un bouton de menu déroulant; FALSe si la palette s’affiche directement sur le ruban.
 
 ### <a name="remarks"></a>Notes
 
@@ -532,7 +533,7 @@ BOOL IsMenuResizeEnabled() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le redimensionnement de menu a été activé ; Sinon, FALSE.
+TRUE si le redimensionnement de menu a été activé; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -556,7 +557,7 @@ BOOL IsMenuSideBar() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la barre latérale de style Office XP est dessinée sur le côté gauche du menu contextuel ; Sinon, FALSE.
+TRUE si la barre latérale du style Office XP est dessinée sur le côté gauche du menu contextuel; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -568,7 +569,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDC*<br/>
+dans *contrôleur de domaine principal*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -580,13 +581,13 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDC*<br/>
+dans *contrôleur de domaine principal*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="ondrawpaletteicon"></a>  CMFCRibbonGallery::OnDrawPaletteIcon
 
-Appelé par le framework lorsqu’une icône de la galerie est dessinée.
+Appelé par le Framework lorsqu’une icône de Galerie est dessinée.
 
 ```
 virtual void OnDrawPaletteIcon(
@@ -600,19 +601,19 @@ virtual void OnDrawPaletteIcon(
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-[in] Pointeur vers le contexte de périphérique qui est utilisé pour le dessin.
+dans Pointeur vers le contexte de périphérique (Device Context) utilisé pour le dessin.
 
 *rectIcon*<br/>
-[in] Spécifie le rectangle englobant de l’icône à dessiner.
+dans Spécifie le rectangle englobant de l’icône à dessiner.
 
 *nIconIndex*<br/>
-[in] Spécifie l’index de base zéro dans la liste d’images d’icônes de la galerie de l’icône à dessiner.
+dans Spécifie l’index de base zéro dans la liste d’images des icônes de la Galerie de l’icône à dessiner.
 
 *pIcon*<br/>
-[in] Pointeur vers l’icône qui est dessiné.
+dans Pointeur vers l’icône qui est dessinée.
 
 *clrText*<br/>
-[in] Spécifie la couleur du texte de l’élément à dessiner.
+dans Spécifie la couleur du texte de l’élément à dessiner.
 
 ### <a name="remarks"></a>Notes
 
@@ -626,11 +627,11 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bActivez*<br/>
+dans *bEnable*<br/>
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="onrtlchanged"></a>  CMFCRibbonGallery::OnRTLChanged
+##  <a name="onrtlchanged"></a>Cmfcribbongallery,:: OnRTLChanged
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -638,13 +639,13 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bIsRTL*<br/>
+dans *bIsRTL*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="redrawicons"></a>  CMFCRibbonGallery::RedrawIcons
 
-Redessine la galerie.
+Redessine la Galerie.
 
 ```
 void RedrawIcons();
@@ -652,11 +653,11 @@ void RedrawIcons();
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction pour redessiner la galerie. Vous devez appeler cette méthode si vous avez modifié le contenu de la galerie lors de l’exécution.
+Appelez cette fonction pour redessiner la Galerie. Vous devez appeler cette méthode si vous avez modifié le contenu de la Galerie au moment de l’exécution.
 
 ##  <a name="removeitemtooltips"></a>  CMFCRibbonGallery::RemoveItemToolTips
 
-Supprime les info-bulles de tous les éléments de la galerie.
+Supprime les info-bulles de tous les éléments de la Galerie.
 
 ```
 void RemoveItemToolTips();
@@ -672,7 +673,7 @@ void SelectItem(int nItemIndex);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *nItemIndex*<br/>
+dans *nItemIndex*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -689,20 +690,20 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>Paramètres
 
 *pParent*<br/>
-[in] La fenêtre parente de la fenêtre de la galerie du ruban.
+dans Fenêtre parente de la fenêtre de la Galerie du ruban.
 
 *data*<br/>
-[out] Un `CAccessibilityData` objet qui reçoit les données d’accessibilité à partir de la galerie du ruban.
+à `CAccessibilityData` Objet qui reçoit les données d’accessibilité de la Galerie du ruban.
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
-TRUE si la méthode a réussi ; Sinon, FALSE.
+TRUE si la méthode réussit; Sinon, FALSe.
 
 ##  <a name="setbuttonmode"></a>  CMFCRibbonGallery::SetButtonMode
 
-Détermine s’il faut afficher la galerie du ruban, comme un bouton de liste déroulante ou comme une palette directement sur le ruban.
+Détermine s’il faut afficher la Galerie du ruban sous la forme d’un bouton déroulant ou d’une palette directement sur le ruban.
 
 ```
 void SetButtonMode(BOOL bSet=TRUE);
@@ -711,7 +712,7 @@ void SetButtonMode(BOOL bSet=TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bSet*<br/>
-[in] True pour afficher la galerie du ruban comme un bouton de menu déroulant ; Pour afficher le contenu de la galerie du ruban directement sur le ruban, la valeur est FALSE.
+dans TRUE pour afficher la Galerie du ruban sous la forme d’un bouton de menu déroulant. FALSe pour afficher le contenu de la Galerie du ruban directement sur le ruban.
 
 ### <a name="remarks"></a>Notes
 
@@ -728,18 +729,18 @@ void SetGroupName(
 ### <a name="parameters"></a>Paramètres
 
 *nGroupIndex*<br/>
-[in] Spécifie l’index de base zéro pour le groupe pour lequel le nom est en cours de modification.
+dans Spécifie l’index de base zéro pour le groupe pour lequel le nom est modifié.
 
 *lpszGroupName*<br/>
-[in] Spécifie le nouveau nom pour le groupe.
+dans Spécifie le nouveau nom du groupe.
 
 ### <a name="remarks"></a>Notes
 
-Le groupe dont le nom est en cours de modification doit avoir été ajouté à l’aide de la [CMFCRibbonGallery::AddGroup](#addgroup) (méthode).
+Le groupe dont le nom est en cours de modification doit avoir été ajouté à l’aide de la méthode [cmfcribbongallery,:: addgroup](#addgroup) .
 
 ##  <a name="seticonsinrow"></a>  CMFCRibbonGallery::SetIconsInRow
 
-Spécifie le nombre d’éléments par ligne dans la galerie.
+Spécifie le nombre d’éléments par ligne dans la Galerie.
 
 ```
 void SetIconsInRow(int nIconsInRow);
@@ -748,15 +749,15 @@ void SetIconsInRow(int nIconsInRow);
 ### <a name="parameters"></a>Paramètres
 
 *nIconsInRow*<br/>
-[in] Spécifie le nombre d’éléments à afficher dans chaque ligne de la galerie.
+dans Spécifie le nombre d’éléments à afficher dans chaque ligne de la Galerie.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour spécifier la largeur de la galerie du ruban.
+Utilisez cette méthode pour spécifier la largeur de la Galerie du ruban.
 
 ##  <a name="setitemtooltip"></a>  CMFCRibbonGallery::SetItemToolTip
 
-Définit le texte d’info-bulle pour un élément dans la galerie.
+Définit le texte d’info-bulle pour un élément de la Galerie.
 
 ```
 void SetItemToolTip(
@@ -767,16 +768,16 @@ void SetItemToolTip(
 ### <a name="parameters"></a>Paramètres
 
 *nItemIndex*<br/>
-[in] Index de base zéro de l’élément de la palette à laquelle associer l’info-bulle.
+dans Index de base zéro de l’élément de palette auquel associer l’info-bulle.
 
 *lpszToolTip*<br/>
-[in] Le texte s’affiche sur l’info-bulle.
+dans Texte à afficher dans l’info-bulle.
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="setpalette"></a>  CMFCRibbonGallery::SetPalette
 
-Attache une palette dans une galerie de ruban.
+Attache une palette à une galerie de ruban.
 
 ```
 void SetPalette(CMFCToolBarImages& imagesPalette);
@@ -789,19 +790,19 @@ void SetPalette(
 ### <a name="parameters"></a>Paramètres
 
 *imagesPalette*<br/>
-[in] Spécifie la liste d’images qui contient les icônes à afficher dans la galerie.
+dans Spécifie la liste d’images qui contient les icônes à afficher dans la Galerie.
 
 *uiImagesPaletteResID*<br/>
-[in] Spécifie l’ID de ressource de la liste d’images qui contient les icônes à afficher dans la galerie.
+dans Spécifie l’ID de ressource de la liste d’images qui contient les icônes à afficher dans la Galerie.
 
 *cxPaletteImage*<br/>
-[in] Spécifie la largeur, en pixels, d’une image dans la galerie.
+dans Spécifie la largeur, en pixels, d’une image sur la Galerie.
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID
 
-Définit l’ID de commande qui est envoyé dans le message WM_COMMAND lorsqu’un utilisateur sélectionne un élément de la galerie.
+Définit l’ID de commande qui est envoyé dans le message WM_COMMAND lorsqu’un utilisateur sélectionne un élément de la Galerie.
 
 ```
 void SetPaletteID(UINT nID);
@@ -810,11 +811,11 @@ void SetPaletteID(UINT nID);
 ### <a name="parameters"></a>Paramètres
 
 *nID*<br/>
-[in] Spécifie l’ID de commande qui est envoyé dans le message WM_COMMAND lorsqu’un utilisateur sélectionne un élément de la galerie.
+dans Spécifie l’ID de commande qui est envoyé dans le message WM_COMMAND lorsqu’un utilisateur sélectionne un élément de la Galerie.
 
 ### <a name="remarks"></a>Notes
 
-Pour déterminer l’élément spécifique qu’un utilisateur sélectionnés à partir de la galerie, appelez le [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) méthode statique.
+Pour déterminer l’élément spécifique qu’un utilisateur a sélectionné à partir de la Galerie, appelez la méthode statique [cmfcribbongallery,:: GetLastSelectedItem](#getlastselecteditem) .
 
 ## <a name="see-also"></a>Voir aussi
 
