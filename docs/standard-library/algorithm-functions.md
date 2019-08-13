@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: b08d45ac065fe63f6f51e3b63a49e8714a486988
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661539"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956986"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt;, fonctions
 
@@ -263,7 +263,7 @@ L'algorithme `adjacent_find` est un algorithme de séquence sans mutation. La pl
 
 `operator==`, qui sert à déterminer la correspondance entre des éléments, doit imposer une relation d'équivalence entre ses opérandes.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_adj_fnd.cpp
@@ -446,7 +446,7 @@ La fonction de modèle retourne **true** uniquement si, pour `N` une partie de l
 
 `[0, last - first)`, le prédicat `pred(*(first + N))` a la valeur true.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_any_of.cpp
@@ -802,7 +802,7 @@ Les algorithmes `copy_backward` et [move_backward](../standard-library/algorithm
 
 L'algorithme `copy_backward` modifie uniquement les valeurs sur lesquelles pointent les itérateurs, assignant de nouvelles valeurs aux éléments dans la plage de destination. Il ne peut pas être utilisé pour créer de nouveaux éléments et ne peut pas insérer directement d'éléments dans un conteneur vide.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_copy_bkwd.cpp
@@ -1006,7 +1006,7 @@ Retourne un itérateur de sortie indiquant où les éléments ont été copiés.
 
 La fonction `*(dest + N) = *(first + N))` de modèle évalue une fois pour chaque `N` dans `[0, count)`la plage, pour les valeurs `N` strictement croissantes de à partir de la valeur la plus faible. Elle retourne ensuite `dest + N`. Si *dest* et désignent d' *abord* les régions de stockage, la *destination* ne `[first, last)`doit pas être comprise dans la plage.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_copy_n.cpp
@@ -1071,7 +1071,7 @@ Valeur des éléments à compter.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Type de différence `InputIterator` du qui compte le nombre d’éléments de la plage [*First*, *Last*) qui ont la valeur *value.*
+Type de différence du `InputIterator` qui compte le nombre d’éléments de la plage [*First*, *Last*) qui ont la valeurvalue.
 
 ### <a name="remarks"></a>Notes
 
@@ -1303,7 +1303,7 @@ Si les deux plages sont de longueur égale, la complexité temporelle de l'algor
 
 Ni le `operator==`, ni le prédicat défini par l'utilisateur ne doit obligatoirement imposer une relation d'équivalence qui est symétrique, réflexive et transitive entre ses opérandes.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 #include <iostream>
@@ -1605,7 +1605,7 @@ ForwardIterator fill_n(
 Stratégie d’exécution à utiliser.
 
 *premier*\
-Itérateur de sortie ciblant la position du premier élément de la plage à laquelle la valeur de la valeur doit être *affectée.*
+Itérateur de sortie ciblant la position du premier élément de la plage à laquelle la valeur dela valeur doit être affectée.
 
 *saut*\
 Type entier signé ou non signé spécifiant le nombre d’éléments auxquels attribuer une valeur.
@@ -1780,7 +1780,7 @@ Itérateur vers l’avant ciblant la position du premier élément de la derniè
 
 Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_find_end.cpp
@@ -1944,7 +1944,7 @@ Itérateur vers l’avant qui traite la position du premier élément de la prem
 
 Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_find_first_of.cpp
@@ -2080,7 +2080,7 @@ Itérateur d’entrée qui fait référence au premier élément de la plage qui
 
 Cette fonction de modèle est une généralisation de l’algorithme [find](../standard-library/algorithm-functions.md#find) et remplace le prédicat « est égal à une valeur spécifique » par un autre prédicat. Pour l’opposé logique (rechercher le premier élément qui ne satisfait pas le prédicat), consultez [find_if_not](../standard-library/algorithm-functions.md#find_if_not).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // cl.exe /W4 /nologo /EHsc /MTd
@@ -2246,7 +2246,7 @@ La plage référencée doit être valide ; tous les pointeurs doivent pouvoir �
 
 La complexité est linéaire avec au maximum (*dernière* - *priorité*) comparaisons.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_for_each.cpp
@@ -2413,7 +2413,7 @@ La plage référencée doit être valide ; tous les pointeurs doivent pouvoir �
 
 La complexité est linéaire, avec exactement ( `last`  -  `first`) les appels au générateur requis.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_generate.cpp
@@ -2618,7 +2618,7 @@ Les types de valeur des itérateurs d’entrée doivent être comparables en ter
 
 La complexité de l’algorithme est linéaire avec au `2 * ((last1 - first1) - (last2 - first2)) - 1` maximum les comparaisons pour les plages sources non vides.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_includes.cpp
@@ -2826,7 +2826,7 @@ Les plages triées consécutives doivent chacune être organisées comme une con
 
 La complexité dépend de la mémoire disponible, car l’algorithme alloue de la mémoire à une mémoire tampon temporaire. Si une quantité suffisante de mémoire est disponible, le meilleur cas `(last - first) - 1` est linéaire avec les comparaisons; si aucune mémoire auxiliaire n’est disponible `N log(N)`, le pire des cas est, où *n* = pour la*dernière* - *fois*.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_inplace_merge.cpp
@@ -3152,7 +3152,7 @@ La première fonction de modèle part du principe qu’il existe autant d’él�
 
 Les deuxième et quatrième fonctions avec modèle ont le même comportement, hormis le fait qu'elles remplacent `operator==(X, Y)` par `Pred(X, Y)`. Pour se comporter correctement, le prédicat doit être symétrique, réflexif et transitif.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 L'exemple suivant montre comment utiliser `is_permutation` :
 
@@ -3337,7 +3337,7 @@ Le deuxième des itérateurs vers l’avant dont la valeur est à échanger.
 
 Les types valeur des itérateurs vers l’avant/d’entrée doivent avoir la même valeur.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_iter_swap.cpp
@@ -3542,7 +3542,7 @@ Une comparaison lexicographique entre séquences les compare élément par élé
 
 - Aucune inégalité n’est trouvée et les séquences ont le même nombre d’éléments. par conséquent, les séquences sont égales et le résultat dela comparaison est false.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_lex_comp.cpp
@@ -3816,7 +3816,7 @@ Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires
 
 La complexité est linéaire, ce `3 * (last - first)` qui nécessite des comparaisons.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_make_heap.cpp
@@ -3903,7 +3903,7 @@ Le plus grand des deux objets, sauf si aucun n'est plus grand que l'autre ; dan
 
 L'algorithme `max` est inhabituel, dans la mesure où les objets sont passés comme paramètres. La plupart des algorithmes de la bibliothèque C++ Standard opèrent sur une plage d’éléments dont la position est spécifiée par des itérateurs passés comme paramètres. Si vous avez besoin d’une fonction qui opère sur une plage d’éléments, utilisez plutôt [max_element](../standard-library/algorithm-functions.md#max_element). Visual Studio 2017 active **constexpr** sur les surcharges qui prennent un initializer_list.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_max.cpp
@@ -4125,7 +4125,7 @@ La plage référencée doit être valide ; tous les pointeurs doivent pouvoir �
 
 La complexité est linéaire: `(last - first) - 1` les comparaisons sont nécessaires pour une plage non vide.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_max_element.cpp
@@ -5019,7 +5019,7 @@ La complexité temporelle de l'algorithme est linéaire pour le nombre d'éléme
 
 Le prédicat défini par l’utilisateur ne doit pas obligatoirement imposer une relation d’équivalence qui est symétrique, réflexive et transitive entre ses opérandes.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 L'exemple suivant montre comment utiliser mismatch. La surcharge C++03 est affichée uniquement pour montrer comment elle peut produire un résultat inattendu.
 
@@ -5586,7 +5586,7 @@ Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’e
 
 La complexité moyenne du tri partiel *est O*(`last`(- - `first`) log`sortEnd`(`first`)).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_partial_sort.cpp
@@ -5726,7 +5726,7 @@ Les plages source et de destination ne doivent pas se chevaucher et doivent êtr
 
 Le prédicat binaire doit fournir un ordre faible strict pour que les éléments qui ne sont pas équivalents soient ordonnés, mais que ceux qui sont équivalents ne le soient pas. Deux éléments sont équivalents sous le prédicat Inférieur à, mais pas nécessairement égaux si aucun n’est inférieur à l’autre.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_partial_sort_copy.cpp
@@ -6012,7 +6012,7 @@ La plage qui exclut l’élément qui vient d’être ajouté à la fin doit êt
 
 La complexité est logarithmique et nécessite au maximum `log (last - first)` les comparaisons.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_pop_heap.cpp
@@ -6115,7 +6115,7 @@ Le prédicat binaire par défaut est inférieur à et les éléments de la plage
 
 La complexité est linéaire, avec au maximum (`last` - `first`)/2 swaps.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_prev_perm.cpp
@@ -6416,7 +6416,7 @@ La complexité est linéaire; Il existe (`last` - )descomparaisonsd’égalité`
 
 La [classe List](../standard-library/list-class.md) a une version de fonction membre plus efficace `remove`de, qui relient également les pointeurs.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_remove.cpp
@@ -6617,7 +6617,7 @@ La complexité est linéaire: il y a`last`( -  - `first`) des comparaisons d’�
 
 Pour plus d’informations sur le comportement de ces fonctions, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_remove_copy_if.cpp
@@ -7386,7 +7386,7 @@ Les plages référencées doivent être valides ; tous les pointeurs doivent pou
 
 La complexité est linéaire avec au maximum (`last` - `first`) des permutations.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_rotate.cpp
@@ -7509,7 +7509,7 @@ Les plages référencées doivent être valides ; tous les pointeurs doivent pou
 
 La complexité est linéaire avec au maximum (`last` - `first`) des permutations.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_rotate_copy.cpp
@@ -7646,7 +7646,7 @@ Itérateur vers l'avant ciblant la position juste après le dernier élément de
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 *recherche*\
-Recherche qui encapsule le modèle à rechercher et l’algorithme de recherche à utiliser.
+Recherche qui encapsule le modèle à rechercher et l’algorithme de recherche à utiliser. Pour plus d’informations sur les recherches, consultez la classe [default_searcher](default-searcher-class.md), la classe [boyer_moore_horspool_searcher](boyer-moore-horspool-searcher-class.md)et la [classe boyer_moore_searcher](boyer-moore-searcher-class.md).
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -7829,7 +7829,7 @@ La plage référencée doit être valide ; tous les pointeurs doivent pouvoir �
 
 La complexité est linéaire par rapport à la taille de la plage de recherche.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_search_n.cpp
@@ -7995,7 +7995,7 @@ Les types de valeur des itérateurs d’entrée doivent être comparables en ter
 
 La complexité de l’algorithme est linéaire avec au `2 * ((last1 - first1) - (last2 - first2)) - 1` maximum les comparaisons pour les plages sources non vides.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_set_diff.cpp
@@ -8395,7 +8395,7 @@ Les types de valeur des itérateurs d’entrée doivent être comparables en ter
 
 La complexité de l’algorithme est linéaire avec au `2 * ((last1 - first1) - (last2 - first2)) - 1` maximum les comparaisons pour les plages sources non vides.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_set_sym_diff.cpp
@@ -8907,7 +8907,7 @@ Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.
 
-La complexité est au maximum `N log N`, où *N* = au plus le*dernier* -  *.*
+La complexité est au maximum `N log N`, où *N* = au plus le*dernier* - .
 
 ### <a name="example"></a>Exemple
 
@@ -9006,7 +9006,7 @@ La plage référencée doit être valide ; tous les pointeurs doivent pouvoir �
 
 Les éléments *a* et *b* sont équivalents, mais pas nécessairement égaux `pred( a, b )` , si a la valeur false et `pred( b, a )` a la valeur false, où prédit est le prédicat spécifié par le paramètre. L' `stable_partition` algorithme est stable et garantit que l’ordre relatif des éléments équivalents sera préservé. L’algorithme `partition` ne préserve pas nécessairement ce classement d’origine.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_stable_partition.cpp
@@ -9105,7 +9105,7 @@ Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’e
 
 La complexité au moment de l' `stable_sort` exécution de dépend de la quantité de mémoire disponible, mais le meilleur cas (avec une mémoire `O(N log N)` suffisante) est et, `O(N (log N)^2)`dans le pire des cas, c’est, où *N* = *dernier*  -   *tout d’abord*. En règle générale `sort` , l’algorithme est `stable_sort`beaucoup plus rapide que.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // alg_stable_sort.cpp
@@ -9199,7 +9199,7 @@ Pour le premier remplacement, deuxième objet dont le contenu est échangé. Pou
 
 La première surcharge est conçue pour traiter des objets individuels. La deuxième surcharge échange le contenu des objets entre deux tableaux.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_swap.cpp
@@ -9429,7 +9429,7 @@ Si le *résultat* est égal à *First1* dans la première version de l’algorit
 
 La complexité est linéaire avec au maximum (`last1` - `first1`) comparaisons.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_transform.cpp
@@ -9577,7 +9577,7 @@ La classe list fournit une fonction membre « unique » plus efficace qui peut
 
 Ces algorithmes ne peuvent pas être utilisés sur un conteneur associatif.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // alg_unique.cpp

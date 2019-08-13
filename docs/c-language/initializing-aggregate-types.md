@@ -9,11 +9,11 @@ helpviewer_keywords:
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151492"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "62326077"
 ---
 # <a name="initializing-aggregate-types"></a>Initialisation des types d'agrégats
 
@@ -22,8 +22,8 @@ Un type d’*agrégat* est un type de structure, d’union ou de tableau. Si un 
 ## <a name="syntax"></a>Syntaxe
 
 *initializer* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **}** /* Pour l’initialisation d’agrégats \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **, }**
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* Pour l’initialisation d’agrégats \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
 
 *initializer-list* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
@@ -35,7 +35,7 @@ Pour chaque liste d'initialiseurs, les valeurs des expressions constantes sont a
 
 Si l'élément *initializer-list* comporte moins de valeurs qu'un type d'agrégat, les membres ou éléments restants du type d'agrégat sont initialisés à 0. La valeur initiale d'un identificateur automatique qui n'est pas initialisé explicitement n'est pas définie. Si *initializer-list* comporte plus de valeurs qu'un type d'agrégat, une erreur se produit. Ces règles s'appliquent à chaque liste d'initialiseurs incorporée, ainsi qu'à l'agrégat dans son ensemble.
 
-L'initialiseur d'une structure est une expression du même type, ou une liste d'initialiseurs pour ses membres placés entre accolades (**{ }**). Les membres champs de bits sans nom ne sont pas initialisés.
+L'initialiseur d'une structure est une expression du même type, ou une liste d'initialiseurs pour ses membres placés entre accolades ( **{ }** ). Les membres champs de bits sans nom ne sont pas initialisés.
 
 Lorsqu'une union est initialisée, *initializer-list* doit être une expression constante unique. La valeur de l'expression constante est assignée au premier membre de l'union.
 
