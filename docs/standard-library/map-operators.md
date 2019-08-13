@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: e05aca75f527e1bc78912ab6b4b5a9de6dcd54c5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246423"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956958"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt;, opérateurs
 
@@ -37,7 +37,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `map`.
 
 *Oui*\
@@ -102,7 +102,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `map`.
 
 *Oui*\
@@ -116,7 +116,7 @@ Objet de type `map`.
 
 La comparaison entre les objets map est basée sur une comparaison par paire de leurs éléments. La relation d'infériorité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // map_op_lt.cpp
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="op_lt_eq"></a> Opérateur&lt;=
+## <a name="op_lt_eq"></a>and&lt;=
 
 Teste si l’objet map situé à gauche de l’opérateur est inférieur ou égal à l’objet map situé à droite.
 
@@ -167,7 +167,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `map`.
 
 *Oui*\
@@ -235,7 +235,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `map`.
 
 *Oui*\
@@ -249,7 +249,7 @@ Objet de type `map`.
 
 La comparaison entre les objets map est basée sur une comparaison par paire de leurs éléments. Deux mappages sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // map_op_eq.cpp
@@ -300,7 +300,7 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `map`.
 
 *Oui*\
@@ -364,7 +364,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `map`.
 
 *Oui*\
@@ -420,7 +420,7 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="op_neq_multimap"></a> opérateur ! = (multimap)
+## <a name="op_neq_multimap"></a>opérateur! = (Multimap)
 
 Teste si l’objet multimap situé à gauche de l’opérateur n’est pas égal à l’objet multimap situé à droite.
 
@@ -432,7 +432,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `multimap`.
 
 *Oui*\
@@ -497,7 +497,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `multimap`.
 
 *Oui*\
@@ -511,7 +511,7 @@ Objet de type `multimap`.
 
 La comparaison entre les objets multimap est basée sur une comparaison par paire de leurs éléments. La relation d'infériorité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // multimap_op_lt.cpp
@@ -550,11 +550,7 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-<<<<<<< HEAD
-## <a name="eq_multimap"></a> Opérateur&lt;=
-=======
 ## <a name="op_lt_eq_multimap"></a>  operator&lt;=
->>>>>>> 009c7ce384664f2a62ffb0bc61d6586b585ed38a
 
 Teste si l’objet multimap situé à gauche de l’opérateur est inférieur ou égal à l’objet multimap situé à droite.
 
@@ -566,7 +562,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `multimap`.
 
 *Oui*\
@@ -576,7 +572,7 @@ Objet de type `multimap`.
 
 **true** si l’objet multimap situé à gauche de l’opérateur est inférieur ou égal à l’objet multimap situé à droite de l’opérateur. Sinon, **false**.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // multimap_op_le.cpp
@@ -634,7 +630,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `multimap`.
 
 *Oui*\
@@ -699,7 +695,7 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `multimap`.
 
 *Oui*\
@@ -713,7 +709,7 @@ Objet de type `multimap`.
 
 La comparaison entre les objets multimap est basée sur une comparaison par paire de leurs éléments. La relation de supériorité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // multimap_op_gt.cpp
@@ -752,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="op_gt_eq_multimap"></a> Opérateur&gt;=
+## <a name="op_gt_eq_multimap"></a>and&gt;=
 
 Teste si l’objet multimap situé à gauche de l’opérateur est supérieur ou égal à l’objet multimap situé à droite.
 
@@ -764,7 +760,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `multimap`.
 
 *Oui*\

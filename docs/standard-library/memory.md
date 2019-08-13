@@ -1,18 +1,18 @@
 ---
 title: '&lt;memory&gt;'
-ms.date: 04/04/2019
+ms.date: 08/04/2019
 f1_keywords:
 - memory/std::<memory>
 - <memory>
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 869a7590d880beba7ccc1d324fd1ba227eeac4e0
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451885"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957087"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -93,7 +93,7 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Cette classe de modèle décrit un objet qui gère l’allocation et la libération de stockage pour des tableaux d’objets de type **Type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Décrit un objet qui détermine toutes les informations qui sont requises par un conteneur activé par allocateur.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|La classe de modèle décrit un objet qui stocke un pointeur vers un objet alloué de <strong>\*</strong> type type qui garantit que l’objet vers lequel il pointe est supprimé lorsque son auto_ptr englobant est détruit.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|La classe de modèle décrit un objet qui stocke un pointeur vers un objet alloué <strong>\*</strong> de type type qui garantit que l’objet vers lequel il pointe est supprimé lorsque son auto_ptr englobant est détruit.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Signale une exception weak_ptr incorrecte.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Aide à générer un `shared_ptr`.|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|Fournit les informations requises par un objet de la classe de modèle `allocator_traits` pour décrire un allocateur avec le type pointeur `Ptr`.|
@@ -108,7 +108,7 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
-|[hash]()||
+|hash|Fournit des surcharges spécialisées `unique_ptr` pour `shared_ptr`et.|
 |[owner_less](../standard-library/memory-functions.md#owner_less)|Permet des comparaisons mixtes basées sur la propriété de pointeurs partagés et faibles.|
 |[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
@@ -116,7 +116,7 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 
 |||
 |-|-|
-|[allocator\<void>](../standard-library/allocator-void-class.md)|Spécialisation de l'allocateur de classe de modèle en type void, définissant les seuls types de membres qui sont pertinents dans ce contexte spécialisé.|
+|[allocator\<void>](../standard-library/allocator-void-class.md)|Spécialisation de l’allocateur de classe de modèle en type **void**, définissant uniquement les types de membres qui ont un sens dans ce contexte spécialisé.|
 
 ## <a name="see-also"></a>Voir aussi
 

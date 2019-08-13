@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: d7a13b98ba8cff78839b2afb98371ffba5ced461
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 506ab5fccd44ad37a08a9f741f44f24d3a85b87d
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458337"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956997"
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
 
@@ -38,12 +38,6 @@ Définit les classes de modèle priority_queue et queue et plusieurs modèles de
 |[operator==](../standard-library/queue-operators.md#op_eq_eq)|Teste si l'objet de file d'attente situé à gauche de l'opérateur est égal à l'objet de file d'attente situé à droite.|
 |[operator>](../standard-library/queue-operators.md#op_gt)|Teste si l'objet de file d'attente situé à gauche de l'opérateur est supérieur à l'objet de file d'attente situé à droite.|
 |[operator>=](../standard-library/queue-operators.md#op_gt_eq)|Teste si l'objet de file d'attente situé à gauche de l'opérateur est supérieur ou égal à l'objet de file d'attente situé à droite.|
-
-### <a name="functions"></a>Fonctions
-
-|||
-|-|-|
-|[swap]()||
 
 ### <a name="classes"></a>Classes
 
