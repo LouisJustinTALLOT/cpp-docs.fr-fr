@@ -1,6 +1,6 @@
 ---
 title: Directives de prétraitement d'un makefile
-ms.date: 06/14/2018
+ms.date: 08/11/2019
 f1_keywords:
 - '!UNDEF'
 - '!INCLUDE'
@@ -39,70 +39,70 @@ helpviewer_keywords:
 - ELSE directive
 - ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-ms.openlocfilehash: 0945d0e1c149b7e1ab31b0dbbd5003f8b15a1e4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4825ca180cb1b419a9ffa5232575ba1a24f8805d
+ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321557"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980511"
 ---
 # <a name="makefile-preprocessing-directives"></a>Directives de prétraitement d'un makefile
 
-Directives de prétraitement ne respectent pas la casse. Le point d’exclamation initial ( !) doit apparaître au début de la ligne. Zéro ou plusieurs espaces ou des tabulations peuvent apparaître après le point d’exclamation, pour la mise en retrait.
+Les directives de prétraitement ne respectent pas la casse. Le point d’exclamation initial (!) doit apparaître au début de la ligne. Zéro, un ou plusieurs espaces ou tabulations peuvent apparaître après le point d’exclamation, pour la mise en retrait.
 
-- **!CMDSWITCHES** {**+** &#124; **-**}*option* ...
+- `!CMDSWITCHES``+` *option* { &#124; }...`-`
 
-   Transforme tous *option* répertoriés ou désactiver. Espaces ou des tabulations doivent apparaître avant le + ou - opérateur. aucun ne peut apparaître entre l’opérateur et la [option lettres](nmake-options.md). Des lettres ne sont pas sensible à la casse et sont spécifiés sans une barre oblique (/). Pour activer ou désactiver certaines options, utilisez des spécifications séparées de **! CMDSWITCHES**.
+   Active ou désactive chaque *option* . Les espaces et les tabulations doivent `+` apparaître `-` avant l’opérateur or; aucun ne peut apparaître entre l’opérateur et les [lettres d’option](running-nmake.md#nmake-options). Les lettres ne respectent pas la casse et sont spécifiées sans`/`barre oblique (). Pour activer certaines options et désactiver d’autres, utilisez des spécifications distinctes de `!CMDSWITCHES`.
 
-   /D uniquement, / I, /N et /S sont admises dans un makefile. Tools.ini, toutes les options sont autorisées à l’exception de /F, /HELP /NOLOGO, / X, et / ?. Modifications spécifiées dans un bloc de description ne prennent pas d’effet jusqu'à ce que le bloc de description suivant. Met à jour de cette directive **MAKEFLAGS**; les modifications sont héritées lors de la récursivité si **MAKEFLAGS** est spécifié.
+   Seuls/D,/I,/N et/S peuvent être utilisés dans un Makefile. Dans Tools. ini, toutes les options sont autorisées, à l’exception de/F,/HELP,/NOLOGO,/X et/?. Les modifications spécifiées dans un bloc de description ne prennent pas effet avant le bloc de description suivant. Cette directive met à jour **MAKEFLAGS**; les modifications sont héritées pendant la récursivité si **MAKEFLAGS** est spécifié.
 
-- **!ERROR**  *text*
+- `!ERROR`*texte*
 
-   Affiche *texte* dans l’erreur U1050, puis arrête NMAKE, même si /K, / I, **. Ignorer**, **! CMDSWITCHES**, ou le modificateur de commande tiret (-) est utilisé. Des espaces ou des onglets avant *texte* sont ignorés.
+   Affiche le *texte* dans l’erreur NMAKE U1050, puis arrête NMAKE, même si/k,/i `.IGNORE`, `!CMDSWITCHES`, ou le modificateur`-`de commande Dash () est utilisé. Les espaces ou les tabulations avant le *texte* sont ignorés.
 
-- **!MESSAGE**  *text*
+- `!MESSAGE`*texte*
 
-   Affiche *texte* dans la sortie standard. Des espaces ou des onglets avant *texte* sont ignorés.
+   Affiche le *texte* vers la sortie standard. Les espaces ou les tabulations avant le *texte* sont ignorés.
 
-- **!INCLUDE** [ **\<** ] *filename* [ **>** ]
+- `!INCLUDE`[ `<` ] *nom* de `>` fichier []
 
-   Lit *filename* en tant que makefile, puis passe le makefile en cours. NMAKE recherche *filename* tout d’abord dans le répertoire spécifié ou en cours, puis de manière récursive dans les répertoires de n’importe quel parent makefiles, puis, si *filename* est mis entre crochets (\<>), dans les répertoires spécifiés par la **INCLUDE** macro, qui est initialement définie sur la variable d’environnement INCLUDE. Utile pour passer **. SUFFIXES** paramètres, **. PRÉCIEUX**et les règles d’inférence aux fichiers Make récursifs.
+   Lit le *nom de fichier* en tant que Makefile, puis continue avec le Makefile en cours. NMAKE recherche d’abord le *nom de fichier* dans le répertoire spécifié ou actif, puis de manière récursive dans les répertoires des makefiles parents, puis, si le nom de`< >` *fichier* est placé entre crochets pointus (), dans les répertoires spécifiés par le  **INCLUT** la macro, qui est initialement définie sur la variable d’environnement include. Utile pour passer `.SUFFIXES` des paramètres `.PRECIOUS`,, et des règles d’inférence à des makefiles récursifs.
 
-- **!IF** *constant_expression*
+- `!IF`*constant_expression*
 
-   Traite les instructions entre **! IF** et la prochaine **! AUTRE** ou **! ENDIF** si *constant_expression* prend une valeur différente de zéro.
+   Traite les instructions `!IF` entre et le `!ELSE` suivant `!ENDIF` ou si *constant_expression* prend une valeur différente de zéro.
 
-- **!IFDEF**  *macroname*
+- `!IFDEF`*nommacro*
 
-   Traite les instructions entre **! IFDEF** et la prochaine **! AUTRE** ou **! ENDIF** si *nom_macro* est défini. Une macro null est considéré comme étant défini.
+   Traite les instructions `!IFDEF` entre et le `!ELSE` suivant `!ENDIF` ou si *macroname* est défini. Une macro null est considérée comme étant définie.
 
-- **!IFNDEF**  *macroname*
+- `!IFNDEF`*nommacro*
 
-   Traite les instructions entre **! IFNDEF** et la prochaine **! AUTRE** ou **! ENDIF** si *nom_macro* n’est pas défini.
+   Traite les instructions `!IFNDEF` entre et le `!ELSE` suivant `!ENDIF` ou si *nommacro* n’est pas défini.
 
-- **!ELSE** [**IF** *constant_expression* &#124; **IFDEF** *macroname* &#124; **IFNDEF** *macroname*]
+- `!ELSE`[`IF` &#124; *constant_expression* &#124; *nommacro* nommacro] `IFDEF` `IFNDEF`
 
-   Traite les instructions entre **! AUTRE** et la prochaine **! ENDIF** si l’accord préalable **! IF**, **! IFDEF**, ou **! IFNDEF** instruction évaluée à zéro. Les mots clés facultatifs donnent davantage de contrôle du prétraitement.
+   Traite les instructions `!ELSE` entre et la `!ENDIF` Next si l' `!IF`instruction `!IFDEF`précédente, `!IFNDEF` ou a évalué la valeur zéro. Les mots clés facultatifs permettent de mieux contrôler le prétraitement.
 
-- **!ELSEIF**
+- `!ELSEIF`
 
-   Synonyme de **! ELSE IF**.
+   Synonyme de `!ELSE IF`.
 
-- **!ELSEIFDEF**
+- `!ELSEIFDEF`
 
-   Synonyme de **! IFDEF ELSE**.
+   Synonyme de `!ELSE IFDEF`.
 
-- **!ELSEIFNDEF**
+- `!ELSEIFNDEF`
 
-   Synonyme de **! IFNDEF ELSE**.
+   Synonyme de `!ELSE IFNDEF`.
 
-- **!ENDIF**
+- `!ENDIF`
 
-   Marque la fin d’un **! IF**, **! IFDEF**, ou **! IFNDEF** bloc. N’importe quel texte qui suit **! ENDIF** sur la même ligne est ignoré.
+   Marque la fin d’un `!IF`bloc `!IFDEF`, ou `!IFNDEF` . Tout texte situé `!ENDIF` après sur la même ligne est ignoré.
 
-- **!UNDEF**  *macroname*
+- `!UNDEF`*nommacro*
 
-   Annule la définition de *nom_macro*.
+   Annule la définition de *nommacro*.
 
 ## <a name="see-also"></a>Voir aussi
 
