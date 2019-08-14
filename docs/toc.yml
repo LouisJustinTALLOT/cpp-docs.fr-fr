@@ -1124,16 +1124,7 @@
                 - name: Projets NMAKE dans Visual Studio
                   href: build/reference/creating-a-makefile-project.md
                 - name: Exécution de NMAKE
-                  expanded: false
-                  items:
-                    - name: Exécution de NMAKE
-                      href: build/reference/running-nmake.md
-                    - name: Options de NMAKE
-                      href: build/reference/nmake-options.md
-                    - name: Tools.ini et NMAKE
-                      href: build/reference/tools-ini-and-nmake.md
-                    - name: Codes de sortie de NMAKE
-                      href: build/reference/exit-codes-from-nmake.md
+                  href: build/reference/running-nmake.md
                 - name: Contenu d’un makefile
                   expanded: false
                   items:
