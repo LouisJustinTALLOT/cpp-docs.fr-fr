@@ -1,21 +1,21 @@
 ---
-title: local (attribut de COM C++)
+title: local (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.local
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: 678968bb7b0f2e7af94124bea5b0967df27e43f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853331ce191f8fe41d5967d2d625a3dac8543a4d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409224"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514415"
 ---
 # <a name="local-c"></a>local (C++)
 
-Lorsqu’il est utilisé dans l’en-tête de l’interface, vous permet d’utiliser le compilateur MIDL comme un générateur d’en-tête. Lorsqu’il est utilisé dans une fonction individuelle, désigne une procédure locale pour lequel aucun stub n’est générés.
+Lorsqu’il est utilisé dans l’en-tête d’interface, vous permet d’utiliser le compilateur MIDL comme générateur d’en-tête. En cas d’utilisation dans une fonction individuelle, désigne une procédure locale pour laquelle aucun stub n’est généré.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Lorsqu’il est utilisé dans l’en-tête de l’interface, vous permet d’uti
 
 ## <a name="remarks"></a>Notes
 
-Le **local** attribut C++ a les mêmes fonctionnalités que le [local](/windows/desktop/Midl/local) attribut MIDL.
+L’attribut **local** C++ a les mêmes fonctionnalités que l’attribut MIDL [local](/windows/win32/Midl/local) .
 
 ## <a name="example"></a>Exemple
 
-Consultez [call_as](call-as.md) pour obtenir un exemple montrant comment utiliser **local**.
+Pour obtenir un exemple d’utilisation de **local**, consultez [call_as](call-as.md) .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -39,7 +39,7 @@ Consultez [call_as](call-as.md) pour obtenir un exemple montrant comment utilise
 |-|-|
 |**S'applique à**|**interface**, méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
+|**Attributs requis**|Aucun|
 |**Attributs non valides**|`dispinterface`|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).

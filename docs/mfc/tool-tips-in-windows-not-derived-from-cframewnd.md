@@ -9,30 +9,30 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
-ms.openlocfilehash: 3d44f2c503b689360f040e6804d319c331d5c0ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f68fb62335219ea498163e6124c8e91e49f2938
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168022"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511027"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Info-bulles dans les fenêtres non dérivées de CFrameWnd
 
-Cette série d’articles couvre l’activation de l’info-bulles pour les contrôles contenus dans une fenêtre qui n’est pas dérivée [CFrameWnd](../mfc/reference/cframewnd-class.md). L’article [barres d’outils, info-bulles](../mfc/toolbar-tool-tips.md) fournit des informations sur les info-bulles pour les contrôles dans un `CFrameWnd`.
+Cette famille d’articles traite de l’activation d’info-bulles pour les contrôles contenus dans une fenêtre qui n’est pas dérivée de [CFrameWnd](../mfc/reference/cframewnd-class.md). Les info- [bulles des barres d’outils](../mfc/toolbar-tool-tips.md) fournissent des informations sur les info- `CFrameWnd`bulles des contrôles dans un.
 
-Les sujets abordés dans cette série d’articles incluent :
+Les sujets abordés dans cet article sont les suivants:
 
 - [Activation des info-bulles](../mfc/enabling-tool-tips.md)
 
 - [Gestion de la notification TTN_NEEDTEXT pour les info-bulles](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)
 
-- [La ToolTipText, Structure](../mfc/tooltiptext-structure.md)
+- [La structure TOOLTIPTEXT](../mfc/tooltiptext-structure.md)
 
-Info-bulles sont affichent automatiquement pour les boutons et autres contrôles contenus dans une fenêtre parente dérivé `CFrameWnd`. Il s’agit, car `CFrameWnd` a un gestionnaire par défaut pour le [TTN_GETDISPINFO](/windows/desktop/Controls/ttn-getdispinfo) notification, qui gère les **TTN_NEEDTEXT** notifications à partir de l’outil de conseil contrôles associés aux contrôles.
+Les info-bulles s’affichent automatiquement pour les boutons et autres contrôles contenus dans une `CFrameWnd`fenêtre parente dérivée de. En effet `CFrameWnd` , a un gestionnaire par défaut pour la notification [TTN_GETDISPINFO](/windows/win32/Controls/ttn-getdispinfo) , qui gère les notifications **TTN_NEEDTEXT** des contrôles d’info-bulle associés aux contrôles.
 
-Toutefois, ce gestionnaire par défaut est appelé pas lorsque le **TTN_NEEDTEXT** notification est envoyée à partir d’un contrôle d’info-bulle associé à un contrôle dans une fenêtre qui n’est pas un `CFrameWnd`, tel qu’un contrôle sur une boîte de dialogue ou une vue de formulaire. Par conséquent, il est nécessaire pour fournir une fonction de gestionnaire pour le **TTN_NEEDTEXT** message de notification pour afficher des info-bulles pour les contrôles enfants.
+Toutefois, ce gestionnaire par défaut n’est pas appelé lorsque la notification **TTN_NEEDTEXT** est envoyée à partir d’un contrôle d’info-bulle associé à un contrôle dans `CFrameWnd`une fenêtre qui n’est pas un, tel qu’un contrôle sur une boîte de dialogue ou un mode formulaire. Par conséquent, il est nécessaire de fournir une fonction de gestionnaire pour le message de notification **TTN_NEEDTEXT** afin d’afficher des info-bulles pour les contrôles enfants.
 
-L’info-bulles par défaut fournis pour les fenêtres en [CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) n’ont pas de texte qui s’y rapportent. Pour récupérer le texte de l’info-bulle à afficher, le **TTN_NEEDTEXT** notification est envoyée à la fenêtre du parent du contrôle info-bulle juste avant que la fenêtre outil de Conseil s’affiche. S’il n’existe aucun gestionnaire pour ce message affecter une valeur à la *pszText* membre de la **TOOLTIPTEXT** structure, il n’y aura aucun texte affiché pour l’info-bulle.
+Les info-bulles par défaut fournies pour votre Windows par [CWnd:: EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) n’ont pas de texte associé. Pour récupérer le texte de l’info-bulle à afficher, la notification **TTN_NEEDTEXT** est envoyée à la fenêtre parente du contrôle d’info-bulle juste avant l’affichage de la fenêtre d’info-bulle. S’il n’existe aucun gestionnaire pour ce message afin d’affecter une valeur au membre *pszText* de la structure **ToolTipText** , aucun texte n’est affiché pour l’info-bulle.
 
 ## <a name="see-also"></a>Voir aussi
 

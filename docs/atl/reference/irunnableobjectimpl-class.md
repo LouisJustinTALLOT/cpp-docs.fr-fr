@@ -1,5 +1,5 @@
 ---
-title: Irunnableobjectimpl, classe
+title: IRunnableObjectImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
 - IRunnableObjectImpl
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - controls [ATL], running
 - controls [C++], container running in ATL
 ms.assetid: 305c7c3b-889e-49dd-aca1-34379c1b9931
-ms.openlocfilehash: 44b1e0ae1b72a40b45abe0650eb69a279b5a84d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b1af7c21c6f5028ad6d3a228cb22650fa3cef42
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200334"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495670"
 ---
-# <a name="irunnableobjectimpl-class"></a>Irunnableobjectimpl, classe
+# <a name="irunnableobjectimpl-class"></a>IRunnableObjectImpl, classe
 
-Cette classe implémente `IUnknown` et fournit une implémentation par défaut de la [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) interface.
+Cette classe implémente `IUnknown` et fournit une implémentation par défaut de l’interface [IRunnableObject](/windows/win32/api/objidl/nn-objidl-irunnableobject) .
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+>  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,7 +40,7 @@ class IRunnableObjectImpl
 #### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Votre classe, dérivée de `IRunnableObjectImpl`.
+Votre classe, dérivée `IRunnableObjectImpl`de.
 
 ## <a name="members"></a>Membres
 
@@ -48,17 +48,17 @@ Votre classe, dérivée de `IRunnableObjectImpl`.
 
 |Nom|Description|
 |----------|-----------------|
-|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Retourne le CLSID du contrôle en cours d’exécution. L’implémentation de ATL définit le CLSID à GUID_NULL et retourne E_UNEXPECTED.|
-|[IRunnableObjectImpl::IsRunning](#isrunning)|Détermine si le contrôle est en cours d’exécution. L’implémentation de ATL retourne la valeur TRUE.|
-|[IRunnableObjectImpl::LockRunning](#lockrunning)|Verrouille le contrôle à l’état en cours d’exécution. L’implémentation de ATL retourne S_OK.|
-|[IRunnableObjectImpl::Run](#run)|Force le contrôle à exécuter. L’implémentation de ATL retourne S_OK.|
-|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|Indique que le contrôle est incorporé. L’implémentation de ATL retourne S_OK.|
+|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Retourne le CLSID du contrôle en cours d’exécution. L’implémentation ATL affecte au CLSID la valeur GUID_NULL et retourne E_UNEXPECTED.|
+|[IRunnableObjectImpl::IsRunning](#isrunning)|Détermine si le contrôle est en cours d’exécution. L’implémentation ATL retourne la valeur TRUE.|
+|[IRunnableObjectImpl::LockRunning](#lockrunning)|Verrouille le contrôle à l’État en cours d’exécution. L’implémentation ATL retourne S_OK.|
+|[IRunnableObjectImpl::Run](#run)|Force le contrôle à s’exécuter. L’implémentation ATL retourne S_OK.|
+|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|Indique que le contrôle est incorporé. L’implémentation ATL retourne S_OK.|
 
 ## <a name="remarks"></a>Notes
 
-Le [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) interface permet à un conteneur déterminer si un contrôle est en cours d’exécution, de forcer son exécution, ou mettez-le à l’état en cours d’exécution. Classe `IRunnableObjectImpl` fournit une implémentation par défaut de cette interface et implémente `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.
+L’interface [IRunnableObject](/windows/win32/api/objidl/nn-objidl-irunnableobject) permet à un conteneur de déterminer si un contrôle est en cours d’exécution, de le forcer à s’exécuter ou de le verrouiller à l’État en cours d’exécution. La `IRunnableObjectImpl` classe fournit une implémentation par défaut de cette interface et `IUnknown` implémente en envoyant des informations à l’appareil de vidage dans les versions Debug.
 
-**Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)
+**Articles connexes** [Didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -68,7 +68,7 @@ Le [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) inte
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlctl.h
+**En-tête:** atlctl. h
 
 ##  <a name="getrunningclass"></a>  IRunnableObjectImpl::GetRunningClass
 
@@ -80,11 +80,11 @@ HRESULT GetRunningClass(LPCLSID lpClsid);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Les jeux de mise en œuvre ATL \* *lpClsid* à GUID_NULL et retourne E_UNEXPECTED.
+L’implémentation ATL affecte \* à *lpClsid* la valeur GUID_NULL et retourne E_UNEXPECTED.
 
 ### <a name="remarks"></a>Notes
 
-Consultez [IRunnableObject::GetRunningClass](/windows/desktop/api/objidl/nf-objidl-irunnableobject-getrunningclass) dans le Kit de développement logiciel Windows.
+Consultez [IRunnableObject:: GetRunningClass](/windows/win32/api/objidl/nf-objidl-irunnableobject-getrunningclass) dans le SDK Windows.
 
 ##  <a name="isrunning"></a>  IRunnableObjectImpl::IsRunning
 
@@ -96,15 +96,15 @@ virtual BOOL IsRunning();
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’implémentation de ATL retourne la valeur TRUE.
+L’implémentation ATL retourne la valeur TRUE.
 
 ### <a name="remarks"></a>Notes
 
-Consultez [IRunnableObject::IsRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-isrunning) dans le Kit de développement logiciel Windows.
+Consultez [IRunnableObject:: IsRunning](/windows/win32/api/objidl/nf-objidl-irunnableobject-isrunning) dans le SDK Windows.
 
 ##  <a name="lockrunning"></a>  IRunnableObjectImpl::LockRunning
 
-Verrouille le contrôle à l’état en cours d’exécution.
+Verrouille le contrôle à l’État en cours d’exécution.
 
 ```
 HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
@@ -112,15 +112,15 @@ HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’implémentation de ATL retourne S_OK.
+L’implémentation ATL retourne S_OK.
 
 ### <a name="remarks"></a>Notes
 
-Consultez [IRunnableObject::LockRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-lockrunning) dans le Kit de développement logiciel Windows.
+Consultez [IRunnableObject:: LockRunning](/windows/win32/api/objidl/nf-objidl-irunnableobject-lockrunning) dans le SDK Windows.
 
 ##  <a name="run"></a>  IRunnableObjectImpl::Run
 
-Force le contrôle à exécuter.
+Force le contrôle à s’exécuter.
 
 ```
 HRESULT Run(LPBINDCTX lpbc);
@@ -128,11 +128,11 @@ HRESULT Run(LPBINDCTX lpbc);
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’implémentation de ATL retourne S_OK.
+L’implémentation ATL retourne S_OK.
 
 ### <a name="remarks"></a>Notes
 
-Consultez [IRunnableObject::Run](/windows/desktop/api/objidl/nf-objidl-irunnableobject-run) dans le Kit de développement logiciel Windows.
+Consultez [IRunnableObject:: Run](/windows/win32/api/objidl/nf-objidl-irunnableobject-run) dans le SDK Windows.
 
 ##  <a name="setcontainedobject"></a>  IRunnableObjectImpl::SetContainedObject
 
@@ -144,11 +144,11 @@ HRESULT SetContainedObject(BOOL fContained);
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’implémentation de ATL retourne S_OK.
+L’implémentation ATL retourne S_OK.
 
 ### <a name="remarks"></a>Notes
 
-Consultez [IRunnableObject::SetContainedObject](/windows/desktop/api/objidl/nf-objidl-irunnableobject-setcontainedobject) dans le Kit de développement logiciel Windows.
+Consultez [IRunnableObject:: SetContainedObject](/windows/win32/api/objidl/nf-objidl-irunnableobject-setcontainedobject) dans le SDK Windows.
 
 ## <a name="see-also"></a>Voir aussi
 

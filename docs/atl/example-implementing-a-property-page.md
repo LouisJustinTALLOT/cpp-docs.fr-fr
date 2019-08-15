@@ -4,14 +4,14 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 1f2c0387cd0a78ad0179e251654d2fa82b1eef13
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 68b4aaef06e40a8ec7b00f9ba744d83ce3388da2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707097"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492379"
 ---
-# <a name="example-implementing-a-property-page"></a>Exemple : Implémentation d’une page de propriétés
+# <a name="example-implementing-a-property-page"></a>Exemple : Implémentation d’une page de propriétés
 
 ::: moniker range="vs-2019"
 
@@ -49,7 +49,7 @@ Pour mettre en place cet exemple, vous allez :
 
 Commencez par créer un projet ATL pour un serveur DLL appelé `ATLPages7`. Utilisez maintenant [l’Assistant Page de propriétés ATL](../atl/reference/atl-property-page-wizard.md) pour générer une page de propriétés. Renseignez le champ **Nom court** de la page de propriétés avec la valeur **DocProperties**, puis basculez sur la page **Chaînes** pour définir les éléments spécifiques de page de propriétés comme indiqué dans le tableau ci-dessous.
 
-|Élément|Value|
+|Item|Valeur|
 |----------|-----------|
 |Titre|TextDocument|
 |Chaîne doc|VCUE TextDocument Properties|
@@ -71,7 +71,7 @@ Maintenant que votre page de propriétés est générée, vous devez ajouter que
 Ces contrôles sont utilisés pour afficher le nom de fichier du document et son état en lecture seule.
 
 > [!NOTE]
->  La ressource de boîte de dialogue n’inclut pas de frame ou de boutons de commande, et, contrairement à ce que vous pouvez penser, ne ressemble pas à un onglet. Ces caractéristiques sont fournies par un frame de page de propriétés tel que celui créé en appelant [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).
+>  La ressource de boîte de dialogue n’inclut pas de frame ou de boutons de commande, et, contrairement à ce que vous pouvez penser, ne ressemble pas à un onglet. Ces caractéristiques sont fournies par un frame de page de propriétés tel que celui créé en appelant [OleCreatePropertyFrame](/windows/win32/api/olectl/nf-olectl-olecreatepropertyframe).
 
 ##  <a name="vcconadding_message_handlers"></a> Ajout de gestionnaires de messages
 
@@ -135,7 +135,7 @@ Pour afficher cette page, vous devez créer un objet d’assistance simple. L’
 
 Utilisez la [boîte de dialogue Ajouter une classe](../ide/add-class-dialog-box.md) et [l’Assistant Objet simple ATL](../atl/reference/atl-simple-object-wizard.md) pour générer une nouvelle classe, et utilisez `Helper` comme nom court. Une fois la classe créée, ajoutez une méthode comme indiqué dans le tableau ci-dessous.
 
-|Élément|Value|
+|Item|Valeur|
 |----------|-----------|
 |Nom de la méthode|`ShowPage`|
 |Paramètres|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|

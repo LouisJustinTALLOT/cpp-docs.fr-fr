@@ -41,14 +41,14 @@ helpviewer_keywords:
 - _vsctprintf_p function
 - vscprintf_p_l function
 ms.assetid: 5da920b3-8652-4ee9-b19e-5aac3ace9d03
-ms.openlocfilehash: 357cc1f28e5495385b67fdb7c1b86bbc15f79950
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74082f0b5ed15b807c626ce08c283724441fc15c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386185"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499112"
 ---
-# <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
+# <a name="_vscprintf_p-_vscprintf_p_l-_vscwprintf_p-_vscwprintf_p_l"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 
 Retourne le nombre de caractères contenus dans la chaîne mise en forme en utilisant un pointeur désignant une liste d’arguments, avec la possibilité de spécifier l’ordre dans lequel les arguments sont utilisés.
 
@@ -90,18 +90,18 @@ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_vscprintf_p** retourne le nombre de caractères qui seraient générés si la chaîne pointée par la liste d’arguments a été imprimé ou envoyé vers un fichier ou les codes de la mémoire tampon à l’aide de la mise en forme spécifiée. La valeur retournée n’inclut pas le caractère Null de fin. **_vscwprintf_p** effectue la même fonction pour les caractères larges.
+**_vscprintf_p** retourne le nombre de caractères qui seraient générés si la chaîne vers laquelle pointe la liste d’arguments a été imprimée ou envoyée à un fichier ou une mémoire tampon à l’aide des codes de mise en forme spécifiés. La valeur retournée n’inclut pas le caractère Null de fin. **_vscwprintf_p** effectue la même fonction pour les caractères larges.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions se distinguent des **_vscprintf** et **_vscwprintf** uniquement car ils prennent en charge la possibilité de spécifier l’ordre dans lequel les arguments sont utilisés. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Ces fonctions diffèrent uniquement de **_vscprintf** et **_vscwprintf** dans le sens où elles prennent en charge la possibilité de spécifier l’ordre dans lequel les arguments sont utilisés. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
-Si *format* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Si *format* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
 > [!IMPORTANT]
-> Garantir que si *format* est une chaîne définie par l’utilisateur, il se termine par null et a le nombre correct et le type de paramètres. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Assurez-vous que si le *format* est une chaîne définie par l’utilisateur, il se termine par null et a le nombre et le type de paramètres appropriés. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -119,7 +119,7 @@ Si *format* est un pointeur null, le Gestionnaire de paramètre non valide est a
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Consultez l’exemple relatif à [vsprintf](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).
 

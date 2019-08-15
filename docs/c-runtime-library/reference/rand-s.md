@@ -27,16 +27,16 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: d196a6f5d7483deb9a7e1b8d7fa929532b6197db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a2c57713d4b455971f24b64dc124862749e927a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358123"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499561"
 ---
-# <a name="rands"></a>rand_s
+# <a name="rand_s"></a>rand_s
 
-Génère un nombre pseudo-aléatoire. Il s’agit d’une version plus sécurisée de la fonction [rand](rand.md), avec les améliorations de sécurité comme décrit dans [des fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Génère un nombre pseudo-aléatoire. Il s’agit d’une version plus sécurisée de la fonction [Rand](rand.md), avec des améliorations de sécurité décrites dans [fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,24 +47,24 @@ errno_t rand_s(unsigned int* randomValue);
 ### <a name="parameters"></a>Paramètres
 
 *randomValue*<br/>
-Pointeur vers un entier pour contenir la valeur générée.
+Pointeur vers un entier destiné à contenir la valeur générée.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro en cas de réussite, code d’erreur dans un autre cas. Si le pointeur d’entrée _randomValue_ est un pointeur null, la fonction appelle un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **EINVAL** et définit **errno** à **EINVAL**. Si la fonction échoue pour une raison quelconque, *_randomValue_ est définie sur 0.
+Zéro en cas de réussite, code d’erreur dans un autre cas. Si le pointeur d’entrée _randomValue_ est un pointeur null, la fonction appelle un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **EINVAL** et définit **errno** sur **EINVAL**. Si la fonction échoue pour une autre raison, *_randomValue_ a la valeur 0.
 
 ## <a name="remarks"></a>Notes
 
-Le **rand_s** fonction écrit un entier pseudo-aléatoire compris dans la plage 0 à **UINT_MAX** au pointeur d’entrée. Le **rand_s** fonction utilise le système d’exploitation pour générer des nombres aléatoires sécurisés par chiffrement. Il n’utilise pas la valeur de départ générée par le [srand](srand.md) (fonction), et n’affecte pas la séquence de nombres aléatoire utilisée par [rand](rand.md).
+La fonction **rand_s** écrit un entier Pseudo-aléatoire compris entre 0 et **UINT_MAX** dans le pointeur d’entrée. La fonction **rand_s** utilise le système d’exploitation pour générer des nombres aléatoires sécurisés par chiffrement. Elle n’utilise pas la valeur de départ générée par la fonction [srand](srand.md) , pas plus qu’elle n’affecte la séquence de nombres aléatoires utilisée par [Rand](rand.md).
 
-Le **rand_s** fonction exige que la constante **_CRT_RAND_S** soit définie avant l’instruction d’inclusion pour la fonction d’être déclarés, comme dans l’exemple suivant :
+La fonction **rand_s** nécessite que la constante **_CRT_RAND_S** soit définie avant l’instruction d’inclusion pour que la fonction soit déclarée, comme dans l’exemple suivant:
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-**rand_s** varie selon le [RtlGenRandom](/windows/desktop/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API, qui est uniquement disponible dans Windows XP et versions ultérieures.
+**rand_s** dépend de l’API [RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) , qui est uniquement disponible dans Windows XP et versions ultérieures.
 
 ## <a name="requirements"></a>Configuration requise
 

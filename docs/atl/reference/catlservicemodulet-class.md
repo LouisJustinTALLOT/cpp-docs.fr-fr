@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 095d909fefe0053b742368f260cf61937c2f5426
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2854d0902700b268383eca094bed35843ea73272
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915870"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497739"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT (classe)
 
@@ -244,7 +244,7 @@ Chaînes supplémentaires facultatives à écrire dans le journal des événemen
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode écrit des détails dans un journal des événements, à l’aide de la fonction [ReportEvent](/windows/desktop/api/winbase/nf-winbase-reporteventa). Si aucun service n’est en cours d’exécution, la chaîne est envoyée à la console.
+Cette méthode écrit des détails dans un journal des événements, à l’aide de la fonction [ReportEvent](/windows/win32/api/winbase/nf-winbase-reporteventw). Si aucun service n’est en cours d’exécution, la chaîne est envoyée à la console.
 
 ##  <a name="m_bservice"></a>  CAtlServiceModuleT::m_bService
 
@@ -280,7 +280,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 
 ### <a name="remarks"></a>Notes
 
-La structure [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) contient des informations sur un service.
+La structure [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) contient des informations sur un service.
 
 ##  <a name="m_status"></a>  CAtlServiceModuleT::m_status
 
@@ -292,7 +292,7 @@ SERVICE_STATUS m_status;
 
 ### <a name="remarks"></a>Notes
 
-La structure [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) contient des informations sur un service.
+La structure [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) contient des informations sur un service.
 
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Paramètres
 
 *nShowCmd*<br/>
-Spécifie la façon dont la fenêtre doit être affichée. Ce paramètre peut être l’une des valeurs décrites dans la section [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) . La valeur par défaut est SW_HIDE.
+Spécifie la façon dont la fenêtre doit être affichée. Ce paramètre peut être l’une des valeurs décrites dans la section [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) . La valeur par défaut est SW_HIDE.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -475,7 +475,7 @@ void SetServiceStatus(DWORD dwState) throw();
 ### <a name="parameters"></a>Paramètres
 
 *dwState*<br/>
-Nouvel État. Pour connaître les valeurs possibles, consultez [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) .
+Nouvel État. Pour connaître les valeurs possibles, consultez [SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus) .
 
 ### <a name="remarks"></a>Notes
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Paramètres
 
 *nShowCmd*<br/>
-Spécifie la façon dont la fenêtre doit être affichée. Ce paramètre peut être l’une des valeurs décrites dans la section [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) .
+Spécifie la façon dont la fenêtre doit être affichée. Ce paramètre peut être l’une des valeurs décrites dans la section [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Paramètres
 
 *nShowCmd*<br/>
-Spécifie la façon dont la fenêtre doit être affichée. Ce paramètre peut être l’une des valeurs décrites dans la section [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) .
+Spécifie la façon dont la fenêtre doit être affichée. Ce paramètre peut être l’une des valeurs décrites dans la section [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Valeur de retour
 

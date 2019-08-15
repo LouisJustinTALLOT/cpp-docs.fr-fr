@@ -1,5 +1,5 @@
 ---
-title: Macros de mappage des messages (ATL)
+title: Macros de table des messages (ATL)
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::ALT_MSG_MAP
@@ -37,57 +37,57 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: bedef3a8563e27f72017720530e3b7addb78ec3d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42fdc7a3f09568b641229e897a2a493994a7ba8a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197430"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495356"
 ---
-# <a name="message-map-macros-atl"></a>Macros de mappage des messages (ATL)
+# <a name="message-map-macros-atl"></a>Macros de table des messages (ATL)
 
-Ces macros définissent des tables des messages et des entrées.
+Ces macros définissent les entrées et les tables des messages.
 
 |||
 |-|-|
 |[ALT_MSG_MAP](#alt_msg_map)|Marque le début d’une autre table des messages.|
 |[BEGIN_MSG_MAP](#begin_msg_map)|Marque le début de la table des messages par défaut.|
-|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|Est lié à une autre table des messages dans la classe de base.|
-|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|Est lié à une autre table des messages dans un membre de données de la classe.|
-|[CHAIN_MSG_MAP](#chain_msg_map)|Est lié à la table des messages par défaut dans la classe de base.|
-|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|Est lié à la table des messages dans une autre classe au moment de l’exécution.|
-|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|Est lié à la table des messages par défaut dans un membre de données de la classe.|
-|[COMMAND_CODE_HANDLER](#command_code_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, selon le code de notification.|
-|[COMMAND_HANDLER](#command_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, selon le code de notification et l’identificateur de l’élément de menu, un contrôle ou un accélérateur.|
-|[COMMAND_ID_HANDLER](#command_id_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, selon l’identificateur de l’élément de menu, un contrôle ou un accélérateur.|
-|[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, selon le code de notification et une plage contiguë d’identificateurs de contrôle.|
-|[COMMAND_RANGE_HANDLER](#command_range_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, selon une plage contiguë d’identificateurs de contrôle.|
-|[DECLARE_EMPTY_MSG_MAP](#declare_empty_msg_map)|Implémente un mappage de message vide.|
-|[DEFAULT_REFLECTION_HANDLER](#default_reflection_handler)|Fournit un gestionnaire par défaut pour les messages réfléchis ne sont pas gérées dans le cas contraire.|
+|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|Chaîne à une autre table des messages dans la classe de base.|
+|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|Chaîne à une autre table des messages dans un membre de données de la classe.|
+|[CHAIN_MSG_MAP](#chain_msg_map)|Chaînes à la table des messages par défaut dans la classe de base.|
+|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|Chaînes à la table des messages dans une autre classe au moment de l’exécution.|
+|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|Chaîne à la table des messages par défaut dans un membre de données de la classe.|
+|[COMMAND_CODE_HANDLER](#command_code_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, en fonction du code de notification.|
+|[COMMAND_HANDLER](#command_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, en fonction du code de notification et de l’identificateur de l’élément de menu, du contrôle ou de l’accélérateur.|
+|[COMMAND_ID_HANDLER](#command_id_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, en fonction de l’identificateur de l’élément de menu, du contrôle ou de l’accélérateur.|
+|[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, en fonction du code de notification et d’une plage contiguë d’identificateurs de contrôle.|
+|[COMMAND_RANGE_HANDLER](#command_range_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, en fonction d’une plage contiguë d’identificateurs de contrôle.|
+|[DECLARE_EMPTY_MSG_MAP](#declare_empty_msg_map)|Implémente une table des messages vide.|
+|[DEFAULT_REFLECTION_HANDLER](#default_reflection_handler)|Fournit un gestionnaire par défaut pour les messages réfléchis qui ne sont pas gérés dans le cas contraire.|
 |[END_MSG_MAP](#end_msg_map)|Marque la fin d’une table des messages.|
 |[FORWARD_NOTIFICATIONS](#forward_notifications)|Transfère les messages de notification à la fenêtre parente.|
-|[MESSAGE_HANDLER](#message_handler)|Mappe un message Windows à une fonction gestionnaire.|
-|[MESSAGE_RANGE_HANDLER](#message_range_handler)|Mappe une plage contiguë de Windows aux messages à une fonction gestionnaire.|
-|[NOTIFY_CODE_HANDLER](#notify_code_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, selon le code de notification.|
-|[NOTIFY_HANDLER](#notify_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, selon le code de notification et l’identificateur du contrôle.|
-|[NOTIFY_ID_HANDLER](#notify_id_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, selon l’identificateur du contrôle.|
-|[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, selon le code de notification et une plage contiguë d’identificateurs de contrôle.|
-|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, selon une plage contiguë d’identificateurs de contrôle.|
+|[MESSAGE_HANDLER](#message_handler)|Mappe un message Windows à une fonction de gestionnaire.|
+|[MESSAGE_RANGE_HANDLER](#message_range_handler)|Mappe une plage contiguë de messages Windows à une fonction de gestionnaire.|
+|[NOTIFY_CODE_HANDLER](#notify_code_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, en fonction du code de notification.|
+|[NOTIFY_HANDLER](#notify_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, en fonction du code de notification et de l’identificateur de contrôle.|
+|[NOTIFY_ID_HANDLER](#notify_id_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, en fonction de l’identificateur de contrôle.|
+|[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, en fonction du code de notification et d’une plage contiguë d’identificateurs de contrôle.|
+|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, en fonction d’une plage contiguë d’identificateurs de contrôle.|
 |[REFLECT_NOTIFICATIONS](#reflect_notifications)|Reflète les messages de notification à la fenêtre qui les a envoyés.|
-|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, selon le code de notification.|
-|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, selon le code de notification et l’identificateur de l’élément de menu, un contrôle ou un accélérateur.|
-|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, selon l’identificateur de l’élément de menu, un contrôle ou un accélérateur.|
-|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, selon le code de notification et une plage contiguë d’identificateurs de contrôle.|
-|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, selon une plage contiguë d’identificateurs de contrôle.|
-|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon le code de notification.|
-|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon le code de notification et l’identificateur du contrôle.|
-|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon l’identificateur du contrôle.|
-|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon le code de notification et une plage contiguë d’identificateurs de contrôle.|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon une plage contiguë d’identificateurs de contrôle.|
+|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, en fonction du code de notification.|
+|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, en fonction du code de notification et de l’identificateur de l’élément de menu, du contrôle ou de l’accélérateur.|
+|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, en fonction de l’identificateur de l’élément de menu, du contrôle ou de l’accélérateur.|
+|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, en fonction du code de notification et d’une plage contiguë d’identificateurs de contrôle.|
+|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, en fonction d’une plage contiguë d’identificateurs de contrôle.|
+|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, en fonction du code de notification.|
+|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, en fonction du code de notification et de l’identificateur de contrôle.|
+|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, en fonction de l’identificateur de contrôle.|
+|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, en fonction du code de notification et d’une plage contiguë d’identificateurs de contrôle.|
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, en fonction d’une plage contiguë d’identificateurs de contrôle.|
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
 
@@ -100,33 +100,33 @@ ALT_MSG_MAP(msgMapID)
 ### <a name="parameters"></a>Paramètres
 
 *msgMapID*<br/>
-[in] Identificateur de plan de message.
+dans Identificateur de la table des messages.
 
 ### <a name="remarks"></a>Notes
 
-ATL identifie chaque mappage de message par un nombre. La table des messages par défaut (déclarée avec la macro BEGIN_MSG_MAP) est identifiée par 0. Une autre table des messages est identifiée par *msgMapID*.
+ATL identifie chaque table des messages par un nombre. La table des messages par défaut (déclarée avec la macro BEGIN_MSG_MAP) est identifiée par 0. Une autre table des messages est identifiée par *msgMapID*.
 
-Tables des messages sont utilisés pour traiter les messages envoyés à une fenêtre. Par exemple, [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) vous permet de spécifier l’identificateur d’une table des messages dans l’objet conteneur. [CContainedWindow::WindowProc](ccontainedwindowt-class.md#windowproc) utilise ensuite cette table des messages pour diriger les messages de la fenêtre de relation contenant-contenu à la fonction gestionnaire approprié ou à une autre table des messages. Pour obtenir la liste des macros qui déclarent des fonctions gestionnaires, consultez [BEGIN_MSG_MAP](#begin_msg_map).
+Les tables des messages sont utilisées pour traiter les messages envoyés à une fenêtre. Par exemple, [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) vous permet de spécifier l’identificateur d’une table des messages dans l’objet conteneur. [CContainedWindow:: WindowProc](ccontainedwindowt-class.md#windowproc) utilise ensuite cette table des messages pour diriger les messages de la fenêtre contenue vers la fonction de gestionnaire appropriée ou vers une autre table des messages. Pour obtenir la liste des macros qui déclarent des fonctions de gestionnaire, consultez [BEGIN_MSG_MAP](#begin_msg_map).
 
-Commencent toujours une table des messages avec BEGIN_MSG_MAP. Vous pouvez ensuite déclarer les tables des messages de remplacement suivants.
+Commencez toujours une table des messages avec BEGIN_MSG_MAP. Vous pouvez ensuite déclarer des tables de messages secondaires suivantes.
 
-Le [END_MSG_MAP](#end_msg_map) macro marque la fin de la table des messages. Notez qu’il est toujours exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
+La macro [END_MSG_MAP](#end_msg_map) marque la fin de la table des messages. Notez qu’il y a toujours exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
 
-Pour plus d’informations sur l’utilisation des tables des messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
+Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-L’exemple suivant montre la table des messages par défaut et une autre table des messages, chacun contenant une fonction de gestionnaire :
+L’exemple suivant illustre la table des messages par défaut et une autre table des messages de remplacement, chacun contenant une fonction de gestionnaire:
 
 [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]
 
-L’exemple suivant montre deux mappages de messages de remplacement. La table des messages par défaut est vide.
+L’exemple suivant montre deux tables de messages de remplacement. La table des messages par défaut est vide.
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP
 
@@ -139,73 +139,73 @@ BEGIN_MSG_MAP(theClass)
 ### <a name="parameters"></a>Paramètres
 
 *theClass*<br/>
-[in] Le nom de la classe contenant la table des messages.
+dans Nom de la classe contenant la table des messages.
 
 ### <a name="remarks"></a>Notes
 
-[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc) utilise la table des messages par défaut pour traiter les messages envoyés à la fenêtre. La table des messages dirige les messages à la fonction gestionnaire approprié ou à une autre table des messages.
+[CWindowImpl:: WindowProc](cwindowimpl-class.md#windowproc) utilise la table des messages par défaut pour traiter les messages envoyés à la fenêtre. La table des messages dirige les messages vers la fonction de gestionnaire appropriée ou vers une autre table des messages.
 
-Les macros suivantes mappent un message à une fonction gestionnaire. Cette fonction doit être définie dans *theClass*.
-
-|Macro|Description|
-|-----------|-----------------|
-|[MESSAGE_HANDLER](#message_handler)|Mappe un message Windows à une fonction gestionnaire.|
-|[MESSAGE_RANGE_HANDLER](#message_range_handler)|Mappe une plage contiguë de Windows aux messages à une fonction gestionnaire.|
-|[COMMAND_HANDLER](#command_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, selon le code de notification et l’identificateur de l’élément de menu, un contrôle ou un accélérateur.|
-|[COMMAND_ID_HANDLER](#command_id_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, selon l’identificateur de l’élément de menu, un contrôle ou un accélérateur.|
-|[COMMAND_CODE_HANDLER](#command_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, selon le code de notification.|
-|[COMMAND_RANGE_HANDLER](#command_range_handler)|Mappe une plage contiguë de WM_COMMAND aux messages à une fonction de gestionnaire, selon l’identificateur de l’élément de menu, un contrôle ou un accélérateur.|
-|[NOTIFY_HANDLER](#notify_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, selon le code de notification et l’identificateur du contrôle.|
-|[NOTIFY_ID_HANDLER](#notify_id_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, selon l’identificateur du contrôle.|
-|[NOTIFY_CODE_HANDLER](#notify_code_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, selon le code de notification.|
-|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|Mappe une plage contiguë de WM_NOTIFY aux messages à une fonction de gestionnaire, selon l’identificateur du contrôle.|
-
-Les macros suivantes dirigent les messages vers une autre table des messages. Ce processus est appelé « chaînage ».
+Les macros suivantes mappent un message à une fonction de gestionnaire. Cette fonction doit être définie dans *les*.
 
 |Macro|Description|
 |-----------|-----------------|
-|[CHAIN_MSG_MAP](#chain_msg_map)|Est lié à la table des messages par défaut dans la classe de base.|
-|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|Est lié à la table des messages par défaut dans un membre de données de la classe.|
-|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|Est lié à une autre table des messages dans la classe de base.|
-|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|Est lié à une autre table des messages dans un membre de données de la classe.|
-|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|Est lié à la table des messages par défaut dans une autre classe au moment de l’exécution.|
+|[MESSAGE_HANDLER](#message_handler)|Mappe un message Windows à une fonction de gestionnaire.|
+|[MESSAGE_RANGE_HANDLER](#message_range_handler)|Mappe une plage contiguë de messages Windows à une fonction de gestionnaire.|
+|[COMMAND_HANDLER](#command_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, en fonction du code de notification et de l’identificateur de l’élément de menu, du contrôle ou de l’accélérateur.|
+|[COMMAND_ID_HANDLER](#command_id_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, en fonction de l’identificateur de l’élément de menu, du contrôle ou de l’accélérateur.|
+|[COMMAND_CODE_HANDLER](#command_handler)|Mappe un message WM_COMMAND à une fonction de gestionnaire, en fonction du code de notification.|
+|[COMMAND_RANGE_HANDLER](#command_range_handler)|Mappe une plage contiguë de messages WM_COMMAND à une fonction de gestionnaire, en fonction de l’identificateur de l’élément de menu, du contrôle ou de l’accélérateur.|
+|[NOTIFY_HANDLER](#notify_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, en fonction du code de notification et de l’identificateur de contrôle.|
+|[NOTIFY_ID_HANDLER](#notify_id_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, en fonction de l’identificateur de contrôle.|
+|[NOTIFY_CODE_HANDLER](#notify_code_handler)|Mappe un message WM_NOTIFY à une fonction de gestionnaire, en fonction du code de notification.|
+|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|Mappe une plage contiguë de messages WM_NOTIFY à une fonction de gestionnaire, en fonction de l’identificateur de contrôle.|
 
-Les macros suivantes dirigent les messages de « reflétées » à partir de la fenêtre parente. Par exemple, un contrôle normalement envoie des messages de notification à sa fenêtre parente pour traitement, mais la fenêtre parente peut refléter le message au contrôle.
+Les macros suivantes dirigent les messages vers une autre table des messages. Ce processus est appelé «chaînage».
 
 |Macro|Description|
 |-----------|-----------------|
-|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, selon le code de notification et l’identificateur de l’élément de menu, un contrôle ou un accélérateur.|
-|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, selon l’identificateur de l’élément de menu, un contrôle ou un accélérateur.|
-|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, selon le code de notification.|
-|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, selon une plage contiguë d’identificateurs de contrôle.|
-|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, selon le code de notification et une plage contiguë d’identificateurs de contrôle.|
-|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon le code de notification et l’identificateur du contrôle.|
-|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon l’identificateur du contrôle.|
-|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon le code de notification.|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon une plage contiguë d’identificateurs de contrôle.|
-|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon le code de notification et une plage contiguë d’identificateurs de contrôle.|
+|[CHAIN_MSG_MAP](#chain_msg_map)|Chaînes à la table des messages par défaut dans la classe de base.|
+|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|Chaîne à la table des messages par défaut dans un membre de données de la classe.|
+|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|Chaîne à une autre table des messages dans la classe de base.|
+|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|Chaîne à une autre table des messages dans un membre de données de la classe.|
+|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|Chaîne à la table des messages par défaut dans une autre classe au moment de l’exécution.|
+
+Les macros suivantes dirigent les messages «reflétés» à partir de la fenêtre parente. Par exemple, un contrôle envoie normalement des messages de notification à sa fenêtre parente pour traitement, mais la fenêtre parente peut répercuter le message dans le contrôle.
+
+|Macro|Description|
+|-----------|-----------------|
+|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, en fonction du code de notification et de l’identificateur de l’élément de menu, du contrôle ou de l’accélérateur.|
+|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, en fonction de l’identificateur de l’élément de menu, du contrôle ou de l’accélérateur.|
+|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, en fonction du code de notification.|
+|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, en fonction d’une plage contiguë d’identificateurs de contrôle.|
+|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Mappe un message WM_COMMAND réfléchi à une fonction de gestionnaire, en fonction du code de notification et d’une plage contiguë d’identificateurs de contrôle.|
+|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, en fonction du code de notification et de l’identificateur de contrôle.|
+|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, en fonction de l’identificateur de contrôle.|
+|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, en fonction du code de notification.|
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, en fonction d’une plage contiguë d’identificateurs de contrôle.|
+|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, en fonction du code de notification et d’une plage contiguë d’identificateurs de contrôle.|
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Windowing#102](../../atl/codesnippet/cpp/message-map-macros-atl_3.h)]
 
-Quand un `CMyExtWindow` objet reçoit un message WM_PAINT, le message est dirigé vers `CMyExtWindow::OnPaint` pour le traitement réel. Si `OnPaint` indique le message nécessite un traitement supplémentaire, le message est ensuite dirigé vers la table des messages par défaut dans `CMyBaseWindow`.
+Lorsqu’un `CMyExtWindow` objet reçoit un message WM_PAINT, le message est dirigé vers `CMyExtWindow::OnPaint` pour le traitement réel. Si `OnPaint` indique que le message nécessite un traitement supplémentaire, le message est ensuite dirigé vers la table des messages `CMyBaseWindow`par défaut dans.
 
-En plus de la table des messages par défaut, vous pouvez définir une autre table des messages avec [ALT_MSG_MAP](#alt_msg_map). Commencent toujours une table des messages avec BEGIN_MSG_MAP. Vous pouvez ensuite déclarer les tables des messages de remplacement suivants. L’exemple suivant montre la table des messages par défaut et une autre table des messages, chacun contenant une fonction de gestionnaire :
+En plus de la table des messages par défaut, vous pouvez définir une autre table des messages avec [ALT_MSG_MAP](#alt_msg_map). Commencez toujours une table des messages avec BEGIN_MSG_MAP. Vous pouvez ensuite déclarer des tables de messages secondaires suivantes. L’exemple suivant illustre la table des messages par défaut et une autre table des messages de remplacement, chacun contenant une fonction de gestionnaire:
 
 [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]
 
-L’exemple suivant montre deux mappages de messages de remplacement. La table des messages par défaut est vide.
+L’exemple suivant montre deux tables de messages de remplacement. La table des messages par défaut est vide.
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
-Le [END_MSG_MAP](#end_msg_map) macro marque la fin de la table des messages. Notez qu’il est toujours exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
+La macro [END_MSG_MAP](#end_msg_map) marque la fin de la table des messages. Notez qu’il y a toujours exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
 
-Pour plus d’informations sur l’utilisation des tables des messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
+Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="chain_msg_map_alt"></a>  CHAIN_MSG_MAP_ALT
 
@@ -218,23 +218,23 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 ### <a name="parameters"></a>Paramètres
 
 *theChainClass*<br/>
-[in] Le nom de la classe de base contenant la table des messages.
+dans Nom de la classe de base contenant la table des messages.
 
 *msgMapID*<br/>
-[in] Identificateur de plan de message.
+dans Identificateur de la table des messages.
 
 ### <a name="remarks"></a>Notes
 
-CHAIN_MSG_MAP_ALT dirige les messages vers une autre table des messages dans une classe de base. Vous devez avez déclaré cette autre table des messages avec [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Pour diriger les messages vers la table des messages par défaut d’une classe de base (déclaré avec [BEGIN_MSG_MAP](#begin_msg_map)), utilisez CHAIN_MSG_MAP. Pour obtenir un exemple, consultez [CHAIN_MSG_MAP](#chain_msg_map).
+CHAIN_MSG_MAP_ALT dirige les messages vers une autre table des messages d’une classe de base. Vous devez avoir déclaré cette table de messages secondaire avec [ALT_MSG_MAP (msgMapID)](#alt_msg_map). Pour diriger les messages vers la table des messages par défaut d’une classe de base (déclarée avec [BEGIN_MSG_MAP](#begin_msg_map)), utilisez CHAIN_MSG_MAP. Pour obtenir un exemple, consultez [CHAIN_MSG_MAP](#chain_msg_map).
 
 > [!NOTE]
->  Commencent toujours une table des messages avec BEGIN_MSG_MAP. Vous pouvez ensuite déclarer les tables des messages de remplacement suivants avec ALT_MSG_MAP. Le [END_MSG_MAP](#end_msg_map) macro marque la fin de la table des messages. Chaque mappage de message doit avoir exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
+>  Commencez toujours une table des messages avec BEGIN_MSG_MAP. Vous pouvez ensuite déclarer des tables de messages secondaires suivantes avec ALT_MSG_MAP. La macro [END_MSG_MAP](#end_msg_map) marque la fin de la table des messages. Chaque table des messages doit avoir une seule instance de BEGIN_MSG_MAP et END_MSG_MAP.
 
-Pour plus d’informations sur l’utilisation des tables des messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
+Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="chain_msg_map_alt_member"></a>  CHAIN_MSG_MAP_ALT_MEMBER
 
@@ -247,23 +247,23 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 ### <a name="parameters"></a>Paramètres
 
 *theChainMember*<br/>
-[in] Le nom du membre de données contenant la table des messages.
+dans Nom du membre de données contenant la table des messages.
 
 *msgMapID*<br/>
-[in] Identificateur de plan de message.
+dans Identificateur de la table des messages.
 
 ### <a name="remarks"></a>Notes
 
-CHAIN_MSG_MAP_ALT_MEMBER dirige les messages vers une autre table des messages dans un membre de données. Vous devez avez déclaré cette autre table des messages avec [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Pour diriger les messages vers la table des messages d’un membre de données par défaut (déclaré avec [BEGIN_MSG_MAP](#begin_msg_map)), utilisez CHAIN_MSG_MAP_MEMBER. Pour obtenir un exemple, consultez [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member).
+CHAIN_MSG_MAP_ALT_MEMBER dirige les messages vers une autre table des messages d’un membre de données. Vous devez avoir déclaré cette table de messages secondaire avec [ALT_MSG_MAP (msgMapID)](#alt_msg_map). Pour diriger les messages vers la table des messages par défaut d’un membre de données (déclaré avec [BEGIN_MSG_MAP](#begin_msg_map)), utilisez CHAIN_MSG_MAP_MEMBER. Pour obtenir un exemple, consultez [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member).
 
 > [!NOTE]
->  Commencent toujours une table des messages avec BEGIN_MSG_MAP. Vous pouvez ensuite déclarer les tables des messages de remplacement suivants avec ALT_MSG_MAP. Le [END_MSG_MAP](#end_msg_map) macro marque la fin de la table des messages. Chaque mappage de message doit avoir exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
+>  Commencez toujours une table des messages avec BEGIN_MSG_MAP. Vous pouvez ensuite déclarer des tables de messages secondaires suivantes avec ALT_MSG_MAP. La macro [END_MSG_MAP](#end_msg_map) marque la fin de la table des messages. Chaque table des messages doit avoir une seule instance de BEGIN_MSG_MAP et END_MSG_MAP.
 
-Pour plus d’informations sur l’utilisation des tables des messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
+Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="chain_msg_map"></a>  CHAIN_MSG_MAP
 
@@ -276,32 +276,32 @@ CHAIN_MSG_MAP(theChainClass)
 ### <a name="parameters"></a>Paramètres
 
 *theChainClass*<br/>
-[in] Le nom de la classe de base contenant la table des messages.
+dans Nom de la classe de base contenant la table des messages.
 
 ### <a name="remarks"></a>Notes
 
-CHAIN_MSG_MAP dirige les messages vers la table des messages par défaut d’une classe de base (déclaré avec [BEGIN_MSG_MAP](#begin_msg_map)). Pour diriger les messages au mappage des messages de remplacement d’une classe de base (déclaré avec [ALT_MSG_MAP](#alt_msg_map)), utilisez [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt).
+CHAIN_MSG_MAP dirige les messages vers la table des messages par défaut d’une classe de base (déclarée avec [BEGIN_MSG_MAP](#begin_msg_map)). Pour diriger les messages vers la table des messages de remplacement d’une classe de base (déclarée avec [ALT_MSG_MAP](#alt_msg_map)), utilisez [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt).
 
 > [!NOTE]
->  Commencent toujours une table des messages avec BEGIN_MSG_MAP. Vous pouvez ensuite déclarer les tables des messages de remplacement suivants avec ALT_MSG_MAP. Le [END_MSG_MAP](#end_msg_map) macro marque la fin de la table des messages. Chaque mappage de message doit avoir exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
+>  Commencez toujours une table des messages avec BEGIN_MSG_MAP. Vous pouvez ensuite déclarer des tables de messages secondaires suivantes avec ALT_MSG_MAP. La macro [END_MSG_MAP](#end_msg_map) marque la fin de la table des messages. Chaque table des messages doit avoir une seule instance de BEGIN_MSG_MAP et END_MSG_MAP.
 
-Pour plus d’informations sur l’utilisation des tables des messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
+Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Windowing#107](../../atl/codesnippet/cpp/message-map-macros-atl_4.h)]
 
-Cet exemple illustre les éléments suivants :
+Cet exemple illustre les éléments suivants:
 
-- Si à l’aide d’une procédure de fenêtre `CMyClass`de table des messages par défaut et `OnPaint` ne pas handle d’un message, le message est dirigé vers `CMyBaseClass`de table des messages par défaut pour le traitement.
+- Si une procédure de fenêtre utilise `CMyClass`la table des messages par `OnPaint` défaut de et ne gère pas un message, le message `CMyBaseClass`est dirigé vers la table des messages par défaut de pour le traitement.
 
-- Si une procédure de fenêtre à l’aide de la première table des messages secondaire dans `CMyClass`, tous les messages sont dirigés vers `CMyBaseClass`de table des messages par défaut.
+- Si une procédure de fenêtre utilise la première table des messages de `CMyClass`remplacement dans, tous les messages `CMyBaseClass`sont dirigés vers la table des messages par défaut de.
 
-- Si à l’aide d’une procédure de fenêtre `CMyClass`de mapper de deuxième message alternatifs et `OnChar` ne pas handle d’un message, le message est dirigé vers la table des messages de remplacement spécifié dans `CMyBaseClass`. `CMyBaseClass` doit avoir déclaré cette table des messages avec ALT_MSG_MAP(1).
+- Si une procédure de fenêtre utilise `CMyClass`une deuxième table des messages de `OnChar` remplacement et ne gère pas de message, le message est dirigé vers la table des messages `CMyBaseClass`alternatifs spécifiée dans. `CMyBaseClass`doit avoir déclaré cette table des messages avec ALT_MSG_MAP (1).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="chain_msg_map_dynamic"></a>  CHAIN_MSG_MAP_DYNAMIC
 
@@ -314,20 +314,20 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 ### <a name="parameters"></a>Paramètres
 
 *dynaChainID*<br/>
-[in] Identificateur unique pour la table des messages d’un objet.
+dans Identificateur unique de la table des messages d’un objet.
 
 ### <a name="remarks"></a>Notes
 
-Macro CHAIN_MSG_MAP_DYNAMIC dirige les messages, en cours d’exécution, à la table des messages par défaut dans un autre objet. L’objet et sa table des messages associés *dynaChainID*, que vous définissez via [CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry). Vous devez dériver votre classe de `CDynamicChain` pour pouvoir utiliser la macro CHAIN_MSG_MAP_DYNAMIC. Pour obtenir un exemple, consultez le [CDynamicChain](../../atl/reference/cdynamicchain-class.md) vue d’ensemble.
+CHAIN_MSG_MAP_DYNAMIC dirige les messages, au moment de l’exécution, vers la table des messages par défaut d’un autre objet. L’objet et sa table des messages sont associés à *dynaChainID*, que vous définissez par le biais de [CDynamicChain:: SetChainEntry](cdynamicchain-class.md#setchainentry). Vous devez dériver votre classe `CDynamicChain` de pour pouvoir utiliser CHAIN_MSG_MAP_DYNAMIC. Pour obtenir un exemple, consultez la vue d’ensemble de [CDynamicChain](../../atl/reference/cdynamicchain-class.md) .
 
 > [!NOTE]
->  Toujours commencer avec une table des messages [BEGIN_MSG_MAP](#begin_msg_map). Vous pouvez ensuite déclarer les tables des messages de remplacement suivants avec ALT_MSG_MAP. Le [END_MSG_MAP](#end_msg_map) macro marque la fin de la table des messages. Chaque mappage de message doit avoir exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
+>  Commencez toujours une table des messages avec [BEGIN_MSG_MAP](#begin_msg_map). Vous pouvez ensuite déclarer des tables de messages secondaires suivantes avec ALT_MSG_MAP. La macro [END_MSG_MAP](#end_msg_map) marque la fin de la table des messages. Chaque table des messages doit avoir une seule instance de BEGIN_MSG_MAP et END_MSG_MAP.
 
-Pour plus d’informations sur l’utilisation des tables des messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
+Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="chain_msg_map_member"></a>  CHAIN_MSG_MAP_MEMBER
 
@@ -340,36 +340,36 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 ### <a name="parameters"></a>Paramètres
 
 *theChainMember*<br/>
-[in] Le nom du membre de données contenant la table des messages.
+dans Nom du membre de données contenant la table des messages.
 
 ### <a name="remarks"></a>Notes
 
-CHAIN_MSG_MAP_MEMBER dirige les messages vers la table des messages d’un membre de données par défaut (déclaré avec [BEGIN_MSG_MAP](#begin_msg_map)). Pour diriger les messages au mappage des messages de remplacement d’un membre de données (déclaré avec [ALT_MSG_MAP](#alt_msg_map)), utilisez [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member).
+CHAIN_MSG_MAP_MEMBER dirige les messages vers la table des messages par défaut d’un membre de données (déclaré avec [BEGIN_MSG_MAP](#begin_msg_map)). Pour diriger les messages vers la table des messages de remplacement d’un membre de données (déclaré avec [ALT_MSG_MAP](#alt_msg_map)), utilisez [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member).
 
 > [!NOTE]
->  Commencent toujours une table des messages avec BEGIN_MSG_MAP. Vous pouvez ensuite déclarer les tables des messages de remplacement suivants avec ALT_MSG_MAP. Le [END_MSG_MAP](#end_msg_map) macro marque la fin de la table des messages. Chaque mappage de message doit avoir exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
+>  Commencez toujours une table des messages avec BEGIN_MSG_MAP. Vous pouvez ensuite déclarer des tables de messages secondaires suivantes avec ALT_MSG_MAP. La macro [END_MSG_MAP](#end_msg_map) marque la fin de la table des messages. Chaque table des messages doit avoir une seule instance de BEGIN_MSG_MAP et END_MSG_MAP.
 
-Pour plus d’informations sur l’utilisation des tables des messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
+Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Windowing#108](../../atl/codesnippet/cpp/message-map-macros-atl_5.h)]
 
-Cet exemple illustre les éléments suivants :
+Cet exemple illustre les éléments suivants:
 
-- Si à l’aide d’une procédure de fenêtre `CMyClass`de table des messages par défaut et `OnPaint` ne pas handle d’un message, le message est dirigé vers `m_obj`de table des messages par défaut pour le traitement.
+- Si une procédure de fenêtre utilise `CMyClass`la table des messages par `OnPaint` défaut de et ne gère pas un message, le message `m_obj`est dirigé vers la table des messages par défaut de pour le traitement.
 
-- Si une procédure de fenêtre à l’aide de la première table des messages secondaire dans `CMyClass`, tous les messages sont dirigés vers `m_obj`de table des messages par défaut.
+- Si une procédure de fenêtre utilise la première table des messages de `CMyClass`remplacement dans, tous les messages `m_obj`sont dirigés vers la table des messages par défaut de.
 
-- Si à l’aide d’une procédure de fenêtre `CMyClass`de mapper de deuxième message alternatifs et `OnChar` ne pas handle d’un message, le message est dirigé vers la table des messages de remplacement spécifié de `m_obj`. Classe `CMyContainedClass` cette table des messages avec ALT_MSG_MAP(1) est déclarée.
+- Si une procédure de fenêtre utilise `CMyClass`une deuxième table des messages de `OnChar` remplacement et ne gère pas de message, le message est dirigé vers l’autre table des `m_obj`messages spécifiée. La `CMyContainedClass` classe doit avoir déclaré cette table des messages avec ALT_MSG_MAP (1).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER
 
-Semblable à [COMMAND_HANDLER](#command_handler), mais mappe un [WM_COMMAND](/windows/desktop/menurc/wm-command) message basé uniquement sur le code de notification.
+Semblable à [COMMAND_HANDLER](#command_handler), mais mappe un message [WM_COMMAND](/windows/win32/menurc/wm-command) basé uniquement sur le code de notification.
 
 ```
 COMMAND_CODE_HANDLER(code, func)
@@ -378,14 +378,14 @@ COMMAND_CODE_HANDLER(code, func)
 ### <a name="parameters"></a>Paramètres
 
 *code*<br/>
-[in] Le code de notification.
+dans Code de notification.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="command_handler"></a>  COMMAND_HANDLER
 
@@ -397,41 +397,41 @@ COMMAND_HANDLER(id, code, func)
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*<br/>
-[in] L’identificateur de l’élément de menu, un contrôle ou un accélérateur.
+*id*<br/>
+dans Identificateur de l’élément de menu, du contrôle ou de l’accélérateur.
 
 *code*<br/>
-[in] Le code de notification.
+dans Code de notification.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="remarks"></a>Notes
 
-COMMAND_HANDLER mappe un [WM_COMMAND](/windows/desktop/menurc/wm-command) message à la fonction de gestionnaire spécifié, selon le code de notification et l’identificateur du contrôle. Exemple :
+COMMAND_HANDLER mappe un message [WM_COMMAND](/windows/win32/menurc/wm-command) à la fonction de gestionnaire spécifiée, en fonction du code de notification et de l’identificateur de contrôle. Par exemple :
 
 [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]
 
-N’importe quelle fonction spécifiée dans une macro COMMAND_HANDLER doit être définie comme suit :
+Toute fonction spécifiée dans une macro COMMAND_HANDLER doit être définie comme suit:
 
 `LRESULT CommandHandler(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL& bHandled);`
 
-Les jeux de mappage de message `bHandled` sur TRUE avant `CommandHandler` est appelée. Si `CommandHandler` ne gère pas entièrement le message, il doit définir `bHandled` à FALSE pour indiquer que le message nécessite un traitement supplémentaire.
+La table des messages `bHandled` est définie sur `CommandHandler` true avant l’appel de. Si `CommandHandler` ne gère pas complètement le message, il doit avoir `bHandled` la valeur false pour indiquer que le message doit être traité ultérieurement.
 
 > [!NOTE]
->  Toujours commencer avec une table des messages [BEGIN_MSG_MAP](#begin_msg_map). Vous pouvez ensuite déclarer les tables des messages de remplacement suivants avec [ALT_MSG_MAP](#alt_msg_map). Le [END_MSG_MAP](#end_msg_map) macro marque la fin de la table des messages. Chaque mappage de message doit avoir exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
+>  Commencez toujours une table des messages avec [BEGIN_MSG_MAP](#begin_msg_map). Vous pouvez ensuite déclarer des tables de messages secondaires suivantes avec [ALT_MSG_MAP](#alt_msg_map). La macro [END_MSG_MAP](#end_msg_map) marque la fin de la table des messages. Chaque table des messages doit avoir une seule instance de BEGIN_MSG_MAP et END_MSG_MAP.
 
-Outre COMMAND_HANDLER, vous pouvez utiliser [MESSAGE_HANDLER](#message_handler) pour mapper un message WM_COMMAND sans tenir compte d’un identificateur ou le code. Dans ce cas, `MESSAGE_HANDLER(WM_COMMAND, OnHandlerFunction)` dirigera tous les messages WM_COMMAND `OnHandlerFunction`.
+En plus de COMMAND_HANDLER, vous pouvez utiliser [MESSAGE_HANDLER](#message_handler) pour mapper un message WM_COMMAND sans tenir compte d’un identificateur ou d’un code. Dans ce cas, `MESSAGE_HANDLER(WM_COMMAND, OnHandlerFunction)` dirige tous les messages WM_COMMAND vers `OnHandlerFunction`.
 
-Pour plus d’informations sur l’utilisation des tables des messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
+Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER
 
-Semblable à [COMMAND_HANDLER](#command_handler), mais mappe un [WM_COMMAND](/windows/desktop/menurc/wm-command) basées sur des messages uniquement sur l’identificateur de l’élément de menu, un contrôle ou un accélérateur.
+Semblable à [COMMAND_HANDLER](#command_handler), mais mappe un message [WM_COMMAND](/windows/win32/menurc/wm-command) uniquement en fonction de l’identificateur de l’élément de menu, du contrôle ou de l’accélérateur.
 
 ```
 COMMAND_ID_HANDLER(id, func)
@@ -439,19 +439,19 @@ COMMAND_ID_HANDLER(id, func)
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*<br/>
-[in] Identificateur de l’élément de menu, le contrôle ou l’accélérateur d’envoi du message.
+*id*<br/>
+dans Identificateur de l’élément de menu, du contrôle ou de l’accélérateur qui envoie le message.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER
 
-Semblable à [COMMAND_RANGE_HANDLER](#command_range_handler), mais mappe [WM_COMMAND](/windows/desktop/menurc/wm-command) messages avec un code de notification spécifique à partir d’un éventail de contrôles à une seule fonction gestionnaire.
+Semblable à [COMMAND_RANGE_HANDLER](#command_range_handler), mais mappe les messages [WM_COMMAND](/windows/win32/menurc/wm-command) avec un code de notification spécifique d’une plage de contrôles à une fonction de gestionnaire unique.
 
 ```
 COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
@@ -460,28 +460,28 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 ### <a name="parameters"></a>Paramètres
 
 *idFirst*<br/>
-[in] Marque le début d’une plage contiguë d’identificateurs de contrôle.
+dans Marque le début d’une plage contiguë d’identificateurs de contrôle.
 
 *idLast*<br/>
-[in] Marque la fin d’une plage contiguë d’identificateurs de contrôle.
+dans Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 
 *code*<br/>
-[in] Le code de notification.
+dans Code de notification.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="remarks"></a>Notes
 
-Cette plage est basée sur l’identificateur de l’élément de menu, le contrôle ou l’accélérateur d’envoi du message.
+Cette plage est basée sur l’identificateur de l’élément de menu, du contrôle ou de l’accélérateur qui envoie le message.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER
 
-Semblable à [COMMAND_HANDLER](#command_handler), mais mappe [WM_COMMAND](/windows/desktop/menurc/wm-command) messages à partir d’un éventail de contrôles à une seule fonction gestionnaire.
+Semblable à [COMMAND_HANDLER](#command_handler), mais mappe les messages [WM_COMMAND](/windows/win32/menurc/wm-command) d’une plage de contrôles à une fonction de gestionnaire unique.
 
 ```
 COMMAND_RANGE_HANDLER( idFirst, idLast, func)
@@ -490,25 +490,25 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 ### <a name="parameters"></a>Paramètres
 
 *idFirst*<br/>
-[in] Marque le début d’une plage contiguë d’identificateurs de contrôle.
+dans Marque le début d’une plage contiguë d’identificateurs de contrôle.
 
 *idLast*<br/>
-[in] Marque la fin d’une plage contiguë d’identificateurs de contrôle.
+dans Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="remarks"></a>Notes
 
-Cette plage est basée sur l’identificateur de l’élément de menu, le contrôle ou l’accélérateur d’envoi du message.
+Cette plage est basée sur l’identificateur de l’élément de menu, du contrôle ou de l’accélérateur qui envoie le message.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="declare_empty_msg_map"></a>  DECLARE_EMPTY_MSG_MAP
 
-Déclare un mappage de message vide.
+Déclare une table des messages vide.
 
 ```
 DECLARE_EMPTY_MSG_MAP()
@@ -516,13 +516,13 @@ DECLARE_EMPTY_MSG_MAP()
 
 ### <a name="remarks"></a>Notes
 
-DECLARE_EMPTY_MSG_MAP est une macro pratique qui appelle les macros [BEGIN_MSG_MAP](#begin_msg_map) et [END_MSG_MAP](#end_msg_map) pour créer une table des messages vide :
+DECLARE_EMPTY_MSG_MAP est une macro pratique qui appelle les macros [BEGIN_MSG_MAP](#begin_msg_map) et [END_MSG_MAP](#end_msg_map) pour créer une table des messages vide:
 
 [!code-cpp[NVC_ATL_Windowing#122](../../atl/codesnippet/cpp/message-map-macros-atl_7.h)]
 
 ##  <a name="default_reflection_handler"></a>  DEFAULT_REFLECTION_HANDLER
 
-Fournit un gestionnaire par défaut pour la fenêtre enfant (contrôle) qui recevra les messages ; réfléchis le gestionnaire passe correctement des messages non gérées à `DefWindowProc`.
+Fournit un gestionnaire par défaut pour la fenêtre enfant (contrôle) qui recevra les messages reflétés; le gestionnaire passera correctement les messages non gérés à `DefWindowProc`.
 
 ```
 DEFAULT_REFLECTION_HANDLER()
@@ -530,7 +530,7 @@ DEFAULT_REFLECTION_HANDLER()
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="end_msg_map"></a>  END_MSG_MAP
 
@@ -542,25 +542,25 @@ END_MSG_MAP()
 
 ### <a name="remarks"></a>Notes
 
-Utilisez toujours le [BEGIN_MSG_MAP](#begin_msg_map) macro pour marquer le début d’une table des messages. Utilisez [ALT_MSG_MAP](#alt_msg_map) pour déclarer les tables des messages de remplacement suivants.
+Utilisez toujours la macro [BEGIN_MSG_MAP](#begin_msg_map) pour marquer le début d’une table des messages. Utilisez [ALT_MSG_MAP](#alt_msg_map) pour déclarer d’autres tables de messages secondaires.
 
-Notez qu’il est toujours exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
+Notez qu’il y a toujours exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
 
-Pour plus d’informations sur l’utilisation des tables des messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
+Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre la table des messages par défaut et une autre table des messages, chacun contenant une fonction de gestionnaire :
+L’exemple suivant illustre la table des messages par défaut et une autre table des messages de remplacement, chacun contenant une fonction de gestionnaire:
 
 [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]
 
-L’exemple suivant montre deux mappages de messages de remplacement. La table des messages par défaut est vide.
+L’exemple suivant montre deux tables de messages de remplacement. La table des messages par défaut est vide.
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="forward_notifications"></a>  FORWARD_NOTIFICATIONS
 
@@ -572,13 +572,13 @@ FORWARD_NOTIFICATIONS()
 
 ### <a name="remarks"></a>Notes
 
-Spécifiez cette macro en tant que partie de votre table des messages.
+Spécifiez cette macro dans le cadre de votre table des messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
-##  <a name="message_handler"></a>  MESSAGE_HANDLER
+##  <a name="message_handler"></a>MESSAGE_HANDLER
 
 Définit une entrée dans une table des messages.
 
@@ -589,27 +589,27 @@ MESSAGE_HANDLER( msg, func )
 ### <a name="parameters"></a>Paramètres
 
 *msg*<br/>
-[in] Le message Windows.
+dans Message Windows.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="remarks"></a>Notes
 
-MESSAGE_HANDLER mappe un message Windows à la fonction de gestionnaire spécifié.
+MESSAGE_HANDLER mappe un message Windows à la fonction de gestionnaire spécifiée.
 
-N’importe quelle fonction spécifiée dans une macro MESSAGE_HANDLER doit être définie comme suit :
+Toute fonction spécifiée dans une macro MESSAGE_HANDLER doit être définie comme suit:
 
 `LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);`
 
-Les jeux de mappage de message `bHandled` sur TRUE avant `MessageHandler` est appelée. Si `MessageHandler` ne gère pas entièrement le message, il doit définir `bHandled` à FALSE pour indiquer que le message nécessite un traitement supplémentaire.
+La table des messages `bHandled` est définie sur `MessageHandler` true avant l’appel de. Si `MessageHandler` ne gère pas complètement le message, il doit avoir `bHandled` la valeur false pour indiquer que le message doit être traité ultérieurement.
 
 > [!NOTE]
->  Toujours commencer avec une table des messages [BEGIN_MSG_MAP](#begin_msg_map). Vous pouvez ensuite déclarer les tables des messages de remplacement suivants avec [ALT_MSG_MAP](#alt_msg_map). Le [END_MSG_MAP](#end_msg_map) macro marque la fin de la table des messages. Chaque mappage de message doit avoir exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
+>  Commencez toujours une table des messages avec [BEGIN_MSG_MAP](#begin_msg_map). Vous pouvez ensuite déclarer des tables de messages secondaires suivantes avec [ALT_MSG_MAP](#alt_msg_map). La macro [END_MSG_MAP](#end_msg_map) marque la fin de la table des messages. Chaque table des messages doit avoir une seule instance de BEGIN_MSG_MAP et END_MSG_MAP.
 
-Outre MESSAGE_HANDLER, vous pouvez utiliser [COMMAND_HANDLER](#command_handler) et [NOTIFY_HANDLER](#notify_handler) pour mapper [WM_COMMAND](/windows/desktop/menurc/wm-command) et [WM_NOTIFY](/windows/desktop/controls/wm-notify) messages , respectivement.
+En plus de MESSAGE_HANDLER, vous pouvez utiliser [COMMAND_HANDLER](#command_handler) et [NOTIFY_HANDLER](#notify_handler) pour mapper les messages [WM_COMMAND](/windows/win32/menurc/wm-command) et [WM_NOTIFY](/windows/win32/controls/wm-notify) , respectivement.
 
-Pour plus d’informations sur l’utilisation des tables des messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
+Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
 ### <a name="example"></a>Exemple
 
@@ -617,11 +617,11 @@ Pour plus d’informations sur l’utilisation des tables des messages dans ATL,
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="message_range_handler"></a>  MESSAGE_RANGE_HANDLER
 
-Semblable à [MESSAGE_HANDLER](#message_handler), mais correspond à une plage de Windows des messages à une seule fonction gestionnaire.
+Semblable à [MESSAGE_HANDLER](#message_handler), mais mappe une plage de messages Windows à une fonction de gestionnaire unique.
 
 ```
 MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
@@ -630,21 +630,21 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 ### <a name="parameters"></a>Paramètres
 
 *msgFirst*<br/>
-[in] Marque le début d’une plage contiguë de messages.
+dans Marque le début d’une plage de messages contiguë.
 
 *msgLast*<br/>
-[in] Marque la fin d’une plage contiguë de messages.
+dans Marque la fin d’une plage de messages contiguë.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER
 
-Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe un [WM_NOTIFY](/windows/desktop/controls/wm-notify) message basé uniquement sur le code de notification.
+Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe un message [WM_NOTIFY](/windows/win32/controls/wm-notify) basé uniquement sur le code de notification.
 
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -653,14 +653,14 @@ NOTIFY_CODE_HANDLER(cd, func)
 ### <a name="parameters"></a>Paramètres
 
 *cd*<br/>
-[in] Le code de notification.
+dans Code de notification.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="notify_handler"></a>  NOTIFY_HANDLER
 
@@ -672,43 +672,43 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*<br/>
-[in] L’identificateur du contrôle qui envoie le message.
+*id*<br/>
+dans Identificateur du contrôle qui envoie le message.
 
 *cd*<br/>
-[in] Le code de notification.
+dans Code de notification.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="remarks"></a>Notes
 
-NOTIFY_HANDLER mappe un [WM_NOTIFY](/windows/desktop/controls/wm-notify) message à la fonction de gestionnaire spécifié, selon le code de notification et l’identificateur du contrôle.
+NOTIFY_HANDLER mappe un message [WM_NOTIFY](/windows/win32/controls/wm-notify) à la fonction de gestionnaire spécifiée, en fonction du code de notification et de l’identificateur de contrôle.
 
-N’importe quelle fonction spécifiée dans une macro NOTIFY_HANDLER doit être définie comme suit :
+Toute fonction spécifiée dans une macro NOTIFY_HANDLER doit être définie comme suit:
 
 `LRESULT NotifyHandler(int idCtrl, LPNMHDR pnmh, BOOL& bHandled);`
 
-Les jeux de mappage de message `bHandled` sur TRUE avant `NotifyHandler` est appelée. Si `NotifyHandler` ne gère pas entièrement le message, il doit définir `bHandled` à FALSE pour indiquer que le message nécessite un traitement supplémentaire.
+La table des messages `bHandled` est définie sur `NotifyHandler` true avant l’appel de. Si `NotifyHandler` ne gère pas complètement le message, il doit avoir `bHandled` la valeur false pour indiquer que le message doit être traité ultérieurement.
 
 > [!NOTE]
->  Toujours commencer avec une table des messages [BEGIN_MSG_MAP](#begin_msg_map). Vous pouvez ensuite déclarer les tables des messages de remplacement suivants avec [ALT_MSG_MAP](#alt_msg_map). Le [END_MSG_MAP](#end_msg_map) macro marque la fin de la table des messages. Chaque mappage de message doit avoir exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
+>  Commencez toujours une table des messages avec [BEGIN_MSG_MAP](#begin_msg_map). Vous pouvez ensuite déclarer des tables de messages secondaires suivantes avec [ALT_MSG_MAP](#alt_msg_map). La macro [END_MSG_MAP](#end_msg_map) marque la fin de la table des messages. Chaque table des messages doit avoir une seule instance de BEGIN_MSG_MAP et END_MSG_MAP.
 
-Outre NOTIFY_HANDLER, vous pouvez utiliser [MESSAGE_HANDLER](#message_handler) pour mapper un message WM_NOTIFY sans tenir compte d’un identificateur ou le code. Dans ce cas, `MESSAGE_HANDLER(WM_NOTIFY, OnHandlerFunction)` dirigera tous les messages WM_NOTIFY à `OnHandlerFunction`.
+En plus de NOTIFY_HANDLER, vous pouvez utiliser [MESSAGE_HANDLER](#message_handler) pour mapper un message WM_NOTIFY sans tenir compte d’un identificateur ou d’un code. Dans ce cas, `MESSAGE_HANDLER(WM_NOTIFY, OnHandlerFunction)` dirige tous les messages WM_NOTIFY vers `OnHandlerFunction`.
 
-Pour plus d’informations sur l’utilisation des tables des messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
+Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_ATL_Windowing#130](../../atl/codesnippet/cpp/message-map-macros-atl_9.h)]
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER
 
-Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe un [WM_NOTIFY](/windows/desktop/controls/wm-notify) basées sur des messages uniquement sur l’identificateur du contrôle.
+Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe un message [WM_NOTIFY](/windows/win32/controls/wm-notify) basé uniquement sur l’identificateur de contrôle.
 
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -716,19 +716,19 @@ NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*<br/>
-[in] L’identificateur du contrôle qui envoie le message.
+*id*<br/>
+dans Identificateur du contrôle qui envoie le message.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER
 
-Semblable à [NOTIFY_RANGE_HANDLER](#notify_range_handler), mais mappe [WM_NOTIFY](/windows/desktop/controls/wm-notify) messages avec un code de notification spécifique à partir d’un éventail de contrôles à une seule fonction gestionnaire.
+Semblable à [NOTIFY_RANGE_HANDLER](#notify_range_handler), mais mappe des messages [WM_NOTIFY](/windows/win32/controls/wm-notify) avec un code de notification spécifique d’une plage de contrôles à une fonction de gestionnaire unique.
 
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -737,16 +737,16 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="parameters"></a>Paramètres
 
 *idFirst*<br/>
-[in] Marque le début d’une plage contiguë d’identificateurs de contrôle.
+dans Marque le début d’une plage contiguë d’identificateurs de contrôle.
 
 *idLast*<br/>
-[in] Marque la fin d’une plage contiguë d’identificateurs de contrôle.
+dans Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 
 *cd*<br/>
-[in] Le code de notification.
+dans Code de notification.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="remarks"></a>Notes
 
@@ -754,11 +754,11 @@ Cette plage est basée sur l’identificateur du contrôle qui envoie le message
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
-##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER
+##  <a name="notify_range_handler"></a>NOTIFY_RANGE_HANDLER
 
-Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe [WM_NOTIFY](/windows/desktop/controls/wm-notify) messages à partir d’un éventail de contrôles à une seule fonction gestionnaire.
+Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe les messages [WM_NOTIFY](/windows/win32/controls/wm-notify) d’une plage de contrôles à une fonction de gestionnaire unique.
 
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
@@ -767,13 +767,13 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="parameters"></a>Paramètres
 
 *idFirst*<br/>
-[in] Marque le début d’une plage contiguë d’identificateurs de contrôle.
+dans Marque le début d’une plage contiguë d’identificateurs de contrôle.
 
 *idLast*<br/>
-[in] Marque la fin d’une plage contiguë d’identificateurs de contrôle.
+dans Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="remarks"></a>Notes
 
@@ -781,7 +781,7 @@ Cette plage est basée sur l’identificateur du contrôle qui envoie le message
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="reflect_notifications"></a>  REFLECT_NOTIFICATIONS
 
@@ -793,15 +793,15 @@ REFLECT_NOTIFICATIONS()
 
 ### <a name="remarks"></a>Notes
 
-Spécifiez cette macro en tant que partie de la table des messages de la fenêtre parente.
+Spécifiez cette macro dans le cadre de la table des messages de la fenêtre parente.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="reflected_command_code_handler"></a>  REFLECTED_COMMAND_CODE_HANDLER
 
-Semblable à [COMMAND_CODE_HANDLER](#command_code_handler), mais mappe des commandes réfléchies à partir de la fenêtre parente.
+Semblable à [COMMAND_CODE_HANDLER](#command_code_handler), mais les commandes Maps sont reflétées à partir de la fenêtre parente.
 
 ```
 REFLECTED_COMMAND_CODE_HANDLER( code, func )
@@ -810,18 +810,18 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 ### <a name="parameters"></a>Paramètres
 
 *code*<br/>
-[in] Le code de notification.
+dans Code de notification.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="reflected_command_handler"></a>  REFLECTED_COMMAND_HANDLER
 
-Semblable à [COMMAND_HANDLER](#command_handler), mais mappe des commandes réfléchies à partir de la fenêtre parente.
+Semblable à [COMMAND_HANDLER](#command_handler), mais les commandes Maps sont reflétées à partir de la fenêtre parente.
 
 ```
 REFLECTED_COMMAND_HANDLER( id, code, func )
@@ -829,22 +829,22 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*<br/>
-[in] L’identificateur de l’élément de menu, un contrôle ou un accélérateur.
+*id*<br/>
+dans Identificateur de l’élément de menu, du contrôle ou de l’accélérateur.
 
 *code*<br/>
-[in] Le code de notification.
+dans Code de notification.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER
 
-Semblable à [COMMAND_ID_HANDLER](#command_id_handler), mais mappe des commandes réfléchies à partir de la fenêtre parente.
+Semblable à [COMMAND_ID_HANDLER](#command_id_handler), mais les commandes Maps sont reflétées à partir de la fenêtre parente.
 
 ```
 REFLECTED_COMMAND_ID_HANDLER( id, func )
@@ -852,19 +852,19 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*<br/>
-[in] L’identificateur de l’élément de menu, un contrôle ou un accélérateur.
+*id*<br/>
+dans Identificateur de l’élément de menu, du contrôle ou de l’accélérateur.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER
 
-Semblable à [COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler), mais mappe des commandes réfléchies à partir de la fenêtre parente.
+Semblable à [COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler), mais les commandes Maps sont reflétées à partir de la fenêtre parente.
 
 ```
 REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
@@ -873,24 +873,24 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 ### <a name="parameters"></a>Paramètres
 
 *idFirst*<br/>
-[in] Marque le début d’une plage contiguë d’identificateurs de contrôle.
+dans Marque le début d’une plage contiguë d’identificateurs de contrôle.
 
 *idLast*<br/>
-[in] Marque la fin d’une plage contiguë d’identificateurs de contrôle.
+dans Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 
 *code*<br/>
-[in] Le code de notification.
+dans Code de notification.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER
 
-Semblable à [COMMAND_RANGE_HANDLER](#command_range_handler), mais mappe des commandes réfléchies à partir de la fenêtre parente.
+Semblable à [COMMAND_RANGE_HANDLER](#command_range_handler), mais les commandes Maps sont reflétées à partir de la fenêtre parente.
 
 ```
 REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
@@ -899,21 +899,21 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="parameters"></a>Paramètres
 
 *idFirst*<br/>
-[in] Marque le début d’une plage contiguë d’identificateurs de contrôle.
+dans Marque le début d’une plage contiguë d’identificateurs de contrôle.
 
 *idLast*<br/>
-[in] Marque la fin d’une plage contiguë d’identificateurs de contrôle.
+dans Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER
 
-Semblable à [NOTIFY_CODE_HANDLER](#notify_code_handler), mais mappe les notifications réfléchies à partir de la fenêtre parente.
+Semblable à [NOTIFY_CODE_HANDLER](#notify_code_handler), mais les notifications de mappage sont reflétées à partir de la fenêtre parente.
 
 ```
 REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
@@ -922,18 +922,18 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 ### <a name="parameters"></a>Paramètres
 
 *cd*<br/>
-[in] Le code de notification.
+dans Code de notification.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER
 
-Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe les notifications réfléchies à partir de la fenêtre parente.
+Semblable à [NOTIFY_HANDLER](#notify_handler), mais les notifications de mappage sont reflétées à partir de la fenêtre parente.
 
 ```
 REFLECTED_NOTIFY_HANDLER( id, cd, func )
@@ -941,22 +941,22 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*<br/>
-[in] L’identificateur de l’élément de menu, un contrôle ou un accélérateur.
+*id*<br/>
+dans Identificateur de l’élément de menu, du contrôle ou de l’accélérateur.
 
 *cd*<br/>
-[in] Le code de notification.
+dans Code de notification.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER
 
-Semblable à [NOTIFY_ID_HANDLER](#notify_id_handler), mais mappe les notifications réfléchies à partir de la fenêtre parente.
+Semblable à [NOTIFY_ID_HANDLER](#notify_id_handler), mais les notifications de mappage sont reflétées à partir de la fenêtre parente.
 
 ```
 REFLECTED_NOTIFY_ID_HANDLER( id, func )
@@ -964,19 +964,19 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*<br/>
-[in] L’identificateur de l’élément de menu, un contrôle ou un accélérateur.
+*id*<br/>
+dans Identificateur de l’élément de menu, du contrôle ou de l’accélérateur.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 
-Semblable à [NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler), mais mappe les notifications réfléchies à partir de la fenêtre parente.
+Semblable à [NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler), mais les notifications de mappage sont reflétées à partir de la fenêtre parente.
 
 ```
 REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -985,24 +985,24 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="parameters"></a>Paramètres
 
 *idFirst*<br/>
-[in] Marque le début d’une plage contiguë d’identificateurs de contrôle.
+dans Marque le début d’une plage contiguë d’identificateurs de contrôle.
 
 *idLast*<br/>
-[in] Marque la fin d’une plage contiguë d’identificateurs de contrôle.
+dans Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 
 *cd*<br/>
-[in] Le code de notification.
+dans Code de notification.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ##  <a name="reflected_notify_range_handler"></a>  REFLECTED_NOTIFY_RANGE_HANDLER
 
-Semblable à [NOTIFY_RANGE_HANDLER](#notify_range_handler), mais mappe les notifications réfléchies à partir de la fenêtre parente.
+Semblable à [NOTIFY_RANGE_HANDLER](#notify_range_handler), mais les notifications de mappage sont reflétées à partir de la fenêtre parente.
 
 ```
 REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
@@ -1011,13 +1011,13 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="parameters"></a>Paramètres
 
 *idFirst*<br/>
-[in] Marque le début d’une plage contiguë d’identificateurs de contrôle.
+dans Marque le début d’une plage contiguë d’identificateurs de contrôle.
 
 *idLast*<br/>
-[in] Marque la fin d’une plage contiguë d’identificateurs de contrôle.
+dans Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 
 *func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.
+dans Nom de la fonction de gestionnaire de messages.
 
 ## <a name="see-also"></a>Voir aussi
 

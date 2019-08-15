@@ -1,17 +1,17 @@
 ---
-title: nonbrowsable (attribut de COM C++)
+title: ne pouvant pas êtreC++ exploré (attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonbrowsable
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 0a5e01c0fde49c7debb7749f5a1d148acb9cca6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b1849aa75e61ea5e369a277cab0b1327f48a28a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409120"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514383"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -25,7 +25,7 @@ Indique qu’un membre d’interface ne doit pas être affiché dans un Explorat
 
 ## <a name="remarks"></a>Notes
 
-Le **nonbrowsable** attribut C++ a les mêmes fonctionnalités que le [nonbrowsable](/windows/desktop/Midl/nonbrowsable) attribut MIDL.
+L' C++ attribut ne pouvant être exploré a les mêmes fonctionnalités que l’attribut MIDL ne pouvant être [exploré](/windows/win32/Midl/nonbrowsable) .
 
 ## <a name="example"></a>Exemple
 
@@ -51,8 +51,8 @@ __interface IMyI
 |-|-|
 |**S'applique à**|Méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

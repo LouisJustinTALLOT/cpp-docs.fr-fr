@@ -1,5 +1,5 @@
 ---
-title: Atl_drawinfo, Structure
+title: ATL_DRAWINFO, structure
 ms.date: 11/04/2016
 f1_keywords:
 - ATL::ATL_DRAWINFO
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 77ef56f73be1ed9ddfc63c459b6bab3ad4decb3f
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 728a7eed418a6600c9247b91ff7b777dd458e621
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503417"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498006"
 ---
-# <a name="atldrawinfo-structure"></a>Atl_drawinfo, Structure
+# <a name="atl_drawinfo-structure"></a>ATL_DRAWINFO, structure
 
-Contient des informations utilisées pour le rendu à différentes cibles, comme une imprimante, un métafichier ou un contrôle ActiveX.
+Contient des informations utilisées pour le rendu de différentes cibles, telles qu’une imprimante, un métafichier ou un contrôle ActiveX.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,56 +42,56 @@ struct ATL_DRAWINFO {
 ## <a name="members"></a>Membres
 
 `cbSize`<br/>
-La taille de la structure, en octets.
+Taille de la structure en octets.
 
 `dwDrawAspect`<br/>
-Spécifie la manière dont la cible doit être représenté. Représentations peuvent inclure contenu, une icône, une miniature ou un document imprimé. Pour obtenir la liste des valeurs possibles, consultez [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) et [DVASPECT2](/windows/desktop/api/ocidl/ne-ocidl-tagdvaspect2).
+Spécifie le mode de représentation de la cible. Les représentations peuvent inclure du contenu, une icône, une miniature ou un document imprimé. Pour obtenir la liste des valeurs possibles, consultez [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) et [DVASPECT2](/windows/win32/api/ocidl/ne-ocidl-dvaspect2).
 
 `lindex`<br/>
-Partie de la cible présente un intérêt pour l’opération de dessin. Son interprétation varie en fonction de la valeur dans la `dwDrawAspect` membre.
+Partie de la cible qui présente un intérêt pour l’opération de dessin. Son interprétation varie en fonction de la valeur `dwDrawAspect` du membre.
 
 `ptd`<br/>
-Pointeur vers un [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) structure qui permet des optimisations de dessins selon l’aspect spécifié. Notez que les plus récentes des objets et des conteneurs qui prennent en charge les interfaces de dessins optimisés prend en charge également ce membre. Anciens objets et conteneurs qui ne prennent pas en charge les interfaces de dessins optimisés toujours spécifient NULL pour ce membre.
+Pointeur vers une structure [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) qui permet de dessiner des optimisations en fonction de l’aspect spécifié. Notez que les objets et les conteneurs les plus récents qui prennent en charge les interfaces de dessin optimisées prennent également en charge ce membre. Les objets et conteneurs plus anciens qui ne prennent pas en charge les interfaces de dessin optimisées spécifient toujours la valeur NULL pour ce membre.
 
 `hicTargetDev`<br/>
-Contexte d’informations pour l’appareil cible vers lequel pointe `ptd` à partir duquel l’objet peut extraire les métriques du périphérique et tester les fonctions du périphérique. Si `ptd` est NULL, l’objet doit ignorer la valeur dans la `hicTargetDev` membre.
+Contexte d’informations de l’appareil cible vers `ptd` lequel l’objet peut extraire les métriques de l’appareil et tester les fonctionnalités de l’appareil. Si `ptd` a la valeur null, l’objet doit ignorer la valeur `hicTargetDev` dans le membre.
 
 `hdcDraw`<br/>
-Le contexte de périphérique sur lequel dessiner. Pour un objet sans fenêtre, le `hdcDraw` membre ne figure dans la `MM_TEXT` mode de mappage avec ses coordonnées logiques mise en correspondance les coordonnées clientes de la fenêtre conteneur. En outre, le contexte de périphérique doit être dans le même état que celui normalement passé par un `WM_PAINT` message.
+Contexte de périphérique sur lequel dessiner. Pour un objet sans fenêtre, le `hdcDraw` membre est `MM_TEXT` en mode de mappage, avec ses coordonnées logiques correspondant aux coordonnées clientes de la fenêtre conteneur. En outre, le contexte de périphérique doit être dans le même État que celui normalement passé par un `WM_PAINT` message.
 
 `prcBounds`<br/>
-Pointeur vers un [RECTL](/previous-versions//dd162907\(v=vs.85\)) structure qui spécifie le rectangle sur `hdcDraw` et dans lequel l’objet doit être dessiné. Ce membre contrôle le positionnement et l’étirement de l’objet. Ce membre doit être NULL pour dessiner un objet actif sur place sans fenêtre. Dans tous les autres cas, la valeur NULL n’est pas une valeur autorisée et doit aboutir à un `E_INVALIDARG` code d’erreur. Si le conteneur passe une valeur non NULL à un objet sans fenêtre, l’objet doit restituer l’aspect demandée dans le contexte de périphérique spécifié et le rectangle. Un conteneur peut demander ce à partir d’un objet sans fenêtre pour restituer une vue deuxième, non actif de l’objet ou pour imprimer l’objet.
+Pointeur vers une structure [Rect](/previous-versions//dd162907\(v=vs.85\)) qui spécifie le rectangle `hdcDraw` sur et dans lequel l’objet doit être dessiné. Ce membre contrôle le positionnement et l’étirement de l’objet. Ce membre doit avoir la valeur NULL pour dessiner un objet actif sur place sans fenêtre. Dans tous les autres cas, NULL n’est pas une valeur autorisée et doit générer `E_INVALIDARG` un code d’erreur. Si le conteneur passe une valeur non NULL à un objet sans fenêtre, l’objet doit restituer l’aspect demandé dans le contexte de périphérique et le rectangle spécifiés. Un conteneur peut demander cela à partir d’un objet sans fenêtre pour afficher une deuxième vue non active de l’objet ou pour imprimer l’objet.
 
 `prcWBounds`<br/>
-Si `hdcDraw` est un contexte de périphérique de métafichier (consultez [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) dans le SDK Windows), il s’agit d’un pointeur vers un `RECTL` structure qui spécifie le rectangle englobant dans le métafichier sous-jacent. La structure rectangle contient l’étendue de la fenêtre et l’origine de la fenêtre. Ces valeurs sont utiles pour dessiner des métafichiers. Le rectangle indiqué par `prcBounds` est imbriqué au sein de cet `prcWBounds` rectangle ; elles se trouvent dans le même espace de coordonnées.
+Si `hdcDraw` est un contexte de périphérique de métafichier (voir [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) dans le SDK Windows), il s’agit d' `RECTL` un pointeur vers une structure qui spécifie le rectangle englobant dans le métafichier sous-jacent. La structure rectangle contient l’étendue de la fenêtre et l’origine de la fenêtre. Ces valeurs sont utiles pour le dessin de recréations de fichiers. Le rectangle indiqué par `prcBounds` est imbriqué à l’intérieur `prcWBounds` de ce rectangle; ils se trouvent dans le même espace de coordonnées.
 
 `bOptimize`<br/>
-Différent de zéro si le dessin du contrôle soit optimisé, sinon 0. Si le dessin est optimisé, l’état du contexte de périphérique est automatiquement restauré lorsque vous avez terminé le rendu.
+Différent de zéro si le dessin du contrôle doit être optimisé; sinon, 0. Si le dessin est optimisé, l’état du contexte de périphérique est automatiquement restauré lorsque vous avez terminé le rendu.
 
 `bZoomed`<br/>
 Différent de zéro si la cible a un facteur de zoom, sinon 0. Le facteur de zoom est stocké dans `ZoomNum`.
 
 `bRectInHimetric`<br/>
-Différent de zéro si les dimensions de `prcBounds` se trouvent dans HIMETRIC, sinon 0.
+Différent de zéro si les dimensions `prcBounds` de se trouvent dans HIMETRIC, sinon 0.
 
 `ZoomNum`<br/>
-La largeur et la hauteur du rectangle dans lequel l’objet est affiché. Le facteur de zoom sur l’axe x (la proportion de la taille naturelle de l’objet à son étendue actuelle) de la cible est la valeur de `ZoomNum.cx` divisée par la valeur de `ZoomDen.cx`. Le facteur de zoom le long de l’axe des ordonnées s’effectue de manière similaire.
+Largeur et hauteur du rectangle dans lequel l’objet est rendu. Le facteur de zoom le long de l’axe x (la proportion de la taille naturelle de l’objet par rapport à son étendue actuelle) de la `ZoomNum.cx` cible est la valeur de `ZoomDen.cx`divisée par la valeur de. Le facteur de zoom sur l’axe y est obtenu de la même manière.
 
 `ZoomDen`<br/>
-La largeur réelle et la hauteur de la cible.
+Largeur et hauteur réelles de la cible.
 
 ## <a name="remarks"></a>Notes
 
-Une utilisation typique de cette structure serait la récupération d’informations pendant le rendu de l’objet cible. Par exemple, Impossible de récupérer des valeurs à partir de ATL_DRAWINFO à l’intérieur de votre surcharge de [CComControlBase::OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced).
+L’utilisation classique de cette structure est la récupération d’informations pendant le rendu de l’objet cible. Par exemple, vous pouvez récupérer des valeurs à partir de ATL_DRAWINFO à l’intérieur de votre surcharge de [CComControlBase:: OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced).
 
-Cette structure stocke des informations pertinentes permettant de restituer l’apparence d’un objet pour l’appareil cible. Les informations fournies peuvent être utilisées dans un dessin à l’écran, une imprimante ou même un métafichier.
+Cette structure stocke les informations pertinentes utilisées pour restituer l’apparence d’un objet pour l’appareil cible. Les informations fournies peuvent être utilisées pour dessiner à l’écran, une imprimante ou même un métafichier.
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlctl.h
+**En-tête:** atlctl. h
 
 ## <a name="see-also"></a>Voir aussi
 
-[Les classes et structs](../../atl/reference/atl-classes.md)<br/>
-[IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
+[Classes et structs](../../atl/reference/atl-classes.md)<br/>
+[IViewObject::Draw](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
 [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)

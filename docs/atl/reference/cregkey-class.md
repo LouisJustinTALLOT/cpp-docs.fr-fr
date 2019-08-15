@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: bce5a16dd8d6564b6a0d3fa0344fe5cb2303764f
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 3faf446f74577034a3d0676b90ebe7027ef6da06
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915787"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496533"
 ---
 # <a name="cregkey-class"></a>CRegKey, classe
 
@@ -124,10 +124,10 @@ class CRegKey
 
 `CRegKey`fournit une interface de programmation au registre système pour un ordinateur donné. Par exemple, pour ouvrir une clé de Registre particulière, `CRegKey::Open`appelez. Pour récupérer ou modifier une valeur de données, `CRegKey::QueryValue` appelez `CRegKey::SetValue`ou, respectivement. Pour fermer une clé, appelez `CRegKey::Close`.
 
-Lorsque vous fermez une clé, ses données de Registre sont écrites (vidées) sur le disque dur. Ce processus peut prendre plusieurs secondes. Si votre application doit écrire explicitement des données de Registre sur le disque dur, vous pouvez appeler la fonction Win32 [regflushkey a](/windows/desktop/api/winreg/nf-winreg-regflushkey) . Toutefois, `RegFlushKey` utilise de nombreuses ressources système et doit être appelé uniquement lorsque cela est absolument nécessaire.
+Lorsque vous fermez une clé, ses données de Registre sont écrites (vidées) sur le disque dur. Ce processus peut prendre plusieurs secondes. Si votre application doit écrire explicitement des données de Registre sur le disque dur, vous pouvez appeler la fonction Win32 [regflushkey a](/windows/win32/api/winreg/nf-winreg-regflushkey) . Toutefois, `RegFlushKey` utilise de nombreuses ressources système et doit être appelé uniquement lorsque cela est absolument nécessaire.
 
 > [!IMPORTANT]
->  Toutes les méthodes qui permettent à l’appelant de spécifier un emplacement du Registre ont la possibilité de lire des données qui ne peuvent pas être approuvées. Les méthodes qui utilisent [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) doivent tenir compte du fait que cette fonction ne gère pas explicitement les chaînes qui se terminent par une valeur null. Les deux conditions doivent être vérifiées par le code appelant.
+>  Toutes les méthodes qui permettent à l’appelant de spécifier un emplacement du Registre ont la possibilité de lire des données qui ne peuvent pas être approuvées. Les méthodes qui utilisent [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) doivent tenir compte du fait que cette fonction ne gère pas explicitement les chaînes qui se terminent par une valeur null. Les deux conditions doivent être vérifiées par le code appelant.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -189,7 +189,7 @@ Spécifie le nom d’une clé à créer ou ouvrir. Ce nom doit être une sous-cl
 Spécifie la classe de la clé à créer ou ouvrir. La valeur par défaut est REG_NONE.
 
 *dwOptions*<br/>
-Options de la clé. La valeur par défaut est REG_OPTION_NON_VOLATILE. Pour obtenir la liste des valeurs possibles et des descriptions, consultez [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) dans le SDK Windows.
+Options de la clé. La valeur par défaut est REG_OPTION_NON_VOLATILE. Pour obtenir la liste des valeurs possibles et des descriptions, consultez [RegCreateKeyEx](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) dans le SDK Windows.
 
 *samDesired*<br/>
 Accès de sécurité pour la clé. La valeur par défaut est &#124; KEY_READ KEY_WRITE. Pour obtenir la liste des valeurs possibles et des descriptions `RegCreateKeyEx`, consultez.
@@ -328,7 +328,7 @@ Si la méthode est réussie, la valeur de retour est ERROR_SUCCESS. Si la métho
 
 ### <a name="remarks"></a>Notes
 
-Pour énumérer les sous-clés, `CRegKey::EnumKey` appelez avec un index de zéro. Incrémentez la valeur d’index et répétez l’opération jusqu’à ce que la méthode retourne ERROR_NO_MORE_ITEMS. Pour plus d’informations, consultez [RegEnumKeyEx](/windows/desktop/api/winreg/nf-winreg-regenumkeyexa) dans le SDK Windows.
+Pour énumérer les sous-clés, `CRegKey::EnumKey` appelez avec un index de zéro. Incrémentez la valeur d’index et répétez l’opération jusqu’à ce que la méthode retourne ERROR_NO_MORE_ITEMS. Pour plus d’informations, consultez [RegEnumKeyEx](/windows/win32/api/winreg/nf-winreg-regenumkeyexw) dans le SDK Windows.
 
 ##  <a name="flush"></a>CRegKey:: Flush
 
@@ -344,7 +344,7 @@ Si la méthode est réussie, la valeur de retour est ERROR_SUCCESS. Si la métho
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [RegEnumFlush](/windows/desktop/api/winreg/nf-winreg-regflushkey) dans le SDK Windows.
+Pour plus d’informations, consultez [RegEnumFlush](/windows/win32/api/winreg/nf-winreg-regflushkey) dans le SDK Windows.
 
 ##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity
 
@@ -360,7 +360,7 @@ LONG GetKeySecurity(
 ### <a name="parameters"></a>Paramètres
 
 *si*<br/>
-Valeur [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) qui indique les informations de sécurité demandées.
+Valeur [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) qui indique les informations de sécurité demandées.
 
 *psd*<br/>
 Pointeur vers une mémoire tampon qui reçoit une copie du descripteur de sécurité demandé.
@@ -374,7 +374,7 @@ Si la méthode est réussie, la valeur de retour est ERROR_SUCCESS. Si la métho
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [RegGetKeySecurity](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity).
+Pour plus d’informations, consultez [RegGetKeySecurity](/windows/win32/api/winreg/nf-winreg-reggetkeysecurity).
 
 ##  <a name="m_hkey"></a>  CRegKey::m_hKey
 
@@ -414,7 +414,7 @@ Spécifie un indicateur qui indique s’il faut signaler les modifications dans 
 *dwNotifyFilter*<br/>
 Spécifie un jeu d’indicateurs qui contrôlent les modifications qui doivent être signalées. Ce paramètre peut être une combinaison des valeurs suivantes:
 
-|Valeur|Signification|
+|`Value`|Signification|
 |-----------|-------------|
 |REG_NOTIFY_CHANGE_NAME|Notifier l’appelant si une sous-clé est ajoutée ou supprimée.|
 |REG_NOTIFY_CHANGE_ATTRIBUTES|Notifiez l’appelant des modifications apportées aux attributs de la clé, tels que les informations de descripteur de sécurité.|
@@ -436,7 +436,7 @@ Si la méthode est réussie, la valeur de retour est ERROR_SUCCESS. Si la métho
 > [!NOTE]
 >  Cette méthode ne notifie pas l’appelant si la clé spécifiée est supprimée.
 
-Pour plus d’informations et pour obtenir un exemple de programme, consultez [RegNotifyChangeKeyValue](/windows/desktop/api/winreg/nf-winreg-regnotifychangekeyvalue).
+Pour plus d’informations et pour obtenir un exemple de programme, consultez [RegNotifyChangeKeyValue](/windows/win32/api/winreg/nf-winreg-regnotifychangekeyvalue).
 
 ##  <a name="open"></a>CRegKey:: Open
 
@@ -458,7 +458,7 @@ Handle d’une clé ouverte.
 Spécifie le nom d’une clé à créer ou ouvrir. Ce nom doit être une sous-clé de *hKeyParent*.
 
 *samDesired*<br/>
-Accès de sécurité pour la clé. La valeur par défaut est KEY_ALL_ACCESS. Pour obtenir la liste des valeurs possibles et des descriptions, consultez [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) dans le SDK Windows.
+Accès de sécurité pour la clé. La valeur par défaut est KEY_ALL_ACCESS. Pour obtenir la liste des valeurs possibles et des descriptions, consultez [RegCreateKeyEx](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -527,10 +527,10 @@ Si la méthode est réussie, ERROR_SUCCESS est retourné. Si la méthode ne parv
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode `RegQueryValueEx` utilise et confirme que le type de données correct est retourné. Pour plus d’informations, consultez [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Cette méthode `RegQueryValueEx` utilise et confirme que le type de données correct est retourné. Pour plus d’informations, consultez [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement du Registre, en lisant potentiellement les données qui ne peuvent pas être approuvées. En outre, la fonction [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) utilisée par cette méthode ne gère pas explicitement les chaînes qui se terminent par null. Les deux conditions doivent être vérifiées par le code appelant.
+>  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement du Registre, en lisant potentiellement les données qui ne peuvent pas être approuvées. En outre, la fonction [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) utilisée par cette méthode ne gère pas explicitement les chaînes qui se terminent par null. Les deux conditions doivent être vérifiées par le code appelant.
 
 ##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue
 
@@ -556,10 +556,10 @@ Si la méthode est réussie, ERROR_SUCCESS est retourné. Si la méthode ne parv
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode `RegQueryValueEx` utilise et confirme que le type de données correct est retourné. Pour plus d’informations, consultez [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Cette méthode `RegQueryValueEx` utilise et confirme que le type de données correct est retourné. Pour plus d’informations, consultez [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement du Registre, en lisant potentiellement les données qui ne peuvent pas être approuvées. En outre, la fonction [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) utilisée par cette méthode ne gère pas explicitement les chaînes qui se terminent par null. Les deux conditions doivent être vérifiées par le code appelant.
+>  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement du Registre, en lisant potentiellement les données qui ne peuvent pas être approuvées. En outre, la fonction [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) utilisée par cette méthode ne gère pas explicitement les chaînes qui se terminent par null. Les deux conditions doivent être vérifiées par le code appelant.
 
 ##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue
 
@@ -585,7 +585,7 @@ Si la méthode est réussie, ERROR_SUCCESS est retourné. Si la méthode ne parv
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode utilise et convertit la chaîne en GUID à l’aide de `CRegKey::QueryStringValue` [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring).
+Cette méthode utilise et convertit la chaîne en GUID à l’aide de `CRegKey::QueryStringValue` [CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring).
 
 > [!IMPORTANT]
 >  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement du Registre, en lisant potentiellement les données qui ne peuvent pas être approuvées.
@@ -618,10 +618,10 @@ Si la méthode est réussie, ERROR_SUCCESS est retourné. Si la méthode ne parv
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode `RegQueryValueEx` utilise et confirme que le type de données correct est retourné. Pour plus d’informations, consultez [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Cette méthode `RegQueryValueEx` utilise et confirme que le type de données correct est retourné. Pour plus d’informations, consultez [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement du Registre, en lisant potentiellement les données qui ne peuvent pas être approuvées. En outre, la fonction [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) utilisée par cette méthode ne gère pas explicitement les chaînes qui se terminent par null. Les deux conditions doivent être vérifiées par le code appelant.
+>  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement du Registre, en lisant potentiellement les données qui ne peuvent pas être approuvées. En outre, la fonction [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) utilisée par cette méthode ne gère pas explicitement les chaînes qui se terminent par null. Les deux conditions doivent être vérifiées par le code appelant.
 
 ##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue
 
@@ -647,10 +647,10 @@ Si la méthode est réussie, ERROR_SUCCESS est retourné. Si la méthode ne parv
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode `RegQueryValueEx` utilise et confirme que le type de données correct est retourné. Pour plus d’informations, consultez [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Cette méthode `RegQueryValueEx` utilise et confirme que le type de données correct est retourné. Pour plus d’informations, consultez [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement du Registre, en lisant potentiellement les données qui ne peuvent pas être approuvées. En outre, la fonction [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) utilisée par cette méthode ne gère pas explicitement les chaînes qui se terminent par null. Les deux conditions doivent être vérifiées par le code appelant.
+>  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement du Registre, en lisant potentiellement les données qui ne peuvent pas être approuvées. En outre, la fonction [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) utilisée par cette méthode ne gère pas explicitement les chaînes qui se terminent par null. Les deux conditions doivent être vérifiées par le code appelant.
 
 ##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue
 
@@ -680,10 +680,10 @@ Si la méthode est réussie, ERROR_SUCCESS est retourné. Si la méthode ne parv
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode `RegQueryValueEx` utilise et confirme que le type de données correct est retourné. Pour plus d’informations, consultez [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Cette méthode `RegQueryValueEx` utilise et confirme que le type de données correct est retourné. Pour plus d’informations, consultez [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement du Registre, en lisant potentiellement les données qui ne peuvent pas être approuvées. En outre, la fonction [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) utilisée par cette méthode ne gère pas explicitement les chaînes qui se terminent par null. Les deux conditions doivent être vérifiées par le code appelant.
+>  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement du Registre, en lisant potentiellement les données qui ne peuvent pas être approuvées. En outre, la fonction [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) utilisée par cette méthode ne gère pas explicitement les chaînes qui se terminent par null. Les deux conditions doivent être vérifiées par le code appelant.
 
 ##  <a name="queryvalue"></a>  CRegKey::QueryValue
 
@@ -794,7 +794,7 @@ Si la méthode est réussie, la valeur de retour est ERROR_SUCCESS. Si la métho
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode utilise [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) pour écrire la valeur dans le registre.
+Cette méthode utilise [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) pour écrire la valeur dans le registre.
 
 ##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue
 
@@ -818,7 +818,7 @@ Si la méthode est réussie, la valeur de retour est ERROR_SUCCESS. Si la métho
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode utilise [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) pour écrire la valeur dans le registre.
+Cette méthode utilise [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) pour écrire la valeur dans le registre.
 
 ##  <a name="setguidvalue"></a>  CRegKey::SetGUIDValue
 
@@ -842,7 +842,7 @@ Si la méthode est réussie, la valeur de retour est ERROR_SUCCESS. Si la métho
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode utilise et convertit le GUID en chaîne à l’aide de `CRegKey::SetStringValue` [StringFromGUID2](/windows/desktop/api/combaseapi/nf-combaseapi-stringfromguid2).
+Cette méthode utilise et convertit le GUID en chaîne à l’aide de `CRegKey::SetStringValue` [StringFromGUID2](/windows/win32/api/combaseapi/nf-combaseapi-stringfromguid2).
 
 ##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue
 
@@ -887,15 +887,15 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 *si*<br/>
 Spécifie les composants du descripteur de sécurité à définir. La valeur peut être une combinaison des valeurs suivantes:
 
-|Valeur|Signification|
+|`Value`|Signification|
 |-----------|-------------|
 |DACL_SECURITY_INFORMATION|Définit la liste de contrôle d’accès discrétionnaire (DACL) de la clé. La clé doit avoir un accès WRITE_DAC, ou le processus appelant doit être le propriétaire de l’objet.|
 |GROUP_SECURITY_INFORMATION|Définit l’identificateur de sécurité (SID) du groupe principal de la clé. La clé doit avoir un accès WRITE_OWNER, ou le processus appelant doit être le propriétaire de l’objet.|
 |OWNER_SECURITY_INFORMATION|Définit le SID du propriétaire de la clé. La clé doit avoir un accès WRITE_OWNER, ou le processus appelant doit être le propriétaire de l’objet ou disposer du privilège SE_TAKE_OWNERSHIP_NAME activé.|
-|SACL_SECURITY_INFORMATION|Définit la liste de contrôle d’accès système (SACL) de la clé. La clé doit avoir un accès ACCESS_SYSTEM_SECURITY. La méthode appropriée pour obtenir cet accès consiste à activer le [privilège](/windows/desktop/secauthz/privileges) SE_SECURITY_NAME dans le jeton d’accès actuel de l’appelant, à ouvrir le handle pour l’accès ACCESS_SYSTEM_SECURITY, puis à désactiver le privilège.|
+|SACL_SECURITY_INFORMATION|Définit la liste de contrôle d’accès système (SACL) de la clé. La clé doit avoir un accès ACCESS_SYSTEM_SECURITY. La méthode appropriée pour obtenir cet accès consiste à activer le [privilège](/windows/win32/secauthz/privileges) SE_SECURITY_NAME dans le jeton d’accès actuel de l’appelant, à ouvrir le handle pour l’accès ACCESS_SYSTEM_SECURITY, puis à désactiver le privilège.|
 
 *psd*<br/>
-Pointeur vers une structure [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor) qui spécifie les attributs de sécurité à définir pour la clé spécifiée.
+Pointeur vers une structure [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor) qui spécifie les attributs de sécurité à définir pour la clé spécifiée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -903,7 +903,7 @@ Si la méthode est réussie, la valeur de retour est ERROR_SUCCESS. Si la métho
 
 ### <a name="remarks"></a>Notes
 
-Définit les attributs de sécurité de la clé. Pour plus d’informations, consultez [RegSetKeySecurity](/windows/desktop/api/winreg/nf-winreg-regsetkeysecurity) .
+Définit les attributs de sécurité de la clé. Pour plus d’informations, consultez [RegSetKeySecurity](/windows/win32/api/winreg/nf-winreg-regsetkeysecurity) .
 
 ##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue
 
@@ -927,7 +927,7 @@ Si la méthode est réussie, la valeur de retour est ERROR_SUCCESS. Si la métho
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode utilise [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) pour écrire la valeur dans le registre.
+Cette méthode utilise [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) pour écrire la valeur dans le registre.
 
 ##  <a name="setqwordvalue"></a>  CRegKey::SetQWORDValue
 
@@ -951,7 +951,7 @@ Si la méthode est réussie, la valeur de retour est ERROR_SUCCESS. Si la métho
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode utilise [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) pour écrire la valeur dans le registre.
+Cette méthode utilise [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) pour écrire la valeur dans le registre.
 
 ##  <a name="setstringvalue"></a>  CRegKey::SetStringValue
 
@@ -981,7 +981,7 @@ Si la méthode est réussie, la valeur de retour est ERROR_SUCCESS. Si la métho
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode utilise [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) pour écrire la valeur dans le registre.
+Cette méthode utilise [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) pour écrire la valeur dans le registre.
 
 ##  <a name="setvalue"></a>  CRegKey::SetValue
 
@@ -1054,7 +1054,7 @@ En cas de réussite, retourne ERROR_SUCCESS; dans le cas contraire, il s’agit 
 
 Les deux versions d’origine `SetValue` de sont marquées comme ATL_DEPRECATED et ne doivent plus être utilisées. Le compilateur émet un avertissement si ces formulaires sont utilisés.
 
-La troisième méthode appelle [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa).
+La troisième méthode appelle [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 07fd470a6aeab0575f2733d72650bd695b8e2752
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: f0b732efdce5cf04349f468363b8d86621d90204
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915688"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496308"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool (classe)
 
@@ -78,7 +78,7 @@ Les threads du pool sont créés et détruits lors de l’initialisation, du red
 
 Immédiatement après la création d’un thread, Worker`Initialize` :: sera appelé sur l’objet associé à ce thread. Juste avant la destruction d’un thread, Worker`Terminate` :: sera appelé. Les deux méthodes doivent accepter un argument **void** <strong>\*</strong> . La valeur de cet argument est passée au pool de threads par le biais du paramètre *pvWorkerParam* de [CThreadPool:: Initialize](#initialize).
 
-Lorsqu’il existe des éléments de travail dans la file d’attente et les threads de travail disponibles pour le travail, un thread de travail extrait `Execute` un élément de la file d’attente et appelle la méthode de l’objet *Worker* pour ce thread. Trois éléments sont ensuite passés à la méthode: l’élément de la file d’attente, `pvWorkerParam` le même passé à *Worker*:: `Initialize` et `Terminate` *Worker*::, et un pointeur vers la structure [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) utilisée pour la file d’attente du port de terminaison d’e/s .
+Lorsqu’il existe des éléments de travail dans la file d’attente et les threads de travail disponibles pour le travail, un thread de travail extrait `Execute` un élément de la file d’attente et appelle la méthode de l’objet *Worker* pour ce thread. Trois éléments sont ensuite passés à la méthode: l’élément de la file d’attente, `pvWorkerParam` le même passé à *Worker*:: `Initialize` et `Terminate` *Worker*::, et un pointeur vers la structure [OVERLAPPED](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) utilisée pour la file d’attente du port de terminaison d’e/s .
 
 La classe Worker déclare le type des éléments qui seront mis en file d’attente sur le pool de threads en fournissant un typedef, `RequestType` *Worker*::. Ce type doit pouvoir être casté vers et à partir d’un ULONG_PTR.
 
@@ -344,7 +344,7 @@ Durée maximale demandée en millisecondes pendant laquelle le pool de threads a
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode publie une demande d’arrêt pour tous les threads du pool. Si le délai d’attente expire, cette méthode appellera [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) sur tout thread qui ne s’est pas arrêté. Cette méthode est appelée automatiquement à partir du destructeur de la classe.
+Cette méthode publie une demande d’arrêt pour tous les threads du pool. Si le délai d’attente expire, cette méthode appellera [TerminateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) sur tout thread qui ne s’est pas arrêté. Cette méthode est appelée automatiquement à partir du destructeur de la classe.
 
 ## <a name="see-also"></a>Voir aussi
 

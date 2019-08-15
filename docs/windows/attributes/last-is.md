@@ -1,21 +1,21 @@
 ---
-title: last_is (C++ attribut COM)
+title: last_is (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409419"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514520"
 ---
-# <a name="lastis"></a>last_is
+# <a name="last_is"></a>last_is
 
-Spécifie l’index du dernier élément de tableau doit être transmis.
+Spécifie l’index du dernier élément de tableau à transmettre.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ Spécifie l’index du dernier élément de tableau doit être transmis.
 ### <a name="parameters"></a>Paramètres
 
 *expression*<br/>
-Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisés.
+Une ou plusieurs expressions en langage C. Les emplacements d’arguments vides sont autorisés.
 
 ## <a name="remarks"></a>Notes
 
-Le **last_is** C++ attribut a les mêmes fonctionnalités que le [last_is](/windows/desktop/Midl/last-is) attribut MIDL.
+L’attribut **last_is** C++ a les mêmes fonctionnalités que l’attribut MIDL [last_is](/windows/win32/Midl/last-is) .
 
 ## <a name="example"></a>Exemple
 
-Consultez [first_is](first-is.md) pour obtenir un exemple montrant comment spécifier une section d’un tableau.
+Pour obtenir un exemple de spécification d’une section d’un tableau, consultez [first_is](first-is.md) .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -42,10 +42,10 @@ Consultez [first_is](first-is.md) pour obtenir un exemple montrant comment spéc
 
 |||
 |-|-|
-|**S'applique à**|Champ **struct** ou **union**, paramètre de l’interface, interface (méthode)|
+|**S'applique à**|Champ dans un **struct** ou une **Union**, un paramètre d’interface, une méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

@@ -47,19 +47,19 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: a8794177f4f92a1928ffeaaa1d7e183aa67cf886
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36cbf78c4645c22209892be77f3bf77e7c93c76b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366652"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499413"
 ---
-# <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
+# <a name="_strrev-_wcsrev-_mbsrev-_mbsrev_l"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 
 Inverse les caractères d’une chaîne.
 
 > [!IMPORTANT]
-> **_mbsrev** et **_mbsrev_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> _ **mbsrev** et **_mbsrev_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -93,14 +93,14 @@ Retourne un pointeur vers la chaîne modifiée. Aucune valeur de retour n'est r�
 
 ## <a name="remarks"></a>Notes
 
-Le **_strrev** fonction inverse l’ordre des caractères dans *str*. Le caractère Null de fin reste en place. **_wcsrev** et **_mbsrev** sont des versions à caractères larges et à caractères multioctets de **_strrev**. Les arguments et la valeur de retour de **_wcsrev** sont des caractères larges chaînes ; ceux de **_mbsrev** sont des chaînes de caractères multioctets. Pour **_mbsrev**, l’ordre des octets dans chaque caractère multioctet dans *str* n’est pas modifié. Ces trois fonctions se comportent sinon de façon identique.
+La fonction **_strrev** inverse l’ordre des caractères dans *Str*. Le caractère Null de fin reste en place. **_wcsrev** et _ **mbsrev** sont des versions à caractères larges et à caractères multioctets de **_strrev**. Les arguments et la valeur de retour de **_wcsrev** sont des chaînes à caractères larges; celles de _ **mbsrev** sont des chaînes de caractères multioctets. Pour _ **mbsrev**, l’ordre des octets dans chaque caractère multioctet de *Str* n’est pas modifié. Ces trois fonctions se comportent sinon de façon identique.
 
-**_mbsrev** valide ses paramètres. Si *string1* ou *string2* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_mbsrev** retourne **NULL** et définit **errno** à **EINVAL**. **_strrev** et **_wcsrev** ne valident pas leurs paramètres.
+_ **mbsrev** valide ses paramètres. Si *Chaîne1* ou *Chaîne2* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, _ **mbsrev** retourne la **valeur null** et définit **errno** sur **EINVAL**. **_strrev** et **_wcsrev** ne valident pas leurs paramètres.
 
-La valeur de sortie est affectée par la valeur de la **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions sont identiques, à ceci près que celles qui n’ont le **_l** suffixe utiliser les paramètres régionaux actuels et celles qui ont le **_l** suffixe utilisent à la place les paramètres régionaux du passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations [, consultez setlocale, _wsetlocale](setlocale-wsetlocale.md) . Les versions de ces fonctions sont identiques, sauf que celles qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels et celles qui ont le suffixe **_L** utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être utilisés pour les attaques du système, car ils peuvent provoquer une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être utilisés pour les attaques du système, car ils peuvent provoquer une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -119,7 +119,7 @@ La valeur de sortie est affectée par la valeur de la **LC_CTYPE** catégorie de
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_strrev.c

@@ -43,14 +43,14 @@ helpviewer_keywords:
 - formatted text [C++]
 - vfwprintf_p function
 ms.assetid: 4d4a0914-4175-4b65-9ca1-037c4ef29147
-ms.openlocfilehash: 7e93972ccd77d730d873177fe92f958877c83fe4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f3a1fa472949d6d1f7880acc942a99c0f32c7ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365362"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499267"
 ---
-# <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l
+# <a name="_vfprintf_p-_vfprintf_p_l-_vfwprintf_p-_vfwprintf_p_l"></a>_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l
 
 Écrivent la sortie mise en forme en utilisant un pointeur désignant une liste d’arguments, avec la possibilité de spécifier l’ordre dans lequel les arguments sont utilisés dans la chaîne de format.
 
@@ -99,20 +99,20 @@ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_vfprintf_p** et **_vfwprintf_p** retourner le nombre de caractères écrits, sans le caractère null de fin, ou une valeur négative si une erreur de sortie se produit.
+**_vfprintf_p** et **_vfwprintf_p** retournent le nombre de caractères écrits, à l’exclusion du caractère null de fin, ou une valeur négative si une erreur de sortie se produit.
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions prend un pointeur désignant une liste d’arguments, puis met en forme et écrit les données fournies à *flux*. Ces fonctions se distinguent de la **_vfprint_s** et **_vfwprint_s** versions uniquement car ils prennent en charge les paramètres positionnels. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Chacune de ces fonctions prend un pointeur vers une liste d’arguments, puis met en forme et écrit les données spécifiées dans le *flux*. Ces fonctions diffèrent uniquement des versions **_vfprint_s** et **_vfwprint_s** en ce qu’elles prennent en charge les paramètres positionnels. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_vfwprintf_p** est la version à caractères larges de **_vprintf_p**; les deux fonctions se comportent comme si le flux est ouvert en mode ANSI. **_vprintf_p** ne prend actuellement en charge la sortie vers un flux UNICODE.
+**_vfwprintf_p** est la version à caractères larges de **_vprintf_p**; les deux fonctions se comportent de la même manière si le flux est ouvert en mode ANSI. **_vprintf_p** ne prend pas actuellement en charge la sortie dans un flux Unicode.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 > [!IMPORTANT]
-> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Si *flux* ou *format* est un pointeur null, ou si la chaîne de format contient des caractères de mise en forme non valides, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Si *Stream* ou *format* est un pointeur null ou si la chaîne de format contient des caractères de mise en forme non valides, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -128,7 +128,7 @@ Si *flux* ou *format* est un pointeur null, ou si la chaîne de format contient 
 |**_vfprintf_p**, **_vfprintf_p_l**|\<stdio.h> et \<stdarg.h>|\<varargs.h>*|
 |**_vfwprintf_p**, **_vfwprintf_p_l**|\<stdio.h> ou \<wchar.h> et \<stdarg.h>|\<varargs.h>*|
 
-\* Nécessaire pour la compatibilité avec UNIX V.
+\** Nécessaire pour la compatibilité avec UNIX V.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

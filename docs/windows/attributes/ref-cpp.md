@@ -1,17 +1,17 @@
 ---
-title: ref (attribut de COM C++)
+title: Ref (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ref
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: f051fe577087d81515ddf0b44dfb15ad0fb2c616
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7dd927f385b039f1909a4bdf1998ea5a0b39264
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407417"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514112"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -25,11 +25,11 @@ Identifie un pointeur de référence.
 
 ## <a name="remarks"></a>Notes
 
-Le **ref** attribut C++ a les mêmes fonctionnalités que le [ref](/windows/desktop/Midl/ref) attribut MIDL.
+L’attribut **ref** C++ a les mêmes fonctionnalités que l’attribut MIDL [ref](/windows/win32/Midl/ref) .
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-Le code suivant montre comment utiliser le **ref** attribut :
+Le code suivant illustre l’utilisation de l’attribut **ref** :
 
 ```cpp
 // cpp_attr_ref_ref.cpp
@@ -49,10 +49,10 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**S'applique à**|**typedef**, paramètre de l’interface, interface (méthode)|
+|**S'applique à**|**typedef**, paramètre d’interface, méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

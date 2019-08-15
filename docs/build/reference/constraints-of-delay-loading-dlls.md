@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: e37890fcd757a52ddeff0ccd79289bbc0c35e042
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: be5e5eb360f80e0b2ea9682f38f6787044cd3c63
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344163"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493069"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Contraintes relatives aux DLL à chargement différé
 
@@ -21,9 +21,9 @@ Des contraintes s'appliquent au chargement différé d'importations.
 
 - Le chargement différé de Kernel32.dll n'est pas pris en charge. Cette DLL est nécessaire pour que les routines de l'assistant de chargement différé effectuent le chargement différé.
 
-- [Liaison](binding-imports.md) d’entrée de points qui sont transférés n’est pas pris en charge.
+- La [liaison](binding-imports.md) des points d’entrée qui sont transférés n’est pas prise en charge.
 
-- Le chargement différé d'une DLL peut ne pas entraîner le même comportement du processus si des initialisations par processus surviennent au point d'entrée de la DLL chargée en différé. Autres cas incluent statique TLS (stockage local des threads), déclaré à l’aide de [__declspec (thread)](../../cpp/thread.md), ce qui n’est pas géré lorsque la DLL est chargée via `LoadLibrary`. Le stockage local des threads (TLS) de type dynamique, via `TlsAlloc`, `TlsFree`, `TlsGetValue` et `TlsSetValue`, peut encore être utilisé dans les bibliothèques DLL statiques ou chargées en différé.
+- Le chargement différé d'une DLL peut ne pas entraîner le même comportement du processus si des initialisations par processus surviennent au point d'entrée de la DLL chargée en différé. D’autres cas incluent le TLS statique (thread local Storage), déclaré à l’aide de [_ _ declspec (thread)](../../cpp/thread.md), qui n’est `LoadLibrary`pas géré lorsque la dll est chargée via. Le stockage local des threads (TLS) de type dynamique, via `TlsAlloc`, `TlsFree`, `TlsGetValue` et `TlsSetValue`, peut encore être utilisé dans les bibliothèques DLL statiques ou chargées en différé.
 
 - Les pointeurs de fonction (globaux) statiques doivent être réinitialisés en fonctions importées après le premier appel à la fonction. Cela est dû au fait que la première utilisation du pointeur de fonction pointera vers le thunk.
 
@@ -34,10 +34,10 @@ Des contraintes s'appliquent au chargement différé d'importations.
 ## <a name="see-also"></a>Voir aussi
 
 [Prise en charge de l’éditeur de liens pour les DLL à chargement différé](linker-support-for-delay-loaded-dlls.md)<br/>
-[LoadLibrary (fonction)](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
-[GetModuleHandle (fonction)](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
-[GetProcAddress (fonction)](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
-[Fonction TlsAlloc par](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
-[Fonction de TlsFree](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
-[TlsGetValue (fonction)](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>
-[TlsSetValue (fonction)](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)
+[Fonction LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)<br/>
+[GetModuleHandle, fonction](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlew)<br/>
+[GetProcAddress, fonction](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
+[TlsAlloc, fonction](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
+[TlsFree, fonction](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
+[TlsGetValue, fonction](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>
+[TlsSetValue fonction)](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)

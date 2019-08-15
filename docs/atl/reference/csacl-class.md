@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: b75dc4110b785f0ab1f55ba5c31df7d3fc6fbd37
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c4bbdfccb2d6d8b167c537b7ae4df57c89438479
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915755"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496513"
 ---
 # <a name="csacl-class"></a>CSacl, classe
 
@@ -64,7 +64,7 @@ Pour définir ou récupérer la liste SACL dans le descripteur de sécurité d�
 
 Utilisez les méthodes de classe fournies pour ajouter, supprimer, créer et supprimer des ACE de `SACL` l’objet. Voir aussi [AtlGetSacl](security-global-functions.md#atlgetsacl) et [AtlSetSacl](security-global-functions.md#atlsetsacl).
 
-Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
+Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/win32/SecAuthZ/access-control) dans le SDK Windows.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -129,7 +129,7 @@ Retourne la valeur true si l’entrée du contrôle `CSacl` d’accès est ajout
 
 Un `CSacl` objet contient des entrées de contrôle d’accès (ACE) qui spécifient les types de tentatives d’accès qui génèrent des enregistrements d’audit dans le journal des événements de sécurité. Cette méthode ajoute une telle entrée de contrôle `CSacl` d’accès à l’objet.
 
-Consultez [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) pour obtenir une description des différents indicateurs qui peuvent être définis dans le paramètre *AceFlags* .
+Consultez [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) pour obtenir une description des différents indicateurs qui peuvent être définis dans le paramètre *AceFlags* .
 
 ##  <a name="csacl"></a>  CSacl::CSacl
 
@@ -222,7 +222,7 @@ Supprime chaque `ACE` structure (le cas échéant) dans `CSacl` l’objet.
 ## <a name="see-also"></a>Voir aussi
 
 [CAcl, classe](../../atl/reference/cacl-class.md)<br/>
-[LCA](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[Roi](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[LCA](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[Roi](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)
