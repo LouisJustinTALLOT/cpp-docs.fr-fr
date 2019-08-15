@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0013
 ms.assetid: 95e7bafd-63c8-4b2d-b778-f19cdf9ba36c
-ms.openlocfilehash: 868b50bdac3931465103b6b4893f7bc4d030c16d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c78f029a3fb0e89913ce9b5ce221569e67d8faf6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359447"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509933"
 ---
 # <a name="project-build-error-prj0013"></a>Erreur de génération de projet PRJ0013
 
@@ -19,4 +19,4 @@ Les ressources système sont peut-être dangereusement basses. Impossible de cr�
 
 Cette erreur indique que les ressources système sont basses. Pour résoudre cette erreur, réduisez l'utilisation des ressources système par les autres processus/applications.
 
-Cette erreur peut également se produire si votre niveau de sécurité est insuffisant pour créer des canaux (consultez [CreatePipe](https://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)).
+Cette erreur peut également se produire si votre niveau de sécurité est insuffisant pour créer des canaux (voir [CreatePipe](/windows/win32/api/namedpipeapi/nf-namedpipeapi-createpipe)).

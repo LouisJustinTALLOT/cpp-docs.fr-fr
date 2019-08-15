@@ -1,5 +1,5 @@
 ---
-title: par défaut (attribut de COM C++)
+title: valeur parC++ défaut (attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: c6448b00fef50a7654816a2c39af2943db12d314
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148079"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501683"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -33,17 +33,17 @@ Interface par défaut qui sera accessible aux environnements de script qui crée
 Si aucune interface par défaut n’est spécifiée, la première occurrence d’une interface non source est utilisée par défaut.
 
 *interface2*<br/>
-(Facultatif) L’interface source par défaut. Vous devez aussi spécifier cette interface avec l’attribut [source](source-cpp.md) .
+Facultatif Interface source par défaut. Vous devez aussi spécifier cette interface avec l’attribut [source](source-cpp.md) .
 
 Si aucune interface source par défaut n’est spécifiée, la première interface source est utilisée par défaut.
 
 ## <a name="remarks"></a>Notes
 
-L’attribut C++ **default** a les mêmes fonctionnalités que l’attribut MIDL [default](/windows/desktop/Midl/default) . L’attribut **default** est aussi utilisé avec l’attribut [case](case-cpp.md) .
+L’attribut C++ **default** a les mêmes fonctionnalités que l’attribut MIDL [default](/windows/win32/Midl/default) . L’attribut **default** est aussi utilisé avec l’attribut [case](case-cpp.md) .
 
 ## <a name="example"></a>Exemple
 
-Le code suivant montre comment **par défaut** est utilisé dans la définition d’une coclasse pour spécifier `ICustomDispatch` en tant que l’interface de programmabilité par défaut :
+Le code suivant montre comment la **valeur par défaut** est utilisée sur la définition d’une coclasse pour spécifier `ICustomDispatch` comme interface de programmabilité par défaut:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -99,10 +99,10 @@ Il existe aussi un exemple pour l’attribut [source](source-cpp.md) qui montre 
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **struct**, membre de données|
+|**S'applique à**|**classe**, **struct**, données membres|
 |**Renouvelable**|Non|
-|**Attributs requis**|**coclasse** (lorsqu’il est appliqué à **classe** ou **struct**)|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|**coclasse** (en cas d’application à une **classe** ou à un **struct**)|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

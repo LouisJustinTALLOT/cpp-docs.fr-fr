@@ -17,16 +17,16 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 52cdddb1d922ca21e24122422ca14d9c12d13a83
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b05284104f9d2e5e7704bceaee6f8adf9a33aac
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259922"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497656"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject, classe
 
-Cette classe implémente le [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) interface pour un objet agrégé. Par définition, un objet est contenu dans un objet externe. Le `CComAggObject` classe est semblable à la [CComObject, classe](../../atl/reference/ccomobject-class.md), à ceci près qu’il expose une interface qui est directement accessible aux clients externes.
+Cette classe implémente l’interface [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pour un objet agrégé. Par définition, un objet agrégé est contenu dans un objet externe. La `CComAggObject` classe est semblable à la [classe CComObject](../../atl/reference/ccomobject-class.md), à ceci près qu’elle expose une interface qui est directement accessible aux clients externes.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,7 +39,7 @@ class CComAggObject : public IUnknown,
 #### <a name="parameters"></a>Paramètres
 
 *contained*<br/>
-Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bien que toutes les autres interfaces souhaitées prendre en charge sur l’objet.
+Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), ainsi que de toutes les autres interfaces que vous souhaitez prendre en charge sur l’objet.
 
 ## <a name="members"></a>Membres
 
@@ -54,24 +54,24 @@ Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-c
 
 |Nom|Description|
 |----------|-----------------|
-|[CComAggObject::AddRef](#addref)|Incrémente le décompte de références sur l’objet agrégée.|
-|[CComAggObject::CreateInstance](#createinstance)|Cette fonction statique vous permet de créer un nouveau **CComAggObject <** `contained` **>** objet sans la surcharge de [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|
-|[CComAggObject::FinalConstruct](#finalconstruct)|Effectue l’initialisation finale de `m_contained`.|
-|[CComAggObject::FinalRelease](#finalrelease)|Effectue une destruction finale des `m_contained`.|
+|[CComAggObject::AddRef](#addref)|Incrémente le décompte de références sur l’objet agrégé.|
+|[CComAggObject::CreateInstance](#createinstance)|Cette fonction statique vous permet de créer un nouvel objet **CComAggObject <** `contained` **>** sans la surcharge de [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).|
+|[CComAggObject:: FinalConstruct](#finalconstruct)|Effectue l’initialisation finale de `m_contained`.|
+|[CComAggObject::FinalRelease](#finalrelease)|Exécute la destruction finale `m_contained`de.|
 |[CComAggObject::QueryInterface](#queryinterface)|Récupère un pointeur vers l'interface demandée.|
-|[CComAggObject::Release](#release)|Décrémente le décompte de références sur l’objet agrégée.|
+|[CComAggObject::Release](#release)|Décrémente le décompte de références sur l’objet agrégé.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CComAggObject::m_contained](#m_contained)|Délégués `IUnknown` appels à inconnu externe.|
+|[CComAggObject::m_contained](#m_contained)|Délègue `IUnknown` les appels à l’externe inconnu.|
 
 ## <a name="remarks"></a>Notes
 
-`CComAggObject` implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pour un objet agrégé. `CComAggObject` possède son propre `IUnknown` interface, distinct de l’objet externe `IUnknown` interface et gère son propre nombre de références.
+`CComAggObject`implémente [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pour un objet agrégé. `CComAggObject`possède sa propre `IUnknown` interface, séparée de l’interface de `IUnknown` l’objet externe, et gère son propre nombre de références.
 
-Pour plus d’informations sur l’agrégation, consultez l’article [principes de base des objets COM ATL](../../atl/fundamentals-of-atl-com-objects.md).
+Pour plus d’informations sur l’agrégation, consultez l’article [notions de base des objets COM ATL](../../atl/fundamentals-of-atl-com-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -85,11 +85,11 @@ Pour plus d’informations sur l’agrégation, consultez l’article [principes
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlcom.h
+**En-tête:** atlcom. h
 
 ##  <a name="addref"></a>  CComAggObject::AddRef
 
-Incrémente le décompte de références sur l’objet agrégée.
+Incrémente le décompte de références sur l’objet agrégé.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -97,7 +97,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur qui peut-être être utiles pour le diagnostic ou de test.
+Valeur qui peut être utile pour les diagnostics ou les tests.
 
 ##  <a name="ccomaggobject"></a>  CComAggObject::CComAggObject
 
@@ -110,13 +110,13 @@ CComAggObject(void* pv);
 ### <a name="parameters"></a>Paramètres
 
 *pv*<br/>
-[in] Inconnu externe.
+dans Inconnu externe.
 
 ### <a name="remarks"></a>Notes
 
-Initialise le `CComContainedObject` membre, [m_contained](#m_contained)et incrémente le nombre de verrous du module.
+Initialise le `CComContainedObject` membre, [m_contained](#m_contained), et incrémente le nombre de verrous de module.
 
-Le destructeur décrémente le module nombre de verrous.
+Le destructeur décrémente le nombre de verrous de module.
 
 ##  <a name="dtor"></a>  CComAggObject::~CComAggObject
 
@@ -128,11 +128,11 @@ Destructeur.
 
 ### <a name="remarks"></a>Notes
 
-Libère toutes les ressources allouées, appels [FinalRelease](#finalrelease), et décrémente le module nombre de verrous.
+Libère toutes les ressources allouées, appelle [FinalRelease](#finalrelease)et décrémente le nombre de verrous de module.
 
 ##  <a name="createinstance"></a>  CComAggObject::CreateInstance
 
-Cette fonction statique vous permet de créer un nouveau **CComAggObject <** `contained` **>** objet sans la surcharge de [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+Cette fonction statique vous permet de créer un nouvel objet **CComAggObject <** `contained` **>** sans la surcharge de [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
 ```
 static HRESULT WINAPI CreateInstance(
@@ -143,21 +143,21 @@ static HRESULT WINAPI CreateInstance(
 ### <a name="parameters"></a>Paramètres
 
 *pp*<br/>
-[out] Un pointeur vers un **CComAggObject\<**<em>contenus</em> **>** pointeur. Si `CreateInstance` échoue, *pp* est définie sur NULL.
+à Pointeur vers un pointeur **«\<CComAggObject**»<em>contenu</em> **>** . En `CreateInstance` cas d’échec, *pp* a la valeur null.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-L’objet retourné est un décompte de références de zéro, appelez `AddRef` immédiatement, utilisez `Release` pour libérer la référence sur le pointeur d’objet lorsque vous avez terminé.
+L’objet retourné a un nombre de références égal à zéro, `AddRef` donc appelez-le `Release` immédiatement, puis utilisez pour libérer la référence sur le pointeur d’objet lorsque vous avez terminé.
 
-Si vous ne pas nécessitant un accès direct à l’objet, mais que vous souhaitez toujours créer un nouvel objet sans la surcharge de `CoCreateInstance`, utilisez [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) à la place.
+Si vous n’avez pas besoin d’un accès direct à l’objet, mais que vous souhaitez toujours créer un nouvel objet `CoCreateInstance`sans la surcharge de, utilisez [CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) à la place.
 
 ##  <a name="finalconstruct"></a>  CComAggObject::FinalConstruct
 
-Appelée au cours des dernières étapes de la construction d’objet, cette méthode exécute toute initialisation finale sur le [m_contained](#m_contained) membre.
+Appelée au cours des dernières étapes de la construction de l’objet, cette méthode effectue toute initialisation finale sur le membre [m_contained](#m_contained) .
 
 ```
 HRESULT FinalConstruct();
@@ -165,11 +165,11 @@ HRESULT FinalConstruct();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
 ##  <a name="finalrelease"></a>  CComAggObject::FinalRelease
 
-Appelé lors de la destruction d’objets, cette méthode libère le [m_contained](#m_contained) membre.
+Appelée lors de la destruction de l’objet, cette méthode libère le membre [m_contained](#m_contained) .
 
 ```
 void FinalRelease();
@@ -177,7 +177,7 @@ void FinalRelease();
 
 ##  <a name="m_contained"></a>  CComAggObject::m_contained
 
-Un [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) objet dérivé de votre classe.
+Objet [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) dérivé de votre classe.
 
 ```
 CComContainedObject<contained> m_contained;
@@ -186,11 +186,11 @@ CComContainedObject<contained> m_contained;
 ### <a name="parameters"></a>Paramètres
 
 *contained*<br/>
-[in] Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bien que toutes les autres interfaces souhaitées prendre en charge sur l’objet.
+dans Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), ainsi que de toutes les autres interfaces que vous souhaitez prendre en charge sur l’objet.
 
 ### <a name="remarks"></a>Notes
 
-Tous les `IUnknown` appelle via `m_contained` sont déléguées à inconnu externe.
+Tous `IUnknown` les appels `m_contained` via sont délégués à l’externe inconnu.
 
 ##  <a name="queryinterface"></a>  CComAggObject::QueryInterface
 
@@ -205,25 +205,25 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="parameters"></a>Paramètres
 
 *iid*<br/>
-[in] L’identificateur de l’interface demandée.
+dans Identificateur de l’interface demandée.
 
 *ppvObject*<br/>
-[out] Un pointeur vers le pointeur d’interface identifié par *iid*. Si l’objet ne prend pas en charge cette interface, *ppvObject* est définie sur NULL.
+à Pointeur vers le pointeur d’interface identifié par *IID*. Si l’objet ne prend pas en charge cette interface, *ppvObject* a la valeur null.
 
 *pp*<br/>
-[out] Un pointeur vers le pointeur d’interface identifié par le type `Q`. Si l’objet ne prend pas en charge cette interface, *pp* est définie sur NULL.
+à Pointeur vers le pointeur d’interface identifié par le `Q`type. Si l’objet ne prend pas en charge cette interface, *pp* a la valeur null.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Si l’interface demandée est `IUnknown`, `QueryInterface` retourne un pointeur vers l’agrégées propre à l’objet `IUnknown` et incrémente le décompte de références. Sinon, cette méthode exécute une requête pour l’interface via la `CComContainedObject` membre, [m_contained](#m_contained).
+Si l’interface demandée est `IUnknown`, `QueryInterface` retourne un pointeur vers le propriétaire `IUnknown` de l’objet agrégé et incrémente le décompte de références. Sinon, cette méthode interroge l’interface via le `CComContainedObject` membre [m_contained](#m_contained).
 
 ##  <a name="release"></a>  CComAggObject::Release
 
-Décrémente le décompte de références sur l’objet agrégée.
+Décrémente le décompte de références sur l’objet agrégé.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -231,7 +231,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Dans les versions debug, `Release` retourne une valeur qui peut-être être utiles pour le diagnostic ou de test. Dans les versions non debug `Release` retourne toujours 0.
+Dans les versions Debug `Release` , retourne une valeur qui peut être utile pour les diagnostics ou les tests. Dans les versions sans débogage `Release` , retourne toujours 0.
 
 ## <a name="see-also"></a>Voir aussi
 

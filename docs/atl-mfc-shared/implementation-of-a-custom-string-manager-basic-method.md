@@ -1,35 +1,35 @@
 ---
-title: Implémentation d’un gestionnaire de chaînes personnalisé (méthode élémentaire)
+title: Implémentation d’un gestionnaire de chaînes personnalisé (méthode de base)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-ms.openlocfilehash: c30c08217a09f600f8801bec9f50c4341e983a6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92c1c46f5251980f9cefb55e052e9aff395e0e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235899"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491314"
 ---
-# <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implémentation d’un gestionnaire de chaînes personnalisé (méthode élémentaire)
+# <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implémentation d’un gestionnaire de chaînes personnalisé (méthode de base)
 
-Le moyen le plus simple pour personnaliser le schéma d’allocation de mémoire pour les données de chaîne sont d’utiliser ATL-fourni par le `CAtlStringMgr` classe mais fournissent des routines d’allocation de mémoire de votre propre. Le constructeur de `CAtlStringMgr` accepte un seul paramètre : un pointeur vers un `IAtlMemMgr` objet. `IAtlMemMgr` est une classe de base abstraite qui fournit une interface générique à un segment de mémoire. À l’aide de la `IAtlMemMgr` interface, le `CAtlStringMgr` alloue, réalloue et libère la mémoire utilisée pour stocker les données de chaîne. Vous pouvez implémenter la `IAtlMemMgr` interface vous-même, ou utilisez une des cinq classes de gestionnaire de mémoire fournis par ATL. Les gestionnaires de mémoire fournis par ATL ne font qu’envelopper les fonctions d’allocation mémoire existant :
+Le moyen le plus simple de personnaliser le schéma d’allocation de mémoire pour les données de type chaîne `CAtlStringMgr` consiste à utiliser la classe fournie par ATL, mais à fournir vos propres routines d’allocation de mémoire. Le constructeur pour `CAtlStringMgr` accepte un seul paramètre: un pointeur vers un `IAtlMemMgr` objet. `IAtlMemMgr`est une classe de base abstraite qui fournit une interface générique à un segment de mémoire. À l' `IAtlMemMgr` aide de l' `CAtlStringMgr` interface, alloue, réalloue et libère la mémoire utilisée pour stocker les données de chaîne. Vous pouvez implémenter l' `IAtlMemMgr` interface vous-même ou utiliser l’une des cinq classes du gestionnaire de mémoire fournies par ATL. Les gestionnaires de mémoire fournis par ATL encapsulent simplement les fonctionnalités d’allocation de mémoire existantes:
 
-- [CCRTHeap](../atl/reference/ccrtheap-class.md) encapsule les fonctions de tas CRT standards ([malloc](../c-runtime-library/reference/malloc.md), [gratuit](../c-runtime-library/reference/free.md), et [realloc](../c-runtime-library/reference/realloc.md))
+- [CCRTHeap](../atl/reference/ccrtheap-class.md) Encapsule les fonctions de tas CRT standard ([malloc](../c-runtime-library/reference/malloc.md), [Free](../c-runtime-library/reference/free.md)et [realloc](../c-runtime-library/reference/realloc.md))
 
-- [CWin32Heap](../atl/reference/cwin32heap-class.md) encapsule un segment de mémoire Win32 gérer, à l’aide [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc), [HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree), et [HeapRealloc](/windows/desktop/api/heapapi/nf-heapapi-heaprealloc)
+- [CWin32Heap](../atl/reference/cwin32heap-class.md) Encapsule un handle de tas Win32 à l’aide de [HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapalloc), [HeapFree](/windows/win32/api/heapapi/nf-heapapi-heapfree)et [HeapRealloc](/windows/win32/api/heapapi/nf-heapapi-heaprealloc)
 
-- [CLocalHeap](../atl/reference/clocalheap-class.md) encapsule les API Win32 : [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc), [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree), and [LocalRealloc](/windows/desktop/api/winbase/nf-winbase-localrealloc)
+- [CLocalHeap](../atl/reference/clocalheap-class.md) Encapsule les API Win32: [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc), [LocalFree](/windows/win32/api/winbase/nf-winbase-localfree)et [LocalRealloc](/windows/win32/api/winbase/nf-winbase-localrealloc)
 
-- [CGlobalHeap](../atl/reference/cglobalheap-class.md) encapsule les API Win32 : [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc), [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree), et [GlobalRealloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).
+- [CGlobalHeap](../atl/reference/cglobalheap-class.md) Encapsule les API Win32: [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc), [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree)et [GlobalReAlloc](/windows/win32/api/winbase/nf-winbase-globalrealloc).
 
-- [CComHeap](../atl/reference/ccomheap-class.md) encapsule les API d’allocateur de tâche de COM : [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), et [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
+- [CComHeap](../atl/reference/ccomheap-class.md) Encapsule les API d’allocateur de tâche COM: [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)et [CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
 
-Pour les besoins de gestion de la mémoire de chaîne, la classe la plus utile est `CWin32Heap` , car il permet de créer plusieurs segments de mémoire indépendants. Par exemple, si vous souhaitez utiliser un segment de mémoire distinct pour les chaînes, vous pouvez procédez comme suit :
+Dans le cadre de la gestion de la mémoire de chaînes, la `CWin32Heap` classe la plus utile est parce qu’elle vous permet de créer plusieurs tas indépendants. Par exemple, si vous souhaitez utiliser un tas distinct uniquement pour les chaînes, vous pouvez effectuer les opérations suivantes:
 
 [!code-cpp[NVC_ATLMFC_Utilities#180](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_1.cpp)]
 
-Pour utiliser le Gestionnaire de chaînes privé pour gérer la mémoire pour un `CString` variable, passez un pointeur vers le gestionnaire en tant que paramètre à la `CString` constructeur de la variable :
+Pour utiliser ce gestionnaire de chaînes privé pour gérer la mémoire `CString` pour une variable, transmettez un pointeur vers le gestionnaire en tant `CString` que paramètre du constructeur de la variable:
 
 [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_2.cpp)]
 

@@ -28,16 +28,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: dec6bbad0aa4a8409b9f3d24476dcc94b8eaefe3
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 36750990dc62d5b24cf1107ac8a2724df787a47d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221160"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496992"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray, classe
 
-Cette classe est un wrapper pour le `SAFEARRAY` structure.
+Cette classe est un wrapper pour la `SAFEARRAY` structure.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,13 +64,13 @@ Type de données à stocker dans le tableau.
 
 |Nom|Description|
 |----------|-----------------|
-|[CComSafeArray::Add](#add)|Ajoute un ou plusieurs éléments, ou un `SAFEARRAY` structure, à un `CComSafeArray`.|
-|[CComSafeArray::Attach](#attach)|Attache un `SAFEARRAY` structure un `CComSafeArray` objet.|
-|[CComSafeArray::CopyFrom](#copyfrom)|Copie le contenu d’un `SAFEARRAY` structure dans le `CComSafeArray` objet.|
+|[CComSafeArray::Add](#add)|Ajoute un ou plusieurs éléments, ou une `SAFEARRAY` structure, à un `CComSafeArray`.|
+|[CComSafeArray::Attach](#attach)|Attache une `SAFEARRAY` structure à un `CComSafeArray` objet.|
+|[CComSafeArray::CopyFrom](#copyfrom)|Copie le contenu d’une `SAFEARRAY` structure dans l' `CComSafeArray` objet.|
 |[CComSafeArray::CopyTo](#copyto)|Crée une copie de l’objet `CComSafeArray`.|
 |[CComSafeArray::Create](#create)|Crée un objet `CComSafeArray`.|
 |[CComSafeArray::Destroy](#destroy)|Détruit un objet `CComSafeArray`.|
-|[CComSafeArray::Detach](#detach)|Détache un `SAFEARRAY` à partir d’un `CComSafeArray` objet.|
+|[CComSafeArray::Detach](#detach)|Détache un `SAFEARRAY` d’un `CComSafeArray` objet.|
 |[CComSafeArray::GetAt](#getat)|Récupère un élément unique à partir d’un tableau unidimensionnel.|
 |[CComSafeArray::GetCount](#getcount)|Retourne le nombre d'éléments du tableau.|
 |[CComSafeArray::GetDimensions](#getdimensions)|Retourne le nombre de dimensions du tableau.|
@@ -88,7 +88,7 @@ Type de données à stocker dans le tableau.
 
 |Nom|Description|
 |----------|-----------------|
-|[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Convertit une valeur dans un `SAFEARRAY` pointeur.|
+|[CComSafeArray:: Operator LPSAFEARRAY](#operator_lpsafearray)|Convertit une valeur en `SAFEARRAY` pointeur.|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Récupère un élément du tableau.|
 |[CComSafeArray::operator =](#operator_eq)|Opérateur d'assignation.|
 
@@ -96,11 +96,11 @@ Type de données à stocker dans le tableau.
 
 |Nom|Description|
 |----------|-----------------|
-|[CComSafeArray::m_psa](#m_psa)|Ce membre de données conserve l’adresse de la `SAFEARRAY` structure.|
+|[CComSafeArray::m_psa](#m_psa)|Ce membre de données contient l’adresse de `SAFEARRAY` la structure.|
 
 ## <a name="remarks"></a>Notes
 
-`CComSafeArray` fournit un wrapper pour la classe [SAFEARRAY Data Type](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) , ce qui simplifie la création et la gestion des tableaux unidimensionnels et multidimensionnels de pratiquement n’importe quel type prenant en charge VARIANT.
+`CComSafeArray` fournit un wrapper pour la classe [SAFEARRAY Data Type](/windows/win32/api/oaidl/ns-oaidl-tagsafearray) , ce qui simplifie la création et la gestion des tableaux unidimensionnels et multidimensionnels de pratiquement n’importe quel type prenant en charge VARIANT.
 
 `CComSafeArray` simplifie le transmission de tableaux entre processus et offre en outre une sécurité renforcée en vérifiant les valeurs d’index de tableau par rapport aux limites inférieure et supérieure.
 
@@ -123,7 +123,7 @@ Un `CComSafeArray` peut contenir le sous-ensemble de types de données VARIANT s
 |VT_UI4|ulong|
 |VT_UI8|ulonglong|
 |VT_R4|float|
-|VT_R8|double|
+|VT_R8|Double|
 |VT_DECIMAL|pointeur décimal|
 |VT_VARIANT|pointeur de type Variant|
 |VT_CY|Currency (type de données)|
@@ -138,7 +138,7 @@ Un `CComSafeArray` peut contenir le sous-ensemble de types de données VARIANT s
 
 ##  <a name="add"></a>  CComSafeArray::Add
 
-Ajoute un ou plusieurs éléments, ou un `SAFEARRAY` structure, à un `CComSafeArray`.
+Ajoute un ou plusieurs éléments, ou une `SAFEARRAY` structure, à un `CComSafeArray`.
 
 ```
 HRESULT Add(const SAFEARRAY* psaSrc);
@@ -152,13 +152,13 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 Pointeur vers un objet `SAFEARRAY` .
 
 *ulCount*<br/>
-Le nombre d’objets à ajouter au tableau.
+Nombre d’objets à ajouter au tableau.
 
 *pT*<br/>
 Pointeur vers un ou plusieurs objets à ajouter au tableau.
 
 *t*<br/>
-Une référence à l’objet à ajouter au tableau.
+Référence à l’objet à ajouter au tableau.
 
 *bCopy*<br/>
 Indique si une copie des données doit être créée. La valeur par défaut est TRUE.
@@ -169,13 +169,13 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Les nouveaux objets sont ajoutés à la fin de l’existante `SAFEARRAY` objet. Ajout d’un objet à un multidimensionnelles `SAFEARRAY` objet n’est pas pris en charge. Lorsque vous ajoutez un tableau d’objets existant, les deux tableaux doit contenir des éléments du même type.
+Les nouveaux objets sont ajoutés à la fin de l’objet existant `SAFEARRAY` . L’ajout d’un objet à un `SAFEARRAY` objet multidimensionnel n’est pas pris en charge. Lorsque vous ajoutez un tableau d’objets existant, les deux tableaux doivent contenir des éléments du même type.
 
-Le *bCopy* indicateur est pris en compte lorsque des éléments de type BSTR ou type VARIANT sont ajoutés à un tableau. La valeur par défaut true garantit qu’une nouvelle copie est effectuée des données lors de l’élément est ajouté au tableau.
+L’indicateur *bCopy* est pris en compte lorsque des éléments de type BSTR ou variant sont ajoutés à un tableau. La valeur par défaut TRUE garantit qu’une nouvelle copie des données est créée lorsque l’élément est ajouté au tableau.
 
 ##  <a name="attach"></a>  CComSafeArray::Attach
 
-Attache un `SAFEARRAY` structure un `CComSafeArray` objet.
+Attache une `SAFEARRAY` structure à un `CComSafeArray` objet.
 
 ```
 HRESULT Attach(const SAFEARRAY* psaSrc);
@@ -184,7 +184,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 ### <a name="parameters"></a>Paramètres
 
 *psaSrc*<br/>
-Un pointeur vers le `SAFEARRAY` structure.
+Pointeur vers la `SAFEARRAY` structure.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -192,7 +192,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Attache un `SAFEARRAY` structure un `CComSafeArray` objet, en rendant existant `CComSafeArray` méthodes disponibles.
+Attache une `SAFEARRAY` structure à un `CComSafeArray` objet, ce qui rend les `CComSafeArray` méthodes existantes disponibles.
 
 ##  <a name="ccomsafearray"></a>  CComSafeArray::CComSafeArray
 
@@ -217,19 +217,19 @@ Structure `SAFEARRAYBOUND`.
 Nombre d’éléments dans le tableau.
 
 *lLBound*<br/>
-La valeur de la limite inférieure ; Autrement dit, l’index du premier élément du tableau.
+Valeur limite inférieure; autrement dit, l’index du premier élément dans le tableau.
 
 *pBound*<br/>
-Un pointeur vers un `SAFEARRAYBOUND` structure.
+Pointeur vers une `SAFEARRAYBOUND` structure.
 
 *uDims*<br/>
-Le nombre de dimensions dans le tableau.
+Nombre de dimensions dans le tableau.
 
 *saSrc*<br/>
-Une référence à un `SAFEARRAY` structure ou `CComSafeArray` objet. Dans les deux cas, le constructeur utilise cette référence pour effectuer une copie du tableau, donc le tableau n’est pas référencé après la construction.
+Référence à une structure `SAFEARRAY` ou `CComSafeArray` un objet. Dans les deux cas, le constructeur utilise cette référence pour effectuer une copie du tableau, de sorte que le tableau n’est pas référencé après la construction.
 
 *psaSrc*<br/>
-Un pointeur vers un `SAFEARRAY` structure. Le constructeur utilise cette adresse pour effectuer une copie du tableau, donc le tableau n’est pas référencé après la construction.
+Pointeur vers une `SAFEARRAY` structure. Le constructeur utilise cette adresse pour effectuer une copie du tableau, de sorte que le tableau n’est pas référencé après la construction.
 
 ### <a name="remarks"></a>Notes
 
@@ -249,7 +249,7 @@ Libère toutes les ressources allouées.
 
 ##  <a name="copyfrom"></a>  CComSafeArray::CopyFrom
 
-Copie le contenu d’un `SAFEARRAY` structure dans le `CComSafeArray` objet.
+Copie le contenu d’une `SAFEARRAY` structure dans l' `CComSafeArray` objet.
 
 ```
 HRESULT CopyFrom(LPSAFEARRAY* ppArray);
@@ -266,7 +266,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode copie le contenu d’un `SAFEARRAY` dans la zone actuelle `CComSafeArray` objet. Le contenu existant du tableau est remplacé.
+Cette méthode copie le contenu d’un `SAFEARRAY` dans l’objet `CComSafeArray` actuel. Le contenu existant du tableau est remplacé.
 
 ##  <a name="copyto"></a>  CComSafeArray::CopyTo
 
@@ -279,7 +279,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 ### <a name="parameters"></a>Paramètres
 
 *ppArray*<br/>
-Un pointeur vers un emplacement dans lequel créer le nouveau `SAFEARRAY`.
+Pointeur vers un emplacement dans lequel créer le nouveau `SAFEARRAY`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -287,7 +287,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode copie le contenu d’un `CComSafeArray` de l’objet dans un `SAFEARRAY` structure.
+Cette méthode copie le contenu d’un `CComSafeArray` objet dans une `SAFEARRAY` structure.
 
 ##  <a name="create"></a>  CComSafeArray::Create
 
@@ -304,13 +304,13 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 Pointeur vers un objet `SAFEARRAYBOUND` .
 
 *uDims*<br/>
-Le nombre de dimensions dans le tableau.
+Nombre de dimensions dans le tableau.
 
 *ulCount*<br/>
 Nombre d’éléments dans le tableau.
 
 *lLBound*<br/>
-La valeur de la limite inférieure ; Autrement dit, l’index du premier élément du tableau.
+Valeur limite inférieure; autrement dit, l’index du premier élément dans le tableau.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -318,7 +318,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Un `CComSafeArray` objet peut être créé à partir d’un existant `SAFEARRAYBOUND` structure et le nombre de dimensions ou en spécifiant le nombre d’éléments du tableau et la limite inférieure. Si le tableau est accessible à partir de C++, la limite inférieure doit être 0. Autres langages peuvent autoriser d’autres valeurs de la limite inférieure (par exemple, les tableaux Visual prend en charge de base avec des éléments avec une plage comme -10 à 10).
+Un `CComSafeArray` objet peut être créé à partir d' `SAFEARRAYBOUND` une structure existante et du nombre de dimensions, ou en spécifiant le nombre d’éléments dans le tableau et la limite inférieure. Si le tableau doit être accessible à partir C++de, la limite inférieure doit être 0. D’autres langages peuvent autoriser d’autres valeurs pour la limite inférieure (par exemple, Visual Basic prend en charge les tableaux avec des éléments avec une plage telle que-10 à 10).
 
 ##  <a name="destroy"></a>  CComSafeArray::Destroy
 
@@ -334,11 +334,11 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Détruit un existant `CComSafeArray` objet et toutes les données qu’il contient.
+Détruit un objet existant `CComSafeArray` et toutes les données qu’il contient.
 
 ##  <a name="detach"></a>  CComSafeArray::Detach
 
-Détache un `SAFEARRAY` à partir d’un `CComSafeArray` objet.
+Détache un `SAFEARRAY` d’un `CComSafeArray` objet.
 
 ```
 LPSAFEARRAY Detach();
@@ -350,7 +350,7 @@ Retourne un pointeur vers un `SAFEARRAY` objet.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode détache le `SAFEARRAY` de l’objet à partir de la `CComSafeArray` objet.
+Cette méthode détache l' `SAFEARRAY` objet de l' `CComSafeArray` objet.
 
 ##  <a name="getat"></a>  CComSafeArray::GetAt
 
@@ -363,7 +363,7 @@ T& GetAt(LONG lIndex) const;
 ### <a name="parameters"></a>Paramètres
 
 *lIndex*<br/>
-Le numéro d’index de la valeur dans le tableau à retourner.
+Numéro d’index de la valeur dans le tableau à retourner.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -380,7 +380,7 @@ ULONG GetCount(UINT uDim = 0) const;
 ### <a name="parameters"></a>Paramètres
 
 *uDim*<br/>
-La dimension du tableau.
+Dimension du tableau.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -388,7 +388,7 @@ Retourne le nombre d'éléments du tableau.
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’il est utilisé avec un tableau multidimensionnel, cette méthode retourne le nombre d’éléments dans une dimension spécifique uniquement.
+Lorsqu’elle est utilisée avec un tableau multidimensionnel, cette méthode retourne le nombre d’éléments dans une dimension spécifique uniquement.
 
 ##  <a name="getdimensions"></a>  CComSafeArray::GetDimensions
 
@@ -413,7 +413,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 ### <a name="parameters"></a>Paramètres
 
 *uDim*<br/>
-La dimension de tableau pour lequel obtenir la limite inférieure. Si omis, la valeur par défaut est 0.
+Dimension du tableau pour laquelle obtenir la limite inférieure. En cas d’omission, la valeur par défaut est 0.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -421,7 +421,7 @@ Retourne la limite inférieure.
 
 ### <a name="remarks"></a>Notes
 
-Si la limite inférieure est 0, cela indique un tableau de type C dont le premier élément est l’élément numéro 0. En cas d’erreur, par exemple, un argument de dimension non valide, cette méthode appelle `AtlThrow` avec un HRESULT qui décrit l’erreur.
+Si la limite inférieure est 0, cela indique un tableau de type C dont le premier élément est le numéro d’élément 0. En cas d’erreur, par exemple, un argument de dimension non valide, cette méthode appelle `AtlThrow` avec un HRESULT décrivant l’erreur.
 
 ##  <a name="getsafearrayptr"></a>  CComSafeArray::GetSafeArrayPtr
 
@@ -433,7 +433,7 @@ LPSAFEARRAY* GetSafeArrayPtr() throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers le [CComSafeArray::m_psa](#m_psa) membre de données.
+Retourne un pointeur vers le membre de données [CComSafeArray:: m_psa](#m_psa) .
 
 ##  <a name="gettype"></a>  CComSafeArray::GetType
 
@@ -445,7 +445,7 @@ VARTYPE GetType() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le type de données stockées dans le tableau, ce qui peut être un des types suivants :
+Retourne le type de données stockées dans le tableau, qui peut être l’un des types suivants:
 
 |VARTYPE|Description|
 |-------------|-----------------|
@@ -460,7 +460,7 @@ Retourne le type de données stockées dans le tableau, ce qui peut être un des
 |VT_UI4|ulong|
 |VT_UI8|ulonglong|
 |VT_R4|float|
-|VT_R8|double|
+|VT_R8|Double|
 |VT_DECIMAL|pointeur décimal|
 |VT_VARIANT|pointeur de type Variant|
 |VT_CY|Currency (type de données)|
@@ -476,15 +476,15 @@ LONG GetUpperBound(UINT uDim = 0) const;
 ### <a name="parameters"></a>Paramètres
 
 *uDim*<br/>
-La dimension de tableau pour lequel obtenir la limite supérieure. Si omis, la valeur par défaut est 0.
+Dimension du tableau pour laquelle obtenir la limite supérieure. En cas d’omission, la valeur par défaut est 0.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la limite supérieure. Cette valeur est inclusive, l’index valide maximale pour cette dimension.
+Retourne la limite supérieure. Cette valeur est comprise, l’index valide maximal pour cette dimension.
 
 ### <a name="remarks"></a>Notes
 
-En cas d’erreur, par exemple, un argument de dimension non valide, cette méthode appelle `AtlThrow` avec un HRESULT qui décrit l’erreur.
+En cas d’erreur, par exemple, un argument de dimension non valide, cette méthode appelle `AtlThrow` avec un HRESULT décrivant l’erreur.
 
 ##  <a name="issizable"></a>  CComSafeArray::IsSizable
 
@@ -496,11 +496,11 @@ bool IsSizable() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si le `CComSafeArray` peut être redimensionné, FALSE s’il ne peut pas.
+Retourne la valeur true `CComSafeArray` si le peut être redimensionné, false dans le cas où il ne peut pas.
 
 ##  <a name="m_psa"></a>  CComSafeArray::m_psa
 
-Contient l’adresse de la `SAFEARRAY` structure accédé.
+Contient l’adresse de la `SAFEARRAY` structure accédée.
 
 ```
 LPSAFEARRAY m_psa;
@@ -517,10 +517,10 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 ### <a name="parameters"></a>Paramètres
 
 *alIndex*<br/>
-Pointeur vers un vecteur d’index pour chaque dimension du tableau. La dimension (le plus significative) à l’extrême gauche est `alIndex[0]`.
+Pointeur vers un vecteur d’index pour chaque dimension du tableau. La dimension la plus à gauche (la `alIndex[0]`plus significative) est.
 
 *t*<br/>
-Une référence aux données retournées.
+Référence aux données retournées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -537,7 +537,7 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 ### <a name="parameters"></a>Paramètres
 
 *alIndex*<br/>
-Pointeur vers un vecteur d’index pour chaque dimension du tableau. La dimension (moins significatif) plus à droite est `alIndex`[0].
+Pointeur vers un vecteur d’index pour chaque dimension du tableau. La dimension la plus à droite (la `alIndex`moins significative) est [0].
 
 *T*<br/>
 Spécifie la valeur du nouvel élément.
@@ -548,7 +548,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Il s’agit d’une version multidimensionnelle de [CComSafeArray::SetAt](#setat).
+Il s’agit d’une version multidimensionnelle de [CComSafeArray:: setat](#setat).
 
 ##  <a name="operator_at"></a>  CComSafeArray::operator \[\]
 
@@ -570,7 +570,7 @@ Retourne l’élément de tableau approprié.
 
 ### <a name="remarks"></a>Notes
 
-Exécute une fonction similaire à [CComSafeArray::GetAt](#getat), mais cet opérateur fonctionne uniquement avec les tableaux unidimensionnels.
+Exécute une fonction similaire à [CComSafeArray:: GetAt](#getat), mais cet opérateur fonctionne uniquement avec les tableaux unidimensionnels.
 
 ##  <a name="operator_eq"></a>  CComSafeArray::operator =
 
@@ -593,9 +593,9 @@ Pointeur vers un objet `SAFEARRAY` .
 
 Retourne le type de données stocké dans le tableau.
 
-##  <a name="operator_lpsafearray"></a>  CComSafeArray::operator LPSAFEARRAY
+##  <a name="operator_lpsafearray"></a>CComSafeArray:: Operator LPSAFEARRAY
 
-Convertit une valeur dans un `SAFEARRAY` pointeur.
+Convertit une valeur en `SAFEARRAY` pointeur.
 
 ```
 operator LPSAFEARRAY() const;
@@ -603,7 +603,7 @@ operator LPSAFEARRAY() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Convertit une valeur dans un `SAFEARRAY` pointeur.
+Convertit une valeur en `SAFEARRAY` pointeur.
 
 ##  <a name="resize"></a>  CComSafeArray::Resize
 
@@ -617,13 +617,13 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 ### <a name="parameters"></a>Paramètres
 
 *pBound*<br/>
-Un pointeur vers un `SAFEARRAYBOUND` structure qui contient des informations sur le nombre d’éléments et la limite inférieure du tableau.
+Pointeur vers une `SAFEARRAYBOUND` structure qui contient des informations sur le nombre d’éléments et la limite inférieure d’un tableau.
 
 *ulCount*<br/>
-Le nombre demandé d’objets dans le tableau redimensionné.
+Nombre d’objets demandé dans le tableau redimensionné.
 
 *lLBound*<br/>
-La limite inférieure.
+Limite inférieure.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -631,7 +631,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode redimensionne uniquement la dimension la plus à droite. Celui-ci se redimensionne pas les tableaux qui retournent `IsResizable` comme FALSE.
+Cette méthode redimensionne uniquement la dimension la plus à droite. Elle ne redimensionne pas les tableaux qui `IsResizable` renvoient la valeur false.
 
 ##  <a name="setat"></a>  CComSafeArray::SetAt
 
@@ -647,7 +647,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 Numéro d’index de l’élément de tableau à définir.
 
 *t*<br/>
-La nouvelle valeur de l’élément spécifié.
+Nouvelle valeur de l’élément spécifié.
 
 *bCopy*<br/>
 Indique si une copie des données doit être créée. La valeur par défaut est TRUE.
@@ -658,11 +658,11 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Le *bCopy* indicateur est pris en compte lorsque des éléments de type BSTR ou type VARIANT sont ajoutés à un tableau. La valeur par défaut true garantit qu’une nouvelle copie est effectuée des données lors de l’élément est ajouté au tableau.
+L’indicateur *bCopy* est pris en compte lorsque des éléments de type BSTR ou variant sont ajoutés à un tableau. La valeur par défaut TRUE garantit qu’une nouvelle copie des données est créée lorsque l’élément est ajouté au tableau.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Type de données SAFEARRAY](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[SAFEARRAY (type de données)](/windows/win32/api/oaidl/ns-oaidl-tagsafearray)<br/>
 [CComSafeArray::Create](#create)<br/>
 [CComSafeArray::Destroy](#destroy)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

@@ -1,17 +1,17 @@
 ---
-title: plage (attribut de COM C++)
+title: Plage (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1221192eb1813d759f293fe5555d7aaa5b367ab
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407482"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514140"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -26,14 +26,14 @@ Spécifie une plage de valeurs autorisées pour les arguments ou les champs dont
 ### <a name="parameters"></a>Paramètres
 
 *low*<br/>
-La valeur de la plage inférieure.
+Valeur de plage inférieure.
 
 *high*<br/>
-La valeur de la plage supérieure.
+Valeur de plage supérieure.
 
 ## <a name="remarks"></a>Notes
 
-Le **plage** attribut C++ a les mêmes fonctionnalités que le [plage](/windows/desktop/Midl/range) attribut MIDL.
+L’attribut **Range** C++ a les mêmes fonctionnalités que l’attribut MIDL [Range](/windows/win32/Midl/range) .
 
 ## <a name="example"></a>Exemple
 
@@ -59,8 +59,8 @@ __interface ICustom {
 |-|-|
 |**S'applique à**|Méthode d’interface, paramètre d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

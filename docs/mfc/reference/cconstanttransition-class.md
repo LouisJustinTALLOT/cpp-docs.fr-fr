@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CConstantTransition [MFC], Create
 - CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
-ms.openlocfilehash: 9641af2f184d2edaa82922363dff75783e79f87e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccf08b309e64cd82215acb6032bc2a777f4c809a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182182"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507166"
 ---
 # <a name="cconstanttransition-class"></a>CConstantTransition, classe
 
@@ -41,17 +41,17 @@ class CConstantTransition : public CBaseTransition;
 
 |Nom|Description|
 |----------|-----------------|
-|[CConstantTransition::Create](#create)|Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé. (Substitue [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CConstantTransition::Create](#create)|Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé. (Substitue [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CConstantTransition::m_duration](#m_duration)|La durée de la transition.|
+|[CConstantTransition::m_duration](#m_duration)|Durée de la transition.|
 
 ## <a name="remarks"></a>Notes
 
-Pendant une transition constante, la valeur d’une variable d’animation conserve la valeur initiale pendant la durée de la transition. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.
+Pendant une transition constante, la valeur d’une variable d’animation reste à la valeur initiale pendant la durée de la transition. Étant donné que toutes les transitions sont automatiquement désactivées, il est recommandé de les allouer à l’aide de operator new. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController:: AnimateGroup, jusqu’à ce qu’il soit NULL. La modification des variables membres après la création de cet objet COM n’a aucun effet.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -76,7 +76,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
 ### <a name="parameters"></a>Paramètres
 
 *duration*<br/>
-La durée de la transition.
+Durée de la transition.
 
 ##  <a name="create"></a>  CConstantTransition::Create
 
@@ -91,15 +91,15 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Paramètres
 
 *pLibrary*<br/>
-Un pointeur vers un [interface IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standards.
+Pointeur vers une [interface IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standard.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la transition est créée avec succès ; Sinon, FALSE.
+TRUE si la transition est créée avec succès; Sinon, FALSe.
 
 ##  <a name="m_duration"></a>  CConstantTransition::m_duration
 
-La durée de la transition.
+Durée de la transition.
 
 ```
 UI_ANIMATION_SECONDS m_duration;

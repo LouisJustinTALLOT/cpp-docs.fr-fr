@@ -32,14 +32,14 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 0b1dbc72124188d06da48f47e47c11ae6d06e771
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: b57ed2b26428c48efbe544c2b4802e347b915c29
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376193"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499940"
 ---
-# <a name="fopen-wfopen"></a>fopen, _wfopen
+# <a name="fopen-_wfopen"></a>fopen, _wfopen
 
 Ouvre un fichier. Des versions plus sécurisées de ces fonctions qui effectuent des validations supplémentaires des paramètres et retournent des codes d’erreur sont disponibles. Consultez [fopen_s, _wfopen_s](fopen-s-wfopen-s.md).
 
@@ -72,7 +72,7 @@ Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_ne
 
 ## <a name="remarks"></a>Notes
 
-La fonction **fopen** ouvre le fichier spécifié par *filename*. Par défaut, une chaîne de *nom de fichier* étroite est interprétée à l’aide de la page de codes ANSI (CP_ACP). Dans les applications de bureau Windows, la page de codes OEM (CP_OEMCP) peut être utilisée à la place avec la fonction [SetFileApisToOEM](/windows/desktop/api/fileapi/nf-fileapi-setfileapistooem) . Vous pouvez utiliser la fonction [AreFileApisANSI](/windows/desktop/api/fileapi/nf-fileapi-arefileapisansi) pour déterminer si *filename* est interprété à l’aide de la page de codes ANSI ou de la page de codes OEM par défaut du système. **_wfopen** est une version à caractères larges de **fopen**; les arguments de **_wfopen** sont des chaînes à caractères larges. Sinon, **_wfopen** et **fopen** se comportent de la même façon. L’utilisation de **_wfopen** n’affecte pas le jeu de caractères codé utilisé dans le flux de fichier.
+La fonction **fopen** ouvre le fichier spécifié par *filename*. Par défaut, une chaîne de *nom de fichier* étroite est interprétée à l’aide de la page de codes ANSI (CP_ACP). Dans les applications de bureau Windows, la page de codes OEM (CP_OEMCP) peut être utilisée à la place avec la fonction [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) . Vous pouvez utiliser la fonction [AreFileApisANSI](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi) pour déterminer si *filename* est interprété à l’aide de la page de codes ANSI ou de la page de codes OEM par défaut du système. **_wfopen** est une version à caractères larges de **fopen**; les arguments de **_wfopen** sont des chaînes à caractères larges. Sinon, **_wfopen** et **fopen** se comportent de la même façon. L’utilisation de **_wfopen** n’affecte pas le jeu de caractères codé utilisé dans le flux de fichier.
 
 **fopen** accepte les chemins d’accès qui sont valides sur le système de fichiers au point d’exécution; **fopen** accepte les chemins d’accès UNC et les chemins d’accès qui impliquent des lecteurs réseau mappés tant que le système qui exécute le code a accès au partage ou au lecteur mappé au moment de l’exécution. Lorsque vous construisez des chemins d’accès pour **fopen**, assurez-vous que les lecteurs, les chemins d’accès ou les partages réseau sont disponibles dans l’environnement d’exécution. Vous pouvez utiliser des barres obliques (/) ou des barres obliques inverses (\\) comme séparateurs de répertoire dans un chemin.
 
@@ -191,7 +191,7 @@ Si vous utilisez le mode **RB** , vous n’avez pas besoin de porter votre code,
 
 **_wfopen** est une extension Microsoft. Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
-Les **options c**, **n**, **t**, **S**, **R**, **t**et  *en mode* D sont des extensions Microsoft pour **fopen** et **_fdopen** et ne doivent pas être utilisées là où la portabilité ANSI est souhaitée.
+Les **options c**, **n**, **t**, **S**, **R**, **t**et *en mode* D sont des extensions Microsoft pour **fopen** et **_fdopen** et ne doivent pas être utilisées là où la portabilité ANSI est souhaitée.
 
 ## <a name="example-1"></a>Exemple 1
 

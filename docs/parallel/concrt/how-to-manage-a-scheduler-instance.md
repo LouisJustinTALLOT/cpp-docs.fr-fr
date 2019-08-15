@@ -1,50 +1,50 @@
 ---
-title: 'Procédure : Gérer une Instance de planificateur'
+title: 'Procédure : Gérer une instance de planificateur'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: bc7adfaeb4c96245488bbcb5cd70cdae9daf9e26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f402e82a18f7b804f2c25ebf0a4392d19694d25c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413877"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510524"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>Procédure : Gérer une Instance de planificateur
+# <a name="how-to-manage-a-scheduler-instance"></a>Procédure : Gérer une instance de planificateur
 
-Instances de planificateur vous permettent d’associer des stratégies de planification spécifiques à différents types de charges de travail. Cette rubrique contient deux exemples simples qui montrent comment créer et gérer une instance du planificateur.
+Les instances de planificateur vous permettent d’associer des stratégies de planification spécifiques à différents genres de charges de travail. Cette rubrique contient deux exemples de base qui montrent comment créer et gérer une instance de planificateur.
 
-Les exemples créent des planificateurs qui utilisent les stratégies de planificateur par défaut. Pour un exemple qui crée un planificateur qui utilise une stratégie personnalisée, consultez [Comment : Spécifier des stratégies de planificateur](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
+Les exemples créent des planificateurs qui utilisent les stratégies de planificateur par défaut. Pour obtenir un exemple qui crée un planificateur qui utilise une stratégie personnalisée, consultez [procédure: Spécifier des stratégies](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)de planificateur spécifiques.
 
-### <a name="to-manage-a-scheduler-instance-in-your-application"></a>Pour gérer une instance du planificateur dans votre application
+### <a name="to-manage-a-scheduler-instance-in-your-application"></a>Pour gérer une instance de planificateur dans votre application
 
-1. Créer un [concurrency::SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) objet qui contient la stratégie de valeurs pour le planificateur à utiliser.
+1. Créez un objet [Concurrency:: SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) qui contient les valeurs de stratégie que le planificateur doit utiliser.
 
-1. Appelez le [Concurrency::CurrentScheduler :: Create](reference/currentscheduler-class.md#create) méthode ou le [Concurrency::Scheduler :: Create](reference/scheduler-class.md#create) méthode pour créer une instance de planificateur.
+1. Appelez la méthode [Concurrency:: CurrentScheduler:: Create](reference/currentscheduler-class.md#create) ou la méthode Concurrency [:: Scheduler:: Create](reference/scheduler-class.md#create) pour créer une instance de planificateur.
 
-   Si vous utilisez le `Scheduler::Create` méthode, appelez le [Concurrency::Scheduler :: Attach](reference/scheduler-class.md#attach) méthode lorsque vous devez associer le planificateur au contexte actuel.
+   Si vous utilisez la `Scheduler::Create` méthode, appelez la méthode Concurrency [:: Scheduler:: Attach](reference/scheduler-class.md#attach) lorsque vous devez associer le planificateur au contexte actuel.
 
-1. Appelez le [CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa) fonction permettant de créer un handle vers un objet d’événement non signalé, de réinitialisation automatique.
+1. Appelez la fonction [CreateEvent](/windows/win32/api/synchapi/nf-synchapi-createeventw) pour créer un handle vers un objet d’événement de réinitialisation automatique non signalé.
 
-1. Passez le handle vers l’objet d’événement que vous venez de créer pour le [Concurrency::CurrentScheduler :: RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent) méthode ou le [Concurrency::Scheduler :: RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent) (méthode). Cela enregistre l’événement à définir lorsque le planificateur est détruit.
+1. Transmettez le descripteur à l’objet d’événement que vous venez de créer à la méthode [Concurrency:: CurrentScheduler:: RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent) ou à la méthode Concurrency [:: Scheduler:: RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent) . Cela enregistre l’événement à définir lorsque le planificateur est détruit.
 
-1. Effectuer les tâches que vous souhaitez que le planificateur actuel pour planifier.
+1. Effectuez les tâches que vous souhaitez que le planificateur actuel planifie.
 
-1. Appelez le [Concurrency::CurrentScheduler :: Detach](reference/currentscheduler-class.md#detach) méthode pour détacher le planificateur actuel et de restaurer le planificateur précédent en tant que celle en cours.
+1. Appelez la méthode [Concurrency:: CurrentScheduler::D Etach](reference/currentscheduler-class.md#detach) pour détacher le planificateur actuel et restaurer le planificateur précédent comme celui en cours.
 
-   Si vous utilisez le `Scheduler::Create` méthode, appelez le [Concurrency::Scheduler :: Release](reference/scheduler-class.md#release) méthode décrémente le décompte de références le `Scheduler` objet.
+   Si vous utilisez la `Scheduler::Create` méthode, appelez la méthode Concurrency [:: Scheduler:: Release](reference/scheduler-class.md#release) pour décrémenter le décompte de références de `Scheduler` l’objet.
 
-1. Passez le handle vers l’événement à la [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) fonction pour attendre l’arrêt du planificateur.
+1. Transmettez le descripteur à l’événement à la fonction [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) pour attendre que le planificateur s’arrête.
 
-1. Appelez le [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) (fonction) pour fermer le handle vers l’objet d’événement.
+1. Appelez la fonction [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) pour fermer le handle de l’objet d’événement.
 
 ## <a name="example"></a>Exemple
 
-Le code suivant montre deux façons de gérer une instance du planificateur. Chaque exemple utilise d’abord le planificateur par défaut pour effectuer une tâche qui imprime l’identificateur unique du planificateur actuel. Chaque exemple utilise ensuite une instance de planificateur pour effectuer la même tâche à nouveau. Enfin, chaque exemple restaure le planificateur par défaut que celui en cours et effectue la tâche une fois de plus.
+Le code suivant montre deux façons de gérer une instance de planificateur. Chaque exemple utilise tout d’abord le planificateur par défaut pour effectuer une tâche qui imprime l’identificateur unique du planificateur actuel. Chaque exemple utilise ensuite une instance de Scheduler pour effectuer à nouveau la même tâche. Enfin, chaque exemple restaure le planificateur par défaut en tant que planificateur actuel et exécute la tâche une fois de plus.
 
-Le premier exemple utilise le [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classe pour créer une instance de planificateur et l’associer avec le contexte actuel. Le deuxième exemple utilise le [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) classe pour effectuer la même tâche. En règle générale, la `CurrentScheduler` classe est utilisée pour travailler avec le planificateur actuel. Le deuxième exemple, qui utilise le `Scheduler` class, est utile lorsque vous souhaitez contrôler quand le planificateur est associé au contexte actuel ou lorsque vous souhaitez associer des planificateurs spécifiques à des tâches spécifiques.
+Le premier exemple utilise la classe [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) pour créer une instance de planificateur et l’associer au contexte actuel. Le deuxième exemple utilise la classe [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) pour effectuer la même tâche. En général, `CurrentScheduler` la classe est utilisée pour fonctionner avec le planificateur actuel. Le deuxième exemple, qui utilise la `Scheduler` classe, est utile lorsque vous souhaitez contrôler le moment où le planificateur est associé au contexte actuel ou lorsque vous souhaitez associer des planificateurs spécifiques à des tâches spécifiques.
 
 [!code-cpp[concrt-scheduler-instance#1](../../parallel/concrt/codesnippet/cpp/how-to-manage-a-scheduler-instance_1.cpp)]
 
@@ -71,9 +71,9 @@ Current scheduler id: 0
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
-Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `scheduler-instance.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
+Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le `scheduler-instance.cpp` dans un fichier nommé, puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
 
-**CL.exe /EHsc scheduler-instance.cpp**
+**CL. exe/EHsc Scheduler-instance. cpp**
 
 ## <a name="see-also"></a>Voir aussi
 

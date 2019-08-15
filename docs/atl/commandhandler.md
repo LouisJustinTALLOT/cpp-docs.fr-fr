@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - CommandHandler function
 ms.assetid: 662bc7bf-4a10-42b3-986d-d8bae4f63551
-ms.openlocfilehash: 743be3e0bc9cc96fc6b22d0806d399ab5e160a3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99a95228f6036e5f391395be367cdef39ca3dc3b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235062"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492452"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
-`CommandHandler` la fonction est identifiée par le troisième paramètre de la macro COMMAND_HANDLER dans votre table des messages.
+`CommandHandler`est la fonction identifiée par le troisième paramètre de la macro COMMAND_HANDLER dans votre table des messages.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,27 +29,27 @@ LRESULT CommandHandler(
 #### <a name="parameters"></a>Paramètres
 
 *wNotifyCode*<br/>
-Le code de notification.
+Code de notification.
 
 *wID*<br/>
-L’identificateur de l’élément de menu, un contrôle ou un accélérateur.
+Identificateur de l’élément de menu, du contrôle ou de l’accélérateur.
 
 *hWndCtl*<br/>
-Handle vers un contrôle de fenêtre.
+Handle d’un contrôle de fenêtre.
 
 *bHandled*<br/>
-Les jeux de mappage de message *bHandled* sur TRUE avant `CommandHandler` est appelée. Si `CommandHandler` ne gère pas entièrement le message, il doit définir *bHandled* sur FALSE pour indiquer que le message nécessite un traitement supplémentaire.
+La table des messages affecte à *bHandled* la `CommandHandler` valeur true avant l’appel à. Si `CommandHandler` ne gère pas complètement le message, il doit affecter à *bHandled* la valeur false pour indiquer que le message doit être traité ultérieurement.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le résultat du traitement de message. 0 si l’opération réussit.
+Résultat du traitement du message. 0 en cas de réussite.
 
 ## <a name="remarks"></a>Notes
 
-Pour obtenir un exemple de l’utilisation de ce gestionnaire de messages dans une table des messages, consultez [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).
+Pour obtenir un exemple d’utilisation de ce gestionnaire de messages dans une table des messages, consultez [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Implémentation d’une fenêtre](../atl/implementing-a-window.md)<br/>
 [Tables des messages](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](/windows/desktop/controls/wm-notify)
+[WM_NOTIFY](/windows/win32/controls/wm-notify)

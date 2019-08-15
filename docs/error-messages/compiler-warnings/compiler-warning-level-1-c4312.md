@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: 666df7904a7aac88983af40d31a67271beaa0b1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1983d7b89688568b8152372328216c2a814f7bc0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408314"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510081"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>Avertissement du compilateur (niveau 1) C4312
 
@@ -21,7 +21,7 @@ Cet avertissement détecte une tentative d'attribuer une valeur 32 bits à un t
 
 Cette conversion est potentiellement dangereuse, même pour des valeurs de pointeur qui tiennent dans 32 bits quand une extension de signe intervient. Si un entier 32 bits négatif est attribué à un type pointeur 64 bits, l'extension de signe se produit et la valeur de pointeur fait référence à une adresse mémoire différente de la valeur de l'entier.
 
-Cet avertissement est émis uniquement pour les cibles de compilation 64 bits. Pour plus d’informations, consultez [règles d’utilisation des pointeurs](/windows/desktop/WinProg64/rules-for-using-pointers).
+Cet avertissement est émis uniquement pour les cibles de compilation 64 bits. Pour plus d’informations, consultez [règles d’utilisation des pointeurs](/windows/win32/WinProg64/rules-for-using-pointers).
 
 L'exemple de code suivant génère l'erreur C4312 quand il est compilé pour des cibles 64 bits :
 

@@ -11,39 +11,39 @@ helpviewer_keywords:
 - MIDL linker option
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
-ms.openlocfilehash: 584958ac51bdc491ad1bdd16117ecaad6e000ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca172428943d2446490eeb10741966f5e8c9ea85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321070"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492719"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Spécification d'options de ligne de commande MIDL)
 
-Spécifie un fichier de réponse pour les options de ligne de commande MIDL
+Spécifie un fichier réponse pour les options de ligne de commande MIDL
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/MIDL:\@**<em>file</em>
+> **/MIDL:\@** <em>fichier</em>
 
 ## <a name="arguments"></a>Arguments
 
 *fichier*<br/>
-Le nom du fichier qui contient [options de ligne de commande MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).
+Nom du fichier qui contient les [options de ligne de commande MIDL](/windows/win32/Midl/general-midl-command-line-syntax).
 
 ## <a name="remarks"></a>Notes
 
-Toutes les options pour la conversion d’un fichier IDL dans un fichier TLB doivent être indiquées dans *fichier*; Options de ligne de commande MIDL ne peut pas être spécifiées sur la ligne de commande de l’éditeur de liens. Si /MIDL n’est pas spécifié, le compilateur MIDL sera appelé avec uniquement le nom de fichier IDL et aucune autre option.
+Toutes les options de conversion d’un fichier IDL en fichier TLB doivent être fournies dans le *fichier*; Les options de ligne de commande MIDL ne peuvent pas être spécifiées sur la ligne de commande de l’éditeur de liens. Si/MIDL n’est pas spécifié, le compilateur MIDL est appelé uniquement avec le nom de fichier IDL et aucune autre option.
 
 Le fichier doit contenir une option de ligne de commande MIDL par ligne.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **IDL incorporé** page de propriétés.
+1. Sélectionnez les **Propriétés** > deconfigurationpage de propriétés**IDL incorporé** . > 
 
-1. Modifier le **commandes MIDL** propriété.
+1. Modifiez la propriété **commandes MIDL** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 

@@ -2,12 +2,12 @@
 title: /INTEGRITYCHECK (Exiger la vérification de la signature)
 ms.date: 11/04/2016
 ms.assetid: 9e738825-2c98-40cd-8ad2-5d0d9c14893e
-ms.openlocfilehash: a46f31140c01753fdaa6e72fd0f741f569a5ad94
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1732c612501b66753635b272f94764975c555f75
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450447"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492845"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (Exiger la vérification de la signature)
 
@@ -21,7 +21,7 @@ Spécifie que la signature numérique de l’image binaire doit être vérifiée
 
 Par défaut, **/INTEGRITYCHECK** est désactivé.
 
-Le **/INTEGRITYCHECK** groupes d’options, dans l’en-tête PE du fichier DLL ou du fichier exécutable, un indicateur pour le Gestionnaire de mémoire vérifier une signature numérique afin de charger l’image dans Windows. Cette option doit être définie pour les DLL 32 bits et 64 bits qui implémentent le code en mode noyau chargé par certaines fonctionnalités de Windows et est recommandée pour tous les pilotes de périphériques sur Windows Vista, Windows 7, Windows 8, Windows Server 2008 et Windows Server 2012. Les versions de Windows antérieures à Windows Vista ignorent cet indicateur. Pour plus d’informations, consultez [forcé l’intégrité de signature de fichiers Portable Executable (PE)](https://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx).
+L’option **/INTEGRITYCHECK** définit, dans l’en-tête PE du fichier dll ou du fichier exécutable, un indicateur pour que le gestionnaire de mémoire vérifie la signature numérique afin de charger l’image dans Windows. Cette option doit être définie pour les dll 32 bits et 64 bits qui implémentent le code en mode noyau chargé par certaines fonctionnalités de Windows. elle est recommandée pour tous les pilotes de périphérique sous Windows Vista, Windows 7, Windows 8, Windows Server 2008 et Windows Server 2012. Les versions de Windows antérieures à Windows Vista ignorent cet indicateur. Pour plus d’informations, consultez [signature d’intégrité forcée des fichiers exécutables portables (PE)](https://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx).
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Pour définir cette option d'éditeur de liens dans Visual Studio
 
@@ -31,14 +31,14 @@ Le **/INTEGRITYCHECK** groupes d’options, dans l’en-tête PE du fichier DLL 
 
 1. Développez le nœud **Éditeur de liens**.
 
-1. Sélectionnez le **ligne de commande** page de propriétés.
+1. Sélectionnez la page de propriétés **ligne de commande** .
 
-1. Dans **des Options supplémentaires**, entrez `/INTEGRITYCHECK` ou `/INTEGRITYCHECK:NO`.
+1. Dans **options supplémentaires**, entrez `/INTEGRITYCHECK` ou `/INTEGRITYCHECK:NO`.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)<br/>
-[Forcé l’intégrité signature de fichiers Portable Executable (PE)](https://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)<br/>
-[Procédure pas à pas de signature du Code en Mode noyau](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>
-[DLL AppInit dans Windows 7 et Windows Server 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)
+[Signature d’intégrité forcée des fichiers exécutables portables (PE)](https://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)<br/>
+[Conditions requises pour la signature de code en mode noyau](/windows-hardware/drivers/install/kernel-mode-code-signing-requirements--windows-vista-and-later-)<br/>
+[DLL AppInit et démarrage sécurisé](/windows/win32/dlls/secure-boot-and-appinit-dlls)

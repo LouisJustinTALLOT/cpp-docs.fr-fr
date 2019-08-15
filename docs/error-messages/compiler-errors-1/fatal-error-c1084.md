@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1084
 ms.assetid: b2f273ef-3a14-4d5f-8ce0-7a11a0388fe6
-ms.openlocfilehash: 8c90616165a7b47d4251ace998fd49c613f244b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0c8e6a8f8321dccdfd7cee128a4cf06cebda991
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208813"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501132"
 ---
 # <a name="fatal-error-c1084"></a>Erreur irrécupérable C1084
 
 Impossible de lire le fichier 'TypeFichier' : 'fichier' : message
 
-Cette erreur résulte généralement de l'échec d'un appel à une API système interne effectué par le compilateur. Le message affiché lorsque cette erreur est rencontrée est souvent généré à l’aide [_wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) ou [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).
+Cette erreur résulte généralement de l'échec d'un appel à une API système interne effectué par le compilateur. Le message qui s’affiche lorsque cette erreur est rencontrée est souvent généré par [_wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) ou [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage).
 
 La procédure ci-dessous peut aider à résoudre l'erreur C1084 :
 
@@ -25,9 +25,9 @@ La procédure ci-dessous peut aider à résoudre l'erreur C1084 :
 
 - Assurez-vous que les autorisations appropriées sont définies afin de pouvoir accéder au fichier spécifié.
 
-- Vérifiez que la syntaxe de ligne de commande respecte les règles décrites sous [du compilateur de ligne de commande syntaxe](../../build/reference/compiler-command-line-syntax.md).
+- Vérifiez que la syntaxe de la ligne de commande respecte les règles décrites dans [syntaxe de la ligne de commande du compilateur](../../build/reference/compiler-command-line-syntax.md).
 
-- Assurez-vous que les variables d’environnement **TMP** et **TEMP** sont correctement ensemble, ainsi que les autorisations appropriées pour accéder aux répertoires ces variables d’environnement font référence. Vérifiez que les lecteurs référencés par le **TMP** et **TEMP** variables d’environnement contiennent une quantité adéquate d’espace libre.
+- Assurez-vous que les variables d’environnement **tmp** et **temp** sont correctement définies, ainsi que les autorisations appropriées pour accéder aux répertoires auxquels ces variables d’environnement font référence. Assurez-vous également que les lecteurs référencés par les variables d’environnement **tmp** et **temp** contiennent une quantité d’espace libre suffisante.
 
 - Si le message indique « numéro de fichier incorrect », le fichier spécifié était peut-être en cours de fermeture au premier plan alors que la compilation se déroulait en arrière-plan.
 

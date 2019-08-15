@@ -1,21 +1,21 @@
 ---
-title: iid_is (C++ attribut COM)
+title: iid_is (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.iid_is
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: b91fb7937bb0e20f2500eace9695bc0ddba21b26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bfa20f55afd85019795fdd40548158c2f49e126
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409523"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514661"
 ---
-# <a name="iidis"></a>iid_is
+# <a name="iid_is"></a>iid_is
 
-Spécifie l’IID de l’interface COM vers laquelle pointé un pointeur d’interface.
+Spécifie l’IID de l’interface COM vers laquelle pointe un pointeur d’interface.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,11 +26,11 @@ Spécifie l’IID de l’interface COM vers laquelle pointé un pointeur d’int
 ### <a name="parameters"></a>Paramètres
 
 *expression*<br/>
-Une expression de langage C qui spécifie un IID d’une interface COM vers laquelle pointe un pointeur d’interface.
+Expression de langage C qui spécifie un IID d’une interface COM vers laquelle pointe un pointeur d’interface.
 
 ## <a name="remarks"></a>Notes
 
-Le **iid_is** C++ attribut a les mêmes fonctionnalités que le [iid_is](/windows/desktop/Midl/iid-is) attribut MIDL.
+L’attribut **iid_is** C++ a les mêmes fonctionnalités que l’attribut MIDL [iid_is](/windows/win32/Midl/iid-is) .
 
 ## <a name="example"></a>Exemple
 
@@ -59,8 +59,8 @@ __interface IFireTabCtrl : IDispatch
 |-|-|
 |**S'applique à**|Paramètre d’interface, membre de données|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

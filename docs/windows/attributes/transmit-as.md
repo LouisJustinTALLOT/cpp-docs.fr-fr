@@ -1,21 +1,21 @@
 ---
-title: transmit_as (C++ attribut COM)
+title: transmit_as (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 939013e43f08aeda788e468c995f1736cf6b6928
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407170"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513916"
 ---
-# <a name="transmitas"></a>transmit_as
+# <a name="transmit_as"></a>transmit_as
 
-Indique au compilateur d’associer un type présenté qui manipulent des applications clientes et serveur, à un type transmis.
+Indique au compilateur d’associer un type présenté que les applications clientes et serveur manipulent, avec un type transmis.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ Indique au compilateur d’associer un type présenté qui manipulent des applic
 ### <a name="parameters"></a>Paramètres
 
 *type*<br/>
-Spécifie le type de données transmises entre le client et le serveur.
+Spécifie le type de données transmis entre le client et le serveur.
 
 ## <a name="remarks"></a>Notes
 
-Le **transmit_as** C++ attribut a les mêmes fonctionnalités que le [transmit_as](/windows/desktop/Midl/transmit-as) attribut MIDL.
+L’attribut **transmit_as** C++ a les mêmes fonctionnalités que l’attribut MIDL [transmit_as](/windows/win32/Midl/transmit-as) .
 
 ## <a name="example"></a>Exemple
 
-Le code suivant illustre une utilisation de la **transmit_as** attribut :
+Le code suivant illustre une utilisation de l’attribut **transmit_as** :
 
 ```cpp
 // cpp_attr_ref_transmit_as.cpp
@@ -72,8 +72,8 @@ struct _TREE_NODE_TYPE * right;
 |-|-|
 |**S'applique à**|**typedef**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

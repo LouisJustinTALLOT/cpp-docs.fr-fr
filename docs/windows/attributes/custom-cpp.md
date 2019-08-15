@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148173"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491000"
 ---
 # <a name="custom-c"></a>custom (C++)
 
-Définit les métadonnées pour un objet dans la bibliothèque de types.
+Définit les métadonnées d’un objet dans la bibliothèque de types.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,13 +32,13 @@ Définit les métadonnées pour un objet dans la bibliothèque de types.
 ID unique.
 
 *value*<br/>
-Une valeur qui peut être placée dans un variant.
+Valeur qui peut être placée dans un variant.
 
 ## <a name="remarks"></a>Notes
 
-Le **personnalisé** attribut C++ entraînera des informations d’être placées dans la bibliothèque de types. Vous devez un outil qui lit la valeur personnalisée à partir de la bibliothèque de types.
+L’attribut **personnalisé** C++ entraîne la placement des informations dans la bibliothèque de types. Vous aurez besoin d’un outil qui lit la valeur personnalisée à partir de la bibliothèque de types.
 
-Le **personnalisé** attribut a les mêmes fonctionnalités que le [personnalisé](/windows/desktop/Midl/custom) attribut MIDL.
+L’attribut **personnalisé** a les mêmes fonctionnalités que l’attribut MIDL [personnalisé](/windows/win32/Midl/custom) .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -46,10 +46,10 @@ Le **personnalisé** attribut a les mêmes fonctionnalités que le [personnalis�
 
 |||
 |-|-|
-|**S'applique à**|Non-COM **interface**, **classe**, **enum**s, `idl_module` méthodes, les membres d’interface, les paramètres de l’interface, **typedef**s, **union**s, **struct**s|
+|**S'applique à**|**Interface**non com, **classe**, **enum**s, `idl_module` méthodes, membres d’interface, paramètres d’interface, **typedef**s, **Union**s, **struct**s|
 |**Renouvelable**|Oui|
-|**Attributs requis**|**coclasse** (lorsqu’il est utilisé pour la classe)|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|**coclasse** (en cas d’utilisation sur la classe)|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

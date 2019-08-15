@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-ms.openlocfilehash: d875a039b01b7458a1df46a2539cf5c68aa67e41
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 16fb330d2da83ddfd013e33a2d4b688b2711103b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915936"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492303"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
@@ -31,7 +31,7 @@ LRESULT NotifyHandler(
 Identificateur du contrôle qui envoie le message.
 
 *pnmh*<br/>
-Adresse d’une structure [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) qui contient le code de notification et des informations supplémentaires. Pour certains messages de notification, ce paramètre pointe vers une structure plus grande qui `NMHDR` a la structure comme premier membre.
+Adresse d’une structure [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) qui contient le code de notification et des informations supplémentaires. Pour certains messages de notification, ce paramètre pointe vers une structure plus grande qui `NMHDR` a la structure comme premier membre.
 
 *bHandled*<br/>
 La table des messages affecte à *bHandled* la valeur true avant l’appel de *notifyhandler* . Si *notifyhandler* ne gère pas complètement le message, il doit affecter à *BHandled* la valeur **false** pour indiquer que le message doit être traité ultérieurement.
@@ -48,4 +48,4 @@ Pour obtenir un exemple d’utilisation de ce gestionnaire de messages dans une 
 
 [Implémentation d’une fenêtre](../atl/implementing-a-window.md)<br/>
 [Tables des messages](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](/windows/desktop/controls/wm-notify)
+[WM_NOTIFY](/windows/win32/controls/wm-notify)

@@ -1,21 +1,21 @@
 ---
-title: size_is (C++ attribut COM)
+title: size_is (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407326"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514041"
 ---
-# <a name="sizeis"></a>size_is
+# <a name="size_is"></a>size_is
 
-Spécifiez la taille de mémoire allouée pour les pointeurs de taille, en taille réelle des pointeurs vers des pointeurs de taille et seul ou les tableaux multidimensionnels.
+Spécifiez la taille de la mémoire allouée aux pointeurs dimensionnés, aux pointeurs dimensionnés aux pointeurs dimensionnés et aux tableaux à une ou plusieurs dimensions.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ Spécifiez la taille de mémoire allouée pour les pointeurs de taille, en taill
 ### <a name="parameters"></a>Paramètres
 
 *expression*<br/>
-La taille de mémoire allouée pour les pointeurs de taille.
+Taille de la mémoire allouée pour les pointeurs de taille.
 
 ## <a name="remarks"></a>Notes
 
-Le **size_is** C++ attribut a les mêmes fonctionnalités que le [size_is](/windows/desktop/Midl/size-is) attribut MIDL.
+L’attribut **size_is** C++ a les mêmes fonctionnalités que l’attribut MIDL [size_is](/windows/win32/Midl/size-is) .
 
 ## <a name="example"></a>Exemple
 
-Consultez l’exemple de [first_is](first-is.md) pour obtenir un exemple montrant comment spécifier une section d’un tableau.
+Consultez l’exemple de [first_is](first-is.md) pour obtenir un exemple de spécification d’une section d’un tableau.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -42,9 +42,9 @@ Consultez l’exemple de [first_is](first-is.md) pour obtenir un exemple montran
 
 |||
 |-|-|
-|**S'applique à**|Champ **struct** ou **union**, paramètre de l’interface, interface (méthode)|
+|**S'applique à**|Champ dans un **struct** ou une **Union**, un paramètre d’interface, une méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
+|**Attributs requis**|Aucun|
 |**Attributs non valides**|`max_is`|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).

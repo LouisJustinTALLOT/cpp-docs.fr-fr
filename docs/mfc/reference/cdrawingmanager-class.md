@@ -1,5 +1,5 @@
 ---
-title: Cdrawingmanager, classe
+title: CDrawingManager, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CDrawingManager
@@ -56,16 +56,16 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69365b66b12d5a9284c9b097b225ba041e07b6b0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164114"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506807"
 ---
-# <a name="cdrawingmanager-class"></a>Cdrawingmanager, classe
+# <a name="cdrawingmanager-class"></a>CDrawingManager, classe
 
-Le `CDrawingManager` classe implémente les algorithmes de dessins complexes.
+La `CDrawingManager` classe implémente des algorithmes de dessin complexes.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -86,35 +86,35 @@ class CDrawingManager : public CObject
 
 |Nom|Description|
 |----------|-----------------|
-|[CDrawingManager::CreateBitmap_32](#createbitmap_32)|Crée une bitmap indépendante du périphérique 32 bits (DIB) que les applications peuvent écrire directement.|
-|[CDrawingManager::DrawAlpha](#drawalpha)|Affiche les bitmaps qui ont des pixels transparents ou semi-transparent.|
-|[CDrawingManager::DrawRotated](#drawrotated)|Fait pivoter une source de contenu de contrôleur de domaine à l’intérieur du rectangle donné par +/-90 degrés|
-|[CDrawingManager::DrawEllipse](#drawellipse)|Dessine une ellipse avec les couleurs de remplissage et la bordure fournis.|
+|[CDrawingManager::CreateBitmap_32](#createbitmap_32)|Crée une image bitmap indépendante du périphérique 32 (DIB) que les applications peuvent écrire directement.|
+|[CDrawingManager::DrawAlpha](#drawalpha)|Affiche les bitmaps qui ont des pixels transparents ou translucides.|
+|[CDrawingManager::DrawRotated](#drawrotated)|Fait pivoter un contenu DC source à l’intérieur du rectangle donné par +/-90 degrés|
+|[CDrawingManager::DrawEllipse](#drawellipse)|Dessine une ellipse avec les couleurs de remplissage et de bordure fournies.|
 |[CDrawingManager::DrawGradientRing](#drawgradientring)|Dessine un anneau et le remplit avec un dégradé de couleur.|
 |[CDrawingManager::DrawLine, CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|Dessine une ligne.|
-|[CDrawingManager::DrawRect](#drawrect)|Dessine un rectangle avec les couleurs de remplissage et la bordure fournis.|
+|[CDrawingManager::DrawRect](#drawrect)|Dessine un rectangle avec les couleurs de remplissage et de bordure fournies.|
 |[CDrawingManager::DrawShadow](#drawshadow)|Dessine une ombre pour une zone rectangulaire.|
-|[CDrawingManager::Fill4ColorsGradient](#fill4colorsgradient)|Remplit une zone rectangulaire avec deux gradients de couleur.|
+|[CDrawingManager::Fill4ColorsGradient](#fill4colorsgradient)|Remplit une zone rectangulaire avec deux dégradés de couleur.|
 |[CDrawingManager::FillGradient](#fillgradient)|Remplit une zone rectangulaire avec un dégradé de couleur spécifié.|
-|[CDrawingManager::FillGradient2](#fillgradient2)|Remplit une zone rectangulaire avec un dégradé de couleur spécifié. La direction de modification de la couleur du dégradé est également spécifiée.|
+|[CDrawingManager::FillGradient2](#fillgradient2)|Remplit une zone rectangulaire avec un dégradé de couleur spécifié. La direction de la modification de couleur du dégradé est également spécifiée.|
 |[CDrawingManager::GrayRect](#grayrect)|Remplit un rectangle avec une couleur grise spécifiée.|
 |[CDrawingManager::HighlightRect](#highlightrect)|Met en surbrillance une zone rectangulaire.|
-|[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)|Convertit une couleur à partir d’une représentation sous forme de HLS en une représentation RVB.|
-|[CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)|Convertit une couleur à partir d’une représentation sous forme de HLS en une représentation RVB.|
-|[CDrawingManager::HSVtoRGB](#hsvtorgb)|Convertit une couleur à partir d’une représentation TSL en une représentation RVB.|
-|[CDrawingManager::HuetoRGB](#huetorgb)|Méthode d’assistance qui convertit une valeur de teinte à un composant rouge, vert ou bleu.|
-|[CDrawingManager::MirrorRect](#mirrorrect)|Cette méthode retourne une zone rectangulaire.|
-|[CDrawingManager::PixelAlpha](#pixelalpha)|Méthode d’assistance qui détermine la couleur finale d’un pixel translucide.|
-|[CDrawingManager::PrepareShadowMask](#prepareshadowmask)|Crée une bitmap qui peut être utilisée comme une ombre.|
-|[CDrawingManager::RGBtoHSL](#rgbtohsl)|Convertit une couleur à partir d’une représentation RVB en une représentation NSL.|
-|[CDrawingManager::RGBtoHSV](#rgbtohsv)|Convertit une couleur à partir d’une représentation RVB en une représentation TSL.|
-|[CDrawingManager::SetAlphaPixel](#setalphapixel)|Méthode d’assistance qui le colore un pixel partiellement transparent dans une image bitmap.|
-|[CDrawingManager::SetPixel](#setpixel)|Méthode d’assistance qui modifie un seul pixel dans un bitmap de la couleur spécifiée.|
-|[CDrawingManager::SmartMixColors](#smartmixcolors)|Combine deux couleurs selon un ratio pondéré.|
+|[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)|Convertit une couleur d’une représentation TLS en une représentation RVB.|
+|[CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)|Convertit une couleur d’une représentation TLS en une représentation RVB.|
+|[CDrawingManager::HSVtoRGB](#hsvtorgb)|Convertit une couleur d’une représentation HSV en une représentation RVB.|
+|[CDrawingManager::HuetoRGB](#huetorgb)|Méthode d’assistance qui convertit une valeur de teinte en composant rouge, vert ou bleu.|
+|[CDrawingManager::MirrorRect](#mirrorrect)|Retourne une zone rectangulaire.|
+|[CDrawingManager::PixelAlpha](#pixelalpha)|Méthode d’assistance qui détermine la couleur finale d’un pixel semi-transparent.|
+|[CDrawingManager::PrepareShadowMask](#prepareshadowmask)|Crée une image bitmap qui peut être utilisée comme une ombre.|
+|[CDrawingManager::RGBtoHSL](#rgbtohsl)|Convertit une couleur d’une représentation RVB en une représentation TSL.|
+|[CDrawingManager::RGBtoHSV](#rgbtohsv)|Convertit une couleur d’une représentation RVB en représentation HSV.|
+|[CDrawingManager::SetAlphaPixel](#setalphapixel)|Méthode d’assistance qui colore un pixel partiellement transparent dans une bitmap.|
+|[CDrawingManager::SetPixel](#setpixel)|Méthode d’assistance qui modifie un seul pixel dans une image bitmap avec la couleur spécifiée.|
+|[CDrawingManager::SmartMixColors](#smartmixcolors)|Combine deux couleurs en fonction d’un rapport pondéré.|
 
 ## <a name="remarks"></a>Notes
 
-Le `CDrawingManager` classe fournit des fonctions de dessin des ombres, des dégradés de couleur et des rectangles en surbrillance. Il effectue également la fusion alpha. Vous pouvez utiliser cette classe pour modifier directement l’interface utilisateur de votre application.
+La `CDrawingManager` classe fournit des fonctions permettant de dessiner des ombres, des dégradés de couleur et des rectangles mis en surbrillance. Il effectue également la fusion alpha. Vous pouvez utiliser cette classe pour modifier directement l’interface utilisateur de votre application.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -123,11 +123,11 @@ Le `CDrawingManager` classe fournit des fonctions de dessin des ombres, des dég
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdrawmanager.h
+**En-tête:** afxdrawmanager. h
 
 ##  <a name="cdrawingmanager"></a>  CDrawingManager::CDrawingManager
 
-Construit un [CDrawingManager](../../mfc/reference/cdrawingmanager-class.md) objet.
+Construit un objet [CDrawingManager](../../mfc/reference/cdrawingmanager-class.md) .
 
 ```
 CDrawingManager(CDC& dc);
@@ -136,11 +136,11 @@ CDrawingManager(CDC& dc);
 ### <a name="parameters"></a>Paramètres
 
 *dc*<br/>
-[in] Une référence à un contexte de périphérique. Le `CDrawingManager` utilise ce contexte de dessin.
+dans Référence à un contexte de périphérique (Device Context). `CDrawingManager` Utilise ce contexte pour dessiner.
 
 ##  <a name="createbitmap_32"></a>  CDrawingManager::CreateBitmap_32
 
-Crée une bitmap indépendante du périphérique 32 bits (DIB) que les applications peuvent écrire directement.
+Crée une image bitmap indépendante du périphérique 32 (DIB) que les applications peuvent écrire directement.
 
 ```
 static HBITMAP __stdcall CreateBitmap_32(
@@ -157,22 +157,22 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||
 |-|-|
 |Paramètre|Description|
-|*size*|[in] Un [CSize](../../atl-mfc-shared/reference/csize-class.md) paramètre qui indique la taille de la bitmap.|
-|*pBits*|[out] Un pointeur vers un pointeur qui reçoit l’emplacement de du fichier DIB bit des valeurs.|
-|*bitmap*|Un handle de bitmap d’origine|
-|*clrTransparent*|Une valeur RVB en spécifiant une couleur transparente de l’image bitmap d’origine.|
+|*size*|dans Paramètre [CSize](../../atl-mfc-shared/reference/csize-class.md) qui indique la taille de l’image bitmap.|
+|*pBits*|à Pointeur vers un pointeur de données qui reçoit l’emplacement des valeurs de bit du DIB.|
+|*bitmap*|Handle vers la bitmap d’origine|
+|*clrTransparent*|Valeur RVB spécifiant la couleur transparente de l’image bitmap d’origine.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un handle de bitmap DIB nouvellement créé si cette méthode a réussi ; Sinon, NULL.
+Handle vers l’image bitmap DIB nouvellement créée si cette méthode réussit; Sinon, NULL.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur la création d’une image bitmap DIB, consultez [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap).
+Pour plus d’informations sur la création d’une bitmap DIB, consultez [CreateDIBSection](/windows/win32/api/wingdi/nf-wingdi-createdibitmap).
 
 ##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha
 
-Affiche les bitmaps qui ont des pixels transparents ou semi-transparent.
+Affiche les bitmaps qui ont des pixels transparents ou translucides.
 
 ```
 void DrawAlpha(
@@ -185,24 +185,24 @@ void DrawAlpha(
 ### <a name="parameters"></a>Paramètres
 
 *pDstDC*<br/>
-[in] Pointeur vers le contexte de périphérique pour la destination.
+dans Pointeur vers le contexte de périphérique (Device Context) pour la destination.
 
 *rectDst*<br/>
-[in] Le rectangle de destination.
+dans Rectangle de destination.
 
 *pSrcDC*<br/>
-[in] Pointeur vers le contexte de périphérique pour la source.
+dans Pointeur vers le contexte de périphérique pour la source.
 
 *rectSrc*<br/>
-[in] Le rectangle source.
+dans Rectangle source.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode effectue la simulation de transparence pour les bitmaps de deux. Pour plus d’informations sur le blindage alpha, consultez [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) dans le SDK Windows.
+Cette méthode effectue une fusion alpha pour deux bitmaps. Pour plus d’informations sur la fusion alpha, consultez [AlphaBlend](/windows/win32/api/wingdi/nf-wingdi-alphablend) dans le SDK Windows.
 
 ##  <a name="drawellipse"></a>  CDrawingManager::DrawEllipse
 
-Dessine une ellipse avec les couleurs de remplissage et la bordure fournis.
+Dessine une ellipse avec les couleurs de remplissage et de bordure fournies.
 
 ```
 void DrawEllipse(
@@ -214,17 +214,17 @@ void DrawEllipse(
 ### <a name="parameters"></a>Paramètres
 
 *rect*<br/>
-[in] Le rectangle englobant de l’ellipse.
+dans Rectangle englobant pour l’ellipse.
 
 *clrFill*<br/>
-[in] La couleur de que cette méthode utilise pour remplir l’ellipse.
+dans Couleur utilisée par cette méthode pour remplir l’ellipse.
 
 *clrLine*<br/>
-[in] La couleur de cette méthode utilise en tant que la bordure de l’ellipse.
+dans Couleur utilisée par cette méthode comme bordure de l’ellipse.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode retourne sans dessiner une ellipse si une couleur est définie sur -1. Elle retourne également sans dessiner une ellipse, si une dimension du rectangle englobant est 0.
+Cette méthode retourne sans dessiner une ellipse si l’une des couleurs est définie sur-1. Elle retourne également sans dessiner une ellipse si l’une des dimensions du rectangle englobant est 0.
 
 ##  <a name="drawgradientring"></a>  CDrawingManager::DrawGradientRing
 
@@ -244,25 +244,25 @@ BOOL DrawGradientRing(
 ### <a name="parameters"></a>Paramètres
 
 *rect*<br/>
-[in] Un [CRect](../../atl-mfc-shared/reference/crect-class.md) paramètre qui spécifie la limite de l’anneau de dégradé.
+dans Paramètre [CRect](../../atl-mfc-shared/reference/crect-class.md) qui spécifie la limite du cycle de dégradé.
 
 *colorStart*<br/>
-[in] La première couleur du dégradé.
+dans Première couleur du dégradé.
 
 *colorFinish*<br/>
-[in] La dernière couleur du dégradé.
+dans Dernière couleur du dégradé.
 
 *colorBorder*<br/>
-[in] La couleur de la bordure.
+dans Couleur de la bordure.
 
 *nAngle*<br/>
-[in] Un paramètre qui spécifie l’angle du dégradé de dessin initial. Cette valeur doit être comprise entre 0 et 360.
+dans Paramètre qui spécifie l’angle de dessin dégradé initial. Cette valeur doit être comprise entre 0 et 360.
 
 *nWidth*<br/>
-[in] La largeur de la bordure de l’anneau.
+dans Largeur de la bordure de l’anneau.
 
 *clrFace*<br/>
-[in] Couleur de l’intérieur de l’anneau.
+dans Couleur de l’intérieur de l’anneau.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -270,7 +270,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Le rectangle défini par *rect* doivent être au moins 5 pixels larges et 5 pixels en hauteur.
+Le rectangle défini par *Rect* doit avoir une largeur d’au moins 5 pixels et une hauteur de 5 pixels.
 
 ##  <a name="drawline_cdrawingmanager__drawlinea"></a>  CDrawingManager::DrawLine, CDrawingManager::DrawLineA
 
@@ -297,19 +297,19 @@ void DrawLineA(
 |||
 |-|-|
 |Paramètre|Description|
-|*x1*|[in] Coordonnée x où la ligne commence.|
-|*y1*|[in] Coordonnée y où la ligne commence.|
-|*x2*|[in] Coordonnée x où la ligne se termine.|
-|*y2*|[in] Coordonnée y où la ligne se termine.|
-|*clrLine*|[in] La couleur de la ligne.|
+|*x1*|dans Coordonnée x où commence la ligne.|
+|*y1*|dans Coordonnée y où commence la ligne.|
+|*x2*|dans Coordonnée x où la ligne se termine.|
+|*y2*|dans Coordonnée y où la ligne se termine.|
+|*clrLine*|dans Couleur de la ligne.|
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode échoue si *clrLine* est égal à -1.
+Cette méthode échoue si *clrLine* est égal à-1.
 
 ##  <a name="drawrect"></a>  CDrawingManager::DrawRect
 
-Dessine un rectangle avec les couleurs de remplissage et la bordure fournis.
+Dessine un rectangle avec les couleurs de remplissage et de bordure fournies.
 
 ```
 void DrawRect(
@@ -321,17 +321,17 @@ void DrawRect(
 ### <a name="parameters"></a>Paramètres
 
 *rect*<br/>
-[in] Les limites du rectangle.
+dans Limites du rectangle.
 
 *clrFill*<br/>
-[in] La couleur de que cette méthode utilise pour remplir le rectangle.
+dans Couleur utilisée par cette méthode pour remplir le rectangle.
 
 *clrLine*<br/>
-[in] La couleur de cette méthode utilise pour la bordure du rectangle.
+dans Couleur utilisée par cette méthode pour la bordure du rectangle.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode retourne sans dessiner un rectangle, si une couleur est définie sur -1. Elle retourne également si une dimension du rectangle est 0.
+Cette méthode retourne sans dessiner de rectangle si l’une des couleurs est définie sur-1. Elle retourne également si l’une des dimensions du rectangle est égale à 0.
 
 ##  <a name="drawshadow"></a>  CDrawingManager::DrawShadow
 
@@ -352,28 +352,28 @@ BOOL DrawShadow(
 ### <a name="parameters"></a>Paramètres
 
 *rect*<br/>
-[in] Une zone rectangulaire dans votre application. Le Gestionnaire de dessin Dessine une ombre en dessous de cette zone.
+dans Zone rectangulaire dans votre application. Le gestionnaire de dessins dessinera une ombre sous cette zone.
 
 *nDepth*<br/>
-[in] La largeur et la hauteur de l’ombre.
+dans Largeur et hauteur de l’ombre.
 
 *iMinBrightness*<br/>
-[in] La luminosité minimale de l’ombre.
+dans Luminosité minimale de l’ombre.
 
 *iMaxBrightness*<br/>
-[in] La luminosité maximale de l’ombre.
+dans Luminosité maximale de l’ombre.
 
 *pBmpSaveBottom*<br/>
-[in] Pointeur vers une image bitmap qui contient l’image pour la partie inférieure de l’ombre.
+dans Pointeur vers une image bitmap qui contient l’image pour la partie inférieure de l’ombre.
 
 *pBmpSaveRight*<br/>
-[in] Pointeur vers une image bitmap qui contient l’image de l’ombre est dessinée sur le côté droit du rectangle.
+dans Pointeur vers une bitmap qui contient l’image de l’ombre dessinée sur le côté droit du rectangle.
 
 *clrBase*<br/>
-[in] La couleur de l’ombre.
+dans Couleur de l’ombre.
 
 *bRightShadow*<br/>
-[in] Un paramètre booléen qui indique comment l’ombre est dessinée. Si *bRightShadow* est `TRUE`, `DrawShadow` Dessine une ombre sur le côté droit du rectangle.
+dans Paramètre booléen qui indique la façon dont l’ombre est dessinée. Si *bRightShadow* est `TRUE`, `DrawShadow` dessine une ombre sur le côté droit du rectangle.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -381,21 +381,21 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez fournir deux bitmaps valides pour le bas et les ombres de droite en utilisant les paramètres *pBmpSaveBottom* et *pBmpSaveRight*. Si ces [CBitmap](../../mfc/reference/cbitmap-class.md) objets ont un objet GDI attaché, `DrawShadow` utilisera ces bitmaps en tant que les ombres. Si le `CBitmap` paramètres n’ont pas d’un objet GDI attaché, `DrawShadow` Dessine l’ombre et attache les bitmaps pour les paramètres. Dans les futures les appels à `DrawShadow`, vous pouvez fournir ces bitmaps pour accélérer le processus de dessin. Pour plus d’informations sur la `CBitmap` classe et les objets GDI, consultez [objets graphiques](../../mfc/graphic-objects.md).
+Vous pouvez fournir deux bitmaps valides pour les ombres inférieures et droites à l’aide des paramètres *pBmpSaveBottom* et *pBmpSaveRight*. Si ces objets [CBitmap](../../mfc/reference/cbitmap-class.md) ont un objet GDI attaché, `DrawShadow` utilisera ces bitmaps comme ombres. Si les `CBitmap` paramètres n’ont pas d’objet GDI attaché, `DrawShadow` dessine l’ombre et joint les bitmaps aux paramètres. Dans les appels ultérieurs à `DrawShadow`, vous pouvez fournir ces bitmaps pour accélérer le processus de dessin. Pour plus d’informations sur `CBitmap` la classe et les objets GDI, consultez [objets graphiques](../../mfc/graphic-objects.md).
 
-Si un de ces paramètres est `NULL`, `DrawShadow` automatiquement Dessine l’ombre.
+Si l’un de ces paramètres `NULL`est `DrawShadow` , dessine automatiquement l’ombre.
 
-Si vous définissez *bRightShadow* sur FALSE, l’ombre sera dessiné en dessous et à gauche de la zone rectangulaire.
+Si vous affectez à *bRightShadow* la valeur false, l’ombre est dessinée en dessous et à gauche de la zone rectangulaire.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `DrawShadow` méthode de la `CDrawingManager` classe. Cet extrait de code fait partie de la [exemple de démonstration de feuille de propriétés de l’abonnement](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser la `DrawShadow` méthode de la `CDrawingManager` classe. Cet extrait de code fait partie de l’exemple de démonstration de la [feuille prop](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_PropSheetDemo#1](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]
 
 ##  <a name="fill4colorsgradient"></a>  CDrawingManager::Fill4ColorsGradient
 
-Remplit une zone rectangulaire avec deux gradients de couleur.
+Remplit une zone rectangulaire avec deux dégradés de couleur.
 
 ```
 void Fill4ColorsGradient(
@@ -411,29 +411,29 @@ void Fill4ColorsGradient(
 ### <a name="parameters"></a>Paramètres
 
 *rect*<br/>
-[in] Le rectangle à remplir.
+dans Rectangle à remplir.
 
 *colorStart1*<br/>
-[in] Couleur initiale du premier dégradé de couleur.
+dans Couleur initiale du dégradé de la première couleur.
 
 *colorFinish1*<br/>
-[in] La couleur finale du premier dégradé de couleur.
+dans Couleur finale du dégradé de la première couleur.
 
 *colorStart2*<br/>
-[in] Couleur initiale du deuxième dégradé de couleur.
+dans Couleur initiale du deuxième dégradé de couleur.
 
 *colorFinish2*<br/>
-[in] La couleur finale du deuxième dégradé de couleur.
+dans Couleur finale du deuxième dégradé de couleur.
 
 *bHorz*<br/>
-[in] Un paramètre booléen qui indique si `Fill4ColorsGradient` couleurs d’un dégradé horizontal ou vertical. TRUE indique un dégradé horizontal.
+dans Paramètre booléen qui indique si `Fill4ColorsGradient` colore un dégradé horizontal ou vertical. TRUE indique un dégradé horizontal.
 
 *nPercentage*<br/>
-[in] Entier compris entre 0 et 100. Cette valeur indique le pourcentage du rectangle à remplir avec le dégradé de couleur de premier.
+dans Entier de 0-100. Cette valeur indique le pourcentage du rectangle à remplir avec le premier dégradé de couleur.
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’un rectangle est rempli avec deux gradients de couleur, ils sont situés au-dessus de l’autre ou à côté de l’autre, selon la valeur de *bHorz*. Chaque dégradé de couleur est calculée indépendamment avec la méthode [CDrawingManager::FillGradient](#fillgradient).
+Lorsqu’un rectangle est rempli avec deux dégradés de couleur, ils sont situés au-dessus l’un de l’autre ou l’un à côté de l’autre, en fonction de la valeur de *bHorz*. Chaque dégradé de couleur est calculé indépendamment avec la méthode [CDrawingManager:: FillGradient](#fillgradient).
 
 Cette méthode génère un échec d’assertion si *nPercentage* est inférieur à 0 ou supérieur à 100.
 
@@ -454,26 +454,26 @@ void FillGradient(
 ### <a name="parameters"></a>Paramètres
 
 *rect*<br/>
-[in] La zone rectangulaire à remplir.
+dans Zone rectangulaire à remplir.
 
 *colorStart*<br/>
-[in] La première couleur du dégradé.
+dans Première couleur du dégradé.
 
 *colorFinish*<br/>
-[in] La couleur finale du dégradé.
+dans Couleur finale du dégradé.
 
 *bHorz*<br/>
-[in] Un paramètre booléen qui spécifie si `FillGradient` doit dessiner un dégradé horizontal ou vertical.
+dans Paramètre booléen qui spécifie si `FillGradient` doit dessiner un dégradé horizontal ou vertical.
 
 *nStartFlatPercentage*<br/>
-[in] Le pourcentage du rectangle qui `FillGradient` remplit avec *colorStart* avant le début du dégradé.
+dans Pourcentage du rectangle qui se `FillGradient` remplit avec *colorStart* avant de démarrer le dégradé.
 
 *nEndFlatPercentage*<br/>
-[in] Le pourcentage du rectangle qui `FillGradient` remplit avec *colorFinish* après avoir fini le dégradé.
+dans Pourcentage du rectangle qui se `FillGradient` remplit avec *colorFinish* après avoir terminé le dégradé.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `FillGradient` méthode de la `CDrawingManager` classe. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser la `FillGradient` méthode de la `CDrawingManager` classe. Cet extrait de code fait partie de l' [exemple de démonstration de MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#12](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]
 
@@ -492,24 +492,24 @@ void FillGradient2 (
 ### <a name="parameters"></a>Paramètres
 
 *rect*<br/>
-[in] La zone rectangulaire à remplir.
+dans Zone rectangulaire à remplir.
 
 *colorStart*<br/>
-[in] La première couleur du dégradé.
+dans Première couleur du dégradé.
 
 *colorFinish*<br/>
-[in] La dernière couleur du dégradé.
+dans Dernière couleur du dégradé.
 
 *nAngle*<br/>
-[in] Entier compris entre 0 et 360. Ce paramètre spécifie le sens du dégradé de couleur.
+dans Entier compris entre 0 et 360. Ce paramètre spécifie le sens du dégradé de couleur.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez *nAngle* pour spécifier le sens du dégradé de couleur. Lorsque vous spécifiez le sens du dégradé de couleur, vous spécifiez également où le dégradé de couleur commence. La valeur 0 pour *nAngle* indique le dégradé démarre à partir du haut du rectangle. En tant que *nAngle* augmente, l’emplacement de départ pour le dégradé se déplace dans le sens inverse des aiguilles selon l’angle.
+Utilisez *nAngle* pour spécifier le sens du dégradé de couleur. Lorsque vous spécifiez la direction du dégradé de couleur, vous spécifiez également l’emplacement de départ du dégradé de couleur. La valeur 0 pour *nAngle* indique que le dégradé commence à partir du haut du rectangle. À mesure que *nAngle* augmente, l’emplacement de départ du dégradé se déplace dans un sens dans le sens inverse des aiguilles d’une montre en fonction de l’angle.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `FillGradient2` méthode de la `CDrawingManager` classe. Cet extrait de code fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser la `FillGradient2` méthode de la `CDrawingManager` classe. Cet extrait de code fait partie de l' [exemple New Controls](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#37](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]
 
@@ -528,26 +528,26 @@ BOOL GrayRect(
 ### <a name="parameters"></a>Paramètres
 
 *rect*<br/>
-[in] La zone rectangulaire à remplir.
+dans Zone rectangulaire à remplir.
 
 *nPercentage*<br/>
-[in] Le pourcentage de votre choix dans le rectangle de gris.
+dans Pourcentage de gris souhaité dans le rectangle.
 
 *clrTransparent*<br/>
-[in] Couleur transparente.
+dans Couleur transparente.
 
 *clrDisabled*<br/>
-[in] La couleur par cette méthode pour la saturation de la déduplication si *nPercentage* a la valeur -1.
+dans Couleur utilisée par cette méthode pour la désaturation si *nPercentage* a la valeur-1.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la méthode a réussi ; Sinon, FALSE.
+TRUE si la méthode a réussi; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 Pour le paramètre *nPercentage*, une valeur inférieure indique une couleur plus sombre.
 
-La valeur maximale pour *nPercentage* est 200. Une valeur supérieure à 200 ne modifie pas l’apparence du rectangle. Si la valeur est -1, cette méthode utilise *clrDisabled* pour limiter la saturation du rectangle.
+La valeur maximale de *nPercentage* est 200. Une valeur supérieure à 200 ne modifie pas l’apparence du rectangle. Si la valeur est-1, cette méthode utilise *clrDisabled* pour limiter la saturation du rectangle.
 
 ##  <a name="highlightrect"></a>  CDrawingManager::HighlightRect
 
@@ -565,33 +565,33 @@ BOOL HighlightRect(
 ### <a name="parameters"></a>Paramètres
 
 *rect*<br/>
-[in] Une zone rectangulaire pour mettre en surbrillance.
+dans Zone rectangulaire à mettre en surbrillance.
 
 *nPercentage*<br/>
-[in] Un pourcentage qui indique le degré de transparence qui doit être à la mise en surbrillance.
+dans Pourcentage qui indique la transparence de la mise en surbrillance.
 
 *clrTransparent*<br/>
-[in] Couleur transparente.
+dans Couleur transparente.
 
 *nTolerance*<br/>
-[in] Un entier compris entre 0 et 255 qui indique la tolérance de couleur.
+dans Entier compris entre 0 et 255 qui indique la tolérance de couleurs.
 
 *clrBlend*<br/>
-[in] La couleur de base pour la fusion.
+dans Couleur de base pour la fusion.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la méthode a réussi ; Sinon, FALSE.
+TRUE si la méthode réussit; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Si *nPercentage* est comprise entre 0 et 99, `HighlightRect` utilise l’algorithme contrôle alpha. Pour plus d’informations sur la fusion alpha, consultez [lignes de fusion Alpha et remplissages](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills). Si *nPercentage* est -1, cette méthode utilise le niveau de mise en surbrillance par défaut. Si *nPercentage* est 100, cette méthode ne fait rien et retourne la valeur TRUE.
+Si la valeur de *nPercentage* est comprise entre 0 et 99, `HighlightRect` utilise l’algorithme de fusion alpha. Pour plus d’informations sur la fusion alpha, consultez [couches et remplissages de fusion alpha](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills). Si *nPercentage* a la valeur-1, cette méthode utilise le niveau de surbrillance par défaut. Si *nPercentage* est 100, cette méthode ne fait rien et retourne true.
 
-La méthode utilise le paramètre *nTolerance* pour déterminer s’il faut mettre en surbrillance de la zone rectangulaire. Pour mettre en surbrillance le rectangle, la différence entre la couleur d’arrière-plan de votre application et *clrTransparent* doit être inférieur à *nTolerance* dans chaque composant de couleur (rouge, vert et bleu).
+La méthode utilise le paramètre *nTolerance* pour déterminer si la zone rectangulaire doit être mise en surbrillance. Pour mettre en surbrillance le rectangle, la différence entre la couleur d’arrière-plan de votre application et *clrTransparent* doit être inférieure à *nTolerance* dans chaque composant de couleur (rouge, vert et bleu).
 
 ##  <a name="hlstorgb_one"></a>  CDrawingManager::HLStoRGB_ONE
 
-Convertit une couleur à partir d’une représentation sous forme de HLS en une représentation RVB.
+Convertit une couleur d’une représentation TLS en une représentation RVB.
 
 ```
 static COLORREF __stdcall HLStoRGB_ONE(
@@ -603,27 +603,27 @@ static COLORREF __stdcall HLStoRGB_ONE(
 ### <a name="parameters"></a>Paramètres
 
 *H*<br/>
-[in] Un nombre compris entre 0 et 1 qui représente la teinte de la couleur.
+dans Nombre compris entre 0 et 1 qui représente la teinte de la couleur.
 
 *L*<br/>
-[in] Un nombre compris entre 0 et 1 qui indique la couleur de la luminosité.
+dans Nombre compris entre 0 et 1 qui indique la luminosité de la couleur.
 
 *S*<br/>
-[in] Un nombre compris entre 0 et 1 qui indique la saturation de la couleur.
+dans Nombre compris entre 0 et 1 qui indique la saturation de la couleur.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La représentation RVB de la couleur TSL fournie.
+Représentation RVB de la couleur TLS fournie.
 
 ### <a name="remarks"></a>Notes
 
-Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](/windows/desktop/uxguide/vis-color).
+Une couleur peut être représentée sous la forme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations de couleur, consultez [Color](/windows/win32/uxguide/vis-color).
 
-Cette méthode et la `CDrawingManager::HLStoRGB_TWO` méthode effectuer la même opération, mais requièrent des valeurs différentes pour le *H* paramètre. Dans cette méthode, *H* est un pourcentage du cercle. Dans le `CDrawingManager::HLStoRGB_TWO` (méthode), *H* est une valeur de degré comprise entre 0 et 360, ce qui les deux représentent rouge. Par exemple, avec `HLStoRGB_ONE`, une valeur de 0,25 pour *H* équivaut à une valeur de 90 avec `HLStoRGB_TWO`.
+Cette méthode et la `CDrawingManager::HLStoRGB_TWO` méthode effectuent la même opération, mais requièrent des valeurs différentes pour le paramètre *H* . Dans cette méthode, *H* est un pourcentage du cercle. Dans la `CDrawingManager::HLStoRGB_TWO` méthode, *H* est une valeur de degré comprise entre 0 et 360, qui représentent toutes deux le rouge. Par exemple, avec `HLStoRGB_ONE`, la valeur 0,25 pour *H* équivaut à une valeur de 90 avec `HLStoRGB_TWO`.
 
-##  <a name="hlstorgb_two"></a>  CDrawingManager::HLStoRGB_TWO
+##  <a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO
 
-Convertit une couleur à partir d’une représentation sous forme de HLS en une représentation RVB.
+Convertit une couleur d’une représentation TLS en une représentation RVB.
 
 ```
 static COLORREF __stdcall HLStoRGB_TWO(
@@ -635,27 +635,27 @@ static COLORREF __stdcall HLStoRGB_TWO(
 ### <a name="parameters"></a>Paramètres
 
 *H*<br/>
-[in] Un nombre compris entre 0 et 360 qui représente la teinte de la couleur.
+dans Nombre compris entre 0 et 360 qui représente la teinte de la couleur.
 
 *L*<br/>
-[in] Un nombre compris entre 0 et 1 qui indique la couleur de la luminosité.
+dans Nombre compris entre 0 et 1 qui indique la luminosité de la couleur.
 
 *S*<br/>
-[in] Un nombre compris entre 0 et 1 qui indique la saturation de la couleur.
+dans Nombre compris entre 0 et 1 qui indique la saturation de la couleur.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La représentation RVB de la couleur TSL fournie.
+Représentation RVB de la couleur TLS fournie.
 
 ### <a name="remarks"></a>Notes
 
-Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](/windows/desktop/uxguide/vis-color).
+Une couleur peut être représentée sous la forme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations de couleur, consultez [Color](/windows/win32/uxguide/vis-color).
 
-Cette méthode et la [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) méthode effectuer la même opération, mais requièrent des valeurs différentes pour le *H* paramètre. Dans cette méthode, *H* est une valeur de degré comprise entre 0 et 360, ce qui les deux représentent rouge. Dans le [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) (méthode), *H* est un pourcentage du cercle. Par exemple, avec `HLStoRGB_ONE`, une valeur de 0,25 pour *H* équivaut à une valeur de 90 avec `HLStoRGB_TWO`.
+Cette méthode et la méthode [CDrawingManager:: HLStoRGB_ONE](#hlstorgb_one) effectuent la même opération, mais requièrent des valeurs différentes pour le paramètre *H* . Dans cette méthode, *H* est une valeur de degré comprise entre 0 et 360, qui représentent toutes deux le rouge. Dans la méthode [CDrawingManager:: HLStoRGB_ONE](#hlstorgb_one) , *H* est un pourcentage du cercle. Par exemple, avec `HLStoRGB_ONE`, la valeur 0,25 pour *H* équivaut à une valeur de 90 avec `HLStoRGB_TWO`.
 
 ##  <a name="hsvtorgb"></a>  CDrawingManager::HSVtoRGB
 
-Convertit une couleur à partir d’une représentation TSL en une représentation RVB.
+Convertit une couleur d’une représentation HSV en une représentation RVB.
 
 ```
 static COLORREF __stdcall HSVtoRGB(
@@ -669,21 +669,21 @@ static COLORREF __stdcall HSVtoRGB(
 |||
 |-|-|
 |Paramètre|Description|
-|*H*|[in] Un nombre compris entre 0 et 360 qui indique la teinte de la couleur.|
-|*S*|[in] Un nombre compris entre 0 et 1 qui indique la saturation de la couleur.|
-|*V*|[in] Un nombre compris entre 0 et 1 qui indique la valeur de la couleur.|
+|*H*|dans Nombre compris entre 0 et 360 qui indique la teinte de la couleur.|
+|*S*|dans Nombre compris entre 0 et 1 qui indique la saturation de la couleur.|
+|*V*|dans Nombre compris entre 0 et 1 qui indique la valeur de la couleur.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-La représentation RVB de la couleur TSL fournie.
+Représentation RVB de la couleur HSV fournie.
 
 ### <a name="remarks"></a>Notes
 
-Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](/windows/desktop/uxguide/vis-color).
+Une couleur peut être représentée sous la forme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations de couleur, consultez [Color](/windows/win32/uxguide/vis-color).
 
 ##  <a name="huetorgb"></a>  CDrawingManager::HuetoRGB
 
-Convertit une valeur de teinte à un composant rouge, vert ou bleu.
+Convertit une valeur de teinte en composant rouge, vert ou bleu.
 
 ```
 static double __stdcall HuetoRGB(
@@ -700,32 +700,32 @@ static BYTE __stdcall HueToRGB(
 ### <a name="parameters"></a>Paramètres
 
 *m1*<br/>
-[in] Consultez la section Notes.
+dans Consultez la section Notes.
 
 *m2*<br/>
-[in] Consultez la section Notes.
+dans Consultez la section Notes.
 
 *h*<br/>
-[in] Consultez la section Notes.
+dans Consultez la section Notes.
 
 *rm1*<br/>
-[in] Consultez la section Notes.
+dans Consultez la section Notes.
 
 *rm2*<br/>
-[in] Consultez la section Notes.
+dans Consultez la section Notes.
 
 *rh*<br/>
-[in] Consultez la section Notes.
+dans Consultez la section Notes.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le composant de rouge, vert ou bleu individuel pour la teinte fourni.
+Composant individuel rouge, vert ou bleu pour la teinte fournie.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est une méthode d’assistance qui le `CDrawingManager` classe utilise pour calculer les composants rouges, vert et bleus individuels d’une couleur dans une représentation TSL ou TSL. Cette méthode n’est pas conçue pour être appelée directement par le programmeur. Les paramètres d’entrée sont des valeurs qui varient selon l’algorithme de conversion.
+Cette méthode est une méthode d’assistance utilisée par `CDrawingManager` la classe pour calculer les composants rouge, vert et bleu individuels d’une couleur dans une représentation HSV ou TSL. Cette méthode n’est pas conçue pour être appelée directement par le programmeur. Les paramètres d’entrée sont des valeurs qui dépendent de l’algorithme de conversion.
 
-Pour convertir une couleur TSL ou HSL en représentation RVB, appelez l’une des méthodes suivantes :
+Pour convertir une couleur HSV ou TSL en une représentation RVB, appelez l’une des méthodes suivantes:
 
 - [CDrawingManager::HSVtoRGB](#hsvtorgb)
 
@@ -735,7 +735,7 @@ Pour convertir une couleur TSL ou HSL en représentation RVB, appelez l’une de
 
 ##  <a name="mirrorrect"></a>  CDrawingManager::MirrorRect
 
-Cette méthode retourne une zone rectangulaire.
+Retourne une zone rectangulaire.
 
 ```
 void MirrorRect(
@@ -746,18 +746,18 @@ void MirrorRect(
 ### <a name="parameters"></a>Paramètres
 
 *rect*<br/>
-[in] Le rectangle englobant de la zone à retourner.
+dans Rectangle englobant de la zone à retourner.
 
 *bHorz*<br/>
-[in] Un paramètre booléen qui indique si le rectangle est retournée horizontalement ou verticalement.
+dans Paramètre booléen qui indique si le rectangle est inversé horizontalement ou verticalement.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode peut retourner toute zone du contexte de périphérique appartenant à la `CDrawingManager` classe. Si *bHorz* est définie sur TRUE, cette méthode retourne la zone horizontalement. Sinon, elle retourne verticalement la zone.
+Cette méthode peut retourner n’importe quelle zone du contexte de périphérique appartenant `CDrawingManager` à la classe. Si *bHorz* a la valeur true, cette méthode retourne la zone horizontalement. Sinon, elle retourne la zone verticalement.
 
 ##  <a name="pixelalpha"></a>  CDrawingManager::PixelAlpha
 
-Calcule la couleur finale d’un pixel translucide.
+Calcule la couleur finale pour un pixel semi-transparent.
 
 ```
 static COLORREF __stdcall PixelAlpha(
@@ -779,36 +779,36 @@ static COLORREF __stdcall PixelAlpha(
 ### <a name="parameters"></a>Paramètres
 
 *srcPixel*<br/>
-[in] Couleur initiale pour le pixel.
+dans Couleur initiale du pixel.
 
 *percent*<br/>
-[in] Un nombre compris entre 0 et 100 qui représente le pourcentage de transparence. Une valeur de 100 indique que la couleur initiale est complètement transparente.
+dans Nombre compris entre 0 et 100 qui représente le pourcentage de transparence. Une valeur de 100 indique que la couleur initiale est complètement transparente.
 
 *percentR*<br/>
-[in] Un nombre compris entre 0 et 100 qui représente le pourcentage de transparence pour le composant rouge.
+dans Nombre compris entre 0 et 100 qui représente le pourcentage de transparence pour le composant rouge.
 
 *percentG*<br/>
-[in] Un nombre compris entre 0 et 100 qui représente le pourcentage de transparence pour le composant vert.
+dans Nombre compris entre 0 et 100 qui représente le pourcentage de transparence pour le composant vert.
 
 *percentB*<br/>
-[in] Un nombre compris entre 0 et 100 qui représente le pourcentage de transparence pour le composant bleu.
+dans Nombre compris entre 0 et 100 qui représente le pourcentage de transparence pour le composant bleu.
 
 *dstPixel*<br/>
-[in] La couleur de base pour le pixel.
+dans Couleur de base du pixel.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La couleur finale du pixel translucide.
+Couleur finale du pixel semi-transparent.
 
 ### <a name="remarks"></a>Notes
 
-Ceci est une classe d’assistance pour colorer les bitmaps translucides et n’est pas conçu pour être appelée directement par le programmeur.
+Il s’agit d’une classe d’assistance pour la coloration des bitmaps translucides et n’est pas conçue pour être appelée directement par le programmeur.
 
-Lorsque vous utilisez la version de la méthode qui a *dstPixel*, la couleur finale est une combinaison de *dstPixel* et *srcPixel*. Le *srcPixel* la couleur est partiellement transparent sur la couleur de base de *dstPixel*.
+Lorsque vous utilisez la version de la méthode avec *dstPixel*, la couleur finale est une combinaison de *dstPixel* et *srcPixel*. La couleur *srcPixel* est la couleur partiellement transparente sur la couleur de base de *dstPixel*.
 
 ##  <a name="prepareshadowmask"></a>  CDrawingManager::PrepareShadowMask
 
-Crée une bitmap qui peut être utilisée comme une ombre.
+Crée une image bitmap qui peut être utilisée comme une ombre.
 
 ```
 static HBITMAP __stdcall PrepareShadowMask (
@@ -821,28 +821,28 @@ static HBITMAP __stdcall PrepareShadowMask (
 ### <a name="parameters"></a>Paramètres
 
 *nDepth*<br/>
-[in] La largeur et la hauteur de l’ombre.
+dans Largeur et hauteur de l’ombre.
 
 *clrBase*<br/>
-[in] La couleur de l’ombre.
+dans Couleur de l’ombre.
 
 *iMinBrightness*<br/>
-[in] La luminosité minimale de l’ombre.
+dans Luminosité minimale de l’ombre.
 
 *iMaxBrightness*<br/>
-[in] La luminosité maximale de l’ombre.
+dans Luminosité maximale de l’ombre.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un handle de bitmap créée si cette méthode a réussi ; Sinon, NULL.
+Handle vers l’image bitmap créée si cette méthode réussit; Sinon, NULL.
 
 ### <a name="remarks"></a>Notes
 
-Si *nDepth* est définie sur 0, cette méthode se termine et retourne la valeur NULL. Si *nDepth* est inférieur à 3, la largeur et la hauteur de l’ombre sont définis pour 3 pixels.
+Si *nDepth* a la valeur 0, cette méthode se termine et retourne la valeur null. Si *nDepth* est inférieur à 3, la largeur et la hauteur de l’ombre sont définies sur 3 pixels.
 
 ##  <a name="rgbtohsl"></a>  CDrawingManager::RGBtoHSL
 
-Convertit une couleur à partir d’une représentation sous forme rouge, vert et bleue (RVB) une teinte, saturation et la représentation sous forme de la luminosité (TSL).
+Convertit une couleur d’une représentation rouge, verte et bleue en une représentation de teinte, de saturation et de luminosité (TSL).
 
 ```
 static void __stdcall RGBtoHSL(
@@ -857,20 +857,20 @@ static void __stdcall RGBtoHSL(
 |||
 |-|-|
 |Paramètre|Description|
-|*rgb*|[in] La couleur de valeurs RVB.|
-|*H*|[out] Pointeur vers un double où la méthode stocke la teinte de la couleur.|
-|*S*|[out] Pointeur vers un double où la méthode stocke la saturation de la couleur.|
-|*L*|[out] Pointeur vers un double où la méthode stocke la luminosité de la couleur.|
+|*rgb*|dans Couleur des valeurs RVB.|
+|*H*|à Pointeur vers un double où la méthode stocke la teinte de la couleur.|
+|*S*|à Pointeur vers un double dans lequel la méthode stocke la saturation de la couleur.|
+|*L*|à Pointeur vers un double dans lequel la méthode stocke la luminosité de la couleur.|
 
 ### <a name="remarks"></a>Notes
 
-Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](/windows/desktop/uxguide/vis-color).
+Une couleur peut être représentée sous la forme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations de couleur, consultez [Color](/windows/win32/uxguide/vis-color).
 
-La valeur retournée pour *H* est représenté sous forme de fraction comprise entre 0 et 1, où 0 et 1 représentent rouge. Les valeurs renvoyées pour *S* et *L* sont des nombres compris entre 0 et 1.
+La valeur retournée pour *H* est représentée sous la forme d’une fraction comprise entre 0 et 1, où 0 et 1 représentent la couleur rouge. Les valeurs retournées pour *S* et *L* sont des nombres compris entre 0 et 1.
 
 ##  <a name="rgbtohsv"></a>  CDrawingManager::RGBtoHSV
 
-Convertit une couleur à partir d’une représentation RVB en une représentation TSL.
+Convertit une couleur d’une représentation RVB en représentation HSV.
 
 ```
 static void __stdcall RGBtoHSV(
@@ -883,26 +883,26 @@ static void __stdcall RGBtoHSV(
 ### <a name="parameters"></a>Paramètres
 
 *rgb*<br/>
-[in] Couleur à convertir en une représentation RVB.
+dans Couleur à convertir dans une représentation RVB.
 
 *H*<br/>
-[out] Pointeur vers un double où cette méthode stocke la teinte résultant pour la couleur.
+à Pointeur vers un double dans lequel cette méthode stocke la teinte résultante pour la couleur.
 
 *S*<br/>
-[out] Pointeur vers un double où cette méthode stocke la saturation qui en résulte pour la couleur.
+à Pointeur vers un double dans lequel cette méthode stocke la saturation résultante pour la couleur.
 
 *V*<br/>
-[out] Pointeur vers un double où cette méthode stocke la valeur obtenue pour la couleur.
+à Pointeur vers un double dans lequel cette méthode stocke la valeur résultante pour la couleur.
 
 ### <a name="remarks"></a>Notes
 
-Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](/windows/desktop/uxguide/vis-color).
+Une couleur peut être représentée sous la forme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations de couleur, consultez [Color](/windows/win32/uxguide/vis-color).
 
-La valeur retournée pour *H* est un nombre compris entre 0 et 360, où 0 et 360 indiquent rouge. Valeurs de retour pour *S* et *V* sont des nombres compris entre 0 et 1.
+La valeur retournée pour *H* est un nombre compris entre 0 et 360, où 0 et 360 indiquent rouge. Les valeurs de retour pour *S* et *V* sont des nombres compris entre 0 et 1.
 
 ##  <a name="setalphapixel"></a>  CDrawingManager::SetAlphaPixel
 
-Couleurs d’un pixel transparent dans une image bitmap.
+Colore un pixel transparent dans une bitmap.
 
 ```
 static void __stdcall SetAlphaPixel(
@@ -919,38 +919,38 @@ static void __stdcall SetAlphaPixel(
 ### <a name="parameters"></a>Paramètres
 
 *pBits*<br/>
-[in] Pointeur vers les valeurs de bits de l’image bitmap.
+dans Pointeur vers les valeurs de bit de l’image bitmap.
 
 *rect*<br/>
-[in] Une zone rectangulaire dans votre application. Le Gestionnaire de dessin Dessine une ombre en dessous et à droite de cette zone.
+dans Zone rectangulaire dans votre application. Le gestionnaire de dessins dessine une ombre sous et à droite de cette zone.
 
 *x*<br/>
-[in] La coordonnée horizontale du pixel de couleur.
+dans Coordonnée horizontale du pixel à colorier.
 
 *y*<br/>
-[in] Coordonnée verticale du pixel de couleur.
+dans Coordonnée verticale du pixel à colorier.
 
 *percent*<br/>
-[in] Le pourcentage de transparence.
+dans Pourcentage de transparence.
 
 *iShadowSize*<br/>
-[in] La largeur et la hauteur de l’ombre.
+dans Largeur et hauteur de l’ombre.
 
 *clrBase*<br/>
-[in] La couleur de l’ombre.
+dans Couleur de l’ombre.
 
 *bIsRight*<br/>
-[in] Un paramètre booléen qui indique quel pixel de couleur. Pour plus d'informations, consultez la section Notes.
+dans Paramètre booléen qui indique le pixel à colorier. Pour plus d'informations, consultez la section Notes.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est une méthode d’assistance qui est utilisée par le [CDrawingManager::DrawShadow](#drawshadow) (méthode). Nous recommandons que si vous souhaitez ajouter une ombre, appelez `CDrawingManager::DrawShadow` à la place.
+Cette méthode est une méthode d’assistance utilisée par la méthode [CDrawingManager::D rawshadow](#drawshadow) . Si vous souhaitez dessiner une ombre, nous vous recommandons d’appeler `CDrawingManager::DrawShadow` à la place.
 
-Si *bIsRight* est définie sur TRUE, le pixel de couleur est mesuré *x* pixels du bord droit de *rect*. Si la valeur est FALSE, le pixel de couleur est mesuré *x* pixels du bord gauche de *rect*.
+Si *bIsRight* a la valeur true, le pixel en couleur est mesuré *x* pixels à partir du bord droit de *Rect*. Si la valeur est FALSe, le pixel de couleur est mesuré *x* pixels à partir du bord gauche de *Rect*.
 
 ##  <a name="setpixel"></a>  CDrawingManager::SetPixel
 
-Modifie un seul pixel dans un bitmap de la couleur spécifiée.
+Remplace un seul pixel d’une image bitmap par la couleur spécifiée.
 
 ```
 static void __stdcall SetPixel(
@@ -967,16 +967,16 @@ static void __stdcall SetPixel(
 |||
 |-|-|
 |Paramètre|Description|
-|*pBits*|[in] Pointeur vers les valeurs de bits de l’image bitmap.|
-|*cx*|[in] La largeur totale de l’image bitmap.|
-|*cy*|[in] La hauteur totale de l’image bitmap.|
-|*x*|[in] Coordonnée x du pixel de la bitmap à modifier.|
-|*y*|[in] Coordonnée y du pixel de la bitmap à modifier.|
-|*color*|[in] La nouvelle couleur du pixel identifié par les coordonnées fournies.|
+|*pBits*|dans Pointeur vers les valeurs de bits de la bitmap.|
+|*cx*|dans Largeur totale de l’image bitmap.|
+|*cy*|dans Hauteur totale de l’image bitmap.|
+|*x*|dans Coordonnée x du pixel de la bitmap à modifier.|
+|*y*|dans Coordonnée y du pixel de la bitmap à modifier.|
+|*color*|dans Nouvelle couleur du pixel identifié par les coordonnées fournies.|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 
-Combine deux couleurs selon un ratio pondéré.
+Combine deux couleurs en fonction d’un rapport pondéré.
 
 ```
 static COLORREF __stdcall SmartMixColors(
@@ -992,25 +992,25 @@ static COLORREF __stdcall SmartMixColors(
 |||
 |-|-|
 |Paramètre|Description|
-|*color1*|[in] La première couleur à combiner.|
-|*color2*|[in] La deuxième couleur à combiner.|
-|*dblLumRatio*|[in] Le rapport pour la luminosité de la nouvelle couleur. `SmartMixColors` Multiplie la luminosité de la couleur mixte par ce rapport avant de déterminer la couleur finale.|
-|*k1*|[in] Le taux pondéré pour la première couleur.|
-|*k2*|[in] Le taux pondéré pour la deuxième couleur.|
+|*color1*|dans Première couleur à mélanger.|
+|*color2*|dans Deuxième couleur à mélanger.|
+|*dblLumRatio*|dans Rapport de la luminosité de la nouvelle couleur. `SmartMixColors`multiplie la luminosité de la couleur mixte par ce rapport avant de déterminer une couleur finale.|
+|*k1*|dans Le rapport pondéré pour la première couleur.|
+|*k2*|dans Le rapport pondéré pour la deuxième couleur.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-Couleur qui représente une combinaison pondérée des couleurs fournis.
+Couleur qui représente un mélange pondéré des couleurs fournies.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode échoue avec une erreur si le *k1* ou *k2* est inférieur à zéro. Si ces deux paramètres sont définies sur 0, la méthode retourne `RGB(0, 0, 0)`.
+Cette méthode échoue avec une erreur si *K1* ou *K2* est inférieur à zéro. Si ces deux paramètres ont la valeur 0, la méthode retourne `RGB(0, 0, 0)`.
 
-Le ratio pondéré est calculé avec la formule suivante : (color1 \* k1 + color2 \* k2) /(k1 + k2). Une fois que le ratio pondéré est déterminé, la méthode calcule la luminosité de la couleur mixte. Il multiplie ensuite la luminosité par *dblLumRatio*. Si la valeur est supérieure à 1.0, la méthode définit la luminosité de la couleur mixte pour la nouvelle valeur. Sinon, la luminosité est définie sur 1.0.
+Le rapport pondéré est calculé avec la formule suivante: (color1 \* K1 + color2 \* K2)/(K1 + K2). Une fois le rapport pondéré mesuré, la méthode calcule la luminosité de la couleur mixte. Il multiplie ensuite la luminosité par *dblLumRatio*. Si la valeur est supérieure à 1,0, la méthode définit la luminosité de la couleur mixte sur la nouvelle valeur. Dans le cas contraire, la luminosité est définie sur 1,0.
 
 ##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated
 
-Fait pivoter une source de contenu de contrôleur de domaine à l’intérieur du rectangle donné de 90 degrés.
+Fait pivoter un contenu DC source à l’intérieur du rectangle donné de 90 degrés.
 
 ```
 void DrawRotated(
@@ -1025,10 +1025,10 @@ void DrawRotated(
 Rectangle de destination.
 
 *dcSrc*<br/>
-Le contexte de périphérique source.
+Contexte de périphérique source.
 
 *bClockWise*<br/>
-TRUE indique que Rotation + 90 degrés ; La valeur FALSE indique Rotation-90 degrés.
+TRUE indique pivoter + 90 degrés; FALSe indique Rotate-90 degrés.
 
 ### <a name="remarks"></a>Notes
 

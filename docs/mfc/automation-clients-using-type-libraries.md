@@ -1,5 +1,5 @@
 ---
-title: 'Clients Automation : À l’aide de bibliothèques de types'
+title: 'Clients Automation: Utilisation des bibliothèques de types'
 ms.date: 11/04/2016
 f1_keywords:
 - MkTypLib
@@ -14,49 +14,49 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-ms.openlocfilehash: 32179f3913b52ca46f9ea7314b9957f4f4970713
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 480f8fca46b13d445f372311ed837475c71a1e9d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374192"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509219"
 ---
-# <a name="automation-clients-using-type-libraries"></a>Clients Automation : À l’aide de bibliothèques de types
+# <a name="automation-clients-using-type-libraries"></a>Clients Automation: Utilisation des bibliothèques de types
 
-Clients Automation doivent disposer d’informations sur les propriétés et méthodes des objets serveur si les clients se pour manipuler des objets de serveurs. Propriétés des types de données ; souvent les méthodes retournent des valeurs et acceptent des paramètres. Le client requiert des informations sur les types de données de tous ces afin de lier statiquement au type d’objet serveur.
+Les clients Automation doivent avoir des informations sur les propriétés et les méthodes des objets serveur si les clients doivent manipuler les objets des serveurs. Les propriétés ont des types de données; les méthodes retournent souvent des valeurs et acceptent des paramètres. Le client nécessite des informations sur les types de données de tous ces types afin de lier statiquement au type d’objet serveur.
 
-Ces informations de type peuvent être apportées connues de plusieurs façons. La méthode recommandée consiste à créer une bibliothèque de types.
+Ces informations de type peuvent être rendues de plusieurs façons. La méthode recommandée consiste à créer une bibliothèque de types.
 
-Pour plus d’informations sur [MkTypLib](/windows/desktop/Midl/differences-between-midl-and-mktyplib), consultez le kit SDK Windows.
+Pour plus d’informations sur [mktyplib](/windows/win32/Midl/differences-between-midl-and-mktyplib), consultez le SDK Windows.
 
-Visual C++ peut lire un fichier de bibliothèque de types et créer une classe de dispatch dérivée [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). Un objet de cette classe possède des propriétés et opérations qui dupliquent celles de l’objet serveur. Votre application appelle les propriétés et les opérations de cet objet et les fonctionnalités héritées de `COleDispatchDriver` achemine ces appels au système OLE, qui à son tour les achemine vers l’objet serveur.
+Visual C++ peut lire un fichier de bibliothèque de types et créer une classe de dispatch dérivée de [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). Un objet de cette classe possède des propriétés et des opérations qui dupliquent celles de l’objet serveur. Votre application appelle les propriétés et les opérations de cet objet, et les `COleDispatchDriver` fonctionnalités héritées de acheminent ces appels au système OLE, qui à son tour les achemine vers l’objet serveur.
 
-Visual C++ gère automatiquement ce fichier de bibliothèque de types pour vous si vous avez choisi d’inclure Automation lorsque le projet a été créé. Dans le cadre de chaque build, le fichier .tlb sera compilé avec MkTypLib.
+Visual C++ gère automatiquement ce fichier de bibliothèque de types pour vous si vous avez choisi d’inclure l’automatisation lors de la création du projet. Dans le cadre de chaque Build, le fichier. tlb sera généré avec MkTypLib.
 
-### <a name="to-create-a-dispatch-class-from-a-type-library-tlb-file"></a>Pour créer une classe de distribution à partir d’un fichier de bibliothèque de types (.tlb)
+### <a name="to-create-a-dispatch-class-from-a-type-library-tlb-file"></a>Pour créer une classe de dispatch à partir d’un fichier de bibliothèque de types (. tlb)
 
-1. Dans l’affichage de classes ou dans l’Explorateur de solutions, cliquez sur le projet, puis cliquez sur **ajouter** puis cliquez sur **ajouter une classe** dans le menu contextuel.
+1. Dans Affichage de classes ou Explorateur de solutions, cliquez avec le bouton droit sur le projet, cliquez sur **Ajouter** , puis sur **Ajouter une classe** dans le menu contextuel.
 
-1. Dans le **ajouter une classe** boîte de dialogue, sélectionnez le **c++ de Visual c++ / MFC** dossier dans le volet gauche. Sélectionnez le **classe MFC à partir de la TypeLib** icône dans le volet droit, cliquez sur **Open**.
+1. Dans la boîte de dialogue **Ajouter une classe** , sélectionnez le dossier **Visual C++/MFC** dans le volet gauche. Sélectionnez l’icône **classe MFC à partir d’une TypeLib** dans le volet droit, puis cliquez sur **ouvrir**.
 
-1. Dans le **Assistant Ajouter une classe à partir d’une Typelib** boîte de dialogue, sélectionnez une bibliothèque de types à partir de la **bibliothèques de types disponibles** liste déroulante. Le **Interfaces** zone affiche les interfaces disponibles pour la bibliothèque de types sélectionnée.
-
-    > [!NOTE]
-    >  Vous pouvez sélectionner des interfaces à partir de plus d’une bibliothèque de types.
-
-   Pour sélectionner des interfaces, double-cliquez dessus ou cliquez sur le **ajouter** bouton. Lorsque vous procédez ainsi, les noms pour les classes de distribution s’affichent dans le **classes générées** boîte. Vous pouvez modifier les noms de classe dans le `Class` boîte.
-
-   Le **fichier** boîte affiche le fichier dans lequel la classe sera déclarée. (vous pouvez modifier ce nom de fichier ainsi). Vous pouvez également utiliser le bouton Parcourir pour sélectionner d’autres fichiers, si vous préférez que les informations d’en-tête et d’implémentation écrites dans les fichiers existants ou dans un répertoire autre que le répertoire du projet.
+1. Dans la boîte de dialogue **Assistant Ajout d’une classe à partir d’une TypeLib** , sélectionnez une bibliothèque de types dans la liste déroulante **bibliothèques de types disponibles** . La zone **interfaces** affiche les interfaces disponibles pour la bibliothèque de types sélectionnée.
 
     > [!NOTE]
-    >  Toutes les classes de distribution pour les interfaces sélectionnés seront placés dans le fichier spécifié ici. Si vous souhaitez que les interfaces doivent être déclarées dans les en-têtes distincts, vous devez exécuter cet Assistant pour chaque fichier d’en-tête que vous souhaitez créer.
+    >  Vous pouvez sélectionner des interfaces à partir de plusieurs bibliothèques de types.
+
+   Pour sélectionner des interfaces, double-cliquez dessus ou cliquez sur le bouton **Ajouter** . Dans ce cas, les noms des classes de dispatch s’affichent dans la zone **classes générées** . Vous pouvez modifier les noms de classe dans `Class` la zone.
+
+   La zone **fichier** affiche le fichier dans lequel la classe doit être déclarée. (vous pouvez également modifier ce nom de fichier). Vous pouvez également utiliser le bouton Parcourir pour sélectionner d’autres fichiers, si vous préférez que les informations d’en-tête et d’implémentation soient écrites dans des fichiers existants ou dans un répertoire autre que le répertoire du projet.
 
     > [!NOTE]
-    >  Des informations de bibliothèque de types peuvent être stockées dans les fichiers avec. DLL. OCX, ou. Extensions de fichier OLB.
+    >  Toutes les classes de dispatch pour les interfaces sélectionnées seront placées dans le fichier spécifié ici. Si vous souhaitez que les interfaces soient déclarées dans des en-têtes distincts, vous devez exécuter cet Assistant pour chaque fichier d’en-tête que vous souhaitez créer.
+
+    > [!NOTE]
+    >  Certaines informations de bibliothèque de types peuvent être stockées dans des fichiers avec. DLL,. OCX ou. Extensions de fichier OLB.
 
 1. Cliquez sur **Terminer**.
 
-   L’Assistant écrit le code pour vos classes de distribution à l’aide de la classe spécifiée et les noms de fichiers.
+   L’Assistant écrira ensuite le code de vos classes de dispatch en utilisant les noms de classe et de fichier spécifiés.
 
 ## <a name="see-also"></a>Voir aussi
 

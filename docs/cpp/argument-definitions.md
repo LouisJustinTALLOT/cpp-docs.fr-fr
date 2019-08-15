@@ -8,12 +8,12 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-ms.openlocfilehash: 92e213b5accbf8fd5f48ac2111a169e585d82a1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14e5ea3a051d81828c5f88ac16df60b6ebb5b559
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184440"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498815"
 ---
 # <a name="argument-definitions"></a>Définitions d’arguments
 
@@ -27,26 +27,26 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 permettent d’analyser facilement les arguments sur la ligne de commande et, éventuellement, d’accéder aux variables d’environnement. Les définitions d’argument sont les suivantes :
 
 *argc*<br/>
-Entier qui contient le nombre d’arguments qui suivent dans *argv*. Le *argc* paramètre est toujours supérieure ou égale à 1.
+Entier qui contient le nombre d’arguments qui suivent dans *argv*. Le paramètre *argc* est toujours supérieur ou égal à 1.
 
 *argv*<br/>
-Tableau de chaînes terminées par le caractère NULL qui représentent les arguments de ligne de commande entrés par l’utilisateur du programme. Par convention, `argv[0]` est la commande avec laquelle le programme est appelé, `argv[1]` est le premier argument de ligne de commande et ainsi de suite, jusqu'à ce que `argv[argc]`, qui est toujours NULL. Consultez [personnalisation du traitement de ligne de commande](../cpp/customizing-cpp-command-line-processing.md) pour plus d’informations sur la suppression du traitement de ligne de commande.
+Tableau de chaînes terminées par le caractère NULL qui représentent les arguments de ligne de commande entrés par l’utilisateur du programme. Par Convention, `argv[0]` est la commande avec laquelle le programme est appelé, `argv[1]` est le premier argument de ligne de commande, et ainsi de suite, `argv[argc]`jusqu’à, qui a toujours la valeur null. Pour plus d’informations sur la suppression du traitement de ligne de commande, consultez Personnalisation du traitement de la [ligne de commande](../cpp/customizing-cpp-command-line-processing.md) .
 
 Le premier argument de ligne de commande est toujours `argv[1]` et le dernier `argv[argc - 1]`.
 
 > [!NOTE]
-> Par convention, `argv[0]` est la commande avec laquelle le programme est appelé.  Toutefois, il est possible de générer un processus utilisant [CreateProcess](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) et si vous utilisez le premier et le deuxième argument (*IpApplicationName* et *lpCommandLine*), `argv[0]` ne peut pas être le nom de l’exécutable ; Utilisez [GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) pour récupérer le nom de l’exécutable et son chemin d’accès qualifié complet.
+> Par Convention, `argv[0]` est la commande avec laquelle le programme est appelé.  Toutefois, il est possible de générer un processus à l’aide de [CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) et si vous utilisez à la fois le premier et le deuxième argument `argv[0]` (*lpApplicationName* et *lpCommandLine*), peut ne pas être le nom de l’exécutable; utiliser [GetModuleFileName ](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew)pour récupérer le nom de l’exécutable et son chemin d’accès complet.
 
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft
 
 *envp*<br/>
-Le *envp* tableau, qui est une extension courante dans de nombreux systèmes UNIX, est utilisé dans Microsoft C++. Il s'agit d'un tableau de chaînes représentant les variables définies dans l'environnement de l'utilisateur. Ce tableau se termine par une entrée NULL. Il peut être déclaré en tant que tableau de pointeurs vers **char** (`char *envp[]`) ou en tant que pointeur vers des pointeurs en **char** (`char **envp`). Si votre programme utilise `wmain` au lieu de `main`, utilisez le **wchar_t** au lieu du type de données **char**. Le bloc environnement passé à `main` et `wmain` est une copie « figée » de l’environnement actuel. Si vous modifiez ultérieurement l’environnement via un appel à `putenv` ou `_wputenv`, l’environnement actuel (tel que retourné par `getenv` ou `_wgetenv` et `_environ` ou `_wenviron` variable) est modifié, mais le bloc désigné par envp ne changera pas. Consultez [personnalisation du traitement de ligne de commande](../cpp/customizing-cpp-command-line-processing.md) pour plus d’informations sur la suppression du traitement de l’environnement. Cet argument est compatible ANSI en C, mais pas en C++.
+Le tableau *envp* , qui est une extension courante dans de nombreux systèmes UNIX, est utilisé dans C++Microsoft. Il s'agit d'un tableau de chaînes représentant les variables définies dans l'environnement de l'utilisateur. Ce tableau se termine par une entrée NULL. Il peut être déclaré comme tableau de pointeurs vers **char** `char *envp[]`() ou comme pointeur vers des pointeurs vers **char** (`char **envp`). Si votre programme utilise `wmain` au lieu `main`de, utilisez le type de données **wchar_t** au lieu de **char**. Le bloc d’environnement passé `main` à `wmain` et est une copie «figée» de l’environnement actuel. Si vous modifiez ultérieurement l’environnement via un appel à `putenv` ou `_wputenv`, l’environnement actuel (tel que retourné `getenv` par `_wgetenv` ou et `_environ` la `_wenviron` variable ou) sera modifié, mais le bloc désigné par envp ne change pas. Pour plus d’informations sur la suppression du traitement de l’environnement, consultez Personnalisation du traitement de la [ligne de commande](../cpp/customizing-cpp-command-line-processing.md) . Cet argument est compatible ANSI en C, mais pas en C++.
 
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le *argc*, *argv*, et *envp* arguments à `main`:
+L’exemple suivant montre comment utiliser les arguments *argc*, *argv*et *envp* pour `main`:
 
 ```cpp
 // argument_definitions.cpp

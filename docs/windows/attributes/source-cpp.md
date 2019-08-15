@@ -1,21 +1,21 @@
 ---
-title: source (attribut de COM C++)
+title: source (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.source
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 699ea64de49a4383bc8fb62b2f3b2133d7c496c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79614a345e6c07b03df351da93a847fe12e4b110
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407183"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514024"
 ---
 # <a name="source-c"></a>source (C++)
 
-Sur une classe, spécifie les interfaces de source de l’objet COM pour les points de connexion. Sur une propriété ou une méthode, indique que le membre retourne un objet ou un VARIANT et qui est une source d’événements.
+Sur une classe, spécifie les interfaces sources de l’objet COM pour les points de connexion. Sur une propriété ou une méthode, indique que le membre retourne un objet ou une variante qui est une source d’événements.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,13 +26,13 @@ Sur une classe, spécifie les interfaces de source de l’objet COM pour les poi
 ### <a name="parameters"></a>Paramètres
 
 *interfaces*<br/>
-Une ou plusieurs interfaces que vous spécifiez lorsque vous appliquez la source de l’attribut à une classe. Ce paramètre n’est pas utilisé lors de la source est appliquée à une propriété ou méthode.
+Une ou plusieurs interfaces que vous spécifiez lorsque vous appliquez l’attribut source à une classe. Ce paramètre n’est pas utilisé lorsque la source est appliquée à une propriété ou à une méthode.
 
 ## <a name="remarks"></a>Notes
 
-Le **source** attribut C++ a les mêmes fonctionnalités que le [source](/windows/desktop/Midl/source) attribut MIDL.
+L’attribut **source** C++ a les mêmes fonctionnalités que l’attribut MIDL [source](/windows/win32/Midl/source) .
 
-Vous pouvez utiliser la [par défaut](default-cpp.md) attribut pour spécifier l’interface source par défaut pour un objet.
+Vous pouvez utiliser l’attribut [default](default-cpp.md) pour spécifier l’interface source par défaut d’un objet.
 
 ## <a name="example"></a>Exemple
 
@@ -76,8 +76,8 @@ class NN : public b
 |-|-|
 |**S'applique à**|**class**, **struct**, **interface**|
 |**Renouvelable**|Non|
-|**Attributs requis**|`coclass` (lorsqu’il est appliqué à la classe ou struct)|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|`coclass`(en cas d’application à une classe ou à un struct)|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

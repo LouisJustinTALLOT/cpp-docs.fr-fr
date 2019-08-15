@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: adc821370201eeb83b6c6b4b875e5e62b0fa523f
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: c8413a28024361db82ca74858453202393987e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606443"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492686"
 ---
 # <a name="manifest-tool-property-pages"></a>Pages de propriétés de l'outil Manifeste
 
-Utilisez ces pages pour spécifier les options générales pour [Mt. exe](https://msdn.microsoft.com/library/aa375649). Ces pages se trouvent sous**Propriétés** > du **projet** > **Propriétés** > de configuration**outil manifeste**.
+Utilisez ces pages pour spécifier les options générales pour [Mt. exe](/windows/win32/sbscs/mt-exe). Ces pages se trouvent sous**Propriétés** > du **projet** > **Propriétés** > de configuration**outil manifeste**.
 
 ## <a name="general-property-page"></a>Général, page de propriétés
 
@@ -105,7 +105,7 @@ Spécifie si l’application prend en charge DPI. Par défaut, le paramètre a l
 
 ## <a name="isolated-com-property-page"></a>Page de propriétés COM isolé
 
-Pour plus d’informations sur le modèle COM isolé, consultez [ [applications isolées](/windows/desktop/SbsCs/isolated-applications) et procédure: Générez des applications isolées pour](../how-to-build-isolated-applications-to-consume-com-components.md)consommer des composants com.
+Pour plus d’informations sur le modèle COM isolé, consultez [ [applications isolées](/windows/win32/SbsCs/isolated-applications) et procédure: Générez des applications isolées pour](../how-to-build-isolated-applications-to-consume-com-components.md)consommer des composants com.
 
 ###  <a name="type-library-file"></a>Fichier bibliothèque de types
 

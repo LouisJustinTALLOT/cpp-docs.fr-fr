@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: ba791ddc46fd59a470943bb30f415da01966dc61
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 5d03154597f800042846e82d0a0cf5e7c46b613f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915889"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497885"
 ---
 # <a name="cacl-class"></a>CAcl, classe
 
@@ -84,7 +84,7 @@ class CAcl
 
 ## <a name="remarks"></a>Notes
 
-La `ACL` structure est l’en-tête d’une liste de contrôle d’accès (ACL). Une liste de contrôle d’accès comprend une liste séquentielle de zéro ou plusieurs entrées de contrôle d’accès ( [ACE](/windows/desktop/SecAuthZ/access-control-entries) ). Les ACE individuelles d’une liste de contrôle d’accès sont numérotées de 0 à *n-1*, où *n* est le nombre d’entrées du contrôle d’accès dans la liste de contrôle d’accès. Lors de la modification d’une liste de contrôle d’accès, une application fait référence à une entrée de contrôle d’accès (ACE) dans la liste ACL par son index.
+La `ACL` structure est l’en-tête d’une liste de contrôle d’accès (ACL). Une liste de contrôle d’accès comprend une liste séquentielle de zéro ou plusieurs entrées de contrôle d’accès ( [ACE](/windows/win32/SecAuthZ/access-control-entries) ). Les ACE individuelles d’une liste de contrôle d’accès sont numérotées de 0 à *n-1*, où *n* est le nombre d’entrées du contrôle d’accès dans la liste de contrôle d’accès. Lors de la modification d’une liste de contrôle d’accès, une application fait référence à une entrée de contrôle d’accès (ACE) dans la liste ACL par son index.
 
 Il existe deux types de listes de contrôle d’accès:
 
@@ -96,9 +96,9 @@ Une liste de contrôle d’accès discrétionnaire est contrôlée par le propri
 
 Un objet peut également être associé à des informations de sécurité au niveau du système, sous la forme d’une liste de contrôle d’accès système contrôlée par un administrateur système. Une liste de contrôle d’accès système peut permettre à l’administrateur système d’effectuer un audit des tentatives d’accès à un objet.
 
-Pour plus d’informations, consultez la discussion sur les [listes de contrôle d’accès](/windows/desktop/SecAuthZ/access-control-lists) dans la SDK Windows.
+Pour plus d’informations, consultez la discussion sur les [listes de contrôle d’accès](/windows/win32/SecAuthZ/access-control-lists) dans la SDK Windows.
 
-Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
+Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/win32/SecAuthZ/access-control) dans le SDK Windows.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -126,7 +126,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 
 ### <a name="remarks"></a>Notes
 
-Ce typedef spécifie le type de tableau utilisé pour définir les indicateurs de contrôle spécifiques au type d’entrée de contrôle d’accès (ACE). Consultez la définition [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) pour obtenir la liste complète des indicateurs possibles.
+Ce typedef spécifie le type de tableau utilisé pour définir les indicateurs de contrôle spécifiques au type d’entrée de contrôle d’accès (ACE). Consultez la définition [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) pour obtenir la liste complète des indicateurs possibles.
 
 ##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray
 
@@ -138,7 +138,7 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 
 ### <a name="remarks"></a>Notes
 
-Ce typedef spécifie le type de tableau utilisé pour définir la nature des objets d’entrée de contrôle d’accès (ACE), tels que ACCESS_ALLOWED_ACE_TYPE ou ACCESS_DENIED_ACE_TYPE. Consultez la définition [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) pour obtenir la liste complète des types possibles.
+Ce typedef spécifie le type de tableau utilisé pour définir la nature des objets d’entrée de contrôle d’accès (ACE), tels que ACCESS_ALLOWED_ACE_TYPE ou ACCESS_DENIED_ACE_TYPE. Consultez la définition [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) pour obtenir la liste complète des types possibles.
 
 ##  <a name="cacl"></a>  CAcl::CAcl
 
@@ -214,7 +214,7 @@ Cette méthode remplit les paramètres de tableau avec les détails de chaque ob
 
 Le contenu de chaque tableau correspond l’un à l’autre, autrement dit, le premier élément `CAccessMaskArray` du tableau correspond au premier élément `CSidArray` du tableau, et ainsi de suite.
 
-Pour plus d’informations sur les types et les indicateurs ACE, consultez [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
+Pour plus d’informations sur les types et les indicateurs ACE, consultez [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) .
 
 ##  <a name="getaclentry"></a>  CAcl::GetAclEntry
 
@@ -258,7 +258,7 @@ Type d’objet hérité. Cette valeur est définie sur GUID_NULL si le type d’
 
 Cette méthode récupère toutes les informations relatives à une entrée de contrôle d’accès, en fournissant plus d’informations que [CaCl:: GetAclEntries](#getaclentries) seul rend disponible.
 
-Pour plus d’informations sur les types et les indicateurs ACE, consultez [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
+Pour plus d’informations sur les types et les indicateurs ACE, consultez [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) .
 
 ##  <a name="getlength"></a>  CAcl::GetLength
 

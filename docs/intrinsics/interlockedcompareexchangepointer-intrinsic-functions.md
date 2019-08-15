@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348729"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509427"
 ---
-# <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer, fonctions intrinsèques
+# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer, fonctions intrinsèques
 
 **Section spécifique à Microsoft**
 
@@ -83,10 +83,10 @@ long _InterlockedCompareExchangePointer_rel (
 [in, out] Pointeur vers un pointeur vers la valeur de destination. Le signe est ignoré.
 
 *Exchange*<br/>
-[in] Pointeur d’échange. Le signe est ignoré.
+dans Pointeur Exchange. Le signe est ignoré.
 
-*Comparand*<br/>
-[in] Pointeur à comparer à la destination. Le signe est ignoré.
+*Comparateur*<br/>
+dans Pointeur à comparer à la destination. Le signe est ignoré.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -104,9 +104,9 @@ La valeur de retour est la valeur initiale de la destination.
 
 `_InterlockedCompareExchangePointer` effectue une comparaison atomique de l'adresse `Destination` à l'adresse `Comparand`. Si l'adresse `Destination` est égale à l'adresse `Comparand`, l'adresse `Exchange` est stockée dans l'adresse spécifiée par `Destination`. Dans le cas contraire, aucune opération n'est effectuée.
 
-`_InterlockedCompareExchangePointer` Fournit la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx) (fonction).
+`_InterlockedCompareExchangePointer`fournit la prise en charge intrinsèque du compilateur pour la fonction Win32 SDK Windows [InterlockedCompareExchangePointer](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer) .
 
-Pour obtenir un exemple montrant comment utiliser `_InterlockedCompareExchangePointer`, consultez [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Pour obtenir un exemple d’utilisation `_InterlockedCompareExchangePointer`de, consultez [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
 Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les fonctions intrinsèques ARM avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agissent pas comme une barrière mémoire.
 

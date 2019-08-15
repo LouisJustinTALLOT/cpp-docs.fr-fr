@@ -8,30 +8,30 @@ helpviewer_keywords:
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a52e9c9dcd53b01f17dc36825732b34771c75bb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318561"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492625"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Spécifier les attributs de section)
 
-> **/ SECTION :**_nom_, [[**!**] {**DEKPRSW**}] [**, ALIGN =**_nombre_]
+> **/Section:** _nom_, [[ **!** ] {**DEKPRSW**}] [ **, Align =** _Number_]
 
 ## <a name="remarks"></a>Notes
 
-Le **/SECTION** option modifie les attributs d’une section, en substituant les attributs définis lorsque le fichier .obj de la section a été compilé.
+L’option **/section** modifie les attributs d’une section, en substituant les attributs définis lors de la compilation du fichier. obj de la section.
 
-Un *section* dans un exécutable portable (PE) le fichier est un bloc nommé contiguë de mémoire qui contient le code ou des données. Certaines sections contiennent des codes ou des données que votre programme déclaré et utilise directement, alors que les autres sections de données sont créées pour vous par l’éditeur de liens et le Gestionnaire de bibliothèque (lib.exe) et contiennent des informations vitales pour le système d’exploitation. Pour plus d’informations, consultez [Format PE](/windows/desktop/Debug/pe-format).
+Une *section* dans un fichier exécutable portable (PE) est un bloc de mémoire contigu nommé qui contient du code ou des données. Certaines sections contiennent du code ou des données que votre programme a déclaré et utilise directement, tandis que d’autres sections de données sont créées pour vous par l’éditeur de liens et le gestionnaire de bibliothèque (lib. exe) et contiennent des informations vitales pour le système d’exploitation. Pour plus d’informations, consultez [format PE](/windows/win32/Debug/pe-format).
 
-Spécifiez un signe deux-points ( :) et une section *nom*. Le *nom* respecte la casse.
+Spécifiez un signe deux-points (:) et un *nom*de section. Le *nom* respecte la casse.
 
-N’utilisez pas les noms suivants, car ils sont en conflit avec des noms standard. Par exemple, .sdata est utilisé sur les plateformes RISC :
+N’utilisez pas les noms suivants, car ils sont en conflit avec les noms standard. Par exemple,. sdata est utilisé sur les plateformes RISC:
 
-- .arch
+- . Arch
 
-- .bss
+- . BSS
 
 - .data
 
@@ -45,45 +45,45 @@ N’utilisez pas les noms suivants, car ils sont en conflit avec des noms standa
 
 - .reloc
 
-- .rsrc
+- . rsrc
 
-- .sbss
+- . sbss
 
 - .sdata
 
 - .srdata
 
-- .text
+- . Text
 
 - .xdata
 
-Spécifiez un ou plusieurs attributs de la section. Les caractères de l’attribut, répertoriés ci-après, ne respectent pas la casse. Vous devez spécifier tous les attributs de la section d’avoir ; un caractère d’attribut est omis provoque le bit d’attribut soit désactivé. Si vous ne spécifiez pas de R, W ou E, existant en lecture, écriture ou exécutable état reste inchangé.
+Spécifiez un ou plusieurs attributs pour la section. Les caractères d’attribut, répertoriés ci-dessous, ne respectent pas la casse. Vous devez spécifier tous les attributs que vous souhaitez appliquer à la section. un caractère d’attribut omis provoque la désactivation du bit d’attribut. Si vous ne spécifiez pas R, W ou E, l’état de lecture, d’écriture ou d’exécutable existant reste inchangé.
 
-Pour exclure un attribut, faites précéder son caractère avec un point d’exclamation ( !). Les significations des caractères d’attribut sont affichées dans ce tableau :
+Pour nier un attribut, faites précéder son caractère d’un point d’exclamation (!). Les significations des caractères d’attribut sont indiquées dans ce tableau:
 
 |Caractère|Attribut|Signification|
 |---------------|---------------|-------------|
-|E|Exécuter|La section est exécutable.|
-|R|Lecture|Permet les opérations de lecture sur les données|
-|W|Write|Autorise les opérations d’écriture sur les données|
+|E|Execute|La section est exécutable|
+|R|Lecture|Autorise les opérations de lecture sur les données|
+|W|Écrire|Autorise les opérations d’écriture sur les données|
 |S|Shared|Partage la section entre tous les processus qui chargent l’image|
-|D|Pouvant être éliminée|Marque la section comme pouvant être éliminée|
-|K|Être mis en cache|Marque la section comme non mis en cache|
+|D|Pouvant être éliminée|Marque la section comme étant à ignorer|
+|K|Mise en cache|Marque la section comme ne pouvant pas être mise en cache|
 |P|Paginable|Marque la section comme non paginable|
 
-K et P est inhabituels, les indicateurs de la section qui leur correspondent sont utilisés dans le sens négatif. Si vous spécifiez un d’eux dans la section ".Text" à l’aide de la **/section :.Text, K** , il n’existe aucune différence dans les indicateurs de section lorsque vous exécutez l’option [DUMPBIN](dumpbin-options.md) avec la [/HEADERS](headers.md)option ; la section a été déjà implicitement mis en cache. Pour supprimer la valeur par défaut, spécifiez   **/section :.Text, ! K** à la place. DUMPBIN révèle les caractéristiques de section, y compris « Non mis en cache. »
+K et P sont inhabituels dans le sens où les indicateurs de section qui leur correspondent sont utilisés dans le sens négatif. Si vous spécifiez l’une d’entre elles sur la section. Text à l’aide de l’option **/section:. Text, K** , il n’y a aucune différence dans les indicateurs de section quand vous exécutez [DUMPBIN](dumpbin-options.md) avec l’option [/headers](headers.md) ; la section a déjà été mise en cache de manière implicite. Pour supprimer la valeur par défaut, spécifiez **/section:. Text,! K** à la place. DUMPBIN révèle les caractéristiques de section, y compris «non mis en cache».
 
-Une section dans le fichier PE qui n’a pas de E, R ou W définie est probablement non valide.
+Une section du fichier PE qui n’a pas de jeu E, R ou W n’est probablement pas valide.
 
-Le **ALIGN =**_nombre_ argument vous permet de spécifier une valeur d’alignement pour une section donnée. Le _nombre_ argument est exprimée en octets et doit être une puissance de deux. Consultez [/aligner](align-section-alignment.md) pour plus d’informations.
+L’argument **align =** _Number_ vous permet de spécifier une valeur d’alignement pour une section particulière. L’argument _Number_ est en octets et doit être une puissance de deux. Pour plus d’informations, consultez [/align](align-section-alignment.md) .
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Choisissez le **propriétés de Configuration** > **l’éditeur de liens** > **ligne de commande** page de propriétés.
+1. Choisissez la page de propriétés**ligne de commande** de l'**éditeur de liens** >  **Propriétés** > de configuration.
 
-1. Entrez l’option dans le **des Options supplémentaires** boîte. Choisissez **OK** ou **appliquer** pour appliquer la modification.
+1. Entrez l’option dans la zone **options supplémentaires** . Choisissez **OK** ou **appliquer** pour appliquer la modification.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 

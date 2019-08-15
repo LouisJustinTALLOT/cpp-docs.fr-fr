@@ -5,34 +5,34 @@ helpviewer_keywords:
 - callback items in CListCtrl class [MFC]
 - CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
-ms.openlocfilehash: 35967f128c6cc59bc9cea90da559b32c51fb38d1
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 5c326d8498ea297936254a8650f666103ea3c772
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344279"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509137"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Éléments de rappel et masque de rappel
 
-Pour chacun de ses éléments, un contrôle list view stocke habituellement le texte d’étiquette, l’index d’image liste des icônes de l’élément, et un ensemble de bits indicateurs d’état de l’élément. Vous pouvez définir des éléments individuels en tant qu’éléments de rappel, qui sont utiles si votre application stocke déjà certaines des informations pour un élément.
+Pour chacun de ses éléments, un contrôle List View stocke généralement le texte de l’étiquette, l’index de liste d’images des icônes de l’élément et un jeu d’indicateurs binaires pour l’état de l’élément. Vous pouvez définir des éléments individuels comme éléments de rappel, ce qui est utile si votre application stocke déjà certaines des informations relatives à un élément.
 
-Vous définissez un élément comme un élément de rappel en spécifiant les valeurs appropriées pour le `pszText` et `iImage` membres de la **LV_ITEM** structure (consultez [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem)). Si l’application gère le texte de l’élément ou le sous-élément, spécifiez la **LPSTR_TEXTCALLBACK** valeur pour le `pszText` membre. Si l’application effectue le suivi de l’icône de l’élément, spécifiez la **I_IMAGECALLBACK** valeur pour le `iImage` membre.
+Vous définissez un élément en tant qu’élément de rappel en spécifiant les `pszText` valeurs `iImage` appropriées pour les `LVITEM` membres et de la structure (consultez [CListCtrl:: GetItem](../mfc/reference/clistctrl-class.md#getitem)). Si l’application gère le texte de l’élément ou du sous-élément , spécifiez la `pszText` valeur LPSTR_TEXTCALLBACK pour le membre. Si l’application effectue le suivi de l’icône pour l’élément, spécifiez la valeur **I_IMAGECALLBACK** pour le `iImage` membre.
 
-Outre la définition des éléments de rappel, vous pouvez également modifier le masque de rappel du contrôle. Ce masque est un ensemble de drapeaux de bit qui spécifient les États d’élément pour lequel l’application, plutôt que le contrôle, stocke les données actuelles. Le masque de rappel s’applique à tous les éléments du contrôle, contrairement à la désignation d’élément de rappel, qui s’applique à un élément spécifique. Le masque de rappel est zéro par défaut, ce qui signifie que le contrôle effectue le suivi de tous les États d’élément. Pour modifier ce comportement par défaut, initialisez le masque à n’importe quelle combinaison des valeurs suivantes :
+En plus de définir des éléments de rappel, vous pouvez également modifier le masque de rappel du contrôle. Ce masque est un jeu d’indicateurs binaires qui spécifient les États de l’élément pour lesquels l’application, plutôt que le contrôle, stocke les données actuelles. Le masque de rappel s’applique à tous les éléments du contrôle, contrairement à la désignation de l’élément de rappel, qui s’applique à un élément spécifique. Par défaut, le masque de rappel est égal à zéro, ce qui signifie que le contrôle effectue le suivi de tous les États des éléments. Pour modifier ce comportement par défaut, initialisez le masque avec n’importe quelle combinaison des valeurs suivantes:
 
-- **LVIS_CUT** l’élément est marqué pour une opération de couper-coller.
+- **LVIS_CUT** L’élément est marqué pour une opération couper-coller.
 
-- **LVIS_DROPHILITED** l’élément est mis en surbrillance comme cible de glisser-déplacer.
+- **LVIS_DROPHILITED** L’élément est mis en surbrillance en tant que cible de glisser-déplacer.
 
-- **LVIS_FOCUSED** l’élément a le focus.
+- **LVIS_FOCUSED** L’élément a le focus.
 
-- **LVIS_SELECTED** l’élément est sélectionné.
+- **LVIS_SELECTED** L’élément est sélectionné.
 
-- **LVIS_OVERLAYMASK** l’application stocke l’index de liste d’image de l’image de superposition actuelle pour chaque élément.
+- **LVIS_OVERLAYMASK** L’application stocke l’index de liste d’images de l’image de superposition actuelle pour chaque élément.
 
-- **LVIS_STATEIMAGEMASK** l’application stocke l’index de liste d’image de l’état en cours pour chaque élément.
+- **LVIS_STATEIMAGEMASK** L’application stocke l’index de liste d’images de l’image d’État actuelle pour chaque élément.
 
-Pour plus d’informations sur la récupération et la définition de ce masque, consultez [CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) et [CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).
+Pour plus d’informations sur la récupération et la définition de ce masque, consultez [CListCtrl:: GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) et [CListCtrl:: SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).
 
 ## <a name="see-also"></a>Voir aussi
 

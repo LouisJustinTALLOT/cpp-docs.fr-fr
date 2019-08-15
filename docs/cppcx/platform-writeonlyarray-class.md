@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5652123d4866262515f804dba790af51610eb426
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182936"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500519"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (classe)
 
@@ -37,7 +37,7 @@ private ref class WriteOnlyArray<T, 1>
 
 Ces méthodes offrent une accessibilité interne, c'est-à-dire qu'elles ne sont accessibles que dans l'application ou le composant C++.
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[WriteOnlyArray::begin](#begin)|Itérateur qui pointe vers le premier élément du tableau.|
 |[WriteOnlyArray::Data](#data)|Pointeur vers le tampon de données.|
@@ -54,7 +54,7 @@ Ces méthodes offrent une accessibilité interne, c'est-à-dire qu'elles ne sont
 
 Option du compilateur : **/ZW**
 
-**Métadonnées :** Platform.winmd
+**Metadata** Platform.winmd
 
 **Espace de noms :** Plateforme
 
@@ -126,7 +126,7 @@ property bool FastPass{
 
 Valeur booléenne qui indique si le tableau est FastPass.
 
-## <a name="get"></a>  Writeonlyarray::Get, méthode
+## <a name="get"></a>WriteOnlyArray:: méthode d’extraction
 
 Retourne l'élément à l'index spécifié.
 
@@ -139,7 +139,7 @@ T& get(unsigned int indexArg) const;
 ### <a name="parameters"></a>Paramètres
 
 *indexArg*<br/>
-L’index à utiliser.
+Index à utiliser.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -185,9 +185,9 @@ Référence à l'élément qui vient d'être défini.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur la façon d’interpréter la valeur HRESULT, consultez [Structure of COM Error Codes](/windows/desktop/com/structure-of-com-error-codes).
+Pour plus d’informations sur la façon d’interpréter la valeur HRESULT, consultez [structure of com Error Codes](/windows/win32/com/structure-of-com-error-codes).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Plateforme Namespace](platform-namespace-c-cx.md)<br/>
+[Espace de noms de plateforme](platform-namespace-c-cx.md)<br/>
 [Création de composants Windows Runtime en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

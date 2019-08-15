@@ -62,19 +62,19 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 04ca1f0b689e68008b3b5a57d01e626ee92a60b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fac7e052c5c1d5525946bdbc599404ac56d47f5a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209746"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499452"
 ---
-# <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
+# <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
 Copie les caractères d'une chaîne vers une autre. Il existe des versions plus sécurisées de ces fonctions. Consultez [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsncpy** et **_mbsncpy_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncpy** et **_mbsncpy_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -173,16 +173,16 @@ Retourne *strDest*. Aucune valeur de retour n'est réservée pour indiquer une e
 
 ## <a name="remarks"></a>Notes
 
-Le **strncpy** fonction copie initial *nombre* caractères de *strSource* à *strDest* et retourne *strDest* . Si *nombre* est inférieure ou égale à la longueur de *strSource*, un caractère null n’est pas automatiquement ajouté à la chaîne copiée. Si *nombre* est supérieur à la longueur de *strSource*, la chaîne de destination est remplie avec les caractères null sur toute longueur *nombre*. Le comportement de **strncpy** n’est pas défini si les chaînes source et de destination se chevauchent.
+La fonction **strncpy** copie les caractères *de nombre* initiaux de *StrSource* vers *strDest* et retourne *strDest*. Si *Count* est inférieur ou égal à la longueur de *strSource*, un caractère NULL n’est pas ajouté automatiquement à la chaîne copiée. Si le *nombre* est supérieur à la longueur de *strSource*, la chaîne de destination est complétée avec un *nombre*de caractères null jusqu’à la longueur. Le comportement de **strncpy** n’est pas défini si les chaînes source et de destination se chevauchent.
 
 > [!IMPORTANT]
-> **strncpy** ne vérifie pas suffisamment d’espace *strDest*; cela rend une cause potentielle de dépassements de mémoire tampon. Le *nombre* argument limite le nombre de caractères copiés ; il n’est pas une limite sur la taille de *strDest*. Lisez l'exemple suivant. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> **strncpy** ne vérifie pas si l’espace est suffisant dans *strDest*; cela en fait une cause potentielle de dépassements de mémoire tampon. L’argument *Count* limite le nombre de caractères copiés; il ne s’agit pas d’une limite de la taille de *strDest*. Consultez l’exemple qui suit. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Si *strDest* ou *strSource* est un **NULL** pointeur, ou si *nombre* est inférieure ou égale à zéro, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Si *strDest* ou *strSource* est un pointeur **null** ou si *Count* est inférieur ou égal à zéro, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
 **wcsncpy** et **_mbsncpy** sont des versions à caractères larges et à caractères multioctets de **strncpy**. Les arguments et la valeur de retour de **wcsncpy** et **_mbsncpy** varient en conséquence. Sinon, ces six fonctions se comportent à l'identique.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -194,7 +194,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l** et **_wcsncpy_l** n’ont aucune dépendance vis-à-vis de paramètres régionaux ; elles sont uniquement fournies pour **_tcsncpy_l** et ne sont pas destinées à être appelées directement.
+> **_strncpy_l** et **_wcsncpy_l** n’ont aucune dépendance des paramètres régionaux; elles sont fournies uniquement pour **_tcsncpy_l** et ne sont pas destinées à être appelées directement.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -206,9 +206,9 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 
 Pour plus d'informations sur la compatibilité de plateforme, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-L’exemple suivant illustre l’utilisation de **strncpy** et comment elle peut être utilisée à mauvais escient pour entraîner des problèmes de sécurité et les bogues de programme. Le compilateur génère un avertissement pour chaque appel à **strncpy** similaire à **crt_strncpy_x86.c (15) : avertissement C4996 : 'strncpy' : Cette fonction ou cette variable peut être non sécurisée. Envisagez d’utiliser strncpy_s à la place. Pour désactiver le message déconseillant l’utilisation, utilisez _CRT_SECURE_NO_WARNINGS. Consultez l’aide en ligne pour plus d’informations.**
+L’exemple suivant illustre l’utilisation de **strncpy** et la façon dont il peut être utilisé de manière inutilisée pour provoquer des bogues de programme et des problèmes de sécurité. Le compilateur génère un avertissement pour chaque appel à **strncpy** similaire à **crt_strncpy_x86. c (15): avertissement C4996: 'strncpy': Cette fonction ou cette variable peut être non sécurisée. Envisagez d’utiliser strncpy_s à la place. Pour désactiver le message déconseillant l’utilisation, utilisez _CRT_SECURE_NO_WARNINGS. Consultez l’aide en ligne pour plus d’informations.**
 
 ```C
 // crt_strncpy_x86.c

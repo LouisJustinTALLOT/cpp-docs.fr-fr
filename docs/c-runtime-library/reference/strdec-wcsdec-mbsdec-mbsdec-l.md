@@ -40,19 +40,19 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: 7e88bcf5bf7ffc5eba6feecd545cda8f7950829c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a937f8fcd18dd62bb7c63cf60c250cf7986b69b7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353878"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500903"
 ---
-# <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
+# <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
 Déplace un pointeur de chaîne d’un caractère en arrière.
 
 > [!IMPORTANT]
-> **mbsdec** et **mbsdec_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsdec** et **mbsdec_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,28 +79,28 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>Paramètres
 
 *start*<br/>
-Pointeur vers n’importe quel caractère (ou pour **_mbsdec** et **_mbsdec_l**, le premier octet d’un caractère multioctet) dans la chaîne source ; *Démarrer* doit précéder *actuel* dans la chaîne source.
+Pointeur vers n’importe quel caractère (ou pour **_mbsdec** et **_mbsdec_l**, le premier octet d’un caractère multioctet) dans la chaîne source; *Start* doit précéder *Current* dans la chaîne source.
 
 *current*<br/>
-Pointeur vers n’importe quel caractère (ou pour **_mbsdec** et **_mbsdec_l**, le premier octet d’un caractère multioctet) dans la chaîne source ; *actuel* doit suivre *Démarrer* dans la chaîne source.
+Pointeur vers n’importe quel caractère (ou pour **_mbsdec** et **_mbsdec_l**, le premier octet d’un caractère multioctet) dans la chaîne source; l' *actuel* doit suivre le *début* dans la chaîne source.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_mbsdec**, **_mbsdec_l**, **_strdec**, et **_wcsdec** retournent chacune un pointeur désignant le caractère qui précède immédiatement *actuel*; **_mbsdec** retourne **NULL** si la valeur de *Démarrer* est supérieure ou égale à celle de *actuel*. **_tcsdec** correspond à une de ces fonctions et sa valeur de retour dépend du mappage.
+**_mbsdec**, **_mbsdec_l**, **_strdec**et **_wcsdec** renvoient chacun un pointeur vers le caractère qui précède immédiatement l’objet *actuel*. **_mbsdec** retourne la valeur **null** si la valeur de *Start* est supérieure ou égale à celle de l’objet *actuel*. **_tcsdec** correspond à l’une de ces fonctions et sa valeur de retour dépend du mappage.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbsdec** et **_mbsdec_l** fonctions retournent un pointeur vers le premier octet du caractère multioctet qui précède immédiatement *actuel* dans la chaîne qui contient *Démarrer*.
+Les fonctions **_mbsdec** et **_mbsdec_l** retournent un pointeur vers le premier octet du caractère multioctet qui précède immédiatement la valeur *actuelle* dans la chaîne qui contient *Start*.
 
-La valeur de sortie est affectée par la valeur de la **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations.  **_mbsdec** reconnaît les séquences de caractères multioctets selon les paramètres régionaux qui est actuellement en cours d’utilisation, tandis que **_mbsdec_l** est identique, à ceci près qu’elle utilise les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations [, consultez setlocale, _wsetlocale](setlocale-wsetlocale.md) .  **_mbsdec** reconnaît les séquences de caractères multioctets en fonction des paramètres régionaux en cours d’utilisation, tandis que **_mbsdec_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Si *Démarrer* ou *actuel* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne **EINVAL** et définit **errno** à **EINVAL**.
+Si *Start* ou *Current* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne **EINVAL** et définit **errno** sur **EINVAL**.
 
 > [!IMPORTANT]
-> Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être utilisés pour les attaques du système, car ils peuvent provoquer une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être utilisés pour les attaques du système, car ils peuvent provoquer une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -108,7 +108,7 @@ Si *Démarrer* ou *actuel* est **NULL**, le Gestionnaire de paramètre non valid
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec** et **_wcsdec** sont des versions-caractères sur un octet et caractères larges de **_mbsdec** et **_mbsdec_l**. **_strdec** et **_wcsdec** sont fournis uniquement pour ce mappage et ne doit pas être utilisé dans le cas contraire.
+**_strdec** et **_wcsdec** sont des versions à caractères codés sur un octet et à caractères larges de **_mbsdec** et **_mbsdec_l**. **_strdec** et **_wcsdec** sont fournis uniquement pour ce mappage et ne doivent pas être utilisés dans le cas contraire.
 
 Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).
 
@@ -123,9 +123,9 @@ Pour plus d’informations, consultez [Utilisation de mappages de texte généri
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-L’exemple suivant montre une utilisation de **_tcsdec**.
+L’exemple suivant illustre une utilisation de **_tcsdec**.
 
 ```cpp
 // crt_tcsdec.cpp
@@ -151,7 +151,7 @@ int main()
 }
 ```
 
-L’exemple suivant montre une utilisation de **_mbsdec**.
+L’exemple suivant illustre une utilisation de **_mbsdec**.
 
 ```cpp
 // crt_mbsdec.cpp

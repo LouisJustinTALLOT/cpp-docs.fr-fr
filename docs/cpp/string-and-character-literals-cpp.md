@@ -14,12 +14,12 @@ helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: df690bea81b9799b30ae91313ce7157400ef8413
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: e7f0d4291aeb2e3d8dc1eac4dd08ef3e961468ff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866092"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498532"
 ---
 # <a name="string-and-character-literals-c"></a>Littéraux de chaîne et deC++caractère ()
 
@@ -107,7 +107,7 @@ Les littéraux de caractère sont encodés différemment en fonction de leur pr�
 
 Il existe trois types de séquence d’échappement : simple, octal et hexadécimal. Les séquences d'échappement peuvent être de l'une des formes suivantes :
 
-|Valeur|Séquence d'échappement|
+|`Value`|Séquence d'échappement|
 |-----------|---------------------|
 | saut de ligne | \\n |
 | barre oblique inverse | \\\\ |
@@ -216,7 +216,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 Les noms de caractères universels ne peuvent pas encoder des valeurs dans la plage de points de code de substitution D800-DFFF. Pour les paires de substitution Unicode, spécifiez le nom de caractère universel à l’aide de `\UNNNNNNNN`, où NNNNNNNN représente le point de code à huit chiffres du caractère. Le compilateur génère une paire de substitution, si nécessaire.
 
-En C++03, le langage autorisait uniquement un sous-ensemble de caractères à être représentés par leurs noms de caractères universels. En outre, il autorisait certains noms de caractères universels qui ne représentaient pas en réalité des caractères Unicode valides. Cette erreur a été corrigée dans la norme C++ 11. En C++11, les littéraux de caractère et de chaîne, ainsi que les identificateurs, peuvent utiliser des noms de caractères universels.  Pour plus d’informations sur les noms de caractères universels, consultez [Character Sets](../cpp/character-sets.md). Pour plus d’informations sur Unicode, consultez [Unicode](https://msdn.microsoft.com/library/dd374081). Pour plus d’informations sur les paires de substitution, consultez [Paires de substitution et caractères supplémentaires](/windows/desktop/Intl/surrogates-and-supplementary-characters).
+En C++03, le langage autorisait uniquement un sous-ensemble de caractères à être représentés par leurs noms de caractères universels. En outre, il autorisait certains noms de caractères universels qui ne représentaient pas en réalité des caractères Unicode valides. Cette erreur a été corrigée dans la norme C++ 11. En C++11, les littéraux de caractère et de chaîne, ainsi que les identificateurs, peuvent utiliser des noms de caractères universels.  Pour plus d’informations sur les noms de caractères universels, consultez [Character Sets](../cpp/character-sets.md). Pour plus d’informations sur Unicode, consultez [Unicode](/windows/win32/intl/unicode). Pour plus d’informations sur les paires de substitution, consultez [Paires de substitution et caractères supplémentaires](/windows/win32/Intl/surrogates-and-supplementary-characters).
 
 ## <a name="string-literals"></a>Littéraux de chaîne
 
