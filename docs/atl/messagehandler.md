@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-ms.openlocfilehash: 1acd56357f9ce234e3c479fd8fa88c1ed8407878
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa044ef88ba3c872c2652cd774ac50024e52c68c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261694"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492310"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
-`MessageHandler` est le nom de la fonction identifiée par le deuxième paramètre de la macro MESSAGE_HANDLER dans votre table des messages.
+`MessageHandler`nom de la fonction identifiée par le deuxième paramètre de la macro MESSAGE_HANDLER dans votre table des messages.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,18 +38,18 @@ Informations supplémentaires spécifiques au message.
 Informations supplémentaires spécifiques au message.
 
 *bHandled*<br/>
-Les jeux de mappage de message *bHandled* sur TRUE avant `MessageHandler` est appelée. Si `MessageHandler` ne gère pas entièrement le message, il doit définir *bHandled* sur FALSE pour indiquer que le message nécessite un traitement supplémentaire.
+La table des messages affecte à *bHandled* la `MessageHandler` valeur true avant l’appel à. Si `MessageHandler` ne gère pas complètement le message, il doit affecter à *bHandled* la valeur false pour indiquer que le message doit être traité ultérieurement.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le résultat du traitement de message. 0 si l’opération réussit.
+Résultat du traitement du message. 0 en cas de réussite.
 
 ## <a name="remarks"></a>Notes
 
-Pour obtenir un exemple de l’utilisation de ce gestionnaire de messages dans une table des messages, consultez [MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler).
+Pour obtenir un exemple d’utilisation de ce gestionnaire de messages dans une table des messages, consultez [MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Implémentation d’une fenêtre](../atl/implementing-a-window.md)<br/>
 [Tables des messages](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](/windows/desktop/controls/wm-notify)
+[WM_NOTIFY](/windows/win32/controls/wm-notify)

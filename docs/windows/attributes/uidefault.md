@@ -1,21 +1,21 @@
 ---
-title: UIDefault (attribut de COM C++)
+title: UIDefault (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.uidefault
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: a5bb8d3ad869d9ee60b2ab04743f5a926a10dd2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4090011aade4ebab2f5c07a8e56e91253cc7c49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407092"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513900"
 ---
 # <a name="uidefault"></a>uidefault
 
-Indique que le membre d’informations de type est le membre par défaut pour l’affichage dans l’interface utilisateur.
+Indique que le membre des informations de type est le membre par défaut à afficher dans l’interface utilisateur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Indique que le membre d’informations de type est le membre par défaut pour l�
 
 ## <a name="remarks"></a>Notes
 
-Le **uidefault** attribut C++ a les mêmes fonctionnalités que le [uidefault](/windows/desktop/Midl/uidefault) attribut MIDL.
+L’attribut **UIDefault** C++ a les mêmes fonctionnalités que l’attribut MIDL [UIDefault](/windows/win32/Midl/uidefault) .
 
 ## <a name="example"></a>Exemple
 
-Le code suivant montre un exemple de **uidefault**:
+Le code suivant illustre un exemple de **UIDefault**:
 
 ```cpp
 // cpp_attr_ref_uidefault.cpp
@@ -56,8 +56,8 @@ __interface ICustom{
 |-|-|
 |**S'applique à**|Méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

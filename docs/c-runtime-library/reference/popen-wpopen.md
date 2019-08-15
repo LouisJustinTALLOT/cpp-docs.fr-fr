@@ -33,14 +33,14 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 5284685f56a73c4c7e48fce981745220651399a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03eb36573abe8e26c47e6dd38c009e5819e60f8f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156159"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499597"
 ---
-# <a name="popen-wpopen"></a>_popen, _wpopen
+# <a name="_popen-_wpopen"></a>_popen, _wpopen
 
 Crée un canal et exécute une commande.
 
@@ -70,13 +70,13 @@ Mode du flux retourné.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un flux associé à une extrémité du canal créé. L’autre extrémité du canal est associée à l’entrée ou à la sortie standard de la commande générée. Les fonctions retournent la valeur **NULL** en cas d’erreur. Si l’erreur est un paramètre non valide, par exemple si *commande* ou *mode* est un pointeur null, ou *mode* n’est pas un mode valide, **errno** est défini sur **EINVAL**. Consultez la section Notes pour en savoir plus sur les modes valides.
+Retourne un flux associé à une extrémité du canal créé. L’autre extrémité du canal est associée à l’entrée ou à la sortie standard de la commande générée. Les fonctions retournent la valeur **NULL** en cas d’erreur. Si l’erreur est un paramètre non valide, par exemple si la *commande* ou le *mode* est un pointeur null ou si le *mode* n’est pas un mode valide, **errno** a la valeur **EINVAL**. Consultez la section Notes pour en savoir plus sur les modes valides.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_popen** fonction crée un canal et exécute une copie de l’interpréteur de commandes avec la chaîne spécifiée générée de manière asynchrone *commande*. La chaîne de caractères *mode* spécifie le type d’accès demandé, comme suit.
+La fonction **_popen** crée un canal et exécute de façon asynchrone une copie générée du processeur de commandes avec la *commande*de chaîne spécifiée. La chaîne de caractères *mode* spécifie le type d’accès demandé, comme suit.
 
 |Mode d'accès|Description|
 |-|-|
@@ -86,9 +86,9 @@ Le **_popen** fonction crée un canal et exécute une copie de l’interpréteur
 |**"t"**|Ouvre en mode texte.|
 
 > [!NOTE]
-> Si utilisé dans un programme Windows, le **_popen** fonction retourne un pointeur de fichier non valide qui amène le programme à cesser de répondre indéfiniment. **_popen** fonctionne correctement dans une application console. Pour créer une application Windows qui redirige les entrées et sorties, consultez [création d’un processus enfant avec redirigé d’entrée et sortie](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) dans le SDK Windows.
+> Si elle est utilisée dans un programme Windows, la fonction **_popen** retourne un pointeur de fichier non valide qui amène le programme à cesser de répondre indéfiniment. **_popen** fonctionne correctement dans une application console. Pour créer une application Windows qui redirige l’entrée et la sortie, consultez [création d’un processus enfant avec une entrée et une sortie](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) redirigées dans le SDK Windows.
 
-**_wpopen** est une version à caractères larges de **_popen**; le *chemin d’accès* l’argument de **_wpopen** est une chaîne de caractères larges. **_wpopen** et **_popen** se comportent de façon identique dans le cas contraire.
+**_wpopen** est une version à caractères larges de **_popen**; l’argument *path* de **_wpopen** est une chaîne de caractères larges. dans le cas contraire, **_wpopen** et **_popen** se comportent de la même façon.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -109,7 +109,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_popen.c

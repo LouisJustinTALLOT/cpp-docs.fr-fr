@@ -43,14 +43,14 @@ helpviewer_keywords:
 - vtcprintf_s function
 - formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
-ms.openlocfilehash: e27018d02c8fb77b0e2a1c02164d3b6d112448ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd346141db9f4974ee5f9300792260bf2a8ec72
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365346"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499324"
 ---
-# <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
+# <a name="_vcprintf_s-_vcprintf_s_l-_vcwprintf_s-_vcwprintf_s_l"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 
 Écrit la sortie mise en forme dans la console en utilisant un pointeur désignant une liste d’arguments. Ces versions de [_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l](vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -97,16 +97,16 @@ Pour plus d’informations, consultez [Syntaxe de spécification de format : fo
 
 Nombre de caractères écrits ou valeur négative si une erreur de sortie se produit.
 
-Comme les versions moins sécurisées de ces fonctions, si *format* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). En outre, contrairement aux versions moins sécurisées de ces fonctions, si *format* ne spécifie pas un format valide, une exception de paramètre non valide est générée. Si l’exécution est autorisée à se poursuivre, ces fonctions retournent un code d’erreur et un ensemble **errno** à ce code d’erreur. Le code d’erreur par défaut est **EINVAL** si une valeur plus spécifique ne s’applique pas.
+Comme les versions moins sécurisées de ces fonctions, si *format* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). En outre, à la différence des versions moins sécurisées de ces fonctions, si *format* ne spécifie pas un format valide, une exception de paramètre non valide est générée. Si l’exécution est autorisée à se poursuivre, ces fonctions retournent un code d’erreur et attribuent à **errno** la valeur de ce code d’erreur. Le code d’erreur par défaut est **EINVAL** si une valeur plus spécifique ne s’applique pas.
 
 ## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions prend un pointeur désignant une liste d’arguments, puis met en forme et écrit les données fournies dans la console. **_vcwprintf_s** est la version à caractères larges de **_vcprintf_s**. Elle prend une chaîne de caractères larges comme argument.
 
-Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, à ceci près qu’elles utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels.
+Les versions de ces fonctions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
 
 > [!IMPORTANT]
-> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -122,7 +122,7 @@ Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, à ceci
 |**_vcprintf_s**, **_vcprintf_s_l**|\<conio.h> et \<stdarg.h>|\<varargs.h>*|
 |**_vcwprintf_s**, **_vcwprintf_s_l**|\<conio.h> ou \<wchar.h> et \<stdarg.h>|\<varargs.h>*|
 
-\* Nécessaire pour la compatibilité avec UNIX V.
+\** Nécessaire pour la compatibilité avec UNIX V.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

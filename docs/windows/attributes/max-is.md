@@ -1,21 +1,21 @@
 ---
-title: max_is (C++ attribut COM)
+title: max_is (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409276"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514425"
 ---
-# <a name="maxis"></a>max_is
+# <a name="max_is"></a>max_is
 
-Désigne la valeur maximale pour un index de tableau valide.
+Désigne la valeur maximale d’un index de tableau valide.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,11 +26,11 @@ Désigne la valeur maximale pour un index de tableau valide.
 ### <a name="parameters"></a>Paramètres
 
 *expression*<br/>
-Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisés.
+Une ou plusieurs expressions en langage C. Les emplacements d’arguments vides sont autorisés.
 
 ## <a name="remarks"></a>Notes
 
-Le **max_is** C++ attribut a les mêmes fonctionnalités que le [max_is](/windows/desktop/Midl/max-is) attribut MIDL.
+L’attribut **max_is** C++ a les mêmes fonctionnalités que l’attribut MIDL [max_is](/windows/win32/Midl/max-is) .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -38,16 +38,16 @@ Le **max_is** C++ attribut a les mêmes fonctionnalités que le [max_is](/window
 
 |||
 |-|-|
-|**S'applique à**|Champ **struct** ou **union**, paramètre de l’interface, interface (méthode)|
+|**S'applique à**|Champ dans un **struct** ou une **Union**, un paramètre d’interface, une méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
+|**Attributs requis**|Aucun|
 |**Attributs non valides**|**size_is**|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-Consultez [first_is](first-is.md) pour obtenir un exemple montrant comment spécifier une section d’un tableau.
+Pour obtenir un exemple de spécification d’une section d’un tableau, consultez [first_is](first-is.md) .
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetActiveObject method [C++]
 ms.assetid: 2fa94853-0410-4620-91f2-136dae923f9f
-ms.openlocfilehash: 84e43de9c40baa3c596c68ed7739471c059cbac7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f13a42878392f63096cdfcb405f3f91cc0efe451
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154849"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498898"
 ---
-# <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
+# <a name="_com_ptr_tgetactiveobject"></a>_com_ptr_t::GetActiveObject
 
 **Section spécifique à Microsoft**
 
-S’attache à une instance existante d’un objet doté d’un `CLSID` ou `ProgID`.
+Attache à une instance existante d’un objet à partir d' `CLSID` un `ProgID`ou d’un.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,23 +36,23 @@ HRESULT GetActiveObject(
 #### <a name="parameters"></a>Paramètres
 
 *rclsid*<br/>
-Le `CLSID` d’un objet.
+`CLSID` D’un objet.
 
 *clsidString*<br/>
-Une chaîne Unicode qui contient un `CLSID` (en commençant par «**{**») ou un `ProgID`.
+Chaîne Unicode qui contient un `CLSID` (commençant par « **{** ») ou un. `ProgID`
 
 *clsidStringA*<br/>
-Chaîne multioctet, à l’aide de la page de codes ANSI, qui contient un `CLSID` (en commençant par «**{**») ou un `ProgID`.
+Chaîne multioctet, utilisant la page de codes ANSI, qui contient un `CLSID` (commençant par « **{** ») ou un. `ProgID`
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions membres appellent **GetActiveObject** pour récupérer un pointeur vers un objet en cours d’exécution qui a été inscrit avec OLE et ensuite les requêtes de ce pointeur intelligent type d’interface. Le pointeur résultant est alors encapsulé dans cet objet `_com_ptr_t`. `Release` est appelé pour décrémenter le décompte de références pour le pointeur précédemment encapsulé. Cette routine retourne le HRESULT pour indiquer la réussite ou l’échec.
+Ces fonctions membres appellent **GetActiveObject** pour récupérer un pointeur vers un objet en cours d’exécution qui a été inscrit avec OLE, puis interroge le type d’interface de ce pointeur intelligent. Le pointeur résultant est alors encapsulé dans cet objet `_com_ptr_t`. `Release`est appelé pour décrémenter le décompte de références pour le pointeur précédemment encapsulé. Cette routine retourne le HRESULT pour indiquer la réussite ou l’échec.
 
-- **GetActiveObject (**`rclsid`**)** s’attache à une instance existante d’un objet doté d’un `CLSID`.
+- **GetActiveObject (** `rclsid` **)** s’attache à une instance existante d’un objet en fonction `CLSID`d’un.
 
-- **GetActiveObject (**`clsidString`**)** s’attache à une instance existante d’un objet doté d’une chaîne Unicode qui contient un `CLSID` (en commençant par «**{**») ou un `ProgID`.
+- **GetActiveObject (** `clsidString` **)** s’attache à une instance existante d’un objet en fonction d’une chaîne Unicode qui contient `CLSID` un (commençant par « **{** ») ou `ProgID`un.
 
-- **GetActiveObject (**`clsidStringA`**)** s’attache à une instance existante d’un objet doté d’une chaîne de caractères multioctets qui contient un `CLSID` (en commençant par «**{**») ou un `ProgID`. Appels [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), ce qui suppose que la chaîne est dans la page de codes ANSI plutôt que dans une page de codes OEM.
+- **GetActiveObject (** `clsidStringA` **)** s’attache à une instance existante d’un objet en fonction d’une chaîne de caractères multioctets qui `CLSID` contient un (commençant par « **{** ») `ProgID`ou un. Appelle [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar), qui suppose que la chaîne se trouve dans la page de codes ANSI et non dans une page de codes OEM.
 
 **FIN de la section spécifique à Microsoft**
 

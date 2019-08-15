@@ -1,5 +1,5 @@
 ---
-title: Cpatht, classe
+title: CPathT, classe
 ms.date: 03/27/2019
 f1_keywords:
 - CPathT
@@ -49,19 +49,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 109f9baefd0e6775db05eeba8cb78542bf60a9ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba1c831d772deef34449d17adc2c8e7a6f90eaef
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278174"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496619"
 ---
-# <a name="cpatht-class"></a>Cpatht, classe
+# <a name="cpatht-class"></a>CPathT, classe
 
 Cette classe représente un chemin d’accès.
 
 > [!IMPORTANT]
-> Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+> Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -73,7 +73,7 @@ class CPathT
 #### <a name="parameters"></a>Paramètres
 
 *StringType*<br/>
-La classe de chaîne ATL/MFC à utiliser pour le chemin d’accès (consultez [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
+Classe de chaîne ATL/MFC à utiliser pour le chemin d’accès (consultez [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
 
 ## <a name="members"></a>Membres
 
@@ -81,66 +81,66 @@ La classe de chaîne ATL/MFC à utiliser pour le chemin d’accès (consultez [C
 
 |Nom|Description|
 |----------|-----------------|
-|[CPathT::PCXSTR](#pcxstr)|Un type de chaîne constante.|
-|[CPathT::PXSTR](#pxstr)|Un type chaîne.|
+|[CPathT::PCXSTR](#pcxstr)|Type chaîne constante.|
+|[CPathT::PXSTR](#pxstr)|Type chaîne.|
 |[CPathT::XCHAR](#xchar)|Type de caractère.|
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CPathT::CPathT](#cpatht)|Le constructeur pour le chemin d’accès.|
+|[CPathT::CPathT](#cpatht)|Constructeur pour le chemin d’accès.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CPathT::AddBackslash](#addbackslash)|Appelez cette méthode pour ajouter une barre oblique inverse à la fin d’une chaîne pour créer la syntaxe correcte pour un chemin d’accès.|
+|[CPathT::AddBackslash](#addbackslash)|Appelez cette méthode pour ajouter une barre oblique inverse à la fin d’une chaîne afin de créer la syntaxe correcte pour un chemin d’accès.|
 |[CPathT::AddExtension](#addextension)|Appelez cette méthode pour ajouter une extension de fichier à un chemin d’accès.|
-|[CPathT::Append](#append)|Appelez cette méthode pour ajouter une chaîne pour le chemin d’accès actuel.|
-|[CPathT::BuildRoot](#buildroot)|Appelez cette méthode pour créer un chemin d’accès racine à partir d’un nombre donné de lecteur.|
-|[CPathT::Canonicalize](#canonicalize)|Appelez cette méthode pour convertir le chemin d’accès de la forme canonique.|
-|[CPathT::Combine](#combine)|Appelez cette méthode pour concaténer une chaîne représentant un nom de répertoire et une chaîne représentant un nom de chemin d’accès de fichier dans un chemin d’accès.|
+|[CPathT::Append](#append)|Appelez cette méthode pour ajouter une chaîne au chemin d’accès actuel.|
+|[CPathT::BuildRoot](#buildroot)|Appelez cette méthode pour créer un chemin d’accès racine à partir d’un numéro de lecteur donné.|
+|[CPathT::Canonicalize](#canonicalize)|Appelez cette méthode pour convertir le chemin d’accès au format canonique.|
+|[CPathT::Combine](#combine)|Appelez cette méthode pour concaténer une chaîne représentant un nom de répertoire et une chaîne représentant un nom de chemin d’accès de fichier en un seul chemin d’accès.|
 |[CPathT::CommonPrefix](#commonprefix)|Appelez cette méthode pour déterminer si le chemin d’accès spécifié partage un préfixe commun avec le chemin d’accès actuel.|
-|[CPathT::CompactPath](#compactpath)|Appelez cette méthode pour tronquer un chemin d’accès de fichier d’ajuster au sein d’une largeur en pixels donné en remplacement des composants de chemin d’accès avec les points de suspension.|
-|[CPathT::CompactPathEx](#compactpathex)|Appelez cette méthode pour tronquer un chemin d’accès de fichier d’ajuster au sein d’un nombre donné de caractères en remplacement des composants de chemin d’accès avec les points de suspension.|
-|[CPathT::FileExists](#fileexists)|Appelez cette méthode pour vérifier si le fichier à ce nom de chemin d’accès existe.|
+|[CPathT::CompactPath](#compactpath)|Appelez cette méthode pour tronquer un chemin d’accès de fichier pour l’ajuster à une largeur de pixel donnée en remplaçant des composants de chemin d’accès par des ellipses.|
+|[CPathT::CompactPathEx](#compactpathex)|Appelez cette méthode pour tronquer un chemin d’accès de fichier à ajuster au sein d’un nombre donné de caractères en remplaçant les composants du chemin par des ellipses.|
+|[CPathT::FileExists](#fileexists)|Appelez cette méthode pour vérifier si le fichier se trouve à ce nom de chemin d’accès.|
 |[CPathT::FindExtension](#findextension)|Appelez cette méthode pour rechercher la position de l’extension de fichier dans le chemin d’accès.|
-|[CPathT::FindFileName](#findfilename)|Appelez cette méthode pour trouver la position du nom de fichier dans le chemin d’accès.|
-|[CPathT::GetDriveNumber](#getdrivenumber)|Appelez cette méthode pour rechercher le chemin d’accès pour une lettre de lecteur dans la plage de 'A' à 'Z' et retourner le nombre de lecteur correspondante.|
-|[CPathT::GetExtension](#getextension)|Appelez cette méthode pour obtenir l’extension de fichier dans le chemin d’accès.|
+|[CPathT::FindFileName](#findfilename)|Appelez cette méthode pour rechercher la position du nom de fichier dans le chemin d’accès.|
+|[CPathT::GetDriveNumber](#getdrivenumber)|Appelez cette méthode pour rechercher dans le chemin d’accès une lettre de lecteur comprise entre «A» et «Z» et retourner le numéro de lecteur correspondant.|
+|[CPathT::GetExtension](#getextension)|Appelez cette méthode pour récupérer l’extension de fichier à partir du chemin d’accès.|
 |[CPathT::IsDirectory](#isdirectory)|Appelez cette méthode pour vérifier si le chemin d’accès est un répertoire valide.|
-|[CPathT::IsFileSpec](#isfilespec)|Appelez cette méthode pour rechercher un chemin d’accès pour tout caractère délimiteur de chemin d’accès (par exemple, ' :' ou '\\'). S’il n’y a aucun caractère délimiteur de chemin d’accès est présent, le chemin d’accès est considéré comme un chemin d’accès de la spécification de fichier.|
-|[CPathT::IsPrefix](#isprefix)|Appelez cette méthode pour déterminer si un chemin d’accès contient un préfixe valide du type passé *pszPrefix*.|
+|[CPathT::IsFileSpec](#isfilespec)|Appelez cette méthode pour rechercher un chemin d’accès pour les caractères délimitant les chemins d’accès (par exemple, '\\: 'ou' '). Si aucun caractère de délimitation de chemin d’accès n’est présent, le chemin d’accès est considéré comme un chemin d’accès de spécifications de fichier.|
+|[CPathT::IsPrefix](#isprefix)|Appelez cette méthode pour déterminer si un chemin d’accès contient un préfixe valide du type passé par *pszPrefix*.|
 |[CPathT::IsRelative](#isrelative)|Appelez cette méthode pour déterminer si le chemin d’accès est relatif.|
-|[CPathT::IsRoot](#isroot)|Appelez cette méthode pour déterminer si le chemin d’accès est un répertoire racine.|
-|[CPathT::IsSameRoot](#issameroot)|Appelez cette méthode pour déterminer si un autre chemin d’accès est un composant racine commun avec le chemin d’accès actuel.|
-|[CPathT::IsUNC](#isunc)|Appelez cette méthode pour déterminer si le chemin d’accès est un chemin d’accès UNC (convention universelle d’affectation de noms) valide pour un serveur et le partager.|
-|[CPathT::IsUNCServer](#isuncserver)|Appelez cette méthode pour déterminer si le chemin d’accès est un chemin d’accès UNC (convention universelle d’affectation de noms) valide pour un seul serveur.|
-|[CPathT::IsUNCServerShare](#isuncservershare)|Appelez cette méthode pour déterminer si le chemin d’accès est un chemin de partage UNC (convention universelle d’affectation de noms) valid, \\ \  *server*\ *partager*.|
-|[CPathT::MakePretty](#makepretty)|Appelez cette méthode pour convertir un chemin d’accès à tous les caractères minuscules pour donner le chemin d’accès une apparence cohérente.|
-|[CPathT::MatchSpec](#matchspec)|Appelez cette méthode pour rechercher le chemin d’accès d’une chaîne contenant un type de correspondance de caractère générique.|
-|[CPathT::QuoteSpaces](#quotespaces)|Appelez cette méthode pour délimiter le chemin d’accès entre guillemets s’il contient des espaces.|
+|[CPathT::IsRoot](#isroot)|Appelez cette méthode pour déterminer si le chemin d’accès est une racine de répertoire.|
+|[CPathT::IsSameRoot](#issameroot)|Appelez cette méthode pour déterminer si un autre chemin d’accès a un composant racine commun avec le chemin d’accès actuel.|
+|[CPathT::IsUNC](#isunc)|Appelez cette méthode pour déterminer si le chemin d’accès est un chemin d’accès UNC (Universal Naming Convention) valide pour un serveur et un partage.|
+|[CPathT::IsUNCServer](#isuncserver)|Appelez cette méthode pour déterminer si le chemin d’accès est un chemin d’accès UNC (Universal Naming Convention) valide pour un serveur uniquement.|
+|[CPathT::IsUNCServerShare](#isuncservershare)|Appelez cette méthode pour déterminer si le chemin d’accès est un chemin de partage UNC (Universal Naming Convention \\) valide, \ le*partage*de *serveur*\ .|
+|[CPathT::MakePretty](#makepretty)|Appelez cette méthode pour convertir un chemin d’accès en caractères minuscules pour que le chemin d’accès soit une apparence cohérente.|
+|[CPathT::MatchSpec](#matchspec)|Appelez cette méthode pour rechercher dans le chemin d’accès une chaîne contenant un type de correspondance de caractère générique.|
+|[CPathT::QuoteSpaces](#quotespaces)|Appelez cette méthode pour placer le chemin d’accès entre guillemets s’il contient des espaces.|
 |[CPathT::RelativePathTo](#relativepathto)|Appelez cette méthode pour créer un chemin d’accès relatif d’un fichier ou dossier à un autre.|
-|[CPathT::RemoveArgs](#removeargs)|Appelez cette méthode pour supprimer tous les arguments de ligne de commande à partir du chemin.|
-|[CPathT::RemoveBackslash](#removebackslash)|Appelez cette méthode pour supprimer la barre oblique de fin du chemin d’accès.|
+|[CPathT::RemoveArgs](#removeargs)|Appelez cette méthode pour supprimer tous les arguments de ligne de commande du chemin d’accès.|
+|[CPathT::RemoveBackslash](#removebackslash)|Appelez cette méthode pour supprimer la barre oblique inverse à la fin du chemin d’accès.|
 |[CPathT::RemoveBlanks](#removeblanks)|Appelez cette méthode pour supprimer tous les espaces de début et de fin du chemin d’accès.|
 |[CPathT::RemoveExtension](#removeextension)|Appelez cette méthode pour supprimer l’extension de fichier du chemin d’accès, le cas échéant.|
-|[CPathT::RemoveFileSpec](#removefilespec)|Appelez cette méthode pour supprimer le nom de fichier à droite et la barre oblique inverse à partir du chemin, s’il a les.|
-|[CPathT::RenameExtension](#renameextension)|Appelez cette méthode pour remplacer l’extension de nom de fichier dans le chemin d’accès avec une nouvelle extension. Si le nom de fichier ne contient pas une extension, l’extension sera attachée à la fin de la chaîne.|
-|[CPathT::SkipRoot](#skiproot)|Appelez cette méthode pour analyser un chemin d’accès, en ignorant la lettre de lecteur ou les parties de chemin d’accès UNC/partage de serveur.|
-|[CPathT::StripPath](#strippath)|Appelez cette méthode pour supprimer la partie de chemin d’accès d’un chemin d’accès complet et le nom de fichier.|
-|[CPathT::StripToRoot](#striptoroot)|Appelez cette méthode pour supprimer toutes les parties du chemin d’accès à l’exception des informations sur les racine.|
-|[CPathT::UnquoteSpaces](#unquotespaces)|Appelez cette méthode pour supprimer les guillemets de début et de fin d’un chemin d’accès.|
+|[CPathT::RemoveFileSpec](#removefilespec)|Appelez cette méthode pour supprimer le nom du fichier de fin et la barre oblique inverse du chemin d’accès, s’il en possède.|
+|[CPathT::RenameExtension](#renameextension)|Appelez cette méthode pour remplacer l’extension de nom de fichier dans le chemin d’accès par une nouvelle extension. Si le nom de fichier ne contient pas d’extension, l’extension est attachée à la fin de la chaîne.|
+|[CPathT::SkipRoot](#skiproot)|Appelez cette méthode pour analyser un chemin d’accès, en ignorant la lettre de lecteur ou le serveur UNC/les parties du chemin d’accès de partage.|
+|[CPathT::StripPath](#strippath)|Appelez cette méthode pour supprimer la partie du chemin d’accès qualifié complet et le nom de fichier.|
+|[CPathT::StripToRoot](#striptoroot)|Appelez cette méthode pour supprimer toutes les parties du chemin d’accès, à l’exception des informations de racine.|
+|[CPathT::UnquoteSpaces](#unquotespaces)|Appelez cette méthode pour supprimer les guillemets à partir du début et de la fin d’un chemin d’accès.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[StringType const CPathT::operator &](#operator_const_stringtype_amp)|Cet opérateur permet à l’objet à être traitée comme une chaîne.|
-|[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Cet opérateur permet à l’objet à être traitée comme une chaîne.|
-|[CPathT::operator StringType &](#operator_stringtype_amp)|Cet opérateur permet à l’objet à être traitée comme une chaîne.|
-|[CPathT::operator +=](#operator_add_eq)|Cet opérateur ajoute une chaîne pour le chemin d’accès.|
+|[CPathT:: Operator const StringType &](#operator_const_stringtype_amp)|Cet opérateur permet à l’objet d’être traité comme une chaîne.|
+|[CPathT:: Operator CPathT::P CXSTR](#operator_cpatht__pcxstr)|Cet opérateur permet à l’objet d’être traité comme une chaîne.|
+|[CPathT:: Operator StringType &](#operator_stringtype_amp)|Cet opérateur permet à l’objet d’être traité comme une chaîne.|
+|[CPathT::operator +=](#operator_add_eq)|Cet opérateur ajoute une chaîne au chemin d’accès.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
@@ -150,7 +150,7 @@ La classe de chaîne ATL/MFC à utiliser pour le chemin d’accès (consultez [C
 
 ## <a name="remarks"></a>Notes
 
-`CPath`, `CPathA`, et `CPathW` sont des instanciations du `CPathT` définie comme suit :
+`CPath`, `CPathA` `CPathT` et `CPathW` sont des instanciations de définies comme suit:
 
 `typedef CPathT< CString > CPath;`
 
@@ -160,11 +160,11 @@ La classe de chaîne ATL/MFC à utiliser pour le chemin d’accès (consultez [C
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlpath.h
+**En-tête:** atlpath. h
 
 ##  <a name="addbackslash"></a>  CPathT::AddBackslash
 
-Appelez cette méthode pour ajouter une barre oblique inverse à la fin d’une chaîne pour créer la syntaxe correcte pour un chemin d’accès. Si le chemin d’accès a déjà une barre oblique de fin, aucune barre oblique inverse n’est ajoutée.
+Appelez cette méthode pour ajouter une barre oblique inverse à la fin d’une chaîne afin de créer la syntaxe correcte pour un chemin d’accès. Si le chemin d’accès contient déjà une barre oblique inverse de fin, aucune barre oblique inverse n’est ajoutée.
 
 ```
 void AddBackslash();
@@ -172,7 +172,7 @@ void AddBackslash();
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathAddBackSlash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha).
+Pour plus d’informations, consultez [PathAddBackSlash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw).
 
 ##  <a name="addextension"></a>  CPathT::AddExtension
 
@@ -185,19 +185,19 @@ BOOL AddExtension(PCXSTR pszExtension);
 ### <a name="parameters"></a>Paramètres
 
 *pszExtension*<br/>
-L’extension de fichier à ajouter.
+Extension de fichier à ajouter.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
+Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona).
+Pour plus d’informations, consultez [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw).
 
 ##  <a name="append"></a>  CPathT::Append
 
-Appelez cette méthode pour ajouter une chaîne pour le chemin d’accès actuel.
+Appelez cette méthode pour ajouter une chaîne au chemin d’accès actuel.
 
 ```
 BOOL Append(PCXSTR pszMore);
@@ -210,15 +210,15 @@ Chaîne à ajouter.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
+Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda).
+Pour plus d’informations, consultez [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw).
 
 ##  <a name="buildroot"></a>  CPathT::BuildRoot
 
-Appelez cette méthode pour créer un chemin d’accès racine à partir d’un nombre donné de lecteur.
+Appelez cette méthode pour créer un chemin d’accès racine à partir d’un numéro de lecteur donné.
 
 ```
 void BuildRoot(int iDrive);
@@ -227,15 +227,15 @@ void BuildRoot(int iDrive);
 ### <a name="parameters"></a>Paramètres
 
 *iDrive*<br/>
-Le numéro du lecteur (0 est a, 1 b : et ainsi de suite).
+Le numéro de lecteur (0 est un:, 1 est B:, etc.).
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota).
+Pour plus d’informations, consultez [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw).
 
 ##  <a name="canonicalize"></a>  CPathT::Canonicalize
 
-Appelez cette méthode pour convertir le chemin d’accès de la forme canonique.
+Appelez cette méthode pour convertir le chemin d’accès au format canonique.
 
 ```
 void Canonicalize();
@@ -243,11 +243,11 @@ void Canonicalize();
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea).
+Pour plus d’informations, consultez [PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew).
 
 ##  <a name="combine"></a>  CPathT::Combine
 
-Appelez cette méthode pour concaténer une chaîne représentant un nom de répertoire et une chaîne représentant un nom de chemin d’accès de fichier dans un chemin d’accès.
+Appelez cette méthode pour concaténer une chaîne représentant un nom de répertoire et une chaîne représentant un nom de chemin d’accès de fichier en un seul chemin d’accès.
 
 ```
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
@@ -256,14 +256,14 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ### <a name="parameters"></a>Paramètres
 
 *pszDir*<br/>
-Le chemin du répertoire.
+Chemin d’accès au répertoire.
 
 *pszFile*<br/>
-Le chemin d’accès du fichier.
+Chemin d’accès du fichier.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea).
+Pour plus d’informations, consultez [PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew).
 
 ##  <a name="commonprefix"></a>  CPathT::CommonPrefix
 
@@ -276,7 +276,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 ### <a name="parameters"></a>Paramètres
 
 *pszOther*<br/>
-Le chemin d’accès à comparer à l’objet actuel.
+Chemin d’accès à comparer à l’objet actuel.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -284,11 +284,11 @@ Retourne le préfixe commun.
 
 ### <a name="remarks"></a>Notes
 
-Un préfixe est un de ces types : « C:\\\\«, ». «, ».. «, ».. \\\\". Pour plus d’informations, consultez [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa).
+Un préfixe est l’un des types suivants: "C:\\\\", ".", "..", ".. \\\\". Pour plus d’informations, consultez [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
 
 ##  <a name="compactpath"></a>  CPathT::CompactPath
 
-Appelez cette méthode pour tronquer un chemin d’accès de fichier d’ajuster au sein d’une largeur en pixels donné en remplacement des composants de chemin d’accès avec les points de suspension.
+Appelez cette méthode pour tronquer un chemin d’accès de fichier pour l’ajuster à une largeur de pixel donnée en remplaçant des composants de chemin d’accès par des ellipses.
 
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -297,22 +297,22 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 ### <a name="parameters"></a>Paramètres
 
 *hDC*<br/>
-Le contexte de périphérique utilisé pour la métrique des polices.
+Contexte de périphérique (Device Context) utilisé pour les métriques de police.
 
 *nWidth*<br/>
-La largeur, en pixels, qui doit se tenir dans la chaîne.
+Largeur, en pixels, à laquelle la chaîne doit s’ajuster.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
+Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha).
+Pour plus d’informations, consultez [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw).
 
 ##  <a name="compactpathex"></a>  CPathT::CompactPathEx
 
-Appelez cette méthode pour tronquer un chemin d’accès de fichier d’ajuster au sein d’un nombre donné de caractères en remplacement des composants de chemin d’accès avec les points de suspension.
+Appelez cette méthode pour tronquer un chemin d’accès de fichier à ajuster au sein d’un nombre donné de caractères en remplaçant les composants du chemin par des ellipses.
 
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
@@ -321,18 +321,18 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 ### <a name="parameters"></a>Paramètres
 
 *nMaxChars*<br/>
-Le nombre maximal de caractères devant figurer dans la nouvelle chaîne, y compris le caractère NULL de fin.
+Nombre maximal de caractères à inclure dans la nouvelle chaîne, y compris le caractère NULL de fin.
 
 *dwFlags*<br/>
 Réservé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
+Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa).
+Pour plus d’informations, consultez [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw).
 
 ##  <a name="cpatht"></a>  CPathT::CPathT
 
@@ -350,11 +350,11 @@ CPathT() throw();
 Pointeur vers une chaîne de chemin d’accès.
 
 *path*<br/>
-La chaîne de chemin d’accès.
+Chaîne du chemin d’accès.
 
 ##  <a name="fileexists"></a>  CPathT::FileExists
 
-Appelez cette méthode pour vérifier si le fichier à ce nom de chemin d’accès existe.
+Appelez cette méthode pour vérifier si le fichier se trouve à ce nom de chemin d’accès.
 
 ```
 BOOL FileExists() const;
@@ -362,11 +362,11 @@ BOOL FileExists() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si le fichier existe, FALSE sinon.
+Retourne la valeur TRUE si le fichier existe; sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa).
+Pour plus d’informations, consultez [PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw).
 
 ##  <a name="findextension"></a>  CPathT::FindExtension
 
@@ -378,15 +378,15 @@ int FindExtension() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la position de la «. » précédant l’extension. Si aucune extension n’est trouvée, retourne -1.
+Retourne la position du «.» précédant l’extension. Si aucune extension n’est trouvée, retourne-1.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona).
+Pour plus d’informations, consultez [PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw).
 
 ##  <a name="findfilename"></a>  CPathT::FindFileName
 
-Appelez cette méthode pour trouver la position du nom de fichier dans le chemin d’accès.
+Appelez cette méthode pour rechercher la position du nom de fichier dans le chemin d’accès.
 
 ```
 int FindFileName() const;
@@ -394,15 +394,15 @@ int FindFileName() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la position du nom de fichier. Si aucun nom de fichier n’est trouvé, retourne -1.
+Retourne la position du nom de fichier. Si aucun nom de fichier n’est trouvé, retourne-1.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea).
+Pour plus d’informations, consultez [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew).
 
 ##  <a name="getdrivenumber"></a>  CPathT::GetDriveNumber
 
-Appelez cette méthode pour rechercher le chemin d’accès pour une lettre de lecteur dans la plage de 'A' à 'Z' et retourner le nombre de lecteur correspondante.
+Appelez cette méthode pour rechercher dans le chemin d’accès une lettre de lecteur comprise entre «A» et «Z» et retourner le numéro de lecteur correspondant.
 
 ```
 int GetDriveNumber() const;
@@ -410,15 +410,15 @@ int GetDriveNumber() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le nombre de lecteur sous forme d’entier de 0 à 25 (correspondant à « A » à « Z ») si le chemin d’accès comporte une lettre de lecteur, ou -1 dans le cas contraire.
+Retourne le numéro de lecteur sous la forme d’un entier compris entre 0 et 25 (correspondant à «A» à «Z») si le chemin d’accès a une lettre de lecteur, ou-1 dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera).
+Pour plus d’informations, consultez [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw).
 
 ##  <a name="getextension"></a>  CPathT::GetExtension
 
-Appelez cette méthode pour obtenir l’extension de fichier dans le chemin d’accès.
+Appelez cette méthode pour récupérer l’extension de fichier à partir du chemin d’accès.
 
 ```
 StringType GetExtension() const;
@@ -438,15 +438,15 @@ BOOL IsDirectory() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne une valeur différente de zéro (16) si le chemin d’accès est un répertoire, sinon FALSE.
+Retourne une valeur différente de zéro (16) si le chemin d’accès est un répertoire; sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya).
+Pour plus d’informations, consultez [PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).
 
 ##  <a name="isfilespec"></a>  CPathT::IsFileSpec
 
-Appelez cette méthode pour rechercher un chemin d’accès pour tout caractère délimiteur de chemin d’accès (par exemple, ' :' ou '\\'). S’il n’y a aucun caractère délimiteur de chemin d’accès est présent, le chemin d’accès est considéré comme un chemin d’accès de la spécification de fichier.
+Appelez cette méthode pour rechercher un chemin d’accès pour les caractères délimitant les chemins d’accès (par exemple, '\\: 'ou' '). Si aucun caractère de délimitation de chemin d’accès n’est présent, le chemin d’accès est considéré comme un chemin d’accès de spécifications de fichier.
 
 ```
 BOOL IsFileSpec() const;
@@ -454,15 +454,15 @@ BOOL IsFileSpec() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne TRUE si aucun caractère délimiteur de chemin d’accès dans le chemin d’accès, ou FALSE s’il existe des caractères de délimitation de chemin d’accès.
+Retourne la valeur TRUE s’il n’y a pas de caractères de délimitation du chemin d’accès dans le chemin d’accès, ou FALSe s’il existe des caractères de délimitation de chemin d’accès.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca).
+Pour plus d’informations, consultez [PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw).
 
 ##  <a name="isprefix"></a>  CPathT::IsPrefix
 
-Appelez cette méthode pour déterminer si un chemin d’accès contient un préfixe valide du type passé *pszPrefix*.
+Appelez cette méthode pour déterminer si un chemin d’accès contient un préfixe valide du type passé par *pszPrefix*.
 
 ```
 BOOL IsPrefix(PCXSTR pszPrefix) const;
@@ -471,15 +471,15 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="parameters"></a>Paramètres
 
 *pszPrefix*<br/>
-Le préfixe à rechercher. Un préfixe est un de ces types : « C:\\\\«, ». «, ».. «, ».. \\\\".
+Préfixe à rechercher. Un préfixe est l’un des types suivants: "C:\\\\", ".", "..", ".. \\\\".
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si le chemin d’accès contient le préfixe, ou FALSE dans le cas contraire.
+Retourne la valeur TRUE si le chemin d’accès contient le préfixe, ou FALSe dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa).
+Pour plus d’informations, consultez [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw).
 
 ##  <a name="isrelative"></a>  CPathT::IsRelative
 
@@ -491,15 +491,15 @@ BOOL IsRelative() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si le chemin d’accès est relatif, ou FALSE si elle est absolue.
+Retourne la valeur TRUE si le chemin d’accès est relatif, ou FALSe s’il est absolu.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea).
+Pour plus d’informations, consultez [PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew).
 
 ##  <a name="isroot"></a>  CPathT::IsRoot
 
-Appelez cette méthode pour déterminer si le chemin d’accès est un répertoire racine.
+Appelez cette méthode pour déterminer si le chemin d’accès est une racine de répertoire.
 
 ```
 BOOL IsRoot() const;
@@ -507,15 +507,15 @@ BOOL IsRoot() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si le chemin d’accès est une racine, ou FALSE dans le cas contraire.
+Retourne la valeur TRUE si le chemin d’accès est une racine, ou FALSe dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota).
+Pour plus d’informations, consultez [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).
 
 ##  <a name="issameroot"></a>  CPathT::IsSameRoot
 
-Appelez cette méthode pour déterminer si un autre chemin d’accès est un composant racine commun avec le chemin d’accès actuel.
+Appelez cette méthode pour déterminer si un autre chemin d’accès a un composant racine commun avec le chemin d’accès actuel.
 
 ```
 BOOL IsSameRoot(PCXSTR pszOther) const;
@@ -524,19 +524,19 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 ### <a name="parameters"></a>Paramètres
 
 *pszOther*<br/>
-L’autre tracé.
+Autre chemin d’accès.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si les deux chaînes ont le même composant racine, ou FALSE dans le cas contraire.
+Retourne la valeur TRUE si les deux chaînes ont le même composant racine, ou FALSe dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota).
+Pour plus d’informations, consultez [PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw).
 
 ##  <a name="isunc"></a>  CPathT::IsUNC
 
-Appelez cette méthode pour déterminer si le chemin d’accès est un chemin d’accès UNC (convention universelle d’affectation de noms) valide pour un serveur et le partager.
+Appelez cette méthode pour déterminer si le chemin d’accès est un chemin d’accès UNC (Universal Naming Convention) valide pour un serveur et un partage.
 
 ```
 BOOL IsUNC() const;
@@ -544,15 +544,15 @@ BOOL IsUNC() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si le chemin d’accès est un chemin UNC valide, ou FALSE dans le cas contraire.
+Retourne la valeur TRUE si le chemin d’accès est un chemin d’accès UNC valide, ou FALSe dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca).
+Pour plus d’informations, consultez [PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw).
 
 ##  <a name="isuncserver"></a>  CPathT::IsUNCServer
 
-Appelez cette méthode pour déterminer si le chemin d’accès est un chemin d’accès UNC (convention universelle d’affectation de noms) valide pour un seul serveur.
+Appelez cette méthode pour déterminer si le chemin d’accès est un chemin d’accès UNC (Universal Naming Convention) valide pour un serveur uniquement.
 
 ```
 BOOL IsUNCServer() const;
@@ -560,15 +560,15 @@ BOOL IsUNCServer() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si la chaîne est un chemin d’accès UNC d’un serveur uniquement (aucun nom de partage) valide, ou FALSE.
+Retourne la valeur TRUE si la chaîne est un chemin d’accès UNC valide pour un serveur uniquement (pas de nom de partage), ou FALSe dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera).
+Pour plus d’informations, consultez [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).
 
 ##  <a name="isuncservershare"></a>  CPathT::IsUNCServerShare
 
-Appelez cette méthode pour déterminer si le chemin d’accès est un chemin de partage UNC (convention universelle d’affectation de noms) valid, \\ \  *server*\ *partager*.
+Appelez cette méthode pour déterminer si le chemin d’accès est un chemin de partage UNC (Universal Naming Convention \\) valide, \ le*partage*de *serveur*\ .
 
 ```
 BOOL IsUNCServerShare() const;
@@ -576,11 +576,11 @@ BOOL IsUNCServerShare() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si le chemin d’accès se présente sous la forme \\ \  *server*\ *partager*, ou FALSE dans le cas contraire.
+Retourne la valeur true si le chemin d’accès \\est \ au format *Server*\ *share*, ou false dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea).
+Pour plus d’informations, consultez [PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew).
 
 ##  <a name="m_strpath"></a>  CPathT::m_strPath
 
@@ -592,11 +592,11 @@ StringType m_strPath;
 
 ### <a name="remarks"></a>Notes
 
-`StringType` est le paramètre de modèle à `CPathT`.
+`StringType`est le paramètre de modèle `CPathT`de.
 
 ##  <a name="makepretty"></a>  CPathT::MakePretty
 
-Appelez cette méthode pour convertir un chemin d’accès à tous les caractères minuscules pour donner le chemin d’accès une apparence cohérente.
+Appelez cette méthode pour convertir un chemin d’accès en caractères minuscules pour que le chemin d’accès soit une apparence cohérente.
 
 ```
 BOOL MakePretty();
@@ -604,15 +604,15 @@ BOOL MakePretty();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si le chemin d’accès a été converti, ou FALSE dans le cas contraire.
+Retourne la valeur TRUE si le chemin d’accès a été converti, ou FALSe dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya).
+Pour plus d’informations, consultez [PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw).
 
 ##  <a name="matchspec"></a>  CPathT::MatchSpec
 
-Appelez cette méthode pour rechercher le chemin d’accès d’une chaîne contenant un type de correspondance de caractère générique.
+Appelez cette méthode pour rechercher dans le chemin d’accès une chaîne contenant un type de correspondance de caractère générique.
 
 ```
 BOOL MatchSpec(PCXSTR pszSpec) const;
@@ -621,19 +621,19 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 ### <a name="parameters"></a>Paramètres
 
 *pszSpec*<br/>
-Pointeur vers une chaîne se terminant par null avec le type de fichier à rechercher. Par exemple, pour tester si le fichier sur le chemin d’accès actuel est un fichier DOC, *pszSpec* doit être défini sur « * .doc ».
+Pointeur vers une chaîne se terminant par un caractère NULL avec le type de fichier à rechercher. Par exemple, pour tester si le fichier situé dans le chemin d’accès actuel est un fichier DOC, *pszSpec* doit être défini sur «*. doc».
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne si la chaîne correspond à la valeur TRUE ou FALSE dans le cas contraire.
+Retourne la valeur TRUE si la chaîne correspond, ou FALSe dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca).
+Pour plus d’informations, consultez [PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw).
 
 ##  <a name="operator_add_eq"></a>  CPathT::operator +=
 
-Cet opérateur ajoute une chaîne pour le chemin d’accès.
+Cet opérateur ajoute une chaîne au chemin d’accès.
 
 ```
 CPathT<StringType>& operator+=(PCXSTR pszMore);
@@ -646,11 +646,11 @@ Chaîne à ajouter.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le chemin d’accès de mise à jour.
+Retourne le chemin d’accès mis à jour.
 
-##  <a name="operator_const_stringtype_amp"></a>  CPathT::operator const StringType &amp;
+##  <a name="operator_const_stringtype_amp"></a>CPathT:: Operator const StringType&amp;
 
-Cet opérateur permet à l’objet à être traitée comme une chaîne.
+Cet opérateur permet à l’objet d’être traité comme une chaîne.
 
 ```
 operator const StringType&() const throw();
@@ -658,11 +658,11 @@ operator const StringType&() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne une chaîne représentant le chemin d’accès actuel géré par cet objet.
+Retourne une chaîne représentant le chemin d’accès actuel managé par cet objet.
 
-##  <a name="operator_cpatht__pcxstr"></a>  CPathT::operator CPathT::PCXSTR
+##  <a name="operator_cpatht__pcxstr"></a>CPathT:: Operator CPathT::P CXSTR
 
-Cet opérateur permet à l’objet à être traitée comme une chaîne.
+Cet opérateur permet à l’objet d’être traité comme une chaîne.
 
 ```
 operator PCXSTR() const throw();
@@ -670,11 +670,11 @@ operator PCXSTR() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne une chaîne représentant le chemin d’accès actuel géré par cet objet.
+Retourne une chaîne représentant le chemin d’accès actuel managé par cet objet.
 
-##  <a name="operator_stringtype_amp"></a>  CPathT::operator StringType &amp;
+##  <a name="operator_stringtype_amp"></a>CPathT:: Operator StringType&amp;
 
-Cet opérateur permet à l’objet à être traitée comme une chaîne.
+Cet opérateur permet à l’objet d’être traité comme une chaîne.
 
 ```
 operator StringType&() throw();
@@ -682,11 +682,11 @@ operator StringType&() throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne une chaîne représentant le chemin d’accès actuel géré par cet objet.
+Retourne une chaîne représentant le chemin d’accès actuel managé par cet objet.
 
 ##  <a name="pcxstr"></a>  CPathT::PCXSTR
 
-Un type de chaîne constante.
+Type chaîne constante.
 
 ```
 typedef StringType::PCXSTR PCXSTR;
@@ -694,11 +694,11 @@ typedef StringType::PCXSTR PCXSTR;
 
 ### <a name="remarks"></a>Notes
 
-`StringType` est le paramètre de modèle à `CPathT`.
+`StringType`est le paramètre de modèle `CPathT`de.
 
 ##  <a name="pxstr"></a>  CPathT::PXSTR
 
-Un type chaîne.
+Type chaîne.
 
 ```
 typedef StringType::PXSTR PXSTR;
@@ -706,11 +706,11 @@ typedef StringType::PXSTR PXSTR;
 
 ### <a name="remarks"></a>Notes
 
-`StringType` est le paramètre de modèle à `CPathT`.
+`StringType`est le paramètre de modèle `CPathT`de.
 
 ##  <a name="quotespaces"></a>  CPathT::QuoteSpaces
 
-Appelez cette méthode pour délimiter le chemin d’accès entre guillemets s’il contient des espaces.
+Appelez cette méthode pour placer le chemin d’accès entre guillemets s’il contient des espaces.
 
 ```
 void QuoteSpaces();
@@ -718,7 +718,7 @@ void QuoteSpaces();
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa).
+Pour plus d’informations, consultez [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw).
 
 ##  <a name="relativepathto"></a>  CPathT::RelativePathTo
 
@@ -738,25 +738,25 @@ BOOL RelativePathTo(
 Début du chemin d’accès relatif.
 
 *dwAttrFrom*<br/>
-Les attributs du fichier de *pszFrom*. Si cette valeur contient FILE_ATTRIBUTE_DIRECTORY, *pszFrom* est censé être un répertoire ; sinon, *pszFrom* est supposé pour être un fichier.
+Attributs de fichier de *pszFrom*. Si cette valeur contient FILE_ATTRIBUTE_DIRECTORY, *pszFrom* est supposé être un répertoire; dans le cas contraire, *pszFrom* est supposé être un fichier.
 
 *pszTo*<br/>
-Le point de terminaison du chemin d’accès relatif.
+Point de terminaison du chemin d’accès relatif.
 
 *dwAttrTo*<br/>
-Les attributs du fichier de *pszTo*. Si cette valeur contient FILE_ATTRIBUTE_DIRECTORY, *pszTo* est censé être un répertoire ; sinon, *pszTo* est supposé pour être un fichier.
+Attributs de fichier de *pszTo*. Si cette valeur contient FILE_ATTRIBUTE_DIRECTORY, *pszTo* est supposé être un répertoire; dans le cas contraire, *pszTo* est supposé être un fichier.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
+Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa).
+Pour plus d’informations, consultez [PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow).
 
 ##  <a name="removeargs"></a>  CPathT::RemoveArgs
 
-Appelez cette méthode pour supprimer tous les arguments de ligne de commande à partir du chemin.
+Appelez cette méthode pour supprimer tous les arguments de ligne de commande du chemin d’accès.
 
 ```
 void RemoveArgs();
@@ -764,11 +764,11 @@ void RemoveArgs();
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa).
+Pour plus d’informations, consultez [PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw).
 
 ##  <a name="removebackslash"></a>  CPathT::RemoveBackslash
 
-Appelez cette méthode pour supprimer la barre oblique de fin du chemin d’accès.
+Appelez cette méthode pour supprimer la barre oblique inverse à la fin du chemin d’accès.
 
 ```
 void RemoveBackslash();
@@ -776,7 +776,7 @@ void RemoveBackslash();
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha).
+Pour plus d’informations, consultez [PathRemoveBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw).
 
 ##  <a name="removeblanks"></a>  CPathT::RemoveBlanks
 
@@ -788,7 +788,7 @@ void RemoveBlanks();
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa).
+Pour plus d’informations, consultez [PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw).
 
 ##  <a name="removeextension"></a>  CPathT::RemoveExtension
 
@@ -800,11 +800,11 @@ void RemoveExtension();
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona).
+Pour plus d’informations, consultez [PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw).
 
 ##  <a name="removefilespec"></a>  CPathT::RemoveFileSpec
 
-Appelez cette méthode pour supprimer le nom de fichier à droite et la barre oblique inverse à partir du chemin, s’il a les.
+Appelez cette méthode pour supprimer le nom du fichier de fin et la barre oblique inverse du chemin d’accès, s’il en possède.
 
 ```
 BOOL RemoveFileSpec();
@@ -812,15 +812,15 @@ BOOL RemoveFileSpec();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
+Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca).
+Pour plus d’informations, consultez [PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw).
 
 ##  <a name="renameextension"></a>  CPathT::RenameExtension
 
-Appelez cette méthode pour remplacer l’extension de nom de fichier dans le chemin d’accès avec une nouvelle extension. Si le nom de fichier ne contient pas une extension, l’extension sera attachée à la fin du chemin d’accès.
+Appelez cette méthode pour remplacer l’extension de nom de fichier dans le chemin d’accès par une nouvelle extension. Si le nom de fichier ne contient pas d’extension, l’extension est attachée à la fin du chemin d’accès.
 
 ```
 BOOL RenameExtension(PCXSTR pszExtension);
@@ -829,19 +829,19 @@ BOOL RenameExtension(PCXSTR pszExtension);
 ### <a name="parameters"></a>Paramètres
 
 *pszExtension*<br/>
-La nouvelle extension de nom de fichier, précédé par un «. » caractères.
+Nouvelle extension de nom de fichier, précédée d’un caractère «.».
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
+Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona).
+Pour plus d’informations, consultez [PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw).
 
 ##  <a name="skiproot"></a>  CPathT::SkipRoot
 
-Appelez cette méthode pour analyser un chemin d’accès, en ignorant la lettre de lecteur ou les parties de chemin d’accès UNC (convention universelle d’affectation de noms) / partage de serveur.
+Appelez cette méthode pour analyser un chemin d’accès, en ignorant la lettre de lecteur ou les parties du chemin d’accès du serveur/partage UNC (Universal Naming Convention).
 
 ```
 int SkipRoot() const;
@@ -849,15 +849,15 @@ int SkipRoot() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la position de début du sous-tracé qui suit la racine (lettre de lecteur ou UNC/partage de serveur).
+Retourne la position du début du sous-chemin d’accès qui suit la racine (lettre de lecteur ou serveur/partage UNC).
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota).
+Pour plus d’informations, consultez [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw).
 
 ##  <a name="strippath"></a>  CPathT::StripPath
 
-Appelez cette méthode pour supprimer la partie de chemin d’accès d’un chemin d’accès complet et le nom de fichier.
+Appelez cette méthode pour supprimer la partie du chemin d’accès qualifié complet et le nom de fichier.
 
 ```
 void StripPath();
@@ -865,11 +865,11 @@ void StripPath();
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha).
+Pour plus d’informations, consultez [PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw).
 
 ##  <a name="striptoroot"></a>  CPathT::StripToRoot
 
-Appelez cette méthode pour supprimer toutes les parties du chemin d’accès à l’exception des informations sur les racine.
+Appelez cette méthode pour supprimer toutes les parties du chemin d’accès, à l’exception des informations de racine.
 
 ```
 BOOL StripToRoot();
@@ -877,15 +877,15 @@ BOOL StripToRoot();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne TRUE si une lettre de lecteur valide a été trouvé dans le chemin d’accès, ou FALSE dans le cas contraire.
+Retourne la valeur TRUE si une lettre de lecteur valide a été trouvée dans le chemin d’accès, ou FALSe dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota).
+Pour plus d’informations, consultez [PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw).
 
 ##  <a name="unquotespaces"></a>  CPathT::UnquoteSpaces
 
-Appelez cette méthode pour supprimer les guillemets de début et de fin d’un chemin d’accès.
+Appelez cette méthode pour supprimer les guillemets à partir du début et de la fin d’un chemin d’accès.
 
 ```
 void UnquoteSpaces();
@@ -893,7 +893,7 @@ void UnquoteSpaces();
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa).
+Pour plus d’informations, consultez [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw).
 
 ##  <a name="xchar"></a>  CPathT::XCHAR
 
@@ -905,7 +905,7 @@ typedef StringType::XCHAR XCHAR;
 
 ### <a name="remarks"></a>Notes
 
-`StringType` est le paramètre de modèle à `CPathT`.
+`StringType`est le paramètre de modèle `CPathT`de.
 
 ## <a name="see-also"></a>Voir aussi
 

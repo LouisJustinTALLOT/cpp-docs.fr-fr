@@ -29,14 +29,14 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 08e8cb0ddaac342682776600fd0fd8b3d26b8953
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1eaa6f0b81daaa7d8c7626398fe30b45ead979c3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188483"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498912"
 ---
-# <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
+# <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s, _wctomb_s_l
 
 Convertit un caractère large en caractère multioctet correspondant. Version de [wctomb, _wctomb_l](wctomb-wctomb-l.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -87,15 +87,15 @@ Conditions d’erreur
 |any|>**INT_MAX**|**EINVAL**|non modifié|
 |any|trop petit|**EINVAL**|non modifié|
 
-Si l’une des conditions d’erreur ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **wctomb** retourne **EINVAL** et définit **errno** à **EINVAL**.
+Si l’une des conditions d’erreur ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **wctomb** retourne **EINVAL** et définit **errno** sur **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **wctomb_s** fonction convertit son *wchar* l’argument de caractère multioctet correspondant et stocke le résultat au niveau *mbchar*. Vous pouvez appeler la fonction de n’importe quel endroit dans n’importe quel programme.
+La fonction **wctomb_s** convertit son argument *WCHAR* en caractère multioctet correspondant et stocke le résultat sur *mbchar*. Vous pouvez appeler la fonction de n’importe quel endroit dans n’importe quel programme.
 
-Si **wctomb_s** convertit le caractère large en caractère multioctet, elle place le nombre d’octets (qui n’est jamais supérieure à **MB_CUR_MAX**) dans le caractère large dans l’entier désigné par *pRetValue*. Si *wchar* est le caractère null de caractères larges (L '\0'), **wctomb_s** remplit *pRetValue* avec 1. Si le pointeur cible *mbchar* est **NULL**, **wctomb_s** affecte la valeur 0 *pRetValue*. Si la conversion n’est pas possible dans les paramètres régionaux actuels, **wctomb_s** place -1 dans *pRetValue*.
+Si **wctomb_s** convertit le caractère élargi en caractère multioctet, il place le nombre d’octets (qui n’est jamais supérieur à **MB_CUR_MAX**) dans le caractère élargi dans l’entier désigné par *pretvalue*. Si *WCHAR* est le caractère null à caractères larges (L' \ 0 '), **Wctomb_s** remplit *pretvalue* avec 1. Si le pointeur cible *mbchar* est **null**, **Wctomb_s** place 0 dans *pretvalue*. Si la conversion n’est pas possible dans les paramètres régionaux actuels, **wctomb_s** place-1dans pretvalue.
 
-**wctomb_s** utilise les paramètres régionaux actuels pour plus d’informations dépendantes des paramètres régionaux ; **_wctomb_s_l** est identique, sauf qu’elle utilise les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**wctomb_s** utilise les paramètres régionaux actuels pour les informations dépendantes des paramètres régionaux; **_wctomb_s_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -106,9 +106,9 @@ Si **wctomb_s** convertit le caractère large en caractère multioctet, elle pla
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-Ce programme illustre le comportement de la **wctomb** (fonction).
+Ce programme illustre le comportement de la fonction **wctomb** .
 
 ```cpp
 // crt_wctomb_s.cpp
@@ -142,4 +142,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 066494f4ba0119f4576e0c8e3c06d87ff736aea3
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 732bdf980240b1f496c1aca56c8a89b6a7f52d27
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916731"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502178"
 ---
 # <a name="cwinapp-class"></a>CWinApp (classe)
 
@@ -260,7 +260,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|Substituez pour effectuer un traitement du temps d’inactivité spécifique à l’application.|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|Appelé par le Framework pour ouvrir un document à partir d’un fichier.|
 |[CWinApp::ParseCommandLine](#parsecommandline)|Analyse des paramètres et des indicateurs individuels dans la ligne de commande.|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtre les messages avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtre les messages avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Intercepte certains messages avant qu’ils n’atteignent l’application.|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|Gère les indicateurs et les arguments de ligne de commande.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Intercepte toutes les exceptions non gérées levées par les gestionnaires de commandes et de messages de l’application.|
@@ -390,7 +390,7 @@ Pointeur vers le `CDocTemplate` à ajouter.
 
 Vous devez ajouter tous les modèles de document à une application avant d’appeler [RegisterShellFileTypes](#registershellfiletypes).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#35](../../mfc/reference/codesnippet/cpp/cwinapp-class_1.cpp)]
 
@@ -636,7 +636,7 @@ void EnableShellOpen();
 
 Appelez la `RegisterShellFileTypes` fonction membre conjointement avec cette fonction ou fournissez un. Fichier REG avec votre application pour l’inscription manuelle des types de documents.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#38](../../mfc/reference/codesnippet/cpp/cwinapp-class_4.cpp)]
 
@@ -850,7 +850,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>Paramètres
 
 *pPrintDlg*<br/>
-Pointeur vers une structure [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) .
+Pointeur vers une structure [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) .
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -902,9 +902,9 @@ Cette fonction membre ne respecte pas la casse; par conséquent, les chaînes da
 > `GetProfileBinary`alloue une mémoire tampon et retourne son adresse dans \* *ppData*. L’appelant est responsable de la libération de la mémoire tampon à l’aide de **delete []** .
 
 > [!IMPORTANT]
-> Les données retournées par cette fonction ne sont pas nécessairement terminées par une valeur NULL, et l’appelant doit effectuer la validation. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Les données retournées par cette fonction ne sont pas nécessairement terminées par une valeur NULL, et l’appelant doit effectuer la validation. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCWindowing#41](../../mfc/reference/codesnippet/cpp/cwinapp-class_7.cpp)]
 
@@ -943,7 +943,7 @@ Cette fonction membre prend en charge la notation hexadécimale pour la valeur d
 Cette fonction membre ne respecte pas la casse; par conséquent, les chaînes dans les paramètres *lpszSection* et *lpszEntry* peuvent être différentes au niveau de la casse.
 
 > [!IMPORTANT]
-> Les données retournées par cette fonction ne sont pas nécessairement terminées par une valeur NULL, et l’appelant doit effectuer la validation. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Les données retournées par cette fonction ne sont pas nécessairement terminées par une valeur NULL, et l’appelant doit effectuer la validation. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Exemple
 
@@ -980,7 +980,7 @@ La valeur de retour est la chaîne du de l’application. Fichier INI ou *lpszDe
 ### <a name="remarks"></a>Notes
 
 > [!IMPORTANT]
-> Les données retournées par cette fonction ne sont pas nécessairement terminées par une valeur NULL, et l’appelant doit effectuer la validation. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Les données retournées par cette fonction ne sont pas nécessairement terminées par une valeur NULL, et l’appelant doit effectuer la validation. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Exemple
 
@@ -1036,7 +1036,7 @@ virtual void HtmlHelp(
 Spécifie des données supplémentaires. La valeur utilisée dépend de la valeur du paramètre *nCmd* . La valeur par `0x000F` défaut correspond à [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command).
 
 *nCmd*<br/>
-Spécifie le type d’aide demandée. Pour obtenir une liste des valeurs possibles et savoir comment elles affectent le paramètre *dwData* , consultez le paramètre *uCommand* décrit dans les fonctions de l’API [HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw) ou [HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa) dans la SDK Windows.  
+Spécifie le type d’aide demandée. Pour obtenir une liste des valeurs possibles et savoir comment elles affectent le paramètre *dwData* , consultez le paramètre *uCommand* décrit dans les fonctions de l’API [HtmlHelpW](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw) ou [HtmlHelpA](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) dans la SDK Windows.  
 
 ### <a name="remarks"></a>Notes
 
@@ -1063,9 +1063,9 @@ L’initialisation de l’application est divisée de manière conceptuelle en d
 Substituez `InitInstance` pour initialiser chaque nouvelle instance de votre application s’exécutant sous Windows. En règle générale, vous `InitInstance` remplacez pour construire votre objet de fenêtre principale et `CWinThread::m_pMainWnd` définir le membre de données pour qu’il pointe vers cette fenêtre. Pour plus d’informations sur la substitution de cette fonction membre [, consultez CWinApp: Classe](../../mfc/cwinapp-the-application-class.md)d’application.
 
 > [!NOTE]
-> Les applications MFC doivent être initialisées en tant que thread unique cloisonné (STA). Si vous appelez [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) dans votre `InitInstance` remplacement, spécifiez COINIT_APARTMENTTHREADED (au lieu de COINIT_MULTITHREADED).
+> Les applications MFC doivent être initialisées en tant que thread unique cloisonné (STA). Si vous appelez [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) dans votre `InitInstance` remplacement, spécifiez COINIT_APARTMENTTHREADED (au lieu de COINIT_MULTITHREADED).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCListView#9](../../atl/reference/codesnippet/cpp/cwinapp-class_10.cpp)]
 
@@ -1099,7 +1099,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 Pointe vers une chaîne se terminant par un caractère null qui contient le nom de la ressource curseur. Vous pouvez utiliser un `CString` pour cet argument.
 
 *nIDResource*<br/>
-ID de la ressource curseur. Pour obtenir la liste des ressources, consultez [LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) dans le SDK Windows.
+ID de la ressource curseur. Pour obtenir la liste des ressources, consultez [LoadCursor](/windows/win32/api/winuser/nf-winuser-loadcursorw) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1111,7 +1111,7 @@ Handle vers un curseur en cas de réussite; Sinon, NULL.
 
 Utilisez la fonction membre [LoadStandardCursor](#loadstandardcursor) ou [LoadOEMCursor](#loadoemcursor) pour accéder aux curseurs Windows prédéfinis.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#44](../../mfc/reference/codesnippet/cpp/cwinapp-class_11.cpp)]
 
@@ -1142,7 +1142,7 @@ Handle d’une icône en cas de réussite; Sinon, NULL.
 Vous pouvez utiliser la fonction membre [LoadStandardIcon](#loadstandardicon) ou [LoadOEMIcon](#loadoemicon) pour accéder aux icônes prédéfinies de Windows.
 
 > [!NOTE]
-> Cette fonction membre appelle la fonction d’API Win32 [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), qui peut uniquement charger une icône dont la taille est conforme aux valeurs de métriques système SM_CXICON et SM_CYICON.
+> Cette fonction membre appelle la fonction d’API Win32 [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw), qui peut uniquement charger une icône dont la taille est conforme aux valeurs de métriques système SM_CXICON et SM_CYICON.
 
 ##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor
 
@@ -1237,7 +1237,7 @@ Handle vers un curseur en cas de réussite; Sinon, NULL.
 
 Utilisez la `LoadStandardCursor` fonction membre ou [LoadOEMCursor](#loadoemcursor) pour accéder aux curseurs Windows prédéfinis.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#47](../../mfc/reference/codesnippet/cpp/cwinapp-class_14.cpp)]
 
@@ -1252,7 +1252,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpszIconName*<br/>
-Identificateur de constante de manifeste qui spécifie une icône Windows prédéfinie. Ces identificateurs sont définis dans WINDOWS. Manutention. Pour obtenir la liste des valeurs prédéfinies possibles et leurs descriptions, consultez le paramètre *lpIconName* dans [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) dans le SDK Windows.
+Identificateur de constante de manifeste qui spécifie une icône Windows prédéfinie. Ces identificateurs sont définis dans WINDOWS. Manutention. Pour obtenir la liste des valeurs prédéfinies possibles et leurs descriptions, consultez le paramètre *lpIconName* dans [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1352,7 +1352,7 @@ HINSTANCE m_hInstance;
 
 Le `m_hInstance` membre de données est un handle de l’instance actuelle de l’application s’exécutant sous Windows. Elle est retournée par la fonction globale [AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle). `m_hInstance`variable publique de type HINSTANCE.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCWindowing#55](../../mfc/reference/codesnippet/cpp/cwinapp-class_15.cpp)]
 
@@ -1368,7 +1368,7 @@ LPTSTR m_lpCmdLine;
 
 Pointe vers une chaîne se terminant par un caractère null qui spécifie la ligne de commande pour l’application. Utilisez `m_lpCmdLine` pour accéder à tous les arguments de ligne de commande entrés par l’utilisateur au démarrage de l’application. `m_lpCmdLine`est une variable publique de type LPTSTR.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#52](../../mfc/reference/codesnippet/cpp/cwinapp-class_16.cpp)]
 
@@ -1396,7 +1396,7 @@ int m_nCmdShow;
 
 Vous devez passer `m_nCmdShow` en tant qu’argument quand vous appelez [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) pour la fenêtre principale de votre application. `m_nCmdShow`variable publique de type **int**.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCWindowing#56](../../mfc/reference/codesnippet/cpp/cwinapp-class_17.cpp)]
 
@@ -1597,7 +1597,7 @@ Vous devez ajouter une `ON_COMMAND( ID_FILE_OPEN, OnFileOpen )` instruction à v
 
 Pour plus d’informations sur le comportement par défaut et des conseils sur la façon de remplacer cette fonction membre, consultez la [note technique 22](../../mfc/tn022-standard-commands-implementation.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCWindowing#49](../../mfc/reference/codesnippet/cpp/cwinapp-class_25.cpp)]
 
@@ -1617,7 +1617,7 @@ Vous devez ajouter une `ON_COMMAND( ID_FILE_PRINT_SETUP, OnFilePrintSetup )` ins
 
 Pour plus d’informations sur le comportement par défaut et des conseils sur la façon de remplacer cette fonction membre, consultez la [note technique 22](../../mfc/tn022-standard-commands-implementation.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCWindowing#49](../../mfc/reference/codesnippet/cpp/cwinapp-class_25.cpp)]
 
@@ -1717,7 +1717,7 @@ N’effectuez pas de tâches de longue `OnIdle` durée pendant que votre applica
 
 Si vous ne souhaitez `OnIdle` pas que soit appelé chaque fois qu’un message est récupéré à partir de la file d’attente de messages, vous pouvez remplacer [CWinThreadIsIdleMessage](../../mfc/reference/cwinthread-class.md#isidlemessage). Si une application a défini un minuteur très bref, ou si le système envoie le message WM_SYSTIMER, `OnIdle` est appelé à plusieurs reprises et dégrade les performances.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Les deux exemples suivants montrent comment utiliser `OnIdle`. Le premier exemple traite deux tâches inactives à l’aide de l’argument *lCount* pour classer par ordre de priorité les tâches. La première tâche est haute priorité et vous devez le faire chaque fois que cela est possible. La deuxième tâche est moins importante et doit être effectuée uniquement lorsqu’il y a une longue pause dans l’entrée de l’utilisateur. Notez l’appel à la version de classe de base `OnIdle`de. Le deuxième exemple gère un groupe de tâches inactives avec des priorités différentes.
 
@@ -1784,7 +1784,7 @@ Pour obtenir une description des indicateurs de ligne de commande, consultez [CC
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
-Substituez cette fonction pour filtrer les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) l’implémentation par défaut effectue une traduction d’accélérateurs, vous devez donc appeler `CWinApp::PreTranslateMessage`fonction membre dans votre version substituée.
+Substituez cette fonction pour filtrer les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) l’implémentation par défaut effectue une traduction d’accélérateurs, vous devez donc appeler `CWinApp::PreTranslateMessage`fonction membre dans votre version substituée.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Paramètres
 
 *pMsg*<br/>
-Pointeur vers une structure [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) qui contient le message à traiter.
+Pointeur vers une structure [MSG](/windows/win32/api/winuser/ns-winuser-tagmsg) qui contient le message à traiter.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1815,7 +1815,7 @@ virtual BOOL ProcessMessageFilter(
 Spécifie un code de raccordement. Cette fonction membre utilise le code pour déterminer comment traiter *lpMsg.*
 
 *lpMsg*<br/>
-Pointeur vers une structure [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) Windows.
+Pointeur vers un tructure de [message](/windows/win32/api/winuser/ns-winuser-msg)Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 Pointeur vers une exception non interceptée.
 
 *pMsg*<br/>
-Structure [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) qui contient des informations sur le message Windows à l’origine de la levée d’une exception par l’infrastructure.
+Tructure [MSG](/windows/win32/api/winuser/ns-winuser-msg)qui contient des informations sur le message Windows à l’origine de la levée d’une exception par l’infrastructure.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2118,7 +2118,7 @@ void SelectPrinter(
 ### <a name="parameters"></a>Paramètres
 
 *hDevNames*<br/>
-Descripteur d’une structure [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) identifiant les noms de pilote, de périphérique et de port de sortie d’une imprimante spécifique.
+Descripteur d’un tructure [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)identifiant les noms de pilote, de périphérique et de port de sortie d’une imprimante spécifique.
 
 *hDevMode*<br/>
 Handle d’une structure [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) qui spécifie des informations sur l’initialisation de l’appareil et l’environnement d’une imprimante.
@@ -2260,7 +2260,7 @@ virtual void WinHelp(
 Spécifie des données supplémentaires. La valeur utilisée dépend de la valeur du paramètre *nCmd* .
 
 *nCmd*<br/>
-Spécifie le type d’aide demandée. Pour obtenir une liste des valeurs possibles et savoir comment elles affectent le paramètre *dwData* , consultez la fonction Windows [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) .
+Spécifie le type d’aide demandée. Pour obtenir une liste des valeurs possibles et savoir comment elles affectent le paramètre *dwData* , consultez la fonction Windows [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) .
 
 ### <a name="remarks"></a>Notes
 
@@ -2370,7 +2370,7 @@ Pointe vers la chaîne à écrire. Si ce paramètre a la valeur NULL, l’entré
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#43](../../mfc/reference/codesnippet/cpp/cwinapp-class_9.cpp)]
 

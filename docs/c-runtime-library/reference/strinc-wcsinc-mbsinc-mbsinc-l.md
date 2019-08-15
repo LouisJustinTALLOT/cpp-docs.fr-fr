@@ -40,19 +40,19 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: dae14fc7b66b9be4e1016c5409a93cd172691fed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48bc7caa5dbc2d2e7eec847bfa5135d13bcd83c0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365208"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499468"
 ---
-# <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
+# <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
 Avance un pointeur de chaîne d'un caractère.
 
 > [!IMPORTANT]
-> **_mbsinc** et **_mbsinc_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsinc** et **_mbsinc_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -84,18 +84,18 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne un pointeur désignant le caractère qui suit immédiatement *actuel*.
+Chacune de ces routines retourne un pointeur vers le caractère qui suit immédiatement le *actuel*.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbsinc** fonction retourne un pointeur vers le premier octet du caractère multioctet qui suit immédiatement *actuel*. **_mbsinc** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) qui est actuellement en cours d’utilisation ; **_mbsinc_l** est identique, à ceci près qu’elle utilise les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La fonction **_mbsinc** retourne un pointeur vers le premier octet du caractère multioctet qui suit immédiatement le *actuel*. **_mbsinc** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation; **_mbsinc_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-La fonction de texte générique **_tcsinc**, définie dans Tchar.h, correspond au **_mbsinc** si **_MBCS** a été défini, ou la valeur **_wcsinc** si **_UNICODE** a été défini. Sinon, **_tcsinc** est mappé à **_strinc**. **_strinc** et **_wcsinc** sont des versions-caractères sur un octet et caractères larges de **_mbsinc**. **_strinc** et **_wcsinc** sont fournis uniquement pour ce mappage et ne doit pas être utilisé dans le cas contraire. Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).
+La fonction de texte générique **_tcsinc**, définie dans Tchar. h, est mappée à **_Mbsinc** si **_ MBCS** a été défini, ou à **_wcsinc** si **_ Unicode** a été défini. Sinon, **_tcsinc** est mappé à **_strinc**. **_strinc** et **_wcsinc** sont des versions à caractères codés sur un octet et à caractères larges de **_mbsinc**. **_strinc** et **_wcsinc** sont fournis uniquement pour ce mappage et ne doivent pas être utilisés dans le cas contraire. Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).
 
-Si *actuel* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne **EINVAL** et définit **errno** à **EINVAL**.
+Si *Current* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne **EINVAL** et définit **errno** sur **EINVAL**.
 
 > [!IMPORTANT]
-> Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être utilisés pour les attaques du système, car ils peuvent provoquer une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être utilisés pour les attaques du système, car ils peuvent provoquer une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Configuration requise
 
