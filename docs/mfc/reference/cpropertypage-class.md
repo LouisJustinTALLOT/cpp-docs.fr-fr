@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: f9116306fd2bd6145096b055025bd4dd2075b0c1
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 6a6223708c83f7a5b3e6532a2016660d558f8270
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916877"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502806"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage (classe)
 
@@ -71,7 +71,7 @@ class CPropertyPage : public CDialog
 |----------|-----------------|
 |[CPropertyPage:: CancelToClose](#canceltoclose)|Modifie le bouton OK pour lire fermer et désactive le bouton Annuler, après une modification irrécupérable dans la page d’une feuille de propriétés modale.|
 |[CPropertyPage:: Construct](#construct)|Construit un objet `CPropertyPage`. Utilisez `Construct` si vous souhaitez spécifier vos paramètres au moment de l’exécution ou si vous utilisez des tableaux.|
-|[CPropertyPage::GetPSP](#getpsp)|Récupère la structure Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) associée à l' `CPropertyPage` objet.|
+|[CPropertyPage::GetPSP](#getpsp)|Récupère la structure Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) associée à l' `CPropertyPage` objet.|
 |[CPropertyPage::OnApply](#onapply)|Appelé par l’infrastructure quand l’utilisateur clique sur le bouton appliquer.|
 |[CPropertyPage:: OnCancel](#oncancel)|Appelé par le Framework lorsque l’utilisateur clique sur le bouton Annuler.|
 |[CPropertyPage::OnKillActive](#onkillactive)|Appelé par le Framework lorsque la page actuelle n’est plus la page active. Effectuez la validation des données ici.|
@@ -89,7 +89,7 @@ class CPropertyPage : public CDialog
 
 |Nom|Description|
 |----------|-----------------|
-|[CPropertyPage::m_psp](#m_psp)|Structure [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) de Windows. Permet d’accéder aux paramètres de la page de propriétés de base.|
+|[CPropertyPage::m_psp](#m_psp)|Structure [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) de Windows. Permet d’accéder aux paramètres de la page de propriétés de base.|
 
 ## <a name="remarks"></a>Notes
 
@@ -261,7 +261,7 @@ Si vous avez plusieurs paramètres (par exemple, si vous utilisez un tableau), u
 
 ##  <a name="getpsp"></a>  CPropertyPage::GetPSP
 
-Récupère la structure Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) associée à l' `CPropertyPage` objet.
+Récupère la structure Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) associée à l' `CPropertyPage` objet.
 
 ```
 const PROPSHEETPAGE& GetPSP() const;
@@ -275,7 +275,7 @@ Référence à la `PROPSHEETPAGE` structure.
 
 ##  <a name="m_psp"></a>  CPropertyPage::m_psp
 
-`m_psp`est une structure dont les membres stockent les caractéristiques de [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2).
+`m_psp`est une structure dont les membres stockent les caractéristiques de [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2).
 
 ```
 PROPSHEETPAGE m_psp;
@@ -311,7 +311,7 @@ Substituez cette fonction membre pour spécifier l’action que votre programme 
 
 L’implémentation par défaut `OnApply` de `OnOK`appelle.
 
-Pour plus d’informations sur les messages de notification envoyés lorsque l’utilisateur appuie sur le bouton Appliquer maintenant ou OK dans une feuille de propriétés, consultez [PSN_APPLY](/windows/desktop/Controls/psn-apply) dans la SDK Windows.
+Pour plus d’informations sur les messages de notification envoyés lorsque l’utilisateur appuie sur le bouton Appliquer maintenant ou OK dans une feuille de propriétés, consultez [PSN_APPLY](/windows/win32/Controls/psn-apply) dans la SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -367,7 +367,7 @@ virtual void OnOK();
 
 ### <a name="remarks"></a>Notes
 
-Quand l’utilisateur choisit le bouton OK ou appliquer maintenant, le Framework reçoit la notification [PSN_APPLY](/windows/desktop/Controls/psn-apply) à partir de la page de propriétés. L’appel à `OnOK` n’est pas effectué si vous appelez [CPropertySheet::P ressbutton](../../mfc/reference/cpropertysheet-class.md#pressbutton) , car la page de propriétés n’envoie pas la notification dans ce cas.
+Quand l’utilisateur choisit le bouton OK ou appliquer maintenant, le Framework reçoit la notification [PSN_APPLY](/windows/win32/Controls/psn-apply) à partir de la page de propriétés. L’appel à `OnOK` n’est pas effectué si vous appelez [CPropertySheet::P ressbutton](../../mfc/reference/cpropertysheet-class.md#pressbutton) , car la page de propriétés n’envoie pas la notification dans ce cas.
 
 Substituez cette fonction membre pour implémenter un comportement supplémentaire spécifique à la page actuellement active lorsque l’utilisateur ignore la totalité de la feuille de propriétés.
 
@@ -481,7 +481,7 @@ Quand un utilisateur clique sur le bouton **Terminer** dans un Assistant, l’in
 
 Vous pouvez remplacer cette fonction membre pour spécifier une action que l’utilisateur doit effectuer lorsque vous appuyez sur le bouton Terminer. Lors du remplacement de cette fonction, retournez FALSe pour empêcher la destruction de la feuille de propriétés.
 
-Pour plus d’informations sur les messages de notification envoyés lorsque l’utilisateur appuie sur le bouton Terminer dans une feuille de propriétés de l’Assistant, consultez [PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) dans la SDK Windows.
+Pour plus d’informations sur les messages de notification envoyés lorsque l’utilisateur appuie sur le bouton Terminer dans une feuille de propriétés de l’Assistant, consultez [PSN_WIZFINISH](/windows/win32/Controls/psn-wizfinish) dans la SDK Windows.
 
 Pour plus d’informations sur la création d’une feuille de propriétés de type assistant, consultez [CPropertySheet:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).
 

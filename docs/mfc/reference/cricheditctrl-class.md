@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 253b1958a93fea28fa2d1408bc8238a5eb0ca519
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: fc2b4c08b5a999f0369199e0dd65a09a7cdf8dff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916807"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503149"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl (classe)
 
@@ -296,7 +296,7 @@ BOOL CanPaste(UINT nFormat = 0) const;
 ### <a name="parameters"></a>Paramètres
 
 *nFormat*<br/>
-Format de données du presse-papiers à interroger. Ce paramètre peut être l’un des formats de presse-papiers prédéfinis ou la valeur retournée par [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata).
+Format de données du presse-papiers à interroger. Ce paramètre peut être l’un des formats de presse-papiers prédéfinis ou la valeur retournée par [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw).
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -306,7 +306,7 @@ Différent de zéro si le format du presse-papiers peut être collé; Sinon, 0.
 
 Si *nFormat* a la valeur `CanPaste` 0, essaiera tout format actuellement dans le presse-papiers.
 
-Pour plus d’informations, consultez [EM_CANPASTE](/windows/desktop/Controls/em-canpaste) message and [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Function dans le SDK Windows.
+Pour plus d’informations, consultez [EM_CANPASTE](/windows/win32/Controls/em-canpaste) message and [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) Function dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -328,7 +328,7 @@ Valeur différente de zéro si la file d’attente de restauration par progressi
 
 Pour découvrir le nom de l’opération dans la file d’attente de restauration par progression, appelez [CRichEditCtrl:: GetRedoName](#getredoname). Pour rétablir l’opération d’annulation la plus récente, appelez [Redo](#redo).
 
-Pour plus d’informations, consultez [EM_CANREDO](/windows/desktop/Controls/em-canredo) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_CANREDO](/windows/win32/Controls/em-canredo) dans le SDK Windows.
 
 ##  <a name="canundo"></a>  CRichEditCtrl::CanUndo
 
@@ -344,7 +344,7 @@ Différent de zéro si la dernière opération de modification peut être annul�
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [EM_CANUNDO](/windows/desktop/Controls/em-canundo) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_CANUNDO](/windows/win32/Controls/em-canundo) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -371,7 +371,7 @@ Index de caractère de base zéro du caractère le plus proche du point spécifi
 
 Cette fonction membre fonctionne avec un contrôle RichEdit. Pour obtenir les informations d’un contrôle d’édition, appelez [CEdit:: CharFromPos](../../mfc/reference/cedit-class.md#charfrompos).
 
-Pour plus d’informations, consultez [EM_CHARFROMPOS](/windows/desktop/Controls/em-charfrompos) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_CHARFROMPOS](/windows/win32/Controls/em-charfrompos) dans le SDK Windows.
 
 ##  <a name="clear"></a>  CRichEditCtrl::Clear
 
@@ -387,7 +387,7 @@ La suppression effectuée par `Clear` peut être annulée en appelant la fonctio
 
 Pour supprimer la sélection actuelle et placer le contenu supprimé dans le presse-papiers, appelez la fonction membre [Cut](#cut) .
 
-Pour plus d’informations, consultez [WM_CLEAR](/windows/desktop/dataxchg/wm-clear) dans le SDK Windows.
+Pour plus d’informations, consultez [WM_CLEAR](/windows/win32/dataxchg/wm-clear) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -403,7 +403,7 @@ void Copy();
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [WM_COPY](/windows/desktop/dataxchg/wm-copy) dans le SDK Windows.
+Pour plus d’informations, consultez [WM_COPY](/windows/win32/dataxchg/wm-copy) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -424,10 +424,10 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Paramètres
 
 *dwStyle*<br/>
-Spécifie le style du contrôle d’édition. Appliquez une combinaison des styles de fenêtre répertoriés dans la section **Notes** ci-dessous, et [Modifiez les styles de contrôle](/windows/desktop/Controls/edit-control-styles), décrits dans la SDK Windows.
+Spécifie le style du contrôle d’édition. Appliquez une combinaison des styles de fenêtre répertoriés dans la section **Notes** ci-dessous, et [Modifiez les styles de contrôle](/windows/win32/Controls/edit-control-styles), décrits dans la SDK Windows.
 
 *rect*<br/>
-Spécifie la taille et la position du contrôle d’édition. Peut être un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou une structure [Rect](/windows/desktop/api/windef/ns-windef-tagrect) .
+Spécifie la taille et la position du contrôle d’édition. Peut être un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou une structure [Rect](/windows/win32/api/windef/ns-windef-rect) .
 
 *pParentWnd*<br/>
 Spécifie la fenêtre parente du contrôle d’édition (souvent un [CDialog](../../mfc/reference/cdialog-class.md)). Il ne doit pas être NULL.
@@ -461,7 +461,7 @@ Appliquez les [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#win
 
 - WS_TABSTOP pour inclure le contrôle d’édition dans l’ordre de tabulation.
 
-Pour plus d’informations sur les styles de fenêtre, consultez [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) dans le SDK Windows.
+Pour plus d’informations sur les styles de fenêtre, consultez [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -483,10 +483,10 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Paramètres
 
 *dwExStyle*<br/>
-Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles Windows étendus, consultez le paramètre *dwExStyle* pour [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) dans le SDK Windows.
+Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles Windows étendus, consultez le paramètre *dwExStyle* pour [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) dans le SDK Windows.
 
 *dwStyle*<br/>
-Spécifie le style du contrôle d’édition. Appliquez une combinaison des styles de fenêtre répertoriés dans la section **Notes** de [Create](#create) and [Edit Control styles](/windows/desktop/Controls/edit-control-styles), décrite dans la SDK Windows.
+Spécifie le style du contrôle d’édition. Appliquez une combinaison des styles de fenêtre répertoriés dans la section **Notes** de [Create](#create) and [Edit Control styles](/windows/win32/Controls/edit-control-styles), décrite dans la SDK Windows.
 
 *rect*<br/>
 Référence à une structure [Rect](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, en coordonnées clientes de *pParentWnd*.
@@ -535,7 +535,7 @@ La suppression effectuée par `Cut` peut être annulée en appelant la fonction 
 
 Pour supprimer la sélection actuelle sans placer le texte supprimé dans le presse-papiers, appelez la fonction membre [Clear](#clear) .
 
-Pour plus d’informations, consultez [WM_CUT](/windows/desktop/dataxchg/wm-cut) dans le SDK Windows.
+Pour plus d’informations, consultez [WM_CUT](/windows/win32/dataxchg/wm-cut) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -552,7 +552,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="parameters"></a>Paramètres
 
 *pDisplayRect*<br/>
-Pointeur vers un objet [Rect](/windows/desktop/api/windef/ns-windef-tagrect) ou [CRect](../../atl-mfc-shared/reference/crect-class.md) spécifiant la zone de l’appareil pour afficher le texte.
+Pointeur vers un objet [Rect](/windows/win32/api/windef/ns-windef-rect) ou [CRect](../../atl-mfc-shared/reference/crect-class.md) spécifiant la zone de l’appareil pour afficher le texte.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -562,7 +562,7 @@ Différent de zéro si l’affichage du texte mis en forme est correct; sinon, 0
 
 Le texte et les éléments OLE sont tronqués à la zone spécifiée par le pointeur *pDisplayRect*.
 
-Pour plus d’informations, consultez [EM_DISPLAYBAND](/windows/desktop/Controls/em-displayband) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_DISPLAYBAND](/windows/win32/Controls/em-displayband) dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -582,7 +582,7 @@ Le contrôle ne peut pas annuler la dernière opération de modification. L’in
 
 L’indicateur d’annulation est automatiquement effacé chaque fois que vous appelez la fonction membre [CWnd](../../mfc/reference/cwnd-class.md) [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).
 
-Pour plus d’informations, consultez [EM_EMPTYUNDOBUFFER](/windows/desktop/Controls/em-emptyundobuffer) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_EMPTYUNDOBUFFER](/windows/win32/Controls/em-emptyundobuffer) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -601,10 +601,10 @@ long FindText(
 ### <a name="parameters"></a>Paramètres
 
 *dwFlags*<br/>
-Pour obtenir la liste des valeurs possibles, consultez *wParam* dans [EM_FINDTEXTEXT](/windows/desktop/Controls/em-findtextex) dans le SDK Windows.
+Pour obtenir la liste des valeurs possibles, consultez *wParam* dans [EM_FINDTEXTEXT](/windows/win32/Controls/em-findtextex) dans le SDK Windows.
 
 *pFindText*<br/>
-Pointeur vers la structure [FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-findtextexa) qui donne les paramètres pour la recherche et retourne la plage où la correspondance a été trouvée.
+Pointeur vers la structure [FINDTEXTEX](/windows/win32/api/richedit/ns-richedit-findtextexw) qui donne les paramètres pour la recherche et retourne la plage où la correspondance a été trouvée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -612,9 +612,9 @@ Position de caractère de base zéro de la correspondance suivante; -1 s’il n�
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez effectuer une recherche vers le haut ou vers le haut en définissant les paramètres de plage appropriés dans la structure [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) au sein de la structure `FINDTEXTEX`.
+Vous pouvez effectuer une recherche vers le haut ou vers le haut en définissant les paramètres de plage appropriés dans la structure [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) au sein de la structure `FINDTEXTEX`.
 
-Pour plus d’informations, consultez [EM_FINDTEXTEX](/windows/desktop/Controls/em-findtextex) message and [FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-findtextexa) structure dans le SDK Windows.
+Pour plus d’informations, consultez [EM_FINDTEXTEX](/windows/win32/Controls/em-findtextex) message and [FINDTEXTEX](/windows/win32/api/richedit/ns-richedit-findtextexw) structure dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -640,7 +640,7 @@ Position du caractère de base zéro à partir de laquelle commencer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Basé sur le paramètre *nCode*. Pour plus d’informations, consultez [EM_FINDWORDBREAK](/windows/desktop/Controls/em-findwordbreak) dans le SDK Windows.
+Basé sur le paramètre *nCode*. Pour plus d’informations, consultez [EM_FINDWORDBREAK](/windows/win32/Controls/em-findwordbreak) dans le SDK Windows.
 
 ### <a name="remarks"></a>Notes
 
@@ -659,7 +659,7 @@ long FormatRange(
 ### <a name="parameters"></a>Paramètres
 
 *pfr*<br/>
-Pointeur vers la structure [FormatRange](/windows/desktop/api/richedit/ns-richedit-formatrange) qui contient des informations sur le périphérique de sortie. La valeur NULL indique que les informations mises en cache au sein du contrôle Rich Edit peuvent être libérées.
+Pointeur vers la structure [FormatRange](/windows/win32/api/richedit/ns-richedit-formatrange) qui contient des informations sur le périphérique de sortie. La valeur NULL indique que les informations mises en cache au sein du contrôle Rich Edit peuvent être libérées.
 
 *bDisplay*<br/>
 Indique si le texte doit être rendu. Si la valeur est FALSe, le texte est uniquement mesuré.
@@ -672,7 +672,7 @@ Index du dernier caractère qui tient dans la région plus un.
 
 En général, cet appel est suivi d’un appel à [DisplayBand](#displayband).
 
-Pour plus d’informations, consultez [EM_FORMATRANGE](/windows/desktop/Controls/em-formatrange) message and [FormatRange](/windows/desktop/api/richedit/ns-richedit-formatrange) structure dans le SDK Windows.
+Pour plus d’informations, consultez [EM_FORMATRANGE](/windows/win32/Controls/em-formatrange) message and [FormatRange](/windows/win32/api/richedit/ns-richedit-formatrange) structure dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -699,7 +699,7 @@ Emplacement de l’angle supérieur gauche du caractère spécifié par *lChar*.
 
 Le caractère est spécifié en donnant sa valeur d’index de base zéro. Si *lChar* est supérieur à l’index du dernier caractère de cet `CRichEditCtrl` objet, la valeur de retour spécifie les coordonnées de la position de caractère juste après le dernier caractère de cet `CRichEditCtrl` objet.
 
-Pour plus d’informations, consultez [EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_POSFROMCHAR](/windows/win32/Controls/em-posfromchar) dans le SDK Windows.
 
 ##  <a name="getdefaultcharformat"></a>  CRichEditCtrl::GetDefaultCharFormat
 
@@ -744,7 +744,7 @@ Masque d’événement pour cet `CRichEditCtrl` objet.
 
 Le masque d’événement spécifie les messages `CRichEditCtrl` de notification envoyés par l’objet à sa fenêtre parente.
 
-Pour plus d’informations, consultez [EM_GETEVENTMASK](/windows/desktop/Controls/em-geteventmask) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_GETEVENTMASK](/windows/win32/Controls/em-geteventmask) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -764,7 +764,7 @@ Index de base zéro de la ligne visible supérieure dans cet `CRichEditCtrl` obj
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [EM_GETFIRSTVISIBLELINE](/windows/desktop/Controls/em-getfirstvisibleline) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_GETFIRSTVISIBLELINE](/windows/win32/Controls/em-getfirstvisibleline) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -780,13 +780,13 @@ IRichEditOle* GetIRichEditOle() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’interface [IRichEditOle](/windows/desktop/api/richole/nn-richole-iricheditole) qui peut être utilisée pour accéder aux `CRichEditCtrl` fonctionnalités OLE de cet objet. NULL si l’interface n’est pas accessible.
+Pointeur vers l’interface [IRichEditOle](/windows/win32/api/richole/nn-richole-iricheditole) qui peut être utilisée pour accéder aux `CRichEditCtrl` fonctionnalités OLE de cet objet. NULL si l’interface n’est pas accessible.
 
 ### <a name="remarks"></a>Notes
 
 Utilisez cette interface pour accéder aux `CRichEditCtrl` fonctionnalités OLE de cet objet.
 
-Pour plus d’informations, consultez message [EM_GETOLEINTERFACE](/windows/desktop/Controls/em-getoleinterface) et interface [IRichEditOle](/windows/desktop/api/richole/nn-richole-iricheditole) dans la SDK Windows.
+Pour plus d’informations, consultez message [EM_GETOLEINTERFACE](/windows/win32/Controls/em-getoleinterface) et interface [IRichEditOle](/windows/win32/api/richole/nn-richole-iricheditole) dans la SDK Windows.
 
 ##  <a name="getlimittext"></a>  CRichEditCtrl::GetLimitText
 
@@ -804,7 +804,7 @@ Limite de texte actuelle, en octets, pour cet `CRichEditCtrl` objet.
 
 La limite de texte correspond à la quantité maximale de texte, en octets, que le contrôle RichEdit peut accepter.
 
-Pour plus d’informations, consultez [EM_GETLIMITTEXT](/windows/desktop/Controls/em-getlimittext) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_GETLIMITTEXT](/windows/win32/Controls/em-getlimittext) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -847,7 +847,7 @@ La ligne copiée ne contient pas de caractère null de fin.
 > [!NOTE]
 >  Étant donné que le premier mot de la mémoire tampon stocke le nombre de caractères à copier, assurez-vous que votre mémoire tampon a une longueur d’au moins 4 octets.
 
-Pour plus d’informations, consultez [EM_GETLINE](/windows/desktop/Controls/em-getline) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_GETLINE](/windows/win32/Controls/em-getline) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -867,7 +867,7 @@ Nombre de lignes dans cet `CRichEditCtrl` objet.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [EM_GETLINECOUNT](/windows/desktop/Controls/em-getlinecount) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_GETLINECOUNT](/windows/win32/Controls/em-getlinecount) dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -889,7 +889,7 @@ Différent de zéro si le texte de `CRichEditCtrl` cet objet a été modifié; s
 
 Windows maintient un indicateur interne indiquant si le contenu du contrôle RichEdit a été modifié. Cet indicateur est effacé lorsque le contrôle d’édition est créé pour la première fois et peut également être effacé en appelant la fonction membre [SetModify](#setmodify) .
 
-Pour plus d’informations, consultez [EM_GETMODIFY](/windows/desktop/Controls/em-getmodify) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_GETMODIFY](/windows/win32/Controls/em-getmodify) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -905,7 +905,7 @@ UINT GetOptions() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Combinaison des valeurs d’indicateur d’option actuelles. Pour obtenir la liste de ces valeurs, consultez le paramètre *fOptions* dans le message [EM_SETOPTIONS](/windows/desktop/Controls/em-setoptions) , comme décrit dans la SDK Windows.
+Combinaison des valeurs d’indicateur d’option actuelles. Pour obtenir la liste de ces valeurs, consultez le paramètre *fOptions* dans le message [EM_SETOPTIONS](/windows/win32/Controls/em-setoptions) , comme décrit dans la SDK Windows.
 
 ##  <a name="getparaformat"></a>  CRichEditCtrl::GetParaFormat
 
@@ -918,9 +918,9 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 ### <a name="parameters"></a>Paramètres
 
 *pf*<br/>
-Dans la première version, pointeur vers une structure [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-paraformat) pour contenir les attributs de mise en forme de paragraphe de la sélection actuelle.
+Dans la première version, pointeur vers une structure [PARAFORMAT](/windows/win32/api/richedit/ns-richedit-paraformat) pour contenir les attributs de mise en forme de paragraphe de la sélection actuelle.
 
-Dans la deuxième version, pointeur vers une structure [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) , qui est une extension Rich Edit 2,0 de la `PARAFORMAT` structure, contenant les attributs de mise en forme de caractères par défaut.
+Dans la deuxième version, pointeur vers une structure [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) , qui est une extension Rich Edit 2,0 de la `PARAFORMAT` structure, contenant les attributs de mise en forme de caractères par défaut.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -930,7 +930,7 @@ Membre de données de *PF.* `dwMask` Elle spécifie les attributs de mise en for
 
 Si plusieurs paragraphes sont sélectionnés, *PF* reçoit les attributs du premier paragraphe sélectionné. La valeur de retour spécifie les attributs qui sont cohérents tout au long de la sélection.
 
-Pour plus d’informations, consultez le message [EM_GETPARAFORMAT](/windows/desktop/Controls/em-getparaformat) et `PARAFORMAT` les `PARAFORMAT2` structures et dans le SDK Windows.
+Pour plus d’informations, consultez le message [EM_GETPARAFORMAT](/windows/win32/Controls/em-getparaformat) et `PARAFORMAT` les `PARAFORMAT2` structures et dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -949,10 +949,10 @@ BOOL GetPunctuation(
 ### <a name="parameters"></a>Paramètres
 
 *fType*<br/>
-Indicateur de type de ponctuation, comme décrit dans le paramètre *ftype* de [EM_GETPUNCTUATION](/windows/desktop/Controls/em-getpunctuation) dans la SDK Windows.
+Indicateur de type de ponctuation, comme décrit dans le paramètre *ftype* de [EM_GETPUNCTUATION](/windows/win32/Controls/em-getpunctuation) dans la SDK Windows.
 
 *lpPunc*<br/>
-Pointeur vers une structure de [PUNCTUATION](/windows/desktop/api/richedit/ns-richedit-punctuation), comme décrit dans la SDK Windows.
+Pointeur vers une structure de [PUNCTUATION](/windows/win32/api/richedit/ns-richedit-punctuation), comme décrit dans la SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -973,13 +973,13 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md) ou pointeur vers un [Rect](/windows/desktop/api/windef/ns-windef-tagrect) pour recevoir le rectangle de mise en forme `CRichEditCtrl` de cet objet.
+[CRect](../../atl-mfc-shared/reference/crect-class.md) ou pointeur vers un [Rect](/windows/win32/api/windef/ns-windef-rect) pour recevoir le rectangle de mise en forme `CRichEditCtrl` de cet objet.
 
 ### <a name="remarks"></a>Notes
 
 Le rectangle de mise en forme est le rectangle englobant du texte. Cette valeur est indépendante de la taille de l' `CRichEditCtrl` objet.
 
-Pour plus d’informations, consultez [EM_GETRECT](/windows/desktop/Controls/em-getrect) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_GETRECT](/windows/win32/Controls/em-getrect) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -995,7 +995,7 @@ UNDONAMEID GetRedoName() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-En cas de `GetRedoName` réussite, retourne le type d’énumération [UNDONAMEID](/windows/desktop/api/richedit/ne-richedit-undonameid) indiquant le type de l’action suivante dans la file d’attente de restauration par progression du contrôle. Si la file d’attente de restauration par progression est vide ou si l’action de rétablissement dans la file d' `GetRedoName` attente est d’un type inconnu, retourne 0.
+En cas de `GetRedoName` réussite, retourne le type d’énumération [UNDONAMEID](/windows/win32/api/richedit/ne-richedit-undonameid) indiquant le type de l’action suivante dans la file d’attente de restauration par progression du contrôle. Si la file d’attente de restauration par progression est vide ou si l’action de rétablissement dans la file d' `GetRedoName` attente est d’un type inconnu, retourne 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -1016,7 +1016,7 @@ void GetSel(
 ### <a name="parameters"></a>Paramètres
 
 *cr*<br/>
-Référence à une structure [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) pour recevoir les limites de la sélection actuelle.
+Référence à une structure [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) pour recevoir les limites de la sélection actuelle.
 
 *nStartChar*<br/>
 Index de base zéro du premier caractère dans la sélection actuelle.
@@ -1034,7 +1034,7 @@ Les deux formes de cette fonction offrent d’autres méthodes pour obtenir les 
 
 La sélection inclut tout si le début (`cpMin` ou *nStartChar*) est égal à 0 et la`cpMax` fin (ou *nEndChar*) est égale à-1.
 
-Pour plus d’informations, consultez [EM_EXGETSEL](/windows/desktop/Controls/em-exgetsel) message and [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) structure dans le SDK Windows.
+Pour plus d’informations, consultez [EM_EXGETSEL](/windows/win32/Controls/em-exgetsel) message and [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) structure dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -1051,9 +1051,9 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="parameters"></a>Paramètres
 
 *cf*<br/>
-Dans la première version, pointeur vers une structure [Charformat](/windows/desktop/api/richedit/ns-richedit-_charformat) pour recevoir les attributs de mise en forme de caractères de la sélection actuelle.
+Dans la première version, pointeur vers une structure [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) pour recevoir les attributs de mise en forme de caractères de la sélection actuelle.
 
-Dans la deuxième version, pointeur vers une structure [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) , qui est une extension Rich Edit 2,0 de la `CHARFORMAT` structure pour recevoir les attributs de mise en forme de caractères de la sélection actuelle.
+Dans la deuxième version, pointeur vers une structure [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , qui est une extension Rich Edit 2,0 de la `CHARFORMAT` structure pour recevoir les attributs de mise en forme de caractères de la sélection actuelle.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1063,7 +1063,7 @@ Données membres de *cf.* `dwMask` Elle spécifie les attributs de mise en forme
 
 Le paramètre *CF* reçoit les attributs du premier caractère dans la sélection actuelle. La valeur de retour spécifie les attributs qui sont cohérents tout au long de la sélection.
 
-Pour plus d’informations, consultez le message [EM_GETCHARFORMAT](/windows/desktop/Controls/em-getcharformat) et `CHARFORMAT` les `CHARFORMAT2` structures et dans le SDK Windows.
+Pour plus d’informations, consultez le message [EM_GETCHARFORMAT](/windows/win32/Controls/em-getcharformat) et `CHARFORMAT` les `CHARFORMAT2` structures et dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1093,7 +1093,7 @@ Indicateurs spécifiant le contenu de la sélection actuelle. Combinaison des in
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [EM_SELECTIONTYPE](/windows/desktop/Controls/em-selectiontype) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_SELECTIONTYPE](/windows/win32/Controls/em-selectiontype) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1124,7 +1124,7 @@ Dépend du formulaire:
 
 Si vous utilisez le premier formulaire, **GetSelText (** `lpBuf` **)** , vous devez vous assurer que la mémoire tampon est suffisamment grande pour le texte qu’elle recevra. Appelez [GetSel](#getsel) pour déterminer le nombre de caractères dans la sélection actuelle.
 
-Pour plus d’informations, consultez [EM_GETSELTEXT](/windows/desktop/Controls/em-getseltext) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_GETSELTEXT](/windows/win32/Controls/em-getseltext) dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -1144,7 +1144,7 @@ Longueur du texte dans cet `CRichEditCtrl` objet.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [WM_GETTEXTLENGTH](/windows/desktop/winmsg/wm-gettextlength) dans le SDK Windows.
+Pour plus d’informations, consultez [WM_GETTEXTLENGTH](/windows/win32/winmsg/wm-gettextlength) dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -1163,7 +1163,7 @@ long GetTextLengthEx(
 ### <a name="parameters"></a>Paramètres
 
 *dwFlags*<br/>
-Valeur spécifiant la méthode à utiliser pour déterminer la longueur du texte. Ce membre peut être une ou plusieurs des valeurs répertoriées dans le membre Flags de [GETTEXTLENGTHEX](/windows/desktop/api/richedit/ns-richedit-gettextlengthex) décrit dans la SDK Windows.
+Valeur spécifiant la méthode à utiliser pour déterminer la longueur du texte. Ce membre peut être une ou plusieurs des valeurs répertoriées dans le membre Flags de [GETTEXTLENGTHEX](/windows/win32/api/richedit/ns-richedit-gettextlengthex) décrit dans la SDK Windows.
 
 *uCodePage*<br/>
 Page de codes pour la traduction (CP_ACP pour la page de codes ANSI, 1200 pour Unicode).
@@ -1174,7 +1174,7 @@ Nombre de caractères ou d’octets dans le contrôle d’édition. Si des indic
 
 ### <a name="remarks"></a>Notes
 
-`GetTextLengthEx`fournit des méthodes supplémentaires pour déterminer la longueur du texte. Il prend en charge la fonctionnalité Rich Edit 2,0. Pour plus d’informations, consultez [à propos des contrôles RichEdit](/windows/desktop/Controls/about-rich-edit-controls) dans Windows SDKfor.
+`GetTextLengthEx`fournit des méthodes supplémentaires pour déterminer la longueur du texte. Il prend en charge la fonctionnalité Rich Edit 2,0. Pour plus d’informations, consultez [à propos des contrôles RichEdit](/windows/win32/Controls/about-rich-edit-controls) dans Windows SDKfor.
 
 ##  <a name="gettextmode"></a>  CRichEditCtrl::GetTextMode
 
@@ -1186,7 +1186,7 @@ UINT GetTextMode() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Jeu d’indicateurs binaires du type d’énumération [TextMode](/windows/desktop/api/richedit/ne-richedit-tagtextmode) , comme décrit dans la SDK Windows. Les indicateurs indiquent le mode texte actuel et le niveau d’annulation du contrôle.
+Jeu d’indicateurs binaires du type d’énumération [TextMode](/windows/win32/api/richedit/ne-richedit-textmode) , comme décrit dans la SDK Windows. Les indicateurs indiquent le mode texte actuel et le niveau d’annulation du contrôle.
 
 ##  <a name="gettextrange"></a>  CRichEditCtrl::GetTextRange
 
@@ -1216,9 +1216,9 @@ Nombre de caractères copiés, à l’exclusion du caractère null de fin.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [EM_GETTEXTRANGE](/windows/desktop/Controls/em-gettextrange) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_GETTEXTRANGE](/windows/win32/Controls/em-gettextrange) dans le SDK Windows.
 
-`GetTextRange`prend en charge la fonctionnalité Rich Edit 2,0. Pour plus d’informations, consultez [à propos des contrôles RichEdit](/windows/desktop/Controls/about-rich-edit-controls) dans Windows SDKfor.
+`GetTextRange`prend en charge la fonctionnalité Rich Edit 2,0. Pour plus d’informations, consultez [à propos des contrôles RichEdit](/windows/win32/Controls/about-rich-edit-controls) dans Windows SDKfor.
 
 ##  <a name="getundoname"></a>  CRichEditCtrl::GetUndoName
 
@@ -1230,7 +1230,7 @@ UNDONAMEID GetUndoName() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si une opération d’annulation se trouve dans la file d’attente `GetUndoName` d’annulation du contrôle, retourne le type d’énumération [UNDONAMEID](/windows/desktop/api/richedit/ne-richedit-undonameid) indiquant le type de l’action suivante dans la file d’attente. Si la file d’attente d’annulation est vide ou si l’action d’annulation dans la file d’attente est `GetUndoName` d’un type inconnu, retourne 0.
+Si une opération d’annulation se trouve dans la file d’attente `GetUndoName` d’annulation du contrôle, retourne le type d’énumération [UNDONAMEID](/windows/win32/api/richedit/ne-richedit-undonameid) indiquant le type de l’action suivante dans la file d’attente. Si la file d’attente d’annulation est vide ou si l’action d’annulation dans la file d’attente est `GetUndoName` d’un type inconnu, retourne 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -1246,7 +1246,7 @@ UINT GetWordWrapMode() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Options de retour automatique à la disposition et de césure des mots active. Ces options sont décrites dans [EM_SETWORDWRAPMODE](/windows/desktop/Controls/em-setwordwrapmode) dans le SDK Windows.
+Options de retour automatique à la disposition et de césure des mots active. Ces options sont décrites dans [EM_SETWORDWRAPMODE](/windows/win32/Controls/em-setwordwrapmode) dans le SDK Windows.
 
 ### <a name="remarks"></a>Notes
 
@@ -1274,7 +1274,7 @@ Indique si cette modification de la visibilité de la sélection doit être perm
 
 Quand *bPerm* a la valeur true, il modifie l’option ECO_NOHIDESEL `CRichEditCtrl` pour cet objet. Pour obtenir une brève description de cette option, consultez [SetOptions](#setoptions). Vous pouvez utiliser cette fonction pour définir toutes les options de cet `CRichEditCtrl` objet.
 
-Pour plus d’informations, consultez [EM_HIDESELECTION](/windows/desktop/Controls/em-hideselection) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_HIDESELECTION](/windows/win32/Controls/em-hideselection) dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -1300,7 +1300,7 @@ La modification de la limite de texte restreint uniquement le texte que l’util
 > [!NOTE]
 >  Pour la limite de texte, chaque élément OLE est compté comme un caractère unique.
 
-Pour plus d’informations, consultez [EM_EXLIMITTEXT](/windows/desktop/Controls/em-exlimittext) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_EXLIMITTEXT](/windows/win32/Controls/em-exlimittext) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1327,7 +1327,7 @@ Numéro de ligne de base zéro de la ligne contenant l’index de caractère sp�
 
 Un index de caractère est le nombre de caractères à partir du début du contrôle Rich Edit. Pour le comptage de caractères, un élément OLE est compté comme un caractère unique.
 
-Pour plus d’informations, consultez [EM_EXLINEFROMCHAR](/windows/desktop/Controls/em-exlinefromchar) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_EXLINEFROMCHAR](/windows/win32/Controls/em-exlinefromchar) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1354,7 +1354,7 @@ Index de caractère de la ligne spécifiée dans *nLigne* ou-1 si le numéro de 
 
 L’index de caractère est le nombre de caractères à partir du début du contrôle Rich Edit jusqu’à la ligne spécifiée.
 
-Pour plus d’informations, consultez [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_LINEINDEX](/windows/win32/controls/em-lineindex) dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -1381,7 +1381,7 @@ Lorsque `LineLength` est appelé pour un contrôle d’édition sur plusieurs li
 
 Utilisez la fonction membre [LineIndex](#lineindex) pour récupérer un index de caractère pour un numéro de ligne donné `CRichEditCtrl` au sein de cet objet.
 
-Pour plus d’informations, consultez [EM_LINELENGTH](/windows/desktop/Controls/em-linelength) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_LINELENGTH](/windows/win32/Controls/em-linelength) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1411,7 +1411,7 @@ Le contrôle d’édition ne fait pas défiler verticalement la dernière ligne 
 
 `LineScroll`peut être utilisé pour faire défiler horizontalement le dernier caractère d’une ligne.
 
-Pour plus d’informations, consultez [EM_LINESCROLL](/windows/desktop/Controls/em-linescroll) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_LINESCROLL](/windows/win32/Controls/em-linescroll) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1429,7 +1429,7 @@ void Paste();
 
 Les données sont insérées uniquement si le presse-papiers contient des données dans un format reconnu.
 
-Pour plus d’informations, consultez [WM_PASTE](/windows/desktop/dataxchg/wm-paste) dans le SDK Windows.
+Pour plus d’informations, consultez [WM_PASTE](/windows/win32/dataxchg/wm-paste) dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -1461,7 +1461,7 @@ Handle vers le métafichier contenant la vue sous forme de l’objet à coller.
 
 Le nouveau matériau est inséré au point d’insertion, à l’emplacement du signe insertion.
 
-Pour plus d’informations, consultez [EM_PASTESPECIAL](/windows/desktop/Controls/em-pastespecial) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_PASTESPECIAL](/windows/win32/Controls/em-pastespecial) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1486,7 +1486,7 @@ Position du caractère, (x, y). Pour un contrôle d’édition sur une seule lig
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_POSFROMCHAR](/windows/win32/Controls/em-posfromchar) dans le SDK Windows.
 
 ##  <a name="redo"></a>  CRichEditCtrl::Redo
 
@@ -1502,7 +1502,7 @@ Valeur différente de zéro en cas de réussite; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [EM_REDO](/windows/desktop/Controls/em-redo) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_REDO](/windows/win32/Controls/em-redo) dans le SDK Windows.
 
 ##  <a name="replacesel"></a>  CRichEditCtrl::ReplaceSel
 
@@ -1530,7 +1530,7 @@ S’il n’y a aucune sélection actuelle, le texte de remplacement est inséré
 
 Cette fonction met en forme le texte inséré avec la mise en forme de caractères existante. Lors du remplacement de l’intégralité de la plage de `SetSel`texte (en appelant (0,- `ReplaceSel`1) avant d’appeler), il existe un caractère de fin de paragraphe qui conserve la mise en forme du paragraphe précédent, qui est héritée par le texte nouvellement inséré.
 
-Pour plus d’informations, consultez [EM_REPLACESEL](/windows/desktop/Controls/em-replacesel) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_REPLACESEL](/windows/win32/Controls/em-replacesel) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1548,7 +1548,7 @@ void RequestResize();
 
 Cette fonction est utile lors du traitement de [CWnd:: OnSize](../../mfc/reference/cwnd-class.md#onsize) pour un `CRichEditCtrl` objet sans fin.
 
-Pour plus d’informations, consultez le message [EM_REQUESTRESIZE](/windows/desktop/Controls/em-requestresize) et la section « **RichEdit Control Controls** » de la rubrique [à propos des contrôles RichEdit](/windows/desktop/Controls/about-rich-edit-controls) dans le SDK Windows.
+Pour plus d’informations, consultez le message [EM_REQUESTRESIZE](/windows/win32/Controls/em-requestresize) et la section « **RichEdit Control Controls** » de la rubrique [à propos des contrôles RichEdit](/windows/win32/Controls/about-rich-edit-controls) dans le SDK Windows.
 
 ##  <a name="setautourldetect"></a>  CRichEditCtrl::SetAutoURLDetect
 
@@ -1569,10 +1569,10 @@ Zéro en cas de réussite, sinon valeur différente de zéro. Par exemple, le me
 
 ### <a name="remarks"></a>Notes
 
-Si cette option est activée, le contrôle RichEdit analyse le texte pour déterminer s’il correspond à un format d’URL standard. Pour obtenir la liste de ces formats d’URL, consultez [EM_AUTOURLDETECT](/windows/desktop/Controls/em-autourldetect) dans le SDK Windows.
+Si cette option est activée, le contrôle RichEdit analyse le texte pour déterminer s’il correspond à un format d’URL standard. Pour obtenir la liste de ces formats d’URL, consultez [EM_AUTOURLDETECT](/windows/win32/Controls/em-autourldetect) dans le SDK Windows.
 
 > [!NOTE]
->  N’affectez `SetAutoURLDetect` pas la valeur true si votre contrôle d’édition utilise l’effet CFE_LINK pour du texte autre que des URL. `SetAutoURLDetect`Active cet effet pour les URL et le désactive pour tout autre texte. Pour plus d’informations sur l’effet CFE_LINK, consultez [EN_LINK](/windows/desktop/Controls/en-link) .
+>  N’affectez `SetAutoURLDetect` pas la valeur true si votre contrôle d’édition utilise l’effet CFE_LINK pour du texte autre que des URL. `SetAutoURLDetect`Active cet effet pour les URL et le désactive pour tout autre texte. Pour plus d’informations sur l’effet CFE_LINK, consultez [EN_LINK](/windows/win32/Controls/en-link) .
 
 ##  <a name="setbackgroundcolor"></a>  CRichEditCtrl::SetBackgroundColor
 
@@ -1598,9 +1598,9 @@ Couleur d’arrière-plan précédente `CRichEditCtrl` pour cet objet.
 
 ### <a name="remarks"></a>Notes
 
-La couleur d’arrière-plan peut être définie sur la valeur système ou sur une valeur [COLORREF](/windows/desktop/gdi/colorref) spécifiée.
+La couleur d’arrière-plan peut être définie sur la valeur système ou sur une valeur [COLORREF](/windows/win32/gdi/colorref) spécifiée.
 
-Pour plus d’informations, consultez [EM_SETBKGNDCOLOR](/windows/desktop/Controls/em-setbkgndcolor) message et [COLORREF](/windows/desktop/gdi/colorref) structure dans le SDK Windows.
+Pour plus d’informations, consultez [EM_SETBKGNDCOLOR](/windows/win32/Controls/em-setbkgndcolor) message et [COLORREF](/windows/win32/gdi/colorref) structure dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -1618,9 +1618,9 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Paramètres
 
 *cf*<br/>
-Dans la première version, pointeur vers une structure [Charformat](/windows/desktop/api/richedit/ns-richedit-_charformat) contenant les nouveaux attributs de mise en forme de caractères par défaut.
+Dans la première version, pointeur vers une structure [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) contenant les nouveaux attributs de mise en forme de caractères par défaut.
 
-Dans la deuxième version, pointeur vers une structure [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) , qui est une extension Rich Edit 2,0 de la `CHARFORMAT` structure, contenant les attributs de mise en forme de caractères par défaut.
+Dans la deuxième version, pointeur vers une structure [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , qui est une extension Rich Edit 2,0 de la `CHARFORMAT` structure, contenant les attributs de mise en forme de caractères par défaut.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1630,7 +1630,7 @@ Valeur différente de zéro en cas de réussite; Sinon, 0.
 
 Seuls les attributs spécifiés par `dwMask` le membre de *CF* sont modifiés par cette fonction.
 
-Pour plus d’informations, consultez le message [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat) et `CHARFORMAT` les `CHARFORMAT2` structures et dans le SDK Windows.
+Pour plus d’informations, consultez le message [EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat) et `CHARFORMAT` les `CHARFORMAT2` structures et dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1657,7 +1657,7 @@ Masque d’événement précédent.
 
 Le masque d’événement spécifie les messages `CRichEditCtrl` de notification envoyés par l’objet à sa fenêtre parente.
 
-Pour plus d’informations, consultez [EM_SETEVENTMASK](/windows/desktop/Controls/em-seteventmask) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_SETEVENTMASK](/windows/win32/Controls/em-seteventmask) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1680,7 +1680,7 @@ La valeur TRUE indique que le texte a été modifié et la valeur FALSe indique 
 
 L’indicateur modifié indique si le texte du contrôle d’édition a été modifié ou non. Elle est définie automatiquement chaque fois que l’utilisateur modifie le texte. Sa valeur peut être récupérée à l’aide de la fonction membre [GetModify](#getmodify) .
 
-Pour plus d’informations, consultez [EM_SETMODIFY](/windows/desktop/Controls/em-setmodify) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_SETMODIFY](/windows/win32/Controls/em-setmodify) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1697,7 +1697,7 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
 ### <a name="parameters"></a>Paramètres
 
 *pCallback*<br/>
-Pointeur vers un objet [IRichEditOleCallback](/windows/desktop/api/richole/nn-richole-iricheditolecallback) qui sera `CRichEditCtrl` utilisé par cet objet pour recevoir des informations et des ressources liées à OLE.
+Pointeur vers un objet [IRichEditOleCallback](/windows/win32/api/richole/nn-richole-iricheditolecallback) qui sera `CRichEditCtrl` utilisé par cet objet pour recevoir des informations et des ressources liées à OLE.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1705,9 +1705,9 @@ Valeur différente de zéro en cas de réussite; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Cet `CRichEditCtrl` objet appellera [IUnknown:: AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) pour incrémenter le nombre d’utilisations de l’objet com spécifié par *pCallback*.
+Cet `CRichEditCtrl` objet appellera [IUnknown:: AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) pour incrémenter le nombre d’utilisations de l’objet com spécifié par *pCallback*.
 
-Pour plus d’informations, consultez message [EM_SETOLECALLBACK](/windows/desktop/Controls/em-setolecallback) et interface [IRichEditOleCallback](/windows/desktop/api/richole/nn-richole-iricheditolecallback) dans la SDK Windows.
+Pour plus d’informations, consultez message [EM_SETOLECALLBACK](/windows/win32/Controls/em-setolecallback) et interface [IRichEditOleCallback](/windows/win32/api/richole/nn-richole-iricheditolecallback) dans la SDK Windows.
 
 ##  <a name="setoptions"></a>  CRichEditCtrl::SetOptions
 
@@ -1755,7 +1755,7 @@ Les options peuvent être une combinaison des valeurs suivantes:
 
 - ECO_VERTICAL dessine le texte et les objets dans un sens vertical. Disponible pour les langues asiatiques uniquement.
 
-Pour plus d’informations, consultez [EM_SETOPTIONS](/windows/desktop/Controls/em-setoptions) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_SETOPTIONS](/windows/win32/Controls/em-setoptions) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1773,9 +1773,9 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="parameters"></a>Paramètres
 
 *pf*<br/>
-Dans la première version, pointeur vers une structure [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-paraformat) contenant les nouveaux attributs de mise en forme des paragraphes par défaut.
+Dans la première version, pointeur vers une structure [PARAFORMAT](/windows/win32/api/richedit/ns-richedit-paraformat) contenant les nouveaux attributs de mise en forme des paragraphes par défaut.
 
-Dans la deuxième version, pointeur vers une structure [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) , qui est une extension Rich Edit 2,0 de la `PARAFORMAT` structure, contenant les attributs de mise en forme de caractères par défaut.
+Dans la deuxième version, pointeur vers une structure [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) , qui est une extension Rich Edit 2,0 de la `PARAFORMAT` structure, contenant les attributs de mise en forme de caractères par défaut.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1785,7 +1785,7 @@ Valeur différente de zéro en cas de réussite; Sinon, 0.
 
 Seuls les attributs spécifiés par `dwMask` le membre de *PF* sont modifiés par cette fonction.
 
-Pour plus d’informations, consultez le message [EM_SETPARAFORMAT](/windows/desktop/Controls/em-setparaformat) et `PARAFORMAT` les `PARAFORMAT2` structures et dans le SDK Windows.
+Pour plus d’informations, consultez le message [EM_SETPARAFORMAT](/windows/win32/Controls/em-setparaformat) et `PARAFORMAT` les `PARAFORMAT2` structures et dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1804,10 +1804,10 @@ BOOL SetPunctuation(
 ### <a name="parameters"></a>Paramètres
 
 *fType*<br/>
-Indicateur de ponctuation. Pour obtenir la liste des valeurs possibles, consultez le paramètre *ftype* pour [EM_SETPUNCTUATION](/windows/desktop/Controls/em-setpunctuation) dans le SDK Windows.
+Indicateur de ponctuation. Pour obtenir la liste des valeurs possibles, consultez le paramètre *ftype* pour [EM_SETPUNCTUATION](/windows/win32/Controls/em-setpunctuation) dans le SDK Windows.
 
 *lpPunc*<br/>
-Pointeur vers une structure de [PUNCTUATION](/windows/desktop/api/richedit/ns-richedit-punctuation), comme décrit dans la SDK Windows.
+Pointeur vers une structure de [PUNCTUATION](/windows/win32/api/richedit/ns-richedit-punctuation), comme décrit dans la SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1838,7 +1838,7 @@ Valeur différente de zéro en cas de réussite; Sinon, 0.
 
 Pour obtenir une brève description de cette option, consultez [SetOptions](#setoptions). Vous pouvez utiliser cette fonction pour définir toutes les options de cet `CRichEditCtrl` objet.
 
-Pour plus d’informations, consultez [EM_SETREADONLY](/windows/desktop/Controls/em-setreadonly) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_SETREADONLY](/windows/win32/Controls/em-setreadonly) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1855,13 +1855,13 @@ void SetRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md) ou pointeur vers un [Rect](/windows/desktop/api/windef/ns-windef-tagrect) qui indique les nouvelles limites du rectangle de mise en forme.
+[CRect](../../atl-mfc-shared/reference/crect-class.md) ou pointeur vers un [Rect](/windows/win32/api/windef/ns-windef-rect) qui indique les nouvelles limites du rectangle de mise en forme.
 
 ### <a name="remarks"></a>Notes
 
 Le rectangle de mise en forme est le rectangle de limitation du texte. Le rectangle de limitation est indépendant de la taille de la fenêtre de contrôle RichEdit. Lorsque cet `CRichEditCtrl` objet est créé pour la première fois, le rectangle de mise en forme est de la même taille que la zone cliente de la fenêtre. Utilisez `SetRect` pour que le rectangle de mise en forme soit plus grand ou plus petit que la fenêtre de modification enrichie.
 
-Pour plus d’informations, consultez [EM_SETRECT](/windows/desktop/Controls/em-setrect) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_SETRECT](/windows/win32/Controls/em-setrect) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1888,7 +1888,7 @@ Index de base zéro du premier caractère de la sélection.
 Index de base zéro du dernier caractère de la sélection.
 
 *cr*<br/>
-Structure [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) qui contient les limites de la sélection actuelle.
+Structure [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) qui contient les limites de la sélection actuelle.
 
 ### <a name="remarks"></a>Notes
 
@@ -1902,7 +1902,7 @@ Le signe insertion est placé à la fin de la sélection indiquée par la plus g
 
 Pour sélectionner tout le texte de cet `CRichEditCtrl` objet, appelez `SetSel` avec un index de début de 0 et un index de fin de-1.
 
-Pour plus d’informations, consultez [EM_EXSETSEL](/windows/desktop/Controls/em-exsetsel) message and [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) structure dans le SDK Windows.
+Pour plus d’informations, consultez [EM_EXSETSEL](/windows/win32/Controls/em-exsetsel) message and [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) structure dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1920,9 +1920,9 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Paramètres
 
 *cf*<br/>
-Dans la première version, pointeur vers une structure [Charformat](/windows/desktop/api/richedit/ns-richedit-_charformat) contenant les nouveaux attributs de mise en forme de caractères pour la sélection actuelle.
+Dans la première version, pointeur vers une structure [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) contenant les nouveaux attributs de mise en forme de caractères pour la sélection actuelle.
 
-Dans la deuxième version, pointeur vers une structure [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) , qui est une extension Rich Edit 2,0 de la `CHARFORMAT` structure, contenant les nouveaux attributs de mise en forme de caractères pour la sélection actuelle.
+Dans la deuxième version, pointeur vers une structure [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , qui est une extension Rich Edit 2,0 de la `CHARFORMAT` structure, contenant les nouveaux attributs de mise en forme de caractères pour la sélection actuelle.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1932,7 +1932,7 @@ Valeur différente de zéro en cas de réussite; Sinon, 0.
 
 Seuls les attributs spécifiés par `dwMask` le membre de *CF* sont modifiés par cette fonction.
 
-Pour plus d’informations, consultez les structures [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat) et les structures `CHARFORMAT` et `CHARFORMAT2` dans le SDK Windows.
+Pour plus d’informations, consultez les structures [EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat) et les structures `CHARFORMAT` et `CHARFORMAT2` dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -1971,7 +1971,7 @@ Valeur différente de zéro en cas de réussite; Sinon, 0.
 
 Si cette fonction est réussie, le contrôle Rich Edit possède le contexte de périphérique passé en tant que paramètre. Dans ce cas, la fonction appelante ne doit pas détruire le contexte de périphérique.
 
-Pour plus d’informations, consultez [EM_SETTARGETDEVICE](/windows/desktop/Controls/em-settargetdevice) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_SETTARGETDEVICE](/windows/win32/Controls/em-settargetdevice) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1988,7 +1988,7 @@ BOOL SetTextMode(UINT fMode);
 ### <a name="parameters"></a>Paramètres
 
 *fMode*<br/>
-Spécifie les nouveaux paramètres pour le mode texte et les paramètres de niveau d’annulation du contrôle. Pour obtenir la liste des valeurs possibles, consultez le paramètre mode de [EM_SETTEXTMODE](/windows/desktop/Controls/em-settextmode) dans la SDK Windows.
+Spécifie les nouveaux paramètres pour le mode texte et les paramètres de niveau d’annulation du contrôle. Pour obtenir la liste des valeurs possibles, consultez le paramètre mode de [EM_SETTEXTMODE](/windows/win32/Controls/em-settextmode) dans la SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1998,7 +1998,7 @@ Zéro en cas de réussite, sinon valeur différente de zéro.
 
 Pour obtenir une description des modes de texte, consultez EM_SETTEXTMODE dans le SDK Windows.
 
-Cette fonction membre échoue si le contrôle contient du texte. Pour vous assurer que le contrôle est vide, envoyez un message [WM_SETTEXT](/windows/desktop/winmsg/wm-settext) avec une chaîne vide.
+Cette fonction membre échoue si le contrôle contient du texte. Pour vous assurer que le contrôle est vide, envoyez un message [WM_SETTEXT](/windows/win32/winmsg/wm-settext) avec une chaîne vide.
 
 ##  <a name="setundolimit"></a>  CRichEditCtrl::SetUndoLimit
 
@@ -2033,9 +2033,9 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Paramètres
 
 *cf*<br/>
-Dans la première version, pointeur vers une structure [Charformat](/windows/desktop/api/richedit/ns-richedit-_charformat) contenant les nouveaux attributs de mise en forme des caractères pour le mot actuellement sélectionné.
+Dans la première version, pointeur vers une structure [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) contenant les nouveaux attributs de mise en forme des caractères pour le mot actuellement sélectionné.
 
-Dans la deuxième version, pointeur vers une structure [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) , qui est une extension Rich Edit 2,0 de la `CHARFORMAT` structure, contenant les nouveaux attributs de mise en forme de caractères pour le mot actuellement sélectionné.
+Dans la deuxième version, pointeur vers une structure [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , qui est une extension Rich Edit 2,0 de la `CHARFORMAT` structure, contenant les nouveaux attributs de mise en forme de caractères pour le mot actuellement sélectionné.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2045,7 +2045,7 @@ Valeur différente de zéro en cas de réussite; Sinon, 0.
 
 Seuls les attributs spécifiés par `dwMask` le membre de *CF* sont modifiés par cette fonction.
 
-Pour plus d’informations, consultez le message [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat) et `CHARFORMAT` les `CHARFORMAT2` structures et dans le SDK Windows.
+Pour plus d’informations, consultez le message [EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat) et `CHARFORMAT` les `CHARFORMAT2` structures et dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -2062,7 +2062,7 @@ UINT SetWordWrapMode(UINT uFlags) const;
 ### <a name="parameters"></a>Paramètres
 
 *uFlags*<br/>
-Options à définir pour le retour automatique à la disposition des mots et du retour automatique à la disposition. Pour obtenir la liste des options possibles, consultez [EM_SETWORDWRAPMODE](/windows/desktop/Controls/em-setwordwrapmode) dans le SDK Windows.
+Options à définir pour le retour automatique à la disposition des mots et du retour automatique à la disposition. Pour obtenir la liste des options possibles, consultez [EM_SETWORDWRAPMODE](/windows/win32/Controls/em-setwordwrapmode) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2084,7 +2084,7 @@ void StopGroupTyping();
 
 Le contrôle stocke l’action de frappe suivante, le cas échéant, dans une nouvelle action de la file d’attente d’annulation.
 
-Pour plus d’informations, consultez [EM_STOPGROUPTYPING](/windows/desktop/Controls/em-stopgrouptyping) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_STOPGROUPTYPING](/windows/win32/Controls/em-stopgrouptyping) dans le SDK Windows.
 
 ##  <a name="streamin"></a>  CRichEditCtrl::StreamIn
 
@@ -2102,7 +2102,7 @@ long StreamIn(
 Indicateurs spécifiant les formats de données d’entrée. Pour plus d'informations, consultez la section Notes.
 
 *sec*<br/>
-Structure [EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-editstream) spécifiant le flux d’entrée. Pour plus d'informations, consultez la section Notes.
+Structure [EDITSTREAM](/windows/win32/api/richedit/ns-richedit-editstream) spécifiant le flux d’entrée. Pour plus d'informations, consultez la section Notes.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2120,7 +2120,7 @@ L’une ou l’autre de ces valeurs peut être combinée avec SFF_SELECTION. Si 
 
 Dans le `EDITSTREAM` paramètre *es*, vous spécifiez une fonction de rappel qui remplit un tampon avec du texte. Cette fonction de rappel est appelée à plusieurs reprises, jusqu’à ce que le flux d’entrée soit épuisé.
 
-Pour plus d’informations, consultez [EM_STREAMIN](/windows/desktop/Controls/em-streamin) message and [EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-editstream) structure dans le SDK Windows.
+Pour plus d’informations, consultez [EM_STREAMIN](/windows/win32/Controls/em-streamin) message and [EDITSTREAM](/windows/win32/api/richedit/ns-richedit-editstream) structure dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -2144,7 +2144,7 @@ long StreamOut(
 Indicateurs spécifiant les formats de données de sortie. Pour plus d'informations, consultez la section Notes.
 
 *sec*<br/>
-Structure [EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-editstream) spécifiant le flux de sortie. Pour plus d'informations, consultez la section Notes.
+Structure [EDITSTREAM](/windows/win32/api/richedit/ns-richedit-editstream) spécifiant le flux de sortie. Pour plus d'informations, consultez la section Notes.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2166,7 +2166,7 @@ Ces valeurs peuvent être combinées avec SFF_SELECTION. Si SFF_SELECTION est sp
 
 Dans le `EDITSTREAM` paramètre *es*, vous spécifiez une fonction de rappel qui remplit un tampon avec du texte. Cette fonction de rappel est appelée à plusieurs reprises, jusqu’à épuisement du flux de sortie.
 
-Pour plus d’informations, consultez [EM_STREAMOUT](/windows/desktop/Controls/em-streamout) message and [EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-editstream) structure dans le SDK Windows.
+Pour plus d’informations, consultez [EM_STREAMOUT](/windows/win32/Controls/em-streamout) message and [EDITSTREAM](/windows/win32/api/richedit/ns-richedit-editstream) structure dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -2190,7 +2190,7 @@ Différent de zéro si l’opération d’annulation réussit; Sinon, 0.
 
 Une opération d’annulation peut également être annulée. Par exemple, vous pouvez restaurer le texte supprimé avec le premier appel `Undo`à. Tant qu’il n’y a pas d’opération de modification intermédiaire, vous pouvez supprimer le texte avec un deuxième appel `Undo`à.
 
-Pour plus d’informations, consultez [EM_UNDO](/windows/desktop/Controls/em-undo) dans le SDK Windows.
+Pour plus d’informations, consultez [EM_UNDO](/windows/win32/Controls/em-undo) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
