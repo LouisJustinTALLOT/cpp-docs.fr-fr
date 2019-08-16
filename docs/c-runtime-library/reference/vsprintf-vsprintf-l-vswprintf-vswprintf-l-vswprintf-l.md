@@ -46,14 +46,14 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-ms.openlocfilehash: 4b6dd55f90a3766dc250040e27b80f9b1c64fde3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb73a5149c1127332b9b8e464da02c6d528610e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383423"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499021"
 ---
-# <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
+# <a name="vsprintf-_vsprintf_l-vswprintf-_vswprintf_l-__vswprintf_l"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 
 Écrivez la sortie mise en forme en utilisant un pointeur désignant une liste d’arguments. Il existe des versions plus sécurisées de ces fonctions. Consultez [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
 
@@ -124,7 +124,7 @@ int _vswprintf_l(
 Emplacement de stockage pour la sortie.
 
 *count*<br/>
-Nombre maximal de caractères à stocker dans les versions de chaîne étendue de cette fonction.
+Nombre maximal de caractères à stocker dans les versions de chaîne étendues de cette fonction.
 
 *format*<br/>
 Spécification de format.
@@ -137,20 +137,20 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**vsprintf** et **vswprintf** retourner le nombre de caractères écrits, sans le caractère null de fin, ou une valeur négative si une erreur de sortie se produit. Si *tampon* ou *format* est un pointeur null, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+**vsprintf** et **vswprintf** retournent le nombre de caractères écrits, à l’exclusion du caractère null de fin, ou une valeur négative si une erreur de sortie se produit. Si la *mémoire tampon* ou le *format* est un pointeur null, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions prend un pointeur désignant une liste d’arguments et puis met en forme et écrit les données fournies à la mémoire vers laquelle pointée *tampon*.
+Chacune de ces fonctions prend un pointeur désignant une liste d’arguments, puis met en forme et écrit les données fournies dans la mémoire vers laquelle pointe la *mémoire tampon*.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 > [!IMPORTANT]
-> À l’aide de **vsprintf**, il n’est aucune méthode pour limiter le nombre de caractères écrits, ce qui signifie que le code à l’aide de cette fonction est vulnérable à des dépassements de mémoire tampon. Utilisez plutôt [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) ou appelez [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) pour déterminer la taille nécessaire d’une mémoire tampon. En outre, vérifiez que *format* n’est pas une chaîne définie par l’utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> À l’aide de **vsprintf**, il n’existe aucun moyen de limiter le nombre de caractères écrits, ce qui signifie que le code qui utilise cette fonction est vulnérable aux dépassements de mémoire tampon. Utilisez plutôt [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) ou appelez [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) pour déterminer la taille nécessaire d’une mémoire tampon. En outre, assurez-vous que *format* n’est pas une chaîne définie par l’utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-**vswprintf** conforme au Standard ISO C, ce qui nécessite le deuxième paramètre, *nombre*, de type **size_t**. Pour forcer l’ancien comportement non standard, définissez **_CRT_NON_CONFORMING_SWPRINTFS**. L’ancien comportement est peut-être pas dans une version ultérieure, donc le code doit être modifié pour utiliser le nouveau comportement conforme.
+**vswprintf** est conforme à la norme ISO C, qui exige le deuxième paramètre, *Count*, de type **size_t**. Pour forcer l’ancien comportement non standard, définissez **_CRT_NON_CONFORMING_SWPRINTFS**. L’ancien comportement n’est peut-être pas dans une version ultérieure. par conséquent, le code doit être modifié pour utiliser le nouveau comportement conforme.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -168,7 +168,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**vsprintf**, **_vsprintf_l**|\<stdio.h> et \<stdarg.h>|\<varargs.h>*|
 |**vswprintf**, **_vswprintf_l**|\<stdio.h> ou \<wchar.h> et \<stdarg.h>|\<varargs.h>*|
 
-\* Nécessaire pour la compatibilité avec UNIX V.
+\** Nécessaire pour la compatibilité avec UNIX V.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

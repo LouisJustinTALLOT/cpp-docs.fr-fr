@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: 0a9bbf3072a665c04501025d421839fa90a37225
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 74a34ec169868d3e28f78f33da38dbda21ef23b3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344419"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502610"
 ---
 # <a name="csharedfile-class"></a>CSharedFile, classe
 
-Le [CMemFile](../../mfc/reference/cmemfile-class.md)-classe dérivée qui prend en charge les fichiers de la mémoire partagée.
+Classe dérivée de [CMemFile](../../mfc/reference/cmemfile-class.md)qui prend en charge les fichiers de mémoire partagée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,17 +46,17 @@ class CSharedFile : public CMemFile
 
 ## <a name="remarks"></a>Notes
 
-Fichiers de mémoire se comportent comme les fichiers de disque. La différence est, un fichier de mémoire est stocké dans la mémoire RAM, plutôt que sur le disque. Un fichier de mémoire est utile pour un stockage temporaire rapide, ou pour transférer les octets bruts ou objets sérialisés entre processus indépendants.
+Les fichiers de mémoire se comportent comme des fichiers disque. La différence est qu’un fichier de mémoire est stocké dans la mémoire RAM plutôt que sur le disque. Un fichier de mémoire est utile pour le stockage temporaire rapide, ou pour le transfert d’octets bruts ou d’objets sérialisés entre des processus indépendants.
 
-Les fichiers de mémoire partagée la différence des autres fichiers de mémoire mémoire leur est allouée à la [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) (fonction) Windows. Le `CSharedFile` classe stocke les données dans un bloc de mémoire alloué dans le monde entier (créé à l’aide `GlobalAlloc`), et ce bloc de mémoire peut être partagé à l’aide de DDE, le Presse-papiers ou autres opérations de transfert OLE/COM de données uniforme, par exemple, à l’aide de `IDataObject`.
+Les fichiers de mémoire partagée diffèrent des autres fichiers mémoire dans la mémoire qui leur est allouée avec la fonction Windows [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) . La `CSharedFile` classe stocke les données dans un bloc de mémoire alloué globalement ( `GlobalAlloc`créé à l’aide de), et ce bloc de mémoire peut être partagé à l’aide de DDE, du presse-papiers ou d’autres opérations `IDataObject`de transfert de données uniforme OLE/com, par exemple, à l’aide de.
 
-`GlobalAlloc` Retourne un HGLOBAL gérer au lieu d’un pointeur vers la mémoire, telles que le pointeur retourné par [malloc](../../c-runtime-library/reference/malloc.md). Le descripteur HGLOBAL est nécessaire dans certaines applications. Par exemple, pour placer des données dans le Presse-papiers, vous devez descripteur HGLOBAL.
+`GlobalAlloc`retourne un handle HGLOBAL plutôt qu’un pointeur vers la mémoire, tel que le pointeur retourné par [malloc](../../c-runtime-library/reference/malloc.md). Le descripteur HGLOBAL est nécessaire dans certaines applications. Par exemple, pour placer des données dans le presse-papiers, vous avez besoin d’un handle HGLOBAL.
 
-`CSharedFile` n’utilisez des fichiers mappés en mémoire et les données ne peut pas être partagé directement entre les processus.
+`CSharedFile`n’utilise pas de fichiers mappés en mémoire et les données ne peuvent pas être partagées directement entre les processus.
 
-`CSharedFile` objets peuvent allouer automatiquement leur propre mémoire. Ou, vous pouvez attacher votre propre bloc de mémoire à la `CSharedFile` objet en appelant [CSharedFile::SetHandle](#sethandle). Dans les deux cas, la mémoire pour la croissance d’automatiquement le fichier de la mémoire est allouée dans `nGrowBytes`-taille par incréments si `nGrowBytes` n’est pas égal à zéro.
+`CSharedFile`les objets peuvent automatiquement allouer leur propre mémoire. Ou vous pouvez attacher votre propre bloc de mémoire à l' `CSharedFile` objet en appelant [CSharedFile:: SetHandle](#sethandle). Dans les deux cas, la mémoire pour augmenter automatiquement le fichier de mémoire `nGrowBytes`est allouée aux `nGrowBytes` incréments par taille si n’est pas égal à zéro.
 
-Pour plus d’informations, consultez l’article [fichiers dans MFC](../../mfc/files-in-mfc.md) et [gestion des fichiers](../../c-runtime-library/file-handling.md) dans le *Run-Time Library Reference*.
+Pour plus d’informations, consultez l’article [fichiers dans MFC](../../mfc/files-in-mfc.md) et [gestion des fichiers](../../c-runtime-library/file-handling.md) dans la référence de la *bibliothèque Runtime*.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -70,11 +70,11 @@ Pour plus d’informations, consultez l’article [fichiers dans MFC](../../mfc/
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxadv.h
+**En-tête:** afxadv. h
 
 ##  <a name="csharedfile"></a>  CSharedFile::CSharedFile
 
-Construit un `CSharedFile` de l’objet et alloue la mémoire pour elle.
+Construit un objet `CSharedFile` et lui alloue de la mémoire.
 
 ```
 CSharedFile(
@@ -85,14 +85,14 @@ CSharedFile(
 ### <a name="parameters"></a>Paramètres
 
 *nAllocFlags*<br/>
-Indicateurs indiquant comment la mémoire doit être allouée. Consultez [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) pour obtenir la liste de valeurs d’indicateur valide.
+Indicateurs indiquant comment la mémoire doit être allouée. Pour obtenir la liste des valeurs d’indicateur valides, consultez [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) .
 
 *nGrowBytes*<br/>
-L’incrément de l’allocation de mémoire en octets.
+Incrément d’allocation de mémoire en octets.
 
 ##  <a name="detach"></a>  CSharedFile::Detach
 
-Appelez cette fonction pour fermer le fichier de mémoire et de le détacher le bloc de mémoire.
+Appelez cette fonction pour fermer le fichier de mémoire et le détacher du bloc de mémoire.
 
 ```
 HGLOBAL Detach();
@@ -100,15 +100,15 @@ HGLOBAL Detach();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le handle du bloc de mémoire qui contient le contenu du fichier en mémoire.
+Handle du bloc de mémoire qui contient le contenu du fichier de mémoire.
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez le rouvrir en appelant [SetHandle](#sethandle), à l’aide du handle retourné par **détachement**.
+Vous pouvez le rouvrir en appelant [SetHandle](#sethandle), à l’aide du handle retourné par **Detach**.
 
 ##  <a name="sethandle"></a>  CSharedFile::SetHandle
 
-Appelez cette fonction pour attacher un bloc de mémoire globale pour la `CSharedFile` objet.
+Appelez cette fonction pour attacher un bloc de mémoire globale à l' `CSharedFile` objet.
 
 ```
 void SetHandle(
@@ -119,14 +119,14 @@ void SetHandle(
 ### <a name="parameters"></a>Paramètres
 
 *hGlobalMemory*<br/>
-Handle vers la mémoire globale à joindre à la `CSharedFile`.
+Handle de la mémoire globale à attacher à `CSharedFile`.
 
 *bAllowGrow*<br/>
 Spécifie si le bloc de mémoire est autorisé à croître.
 
 ### <a name="remarks"></a>Notes
 
-Si *bAllowGrow* est différent de zéro, la taille du bloc de mémoire est augmentée en fonction des besoins, par exemple, si vous tentez d’écrire des octets dans le fichier à la taille du bloc de mémoire.
+Si *bAllowGrow* est différent de zéro, la taille du bloc de mémoire est augmentée si nécessaire, par exemple, si vous tentez d’écrire plus d’octets dans le fichier que la taille du bloc de mémoire.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,21 +1,21 @@
 ---
-title: chaîne (attribut de COM C++)
+title: String (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.string
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: e1b528fb922a15655de403c6099ee1d36e2fb3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407274"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514006"
 ---
 # <a name="string-c"></a>string (C++)
 
-Indique qu’unidimensionnel **char**, **wchar_t**, `byte` (ou équivalent) tableau ou pointeur vers ce type de tableau doit être traité comme une chaîne.
+Indique que le tableau **char**, **wchar_t**, `byte` (ou équivalent) unidimensionnel ou le pointeur vers ce tableau doit être traité comme une chaîne.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Indique qu’unidimensionnel **char**, **wchar_t**, `byte` (ou équivalent) tabl
 
 ## <a name="remarks"></a>Notes
 
-Le **chaîne** attribut C++ a les mêmes fonctionnalités que le [chaîne](/windows/desktop/Midl/string) attribut MIDL.
+L’attribut de **chaîne** C++ a les mêmes fonctionnalités que l’attribut MIDL de [chaîne](/windows/win32/Midl/string) .
 
 ## <a name="example"></a>Exemple
 
-Le code suivant montre comment utiliser **chaîne** sur une interface et sur un typedef :
+Le code suivant montre comment utiliser **String** sur une interface et sur un typedef:
 
 ```cpp
 // cpp_attr_ref_string.cpp
@@ -50,10 +50,10 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**S'applique à**|Tableau ou pointeur vers un tableau, le paramètre d’interface, la méthode d’interface|
+|**S'applique à**|Tableau ou pointeur vers un tableau, un paramètre d’interface, une méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

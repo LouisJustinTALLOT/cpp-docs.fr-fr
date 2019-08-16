@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: a9e0eb01608edf29f99209dffc932630ad08807a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 90f8cfd66fbab88bfa29c39ff27189f02447a7c7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915712"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496488"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc, classe
 
@@ -107,7 +107,7 @@ La `SECURITY_DESCRIPTOR` structure contient les informations de sécurité assoc
 
 Les applications ne doivent pas `SECURITY_DESCRIPTOR` modifier la structure directement, et doivent plutôt utiliser les méthodes de classe fournies.
 
-Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
+Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/win32/SecAuthZ/access-control) dans le SDK Windows.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -155,7 +155,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="parameters"></a>Paramètres
 
 *pstr*<br/>
-Pointeur vers une chaîne se terminant par un caractère null qui contient le descripteur de [sécurité au format chaîne](/windows/desktop/SecAuthZ/security-descriptor-string-format) à convertir.
+Pointeur vers une chaîne se terminant par un caractère null qui contient le descripteur de [sécurité au format chaîne](/windows/win32/SecAuthZ/security-descriptor-string-format) à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -165,7 +165,7 @@ Retourne la valeur true en cas de réussite. Lève une exception en cas d’éch
 
 La chaîne peut être créée à l’aide de [CSecurityDesc:: ToString](#tostring). La conversion du descripteur de sécurité en chaîne facilite son stockage et sa transmission.
 
-Cette méthode appelle [convertstringsecuritydescriptortosecuritydescriptor a](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).
+Cette méthode appelle [convertstringsecuritydescriptortosecuritydescriptor a](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw).
 
 ##  <a name="getcontrol"></a>  CSecurityDesc::GetControl
 
@@ -186,7 +186,7 @@ Retourne la valeur true si la méthode réussit, false en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode appelle [GetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol).
+Cette méthode appelle [GetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol).
 
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl
 
@@ -268,7 +268,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers la structure [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor) .
+Retourne un pointeur vers la structure [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor) .
 
 ##  <a name="getsacl"></a>  CSecurityDesc::GetSacl
 
@@ -480,7 +480,7 @@ bool IsSelfRelative() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur true si le descripteur de sécurité est au format auto-relatif avec toutes les informations de sécurité dans un bloc de mémoire contigu. Retourne la valeur false si le descripteur de sécurité est au format absolu. Pour plus d’informations, consultez descripteurs de [sécurité absolus et auto-relatifs](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Retourne la valeur true si le descripteur de sécurité est au format auto-relatif avec toutes les informations de sécurité dans un bloc de mémoire contigu. Retourne la valeur false si le descripteur de sécurité est au format absolu. Pour plus d’informations, consultez descripteurs de [sécurité absolus et auto-relatifs](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
 ##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute
 
@@ -496,7 +496,7 @@ Retourne la valeur true si la méthode est réussie; sinon, false.
 
 ### <a name="remarks"></a>Notes
 
-Un descripteur de sécurité au format absolu contient des pointeurs vers les informations qu’il contient, plutôt que les informations lui-même. Un descripteur de sécurité au format auto-relatif contient les informations dans un bloc de mémoire contigu. Dans un descripteur de sécurité auto- `SECURITY_DESCRIPTOR` relatif, une structure démarre toujours les informations, mais les autres composants du descripteur de sécurité peuvent suivre la structure dans n’importe quel ordre. Au lieu d’utiliser des adresses mémoire, les composants du descripteur de sécurité auto-relatif sont identifiés par des décalages à partir du début du descripteur de sécurité. Ce format est utile lorsqu’un descripteur de sécurité doit être stocké sur un disque ou transmis au moyen d’un protocole de communication. Pour plus d’informations, consultez descripteurs de [sécurité absolus et auto-relatifs](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Un descripteur de sécurité au format absolu contient des pointeurs vers les informations qu’il contient, plutôt que les informations lui-même. Un descripteur de sécurité au format auto-relatif contient les informations dans un bloc de mémoire contigu. Dans un descripteur de sécurité auto- `SECURITY_DESCRIPTOR` relatif, une structure démarre toujours les informations, mais les autres composants du descripteur de sécurité peuvent suivre la structure dans n’importe quel ordre. Au lieu d’utiliser des adresses mémoire, les composants du descripteur de sécurité auto-relatif sont identifiés par des décalages à partir du début du descripteur de sécurité. Ce format est utile lorsqu’un descripteur de sécurité doit être stocké sur un disque ou transmis au moyen d’un protocole de communication. Pour plus d’informations, consultez descripteurs de [sécurité absolus et auto-relatifs](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
 ##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative
 
@@ -512,7 +512,7 @@ Retourne la valeur true si la méthode est réussie; sinon, false.
 
 ### <a name="remarks"></a>Notes
 
-Un descripteur de sécurité au format absolu contient des pointeurs vers les informations qu’il contient, au lieu de contenir les informations lui-même. Un descripteur de sécurité au format auto-relatif contient les informations dans un bloc de mémoire contigu. Dans un descripteur de sécurité auto- `SECURITY_DESCRIPTOR` relatif, une structure démarre toujours les informations, mais les autres composants du descripteur de sécurité peuvent suivre la structure dans n’importe quel ordre. Au lieu d’utiliser des adresses mémoire, les composants du descripteur de sécurité sont identifiés par des décalages à partir du début du descripteur de sécurité. Ce format est utile lorsqu’un descripteur de sécurité doit être stocké sur un disque ou transmis au moyen d’un protocole de communication. Pour plus d’informations, consultez descripteurs de [sécurité absolus et auto-relatifs](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Un descripteur de sécurité au format absolu contient des pointeurs vers les informations qu’il contient, au lieu de contenir les informations lui-même. Un descripteur de sécurité au format auto-relatif contient les informations dans un bloc de mémoire contigu. Dans un descripteur de sécurité auto- `SECURITY_DESCRIPTOR` relatif, une structure démarre toujours les informations, mais les autres composants du descripteur de sécurité peuvent suivre la structure dans n’importe quel ordre. Au lieu d’utiliser des adresses mémoire, les composants du descripteur de sécurité sont identifiés par des décalages à partir du début du descripteur de sécurité. Ce format est utile lorsqu’un descripteur de sécurité doit être stocké sur un disque ou transmis au moyen d’un protocole de communication. Pour plus d’informations, consultez descripteurs de [sécurité absolus et auto-relatifs](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
 ##  <a name="operator_eq"></a>  CSecurityDesc::operator =
 
@@ -553,7 +553,7 @@ bool SetControl(
 ### <a name="parameters"></a>Paramètres
 
 *ControlBitsOfInterest*<br/>
-Masque SECURITY_DESCRIPTOR_CONTROL qui indique les bits de contrôle à définir. Pour obtenir la liste des indicateurs qui peuvent être définis, consultez [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
+Masque SECURITY_DESCRIPTOR_CONTROL qui indique les bits de contrôle à définir. Pour obtenir la liste des indicateurs qui peuvent être définis, consultez [SetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 *ControlBitsToSet*<br/>
 Masque SECURITY_DESCRIPTOR_CONTROL qui indique les nouvelles valeurs pour les bits de contrôle spécifiés par le masque *ControlBitsOfInterest* . Ce paramètre peut être une combinaison des indicateurs listés pour le paramètre *ControlBitsOfInterest* .
@@ -564,7 +564,7 @@ Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode appelle [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
+Cette méthode appelle [SetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 
@@ -673,7 +673,7 @@ bool ToString(
 ### <a name="parameters"></a>Paramètres
 
 *pstr*<br/>
-Pointeur vers une chaîne se terminant par un caractère null qui recevra le descripteur de [sécurité au format chaîne](/windows/desktop/SecAuthZ/security-descriptor-string-format).
+Pointeur vers une chaîne se terminant par un caractère null qui recevra le descripteur de [sécurité au format chaîne](/windows/win32/SecAuthZ/security-descriptor-string-format).
 
 *si*<br/>
 Spécifie une combinaison d’indicateurs de bits SECURITY_INFORMATION pour indiquer les composants du descripteur de sécurité à inclure dans la chaîne de sortie.
@@ -688,7 +688,7 @@ Une fois que le descripteur de sécurité est au format chaîne, il peut être p
 
 Le paramètre *si* peut contenir les indicateurs SECURITY_INFORMATION suivants:
 
-|`Value`|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |OWNER_SECURITY_INFORMATION|Incluez le propriétaire.|
 |GROUP_SECURITY_INFORMATION|Incluez le groupe principal.|
@@ -697,13 +697,13 @@ Le paramètre *si* peut contenir les indicateurs SECURITY_INFORMATION suivants:
 
 Si la liste DACL est NULL et que le bit de contrôle SE_DACL_PRESENT est défini dans le descripteur de sécurité d’entrée, la méthode échoue.
 
-Si la liste DACL est NULL et que le bit de contrôle SE_DACL_PRESENT n’est pas défini dans le descripteur de sécurité d’entrée, la chaîne du descripteur de sécurité résultant n’a pas de composant D:. Pour plus d’informations, consultez [format de chaîne](/windows/desktop/SecAuthZ/security-descriptor-string-format) de descripteur de sécurité.
+Si la liste DACL est NULL et que le bit de contrôle SE_DACL_PRESENT n’est pas défini dans le descripteur de sécurité d’entrée, la chaîne du descripteur de sécurité résultant n’a pas de composant D:. Pour plus d’informations, consultez [format de chaîne](/windows/win32/SecAuthZ/security-descriptor-string-format) de descripteur de sécurité.
 
-Cette méthode appelle [convertstringsecuritydescriptortosecuritydescriptor a](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).
+Cette méthode appelle [convertstringsecuritydescriptortosecuritydescriptor a](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Exemple de sécurité](../../overview/visual-cpp-samples.md)<br/>
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)
