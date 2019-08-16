@@ -8,20 +8,20 @@ helpviewer_keywords:
 - item labels, tree controls
 - item labels
 ms.assetid: fe834107-1a25-4280-aced-774c11565805
-ms.openlocfilehash: c945556ff9236db1ca61b15f1072efdc2f49541f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1f7fb8b558ff4726f7787cbf355a059fbcce8b5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371949"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513380"
 ---
 # <a name="tree-control-item-labels"></a>Étiquettes d'élément de contrôle d'arborescence
 
-En règle générale, vous spécifiez le texte d’étiquette de l’élément lors de l’ajout de l’élément au contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Le `InsertItem` fonction membre peut passer un [structure TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) structure qui définit les propriétés de l’élément, y compris une chaîne contenant le texte de l’étiquette. `InsertItem` a plusieurs surcharges qui peuvent être appelées avec diverses combinaisons de paramètres.
+En général, vous spécifiez le texte de l’étiquette d’un élément lors de l’ajout de l’élément au contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). La `InsertItem` fonction membre peut passer une structure [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) qui définit les propriétés de l’élément, y compris une chaîne contenant le texte de l’étiquette. `InsertItem`a plusieurs surcharges qui peuvent être appelées avec différentes combinaisons de paramètres.
 
-Un contrôle d’arborescence alloue de la mémoire pour le stockage de chaque élément ; le texte des étiquettes occupe une partie significative de cette mémoire. Si votre application conserve une copie des chaînes dans le contrôle d’arborescence, vous pouvez réduire la mémoire requise par le contrôle en spécifiant le **LPSTR_TEXTCALLBACK** valeur dans le *pszText* membre `TV_ITEM` ou *lpszItem* paramètre au lieu de passer des chaînes réelles au contrôle d’arborescence. À l’aide de **LPSTR_TEXTCALLBACK** entraîne le contrôle d’arborescence récupérer le texte d’étiquette de l’élément à partir de l’application chaque fois que l’élément doit être redessiné. Pour récupérer le texte, le contrôle d’arborescence envoie un [TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo) message de notification, qui inclut l’adresse d’un [structure NMTVDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvdispinfoa) structure. Vous devez répondre en définissant les membres appropriés de la structure incluse.
+Un contrôle d’arborescence alloue de la mémoire pour stocker chaque élément; le texte des étiquettes d’élément occupe une partie importante de cette mémoire. Si votre application gère une copie des chaînes dans le contrôle d’arborescence, vous pouvez réduire les besoins en mémoire du contrôle en spécifiant la valeur **LPSTR_TEXTCALLBACK** dans le membre pszText `TV_ITEM` de ou le *lpszItem* au lieu de passer des chaînes réelles au contrôle d’arborescence. Si vous utilisez **LPSTR_TEXTCALLBACK** , le contrôle d’arborescence récupère le texte de l’étiquette d’un élément à partir de l’application chaque fois que l’élément doit être redessiné. Pour récupérer le texte, le contrôle d’arborescence envoie un message de notification [TVN_GETDISPINFO](/windows/win32/Controls/tvn-getdispinfo) , qui comprend l’adresse d’une structure [NMTVDISPINFO](/windows/win32/api/commctrl/ns-commctrl-tvdispinfow) . Vous devez répondre en définissant les membres appropriés de la structure incluse.
 
-Un contrôle d’arborescence utilise la mémoire allouée à partir du tas du processus qui crée le contrôle d’arborescence. Le nombre maximal d’éléments dans un contrôle d’arborescence est basé sur la quantité de mémoire disponible dans le tas. Chaque élément occupe 64 octets.
+Un contrôle d’arborescence utilise la mémoire allouée à partir du tas du processus qui crée le contrôle d’arborescence. Le nombre maximal d’éléments dans un contrôle d’arborescence est basé sur la quantité de mémoire disponible dans le tas. Chaque élément utilise 64 octets.
 
 ## <a name="see-also"></a>Voir aussi
 

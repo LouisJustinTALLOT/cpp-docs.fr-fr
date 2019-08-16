@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: d493a2d4d1c531250abc1cd60d1d3d5b79dea1b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: a552334adb4963f45388a798eb0723e61c09ec85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916770"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502840"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton, classe
 
@@ -54,7 +54,7 @@ class CSplitButton : public CButton
 
 ## <a name="remarks"></a>Notes
 
-La `CSplitButton` classe est dérivée de la classe [CButton](../../mfc/reference/cbutton-class.md) . Le contrôle bouton partagé est un contrôle bouton dont le style est BS_SPLITBUTTON. Il affiche un menu personnalisé lorsqu’un utilisateur clique sur la flèche déroulante. Pour plus d’informations, consultez les styles BS_SPLITBUTTON et BS_DEFSPLITBUTTON dans les [styles de bouton](/windows/desktop/Controls/button-styles).
+La `CSplitButton` classe est dérivée de la classe [CButton](../../mfc/reference/cbutton-class.md) . Le contrôle bouton partagé est un contrôle bouton dont le style est BS_SPLITBUTTON. Il affiche un menu personnalisé lorsqu’un utilisateur clique sur la flèche déroulante. Pour plus d’informations, consultez les styles BS_SPLITBUTTON et BS_DEFSPLITBUTTON dans les [styles de bouton](/windows/win32/Controls/button-styles).
 
 L’illustration suivante représente une boîte de dialogue qui contient un contrôle de pagineur et un contrôle de bouton partagé (1). La flèche de déroulement (2) a déjà été cliquée et le sous-menu (3) s’affiche.
 
@@ -144,8 +144,8 @@ afx_msg void OnDropDown(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*pNMHDR*|dans Pointeur vers une structure [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) qui contient des informations sur la notification [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) .|
-|*pResult*|à (Non utilisé; aucune valeur n’est retournée.) Valeur de retour de la notification [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) .|
+|*pNMHDR*|dans Pointeur vers une structure [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) qui contient des informations sur la notification [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) .|
+|*pResult*|à (Non utilisé; aucune valeur n’est retournée.) Valeur de retour de la notification [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) .|
 
 ### <a name="remarks"></a>Notes
 
@@ -190,7 +190,7 @@ L’illustration suivante représente une boîte de dialogue qui contient un con
 
 ![Boîte de dialogue avec un contrôle SplitButton et radiomessagerie.](../../mfc/reference/media/splitbutton_pager.png "Boîte de dialogue avec un contrôle SplitButton et radiomessagerie.")
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 La première instruction de l’exemple de code suivant illustre la méthode [CSplitButton:: SetDropDownMenu](#setdropdownmenu) . Nous avons créé le menu avec l’éditeur de ressources de Visual Studio, qui a automatiquement nommé ID de barre de menus, IDR_MENU1. Le paramètre *nSubMenuId* , qui est égal à zéro, fait référence au seul sous-menu de la barre de menus.
 

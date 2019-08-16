@@ -7,29 +7,29 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 9c74b1e8e9fc101ed9b3acd842d38dcdb9eb48f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247395"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497855"
 ---
 # <a name="category-macros"></a>Macros de catégorie
 
-Ces macros définissent les mappages de catégorie.
+Ces macros définissent des cartes de catégorie.
 
 |||
 |-|-|
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|Marque le début de la carte de catégorie.|
 |[END_CATEGORY_MAP](#end_category_map)|Marque la fin de la carte de catégorie.|
-|[IMPLEMENTED_CATEGORY](#implemented_category)|Indique les catégories qui sont implémentées par l’objet COM.|
-|[REQUIRED_CATEGORY](#required_category)|Indique les catégories qui sont requises du conteneur par l’objet COM.|
+|[IMPLEMENTED_CATEGORY](#implemented_category)|Indique les catégories implémentées par l’objet COM.|
+|[REQUIRED_CATEGORY](#required_category)|Indique les catégories qui sont requises par l’objet COM pour le conteneur.|
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlcom.h
+**En-tête:** atlcom. h
 
-##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
+##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
 
 Marque le début de la carte de catégorie.
 
@@ -40,26 +40,26 @@ BEGIN_CATEGORY_MAP(theClass)
 ### <a name="parameters"></a>Paramètres
 
 *theClass*<br/>
-[in] Le nom de la classe contenant le mappage de catégorie.
+dans Nom de la classe contenant la carte de catégorie.
 
 ### <a name="remarks"></a>Notes
 
-Le mappage de catégorie est utilisé pour spécifier les catégories de composant implémente la classe COM et les catégories dans lesquelles il requiert de son conteneur.
+La carte de catégorie est utilisée pour spécifier les catégories de composants que la classe COM doit implémenter et les catégories requises à partir de son conteneur.
 
-Ajouter un [IMPLEMENTED_CATEGORY](#implemented_category) entrée dans le mappage pour chaque catégorie implémenté par la classe COM. Ajouter un [REQUIRED_CATEGORY](#required_category) entrée à la carte pour chaque catégorie de la classe nécessitant ses clients à implémenter. Marquer la fin de la carte avec le [END_CATEGORY_MAP](#end_category_map) (macro).
+Ajoutez une entrée [IMPLEMENTED_CATEGORY](#implemented_category) à la carte pour chaque catégorie implémentée par la classe com. Ajoutez une entrée [REQUIRED_CATEGORY](#required_category) à la carte pour chaque catégorie dont les clients doivent implémenter la classe. Marquez la fin de la carte avec la macro [END_CATEGORY_MAP](#end_category_map) .
 
-Les catégories de composants répertoriés dans le mappage seront inscrit automatiquement lorsque le module est enregistré si la classe est associé à un [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) ou [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
+Les catégories de composants répertoriées dans le mappage sont inscrites automatiquement quand le module est inscrit si la classe a un [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) ou [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)associé.
 
 > [!NOTE]
->  ATL utilise le Gestionnaire de catégories de composants standard pour enregistrer les catégories de composants. Si le gestionnaire n’est pas présent sur le système lorsque le module est enregistré, l’inscription réussit, mais les catégories de composant ne seront pas enregistrés pour cette classe.
+>  ATL utilise le gestionnaire de catégories de composants standard pour inscrire les catégories de composants. Si le gestionnaire n’est pas présent sur le système lorsque le module est inscrit, l’inscription s’effectue correctement, mais les catégories de composants ne sont pas inscrites pour cette classe.
 
-Pour plus d’informations sur les catégories de composants, consultez [quelles sont les catégories de composants et comment elles fonctionnent](/windows/desktop/com/component-categories-and-how-they-work) dans le SDK Windows.
+Pour plus d’informations sur les catégories de composants, consultez [que sont les catégories de composants et comment fonctionnent-ils](/windows/win32/com/component-categories-and-how-they-work) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="end_category_map"></a>  END_CATEGORY_MAP
+##  <a name="end_category_map"></a>END_CATEGORY_MAP
 
 Marque la fin de la carte de catégorie.
 
@@ -67,13 +67,13 @@ Marque la fin de la carte de catégorie.
 END_CATEGORY_MAP()
 ```
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-Consultez l’exemple de [BEGIN_CATEGORY_MAP](#begin_category_map).
+Consultez l’exemple pour [BEGIN_CATEGORY_MAP](#begin_category_map).
 
-##  <a name="implemented_category"></a>  IMPLEMENTED_CATEGORY
+##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
-Ajouter une macro IMPLEMENTED_CATEGORY à de votre composant [correspondance des catégories](#begin_category_map) pour spécifier qu’il doit être inscrit en tant que l’implémentation de la catégorie identifiée par le *catID* paramètre.
+Ajoutez une macro IMPLEMENTED_CATEGORY à la carte des [catégories](#begin_category_map) de votre composant pour spécifier qu’elle doit être enregistrée en tant qu’implémentation de la catégorie identifiée par le paramètre *CATID* .
 
 ```
 IMPLEMENTED_CATEGORY(catID)
@@ -82,35 +82,35 @@ IMPLEMENTED_CATEGORY(catID)
 ### <a name="parameters"></a>Paramètres
 
 *catID*<br/>
-[in] CATID constante ou variable qui contient l’identificateur global unique (GUID) pour la catégorie implémentée. L’adresse de *catID* seront effectuées et ajoutée à la carte. Consultez le tableau ci-dessous pour une sélection des catégories de stock.
+dans Constante ou variable CATID contenant l’identificateur global unique (GUID) de la catégorie implémentée. L’adresse du *CATID* sera prise et ajoutée au mappage. Reportez-vous au tableau ci-dessous pour sélectionner des catégories de stock.
 
 ### <a name="remarks"></a>Notes
 
-Les catégories de composants répertoriés dans le mappage seront inscrit automatiquement lorsque le module est enregistré si la classe est associé à un [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) ou [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) macro.
+Les catégories de composants répertoriées dans le mappage sont inscrites automatiquement quand le module est inscrit si la classe a une macro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) ou [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) associée.
 
-Les clients peuvent utiliser les informations de catégorie inscrits pour la classe pour déterminer ses fonctionnalités et les exigences sans avoir à créer une instance de celle-ci.
+Les clients peuvent utiliser les informations de catégorie inscrites pour la classe afin de déterminer ses fonctionnalités et exigences sans avoir à créer une instance de celle-ci.
 
-Pour plus d’informations sur les catégories de composants, consultez [quelles sont les catégories de composants et comment elles fonctionnent](/windows/desktop/com/component-categories-and-how-they-work) dans le SDK Windows.
+Pour plus d’informations sur les catégories de composants, consultez [que sont les catégories de composants et comment fonctionnent-ils](/windows/win32/com/component-categories-and-how-they-work) dans le SDK Windows.
 
-### <a name="a-selection-of-stock-categories"></a>Une sélection des catégories de Stock
+### <a name="a-selection-of-stock-categories"></a>Sélection des catégories de stock
 
-|Description|Symbole|GUID de Registre|
+|Description|Symbole|GUID du Registre|
 |-----------------|------------|-------------------|
-|Safe pour le script|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
-|Sûr pour l’initialisation|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
-|Relation contenant-contenu de cadre simple Site|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
+|Sécurisé pour les scripts|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
+|Sécurisé pour l’initialisation|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
+|Relation contenant-contenu de site à cadre simple|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
 |liaison de données simple|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Liaison de données avancée|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Contrôles sans fenêtre|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Objets prenant en charge Internet|Consultez [Internet des objets prenant en charge](/windows/desktop/com/internet-aware-objects) dans le SDK Windows pour un exemple de liste.||
+|Objets prenant en charge Internet|Pour obtenir un exemple de liste, consultez [objets prenant en charge Internet](/windows/win32/com/internet-aware-objects) dans le SDK Windows.||
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="required_category"></a>  REQUIRED_CATEGORY
+##  <a name="required_category"></a>REQUIRED_CATEGORY
 
-Ajouter une macro REQUIRED_CATEGORY à de votre composant [correspondance des catégories](#begin_category_map) pour spécifier qu’il doit être inscrit comme nécessitant la catégorie identifiée par le *catID* paramètre.
+Ajoutez une macro REQUIRED_CATEGORY à la carte des [catégories](#begin_category_map) de votre composant pour spécifier qu’elle doit être inscrite comme nécessitant la catégorie identifiée par le paramètre *CATID* .
 
 ```
 REQUIRED_CATEGORY( catID )
@@ -119,27 +119,27 @@ REQUIRED_CATEGORY( catID )
 ### <a name="parameters"></a>Paramètres
 
 *catID*<br/>
-[in] CATID constante ou variable qui contient l’identificateur global unique (GUID) pour la catégorie obligatoire. L’adresse de *catID* seront effectuées et ajoutée à la carte. Consultez le tableau ci-dessous pour une sélection des catégories de stock.
+dans Constante ou variable CATID contenant l’identificateur global unique (GUID) de la catégorie requise. L’adresse du *CATID* sera prise et ajoutée au mappage. Reportez-vous au tableau ci-dessous pour sélectionner des catégories de stock.
 
 ### <a name="remarks"></a>Notes
 
-Les catégories de composants répertoriés dans le mappage seront inscrit automatiquement lorsque le module est enregistré si la classe est associé à un [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) ou [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) macro.
+Les catégories de composants répertoriées dans le mappage sont inscrites automatiquement quand le module est inscrit si la classe a une macro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) ou [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) associée.
 
-Les clients peuvent utiliser les informations de catégorie inscrits pour la classe pour déterminer ses fonctionnalités et les exigences sans avoir à créer une instance de celle-ci. Par exemple, un contrôle peut nécessiter qu’un conteneur prend en charge la liaison de données. Le conteneur peut savoir s’il a les fonctionnalités nécessaires pour héberger le contrôle en interrogeant le Gestionnaire de catégorie pour les catégories requises par ce contrôle. Si le conteneur ne prend pas en charge une fonctionnalité requise, elle peut refuser héberger l’objet COM.
+Les clients peuvent utiliser les informations de catégorie inscrites pour la classe afin de déterminer ses fonctionnalités et exigences sans avoir à créer une instance de celle-ci. Par exemple, un contrôle peut exiger qu’un conteneur prenne en charge la liaison de données. Le conteneur peut déterminer s’il dispose des fonctionnalités nécessaires pour héberger le contrôle en interrogeant le gestionnaire de catégories pour connaître les catégories requises par ce contrôle. Si le conteneur ne prend pas en charge une fonctionnalité requise, il peut refuser l’hébergement de l’objet COM.
 
-Pour plus d’informations sur les catégories de composants, notamment une liste d’exemples, consultez [quelles sont les catégories de composants et comment elles fonctionnent](/windows/desktop/com/component-categories-and-how-they-work) dans le SDK Windows.
+Pour plus d’informations sur les catégories de composants, y compris un exemple de liste, consultez [que sont les catégories de composants et comment fonctionnent-ils](/windows/win32/com/component-categories-and-how-they-work) dans le SDK Windows.
 
-### <a name="a-selection-of-stock-categories"></a>Une sélection des catégories de Stock
+### <a name="a-selection-of-stock-categories"></a>Sélection des catégories de stock
 
-|Description|Symbole|GUID de Registre|
+|Description|Symbole|GUID du Registre|
 |-----------------|------------|-------------------|
-|Safe pour le script|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
-|Sûr pour l’initialisation|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
-|Relation contenant-contenu de cadre simple Site|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
+|Sécurisé pour les scripts|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
+|Sécurisé pour l’initialisation|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
+|Relation contenant-contenu de site à cadre simple|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
 |liaison de données simple|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Liaison de données avancée|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Contrôles sans fenêtre|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Objets prenant en charge Internet|Consultez [Internet des objets prenant en charge](/windows/desktop/com/internet-aware-objects) dans le SDK Windows pour un exemple de liste.||
+|Objets prenant en charge Internet|Pour obtenir un exemple de liste, consultez [objets prenant en charge Internet](/windows/win32/com/internet-aware-objects) dans le SDK Windows.||
 
 ### <a name="example"></a>Exemple
 

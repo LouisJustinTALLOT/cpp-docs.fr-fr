@@ -1,5 +1,5 @@
 ---
-title: Csnapinitemimpl, classe
+title: CSnapInItemImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CSnapInItemImpl
@@ -27,19 +27,19 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 27f3e8a17a9538a72a6592177a88a9b415b1a27c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9ebcf8827d79a9613ce14251d361dd607aa6af3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277706"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496547"
 ---
-# <a name="csnapinitemimpl-class"></a>Csnapinitemimpl, classe
+# <a name="csnapinitemimpl-class"></a>CSnapInItemImpl, classe
 
 Cette classe fournit des méthodes pour implémenter un objet de nœud de composant logiciel enfichable.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+>  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,10 +51,10 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 #### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Votre classe, dérivée de `CSnapInItemImpl`.
+Votre classe, dérivée `CSnapInItemImpl`de.
 
 *bIsExtension*<br/>
-TRUE si l’objet est une extension de composant logiciel enfichable ; Sinon, FALSE.
+TRUE si l’objet est une extension de composant logiciel enfichable; Sinon, FALSe.
 
 ## <a name="members"></a>Membres
 
@@ -69,30 +69,30 @@ TRUE si l’objet est une extension de composant logiciel enfichable ; Sinon, F
 |Nom|Description|
 |----------|-----------------|
 |[CSnapInItemImpl::AddMenuItems](#addmenuitems)|Ajoute des éléments de menu à un menu contextuel.|
-|[CSnapInItemImpl::Command](#command)|Appelée par la console lorsqu’un élément de menu personnalisé est sélectionné.|
+|[CSnapInItemImpl::Command](#command)|Appelé par la console lorsqu’un élément de menu personnalisé est sélectionné.|
 |[CSnapInItemImpl::CreatePropertyPages](#createpropertypages)|Ajoute des pages à la feuille de propriétés du composant logiciel enfichable.|
-|[CSnapInItemImpl::FillData](#filldata)|Copie les informations sur l’objet de composant logiciel enfichable dans un flux spécifié.|
-|[CSnapInItemImpl::GetResultPaneInfo](#getresultpaneinfo)|Récupère le `RESULTDATAITEM` structure de l’utilisation du composant logiciel enfichable.|
-|[CSnapInItemImpl::GetResultViewType](#getresultviewtype)|Détermine le type d’affichage utilisé par le volet de résultats.|
-|[CSnapInItemImpl::GetScopePaneInfo](#getscopepaneinfo)|Récupère le `SCOPEDATAITEM` structure de l’utilisation du composant logiciel enfichable.|
+|[CSnapInItemImpl::FillData](#filldata)|Copie les informations sur l’objet de composant logiciel enfichable dans un flux de données spécifié.|
+|[CSnapInItemImpl::GetResultPaneInfo](#getresultpaneinfo)|Récupère la `RESULTDATAITEM` structure du composant logiciel enfichable.|
+|[CSnapInItemImpl::GetResultViewType](#getresultviewtype)|Détermine le type de vue utilisé par le volet de résultats.|
+|[CSnapInItemImpl::GetScopePaneInfo](#getscopepaneinfo)|Récupère la `SCOPEDATAITEM` structure du composant logiciel enfichable.|
 |[CSnapInItemImpl::Notify](#notify)|Appelé par la console pour notifier le composant logiciel enfichable des actions effectuées par l’utilisateur.|
 |[CSnapInItemImpl::QueryPagesFor](#querypagesfor)|Appelé pour déterminer si le nœud de composant logiciel enfichable prend en charge les pages de propriétés.|
-|[CSnapInItemImpl::SetMenuInsertionFlags](#setmenuinsertionflags)|Modifie les indicateurs d’insertion de menu pour un objet de composant logiciel enfichable.|
-|[CSnapInItemImpl::SetToolbarButtonInfo](#settoolbarbuttoninfo)|Définit les informations du bouton de barre d’outils spécifiée.|
-|[CSnapInItemImpl::UpdateMenuState](#updatemenustate)|Met à jour l’état de l’élément de menu contextuel.|
-|[CSnapInItemImpl::UpdateToolbarButton](#updatetoolbarbutton)|Met à jour l’état du bouton de barre d’outils spécifiée.|
+|[CSnapInItemImpl::SetMenuInsertionFlags](#setmenuinsertionflags)|Modifie les indicateurs d’insertion de menu pour un objet composant logiciel enfichable.|
+|[CSnapInItemImpl::SetToolbarButtonInfo](#settoolbarbuttoninfo)|Définit les informations du bouton de barre d’outils spécifié.|
+|[CSnapInItemImpl::UpdateMenuState](#updatemenustate)|Met à jour l’état d’un élément de menu contextuel.|
+|[CSnapInItemImpl::UpdateToolbarButton](#updatetoolbarbutton)|Met à jour l’état du bouton de barre d’outils spécifié.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CSnapInItemImpl::m_bstrDisplayName](#m_bstrdisplayname)|Le nom de l’objet de composant logiciel enfichable.|
-|[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Le Windows `RESULTDATAITEM` structure utilisée par le `CSnapInItemImpl` objet.|
-|[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Le Windows `SCOPEDATAITEM` structure utilisée par le `CSnapInItemImpl` objet.|
+|[CSnapInItemImpl::m_bstrDisplayName](#m_bstrdisplayname)|Nom de l’objet de composant logiciel enfichable.|
+|[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Structure Windows `RESULTDATAITEM` utilisée par l' `CSnapInItemImpl` objet.|
+|[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Structure Windows `SCOPEDATAITEM` utilisée par l' `CSnapInItemImpl` objet.|
 
 ## <a name="remarks"></a>Notes
 
-`CSnapInItemImpl` Fournit une implémentation de base pour un objet de nœud de composant logiciel enfichable, telles que l’ajout de barres d’outils et des éléments de menu et le transfert de commandes pour le nœud de composant logiciel enfichable à la fonction gestionnaire approprié. Ces fonctionnalités sont implémentées à l’aide de plusieurs interfaces différentes et mappent les types. L’implémentation par défaut gère les notifications envoyées à l’objet de nœud par la détermination de l’instance correcte de la classe dérivée et puis transférer le message à l’instance correcte.
+`CSnapInItemImpl`fournit une implémentation de base pour un objet de nœud de composant logiciel enfichable, comme l’ajout d’éléments de menu et de barres d’outils, et le transfert de commandes pour le nœud de composant logiciel enfichable vers la fonction de gestionnaire appropriée. Ces fonctionnalités sont implémentées à l’aide de différentes interfaces et types de mappages. L’implémentation par défaut gère les notifications envoyées à l’objet de nœud en déterminant l’instance correcte de la classe dérivée, puis en retransférant le message à l’instance correcte.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -102,11 +102,11 @@ TRUE si l’objet est une extension de composant logiciel enfichable ; Sinon, F
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlsnap.h
+**En-tête:** atlsnap. h
 
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems
 
-Cette méthode implémente la fonction Win32 [IExtendContextMenu::AddMenuItems](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems).
+Cette méthode implémente la fonction Win32 [IExtendContextMenu:: AddMenuItems](/windows/win32/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems).
 
 ```
 AddMenuItems(
@@ -118,33 +118,33 @@ AddMenuItems(
 ### <a name="parameters"></a>Paramètres
 
 *piCallback*<br/>
-[in] Pointeur vers le `IContextMenuCallback` qui peut ajouter des éléments au menu contextuel.
+dans Pointeur vers le `IContextMenuCallback` qui peut ajouter des éléments au menu contextuel.
 
 *pInsertionAllowed*<br/>
-[in, out] Identifie définies par Microsoft Management Console MMC, élément de menu points d’insertion qui peuvent être utilisés. Cela peut être une combinaison des indicateurs suivants :
+[in, out] Identifie les points d’insertion d’élément de menu définis par la console MMC (Microsoft Management Console), qui peuvent être utilisés. Il peut s’agir d’une combinaison des indicateurs suivants:
 
-- CCM_INSERTIONALLOWED_TOP éléments peuvent être insérées en haut d’un menu contextuel.
+- Les éléments CCM_INSERTIONALLOWED_TOP peuvent être insérés en haut d’un menu contextuel.
 
-- CCM_INSERTIONALLOWED_NEW éléments peuvent être insérés dans le sous-menu de créer un nouveau.
+- Vous pouvez insérer des éléments CCM_INSERTIONALLOWED_NEW dans le sous-menu créer.
 
-- CCM_INSERTIONALLOWED_TASK éléments peuvent être insérés dans le sous-menu de la tâche.
+- Les éléments CCM_INSERTIONALLOWED_TASK peuvent être insérés dans le sous-menu tâche.
 
-- CCM_INSERTIONALLOWED_VIEW éléments peuvent être insérés dans le menu Affichage de barre d’outils ou dans le sous-menu de l’affichage du menu contextuel de volet de résultats.
+- Les éléments CCM_INSERTIONALLOWED_VIEW peuvent être insérés dans le menu Affichage de la barre d’outils ou dans le sous-menu Affichage du menu contextuel du volet de résultats.
 
 *type*<br/>
-[in] Spécifie le type d’objet. Il peut avoir l’une des valeurs suivantes :
+dans Spécifie le type d’objet. Il peut prendre l’une des valeurs suivantes:
 
-- Objet de données de CCT_SCOPE pour le contexte de volet d’étendue.
+- Objet de données CCT_SCOPE pour le contexte du volet d’étendue.
 
-- Objet de données de CCT_RESULT pour le contexte de volet de résultats.
+- Objet de données CCT_RESULT pour le contexte du volet de résultats.
 
-- Objet de données de CCT_SNAPIN_MANAGER pour le contexte du composant logiciel enfichable Gestionnaire.
+- Objet de données CCT_SNAPIN_MANAGER pour le contexte du gestionnaire de composants logiciels enfichables.
 
-- Objet de données de CCT_UNINITIALIZED a un type non valide.
+- Le type de l’objet de données CCT_UNINITIALIZED n’est pas valide.
 
 ##  <a name="command"></a>  CSnapInItemImpl::Command
 
-Cette méthode implémente la fonction Win32 [IExtendContextMenu::Command](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-command).
+Cette méthode implémente la fonction Win32 [IExtendContextMenu:: Command](/windows/win32/api/mmc/nf-mmc-iextendcontextmenu-command).
 
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -153,22 +153,22 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 ### <a name="parameters"></a>Paramètres
 
 *lCommandID*<br/>
-[in] Spécifie l’identificateur de commande de l’élément de menu.
+dans Spécifie l’identificateur de commande de l’élément de menu.
 
 *type*<br/>
-[in] Spécifie le type d’objet. Il peut avoir l’une des valeurs suivantes :
+dans Spécifie le type d’objet. Il peut prendre l’une des valeurs suivantes:
 
-- Objet de données de CCT_SCOPE pour le contexte de volet d’étendue.
+- Objet de données CCT_SCOPE pour le contexte du volet d’étendue.
 
-- Objet de données de CCT_RESULT pour le contexte de volet de résultats.
+- Objet de données CCT_RESULT pour le contexte du volet de résultats.
 
-- Objet de données de CCT_SNAPIN_MANAGER pour le contexte du composant logiciel enfichable Gestionnaire.
+- Objet de données CCT_SNAPIN_MANAGER pour le contexte du gestionnaire de composants logiciels enfichables.
 
-- Objet de données de CCT_UNINITIALIZED a un type non valide.
+- Le type de l’objet de données CCT_UNINITIALIZED n’est pas valide.
 
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages
 
-Cette méthode implémente la fonction Win32 [IExtendPropertySheet::CreatePropertyPages](/windows/desktop/api/mmc/nn-mmc-iextendpropertysheet2).
+Cette méthode implémente la fonction Win32 [IExtendPropertySheet:: CreatePropertyPages](/windows/win32/api/mmc/nn-mmc-iextendpropertysheet2).
 
 ```
 CreatePropertyPages(
@@ -181,24 +181,24 @@ CreatePropertyPages(
 ### <a name="parameters"></a>Paramètres
 
 *lpProvider*<br/>
-[in] Pointeur vers le `IPropertySheetCallback` interface.
+dans Pointeur vers l' `IPropertySheetCallback` interface.
 
 *handle*<br/>
-[in] Spécifie le handle utilisé pour router le message de notification MMCN_PROPERTY_CHANGE à la classe de données approprié.
+dans Spécifie le descripteur utilisé pour acheminer le message de notification MMCN_PROPERTY_CHANGE à la classe de données appropriée.
 
 *pUnk*<br/>
-[in] Pointeur vers le `IExtendPropertySheet` interface sur l’objet qui contient des informations de contexte sur le nœud.
+dans Pointeur vers l' `IExtendPropertySheet` interface sur l’objet qui contient des informations de contexte sur le nœud.
 
 *type*<br/>
-[in] Spécifie le type d’objet. Il peut avoir l’une des valeurs suivantes :
+dans Spécifie le type d’objet. Il peut prendre l’une des valeurs suivantes:
 
-- Objet de données de CCT_SCOPE pour le contexte de volet d’étendue.
+- Objet de données CCT_SCOPE pour le contexte du volet d’étendue.
 
-- Objet de données de CCT_RESULT pour le contexte de volet de résultats.
+- Objet de données CCT_RESULT pour le contexte du volet de résultats.
 
-- Objet de données de CCT_SNAPIN_MANAGER pour le contexte du composant logiciel enfichable Gestionnaire.
+- Objet de données CCT_SNAPIN_MANAGER pour le contexte du gestionnaire de composants logiciels enfichables.
 
-- Objet de données de CCT_UNINITIALIZED a un type non valide.
+- Le type de l’objet de données CCT_UNINITIALIZED n’est pas valide.
 
 ##  <a name="csnapinitemimpl"></a>  CSnapInItemImpl::CSnapInItemImpl
 
@@ -210,7 +210,7 @@ CSnapInItemImpl();
 
 ##  <a name="filldata"></a>  CSnapInItemImpl::FillData
 
-Cette fonction est appelée pour récupérer des informations sur l’élément.
+Cette fonction est appelée pour extraire des informations sur l’élément.
 
 ```
 FillData(CLIPFORMAT cf, LPSTREAM pStream);
@@ -219,18 +219,18 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="parameters"></a>Paramètres
 
 *cf*<br/>
-[in] Le format (texte, texte enrichi ou texte enrichi avec les éléments OLE) du Presse-papiers.
+dans Format (texte, texte enrichi ou texte enrichi avec éléments OLE) du presse-papiers.
 
 *pStream*<br/>
-[in] Un pointeur vers le flux contenant les données d’objet.
+dans Pointeur vers le flux contenant les données d’objet.
 
 ### <a name="remarks"></a>Notes
 
-Pour implémenter correctement cette fonction, copiez les informations correctes dans le flux (*pStream*), selon le format de Presse-papiers indiqué par *cf*.
+Pour implémenter correctement cette fonction, copiez les informations correctes dans le flux (*pStream*), en fonction du format du presse-papiers indiqué par *CF*.
 
 ##  <a name="getresultviewtype"></a>  CSnapInItemImpl::GetResultViewType
 
-Appelez cette fonction pour récupérer le type de l’affichage du volet de résultats de l’objet de composant logiciel enfichable.
+Appelez cette fonction pour récupérer le type de vue du volet de résultats de l’objet de composant logiciel enfichable.
 
 ```
 GetResultViewType(
@@ -241,18 +241,18 @@ GetResultViewType(
 ### <a name="parameters"></a>Paramètres
 
 *ppViewType*<br/>
-[out] Pointeur vers l’adresse du type de vue renvoyé.
+à Pointeur vers l’adresse du type de vue retourné.
 
 *pViewOptions*<br/>
-[out] Pointeur vers l’énumération MMC_VIEW_OPTIONS, qui fournit la console avec les options spécifiées par le composant logiciel enfichable propriétaire. Cette valeur peut être une des opérations suivantes :
+à Pointeur vers l’énumération MMC_VIEW_OPTIONS, qui fournit la console avec les options spécifiées par le composant logiciel enfichable propriétaire. Cette valeur peut être l’une des suivantes:
 
-- MMC_VIEW_OPTIONS_NOLISTVIEWS = 0 x 00000001 indique à la console à ne pas présenter des choix d’affichage de liste standard dans le **vue** menu. Permet le composant logiciel enfichable afficher ses propres affichages personnalisés uniquement dans le volet résultat. Il s’agit de l’indicateur d’option uniquement défini pour l’instant.
+- MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x00000001 indique à la console de s’abstenir de présenter les choix de vue de liste standard dans le menu **affichage** . Permet au composant logiciel enfichable d’afficher ses propres vues personnalisées uniquement dans le volet affichage des résultats. Il s’agit du seul indicateur d’option défini à ce stade.
 
 - MMC_VIEW_OPTIONS_NONE = 0 autorise les options d’affichage par défaut.
 
 ##  <a name="getscopepaneinfo"></a>  CSnapInItemImpl::GetScopePaneInfo
 
-Appelez cette fonction pour récupérer le `SCOPEDATAITEM` structure de l’utilisation du composant logiciel enfichable.
+Appelez cette fonction pour récupérer la `SCOPEDATAITEM` structure du composant logiciel enfichable.
 
 ```
 GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
@@ -261,11 +261,11 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 ### <a name="parameters"></a>Paramètres
 
 *pScopeDataItem*<br/>
-[out] Un pointeur vers le `SCOPEDATAITEM` structure de le `CSnapInItemImpl` objet.
+à Pointeur vers la `SCOPEDATAITEM` structure de l' `CSnapInItemImpl` objet.
 
 ##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo
 
-Appelez cette fonction pour récupérer le `RESULTDATAITEM` structure de l’utilisation du composant logiciel enfichable.
+Appelez cette fonction pour récupérer la `RESULTDATAITEM` structure du composant logiciel enfichable.
 
 ```
 GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
@@ -274,7 +274,7 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 ### <a name="parameters"></a>Paramètres
 
 *pResultDataItem*<br/>
-[out] Un pointeur vers le `RESULTDATAITEM` structure de le `CSnapInItemImpl` objet.
+à Pointeur vers la `RESULTDATAITEM` structure de l' `CSnapInItemImpl` objet.
 
 ##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName
 
@@ -286,7 +286,7 @@ CComBSTR m_bstrDisplayName;
 
 ##  <a name="m_scopedataitem"></a>  CSnapInItemImpl::m_scopeDataItem
 
-Le `SCOPEDATAITEM` structure de l’objet de données du composant logiciel enfichable.
+`SCOPEDATAITEM` Structure de l’objet de données du composant logiciel enfichable.
 
 ```
 SCOPEDATAITEM m_scopeDataItem;
@@ -294,7 +294,7 @@ SCOPEDATAITEM m_scopeDataItem;
 
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem
 
-Le [RESULTDATAITEM](/windows/desktop/api/mmc/ns-mmc-resultdataitem) structure de l’objet de données du composant logiciel enfichable.
+Structure [RESULTDATAITEM](/windows/win32/api/mmc/ns-mmc-resultdataitem) de l’objet de données du composant logiciel enfichable.
 
 ```
 RESULTDATAITEM m_resultDataItem;
@@ -302,7 +302,7 @@ RESULTDATAITEM m_resultDataItem;
 
 ##  <a name="notify"></a>  CSnapInItemImpl::Notify
 
-Appelé lorsque l’objet de composant logiciel enfichable est appliquée par l’utilisateur.
+Appelé lorsque l’objet composant logiciel enfichable est traité par l’utilisateur.
 
 ```
 STDMETHOD(Notify)(
@@ -317,58 +317,58 @@ STDMETHOD(Notify)(
 ### <a name="parameters"></a>Paramètres
 
 *event*<br/>
-[in] Identifie une action effectuée par un utilisateur. Les notifications suivantes sont possibles :
+dans Identifie une action entreprise par un utilisateur. Les notifications suivantes sont possibles:
 
 - MMCN_ACTIVATE envoyé lorsqu’une fenêtre est activée et désactivée.
 
-- MMCN_ADD_IMAGES envoyé pour ajouter des images vers le volet de résultats.
+- MMCN_ADD_IMAGES envoyé pour ajouter des images au volet des résultats.
 
-- MMCN_BTN_CLICK envoyé lorsque l’utilisateur clique sur un des boutons de barre d’outils.
+- MMCN_BTN_CLICK envoyé lorsque l’utilisateur clique sur l’un des boutons de la barre d’outils.
 
-- MMCN_CLICK envoyé lorsqu’un utilisateur clique sur un bouton de la souris sur un élément de liste.
+- MMCN_CLICK envoyé quand un utilisateur clique sur un bouton de la souris sur un élément de la vue liste.
 
-- MMCN_DBLCLICK envoyé lorsqu’un utilisateur double-clique sur un bouton de la souris sur un élément de liste.
+- MMCN_DBLCLICK envoyé quand un utilisateur double-clique sur un bouton de la souris sur un élément de la vue liste.
 
-- MMCN_DELETE envoyé pour informer le composant logiciel enfichable dans l’objet doit être supprimé.
+- MMCN_DELETE envoyé pour informer le composant logiciel enfichable que l’objet doit être supprimé.
 
-- MMCN_EXPAND envoyé lorsqu’un dossier doit être développé ou contractées.
+- MMCN_EXPAND envoyé lorsqu’un dossier doit être développé ou contracté.
 
 - MMCN_MINIMIZED envoyé lorsqu’une fenêtre est réduite ou agrandie.
 
-- MMCN_PROPERTY_CHANGE envoyé pour informer un composant logiciel enfichable objet vue du composant logiciel enfichable dans l’objet va être modifiée.
+- MMCN_PROPERTY_CHANGE envoyé pour notifier un objet composant logiciel enfichable que la vue de l’objet composant logiciel enfichable va modifier.
 
-- MMCN_REMOVE_CHILDREN envoyé lorsque le composant logiciel enfichable doit supprimer l’ensemble du sous-arbre a ajouté sous le nœud spécifié.
+- MMCN_REMOVE_CHILDREN envoyé lorsque le composant logiciel enfichable doit supprimer l’intégralité de la sous-arborescence qu’il a ajoutée sous le nœud spécifié.
 
-- MMCN_RENAME envoyé la première fois à la requête pour un changement de nom et la deuxième fois pour effectuer le changement de nom.
+- MMCN_RENAME a envoyé la première fois pour demander un changement de nom et la deuxième fois pour effectuer le changement de nom.
 
-- MMCN_SELECT envoyé lorsqu’un élément dans le volet de vue étendue ou le résultat est sélectionné.
+- MMCN_SELECT envoyé lorsqu’un élément du volet étendue ou affichage des résultats est sélectionné.
 
-- MMCN_SHOW envoyé lorsqu’un élément de portée est sélectionné ou désélectionné pour la première fois.
+- MMCN_SHOW envoyé lorsqu’un élément d’étendue est sélectionné ou désélectionné pour la première fois.
 
 - MMCN_VIEW_CHANGE envoyé lorsque le composant logiciel enfichable peut mettre à jour toutes les vues lorsqu’une modification se produit.
 
 *arg*<br/>
-[in] Varie selon le type de notification.
+dans Dépend du type de notification.
 
 *param*<br/>
-[in] Varie selon le type de notification.
+dans Dépend du type de notification.
 
 *pComponentData*<br/>
-[out] Un pointeur vers l’objet qui implémente `IComponentData`. Ce paramètre est NULL si la notification n’est pas transférée à partir de `IComponentData::Notify`.
+à Pointeur vers l’objet qui implémente `IComponentData`. Ce paramètre a la valeur NULL si la notification n’est pas `IComponentData::Notify`transférée à partir de.
 
 *pComponent*<br/>
-[out] Un pointeur vers l’objet qui implémente `IComponent`. Ce paramètre est NULL si la notification n’est pas transférée à partir de `IComponent::Notify`.
+à Pointeur vers l’objet qui implémente `IComponent`. Ce paramètre a la valeur NULL si la notification n’est pas `IComponent::Notify`transférée à partir de.
 
 *type*<br/>
-[in] Spécifie le type d’objet. Il peut avoir l’une des valeurs suivantes :
+dans Spécifie le type d’objet. Il peut prendre l’une des valeurs suivantes:
 
-- Objet de données de CCT_SCOPE pour le contexte de volet d’étendue.
+- Objet de données CCT_SCOPE pour le contexte du volet d’étendue.
 
-- Objet de données de CCT_RESULT pour le contexte de volet de résultats.
+- Objet de données CCT_RESULT pour le contexte du volet de résultats.
 
-- Objet de données de CCT_SNAPIN_MANAGER pour le contexte du composant logiciel enfichable Gestionnaire.
+- Objet de données CCT_SNAPIN_MANAGER pour le contexte du gestionnaire de composants logiciels enfichables.
 
-- Objet de données de CCT_UNINITIALIZED a un type non valide.
+- Le type de l’objet de données CCT_UNINITIALIZED n’est pas valide.
 
 ##  <a name="querypagesfor"></a>  CSnapInItemImpl::QueryPagesFor
 
@@ -391,28 +391,28 @@ void SetMenuInsertionFlags(
 ### <a name="parameters"></a>Paramètres
 
 *bBeforeInsertion*<br/>
-[in] Différent de zéro si la fonction doit être appelée avant que les éléments sont ajoutés au menu contextuel ; sinon 0.
+dans Différent de zéro si la fonction doit être appelée avant que les éléments ne soient ajoutés au menu contextuel; Sinon, 0.
 
 *pInsertionAllowed*<br/>
-[in, out] Identifie définies par Microsoft Management Console MMC, élément de menu points d’insertion qui peuvent être utilisés. Cela peut être une combinaison des indicateurs suivants :
+[in, out] Identifie les points d’insertion d’élément de menu définis par la console MMC (Microsoft Management Console), qui peuvent être utilisés. Il peut s’agir d’une combinaison des indicateurs suivants:
 
-- CCM_INSERTIONALLOWED_TOP éléments peuvent être insérées en haut d’un menu contextuel.
+- Les éléments CCM_INSERTIONALLOWED_TOP peuvent être insérés en haut d’un menu contextuel.
 
-- CCM_INSERTIONALLOWED_NEW éléments peuvent être insérés dans le sous-menu de créer un nouveau.
+- Vous pouvez insérer des éléments CCM_INSERTIONALLOWED_NEW dans le sous-menu créer.
 
-- CCM_INSERTIONALLOWED_TASK éléments peuvent être insérés dans le sous-menu de la tâche.
+- Les éléments CCM_INSERTIONALLOWED_TASK peuvent être insérés dans le sous-menu tâche.
 
-- CCM_INSERTIONALLOWED_VIEW éléments peuvent être insérés dans le menu Affichage de barre d’outils ou dans le sous-menu de l’affichage du menu contextuel de volet de résultats.
+- Les éléments CCM_INSERTIONALLOWED_VIEW peuvent être insérés dans le menu Affichage de la barre d’outils ou dans le sous-menu Affichage du menu contextuel du volet de résultats.
 
 ### <a name="remarks"></a>Notes
 
-Si vous développez un composant logiciel enfichable principal, vous pouvez réinitialiser un des indicateurs d’insertion comme un moyen de limiter le type d’éléments de menu qui a une extension tierce peut ajouter. Par exemple, le composant logiciel enfichable principal peut effacer l’indicateur CCM_INSERTIONALLOWED_NEW pour empêcher des extensions d’ajouter leurs propres éléments de menu créer un nouveau.
+Si vous développez un composant logiciel enfichable principal, vous pouvez réinitialiser tous les indicateurs d’insertion comme un moyen de limiter le type d’éléments de menu qu’une extension tierce peut ajouter. Par exemple, le composant logiciel enfichable principal peut effacer l’indicateur CCM_INSERTIONALLOWED_NEW pour empêcher les extensions d’ajouter leurs propres éléments de menu créer.
 
-Vous ne devez pas tenter de définir des bits *pInsertionAllowed* qui ont été effacées à l’origine. Les versions futures de la console MMC peuvent utiliser bits pas actuellement définis afin de vous ne devez pas modifier les bits qui ne sont pas actuellement définis.
+Vous ne devez pas essayer de définir des bits dans *pInsertionAllowed* qui ont été effacés à l’origine. Les futures versions de la console MMC peuvent utiliser des bits qui ne sont pas actuellement définis. par conséquent, vous ne devez pas modifier les bits qui ne sont pas actuellement définis.
 
 ##  <a name="settoolbarbuttoninfo"></a>  CSnapInItemImpl::SetToolbarButtonInfo
 
-Appelez cette fonction pour modifier les styles de bouton de barre d’outils, de l’objet composant logiciel enfichable, avant la création de la barre d’outils.
+Appelez cette fonction pour modifier tous les styles de boutons de barre d’outils, de l’objet de composant logiciel enfichable, avant la création de la barre d’outils.
 
 ```
 void SetToolbarButtonInfo(
@@ -423,40 +423,40 @@ void SetToolbarButtonInfo(
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*<br/>
-[in] L’ID du bouton de barre d’outils à définir.
+*id*<br/>
+dans ID du bouton de barre d’outils à définir.
 
 *fsState*<br/>
-[in] Les indicateurs d’état du bouton. Peut être une ou plusieurs des opérations suivantes :
+dans Indicateurs d’État du bouton. Il peut s’agir d’un ou plusieurs des éléments suivants:
 
 - TBSTATE_CHECKED le bouton a le style TBSTYLE_CHECKED et est enfoncé.
 
-- Le bouton TBSTATE_ENABLED accepte les entrées utilisateur. Un bouton qui n’a pas de cet état n’accepte pas d’entrée d’utilisateur et est grisé.
+- TBSTATE_ENABLED le bouton accepte l’intervention de l’utilisateur. Un bouton qui n’a pas cet État n’accepte pas les entrées d’utilisateur et est grisé.
 
-- TBSTATE_HIDDEN le bouton n’est pas visible et ne peut pas recevoir l’entrée d’utilisateur.
+- TBSTATE_HIDDEN le bouton n’est pas visible et ne peut pas recevoir d’entrée d’utilisateur.
 
 - TBSTATE_INDETERMINATE le bouton est grisé.
 
 - TBSTATE_PRESSED le bouton est enfoncé.
 
-- Saut de ligne A TBSTATE_WRAP suit le bouton. Le bouton doit également avoir le TBSTATE_ENABLED.
+- TBSTATE_WRAP un saut de ligne suit le bouton. Le bouton doit également avoir le TBSTATE_ENABLED.
 
 *fsType*<br/>
-[in] Les indicateurs d’état du bouton. Peut être une ou plusieurs des opérations suivantes :
+dans Indicateurs d’État du bouton. Il peut s’agir d’un ou plusieurs des éléments suivants:
 
 - TBSTYLE_BUTTON crée un bouton de commande standard.
 
-- TBSTYLE_CHECK crée un bouton qui fait basculer entre les États enfoncés et non-enfoncé chaque fois que l’utilisateur clique dessus. Le bouton a une couleur d’arrière-plan différente lorsqu’il est dans un état appuyé.
+- TBSTYLE_CHECK crée un bouton qui bascule entre les États enfoncé et non enfoncé chaque fois que l’utilisateur clique dessus. Le bouton a une couleur d’arrière-plan différente lorsqu’il est dans un état appuyé.
 
-- TBSTYLE_CHECKGROUP crée un bouton de vérification qui reste enfoncé jusqu'à ce que l’utilisateur appuie sur un autre bouton dans le groupe.
+- TBSTYLE_CHECKGROUP crée un bouton de vérification qui reste enfoncé jusqu’à ce qu’un autre bouton du groupe soit enfoncé.
 
-- TBSTYLE_GROUP crée un bouton qui reste enfoncé jusqu'à ce que l’utilisateur appuie sur un autre bouton dans le groupe.
+- TBSTYLE_GROUP crée un bouton qui reste enfoncé jusqu’à ce qu’un autre bouton du groupe soit enfoncé.
 
-- TBSTYLE_SEP crée un séparateur, en fournissant un petit intervalle entre les groupes de bouton. Un bouton qui a ce style ne reçoit pas d’entrée d’utilisateur.
+- TBSTYLE_SEP crée un séparateur en fournissant un petit intervalle entre les groupes de boutons. Un bouton qui a ce style ne reçoit pas d’entrée d’utilisateur.
 
 ##  <a name="updatemenustate"></a>  CSnapInItemImpl::UpdateMenuState
 
-Appelez cette fonction pour modifier un élément de menu avant qu’il est inséré dans le menu contextuel de l’objet de composant logiciel enfichable.
+Appelez cette fonction pour modifier un élément de menu avant qu’il ne soit inséré dans le menu contextuel de l’objet composant logiciel enfichable.
 
 ```
 void UpdateMenuState(
@@ -467,36 +467,36 @@ void UpdateMenuState(
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*<br/>
-[in] ID de l’élément de menu à définir.
+*id*<br/>
+dans ID de l’élément de menu à définir.
 
 *pBuf*<br/>
-[in] Pointeur vers la chaîne de l’élément de menu à mettre à jour.
+dans Pointeur vers la chaîne de l’élément de menu à mettre à jour.
 
 *flags*<br/>
-[in] Spécifie les indicateurs d’état. Cela peut être une combinaison des indicateurs suivants :
+dans Spécifie les nouveaux indicateurs d’État. Il peut s’agir d’une combinaison des indicateurs suivants:
 
-- MF_POPUP Spécifie qu’il s’agit d’un sous-menu dans le menu contextuel. Éléments de menu, les points d’insertion et les sous-menus davantage peuvent être ajoutés à ce sous-menu à l’aide de son `lCommandID` en tant que leur `IInsertionPointID`.
+- MF_POPUP spécifie qu’il s’agit d’un sous-menu dans le menu contextuel. Les éléments de menu, les points d’insertion et d’autres sous-menus peuvent être ajoutés à ce `lCommandID` sous- `IInsertionPointID`menu à l’aide de son.
 
-- MF_BITMAP et MF_OWNERDRAW ces indicateurs ne sont pas autorisés et provoqueront une valeur de retour de E_INVALIDARG.
+- MF_BITMAP et MF_OWNERDRAW ces indicateurs ne sont pas autorisés et entraînent la valeur de retour E_INVALIDARG.
 
-- MF_SEPARATOR Dessine une ligne de démarcation horizontale. Uniquement `IContextMenuProvider` est autorisé à ajouter des éléments de menu avec MF_SEPARATOR ensemble.
+- MF_SEPARATOR dessine une ligne de séparation horizontale. Seul `IContextMenuProvider` est autorisé à ajouter des éléments de menu avec MF_SEPARATOR Set.
 
 - MF_CHECKED place une coche en regard de l’élément de menu.
 
-- MF_DISABLED désactive l’élément de menu afin qu’il ne peut pas être sélectionné, mais l’indicateur ne pas gris il.
+- MF_DISABLED désactive l’élément de menu afin qu’il ne puisse pas être sélectionné, mais l’indicateur ne le grise pas.
 
-- MF_ENABLED permet à l’élément de menu afin qu’il peut être sélectionné, restaurant à partir de son état grisé.
+- MF_ENABLED active l’élément de menu pour qu’il puisse être sélectionné, en le restaurant de son état grisé.
 
-- MF_GRAYED désactive l’élément de menu, qui elle devient donc il ne peut pas être sélectionné.
+- MF_GRAYED désactive l’élément de menu, en le grisant afin qu’il ne puisse pas être sélectionné.
 
-- Les fonctions MF_MENUBARBREAK identique à la MF_MENUBREAK indicateur pour une barre de menus. Pour un menu déroulant, un sous-menu ou un menu contextuel, la nouvelle colonne est l’ancienne colonne séparée par une ligne verticale.
+- MF_MENUBARBREAK fonctionne de la même façon que l’indicateur MF_MENUBREAK pour une barre de menus. Dans le cas d’un menu déroulant, d’un sous-menu ou d’un menu contextuel, la nouvelle colonne est séparée de l’ancienne colonne par une ligne verticale.
 
-- MF_MENUBREAK place l’élément sur une nouvelle ligne (pour une barre de menus) ou dans une nouvelle colonne (pour un menu déroulant, un sous-menu ou un menu contextuel) sans séparation des colonnes.
+- MF_MENUBREAK place l’élément sur une nouvelle ligne (pour une barre de menus) ou dans une nouvelle colonne (pour un menu déroulant, un sous-menu ou un menu contextuel) sans séparer les colonnes.
 
-- MF_UNCHECKED pas impose une case à cocher en regard de l’élément (par défaut).
+- MF_UNCHECKED ne place pas de coche en regard de l’élément (valeur par défaut).
 
-Les groupes d’indicateurs suivants ne peuvent pas être utilisés ensemble :
+Les groupes d’indicateurs suivants ne peuvent pas être utilisés ensemble:
 
 - MF_DISABLED, MF_ENABLED et MF_GRAYED.
 
@@ -506,7 +506,7 @@ Les groupes d’indicateurs suivants ne peuvent pas être utilisés ensemble :
 
 ##  <a name="updatetoolbarbutton"></a>  CSnapInItemImpl::UpdateToolbarButton
 
-Appelez cette fonction pour modifier un bouton de barre d’outils, de l’objet composant logiciel enfichable, avant son affichage.
+Appelez cette fonction pour modifier un bouton de barre d’outils, de l’objet de composant logiciel enfichable, avant qu’il ne soit affiché.
 
 ```
 BOOL UpdateToolbarButton(UINT id, BYTE fsState);
@@ -514,19 +514,19 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*<br/>
-Spécifie l’ID de bouton du bouton de barre d’outils de mise à jour.
+*id*<br/>
+Spécifie l’ID du bouton de barre d’outils à mettre à jour.
 
 *fsState*<br/>
-Spécifie un état du bouton de barre d’outils. Si cet état doit être défini, retourne la valeur TRUE. Cela peut être une combinaison des indicateurs suivants :
+Spécifie un état de bouton de barre d’outils. Si cet État doit être défini, retourne la valeur TRUE. Il peut s’agir d’une combinaison des indicateurs suivants:
 
-- ACTIVÉ le bouton accepte l’entrée d’utilisateur. Un bouton qui n’a pas de cet état n’accepte pas d’entrée d’utilisateur et est grisé.
+- ACTIVÉ le bouton accepte les entrées utilisateur. Un bouton qui n’a pas cet État n’accepte pas les entrées d’utilisateur et est grisé.
 
-- Vérifiez que le bouton a le style activé et est enfoncé.
+- COCHÉ le bouton a le style coché et est enfoncé.
 
-- HIDDEN le bouton n’est pas visible et ne peut pas recevoir l’entrée d’utilisateur.
+- MASQUÉ le bouton n’est pas visible et ne peut pas recevoir d’entrée d’utilisateur.
 
-- Le bouton est grisé indéterminé.
+- INDÉTERMINÉ le bouton est grisé.
 
 - BUTTONPRESSED le bouton est enfoncé.
 

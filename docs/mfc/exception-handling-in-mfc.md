@@ -33,81 +33,81 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: 69bb5a9478120db322b5727af491be7943f44cbe
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: e8c0f1feba566ef9b961edcfacb9124830f9851d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449728"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508621"
 ---
 # <a name="exception-handling-in-mfc"></a>Gestion des exceptions dans MFC
 
-Cet article explique les mécanismes de gestion des exceptions disponibles dans MFC. Deux mécanismes sont disponibles :
+Cet article explique les mécanismes de gestion des exceptions disponibles dans MFC. Deux mécanismes sont disponibles:
 
-- Exceptions C++, disponibles dans MFC version 3.0 et versions ultérieures
+- C++exceptions, disponibles dans MFC version 3,0 et versions ultérieures
 
-- Les macros d’exception MFC, disponibles dans MFC, versions 1.0 et versions ultérieures
+- Les macros d’exception MFC, disponibles dans les versions 1,0 et ultérieures de MFC
 
-Si vous écrivez une nouvelle application à l’aide de MFC, vous devez utiliser le mécanisme de C++. Vous pouvez utiliser le mécanisme de macro si votre application existante déjà utilise ce mécanisme de manière intensive.
+Si vous écrivez une nouvelle application à l’aide de MFC, vous devez C++ utiliser le mécanisme. Vous pouvez utiliser le mécanisme basé sur les macros si votre application existante utilise déjà ce mécanisme de manière intensive.
 
-Vous pouvez facilement convertir un code existant pour utiliser des exceptions C++ plutôt que les macros d’exception MFC. Avantages de la conversion de votre code et des instructions pour effectuer cette opération sont décrites dans l’article [Exceptions : Conversion à partir de Macros d’Exception MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+Vous pouvez facilement convertir le code existant pour C++ utiliser des exceptions au lieu des macros d’exception MFC. Les avantages de la conversion de votre code et des instructions pour ce faire sont [décrits dans l’article exceptions: Conversion à partir de macros](../mfc/exceptions-converting-from-mfc-exception-macros.md)d’exception MFC.
 
-Si vous avez déjà développé une application à l’aide de macros d’exception MFC, vous pouvez continuer à l’aide de ces macros dans votre code existant, tout en utilisant des exceptions C++ dans votre nouveau code. L’article [Exceptions : Modifications apportées aux Macros d’Exception dans la Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) donne des instructions pour effectuer cette opération.
+Si vous avez déjà développé une application à l’aide des macros d’exception MFC, vous pouvez continuer à utiliser ces macros dans votre code C++ existant, tout en utilisant des exceptions dans votre nouveau code. Les exceptions [de l’article sont les suivantes: Les modifications apportées aux macros](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) d’exception dans la version 3,0 fournissent des instructions pour ce faire.
 
 > [!NOTE]
->  Pour activer les exceptions C++ dans votre code, sélectionnez Activation des Exceptions C++ dans la page génération de Code dans le dossier C/C++ du projet [Pages de propriétés](../build/reference/property-pages-visual-cpp.md) boîte de dialogue, ou utilisez le [/EHsc](../build/reference/eh-exception-handling-model.md) option du compilateur.
+>  Pour activer C++ la gestion des exceptions dans votre code, C++ sélectionnez Activer les exceptions dans la page génération de codeC++ dans le dossier C/de la boîte de dialogue [pages de propriétés](../build/reference/property-pages-visual-cpp.md) du projet ou utilisez l’option de compilateur [/EHsc](../build/reference/eh-exception-handling-model.md) .
 
-Cet article aborde les rubriques suivantes :
+Cet article aborde les sujets suivants:
 
 - [Quand utiliser des exceptions](#_core_when_to_use_exceptions)
 
 - [Prise en charge des exceptions MFC](#_core_mfc_exception_support)
 
-- [Obtenir des informations supplémentaires sur les exceptions](#_core_further_reading_about_exceptions)
+- [En savoir plus sur les exceptions](#_core_further_reading_about_exceptions)
 
-##  <a name="_core_when_to_use_exceptions"></a> Quand utiliser des Exceptions
+##  <a name="_core_when_to_use_exceptions"></a>Quand utiliser des exceptions
 
-Trois catégories de résultats peuvent se produire lorsqu’une fonction est appelée pendant l’exécution du programme : l’exécution normale, exécution erronée ou exécution anormale. Chaque catégorie est décrite ci-dessous.
+Trois catégories de résultats peuvent se produire lorsqu’une fonction est appelée pendant l’exécution du programme: exécution normale, exécution erronée ou exécution anormale. Chaque catégorie est décrite ci-dessous.
 
 - Exécution normale
 
-   La fonction peut exécuter normalement et retourner. Certaines fonctions retournent un code de résultat à l’appelant, qui indique le résultat de la fonction. Les codes de résultat possibles sont strictement définis pour la fonction et représentent la plage de résultats possibles de la fonction. Le code de résultat peut indiquer la réussite ou échec, ou peut indiquer même un type particulier de défaillance qui se trouve dans la plage normale d’attentes. Par exemple, une fonction de l’état des fichiers peut retourner un code qui indique que le fichier n’existe pas. Notez que le terme « code d’erreur » n’est pas utilisé, car un code de résultat représente un des nombreux résultats possibles.
+   La fonction peut s’exécuter normalement et retourner. Certaines fonctions retournent un code de résultat à l’appelant, ce qui indique le résultat de la fonction. Les codes de résultat possibles sont définis de façon stricte pour la fonction et représentent la plage des résultats possibles de la fonction. Le code de résultat peut indiquer la réussite ou l’échec ou peut même indiquer un type particulier de défaillance qui se trouve dans la plage normale des attentes. Par exemple, une fonction d’état de fichier peut retourner un code qui indique que le fichier n’existe pas. Notez que le terme «code d’erreur» n’est pas utilisé, car un code de résultat représente l’un des nombreux résultats attendus.
 
 - Exécution erronée
 
-   L’appelant commet une erreur lors du passage des arguments à la fonction ou appelle la fonction dans un contexte inapproprié. Cette situation provoque une erreur, et il doit être détecté par une assertion au cours du développement du programme. (Pour plus d’informations sur les assertions, consultez [Assertions C/C++](/visualstudio/debugger/c-cpp-assertions).)
+   L’appelant fait une erreur lors du passage des arguments à la fonction ou appelle la fonction dans un contexte inapproprié. Cette situation provoque une erreur et doit être détectée par une assertion pendant le développement du programme. (Pour plus d’informations sur les assertions, consultez [C/C++ ](/visualstudio/debugger/c-cpp-assertions)assertions.)
 
 - Exécution anormale
 
-   Exécution anormale inclut les situations où les conditions à l’extérieur du contrôle du programme, telles que la mémoire est insuffisante ou des erreurs d’e/s, influencent le résultat de la fonction. Situations anormales doivent être gérées par la mise en cache et levée d’exceptions.
+   Une exécution anormale comprend des situations où des conditions en dehors du contrôle du programme, telles que de la mémoire insuffisante ou des erreurs d’e/s, influencent le résultat de la fonction. Les situations anormales doivent être gérées par l’interception et la levée d’exceptions.
 
-Utilisation d’exceptions est particulièrement bien adapté pour exécution anormale.
+L’utilisation d’exceptions est particulièrement appropriée pour une exécution anormale.
 
-##  <a name="_core_mfc_exception_support"></a> Prise en charge des exceptions MFC
+##  <a name="_core_mfc_exception_support"></a>Prise en charge des exceptions MFC
 
-Si vous utilisez les exceptions C++ directement ou les macros d’exception MFC, vous allez utiliser [CException (classe)](../mfc/reference/cexception-class.md) ou `CException`-dérivées des objets qui peuvent être levées par le framework ou par votre application.
+Que vous utilisiez C++ les exceptions directement ou utilisiez les macros d’exception MFC, vous utiliserez `CException`la [classe CException](../mfc/reference/cexception-class.md) ou des objets dérivés qui peuvent être levés par l’infrastructure ou par votre application.
 
-Le tableau suivant montre les exceptions prédéfinies fournies par MFC.
+Le tableau suivant présente les exceptions prédéfinies fournies par MFC.
 
 |Exception (classe)|Signification|
 |---------------------|-------------|
 |[CMemoryException, classe](../mfc/reference/cmemoryexception-class.md)|Mémoire insuffisante|
 |[CFileException, classe](../mfc/reference/cfileexception-class.md)|Exception de fichier|
-|[CArchiveException, classe](../mfc/reference/carchiveexception-class.md)|Exception de l’archive/sérialisation|
+|[CArchiveException, classe](../mfc/reference/carchiveexception-class.md)|Exception d’archivage/sérialisation|
 |[CNotSupportedException, classe](../mfc/reference/cnotsupportedexception-class.md)|Réponse à la demande de service non pris en charge|
-|[CResourceException, classe](../mfc/reference/cresourceexception-class.md)|Exception d’allocation des ressources Windows|
+|[CResourceException, classe](../mfc/reference/cresourceexception-class.md)|Exception d’allocation de ressources Windows|
 |[CDaoException, classe](../mfc/reference/cdaoexception-class.md)|Exceptions de base de données (classes DAO)|
 |[CDBException, classe](../mfc/reference/cdbexception-class.md)|Exceptions de base de données (classes ODBC)|
 |[COleException, classe](../mfc/reference/coleexception-class.md)|exceptions OLE|
-|[COleDispatchException, classe](../mfc/reference/coledispatchexception-class.md)|Exceptions de distribution (automation)|
-|[CUserException, classe](../mfc/reference/cuserexception-class.md)|Exception qui avertit l’utilisateur avec une boîte de message, puis lève un générique [CException (classe)](../mfc/reference/cexception-class.md)|
+|[COleDispatchException, classe](../mfc/reference/coledispatchexception-class.md)|Exceptions de dispatch (Automation)|
+|[CUserException, classe](../mfc/reference/cuserexception-class.md)|Exception qui avertit l’utilisateur avec une boîte de message, puis lève une [classe de CException](../mfc/reference/cexception-class.md) générique|
 
 > [!NOTE]
->  MFC prend en charge les exceptions C++ et les macros d’exception MFC. MFC ne gère pas directement les gestionnaires d’exceptions NT Windows structurée (SEH), comme indiqué dans [Structured Exception Handling](/windows/desktop/debug/structured-exception-handling).
+>  MFC prend en C++ charge les exceptions et les macros d’exception MFC. MFC ne prend pas directement en charge les gestionnaires d’exceptions structurées (SEH) Windows NT, comme indiqué dans [gestion structurée des exceptions](/windows/win32/debug/structured-exception-handling).
 
-##  <a name="_core_further_reading_about_exceptions"></a> Obtenir des informations supplémentaires sur les Exceptions
+##  <a name="_core_further_reading_about_exceptions"></a>En savoir plus sur les exceptions
 
-Les articles suivants expliquent l’utilisation de la bibliothèque MFC pour gérer les exceptions :
+Les articles suivants expliquent comment utiliser la bibliothèque MFC pour la gestion des exceptions:
 
 - [Exceptions : Interception et suppression d’exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md)
 
@@ -121,7 +121,7 @@ Les articles suivants expliquent l’utilisation de la bibliothèque MFC pour g�
 
 - [Exceptions : Exceptions OLE](../mfc/exceptions-ole-exceptions.md)
 
-Les articles suivants comparent les macros d’exception MFC avec les mots clés des exceptions C++ et expliquent comment vous pouvez adapter votre code :
+Les articles suivants comparent les macros d’exceptions MFC C++ avec les mots clés d’exception et expliquent comment adapter votre code:
 
 - [Exceptions : Modifications apportées aux macros d’exception dans la version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
@@ -132,4 +132,4 @@ Les articles suivants comparent les macros d’exception MFC avec les mots clés
 ## <a name="see-also"></a>Voir aussi
 
 [Gestion d’exceptions C++](../cpp/cpp-exception-handling.md)<br/>
-[Comment faire Créer mes propres Classes d’Exception personnalisées](https://go.microsoft.com/fwlink/p/?linkid=128045)
+[Comment faire: Créer mes propres classes d’exceptions personnalisées](https://go.microsoft.com/fwlink/p/?linkid=128045)

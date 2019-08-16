@@ -7,20 +7,20 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - global hot keys [MFC]
 ms.assetid: e0b95d14-c571-4c9a-9cd1-e7fc1f0e278d
-ms.openlocfilehash: eedeb0547320c8b421fa72647f51b02f834af300
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59918648ea24fd1e2a86ca786de3081cd6cca2df
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219604"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508565"
 ---
 # <a name="global-hot-keys"></a>Touches globales d'accès rapide
 
-Une touche d’accès rapide est associée à une fenêtre non-enfant particulière. Il permet à l’utilisateur Activer la fenêtre à partir de n’importe quelle partie du système. Une application définit une touche d’accès rapide pour une fenêtre particulière en envoyant le [message WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) message à cette fenêtre. Par exemple, si `m_HotKeyCtrl` est la [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) objet et `pMainWnd` est un pointeur vers la fenêtre à activer lorsque vous appuyez sur la touche d’accès rapide, vous pouvez utiliser le code suivant pour associer la touche d’accès rapide spécifiée dans le contrôle avec la fenêtre vers laquelle pointe `pMainWnd`.
+Une touche d’accès rapide globale est associée à une fenêtre non enfant particulière. Elle permet à l’utilisateur d’activer la fenêtre à partir de n’importe quelle partie du système. Une application définit une touche d’accès rapide globale pour une fenêtre particulière en envoyant le message [WM_SETHOTKEY](/windows/win32/inputdev/wm-sethotkey) à cette fenêtre. Par exemple, si `m_HotKeyCtrl` est l’objet [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) et `pMainWnd` est un pointeur vers la fenêtre à activer quand la touche d’accès rapide est enfoncée, vous pouvez utiliser le code suivant pour associer la touche d’accès rapide spécifiée dans le contrôle à la fenêtre vers laquelle pointe `pMainWnd`.
 
 [!code-cpp[NVC_MFCControlLadenDialog#18](../mfc/codesnippet/cpp/global-hot-keys_1.cpp)]
 
-Chaque fois que l’utilisateur appuie sur une touche d’accès rapide, la fenêtre spécifiée reçoit un [WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand) message spécifie **SC_HOTKEY** en tant que le type de la commande. Ce message Active également la fenêtre qui le reçoit. Étant donné que ce message n’inclut pas toutes les informations sur la clé exacte qui a été enfoncée, à l’aide de cette méthode ne permet de pas faire la distinction entre différentes touches d’accès rapide qui peuvent être attachées à la même fenêtre. La touche d’accès rapide reste valide jusqu'à ce que l’application qui a envoyé **message WM_SETHOTKEY** se termine.
+Chaque fois que l’utilisateur appuie sur une touche d’accès rapide globale, la fenêtre spécifiée reçoit un message [WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand) qui spécifie **SC_HOTKEY** comme type de la commande. Ce message active également la fenêtre qui le reçoit. Étant donné que ce message n’inclut aucune information sur la touche exacte qui a été enfoncée, l’utilisation de cette méthode n’autorise pas la distinction entre les différentes touches d’accès rapide qui peuvent être attachées à la même fenêtre. La touche d’accès rapide reste valide jusqu’à ce que l’application qui a envoyé **WM_SETHOTKEY** se termine.
 
 ## <a name="see-also"></a>Voir aussi
 

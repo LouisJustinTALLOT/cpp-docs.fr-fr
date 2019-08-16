@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 889b722c91fd56613c5902eb4ce6439763a49bd9
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606486"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498415"
 ---
 # <a name="comptr-class"></a>ComPtr (classe)
 
@@ -84,13 +84,13 @@ Classe à laquelle le actuel `ComPtr` est un Friend. (Le modèle qui utilise ce 
 
 `ComPtr<>`déclare un type qui représente le pointeur d’interface sous-jacent. Utilisez `ComPtr<>` pour déclarer une variable, puis utilisez l’opérateur d’accès aux membres Arrow`->`() pour accéder à une fonction membre d’interface.
 
-Pour plus d’informations sur les pointeurs intelligents, consultez la sous-section «pointeurs intelligents COM» de la rubrique relative aux [pratiques de codage com](/windows/desktop/LearnWin32/com-coding-practices) dans MSDN Library.
+Pour plus d’informations sur les pointeurs intelligents, consultez la sous-section «pointeurs intelligents COM» de la rubrique relative aux [pratiques de codage com](/windows/win32/LearnWin32/com-coding-practices) dans MSDN Library.
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-Name            | Description
+Nom            | Description
 --------------- | ---------------------------------------------------------------
 `InterfaceType` | Synonyme du type spécifié par le paramètre de modèle *T* .
 

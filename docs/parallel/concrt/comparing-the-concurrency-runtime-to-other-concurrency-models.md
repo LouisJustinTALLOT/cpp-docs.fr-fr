@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 885cce09707e1c067efdeb0bdc8b7d8a40841c02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337711"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512812"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparaison du runtime d'accès concurrentiel aux autres modèles d'accès concurrentiel
 
@@ -33,7 +33,7 @@ Le modèle préemptif et les modèles de planification coopérative sont deux m�
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>Planifications préemptive et coopérative
 
-La*planification préemptive* est un mécanisme de tourniquet (round robin) basé sur des priorités, qui donne à chaque tâche un accès exclusif à une ressource de calcul pour une période donnée, puis bascule vers une autre tâche. Planification préemptive est courant dans les systèmes d’exploitation multitâches tels que Windows. *La planification coopérative* est un mécanisme qui donne à chaque tâche un accès exclusif à une ressource de calcul jusqu'à ce que la tâche se termine ou qu’elle cède son accès à la ressource. Le runtime d’accès concurrentiel utilise la planification coopérative en combinaison avec le planificateur préemptif du système d’exploitation pour optimiser l’utilisation des ressources de traitement.
+La*planification préemptive* est un mécanisme de tourniquet (round robin) basé sur des priorités, qui donne à chaque tâche un accès exclusif à une ressource de calcul pour une période donnée, puis bascule vers une autre tâche. La planification préemptive est courante dans les systèmes d’exploitation multitâche tels que Windows. La *planification coopérative* est un mécanisme qui donne à chaque tâche un accès exclusif à une ressource de calcul jusqu’à ce que la tâche se termine ou jusqu’à ce que la tâche donne son accès à la ressource. Le runtime d’accès concurrentiel utilise la planification coopérative en combinaison avec le planificateur préemptif du système d’exploitation pour optimiser l’utilisation des ressources de traitement.
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Différences entre les planificateurs préemptifs et coopératifs
 
@@ -63,7 +63,7 @@ L’API Windows utilise le langage de programmation C pour exposer le modèle de
 
 ### <a name="threads-and-thread-pools"></a>Threads et pools de threads
 
-Le thread est au cœur du mécanisme d’accès concurrentiel dans l’API Windows. Les threads sont généralement créés à l’aide de la fonction [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) . Les threads sont relativement faciles à créer et à utiliser, mais pour leur gestion, le système d’exploitation alloue une quantité importante de temps et d’autres ressources. Même si chaque thread est assuré d’obtenir le même temps d’exécution que les autres threads au même niveau de priorité, vous devez aussi créer des tâches suffisamment grandes pour prendre en charge le traitement induit. Pour des tâches plus petites ou plus précises, le traitement lié à l’accès concurrentiel peut annuler les avantages de l’exécution des tâches en parallèle.
+Le thread est au cœur du mécanisme d’accès concurrentiel dans l’API Windows. Les threads sont généralement créés à l’aide de la fonction [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) . Les threads sont relativement faciles à créer et à utiliser, mais pour leur gestion, le système d’exploitation alloue une quantité importante de temps et d’autres ressources. Même si chaque thread est assuré d’obtenir le même temps d’exécution que les autres threads au même niveau de priorité, vous devez aussi créer des tâches suffisamment grandes pour prendre en charge le traitement induit. Pour des tâches plus petites ou plus précises, le traitement lié à l’accès concurrentiel peut annuler les avantages de l’exécution des tâches en parallèle.
 
 Les pools de threads sont un moyen de réduire le coût de gestion des threads. Les pools de threads personnalisés et l’implémentation du pool de threads fournie par l’API Windows permettent à de petits éléments de travail de s’exécuter efficacement en parallèle. Le pool de threads Windows met les éléments de travail en attente selon le principe du premier entré, premier sorti (FIFO). Chaque élément de travail est démarré dans l’ordre dans lequel il a été ajouté au pool.
 
@@ -77,7 +77,7 @@ Sur Windows XP et Windows Vista, les applications qui utilisent le runtime d’a
 
 Sur Windows 7 et Windows Server 2008 R2, le système d’exploitation prend mieux en charge l’accès concurrentiel et la scalabilité. Par exemple, ces systèmes d’exploitation prennent en charge les ordinateurs qui ont plus de 64 threads matériels. Une application existante qui utilise l’API Windows doit être modifiée pour tirer parti de ces nouvelles fonctionnalités. En revanche, une application qui utilise le runtime d’accès concurrentiel utilise automatiquement ces fonctionnalités, sans nécessiter de modifications.
 
-[base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)
+[base.user-mode_scheduling](/windows/win32/procthread/user-mode-scheduling)
 
 [[Haut](#top)]
 

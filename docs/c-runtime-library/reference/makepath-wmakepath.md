@@ -33,14 +33,14 @@ helpviewer_keywords:
 - _wmakepath function
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
-ms.openlocfilehash: 073f8aba6936aa33dafcef7ed47f5286802a4948
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fab53d70df1c5361bc56bc0df16d0d2171f07a94
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285697"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499918"
 ---
-# <a name="makepath-wmakepath"></a>_makepath, _wmakepath
+# <a name="_makepath-_wmakepath"></a>_makepath, _wmakepath
 
 Créent un nom de chemin à partir des composants. Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
 
@@ -69,22 +69,22 @@ void _wmakepath(
 Mémoire tampon du chemin d’accès complet.
 
 *drive*<br/>
-Contient une lettre (A, B, etc.) correspondant au lecteur souhaité et un signe deux-points de fin facultatif. **_makepath** insère automatiquement le signe deux-points dans le chemin d’accès composite s’il est manquant. Si *lecteur* est **NULL** ou pointe vers une chaîne vide, aucune lettre de lecteur s’affiche dans le service composite *chemin d’accès* chaîne.
+Contient une lettre (A, B, etc.) correspondant au lecteur souhaité et un signe deux-points de fin facultatif. **_makepath** insère le signe deux-points automatiquement dans le chemin d’accès composite s’il est manquant. Si le *lecteur* est **null** ou pointe vers une chaîne vide, aucune lettre de lecteur ne s’affiche dans la chaîne du *chemin d’accès* composite.
 
 *dir*<br/>
-Contient le chemin d’accès des répertoires, sans l’indicateur de lecteur ou le nom de fichier réel. La barre oblique de fin est facultative et une barre oblique (/) ou une barre oblique inverse (\\) ou les deux peuvent être utilisées dans un seul *dir* argument. Si aucune barre oblique finale (/ ou \\) n’est spécifiée, elle est insérée automatiquement. Si *dir* est **NULL** ou pointe vers une chaîne vide, aucun chemin d’accès du répertoire est inséré dans le service composite *chemin d’accès* chaîne.
+Contient le chemin d’accès des répertoires, sans l’indicateur de lecteur ou le nom de fichier réel. La barre oblique finale est facultative, et une barre oblique (/) ou une barre oblique inverse\\() ou les deux peuvent être utilisées dans un seul argument *dir* . Si aucune barre oblique finale (/ ou \\) n’est spécifiée, elle est insérée automatiquement. Si *dir* a la **valeur null** ou pointe vers une chaîne vide, aucun chemin d’accès de répertoire n’est inséré dans la chaîne du *chemin d’accès* composite.
 
 *fname*<br/>
-Contient le nom de fichier de base sans les extensions du nom de fichier. Si *fname* est **NULL** ou pointe vers une chaîne vide, aucun nom de fichier est inséré dans le service composite *chemin d’accès* chaîne.
+Contient le nom de fichier de base sans les extensions du nom de fichier. Si *fname* a la **valeur null** ou pointe vers une chaîne vide, aucun nom de fichier n’est inséré dans la chaîne du *chemin d’accès* composite.
 
 *ext*<br/>
-Contient l’extension de nom de fichier réelle, avec ou sans point initial (.). **_makepath** insère automatiquement la période si elle n’apparaît pas dans *ext*. Si *ext* est **NULL** ou pointe vers une chaîne vide, aucune extension est inséré dans le service composite *chemin d’accès* chaîne.
+Contient l’extension de nom de fichier réelle, avec ou sans point initial (.). **_makepath** insère automatiquement le point s’il n’apparaît pas dans *ext*. Si *ext* a la **valeur null** ou pointe vers une chaîne vide, aucune extension n’est insérée dans la chaîne du *chemin d’accès* composite.
 
 ## <a name="remarks"></a>Notes
 
-Le **_makepath** fonction crée une chaîne de chemin d’accès composite à partir des composants individuels, en stockant le résultat dans *chemin d’accès*. Le *chemin d’accès* peut inclure une lettre de lecteur, chemin d’accès de répertoire, nom de fichier et extension de nom de fichier. **_wmakepath** est une version à caractères larges de **_makepath**; les arguments de **_wmakepath** sont des chaînes à caractères larges. **_wmakepath** et **_makepath** se comportent de façon identique dans le cas contraire.
+La fonction **_makepath** crée une chaîne de chemin d’accès composite à partir de composants individuels, en stockant le résultat dans le *chemin d’accès*. Le *chemin d’accès* peut inclure une lettre de lecteur, un chemin d’accès de répertoire, un nom de fichier et une extension de nom de fichier. **_wmakepath** est une version à caractères larges de **_makepath**; les arguments de **_wmakepath** sont des chaînes à caractères larges. dans le cas contraire, **_wmakepath** et **_makepath** se comportent de la même façon.
 
-**Remarque relative à la sécurité** Utilisez une chaîne se terminant par un caractère Null. Pour éviter les dépassements de mémoire tampon, la chaîne se terminant par null ne doit pas dépasser la taille de la *chemin d’accès* mémoire tampon. **_makepath** ne garantit pas que la longueur de la chaîne de chemin d’accès composite ne dépasse pas **_MAX_PATH**. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Remarque relative à la sécurité** Utilisez une chaîne se terminant par un caractère Null. Pour éviter une saturation de la mémoire tampon, la chaîne se terminant par NULL ne doit pas dépasser la taille de la mémoire tampon du *chemin d’accès* . **_makepath** ne garantit pas que la longueur de la chaîne de chemin d’accès composite ne dépasse pas _ **MAX_PATH**. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -92,9 +92,9 @@ Le **_makepath** fonction crée une chaîne de chemin d’accès composite à pa
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
-Le *chemin d’accès* argument doit pointer vers une mémoire tampon vide suffisamment grande pour contenir le chemin d’accès complet. Le service composite *chemin d’accès* doit pas être supérieure à la **_MAX_PATH** constante, définie dans Stdlib.h.
+L’argument *path* doit pointer vers une mémoire tampon vide suffisamment grande pour contenir le chemin d’accès complet. Le *chemin d’accès* composite ne doit pas être supérieur à la constante _ **MAX_PATH** , définie dans stdlib. h.
 
-Si le chemin d’accès est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). En outre, **errno** a la valeur **EINVAL**. **NULL** valeurs sont autorisées pour tous les autres paramètres.
+Si path a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). En outre, **errno** a la valeur **EINVAL**. Les valeurs **null** sont autorisées pour tous les autres paramètres.
 
 ## <a name="requirements"></a>Configuration requise
 

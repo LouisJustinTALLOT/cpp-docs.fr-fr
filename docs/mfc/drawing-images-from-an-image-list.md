@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: e4e60f0e6e4ee22712e4bbce344fd6437cf3db7e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: fb307d5557c0e136c1c44c29f08af6062bb1c19d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916412"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508614"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Dessin d'images à partir d'une liste d'images
 
@@ -28,7 +28,7 @@ Les styles **ILD_BLEND25** et **ILD_BLEND50** dithernt l’image avec la couleur
 
 Une image non masquée est copiée dans le contexte de périphérique de `SRCCOPY` destination à l’aide de l’opération Raster. Les couleurs dans l'image s'affichent de la même façon indépendamment de la couleur d'arrière-plan du contexte de périphérique. Les styles de dessin spécifiés dans `Draw` n’ont pas non plus d’effet sur l’apparence d’une image non masquée.
 
-Outre la fonction membre Draw, une autre fonction, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), permet d’étendre la capacité de rendu d’une image. `DrawIndirect`prend comme paramètre une structure [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) . Cette structure peut être utilisée pour personnaliser le rendu de l'image actuelle, notamment l'utilisation de codes d'opération de rastérisation (ROP, Raster Operation). Pour plus d’informations sur les codes ROP, consultez [codes d’opération Raster](/windows/desktop/gdi/raster-operation-codes) et bitmaps en [tant que pinceaux](/windows/desktop/gdi/bitmaps-as-brushes) dans le SDK Windows.
+Outre la fonction membre Draw, une autre fonction, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), permet d’étendre la capacité de rendu d’une image. `DrawIndirect`prend comme paramètre une structure [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) . Cette structure peut être utilisée pour personnaliser le rendu de l'image actuelle, notamment l'utilisation de codes d'opération de rastérisation (ROP, Raster Operation). Pour plus d’informations sur les codes ROP, consultez [codes d’opération Raster](/windows/win32/gdi/raster-operation-codes) et bitmaps en [tant que pinceaux](/windows/win32/gdi/bitmaps-as-brushes) dans le SDK Windows.
 
 ## <a name="see-also"></a>Voir aussi
 

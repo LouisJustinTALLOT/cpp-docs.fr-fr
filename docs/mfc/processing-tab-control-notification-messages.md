@@ -8,18 +8,18 @@ helpviewer_keywords:
 - processing notifications [MFC]
 - tab controls [MFC], processing notifications
 ms.assetid: 758ccb7a-9e73-48f8-9073-23f7cb09918c
-ms.openlocfilehash: 4be9074f3e7d7ce4321402d27fc26283a52436e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97abde8285a3baf307df79fd97d4f9a379c8f58f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391385"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507829"
 ---
 # <a name="processing-tab-control-notification-messages"></a>Traitement des messages de notification du contrôle Tab
 
-Comme les utilisateurs cliquent sur des onglets ou des boutons, le contrôle d’onglet ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) envoie des messages de notification à sa fenêtre parente. Vous devez gérer ces messages si vous voulez faire quelque chose en réponse. Par exemple, lorsque l’utilisateur clique sur un onglet, vous souhaiterez présélection des données de contrôle sur la page avant de les afficher.
+Quand les utilisateurs cliquent sur des onglets ou des boutons, le contrôle onglet ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) envoie des messages de notification à sa fenêtre parente. Vous devez gérer ces messages si vous voulez faire quelque chose en réponse. Par exemple, quand l’utilisateur clique sur un onglet, vous souhaiterez peut-être prédéfinir les données du contrôle sur la page avant de l’afficher.
 
-Traitez les messages WM_NOTIFY à partir du contrôle d’onglet dans votre classe d’affichage ou de la boîte de dialogue. Utilisez la fenêtre Propriétés pour créer un [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) fonction de gestionnaire avec une instruction switch basée sur le message de notification est géré. Pour obtenir la liste des notifications d’un contrôle onglet peut envoyer à sa fenêtre parente, consultez le **Notifications** section de [référence de contrôle d’onglet](/windows/desktop/controls/tab-control-reference) dans le SDK Windows.
+Traitez les messages WM_NOTIFY à partir du contrôle onglet dans votre classe d’affichage ou de boîte de dialogue. Utilisez la Fenêtre Propriétés pour créer une fonction gestionnaire [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) avec une instruction switch basée sur le message de notification géré. Pour obtenir la liste des notifications qu’un contrôle onglet peut envoyer à sa fenêtre parente , consultez la section notifications de la [référence de contrôle onglet](/windows/win32/controls/tab-control-reference) dans la SDK Windows.
 
 ## <a name="see-also"></a>Voir aussi
 

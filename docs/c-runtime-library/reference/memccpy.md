@@ -22,14 +22,14 @@ helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 5cd037974d8580b6ee90b1af736e8f2c6897fe8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 704aab84ea3e39c91def1d4ac8b6d2d9d3650759
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156601"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499688"
 ---
-# <a name="memccpy"></a>_memccpy
+# <a name="_memccpy"></a>_memccpy
 
 Copie des caractères à partir de la mémoire tampon.
 
@@ -60,13 +60,13 @@ Nombre de caractères.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si le caractère *c* est copié, **_memccpy** retourne un pointeur vers le caractère dans *dest* qui suit immédiatement le caractère. Si *c* n’est pas copié, elle retourne **NULL**.
+Si le caractère *c* est copié, **_memccpy** retourne un pointeur vers le caractère dans *dest* qui suit immédiatement le caractère. Si *c* n’est pas copié, la **valeur null**est retournée.
 
 ## <a name="remarks"></a>Notes
 
-Le **_memccpy** fonction copie 0 ou plusieurs caractères de *src* à *dest*, et s’arrête dès le caractère *c* a été copié ou lorsque *nombre* caractères ont été copiés, le premier prévalant.
+La fonction **_memccpy** copie 0 ou plusieurs caractères de *src* vers *dest*, en s’arrêtant lorsque le caractère *c* a été copié ou lorsque les *nombres* de caractères ont été copiés, selon ce qui se produit en premier.
 
-**Remarque relative à la sécurité** Vérifiez que la mémoire tampon de destination est d’une taille identique ou supérieure à celle de la mémoire tampon source. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Remarque relative à la sécurité** Vérifiez que la mémoire tampon de destination est d’une taille identique ou supérieure à celle de la mémoire tampon source. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Configuration requise
 

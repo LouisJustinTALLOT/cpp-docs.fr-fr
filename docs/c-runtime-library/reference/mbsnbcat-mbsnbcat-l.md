@@ -32,16 +32,16 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-ms.openlocfilehash: c1da330ee0faba922f1e5b193fa095b97d3f4745
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 476909858a8537fb96d56d3230fd48719d5564ed
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285548"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499832"
 ---
-# <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
+# <a name="_mbsnbcat-_mbsnbcat_l"></a>_mbsnbcat, _mbsnbcat_l
 
-Ajoute, au plus, le premier **n** octets d’une chaîne de caractères multioctets à un autre. Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md).
+Ajoute, au plus, les **n** premiers octets d’une chaîne de caractères multioctets à une autre. Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md).
 
 > [!IMPORTANT]
 > Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -84,7 +84,7 @@ Chaîne de destination à caractères multioctets se terminant par un caractère
 Chaîne source à caractères multioctets se terminant par un caractère null.
 
 *count*<br/>
-Nombre d’octets à partir de *src* à ajouter à *dest*.
+Nombre d’octets de *src* à ajouter à *dest*.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
@@ -95,13 +95,13 @@ Paramètres régionaux à utiliser.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbsnbcat** fonction ajoute, au plus, le premier *nombre* octets de *src* à *dest*. Si l’octet qui précède immédiatement le caractère null dans *dest* est un octet de tête, l’octet initial de *src* remplace cet octet de tête. Sinon, l’octet initial de *src* remplace le caractère null de fin de *dest*. Si un octet null apparaît dans *src* avant *nombre* octets sont ajoutés, **_mbsnbcat** ajoute tous les octets à partir de *src*, jusqu’au caractère null. Si *nombre* est supérieur à la longueur de *src*, la longueur de *src* est utilisé à la place de *nombre*. La chaîne obtenue se termine par un caractère Null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+La fonction **_mbsnbcat** ajoute, au plus, le premier *nombre* d’octets de *src* à *dest*. Si l’octet qui précède immédiatement le caractère NULL dans *dest* est un octet de tête, l’octet initial de *src* remplace cet octet de tête. Dans le cas contraire, l’octet initial de *src* remplace le caractère null de fin de *dest*. Si un octet NULL apparaît dans *src* avant que le *nombre* d’octets soit ajouté, **_mbsnbcat** ajoute tous les octets de *src*, jusqu’au caractère null. Si *Count* est supérieur à la longueur de *src*, la longueur de *src* est utilisée à la place de *Count*. La chaîne obtenue se termine par un caractère Null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Le **_mbsnbcat** version de la fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la **_mbsnbcat_l** version est identique, sauf qu’ils utilisent les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version **_mbsnbcat** de la fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux; la version **_mbsnbcat_l** est identique, sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-**Remarque relative à la sécurité** Utilisez une chaîne se terminant par un caractère Null. La chaîne ne doit pas dépasser la taille de la mémoire tampon de destination. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Remarque relative à la sécurité** Utilisez une chaîne se terminant par un caractère Null. La chaîne ne doit pas dépasser la taille de la mémoire tampon de destination. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Si *dest* ou *src* est **NULL**, la fonction génère une erreur de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’erreur est gérée, la fonction retourne **EINVAL** et définit **errno** à **EINVAL**.
+Si *dest* ou *src* a la **valeur null**, la fonction génère une erreur de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’erreur est gérée, la fonction retourne **EINVAL** et définit **errno** sur **EINVAL**.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -13,18 +13,18 @@ helpviewer_keywords:
 - software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
-ms.openlocfilehash: 49ee800bafff017c29b73c5f6fd64318009a140a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65e011f74868a77781b03f475d45e2a5d636d460
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403462"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498581"
 ---
 # <a name="raising-software-exceptions"></a>Déclenchement d'exceptions logicielles
 
 Certaines des sources les plus courantes d'erreurs de programme ne sont pas marquées en tant qu'exceptions par le système. Par exemple, si vous essayez d'allouer un bloc de mémoire mais que la mémoire disponible est insuffisante, la fonction runtime ou API ne déclenche pas d'exception mais retourne un code d'erreur.
 
-Toutefois, vous pouvez traiter n’importe quelle condition en tant qu’exception en détectant cette condition dans votre code, puis les rapports en appelant le [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) (fonction). Le fait de marquer les erreurs de cette manière vous permet de tirer parti de la gestion structurée des exceptions pour tout type d'erreur d'exécution.
+Toutefois, vous pouvez traiter n’importe quelle condition comme une exception en détectant cette condition dans votre code, puis en la signalant en appelant la fonction [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) . Le fait de marquer les erreurs de cette manière vous permet de tirer parti de la gestion structurée des exceptions pour tout type d'erreur d'exécution.
 
 Pour utiliser la gestion structurée des exceptions avec des erreurs :
 
@@ -34,24 +34,24 @@ Pour utiliser la gestion structurée des exceptions avec des erreurs :
 
 - Utilisez les filtres de gestion des exceptions pour tester le code d'exception que vous avez défini.
 
-Le \<winerror.h > fichier illustre le format pour les codes d’exception. Pour veiller à ne pas définir un code qui est en conflit avec un code d'exception existant, définissez le troisième bit le plus significatif à 1. Les quatre bits les plus significatifs doivent être définis comme indiqué dans le tableau suivant.
+Le \<fichier winerror. h > affiche le format des codes d’exception. Pour veiller à ne pas définir un code qui est en conflit avec un code d'exception existant, définissez le troisième bit le plus significatif à 1. Les quatre bits les plus significatifs doivent être définis comme indiqué dans le tableau suivant.
 
 |Bits|Paramètre binaire recommandé|Description|
 |----------|--------------------------------|-----------------|
-|31-30|11|Ces deux bits décrivent l’état de base du code :  11 = erreur, 00 = succès, 01 = informatif, 10 = avertissement.|
+|31-30|11|Ces deux bits décrivent l’état de base du code:  11 = erreur, 00 = succès, 01 = informatif, 10 = avertissement.|
 |29|1|Bit client. Affectez-lui la valeur 1 pour les codes définis par l'utilisateur.|
 |28|0|Bit réservé. (Laissez la valeur 0.)|
 
 Vous pouvez définir les deux premiers bits à un paramètre autre 11 binaire, bien que le paramètre « erreur » soit appropriée pour la plupart des exceptions. Veillez à définir les bits 29 et 28 comme indiqué dans le tableau précédent.
 
-Le code d’erreur résultant doit donc contenir les quatre bits le plus élevés défini sur la valeur e hexadécimale. Par exemple, les définitions suivantes définissent les codes d’exception qui ne pas en conflit avec les codes d’exception Windows. (Toutefois, vous pouvez être amené à vérifier quels codes sont utilisés par les DLL tierces.)
+Le code d’erreur obtenu doit donc avoir les quatre bits les plus élevés définis sur E hexadécimale. Par exemple, les définitions suivantes définissent des codes d’exception qui ne sont pas en conflit avec les codes d’exception Windows. (Toutefois, vous pouvez être amené à vérifier quels codes sont utilisés par les DLL tierces.)
 
 ```cpp
 #define STATUS_INSUFFICIENT_MEM       0xE0000001
 #define STATUS_FILE_BAD_FORMAT        0xE0000002
 ```
 
-Après avoir défini un code d'exception, vous pouvez l'utiliser pour lever une exception. Par exemple, le code suivant déclenche le `STATUS_INSUFFICIENT_MEM` exception en réponse à un problème d’allocation de mémoire :
+Après avoir défini un code d'exception, vous pouvez l'utiliser pour lever une exception. Par exemple, le code suivant lève l' `STATUS_INSUFFICIENT_MEM` exception en réponse à un problème d’allocation de mémoire:
 
 ```cpp
 lpstr = _malloc( nBufferSize );
@@ -59,9 +59,9 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);
 ```
 
-Si vous souhaitez déclencher simplement une exception, vous pouvez définir les trois derniers paramètres à 0. Les trois derniers paramètres sont utiles pour transmettre des informations supplémentaires et définir un indicateur qui empêche les gestionnaires de poursuivre l'exécution. Consultez le [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) fonction dans le SDK Windows pour plus d’informations.
+Si vous souhaitez déclencher simplement une exception, vous pouvez définir les trois derniers paramètres à 0. Les trois derniers paramètres sont utiles pour transmettre des informations supplémentaires et définir un indicateur qui empêche les gestionnaires de poursuivre l'exécution. Pour plus d’informations, consultez la fonction [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) dans la SDK Windows.
 
-Dans vos filtres de gestion des exceptions, vous pouvez ensuite tester les codes que vous avez définis. Exemple :
+Dans vos filtres de gestion des exceptions, vous pouvez ensuite tester les codes que vous avez définis. Par exemple :
 
 ```cpp
 __try {

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: a2773333ea1dd89f73e7bdf3c5dc2f36945e0810
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a1e27ca6c1019eb8716194b3b7711238d015d6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391099"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503998"
 ---
 # <a name="coledropsource-class"></a>COleDropSource, classe
 
-Permet de faire glisser vers une cible de déplacement des données.
+Permet de faire glisser des données vers une cible de déplacement.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,19 +43,19 @@ class COleDropSource : public CCmdTarget
 
 |Nom|Description|
 |----------|-----------------|
-|[COleDropSource::GiveFeedback](#givefeedback)|Modifie le curseur lors d’une opération de glisser-déplacer.|
+|[COleDropSource:: GiveFeedback](#givefeedback)|Modifie le curseur pendant une opération de glisser-déplacer.|
 |[COleDropSource::OnBeginDrag](#onbegindrag)|Gère la capture de la souris pendant une opération de glisser-déplacer.|
-|[COleDropSource::QueryContinueDrag](#querycontinuedrag)|Vérifie si le glissement doit continuer.|
+|[COleDropSource::QueryContinueDrag](#querycontinuedrag)|Vérifie si le glisser-déplacer doit continuer.|
 
 ## <a name="remarks"></a>Notes
 
-Le [COleDropTarget](../../mfc/reference/coledroptarget-class.md) classe gère la partie réception de l’opération de glisser-déplacer. Le `COleDropSource` objet est chargé de déterminer quand une opération glisser commence, fournir des commentaires pendant l’opération glisser et déterminer quand l’opération glisser se termine.
+La classe [COleDropTarget](../../mfc/reference/coledroptarget-class.md) gère la partie réceptrice de l’opération de glisser-déplacer. L' `COleDropSource` objet est chargé de déterminer quand une opération glisser commence, de fournir des commentaires pendant l’opération glisser et de déterminer à quel moment l’opération glisser se termine.
 
-Pour utiliser un `COleDropSource` d’objet, appelez simplement le constructeur. Cela simplifie le processus permettant de déterminer quels événements, tels qu’un clic de souris, commenceront une opération de glisser à l’aide [COleDataSource::DoDragDrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::DoDragDrop](../../mfc/reference/coleclientitem-class.md#dodragdrop), ou [ COleServerItem::DoDragDrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) (fonction). Ces fonctions créera un `COleDropSource` objet pour vous. Vous souhaiterez peut-être modifier le comportement par défaut de la `COleDropSource` fonctions substituables. Ces fonctions de membre seront appelées aux moments appropriés par l’infrastructure.
+Pour utiliser un `COleDropSource` objet, il vous suffit d’appeler le constructeur. Cela simplifie le processus de détermination des événements, tels qu’un clic de souris, à commencer une opération glisser à l’aide de [COleDataSource::D odragdrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::D odragdrop](../../mfc/reference/coleclientitem-class.md#dodragdrop)ou [COleServerItem::D fonction odragdrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) . Ces fonctions vont créer un `COleDropSource` objet pour vous. Vous souhaiterez peut-être modifier le comportement par `COleDropSource` défaut des fonctions substituables. Ces fonctions membres seront appelées aux moments appropriés par l’infrastructure.
 
-Pour plus d’informations sur les opérations de glisser-déplacer à l’aide de OLE, consultez l’article [glisser-déposer (OLE)](../../mfc/drag-and-drop-ole.md).
+Pour plus d’informations sur les opérations de glisser-déplacer à l’aide d’OLE, consultez l’article [glisser-déplacer (OLE)](../../mfc/drag-and-drop-ole.md).
 
-Pour plus d’informations, consultez [IDropSource](/windows/desktop/api/oleidl/nn-oleidl-idropsource) dans le SDK Windows.
+Pour plus d’informations, consultez [IDropSource](/windows/win32/api/oleidl/nn-oleidl-idropsource) dans le SDK Windows.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -67,7 +67,7 @@ Pour plus d’informations, consultez [IDropSource](/windows/desktop/api/oleidl/
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxole.h
+**En-tête:** AFXOLE. h
 
 ##  <a name="coledropsource"></a>  COleDropSource::COleDropSource
 
@@ -79,7 +79,7 @@ COleDropSource();
 
 ##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback
 
-Appelé par l’infrastructure après l’appel [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) ou [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).
+Appelée par l’infrastructure après l’appel de [COleDropTarget:: OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) ou [COleDropTarget::D ragenter](../../mfc/reference/coledroptarget-class.md#ondragenter).
 
 ```
 virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
@@ -88,31 +88,31 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ### <a name="parameters"></a>Paramètres
 
 *dropEffect*<br/>
-L’effet que vous souhaitez afficher à l’utilisateur, ce qui indique généralement ce qui se passe si une opération déplacer est effectuée à ce stade, avec les données sélectionnées. En règle générale, c’est la valeur retournée par l’appel le plus récent à [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) ou [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Il peut être une ou plusieurs des opérations suivantes :
+L’effet que vous souhaitez afficher à l’utilisateur, en général qui indique ce qui se passe si une chute a eu lieu à ce stade avec les données sélectionnées. En règle générale, il s’agit de la valeur retournée par l’appel le plus récent à [CView:: OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) ou [CView:: OnDragOver](../../mfc/reference/cview-class.md#ondragover). Il peut s’agir d’un ou plusieurs des éléments suivants:
 
-- DROPEFFECT_NONE une chute ne serait pas autorisée.
+- DROPEFFECT_NONE une suppression n’est pas autorisée.
 
-- DROPEFFECT_COPY une opération de copie est réalisée.
+- DROPEFFECT_COPY: une opération de copie est effectuée.
 
-- DROPEFFECT_MOVE serait exécutée une opération de déplacement.
+- DROPEFFECT_MOVE: une opération de déplacement est effectuée.
 
-- Lien d’un DROPEFFECT_LINK à partir de données déplacées vers les données d’origine serait être établi.
+- DROPEFFECT_LINK un lien des données déplacées vers les données d’origine est établi.
 
-- Opération de défilement DROPEFFECT_SCROLL un glissement doit se produire ou se produit dans la cible.
+- DROPEFFECT_SCROLL une opération glisser-déplacer est sur le ou en cours d’exécution dans la cible.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne une valeur DRAGDROP_S_USEDEFAULTCURSORS si glisser est en cours d’exécution, NOERROR si elle n’est pas.
+Retourne DRAGDROP_S_USEDEFAULTCURSORS si l’opération de glisser-déplacer est en cours, NOERROR si ce n’est pas le cas.
 
 ### <a name="remarks"></a>Notes
 
-Remplacez cette fonction pour fournir des commentaires à l’utilisateur sur ce qui se passerait si une opération déplacer est effectuée à ce stade. L’implémentation par défaut utilise les curseurs par défaut OLE. Pour plus d’informations sur les opérations de glisser-déplacer à l’aide de OLE, consultez l’article [glisser-déposer (OLE)](../../mfc/drag-and-drop-ole.md).
+Remplacez cette fonction pour fournir des commentaires à l’utilisateur sur ce qui se passerait si une suppression se produisait à ce stade. L’implémentation par défaut utilise les curseurs OLE par défaut. Pour plus d’informations sur les opérations de glisser-déplacer à l’aide d’OLE, consultez l’article [glisser-déplacer (OLE)](../../mfc/drag-and-drop-ole.md).
 
-Pour plus d’informations, consultez [IDropSource::GiveFeedback](/windows/desktop/api/oleidl/nf-oleidl-idropsource-givefeedback), [IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover), et [IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) dans le SDK Windows.
+Pour plus d’informations, consultez [IDropSource:: GiveFeedback](/windows/win32/api/oleidl/nf-oleidl-idropsource-givefeedback), [IDropTarget::D ragover](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover)et [IDropTarget::D ragenter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter) dans le SDK Windows.
 
 ##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag
 
-Appelé par le framework lorsque survient un événement qui pourrait commencer une opération glisser, par exemple en appuyant sur le bouton gauche de la souris.
+Appelée par l’infrastructure quand un événement qui peut commencer une opération glisser, par exemple en appuyant sur le bouton gauche de la souris.
 
 ```
 virtual BOOL OnBeginDrag(CWnd* pWnd);
@@ -125,15 +125,15 @@ Pointe vers la fenêtre qui contient les données sélectionnées.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le glissement est autorisé, sinon 0.
+Valeur différente de zéro si le glissement est autorisé; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Remplacez cette fonction si vous souhaitez modifier la façon dont le processus de déplacement est démarré. L’implémentation par défaut capture la souris et reste en mode glisser jusqu'à ce que l’utilisateur clique sur le bouton gauche ou droit de la souris ou appuie sur ÉCHAP, moment auquel il relâche la souris.
+Remplacez cette fonction si vous souhaitez modifier le mode de démarrage du processus de glissement. L’implémentation par défaut capture la souris et reste en mode glisser jusqu’à ce que l’utilisateur clique sur le bouton gauche ou droit de la souris ou appuie sur ÉCHAP, moment où il relâche la souris.
 
 ##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag
 
-Lorsque vous commencez, cette fonction est appelée plusieurs fois par l’infrastructure jusqu'à ce que l’opération glisser soit annulée ou terminée.
+Une fois que le glissement a commencé, cette fonction est appelée à plusieurs reprises par l’infrastructure jusqu’à ce que l’opération glisser soit annulée ou terminée.
 
 ```
 virtual SCODE QueryContinueDrag(
@@ -144,22 +144,22 @@ virtual SCODE QueryContinueDrag(
 ### <a name="parameters"></a>Paramètres
 
 *bEscapePressed*<br/>
-Indique si la touche ÉCHAP a été enfoncée depuis le dernier appel à `COleDropSource::QueryContinueDrag`.
+Indique si la touche ÉCHAP a été enfoncée depuis le dernier `COleDropSource::QueryContinueDrag`appel à.
 
 *dwKeyState*<br/>
-Contient l’état des touches de modification du clavier. Il s’agit d’une combinaison d’un nombre quelconque de ce qui suit : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
+Contient l’état des touches de modification du clavier. Il s’agit d’une combinaison de n’importe quel nombre de ce qui suit: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
 
 ### <a name="return-value"></a>Valeur de retour
 
-DRAGDROP_S_CANCEL si la touche ÉCHAP ou le bouton droit est appuyé ou le bouton gauche est déclenché avant de faire glisser commence. DRAGDROP_S_DROP si une opération de déplacement doit se produire. Sinon S_OK.
+DRAGDROP_S_CANCEL si vous appuyez sur la touche Échap ou sur le bouton droit, ou si le bouton gauche est déclenché avant le début du glissement. DRAGDROP_S_DROP si une opération de déplacement doit se produire. Sinon, S_OK.
 
 ### <a name="remarks"></a>Notes
 
-Remplacement de que cette fonction si vous souhaitez modifier le point en les faisant glisser est annulée ou une opération déplacer se produit.
+Substituez cette fonction si vous souhaitez modifier le point à partir duquel le glissement est annulé ou une opération de déplacement.
 
-L’implémentation par défaut initialise la liste déroulante ou annule l’opération glisser comme suit. Il annule une opération glisser lorsque la touche ÉCHAP ou le bouton droit de la souris est enfoncé. Il lance une opération de déplacement lorsque le bouton gauche de la souris est déclenché après le démarrage de glissement. Sinon, elle retourne S_OK et n’exécute aucune opération supplémentaire.
+L’implémentation par défaut initie la suppression ou annule le glissement comme suit. Elle annule une opération glisser quand l’utilisateur appuie sur la touche Échap ou sur le bouton droit de la souris. Elle lance une opération de déplacement lorsque le bouton gauche de la souris est déclenché après le début du glissement. Sinon, elle retourne S_OK et n’effectue aucune opération supplémentaire.
 
-Étant donné que cette fonction est appelée fréquemment, il doit être optimisé autant que possible.
+Étant donné que cette fonction est souvent appelée, elle doit être optimisée autant que possible.
 
 ## <a name="see-also"></a>Voir aussi
 

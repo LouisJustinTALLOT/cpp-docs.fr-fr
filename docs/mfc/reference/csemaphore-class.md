@@ -1,5 +1,5 @@
 ---
-title: CSemaphore, classe
+title: CSemaphore (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - CSemaphore
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: 6c518b6a9ad0fe857b0878bcecd3020ba97174e6
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d5a0e4187107aaab7cedf4e7a0e2fc47b9f9f305
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504710"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502583"
 ---
-# <a name="csemaphore-class"></a>CSemaphore, classe
+# <a name="csemaphore-class"></a>CSemaphore (classe)
 
-Un objet de classe `CSemaphore` représente un « sémaphore », un objet de synchronisation qui permet un nombre limité de threads dans un ou plusieurs processus pour accéder à un maintien d’un décompte du nombre de threads qui accèdent actuellement à une ressource spécifiée.
+Un objet de classe `CSemaphore` représente un «sémaphore», c’est-à-dire un objet de synchronisation qui permet à un nombre limité de threads dans un ou plusieurs processus d’accéder à un, gère le nombre de threads qui accèdent actuellement à une ressource spécifiée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,21 +31,21 @@ class CSemaphore : public CSyncObject
 
 |Nom|Description|
 |----------|-----------------|
-|[CSemaphore::CSemaphore](#csemaphore)|Construit un objet `CSemaphore`.|
+|[CSemaphore:: CSemaphore](#csemaphore)|Construit un objet `CSemaphore`.|
 
 ## <a name="remarks"></a>Notes
 
-Sémaphores sont utiles dans le contrôle de l’accès à une ressource partagée qui peut prendre uniquement en charge un nombre limité d’utilisateurs. Le nombre actuel de la `CSemaphore` objet est le nombre d’utilisateurs supplémentaires autorisés. Lorsque le décompte atteint zéro, toutes les tentatives d’utiliser les ressources contrôlées par le `CSemaphore` objet sera insérée dans une file d’attente système et ils attendre un délai d’attente ou le nombre s’élève au-dessus de 0. Le nombre maximal d’utilisateurs pouvant accéder simultanément à la ressource contrôlée est spécifié pendant la construction de la `CSemaphore` objet.
+Les sémaphores sont utiles pour contrôler l’accès à une ressource partagée qui ne peut prendre en charge qu’un nombre limité d’utilisateurs. Le nombre actuel de l' `CSemaphore` objet est le nombre d’utilisateurs supplémentaires autorisés. Lorsque le nombre atteint zéro, toutes les tentatives d’utilisation de la ressource contrôlée `CSemaphore` par l’objet sont insérées dans une file d’attente système et patientent jusqu’à expiration ou que le nombre dépasse 0. Le nombre maximal d’utilisateurs pouvant accéder à la ressource contrôlée à un moment donné est spécifié lors de la `CSemaphore` construction de l’objet.
 
-Pour utiliser un `CSemaphore` d’objet, de construire le `CSemaphore` lorsqu’il est nécessaire de l’objet. Spécifiez le nom du sémaphore voulez-vous attendre, et que votre application doit initialement êtes bien le propriétaire. Vous pouvez ensuite accéder le sémaphore lorsque le constructeur est retournée. Appelez [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) lorsque vous avez terminé l’accès à la ressource contrôlée.
+Pour utiliser un `CSemaphore` objet, construisez `CSemaphore` l’objet quand il est nécessaire. Spécifiez le nom du sémaphore sur lequel vous souhaitez attendre, et que votre application doit initialement la posséder. Vous pouvez ensuite accéder au sémaphore lorsque le constructeur retourne. Appelez [CSyncObject:: Unlock](../../mfc/reference/csyncobject-class.md#unlock) lorsque vous avez terminé d’accéder à la ressource contrôlée.
 
-Une autre méthode pour l’utilisation de `CSemaphore` objets consiste à ajouter une variable de type `CSemaphore` comme membre de données à la classe que vous souhaitez contrôler. Pendant la construction de l’objet contrôlée, appelez le constructeur de la `CSemaphore` membre de données en spécifiant l’initiale accéder count, nombre maximal d’accès, nom du sémaphore (s’il doit être utilisé au-delà des limites de processus) et les attributs de sécurité souhaités.
+Une autre méthode pour l' `CSemaphore` utilisation d’objets consiste à ajouter une variable `CSemaphore` de type comme donnée membre à la classe que vous souhaitez contrôler. Pendant la construction de l’objet contrôlé, appelez le constructeur du `CSemaphore` membre de données en spécifiant le nombre d’accès initial, le nombre maximal d’accès, le nom du sémaphore (s’il sera utilisé au-delà des limites du processus) et les attributs de sécurité souhaités.
 
-Pour accéder aux ressources contrôlées par `CSemaphore` objets de cette manière, créez tout d’abord une variable de type [CSingleLock](../../mfc/reference/csinglelock-class.md) ou type [CMultiLock](../../mfc/reference/cmultilock-class.md) dans la fonction membre de l’accès de votre ressource. Appelez ensuite l’objet verrou `Lock` fonction membre (par exemple, [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). À ce stade, votre thread sera soit accéder à la ressource, attendez que la ressource à libérée et y accéder ou attendez que la ressource doit être publié et le délai d’attente, ne parvient pas à accéder à la ressource. Dans tous les cas, votre ressource a accédé de manière thread-safe. Pour libérer la ressource, utilisez l’objet verrou `Unlock` fonction membre (par exemple, [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), ou autorise l’objet verrou se situent hors de portée.
+Pour accéder aux ressources contrôlées par `CSemaphore` les objets de cette manière, commencez par créer une variable de type [CSingleLock](../../mfc/reference/csinglelock-class.md) ou [CMultiLock](../../mfc/reference/cmultilock-class.md) dans la fonction membre Access de votre ressource. Appelez ensuite la fonction membre de `Lock` l’objet Lock (par exemple, [CSingleLock:: Lock](../../mfc/reference/csinglelock-class.md#lock)). À ce stade, votre thread peut accéder à la ressource, attendre que la ressource soit libérée et y accéder, ou attendre la libération et l’expiration de la ressource, ce qui ne peut pas accéder à la ressource. Dans tous les cas, votre ressource est accessible de manière thread-safe. Pour libérer la ressource, utilisez la fonction membre de `Unlock` l’objet Lock (par exemple, [CSingleLock:: Unlock](../../mfc/reference/csinglelock-class.md#unlock)), ou autorisez l’objet Lock à tomber hors de portée.
 
-Vous pouvez également créer un `CSemaphore` objet autonome et y accéder explicitement avant de tenter d’accéder à la ressource contrôlée. Cette méthode, lors de la façon la plus claire à une personne lisant votre code source, est plus sujette aux erreurs.
+Vous pouvez également créer un `CSemaphore` objet autonome et y accéder explicitement avant de tenter d’accéder à la ressource contrôlée. Cette méthode, bien que plus claire à la lecture de votre code source, est plus sujette à une erreur.
 
-Pour plus d’informations sur l’utilisation `CSemaphore` objets, consultez l’article [Multithreading : Comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Pour plus d’informations sur l’utilisation `CSemaphore` des objets, consultez l' [article Multithreading: Comment utiliser les classes](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)de synchronisation.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -57,11 +57,11 @@ Pour plus d’informations sur l’utilisation `CSemaphore` objets, consultez l�
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxmt.h
+**En-tête:** afxmt. h
 
 ##  <a name="csemaphore"></a>  CSemaphore::CSemaphore
 
-Construit un nommé ou sans nom `CSemaphore` objet.
+Construit un `CSemaphore` objet nommé ou sans nom.
 
 ```
 CSemaphore(
@@ -74,23 +74,23 @@ CSemaphore(
 ### <a name="parameters"></a>Paramètres
 
 *lInitialCount*<br/>
-Le décompte d’utilisation initial pour le sémaphore. Doit être supérieur ou égal à 0 et inférieur ou égal à *lMaxCount*.
+Le nombre initial d’utilisations du sémaphore. Doit être supérieur ou égal à 0 et inférieur ou égal à *lMaxCount*.
 
 *lMaxCount*<br/>
-Le décompte d’utilisation maximale pour le sémaphore. Doit être supérieure à 0.
+Nombre maximal d’utilisations du sémaphore. Doit être supérieure à 0.
 
 *pstrName*<br/>
-Le nom du sémaphore. Doit être fourni si le sémaphore est accessible au-delà des limites de processus. Si `NULL`, l’objet sera sans nom. Si le nom correspond à un sémaphore existant, le constructeur crée quand même un `CSemaphore` objet qui référence le sémaphore de ce nom. Si le nom correspond à un objet de synchronisation existant qui n’est pas un sémaphore, la construction échoue.
+Nom du sémaphore. Doit être fourni si le sémaphore est accessible à travers les limites du processus. Si `NULL`la condition est, l’objet ne sera pas nommé. Si le nom correspond à un sémaphore existant, le constructeur génère un `CSemaphore` nouvel objet qui fait référence au sémaphore de ce nom. Si le nom correspond à un objet de synchronisation existant qui n’est pas un sémaphore, la construction échoue.
 
 *lpsaAttributes*<br/>
-Attributs de sécurité de l’objet de sémaphore. Pour obtenir une description complète de cette structure, consultez [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) dans le SDK Windows.
+Attributs de sécurité pour l’objet Semaphore. Pour obtenir une description complète de cette structure, consultez [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) dans le SDK Windows.
 
 ### <a name="remarks"></a>Notes
 
-Pour accéder à ou libérer un `CSemaphore` d’objet, de créer un [CMultiLock](../../mfc/reference/cmultilock-class.md) ou [CSingleLock](../../mfc/reference/csinglelock-class.md) objet et appelez ses [verrou](../../mfc/reference/csinglelock-class.md#lock) et [Unlock](../../mfc/reference/csinglelock-class.md#unlock) fonctions membres.
+Pour accéder ou libérer un `CSemaphore` objet, créez un objet [CMultiLock](../../mfc/reference/cmultilock-class.md) ou [CSingleLock](../../mfc/reference/csinglelock-class.md) et appelez ses fonctions membres [Lock](../../mfc/reference/csinglelock-class.md#lock) et [Unlock](../../mfc/reference/csinglelock-class.md#unlock) .
 
 > [!IMPORTANT]
->  Après avoir créé le `CSemaphore` de l’objet, utilisez [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) pour vous assurer que le mutex n’existait pas. Si le mutex n’existait inattendu, cela peut indiquer un processus non fiable est l’occupation et peut être ayant l’intention d’utiliser le mutex à des fins malveillantes. Dans ce cas, la procédure en termes de sécurité recommandée consiste à fermer le handle et continuer comme si une défaillance s’est produite lors de la création de l’objet.
+>  Après avoir créé `CSemaphore` l’objet, utilisez [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) pour vous assurer que le mutex n’existait pas déjà. Si le mutex s’est exécuté de façon inattendue, cela peut indiquer qu’un processus non autorisé est une opération d’occupation et peut être l’intention d’utiliser le mutex à des fins malveillantes. Dans ce cas, la procédure recommandée pour la sécurité consiste à fermer le descripteur et à continuer comme en cas de défaillance lors de la création de l’objet.
 
 ## <a name="see-also"></a>Voir aussi
 

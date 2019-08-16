@@ -1,26 +1,26 @@
 ---
-title: 'Procédure pas à pas : Suppression de travail d’un Thread d’Interface utilisateur'
+title: 'Procédure pas à pas : Suppression du travail d’un thread d’interface utilisateur'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 3bd41b1815737730067929c4728b32181cb2fc03
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 214796777968c8aec7116a848e791aeef0d3af7b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857001"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512267"
 ---
-# <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Procédure pas à pas : Suppression de travail d’un Thread d’Interface utilisateur
+# <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Procédure pas à pas : Suppression du travail d’un thread d’interface utilisateur
 
-Ce document montre comment utiliser le Runtime d’accès concurrentiel pour déplacer le travail effectué par le thread d’interface utilisateur (IU) dans une application Microsoft Foundation Classes (MFC) à un thread de travail. Ce document montre également comment améliorer les performances d’une longue opération de dessin.
+Ce document montre comment utiliser l’runtime d’accès concurrentiel pour déplacer le travail effectué par le thread d’interface utilisateur dans une application Microsoft Foundation Classes (MFC) vers un thread de travail. Ce document montre également comment améliorer les performances d’une longue opération de dessin.
 
-Suppression de travail à partir du thread d’interface utilisateur en déchargeant les opérations bloquantes, par exemple, le dessin, aux threads de travail peut améliorer la réactivité de votre application. Cette procédure pas à pas utilise une routine de dessin qui génère une fractale de Mandelbrot pour illustrer une longue opération de blocage. La génération de la fractale de Mandelbrot est également un bon candidat pour la parallélisation car le calcul de chaque pixel est indépendant de tous les autres calculs.
+La suppression du travail du thread d’interface utilisateur par déchargement des opérations bloquantes, par exemple, le dessin, sur des threads de travail peut améliorer la réactivité de votre application. Cette procédure pas à pas utilise une routine de dessin qui génère la fractale de Mandelbrot pour illustrer une longue opération de blocage. La génération de la fractale Mandelbrot est également un bon candidat à la parallélisation, car le calcul de chaque pixel est indépendant de tous les autres calculs.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Lisez les rubriques suivantes avant de commencer cette procédure pas à pas :
+Lisez les rubriques suivantes avant de commencer cette procédure pas à pas:
 
 - [Parallélisme des tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md)
 
@@ -32,177 +32,177 @@ Lisez les rubriques suivantes avant de commencer cette procédure pas à pas :
 
 - [Annulation dans la bibliothèque de modèles parallèles](cancellation-in-the-ppl.md)
 
-Nous vous recommandons également de comprendre les principes fondamentaux du développement d’applications MFC et GDI + avant de commencer cette procédure pas à pas. Pour plus d’informations à propos de MFC, consultez [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md). Pour plus d’informations sur GDI +, consultez [GDI +](https://msdn.microsoft.com/library/windows/desktop/ms533798).
+Nous vous recommandons également de comprendre les principes de base du développement d’applications MFC et de GDI+ avant de commencer cette procédure pas à pas. Pour plus d’informations sur MFC, consultez [applications de bureau MFC](../../mfc/mfc-desktop-applications.md). Pour plus d’informations sur GDI+, consultez [GDI+](/windows/win32/gdiplus/-gdiplus-gdi-start).
 
 ##  <a name="top"></a> Sections
 
 Cette procédure pas à pas contient les sections suivantes :
 
-- [Création de l’Application MFC](#application)
+- [Création de l’application MFC](#application)
 
-- [Implémentation de la Version sérialisée de l’Application Mandelbrot](#serial)
+- [Implémentation de la version série de l’application Mandelbrot](#serial)
 
-- [Suppression de travail à partir du Thread d’Interface utilisateur](#removing-work)
+- [Suppression du travail du thread d’interface utilisateur](#removing-work)
 
 - [Amélioration des performances de dessin](#performance)
 
-- [Ajout de prise en charge de l’annulation](#cancellation)
+- [Ajout de la prise en charge de l’annulation](#cancellation)
 
-##  <a name="application"></a> Création de l’Application MFC
+##  <a name="application"></a>Création de l’application MFC
 
 Cette section décrit comment créer l’application MFC de base.
 
-### <a name="to-create-a-visual-c-mfc-application"></a>Pour créer une application MFC Visual C++
+### <a name="to-create-a-visual-c-mfc-application"></a>Pour créer une application C++ Visual MFC
 
-1. Utilisez le **Assistant Application MFC** pour créer une application MFC avec tous les paramètres par défaut. Consultez [Procédure pas à pas : À l’aide de nouveaux contrôles d’environnement MFC](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) pour obtenir des instructions sur la façon d’ouvrir l’Assistant pour votre version de Visual Studio.
+1. Utilisez l' **Assistant Application MFC** pour créer une application MFC avec tous les paramètres par défaut. Consultez [Procédure pas à pas : Utilisation des nouveaux contrôles de l'](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) interpréteur de commandes MFC pour obtenir des instructions sur l’ouverture de l’Assistant pour votre version de Visual Studio.
 
-1. Tapez un nom pour le projet, par exemple, `Mandelbrot`, puis cliquez sur **OK** pour afficher le **Assistant Application MFC**.
+1. Tapez un nom pour le projet, par exemple `Mandelbrot`,, puis cliquez sur **OK** pour afficher l **'Assistant Application MFC**.
 
-1. Dans le **Type d’Application** volet, sélectionnez **monodocument**. Vérifiez que le **support de l’architecture Document/vue** case à cocher est désactivée.
+1. Dans le volet **type d’application** , sélectionnez **document unique**. Vérifiez que la case à cocher **prise en charge de l’architecture document/vue** est désactivée.
 
-1. Cliquez sur **Terminer** pour créer le projet et fermer la **Assistant Application MFC**.
+1. Cliquez sur **Terminer** pour créer le projet et fermer l' **Assistant Application MFC**.
 
-   Vérifiez que l’application a été créée avec succès en créant et son exécution. Pour générer l’application, dans le **Build** menu, cliquez sur **générer la Solution**. Si l’application est générée avec succès, exécutez l’application en cliquant sur **démarrer le débogage** sur le **déboguer** menu.
+   Vérifiez que l’application a été créée avec succès en la générant et en l’exécutant. Pour générer l’application, dans le menu **générer** , cliquez sur **générer la solution**. Si l’application est générée avec succès, exécutez l’application en cliquant sur **Démarrer** le débogage dans le menu Déboguer.
 
-##  <a name="serial"></a> Implémentation de la Version sérialisée de l’Application Mandelbrot
+##  <a name="serial"></a>Implémentation de la version série de l’application Mandelbrot
 
-Cette section décrit comment créer la fractale de Mandelbrot. Cette version dessine la fractale de Mandelbrot dans GDI + [Bitmap](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-bitmap) de l’objet et puis copie le contenu de cette bitmap dans la fenêtre du client.
+Cette section décrit comment dessiner une fractale de Mandelbrot. Cette version dessine la fractale de Mandelbrot dans un objet [bitmap](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) GDI+, puis copie le contenu de cette image bitmap dans la fenêtre cliente.
 
-#### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>Pour implémenter la version sérialisée de l’application Mandelbrot
+#### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>Pour implémenter la version série de l’application Mandelbrot
 
-1. Dans stdafx.h, ajoutez le code suivant `#include` directive :
+1. Dans stdafx. h, ajoutez la directive `#include` suivante:
 
    [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
 
-1. Dans ChildView.h, après le `pragma` directive, définir le `BitmapPtr` type. Le `BitmapPtr` type permet à un pointeur vers un `Bitmap` objet devant être partagé par plusieurs composants. Le `Bitmap` objet est supprimé lorsqu’il n’est plus référencé par aucun composant.
+1. Dans ChildView. h, après la `pragma` directive, définissez le `BitmapPtr` type. Le `BitmapPtr` type permet à un pointeur vers `Bitmap` un objet d’être partagé par plusieurs composants. L' `Bitmap` objet est supprimé lorsqu’il n’est plus référencé par aucun composant.
 
    [!code-cpp[concrt-mandelbrot#2](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_2.h)]
 
-1. Dans ChildView.h, ajoutez le code suivant à la `protected` section de la `CChildView` classe :
+1. Dans ChildView. h, ajoutez le code suivant à la `protected` section de la `CChildView` classe:
 
    [!code-cpp[concrt-mandelbrot#3](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_3.h)]
 
-1. Dans ChildView.cpp, commentez ou supprimez les lignes suivantes.
+1. Dans ChildView. cpp, commentez ou supprimez les lignes suivantes.
 
    [!code-cpp[concrt-mandelbrot#4](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_4.cpp)]
 
-   Dans les versions Debug, cette étape empêche l’application d’utiliser le `DEBUG_NEW` allocateur, qui n’est pas compatible avec GDI +.
+   Dans les versions Debug, cette étape empêche l’application d’utiliser `DEBUG_NEW` l’allocateur, qui est incompatible avec GDI+.
 
-1. Dans ChildView.cpp, ajoutez un `using` directive pour le `Gdiplus` espace de noms.
+1. Dans ChildView. cpp, ajoutez une `using` directive à l' `Gdiplus` espace de noms.
 
    [!code-cpp[concrt-mandelbrot#5](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_5.cpp)]
 
-1. Ajoutez le code suivant au constructeur et destructeur de la `CChildView` classe pour initialiser et arrêter GDI +.
+1. Ajoutez le code suivant au constructeur et au destructeur de la `CChildView` classe pour initialiser et arrêter GDI+.
 
    [!code-cpp[concrt-mandelbrot#6](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_6.cpp)]
 
-1. Implémentez la méthode `CChildView::DrawMandelbrot`. Cette méthode dessine une fractale de Mandelbrot spécifié `Bitmap` objet.
+1. Implémentez la méthode `CChildView::DrawMandelbrot`. Cette méthode dessine la fractale de Mandelbrot `Bitmap` sur l’objet spécifié.
 
    [!code-cpp[concrt-mandelbrot#7](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_7.cpp)]
 
-1. Implémentez la méthode `CChildView::OnPaint`. Cette méthode appelle `CChildView::DrawMandelbrot` , puis copie le contenu de la `Bitmap` objet dans la fenêtre.
+1. Implémentez la méthode `CChildView::OnPaint`. Cette méthode appelle `CChildView::DrawMandelbrot` , puis copie le contenu de l' `Bitmap` objet dans la fenêtre.
 
    [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
 
-1. Vérifiez que l’application a été mises à jour en créant et son exécution.
+1. Vérifiez que l’application a été correctement mise à jour en la générant et en l’exécutant.
 
 L’illustration suivante montre les résultats de l’application Mandelbrot.
 
-![L’Application Mandelbrot](../../parallel/concrt/media/mandelbrot.png "l’Application Mandelbrot")
+![L’application Mandelbrot](../../parallel/concrt/media/mandelbrot.png "L’application Mandelbrot")
 
-Étant donné que le calcul de chaque pixel est gourmand en ressources, le thread d’interface utilisateur ne peut pas traiter les messages supplémentaires jusqu'à ce que le calcul total se termine. Cela peut réduire la réactivité de l’application. Toutefois, vous pouvez atténuer ce problème en supprimant le travail à partir du thread d’interface utilisateur.
+Étant donné que le calcul pour chaque pixel est coûteux en termes de calcul, le thread d’interface utilisateur ne peut pas traiter des messages supplémentaires tant que le calcul global n’est pas terminé. Cela peut nuire à la réactivité de l’application. Toutefois, vous pouvez soulager ce problème en supprimant le travail du thread d’interface utilisateur.
 
 [[Haut](#top)]
 
-##  <a name="removing-work"></a> Suppression de travail à partir du Thread d’interface utilisateur
+##  <a name="removing-work"></a>Suppression du travail du thread d’interface utilisateur
 
-Cette section montre comment supprimer le travail de dessin à partir du thread d’interface utilisateur dans l’application Mandelbrot. En déplaçant le travail de dessin à partir du thread d’interface utilisateur à un thread de travail, le thread d’interface utilisateur peut traiter les messages que le thread de travail génère l’image en arrière-plan.
+Cette section montre comment supprimer le travail de dessin du thread d’interface utilisateur dans l’application Mandelbrot. En déplaçant le travail de dessin du thread d’interface utilisateur vers un thread de travail, le thread d’interface utilisateur peut traiter les messages lorsque le thread de travail génère l’image en arrière-plan.
 
-Le Runtime d’accès concurrentiel fournit trois méthodes pour exécuter des tâches : [groupes de tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md), [agents asynchrones](../../parallel/concrt/asynchronous-agents.md), et [tâches légères](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Bien que vous pouvez utiliser l’un de ces mécanismes pour supprimer du travail à partir du thread d’interface utilisateur, cet exemple utilise un [concurrency::task_group](reference/task-group-class.md) , car les groupes de tâches prennent en charge l’annulation de l’objet. Cette procédure pas à pas utilise plus tard d’annulation afin de réduire la quantité de travail qui est effectuée lorsque la fenêtre du client est redimensionnée et effectuer un nettoyage lorsque la fenêtre est détruite.
+L’runtime d’accès concurrentiel offre trois façons d’exécuter des tâches: des [groupes de tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md), des [agents asynchrones](../../parallel/concrt/asynchronous-agents.md)et des [tâches légères](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Bien que vous puissiez utiliser l’un de ces mécanismes pour supprimer le travail du thread d’interface utilisateur, cet exemple utilise un objet [Concurrency:: task_group](reference/task-group-class.md) , car les groupes de tâches prennent en charge l’annulation. Cette procédure pas à pas utilise ultérieurement l’annulation pour réduire la quantité de travail effectuée lorsque la fenêtre cliente est redimensionnée et pour effectuer un nettoyage lorsque la fenêtre est détruite.
 
-Cet exemple utilise également un [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objet afin de permettre le thread d’interface utilisateur et le thread de travail pour communiquer entre eux. Une fois que le thread de travail génère l’image, il envoie un pointeur vers le `Bitmap` de l’objet à le `unbounded_buffer` de l’objet, puis publie un message de peinture au thread d’interface utilisateur. Le thread d’interface utilisateur reçoit le `unbounded_buffer` objet le `Bitmap` de l’objet et dessine dans la fenêtre du client.
+Cet exemple utilise également un objet [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) pour permettre au thread d’interface utilisateur et au thread de travail de communiquer entre eux. Une fois que le thread de travail a produit l’image, il envoie `Bitmap` un pointeur vers `unbounded_buffer` l’objet à l’objet, puis publie un message de peinture sur le thread d’interface utilisateur. Le thread d’interface utilisateur reçoit ensuite `unbounded_buffer` de l' `Bitmap` objet l’objet et le dessine dans la fenêtre cliente.
 
-#### <a name="to-remove-the-drawing-work-from-the-ui-thread"></a>Pour supprimer le travail de dessin à partir du thread d’interface utilisateur
+#### <a name="to-remove-the-drawing-work-from-the-ui-thread"></a>Pour supprimer le travail de dessin du thread d’interface utilisateur
 
-1. Dans stdafx.h, ajoutez le code suivant `#include` directives :
+1. Dans stdafx. h, ajoutez les directives `#include` suivantes:
 
    [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
 
-1. Dans ChildView.h, ajoutez `task_group` et `unbounded_buffer` les variables de membre à la `protected` section de la `CChildView` classe. Le `task_group` objet conserve les tâches qui exécutent le dessin ; le `unbounded_buffer` objet conserve l’image de Mandelbrot terminée.
+1. Dans ChildView. h, ajoutez `task_group` les `unbounded_buffer` variables membres et à `protected` la section de `CChildView` la classe. L' `task_group` objet contient les tâches qui effectuent le dessin `unbounded_buffer` ; l’objet contient l’image Mandelbrot terminée.
 
    [!code-cpp[concrt-mandelbrot#102](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_10.h)]
 
-1. Dans ChildView.cpp, ajoutez un `using` directive pour le `concurrency` espace de noms.
+1. Dans ChildView. cpp, ajoutez une `using` directive à l' `concurrency` espace de noms.
 
    [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]
 
-1. Dans le `CChildView::DrawMandelbrot` (méthode), après l’appel à `Bitmap::UnlockBits`, appelez le [concurrency::send](reference/concurrency-namespace-functions.md#send) (fonction) pour passer le `Bitmap` objet pour le thread d’interface utilisateur. Publier un message de peinture au thread d’interface utilisateur, puis invalide la zone cliente.
+1. Dans la `CChildView::DrawMandelbrot` méthode, après l’appel à `Bitmap::UnlockBits`, appelez la fonction Concurrency [:: Send](reference/concurrency-namespace-functions.md#send) pour passer l' `Bitmap` objet au thread d’interface utilisateur. Publiez ensuite un message de peinture dans le thread d’interface utilisateur et invalidez la zone cliente.
 
    [!code-cpp[concrt-mandelbrot#104](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_12.cpp)]
 
-1. Mise à jour le `CChildView::OnPaint` méthode pour recevoir les mises à jour `Bitmap` de l’objet et dessiner l’image dans la fenêtre du client.
+1. Mettez à `CChildView::OnPaint` jour la méthode pour recevoir `Bitmap` l’objet mis à jour et dessiner l’image dans la fenêtre cliente.
 
    [!code-cpp[concrt-mandelbrot#105](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_13.cpp)]
 
-   Le `CChildView::OnPaint` méthode crée une tâche pour générer l’image Mandelbrot si il n’existe pas dans le tampon de messages. Le tampon de messages ne contiendra pas un `Bitmap` objet dans les cas tels que le message de peinture initial et lorsqu’une autre fenêtre est déplacée devant la fenêtre du client.
+   La `CChildView::OnPaint` méthode crée une tâche pour générer l’image Mandelbrot si elle n’existe pas dans la mémoire tampon des messages. La mémoire tampon des messages ne contient `Bitmap` pas d’objet dans les cas tels que le message de peinture initial et lorsqu’une autre fenêtre est déplacée devant la fenêtre du client.
 
-1. Vérifiez que l’application a été mises à jour en créant et son exécution.
+1. Vérifiez que l’application a été correctement mise à jour en la générant et en l’exécutant.
 
-L’interface utilisateur est maintenant plus réactive, car le travail de dessin est effectué en arrière-plan.
+L’interface utilisateur est maintenant plus réactive car le travail de dessin est effectué en arrière-plan.
 
 [[Haut](#top)]
 
-##  <a name="performance"></a> Amélioration des performances de dessin
+##  <a name="performance"></a>Amélioration des performances de dessin
 
-La génération de la fractale de Mandelbrot est un bon candidat pour la parallélisation car le calcul de chaque pixel est indépendant de tous les autres calculs. Pour paralléliser la procédure de dessin, convertissez externe `for` boucle dans le `CChildView::DrawMandelbrot` méthode à un appel à la [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorithme, comme suit.
+La génération de la fractale Mandelbrot est un bon candidat à la parallélisation, car le calcul de chaque pixel est indépendant de tous les autres calculs. Pour paralléliser la procédure de dessin, convertissez la `for` boucle externe de `CChildView::DrawMandelbrot` la méthode en un appel à l’algorithme d' [accès concurrentiel::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) , comme suit.
 
 [!code-cpp[concrt-mandelbrot#301](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_14.cpp)]
 
-Étant donné que le calcul de chaque élément de bitmap est indépendant, il est inutile synchroniser les opérations de dessin qui accèdent à la mémoire bitmap. Ainsi, les performances à l’échelle en tant que le nombre de processeurs disponibles augmente.
+Étant donné que le calcul de chaque élément bitmap est indépendant, vous n’avez pas à synchroniser les opérations de dessin qui accèdent à la mémoire bitmap. Cela permet de mettre à l’échelle les performances à mesure que le nombre de processeurs disponibles augmente.
 
 [[Haut](#top)]
 
-##  <a name="cancellation"></a> Ajout de prise en charge de l’annulation
+##  <a name="cancellation"></a>Ajout de la prise en charge de l’annulation
 
-Cette section décrit comment gérer le redimensionnement des fenêtres et comment annuler des tâches de dessins actives lorsque la fenêtre est détruite.
+Cette section décrit comment gérer le redimensionnement de fenêtre et comment annuler des tâches de dessin actives lorsque la fenêtre est détruite.
 
-Le document [l’annulation dans la bibliothèque PPL](cancellation-in-the-ppl.md) explique le fonctionne de l’annulation dans le runtime. L’annulation est coopérative ; Par conséquent, il ne se produit pas immédiatement. Pour arrêter une tâche annulée, le runtime lève une exception interne pendant un appel ultérieur à partir de la tâche dans le runtime. La section précédente montre comment utiliser le `parallel_for` algorithme pour améliorer les performances de la tâche de dessin. L’appel à `parallel_for` permet à l’exécution d’arrêter la tâche et par conséquent, l’annulation de fonctionner.
+L' [annulation de document dans la bibliothèque de modèles parallèles](cancellation-in-the-ppl.md) explique le fonctionnement de l’annulation dans le Runtime. L’annulation est coopérative. par conséquent, il ne se produit pas immédiatement. Pour arrêter une tâche annulée, le runtime lève une exception interne pendant un appel ultérieur de la tâche dans le Runtime. La section précédente montre comment utiliser l' `parallel_for` algorithme pour améliorer les performances de la tâche de dessin. L’appel à `parallel_for` permet au runtime d’arrêter la tâche et, par conséquent, d’autoriser le fonctionnement de l’annulation.
 
-### <a name="cancelling-active-tasks"></a>L’annulation de tâches actives
+### <a name="cancelling-active-tasks"></a>Annulation des tâches actives
 
-Crée l’application Mandelbrot `Bitmap` objets dont les dimensions correspondent à la taille de la fenêtre du client. Chaque fois que la fenêtre du client est redimensionnée, l’application crée une tâche supplémentaire en arrière-plan pour générer une image pour la nouvelle taille de fenêtre. L’application ne nécessite pas ces images intermédiaires ; Il nécessite uniquement l’image pour la taille de fenêtre finale. Pour empêcher l’application d’exécuter ce travail supplémentaire, vous pouvez annuler toutes les tâches dessins actives dans les gestionnaires de messages pour le `WM_SIZE` et `WM_SIZING` messages et puis replanifiez dessin fonctionneront une fois la fenêtre est redimensionnée.
+L’application Mandelbrot crée `Bitmap` des objets dont les dimensions correspondent à la taille de la fenêtre du client. Chaque fois que la fenêtre cliente est redimensionnée, l’application crée une tâche en arrière-plan supplémentaire pour générer une image pour la nouvelle taille de fenêtre. L’application ne nécessite pas ces images intermédiaires. elle nécessite uniquement l’image pour la taille finale de la fenêtre. Pour empêcher l’application d’effectuer ce travail supplémentaire, vous pouvez annuler toutes les tâches de dessin actives dans les gestionnaires de messages `WM_SIZE` pour `WM_SIZING` les messages et, puis replanifier le travail de dessin une fois que la fenêtre est redimensionnée.
 
-Pour annuler les tâches de dessins actives lorsque la fenêtre est redimensionnée, l’application appelle le [Concurrency::task_group :: Cancel](reference/task-group-class.md#cancel) méthode dans les gestionnaires pour le `WM_SIZING` et `WM_SIZE` messages. Le gestionnaire pour le `WM_SIZE` message également appels le [Concurrency::task_group :: wait](reference/task-group-class.md#wait) méthode pour attendre que toutes les tâches à effectuer et puis replanifie la tâche de dessin pour la taille de fenêtre de mise à jour.
+Pour annuler les tâches de dessin actives quand la fenêtre est redimensionnée, l’application appelle la méthode Concurrency [:: task_group:: Cancel](reference/task-group-class.md#cancel) dans les gestionnaires pour `WM_SIZING` les `WM_SIZE` messages et. Le gestionnaire `WM_SIZE` du message appelle également la méthode [Concurrency:: task_group:: wait](reference/task-group-class.md#wait) pour attendre que toutes les tâches actives se terminent, puis replanifie la tâche de dessin pour la taille de fenêtre mise à jour.
 
-Lorsque la fenêtre du client est détruite, il est conseillé d’annuler toutes les tâches actives dessins. Annulation de toutes les tâches actives dessins permet de s’assurer que les threads de travail ne les publiez pas les messages vers le thread d’interface utilisateur après la destruction de la fenêtre du client. L’application annule toutes les tâches actives dessins dans le gestionnaire pour le `WM_DESTROY` message.
+Lorsque la fenêtre cliente est détruite, il est conseillé d’annuler toutes les tâches de dessin actives. L’annulation d’une tâche de dessin active permet de s’assurer que les threads de travail ne publient pas de messages dans le thread d’interface utilisateur après la destruction de la fenêtre du client. L’application annule toutes les tâches de dessin actives dans le gestionnaire `WM_DESTROY` pour le message.
 
-### <a name="responding-to-cancellation"></a>Répondre à l’annulation
+### <a name="responding-to-cancellation"></a>Réponse à l’annulation
 
-Le `CChildView::DrawMandelbrot` (méthode), qui exécute la tâche de dessin, doit répondre à l’annulation. Étant donné que le runtime utilise la gestion des exceptions pour annuler des tâches, le `CChildView::DrawMandelbrot` méthode doit utiliser un mécanisme sécurisé de l’exception afin de garantir que toutes les ressources sont correctement nettoyées. Cet exemple utilise le *Resource Acquisition Is Initialization* modèle (RAII) pour garantir que les bits du bitmap sont déverrouillés lorsque la tâche est annulée.
+La `CChildView::DrawMandelbrot` méthode, qui exécute la tâche de dessin, doit répondre à l’annulation. Étant donné que le runtime utilise la gestion des exceptions pour `CChildView::DrawMandelbrot` annuler des tâches, la méthode doit utiliser un mécanisme sécurisé pour garantir que toutes les ressources sont correctement nettoyées. Cet exemple utilise le modèle RAII ( *Resource Acquisition Is Initialization* ) pour garantir que les bits de la bitmap sont déverrouillés lorsque la tâche est annulée.
 
 ##### <a name="to-add-support-for-cancellation-in-the-mandelbrot-application"></a>Pour ajouter la prise en charge de l’annulation dans l’application Mandelbrot
 
-1. Dans ChildView.h, dans le `protected` section de la `CChildView` de classe, ajoutez des déclarations pour les `OnSize`, `OnSizing`, et `OnDestroy` des fonctions de mappage de message.
+1. Dans ChildView. h, dans la `protected` section de la `CChildView` classe, ajoutez des déclarations pour `OnSize`les `OnSizing`fonctions de `OnDestroy` table des messages, et.
 
    [!code-cpp[concrt-mandelbrot#201](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_15.h)]
 
-1. Dans ChildView.cpp, modifiez la table des messages pour qu’il contienne des gestionnaires pour les `WM_SIZE`, `WM_SIZING`, et `WM_DESTROY` messages.
+1. Dans ChildView. cpp, modifiez la table des messages pour qu’elle contienne `WM_SIZE`des `WM_SIZING`gestionnaires pour `WM_DESTROY` les messages, et.
 
    [!code-cpp[concrt-mandelbrot#202](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_16.cpp)]
 
-1. Implémentez la méthode `CChildView::OnSizing`. Cette méthode annule toutes les tâches dessins existants.
+1. Implémentez la méthode `CChildView::OnSizing`. Cette méthode annule toutes les tâches de dessin existantes.
 
    [!code-cpp[concrt-mandelbrot#203](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_17.cpp)]
 
-1. Implémentez la méthode `CChildView::OnSize`. Cette méthode annule toutes les tâches dessins existants et crée une nouvelle tâche de dessin pour la taille de fenêtre du client mis à jour.
+1. Implémentez la méthode `CChildView::OnSize`. Cette méthode annule toutes les tâches de dessin existantes et crée une tâche de dessin pour la taille de la fenêtre cliente mise à jour.
 
    [!code-cpp[concrt-mandelbrot#204](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_18.cpp)]
 
-1. Implémentez la méthode `CChildView::OnDestroy`. Cette méthode annule toutes les tâches dessins existants.
+1. Implémentez la méthode `CChildView::OnDestroy`. Cette méthode annule toutes les tâches de dessin existantes.
 
    [!code-cpp[concrt-mandelbrot#205](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_19.cpp)]
 
-1. Dans ChildView.cpp, définissez la `scope_guard` classe qui implémente le modèle RAII.
+1. Dans ChildView. cpp, définissez la `scope_guard` classe, qui implémente le modèle RAII.
 
    [!code-cpp[concrt-mandelbrot#206](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_20.cpp)]
 
@@ -210,15 +210,15 @@ Le `CChildView::DrawMandelbrot` (méthode), qui exécute la tâche de dessin, do
 
    [!code-cpp[concrt-mandelbrot#207](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_21.cpp)]
 
-   Ce code gère l’annulation en créant un `scope_guard` objet. Lorsque l’objet quitte la portée, il déverrouille les bits du bitmap.
+   Ce code gère l’annulation en créant `scope_guard` un objet. Lorsque l’objet quitte l’étendue, il déverrouille les bits de la bitmap.
 
-1. Modifiez la fin de la `CChildView::DrawMandelbrot` méthode pour faire disparaître le `scope_guard` une fois les bits du bitmap déverrouillés, mais avant que tous les messages sont envoyés au thread d’interface utilisateur de l’objet. Cela garantit que le thread d’interface utilisateur n’est pas mis à jour avant que les bits du bitmap sont déverrouillées.
+1. Modifiez la fin de la `CChildView::DrawMandelbrot` méthode pour ignorer l' `scope_guard` objet une fois que les bits de la bitmap sont déverrouillés, mais avant l’envoi des messages au thread d’interface utilisateur. Cela permet de s’assurer que le thread d’interface utilisateur n’est pas mis à jour avant le déverrouillage des bits de la bitmap.
 
    [!code-cpp[concrt-mandelbrot#208](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_22.cpp)]
 
-9. Vérifiez que l’application a été mises à jour en créant et son exécution.
+9. Vérifiez que l’application a été correctement mise à jour en la générant et en l’exécutant.
 
-Quand vous redimensionnez la fenêtre, le travail de dessin est effectuée uniquement pour la taille de fenêtre finale. Les tâches de dessins actives sont également annulées lorsque la fenêtre est détruite.
+Lorsque vous redimensionnez la fenêtre, le travail de dessin est effectué uniquement pour la taille finale de la fenêtre. Toutes les tâches de dessin actives sont également annulées lorsque la fenêtre est détruite.
 
 [[Haut](#top)]
 

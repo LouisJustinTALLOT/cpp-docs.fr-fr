@@ -7,22 +7,22 @@ helpviewer_keywords:
 - label editing in CTreeCtrl class [MFC]
 - tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
-ms.openlocfilehash: 446db94ec49859e2213f00d205df57e332c85af2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10148ef0dd8ccb2cf82c14c1c80ade6e8e5aa2b2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388148"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513306"
 ---
 # <a name="tree-control-label-editing"></a>Modification des étiquettes de contrôles d’arborescence
 
-L’utilisateur peut modifier directement les étiquettes des éléments dans un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) qui a le **TVS_EDITLABELS** style. L’utilisateur commence à modifier en cliquant sur l’étiquette de l’élément qui a le focus. Une application commence à modifier à l’aide de la [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) fonction membre. Le contrôle d’arborescence envoie la notification lors de la modification commence et lorsqu’elle est annulée ou terminée. Lorsque la modification est effectuée, vous êtes responsable de l’étiquette de l’élément de la mise à jour si nécessaire.
+L’utilisateur peut modifier directement les étiquettes des éléments dans un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) qui a le style **TVS_EDITLABELS** . L’utilisateur commence la modification en cliquant sur l’étiquette de l’élément qui a le focus. Une application commence la modification à l’aide de la fonction membre [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) . Le contrôle d’arborescence envoie la notification lorsque la modification commence et lorsqu’elle est annulée ou terminée. Lorsque la modification est terminée, vous êtes responsable de la mise à jour de l’étiquette de l’élément, le cas échéant.
 
-Quand une modification d’étiquette commence, un contrôle d’arborescence envoie un [TVN_BEGINLABELEDIT](/windows/desktop/Controls/tvn-beginlabeledit) message de notification. En traitant cette notification, vous pouvez autoriser la modification de certaines étiquettes et empêcher la modification des autres. Méthode retournant 0 autorise la modification, et l’autre valeur empêche.
+Lorsque la modification d’étiquette commence, un contrôle d’arborescence envoie un message de notification [TVN_BEGINLABELEDIT](/windows/win32/Controls/tvn-beginlabeledit) . En traitant cette notification, vous pouvez autoriser la modification de certaines étiquettes et empêcher la modification des autres. Si la valeur 0 est retournée, la modification est retournée et une valeur différente de zéro l’empêche.
 
-Lors de la modification d’étiquette est annulée ou terminée, un contrôle d’arborescence envoie un [TVN_ENDLABELEDIT](/windows/desktop/Controls/tvn-endlabeledit) message de notification. Le *lParam* paramètre est l’adresse d’un [structure NMTVDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvdispinfoa) structure. Le **élément** membre est un [structure TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) structure qui identifie l’élément et inclut le texte modifié. Vous êtes responsable de la mise à jour étiquette de l’élément, le cas échéant, peut-être après avoir validé la chaîne modifiée. Le *pszText* membre `TV_ITEM` est 0 si la modification est annulée.
+Lorsque la modification d’étiquette est annulée ou terminée, un contrôle d’arborescence envoie un message de notification [TVN_ENDLABELEDIT](/windows/win32/Controls/tvn-endlabeledit) . Le paramètre *lParam* est l’adresse d’une structure [NMTVDISPINFO](/windows/win32/api/commctrl/ns-commctrl-tvdispinfow) . Le membre de l' **élément** est une structure [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) qui identifie l’élément et qui comprend le texte modifié. Vous êtes responsable de la mise à jour de l’étiquette de l’élément, le cas échéant, éventuellement après la validation de la chaîne modifiée. Le membre *pszText* de `TV_ITEM` est 0 si la modification est annulée.
 
-Au cours de la modification d’étiquette, généralement en réponse à la [TVN_BEGINLABELEDIT](/windows/desktop/Controls/tvn-beginlabeledit) message de notification, vous pouvez obtenir un pointeur vers le contrôle d’édition utilisé pour la modification d’étiquette à l’aide de la [fonction membre GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) membre fonction. Vous pouvez appeler le contrôle d’édition [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) fonction membre pour limiter la quantité de texte, un utilisateur peut entrer ou sous-classe le contrôle d’édition à intercepter et ignorer les caractères non valides. Notez, cependant, que le contrôle d’édition est uniquement affiché *après* **TVN_BEGINLABELEDIT** est envoyé.
+Pendant la modification des étiquettes, en général en réponse au message de notification [TVN_BEGINLABELEDIT](/windows/win32/Controls/tvn-beginlabeledit) , vous pouvez obtenir un pointeur vers le contrôle d’édition utilisé pour la modification d’étiquette à l’aide de la fonction membre [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) . Vous pouvez appeler la fonction membre [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) du contrôle d’édition pour limiter la quantité de texte qu’un utilisateur peut entrer ou sous-classer dans le contrôle d’édition pour intercepter et ignorer les caractères non valides. Notez, toutefois, que le contrôle d’édition s’affiche uniquement *après* l’envoi de **TVN_BEGINLABELEDIT** .
 
 ## <a name="see-also"></a>Voir aussi
 

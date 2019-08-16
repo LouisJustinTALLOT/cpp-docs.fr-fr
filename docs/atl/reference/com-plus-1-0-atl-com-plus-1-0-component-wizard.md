@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: bff7f87fbdebbff9a1823ae8718c64be4f47a2ea
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 83b7beafe537f6b271b254d16505b515a41acf27
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707459"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496691"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, Assistant Composant COM+ 1.0 ATL
 
@@ -32,7 +32,7 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consul
    |Option|Description|
    |------------|-----------------|
    |**Double**|Spécifie que l’objet prend en charge une interface double (sa vtable comprend des fonctions d’interface personnalisées et des méthodes `IDispatch` à liaison tardive). Permet aux clients COM et aux contrôleurs Automation d’accéder à l’objet.|
-   |**Personnalisé**|Spécifie que l’objet prend en charge une interface personnalisée (sa vtable comprend des fonctions d’interface personnalisées). Une interface personnalisée peut être plus rapide qu’une interface double, en particulier entre les frontières de processus.<br /><br /> - **Compatible Automation** ajoute la prise en charge de l’automation à l’interface personnalisée. Pour les projets avec attributs, définit l’attribut **oleautomation** dans la coclasse.|
+   |**Personnalisée**|Spécifie que l’objet prend en charge une interface personnalisée (sa vtable comprend des fonctions d’interface personnalisées). Une interface personnalisée peut être plus rapide qu’une interface double, en particulier entre les frontières de processus.<br /><br /> - **Compatible Automation** ajoute la prise en charge de l’automation à l’interface personnalisée. Pour les projets avec attributs, définit l’attribut **oleautomation** dans la coclasse.|
 
 - **Queueable**
 
@@ -45,8 +45,8 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consul
    |Option|Description|
    |------------|-----------------|
    |**ISupportErrorInfo**|Crée une prise en charge pour l’interface [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) afin que l’objet puisse retourner les informations d’erreur au client.|
-   |**IObjectControl**|Fournit à votre objet l’accès aux trois méthodes [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) : [Activate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled) et [Deactivate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
-   |**IObjectConstruct**|Crée une prise en charge pour l’interface [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct) afin de gérer le passage des paramètres à partir d’autres méthodes ou objets.|
+   |**IObjectControl**|Fournit à votre objet l’accès aux trois méthodes [IObjectControl](/windows/win32/api/comsvcs/nn-comsvcs-iobjectcontrol) : [Activate](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled) et [Deactivate](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
+   |**IObjectConstruct**|Crée une prise en charge pour l’interface [IObjectConstruct](/windows/win32/api/comsvcs/nn-comsvcs-iobjectconstruct) afin de gérer le passage des paramètres à partir d’autres méthodes ou objets.|
 
 - **Transaction**
 

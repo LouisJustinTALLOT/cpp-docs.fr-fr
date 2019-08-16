@@ -2,12 +2,12 @@
 title: Cloud et programmation Web dans Visual C++
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.openlocfilehash: 3f4786d8b17aed2d7faeddf1e2c32a825fd8d0e5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65790358"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498870"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Cloud et programmation Web dans Visual C++
 
@@ -48,11 +48,11 @@ En C++, vous disposez de plusieurs options de connexion web et cloud.
 
   Classe de client HTTP Windows Runtime modélisée sur la classe .NET Framework du même nom dans l'espace de noms System.Web. `HttpClient` prend entièrement en charge le chargement et le téléchargement asynchrones via HTTP, ainsi que les filtres de pipeline qui permettent l'insertion de gestionnaires HTTP personnalisés dans le pipeline. Le Kit de développement logiciel (SDK) Windows inclut des exemples de filtres pour les connexions réseau limitées, l'authentification OAuth et bien plus encore. Pour les applications qui ciblent seulement UWP, nous vous recommandons d’utiliser la classe `Windows::Web:HttpClient`.
 
-- [Interface IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
+- [Interface IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
   Fournit une interface COM native que vous pouvez utiliser dans les applications Windows Runtime ou les applications Windows Desktop pour vous connecter à Internet via HTTP, et émettre des commandes GET et PUT, et d’autres commandes HTTP. Pour plus d’informations, consultez [Procédure pas à pas : Connexion à l’aide de tâches et de requêtes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
-- [Windows Internet (WinInet)](/windows/desktop/WinInet/portal)
+- [Windows Internet (WinInet)](/windows/win32/WinInet/portal)
 
   API Windows que vous pouvez utiliser dans les applications de bureau Windows pour vous connecter à Internet.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: 2eb899e66acbadbe45aae2c8adbb356bf4730191
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 80b95225a277a7985c30e5ea453597b06e501753
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915248"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513309"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT, structure
 
@@ -31,7 +31,7 @@ typedef struct {
 ```
 
 *hdr*<br/>
-Identifie l’outil qui a besoin de texte. Le seul membre de cette structure dont vous pouvez avoir besoin est l’ID de commande du contrôle. L’ID de commande du contrôle se trouve dans le membre *idFrom* de la structure **NMHDR** , accessible à l' `hdr.idFrom`aide de la syntaxe. Consultez [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) pour une discussion sur les membres de la structure **NMHDR** .
+Identifie l’outil qui a besoin de texte. Le seul membre de cette structure dont vous pouvez avoir besoin est l’ID de commande du contrôle. L’ID de commande du contrôle se trouve dans le membre *idFrom* de la structure **NMHDR** , accessible à l' `hdr.idFrom`aide de la syntaxe. Consultez [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) pour une discussion sur les membres de la structure **NMHDR** .
 
 *lpszText*<br/>
 Adresse d’une chaîne devant recevoir le texte d’un outil.

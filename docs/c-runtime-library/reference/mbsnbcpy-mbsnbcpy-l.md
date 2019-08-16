@@ -33,16 +33,16 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 1f22e8066b5b32feef642b01ad82955935a450e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9940146e46990c91a49478a0450d5ff489e51bc5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285571"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499844"
 ---
-# <a name="mbsnbcpy-mbsnbcpyl"></a>_mbsnbcpy, _mbsnbcpy_l
+# <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy, _mbsnbcpy_l
 
-Copies **n** octets d’une chaîne en une chaîne de destination. Des versions plus sécurisées de ces fonctions sont disponibles (consultez [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md)).
+Copie **n** octets d’une chaîne dans une chaîne de destination. Des versions plus sécurisées de ces fonctions sont disponibles (consultez [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md)).
 
 > [!IMPORTANT]
 > Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -96,14 +96,14 @@ Paramètres régionaux à utiliser.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbsnbcpy** fonction copies *nombre* octets à partir de *strSource* à *strDest*. Si *nombre* dépasse la taille de *strDest* ou les chaînes source et de destination se chevauchent, le comportement de **_mbsnbcpy** n’est pas défini.
+La fonction **_mbsnbcpy** copie le *nombre* d’octets de *strSource* vers *strDest*. Si *Count* dépasse la taille de *strDest* ou que les chaînes source et de destination se chevauchent, le comportement de **_mbsnbcpy** n’est pas défini.
 
-Si *strSource* ou *strDest* est un pointeur null, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **NULL** et définit **errno** à **EINVAL**.
+Si *strSource* ou *strDest* est un pointeur null, cette fonction appelle le gestionnaire de paramètre non valide comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne la **valeur null** et définit **errno** sur **EINVAL**.
 
-La valeur de sortie est affectée par la valeur de la **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions sont identiques, sauf que celles qui n’ont pas la **_l** suffixe utiliser les paramètres régionaux actuels et les versions qui ont le **_l** suffixe utilisent à la place les paramètres régionaux du passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations [, consultez setlocale, _wsetlocale](setlocale-wsetlocale.md) . Les versions de ces fonctions sont identiques, sauf que celles qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels et que les versions qui ont le suffixe **_L** utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent servir à exécuter du code arbitraire émanant d'une personne malveillante, ce qui peut se traduire par une élévation de privilèges injustifiée et compromettre le système. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent servir à exécuter du code arbitraire émanant d'une personne malveillante, ce qui peut se traduire par une élévation de privilèges injustifiée et compromettre le système. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et plus sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: ccd500547bdcf65e922f7b5e5ca8d30e0423933d
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: d348cf7aac57ce213e4d3f602501d12cee8e20d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866189"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505444"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar, classe
 
@@ -120,7 +120,7 @@ dans Spécifie le texte à afficher sur le rebar. Le texte ne fait pas partie de
 [in, out] Spécifie l’image bitmap à afficher sur l’arrière-plan du Rebar.
 
 *dwStyle*<br/>
-dans Contient le style à appliquer à la bande. Pour obtenir la liste complète des styles de bande, consultez la `fStyle` Description de dans la structure [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) dans la documentation SDK Windows.
+dans Contient le style à appliquer à la bande. Pour obtenir la liste complète des styles de bande, consultez la `fStyle` Description de dans la structure [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) dans la documentation SDK Windows.
 
 *clrFore*<br/>
 dans Représente la couleur de premier plan du Rebar.
@@ -150,7 +150,7 @@ BOOL Create(
 [in, out] Pointeur vers la fenêtre parente de ce contrôle rebar.
 
 *dwCtrlStyle*<br/>
-dans Spécifie le style du contrôle rebar. La valeur de style par défaut est **RBS_BANDBORDERS**, qui affiche des lignes étroites pour séparer les bandes adjacentes sur le contrôle rebar. Pour obtenir la liste des styles valides, consultez [styles de contrôle rebar](/windows/desktop/Controls/rebar-control-styles) dans la documentation SDK Windows.
+dans Spécifie le style du contrôle rebar. La valeur de style par défaut est **RBS_BANDBORDERS**, qui affiche des lignes étroites pour séparer les bandes adjacentes sur le contrôle rebar. Pour obtenir la liste des styles valides, consultez [styles de contrôle rebar](/windows/win32/Controls/rebar-control-styles) dans la documentation SDK Windows.
 
 *dwStyle*<br/>
 dans Style de fenêtre du contrôle rebar. Pour obtenir la liste des styles valides, consultez [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).

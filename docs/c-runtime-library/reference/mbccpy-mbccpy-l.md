@@ -34,14 +34,14 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: 852097ebea41ef99b1a53f7bc344eb0c08911a4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d0711a98813565e945dad1d0e998847029668c2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156835"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499891"
 ---
-# <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
+# <a name="_mbccpy-_mbccpy_l"></a>_mbccpy, _mbccpy_l
 
 Copier un caractère multioctet d’une chaîne vers une autre chaîne. Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [_mbccpy_s, _mbccpy_s_l](mbccpy-s-mbccpy-s-l.md).
 
@@ -75,13 +75,13 @@ Paramètres régionaux à utiliser.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbccpy** fonction copie un caractère multioctet depuis *src* à *dest*.
+La fonction **_mbccpy** copie un caractère multioctet de *src* vers *dest*.
 
-Cette fonction valide ses paramètres. Si **_mbccpy** est passée un pointeur null pour *dest* ou *src*, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL**.
+Cette fonction valide ses paramètres. Si **_mbccpy** reçoit un pointeur null pour *dest* ou *src*, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL**.
 
-**_mbccpy** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux. **_mbccpy_l** est identique à **_mbccpy** , à ceci près que **_mbccpy_l** utilise les paramètres régionaux passé pour n’importe quel comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_mbccpy** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux. **_mbccpy_l** est identique à **_mbccpy** , sauf que **_mbccpy_l** utilise les paramètres régionaux passés pour tout comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-**Remarque relative à la sécurité** Utilisez une chaîne se terminant par un caractère Null. La chaîne ne doit pas dépasser la taille de la mémoire tampon de destination. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns). Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée.
+**Remarque relative à la sécurité** Utilisez une chaîne se terminant par un caractère Null. La chaîne ne doit pas dépasser la taille de la mémoire tampon de destination. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns). Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

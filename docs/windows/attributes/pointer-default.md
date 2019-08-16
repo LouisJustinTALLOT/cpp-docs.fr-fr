@@ -1,21 +1,21 @@
 ---
-title: pointer_default (C++ attribut COM)
+title: pointer_default (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pointer_default
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c70c372e5f1c3a9c2f620a1fa3505fb9d0436e79
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407508"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514259"
 ---
-# <a name="pointerdefault"></a>pointer_default
+# <a name="pointer_default"></a>pointer_default
 
-Spécifie l’attribut de pointeur par défaut pour tous les pointeurs, à l’exception des pointeurs de niveau supérieur qui s’affichent dans les listes de paramètres.
+Spécifie l’attribut de pointeur par défaut pour tous les pointeurs, à l’exception des pointeurs de niveau supérieur qui apparaissent dans les listes de paramètres.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ Spécifie l’attribut de pointeur par défaut pour tous les pointeurs, à l’e
 ### <a name="parameters"></a>Paramètres
 
 *value*<br/>
-Une valeur qui décrit le type de pointeur : **ptr**, **ref**, ou **unique**.
+Valeur qui décrit le type de pointeur: **ptr**, **ref**ou **unique**.
 
 ## <a name="remarks"></a>Notes
 
-Le **pointer_default** C++ attribut a les mêmes fonctionnalités que le [pointer_default](/windows/desktop/Midl/pointer-default) attribut MIDL.
+L’attribut **pointer_default** C++ a les mêmes fonctionnalités que l’attribut MIDL [pointer_default](/windows/win32/Midl/pointer-default) .
 
 ## <a name="example"></a>Exemple
 
-Consultez l’exemple de [defaultvalue](defaultvalue.md) pour un exemple d’utilisation de **pointer_default**.
+Pour obtenir un exemple d’utilisation de **pointer_default**, consultez l’exemple correspondant à [DefaultValue](defaultvalue.md) .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -44,8 +44,8 @@ Consultez l’exemple de [defaultvalue](defaultvalue.md) pour un exemple d’uti
 |-|-|
 |**S'applique à**|**interface**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

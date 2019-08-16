@@ -26,14 +26,14 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: c02d1a636db75b4a26891a93fa20327b7430443d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13ac8ad139cc12310663fbd23a21a461cd207236
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156614"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499729"
 ---
-# <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
+# <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
 Convertir un caractère multioctet en un caractère large correspondant.
 
@@ -56,7 +56,7 @@ int _mbtowc_l(
 ### <a name="parameters"></a>Paramètres
 
 *wchar*<br/>
-Adresse d’un caractère large (type **wchar_t**).
+Adresse d’un caractère élargi (type **wchar_t**).
 
 *mbchar*<br/>
 Adresse d'une séquence d'octets (un caractère multioctet).
@@ -69,11 +69,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si **mbchar** n’est pas **NULL** et si l’objet qui *mbchar* pointe vers les formulaires un caractère multioctet valide, **mbtowc** retourne la longueur de octets du caractère multioctet. Si *mbchar* est **NULL** ou l’objet qu’il désigne est un caractère null de caractères larges (L '\0'), la fonction retourne 0. Si l’objet qui *mbchar* pointe vers ne forment pas un caractère multioctet valide au sein du premier *nombre* caractères, elle retourne -1.
+Si **mbchar** n’a pas la **valeur null** et que l’objet qui *mbchar* pointe vers forme un caractère multioctet valide, **mbtowc** retourne la longueur, en octets, du caractère multioctet. Si *mbchar* a la **valeur null** ou que l’objet vers lequel il pointe est un caractère null à caractères larges (L' \ 0 '), la fonction retourne 0. Si l’objet vers lequel pointe *mbchar* ne forme pas un caractère multioctet valide dans les premiers caractères, elle retourne-1.
 
 ## <a name="remarks"></a>Notes
 
-Le **mbtowc** fonction convertit *nombre* ou octets désignés par *mbchar*si *mbchar* n’est pas **NULL**, à un caractère large correspondant. **mbtowc** stocke le caractère large résultant dans *wchar,* si *wchar* n’est pas **NULL**. **mbtowc** n’examine pas plus de **MB_CUR_MAX** octets. **mbtowc** utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux ; **_mbtowc_l** est identique, sauf qu’elle utilise les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La fonction **mbtowc** convertit le *nombre* ou moins d’octets pointés par *mbchar*, si *mbchar* n’est pas **null**, en un caractère élargi correspondant. **mbtowc** stocke le caractère élargi résultant à *WCHAR,* si *WCHAR* n’est pas **null**. **mbtowc** n’examine pas plus de **MB_CUR_MAX** octets. **mbtowc** utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux; **_mbtowc_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -147,7 +147,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [Interprétation des séquences de caractères multi-octets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

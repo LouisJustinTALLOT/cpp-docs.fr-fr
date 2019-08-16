@@ -1,5 +1,5 @@
 ---
-title: CEditView, classe
+title: Classe CEditView
 ms.date: 11/04/2016
 f1_keywords:
 - CEditView
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: 3ab276e83e8642aa5de2fd96305cb6d7b648fc40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9b7dea980e607c776e2d50c679042c765080fdb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164173"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506728"
 ---
-# <a name="ceditview-class"></a>CEditView, classe
+# <a name="ceditview-class"></a>Classe CEditView
 
 Type de classe d'affichage qui fournit les fonctionnalités d'un contrôle d'édition Windows et peut être utilisé pour implémenter des fonctionnalités d'éditeur de texte simples.
 
@@ -63,7 +63,7 @@ class CEditView : public CCtrlView
 
 |Nom|Description|
 |----------|-----------------|
-|[CEditView::CEditView](#ceditview)|Construit un objet de type `CEditView`.|
+|[CEditView:: CEditView](#ceditview)|Construit un objet de type `CEditView`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -71,62 +71,62 @@ class CEditView : public CCtrlView
 |----------|-----------------|
 |[CEditView::FindText](#findtext)|Recherche une chaîne dans le texte.|
 |[CEditView::GetBufferLength](#getbufferlength)|Obtient la longueur de la mémoire tampon de caractères.|
-|[CEditView::GetEditCtrl](#geteditctrl)|Fournit l’accès à la `CEdit` partie d’un `CEditView` objet (contrôle d’édition des Windows).|
-|[CEditView::GetPrinterFont](#getprinterfont)|Récupère la police d’imprimante actuelle.|
-|[CEditView::GetSelectedText](#getselectedtext)|Récupère le texte sélectionné.|
+|[CEditView::GetEditCtrl](#geteditctrl)|Fournit l’accès à `CEdit` la partie d' `CEditView` un objet (le contrôle d’édition Windows).|
+|[CEditView:: GetPrinterFont](#getprinterfont)|Récupère la police actuelle de l’imprimante.|
+|[CEditView::GetSelectedText](#getselectedtext)|Récupère la sélection de texte actuelle.|
 |[CEditView::LockBuffer](#lockbuffer)|Verrouille la mémoire tampon.|
 |[CEditView::PrintInsideRect](#printinsiderect)|Restitue le texte à l’intérieur d’un rectangle donné.|
-|[CEditView::SerializeRaw](#serializeraw)|Sérialise un `CEditView` objet sur le disque en tant que texte brut.|
-|[CEditView::SetPrinterFont](#setprinterfont)|Définit une nouvelle police d’imprimante.|
-|[CEditView::SetTabStops](#settabstops)|Jeux de tabulations pour la capture d’écran et l’impression.|
+|[CEditView::SerializeRaw](#serializeraw)|Sérialise un objet `CEditView` sur le disque sous forme de texte brut.|
+|[CEditView:: SetPrinterFont](#setprinterfont)|Définit une nouvelle police d’imprimante.|
+|[CEditView:: SetTabStops](#settabstops)|Définit des taquets de tabulation pour l’affichage à l’écran et l’impression.|
 |[CEditView::UnlockBuffer](#unlockbuffer)|Déverrouille la mémoire tampon.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
 |Nom|Description|
 |----------|-----------------|
-|[CEditView::OnFindNext](#onfindnext)|Recherche l’occurrence suivante d’une chaîne de texte.|
-|[CEditView::OnReplaceAll](#onreplaceall)|Remplace toutes les occurrences d’une chaîne donnée par une nouvelle chaîne.|
+|[CEditView:: OnFindNext](#onfindnext)|Recherche l’occurrence suivante d’une chaîne de texte.|
+|[CEditView:: OnReplaceAll](#onreplaceall)|Remplace toutes les occurrences d’une chaîne donnée par une nouvelle chaîne.|
 |[CEditView::OnReplaceSel](#onreplacesel)|Remplace la sélection actuelle.|
-|[CEditView::OnTextNotFound](#ontextnotfound)|Appelé lorsqu’une opération de recherche ne correspond à n’importe quel texte supplémentaire.|
+|[CEditView:: OnTextNotFound](#ontextnotfound)|Appelé lorsqu’une opération de recherche ne parvient pas à faire correspondre un texte supplémentaire.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CEditView::dwStyleDefault](#dwstyledefault)|Style par défaut pour les objets de type `CEditView`.|
+|[CEditView::dwStyleDefault](#dwstyledefault)|Style par défaut pour les objets `CEditView`de type.|
 
 ## <a name="remarks"></a>Notes
 
-Le `CEditView` classe fournit les fonctions supplémentaires suivantes :
+La `CEditView` classe fournit les fonctions supplémentaires suivantes:
 
-- Imprimer.
+- Étendue.
 
 - Rechercher et remplacer.
 
-Étant donné que classe `CEditView` est un dérivé de la classe `CView`, objets de la classe `CEditView` peut être utilisé avec des documents et des modèles de document.
+Étant donné `CEditView` que la classe est une `CView`dérivée de la `CEditView` classe, les objets de la classe peuvent être utilisés avec des documents et des modèles de document.
 
-Chaque `CEditView` texte du contrôle est conservé dans son propre objet de mémoire globale. Votre application peut avoir un nombre quelconque de `CEditView` objets.
+Le `CEditView` texte de chaque contrôle est conservé dans son propre objet de mémoire globale. Votre application peut avoir un nombre quelconque `CEditView` d’objets.
 
-Créer des objets de type `CEditView` si vous souhaitez une fenêtre d’édition avec les fonctionnalités répertoriées ci-dessus, ou si vous souhaitez que les fonctionnalités de l’éditeur de texte simple. Un `CEditView` objet peut occuper la zone cliente d’une fenêtre. Dériver vos propres classes de `CEditView` pour ajouter ou modifier les fonctionnalités de base, ou pour déclarer des classes qui peuvent être ajoutés à un modèle de document.
+Créer des objets de `CEditView` type si vous souhaitez une fenêtre d’édition avec la fonctionnalité ajoutée indiquée ci-dessus, ou si vous souhaitez une fonctionnalité d’éditeur de texte simple. Un `CEditView` objet peut occuper la totalité de la zone cliente d’une fenêtre. Dérivez vos propres `CEditView` classes à partir de pour ajouter ou modifier les fonctionnalités de base, ou pour déclarer des classes qui peuvent être ajoutées à un modèle de document.
 
-L’implémentation par défaut de la classe `CEditView` gère les commandes suivantes : ID_EDIT_SELECT_ALL ID_EDIT_FIND, ID_EDIT_REPLACE, ID_EDIT_REPEAT et ID_FILE_PRINT.
+L’implémentation par défaut de `CEditView` la classe gère les commandes suivantes: ID_EDIT_SELECT_ALL, ID_EDIT_FIND, ID_EDIT_REPLACE, ID_EDIT_REPEAT et ID_FILE_PRINT.
 
-La limite de caractères par défaut pour `CEditView` est (1024 \* 1024-1 = 1048575). Cela peut être modifié en appelant la fonction EM_LIMITTEXT du contrôle d’édition sous-jacent. Toutefois, les limites sont différentes selon le système d’exploitation et le type de modifier le contrôle (unique ou multiligne). Pour plus d’informations sur ces limites, consultez [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext).
+La limite de caractères par `CEditView` défaut pour est \* (1024 1024-1 = 1048575). Cela peut être modifié en appelant la fonction EM_LIMITTEXT du contrôle d’édition sous-jacent. Toutefois, les limites sont différentes selon le système d’exploitation et le type de contrôle d’édition (simple ou multiligne). Pour plus d’informations sur ces limites, consultez [EM_LIMITTEXT](/windows/win32/Controls/em-limittext).
 
-Pour modifier cette limite dans votre contrôle, substituez le `OnCreate()` fonctionner pour votre `CEditView` classe et d’insérer la ligne de code suivante :
+Pour modifier cette limite dans votre contrôle, remplacez la `OnCreate()` fonction de votre `CEditView` classe et insérez la ligne de code suivante:
 
 [!code-cpp[NVC_MFCDocView#65](../../mfc/codesnippet/cpp/ceditview-class_1.cpp)]
 
-Objets de type `CEditView` (ou des types dérivés de `CEditView`) présentent les limitations suivantes :
+Les objets de `CEditView` type (ou de types `CEditView`dérivés de) présentent les limitations suivantes:
 
-- `CEditView` n’implémente pas la valeur true ce que vous voyez est ce que vous obtenez modification (WYSIWYG). S’il existe un choix entre la lisibilité à l’écran et la sortie imprimée correspondant, `CEditView` opte pour une meilleure lisibilité de l’écran.
+- `CEditView`n’implémente pas true ce que vous voyez est la modification (WYSIWYG) de ce que vous obtenez. Lorsqu’il existe un choix entre la lisibilité à l’écran et la sortie imprimée `CEditView` correspondante, opte pour la lisibilité de l’écran.
 
-- `CEditView` pouvez afficher du texte dans une police uniquement. Aucune mise en forme du caractère spécial n’est pris en charge. Consultez la classe [CRichEditView](../../mfc/reference/cricheditview-class.md) pour davantage de fonctionnalités.
+- `CEditView`peut afficher du texte dans une seule police. Aucune mise en forme de caractères spéciaux n’est prise en charge. Consultez la classe [CRichEditView](../../mfc/reference/cricheditview-class.md) pour obtenir des fonctionnalités plus avancées.
 
-- La quantité de texte un `CEditView` peut contenir est limité. Les limites sont les mêmes que pour le `CEdit` contrôle.
+- La quantité de texte qu' `CEditView` un peut contenir est limitée. Les limites sont les mêmes que pour le `CEdit` contrôle.
 
-Pour plus d’informations sur `CEditView`, consultez [dérivées les Classes d’affichage disponibles dans MFC](../../mfc/derived-view-classes-available-in-mfc.md).
+Pour plus d’informations `CEditView`sur, consultez [classes de vue dérivées disponibles dans MFC](../../mfc/derived-view-classes-available-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -144,7 +144,7 @@ Pour plus d’informations sur `CEditView`, consultez [dérivées les Classes d�
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxext.h
+**En-tête:** afxext. h
 
 ##  <a name="ceditview"></a>  CEditView::CEditView
 
@@ -156,11 +156,11 @@ CEditView();
 
 ### <a name="remarks"></a>Notes
 
-Après la construction de l’objet, vous devez appeler la [CWnd::Create](../../mfc/reference/cwnd-class.md#create) fonctionner avant que le contrôle d’édition est utilisé. Si vous dérivez une classe de `CEditView` et l’ajouter au modèle en utilisant `CWinApp::AddDocTemplate`, le framework appelle les deux cet constructeur et le `Create` (fonction).
+Après avoir construit l’objet, vous devez appeler la fonction [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) avant d’utiliser le contrôle d’édition. Si vous dérivez une `CEditView` classe de et l’ajoutez au modèle `CWinApp::AddDocTemplate`à l’aide de, le Framework appelle à `Create` la fois ce constructeur et la fonction.
 
 ##  <a name="dwstyledefault"></a>  CEditView::dwStyleDefault
 
-Contient le style par défaut de la `CEditView` objet.
+Contient le style par défaut de `CEditView` l’objet.
 
 ```
 static const DWORD dwStyleDefault;
@@ -168,11 +168,11 @@ static const DWORD dwStyleDefault;
 
 ### <a name="remarks"></a>Notes
 
-Passer ce membre statique en tant que le *dwStyle* paramètre de la `Create` fonction pour obtenir le style par défaut pour le `CEditView` objet.
+Transmettez ce membre static en tant que paramètre dwStyle `Create` de la fonction pour obtenir le style par `CEditView` défaut de l’objet.
 
 ##  <a name="findtext"></a>  CEditView::FindText
 
-Appelez le `FindText` (fonction) pour rechercher le `CEditView` mémoire tampon de texte de l’objet.
+Appelez la `FindText` fonction pour rechercher la `CEditView` mémoire tampon de texte de l’objet.
 
 ```
 BOOL FindText(
@@ -184,27 +184,27 @@ BOOL FindText(
 ### <a name="parameters"></a>Paramètres
 
 *lpszFind*<br/>
-Le texte à rechercher.
+Texte à rechercher.
 
 *bNext*<br/>
-Spécifie la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSE, le sens de la recherche est vers le début de la mémoire tampon.
+Spécifie la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSe, le sens de la recherche est dirigé vers le début de la mémoire tampon.
 
 *bCase*<br/>
-Spécifie si la recherche respecte la casse. Si la valeur est TRUE, la recherche respecte la casse. Si la valeur est FALSE, la recherche n’est pas sensible à la casse.
+Spécifie si la recherche respecte la casse. Si la valeur est TRUE, la recherche respecte la casse. Si la valeur est FALSe, la recherche ne respecte pas la casse.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le texte recherché est trouvé ; sinon 0.
+Différent de zéro si le texte recherché est trouvé; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction recherche dans la mémoire tampon pour le texte spécifié par le texte *lpszFind*, en commençant à la sélection actuelle, dans la direction spécifiée par *bsuivant*et respectant la casse spécifiée par *bCase*. Si le texte est trouvé, il définit la sélection sur le texte trouvé et retourne une valeur différente de zéro. Si le texte est introuvable, la fonction retourne 0.
+Cette fonction recherche le texte spécifié par *lpszFind*dans le texte de la mémoire tampon, en commençant à la sélection actuelle, dans la direction spécifiée par *Bnext*, et avec le respect de la casse spécifié par *bCase*. Si le texte est trouvé, il définit la sélection sur le texte trouvé et retourne une valeur différente de zéro. Si le texte est introuvable, la fonction retourne 0.
 
-Normalement, vous n’avez pas besoin d’appeler le `FindText` de fonction, sauf si vous remplacez `OnFindNext`, qui appelle `FindText`.
+Normalement, vous n’avez pas besoin d' `FindText` appeler la fonction, sauf `OnFindNext`si vous substituez, qui appelle `FindText`.
 
 ##  <a name="getbufferlength"></a>  CEditView::GetBufferLength
 
-Appelez cette fonction membre pour obtenir le nombre de caractères actuellement en mémoire tampon du contrôle d’édition, non compris le terminateur null.
+Appelez cette fonction membre pour obtenir le nombre de caractères actuellement dans la mémoire tampon du contrôle d’édition, à l’exclusion de la marque de fin null.
 
 ```
 UINT GetBufferLength() const;
@@ -212,11 +212,11 @@ UINT GetBufferLength() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La longueur de la chaîne dans la mémoire tampon.
+Longueur de la chaîne dans la mémoire tampon.
 
 ##  <a name="geteditctrl"></a>  CEditView::GetEditCtrl
 
-Appelez `GetEditCtrl` pour obtenir une référence au contrôle d’édition utilisé par la vue edit.
+Appelez `GetEditCtrl` pour obtenir une référence au contrôle d’édition utilisé par la vue Edit.
 
 ```
 CEdit& GetEditCtrl() const;
@@ -228,18 +228,18 @@ Référence à un objet `CEdit`.
 
 ### <a name="remarks"></a>Notes
 
-Ce contrôle est de type [CEdit](../../mfc/reference/cedit-class.md), de sorte que vous pouvez manipuler le contrôle d’édition Windows directement à l’aide de la `CEdit` fonctions membres.
+Ce contrôle étant de type [CEdit](../../mfc/reference/cedit-class.md), vous pouvez manipuler le contrôle d’édition Windows directement à l' `CEdit` aide des fonctions membres.
 
 > [!CAUTION]
->  À l’aide de la `CEdit` de l’objet peut changer l’état de la Windows sous-jacente contrôle edit. Par exemple, vous ne devez pas modifier les paramètres de tabulation définis à l’aide de la [CEdit::SetTabStops](../../mfc/reference/cedit-class.md#settabstops) fonctionner car `CEditView` met en cache de ces paramètres pour une utilisation à la fois dans le contrôle d’édition et l’impression. Au lieu de cela, utilisez [CEditView::SetTabStops](#settabstops).
+>  L’utilisation `CEdit` de l’objet peut modifier l’état du contrôle d’édition Windows sous-jacent. Par exemple, vous ne devez pas modifier les paramètres de tabulation à l’aide de la fonction `CEditView` [CEdit:: SetTabStops](../../mfc/reference/cedit-class.md#settabstops) car met en cache ces paramètres pour les utiliser dans le contrôle d’édition et dans l’impression. Au lieu de cela, utilisez [CEditView:: SetTabStops](#settabstops).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCDocView#66](../../mfc/codesnippet/cpp/ceditview-class_2.cpp)]
 
 ##  <a name="getprinterfont"></a>  CEditView::GetPrinterFont
 
-Appelez `GetPrinterFont` pour obtenir un pointeur vers un [CFont](../../mfc/reference/cfont-class.md) objet qui décrit la police d’imprimante actuelle.
+Appelez `GetPrinterFont` pour obtenir un pointeur vers un objet [CFont](../../mfc/reference/cfont-class.md) qui décrit la police d’imprimante actuelle.
 
 ```
 CFont* GetPrinterFont() const;
@@ -247,17 +247,17 @@ CFont* GetPrinterFont() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers un `CFont` objet qui spécifie la police actuelle de l’imprimante ; NULL si la police d’imprimante n’a pas été définie. Le pointeur peut être temporaire et ne doit pas être stocké pour une utilisation ultérieure.
+Pointeur vers un `CFont` objet qui spécifie la police actuelle de l’imprimante; NULL si la police de l’imprimante n’a pas été définie. Le pointeur peut être temporaire et ne doit pas être stocké pour une utilisation ultérieure.
 
 ### <a name="remarks"></a>Notes
 
-Si la police d’imprimante n'a pas été définie, la valeur par défaut de l’impression de comportement de la `CEditView` classe consiste à imprimer à l’aide de la même police utilisée pour l’affichage.
+Si la police de l’imprimante n’a pas été définie, le comportement d' `CEditView` impression par défaut de la classe consiste à imprimer à l’aide de la même police que celle utilisée pour l’affichage.
 
-Utilisez cette fonction pour déterminer la police d’imprimante actuelle. Si elle n’est pas la police d’imprimante de votre choix, utilisez [CEditView::SetPrinterFont](#setprinterfont) pour le modifier.
+Utilisez cette fonction pour déterminer la police actuelle de l’imprimante. S’il ne s’agit pas de la police d’imprimante souhaitée, utilisez [CEditView:: SetPrinterFont](#setprinterfont) pour le modifier.
 
 ##  <a name="getselectedtext"></a>  CEditView::GetSelectedText
 
-Appelez `GetSelectedText` pour copier le texte sélectionné dans un `CString` objet, jusqu'à la fin de la sélection ou le caractère qui précède le premier caractère de retour chariot dans la sélection.
+Appelez `GetSelectedText` pour copier le texte sélectionné dans un `CString` objet, jusqu’à la fin de la sélection ou le caractère qui précède le premier caractère de retour chariot dans la sélection.
 
 ```
 void GetSelectedText(CString& strResult) const;
@@ -266,7 +266,7 @@ void GetSelectedText(CString& strResult) const;
 ### <a name="parameters"></a>Paramètres
 
 *strResult*<br/>
-Une référence à la `CString` objet devant recevoir le texte sélectionné.
+Référence à l' `CString` objet qui doit recevoir le texte sélectionné.
 
 ##  <a name="lockbuffer"></a>  CEditView::LockBuffer
 
@@ -280,9 +280,9 @@ LPCTSTR LockBuffer() const;
 
 Pointeur vers la mémoire tampon du contrôle d’édition.
 
-##  <a name="onfindnext"></a>  CEditView::OnFindNext
+##  <a name="onfindnext"></a>CEditView:: OnFindNext
 
-Recherche dans la mémoire tampon pour le texte spécifié par le texte *lpszFind*, dans la direction spécifiée par *bsuivant*, en respectant la casse spécifiée par *bCase*.
+Recherche le texte spécifié par *lpszFind*dans le texte de la mémoire tampon, dans la direction spécifiée par *Bnext*, avec le respect de la casse spécifié par *bCase*.
 
 ```
 virtual void OnFindNext(
@@ -294,23 +294,23 @@ virtual void OnFindNext(
 ### <a name="parameters"></a>Paramètres
 
 *lpszFind*<br/>
-Le texte à rechercher.
+Texte à rechercher.
 
 *bNext*<br/>
-Spécifie la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSE, le sens de la recherche est vers le début de la mémoire tampon.
+Spécifie la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSe, le sens de la recherche est dirigé vers le début de la mémoire tampon.
 
 *bCase*<br/>
-Spécifie si la recherche respecte la casse. Si la valeur est TRUE, la recherche respecte la casse. Si la valeur est FALSE, la recherche n’est pas sensible à la casse.
+Spécifie si la recherche respecte la casse. Si la valeur est TRUE, la recherche respecte la casse. Si la valeur est FALSe, la recherche ne respecte pas la casse.
 
 ### <a name="remarks"></a>Notes
 
-La recherche commence au début de la sélection actuelle et s’effectue via un appel à [FindText](#findtext). Dans l’implémentation par défaut, `OnFindNext` appels [OnTextNotFound](#ontextnotfound) si le texte est introuvable.
+La recherche commence au début de la sélection actuelle et est accomplie par un appel à [TexteCherché](#findtext). Dans l’implémentation par défaut `OnFindNext` , appelle [OnTextNotFound](#ontextnotfound) si le texte est introuvable.
 
-Substituer `OnFindNext` pour modifier la façon dont un `CEditView`-objet dérivé recherche du texte. `CEditView` appels `OnFindNext` quand l’utilisateur choisit le bouton suivant dans la boîte de dialogue de recherche standard.
+Substituez `OnFindNext` pour modifier la façon dont `CEditView`un objet dérivé de recherche du texte. `CEditView`appelle `OnFindNext` lorsque l’utilisateur clique sur le bouton suivant de la boîte de dialogue Rechercher standard.
 
 ##  <a name="onreplaceall"></a>  CEditView::OnReplaceAll
 
-`CEditView` appels `OnReplaceAll` lorsque l’utilisateur sélectionne le bouton Remplacer tout dans la boîte de dialogue Remplacer standard.
+`CEditView`appelle `OnReplaceAll` lorsque l’utilisateur sélectionne le bouton remplacer tout dans la boîte de dialogue remplacer standard.
 
 ```
 virtual void OnReplaceAll(
@@ -322,25 +322,25 @@ virtual void OnReplaceAll(
 ### <a name="parameters"></a>Paramètres
 
 *lpszFind*<br/>
-Le texte à rechercher.
+Texte à rechercher.
 
 *lpszReplace*<br/>
-Texte à remplacer le texte recherché.
+Texte pour remplacer le texte recherché.
 
 *bCase*<br/>
-Spécifie si la recherche est sensible à la casse. Si la valeur est TRUE, la recherche respecte la casse. Si la valeur est FALSE, la recherche n’est pas sensible à la casse.
+Spécifie si la recherche respecte la casse. Si la valeur est TRUE, la recherche respecte la casse. Si la valeur est FALSe, la recherche ne respecte pas la casse.
 
 ### <a name="remarks"></a>Notes
 
-`OnReplaceAll` recherche dans la mémoire tampon pour le texte spécifié par le texte *lpszFind*, en respectant la casse spécifiée par *bCase*. La recherche commence au début de la sélection actuelle. Chaque fois que le texte recherché est trouvé, cette fonction remplace cette occurrence du texte avec le texte spécifié par *lpszReplace*. La recherche s’effectue via un appel à [FindText](#findtext). Dans l’implémentation par défaut, [OnTextNotFound](#ontextnotfound) est appelée si le texte est introuvable.
+`OnReplaceAll`recherche le texte spécifié par *lpszFind*dans le texte de la mémoire tampon, avec le respect de la casse spécifié par *bCase*. La recherche commence au début de la sélection actuelle. Chaque fois que le texte recherché est trouvé, cette fonction remplace cette occurrence du texte par le texte spécifié par *lpszReplace*. La recherche s’effectue à l’aide d’un appel à [TexteCherché](#findtext). Dans l’implémentation par défaut, [OnTextNotFound](#ontextnotfound) est appelé si le texte est introuvable.
 
-Si la sélection actuelle ne correspond pas à *lpszFind*, la sélection est mise à jour pour la première occurrence du texte spécifié par *lpszFind* et une opération de remplacement n’est pas effectuée. Cela permet à l’utilisateur à confirmer que c’est ce qu’il souhaite faire lorsque la sélection ne correspond pas à du texte à remplacer.
+Si la sélection actuelle ne correspond pas à *lpszFind*, la sélection est mise à jour en fonction de la première occurrence du texte spécifié par *lpszFind* et un remplacement n’est pas effectué. Cela permet à l’utilisateur de confirmer que c’est ce qu’il souhaite faire lorsque la sélection ne correspond pas au texte à remplacer.
 
-Substituer `OnReplaceAll` pour modifier la façon dont un `CEditView`-objet dérivé remplace du texte.
+Substituez `OnReplaceAll` pour modifier la façon dont `CEditView`un objet dérivé de remplace le texte.
 
 ##  <a name="onreplacesel"></a>  CEditView::OnReplaceSel
 
-`CEditView` appels `OnReplaceSel` lorsque l’utilisateur sélectionne le bouton Remplacer dans la boîte de dialogue Remplacer standard.
+`CEditView`appelle `OnReplaceSel` lorsque l’utilisateur sélectionne le bouton remplacer dans la boîte de dialogue remplacer standard.
 
 ```
 virtual void OnReplaceSel(
@@ -353,26 +353,26 @@ virtual void OnReplaceSel(
 ### <a name="parameters"></a>Paramètres
 
 *lpszFind*<br/>
-Le texte à rechercher.
+Texte à rechercher.
 
 *bNext*<br/>
-Spécifie la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSE, le sens de la recherche est vers le début de la mémoire tampon.
+Spécifie la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSe, le sens de la recherche est dirigé vers le début de la mémoire tampon.
 
 *bCase*<br/>
-Spécifie si la recherche respecte la casse. Si la valeur est TRUE, la recherche respecte la casse. Si la valeur est FALSE, la recherche n’est pas sensible à la casse.
+Spécifie si la recherche respecte la casse. Si la valeur est TRUE, la recherche respecte la casse. Si la valeur est FALSe, la recherche ne respecte pas la casse.
 
 *lpszReplace*<br/>
-Texte à remplacer le texte trouvé.
+Texte pour remplacer le texte trouvé.
 
 ### <a name="remarks"></a>Notes
 
-Après avoir remplacé la sélection, cette fonction recherche le texte dans la mémoire tampon pour l’occurrence suivante du texte spécifié par *lpszFind*, dans la direction spécifiée par *bsuivant*, en respectant la casse spécifié par *bCase*. La recherche s’effectue via un appel à [FindText](#findtext). Si le texte n’est pas trouvé, [OnTextNotFound](#ontextnotfound) est appelée.
+Après avoir remplacé la sélection, cette fonction recherche dans le texte de la mémoire tampon l’occurrence suivante du texte spécifié par *lpszFind*, dans la direction spécifiée par *Bnext*, avec le respect de la casse spécifié par *bCase*. La recherche s’effectue à l’aide d’un appel à [TexteCherché](#findtext). Si le texte est introuvable, [OnTextNotFound](#ontextnotfound) est appelé.
 
-Substituer `OnReplaceSel` pour modifier la façon dont un `CEditView`-objet dérivé remplace le texte sélectionné.
+Substituez `OnReplaceSel` pour modifier la façon dont `CEditView`un objet dérivé de remplace le texte sélectionné.
 
 ##  <a name="ontextnotfound"></a>  CEditView::OnTextNotFound
 
-Remplacez cette fonction pour modifier l’implémentation par défaut, qui appelle la fonction Windows `MessageBeep`.
+Substituez cette fonction pour modifier l’implémentation par défaut, qui appelle la fonction `MessageBeep`Windows.
 
 ```
 virtual void OnTextNotFound(LPCTSTR lpszFind);
@@ -381,11 +381,11 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ### <a name="parameters"></a>Paramètres
 
 *lpszFind*<br/>
-Le texte à rechercher.
+Texte à rechercher.
 
 ##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect
 
-Appelez `PrintInsideRect` à imprimer du texte dans le rectangle spécifié par *rectLayout*.
+Appelez `PrintInsideRect` pour imprimer du texte dans le rectangle spécifié par *rectLayout*.
 
 ```
 UINT PrintInsideRect(
@@ -398,30 +398,30 @@ UINT PrintInsideRect(
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-Pointeur vers le contexte de périphérique d’imprimante.
+Pointeur vers le contexte de périphérique d’impression.
 
 *rectLayout*<br/>
-Référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [structure RECT](/windows/desktop/api/windef/ns-windef-tagrect) en spécifiant le rectangle dans lequel le texte doit être restitué.
+Référence à un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou à une [structure Rect](/windows/win32/api/windef/ns-windef-rect) spécifiant le rectangle dans lequel le texte doit être rendu.
 
 *nIndexStart*<br/>
-Index dans la mémoire tampon du premier caractère doit être restitué.
+Index dans la mémoire tampon du premier caractère à restituer.
 
 *nIndexStop*<br/>
-Index dans la mémoire tampon du caractère suivant le dernier caractère doit être restitué.
+Index dans la mémoire tampon du caractère qui suit le dernier caractère à restituer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’index du caractère suivant à imprimer (autrement dit, le caractère suivant le dernier caractère rendu).
+Index du caractère suivant à imprimer (autrement dit, le caractère qui suit le dernier rendu du caractère).
 
 ### <a name="remarks"></a>Notes
 
-Si le `CEditView` contrôle n’a pas le style ES_AUTOHSCROLL, le texte est encapsulé dans le rectangle de rendu. Si le contrôle n’a pas le style ES_AUTOHSCROLL, le texte est coupé sur le bord droit du rectangle.
+Si le `CEditView` contrôle n’a pas le style ES_AUTOHSCROLL, le texte est encapsulé dans le rectangle de rendu. Si le contrôle a le style ES_AUTOHSCROLL, le texte est coupé au bord droit du rectangle.
 
-Le `rect.bottom` élément de la *rectLayout* objet est modifié afin que les dimensions du rectangle définissent la partie du rectangle d’origine qui est occupé par le texte.
+L' `rect.bottom` élément de l’objet *rectLayout* est modifié de sorte que les dimensions du rectangle définissent la partie du rectangle d’origine occupée par le texte.
 
 ##  <a name="serializeraw"></a>  CEditView::SerializeRaw
 
-Appelez `SerializeRaw` pour avoir un `CArchive` objet lire ou écrire le texte le `CEditView` objet dans un fichier texte.
+Appelez `SerializeRaw` pour `CEditView` que l’objet ait lu ou écrit le texte de l’objet dans un fichier texte. `CArchive`
 
 ```
 void SerializeRaw(CArchive& ar);
@@ -430,15 +430,15 @@ void SerializeRaw(CArchive& ar);
 ### <a name="parameters"></a>Paramètres
 
 *ar*<br/>
-Référence à la `CArchive` objet qui stocke le texte sérialisé.
+Référence à l' `CArchive` objet qui stocke le texte sérialisé.
 
 ### <a name="remarks"></a>Notes
 
-`SerializeRaw` diffère `CEditView`d’implémentation interne de `Serialize` il lit et écrit uniquement le texte, sans faire précéder les données de la description de l’objet.
+`SerializeRaw`diffère de `CEditView`l’implémentation interne de `Serialize` en ce qu’il lit et écrit uniquement le texte, sans les données de description d’objet précédentes.
 
 ##  <a name="setprinterfont"></a>  CEditView::SetPrinterFont
 
-Appelez `SetPrinterFont` pour définir la police d’imprimante pour la police spécifiée par *pFont*.
+Appelez `SetPrinterFont` pour définir la police de l’imprimante avec la police spécifiée par *pFont*.
 
 ```
 void SetPrinterFont(CFont* pFont);
@@ -447,11 +447,11 @@ void SetPrinterFont(CFont* pFont);
 ### <a name="parameters"></a>Paramètres
 
 *pFont*<br/>
-Un pointeur vers un objet de type `CFont`. Si NULL, la police utilisée pour l’impression est basée sur la police d’affichage.
+Pointeur vers un objet de type `CFont`. Si la valeur est NULL, la police utilisée pour l’impression est basée sur la police d’affichage.
 
 ### <a name="remarks"></a>Notes
 
-Si vous souhaitez que votre vue à toujours utiliser une police particulière pour l’impression, incluez un appel à `SetPrinterFont` dans votre classe de `OnPreparePrinting` (fonction). Cette fonction virtuelle est appelée avant l’impression, donc la modification de la police a lieu avant le contenu est imprimé.
+Si vous souhaitez que votre vue utilise toujours une police particulière pour l’impression, incluez un `SetPrinterFont` appel à dans la `OnPreparePrinting` fonction de votre classe. Cette fonction virtuelle est appelée avant l’impression, donc la modification de la police a lieu avant l’impression du contenu de la vue.
 
 ##  <a name="settabstops"></a>  CEditView::SetTabStops
 
@@ -468,13 +468,13 @@ Largeur de chaque taquet de tabulation, en unités de boîte de dialogue.
 
 ### <a name="remarks"></a>Notes
 
-Uniquement une largeur de taquet de tabulation unique est prise en charge. ( `CEdit` objets prennent en charge plusieurs largeurs d’onglet.) Largeurs sont exprimées en unités de boîte de dialogue, ce qui est égal à un quart de la largeur des caractères moyenne (selon les caractères majuscules et minuscules alphabétiques uniquement) de la police utilisée au moment de l’impression ou l’affichage. Vous ne devez pas utiliser `CEdit::SetTabStops` car `CEditView` doit mettre en cache la valeur de taquet de tabulation.
+Seule une largeur de taquet de tabulation unique est prise en charge. ( `CEdit` les objets prennent en charge plusieurs largeurs d’onglets.) Les largeurs sont en unités de boîte de dialogue, qui sont égales à un quart de la largeur moyenne des caractères (en fonction des caractères alphabétiques majuscules et minuscules uniquement) de la police utilisée au moment de l’impression ou de l’affichage. Vous ne devez pas `CEdit::SetTabStops` utiliser `CEditView` car doit mettre en cache la valeur d’arrêt de tabulation.
 
-Cette fonction modifie uniquement les onglets de l’objet pour lequel elle est appelée. Pour modifier l’onglet s’arrête pour chaque `CEditView` objet dans votre application, l’appel de chaque objet `SetTabStops` (fonction).
+Cette fonction modifie uniquement les onglets de l’objet pour lequel elle est appelée. Pour modifier les taquets de tabulation `CEditView` pour chaque objet de votre application, appelez la `SetTabStops` fonction de chaque objet.
 
 ### <a name="example"></a>Exemple
 
-Ce fragment de code définit les taquets de tabulation dans le contrôle à chaque quatrième caractère en mesurant soigneusement la police que le contrôle utilise.
+Ce fragment de code définit les taquets de tabulation dans le contrôle à chaque quatrième caractère en mesurant minutieusement la police utilisée par le contrôle.
 
 [!code-cpp[NVC_MFCDocView#67](../../mfc/codesnippet/cpp/ceditview-class_3.cpp)]
 

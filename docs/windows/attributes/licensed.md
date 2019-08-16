@@ -1,21 +1,21 @@
 ---
-title: Attribut sous licence (C++ COM)
+title: sous licenceC++ (attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.licensed
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 90fba74fb97ce49088145888c3b1925b4ee0829c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c637f9e3f6d99b9f197474f49a1a9843744f38b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409328"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514456"
 ---
 # <a name="licensed"></a>licensed
 
-Indique que l’objet COM auquel il s’applique est concédé sous licence et doit être instanciée à l’aide de `IClassFactory2`.
+Indique que l’objet COM auquel il s’applique est concédé sous licence et doit être instancié à `IClassFactory2`l’aide de.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,7 +25,7 @@ Indique que l’objet COM auquel il s’applique est concédé sous licence et d
 
 ## <a name="remarks"></a>Notes
 
-Le **concédé sous licence** attribut C++ a les mêmes fonctionnalités que le [concédé sous licence](/windows/desktop/Midl/licensed) attribut MIDL.
+L’attribut **sous licence** C++ a les mêmes fonctionnalités que l’attribut MIDL [sous licence](/windows/win32/Midl/licensed) .
 
 ## <a name="example"></a>Exemple
 
@@ -57,7 +57,7 @@ public:
 |**S'applique à**|**class**, **struct**|
 |**Renouvelable**|Non|
 |**Attributs requis**|`coclass`|
-|**Attributs non valides**|Aucun.|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

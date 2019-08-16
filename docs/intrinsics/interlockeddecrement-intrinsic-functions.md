@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: 525c40f4260d59f370f0580d2cb7d9e8f184ee4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43bf7a9b788c176490ec3fe08e370708eaf000ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396754"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509404"
 ---
-# <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement, fonctions intrinsèques
+# <a name="_interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement, fonctions intrinsèques
 
 **Section spécifique à Microsoft**
 
-Fournit la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement) (fonction).
+Fournit la prise en charge intrinsèque du compilateur pour la fonction Win32 SDK Windows [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -114,7 +114,7 @@ La valeur de retour est la valeur décrémentée résultante.
 |`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, x64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
@@ -124,11 +124,11 @@ La fonction `_InterlockedDecrement` opère sur des valeurs entières de 32 bits
 
 Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les fonctions intrinsèques avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agissent pas comme une barrière mémoire.
 
-La variable vers laquelle pointe le paramètre `lpAddend` doit être alignée sur une limite de 32 bits. Dans le cas contraire, cette fonction échoue sur les systèmes x86 multiprocesseurs et les systèmes autres que x86. Pour plus d’informations, consultez [aligner](../cpp/align-cpp.md).
+La variable vers laquelle pointe le paramètre `lpAddend` doit être alignée sur une limite de 32 bits. Dans le cas contraire, cette fonction échoue sur les systèmes x86 multiprocesseurs et les systèmes autres que x86. Pour plus d’informations, consultez [Aligner](../cpp/align-cpp.md).
 
 Ces routines sont disponibles seulement comme fonctions intrinsèques.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // compiler_intrinsics_interlocked.cpp

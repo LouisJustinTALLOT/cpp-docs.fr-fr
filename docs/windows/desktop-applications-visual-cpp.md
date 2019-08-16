@@ -2,18 +2,18 @@
 title: Applications de bureau ( C++visuel)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: a1e302a29e079545f6d12ad544eab4f43e2bd445
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 355102d9d58a8d93d7fb6935528f8fb8c4b534b1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606511"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514755"
 ---
 # <a name="desktop-applications-visual-c"></a>Applications de bureau ( C++visuel)
 
 Une *application* de bureau C++ dans est une application native qui peut accéder à l’ensemble des API Windows et s’exécute dans une fenêtre ou dans la console système. Les applications de C++ Bureau dans peuvent s’exécuter sur Windows XP via Windows 10 (même si Windows XP n’est plus officiellement pris en charge et que de nombreuses API Windows ont été introduites depuis). 
 
-Une application de bureau est distincte d’une application de plateforme Windows universelle (UWP), qui peut s’exécuter sur des PC exécutant Windows 10 et également sur XBox, Windows Phone, Surface Hub et d’autres appareils. Pour plus d’informations sur les ordinateurs de bureau et Les applications UWP, consultez [choisir votre technologie](/windows/desktop/choose-your-technology).
+Une application de bureau est distincte d’une application de plateforme Windows universelle (UWP), qui peut s’exécuter sur des PC exécutant Windows 10 et également sur XBox, Windows Phone, Surface Hub et d’autres appareils. Pour plus d’informations sur les ordinateurs de bureau et Les applications UWP, consultez [choisir votre technologie](/windows/win32/choose-your-technology).
 
 ### <a name="desktop-bridge"></a>Pont Desktop
 
@@ -23,15 +23,15 @@ Dans Visual Studio 2017 version 15,4 et versions ultérieures, vous pouvez crée
 
 ### <a name="terminology"></a>Terminologie
 
-- Une application *Win32* est une application de bureau Windows C++ dans qui peut utiliser des API [Windows C natives et/ou](/windows/desktop/apiindex/windows-api-list) des API de bibliothèque CRT et d’API com, ainsi que des bibliothèques tierces. Une application Win32 qui s’exécute dans une fenêtre exige que le développeur travaille explicitement avec des messages Windows dans une fonction de procédure Windows. Malgré le nom, une application Win32 peut être compilée en tant que binaire 32 bits (x86) ou 64 bits (x64). Dans l’IDE de Visual Studio, les termes x86 et Win32 sont synonymes.
+- Une application *Win32* est une application de bureau Windows C++ dans qui peut utiliser des API [Windows C natives et/ou](/windows/win32/apiindex/windows-api-list) des API de bibliothèque CRT et d’API com, ainsi que des bibliothèques tierces. Une application Win32 qui s’exécute dans une fenêtre exige que le développeur travaille explicitement avec des messages Windows dans une fonction de procédure Windows. Malgré le nom, une application Win32 peut être compilée en tant que binaire 32 bits (x86) ou 64 bits (x64). Dans l’IDE de Visual Studio, les termes x86 et Win32 sont synonymes.
 
-- Le [modèle COM (Component Object Model)](/windows/desktop/com/the-component-object-model) est une spécification qui permet aux programmes écrits dans différents langages de communiquer les uns avec les autres. De nombreux composants Windows sont implémentés en tant qu’objets COM et suivent des règles COM standard pour la création d’objets, la découverte d’interfaces et la destruction d’objets.  L’utilisation d’objets C++ com à partir d’applications de bureau est relativement simple, mais l’écriture de votre propre objet com est plus avancée. La [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) fournit des macros et des fonctions d’assistance qui simplifient le développement com.
+- Le [modèle COM (Component Object Model)](/windows/win32/com/the-component-object-model) est une spécification qui permet aux programmes écrits dans différents langages de communiquer les uns avec les autres. De nombreux composants Windows sont implémentés en tant qu’objets COM et suivent des règles COM standard pour la création d’objets, la découverte d’interfaces et la destruction d’objets.  L’utilisation d’objets C++ com à partir d’applications de bureau est relativement simple, mais l’écriture de votre propre objet com est plus avancée. La [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) fournit des macros et des fonctions d’assistance qui simplifient le développement com.
 
 - Une application MFC est une application de bureau Windows qui utilise la [Microsoft Foundation classes](../mfc/mfc-desktop-applications.md) pour créer l’interface utilisateur. Une application MFC peut également utiliser des composants COM, ainsi que des API CRT et de bibliothèque standard. MFC fournit un wrapper C++ orienté objet étroit sur la boucle de message de fenêtre et les API Windows. MFC est le choix par défaut pour les applications, en particulier les applications de type entreprise, qui possèdent un grand nombre de contrôles d’interface utilisateur ou de contrôles utilisateur personnalisés. MFC fournit des classes d’assistance pratiques pour la gestion des fenêtres, la sérialisation, la manipulation de texte, l’impression et les éléments d’interface utilisateur modernes tels que le ruban. Pour être efficace avec MFC, vous devez être familiarisé avec Win32.
 
 - Une C++application ou un composant/CLI utilise des C++ extensions de syntaxe (telles que C++ autorisées par la norme) pour permettre l’interaction entre .net et du code c++ natif.  Une C++application/CLI peut avoir des composants qui s’exécutent en mode natif et les composants qui s’exécutent sur le .NET Framework avec un accès à la bibliothèque de classes de base .net. C++/CLI est l’option recommandée lorsque vous avez du C++ code natif qui doit utiliser du code écrit dans C# ou Visual Basic. Elle est destinée à être utilisée dans les dll .NET plutôt que dans le code de l’interface utilisateur. Pour plus d’informations, consultez [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
-Toute application de bureau C++ dans peut utiliser C Runtime (CRT) et des classes et des fonctions de bibliothèque standard, des objets com et les fonctions Windows publiques, qui sont collectivement appelées API Windows. Pour une introduction aux applications de bureau Windows C++dans, consultez [prise en main de C++Win32 et ](/windows/desktop/LearnWin32/learn-to-program-for-windows).
+Toute application de bureau C++ dans peut utiliser C Runtime (CRT) et des classes et des fonctions de bibliothèque standard, des objets com et les fonctions Windows publiques, qui sont collectivement appelées API Windows. Pour une introduction aux applications de bureau Windows C++dans, consultez [prise en main de C++Win32 et ](/windows/win32/LearnWin32/learn-to-program-for-windows).
 
 ## <a name="in-this-section"></a>Dans cette section
 
@@ -50,7 +50,7 @@ Toute application de bureau C++ dans peut utiliser C Runtime (CRT) et des classe
 
 |Titre|Description|
 |-----------|-----------------|
-|[Développement Windows](/windows/desktop/index)|Contient des informations sur l'API Windows et COM. (Certaines API Windows et DLL tierces sont implémentées comme objets COM.)|
+|[Développement Windows](/windows/win32/index)|Contient des informations sur l'API Windows et COM. (Certaines API Windows et DLL tierces sont implémentées comme objets COM.)|
 |[Hilo Développement C++ d’applications pour Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Explique comment créer une application de bureau Windows cliente enrichie, qui utilise l’animation Windows et Direct2D pour créer une interface utilisateur de type carrousel.  Ce didacticiel n’a pas été mis à jour depuis Windows 7, mais il fournit toujours une introduction complète à la programmation Win32.|
 |[Vue d’ensemble de la programmation Windows en C++](overview-of-windows-programming-in-cpp.md)|Décrit les principales fonctionnalités de la programmation Windows C++Desktop dans.|
 

@@ -1,5 +1,5 @@
 ---
-title: / Validate-CharSet (valider les caractères compatibles)
+title: /validate-charset (Valider les caractères compatibles)
 ms.date: 02/06/2019
 f1_keywords:
 - /validate-charset
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
-ms.openlocfilehash: 30c818bcb64c2f2ee57c05a4870e7d30afe98cfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2390aa98b9416eb538f529c8c370c888cccf4734
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317079"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498163"
 ---
-# <a name="validate-charset-validate-for-compatible-characters"></a>/ Validate-CharSet (valider les caractères compatibles)
+# <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset (Valider les caractères compatibles)
 
-Valide le fait que le texte du fichier source contient uniquement des caractères qui peut être représentées au format UTF-8.
+Valide que le texte du fichier source contient uniquement des caractères pouvant être représentés en UTF-8.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,19 +26,19 @@ Valide le fait que le texte du fichier source contient uniquement des caractère
 
 ## <a name="remarks"></a>Notes
 
-Vous pouvez utiliser la **/Validate-CharSet** option pour valider que le code source contient uniquement des caractères qui peuvent être représentés dans les deux caractères de code source et de jeu de caractères d’exécution. Cette vérification est activée automatiquement lorsque vous spécifiez **/source-CharSet**, **/Execution-CharSet**, ou **/UTF-8** options du compilateur. Vous pouvez désactiver explicitement cette vérification en spécifiant le **/ valider-charset -** option.
+Vous pouvez utiliser l’option **/Validate-charset** pour vérifier que le code source contient uniquement des caractères qui peuvent être représentés à la fois dans le jeu de caractères source et dans le jeu de caractères d’exécution. Cette vérification est activée automatiquement lorsque vous spécifiez les options du compilateur **/source-charset**, **/Execution-charset**ou **/UTF-8** . Vous pouvez désactiver explicitement cette vérification en spécifiant l’option **/Validate-charset-** .
 
-Par défaut, Visual Studio détecte une marque d’ordre d’octet pour déterminer si le fichier source est encodé au format Unicode, par exemple, UTF-16 ou UTF-8. Si aucune marque d’ordre d’octet n’est trouvé, il part du principe que le fichier source est encodé à l’aide de la page de codes utilisateur actuel, sauf si vous avez spécifié une page de codes à l’aide de **/UTF-8** ou **/source-CharSet** option. Visual Studio vous permet d’enregistrer votre code source C++ à l’aide des plusieurs encodages de caractères. Pour plus d’informations sur les jeux de caractères source et d’exécution, consultez [jeux de caractères](../../cpp/character-sets.md) dans la documentation du langage. Pour une liste de prise en charge les identificateurs de page de code et les noms de jeu de caractères, consultez [Code Page Identifiers](/windows/desktop/Intl/code-page-identifiers).
+Par défaut, Visual Studio détecte une marque d’ordre d’octet pour déterminer si le fichier source est dans un format Unicode encodé, par exemple UTF-16 ou UTF-8. Si aucune marque d’ordre d’octet n’est trouvée, il suppose que le fichier source est encodé à l’aide de la page de codes de l’utilisateur actuel, à moins que vous n’ayez spécifié une page de codes à l’aide de **/UTF-8** ou de l’option **/source-charset** . Visual Studio vous permet d’enregistrer votre C++ code source à l’aide de plusieurs encodages de caractères. Pour plus d’informations sur les jeux de caractères source et d’exécution, consultez [jeux de caractères](../../cpp/character-sets.md) dans la documentation du langage. Pour obtenir la liste des identificateurs de pages de codes et des noms de jeux de caractères pris en charge, consultez identificateurs de [page de codes](/windows/win32/Intl/code-page-identifiers).
 
-Visual Studio utilise UTF-8 en tant que l’encodage de caractères interne lors de la conversion entre le jeu de caractères source et le jeu de caractères d’exécution. Si un caractère dans le fichier source ne peut pas être représenté dans le jeu de caractères d’exécution, la conversion UTF-8 remplace par un point d’interrogation « ? » caractères. Le **/Validate-CharSet** option entraîne la compilation signaler un avertissement si cela se produit.
+Visual Studio utilise UTF-8 comme encodage de caractères interne lors de la conversion entre le jeu de caractères source et le jeu de caractères d’exécution. Si un caractère du fichier source ne peut pas être représenté dans le jeu de caractères d’exécution, la conversion UTF-8 remplace un caractère point d’interrogation «?». Avec l’option **/Validate-charset** , la compilation signale un avertissement si cela se produit.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Développez le **propriétés de Configuration**, **C/C++**, **ligne de commande** dossier.
+1. Développez le dossier **Propriétés de configuration**, **CC++/** , ligne de **commande** .
 
-1. Dans **des Options supplémentaires**, ajoutez le **/Validate-CharSet** option et spécifiez votre encodage préféré.
+1. Dans **options supplémentaires**, ajoutez l’option **/Validate-charset** et spécifiez votre encodage préféré.
 
 1. Choisissez **OK** pour enregistrer vos modifications.
 
@@ -46,6 +46,6 @@ Visual Studio utilise UTF-8 en tant que l’encodage de caractères interne lors
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
 [Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
-[/ EXECUTION-CharSet (définir l’exécution du jeu de caractères)](execution-charset-set-execution-character-set.md)<br/>
+[/Execution-charset (définir le jeu de caractères d’exécution)](execution-charset-set-execution-character-set.md)<br/>
 [/source-charset (Définir le jeu de caractères source)](source-charset-set-source-character-set.md)<br/>
 [/utf-8 (Définir les jeux de caractères sources et exécutables sur UTF-8)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)

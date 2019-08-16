@@ -13,18 +13,18 @@ helpviewer_keywords:
 - explicit linking [C++]
 - DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-ms.openlocfilehash: 59deb75ad77b0a80efc69d9991e093ecef95c51e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 9c657bb0d583270f81658afa53f36b1be6a4fd4a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221414"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493262"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary et AfxFreeLibrary
 
-Processus de liaison explicite à une DLL appellent la [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary) fonctionner lorsque le module DLL n’est plus nécessaire. Cette fonction décrémente le nombre de module référence et, si le décompte de références est égal à zéro, annule son mappage à partir de l’espace d’adressage du processus.
+Les processus qui sont explicitement liés à une DLL appellent la fonction [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) lorsque le module dll n’est plus nécessaire. Cette fonction décrémente le nombre de références du module et, si le nombre de références est égal à zéro, la démappe de l’espace d’adressage du processus.
 
-Dans une application MFC, utilisez [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) au lieu de `FreeLibrary` pour décharger une DLL d’extension MFC. L’interface (prototype de fonction) pour `AfxFreeLibrary` est identique à `FreeLibrary`.
+Dans une application MFC, utilisez [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) au lieu `FreeLibrary` de pour décharger une DLL d’extension MFC. L’interface (prototype de fonction) `AfxFreeLibrary` pour est identique à `FreeLibrary`.
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
@@ -40,6 +40,6 @@ Dans une application MFC, utilisez [AfxFreeLibrary](../mfc/reference/application
 
 ## <a name="see-also"></a>Voir aussi
 
-[Créer des DLL C/C++ dans Visual Studio](dlls-in-visual-cpp.md)<br/>
-[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
+[Création de DLL C/C++ dans Visual Studio](dlls-in-visual-cpp.md)<br/>
+[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

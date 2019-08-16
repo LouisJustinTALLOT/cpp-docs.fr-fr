@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: a9009c4ea08771949cea2c44e4f6265783ced35a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 18b17d0f40aaab6ba2a018a568950549eda23016
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916933"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503011"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog, classe
 
@@ -142,7 +142,7 @@ Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les para
 
 - PSD_DISABLEORIENTATION désactive le contrôle de boîte de dialogue d’orientation de page.
 
-- PSD_RETURNDEFAULT oblige `CPageSetupDialog` à retourner des structures [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) et [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) initialisées pour l’imprimante système par défaut sans afficher de boîte de dialogue. Il est supposé que et `hDevNames` `hDevMode` ont tous deux la valeur null; dans le cas contraire, la fonction retourne une erreur. Si l’imprimante par défaut du système est prise en charge par un ancien pilote d’imprimante (antérieur à la `hDevNames` version 3,0 de Windows), seul est retourné; `hDevMode` a la valeur null.
+- PSD_RETURNDEFAULT oblige `CPageSetupDialog` à retourner des structures [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) et [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) initialisées pour l’imprimante système par défaut sans afficher de boîte de dialogue. Il est supposé que et `hDevNames` `hDevMode` ont tous deux la valeur null; dans le cas contraire, la fonction retourne une erreur. Si l’imprimante par défaut du système est prise en charge par un ancien pilote d’imprimante (antérieur à la `hDevNames` version 3,0 de Windows), seul est retourné; `hDevMode` a la valeur null.
 
 - PSD_DISABLEPAPER désactive le contrôle de sélection de papier.
 
@@ -171,7 +171,7 @@ Utilisez la fonction [DoModal](../../mfc/reference/cdialog-class.md#domodal) pou
 
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
 
-Crée un contexte de périphérique d’impression à partir des structures [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) et [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) .
+Crée un contexte de périphérique d’impression à partir des structures [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) et [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) .
 
 ```
 HDC CreatePrinterDC();
@@ -191,7 +191,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valeur de retour
 
-IDOK ou IDCANCEL. Si IDCANCEL est retourné, appelez la fonction [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) de Windows pour déterminer si une erreur s’est produite.
+IDOK ou IDCANCEL. Si IDCANCEL est retourné, appelez la fonction [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) de Windows pour déterminer si une erreur s’est produite.
 
 IDOK et IDCANCEL sont des constantes qui indiquent si l’utilisateur a sélectionné le bouton OK ou annuler.
 
@@ -205,7 +205,7 @@ Si vous souhaitez propager les paramètres actuels entrés par l’utilisateur, 
 
 [!code-cpp[NVC_MFCDocView#95](../../mfc/codesnippet/cpp/cpagesetupdialog-class_2.cpp)]
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
   Consultez l’exemple de [CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog).
 
@@ -231,7 +231,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Structure de données [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , qui contient des informations sur l’initialisation de l’appareil et l’environnement d’un pilote d’impression. Vous devez déverrouiller la mémoire prise par cette structure à l’aide de la fonction [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) de Windows, qui est décrite dans la SDK Windows.
+Structure de données [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , qui contient des informations sur l’initialisation de l’appareil et l’environnement d’un pilote d’impression. Vous devez déverrouiller la mémoire prise par cette structure à l’aide de la fonction [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) de Windows, qui est décrite dans la SDK Windows.
 
 ##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName
 
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>Paramètres
 
 *lpRectMargins*<br/>
-Pointeur vers une structure [Rect](/windows/desktop/api/windef/ns-windef-tagrect) ou un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui décrit (dans 1/1000 pouces ou 1/100 mm) les marges d’impression pour l’imprimante actuellement sélectionnée. Transmettez la valeur NULL pour ce paramètre, si vous n’êtes pas intéressé par ce rectangle.
+Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) ou un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui décrit (dans 1/1000 pouces ou 1/100 mm) les marges d’impression pour l’imprimante actuellement sélectionnée. Transmettez la valeur NULL pour ce paramètre, si vous n’êtes pas intéressé par ce rectangle.
 
 *lpRectMinMargins*<br/>
 Pointeur vers une `RECT` structure ou `CRect` un objet qui décrit (en 1/1000 pouces ou 1/100 mm) les marges d’impression minimales pour l’imprimante actuellement sélectionnée. Transmettez la valeur NULL pour ce paramètre, si vous n’êtes pas intéressé par ce rectangle.
@@ -305,7 +305,7 @@ Après avoir construit un `CPageSetupDialog` objet, vous pouvez utiliser `m_psd`
 
 Si vous modifiez directement `m_psd` le membre de données, vous remplacerez tout comportement par défaut.
 
-Pour plus d’informations sur la structure [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda) , reportez-vous à la SDK Windows.
+Pour plus d’informations sur la structure [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw) , reportez-vous à la SDK Windows.
 
 Consultez l’exemple de [CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog).
 
@@ -341,7 +341,7 @@ Spécifie un message indiquant la zone de la page en cours de dessin. Il peut s'
 - Zone WM_PSD_YAFULLPAGERECT pour une représentation d’adresse de retour. Cette zone s’étend jusqu’aux bords de l’exemple de zone de page.
 
 *lpRect*<br/>
-Pointeur vers un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [Rect](/windows/desktop/api/windef/ns-windef-tagrect) contenant les coordonnées de la zone de dessin.
+Pointeur vers un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [Rect](/windows/win32/api/windef/ns-windef-rect) contenant les coordonnées de la zone de dessin.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -393,7 +393,7 @@ Indique l’orientation du papier ou de l’enveloppe, et si l’imprimante est 
 - Enveloppe 0x01f en mode Portrait (matricielle)
 
 *pPSD*<br/>
-Pointeur désignant une structure `PAGESETUPDLG`. Pour plus d’informations sur [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda), consultez la SDK Windows.
+Pointeur désignant une structure `PAGESETUPDLG`. Pour plus d’informations sur [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw), consultez la SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 

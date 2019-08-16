@@ -30,16 +30,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5afbc907356d4c5b14b749de5de0c8d36280891e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288821"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499960"
 ---
-# <a name="endthread-endthreadex"></a>_endthread, _endthreadex
+# <a name="_endthread-_endthreadex"></a>_endthread, _endthreadex
 
-Termine un thread ; **_endthread** termine un thread créé par **_beginthread** et **_endthreadex** termine un thread créé par **_beginthreadex**.
+Termine un thread; _ **endthread** termine un thread créé par _ **BeginThread** et _ **endthreadex** met fin à un thread créé par _ **beginthreadex**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,17 +57,17 @@ Code de sortie de thread.
 
 ## <a name="remarks"></a>Notes
 
-Vous pouvez appeler **_endthread** ou **_endthreadex** explicitement pour terminer un thread ; Toutefois, **_endthread** ou **_endthreadex** est appelée automatiquement lorsque le thread retourne de la routine passée en tant que paramètre à **_beginthread** ou **_beginthreadex**. Arrêt d’un thread avec un appel à **endthread** ou **_endthreadex** vous aide à garantir une récupération correcte des ressources allouées pour le thread.
+Vous pouvez appeler _ **endthread** ou _ **endthreadex** explicitement pour terminer un thread; Toutefois, _ **endthread** ou _ **endthreadex** est appelé automatiquement lorsque le thread retourne de la routine passée en tant que paramètre à _ **BeginThread** ou _ **beginthreadex**. L’arrêt d’un thread avec un appel à **endthread** ou _ **endthreadex** permet de garantir une récupération correcte des ressources allouées pour le thread.
 
 > [!NOTE]
-> Pour un fichier exécutable lié à Libcmt.lib, n’appelez pas l’API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) Win32, car elle empêche le système runtime de récupérer les ressources allouées. **_endthread** et **_endthreadex** récupèrent les ressources de thread allouées, puis appellent **ExitThread**.
+> Pour un fichier exécutable lié à Libcmt.lib, n’appelez pas l’API [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) Win32, car elle empêche le système runtime de récupérer les ressources allouées. _ **endthread** et _ **endthreadex** récupèrent les ressources de thread allouées, puis appellent **ExitThread**.
 
-**_endthread** ferme automatiquement le handle du thread. (Ce comportement diffère de Win32 **ExitThread** API.) Par conséquent, lorsque vous utilisez **_beginthread** et **_endthread**, ne fermez pas explicitement le handle du thread en appelant Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API.
+_ **endthread** ferme automatiquement le handle de thread. (Ce comportement diffère de l’API **ExitThread** Win32.) Par conséquent, lorsque vous utilisez _ **BeginThread** et _ **endthread**, ne fermez pas explicitement le handle du thread en appelant l’API [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) Win32.
 
-Comme Win32 **ExitThread** API, **_endthreadex** ne ferme pas le handle du thread. Par conséquent, lorsque vous utilisez **_beginthreadex** et **_endthreadex**, vous devez fermer le handle du thread en appelant Win32 **CloseHandle** API.
+À l’instar de l’API **ExitThread** Win32, _ **endthreadex** ne ferme pas le handle de thread. Par conséquent, lorsque vous utilisez _ **beginthreadex** et _ **endthreadex**, vous devez fermer le handle du thread en appelant l’API **CloseHandle** Win32.
 
 > [!NOTE]
-> **_endthread** et **_endthreadex** provoquer C++ destructeurs en attente dans le thread d’appel.
+> _ **endthread** et _ C++ **endthreadex** entraînent la non-appel des destructeurs en attente dans le thread.
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: c3fd57510a38d597b827f80ab98a0be280ad31e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d46f175a62cda7f1ff08327830f1dffe2967727
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254096"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507182"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx (classe)
 
@@ -65,48 +65,48 @@ class CComboBoxEx : public CComboBox
 
 |Nom|Description|
 |----------|-----------------|
-|[CComboBoxEx::Create](#create)|Crée la zone de liste modifiable et l’attache à la `CComboBoxEx` objet.|
-|[CComboBoxEx::CreateEx](#createex)|Crée une zone de liste déroulante avec les styles étendus Windows spécifiés et l’attache à un `ComboBoxEx` objet.|
+|[CComboBoxEx::Create](#create)|Crée la zone de liste déroulante et l' `CComboBoxEx` attache à l’objet.|
+|[CComboBoxEx::CreateEx](#createex)|Crée une zone de liste déroulante avec les styles étendus Windows spécifiés `ComboBoxEx` et l’attache à un objet.|
 |[CComboBoxEx::DeleteItem](#deleteitem)|Supprime un élément d’un `ComboBoxEx` contrôle.|
-|[CComboBoxEx::GetComboBoxCtrl](#getcomboboxctrl)|Récupère un pointeur vers le contrôle de zone de liste modifiable enfant.|
-|[CComboBoxEx::GetEditCtrl](#geteditctrl)|Récupère le handle vers la partie de contrôle d’édition une `ComboBoxEx` contrôle.|
-|[CComboBoxEx::GetExtendedStyle](#getextendedstyle)|Récupère les styles étendus qui sont en cours d’utilisation pour un `ComboBoxEx` contrôle.|
-|[CComboBoxEx::GetImageList](#getimagelist)|Récupère un pointeur vers la liste d’images assignée à un `ComboBoxEx` contrôle.|
-|[CComboBoxEx::GetItem](#getitem)|Récupère d’élément d’informations pour une donnée `ComboBoxEx` élément.|
-|[CComboBoxEx::HasEditChanged](#haseditchanged)|Détermine si l’utilisateur a modifié le contenu de la `ComboBoxEx` contrôle d’édition en tapant.|
+|[CComboBoxEx::GetComboBoxCtrl](#getcomboboxctrl)|Récupère un pointeur désignant le contrôle de zone de liste déroulante enfant.|
+|[CComboBoxEx::GetEditCtrl](#geteditctrl)|Récupère le handle de la partie du contrôle d’édition d' `ComboBoxEx` un contrôle.|
+|[CComboBoxEx::GetExtendedStyle](#getextendedstyle)|Récupère les styles étendus qui sont utilisés pour un `ComboBoxEx` contrôle.|
+|[CComboBoxEx::GetImageList](#getimagelist)|Récupère un pointeur vers la liste d’images assignée `ComboBoxEx` à un contrôle.|
+|[CComboBoxEx::GetItem](#getitem)|Récupère des informations d’élément pour un `ComboBoxEx` élément donné.|
+|[CComboBoxEx::HasEditChanged](#haseditchanged)|Détermine si l’utilisateur a modifié le contenu du contrôle `ComboBoxEx` d’édition en tapant.|
 |[CComboBoxEx::InsertItem](#insertitem)|Insère un nouvel élément dans un `ComboBoxEx` contrôle.|
-|[CComboBoxEx::SetExtendedStyle](#setextendedstyle)|Définit les styles étendus au sein d’un `ComboBoxEx` contrôle.|
-|[CComboBoxEx::SetImageList](#setimagelist)|Définit une liste d’images pour un `ComboBoxEx` contrôle.|
+|[CComboBoxEx::SetExtendedStyle](#setextendedstyle)|Définit des styles étendus `ComboBoxEx` dans un contrôle.|
+|[CComboBoxEx::SetImageList](#setimagelist)|Définit une liste d’images pour `ComboBoxEx` un contrôle.|
 |[CComboBoxEx::SetItem](#setitem)|Définit les attributs d’un élément dans un `ComboBoxEx` contrôle.|
-|[CComboBoxEx::SetWindowTheme](#setwindowtheme)|Définit le style visuel de la liste déroulante étendue de contrôle de zone.|
+|[CComboBoxEx::SetWindowTheme](#setwindowtheme)|Définit le style visuel du contrôle de zone de liste déroulante étendue.|
 
 ## <a name="remarks"></a>Notes
 
-À l’aide de `CComboBoxEx` pour créer des contrôles de zone de liste déroulante, vous n’avez plus besoin d’implémenter votre propre code de dessin de l’image. Au lieu de cela, utilisez `CComboBoxEx` aux images de l’accès à partir d’une liste d’images.
+En utilisant `CComboBoxEx` pour créer des contrôles de zone de liste déroulante, vous n’avez plus besoin d’implémenter votre propre code de dessin d’image. Utilisez `CComboBoxEx` plutôt pour accéder aux images à partir d’une liste d’images.
 
-## <a name="image-list-support"></a>Prise en charge de la liste des images
+## <a name="image-list-support"></a>Prise en charge de la liste d’images
 
-Dans une zone de liste modifiable, le propriétaire de la zone de liste déroulante est responsable du dessin d’une image en créant la zone de liste modifiable en tant qu’un contrôle owner-draw. Lorsque vous utilisez `CComboBoxEx`, vous n’avez pas besoin de définir les styles de dessin CBS_OWNERDRAWFIXED et CBS_HASSTRINGS, car elles sont implicites. Sinon, vous devez écrire du code pour effectuer des opérations de dessin. Un `CComboBoxEx` contrôle prend en charge jusqu'à trois images par élément : un pour un état sélectionné, un pour un état désélectionné et l’autre pour une image de superposition.
+Dans une zone de liste modifiable standard, le propriétaire de la zone de liste déroulante est chargé de dessiner une image en créant la zone de liste déroulante comme contrôle owner-draw. Lorsque vous utilisez `CComboBoxEx`, vous n’avez pas besoin de définir les styles de dessin CBS_OWNERDRAWFIXED et CBS_HASSTRINGS, car ils sont implicites. Dans le cas contraire, vous devez écrire du code pour effectuer des opérations de dessin. Un `CComboBoxEx` contrôle prend en charge jusqu’à trois images par élément: une pour un état sélectionné, une pour un État non sélectionné et une pour une image de superposition.
 
 ## <a name="styles"></a>Styles
 
-`CComboBoxEx` prend en charge les styles CBS_SIMPLE, CBS_DROPDOWN, CBS_DROPDOWNLIST et WS_CHILD. Tous les autres styles passées lors de la création de la fenêtre sont ignorés par le contrôle. Une fois que la fenêtre est créée, vous pouvez fournir autre liste déroulante styles de zone en appelant le `CComboBoxEx` fonction membre [SetExtendedStyle](#setextendedstyle). Avec ces styles, vous pouvez :
+`CComboBoxEx`prend en charge les styles CBS_SIMPLE, CBS_DROPDOWN, CBS_DROPDOWNLIST et WS_CHILD. Tous les autres styles passés lorsque vous créez la fenêtre sont ignorés par le contrôle. Une fois la fenêtre créée, vous pouvez fournir d’autres styles de zone de liste `CComboBoxEx` déroulante en appelant la fonction membre [SetExtendedStyle](#setextendedstyle). Avec ces styles, vous pouvez:
 
-- Ensemble des recherches de chaîne dans la liste pour respecter la casse.
+- Définissez les recherches de chaînes dans la liste pour respecter la casse.
 
-- Créer un contrôle combo box qui utilise une barre oblique (« / »), barre oblique inverse ('\\') et la période ('. ') caractères en tant que délimiteurs de word. Cela permettre aux utilisateurs d’accéder à partir d’un mot à un autre, en utilisant le raccourci clavier CTRL + flèche.
+- Créez un contrôle de zone de liste déroulante qui utilise la barre oblique («/\\»), la barre oblique inverse («») et le point ('. ') caractères comme délimiteurs de mots. Cela permet aux utilisateurs de passer de Word à Word, en utilisant le raccourci clavier CTRL + Flèche.
 
-- Définissez la liste déroulante contrôle de zone pour afficher ou non afficher une image. Si aucune image n’est affichée, la zone de liste modifiable peut supprimer le retrait du texte qui prend en charge une image.
+- Définissez le contrôle de zone de liste déroulante pour afficher ou ne pas afficher une image. Si aucune image n’est affichée, la zone de liste modifiable peut supprimer le retrait du texte qui prend en charge une image.
 
-- Créer un contrôle de zone de liste déroulante étroit, notamment le dimensionnement d’afin qu’elle découpe la zone de liste déroulante plus large qu’elle contient.
+- Créez un contrôle de zone de liste modifiable étroite, y compris pour le dimensionner afin qu’il découpe la zone de liste déroulante plus large qu’il contient.
 
-Ces indicateurs de style sont décrites dans [à l’aide de CComboBoxEx](../../mfc/using-ccomboboxex.md).
+Ces indicateurs de style sont décrits plus en détail dans [utilisation de CComboBoxEx](../../mfc/using-ccomboboxex.md).
 
-## <a name="item-retention-and-callback-item-attributes"></a>Rétention des éléments et attributs d’élément de rappel
+## <a name="item-retention-and-callback-item-attributes"></a>Attributs de rétention d’élément et d’élément de rappel
 
-Informations sur les éléments, tels que des index pour les éléments et les images, les valeurs de mise en retrait et les chaînes de texte, sont stockées dans la structure Win32 [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema), comme décrit dans le SDK Windows. La structure contient également les membres qui correspondent aux indicateurs de rappel.
+Les informations d’élément, telles que les index pour les éléments et les images, les valeurs de mise en retrait et les chaînes de texte, sont stockées dans la [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw)de la structure Win32, comme décrit dans la SDK Windows. La structure contient également des membres qui correspondent aux indicateurs de rappel.
 
-Pour une explication détaillée, conceptuelle, consultez [à l’aide de CComboBoxEx](../../mfc/using-ccomboboxex.md).
+Pour une discussion conceptuelle détaillée, consultez [utilisation de CComboBoxEx](../../mfc/using-ccomboboxex.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -134,7 +134,7 @@ CComboBoxEx();
 
 ##  <a name="create"></a>  CComboBoxEx::Create
 
-Crée la zone de liste modifiable et l’attache à la `CComboBoxEx` objet.
+Crée la zone de liste déroulante et l' `CComboBoxEx` attache à l’objet.
 
 ```
 virtual BOOL Create(
@@ -147,32 +147,32 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Paramètres
 
 *dwStyle*<br/>
-Spécifie la combinaison de styles de zone de liste déroulante appliqué à la zone de liste déroulante. Consultez **notes** ci-dessous pour plus d’informations sur les styles.
+Spécifie la combinaison de styles de zone de liste déroulante appliquée à la zone de liste déroulante. Pour plus d’informations sur les styles, consultez les **Remarques** ci-dessous.
 
 *rect*<br/>
-Une référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [RECT](/previous-versions/dd162897\(v=vs.85\)) structure, qui est la position et la taille de la zone de liste déroulante.
+Référence à un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou à une structure [Rect](/previous-versions/dd162897\(v=vs.85\)) , qui est la position et la taille de la zone de liste déroulante.
 
 *pParentWnd*<br/>
-Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parente de la zone de liste déroulante (généralement un `CDialog`). Il ne doit pas être NULL.
+Pointeur vers un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fenêtre parente de la zone de liste déroulante (généralement `CDialog`). Il ne doit pas être NULL.
 
 *nID*<br/>
-Spécifie l’ID du contrôle. de zone de liste déroulante
+Spécifie l’ID de contrôle de la zone de liste déroulante.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’objet a été créé avec succès ; sinon 0.
+Différent de zéro si l’objet a été créé avec succès; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Créer un `CComboBoxEx` objet en deux étapes :
+Créez un `CComboBoxEx` objet en deux étapes:
 
 1. Appelez [CComboBoxEx](#ccomboboxex) pour construire un `CComboBoxEx` objet.
 
-1. Appelez cette fonction membre, ce qui crée la zone de liste déroulante étendue Windows et l’attache à la `CComboBoxEx` objet.
+1. Appelez cette fonction membre, qui crée la zone de liste déroulante Windows étendue et l' `CComboBoxEx` attache à l’objet.
 
 Lorsque vous appelez `Create`, MFC initialise les contrôles communs.
 
-Lorsque vous créez la zone de liste déroulante, vous pouvez spécifier tout ou partie des styles de zone de liste déroulante suivantes :
+Lorsque vous créez la zone de liste déroulante, vous pouvez spécifier tout ou partie des styles de zone de liste déroulante suivants:
 
 - CBS_SIMPLE
 
@@ -184,13 +184,13 @@ Lorsque vous créez la zone de liste déroulante, vous pouvez spécifier tout ou
 
 - WS_CHILD
 
-Tous les autres styles passées lors de la création de la fenêtre sont ignorés. Le `ComboBoxEx` contrôle prend également en charge les styles étendus qui fournissent des fonctionnalités supplémentaires. Ces styles sont décrites dans [ComboBoxEx contrôler des styles étendus](/windows/desktop/Controls/comboboxex-control-extended-styles), dans le SDK Windows. Définir ces styles en appelant [SetExtendedStyle](#setextendedstyle).
+Tous les autres styles passés lorsque vous créez la fenêtre sont ignorés. Le `ComboBoxEx` contrôle prend également en charge des styles étendus qui fournissent des fonctionnalités supplémentaires. Ces styles sont décrits dans la SDK Windows les [styles étendus de contrôle ComboBoxEx](/windows/win32/Controls/comboboxex-control-extended-styles). Définissez ces styles en appelant [SetExtendedStyle](#setextendedstyle).
 
-Si vous souhaitez utiliser des styles étendus windows avec votre contrôle, appelez [CreateEx](#createex) au lieu de `Create`.
+Si vous souhaitez utiliser des styles Windows étendus avec votre contrôle, appelez [CreateEx](#createex) au `Create`lieu de.
 
 ##  <a name="createex"></a>  CComboBoxEx::CreateEx
 
-Appelez cette fonction pour créer un contrôle de zone de liste déroulante étendue (une fenêtre enfant) et l’associer avec le `CComboBoxEx` objet.
+Appelez cette fonction pour créer un contrôle de zone de liste déroulante étendue (une fenêtre enfant) `CComboBoxEx` et l’associer à l’objet.
 
 ```
 virtual BOOL CreateEx(
@@ -204,19 +204,19 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Paramètres
 
 *dwExStyle*<br/>
-Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) dans le SDK Windows.
+Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles Windows étendus, consultez le paramètre *dwExStyle* pour [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) dans le SDK Windows.
 
 *dwStyle*<br/>
-Style du contrôle de zone de liste déroulante. Consultez [créer](#create) pour obtenir la liste des styles.
+Style du contrôle de zone de liste déroulante. Pour obtenir la liste des styles, consultez [créer](#create) .
 
 *rect*<br/>
-Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
+Référence à une structure [Rect](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, en coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
 Pointeur vers la fenêtre qui est le parent du contrôle.
 
 *nID*<br/>
-ID de fenêtre enfant. du contrôle
+ID de la fenêtre enfant du contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -224,9 +224,9 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez `CreateEx` au lieu de `Create` pour appliquer des styles étendus de Windows, spécifiés par la préface de style étendu Windows **WS_EX_**.
+Utilisez `CreateEx` au lieu `Create` de pour appliquer des styles Windows étendus, spécifiés par la préface de style étendu Windows **WS_EX_** .
 
-`CreateEx` crée le contrôle avec les styles étendus de Windows spécifiés par *dwExStyle*. Vous devez définir des styles étendus propres à un contrôle de zone de liste déroulante étendue à l’aide [SetExtendedStyle](#setextendedstyle). Par exemple, utilisez `CreateEx` pour définir des styles de ce type en tant que WS_EX_CONTEXTHELP, mais utiliser `SetExtendedStyle` pour définir des styles de ce type comme CBES_EX_CASESENSITIVE. Pour plus d’informations, consultez les styles décrites dans la rubrique [ComboBoxEx contrôle étendu Styles](/windows/desktop/Controls/comboboxex-control-extended-styles) dans le SDK Windows.
+`CreateEx`crée le contrôle avec les styles Windows étendus spécifiés par *dwExStyle*. Vous devez définir des styles étendus spécifiques à un contrôle de zone de liste déroulante étendue à l’aide de [SetExtendedStyle](#setextendedstyle). Par exemple, utilisez `CreateEx` pour définir des styles tels que WS_EX_CONTEXTHELP, mais `SetExtendedStyle` utilisez pour définir des styles tels que CBES_EX_CASESENSITIVE. Pour plus d’informations, consultez les styles décrits dans la rubrique [ComboBoxEx contrôler les styles étendus](/windows/win32/Controls/comboboxex-control-extended-styles) dans le SDK Windows.
 
 ##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem
 
@@ -243,15 +243,15 @@ Index de base zéro de l’élément à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre d’éléments restants dans le contrôle. Si *iIndex* est non valide, la fonction retourne CB_ERR.
+Nombre d’éléments restants dans le contrôle. Si *iIndex* n’est pas valide, la fonction retourne CB_ERR.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente les fonctionnalités du message [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), comme décrit dans le SDK Windows. Lorsque vous appelez DeleteItem, un [WM_NOTIFY](/windows/desktop/controls/wm-notify) message avec notification de CBEN_DELETEITEM sera envoyé à la fenêtre parente.
+Cette fonction membre implémente les fonctionnalités du message [CBEM_DELETEITEM](/windows/win32/Controls/cbem-deleteitem), comme décrit dans la SDK Windows. Quand vous appelez DeleteItem, un message [WM_NOTIFY](/windows/win32/controls/wm-notify) avec notification CBEN_DELETEITEM est envoyé à la fenêtre parente.
 
 ##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl
 
-Appelez cette fonction membre pour obtenir un pointeur vers un contrôle combo box dans un `CComboBoxEx` objet.
+Appelez cette fonction membre pour obtenir un pointeur vers un contrôle de zone de liste `CComboBoxEx` déroulante dans un objet.
 
 ```
 CComboBox* GetComboBoxCtrl();
@@ -265,7 +265,7 @@ Pointeur vers un objet `CComboBox` .
 
 Le `CComboBoxEx` contrôle se compose d’une fenêtre parente, qui encapsule un `CComboBox`.
 
-Le `CComboBox` objet désigné par la valeur de retour est un objet temporaire et est détruit pendant la durée de traitement d’inactivité suivante.
+L' `CComboBox` objet vers lequel pointe la valeur de retour est un objet temporaire et il est détruit pendant le temps de traitement inactif suivant.
 
 ##  <a name="geteditctrl"></a>  CComboBoxEx::GetEditCtrl
 
@@ -277,17 +277,17 @@ CEdit* GetEditCtrl();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers un [CEdit](../../mfc/reference/cedit-class.md) objet.
+Pointeur vers un objet [CEdit](../../mfc/reference/cedit-class.md) .
 
 ### <a name="remarks"></a>Notes
 
 Un `CComboBoxEx` contrôle utilise une zone d’édition lorsqu’il est créé avec le style CBS_DROPDOWN.
 
-Le `CEdit` objet désigné par la valeur de retour est un objet temporaire et est détruit pendant la durée de traitement d’inactivité suivante.
+L' `CEdit` objet vers lequel pointe la valeur de retour est un objet temporaire et il est détruit pendant le temps de traitement inactif suivant.
 
 ##  <a name="getextendedstyle"></a>  CComboBoxEx::GetExtendedStyle
 
-Appelez cette fonction membre pour obtenir les styles étendus utilisés pour un `CComboBoxEx` contrôle.
+Appelez cette fonction membre pour obtenir les styles étendus utilisés pour `CComboBoxEx` un contrôle.
 
 ```
 DWORD GetExtendedStyle() const;
@@ -295,15 +295,15 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La valeur DWORD qui contient les styles étendus qui sont utilisés pour le contrôle de zone de liste déroulante.
+Valeur DWORD qui contient les styles étendus utilisés pour le contrôle de zone de liste déroulante.
 
 ### <a name="remarks"></a>Notes
 
-Consultez [ComboBoxEx contrôle étendu Styles](/windows/desktop/Controls/comboboxex-control-extended-styles) dans le SDK Windows pour plus d’informations sur ces styles.
+Pour plus d’informations sur ces styles, consultez [ComboBoxEx, contrôle des styles étendus](/windows/win32/Controls/comboboxex-control-extended-styles) dans le SDK Windows.
 
 ##  <a name="getimagelist"></a>  CComboBoxEx::GetImageList
 
-Appelez cette fonction membre pour obtenir un pointeur vers la liste d’images utilisée par un `CComboBoxEx` contrôle.
+Appelez cette fonction membre pour obtenir un pointeur vers la liste d’images utilisée par `CComboBoxEx` un contrôle.
 
 ```
 CImageList* GetImageList() const;
@@ -311,15 +311,15 @@ CImageList* GetImageList() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) objet. En cas d’échec, cette fonction membre retourne NULL.
+Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) . En cas d’échec, cette fonction membre retourne la valeur NULL.
 
 ### <a name="remarks"></a>Notes
 
-Le `CImageList` objet désigné par la valeur de retour est un objet temporaire et est détruit pendant la durée de traitement d’inactivité suivante.
+L' `CImageList` objet vers lequel pointe la valeur de retour est un objet temporaire et il est détruit pendant le temps de traitement inactif suivant.
 
 ##  <a name="getitem"></a>  CComboBoxEx::GetItem
 
-Récupère d’élément d’informations pour une donnée `ComboBoxEx` élément.
+Récupère des informations d’élément pour un `ComboBoxEx` élément donné.
 
 ```
 BOOL GetItem(COMBOBOXEXITEM* pCBItem);
@@ -328,19 +328,19 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ### <a name="parameters"></a>Paramètres
 
 *pCBItem*<br/>
-Un pointeur vers un [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) structure qui recevra les informations d’élément.
+Pointeur vers une structure [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) qui recevra les informations de l’élément.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’opération a réussi ; sinon 0.
+Différent de zéro si l’opération a réussi; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente les fonctionnalités du message [CBEM_GETITEM](/windows/desktop/Controls/cbem-getitem), comme décrit dans le SDK Windows.
+Cette fonction membre implémente les fonctionnalités du message [CBEM_GETITEM](/windows/win32/Controls/cbem-getitem), comme décrit dans la SDK Windows.
 
 ##  <a name="haseditchanged"></a>  CComboBoxEx::HasEditChanged
 
-Détermine si l’utilisateur a modifié le contenu de la `ComboBoxEx` contrôle d’édition en tapant.
+Détermine si l’utilisateur a modifié le contenu du contrôle `ComboBoxEx` d’édition en tapant.
 
 ```
 BOOL HasEditChanged();
@@ -348,11 +348,11 @@ BOOL HasEditChanged();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’utilisateur a tapé dans la zone d’édition du contrôle ; sinon 0.
+Différent de zéro si l’utilisateur a tapé la zone d’édition du contrôle; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente les fonctionnalités du message [CBEM_HASEDITCHANGED](/windows/desktop/Controls/cbem-haseditchanged), comme décrit dans le SDK Windows.
+Cette fonction membre implémente les fonctionnalités du message [CBEM_HASEDITCHANGED](/windows/win32/Controls/cbem-haseditchanged), comme décrit dans la SDK Windows.
 
 ##  <a name="insertitem"></a>  CComboBoxEx::InsertItem
 
@@ -365,19 +365,19 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="parameters"></a>Paramètres
 
 *pCBItem*<br/>
-Un pointeur vers un [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) structure qui recevra les informations d’élément. Cette structure contient des valeurs d’indicateur de rappel pour l’élément.
+Pointeur vers une structure [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) qui recevra les informations de l’élément. Cette structure contient des valeurs d’indicateur de rappel pour l’élément.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’index au niveau duquel le nouvel élément a été inséré en cas de réussite ; sinon -1.
+Index auquel le nouvel élément a été inséré en cas de réussite; sinon-1.
 
 ### <a name="remarks"></a>Notes
 
-Lorsque vous appelez `InsertItem`, un [WM_NOTIFY](/windows/desktop/controls/wm-notify) message avec [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) notification sera envoyée à la fenêtre parente.
+Quand vous appelez `InsertItem`, un message [WM_NOTIFY](/windows/win32/controls/wm-notify) avec notification [CBEN_INSERTITEM](/windows/win32/Controls/cben-insertitem) est envoyé à la fenêtre parente.
 
 ##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle
 
-Appelez cette fonction membre pour définir les styles étendus utilisés pour une zone de liste déroulante étendue du contrôle.
+Appelez cette fonction membre pour définir les styles étendus utilisés pour un contrôle étendu de zone de liste déroulante.
 
 ```
 DWORD SetExtendedStyle(
@@ -388,24 +388,24 @@ DWORD SetExtendedStyle(
 ### <a name="parameters"></a>Paramètres
 
 *dwExMask*<br/>
-Une valeur DWORD qui indique les styles dans *dwExStyles* sont affectées. Uniquement les styles étendus dans *dwExMask* sera modifié. Tous les autres styles seront conservées en l’état. Si ce paramètre est zéro, tous les styles dans *dwExStyles* seront affectées.
+Valeur DWORD qui indique les styles de *dwExStyles* à affecter. Seuls les styles étendus dans *dwExMask* seront modifiés. Tous les autres styles seront conservés tels quels. Si ce paramètre est égal à zéro, tous les styles dans *dwExStyles* seront affectés.
 
 *dwExStyles*<br/>
-Une valeur DWORD qui contient le contrôle de zone de liste déroulante étendue des styles à définir pour le contrôle.
+Valeur DWORD qui contient la zone de liste déroulante styles étendus à définir pour le contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur DWORD qui contient les styles étendus précédemment utilisés pour le contrôle.
+Valeur DWORD qui contient les styles étendus utilisés précédemment pour le contrôle.
 
 ### <a name="remarks"></a>Notes
 
-Consultez [ComboBoxEx contrôle étendu Styles](/windows/desktop/Controls/comboboxex-control-extended-styles) dans le SDK Windows pour plus d’informations sur ces styles.
+Pour plus d’informations sur ces styles, consultez [ComboBoxEx, contrôle des styles étendus](/windows/win32/Controls/comboboxex-control-extended-styles) dans le SDK Windows.
 
-Pour créer une zone de liste déroulante étendue de contrôle avec des styles d’étendues de windows, utilisez [CreateEx](#createex).
+Pour créer un contrôle étendu de zone de liste déroulante avec des styles Windows étendus, utilisez [CreateEx](#createex).
 
 ##  <a name="setimagelist"></a>  CComboBoxEx::SetImageList
 
-Définit une liste d’images pour un `ComboBoxEx` contrôle.
+Définit une liste d’images pour `ComboBoxEx` un contrôle.
 
 ```
 CImageList* SetImageList(CImageList* pImageList);
@@ -414,17 +414,17 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="parameters"></a>Paramètres
 
 *pImageList*<br/>
-Un pointeur vers un `CImageList` objet contenant les images à utiliser avec le `CComboBoxEx` contrôle.
+Pointeur vers un `CImageList` objet contenant les images à utiliser avec le `CComboBoxEx` contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) objet contenant les images précédemment utilisées par le `CComboBoxEx` contrôle. NULL si aucune liste d’images a été défini précédemment.
+Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) contenant les images précédemment utilisées par le `CComboBoxEx` contrôle. NULL si aucune liste d’images n’a été définie précédemment.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente les fonctionnalités du message [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), comme décrit dans le SDK Windows. Si vous modifiez la hauteur du contrôle d’édition par défaut, appelez la fonction Win32 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) pour redimensionner votre contrôle après avoir appelé `SetImageList`, ou il ne s’affiche correctement.
+Cette fonction membre implémente les fonctionnalités du message [CBEM_SETIMAGELIST](/windows/win32/Controls/cbem-setimagelist), comme décrit dans la SDK Windows. Si vous modifiez la hauteur du contrôle d’édition par défaut, appelez la fonction Win32 [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) pour redimensionner votre contrôle après `SetImageList`l’appel de, ou il ne s’affichera pas correctement.
 
-Le `CImageList` objet désigné par la valeur de retour est un objet temporaire et est détruit pendant la durée de traitement d’inactivité suivante.
+L' `CImageList` objet vers lequel pointe la valeur de retour est un objet temporaire et il est détruit pendant le temps de traitement inactif suivant.
 
 ##  <a name="setitem"></a>  CComboBoxEx::SetItem
 
@@ -437,19 +437,19 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="parameters"></a>Paramètres
 
 *pCBItem*<br/>
-Un pointeur vers un [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) structure qui recevra les informations d’élément.
+Pointeur vers une structure [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) qui recevra les informations de l’élément.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’opération a réussi ; sinon 0.
+Différent de zéro si l’opération a réussi; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente les fonctionnalités du message [CBEM_SETITEM](/windows/desktop/Controls/cbem-setitem), comme décrit dans le SDK Windows.
+Cette fonction membre implémente les fonctionnalités du message [CBEM_SETITEM](/windows/win32/Controls/cbem-setitem), comme décrit dans la SDK Windows.
 
 ##  <a name="setwindowtheme"></a>  CComboBoxEx::SetWindowTheme
 
-Définit le style visuel de la liste déroulante étendue de contrôle de zone.
+Définit le style visuel du contrôle de zone de liste déroulante étendue.
 
 ```
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
@@ -466,11 +466,11 @@ La valeur de retour n’est pas utilisée.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre émule la fonctionnalité de la [CBEM_SETWINDOWTHEME](/windows/desktop/Controls/cbem-setwindowtheme) du message, comme décrit dans le SDK Windows.
+Cette fonction membre émule les fonctionnalités du message [CBEM_SETWINDOWTHEME](/windows/win32/Controls/cbem-setwindowtheme) , comme décrit dans la SDK Windows.
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC, exemple MFCIE](../../overview/visual-cpp-samples.md)<br/>
+[Exemple de MFCIE MFC](../../overview/visual-cpp-samples.md)<br/>
 [CComboBox, classe](../../mfc/reference/ccombobox-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CComboBox, classe](../../mfc/reference/ccombobox-class.md)

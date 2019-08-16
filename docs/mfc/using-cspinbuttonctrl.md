@@ -9,27 +9,27 @@ helpviewer_keywords:
 - spin button control
 - CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
-ms.openlocfilehash: 6bb663b6ff9b9b039bd774f6e607c7acdb1c4b11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2a12672f0e70248e135bdd177b76589b6197c75
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411719"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513469"
 ---
 # <a name="using-cspinbuttonctrl"></a>Utilisation de CSpinButtonCtrl
 
-Le *toupie* contrôle (également appelé un *haut-bas* contrôle) fournit une paire de flèches sur lesquelles un utilisateur peut cliquer pour ajuster une valeur. Cette valeur est appelée le *position actuelle*. La position reste dans la plage du bouton Spin. Lorsque l'utilisateur clique sur la flèche vers le haut, la position se déplace vers le maximum ; et lorsque l'utilisateur clique sur la flèche vers le bas, la position se déplace vers le minimum.
+Le contrôle *spin Button* (également appelé contrôle *Up-Down* ) fournit une paire de flèches sur lesquelles un utilisateur peut cliquer pour ajuster une valeur. Cette valeur est appelée *position actuelle*. La position reste dans la plage du bouton Spin. Lorsque l'utilisateur clique sur la flèche vers le haut, la position se déplace vers le maximum ; et lorsque l'utilisateur clique sur la flèche vers le bas, la position se déplace vers le minimum.
 
-Le contrôle de bouton toupie (spin) est représenté dans MFC par la [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) classe.
+Le contrôle spin Button est représenté dans MFC par la classe [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) .
 
 > [!NOTE]
->  Par défaut, la plage du bouton Spin a la valeur maximale définie sur zéro (0) et la valeur minimale définie sur 100. Étant donné que la valeur maximale est inférieure à la valeur minimale, cliquez sur la flèche vers le haut pour diminuer la position et cliquez sur la flèche vers le bas pour l'augmenter. Utilisez [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) pour ajuster ces valeurs.
+>  Par défaut, la plage du bouton Spin a la valeur maximale définie sur zéro (0) et la valeur minimale définie sur 100. Étant donné que la valeur maximale est inférieure à la valeur minimale, cliquez sur la flèche vers le haut pour diminuer la position et cliquez sur la flèche vers le bas pour l'augmenter. Utilisez [CSpinButtonCtrl::](../mfc/reference/cspinbuttonctrl-class.md#setrange) SetRange pour ajuster ces valeurs.
 
-En général, la position actuelle est affichée dans un contrôle compagnon. Le contrôle Compagnon est appelé le *fenêtre associée*. Pour obtenir une illustration d’un contrôle de bouton toupie (spin), consultez [sur les contrôles Up-Down](/windows/desktop/Controls/up-down-controls) dans le SDK Windows.
+En général, la position actuelle est affichée dans un contrôle compagnon. Le contrôle compagnon est connu sous le nom de *fenêtre associée*. Pour obtenir une illustration d’un contrôle de bouton toupie, consultez [à propos des contrôles Up-Down](/windows/win32/Controls/up-down-controls) dans le SDK Windows.
 
-Pour créer un contrôle Spin et une fenêtre associée du contrôle Edit, dans Visual Studio, faites glisser au préalable un contrôle Edit vers la boîte de dialogue ou la fenêtre, puis faites glisser à son tour un contrôle Spin. Sélectionnez le contrôle spin et définissez son **Auto Buddy** et **Set Buddy Integer** propriétés à **True**. Définissez également la **alignement** propriété ; **Aligner à droite** est plus courant. Avec ces paramètres, le contrôle Edit est défini comme fenêtre associée car elle précède directement le contrôle Edit dans l'ordre de tabulation. Le contrôle Edit affiche des entiers et le contrôle Spin est incorporé dans la partie droite du contrôle Edit. Si vous le souhaitez, vous pouvez définir la plage valide du contrôle spin à l’aide de la [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) (méthode). Aucun gestionnaire d'événements n'est requis pour la communication entre le contrôle Spin et la fenêtre associée car ils échangent des données directement. Si vous utilisez un contrôle spin à d’autres fins, par exemple, pour parcourir une séquence de fenêtres ou boîtes de dialogue, puis ajoutez un gestionnaire pour le message UDN_DELTAPOS et exécutez votre action personnalisée il.
+Pour créer un contrôle Spin et une fenêtre associée du contrôle Edit, dans Visual Studio, faites glisser au préalable un contrôle Edit vers la boîte de dialogue ou la fenêtre, puis faites glisser à son tour un contrôle Spin. Sélectionnez le contrôle spin et définissez ses propriétés **auto Buddy** et **Set Buddy Integer** sur **true**. Définissez également la propriété d' **alignement** . **Aligner à droite est le** plus courant. Avec ces paramètres, le contrôle Edit est défini comme fenêtre associée car elle précède directement le contrôle Edit dans l'ordre de tabulation. Le contrôle Edit affiche des entiers et le contrôle Spin est incorporé dans la partie droite du contrôle Edit. Si vous le souhaitez, vous pouvez définir la plage valide du contrôle spin à l’aide de la méthode [CSpinButtonCtrl::](../mfc/reference/cspinbuttonctrl-class.md#setrange) SetRange. Aucun gestionnaire d'événements n'est requis pour la communication entre le contrôle Spin et la fenêtre associée car ils échangent des données directement. Si vous utilisez un contrôle spin à d’autres fins, par exemple, pour parcourir une séquence de fenêtres ou de boîtes de dialogue, ajoutez un gestionnaire pour le message UDN_DELTAPOS et effectuez votre action personnalisée ici.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
 - [Bouton toupie, styles](../mfc/spin-button-styles.md)
 

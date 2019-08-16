@@ -7,20 +7,20 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], using
 - tab controls [MFC], using
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
-ms.openlocfilehash: 97844fea667edab5a4d1f1a49c3908454a203d1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07452fd52e2da3187e89ceafcd9f74e3f0cb159
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411680"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510783"
 ---
 # <a name="using-ctabctrl"></a>Utilisation de CTabCtrl
 
-Un « contrôle onglet » est semblable aux intercalaires d’un agenda ou les dossiers étiquetées dans un fichier CAB. Utiliser le contrôle onglet, représenté par la classe [CTabCtrl](../mfc/reference/ctabctrl-class.md), pour afficher plusieurs pages d’informations ou de contrôles à un utilisateur, un à la fois, dans un format qui suggère un homologue ou une relation logique entre chaque page.
+Un contrôle d’onglet est analogue aux séparateurs d’un bloc-notes ou aux dossiers étiquetés dans un fichier CAB. Utilisez le contrôle onglet, représenté par la classe [CTabCtrl](../mfc/reference/ctabctrl-class.md), pour afficher plusieurs pages d’informations ou de contrôles à un utilisateur, l’un après l’autre, dans un format qui suggère une relation d’homologue ou logique entre chaque page.
 
-Pour plus d’informations sur les contrôles d’onglet, consultez [contrôles onglet](/windows/desktop/Controls/tab-controls) dans le SDK Windows.
+Pour plus d’informations sur les contrôles d’onglet, consultez [contrôles d’onglet](/windows/win32/Controls/tab-controls) dans la SDK Windows.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
 - [Contrôles onglet et feuilles de propriétés](../mfc/tab-controls-and-property-sheets.md)
 

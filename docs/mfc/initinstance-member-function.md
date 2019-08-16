@@ -9,22 +9,22 @@ helpviewer_keywords:
 - MFC, initializing
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
-ms.openlocfilehash: c96d009cf19981a475209233ee397af1cdcb352d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1f83f794cc40fa7f4d290fa4a147fe9f7e074be
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219518"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508374"
 ---
 # <a name="initinstance-member-function"></a>InitInstance, fonction membre
 
-Le système d’exploitation Windows vous permet d’exécuter plusieurs copies, ou « instance » de la même application. `WinMain` appels [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) chaque fois qu’une nouvelle instance de l’application démarre.
+Le système d’exploitation Windows vous permet d’exécuter plusieurs copies, ou «instances», de la même application. `WinMain`appelle [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) chaque fois qu’une nouvelle instance de l’application démarre.
 
-La norme `InitInstance` implémentation créée par l’Assistant Application MFC effectue les tâches suivantes :
+L’implémentation `InitInstance` standard créée par l’Assistant Application MFC effectue les tâches suivantes:
 
-- En tant qu’action centrale, crée les modèles de document qui à leur tour créent des documents, vues et fenêtres frame. Pour obtenir une description de ce processus, consultez [création du modèle de Document](../mfc/document-template-creation.md).
+- Comme action centrale, crée les modèles de document qui, à leur tour, créent des documents, des vues et des fenêtres Frame. Pour obtenir une description de ce processus, consultez Création d’un [modèle de document](../mfc/document-template-creation.md).
 
-- Charge les options de fichier standard à partir d’un fichier .ini ou le Registre Windows, y compris les noms des fichiers récemment utilisés.
+- Charge les options de fichier standard à partir d’un fichier. ini ou du Registre Windows, y compris les noms des derniers fichiers utilisés.
 
 - Inscrit un ou plusieurs modèles de document.
 
@@ -35,7 +35,7 @@ La norme `InitInstance` implémentation créée par l’Assistant Application MF
 Vous pouvez ajouter votre propre code d’initialisation ou modifier le code écrit par l’Assistant.
 
 > [!NOTE]
->  Les applications MFC doivent être initialisées en tant que thread unique cloisonné (STA). Si vous appelez [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) dans votre `InitInstance` substituer, spécifiez COINIT_APARTMENTTHREADED (plutôt que COINIT_MULTITHREADED).
+>  Les applications MFC doivent être initialisées en tant que thread unique cloisonné (STA). Si vous appelez [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) dans votre `InitInstance` remplacement, spécifiez COINIT_APARTMENTTHREADED (au lieu de COINIT_MULTITHREADED).
 
 ## <a name="see-also"></a>Voir aussi
 
