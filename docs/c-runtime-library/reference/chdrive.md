@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: 963b7b7b40b632981abfc1529beb9c48a5b991ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e36867bb8237c549fd250be88a99244766920ba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335475"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500288"
 ---
-# <a name="chdrive"></a>_chdrive
+# <a name="_chdrive"></a>_chdrive
 
 Change le lecteur de travail actif.
 
@@ -57,9 +57,9 @@ Zéro (0) si le lecteur de travail actif a été correctement changé ; Sinon, 
 
 ## <a name="remarks"></a>Notes
 
-Si *lecteur* est pas dans la plage comprise entre 1 et 26, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la **_chdrive** fonction retourne -1, **errno** a la valeur **EACCES**, et **_doserrno** est défini sur  **ERROR_INVALID_DRIVE**.
+Si le *lecteur* n’est pas dans la plage comprise entre 1 et 26, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction **_chdrive** retourne-1, **errno** a la valeur **EACCES**et **_doserrno** la valeur **ERROR_INVALID_DRIVE**.
 
-La fonction **_chdrive** n’est pas thread-safe, car elle dépend de la fonction **SetCurrentDirectory**, qui elle-même n’est pas thread-safe. Pour utiliser **_chdrive** en toute sécurité dans une application multithread, vous devez fournir votre propre synchronisation de thread. Pour plus d’informations, consultez [SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory).
+La fonction **_chdrive** n’est pas thread-safe, car elle dépend de la fonction **SetCurrentDirectory**, qui elle-même n’est pas thread-safe. Pour utiliser **_chdrive** en toute sécurité dans une application multithread, vous devez fournir votre propre synchronisation de thread. Pour plus d’informations, consultez [SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory).
 
 La fonction **_chdrive** change uniquement le lecteur travail actif ; **_chdir** change le répertoire de travail actif.
 

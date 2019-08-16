@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383345"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500549"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (classe)
 
@@ -48,7 +48,7 @@ La classe COMException a les propriétés ci-dessous.
 
 |Membre|Description|
 |------------|-----------------|
-|[Exception::HResult](#hresult)|HRESULT qui correspond à l'exception.|
+|[Exception:: HResult](#hresult)|HRESULT qui correspond à l'exception.|
 |[Exception::Message](#message)|Message décrivant l'exception.|
 
 ## <a name="derived-exceptions"></a>Exceptions dérivées
@@ -73,15 +73,15 @@ Les exceptions prédéfinies suivantes sont dérivées de COMException. Elles di
 
 ### <a name="requirements"></a>Configuration requise
 
-**Prise en charge minimale du client :** Windows 8
+**Client minimal pris en charge:** Windows 8
 
-**Serveur pris en charge minimale :** Windows Server 2012
+**Serveur minimal pris en charge:** Windows Server 2012
 
 **Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 
-## <a name="ctor"></a> COMException::COMException (constructeur)
+## <a name="ctor"></a>COMException:: COMException, constructeur
 
 Initialise une nouvelle instance de la classe COMException.
 
@@ -93,10 +93,10 @@ COMException( int hresult )
 
 ### <a name="parameters"></a>Paramètres
 
-*hresult*<br/>
+*signé*<br/>
 Erreur HRESULT qui est représentée par l'exception.
 
-## <a name="hresult"></a> COMException::HResult (propriété)
+## <a name="hresult"></a>COMException:: HResult, propriété
 
 HRESULT qui correspond à l'exception.
 
@@ -113,9 +113,9 @@ Valeur HRESULT qui spécifie l'erreur.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur la façon d’interpréter la valeur HRESULT, consultez [Structure of COM Error Codes](/windows/desktop/com/structure-of-com-error-codes).
+Pour plus d’informations sur la façon d’interpréter la valeur HRESULT, consultez [structure of com Error Codes](/windows/win32/com/structure-of-com-error-codes).
 
-## <a name="message"></a> COMException::Message (propriété)
+## <a name="message"></a>COMException:: message, propriété
 
 Message décrivant l'exception.
 

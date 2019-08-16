@@ -1,21 +1,21 @@
 ---
-title: length_is (C++ attribut COM)
+title: length_is (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f4bfe233e3228c50aee734de4ad979c38a55fda
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409302"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514527"
 ---
-# <a name="lengthis"></a>length_is
+# <a name="length_is"></a>length_is
 
-Spécifie le nombre d’éléments de tableau doit être transmis.
+Spécifie le nombre d’éléments de tableau à transmettre.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ Spécifie le nombre d’éléments de tableau doit être transmis.
 ### <a name="parameters"></a>Paramètres
 
 *expression*<br/>
-Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisés.
+Une ou plusieurs expressions en langage C. Les emplacements d’arguments vides sont autorisés.
 
 ## <a name="remarks"></a>Notes
 
-Le **length_is** C++ attribut a les mêmes fonctionnalités que le [length_is](/windows/desktop/Midl/length-is) attribut MIDL.
+L’attribut **length_is** C++ a les mêmes fonctionnalités que l’attribut MIDL [length_is](/windows/win32/Midl/length-is) .
 
 ## <a name="example"></a>Exemple
 
-Consultez [first_is](first-is.md) pour obtenir un exemple montrant comment spécifier une section d’un tableau.
+Pour obtenir un exemple de spécification d’une section d’un tableau, consultez [first_is](first-is.md) .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -42,10 +42,10 @@ Consultez [first_is](first-is.md) pour obtenir un exemple montrant comment spéc
 
 |||
 |-|-|
-|**S'applique à**|Champ **struct** ou **union**, paramètre de l’interface, interface (méthode)|
+|**S'applique à**|Champ dans un **struct** ou une **Union**, un paramètre d’interface, une méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

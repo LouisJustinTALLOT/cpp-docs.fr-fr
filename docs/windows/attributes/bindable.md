@@ -1,17 +1,17 @@
 ---
-title: peut être liée (attribut de COM C++)
+title: pouvant être liéC++ (attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 07f446b946d6703c4a8b9ae59ae0edd8172c6879
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a74531a40bcacdae4ef98c292884e7a43fa82fe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148391"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501823"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,19 +25,19 @@ Indique que la propriété prend en charge la liaison de données.
 
 ## <a name="remarks"></a>Notes
 
-Le **peut être liée** attribut C++ a les mêmes fonctionnalités que le [peut être liée](/windows/desktop/Midl/bindable) attribut MIDL. Vous pouvez l’utiliser sur les propriétés définies avec la [propget](propget.md), [propput](propput.md), ou [propputref](propputref.md) attributs, ou vous pouvez définir manuellement une méthode pouvant être liée.
+L' C++ attribut **pouvant être lié** a les mêmes fonctionnalités que l’attribut MIDL [pouvant être lié](/windows/win32/Midl/bindable) . Vous pouvez l’utiliser sur les propriétés définies avec les attributs [propget](propget.md), [propput](propput.md)ou [PROPPUTREF](propputref.md) , ou vous pouvez définir manuellement une méthode pouvant être liée.
 
-Les exemples MFC suivants illustrent l’utilisation de **peut être liée**:
+Les exemples MFC suivants illustrent l’utilisationde bindables:
 
-- [Exemples de contrôles : Contrôles ActiveX basé sur MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Exemples de contrôles: Contrôles ActiveX basés sur MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [CERC exemple : Contrôle ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Exemple CIRC: Contrôle ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Exemple TESTHELP : Contrôle ActiveX avec info-bulles et aide](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Exemple TESTHELP: Contrôle ActiveX avec info-bulles et aide](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>Exemple
 
-Le code suivant montre comment vous pouvez utiliser **peut être liée** sur une propriété :
+Le code suivant montre comment vous pouvez utiliser **Binder** sur une propriété:
 
 ```cpp
 // cpp_attr_ref_bindable.cpp
@@ -66,8 +66,8 @@ __interface IPropDemo : IDispatch {
 |-|-|
 |**S'applique à**|Méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

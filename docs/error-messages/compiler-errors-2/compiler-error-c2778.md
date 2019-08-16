@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2778
 ms.assetid: b24cb732-2914-42cc-8928-e2d87b393428
-ms.openlocfilehash: 56c316ac971d0bdd1a0ca27ef8d4282acbe24779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98b5bf0a1315236f3ce96fd4b8c140ce1ab70a9f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227674"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501035"
 ---
 # <a name="compiler-error-c2778"></a>Erreur du compilateur C2778
 
-GUID incorrectement formé dans __declspec(uuid())
+GUID incorrectement formé dans _ _ declspec (UUID ())
 
-Un GUID incorrect est fourni à la [uuid](../../cpp/uuid-cpp.md) attributs étendus.
+Un GUID incorrect a été fourni à l’attribut étendu [UUID](../../cpp/uuid-cpp.md) .
 
-Le GUID doit être une chaîne de nombres hexadécimaux au format suivant :
+Le GUID doit être une chaîne de nombres hexadécimaux au format suivant:
 
 ```
 // C2778a.cpp
@@ -28,9 +28,9 @@ struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};
 ```
 
-Le `uuid` attributs étendus accepte les chaînes reconnues par [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring), avec ou sans délimiteurs d’accolades.
+L' `uuid` attribut étendu accepte les chaînes reconnues par [CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring), avec ou sans délimiteurs d’accolades.
 
-L’exemple suivant génère l’erreur C2778 :
+L’exemple suivant génère l’C2778:
 
 ```
 // C2778b.cpp

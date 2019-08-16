@@ -1,17 +1,17 @@
 ---
-title: retval (attribut de COM C++)
+title: retval (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.retval
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a2865c1eda229f1a2fcd457c22119b2908c1caa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407404"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514048"
 ---
 # <a name="retval"></a>retval
 
@@ -25,13 +25,13 @@ Désigne le paramètre qui reçoit la valeur de retour du membre.
 
 ## <a name="remarks"></a>Notes
 
-Le **retval** attribut C++ a les mêmes fonctionnalités que le [retval](/windows/desktop/Midl/retval) attribut MIDL.
+L’attribut **retVal** C++ a les mêmes fonctionnalités que l’attribut MIDL [retVal](/windows/win32/Midl/retval) .
 
-**retval** doit apparaître sur le dernier argument dans les déclaration d’une fonction.
+**retVal** doit apparaître sur le dernier argument dans la déclaration d’une fonction.
 
 ## <a name="example"></a>Exemple
 
-Consultez l’exemple de [peut être liée](bindable.md) pour un exemple d’utilisation de **retval**.
+Consultez l’exemple de [liaison](bindable.md) pour obtenir un exemple d’utilisation de **retVal**.
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CLinearTransition [MFC], m_dblFinalValue
 - CLinearTransition [MFC], m_duration
 ms.assetid: 7fcb2dba-beb8-4933-9f5d-3b7fb1585ef0
-ms.openlocfilehash: 4aa2d9955d2bbf98d2d7829806c4bcbd76340847
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a6348d1afd0117683bd31af61324b14e16f710c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392529"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505740"
 ---
 # <a name="clineartransition-class"></a>CLinearTransition, classe
 
@@ -43,18 +43,18 @@ class CLinearTransition : public CBaseTransition;
 
 |Nom|Description|
 |----------|-----------------|
-|[CLinearTransition::Create](#create)|Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé. (Substitue [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CLinearTransition::Create](#create)|Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé. (Substitue [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|La valeur de la variable à la fin de la transition de l’animation.|
-|[CLinearTransition::m_duration](#m_duration)|La durée de la transition.|
+|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|Valeur de la variable d’animation à la fin de la transition.|
+|[CLinearTransition::m_duration](#m_duration)|Durée de la transition.|
 
 ## <a name="remarks"></a>Notes
 
-Pendant une transition linéaire, la valeur de la variable de l’animation passe linéairement à partir de sa valeur initiale à une valeur finale spécifiée. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.
+Pendant une transition linéaire, la valeur de la variable d’animation passe de manière linéaire de sa valeur initiale à une valeur finale spécifiée. Étant donné que toutes les transitions sont automatiquement désactivées, il est recommandé de les allouer à l’aide de operator new. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController:: AnimateGroup, jusqu’à ce qu’il soit NULL. La modification des variables membres après la création de cet objet COM n’a aucun effet.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -81,10 +81,10 @@ CLinearTransition(
 ### <a name="parameters"></a>Paramètres
 
 *duration*<br/>
-La durée de la transition.
+Durée de la transition.
 
 *dblFinalValue*<br/>
-La valeur de la variable à la fin de la transition de l’animation.
+Valeur de la variable d’animation à la fin de la transition.
 
 ##  <a name="create"></a>  CLinearTransition::Create
 
@@ -99,15 +99,15 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Paramètres
 
 *pLibrary*<br/>
-Un pointeur vers un [interface IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standards.
+Pointeur vers une [interface IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standard.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la transition est créée avec succès ; Sinon, FALSE.
+TRUE si la transition est créée avec succès; Sinon, FALSe.
 
 ##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue
 
-La valeur de la variable à la fin de la transition de l’animation.
+Valeur de la variable d’animation à la fin de la transition.
 
 ```
 DOUBLE m_dblFinalValue;
@@ -115,7 +115,7 @@ DOUBLE m_dblFinalValue;
 
 ##  <a name="m_duration"></a>  CLinearTransition::m_duration
 
-La durée de la transition.
+Durée de la transition.
 
 ```
 UI_ANIMATION_SECONDS m_duration;

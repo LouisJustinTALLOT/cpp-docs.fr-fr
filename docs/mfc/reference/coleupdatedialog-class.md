@@ -1,5 +1,5 @@
 ---
-title: Coleupdatedialog, classe
+title: COleUpdateDialog, classe
 ms.date: 11/04/2016
 f1_keywords:
 - COleUpdateDialog
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: b8e580130b025f07b8f85a624b7f5a224a00e49e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 150e78b7880a61343db21c3c787ffdd1f0b734a5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373594"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503168"
 ---
-# <a name="coleupdatedialog-class"></a>Coleupdatedialog, classe
+# <a name="coleupdatedialog-class"></a>COleUpdateDialog, classe
 
 Utilisée pour un cas particulier de la boîte de dialogue OLE Modifier les liens, qui doit être utilisée lorsque vous devez mettre à jour uniquement les objets liés ou incorporés d'un document.
 
@@ -39,7 +39,7 @@ class COleUpdateDialog : public COleLinksDialog
 
 |Nom|Description|
 |----------|-----------------|
-|[COleUpdateDialog::DoModal](#domodal)|Affiche le **modifier les liens** boîte de dialogue dans un mode de mise à jour.|
+|[COleUpdateDialog::DoModal](#domodal)|Affiche la boîte de dialogue **modifier les liens** dans un mode de mise à jour.|
 
 ## <a name="remarks"></a>Notes
 
@@ -65,7 +65,7 @@ Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, cons
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxodlgs.h
+**En-tête:** afxodlgs. h
 
 ##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog
 
@@ -82,7 +82,7 @@ explicit COleUpdateDialog(
 ### <a name="parameters"></a>Paramètres
 
 *pDoc*<br/>
-Pointe vers le document qui contient les liens qui peuvent nécessiter la mise à jour.
+Pointe vers le document contenant les liens qui peuvent nécessiter une mise à jour.
 
 *bUpdateLinks*<br/>
 Indicateur qui détermine si les objets liés doivent être mis à jour.
@@ -91,15 +91,15 @@ Indicateur qui détermine si les objets liés doivent être mis à jour.
 Indicateur qui détermine si les objets incorporés doivent être mis à jour.
 
 *pParentWnd*<br/>
-Pointe vers l’objet de fenêtre parente ou propriétaire (de type `CWnd`) auquel appartient l’objet de la boîte de dialogue. Si sa valeur est NULL, la fenêtre parente de la boîte de dialogue est fixée à la fenêtre principale de l’application.
+Pointe vers l’objet de fenêtre parent ou propriétaire (de `CWnd`type) auquel l’objet de boîte de dialogue appartient. Si la valeur est NULL, la fenêtre parente de la boîte de dialogue est définie sur la fenêtre d’application principale.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction construit uniquement un `COleUpdateDialog` objet. Pour afficher la boîte de dialogue, appelez [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Cette classe doit être utilisée à la place de `COleLinksDialog` lorsque vous souhaitez mettre à jour uniquement les éléments liés ou incorporés.
+Cette fonction construit uniquement un `COleUpdateDialog` objet. Pour afficher la boîte de dialogue, appelez [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Cette classe doit être utilisée au lieu `COleLinksDialog` de lorsque vous souhaitez mettre à jour uniquement les éléments liés ou incorporés existants.
 
 ##  <a name="domodal"></a>  COleUpdateDialog::DoModal
 
-Affiche la boîte de dialogue Modifier les liens zone mettre à jour le mode.
+Affiche la boîte de dialogue Modifier les liens en mode mise à jour.
 
 ```
 virtual INT_PTR DoModal();
@@ -107,17 +107,17 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valeur de retour
 
-État d’achèvement de la boîte de dialogue. Une des valeurs suivantes :
+État d’achèvement de la boîte de dialogue. L’une des valeurs suivantes :
 
-- IDOK si la boîte de dialogue a été retourné avec succès.
+- IDOK si la boîte de dialogue a été retournée avec succès.
 
-- IDCANCEL, si aucun élément lié ou incorporé dans le document actif avez besoin de la mise à jour.
+- IDCANCEL si aucun des éléments liés ou incorporés dans le document actif n’a besoin d’être mis à jour.
 
-- IDABORT si une erreur s’est produite. Si IDABORT est retournée, appelez le [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) fonction membre pour obtenir plus d’informations sur le type d’erreur qui s’est produite. Pour obtenir la liste des erreurs possibles, consultez le [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) (fonction) dans le SDK Windows.
+- IDABORT si une erreur s’est produite. Si IDABORT est retourné, appelez la fonction membre [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) pour obtenir plus d’informations sur le type d’erreur qui s’est produit. Pour obtenir la liste des erreurs possibles, consultez la fonction [OleUIEditLinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) dans la SDK Windows.
 
 ### <a name="remarks"></a>Notes
 
-Tous les liens et/ou des incorporations sont mis à jour, sauf si l’utilisateur sélectionne le bouton Annuler.
+Tous les liens et/ou les incorporations sont mis à jour, sauf si l’utilisateur sélectionne le bouton Annuler.
 
 ## <a name="see-also"></a>Voir aussi
 

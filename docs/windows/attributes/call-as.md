@@ -1,21 +1,21 @@
 ---
-title: call_as (C++ attribut COM)
+title: call_as (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f36cf8d1be589cc614a6def583b00af00aabdb61
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148352"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501808"
 ---
-# <a name="callas"></a>call_as
+# <a name="call_as"></a>call_as
 
-Permet une [local](local-cpp.md) fonction être mappée à une fonction à distance afin que lorsque la fonction à distance est appelée, la fonction locale soit appelée.
+Permet à une fonction [locale](local-cpp.md) d’être mappée à une fonction distante afin que, lorsque la fonction distante est appelée, la fonction locale soit appelée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ Permet une [local](local-cpp.md) fonction être mappée à une fonction à dista
 ### <a name="parameters"></a>Paramètres
 
 *function*<br/>
-La fonction locale que vous souhaitez être appelée lorsqu’une fonction à distance est appelée.
+Fonction locale que vous souhaitez appeler lorsqu’une fonction distante est appelée.
 
 ## <a name="remarks"></a>Notes
 
-Le **call_as** C++ attribut a les mêmes fonctionnalités que le [call_as](/windows/desktop/Midl/call-as) attribut MIDL.
+L’attribut **call_as** C++ a les mêmes fonctionnalités que l’attribut MIDL [call_as](/windows/win32/Midl/call-as) .
 
 ## <a name="example"></a>Exemple
 
-Le code suivant montre comment vous pouvez utiliser **call_as** pour mapper une fonction non accessibles à distance (`f1`) à une fonction accessible à distance (`Remf1`) :
+Le code suivant montre comment vous pouvez utiliser **call_as** pour mapper une fonction qui n’est pas`f1`accessible à distance () à une`Remf1`fonction accessible à distance ():
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -56,8 +56,8 @@ __interface IMInterface {
 |-|-|
 |**S'applique à**|Méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

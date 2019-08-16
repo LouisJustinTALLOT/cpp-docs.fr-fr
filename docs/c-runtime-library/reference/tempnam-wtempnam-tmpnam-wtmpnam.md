@@ -40,14 +40,14 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-ms.openlocfilehash: 29fa8fc836b1b52bcf66247b3f6aaba47b8c2eaa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e8e11182948e9bccf1c55685cc7c3d55ff697c8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284865"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500767"
 ---
-# <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
+# <a name="_tempnam-_wtempnam-tmpnam-_wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 
 Génèrent des noms que vous pouvez utiliser pour créer des fichiers temporaires. Il existe des versions plus sécurisées de ces fonctions. Consultez [tmpnam_s, _wtmpnam_s](tmpnam-s-wtmpnam-s.md).
 
@@ -73,7 +73,7 @@ wchar_t *_wtmpnam(
 ### <a name="parameters"></a>Paramètres
 
 *prefix*<br/>
-La chaîne qui sera ajouté aux noms retournés par **_tempnam**.
+Chaîne qui sera précédée des noms retournés par **_tempnam**.
 
 *dir*<br/>
 Chemin d’accès utilisé dans le nom de fichier en l’absence de variable d’environnement TMP ou si TMP n’est pas un répertoire valide.
@@ -83,30 +83,30 @@ Pointeur destiné à contenir le nom généré et qui sera identique à celui re
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne un pointeur vers le nom généré ou **NULL** s’il existe un échec. Échec peut se produire si vous essayez de plus de **TMP_MAX** (voir STDIO. (H) appels avec **tmpnam** ou si vous utilisez **_tempnam** et il existe un nom de répertoire non valide spécifié dans la variable d’environnement TMP et dans le *dir* paramètre.
+Chacune de ces fonctions retourne un pointeur vers le nom généré ou **null** en cas d’échec. Une défaillance peut se produire si vous tentez plus de **TMP_MAX** (voir stdio. H) appelle avec **tmpnam** ou si vous utilisez **_tempnam** et qu’un nom de répertoire non valide est spécifié dans la variable d’environnement TMP et dans le paramètre *dir* .
 
 > [!NOTE]
-> Les pointeurs retournés par **tmpnam** et **_wtmpnam** pointent vers les mémoires tampons internes statiques. [free](free.md) ne doit pas être appelé pour libérer ces pointeurs. **gratuit** doit être appelée pour les pointeurs alloués par **_tempnam** et **_wtempnam**.
+> Les pointeurs retournés par **tmpnam** et **_wtmpnam** pointent vers des mémoires tampon statiques internes. [free](free.md) ne doit pas être appelé pour libérer ces pointeurs. **Free** doit être appelé pour les pointeurs alloués par **_tempnam** et **_wtempnam**.
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions retourne le nom d’un fichier qui n’existe pas actuellement. **tmpnam** retourne un nom unique dans le répertoire temporaire Windows désigné retourné par [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). **\_tempnam** génère un nom unique dans un répertoire autre que celui désigné. Notez que lorsqu’un nom de fichier est précédé d’une barre oblique inverse et d’aucune information de chemin, comme \fname21, cela indique que le nom est valide pour le répertoire de travail actif.
+Chacune de ces fonctions retourne le nom d’un fichier qui n’existe pas actuellement. **tmpnam** retourne un nom unique dans le répertoire temporaire Windows désigné renvoyé par [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). tempnam génère un nom unique dans un répertoire autre que celui désigné.  **\_** Notez que lorsqu’un nom de fichier est précédé d’une barre oblique inverse et d’aucune information de chemin, comme \fname21, cela indique que le nom est valide pour le répertoire de travail actif.
 
-Pour **tmpnam**, vous pouvez stocker ce nom de fichier généré dans *str*. Si *str* est **NULL**, puis **tmpnam** laisse le résultat dans une mémoire tampon statique interne. Par conséquent, tous les appels suivants détruisent cette valeur. Le nom généré par **tmpnam** se compose d’un nom de fichier généré par le programme et, après le premier appel à **tmpnam**, une extension de fichier de numéros séquentiels en base 32 ((.1-.vvu, quand **TMP_MAX**  dans STDIO. H est 32 767).
+Pour **tmpnam**, vous pouvez stocker ce nom de fichier généré dans *Str*. Si *Str* a la **valeur null**, **tmpnam** laisse le résultat dans une mémoire tampon statique interne. Par conséquent, tous les appels suivants détruisent cette valeur. Le nom généré par **tmpnam** se compose d’un nom de fichier généré par le programme et, après le premier appel à **tmpnam**, une extension de fichier de nombres séquentiels dans la base 32 (. 1-4. vvu, quand **TMP_MAX** dans stdio. H est 32 767).
 
-**_tempnam** générera un nom de fichier unique pour un répertoire choisi par les règles suivantes :
+**_tempnam** génère un nom de fichier unique pour un répertoire choisi par les règles suivantes:
 
 - Si la variable d’environnement TMP est définie avec un nom de répertoire valide, des noms de fichiers uniques sont générés pour le répertoire spécifié par TMP.
 
-- Si la variable d’environnement TMP n’est pas définie ou si elle est définie sur le nom d’un répertoire qui n’existe pas, **_tempnam** utilisera le *dir* paramètre en tant que le chemin d’accès pour lesquels il génère des noms uniques.
+- Si la variable d’environnement TMP n’est pas définie ou si elle est définie sur le nom d’un répertoire qui n’existe pas, **_tempnam** utilise le paramètre *dir* comme chemin d’accès pour lequel elle génère des noms uniques.
 
-- Si la variable d’environnement TMP n’est pas définie ou si elle est définie sur le nom d’un répertoire qui n’existe pas et si *dir* est soit **NULL** ou le nom d’un répertoire qui n’existe pas, la valeur **_ tempnam** utilisera le répertoire de travail actuel pour générer des noms uniques. Actuellement, si les deux TMP et *dir* spécifier des noms de répertoires qui n’existent pas, le **_tempnam** appel de fonction échoue.
+- Si la variable d’environnement TMP n’est pas définie ou si elle est définie sur le nom d’un répertoire qui n’existe pas, et si *dir* a la valeur **null** ou est défini sur le nom d’un répertoire qui n’existe pas, **_tempnam** utilise le répertoire de travail actuel dans le gène Évaluez les noms uniques. Actuellement, si TMP et *dir* spécifient tous deux des noms de répertoires qui n’existent pas, l’appel de la fonction **_tempnam** échoue.
 
-Le nom retourné par **_tempnam** sera une concaténation de *préfixe* et un numéro séquentiel, qui est associés pour créer un nom de fichier unique pour le répertoire spécifié. **_tempnam** génère des noms de fichier sans extension. **_tempnam** utilise [malloc](malloc.md) pour allouer de l’espace pour le nom de fichier ; le programme est chargé de libérer cet espace quand il n’est plus nécessaire.
+Le nom retourné par **_tempnam** sera une concaténation de *préfixe* et un nombre séquentiel, qui sera combiné pour créer un nom de fichier unique pour le répertoire spécifié. **_tempnam** génère des noms de fichiers qui n’ont pas d’extension. **_tempnam** utilise [malloc](malloc.md) pour allouer de l’espace pour le nom de fichier; le programme est chargé de libérer cet espace lorsqu’il n’est plus nécessaire.
 
-**_tempnam** et **tmpnam** automatiquement handle arguments de chaîne de caractères multioctets comme il convient, en identifiant les séquences de caractères multioctets en fonction de la page de codes OEM obtient du système d’exploitation. **_wtempnam** est une version à caractères larges de **_tempnam**; les arguments et la valeur de retour de **_wtempnam** sont des chaînes à caractères larges. **_wtempnam** et **_tempnam** ont un comportement identique, sauf que **_wtempnam** ne gère pas les chaînes de caractères multioctets. **_wtmpnam** est une version à caractères larges de **tmpnam**; l’argument et valeur de retour de **_wtmpnam** sont des chaînes à caractères larges. **_wtmpnam** et **tmpnam** ont un comportement identique, sauf que **_wtmpnam** ne gère pas les chaînes de caractères multioctets.
+**_tempnam** et **tmpnam** gèrent automatiquement les arguments de chaîne de caractères multioctets comme il convient, en identifiant les séquences de caractères multioctets en fonction de la page de codes OEM obtenue du système d’exploitation. **_wtempnam** est une version à caractères larges de **_tempnam**; les arguments et la valeur de retour de **_wtempnam** sont des chaînes à caractères larges. **_wtempnam** et **_tempnam** se comportent de la même manière, sauf que **_wtempnam** ne gère pas les chaînes de caractères multioctets. **_wtmpnam** est une version à caractères larges de **tmpnam**; l’argument et la valeur de retour de **_wtmpnam** sont des chaînes à caractères larges. **_wtmpnam** et **tmpnam** se comportent de la même manière, sauf que **_wtmpnam** ne gère pas les chaînes de caractères multioctets.
 
-Si **_DEBUG** et **_CRTDBG_MAP_ALLOC** sont définis, **_tempnam** et **_wtempnam** sont remplacés par les appels à [_tempnam _dbg et _wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md).
+Si **_ Debug et _** **CRTDBG_MAP_ALLOC** sont définis, **_tempnam** et **_wtempnam** sont remplacés par les appels à [_tempnam_dbg et _wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -125,7 +125,7 @@ Si **_DEBUG** et **_CRTDBG_MAP_ALLOC** sont définis, **_tempnam** et **_wtempna
 
 Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_tempnam.c

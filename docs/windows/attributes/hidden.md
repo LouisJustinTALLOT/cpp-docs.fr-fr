@@ -1,21 +1,21 @@
 ---
-title: (C++ COM attribut masqué)
+title: Hidden (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.hidden
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: d1d87ea057b22984a0e0f8f5518899e36f7d0221
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75b03877b1204d6e1c4770f5ba9c8c88338b3394
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409510"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501446"
 ---
 # <a name="hidden"></a>hidden
 
-Indique que l’élément existe, mais ne doit pas être affiché dans un navigateur orienté utilisateur.
+Indique que l’élément existe mais qu’il ne doit pas être affiché dans un navigateur orienté utilisateur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Indique que l’élément existe, mais ne doit pas être affiché dans un naviga
 
 ## <a name="remarks"></a>Notes
 
-Le **masqué** attribut C++ a les mêmes fonctionnalités que le [masqué](/windows/desktop/Midl/hidden) attribut MIDL.
+L’attribut **Hidden** C++ a les mêmes fonctionnalités que l’attribut MIDL [masqué](/windows/win32/Midl/hidden) .
 
 ## <a name="example"></a>Exemple
 
-Consultez l’exemple de [peut être liée](bindable.md) pour obtenir un exemple montrant comment utiliser **masqué**.
+Pour obtenir un exemple d’utilisation de **Hidden**, consultez l’exemple de [Bindable](bindable.md) .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -39,8 +39,8 @@ Consultez l’exemple de [peut être liée](bindable.md) pour obtenir un exemple
 |-|-|
 |**S'applique à**|**interface**, **classe**, **struct**, méthode, propriété|
 |**Renouvelable**|Non|
-|**Attributs requis**|**coclasse** (lorsqu’il est appliqué à **classe** ou **struct**)|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|**coclasse** (en cas d’application à une **classe** ou à un **struct**)|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

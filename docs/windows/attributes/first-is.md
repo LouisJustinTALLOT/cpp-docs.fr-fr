@@ -1,21 +1,21 @@
 ---
-title: first_is (C++ attribut COM)
+title: first_is (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d06435caaeb53beb76bd145c92c470446cae3a7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409601"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501557"
 ---
-# <a name="firstis"></a>first_is
+# <a name="first_is"></a>first_is
 
-Spécifie l’index du premier élément de tableau doit être transmis.
+Spécifie l’index du premier élément de tableau à transmettre.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ Spécifie l’index du premier élément de tableau doit être transmis.
 ### <a name="parameters"></a>Paramètres
 
 *expression*<br/>
-Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisés.
+Une ou plusieurs expressions en langage C. Les emplacements d’arguments vides sont autorisés.
 
 ## <a name="remarks"></a>Notes
 
-Le **first_is** C++ attribut a les mêmes fonctionnalités que le [first_is](/windows/desktop/Midl/first-is) attribut MIDL.
+L’attribut **first_is** C++ a les mêmes fonctionnalités que l’attribut MIDL [first_is](/windows/win32/Midl/first-is) .
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-Le code suivant montre différentes façons de spécifier une section dans un tableau :
+Le code suivant montre différentes façons de spécifier une section dans un tableau:
 
 ```cpp
 // cpp_attr_ref_first_is.cpp
@@ -62,10 +62,10 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**S'applique à**|Champ **struct** ou **union**, paramètre de l’interface, interface (méthode)|
+|**S'applique à**|Champ dans un **struct** ou une **Union**, un paramètre d’interface, une méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
