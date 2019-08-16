@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: ebffbea120101a77450a5e8da3cdb6e34723e7be
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915725"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496501"
 ---
 # <a name="csecurityattributes-class"></a>Vue, classe
 
@@ -45,9 +45,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ## <a name="remarks"></a>Notes
 
-La `SECURITY_ATTRIBUTES` structure contient un descripteur de [sécurité](/windows/desktop/api/winnt/ns-winnt-security_descriptor) utilisé pour la création d’un objet et spécifie si le handle récupéré en spécifiant cette structure peut être hérité.
+La `SECURITY_ATTRIBUTES` structure contient un descripteur de [sécurité](/windows/win32/api/winnt/ns-winnt-security_descriptor) utilisé pour la création d’un objet et spécifie si le handle récupéré en spécifiant cette structure peut être hérité.
 
-Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
+Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/win32/SecAuthZ/access-control) dans le SDK Windows.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -100,6 +100,6 @@ Cette méthode est utilisée par le constructeur pour initialiser l' `CSecurityA
 
 [Exemple de sécurité](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[descripteur de sécurité](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[descripteur de sécurité](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)

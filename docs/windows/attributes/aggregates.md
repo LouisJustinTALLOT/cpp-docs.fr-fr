@@ -1,5 +1,5 @@
 ---
-title: agrégats (C++ COM attribut)
+title: agrégats (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregates
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: 12e6af31c2714095cf2ecf51e4f067081789a9e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9e3f84fbc781bd5187ae0c3461a6c8d68a29aa0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262175"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501883"
 ---
 # <a name="aggregates"></a>agrégats
 
@@ -31,14 +31,14 @@ Indique que l’objet agrège l’objet spécifié par le CLSID.
 *clsid*<br/>
 Spécifie le CLSID de l’objet qui peut être agrégé.
 
-*nom_variable*<br/>
+*nom_de_variable*<br/>
 Nom de la variable à insérer. Cette variable contient le `IUnknown` de l’objet en cours d’agrégation.
 
 ## <a name="remarks"></a>Notes
 
 Quand il est appliqué à un objet, l’attribut C++ **aggregates** implémente un wrapper externe pour l’objet en cours d’agrégation (spécifié par `clsid`).
 
-Cet attribut exige que l’attribut [coclass](coclass.md), [progid](progid.md)ou [vi_progid](vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliquée, `vi_progid` et `coclass` sont également appliquées.
+Cet attribut exige que l’attribut [coclass](coclass.md), [progid](progid.md)ou [vi_progid](vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliqué, `vi_progid` et `coclass` sont également appliqués.
 
 ### <a name="atl-projects"></a>Projets ATL
 
@@ -85,8 +85,8 @@ struct CObject : IObject
 |-|-|
 |**S'applique à**|**class**, **struct**|
 |**Renouvelable**|Oui|
-|**Attributs requis**|Un ou plusieurs des opérations suivantes : `coclass`, `progid`, ou `vi_progid`.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Une ou plusieurs des valeurs suivantes: `coclass`, `progid`ou `vi_progid`.|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
@@ -95,6 +95,6 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 [Attributs COM](com-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Aggregation](/windows/desktop/com/aggregation)<br/>
-[Aggregatable](/windows/desktop/Midl/aggregatable)<br/>
+[Aggregation](/windows/win32/com/aggregation)<br/>
+[Aggregatable](/windows/win32/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

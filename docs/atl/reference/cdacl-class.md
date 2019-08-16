@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 2bc962407bac947f475368b43f5039bca3c1da1e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: a37ef47a4ea89d9ec24fac417e5b715bd2602fd7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915812"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496927"
 ---
 # <a name="cdacl-class"></a>CDacl, classe
 
@@ -66,7 +66,7 @@ Pour récupérer la liste DACL d’un objet, vous devez être le propriétaire d
 
 Utilisez les méthodes de classe fournies pour créer, ajouter, supprimer et supprimer des ACE de `CDacl` l’objet. Voir aussi [AtlGetDacl](security-global-functions.md#atlgetdacl) et [AtlSetDacl](security-global-functions.md#atlsetdacl).
 
-Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
+Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/win32/SecAuthZ/access-control) dans le SDK Windows.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -121,7 +121,7 @@ Retourne la valeur true si l’entrée du contrôle `CDacl` d’accès est ajout
 
 Un `CDacl` objet contient zéro, une ou plusieurs entrées de contrôle d’accès (ACE, Access Control Entry) qui identifient les utilisateurs et les groupes qui peuvent accéder à l’objet. Cette méthode ajoute une entrée du contrôle d’accès qui `CDacl` autorise l’accès à l’objet.
 
-Consultez [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) pour obtenir une description des différents indicateurs qui peuvent être définis dans le `AceFlags` paramètre.
+Consultez [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) pour obtenir une description des différents indicateurs qui peuvent être définis dans le `AceFlags` paramètre.
 
 ##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce
 
@@ -166,7 +166,7 @@ Retourne la valeur true si l’entrée du contrôle `CDacl` d’accès est ajout
 
 Un `CDacl` objet contient zéro, une ou plusieurs entrées de contrôle d’accès (ACE, Access Control Entry) qui identifient les utilisateurs et les groupes qui peuvent accéder à l’objet. Cette méthode ajoute une entrée du contrôle d’accès qui refuse `CDacl` l’accès à l’objet.
 
-Consultez [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) pour obtenir une description des différents indicateurs qui peuvent être définis dans le `AceFlags` paramètre.
+Consultez [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) pour obtenir une description des différents indicateurs qui peuvent être définis dans le `AceFlags` paramètre.
 
 ##  <a name="cdacl"></a>  CDacl::CDacl
 
@@ -264,7 +264,7 @@ Supprime chaque `ACE` structure (d’entrée de contrôle d’accès) (le cas é
 
 [Exemple de sécurité](../../overview/visual-cpp-samples.md)<br/>
 [CAcl, classe](../../atl/reference/cacl-class.md)<br/>
-[LCA](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[Roi](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[LCA](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[Roi](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)

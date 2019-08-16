@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1510
 ms.assetid: 150c827f-9514-41a9-8d7e-82f820749bcb
-ms.openlocfilehash: f05f79ea78958a7d7a64f24bdce2d1151b93cdfb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33c17a3099f4aed99cc26579d0e65c4a350b4268
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208503"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501093"
 ---
 # <a name="fatal-error-c1510"></a>Erreur irrécupérable C1510
 
 Impossible d'ouvrir la ressource de langage clui.dll
 
-Le compilateur ne peut pas charger la DLL de ressource de langue.
+Le compilateur ne peut pas charger la DLL de ressources de langage.
 
-Il existe deux causes courantes de ce problème. Lorsque vous utilisez le compilateur 32 bits et les outils, vous pouvez voir cette erreur pour les grands projets qui utilisent plus de 2 Go de mémoire au cours d’un lien. Une solution possible sur les systèmes Windows 64 bits consiste à utiliser natif 64 bits ou cross compilateur et les outils de génération de votre code. Il tire parti de l’espace mémoire disponible pour les applications 64 bits. Si vous devez utiliser un compilateur 32 bits, car il est en cours d’exécution sur un système 32 bits, dans certains cas, vous pouvez augmenter la quantité de mémoire disponible pour l’éditeur de liens / 3GB. Pour plus d’informations, consultez [4-Gigabyte Tuning : BCDEdit et Boot.ini](https://msdn.microsoft.com/library/vs/alm/bb613473) et [BCDEdit /Set increaseuserva](https://msdn.microsoft.com/library/ff542202.aspx) commande.
+Il existe deux causes courantes à ce problème. Lorsque vous utilisez le compilateur et les outils 32 bits, vous pouvez voir cette erreur pour les grands projets qui utilisent plus de 2 Go de mémoire pendant un lien. Une solution possible sur les systèmes Windows 64 bits consiste à utiliser le compilateur et les outils natifs ou croisés 64 bits pour générer votre code. Cela tire parti de l’espace mémoire plus important disponible pour les applications 64 bits. Si vous devez utiliser un compilateur 32 bits, car vous exécutez sur un système 32 bits, vous pouvez, dans certains cas, augmenter la quantité de mémoire disponible pour l’éditeur de liens à 3 Go. Pour plus d’informations, [consultez réglage de 4 gigaoctets: Bcdedit et boot. ini](/windows/win32/memory/4-gigabyte-tuning) et la commande [bcdedit/set increaseuserva](/windows-hardware/drivers/devtest/bcdedit--set) .
 
-La cause est une installation de Visual Studio rompue ou incomplète. Dans ce cas, exécutez le programme d’installation pour réparer ou réinstaller Visual Studio.
+L’autre cause courante est une installation de Visual Studio interrompue ou incomplète. Dans ce cas, réexécutez le programme d’installation pour réparer ou réinstaller Visual Studio.

@@ -49,19 +49,19 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 4a12c87f1cff14582e21fbb7d617100fc2853dab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7736e1e7889642c41a5e3853ac13221ab22f6d03
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362281"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500926"
 ---
-# <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
+# <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
 Obtient la longueur d'une chaîne en utilisant les paramètres régionaux actifs ou des paramètres régionaux spécifiés. Il existe des versions plus sécurisées de ces fonctions. Consultez [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](strnlen-strnlen-s.md)
 
 > [!IMPORTANT]
-> **_mbslen**, **_mbslen_l**, **_mbstrlen**, et **_mbstrlen_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslen**, **_mbslen_l**, **_mbstrlen**et **_mbstrlen_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -98,13 +98,13 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne le nombre de caractères dans *str*, à l’exclusion de la valeur null terminal. Aucune valeur de retour n’est réservée pour indiquer une erreur, à l’exception de **_mbstrlen** et **_mbstrlen_l**, qui retournent `((size_t)(-1))` si la chaîne contient un caractère multioctet non valide.
+Chacune de ces fonctions retourne le nombre de caractères dans *Str*, à l’exclusion du terminal null. Aucune valeur de retour n’est réservée pour indiquer une erreur , à l’exception de _mbstrlen `((size_t)(-1))` et **_mbstrlen_l**, qui retourne si la chaîne contient un caractère multioctet non valide.
 
 ## <a name="remarks"></a>Notes
 
-**strlen** interprète la chaîne comme une chaîne de caractères à un octet, donc sa valeur de retour est toujours égal au nombre d’octets, même si la chaîne contient des caractères multioctets. **wcslen** est une version à caractères larges de **strlen**; l’argument de **wcslen** est une chaîne de caractères larges et le nombre de caractères est en caractères larges (deux octets). **wcslen** et **strlen** se comportent de façon identique dans le cas contraire.
+**strlen** interprète la chaîne comme une chaîne de caractères codés sur un octet, donc sa valeur de retour est toujours égale au nombre d’octets, même si la chaîne contient des caractères multioctets. **wcslen** est une version à caractères larges de **strlen**; l’argument de **wcslen** est une chaîne de caractères larges et le nombre de caractères est en caractères larges (sur deux octets). dans le cas contraire, **wcslen** et **strlen** se comportent de la même façon.
 
-**Remarque relative à la sécurité** Ces fonctions sont exposées à une menace potentielle liée à un problème de dépassement de mémoire tampon. Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Remarque relative à la sécurité** Ces fonctions sont exposées à une menace potentielle liée à un problème de dépassement de mémoire tampon. Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -114,7 +114,7 @@ Chacune de ces fonctions retourne le nombre de caractères dans *str*, à l’ex
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen** et **_mbslen_l** retourner le nombre de caractères multioctets dans une chaîne de caractères multioctets mais ils ne testent pas pour la validité des caractères multioctets. **_mbstrlen** et **_mbstrlen_l** tester la validité des caractères multioctets et reconnaissent les séquences de caractères multioctets. Si la chaîne passée à **_mbstrlen** ou **_mbstrlen_l** contient un caractère multioctet non valide pour la page de codes, la fonction retourne -1 et les jeux **errno** à **EILSEQ**.
+**_mbslen** et **_mbslen_l** retournent le nombre de caractères multioctets dans une chaîne de caractères multioctets, mais ils ne testent pas la validité des caractères multioctets. **_mbstrlen** et **_mbstrlen_l** testent la validité des caractères multioctets et reconnaissent les séquences de caractères multioctets. Si la chaîne transmise à **_mbstrlen** ou **_mbstrlen_l** contient un caractère multioctet non valide pour la page de codes, la fonction retourne-1 et définit **errno** sur **EILSEQ**.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

@@ -1,17 +1,17 @@
 ---
-title: Fonctions globales de contexte de périphérique
+title: Fonctions globales du contexte de périphérique
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlCreateTargetDC
 ms.assetid: 08ec28f6-daff-4882-9544-e8a4639d05c4
-ms.openlocfilehash: aeebec65def9364e56156f6bb323815da012e11f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d225bd0cd996fd908479b5a93aad81ea0428900b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276560"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496102"
 ---
-# <a name="device-context-global-functions"></a>Fonctions globales de contexte de périphérique
+# <a name="device-context-global-functions"></a>Fonctions globales du contexte de périphérique
 
 Cette fonction crée un contexte de périphérique pour un appareil donné.
 
@@ -21,7 +21,7 @@ Cette fonction crée un contexte de périphérique pour un appareil donné.
 
 ##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC
 
-Crée un contexte de périphérique pour le périphérique spécifié dans le [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) structure.
+Crée un contexte de périphérique pour l’appareil spécifié dans la structure [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) .
 
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
@@ -30,24 +30,24 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 ### <a name="parameters"></a>Paramètres
 
 *hdc*<br/>
-[in] Le handle existant d’un contexte de périphérique, ou NULL.
+dans Handle existant d’un contexte de périphérique (ou NULL).
 
 *ptd*<br/>
-[in] Un pointeur vers le `DVTARGETDEVICE` structure qui contient des informations sur l’appareil cible.
+dans Pointeur vers la `DVTARGETDEVICE` structure qui contient des informations sur l’appareil cible.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le handle vers un contexte de périphérique pour le périphérique spécifié dans le `DVTARGETDEVICE`. Si aucun périphérique n’est spécifié, retourne le handle vers le périphérique d’affichage par défaut.
+Retourne le handle vers un contexte de périphérique pour l’appareil spécifié dans `DVTARGETDEVICE`le. Si aucun appareil n’est spécifié, retourne le descripteur au périphérique d’affichage par défaut.
 
 ### <a name="remarks"></a>Notes
 
-Si la structure est NULL et *hdc* est NULL, crée un contexte de périphérique pour le périphérique d’affichage par défaut.
+Si la structure est NULL et que *HDC* a la valeur null, crée un contexte de périphérique pour le périphérique d’affichage par défaut.
 
-Si *hdc* n’est pas NULL et *ptd* est NULL, la fonction retourne existant *hdc*.
+Si *HDC* n’a pas la valeur null et que *PTD* a la valeur null, la fonction retourne le *HDC*existant.
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin. h
 
 ## <a name="see-also"></a>Voir aussi
 

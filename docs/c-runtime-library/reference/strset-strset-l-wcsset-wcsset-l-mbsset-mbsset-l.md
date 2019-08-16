@@ -60,19 +60,19 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 486e53a38f5b91732a422f01dce9dbd5c1b36c3d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 916e65f543e48a9fbfede3ca973698f8b0d07040
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375364"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500836"
 ---
-# <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
+# <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
 Remplace les caractères d’une chaîne par un caractère. Il existe des versions plus sécurisées de ces fonctions. Consultez [_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsset** et **_mbsset_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsset** et **_mbsset_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -123,14 +123,14 @@ Retourne un pointeur vers la chaîne modifiée.
 
 ## <a name="remarks"></a>Notes
 
-Le **_strset** fonction définit tous les caractères (sauf le caractère null de fin) de *str* à *c*, converti en **char**. **_wcsset** et **_mbsset_l** sont des versions à caractères larges et à caractères multioctets de **_strset**, et les types de données des arguments et valeurs de retour varient en conséquence. Ces fonctions se comportent sinon de façon identique.
+La fonction **_strset** définit tous les caractères (à l’exception du caractère null de fin) de *Str* sur *c*, convertis en **char**. **_wcsset** et **_mbsset_l** sont des versions à caractères larges et à caractères multioctets de **_strset**, et les types de données des arguments et des valeurs de retour varient en conséquence. Ces fonctions se comportent sinon de façon identique.
 
-**_mbsset** valide ses paramètres. Si *str* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_mbsset** retourne **NULL** et définit **errno** à **EINVAL**. **_strset** et **_wcsset** ne valident pas leurs paramètres.
+**_mbsset** valide ses paramètres. Si *Str* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_mbsset** retourne la **valeur null** et définit **errno** sur **EINVAL**. **_strset** et **_wcsset** ne valident pas leurs paramètres.
 
-La valeur de sortie est affectée par la valeur de la **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions sont identiques, à ceci près que celles qui n’ont le **_l** suffixe utiliser les paramètres régionaux actuels et celles qui ont le **_l** suffixe utilisent à la place les paramètres régionaux du passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations [, consultez setlocale, _wsetlocale](setlocale-wsetlocale.md) . Les versions de ces fonctions sont identiques, sauf que celles qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels et celles qui ont le suffixe **_L** utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être utilisés pour les attaques du système, car ils peuvent provoquer une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être utilisés pour les attaques du système, car ils peuvent provoquer une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

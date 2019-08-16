@@ -1,5 +1,5 @@
 ---
-title: Cglobalheap, classe
+title: CGlobalHeap, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CGlobalHeap
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CGlobalHeap class
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
-ms.openlocfilehash: cba15421fd0329df7a66a35979ed54b863b7cca0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b5aa09357ddcc77b6b10de58545bea86eff2488
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258817"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496765"
 ---
-# <a name="cglobalheap-class"></a>Cglobalheap, classe
+# <a name="cglobalheap-class"></a>CGlobalHeap, classe
 
-Cette classe implémente [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) en utilisant les fonctions de tas global Win32.
+Cette classe implémente [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) à l’aide des fonctions de tas global Win32.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+>  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,20 +38,20 @@ class CGlobalHeap : public IAtlMemMgr
 |Nom|Description|
 |----------|-----------------|
 |[CGlobalHeap::Allocate](#allocate)|Appelez cette méthode pour allouer un bloc de mémoire.|
-|[CGlobalHeap::Free](#free)|Appelez cette méthode pour libérer un bloc de mémoire allouée par ce gestionnaire de mémoire.|
-|[CGlobalHeap::GetSize](#getsize)|Appelez cette méthode pour obtenir la taille d’un bloc de mémoire allouée par ce gestionnaire de mémoire allouée.|
+|[CGlobalHeap::Free](#free)|Appelez cette méthode pour libérer un bloc de mémoire alloué par ce gestionnaire de mémoire.|
+|[CGlobalHeap::GetSize](#getsize)|Appelez cette méthode pour obtenir la taille allouée d’un bloc de mémoire alloué par ce gestionnaire de mémoire.|
 |[CGlobalHeap::Reallocate](#reallocate)|Appelez cette méthode pour réallouer la mémoire allouée par ce gestionnaire de mémoire.|
 
 ## <a name="remarks"></a>Notes
 
-`CGlobalHeap` implémente les fonctions d’allocation de mémoire en utilisant les fonctions de tas global Win32.
+`CGlobalHeap`implémente les fonctions d’allocation de mémoire à l’aide des fonctions de tas global Win32.
 
 > [!NOTE]
->  Les fonctions de tas global sont plus lentes que les autres fonctions de gestion de mémoire et ne fournissent pas autant de fonctionnalités. Par conséquent, les nouvelles applications doivent utiliser le [fonctions de tas](/windows/desktop/Memory/heap-functions). Elles sont disponibles dans le [CWin32Heap](../../atl/reference/cwin32heap-class.md) classe. Fonctions globales sont toujours utilisées par DDE et les fonctions de Presse-papiers.
+>  Les fonctions de tas global sont plus lentes que les autres fonctions de gestion de la mémoire et ne fournissent pas autant de fonctionnalités. Par conséquent, les nouvelles applications doivent utiliser les [fonctions de tas](/windows/win32/Memory/heap-functions). Celles-ci sont disponibles dans la classe [CWin32Heap](../../atl/reference/cwin32heap-class.md) . Les fonctions globales sont toujours utilisées par les fonctions DDE et le presse-papiers.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-Consultez l’exemple de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
+Consultez l’exemple pour [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -61,7 +61,7 @@ Consultez l’exemple de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlmem.h
+**En-tête:** atlmem. h
 
 ##  <a name="allocate"></a>  CGlobalHeap::Allocate
 
@@ -82,13 +82,13 @@ Retourne un pointeur vers le début du bloc de mémoire nouvellement alloué.
 
 ### <a name="remarks"></a>Notes
 
-Appelez [CGlobalHeap::Free](#free) ou [CGlobalHeap::Reallocate](#reallocate) pour libérer la mémoire allouée par cette méthode.
+Appelez [CGlobalHeap:: Free](#free) ou [CGlobalHeap::](#reallocate) Allocate pour libérer la mémoire allouée par cette méthode.
 
-Implémenté à l’aide [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) avec un paramètre d’indicateur de GMEM_FIXED.
+Implémenté à l’aide de [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) avec un paramètre flag de GMEM_FIXED.
 
 ##  <a name="free"></a>  CGlobalHeap::Free
 
-Appelez cette méthode pour libérer un bloc de mémoire allouée par ce gestionnaire de mémoire.
+Appelez cette méthode pour libérer un bloc de mémoire alloué par ce gestionnaire de mémoire.
 
 ```
 virtual void Free(void* p) throw();
@@ -101,11 +101,11 @@ Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoir
 
 ### <a name="remarks"></a>Notes
 
-Implémenté à l’aide [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree).
+Implémenté à l’aide de [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree).
 
 ##  <a name="getsize"></a>  CGlobalHeap::GetSize
 
-Appelez cette méthode pour obtenir la taille d’un bloc de mémoire allouée par ce gestionnaire de mémoire allouée.
+Appelez cette méthode pour obtenir la taille allouée d’un bloc de mémoire alloué par ce gestionnaire de mémoire.
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -118,11 +118,11 @@ Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoir
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la taille de bloc de mémoire alloué en octets.
+Retourne la taille du bloc de mémoire alloué, en octets.
 
 ### <a name="remarks"></a>Notes
 
-Implémenté à l’aide [GlobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize).
+Implémenté à l’aide de [GlobalSize](/windows/win32/api/winbase/nf-winbase-globalsize).
 
 ##  <a name="reallocate"></a>  CGlobalHeap::Reallocate
 
@@ -146,9 +146,9 @@ Retourne un pointeur vers le début du bloc de mémoire nouvellement alloué.
 
 ### <a name="remarks"></a>Notes
 
-Appelez [CGlobalHeap::Free](#free) pour libérer la mémoire allouée par cette méthode.
+Appelez [CGlobalHeap:: Free](#free) pour libérer la mémoire allouée par cette méthode.
 
-Implémenté à l’aide [GlobalReAlloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).
+Implémenté à l’aide de [GlobalReAlloc](/windows/win32/api/winbase/nf-winbase-globalrealloc).
 
 ## <a name="see-also"></a>Voir aussi
 

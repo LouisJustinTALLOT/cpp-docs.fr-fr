@@ -17,16 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 689221ec77b21fc8bfaed2e929aee5402a4bc676
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246229"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496985"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase, classe
 
-Cette classe fournit une base pour les classes de pointeur intelligent à l’aide des routines de mémoire basé sur COM.
+Cette classe fournit une base pour les classes de pointeurs intelligents utilisant des routines de mémoire basées sur COM.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,7 +38,7 @@ class CComPtrBase
 #### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Le type d’objet devant être référencé par le pointeur intelligent.
+Type d’objet à référencer par le pointeur intelligent.
 
 ## <a name="members"></a>Membres
 
@@ -46,51 +46,51 @@ Le type d’objet devant être référencé par le pointeur intelligent.
 
 |Nom|Description|
 |----------|-----------------|
-|[CComPtrBase::~CComPtrBase](#dtor)|Destructeur.|
+|[CComPtrBase:: ~ CComPtrBase](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CComPtrBase::Advise](#advise)|Appelez cette méthode pour créer une connexion entre le `CComPtrBase`du point de connexion et un récepteur de client.|
+|[CComPtrBase:: Advise](#advise)|Appelez cette méthode pour créer une connexion entre le `CComPtrBase`point de connexion de et le récepteur d’un client.|
 |[CComPtrBase::Attach](#attach)|Appelez cette méthode pour prendre possession d’un pointeur existant.|
-|[CComPtrBase::CoCreateInstance](#cocreateinstance)|Appelez cette méthode pour créer un objet de la classe associée à un ID de classe spécifié ou les ID de programme.|
-|[CComPtrBase::CopyTo](#copyto)|Appelez cette méthode pour copier le `CComPtrBase` pointeur vers une autre variable de pointeur.|
-|[CComPtrBase::Detach](#detach)|Appelez cette méthode pour libérer la possession d’un pointeur.|
-|[CComPtrBase::IsEqualObject](#isequalobject)|Appelez cette méthode pour vérifier si le texte spécifié `IUnknown` pointe vers le même objet associé à la `CComPtrBase` objet.|
+|[CComPtrBase::CoCreateInstance](#cocreateinstance)|Appelez cette méthode pour créer un objet de la classe associée à un ID de classe ou un ID de programme spécifié.|
+|[CComPtrBase::CopyTo](#copyto)|Appelez cette méthode pour copier le `CComPtrBase` pointeur vers une autre variable pointeur.|
+|[CComPtrBase::Detach](#detach)|Appelez cette méthode pour libérer la propriété d’un pointeur.|
+|[CComPtrBase::IsEqualObject](#isequalobject)|Appelez cette méthode pour vérifier si le spécifié `IUnknown` pointe vers le même objet associé à l' `CComPtrBase` objet.|
 |[CComPtrBase::QueryInterface](#queryinterface)|Appelez cette méthode pour retourner un pointeur vers une interface spécifiée.|
-|[CComPtrBase::Release](#release)|Appelez cette méthode pour libérer de l’interface.|
-|[CComPtrBase::SetSite](#setsite)|Appelez cette méthode pour définir le site de la `CComPtrBase` de l’objet à le `IUnknown` de l’objet parent.|
+|[CComPtrBase::Release](#release)|Appelez cette méthode pour libérer l’interface.|
+|[CComPtrBase::SetSite](#setsite)|Appelez cette méthode pour définir le site de l' `CComPtrBase` objet sur le `IUnknown` de l’objet parent.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CComPtrBase::operator T *](#operator_t_star)|L’opérateur de cast.|
-|[CComPtrBase::operator !](#operator_not)|L’opérateur NOT.|
-|[CComPtrBase::operator &](#operator_amp)|Le & opérateur.|
-|[CComPtrBase::operator *](#operator_star)|opérateur \*,|
-|[CComPtrBase::operator <](#ccomptrbase__operator lt)|Inférieur-que l’opérateur.|
-|[CComPtrBase::operator ==](#operator_eq_eq)|L’opérateur d’égalité.|
-|[CComPtrBase::operator ->](#operator_ptr)|L’opérateur de pointeur de membre.|
+|[CComPtrBase:: Operator T *](#operator_t_star)|Opérateur de cast.|
+|[CComPtrBase:: Operator!](#operator_not)|Opérateur NOT.|
+|[CComPtrBase:: operator &](#operator_amp)|Opérateur &.|
+|[CComPtrBase:: Operator *](#operator_star)|opérateur \*,|
+|[CComPtrBase:: Operator <](#ccomptrbase__operator lt)|Opérateur inférieur à.|
+|[CComPtrBase::operator ==](#operator_eq_eq)|Opérateur d’égalité.|
+|[CComPtrBase:: operator->](#operator_ptr)|Opérateur pointeur vers membre.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CComPtrBase::p](#p)|La variable de membre de données de pointeur.|
+|[CComPtrBase::p](#p)|Variable de membre de données de pointeur.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe fournit la base d’autres pointeurs intelligents qui utilisent les routines de gestion de mémoire COM, tel que [CComQIPtr](../../atl/reference/ccomqiptr-class.md) et [CComPtr](../../atl/reference/ccomptr-class.md). Les classes dérivées ajouter leurs propres constructeurs et des opérateurs, mais s’appuient sur les méthodes fournies par `CComPtrBase`.
+Cette classe fournit la base pour d’autres pointeurs intelligents qui utilisent des routines de gestion de la mémoire COM, telles que [CComQIPtr](../../atl/reference/ccomqiptr-class.md) et [CComPtr](../../atl/reference/ccomptr-class.md). Les classes dérivées ajoutent leurs propres constructeurs et opérateurs, mais s’appuient sur les `CComPtrBase`méthodes fournies par.
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlcomcli.h
+**En-tête:** atlcomcli. h
 
 ##  <a name="advise"></a>  CComPtrBase::Advise
 
-Appelez cette méthode pour créer une connexion entre le `CComPtrBase`du point de connexion et un récepteur de client.
+Appelez cette méthode pour créer une connexion entre le `CComPtrBase`point de connexion de et le récepteur d’un client.
 
 ```
 HRESULT Advise(
@@ -102,10 +102,10 @@ HRESULT Advise(
 ### <a name="parameters"></a>Paramètres
 
 *pUnk*<br/>
-Un pointeur vers le client `IUnknown`.
+Pointeur vers le du `IUnknown`client.
 
 *iid*<br/>
-Le GUID du point de connexion. En règle générale, cela est identique à l’interface sortante managée par le point de connexion.
+GUID du point de connexion. En règle générale, il s’agit de l’interface sortante gérée par le point de connexion.
 
 *pdw*<br/>
 Pointeur vers le cookie qui identifie de façon unique la connexion.
@@ -116,7 +116,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Consultez [AtlAdvise](connection-point-global-functions.md#atladvise) pour plus d’informations.
+Pour plus d’informations, consultez [AtlAdvise](connection-point-global-functions.md#atladvise) .
 
 ##  <a name="attach"></a>  CComPtrBase::Attach
 
@@ -129,11 +129,11 @@ void Attach(T* p2) throw();
 ### <a name="parameters"></a>Paramètres
 
 *p2*<br/>
-Le `CComPtrBase` objet prendra possession de ce pointeur.
+L' `CComPtrBase` objet prend la propriété de ce pointeur.
 
 ### <a name="remarks"></a>Notes
 
-`Attach` appels [CComPtrBase::Release](#release) sur existant [CComPtrBase::p](#p) variable membre, puis assigne *p2* à `CComPtrBase::p`. Quand un `CComPtrBase` objet prend possession d’un pointeur, il appellera automatiquement `Release` sur le pointeur qui supprimera le pointeur et tout allouée données si le décompte de références sur l’objet passe à 0.
+`Attach`appelle [CComPtrBase:: Release](#release) sur la variable de membre [CComPtrBase::p](#p) existante, puis affecte *P2* à `CComPtrBase::p`. Lorsqu’un `CComPtrBase` objet prend possession d’un pointeur, il appelle `Release` automatiquement sur le pointeur qui supprime le pointeur et toutes les données allouées si le nombre de références sur l’objet est égal à 0.
 
 ##  <a name="dtor"></a>  CComPtrBase::~CComPtrBase
 
@@ -145,11 +145,11 @@ Destructeur.
 
 ### <a name="remarks"></a>Notes
 
-Libère l’interface vers laquelle pointé `CComPtrBase`.
+Libère l’interface vers laquelle pointe `CComPtrBase`.
 
 ##  <a name="cocreateinstance"></a>  CComPtrBase::CoCreateInstance
 
-Appelez cette méthode pour créer un objet de la classe associée à un ID de classe spécifié ou les ID de programme.
+Appelez cette méthode pour créer un objet de la classe associée à un ID de classe ou un ID de programme spécifié.
 
 ```
 HRESULT CoCreateInstance(
@@ -169,27 +169,27 @@ HRESULT CoCreateInstance(
 Pointeur vers un ProgID, utilisé pour récupérer le CLSID.
 
 *pUnkOuter*<br/>
-Si NULL, indique que l’objet n’est pas créé en tant que partie d’un agrégat. Si non NULL, est un pointeur vers l’objet d’agrégation `IUnknown` interface (le contrôle `IUnknown`).
+Si la valeur est NULL, cela indique que l’objet n’est pas créé dans le cadre d’un agrégat. Si la valeur est non null, est un pointeur vers l’interface `IUnknown` de l’objet d' `IUnknown`agrégation (le contrôle).
 
 *dwClsContext*<br/>
-Contexte dans lequel s’exécutera le code qui gère l’objet nouvellement créé.
+Contexte dans lequel le code qui gère l’objet nouvellement créé s’exécutera.
 
 *rclsid*<br/>
-CLSID associé aux données et au code qui sera utilisé pour créer l’objet.
+CLSID associé aux données et au code qui seront utilisés pour créer l’objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING ou E_NOINTERFACE en cas d’échec. Consultez [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) et [CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) pour obtenir une description de ces erreurs.
+Retourne S_OK en cas de réussite, ou REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING ou E_NOINTERFACE en cas d’échec. Pour obtenir une description de ces erreurs, consultez [CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) et [CLSIDFromProgID](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) .
 
 ### <a name="remarks"></a>Notes
 
-Si la première forme de la méthode est appelée, [CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) est utilisée pour récupérer le CLSID. Les deux formes puis appellent [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+Si la première forme de la méthode est appelée, [CLSIDFromProgID](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) est utilisé pour récupérer le CLSID. Les deux formes appellent ensuite [CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
-Dans les versions debug, une erreur d’assertion se produit si [CComPtrBase::p](#p) n’est pas égal à NULL.
+Dans les versions Debug, une erreur d’assertion se produit si [CComPtrBase::p](#p) n’est pas égal à null.
 
 ##  <a name="copyto"></a>  CComPtrBase::CopyTo
 
-Appelez cette méthode pour copier le `CComPtrBase` pointeur vers une autre variable de pointeur.
+Appelez cette méthode pour copier le `CComPtrBase` pointeur vers une autre variable pointeur.
 
 ```
 HRESULT CopyTo(T** ppT) throw();
@@ -198,7 +198,7 @@ HRESULT CopyTo(T** ppT) throw();
 ### <a name="parameters"></a>Paramètres
 
 *ppT*<br/>
-Adresse de la variable qui reçoit le `CComPtrBase` pointeur.
+Adresse de la variable qui recevra le `CComPtrBase` pointeur.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -206,13 +206,13 @@ Retourne S_OK en cas de réussite, E_POINTER en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Copie le `CComPtrBase` pointeur vers *ppT*. Le nombre de références le [CComPtrBase::p](#p) variable membre est incrémentée.
+Copie le `CComPtrBase` pointeur vers *ppT*. Le décompte de références sur la variable de membre [CComPtrBase::p](#p) est incrémenté.
 
-Une erreur HRESULT sera retourné si *ppT* est égal à NULL. Dans les versions debug, une erreur d’assertion se produit si *ppT* est égal à NULL.
+Une erreur HRESULT est retournée si *ppT* est égal à null. Dans les versions Debug, une erreur d’assertion se produit si *ppT* est égal à null.
 
 ##  <a name="detach"></a>  CComPtrBase::Detach
 
-Appelez cette méthode pour libérer la possession d’un pointeur.
+Appelez cette méthode pour libérer la propriété d’un pointeur.
 
 ```
 T* Detach() throw();
@@ -224,11 +224,11 @@ Retourne une copie du pointeur.
 
 ### <a name="remarks"></a>Notes
 
-Libère la propriété d’un pointeur, définit le [CComPtrBase::p](#p) variable de membre de données avec la valeur NULL et retourne une copie du pointeur.
+Libère la propriété d’un pointeur, définit la variable de membre de données [CComPtrBase::p](#p) sur la valeur null et retourne une copie du pointeur.
 
 ##  <a name="isequalobject"></a>  CComPtrBase::IsEqualObject
 
-Appelez cette méthode pour vérifier si le texte spécifié `IUnknown` pointe vers le même objet associé à la `CComPtrBase` objet.
+Appelez cette méthode pour vérifier si le spécifié `IUnknown` pointe vers le même objet associé à l' `CComPtrBase` objet.
 
 ```
 bool IsEqualObject(IUnknown* pOther) throw();
@@ -241,11 +241,11 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur true si les objets sont identiques, false sinon.
+Retourne la valeur true si les objets sont identiques; sinon, false.
 
-##  <a name="operator_not"></a>  CComPtrBase::operator !
+##  <a name="operator_not"></a>CComPtrBase:: Operator!
 
-L’opérateur NOT.
+Opérateur NOT.
 
 ```
 bool operator!() const throw();
@@ -253,11 +253,11 @@ bool operator!() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne true si le `CComHeapPtr` pointeur est égal à NULL, false sinon.
+Retourne la valeur true `CComHeapPtr` si le pointeur est égal à NULL; sinon, false.
 
-##  <a name="operator_amp"></a>  CComPtrBase::operator &amp;
+##  <a name="operator_amp"></a>CComPtrBase::, opérateur&amp;
 
-Le & opérateur.
+Opérateur &.
 
 ```
 T** operator&() throw();
@@ -265,9 +265,9 @@ T** operator&() throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne l’adresse de l’objet vers lequel pointé le `CComPtrBase` objet.
+Retourne l’adresse de l’objet vers lequel pointe l' `CComPtrBase` objet.
 
-##  <a name="operator_star"></a>  CComPtrBase::operator \*
+##  <a name="operator_star"></a>CComPtrBase::, opérateur\*
 
 opérateur \*,
 
@@ -277,13 +277,13 @@ T& operator*() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de [CComPtrBase::p](#p); autrement dit, un pointeur vers l’objet référencé par le `CComPtrBase` objet.
+Retourne la valeur de [CComPtrBase::p](#p); autrement dit, un pointeur vers l’objet référencé par l' `CComPtrBase` objet.
 
-Si les versions debug, une erreur d’assertion se produit si [CComPtrBase::p](#p) n’est pas égal à NULL.
+Si les versions Debug sont générées, une erreur d’assertion se produit si [CComPtrBase::p](#p) n’est pas égal à null.
 
 ##  <a name="operator_eq_eq"></a>  CComPtrBase::operator ==
 
-L’opérateur d’égalité.
+Opérateur d’égalité.
 
 ```
 bool operator== (T* pT) const throw();
@@ -296,11 +296,11 @@ Pointeur vers un objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne true si `CComPtrBase` et *pT* pointent vers le même objet, false sinon.
+Retourne la valeur `CComPtrBase` true si et *PT* pointent vers le même objet; sinon, false.
 
-##  <a name="operator_ptr"></a>  CComPtrBase::operator -&gt;
+##  <a name="operator_ptr"></a>CComPtrBase:: Operator-&gt;
 
-L’opérateur pointeur vers membre.
+Opérateur pointeur vers membre.
 
 ```
 _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
@@ -308,15 +308,15 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de la [CComPtrBase::p](#p) variable de membre de données.
+Retourne la valeur de la variable de membre de données [CComPtrBase::p](#p) .
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cet opérateur pour appeler une méthode dans une classe vers laquelle pointée le `CComPtrBase` objet. Dans les versions debug, un échec d’assertion se produit si le `CComPtrBase` membre de données pointe vers la valeur NULL.
+Utilisez cet opérateur pour appeler une méthode dans une classe vers laquelle pointe l' `CComPtrBase` objet. Dans les versions Debug, un échec d’assertion se produit `CComPtrBase` si le membre de données pointe vers la valeur null.
 
-##  <a name="operator_lt"></a>  CComPtrBase::operator &lt;
+##  <a name="operator_lt"></a>CComPtrBase::, opérateur&lt;
 
-Inférieur-que l’opérateur.
+Opérateur inférieur à.
 
 ```
 bool operator<(T* pT) const throw();
@@ -329,11 +329,11 @@ Pointeur vers un objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur true si le pointeur est géré par l’objet actuel est inférieure à celle du pointeur auquel il est comparé.
+Retourne la valeur true si le pointeur managé par l’objet actuel est inférieur au pointeur auquel il est comparé.
 
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*
+##  <a name="operator_t_star"></a>CComPtrBase:: Operator T\*
 
-L’opérateur de cast.
+Opérateur de cast.
 
 ```
 operator T*() const throw();
@@ -341,11 +341,11 @@ operator T*() const throw();
 
 ### <a name="remarks"></a>Notes
 
-Retourne un pointeur vers le type de données d’objet défini dans le modèle de classe.
+Retourne un pointeur vers le type de données objet défini dans le modèle de classe.
 
 ##  <a name="p"></a>  CComPtrBase::p
 
-La variable de membre de données de pointeur.
+Variable de membre de données de pointeur.
 
 ```
 T* p;
@@ -353,7 +353,7 @@ T* p;
 
 ### <a name="remarks"></a>Notes
 
-Cette variable membre conserve les informations de pointeur.
+Cette variable membre contient les informations de pointeur.
 
 ##  <a name="queryinterface"></a>  CComPtrBase::QueryInterface
 
@@ -367,24 +367,24 @@ template <class Q> HRESULT QueryInterface(Q
 ### <a name="parameters"></a>Paramètres
 
 *Q*<br/>
-Le type d’objet dont pointeur d’interface est nécessaire.
+Type d’objet dont le pointeur d’interface est requis.
 
 *pp*<br/>
-Adresse de variable de sortie qui reçoit le pointeur d’interface demandé.
+Adresse de la variable de sortie qui reçoit le pointeur d’interface demandé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou E_NOINTERFACE en cas d’échec.
+Retourne S_OK en cas de réussite ou d’E_NOINTERFACE en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode appelle [IUnknown::QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
+Cette méthode appelle [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
 
-Dans les versions debug, une erreur d’assertion se produit si *pp* n’est pas égal à NULL.
+Dans les versions Debug, une erreur d’assertion se produit si *pp* n’est pas égal à null.
 
 ##  <a name="release"></a>  CComPtrBase::Release
 
-Appelez cette méthode pour libérer de l’interface.
+Appelez cette méthode pour libérer l’interface.
 
 ```
 void Release() throw();
@@ -392,11 +392,11 @@ void Release() throw();
 
 ### <a name="remarks"></a>Notes
 
-L’interface soit libérée, et [CComPtrBase::p](#p) est définie sur NULL.
+L’interface est libérée et [CComPtrBase::p](#p) a la valeur null.
 
 ##  <a name="setsite"></a>  CComPtrBase::SetSite
 
-Appelez cette méthode pour définir le site de la `CComPtrBase` de l’objet à le `IUnknown` de l’objet parent.
+Appelez cette méthode pour définir le site de l' `CComPtrBase` objet sur le `IUnknown` de l’objet parent.
 
 ```
 HRESULT SetSite(IUnknown* punkParent) throw();
@@ -405,7 +405,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 ### <a name="parameters"></a>Paramètres
 
 *punkParent*<br/>
-Un pointeur vers le `IUnknown` interface du parent.
+Pointeur vers l' `IUnknown` interface du parent.
 
 ### <a name="return-value"></a>Valeur de retour
 

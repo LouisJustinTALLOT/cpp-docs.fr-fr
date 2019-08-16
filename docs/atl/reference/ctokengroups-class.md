@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 4e5d06ca01201bf415afedbe6f6e5bca096f68fa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 88096747f45d4a81c873837cdd4975da9d8c24e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915577"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496291"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups, classe
 
@@ -67,11 +67,11 @@ class CTokenGroups
 
 ## <a name="remarks"></a>Notes
 
-Un [jeton d’accès](/windows/desktop/SecAuthZ/access-tokens) est un objet qui décrit le contexte de sécurité d’un processus ou d’un thread et qui est alloué à chaque utilisateur connecté à un système Windows.
+Un [jeton d’accès](/windows/win32/SecAuthZ/access-tokens) est un objet qui décrit le contexte de sécurité d’un processus ou d’un thread et qui est alloué à chaque utilisateur connecté à un système Windows.
 
-La `CTokenGroups` classe est un wrapper pour la structure [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) , contenant des informations sur les identificateurs de sécurité (SID) de groupe dans un jeton d’accès.
+La `CTokenGroups` classe est un wrapper pour la structure [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) , contenant des informations sur les identificateurs de sécurité (SID) de groupe dans un jeton d’accès.
 
-Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
+Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/win32/SecAuthZ/access-control) dans le SDK Windows.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -95,7 +95,7 @@ Objet [CSID](../../atl/reference/csid-class.md) .
 Attributs à associer à l' `CSid` objet.
 
 *rTokenGroups*<br/>
-Structure [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) .
+Structure [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) .
 
 ### <a name="remarks"></a>Notes
 
@@ -114,7 +114,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="parameters"></a>Paramètres
 
 *rhs*<br/>
-Objet ou structure [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) avec laquelle construire l' `CTokenGroups` objet. `CTokenGroups`
+Objet ou structure [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) avec laquelle construire l' `CTokenGroups` objet. `CTokenGroups`
 
 ### <a name="remarks"></a>Notes
 
@@ -191,7 +191,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Récupère un pointeur vers la structure [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) qui appartient à l' `CTokenGroups` objet de jeton d’accès.
+Récupère un pointeur vers la structure [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) qui appartient à l' `CTokenGroups` objet de jeton d’accès.
 
 ##  <a name="getsidsandattributes"></a>  CTokenGroups::GetSidsAndAttributes
 
@@ -253,7 +253,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="parameters"></a>Paramètres
 
 *rhs*<br/>
-La `CTokenGroups` structure Object ou [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) à assigner `CTokenGroups` à l’objet.
+La `CTokenGroups` structure Object ou [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) à assigner `CTokenGroups` à l’objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -269,7 +269,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ### <a name="remarks"></a>Notes
 
-Convertit une valeur en pointeur vers la structure [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) .
+Convertit une valeur en pointeur vers la structure [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) .
 
 ## <a name="see-also"></a>Voir aussi
 

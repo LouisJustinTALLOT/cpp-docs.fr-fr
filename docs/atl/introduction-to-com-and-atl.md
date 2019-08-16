@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL, COM
 - COM objects, ATL
 ms.assetid: 35d6ae9c-abbb-42f0-9344-33f3c19ac3ce
-ms.openlocfilehash: bdfee1969781af5efdfbcdadfbbbce3f64d2dda0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a107fa9feee7b20a81ea4c1613003da1bcb47f60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250971"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492082"
 ---
 # <a name="introduction-to-com-and-atl"></a>Introduction à COM et ATL
 
@@ -21,15 +21,15 @@ Cette section fournit une brève introduction à COM et ATL.
 ## <a name="in-this-section"></a>Dans cette section
 
 [Présentation de COM](../atl/introduction-to-com.md)<br/>
-Fournit une vue d’ensemble de la Component Object Model (COM) des concepts fondamentaux, y compris les interfaces `IUnknown`, comptage de références, `QueryInterface`, marshaling et l’agrégation.
+Fournit une vue d’ensemble des concepts fondamentaux du modèle COM (Component Object Model), y `IUnknown`compris les interfaces, `QueryInterface`, le décompte de références, le marshaling et l’agrégation.
 
 [Introduction à ATL](../atl/introduction-to-atl.md)<br/>
-Explique, en bref, ce que la bibliothèque ATL (Active Template) a été conçu pour les bibliothèques de modèles et les numéros de version ATL. Inclut des recommandations relatives au choix entre ATL et MFC.
+Explique, brièvement, ce que la Active Template Library (ATL) a été conçue pour, les bibliothèques de modèles et les numéros de version ATL. Contient des recommandations pour le choix entre ATL et MFC.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[COM (Component Object Model)](/windows/desktop/com/the-component-object-model)<br/>
-La documentation de Windows SDK sur COM.
+[COM (Component Object Model)](/windows/win32/com/the-component-object-model)<br/>
+Matériel SDK Windows sur COM.
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Propose des liens vers des rubriques conceptuelles traitant de la programmation à l'aide de la bibliothèque ATL (Active Template Library).

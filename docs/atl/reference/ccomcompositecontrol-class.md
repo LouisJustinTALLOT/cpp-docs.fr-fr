@@ -16,19 +16,19 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-ms.openlocfilehash: f1a9a2d0628b3683f047ce9858d809040438db03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b57eaf105bfca1a49d53b5e5e99969b0fa2fc82f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260238"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497337"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl, classe
 
 Cette classe fournit les méthodes requises pour implémenter un contrôle composite.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+>  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,7 +40,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 #### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bien que toutes les autres interfaces souhaitées prendre en charge pour votre contrôle composite.
+Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), ainsi que de toutes les autres interfaces que vous souhaitez prendre en charge pour votre contrôle composite.
 
 ## <a name="members"></a>Membres
 
@@ -55,34 +55,34 @@ Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-c
 
 |Nom|Description|
 |----------|-----------------|
-|[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|Appelez cette méthode pour conseiller ou déconseiller de tous les contrôles hébergés par le contrôle composite.|
+|[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|Appelez cette méthode pour informer ou déconseiller tous les contrôles hébergés par le contrôle composite.|
 |[CComCompositeControl::CalcExtent](#calcextent)|Appelez cette méthode pour calculer la taille en unités HIMETRIC de la ressource de boîte de dialogue utilisée pour héberger le contrôle composite.|
 |[CComCompositeControl::Create](#create)|Cette méthode est appelée pour créer la fenêtre de contrôle pour le contrôle composite.|
-|[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|Appelez cette méthode pour créer la fenêtre de contrôle et le Conseiller de n’importe quel contrôle hébergé.|
+|[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|Appelez cette méthode pour créer la fenêtre de contrôle et conseiller tout contrôle hébergé.|
 |[CComCompositeControl::SetBackgroundColorFromAmbient](#setbackgroundcolorfromambient)|Appelez cette méthode pour définir la couleur d’arrière-plan du contrôle composite à l’aide de la couleur d’arrière-plan du conteneur.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CComCompositeControl::m_hbrBackground](#m_hbrbackground)|Le pinceau d’arrière-plan.|
-|[CComCompositeControl::m_hWndFocus](#m_hwndfocus)|Le handle de la fenêtre qui possède actuellement le focus.|
+|[CComCompositeControl::m_hbrBackground](#m_hbrbackground)|Pinceau d’arrière-plan.|
+|[CComCompositeControl::m_hWndFocus](#m_hwndfocus)|Handle de la fenêtre qui a actuellement le focus.|
 
 ## <a name="remarks"></a>Notes
 
-Classes dérivées de la classe `CComCompositeControl` héritez des fonctionnalités d’un contrôle composite ActiveX. Contrôles ActiveX dérivés `CComCompositeControl` sont hébergés par une boîte de dialogue standard. Ces types de contrôles sont appelés contrôles composites, car ils sont capables d’héberger d’autres contrôles (contrôles Windows natifs et les contrôles ActiveX).
+Les classes dérivées `CComCompositeControl` de la classe héritent des fonctionnalités d’un contrôle composite ActiveX. Les contrôles ActiveX dérivés de `CComCompositeControl` sont hébergés par une boîte de dialogue standard. Ces types de contrôles sont appelés contrôles composites, car ils peuvent héberger d’autres contrôles (contrôles Windows natifs et contrôles ActiveX).
 
-`CComCompositeControl` identifie la ressource de boîte de dialogue à utiliser pour créer le contrôle composite en recherchant un membre de données énumérées dans la classe enfant. Le membre IDD de cette classe enfant est défini sur l’ID de ressource de la ressource de boîte de dialogue qui sera utilisée comme la fenêtre du contrôle. Voici un exemple du membre de données que la classe dérivée de `CComCompositeControl` doit contenir pour identifier la ressource de boîte de dialogue à utiliser pour la fenêtre du contrôle :
+`CComCompositeControl`identifie la ressource de boîte de dialogue à utiliser lors de la création du contrôle composite en recherchant un membre de données énuméré dans la classe enfant. L’IDD membre de cette classe enfant a pour valeur l’ID de ressource de la ressource de boîte de dialogue qui sera utilisée comme fenêtre du contrôle. Voici un exemple des données membres que la classe dérivée de `CComCompositeControl` doit contenir pour identifier la ressource de boîte de dialogue à utiliser pour la fenêtre du contrôle:
 
 [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]
 
 > [!NOTE]
->  Les contrôles composites sont toujours contrôles fenêtrés, même si elles peuvent contenir des contrôles sans fenêtre.
+>  Les contrôles composites sont toujours des contrôles avec fenêtres, bien qu’ils puissent contenir des contrôles sans fenêtre.
 
-Un contrôle implémenté par un `CComCompositeControl`-classe dérivée a intégré de comportement de tabulation par défaut. Lorsque le contrôle reçoit le focus par Selectable dans une application conteneur en cours, successivement en appuyant sur la touche TAB provoque le focus puisse passer les contrôles contenus du contrôle composite, puis en dehors du contrôle composite et une session sur l’élément suivant dans le ordre de tabulation du conteneur. L’ordre de tabulation des contrôles hébergés est déterminé par la ressource de boîte de dialogue et détermine l’ordre dans les tabulation se produira.
+Un contrôle implémenté par une `CComCompositeControl`classe dérivée de a un comportement de tabulation par défaut intégré. Lorsque le contrôle reçoit le focus en faisant l’objet d’un onglet dans une application conteneur, en appuyant successivement sur la touche TAB, le focus passe par tous les contrôles contenus du contrôle composite, puis en dehors du contrôle composite et à l’élément suivant dans ordre de tabulation du conteneur. L’ordre de tabulation des contrôles hébergés est déterminé par la ressource de boîte de dialogue et détermine l’ordre dans lequel la tabulation aura lieu.
 
 > [!NOTE]
->  Dans l’ordre pour les accélérateurs fonctionnent correctement avec un `CComCompositeControl`, il est nécessaire de charger une table d’accélérateurs, comme le contrôle est créé, passez le handle et le nombre d’accélérateurs dans [IOleControlImpl::GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo), et détruire enfin la table lorsque le contrôle est libéré.
+>  Pour que les accélérateurs fonctionnent correctement avec un `CComCompositeControl`, il est nécessaire de charger une table d’accélérateurs au fur et à mesure que le contrôle est créé, de passer le handle et le nombre d’accélérateurs dans [IOleControlImpl:: GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo), et enfin de détruire la table. Lorsque le contrôle est libéré.
 
 ## <a name="example"></a>Exemple
 
@@ -100,11 +100,11 @@ Un contrôle implémenté par un `CComCompositeControl`-classe dérivée a inté
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlctl.h
+**En-tête:** atlctl. h
 
 ##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap
 
-Appelez cette méthode pour conseiller ou déconseiller de tous les contrôles hébergés par le contrôle composite.
+Appelez cette méthode pour informer ou déconseiller tous les contrôles hébergés par le contrôle composite.
 
 ```
 HRESULT AdviseSinkMap(bool bAdvise);
@@ -113,22 +113,22 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="parameters"></a>Paramètres
 
 *bAdvise*<br/>
-True si tous les contrôles doivent être avertie ; Sinon, false.
+True si tous les contrôles doivent être recommandés; Sinon, false.
 
 ### <a name="return-value"></a>Valeur de retour
 
 |||
 |-|-|
-|S_OK  |Tous les contrôles de table de récepteur ont été connecté ou déconnecté avec succès à partir de leur source d’événement.|
-|E_FAIL  |Pas tous les contrôles dans l’événement table de récepteur peut être connecté ou déconnecté avec succès à partir de leur source d’événement.|
-|E_POINTER  |Cette erreur indique généralement un problème avec une entrée dans la table de récepteur d’événements du contrôle ou un problème avec un argument de modèle utilisé dans un `IDispEventImpl` ou `IDispEventSimpleImpl` classe de base.|
-|CONNECT_E_ADVISELIMIT  |Le point de connexion a déjà atteint sa limite de connexions et ne peut pas accepter d’autres.|
+|S_OK  |Tous les contrôles de la table de récepteurs d’événements ont été connectés ou déconnectés de leur source d’événements.|
+|E_FAIL  |Tous les contrôles de la table de récepteurs d’événements n’ont pas pu être connectés ou déconnectés correctement de leur source d’événement.|
+|E_POINTER  |Cette erreur indique généralement un problème avec une entrée dans le mappage de récepteur d’événements du contrôle ou un problème avec un argument de modèle `IDispEventImpl` utilisé `IDispEventSimpleImpl` dans une classe de base ou.|
+|CONNECT_E_ADVISELIMIT  |Le point de connexion a déjà atteint sa limite de connexions et ne peut plus en accepter.|
 |CONNECT_E_CANNOTCONNECT  |Le récepteur ne prend pas en charge l’interface requise par ce point de connexion.|
-|CONNECT_E_NOCONNECTION  |La valeur du cookie ne représente pas une connexion valide. Cette erreur indique généralement un problème avec une entrée dans la table de récepteur d’événements du contrôle ou un problème avec un argument de modèle utilisé dans un `IDispEventImpl` ou `IDispEventSimpleImpl` classe de base.|
+|CONNECT_E_NOCONNECTION  |La valeur de cookie ne représente pas une connexion valide. Cette erreur indique généralement un problème avec une entrée dans le mappage de récepteur d’événements du contrôle ou un problème avec un argument de modèle `IDispEventImpl` utilisé `IDispEventSimpleImpl` dans une classe de base ou.|
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation de base de cette méthode effectue une recherche dans les entrées dans cette table de récepteur. Ensuite, il conseille ou avertit les points de connexion pour les objets COM décrites par les entrées de récepteurs de la table récepteur d’événements. Cette méthode de membre s’appuie également sur le fait que la classe dérivée hérite d’une instance de `IDispEventImpl` pour chaque contrôle dans la table de récepteur qui doit être conseillée ou arrêter.
+L’implémentation de base de cette méthode parcourt les entrées de la table de récepteurs d’événements. Il conseille ensuite ou déconseille les points de connexion aux objets COM décrits par les entrées de récepteur de la carte de récepteurs d’événements. Cette méthode membre repose également sur le fait que la classe dérivée hérite d’une instance de `IDispEventImpl` pour chaque contrôle dans le mappage de récepteur qui doit être avisé ou non.
 
 ##  <a name="calcextent"></a>  CComCompositeControl::CalcExtent
 
@@ -141,15 +141,15 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="parameters"></a>Paramètres
 
 *size*<br/>
-Une référence à un `SIZE` structure doivent être remplis par cette méthode.
+Référence à une `SIZE` structure à remplir par cette méthode.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le contrôle est hébergé par une boîte de dialogue ; Sinon, FALSE.
+TRUE si le contrôle est hébergé par une boîte de dialogue; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-La taille est retournée dans le *taille* paramètre.
+La taille est retournée dans le paramètre *Size* .
 
 ##  <a name="create"></a>  CComCompositeControl::Create
 
@@ -165,17 +165,17 @@ HWND Create(
 ### <a name="parameters"></a>Paramètres
 
 *hWndParent*<br/>
-Handle vers la fenêtre parente du contrôle.
+Handle de la fenêtre parente du contrôle.
 
 *rcPos*<br/>
 Réservé.
 
 *dwInitParam*<br/>
-Données à passer au contrôle lors de la création du contrôle. Les données transmises en tant que *dwInitParam* s’affichera en tant que le paramètre LPARAM de la [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) message, qui sera envoyé au contrôle composite quand il est créé.
+Données à passer au contrôle pendant la création du contrôle. Les données transmises comme *dwInitParam* apparaissent comme paramètre LParam du message [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) , qui sera envoyé au contrôle composite lorsqu’il est créé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Handle vers la boîte de dialogue de contrôle composite qui vient d’être créé.
+Handle de la boîte de dialogue de contrôle composite nouvellement créée.
 
 ### <a name="remarks"></a>Notes
 
@@ -191,7 +191,7 @@ CComCompositeControl();
 
 ### <a name="remarks"></a>Notes
 
-Initialise le [CComCompositeControl::m_hbrBackground](#m_hbrbackground) et [CComCompositeControl::m_hWndFocus](#m_hwndfocus) les membres de données avec la valeur NULL.
+Initialise les membres de données [CComCompositeControl:: m_hbrBackground](#m_hbrbackground) et [CComCompositeControl:: m_hWndFocus](#m_hwndfocus) sur la valeur null.
 
 ##  <a name="dtor"></a>  CComCompositeControl::~CComCompositeControl
 
@@ -203,11 +203,11 @@ Destructeur.
 
 ### <a name="remarks"></a>Notes
 
-Supprime l’objet en arrière-plan, si elle existe.
+Supprime l’objet d’arrière-plan, s’il existe.
 
 ##  <a name="createcontrolwindow"></a>  CComCompositeControl::CreateControlWindow
 
-Appelez cette méthode pour créer la fenêtre de contrôle et d’informer tous les contrôles hébergés.
+Appelez cette méthode pour créer la fenêtre de contrôle et conseiller tous les contrôles hébergés.
 
 ```
 virtual HWND CreateControlWindow(
@@ -218,22 +218,22 @@ virtual HWND CreateControlWindow(
 ### <a name="parameters"></a>Paramètres
 
 *hWndParent*<br/>
-Handle vers la fenêtre parente du contrôle.
+Handle de la fenêtre parente du contrôle.
 
 *rcPos*<br/>
-La valeur position rectangle du contrôle composite dans le client en coordonnées relatif *hWndParent*.
+Rectangle de position du contrôle composite dans les coordonnées clientes par rapport à *hwndParent*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne un handle vers la boîte de dialogue de contrôle composite qui vient d’être créé.
+Retourne un handle vers la boîte de dialogue de contrôle composite nouvellement créée.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode appelle [CComCompositeControl::Create](#create) et [CComCompositeControl::AdviseSinkMap](#advisesinkmap).
+Cette méthode appelle [CComCompositeControl:: Create](#create) et [CComCompositeControl:: AdviseSinkMap](#advisesinkmap).
 
 ##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground
 
-Le pinceau d’arrière-plan.
+Pinceau d’arrière-plan.
 
 ```
 HBRUSH m_hbrBackground;
@@ -241,7 +241,7 @@ HBRUSH m_hbrBackground;
 
 ##  <a name="m_hwndfocus"></a>  CComCompositeControl::m_hWndFocus
 
-Le handle de la fenêtre qui possède actuellement le focus.
+Handle de la fenêtre qui a actuellement le focus.
 
 ```
 HWND m_hWndFocus;
@@ -262,5 +262,5 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 ## <a name="see-also"></a>Voir aussi
 
 [CComControl, classe](../../atl/reference/ccomcontrol-class.md)<br/>
-[Notions fondamentales du contrôle composite](../../atl/atl-composite-control-fundamentals.md)<br/>
+[Notions de base des contrôles composites](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Cwindowdc, classe
+title: CWindowDC, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CWindowDC
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CWindowDC [MFC], CWindowDC
 - CWindowDC [MFC], m_hWnd
 ms.assetid: 876a3641-4cde-471c-b0d1-fe58b32af79c
-ms.openlocfilehash: 55a9ccfc496c95c9e7410cbd5645135ee555ff26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ef9b4917dc834eb8335690f9b0d171245f5c170
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323383"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502155"
 ---
-# <a name="cwindowdc-class"></a>Cwindowdc, classe
+# <a name="cwindowdc-class"></a>CWindowDC, classe
 
 Dérivée de `CDC`.
 
@@ -37,15 +37,15 @@ class CWindowDC : public CDC
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CWindowDC::m_hWnd](#m_hwnd)|Le HWND à laquelle cet `CWindowDC` est attaché.|
+|[CWindowDC::m_hWnd](#m_hwnd)|HWND auquel ce `CWindowDC` est attaché.|
 
 ## <a name="remarks"></a>Notes
 
-Appelle la fonction Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)au moment de la construction et [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) au moment de la destruction. Cela signifie qu’un `CWindowDC` objet accède à la zone de la totalité de l’écran d’un [CWnd](../../mfc/reference/cwnd-class.md) (zones clientes et non clientes).
+Appelle la fonction Windows [GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindowdc)au moment de la construction et [ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) au moment de la destruction. Cela signifie qu’un `CWindowDC` objet accède à la totalité de la zone d’écran d’un [CWnd](../../mfc/reference/cwnd-class.md) (zones clientes et non clientes).
 
-Pour plus d’informations sur l’utilisation de `CWindowDC`, consultez [contextes de périphérique](../../mfc/device-contexts.md).
+Pour plus d’informations sur `CWindowDC`l’utilisation de, consultez contextes de [périphérique](../../mfc/device-contexts.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -57,11 +57,11 @@ Pour plus d’informations sur l’utilisation de `CWindowDC`, consultez [contex
 
 ## <a name="requirements"></a>Configuration requise
 
-En-tête : afxwin.h
+En-tête: AFXWIN. h
 
 ##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC
 
-Construit un `CWindowDC` objet qui accède à la zone de l’écran (clientes et non clientes) de la `CWnd` objet vers lequel pointe *pWnd*.
+Construit un `CWindowDC` objet qui accède à la totalité de la zone d’écran (client et non client) de `CWnd` l’objet vers lequel pointe *pwnd*.
 
 ```
 explicit CWindowDC(CWnd* pWnd);
@@ -70,13 +70,13 @@ explicit CWindowDC(CWnd* pWnd);
 ### <a name="parameters"></a>Paramètres
 
 *pWnd*<br/>
-La fenêtre dont la zone cliente accède à l’objet de contexte de périphérique.
+Fenêtre dont l’objet de contexte de périphérique doit accéder à la zone cliente.
 
 ### <a name="remarks"></a>Notes
 
-Le constructeur appelle la fonction Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc).
+Le constructeur appelle la fonction Windows [GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindowdc).
 
-Une exception (de type `CResourceException`) est levée si le Windows `GetWindowDC` appeler échoue. Un contexte de périphérique n’est peut-être pas disponible si Windows a déjà alloué tous ses contextes de périphérique disponible. Votre application est en concurrence pour les contextes d’affichage courants cinq disponibles à un moment donné sous Windows.
+Une exception (de type `CResourceException`) est levée en cas d' `GetWindowDC` échec de l’appel Windows. Un contexte de périphérique peut ne pas être disponible si Windows a déjà alloué tous les contextes de périphérique disponibles. Votre application est en concurrence pour les cinq contextes d’affichage courants disponibles à un moment donné sous Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -84,7 +84,7 @@ Une exception (de type `CResourceException`) est levée si le Windows `GetWindow
 
 ##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd
 
-Le HWND de la `CWnd` pointeur est utilisé pour construire le `CWindowDC` objet.
+Le HWND du `CWnd` pointeur est utilisé pour construire l' `CWindowDC` objet.
 
 ```
 HWND m_hWnd;
@@ -92,11 +92,11 @@ HWND m_hWnd;
 
 ### <a name="remarks"></a>Notes
 
-`m_hWnd` est une variable protégée de type HWND.
+`m_hWnd`variable protégée de type HWND.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-  Consultez l’exemple de [CWindowDC::CWindowDC](#cwindowdc).
+  Consultez l’exemple de [CWindowDC:: CWindowDC](#cwindowdc).
 
 ## <a name="see-also"></a>Voir aussi
 

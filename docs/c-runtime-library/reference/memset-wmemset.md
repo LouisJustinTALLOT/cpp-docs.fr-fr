@@ -26,12 +26,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: d517c5565ef07a834d7ef864e495a4bb33351007
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d7b57292f582491a7750b4e12a8072112eac4dd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285145"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501011"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
@@ -65,13 +65,13 @@ Nombre de caractères.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de *dest*.
+Valeur de *dest*.
 
 ## <a name="remarks"></a>Notes
 
-Définit le premier *nombre* caractères de *dest* au caractère *c*.
+Définit les premiers caractères de la *valeur* *dest* sur le caractère *c*.
 
-**Note de sécurité** vous assurer que la mémoire tampon de destination a suffisamment d’espace au moins *nombre* caractères. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Note de sécurité** Assurez-vous que la mémoire tampon de destination a suffisamment d’espace pour au moins le *nombre* de caractères. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -1,17 +1,17 @@
 ---
-title: dispinterface (attribut de COM C++)
+title: dispinterface (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6fd5010dc20d03c518206d81919e3beafbcaa9a9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346304"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501626"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -29,7 +29,7 @@ Quand l’attribut C++ **dispinterface** précède une interface, il fait en sor
 
 Une interface de dispatch dérivent de `IDispatch`, sauf si vous spécifiez une classe de base. Vous devez spécifier un [id](id.md) pour les membres d’une interface de dispatch.
 
-L’exemple d’utilisation de [dispinterface](/windows/desktop/Midl/dispinterface) dans la documentation MIDL :
+L’exemple d’utilisation de [dispinterface](/windows/win32/Midl/dispinterface) dans la documentation MIDL :
 
 ```cpp
 dispinterface helloPro
@@ -38,7 +38,7 @@ dispinterface helloPro
 
 n’est pas valide pour l’attribut **dispinterface** .
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Pour obtenir un exemple montrant comment utiliser [dispinterface](bindable.md) , consultez l’exemple de **bindable**.
 
@@ -50,7 +50,7 @@ Pour obtenir un exemple montrant comment utiliser [dispinterface](bindable.md) ,
 |-|-|
 |**S'applique à**|**interface**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
+|**Attributs requis**|Aucun|
 |**Attributs non valides**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).

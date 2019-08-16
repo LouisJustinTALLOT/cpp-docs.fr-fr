@@ -1,21 +1,21 @@
 ---
-title: pragma (attribut de COM C++)
+title: pragma (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pragma
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: 159e1570c2bde07bb4df8fa904a519e8e0018a6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c3ee0d3f99bd27ca41d68b11c11522e92c8d40a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407456"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514278"
 ---
 # <a name="pragma"></a>pragma
 
-Émet la chaîne spécifiée dans le fichier .idl généré sans utiliser de guillemets.
+Émet la chaîne spécifiée dans le fichier. idl généré sans utiliser de guillemets.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,13 +26,13 @@ ms.locfileid: "62407456"
 ### <a name="parameters"></a>Paramètres
 
 *pragma_statement*<br/>
-Le pragma que vous souhaitez aller dans le fichier .idl généré.
+Le pragma que vous souhaitez placer dans le fichier. idl généré.
 
 ## <a name="remarks"></a>Notes
 
-Le **pragma** attribut C++ a les mêmes fonctionnalités que le [pragma](/windows/desktop/Midl/pragma) attribut MIDL.
+L’attribut **pragma** C++ a les mêmes fonctionnalités que l’attribut MIDL [pragma](/windows/win32/Midl/pragma) .
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // cpp_attr_ref_pragma.cpp
@@ -56,8 +56,8 @@ __interface A
 |-|-|
 |**S'applique à**|N'importe où|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

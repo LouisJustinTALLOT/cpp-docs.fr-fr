@@ -1,5 +1,5 @@
 ---
-title: Cmfctoolbarfontcombobox, classe
+title: CMFCToolBarFontComboBox, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBarFontComboBox
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-ms.openlocfilehash: 89767a3ed6880703c3c754700ea5669c0cc183e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e19fc9257c1fe986ff09a8bbc86bf2fb55af7ee
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218346"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504744"
 ---
-# <a name="cmfctoolbarfontcombobox-class"></a>Cmfctoolbarfontcombobox, classe
+# <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox, classe
 
-Un bouton de barre d’outils qui contient un contrôle de zone de liste déroulante qui permet à l’utilisateur à sélectionner une police dans une liste de polices système.
+Bouton de barre d’outils qui contient un contrôle zone de liste déroulante qui permet à l’utilisateur de sélectionner une police dans une liste de polices système.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,29 +41,29 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|Retourne un pointeur vers le `CMFCFontInfo` objet pour un index spécifié dans la zone de liste déroulante.|
-|[CMFCToolBarFontComboBox::SetFont](#setfont)|Sélectionne une police dans la zone de liste déroulante de police en fonction d’une, le nom de la police ou le préfixe et jeu de caractères de la police.|
+|[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|Retourne un pointeur vers l' `CMFCFontInfo` objet pour un index spécifié dans la zone de liste déroulante.|
+|[CMFCToolBarFontComboBox::SetFont](#setfont)|Sélectionne une police dans la zone de liste déroulante de police en fonction du nom de la police ou du préfixe et du jeu de caractères de la police.|
 
 ### <a name="data-members"></a>Membres de données
 
 [CMFCToolBarFontComboBox::m_nFontHeight](#m_nfontheight)<br/>
-La hauteur des caractères dans la zone de liste déroulante de police.
+Hauteur des caractères de la zone de liste déroulante de police.
 
 ## <a name="remarks"></a>Notes
 
-Pour ajouter un bouton de zone de liste déroulante de police à une barre d’outils, procédez comme suit :
+Pour ajouter un bouton de zone de liste déroulante de police à une barre d’outils, procédez comme suit:
 
 1. Réservez un ID de ressource factice pour le bouton dans la ressource de la barre d'outils parente.
 
-1. Construire un `CMFCToolBarFontComboBox` objet.
+1. Construisez `CMFCToolBarFontComboBox` un objet.
 
-1. Dans le Gestionnaire de messages qui traite le message AFX_WM_RESETTOOLBAR, remplacer le bouton d’origine avec le nouveau bouton de zone de liste déroulante à l’aide de [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
+1. Dans le gestionnaire de messages qui traite le message AFX_WM_RESETTOOLBAR, remplacez le bouton d’origine par le nouveau bouton de zone de liste déroulante à l’aide de [CMFCToolBar:: ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-1. Synchroniser la police est sélectionnée dans la zone de liste déroulante avec la police dans le document à l’aide de la [CMFCToolBarFontComboBox::SetFont](#setfont) (méthode).
+1. Synchronisez la police sélectionnée dans la zone de liste déroulante avec la police dans le document à l’aide de la méthode [CMFCToolBarFontComboBox:: SetFont](#setfont) .
 
-Pour synchroniser police du document l’avec la police sélectionnée dans la zone de liste déroulante, utilisez la [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) méthode pour récupérer les attributs de la police sélectionnée et utiliser ces attributs pour créer un [ CFont (classe)](../../mfc/reference/cfont-class.md) objet.
+Pour synchroniser la police du document avec la police sélectionnée dans la zone de liste déroulante, utilisez la méthode [CMFCToolBarFontComboBox:: GetFontDesc](#getfontdesc) pour récupérer les attributs de la police sélectionnée et utilisez ces attributs pour créer un objet de [classe CFont](../../mfc/reference/cfont-class.md) .
 
-Le bouton de zone de liste déroulante Police appelle la fonction Win32 [EnumFontFamiliesEx](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesexa) pour déterminer les polices d’écran et d’imprimantes disponibles pour le système.
+Le bouton de zone de liste déroulante de police appelle la fonction Win32 [EnumFontFamiliesEx](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesexw) pour déterminer les polices d’écran et d’imprimante disponibles pour le système.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -77,11 +77,11 @@ Le bouton de zone de liste déroulante Police appelle la fonction Win32 [EnumFon
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxtoolbarfontcombobox.h
+**En-tête:** afxtoolbarfontcombobox. h
 
 ##  <a name="cmfctoolbarfontcombobox"></a>  CMFCToolBarFontComboBox::CMFCToolBarFontComboBox
 
-Construit un [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) objet.
+Construit un objet [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) .
 
 ```
 public:
@@ -107,13 +107,13 @@ CMFCToolBarFontComboBox();
 ### <a name="parameters"></a>Paramètres
 
 *uiID*<br/>
-[in] L’ID de commande de la zone de liste déroulante.
+dans ID de commande de la zone de liste déroulante.
 
 *iImage*<br/>
-[in] Index de base zéro d’une image de la barre d’outils. L’image se trouve dans le [cmfctoolbarimages, classe](../../mfc/reference/cmfctoolbarimages-class.md) objet [cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md) classe conserve.
+dans Index de base zéro d’une image de barre d’outils. L’image se trouve dans l’objet de [classe CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) géré par la classe de [classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) .
 
 *nFontType*<br/>
-[in] Les types de polices qui contient la zone de liste déroulante. Ce paramètre peut être une combinaison (OR booléenne) des valeurs suivantes :
+dans Types de polices que contient la zone de liste déroulante. Ce paramètre peut être une combinaison (booléenne ou) des valeurs suivantes:
 
 DEVICE_FONTTYPE
 
@@ -122,23 +122,23 @@ RASTER_FONTTYPE
 TRUETYPE_FONTTYPE
 
 *nCharSet*<br/>
-[in] Si la valeur DEFAULT_CHARSET, la zone de liste déroulante contient tout-nommés de manière unique les polices dans tous les jeux de caractères. (S’il existe deux polices portant le même nom, la zone de liste déroulante contient un d’eux.) Si défini sur une valeur de jeu de caractères valide, la zone de liste déroulante contient uniquement les polices dans le jeu de caractères spécifié. Consultez [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) pour obtenir la liste de caractères possibles définit.
+dans Si la valeur est DEFAULT_CHARSET, la zone de liste déroulante contient toutes les polices portant un nom unique dans tous les jeux de caractères. (S’il existe deux polices portant le même nom, la zone de liste déroulante en contient une.) Si la valeur d’un jeu de caractères est valide, la zone de liste déroulante contient uniquement les polices du jeu de caractères spécifié. Pour obtenir la liste des jeux de caractères possibles, consultez [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .
 
 *dwStyle*<br/>
-[in] Style de la zone de liste déroulante. (consultez [Styles de zone de liste déroulante](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))
+dans Style de la zone de liste déroulante. (voir [styles de zone de liste](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)déroulante)
 
 *iWidth*<br/>
-[in] La largeur en pixels du contrôle d’édition.
+dans Largeur en pixels du contrôle d’édition.
 
 *nPitchAndFamily*<br/>
-[in] Si la valeur DEFAULT_PITCH, la zone de liste déroulante contient des polices, quel que soit la tonalité. Si la valeur FIXED_PITCH ou VARIABLE_PITCH, la zone de liste déroulante contient uniquement les polices avec ce type de tonalité. Filtrage basé sur la famille de polices n’est pas pris en charge actuellement.
+dans Si la valeur est DEFAULT_PITCH, la zone de liste déroulante contient des polices, quel que soit le pas. Si la valeur est FIXED_PITCH ou VARIABLE_PITCH, la zone de liste déroulante contient uniquement des polices avec ce type de tonalité. Le filtrage basé sur la famille de polices n’est pas pris en charge actuellement.
 
 *pLstFontsExternal*<br/>
-[out] Pointeur vers un [CObList, classe](../../mfc/reference/coblist-class.md) objet qui stocke les polices disponibles.
+à Pointeur vers un objet de [classe CObList](../../mfc/reference/coblist-class.md) qui stocke les polices disponibles.
 
 ### <a name="remarks"></a>Notes
 
-En règle générale, `CMFCToolBarFontComboBox` objets stockent la liste des polices disponibles dans un seul partagé `CObList` objet. Si vous utilisez la deuxième surcharge du constructeur et fournir un pointeur valide vers *pLstFontsExternal*, qui `CMFCToolBarFontComboBox` objet remplira à la place la `CObList` qui *pLstFontsExternal* pointe vers des polices disponibles.
+En règle `CMFCToolBarFontComboBox` générale, les objets stockent la liste des polices disponibles `CObList` dans un objet partagé unique. Si vous utilisez la deuxième surcharge du constructeur et fournissez un pointeur valide vers *pLstFontsExternal*, cet `CMFCToolBarFontComboBox` objet remplira à la `CObList` place le point de *pLstFontsExternal* avec les polices disponibles.
 
 ### <a name="example"></a>Exemple
 
@@ -148,7 +148,7 @@ L’exemple suivant montre comment construire un `CMFCToolBarFontComboBox` objet
 
 ##  <a name="getfontdesc"></a>  CMFCToolBarFontComboBox::GetFontDesc
 
-Retourne un pointeur vers le `CMFCFontInfo` objet pour un index spécifié dans la zone de liste déroulante.
+Retourne un pointeur vers l' `CMFCFontInfo` objet pour un index spécifié dans la zone de liste déroulante.
 
 ```
 const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
@@ -157,15 +157,15 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ### <a name="parameters"></a>Paramètres
 
 *iIndex*<br/>
-[in] Spécifie l’index de base zéro d’un élément de zone de liste déroulante.
+dans Spécifie l’index de base zéro d’un élément de zone de liste déroulante.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers un objet `CMFCFontInfo` . Si *iIndex* ne spécifie pas un index d’élément valide, la valeur de retour est NULL.
+Pointeur vers un objet `CMFCFontInfo` . Si *iIndex* ne spécifie pas un index d’élément valide, la valeur de retour est null.
 
 ##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight
 
-Spécifie la hauteur, en pixels, de caractères dans la zone de liste déroulante police si la zone de liste déroulante possède un propriétaire de style de dessin.
+Spécifie la hauteur, en pixels, des caractères de la zone de liste déroulante de police si la zone de liste déroulante a Owner Draw style.
 
 ```
 static int m_nFontHeight
@@ -173,11 +173,11 @@ static int m_nFontHeight
 
 ### <a name="remarks"></a>Notes
 
-Si le `m_nFontHeight` variable est 0, la hauteur est calculée automatiquement en fonction de la police par défaut de la zone de liste déroulante. La hauteur inclut à la fois la hauteur des caractères au-dessus de la ligne de base et la profondeur des caractères en dessous de la ligne de base.
+Si la `m_nFontHeight` variable est égale à 0, la hauteur est calculée automatiquement en fonction de la police par défaut de la zone de liste déroulante. La hauteur comprend à la fois la hauteur des caractères au-dessus de la ligne de base et la profondeur des caractères sous la ligne de base.
 
 ##  <a name="setfont"></a>  CMFCToolBarFontComboBox::SetFont
 
-Sélectionne que la police dans la zone de liste déroulante de police en fonction du nom de la police et le caractère défini qui est spécifiés dans les paramètres.
+Sélectionne la police dans la zone de liste déroulante de police en fonction du nom de la police et du jeu de caractères spécifiés dans les paramètres.
 
 ```
 BOOL SetFont(
@@ -189,21 +189,21 @@ BOOL SetFont(
 ### <a name="parameters"></a>Paramètres
 
 *lpszName*<br/>
-[in] Spécifie le nom de la police ou le préfixe.
+dans Spécifie le nom ou le préfixe de la police.
 
 *nCharSet*<br/>
-[in] Spécifie le jeu de caractères.
+dans Spécifie le jeu de caractères.
 
 *bExact*<br/>
-[in] Spécifie si *le caractère* contient le nom de la police ou le préfixe de la police.
+dans Spécifie si *lpszName* contient le nom de police ou le préfixe de police.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la police a été activée avec succès ; sinon 0.
+Différent de zéro si la police a été sélectionnée avec succès; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Si *bExact* a la valeur TRUE, cette méthode sélectionne une police qui correspond exactement au nom que vous avez spécifié en tant que *le caractère*. Si *bExact* est FALSE, cette sélectionne méthode une police qui commence par le texte spécifiée en tant que *le caractère* et qui utilise le jeu de caractères que vous avez spécifié en tant que *nCharSet*. Si *nCharSet* est définie à DEFAULT_CHARSET, le jeu de caractères sera ignoré et seule *le caractère* permet de sélectionner une police.
+Si *bExact* a la valeur true, cette méthode sélectionne une police qui correspond exactement au nom que vous avez spécifié en tant que *lpszName*. Si *bExact* a la valeur false, cette méthode sélectionne une police qui commence par le texte spécifié en tant que *lpszName* et qui utilise le jeu de caractères que vous avez spécifié comme *nCharSet*. Si *nCharSet* a la valeur default_charset, le jeu de caractères est ignoré et seul *lpszName* est utilisé pour sélectionner une police.
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -213,5 +213,5 @@ Si *bExact* a la valeur TRUE, cette méthode sélectionne une police qui corresp
 [CMFCToolBarButton, classe](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CMFCToolBarComboBoxButton, classe](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)<br/>
 [CMFCFontInfo, classe](../../mfc/reference/cmfcfontinfo-class.md)<br/>
-[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
+[CMFCToolBar:: ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Procédure pas à pas : Placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
