@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::InspectableClass
 ms.assetid: ff390b26-58cc-424f-87ac-1fe3cc692b59
-ms.openlocfilehash: 9d194f5a87ac4a142301bc896cb3ed172f119473
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee2a76edb967923a03ce6720b4163baf1cc48c32
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398188"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500478"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass, macro
 
-Définit le niveau de confiance et de nom de la classe runtime.
+Définit le nom de la classe d’exécution et le niveau de confiance.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,20 +27,20 @@ InspectableClass(
 ### <a name="parameters"></a>Paramètres
 
 *runtimeClassName*<br/>
-Le nom textuel complet de la classe runtime.
+Nom textuel complet de la classe Runtime.
 
 *trustLevel*<br/>
-Parmi les [TrustLevel](/windows/desktop/api/inspectable/ne-inspectable-trustlevel) valeurs énumérées.
+Une des valeurs énumérées de [trustLevel](/windows/win32/api/inspectable/ne-inspectable-trustlevel) .
 
 ## <a name="remarks"></a>Notes
 
-Le **InspectableClass** macro peut être utilisée uniquement avec les types Windows Runtime.
+La macro **inspectableclass,** peut être utilisée uniquement avec des types de Windows Runtime.
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** implements.h
+**En-tête:** Implements. h
 
-**Espace de noms :** Microsoft::wrl
+**Espace de noms :** Microsoft:: WRL
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,21 +1,21 @@
 ---
-title: defaultvtable (attribut de COM C++)
+title: defaultvtable (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvtable
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 813fb9dd4edf2f6e522e7310ba1e8bfcd55ed2b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ab37af4deab516dc01f55f986811668737cf18c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147949"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501648"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
-Définit une interface en tant que l’interface de vtable par défaut pour un objet COM.
+Définit une interface comme interface vtable par défaut pour un objet COM.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ Définit une interface en tant que l’interface de vtable par défaut pour un o
 ### <a name="parameters"></a>Paramètres
 
 *interface*<br/>
-L’interface désigné que vous souhaitez avoir vtable pour l’objet COM par défaut.
+Interface désignée dont vous souhaitez obtenir la vtable par défaut pour l’objet COM.
 
 ## <a name="remarks"></a>Notes
 
-Le **defaultvtable** attribut C++ a les mêmes fonctionnalités que le [defaultvtable](/windows/desktop/Midl/defaultvtable) attribut MIDL.
+L’attribut **defaultvtable** C++ a les mêmes fonctionnalités que l’attribut MIDL [defaultvtable](/windows/win32/Midl/defaultvtable) .
 
 ## <a name="example"></a>Exemple
 
-Le code suivant montre les attributs sur une classe qui utilisent **defaultvtable** pour spécifier une interface par défaut :
+Le code suivant affiche les attributs d’une classe qui utilisent **defaultvtable** pour spécifier une interface par défaut:
 
 ```cpp
 // cpp_attr_ref_defaultvtable.cpp
@@ -71,7 +71,7 @@ class CMyC3 : public IMyI3 {};
 |**S'applique à**|**class**, **struct**|
 |**Renouvelable**|Non|
 |**Attributs requis**|**coclasse**|
-|**Attributs non valides**|Aucun.|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

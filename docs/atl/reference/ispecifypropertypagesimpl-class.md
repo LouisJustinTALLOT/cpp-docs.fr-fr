@@ -10,19 +10,19 @@ helpviewer_keywords:
 - ISpecifyPropertyPages
 - ISpecifyPropertyPagesImpl class
 ms.assetid: 4e4b9795-b656-4d56-9b8c-85941e7731f9
-ms.openlocfilehash: 3f5db65d1c318677a630307f44533e51d63ec44d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c201cf6d9d89ab1a6a8e888deee1be79e5770490
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197417"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495413"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl, classe
 
-Cette classe implémente `IUnknown` et fournit une implémentation par défaut de la [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages) interface.
+Cette classe implémente `IUnknown` et fournit une implémentation par défaut de l’interface [ISpecifyPropertyPages](/windows/win32/api/ocidl/nn-ocidl-ispecifypropertypages) .
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+>  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 #### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Votre classe, dérivée de `ISpecifyPropertyPagesImpl`.
+Votre classe, dérivée `ISpecifyPropertyPagesImpl`de.
 
 ## <a name="members"></a>Membres
 
@@ -43,16 +43,16 @@ Votre classe, dérivée de `ISpecifyPropertyPagesImpl`.
 
 |Nom|Description|
 |----------|-----------------|
-|[ISpecifyPropertyPagesImpl::GetPages](#getpages)|Remplit un valeurs compté le tableau d’UUID. Chaque UUID correspond au CLSID de l’un des pages de propriétés qui peuvent être affichées dans la feuille de propriétés de l’objet.|
+|[ISpecifyPropertyPagesImpl::GetPages](#getpages)|Remplit un tableau compté de valeurs UUID. Chaque UUID correspond au CLSID de l’une des pages de propriétés qui peuvent être affichées dans la feuille de propriétés de l’objet.|
 
 ## <a name="remarks"></a>Notes
 
-Le [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages) interface permet à un client obtenir une liste des CLSID pour les pages de propriétés pris en charge par un objet. Classe `ISpecifyPropertyPagesImpl` fournit une implémentation par défaut de cette interface et implémente `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.
+L’interface [ISpecifyPropertyPages](/windows/win32/api/ocidl/nn-ocidl-ispecifypropertypages) permet à un client d’obtenir une liste de CLSID pour les pages de propriétés prises en charge par un objet. La `ISpecifyPropertyPagesImpl` classe fournit une implémentation par défaut de cette interface et `IUnknown` implémente en envoyant des informations à l’appareil de vidage dans les versions Debug.
 
 > [!NOTE]
->  N’exposez pas le `ISpecifyPropertyPages` si votre objet ne prend pas en charge les pages de propriétés de l’interface.
+>  N’exposez `ISpecifyPropertyPages` pas l’interface si votre objet ne prend pas en charge les pages de propriétés.
 
-**Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)
+**Articles connexes** [Didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -62,11 +62,11 @@ Le [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertyp
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlcom.h
+**En-tête:** atlcom. h
 
 ##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages
 
-Remplit le tableau le [CAUUID](/windows/desktop/api/ocidl/ns-ocidl-tagcauuid) structure avec les CLSID pour les pages de propriétés qui peuvent être affichées dans la feuille de propriétés de l’objet.
+Remplit le tableau dans la structure [cauuid](/windows/win32/api/ocidl/ns-ocidl-cauuid) avec les CLSID des pages de propriétés qui peuvent être affichées dans la feuille de propriétés de l’objet.
 
 ```
 STDMETHOD(GetPages)(CAUUID* pPages);
@@ -76,7 +76,7 @@ STDMETHOD(GetPages)(CAUUID* pPages);
 
 ATL utilise le mappage des propriétés de l’objet pour récupérer chaque CLSID.
 
-Consultez [ISpecifyPropertyPages::GetPages](/windows/desktop/api/ocidl/nf-ocidl-ispecifypropertypages-getpages) dans le Kit de développement logiciel Windows.
+Consultez [ISpecifyPropertyPages:: GetPages](/windows/win32/api/ocidl/nf-ocidl-ispecifypropertypages-getpages) dans le SDK Windows.
 
 ## <a name="see-also"></a>Voir aussi
 

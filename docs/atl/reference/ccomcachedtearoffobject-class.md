@@ -15,16 +15,16 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: fb7821da03e1ca69c850fa1a295851faf4af4c5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d993a349d38342bda30a83dfdbe25577953799b3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259675"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497537"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject, classe
 
-Cette classe implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pour une interface détachable.
+Cette classe implémente [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pour une interface détachée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,7 +40,7 @@ public CComObjectRootEx<contained
 #### <a name="parameters"></a>Paramètres
 
 *contained*<br/>
-Votre classe détachable, dérivée de `CComTearOffObjectBase` et les interfaces vous souhaitez que votre objet détachable pour prendre en charge.
+Votre classe détachée, dérivée de `CComTearOffObjectBase` et des interfaces que vous souhaitez que votre objet déchire prenne en charge.
 
 ## <a name="members"></a>Membres
 
@@ -49,31 +49,31 @@ Votre classe détachable, dérivée de `CComTearOffObjectBase` et les interfaces
 |Nom|Description|
 |----------|-----------------|
 |[CComCachedTearOffObject::CComCachedTearOffObject](#ccomcachedtearoffobject)|Constructeur.|
-|[CComCachedTearOffObject::~CComCachedTearOffObject](#dtor)|Destructeur.|
+|[CComCachedTearOffObject:: ~ CComCachedTearOffObject](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CComCachedTearOffObject::AddRef](#addref)|Incrémente le décompte de références pour un `CComCachedTearOffObject` objet.|
-|[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|Appelle le `m_contained::FinalConstruct` (la détachable méthode classe).|
-|[CComCachedTearOffObject::FinalRelease](#finalrelease)|Appelle le `m_contained::FinalRelease` (la détachable méthode classe).|
-|[CComCachedTearOffObject::QueryInterface](#queryinterface)|Retourne un pointeur vers le `IUnknown` de la `CComCachedTearOffObject` objet, ou vers l’interface demandée sur votre classe détachable (la classe `contained`).|
-|[CComCachedTearOffObject::Release](#release)|Décrémente le décompte de références pour un `CComCachedTearOffObject` de l’objet et il détruit si le décompte de références est 0.|
+|[CComCachedTearOffObject::AddRef](#addref)|Incrémente le décompte de références `CComCachedTearOffObject` pour un objet.|
+|[CComCachedTearOffObject:: FinalConstruct](#finalconstruct)|Appelle la `m_contained::FinalConstruct` méthode de la classe Tear.|
+|[CComCachedTearOffObject::FinalRelease](#finalrelease)|Appelle la `m_contained::FinalRelease` méthode de la classe Tear.|
+|[CComCachedTearOffObject::QueryInterface](#queryinterface)|Retourne un pointeur vers le `IUnknown` de l' `CComCachedTearOffObject` objet ou vers l’interface demandée sur votre classe détachée (classe `contained`).|
+|[CComCachedTearOffObject::Release](#release)|Décrémente le décompte de références pour `CComCachedTearOffObject` un objet et le détruit si le nombre de références est égal à 0.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CComCachedTearOffObject::m_contained](#m_contained)|Un `CComContainedObject` objet dérivé de votre classe détachable (la classe `contained`).|
+|[CComCachedTearOffObject::m_contained](#m_contained)|Objet dérivé de votre classe Tear (la classe `contained`). `CComContainedObject`|
 
 ## <a name="remarks"></a>Notes
 
-`CComCachedTearOffObject` implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pour une interface détachable. Cette classe diffère `CComTearOffObject` dans la mesure `CComCachedTearOffObject` possède son propre `IUnknown`, indépendamment de l’objet propriétaire `IUnknown` (le propriétaire est l’objet pour lequel le détachable est créé). `CComCachedTearOffObject` conserve son propre le décompte de références sur son `IUnknown` et se supprime lui-même une fois que son décompte de références est égal à zéro. Toutefois, si vous interrogez des ses détachable interfaces, le décompte de références de l’objet propriétaire `IUnknown` est incrémenté.
+`CComCachedTearOffObject`implémente [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pour une interface détachée. Cette classe diffère de `CComTearOffObject` `CComCachedTearOffObject` dans `IUnknown`, et est distincte de celle de l’objet `IUnknown` propriétaire (le propriétaire est l’objet pour lequel la destruction est créée). `CComCachedTearOffObject`conserve son propre décompte de références `IUnknown` sur son et le supprime une fois que son décompte de références est égal à zéro. Toutefois, si vous interrogez l’une de ses interfaces détachées, le décompte de références de l’objet `IUnknown` propriétaire sera incrémenté.
 
-Si le `CComCachedTearOffObject` implémentant le détachable est déjà instancié, et l’interface détachable est interrogée pour là encore, dans le même objet `CComCachedTearOffObject` objet est réutilisé. En revanche, si une interface détachable implémentée par un `CComTearOffObject` est à nouveau interrogée pour via l’objet propriétaire, un autre `CComTearOffObject` sera instancié.
+Si l' `CComCachedTearOffObject` objet qui implémente le déchirement est déjà instancié et que l’interface détachée est recherchée, le même `CComCachedTearOffObject` objet est réutilisé. En revanche, si une interface détachée implémentée par un `CComTearOffObject` est à nouveau interrogée par le biais de l’objet `CComTearOffObject` propriétaire, une autre instance est instanciée.
 
-La classe propriétaire doit implémenter `FinalRelease` et appelez `Release` sur la mise en cache `IUnknown` pour le `CComCachedTearOffObject`, qui décrémente son décompte de références. Cela entraîne `CComCachedTearOffObject`de `FinalRelease` pour être appelée et supprimer le détachable.
+La `FinalRelease` classe propriétaire doit implémenter et appeler `Release` sur `CComCachedTearOffObject`le mis `IUnknown` en cache pour, ce qui décrémente son décompte de références. Cela entraînera `CComCachedTearOffObject`l' `FinalRelease` appel de et la suppression de la déchirure.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -87,11 +87,11 @@ La classe propriétaire doit implémenter `FinalRelease` et appelez `Release` su
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlcom.h
+**En-tête:** atlcom. h
 
 ##  <a name="addref"></a>  CComCachedTearOffObject::AddRef
 
-Incrémente le décompte de références le `CComCachedTearOffObject` objet par 1.
+Incrémente le décompte de références `CComCachedTearOffObject` de l’objet de 1.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -99,7 +99,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur qui peut être utile pour les diagnostics et de test.
+Valeur qui peut être utile pour les diagnostics et les tests.
 
 ##  <a name="ccomcachedtearoffobject"></a>  CComCachedTearOffObject::CComCachedTearOffObject
 
@@ -112,7 +112,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="parameters"></a>Paramètres
 
 *pv*<br/>
-[in] Pointeur vers le `IUnknown` de la `CComCachedTearOffObject`.
+dans Pointeur vers le `IUnknown` `CComCachedTearOffObject`de.
 
 ### <a name="remarks"></a>Notes
 
@@ -128,11 +128,11 @@ Destructeur.
 
 ### <a name="remarks"></a>Notes
 
-Libère toutes les ressources allouées et appels [FinalRelease](#finalrelease).
+Libère toutes les ressources allouées et appelle [FinalRelease](#finalrelease).
 
 ##  <a name="finalconstruct"></a>  CComCachedTearOffObject::FinalConstruct
 
-Appels `m_contained::FinalConstruct` créer `m_contained`, le `CComContainedObject` <  `contained`> objet utilisé pour accéder à l’interface implémentée par votre classe détachable.
+Appelle `m_contained::FinalConstruct` pour créer `m_contained`, l' `CComContainedObject` objet>utilisé`contained`pour accéder à l’interface implémentée par votre classe Tear. < 
 
 ```
 HRESULT FinalConstruct();
@@ -140,11 +140,11 @@ HRESULT FinalConstruct();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
 ##  <a name="finalrelease"></a>  CComCachedTearOffObject::FinalRelease
 
-Appels `m_contained::FinalRelease` pour libérer `m_contained`, le `CComContainedObject` <  `contained`> objet.
+Appelle `m_contained::FinalRelease` la valeur `m_contained`Free, `CComContainedObject`l' <  objet>`contained`.
 
 ```
 void FinalRelease();
@@ -152,7 +152,7 @@ void FinalRelease();
 
 ##  <a name="m_contained"></a>  CComCachedTearOffObject::m_contained
 
-Un [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) objet dérivé de votre classe détachable.
+Objet [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) dérivé de votre classe Tear.
 
 ```
 CcomContainedObject <contained> m_contained;
@@ -161,11 +161,11 @@ CcomContainedObject <contained> m_contained;
 ### <a name="parameters"></a>Paramètres
 
 *contained*<br/>
-[in] Votre classe détachable, dérivée de `CComTearOffObjectBase` et les interfaces vous souhaitez que votre objet détachable pour prendre en charge.
+dans Votre classe détachée, dérivée de `CComTearOffObjectBase` et des interfaces que vous souhaitez que votre objet déchire prenne en charge.
 
 ### <a name="remarks"></a>Notes
 
-Les méthodes `m_contained` hérite sont utilisés pour accéder à l’interface détachable dans votre classe détachable via l’objet mis en cache détachable `QueryInterface`, `FinalConstruct`, et `FinalRelease`.
+Les méthodes `m_contained` héritées sont utilisées pour accéder à l’interface détachée dans votre classe détachée par le biais des objets, `FinalConstruct`et `FinalRelease`de `QueryInterface`l’objet Tear mis en cache.
 
 ##  <a name="queryinterface"></a>  CComCachedTearOffObject::QueryInterface
 
@@ -178,22 +178,22 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="parameters"></a>Paramètres
 
 *iid*<br/>
-[in] Le GUID de l’interface demandée.
+dans GUID de l’interface demandée.
 
 *ppvObject*<br/>
-[out] Un pointeur vers le pointeur d’interface identifié par *iid*, ou NULL si l’interface est introuvable.
+à Pointeur vers le pointeur d’interface identifié par *IID*, ou null si l’interface est introuvable.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Si l’interface demandée est `IUnknown`, retourne un pointeur vers le `CComCachedTearOffObject`de propre `IUnknown` et incrémente le décompte de références. Sinon, les requêtes pour l’interface sur votre classe détachables à l’aide de la [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) héritée de la méthode `CComObjectRootEx`.
+Si l’interface demandée est `IUnknown`, retourne un pointeur vers le `CComCachedTearOffObject`propre `IUnknown` et incrémente le décompte de références. Sinon, interroge l’interface sur votre classe détachée à l’aide de la méthode [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) héritée de `CComObjectRootEx`.
 
 ##  <a name="release"></a>  CComCachedTearOffObject::Release
 
-Décrémente le décompte de références par 1 et, si le décompte de références est 0, supprime le `CComCachedTearOffObject` objet.
+Décrémente le nombre de références de 1 et, si le nombre de références est 0, supprime l' `CComCachedTearOffObject` objet.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -201,7 +201,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Dans les versions non debug retourne toujours 0. Dans les versions debug, retourne une valeur qui peut-être être utiles pour le diagnostic ou de test.
+Dans les versions sans débogage, retourne toujours 0. Dans les versions Debug, retourne une valeur qui peut être utile pour les diagnostics ou les tests.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,5 +1,5 @@
 ---
-title: CW2AEX classe
+title: CW2AEX, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CW2AEX
@@ -10,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-ms.openlocfilehash: 97b398dd80bb38b1579458ae0b8b65f082458e23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4dda1cb9e54c44f7940475660bc629192b9ead61
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277163"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496265"
 ---
-# <a name="cw2aex-class"></a>CW2AEX classe
+# <a name="cw2aex-class"></a>CW2AEX, classe
 
-Cette classe est utilisée par les macros de conversion de chaîne CT2AEX, CW2TEX, CW2CTEX, CT2CAEX et CW2A typedef.
+Cette classe est utilisée par les macros de conversion de chaînes CT2AEX, CW2TEX, CW2CTEX et CT2CAEX, ainsi que les CW2A typedef.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+>  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,7 +34,7 @@ class CW2AEX
 #### <a name="parameters"></a>Paramètres
 
 *t_nBufferLength*<br/>
-La taille de la mémoire tampon utilisée dans le processus de traduction. La longueur par défaut est 128 octets.
+Taille de la mémoire tampon utilisée dans le processus de traduction. La longueur par défaut est de 128 octets.
 
 ## <a name="members"></a>Membres
 
@@ -49,26 +49,26 @@ La taille de la mémoire tampon utilisée dans le processus de traduction. La lo
 
 |Nom|Description|
 |----------|-----------------|
-|[CW2AEX::operator LPSTR](#operator_lpstr)|Opérateur de conversion.|
+|[CW2AEX:: Operator LPSTR](#operator_lpstr)|Opérateur de conversion.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CW2AEX::m_psz](#m_psz)|Le membre de données qui stocke la chaîne source.|
-|[CW2AEX::m_szBuffer](#m_szbuffer)|La mémoire tampon statique, utilisé pour stocker la chaîne convertie.|
+|[CW2AEX::m_psz](#m_psz)|Membre de données qui stocke la chaîne source.|
+|[CW2AEX::m_szBuffer](#m_szbuffer)|Mémoire tampon statique, utilisée pour stocker la chaîne convertie.|
 
 ## <a name="remarks"></a>Notes
 
-À moins que des fonctionnalités supplémentaires sont requises, utilisez CT2AEX, CW2TEX, CW2CTEX, CT2CAEX ou CW2A dans votre code.
+À moins que des fonctionnalités supplémentaires ne soient requises, utilisez CT2AEX, CW2TEX, CW2CTEX, CT2CAEX ou CW2A dans votre code.
 
-Cette classe contient une mémoire tampon de taille fixe statique qui est utilisé pour stocker le résultat de la conversion. Si le résultat est trop grand pour tenir dans la mémoire tampon statique, la classe alloue la mémoire à l’aide **malloc**, libère la mémoire quand l’objet est hors de portée. Cela garantit que, contrairement au texte des macros de conversion disponibles dans les versions précédentes d’ATL, cette classe est sûr à utiliser dans des boucles et qu’il ne dépassement de la pile.
+Cette classe contient une mémoire tampon statique de taille fixe qui est utilisée pour stocker le résultat de la conversion. Si le résultat est trop grand pour tenir dans la mémoire tampon statique, la classe alloue de la mémoire à l’aide de **malloc**, en libérant la mémoire lorsque l’objet est hors de portée. Cela garantit que, contrairement aux macros de conversion de texte disponibles dans les versions précédentes d’ATL, cette classe peut être utilisée en toute sécurité dans les boucles et qu’elle ne déborde pas la pile.
 
-Si la classe tente d’allouer de la mémoire sur le tas et échoue, il appellera `AtlThrow` avec l’argument E_OUTOFMEMORY.
+Si la classe tente d’allouer de la mémoire sur le tas et échoue, `AtlThrow` elle appellera avec un argument de E_OUTOFMEMORY.
 
-Par défaut, les macros et les classes de conversion ATL utilisent page de codes ANSI du thread actuel pour la conversion. Si vous souhaitez substituer ce comportement pour une conversion spécifique, spécifiez la page de codes comme second paramètre au constructeur pour la classe.
+Par défaut, les macros et les classes de conversion ATL utilisent la page de codes ANSI du thread actuel pour la conversion. Si vous souhaitez substituer ce comportement pour une conversion spécifique, spécifiez la page de codes comme deuxième paramètre du constructeur pour la classe.
 
-Les macros suivantes sont basées sur cette classe :
+Les macros suivantes sont basées sur cette classe:
 
 - CT2AEX
 
@@ -78,19 +78,19 @@ Les macros suivantes sont basées sur cette classe :
 
 - CT2CAEX
 
-Le typedef suivant est basé sur cette classe :
+Le typedef suivant est basé sur cette classe:
 
 - CW2A
 
-Pour une description de ces macros de conversion de texte, consultez [Macros de Conversion de chaîne de MFC et ATL](string-conversion-macros.md).
+Pour plus d’informations sur ces macros de conversion de texte, consultez macros de [conversion de chaînes ATL et MFC](string-conversion-macros.md).
 
 ## <a name="example"></a>Exemple
 
-Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.
+Pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes, consultez macros de [conversion de chaînes ATL et MFC](string-conversion-macros.md) .
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlconv.h
+**En-tête:** atlconv. h
 
 ##  <a name="cw2aex"></a>  CW2AEX::CW2AEX
 
@@ -104,10 +104,10 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="parameters"></a>Paramètres
 
 *psz*<br/>
-La chaîne de texte à convertir.
+Chaîne de texte à convertir.
 
 *nCodePage*<br/>
-La page de codes utilisée pour effectuer la conversion. Consultez la discussion de paramètre de page de code pour la fonction Windows SDK [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) pour plus d’informations.
+Page de codes utilisée pour effectuer la conversion. Pour plus d’informations, consultez la discussion sur les paramètres de page de codes pour la fonction SDK Windows [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar) .
 
 ### <a name="remarks"></a>Notes
 
@@ -127,7 +127,7 @@ Libère la mémoire tampon allouée.
 
 ##  <a name="m_psz"></a>  CW2AEX::m_psz
 
-Le membre de données qui stocke la chaîne source.
+Membre de données qui stocke la chaîne source.
 
 ```
 LPSTR m_psz;
@@ -135,13 +135,13 @@ LPSTR m_psz;
 
 ##  <a name="m_szbuffer"></a>  CW2AEX::m_szBuffer
 
-La mémoire tampon statique, utilisé pour stocker la chaîne convertie.
+Mémoire tampon statique, utilisée pour stocker la chaîne convertie.
 
 ```
 char m_szBuffer[t_nBufferLength];
 ```
 
-##  <a name="operator_lpstr"></a>  CW2AEX::operator LPSTR
+##  <a name="operator_lpstr"></a>CW2AEX:: Operator LPSTR
 
 Opérateur de conversion.
 
@@ -151,7 +151,7 @@ operator LPSTR() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la chaîne de texte comme type LPSTR.
+Retourne la chaîne de texte en tant que type LPSTR.
 
 ## <a name="see-also"></a>Voir aussi
 

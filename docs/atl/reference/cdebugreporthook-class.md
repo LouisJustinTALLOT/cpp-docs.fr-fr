@@ -1,5 +1,5 @@
 ---
-title: CDebugReportHook, classe
+title: CDebugReportHook (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - CDebugReportHook
@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: a7c5993d1b96daaa73e7fc9509c93e66daed77f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7187448b2ba2c9d3ab0399aa3e75ce8d757bfec1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245914"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496776"
 ---
-# <a name="cdebugreporthook-class"></a>CDebugReportHook, classe
+# <a name="cdebugreporthook-class"></a>CDebugReportHook (classe)
 
 Utilisez cette classe pour envoyer des rapports de débogage à un canal nommé.
 
@@ -36,34 +36,34 @@ class CDebugReportHook
 
 |Nom|Description|
 |----------|-----------------|
-|[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|Appels [SetPipeName](#setpipename), [SetTimeout](#settimeout), et [SetHook](#sethook).|
-|[CDebugReportHook::~CDebugReportHook](#dtor)|Calls [CDebugReportHook::RemoveHook](#removehook).|
+|[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|Appelle [SetPipeName](#setpipename), [setTimeout](#settimeout)et [SetHook](#sethook).|
+|[CDebugReportHook::~CDebugReportHook](#dtor)|Appelle [CDebugReportHook:: RemoveHook](#removehook).|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|(Statique) La fonction de création de rapports personnalisée est raccordée à la durée d’exécution C déboguer des processus de création de rapports.|
-|[CDebugReportHook::RemoveHook](#removehook)|Appelez cette méthode pour arrêter l’envoi des rapports de débogage pour le canal nommé et restaurer le raccordement de rapport précédente.|
-|[CDebugReportHook::SetHook](#sethook)|Appelez cette méthode pour commencer à envoyer des rapports de débogage pour le canal nommé.|
+|[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|Statique Fonction de création de rapports personnalisée qui est raccordée au processus de création de rapports de débogage du runtime C.|
+|[CDebugReportHook::RemoveHook](#removehook)|Appelez cette méthode pour arrêter d’envoyer des rapports de débogage au canal nommé et restaurer le hook de rapport précédent.|
+|[CDebugReportHook::SetHook](#sethook)|Appelez cette méthode pour commencer à envoyer des rapports de débogage au canal nommé.|
 |[CDebugReportHook::SetPipeName](#setpipename)|Appelez cette méthode pour définir l’ordinateur et le nom du canal auquel les rapports de débogage seront envoyés.|
-|[CDebugReportHook::SetTimeout](#settimeout)|Appelez cette méthode pour définir le temps en millisecondes que cette classe doit attendre le canal nommé soit disponible.|
+|[CDebugReportHook::SetTimeout](#settimeout)|Appelez cette méthode pour définir la durée en millisecondes pendant laquelle cette classe attend que le canal nommé soit disponible.|
 
 ## <a name="remarks"></a>Notes
 
-Créez une instance de cette classe dans les versions debug de vos services ou applications d’envoyer des rapports de débogage à un canal nommé. Rapports de débogage sont générés en appelant [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) ou à l’aide d’un wrapper pour cette fonction comme le [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) et [ATLASSERT ;](debugging-and-error-reporting-macros.md#atlassert) macros.
+Créez une instance de cette classe dans les versions Debug de vos services ou applications pour envoyer des rapports de débogage à un canal nommé. Les rapports de débogage sont générés en appelant _ [CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) ou à l’aide d’un wrapper pour cette fonction, comme les macros [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) et [ATLASSERT](debugging-and-error-reporting-macros.md#atlassert) .
 
-Utilisation de cette classe vous permet de déboguer interactivement les composants qui s’exécutent non-interactif [stations de fenêtre](/windows/desktop/winstation/window-stations).
+L’utilisation de cette classe vous permet de déboguer de manière interactive des composants s’exécutant dans des [stations de fenêtre](/windows/win32/winstation/window-stations)non interactives.
 
-Notez que les rapports de débogage sont envoyés en utilisant le contexte de sécurité sous-jacente du thread. L’emprunt d’identité est temporairement désactivé afin que les rapports de débogage peuvent être affichés dans les situations où l’emprunt d’identité des utilisateurs de faibles privilèges est en cours, comme dans les applications web.
+Notez que les rapports de débogage sont envoyés à l’aide du contexte de sécurité sous-jacent du thread. L’emprunt d’identité est temporairement désactivé afin que les rapports de débogage puissent être affichés dans les situations où l’emprunt d’identité des utilisateurs à faibles privilèges se produit, par exemple dans les applications Web.
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlutil.h
+**En-tête:** atlutil. h
 
 ##  <a name="cdebugreporthook"></a>  CDebugReportHook::CDebugReportHook
 
-Appels [SetPipeName](#setpipename), [SetTimeout](#settimeout), et [SetHook](#sethook).
+Appelle [SetPipeName](#setpipename), [setTimeout](#settimeout)et [SetHook](#sethook).
 
 ```
 CDebugReportHook(
@@ -75,17 +75,17 @@ CDebugReportHook(
 ### <a name="parameters"></a>Paramètres
 
 *szMachineName*<br/>
-Le nom de l’ordinateur auquel la sortie de débogage doit être envoyée. Par défaut, l’ordinateur local.
+Nom de l’ordinateur sur lequel la sortie de débogage doit être envoyée. La valeur par défaut est l’ordinateur local.
 
 *szPipeName*<br/>
-Le nom du canal nommé auquel la sortie de débogage doit être envoyée.
+Nom du canal nommé auquel la sortie de débogage doit être envoyée.
 
 *dwTimeout*<br/>
-Durée en millisecondes que cette classe doit attendre le canal nommé soit disponible.
+Durée en millisecondes pendant laquelle cette classe attend que le canal nommé soit disponible.
 
 ##  <a name="dtor"></a>  CDebugReportHook::~CDebugReportHook
 
-Calls [CDebugReportHook::RemoveHook](#removehook).
+Appelle [CDebugReportHook:: RemoveHook](#removehook).
 
 ```
 ~CDebugReportHook() throw();
@@ -93,7 +93,7 @@ Calls [CDebugReportHook::RemoveHook](#removehook).
 
 ##  <a name="cdebugreporthookproc"></a>  CDebugReportHook::CDebugReportHookProc
 
-La fonction de création de rapports personnalisée est raccordée à la durée d’exécution C déboguer des processus de création de rapports.
+Fonction de création de rapports personnalisée qui est raccordée au processus de création de rapports de débogage du runtime C.
 
 ```
 static int __cdecl CDebugReportHookProc(
@@ -105,27 +105,27 @@ static int __cdecl CDebugReportHookProc(
 ### <a name="parameters"></a>Paramètres
 
 *reportType*<br/>
-Le type de rapport (_CRT_WARN, _CRT_ERROR ou _CRT_ASSERT).
+Type du rapport (_CRT_WARN, _CRT_ERROR ou _CRT_ASSERT).
 
 *message*<br/>
-La chaîne de message.
+Chaîne du message.
 
 *returnValue*<br/>
-La valeur doit être retournée par [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).
+Valeur qui doit être retournée par _ [CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne FALSE si le raccordement gère intégralement le message en question et qu’aucun rapport supplémentaire n’est requis. Retourne la valeur TRUE si `_CrtDbgReport` doit signaler le message de façon normale.
+Retourne la valeur FALSe si le raccordement gère complètement le message en question afin qu’aucune autre génération de rapports ne soit requise. Retourne la valeur `_CrtDbgReport` true si doit signaler le message de manière normale.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de création de rapports tente d’ouvrir le canal nommé et communiquer avec le processus à l’autre extrémité. Si le canal est occupé, la fonction de création de rapports attend jusqu'à ce que le canal est gratuit ou l’expiration du délai. Le délai d’expiration peut être définie par le constructeur ou un appel à [CDebugReportHook::SetTimeout](#settimeout).
+La fonction de création de rapports tente d’ouvrir le canal nommé et de communiquer avec le processus à l’autre extrémité. Si le canal est occupé, la fonction de création de rapports attend jusqu’à ce que le canal soit libre ou que le délai d’attente expire. Le délai d’attente peut être défini par le constructeur ou par un appel à [CDebugReportHook:: setTimeout](#settimeout).
 
-Le code de cette fonction est exécuté dans le contexte de sécurité sous-jacente du thread appelant, autrement dit, l’emprunt d’identité est désactivé pendant la durée de cette fonction.
+Le code de cette fonction est exécuté dans le contexte de sécurité sous-jacent du thread appelant, autrement dit, l’emprunt d’identité est désactivé pendant toute la durée de cette fonction.
 
 ##  <a name="removehook"></a>  CDebugReportHook::RemoveHook
 
-Appelez cette méthode pour arrêter l’envoi des rapports de débogage pour le canal nommé et restaurer le raccordement de rapport précédente.
+Appelez cette méthode pour arrêter d’envoyer des rapports de débogage au canal nommé et restaurer le hook de rapport précédent.
 
 ```
 void RemoveHook() throw();
@@ -133,11 +133,11 @@ void RemoveHook() throw();
 
 ### <a name="remarks"></a>Notes
 
-Appels [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) pour restaurer le raccordement de rapport précédente.
+Appelle [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) pour restaurer le hook de rapport précédent.
 
 ##  <a name="sethook"></a>  CDebugReportHook::SetHook
 
-Appelez cette méthode pour commencer à envoyer des rapports de débogage pour le canal nommé.
+Appelez cette méthode pour commencer à envoyer des rapports de débogage au canal nommé.
 
 ```
 void SetHook() throw();
@@ -145,7 +145,7 @@ void SetHook() throw();
 
 ### <a name="remarks"></a>Notes
 
-Appels [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) des rapports de débogage acheminés via [CDebugReportHookProc](#cdebugreporthookproc) au canal nommé. Cette classe effectue le suivi de la précédente raccordement de rapport afin qu’il puisse être restaurées si [RemoveHook](#removehook) est appelée.
+Appelle [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) pour que les rapports de débogage soient routés via [CDebugReportHookProc](#cdebugreporthookproc) vers le canal nommé. Cette classe effectue le suivi du hook de rapport précédent afin qu’il puisse être restauré quand [RemoveHook](#removehook) est appelé.
 
 ##  <a name="setpipename"></a>  CDebugReportHook::SetPipeName
 
@@ -160,18 +160,18 @@ BOOL SetPipeName(
 ### <a name="parameters"></a>Paramètres
 
 *szMachineName*<br/>
-Le nom de l’ordinateur auquel la sortie de débogage doit être envoyée.
+Nom de l’ordinateur sur lequel la sortie de débogage doit être envoyée.
 
 *szPipeName*<br/>
-Le nom du canal nommé auquel la sortie de débogage doit être envoyée.
+Nom du canal nommé auquel la sortie de débogage doit être envoyée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
+Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ##  <a name="settimeout"></a>  CDebugReportHook::SetTimeout
 
-Appelez cette méthode pour définir le temps en millisecondes que cette classe doit attendre le canal nommé soit disponible.
+Appelez cette méthode pour définir la durée en millisecondes pendant laquelle cette classe attend que le canal nommé soit disponible.
 
 ```
 void SetTimeout(DWORD dwTimeout);
@@ -180,7 +180,7 @@ void SetTimeout(DWORD dwTimeout);
 ### <a name="parameters"></a>Paramètres
 
 *dwTimeout*<br/>
-Durée en millisecondes que cette classe doit attendre le canal nommé soit disponible.
+Durée en millisecondes pendant laquelle cette classe attend que le canal nommé soit disponible.
 
 ## <a name="see-also"></a>Voir aussi
 

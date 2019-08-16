@@ -4,12 +4,12 @@ ms.date: 07/02/2019
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 87d2bf434aef3a85bf7fa19f5886bec106515809
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: ae751b1632473fa316c7965bc751e91b782a89ea
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552337"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513667"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Préparation d'un ordinateur de test pour lancer un exécutable de débogage
 
@@ -25,7 +25,7 @@ Il existe trois façons de déployer les versions debug des DLL de la bibliothè
 - Utilisez le déploiement local pour installer une version debug d’une DLL Visual C++ particulière dans le répertoire d’installation de l’application en utilisant les fichiers fournis dans le répertoire Program Files ou Program Files (x86) sous \Microsoft Visual Studio \<version>\VC\redist\Debug_NonRedist\\.
 
     > [!NOTE]
-    >  Pour le débogage distant de votre application générée à l’aide de Visual Studio 2005 ou Visual Studio 2008 sur un autre ordinateur, vous devez déployer les versions debug de visuel C++ bibliothèque DLL en tant qu’assemblys côte à côte partagés. Vous pouvez utiliser un projet d'installation ou Windows Installer pour installer les modules de fusion correspondants.
+    >  Pour le débogage distant de votre application créée à l’aide de Visual Studio 2005 ou Visual Studio 2008 sur un autre ordinateur, vous devez déployer les versions C++ Debug des dll de la bibliothèque Visual en tant qu’assemblys côte à côte partagés. Vous pouvez utiliser un projet d'installation ou Windows Installer pour installer les modules de fusion correspondants.
 
 - Utilisez l’option _**Déployer** dans la boîte de dialogue **Gestionnaire de configurations** de Visual Studio pour copier la sortie du projet et d’autres fichiers sur l’ordinateur distant.
 
@@ -34,6 +34,6 @@ Après avoir installé les DLL Visual C++, vous pouvez exécuter un débogueur 
 ## <a name="see-also"></a>Voir aussi
 
 [Déploiement dans Visual C++](deployment-in-visual-cpp.md)<br>
-[Options de ligne de commande de Windows Installer](/windows/desktop/Msi/command-line-options)<br>
+[Options de ligne de commande de Windows Installer](/windows/win32/Msi/command-line-options)<br>
 [Exemples de déploiement](deployment-examples.md)<br>
 [Remote Debugging](/visualstudio/debugger/remote-debugging)

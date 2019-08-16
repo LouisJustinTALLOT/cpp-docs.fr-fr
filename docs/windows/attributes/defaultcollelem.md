@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: be4ea7097bd811444fca050525338931867998d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8848562c1470198d3f2a1b6f285510bcbb43d7c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148053"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501657"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
-Utilisé pour l’optimisation du code Visual Basic.
+Utilisé pour Visual Basic optimisation du code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Utilisé pour l’optimisation du code Visual Basic.
 
 ## <a name="remarks"></a>Notes
 
-Le **defaultcollelem** attribut C++ a les mêmes fonctionnalités que le [defaultcollelem](/windows/desktop/Midl/defaultcollelem) attribut MIDL.
+L’attribut **defaultcollelem** C++ a les mêmes fonctionnalités que l’attribut MIDL [defaultcollelem](/windows/win32/Midl/defaultcollelem) .
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-Le code suivant montre une méthode d’interface à l’aide du **defaultcollelem** attribut :
+Le code suivant illustre une méthode d’interface à l’aide de l’attribut **defaultcollelem** :
 
 ```cpp
 // cpp_attr_ref_defaultcollelem.cpp
@@ -52,8 +52,8 @@ __interface IMyForm
 |-|-|
 |**S'applique à**|Méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

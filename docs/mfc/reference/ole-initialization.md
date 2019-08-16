@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
-ms.openlocfilehash: 3d49b37ffc2561fa9a51463a893ec2ba4f4fb725
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6860697dd3adbe26197dd9075e84f402029e00a5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310268"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502023"
 ---
 # <a name="ole-initialization"></a>Initialisation d'OLE
 
-Avant d’une application peut utiliser les services du système OLE, il doit initialiser les DLL système OLE et vérifiez que les DLL sont la version correcte. Le `AfxOleInit` fonction initialise les DLL système OLE.
+Pour qu’une application puisse utiliser les services système OLE, elle doit initialiser les DLL système OLE et vérifier que la version des dll est correcte. La `AfxOleInit` fonction initialise les DLL système OLE.
 
 ### <a name="ole-initialization"></a>Initialisation d'OLE
 
 |||
 |-|-|
 |[AfxOleInit](#afxoleinit)|Initialise les bibliothèques OLE.|
-|[AfxEnableControlContainer](#afxenablecontrolcontainer)|Appelez cette fonction dans l’objet de votre application `InitInstance` (fonction) pour activer la prise en charge de la relation contenant-contenu des contrôles OLE.|
+|[AfxEnableControlContainer](#afxenablecontrolcontainer)|Appelez cette fonction dans la fonction de `InitInstance` votre objet application pour activer la prise en charge de la relation contenant-contenu des contrôles OLE.|
 
-## <a name="afxenablecontrolcontainer"></a> AfxEnableControlContainer
+## <a name="afxenablecontrolcontainer"></a>AfxEnableControlContainer (
 
-Appelez cette fonction dans l’objet de votre application `InitInstance` (fonction) pour activer la prise en charge de la relation contenant-contenu des contrôles OLE.
+Appelez cette fonction dans la fonction de `InitInstance` votre objet application pour activer la prise en charge de la relation contenant-contenu des contrôles OLE.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -37,7 +37,7 @@ void AfxEnableControlContainer( );
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur les contrôles OLE (maintenant appelé contrôles ActiveX), consultez [rubriques du contrôle ActiveX](../mfc-activex-controls.md).
+Pour plus d’informations sur les contrôles OLE (désormais appelés contrôles ActiveX), consultez les [rubriques relatives](../mfc-activex-controls.md)aux contrôles ActiveX.
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -53,21 +53,21 @@ BOOL AFXAPI AfxOleInit();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro en cas de réussite ; 0 si l’initialisation échoue, probablement parce que les versions incorrectes des DLL système OLE sont installées.
+Valeur différente de zéro en cas de réussite; 0 si l’initialisation échoue, peut-être parce que des versions incorrectes des DLL système OLE sont installées.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction pour initialiser la prise en charge OLE pour une application MFC. Lorsque cette fonction est appelée, les actions suivantes se produisent :
+Appelez cette fonction pour initialiser la prise en charge OLE pour une application MFC. Lorsque cette fonction est appelée, les actions suivantes se produisent:
 
-- Initialise la bibliothèque COM sur l’appartement actuel de l’application appelante. Pour plus d’informations, consultez [OleInitialize](/windows/desktop/api/ole2/nf-ole2-oleinitialize).
+- Initialise la bibliothèque COM sur le cloisonnement actuel de l’application appelante. Pour plus d’informations, consultez [OleInitialize](/windows/win32/api/ole2/nf-ole2-oleinitialize).
 
-- Crée un objet de filtre de message, mise en œuvre le [IMessageFilter](/windows/desktop/api/objidl/nn-objidl-imessagefilter) interface. Ce filtre de messages est accessible par un appel à [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter).
-
-> [!NOTE]
->  Si **AfxOleInit** est appelée à partir d’une DLL MFC, l’appel échoue. L’échec se produit parce que la fonction suppose que, si elle est appelée à partir d’une DLL, le système OLE a été précédemment initialisé par l’application appelante.
+- Crée un objet de filtre de messages, en implémentant l’interface [IMessageFilter](/windows/win32/api/objidl/nn-objidl-imessagefilter) . Ce filtre de messages est accessible à l’aide d’un appel à [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter).
 
 > [!NOTE]
->  Les applications MFC doivent être initialisées en tant que thread unique cloisonné (STA). Si vous appelez [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) dans votre `InitInstance` substituer, spécifiez COINIT_APARTMENTTHREADED (plutôt que COINIT_MULTITHREADED).
+>  Si **AfxOLEInit** est appelé à partir d’une DLL MFC, l’appel échoue. L’échec se produit parce que la fonction suppose que, s’il est appelé à partir d’une DLL, le système OLE a été précédemment initialisé par l’application appelante.
+
+> [!NOTE]
+>  Les applications MFC doivent être initialisées en tant que thread unique cloisonné (STA). Si vous appelez [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) dans votre `InitInstance` remplacement, spécifiez COINIT_APARTMENTTHREADED (au lieu de COINIT_MULTITHREADED).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -75,4 +75,4 @@ Appelez cette fonction pour initialiser la prise en charge OLE pour une applicat
 
 ## <a name="see-also"></a>Voir aussi
 
-[Macros et objet Globals](../../mfc/reference/mfc-macros-and-globals.md)
+[Macros et globales](../../mfc/reference/mfc-macros-and-globals.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 1d9dca16ca905afbc94d912a8083017ba9cc84e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c977bc204f4c9428a4aae09300269b1ed82d53e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188530"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498951"
 ---
 # <a name="wctob"></a>wctob
 
@@ -49,13 +49,13 @@ Valeur à traduire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si **wctob** convertit correctement un caractère large, elle retourne sa représentation sous forme de caractère multioctet, uniquement si le caractère multioctet est un octet exactement. Si **wctob** rencontre un caractère large, elle ne peut pas convertir en un caractère multioctet ou le caractère multioctet est de pas exactement un octet, elle retourne une valeur -1.
+Si **wctob** convertit correctement un caractère élargi, il retourne sa représentation de caractère multioctet, uniquement si la longueur du caractère multioctet est d’un octet exactement. Si **wctob** rencontre un caractère étendu qu’il ne peut pas convertir en caractère multioctet ou si le caractère multioctet n’est pas exactement d’un octet, il retourne-1.
 
 ## <a name="remarks"></a>Notes
 
-Le **wctob** fonction convertit un caractère large contenu dans *wchar* caractère multioctet correspondant passé par la valeur de retour **int** valeur, si le multioctets caractère est un octet exactement.
+La fonction **wctob** convertit un caractère élargi contenu dans *WCHAR* en caractère multioctet correspondant passé par la valeur **int** de retour, si le caractère multioctet est exactement d’un octet.
 
-Si **wctob** a échoué et qu’aucun caractère multioctet correspondant a été trouvé, la fonction définit **errno** à **EILSEQ** et retourne -1.
+Si **wctob** a échoué et qu’aucun caractère multioctet correspondant n’a été trouvé, la fonction affecte à **errno** la valeur **EILSEQ** et retourne-1.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -65,9 +65,9 @@ Si **wctob** a échoué et qu’aucun caractère multioctet correspondant a ét�
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-Ce programme illustre le comportement de la **wcstombs** (fonction).
+Ce programme illustre le comportement de la fonction **wcstombs** .
 
 ```C
 // crt_wctob.c
@@ -107,4 +107,4 @@ Determined the corresponding multibyte character to be "A".
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

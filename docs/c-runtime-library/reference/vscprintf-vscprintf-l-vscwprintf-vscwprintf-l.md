@@ -42,14 +42,14 @@ helpviewer_keywords:
 - vscprintf function
 - vscprintf_l function
 ms.assetid: 1bc67d3d-21d5-49c9-ac8d-69e26b16a3c3
-ms.openlocfilehash: 18b177114fe0e2984fee518b06a72bea72905ed1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 543b8d1024a355bbe92bf63684a7933ca177e3bb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383475"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499106"
 ---
-# <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
+# <a name="_vscprintf-_vscprintf_l-_vscwprintf-_vscwprintf_l"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 
 Retourne le nombre de caractères présents dans la chaîne mise en forme en utilisant un pointeur désignant une liste d’arguments.
 
@@ -91,18 +91,18 @@ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_vscprintf** retourne le nombre de caractères qui seraient générés si la chaîne pointée par la liste d’arguments a été imprimé ou envoyé vers un fichier ou les codes de la mémoire tampon à l’aide de la mise en forme spécifiée. La valeur retournée n’inclut pas le caractère Null de fin. **_vscwprintf** effectue la même fonction pour les caractères larges.
+**_vscprintf** retourne le nombre de caractères qui seraient générés si la chaîne vers laquelle pointe la liste d’arguments a été imprimée ou envoyée à un fichier ou une mémoire tampon à l’aide des codes de mise en forme spécifiés. La valeur retournée n’inclut pas le caractère Null de fin. **_vscwprintf** effectue la même fonction pour les caractères larges.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
-Si *format* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Si *format* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Chaque *argument* (le cas échéant) est converti selon la spécification de format correspondante dans *format*. Le format se compose de caractères ordinaires et a les mêmes forme et fonction que le *format* argument pour [printf](printf-printf-l-wprintf-wprintf-l.md).
+Chaque *argument* (le cas échéant) est converti selon la spécification de format correspondante au *format*. Le format se compose de caractères ordinaires et a la même forme et fonction que l’argument *format* pour [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 > [!IMPORTANT]
-> Garantir que si *format* est une chaîne définie par l’utilisateur, il se termine par null et a le nombre correct et le type de paramètres. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Assurez-vous que si le *format* est une chaîne définie par l’utilisateur, il se termine par null et a le nombre et le type de paramètres appropriés. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -120,7 +120,7 @@ Chaque *argument* (le cas échéant) est converti selon la spécification de for
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Consultez l’exemple relatif à [vsprintf](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).
 

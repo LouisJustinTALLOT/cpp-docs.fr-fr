@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: b41ce5c744bde7cd89cabed6c829cfb06da75129
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58c71c577e3d87ca72836134a4f895f32170fe7f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350086"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509356"
 ---
-# <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement, fonctions intrinsèques
+# <a name="_interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement, fonctions intrinsèques
 
 **Section spécifique à Microsoft**
 
-Fournir la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement) (fonction).
+Fournit la prise en charge intrinsèque du compilateur pour la fonction Win32 SDK Windows [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -122,7 +122,7 @@ La fonction `_InterlockedIncrement` opère sur des valeurs entières de 32 bits
 
 Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. La fonction intrinsèque avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agit pas comme une barrière mémoire.
 
-La variable vers laquelle pointe le paramètre `lpAddend` doit être alignée sur une limite de 32 bits. Dans le cas contraire, cette fonction échoue sur les systèmes x86 multiprocesseurs et les systèmes autres que x86. Pour plus d’informations, consultez [aligner](../cpp/align-cpp.md).
+La variable vers laquelle pointe le paramètre `lpAddend` doit être alignée sur une limite de 32 bits. Dans le cas contraire, cette fonction échoue sur les systèmes x86 multiprocesseurs et les systèmes autres que x86. Pour plus d’informations, consultez [Aligner](../cpp/align-cpp.md).
 
 La fonction Win32 est déclarée dans `Wdm.h` ou `Ntddk.h`.
 
@@ -130,7 +130,7 @@ Ces routines sont disponibles seulement comme fonctions intrinsèques.
 
 ## <a name="example"></a>Exemple
 
-Pour obtenir un exemple montrant comment utiliser `_InterlockedIncrement`, consultez [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Pour obtenir un exemple d’utilisation `_InterlockedIncrement`de, consultez [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
 **FIN de la section spécifique à Microsoft**
 
