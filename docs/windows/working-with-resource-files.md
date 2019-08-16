@@ -1,45 +1,45 @@
 ---
-title: Utilisation des fichiers de ressources (C++)
+title: Utilisation des fichiers de ressourcesC++()
 ms.date: 02/14/2019
 helpviewer_keywords:
 - resources [C++], about resources
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 09a85231f871ef1a21b2f2adb309d94bb4a29e1a
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d9f6c6b9798bc708bb5334eafc0585471f25c059
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504510"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513588"
 ---
 # <a name="working-with-resource-files"></a>Utilisation des fichiers de ressources
 
 > [!WARNING]
 > Cette section concerne les applications de bureau Windows écrites en C++.
 >
-> Pour plus d’informations sur les ressources dans les applications de plateforme Windows universelle écrites en C++, consultez [définition des ressources d’application](/windows/uwp/app-resources/), ou sur l’ajout de ressources à C++ / c++ / CLI (géré), projets, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le .NET Framework Guide du développeur.
+> Pour plus d’informations sur les ressources dans plateforme Windows universelle C++les applications écrites dans, consultez [définition des ressources](/windows/uwp/app-resources/)d’application C++, ou ajout de ressources aux projets/CLI (managés), consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le .NET Framework du développeur Père.
 
-Ressources peuvent être composées d’un large éventail d’éléments, tels que :
+Les ressources peuvent être composées d’un large éventail d’éléments, par exemple:
 
-- Les éléments d’interface qui fournissent des informations à l’utilisateur comme une image bitmap, une icône ou un curseur.
-- Ressources personnalisées qui contiennent des données et l’application a besoin.
-- Ressources de version qui sont utilisées par le programme d’installation de l’API.
-- Ressources de zone de menu et de la boîte de dialogue.
+- Éléments d’interface qui fournissent des informations à l’utilisateur, telles qu’une bitmap, une icône ou un curseur.
+- Ressources personnalisées qui contiennent des besoins en matière de données et d’applications.
+- Ressources de version utilisées par les API d’installation.
+- Ressources de menu et de boîte de dialogue.
 
 Vous pouvez ajouter de nouvelles ressources à votre projet et modifier ces ressources à l'aide de l'éditeur de ressources approprié. La plupart des Assistants Visual C++ génèrent automatiquement un fichier .rc pour votre projet.
 
 > [!NOTE]
-> Le **éditeurs de ressources** et **affichage des ressources** ne sont pas disponibles dans les éditions Express.
+> Les **éditeurs de ressources** et les **affichage des ressources** ne sont pas disponibles dans les éditions Express.
 
-Pour ajouter manuellement les fichiers de ressources aux projets managés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Cet article comprend comment accéder aux ressources, afficher des ressources statiques et affecter des chaînes de ressources aux propriétés.
+Pour ajouter manuellement des fichiers de ressources aux projets managés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Cet article explique comment accéder aux ressources, afficher des ressources statiques et assigner des chaînes de ressources à des propriétés.
 
-Pour globaliser et localiser les ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
+Pour globaliser et localiser des ressources dans des applications gérées, consultez [globalisation et localisation d’applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="in-this-section"></a>Dans cette section
 
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
-Décrit les fichiers de ressources et comment ils sont utilisés dans les applications de bureau Windows. Fournit également des liens vers des articles qui expliquent comment utiliser des fichiers de ressources.
+Décrit les fichiers de ressources et la façon dont ils sont utilisés dans les applications de bureau Windows. Fournit également des liens vers des articles qui décrivent comment utiliser des fichiers de ressources.
 
 [Identificateurs de ressources (symboles)](../windows/symbols-resource-identifiers.md)<br/>
 Décrit les symboles et fournit des informations sur l'utilisation de la boîte de dialogue **Symboles des ressources** pour gérer les symboles dans vos projets.
@@ -58,4 +58,4 @@ Propose des liens vers des informations sur l'utilisation de l'ensemble de docum
 ## <a name="see-also"></a>Voir aussi
 
 [Applications de bureau Windows](../windows/windows-desktop-applications-cpp.md)<br/>
-[Menus et autres ressources](/windows/desktop/menurc/resources)
+[Menus et autres ressources](/windows/win32/menurc/resources)
