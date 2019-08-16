@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: ff050a89a10c68c639c141891dd51b1b2d58e105
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 0c8c401b43361a5e1472e3470f5ea452c91b957f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915996"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505961"
 ---
 # <a name="chttpfile-class"></a>CHttpFile, classe
 
@@ -126,7 +126,7 @@ Référence à un objet [CString](../../atl-mfc-shared/reference/cstringt-class.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) peut être appelée pour déterminer la cause de l’erreur.
+Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) peut être appelée pour déterminer la cause de l’erreur.
 
 ### <a name="remarks"></a>Notes
 
@@ -198,10 +198,10 @@ BOOL EndRequest(
 ### <a name="parameters"></a>Paramètres
 
 *dwFlags*<br/>
-Indicateurs décrivant l’opération. Pour obtenir la liste des indicateurs appropriés, consultez [HttpEndRequest](/windows/desktop/api/wininet/nf-wininet-httpendrequesta) dans le SDK Windows.
+Indicateurs décrivant l’opération. Pour obtenir la liste des indicateurs appropriés, consultez [HttpEndRequest](/windows/win32/api/wininet/nf-wininet-httpendrequestw) dans le SDK Windows.
 
 *lpBuffIn*<br/>
-Pointeur vers un [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-internet_buffersa) initialisé qui décrit la mémoire tampon d’entrée utilisée pour l’opération.
+Pointeur vers un [INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw) initialisé qui décrit la mémoire tampon d’entrée utilisée pour l’opération.
 
 *dwContext*<br/>
 Identificateur de contexte de l' `CHttpFile` opération. Pour plus d’informations sur ce paramètre, consultez la section Notes.
@@ -293,7 +293,7 @@ Combinaison de l’attribut à interroger et des indicateurs suivants qui spéci
 
 - HTTP_QUERY_FLAG_REQUEST_HEADERS en général, l’application interroge les en-têtes de réponse, mais une application peut également interroger les en-têtes de demande à l’aide de cet indicateur.
 
-- HTTP_QUERY_FLAG_SYSTEMTIME pour les en-têtes dont la valeur est une chaîne de date/heure, telle que «Last-modified-Time», cet indicateur retourne la valeur d’en-tête en tant que structure [SystemTime](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Win32 standard qui ne nécessite pas que l’application analyse les données. Si vous utilisez cet indicateur, vous souhaiterez peut-être `SYSTEMTIME` utiliser la substitution de la fonction.
+- HTTP_QUERY_FLAG_SYSTEMTIME pour les en-têtes dont la valeur est une chaîne de date/heure, telle que «Last-modified-Time», cet indicateur retourne la valeur d’en-tête en tant que structure [SystemTime](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) Win32 standard qui ne nécessite pas que l’application analyse les données. Si vous utilisez cet indicateur, vous souhaiterez peut-être `SYSTEMTIME` utiliser la substitution de la fonction.
 
 - HTTP_QUERY_FLAG_NUMBER pour les en-têtes dont la valeur est un nombre, tel que le code d’État, cet indicateur retourne les données sous la forme d’un nombre de 32 bits.
 
@@ -315,11 +315,11 @@ Référence à l’objet [CString](../../atl-mfc-shared/reference/cstringt-class
 Valeur d’index. Consultez *lpdwIndex*.
 
 *pSysTime*<br/>
-Pointeur vers une structure [SystemTime](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Win32.
+Pointeur vers une structure [SystemTime](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) Win32.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) peut être appelée pour déterminer la cause de l’erreur.
+Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) peut être appelée pour déterminer la cause de l’erreur.
 
 ### <a name="remarks"></a>Notes
 
@@ -398,7 +398,7 @@ Référence à un code d’État. Les codes d’État indiquent la réussite ou 
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) peut être appelée pour déterminer la cause de l’erreur.
+Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) peut être appelée pour déterminer la cause de l’erreur.
 
 ### <a name="remarks"></a>Notes
 
@@ -485,13 +485,13 @@ BOOL SendRequestEx(
 Nombre d’octets à envoyer dans la demande.
 
 *dwFlags*<br/>
-Indicateurs décrivant l’opération. Pour obtenir la liste des indicateurs appropriés, consultez [HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) dans le SDK Windows.
+Indicateurs décrivant l’opération. Pour obtenir la liste des indicateurs appropriés, consultez [HttpSendRequestEx](/windows/win32/api/wininet/nf-wininet-httpsendrequestexw) dans le SDK Windows.
 
 *dwContext*<br/>
 Identificateur de contexte de l' `CHttpFile` opération. Pour plus d’informations sur ce paramètre, consultez la section Notes.
 
 *lpBuffIn*<br/>
-Pointeur vers un [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-internet_buffersa) initialisé qui décrit la mémoire tampon d’entrée utilisée pour l’opération.
+Pointeur vers un [INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw) initialisé qui décrit la mémoire tampon d’entrée utilisée pour l’opération.
 
 *lpBuffOut*<br/>
 Pointeur vers un INTERNET_BUFFERS initialisé qui décrit la mémoire tampon de sortie utilisée pour l’opération.
