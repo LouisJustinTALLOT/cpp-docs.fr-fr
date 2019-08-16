@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 6c419081a649fddd65120270decb0cb57ee743fa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 1555209ce0f1c2caacbfb4b01107775db948d230
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916203"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505955"
 ---
 # <a name="cimagelist-class"></a>CImageList (classe)
 
@@ -204,7 +204,7 @@ Index de base zéro de la première nouvelle image en cas de réussite; sinon-1.
 
 Vous êtes responsable de la libération du descripteur d’icône lorsque vous n’en avez plus besoin.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFC_CImageList#1](../../mfc/reference/codesnippet/cpp/cimagelist-class_1.cpp)]
 
@@ -225,7 +225,7 @@ Handle d’un objet de liste d’images.
 
 Différent de zéro si la pièce jointe a abouti; Sinon, 0.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFC_CImageList#2](../../mfc/reference/codesnippet/cpp/cimagelist-class_2.cpp)]
 
@@ -269,7 +269,7 @@ CImageList();
 
 ##  <a name="copy"></a>  CImageList::Copy
 
-Cette fonction membre implémente le comportement de la fonction Win32 [ImageList_Copy](/windows/desktop/api/commctrl/nf-commctrl-imagelist_copy), comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement de la fonction Win32 [ImageList_Copy](/windows/win32/api/commctrl/nf-commctrl-imagelist_copy), comme décrit dans la SDK Windows.
 
 ```
 BOOL Copy(
@@ -307,7 +307,7 @@ Pointeur vers un `CImageList` objet qui est la cible de l’opération de copie.
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFC_CImageList#6](../../mfc/reference/codesnippet/cpp/cimagelist-class_4.cpp)]
 
@@ -357,7 +357,7 @@ Dimensions de chaque image, en pixels.
 *nFlags*<br/>
 Spécifie le type de liste d’images à créer. Ce paramètre peut être une combinaison des valeurs suivantes, mais il ne peut inclure qu’une seule des `ILC_COLOR` valeurs.
 
-|Valeur|Signification|
+|`Value`|Signification|
 |-----------|-------------|
 |ILC_COLOR|Utilisez le comportement par défaut si aucun des autres indicateurs ILC_COLOR * n’est spécifié. En général, la valeur par défaut est ILC_COLOR4; Toutefois, pour les anciens pilotes d’affichage, la valeur par défaut est ILC_COLORDDB.|
 |ILC_COLOR4|Utilisez une section DIB (Device-Independent Bitmap) 4 bits (16 couleurs) comme bitmap de la liste d’images.|
@@ -440,7 +440,7 @@ Appelée automatiquement par le `CWinApp` gestionnaire de temps d’inactivité,
 static void PASCAL DeleteTempMap();
 ```
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFC_CImageList#9](../../mfc/reference/codesnippet/cpp/cimagelist-class_7.cpp)]
 
@@ -515,7 +515,7 @@ Pointeur vers la fenêtre qui possède l’image de glissement.
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
   Consultez l’exemple pour [CImageList:: EndDrag](#enddrag).
 
@@ -591,7 +591,7 @@ Emplacement à partir duquel dessiner dans le contexte de périphérique spécif
 *nStyle*<br/>
 Indicateur spécifiant le style de dessin. Il peut s’agir d’une ou plusieurs des valeurs suivantes:
 
-|Valeur|Signification|
+|`Value`|Signification|
 |-----------|-------------|
 |ILD_BLEND25, ILD_FOCUS|Dessine l’image, en fusionnant 25% avec la couleur de surbrillance du système. Cette valeur n’a aucun effet si la liste d’images ne contient pas de masque.|
 |ILD_BLEND50, ILD_SELECTED, ILD_BLEND|Dessine l’image, en fusionnant 50% avec la couleur de surbrillance du système. Cette valeur n’a aucun effet si la liste d’images ne contient pas de masque.|
@@ -634,16 +634,16 @@ Index de base zéro de l’image à dessiner.
 Emplacement à partir duquel dessiner dans le contexte de périphérique spécifié.
 
 *sz*<br/>
-Taille de la partie de l’image à dessiner par rapport à l’angle supérieur gauche de l’image. Consultez *DX* et *dy* dans [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) dans le SDK Windows.
+Taille de la partie de l’image à dessiner par rapport à l’angle supérieur gauche de l’image. Consultez *DX* et *dy* dans [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) dans le SDK Windows.
 
 *clrBk*<br/>
-Couleur d’arrière-plan de l’image. Consultez *rgbBk* dans [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) dans le SDK Windows.
+Couleur d’arrière-plan de l’image. Consultez *rgbBk* dans [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) dans le SDK Windows.
 
 *clrFg*<br/>
-Couleur de premier plan de l’image. Consultez *rgbFg* dans [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) dans le SDK Windows.
+Couleur de premier plan de l’image. Consultez *rgbFg* dans [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) dans le SDK Windows.
 
 *nStyle*<br/>
-Indicateur spécifiant le style de dessin. Consultez *fStyle* dans [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) dans le SDK Windows.
+Indicateur spécifiant le style de dessin. Consultez *fStyle* dans [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -682,7 +682,7 @@ BOOL DrawIndirect(
 ### <a name="parameters"></a>Paramètres
 
 *pimldp*<br/>
-Pointeur vers une structure [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) qui contient des informations sur l’opération de dessin.
+Pointeur vers une structure [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) qui contient des informations sur l’opération de dessin.
 
 *pDC*<br/>
 Pointeur vers le contexte de périphérique de destination. Vous devez supprimer cet objet [CDC](../../mfc/reference/cdc-class.md) lorsque vous n’en avez plus besoin.
@@ -694,7 +694,7 @@ Index de base zéro de l’image à dessiner.
 Structure de [points](/previous-versions/dd162805\(v=vs.85\)) contenant les coordonnées x et y à laquelle l’image sera dessinée.
 
 *sz*<br/>
-Structure de [taille](/windows/desktop/api/windef/ns-windef-tagsize) indiquant la taille de l’image à dessiner.
+Structure de [taille](/windows/win32/api/windef/ns-windef-size) indiquant la taille de l’image à dessiner.
 
 *ptOrigin*<br/>
 Structure de [points](/previous-versions/dd162805\(v=vs.85\)) contenant les coordonnées x et y qui spécifient l’angle supérieur gauche de l’opération de dessin par rapport à l’image elle-même. Les pixels de l’image situés à gauche de la coordonnée x et au-dessus de la coordonnée y ne sont pas dessinés.
@@ -702,12 +702,12 @@ Structure de [points](/previous-versions/dd162805\(v=vs.85\)) contenant les coor
 *fStyle*<br/>
 Indicateur spécifiant le style de dessin et, éventuellement, l’image de superposition. Pour plus d’informations sur l’image de superposition, consultez la section Notes. L’implémentation par défaut MFC, ILD_NORMAL, dessine l’image à l’aide de la couleur d’arrière-plan de la liste d’images. Si la couleur d’arrière-plan est la valeur CLR_NONE, l’image est dessinée de manière transparente à l’aide d’un masque.
 
-D’autres styles possibles sont décrits dans le membre *fStyle* de la structure [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) .
+D’autres styles possibles sont décrits dans le membre *fStyle* de la structure [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) .
 
 *dwRop*<br/>
 Valeur spécifiant un code d’opération Raster. Ces codes définissent la façon dont les données de couleur du rectangle source sont combinées avec les données de couleur du rectangle de destination pour obtenir la couleur finale. L’implémentation par défaut de MFC, SRCCOPY, copie le rectangle source directement dans le rectangle de destination. Ce paramètre est ignoré si le paramètre *fStyle* n’inclut pas l’indicateur ILD_ROP.
 
-D’autres valeurs possibles sont décrites dans le membre *dwRop* de la structure [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) .
+D’autres valeurs possibles sont décrites dans le membre *dwRop* de la structure [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) .
 
 *rgbBack*<br/>
 Couleur d’arrière-plan de l’image, par défaut CLR_DEFAULT. Ce paramètre peut être une valeur RVB définie par l’application ou l’une des valeurs suivantes:
@@ -720,7 +720,7 @@ Couleur d’arrière-plan de l’image, par défaut CLR_DEFAULT. Ce paramètre p
 *rgbFore*<br/>
 Couleur de premier plan de l’image, par défaut CLR_DEFAULT. Ce paramètre peut être une valeur RVB définie par l’application ou l’une des valeurs suivantes:
 
-|Valeur|Signification|
+|`Value`|Signification|
 |-----------|-------------|
 |CLR_DEFAULT|Couleur de premier plan par défaut. L’image est dessinée à l’aide de la couleur de surbrillance du système comme couleur de premier plan.|
 |CLR_NONE|Aucune couleur de fusion. L’image est fusionnée avec la couleur du contexte de périphérique de destination.|
@@ -738,7 +738,7 @@ Lorsqu’il est utilisé avec ILS_SATURATE, ce membre contient la valeur qui est
 Lorsqu’il est utilisé avec ILS_APLHA, ce membre contient la valeur du canal alpha. Cette valeur peut être comprise entre 0 et 255, 0 étant complètement transparent et 255 entièrement opaque.
 
 *crEffect*<br/>
-Valeur [COLORREF](/windows/desktop/gdi/colorref) utilisée pour les effets de lumière et d’ombre.
+Valeur [COLORREF](/windows/win32/gdi/colorref) utilisée pour les effets de lumière et d’ombre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -748,7 +748,7 @@ TRUE si l’image est correctement dessinée; Sinon, FALSe.
 
 Utilisez la première version si vous souhaitez remplir la structure Win32 vous-même. Utilisez la deuxième version si vous souhaitez tirer parti d’un ou plusieurs des arguments par défaut de MFC, ou évitez de gérer la structure.
 
-Une image de superposition est une image dessinée au-dessus de l’image principale, spécifiée dans cette fonction membre par le paramètre *nimage* . Dessinez un masque de superposition à l’aide de la fonction membre [Draw](#draw) avec l’index de base 1 du masque de superposition spécifié à l’aide de la macro [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) .
+Une image de superposition est une image dessinée au-dessus de l’image principale, spécifiée dans cette fonction membre par le paramètre *nimage* . Dessinez un masque de superposition à l’aide de la fonction membre [Draw](#draw) avec l’index de base 1 du masque de superposition spécifié à l’aide de la macro [INDEXTOOVERLAYMASK](/windows/win32/api/commctrl/nf-commctrl-indextooverlaymask) .
 
 ### <a name="example"></a>Exemple
 
@@ -789,7 +789,7 @@ Handle de l’icône en cas de réussite; Sinon, NULL.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode s’appuie sur le comportement de la macro [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) pour créer l’icône. Pour plus d’informations sur la création et le nettoyage d’icônes, reportez-vous à la macro [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) .
+Cette méthode s’appuie sur le comportement de la macro [ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon) pour créer l’icône. Pour plus d’informations sur la création et le nettoyage d’icônes, reportez-vous à la macro [ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon) .
 
 ### <a name="example"></a>Exemple
 
@@ -895,7 +895,7 @@ int GetImageCount() const;
 
 Nombre d’images.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
   Consultez l’exemple pour [CImageList:: ExtractIcon](#extracticon).
 
@@ -915,7 +915,7 @@ BOOL GetImageInfo(
 Index de base zéro de l’image.
 
 *pImageInfo*<br/>
-Pointeur vers une structure [IMAGEINFO](/windows/desktop/api/commctrl/ns-commctrl-imageinfo) qui reçoit des informations sur l’image. Les informations de cette structure peuvent être utilisées pour manipuler directement les bitmaps de l’image.
+Pointeur vers une structure [IMAGEINFO](/windows/win32/api/commctrl/ns-commctrl-imageinfo) qui reçoit des informations sur l’image. Les informations de cette structure peuvent être utilisées pour manipuler directement les bitmaps de l’image.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -937,7 +937,7 @@ HIMAGELIST GetSafeHandle() const;
 
 Handle de la liste d’images attachée; Sinon, la valeur est NULL si aucun objet n’est attaché.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFC_CImageList#15](../../mfc/reference/codesnippet/cpp/cimagelist-class_15.cpp)]
 
@@ -971,7 +971,7 @@ En cas de réussite, handle vers la liste d’images représentée `CImageList` 
 
 Cet opérateur est un opérateur de cast qui prend en charge l’utilisation directe d’un objet HIMAGELIST.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFC_CImageList#16](../../mfc/reference/codesnippet/cpp/cimagelist-class_17.cpp)]
 
@@ -992,7 +992,7 @@ Pointeur vers un `CArchive` objet à partir duquel la liste d’images doit êtr
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFC_CImageList#18](../../mfc/reference/codesnippet/cpp/cimagelist-class_18.cpp)]
 
@@ -1109,7 +1109,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Étant donné que les fonctions de glissement utilisent la nouvelle image pendant une opération de glissement, vous devez utiliser la fonction [ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor) de Windows pour masquer `CImageList::SetDragCursorImage`le curseur de la souris réel après l’appel de. Sinon, le système peut sembler être composé de deux curseurs de souris pour la durée de l'opération Glisser-déplacer.
+Étant donné que les fonctions de glissement utilisent la nouvelle image pendant une opération de glissement, vous devez utiliser la fonction [ShowCursor](/windows/win32/api/winuser/nf-winuser-showcursor) de Windows pour masquer `CImageList::SetDragCursorImage`le curseur de la souris réel après l’appel de. Sinon, le système peut sembler être composé de deux curseurs de souris pour la durée de l'opération Glisser-déplacer.
 
 ##  <a name="setimagecount"></a>  CImageList::SetImageCount
 
@@ -1134,7 +1134,7 @@ Si vous appelez cette fonction membre pour augmenter le nombre d’images dans l
 
 Si vous réduisez la taille d’une liste d’images à l’aide de cette fonction, les images tronquées sont libérées.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFC_CImageList#21](../../mfc/reference/codesnippet/cpp/cimagelist-class_21.cpp)]
 
@@ -1166,7 +1166,7 @@ Jusqu’à quatre index peuvent être ajoutés à la liste.
 
 Un masque de superposition est une image dessinée de manière transparente sur une autre image. Dessinez un masque de superposition sur une image à l’aide de la fonction membre [CImageList::D RAW](#draw) avec l’index de base 1 du masque de superposition spécifié à l’aide de la macro INDEXTOOVERLAYMASK.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFC_CImageList#22](../../mfc/reference/codesnippet/cpp/cimagelist-class_22.cpp)]
 

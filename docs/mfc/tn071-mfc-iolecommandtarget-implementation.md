@@ -1,5 +1,5 @@
 ---
-title: 'TN071 : Implémentation IOleCommandTarget MFC'
+title: 'TN071 : Implémentation IOleCommandTarget MFC'
 ms.date: 06/28/2018
 f1_keywords:
 - IOleCommandTarget
@@ -7,85 +7,85 @@ helpviewer_keywords:
 - TN071 [MFC]
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
-ms.openlocfilehash: dca1183a17fe8f3022f517d1ad0c3932ea272417
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7077211396c68750d47b91c7b2bb113370990f62
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167996"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511098"
 ---
-# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071 : Implémentation IOleCommandTarget MFC
+# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071 : Implémentation IOleCommandTarget MFC
 
 > [!NOTE]
 > La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
 
-Le `IOleCommandTarget` interface permet les objets et leurs conteneurs à répartir les uns des autres commandes. Par exemple, barres d’outils d’un objet peuvent contenir des boutons pour les commandes telles que `Print`, `Print Preview`, `Save`, `New`, et `Zoom`. Si un tel objet ont été incorporées dans un conteneur qui prend en charge `IOleCommandTarget`, l’objet pouvant permettre de ses boutons et transférer les commandes pour le conteneur pour le traitement lorsque l’utilisateur a cliqué sur eux. Si un conteneur voulu l’objet incorporé s’imprimer, il peut effectuer cette demande en envoyant une commande via le `IOleCommandTarget` interface de l’objet incorporé.
+L' `IOleCommandTarget` interface permet aux objets et à leurs conteneurs de distribuer les commandes les unes aux autres. Par exemple, les barres d’outils d’un objet peuvent contenir des boutons pour `Print`les `Print Preview`commandes `Save`telles `New`que, `Zoom`,, et. Si un objet de ce type a été incorporé dans `IOleCommandTarget`un conteneur qui prend en charge, l’objet peut activer ses boutons et transférer les commandes au conteneur pour traitement lorsque l’utilisateur clique dessus. Si un conteneur souhaite que l’objet incorporé s’imprime lui-même, il peut effectuer cette requête en `IOleCommandTarget` envoyant une commande par le biais de l’interface de l’objet incorporé.
 
-`IOleCommandTarget` est une interface similaire à Automation, car il est utilisé par un client pour appeler des méthodes sur un serveur. Toutefois, à l’aide de `IOleCommandTarget` économise la surcharge des appels via les interfaces d’automatisation, car les programmeurs n’êtes pas obligé d’utiliser généralement coûteux `Invoke` méthode de `IDispatch`.
+`IOleCommandTarget`est une interface de type Automation en ce qu’elle est utilisée par un client pour appeler des méthodes sur un serveur. Toutefois, l' `IOleCommandTarget` utilisation de économise la surcharge liée à l’exécution d’appels via des interfaces d’automatisation, car les `Invoke` programmeurs `IDispatch`n’ont pas besoin d’utiliser la méthode généralement coûteuse de.
 
-Dans MFC, la `IOleCommandTarget` interface est utilisée par les serveurs de documents actifs pour permettre aux conteneurs de documents actifs distribuer des commandes sur le serveur. La classe de serveur de documents actifs, `CDocObjectServerItem`, utilise des tables d’interface MFC (consultez [TN038 : Implémentation d’IUnknown MFC/OLE](../mfc/tn038-mfc-ole-iunknown-implementation.md)) pour implémenter le `IOleCommandTarget` interface.
+Dans MFC, l' `IOleCommandTarget` interface est utilisée par les serveurs de documents actifs pour permettre aux conteneurs de documents actifs de distribuer des commandes au serveur. La classe du serveur de documents `CDocObjectServerItem`actifs,, utilise des mappages [d’interfaces MFC (consultez TN038: Implémentation](../mfc/tn038-mfc-ole-iunknown-implementation.md)IUnknown MFC/OLE) pour implémenter `IOleCommandTarget` l’interface.
 
-`IOleCommandTarget` est également implémentée dans le `COleFrameHook` classe. `COleFrameHook` est une classe MFC non documentée qui implémente les fonctionnalités de la fenêtre frame de conteneurs de modifications sur place. `COleFrameHook` utilise également des mappages d’interface MFC pour implémenter le `IOleCommandTarget` interface. `COleFrameHook`d’implémentation de `IOleCommandTarget` transfère des commandes OLE pour `COleDocObjectItem`-dérivée des conteneurs de documents actifs. Cela permet à n’importe quel conteneur de document MFC Active recevoir des messages à partir de serveurs de relation contenant-contenu de document actif.
+`IOleCommandTarget`est également implémentée dans `COleFrameHook` la classe. `COleFrameHook`est une classe MFC non documentée qui implémente la fonctionnalité de fenêtre frame des conteneurs d’édition sur place. `COleFrameHook`utilise également des mappages d’interface MFC `IOleCommandTarget` pour implémenter l’interface. `COleFrameHook`l’implémentation de `IOleCommandTarget` transfère des commandes OLE à `COleDocObjectItem`des conteneurs de documents actifs dérivés. Cela permet à n’importe quel conteneur de documents actifs MFC de recevoir des messages à partir de serveurs de documents actifs contenus.
 
-## <a name="mfc-ole-command-maps"></a>Mappages de commande OLE MFC
+## <a name="mfc-ole-command-maps"></a>Mappages de commandes OLE MFC
 
-Les développeurs MFC peuvent tirer parti de `IOleCommandTarget` à l’aide de OLE MFC commande maps. Mappages de commande OLE sont comme des tables des messages, car ils peuvent être utilisés pour mapper les commandes OLE aux fonctions membres de la classe qui contient le mappage de la commande. Pour que cela fonctionne, placer des macros dans le mappage de commande pour spécifier le groupe de commandes OLE de la commande que vous souhaitez gérer, de la commande OLE et de l’ID de commande de la [WM_COMMAND](/windows/desktop/menurc/wm-command) message qui sera envoyée lors de la réception de la commande OLE. MFC fournit également plusieurs des macros prédéfinies pour les commandes OLE standard. Pour obtenir la liste de l’OLE standard les commandes qui ont été conçus pour utiliser avec les applications Microsoft Office, consultez l’énumération OLECMDID, qui est définie dans docobj.h.
+Les développeurs MFC peuvent tirer parti `IOleCommandTarget` de à l’aide des mappages de commandes OLE MFC. Les mappages de commandes OLE sont similaires aux tables des messages, car ils peuvent être utilisés pour mapper des commandes OLE aux fonctions membres de la classe qui contient le mappage de commandes. Pour ce faire, placez les macros dans le mappage de commandes pour spécifier le groupe de commandes OLE de la commande que vous souhaitez gérer, la commande OLE et l’ID de commande du message [WM_COMMAND](/windows/win32/menurc/wm-command) à envoyer lorsque la commande OLE est reçue. MFC fournit également un certain nombre de macros prédéfinies pour les commandes OLE standard. Pour obtenir la liste des commandes OLE standard qui ont été conçues à l’origine pour une utilisation avec les applications Microsoft Office, consultez l’énumération OLECMDID, qui est définie dans docobj. h.
 
-Lorsqu’une commande OLE est reçue par une application MFC qui contient une table de commandes OLE, MFC tente de trouver l’ID de commande et le groupe de commandes pour la commande demandée dans le mappage de commande OLE de l’application. Si une correspondance est trouvée, un message WM_COMMAND est distribué à l’application contenant le mappage de la commande avec l’ID de la commande demandée. (Consultez la description de `ON_OLECMD` ci-dessous.) De cette façon, les commandes OLE distribués à une application sont transformées en messages WM_COMMAND par MFC. Les messages WM_COMMAND sont ensuite acheminés via les tables de messages de l’application à l’aide de la norme MFC [routage des commandes](../mfc/command-routing.md) architecture.
+Quand une commande OLE est reçue par une application MFC qui contient un mappage de commandes OLE, MFC tente de trouver l’ID de commande et le groupe de commandes pour la commande demandée dans le mappage de commandes OLE de l’application. Si une correspondance est trouvée, un message WM_COMMAND est distribué à l’application contenant le mappage de commande avec l’ID de la commande demandée. (Voir la description `ON_OLECMD` ci-dessous.) De cette façon, les commandes OLE distribuées à une application sont transformées en messages WM_COMMAND par MFC. Les messages WM_COMMAND sont ensuite routés via les tables des messages de l’application à l’aide de l’architecture de [routage des commandes](../mfc/command-routing.md) standard MFC.
 
-Contrairement aux tables des messages, mappages de commande OLE MFC ne sont pas pris en charge par ClassWizard. Les développeurs MFC doivent ajouter manuellement les entrées de mappage de commande OLE et de prise en charge des cartes de commande OLE. Commande OLE mappages peuvent être ajoutés à des serveurs de documents actifs MFC dans n’importe quelle classe qui se trouve dans la chaîne de routage des messages WM_COMMAND au moment où le document actif est actif en place dans un conteneur. Ces classes incluent les classes dérivées de l’application [CWinApp](../mfc/reference/cwinapp-class.md), [CView](../mfc/reference/cview-class.md), [CDocument](../mfc/reference/cdocument-class.md), et [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md). Conteneurs de documents actifs, les mappages de commande OLE peuvent uniquement être ajoutées à la [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)-classe dérivée. En outre, dans des conteneurs de documents actifs, les messages WM_COMMAND sont uniquement envoyés à la table des messages dans la `COleDocObjectItem`-classe dérivée.
+Contrairement aux tables de messages, les mappages de commandes OLE MFC ne sont pas pris en charge par ClassWizard. Les développeurs MFC doivent ajouter manuellement la prise en charge des mappages de commandes OLE et les entrées de mappage de commandes OLE. Les mappages de commandes OLE peuvent être ajoutés aux serveurs de documents actifs MFC dans toutes les classes qui se trouvent dans la chaîne de routage de messages WM_COMMAND au moment où le document actif est actif sur place dans un conteneur. Ces classes incluent les classes de l’application dérivées de [CWinApp](../mfc/reference/cwinapp-class.md), [CView](../mfc/reference/cview-class.md), [CDocument](../mfc/reference/cdocument-class.md)et [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md). Dans les conteneurs de documents actifs, les mappages de commandes OLE peuvent uniquement être ajoutés à la classe dérivée de [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md). En outre, dans les conteneurs de documents actifs, les messages WM_COMMAND seront envoyés uniquement à la table des messages de `COleDocObjectItem`la classe dérivée de.
 
-## <a name="ole-command-map-macros"></a>Macros de table de commande OLE
+## <a name="ole-command-map-macros"></a>Macros de mappage de commandes OLE
 
-Pour ajouter des fonctionnalités de mappage de commande à votre classe, utilisez les macros suivantes :
+Utilisez les macros suivantes pour ajouter la fonctionnalité de mappage de commande à votre classe:
 
 ```cpp
 DECLARE_OLECMD_MAP ()
 ```
 
-Cette macro est envoyé dans la déclaration de classe (généralement dans le fichier d’en-tête) de la classe qui contient le mappage de la commande.
+Cette macro est insérée dans la déclaration de classe (généralement dans le fichier d’en-tête) de la classe qui contient le mappage de commandes.
 
 ```cpp
 BEGIN_OLECMD_MAP(theClass, baseClass)
 ```
 
 *theClass*<br/>
-Nom de la classe qui contient le mappage de la commande.
+Nom de la classe qui contient le mappage de commandes.
 
 *baseClass*<br/>
-Nom de la classe de base de la classe qui contient le mappage de la commande.
+Nom de la classe de base de la classe qui contient le mappage de commandes.
 
-Cette macro marque le début de la carte de la commande. Utilisez cette macro dans le fichier d’implémentation pour la classe qui contient le mappage de la commande.
+Cette macro marque le début du mappage de commandes. Utilisez cette macro dans le fichier d’implémentation pour la classe qui contient le mappage de commandes.
 
 ```
 END_OLECMD_MAP()
 ```
 
-Cette macro marque la fin de la carte de la commande. Utilisez cette macro dans le fichier d’implémentation pour la classe qui contient le mappage de la commande. Cette macro doit suivre toujours la macro BEGIN_OLECMD_MAP.
+Cette macro marque la fin du mappage de commandes. Utilisez cette macro dans le fichier d’implémentation pour la classe qui contient le mappage de commandes. Cette macro doit toujours suivre la macro BEGIN_OLECMD_MAP.
 
 ```
 ON_OLECMD(pguid, olecmdid, id)
 ```
 
 *pguid*<br/>
-Pointeur vers le GUID de groupe de commandes de la commande OLE. Ce paramètre est **NULL** pour le groupe de commandes OLE standard.
+Pointeur vers le GUID du groupe de commandes de la commande OLE. Ce paramètre a la **valeur null** pour le groupe de commandes OLE standard.
 
 *olecmdid*<br/>
 ID de commande OLE de la commande à appeler.
 
-*ID*<br/>
-ID du message WM_COMMAND à envoyer à l’application contenant le mappage de la commande lors de cette commande OLE est appelée.
+*id*<br/>
+ID du message WM_COMMAND à envoyer à l’application contenant le mappage de commandes lorsque cette commande OLE est appelée.
 
-Utiliser l’on_olecmd (macro) dans le mappage de commande pour ajouter des entrées pour les commandes OLE que vous souhaitez gérer. Lorsque les commandes OLE sont reçus, ils seront convertis au message WM_COMMAND spécifié et acheminés via le mappage de message de l’application à l’aide de l’architecture de routage des commandes MFC standard.
+Utilisez la macro ON_OLECMD dans le mappage de commandes pour ajouter des entrées pour les commandes OLE que vous souhaitez gérer. Une fois les commandes OLE reçues, elles sont converties dans le message WM_COMMAND spécifié et acheminées via la table des messages de l’application à l’aide de l’architecture de routage de commande MFC standard.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment ajouter la fonctionnalité de gestion de commande OLE à un serveur de document actif de MFC pour gérer le [OLECMDID_PRINT](/windows/desktop/api/docobj/ne-docobj-olecmdid) commande OLE. Cet exemple suppose que vous avez utilisé par AppWizard pour générer une application MFC qui est un serveur de document actif.
+L’exemple suivant montre comment ajouter la fonctionnalité de gestion de commandes OLE à un serveur de documents actifs MFC pour gérer la commande OLE [OLECMDID_PRINT](/windows/win32/api/docobj/ne-docobj-olecmdid) . Cet exemple suppose que vous avez utilisé AppWizard pour générer une application MFC qui est un serveur de documents actifs.
 
-1. Dans votre `CView`-dérivés d’en-tête de la classe, ajoutez la macro DECLARE_OLECMD_MAP à la déclaration de classe.
+1. Dans le `CView`fichier d’en-tête de votre classe dérivée de, ajoutez la macro DECLARE_OLECMD_MAP à la déclaration de classe.
 
     > [!NOTE]
-    > Utilisez le `CView`-classe dérivée, car il est une des classes dans le serveur de document actif qui se trouve dans la chaîne de routage des messages WM_COMMAND.
+    > Utilisez la `CView`classe dérivée de, car il s’agit de l’une des classes du serveur de documents actif qui se trouve dans la chaîne de routage des messages WM_COMMAND.
 
     ```cpp
     class CMyServerView : public CView
@@ -98,7 +98,7 @@ L’exemple suivant montre comment ajouter la fonctionnalité de gestion de comm
     };
     ```
 
-2. Dans le fichier d’implémentation pour le `CView`-classe dérivée, ajoutez les macros BEGIN_OLECMD_MAP et END_OLECMD_MAP :
+2. Dans le fichier d’implémentation de `CView`la classe dérivée de, ajoutez les macros BEGIN_OLECMD_MAP et END_OLECMD_MAP:
 
     ```cpp
     BEGIN_OLECMD_MAP(CMyServerView, CView)
@@ -106,7 +106,7 @@ L’exemple suivant montre comment ajouter la fonctionnalité de gestion de comm
     END_OLECMD_MAP()
     ```
 
-3. Pour gérer la commande d’impression OLE standard, ajoutez un [ON_OLECMD](reference/message-map-macros-mfc.md#on_olecmd) macro pour le mappage de la commande en spécifiant l’ID de commande OLE pour la commande d’impression standard et **ID_FILE_PRINT** pour l’ID de WM_COMMAND. **ID_FILE_PRINT** est la norme commande d’impression ID utilisée par les applications MFC générées par AppWizard :
+3. Pour gérer la commande d’impression OLE standard, ajoutez une macro [ON_OLECMD](reference/message-map-macros-mfc.md#on_olecmd) au mappage de commandes en spécifiant l’ID de commande OLE pour la commande d’impression standard et **ID_FILE_PRINT** pour l’ID WM_COMMAND. **ID_FILE_PRINT** est l’ID de commande d’impression standard utilisé par les applications MFC générées par AppWizard:
 
     ```
     BEGIN_OLECMD_MAP(CMyServerView, CView)
@@ -114,9 +114,9 @@ L’exemple suivant montre comment ajouter la fonctionnalité de gestion de comm
     END_OLECMD_MAP()
     ```
 
-Notez qu’une des macros de commande standards OLE, définies dans afxdocob.h, peut être utilisée à la place l’on_olecmd (macro), car **OLECMDID_PRINT** est un ID de commande OLE standard. L’on_olecmd_print (macro) exécutera la même tâche que l’on_olecmd (macro) ci-dessus.
+Notez que l’une des macros de commande OLE standard, définie dans AfxDocOb. h, peut être utilisée à la place de la macro ON_OLECMD, car **OLECMDID_PRINT** est un ID de commande OLE standard. La macro ON_OLECMD_PRINT effectue la même tâche que la macro ON_OLECMD présentée ci-dessus.
 
-Lorsqu’une application conteneur envoie ce serveur un **OLECMDID_PRINT** commande par le biais du serveur `IOleCommandTarget` interface, la bibliothèque MFC l’impression du Gestionnaire de commandes est invoqué dans le serveur, le serveur à l’application d’impression. Code du conteneur de documents actifs pour appeler la commande d’impression ajoutée aux étapes ci-dessus ressemblent à ceci :
+Quand une application de conteneur envoie ce serveur à une commande **OLECMDID_PRINT** par le `IOleCommandTarget` biais de l’interface du serveur, le gestionnaire de commandes d’impression MFC est appelé sur le serveur, ce qui entraîne l’impression de l’application par le serveur. Le code du conteneur de documents actifs permettant d’appeler la commande Imprimer ajoutée dans les étapes ci-dessus ressemble à ce qui suit:
 
 ```cpp
 void CContainerCntrItem::DoOleCmd()

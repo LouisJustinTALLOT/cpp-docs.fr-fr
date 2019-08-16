@@ -1,5 +1,5 @@
 ---
-title: 'TN006 : Tables des messages'
+title: 'TN006 : Tables des messages'
 ms.date: 06/25/2018
 f1_keywords:
 - vc.messages.maps
@@ -19,38 +19,38 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 3536cb215da04fb7114853d3fa5d764585cbb58e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 489db046910cc4b44e381b3f9056cfe8f8b7ccfa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306142"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511107"
 ---
-# <a name="tn006-message-maps"></a>TN006 : Tables des messages
+# <a name="tn006-message-maps"></a>TN006 : Tables des messages
 
-Cette note décrit la fonctionnalité de mappage de messages MFC.
+Cette note décrit la fonctionnalité de table des messages MFC.
 
 ## <a name="the-problem"></a>Le problème
 
-Microsoft Windows implémente des fonctions virtuelles dans les classes de fenêtre qui utilisent la fonction de sa messagerie. En raison du grand nombre de messages impliquée, fournissant une fonction virtuelle distincte pour chaque message Windows créerait un vtable beaucoup trop volumineux.
+Microsoft Windows implémente des fonctions virtuelles dans les classes de fenêtre qui utilisent sa fonctionnalité de messagerie. En raison du grand nombre de messages impliqués, le fait de fournir une fonction virtuelle distincte pour chaque message Windows crée un vtable à grande échelle.
 
-Étant donné que le nombre de messages de Windows définie par le système change au fil du temps, et les tables des messages, car les applications peuvent définir leurs propres messages Windows, fournir un niveau d’indirection qui empêche les modifications de l’interface de casser le code existant.
+Étant donné que le nombre de messages Windows définis par le système change au fil du temps, et parce que les applications peuvent définir leurs propres messages Windows, les tables des messages fournissent un niveau d’indirection qui empêche les modifications de l’interface d’altérer le code existant.
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Présentation
 
-MFC fournit une alternative à l’instruction switch qui a été utilisée dans des programmes Windows traditionnels pour gérer les messages envoyés à une fenêtre. Un mappage à partir des messages aux méthodes peut être défini afin que lorsqu’un message est reçu par une fenêtre, la méthode appropriée est appelée automatiquement. Cette fonctionnalité de la table des messages est conçue pour ressembler à des fonctions virtuelles, mais présente des avantages supplémentaires n’est pas possibles avec des fonctions virtuelles C++.
+MFC fournit une alternative à l’instruction switch qui a été utilisée dans les programmes Windows traditionnels pour gérer les messages envoyés à une fenêtre. Un mappage des messages aux méthodes peut être défini de sorte que lorsqu’un message est reçu par une fenêtre, la méthode appropriée est appelée automatiquement. Cette fonctionnalité de table des messages est conçue pour ressembler à des fonctions virtuelles, mais C++ elle n’a pas d’avantages supplémentaires avec les fonctions virtuelles.
 
-## <a name="defining-a-message-map"></a>Définition d’une carte de Message
+## <a name="defining-a-message-map"></a>Définition d’une table des messages
 
-Le [DECLARE_MESSAGE_MAP](reference/message-map-macros-mfc.md#declare_message_map) macro déclare trois membres pour une classe.
+La macro [DECLARE_MESSAGE_MAP](reference/message-map-macros-mfc.md#declare_message_map) déclare trois membres pour une classe.
 
-- Un tableau d’entrées AFX_MSGMAP_ENTRY privé appelé *_messageEntries*.
+- Un tableau privé d’entrées AFX_MSGMAP_ENTRY appelé *_messageEntries*.
 
-- Une structure AFX_MSGMAP protégée appelée *messageMap* qui pointe vers le *_messageEntries* tableau.
+- Une structure AFX_MSGMAP protégée appelée *messageMap* qui pointe vers le tableau *_messageEntries* .
 
 - Une fonction virtuelle protégée appelée `GetMessageMap` qui retourne l’adresse de *messageMap*.
 
-Cette macro doit être placée dans la déclaration de n’importe quelle classe à l’aide de tables des messages. Par convention, il est à la fin de la déclaration de classe. Exemple :
+Cette macro doit être placée dans la déclaration de toute classe utilisant des tables de messages. Par Convention, il se trouve à la fin de la déclaration de classe. Par exemple :
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -66,18 +66,18 @@ protected:
 };
 ```
 
-Il s’agit du format généré par AppWizard et ClassWizard lorsqu’ils créent de nouvelles classes. Les / / {{et / /}} crochets sont nécessaires pour ClassWizard.
+Il s’agit du format généré par AppWizard et ClassWizard lorsqu’ils créent des classes. Les crochets//{{et//}} sont nécessaires pour ClassWizard.
 
-Table de la table des messages est définie à l’aide d’un ensemble de macros qui s’étendent aux entrées de mappage de message. Un tableau commence par un [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) appel de macro, ce qui définit la classe qui est gérée par ce mappage de message et la classe parente à laquelle les messages non prise en charge sont passés. Le tableau se termine par le [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) appel de macro.
+La table de la table des messages est définie à l’aide d’un ensemble de macros qui se développent en entrées de la table des messages. Une table commence par un appel de macro [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) , qui définit la classe gérée par cette table des messages et la classe parente à laquelle les messages non gérés sont passés. La table se termine par l’appel de la macro [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) .
 
-Entre les appels de ces deux macros est une entrée pour chaque message à traiter par ce mappage de message. Tous les messages Windows standard a une macro sous la forme ON_WM_*MESSAGE_NAME* qui génère une entrée pour ce message.
+Entre ces deux appels de macro est une entrée pour chaque message à gérer par cette table des messages. Chaque message Windows standard est associé à une macro de la forme ON_WM_*MESSAGE_NAME* qui génère une entrée pour ce message.
 
-Une signature de fonction standard a été définie pour décompresser les paramètres de chaque message Windows et de fournir la sécurité de type. Ces signatures peuvent se trouver dans le fichier Afxwin.h dans la déclaration de [CWnd](../mfc/reference/cwnd-class.md). Chacun d’eux est marqué avec le mot clé **afx_msg** pour faciliter l’identification.
+Une signature de fonction standard a été définie pour décompresser les paramètres de chaque message Windows et fournir la sécurité de type. Ces signatures peuvent se trouver dans le fichier AFXWIN. h dans la déclaration de [CWnd](../mfc/reference/cwnd-class.md). Chacune d’elles est marquée avec le mot clé **afx_msg** pour faciliter l’identification.
 
 > [!NOTE]
-> ClassWizard exige que vous utilisiez le **afx_msg** mot clé dans les déclarations de gestionnaire de mappage de message.
+> ClassWizard requiert que vous utilisiez le mot clé **afx_msg** dans les déclarations de votre gestionnaire de table des messages.
 
-Ces signatures de fonction sont dérivés à l’aide d’une convention simple. Le nom de la fonction commence toujours par `"On`». Cela est suivi par le nom du message Windows avec « WM_ » supprimé et la première lettre de chaque mot en majuscule. L’ordre des paramètres est *wParam* suivie `LOWORD`(*lParam*) puis `HIWORD`(*lParam*). Les paramètres inutilisés ne sont pas transmis. Tous les handles qui sont encapsulés par les classes MFC sont convertis en pointeurs vers les objets MFC appropriés. L’exemple suivant montre comment gérer le message WM_PAINT et provoquer le `CMyWnd::OnPaint` fonction à appeler :
+Ces signatures de fonction ont été dérivées à l’aide d’une convention simple. Le nom de la fonction commence toujours par `"On`«. Elle est suivie du nom du message Windows avec «WM_» supprimé et de la première lettre de chaque mot en majuscule. L’ordre des paramètres est *wParam* suivi `LOWORD`de (*lParam*) Then `HIWORD`(*lParam*). Les paramètres inutilisés ne sont pas transmis. Tous les descripteurs encapsulés par les classes MFC sont convertis en pointeurs vers les objets MFC appropriés. L’exemple suivant montre comment gérer le message WM_PAINT et provoquer l’appel `CMyWnd::OnPaint` de la fonction:
 
 ```cpp
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
@@ -87,14 +87,14 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
-Le tableau de mappage de message doit être défini en dehors de l’étendue d’une définition de fonction ou une classe. Il ne doit pas être placé dans un bloc d’extern « C ».
+La table des messages doit être définie à l’extérieur de la portée de toute définition de fonction ou de classe. Il ne doit pas être placé dans un bloc extern "C".
 
 > [!NOTE]
-> ClassWizard modifiera les entrées de mappage de message qui se produisent entre les / / {{et / /}} crochet de commentaire.
+> ClassWizard modifiera les entrées de la table des messages qui se produisent entre le crochet de commentaires//{{et//}}.
 
-## <a name="user-defined-windows-messages"></a>Les Messages Windows défini par l’utilisateur
+## <a name="user-defined-windows-messages"></a>Messages Windows définis par l’utilisateur
 
-Messages définis par l’utilisateur peuvent être inclus dans une table des messages à l’aide de la [ON_MESSAGE](reference/message-map-macros-mfc.md#on_message) macro. Cette macro accepte un numéro de message et une méthode du formulaire :
+Les messages définis par l’utilisateur peuvent être inclus dans une table des messages à l’aide de la macro [ON_MESSAGE](reference/message-map-macros-mfc.md#on_message) . Cette macro accepte un numéro de message et une méthode sous la forme:
 
 ```cpp
     // inside the class declaration
@@ -107,21 +107,21 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
-Dans cet exemple, nous établissons un gestionnaire pour un message personnalisé qui a un ID de message Windows dérivé de la base de WM_USER standard pour les messages définis par l’utilisateur. L’exemple suivant montre comment appeler ce gestionnaire :
+Dans cet exemple, nous créons un gestionnaire pour un message personnalisé dont l’ID de message Windows est dérivé de la base standard WM_USER pour les messages définis par l’utilisateur. L’exemple suivant montre comment appeler ce gestionnaire:
 
 ```cpp
 CWnd* pWnd = ...;
 pWnd->SendMessage(WM_MYMESSAGE);
 ```
 
-La plage de messages définis par l’utilisateur qui utilisent cette approche doit être dans la plage WM_USER à 0x7fff.
+La plage de messages définis par l’utilisateur qui utilisent cette approche doit être comprise dans la plage WM_USER à 0x7FFF.
 
 > [!NOTE]
-> ClassWizard ne prend pas en charge les routines de gestionnaire ON_MESSAGE entrant à partir de l’interface utilisateur de ClassWizard. Vous devez les entrer manuellement à partir de l’éditeur Visual C++. ClassWizard analysera ces entrées et vous permettre de les parcourir comme toutes les autres entrées de table des messages.
+> ClassWizard ne prend pas en charge l’entrée de routines de gestionnaire ON_MESSAGE à partir de l’interface utilisateur ClassWizard. Vous devez les entrer manuellement à partir de C++ l’éditeur visuel. ClassWizard analyse ces entrées et vous permet de les parcourir comme n’importe quelle autre entrée de table des messages.
 
 ## <a name="registered-windows-messages"></a>Messages Windows inscrits
 
-Le [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) fonction est utilisée pour définir un nouveau message de fenêtre est garanti être unique dans tout le système. La macro ON_REGISTERED_MESSAGE sert à gérer ces messages. Cette macro accepte un nom d’un *UINT près* variable qui contient l’ID de message windows inscrits. Exemple :
+La fonction [RegisterWindowMessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew) est utilisée pour définir un nouveau message de fenêtre dont l’unicité est garantie dans tout le système. La macro ON_REGISTERED_MESSAGE est utilisée pour gérer ces messages. Cette macro accepte le nom d’une variable *uint near* qui contient l’ID de message Windows enregistré. Exemple :
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -145,32 +145,32 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
-La variable ID de message inscrite Windows (WM_FIND dans cet exemple) doit être un *NEAR* variable en raison du mode ON_REGISTERED_MESSAGE est implémentée.
+La variable d’ID de message Windows inscrite (WM_FIND dans cet exemple) doit être une variable *proche* en raison de la façon dont ON_REGISTERED_MESSAGE est implémenté.
 
-La plage de messages définis par l’utilisateur qui utilisent cette approche sera dans la plage 0xC000 à 0xFFFF.
+La plage de messages définis par l’utilisateur qui utilisent cette approche sera comprise entre 0xC000 et 0xFFFF.
 
 > [!NOTE]
-> ClassWizard ne prend pas en charge les routines de gestionnaire ON_REGISTERED_MESSAGE entrant à partir de l’interface utilisateur de ClassWizard. Vous devez les entrer manuellement à partir de l’éditeur de texte. ClassWizard analysera ces entrées et vous permettre de les parcourir comme toutes les autres entrées de table des messages.
+> ClassWizard ne prend pas en charge l’entrée de routines de gestionnaire ON_REGISTERED_MESSAGE à partir de l’interface utilisateur ClassWizard. Vous devez les entrer manuellement dans l’éditeur de texte. ClassWizard analyse ces entrées et vous permet de les parcourir comme n’importe quelle autre entrée de table des messages.
 
 ## <a name="command-messages"></a>Messages de commande
 
-Messages de commande à partir des menus et les raccourcis sont gérées dans les tables des messages avec la macro ON_COMMAND. Cette macro accepte un ID de commande et une méthode. Uniquement le message WM_COMMAND spécifique qui a un *wParam* égale à la commande spécifiée ID est géré par la méthode spécifiée dans l’entrée de table des messages. Fonctions de membre de gestionnaires de commandes n’acceptent aucun paramètre et retourner **void**. La macro a la forme suivante :
+Les messages de commande des menus et des accélérateurs sont gérés dans les tables des messages avec la macro ON_COMMAND. Cette macro accepte un ID de commande et une méthode. Seul le message WM_COMMAND spécifique qui a un *wParam* égal à l’ID de commande spécifié est géré par la méthode spécifiée dans l’entrée de la table des messages. Les fonctions membres du gestionnaire de commandes ne prennent aucun paramètre et retournent **void**. La macro se présente sous la forme suivante:
 
 ```cpp
 ON_COMMAND(id, memberFxn)
 ```
 
-Les messages de mise à jour de commandes sont routées via le même mécanisme, mais utilisent la macro ON_UPDATE_COMMAND_UI à la place. Fonctions membres de gestionnaire de mise à jour de commande prennent un seul paramètre, un pointeur vers un [CCmdUI](../mfc/reference/ccmdui-class.md) de l’objet et retourner **void**. La macro présente sous la forme
+Les messages de mise à jour de commande sont routés via le même mécanisme, mais utilisez la macro ON_UPDATE_COMMAND_UI à la place. Les fonctions membres du gestionnaire de mise à jour de commandes acceptent un seul paramètre, un pointeur vers un objet [CCmdUI](../mfc/reference/ccmdui-class.md) et retournent **void**. La macro se présente sous la forme
 
 ```cpp
 ON_UPDATE_COMMAND_UI(id, memberFxn)
 ```
 
-Les utilisateurs avancés peuvent utiliser l’ON_COMMAND_EX (macro), qui est une forme étendue de gestionnaires de messages de commande. La macro fournit un sur-ensemble de la fonctionnalité ON_COMMAND. Fonctions membres de gestionnaire de commandes étendue acceptent un seul paramètre, un **UINT** qui contient l’ID de commande et retournent un **BOOL**. La valeur de retour doit être **TRUE** pour indiquer que la commande a été gérée. Routage dans le cas contraire, il continuera à d’autres objets de cible de commande.
+Les utilisateurs expérimentés peuvent utiliser la macro ON_COMMAND_EX, qui est une forme étendue de gestionnaires de messages de commande. La macro fournit un sur-ensemble de la fonctionnalité ON_COMMAND. Les fonctions membres du gestionnaire de commandes étendues acceptent un seul paramètre, un **uint** qui contient l’ID de commande et retournent une valeur **booléenne**. La valeur de retour doit être **true** pour indiquer que la commande a été gérée. Sinon, le routage continue vers d’autres objets de la cible de commande.
 
-Exemples de ces formes :
+Exemples de ces formes:
 
-- Inside Resource.h (généralement généré par Visual C++)
+- Dans Resource. h (généralement généré par C++un visuel)
 
     ```cpp
     #define    ID_MYCMD      100
@@ -185,7 +185,7 @@ Exemples de ces formes :
     afx_msg BOOL OnComplexCommand(UINT nID);
     ```
 
-- À l’intérieur de la définition de mappage de message
+- À l’intérieur de la définition de la table des messages
 
     ```cpp
     ON_COMMAND(ID_MYCMD, OnMyCommand)
@@ -213,31 +213,31 @@ Exemples de ces formes :
     }
     ```
 
-Les utilisateurs expérimentés peuvent gérer un éventail de commandes en utilisant un gestionnaire de commande unique : [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) ou ON_COMMAND_RANGE_EX. Consultez la documentation du produit pour plus d’informations sur ces macros.
+Les utilisateurs avancés peuvent gérer une plage de commandes à l’aide d’un gestionnaire de commandes unique: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) ou ON_COMMAND_RANGE_EX. Pour plus d’informations sur ces macros, consultez la documentation du produit.
 
 > [!NOTE]
-> ClassWizard prend en charge la création des gestionnaires ON_COMMAND et ON_UPDATE_COMMAND_UI, mais il ne prend pas en charge la création gestionnaires ON_COMMAND_EX ou ON_COMMAND_RANGE. Toutefois, Assistant classe analyse et vous permet de consulter toutes les variantes de gestionnaire de commande de quatre.
+> ClassWizard prend en charge la création de gestionnaires ON_COMMAND et ON_UPDATE_COMMAND_UI, mais ne prend pas en charge la création de gestionnaires ON_COMMAND_EX ou ON_COMMAND_RANGE. Toutefois, l’Assistant classe effectue une analyse et vous permet de parcourir les quatre variantes du gestionnaire de commandes.
 
-## <a name="control-notification-messages"></a>Messages de Notification de contrôle
+## <a name="control-notification-messages"></a>Contrôler les messages de notification
 
-Mappent les messages qui sont envoyés à partir de contrôles enfants à une fenêtre ont un supplémentaire de bits d’informations dans leur message entrée : ID. du contrôle Le Gestionnaire de messages spécifié dans une entrée de mappage de message est appelé uniquement si les conditions suivantes sont remplies :
+Les messages envoyés à partir de contrôles enfants dans une fenêtre ont un peu d’informations dans leur entrée de la table des messages: l’ID du contrôle. Le gestionnaire de messages spécifié dans une entrée de la table des messages est appelé uniquement si les conditions suivantes sont vraies:
 
-- Le code de notification de contrôle (mot de poids fort *lParam*), tels que BN_CLICKED, correspond au code de notification spécifié dans l’entrée de table des messages.
+- Le code de notification de contrôle (mot haut de *lParam*), tel que BN_CLICKED, correspond au code de notification spécifié dans l’entrée de la table des messages.
 
-- L’ID de contrôle (*wParam*) correspond à l’ID du contrôle spécifié dans l’entrée de table des messages.
+- L’ID de contrôle (*wParam*) correspond à l’ID de contrôle spécifié dans l’entrée de la table des messages.
 
-Messages de notification de contrôle personnalisé peuvent utiliser le [ON_CONTROL](reference/message-map-macros-mfc.md#on_control) macro pour définir une entrée de mappage de message avec un code de notification personnalisée. Cette macro présente sous la forme
+Les messages de notification de contrôle personnalisé peuvent utiliser la macro [ON_CONTROL](reference/message-map-macros-mfc.md#on_control) pour définir une entrée de la table des messages avec un code de notification personnalisé. Cette macro se présente sous la forme
 
 ```cpp
 ON_CONTROL(wNotificationCode, id, memberFxn)
 ```
 
-L’utilisation avancée [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range) peut être utilisé pour gérer une notification de contrôle spécifique à partir d’un éventail de contrôles avec le même gestionnaire.
+Pour une utilisation avancée, [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range) peut être utilisé pour gérer une notification de contrôle spécifique à partir d’une plage de contrôles avec le même gestionnaire.
 
 > [!NOTE]
-> ClassWizard ne prend pas en charge la création d’un gestionnaire ON_CONTROL ou ON_CONTROL_RANGE dans l’interface utilisateur. Vous devez les entrer manuellement avec l’éditeur de texte. ClassWizard analysera ces entrées et vous permettre de les parcourir tout comme les autres entrées de mappage de message.
+> ClassWizard ne prend pas en charge la création d’un gestionnaire ON_CONTROL ou ON_CONTROL_RANGE dans l’interface utilisateur. Vous devez les entrer manuellement avec l’éditeur de texte. ClassWizard analyse ces entrées et vous permet de les parcourir comme n’importe quelle autre entrée de la table des messages.
 
-Les contrôles communs Windows utilisent le plus puissant [WM_NOTIFY](/windows/desktop/controls/wm-notify) pour les notifications de contrôle complexe. Cette version de la bibliothèque MFC a une prise en charge directe pour ce nouveau message en utilisant les macros ON_NOTIFY et ON_NOTIFY_RANGE. Consultez la documentation du produit pour plus d’informations sur ces macros.
+Les contrôles communs Windows utilisent le [WM_NOTIFY](/windows/win32/controls/wm-notify) plus puissant pour les notifications de contrôle complexes. Cette version de MFC prend directement en charge ce nouveau message à l’aide des macros ON_NOTIFY et ON_NOTIFY_RANGE. Pour plus d’informations sur ces macros, consultez la documentation du produit.
 
 ## <a name="see-also"></a>Voir aussi
 

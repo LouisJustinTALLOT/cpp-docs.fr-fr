@@ -1,5 +1,5 @@
 ---
-title: 'Multithreading : Création de Threads d’Interface utilisateur MFC'
+title: 'Multithreading : Création de threads d’interface utilisateur MFC'
 ms.date: 08/27/2018
 f1_keywords:
 - CREATE_SUSPENDED
@@ -11,43 +11,43 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-ms.openlocfilehash: b2fb23bd502de87aefe01d91e2b0640ee3137b00
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 1cd28a848f9be223f43412c3e0f3961cef9db6c7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504587"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512088"
 ---
-# <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading : Création de Threads d’Interface utilisateur MFC
+# <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading : Création de threads d’interface utilisateur MFC
 
-Un thread d’interface utilisateur est couramment utilisé pour gérer l’entrée d’utilisateur et répondre aux événements utilisateur indépendamment des threads exécutant d’autres parties de l’application. Le thread principal de l’application (fourni dans votre `CWinApp`-classe dérivée) est déjà créée et démarrée pour vous. Cette rubrique décrit les étapes nécessaires à la création de threads d’interface utilisateur supplémentaires.
+Un thread d’interface utilisateur est couramment utilisé pour gérer les entrées d’utilisateur et répondre aux événements utilisateur indépendamment des threads qui exécutent d’autres parties de l’application. Le thread d’application principal (fourni dans `CWinApp`votre classe dérivée de) est déjà créé et démarré pour vous. Cette rubrique décrit les étapes nécessaires à la création de threads d’interface utilisateur supplémentaires.
 
-La première chose que vous devez effectuer lors de la création d’un thread d’interface utilisateur est de dériver une classe de [CWinThread](../mfc/reference/cwinthread-class.md). Vous devez déclarer et implémenter cette classe, à l’aide de la [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) et [IMPLEMENT_DYNCREATE](../mfc/reference/run-time-object-model-services.md#implement_dyncreate) macros. Cette classe doit substituer certaines fonctions et peut substituer d’autres. Ces fonctions et leur finalité sont présentées dans le tableau suivant.
+La première chose à faire lorsque vous créez un thread d’interface utilisateur est de dériver une classe de [CWinThread](../mfc/reference/cwinthread-class.md). Vous devez déclarer et implémenter cette classe à l’aide des macros [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) et [IMPLEMENT_DYNCREATE](../mfc/reference/run-time-object-model-services.md#implement_dyncreate) . Cette classe doit substituer certaines fonctions et peut substituer d’autres. Ces fonctions et ce qu’elles doivent faire sont présentés dans le tableau suivant.
 
-### <a name="functions-to-override-when-creating-a-user-interface-thread"></a>Fonctions à remplacer lors de la création d’un Thread d’Interface utilisateur
+### <a name="functions-to-override-when-creating-a-user-interface-thread"></a>Fonctions à substituer lors de la création d’un thread d’interface utilisateur
 
 |Fonction|Objectif|
 |--------------|-------------|
-|[ExitInstance](../mfc/reference/cwinthread-class.md#exitinstance)|Effectuer un nettoyage lorsque le thread s’arrête. Est généralement substituée.|
-|[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)|Effectuer une initialisation d’instance de thread. Doit être remplacée.|
-|[OnIdle](../mfc/reference/cwinthread-class.md#onidle)|Exécuter le traitement des temps d’inactivité spécifique au thread. N’est généralement pas remplacé.|
-|[PreTranslateMessage](../mfc/reference/cwinthread-class.md#pretranslatemessage)|Filtrer les messages avant qu’ils soient distribués aux `TranslateMessage` et `DispatchMessage`. N’est généralement pas remplacé.|
-|[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)|Intercepter des exceptions non gérées levées par les gestionnaires de commandes et de messages du thread. N’est généralement pas remplacé.|
-|[Exécuter](../mfc/reference/cwinthread-class.md#run)|Fonction de contrôle pour le thread. Contient la pompe de messages. Substitution rarement.|
+|[ExitInstance](../mfc/reference/cwinthread-class.md#exitinstance)|Effectue un nettoyage lorsque le thread se termine. Généralement substitué.|
+|[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)|Effectuer l’initialisation de l’instance de thread. Doit être substitué.|
+|[OnIdle](../mfc/reference/cwinthread-class.md#onidle)|Effectue un traitement du temps d’inactivité spécifique au thread. Ce n’est généralement pas le cas.|
+|[PreTranslateMessage](../mfc/reference/cwinthread-class.md#pretranslatemessage)|Filtrer les messages avant leur distribution vers `TranslateMessage` et. `DispatchMessage` Ce n’est généralement pas le cas.|
+|[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)|Interceptez les exceptions non gérées levées par les gestionnaires de commandes et de messages du thread. Ce n’est généralement pas le cas.|
+|[Exécuter](../mfc/reference/cwinthread-class.md#run)|Contrôle de la fonction pour le thread. Contient la pompe de messages. Rarement substitué.|
 
-MFC fournit deux versions de `AfxBeginThread` via la surcharge de paramètres : une qui peut seulement créer des threads de travail et une autre qui peut créer des threads d’interface utilisateur ou des threads de travail. Pour démarrer votre thread d’interface utilisateur, appelez la deuxième surcharge de [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), fournissant les informations suivantes :
+MFC fournit deux versions de `AfxBeginThread` via la surcharge des paramètres: une qui peut uniquement créer des threads de travail et une qui peut créer des threads d’interface utilisateur ou des threads de travail. Pour démarrer votre thread d’interface utilisateur, appelez la deuxième surcharge de [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), en fournissant les informations suivantes:
 
-- Le [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) de la classe dérivée à partir de `CWinThread`.
+- [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) de la classe à partir `CWinThread`de laquelle vous avez dérivé.
 
-- (Facultatif) Le niveau de priorité souhaité. La valeur par défaut est une priorité normale. Pour plus d’informations sur les niveaux de priorité disponibles, consultez [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) dans le SDK Windows.
+- Facultatif Niveau de priorité souhaité. La valeur par défaut est la priorité normale. Pour plus d’informations sur les niveaux de priorité disponibles, consultez [SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) dans le SDK Windows.
 
-- (Facultatif) La taille de pile pour le thread. La valeur par défaut est la même taille de pile du thread parent.
+- Facultatif Taille de pile souhaitée pour le thread. La valeur par défaut est la même pile de taille que le thread de création.
 
-- (Facultatif) CREATE_SUSPENDED si vous souhaitez que le thread peut être créé dans un état suspendu. La valeur par défaut est 0, ou démarrez le thread normalement.
+- Facultatif CREATE_SUSPENDED si vous souhaitez que le thread soit créé dans un état suspendu. La valeur par défaut est 0 ou démarre le thread normalement.
 
-- (Facultatif) Les attributs de sécurité souhaité. La valeur par défaut est le même accès que le thread parent. Pour plus d’informations sur le format de ces informations de sécurité, consultez [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) dans le SDK Windows.
+- Facultatif Attributs de sécurité souhaités. La valeur par défaut est le même accès que le thread parent. Pour plus d’informations sur le format de ces informations de sécurité, consultez [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) dans le SDK Windows.
 
-`AfxBeginThread` effectue l’essentiel du travail pour vous. Elle crée un nouvel objet de votre classe, l’initialise avec les informations que vous fournissez et appelle [CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) pour démarrer l’exécution du thread. S’assurer que tous les objets sont libérés correctement doit échouer de n’importe quelle partie de la création, les vérifications sont effectuées tout au long de la procédure.
+`AfxBeginThread`effectue la majeure partie du travail pour vous. Il crée un nouvel objet de votre classe, l’initialise avec les informations que vous fournissez et appelle [CWinThread:: CreateThread](../mfc/reference/cwinthread-class.md#createthread) pour démarrer l’exécution du thread. Les vérifications sont effectuées tout au long de la procédure pour s’assurer que tous les objets sont désalloués correctement en cas d’échec d’une partie de la création.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
@@ -55,7 +55,7 @@ MFC fournit deux versions de `AfxBeginThread` via la surcharge de paramètres :
 
 - [Multithreading : Création de threads de travail](multithreading-creating-worker-threads.md)
 
-- [Processus et Threads](/windows/desktop/ProcThread/processes-and-threads)
+- [Processus et threads](/windows/win32/ProcThread/processes-and-threads)
 
 ## <a name="see-also"></a>Voir aussi
 

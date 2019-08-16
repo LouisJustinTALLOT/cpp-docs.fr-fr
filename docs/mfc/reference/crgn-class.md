@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 66721f34a8ac2b6dac6addcfa04a88b46a37ee60
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 34dcc618f603302c5598e42588ffad78d61ee222
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916828"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502714"
 ---
 # <a name="crgn-class"></a>CRgn, classe
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Définit un `CRgn` objet de manière à ce qu’il soit équivalent à l’Union `CRgn` de deux objets spécifiés.|
 |[CRgn::CopyRgn](#copyrgn)|Définit un `CRgn` objet afin qu’il s’agit d’une copie d' `CRgn` un objet spécifié.|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Initialise un `CRgn` objet avec une zone elliptique.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initialise un `CRgn` objet avec une zone elliptique définie par une structure [Rect](/windows/desktop/api/windef/ns-windef-tagrect) .|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initialise un `CRgn` objet avec une zone elliptique définie par une structure [Rect](/windows/win32/api/windef/ns-windef-tagrect) .|
 |[CRgn::CreateFromData](#createfromdata)|Crée une région à partir de la région donnée et des données de transformation.|
 |[CRgn::CreateFromPath](#createfrompath)|Crée une région à partir du chemin d’accès sélectionné dans le contexte de périphérique donné.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|Initialise un `CRgn` objet avec une région polygonale. Le système ferme automatiquement le polygone, si nécessaire, en dessinant une ligne du dernier vertex jusqu’au premier.|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Initialise un `CRgn` objet avec une zone composée d’une série de polygones fermés. Les polygones peuvent être disjoints ou se chevaucher.|
 |[CRgn::CreateRectRgn](#createrectrgn)|Initialise un `CRgn` objet avec une zone rectangulaire.|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Initialise un `CRgn` objet avec une zone rectangulaire définie par une structure [Rect](/windows/desktop/api/windef/ns-windef-tagrect) .|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Initialise un `CRgn` objet avec une zone rectangulaire définie par un [Rect](/windows/win32/api/windef/ns-windef-rect)tructure.|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Initialise un `CRgn` objet avec une zone rectangulaire avec des angles arrondis.|
 |[CRgn::EqualRgn](#equalrgn)|Vérifie deux `CRgn` objets pour déterminer s’ils sont équivalents.|
 |[CRgn::FromHandle](#fromhandle)|Retourne un pointeur vers un `CRgn` objet en fonction d’un handle vers une région Windows.|
@@ -208,7 +208,7 @@ Spécifie le type de la zone résultante. Il peut s’agir de l’une des valeur
 
 La nouvelle région remplace la région précédemment stockée dans `CRgn` l’objet. Cette fonction est un cas particulier de la fonction membre [CombineRgn](#combinergn) .
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
   Consultez l’exemple de [CRgn:: CreateEllipticRgn](#createellipticrgn).
 
@@ -250,7 +250,7 @@ La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 
 
 Lorsqu’il a fini d’utiliser une région créée avec `CreateEllipticRgn` la fonction, une application doit sélectionner la région hors du contexte de périphérique et utiliser `DeleteObject` la fonction pour la supprimer.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCDocView#145](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]
 
@@ -279,7 +279,7 @@ La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 
 
 Lorsqu’il a fini d’utiliser une région créée avec `CreateEllipticRgnIndirect` la fonction, une application doit sélectionner la région hors du contexte de périphérique et utiliser `DeleteObject` la fonction pour la supprimer.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
   Consultez l’exemple de [CRgn:: CreateRectRgnIndirect](#createrectrgnindirect).
 
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>Paramètres
 
 *lpXForm*<br/>
-Pointe vers une structure de données [XForm](/windows/desktop/api/wingdi/ns-wingdi-tagxform) qui définit la transformation à exécuter sur la région. Si ce pointeur est NULL, la transformation d’identité est utilisée.
+Pointe vers une structure ATA [XForm](/windows/win32/api/wingdi/ns-wingdi-xform)qui définit la transformation à effectuer sur la région. Si ce pointeur est NULL, la transformation d’identité est utilisée.
 
 *nCount*<br/>
 Spécifie le nombre d’octets pointés par *pRgnData*.
 
 *pRgnData*<br/>
-Pointe vers une structure de données [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-rgndata) qui contient les données de la région.
+Pointe vers une structure de données [RGNDATA](/windows/win32/api/wingdi/ns-wingdi-rgndata) qui contient les données de la région.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -379,7 +379,7 @@ Lorsque le mode de remplissage de polygone est en cours d’enroulement, le syst
 
 Lorsqu’une application a fini d’utiliser une région créée à `CreatePolygonRgn` l’aide de la fonction, elle doit sélectionner la région hors du contexte de `DeleteObject` périphérique et utiliser la fonction pour la supprimer.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCDocView#146](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]
 
@@ -470,7 +470,7 @@ La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 
 
 Lorsqu’il a fini d’utiliser une région créée `CreateRectRgn`par, une application doit utiliser la fonction membre [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour supprimer la région.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCDocView#147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]
 
@@ -508,7 +508,7 @@ La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 
 
 Lorsqu’il a fini d’utiliser une région créée `CreateRectRgnIndirect`par, une application doit utiliser la fonction membre [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour supprimer la région.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#148](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]
 
@@ -556,7 +556,7 @@ La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 
 
 Lorsqu’une application a fini d’utiliser une région créée à `CreateRoundRectRgn` l’aide de la fonction, elle doit sélectionner la région hors du contexte de périphérique et utiliser la fonction membre [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour la supprimer.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCDocView#149](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]
 
@@ -593,7 +593,7 @@ Identifie une région.
 
 Différent de zéro si les deux régions sont équivalentes; Sinon, 0.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#150](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>Paramètres
 
 *lpRgnData*<br/>
-Pointe vers une structure de données [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-rgndata) qui reçoit les informations. Si ce paramètre a la valeur NULL, la valeur de retour contient le nombre d’octets nécessaires pour les données de la région.
+Pointe vers une structure de données [RGNDATA](/windows/win32/api/wingdi/ns-wingdi-rgndata) qui reçoit les informations. Si ce paramètre a la valeur NULL, la valeur de retour contient le nombre d’octets nécessaires pour les données de la région.
 
 *nCount*<br/>
 Spécifie la taille, en octets, de la mémoire tampon *lpRgnData* .
@@ -681,7 +681,7 @@ Spécifie le type de la région. Il peut s’agir de l’une des valeurs suivant
 
 - La région SIMPLEREGION n’a pas de bordures se chevauchant.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
   Consultez l’exemple de [CRgn:: CreatePolygonRgn](#createpolygonrgn).
 
@@ -746,7 +746,7 @@ En cas de réussite, handle vers l’objet Windows GDI représenté par `CRgn` l
 
 Cet opérateur est un opérateur de cast qui prend en charge l’utilisation directe d’un objet HRGN.
 
-Pour plus d’informations sur l’utilisation des objets graphiques, consultez l’article [objets graphiques](/windows/desktop/gdi/graphic-objects) dans le SDK Windows.
+Pour plus d’informations sur l’utilisation des objets graphiques, consultez l’article [objets graphiques](/windows/win32/gdi/graphic-objects) dans le SDK Windows.
 
 ##  <a name="ptinregion"></a>  CRgn::PtInRegion
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: 988af1c2678e20ea40ce4dfe331a3b6c49db0547
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27811f56f1956bcaaea4ec589f7e6c71afaca380
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156562"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499629"
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
 
@@ -64,22 +64,22 @@ Nombre d’octets (**memmove**) ou de caractères (**wmemmove**) à copier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de *dest*.
+Valeur de *dest*.
 
 ## <a name="remarks"></a>Notes
 
-Copies *nombre* octets (**memmove**) ou de caractères (**wmemmove**) à partir de *src* à *dest*. Si certaines régions de la zone source et de la destination se chevauchent, les deux fonctions garantissent que les octets source d’origine dans la région de chevauchement sont copiés avant d’être remplacés.
+Copie le *nombre* d’octets (**memmove**) ou de caractères (**wmemmove**) de *src* vers *dest*. Si certaines régions de la zone source et de la destination se chevauchent, les deux fonctions garantissent que les octets source d’origine dans la région de chevauchement sont copiés avant d’être remplacés.
 
-**Remarque relative à la sécurité** Vérifiez que la mémoire tampon de destination est d’une taille identique ou supérieure à celle de la mémoire tampon source. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Remarque relative à la sécurité** Vérifiez que la mémoire tampon de destination est d’une taille identique ou supérieure à celle de la mémoire tampon source. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Le **memmove** et **wmemmove** fonctions seront déconseillées seulement si la constante **_CRT_SECURE_DEPRECATE_MEMORY** est défini avant l’instruction d’inclusion dans l’ordre pour les fonctions déconseillées, comme illustré dans l’exemple ci-dessous :
+Les fonctions **memmove** et **wmemmove** seront dépréciées uniquement si la constante **_CRT_SECURE_DEPRECATE_MEMORY** est définie avant l’instruction d’inclusion pour que les fonctions soient dépréciées, comme dans l’exemple ci-dessous:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
 #include <string.h>
 ```
 
-ou
+ou Gestionnaire de configuration
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY

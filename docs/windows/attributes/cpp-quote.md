@@ -1,21 +1,21 @@
 ---
-title: cpp_quote (C++ attribut COM)
+title: cpp_quote (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.cpp_quote
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-ms.openlocfilehash: 378435ced5a541785b7b32bc9d2f408034d5a2d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 905c9fc41b1b42dffe9c7b39fae0b096cdc24950
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148235"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501765"
 ---
-# <a name="cppquote"></a>cpp_quote
+# <a name="cpp_quote"></a>cpp_quote
 
-Émet la chaîne spécifiée, sans les caractères guillemet, dans le fichier .idl généré.
+Émet la chaîne spécifiée, sans les guillemets, dans le fichier. idl généré.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,19 +26,19 @@ ms.locfileid: "62148235"
 ### <a name="parameters"></a>Paramètres
 
 *statement*<br/>
-Une instruction C.
+Instruction C.
 
 ## <a name="remarks"></a>Notes
 
-Le **cpp_quote** C++ attribut est utile si vous souhaitez placer une directive de préprocesseur dans un fichier .idl.
+L’attribut **cpp_quote** C++ est utile si vous souhaitez placer une directive de préprocesseur dans un fichier. idl.
 
-Vous pouvez également utiliser **cpp_quote** et générer un fichier .h dans le cadre de la compilation MIDL. Par exemple, si vous avez un fichier d’en-tête C++ qui utilise des attributs IDL du C++, mais ne pouvez pas utiliser ce fichier pour une tâche, puis vous pouvez compiler pour créer un fichier .h générés par MIDL, dont vous devez être en mesure d’utiliser.
+Vous pouvez également utiliser **cpp_quote** et générer un fichier. h dans le cadre de la compilation MIDL. Par exemple, si vous avez un C++ fichier d’en- C++ tête qui utilise des attributs IDL mais que vous ne pouvez pas utiliser ce fichier pour une tâche, vous pouvez le compiler pour créer un fichier. h généré par MIDL, que vous devez être en mesure d’utiliser.
 
-Le **cpp_quote** attribut a les mêmes fonctionnalités que le [cpp_quote](/windows/desktop/Midl/cpp-quote) attribut MIDL.
+L’attribut **cpp_quote** a les mêmes fonctionnalités que l’attribut MIDL [cpp_quote](/windows/win32/Midl/cpp-quote) .
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-Consultez l’exemple de [double](dual.md) pour obtenir un exemple, utilisez l’utilisation de **cpp_quote**.
+Consultez l’exemple de [double](dual.md) pour obtenir un exemple d’utilisation de **cpp_quote**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -48,8 +48,8 @@ Consultez l’exemple de [double](dual.md) pour obtenir un exemple, utilisez l�
 |-|-|
 |**S'applique à**|N'importe où|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

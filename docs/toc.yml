@@ -91,7 +91,7 @@
       items:
         - name: Projets CMake
           href: build/cmake-projects-in-visual-studio.md
-        - name: "Tutoriel\_: Créer des projets multiplateformes C++ dans Visual Studio"
+        - name: 'Didacticiel : Créer des projets multiplateformes C++ dans Visual Studio'
           href: build/get-started-linux-cmake.md
         - name: Clang/LLVM dans des projets CMake
           href: build/clang-support-cmake.md
@@ -114,7 +114,7 @@
       items:
         - name: Versions release C++
           href: build/release-builds.md
-        - name: "Procédure\_: Créer une version release"
+        - name: Activation Créer une version release
           href: build/how-to-create-a-release-build.md
         - name: Problèmes courants lors de la création d’une version release
           href: build/common-problems-when-creating-a-release-build.md
@@ -127,7 +127,7 @@
               href: build/using-verify-instead-of-assert.md
             - name: Utilisation de la version Debug pour vérifier les remplacements en mémoire
               href: build/using-the-debug-build-to-check-for-memory-overwrite.md
-            - name: "Procédure\_: Déboguer une version release"
+            - name: Activation Déboguer une version release
               href: build/how-to-debug-a-release-build.md
             - name: Vérification des remplacements en mémoire
               href: build/checking-for-memory-overwrites.md
@@ -163,7 +163,7 @@
                   href: build/pgomgr.md
                 - name: pgosweep
                   href: build/pgosweep.md
-                - name: "Procédure\_: Fusionner plusieurs profils PGO en un seul profil"
+                - name: Activation Fusionner plusieurs profils PGO en un seul profil
                   href: build/how-to-merge-multiple-pgo-profiles-into-a-single-profile.md
     - name: Utiliser l’ensemble d’outils MSVC à partir de la ligne de commande
       expanded: false
@@ -187,15 +187,15 @@
           href: build/msbuild-visual-cpp.md
         - name: "Procédure pas à pas\_: Utilisation de MSBuild pour créer un projet C++"
           href: build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md
-        - name: "Procédure\_: Utiliser des événements de build dans des projets MSBuild"
+        - name: Activation Utiliser des événements de build dans des projets MSBuild
           href: build/how-to-use-build-events-in-msbuild-projects.md
-        - name: "Procédure\_: Ajouter une étape de build personnalisée à des projets MSBuild"
+        - name: Activation Ajouter une étape de build personnalisée à des projets MSBuild
           href: build/how-to-add-a-custom-build-step-to-msbuild-projects.md
-        - name: "Procédure\_: Ajouter des outils de build personnalisés à des projets MSBuild"
+        - name: Activation Ajouter des outils de build personnalisés à des projets MSBuild
           href: build/how-to-add-custom-build-tools-to-msbuild-projects.md
-        - name: "Procédure\_: Intégrer des outils personnalisés dans les propriétés du projet"
+        - name: Activation Intégrer des outils personnalisés dans les propriétés du projet
           href: build/how-to-integrate-custom-tools-into-the-project-properties.md
-        - name: "Procédure\_: modifier le framework cible et l’ensemble d’outils de plateforme"
+        - name: Activation modifier le framework cible et l’ensemble d’outils de plateforme
           href: build/how-to-modify-the-target-framework-and-platform-toolset.md
     - name: "Procédure pas à pas\_: Création et utilisation d’une bibliothèque statique (C++)"
       href: build/walkthrough-creating-and-using-a-static-library-cpp.md
@@ -302,9 +302,9 @@
           href: build/building-c-cpp-isolated-applications.md
         - name: Création d’assemblys côte à côte C/C++
           href: build/building-c-cpp-side-by-side-assemblies.md
-        - name: "Procédure\_: Créer des composants COM sans inscription"
+        - name: Activation Créer des composants COM sans inscription
           href: build/how-to-build-registration-free-com-components.md
-        - name: "Procédure\_: Créer des applications isolées afin de consommer des composants COM"
+        - name: Activation Créer des applications isolées afin de consommer des composants COM
           href: build/how-to-build-isolated-applications-to-consume-com-components.md
         - name: "Fonctionnement de la génération de manifeste pour les programmes\_C/C++"
           expanded: false
@@ -315,7 +315,7 @@
               href: build/manifest-generation-in-visual-studio.md
             - name: Génération de manifeste au niveau de la ligne de commande
               href: build/manifest-generation-at-the-command-line.md
-            - name: "Procédure\_: Incorporer un manifeste dans une application C/C++"
+            - name: Activation Incorporer un manifeste dans une application C/C++
               href: build/how-to-embed-a-manifest-inside-a-c-cpp-application.md
         - name: Dépannage d’applications isolées C/C++ et d’assemblys côte à côte
           href: build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md
@@ -324,9 +324,9 @@
       items:
         - name: "Configurer MSVC pour des cibles\_x64 64\_bits"
           href: build/configuring-programs-for-64-bit-visual-cpp.md
-        - name: "Procédure\_: Configurer des projets C++ pour cibler des plateformes\_x64 64\_bits"
+        - name: "Activation Configurer des projets C++ pour cibler des plateformes\_x64 64\_bits"
           href: build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md
-        - name: "Procédure\_: Activer un ensemble d’outils MSVC 64\_bits sur la ligne de commande"
+        - name: "Activation Activer un ensemble d’outils MSVC 64\_bits sur la ligne de commande"
           href: build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md
         - name: Problèmes courants de migration vers MSVC 64 bits
           href: build/common-visual-cpp-64-bit-migration-issues.md
@@ -442,7 +442,7 @@
                   href: build/reference/xml-data-generator-tool-property-page.md
                 - name: 'Outil Générateur de documents XML, page de propriétés'
                   href: build/reference/xml-document-generator-tool-property-pages.md
-                - name: "Étape de génération personnalisée, page de propriétés\_: Général"
+                - name: "Étape de génération personnalisée, page de propriétés\_: Généralités"
                   href: build/reference/custom-build-step-property-page-general.md
                 - name: 'HLSL, page de propriétés'
                   href: build/reference/hlsl-property-pages.md
@@ -1277,7 +1277,7 @@
                   items:
                     - name: Vue d'ensemble de LIB
                       href: build/reference/overview-of-lib.md
-                    - name: "Procédure\_: Définir les options de LIB.EXE dans l’environnement de développement Visual Studio"
+                    - name: Activation Définir les options de LIB.EXE dans l’environnement de développement Visual Studio
                       href: build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md
                     - name: Fichiers d’entrée LIB
                       href: build/reference/lib-input-files.md
@@ -1587,7 +1587,7 @@
     - name: "Procédure pas à pas\_: Créer des applications Windows Desktop"
       href: windows/walkthrough-creating-windows-desktop-applications-cpp.md
     - name: Assistant Windows Desktop
-      href: windows/win32-application-wizard.md
+      href: windows/windows-desktop-wizard.md
     - name: Bibliothèque ATL (Active Template Library)
       href: atl/
     - name: Microsoft Foundation Classes (MFC)
@@ -1607,10 +1607,6 @@
               items:
                 - name: Date et heure - Vue d’ensemble
                   href: atl-mfc-shared/date-and-time.md
-                - name: "Date et heure\_: prise en charge d’Automation"
-                  href: atl-mfc-shared/date-and-time-automation-support.md
-                - name: "Date et heure\_: prise en charge des bases de données"
-                  href: atl-mfc-shared/date-and-time-database-support.md
                 - name: 'DATE, type'
                   href: atl-mfc-shared/date-type.md
             - name: Chaînes (ATL-MFC)
@@ -1758,11 +1754,11 @@
               href: text/generic-text-mappings-in-tchar-h.md
             - name: Utilisation de types de données TCHAR.H avec le code _MBCS
               href: text/using-tchar-h-data-types-with-mbcs-code.md
-        - name: "Procédure\_: Effectuer une conversion entre différents types de chaînes"
+        - name: Activation Effectuer une conversion entre différents types de chaînes
           href: text/how-to-convert-between-various-string-types.md
     - name: Ressources pour la création d’un jeu à l’aide de DirectX
       href: windows/resources-for-creating-a-game-using-directx.md
-    - name: "Procédure\_: Utiliser le SDK Windows\_10 dans une application Windows Desktop"
+    - name: "Activation Utiliser le SDK Windows\_10 dans une application Windows Desktop"
       href: windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md
     - name: Utiliser des fichiers de ressources
       expanded: false
@@ -1774,20 +1770,20 @@
           items:
             - name: Fichiers de ressources
               href: windows/resource-files-visual-studio.md
-            - name: "Procédure\_: Créer des ressources"
+            - name: Activation Créer des ressources
               href: windows/how-to-create-a-resource-script-file.md
-            - name: "Procédure\_: Gérer les ressources"
+            - name: Activation Gérer les ressources
               href: windows/how-to-copy-resources.md
-            - name: "Procédure\_: Inclure des ressources au moment de la compilation"
+            - name: Activation Inclure des ressources au moment de la compilation
               href: windows/how-to-include-resources-at-compile-time.md
         - name: Identificateurs de ressources (symboles)
           expanded: false
           items:
             - name: Identificateurs de ressources (symboles)
               href: windows/symbols-resource-identifiers.md
-            - name: "Procédure\_: Créer des symboles"
+            - name: Activation Créer des symboles
               href: windows/creating-new-symbols.md
-            - name: "Procédure\_: Gérer des symboles"
+            - name: Activation Gérer des symboles
               href: windows/changing-a-symbol-or-symbol-name-id.md
             - name: ID de symbole prédéfinis
               expanded: false
@@ -1819,31 +1815,31 @@
               items:
                 - name: Éditeur de boîtes de dialogue
                   href: windows/dialog-editor.md
-                - name: "Procédure\_: Créer une boîte de dialogue"
+                - name: Activation Créer une boîte de dialogue
                   href: windows/creating-a-new-dialog-box.md
                 - name: Contrôles de boîte de dialogue
                   expanded: false
                   items:
                     - name: Contrôles de boîte de dialogue
                       href: windows/controls-in-dialog-boxes.md
-                    - name: "Procédure\_: Ajouter, modifier, ou supprimer des contrôles"
+                    - name: 'Activation Ajouter, modifier, ou supprimer des contrôles'
                       href: windows/adding-editing-or-deleting-controls.md
-                    - name: "Procédure\_: Contrôles de disposition"
+                    - name: Activation Contrôles de disposition
                       href: windows/arrangement-of-controls-on-dialog-boxes.md
-                    - name: "Procédure\_: Définir les valeurs et l’accès au contrôle"
+                    - name: Activation Définir les valeurs et l’accès au contrôle
                       href: windows/defining-mnemonics-access-keys.md
             - name: Éditeur d’images pour les icônes
               expanded: false
               items:
                 - name: Éditeur d’images pour les icônes
                   href: windows/image-editor-for-icons.md
-                - name: "Procédure\_: Créer une icône ou une autre image"
+                - name: Activation Créer une icône ou une autre image
                   href: windows/creating-an-icon-or-other-image-image-editor-for-icons.md
-                - name: "Procédure\_: Modifier une image"
+                - name: Activation Modifier une image
                   href: windows/selecting-an-area-of-an-image-image-editor-for-icons.md
-                - name: "Procédure\_: Utiliser un outil de dessin"
+                - name: Activation Utiliser un outil de dessin
                   href: windows/using-a-drawing-tool-image-editor-for-icons.md
-                - name: "Procédure\_: Utiliser les couleurs"
+                - name: Activation Utiliser les couleurs
                   href: windows/working-with-color-image-editor-for-icons.md
                 - name: Touches d’accélérateur
                   href: windows/accelerator-keys-image-editor-for-icons.md
@@ -1919,7 +1915,7 @@
       items:
         - name: Informations de référence sur le langage C++/CX
           href: cppcx/visual-c-language-reference-c-cx.md
-        - name: Aide-mémoire
+        - name: Référence rapide
           href: cppcx/quick-reference-c-cx.md
         - name: Système des types
           expanded: false
@@ -1940,7 +1936,7 @@
               href: cppcx/value-classes-and-structs-c-cx.md
             - name: Classes partielles
               href: cppcx/partial-classes-c-cx.md
-            - name: Propriétés
+            - name: properties
               href: cppcx/properties-c-cx.md
             - name: Collections
               href: cppcx/collections-c-cx.md
@@ -2188,19 +2184,19 @@
       items:
         - name: Bibliothèque de modèles Windows Runtime C++ (WRL)
           href: cppcx/wrl/windows-runtime-cpp-template-library-wrl.md
-        - name: "Procédure\_: Activer et utiliser un composant Windows Runtime Component à l’aide de WRL"
+        - name: Activation Activer et utiliser un composant Windows Runtime Component à l’aide de WRL
           href: cppcx/wrl/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md
-        - name: "Procédure\_: Effectuer une opération asynchrone à l’aide de WRL"
+        - name: Activation Effectuer une opération asynchrone à l’aide de WRL
           href: cppcx/wrl/how-to-complete-asynchronous-operations-using-wrl.md
-        - name: "Procédure\_: Gérer les événements à l’aide de WRL"
+        - name: Activation Gérer les événements à l’aide de WRL
           href: cppcx/wrl/how-to-handle-events-using-wrl.md
         - name: "Procédure pas à pas\_: Création d’une application UWP à l’aide de WRL et Media Foundation"
           href: cppcx/wrl/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md
-        - name: "Procédure\_: Créer un composant COM classique à l’aide de WRL"
+        - name: Activation Créer un composant COM classique à l’aide de WRL
           href: cppcx/wrl/how-to-create-a-classic-com-component-using-wrl.md
-        - name: "Procédure\_: Instancier directement des composants WRL"
+        - name: Activation Instancier directement des composants WRL
           href: cppcx/wrl/how-to-instantiate-wrl-components-directly.md
-        - name: "Procédure\_: Utiliser winmdidl.exe et midlrt.exe pour créer les fichiers .h à partir des métadonnées Windows"
+        - name: Activation Utiliser winmdidl.exe et midlrt.exe pour créer les fichiers .h à partir des métadonnées Windows
           href: cppcx/wrl/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md
         - name: API WRL principales par catégorie
           href: cppcx/wrl/key-wrl-apis-by-category.md
@@ -2460,15 +2456,15 @@
       items:
         - name: "Tâches\_C++/CLI"
           href: dotnet/cpp-cli-tasks.md
-        - name: "Procédure\_: Créer des projets vides CLR"
+        - name: Activation Créer des projets vides CLR
           href: dotnet/how-to-create-clr-empty-projects.md
-        - name: "Procédure\_: Créer des applications console CLR"
+        - name: Activation Créer des applications console CLR
           href: dotnet/how-to-create-clr-console-applications-cpp-cli.md
-        - name: "Procédure\_: Utiliser des références de suivi dans C++/CLI"
+        - name: Activation Utiliser des références de suivi dans C++/CLI
           href: dotnet/how-to-use-tracking-references-in-cpp-cli.md
-        - name: "Procédure\_: Utiliser des tableaux dans C++/CLI"
+        - name: Activation Utiliser des tableaux dans C++/CLI
           href: dotnet/how-to-use-arrays-in-cpp-cli.md
-        - name: "Procédure\_: Définir et consommer des classes et des structs"
+        - name: Activation Définir et consommer des classes et des structs
           href: dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md
         - name: Sémantique de pile C++ pour les types de référence
           href: dotnet/cpp-stack-semantics-for-reference-types.md
@@ -2478,19 +2474,19 @@
           href: dotnet/user-defined-conversions-cpp-cli.md
         - name: initonly
           href: dotnet/initonly-cpp-cli.md
-        - name: "Procédure\_: Définir et utiliser des délégués"
+        - name: Activation Définir et utiliser des délégués
           href: dotnet/how-to-define-and-use-delegates-cpp-cli.md
-        - name: "Procédure\_: Définir et consommer des énumérateurs dans C++/CLI"
+        - name: Activation Définir et consommer des énumérateurs dans C++/CLI
           href: dotnet/how-to-define-and-consume-enums-in-cpp-cli.md
-        - name: "Procédure\_: Utiliser des événements dans C++/CLI"
+        - name: Activation Utiliser des événements dans C++/CLI
           href: dotnet/how-to-use-events-in-cpp-cli.md
-        - name: "Procédure\_: Définir un constructeur d’interface statique"
+        - name: Activation Définir un constructeur d’interface statique
           href: dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md
-        - name: "Procédure\_: Déclarer des spécificateurs de substitution dans les compilations natives"
+        - name: Activation Déclarer des spécificateurs de substitution dans les compilations natives
           href: dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md
-        - name: "Procédure\_: Utiliser des propriétés dans C++/CLI"
+        - name: Activation Utiliser des propriétés dans C++/CLI
           href: dotnet/how-to-use-properties-in-cpp-cli.md
-        - name: "Procédure\_: Utiliser safe_cast dans C++/CLI"
+        - name: Activation Utiliser safe_cast dans C++/CLI
           href: dotnet/how-to-use-safe-cast-in-cpp-cli.md
         - name: Expressions régulières
           href: dotnet/regular-expressions-cpp-cli.md
@@ -2514,9 +2510,9 @@
           items:
             - name: Assemblys mixtes (natifs et managés)
               href: dotnet/mixed-native-and-managed-assemblies.md
-            - name: "Procédure\_: Migrer vers -clr"
+            - name: Activation Migrer vers -clr
               href: dotnet/how-to-migrate-to-clr.md
-            - name: "Procédure\_: Compiler du code MFC et ATL à l’aide de -clr"
+            - name: Activation Compiler du code MFC et ATL à l’aide de -clr
               href: dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md
             - name: Initialisation d’assemblys mixtes
               href: dotnet/initialization-of-mixed-assemblies.md
@@ -2530,7 +2526,7 @@
               href: dotnet/double-thunking-cpp.md
             - name: "Éviter des exceptions à l’arrêt du CLR lors de l’utilisation d’objets COM générés avec\_-clr"
               href: dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md
-            - name: "Procédure\_: Créer une application partiellement approuvée en supprimant la dépendance de la DLL de la bibliothèque CRT"
+            - name: Activation Créer une application partiellement approuvée en supprimant la dépendance de la DLL de la bibliothèque CRT
               href: dotnet/create-a-partially-trusted-application.md
         - name: Utilisation d’un contrôle utilisateur Windows Forms dans MFC
           expanded: false
@@ -2544,22 +2540,22 @@
               items:
                 - name: Hébergement d’un contrôle utilisateur Windows Forms dans une boîte de dialogue MFC
                   href: dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
-                - name: "Procédure\_: Créer le contrôle utilisateur et l’héberger dans une boîte de dialogue"
+                - name: Activation Créer le contrôle utilisateur et l’héberger dans une boîte de dialogue
                   href: dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md
-                - name: "Procédure\_: Établir la liaison des données DDX/DDV avec Windows Forms"
+                - name: Activation Établir la liaison des données DDX/DDV avec Windows Forms
                   href: dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md
-                - name: "Procédure\_: Recevoir des événements Windows Forms de classes C++ natives"
+                - name: Activation Recevoir des événements Windows Forms de classes C++ natives
                   href: dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
             - name: "Hébergement d'un contrôle utilisateur Windows Forms en tant que vue\_MFC"
               expanded: false
               items:
                 - name: "Hébergement d'un contrôle utilisateur Windows Forms en tant que vue\_MFC"
                   href: dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
-                - name: "Procédure\_: Créer le contrôle utilisateur et héberger la vue MDI"
+                - name: Activation Créer le contrôle utilisateur et héberger la vue MDI
                   href: dotnet/how-to-create-the-user-control-and-host-mdi-view.md
-                - name: "Procédure\_: Ajouter le routage des commandes au contrôle Windows Forms"
+                - name: Activation Ajouter le routage des commandes au contrôle Windows Forms
                   href: dotnet/how-to-add-command-routing-to-the-windows-forms-control.md
-                - name: "Procédure\_: Appeler des propriétés et des méthodes du contrôle Windows Forms"
+                - name: Activation Appeler des propriétés et des méthodes du contrôle Windows Forms
                   href: dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md
             - name: Hébergement d’un contrôle utilisateur Windows Form en tant que boîte de dialogue MFC
               href: dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
@@ -2573,81 +2569,81 @@
               items:
                 - name: Utilisation d’un PInvoke explicite en C++ (attribut DllImport)
                   href: dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
-                - name: "Procédure\_: Appeler des DLL natives à partir du code managé à l’aide de PInvoke"
+                - name: Activation Appeler des DLL natives à partir du code managé à l’aide de PInvoke
                   href: dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md
-                - name: "Procédure\_: Marshaler des chaînes à l’aide de PInvoke"
+                - name: Activation Marshaler des chaînes à l’aide de PInvoke
                   href: dotnet/how-to-marshal-strings-using-pinvoke.md
-                - name: "Procédure\_: Marshaler des structures à l’aide de PInvoke"
+                - name: Activation Marshaler des structures à l’aide de PInvoke
                   href: dotnet/how-to-marshal-structures-using-pinvoke.md
-                - name: "Procédure\_: Marshaler des tableaux à l’aide de PInvoke"
+                - name: Activation Marshaler des tableaux à l’aide de PInvoke
                   href: dotnet/how-to-marshal-arrays-using-pinvoke.md
-                - name: "Procédure\_: Marshaler des pointeurs de fonction à l’aide de PInvoke"
+                - name: Activation Marshaler des pointeurs de fonction à l’aide de PInvoke
                   href: dotnet/how-to-marshal-function-pointers-using-pinvoke.md
-                - name: "Procédure\_: Marshaler des pointeurs incorporés à l’aide de PInvoke"
+                - name: Activation Marshaler des pointeurs incorporés à l’aide de PInvoke
                   href: dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
             - name: Utilisation de l’interopérabilité C++ (PInvoke implicite)
               expanded: false
               items:
                 - name: Utilisation de l’interopérabilité C++ (PInvoke implicite)
                   href: dotnet/using-cpp-interop-implicit-pinvoke.md
-                - name: "Procédure\_: Marshaler des chaînes ANSI à l’aide de l’interopérabilité\_C++"
+                - name: "Activation Marshaler des chaînes ANSI à l’aide de l’interopérabilité\_C++"
                   href: dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md
-                - name: "Procédure\_: Marshaler des chaînes Unicode à l’aide de l’interopérabilité\_C++"
+                - name: "Activation Marshaler des chaînes Unicode à l’aide de l’interopérabilité\_C++"
                   href: dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md
-                - name: "Procédure\_: Marshaler des chaînes COM à l’aide de l’interopérabilité\_C++"
+                - name: "Activation Marshaler des chaînes COM à l’aide de l’interopérabilité\_C++"
                   href: dotnet/how-to-marshal-com-strings-using-cpp-interop.md
-                - name: "Procédure\_: Marshaler des structures à l’aide de l’interopérabilité C++"
+                - name: Activation Marshaler des structures à l’aide de l’interopérabilité C++
                   href: dotnet/how-to-marshal-structures-using-cpp-interop.md
-                - name: "Procédure\_: Marshaler des tableaux à l’aide de l’interopérabilité C++"
+                - name: Activation Marshaler des tableaux à l’aide de l’interopérabilité C++
                   href: dotnet/how-to-marshal-arrays-using-cpp-interop.md
-                - name: "Procédure\_: Marshaler des rappels et des délégués à l’aide de l’interopérabilité C++"
+                - name: Activation Marshaler des rappels et des délégués à l’aide de l’interopérabilité C++
                   href: dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md
-                - name: "Procédure\_: Marshaler des pointeurs incorporés à l’aide de l’interopérabilité C++"
+                - name: Activation Marshaler des pointeurs incorporés à l’aide de l’interopérabilité C++
                   href: dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md
-                - name: "Procédure\_: Étendre la bibliothèque de marshaling"
+                - name: Activation Étendre la bibliothèque de marshaling
                   href: dotnet/how-to-extend-the-marshaling-library.md
-                - name: "Procédure\_: Accéder aux caractères d’un System::String"
+                - name: 'Activation Accéder aux caractères d’un System::String'
                   href: dotnet/how-to-access-characters-in-a-system-string.md
-                - name: "Procédure\_: Convertir la chaîne char * en tableau System::Byte"
+                - name: 'Activation Convertir la chaîne char * en tableau System::Byte'
                   href: dotnet/how-to-convert-char-star-string-to-system-byte-array.md
-                - name: "Procédure\_: Convertir System::String en wchar_t* ou char*"
+                - name: 'Activation Convertir System::String en wchar_t* ou char*'
                   href: dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md
-                - name: "Procédure\_: Convertir System::String en chaîne standard"
+                - name: 'Activation Convertir System::String en chaîne standard'
                   href: dotnet/how-to-convert-system-string-to-standard-string.md
-                - name: "Procédure\_: Convertir une chaîne standard en System::String"
+                - name: 'Activation Convertir une chaîne standard en System::String'
                   href: dotnet/how-to-convert-standard-string-to-system-string.md
-                - name: "Procédure\_: Obtenir un pointeur vers un tableau d’octets"
+                - name: Activation Obtenir un pointeur vers un tableau d’octets
                   href: dotnet/how-to-obtain-a-pointer-to-byte-array.md
-                - name: "Procédure\_: Charger des ressources non managées dans un tableau d’octets"
+                - name: Activation Charger des ressources non managées dans un tableau d’octets
                   href: dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md
-                - name: "Procédure\_: Modifier la classe de référence dans une fonction native"
+                - name: Activation Modifier la classe de référence dans une fonction native
                   href: dotnet/how-to-modify-reference-class-in-a-native-function.md
-                - name: "Procédure\_: Déterminer si une image est native ou CLR"
+                - name: Activation Déterminer si une image est native ou CLR
                   href: dotnet/how-to-determine-if-an-image-is-native-or-clr.md
-                - name: "Procédure\_: Ajouter une DLL native au Global Assembly Cache"
+                - name: Activation Ajouter une DLL native au Global Assembly Cache
                   href: dotnet/how-to-add-native-dll-to-global-assembly-cache.md
-                - name: "Procédure\_: Stocker une référence à un type valeur dans un type natif"
+                - name: Activation Stocker une référence à un type valeur dans un type natif
                   href: dotnet/how-to-hold-reference-to-value-type-in-native-type.md
-                - name: "Procédure\_: Stocker la référence d’un objet dans une mémoire non managée"
+                - name: Activation Stocker la référence d’un objet dans une mémoire non managée
                   href: dotnet/how-to-hold-object-reference-in-unmanaged-memory.md
-                - name: "Procédure\_: Détecter une compilation -clr"
+                - name: Activation Détecter une compilation -clr
                   href: dotnet/how-to-detect-clr-compilation.md
-                - name: "Procédure\_: Procéder à une conversion entre System::Guid et _GUID"
+                - name: 'Activation Procéder à une conversion entre System::Guid et _GUID'
                   href: dotnet/how-to-convert-between-system-guid-and-guid.md
-                - name: "Procédure\_: Spécifier un paramètre de sortie"
+                - name: Activation Spécifier un paramètre de sortie
                   href: dotnet/how-to-specify-an-out-parameter.md
-                - name: "Procédure\_: Utiliser un type natif dans une compilation -clr"
+                - name: Activation Utiliser un type natif dans une compilation -clr
                   href: dotnet/how-to-use-a-native-type-in-a-clr-compilation.md
-                - name: "Procédure\_: Déclarer des handles dans les types natifs"
+                - name: Activation Déclarer des handles dans les types natifs
                   href: dotnet/how-to-declare-handles-in-native-types.md
-                - name: "Procédure\_: Inclure une classe native dans un wrapper pour une utilisation par C#"
+                - name: 'Activation Inclure une classe native dans un wrapper pour une utilisation par C#'
                   href: dotnet/how-to-wrap-native-class-for-use-by-csharp.md
     - name: Code pur et vérifiable
       expanded: false
       items:
         - name: Code pur et vérifiable
           href: dotnet/pure-and-verifiable-code-cpp-cli.md
-        - name: "Procédure\_: Créer des projets C++ vérifiables"
+        - name: Activation Créer des projets C++ vérifiables
           href: dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md
         - name: Utilisation d’assemblys vérifiables avec SQL Server
           href: dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md
@@ -2676,11 +2672,11 @@
           href: dotnet/stl-clr-containers.md
         - name: Spécifications pour les éléments de conteneur STL/CLR
           href: dotnet/requirements-for-stl-clr-container-elements.md
-        - name: "Procédure\_: Convertir une collection .NET en conteneur STL/CLR"
+        - name: Activation Convertir une collection .NET en conteneur STL/CLR
           href: dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md
-        - name: "Procédure\_: Convertir un conteneur STL/CLR en collection .NET"
+        - name: Activation Convertir un conteneur STL/CLR en collection .NET
           href: dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md
-        - name: "Procédure\_: Exposer un conteneur STL/CLR d’un assembly"
+        - name: Activation Exposer un conteneur STL/CLR d’un assembly
           href: dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md
         - name: 'for each, in'
           href: dotnet/for-each-in.md
@@ -2800,20 +2796,20 @@
           href: dotnet/differences-in-exception-handling-behavior-under-clr.md
         - name: finally
           href: dotnet/finally.md
-        - name: "Procédure\_: Intercepter des exceptions en code natif levées à partir de MSIL"
+        - name: Activation Intercepter des exceptions en code natif levées à partir de MSIL
           href: dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md
-        - name: "Procédure\_: Définir et installer un gestionnaire d’exceptions global"
+        - name: Activation Définir et installer un gestionnaire d’exceptions global
           href: dotnet/how-to-define-and-install-a-global-exception-handler.md
     - name: Boxing
       expanded: false
       items:
         - name: Boxing
           href: dotnet/boxing-cpp-cli.md
-        - name: "Procédure\_: Demander explicitement le boxing"
+        - name: Activation Demander explicitement le boxing
           href: dotnet/how-to-explicitly-request-boxing.md
-        - name: "Procédure\_: Utiliser gcnew pour créer des types valeur et utiliser un boxing implicite"
+        - name: Activation Utiliser gcnew pour créer des types valeur et utiliser un boxing implicite
           href: dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md
-        - name: "Procédure\_: Effectuer une conversion unbox"
+        - name: Activation Effectuer une conversion unbox
           href: dotnet/how-to-unbox.md
         - name: Conversions standard et boxing implicite
           href: dotnet/standard-conversions-and-implicit-boxing.md
@@ -2872,7 +2868,7 @@
       items:
         - name: "Introduction à la plateforme\_Windows\_universelle (C++)"
           href: porting/porting-to-the-universal-windows-platform-cpp.md
-        - name: "Procédure\_: Utiliser le code C++ existant dans une application de plateforme Windows universelle"
+        - name: Activation Utiliser le code C++ existant dans une application de plateforme Windows universelle
           href: porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md
 - name: Meilleures pratiques de sécurité pour C++
   expanded: false
@@ -2888,10 +2884,12 @@
 - name: Référence
   expanded: false
   items:
+    - name: Langage C++ et bibliothèques standard
+      href: cpp/c-cpp-language-and-standard-libraries.md
     - name: Informations de référence sur les langages
       expanded: false
       items:
-        - name: Langages
+        - name: Languages
           href: overview/languages-cpp.md
         - name: Informations de référence sur le langage C
           expanded: false
@@ -3392,7 +3390,7 @@
                       href: c-language/storage-class.md
                     - name: Type de retour
                       href: c-language/return-type.md
-                    - name: Paramètres
+                    - name: parameters
                       href: c-language/parameters.md
                     - name: Corps de fonction
                       href: c-language/function-body.md
@@ -3668,13 +3666,13 @@
                   items:
                     - name: Pointeurs intelligents (C++ moderne)
                       href: cpp/smart-pointers-modern-cpp.md
-                    - name: "Procédure\_: Créer et utiliser des instances unique_ptr"
+                    - name: Activation Créer et utiliser des instances unique_ptr
                       href: cpp/how-to-create-and-use-unique-ptr-instances.md
-                    - name: "Procédure\_: Créer et utiliser des instances shared_ptr"
+                    - name: Activation Créer et utiliser des instances shared_ptr
                       href: cpp/how-to-create-and-use-shared-ptr-instances.md
-                    - name: "Procédure\_: Créer et utiliser des instances weak_ptr"
+                    - name: Activation Créer et utiliser des instances weak_ptr
                       href: cpp/how-to-create-and-use-weak-ptr-instances.md
-                    - name: "Procédure\_: Créer et utiliser des instances CComPtr et CComQIPtr"
+                    - name: Activation Créer et utiliser des instances CComPtr et CComQIPtr
                       href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
                 - name: Pimpl pour l’encapsulation au moment de la compilation (C++ moderne)
                   href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
@@ -3689,9 +3687,9 @@
                   items:
                     - name: Gestion des erreurs et des exceptions (C++ moderne)
                       href: cpp/errors-and-exception-handling-modern-cpp.md
-                    - name: "Procédure\_: Concevoir la sécurité des exceptions"
+                    - name: Activation Concevoir la sécurité des exceptions
                       href: cpp/how-to-design-for-exception-safety.md
-                    - name: "Procédure\_: Interface entre le code exceptionnel et le code non exceptionnel"
+                    - name: Activation Interface entre le code exceptionnel et le code non exceptionnel
                       href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
                 - name: Portabilité aux limites ABI (C++ moderne)
                   href: cpp/portability-at-abi-boundaries-modern-cpp.md
@@ -3704,7 +3702,7 @@
                   href: cpp/overview-of-file-translation.md
                 - name: Jeux de caractères
                   href: cpp/character-sets.md
-                - name: jetons
+                - name: Jetons
                   href: cpp/tokens-cpp.md
                 - name: Commentaires
                   href: cpp/comments-cpp.md
@@ -3767,7 +3765,7 @@
                       href: cpp/decltype-cpp.md
                     - name: Attributs
                       href: cpp/attributes.md
-                - name: Portée
+                - name: Étendue
                   href: cpp/scope-visual-cpp.md
                 - name: Fichiers d’en-tête
                   href: cpp/header-files-cpp.md
@@ -4098,7 +4096,7 @@
                       href: cpp/increment-and-decrement-operator-overloading-cpp.md
                 - name: Opérateurs binaires
                   href: cpp/binary-operators.md
-                - name: Attribution
+                - name: Affectation
                   href: cpp/assignment.md
                 - name: Appel de fonction
                   href: cpp/function-call-cpp.md
@@ -5592,7 +5590,7 @@
                   href: assembler/masm/textequ.md
                 - name: .TFCOND
                   href: assembler/masm/dot-tfcond.md
-                - name: TITLE
+                - name: TITRE
                   href: assembler/masm/title.md
                 - name: TYPEDEF (MASM)
                   href: assembler/masm/typedef-masm.md
@@ -6019,7 +6017,7 @@
                   href: extensions/consuming-generics-cpp-cli.md
                 - name: Génériques et modèles
                   href: extensions/generics-and-templates-visual-cpp.md
-                - name: "Procédure\_: Améliorer les performances avec des génériques"
+                - name: Activation Améliorer les performances avec des génériques
                   href: extensions/how-to-improve-performance-with-generics-visual-cpp.md
             - name: 'interface, classe'
               href: extensions/interface-class-cpp-component-extensions.md
@@ -6070,22 +6068,22 @@
                   items:
                     - name: interior_ptr
                       href: extensions/interior-ptr-cpp-cli.md
-                    - name: "Procédure\_: Déclarer et utiliser des pointeurs intérieurs et des tableaux managés"
+                    - name: Activation Déclarer et utiliser des pointeurs intérieurs et des tableaux managés
                       href: extensions/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md
-                    - name: "Procédure\_: Déclarer des types de valeur avec le mot clé interior_ptr"
+                    - name: Activation Déclarer des types de valeur avec le mot clé interior_ptr
                       href: extensions/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md
-                    - name: "Procédure\_: Surcharger des fonctions avec des pointeurs intérieurs et des pointeurs natifs"
+                    - name: Activation Surcharger des fonctions avec des pointeurs intérieurs et des pointeurs natifs
                       href: extensions/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md
-                    - name: "Procédure\_: Déclarer des pointeurs intérieurs avec le mot clé const"
+                    - name: Activation Déclarer des pointeurs intérieurs avec le mot clé const
                       href: extensions/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md
                 - name: pin_ptr
                   expanded: false
                   items:
                     - name: pin_ptr
                       href: extensions/pin-ptr-cpp-cli.md
-                    - name: "Procédure\_: Épingler des pointeurs et des tableaux"
+                    - name: Activation Épingler des pointeurs et des tableaux
                       href: extensions/how-to-pin-pointers-and-arrays.md
-                    - name: "Procédure\_: Déclarer l’épinglage de pointeurs et de types de valeur"
+                    - name: Activation Déclarer l’épinglage de pointeurs et de types de valeur
                       href: extensions/how-to-declare-pinning-pointers-and-value-types.md
                 - name: Transfert de type
                   href: extensions/type-forwarding-cpp-cli.md
@@ -6155,13 +6153,13 @@
                   href: windows/attributes/bindable.md
                 - name: call_as
                   href: windows/attributes/call-as.md
-                - name: casse
+                - name: cas
                   href: windows/attributes/case-cpp.md
                 - name: coclasse
                   href: windows/attributes/coclass.md
                 - name: com_interface_entry
                   href: windows/attributes/com-interface-entry-cpp.md
-                - name: contrôle
+                - name: control
                   href: windows/attributes/control.md
                 - name: cpp_quote
                   href: windows/attributes/cpp-quote.md
@@ -6219,7 +6217,7 @@
                   href: windows/attributes/helpstringdll.md
                 - name: hidden
                   href: windows/attributes/hidden.md
-                - name: ID
+                - name: id
                   href: windows/attributes/id.md
                 - name: idl_module
                   href: windows/attributes/idl-module.md
@@ -6233,13 +6231,13 @@
                   href: windows/attributes/implements-cpp.md
                 - name: implements_category
                   href: windows/attributes/implements-category.md
-                - name: d'importation
+                - name: importation
                   href: windows/attributes/import.md
                 - name: importidl
                   href: windows/attributes/importidl.md
                 - name: importlib
                   href: windows/attributes/importlib.md
-                - name: dans
+                - name: commencer
                   href: windows/attributes/in-cpp.md
                 - name: include
                   href: windows/attributes/include-cpp.md
@@ -6255,7 +6253,7 @@
                   href: windows/attributes/library-block.md
                 - name: licensed
                   href: windows/attributes/licensed.md
-                - name: locaux
+                - name: local
                   href: windows/attributes/local-cpp.md
                 - name: max_is
                   href: windows/attributes/max-is.md
@@ -6271,13 +6269,13 @@
                   href: windows/attributes/noncreatable.md
                 - name: nonextensible
                   href: windows/attributes/nonextensible.md
-                - name: object
+                - name: objet
                   href: windows/attributes/object-cpp.md
                 - name: odl
                   href: windows/attributes/odl.md
                 - name: oleautomation
                   href: windows/attributes/oleautomation.md
-                - name: facultatifs
+                - name: facultatif
                   href: windows/attributes/optional-cpp.md
                 - name: out
                   href: windows/attributes/out-cpp.md
@@ -6870,7 +6868,7 @@
                   href: c-runtime-library/reference/alloca.md
                 - name: _amsg_exit
                   href: c-runtime-library/reference/amsg-exit.md
-                - name: et
+                - name: and
                   href: c-runtime-library/reference/and.md
                 - name: and_eq
                   href: c-runtime-library/reference/and-eq.md
@@ -7320,7 +7318,7 @@
                   href: c-runtime-library/reference/fread-nolock.md
                 - name: _fread_nolock_s2
                   href: c-runtime-library/reference/fread-nolock-s2.md
-                - name: free
+                - name: gratuit
                   href: c-runtime-library/reference/free.md
                 - name: _free_dbg
                   href: c-runtime-library/reference/free-dbg.md
@@ -7762,7 +7760,7 @@
                   href: c-runtime-library/reference/offsetof-macro.md
                 - name: '_onexit, _onexit_m'
                   href: c-runtime-library/reference/onexit-onexit-m.md
-                - name: ouvrir
+                - name: ouvert
                   href: c-runtime-library/reference/open.md
                 - name: '_open, _wopen'
                   href: c-runtime-library/reference/open-wopen.md
@@ -7770,7 +7768,7 @@
                   href: c-runtime-library/reference/open-osfhandle.md
                 - name: or_eq
                   href: c-runtime-library/reference/or-eq.md
-                - name: ou
+                - name: or
                   href: c-runtime-library/reference/or.md
                 - name: _pclose
                   href: c-runtime-library/reference/pclose.md
@@ -8308,7 +8306,7 @@
                   href: c-runtime-library/reference/wctrans.md
                 - name: wctype
                   href: c-runtime-library/reference/wctype.md
-                - name: écriture
+                - name: write
                   href: c-runtime-library/reference/posix-write.md
                 - name: _write
                   href: c-runtime-library/reference/write.md
@@ -10076,13 +10074,13 @@
                       items:
                         - name: Migration d'OpenMP au runtime d'accès concurrentiel
                           href: parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md
-                        - name: "Procédure\_: Convertir un parallèle OpenMP pour qu’une boucle utilise le runtime d’accès concurrentiel"
+                        - name: Activation Convertir un parallèle OpenMP pour qu’une boucle utilise le runtime d’accès concurrentiel
                           href: parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md
-                        - name: "Procédure\_: Convertir une boucle OpenMP utilisant l’annulation pour qu’elle le runtime d’accès concurrentiel"
+                        - name: Activation Convertir une boucle OpenMP utilisant l’annulation pour qu’elle le runtime d’accès concurrentiel
                           href: parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md
-                        - name: "Procédure\_: Convertir une boucle OpenMP utilisant la gestion des exceptions pour qu’elle utilise le runtime d’accès concurrentiel"
+                        - name: Activation Convertir une boucle OpenMP utilisant la gestion des exceptions pour qu’elle utilise le runtime d’accès concurrentiel
                           href: parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md
-                        - name: "Procédure\_: Convertir une boucle OpenMP utilisant une variable de réduction pour qu’elle utilise le runtime d’accès concurrentiel"
+                        - name: Activation Convertir une boucle OpenMP utilisant une variable de réduction pour qu’elle utilise le runtime d’accès concurrentiel
                           href: parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md
                 - name: Bibliothèque de modèles parallèles
                   expanded: false
@@ -10094,42 +10092,42 @@
                       items:
                         - name: Parallélisme des tâches (runtime d’accès concurrentiel)
                           href: parallel/concrt/task-parallelism-concurrency-runtime.md
-                        - name: "Procédure\_: Utiliser parallel_invoke pour écrire une routine de tri parallèle"
+                        - name: Activation Utiliser parallel_invoke pour écrire une routine de tri parallèle
                           href: parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md
-                        - name: "Procédure\_: Utiliser parallel_invoke pour exécuter des opérations parallèles"
+                        - name: Activation Utiliser parallel_invoke pour exécuter des opérations parallèles
                           href: parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md
-                        - name: "Procédure\_: Créer une tâche qui se termine après un certain délai"
+                        - name: Activation Créer une tâche qui se termine après un certain délai
                           href: parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md
                     - name: Algorithmes parallèles
                       expanded: false
                       items:
                         - name: Algorithmes parallèles
                           href: parallel/concrt/parallel-algorithms.md
-                        - name: "Procédure\_: Écrire une boucle parallel_for"
+                        - name: Activation Écrire une boucle parallel_for
                           href: parallel/concrt/how-to-write-a-parallel-for-loop.md
-                        - name: "Procédure\_: Écrire une boucle parallel_for_each"
+                        - name: Activation Écrire une boucle parallel_for_each
                           href: parallel/concrt/how-to-write-a-parallel-for-each-loop.md
-                        - name: "Procédure\_: Exécuter des opérations de mappage et de réduction en parallèle"
+                        - name: Activation Exécuter des opérations de mappage et de réduction en parallèle
                           href: parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md
                     - name: Conteneurs et objets parallèles
                       expanded: false
                       items:
                         - name: Conteneurs et objets parallèles
                           href: parallel/concrt/parallel-containers-and-objects.md
-                        - name: "Procédure\_: Utiliser des conteneurs parallèles pour une efficacité accrue"
+                        - name: Activation Utiliser des conteneurs parallèles pour une efficacité accrue
                           href: parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md
-                        - name: "Procédure\_: Utiliser la classe combinable pour améliorer les performances"
+                        - name: Activation Utiliser la classe combinable pour améliorer les performances
                           href: parallel/concrt/how-to-use-combinable-to-improve-performance.md
-                        - name: "Procédure\_: Utiliser la classe combinable pour combiner des ensembles"
+                        - name: Activation Utiliser la classe combinable pour combiner des ensembles
                           href: parallel/concrt/how-to-use-combinable-to-combine-sets.md
                     - name: Annulation dans la bibliothèque de modèles parallèles
                       expanded: false
                       items:
                         - name: Annulation dans la bibliothèque de modèles parallèles
                           href: parallel/concrt/cancellation-in-the-ppl.md
-                        - name: "Procédure\_: Utiliser l’annulation pour sortir d’une boucle parallèle"
+                        - name: Activation Utiliser l’annulation pour sortir d’une boucle parallèle
                           href: parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md
-                        - name: "Procédure\_: Utiliser la gestion des exceptions pour sortir d’une boucle parallèle"
+                        - name: Activation Utiliser la gestion des exceptions pour sortir d’une boucle parallèle
                           href: parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md
                 - name: bibliothèque d’agents asynchrones
                   expanded: false
@@ -10142,17 +10140,17 @@
                       href: parallel/concrt/asynchronous-message-blocks.md
                     - name: Fonctions de passage de messages
                       href: parallel/concrt/message-passing-functions.md
-                    - name: "Procédure\_: Implémenter différents modèles de producteur-consommateur"
+                    - name: Activation Implémenter différents modèles de producteur-consommateur
                       href: parallel/concrt/how-to-implement-various-producer-consumer-patterns.md
-                    - name: "Procédure\_: Fournir des fonctions de travail aux classes call et transformer"
+                    - name: Activation Fournir des fonctions de travail aux classes call et transformer
                       href: parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md
-                    - name: "Procédure\_: Utiliser la classe transformer dans un pipeline de données"
+                    - name: Activation Utiliser la classe transformer dans un pipeline de données
                       href: parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md
-                    - name: "Procédure\_: Effectuer une sélection parmi les tâches terminées"
+                    - name: Activation Effectuer une sélection parmi les tâches terminées
                       href: parallel/concrt/how-to-select-among-completed-tasks.md
-                    - name: "Procédure\_: Envoyer un message à intervalles réguliers"
+                    - name: Activation Envoyer un message à intervalles réguliers
                       href: parallel/concrt/how-to-send-a-message-at-a-regular-interval.md
-                    - name: "Procédure\_: Utiliser un filtre de bloc de message"
+                    - name: Activation Utiliser un filtre de bloc de message
                       href: parallel/concrt/how-to-use-a-message-block-filter.md
                 - name: Structures de données de synchronisation
                   expanded: false
@@ -10171,23 +10169,23 @@
                       items:
                         - name: Instances de planificateur
                           href: parallel/concrt/scheduler-instances.md
-                        - name: "Procédure\_: Gérer une instance de planificateur"
+                        - name: Activation Gérer une instance de planificateur
                           href: parallel/concrt/how-to-manage-a-scheduler-instance.md
                     - name: Stratégies de planificateur
                       expanded: false
                       items:
                         - name: Stratégies de planificateur
                           href: parallel/concrt/scheduler-policies.md
-                        - name: "Procédure\_: Spécifier des stratégies de planificateur spécifiques"
+                        - name: Activation Spécifier des stratégies de planificateur spécifiques
                           href: parallel/concrt/how-to-specify-specific-scheduler-policies.md
-                        - name: "Procédure\_: Créer des agents qui utilisent des stratégies spécifiques de planificateur"
+                        - name: Activation Créer des agents qui utilisent des stratégies spécifiques de planificateur
                           href: parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md
                     - name: Groupes de planification
                       expanded: false
                       items:
                         - name: Groupes de planification
                           href: parallel/concrt/schedule-groups.md
-                        - name: "Procédure\_: Utiliser des groupes de planification pour influencer l’ordre d’exécution"
+                        - name: Activation Utiliser des groupes de planification pour influencer l’ordre d’exécution
                           href: parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md
                     - name: Tâches légères
                       href: parallel/concrt/lightweight-tasks.md
@@ -10196,16 +10194,16 @@
                       items:
                         - name: Contextes
                           href: parallel/concrt/contexts.md
-                        - name: "Procédure\_: Utiliser la classe de contexte pour implémenter un sémaphore coopératif"
+                        - name: Activation Utiliser la classe de contexte pour implémenter un sémaphore coopératif
                           href: parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md
-                        - name: "Procédure\_: Utiliser le surabonnement afin de compenser la latence"
+                        - name: Activation Utiliser le surabonnement afin de compenser la latence
                           href: parallel/concrt/how-to-use-oversubscription-to-offset-latency.md
                     - name: Fonctions de gestion de la mémoire
                       expanded: false
                       items:
                         - name: Fonctions de gestion de la mémoire
                           href: parallel/concrt/memory-management-functions.md
-                        - name: "Procédure\_: Utiliser Alloc et Free afin d’améliorer les performances de la mémoire"
+                        - name: Activation Utiliser Alloc et Free afin d’améliorer les performances de la mémoire
                           href: parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md
                 - name: Procédures pas à pas relatives au runtime d’accès concurrentiel
                   expanded: false

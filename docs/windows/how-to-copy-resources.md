@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Gérer les ressources (C++)'
+title: 'Procédure : Gérer les ressourcesC++()'
 ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
@@ -30,57 +30,57 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 28678b560387fa6b111d60a7487ed44f9244a821
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 56cff04d64f2f0a64fc216fbd418954b4c11b0f2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449062"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514740"
 ---
-# <a name="how-to-manage-resources-c"></a>Procédure : Gérer les ressources (C++)
+# <a name="how-to-manage-resources-c"></a>Procédure : Gérer les ressourcesC++()
 
-## <a name="copy-and-edit-resources"></a>Copie et ressources pour la modification
+## <a name="copy-and-edit-resources"></a>Copier et modifier des ressources
 
-Vous pouvez copier des ressources à partir d’un fichier vers un autre sans les modifier, ou de modifier la langue ou la condition d’une ressource lors de la copie.
+Vous pouvez copier des ressources d’un fichier vers un autre sans les modifier, ou modifier la langue ou la condition d’une ressource lors de sa copie.
 
-Vous pouvez facilement copier les ressources à partir d’une ressource existante ou d’un fichier exécutable à votre fichier de ressources actuel. Pour copier des ressources, vous ouvrez les deux fichiers contenant des ressources en même temps et faire glisser des éléments à partir d’un fichier vers un autre, ou copiez et collez entre les deux fichiers. Cette méthode fonctionne pour les fichiers de script (.rc) de ressources et les fichiers de ressources (.rct) de modèle et en tant que fichiers exécutables (.exe).
+Vous pouvez facilement copier des ressources à partir d’une ressource ou d’un fichier exécutable existant dans votre fichier de ressources actuel. Pour copier des ressources, vous devez ouvrir les deux fichiers contenant les ressources en même temps et faire glisser les éléments d’un fichier vers un autre ou les copier et les coller entre les deux fichiers. Cette méthode fonctionne pour les fichiers de script de ressources (. RC) et les fichiers de modèle de ressource (. RCT) et comme fichiers exécutables (. exe).
 
 > [!NOTE]
-> Visual C++ inclut des exemples de fichiers de ressources que vous pouvez utiliser dans votre propre application. Pour plus d’informations, consultez [CLIPART : Ressources communes](https://github.com/Microsoft/VCSamples).
+> Visual C++ contient des exemples de fichiers de ressources que vous pouvez utiliser dans votre propre application. Pour plus d’informations, [consultez Clipart: Ressources](https://github.com/Microsoft/VCSamples)communes.
 
-Vous ne pouvez pas faire glisser et drop, copier, Couper ou -coller entre les fichiers de ressources dans le projet (**affichage des ressources**) et ouvrent des fichiers .rc autonome dans les fenêtres de document. Vous le faisiez dans les versions précédentes du produit. Utilisez uniquement la méthode glisser-déplacer entre les fichiers .rc qui sont ouverts en dehors du projet.
+Vous ne pouvez pas effectuer des opérations de glisser-déplacer, copier, couper ou coller entre les fichiers de ressources du projet (**affichage des ressources**) et les fichiers. RC autonomes ouverts dans les fenêtres de document. Vous pouvez le faire dans les versions précédentes du produit. Utilisez uniquement la méthode de glisser-déplacer entre les fichiers. RC qui sont ouverts en dehors du projet.
 
 ### <a name="to-copy-resources"></a>Pour copier des ressources
 
-1. Ouvrez les deux fichiers de ressources en mode autonome. (Consultez [utilisent les fichiers de script de ressources](how-to-create-a-resource-script-file.md#use-resource-script-files)). Par exemple, ouvrez *Source1.rc* et *Source2.rc*.
+1. Ouvrez les deux fichiers de ressources en mode autonome. (Voir [utiliser des fichiers de script de ressources](how-to-create-a-resource-script-file.md#use-resource-script-files)). Par exemple, ouvrez *source1. RC* et *source2. RC*.
 
-1. À l’intérieur du premier fichier .rc, soit :
+1. Dans le premier fichier. RC, soit:
 
-   - Utilisez la méthode glisser-déplacer
+   - Utiliser la méthode de glisser-déplacer
 
-      1. Sélectionnez la ressource que vous souhaitez copier. Par exemple, dans *Source1.rc*, sélectionnez **IDD_DIALOG1**.
+      1. Sélectionnez la ressource que vous souhaitez copier. Par exemple, dans *source1. RC*, sélectionnez **IDD_DIALOG1**.
 
-      1. Maintenez la **Ctrl** de clé et faites glisser la ressource pour le deuxième fichier .rc. Par exemple, faites glisser **IDD_DIALOG1** de *Source1.rc* à *Source2.rc*.
+      1. Maintenez la touche **CTRL** enfoncée et faites glisser la ressource vers le deuxième fichier. rc. Par exemple, faites glisser **IDD_DIALOG1** de *source1. RC* vers *source2. RC*.
 
          > [!TIP]
-         > En faisant glisser la ressource sans maintenir enfoncée la **Ctrl** touche déplace la ressource plutôt que de le copier.
+         > Le fait de faire glisser la ressource sans maintenir la touche **CTRL** enfoncée déplace la ressource au lieu de la copier.
 
-   - Utilisez le copier-coller (méthode)
+   - Utiliser la méthode de copie et de collage
 
-      1. Avec le bouton droit de la ressource vous avec copie (par exemple, *Source1.rc*) et choisissez **copie**.
+      1. Cliquez avec le bouton droit sur la ressource que vous souhaitez copier (par exemple, *source1. RC*) et choisissez **copier**.
 
-      1. Cliquez sur le fichier de ressources dans lequel vous souhaitez coller la ressource (par exemple, *Source2.rc*) et choisissez **collez**.
+      1. Cliquez avec le bouton droit sur le fichier de ressources dans lequel vous souhaitez coller la ressource (par exemple, *source2. RC*) et choisissez **coller**.
 
 > [!NOTE]
-> Pour éviter les conflits avec les noms de symboles ou les valeurs dans le fichier existant, Visual C++ peut modifier les valeur de symbole de la ressource transférée ou le nom et valeur lorsque vous la copiez dans le nouveau fichier.
+> Pour éviter les conflits avec les noms de symboles ou les valeurs dans le C++ fichier existant, Visual peut modifier la valeur de symbole ou le nom et la valeur du symbole de la ressource transférée lorsque vous la copiez dans le nouveau fichier.
 
 Durant la copie d'une ressource, vous pouvez changer sa propriété language ou sa propriété condition, ou les deux.
 
-- La langue d’une ressource spécifie la langue utilisée par [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) pour aider à identifier la ressource pour laquelle vous avez besoin. Les ressources peuvent avoir des différences qui ne sont pas liées au texte pour chaque langue, par exemple, des accélérateurs qui fonctionnent uniquement sur un clavier japonais ou une image bitmap n’est appropriée pour localisées en chinois builds.
+- La langue d’une ressource spécifie la langue utilisée par [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew) pour aider à identifier la ressource que vous recherchez. Les ressources peuvent avoir des différences pour chaque langue qui ne sont pas liées à du texte, par exemple, des accélérateurs qui peuvent uniquement fonctionner sur un clavier japonais ou une bitmap qui serait uniquement appropriée pour les versions localisées en chinois.
 
 - La condition d'une ressource est un symbole défini qui identifie une condition dans laquelle cette copie particulière de la ressource doit être utilisée.
 
-La langue et la condition d’une ressource sont affichées entre parenthèses après le nom de la ressource dans le **espace de travail** fenêtre. Ici, la ressource nommée `IDD_AboutBox` utilise `Finnish` en tant que son langage et sa condition est `XX33`:
+La langue et la condition d’une ressource sont indiquées entre parenthèses après le nom de la ressource dans la fenêtre de l' **espace de travail** . Ici, la ressource `IDD_AboutBox` nommée utilise `Finnish` comme langue et sa condition est `XX33`:
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
@@ -88,39 +88,39 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Pour copier une ressource existante et modifier sa langue ou sa condition
 
-Dans le *.rc* fichier ou dans le [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources) fenêtre, avec le bouton droit de la ressource que vous souhaitez copier et choisissez **insérer une copie**. Ensuite, définissez les éléments suivants :
+Dans le fichier *. RC* ou dans la fenêtre de [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources) , cliquez avec le bouton droit sur la ressource que vous souhaitez copier, puis choisissez **Insérer une copie**. Ensuite, définissez les éléments suivants:
 
-- Pour le **langage** zone de liste, sélectionnez la langue.
+- Pour la zone de liste **langue** , sélectionnez la langue.
 
-- Dans le **Condition** , tapez la condition.
+- Dans la zone **condition** , tapez la condition.
 
 ### <a name="to-edit-resources"></a>Pour modifier des ressources
 
-Fichiers de ressources managés (.resx) sont des fichiers XML. Lorsque vous ajoutez un fichier de ressources managé à votre projet à partir de la **ajouter un nouvel élément** boîte de dialogue, le **éditeur de ressources managées** s’ouvre par défaut.
+Les fichiers de ressources managées (. resx) sont des fichiers XML. Lorsque vous ajoutez un fichier de ressources managé à votre projet à partir de la boîte de dialogue **Ajouter un nouvel élément** , l' **éditeur de ressources managées** s’ouvre par défaut.
 
-## <a name="import-and-export-resources"></a>Importation et exportation de ressources
+## <a name="import-and-export-resources"></a>Importer et exporter des ressources
 
-Vous pouvez importer des ressources graphiques (images bitmap, icônes, curseurs et barres d'outils), des fichiers HTML et des ressources personnalisées pour les utiliser dans Visual C++. Vous pouvez exporter les mêmes types de fichiers à partir de Visual Studio C++ projet pour séparer les fichiers qui peuvent être utilisés en dehors de l’environnement de développement.
+Vous pouvez importer des ressources graphiques (images bitmap, icônes, curseurs et barres d'outils), des fichiers HTML et des ressources personnalisées pour les utiliser dans Visual C++. Vous pouvez exporter les mêmes types de fichiers à partir d’un C++ projet Visual Studio vers des fichiers distincts qui peuvent être utilisés en dehors de l’environnement de développement.
 
 > [!NOTE]
-> Types de ressources tels que les accélérateurs, les boîtes de dialogue et les tables de chaînes ne peuvent pas être importées ou exportées, car ils ne sont pas des types de fichiers autonome.
+> Les types de ressources tels que les accélérateurs, les boîtes de dialogue et les tables de chaînes ne peuvent pas être importés ou exportés, car ils ne sont pas des types de fichiers autonomes.
 
 ### <a name="to-import-a-resource-into-the-resource-script-file"></a>Pour importer une ressource dans le fichier de script de ressources
 
-1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources) cliquez sur le nœud du fichier de script (.rc) de ressources auquel vous souhaitez ajouter une ressource, puis sélectionnez **importation**.
+1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources) cliquez avec le bouton droit sur le nœud du fichier de script de ressources (. RC) auquel vous souhaitez ajouter une ressource, puis sélectionnez **Importer**.
 
-1. Recherchez et choisissez le nom de fichier de l’image bitmap (.bmp), icône (.ico), curseur (.cur), le fichier html (.htm) ou un autre fichier à importer.
+1. Recherchez et choisissez le nom de fichier de l’image bitmap (. bmp), de l’icône (. ico), du curseur (. cur), du fichier HTML (. htm) ou de tout autre fichier à importer.
 
 1. Sélectionnez **OK** pour ajouter la ressource au fichier de script de ressources.
 
 > [!NOTE]
-> Le processus d’importation fonctionne sans quel que soit le type de ressource auquel vous avez sélectionné. La ressource importée est automatiquement ajoutée au nœud correct de ce type de ressource.
+> Le processus d’importation fonctionne de la même façon quel que soit le type de ressource que vous avez sélectionné. La ressource importée est automatiquement ajoutée au nœud approprié de ce type de ressource.
 
-### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Pour exporter une ressource pour une utilisation en dehors de Visual C++
+### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Pour exporter une ressource en vue d’une utilisation en dehors de VisualC++
 
-1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), avec le bouton droit de la ressource que vous souhaitez exporter, puis sélectionnez **exporter**. Vous pouvez accepter le nom de fichier en cours ou tapez-en un nouveau.
+1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), cliquez avec le bouton droit sur la ressource que vous souhaitez exporter, puis sélectionnez **Exporter**. Vous pouvez accepter le nom de fichier actuel ou en taper un nouveau.
 
-1. Accédez au dossier où vous souhaitez enregistrer le fichier et sélectionnez **exporter**.
+1. Accédez au dossier dans lequel vous souhaitez enregistrer le fichier, puis sélectionnez **Exporter**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -129,5 +129,5 @@ Win32
 ## <a name="see-also"></a>Voir aussi
 
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
-[Guide pratique pour Créer des ressources](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Guide pratique pour inclure des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Guide pratique : Créer des ressources](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Guide pratique : inclure des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md)<br/>

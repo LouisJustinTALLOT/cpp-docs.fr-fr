@@ -1,5 +1,5 @@
 ---
-title: / source-CharSet (définir jeu de caractères Source)
+title: /source-charset (définir le jeu de caractères source)
 ms.date: 02/06/2019
 f1_keywords:
 - source-charset
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-ms.openlocfilehash: 54f8d4d0edaa310384d19a9c9a188f96ec895eac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd3e4eb3fd305ba6bdd298d18b1edb80f2b98343
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318210"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498256"
 ---
-# <a name="source-charset-set-source-character-set"></a>/ source-CharSet (définir jeu de caractères Source)
+# <a name="source-charset-set-source-character-set"></a>/source-charset (définir le jeu de caractères source)
 
-Vous permet de spécifier la source jeu de caractères pour votre fichier exécutable.
+Vous permet de spécifier le jeu de caractères source pour votre fichier exécutable.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,25 +30,25 @@ Vous permet de spécifier la source jeu de caractères pour votre fichier exécu
 Nom du jeu de caractères défini par l’IANA.
 
 **CPID**<br/>
-Identificateur de la page de code comme un nombre décimal.
+Identificateur de la page de codes sous la forme d’un nombre décimal.
 
 ## <a name="remarks"></a>Notes
 
-Vous pouvez utiliser la **/source-CharSet** option pour spécifier un caractère étendu source définie à utiliser lors de vos fichiers sources incluent des caractères qui ne sont pas représentés dans le jeu de caractères sources de base. Le jeu de caractères source est l’encodage utilisé pour interpréter le texte de la source de votre programme dans la représentation interne utilisée comme entrée pour les phases de prétraitement avant la compilation. La représentation interne est ensuite convertie en le jeu de caractères d’exécution pour stocker les valeurs de chaîne et de caractère dans le fichier exécutable. Vous pouvez utiliser soit l’IANA ou nom de jeu de caractères ISO ou un point (.) suivi d’un identificateur de page de code décimal de 3 à 5 chiffres pour spécifier le jeu de caractères à utiliser. Pour une liste de prise en charge les identificateurs de page de code et les noms de jeu de caractères, consultez [Code Page Identifiers](/windows/desktop/Intl/code-page-identifiers).
+Vous pouvez utiliser l’option **/source-charset** pour spécifier un jeu de caractères sources étendus à utiliser lorsque vos fichiers sources contiennent des caractères qui ne sont pas représentés dans le jeu de caractères sources de base. Le jeu de caractères source est l’encodage utilisé pour interpréter le texte source de votre programme dans la représentation interne utilisée comme entrée pour les phases de prétraitement avant la compilation. La représentation interne est ensuite convertie en jeu de caractères d’exécution pour stocker les valeurs de chaîne et de caractère dans l’exécutable. Vous pouvez utiliser le nom du jeu de caractères IANA ou ISO, ou un point (.) suivi d’un identificateur de page de codes décimaux de 3 à 5 chiffres pour spécifier le jeu de caractères à utiliser. Pour obtenir la liste des identificateurs de pages de codes et des noms de jeux de caractères pris en charge, consultez identificateurs de [page de codes](/windows/win32/Intl/code-page-identifiers).
 
-Par défaut, Visual Studio détecte une marque d’ordre d’octet pour déterminer si le fichier source est encodé au format Unicode, par exemple, UTF-16 ou UTF-8. Si aucune marque d’ordre d’octet n’est trouvé, il part du principe que le fichier source est encodé à l’aide de la page de codes utilisateur actuel, sauf si vous spécifiez un jeu de caractères nom ou page de codes à l’aide de la **/source-CharSet** option. Visual Studio vous permet d’enregistrer votre code source C++ à l’aide des plusieurs encodages de caractères. Pour plus d’informations sur les jeux de caractères source et d’exécution, consultez [jeux de caractères](../../cpp/character-sets.md) dans la documentation du langage.
+Par défaut, Visual Studio détecte une marque d’ordre d’octet pour déterminer si le fichier source est dans un format Unicode encodé, par exemple UTF-16 ou UTF-8. Si aucune marque d’ordre d’octet n’est trouvée, il suppose que le fichier source est encodé à l’aide de la page de codes de l’utilisateur actuel, sauf si vous spécifiez un nom de jeu de caractères ou une page de codes à l’aide de l’option **/source-charset** . Visual Studio vous permet d’enregistrer votre C++ code source à l’aide de plusieurs encodages de caractères. Pour plus d’informations sur les jeux de caractères source et d’exécution, consultez [jeux de caractères](../../cpp/character-sets.md) dans la documentation du langage.
 
-Le jeu de caractères source que vous fournissez doit mapper les caractères ASCII 7 bits sur les mêmes points de code dans votre jeu de caractères ou de nombreuses erreurs de compilation sont susceptibles de suivre. Votre jeu de caractères source doit également être mappable au jeu puissent être codés en UTF-8 de caractères Unicode étendus. Les caractères qui ne sont pas puissent être codés en UTF-8 sont représentés par un spécifique à l’implémentation de substitution. Le compilateur Microsoft utilise un point d’interrogation pour ces caractères.
+Le jeu de caractères source que vous fournissez doit mapper les caractères ASCII de 7 bits aux mêmes points de code dans votre jeu de caractères, ou de nombreuses erreurs de compilation sont susceptibles de se suivre. Votre jeu de caractères source doit également être mappé au jeu de caractères Unicode étendu encodable par UTF-8. Les caractères qui ne sont pas encodable en UTF-8 sont représentés par un substitut spécifique à l’implémentation. Le compilateur Microsoft utilise un point d’interrogation pour ces caractères.
 
-Si vous souhaitez définir le jeu de caractères source et le jeu de caractères d’exécution au format UTF-8, vous pouvez utiliser la **/UTF-8** option du compilateur sous forme de raccourci. Il est équivalent à la spécification **/source-charset:utf-/execution 8-charset:utf-8** sur la ligne de commande. Aucune de ces options également permet la **/Validate-CharSet** option par défaut.
+Si vous souhaitez définir le jeu de caractères source et le jeu de caractères d’exécution sur UTF-8, vous pouvez utiliser l’option du compilateur **/UTF-8** comme raccourci. Cela équivaut à spécifier **/source-charset: UTF-8/Execution-charset: UTF-8** sur la ligne de commande. L’une de ces options active également l’option **/Validate-charset** par défaut.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Développez le **propriétés de Configuration**, **C/C++**, **ligne de commande** dossier.
+1. Développez le dossier **Propriétés de configuration**, **CC++/** , ligne de **commande** .
 
-1. Dans **des Options supplémentaires**, ajoutez le **/source-CharSet** option et spécifiez votre encodage préféré.
+1. Dans **options supplémentaires**, ajoutez l’option **/source-charset** et spécifiez votre encodage préféré.
 
 1. Choisissez **OK** pour enregistrer vos modifications.
 
@@ -56,6 +56,6 @@ Si vous souhaitez définir le jeu de caractères source et le jeu de caractères
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
 [Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
-[/ EXECUTION-CharSet (définir l’exécution du jeu de caractères)](execution-charset-set-execution-character-set.md)<br/>
+[/Execution-charset (définir le jeu de caractères d’exécution)](execution-charset-set-execution-character-set.md)<br/>
 [/utf-8 (Définir les jeux de caractères sources et exécutables sur UTF-8)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
 [/validate-charset (Valider les caractères compatibles)](validate-charset-validate-for-compatible-characters.md)

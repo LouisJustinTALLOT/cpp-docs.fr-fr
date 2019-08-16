@@ -8,30 +8,30 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: 1c7f901009d5e1e7f0af20d493bb748b46b18480
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d81bd0a8bdd24059951cba5c8b69751b3d1db86
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219127"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508271"
 ---
 # <a name="memory-management"></a>Gestion de la mémoire
 
-Ce groupe d’articles décrit comment tirer parti des services à usage général de la MFC Microsoft Foundation Class Library () associés à la gestion de la mémoire. Allocation de mémoire peut être divisée en deux catégories principales : allocations de frame et les allocations de tas.
+Ce groupe d’articles explique comment tirer parti des services à usage général du bibliothèque MFC (Microsoft Foundation Class) (MFC) relatifs à la gestion de la mémoire. L’allocation de mémoire peut être divisée en deux catégories principales: les allocations de frame et les allocations de tas.
 
-Une des principales différences entre les deux techniques d’allocation est qu’avec l’allocation de frame que vous travaillez généralement avec la mémoire réelle bloc lui-même, alors qu’avec l’allocation de tas, vous disposez d’un pointeur désignant le bloc de mémoire. Une autre différence importante entre ces deux modèles est que les objets frame sont automatiquement supprimés, tandis que les objets du tas doivent être explicitement supprimés par le programmeur.
+L’une des principales différences entre les deux techniques d’allocation est qu’avec l’allocation de frame, vous travaillez généralement avec le bloc de mémoire réel proprement dit, tandis que avec l’allocation de tas, vous recevez toujours un pointeur vers le bloc de mémoire. Une autre différence majeure entre les deux schémas est que les objets Frame sont automatiquement supprimés, tandis que les objets Heap doivent être supprimés explicitement par le programmeur.
 
-Pour plus d’informations non-MFC sur la gestion de mémoire dans les programmes pour Windows, consultez [gestion de la mémoire](/windows/desktop/memory/memory-management) dans le SDK Windows.
+Pour obtenir des informations non-MFC sur la gestion de la mémoire dans les programmes pour Windows, consultez Gestion de la [mémoire](/windows/win32/memory/memory-management) dans le SDK Windows.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
 - [Allocation de frame](../mfc/memory-management-frame-allocation.md)
 
-- [Allocation de tas](../mfc/memory-management-heap-allocation.md)
+- [Allocation du tas](../mfc/memory-management-heap-allocation.md)
 
 - [Allocation de mémoire pour un tableau](../mfc/memory-management-examples.md)
 
-- [Désallocation de mémoire pour un tableau à partir du tas](../mfc/memory-management-examples.md)
+- [Libération de la mémoire pour un tableau à partir du tas](../mfc/memory-management-examples.md)
 
 - [Allocation de mémoire pour une structure de données](../mfc/memory-management-examples.md)
 

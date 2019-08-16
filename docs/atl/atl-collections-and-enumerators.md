@@ -7,41 +7,41 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: ebf7be8b2c80a714a27567ce0334475519a69454
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 502bedb1773dc2a6edbd6679d50e9c5946228283
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252364"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491899"
 ---
 # <a name="atl-collections-and-enumerators"></a>Collections et énumérateurs ATL
 
-Un `collection` est un objet COM qui fournit une interface qui autorise l’accès à un groupe d’éléments de données (données brutes ou autres objets). Une interface qui suit les normes pour fournir l’accès à un groupe d’objets est appelé un *interface de collection*.
+Un `collection` est un objet com qui fournit une interface qui permet d’accéder à un groupe d’éléments de données (données brutes ou autres objets). Une interface qui suit les normes pour fournir l’accès à un groupe d’objets est connue sous le nom d' *interface de collection*.
 
-Au minimum, les interfaces de collection doivent fournir un `Count` propriété qui retourne le nombre d’éléments dans la collection, une `Item` propriété qui retourne un élément de la collection basée sur un index, et un `_NewEnum` propriété qui retourne un énumérateur de la collection. Si vous le souhaitez, peuvent fournir des interfaces de collection `Add` et `Remove` des méthodes qui permettent d’éléments à insérer ou supprimer de la collection et un `Clear` méthode pour supprimer tous les éléments.
+Au minimum, les interfaces de collection doivent fournir `Count` une propriété qui retourne le nombre d’éléments dans la collection, `Item` une propriété qui retourne un élément de la collection en fonction d’un index et `_NewEnum` une propriété qui retourne un énumérateur de la collection. Éventuellement, les interfaces de collection peuvent `Add` fournir `Remove` des méthodes et pour autoriser l’insertion ou la suppression d’éléments dans la collection, `Clear` et une méthode pour supprimer tous les éléments.
 
-Un `enumerator` est un objet COM qui fournit une interface pour itérer au sein des éléments dans une collection. Interfaces d’énumérateur fournissent un accès série aux éléments d’une collection par le biais de quatre méthodes : `Next`, `Skip`, `Reset`, et `Clone`.
+Un `enumerator` est un objet com qui fournit une interface pour itérer au sein des éléments d’une collection. Les interfaces d’énumérateur fournissent un accès en série aux éléments d’une collection à l' `Next`aide de `Reset`quatre méthodes `Clone`requises:, `Skip`, et.
 
-Vous pouvez en savoir plus sur les interfaces d’énumérateur par lecture de contenu de référence comme [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) interface.
+Vous pouvez en savoir plus sur les interfaces d’énumérateur en lisant le contenu de référence, par exemple l’interface [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) .
 
 ## <a name="in-this-section"></a>Dans cette section
 
 [Collections ATL et classes d’énumérateurs](../atl/atl-collection-and-enumerator-classes.md)<br/>
-Décrit brièvement et fournit des liens vers les classes ATL qui vous aidera à implémentent des collections et énumérateurs.
+Décrit brièvement et fournit des liens vers les classes ATL qui vous aideront à implémenter des collections et des énumérateurs.
 
 [Principes de conception pour les interfaces d’énumérateurs et de collections](../atl/design-principles-for-collection-and-enumerator-interfaces.md)<br/>
-Décrit les principes de conception différent chaque type d’interface.
+Présente les différents principes de conception sous-jacents à chaque type d’interface.
 
 [Implémentation d’une collection basée sur la bibliothèque standard C++](../atl/implementing-an-stl-based-collection.md)<br/>
-Un exemple d’étendue qui vous guide tout au long de l’implémentation d’une collection basée sur la bibliothèque C++ Standard.
+Exemple étendu qui vous guide tout au long de l’implémentation C++ d’une collection standard basée sur la bibliothèque.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Propose des liens vers des rubriques conceptuelles traitant de la programmation à l'aide de la bibliothèque ATL (Active Template Library).
 
-[ATLCollections, exemple](../overview/visual-cpp-samples.md)<br/>
-Un exemple qui illustre l’utilisation de `ICollectionOnSTLImpl` et `CComEnumOnSTL`et l’implémentation de classes de stratégie de copie personnalisé.
+[Exemple ATLCollections](../overview/visual-cpp-samples.md)<br/>
+Exemple qui illustre l’utilisation de `ICollectionOnSTLImpl` et `CComEnumOnSTL`de, et l’implémentation de classes de stratégie de copie personnalisées.
 
 ## <a name="see-also"></a>Voir aussi
 

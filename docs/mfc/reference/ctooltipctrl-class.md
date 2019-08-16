@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: bbd369d282df1cac59e6966a2d832e23b8ff6da0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 046c8a3f99e8b505ee6a6e8b534318263090e07d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916737"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502255"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -231,7 +231,7 @@ Un contrôle d’info-bulle peut être associé à plusieurs outils. Appelez cet
 > [!NOTE]
 >  Vous ne pouvez pas définir une info-bulle sur un `AddTool`contrôle statique à l’aide de.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
   Consultez l’exemple de [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
@@ -261,7 +261,7 @@ Différent de zéro si le rectangle est correctement ajusté; Sinon, 0.
 
 Cette fonction membre calcule le rectangle d’affichage du texte d’un contrôle d’info-bulle à partir du rectangle de sa fenêtre, ou le rectangle de la fenêtre d’info-bulle nécessaire pour afficher un rectangle d’affichage de texte spécifié.
 
-Cette fonction membre implémente le comportement du [TTM_ADJUSTRECT](/windows/desktop/Controls/ttm-adjustrect)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement du [TTM_ADJUSTRECT](/windows/win32/Controls/ttm-adjustrect)de message Win32, comme décrit dans la SDK Windows.
 
 ##  <a name="create"></a>  CToolTipCtrl::Create
 
@@ -322,7 +322,7 @@ Pointeur vers la fenêtre qui est le parent du contrôle.
 Spécifie le style du contrôle d’info-bulle. Pour plus d’informations, consultez la section **Notes** de la rubrique [Create](#create) .
 
 *dwStyleEx*<br/>
-Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles Windows étendus, consultez le paramètre *dwExStyle* pour [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) dans le SDK Windows.
+Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles Windows étendus, consultez le paramètre *dwExStyle* pour [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -377,7 +377,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpToolInfo*<br/>
-Pointeur vers la structure [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) de l’info-bulle.
+Pointeur vers la structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) de l’info-bulle.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -385,7 +385,7 @@ Taille de l’info-bulle.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_GETBUBBLESIZE](/windows/desktop/Controls/ttm-getbubblesize)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement du [TTM_GETBUBBLESIZE](/windows/win32/Controls/ttm-getbubblesize)de message Win32, comme décrit dans la SDK Windows.
 
 ##  <a name="getcurrenttool"></a>  CToolTipCtrl::GetCurrentTool
 
@@ -399,7 +399,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*lpToolInfo*|à Pointeur vers une structure [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) qui reçoit des informations sur la fenêtre d’info-bulle actuelle.|
+|*lpToolInfo*|à Pointeur vers une structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) qui reçoit des informations sur la fenêtre d’info-bulle actuelle.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -407,9 +407,9 @@ TRUE si les informations sont récupérées avec succès; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le message [TTM_GETCURRENTTOOL](/windows/desktop/Controls/ttm-getcurrenttool) , qui est décrit dans le SDK Windows.
+Cette méthode envoie le message [TTM_GETCURRENTTOOL](/windows/win32/Controls/ttm-getcurrenttool) , qui est décrit dans le SDK Windows.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 L’exemple de code suivant récupère des informations sur la fenêtre d’info-bulle actuelle.
 
@@ -440,7 +440,7 @@ Délai spécifié, en millisecondes.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_GETDELAYTIME](/windows/desktop/Controls/ttm-getdelaytime)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement du [TTM_GETDELAYTIME](/windows/win32/Controls/ttm-getdelaytime)de message Win32, comme décrit dans la SDK Windows.
 
 ##  <a name="getmargin"></a>  CToolTipCtrl::GetMargin
 
@@ -464,7 +464,7 @@ Adresse d’une `RECT` structure qui recevra les informations sur les marges. Le
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_GETMARGIN](/windows/desktop/Controls/ttm-getmargin)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement du [TTM_GETMARGIN](/windows/win32/Controls/ttm-getmargin)de message Win32, comme décrit dans la SDK Windows.
 
 ##  <a name="getmaxtipwidth"></a>  CToolTipCtrl::GetMaxTipWidth
 
@@ -480,7 +480,7 @@ Largeur maximale d’une fenêtre d’info-bulle.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_GETMAXTIPWIDTH](/windows/desktop/Controls/ttm-getmaxtipwidth)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement du [TTM_GETMAXTIPWIDTH](/windows/win32/Controls/ttm-getmaxtipwidth)de message Win32, comme décrit dans la SDK Windows.
 
 ##  <a name="gettext"></a>  CToolTipCtrl::GetText
 
@@ -518,11 +518,11 @@ COLORREF GetTipBkColor() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur [COLORREF](/windows/desktop/gdi/colorref) qui représente la couleur d’arrière-plan.
+Valeur [COLORREF](/windows/win32/gdi/colorref) qui représente la couleur d’arrière-plan.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_GETTIPBKCOLOR](/windows/desktop/Controls/ttm-gettipbkcolor)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement du [TTM_GETTIPBKCOLOR](/windows/win32/Controls/ttm-gettipbkcolor)de message Win32, comme décrit dans la SDK Windows.
 
 ##  <a name="gettiptextcolor"></a>  CToolTipCtrl::GetTipTextColor
 
@@ -534,11 +534,11 @@ COLORREF GetTipTextColor() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur [COLORREF](/windows/desktop/gdi/colorref) qui représente la couleur du texte.
+Valeur [COLORREF](/windows/win32/gdi/colorref) qui représente la couleur du texte.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_GETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-gettiptextcolor)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement du [TTM_GETTIPTEXTCOLOR](/windows/win32/Controls/ttm-gettiptextcolor)de message Win32, comme décrit dans la SDK Windows.
 
 ##  <a name="gettitle"></a>  CToolTipCtrl::GetTitle
 
@@ -552,11 +552,11 @@ void GetTitle(PTTGETTITLE pttgt) const;
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*pttgt*|à Pointeur vers une structure [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-ttgettitle) qui contient des informations sur le contrôle ToolTip. Lorsque cette méthode est retournée, le membre *pszTitle* de la structure [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-ttgettitle) pointe vers le texte du titre.|
+|*pttgt*|à Pointeur vers une structure [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) qui contient des informations sur le contrôle ToolTip. Lorsque cette méthode est retournée, le membre *pszTitle* de la structure [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) pointe vers le texte du titre.|
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le message [TTM_GETTITLE](/windows/desktop/Controls/ttm-gettitle) , qui est décrit dans le SDK Windows.
+Cette méthode envoie le message [TTM_GETTITLE](/windows/win32/Controls/ttm-gettitle) , qui est décrit dans le SDK Windows.
 
 ##  <a name="gettoolcount"></a>  CToolTipCtrl::GetToolCount
 
@@ -598,7 +598,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Les `hwnd` membres `uId` et de la structure [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) référencée par *CToolInfo* identifient l’outil. Si cet outil a été inscrit avec le contrôle d’info-bulle par le biais `AddTool`d’un `TOOLINFO` appel précédent à, la structure est remplie avec des informations sur l’outil.
+Les `hwnd` membres `uId` et de la structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) référencée par *CToolInfo* identifient l’outil. Si cet outil a été inscrit avec le contrôle d’info-bulle par le biais `AddTool`d’un `TOOLINFO` appel précédent à, la structure est remplie avec des informations sur l’outil.
 
 ##  <a name="hittest"></a>  CToolTipCtrl::HitTest
 
@@ -620,7 +620,7 @@ Pointeur vers la fenêtre qui contient l’outil.
 Pointeur vers un `CPoint` objet contenant les coordonnées du point à tester.
 
 *lpToolInfo*<br/>
-Pointeur vers la structure [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) qui contient des informations sur l’outil.
+Pointeur vers la structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) qui contient des informations sur l’outil.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -662,7 +662,7 @@ void Pop();
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_POP](/windows/desktop/Controls/ttm-pop)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement du [TTM_POP](/windows/win32/Controls/ttm-pop)de message Win32, comme décrit dans la SDK Windows.
 
 ##  <a name="popup"></a>  CToolTipCtrl::Popup
 
@@ -674,7 +674,7 @@ void Popup();
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le message [TTM_POPUP](/windows/desktop/Controls/ttm-popup) , qui est décrit dans le SDK Windows.
+Cette méthode envoie le message [TTM_POPUP](/windows/win32/Controls/ttm-popup) , qui est décrit dans le SDK Windows.
 
 ### <a name="example"></a>Exemples
 
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Paramètres
 
 *lpMsg*<br/>
-Pointeur vers une structure [MSG](/windows/desktop/api/winuser/ns-winuser-msg) qui contient le message à relayer.
+Pointeur vers une structure [MSG](/windows/win32/api/winuser/ns-winuser-msg) qui contient le message à relayer.
 
 ### <a name="remarks"></a>Notes
 
@@ -705,7 +705,7 @@ Un contrôle d’info-bulle traite uniquement les messages suivants, qui lui son
 |WM_MBUTTONDOWN|WM_RBUTTONUP|
 |WM_MBUTTONUP||
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
   Consultez l’exemple de [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
@@ -751,7 +751,7 @@ Adresse d’une `RECT` structure qui contient les informations sur les marges à
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_SETMARGIN](/windows/desktop/Controls/ttm-setmargin)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement du [TTM_SETMARGIN](/windows/win32/Controls/ttm-setmargin)de message Win32, comme décrit dans la SDK Windows.
 
 ##  <a name="setmaxtipwidth"></a>  CToolTipCtrl::SetMaxTipWidth
 
@@ -772,7 +772,7 @@ Largeur maximale du Conseil.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_SETMAXTIPWIDTH](/windows/desktop/Controls/ttm-setmaxtipwidth)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement du [TTM_SETMAXTIPWIDTH](/windows/win32/Controls/ttm-setmaxtipwidth)de message Win32, comme décrit dans la SDK Windows.
 
 ##  <a name="settipbkcolor"></a>  CToolTipCtrl::SetTipBkColor
 
@@ -789,7 +789,7 @@ Nouvelle couleur d’arrière-plan.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_SETTIPBKCOLOR](/windows/desktop/Controls/ttm-settipbkcolor)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement du [TTM_SETTIPBKCOLOR](/windows/win32/Controls/ttm-settipbkcolor)de message Win32, comme décrit dans la SDK Windows.
 
 ##  <a name="settiptextcolor"></a>  CToolTipCtrl::SetTipTextColor
 
@@ -806,7 +806,7 @@ Nouvelle couleur du texte.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_SETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-settiptextcolor)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement du [TTM_SETTIPTEXTCOLOR](/windows/win32/Controls/ttm-settiptextcolor)de message Win32, comme décrit dans la SDK Windows.
 
 ##  <a name="settitle"></a>  CToolTipCtrl::SetTitle
 
@@ -821,7 +821,7 @@ BOOL SetTitle(
 ### <a name="parameters"></a>Paramètres
 
 *uIcon*<br/>
-Consultez l' *icône* dans [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle) dans le SDK Windows.
+Consultez l' *icône* dans [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle) dans le SDK Windows.
 
 *lpstrTitle*<br/>
 Pointeur vers la chaîne de titre.
@@ -832,7 +832,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement du [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle)de message Win32, comme décrit dans la SDK Windows.
 
 ##  <a name="settoolinfo"></a>  CToolTipCtrl::SetToolInfo
 
@@ -845,7 +845,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>Paramètres
 
 *lpToolInfo*<br/>
-Pointeur vers une structure [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) qui spécifie les informations à définir.
+Pointeur vers une structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) qui spécifie les informations à définir.
 
 ##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect
 
@@ -888,7 +888,7 @@ La valeur de retour n’est pas utilisée.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre émule les fonctionnalités du message [TTM_SETWINDOWTHEME](/windows/desktop/Controls/ttm-setwindowtheme) , comme décrit dans la SDK Windows.
+Cette fonction membre émule les fonctionnalités du message [TTM_SETWINDOWTHEME](/windows/win32/Controls/ttm-setwindowtheme) , comme décrit dans la SDK Windows.
 
 ##  <a name="update"></a>  CToolTipCtrl::Update
 

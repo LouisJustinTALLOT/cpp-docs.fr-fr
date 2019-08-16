@@ -10,16 +10,16 @@ helpviewer_keywords:
 - -GA compiler option [C++]
 - Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-ms.openlocfilehash: a5eb6a10f3c4833ecc3e9d9c8451894788ebd938
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85efa03a3f3d267580cbb0442839afb18ac6c313
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292313"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492864"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (Optimiser pour une application Windows)
 
-Génère du code plus efficace pour un fichier .exe pour accéder aux variables de stockage local des threads (TLS).
+Permet d’obtenir un code plus efficace pour un fichier. exe pour l’accès aux variables de stockage local des threads (TLS).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,13 +29,13 @@ Génère du code plus efficace pour un fichier .exe pour accéder aux variables 
 
 ## <a name="remarks"></a>Notes
 
-**/GA** accélère l’accès aux données déclarées avec [__declspec (thread)](../../cpp/declspec.md) dans un programme basé sur Windows. Lorsque cette option est définie, le [__tls_index a la valeur](/windows/desktop/ProcThread/thread-local-storage) macro est censée pour avoir la valeur 0.
+**/GA** accélère l’accès aux données déclarées avec [_ _ declspec (thread)](../../cpp/declspec.md) dans un programme Windows. Lorsque cette option est définie, la macro [__tls_index](/windows/win32/ProcThread/thread-local-storage) est supposée être 0.
 
-À l’aide de **/GA** pour une DLL peut entraîner la génération de code incorrecte.
+L’utilisation de **/GA** pour une dll peut entraîner une génération de code incorrecte.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 

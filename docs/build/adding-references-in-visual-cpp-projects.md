@@ -1,5 +1,5 @@
 ---
-title: Utilisation des bibliothèques et des composants dans les projets C++
+title: Utilisation de bibliothèques et de composants C++ dans des projets
 ms.date: 12/10/2018
 f1_keywords:
 - VC.Project.References
@@ -7,50 +7,50 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a65ad69914b14e7b8b37c321fa7d06740af57e3a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274787"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493384"
 ---
-# <a name="consuming-libraries-and-components"></a>Utilisation des bibliothèques et composants
+# <a name="consuming-libraries-and-components"></a>Utilisation de bibliothèques et de composants
 
-Souvent, un projet C++ doit appeler des fonctions ou accéder aux données dans un fichier binaire comme bibliothèque statique (fichiers .lib), DLL, composant de Windows Runtime, COM ou un assembly .NET. Dans ce cas, vous devez configurer le projet pour qu’il puisse trouver ce code binaire au moment de la génération. Les étapes spécifiques varient selon le type de votre projet, le type du fichier binaire, et indique si le fichier binaire est généré dans la même solution que votre projet. 
+Souvent, un C++ projet doit appeler des fonctions ou accéder aux données dans un fichier binaire, tel qu’une bibliothèque statique (fichiers. lib), une dll, un composant Windows Runtime, un composant com ou un assembly .net. Dans ce cas, vous devez configurer le projet afin qu’il puisse trouver ce fichier binaire au moment de la génération. Les étapes spécifiques dépendent du type de votre projet, du type de fichier binaire et de l’éventuelle génération du fichier binaire dans la même solution que votre projet. 
 
-## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Utilisation des bibliothèques téléchargés via vcpkg
+## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Utilisation de bibliothèques téléchargées via vcpkg
 
-Pour utiliser une bibliothèque que vous avez téléchargé à l’aide de la **vcpkg** Gestionnaire de package, vous pouvez ignorer les instructions ci-dessous. Consultez [vcpkg : Gestionnaire de package C++ pour Windows, Linux et MacOS](vcpkg.md#integrate-with-visual-studio-windows) pour plus d’informations.
+Pour utiliser une bibliothèque que vous avez téléchargée à l’aide du gestionnaire de package **vcpkg** , vous pouvez ignorer les instructions ci-dessous. Consultez [vcpkg : Un C++ gestionnaire de package pour Windows, Linux et](vcpkg.md#integrate-with-visual-studio-windows) MacOS pour plus d’informations.
 
-## <a name="consuming-static-libraries"></a>Utilisation des bibliothèques statiques
+## <a name="consuming-static-libraries"></a>Utilisation de bibliothèques statiques
 
-Si votre projet de bibliothèque statique est généré dans la même solution :
+Si votre projet de bibliothèque statique est généré dans la même solution:
 
-1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>inclure les fichiers d’en-tête pour la bibliothèque statique à l’aide de guillemets. Dans une solution classique commence par le chemin d’accès `../<library project name>`. IntelliSense vous aidera à trouver.
-2. Ajoutez une référence au projet de bibliothèque statique. Avec le bouton droit sur **références** sous le nœud de projet d’application dans **l’Explorateur de solutions** et choisissez **ajouter une référence**. 
+1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>incluez le ou les fichiers d’en-tête pour la bibliothèque statique à l’aide de guillemets. Dans une solution standard, le chemin d’accès `../<library project name>`commence par. IntelliSense vous aide à le trouver.
+2. Ajoutez une référence au projet de bibliothèque statique. Cliquez avec le bouton droit sur **références** sous le nœud projet d’application dans **Explorateur de solutions** et choisissez **Ajouter une référence**. 
 
-Si la bibliothèque statique ne fait pas partie de la solution :
+Si la bibliothèque statique ne fait pas partie de la solution:
 
-1. Avec le bouton droit sur le nœud de projet d’application dans **l’Explorateur de solutions** , puis **propriétés**. 
-2. Dans le **répertoires VC ++** propriété page, ajoutez le chemin d’accès au répertoire où se trouve le fichier .lib dans **chemins d’accès de la bibliothèque** et ajoutez le chemin d’accès aux fichiers d’en-tête de bibliothèque dans **répertoires Include** .  
-3. Dans le **l’éditeur de liens > entrée** propriété page, ajoutez le nom du fichier .lib à **dépendances supplémentaires**.
+1. Dans **Explorateur de solutions** , cliquez avec le bouton droit sur le nœud du projet d’application, puis choisissez **Propriétés**. 
+2. Dans la page de propriétés **Répertoires VC + +** , ajoutez le chemin d’accès au répertoire où se trouve le fichier. lib dans les **chemins d’accès de bibliothèque** , puis ajoutez le chemin d’accès au (x) fichier (s) d’en-tête de bibliothèque dans les répertoires **include**.  
+3. Dans l' **éditeur de liens >** page de propriétés d’entrée, ajoutez le nom du fichier. lib aux **dépendances supplémentaires**.
 
 ## <a name="dynamic-link-libraries"></a>Bibliothèques de liens dynamiques
 
 Si la DLL est générée dans le cadre de la même solution que l’application, suivez les mêmes étapes que pour une bibliothèque statique.
 
-Si la DLL ne fait pas partie de la solution d’application, vous devez le fichier DLL, les en-têtes avec des prototypes pour les classes et les fonctions exportées et un fichier .lib qui fournit les informations de liaison nécessaires.
+Si la DLL ne fait pas partie de la solution d’application, vous avez besoin du fichier DLL, des en-têtes avec des prototypes pour les fonctions et les classes exportées, et d’un fichier. lib qui fournit les informations de liaison nécessaires.
 
-1. Copiez la DLL dans le dossier de sortie de votre projet, ou vers un autre dossier dans le chemin de recherche Windows standard pour les DLL. Consultez [Dynamic-Link Library Search Order](/windows/desktop/dlls/dynamic-link-library-search-order).
-2. Suivez les étapes 1 à 3 pour les bibliothèques statiques fournir les chemins d’accès pour les en-têtes et le fichier .lib.
+1. Copiez la DLL dans le dossier de sortie de votre projet ou dans un autre dossier du chemin d’accès de recherche Windows standard pour les dll. Consultez l' [ordre de recherche de la bibliothèque de liens dynamiques](/windows/win32/dlls/dynamic-link-library-search-order).
+2. Suivez les étapes 1-3 pour les bibliothèques statiques pour fournir les chemins d’accès aux en-têtes et au fichier. lib.
 
 ## <a name="com-objects"></a>objets COM
 
-Si votre application C++ native doit utiliser un objet COM, et cet objet est *inscrit*, il vous est alors appelez CoCreateInstance et passez le CLSID de l’objet. Le système le trouver dans le Registre Windows et le charger. C++ / c++ / projet CLI peut consommer un objet COM de la même façon, ou en ajoutant une référence à celui-ci à partir de la **ajouter des références > COM** liste et le consommer via son [wrapper RCW](/dotnet/framework/interop/runtime-callable-wrapper). 
+Si votre application C++ Native doit consommer un objet com et que cet objet est *inscrit*, il vous suffit d’appeler CoCreateInstance et de transmettre le CLSID de l’objet. Le système le trouvera dans le Registre Windows et le chargera. Un C++projet/CLI peut utiliser un objet com de la même manière, ou en ajoutant une référence à partir de la liste **ajouter des références > com** et en l’utilisant via son [Wrapper pouvant être appelé](/dotnet/framework/interop/runtime-callable-wrapper)par le Runtime. 
 
-## <a name="net-assemblies-and-windows-runtime-components"></a>Assemblys .NET et composants Windows Runtime
+## <a name="net-assemblies-and-windows-runtime-components"></a>Assemblys .NET et composants de Windows Runtime
 
-Dans UWP ou C++ / c++ / projets de l’interface CLI, vous consommez des assemblys .NET ou composants Windows Runtime en ajoutant un *référence* à l’assembly ou le composant. Sous le **références** nœud dans un UWP ou C++ / c++ / CLI project, vous voyez des références aux composants couramment utilisés. Avec le bouton droit sur le **références** nœud dans **l’Explorateur de solutions** pour faire apparaître le **Gestionnaire de références** et parcourir des composants supplémentaires qui sont connus pour le système. Cliquez sur le **Parcourir** bouton pour accéder à n’importe quel dossier où se trouve un composant personnalisé. Étant donné que les assemblys .NET et les composants Windows Runtime contiennent des informations de type intégré, vous pouvez afficher leurs classes et méthodes en effectuant un clic droit et en choisissant **afficher dans le navigateur de l’objet**. 
+Dans les projets C++UWP ou/CLI, vous consommez des assemblys .net ou des composants Windows Runtime en ajoutant une *référence* à l’assembly ou au composant. Sous le nœud **références** dans un projet UWP C++ou/CLI, vous pouvez voir des références à des composants couramment utilisés. Cliquez avec le bouton droit sur le nœud **références** dans **Explorateur de solutions** pour afficher le **Gestionnaire de références** et parcourir les autres composants connus du système. Cliquez sur le bouton **Parcourir** pour accéder à un dossier où se trouve un composant personnalisé. Étant donné que les assemblys .NET et les composants Windows Runtime contiennent des informations de type intégrées, vous pouvez afficher leurs méthodes et classes en cliquant avec le bouton droit et en sélectionnant **afficher dans l’Explorateur d’objets**. 
 
 ## <a name="reference-properties"></a>Propriétés de référence
 
@@ -80,9 +80,9 @@ Les propriétés de référence ActiveX sont disponibles uniquement pour les ré
 
    Affiche l'outil utilisé pour générer l'assembly d'interopérabilité à partir de la bibliothèque COM référencée ou d'un contrôle ActiveX.
 
-### <a name="assembly-reference-properties-ccli"></a>Propriétés de référence d’assembly (C++ / c++ / CLI)
+### <a name="assembly-reference-properties-ccli"></a>Propriétés de référence deC++l’assembly (/CLI)
 
-Propriétés de référence d’assembly sont disponibles uniquement pour les références aux assemblys .NET Framework en C / c++ / projets de l’interface CLI. Ces propriétés sont affichées uniquement lorsqu’un assembly .NET Framework est sélectionné dans le **références** volet. Les propriétés ne peuvent pas être modifiées.
+Les propriétés de référence d’assembly sont disponibles uniquement pour les C++références aux assemblys .NET Framework dans les projets/CLI. Ces propriétés s’affichent uniquement lorsqu’un assembly de .NET Framework est sélectionné dans le volet **références** . Les propriétés ne peuvent pas être modifiées.
 
 - **Chemin d’accès relatif**
 
@@ -96,7 +96,7 @@ Les propriétés suivantes sont disponibles sur divers genres de références. E
 
    Spécifie si l'assembly référencé doit être copié automatiquement vers l'emplacement cible pendant une génération.
 
-- **Copiez les assemblys satellites locaux (C++ / c++ / CLI)**
+- **Copier les assemblys satellites locauxC++(/CLI)**
 
    Spécifie si les assemblys satellites de l'assembly référencé doivent être copiés automatiquement vers l'emplacement cible pendant une génération. Utilisé uniquement si **Copie locale** a la valeur **true**.
 
@@ -106,7 +106,7 @@ Les propriétés suivantes sont disponibles sur divers genres de références. E
 
 ### <a name="project-to-project-reference-properties"></a>Propriétés de référence entre projets
 
-Les propriétés suivantes définissent un *référence de projet à projet* à partir du projet est sélectionné dans le **références** volet à un autre projet dans la même solution. Pour plus d’informations, consultez [Gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project).
+Les propriétés suivantes définissent une *référence* entre projets à partir du projet sélectionné dans le volet **références** vers un autre projet de la même solution. Pour plus d’informations, consultez [Gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project).
 
 - **Lier les dépendances de la bibliothèque**
 
@@ -120,7 +120,7 @@ Les propriétés suivantes définissent un *référence de projet à projet* à 
 
    Quand cette propriété a la valeur **False**, le système de projet ne lie pas au projet dépendant les fichiers .obj de la bibliothèque produite par le projet indépendant. Ainsi, cette valeur désactive la liaison incrémentielle. En général, vous spécifiez **False** , car la génération de l'application peut prendre du temps, s'il existe de nombreux projets indépendants.
 
-### <a name="read-only-reference-properties-com--net"></a>Propriétés de la référence en lecture seule (COM et .NET)
+### <a name="read-only-reference-properties-com--net"></a>Propriétés de référence en lecture seule (COM & .NET)
 
 Les propriétés suivantes font partie des références d’assembly COM et .NET. Elles ne peuvent pas être modifiées.
 
@@ -166,5 +166,5 @@ Les propriétés suivantes font partie des références d’assembly COM et .NET
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de page de propriété de projet C++](reference/property-pages-visual-cpp.md)<br>
+[C++Référence de la page de propriétés du projet](reference/property-pages-visual-cpp.md)<br>
 [Définir le compilateur C++ et les propriétés de build dans Visual Studio](working-with-project-properties.md)

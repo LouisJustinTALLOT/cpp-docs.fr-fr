@@ -1,5 +1,5 @@
 ---
-title: Ckeyboardmanager, classe
+title: CKeyboardManager, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CKeyboardManager
@@ -30,14 +30,14 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: 3360a28d50f64546837cc5ef35dcfc761b4fb0f5
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e4f8f678e76113b5d012242f474ff0ab8b0628dd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341502"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505778"
 ---
-# <a name="ckeyboardmanager-class"></a>Ckeyboardmanager, classe
+# <a name="ckeyboardmanager-class"></a>CKeyboardManager, classe
 
 Gère les tables de touches de raccourci pour la fenêtre frame principale et les fenêtres frames enfants.
 
@@ -54,7 +54,7 @@ class CKeyboardManager : public CObject
 |||
 |-|-|
 |Nom|Description|
-|[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Construit un objet `CKeyboardManager`.|
+|[CKeyboardManager:: CKeyboardManager](#ckeyboardmanager)|Construit un objet `CKeyboardManager`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -62,26 +62,26 @@ class CKeyboardManager : public CObject
 |-|-|
 |Nom|Description|
 |[CKeyboardManager::CleanUp](#cleanup)|Efface les tables de touches de raccourci.|
-|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Récupère la touche de raccourci par défaut pour la commande spécifiée et la fenêtre.|
+|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Récupère la touche de raccourci par défaut pour la commande et la fenêtre spécifiées.|
 |[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Détermine si une clé est gérée par la table d’accélérateurs.|
-|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Indique si un caractère imprimable.|
-|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Indique si les menus affichent toutes les touches de raccourci pour une commande ou uniquement la touche de raccourci par défaut.|
+|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Indique si un caractère peut être imprimé.|
+|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Indique si les menus affichent toutes les touches de raccourci d’une commande ou uniquement la touche de raccourci par défaut.|
 |[CKeyboardManager::LoadState](#loadstate)|Charge les tables de touches de raccourci à partir du Registre Windows.|
-|[CKeyboardManager::ResetAll](#resetall)|Recharge les tables de clés de raccourci à partir de la ressource d’application.|
-|[CKeyboardManager::SaveState](#savestate)|Enregistre le raccourci de tables de clés dans le Registre Windows.|
-|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Spécifie si le framework affiche toutes les touches de raccourci pour toutes les commandes ou une touche de raccourci unique pour chaque commande. Cette méthode n’affecte pas les commandes qui n'ont qu’une seule touche de raccourci associé.|
-|[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Convertit un caractère en son Registre supérieure.|
-|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Met à jour une table de clés de raccourci avec une nouvelle table de clé de raccourci.|
+|[CKeyboardManager::ResetAll](#resetall)|Recharge les tables de touches de raccourci à partir de la ressource d’application.|
+|[CKeyboardManager::SaveState](#savestate)|Enregistre les tables de touches de raccourci dans le Registre Windows.|
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Spécifie si l’infrastructure affiche toutes les touches de raccourci pour toutes les commandes, ou une touche de raccourci unique pour chaque commande. Cette méthode n’affecte pas les commandes qui n’ont qu’une seule touche de raccourci associée.|
+|[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Convertit un caractère en son registre supérieur.|
+|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Met à jour une table de raccourcis clavier avec une nouvelle table de touches de raccourci.|
 
 ## <a name="remarks"></a>Notes
 
-Les membres de cette classe vous permettent d’enregistrer et charger des tables de clés de raccourci dans le Registre Windows, utilisez un modèle pour mettre à jour les tables de clés contextuels et trouver la touche de raccourci par défaut pour une commande dans une fenêtre frame. En outre, le `CKeyboardManager` objet vous permet de contrôler comment les touches de raccourci sont affichées à l’utilisateur.
+Les membres de cette classe vous permettent d’enregistrer et de charger des tables de touches de raccourci dans le Registre Windows, d’utiliser un modèle pour mettre à jour les tables de clés courtes et de rechercher la touche de raccourci par défaut pour une commande dans une fenêtre frame. En outre, l' `CKeyboardManager` objet vous permet de contrôler la façon dont les touches de raccourci sont affichées à l’utilisateur.
 
-Vous ne devez pas créer un `CKeyboardManager` objet manuellement. Il sera créé automatiquement par l’infrastructure de votre application. Toutefois, vous devez appeler [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) pendant le processus d’initialisation de votre application. Pour obtenir un pointeur vers le Gestionnaire de clavier pour votre application, appelez [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).
+Vous ne devez pas créer `CKeyboardManager` un objet manuellement. Il sera créé automatiquement par l’infrastructure de votre application. Toutefois, vous devez appeler [CWinAppEx:: InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) pendant le processus d’initialisation de votre application. Pour obtenir un pointeur vers le gestionnaire de clavier de votre application, appelez [CWinAppEx:: GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment récupérer un pointeur vers un `CKeyboardManager` de l’objet à partir d’un `CWinAppEx` classe et comment afficher toutes les touches de raccourci associées aux commandes de menu. Cet extrait de code fait partie de la [exemple des Pages personnalisées](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment récupérer un pointeur vers un `CKeyboardManager` objet à partir d’une `CWinAppEx` classe, et comment afficher toutes les touches de raccourci associées aux commandes de menu. Cet extrait de code fait partie de l' [exemple de pages personnalisées](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 
@@ -93,7 +93,7 @@ L’exemple suivant montre comment récupérer un pointeur vers un `CKeyboardMan
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxkeyboardmanager.h
+**En-tête:** afxkeyboardmanager. h
 
 ##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager
 
@@ -105,11 +105,11 @@ CKeyboardManager();
 
 ### <a name="remarks"></a>Notes
 
-Dans la plupart des cas, vous n’avez pas à créer un `CKeyboardManager` directement. Par défaut, l’infrastructure crée un pour vous. Pour obtenir un pointeur vers le `CKeyboardManager`, appelez [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Si vous créez une manuellement, vous devez l’initialiser avec la méthode [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).
+Dans la plupart des cas, vous n’avez pas besoin `CKeyboardManager` de créer un directement. Par défaut, le Framework en crée un pour vous. Pour obtenir un pointeur vers le `CKeyboardManager`, appelez [CWinAppEx:: GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Si vous en créez une manuellement, vous devez l’initialiser à l’aide de la méthode [CWinAppEx:: InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).
 
 ##  <a name="cleanup"></a>  CKeyboardManager::CleanUp
 
-Libère le `CKeyboardManager` ressources et efface tous les mappages de touches de raccourci.
+Libère les `CKeyboardManager` ressources et efface tous les mappages de touches de raccourci.
 
 ```
 static void CleanUp();
@@ -117,13 +117,13 @@ static void CleanUp();
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur les touches de raccourci, consultez [personnalisation du clavier et souris](../../mfc/keyboard-and-mouse-customization.md).
+Pour plus d’informations sur les touches de raccourci, consultez [Personnalisation du clavier et de la souris](../../mfc/keyboard-and-mouse-customization.md).
 
-Il est inutile d’appeler cette fonction lorsque vous quittez l’application, car le framework appelle automatiquement au cours de fermeture de l’application.
+Vous n’avez pas à appeler cette fonction lorsque votre application se ferme, car le Framework l’appelle automatiquement pendant la fermeture de l’application.
 
 ##  <a name="finddefaultaccelerator"></a>  CKeyboardManager::FindDefaultAccelerator
 
-Récupère la touche de raccourci par défaut pour la commande spécifiée et la fenêtre.
+Récupère la touche de raccourci par défaut pour la commande et la fenêtre spécifiées.
 
 ```
 static BOOL FindDefaultAccelerator(
@@ -136,28 +136,28 @@ static BOOL FindDefaultAccelerator(
 ### <a name="parameters"></a>Paramètres
 
 *uiCmd*<br/>
-[in] ID de commande.
+dans ID de la commande.
 
 *str*<br/>
-[out] Une référence à un `CString` objet.
+à Référence à un `CString` objet.
 
 *pWndFrame*<br/>
-[in] Pointeur vers une fenêtre frame.
+dans Pointeur vers une fenêtre frame.
 
 *bIsDefaultFrame*<br/>
-[in] Spécifie si la fenêtre frame est la fenêtre de frame par défaut.
+dans Spécifie si la fenêtre frame est la fenêtre frame par défaut.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le raccourci est trouvé ; sinon 0.
+Différent de zéro si le raccourci est trouvé; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode recherche la commande spécifiée par *uiCmd* et récupère la touche de raccourci par défaut. Ensuite, la méthode accepte la chaîne associée à cette touche de raccourci et écrit la valeur pour le *str* paramètre.
+Cette méthode recherche la commande spécifiée par *uiCmd* et récupère la touche de raccourci par défaut. La méthode prend ensuite la chaîne associée à cette touche de raccourci et écrit la valeur dans le paramètre *Str* .
 
 ##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled
 
-Détermine si la clé spécifiée est gérée par le [ckeyboardmanager, classe](../../mfc/reference/ckeyboardmanager-class.md).
+Détermine si la clé spécifiée est gérée par la [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md).
 
 ```
 static BOOL __stdcall IsKeyHandled(
@@ -172,22 +172,22 @@ static BOOL __stdcall IsKeyHandled(
 |||
 |-|-|
 |Paramètre|Description|
-|*nKey*|[in] La clé à vérifier.|
-|*fVirt*|[in] Spécifie le comportement de la touche de raccourci. Pour obtenir la liste des valeurs possibles, consultez [accélération Structure](/windows/desktop/api/winuser/ns-winuser-tagaccel).|
-|*pWndFrame*|[in] Une fenêtre frame. Cette méthode détermine si une touche de raccourci est gérée dans ce frame.|
-|*bIsDefaultFrame*|[in] Un paramètre booléen qui indique si *pWndFrame* est la fenêtre de frame par défaut.|
+|*nKey*|dans Clé à vérifier.|
+|*fVirt*|dans Spécifie le comportement de la touche de raccourci. Pour obtenir la liste des valeurs possibles, consultez la rubrique [structure d’accélération](/windows/win32/api/winuser/ns-winuser-accel).|
+|*pWndFrame*|dans Fenêtre frame. Cette méthode détermine si une touche de raccourci est gérée dans ce frame.|
+|*bIsDefaultFrame*|dans Paramètre booléen qui indique si *pWndFrame* est la fenêtre frame par défaut.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la touche de raccourci est gérée. FALSE si la clé n’est pas gérée ou si *pWndFrame* a la valeur NULL.
+TRUE si la touche de raccourci est gérée. FALSe si la clé n’est pas gérée ou si *pWndFrame* a la valeur null.
 
 ### <a name="remarks"></a>Notes
 
-Les paramètres d’entrée doivent correspondre à l’entrée dans la table d’accélérateurs les deux pour *nKey* et *fVirt* pour déterminer si une touche de raccourci est gérée dans *pWndFrame*.
+Les paramètres d’entrée doivent correspondre à l’entrée de la table d’accélérateurs pour *nKey* et *fVirt* pour déterminer si une touche de raccourci est gérée dans *pWndFrame*.
 
 ##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable
 
-Indique si un caractère imprimable.
+Indique si un caractère peut être imprimé.
 
 ```
 static BOOL __stdcall IsKeyPrintable(const UINT nChar);
@@ -198,15 +198,15 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||
 |-|-|
 |Paramètre|Description|
-|*nChar*|[in] Le caractère qui vérifie cette méthode.|
+|*nChar*|dans Caractère vérifié par cette méthode.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le caractère imprimable, zéro si elle n’est pas.
+Différent de zéro si le caractère est imprimable, zéro si ce n’est pas le cas.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode échoue si un appel à [GetKeyboardState](/windows/desktop/api/winuser/nf-winuser-getkeyboardstate) échoue.
+Cette méthode échoue si un appel à [GetKeyboardState](/windows/win32/api/winuser/nf-winuser-getkeyboardstate) échoue.
 
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators
 
@@ -218,11 +218,11 @@ static BOOL IsShowAllAccelerators();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’application répertorie toutes les touches de raccourci pour les commandes de menu ; 0 si l’application affiche uniquement les touches de raccourci par défaut.
+Différent de zéro si l’application répertorie toutes les touches de raccourci pour les commandes de menu; 0 si l’application affiche uniquement les touches de raccourci par défaut.
 
 ### <a name="remarks"></a>Notes
 
-L’application répertorie les touches de raccourci pour les commandes de menu dans la barre de menus. Utilisez la fonction [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) pour contrôler si l’application répertorie toutes les touches de raccourci ou simplement les touches de raccourci par défaut.
+L’application répertorie les touches de raccourci pour les commandes de menu dans la barre de menus. Utilisez la fonction [CKeyboardManager:: ShowAllAccelerators](#showallaccelerators) pour contrôler si l’application répertorie toutes les touches de raccourci ou uniquement les touches de raccourci par défaut.
 
 ##  <a name="loadstate"></a>  CKeyboardManager::LoadState
 
@@ -237,24 +237,24 @@ BOOL LoadState(
 ### <a name="parameters"></a>Paramètres
 
 *lpszProfileName*<br/>
-[in] Le chemin d’accès du Registre où `CKeyboardManager` les données sont enregistrées.
+dans Chemin d’accès au `CKeyboardManager` registre où les données sont enregistrées.
 
 *pDefaultFrame*<br/>
-[in] Pointeur vers une fenêtre frame à utiliser comme la fenêtre par défaut.
+dans Pointeur vers une fenêtre frame à utiliser comme fenêtre par défaut.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’état a été chargé avec succès ou 0 dans le cas contraire.
+Différent de zéro si l’État a été chargé avec succès ou 0 dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Si le *lpszProfileName* paramètre est NULL, cette méthode vérifie l’emplacement de Registre par défaut `CKeyboardManager` données. L’emplacement de Registre par défaut est spécifié par le [CWinAppEx, classe](../../mfc/reference/cwinappex-class.md). Les données doivent être écrites précédemment avec la méthode [CKeyboardManager::SaveState](#savestate).
+Si le paramètre *lpszProfileName* est null, cette méthode vérifie l’emplacement du Registre par `CKeyboardManager` défaut pour les données. L’emplacement du Registre par défaut est spécifié par la [classe CWinAppEx](../../mfc/reference/cwinappex-class.md). Les données doivent être écrites précédemment à l’aide de la méthode [CKeyboardManager:: saveste](#savestate).
 
-Si vous ne spécifiez pas une fenêtre par défaut, la fenêtre frame principale de votre application sera utilisée.
+Si vous ne spécifiez pas de fenêtre par défaut, la fenêtre frame principale de votre application est utilisée.
 
 ##  <a name="resetall"></a>  CKeyboardManager::ResetAll
 
-Recharge les tables de clés de raccourci à partir de la ressource d’application.
+Recharge les tables de touches de raccourci à partir de la ressource d’application.
 
 ```
 void ResetAll();
@@ -262,11 +262,11 @@ void ResetAll();
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction efface les raccourcis stockées dans le `CKeyboardManager` instance. Il sera ensuite rechargez l’état du Gestionnaire de clavier à partir de la ressource d’application.
+Cette fonction efface les raccourcis stockés dans l' `CKeyboardManager` instance. Il recharge ensuite l’état du gestionnaire de clavier à partir de la ressource d’application.
 
 ##  <a name="savestate"></a>  CKeyboardManager::SaveState
 
-Enregistre le raccourci de tables de clés dans le Registre Windows.
+Enregistre les tables de touches de raccourci dans le Registre Windows.
 
 ```
 BOOL SaveState(
@@ -277,20 +277,20 @@ BOOL SaveState(
 ### <a name="parameters"></a>Paramètres
 
 *lpszProfileName*<br/>
-[in] Le chemin d’accès de Registre pour enregistrer le `CKeyboardManager` état.
+dans Chemin d’accès du Registre pour `CKeyboardManager` l’enregistrement de l’État.
 
 *pDefaultFrame*<br/>
-[in] Pointeur vers une fenêtre frame qui devient la fenêtre par défaut.
+dans Pointeur vers une fenêtre frame qui devient la fenêtre par défaut.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’état de gestionnaire de clavier a été enregistré avec succès, ou 0 dans le cas contraire.
+Différent de zéro si l’état du gestionnaire de clavier a été enregistré avec succès, ou 0 dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Si le *lpszProfileName* paramètre est NULL, cette méthode écrit le `CKeyboardManager` à l’état de l’emplacement par défaut spécifié par le [CWinAppEx, classe](../../mfc/reference/cwinappex-class.md). Si vous spécifiez un emplacement, vous pouvez charger les données ultérieurement à l’aide de la méthode [CKeyboardManager::LoadState](#loadstate).
+Si le paramètre *lpszProfileName* est null, cette méthode écrit l' `CKeyboardManager` État à l’emplacement par défaut spécifié par la [classe CWinAppEx](../../mfc/reference/cwinappex-class.md). Si vous spécifiez un emplacement, vous pouvez charger les données ultérieurement à l’aide de la méthode [CKeyboardManager:: LoadState](#loadstate).
 
-Si vous ne spécifiez pas une fenêtre par défaut, la fenêtre frame principale sera utilisée en tant que la fenêtre par défaut.
+Si vous ne spécifiez pas de fenêtre par défaut, la fenêtre frame principale sera utilisée comme fenêtre par défaut.
 
 ##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators
 
@@ -305,20 +305,20 @@ static void ShowAllAccelerators(
 ### <a name="parameters"></a>Paramètres
 
 *bShowAll*<br/>
-[in] Si la valeur est TRUE, toutes les touches de raccourci seront affichera. Si la valeur est FALSE, la première touche de raccourci s’affichera.
+dans Si la valeur est TRUE, toutes les touches de raccourci sont affichées. Si la valeur est FALSe, seule la première touche de raccourci sera affichée.
 
 *lpszDelimiter*<br/>
-[in] Chaîne à insérer entre les touches de raccourci. Ce séparateur n’a aucun effet si seulement une touche de raccourci s’affiche.
+dans Chaîne à insérer entre les touches de raccourci. Ce délimiteur n’a aucun effet si une seule touche de raccourci est affichée.
 
 ### <a name="remarks"></a>Notes
 
-Par défaut, si une commande contient plus d’une touche de raccourci associée, uniquement la première touche de raccourci s’affichera. Cette fonction vous permet de répertorier toutes les touches de raccourci associés à toutes les commandes.
+Par défaut, si plusieurs touches de raccourci sont associées à une commande, seule la première touche de raccourci sera affichée. Cette fonction vous permet de répertorier toutes les touches de raccourci associées à toutes les commandes.
 
-Les touches de raccourci apparaît en regard de la commande dans la barre de menus. Si les touches de raccourci sont affichées, la chaîne fournie par *lpszDelimiter* pour séparer les touches de raccourci individuels.
+Les touches de raccourci seront listées en regard de la commande dans la barre de menus. Si toutes les touches de raccourci sont affichées, la chaîne fournie par *lpszDelimiter* sépare les touches de raccourci individuelles.
 
 ##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper
 
-Convertit un caractère en son Registre supérieure.
+Convertit un caractère en son registre supérieur.
 
 ```
 static UINT TranslateCharToUpper(const UINT nChar);
@@ -327,15 +327,15 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ### <a name="parameters"></a>Paramètres
 
 *nChar*<br/>
-[in] Caractère à convertir.
+dans Caractère à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le caractère qui représente le Registre supérieur du paramètre d’entrée.
+Caractère qui est le registre supérieur du paramètre d’entrée.
 
 ##  <a name="updateacceltable"></a>  CKeyboardManager::UpdateAccelTable
 
-Met à jour une table de clés de raccourci avec une nouvelle table de clé de raccourci.
+Met à jour une table de raccourcis clavier avec une nouvelle table de touches de raccourci.
 
 ```
 BOOL UpdateAccelTable(
@@ -353,27 +353,27 @@ BOOL UpdateAccelTable(
 ### <a name="parameters"></a>Paramètres
 
 *pTemplate*<br/>
-[in] Pointeur vers un modèle de document.
+dans Pointeur vers un modèle de document.
 
 *lpAccel*<br/>
-[in] Pointeur vers la nouvelle touche de raccourci.
+dans Pointeur vers la nouvelle touche de raccourci.
 
 *nSize*<br/>
-[in] La taille de la nouvelle table de raccourci.
+dans Taille du nouveau tableau de raccourcis.
 
 *pDefaultFrame*<br/>
-[in] Pointeur vers la fenêtre de frame par défaut.
+dans Pointeur vers la fenêtre frame par défaut.
 
 *hAccelNew*<br/>
-[in] Handle vers la nouvelle table de raccourci.
+dans Handle vers le nouveau tableau de raccourcis.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la méthode réussit ; sinon 0.
+Différent de zéro si la méthode réussit; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction permet de remplacer la table de raccourci existant avec nouvelles touches de raccourci pour plusieurs objets de fenêtre frame. La fonction reçoit un modèle de document en tant que paramètre pour obtenir l’accès à tous les objets de fenêtre frame connecté au modèle de document donné.
+Utilisez cette fonction pour remplacer la table de raccourcis existante par de nouvelles touches de raccourci pour plusieurs objets de fenêtre frame. La fonction reçoit un modèle de document en tant que paramètre pour obtenir l’accès à tous les objets de fenêtre frame connectés au modèle de document donné.
 
 ## <a name="see-also"></a>Voir aussi
 

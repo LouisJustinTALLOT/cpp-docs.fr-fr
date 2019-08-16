@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 23160c51466ce1a2857d3648dd5f4970dfe172f7
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 5e485c22bcc4bf35f61226d84345102052689f89
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504217"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504534"
 ---
 # <a name="cnetaddressctrl-class"></a>Classe CNetAddressCtrl
 
@@ -49,32 +49,32 @@ class CNetAddressCtrl : public CEdit
 
 |Nom|Description|
 |----------|-----------------|
-|[CNetAddressCtrl::Create](#create)|Crée un contrôle d’adresse réseau avec des styles spécifiés et l’attache à actuel `CNetAddressCtrl` objet.|
-|[CNetAddressCtrl::CreateEx](#createex)|Crée un contrôle d’adresse réseau avec des styles étendus spécifiés et l’attache à actuel `CNetAddressCtrl` objet.|
-|[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)|Affiche une info-bulle erreur lorsque l’utilisateur entre une adresse de réseau non pris en charge dans le contrôle d’adresse réseau actuelle.|
-|[CNetAddressCtrl::GetAddress](#getaddress)|Récupère une représentation analysée et validée de l’adresse de réseau associé au contrôle d’adresse réseau actuelle.|
-|[CNetAddressCtrl::GetAllowType](#getallowtype)|Récupère le type d’adresse réseau prenant en charge le contrôle d’adresse réseau actuelle.|
-|[CNetAddressCtrl::SetAllowType](#setallowtype)|Définit le type d’adresse réseau prenant en charge le contrôle d’adresse réseau actuelle.|
+|[CNetAddressCtrl::Create](#create)|Crée un contrôle d’adresse réseau avec les styles spécifiés et l’attache à `CNetAddressCtrl` l’objet actuel.|
+|[CNetAddressCtrl::CreateEx](#createex)|Crée un contrôle d’adresse réseau avec les styles étendus spécifiés et l’attache `CNetAddressCtrl` à l’objet actuel.|
+|[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)|Affiche un info-bulle d’erreur lorsque l’utilisateur entre une adresse réseau non prise en charge dans le contrôle d’adresse réseau actuel.|
+|[CNetAddressCtrl::GetAddress](#getaddress)|Récupère une représentation validée et analysée de l’adresse réseau associée au contrôle d’adresse réseau actuel.|
+|[CNetAddressCtrl::GetAllowType](#getallowtype)|Récupère le type d’adresse réseau que le contrôle d’adresse réseau actuel peut prendre en charge.|
+|[CNetAddressCtrl::SetAllowType](#setallowtype)|Définit le type d’adresse réseau que le contrôle d’adresse réseau actuel peut prendre en charge.|
 
 ## <a name="remarks"></a>Notes
 
-Le contrôle d’adresse réseau vérifie que le format de l’adresse de l’utilisateur entre est correct. Le contrôle ne se connecte pas réellement à l’adresse réseau. Le [CNetAddressCtrl::SetAllowType](#setallowtype) méthode spécifie un ou plusieurs types d’adresse qui le [CNetAddressCtrl::GetAddress](#getaddress) méthode peut analyser et vérifier. Une adresse peut être sous la forme d’IPv4, IPv6 ou adresse nommée d’un serveur, réseau, hôte ou destination de message de diffusion. Si le format de l’adresse est incorrect, vous pouvez utiliser la [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) pour afficher une boîte de message d’info-bulle qui pointe vers la zone de texte du contrôle d’adresse réseau et affiche une liste prédéfinie graphiquement (méthode) message d’erreur.
+Le contrôle d’adresse réseau vérifie que le format de l’adresse entrée par l’utilisateur est correct. Le contrôle ne se connecte pas réellement à l’adresse réseau. La méthode [CNetAddressCtrl:: SetAllowType](#setallowtype) spécifie un ou plusieurs types d’adresses que la méthode [CNetAddressCtrl:: GetAddress](#getaddress) peut analyser et vérifier. Une adresse peut se présenter sous la forme d’une adresse IPv4, IPv6 ou nommée pour un serveur, un réseau, un hôte ou une destination de message de diffusion. Si le format de l’adresse est incorrect, vous pouvez utiliser la méthode [CNetAddressCtrl::D isplayerrortip](#displayerrortip) pour afficher une boîte de message d’info-bulle qui pointe graphiquement vers la zone de texte du contrôle d’adresse réseau et affiche un message d’erreur prédéfini.
 
-Le `CNetAddressCtrl` classe est dérivée de la [CEdit](../../mfc/reference/cedit-class.md) classe. Par conséquent, le contrôle d’adresse réseau fournit l’accès à tous les messages de contrôle d’édition Windows.
+La `CNetAddressCtrl` classe est dérivée de la classe [CEdit](../../mfc/reference/cedit-class.md) . Par conséquent, le contrôle d’adresse réseau permet d’accéder à tous les messages de contrôle d’édition Windows.
 
-L’illustration suivante représente une boîte de dialogue qui contient un contrôle d’adresse réseau. Le texte boîte (1) pour le contrôle d’adresse réseau contient une adresse réseau non valide. Le message d’info-bulle (2) s’affiche si l’adresse réseau n’est pas valide.
+L’illustration suivante représente une boîte de dialogue qui contient un contrôle d’adresse réseau. La zone de texte (1) pour le contrôle d’adresse réseau contient une adresse réseau non valide. Le message d’info-bulle (2) s’affiche si l’adresse réseau n’est pas valide.
 
-![Boîte de dialogue avec un contrôle d’adresse réseau et l’info-bulle. ](../../mfc/reference/media/cnetaddctrl.png "Boîte de dialogue avec un contrôle d’adresse réseau et l’info-bulle.")
+![Boîte de dialogue avec un contrôle d’adresse réseau et une info-bulle.](../../mfc/reference/media/cnetaddctrl.png "Boîte de dialogue avec un contrôle d’adresse réseau et une info-bulle.")
 
 ## <a name="example"></a>Exemple
 
-L’exemple de code suivant est une partie d’une boîte de dialogue qui valide une adresse réseau. Les gestionnaires d’événements pour les trois boutons radio spécifient que l’adresse réseau peut être un des trois types d’adresses. L’utilisateur entre une adresse dans la zone de texte du contrôle de réseau, puis appuie sur un bouton pour valider l’adresse. Si l’adresse est valide, un message de réussite s’affiche ; Sinon, le message d’erreur prédéfinies info-bulle s’affiche.
+L’exemple de code suivant est une partie d’une boîte de dialogue qui valide une adresse réseau. Les gestionnaires d’événements pour trois cases d’option spécifient que l’adresse réseau peut être l’un des trois types d’adresses. L’utilisateur entre une adresse dans la zone de texte du contrôle réseau, puis appuie sur un bouton pour valider l’adresse. Si l’adresse est valide, un message de réussite s’affiche. dans le cas contraire, le message d’erreur info-bulle prédéfini s’affiche.
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]
 
 ## <a name="example"></a>Exemple
 
-L’exemple de code suivant à partir du fichier d’en-tête de boîte de dialogue définit les [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) et [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) variables qui sont requis par le [CNetAddressCtrl::GetAddress](#getaddress)(méthode).
+L’exemple de code suivant du fichier d’en-tête de boîte de dialogue définit les variables [NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address) et [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) requises par la méthode [CNetAddressCtrl:: GetAddress](#getaddress) .
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]
 
@@ -94,9 +94,9 @@ L’exemple de code suivant à partir du fichier d’en-tête de boîte de dialo
 
 **En-tête :** afxcmn.h
 
-Cette classe est pris en charge dans Windows Vista et versions ultérieures.
+Cette classe est prise en charge dans Windows Vista et versions ultérieures.
 
-Exigences supplémentaires pour cette classe sont décrites dans [Build Configuration requise pour Windows Vista contrôles communs](../../mfc/build-requirements-for-windows-vista-common-controls.md).
+Des exigences supplémentaires pour cette classe sont décrites dans [exigences de build pour les contrôles communs Windows Vista](../../mfc/build-requirements-for-windows-vista-common-controls.md).
 
 ##  <a name="cnetaddressctrl"></a>  CNetAddressCtrl::CNetAddressCtrl
 
@@ -108,11 +108,11 @@ CNetAddressCtrl();
 
 ### <a name="remarks"></a>Notes
 
-Utilisez le [CNetAddressCtrl::Create](#create) ou [CNetAddressCtrl::CreateEx](#createex) méthode pour créer un contrôle de réseau et l’attacher à la `CNetAddressCtrl` objet.
+Utilisez la méthode [CNetAddressCtrl:: Create](#create) ou [CNetAddressCtrl:: CreateEx](#createex) pour créer un contrôle réseau et l’attacher à `CNetAddressCtrl` l’objet.
 
 ##  <a name="create"></a>  CNetAddressCtrl::Create
 
-Crée un contrôle d’adresse réseau avec des styles spécifiés et l’attache à actuel `CNetAddressCtrl` objet.
+Crée un contrôle d’adresse réseau avec les styles spécifiés et l’attache à `CNetAddressCtrl` l’objet actuel.
 
 ```
 virtual BOOL Create(
@@ -126,18 +126,18 @@ virtual BOOL Create(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*dwStyle*|[in] Une combinaison au niveau du bit de styles à appliquer au contrôle. Pour plus d’informations, consultez [modifier les Styles](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*rect*|[in] Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui contient la position et la taille du contrôle.|
-|*pParentWnd*|[in] Un pointeur non null pour un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle.|
-|*nID*|[in] L’ID du contrôle.|
+|*dwStyle*|dans Combinaison d’opérations de bits de styles à appliquer au contrôle. Pour plus d’informations, consultez [modifier des styles](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
+|*rect*|dans Référence à une structure [Rect](/previous-versions/dd162897\(v=vs.85\)) qui contient la position et la taille du contrôle.|
+|*pParentWnd*|dans Pointeur non null vers un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fenêtre parente du contrôle.|
+|*nID*|dans ID du contrôle.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si cette méthode a réussi ; Sinon, FALSE.
+TRUE si cette méthode réussit; Sinon, FALSe.
 
 ##  <a name="createex"></a>  CNetAddressCtrl::CreateEx
 
-Crée un contrôle d’adresse réseau avec des styles étendus spécifiés et l’attache à actuel `CNetAddressCtrl` objet.
+Crée un contrôle d’adresse réseau avec les styles étendus spécifiés et l’attache `CNetAddressCtrl` à l’objet actuel.
 
 ```
 virtual BOOL CreateEx(
@@ -152,19 +152,19 @@ virtual BOOL CreateEx(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*dwExStyle*|[in] Une combinaison (OR) au niveau du bit des styles étendus à appliquer au contrôle. Pour plus d’informations, consultez le *dwExStyle* paramètre de la [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) (fonction).|
-|*dwStyle*|[in] Une combinaison (OR) au niveau du bit de styles à appliquer au contrôle. Pour plus d’informations, consultez [modifier les Styles](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*rect*|[in] Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui contient la position et la taille du contrôle.|
-|*pParentWnd*|[in] Un pointeur non null pour un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle.|
-|*nID*|[in] L’ID du contrôle.|
+|*dwExStyle*|dans Combinaison d’opérations de bits de styles étendus à appliquer au contrôle. Pour plus d’informations, consultez le paramètre *dwExStyle* de la fonction [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) .|
+|*dwStyle*|dans Combinaison d’opérations de bits (ou) de styles à appliquer au contrôle. Pour plus d’informations, consultez [modifier des styles](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
+|*rect*|dans Référence à une structure [Rect](/previous-versions/dd162897\(v=vs.85\)) qui contient la position et la taille du contrôle.|
+|*pParentWnd*|dans Pointeur non null vers un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fenêtre parente du contrôle.|
+|*nID*|dans ID du contrôle.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si cette méthode a réussi ; Sinon, FALSE.
+TRUE si cette méthode réussit; Sinon, FALSe.
 
 ##  <a name="displayerrortip"></a>  CNetAddressCtrl::DisplayErrorTip
 
-Affiche un message d’erreur dans l’info-bulle qui est associé au contrôle d’adresse réseau actuelle.
+Affiche un message d’erreur dans l’info-bulle associée au contrôle d’adresse réseau actuel.
 
 ```
 HRESULT DisplayErrorTip();
@@ -172,17 +172,17 @@ HRESULT DisplayErrorTip();
 
 ### <a name="return-value"></a>Valeur de retour
 
-La valeur `S_OK` si cette méthode est réussie ; sinon, un code d’erreur.
+Valeur `S_OK` si cette méthode réussit; sinon, code d’erreur.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez le [CNetAddressCtrl::SetAllowType](#setallowtype) méthode pour spécifier les types d’adresses prenant en charge le contrôle d’adresse réseau actuelle. Utilisez le [CNetAddressCtrl::GetAddress](#getaddress) méthode pour valider et d’analyser l’adresse réseau que l’utilisateur entre. Utilisez le [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) méthode pour afficher une info-bulle de message erreur si le [CNetAddressCtrl::GetAddress](#getaddress) méthode est infructueuse.
+Utilisez la méthode [CNetAddressCtrl:: SetAllowType](#setallowtype) pour spécifier les types d’adresses que le contrôle d’adresse réseau actuel peut prendre en charge. Utilisez la méthode [CNetAddressCtrl:: GetAddress](#getaddress) pour valider et analyser l’adresse réseau entrée par l’utilisateur. Utilisez la méthode [CNetAddressCtrl::D isplayerrortip](#displayerrortip) pour afficher une info-bulle de message d’erreur si la méthode [CNetAddressCtrl:: GetAddress](#getaddress) échoue.
 
-Ce message appelle la [NetAddr_DisplayErrorTip](/windows/desktop/api/shellapi/nf-shellapi-netaddr_displayerrortip) (macro), qui est décrit dans le SDK Windows. Cette macro envoie le `NCM_DISPLAYERRORTIP` message.
+Ce message appelle la macro [NetAddr_DisplayErrorTip](/windows/win32/api/shellapi/nf-shellapi-netaddr_displayerrortip) , qui est décrite dans la SDK Windows. Cette macro envoie le `NCM_DISPLAYERRORTIP` message.
 
 ##  <a name="getaddress"></a>  CNetAddressCtrl::GetAddress
 
-Récupère une représentation analysée et validée de l’adresse réseau qui est associé au contrôle d’adresse réseau actuelle.
+Récupère une représentation validée et analysée de l’adresse réseau associée au contrôle d’adresse réseau actuel.
 
 ```
 HRESULT GetAddress(PNC_ADDRESS pAddress) const;
@@ -191,23 +191,23 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ### <a name="parameters"></a>Paramètres
 
 *pAddress*<br/>
-[in, out] Pointeur vers un [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) structure.  Définir le *pAddrInfo* membre de cette structure à l’adresse d’un [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) structure avant d’appeler la méthode GetAddress.
+[in, out] Pointeur vers une structure [NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address) .  Définissez le membre *pAddrInfo* de cette structure sur l’adresse d’une structure [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) avant d’appeler la méthode GetAddress.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La valeur S_OK si cette méthode a réussi ; Sinon, un code d’erreur COM. Pour plus d’informations sur les codes d’erreur possibles, consultez la section de la valeur de retour de la [NetAddr_GetAddress](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getaddress) (macro).
+Valeur S_OK si cette méthode réussit; Sinon, code d’erreur COM. Pour plus d’informations sur les codes d’erreur possibles, consultez la section valeur de retour de la macro [NetAddr_GetAddress](/windows/win32/api/shellapi/nf-shellapi-netaddr_getaddress) .
 
 ### <a name="remarks"></a>Notes
 
-Si cette méthode réussite, le [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) structure contient des informations supplémentaires sur l’adresse réseau.
+Si cette méthode réussit, la structure [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) contient des informations supplémentaires sur l’adresse réseau.
 
-Utilisez le [CNetAddressCtrl::SetAllowType](#setallowtype) méthode pour spécifier les types d’adresses, le contrôle d’adresse réseau actuelle peut prendre en charge. Utilisez le [CNetAddressCtrl::GetAddress](#getaddress) méthode pour valider et d’analyser l’adresse réseau que l’utilisateur entre. Utilisez le [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) méthode pour afficher une info-bulle de message erreur si le [CNetAddressCtrl::GetAddress](#getaddress) méthode est infructueuse.
+Utilisez la méthode [CNetAddressCtrl:: SetAllowType](#setallowtype) pour spécifier les types d’adresses que le contrôle d’adresse réseau actuel peut prendre en charge. Utilisez la méthode [CNetAddressCtrl:: GetAddress](#getaddress) pour valider et analyser l’adresse réseau entrée par l’utilisateur. Utilisez la méthode [CNetAddressCtrl::D isplayerrortip](#displayerrortip) pour afficher une info-bulle de message d’erreur si la méthode [CNetAddressCtrl:: GetAddress](#getaddress) échoue.
 
-Cette méthode appelle la [NetAddr_GetAddress](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getaddress) (macro), qui est décrit dans le SDK Windows. Cette macro envoie le message NCM_GETADDRESS.
+Cette méthode appelle la macro [NetAddr_GetAddress](/windows/win32/api/shellapi/nf-shellapi-netaddr_getaddress) , qui est décrite dans la SDK Windows. Cette macro envoie le message NCM_GETADDRESS.
 
 ##  <a name="getallowtype"></a>  CNetAddressCtrl::GetAllowType
 
-Récupère le type d’adresse réseau prenant en charge le contrôle d’adresse réseau actuelle.
+Récupère le type d’adresse réseau que le contrôle d’adresse réseau actuel peut prendre en charge.
 
 ```
 DWORD GetAllowType() const;
@@ -215,15 +215,15 @@ DWORD GetAllowType() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une combinaison (OR) d’indicateurs qui spécifie les types d’adresses que le contrôle d’adresse réseau peut prendre en charge. Pour plus d’informations, consultez [NET_STRING](/windows/desktop/shell/net-string).
+Combinaison de bits (OR) d’indicateurs qui spécifie les types d’adresses que le contrôle d’adresse réseau peut prendre en charge. Pour plus d’informations, consultez [NET_STRING](/windows/win32/shell/net-string).
 
 ### <a name="remarks"></a>Notes
 
-Ce message appelle la [NetAddr_GetAllowType](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getallowtype) (macro), qui est décrit dans le SDK Windows. Cette macro envoie le message NCM_GETALLOWTYPE.
+Ce message appelle la macro [NetAddr_GetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_getallowtype) , qui est décrite dans la SDK Windows. Cette macro envoie le message NCM_GETALLOWTYPE.
 
 ##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType
 
-Définit le type d’adresse réseau prenant en charge le contrôle d’adresse réseau actuelle.
+Définit le type d’adresse réseau que le contrôle d’adresse réseau actuel peut prendre en charge.
 
 ```
 HRESULT SetAllowType(DWORD dwAddrMask);
@@ -233,17 +233,17 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*dwAddrMask*|[in] Une combinaison (OR) d’indicateurs qui spécifie les types d’adresses que le contrôle d’adresse réseau peut prendre en charge. Pour plus d’informations, consultez [NET_STRING](/windows/desktop/shell/net-string).|
+|*dwAddrMask*|dans Combinaison de bits (OR) d’indicateurs qui spécifie les types d’adresses que le contrôle d’adresse réseau peut prendre en charge. Pour plus d’informations, consultez [NET_STRING](/windows/win32/shell/net-string).|
 
 ### <a name="return-value"></a>Valeur de retour
 
-S_OK si cette méthode a réussi ; Sinon, un code d’erreur COM.
+S_OK si cette méthode réussit; Sinon, code d’erreur COM.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez le [CNetAddressCtrl::SetAllowType](#setallowtype) méthode pour spécifier les types d’adresses prenant en charge le contrôle d’adresse réseau actuelle. Utilisez le [CNetAddressCtrl::GetAddress](#getaddress) méthode pour valider et d’analyser l’adresse réseau que l’utilisateur entre. Utilisez le [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) méthode pour afficher une info-bulle de message erreur si le [CNetAddressCtrl::GetAddress](#getaddress) méthode est infructueuse.
+Utilisez la méthode [CNetAddressCtrl:: SetAllowType](#setallowtype) pour spécifier les types d’adresses que le contrôle d’adresse réseau actuel peut prendre en charge. Utilisez la méthode [CNetAddressCtrl:: GetAddress](#getaddress) pour valider et analyser l’adresse réseau entrée par l’utilisateur. Utilisez la méthode [CNetAddressCtrl::D isplayerrortip](#displayerrortip) pour afficher une info-bulle de message d’erreur si la méthode [CNetAddressCtrl:: GetAddress](#getaddress) échoue.
 
-Ce message appelle la [NetAddr_SetAllowType](/windows/desktop/api/shellapi/nf-shellapi-netaddr_setallowtype) (macro), qui est décrit dans le SDK Windows. Cette macro envoie le message NCM_SETALLOWTYPE.
+Ce message appelle la macro [NetAddr_SetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_setallowtype) , qui est décrite dans la SDK Windows. Cette macro envoie le message NCM_SETALLOWTYPE.
 
 ## <a name="see-also"></a>Voir aussi
 

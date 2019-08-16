@@ -1,5 +1,5 @@
 ---
-title: Décompte de références (ATL)
+title: Comptage de références (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - AddRef method [C++], reference counting
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - reference counts
 - references, counting
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
-ms.openlocfilehash: fa160cb40af632321e1b14fd3ca88a4dd578b972
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 565b74956280d4e80c41376ead4249e69980a80e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249650"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492218"
 ---
-# <a name="reference-counting"></a>Comptage de références
+# <a name="reference-counting"></a>Décompte de références
 
-COM lui-même n’essaie pas automatiquement supprimer un objet de la mémoire lorsqu’il détermine que l’objet n’est plus utilisé. Au lieu de cela, le programmeur de l’objet doit supprimer l’objet inutilisé. Le programmeur détermine si un objet peut être supprimé en fonction d’un décompte de références.
+COM n’essaie pas automatiquement de supprimer un objet de la mémoire lorsqu’il pense que l’objet n’est plus utilisé. Au lieu de cela, le programmeur d’objets doit supprimer l’objet inutilisé. Le programmeur détermine si un objet peut être supprimé en fonction d’un décompte de références.
 
-COM utilise le `IUnknown` méthodes, [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) et [version](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), pour gérer le décompte de références des interfaces sur un objet. Les règles générales pour l’appel de ces méthodes sont :
+COM utilise les `IUnknown` méthodes, [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) et [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release), pour gérer le décompte de références des interfaces sur un objet. Les règles générales pour l’appel de ces méthodes sont les suivantes:
 
-- Chaque fois qu’un client reçoit un pointeur d’interface, `AddRef` doit être appelée sur l’interface.
+- Chaque fois qu’un client reçoit un pointeur `AddRef` d’interface, doit être appelé sur l’interface.
 
-- Chaque fois que le client a terminé d’utiliser le pointeur d’interface, il doit appeler `Release`.
+- Chaque fois que le client a terminé d’utiliser le pointeur d’interface `Release`, il doit appeler.
 
-Dans une implémentation simple, chaque `AddRef` appeler incrémente et chacun `Release` appeler décrémente une variable de compteur à l’intérieur de l’objet. Lorsque le compteur revient à zéro, l’interface n’est plus a tous les utilisateurs et est libre de supprimer lui-même de la mémoire.
+Dans une implémentation simple, chaque `AddRef` appel est incrémenté et `Release` chaque appel décrémente une variable de compteur à l’intérieur de l’objet. Lorsque le nombre retourne à zéro, l’interface n’a plus d’utilisateurs et est libre de se supprimer de la mémoire.
 
-Comptage de références peut également être implémentée afin que chaque référence à l’objet (pas une interface individuelle) est comptabilisé. Dans ce cas, chaque `AddRef` et `Release` appeler des délégués à une implémentation centrale sur l’objet, et `Release` libère l’objet entier lorsque son décompte de références atteint zéro.
+Le décompte de références peut également être implémenté afin que chaque référence à l’objet (et non à une interface individuelle) soit comptée. Dans ce cas, chacun `AddRef` et `Release` appelle des délégués à une implémentation centrale sur l’objet et `Release` libère l’objet entier lorsque son décompte de références atteint zéro.
 
 > [!NOTE]
->  Quand un `CComObject`-objet dérivé est construit à l’aide de la **nouveau** opérateur, le décompte de références est 0. Par conséquent, un appel à `AddRef` doit être effectué après la création du `CComObject`-objet dérivé.
+>  Lorsqu’un `CComObject`objet dérivé de est construit à l’aide de l’opérateur **New** , le nombre de références est égal à 0. Par conséquent, un appel `AddRef` à doit être effectué après la création `CComObject`réussie de l’objet dérivé de.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Présentation de COM](../atl/introduction-to-com.md)<br/>
-[La gestion des durées de vie des objets via le décompte](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
+[Gestion des durées de vie des objets via le décompte de références](/windows/win32/com/managing-object-lifetimes-through-reference-counting)

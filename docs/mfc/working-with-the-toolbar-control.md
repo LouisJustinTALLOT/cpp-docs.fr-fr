@@ -7,55 +7,55 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-ms.openlocfilehash: 88c00bf60f2ce1fccecd757d13b2f814e3a18be4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60cc527493e2a68751c201b998ab171c564d6c1f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399497"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510579"
 ---
 # <a name="working-with-the-toolbar-control"></a>Utilisation du contrôle ToolBar
 
-Cet article explique comment vous pouvez accéder à la [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objet sous-jacent un [CToolBar](../mfc/reference/ctoolbar-class.md) pour mieux contrôler vos barres d’outils. Il s’agit d’une rubrique avancée.
+Cet article explique comment vous pouvez accéder à l’objet [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) sous-jacent à [CToolBar](../mfc/reference/ctoolbar-class.md) pour mieux contrôler vos barres d’outils. Il s’agit d’une rubrique avancée.
 
 ## <a name="procedures"></a>Procédures
 
-#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>Pour accéder au contrôle commun de barre d’outils sous-jacent de l’objet CToolBar
+#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>Pour accéder au contrôle commun de barre d’outils sous-jacent à votre objet CToolBar
 
-1. Appelez [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).
+1. Appelez [CToolBar:: GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).
 
-`GetToolBarCtrl` Retourne une référence à un [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objet. Vous pouvez utiliser la référence pour appeler des fonctions membres de la classe de contrôle de barre d’outils.
+`GetToolBarCtrl`retourne une référence à un objet [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) . Vous pouvez utiliser la référence pour appeler des fonctions membres de la classe de contrôle ToolBar.
 
 > [!CAUTION]
->  Lors de l’appel `CToolBarCtrl` **obtenir** fonctions sont sécurisées, soyez prudent si vous appelez le **définir** fonctions. Il s’agit d’une rubrique avancée. Normalement, vous ne doit pas besoin d’accéder au contrôle sous-jacent de la barre d’outils.
+>  Bien que `CToolBarCtrl` l’appel des fonctions d' **extraction** soit sécurisé, soyez prudent si vous appelez les fonctions **Set** . Il s’agit d’une rubrique avancée. Normalement, vous n’avez pas besoin d’accéder au contrôle de barre d’outils sous-jacent.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+### <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
 - [Contrôles (contrôles communs Windows)](../mfc/controls-mfc.md)
 
-- [Principes de base de barre d’outils](../mfc/toolbar-fundamentals.md)
+- [Notions de base de la barre d’outils](../mfc/toolbar-fundamentals.md)
 
-- [Ancrer et rendre flottantes les barres d’outils](../mfc/docking-and-floating-toolbars.md)
+- [Barres d’outils ancrées et flottantes](../mfc/docking-and-floating-toolbars.md)
 
 - [Redimensionnement dynamique de la barre d’outils](../mfc/docking-and-floating-toolbars.md)
 
 - [Info-bulles de barre d’outils](../mfc/toolbar-tool-tips.md)
 
-- [Mises à jour de barre d’état flyby](../mfc/toolbar-tool-tips.md)
+- [Mises à jour de la barre d’État Flyby](../mfc/toolbar-tool-tips.md)
 
-- [Gestion des notifications pour les info-bulle Info](../mfc/handling-tool-tip-notifications.md)
+- [Gestion des notifications d’info-bulle](../mfc/handling-tool-tip-notifications.md)
 
-- Le [CToolBar](../mfc/reference/ctoolbar-class.md) et [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes
+- Classes [CToolBar](../mfc/reference/ctoolbar-class.md) et [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)
 
 - [Gestion des notifications de personnalisation](../mfc/handling-customization-notifications.md)
 
-- [Plusieurs barres d’outils](../mfc/toolbar-fundamentals.md)
+- [Barres d’outils multiples](../mfc/toolbar-fundamentals.md)
 
-- [À l’aide de vos anciennes barres d’outils](../mfc/using-your-old-toolbars.md)
+- [Utilisation de vos anciennes barres d’outils](../mfc/using-your-old-toolbars.md)
 
 - [Barres de contrôles](../mfc/control-bars.md)
 
-Pour obtenir des informations générales sur l’utilisation de contrôles communs Windows, consultez [contrôles communs](/windows/desktop/Controls/common-controls-intro).
+Pour obtenir des informations générales sur l’utilisation des contrôles communs Windows, consultez [contrôles communs](/windows/win32/Controls/common-controls-intro).
 
 ## <a name="see-also"></a>Voir aussi
 

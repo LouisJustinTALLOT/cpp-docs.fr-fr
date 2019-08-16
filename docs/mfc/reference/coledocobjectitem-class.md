@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: 454be491fe5875b1b1ac9b2b85fdebe2f1663ebc
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c6e00bf42cf20b46c949c218efe1820cc7ce0f9b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916976"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504007"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem, classe
 
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
 Identificateur de la commande à exécuter. Doit se trouver dans le groupe identifié par *pguidCmdGroup*.
 
 *nCmdExecOpt*<br/>
-Spécifie les options d’exécution de commande. Par défaut, définissez pour exécuter la commande sans inviter l’utilisateur. Pour obtenir la liste des valeurs, consultez [OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) .
+Spécifie les options d’exécution de commande. Par défaut, définissez pour exécuter la commande sans inviter l’utilisateur. Pour obtenir la liste des valeurs, consultez [OLECMDEXECOPT](/windows/win32/api/docobj/ne-docobj-olecmdexecopt) .
 
 *pguidCmdGroup*<br/>
 Identificateur unique du groupe de commandes. Par défaut, NULL, qui spécifie le groupe standard. La commande passée dans *nCmdId* doit appartenir au groupe.
@@ -176,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’interface [IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview) de la vue actuellement active. S’il n’existe pas d’affichage actuel, la valeur NULL est retournée.
+Pointeur vers l’interface [IOleDocumentView](/windows/win32/api/docobj/nn-docobj-ioledocumentview) de la vue actuellement active. S’il n’existe pas d’affichage actuel, la valeur NULL est retournée.
 
 ### <a name="remarks"></a>Notes
 
@@ -270,21 +270,21 @@ HRESULT QueryCommand(
 identificateur de la commande en cours d’interrogation.
 
 *pdwStatus*<br/>
-Pointeur vers les indicateurs retournés en tant que résultat de la requête. Pour obtenir la liste des valeurs possibles, consultez [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf).
+Pointeur vers les indicateurs retournés en tant que résultat de la requête. Pour obtenir la liste des valeurs possibles, consultez [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf).
 
 *pCmdText*<br/>
-Pointeur vers une structure [OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-olecmdtext) dans laquelle retourner les informations de nom et d’État pour une seule commande. Peut avoir la valeur NULL pour indiquer que l’appelant n’a pas besoin de ces informations.
+Pointeur vers une structure [OLECMDTEXT](/windows/win32/api/docobj/ns-docobj-olecmdtext) dans laquelle retourner les informations de nom et d’État pour une seule commande. Peut avoir la valeur NULL pour indiquer que l’appelant n’a pas besoin de ces informations.
 
 *pguidCmdGroup*<br/>
 Identificateur unique du groupe de commandes; peut avoir la valeur NULL pour spécifier le groupe standard.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pour obtenir la liste complète des valeurs de retour, consultez [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) dans le SDK Windows.
+Pour obtenir la liste complète des valeurs de retour, consultez [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) dans le SDK Windows.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre émule les fonctionnalités de la méthode [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) , comme décrit dans la SDK Windows.
+Cette fonction membre émule les fonctionnalités de la méthode [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) , comme décrit dans la SDK Windows.
 
 ##  <a name="release"></a>  COleDocObjectItem::Release
 

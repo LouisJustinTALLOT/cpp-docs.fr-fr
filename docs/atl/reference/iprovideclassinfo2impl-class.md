@@ -1,5 +1,5 @@
 ---
-title: Classe de IProvideClassInfo2Impl
+title: IProvideClassInfo2Impl, classe
 ms.date: 11/04/2016
 f1_keywords:
 - IProvideClassInfo2Impl
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - IProvideClassInfo2 ATL implementation
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
-ms.openlocfilehash: 41a0756250e749a07d48ad4f090c2f1c322aa558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0ff3607002d32b4e21f7fc2199cc5da3662af8b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276040"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495542"
 ---
-# <a name="iprovideclassinfo2impl-class"></a>Classe de IProvideClassInfo2Impl
+# <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl, classe
 
-Cette classe fournit une implémentation par défaut de la [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) et [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) méthodes.
+Cette classe fournit une implémentation par défaut des méthodes [IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo) et [IProvideClassInfo2](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,10 +41,10 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 Pointeur vers l’identificateur de la coclasse.
 
 *psrcid*<br/>
-Un pointeur vers l’identificateur par défaut de la coclasse sortants dispinterface.
+Pointeur vers l’identificateur pour la dispinterface sortante par défaut de la coclasse.
 
 *plibid*<br/>
-Pointeur vers le LIBID de la bibliothèque de types qui contient des informations sur l’interface. Par défaut, la bibliothèque de types de niveau serveur est passée.
+Pointeur vers le LIBID de la bibliothèque de types qui contient des informations sur l’interface. Par défaut, la bibliothèque de types au niveau du serveur est passée.
 
 *wMajor*<br/>
 Version principale de la bibliothèque de types. La valeur par défaut est 1.
@@ -53,7 +53,7 @@ Version principale de la bibliothèque de types. La valeur par défaut est 1.
 Version secondaire de la bibliothèque de types. La valeur par défaut est 0.
 
 *tihclass*<br/>
-La classe utilisée pour gérer les informations de type de la coclasse. La valeur par défaut est `CComTypeInfoHolder`.
+Classe utilisée pour gérer les informations de type de la coclasse. La valeur par défaut est `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Membres
 
@@ -68,19 +68,19 @@ La classe utilisée pour gérer les informations de type de la coclasse. La vale
 |Nom|Description|
 |----------|-----------------|
 |[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Récupère un `ITypeInfo` pointeur vers les informations de type de la coclasse.|
-|[IProvideClassInfo2Impl::GetGUID](#getguid)|Récupère le GUID pour dispinterface sortant de l’objet.|
+|[IProvideClassInfo2Impl::GetGUID](#getguid)|Récupère le GUID de la dispinterface sortante de l’objet.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[IProvideClassInfo2Impl::_tih](#_tih)|Gère les informations de type pour la coclasse.|
 
 ## <a name="remarks"></a>Notes
 
-Le [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) interface étend [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) en ajoutant le `GetGUID` (méthode). Cette méthode permet à un client récupérer l’interface sortante d’un objet IID pour son jeu d’événements par défaut. Classe `IProvideClassInfo2Impl` fournit une implémentation par défaut de la `IProvideClassInfo` et `IProvideClassInfo2` méthodes.
+L’interface [IProvideClassInfo2](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2) étend [IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo) en ajoutant la `GetGUID` méthode. Cette méthode permet à un client de récupérer l’IID d’interface sortante d’un objet pour son jeu d’événements par défaut. `IProvideClassInfo2` La `IProvideClassInfo2Impl` classefournituneimplémentationpardéfaut`IProvideClassInfo` des méthodes et.
 
-`IProvideClassInfo2Impl` contient un membre statique de type `CComTypeInfoHolder` qui gère les informations de type pour la coclasse.
+`IProvideClassInfo2Impl`contient un membre statique de type `CComTypeInfoHolder` qui gère les informations de type de la coclasse.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -90,7 +90,7 @@ Le [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) 
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlcom.h
+**En-tête:** atlcom. h
 
 ##  <a name="getclassinfo"></a>  IProvideClassInfo2Impl::GetClassInfo
 
@@ -102,11 +102,11 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 
 ### <a name="remarks"></a>Notes
 
-Consultez [IProvideClassInfo::GetClassInfo](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) dans le Kit de développement logiciel Windows.
+Consultez [IProvideClassInfo:: GetClassinfo](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) dans la SDK Windows.
 
 ##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID
 
-Récupère le GUID pour dispinterface sortant de l’objet.
+Récupère le GUID de la dispinterface sortante de l’objet.
 
 ```
 STDMETHOD(GetGUID)(
@@ -116,7 +116,7 @@ STDMETHOD(GetGUID)(
 
 ### <a name="remarks"></a>Notes
 
-Consultez [IProvideClassInfo2::GetGUID](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) dans le Kit de développement logiciel Windows.
+Consultez [IProvideClassInfo2:: GetGuid](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) dans le SDK Windows.
 
 ##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl
 
@@ -128,11 +128,11 @@ IProvideClassInfo2Impl();
 
 ### <a name="remarks"></a>Notes
 
-Appels `AddRef` sur le [_tih](#_tih) membre. Le destructeur appelle `Release`.
+Appelle `AddRef` sur le membre [_tih](#_tih) . Le destructeur appelle `Release`.
 
 ##  <a name="_tih"></a>  IProvideClassInfo2Impl::_tih
 
-Ce membre de données statique est une instance du paramètre de modèle de classe, *tihclass*, qui par défaut est `CComTypeInfoHolder`.
+Ce membre de données statique est une instance du paramètre de modèle de classe, *tihclass*, qui est `CComTypeInfoHolder`par défaut.
 
 ```
 static  tihclass
@@ -141,7 +141,7 @@ static  tihclass
 
 ### <a name="remarks"></a>Notes
 
-`_tih` Gère les informations de type pour la coclasse.
+`_tih`gère les informations de type pour la coclasse.
 
 ## <a name="see-also"></a>Voir aussi
 

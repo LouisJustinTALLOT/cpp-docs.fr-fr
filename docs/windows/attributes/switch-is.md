@@ -1,21 +1,21 @@
 ---
-title: switch_is (C++ attribut COM)
+title: switch_is (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_is
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: ccac405480e415df17b42f02dce74759f578d025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b72052f4cbd7f94b170ea58b8f7b284b85d7ab00
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407248"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513981"
 ---
-# <a name="switchis"></a>switch_is
+# <a name="switch_is"></a>switch_is
 
-Spécifie l’expression ou l’identificateur agissant comme l’union discriminante qui sélectionne le membre d’union.
+Spécifie l’expression ou l’identificateur agissant comme le discriminante d’Union qui sélectionne le membre Union.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Spécifie l’expression ou l’identificateur agissant comme l’union discrimi
 
 ## <a name="remarks"></a>Notes
 
-Le **switch_is** C++ attribut a les mêmes fonctionnalités que le [switch_is](/windows/desktop/Midl/switch-is) attribut MIDL.
+L’attribut **switch_is** C++ a les mêmes fonctionnalités que l’attribut MIDL [switch_is](/windows/win32/Midl/switch-is) .
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-Consultez le [cas](case-cpp.md) exemple pour un exemple d’utilisation de **switch_is**.
+Pour obtenir un exemple d’utilisation de **switch_is**, consultez l’exemple de [cas](case-cpp.md) .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -39,8 +39,8 @@ Consultez le [cas](case-cpp.md) exemple pour un exemple d’utilisation de **swi
 |-|-|
 |**S'applique à**|**typedef**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

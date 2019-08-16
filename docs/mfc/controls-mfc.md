@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-ms.openlocfilehash: c0738128d20839046e0885e7489b494d84349e4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3155889f2fd4002286340ccec7f4a35d1a6a9c20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297266"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508797"
 ---
 # <a name="controls-mfc"></a>Contrôles (MFC)
 
@@ -76,7 +76,7 @@ Le tableau ci-dessous décrit brièvement chacun des contrôles communs Windows,
 |[astuce](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|Petite fenêtre contextuelle qui décrit la fonction d’un bouton de barre d’outils ou autre outil|Oui|
 |[arborescence](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Fenêtre qui affiche une liste hiérarchique d’éléments|Oui|
 
-### <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+### <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
 - Un contrôle spécifique : consultez le tableau [Contrôles communs Windows et classes MFC](#_core_windows_common_controls_and_mfc_classes) dans cette rubrique pour obtenir des liens vers tous les contrôles
 
@@ -102,9 +102,9 @@ Le tableau ci-dessous décrit brièvement chacun des contrôles communs Windows,
 
 - [Exemples](../mfc/common-control-sample-list.md)
 
-Pour plus d’informations sur les contrôles communs Windows dans le SDK Windows, consultez [contrôles communs](/windows/desktop/Controls/common-controls-intro).
+Pour plus d’informations sur les contrôles communs Windows dans le SDK Windows, consultez [contrôles communs](/windows/win32/Controls/common-controls-intro).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)<br/>
+[Éléments de l’interface utilisateur](../mfc/user-interface-elements-mfc.md)<br/>
 [Éditeur de boîtes de dialogue](../windows/dialog-editor.md)

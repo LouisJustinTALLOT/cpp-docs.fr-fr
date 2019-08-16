@@ -31,14 +31,14 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 87ac912ab47483929b3afc2357331f8d97264b31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c5760eb5231d17a8b17fe5d21f1459a865c067
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341702"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500016"
 ---
-# <a name="access-waccess"></a>_access, _waccess
+# <a name="_access-_waccess"></a>_access, _waccess
 
 Détermine si un fichier est en lecture seule ou non. Des versions plus sécurisées sont disponibles. Consultez [_access_s, _waccess_s](access-s-waccess-s.md).
 
@@ -65,7 +65,7 @@ Attribut de lecture/écriture.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction retourne 0 si le fichier a le mode donné. La fonction retourne -1 si le fichier nommé n’existe pas ou n’a pas le mode donné ; Dans ce cas, `errno` est défini comme indiqué dans le tableau suivant.
+Chaque fonction retourne 0 si le fichier a le mode donné. La fonction retourne-1 si le fichier nommé n’existe pas ou s’il n’a pas le mode donné; dans ce cas, `errno` est défini comme indiqué dans le tableau suivant.
 
 |||
 |-|-|
@@ -77,20 +77,20 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 ## <a name="remarks"></a>Notes
 
-Lorsqu’il est utilisé avec des fichiers, le **_access** fonction détermine si le fichier ou répertoire spécifié existe et a les attributs spécifiés par la valeur de *mode*. Lorsqu’il est utilisé avec les répertoires, **_access** détermine uniquement si le répertoire spécifié existe ; dans Windows 2000 et versions ultérieures systèmes d’exploitation, tous les répertoires ont lu et l’accès en écriture.
+Lorsqu’elle est utilisée avec des fichiers, la fonction **_access** détermine si le fichier ou le répertoire spécifié existe et possède les attributs spécifiés par la valeur de *mode*. En cas d’utilisation avec des répertoires, **_access** détermine uniquement si le répertoire spécifié existe; dans les systèmes d’exploitation Windows 2000 et versions ultérieures, tous les répertoires disposent d’un accès en lecture et en écriture.
 
-|*mode* valeur|Test réalisé sur le fichier|
+|valeur du *mode*|Test réalisé sur le fichier|
 |------------------|---------------------|
 |00|Existence uniquement|
 |02|En écriture seule|
 |04|Lecture seule|
 |06|Opérations de lecture et d’écriture|
 
-Cette fonction vérifie uniquement si le fichier et le répertoire sont en lecture seule ou non ; elle ne vérifie pas les paramètres de sécurité du système de fichiers. Pour cela, vous avez besoin d’un jeton d’accès. Pour plus d’informations sur la sécurité du système de fichiers, consultez [Access Tokens](/windows/desktop/SecAuthZ/access-tokens) (Jetons d’accès). Il existe une classe ATL pour fournir cette fonctionnalité ; consultez [CAccessToken, classe](../../atl/reference/caccesstoken-class.md).
+Cette fonction vérifie uniquement si le fichier et le répertoire sont en lecture seule ou non ; elle ne vérifie pas les paramètres de sécurité du système de fichiers. Pour cela, vous avez besoin d’un jeton d’accès. Pour plus d’informations sur la sécurité du système de fichiers, consultez [Access Tokens](/windows/win32/SecAuthZ/access-tokens) (Jetons d’accès). Il existe une classe ATL pour fournir cette fonctionnalité ; consultez [CAccessToken, classe](../../atl/reference/caccesstoken-class.md).
 
-**_waccess** est une version à caractères larges de **_access**; le *chemin d’accès* l’argument de **_waccess** est une chaîne de caractères larges. **_waccess** et **_access** se comportent de façon identique dans le cas contraire.
+**_waccess** est une version à caractères larges de **_access**; l’argument *path* de **_waccess** est une chaîne de caractères larges. dans le cas contraire, **_waccess** et **_access** se comportent de la même façon.
 
-Cette fonction valide ses paramètres. Si *chemin d’accès* est NULL ou *mode* ne spécifie pas un mode valide, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction définit `errno` avec la valeur `EINVAL` et retourne -1.
+Cette fonction valide ses paramètres. Si *path* a la valeur null ou que le *mode* ne spécifie pas de mode valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction définit `errno` avec la valeur `EINVAL` et retourne -1.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -105,9 +105,9 @@ Cette fonction valide ses paramètres. Si *chemin d’accès* est NULL ou *mode*
 |**_access**|\<io.h>|\<errno.h>|
 |**_waccess**|\<wchar.h> ou \<io.h>|\<errno.h>|
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-L’exemple suivant utilise **_access** pour vérifier le fichier nommé crt_ACCESS. C pour voir si elle existe et si l’écriture est autorisée.
+L’exemple suivant utilise **_access** pour vérifier le fichier nommé crt_ACCESS. C pour voir s’il existe et si l’écriture est autorisée.
 
 ```C
 // crt_access.c

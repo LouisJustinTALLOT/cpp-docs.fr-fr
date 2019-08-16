@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 337fe03ab09a6ed3da283f45dd4eb58aaaad5bc5
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957499"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502558"
 ---
 # <a name="exception-processing"></a>Traitement des exceptions
 
@@ -137,7 +137,7 @@ Le pointeur d’objet exception est créé par la macro. Vous n’avez pas besoi
 
 Pour plus d’informations sur les exceptions et la macro CATCH, consultez l’article [exceptions](../../mfc/exception-handling-in-mfc.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]
 
@@ -163,7 +163,7 @@ Le code de traitement des exceptions peut interroger l’objet exception, le cas
 
 Pour plus d’informations sur les exceptions, consultez l’article [exceptions](../../mfc/exception-handling-in-mfc.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez l’exemple pour [CFile:: Abort](../../mfc/reference/cfile-class.md#abort).
 
@@ -294,7 +294,7 @@ Cette macro vous permet de lever une exception créée localement. Si vous essay
 
 Pour plus d’informations, consultez l’article [exceptions](../../mfc/exception-handling-in-mfc.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez l’exemple pour [CFile:: Abort](../../mfc/reference/cfile-class.md#abort).
 
@@ -380,7 +380,7 @@ void AfxThrowMemoryException();
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction si les appels aux allocateurs de mémoire système sous-jacents (tels que **malloc** et la fonction Windows [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) ) échouent. Vous n’avez pas besoin de l’appeler pour **New** , car **New** lève une exception de mémoire automatiquement en cas d’échec de l’allocation de mémoire.
+Appelez cette fonction si les appels aux allocateurs de mémoire système sous-jacents (tels que **malloc** et la fonction Windows [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) ) échouent. Vous n’avez pas besoin de l’appeler pour **New** , car **New** lève une exception de mémoire automatiquement en cas d’échec de l’allocation de mémoire.
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -491,7 +491,7 @@ Handle d’un code de résultat qui indique la raison de l’exception.
 
 ### <a name="remarks"></a>Notes
 
-La version qui accepte un HRESULT comme argument convertit ce code de résultat en SCODE correspondant. Pour plus d’informations sur HRESULT et SCODE, consultez [structure of com Error Codes](/windows/desktop/com/structure-of-com-error-codes) in the SDK Windows.
+La version qui accepte un HRESULT comme argument convertit ce code de résultat en SCODE correspondant. Pour plus d’informations sur HRESULT et SCODE, consultez [structure of com Error Codes](/windows/win32/com/structure-of-com-error-codes) in the SDK Windows.
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -569,7 +569,7 @@ void  AfxAbort();
 
 `AfxAbort`est appelé en interne par les fonctions membres MFC lorsqu’il y a une erreur irrécupérable, telle qu’une exception non interceptée qui ne peut pas être gérée. Vous pouvez appeler `AfxAbort` dans les rares cas où vous rencontrez une erreur catastrophique à partir de laquelle vous ne pouvez pas effectuer de récupération.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Consultez l’exemple pour [catch](#catch).
 

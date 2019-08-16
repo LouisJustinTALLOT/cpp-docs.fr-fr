@@ -11,46 +11,46 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-ms.openlocfilehash: 8a0db3299ebb54d226edc1434dedbc6a04eb9b00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 590f0dce6c50ee6d0ca30c4c68e21787563bd686
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241805"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508730"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Personnalisation de l'apparence d'un contrôle ToolBar
 
-Classe `CToolBarCtrl` fournit de nombreux styles qui affectent l’apparence (et, parfois, le comportement) de l’objet de barre d’outils. Modifier l’objet de barre d’outils en définissant le `dwCtrlStyle` paramètre de la `CToolBarCtrl::Create` (ou `CToolBar::CreateEx`) fonction membre, lorsque vous créez tout d’abord le contrôle de barre d’outils.
+La `CToolBarCtrl` classe fournit de nombreux styles qui affectent l’apparence (et parfois, le comportement) de l’objet Toolbar. Modifiez l’objet Toolbar en définissant `dwCtrlStyle` le paramètre de `CToolBarCtrl::Create` la fonction `CToolBar::CreateEx`membre (ou), lorsque vous créez le contrôle ToolBar pour la première fois.
 
-Les styles suivants affectent l’aspect « 3D » des boutons de barre d’outils et le positionnement du texte du bouton :
+Les styles suivants affectent l’aspect «3D» des boutons de la barre d’outils et le positionnement du texte du bouton:
 
-- **TBSTYLE_FLAT** crée une barre d’outils plate où la barre d’outils et les boutons sont transparents. Texte du bouton s’affiche sous les bitmaps des boutons. Lorsque ce style est utilisé, le bouton situé sous le curseur est automatiquement mis en surbrillance.
+- **TBSTYLE_FLAT** Crée une barre d’outils plate dans laquelle la barre d’outils et les boutons sont transparents. Le texte du bouton s’affiche sous bitmaps du bouton. Quand ce style est utilisé, le bouton situé sous le curseur est automatiquement mis en surbrillance.
 
-- **TBSTYLE_TRANSPARENT** crée une barre d’outils transparente. Dans une barre d’outils transparente, la barre d’outils est transparent, mais les boutons ne sont pas. Texte du bouton s’affiche sous les bitmaps des boutons.
+- **TBSTYLE_TRANSPARENT** Crée une barre d’outils transparente. Dans une barre d’outils transparente, la barre d’outils est transparente, mais les boutons ne le sont pas. Le texte du bouton s’affiche sous bitmaps du bouton.
 
-- **TBSTYLE_LIST** emplacements bouton à droite des bitmaps des boutons de texte.
+- **TBSTYLE_LIST** Place le texte du bouton à droite des bitmaps de bouton.
 
 > [!NOTE]
->  Pour éviter les problèmes de redessin, les **TBSTYLE_FLAT** et **TBSTYLE_TRANSPARENT** styles doivent être définis avant que l’objet de barre d’outils est visible.
+>  Pour éviter les problèmes de redessin, les styles **TBSTYLE_FLAT** et **TBSTYLE_TRANSPARENT** doivent être définis avant que l’objet Toolbar soit visible.
 
-Les styles suivants déterminent si la barre d’outils permet à un utilisateur de repositionner des boutons individuels dans un objet de barre d’outils à l’aide de glisser-déplacer :
+Les styles suivants déterminent si la barre d’outils permet à un utilisateur de repositionner des boutons individuels dans un objet de barre d’outils à l’aide de la fonction glisser-déplacer:
 
-- **TBSTYLE_ALTDRAG** permet aux utilisateurs de modifier la position d’un bouton de barre d’outils en le faisant glisser tout en maintenant la touche ALT ENFONCÉE. Si ce style n’est pas spécifié, l’utilisateur doit maintenir la touche MAJ ENFONCÉE tout en faisant glisser un bouton.
+- **TBSTYLE_ALTDRAG** Permet aux utilisateurs de modifier la position d’un bouton de barre d’outils en le faisant glisser tout en maintenant la touche ALT enfoncée. Si ce style n’est pas spécifié, l’utilisateur doit maintenir la touche Maj enfoncée tout en faisant glisser un bouton.
 
     > [!NOTE]
-    >  Le **CCS_ADJUSTABLE** style doit être spécifié pour activer les boutons de barre d’outils à faire glisser.
+    >  Le style **CCS_ADJUSTABLE** doit être spécifié pour permettre le glissement des boutons de la barre d’outils.
 
-- **TBSTYLE_REGISTERDROP** génère **TBN_GETOBJECT** notification messages de demande de supprimer les objets cible lorsque le pointeur de la souris passe au-dessus des boutons de barre d’outils.
+- **TBSTYLE_REGISTERDROP** Génère des messages de notification **TBN_GETOBJECT** pour demander des objets cible de déplacement lorsque le pointeur de la souris passe sur les boutons de la barre d’outils.
 
-Les autres styles affectent les aspects visuels et de l’objet de barre d’outils :
+Les autres styles affectent les aspects visuels et invisuels de l’objet Toolbar:
 
-- **TBSTYLE_WRAPABLE** crée une barre d’outils qui peut avoir plusieurs lignes de boutons. Boutons de barre d’outils peuvent « encapsuler » à la ligne suivante lorsque la barre d’outils devienne trop étroite pour inclure tous les boutons sur la même ligne. Retour à la ligne se produit sur des séparateurs et.
+- **TBSTYLE_WRAPABLE** Crée une barre d’outils qui peut comporter plusieurs lignes de boutons. Les boutons de barre d’outils peuvent «habiller» à la ligne suivante quand la barre d’outils devient trop étroite pour inclure tous les boutons sur la même ligne. L’encapsulation se produit sur les limites de séparation et de non-groupe.
 
-- **TBSTYLE_CUSTOMERASE** génère **NM_CUSTOMDRAW** lorsqu’il traite les messages de notification **WM_ERASEBKGND** messages.
+- **TBSTYLE_CUSTOMERASE** Génère des messages de notification **NM_CUSTOMDRAW** lors du traitement des messages **WM_ERASEBKGND** .
 
-- **TBSTYLE_TOOLTIPS** crée un contrôle d’info-bulle qu’une application peut utiliser pour afficher un texte descriptif pour les boutons dans la barre d’outils.
+- **TBSTYLE_TOOLTIPS** Crée un contrôle d’info-bulle qu’une application peut utiliser pour afficher le texte descriptif des boutons dans la barre d’outils.
 
-Pour obtenir une liste complète des styles de barre d’outils et des styles étendus, consultez [contrôle de barre d’outils et les Styles de boutons](/windows/desktop/Controls/toolbar-control-and-button-styles) et [Styles étendus de barre d’outils](/windows/desktop/Controls/toolbar-extended-styles) dans le SDK Windows.
+Pour obtenir la liste complète des styles de barre d’outils et des styles étendus, consultez styles de barre d’outils et styles de [bouton](/windows/win32/Controls/toolbar-control-and-button-styles) et styles étendus de [barre d’outils](/windows/win32/Controls/toolbar-extended-styles) dans le SDK Windows.
 
 ## <a name="see-also"></a>Voir aussi
 

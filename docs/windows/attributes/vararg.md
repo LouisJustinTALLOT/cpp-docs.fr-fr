@@ -1,17 +1,17 @@
 ---
-title: VARARG (attribut de COM C++)
+title: vararg (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vararg
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: a433522b78424c48c4afe754f7b8337e3952dc8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1c6b1a4e049bccfcf3e16bae4b5f9b285d11192
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407209"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514885"
 ---
 # <a name="vararg"></a>vararg
 
@@ -25,7 +25,7 @@ Spécifie que la fonction accepte un nombre variable d’arguments.
 
 ## <a name="remarks"></a>Notes
 
-Le **vararg** attribut C++ a les mêmes fonctionnalités que le [vararg](/windows/desktop/Midl/vararg) attribut MIDL.
+L’attribut **vararg** C++ a les mêmes fonctionnalités que l’attribut MIDL [vararg](/windows/win32/Midl/vararg) .
 
 ## <a name="example"></a>Exemple
 
@@ -53,8 +53,8 @@ __interface X : public IUnknown
 |-|-|
 |**S'applique à**|Méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

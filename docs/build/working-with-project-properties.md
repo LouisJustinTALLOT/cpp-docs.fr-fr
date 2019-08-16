@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 436c9c47d7e08176860144ce62cc874919351029
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: 57414bd56c72b951d3f1948e658243e9036f0179
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313449"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498126"
 ---
 # <a name="set-compiler-and-build-properties"></a>Définir les propriétés du compilateur et de la Build
 
@@ -39,7 +39,7 @@ L’illustration suivante montre la même page de propriétés de projet, mais l
 
 ## <a name="target-platforms"></a>Plateformes cibles
 
-*Plateforme cible* fait référence au type d’appareil et/ou de système d’exploitation sur lequel doit s’exécuter l’exécutable. Vous pouvez générer un projet pour plusieurs plateformes. Les plateformes cibles disponibles pour les projets C++ varient selon le type de projet et sont entre autres : Win32, x64, ARM, Android et iOS.     La plateforme cible **x86** que vous pouvez voir dans le **Gestionnaire de configuration** est identique à **Win32** dans les projets C++ natifs. Win32 désigne Windows 32 bits et **x64** désigne Windows 64 bits. Pour plus d’informations sur ces deux plateformes, consultez [Exécution d’applications 32 bits](/windows/desktop/WinProg64/running-32-bit-applications).
+*Plateforme cible* fait référence au type d’appareil et/ou de système d’exploitation sur lequel doit s’exécuter l’exécutable. Vous pouvez générer un projet pour plusieurs plateformes. Les plateformes cibles disponibles pour les projets C++ varient selon le type de projet et sont entre autres : Win32, x64, ARM, Android et iOS.     La plateforme cible **x86** que vous pouvez voir dans le **Gestionnaire de configuration** est identique à **Win32** dans les projets C++ natifs. Win32 désigne Windows 32 bits et **x64** désigne Windows 64 bits. Pour plus d’informations sur ces deux plateformes, consultez [Exécution d’applications 32 bits](/windows/win32/WinProg64/running-32-bit-applications).
 
 La valeur de plateforme cible **N’importe quelle UC** que vous pouvez voir dans le **Gestionnaire de configuration** n’a aucun effet sur les projets C++ natifs, elle concerne les projets C++/ CLI et d’autres types de projet .NET. Pour plus d’informations, consultez l’article [/CLRIMAGETYPE (Spécifier le type d’une image CLR)](reference/clrimagetype-specify-type-of-clr-image.md).
 

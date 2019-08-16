@@ -1,17 +1,17 @@
 ---
-title: out (attribut de COM C++)
+title: out (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.out
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 7020bd6cfcf8bcdbfb773908e693c6364a29e343
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11c8e4473f0b849fab7846a825b90da3ed9f036f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407599"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514287"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -25,7 +25,7 @@ Identifie des paramètres pointeurs qui sont retournés de la procédure appelé
 
 ## <a name="remarks"></a>Notes
 
-L’attribut C++ **out** a les mêmes fonctionnalités que l’attribut MIDL [out](/windows/desktop/Midl/out-idl) .
+L’attribut C++ **out** a les mêmes fonctionnalités que l’attribut MIDL [out](/windows/win32/Midl/out-idl) .
 
 ## <a name="example"></a>Exemple
 
@@ -39,8 +39,8 @@ Consultez l’exemple pour [bindable](bindable.md) pour obtenir un exemple d’u
 |-|-|
 |**S'applique à**|Paramètre d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
@@ -49,4 +49,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de paramètres](parameter-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[ID](id.md)
+[id](id.md)

@@ -1,21 +1,21 @@
 ---
-title: wire_marshal (C++ attribut COM)
+title: wire_marshal (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: d1d18336a20644338a50ab66c7fcb06959e5760a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1067b74191dcde98dd9c85a246db2acd26eff9c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407014"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514848"
 ---
-# <a name="wiremarshal"></a>wire_marshal
+# <a name="wire_marshal"></a>wire_marshal
 
-Spécifie un type de données qui sera utilisé pour la transmission au lieu d’un type de données spécifiques à l’application.
+Spécifie un type de données qui sera utilisé pour la transmission au lieu d’un type de données spécifique à l’application.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,7 +25,7 @@ Spécifie un type de données qui sera utilisé pour la transmission au lieu d�
 
 ## <a name="remarks"></a>Notes
 
-Le **wire_marshal** C++ attribut a les mêmes fonctionnalités que le [wire_marshal](/windows/desktop/Midl/wire-marshal) attribut MIDL.
+L’attribut **wire_marshal** C++ a les mêmes fonctionnalités que l’attribut MIDL [wire_marshal](/windows/win32/Midl/wire-marshal) .
 
 ## <a name="example"></a>Exemple
 
@@ -55,8 +55,8 @@ Le code suivant illustre une utilisation de **wire_marshal**:
 |-|-|
 |**S'applique à**|**typedef**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

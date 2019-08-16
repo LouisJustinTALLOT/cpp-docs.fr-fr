@@ -1,21 +1,21 @@
 ---
-title: restreint (C++ COM attribut)
+title: Restricted (C++ attribut com)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 86f40fa49daf88668e37bef07f0db33d01cf1942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407352"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514064"
 ---
 # <a name="restricted"></a>restricted
 
-Spécifie qu’un membre d’un module, une interface ou une dispinterface ne peut pas être appelé arbitrairement.
+Spécifie qu’un membre d’un module, d’une interface ou d’une dispinterface ne peut pas être appelé arbitrairement.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,15 +28,15 @@ Spécifie qu’un membre d’un module, une interface ou une dispinterface ne pe
 ### <a name="parameters"></a>Paramètres
 
 *interfaces*<br/>
-Une ou plusieurs interfaces qui ne peuvent pas être appelées arbitrairement sur un objet COM. Ce paramètre est uniquement valide lorsqu’il est appliqué à une classe.
+Une ou plusieurs interfaces qui ne peuvent pas être appelées arbitrairement sur un objet COM. Ce paramètre est valide uniquement lorsqu’il est appliqué à une classe.
 
 ## <a name="remarks"></a>Notes
 
-Le **restreint** attribut C++ a les mêmes fonctionnalités que le [restreint](/windows/desktop/Midl/restricted) attribut MIDL.
+L’attribut **Restricted** C++ a les mêmes fonctionnalités que l’attribut MIDL [restreint](/windows/win32/Midl/restricted) .
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-Le code suivant montre comment utiliser le **restreint** attribut :
+Le code suivant illustre l’utilisation de l’attribut **Restricted** :
 
 ```cpp
 // cpp_attr_ref_restricted.cpp
@@ -67,10 +67,10 @@ class c : public a, public b
 
 |||
 |-|-|
-|**S'applique à**|Méthode, d’interface **interface**, **classe**, **struct**|
+|**S'applique à**|Méthode d’interface, **interface**, **classe**, **struct**|
 |**Renouvelable**|Non|
-|**Attributs requis**|**coclasse** (lorsqu’il est appliqué à **classe** ou **struct**)|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|**coclasse** (en cas d’application à une **classe** ou à un **struct**)|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

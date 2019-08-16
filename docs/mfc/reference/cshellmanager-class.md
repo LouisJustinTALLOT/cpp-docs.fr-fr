@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 14e8da573621f712ae9e27647122d305be54b7b0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 8151550dafdd1bdf8593d555008af387cf548bc8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916683"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502623"
 ---
 # <a name="cshellmanager-class"></a>CShellManager, classe
 
@@ -113,7 +113,7 @@ dans Chaîne qui contient le dossier sélectionné par défaut lorsque la boîte
 dans Titre de la boîte de dialogue.
 
 *ulFlags*<br/>
-dans Indicateurs spécifiant les options de la boîte de dialogue. Pour obtenir une description détaillée, consultez [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) .
+dans Indicateurs spécifiant les options de la boîte de dialogue. Pour obtenir une description détaillée, consultez [BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) .
 
 *piFolderImage*<br/>
 à Pointeur vers la valeur entière où la méthode écrit l’index d’image du dossier sélectionné.
@@ -156,7 +156,7 @@ Pointeur vers la nouvelle liste d’éléments si la fonction est réussie, sino
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode crée un [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) suffisamment grand pour contenir à la fois *pidl1* et *pidl2*. Il copie ensuite *pidl1* et *pidl2* dans la nouvelle liste.
+Cette méthode crée un [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) suffisamment grand pour contenir à la fois *pidl1* et *pidl2*. Il copie ensuite *pidl1* et *pidl2* dans la nouvelle liste.
 
 ##  <a name="copyitem"></a>  CShellManager::CopyItem
 

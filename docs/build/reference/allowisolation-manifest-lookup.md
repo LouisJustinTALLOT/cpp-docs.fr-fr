@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -ALLOWISOLATION linker option
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-ms.openlocfilehash: fe76e0d40a2a19a002136a7e095875ad2903d434
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7c799f3d44428643bccc2869255ffa4e9d194d70
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341084"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493135"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Recherche de manifeste)
 
@@ -27,23 +27,23 @@ Spécifie un comportement pour la recherche de manifeste.
 
 ## <a name="remarks"></a>Notes
 
-**/ALLOWISOLATION:no** indique les DLL sont chargées comme s’il n’a pas de manifeste et entraîne l’éditeur de liens définir le `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit dans l’en-tête optional `DllCharacteristics` champ.
+**/ALLOWISOLATION: no** indique que les dll sont chargées comme s’il n’existait aucun manifeste et que l’éditeur `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` de liens a défini le bit `DllCharacteristics` dans le champ d’en-tête facultatif.
 
-**/ ALLOWISOLATION** provoque le système d’exploitation et charger des manifestes.
+**/ALLOWISOLATION** fait en sorte que le système d’exploitation effectue des recherches et des chargements de manifeste.
 
-**/ ALLOWISOLATION** est la valeur par défaut.
+**/ALLOWISOLATION** est la valeur par défaut.
 
-Lors de l’isolation est désactivée pour un fichier exécutable, le chargeur Windows ne tente pas de trouver un manifeste d’application pour le processus qui vient d’être créé. Le nouveau processus n’aura pas un contexte d’activation par défaut, même s’il existe un manifeste à l’intérieur du fichier exécutable ou dans le même répertoire que le fichier exécutable avec le nom <em>nom_exécutable</em>**. exe.manifest**.
+Lorsque l’isolation est désactivée pour un fichier exécutable, le chargeur Windows ne tente pas de trouver un manifeste d’application pour le processus nouvellement créé. Le nouveau processus n’aura pas de contexte d’activation par défaut, même s’il existe un manifeste dans le fichier exécutable ou placé dans le même répertoire que le fichier exécutable avec name <em>executable-name</em> **. exe. manifest**.
 
-Pour plus d’informations, consultez [référence des fichiers manifeste](/windows/desktop/SbsCs/manifest-files-reference).
+Pour plus d’informations, consultez [référence des fichiers manifestes](/windows/win32/SbsCs/manifest-files-reference).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **le fichier manifeste** page de propriétés.
+1. Sélectionnez la page de propriétés**fichier manifeste** de l'**éditeur de liens** >  **Propriétés** > de configuration.
 
-1. Modifier le **autoriser l’Isolation** propriété.
+1. Modifiez la propriété **autoriser l’isolation** .
 
 ## <a name="see-also"></a>Voir aussi
 

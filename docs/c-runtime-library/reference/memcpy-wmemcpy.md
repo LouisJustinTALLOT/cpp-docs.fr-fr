@@ -24,12 +24,12 @@ helpviewer_keywords:
 - wmemcpy function
 - memcpy function
 ms.assetid: 34abb90b-bffb-46dc-a2f3-a5e9940839d6
-ms.openlocfilehash: afdb854bd28b55735cc6b5e26788307e2db0caa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f687e231060c287e206017dc61fe1d5193d8f0de
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156588"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499639"
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy, wmemcpy
 
@@ -63,28 +63,28 @@ Nombre de caractères à copier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de *dest*.
+Valeur de *dest*.
 
 ## <a name="remarks"></a>Notes
 
-**memcpy** copies *nombre* octets à partir de *src* à *dest*; **wmemcpy** copies *nombre* caractères larges (sur deux octets). Si la source et la destination se chevauchent, le comportement de **memcpy** n’est pas défini. Utilisez **memmove** pour gérer les régions qui se chevauchent.
+**memcpy** copie le *nombre* d’octets de *src* vers *dest*; **wmemcpy** copie le *nombre* de caractères larges (deux octets). Si la source et la destination se chevauchent, le comportement de **memcpy** n’est pas défini. Utilisez **memmove** pour gérer les régions qui se chevauchent.
 
 > [!IMPORTANT]
-> Assurez-vous que la mémoire tampon de destination est d'une taille identique ou supérieure à celle de la mémoire tampon source. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Assurez-vous que la mémoire tampon de destination est d'une taille identique ou supérieure à celle de la mémoire tampon source. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 > [!IMPORTANT]
-> Étant donné que tellement dépassements de mémoire tampon et les failles de sécurité potentielles par conséquent, ont été détectées pour une utilisation incorrecte de **memcpy**, cette fonction est répertoriée parmi les fonctions « bannies » par Security Development Lifecycle (SDL).  Vous pouvez observer que certaines classes de bibliothèque VC ++ continuent à utiliser **memcpy**.  En outre, vous pouvez observer que l’optimiseur du compilateur VC ++ émet parfois des appels à **memcpy**.  Le produit Visual C++ est développé conformément au processus SDL, et l'utilisation de cette fonction bannie a donc été évaluée avec attention.  Dans le cas de son utilisation dans des bibliothèques, les appels ont été examinés avec soin pour garantir que les dépassements de mémoire tampon ne seront pas autorisés via ces appels.  Dans le cas le compilateur, parfois, certains modèles de code sont reconnus comme étant identiques au modèle de **memcpy**et sont donc remplacés par un appel à la fonction.  Dans ce cas, l’utilisation de **memcpy** n’est pas plus risquée que l’original instructions auraient été ; elles ont simplement été optimisées à un appel à la performances optimisées **memcpy** (fonction).  Tout comme l'utilisation de fonctions CRT « sécurisées » ne garantit pas la sécurité (elles rendent simplement plus compliquée une utilisation risquée), l'utilisation de fonctions « bannies » ne signifie pas qu'il y a danger à coup sûr (elles nécessitent seulement un examen plus attentif pour garantir la sécurité).
+> Étant donné qu’un grand nombre de dépassements de mémoire tampon, et donc des failles de sécurité potentielles, ont été suivis pour une utilisation incorrecte de **memcpy**, cette fonction est indiquée parmi les fonctions «bannies» par le cycle de vie de développement de la sécurité (SDL).  Vous pouvez remarquer que certaines classes de bibliothèque VC + + continuent à utiliser **memcpy**.  En outre, vous pouvez remarquer que l’optimiseur du compilateur VC + + émet parfois des appels à **memcpy**.  Le produit Visual C++ est développé conformément au processus SDL, et l'utilisation de cette fonction bannie a donc été évaluée avec attention.  Dans le cas de son utilisation dans des bibliothèques, les appels ont été examinés avec soin pour garantir que les dépassements de mémoire tampon ne seront pas autorisés via ces appels.  Dans le cas du compilateur, certains modèles de code sont parfois reconnus comme étant identiques au modèle de **memcpy**et sont donc remplacés par un appel à la fonction.  Dans ce cas, l’utilisation de **memcpy** n’est pas plus risquée que les instructions d’origine. ils ont simplement été optimisés pour un appel à la fonction **memcpy** optimisée pour les performances.  Tout comme l'utilisation de fonctions CRT « sécurisées » ne garantit pas la sécurité (elles rendent simplement plus compliquée une utilisation risquée), l'utilisation de fonctions « bannies » ne signifie pas qu'il y a danger à coup sûr (elles nécessitent seulement un examen plus attentif pour garantir la sécurité).
 >
-> Étant donné que **memcpy** utilisation par des bibliothèques et du compilateur VC ++ a été examinée avec soin, ces appels sont autorisés dans du code qui est conforme à SDL.  **memcpy** appels introduites dans le code source d’application sont conformes à SDL uniquement lorsque cette utilisation a été vérifiée par des experts en sécurité.
+> Étant donné que l’utilisation de **memcpy** par le compilateur et les bibliothèques VC + + a été examinée avec soin, ces appels sont autorisés dans du code qui est autrement conforme à SDL.  les appels **memcpy** introduits dans le code source de l’application sont uniquement conformes à SDL quand cette utilisation a été vérifiée par des experts en sécurité.
 
-Le **memcpy** et **wmemcpy** fonctions seront déconseillées seulement si la constante **_CRT_SECURE_DEPRECATE_MEMORY** est défini avant l’instruction d’inclusion dans l’ordre pour les fonctions déconseillées, comme illustré dans l’exemple ci-dessous :
+Les fonctions **memcpy** et **wmemcpy** ne seront plus dépréciées si la constante **_CRT_SECURE_DEPRECATE_MEMORY** est définie avant l’instruction d’inclusion pour que les fonctions soient dépréciées, comme dans l’exemple ci-dessous:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
 #include <memory.h>
 ```
 
-ou
+ou Gestionnaire de configuration
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -100,9 +100,9 @@ ou
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-Consultez [memmove](memmove-wmemmove.md) pour obtenir un exemple montrant comment utiliser **memcpy**.
+Consultez [memmove](memmove-wmemmove.md) pour obtenir un exemple d’utilisation de **memcpy**.
 
 ## <a name="see-also"></a>Voir aussi
 

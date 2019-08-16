@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 9afe2bf563ffa80a3238548d75efa69178fa1f64
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2f4a394e29be135cac95edf6f504d8b066f53414
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916068"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506244"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind, classe
 
@@ -55,7 +55,7 @@ Les autres classes MFC conçues pour Internet et les fichiers locaux recherchés
 
 Pour plus d’informations sur l’utilisation `CFtpFileFind` de et sur les autres classes WinInet, consultez l’article [programmation Internet avec WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Le code suivant montre comment énumérer tous les fichiers dans le répertoire actif du serveur FTP.
 
@@ -95,7 +95,7 @@ Identificateur de contexte de l' `CFtpFileFind` objet. Pour plus d’information
 
 La valeur par défaut pour *dwContext* est envoyée par MFC à `CFtpFileFind` l’objet à partir de l’objet [CInternetSession](../../mfc/reference/cinternetsession-class.md) qui a créé l' `CFtpFileFind` objet. Vous pouvez remplacer la valeur par défaut pour définir l’identificateur de contexte sur la valeur de votre choix. L’identificateur de contexte est retourné à [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’objet avec lequel il est identifié. Consultez l’article [première étape d’Internet: WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
   Consultez l’exemple dans la vue d’ensemble de la classe, plus haut dans cette rubrique.
 
@@ -121,7 +121,7 @@ Indicateurs décrivant comment gérer cette session. Ces indicateurs peuvent êt
 
 - INTERNET_FLAG_DONT_CACHE ne met pas en cache les données, que ce soit localement ou dans les passerelles.
 
-- INTERNET_FLAG_RAW_DATA remplace la valeur par défaut pour retourner les données brutes (structures [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) pour FTP).
+- INTERNET_FLAG_RAW_DATA remplace la valeur par défaut pour retourner les données brutes (structures [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) pour FTP).
 
 - INTERNET_FLAG_SECURE sécurise les transactions sur le câble avec protocole SSL ou PCT. Cet indicateur s’applique uniquement aux requêtes HTTP.
 
@@ -129,13 +129,13 @@ Indicateurs décrivant comment gérer cette session. Ces indicateurs peuvent êt
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro cas de réussite ; sinon, 0. Pour afficher les informations d’erreur étendues, appelez la fonction Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Valeur différente de zéro cas de réussite ; sinon, 0. Pour afficher les informations d’erreur étendues, appelez la fonction Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Notes
 
 Après avoir `FindFile` appelé pour extraire le premier fichier FTP, vous pouvez appeler [FindNextFile](#findnextfile) pour récupérer les fichiers FTP suivants.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
   Consultez l’exemple précédent dans cette rubrique.
 
@@ -149,15 +149,15 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro s’il y a plus de fichiers; zéro si le fichier trouvé est le dernier dans le répertoire ou si une erreur s’est produite. Pour afficher les informations d’erreur étendues, appelez la fonction Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Si le fichier trouvé est le dernier fichier du répertoire, ou si aucun fichier correspondant n’est trouvé, la `GetLastError` fonction retourne ERROR_NO_MORE_FILES.
+Différent de zéro s’il y a plus de fichiers; zéro si le fichier trouvé est le dernier dans le répertoire ou si une erreur s’est produite. Pour afficher les informations d’erreur étendues, appelez la fonction Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror). Si le fichier trouvé est le dernier fichier du répertoire, ou si aucun fichier correspondant n’est trouvé, la `GetLastError` fonction retourne ERROR_NO_MORE_FILES.
 
 ### <a name="remarks"></a>Notes
 
 Vous devez appeler cette fonction au moins une fois avant d’appeler une fonction d’attribut (consultez [CFileFind:: FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).
 
-`FindNextFile`encapsule la fonction Win32 [FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea).
+`FindNextFile`encapsule la fonction Win32 [FindNextFile](/windows/win32/api/fileapi/nf-fileapi-findnextfilew).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
   Consultez l’exemple précédent dans cette rubrique.
 

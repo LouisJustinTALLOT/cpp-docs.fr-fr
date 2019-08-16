@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: db2dcf7c60d164f9d04eb98f8eaac79ae14e3e73
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 442860b1751591c5763a768f9bd9b6ba59f33fa5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821253"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504884"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -177,7 +177,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Appelée par l’infrastructure quand le curseur est déplacé pour la première fois dans la fenêtre de contrôle d’onglet.|
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Appelée par l’infrastructure pendant une opération glisser lorsque la souris est déplacée sur la fenêtre cible du déplacement. (Substitue [CMFCBaseTabCtrl:: OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Affiche un menu contextuel des fenêtres à onglets, attend que l’utilisateur sélectionne un onglet et rend l’onglet sélectionné actif.|
-|`CMFCTabCtrl::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Substitue [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
+|`CMFCTabCtrl::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Substitue [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
 |`CMFCTabCtrl::RecalcLayout`|Recalcule la disposition interne du contrôle onglet. (Substitue [CMFCBaseTabCtrl:: RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Définit l’onglet actif d’un contrôle onglet en tant qu’onglet actif dans un groupe d’onglets interface multidocument.|
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Active un onglet. (Substitue [CMFCBaseTabCtrl:: SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
@@ -241,7 +241,7 @@ Pour obtenir un exemple de création d’une fenêtre à onglets sous la forme d
 
 [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 L’exemple suivant montre comment utiliser différentes méthodes dans la `CMFCTabCtrl` classe pour configurer un `CMFCTabCtrl` objet. Cet exemple explique comment ajouter un onglet, afficher le bouton Fermer sur l’onglet actif, activer les étiquettes de tabulation modifiables et afficher un menu contextuel des étiquettes de la fenêtre à onglets. Cet exemple fait partie de l' [exemple de collection d’États](../../overview/visual-cpp-samples.md).
 
@@ -353,7 +353,7 @@ Le tableau suivant répertorie les valeurs que vous pouvez spécifier pour le pa
 |LOCATION_BOTTOM|Les onglets sont situés en bas du contrôle onglet.|
 |LOCATION_TOP|Les onglets sont situés en haut du contrôle onglet.|
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 L’exemple suivant montre comment utiliser la `Create` méthode dans la `CMFCTabCtrl` classe. Cet exemple fait partie de l' [exemple de collection d’États](../../overview/visual-cpp-samples.md).
 
@@ -846,7 +846,7 @@ Toujours TRUE.
 
 La valeur du paramètre de *style* peut être l’une des énumérations suivantes `CMFCTabCtrl::Style` .
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |STYLE_3D|Affiche des onglets rectangulaires à trois dimensions qui ont des angles arrondis.|
 |STYLE_3D_ONENOTE|Affiche les onglets en trois dimensions qui ont un côté vertical et un côté incliné et qui ont des angles arrondis.|
@@ -874,7 +874,7 @@ virtual DROPEFFECT OnDragEnter(
 dans Pointe vers un objet de données qui contient des données que l’utilisateur fait glisser.
 
 *dwKeyState*<br/>
-dans Contient l’état des touches de modification. Ce paramètre est une combinaison au niveau du bit (ou) des valeurs suivantes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON. Pour plus d’informations, consultez la section **paramètres de message** de [à propos](/windows/desktop/inputdev/about-mouse-input)de l’entrée de souris.
+dans Contient l’état des touches de modification. Ce paramètre est une combinaison au niveau du bit (ou) des valeurs suivantes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON. Pour plus d’informations, consultez la section **paramètres de message** de [à propos](/windows/win32/inputdev/about-mouse-input)de l’entrée de souris.
 
 *point*<br/>
 dans Contient l’emplacement actuel du curseur dans les coordonnées clientes.
@@ -906,7 +906,7 @@ virtual DROPEFFECT OnDragOver(
 dans Pointeur vers un objet [COleDataObject](../../mfc/reference/coledataobject-class.md) qui est glissé sur la cible de déplacement.
 
 *dwKeyState*<br/>
-dans L’état des touches de modification, qui est une combinaison au niveau du bit (ou) de MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON. Pour plus d’informations, consultez «Paramètres de message» dans [à propos](/windows/desktop/inputdev/about-mouse-input)de l’entrée de souris.
+dans L’état des touches de modification, qui est une combinaison au niveau du bit (ou) de MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON. Pour plus d’informations, consultez «Paramètres de message» dans [à propos](/windows/win32/inputdev/about-mouse-input)de l’entrée de souris.
 
 *point*<br/>
 dans Position actuelle de la souris.
