@@ -2,12 +2,12 @@
 title: Nouveautés de Visual C++ entre 2003 et 2015
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 1aff65ff998d9b3bb86fbf7288850287f4445275
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 6a3db2c9af2bcd9201f696756053cedb0788571a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552201"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510301"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Nouveautés de Visual C++ entre 2003 et 2015
 
@@ -1349,7 +1349,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - **Dépréciation de la prise en charge du code ATL avec attributs**. Le niveau 1 (`/W1`) est activé par défaut.
 
-   Les versions précédentes du compilateur prenaient en charge le code ATL avec attributs. Comme phase suivante de la suppression de la prise en charge du code ATL avec attributs qui [est apparue dans Visual C++ 2008](https://msdn.microsoft.com/library/bb384632), le code ATL avec attributs a été déprécié. Le compilateur émet désormais l’avertissement C4467 pour faciliter l’identification de ce type de code déprécié.
+   Les versions précédentes du compilateur prenaient en charge le code ATL avec attributs. Comme phase suivante de la suppression de la prise en charge du code ATL avec attributs qui [est apparue dans Visual C++ 2008](#whats-new-for-c-in-visual-studio-2008), le code ATL avec attributs a été déprécié. Le compilateur émet désormais l’avertissement C4467 pour faciliter l’identification de ce type de code déprécié.
 
    ```Output
     warning C4467: Usage of ATL attributes is deprecated

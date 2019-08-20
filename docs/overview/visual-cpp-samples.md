@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: d91fa77c9a76fb7c1f9f8281a9fdbbc463cc0fea
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 10e5ca4648f88cc41e0f928272224a21d9c66a0f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58782116"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512981"
 ---
 # <a name="visual-c-samples"></a>Exemples Visual C++
 
@@ -32,7 +32,7 @@ Les exemples Visual C++ répertoriés ci-dessous illustrent différentes fonctio
 
 [Exemples CodePlex](https://archive.codeplex.com/)
 
-[Exemples de code ADO](https://msdn.microsoft.com/library/jj249212.aspx)
+[Exemples de code ADO](/office/client-developer/access/desktop-database-reference/ado-code-examples-in-microsoft-visual-c)
 
 [Exemples de développement de matériel pour Windows](https://code.msdn.microsoft.com/windowshardware/)
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 79938cb5c762292c5e1802832477c3a568ae2fdb
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 5c472b74fee690c0cf33f78eca9e2e8462930eb8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504475"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509531"
 ---
 # <a name="add-a-property"></a>Ajouter une propriété
 
@@ -149,15 +149,15 @@ Utilisez cette page de l’Assistant Ajout de propriété pour spécifier tous l
 
 - `id`
 
-  Définit l’ID numérique qui identifie la propriété. Cette option n’est pas disponible pour les propriétés des interfaces personnalisées. Consultez [id](/windows/desktop/Midl/id) dans les *Informations de référence MIDL*.
+  Définit l’ID numérique qui identifie la propriété. Cette option n’est pas disponible pour les propriétés des interfaces personnalisées. Consultez [id](/windows/win32/Midl/id) dans les *Informations de référence MIDL*.
 
 - `helpcontext`
 
-  Spécifie un ID de contexte qui permet à l’utilisateur de voir des informations sur cette propriété dans le fichier d’aide. Consultez [helpcontext](/windows/desktop/Midl/helpcontext) dans les *Informations de référence MIDL*.
+  Spécifie un ID de contexte qui permet à l’utilisateur de voir des informations sur cette propriété dans le fichier d’aide. Consultez [helpcontext](/windows/win32/Midl/helpcontext) dans les *Informations de référence MIDL*.
 
 - `helpstring`
 
-  Spécifie une chaîne de caractères qui est utilisée pour décrire l’élément auquel elle s’applique. Par défaut, sa valeur est `property`&nbsp;*nom_propriété*. Consultez [helpstring](/windows/desktop/Midl/helpstring) dans les *Informations de référence MIDL*.
+  Spécifie une chaîne de caractères qui est utilisée pour décrire l’élément auquel elle s’applique. Par défaut, sa valeur est `property`&nbsp;*nom_propriété*. Consultez [helpstring](/windows/win32/Midl/helpstring) dans les *Informations de référence MIDL*.
 
 ### <a name="other-options"></a>Autres options
 
@@ -165,17 +165,17 @@ Les options ne sont pas toutes disponibles pour tous les types de propriété.
 
 |Option|Description|
 |------------|-----------------|
-|`bindable`|Indique que la propriété prend en charge la liaison de données. Consultez [bindable](/windows/desktop/Midl/bindable) dans les *Informations de référence MIDL*. Pour l’implémentation stock de la propriété, cette option est définie par défaut et n’est pas modifiable.|
-|`defaultbind`|Indique que cette seule propriété prenant en charge la liaison de données représente le mieux l’objet. Consultez [defaultbind](/windows/desktop/Midl/defaultbind) dans les *Informations de référence MIDL*.|
-|`displaybind`|Indique que cette propriété doit être montrée à l’utilisateur comme pouvant être liée. Consultez [displaybind](/windows/desktop/Midl/displaybind) dans les *Informations de référence MIDL*.|
-|`immediatebind`|Indique que la base de données est immédiatement avertie de tout changement de cette propriété d’un objet lié aux données. Consultez [immediatebind](/windows/desktop/Midl/immediatebind) dans les *Informations de référence MIDL*.|
-|`defaultcollelem`|Indique que la propriété est une fonction d’accesseur pour un élément de la collection par défaut. Consultez [defaultcollelem](/windows/desktop/Midl/defaultcollelem) dans les *Informations de référence MIDL*.|
-|`nonbrowsable`|Marque un membre d’interface ou de dispinterface qui ne doit pas être affiché dans un navigateur de propriétés. Consultez [nonbrowsable](/windows/desktop/Midl/nonbrowsable) dans les *Informations de référence MIDL*.|
-|`requestedit`|Indique que la propriété prend en charge la notification `OnRequestEdit`. Consultez [requestedit](/windows/desktop/Midl/requestedit) dans les *Informations de référence MIDL*. Pour l’implémentation stock de la propriété, cette option est définie par défaut et n’est pas modifiable.|
-|`source`|Indique qu’un membre de la propriété est une source d’événements. Consultez [source](/windows/desktop/Midl/source) dans les *Informations de référence MIDL*.|
-|`hidden`|Indique que la propriété existe, mais qu’elle ne doit pas être affichée dans un navigateur orienté utilisateur. Consultez [hidden](/windows/desktop/Midl/hidden) dans les *Informations de référence MIDL*.|
-|`restricted`|Spécifie que la propriété ne peut pas être appelée arbitrairement. Consultez [restricted](/windows/desktop/Midl/restricted) dans les *Informations de référence MIDL*.|
-|`local`|Indique au compilateur MIDL que la propriété n’est pas distante. Consultez [local](/windows/desktop/Midl/local) dans les *Informations de référence MIDL*.|
+|`bindable`|Indique que la propriété prend en charge la liaison de données. Consultez [bindable](/windows/win32/Midl/bindable) dans les *Informations de référence MIDL*. Pour l’implémentation stock de la propriété, cette option est définie par défaut et n’est pas modifiable.|
+|`defaultbind`|Indique que cette seule propriété prenant en charge la liaison de données représente le mieux l’objet. Consultez [defaultbind](/windows/win32/Midl/defaultbind) dans les *Informations de référence MIDL*.|
+|`displaybind`|Indique que cette propriété doit être montrée à l’utilisateur comme pouvant être liée. Consultez [displaybind](/windows/win32/Midl/displaybind) dans les *Informations de référence MIDL*.|
+|`immediatebind`|Indique que la base de données est immédiatement avertie de tout changement de cette propriété d’un objet lié aux données. Consultez [immediatebind](/windows/win32/Midl/immediatebind) dans les *Informations de référence MIDL*.|
+|`defaultcollelem`|Indique que la propriété est une fonction d’accesseur pour un élément de la collection par défaut. Consultez [defaultcollelem](/windows/win32/Midl/defaultcollelem) dans les *Informations de référence MIDL*.|
+|`nonbrowsable`|Marque un membre d’interface ou de dispinterface qui ne doit pas être affiché dans un navigateur de propriétés. Consultez [nonbrowsable](/windows/win32/Midl/nonbrowsable) dans les *Informations de référence MIDL*.|
+|`requestedit`|Indique que la propriété prend en charge la notification `OnRequestEdit`. Consultez [requestedit](/windows/win32/Midl/requestedit) dans les *Informations de référence MIDL*. Pour l’implémentation stock de la propriété, cette option est définie par défaut et n’est pas modifiable.|
+|`source`|Indique qu’un membre de la propriété est une source d’événements. Consultez [source](/windows/win32/Midl/source) dans les *Informations de référence MIDL*.|
+|`hidden`|Indique que la propriété existe, mais qu’elle ne doit pas être affichée dans un navigateur orienté utilisateur. Consultez [hidden](/windows/win32/Midl/hidden) dans les *Informations de référence MIDL*.|
+|`restricted`|Spécifie que la propriété ne peut pas être appelée arbitrairement. Consultez [restricted](/windows/win32/Midl/restricted) dans les *Informations de référence MIDL*.|
+|`local`|Indique au compilateur MIDL que la propriété n’est pas distante. Consultez [local](/windows/win32/Midl/local) dans les *Informations de référence MIDL*.|
 
 ## <a name="stock-properties"></a>Propriétés stock
 
