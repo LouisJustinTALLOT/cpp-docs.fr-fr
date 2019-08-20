@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces, implementing
 - implement interface wizard [C++]
 ms.assetid: 72f8731b-7e36-45db-8b10-7ef211a773cd
-ms.openlocfilehash: 8e166f806d247cd93ff0f471360d749fa95e430b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: bb1db35e269ef884f3ebdf4564d8f0a3e579db50
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692899"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509512"
 ---
 # <a name="implement-an-interface"></a>Implémenter une interface
 
@@ -50,7 +50,7 @@ Si vous ajoutez une nouvelle interface, vous devez l’ajouter manuellement au f
 
 Cet Assistant implémente une interface pour un objet COM. Les implémentations de nombreuses interfaces sont incluses dans les bibliothèques COM disponibles avec Visual Studio et Windows. Une implémentation d’interface est associée à un objet quand une instance de cet objet est créée. Elle fournit également les services qu’offre l’objet.
 
-Pour en savoir plus sur les interfaces et les implémentations, consultez [Interfaces et implémentations d’interface](/windows/desktop/com/interfaces-and-interface-implementations) dans le SDK Windows.
+Pour en savoir plus sur les interfaces et les implémentations, consultez [Interfaces et implémentations d’interface](/windows/win32/com/interfaces-and-interface-implementations) dans le SDK Windows.
 
 - **Implémenter une interface à partir de**
 

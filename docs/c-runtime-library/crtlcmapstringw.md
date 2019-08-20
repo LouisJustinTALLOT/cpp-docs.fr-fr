@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-ms.openlocfilehash: 0c3752baba05e18903c32919505d702081d09dca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e79ac5d4072595ef1034a0483b9edc8eada916d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468417"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500212"
 ---
-# <a name="crtlcmapstringw"></a>__crtLCMapStringW
+# <a name="__crtlcmapstringw"></a>__crtLCMapStringW
 
 Mappe une chaîne de caractères à une autre en effectuant une transformation dépendante des paramètres régionaux spécifiés. Cette fonction peut aussi être utilisée pour générer une clé de tri pour la chaîne d’entrée.
 
@@ -70,9 +70,9 @@ Si la valeur de `cchDest` est égale à zéro, la taille de la mémoire tampon e
 
 La valeur zéro indique l’échec de l’opération. Pour obtenir des informations plus complètes sur les erreurs, appelez la fonction `GetLastError` .
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Si `cchSrc` est supérieure à zéro et que `lpSrcStr` est une chaîne qui se termine par un caractère null, `__crtLCMapStringW` affecte à `cchSrc` la longueur de la chaîne. `__crtLCMapStringW` appelle ensuite la version de chaîne étendue (Unicode) de la fonction `LCMapString` avec les paramètres spécifiés. Pour plus d’informations sur les paramètres et la valeur de retour de cette fonction, consultez [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa).
+Si `cchSrc` est supérieure à zéro et que `lpSrcStr` est une chaîne qui se termine par un caractère null, `__crtLCMapStringW` affecte à `cchSrc` la longueur de la chaîne. `__crtLCMapStringW` appelle ensuite la version de chaîne étendue (Unicode) de la fonction `LCMapString` avec les paramètres spécifiés. Pour plus d’informations sur les paramètres et la valeur de retour de cette fonction, consultez [LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw).
 
 ## <a name="requirements"></a>Configuration requise
 

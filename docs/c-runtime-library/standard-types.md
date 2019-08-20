@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: d2b209e29b0690ec2003031e160ce9fd1f749b13
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c93cf4bf138fc6bc648d33c180edbed0dbe5014e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915319"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500636"
 ---
 # <a name="standard-types"></a>Types standard
 
@@ -202,7 +202,7 @@ La bibliothèque Runtime Microsoft définit les types et typedefs standard suiva
 |Structures `div_t`, `ldiv_t` et `lldiv_t`|Stockent les valeurs retournées par [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) et [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), respectivement.|STDLIB.H|
 |Entier `errno_t`|Utilisé pour un type de résultat ou un paramètre de fonction qui traite les codes d'erreur de `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |Structure `_exception`|Stocke les informations sur l'erreur pour [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
-|`_EXCEPTION_POINTERS`|Contient un enregistrement d'exception. Pour plus d'informations, consultez [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-exception_pointers).|FPIEEE.H|
+|`_EXCEPTION_POINTERS`|Contient un enregistrement d'exception. Pour plus d'informations, consultez [EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers).|FPIEEE.H|
 |Structure `FILE`|Stocke les informations sur l'état actuel du flux ; utilisé dans toutes les opérations d'E/S de flux.|STDIO.H|
 |Structures `_finddata_t`, `_wfinddata_t`, `_finddata32_t`, `_wfinddata32_t`, `_finddatai64_t`, `_wfinddatai64_t`, `__finddata64_t`, `__wfinddata64_t`, `__finddata32i64_t`, `__wfinddata32i64_t`, `__finddata64i32_t`, `__wfinddata64i32_t`|Stockent les informations d'attribut de fichier retournées par [_findfirst, _wfindfirst, and related functions](../c-runtime-library/reference/findfirst-functions.md) and [_findnext, _wfindnext et les fonctions liées](../c-runtime-library/reference/findnext-functions.md). Pour plus d'informations sur les membres de structures, consultez [Fonctions _find, _wfind](../c-runtime-library/filename-search-functions.md).|IO.H, WCHAR.H|
 |Structure `_FPIEEE_RECORD`|Contient des informations concernant l'exception à virgule flottante IEEE ; passé au gestionnaire d'interruptions défini par l'utilisateur par [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md).|FPIEEE.H|

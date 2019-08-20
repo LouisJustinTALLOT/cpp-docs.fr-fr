@@ -15,12 +15,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: c45197c9008c2d0b6a0519d947ca75f55a7960fd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: eb8a2829540876936f6c57745fb56e7d19f16394
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747844"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498885"
 ---
 # <a name="vprintf-functions"></a>Fonctions vprintf
 
@@ -81,7 +81,7 @@ Les versions de ces fonctions avec le suffixe **_p** permettent de spécifier l�
 Pour **vsprintf**, `vswprintf`, `_vsnprintf` et `_vsnwprintf`, si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
->  Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns). Si vous utilisez les versions sécurisées de ces fonctions (avec le suffixe **_s** ou **_p**), une chaîne de format de fournie par l’utilisateur risque de déclencher une exception de paramètre non valide si la chaîne fournie par l’utilisateur contient des caractères de mise en forme non valides.
+>  Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns). Si vous utilisez les versions sécurisées de ces fonctions (avec le suffixe **_s** ou **_p**), une chaîne de format de fournie par l’utilisateur risque de déclencher une exception de paramètre non valide si la chaîne fournie par l’utilisateur contient des caractères de mise en forme non valides.
 
 ## <a name="see-also"></a>Voir aussi
 

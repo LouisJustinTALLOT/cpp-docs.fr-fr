@@ -2,12 +2,12 @@
 title: 'Guide du portage : Scribble MFC'
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 0424b5e8c87c0103b4ebee65765244b40e8fa553
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448957"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511536"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guide du portage : Scribble MFC
 
@@ -65,7 +65,7 @@ Générez à présent la solution. Dans la fenêtre Sortie, le compilateur nous 
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 ```
 
-Ce n’est pas une erreur, mais un avertissement très fréquent pendant la mise à niveau d’un projet Visual Studio C++. Il s'agit de la macro qui définit la version de Windows la plus ancienne sur laquelle notre application s'exécutera. Si nous ignorons l'avertissement, nous acceptons la valeur par défaut, _WIN32_WINNT_MAXVER, qui correspond à la version actuelle de Windows. Pour obtenir un tableau des valeurs possibles, consultez [Utilisation des en-têtes Windows](/windows/desktop/WinProg/using-the-windows-headers). Par exemple, nous pouvons choisir de l'exécuter sur toutes les versions à partir de Vista.
+Ce n’est pas une erreur, mais un avertissement très fréquent pendant la mise à niveau d’un projet Visual Studio C++. Il s'agit de la macro qui définit la version de Windows la plus ancienne sur laquelle notre application s'exécutera. Si nous ignorons l'avertissement, nous acceptons la valeur par défaut, _WIN32_WINNT_MAXVER, qui correspond à la version actuelle de Windows. Pour obtenir un tableau des valeurs possibles, consultez [Utilisation des en-têtes Windows](/windows/win32/WinProg/using-the-windows-headers). Par exemple, nous pouvons choisir de l'exécuter sur toutes les versions à partir de Vista.
 
 ```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA

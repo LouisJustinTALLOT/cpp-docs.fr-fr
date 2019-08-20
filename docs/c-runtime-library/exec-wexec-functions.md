@@ -53,14 +53,14 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 72300f754015e54daf14863ca2ae677bde8f7d1a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d31192a25cce86dad6f8e1e8b0258a457d0a5436
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746199"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500134"
 ---
-# <a name="exec-wexec-functions"></a>_exec, _wexec, fonctions
+# <a name="_exec-_wexec-functions"></a>_exec, _wexec, fonctions
 
 Chaque fonction dans cette famille charge et exécute un nouveau processus :
 
@@ -82,7 +82,7 @@ La lettre à la fin du nom de fonction détermine la variance.
 
 ## <a name="remarks"></a>Remarques
 
-Chaque fonction `_exec` charge et exécute un nouveau processus. Toutes les fonctions `_exec` utilisent la même fonction de système d’exploitation ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)). Les fonctions `_exec` gèrent automatiquement des arguments de chaîne de caractères multioctets de façon appropriée, en identifiant des séquences de caractères multioctets selon la page de codes multioctets actuellement utilisée. Les fonctions `_wexec` sont des versions à caractères larges des fonctions `_exec`. Les fonctions `_wexec` se comportent de la même façon que leurs équivalents de famille `_exec`, sauf qu'elles ne gèrent pas les chaînes de caractères multioctets.
+Chaque fonction `_exec` charge et exécute un nouveau processus. Toutes les fonctions `_exec` utilisent la même fonction de système d’exploitation ([CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)). Les fonctions `_exec` gèrent automatiquement des arguments de chaîne de caractères multioctets de façon appropriée, en identifiant des séquences de caractères multioctets selon la page de codes multioctets actuellement utilisée. Les fonctions `_wexec` sont des versions à caractères larges des fonctions `_exec`. Les fonctions `_wexec` se comportent de la même façon que leurs équivalents de famille `_exec`, sauf qu'elles ne gèrent pas les chaînes de caractères multioctets.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -105,7 +105,7 @@ Les paramètres sont passés au nouveau processus en fournissant un ou plusieurs
 >  Les espaces incorporés dans les chaînes peuvent provoquer un comportement inattendu ; par exemple, le passage à `_exec` de la chaîne `"hi there"` a comme conséquence que le nouveau processus obtient deux arguments, `"hi"` et `"there"`. Si l'objectif était que le nouveau processus ouvre un fichier nommé « hi there », le processus échoue. Vous pouvez éviter cela en plaçant la chaîne `"\"hi there\""` entre guillemets.
 
 > [!IMPORTANT]
->  Ne passez pas d'entrée utilisateur à `_exec` sans vérifier explicitement son contenu. `_exec` entraîne un appel à [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa), alors gardez à l’esprit que les noms de chemin incomplets peut créer des failles de sécurité potentielles.
+>  Ne passez pas d'entrée utilisateur à `_exec` sans vérifier explicitement son contenu. `_exec` entraîne un appel à [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), alors gardez à l’esprit que les noms de chemin incomplets peut créer des failles de sécurité potentielles.
 
 Les fonctions `_exec` valident leurs paramètres. Si les paramètres attendus sont des pointeurs Null ou des chaînes vides, ou sont omis, les fonctions `_exec` appellent le gestionnaire de paramètre non valide comme décrit dans [Validation de paramètre](../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL` et retournent -1. Aucun nouveau processus n'est exécuté.
 
@@ -121,7 +121,7 @@ Un programme exécuté avec l'une des fonctions `_exec` est toujours chargé en 
 
 Les appels de fonction `_exec` ne conservent pas les modes de traduction des fichiers ouverts. Si le nouveau processus doit utiliser des fichiers hérités du processus appelant, utilisez la routine [_setmode](../c-runtime-library/reference/setmode.md) pour définir le mode de traduction souhaité pour ces fichiers. Vous devez explicitement vider (à l'aide de `fflush` ou de `_flushall`) ou fermer tout flux avant l'appel de fonction `_exec`. Les paramètres de signal ne sont pas conservés dans les nouveaux processus qui sont créés par des appels aux routines de fonction `_exec`. Les paramètres de signal sont réinitialisés à la valeur par défaut dans le nouveau processus.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```
 // crt_args.c
@@ -229,7 +229,7 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** process.h
 

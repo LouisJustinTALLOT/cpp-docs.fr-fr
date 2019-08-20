@@ -45,14 +45,14 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 044aaee376be02d0d3734ea8982a8c4db47f7d39
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8ab368378775102b708635b551c046a326adfecb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748045"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498909"
 ---
-# <a name="spawn-wspawn-functions"></a>_spawn, _wspawn, fonctions
+# <a name="_spawn-_wspawn-functions"></a>_spawn, _wspawn, fonctions
 
 Chacune des fonctions `_spawn` crée et exécute un nouveau processus :
 
@@ -117,13 +117,13 @@ Pour passer des arguments au nouveau processus, fournissez un ou plusieurs point
 >  Les espaces incorporés dans les chaînes peuvent provoquer un comportement inattendu ; par exemple, le passage à `_spawn` de la chaîne `"hi there"` a comme conséquence que le nouveau processus obtient deux arguments, `"hi"` et `"there"`. Si l'objectif était que le nouveau processus ouvre un fichier nommé « hi there », le processus échoue. Vous pouvez éviter cela en plaçant la chaîne `"\"hi there\""` entre guillemets.
 
 > [!IMPORTANT]
->  Ne passez pas d'entrée utilisateur à `_spawn` sans vérifier explicitement son contenu. `_spawn` entraîne un appel à [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa), alors gardez à l’esprit que les noms de chemin incomplets peut créer des failles de sécurité potentielles.
+>  Ne passez pas d'entrée utilisateur à `_spawn` sans vérifier explicitement son contenu. `_spawn` entraîne un appel à [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), alors gardez à l’esprit que les noms de chemin incomplets peut créer des failles de sécurité potentielles.
 
 Vous pouvez passer des pointeurs d'arguments en tant qu'arguments distincts (dans `_spawnl`, `_spawnle`, `_spawnlp` et `_spawnlpe`) ou en tant que tableau de pointeurs (dans `_spawnv`, `_spawnve`, `_spawnvp` et `_spawnvpe`). Vous devez passer au moins un argument, `arg0` ou `argv`[0], au processus engendré. Par convention, cet argument correspond au nom du programme tel que vous le taperiez sur la ligne de commande. Une valeur différente ne produit pas d'erreur.
 
 Les appels `_spawnl`, `_spawnle`, `_spawnlp` et `_spawnlpe` sont généralement utilisés dans les cas où le nombre d'arguments est connu à l'avance. L’argument `arg0` est généralement un pointeur vers `cmdname`. Les arguments `arg1` à `argn` sont des pointeurs vers les chaînes de caractères formant la nouvelle liste d’arguments. Après `argn`, il doit exister un pointeur **NULL** pour marquer la fin de la liste des arguments.
 
-Les appels `_spawnv`, `_spawnve`, `_spawnvp` et `_spawnvpe` sont utiles lorsque le nouveau processus contient un nombre variable d'arguments. Les pointeurs vers les arguments sont passés en tant que tableau, `argv`*.* L’argument `argv`[0] est généralement un pointeur qui désigne un chemin en mode réel ou le nom de programme en mode protégé, tandis que `argv`[1] à `argv`[`n`] sont des pointeurs qui pointent vers les chaînes de caractères formant la nouvelle liste d’arguments. L’argument `argv`[`n` +1] doit être un pointeur **NULL** pour marquer la fin de la liste d’arguments.
+Les appels `_spawnv`, `_spawnve`, `_spawnvp` et `_spawnvpe` sont utiles lorsque le nouveau processus contient un nombre variable d'arguments. Les pointeurs vers les arguments sont passés en tant que tableau, `argv` *.* L’argument `argv`[0] est généralement un pointeur qui désigne un chemin en mode réel ou le nom de programme en mode protégé, tandis que `argv`[1] à `argv`[`n`] sont des pointeurs qui pointent vers les chaînes de caractères formant la nouvelle liste d’arguments. L’argument `argv`[`n` +1] doit être un pointeur **NULL** pour marquer la fin de la liste d’arguments.
 
 ## <a name="environment-of-the-spawned-process"></a>Environnement du processus engendré
 
@@ -139,11 +139,11 @@ Les nouveaux processus créés par des appels aux routines `_spawn` ne conserven
 
 Si vous appelez `_spawn` à partir d'une DLL ou d'une application GUI et souhaitez rediriger la sortie vers un canal, deux options sont possibles :
 
-- Utilisez l’API Win32 pour créer un canal, appelez [AllocConsole](/windows/console/allocconsole), définissez les valeurs de handle dans la structure de démarrage, puis appelez [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).
+- Utilisez l’API Win32 pour créer un canal, appelez [AllocConsole](/windows/console/allocconsole), définissez les valeurs de handle dans la structure de démarrage, puis appelez [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw).
 
 - Appelez [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md), ce qui crée un canal et appelle l’application à l’aide de **cmd.exe /c** (ou **command.exe /c**).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```
 // crt_spawn.c
