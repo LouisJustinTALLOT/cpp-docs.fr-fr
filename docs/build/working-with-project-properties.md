@@ -23,7 +23,7 @@ Dans l’IDE, toutes les informations nécessaires pour générer un projet sont
 
 Quand vous créez un projet, le système attribue des valeurs à différentes propriétés. Les valeurs par défaut varient légèrement en fonction du type de projet et des options que vous choisissez dans l’Assistant Application. Par exemple, un projet ATL a des propriétés relatives aux fichiers MIDL, mais elles sont absentes dans une application console de base. Les propriétés par défaut sont affichées dans le volet Général des pages de propriétés :
 
-![&#43; &#43; ]Valeurs par défaut du projet Visual C(media/visual-c---project-defaults.png " C++ ") par défaut
+![Paramètres par défaut des projets Visual C&#43;&#43;](media/visual-c---project-defaults.png "Paramètres par défaut des projets Visual C++")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Application de propriétés aux configurations de build et aux plateformes cibles
 
