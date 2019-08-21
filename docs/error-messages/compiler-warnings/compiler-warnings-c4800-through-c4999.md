@@ -153,12 +153,12 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 518efdd74a90198818538c1548adb2b7ff37290c
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: ae73d4ba503dfbbc27f91040c31beb91da3b7e54
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821124"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631535"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Avertissements du compilateur C4800 à C5999
 
@@ -266,7 +266,8 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 1) C4973|'*symbol*': marqué comme déconseillé|
 |Avertissement du compilateur (niveau 1) C4974|'*symbol*': marqué comme déconseillé|
 |Avertissement du compilateur (niveau 3) C4981|Warbird: fonction'*fonction*'marquée comme _ _ forceinline non inline, car elle contient une sémantique d’exception|
-|Avertissement du compilateur (niveau 3) C4985|Symbol Name': attributs absents de la déclaration précédente.|
+|[Avertissement du compilateur C4984](compiler-warning-c4984.md)|'If constexpr’est une extension de langage C++ 17|
+|Avertissement du compilateur (niveau 3) C4985|'*symbol_name*': attributs absents de la déclaration précédente.|
 |[Avertissement du compilateur C4986](compiler-warning-c4986.md)|'*déclaration*': la spécification d’exception ne correspond pas à la déclaration précédente|
 |Avertissement du compilateur (niveau 4) C4987|extension non standard utilisée : 'throw (...)'|
 |Avertissement du compilateur (niveau 4) C4988|'*variable*': variable déclarée en dehors de la portée classe/fonction|

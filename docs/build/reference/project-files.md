@@ -1,24 +1,38 @@
 ---
 title: Exemple de fichier projet
-ms.date: 10/09/2018
+ms.date: 08/19/2019
 helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: 306b6a7b39db758c3712b1d57460268fc6414726
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0eb87c3f3ba8bd60f0944ad673d22f9b84e070a5
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217734"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630768"
 ---
 # <a name="project-files"></a>Fichiers projet
 
-Un C++ fichier projet dans Visual Studio est un fichier basé sur XML qui a l’extension de nom de fichier .vcxproj et contient des informations qui sont requis pour générer un C++ projet. Notez que le fichier de projet importe différents fichiers de projet ayant l’extension *.props* ou *.targets*. Ces fichiers contiennent des informations de build supplémentaires, et peuvent faire référence à d’autres fichiers *.props* ou *.targets*. Les macros contenues dans le chemin d’accès au fichier (par exemple `$(VCTargetsPath)`) dépendent de votre installation de Visual Studio. Pour plus d’informations sur ces macros et *.props* et *.targets* de fichiers, consultez [VC ++ Directories Property Page](vcpp-directories-property-page.md), [compilateur C++ de définir et build propriétés dans Visual Studio](../working-with-project-properties.md) et [macros courantes pour générer des propriétés et les commandes](common-macros-for-build-commands-and-properties.md).
+Un C++ fichier projet dans Visual Studio est un fichier XML dont l’extension de nom de fichier est. vcxproj et qui contient les informations requises pour générer un C++ projet. Notez que le fichier projet importe différents fichiers projet avec l’extension «. props» ou «. targets». Ces fichiers contiennent des informations de build supplémentaires et peuvent eux-mêmes faire référence à d’autres fichiers «. props» ou «. targets». Les macros contenues dans le chemin d’accès au fichier (par exemple `$(VCTargetsPath)`) dépendent de votre installation de Visual Studio. Pour plus d’informations sur ces macros et les fichiers «. props» et «. targets», consultez la [page de propriétés Répertoires VC + +](vcpp-directories-property-page.md), [ C++ définir les propriétés du compilateur et de build dans Visual Studio](../working-with-project-properties.md) et les [macros courantes pour les commandes et les propriétés de génération](common-macros-for-build-commands-and-properties.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
+
+::: moniker range=">=vs-2019"
+
+L’exemple de fichier. vcxproj suivant a été généré en choisissant **Assistant Windows Desktop** dans la boîte de dialogue **nouveau projet** . Pour traiter un fichier projet, utilisez l’outil msbuild.exe sur la ligne de commande, ou la commande **Générer** dans l’IDE. (Cet exemple ne peut pas être traité, car les fichiers sources et les fichiers d’en-tête requis n’ont pas été fournis.) Pour plus d’informations sur les éléments XML d’un fichier projet, consultez [Informations de référence sur le schéma de fichier projet](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 L’exemple de fichier .vcxproj suivant a été produit en spécifiant une **Application console Win32** dans la boîte de dialogue **Nouveau projet**. Pour traiter un fichier projet, utilisez l’outil msbuild.exe sur la ligne de commande, ou la commande **Générer** dans l’IDE. (Cet exemple ne peut pas être traité, car les fichiers sources et les fichiers d’en-tête requis n’ont pas été fournis.) Pour plus d’informations sur les éléments XML d’un fichier projet, consultez [Informations de référence sur le schéma de fichier projet](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+
+::: moniker-end
+
+
+>[!NOTE]
+> Pour les projets dans Visual Studio 2017 et versions antérieures `pch.h` , `stdafx.h` remplacez `pch.cpp` par `stdafx.cpp`et par.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -102,12 +116,12 @@ L’exemple de fichier .vcxproj suivant a été produit en spécifiant une **App
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SomeProjName.cpp" />
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>

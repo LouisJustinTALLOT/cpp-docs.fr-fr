@@ -1,6 +1,6 @@
 ---
 title: Utilisation des fichiers sources MFC
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 helpviewer_keywords:
 - public members
 - source files
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - protected member access
 - source files, MFC
 ms.assetid: 3230e8fb-3b69-4ddf-9538-365ac7ea5e72
-ms.openlocfilehash: 6f23f792f750e4352494bf3e4bde08f0fe360439
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: ca5799da7a6ada42db20e3551b3fb7262e8990a0
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980491"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631665"
 ---
 # <a name="using-the-mfc-source-files"></a>Utilisation des fichiers sources MFC
 
-La bibliothèque MFC (Microsoft Foundation Class) fournit du code source complet. Les fichiers d’en-tête (. h) se trouvent dans le répertoire \atlmfc\include les fichiers d’implémentation (. cpp) se trouvent dans le répertoire \atlmfc\src\mfc
+La bibliothèque MFC (Microsoft Foundation Class) fournit du code source complet. Les fichiers d’en-tête (. h) se trouvent dans le répertoire *\atlmfc\include* Les fichiers d’implémentation (. cpp) se trouvent dans le répertoire *\atlmfc\src\mfc*
 
-Cette famille d’articles explique les conventions utilisées par MFC pour commenter les différentes parties de chaque classe, ce que signifient ces commentaires et ce que vous devez trouver dans chaque section. Les assistants visuels C++ utilisent des conventions similaires pour les classes qu’ils créent pour vous, et vous trouverez probablement ces conventions utiles pour votre propre code.
+Cet article explique les conventions utilisées par MFC pour commenter les différentes parties de chaque classe, ce que signifient ces commentaires et ce que vous devez trouver dans chaque section. Les Assistants Visual Studio utilisent des conventions similaires pour les classes qu’ils créent pour vous, et vous trouverez probablement ces conventions utiles pour votre propre code.
 
 Vous connaissez peut-être les mots clés **public**, **protected**et **Private** C++ . Dans les fichiers d’en-tête MFC, vous trouverez chaque classe peut avoir plusieurs de chacune d’elles. Par exemple, les variables et les fonctions des membres publics peuvent être sous plusieurs mots clés **publics** . C’est parce que MFC sépare les variables et les fonctions membres en fonction de leur utilisation, et non du type d’accès autorisé. MFC utilise la modération **privée** . Même les éléments considérés comme des détails d’implémentation sont souvent **protégés**et les nombreuses fois sont **publics**. Bien que l’accès aux détails d’implémentation soit déconseillé, les MFC ne quittent pas la décision.
 
@@ -38,19 +38,102 @@ Dans les fichiers sources MFC et les fichiers d’en-tête créés par l’Assis
 
 `// Implementation`
 
-Les sujets abordés dans cette série d’articles sont les suivants:
+## <a name="an-example-of-the-comments"></a>Un exemple des commentaires
 
-- [Un exemple des commentaires](../mfc/an-example-of-the-comments.md)
+La liste partielle suivante de la `CStdioFile` classe utilise la plupart des commentaires standard que MFC utilise dans ses classes pour diviser les membres de la classe selon les méthodes utilisées:
 
-- [//Commentaire sur l’implémentation](../mfc/decrement-implementation-comment.md)
+```cpp
+/*============================================================================*/
+// STDIO file implementation
 
-- [Le commentaire des constructeurs//](../mfc/decrement-constructors-comment.md)
+class CStdioFile : public CFile
+{
+    DECLARE_DYNAMIC(CStdioFile)
 
-- [Le commentaire//Attributes](../mfc/decrement-attributes-comment.md)
+public:
+// Constructors
+    CStdioFile();
 
-- [Le commentaire//Operations](../mfc/decrement-operations-comment.md)
+    // . . .
 
-- [Commentaire//remplaçable](../mfc/decrement-overridables-comment.md)
+// Attributes
+    FILE* m_pStream;    // stdio FILE
+                        // m_hFile from base class is _fileno(m_pStream)
+
+// Operations
+    // reading and writing strings
+    virtual void WriteString(LPCTSTR lpsz);
+    virtual LPTSTR ReadString(_Out_writes_z_(nMax) LPTSTR lpsz, _In_ UINT nMax);
+    virtual BOOL ReadString(CString& rString);
+
+// Implementation
+public:
+    virtual ~CStdioFile();
+#ifdef _DEBUG
+    void Dump(CDumpContext& dc) const;
+#endif
+    virtual ULONGLONG GetPosition() const;
+    virtual ULONGLONG GetLength() const;
+    virtual BOOL Open(LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL);
+
+    // . . .
+
+protected:
+    void CommonBaseInit(FILE* pOpenStream, CAtlTransactionManager* pTM);
+    void CommonInit(LPCTSTR lpszFileName, UINT nOpenFlags, CAtlTransactionManager* pTM);
+};
+```
+
+Ces commentaires marquent de manière cohérente les sections de la déclaration de classe qui contiennent des genres similaires de membres de classe. Gardez à l’esprit qu’il s’agit de conventions MFC, et non de règles définies.
+
+## <a name="-constructors-comment"></a>Constructeur, commentaire
+
+La `// Constructors` section d’une déclaration de classe MFC déclare des constructeurs (dans le C++ sens) et toutes les fonctions d’initialisation requises pour vraiment utiliser l’objet. Par exemple, `CWnd::Create` se trouve dans la section constructeurs, car avant d’utiliser `CWnd` l’objet, il doit être «entièrement construit» en appelant d' C++ abord le constructeur, puis `Create` en appelant la fonction. En règle générale, ces membres sont publics.
+
+Par exemple, la `CStdioFile` classe a cinq constructeurs, dont l’un est affiché dans la liste sous [un exemple de commentaires](#an-example-of-the-comments).
+
+## <a name="-attributes-comment"></a>Attributs (commentaire)
+
+La `// Attributes` section d’une déclaration de classe MFC contient les attributs (ou propriétés) publics de l’objet. En général, les attributs sont des variables membres ou des fonctions d’extraction/définition. Les fonctions «obtient» et «Set» peuvent être virtuelles ou non. Les fonctions «obtenir» sont souvent **const**, car dans la plupart des cas, elles n’ont pas d’effets secondaires. Ces membres sont normalement publics. Les attributs protected et Private se trouvent généralement dans la section Implementation.
+
+Dans l’exemple de liste à `CStdioFile`partir de la classe, sous [un exemple des commentaires](#an-example-of-the-comments), la liste comprend une variable membre, *m_pStream*. La `CDC` classe répertorie presque 20 membres sous ce commentaire.
+
+> [!NOTE]
+> Les classes volumineuses, `CDC` telles `CWnd`que et, peuvent avoir un grand nombre de membres qui répertorient simplement tous les attributs d’un groupe qui n’ajouteraient pas beaucoup de clarté. Dans ce cas, la bibliothèque de classes utilise d’autres commentaires comme en-têtes pour délimiter les membres. Par exemple, `CDC` utilise `// Device-Context Functions`, `// Drawing Tool Functions`, `// Drawing Attribute Functions`, et bien plus encore. Les groupes qui représentent des attributs suivent la syntaxe habituelle décrite ci-dessus. De nombreuses classes OLE ont une section d' `// Interface Maps`implémentation appelée.
+
+## <a name="-operations-comment"></a>Commentaire sur les opérations
+
+La `// Operations` section d’une déclaration de classe MFC contient des fonctions membres que vous pouvez appeler sur l’objet pour effectuer des opérations ou prendre des mesures (effectuer des opérations). Ces fonctions ne sont généralement pas**const** , car elles ont généralement des effets secondaires. Elles peuvent être virtuelles ou invirtuelles selon les besoins de la classe. En règle générale, ces membres sont publics.
+
+Dans l’exemple de liste à `CStdioFile`partir de la classe, dans [un exemple des commentaires](#an-example-of-the-comments), la liste comprend trois fonctions membres sous `WriteString` ce commentaire: et deux surcharges de. `ReadString`
+
+Comme avec les attributs, les opérations peuvent être réparties de manière plus approfondie.
+
+## <a name="-overridables-comment"></a>Remplaçable commentaire
+
+La `// Overridables` section d’une déclaration de classe MFC contient des fonctions virtuelles que vous pouvez substituer dans une classe dérivée lorsque vous devez modifier le comportement de la classe de base. Elles sont généralement nommées à partir de «on», bien que cela ne soit pas strictement nécessaire. Les fonctions ici sont conçues pour être remplacées et implémentent souvent ou fournissent une sorte de «rappel» ou de «raccordement». En règle générale, ces membres sont protégés.
+
+Dans MFC elle-même, les fonctions virtuelles pures sont toujours placées dans cette section. Une fonction virtuelle pure dans C++ prend la forme suivante:
+
+`virtual void OnDraw( ) = 0;`
+
+Dans l’exemple de liste à `CStdioFile`partir de la classe, dans [un exemple de commentaires](#an-example-of-the-comments), la liste n’indique aucune section remplaçable. En `CDocument`revanche, la classe répertorie environ 10 fonctions membres substituables.
+
+Dans certaines classes, vous pouvez également voir le commentaire `// Advanced Overridables`. Ces fonctions sont celles que seuls les programmeurs avancés doivent essayer de substituer. Vous n’aurez probablement jamais besoin de les remplacer.
+
+> [!NOTE]
+> Les conventions décrites dans cet article fonctionnent également bien, en général, pour les méthodes et propriétés Automation (anciennement appelées OLE Automation). Les méthodes Automation sont similaires aux opérations MFC. Les propriétés Automation sont similaires aux attributs MFC. Les événements Automation (pris en charge pour les contrôles ActiveX, autrefois appelés contrôles OLE) sont similaires aux fonctions membres substituables MFC.
+
+## <a name="-implementation-comment"></a>Commentaire d’implémentation
+
+La `// Implementation` section est la partie la plus importante de toute déclaration de classe MFC.
+
+Cette section contient tous les détails de l’implémentation. Les variables membres et les fonctions membres peuvent apparaître dans cette section. Tout ce qui se trouve sous cette ligne peut changer dans une version ultérieure de MFC. À moins que vous ne puissiez pas l’éviter, vous ne devez `// Implementation` pas vous appuyer sur les détails sous la ligne. En outre, les membres déclarés sous la ligne d’implémentation ne sont pas documentés, bien que certaines implémentations soient abordées dans les notes techniques. Les substitutions de fonctions virtuelles dans la classe de base résident dans cette section, quelle que soit la section dans laquelle la fonction de classe de base est définie. Lorsqu’une fonction remplace l’implémentation de la classe de base, elle est considérée comme un détail d’implémentation. En règle générale, ces membres sont protégés, mais pas toujours.
+
+Dans la `CStdioFile` liste sous [un exemple des commentaires](#an-example-of-the-comments), les membres déclarés sous `// Implementation` le commentaire peuvent être déclarés comme **public**, **protected**ou **Private**. Utilisez ces membres avec précaution, car ils peuvent changer à l’avenir. La déclaration d’un groupe de membres en tant que **public** peut être nécessaire pour que l’implémentation de la bibliothèque de classes fonctionne correctement. Toutefois, cela ne signifie pas que vous pouvez utiliser en toute sécurité les membres déclarés.
+
+> [!NOTE]
+> Vous pouvez trouver des commentaires sur les types restants, au `// Implementation` -dessus ou en dessous du commentaire. Dans les deux cas, ils décrivent les genres de membres déclarés sous eux. S’ils se trouvent sous `// Implementation` le commentaire, vous devez supposer que les membres peuvent changer dans les versions ultérieures de MFC.
 
 ## <a name="see-also"></a>Voir aussi
 

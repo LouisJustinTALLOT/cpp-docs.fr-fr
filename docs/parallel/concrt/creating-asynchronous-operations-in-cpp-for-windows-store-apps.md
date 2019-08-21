@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: d6a36da79f24d98d162c4ffffff17b4471b2b063
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e3a5b634eb22a6860fe8af5b3b737a8e649e03c2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512253"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631738"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Création d’opérations asynchrones dans C++ pour les applications UWP
 
@@ -70,10 +70,10 @@ La notion d' *action* signifie que la tâche asynchrone ne produit pas de valeur
 
 Le type de retour de `create_async` est déterminé par le type de ses arguments. Par exemple, si votre fonction de travail ne retourne pas de valeur et ne rapporte pas la progression, `create_async` renvoie `IAsyncAction`. Si votre fonction de travail ne renvoie pas de valeur et rapporte également la progression, `create_async` renvoie `IAsyncActionWithProgress`. Pour signaler la progression, utilisez un objet [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) comme paramètre de votre fonction de travail. La possibilité de signaler la progression vous permet de rapporter la quantité de travail qui a été effectuée et la quantité restante (par exemple sous forme d'un pourcentage). Elle vous permet également de rapporter les résultats à mesure qu'ils deviennent disponibles.
 
-Les interfaces `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`et `IAsyncActionOperationWithProgress<TProgress, TProgress>` fournissent chacune une méthode `Cancel` qui vous permet d'annuler l'opération asynchrone. La classe `task` fonctionne avec des jetons d'annulation. Lorsque vous utilisez un jeton d'annulation pour annuler un travail, le runtime ne démarre pas le nouveau processus qui souscrit à ce jeton. Un travail qui est déjà actif peut contrôler son jeton d'annulation et s'arrêter lorsqu'il peut. Ce mécanisme est décrit plus en détail dans le document [Cancellation in the PPL](cancellation-in-the-ppl.md). Vous pouvez connecter l’annulation de tâche avec`Cancel` les méthodes Windows Runtime de deux manières. Tout d'abord, vous pouvez définir la fonction de travail que vous passez à `create_async` pour prendre un objet [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . Lorsque la méthode `Cancel` est appelée, ce jeton d'annulation est annulé et les règles normales d'annulation s'appliquent à l'objet `task` sous-jacent qui prend en charge l'appel `create_async` . Si vous ne fournissez pas d'objet `cancellation_token` , l'objet `task` sous-jacent en définit un implicitement. Définissez un objet `cancellation_token` lorsque vous devez gérer de manière coopérative l'annulation dans votre fonction de travail. La section [exemple: Le contrôle de l’exécution dans une C++ application Windows Runtime](#example-app) avec et XAML montre un exemple de la façon d’effectuer une annulation dans une application C# plateforme Windows universelle (UWP) avec et XAML C++ qui utilise un composant Windows Runtime personnalisé.
+Les interfaces `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`et `IAsyncActionOperationWithProgress<TProgress, TProgress>` fournissent chacune une méthode `Cancel` qui vous permet d'annuler l'opération asynchrone. La classe `task` fonctionne avec des jetons d'annulation. Lorsque vous utilisez un jeton d'annulation pour annuler un travail, le runtime ne démarre pas le nouveau processus qui souscrit à ce jeton. Un travail qui est déjà actif peut contrôler son jeton d'annulation et s'arrêter lorsqu'il peut. Ce mécanisme est décrit plus en détail dans le document [Cancellation in the PPL](cancellation-in-the-ppl.md). Vous pouvez connecter l’annulation de tâche avec`Cancel` les méthodes Windows Runtime de deux manières. Tout d'abord, vous pouvez définir la fonction de travail que vous passez à `create_async` pour prendre un objet [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . Lorsque la `Cancel` méthode est appelée, ce jeton d’annulation est annulé et les règles d’annulation normales s’appliquent `task` à l’objet sous `create_async` -jacent qui prend en charge l’appel. Si vous ne fournissez pas d'objet `cancellation_token` , l'objet `task` sous-jacent en définit un implicitement. Définissez un objet `cancellation_token` lorsque vous devez gérer de manière coopérative l'annulation dans votre fonction de travail. La section [exemple: Le contrôle de l’exécution dans une C++ application Windows Runtime](#example-app) avec et XAML montre un exemple de la façon d’effectuer une annulation dans une application C# plateforme Windows universelle (UWP) avec et XAML C++ qui utilise un composant Windows Runtime personnalisé.
 
 > [!WARNING]
->  Dans une chaîne de continuations de tâches, nettoyez toujours l'état, puis appelez [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) quand le jeton d'annulation est annulé. Si vous utilisez la méthode du retour rapide au lieu d'appeler `cancel_current_task`, l'opération passe à l'état Terminé au lieu de l'état Annulé.
+>  Dans une chaîne de continuations de tâches, nettoyez toujours l’État, puis appelez [Concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) quand le jeton d’annulation est annulé. Si vous utilisez la méthode du retour rapide au lieu d'appeler `cancel_current_task`, l'opération passe à l'état Terminé au lieu de l'état Annulé.
 
 Le tableau suivant résume les combinaisons qu'il est possible d'utiliser pour définir des opérations asynchrones dans votre application.
 
@@ -161,7 +161,7 @@ Mettez l'élément `Grid` à jour dans MainPage.xaml pour inclure un élément `
 
 [!code-xml[concrt-windowsstore-commonwords#1](../../parallel/concrt/codesnippet/xaml/creating-asynchronous-operations-in-cpp-for-windows-store-apps_6.xaml)]
 
-Ajoutez les instructions `#include` suivantes à pch.h.
+Ajoutez les instructions `#include` suivantes à *pch. h*.
 
 [!code-cpp[concrt-windowsstore-commonwords#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_7.h)]
 

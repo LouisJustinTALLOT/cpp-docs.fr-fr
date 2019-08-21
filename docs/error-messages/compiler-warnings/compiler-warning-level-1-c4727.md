@@ -1,35 +1,55 @@
 ---
 title: Avertissement du compilateur (niveau 1) C4727
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - C4727
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: be1a248fc2709706e137b543344966735c19064e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bcc029536d2602d50178d7148332b8371db3c7f
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386432"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630830"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Avertissement du compilateur (niveau 1) C4727
 
-« PCH nommé fichier_pch comportant le même horodatage dans fichier_obj_1 et fichier_obj_2.  À l’aide du premier PCH.
+«PCH nommé pch_file avec le même horodatage trouvé dans obj_file_1 et obj_file_2.  Utilisation du premier PCH.
 
-C4727 se produit lors de la compilation de plusieurs compilands avec **/Yc**, et où le compilateur a pu marquer tous les fichiers .obj avec le même horodatage .pch.
+> [!NOTE]
+> Dans Visual Studio 2017 et les versions antérieures, l’en-tête précompilé est appelé *stdafx. h* par défaut, et dans visual studio 2019 et versions ultérieures, il est appelé *pch. h* par défaut.
 
-Pour résoudre, compilez un fichier source avec **/Yc /c** (crée un fichier .pch), et compilez les autres séparément avec **/Yu /c** (utilise un fichier .pch), puis les relier.
+C4727 se produit lors de la compilation de plusieurs compilands avec **/Yc**, et où le compilateur a pu marquer tous les fichiers. obj avec le même horodatage. pch.
 
-Par conséquent, si vous avez fait ce qui suit et génère C4727 :
+Pour résoudre le, compilez un fichier source avec **/Yc/c** (crée PCH) et les autres compilent séparément avec **/Yu/c** (utilise PCH), puis liez-les ensemble.
 
-**cl /clr /GL a.cpp b.cpp c.cpp /Ycstdafx.h**
+Par conséquent, si vous avez effectué les opérations suivantes et qu’il génère C4727:
 
-Vous devez procédez comme suit à la place :
+::: moniker range="<=vs-2017"
 
-**cl /clr /GL a.cpp /Ycstdafx.h /c**
+**CL/CLR/GL a. cpp b. cpp c. cpp/Ycstdafx.h**
 
-**cl /clr /GL b.cpp c.cpp /Yustdafx.h /link a.obj**
+À la place, procédez comme suit:
+
+**CL/CLR/GL a. cpp/Ycstdafx.h/c**
+
+**CL/CLR/GL b. cpp c. cpp/Yustdafx.h/Link a. obj**
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+**CL/CLR/GL a. cpp b. cpp c. cpp/Ycpch.h**
+
+À la place, procédez comme suit:
+
+**CL/CLR/GL a. cpp/Ycpch.h/c**
+
+**CL/CLR/GL b. cpp c. cpp/Yupch.h/Link a. obj**
+
+::: moniker-end
+
 
 Pour plus d'informations, consultez
 

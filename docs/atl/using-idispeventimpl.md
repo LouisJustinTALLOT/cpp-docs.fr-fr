@@ -1,35 +1,35 @@
 ---
-title: Utilisation d’IDispEventImpl (ATL)
-ms.date: 11/04/2016
+title: Utilisation de IDispEventImpl (ATL)
+ms.date: 08/19/2019
 helpviewer_keywords:
 - IDispEventImpl class, using
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
-ms.openlocfilehash: c532164788d359c7834759de01407d49c19463ca
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 9684781ba99d96e2c58d450ee0ff892374e33aef
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341482"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630596"
 ---
 # <a name="using-idispeventimpl"></a>Utilisation d’IDispEventImpl
 
-Lorsque vous utilisez `IDispEventImpl` pour gérer les événements, vous devez :
+Lorsque vous `IDispEventImpl` utilisez pour gérer des événements, vous devez:
 
 - Dérivez votre classe de [IDispEventImpl](../atl/reference/idispeventimpl-class.md).
 
-- Ajoutez une table de récepteur d’événements à votre classe.
+- Ajoutez un mappage de récepteur d’événements à votre classe.
 
-- Ajouter des entrées à la carte de récepteur événement à l’aide du [aide de SINK_ENTRY](reference/composite-control-macros.md#sink_entry) ou [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) (macro).
+- Ajoutez des entrées à la table de récepteurs d’événements à l’aide de la macro [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) ou [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) .
 
-- Implémenter les méthodes qui vous intéresse dans la gestion des.
+- Implémentez les méthodes que vous souhaitez gérer.
 
-- Et désinformation la source d’événements.
+- Conseillez et Déconseillez la source de l’événement.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-L’exemple ci-dessous montre comment gérer les `DocumentChange` événements déclenchement par de Word **Application** objet. Cet événement est défini en tant que méthode sur le `ApplicationEvents` dispinterface.
+L’exemple ci-dessous montre comment gérer `DocumentChange` l’événement déclenché par l’objet **application** de Word. Cet événement est défini comme une méthode sur la `ApplicationEvents` dispinterface.
 
-L’exemple est issu le [exemple ATLEventHandling](../overview/visual-cpp-samples.md).
+L’exemple provient de l' [exemple ATLEventHandling](../overview/visual-cpp-samples.md).
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
@@ -47,15 +47,15 @@ methods:
 };
 ```
 
-L’exemple utilise `#import` pour générer les fichiers d’en-tête requis à partir de la bibliothèque de types de Word. Si vous souhaitez utiliser cet exemple avec d’autres versions de Word, vous devez spécifier le fichier mso dll approprié. Par exemple, Office 2000 fournit mso9.dll et OfficeXP fournit mso.dll. Ce code est simplifié dans stdafx.h :
+L’exemple utilise `#import` pour générer les fichiers d’en-tête requis à partir de la bibliothèque de types Word. Si vous souhaitez utiliser cet exemple avec d’autres versions de Word, vous devez spécifier le fichier dll mso correct. Par exemple, Office 2000 fournit mso9. dll et OfficeXP fournit mso. dll. Ce code est simplifié de *pch. h* (*stdafx. h* dans Visual Studio 2017 et versions antérieures):
 
 [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]
 
-Le code suivant s’affiche dans NotSoSimple.h. Le code correspondant est indiqué par des commentaires :
+Le code suivant apparaît dans NotSoSimple. h. Le code approprié est indiqué par des commentaires:
 
 [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]
 
 ## <a name="see-also"></a>Voir aussi
 
 [Gestion des événements](../atl/event-handling-and-atl.md)<br/>
-[ATLEventHandling, exemple](../overview/visual-cpp-samples.md)
+[Exemple de ATLEventHandling](../overview/visual-cpp-samples.md)
