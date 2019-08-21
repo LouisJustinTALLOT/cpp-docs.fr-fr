@@ -1,6 +1,6 @@
 ---
 title: Dll et comportement C++ de la bibliothèque Runtime visuelle
-ms.date: 05/06/2019
+ms.date: 08/19/2019
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: d44f3bf7a8b06f567b1af221e17085d589e56aca
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 572a0ba70c1ba2d46d2d9fd6d8ac543a77bbbc01
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492620"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630371"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll et comportement C++ de la bibliothèque Runtime visuelle
 
@@ -30,7 +30,7 @@ Lorsque vous générez une bibliothèque de liens dynamiques (DLL) à l’aide d
 
 Dans Windows, toutes les dll peuvent contenir une fonction de point d’entrée facultative, `DllMain`généralement appelée, qui est appelée à la fois pour l’initialisation et l’arrêt. Cela vous donne la possibilité d’allouer ou de libérer des ressources supplémentaires en fonction des besoins. Windows appelle la fonction de point d’entrée dans quatre cas: attachement de processus, détachement de processus, attachement de thread et détachement de thread. Lorsqu’une DLL est chargée dans un espace d’adressage de processus, soit lorsqu’une application qui l’utilise est chargée, soit lorsque l’application demande la DLL au moment de l’exécution, le système d’exploitation crée une copie distincte des données DLL. C’est ce que l’on appelle un *attachement de processus*. L' *attachement de thread* se produit lorsque le processus dans lequel la dll est chargée crée un nouveau thread. Le détachement de *thread* se produit lorsque le thread se termine, et le détachement de *processus* est lorsque la dll n’est plus nécessaire et est libérée par une application. Le système d’exploitation effectue un appel séparé au point d’entrée de la DLL pour chacun de ces événements, en passant un argument *reason* pour chaque type d’événement. Par exemple, le système d' `DLL_PROCESS_ATTACH` exploitation envoie comme argument *reason* pour signaler le processus Attach.
 
-La bibliothèque VCRuntime fournit une fonction de point d’entrée `_DllMainCRTStartup` appelée pour gérer les opérations d’initialisation et d’arrêt par défaut. Sur le processus d’attachement `_DllMainCRTStartup` , la fonction configure les vérifications de sécurité de la mémoire tampon, initialise la bibliothèque CRT et d’autres bibliothèques, initialise les informations de type au moment de l’exécution, initialise et appelle les constructeurs pour les données statiques et non locales, initialise le stockage local des threads. , incrémente un compteur statique interne pour chaque attachement, puis appelle un utilisateur ou une bibliothèque fournie `DllMain`. Lors du détachement de processus, la fonction passe en revue ces étapes en sens inverse. Il appelle `DllMain`, décrémente le compteur interne, appelle des destructeurs, appelle des fonctions de terminaison CRT `atexit` et des fonctions inscrites, et notifie toutes les autres bibliothèques de terminaison. Lorsque le compteur de pièce jointe atteint la valeur zéro `FALSE` , la fonction retourne pour indiquer à Windows que la dll peut être déchargée. La `_DllMainCRTStartup` fonction est également appelée pendant l’attachement de thread et le détachement de thread. Dans ce cas, le code VCRuntime n’effectue pas d’initialisation ou d’arrêt supplémentaire, et appelle `DllMain` simplement pour transmettre le message. Si `DllMain` retourne `DllMain` `_DllMainCRTStartup` `DLL_PROCESS_DETACH` de l’attachement du processus, échec de la signalisation, rappelle et passe en tant qu’argument Reason, passe au reste du processus d’arrêt. `FALSE`
+La bibliothèque VCRuntime fournit une fonction de point d’entrée `_DllMainCRTStartup` appelée pour gérer les opérations d’initialisation et d’arrêt par défaut. Sur le processus d’attachement `_DllMainCRTStartup` , la fonction configure les vérifications de sécurité de la mémoire tampon, initialise la bibliothèque CRT et d’autres bibliothèques, initialise les informations de type au moment de l’exécution, initialise et appelle les constructeurs pour les données statiques et non locales, initialise le stockage local des threads. , incrémente un compteur statique interne pour chaque attachement, puis appelle un utilisateur ou une bibliothèque fournie `DllMain`. Lors du détachement de processus, la fonction passe en revue ces étapes en sens inverse. Il appelle `DllMain`, décrémente le compteur interne, appelle des destructeurs, appelle des fonctions de terminaison CRT `atexit` et des fonctions inscrites, et notifie toutes les autres bibliothèques de terminaison. Lorsque le compteur de pièce jointe atteint la valeur zéro `FALSE` , la fonction retourne pour indiquer à Windows que la dll peut être déchargée. La `_DllMainCRTStartup` fonction est également appelée pendant l’attachement de thread et le détachement de thread. Dans ce cas, le code VCRuntime n’effectue pas d’initialisation ou d’arrêt supplémentaire, et appelle `DllMain` simplement pour transmettre le message. Si `DllMain` retourne `DllMain` `_DllMainCRTStartup` `DLL_PROCESS_DETACH` de l’attachement de processus, échec de signalement, rappelle et passe en tant qu’argument Reason, passe au reste du processus d’arrêt. `FALSE`
 
 Lors de la génération de dll dans Visual Studio, le `_DllMainCRTStartup` point d’entrée par défaut fourni par VCRuntime est lié automatiquement. Vous n’avez pas besoin de spécifier une fonction de point d’entrée pour votre DLL à l’aide de l’option de l’éditeur de liens [/entry (symbole de point d’entrée)](reference/entry-entry-point-symbol.md) .
 
@@ -125,7 +125,7 @@ Dans votre DLL MFC normale liée de manière dynamique aux MFC, si vous utilisez
 L’Assistant fournit le code suivant pour les dll d’extension MFC. Dans le code, `PROJNAME` est un espace réservé pour le nom de votre projet.
 
 ```cpp
-#include "stdafx.h"
+#include "pch.h" // For Visual Studio 2017 and earlier, use "stdafx.h"
 #include <afxdllx.h>
 
 #ifdef _DEBUG
@@ -174,7 +174,7 @@ Les dll d’extension peuvent prendre en charge le multithreading `DLL_THREAD_AT
 Notez que le fichier d’en-tête Afxdllx. h contient des définitions spéciales pour les structures utilisées dans les dll d’extension `AFX_EXTENSION_MODULE` MFC `CDynLinkLibrary`, telles que la définition pour et. Vous devez inclure ce fichier d’en-tête dans votre DLL d’extension MFC.
 
 > [!NOTE]
->  Il est important de ne pas définir ni d’annuler la `_AFX_NO_XXX` définition des macros dans stdafx. h. Ces macros existent uniquement dans le but de vérifier si une plateforme cible particulière prend en charge cette fonctionnalité ou non. Vous pouvez écrire votre programme pour vérifier ces macros (par exemple, `#ifndef _AFX_NO_OLE_SUPPORT`), mais votre programme ne doit jamais définir ou annuler la définition de ces macros.
+>  Il est important de ne pas définir ni d’annuler la `_AFX_NO_XXX` définition des macros dans *pch. h* (*stdafx. h* dans Visual Studio 2017 et versions antérieures). Ces macros existent uniquement dans le but de vérifier si une plateforme cible particulière prend en charge cette fonctionnalité ou non. Vous pouvez écrire votre programme pour vérifier ces macros (par exemple, `#ifndef _AFX_NO_OLE_SUPPORT`), mais votre programme ne doit jamais définir ou annuler la définition de ces macros.
 
 Un exemple de fonction d’initialisation qui gère le multithreading est inclus dans [l’utilisation du stockage local des threads dans une bibliothèque de liens dynamiques](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library) dans le SDK Windows. Notez que l’exemple contient une fonction de point d’entrée `LibMain`appelée, mais vous devez nommer cette `DllMain` fonction pour qu’elle fonctionne avec les bibliothèques Runtime C et MFC.
 
