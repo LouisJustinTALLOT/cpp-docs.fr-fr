@@ -10,12 +10,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: f01b00a1469cdf82590a1bdfc742312ec96912c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b3352110c2074b325ac345c05dbf899c0bdbd0ab
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459449"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975908"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -76,7 +76,14 @@ Incluez l’en-tête standard \<chrono> pour définir des classes et des fonctio
 
 Pour plus d’informations sur les types de rapports utilisés dans les typedefs suivants, consultez [\<ratio>](../standard-library/ratio.md).
 
-||| ||| | `typedef duration<long long, nano> nanoseconds;`| Synonyme pour un `duration` type qui a une période de cycle de 1 nanoseconde.`typedef duration<long long, micro> microseconds;`| | | Synonyme pour un `duration` type qui a une période de cycle de 1 microseconde. |`typedef duration<long long, milli> milliseconds;`| | Synonyme pour un `duration` type qui a une période de cycle de 1 milliseconde.`typedef duration<long long> seconds;`| | | Synonyme pour un `duration` type qui a une période de cycle de 1 seconde.`typedef duration<int, ratio<60> > minutes;`| | | Synonyme pour un `duration` type qui a une période de cycle de 1 minute.`typedef duration<int, ratio<3600> > hours;`| | | Synonyme pour un `duration` type qui a une période de cycle de 1 heure. |
+|||
+|-|-|
+|`typedef duration<long long, nano> nanoseconds;`|Synonyme pour un `duration` type qui a une période de cycle de 1 nanoseconde.|
+|`typedef duration<long long, micro> microseconds;`|Synonyme pour un `duration` type qui a une période de cycle de 1 microseconde.|
+|`typedef duration<long long, milli> milliseconds;`|Synonyme pour un `duration` type qui a une période de cycle de 1 milliseconde.|
+|`typedef duration<long long> seconds;`|Synonyme pour un `duration` type qui a une période de cycle de 1 seconde.|
+|`typedef duration<int, ratio<60> > minutes;`|Synonyme pour un `duration` type qui a une période de cycle de 1 minute.|
+|`typedef duration<int, ratio<3600> > hours;`|Synonyme pour un `duration` type qui a une période de cycle de 1 heure.|
 
 ### <a name="literals"></a>Littéraux
 
