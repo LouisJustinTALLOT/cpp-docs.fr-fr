@@ -2,12 +2,12 @@
 title: 'Guide du portage : Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 206698d35239f416d2f13891044aa54fe502500a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511660"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630447"
 ---
 # <a name="porting-guide-spy"></a>Guide du portage : Spy++
 
@@ -67,7 +67,7 @@ Microsoft n’assure plus le support de Windows XP. Le ciblage de cette version 
 
 Pour résoudre cette erreur, définissez WINVER en mettant à jour le paramètre **Propriétés du projet** vers la plus ancienne version de Windows que vous voulez cibler. Pour obtenir un tableau des valeurs correspondant aux différentes versions de Windows, cliquez [ici](/windows/win32/WinProg/using-the-windows-headers).
 
-Le fichier stdafx.h contenait certaines de ces définitions de macros.
+Le fichier *stdafx.h* contenait certaines de ces définitions de macros.
 
 ```cpp
 #define WINVER       0x0500  // these defines are set so that we get the
@@ -502,7 +502,7 @@ Ce problème se produit quand une variable est initialement déclarée **extern*
 
 ##  <a name="porting_to_unicode"></a> Étape 11. Portage de MBCS vers Unicode
 
-Notez que, dans l'univers Windows, le terme Unicode désigne généralement UTF-16. D'autres systèmes d'exploitation tels que Linux utilisent UTF-8, ce qui n'est pas le cas de Windows en général. La version MBCS de MFC était dépréciée dans Visual Studio 2013 et 2015, mais elle ne l’est plus dans Visual Studio 2017. Si vous utilisez Visual Studio 2013 ou 2015, avant de procéder au portage du code MBCS vers Unicode UTF-16, nous pouvons éliminer temporairement les avertissements signalant que MBCS est dépréciée, afin d’effectuer d’autres tâches ou de reporter le portage à un autre moment. Le code actuel utilise MBCS. Pour continuer à l’utiliser, nous devons installer la version ANSI/MBCS de MFC. Comme la bibliothèque MFC, qui est relativement volumineuse, ne fait pas partie de l’installation **Développement Desktop en C++** de Visual Studio par défaut, elle doit être sélectionnée dans les composants facultatifs proposés dans le programme d’installation. Consultez [MFC MBCS DLL, complément](../mfc/mfc-mbcs-dll-add-on.md). Une fois que vous avez téléchargé ce complément et redémarré Visual Studio, vous pouvez effectuer la compilation et la liaison avec la version MBCS de MFC. Toutefois, pour supprimer les avertissements relatifs à MBCS si vous utilisez Visual Studio 2013 ou 2015, vous devez également ajouter NO_WARN_MBCS_MFC_DEPRECATION à la liste des macros prédéfinies dans la section **Préprocesseur** des propriétés du projet, ou au début de votre fichier d’en-tête stdafx.h ou d’un autre fichier d’en-tête standard.
+Notez que, dans l'univers Windows, le terme Unicode désigne généralement UTF-16. D'autres systèmes d'exploitation tels que Linux utilisent UTF-8, ce qui n'est pas le cas de Windows en général. La version MBCS de MFC était dépréciée dans Visual Studio 2013 et 2015, mais elle ne l’est plus dans Visual Studio 2017. Si vous utilisez Visual Studio 2013 ou 2015, avant de procéder au portage du code MBCS vers Unicode UTF-16, nous pouvons éliminer temporairement les avertissements signalant que MBCS est dépréciée, afin d’effectuer d’autres tâches ou de reporter le portage à un autre moment. Le code actuel utilise MBCS. Pour continuer à l’utiliser, nous devons installer la version ANSI/MBCS de MFC. Comme la bibliothèque MFC, qui est relativement volumineuse, ne fait pas partie de l’installation **Développement Desktop en C++** de Visual Studio par défaut, elle doit être sélectionnée dans les composants facultatifs proposés dans le programme d’installation. Consultez [MFC MBCS DLL, complément](../mfc/mfc-mbcs-dll-add-on.md). Une fois que vous avez téléchargé ce complément et redémarré Visual Studio, vous pouvez effectuer la compilation et la liaison avec la version MBCS de MFC. Toutefois, pour supprimer les avertissements relatifs à MBCS si vous utilisez Visual Studio 2013 ou 2015, vous devez également ajouter NO_WARN_MBCS_MFC_DEPRECATION à la liste des macros prédéfinies dans la section **Préprocesseur** des propriétés du projet, ou au début de votre fichier d’en-tête *stdafx.h* ou d’un autre fichier d’en-tête standard.
 
 Nous avons maintenant des erreurs de l'éditeur de liens.
 

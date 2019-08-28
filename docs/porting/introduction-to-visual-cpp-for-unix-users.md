@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 17f8082ac0442f65b9195b37da18b04f795d3d66
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7f73e51e02eafe46c279a8f828803912d8cd190a
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448946"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631699"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introduction à Visual C++ pour les utilisateurs UNIX
 
@@ -57,7 +57,7 @@ Vous pouvez désactiver toutes les extensions spécifiques Microsoft pour C++ à
 
 Les compilateurs Microsoft C et C++ offrent des options pour la précompilation du code en C ou C++, y compris du code incorporé. Grâce à cela, vous pouvez compiler un corps de code stable, stocker l'état compilé du code dans un fichier et, lors des compilations suivantes, combiner le code précompilé avec du code qui est toujours en cours de développement. Les compilations ultérieures sont plus rapides, car le code stable n'a pas besoin d'être recompilé.
 
-Par défaut, le code précompilé est spécifié dans les fichiers stdafx.h et stdafx.cpp. L’Assistant **Nouveau projet** créera automatiquement ces fichiers, sauf si vous désélectionnez l’option **En-tête précompilé**. Pour plus d’informations, consultez [Création de fichiers d’en-têtes précompilés](../build/creating-precompiled-header-files.md).
+Par défaut, le code précompilé est spécifié dans les fichiers *pch.h* et *pch.cpp* (*stdafx.h* et *stdafx.cpp* dans Visual Studio 2017 et les versions antérieures). L’Assistant **Nouveau projet** créera automatiquement ces fichiers, sauf si vous désélectionnez l’option **En-tête précompilé**. Pour plus d’informations, consultez [Création de fichiers d’en-têtes précompilés](../build/creating-precompiled-header-files.md).
 
 ## <a name="related-sections"></a>Rubriques connexes
 

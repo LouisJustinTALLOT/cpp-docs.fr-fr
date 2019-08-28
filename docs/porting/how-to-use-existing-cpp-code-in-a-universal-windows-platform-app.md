@@ -2,12 +2,12 @@
 title: 'Procédure : utiliser le code C++ existant dans une application de plateforme Windows universelle'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: e587ae88fe8d38a22b351d87ae585efe82acf091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5050a9773eea55549958195efa624743f44ed031
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510377"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630430"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procédure : utiliser le code C++ existant dans une application de plateforme Windows universelle
 
@@ -151,7 +151,7 @@ La procédure suivante s’applique quand vous avez une DLL native qui expose de
 
    L’**Explorateur de solutions** identifie désormais le projet en tant que projet Windows universel.
 
-5. Assurez-vous que le nom de votre fichier d'en-tête précompilé est correct. Dans la section **En-têtes précompilés**, remplacez le **fichier d’en-tête précompilé** pch.h par stdafx.h. Si vous ne le faites pas, l'erreur suivante apparaît.
+5. Assurez-vous que le nom de votre fichier d'en-tête précompilé est correct. Dans la section **En-têtes précompilés**, remplacez le **fichier d’en-tête précompilé** *pch.h* par *stdafx.h*. Si vous ne le faites pas, l'erreur suivante apparaît.
 
    > Erreur C2857 : L'instruction '#include' spécifiée avec l'option de ligne de commande /Yc%s n'a pu être trouvée dans le fichier source
 
@@ -165,7 +165,7 @@ La procédure suivante s’applique quand vous avez une DLL native qui expose de
 
    Sous **Projets** > **Solution**, cochez la case en regard du projet DLL, puis choisissez le bouton **OK**.
 
-8. Incluez le ou les fichiers d’en-tête de la bibliothèque dans le fichier pch.h de votre application UWP.
+8. Incluez le ou les fichiers d’en-tête de la bibliothèque dans le fichier *pch.h* de votre application UWP.
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -195,7 +195,7 @@ Toutefois, vous pouvez utiliser une bibliothèque statique dans une application 
 
 1. Dans les propriétés du projet UWP, choisissez **Propriétés de configuration** > **Éditeur de liens** > **Entrée** dans le volet gauche. Dans le volet droit, ajoutez le chemin d’accès à la bibliothèque dans la propriété **Dépendances supplémentaires**. Par exemple, pour une bibliothèque dans le projet qui place sa sortie dans *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, ajoutez le chemin d’accès relatif `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
 
-2. Ajoutez une instruction include pour référencer le fichier d’en-tête à votre fichier pch.h (le cas échéant), ou dans n’importe quel fichier .cpp, puis commencez à ajouter du code qui utilise la bibliothèque.
+2. Ajoutez une instruction include pour référencer le fichier d’en-tête à votre fichier *pch.h* (le cas échéant), ou dans n’importe quel fichier .cpp, puis commencez à ajouter du code qui utilise la bibliothèque.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -219,7 +219,7 @@ Si vous souhaitez consommer des API natives dans une bibliothèque statique à p
 
 5. Sélectionnez tous les fichiers à ajouter à partir de votre projet d’origine, puis choisissez **OK**. Répétez cette opération si nécessaire pour les sous-dossiers.
 
-6. Il est possible que vous vous retrouviez avec du code dupliqué. Si vous disposez de plusieurs en-têtes précompilés (par exemple, stdafx.h et pch.h), choisissez-en un. Copiez tout le code requis, comme les instructions include, dans celui que vous souhaitez conserver. Supprimez ensuite l’autre et, dans les propriétés du projet, sous **En-têtes précompilés**, vérifiez que le nom du fichier d’en-tête est correct.
+6. Il est possible que vous vous retrouviez avec du code dupliqué. Si vous disposez de plusieurs en-têtes précompilés (par exemple, *stdafx.h* et *pch.h*), choisissez-en un. Copiez tout le code requis, comme les instructions include, dans celui que vous souhaitez conserver. Supprimez ensuite l’autre et, dans les propriétés du projet, sous **En-têtes précompilés**, vérifiez que le nom du fichier d’en-tête est correct.
 
    Si vous avez modifié le fichier à utiliser comme en-tête précompilé, assurez-vous que les options des en-têtes précompilés sont correctes pour chaque fichier. Sélectionnez un à un les fichiers .cpp, ouvrez la fenêtre de propriétés de chacun d’eux et vérifiez que toutes les propriétés ont la valeur **Utiliser (/Yu)** , à l’exception de l’en-tête précompilé voulu qui doit avoir la valeur **Créer (/Yc)** .
 
