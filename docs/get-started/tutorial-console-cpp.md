@@ -2,16 +2,16 @@
 title: Créer un projet d’application console C++
 description: Créer une application console Hello World et une application de calculatrice dans Visual C++
 ms.custom: mvc
-ms.date: 05/28/2019
+ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 9fc5508b68c8e206e76ead08ddb8015dd5133256
-ms.sourcegitcommit: 18f535a6c4cfe58362ed56599b1a875ee71ff6aa
+ms.openlocfilehash: ff1b5295f9fefd681ea76d09349415b59ceac1f2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66410758"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631303"
 ---
 # <a name="create-a-c-console-app-project"></a>Créer un projet d’application console C++
 
@@ -486,7 +486,7 @@ Maintenant, nous allons transformer le code de ce modèle en application de calc
    > Explication du code :
    >
    > - Les instructions `#include` vous permettent de référencer le code situé dans d’autres fichiers. Parfois, vous pouvez voir un nom de fichier entouré de crochets pointus ( **\<\>** ) et parfois, entouré de guillemets doubles ( **" "** ). En règle générale, les crochets pointus sont utilisés lors du référencement de la bibliothèque C++ standard. Les guillemets doubles sont utilisés pour les autres fichiers.
-   > - La ligne `#include "pch.h"` (ou `#include "stdafx.h"` dans les versions antérieures de Visual Studio) référence ce qu’on appelle un « en-tête précompilé ». Ce type d’en-tête est généralement utilisé par les programmeurs professionnels pour améliorer les temps de compilation. Toutefois, leur utilisation sort du cadre de ce tutoriel.
+   > - La ligne `#include "pch.h"` (ou `#include "stdafx.h"` dans Visual Studio 2017 et les versions antérieures) référence ce qu’on appelle un « en-tête précompilé ». Ce type d’en-tête est généralement utilisé par les programmeurs professionnels pour améliorer les temps de compilation. Toutefois, leur utilisation sort du cadre de ce tutoriel.
    > - La ligne `using namespace std;` indique au compilateur qu’il doit s’attendre à ce que des éléments de la bibliothèque C++ standard soient utilisés dans ce fichier. Sans cette ligne, chaque mot clé de la bibliothèque devrait être précédé d’un `std::`, pour indiquer sa portée. Par exemple, sans cette ligne, chaque référence à `cout` devrait être écrite ainsi : `std::cout`. L’instruction `using` est ajoutée pour rendre le code plus clair.
    > - Le mot clé `cout` est utilisé pour afficher la sortie standard en C++. L’opérateur **\<\<** indique au compilateur d’envoyer tout ce qui est à sa droite vers la sortie standard.
    > - Le mot clé **endl** est similaire à la touche Entrée. Il indique la fin de la ligne et déplace le curseur à la ligne suivante. Il est préférable de placer un `\n` à l’intérieur de la chaîne (entre "") pour faire de même, car `endl` vide toujours la mémoire tampon et peut nuire aux performances du programme. Toutefois, comme il s’agit d’une toute petite application, `endl` est utilisé pour une meilleure lisibilité.
