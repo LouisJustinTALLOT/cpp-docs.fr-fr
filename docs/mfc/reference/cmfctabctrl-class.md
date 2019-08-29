@@ -1,6 +1,6 @@
 ---
 title: CMFCTabCtrl Class
-ms.date: 11/04/2016
+ms.date: 08/28/2019
 f1_keywords:
 - CMFCTabCtrl
 - AFXTABCTRL/CMFCTabCtrl
@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 442860b1751591c5763a768f9bd9b6ba59f33fa5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 74f5c6e0471682a6b96e82cb2f80cc53155866ca
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504884"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108490"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -241,7 +241,7 @@ Pour obtenir un exemple de création d’une fenêtre à onglets sous la forme d
 
 [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 L’exemple suivant montre comment utiliser différentes méthodes dans la `CMFCTabCtrl` classe pour configurer un `CMFCTabCtrl` objet. Cet exemple explique comment ajouter un onglet, afficher le bouton Fermer sur l’onglet actif, activer les étiquettes de tabulation modifiables et afficher un menu contextuel des étiquettes de la fenêtre à onglets. Cet exemple fait partie de l' [exemple de collection d’États](../../overview/visual-cpp-samples.md).
 
@@ -353,7 +353,7 @@ Le tableau suivant répertorie les valeurs que vous pouvez spécifier pour le pa
 |LOCATION_BOTTOM|Les onglets sont situés en bas du contrôle onglet.|
 |LOCATION_TOP|Les onglets sont situés en haut du contrôle onglet.|
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 L’exemple suivant montre comment utiliser la `Create` méthode dans la `CMFCTabCtrl` classe. Cet exemple fait partie de l' [exemple de collection d’États](../../overview/visual-cpp-samples.md).
 
@@ -846,7 +846,7 @@ Toujours TRUE.
 
 La valeur du paramètre de *style* peut être l’une des énumérations suivantes `CMFCTabCtrl::Style` .
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |STYLE_3D|Affiche des onglets rectangulaires à trois dimensions qui ont des angles arrondis.|
 |STYLE_3D_ONENOTE|Affiche les onglets en trois dimensions qui ont un côté vertical et un côté incliné et qui ont des angles arrondis.|
@@ -970,7 +970,7 @@ TRUE si l’onglet spécifié est rendu actif; FALSe si la valeur de paramètre 
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode n’envoie pas la notification AFX_WM_CHANGE_ACTIVE_TAB à la fenêtre parente du contrôle onglet.
+La `AFX_WM_CHANGE_ACTIVE_TAB` notification est alors envoyée à la fenêtre parente et au frame du parent du contrôle onglet.
 
 La `SetActiveTab` méthode appelle automatiquement la méthode [CMFCTabCtrl:: HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar) pour empêcher le clignotement de l’écran.
 
