@@ -1,44 +1,42 @@
 ---
 title: Création d'un contrôle ActiveX MFC
-ms.date: 09/12/2018
+ms.date: 08/19/2019
 f1_keywords:
 - vc.appwiz.activex.project
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: c67f925773854258111b3a2aa1967f51de4df127
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: d35b788910b0c73a3b6da85faf119958ffbccea0
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708252"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108440"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Création d'un contrôle ActiveX MFC
 
-Programmes de contrôle ActiveX sont modulaire conçu pour donner un type spécifique de fonctionnalités à une application parente. Par exemple, vous pouvez créer un contrôle tel qu’un bouton pour une utilisation dans une boîte de dialogue ou une barre d’outils pour une utilisation dans une page Web.
+Les programmes de contrôle ActiveX sont des programmes modulaires conçus pour fournir un type de fonctionnalité spécifique à une application parente. Par exemple, vous pouvez créer un contrôle tel qu’un bouton à utiliser dans une boîte de dialogue ou une barre d’outils pour une utilisation dans une page Web.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations, consultez [contrôles ActiveX](../activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour un nouveau développement. Pour plus d’informations, consultez [contrôles ActiveX](../activex-controls.md).
 
-Le moyen le plus simple de créer un contrôle ActiveX MFC consiste à utiliser le [Assistant contrôle ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md).
+Le moyen le plus simple de créer un contrôle ActiveX MFC consiste à utiliser l' [Assistant contrôle ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md).
 
-### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>Pour créer un contrôle ActiveX de MFC à l’aide de l’Assistant de contrôle ActiveX MFC
+### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>Pour créer un contrôle ActiveX MFC à l’aide de l’Assistant contrôle ActiveX MFC
 
-1. Suivez les instructions de la rubrique d’aide [créer un projet d’application console C++](../../get-started/tutorial-console-cpp.md).
+1. Suivez les instructions de la rubrique d’aide [création d’une application MFC](creating-an-mfc-application.md) , mais choisissez **contrôle ActiveX MFC** dans la liste des modèles disponibles.
 
-1. Dans le **nouveau projet** boîte de dialogue, sélectionnez le **contrôle ActiveX MFC** icône dans le volet Modèles pour ouvrir l’Assistant contrôle ActiveX MFC.
-
-1. Définir votre [paramètres d’application](../../mfc/reference/application-settings-mfc-activex-control-wizard.md), [des noms de contrôle](../../mfc/reference/control-names-mfc-activex-control-wizard.md), et [contrôler les paramètres](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) à l’aide de l’Assistant de contrôle ActiveX MFC.
+1. Définissez les [paramètres](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)de votre application, les [noms des contrôles](../../mfc/reference/control-names-mfc-activex-control-wizard.md)et les [paramètres de contrôle](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) à l’aide de l’Assistant contrôle ActiveX MFC.
 
     > [!NOTE]
     >  Ignorez cette étape afin que l'Assistant conserve les paramètres par défaut.
 
 1. Cliquez sur **Terminer** pour fermer l’Assistant et ouvrir votre nouveau projet dans l’environnement de développement.
 
-Une fois que vous avez créé votre projet, vous pouvez afficher les fichiers créés dans **l’Explorateur de solutions**. Pour plus d'informations sur les fichiers créés par l'Assistant pour votre projet, consultez le fichier Readme.txt généré pour le projet. Pour plus d’informations sur les types de fichiers, consultez [Types de fichiers créés pour Visual Studio C++ projets](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Après avoir créé votre projet, vous pouvez afficher les fichiers créés dans **Explorateur de solutions**. Pour plus d'informations sur les fichiers créés par l'Assistant pour votre projet, consultez le fichier Readme.txt généré pour le projet. Pour plus d’informations sur les types de fichiers, consultez [Types de fichiers créés pour les projets Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
-Une fois que vous avez créé votre projet, vous pouvez utiliser les Assistants de code pour ajouter [fonctions](../../ide/add-member-function-wizard.md), [variables](../../ide/add-member-variable-wizard.md), [événements](../../ide/add-event-wizard.md), [propriétés](../../ide/names-add-property-wizard.md), et [méthodes](../../ide/add-method-wizard.md). Pour plus d’informations sur la personnalisation de votre contrôle ActiveX, consultez [contrôles ActiveX MFC](../../mfc/mfc-activex-controls.md).
+Après avoir créé votre projet, vous pouvez utiliser les assistants code pour ajouter des [fonctions](../../ide/add-member-function-wizard.md), des [variables](../../ide/add-member-variable-wizard.md), des [événements](../../ide/add-event-wizard.md), des [Propriétés](../../ide/names-add-property-wizard.md)et des [méthodes](../../ide/add-method-wizard.md). Pour plus d’informations sur la personnalisation de votre contrôle ActiveX, consultez [contrôles ActiveX MFC](../../mfc/mfc-activex-controls.md).
 
 ## <a name="see-also"></a>Voir aussi
 

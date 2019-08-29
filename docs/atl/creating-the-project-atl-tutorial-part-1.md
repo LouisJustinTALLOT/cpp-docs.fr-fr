@@ -3,19 +3,16 @@ title: Création du projet (Didacticiel ATL, Partie 1)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 9f7f62ec94d5ac6d6076763853aa19297cf310e6
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 5bb4c6edffd13e13a451b203feea9a03461a9318
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630687"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108373"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Création du projet (Didacticiel ATL, Partie 1)
 
-Ce didacticiel vous guide tout au long d’un projet ATL sans attribut qui crée un objet ActiveX qui affiche un polygone. L’objet comprend des options permettant à l’utilisateur de modifier le nombre de côtés composant le polygone et le code d’actualiser l’affichage.
-
-> [!NOTE]
-> ATL et MFC ne sont généralement pas pris en charge dans les éditions Express de Visual Studio.
+Ce didacticiel vous guide pas à pas dans un projet ATL sans attributs qui crée un objet ActiveX qui affiche un polygone. L’objet comprend des options permettant à l’utilisateur de modifier le nombre de côtés composant le polygone et le code d’actualiser l’affichage.
 
 > [!NOTE]
 > Ce didacticiel crée le même code source que l’exemple Polygon. Si vous souhaitez éviter d’entrer le code source manuellement, vous pouvez le télécharger à partir de l' [exemple de résumé de polygone](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). Vous pouvez ensuite faire référence au code source Polygon au fur et à mesure que vous parcourez le didacticiel, ou l’utiliser pour rechercher les erreurs dans votre propre projet.
