@@ -1,6 +1,6 @@
 ---
 title: CStdioFile, classe
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CStdioFile
 - AFX/CStdioFile
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: 068e59fdc19821487bc78141d10743363221518e
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 4b667f4121d92863335befda3a7beef74f29ad1a
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375838"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177491"
 ---
 # <a name="cstdiofile-class"></a>CStdioFile, classe
 
@@ -54,7 +54,7 @@ class CStdioFile : public CFile
 
 ### <a name="public-data-members"></a>Membres de données publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CStdioFile::m_pStream](#m_pstream)|Contient un pointeur vers un fichier ouvert.|
 
@@ -89,7 +89,7 @@ Construit et initialise un objet `CStdioFile`.
 ```
 CStdioFile();
 CStdioFile(CAtlTransactionManager* pTM);
-  CStdioFile(FILE* pOpenStream);
+CStdioFile(FILE* pOpenStream);
 
 CStdioFile(
     LPCTSTR lpszFileName,
@@ -107,7 +107,7 @@ CStdioFile(
 Spécifie le pointeur de fichier retourné par un appel à la fonction Runtime C [fopen](../../c-runtime-library/reference/fopen-wfopen.md).
 
 *lpszFileName*<br/>
-Spécifie une chaîne qui correspond au chemin d’accès au fichier souhaité. Le chemin d’accès peut être relatif ou absolu.
+Spécifie une chaîne qui correspond au chemin d’accès au fichier souhaité. Le chemin peut être relatif ou absolu.
 
 *nOpenFlags*<br/>
 Spécifie des options pour la création de fichiers, le partage de fichiers et les modes d’accès aux fichiers. Vous pouvez spécifier plusieurs options à l’aide de l’opérateur **|** de bits or ().
@@ -129,7 +129,7 @@ Si vous transmettez la valeur NULL pour *pOpenStream* ou *lpszFileName*, le cons
 
 Si le fichier ne peut pas être ouvert ou créé, le constructeur lève `CFileException*`une exception.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCFiles#37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]
 
@@ -165,7 +165,7 @@ virtual BOOL Open(
 ### <a name="parameters"></a>Paramètres
 
 *lpszFileName*<br/>
-Chaîne qui correspond au chemin d’accès au fichier souhaité. Le chemin d’accès peut être relatif ou absolu.
+Chaîne qui correspond au chemin d’accès au fichier souhaité. Le chemin peut être relatif ou absolu.
 
 *nOpenFlags*<br/>
 Mode de partage et d’accès. Spécifie l’action à exécuter lors de l’ouverture du fichier. Vous pouvez combiner des options à l’aide de l’opérateur&#124;de bits or (). Une autorisation d’accès et une option de partage sont requises. les modes modeCreate et modeNoInherit sont facultatifs.
@@ -287,7 +287,7 @@ Cette méthode lève une `CInvalidArgException*` exception si vous spécifiez NU
 
 Cette méthode lève une `CFileException*` exception en réponse à des erreurs du système de fichiers.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCFiles#40](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_4.cpp)]
 
