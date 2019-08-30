@@ -1,6 +1,6 @@
 ---
-title: C++Référence de la page de propriétés du projet-Visual Studio
-ms.date: 07/24/2019
+title: Référence C++ de page de propriétés de projet Windows-Visual Studio
+ms.date: 08/28/2019
 helpviewer_keywords:
 - project-file macro
 - project properties [C++], default values
@@ -12,16 +12,20 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: d425cc6c5c6a2a8934c026174f396cb01bc3a9b7
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: c9fd4fc00e86e0660972fc0bd37b66b2fea02ee0
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606391"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177470"
 ---
-# <a name="c-project-property-page-reference"></a>C++Référence de la page de propriétés du projet
+# <a name="windows-c-project-property-page-reference"></a>Référence C++ de la page de propriétés du projet Windows
 
-Dans Visual Studio, vous spécifiez les options du compilateur et de l’éditeur de liens, les chemins d’accès aux fichiers et d’autres paramètres de génération via les pages de propriétés du projet. Pour ouvrir les **pages de propriétés**, choisissez**Propriétés** du **projet** > dans le menu principal, ou cliquez avec le bouton droit sur le nœud du projet dans **Explorateur de solutions** et choisissez **Propriétés**. Pour plus d’informations sur les propriétés de projet, consultez [définir C++ des propriétés de compilation et de compilation dans Visual Studio](../working-with-project-properties.md).
+Dans Visual Studio, vous spécifiez les options du compilateur et de l’éditeur de liens, les chemins d’accès aux fichiers et d’autres paramètres de génération via les pages de propriétés du projet. Les propriétés et les pages de propriétés disponibles varient selon le type de projet. Par exemple, un projet Makefile a une page de propriétés NMake, qui n’est pas présente dans un projet de console MFC ou Win32. Pour ouvrir les **pages de propriétés**, choisissez**Propriétés** du **projet** > dans le menu principal, ou cliquez avec le bouton droit sur le nœud du projet dans **Explorateur de solutions** et choisissez **Propriétés**. Les fichiers individuels ont également des pages de propriétés qui vous permettent de définir des options de compilation et de génération uniquement pour ce fichier. L’illustration suivante montre les pages de propriétés d’un projet MFC.
+
+![Pages de propriétés C++ du projet](media/example-prop-page.png)
+
+Cette section fournit une référence rapide pour les pages de propriétés elles-mêmes. Les options et les paramètres exposés dans les pages de propriétés sont documentés plus complètement dans leurs propres rubriques et sont liés depuis les rubriques de la page de propriétés. Pour plus d’informations sur les propriétés de projet, consultez [définir C++ des propriétés de compilation et de compilation dans Visual Studio](../working-with-project-properties.md).
 
 Pour les pages de propriétés dans les projets Linux, consultez Référence de la [page de propriétés Linux C++ ](../../linux/prop-pages-linux.md).
 
@@ -48,4 +52,5 @@ Pour les pages de propriétés dans les projets Linux, consultez Référence de 
 ## <a name="see-also"></a>Voir aussi
 
 [Guide pratique pour créer et supprimer les dépendances d’un projet](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br/>
-[Guide pratique : créer et modifier des configurations](/visualstudio/ide/how-to-create-and-edit-configurations)
+[Guide pratique : créer et modifier des configurations](/visualstudio/ide/how-to-create-and-edit-configurations)<br/>
+[Référence C++ de la page de propriétés Linux](../../linux/prop-pages-linux.md)

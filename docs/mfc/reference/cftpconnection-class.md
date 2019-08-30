@@ -1,6 +1,6 @@
 ---
 title: CFtpConnection, classe
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CFtpConnection
 - AFXINET/CFtpConnection
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 977a8c9fc6dd653a59434d29bb72b0fe28900001
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 94ee4cb938ee061470282eb2f08a94d83c908805
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506369"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177285"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection, classe
 
@@ -79,7 +79,7 @@ Pour communiquer avec un serveur Internet FTP, vous devez d’abord créer une i
 
 Pour en savoir plus sur `CFtpConnection` le fonctionnement des autres classes Internet MFC, consultez l’article [programmation Internet avec WinInet](../../mfc/win32-internet-extensions-wininet.md). Pour plus d’informations sur la communication avec les deux autres services pris en charge, HTTP et Gopher, consultez les classes [CHttpConnection](../../mfc/reference/chttpconnection-class.md) et [CGopherConnection](../../mfc/reference/cgopherconnection-class.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
   Consultez l’exemple dans la vue d’ensemble de la classe [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) .
 
@@ -171,11 +171,13 @@ CInternetFile* Command(
 Pointeur vers une chaîne contenant la commande à envoyer.
 
 *eResponse*<br/>
-Détermine si une réponse du serveur FTP est attendue. Peut avoir l'une des valeurs suivantes :
+Spécifie si une réponse est attendue à partir du serveur FTP. Peut avoir l'une des valeurs suivantes :
 
 - `CmdRespNone`Aucune réponse n’est attendue.
-
 - `CmdRespRead`Une réponse est attendue.
+- `CmdRespWrite`Non utilisé.
+
+CmdResponseType est membre de CFtpConnection, défini dans *AFXINET. h*.
 
 *dwFlags*<br/>
 Valeur contenant les indicateurs qui contrôlent cette fonction. Pour obtenir une liste complète, consultez [getdcbrushcolor](/windows/win32/api/wininet/nf-wininet-ftpcommandw).

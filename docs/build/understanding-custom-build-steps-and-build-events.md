@@ -1,6 +1,6 @@
 ---
 title: Présentation des étapes de génération personnalisée et des événements de build
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - builds [C++], events
 - custom build steps [C++], customizing builds
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 93a1c787a863c2c52986a00fdeabbc4d44b0fcce
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 386a12213814e3825ece8a81d61ac251c6793f43
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400449"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177312"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Présentation des étapes de génération personnalisée et des événements de build
 
@@ -24,11 +24,11 @@ Dans l’environnement de développement Visual C++, vous pouvez personnaliser l
 
 - **Étapes de build personnalisée**
 
-   Une étape de build personnalisée est une règle de build associée à un projet. Une étape de build personnalisée peut spécifier une ligne de commande à exécuter, une entrée supplémentaire ou des fichiers de sortie, et un message à afficher. Pour plus d'informations, voir [Procédure : ajouter une étape de génération personnalisée à des projets MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md).
+   Une étape de build personnalisée est une règle de build associée à un projet. Une étape de build personnalisée peut spécifier une ligne de commande à exécuter, une entrée supplémentaire ou des fichiers de sortie, et un message à afficher. Pour plus d’informations, consultez [Guide pratique pour ajouter une étape de génération personnalisée à des projets MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md).
 
 - **Outils de build personnalisée**
 
-   Un outil de build personnalisée est une règle de build associée à un ou plusieurs fichiers. Une étape de build personnalisée peut passer des fichiers d’entrée à un outil de build personnalisée, ce qui produit un ou plusieurs fichiers de sortie. Par exemple, les fichiers d’aide dans une application MFC sont générés avec un outil de build personnalisée. Pour plus d'informations, voir [Procédure : ajouter des outils de génération personnalisée à des projets MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md) et [spécification d’outils de génération personnalisés](specifying-custom-build-tools.md).
+   Un outil de build personnalisée est une règle de build associée à un ou plusieurs fichiers. Une étape de build personnalisée peut passer des fichiers d’entrée à un outil de build personnalisée, ce qui produit un ou plusieurs fichiers de sortie. Par exemple, les fichiers d’aide dans une application MFC sont générés avec un outil de build personnalisée. Pour plus d’informations, consultez [Guide pratique pour ajouter des outils de génération personnalisée à des projets MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md) et [spécification d’outils de génération personnalisés](specifying-custom-build-tools.md).
 
 - **Événements de build**
 
@@ -38,7 +38,7 @@ Dans l’environnement de développement Visual C++, vous pouvez personnaliser l
 
 Le format de sortie d’une étape de build personnalisée ou d’un événement de build peut aussi améliorer la maniabilité de l’outil. Pour plus d’informations, consultez [Mise en forme de la sortie d’une étape de génération personnalisée ou d’un événement de build](formatting-the-output-of-a-custom-build-step-or-build-event.md).
 
-Les événements de build et les étapes de build personnalisée s’exécutent dans l’ordre suivant, avec d’autres étapes de build :
+Pour chaque projet dans une solution, les événements de build et les étapes de génération personnalisée s’exécutent dans l’ordre suivant avec d’autres étapes de génération:
 
 1. Événement pré-build
 

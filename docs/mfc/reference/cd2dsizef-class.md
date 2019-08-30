@@ -1,6 +1,6 @@
 ---
 title: CD2DSizeF, classe
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CD2DSizeF
 - AFXRENDERTARGET/CD2DSizeF
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DSizeF [MFC], CD2DSizeF
 - CD2DSizeF [MFC], IsNull
 ms.assetid: f486a1e1-997d-4286-8cb9-26369dc82055
-ms.openlocfilehash: 09ccd8c4ba6bb0c345adb32bcf22686c485d1184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df895c278003e2c71f37a00af6bf14912756701a
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396234"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177199"
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF, classe
 
@@ -33,19 +33,19 @@ class CD2DSizeF : public D2D1_SIZE_F;
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DSizeF::CD2DSizeF](#cd2dsizef)|Surchargé. Construit un `CD2DSizeF` à partir de l’objet `D2D1_SIZE_F` objet.|
+|[CD2DSizeF::CD2DSizeF](#cd2dsizef)|Surchargé. Construit un `CD2DSizeF` objet à partir `D2D1_SIZE_F` de l’objet.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DSizeF::IsNull](#isnull)|Retourne un **booléenne** valeur qui indique si une expression ne contient aucune donnée valide (NULL).|
+|[CD2DSizeF::IsNull](#isnull)|Retourne une valeur **booléenne** qui indique si une expression ne contient pas de données valides (null).|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DSizeF::operator CSize](#operator_csize)|Convertit `CD2DSizeF` à `CSize` objet.|
+|[Cd2dsizef,:: Operator CSize](#operator_csize)|Convertit `CSize`enobjet `CD2DSizeF` .|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -55,16 +55,16 @@ class CD2DSizeF : public D2D1_SIZE_F;
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxrendertarget.h
+**En-tête:** afxrendertarget. h
 
 ##  <a name="cd2dsizef"></a>  CD2DSizeF::CD2DSizeF
 
-Construit un objet CD2DSizeF à partir de l’objet CSize.
+Construit un objet Cd2dsizef, à partir de l’objet CSize.
 
 ```
 CD2DSizeF(const CSize& size);
 CD2DSizeF(const D2D1_SIZE_F& size);
-  CD2DSizeF(const D2D1_SIZE_F* size);
+CD2DSizeF(const D2D1_SIZE_F* size);
 
 CD2DSizeF(
     FLOAT cx = 0.,
@@ -82,9 +82,9 @@ largeur de la source
 *cy*<br/>
 hauteur de la source
 
-##  <a name="isnull"></a>  CD2DSizeF::IsNull
+##  <a name="isnull"></a>Cd2dsizef,:: IsNull
 
-Retourne une valeur booléenne qui indique si une expression ne contient aucune donnée valide (Null).
+Retourne une valeur booléenne qui indique si une expression ne contient pas de données valides (null).
 
 ```
 BOOL IsNull() const;
@@ -92,11 +92,11 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la largeur et la hauteur sont vides ; Sinon, FALSE.
+TRUE si Width et Height sont vides; Sinon, FALSe.
 
-##  <a name="operator_csize"></a>  CD2DSizeF::operator CSize
+##  <a name="operator_csize"></a>Cd2dsizef,:: Operator CSize
 
-Convertit CD2DSizeF en objet CSize.
+Convertit Cd2dsizef, en objet CSize.
 
 ```
 operator CSize();
@@ -104,7 +104,7 @@ operator CSize();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur actuelle de la taille de D2D.
+Valeur actuelle de la taille D2D.
 
 ## <a name="see-also"></a>Voir aussi
 

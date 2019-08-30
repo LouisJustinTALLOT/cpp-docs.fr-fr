@@ -1,6 +1,6 @@
 ---
 title: sscanf, _sscanf_l, swscanf, _swscanf_l
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 apiname:
 - swscanf
 - sscanf
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-ms.openlocfilehash: 60dbb8e89e531c3020c243d998a69370095424e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac8bc14fed554c2ea5cede7f37c1dc49f4740bf3
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354696"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177417"
 ---
-# <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
+# <a name="sscanf-_sscanf_l-swscanf-_swscanf_l"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 
 Lisent les données mises en forme d’une chaîne. Il existe des versions plus sécurisées de ces fonctions. Consultez [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
@@ -96,20 +96,22 @@ Paramètres régionaux à utiliser
 
 Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. La valeur de retour est **EOF** pour une erreur ou si la fin de la chaîne est atteinte avant la première conversion.
 
-Si *tampon* ou *format* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Si la *mémoire tampon* ou le *format* est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **sscanf** fonction lit les données à partir de *tampon* dans l’emplacement indiqué par chaque *argument*. Chaque *argument* doit être un pointeur vers une variable avec un type qui correspond à un spécificateur de type dans *format*. Le *format* contrôles d’argument des champs de l’interprétation de l’entrée et a les mêmes forme et fonction que le *format* argument pour le **scanf** (fonction). Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+La fonction **sscanf** lit les données de la *mémoire tampon* dans l’emplacement donné par chaque *argument*. Chaque *argument* doit être un pointeur vers une variable dont le type correspond à un spécificateur de type au *format*. L’argument *format* contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que l’argument *format* pour la fonction **scanf** . Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+
+Pour plus d’informations sur les caractères du champ de type scanf, consultez [caractères du champ de type scanf](../scanf-type-field-characters.md). Pour plus d’informations sur les champs de spécification de format scanf, consultez [champs de spécification de format](../format-specification-fields-scanf-and-wscanf-functions.md).
 
 > [!IMPORTANT]
-> Lors de la lecture une chaîne avec **sscanf**, toujours spécifier une largeur pour les **%s** format (par exemple, **« % 32s »** au lieu de **« %s »**) ; sinon , une entrée mal formatée peut facilement provoquer un dépassement de mémoire tampon.
+> Lors de la lecture d’une chaîne avec **sscanf**, spécifiez toujours une largeur pour le format **% s** (par exemple, **«% 32s»** au lieu de **«% s»** ); dans le cas contraire, une entrée mal mise en forme peut facilement provoquer un dépassement de mémoire tampon.
 
-**swscanf** est une version à caractères larges de **sscanf**; les arguments de **swscanf** sont des chaînes à caractères larges. **sscanf** ne gère pas les caractères hexadécimaux multioctets. **swscanf** ne gère pas hexadécimaux entiers Unicode ou caractères de « zone de compatibilité ». Sinon, **swscanf** et **sscanf** ont un comportement identique.
+**swscanf** est une version à caractères larges de **sscanf**; les arguments de **swscanf** sont des chaînes à caractères larges. **sscanf** ne gère pas les caractères hexadécimaux multioctets. **swscanf** ne gère pas les caractères hexadécimaux ou «zone de compatibilité» Unicode à pleine chasse. Sinon, **swscanf** et **sscanf** se comportent de la même façon.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
