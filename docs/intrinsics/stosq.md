@@ -1,6 +1,6 @@
 ---
 title: __stosq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: eacb12f7c02b82607d980281f8d4a0bc1e1d7c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b347d595da4cdbf1fefb6244940e262981671e9
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390345"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219951"
 ---
-# <a name="stosq"></a>__stosq
+# <a name="__stosq"></a>__stosq
 
 **Section spécifique à Microsoft**
 
-Génère une instruction de chaîne de magasin (`rep stosq`).
+Génère une instruction de chaîne de`rep stosq`magasin ().
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __stosb(
-   unsigned __int64* Dest,
+   unsigned __int64* Destination,
    unsigned __int64 Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Dest*<br/>
-[out] La destination de l’opération.
+*Destination*\
+à Destination de l’opération.
 
-*Données*<br/>
-[in] Les données à stocker.
+*Métadonnée*\
+dans Données à stocker.
 
-*Nombre*<br/>
-[in] La longueur du bloc de mots quadruples à écrire.
+*Saut*\
+dans Longueur du bloc de mots quadruples à écrire.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -48,17 +48,17 @@ void __stosb(
 |---------------|------------------|
 |`__stosq`|AMD64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-Le résultat est que le mot quadruple `Data` est écrit dans un bloc de `Count` mots quadruples dans le `Dest` chaîne.
+Le résultat est que les *données* de mot quadruple sont écrites dans un bloc de *Count* mots quadruples dans la chaîne de *destination* .
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-```
+```C
 // stosq.c
 // processor: x64
 #include <stdio.h>
@@ -76,9 +76,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Sortie
-
-```
+```Output
 0 ffffffffffff ffffffffffff 0
 ```
 
@@ -86,4 +84,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

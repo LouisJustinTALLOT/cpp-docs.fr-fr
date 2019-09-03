@@ -1,23 +1,24 @@
 ---
 title: Résumé de la grammaire (C/C++)
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - grammar
 - preprocessor, grammar
 ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
-ms.openlocfilehash: a3f1674d8d72639413f092ca3f67324d4688618a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 41fe97ebdc2d839915f80c5f93b685bbe4f7ed8e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038432"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219049"
 ---
 # <a name="grammar-summary-cc"></a>Résumé de la grammaire (C/C++)
-Cette section décrit la grammaire formelle du préprocesseur. Elle couvre la syntaxe des directives de prétraitement et opérateurs décrits dans [le préprocesseur](../preprocessor/preprocessor.md) et dans [Directives Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
-Les rubriques suivantes sont incluses :
+Cette section décrit la grammaire formelle du préprocesseur. Il aborde la syntaxe des directives de prétraitement et des opérateurs décrits dans [les](../preprocessor/preprocessor.md) directives de préprocesseur et de [pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
-- [Définitions](../preprocessor/definitions-for-the-grammar-summary.md)
+Les articles suivants sont inclus:
+
+- [Description](../preprocessor/definitions-for-the-grammar-summary.md)
 
 - [Conventions](../preprocessor/conventions.md)
 
@@ -25,4 +26,4 @@ Les rubriques suivantes sont incluses :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur le préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+[Référence duC++ préprocesseur C/](../preprocessor/c-cpp-preprocessor-reference.md)

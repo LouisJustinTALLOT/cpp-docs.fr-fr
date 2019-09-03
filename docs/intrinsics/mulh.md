@@ -1,40 +1,40 @@
 ---
 title: __mulh
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __mulh
 helpviewer_keywords:
 - __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-ms.openlocfilehash: 122d7ff28a01c0b95c16c6a0f4cd20e883744d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3a421cdda1c62620d4c933436fd0b5bab589c0e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263072"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221684"
 ---
-# <a name="mulh"></a>__mulh
+# <a name="__mulh"></a>__mulh
 
 **Section spécifique à Microsoft**
 
-Retourne les 64 bits de poids fort du produit de deux entiers signés 64 bits.
+Retourne les 64 bits de poids fort du produit des entiers 2 64 bits signés.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 __int64 __mulh(
    __int64 a,
    __int64 b
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*a*<br/>
-[in] Le premier nombre à multiplier.
+*un*\
+[in] Premier nombre à multiplier.
 
-*b*<br/>
-[in] Le second nombre à multiplier.
+*p*\
+[in] Second nombre à multiplier.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -46,15 +46,15 @@ __int64 __mulh(
 |---------------|------------------|
 |`__mulh`|X64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-```
+```cpp
 // mulh.cpp
 // processor: x64
 #include <stdio.h>
@@ -83,4 +83,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

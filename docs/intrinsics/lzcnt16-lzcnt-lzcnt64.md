@@ -1,6 +1,6 @@
 ---
 title: __lzcnt16, __lzcnt, __lzcnt64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __lzcnt64
 - __lzcnt16
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-ms.openlocfilehash: 333d9f2b23fb90388af8395945256956c9222ab9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcd801717974a230fbd19cc7802d8f6a011774f7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263371"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221803"
 ---
-# <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
+# <a name="__lzcnt16-__lzcnt-__lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
 
 **Section spécifique à Microsoft**
 
-Nombres le nombre d’espace de début zéros à droite dans un 16, 32 ou entier 64 bits.
+Compte le nombre de zéros non significatifs dans un entier 16, 32 ou 64 bits.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned short __lzcnt16(
    unsigned short value
 );
@@ -41,36 +41,36 @@ unsigned __int64 __lzcnt64(
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*value*<br/>
-[in] Le 16, 32 ou entier non signé 64 bits pour rechercher des zéros non significatifs.
+*value*\
+dans Entier non signé 16, 32 ou 64 bits à rechercher pour les zéros non significatifs.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le nombre de zéros d’en-tête dans le `value` paramètre. Si `value` est égal à zéro, la valeur de retour est la taille de l’opérande d’entrée (16, 32 ou 64). Si le bit de poids de `value` est 1, la valeur de retour est égale à zéro.
+Nombre de bits de début non significatif dans `value` le paramètre. Si `value` est égal à zéro, la valeur de retour est la taille de l’opérande d’entrée (16, 32 ou 64). Si le bit le plus significatif `value` de est un, la valeur de retour est zéro.
 
 ## <a name="requirements"></a>Configuration requise
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
-|`__lzcnt16`|AMD : Manipulation de bits avancés (ABM)<br /><br /> Intel : Haswell|
-|`__lzcnt`|AMD : Manipulation de bits avancés (ABM)<br /><br /> Intel : Haswell|
-|`__lzcnt64`|AMD : Avancées Bit Manipulation (ABM) en mode 64 bits.<br /><br /> Intel : Haswell|
+|`__lzcnt16`|AMD Manipulation de bits avancée (ABM)<br /><br /> Cartes Haswell|
+|`__lzcnt`|AMD Manipulation de bits avancée (ABM)<br /><br /> Cartes Haswell|
+|`__lzcnt64`|AMD Manipulation de bits avancée (ABM) en mode 64 bits.<br /><br /> Cartes Haswell|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions intrinsèques génère la `lzcnt` instruction.  La taille de la valeur que la `lzcnt` instruction retourne est identique à la taille de son argument.  En mode 32 bits il n’existe aucune registres 64 bits à usage général, par conséquent, ne 64 bits `lzcnt`.
+Chacun des intrinsèques génère l' `lzcnt` instruction.  La taille de la valeur retournée `lzcnt` par l’instruction est identique à la taille de son argument.  En mode 32 bits, il n’existe aucun registre à usage général de 64 bits, donc le 64 `lzcnt` bits n’est pas pris en charge.
 
-Pour déterminer la prise en charge matérielle pour le `lzcnt` appel le `__cpuid` intrinsèque avec `InfoType=0x80000001` et vérifiez le bit 5 de `CPUInfo[2] (ECX)`. Ce bit sera égale à 1 si l’instruction est pris en charge et 0 dans le cas contraire. Si vous exécutez le code qui utilise cet intrinsèque sur du matériel qui ne prend pas en charge la `lzcnt` instruction, les résultats sont imprévisibles.
+Pour déterminer la prise en charge `lzcnt` matérielle de l’instruction `__cpuid` , appelez `InfoType=0x80000001` l’intrinsèque avec et vérifiez `CPUInfo[2] (ECX)`le bit 5 de. Ce bit aura la valeur 1 si l’instruction est prise en charge, et 0 dans le cas contraire. Si vous exécutez du code qui utilise l’intrinsèque sur du matériel qui ne `lzcnt` prend pas en charge l’instruction, les résultats sont imprévisibles.
 
-Sur les processeurs Intel ne prenant pas en charge la `lzcnt` obtenir des instructions, l’octet d’encodage instruction est exécutée en tant que `bsr` (bit analyse inverse). Si la portabilité du code pose problème, envisagez d’utiliser le `_BitScanReverse` intrinsèque à la place. Pour plus d’informations, consultez [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).
+Sur les processeurs Intel qui ne `lzcnt` prennent pas en charge l’instruction, l’encodage d’octet d’instruction est exécuté en tant que `bsr` (bit Scan inverse). Si la portabilité du code est un problème, envisagez d’utiliser l’intrinsèque à la `_BitScanReverse` place. Pour plus d’informations, consultez [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // Compile this test with: /EHsc
 #include <iostream>
 #include <intrin.h>
@@ -107,8 +107,8 @@ __lzcnt(0xffffffff) = 0
 
 **FIN de la section spécifique à Microsoft**
 
-Certaines parties de ce contenu sont Copyright 2007 par Advanced Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.
+Des parties de ce contenu sont protégées par Copyright 2007 par Advanced Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation de Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

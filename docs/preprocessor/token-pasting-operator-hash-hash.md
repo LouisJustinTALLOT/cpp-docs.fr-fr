@@ -1,26 +1,26 @@
 ---
-title: Opérateurs de collage de jeton (##)
-ms.date: 11/04/2016
+title: 'Opérateur de collage de jeton (# #)'
+ms.date: 08/29/2019
 f1_keywords:
 - '##'
 helpviewer_keywords:
 - preprocessor, operators
 - '## preprocessor operator'
 ms.assetid: 4f173503-990f-4bff-aef3-ec4d1f1458ef
-ms.openlocfilehash: dab4da5fd65fc280d2061256a580a015917d24b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bf1b8c8f56ab9375503c9e8fb6a906706fc70bb
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179592"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218106"
 ---
-# <a name="token-pasting-operator-"></a>Opérateurs de collage de jeton (##)
+# <a name="token-pasting-operator-"></a>Opérateur de collage de jeton (# #)
 
-L’opérateur double-number-sign ou « collage de jeton » (**##**), qui est parfois appelé l’opérateur « fusion », est utilisé dans les macros object-like et de type fonction. Il permet aux jetons séparés d'être regroupés en un seul jeton et ne peut donc pas être le premier ou dernier jeton de la définition de macro.
+Le signe double-dièse ou l’opérateur de *collage de jeton* ( **##** ), qui est parfois appelé opérateur de *fusion* ou de *combinaison* , est utilisé à la fois dans les macros de type objet et de type fonction. Il permet de joindre des jetons distincts à un jeton unique et, par conséquent, ne peut pas être le premier ou le dernier jeton dans la définition de macro.
 
 Si un paramètre formel d’une définition de macro est précédé ou suivi d’un opérateur de collage de jeton, le paramètre formel est immédiatement remplacé par l’argument réel non étendu. L’expansion de macro n’est pas exécutée sur l’argument avant son remplacement.
 
-Ensuite, chaque occurrence de l’opérateur de collage de jeton dans *chaîne de jeton* est supprimé, et les jetons le précédant ou suivant sont concaténés. Le jeton résultant doit être un jeton valide. Dans ce cas, le jeton est analysé en vue de son remplacement éventuel lorsqu'il représente un nom de macro. L'identificateur représente le nom sous lequel les jetons concaténés sont connus dans le programme avant leur remplacement. Chaque jeton représente un jeton défini ailleurs, soit dans le programme, soit sur la ligne de commande du compilateur. L'espace blanc précédent ou suivant l'opérateur est facultatif.
+Ensuite, chaque occurrence de l’opérateur de collage de jeton dans *Token-String* est supprimée, et les jetons qui le précèdent et le suivent sont concaténés. Le jeton résultant doit être un jeton valide. Dans ce cas, le jeton est analysé en vue de son remplacement éventuel lorsqu'il représente un nom de macro. L'identificateur représente le nom sous lequel les jetons concaténés sont connus dans le programme avant leur remplacement. Chaque jeton représente un jeton défini ailleurs, soit dans le programme, soit sur la ligne de commande du compilateur. L'espace blanc précédent ou suivant l'opérateur est facultatif.
 
 Cet exemple illustre l'utilisation de l'opérateur stringizing et de l'opérateur de collage de jeton lors de la spécification de la sortie du programme :
 

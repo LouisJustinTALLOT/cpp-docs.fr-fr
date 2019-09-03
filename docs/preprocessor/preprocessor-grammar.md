@@ -1,91 +1,91 @@
 ---
-title: Syntaxe du préprocesseur
-ms.date: 09/04/2018
+title: Grammaire du préprocesseur
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0916e3cc9bbdb398db693286dacc4517df03557
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179878"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222263"
 ---
-# <a name="preprocessor-grammar"></a>Syntaxe du préprocesseur
+# <a name="preprocessor-grammar"></a>Grammaire du préprocesseur
 
-*ligne de contrôle*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identifier* *token-string*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identifier</em>**(** *identifier*<sub>opt</sub> **,** ... **,** *identifier*<sub>opt</sub> **)** *token-string*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *digit-sequence*  **"** *filename* **"**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#error** *token-string*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *token-string*
+*ligne de contrôle*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *identificateur* *jeton-chaîne* <sub>OPT</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *identificateur* **(** &#x2800;identificateur&#x200B;<sub>OPT</sub> **,** ... **,** *identificateur* &#x200B; <sub></sub>opt&#x2800; **)** *jeton-chaîne*<sub>OPT</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _chemin d’accès-spécification_ **"** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** _chemin d’accès-spécification_ **\<** **>** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#line** *chiffre-séquence* **"** _nom du fichier_ **"** &#x200B; <sub>OPT</sub>  \
+&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *identificateur*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#error** *jeton-chaîne*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *token-string*
 
-*constant-expression* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**defined(** *identifier* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**defined** *identifier*<br/>
+*constante-expression*: \
+&nbsp;&nbsp;&nbsp;&nbsp;**defined (** &#x2800;*identificateur*&#x2800; **)** \
+&nbsp;&nbsp;&nbsp;&nbsp;**défini** *identificateur*\
 &nbsp;&nbsp;&nbsp;&nbsp;toute autre expression constante
 
-*conditionnel* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*if-part* *elif-parts*<sub>opt</sub> *else-part*<sub>opt</sub> *endif-line*
+*Conditional*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*If-part* *Elif-parties* <sub>OPT</sub> *autre partie* <sub>OPT</sub> *endif-ligne*
 
-*If-partie* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
+*If-part*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*If-Line* *texte*
 
-*If-line* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if** *constant-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identifier*
+*If-Line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *constant-expression*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *identificateur*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identifier*
 
-*elif-parts* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *text*<br/>
+*Elif-parties*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*ligne Elif* *texte*\
 &nbsp;&nbsp;&nbsp;&nbsp;*elif-parts* *elif-line* *text*
 
-*elif-ligne* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *constant-expression*
+*Elif-ligne*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *constant-expression*
 
-*partie « else »* :<br/>
+*else-part*: \
 &nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
 
-*ligne Else* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+*else-ligne*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
-*ligne endif* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+*endif-ligne*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
-*séquence de chiffres* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+*chiffre-séquence*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*caractères*\
 &nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 
-*chiffre* : un des<br/>
+*digit*: un des éléments suivants: \
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-*chaîne de jeton* :<br/>
+*jeton-chaîne*: \
 &nbsp;&nbsp;&nbsp;&nbsp;Chaîne de jetons
 
-*jeton* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*constante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*opérateur*<br/>
+*jeton*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*mot*\
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur*\
+&nbsp;&nbsp;&nbsp;&nbsp;*suivantes*\
+&nbsp;&nbsp;&nbsp;&nbsp;*and*\
 &nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
-*nom de fichier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Nom de fichier de système d’exploitation conforme
+*nom de fichier*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Nom de fichier du système d’exploitation légal
 
-*spécification de chemin d’accès* :<br/>
+*path-spec*: \
 &nbsp;&nbsp;&nbsp;&nbsp;Chemin d’accès de fichier conforme
 
-*texte* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;N’importe quelle séquence de texte
+*texte*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Toute séquence de texte
 
 > [!NOTE]
-> Les éléments non terminaux suivants sont développées dans le [Conventions lexicales](../cpp/lexical-conventions.md) section de la *référence du langage C++*: *constante*, *expression constante* , *identificateur*, *mot clé*, *opérateur*, et */ / / délimiteur*.
+> Les non terminaux suivants sont développés dans la section [conventions lexicales](../cpp/lexical-conventions.md) de la  *C++ référence du langage*: *constante*, *expression constante*, *identificateur*, *mot clé*, *opérateur*etsigne de ponctuation.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Résumé de la grammaire (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+[Résumé de la grammaire (C++C/)](../preprocessor/grammar-summary-c-cpp.md)

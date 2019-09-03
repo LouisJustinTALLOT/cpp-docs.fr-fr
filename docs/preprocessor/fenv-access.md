@@ -1,6 +1,6 @@
 ---
-title: fenv_access
-ms.date: 03/12/2018
+title: fenv_access, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.fenv_access
 - fenv_access_CPP
@@ -8,15 +8,16 @@ helpviewer_keywords:
 - pragmas, fenv_access
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-ms.openlocfilehash: 507e78dd9f9571cc9ce44d7fd91e78b1c955ba73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8e66881bde12df28bf24e18230471cb4caca792
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389253"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218603"
 ---
-# <a name="fenvaccess"></a>fenv_access
-Désactive (**sur**) ou active (**hors**) optimisations qui peuvent modifier l’environnement à virgule flottante signaler des tests et les changements de mode.
+# <a name="fenv_access-pragma"></a>fenv_access, pragma
+
+Désactive (activé) ou active (**off**) les optimisations qui peuvent modifier les tests d’indicateur**d'** environnement à virgule flottante et les modifications de mode.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,11 +25,11 @@ Désactive (**sur**) ou active (**hors**) optimisations qui peuvent modifier l�
 
 ## <a name="remarks"></a>Notes
 
-Par défaut, **fenv_access** est **hors**. Si le compilateur peut supposer que votre code ne pas accéder à ou manipuler l’environnement à virgule flottante, il peut effectuer de nombreuses optimisations de code en virgule flottante. Définissez **fenv_access** à **sur** pour informer le compilateur que votre code accède à l’environnement à virgule flottante pour tester les indicateurs d’état, exceptions, ou pour définir des indicateurs de mode de contrôle. Le compilateur désactive ces optimisations afin que votre code peut accéder à l’environnement à virgule flottante régulièrement.
+Par défaut, **fenv_access** est **désactivé**. Si le compilateur peut supposer que votre code n’accède pas ou ne manipule pas l’environnement à virgule flottante, il peut effectuer de nombreuses optimisations de code à virgule flottante. Affectez à **fenv_access** la valeur **on** pour indiquer au compilateur que votre code accède à l’environnement à virgule flottante pour tester les indicateurs d’État, les exceptions ou pour définir des indicateurs de mode de contrôle. Le compilateur désactive ces optimisations afin que votre code puisse accéder de façon cohérente à l’environnement à virgule flottante.
 
-Pour plus d’informations sur le comportement de virgule flottante, consultez [/fp (spécifier le comportement de virgule flottante)](../build/reference/fp-specify-floating-point-behavior.md).
+Pour plus d’informations sur le comportement de virgule flottante, consultez [/FP (spécifier le comportement à virgule flottante)](../build/reference/fp-specify-floating-point-behavior.md).
 
-Les types d’optimisations qui sont soumis aux **fenv_access** sont :
+Les types d’optimisations qui sont soumis à **fenv_access** sont les suivants:
 
 - Élimination globale de sous-expressions communes
 
@@ -44,11 +45,11 @@ Les autres pragmas à virgule flottante incluent :
 
 ## <a name="examples"></a>Exemples
 
-Cet exemple définit **fenv_access** à **sur** pour définir le Registre de contrôle à virgule flottante de précision de 24 bits :
+Cet exemple affecte à **fenv_access** la valeur **on** pour définir le registre de contrôle à virgule flottante pour une précision de 24 bits:
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
-// compile with: /O2
+// compile with: /O2 /arch:IA32
 // processor: x86
 #include <stdio.h>
 #include <float.h>
@@ -71,14 +72,14 @@ int main() {
 ```
 
 ```Output
-out=9.999999776482582e-003
+out=9.999999776482582e-03
 ```
 
-Si vous commentez `#pragma fenv_access (on)` à partir de l’exemple précédent, notez que la sortie est différente, car le compilateur effectue l’évaluation au moment de la compilation, qui n’utilise pas le mode de contrôle.
+Si vous supprimez `#pragma fenv_access (on)` le commentaire de l’exemple précédent, Notez que la sortie est différente car le compilateur effectue une évaluation au moment de la compilation, qui n’utilise pas le mode de contrôle.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp
-// compile with: /O2
+// compile with: /O2 /arch:IA32
 #include <stdio.h>
 #include <float.h>
 
@@ -98,9 +99,9 @@ int main() {
 ```
 
 ```Output
-out=1.000000000000000e-002
+out=1.000000000000000e-02
 ```
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

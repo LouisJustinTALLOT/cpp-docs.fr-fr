@@ -1,6 +1,6 @@
 ---
 title: __inword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __indword_cpp
 - __indword
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - in instruction
 - __inword intrinsic
 ms.assetid: 5c617edd-6709-40a1-aad2-40d5e39283c6
-ms.openlocfilehash: f7355f64eeb2ace550d272ac6a9b1414e90eb172
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cfb6e5a11bed5feec3435ab604d22b8f532d3400
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264489"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217526"
 ---
-# <a name="inword"></a>__inword
+# <a name="__inword"></a>__inword
 
 **Section spécifique à Microsoft**
 
-Lit les données du port spécifié à l’aide de la `in` instruction.
+Lit les données à partir du port spécifié `in` à l’aide de l’instruction.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned short __inword(
    unsigned short Port
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Port*<br/>
-[in] Le port à lire.
+*Importer*\
+dans Port à partir duquel effectuer la lecture.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le mot de lire des données.
+Mot des données lues.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -44,7 +44,7 @@ Le mot de lire des données.
 |---------------|------------------|
 |`__inword`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
@@ -54,4 +54,4 @@ Cette routine est disponible uniquement en tant qu'intrinsèque.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

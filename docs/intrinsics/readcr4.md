@@ -1,33 +1,33 @@
 ---
 title: __readcr4
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readcr4
 helpviewer_keywords:
 - __readcr4 intrinsic
 ms.assetid: b841a27b-fe0d-4ee9-b76b-f91d3eb061fa
-ms.openlocfilehash: b67016846768be778881c02b395c8d6f3af1ef3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d43b5204d412de40284f89cfd4d74f1c1f9d86d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396494"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216734"
 ---
-# <a name="readcr4"></a>__readcr4
+# <a name="__readcr4"></a>__readcr4
 
 **Section spécifique à Microsoft**
 
-Lit le Registre CR4 et retourne sa valeur.
+Lit le registre CR4 et retourne sa valeur.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned __int64 __readcr4(void);
 ```
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur du Registre CR4.
+Valeur dans le registre CR4.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -35,14 +35,14 @@ La valeur du Registre CR4.
 |---------------|------------------|
 |`__readcr4`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-Cette intrinsèque est disponible uniquement en mode noyau et la routine est disponible uniquement comme intrinsèque.
+L’intrinsèque est disponible uniquement en mode noyau et la routine n’est disponible qu’en tant qu’intrinsèque.
 
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)
