@@ -1,6 +1,6 @@
 ---
 title: __debugbreak
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __debugbreak_cpp
 - __debugbreak
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-ms.openlocfilehash: ed75b94e8bf0aca9369c56f23e8ff00ea6953642
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e4cf2c85818a878417c560ddb5a80f8690e60a93
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509502"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217923"
 ---
 # <a name="__debugbreak"></a>__debugbreak
 
@@ -23,7 +23,7 @@ Génère un point d'arrêt dans votre code, où l'utilisateur sera invité à ex
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __debugbreak();
 ```
 
@@ -38,11 +38,11 @@ void __debugbreak();
 Le `__debugbreak` compilateur intrinsèque, similaire à [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak), est un moyen portable portable de provoquer un point d’arrêt.
 
 > [!NOTE]
->  Lors de la compilation avec **/CLR**, une `__debugbreak` fonction contenant sera compilée en langage MSIL. `asm int 3` entraîne la compilation d'une fonction en code natif. Pour plus d’informations, consultez [__asm](../assembler/inline/asm.md).
+> Lors de la compilation avec **/CLR**, une `__debugbreak` fonction contenant sera compilée en langage MSIL. `asm int 3` entraîne la compilation d'une fonction en code natif. Pour plus d’informations, consultez [__asm](../assembler/inline/asm.md).
 
 Par exemple :
 
-```
+```C
 main() {
    __debugbreak();
 }
@@ -50,7 +50,7 @@ main() {
 
 est similaire à :
 
-```
+```C
 main() {
    __asm {
       int 3
@@ -68,5 +68,5 @@ Cette routine est disponible uniquement en tant qu'intrinsèque.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)\
 [Mots clés](../cpp/keywords-cpp.md)

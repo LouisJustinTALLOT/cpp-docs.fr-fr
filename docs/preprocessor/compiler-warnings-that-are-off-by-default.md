@@ -1,16 +1,16 @@
 ---
 title: Avertissements du compilateur désactivés par défaut
-ms.date: 05/30/2018
+ms.date: 08/29/2019
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 1a95153f3cefd2bcfcae6ebb297a7c6b52944f82
-ms.sourcegitcommit: d3829ae0c3db909f96057755a80665f5ea4896ea
+ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550469"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220487"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avertissements du compilateur désactivés par défaut
 
@@ -150,15 +150,13 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |C5042 (niveau 3)|'*fonction*': les déclarations de fonction au niveau de la portée de bloc ne peuvent pas C++être spécifiées’inline’en standard; supprimer le spécificateur’inline' <sup>15,5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Le compilateur insère l’atténuation spectre pour la charge de mémoire si le commutateur/Qspectre spécifié <sup>15,7</sup>|
 
-<sup>14,1</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 1.<br/>
-<sup>14,3</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 3.<br/>
-<sup>15,3</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,3.<br/>
-<sup>15,5</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,5.<br/>
-<sup>15,7</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,7.<br/>
-<sup>15,8</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,8.<br/>
-::: moniker range=">= vs-2019"
-<sup>16,0</sup> cet avertissement est disponible à partir de Visual Studio 2019 RTM.<br/>
-::: moniker-end
+<sup>14,1</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 1. \
+<sup>14,3</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 3. \
+<sup>15,3</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,3. \
+<sup>15,5</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,5. \
+<sup>15,7</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,7. \
+<sup>15,8</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,8. \
+<sup>16,0</sup> cet avertissement est disponible à partir de Visual Studio 2019 RTM. \
 <sup></sup> Autorisation Cet avertissement est désactivé, sauf si l’option du compilateur [/permissive-](../build/reference/permissive-standards-conformance.md) est définie.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avertissements désactivés par défaut dans les versions antérieures

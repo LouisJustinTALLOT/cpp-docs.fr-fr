@@ -1,41 +1,41 @@
 ---
 title: __outword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outword
 helpviewer_keywords:
 - __outword intrinsic
 - out instruction
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
-ms.openlocfilehash: 067f438d2135f4d61245606ab25af5a6f1ec9568
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 766f6adff5ea0212f48ff8727024ac7a5729c944
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262955"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221394"
 ---
-# <a name="outword"></a>__outword
+# <a name="__outword"></a>__outword
 
 **Section spécifique à Microsoft**
 
-Génère le `out` instruction, qui envoie le mot `Data` le port d’e/s spécifié par `Port`.
+Génère l' `out` instruction, qui envoie le mot *Data* out au port d’e/s spécifié par le *port*.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __outword(
    unsigned short Port,
    unsigned short Data
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Port*<br/>
-[in] Le port pour envoyer les données.
+*Importer*\
+dans Port auquel envoyer les données.
 
-*Données*<br/>
-[in] Les données à envoyer.
+*Métadonnée*\
+dans Données à envoyer.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -43,7 +43,7 @@ void __outword(
 |---------------|------------------|
 |`__outword`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
@@ -53,4 +53,4 @@ Cette routine est disponible uniquement en tant qu'intrinsèque.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)
