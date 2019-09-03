@@ -1,41 +1,41 @@
 ---
 title: _mm_stream_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_stream_si64x
 helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-ms.openlocfilehash: d7f7a75be1602fbb70a230b0dd3a791be99d092a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6ed0f2482ecbcdaa4d50034e0d08381768847a2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396637"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221750"
 ---
-# <a name="mmstreamsi64x"></a>_mm_stream_si64x
+# <a name="_mm_stream_si64x"></a>_mm_stream_si64x
 
 **Section spécifique à Microsoft**
 
-Génère la movnti, instruction. Écrit les données `Source` vers un emplacement mémoire spécifié par `Dest`, sans polluer les caches.
+Génère l’instruction MOVNTI. Écrit les données dans la *source* dans un emplacement de mémoire spécifié par *destination*, sans polluer les caches.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void _mm_stream_si64x(
-   __int64 * Dest,
+   __int64 * Destination,
    __int64 Source
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Dest*<br/>
-[out] Un pointeur vers l’emplacement à écrire les données source.
+*Destination*\
+à Pointeur vers l’emplacement où écrire les données sources.
 
-*Source*<br/>
-[in] Les données à écrire.
+*Source*\
+dans Données à écrire.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -43,7 +43,7 @@ void _mm_stream_si64x(
 |---------------|------------------|
 |`_mm_stream_si64x`|X64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
@@ -79,4 +79,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

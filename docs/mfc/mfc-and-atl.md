@@ -2,12 +2,13 @@
 title: MFC et ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
-ms.openlocfilehash: 2d986c3237a6fa58cfcebef29939dbf6b1c316ae
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.topic: landing-page
+ms.openlocfilehash: 3eba0731c01fe232334efb4a2ff7df7179747b3e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706624"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218746"
 ---
 # <a name="mfc-and-atl"></a>MFC et ATL
 
@@ -17,7 +18,7 @@ Vous pouvez créer des programmes MFC ou ATL avec Visual Studio Community Editio
 
 Dans Visual Studio 2015, Visual C++ est un composant facultatif, et les composants MFC et ATL sont des sous-composants facultatifs sous Visual C++. Si vous ne sélectionnez pas ces composants lors de l’installation de Visual Studio, il vous est demandé de les installer la première fois que vous tentez de créer ou d’ouvrir un projet MFC ou ATL.
 
-Dans Visual Studio 2017 et versions ultérieures, MFC et ATL sont des sous-composants facultatifs sous le **développement Desktop en C++** charge de travail dans le programme du programme d’installation de Visual Studio. Vous pouvez installer prise en charge ATL sans MFC ou combinées de prise en charge ATL et MFC (MFC dépend de ATL). Pour plus d’informations sur les charges de travail et des composants, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).
+Dans Visual Studio 2017 et versions ultérieures, MFC et ATL sont des sous-composants facultatifs dans le cadre du **développement bureautique avec C++**  une charge de travail dans le programme Visual Studio installer. Vous pouvez installer la prise en charge ATL sans MFC, ou la prise en charge MFC et ATL combinée (MFC dépend de ATL). Pour plus d’informations sur les charges de travail et les composants, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).
 
 ## <a name="related-articles"></a>Articles connexes
 

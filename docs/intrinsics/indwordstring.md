@@ -1,6 +1,6 @@
 ---
 title: __indwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __indwordstring
 - __indwordstring_cpp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __indwordstring intrinsic
 - rep insd instruction
 ms.assetid: 96a1cf33-f691-4916-99e4-fa849b61e3a9
-ms.openlocfilehash: 6f50aed8e6efe3b0b0a6e7eaebef5719475463ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0b160ba00b1c0b7aa6bffc913e4cb56d503c2ff
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263787"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217832"
 ---
-# <a name="indwordstring"></a>__indwordstring
+# <a name="__indwordstring"></a>__indwordstring
 
 **Section spécifique à Microsoft**
 
-Lit les données du port spécifié à l’aide de la `rep insd` instruction.
+Lit les données à partir du port spécifié `rep insd` à l’aide de l’instruction.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __indwordstring(
    unsigned short Port,
    unsigned long* Buffer,
@@ -31,16 +31,16 @@ void __indwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Port*<br/>
-[in] Le port à lire.
+*Importer*\
+dans Port à partir duquel effectuer la lecture.
 
-*Buffer*<br/>
-[out] Les données lues à partir du port sont écrit ici.
+*Mémoire tampon*\
+à Les données lues à partir du port sont écrites ici.
 
-*Nombre*<br/>
-[in] Le nombre d’octets de données à lire.
+*Saut*\
+dans Nombre d’octets de données à lire.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -48,7 +48,7 @@ void __indwordstring(
 |---------------|------------------|
 |`__indwordstring`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
@@ -58,4 +58,4 @@ Cette routine est disponible uniquement en tant qu'intrinsèque.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

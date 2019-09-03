@@ -1,38 +1,37 @@
 ---
-title: no_implementation
-ms.date: 11/04/2016
+title: no_implementation importer l’attribut
+ms.date: 08/29/2019
 f1_keywords:
 - no_implementation
 helpviewer_keywords:
 - no_implementation attribute
 ms.assetid: bdc67785-e131-409c-87bc-f4d2f4abb07b
-ms.openlocfilehash: 26527ca69c66c73f5d41084dc42df5faa34481d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f0a7454fdbedc1959b665ccb2a23748d21c342d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409809"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220768"
 ---
-# <a name="noimplementation"></a>no_implementation
-**Spécifique à C++**
+# <a name="no_implementation-import-attribute"></a>no_implementation importer l’attribut
 
-Supprime la génération de l'en-tête .tli, qui contient les implémentations des fonctions membres de wrapper.
+**C++Plus**
+
+Supprime la génération de l' `.tli` en-tête, qui contient les implémentations des fonctions membres wrapper.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-no_implementation
-```
+> **#import** *bibliothèque de types* **no_implementation**
 
 ## <a name="remarks"></a>Notes
 
-Si cet attribut est spécifié, l'en-tête .tlh, avec les déclarations pour exposer les éléments de bibliothèque de types, sera généré sans instruction `#include` pour inclure le fichier d'en-tête .tli.
+Si cet attribut est spécifié, l' `.tlh` en-tête, avec les déclarations pour exposer des éléments de bibliothèque de types, est `#include` généré sans instruction pour `.tli` inclure le fichier d’en-tête.
 
 Cet attribut est utilisé conjointement avec [implementation_only](../preprocessor/implementation-only.md).
 
-**FIN spécifique à C++**
+**Spécifique C++ à la fin**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import directive](../preprocessor/hash-import-directive-cpp.md)

@@ -1,6 +1,6 @@
 ---
-title: _InterlockedCompareExchangePointer, fonctions intrinsèques
-ms.date: 11/04/2016
+title: _InterlockedCompareExchangePointer fonctions intrinsèques
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchangePointer_HLERelease
 - _InterlockedCompareExchangePointer_rel
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0a0083c19df51d2d2eccb7a7bbf6521303c1f85
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509427"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222035"
 ---
-# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer, fonctions intrinsèques
+# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer fonctions intrinsèques
 
 **Section spécifique à Microsoft**
 
@@ -39,7 +39,7 @@ Effectue une opération atomique qui stocke l'adresse `Exchange` dans l'adresse 
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void * _InterlockedCompareExchangePointer (
    void * volatile * Destination,
    void * Exchange,
@@ -77,15 +77,15 @@ long _InterlockedCompareExchangePointer_rel (
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Destination*<br/>
+*Destination*\
 [in, out] Pointeur vers un pointeur vers la valeur de destination. Le signe est ignoré.
 
-*Exchange*<br/>
+*Échanger*\
 dans Pointeur Exchange. Le signe est ignoré.
 
-*Comparateur*<br/>
+*Comparateur*\
 dans Pointeur à comparer à la destination. Le signe est ignoré.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -96,8 +96,8 @@ La valeur de retour est la valeur initiale de la destination.
 
 |Intrinsèque|Architecture|Header|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
+|`_InterlockedCompareExchangePointer`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM, ARM64|\<iiintrin.h>|
 |`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Notes
@@ -108,11 +108,11 @@ La valeur de retour est la valeur initiale de la destination.
 
 Pour obtenir un exemple d’utilisation `_InterlockedCompareExchangePointer`de, consultez [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les fonctions intrinsèques ARM avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agissent pas comme une barrière mémoire.
+Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les intrinsèques ARM avec `_nf` un suffixe («no cloture») n’agissent pas comme une barrière de mémoire.
 
 Les fonctions intrinsèques avec un suffixe `_np` (pour « no prefetch », « pas de prérécupération ») empêchent l'insertion par le compilateur d'une possible opération de prérécupération.
 
-Sur les plateformes Intel qui prennent en charge les instructions HLE (Hardware Lock Elision), les fonctions intrinsèques avec les suffixes `_HLEAcquire` et `_HLERelease` comprennent une indication pour le processeur qui peut accélérer les performances en éliminant une étape d'écriture de verrou dans le matériel. Si ces fonctions intrinsèques sont appelées sur des plateformes qui ne prennent pas en charge HLE, l'indication est ignorée.
+Sur les plateformes Intel qui prennent en charge les instructions HLE (Hardware Lock Elision), les fonctions intrinsèques avec les suffixes `_HLEAcquire` et `_HLERelease` comprennent une indication pour le processeur qui peut accélérer les performances en éliminant une étape d'écriture de verrou dans le matériel. Si ces fonctions intrinsèques sont appelées sur des plateformes qui ne prennent pas en charge HLE, l’indicateur est ignoré.
 
 Ces routines sont disponibles seulement comme fonctions intrinsèques.
 
@@ -120,5 +120,5 @@ Ces routines sont disponibles seulement comme fonctions intrinsèques.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)\
 [Mots clés](../cpp/keywords-cpp.md)

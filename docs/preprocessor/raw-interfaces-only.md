@@ -1,38 +1,37 @@
 ---
-title: raw_interfaces_only
-ms.date: 11/04/2016
+title: raw_interfaces_only importer l’attribut
+ms.date: 08/29/2019
 f1_keywords:
 - raw_interfaces_only
 helpviewer_keywords:
 - raw_interfaces_only attribute
 ms.assetid: 87056c6d-3f34-4248-af58-f5775a35bfb7
-ms.openlocfilehash: 48133b85ccb5ddb8de8e6cb614d41cde22dac66b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b79aa4dbafa204d84f4d6ed7ec78fdec1b81fa7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179787"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216207"
 ---
-# <a name="rawinterfacesonly"></a>raw_interfaces_only
-**Spécifique à C++**
+# <a name="raw_interfaces_only-import-attribute"></a>raw_interfaces_only importer l’attribut
 
-Supprime la génération de fonctions de wrapper de la gestion des erreurs et [propriété](../cpp/property-cpp.md) déclarations qui utilisent ces fonctions wrapper.
+**C++Plus**
+
+Supprime la génération des fonctions wrapper de gestion des erreurs, et les déclarations de [propriété](../cpp/property-cpp.md) qui utilisent ces fonctions wrapper.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-raw_interfaces_only
-```
+> **#import** *bibliothèque de types* **raw_interfaces_only**
 
 ## <a name="remarks"></a>Notes
 
-Le **raw_interfaces_only** attribut provoque également le préfixe par défaut utilisé pour nommer les fonctions non-propriété à supprimer. Normalement, le préfixe est **raw_**. Si cet attribut est spécifié, les noms de fonctions proviennent directement de la bibliothèque de types.
+L’attribut **raw_interfaces_only** entraîne également le préfixe par défaut utilisé pour nommer les fonctions sans propriété à supprimer. Normalement, le préfixe `raw_`est. Si cet attribut est spécifié, les noms de fonction sont pris directement à partir de la bibliothèque de types.
 
 Cet attribut vous permet d'exposer uniquement le contenu de bas niveau de la bibliothèque de types.
 
-**FIN spécifique à C++**
+**Spécifique C++ à la fin**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import directive](../preprocessor/hash-import-directive-cpp.md)
