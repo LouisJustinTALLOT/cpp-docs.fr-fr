@@ -1,48 +1,46 @@
 ---
-title: high_property_prefixes
-ms.date: 10/18/2018
+title: high_property_prefixes importer l’attribut
+ms.date: 08/29/2019
 f1_keywords:
 - high_property_prefixes
 helpviewer_keywords:
 - high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
-ms.openlocfilehash: 3f8975ec9737e02bb1216166cc6c241549e95a07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e44f6f1afae479f803f4c6d866ef3ee38744561
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409835"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219004"
 ---
-# <a name="highpropertyprefixes"></a>high_property_prefixes
+# <a name="high_property_prefixes-import-attribute"></a>high_property_prefixes importer l’attribut
 
-**Spécifique à C++**
+**C++Plus**
 
 Spécifie d'autres préfixes pour trois méthodes de propriété.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
-```
+> **#import** *bibliothèque de types* **high_property_prefixes (** «*GetPrefix*» **,** «*PutPrefix*» **,** «*PutRefPrefix*» **)**
 
 ### <a name="parameters"></a>Paramètres
 
-*GetPrefix*<br/>
-Préfixe à utiliser pour le `propget` méthodes.
+*GetPrefix*\
+Préfixe à utiliser pour les `propget` méthodes.
 
-*PutPrefix*<br/>
-Préfixe à utiliser pour le `propput` méthodes.
+*PutPrefix*\
+Préfixe à utiliser pour les `propput` méthodes.
 
-*PutRefPrefix*<br/>
-Préfixe à utiliser pour le `propputref` méthodes.
+*PutRefPrefix*\
+Préfixe à utiliser pour les `propputref` méthodes.
 
 ## <a name="remarks"></a>Notes
 
-Par défaut, la gestion des erreurs générales `propget`, `propput`, et `propputref` méthodes sont exposées par les fonctions membres nommées avec les préfixes `Get`, `Put`, et `PutRef`, respectivement.
+Par défaut, les méthodes de `propget`gestion des erreurs de haut niveau, `propput`et `propputref` sont exposées par les fonctions membres nommées `Get`avec `Put`des préfixes, et `PutRef`, respectivement.
 
-**FIN spécifique à C++**
+**Spécifique C++ à la fin**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import directive](../preprocessor/hash-import-directive-cpp.md)

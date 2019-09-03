@@ -1,20 +1,20 @@
 ---
 title: _div64
-ms.date: 04/17/2019
+ms.date: 09/02/2019
 f1_keywords:
 - _div64
 helpviewer_keywords:
 - _div64 intrinsic
-ms.openlocfilehash: a221cc7cf0655a41873c6777aecd8a9b27131b74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d05c5d6e25540a5de1b2f8231697c9a738759ce
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264112"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216763"
 ---
-# <a name="div64"></a>_div64
+# <a name="_div64"></a>_div64
 
-Le `_div64` intrinsèque divise un entier 64 bits par un entier 32 bits. La valeur de retour conserve le quotient, et la fonction intrinsèque retourne le reste à un paramètre de pointeur. `_div64` est **spécifique à Microsoft**.
+L' `_div64` intrinsèque divise un entier 64 bits par un entier 32 bits. La valeur de retour contient le quotient et l’intrinsèque retourne le reste à l’aide d’un paramètre de pointeur. `_div64`est **spécifique à Microsoft**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,21 +29,21 @@ int _div64(
 ### <a name="parameters"></a>Paramètres
 
 *dividend* \
-[in] Entier 64 bits à diviser.
+dans Entier 64 bits à diviser.
 
-*divisor* \
-[in] Entier 32 bits à diviser par.
+*Division* \
+dans Entier 32 bits à diviser par.
 
-*remainder* \
-[out] Les bits d’entier 32 bits du reste.
+*sections* \
+à Bits d’entier 32 bits du reste.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les 32 bits du quotient.
+32 bits du quotient.
 
 ## <a name="remarks"></a>Notes
 
-Le `_div64` divise intrinsèque *dividende* par *diviseur*. Il stocke le reste de l’entier 32 bits vers lequel pointé *reste*et retourne les 32 bits du quotient.
+L' `_div64` intrinsèque divise le dividendepar diviseur. Elle stocke le reste dans l’entier 32 bits désigné par le *reste*, et retourne les 32 bits du quotient.
 
 Le `_div64` intrinsèque est disponible à partir de Visual Studio 2019 RTM.
 

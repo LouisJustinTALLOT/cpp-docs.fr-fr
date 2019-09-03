@@ -1,36 +1,36 @@
 ---
 title: __writecr4
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _writecr4
 helpviewer_keywords:
 - _writecr4 intrinsic
 ms.assetid: ab7651d7-b86b-4be7-a0a0-7263099c70fc
-ms.openlocfilehash: bbeb282e0e2c386d95009bef277546a260057334
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1afdadcdfdbf1060c87e3865dd5597b0b9a2ea6b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389955"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219273"
 ---
-# <a name="writecr4"></a>__writecr4
+# <a name="__writecr4"></a>__writecr4
 
 **Section spécifique à Microsoft**
 
-Écrit la valeur `Data` au CR4 s’inscrivent.
+Écrit la valeur `Data` dans le registre CR4.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void writecr4(
    unsigned __int64 Data
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Données*<br/>
-[in] La valeur à écrire dans le Registre CR4.
+*Métadonnée*\
+dans Valeur à écrire dans le registre CR4.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -38,7 +38,7 @@ void writecr4(
 |---------------|------------------|
 |`__writecr4`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
@@ -48,4 +48,4 @@ Cette intrinsèque est disponible uniquement en mode noyau et la routine est dis
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
-title: '#undef, Directive (C/C++)'
-ms.date: 11/04/2016
+title: '#undef, directive (C/C++)'
+ms.date: 08/29/2019
 f1_keywords:
 - '#undef'
 helpviewer_keywords:
@@ -8,34 +8,32 @@ helpviewer_keywords:
 - undef directive (#undef)
 - preprocessor, directives
 ms.assetid: 88900e0e-2c19-4a63-b681-f3d3133c24ca
-ms.openlocfilehash: 4f4f5ce244be6d7f4e13d7a2abc5d21232c08d9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a69bc568579e7da7c7e3816cb67c8153b8f1a27
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409848"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220217"
 ---
-# <a name="undef-directive-cc"></a>#undef, directive (C/C++)
+# <a name="undef-directive-cc"></a>#undef, directive (CC++/)
+
 Supprime (élimine) un nom créé précédemment avec `#define`.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#undef
-identifier
-```
+> **#undef** *identificateur*
 
 ## <a name="remarks"></a>Notes
 
-Le **#undef** directive supprime la définition actuelle de *identificateur*. Par conséquent, les occurrences suivantes de *identificateur* sont ignorés par le préprocesseur. Pour supprimer une définition de macro à l’aide **#undef**, donnez uniquement la macro *identificateur* ; ne donnent pas une liste de paramètres.
+La directive **#undef** supprime la définition actuelle de l' *identificateur*. Par conséquent, les occurrences suivantes de *identifier* sont ignorées par le préprocesseur. Pour supprimer une définition de macro à l’aide de **#undef**, attribuez uniquement l' *identificateur*de macro, et non une liste de paramètres.
 
-Vous pouvez également appliquer le **#undef** directive à un identificateur qui n’a aucune définition précédente. Cela garantit que l'identificateur n'est pas défini. Remplacement de macro n’est pas effectué dans **#undef** instructions.
+Vous pouvez également appliquer la directive **#undef** à un identificateur qui n’a pas de définition précédente. Cela garantit que l'identificateur n'est pas défini. Le remplacement de macro n’est pas effectué dans les instructions **#undef** .
 
-Le **#undef** directive est généralement associée à un `#define` directive permettant de créer une région dans un programme source dans lequel un identificateur a une signification particulière. Par exemple, une fonction spécifique du programme source peut utiliser des constantes manifestes pour définir les valeurs spécifiques à l'environnement qui n'affectent pas le reste du programme. Le **#undef** directive fonctionne également avec la `#if` directive pour contrôler la compilation conditionnelle du programme source. Consultez [le #if, #elif #else et #endif Directives](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md) pour plus d’informations.
+La directive **#undef** est généralement associée à une `#define` directive pour créer une zone dans un programme source dans lequel un identificateur a une signification particulière. Par exemple, une fonction spécifique du programme source peut utiliser des constantes manifestes pour définir les valeurs spécifiques à l'environnement qui n'affectent pas le reste du programme. La directive **#undef** fonctionne également avec la `#if` directive pour contrôler la compilation conditionnelle du programme source. Pour plus d’informations, consultez [les directives #if, #elif, #else et #endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
 
-Dans l’exemple suivant, le **#undef** directive supprime des définitions d’une constante symbolique et une macro. Notez que seul l'identificateur de la macro est donné.
+Dans l’exemple suivant, la directive **#undef** supprime les définitions d’une constante symbolique et une macro. Notez que seul l'identificateur de la macro est donné.
 
-```
+```C
 #define WIDTH 80
 #define ADD( X, Y ) ((X) + (Y))
 .
@@ -47,7 +45,7 @@ Dans l’exemple suivant, le **#undef** directive supprime des définitions d’
 
 **Section spécifique à Microsoft**
 
-Macros peuvent être supprimées à partir de la ligne de commande à l’aide de la `/U` option, suivie des noms de macro pour être non défini. Le fait de publier cette commande est équivalent à une séquence de `#undef` *nom de la macro* instructions au début du fichier.
+Les macros peuvent être non définies à partir de la ligne de `/U` commande à l’aide de l’option, suivie des noms de macros à non définir. L’effet de l’émission de cette commande est équivalent à une `#undef` séquence d’instructions de *nom de macro* au début du fichier.
 
 **FIN de la section spécifique à Microsoft**
 

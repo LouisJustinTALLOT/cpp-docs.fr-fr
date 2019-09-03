@@ -1,6 +1,6 @@
 ---
-title: optimize
-ms.date: 11/04/2016
+title: optimize, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.optimize
 - optimize_CPP
@@ -8,57 +8,53 @@ helpviewer_keywords:
 - pragmas, optimize
 - optimize pragma
 ms.assetid: cb13c1cc-186a-45bc-bee7-95a8de7381cc
-ms.openlocfilehash: 9f5240fc59f59a71ddb3d18b67fadf3463a0d1ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d7b99b7a72c133d56a209cf42fa9ef670a4a7f9
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328170"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220516"
 ---
-# <a name="optimize"></a>optimize
+# <a name="optimize-pragma"></a>optimize, pragma
 
-Spécifie les optimisations à effectuer sur une base fonction par fonction.
+Spécifie des optimisations fonction par fonction.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma optimize( "[optimization-list]", {on | off} )
-```
+> **#pragma optimize ("** [ *Optimization-List* ] **",** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Notes
 
-Le **optimiser** pragma doit apparaître en dehors d’une fonction et prend effet à la première fonction définie après le pragma. Le *sur* et *hors* arguments activer des options spécifiées dans le *liste d’optimisation* activé ou désactivé.
+Le pragma **optimize** doit apparaître en dehors d’une fonction. Elle prend effet à la première fonction définie après l’affichage du pragma. Les arguments **on** et **off** activent ou désactivent les options spécifiées dans la *liste d’optimisation* .
 
-Le *liste d’optimisation* peut être zéro ou plusieurs des paramètres indiqués dans le tableau suivant.
+La *liste* d’optimisations peut être égale à zéro ou plusieurs des paramètres indiqués dans le tableau suivant.
 
 ### <a name="parameters-of-the-optimize-pragma"></a>Paramètres du pragma optimize
 
-|Paramètre(s)|Type d'optimisation|
+| Paramètre(s) | Type d'optimisation |
 |--------------------|--------------------------|
-|*g*|Active les optimisations globales.|
-|*s* ou *t*|Spécifie des séquences courtes ou rapides de code machine.|
-|*y*|Génère des pointeurs de frame sur la pile du programme.|
+| **g** | Active les optimisations globales. |
+| **s** ou **t** | Spécifie des séquences courtes ou rapides de code machine. |
+| **y** | Génère des pointeurs de frame sur la pile du programme. |
 
-Ce sont les mêmes lettres que celui utilisés avec le [/O](../build/reference/o-options-optimize-code.md) options du compilateur. Par exemple, le pragma suivant équivaut à l'option du compilateur `/Os` :
+Ces paramètres sont les mêmes que ceux utilisés avec les options du compilateur [/o](../build/reference/o-options-optimize-code.md) . Par exemple, le pragma suivant équivaut à l'option du compilateur `/Os` :
 
+```cpp
+#pragma optimize( "s", on )
 ```
-#pragma optimize( "ts", on )
-```
 
-À l’aide de la **optimiser** pragma avec la chaîne vide (**» «**) est une forme spéciale de la directive :
+L’utilisation du pragma **optimize** avec la chaîne vide ( **""** ) est une forme spéciale de la directive:
 
-Lorsque vous utilisez le *hors* paramètre, il désactive toutes les optimisations, *g*, *s*, *t*, et *y*, off.
+Quand vous utilisez le paramètre **off** , il désactive toutes les optimisations, **g**, **s**, **t**et **y**, OFF.
 
-Lorsque vous utilisez le *sur* paramètre, il réinitialise les optimisations à celles que vous avez spécifié avec la [/O](../build/reference/o-options-optimize-code.md) option du compilateur.
+Quand vous utilisez le paramètre **on** , il réinitialise les optimisations à celles que vous avez spécifiées à l’aide de l’option du compilateur [/o](../build/reference/o-options-optimize-code.md) .
 
-```
+```cpp
 #pragma optimize( "", off )
-.
-.
-.
+/* unoptimized code section */
 #pragma optimize( "", on )
 ```
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

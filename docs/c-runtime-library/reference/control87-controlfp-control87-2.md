@@ -1,6 +1,6 @@
 ---
 title: _control87, _controlfp, __control87_2
-ms.date: 04/05/2018
+ms.date: 08/29/2019
 apiname:
 - _control87
 - _controlfp
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
-ms.openlocfilehash: e2ebfdc80a451ebf02563f78a62dd08618f92bcd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75b2870543ec3ddd20d445a492ad4270b91e80d7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340415"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218416"
 ---
-# <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
+# <a name="_control87-_controlfp-__control87_2"></a>_control87, _controlfp, __control87_2
 
-Obtient et définit le mot de contrôle à virgule flottante. Une version plus sécurisée de **_controlfp** est disponible ; consultez [_controlfp_s](controlfp-s.md).
+Obtient et définit le mot de contrôle à virgule flottante. Une version plus sécurisée de _ **controlfp** est disponible; consultez [_controlfp_s](controlfp-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,34 +70,32 @@ int __control87_2(
 
 ### <a name="parameters"></a>Paramètres
 
-*new*<br/>
+*new*\
 Nouvelles valeurs en bits du mot de contrôle.
 
-*mask*<br/>
+*filtrage*\
 Masque des bits du nouveau mot de contrôle à définir.
 
-*x86_cw*<br/>
-Renseigné avec le mot de contrôle pour l’unité de virgule flottante x87. Passer la valeur 0 (**NULL**) pour définir le mot de contrôle SSE2 uniquement.
+*x86_cw*\
+Renseigné avec le mot de contrôle pour l’unité de virgule flottante x87. Transmettez 0 (**null**) pour définir uniquement le mot de contrôle SSE2.
 
-*sse2_cw*<br/>
-Mot de contrôle pour l’unité de virgule flottante SSE. Passer la valeur 0 (**NULL**) pour définir uniquement les x87 mot de contrôle.
+*sse2_cw*\
+Mot de contrôle pour l’unité de virgule flottante SSE. Transmettez 0 (**null**) pour définir uniquement le mot de contrôle X87.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Pour **_control87** et **_controlfp**, les bits dans la valeur retournée indiquent l’état de contrôle à virgule flottante. Pour obtenir une définition complète des bits retournés par **_control87**, consultez FLOAT. H.
+Pour **_control87** et _ **controlfp**, les bits de la valeur retournée indiquent l’état de contrôle à virgule flottante. Pour obtenir une définition complète des bits retournés par **_control87**, consultez float. Manutention.
 
-Pour **__control87_2**, la valeur de retour est 1, ce qui indique la réussite.
+Pour **__control87_2**, la valeur de retour est 1, ce qui indique une réussite.
 
 ## <a name="remarks"></a>Notes
 
-Le **_control87** fonction obtient et définit le mot de contrôle à virgule flottante. Le mot de contrôle à virgule flottante permet au programme de modifier les modes de précision, d’arrondi et d’infini dans le package mathématique à virgule flottante, selon la plateforme. Vous pouvez également utiliser **_control87** pour masquer ou démasquer les exceptions de virgule flottante. Si la valeur de *masque* est égal à 0, **_control87** Obtient le mot de contrôle à virgule flottante. Si *masque* est différent de zéro, une nouvelle valeur pour le mot de contrôle est définie : Pour un bit qui se trouve sur (autrement dit, égal à 1) dans *masque*, le bit correspondant dans *nouveau* est utilisé pour mettre à jour le mot de contrôle. En d’autres termes, **fpcntrl** = ((**fpcntrl** & ~*masque*) &#124; (*nouveau* & *masque*)) où **fpcntrl** est le mot de contrôle à virgule flottante.
+La fonction **_control87** obtient et définit le mot de contrôle à virgule flottante. Le mot de contrôle à virgule flottante permet au programme de modifier les modes de précision, d’arrondi et d’infini, en fonction de la plateforme. Vous pouvez également utiliser **_control87** pour masquer ou démasquer les exceptions de virgule flottante. Si la valeur du *masque* est égale à 0, **_control87** obtient le mot de contrôle à virgule flottante. Si *Mask* est différent de zéro, une nouvelle valeur est définie pour le mot de contrôle: Pour tout bit sur (autrement dit, égal à 1) dans le *masque*, le bit correspondant dans *New* est utilisé pour mettre à jour le mot de contrôle. En d’autres termes **, fpcntrl** = ((**fpcntrl** & ~*Mask*) &#124; (*nouveau* & *masque*)) où **fpcntrl** est le mot de contrôle à virgule flottante.
 
 > [!NOTE]
 > Par défaut, les bibliothèques d’exécution masquent toutes les exceptions de virgule flottante.
 
-**_controlfp** est une version portable indépendante de la plateforme de **_control87**. Il est presque identique à la **_control87** fonction sur x86 x64, plates-formes et ARM. Si vous ciblez x86, x64 ou les plateformes ARM, utilisez **_control87** ou **_controlfp**.
-
-La différence entre **_control87** et **_controlfp** est dans la manière dont elles traitent les valeurs DENORMAL. Pour les plateformes ARM, x86 et x64 **_control87** pouvez activer et désactiver le masque d’exception DENORMAL OPERAND. **_controlfp** ne modifie pas le masque d’exception DENORMAL OPERAND. Cet exemple illustre la différence :
+_ **controlfp** est une version portable, indépendante de la plateforme, de **_control87** qui est quasiment identique à la fonction **_control87** . Si votre code cible plusieurs plateformes, utilisez _ **controlfp** ou **_controlfp_s**. La différence entre **_control87** et _ **controlfp** réside dans la façon dont ils traitent les valeurs Denormal. Pour les plateformes x86, x64, ARM et ARM64, **_control87** peut définir et désélectionner le masque d’exception Denormal OPERAND. _ **controlfp** ne modifie pas le masque d’exception dénormal des opérandes. Cet exemple illustre la différence :
 
 ```C
 _control87( _EM_INVALID, _MCW_EM );
@@ -106,9 +104,9 @@ _controlfp( _EM_INVALID, _MCW_EM );
 // DENORMAL exception mask remains unchanged
 ```
 
-Les valeurs possibles pour la constante du masque (*masque*) et les nouvelles valeurs de contrôle (*nouveau*) sont affichés dans le tableau de valeurs hexadécimales suivant. Utilisez l’une des constantes portables répertoriées ci-dessous (**_MCW_EM**, **_EM_INVALID**, et ainsi de suite) en tant qu’arguments de ces fonctions, au lieu de fournir la valeur hexadécimale valeurs explicitement.
+Les valeurs possibles pour les constantes de masque (*masque*) et les nouvelles valeurs de contrôle (*nouveau*) s’affichent dans le tableau de contrôles des masques et des valeurs de mot. Utilisez les constantes portables listées ci-dessous ( **_MCW_EM**, **_EM_INVALID**, etc.) comme arguments pour ces fonctions, au lieu de fournir les valeurs hexadécimales explicitement.
 
-Les plateformes x86 dérivées d’Intel prennent en charge l’entrée DENORMAL et de sortie des valeurs dans le matériel. Le comportement x86 consiste à conserver les valeurs DENORMAL. La plateforme ARM et le x64 prennent en charge des plateformes qui ont SSE2 activer DENORMAL opérandes et les résultats afin d’être vidés ou définis à zéro. Le **_controlfp** et **_control87** fonctions fournissent un masque pour modifier ce comportement. L’exemple suivant illustre l’utilisation de ce masque.
+Les plateformes dérivées d’Intel x86 prennent en charge les valeurs d’entrée et de sortie dénormalisées dans le matériel. Le comportement x86 consiste à conserver les valeurs DENORMAL. Les plateformes ARM et ARM64 et les plateformes x64 qui disposent de la prise en charge de SSE2 activent les opérandes et les résultats dénormals à vider, ou sont forcés à zéro. Les fonctions _ **controlfp** et **_control87** fournissent un masque pour modifier ce comportement. L’exemple suivant illustre l’utilisation de ce masque.
 
 ```C
 _controlfp(_DN_SAVE, _MCW_DN);
@@ -119,26 +117,30 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-Sur les plateformes ARM, le **_control87** et **_controlfp** fonctions s’appliquent au Registre fpscr. Sur x64 architectures, seul le mot de contrôle SSE2 stocké dans le Registre MXCSR est affecté. Sur x86 plateformes, **_control87** et **_controlfp** affectent les mots de contrôle pour x87 et SSE2, le cas échéant. La fonction **__control87_2** permet x87 et unités de virgule flottante SSE2 pour l’ensemble ou séparément. Si vous souhaitez affecter les deux unités, passez les adresses des deux entiers à **x86_cw** et **sse2_cw**. Si vous souhaitez uniquement affecter une unité, passez une adresse pour ce paramètre, mais passer la valeur 0 (**NULL**) pour l’autre. Si 0 est passé pour l’un de ces paramètres, la fonction n’a aucun effet sur cette unité de virgule flottante. Cette fonctionnalité peut être utile dans les cas où une partie du code utilise l’unité de virgule flottante x87 et une autre partie l’unité de virgule flottante SSE2. Si vous utilisez **__control87_2** dans une partie d’un programme et définissez des valeurs différentes pour les mots de contrôle à virgule flottante, puis utiliser **_control87** ou **_controlfp** pour en savoir plus manipuler le mot de contrôle, puis **_control87** et **_controlfp** peut être incapable de renvoyer un mot de contrôle unique pour représenter l’état de ces deux unités de virgule flottante. Dans ce cas, ces fonctions définissent le **indicateur em_ambiguous prend** indicateur dans la valeur entière retournée pour indiquer qu’il existe une incohérence entre les deux mots de contrôle. Il s’agit d’un message d’avertissement selon lequel le mot de contrôle retourné peut ne pas représenter l’état des deux mots de contrôle à virgule flottante avec précision.
+Sur les plateformes ARM et ARM64, les fonctions **_control87** et _ **controlfp** s’appliquent au registre Registre fpscr. Seul le mot de contrôle SSE2 qui est stocké dans le registre MXCSR est affecté sur les plateformes x64. Sur les plateformes x86, **_control87** et _ **controlfp** affectent les mots de contrôle pour le X87 et le SSE2, le cas échéant.
 
-Sur la ARM et x64 architectures, en modifiant le mode d’infini ou la précision à virgule flottante ne sont pas pris en charge. Si le masque de contrôle de précision est utilisé sur le x64 plateforme, la fonction génère une assertion et le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+La fonction **__control87_2** permet de contrôler les unités à virgule flottante X87 et SSE2 ensemble ou séparément. Pour affecter les deux unités, transmettez les adresses de deux entiers à **x86_cw** et **sse2_cw**. Si vous souhaitez uniquement affecter une unité, transmettez une adresse pour ce paramètre, mais transmettez la valeur 0 (**null**) pour l’autre. Si 0 est passé pour l’un de ces paramètres, la fonction n’a aucun effet sur cette unité de virgule flottante. Elle est utile quand une partie de votre code utilise l’unité à virgule flottante X87 et qu’une autre partie utilise l’unité à virgule flottante SSE2.
+
+Si vous utilisez **__control87_2** pour définir des valeurs différentes pour les mots de contrôle à virgule flottante, **_control87** ou _ **controlfp** peut ne pas être en mesure de retourner un mot de contrôle unique pour représenter l’état des deux unités à virgule flottante. Dans ce cas, ces fonctions définissent l’indicateur **EM_AMBIGUOUS** dans la valeur entière retournée pour indiquer une incohérence entre les deux mots de contrôle. L’indicateur **EM_AMBIGUOUS** est un avertissement indiquant que le mot de contrôle retourné peut ne pas représenter l’état des deux mots de contrôle à virgule flottante avec précision.
+
+Sur les plateformes ARM, ARM64 et x64, la modification du mode infini ou de la précision à virgule flottante n’est pas prise en charge. Si le masque de contrôle de précision est utilisé sur la plateforme x64, la fonction lève une assertion, et le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 > [!NOTE]
-> **__control87_2** n’est pas pris en charge sur le ARM ou x64 architectures. Si vous utilisez **__control87_2** et compiler votre programme pour le ARM ou x64 architectures, le compilateur génère une erreur.
+> **__control87_2** n’est pas pris en charge sur les plateformes ARM, ARM64 ou x64. Si vous utilisez **__control87_2** et compilez votre programme pour les plateformes ARM, ARM64 ou x64, le compilateur génère une erreur.
 
-Ces fonctions sont ignorées lorsque vous utilisez [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) pour compiler, car le common language runtime (CLR) prend uniquement en charge la précision à virgule flottante par défaut.
+Ces fonctions sont ignorées lorsque vous utilisez [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) à compiler. Le common language runtime (CLR) prend uniquement en charge la précision à virgule flottante par défaut.
 
-**Valeurs hexadécimales**
+### <a name="control-word-masks-and-values"></a>Contrôler les masques et les valeurs de mots
 
-Pour le **_MCW_EM** masque, effacer le masque définit l’exception, ce qui permet à l’exception de matériel ; définir masque l’exception. Si un **_EM_UNDERFLOW** ou **_EM_OVERFLOW** se produit, aucune exception de matériel n’est levée jusqu'à ce que la prochaine instruction à virgule flottante est exécutée. Pour générer une exception matérielle immédiatement après **_EM_UNDERFLOW** ou **_EM_OVERFLOW**, appelez le **FWAIT** instruction MASM.
+Pour le masque **_MCW_EM** , l’effacement du masque définit l’exception, ce qui permet l’exception matérielle. la définition du masque masque l’exception. Si un **_EM_UNDERFLOW** ou **_EM_OVERFLOW** se produit, aucune exception matérielle n’est levée tant que l’instruction à virgule flottante suivante n’est pas exécutée. Pour générer une exception matérielle immédiatement après **_EM_UNDERFLOW** ou **_EM_OVERFLOW**, appelez l’instruction **FWAIT** MASM.
 
 |Masque|Valeur hexadécimale|Constante|Valeur hexadécimale|
 |----------|---------------|--------------|---------------|
-|**_MCW_DN** (contrôle de la dénormalisation)|0x03000000|**_DN_SAVE**<br /><br /> **_DN_FLUSH**|0x00000000<br /><br /> 0x01000000|
-|**_MCW_EM** (masque d’exception d’interruption)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
-|**_MCW_IC** (contrôle de l’infini)<br /><br /> (Non pris en charge sur ARM ou x64] plateformes.)|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
-|**_MCW_RC** (en arrondissant contrôle)|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
-|**_MCW_PC** (contrôle de précision)<br /><br /> (Pas plateformes prises en charge sur ARM ou x64.)|0x00030000|**_PC_24** (24 bits)<br /><br /> **_PC_53** (53 bits)<br /><br /> **_PC_64** (64 bits)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
+|**_MCW_DN** (Contrôle de dénormalisation)|0x03000000|**_DN_SAVE**<br /><br /> **_DN_FLUSH**|0x00000000<br /><br /> 0x01000000|
+|**_MCW_EM** (Masque d’exception d’interruption)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
+|**_MCW_IC** (Contrôle infini)<br /><br /> (Non pris en charge sur les plateformes ARM ou x64.)|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
+|**_MCW_RC** (Contrôle d’arrondi)|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
+|**_MCW_PC** (Contrôle de précision)<br /><br /> (Non pris en charge sur les plateformes ARM ou x64.)|0x00030000|**_PC_24** (24 bits)<br /><br /> **_PC_53** (53 bits)<br /><br /> **_PC_64** (64 bits)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -153,6 +155,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 ```C
 // crt_cntrl87.c
 // processor: x86
+// compile by using: cl /W4 /arch:IA32 crt_cntrl87.c
 // This program uses __control87_2 to output the x87 control
 // word, set the precision to 24 bits, and reset the status to
 // the default.
@@ -164,40 +167,38 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 int main( void )
 {
     double a = 0.1;
-    unsigned int control_word_x87;
+    unsigned int control_word_x87 = 0;
+    int result;
 
     // Show original x87 control word and do calculation.
-    control_word_x87 = __control87_2(0, 0,
-                                     &control_word_x87, 0);
-    printf( "Original: 0x%.4x\n", control_word_x87 );
+    result = __control87_2(0, 0, &control_word_x87, 0 );
+    printf( "Original: 0x%.8x\n", control_word_x87 );
     printf( "%1.1f * %1.1f = %.15e\n", a, a, a * a );
 
     // Set precision to 24 bits and recalculate.
-    control_word_x87 = __control87_2(_PC_24, MCW_PC,
-                                     &control_word_x87, 0);
-    printf( "24-bit:   0x%.4x\n", control_word_x87 );
+    result = __control87_2(_PC_24, MCW_PC, &control_word_x87, 0 );
+    printf( "24-bit:   0x%.8x\n", control_word_x87 );
     printf( "%1.1f * %1.1f = %.15e\n", a, a, a * a );
 
     // Restore default precision-control bits and recalculate.
-    control_word_x87 = __control87_2( _CW_DEFAULT, MCW_PC,
-                                     &control_word_x87, 0 );
-    printf( "Default:  0x%.4x\n", control_word_x87 );
+    result = __control87_2( _CW_DEFAULT, MCW_PC, &control_word_x87, 0 );
+    printf( "Default:  0x%.8x\n", control_word_x87 );
     printf( "%1.1f * %1.1f = %.15e\n", a, a, a * a );
 }
 ```
 
 ```Output
-Original: 0x0001
-0.1 * 0.1 = 1.000000000000000e-002
-24-bit:   0x0001
-0.1 * 0.1 = 9.999999776482582e-003
-Default:  0x0001
-0.1 * 0.1 = 1.000000000000000e-002
+Original: 0x0009001f
+0.1 * 0.1 = 1.000000000000000e-02
+24-bit:   0x000a001f
+0.1 * 0.1 = 9.999999776482582e-03
+Default:  0x0009001f
+0.1 * 0.1 = 1.000000000000000e-02
 ```
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[_clear87, _clearfp](clear87-clearfp.md)<br/>
-[_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)<br/>
-[_controlfp_s](controlfp-s.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)\
+[_clear87, _clearfp](clear87-clearfp.md)\
+[_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)\
+[_controlfp_s](controlfp-s.md)

@@ -1,19 +1,19 @@
 ---
 title: __umulh
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __umulh
 helpviewer_keywords:
 - __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
-ms.openlocfilehash: 3a42de276b483f98e2eaf9d0c8505d7f1d5b5bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf098657d1bd5b7ef8a4ffc21f487d2ce619a04e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390111"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219663"
 ---
-# <a name="umulh"></a>__umulh
+# <a name="__umulh"></a>__umulh
 
 **Section spécifique à Microsoft**
 
@@ -21,20 +21,20 @@ Retourner les 64 bits de poids fort du produit de deux entiers non signés 64 
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned __int64 __umulh(
    unsigned __int64 a,
    unsigned __int64 b
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*a*<br/>
-[in] Le premier nombre à multiplier.
+*un*\
+[in] Premier nombre à multiplier.
 
-*b*<br/>
-[in] Le second nombre à multiplier.
+*p*\
+[in] Second nombre à multiplier.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -46,7 +46,7 @@ unsigned __int64 __umulh(
 |---------------|------------------|
 |`__umulh`|X64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
@@ -54,7 +54,7 @@ Ces routines sont disponibles seulement comme fonctions intrinsèques.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // umulh.cpp
 // processor: X64
 #include <cstdio>
@@ -82,4 +82,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

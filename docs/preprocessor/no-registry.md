@@ -1,44 +1,42 @@
 ---
-title: no_registry
-ms.date: 10/18/2018
+title: no_registry importer l’attribut
+ms.date: 08/29/2019
 f1_keywords:
 - no_registry
 helpviewer_keywords:
 - no_registry attribute
 ms.assetid: d30de4e2-551c-428c-98fd-951330d578d3
-ms.openlocfilehash: 2a0fd9a761f765aa9562ab18c095f683b80c7987
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c81cc2f570cb9ac4e977dac6d55cb69e491d3b2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411316"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220723"
 ---
-# <a name="noregistry"></a>no_registry
+# <a name="no_registry-import-attribute"></a>no_registry importer l’attribut
 
-**no_registry** indique au compilateur de ne pas rechercher le Registre pour les bibliothèques de types importés avec `#import`.
+**no_registry** indique au compilateur de ne pas rechercher dans le registre les bibliothèques de `#import`types importées avec.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#import filename no_registry
-```
+> **#import** *bibliothèque de types* **no_registry**
 
 ### <a name="parameters"></a>Paramètres
 
-*filename*<br/>
+*bibliothèque de types*\
 Bibliothèque de types.
 
 ## <a name="remarks"></a>Notes
 
-Si une bibliothèque de types référencée est introuvable dans les répertoires include, la compilation échoue même si la bibliothèque de types est dans le Registre.  **no_registry** se propage à d’autres bibliothèques de types implicitement importées avec `auto_search`.
+Si une bibliothèque de types référencée est introuvable dans les répertoires Include, la compilation échoue même si la bibliothèque de types se trouve dans le registre.  **no_registry** se propage à d’autres bibliothèques de types importées implicitement avec `auto_search`.
 
-Le compilateur ne recherchera jamais dans le Registre les bibliothèques de types qui sont spécifiées par nom de fichier et passées directement à `#import`.
+Le compilateur ne recherche jamais dans le registre les bibliothèques de types spécifiées par le nom de fichier `#import`et transmises directement à.
 
-Lorsque `auto_search` est spécifié, supplémentaires `#import`s sera généré avec la **no_registry** paramètre initial `#import` (si initial `#import` directive a été **no_registry** , un `auto_search`-généré `#import` est également **no_registry**.)
+Lorsque `auto_search` est spécifié, les directives `#import` supplémentaires sont générées à l’aide du paramètre **no_registry** du `#import`initial. Si la directive `#import` initiale était **no_registry**, un `auto_search`-generated `#import` est également **no_registry**.
 
-**no_registry** est utile si vous souhaitez importer des bibliothèques de types référencée sans le compilateur risque de trouver une version antérieure du fichier dans le Registre. **no_registry** est également utile si la bibliothèque de types n’est pas inscrit.
+**no_registry** est utile si vous souhaitez importer des bibliothèques de types à références croisées. Il empêche le compilateur de trouver une version antérieure du fichier dans le registre. **no_registry** est également utile si la bibliothèque de types n’est pas inscrite.
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import directive](../preprocessor/hash-import-directive-cpp.md)

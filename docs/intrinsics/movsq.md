@@ -1,6 +1,6 @@
 ---
 title: __movsq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-ms.openlocfilehash: 4e4908cd5ffc28840b5a48b735048cccb557e97c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66de1971c48f6697fd06579fac635cce31545e92
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263163"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217263"
 ---
-# <a name="movsq"></a>__movsq
+# <a name="__movsq"></a>__movsq
 
 **Section spécifique à Microsoft**
 
-Génère une chaîne de déplacer répétées (`rep movsq`) instruction.
+Génère une instruction Move String (`rep movsq`) répétée.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __movsq(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Dest*<br/>
-[out] La destination de l’opération.
+*Destination*\
+à Destination de l’opération.
 
-*Source*<br/>
-[in] La source de l’opération.
+*Source*\
+dans Source de l’opération.
 
-*Nombre*<br/>
-[in] Le nombre de mots quadruples à copier.
+*Saut*\
+dans Nombre de mots quadruples à copier.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -48,17 +48,17 @@ void __movsq(
 |---------------|------------------|
 |`__movsq`|X64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-Le résultat est que la première `Count` mots quadruples vers lequel pointe `Source` sont copiés vers le `Dest` chaîne.
+Le résultat est que le premier *nombre* d’mots quadruples pointé vers la *source* est copié dans la chaîne de *destination* .
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // movsq.cpp
 // processor: x64
 #include <stdio.h>
@@ -87,4 +87,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

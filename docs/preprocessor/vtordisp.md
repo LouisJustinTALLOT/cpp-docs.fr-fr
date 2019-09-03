@@ -1,6 +1,6 @@
 ---
-title: vtordisp
-ms.date: 10/18/2018
+title: vtordisp, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.vtordisp
 - vtordisp_CPP
@@ -8,56 +8,54 @@ helpviewer_keywords:
 - pragmas, vtordisp
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-ms.openlocfilehash: 67c6c329bcee75012f6075334760925eca945501
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c676ab2bfee1b6cf3caff3ab456a4f23f2744c3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179450"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216480"
 ---
-# <a name="vtordisp"></a>vtordisp
+# <a name="vtordisp-pragma"></a>vtordisp, pragma
 
-**Spécifique à C++**
+**C++Plus**
 
-Contrôle l'ajout du membre de déplacement de construction/destruction vtordisp masqué.
+Contrôle l’ajout du membre de `vtordisp` déplacement de construction/destruction masqué.
 
 ## <a name="syntax"></a>Syntaxe
 
-```cpp
-#pragma vtordisp([push,] n)
-#pragma vtordisp(pop)
-#pragma vtordisp()
-#pragma vtordisp([push,] {on | off})
-```
+> **#pragma vtordisp (** [ **push,** ] *n* **)** \
+> **#pragma vtordisp (POP)** \
+> **#pragma vtordisp ()** \
+> **#pragma vtordisp (** [ **push,** ] { **on** | **off** } **)**
 
 ### <a name="parameters"></a>Paramètres
 
-*push*<br/>
-Envoie le paramètre vtordisp actuel sur la pile interne du compilateur et affecte le nouveau paramètre vtordisp *n*.  Si *n* n’est pas spécifié, le paramètre vtordisp actuel n’est pas modifié.
+**souleve**\
+Exécute un push du `vtordisp` paramètre actuel sur la pile interne du compilateur et définit le `vtordisp` nouveau paramètre sur *n*.  Si *n* n’est pas spécifié, `vtordisp` le paramètre actuel est inchangé.
 
-*pop*<br/>
-Supprime l'enregistrement supérieur de la pile interne du compilateur et rétablit la valeur supprimée du paramètre vtordisp.
+**roulant**\
+Supprime l’enregistrement supérieur de la pile interne du compilateur et restaure le `vtordisp` paramètre à la valeur supprimée.
 
-*n*<br/>
-Spécifie la nouvelle valeur du paramètre vtordisp. Les valeurs possibles sont 0, 1 ou 2, correspondant à la `/vd0`, `/vd1`, et `/vd2` options du compilateur. Pour plus d’informations, consultez [/vd (désactiver les déplacements de Construction)](../build/reference/vd-disable-construction-displacements.md).
+*n*\
+Spécifie la nouvelle valeur `vtordisp` du paramètre. Les valeurs possibles sont 0, 1 ou 2, ce `/vd0`qui correspond aux options de compilateur, `/vd1`et `/vd2` . Pour plus d’informations, consultez [/VD (désactiver les déplacements de construction)](../build/reference/vd-disable-construction-displacements.md).
 
-*on*<br/>
+**sur**\
 Équivalent à `#pragma vtordisp(1)`.
 
-*off*<br/>
+**préférable**\
 Équivalent à `#pragma vtordisp(0)`.
 
 ## <a name="remarks"></a>Notes
 
-Le **vtordisp** pragma s’applique uniquement au code qui utilise des bases virtuelles. Si une classe dérivée remplace une fonction virtuelle qu’elle hérite d’une classe de base virtuelle, et si un constructeur ou un destructeur pour la classe dérivée appelle cette fonction à l’aide d’un pointeur vers la classe de base virtuelle, le compilateur peut introduire masquéssupplémentaires**vtordisp** les champs dans des classes avec bases virtuelles.
+Le pragma **vtordisp** s’applique uniquement au code qui utilise des bases virtuelles. Si une classe dérivée remplace une fonction virtuelle qu'elle hérite d'une classe de base virtuelle et si un constructeur ou un destructeur pour la classe dérivée appelle cette fonction à l'aide d'un pointeur vers la classe de base virtuelle, le compilateur peut introduire des champs `vtordisp` masqués supplémentaires dans les classes dotées de bases virtuelles.
 
-Le **vtordisp** pragma affecte la disposition des classes qui le suivent. Le `/vd0`, `/vd1`, et `/vd2` options spécifient le même comportement pour les modules complets. Spécification de 0 ou *hors* supprime le texte masqué **vtordisp** membres. Désactiver **vtordisp** uniquement s’il existe aucune possibilité de la classe constructeurs et destructeurs appellent virtuels ne fonctionne sur l’objet vers lequel pointé le **cela** pointeur.
+Le pragma **vtordisp** affecte la disposition des classes qui le suivent. Les `/vd0`options `/vd1`, et`/vd2` spécifient le même comportement pour les modules complets. Si vous spécifiez la valeur 0 ou `vtordisp` **off** , les membres masqués sont supprimés. Désactivez **vtordisp** uniquement s’il n’est pas possible que les constructeurs et les destructeurs de la classe appellent des fonctions virtuelles sur l' `this` objet vers lequel pointe le pointeur.
 
-Spécification de 1 ou *sur*, permet à la valeur par défaut, le texte masqué **vtordisp** membres là où ils sont nécessaires.
+Si vous spécifiez 1 ou **on**, la valeur par `vtordisp` défaut active les membres masqués là où ils sont nécessaires.
 
-En spécifiant 2 permet le texte masqué **vtordisp** membres pour toutes les bases virtuelles avec des fonctions virtuelles.  `vtordisp(2)` peut être nécessaire de garantir des performances correctes de **dynamic_cast** sur un objet partiellement construit. Pour plus d’informations, consultez [Avertissement du compilateur (niveau 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
+La spécification de 2 active `vtordisp` les membres masqués pour toutes les bases virtuelles avec des fonctions virtuelles.  `#pragma vtordisp(2)`peut être nécessaire pour garantir des performances correctes de **dynamic_cast** sur un objet partiellement construit. Pour plus d’informations, consultez [Avertissement du compilateur (niveau 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
 
-`#pragma vtordisp()`, sans argument, rétablit la valeur initiale du paramètre vtordisp.
+`#pragma vtordisp()`, sans argument, rétablit la valeur `vtordisp` initiale du paramètre.
 
 ```cpp
 #pragma vtordisp(push, 2)
@@ -65,8 +63,8 @@ class GetReal : virtual public VBase { ... };
 #pragma vtordisp(pop)
 ```
 
-**FIN spécifique à C++**
+**Spécifique C++ à la fin**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

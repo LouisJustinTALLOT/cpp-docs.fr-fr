@@ -1,6 +1,6 @@
 ---
 title: _bittestandreset, _bittestandreset64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittestandreset64_cpp
 - _bittestandreset
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _bittestandreset intrinsic
 - _bittestandreset64 intrinsic
 ms.assetid: 8dad63bb-a051-4cd7-a793-3357537dfeaf
-ms.openlocfilehash: 53a9921b856a3bc489d1d8e1cd78a4cfa7493320
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e0c869b926b2f9f3c04fd648f84ef33b8d16fcd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349145"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216926"
 ---
-# <a name="bittestandreset-bittestandreset64"></a>_bittestandreset, _bittestandreset64
+# <a name="_bittestandreset-_bittestandreset64"></a>_bittestandreset, _bittestandreset64
 
 **Section spécifique à Microsoft**
 
-Générer l'instruction qui examine le bit `b` de l'adresse `a`, retourne sa valeur actuelle et réinitialise le bit à la valeur 0.
+Générez l’instruction pour examiner `b` le bit de `a`l’adresse, retournez sa valeur actuelle et réinitialisez le bit à 0.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned char _bittestandreset(
    long *a,
    long b
@@ -37,13 +37,13 @@ unsigned char _bittestandreset64(
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*a*<br/>
+*un*\
 [in, out] Pointeur vers la mémoire à examiner.
 
-*b*<br/>
-[in] La position de bit à tester.
+*p*\
+dans Position de bit à tester.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -53,10 +53,10 @@ Bit à la position spécifiée.
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
-|`_bittestandreset`|x86, ARM, x64|
-|`_bittestandreset64`|X64|
+|`_bittestandreset`|x86, ARM, x64, ARM64|
+|`_bittestandreset64`|x64, ARM64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
@@ -64,7 +64,7 @@ Cette routine est disponible uniquement en tant qu'intrinsèque.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // bittestandreset.cpp
 // processor: x86, IPF, x64
 #include <stdio.h>
@@ -103,4 +103,4 @@ The number was negative.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

@@ -1,21 +1,21 @@
 ---
-title: Liste alphabétique des fonctions intrinsèques
+title: Liste alphabétique des intrinsèques
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cl.exe compiler intrinsics
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff6957436ecfb86ae44388e55488981f528f2c73
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264309"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220084"
 ---
-# <a name="alphabetical-listing-of-intrinsic-functions"></a>Liste alphabétique des fonctions intrinsèques
+# <a name="alphabetical-listing-of-intrinsic-functions"></a>Liste alphabétique des intrinsèques
 
-Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Microsoft disponibles sur toutes les architectures ou sur certaines d'entre elles. D'autres fonctions intrinsèques prises en charge sont documentées par les fabricants de processeurs dans les fichiers d'en-tête ou sur leurs sites web. Consultez le [ARM intrinsèques](../intrinsics/arm-intrinsics.md), [x86 intrinsèques](../intrinsics/x86-intrinsics-list.md), et [x64 intrinsèques](../intrinsics/x64-amd64-intrinsics-list.md) sections pour obtenir des liens vers la documentation du fabricant. Les fonctions de bibliothèque Runtime (CRT) C qui ont des fonctions intrinsèques implémentées ne sont pas décrites ici ; Ces fonctions sont décrites dans le [C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md).
+Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Microsoft disponibles sur toutes les architectures ou sur certaines d'entre elles. D'autres fonctions intrinsèques prises en charge sont documentées par les fabricants de processeurs dans les fichiers d'en-tête ou sur leurs sites web. Pour plus d’informations sur les liens vers la documentation du fabricant, consultez les sections [ARM Intrinsic](../intrinsics/arm-intrinsics.md), intrinsèques [x86](../intrinsics/x86-intrinsics-list.md)et [fonctions intrinsèques x64](../intrinsics/x64-amd64-intrinsics-list.md) . Les fonctions de bibliothèque Runtime C (CRT) dont les fonctions intrinsèques sont implémentées ne sont pas documentées ici; ces fonctions sont documentées dans la référence de la [bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md).
 
 [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
@@ -69,35 +69,35 @@ Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Mi
 
 [__int2c](../intrinsics/int2c.md)
 
-[_InterlockedAdd, fonctions intrinsèques](../intrinsics/interlockedadd-intrinsic-functions.md)
+[_InterlockedAdd fonctions intrinsèques](../intrinsics/interlockedadd-intrinsic-functions.md)
 
 [_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)
 
-[_InterlockedAnd, fonctions intrinsèques](../intrinsics/interlockedand-intrinsic-functions.md)
+[_InterlockedAnd fonctions intrinsèques](../intrinsics/interlockedand-intrinsic-functions.md)
 
-[_interlockedbittestandreset, fonctions intrinsèques](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
+[_interlockedbittestandreset fonctions intrinsèques](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
-[_interlockedbittestandset, fonctions intrinsèques](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
+[_interlockedbittestandset fonctions intrinsèques](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
-[_InterlockedCompareExchange, fonctions intrinsèques](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
+[_InterlockedCompareExchange fonctions intrinsèques](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)
 
-[_InterlockedCompareExchangePointer, fonctions intrinsèques](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
+[_InterlockedCompareExchangePointer fonctions intrinsèques](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
 
-[_InterlockedDecrement, fonctions intrinsèques](../intrinsics/interlockeddecrement-intrinsic-functions.md)
+[_InterlockedDecrement fonctions intrinsèques](../intrinsics/interlockeddecrement-intrinsic-functions.md)
 
-[_InterlockedExchange, fonctions intrinsèques](../intrinsics/interlockedexchange-intrinsic-functions.md)
+[_InterlockedExchange fonctions intrinsèques](../intrinsics/interlockedexchange-intrinsic-functions.md)
 
-[_InterlockedExchangeAdd, fonctions intrinsèques](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)
+[_InterlockedExchangeAdd fonctions intrinsèques](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)
 
-[_InterlockedExchangePointer, fonctions intrinsèques](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)
+[_InterlockedExchangePointer fonctions intrinsèques](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)
 
-[_InterlockedIncrement, fonctions intrinsèques](../intrinsics/interlockedincrement-intrinsic-functions.md)
+[_InterlockedIncrement fonctions intrinsèques](../intrinsics/interlockedincrement-intrinsic-functions.md)
 
-[_InterlockedOr, fonctions intrinsèques](../intrinsics/interlockedor-intrinsic-functions.md)
+[_InterlockedOr fonctions intrinsèques](../intrinsics/interlockedor-intrinsic-functions.md)
 
-[_InterlockedXor, fonctions intrinsèques](../intrinsics/interlockedxor-intrinsic-functions.md)
+[_InterlockedXor fonctions intrinsèques](../intrinsics/interlockedxor-intrinsic-functions.md)
 
 [__invlpg](../intrinsics/invlpg.md)
 
@@ -275,4 +275,4 @@ Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Mi
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

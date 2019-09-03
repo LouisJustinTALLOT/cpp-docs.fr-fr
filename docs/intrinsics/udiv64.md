@@ -1,20 +1,20 @@
 ---
 title: _udiv64
-ms.date: 04/17/2019
+ms.date: 09/02/2019
 f1_keywords:
 - _udiv64
 helpviewer_keywords:
 - _udiv64 intrinsic
-ms.openlocfilehash: 73a29b180eeda49a9a25e9e568d25c7563234fad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6dabbc94260ef578eb1a58a1b289b4a4654decdd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390150"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219681"
 ---
-# <a name="udiv64"></a>_udiv64
+# <a name="_udiv64"></a>_udiv64
 
-Le `_udiv64` intrinsèque divise un entier non signé 64 bits en un entier non signé 32 bits. La valeur de retour conserve le quotient, et la fonction intrinsèque retourne le reste à un paramètre de pointeur. `_udiv64` est **spécifique à Microsoft**.
+L' `_udiv64` intrinsèque divise un entier non signé 64 bits par un entier non signé 32 bits. La valeur de retour contient le quotient et l’intrinsèque retourne le reste à l’aide d’un paramètre de pointeur. `_udiv64`est **spécifique à Microsoft**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,22 +28,22 @@ unsigned int _udiv64(
 
 ### <a name="parameters"></a>Paramètres
 
-*dividend*<br/>
-[in] L’entier non signé 64 bits à diviser.
+*dividend*\
+dans Entier non signé 64 bits à diviser.
 
-*divisor*<br/>
-[in] L’entier non signé de 32 bits à diviser par.
+*Division*\
+dans Entier non signé 32 bits à diviser par.
 
-*remainder*<br/>
-[out] Le reste de l’entier non signé 32 bits.
+*sections*\
+à Reste de l’entier non signé 32 bits.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les 32 bits du quotient.
+32 bits du quotient.
 
 ## <a name="remarks"></a>Notes
 
-Le `_udiv64` divise intrinsèque *dividende* par *diviseur*. Il stocke le reste de l’entier non signé 32 bits vers lequel pointé *reste*et retourne les 32 bits du quotient.
+L' `_udiv64` intrinsèque divise le dividendepar diviseur. Elle stocke le reste dans l’entier non signé 32 bits vers le *reste*, et retourne les 32 bits du quotient.
 
 Le `_udiv64` intrinsèque est disponible à partir de Visual Studio 2019 RTM.
 

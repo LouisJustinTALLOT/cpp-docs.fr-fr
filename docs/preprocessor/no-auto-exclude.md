@@ -1,36 +1,35 @@
 ---
-title: no_auto_exclude
-ms.date: 11/04/2016
+title: no_auto_exclude importer l’attribut
+ms.date: 08/29/2019
 f1_keywords:
 - no_auto_exclude
 helpviewer_keywords:
 - no_auto_exclude attribute
 ms.assetid: 3241ef9c-758a-4e86-bdc5-37da6072430f
-ms.openlocfilehash: 06bde7535bd181057750ab9dd4c3999321b4990c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 530c2b2adf24e964cb0a512371f4430a61bf8b11
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371696"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216079"
 ---
-# <a name="noautoexclude"></a>no_auto_exclude
-**Spécifique à C++**
+# <a name="no_auto_exclude-import-attribute"></a>no_auto_exclude importer l’attribut
+
+**C++Plus**
 
 Désactive l'exclusion automatique.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-no_auto_exclude
-```
+> **#import** *bibliothèque de types* **no_auto_exclude**
 
 ## <a name="remarks"></a>Notes
 
-Les bibliothèques de types peuvent inclure des définitions d'éléments définis dans les en-têtes système ou dans d'autres bibliothèques de types. `#import` tente d'éviter les erreurs de définitions multiples en excluant automatiquement ces éléments. Dans ce cas, [Avertissement du compilateur (niveau 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) sera émis pour chaque élément à exclure. Vous pouvez désactiver cette exclusion automatique à l'aide de cet attribut.
+Les bibliothèques de types peuvent inclure des définitions d'éléments définis dans les en-têtes système ou dans d'autres bibliothèques de types. `#import` tente d'éviter les erreurs de définitions multiples en excluant automatiquement ces éléments. Cela entraîne l’exclusion de l' [Avertissement du compilateur (niveau 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) pour chaque élément à exclure. Vous pouvez désactiver l’exclusion automatique à l’aide de cet attribut.
 
-**FIN spécifique à C++**
+**Spécifique C++ à la fin**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import directive](../preprocessor/hash-import-directive-cpp.md)

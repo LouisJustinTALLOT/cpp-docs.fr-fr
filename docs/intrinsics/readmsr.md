@@ -1,6 +1,6 @@
 ---
 title: __readmsr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readmsr
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - rdmsr instruction
 - __readmsr intrinsic
 ms.assetid: 7ab1f8e8-72cb-4ce4-817d-3e728a3c9716
-ms.openlocfilehash: 2c866213c452f3b8791bf0fe031a43bb024e91fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4398b9d42369e3a914dbec1ed2d14cafecf58483
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262773"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222339"
 ---
-# <a name="readmsr"></a>__readmsr
+# <a name="__readmsr"></a>__readmsr
 
 **Section spécifique à Microsoft**
 
-Génère le `rdmsr` instruction, qui lit le Registre spécifiques au modèle spécifié par `register` et retourne sa valeur.
+Génère l' `rdmsr` instruction, qui lit le Registre spécifique au modèle spécifié par `register` et retourne sa valeur.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 __int64 __readmsr(
    int register
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*register*<br/>
-[in] Le modèle spécifique s’inscrire à lire.
+*annuler*\
+dans Registre spécifique au modèle à lire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur dans le Registre spécifié.
+Valeur dans le registre spécifié.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -44,11 +44,11 @@ La valeur dans le Registre spécifié.
 |---------------|------------------|
 |`__readmsr`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-Cette fonction est uniquement disponible en mode noyau, et la routine est uniquement disponible comme intrinsèque.
+Cette fonction est disponible uniquement en mode noyau et la routine n’est disponible qu’en tant qu’intrinsèque.
 
 Pour plus d’informations, consultez la documentation AMD.
 
@@ -56,4 +56,4 @@ Pour plus d’informations, consultez la documentation AMD.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

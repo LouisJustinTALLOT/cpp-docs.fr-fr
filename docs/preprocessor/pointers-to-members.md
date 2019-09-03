@@ -1,6 +1,6 @@
 ---
-title: pointers_to_members
-ms.date: 11/04/2016
+title: pointers_to_members, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - pointers_to_members_CPP
 - vc-pragma.pointers_to_members
@@ -10,56 +10,54 @@ helpviewer_keywords:
 - members, pointers to
 - pointers_to_members pragma
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
-ms.openlocfilehash: 5ee45a77a7094fb1ef9ba536bae391aaad00e812
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb5b277252b6c1422a87c5f2a2e2b7230ec49632
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180002"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219063"
 ---
-# <a name="pointerstomembers"></a>pointers_to_members
+# <a name="pointers_to_members-pragma"></a>pointers_to_members, pragma
 
-**Spécifique à C++**
+**C++Plus**
 
-Spécifie si un pointeur vers un membre de classe peut être déclaré avant la définition de classe qui lui est associée et s'il sert à contrôler la taille du pointeur et le code requis pour interpréter le pointeur.
+Spécifie si un pointeur vers un membre de classe peut être déclaré avant sa définition de classe associée. Utilisé pour contrôler la taille du pointeur et le code requis pour interpréter le pointeur.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma pointers_to_members( pointer-declaration, [most-general-representation] )
-```
+> **#pragma pointers_to_members (** *pointeur-* DECLARATION [ **,** *la représentation la plus générale* ])
 
 ## <a name="remarks"></a>Notes
 
-Vous pouvez placer un **pointers_to_members** pragma dans votre fichier source au lieu d’utiliser le [/vmx](../build/reference/vmb-vmg-representation-method.md) options du compilateur ou le [mots clé d’héritage](../cpp/inheritance-keywords.md).
+Vous pouvez placer un pragma **pointers_to_members** dans votre fichier source au lieu d’utiliser les options du compilateur [/VMB ou/VMG](../build/reference/vmb-vmg-representation-method.md) ou les [Mots clés d’héritage](../cpp/inheritance-keywords.md).
 
-Le *déclaration de pointeur* argument spécifie si vous avez déclaré un pointeur vers un membre avant ou après la définition de fonction associé. Le *déclaration de pointeur* argument est un des deux symboles suivants :
+L’argument *pointer-* declaration spécifie si vous avez déclaré un pointeur vers un membre avant ou après la définition de fonction associée. L’argument *pointer-* declaration est l’un des deux symboles suivants:
 
-|Argument|Commentaires|
+| Argument | Commentaires |
 |--------------|--------------|
-|*full_generality*|Génère un code sécurisé, parfois non optimal. Vous utilisez *full_generality* si n’importe quel pointeur vers un membre est déclaré avant la définition de classe associée. Cet argument utilise toujours la représentation de pointeur spécifiée par le *most-general-representation* argument. Équivaut à /vmg.|
-|*best_case*|Génère un code sécurisé et optimal à l'aide de la représentation préférentielle pour tous les pointeurs vers des membres. Nécessite de définir la classe avant de déclarer un pointeur vers un membre de la classe. La valeur par défaut est *best_case*.|
+| **full_generality** | Génère un code sécurisé, parfois non optimal. Vous utilisez **full_generality** si un pointeur vers un membre est déclaré avant la définition de classe associée. Cet argument utilise toujours la représentation de pointeur spécifiée par l’argument de *représentation le plus général* . Équivaut à /vmg. |
+| **best_case** | Génère un code sécurisé et optimal à l'aide de la représentation préférentielle pour tous les pointeurs vers des membres. Nécessite de définir la classe avant de déclarer un pointeur vers un membre de la classe. La valeur par défaut est **best_case**. |
 
-Le *most-general-representation* argument spécifie la plus petite représentation de pointeur que le compilateur peut en toute sécurité utiliser pour référencer n’importe quel pointeur vers un membre d’une classe dans une unité de traduction. L’argument peut être l’un des arguments suivants :
+L’argument de *représentation la plus générale* spécifie la plus petite représentation de pointeur que le compilateur peut utiliser sans risque pour référencer n’importe quel pointeur vers un membre d’une classe dans une unité de traduction. L’argument peut prendre l’une des valeurs suivantes:
 
-|Argument|Commentaires|
+| Argument | Commentaires |
 |--------------|--------------|
-|*single_inheritance*|La représentation la plus générale est la fonction pointeur vers fonction membre héritage simple. Génère une erreur si le modèle d'héritage d'une définition de classe pour laquelle un pointeur vers un membre est déclaré est de type multiple ou virtuel.|
-|*multiple_inheritance*|La représentation la plus générale est la fonction pointeur vers fonction membre héritage multiple. Génère une erreur si le modèle d'héritage d'une définition de classe pour laquelle un pointeur vers un membre est déclaré est de type virtuel.|
-|*virtual_inheritance*|La représentation la plus générale est la fonction pointeur vers fonction membre héritage virtuel. Ne génère jamais d'erreur. Ceci est l’argument par défaut lorsque `#pragma pointers_to_members(full_generality)` est utilisé.|
+| **single_inheritance** | La représentation la plus générale est la fonction pointeur vers fonction membre héritage simple. Génère une erreur si le modèle d'héritage d'une définition de classe pour laquelle un pointeur vers un membre est déclaré est de type multiple ou virtuel. |
+| **multiple_inheritance** | La représentation la plus générale est la fonction pointeur vers fonction membre héritage multiple. Génère une erreur si le modèle d'héritage d'une définition de classe pour laquelle un pointeur vers un membre est déclaré est de type virtuel. |
+| **virtual_inheritance** | La représentation la plus générale est la fonction pointeur vers fonction membre héritage virtuel. Ne génère jamais d'erreur. **virtual_inheritance** est l’argument par défaut `#pragma pointers_to_members(full_generality)` lorsque est utilisé. |
 
 > [!CAUTION]
-> Nous vous recommandons d’insérer le **pointers_to_members** pragma uniquement dans le fichier de code source que vous souhaitez affecter et uniquement après les `#include` directives. Cette pratique atténue le risque que le pragma affecte d'autres fichiers et que vous spécifiiez par erreur plusieurs définitions pour la même variable, la même fonction ou le même nom de classe.
+> Nous vous conseillons de placer le pragma **pointers_to_members** uniquement dans le fichier de code source que vous souhaitez affecter, et uniquement après `#include` les directives. Cette pratique atténue le risque que le pragma affecte d'autres fichiers et que vous spécifiiez par erreur plusieurs définitions pour la même variable, la même fonction ou le même nom de classe.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 //   Specify single-inheritance only
 #pragma pointers_to_members( full_generality, single_inheritance )
 ```
 
-## <a name="end-c-specific"></a>FIN de la section spécifique à C++
+**Spécifique C++ à la fin**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

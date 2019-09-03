@@ -1,6 +1,6 @@
 ---
 title: _bittest, _bittest64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittest64
 - _bittest_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - _bittest64 intrinsic
 - bt instruction
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
-ms.openlocfilehash: 1d29b8bec646bb2da8acfe20479fe0e238db0de5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37d96cc008d0da018355a2eca63c6c592ab50f12
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349171"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216906"
 ---
-# <a name="bittest-bittest64"></a>_bittest, _bittest64
+# <a name="_bittest-_bittest64"></a>_bittest, _bittest64
 
 **Section spécifique à Microsoft**
 
@@ -26,7 +26,7 @@ Génère l'instruction `bt`, qui examine le bit à la position `b` de l'adresse 
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned char _bittest(
    long const *a,
    long b
@@ -39,11 +39,11 @@ unsigned char _bittest64(
 
 ### <a name="parameters"></a>Paramètres
 
-*a*<br/>
-[in] Pointeur vers la mémoire à examiner.
+*un*\
+dans Pointeur vers la mémoire à examiner.
 
-*b*<br/>
-[in] La position de bit à tester.
+*p*\
+dans Position de bit à tester.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -53,8 +53,8 @@ Bit à la position spécifiée.
 
 |Intrinsèque|Architecture|Header|
 |---------------|------------------|------------|
-|`_bittest`|x86, ARM, x64|\<intrin.h>|
-|`_bittest64`|ARM, x64|\<intrin.h>|
+|`_bittest`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_bittest64`|ARM64, x64|\<intrin.h>|
 
 ## <a name="remarks"></a>Notes
 
@@ -104,4 +104,4 @@ Binary representation:
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

@@ -1,45 +1,43 @@
 ---
-title: include()
-ms.date: 10/18/2018
+title: attribut d’importation include ()
+ms.date: 08/29/2019
 f1_keywords:
 - include()
 helpviewer_keywords:
 - include() attribute
 ms.assetid: 86c9dcb2-d9e0-4fd5-97d7-0bb3e23d6ecc
-ms.openlocfilehash: 1208f14a9f6b3724dd5353df57213baa3910d07f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39ab63525b2b83781cbcaf86a61742c5fb767b72
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383735"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218869"
 ---
-# <a name="include"></a>include()
+# <a name="include-import-attribute"></a>attribut d’importation include ()
 
-**Spécifique à C++**
+**C++Plus**
 
 Désactive l'exclusion automatique.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-include("Name1"[,"Name2", ...])
-```
+> **#import** *bibliothèque de types* **include ("** _nom1_ **"** [ __, "__ *nom2* __"__ ...] __)__
 
 ### <a name="parameters"></a>Paramètres
 
-*Name1*<br/>
+*Name1*\
 Premier élément à inclure de force.
 
-*Name2*<br/>
+*Nom2*\
 Deuxième élément à inclure de force (si nécessaire).
 
 ## <a name="remarks"></a>Notes
 
-Les bibliothèques de types peuvent inclure des définitions d'éléments définis dans les en-têtes système ou dans d'autres bibliothèques de types. `#import` tente d'éviter les erreurs de définitions multiples en excluant automatiquement ces éléments. Si les éléments ont été exclus, comme indiqué par [Avertissement du compilateur (niveau 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md), et ils ne doivent pas avoir été, cet attribut peut être utilisé pour désactiver l’exclusion automatique. Cet attribut peut comprendre n’importe quel nombre d’arguments, chacun portant le nom de l’élément bibliothèque-types à inclure.
+Les bibliothèques de types peuvent inclure des définitions d'éléments définis dans les en-têtes système ou dans d'autres bibliothèques de types. `#import` tente d'éviter les erreurs de définitions multiples en excluant automatiquement ces éléments. Si certains éléments ne doivent pas être exclus automatiquement, vous pouvez voir [Avertissement du compilateur (niveau 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md). Vous pouvez utiliser cet attribut pour désactiver l’exclusion automatique. Cet attribut peut prendre un nombre quelconque d’arguments, un pour chaque nom d’un élément de bibliothèque de types à inclure.
 
-**FIN spécifique à C++**
+**Spécifique C++ à la fin**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import directive](../preprocessor/hash-import-directive-cpp.md)

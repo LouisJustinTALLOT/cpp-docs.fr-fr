@@ -1,6 +1,6 @@
 ---
 title: _rotl8, _rotl16
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _rotl8
 - _rotl16
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - _rotl8 intrinsic
 - _rotl16 intrinsic
 ms.assetid: 8c519ab6-aef9-4f07-a387-daee8408368f
-ms.openlocfilehash: 8c87c7a5fa1c2bee475b0e4508b5c1571dc449de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dffde2d3f830b6ec4ad43865648c27b1defb593
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390475"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218025"
 ---
-# <a name="rotl8-rotl16"></a>_rotl8, _rotl16
+# <a name="_rotl8-_rotl16"></a>_rotl8, _rotl16
 
 **Section spécifique à Microsoft**
 
@@ -23,7 +23,7 @@ Faire pivoter les valeurs d'entrée vers la gauche pour le bit le plus significa
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned char _rotl8(
    unsigned char value,
    unsigned char shift
@@ -34,13 +34,13 @@ unsigned short _rotl16(
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*value*<br/>
-[in] Valeur à faire pivoter.
+*value*\
+dans Valeur à faire pivoter.
 
-*shift*<br/>
-[in] Le nombre de bits de rotation.
+*majuscule*\
+dans Nombre de bits à faire pivoter.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -50,18 +50,18 @@ Valeur ayant fait l'objet d'une rotation.
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
-|`_rotl8`|x86, ARM, x64|
-|`_rotl16`|x86, ARM, x64|
+|`_rotl8`|x86, ARM, x64, ARM64|
+|`_rotl16`|x86, ARM, x64, ARM64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-Contrairement à une opération de décalage vers la gauche, lors de l'exécution d'une rotation vers la gauche, les bits de poids fort qui se trouvent hors limite sont placés dans les positions de bits les moins significatives.
+Contrairement à une opération de décalage vers la gauche, lors de l’exécution d’une rotation vers la gauche, les bits de poids fort qui se trouvent en dehors de l’extrémité supérieure sont déplacés dans les positions de bits les moins significatives.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // rotl.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -102,5 +102,5 @@ Rotating unsigned short 0x12 left by 10 bits gives 0x4800
 
 ## <a name="see-also"></a>Voir aussi
 
-[_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)<br/>
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)\
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

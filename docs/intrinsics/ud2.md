@@ -1,20 +1,20 @@
 ---
 title: __ud2
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ud2
 helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-ms.openlocfilehash: a36ab5c25ac9138b2a4d6810cc2a339e534f1695
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5aa20804099af4d75dcc62a5e62ccc0d4a09566
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390176"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219758"
 ---
-# <a name="ud2"></a>__ud2
+# <a name="__ud2"></a>__ud2
 
 **Section spécifique à Microsoft**
 
@@ -22,15 +22,15 @@ Génère une instruction non définie.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __ud2();
 ```
 
 ## <a name="remarks"></a>Notes
 
-Le processeur génère une exception de l’opcode non valide si vous exécutez une instruction non définie.
+Le processeur déclenche une exception opcode non valide si vous exécutez une instruction non définie.
 
-Le `__ud2` fonction est équivalente à la `UD2` instruction machine et est disponible uniquement en mode noyau. Pour plus d’informations, recherchez dans le document, « manuel du développeur de logiciels Architecture Intel, Volume 2 : Instruction Set Reference, » à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+La `__ud2` fonction est équivalente à `UD2` l’instruction machine et est disponible uniquement en mode noyau. Pour plus d’informations, recherchez le document «Guide du développeur de logiciels d’architecture Intel, volume 2: Référence du jeu d’instructions, sur le site [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -38,15 +38,15 @@ Le `__ud2` fonction est équivalente à la `UD2` instruction machine et est disp
 |---------------|------------------|
 |`__ud2`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant exécute une instruction non définie, qui lève une exception. Le Gestionnaire d’exceptions modifie ensuite le code de retour de zéro à un.
+L’exemple suivant exécute une instruction non définie, qui lève une exception. Le gestionnaire d’exceptions remplace alors le code de retour zéro par un.
 
-```
+```cpp
 // __ud2_intrinsic.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -84,4 +84,4 @@ After __ud2().  Return code = 1.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
-title: deprecated (C/C++)
-ms.date: 11/04/2016
+title: deprecated (pragma)
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.deprecated
 - deprecated_CPP
@@ -8,35 +8,33 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 262b23e6e4813a5e22bc3f4e7c9a18efb9988a7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e76d1c53cb900c108e2839a9aad17b330143a5d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389292"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222402"
 ---
-# <a name="deprecated-cc"></a>deprecated (C/C++)
+# <a name="deprecated-pragma"></a>deprecated (pragma)
 
-Le **déconseillée** pragma vous permet d’indiquer qu’une fonction, type ou tout autre identificateur peut plus être prises en charge dans une future mise en production ou ne doit plus être utilisé.
+Le pragma **déconseillé** vous permet d’indiquer qu’une fonction, un type ou tout autre identificateur ne peut plus être pris en charge dans une version ultérieure ou qu’il ne doit plus être utilisé.
 
 > [!NOTE]
-> Pour plus d’informations sur C ++ 14 `[[deprecated]]` attribut et des conseils sur l’utilisation qui attribut vs le declspec de Microsoft ou le pragma, consultez [attributs Standard C++](../cpp/attributes.md) attribut.
+> Pour plus d’informations sur l' `[[deprecated]]` attribut c++ 14 et des conseils sur l’utilisation de cet attribut au lieu `__declspec(deprecated)` du modificateur Microsoft ou du pragma **déconseillé** , consultez [attributs C++dans ](../cpp/attributes.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma deprecated( identifier1 [,identifier2, ...] )
-```
+> **#pragma déconseillé (** *identificateur1* [ **,** *identificateur2* ...] **)**
 
 ## <a name="remarks"></a>Notes
 
-Lorsque le compilateur rencontre un identificateur spécifié par un **déconseillée** pragma, il émet Avertissement du compilateur [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
+Lorsque le compilateur rencontre un identificateur spécifié par un pragma **déconseillé** , il émet un avertissement du compilateur [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
 
 Vous pouvez désapprouver des noms de macros. Placez le nom de la macro entre guillemets, sinon une expansion macro va se produire.
 
-Étant donné que le **déconseillée** pragma fonctionne sur tous les identificateurs correspondants et ne prend pas de signatures en compte, il n’est pas la meilleure option de la dépréciation des versions spécifiques des fonctions surchargées. N’importe quel nom de la fonction correspondante est placée dans la portée déclenche l’avertissement.
+Étant donné que le pragma **déconseillé** fonctionne sur tous les identificateurs correspondants et qu’il ne prend pas en compte les signatures, il ne s’agit pas de la meilleure option pour déprécier des versions spécifiques des fonctions surchargées. Tout nom de fonction mis en correspondance qui est placé dans la portée déclenche l’avertissement.
 
-Nous vous recommandons d’utiliser C ++ 14 `[[deprecated]]` d’attribut, si possible, au lieu du **déconseillée** pragma. Spécifique à Microsoft, [__declspec (deprecated)](../cpp/deprecated-cpp.md) modificateur de déclaration est également un meilleur choix dans de nombreux cas que le **déconseillée** pragma. Le `[[deprecated]]` attribut et `__declspec(deprecated)` modificateur permettent de spécifier l’état déconseillé pour les formes spéciales des fonctions surchargées. L’avertissement de diagnostic s’affiche uniquement sur les références à la fonction surchargée spécifique l’attribut ou modificateur s’applique à.
+Nous vous recommandons d’utiliser l’attribut `[[deprecated]]` c++ 14, lorsque cela est possible, au lieu du pragma **déconseillé** . Le modificateur de Déclaration [_ _ declspec (Deprecated)](../cpp/deprecated-cpp.md) spécifique à Microsoft est également un meilleur choix dans de nombreux cas que le pragma **déconseillé** . L' `[[deprecated]]` attribut et `__declspec(deprecated)` le modificateur vous permettent de spécifier l’État déconseillé pour des formes particulières de fonctions surchargées. L’avertissement de diagnostic apparaît uniquement sur les références à la fonction surchargée spécifique à laquelle s’applique l’attribut ou le modificateur.
 
 ## <a name="example"></a>Exemple
 
@@ -77,4 +75,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

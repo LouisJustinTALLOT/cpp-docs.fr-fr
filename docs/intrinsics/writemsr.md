@@ -1,6 +1,6 @@
 ---
 title: __writemsr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writemsr
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - wrmsr instruction
 - __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
-ms.openlocfilehash: ac57bac1d132c581ee12048b89d13ed1d1fdb7da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7819477edb8d4e6b18a1213a73ba67065ea7ff57
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389708"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219133"
 ---
-# <a name="writemsr"></a>__writemsr
+# <a name="__writemsr"></a>__writemsr
 
 **Section spécifique à Microsoft**
 
-Génère l’écriture dans le modèle de Registre spécifiques (`wrmsr`) instruction.
+Génère l’instruction écrire dans le Registre spécifique`wrmsr`au modèle ().
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __writemsr(
    unsigned long Register,
    unsigned __int64 Value
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*S’inscrire*<br/>
-[in] Le Registre spécifiques du modèle.
+*Annuler*\
+dans Registre spécifique au modèle.
 
-*Valeur*<br/>
-[in] Valeur à écrire.
+*Ajoutée*\
+dans Valeur à écrire.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -44,14 +44,14 @@ void __writemsr(
 |---------------|------------------|
 |`__writemsr`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-Cette fonction peut uniquement être utilisée en mode noyau, et cette routine est uniquement disponible comme intrinsèque.
+Cette fonction ne peut être utilisée qu’en mode noyau, et cette routine est uniquement disponible en tant qu’intrinsèque.
 
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

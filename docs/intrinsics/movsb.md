@@ -1,6 +1,6 @@
 ---
 title: __movsb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsb
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - rep movsb instruction
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-ms.openlocfilehash: 42124743c27b297c723780c1bc19038fb54e638d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca06fc9114f6e824a690cc4e612c21d705a485cd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263813"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217280"
 ---
-# <a name="movsb"></a>__movsb
+# <a name="__movsb"></a>__movsb
 
 **Section spécifique à Microsoft**
 
-Génère une chaîne de déplacer (`rep movsb`) instruction.
+Génère une instruction Move String`rep movsb`().
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __movsb(
    unsigned char* Destination,
    unsigned const char* Source,
@@ -31,16 +31,16 @@ void __movsb(
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Destination*<br/>
-[out] Pointeur vers la destination de la copie.
+*Destination*\
+à Pointeur vers la destination de la copie.
 
-*Source*<br/>
-[in] Pointeur vers la source de la copie.
+*Source*\
+dans Pointeur vers la source de la copie.
 
-*Nombre*<br/>
-[in] Le nombre d’octets à copier.
+*Saut*\
+dans Nombre d’octets à copier.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -48,17 +48,17 @@ void __movsb(
 |---------------|------------------|
 |`__movsb`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-Le résultat est que la première `Count` octets vers lequel pointe `Source` sont copiés vers le `Destination` chaîne.
+Le résultat est que les premiers `Count` octets pointés par `Source` sont copiés dans `Destination` la chaîne.
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // movsb.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -84,4 +84,4 @@ A big black dog. A big black dog.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

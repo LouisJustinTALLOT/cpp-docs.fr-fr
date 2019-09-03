@@ -1,6 +1,6 @@
 ---
-title: Directives pragma et mot clé _Pragma
-ms.date: 11/04/2016
+title: Directives pragma et mot clé __Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - '#pragma'
 helpviewer_keywords:
@@ -13,33 +13,31 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: b6c2ff579c6fafa78cbfd0a2879a71fca2bfaa01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cf075e4ff8049593a1e77c5d2c1c259b224877b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179956"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222297"
 ---
-# <a name="pragma-directives-and-the-pragma-keyword"></a>Directives pragma et mot clé _Pragma
+# <a name="pragma-directives-and-the-__pragma-keyword"></a>Directives pragma et mot clé __Pragma
 
-Les directives pragma spécifient des fonctionnalités de compilateur spécifiques à l'ordinateur ou au système d'exploitation. Le **_pragma** mot clé, qui est spécifique au compilateur de Microsoft, vous permet de coder des directives pragma dans des définitions de macro.
+Les directives pragma spécifient des fonctionnalités de compilateur spécifiques à l’ordinateur ou au système d’exploitation. Le mot clé **__Pragma** , qui est spécifique au compilateur Microsoft, vous permet de coder des directives pragma dans les définitions de macros.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma token-string
-__pragma(token-string)
-```
+> **#pragma** *jeton-chaîne*\
+> **__Pragma (** *chaîne de jeton* **)**
 
 ## <a name="remarks"></a>Notes
 
-Chaque implémentation de C et C++ prend en charge des fonctionnalités spécifiques de son ordinateur hôte ou de son système d’exploitation. Certains programmes, par exemple, doivent exercer un contrôle précis des zones de mémoire où les données sont placées, ou contrôler la façon dont certaines fonctions reçoivent les paramètres. Le **#pragma** directives offrent un moyen pour chaque compilateur d’offrir des fonctionnalités propres de machine et de système d’exploitation tout en conservant une compatibilité globale avec les langages C et C++.
+Chaque implémentation de C et C++ prend en charge des fonctionnalités spécifiques de son ordinateur hôte ou de son système d’exploitation. Certains programmes, par exemple, doivent exercer un contrôle précis sur l’emplacement des données en mémoire ou contrôler la façon dont certaines fonctions reçoivent des paramètres. Les directives **#pragma** permettent à chaque compilateur d’offrir des fonctionnalités propres aux ordinateurs et aux systèmes d’exploitation, tout en conservant la compatibilité générale avec C++ les langages C et.
 
-Les pragmas sont spécifiques à l'ordinateur ou au système d'exploitation, par définition, et sont généralement différents pour chaque compilateur. Les pragmas peuvent être utilisés dans les instructions conditionnelles pour fournir de nouvelles fonctionnalités de préprocesseur ou pour fournir des informations définies par l'implémentation au compilateur.
+Les pragmas sont spécifiques à l’ordinateur ou au système d’exploitation par définition, et sont généralement différents pour chaque compilateur. Les pragmas peuvent être utilisés dans les directives conditionnelles pour fournir de nouvelles fonctionnalités de préprocesseur ou pour fournir des informations définies par l’implémentation au compilateur.
 
-`token-string` est une série de caractères qui fournit à un compilateur spécifique l’instruction et les arguments, le cas échéant. Le signe dièse (**#**) doit être le premier caractère autre qu’un espace blanc sur la ligne qui contient le pragma ; blancs peuvent séparer le signe dièse et le mot « pragma ». Suivant **#pragma**, saisissez un texte que le traducteur peut analyser en tant que jetons de prétraitement. L’argument **#pragma** est soumis à une expansion macro.
+La *chaîne de jeton* est une série de caractères qui donne une instruction et des arguments spécifiques du compilateur, le cas échéant. Le signe dièse ( **#** ) doit être le premier caractère autre qu’un espace blanc sur la ligne qui contient le pragma. Les espaces blancs peuvent séparer le signe dièse et le mot «pragma». Après **#pragma**, écrivez le texte que le traducteur peut analyser en tant que jetons de prétraitement. L’argument pour **#pragma** est soumis à une expansion macro.
 
-Si le compilateur recherche un pragma qu'il ne reconnaît pas, il émet un avertissement et continue la compilation.
+Le compilateur émet un avertissement lorsqu’il trouve un pragma qu’il ne reconnaît pas, et poursuit la compilation.
 
 Les compilateurs Microsoft C et C++ reconnaissent les pragmas suivants :
 
@@ -53,38 +51,39 @@ Les compilateurs Microsoft C et C++ reconnaissent les pragmas suivants :
 |[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|
 |[intrinsic](../preprocessor/intrinsic.md)|[loop](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
-|[managed](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||
-|[omp](../preprocessor/omp.md)|[once](../preprocessor/once.md)||
-|[optimize](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|
-|[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|[region, endregion](../preprocessor/region-endregion.md)|
-|[runtime_checks](../preprocessor/runtime-checks.md)|[section](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|
-|[strict_gs_check](../preprocessor/strict-gs-check.md)|[unmanaged](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
-|[warning](../preprocessor/warning.md)|||
+|[nage](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)|[omp](../preprocessor/omp.md)|
+|[once](../preprocessor/once.md)|[optimize](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|
+|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|
+|[region, endregion](../preprocessor/region-endregion.md)|[runtime_checks](../preprocessor/runtime-checks.md)|[section](../preprocessor/section.md)|
+|[setlocale](../preprocessor/setlocale.md)|[strict_gs_check](../preprocessor/strict-gs-check.md)|[non managé](../preprocessor/managed-unmanaged.md)|
+|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|[warning](../preprocessor/warning.md)||
 
-<sup>1</sup> pris en charge uniquement par le compilateur C++.
+<sup>1</sup> pris en charge uniquement C++ par le compilateur.
 
 ## <a name="pragmas-and-compiler-options"></a>Pragmas et options du compilateur
 
-Certains pragmas fournissent les mêmes fonctionnalités que les options du compilateur. Lorsqu'un pragma est rencontré dans le code source, il remplace le comportement spécifié par l'option du compilateur. Par exemple, si vous avez spécifié [/Zp8](../build/reference/zp-struct-member-alignment.md), vous pouvez remplacer ce paramètre de compilateur des sections spécifiques du code avec [pack](../preprocessor/pack.md):
+Certains pragmas fournissent les mêmes fonctionnalités que les options du compilateur. Lorsqu'un pragma est rencontré dans le code source, il remplace le comportement spécifié par l'option du compilateur. Par exemple, si vous avez spécifié [/Zp8](../build/reference/zp-struct-member-alignment.md), vous pouvez remplacer ce paramètre de compilateur pour des sections spécifiques du code avec [Pack](../preprocessor/pack.md):
 
+```cmd
+cl /Zp8 some_file.cpp
 ```
-cl /Zp8 ...
 
-<file> - packing is 8
+```cpp
+// some_file.cpp - packing is 8
 // ...
 #pragma pack(push, 1) - packing is now 1
 // ...
-#pragma pack(pop) - packing is 8
-</file>
+#pragma pack(pop) - packing is 8 again
+// ...
 ```
 
-## <a name="the-pragma-keyword"></a>Mot clé __pragma()
+## <a name="the-__pragma-keyword"></a>Mot clé __Pragma ()
 
 **Spécifique à Microsoft**
 
-Le compilateur prend également en charge la **_pragma** mot clé, qui a les mêmes fonctionnalités que le **#pragma** directive, mais peut être utilisé inline dans une définition de macro. Le **#pragma** directive ne peut pas être utilisée dans une définition de macro, car le compilateur interprète le signe dièse ('#') dans la directive pour être le [opérateur d’enchaînement (#)](../preprocessor/stringizing-operator-hash.md).
+Le compilateur prend également en charge le mot clé **__Pragma** , qui a les mêmes fonctionnalités que la directive **#pragma** . La différence est que le mot clé **__Pragma** est utilisable inline dans une définition de macro. La directive **#pragma** n’est pas utilisable dans une définition de macro, car le compilateur interprète le signe dièse (#) dans la directive comme opérateur de [chaîne (#)](../preprocessor/stringizing-operator-hash.md).
 
-L’exemple de code suivant montre comment la **_pragma** mot clé peut être utilisé dans une macro. Ce code est extrait de l'en-tête mfcdual.h de l'exemple CDUAL dans « Exemples de prise en charge COM du compilateur » :
+L’exemple de code suivant montre comment le mot clé **__Pragma** peut être utilisé dans une macro. Ce code est extrait de l'en-tête mfcdual.h de l'exemple CDUAL dans « Exemples de prise en charge COM du compilateur » :
 
 ```cpp
 #define CATCH_ALL_DUAL \
@@ -108,6 +107,6 @@ return _hr; \
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur le préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
-[Pragmas C](../c-language/c-pragmas.md)<br/>
+[Référence duC++ préprocesseur C/](../preprocessor/c-cpp-preprocessor-reference.md)\
+[Pragmas C](../c-language/c-pragmas.md)\
 [Mots clés](../cpp/keywords-cpp.md)
