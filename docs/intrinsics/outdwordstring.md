@@ -1,6 +1,6 @@
 ---
 title: __outdwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outdwordstring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outdwordstring intrinsic
 - rep outsd instruction
 ms.assetid: 55b31a65-aab7-4b5c-b61d-d9e2fb0c497a
-ms.openlocfilehash: 51cb4a97d271d6d41d39d1025e3a5d34b273cdc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50908a65795af617f18a497c073cfefe009dfd80
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396585"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217162"
 ---
-# <a name="outdwordstring"></a>__outdwordstring
+# <a name="__outdwordstring"></a>__outdwordstring
 
 **Section spécifique à Microsoft**
 
-Génère le `rep outsd` instruction, qui envoie `Count` mots doubles en commençant à `Buffer` le port d’e/s spécifié par `Port`.
+Génère l' `rep outsd` instruction, qui envoie `Count` des mots doubles `Buffer` à partir du port d’e/s `Port`spécifié par.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __outdwordstring(
    unsigned short Port,
    unsigned long* Buffer,
@@ -31,16 +31,16 @@ void __outdwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Port*<br/>
-[in] Le port pour envoyer les données.
+*Importer*\
+dans Port auquel envoyer les données.
 
-*Buffer*<br/>
-[in] Un pointeur vers les données seront envoyés le port spécifié.
+*Mémoire tampon*\
+dans Pointeur vers les données à envoyer vers le port spécifié.
 
-*Nombre*<br/>
-[in] Le nombre de mots doubles à envoyer.
+*Saut*\
+dans Nombre de mots doubles à envoyer.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -48,7 +48,7 @@ void __outdwordstring(
 |---------------|------------------|
 |`__outdwordstring`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
@@ -58,4 +58,4 @@ Cette routine est disponible uniquement en tant qu'intrinsèque.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
-title: pop_macro
-ms.date: 11/04/2016
+title: pop_macro, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.pop_macro
 - pop_macro_CPP
@@ -8,27 +8,24 @@ helpviewer_keywords:
 - pop_macro pragma
 - pragmas, pop_macro
 ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
-ms.openlocfilehash: 0ea7d37332ce50fd1d21acba058da721a23f2097
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9e097d139e1df5c9ba09ad9ca99f0cfe6bbbfb3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180132"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218284"
 ---
-# <a name="popmacro"></a>pop_macro
-Définit la valeur de la *macro_name* macro à la valeur en haut de la pile pour cette macro.
+# <a name="pop_macro-pragma"></a>pop_macro, pragma
+
+Affecte à la valeur de la macro de *nom de macro* la valeur en haut de la pile pour cette macro.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma pop_macro("
-macro_name
-")
-```
+> **#pragma pop_macro (** "*macro-Name*" **)**
 
 ## <a name="remarks"></a>Notes
 
-Vous devez tout d’abord émettre une [push_macro](../preprocessor/push-macro.md) pour *macro_name* avant de pouvoir effectuer un **pop_macro**.
+Un [push_macro](../preprocessor/push-macro.md) pour la *macro-Name* doit être émis pour que vous puissiez effectuer un **pop_macro**.
 
 ## <a name="example"></a>Exemple
 
@@ -66,4 +63,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

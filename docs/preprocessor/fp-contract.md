@@ -1,6 +1,6 @@
 ---
-title: fp_contract
-ms.date: 03/12/2018
+title: fp_contract, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.fp_contract
 - fp_contract_CPP
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - pragmas, fp_contract
 - fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: 14c3ac60d4fc0f45fcf0ece6c3f73153e5de4271
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 833d8e7f4b8c9da18901610e52afed619468c5c3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409913"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218560"
 ---
-# <a name="fpcontract"></a>fp_contract
+# <a name="fp_contract-pragma"></a>fp_contract, pragma
 
-Détermine si une contraction à virgule flottante a lieu. Une contraction à virgule flottante est une instruction comme FMA (fondus-multiplication / addition) qui combine deux opérations à virgule flottante distincts dans une seule instruction. Utilisation de ces instructions peut affecter la précision à virgule flottante, car au lieu de l’arrondi après chaque opération, le processeur peut arrondir qu’une seule fois après les deux opérations.
+Détermine si la contraction à virgule flottante a lieu. Une contraction à virgule flottante est une instruction, telle que FMA (multicolore-multiplier-Add) qui combine deux opérations à virgule flottante distinctes en une seule instruction. L’utilisation de ces instructions peut affecter la précision en virgule flottante, car au lieu d’effectuer un arrondi après chaque opération, le processeur peut arrondir une seule fois après les deux opérations.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,9 +25,9 @@ Détermine si une contraction à virgule flottante a lieu. Une contraction à vi
 
 ## <a name="remarks"></a>Notes
 
-Par défaut, **fp_contract** est **sur**. Cela indique au compilateur d’utiliser les instructions de la contraction à virgule flottante lorsque cela est possible. Définissez **fp_contract** à **hors** pour conserver les instructions à virgule flottante individuelles.
+Par défaut, **fp_contract** est **activé**. Cela indique au compilateur d’utiliser des instructions de contraction à virgule flottante dans la mesure du possible. Affectez la valeur **off** à **fp_contract** pour conserver les instructions à virgule flottante individuelles.
 
-Pour plus d’informations sur le comportement de virgule flottante, consultez [/fp (spécifier le comportement de virgule flottante)](../build/reference/fp-specify-floating-point-behavior.md).
+Pour plus d’informations sur le comportement de virgule flottante, consultez [/FP (spécifier le comportement à virgule flottante)](../build/reference/fp-specify-floating-point-behavior.md).
 
 Les autres pragmas à virgule flottante incluent :
 
@@ -37,7 +37,7 @@ Les autres pragmas à virgule flottante incluent :
 
 ## <a name="example"></a>Exemple
 
-Le code généré à partir de cet exemple n’utilise pas une instruction fusionnés-multiplication / addition même lorsqu’il est disponible sur le processeur cible. Si vous commentez `#pragma fp_contract (off)`, le code généré peut utiliser une instruction fusionnés-multiplication / addition s’il est disponible.
+Le code généré à partir de cet exemple n’utilise pas d’instruction de multiplication par fusion et d’ajout, même lorsqu’il est disponible sur le processeur cible. Si vous supprimez `#pragma fp_contract (off)`les commentaires, le code généré peut utiliser une instruction-multiplier-ajouter fusionnée s’il est disponible.
 
 ```cpp
 // pragma_directive_fp_contract.cpp
@@ -77,4 +77,4 @@ out = 4.587525000000000e+03
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

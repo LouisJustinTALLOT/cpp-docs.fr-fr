@@ -1,6 +1,6 @@
 ---
-title: Fonctions intrinsèques _InterlockedCompareExchangePointer
-ms.date: 12/17/2018
+title: _InterlockedCompareExchange fonctions intrinsèques
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchange_HLERelease
 - _InterlockedCompareExchange8_nf
@@ -48,14 +48,14 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: baa3131a7ca533af30e9ed73cd2698c06011488e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 26dff1c902fff495d5efe45d8da10b1c5da72878
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509443"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222056"
 ---
-# <a name="_interlockedcompareexchange-intrinsic-functions"></a>Fonctions intrinsèques _InterlockedCompareExchangePointer
+# <a name="_interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange fonctions intrinsèques
 
 **Section spécifique à Microsoft**
 
@@ -63,7 +63,7 @@ Effectue une comparaison et un échange interverrouillés.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 long _InterlockedCompareExchange(
    long volatile * Destination,
    long Exchange,
@@ -176,15 +176,15 @@ __int64 _InterlockedCompareExchange64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Destination*<br/>
+*Destination*\
 [in, out] Pointeur vers la valeur de destination. Le signe est ignoré.
 
-*Exchange*<br/>
+*Échanger*\
 dans Valeur d’échange. Le signe est ignoré.
 
-*Comparateur*<br/>
+*Comparateur*\
 dans Valeur à comparer à la destination. Le signe est ignoré.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -195,8 +195,8 @@ La valeur de retour est la valeur initiale du pointeur `Destination`.
 
 |Intrinsèque|Architecture|Header|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|
+|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM, ARM64|\<intrin.h>|
 |`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|X64|\<intrin.h>|
 |`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, x64|\<immintrin.h>|
 
@@ -296,7 +296,6 @@ namespace MyInterlockedIntrinsicLock
 }
 
 // ------------------------------------------------------------------
-
 // Data shared by threads
 
 queue<int> SharedQueue;
@@ -435,8 +434,8 @@ int main(
 
 ## <a name="see-also"></a>Voir aussi
 
-[_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)<br/>
-[_InterlockedCompareExchangePointer, fonctions intrinsèques](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)<br/>
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
-[Mots clés](../cpp/keywords-cpp.md)<br/>
+[_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)\
+[_InterlockedCompareExchangePointer fonctions intrinsèques](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)\
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)\
+[Mots clés](../cpp/keywords-cpp.md)\
 [Conflits avec le compilateur x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

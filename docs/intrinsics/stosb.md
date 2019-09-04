@@ -1,6 +1,6 @@
 ---
 title: __stosb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosb
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __stosb intrinsic
 - stosb instruction
 ms.assetid: 634589ed-2da3-439b-a381-a214d89bf10c
-ms.openlocfilehash: 679f1a892a6ee5b458a05d1577ecf766bed385dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edf74da4c8b5aa97e542d89f55b3ed8411db9bac
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390280"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221214"
 ---
-# <a name="stosb"></a>__stosb
+# <a name="__stosb"></a>__stosb
 
 **Section spécifique à Microsoft**
 
-Génère une instruction de chaîne de magasin (`rep stosb`).
+Génère une instruction de chaîne de`rep stosb`magasin ().
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __stosb(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Dest*<br/>
-[out] La destination de l’opération.
+*Destination*\
+à Destination de l’opération.
 
-*Données*<br/>
-[in] Les données à stocker.
+*Métadonnée*\
+dans Données à stocker.
 
-*Nombre*<br/>
-[in] La longueur du bloc d’octets à écrire.
+*Saut*\
+dans Longueur du bloc d’octets à écrire.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -48,11 +48,11 @@ void __stosb(
 |---------------|------------------|
 |`__stosb`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-Le résultat est que le caractère `Data` est écrit dans un bloc de `Count` octets dans le `Dest` chaîne.
+Le résultat est que les *données* caractères sont écrites dans un bloc de *nombre* d’octets dans la chaîne de *destination* .
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
@@ -87,4 +87,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

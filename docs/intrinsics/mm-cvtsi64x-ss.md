@@ -1,45 +1,45 @@
 ---
 title: _mm_cvtsi64x_ss
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvtsi64x_ss
 helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-ms.openlocfilehash: 3ba9dc56cbb027e8cf9f31d293b3f96908aff5e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e9bacc56f212e804467d1c6e0159a1749235976
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264411"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217457"
 ---
-# <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
+# <a name="_mm_cvtsi64x_ss"></a>_mm_cvtsi64x_ss
 
 **Section spécifique à Microsoft**
 
-Génère le x64 étendu version du convertir en entier 64 bits en à valeur scalaire en nombres à virgule flottante simple précision (`cvtsi2ss`) instruction.
+Génère la version étendue x64 de l’entier de conversion 64 bits en une instruction de valeur à virgule flottante simple`cvtsi2ss`précision scalaire ().
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 __m128 _mm_cvtsi64x_ss(
    __m128 a,
    __int64 b
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*a*<br/>
-[in] Un `__m128` structure contenant quatre valeurs à virgule flottante simple précision.
+*un*\
+dans `__m128` Structure contenant quatre valeurs à virgule flottante simple précision.
 
-*b*<br/>
-[in] Un entier 64 bits à convertir en valeur à virgule flottante.
+*p*\
+dans Entier 64 bits à convertir en valeur à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Un `__m128` structure dont la première valeur à virgule flottante est le résultat de la conversion. Les trois autres valeurs sont copiées sans modification à partir de `a`.
+`__m128` Structure dont la première valeur à virgule flottante est le résultat de la conversion. Les trois autres valeurs sont copiées sans modification àpartir de.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -47,17 +47,17 @@ Un `__m128` structure dont la première valeur à virgule flottante est le résu
 |---------------|------------------|
 |`_mm_cvtsi64x_ss`|X64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-Le `__m128` structure représente un registre XMM, donc cette intrinsèque autorise une valeur `b` de la mémoire système à déplacer vers un XMM inscrire.
+La `__m128` structure représente un registre XMM, de sorte que l’intrinsèque autorise le déplacement de la valeur *b* de la mémoire système vers un registre XMM.
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-```
+```cpp
 // _mm_cvtsi64x_ss.cpp
 // processor: x64
 
@@ -91,5 +91,5 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[__m128](../cpp/m128.md)<br/>
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[__m128](../cpp/m128.md)\
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

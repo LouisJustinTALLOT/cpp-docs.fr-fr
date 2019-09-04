@@ -1,6 +1,6 @@
 ---
-title: bss_seg
-ms.date: 10/22/2018
+title: bss_seg, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.bss_seg
 - bss_seg_CPP
@@ -8,53 +8,54 @@ helpviewer_keywords:
 - pragmas, bss_seg
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
-ms.openlocfilehash: 489ced11bb6024fdf9818872c07ab7feebfeabf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a343fb45b4bbe4789f38b7a1102572cf4241ec53
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212411"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218549"
 ---
-# <a name="bssseg"></a>bss_seg
+# <a name="bss_seg-pragma"></a>bss_seg, pragma
 
-Spécifie le segment où les variables non initialisées sont stockées dans le fichier .obj.
+Spécifie la section (segment) dans laquelle les variables non initialisées sont stockées dans le fichier objet (. obj).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma bss_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
-```
+> **#pragma bss_seg (** ["*section-Name*" [ **,** "*section-Class*"]] **)** \
+> **#pragma bss_seg (** { **Push** | **pop** } [ **,** *identificateur* ] [ **,** "*section-Name*" [ **,** "*section-Class*"]] **)**
 
 ### <a name="parameters"></a>Paramètres
 
-**push**<br/>
-(Facultatif) Place un enregistrement sur la pile interne du compilateur. Un *pu*sh * peut avoir un *identificateur* et *segment-name*.
+**souleve**\
+Facultatif Place un enregistrement sur la pile interne du compilateur. Un **Push** peut avoir un *identificateur* et un *nom de section*.
 
-**pop**<br/>
-(Facultatif) Supprime un enregistrement à partir du haut de la pile interne du compilateur.
+**roulant**\
+Facultatif Supprime un enregistrement du haut de la pile interne du compilateur. Une **liste** déroulante peut avoir un *identificateur* et un *nom de section*. Vous pouvez dépiler plusieurs enregistrements à l’aide d’une seule commande **pop** en utilisant l' *identificateur*. La *section-Name* devient le nom de la section BSS active après le pop.
 
-*identifier*<br/>
-(Facultatif) Lorsqu’il est utilisé avec **push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. *identificateur* permet à plusieurs enregistrements à dépiler avec une seule **pop** commande. Lorsqu’il est utilisé avec **pop**, la directive dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilés.
+*identificateur*\
+Facultatif En cas d’utilisation avec **Push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’elle est utilisée avec **pop**, la directive dépile les enregistrements de la pile interne jusqu’à ce que l' *identificateur* soit supprimé. Si l' *identificateur* est introuvable sur la pile interne, rien n’est dépilé.
 
-*"segment-name"*<br/>
-(Facultatif) Le nom d’un segment. Lorsqu’il est utilisé avec **pop**, la pile est dépilée et *segment-name* devient le nom de segment actif.
+*«section-Name»* \
+Facultatif Nom d’une section. Lorsqu’elle est utilisée avec **pop**, la pile est dépilée et la *section-Name* devient le nom de la section BSS active.
 
-*"segment-class"*<br/>
-(Facultatif) Inclus pour la compatibilité avec C++ antérieures à la version 2.0. Elle est ignorée.
+*«section-Class»* \
+Facultatif Ignoré, mais inclus pour la compatibilité avec les versions C++ de Microsoft antérieures à la version 2,0.
 
 ## <a name="remarks"></a>Notes
 
-. Fichiers obj peuvent être affichés avec le [dumpbin](../build/reference/dumpbin-command-line.md) application. Le segment par défaut dans le fichier .obj pour les données non initialisées est .bss. Dans certains cas l’utilisation de **bss_seg** peut accélérer les temps de chargement en regroupant les données non initialisées en une seule section.
+Une *section* dans un fichier objet est un bloc de données nommé qui est chargé en mémoire en tant qu’unité. Une *section BSS* est une section qui contient des données non initialisées. Dans cet article, les termes *segment* et *section* ont la même signification.
 
-**bss_seg** sans paramètres réinitialise le segment à .bss.
+La directive pragma **bss_seg** indique au compilateur de placer tous les éléments de données non initialisés à partir de l’unité de traduction dans une section BSS nommée *section-Name*. Dans certains cas, l’utilisation de **bss_seg** peut accélérer les temps de chargement en regroupant les données non initialisées dans une section. Par défaut, la section BSS utilisée pour les données non initialisées dans un fichier objet est `.bss`nommée. Une directive pragma **bss_seg** sans paramètre *de nom de section* rétablit la valeur du nom de la section BSS pour les éléments de `.bss`données non initialisés suivants.
 
-Données allouées en utilisant le **bss_seg** pragma ne conserve aucune information concernant leur emplacement.
+Les données allouées à l’aide du pragma **bss_seg** ne conservent aucune information sur son emplacement.
 
-Vous pouvez également spécifier des sections pour les données initialisées ([data_seg](../preprocessor/data-seg.md)), fonctions ([code_seg](../preprocessor/code-seg.md)) et les variables const ([const_seg](../preprocessor/const-seg.md)).
+Pour obtenir la liste des noms qui ne doivent pas être utilisés pour créer une section, consultez [/section](../build/reference/section-specify-section-attributes.md).
 
-Consultez [/SECTION](../build/reference/section-specify-section-attributes.md) pour obtenir la liste des noms que vous ne devez pas utiliser lors de la création d’une section.
+Vous pouvez également spécifier des sections pour les données initialisées ([data_seg](../preprocessor/data-seg.md)), les fonctions ([code_seg](../preprocessor/code-seg.md)) et les variables const ([const_seg](../preprocessor/const-seg.md)).
 
-## <a name="example"></a>Exemple
+Vous pouvez utiliser [DUMPBIN. EXE](../build/reference/dumpbin-command-line.md) pour afficher les fichiers objets. Les versions de DUMPBIN pour chaque architecture cible prise en charge sont incluses dans Visual Studio.
+
+## <a name="example"></a>Exemples
 
 ```cpp
 // pragma_directive_bss_seg.cpp
@@ -74,4 +75,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,42 +1,40 @@
 ---
-title: high_method_prefix
-ms.date: 10/18/2018
+title: high_method_prefix importer l’attribut
+ms.date: 08/29/2019
 f1_keywords:
 - high_method_prefix
 helpviewer_keywords:
 - high_method_prefix attribute
 ms.assetid: cacebf09-12f5-4919-ad40-939e206e340c
-ms.openlocfilehash: 1575b2e3fee461ee0e3987aaf1e770d0611e31ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 357ac528a921a9f864f0f7e30252281a4d10e33c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383750"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219022"
 ---
-# <a name="highmethodprefix"></a>high_method_prefix
+# <a name="high_method_prefix-import-attribute"></a>high_method_prefix importer l’attribut
 
-**Spécifique à C++**
+**C++Plus**
 
 Spécifie un préfixe à utiliser pour nommer les propriétés et les méthodes de haut niveau.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-high_method_prefix("Prefix")
-```
+> **#import** *bibliothèque de types* **high_method_prefix (** «*préfixe*» **)**
 
 ### <a name="parameters"></a>Paramètres
 
-*Prefix*<br/>
+*Céder*\
 Préfixe à utiliser.
 
 ## <a name="remarks"></a>Notes
 
 Par défaut, les propriétés de gestion des erreurs et les méthodes de niveau supérieur sont exposées par des fonctions membres nommées sans préfixe. Les noms sont issus de la bibliothèque de types.
 
-**FIN spécifique à C++**
+**Spécifique C++ à la fin**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import directive](../preprocessor/hash-import-directive-cpp.md)

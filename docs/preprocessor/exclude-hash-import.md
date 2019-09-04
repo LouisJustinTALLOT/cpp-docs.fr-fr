@@ -1,45 +1,43 @@
 ---
-title: exclude (#import)
-ms.date: 10/18/2018
+title: exclure l’attribut d’importation
+ms.date: 08/29/2019
 f1_keywords:
 - exclude
 helpviewer_keywords:
 - exclude attribute
 ms.assetid: 0883248a-d4bf-420e-9848-807b28fa976e
-ms.openlocfilehash: d6a320089d5954b2cf1d0d96ae1f37656f2ddd58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a3625ee0dd44f3e2731e1240fea5f3dd4ed109e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389318"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218719"
 ---
-# <a name="exclude-import"></a>exclude (\#import)
+# <a name="exclude-import-attribute"></a>exclure l’attribut d’importation
 
-**Spécifique à C++**
+**C++Plus**
 
 Exclut des éléments des fichiers d'en-tête de bibliothèque de types en cours de création.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-exclude("Name1"[, "Name2",...])
-```
+> **#import** *bibliothèque de types* **Exclude (** "*nom1*" [ **,** "*nom2*"...] **)**
 
 ### <a name="parameters"></a>Paramètres
 
-*Name1*<br/>
+*Name1*\
 Premier élément à exclure.
 
-*Name2*<br/>
-Deuxième élément à exclure (si nécessaire).
+*Nom2*\
+Facultatif Deuxième et dernière éléments à exclure, si nécessaire.
 
 ## <a name="remarks"></a>Notes
 
-Les bibliothèques de types peuvent inclure des définitions d'éléments définis dans les en-têtes système ou dans d'autres bibliothèques de types. Cet attribut peut prendre un nombre quelconque d'arguments, chacun étant un élément de niveau supérieur de bibliothèque de types à exclure.
+Les bibliothèques de types peuvent inclure des définitions d'éléments définis dans les en-têtes système ou dans d'autres bibliothèques de types. Cet attribut peut prendre un nombre quelconque d’arguments, où chacun d’eux est un élément de bibliothèque de types de niveau supérieur à exclure.
 
-**FIN spécifique à C++**
+**Spécifique C++ à la fin**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import directive](../preprocessor/hash-import-directive-cpp.md)

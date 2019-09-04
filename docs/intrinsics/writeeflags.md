@@ -1,38 +1,37 @@
 ---
 title: __writeeflags
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writeeflags
 helpviewer_keywords:
 - __writeeflags intrinsics
 ms.assetid: a62a522c-d7fa-4f10-a620-a3b32bdf3f17
-ms.openlocfilehash: 6679a3b16def3ed413c5cec2a4bb7d5fe5d732c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e43789d2fbed1bdc52665531c61c6c932a27f5ab
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389916"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219143"
 ---
-# <a name="writeeflags"></a>__writeeflags
+# <a name="__writeeflags"></a>__writeeflags
 
-Écrit la valeur spécifiée dans le programme inscrivent d’état et contrôle (EFLAGS).
+Écrit la valeur spécifiée dans le registre d’État et de contrôle (EFLAGS) du programme.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-void __writeeflags(unsigned Value);
-void __writeeflags(unsigned __int64 Value);
+```C
+void __writeeflags(unsigned Value); /* x86 */
+void __writeeflags(unsigned __int64 Value); /* x64 */
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*Valeur*|[in] La valeur à écrire dans le Registre EFLAGS. Le `Value` paramètre est 32 bits de long pour une plateforme 32 bits et 64 bits long pour une plateforme 64 bits.|
+*Ajoutée*\
+dans Valeur à écrire dans le registre EFLAGS. Le `Value` paramètre a une longueur de 32 bits pour une plateforme 32 bits et une longueur de 64 bits pour une plateforme 64 bits.
 
 ## <a name="remarks"></a>Notes
 
-Ces routines sont disponibles uniquement sous forme de fonctions intrinsèques.
+Ces routines sont disponibles uniquement comme intrinsèques.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -40,11 +39,11 @@ Ces routines sont disponibles uniquement sous forme de fonctions intrinsèques.
 |---------------|------------------|
 |`__writeeflags`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)\
 [__readeflags](../intrinsics/readeflags.md)

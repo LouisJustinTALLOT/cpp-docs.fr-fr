@@ -2,12 +2,13 @@
 title: Applications de bureau ( C++visuel)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 355102d9d58a8d93d7fb6935528f8fb8c4b534b1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.topic: landing-page
+ms.openlocfilehash: 1d0e725cce42785357232312d21ce37e18d9c73d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514755"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217002"
 ---
 # <a name="desktop-applications-visual-c"></a>Applications de bureau ( C++visuel)
 
@@ -44,7 +45,7 @@ Toute application de bureau C++ dans peut utiliser C Runtime (CRT) et des classe
 |[Utilisation des fichiers de ressources](working-with-resource-files.md)|Comment ajouter des images, des icônes, des tables de chaînes et d’autres ressources à une application de bureau.|
 |[Ressources pour la création d’un jeu àC++l’aide de DirectX ()](resources-for-creating-a-game-using-directx.md)|Liens vers du contenu pour la création C++de jeux dans.|
 |[Procédure pas à pas : Création et utilisation d’une bibliothèque statique](walkthrough-creating-and-using-a-static-library-cpp.md)|Comment créer un fichier binaire. lib.|
-|[Guide pratique : utiliser le kit SDK Windows 10 dans une application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contient les étapes pour configurer votre projet à générer avec le Kit de développement logiciel (SDK) Windows 10.|
+|[Guide pratique pour utiliser le kit SDK Windows 10 dans une application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contient les étapes pour configurer votre projet à générer avec le Kit de développement logiciel (SDK) Windows 10.|
 
 ## <a name="related-articles"></a>Articles connexes
 

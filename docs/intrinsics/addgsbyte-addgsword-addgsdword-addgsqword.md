@@ -1,6 +1,6 @@
 ---
 title: __addgsbyte, __addgsword, __addgsdword, __addgsqword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __addgsdword
 - __addgsqword
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - __addgsdword intrinsic
 - __addgsbyte intrinsic
 ms.assetid: 4fa03e69-d849-49ed-ba37-1d3aa23c2a21
-ms.openlocfilehash: 61fff704e600296443964ab62a0b58799c87b51b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dddd8b4a887dc0e01107f8c1036a399b4e52d2e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264424"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221081"
 ---
-# <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
+# <a name="__addgsbyte-__addgsword-__addgsdword-__addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 
 **Section spécifique à Microsoft**
 
-Ajouter une valeur à un emplacement de mémoire spécifié par un offset par rapport au début de la `GS` segment.
+Ajoute une valeur à un emplacement de mémoire spécifié par un décalage par rapport au début du `GS` segment.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __addgsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -50,13 +50,13 @@ void __addgsqword(
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Offset*<br/>
-[in] Le décalage à partir du début de `GS`.
+*Décalage*\
+dans Offset à partir du début de `GS`.
 
-*Données*<br/>
-[in] Valeur à ajouter à l’emplacement de mémoire.
+*Métadonnée*\
+dans Valeur à ajouter à l’emplacement de mémoire.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -67,15 +67,17 @@ void __addgsqword(
 |`__addgsdword`|X64|
 |`__addgsqword`|X64|
 
+**Fichier d’en-tête** \<> Intro. h
+
 ## <a name="remarks"></a>Notes
 
-Ces routines sont uniquement disponibles comme intrinsèque.
+Ces routines sont uniquement disponibles en tant qu’intrinsèque.
 
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)<br/>
-[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)\
+[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

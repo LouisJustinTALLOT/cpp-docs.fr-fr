@@ -1,41 +1,41 @@
 ---
 title: __segmentlimit
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __segmentlimit
 helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 650a847be3270782dc441d0e68c2c80d910e9d1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390384"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217992"
 ---
-# <a name="segmentlimit"></a>__segmentlimit
+# <a name="__segmentlimit"></a>__segmentlimit
 
 **Section spécifique à Microsoft**
 
-Génère le `lsl` instruction de (limite du Segment de charge).
+Génère l' `lsl` instruction (limite de chargement du segment).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned long __segmentlimit(
    unsigned long a
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*a*<br/>
-[in] Constante qui spécifie le sélecteur de segment.
+*un*\
+dans Constante qui spécifie le sélecteur de segment.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La limite du segment du sélecteur de segment spécifié par `a`, à condition que le sélecteur est valide et visible au niveau d’autorisation actuel.
+Limite de segment du sélecteur de segment spécifié par *un*, si le sélecteur est valide et visible au niveau d’autorisation actuel.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -43,17 +43,17 @@ La limite du segment du sélecteur de segment spécifié par `a`, à condition q
 |---------------|------------------|
 |`__segmentlimit`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-Si la limite du segment ne peut pas être récupérée, cette instruction échoue. En cas d’échec, cette instruction efface l’indicateur ZF et la valeur de retour n’est pas définie.
+Si la limite de segment ne peut pas être récupérée, cette instruction échoue. En cas d’échec, cette instruction efface l’indicateur ZF et la valeur de retour n’est pas définie.
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 #include <stdio.h>
 
 #ifdef _M_IX86
@@ -109,4 +109,4 @@ sl was changed
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

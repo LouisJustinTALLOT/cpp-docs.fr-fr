@@ -1,6 +1,6 @@
 ---
 title: __lidt
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __lidt
 - __lidt_cpp
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - LIDT instruction
 - __lidt intrinsic
 ms.assetid: 8298d25d-a19e-4900-828d-6b3b09841882
-ms.openlocfilehash: 757309603af48820a17668cfe272bbeaad9239b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24778b761ada56830b155a2fc65e90f54ba729ed
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263683"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217507"
 ---
-# <a name="lidt"></a>__lidt
+# <a name="__lidt"></a>__lidt
 
 **Section spécifique à Microsoft**
 
-Charge le Registre des interruptions table descripteur (IDTR) avec la valeur dans l’emplacement de mémoire spécifié.
+Charge le registre de la table du descripteur d’interruption (IDTR) avec la valeur dans l’emplacement de mémoire spécifié.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __lidt(void * Source);
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*Source*|[in] Pointeur vers la valeur à copier vers le IDTR.|
+|*Source*|dans Pointeur vers la valeur à copier dans IDTR.|
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -39,15 +39,15 @@ void __lidt(void * Source);
 |---------------|------------------|
 |`__lidt`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-Le `__lidt` fonction est équivalente à la `LIDT` instruction machine et est disponible uniquement en mode noyau. Pour plus d’informations, recherchez dans le document, « manuel du développeur de logiciels Architecture Intel, Volume 2 : Instruction Set Reference, » à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+La `__lidt` fonction est équivalente à `LIDT` l’instruction machine et est disponible uniquement en mode noyau. Pour plus d’informations, recherchez le document «Guide du développeur de logiciels d’architecture Intel, volume 2: Référence du jeu d’instructions, sur le site [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)\
 [__sidt](../intrinsics/sidt.md)

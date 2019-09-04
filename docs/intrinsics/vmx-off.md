@@ -1,34 +1,34 @@
 ---
 title: __vmx_off
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_off
 helpviewer_keywords:
 - VMXOFF instruction
 - __vmx_off intrinsic
 ms.assetid: 78a32d46-9291-406c-b982-a550855aff18
-ms.openlocfilehash: 4a01752bd510f9aa8cb159c23e691c9d244145e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 226b5111c2f4f6771ac75d165c80c3e8ae2336af
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390072"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219584"
 ---
-# <a name="vmxoff"></a>__vmx_off
+# <a name="__vmx_off"></a>__vmx_off
 
 **Section spécifique à Microsoft**
 
-Désactive l’opération des extensions (VMX) de machine virtuelle dans le processeur.
+Désactive l’opération VMX (Virtual Machine extensions) dans le processeur.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __vmx_off();
 ```
 
 ## <a name="remarks"></a>Notes
 
-La fonction `__vmx_off` est équivalente à l’instruction machine `VMXOFF` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+La fonction `__vmx_off` est équivalente à l’instruction machine `VMXOFF` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document «Intel Virtualization Technical Specification for the IA-32 Intel architecture», document number est c97063-002, sur le site [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -36,10 +36,10 @@ La fonction `__vmx_off` est équivalente à l’instruction machine `VMXOFF` . C
 |---------------|------------------|
 |`__vmx_off`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

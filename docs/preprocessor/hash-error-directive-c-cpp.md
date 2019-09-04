@@ -1,6 +1,6 @@
 ---
-title: '#erreur Directive (C/C++)'
-ms.date: 11/04/2016
+title: '#error, directive (C/C++)'
+ms.date: 08/29/2019
 f1_keywords:
 - '#error'
 helpviewer_keywords:
@@ -8,27 +8,26 @@ helpviewer_keywords:
 - preprocessor, directives
 - error directive (#error directive)
 ms.assetid: d550a802-ff19-4347-9597-688935d23b2b
-ms.openlocfilehash: dc229a8eae6938cba32787ecbec6a5aa6a17ab47
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfb5c18f20319e6e6d345f28d3e1850714334b71
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383983"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216125"
 ---
-# <a name="error-directive-cc"></a>#error, directive (C/C++)
-Le **#error** directive émet un message d’erreur spécifié par l’utilisateur au moment de la compilation, puis termine la compilation.
+# <a name="error-directive-cc"></a>#error, directive (CC++/)
+
+La directive **#error** émet un message d’erreur spécifié par l’utilisateur au moment de la compilation, puis met fin à la compilation.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#errortoken-string
-```
+> **#error** *jeton-chaîne*
 
 ## <a name="remarks"></a>Notes
 
-Le message d’erreur qui émet cette directive inclut le *chaîne de jeton* paramètre. Le *chaîne de jeton* paramètre n’est pas soumis à une expansion macro. Cette directive est particulièrement utile pendant le prétraitement pour notifier le développeur d’une incohérence de programme ou de la violation d’une contrainte. L’exemple suivant illustre l’erreur lors du traitement pendant le prétraitement :
+Le message d’erreur émis par cette directive comprend le paramètre *de chaîne de jeton* . Le paramètre de *chaîne de jeton* n’est pas soumis à l’expansion macro. Cette directive est particulièrement utile pendant le prétraitement, pour informer le développeur d’une incohérence de programme ou la violation d’une contrainte. L’exemple suivant illustre le traitement des erreurs pendant le prétraitement:
 
-```
+```cpp
 #if !defined(__cplusplus)
 #error C++ compiler required.
 #endif

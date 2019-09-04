@@ -1,6 +1,6 @@
 ---
-title: conform
-ms.date: 11/04/2016
+title: conform, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - conform_CPP
 - vc-pragma.conform
@@ -9,41 +9,42 @@ helpviewer_keywords:
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 816ff85bb19f549c6ea072073bd89fcd503545f2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366757"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220499"
 ---
-# <a name="conform"></a>conform
-**Spécifique à C++**
+# <a name="conform-pragma"></a>conform, pragma
 
-Spécifie le comportement au moment de l’exécution de la [/Zc : forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) option du compilateur.
+**C++Plus**
+
+Spécifie le comportement au moment de l’exécution de l’option du compilateur [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma conform(** *name* [**, show** ] [**,** { **on** | **off** } ] [ [**,** { **push** | **pop** } ] [**,** *identifier* ] ] **)**
+> **#pragma conforme (** *nom* [ **, affichage** ] [ **,** { **on** | **off** }] [[ **,** { **Push** | **pop** }] [ **,** *identificateur* [ **,** { **on** **off}** ]  |  ] ] **)**
 
 ### <a name="parameters"></a>Paramètres
 
-*name*<br/>
-Spécifie le nom de l'option du compilateur à modifier. Valide uniquement *nom* est `forScope`.
+*nomme*\
+Spécifie le nom de l'option du compilateur à modifier. Le seul *nom* valide est `forScope`.
 
-**show**<br/>
-(Facultatif) Provoque le paramètre actuel de *nom* (true ou false) à afficher au moyen d’un message d’avertissement pendant la compilation. Par exemple, `#pragma conform(forScope, show)`.
+**afficher**\
+Facultatif Entraîne l’affichage du paramètre actuel de *Name* (true ou false) au moyen d’un message d’avertissement lors de la compilation. Par exemple, `#pragma conform(forScope, show)`.
 
-**on**, **off**<br/>
-(Facultatif) Paramètre *nom* à **sur** permet la [/Zc : forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) option du compilateur. La valeur par défaut est **hors**.
+activé, **désactivé**\
+Facultatif Le paramètre name **sur on** active l’option du compilateur [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) . La valeur par défaut est **off**.
 
-**push**<br/>
-(Facultatif) Exécute un push de la valeur actuelle de *nom* dans la pile interne du compilateur. Si vous spécifiez *identificateur*, vous pouvez spécifier le **sur** ou **hors** valeur pour *nom* à la pile. Par exemple, `#pragma conform(forScope, push, myname, on)`.
+**souleve**\
+Facultatif Exécute un push de la valeur actuelle de *Name* dans la pile interne du compilateur. Si vous spécifiez *identifier*, vous pouvez spécifier la valeur **on** ou **off** pour que *Name* fasse l’objet d’un push dans la pile. Par exemple, `#pragma conform(forScope, push, myname, on)`.
 
-**pop**<br/>
-(Facultatif) Définit la valeur de *nom* à la valeur en haut de la pile interne du compilateur, puis dépile la pile. Si l’identificateur est spécifié avec **pop**, la pile est alors dépilée jusqu'à ce que qu’il trouve l’enregistrement avec *identificateur*, qui sera également dépilé ; la valeur actuelle pour *nom* dans l’enregistrement suivant sur la pile devient la nouvelle valeur pour *nom*. Si vous spécifiez **pop** avec un *identificateur* qui ne se trouve pas dans un enregistrement sur la pile, le **pop** est ignoré.
+**roulant**\
+Facultatif Affecte à la valeur de *Name* la valeur en haut de la pile interne du compilateur, puis dépile la pile. Si l’identificateur est spécifié avec la fonction **pop**, la pile est repilée jusqu’à ce qu’il trouve l’enregistrement avec l' *identificateur*, qui est également dépilé. la valeur actuelle de *Name* dans l’enregistrement suivant sur la pile devient la nouvelle valeur de *Name*. Si vous spécifiez **pop** avec un *identificateur* qui ne se trouve pas dans un enregistrement sur la pile, le **pop** est ignoré.
 
-*identifier*<br/>
-(Facultatif) Peut être inclus avec un **push** ou **pop** commande. Si *identificateur* est utilisé, puis un **sur** ou **hors** spécificateur peut également être utilisé.
+*identificateur*\
+Facultatif Peut être inclus avec une commande **Push** ou **pop** . Si l' *identificateur* est utilisé, un spécificateur **on** ou **off** peut également être utilisé.
 
 ## <a name="example"></a>Exemple
 
@@ -65,4 +66,4 @@ int main() {}
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

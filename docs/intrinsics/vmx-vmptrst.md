@@ -1,28 +1,28 @@
 ---
 title: __vmx_vmptrst
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmptrst
 helpviewer_keywords:
 - __vmx_vmptrst intrinsic
 - VMPTRST instruction
 ms.assetid: 8dc66e47-03a0-41b0-8e25-c1485f42817a
-ms.openlocfilehash: 5ef02dd4401e0c10a84be008d7cb25841e0359cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e559746be9e2a3fe5e81afa4d290265394db3e36
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389994"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219486"
 ---
-# <a name="vmxvmptrst"></a>__vmx_vmptrst
+# <a name="__vmx_vmptrst"></a>__vmx_vmptrst
 
 **Section spécifique à Microsoft**
 
-Stocke le pointeur vers la structure de contrôle de machine virtuelle actuelle (VMCS) à l’adresse spécifiée.
+Stocke le pointeur vers la structure de contrôle de machine virtuelle (VMCS) actuelle à l’adresse spécifiée.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __vmx_vmptrst(
    unsigned __int64 *VmcsPhysicalAddress
 );
@@ -30,14 +30,14 @@ void __vmx_vmptrst(
 
 ### <a name="parameters"></a>Paramètres
 
-*VmcsPhysicalAddress*<br/>
-[in] L’adresse où se trouve le pointeur de la VMCS actuels.
+*VmcsPhysicalAddress*\
+dans Adresse où le pointeur VMCS actuel est stocké.
 
 ## <a name="remarks"></a>Notes
 
-Le pointeur de la VMCS est une adresse physique 64 bits.
+Le pointeur VMCS est une adresse physique 64 bits.
 
-La fonction `__vmx_vmptrst` est équivalente à l’instruction machine `VMPTRST` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+La fonction `__vmx_vmptrst` est équivalente à l’instruction machine `VMPTRST` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document «Intel Virtualization Technical Specification for the IA-32 Intel architecture», document number est c97063-002, sur le site [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -45,11 +45,11 @@ La fonction `__vmx_vmptrst` est équivalente à l’instruction machine `VMPTRST
 |---------------|------------------|
 |`__vmx_vmptrst`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)

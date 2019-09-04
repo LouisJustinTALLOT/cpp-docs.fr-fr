@@ -1,19 +1,19 @@
 ---
 title: _umul128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __umul128
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-ms.openlocfilehash: afca1e62127ac2dbcfc407982dbe191d379b4acb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 205f0f7f9046ede624bb09e18d8ede32fadbc3de
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390098"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219692"
 ---
-# <a name="umul128"></a>_umul128
+# <a name="_umul128"></a>_umul128
 
 **Section spécifique à Microsoft**
 
@@ -21,7 +21,7 @@ Multiplie deux entiers non signés 64 bits passés comme les deux premiers argu
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned __int64 _umul128(
    unsigned __int64 Multiplier,
    unsigned __int64 Multiplicand,
@@ -29,16 +29,16 @@ unsigned __int64 _umul128(
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Multiplicateur*<br/>
-[in] Le premier entier de 64 bits à multiplier.
+*Multiple*\
+dans Premier entier 64 bits à multiplier.
 
-*Multiplicand*<br/>
-[in] Le second entier de 64 bits à multiplier.
+*Multiplicande*\
+dans Deuxième entier 64 bits à multiplier.
 
-*HighProduct*<br/>
-[out] 64 bits de poids fort du produit.
+*HighProduct*\
+à 64 bits de poids fort du produit.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -52,7 +52,7 @@ unsigned __int64 _umul128(
 
 ## <a name="example"></a>Exemple
 
-```
+```C
 // umul128.c
 // processor: x64
 
@@ -81,4 +81,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

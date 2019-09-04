@@ -1,28 +1,28 @@
 ---
 title: __vmx_vmptrld
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmptrld
 helpviewer_keywords:
 - __vmx_vmptrld intrinsic
 - VMPTRLD instruction
 ms.assetid: 95c9ec5b-1a81-41ba-983e-327bd6a65fcb
-ms.openlocfilehash: e3d552720d454a4f22af368616b3953452c6db0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79b5a8b34b652ae1f011e89c793a7157c9e435ee
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390033"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219497"
 ---
-# <a name="vmxvmptrld"></a>__vmx_vmptrld
+# <a name="__vmx_vmptrld"></a>__vmx_vmptrld
 
 **Section spécifique à Microsoft**
 
-Charge le pointeur à la structure de contrôle de machine virtuelle actuelle (VMCS) à partir de l’adresse spécifiée.
+Charge le pointeur vers la structure de contrôle de machine virtuelle (VMCS) actuelle à partir de l’adresse spécifiée.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 int __vmx_vmptrld(
    unsigned __int64 *VmcsPhysicalAddress
 );
@@ -30,25 +30,25 @@ int __vmx_vmptrld(
 
 ### <a name="parameters"></a>Paramètres
 
-*VmcsPhysicalAddress*<br/>
-[in] L’adresse où se trouve le pointeur de la VMCS.
+*VmcsPhysicalAddress*\
+dans Adresse où le pointeur VMCS est stocké.
 
 ## <a name="return-value"></a>Valeur de retour
 
-0<br/>
+entre
 L’opération a réussi.
 
-1<br/>
+1,0
 L’opération a échoué avec l’état étendu disponible dans le `VM-instruction error field` de la VMCS actuelle.
 
-2<br/>
+2
 L’opération a échoué sans état disponible.
 
 ## <a name="remarks"></a>Notes
 
-Le pointeur de la VMCS est une adresse physique 64 bits.
+Le pointeur VMCS est une adresse physique 64 bits.
 
-La fonction `__vmx_vmptrld` est équivalente à l’instruction machine `VMPTRLD` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+La fonction `__vmx_vmptrld` est équivalente à l’instruction machine `VMPTRLD` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document «Intel Virtualization Technical Specification for the IA-32 Intel architecture», document number est c97063-002, sur le site [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -56,11 +56,11 @@ La fonction `__vmx_vmptrld` est équivalente à l’instruction machine `VMPTRLD
 |---------------|------------------|
 |`__vmx_vmptrld`|X64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmptrst](../intrinsics/vmx-vmptrst.md)

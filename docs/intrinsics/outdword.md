@@ -1,6 +1,6 @@
 ---
 title: __outdword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outdword
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - outdword instruction
 - __outdword intrinsic
 ms.assetid: ed1e4994-a84b-4759-8bf9-cd48fb073f4d
-ms.openlocfilehash: 236c4812f62cb092876b400051248425ee1b13e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce1358e7cef0136ccf7d314038d06d271916e0bc
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263007"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221656"
 ---
-# <a name="outdword"></a>__outdword
+# <a name="__outdword"></a>__outdword
 
 **Section spécifique à Microsoft**
 
-Génère le `out` instruction pour envoyer un mot double `Data` le port de sortie `Port`.
+Génère l' `out` instruction pour envoyer des *données* de mot double vers le *port*du port.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __outdword(
    unsigned short Port,
    unsigned long Data
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Port*<br/>
-[in] Le port pour envoyer les données.
+*Importer*\
+dans Port auquel envoyer les données.
 
-*Données*<br/>
-[in] Le mot double à envoyer.
+*Métadonnée*\
+dans Mot double à envoyer.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -44,7 +44,7 @@ void __outdword(
 |---------------|------------------|
 |`__outdword`|x86, x64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
@@ -54,4 +54,4 @@ Cette routine est disponible uniquement en tant qu'intrinsèque.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

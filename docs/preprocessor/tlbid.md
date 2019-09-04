@@ -1,40 +1,38 @@
 ---
-title: tlbid
-ms.date: 10/18/2018
+title: TLBID (importer l’attribut
+ms.date: 08/29/2019
 f1_keywords:
 - tlbid
 helpviewer_keywords:
 - tlbid attribute
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
-ms.openlocfilehash: ae79ce9245bb1c0425c3e9b92dd27b52fa443dba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 364fb224b0f2769cb0933e71d18ff70768189328
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179605"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216533"
 ---
-# <a name="tlbid"></a>tlbid
+# <a name="tlbid-import-attribute"></a>TLBID (importer l’attribut
 
-**Spécifique à C++**
+**C++Plus**
 
 Permet de charger des bibliothèques autres que la bibliothèque de types principale.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-tlbid(number)
-```
+> **#import** *bibliothèque de types-dll* **TLBID ((** *nombre* **)**
 
 ### <a name="parameters"></a>Paramètres
 
-*number*<br/>
-Numéro de la bibliothèque de types dans `filename`.
+*certain*\
+Numéro de la bibliothèque de types dans le *type-library-dll*.
 
 ## <a name="remarks"></a>Notes
 
-Si plusieurs bibliothèques de types sont intégrées à une même DLL, il est possible de charger des bibliothèques autres que la bibliothèque de type principal à l’aide de **tlbid**.
+Si plusieurs bibliothèques de types sont générées dans une seule DLL, il est possible de charger des bibliothèques autres que la bibliothèque de types principale à l’aide de **TLBID (** .
 
-Exemple :
+Par exemple :
 
 ```cpp
 #import <MyResource.dll> tlbid(2)
@@ -46,9 +44,9 @@ Exemple :
 LoadTypeLib("MyResource.dll\\2");
 ```
 
-**FIN spécifique à C++**
+**Spécifique C++ à la fin**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import directive](../preprocessor/hash-import-directive-cpp.md)

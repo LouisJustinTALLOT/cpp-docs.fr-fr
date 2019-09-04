@@ -1,40 +1,38 @@
 ---
-title: rename_search_namespace
-ms.date: 10/18/2018
+title: rename_search_namespace importer l’attribut
+ms.date: 08/29/2019
 f1_keywords:
 - rename_search_namespace
 helpviewer_keywords:
 - rename_search_namespace attribute
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
-ms.openlocfilehash: ca5d24ca9cc12e9defaa395cf150bc3c04ee4439
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42c6edb6aa34b441db8041dd2974728c138b2c82
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179774"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216620"
 ---
-# <a name="renamesearchnamespace"></a>rename_search_namespace
+# <a name="rename_search_namespace-import-attribute"></a>rename_search_namespace importer l’attribut
 
-**Spécifique à C++**
+**C++Plus**
 
-A les mêmes fonctionnalités que le [rename_namespace](../preprocessor/rename-namespace.md) d’attribut, mais est utilisée sur les bibliothèques de types que vous utilisez le `#import` directive avec la [auto_search](../preprocessor/auto-search.md) attribut.
+A les mêmes fonctionnalités que l’attribut [rename_namespace](../preprocessor/rename-namespace.md) , mais est utilisé sur les bibliothèques de types où vous `#import` utilisez la directive avec l’attribut [auto_search](../preprocessor/auto-search.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-rename_search_namespace("NewName")
-```
+> **#import** *bibliothèque de types* **rename_search_namespace (** «*NewName*» **)**
 
 ### <a name="parameters"></a>Paramètres
 
-*NewName*<br/>
+*NewName*\
 Nom du nouvel espace de noms.
 
 ## <a name="remarks"></a>Notes
 
-**FIN spécifique à C++**
+**Spécifique C++ à la fin**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import directive](../preprocessor/hash-import-directive-cpp.md)

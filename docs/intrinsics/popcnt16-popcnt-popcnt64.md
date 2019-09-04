@@ -1,6 +1,6 @@
 ---
 title: __popcnt16, __popcnt, __popcnt64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __popcnt64
 - __popcnt
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: d6cc9a0ce784ab79f5e4225675a082fc55bd53e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e5ae7f897500775671f8bd2563028874579a627
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263215"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221357"
 ---
-# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
+# <a name="__popcnt16-__popcnt-__popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
 **Section spécifique à Microsoft**
 
-Compte le nombre de bits (peuplement) dans un 16, 32 ou entier non signé 64 bits.
+Compte le nombre de `1` bits (nombre de remplissage) dans un entier non signé 16, 32 ou 64 bits.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned short __popcnt16(
    unsigned short value
 );
@@ -38,34 +38,34 @@ unsigned __int64 __popcnt64(
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*value*<br/>
-[in] Le 16, 32 ou entier non signé 64 bits pour lequel nous voulons le volume de peuplement.
+*value*\
+dans Entier non signé 16, 32 ou 64 bits pour lequel nous souhaitons obtenir le nombre de remplissages.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le nombre de bits un dans le `value` paramètre.
+Nombre de `1` bits dans le paramètre de *valeur* .
 
 ## <a name="requirements"></a>Configuration requise
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
-|`__popcnt16`|Manipulation de bits avancés|
-|`__popcnt`|Manipulation de bits avancés|
-|`__popcnt64`|Manipulation de bits avancés en mode 64 bits.|
+|`__popcnt16`|Manipulation de bits avancée|
+|`__popcnt`|Manipulation de bits avancée|
+|`__popcnt64`|Manipulation de bits avancée en mode 64 bits.|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions intrinsèques génère la `popcnt` instruction. En mode 32 bits il n’existe aucune registres 64 bits à usage général, par conséquent, ne 64 bits `popcnt`.
+Chacun des intrinsèques génère l' `popcnt` instruction. En mode 32 bits, il n’existe aucun registre à usage général de 64 bits, donc 64 `popcnt` bits n’est pas pris en charge.
 
-Pour déterminer la prise en charge matérielle pour le `popcnt` instruction, appelez le `__cpuid` intrinsèque avec `InfoType=0x00000001` et vérifiez le bit 23 de `CPUInfo[2] (ECX)`. Ce bit est 1 si l’instruction est pris en charge et 0 dans le cas contraire. Si vous exécutez le code qui utilise cet intrinsèque sur du matériel qui ne prend pas en charge la `popcnt` instruction, les résultats sont imprévisibles.
+Pour déterminer la prise en charge `popcnt` matérielle de l’instruction `__cpuid` , appelez `InfoType=0x00000001` l’intrinsèque avec et vérifiez `CPUInfo[2] (ECX)`le bit 23 de. Ce bit est égal à 1 si l’instruction est prise en charge et 0 dans le cas contraire. Si vous exécutez du code qui utilise ces fonctions intrinsèques sur du matériel qui `popcnt` ne prend pas en charge l’instruction, les résultats sont imprévisibles.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 #include <iostream>
 #include <intrin.h>
 using namespace std;
@@ -101,8 +101,8 @@ __popcnt(0xffffffff) = 32
 
 **FIN de la section spécifique à Microsoft**
 
-Copyright 2007 par avancées Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.
+Parties Copyright 2007 par Advanced Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation de Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

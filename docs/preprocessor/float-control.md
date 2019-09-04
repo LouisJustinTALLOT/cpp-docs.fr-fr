@@ -1,6 +1,6 @@
 ---
-title: float_control
-ms.date: 11/04/2016
+title: float_control, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.float_control
 - float_control_CPP
@@ -8,39 +8,41 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 8a7829252cebb726363c67c990a94d08b0d6467a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa8cdc07953405175c1753791ab53214d73ba516
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389214"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218579"
 ---
-# <a name="floatcontrol"></a>float_control
+# <a name="float_control-pragma"></a>float_control, pragma
 
 Spécifie le comportement de virgule flottante d'une fonction.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma float_control** [ **(** [ *value* **,** *setting* [ **, push** ] ] | [ **push** | **pop** ] **)** ]
+> **#pragma float_control**\
+> **#pragma float_control (** { **precise** |  |  Except}, {on off} [, Push]) | \
+> **#pragma float_control (** { **Push** | **pop** } **)**
 
 ## <a name="options"></a>Options
 
-*value*, *setting* [, **push**]<br/>
-Spécifie le comportement de virgule flottante. *valeur* peut être **précise**, **strict**, ou **sauf**. Pour plus d’informations, consultez l’article [/fp (Spécifier le comportement de virgule flottante)](../build/reference/fp-specify-floating-point-behavior.md). Le *paramètre* peut être **sur** ou **hors**.
+**strict strict** **except:** OFF, push |  |  | \
+Spécifie le comportement à virgule flottante, qui peut être **précis**, **strict**ou **except**. Pour plus d’informations, consultez l’article [/fp (Spécifier le comportement de virgule flottante)](../build/reference/fp-specify-floating-point-behavior.md). Le paramètre peut être **activé** ou **désactivé**.
 
-Si *valeur* est **strict**, les paramètres des options **strict** et **sauf** sont spécifiées par *paramètre* . **à l’exception** peut uniquement être définie sur **sur** lorsque **précise** ou **strict** est également défini sur **sur**.
+Lorsque la valeur est **strict**, les paramètres de **strict** et **except** sont spécifiés par le paramètre **on** ou **off** . **except** ne peut avoir la valeur **on** que si precise ou **strict** est également défini sur **on**.
 
-Si le paramètre facultatif **push** jeton est ajouté, actuel définissant pour *valeur* est envoyée sur à la pile interne du compilateur.
+Si le jeton **Push** facultatif est ajouté, le paramètre actuel pour **float_control** fait l’objet d’un push sur la pile interne du compilateur.
 
-**push**<br/>
-Exécute un push du **float_control** définition sur la pile interne du compilateur
+**souleve**\
+Exécute un push du paramètre **float_control** actuel sur la pile interne du compilateur
 
-**pop**<br/>
-Supprime le **float_control** définition à partir du haut de la pile interne du compilateur et qui rend la nouvelle **float_control** paramètre.
+**roulant**\
+Supprime le paramètre **float_control** du haut de la pile interne du compilateur et en fait le nouveau paramètre **float_control** .
 
 ## <a name="remarks"></a>Notes
 
-Vous ne pouvez pas utiliser **float_control** pour activer **précise** désactivé lorsque **sauf** se trouve sur. De même, **précise** ne peut pas être mis hors tension lorsque [fenv_access](../preprocessor/fenv-access.md) se trouve sur. Pour passer d’un modèle strict à un modèle rapide à l’aide de la **float_control** pragma, utilisez le code suivant :
+Vous ne pouvez pas utiliser **float_control** pour désactiver la **précision** lorsque **except** est activé. De même, la **précision** ne peut pas être désactivée lorsque [fenv_access](../preprocessor/fenv-access.md) est activé. Pour passer du modèle strict à un modèle rapide à l’aide du pragma **float_control** , utilisez le code suivant:
 
 ```cpp
 #pragma float_control(except, off)
@@ -48,7 +50,7 @@ Vous ne pouvez pas utiliser **float_control** pour activer **précise** désacti
 #pragma float_control(precise, off)
 ```
 
-Pour passer d’un modèle rapide à un modèle strict avec le **float_control** pragma, utilisez le code suivant :
+Pour passer du modèle Fast à un modèle strict avec le pragma **float_control** , utilisez le code suivant:
 
 ```cpp
 #pragma float_control(precise, on)
@@ -56,7 +58,7 @@ Pour passer d’un modèle rapide à un modèle strict avec le **float_control**
 #pragma float_control(except, on)
 ```
 
-Si aucune option est spécifiée, **float_control** n’a aucun effet.
+Si aucune option n’est spécifiée, **float_control** n’a aucun effet.
 
 Les autres pragmas à virgule flottante incluent :
 
@@ -66,7 +68,7 @@ Les autres pragmas à virgule flottante incluent :
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment intercepter une exception de virgule flottante de dépassement de capacité en utilisant le pragma **float_control**.
+L’exemple suivant montre comment intercepter une exception à virgule flottante de dépassement de capacité à l’aide de pragma **float_control**.
 
 ```cpp
 // pragma_directive_float_control.cpp
@@ -108,4 +110,4 @@ Pass
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

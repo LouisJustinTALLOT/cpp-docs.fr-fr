@@ -1,6 +1,6 @@
 ---
 title: __readfsbyte, __readfsdword, __readfsqword, __readfsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readfsword
 - __readfsdword
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-ms.openlocfilehash: f291747d1f46ebdf3ea1f71cd9ab7e074058201d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30040b33fe8c686bc0cda585c525ae2926cdf314
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262731"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222362"
 ---
-# <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
+# <a name="__readfsbyte-__readfsdword-__readfsqword-__readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 
 **Section spécifique à Microsoft**
 
-Lire la mémoire à partir d’un emplacement spécifié par un décalage par rapport au début du segment FS.
+Lit la mémoire à partir d’un emplacement spécifié par un décalage par rapport au début du segment FS.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned char __readfsbyte(
    unsigned long Offset
 );
@@ -46,14 +46,14 @@ unsigned __int64 __readfsqword(
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*Offset*<br/>
-[in] Le décalage à partir du début de `FS` pour lire à partir de.
+*Décalage*\
+dans Offset à partir du début de `FS` à lire à partir de.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le contenu de la mémoire de l’octet, word, mot double ou mot quadruple (comme indiqué par le nom de la fonction appelée) à l’emplacement `FS:[Offset]`.
+Contenu de la mémoire de l’octet, du mot, du mot double ou de mot quadruple (comme indiqué par le nom de la fonction `FS:[Offset]`appelée) à l’emplacement.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -64,15 +64,15 @@ Le contenu de la mémoire de l’octet, word, mot double ou mot quadruple (comme
 |`__readfsqword`|x86|
 |`__readfsword`|x86|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-Ces routines sont disponibles uniquement sous forme de fonctions intrinsèques.
+Ces routines sont disponibles uniquement comme intrinsèques.
 
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

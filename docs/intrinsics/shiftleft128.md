@@ -1,19 +1,19 @@
 ---
 title: __shiftleft128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __shiftleft128
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 5fcb797694c7a45dc4f2113f3d2ed4a2f578c894
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5da9ac81cedbdd24e10eb438892f88510c32ca24
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390410"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218002"
 ---
-# <a name="shiftleft128"></a>__shiftleft128
+# <a name="__shiftleft128"></a>__shiftleft128
 
 **Section spécifique à Microsoft**
 
@@ -21,7 +21,7 @@ Décale une quantité de 128 bits, représentée par deux quantités de 64 bit
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned __int64 __shiftleft128(
    unsigned __int64 LowPart,
    unsigned __int64 HighPart,
@@ -29,16 +29,16 @@ unsigned __int64 __shiftleft128(
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*LowPart*<br/>
-[in] 64 bits de poids faibles de la quantité de 128 bits à décaler.
+*LowPart*\
+dans 64 bits de poids faible de la quantité 128 bits à décaler.
 
-*HighPart*<br/>
-[in] 64 bits de poids fort de la quantité de 128 bits à décaler.
+*HighPart*\
+dans 64 bits de poids fort de la quantité 128 bits à décaler.
 
-*Maj*<br/>
-[in] Le nombre de bits de décalage.
+*Majuscule*\
+dans Nombre de bits à décaler.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -50,15 +50,15 @@ unsigned __int64 __shiftleft128(
 |---------------|------------------|
 |`__shiftleft128`|X64|
 
-**Fichier d’en-tête** \<intrin.h >
+**Fichier d’en-tête** \<> Intro. h
 
 ## <a name="remarks"></a>Notes
 
-La valeur `Shift` est toujours modulo 64 pour que, par exemple, si vous appelez `__shiftleft128(1, 0, 64)`, la fonction décale les `0` bits de la partie inférieure vers la gauche et renvoie une partie élevée de `0` et non `1` comme on pourrait s'y attendre.
+La valeur de *décalage* est toujours modulo 64 afin que, par exemple, si vous `__shiftleft128(1, 0, 64)`appelez, la fonction décale les bits `0` de la partie inférieure vers la gauche et `0` retourne une `1` partie haute de et non comme cela peut être prévu.
 
 ## <a name="example"></a>Exemple
 
-```
+```C
 // shiftleft128.c
 // processor: IPF, x64
 #include <stdio.h>
@@ -98,5 +98,5 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[__shiftright128](../intrinsics/shiftright128.md)<br/>
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[__shiftright128](../intrinsics/shiftright128.md)\
+[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)
