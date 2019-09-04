@@ -1,18 +1,18 @@
 ---
-title: Vue d’ensemble des modules dansC++
+title: Vue d'ensemble des modules dans C++
 ms.date: 07/23/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: Les modules en C++ 20 fournissent une alternative moderne aux fichiers d’en-tête.
-ms.openlocfilehash: 84683d9c4b0e1a514b17883b89c58488b9879edb
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 17495aa3e295b26fcfa5c489ff6793bb75d13d68
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537805"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273671"
 ---
-# <a name="overview-of-modules-in-c"></a>Vue d’ensemble des modules dansC++
+# <a name="overview-of-modules-in-c"></a>Vue d'ensemble des modules dans C++
 
 C++ 20 introduit des *modules*, une solution moderne pour la composante C++ des bibliothèques et des programmes. Un module est un ensemble de fichiers de code source qui sont compilés indépendamment des [unités de traduction](https://wikipedia.org/wiki/Translation_unit_(programming)) qui les importent. Les modules éliminent ou réduisent beaucoup les problèmes associés à l’utilisation des fichiers d’en-tête, et peuvent également réduire les délais de compilation. Les macros, les directives de préprocesseur et les noms non exportés déclarés dans un module ne sont pas visibles et, par conséquent, n’ont aucun effet sur la compilation de l’unité de traduction qui importe le module. Vous pouvez importer des modules dans n’importe quel ordre, sans vous soucier des redéfinitions de macros. Les déclarations de l’unité de traduction d’importation ne participent pas à la résolution de surcharge ou à la recherche de nom dans le module importé. Une fois qu’un module est compilé une seule fois, les résultats sont stockés dans un fichier binaire qui décrit tous les types, fonctions et modèles exportés. Ce fichier peut être traité beaucoup plus rapidement qu’un fichier d’en-tête et peut être réutilisé par le compilateur chaque fois que le module est importé dans un projet.
 
@@ -20,13 +20,13 @@ Les modules peuvent être utilisés côte à côte avec des fichiers d’en-têt
 
 ## <a name="enable-modules-in-the-microsoft-c-compiler"></a>Activer les modules dans le C++ compilateur Microsoft
 
-Depuis Visual Studio 2019 version 16,2, les modules ne sont pas entièrement implémentés dans C++ le compilateur Microsoft. Vous pouvez utiliser la fonctionnalité Modules pour créer des modules à partition unique et importer les modules de bibliothèque standard fournis par Microsoft. Pour activer la prise en charge des modules `/experimental:modules` , `/std:c++latest`compilez avec et. Dans un projet Visual Studio, cliquez avec le bouton droit sur le nœud du projet dans **Explorateur de solutions** , puis choisissez **Propriétés**. Définissez la liste déroulante **configuration** sur **toutes les configurations**, puis choisissez **Propriétés** > de configuration**C++C/**  >  > langue **C++ activer les modules ( expérimental)** .
+Depuis Visual Studio 2019 version 16,2, les modules ne sont pas entièrement implémentés dans C++ le compilateur Microsoft. Vous pouvez utiliser la fonctionnalité Modules pour créer des modules à partition unique et importer les modules de bibliothèque standard fournis par Microsoft. Pour activer la prise en charge des modules, compilez avec [/experimental : module](../build/reference/experimental-module.md) et [/std : c + + latest](../build/reference/std-specify-language-standard-version.md). Dans un projet Visual Studio, cliquez avec le bouton droit sur le nœud du projet dans **Explorateur de solutions** , puis choisissez **Propriétés**. Définissez la liste déroulante **configuration** sur **toutes les configurations**, puis choisissez **Propriétés** > de configuration**C++C/**  >  > langue **C++ activer les modules ( expérimental)** .
 
 Un module et le code qui le consomme doivent être compilés avec les mêmes options de compilateur.
 
 ## <a name="consume-the-c-standard-library-as-modules"></a>Utiliser la C++ bibliothèque standard en tant que modules
 
-Bien que cela ne soit pas spécifié par la norme C++ 20, Microsoft permet C++ l’importation de l’implémentation de la bibliothèque standard en tant que modules. En important la C++ bibliothèque standard sous forme de modules plutôt que de la #including à travers des fichiers d’en-tête, vous pouvez potentiellement accélérer la compilation en fonction de la taille de votre projet. La bibliothèque est composant dans les modules suivants:
+Bien que cela ne soit pas spécifié par la norme C++ 20, Microsoft permet C++ l’importation de l’implémentation de la bibliothèque standard en tant que modules. En important la C++ bibliothèque standard sous forme de modules plutôt que de la #including à travers des fichiers d’en-tête, vous pouvez potentiellement accélérer la compilation en fonction de la taille de votre projet. La bibliothèque est composant dans les modules suivants :
 
 - STD. Regex fournit le contenu de l' \<en-tête Regex >
 - le système de fichiers STD fournit le contenu \<du système de fichiers d’en-tête >
@@ -45,7 +45,7 @@ Pour utiliser le module Microsoft standard Library, vous devez compiler votre pr
 
 ## <a name="basic-example"></a>Exemple de base
 
-L’exemple suivant montre une définition de module simple dans un fichier source appelé **foo. IXX**. L’extension **. IXX** est requise pour les fichiers d’interface de module dans Visual Studio. Dans cet exemple, le fichier d’interface contient la définition de fonction ainsi que la déclaration. Toutefois, les définitions peuvent également être placées dans un ou plusieurs fichiers distincts (comme indiqué dans un exemple ultérieur). L’instruction **foo du module d’exportation** indique que ce fichier est l’interface principale d’un `Foo`module appelé. Le  modificateur d’exportation `f()` sur indique que cette fonction sera visible quand `Foo` est importé par un autre programme ou module. Notez que le module référence un espace `Bar`de noms.
+L’exemple suivant montre une définition de module simple dans un fichier source appelé **foo. IXX**. L’extension **. IXX** est requise pour les fichiers d’interface de module dans Visual Studio. Dans cet exemple, le fichier d’interface contient la définition de fonction ainsi que la déclaration. Toutefois, les définitions peuvent également être placées dans un ou plusieurs fichiers distincts (comme indiqué dans un exemple ultérieur). L’instruction **foo du module d’exportation** indique que ce fichier est l’interface principale d’un `Foo`module appelé. Le modificateur d’exportation `f()` sur indique que cette fonction sera visible quand `Foo` est importé par un autre programme ou module. Notez que le module référence un espace `Bar`de noms.
 
 ```cpp
 export module Foo;
@@ -101,26 +101,26 @@ Lorsque vous effectuez une recherche dépendante d’un argument pour des résol
 > [!NOTE]
 > Cette section est fournie à des fins d’exhaustivité. Les partitions ne sont pas encore implémentées dans C++ le compilateur Microsoft.
 
-Un module peut être mis en composant dans des *partitions*, chacune contenant un fichier d’interface et zéro, un ou plusieurs fichiers d’implémentation. Une partition de module est similaire à un module, à ceci près qu’elle partage la propriété de toutes les déclarations dans le module entier. Tous les noms exportés par les fichiers d’interface de partition sont importés et réexportés par le fichier d’interface principal. Le nom d’une partition doit commencer par le nom du module suivi d’un signe deux-points. Les déclarations dans l’une des partitions sont visibles dans l’ensemble du module. Aucune précaution spéciale n’est nécessaire pour éviter les erreurs de règle de ODR. Vous pouvez déclarer un nom (fonction, classe, etc.) dans une partition et le définir dans une autre. Un fichier d’implémentation de partition commence comme suit:
+Un module peut être mis en composant dans des *partitions*, chacune contenant un fichier d’interface et zéro, un ou plusieurs fichiers d’implémentation. Une partition de module est similaire à un module, à ceci près qu’elle partage la propriété de toutes les déclarations dans le module entier. Tous les noms exportés par les fichiers d’interface de partition sont importés et réexportés par le fichier d’interface principal. Le nom d’une partition doit commencer par le nom du module suivi d’un signe deux-points. Les déclarations dans l’une des partitions sont visibles dans l’ensemble du module. Aucune précaution spéciale n’est nécessaire pour éviter les erreurs de règle de ODR. Vous pouvez déclarer un nom (fonction, classe, etc.) dans une partition et le définir dans une autre. Un fichier d’implémentation de partition commence comme suit :
 
 ```cpp
 module Foo:part1
 ```
 
-et le fichier d’interface de partition commence comme suit:
+et le fichier d’interface de partition commence comme suit :
 
 ```cpp
 export module Foo:part1
 ```
 
-Pour accéder aux déclarations d’une autre partition, une partition doit l’importer, mais elle ne peut utiliser que le nom de la partition, pas le nom du module:
+Pour accéder aux déclarations d’une autre partition, une partition doit l’importer, mais elle ne peut utiliser que le nom de la partition, pas le nom du module :
 
 ```cpp
 module Foo:part2;
 import :part1;
 ```
 
-L’unité d’interface principale doit importer et réexporter tous les fichiers de partition d’interface du module comme suit:
+L’unité d’interface principale doit importer et réexporter tous les fichiers de partition d’interface du module comme suit :
 
 ```cpp
 export import :part1
@@ -146,7 +146,7 @@ import MyModuleB;
 //... rest of file
 ```
 
-Vous pouvez utiliser un fichier d’en-tête traditionnel pour contrôler les modules qui sont importés:
+Vous pouvez utiliser un fichier d’en-tête traditionnel pour contrôler les modules qui sont importés :
 
 ```cpp
 // MyProgram.h

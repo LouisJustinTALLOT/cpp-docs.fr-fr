@@ -1,34 +1,52 @@
 ---
 title: Erreur irrécupérable C1010
-ms.date: 08/19/2019
+ms.date: 09/03/2019
 f1_keywords:
 - C1010
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 35b0f60f7eb3be887598e7ffaf3e3eae74aefcff
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 0315af63e9fdbbb0b136a85a23cb28936dee6836
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630788"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273563"
 ---
 # <a name="fatal-error-c1010"></a>Erreur irrécupérable C1010
 
-fin de fichier inattendue lors de la recherche d'un en-tête précompilé. Avez-vous oublié d’ajouter' #include Name’à votre source?
+> fin de fichier inattendue lors de la recherche d'un en-tête précompilé. Avez-vous oublié d’ajouter' #include *Name*'à votre source ?
 
-Un fichier include spécifié avec [/Yu](../../build/reference/yu-use-precompiled-header-file.md) n’est pas listé dans le fichier source.  Cette option est activée par défaut dans la plupart des C++ types de projets Visual Studio et *pch. h* (*stdafx. h* dans Visual Studio 2017 et versions antérieures) est le fichier include par défaut spécifié par cette option.
+## <a name="remarks"></a>Notes
 
-Dans l’environnement Visual Studio, utilisez l’une des méthodes suivantes pour résoudre cette erreur:
+Un fichier include spécifié par [/Yu](../../build/reference/yu-use-precompiled-header-file.md) n’est pas listé dans le fichier source. Cette option est activée par défaut dans de nombreux types C++ de projets Visual Studio. Le fichier include par défaut spécifié par cette option est *pch. h*ou *stdafx. h* dans Visual Studio 2017 et versions antérieures.
 
-- Si vous n’utilisez pas d’en-têtes précompilés dans votre projet, affectez à la propriété **créer/utiliser un en-tête précompilé** des fichiers sources la valeur **n’utilisant pas les en-têtes**précompilés. Pour définir cette option du compilateur, procédez comme suit:
+Dans l’environnement Visual Studio, utilisez l’une des méthodes suivantes pour résoudre cette erreur :
 
-   1. Dans le volet Explorateur de solutions du projet, cliquez avec le bouton droit sur le nom du projet, puis cliquez sur **Propriétés**.
+- Vérifiez que vous n’avez pas supprimé par inadvertance, renommé ou supprimé le fichier d’en-tête *pch. h* ou le fichier source *pch. cpp* du projet actuel. (Dans les projets plus anciens, ces fichiers peuvent être nommés *stdafx. h* et *stdafx. cpp*.)
 
-   1. Dans le volet gauche, cliquez sur le dossier **C/C++**  .
+- Assurez-vous que le fichier d’en-tête *pch. h* ou *stdafx. h* est inclus avant toute autre directive de préprocesseur ou de code dans vos fichiers sources. (Dans Visual Studio, ce fichier d’en-tête est spécifié par la propriété du projet **fichier d’en-tête précompilé** .)
 
-   1. Cliquez sur le nœud **en-têtes** précompilés.
+- Vous pouvez désactiver l’utilisation d’en-tête précompilé. Si vous désactivez les en-têtes précompilés, cela peut avoir un impact sérieux sur les performances de génération.
 
-   1. Dans le volet droit, cliquez sur **créer/utiliser un en-tête précompilé**, puis sur **ne pas utiliser les en-têtes**précompilés.
+### <a name="to-turn-off-precompiled-headers"></a>Pour désactiver les en-têtes précompilés
 
-- Assurez-vous que vous n’avez pas supprimé par inadvertance, renommé ou supprimé le fichier d’en-tête (par défaut, stdafx. h) du projet actuel. Ce fichier doit également être inclus avant tout autre code dans vos fichiers sources à l’aide de **#include «stdafx. h»** . (Ce fichier d’en-tête est spécifié en tant que propriété de projet **créer/utiliser PCH par fichier** )
+Pour désactiver l’utilisation d’en-têtes précompilés dans un projet, procédez comme suit :
+
+1. Dans la fenêtre **Explorateur de solutions** , cliquez avec le bouton droit sur le nom du projet, puis choisissez **Propriétés** pour ouvrir la boîte de dialogue **pages de propriétés** du projet.
+
+1. Dans la liste déroulante **configuration** , sélectionnez **toutes les configurations**.
+
+1. Sélectionnez la page de propriétés **Propriétés** > de > configuration**C/C++** **en-têtes précompilés** .
+
+1. Dans la liste propriété, sélectionnez la liste déroulante pour la propriété **en-tête précompilé** , puis choisissez **ne pas utiliser les en-têtes précompilés**. Choisissez **OK** pour enregistrer vos modifications.
+
+1. Dans la fenêtre **Explorateur de solutions** , cliquez avec le bouton droit sur le fichier source *pch. cpp* dans votre projet. (Dans les projets plus anciens, le fichier peut être nommé *stdafx. cpp*.) Choisissez **exclure du projet** pour le supprimer de la Build.
+
+1. Utilisez la commande de menu **générer** > une**solution propre** pour chaque configuration que vous générez pour supprimer tous les fichiers *PROJECT_NAME. pch* dans vos répertoires de build intermédiaires.
+
+## <a name="see-also"></a>Voir aussi
+
+[Fichiers d’en-tête précompilés](../../build/creating-precompiled-header-files.md)\
+[/YC (créer un fichier d’en-tête précompilé)](../../build/reference/yc-create-precompiled-header-file.md)\
+[/Yu (utiliser un fichier d’en-tête précompilé)](../../build/reference/yu-use-precompiled-header-file.md)
