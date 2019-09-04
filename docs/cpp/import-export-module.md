@@ -1,5 +1,5 @@
 ---
-title: module, importer, exporter
+title: module, importation, exportation
 ms.date: 07/15/2019
 f1_keywords:
 - module_cpp
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - modules [C++], import
 - modules [C++], export
 description: Utilisez l’instruction import pour accéder aux types et aux fonctions définis dans le module spécifié.
-ms.openlocfilehash: fbb9c45ec816c859edb4df38ad67dc7778247e87
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: ee1d50a76a3304359c0771aa0174968439f5faa4
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537785"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273623"
 ---
-# <a name="module-import-export"></a>module, importer, exporter
+# <a name="module-import-export"></a>module, importation, exportation
 
-Les mots clés **module**, **Import**et **Export** sont disponibles en c++ 20 et nécessitent le `/experimental:modules` commutateur du compilateur avec `/std:c++latest`. Pour plus d’informations, consultez [vue d’ensemble C++des modules dans ](modules-cpp.md).
+Les mots clés **module**, **Import**et **Export** sont disponibles en c++ 20 et nécessitent le commutateur [/experimental : module](../build/reference/experimental-module.md) compiler avec [/std : C + + latest](../build/reference/std-specify-language-standard-version.md). Pour plus d’informations, consultez [vue d’ensemble C++des modules dans ](modules-cpp.md).
 
 ## <a name="module"></a>module
 
@@ -37,7 +37,7 @@ Utilisez l’instruction **Export module** pour le fichier d’interface princip
 export module ModuleA;
 ```
 
-Dans un fichier d’interface, utilisez le modificateur **Export** sur les noms destinés à faire partie de l’interface publique:
+Dans un fichier d’interface, utilisez le modificateur **Export** sur les noms destinés à faire partie de l’interface publique :
 
 ```cpp
 // ModuleA.ixx
@@ -52,7 +52,7 @@ namespace Bar
 }
 ```
 
-Les noms non exportés ne sont pas visibles pour le code qui importe le module:
+Les noms non exportés ne sont pas visibles pour le code qui importe le module :
 
 ```cpp
 //MyProgram.cpp
@@ -87,4 +87,5 @@ class Baz
 ```
 
 ## <a name="see-also"></a>Voir aussi
+
 [Vue d’ensemble des modules dansC++](modules-cpp.md)

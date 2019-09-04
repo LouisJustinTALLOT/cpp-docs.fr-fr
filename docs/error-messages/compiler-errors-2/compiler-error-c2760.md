@@ -6,22 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2760
 ms.assetid: 585757fd-d519-43f3-94e5-50316ac8b90b
-ms.openlocfilehash: 24c33d90c0f91aa3c4b01142902afc4333c1c732
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5680de2fe0364d7cdc5e7ef017bd298423ea4c21
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257788"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273669"
 ---
 # <a name="compiler-error-c2760"></a>Erreur du compilateur C2760
 
-Erreur de syntaxe : attendu 'nom1' non 'nom2'
+> erreur de syntaxe : '*nom1*'non'*nom2*'attendu
 
-Un opérateur de cast est utilisé avec un opérateur non valide.
+## <a name="remarks"></a>Notes
 
-L’exemple suivant génère l’erreur C2760 :
+Il existe plusieurs façons de provoquer cette erreur. En règle générale, elle est provoquée par une séquence de jeton que le compilateur ne peut pas avoir de sens.
 
-```
+## <a name="example"></a>Exemples
+
+Dans cet exemple, un opérateur de cast est utilisé avec un opérateur non valide.
+
+```cpp
 // C2760.cpp
 class B {};
 class D : public B {};
