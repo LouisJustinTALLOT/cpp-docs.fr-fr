@@ -58,6 +58,8 @@
               href: build/project-property-inheritance.md
             - name: Modifier les propriétés et les cibles sans changer le fichier projet
               href: build/modify-project-properties-without-changing-project-file.md
+        - name: Clang/LLVM dans les projets Visual Studio (MSBuild)
+          href: build/clang-support-msbuild.md
         - name: Composants et bibliothèques de référence au moment de la build
           href: build/adding-references-in-visual-cpp-projects.md
         - name: Organiser les fichiers de sortie des projets
@@ -4794,7 +4796,7 @@
                       href: preprocessor/null-directive.md
                     - name: '#undef, directive (C/C++)'
                       href: preprocessor/hash-undef-directive-c-cpp.md
-                    - name: '#using, directive (C++)'
+                    - name: '#using, directive (C++/CLI)'
                       href: preprocessor/hash-using-directive-cpp.md
                 - name: Opérateurs de préprocesseur
                   expanded: false
@@ -4805,7 +4807,7 @@
                       href: preprocessor/stringizing-operator-hash.md
                     - name: 'Opérateur charizing (#@)'
                       href: preprocessor/charizing-operator-hash-at.md
-                    - name: 'Opérateurs de collage de jeton (##)'
+                    - name: 'Opérateur de collage de jeton (##)'
                       href: preprocessor/token-pasting-operator-hash-hash.md
                 - name: Macros de préprocesseur (C/C++)
                   expanded: false
@@ -4829,10 +4831,10 @@
                   href: preprocessor/conventions.md
                 - name: Grammaire du préprocesseur
                   href: preprocessor/preprocessor-grammar.md
-            - name: Directives pragma et mot clé _Pragma
+            - name: Directives Pragma et mot clé __pragma
               expanded: false
               items:
-                - name: Directives pragma et mot clé _Pragma
+                - name: Directives Pragma et mot clé __pragma
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
                 - name: 'alloc_text, pragma'
                   href: preprocessor/alloc-text.md
