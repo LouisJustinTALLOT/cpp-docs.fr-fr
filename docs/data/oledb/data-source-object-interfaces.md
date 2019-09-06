@@ -9,30 +9,30 @@ helpviewer_keywords:
 - OLE DB provider templates [C++], object interfaces
 - OLE DB [C++], interfaces
 ms.assetid: 929e100c-c08c-4b64-8437-d8d1357226f6
-ms.openlocfilehash: fc8d2f5edf854766dcb5dcc8ed6d57a849b8f2a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a615694a9db75cdaf3b187cf6d29248bd26ef978
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176016"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311802"
 ---
 # <a name="data-source-object-interfaces"></a>Interfaces de l'objet source de données
 
-Le tableau suivant montre les interfaces obligatoires et facultatives définies par OLE DB pour un objet de source de données.
+Le tableau suivant indique les interfaces obligatoires et facultatives définies par OLE DB pour un objet source de données.
 
-|Interface|Obligatoire ?|Implémentée par les modèles OLE DB ?|
+|Interface|Requis ?|Implémenté par OLE DB modèles ?|
 |---------------|---------------|--------------------------------------|
 |`IDBCreateSession`|Obligatoire|Oui|
 |`IDBInitialize`|Obligatoire|Oui|
 |`IDBProperties`|Obligatoire|Oui|
-|[IPersist](/windows/desktop/api/objidl/nn-objidl-ipersist)|Obligatoire|Oui|
-|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Facultatif|Non|
+|[IPersist](/windows/win32/api/objidl/nn-objidl-ipersist)|Obligatoire|Oui|
+|[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Facultatif|Non|
 |`IDBDataSourceAdmin`|Facultatif|Non|
 |`IDBInfo`|Facultatif|Non|
-|[IPersistFile](/windows/desktop/api/objidl/nn-objidl-ipersistfile)|Facultatif|Non|
+|[IPersistFile](/windows/win32/api/objidl/nn-objidl-ipersistfile)|Facultatif|Non|
 |`ISupportErrorInfo`|Facultatif|Non|
 
-La source de données objet implémente le `IDBProperties`, `IDBInitialize`, et `IDBCreateSession` interfaces via l’héritage. Vous pouvez choisir de prendre en charge des fonctionnalités supplémentaires en héritant ou non à partir d’une de ces classes d’implémentation. Si vous souhaitez prendre en charge la `IDBDataSourceAdmin` interface, vous devez hériter de la `IDBDataSourceAdminImpl` classe.
+L’objet de source de données implémente les `IDBProperties`interfaces `IDBCreateSession` , `IDBInitialize`et via l’héritage. Vous pouvez choisir de prendre en charge des fonctionnalités supplémentaires en héritant ou n’héritant pas de l’une de ces classes d’implémentation. Si vous souhaitez prendre en charge `IDBDataSourceAdmin` l’interface, vous devez hériter `IDBDataSourceAdminImpl` de la classe.
 
 ## <a name="see-also"></a>Voir aussi
 

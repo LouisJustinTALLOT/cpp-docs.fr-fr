@@ -8,12 +8,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: eb9b3907008147cb21f04aec5f42e4896fa35b3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 37406060c3569c417c14bcc98561f8f52a7c6201
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516474"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "70311946"
 ---
 # <a name="partial--ccli-and-ccx"></a>partiel (C++/CLI et C++/CX)
 
@@ -49,7 +49,7 @@ Un mot clé qui déclare une classe ou un struct pris en charge par Windows Runt
 *identifier*<br/>
 Le nom du type défini.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Une classe partielle prend en charge les scénarios dans lesquels vous modifiez une partie d’une définition de classe dans un fichier, et un logiciel de génération de code automatique, par exemple le concepteur XAML, modifie le code de la même classe dans un autre fichier. L’utilisation d’une classe partielle vous permet d’empêcher le générateur de code automatique de remplacer votre code. Dans un projet Visual Studio, le modificateur **partial** est appliqué automatiquement au fichier généré.
 
@@ -67,9 +67,9 @@ Modèles : Une classe partielle ne peut pas être un modèle.
 
 Génériques : Une classe partielle peut être générique si la définition complète peut être générique. Mais toutes les classes partielles et complètes doivent avoir exactement les mêmes paramètres génériques, y compris les noms de paramètres formels.
 
-Pour plus d’informations sur l’utilisation du mot clé **partial**, consultez [Classes partielles (C++/CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023).
+Pour plus d’informations sur l’utilisation du mot clé **partial**, consultez [Classes partielles (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/ZW`
 
@@ -79,4 +79,4 @@ Option du compilateur : `/ZW`
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classes partielles (C++/CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)
+[Classes partielles (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023)

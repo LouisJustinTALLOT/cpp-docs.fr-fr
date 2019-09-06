@@ -6,16 +6,16 @@ helpviewer_keywords:
 - maps, property
 - property maps
 ms.assetid: 44abde56-90ad-4612-854e-d2fa5426fa80
-ms.openlocfilehash: 9df98dc85c9242693319542cea0730341d87a052
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79a65290c24ab016d9f81b54b9b7720d5c4ff352
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284031"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311641"
 ---
 # <a name="property-maps"></a>Mappages des propriétés
 
-Avec la session, un ensemble de lignes et un objet de commande facultatifs, chaque fournisseur prend en charge une ou plusieurs propriétés. Ces propriétés sont définies dans les mappages de propriété stockés dans les fichiers d’en-tête créés par le **Assistant fournisseur OLE DB**. Chaque fichier d’en-tête contient un mappage pour les propriétés dans le groupe de propriétés OLE DB définis pour l’ou les objets définis dans ce fichier. Le fichier d’en-tête qui contient l’objet de source de données contient également le mappage des propriétés pour le [propriétés DataSource](https://msdn.microsoft.com/library/ms724188). `Session.h` contient le mappage des propriétés pour le [propriétés de la Session](/previous-versions/windows/desktop/ms714221(v=vs.85)). Les objets de l’ensemble de lignes et de commande sont dans un fichier d’en-tête unique, appelé *nom_projet*RS.h. Ces propriétés sont des membres de la [propriétés de l’ensemble de lignes](/previous-versions/windows/desktop/ms711252(v=vs.85)) groupe.
+Avec la session, l’ensemble de lignes et l’objet de commande facultatif, chaque fournisseur prend en charge une ou plusieurs propriétés. Ces propriétés sont définies dans les mappages de propriétés stockés dans les fichiers d’en-tête créés par l' **assistant OLE DB fournisseur**. Chaque fichier d’en-tête contient un mappage pour les propriétés du groupe de propriétés OLE DB défini pour l’objet ou les objets définis dans ce fichier. Le fichier d’en-tête qui contient l’objet source de données contient également le mappage des propriétés pour les [propriétés DataSource](/previous-versions/windows/desktop/ms724188(v=vs.85)). `Session.h`contient le mappage des propriétés pour les [Propriétés de session](/previous-versions/windows/desktop/ms714221(v=vs.85)). Les objets rowset et Command se trouvent dans un seul fichier d’en-tête, appelé *ProjectName*RS. h. Ces propriétés sont des membres du groupe de [Propriétés rowset](/previous-versions/windows/desktop/ms711252(v=vs.85)) .
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 26bfc3bb9892486353f55a71cfd86a17f2de98b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516584"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311664"
 ---
 # <a name="event--ccli-and-ccx"></a>événement (C++/CLI et C++/CX)
 
@@ -55,7 +55,7 @@ Valeur de retour de la méthode d’accesseur d’événement.  Pour être véri
 *parameters*<br/>
 (facultatif) Paramètres de la méthode `raise`, qui correspondent à la signature du paramètre *delegate*.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Un événement est une association entre un délégué et une fonction membre (gestionnaire d’événements) qui répond au déclenchement de l’événement et permet aux clients de toute classe d’inscrire des méthodes conformes à la signature et au type de retour du délégué sous-jacent.
 
@@ -73,13 +73,13 @@ Vous pouvez utiliser **operators+=** et **operator-=** pour ajouter et supprimer
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [Événements (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
+Pour plus d’informations, consultez [Événements (C++/CX)](../cppcx/events-c-cx.md).
 
 Si vous envisagez d'ajouter, puis de supprimer un gestionnaire d'événements, vous devez enregistrer la structure EventRegistrationToken retournée par l'opération d'ajout. Ensuite, dans l'opération de suppression, vous devez utiliser la structure EventRegistrationToken enregistrée pour identifier le gestionnaire d'événements à supprimer.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/ZW`
 
@@ -119,7 +119,7 @@ Valeur de retour de la méthode d’accesseur d’événement.  Pour être véri
 *parameters*<br/>
 (facultatif) Paramètres de la méthode `raise`, qui correspondent à la signature du paramètre *delegate*.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Un événement est une association entre un délégué et une fonction membre (gestionnaire d’événements) qui répond au déclenchement de l’événement et permet aux clients de toute classe d’inscrire des méthodes conformes à la signature et au type de retour du délégué sous-jacent.
 
@@ -165,7 +165,7 @@ Pour plus d’informations sur les événements C++/CLI, consultez
 
 - [Événements dans une interface](../dotnet/how-to-use-events-in-cpp-cli.md)
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/clr`
 

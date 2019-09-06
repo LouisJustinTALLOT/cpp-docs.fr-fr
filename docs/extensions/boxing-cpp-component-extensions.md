@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 0b41cacba8c279447e1e944cc3214ca1ba607665
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 6221087b60e76e3a2648366c4efebc4105f0ab58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516154"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311761"
 ---
 # <a name="boxing--ccli-and-ccx"></a>Boxing (C++/ CLI et C++/CX)
 
@@ -30,7 +30,7 @@ C++/CX prend en charge une syntaxe sténographique pour les types valeur boxing 
 value_variable = (value_type) object_variable;
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/ZW`
 
@@ -72,7 +72,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-Pour plus d’informations, consultez [Boxing (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969554.aspx).
+Pour plus d’informations, consultez [Boxing (C++/CX)](../cppcx/boxing-c-cx.md).
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
@@ -90,7 +90,7 @@ Pour plus d'informations, voir :
 
 - [Conversions standard et boxing implicite](../dotnet/standard-conversions-and-implicit-boxing.md)
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/clr`
 

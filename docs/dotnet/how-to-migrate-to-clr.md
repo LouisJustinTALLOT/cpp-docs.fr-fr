@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Migration vers / clr'
+title: 'Procédure : Migrer vers -clr'
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 9abc85227d6091005d7e097d3305150f4ca347a1
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 337dc69b60537fba8484837981fc6be0971c69cb
+ms.sourcegitcommit: 40ffe764244784c715b086c79626ac390b855d47
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448083"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "70311747"
 ---
 # <a name="how-to-migrate-to-clr"></a>Procédure : Migrer vers/CLR
 
-Cette rubrique traite des problèmes qui surviennent lors de la compilation de code natif avec **/CLR** (consultez [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) pour plus d’informations). **/ CLR** permet à du code C++ natif à appeler et d’être appelés à partir des assemblys .NET en plus de tout autre code C++ natif. Consultez [assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md) et [natif et l’interopérabilité .NET](../dotnet/native-and-dotnet-interoperability.md) pour plus d’informations sur les avantages de la compilation avec **/CLR**.
+Cette rubrique décrit les problèmes qui surviennent lors de la compilation de code natif avec **/CLR** (pour plus d’informations, consultez [/clr (compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) . **/CLR** permet au C++ code natif d’appeler et d’être appelé à partir d’assemblys .net en plus C++ d’un autre code natif. Pour plus d’informations sur les avantages de la compilation avec **/CLR**, consultez [assemblys mixtes (natifs et managés)](../dotnet/mixed-native-and-managed-assemblies.md) et [interopérabilité native et .net](../dotnet/native-and-dotnet-interoperability.md) .
 
-## <a name="known-issues-compiling-library-projects-with-clr"></a>Connus problèmes de compilation de projets de bibliothèque avec/CLR
+## <a name="known-issues-compiling-library-projects-with-clr"></a>Problèmes connus de compilation de projets de bibliothèque avec/CLR
 
-Visual Studio contient des problèmes connus lors de la compilation des projets de bibliothèque avec **/CLR**:
+Visual Studio contient des problèmes connus lors de la compilation de projets de bibliothèque avec **/CLR**:
 
-- Votre code peut interroger des types lors de l’exécution avec [CRuntimeClass::FromName](../mfc/reference/cruntimeclass-structure.md#fromname). Toutefois, si un type est dans un fichier .dll MSIL (compilé avec **/CLR**), l’appel à `FromName` peut échouer si elle se produit avant que les constructeurs statiques exécutées dans le .dll managé (vous ne verrez pas ce problème si l’appel FromName se produit une fois que le code a exécutée dans le .dll managé). Pour contourner ce problème, vous pouvez forcer la construction du constructeur statique managé en définissant une fonction dans le .dll managé, son exportation et appeler à partir de l’application MFC native. Exemple :
+- Votre code peut interroger des types au moment de l’exécution avec [CRuntimeClass :: FromName](../mfc/reference/cruntimeclass-structure.md#fromname). Toutefois, si un type se trouve dans un fichier MSIL. dll (compilé avec **/CLR**), l' `FromName` appel à peut échouer s’il se produit avant l’exécution des constructeurs statiques dans le fichier. dll managé (vous ne verrez pas ce problème si l’appel FromName se produit après l’exécution du code dans le managé. dll). Pour contourner ce problème, vous pouvez forcer la construction du constructeur statique géré en définissant une fonction dans le fichier. dll managé, en l’exportant et en l’appelant à partir de l’application MFC native. Par exemple :
 
     ```
     // MFC extension DLL Header file:
@@ -35,36 +35,36 @@ Visual Studio contient des problèmes connus lors de la compilation des projets 
     }
     ```
 
-## <a name="compile-with-visual-c"></a>Compilez avec Visual C++
+## <a name="compile-with-visual-c"></a>Compiler avec VisualC++
 
-Avant d’utiliser **/CLR** sur n’importe quel module dans votre projet, tout d’abord compiler et lier votre projet natif avec Visual Studio 2010.
+Avant d’utiliser **/CLR** sur un module de votre projet, compilez et liez d’abord votre projet natif à Visual Studio 2010.
 
-Les étapes suivantes, suivies dans l’ordre, indiquent le chemin le plus simple pour un **/CLR** compilation. Il est important de compiler et exécuter votre projet après chacune de ces étapes.
+Les étapes suivantes, suivies dans l’ordre, fournissent le chemin d’accès le plus simple à une compilation **/CLR** . Il est important de compiler et d’exécuter votre projet après chacune de ces étapes.
 
 ### <a name="versions-prior-to-visual-studio-2003"></a>Versions antérieures à Visual Studio 2003
 
-Si vous mettez à niveau vers Visual Studio 2010 à partir d’une version antérieure de Visual Studio 2003, vous pouvez voir des erreurs de compilation liées à améliorée, la fonction C++ conformité standard dans Visual Studio 2003
+Si vous effectuez une mise à niveau vers Visual Studio 2010 à partir d’une version antérieure à Visual Studio 2003, vous pouvez voir des erreurs C++ de compilateur liées à la conformité standard améliorée dans visual studio 2003
 
-### <a name="upgrading-from-visual-studio-2003"></a>La mise à niveau à partir de Visual Studio 2003
+### <a name="upgrading-from-visual-studio-2003"></a>Mise à niveau à partir de Visual Studio 2003
 
-Projets précédents créés avec Visual Studio 2003 doivent également être compilés d’abord sans **/CLR** comme Visual Studio bénéficie d’une meilleure conformité aux normes ANSI/ISO et des modifications avec rupture. La modification sans doute le plus d’attention est [des fonctionnalités de sécurité dans le CRT](../c-runtime-library/security-features-in-the-crt.md). Code qui utilise la bibliothèque CRT est très probable produire des avertissements de désapprobation. Ces avertissements peuvent être supprimés, mais la migration vers le nouveau [Versions de fonctions CRT](../c-runtime-library/security-enhanced-versions-of-crt-functions.md) est recommandée, car ils fournissent une meilleure sécurité et peuvent révéler des problèmes de sécurité dans votre code.
+Les projets générés précédemment à l’aide de Visual Studio 2003 doivent également être compilés sans **/CLR** , car Visual Studio a désormais une conformité ANSI/ISO accrue et des modifications avec rupture. La modification qui est susceptible de nécessiter la plus grande attention est celle des [fonctionnalités de sécurité dans le CRT](../c-runtime-library/security-features-in-the-crt.md). Le code qui utilise le CRT est très susceptible de produire des avertissements de désapprobation. Ces avertissements peuvent être supprimés, mais il est préférable de migrer vers les nouvelles [versions à sécurité améliorée des fonctions CRT](../c-runtime-library/security-enhanced-versions-of-crt-functions.md) , car elles fournissent une meilleure sécurité et peuvent révéler des problèmes de sécurité dans votre code.
 
-### <a name="upgrading-from-managed-extensions-for-c"></a>La mise à niveau à partir des Extensions managées pour C++
+### <a name="upgrading-from-managed-extensions-for-c"></a>Mise à niveau à partir d’extensions managées pourC++
 
-À partir de Visual Studio 2005, le code écrit avec des Extensions managées pour C++ n’est pas compilé sous **/CLR**.
+À compter de Visual Studio 2005, le code écrit avec les C++ extensions managées pour ne sera pas compilé sous **/CLR**.
 
-## <a name="convert-c-code-to-c"></a>Convertir le Code C en C++
+## <a name="convert-c-code-to-c"></a>Convertir du code C enC++
 
-Bien que Visual Studio compile les fichiers C, il est nécessaire de les convertir en C++ pour un **/CLR** compilation. Nom de fichier ne doit pas être modifié ; Vous pouvez utiliser **/Tp** (consultez [TP, / TP, /TP (spécifier le Type des fichiers Source)](../build/reference/tc-tp-tc-tp-specify-source-file-type.md).) Notez que bien que les fichiers de code source C++ sont requis pour **/CLR**, il n’est pas nécessaire de refactoriser votre code pour utiliser des paradigmes orientés objet.
+Bien que Visual Studio compile des fichiers C, il est nécessaire de les convertir C++ en pour une compilation **/CLR** . Il n’est pas nécessaire de modifier le nom de fichier réel ; vous pouvez utiliser **/TP** (voir [/TC,/TP,/TC,/TP (spécifier le type de fichier source)](../build/reference/tc-tp-tc-tp-specify-source-file-type.md).) Notez que même C++ si les fichiers de code source sont requis pour **/CLR**, il n’est pas nécessaire de refactoriser votre code pour utiliser des paradigmes orientés objet.
 
-Code C est très susceptible de nécessiter des modifications lors de la compilation dans un fichier C++. Les règles de sécurité de type C++ sont stricts, les conversions de type doivent être rendue explicites avec des casts. Par exemple, malloc retourne un pointeur void, mais peut être affecté à un pointeur vers n’importe quel type en C avec un cast :
+Le C++ code C est très susceptible d’exiger des modifications lorsqu’il est compilé en tant que fichier. Les C++ règles de sécurité de type sont strictes. par conséquent, les conversions de type doivent être rendues explicites avec des casts. Par exemple, malloc retourne un pointeur void, mais peut être assigné à un pointeur vers n’importe quel type en C avec un cast :
 
 ```
 int* a = malloc(sizeof(int));   // C code
 int* b = (int*)malloc(sizeof(int));   // C++ equivalent
 ```
 
-Pointeurs de fonction étant également strictement de type sécurisé en C++, le code C suivant requiert une modification. En C++, il est préférable de créer un `typedef` qui définit le type de pointeur de fonction et ensuite utiliser ce type pour convertir des pointeurs de fonction :
+Les pointeurs de fonction sont également strictement sécurisés C++dans. par conséquent, le code C suivant nécessite une modification. Dans C++ , il est préférable de créer `typedef` un qui définit le type de pointeur de fonction, puis d’utiliser ce type pour caster des pointeurs de fonction :
 
 ```
 NewFunc1 = GetProcAddress( hLib, "Func1" );   // C code
@@ -72,9 +72,9 @@ typedef int(*MYPROC)(int);   // C++ equivalent
 NewFunc2 = (MYPROC)GetProcAddress( hLib, "Func2" );
 ```
 
-C++ requiert également être soit prototypée soit entièrement définie avant de pouvoir être référencés ou appelés.
+C++requiert également que les fonctions soient prototypées ou entièrement définies avant de pouvoir être référencées ou appelées.
 
-Les identificateurs utilisés dans le code C et qui peuvent être des mots clés en C++ (tels que **virtuels**, **nouveau**, **supprimer**, **bool**, **true** , **false**, etc.) doit être renommé. Généralement procéder avec de simples opérations de recherche et remplacement.
+Les identificateurs utilisés dans le code C qui se trouvent être C++ des mots clés dans (tels que **Virtual**, **New**, **Delete**, **bool**, **true**, **false**, etc.) doivent être renommés. Cela peut généralement être fait avec des opérations de recherche et de remplacement simples.
 
 ```
 COMObj1->lpVtbl->Method(COMObj, args);  // C code
@@ -83,80 +83,78 @@ COMObj2->Method(args);  // C++ equivalent
 
 ## <a name="reconfigure-project-settings"></a>Reconfigurer les paramètres du projet
 
-Une fois que votre projet se compile et s’exécute dans Visual Studio 2010, vous devez créer des configurations de projet pour **/CLR** plutôt que de modifier les configurations par défaut. **/ CLR** est incompatible avec certaines options du compilateur et de la création de configurations séparées vous permet de générer votre projet comme natif ou managé. Lorsque **/CLR** est sélectionné dans la boîte de dialogue des pages de propriété, paramètres du projet non compatibles avec **/CLR** sont désactivés (et les options désactivées ne sont pas restaurées automatiquement si   **/CLR** est désélectionné par la suite).
+Une fois que votre projet est compilé et exécuté dans Visual Studio 2010, vous devez créer de nouvelles configurations de projet pour **/CLR** au lieu de modifier les configurations par défaut. **/CLR** est incompatible avec certaines options du compilateur et la création de configurations distinctes vous permet de générer votre projet en tant que code natif ou managé. Quand **/CLR** est sélectionné dans la boîte de dialogue pages de propriétés, les paramètres de projet non compatibles avec **/CLR** sont désactivés (et les options désactivées ne sont pas restaurées automatiquement si **/CLR** est désélectionné par la suite).
 
-### <a name="create-new-project-configurations"></a>Créer des Configurations de projet
+### <a name="create-new-project-configurations"></a>Créer des configurations de projet
 
-Vous pouvez utiliser **copier les paramètres de** option dans le **nouvelle boîte de dialogue de Configuration de projet** (**Build** > **deConfigurationManager**  >  **Configuration de la Solution active** > **New**) pour créer une configuration de projet en fonction de vos paramètres de projet existants. Pour cela qu’une seule fois pour la configuration Debug et une fois pour la configuration Release. Les modifications ultérieures apportées peuvent ensuite être appliquées à la **/CLR** -des configurations spécifiques uniquement, laissant les configurations de projet d’origine intact.
+Vous pouvez utiliser l’option **copier les paramètres de** dans la **boîte de dialogue nouvelle configuration de projet** (**générer** > **Configuration Manager** > **configuration** > de solution active**New**) pour créer une configuration de projet basée sur vos paramètres de projet existants. Effectuez cette opération une fois pour la configuration Debug et une fois pour la configuration Release. Les modifications ultérieures peuvent ensuite être appliquées uniquement aux configurations spécifiques à **/CLR** , en laissant intactes les configurations de projet d’origine.
 
-Les projets qui utilisent des règles de génération personnalisée peuvent nécessiter une attention supplémentaire.
+Les projets qui utilisent des règles de génération personnalisées peuvent nécessiter une attention particulière.
 
-Cette étape a différentes implications pour les projets qui utilisent des makefiles. Dans ce cas une cible de génération distincte peut être configurée, ou une version spécifique à **/CLR** compilation peut être créée à partir d’une copie de l’original.
+Cette étape a des implications différentes pour les projets qui utilisent des makefiles. Dans ce cas, une cible de génération distincte peut être configurée, ou une version spécifique à la compilation **/CLR** peut être créée à partir d’une copie de l’original.
 
-### <a name="change-project-settings"></a>Modifier les paramètres de projet
+### <a name="change-project-settings"></a>Modifier les paramètres du projet
 
-**/ CLR** peuvent être sélectionnés dans l’environnement de développement en suivant les instructions dans [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md). Comme mentionné précédemment, cette étape désactive automatiquement les paramètres de projet en conflit.
+vous pouvez sélectionner **/CLR** dans l’environnement de développement en suivant les instructions fournies dans [/clr (compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md). Comme mentionné précédemment, cette étape désactive automatiquement les paramètres de projet en conflit.
 
 > [!NOTE]
->  Mise à niveau d’une bibliothèque managée ou un projet de service web de Visual Studio 2003, le **/Zl** est d’option du compilateur ajoutée dans le **ligne de commande** page de propriétés. Cela entraîne l’erreur LNK2001. Supprimer **/Zl** à partir de la **ligne de commande** page de propriétés. Consultez [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md) et [définir du compilateur et les propriétés de build](../build/working-with-project-properties.md) pour plus d’informations. Ou ajoutez msvcrt.lib et msvcmrt.lib à l’éditeur de liens **dépendances supplémentaires** propriété.
+>  Lors de la mise à niveau d’une bibliothèque managée ou d’un projet de service Web à partir de Visual Studio 2003, l’option de compilateur **/zl** sera ajoutée à la page de propriétés **ligne de commande** . Cela provoque l’LNK2001. Supprimez **/zl** de la page de propriétés **ligne de commande** pour résoudre. Pour plus d’informations, consultez [/zl (omettre le nom de la bibliothèque par défaut)](../build/reference/zl-omit-default-library-name.md) et [définir les propriétés du compilateur et](../build/working-with-project-properties.md) de la Build. Ou ajoutez Msvcrt. lib et msvcmrt. lib à la propriété **dépendances supplémentaires** de l’éditeur de liens.
 
-Pour les projets générés avec des makefiles, les options du compilateur incompatible doivent être désactivées manuellement une fois **/CLR** est ajouté. Consultez /[/clr Restrictions](../build/reference/clr-restrictions.md) pour plus d’informations sur les options du compilateur qui ne sont pas compatibles avec **/CLR**.
+Pour les projets générés avec des makefiles, les options de compilateur incompatibles doivent être désactivées manuellement une fois que **/CLR** est ajouté. Consultez[restrictions//CLR](../build/reference/clr-restrictions.md) pour plus d’informations sur les options du compilateur qui ne sont pas compatibles avec **/CLR**.
 
 ### <a name="precompiled-headers"></a>En-têtes précompilés
 
-En-têtes précompilés sont pris en charge sous **/CLR**. Toutefois, si vous ne compilez que certains de vos fichiers CPP avec **/CLR** (en compilant le reste en natif) certaines modifications soient nécessaires, car les en-têtes précompilés générés avec **/CLR** ne sont pas compatibles avec ceux généré sans **/CLR**. Cette incompatibilité est due au fait que **/CLR** génère et requiert des métadonnées. Modules compilés **/CLR** peuvent donc pas utiliser des en-têtes précompilés qui n’incluent pas les métadonnées et non **/CLR** modules ne peuvent pas utiliser les fichiers d’en-tête précompilé qui contiennent des métadonnées.
+Les en-têtes précompilés sont pris en charge sous **/CLR**. Toutefois, si vous compilez uniquement certains de vos fichiers CPP avec **/CLR** (en compilant le reste en natif), certaines modifications sont nécessaires, car les en-têtes précompilés générés avec **/CLR** ne sont pas compatibles avec ceux générés sans **/CLR**. Cette incompatibilité est due au fait que **/CLR** génère et nécessite des métadonnées. Modules compilés **/CLR** ne peut donc pas utiliser des en-têtes précompilés qui n’incluent pas de métadonnées, et les modules non- **/CLR** ne peuvent pas utiliser des fichiers d’en-tête précompilés qui contiennent des métadonnées.
 
-Le moyen le plus simple de compiler un projet dont certains modules sont compilés **/CLR** consiste à désactiver complètement les en-têtes précompilés. (Dans la boîte de dialogue Pages de propriétés de projet, ouvrez le nœud C/C++ et sélectionnez les en-têtes précompilés. Puis remplacez la propriété créer/utiliser des en-têtes précompilés « Pas utiliser les en-têtes précompilés ».)
+Le moyen le plus simple de compiler un projet où certains modules sont compilés **/CLR** est de désactiver entièrement les en-têtes précompilés. (Dans la boîte de dialogue pages de propriétés du projet,C++ Ouvrez le nœud C/, puis sélectionnez en-têtes précompilés. Modifiez ensuite la propriété créer/utiliser des en-têtes précompilés sur « pas à l’aide des en-têtes précompilés ».)
 
-Toutefois, en particulier pour les grands projets, en-têtes précompilés fournissent bien meilleure vitesse de compilation, afin de désactiver cette fonctionnalité n’est pas souhaitable. Dans ce cas, il est préférable de configurer le **/CLR** et non **/CLR** fichiers à utiliser séparément les en-têtes précompilés. Cela est possible en une seule étape en sélectionnant simultanément les modules à compiler **/CLR** à l’aide de **l’Explorateur de solutions**, clic droit sur le groupe et sélectionnez Propriétés. Puis modifier les propriétés de la création/utilisation PCH via fichier et le fichier d’en-tête précompilé pour utiliser respectivement un nom de fichier d’en-tête différent et un fichier PCH.
+Toutefois, en particulier pour les grands projets, les en-têtes précompilés offrent une plus grande rapidité de compilation. par conséquent, la désactivation de cette fonctionnalité n’est pas souhaitable. Dans ce cas, il est préférable de configurer les fichiers **/CLR** et non **/CLR** pour utiliser des en-têtes précompilés distincts. Vous pouvez effectuer cette opération en une seule étape en sélectionnant les modules **à compiler à** l’aide de **Explorateur de solutions**, en cliquant avec le bouton droit sur le groupe et en sélectionnant Propriétés. Modifiez ensuite les propriétés créer/utiliser PCH par le fichier et en-tête précompilé pour utiliser respectivement un nom de fichier d’en-tête et un fichier PCH différents.
 
 ## <a name="fixing-errors"></a>Correction des erreurs
 
-Compilation avec **/CLR** peut entraîner des erreurs du compilateur, éditeur de liens ou runtime. Cette section traite des problèmes les plus courants.
+La compilation avec **/CLR** peut entraîner des erreurs du compilateur, de l’éditeur de liens ou du Runtime. Cette section décrit les problèmes les plus courants.
 
 ### <a name="metadata-merge"></a>Fusion des métadonnées
 
-Différentes versions de types de données peuvent entraîner d’échouer car les métadonnées générées pour les deux types ne correspond pas à l’éditeur de liens. (Cela est généralement dû membres d’un type sont définis de façon conditionnelle, mais les conditions ne sont pas les mêmes pour tous les fichiers CPP qui utilisent le type.) Dans ce cas l’éditeur de liens échoue uniquement le nom du symbole et le nom du deuxième fichier OBJ où le type a été défini. Il est souvent utile faire pivoter l’ordre que les fichiers OBJ sont envoyés à l’éditeur de liens pour découvrir l’emplacement de l’autre version du type de données.
+Les différentes versions des types de données peuvent provoquer l’échec de l’éditeur de liens, car les métadonnées générées pour les deux types ne correspondent pas. (Cela est généralement dû au fait que les membres d’un type sont définis de manière conditionnelle, mais que les conditions ne sont pas les mêmes pour tous les fichiers CPP qui utilisent le type.) Dans ce cas, l’éditeur de liens échoue, en signalant uniquement le nom du symbole et le nom du deuxième fichier OBJ où le type a été défini. Il est souvent utile de faire pivoter l’ordre dans lequel les fichiers OBJ sont envoyés à l’éditeur de liens pour découvrir l’emplacement de l’autre version du type de données.
 
-### <a name="loader-lock-deadlock"></a>Blocage du verrou du chargeur
+### <a name="loader-lock-deadlock"></a>Verrou mortel du chargeur
 
-Le « blocage du verrou du chargeur » peut se produire, mais est déterministe et est détecté et signalé lors de l’exécution. Consultez [l’initialisation des assemblys mixtes](../dotnet/initialization-of-mixed-assemblies.md) pour des informations détaillées, des conseils et des solutions.
+Le « blocage du verrou de chargeur » peut se produire, mais il est déterministe et est détecté et signalé au moment de l’exécution. Pour obtenir des informations détaillées, des conseils et des solutions, consultez [initialisation des assemblys mixtes](../dotnet/initialization-of-mixed-assemblies.md) .
 
 ### <a name="data-exports"></a>Exportations de données
 
-Exportation de données de la DLL est sujette aux erreurs et pas recommandé. Il s’agit, car la section de données d’une DLL n’est pas garantie pour être initialisée avant qu’une partie managée de la DLL a été exécutée. Les métadonnées de référence avec [#using, Directive](../preprocessor/hash-using-directive-cpp.md).
+L’exportation de données de DLL est sujette aux erreurs et n’est pas recommandée. Cela est dû au fait que la section de données d’une DLL n’est pas nécessairement initialisée tant qu’une partie managée de la DLL n’a pas été exécutée. Référencez les métadonnées avec [#using directive](../preprocessor/hash-using-directive-cpp.md).
 
 ### <a name="type-visibility"></a>Visibilité du type
 
-Les types natifs sont privés par défaut. Cela peut entraîner un type natif ne sont pas visibles en dehors de la DLL. Résoudre cette erreur en ajoutant `public` à ces types.
+Les types natifs sont privés par défaut. Cela peut entraîner un type natif qui n’est pas visible à l’extérieur de la DLL. Résolvez cette erreur en `public` ajoutant à ces types.
 
-### <a name="floating-point-and-alignment-issues"></a>Virgule flottante et problèmes d’alignement
+### <a name="floating-point-and-alignment-issues"></a>Problèmes de virgule flottante et d’alignement
 
-`__controlfp` n’est pas pris en charge sur le common language runtime (consultez [_control87, _controlfp, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) pour plus d’informations). Le CLR ne respectera pas non plus [aligner](../cpp/align-cpp.md).
+`__controlfp`n’est pas pris en charge sur le Common Language Runtime (consultez [_control87 \_, _ controlfp, _control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) pour plus d’informations). Le CLR ne respecte pas non plus l' [alignement](../cpp/align-cpp.md).
 
-### <a name="com-initialization"></a>Initialisation de COM
+### <a name="com-initialization"></a>Initialisation COM
 
-Le Common Language Runtime initialise automatiquement COM lorsqu’un module est initialisé (lorsque COM est initialisé automatiquement qu’il a exécuté en tant que MTA). Par conséquent, l’initialiser COM explicitement génère les codes de retour indiquant que COM est déjà initialisé. Tente d’initialiser explicitement COM avec un modèle de thread lorsque le CLR a déjà initialisé COM à un autre modèle de thread peut provoquer l’échec de votre application.
+Le Common Language Runtime Initialise automatiquement COM lorsqu’un module est initialisé (quand COM est initialisé automatiquement, il est effectué comme MTA). Par conséquent, l’initialisation explicite de COM génère des codes de retour indiquant que COM est déjà initialisé. Toute tentative d’initialisation explicite de COM avec un modèle de thread lorsque le CLR a déjà initialisé COM sur un autre modèle de thread peut entraîner l’échec de votre application.
 
-Le common language runtime démarre COM en tant que MTA par défaut ; Utilisez [/CLRTHREADATTRIBUTE (définir l’attribut de Thread CLR)](../build/reference/clrthreadattribute-set-clr-thread-attribute.md) pour modifier cela.
+Le common language runtime démarre COM en tant que MTA par défaut ; Utilisez [/CLRTHREADATTRIBUTE (définir l’attribut de thread CLR)](../build/reference/clrthreadattribute-set-clr-thread-attribute.md) pour modifier cela.
 
 ### <a name="performance-issues"></a>Problèmes de performances
 
-Vous pouvez voir une diminution des performances lorsque les méthodes C++ natives générées en MSIL sont appelées indirectement (appels de fonction virtuelle ou à l’aide de pointeurs de fonction). Pour plus d’informations, consultez [Double médiateur](../dotnet/double-thunking-cpp.md).
+Vous pouvez constater une baisse des performances C++ lorsque les méthodes natives générées en langage MSIL sont appelées indirectement (appels de fonction virtuelle ou utilisation de pointeurs de fonction). Pour en savoir plus à ce sujet, consultez [double médiateur](../dotnet/double-thunking-cpp.md).
 
-Lors du déplacement du code natif en langage MSIL, vous remarquerez une augmentation de la taille de votre jeu de travail. Il s’agit, car le common language runtime fournit de nombreuses fonctionnalités pour vous assurer que les programmes s’exécutent correctement. Si votre **/CLR** application ne fonctionne pas correctement, vous pouvez activer C4793 (désactivé par défaut), consultez [Avertissement du compilateur (niveau 1 et 3) C4793](../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md) pour plus d’informations.
+Lors du passage de Native à MSIL, vous remarquerez une augmentation de la taille de votre plage de travail. Cela est dû au fait que le common language runtime fournit de nombreuses fonctionnalités pour s’assurer que les programmes s’exécutent correctement. Si votre application **/CLR** ne s’exécute pas correctement, vous pouvez activer C4793 (désactivé par défaut). pour plus d’informations, consultez [Avertissement du compilateur (niveaux 1 et 3) C4793](../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md) .
 
-### <a name="program-crashes-on-shutdown"></a>Incidents de programme lors de l’arrêt
+### <a name="program-crashes-on-shutdown"></a>Blocage du programme lors de l’arrêt
 
-Dans certains cas, le CLR puisse s’arrêter avant la fin de votre code managé en cours d’exécution. À l’aide de `std::set_terminate` et `SIGTERM` peuvent entraîner ce problème. Consultez [signal, constantes](../c-runtime-library/signal-constants.md) et [set_terminate](../c-runtime-library/abnormal-termination.md) pour plus d’informations.
+Dans certains cas, le CLR peut être arrêté avant la fin de l’exécution de votre code managé. L' `std::set_terminate` utilisation `SIGTERM` de et peut entraîner ce problème. Pour plus d’informations, consultez [constantes de signal](../c-runtime-library/signal-constants.md) et [set_terminate](../c-runtime-library/abnormal-termination.md) .
 
-## <a name="using-new-visual-c-features"></a>À l’aide des nouvelles fonctionnalités de Visual C++
+## <a name="using-new-visual-c-features"></a>Utilisation des nouvelles C++ fonctionnalités visuelles
 
-Une fois votre application compilée, liens et s’exécute, commencer à utiliser des fonctionnalités .NET dans n’importe quel module compilé avec **/CLR**. Pour plus d’informations, consultez [Extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md).
+Après compilation, liaison et exécution de votre application, vous pouvez commencer à utiliser les fonctionnalités .NET dans n’importe quel module compilé avec **/CLR**. Pour plus d’informations, consultez [Extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md).
 
-Si vous avez utilisé des Extensions managées pour C++, vous pouvez convertir votre code pour utiliser la nouvelle syntaxe. Pour plus d’informations sur la conversion d’Extensions managées pour C++, consultez [C++ / c++ / CLI Migration Primer](../dotnet/cpp-cli-migration-primer.md).
-
-Pour plus d’informations sur la programmation dans Visual C++ .NET, consultez :
+Pour plus d’informations sur la programmation C++ .net en Visual, consultez :
 
 - [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 
