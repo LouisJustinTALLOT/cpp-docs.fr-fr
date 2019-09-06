@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: ef2837ea80c61f074cf567ee1fe61fa2cfa0ae73
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: b481d9948d3055247bd284ca794a0fa65905e21b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525316"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311867"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Questions relatives à la conception architecturale d'OLE DB
 
@@ -38,7 +38,7 @@ Par exemple, si vous souhaitez mettre à jour des données dans un ensemble de l
 
 - [Aide et support Microsoft](https://support.microsoft.com/)
 
-- [Présentation des articles techniques relatifs à Microsoft Data Access](https://msdn.microsoft.com/library/ms810811.aspx)
+- [Présentation des articles techniques relatifs à Microsoft Data Access](/previous-versions/ms810811(v=msdn.10))
 
 ## <a name="see-also"></a>Voir aussi
 

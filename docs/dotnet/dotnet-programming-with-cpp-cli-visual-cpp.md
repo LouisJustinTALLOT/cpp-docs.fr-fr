@@ -7,18 +7,18 @@ helpviewer_keywords:
 - .NET applications [C++]
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
-ms.openlocfilehash: 21a45dbff2b02ccce5444706c158e5bdcc6e6cc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ac73ec4921b57f5a4c8e1fdeb16edc4d92f57e1
+ms.sourcegitcommit: 40ffe764244784c715b086c79626ac390b855d47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303794"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "70311868"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>Programmation .NET avec C++/CLI (Visual C++)
 
 **Visual Studio 2015** : Par défaut, les projets CLR créés avec Visual Studio 2015 ciblent .NET Framework 4.5.2. Pour cibler .NET Framework 4.6 quand vous créez un projet, dans la boîte de dialogue **Nouveau projet** , remplacez la version cible de .NET Framework dans la zone de liste déroulante en haut et au milieu de la boîte de dialogue. Pour changer la version cible de .NET Framework pour un projet existant, fermez le projet, éditez le fichier projet (.vcxproj), puis remplacez la valeur de la version cible de .NET Framework par 4.6. La prochaine fois que vous ouvrez le projet, les paramètres prennent effet.
 
-**Visual Studio 2017** : Dans Visual Studio 2017, l’infrastructure par défaut est 4.6.1 et le sélecteur de version de Framework est en bas de la **boîte de dialogue Nouveau projet**. C++ / c++ / CLI proprement dite n’est pas installé par défaut. Pour installer le composant, ouvrez le programme d’installation Visual Studio et choisir C++ / c++ / CLI composant sous Visual C++.
+**Visual Studio 2017** : Dans Visual Studio 2017, l’infrastructure par défaut est 4.6.1 et le sélecteur de version de l’infrastructure se trouve au bas de la **boîte de dialogue Nouveau projet**. C++/CLI n’est pas installé par défaut. Pour installer le composant, ouvrez le Visual Studio Installer et choisissez le C++composant/CLI sous Visual C++.
 
 ## <a name="in-this-section"></a>Dans cette section
 
@@ -26,13 +26,11 @@ ms.locfileid: "62303794"
 
 [Interopérabilité native et .NET](../dotnet/native-and-dotnet-interoperability.md)
 
-[Initiation à la migration de C++/CLI](../dotnet/cpp-cli-migration-primer.md)
-
 [Code pur et vérifiable (C++-CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
 
 [Expressions régulières (C++-CLI)](../dotnet/regular-expressions-cpp-cli.md)
 
-[Gestion de fichiers et e/s (C++ / c++ / CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)
+[Gestion de fichiers et e/sC++(/CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)
 
 [Opérations graphiques (C++-CLI)](../dotnet/graphics-operations-cpp-cli.md)
 

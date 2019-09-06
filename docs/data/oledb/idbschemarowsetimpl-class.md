@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: b764b571aae81f6225028cbe0d052d817d93d183
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c34f84254fc57b6cd5f8b4763faac313a01636b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409029"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311789"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl (classe)
 
@@ -84,7 +84,7 @@ Classe par laquelle `IDBSchemaRowsetImpl` est hérité. En général, cette clas
 
 Cette classe implémente l’interface [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) et la fonction de créateur mise en modèle [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md).
 
-OLE DB utilise les ensembles de lignes de schéma pour retourner des données à propos des données d’un fournisseur. Ces données sont souvent appelées « métadonnées ». Par défaut, un fournisseur doit toujours prendre en charge `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, et `DBSCHEMA_PROVIDER_TYPES`, comme décrit dans [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le *de référence du programmeur OLE DB*. Les ensembles de lignes de schéma sont désignés dans un mappage de schéma. Pour plus d’informations sur les entrées de mappage de schéma, consultez [SCHEMA_ENTRY](../../data/oledb/schema-entry.md).
+OLE DB utilise les ensembles de lignes de schéma pour retourner des données à propos des données d’un fournisseur. Ces données sont souvent appelées « métadonnées ». Par défaut, un fournisseur doit toujours prendre `DBSCHEMA_TABLES`en `DBSCHEMA_COLUMNS`charge, `DBSCHEMA_PROVIDER_TYPES`et, comme décrit dans [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*. Les ensembles de lignes de schéma sont désignés dans un mappage de schéma. Pour plus d’informations sur les entrées de mappage de schéma, consultez [SCHEMA_ENTRY](../../data/oledb/schema-entry.md).
 
 L’Assistant Fournisseur OLE DB, dans l’Assistant Objet ATL, génère automatiquement le code pour les ensembles de lignes de schéma dans votre projet. (Par défaut, l’Assistant prend en charge les ensembles de lignes de schéma obligatoires précédemment mentionnés.) Quand vous créez un consommateur à l’aide de l’Assistant Objet ATL, l’Assistant utilise les ensembles de lignes de schéma pour lier les données appropriées à un fournisseur. Si vous n’implémentez pas vos ensembles de lignes de schéma pour fournir les métadonnées correctes, l’Assistant ne lie pas les bonnes données.
 
@@ -92,7 +92,7 @@ Pour plus d’informations sur la prise en charge des ensembles de lignes de sch
 
 Pour plus d’informations sur les ensembles de lignes de schéma, consultez [Ensembles de lignes de schéma](/previous-versions/windows/desktop/ms712921(v=vs.85)) dans les *Informations de référence du programmeur OLE DB*.
 
-## <a name="checkrestrictions"></a> IDBSchemaRowsetImpl::CheckRestrictions
+## <a name="checkrestrictions"></a>IDBSchemaRowsetImpl :: CheckRestrictions
 
 Vérifie la validité des restrictions par rapport à un ensemble de lignes de schéma.
 
@@ -112,15 +112,15 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
 [in] Nombre de restrictions passées par le consommateur pour l’ensemble de lignes de schéma.
 
 *rgRestrictions*<br/>
-[in] Tableau de longueur *cRestrictions* des valeurs de restriction à définir. Pour plus d’informations, consultez la description de la *rgRestrictions* paramètre dans [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
+[in] Tableau de longueur *cRestrictions* des valeurs de restriction à définir. Pour plus d’informations, consultez la description du paramètre *rgRestrictions* dans [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
 
 ### <a name="remarks"></a>Notes
 
-Utilisez la méthode `CheckRestrictions` pour vérifier la validité des restrictions par rapport à un ensemble de lignes de schéma. Il vérifie les restrictions pour `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, et `DBSCHEMA_PROVIDER_TYPES` ensembles de lignes de schéma. Appelez-la pour déterminer si un consommateur l’appel à `IDBSchemaRowset::GetRowset` est correct. Si vous voulez prendre en charge d’autres ensembles de lignes de schéma que ceux répertoriés ci-dessus, vous devez créer votre propre fonction pour mener à bien cette tâche.
+Utilisez la méthode `CheckRestrictions` pour vérifier la validité des restrictions par rapport à un ensemble de lignes de schéma. Elle vérifie les restrictions `DBSCHEMA_TABLES`pour `DBSCHEMA_COLUMNS`les ensembles `DBSCHEMA_PROVIDER_TYPES` de lignes de schéma, et. Appelez-le pour déterminer si l’appel d’un `IDBSchemaRowset::GetRowset` consommateur à est correct. Si vous voulez prendre en charge d’autres ensembles de lignes de schéma que ceux répertoriés ci-dessus, vous devez créer votre propre fonction pour mener à bien cette tâche.
 
-`CheckRestrictions` Détermine si le consommateur appelle [GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) avec la restriction et le type de restriction appropriés (par exemple, VT_BSTR pour une chaîne) qui prend en charge par le fournisseur. De même, elle détermine si le nombre correct de restrictions est pris en charge. Par défaut, `CheckRestrictions` demande au fournisseur, via l’appel [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) , quelles restrictions il prend en charge dans un ensemble de lignes donné. La méthode compare ensuite les restrictions du consommateur à celles que prend en charge le fournisseur avant d’aboutir ou d’échouer.
+`CheckRestrictions`détermine si le consommateur appelle [GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) avec la restriction correcte et le type de restriction correct (par exemple, un VT_BSTR pour une chaîne) que le fournisseur prend en charge. De même, elle détermine si le nombre correct de restrictions est pris en charge. Par défaut, `CheckRestrictions` demande au fournisseur, via l’appel [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) , quelles restrictions il prend en charge dans un ensemble de lignes donné. La méthode compare ensuite les restrictions du consommateur à celles que prend en charge le fournisseur avant d’aboutir ou d’échouer.
 
-Pour plus d’informations sur les ensembles de lignes de schéma, consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le *de référence du programmeur OLE DB* dans le SDK Windows.
+Pour plus d’informations sur les ensembles de lignes de schéma, consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* dans le SDK Windows.
 
 ## <a name="createschemarowset"></a> IDBSchemaRowsetImpl::CreateSchemaRowset
 
@@ -143,7 +143,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 #### <a name="parameters"></a>Paramètres
 
 *pUnkOuter*<br/>
-[in] Externe [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) lors de l’agrégation, sinon NULL.
+dans [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) externe lors de l’agrégation ; sinon, null.
 
 *cRestrictions*<br/>
 [in] Nombre de restrictions appliquées à l’ensemble de lignes du schéma.
@@ -152,7 +152,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 [in] Tableau de `cRestrictions`**s de**à appliquer à l’ensemble de lignes.
 
 *riid*<br/>
-[in] L’interface à [QueryInterface](../../atl/queryinterface.md) pour sur la sortie `IUnknown`.
+dans Interface à [QueryInterface](../../atl/queryinterface.md) pour sur la sortie `IUnknown`.
 
 *cPropertySets*<br/>
 [in] Nombre de sets de propriétés à définir.
@@ -161,20 +161,20 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 [in] Tableau de structures [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) qui spécifient les propriétés définies.
 
 *ppRowset*<br/>
-[out] Sortant `IUnknown` demandé par *riid*. Cela `IUnknown` est une interface sur l’objet d’ensemble de lignes de schéma.
+à Sortant `IUnknown` demandé par *riid*. Il `IUnknown` s’agit d’une interface sur l’objet d’ensemble de lignes de schéma.
 
 *pSchemaRowset*<br/>
 [out] Pointeur vers une instance de la classe d’ensemble de lignes du schéma. Ce paramètre n’est généralement pas utilisé, mais il peut l’être si vous devez effectuer des tâches supplémentaires sur l’ensemble de lignes du schéma avant de le passer à un objet COM. La durée de vie de *pSchemaRowset* est liée par *ppRowset*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
 Cette fonction implémente un créateur générique pour tous les types d’ensembles de lignes du schéma. En règle générale, l’utilisateur n’appelle pas cette fonction. Elle est appelée par l’implémentation du mappage de schéma.
 
-## <a name="setrestrictions"></a> IDBSchemaRowsetImpl::SetRestrictions
+## <a name="setrestrictions"></a>IDBSchemaRowsetImpl :: SetRestrictions
 
 Spécifie les restrictions que vous prenez en charge sur un ensemble de lignes de schéma particulier.
 
@@ -189,27 +189,27 @@ void SetRestrictions(ULONG cRestrictions,
 #### <a name="parameters"></a>Paramètres
 
 *cRestrictions*<br/>
-[in] Le nombre de restrictions dans le *rgRestrictions* tableau et le nombre de GUID dans le *rguidSchema* tableau.
+dans Nombre de restrictions dans le tableau *rgRestrictions* et nombre de GUID dans le tableau *rguidSchema* .
 
 *rguidSchema*<br/>
 [in] Tableau des GUID des ensembles de lignes de schéma pour lesquels les restrictions doivent être récupérées. Chaque élément de tableau contient le GUID d’un ensemble de lignes de schéma (par exemple, `DBSCHEMA_TABLES`).
 
 *rgRestrictions*<br/>
-[in] Tableau de longueur *cRestrictions* des valeurs de restriction à définir. Chaque élément correspond aux restrictions de l’ensemble de lignes de schéma identifié par le GUID. Si un ensemble de lignes de schéma n’est pas pris en charge par le fournisseur, la valeur définie de l’élément est zéro. Dans le cas contraire, la valeur **ULONG** contient un masque de bits qui représente les restrictions prises en charge sur cet ensemble de lignes de schéma. Pour plus d’informations sur les restrictions correspondant à un ensemble de lignes de schéma particulier, consultez le tableau de GUID du jeu de lignes de schéma dans [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le *de référence du programmeur OLE DB* dans le Windows KIT DE DÉVELOPPEMENT LOGICIEL.
+[in] Tableau de longueur *cRestrictions* des valeurs de restriction à définir. Chaque élément correspond aux restrictions de l’ensemble de lignes de schéma identifié par le GUID. Si un ensemble de lignes de schéma n’est pas pris en charge par le fournisseur, la valeur définie de l’élément est zéro. Dans le cas contraire, la valeur **ULONG** contient un masque de bits qui représente les restrictions prises en charge sur cet ensemble de lignes de schéma. Pour plus d’informations sur les restrictions correspondant à un ensemble de lignes de schéma particulier, consultez la table des GUID d’ensembles de lignes de schéma dans [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* dans le SDK Windows.
 
 ### <a name="remarks"></a>Notes
 
-Le `IDBSchemaRowset` object appelle `SetRestrictions` pour déterminer les restrictions que vous prenez en charge sur un ensemble de lignes de schéma déterminé (elle est appelée par [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) via un pointeur converti en supertype). Les restrictions permettent aux consommateurs de récupérer uniquement les lignes correspondantes (par exemple, toutes les colonnes de la table « MaTable »). Les restrictions sont facultatives, et dans le cas où aucune n’est prise en charge (par défaut), toutes les données sont systématiquement retournées.
+L' `IDBSchemaRowset` objet appelle `SetRestrictions` pour déterminer les restrictions que vous prenez en charge sur un ensemble de lignes de schéma particulier (il est appelé par [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) via un pointeur converti). Les restrictions permettent aux consommateurs de récupérer uniquement les lignes correspondantes (par exemple, toutes les colonnes de la table « MaTable »). Les restrictions sont facultatives, et dans le cas où aucune n’est prise en charge (par défaut), toutes les données sont systématiquement retournées.
 
-L’implémentation par défaut de cette méthode définit le *rgRestrictions* 0 éléments de tableau. Remplacez la valeur par défaut dans votre classe session pour définir d’autres restrictions que celle par défaut.
+L’implémentation par défaut de cette méthode affecte la valeur 0 aux éléments du tableau *rgRestrictions* . Remplacez la valeur par défaut dans votre classe session pour définir d’autres restrictions que celle par défaut.
 
 Pour plus d’informations sur l’implémentation de la prise en charge des ensembles de lignes de schéma, consultez [Prise en charge des ensembles de lignes de schéma](../../data/oledb/supporting-schema-rowsets.md).
 
 Pour obtenir un exemple de fournisseur qui prend en charge les ensembles de lignes de schéma, consultez l’exemple [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .
 
-Pour plus d’informations sur les ensembles de lignes de schéma, consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le *de référence du programmeur OLE DB* dans le SDK Windows.
+Pour plus d’informations sur les ensembles de lignes de schéma, consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* dans le SDK Windows.
 
-## <a name="getrowset"></a> IDBSchemaRowsetImpl::GetRowset
+## <a name="getrowset"></a>IDBSchemaRowsetImpl :: GetRowset
 
 Retourne un ensemble de lignes de schéma.
 
@@ -229,7 +229,7 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 #### <a name="parameters"></a>Paramètres
 
 *pUnkOuter*<br/>
-[in] Externe `IUnknown` pendant l’agrégation ; sinon, NULL.
+dans Externe `IUnknown` lors de l’agrégation ; sinon, null.
 
 *rguidSchema*<br/>
 [in] Référence au GUID d’ensemble de lignes de schéma demandé (par exemple, `DBSCHEMA_TABLES`).
@@ -254,11 +254,11 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode impose à l’utilisateur de disposer d’un mappage de schéma dans la classe session. En utilisant les informations de mappage de schéma, `GetRowset` crée un objet rowset donné si le *rguidSchema* paramètre est égal à une des entrées de mappage GUID. Consultez [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) pour obtenir une description de l’entrée de mappage.
+Cette méthode impose à l’utilisateur de disposer d’un mappage de schéma dans la classe session. À l’aide des informations de `GetRowset` mappage de schéma, crée un objet d’ensemble de lignes donné si le paramètre *rguidSchema* est égal à l’un des GUID d’entrée de mappage. Consultez [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) pour obtenir une description de l’entrée de mappage.
 
-Consultez [IDBSchemaRowset::GetRowset](/previous-versions/windows/desktop/ms722634(v=vs.85)) dans le Kit de développement logiciel Windows.
+Consultez [IDBSchemaRowset :: GetRowset](/previous-versions/windows/desktop/ms722634(v=vs.85)) dans le SDK Windows.
 
-## <a name="getschemas"></a> IDBSchemaRowsetImpl::GetSchemas
+## <a name="getschemas"></a>IDBSchemaRowsetImpl :: GetSchemas
 
 Retourne une liste d’ensembles de lignes de schéma accessibles par [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md).
 
@@ -283,7 +283,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode retourne un tableau de tous les ensembles de lignes de schéma pris en charge par le fournisseur. Consultez [IDBSchemaRowset::GetSchemas](/previous-versions/windows/desktop/ms719605(v=vs.85)) dans le Kit de développement logiciel Windows.
+Cette méthode retourne un tableau de tous les ensembles de lignes de schéma pris en charge par le fournisseur. Consultez [IDBSchemaRowset :: GetSchemas](/previous-versions/windows/desktop/ms719605(v=vs.85)) dans la SDK Windows.
 
 L’implémentation de cette fonction impose à l’utilisateur de disposer d’un mappage de schéma dans la classe session. À partir des informations de mappage de schéma, elle répond ensuite avec le tableau de GUID des schémas contenus dans le mappage. Il s’agit des schémas pris en charge par le fournisseur.
 

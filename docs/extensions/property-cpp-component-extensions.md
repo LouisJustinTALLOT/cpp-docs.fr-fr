@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 8ec76db37cffb1b3d15447165300bedf1a8771c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 4a05f9cf8cbec9644254d14873a3259f12b33aed
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516504"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311693"
 ---
 # <a name="property--ccli-and-ccx"></a>propriété (C++/CLI et C++/CX)
 
@@ -86,9 +86,9 @@ Corps de la méthode de propriété de l'accesseur set ou get. *property_body* p
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-Pour plus d’informations, consultez [Propriétés (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
+Pour plus d’informations, consultez [Propriétés (C++/CX)](../cppcx/properties-c-cx.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/ZW`
 
@@ -125,7 +125,7 @@ Paramètre(s) de la méthode raise ; doit correspondre à la signature du dél�
 *index_list*<br/>
 Liste délimitée par des virgules d'un ou plusieurs index, spécifiés entre crochets (opérateur d'indice, ([])). Pour chaque index, spécifiez un type et éventuellement un identificateur qui peut être utilisé dans le corps de la méthode de propriété.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le premier exemple de syntaxe montre une *propriété simple*, qui déclare implicitement à la fois une méthode `set` et une méthode `get`. Le compilateur crée automatiquement un champ privé pour stocker la valeur de la propriété.
 
@@ -163,7 +163,7 @@ Une accessibilité différente est autorisée pour les méthodes d'accesseur dan
 
 **property** est un mot clé contextuel.  Pour plus d’informations, consultez [Mots clés contextuels](context-sensitive-keywords-cpp-component-extensions.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/clr`
 

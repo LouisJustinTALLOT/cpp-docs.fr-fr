@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: a7599e2987d27626e6f5c9d049d9a3bd4509c3ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: db6c73d6c52bf97aea5d0fbeeeebdeef87f692cc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516514"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311644"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Plateforme, valeur par défaut et espaces de noms cli (C++/CLI et C++/CX)
 
@@ -26,9 +26,9 @@ Visual Studio offre un espace de noms par défaut pour votre projet lorsque vous
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-Pour plus d’informations, consultez [Espaces de noms et visibilité de type (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx).
+Pour plus d’informations, consultez [Espaces de noms et visibilité de type (C++/CX)](../cppcx/namespaces-and-type-visibility-c-cx.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/ZW`
 
@@ -40,7 +40,7 @@ Option du compilateur : `/ZW`
 using namespace cli;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 C++/CLI prend en charge l’espace de noms **cli**. Lors de la compilation avec `/clr`, l’instruction **using** de la section Syntaxe est implicite.
 
@@ -54,7 +54,7 @@ Les fonctionnalités de langage suivantes se trouvent dans l’espace de noms **
 
 - [safe_cast](safe-cast-cpp-component-extensions.md)
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/clr`
 

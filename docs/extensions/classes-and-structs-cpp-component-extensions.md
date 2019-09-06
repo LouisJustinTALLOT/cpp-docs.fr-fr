@@ -1,21 +1,24 @@
 ---
 title: classe ref et struct ref (C++/CLI et C++/CX)
-ms.date: 05/16/2019
+ms.date: 05/30/2019
 ms.topic: reference
 f1_keywords:
 - ref class
+- value class
+- ref struct
+- value struct
 helpviewer_keywords:
 - ref class keyword [C++]
 - value class keyword [C++]
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 9c993b134d6d359d0bc756f5e79d2f9cc137c9cf
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
-ms.translationtype: HT
+ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65788785"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311748"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>classe ref et struct ref (C++/CLI et C++/CX)
 
@@ -54,7 +57,7 @@ Nom de la classe ou du struct.
 
 Pour plus d’informations, consultez les descriptions propres aux langages de ce paramètre dans les sections Windows Runtime et Common Language Runtime.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’accessibilité des membres par défaut d’un objet déclaré avec une **classe ref** ou une **classe value** est **private**. Et l’accessibilité des membres par défaut d’un objet déclaré avec un **struct ref** ou un **struct value** est **public**.
 
@@ -82,9 +85,9 @@ Pour plus d'informations sur les classes et structs, consultez
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-Consultez [Classes et structures de référence](../cppcx/ref-classes-and-structs-c-cx.md) et [Classes de valeur et structures de valeur](https://msdn.microsoft.com/library/windows/apps/hh699861.aspx).
+Consultez [Classes et structures de référence](../cppcx/ref-classes-and-structs-c-cx.md) et [Classes de valeur et structures de valeur](../cppcx/value-classes-and-structs-c-cx.md).
 
 ### <a name="parameters"></a>Paramètres
 
@@ -95,13 +98,13 @@ Quand vous déclarez un objet à l’aide des mots clés **ref class** ou **ref 
 
 Quand vous déclarez un objet à l’aide des mots clés **value class** ou **value struct**, la durée de vie de l’objet déclaré n’est pas contrôlée. L'objet est comme toute autre classe ou tout autre struct C++ standard.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le tableau suivant répertorie les différences spécifiques à C++/CLI par rapport à la syntaxe indiquée dans la section **Tous les runtimes**.
 
@@ -114,7 +117,7 @@ Les mots clés **ref class** et **ref struct** indiquent au compilateur que la c
 
 Les mots clés **value class** et **value struct** indiquent au compilateur que la valeur de la classe allouée ou du struct alloué est transmise aux fonctions ou stockée dans les membres.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/clr`
 

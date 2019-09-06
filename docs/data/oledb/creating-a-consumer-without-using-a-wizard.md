@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 421723ed561e8ed986a64024c4c5d29c9fba6110
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 85e95afa92c8a968865d9a3031e1a309e68ae7d3
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525115"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "70311689"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Création d'un consommateur sans utiliser l'Assistant
 
@@ -17,7 +17,7 @@ L’exemple suivant suppose que vous ajoutez la prise en charge du consommateur 
 
 Pour ajouter la prise en charge du consommateur OLE DB sans utiliser l’**Assistant Consommateur OLE DB ATL**:
 
-- Dans votre fichier pch.h, ajoutez les instructions `#include` suivantes :
+- Dans votre fichier *pch. h* , ajoutez les instructions `#include` suivantes :
 
     ```cpp
     #include <atlbase.h>
@@ -40,7 +40,7 @@ Par programmation, un consommateur exécute généralement la séquence d’opé
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>
     ```
 
-- Appelez `CoInitialize` pour initialiser COM. Il est appelé dans le code principal. Par exemple :
+- Appelez `CoInitialize` pour initialiser COM. Il est appelé dans le code principal. Par exemple :
 
     ```cpp
     HRESULT hr = CoInitialize(NULL);

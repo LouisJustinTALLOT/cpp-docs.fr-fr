@@ -3,12 +3,12 @@ title: Créer et configurer un projet CMake Linux dans Visual Studio
 description: Comment créer, configurer, modifier et compiler un projet CMake Linux dans Visual Studio
 ms.date: 06/12/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: d70ffe593cc014bca40a447a9cdb1c1c96a40e3f
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
-ms.translationtype: HT
+ms.openlocfilehash: 5c3a2b212240217fe6d6053188dd466376010391
+ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042678"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383413"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Créer et configurer un projet CMake Linux
 
@@ -112,7 +112,18 @@ Pour fournir la prise en charge des fonctionnalités IntelliSense pour les en-t�
 
 Pour déboguer votre code sur le système cible de débogage spécifié, définissez un point d’arrêt, sélectionnez la cible CMake comme élément de démarrage dans le menu de barre d’outils à côté des paramètres du projet, puis choisissez **&#x23f5; Démarrer** dans la barre d’outils ou appuyez sur F5.
 
-Pour personnaliser les arguments de ligne de commande de votre programme, appuyez sur le bouton **Changer les cibles** en haut de **l’Explorateur de solutions**, puis choisissez **Vue des cibles**. Puis cliquez avec le bouton droit sur la cible et sélectionnez **Paramètres de débogage et de lancement**. Un fichier de configuration launch.vs.json contenant des informations sur votre programme s’ouvre ou est créé. Pour spécifier des arguments supplémentaires, ajoutez-les au tableau JSON `args`. Pour plus d’informations, consultez [Projets Dossier ouvert pour C++](../build/open-folder-projects-cpp.md) et [Configurer des sessions de débogage CMake](../build/configure-cmake-debugging-sessions.md).
+Pour personnaliser les arguments de ligne de commande de votre programme, appuyez sur le bouton **Changer les cibles** en haut de **l’Explorateur de solutions**, puis choisissez **Vue des cibles**. Puis cliquez avec le bouton droit sur la cible et sélectionnez **Paramètres de débogage et de lancement**. Un fichier de configuration launch.vs.json contenant des informations sur votre programme s’ouvre ou est créé. Pour spécifier l’emplacement des fichiers sources, ajoutez une propriété **sourceFileMap** au fichier, comme illustré dans cet exemple :
+
+```json
+"MIMode": "gdb",
+"externalConsole": true,
+"sourceFileMap": {
+"c/Users/USER/source/repos/CMAKEPROJECTNAME": "C:\\Users\\USER\\source\\repos\\CMAKEPROJECTNAME"
+},
+"remoteMachineName": "${debugInfo.remoteMachineName}",
+```
+
+Pour spécifier des arguments supplémentaires, ajoutez-les au tableau JSON `args`. Pour plus d’informations, consultez [Projets Dossier ouvert pour C++](../build/open-folder-projects-cpp.md) et [Configurer des sessions de débogage CMake](../build/configure-cmake-debugging-sessions.md).
 
 ## <a name="configure_cmake_linux"></a> Configurer les paramètres CMake pour Linux
 

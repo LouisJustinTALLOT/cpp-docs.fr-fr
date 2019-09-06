@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: a3ab63206ce7ac53ff996ecf1bb64bdaa0b79fcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 481c2c0ec28972e9cef8d1103e49afa2037c2393
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390735"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311844"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP, classe
 
@@ -50,16 +50,16 @@ class IRowsetNotifyCP :
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Une classe dérivée de `IRowsetNotifyCP`.
+Classe dérivée de `IRowsetNotifyCP`.
 
 *ReentrantEventSync*<br/>
-Une classe de mutex qui prend en charge de la réentrance (la valeur par défaut est `CComSharedMutex`). Un mutex est un objet de synchronisation qui permet à un thread l’accès mutuellement exclusif à une ressource.
+Classe Mutex qui prend en charge la réentrance `CComSharedMutex`(la valeur par défaut est). Un mutex est un objet de synchronisation qui permet à un thread l’accès mutuellement exclusif à une ressource.
 
 *piid*<br/>
-Un pointeur d’interface ID (`IID*`) pour un `IRowsetNotify` interface point de connexion. La valeur par défaut est `&__uuidof(IRowsetNotify)`.
+Pointeur d’ID d’interface`IID*`() pour `IRowsetNotify` une interface de point de connexion. La valeur par défaut est `&__uuidof(IRowsetNotify)`.
 
 *DynamicUnkArray*<br/>
-Tableau de type [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), qui est un tableau alloué dynamiquement de `IUnknown` interfaces de récepteur de pointeurs vers le client.
+Tableau de type [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), qui est un tableau alloué dynamiquement de `IUnknown` pointeurs vers les interfaces du récepteur client.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -71,21 +71,21 @@ Tableau de type [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-cl
 
 |||
 |-|-|
-|[Fire_OnFieldChange](#onfieldchange)|Notifie le consommateur d’une modification à la valeur d’une colonne.|
-|[Fire_OnRowChange](#onrowchange)|Notifie le consommateur d’une modification qui affectent les lignes.|
-|[Fire_OnRowsetChange](#onrowsetchange)|Notifie le consommateur d’une modification qui affectent l’ensemble de lignes.|
+|[Fire_OnFieldChange](#onfieldchange)|Notifie le consommateur d’une modification de la valeur d’une colonne.|
+|[Fire_OnRowChange](#onrowchange)|Notifie le consommateur d’une modification affectant les lignes.|
+|[Fire_OnRowsetChange](#onrowsetchange)|Notifie le consommateur d’une modification affectant l’ensemble de lignes entier.|
 
 ## <a name="remarks"></a>Notes
 
-`IRowsetNotifyCP` implémente des fonctions pour informer les écouteurs sur le point de connexion de diffusion `IID_IRowsetNotify` des modifications apportées au contenu de l’ensemble de lignes.
+`IRowsetNotifyCP`implémente des fonctions de diffusion pour informer les écouteurs sur le `IID_IRowsetNotify` point de connexion des modifications apportées au contenu de l’ensemble de lignes.
 
-Notez que vous devez également implémenter et inscrire `IRowsetNotify` sur le consommateur (également appelé « sink ») à l’aide de [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) afin que le consommateur peut gérer les notifications. Consultez [réception des Notifications](../../data/oledb/receiving-notifications.md) sur l’implémentation de l’interface de point de connexion sur le consommateur.
+Notez que vous devez également implémenter et `IRowsetNotify` inscrire sur le consommateur (également appelé « récepteur ») à l’aide de [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) afin que le consommateur puisse gérer les notifications. Consultez [réception de notifications](../../data/oledb/receiving-notifications.md) sur l’implémentation de l’interface de point de connexion sur le consommateur.
 
-Pour plus d’informations sur l’implémentation des notifications, consultez « Prise en charge des Notifications » dans [création d’un fournisseur actualisable](../../data/oledb/creating-an-updatable-provider.md).
+Pour plus d’informations sur l’implémentation des notifications, consultez « notifications de prise en charge » dans [création d’un fournisseur pouvant être mis à jour](../../data/oledb/creating-an-updatable-provider.md).
 
-## <a name="onfieldchange"></a> IRowsetNotifyCP::Fire_OnFieldChange
+## <a name="onfieldchange"></a>IRowsetNotifyCP :: Fire_OnFieldChange
 
-Diffuse un [OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) événement pour avertir les utilisateurs d’une modification à la valeur d’une colonne.
+Diffuse un événement [OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) pour informer les utilisateurs d’une modification de la valeur d’une colonne.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -101,11 +101,11 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IRowsetNotify :: OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="onrowchange"></a> IRowsetNotifyCP::Fire_OnRowChange
+## <a name="onrowchange"></a>IRowsetNotifyCP :: Fire_OnRowChange
 
-Diffuse un [OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) événement à tous les écouteurs sur le point de connexion `IID_IRowsetNotify` pour avertir les utilisateurs d’une modification qui affectent les lignes.
+Diffuse un événement [OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) à tous les écouteurs sur le point `IID_IRowsetNotify` de connexion pour notifier les consommateurs d’une modification affectant les lignes.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -120,11 +120,11 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IRowsetNotify :: OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="onrowsetchange"></a> IRowsetNotifyCP::Fire_OnRowsetChange
+## <a name="onrowsetchange"></a>IRowsetNotifyCP :: Fire_OnRowsetChange
 
-Diffuse un [OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) événement à tous les écouteurs sur le point de connexion `IID_IRowsetNotify` pour avertir les utilisateurs d’une modification qui affectent l’ensemble de lignes.
+Diffuse un événement [OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) à tous les écouteurs sur le point `IID_IRowsetNotify` de connexion pour informer les consommateurs d’une modification affectant l’ensemble de lignes entier.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -137,13 +137,13 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IRowsetNotify :: OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[Notifications (COM)](/windows/desktop/com/notifications)<br/>
+[Notifications (COM)](/windows/win32/com/notifications)<br/>
 [BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)<br/>
 [END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)<br/>
 [CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)<br/>
