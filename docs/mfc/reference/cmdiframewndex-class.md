@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7973cf89eaa2090a8f1548f38a728f1100d5cbec
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505534"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741590"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx, classe
 
@@ -182,7 +182,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Recalcule la disposition de l’élément actif.|
 |`CMDIFrameWndEx::AddDockSite`|Cette méthode n’est pas utilisée.|
 |[CMDIFrameWndEx::AddPane](#addpane)|Inscrit un volet auprès du gestionnaire d’ancrage.|
-|[CMDIFrameWndEx:: AdjustClientArea](#adjustclientarea)|Réduit la zone cliente pour autoriser une bordure.|
+|[CMDIFrameWndEx :: AdjustClientArea](#adjustclientarea)|Réduit la zone cliente pour autoriser une bordure.|
 |[CMDIFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)|Recalcule la disposition de tous les volets ancrés.|
 |[CMDIFrameWndEx::AreMDITabs](#aremditabs)|Détermine si la fonctionnalité onglets MDI ou groupes avec onglet MDI est activée.|
 |[CMDIFrameWndEx::CanCovertControlBarToMDIChild](#cancovertcontrolbartomdichild)|Appelé par l’infrastructure pour déterminer si la fenêtre frame peut convertir les volets d’ancrage en documents avec onglet.|
@@ -244,7 +244,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Appelé par l’infrastructure pour mettre à jour le menu Frame. (Substitue `CMDIFrameWnd::OnUpdateFrameMenu`.)|
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Retourne le volet d’ancrage qui contient le point spécifié.|
 |`CMDIFrameWndEx::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) .  (Substitue `CMDIFrameWnd::PreTranslateMessage`.)|
-|[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Appelé par l’infrastructure pour recalculer la disposition de la fenêtre frame. (Substitue [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
+|[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Appelé par l’infrastructure pour recalculer la disposition de la fenêtre frame. (Substitue [CFrameWnd :: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Annule l’inscription d’un volet et le supprime du gestionnaire d’ancrage.|
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Enregistre la disposition actuelle des groupes avec onglet MDI et la liste des documents précédemment ouverts.|
 |[CMDIFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|Définit la fenêtre frame d’aperçu avant impression.|
@@ -255,7 +255,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::TabbedDocumentToControlBar](#tabbeddocumenttocontrolbar)|Convertit le document avec onglet spécifié en un volet d’ancrage.|
 |[CMDIFrameWndEx::UpdateCaption](#updatecaption)|Appelé par l’infrastructure pour mettre à jour la légende de frame de fenêtre.|
 |[CMDIFrameWndEx::UpdateMDITabbedBarsIcons](#updatemditabbedbarsicons)|Définit l’icône pour chaque volet à onglets MDI.|
-|[CMDIFrameWndEx::WinHelp](#winhelp)|Appelée par l’infrastructure pour lancer l’application WinHelp ou l’aide contextuelle. (Substitue [CWnd:: WinHelp](../../mfc/reference/cwnd-class.md#winhelp).)|
+|[CMDIFrameWndEx::WinHelp](#winhelp)|Appelée par l’infrastructure pour lancer l’application WinHelp ou l’aide contextuelle. (Substitue [CWnd :: WinHelp](../../mfc/reference/cwnd-class.md#winhelp).)|
 
 ### <a name="data-members"></a>Membres de données
 
@@ -268,9 +268,9 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 Pour tirer parti des fonctionnalités de personnalisation étendues dans votre application MDI, dérivez la classe de fenêtre frame MDI `CMDIFrameWndEx` de l' `CMDIFrameWnd`application à partir de au lieu de.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
-L’exemple suivant dérive une classe de `CMDIFrameWndEx`. Cet extrait de code provient de [l’exemple DrawClient: Application](../../overview/visual-cpp-samples.md)de dessin d’objets OLE basée sur le ruban MFC.
+L’exemple suivant dérive une classe de `CMDIFrameWndEx`. Cet extrait de code provient de [l’exemple DrawClient : Application](../../overview/visual-cpp-samples.md)de dessin d’objets OLE basée sur le ruban MFC.
 
 [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]
 
@@ -290,7 +290,7 @@ L’exemple suivant dérive une classe de `CMDIFrameWndEx`. Cet extrait de code 
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête:** afxMDIFrameWndEx. h
+**En-tête :** afxMDIFrameWndEx. h
 
 ##  <a name="activeitemrecalclayout"></a>  CMDIFrameWndEx::ActiveItemRecalcLayout
 
@@ -362,7 +362,7 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 ### <a name="parameters"></a>Paramètres
 
 *pnMDITabsType*<br/>
-à Pointeur vers une variable de type entier qui indique les fonctionnalités activées:
+à Pointeur vers une variable de type entier qui indique les fonctionnalités activées :
 
 - 0 : Toutes les fonctionnalités sont désactivées.
 
@@ -378,9 +378,9 @@ Retourne la valeur FALSe si aucune des fonctionnalités ci-dessus n’est activ�
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette fonction pour déterminer si les onglets MDI ou les groupes avec onglet MDI sont activés pour la fenêtre frame. Utilisez [CMDIFrameWndEx:: EnableMDITabs](#enablemditabs) pour activer ou désactiver la fonctionnalité d’onglets MDI.
+Utilisez cette fonction pour déterminer si les onglets MDI ou les groupes avec onglet MDI sont activés pour la fenêtre frame. Utilisez [CMDIFrameWndEx :: EnableMDITabs](#enablemditabs) pour activer ou désactiver la fonctionnalité d’onglets MDI.
 
-Utilisez [CMDIFrameWndEx:: EnableMDITabbedGroups](#enablemditabbedgroups) pour activer ou désactiver la fonctionnalité groupes avec onglet MDI.
+Utilisez [CMDIFrameWndEx :: EnableMDITabbedGroups](#enablemditabbedgroups) pour activer ou désactiver la fonctionnalité groupes avec onglet MDI.
 
 ##  <a name="cancovertcontrolbartomdichild"></a>  CMDIFrameWndEx::CanCovertControlBarToMDIChild
 
@@ -392,11 +392,11 @@ virtual BOOL CanCovertControlBarToMDIChild();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si la fenêtre frame peut convertir des volets d’ancrage en documents avec onglets; Sinon, retourne FALSe.
+Retourne la valeur TRUE si la fenêtre frame peut convertir des volets d’ancrage en documents avec onglets ; Sinon, retourne FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Substituez cette méthode dans une classe dérivée et retournez la valeur TRUE pour activer la conversion des volets d’ancrage en documents avec onglet. Vous pouvez également définir [CMDIFrameWndEx:: m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild) sur true.
+Substituez cette méthode dans une classe dérivée et retournez la valeur TRUE pour activer la conversion des volets d’ancrage en documents avec onglet. Vous pouvez également définir [CMDIFrameWndEx :: m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild) sur true.
 
 ##  <a name="controlbartotabbeddocument"></a>  CMDIFrameWndEx::ControlBarToTabbedDocument
 
@@ -449,9 +449,9 @@ Substituez cette méthode afin de créer des documents lorsqu’ils sont chargé
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `CreateDocumentWindow` est utilisé dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment `CreateDocumentWindow` est utilisé dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
-Dans cet exemple, `g_strStartViewName` peut être le nom d’un «document virtuel» (par exemple, «page de démarrage») qui n’est pas réellement chargé à partir d’un fichier sur disque. Par conséquent, nous avons besoin d’un traitement spécial pour gérer ce cas.
+Dans cet exemple, `g_strStartViewName` peut être le nom d’un « document virtuel » (par exemple, « page de démarrage ») qui n’est pas réellement chargé à partir d’un fichier sur disque. Par conséquent, nous avons besoin d’un traitement spécial pour gérer ce cas.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
@@ -501,11 +501,11 @@ dans Non utilisé.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode ancre le volet spécifié à l’un des côtés de la fenêtre frame spécifiée lors de l’appel de [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) et [CMDIFrameWndEx:: EnableDocking](#enabledocking) .
+Cette méthode ancre le volet spécifié à l’un des côtés de la fenêtre frame spécifiée lors de l’appel de [CBasePane :: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) et [CMDIFrameWndEx :: EnableDocking](#enabledocking) .
 
 ### <a name="example"></a>Exemple
 
-L'exemple suivant illustre l'utilisation de la méthode `DockPane`. Cet extrait de code provient de [l’exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L'exemple suivant illustre l'utilisation de la méthode `DockPane`. Cet extrait de code provient de [l’exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]
 
@@ -535,9 +535,9 @@ Retourne la valeur TRUE si l’opération réussit. Sinon, retourne FALSe.
 
 Appelez cette méthode pour ancrer plusieurs objets Pane dans un ordre prédéfini. Cette méthode ancre le volet spécifié par *pBar* à gauche du volet spécifié par *pLeftOf*.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-L’exemple suivant montre comment la `DockPaneLeftOf` méthode est utilisée dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment la `DockPaneLeftOf` méthode est utilisée dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]
 
@@ -568,7 +568,7 @@ Appelez cette fonction pour activer le mode de masquage automatique des volets l
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment la `EnableAutoHidePanes` méthode est utilisée dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment la `EnableAutoHidePanes` méthode est utilisée dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]
 
@@ -595,7 +595,7 @@ Appelez cette fonction pour activer l’ancrage des volets qui appartiennent à 
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment la `EnableDocking` méthode est utilisée dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment la `EnableDocking` méthode est utilisée dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]
 
@@ -629,7 +629,7 @@ dans ID d’une commande qui active ou désactive le mode plein écran.
 
 ### <a name="remarks"></a>Notes
 
-En mode plein écran, toutes les barres de contrôle d’ancrage, barres d’outils et menus sont masquées et la vue active est redimensionnée pour occuper le plein écran. Lorsque vous activez le mode plein écran, vous devez spécifier un ID de la commande qui l’active ou le désactive. Vous pouvez appeler `EnableFullScreenMode` à partir de la fonction `OnCreate` du frame principal. Quand une fenêtre frame est basculée en mode plein écran, l’infrastructure crée une barre d’outils flottante avec un bouton doté de l’ID de commande spécifié. Si vous souhaitez conserver le menu principal à l’écran, appelez [CMDIFrameWndEx:: EnableFullScreenMainMenu](#enablefullscreenmainmenu).
+En mode plein écran, toutes les barres de contrôle d’ancrage, barres d’outils et menus sont masquées et la vue active est redimensionnée pour occuper le plein écran. Lorsque vous activez le mode plein écran, vous devez spécifier un ID de la commande qui l’active ou le désactive. Vous pouvez appeler `EnableFullScreenMode` à partir de la fonction `OnCreate` du frame principal. Quand une fenêtre frame est basculée en mode plein écran, l’infrastructure crée une barre d’outils flottante avec un bouton doté de l’ID de commande spécifié. Si vous souhaitez conserver le menu principal à l’écran, appelez [CMDIFrameWndEx :: EnableFullScreenMainMenu](#enablefullscreenmainmenu).
 
 ##  <a name="enableloaddockstate"></a>  CMDIFrameWndEx::EnableLoadDockState
 
@@ -659,7 +659,7 @@ void EnableMDITabbedGroups(
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-dans Si la valeur est TRUE, la fonctionnalité de groupes avec onglet MDI est activée; Si la valeur est FALSe, la fonctionnalité de groupes avec onglet MDI est désactivée.
+dans Si la valeur est TRUE, la fonctionnalité de groupes avec onglet MDI est activée ; Si la valeur est FALSe, la fonctionnalité de groupes avec onglet MDI est désactivée.
 
 *params*<br/>
 dans Spécifie les paramètres que l’infrastructure s’applique aux fenêtres enfants créées dans la zone cliente MDI.
@@ -668,7 +668,7 @@ dans Spécifie les paramètres que l’infrastructure s’applique aux fenêtres
 
 Utilisez cette méthode pour activer ou désactiver la fonctionnalité groupes avec onglet MDI. Cette fonctionnalité permet aux applications MDI d’afficher les fenêtres enfants sous forme de fenêtres avec onglets alignées verticalement ou horizontalement dans la zone cliente MDI. Les groupes de fenêtres avec onglet sont séparés par des séparateurs. L’utilisateur peut redimensionner des groupes avec onglet à l’aide d’un séparateur.
 
-- L’utilisateur peut:
+- L’utilisateur peut :
 
 - Faites glisser des onglets individuels entre des groupes.
 
@@ -686,7 +686,7 @@ Pour plus d’informations sur l’utilisation des groupes avec onglet MDI, cons
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `EnableMDITabbedGroups` est utilisé dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment `EnableMDITabbedGroups` est utilisé dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]
 
@@ -738,7 +738,7 @@ Si *bTabCustomTooltips* a la valeur true, un message AFX_WM_ON_GET_TAB_TOOLTIP e
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `EnableMDITabs` est utilisé dans l' [exemple MDITabsDemo: Application](../../overview/visual-cpp-samples.md)MDI avec onglets MFC.
+L’exemple suivant montre comment `EnableMDITabs` est utilisé dans l' [exemple MDITabsDemo : Application](../../overview/visual-cpp-samples.md)MDI avec onglets MFC.
 
 [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]
 
@@ -757,7 +757,7 @@ dans Si la valeur est TRUE, active l’activation du dernier onglet actif. Si la
 
 ### <a name="remarks"></a>Notes
 
-Il existe deux façons d’ouvrir un onglet lorsque l’onglet actif est fermé:
+Il existe deux façons d’ouvrir un onglet lorsque l’onglet actif est fermé :
 
 - Activez l’onglet suivant.
 
@@ -784,7 +784,7 @@ void EnablePaneMenu(
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-dans Si la valeur est TRUE, la gestion automatique du menu du volet est activée; Si la valeur est FALSe, la gestion automatique est désactivée.
+dans Si la valeur est TRUE, la gestion automatique du menu du volet est activée ; Si la valeur est FALSe, la gestion automatique est désactivée.
 
 *uiCustomizeCmd*<br/>
 dans ID de commande de l’élément de menu **personnaliser** . Cet élément de menu est généralement ajouté à la fin de la liste des volets.
@@ -807,7 +807,7 @@ Le menu contextuel affiche la liste des volets de l’application et permet à l
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `EnablePaneMenu` est utilisé dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment `EnablePaneMenu` est utilisé dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]
 
@@ -849,7 +849,7 @@ Utilisez cette méthode pour insérer un élément de menu dont la commande appe
 
 ### <a name="example"></a>Exemples
 
-L’exemple suivant montre comment `EnableWindowsDialog` est utilisé dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment `EnableWindowsDialog` est utilisé dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]
 
@@ -863,7 +863,7 @@ CMFCPopupMenu* GetActivePopup() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers le menu contextuel actif; NULL si aucun menu contextuel n’est actif.
+Pointeur vers le menu contextuel actif ; NULL si aucun menu contextuel n’est actif.
 
 ### <a name="remarks"></a>Notes
 
@@ -883,7 +883,7 @@ Valeur d’ID de ressource. 0 si la fenêtre frame n’a pas de barre de menus.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode retourne l’ID de ressource qui a été spécifié lors du chargement de la fenêtre frame MDI par [CFrameWnd:: LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe).
+Cette méthode retourne l’ID de ressource qui a été spécifié lors du chargement de la fenêtre frame MDI par [CFrameWnd :: LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe).
 
 ##  <a name="getmditabgroups"></a>  CMDIFrameWndEx::GetMDITabGroups
 
@@ -923,11 +923,11 @@ DWORD GetMDITabsContextMenuAllowedItems();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Combinaison or au niveau du bit des indicateurs suivants:
+Combinaison or au niveau du bit des indicateurs suivants :
 
-- BCGP_MDI_CREATE_VERT_GROUP: peut créer un groupe d’onglets vertical.
+- BCGP_MDI_CREATE_VERT_GROUP : peut créer un groupe d’onglets vertical.
 
-- BCGP_MDI_CREATE_HORZ_GROUP: permet de créer un groupe d’onglets horizontal.
+- BCGP_MDI_CREATE_HORZ_GROUP : permet de créer un groupe d’onglets horizontal.
 
 - BCGP_MDI_CAN_MOVE_PREV-peut déplacer un onglet vers le groupe d’onglets précédent.
 
@@ -1068,11 +1068,11 @@ BOOL IsFullScreen() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la fenêtre frame est en mode plein écran; Sinon, FALSe.
+TRUE si la fenêtre frame est en mode plein écran ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez définir le mode plein écran en appelant la méthode [CMDIFrameWndEx:: EnableFullScreenMode](#enablefullscreenmode) .
+Vous pouvez définir le mode plein écran en appelant la méthode [CMDIFrameWndEx :: EnableFullScreenMode](#enablefullscreenmode) .
 
 ##  <a name="ismditabbedgroup"></a>  CMDIFrameWndEx::IsMDITabbedGroup
 
@@ -1084,11 +1084,11 @@ BOOL IsMDITabbedGroup() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la fonctionnalité de groupes avec onglet MDI est activée; Sinon, FALSe.
+TRUE si la fonctionnalité de groupes avec onglet MDI est activée ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Pour déterminer si les onglets MDI standard ou la fonctionnalité groupes avec onglet MDI sont activés, utilisez [CMDIFrameWndEx:: AreMDITabs](#aremditabs).
+Pour déterminer si les onglets MDI standard ou la fonctionnalité groupes avec onglet MDI sont activés, utilisez [CMDIFrameWndEx :: AreMDITabs](#aremditabs).
 
 ##  <a name="ismemberofmditabgroup"></a>  CMDIFrameWndEx::IsMemberOfMDITabGroup
 
@@ -1117,7 +1117,7 @@ BOOL IsMenuBarAvailable() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le pointeur vers l’objet de barre de menus n’a pas la valeur NULL; Sinon, FALSe.
+TRUE si le pointeur vers l’objet de barre de menus n’a pas la valeur NULL ; Sinon, FALSe.
 
 ##  <a name="ispointneardocksite"></a>  CMDIFrameWndEx::IsPointNearDockSite
 
@@ -1139,11 +1139,11 @@ dans Point spécifié en coordonnées d’écran.
 dans Spécifie le bord vers lequel le point est proche. Les valeurs possibles sont CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP et CBRS_ALIGN_BOTTOM
 
 *bOuterEdge*<br/>
-dans TRUE si le point est proche de la bordure externe du site d’ancrage; FALSe dans le cas contraire.
+dans TRUE si le point est proche de la bordure externe du site d’ancrage ; FALSe dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le point est proche du site d’ancrage; Sinon, FALSe.
+TRUE si le point est proche du site d’ancrage ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -1159,7 +1159,7 @@ BOOL IsPrintPreview();
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la fenêtre frame est en mode aperçu avant impression; Sinon, FALSe.
+TRUE si la fenêtre frame est en mode aperçu avant impression ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -1191,7 +1191,7 @@ dans Pointeur vers une [structure CCreateContext](../../mfc/reference/ccreatecon
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la méthode est réussie; sinon, FALSe.
+TRUE si la méthode est réussie ; sinon, FALSe.
 
 ##  <a name="loadmdistate"></a>  CMDIFrameWndEx::LoadMDIState
 
@@ -1208,23 +1208,23 @@ dans Spécifie le nom du profil.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le chargement a réussi; FALSe si le chargement a échoué ou s’il n’y a pas de données à charger.
+TRUE si le chargement a réussi ; FALSe si le chargement a échoué ou s’il n’y a pas de données à charger.
 
 ### <a name="remarks"></a>Notes
 
-Pour charger ou enregistrer l’état des onglets et groupes MDI et la liste des documents ouverts, procédez comme suit:
+Pour charger ou enregistrer l’état des onglets et groupes MDI et la liste des documents ouverts, procédez comme suit :
 
-- Appeler [CMDIFrameWndEx:: SaveMDIState](#savemdistate) lorsque le frame principal est en cours de fermeture
+- Appeler [CMDIFrameWndEx :: SaveMDIState](#savemdistate) lorsque le frame principal est en cours de fermeture
 
-- Appelez [CMDIFrameWndEx:: LoadMDIState](#loadmdistate) lorsque le frame principal est en cours de création. L’emplacement recommandé pour cet appel est avant que le frame principal ne s’affiche pour la première fois. Ajoutez `CWinAppEx::EnableLoadWindowPlacement` avantAdd`pMainFrame->LoadFrame (IDR_MAINFRAME);.` aprèsl'`LoadMDIState` appel à pour afficher le frame principal à la position qui a été stockée dans le registre. `CBCGPWorkspace::ReloadWindowPlacement` `(FALSE);` `(pMainFrame);`
+- Appelez [CMDIFrameWndEx :: LoadMDIState](#loadmdistate) lorsque le frame principal est en cours de création. L’emplacement recommandé pour cet appel est avant que le frame principal ne s’affiche pour la première fois. Ajoutez `CWinAppEx::EnableLoadWindowPlacement` avantAdd`pMainFrame->LoadFrame (IDR_MAINFRAME);.` aprèsl'`LoadMDIState` appel à pour afficher le frame principal à la position qui a été stockée dans le registre. `CBCGPWorkspace::ReloadWindowPlacement` `(FALSE);` `(pMainFrame);`
 
-- Substituez `GetDocumentName` dans la `CMDIChildWndEx`classe dérivée de si votre application affiche des documents qui ne sont pas stockés en tant que fichiers. La chaîne retournée sera enregistrée dans le registre en tant qu’identificateur de document. L’implémentation de base de [CMDIChildWndEx,:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) retourne une valeur obtenue à partir de [CDocument:: GetPathName](../../mfc/reference/cdocument-class.md#getpathname).
+- Substituez `GetDocumentName` dans la `CMDIChildWndEx`classe dérivée de si votre application affiche des documents qui ne sont pas stockés en tant que fichiers. La chaîne retournée sera enregistrée dans le registre en tant qu’identificateur de document. L’implémentation de base de [CMDIChildWndEx, :: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) retourne une valeur obtenue à partir de [CDocument :: GetPathName](../../mfc/reference/cdocument-class.md#getpathname).
 
-- Remplacez [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) pour créer correctement des documents lorsqu’ils sont chargés à partir du Registre. Le premier paramètre est la chaîne `GetDocumentName` retournée.
+- Remplacez [CMDIFrameWndEx :: CreateDocumentWindow](#createdocumentwindow) pour créer correctement des documents lorsqu’ils sont chargés à partir du Registre. Le premier paramètre est la chaîne `GetDocumentName` retournée.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `LoadMDIState` est utilisé dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment `LoadMDIState` est utilisé dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]
 
@@ -1258,9 +1258,9 @@ dans Spécifie le nouvel alignement du groupe. Si la valeur est TRUE, le nouveau
 
 Utilisez cette fonction pour créer une nouvelle fenêtre à onglets (nouveau groupe à onglets) et y ajouter le premier onglet.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-L’exemple suivant montre comment `MDITabNewGroup` est utilisé dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment `MDITabNewGroup` est utilisé dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]
 
@@ -1274,13 +1274,13 @@ BOOL m_bCanCovertControlBarToMDIChild;
 
 ### <a name="remarks"></a>Notes
 
-Indique si les barres de contrôle d’ancrage peuvent être converties en fenêtres enfants MDI. Si cet indicateur a la valeur TRUE, l’infrastructure gère automatiquement la conversion lorsque l’utilisateur sélectionne la commande de **document** à onglets. L’indicateur est protégé et vous devez activer explicitement cette option soit en définissant `m_bCanCovertControlBarToMDIChild` dans un constructeur d’une `CMDIFrameWndEx`classe dérivée de, soit en `CanConvertControlBarToMDIChild`substituant.
+Indique si les barres de contrôle d’ancrage peuvent être converties en fenêtres enfants MDI. Si cet indicateur a la valeur TRUE, l’infrastructure gère automatiquement la conversion lorsque l’utilisateur sélectionne la commande de **document à onglets** . L’indicateur est protégé et vous devez activer explicitement cette option soit en définissant `m_bCanCovertControlBarToMDIChild` dans un constructeur d’une `CMDIFrameWndEx`classe dérivée de, soit en `CanConvertControlBarToMDIChild`substituant.
 
 La valeur par défaut est `FALSE`.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `m_bCanCovertControlBarToMDIChild` est utilisé dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment `m_bCanCovertControlBarToMDIChild` est utilisé dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
@@ -1326,7 +1326,7 @@ dans Contient l’une des valeurs suivantes de l’énumération `CFrameWnd::Bor
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la méthode a réussi; Sinon, 0.
+Différent de zéro si la méthode a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -1413,17 +1413,17 @@ virtual BOOL OnCmdMsg(
 dans ID de la commande.
 
 *nCode*<br/>
-dans Identifie le code de notification de commande. Pour plus d’informations sur les valeurs de *nCode*, consultez [CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) .
+dans Identifie le code de notification de commande. Pour plus d’informations sur les valeurs de *nCode*, consultez [CCmdTarget :: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) .
 
 *pExtra*<br/>
-dans Utilisé en fonction de la valeur de *nCode*. Pour plus d’informations sur *pExtra*, consultez [CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) .
+dans Utilisé en fonction de la valeur de *nCode*. Pour plus d’informations sur *pExtra*, consultez [CCmdTarget :: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) .
 
 *pHandlerInfo*<br/>
 [in, out] En général, ce paramètre doit avoir la valeur NULL. Si la valeur n' `OnCmdMsg` est pas null, `pTarget` remplit `pmf` les membres et de la structure *pHandlerInfo* au lieu de distribuer la commande.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le message est géré; Sinon, 0.
+Différent de zéro si le message est géré ; Sinon, 0.
 
 ##  <a name="ondrawmenuimage"></a>  CMDIFrameWndEx::OnDrawMenuImage
 
@@ -1502,7 +1502,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 dans Bouton de barre d’outils.
 
 *pTI*<br/>
-à Pointeur vers une structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) .
+à Pointeur vers une structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) .
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1527,7 +1527,7 @@ dans Pointeur vers une fenêtre mini-frame.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la méthode est réussie; sinon, FALSe.
+TRUE si la méthode est réussie ; sinon, FALSe.
 
 ##  <a name="onsetpreviewmode"></a>  CMDIFrameWndEx::OnSetPreviewMode
 
@@ -1549,7 +1549,7 @@ dans Pointeur vers une `CPrintPreviewState` structure.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode remplace [CFrameWnd:: OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).
+Cette méthode remplace [CFrameWnd :: OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).
 
 ##  <a name="onshowcustomizepane"></a>  CMDIFrameWndEx::OnShowCustomizePane
 
@@ -1596,11 +1596,11 @@ virtual BOOL OnShowMDITabContextMenu(
 dans Emplacement du menu en coordonnées d’écran.
 
 *dwAllowedItems*<br/>
-dans Combinaison or au niveau du bit des indicateurs qui indique les actions autorisées pour l’onglet actuel:
+dans Combinaison or au niveau du bit des indicateurs qui indique les actions autorisées pour l’onglet actuel :
 
-- BCGP_MDI_CREATE_VERT_GROUP: peut créer un groupe d’onglets vertical.
+- BCGP_MDI_CREATE_VERT_GROUP : peut créer un groupe d’onglets vertical.
 
-- BCGP_MDI_CREATE_HORZ_GROUP: permet de créer un groupe d’onglets horizontal.
+- BCGP_MDI_CREATE_HORZ_GROUP : permet de créer un groupe d’onglets horizontal.
 
 - BCGP_MDI_CAN_MOVE_PREV-peut déplacer un onglet vers le groupe d’onglets précédent.
 
@@ -1621,7 +1621,7 @@ Si vous ne traitez `OnShowMDITabContextMenu`pas, le menu contextuel ne s’affic
 
 ### <a name="example"></a>Exemples
 
-L’exemple suivant montre comment `OnShowMDITabContextMenu` est utilisé dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment `OnShowMDITabContextMenu` est utilisé dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]
 
@@ -1646,7 +1646,7 @@ TRUE si l’état des volets change suite à l’appel de cette méthode, FALSe 
 
 L’implémentation par défaut supprime la barre d’outils de la fenêtre frame de niveau supérieur.
 
-Si [CDockingManager:: m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode) a la valeur true (valeur par défaut), tous les volets d’ancrage sont masqués.
+Si [CDockingManager :: m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode) a la valeur true (valeur par défaut), tous les volets d’ancrage sont masqués.
 
 ##  <a name="onshowpopupmenu"></a>  CMDIFrameWndEx::OnShowPopupMenu
 
@@ -1766,7 +1766,7 @@ Pointeur vers un volet d’ancrage, ou NULL si aucun contrôle ne contient le po
 
 ### <a name="remarks"></a>Notes
 
-L’appel est redirigé vers la [classe CDockingManager](../../mfc/reference/cdockingmanager-class.md). Pour plus d’informations, consultez [CDockingManager:: ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) .
+L’appel est redirigé vers la [classe CDockingManager](../../mfc/reference/cdockingmanager-class.md). Pour plus d’informations, consultez [CDockingManager :: ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) .
 
 ##  <a name="recalclayout"></a>  CMDIFrameWndEx::RecalcLayout
 
@@ -1779,11 +1779,11 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bNotify*<br/>
-dans Détermine si l’élément sur place actif pour la fenêtre frame reçoit une notification de la modification de la disposition. Si la valeur est TRUE, l’élément est notifié; Sinon, FALSe.
+dans Détermine si l’élément sur place actif pour la fenêtre frame reçoit une notification de la modification de la disposition. Si la valeur est TRUE, l’élément est notifié ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode remplace [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).
+Cette méthode remplace [CFrameWnd :: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).
 
 ##  <a name="removepanefromdockmanager"></a>  CMDIFrameWndEx::RemovePaneFromDockManager
 
@@ -1817,7 +1817,7 @@ dans Pointeur vers un volet qui remplace le volet supprimé.
 
 ### <a name="remarks"></a>Notes
 
-Vous devez inscrire chaque volet auprès du gestionnaire d’ancrage pour prendre part à la disposition de l’ancrage. Utilisez [CMDIFrameWndEx:: AddPane](#addpane) ou [CMDIFrameWndEx:: InsertPane](#insertpane) pour enregistrer les volets.
+Vous devez inscrire chaque volet auprès du gestionnaire d’ancrage pour prendre part à la disposition de l’ancrage. Utilisez [CMDIFrameWndEx :: AddPane](#addpane) ou [CMDIFrameWndEx :: InsertPane](#insertpane) pour enregistrer les volets.
 
 Utilisez cette méthode quand un volet ne fait plus partie de la disposition d’ancrage de la fenêtre frame.
 
@@ -1836,27 +1836,27 @@ dans Spécifie le nom du profil.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’enregistrement a réussi; FALSe si l’enregistrement a échoué.
+TRUE si l’enregistrement a réussi ; FALSe si l’enregistrement a échoué.
 
 ### <a name="remarks"></a>Notes
 
-Pour charger ou enregistrer l’état des onglets et groupes MDI et la liste des documents ouverts, procédez comme suit:
+Pour charger ou enregistrer l’état des onglets et groupes MDI et la liste des documents ouverts, procédez comme suit :
 
 - Appeler `SaveMDIState` lorsque le frame principal est fermé
 
-- Appelez [CMDIFrameWndEx:: LoadMDIState](#loadmdistate) lorsque le frame principal est en cours de création. L’emplacement recommandé pour cet appel est avant que le frame principal ne s’affiche pour la première fois.
+- Appelez [CMDIFrameWndEx :: LoadMDIState](#loadmdistate) lorsque le frame principal est en cours de création. L’emplacement recommandé pour cet appel est avant que le frame principal ne s’affiche pour la première fois.
 
 - Appeler `CWinAppEx::EnableLoadWindowPlacement(FALSE);` avant`pMainFrame->LoadFrame (IDR_MAINFRAME);`
 
 - Appelez `CWinAppEx::ReloadWindowPlacement(pMainFrame)` after`LoadMDIState` pour afficher le frame principal à la position qui a été stockée dans le registre.
 
-- Substituez `GetDocumentName` dans la `CMDIChildWndEx`classe dérivée de si votre application affiche des documents qui ne sont pas stockés en tant que fichiers. La chaîne retournée sera enregistrée dans le registre en tant qu’identificateur de document. Pour plus d’informations, consultez [CMDIChildWndEx,:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).
+- Substituez `GetDocumentName` dans la `CMDIChildWndEx`classe dérivée de si votre application affiche des documents qui ne sont pas stockés en tant que fichiers. La chaîne retournée sera enregistrée dans le registre en tant qu’identificateur de document. Pour plus d’informations, consultez [CMDIChildWndEx, :: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).
 
-- Remplacez [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) pour créer correctement des documents lorsqu’ils sont chargés à partir du Registre. Le paramètre de `CreateDocumentWindow` est la `GetDocumentName` chaîne retournée précédemment.
+- Remplacez [CMDIFrameWndEx :: CreateDocumentWindow](#createdocumentwindow) pour créer correctement des documents lorsqu’ils sont chargés à partir du Registre. Le paramètre de `CreateDocumentWindow` est la `GetDocumentName` chaîne retournée précédemment.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `SaveMDIState` est utilisé dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment `SaveMDIState` est utilisé dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]
 
@@ -1939,7 +1939,7 @@ Appelez cette méthode pour afficher ou masquer le volet. N’utilisez `ShowWind
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `ShowPane` est utilisé dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment `ShowPane` est utilisé dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]
 
@@ -1951,9 +1951,9 @@ Crée une zone [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanager
 void ShowWindowsDialog();
 ```
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-L’exemple suivant montre comment `ShowWindowsDialog` est utilisé dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment `ShowWindowsDialog` est utilisé dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]
 
@@ -1976,11 +1976,11 @@ TRUE si la méthode a réussi, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour convertir un document avec onglets en un volet d’ancrage. Le document avec onglet doit avoir été créé à l’aide de [CMDIFrameWndEx:: ControlBarToTabbedDocument](#controlbartotabbeddocument).
+Utilisez cette méthode pour convertir un document avec onglets en un volet d’ancrage. Le document avec onglet doit avoir été créé à l’aide de [CMDIFrameWndEx :: ControlBarToTabbedDocument](#controlbartotabbeddocument).
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `TabbedDocumentToControlBar` est utilisé dans l' [exemple VisualStudioDemo: Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
+L’exemple suivant montre comment `TabbedDocumentToControlBar` est utilisé dans l' [exemple VisualStudioDemo : Application](../../overview/visual-cpp-samples.md)Visual Studio MFC.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]
 

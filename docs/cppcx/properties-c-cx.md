@@ -2,16 +2,16 @@
 title: Propriétés (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-ms.openlocfilehash: 8303952beefbbac13db14e148c6441c29a46b3d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdff2bf5abd3177eda962b7cc55ace1078522f32
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375221"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741095"
 ---
 # <a name="properties-ccx"></a>Propriétés (C++/CX)
 
-Types Windows Runtime exposent les données publiques en tant que propriétés. Le code client accède à la propriété comme un DataMember public. En interne, la propriété est implémentée en tant que bloc qui contient une méthode d'accesseur get et une méthode d'accesseur set ou les deux. En utilisant des méthodes d'accesseur, vous pouvez exécuter des actions supplémentaires avant ou après avoir récupéré la valeur. Par exemple, vous pouvez déclencher un événement ou effectuer des contrôles de validation.
+Les types de Windows Runtime exposent des données publiques sous forme de propriétés. Le code client accède à la propriété comme un DataMember public. En interne, la propriété est implémentée en tant que bloc qui contient une méthode d'accesseur get et une méthode d'accesseur set ou les deux. En utilisant des méthodes d'accesseur, vous pouvez exécuter des actions supplémentaires avant ou après avoir récupéré la valeur. Par exemple, vous pouvez déclencher un événement ou effectuer des contrôles de validation.
 
 ### <a name="remarks"></a>Notes
 
@@ -38,5 +38,5 @@ Notez qu'une propriété ne peut pas être initialisée dans une liste de membre
 ## <a name="see-also"></a>Voir aussi
 
 [Système de type](../cppcx/type-system-c-cx.md)<br/>
-[Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)

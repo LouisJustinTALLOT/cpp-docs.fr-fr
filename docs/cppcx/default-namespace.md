@@ -2,16 +2,16 @@
 title: espace de noms par défaut
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-ms.openlocfilehash: 60a47c9549ee40b419eb5f4aa84720f8dcd1c366
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b67aedc791ed41e93268d9e9f44492781940d55e
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389461"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740517"
 ---
 # <a name="default-namespace"></a>espace de noms par défaut
 
-Le `default` les types intégrés sont pris en charge par C++ / définit la portée espace de noms c++ / CX.
+L' `default` espace de noms portée les types intégrés qui sont pris en charge C++par/CX.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,4 +52,4 @@ Tous les types intégrés héritent des membres suivants.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
+[Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)

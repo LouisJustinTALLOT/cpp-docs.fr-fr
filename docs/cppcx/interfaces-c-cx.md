@@ -2,12 +2,12 @@
 title: Interfaces (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: 04aaf25817cade47e89f0a06c423b68538d947b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 263feb7b9c8a472a6077236596107bdeff26a5a4
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375780"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740187"
 ---
 # <a name="interfaces-ccx"></a>Interfaces (C++/CX)
 
@@ -25,7 +25,7 @@ Une interface possède les caractéristiques suivantes :
 
 - Les champs et les membres statiques ne sont pas autorisés.
 
-- Types qui sont utilisés en tant que propriétés, paramètres de méthode ou valeurs de retour peuvent uniquement être des types de Runtime de Windows ; Cela inclut les types fondamentaux et les types de classe enum.
+- Les types utilisés comme propriétés, paramètres de méthode ou valeurs de retour ne peuvent être que des types Windows Runtime ; Cela comprend les types fondamentaux et les types de classe Enum.
 
 ## <a name="declaration-and-usage"></a>Déclaration et utilisation
 
@@ -63,9 +63,9 @@ Lorsqu'une classe ref implémente plusieurs interfaces, et ces interfaces ont de
 
 ## <a name="generic-interfaces"></a>Interfaces génériques
 
-En C / c++ / CX, le `generic` mot clé est utilisé pour représenter un type de Runtime Windows paramétrables. Un type paramétré est émis dans les métadonnées et peut être consommé par le code écrit dans n'importe quel langage qui prend en charge les paramètres de type. Le Windows Runtime définit certaines interfaces génériques — par exemple, [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)— mais il ne prend en charge la création de des interfaces génériques publiques définies par l’utilisateur en C / c++ / CX. Toutefois, vous pouvez créer des interfaces génériques privées.
+Dans C++/CX, le `generic` mot clé est utilisé pour représenter un type paramétrable Windows Runtime. Un type paramétré est émis dans les métadonnées et peut être consommé par le code écrit dans n'importe quel langage qui prend en charge les paramètres de type. La Windows Runtime définit des interfaces génériques, par exemple [Windows :: Foundation :: Collections :: IVector\<T >](Windows::Foundation::Collections::IVector), mais elle ne prend pas en charge la création d’interfaces génériques publiques définies par l’utilisateur dans/CX. C++ Toutefois, vous pouvez créer des interfaces génériques privées.
 
-Voici comment les types de Runtime de Windows peuvent être utilisés pour créer une interface générique :
+Voici comment les types de Windows Runtime peuvent être utilisés pour créer une interface générique :
 
 - Une `interface class` générique définie par l'utilisateur ne peut pas émettre dans son fichier de métadonnées Windows ; par conséquent, elle ne peut pas avoir un accès public, et le code client dans d'autres fichiers .winmd ne peut pas l'implémenter. Elle peut être implémentée par les classes ref non publiques dans le même composant. Une classe ref publique peut avoir un type d'interface générique comme membre privé.
 
@@ -77,7 +77,7 @@ Voici comment les types de Runtime de Windows peuvent être utilisés pour crée
 
 - Une interface générique peut prendre un ou plusieurs paramètres de type générique précédés par `typename` ou `class`. Les paramètres sans type ne sont pas pris en charge.
 
-- Un paramètre de type peut être n’importe quel type Windows Runtime. Autrement dit, le paramètre de type peut être un type référence, un type valeur, une classe d'interface, un délégué, un type fondamental ou une classe d'énumération publique.
+- Un paramètre de type peut être n’importe quel type de Windows Runtime. Autrement dit, le paramètre de type peut être un type référence, un type valeur, une classe d'interface, un délégué, un type fondamental ou une classe d'énumération publique.
 
 - Une *interface générique fermée* est une interface qui hérite d'une interface générique et spécifie les arguments de type concret pour tous les paramètres de type. Elle peut être utilisée partout où une interface privée non générique peut être utilisée.
 
@@ -89,14 +89,14 @@ Voici comment les types de Runtime de Windows peuvent être utilisés pour crée
 
 - Une interface générique fermée possède un UUID généré implicitement. Un utilisateur ne peut pas spécifier un UUID.
 
-- Dans l'interface, il est supposé que toute référence à l'interface actuelle, dans un paramètre de méthode, une valeur de retour ou une propriété, fait référence à l'instanciation actuelle. Par exemple, *IMyIntf* signifie *IMyIntf\<T >*.
+- Dans l'interface, il est supposé que toute référence à l'interface actuelle, dans un paramètre de méthode, une valeur de retour ou une propriété, fait référence à l'instanciation actuelle. Par exemple, *IMyIntf* signifie *IMyIntf\<T >* .
 
 - Lorsque le type d'un paramètre de méthode est un paramètre de type, la déclaration de ce paramètre ou de cette variable utilise le nom du paramètre de type sans pointeur, référence native ou déclarateur de handle. En d'autres termes, vous ne devez jamais écrire « T^ ».
 
-- Les classes ref basées sur un modèle doivent être privées. Elles peuvent implémenter des interfaces génériques et passer le paramètre de modèle *T* à l’argument générique *T*. Chaque instanciation d'une classe ref basée sur un modèle est elle-même une classe ref.
+- Les classes ref basées sur un modèle doivent être privées. Elles peuvent implémenter des interfaces génériques et passer le paramètre de modèle *t* à l’argument générique *t*. Chaque instanciation d'une classe ref basée sur un modèle est elle-même une classe ref.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Système de type](../cppcx/type-system-c-cx.md)<br/>
-[Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)

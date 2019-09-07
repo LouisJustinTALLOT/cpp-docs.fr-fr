@@ -2,22 +2,22 @@
 title: Classes et structures de référence (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-ms.openlocfilehash: e9ac14762dba580967fbecd245a81a4ff4356b64
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b58c5b64d8f4a60b418fdd2b11318055a8fb618e
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368589"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740885"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Classes et structures de référence (C++/CX)
 
-C++ / c++ / prend en charge CX défini par l’utilisateur *classes ref* et *structs ref*, définis par l’utilisateur *valeur classes* et *valeur structs*. Ces structures de données sont des conteneurs principaux par quels C / c++ / CX prend en charge le système de type Windows Runtime. Leur contenu est émis vers des métadonnées selon certaines règles spécifiques, et cela leur permet de passer entre les composants Windows Runtime et les applications de plateforme Windows universelle qui sont écrits en C++ ou d’autres langages.
+Le C++/CX prend en charge les *classes Ref* définies par l’utilisateur et les *structs de référence*, ainsi que les *classes* de valeur et les *structures*de valeur définies par l’utilisateur. Ces structures de données sont les conteneurs principaux par C++lesquels/CX prend en charge le système de type Windows Runtime. Leur contenu est émis vers les métadonnées en fonction de certaines règles spécifiques, ce qui leur permet d’être transmis entre des composants de Windows Runtime et des applications C++ plateforme Windows universelle qui sont écrites dans ou d’autres langages.
 
 Une classe ref ou un struct ref comporte les caractéristiques essentielles suivantes :
 
-- Elle/il doit être déclaré(e) dans un espace de noms, dans la portée de l'espace de noms. En outre, au sein de cet espace de noms, elle/il peut disposer d'un accès public ou privé. Seuls les types publics sont émis vers les métadonnées. Les définitions de classes publiques imbriquées ne sont pas autorisées, notamment les classes [enum](../cppcx/enums-c-cx.md) publiques imbriquées. Pour plus d’informations, consultez [espaces de noms et la visibilité du Type](../cppcx/namespaces-and-type-visibility-c-cx.md).
+- Elle/il doit être déclaré(e) dans un espace de noms, dans la portée de l'espace de noms. En outre, au sein de cet espace de noms, elle/il peut disposer d'un accès public ou privé. Seuls les types publics sont émis vers les métadonnées. Les définitions de classes publiques imbriquées ne sont pas autorisées, notamment les classes [enum](../cppcx/enums-c-cx.md) publiques imbriquées. Pour plus d’informations, consultez [espaces de noms et visibilité de type](../cppcx/namespaces-and-type-visibility-c-cx.md).
 
-- Il peut contenir en tant que membres C++ / c++ / CX, y compris les classes ref, valeur classes, structs ref, structs value ou les structs de valeur nullable. Elle/il peut également contenir des types scalaires tels que float64, bool, etc. Elle/il peut également contenir des types C++ standard tels que `std::vector` ou une classe personnalisée, tant qu'ils ne sont pas publics. C++ / c++ / CX constructions peut-être `public`, `protected`, `internal`, `private`, ou `protected private` accessibilité. Tous les membres `public` ou `protected` sont émis vers les métadonnées. Les types C++ standard doivent avoir une accessibilité `private`, `internal`ou `protected private` , ce qui les empêche d'être émis vers les métadonnées.
+- Elle peut contenir en tant C++que membres/CX y compris les classes REF, les classes de valeur, les structs de référence, les structs de valeur ou les structs de valeur Nullable. Elle/il peut également contenir des types scalaires tels que float64, bool, etc. Elle/il peut également contenir des types C++ standard tels que `std::vector` ou une classe personnalisée, tant qu'ils ne sont pas publics. C++Les constructions/CX peuvent avoir `public`une `protected`accessibilité `internal`, `private`,, `protected private` ou. Tous les membres `public` ou `protected` sont émis vers les métadonnées. Les types C++ standard doivent avoir une accessibilité `private`, `internal`ou `protected private` , ce qui les empêche d'être émis vers les métadonnées.
 
 - Elle peut implémenter une ou plusieurs *classes d'interface* ou *structures d'interface*.
 
@@ -29,7 +29,7 @@ Une classe ref ou un struct ref comporte les caractéristiques essentielles suiv
 
 ## <a name="declaration"></a>Déclaration
 
-Le fragment de code suivant déclare la classe ref `Person` . Notez que le C++ standard `std::map` type est utilisé dans les membres privés et le Runtime Windows`IMapView` interface est utilisée dans l’interface publique. Notez également que « ^ » est ajouté aux déclarations de types de référence.
+Le fragment de code suivant déclare la classe ref `Person` . Notez que le type C++ `std::map` standard est utilisé dans les membres privés et que l’interface`IMapView` Windows Runtime est utilisée dans l’interface publique. Notez également que « ^ » est ajouté aux déclarations de types de référence.
 
 [!code-cpp[cx_classes#03](../cppcx/codesnippet/CPP/classesstructs/class1.h#03)]
 
@@ -69,11 +69,11 @@ Une classe ref peut contenir des membres de fonction `public`, `protected`et `pr
 
 Un struct ref (structure de référence) est identique à une classe ref, sauf que ses membres ont par défaut une accessibilité `public` .
 
-Un `public` classe ref ou un struct ref est émis dans les métadonnées, mais pour être utilisable à partir d’autres applications de plateforme Windows universelle et les composants Windows Runtime, elle doit avoir au moins un constructeur public ou protégé. Une classe ref publique qui comporte un constructeur public doit être également déclarée comme `sealed` pour éviter toute dérivation ultérieure via l'interface binaire d'application (ABI, Application Binary Interface).
+Une `public` classe ref ou un struct Ref est émis dans les métadonnées, mais pour être utilisable à partir d’autres applications plateforme Windows universelle et Windows Runtime composants, il doit avoir au moins un constructeur public ou protégé. Une classe ref publique qui comporte un constructeur public doit être également déclarée comme `sealed` pour éviter toute dérivation ultérieure via l'interface binaire d'application (ABI, Application Binary Interface).
 
-Membres publics ne peuvent pas être déclarées comme const, car le système de type Windows Runtime ne prend pas en charge constantes. Vous pouvez utiliser une propriété statique pour déclarer des données membres publiques avec une valeur constante.
+Les membres publics ne peuvent pas être déclarés comme const, car le système de type Windows Runtime ne prend pas en charge const. Vous pouvez utiliser une propriété statique pour déclarer des données membres publiques avec une valeur constante.
 
-Lorsque vous définissez une classe ref publique ou un struct ref public, le compilateur applique les attributs nécessaires à la classe et stocke ces informations dans le fichier .winmd de l'application. Toutefois, lorsque vous définissez une classe ref déverrouillée publique, appliquer manuellement la `Windows::Foundation::Metadata::WebHostHidden` attribut pour vous assurer que la classe n’est pas visible aux applications de plateforme Windows universelle qui sont écrits en JavaScript.
+Lorsque vous définissez une classe ref publique ou un struct ref public, le compilateur applique les attributs nécessaires à la classe et stocke ces informations dans le fichier .winmd de l'application. Toutefois, lorsque vous définissez une classe ref publique non scellée, appliquez manuellement l' `Windows::Foundation::Metadata::WebHostHidden` attribut pour vous assurer que la classe n’est pas visible pour plateforme Windows universelle les applications écrites en JavaScript.
 
 Une classe ref peut avoir des types standard C++, notamment des types `const` , dans tout membre `private`, `internal`ou `protected private` .
 
@@ -81,9 +81,9 @@ Les classes ref publiques qui ont des paramètres de type ne sont pas autorisée
 
 ## <a name="destructors"></a>Destructeurs
 
-En C / c++ / CX, appelant `delete` sur un destructeur public appelle le destructeur, quel que soit le nombre de références de l’objet. Ce comportement vous permet de définir un destructeur qui effectue un nettoyage personnalisé des ressources autres que RAII (Resource Acquisition Is Initialization) de façon déterministe. Toutefois, même dans ce cas, l'objet lui-même n'est pas supprimé de la mémoire. La mémoire de l'objet est libérée uniquement lorsque le nombre de références atteint zéro.
+Dans C++/CX, l' `delete` appel de sur un destructeur public appelle le destructeur quel que soit le nombre de références de l’objet. Ce comportement vous permet de définir un destructeur qui effectue un nettoyage personnalisé des ressources autres que RAII (Resource Acquisition Is Initialization) de façon déterministe. Toutefois, même dans ce cas, l'objet lui-même n'est pas supprimé de la mémoire. La mémoire de l'objet est libérée uniquement lorsque le nombre de références atteint zéro.
 
-Si le destructeur d'une classe n'est pas public, il est uniquement appelé lorsque le nombre de références atteint zéro. Si vous appelez `delete` sur un objet qui a un destructeur privé, le compilateur génère l’avertissement C4493, qui porte la mention « expression delete n’a aucun effet car le destructeur de \<nom de type > n’a pas d’accessibilité 'publique'. »
+Si le destructeur d'une classe n'est pas public, il est uniquement appelé lorsque le nombre de références atteint zéro. Si vous appelez `delete` sur un objet qui a un destructeur privé, le compilateur déclenche l’avertissement C4493, ce qui indique que « l’expression Delete n’a aucun effet, \<car le destructeur de type name > n’a pas d’accessibilité «public ».
 
 Les destructeurs de classe ref peuvent être déclarés uniquement comme suit :
 
@@ -97,11 +97,11 @@ Il ne fournit aucune autre combinaison d'accessibilité, de virtualité et de ve
 
 Le comportement n'est pas défini si vous tentez d'accéder aux membres d'une classe dont le destructeur a déjà été exécuté ; il provoquera très probablement l'arrêt système du programme. Appeler `delete t` sur un type qui ne comporte aucun destructeur public n'a aucun effet. Appeler `delete this` sur un type ou une classe de base qui comporte un destructeur `private` ou `protected private` connu à partir de sa hiérarchie de types n'a également aucun effet.
 
-Lorsque vous déclarez un destructeur public, le compilateur génère le code afin que la classe ref implémente `Platform::IDisposable` et que le destructeur implémente la méthode `Dispose` . `Platform::IDisposable` est le C + c++ / projection CX de `Windows::Foundation::IClosable`. N'implémentez jamais explicitement ces interfaces.
+Lorsque vous déclarez un destructeur public, le compilateur génère le code afin que la classe ref implémente `Platform::IDisposable` et que le destructeur implémente la méthode `Dispose` . `Platform::IDisposable`est la C++projection/CX de `Windows::Foundation::IClosable`. N'implémentez jamais explicitement ces interfaces.
 
 ## <a name="inheritance"></a>Héritage
 
-Platform::Object est la classe de base universelle pour toutes les classes ref. Toutes les classes ref sont implicitement convertibles en Platform::Object et peuvent remplacer [Object::ToString](../cppcx/platform-object-class.md#tostring). Toutefois, le modèle d’héritage de Windows Runtime pas conçus pour servir un grand modèle d’héritage ; en C / c++ / CX, cela signifie qu’une classe ref publique définie par l’utilisateur ne peut pas servir à une classe de base.
+Platform::Object est la classe de base universelle pour toutes les classes ref. Toutes les classes ref sont implicitement convertibles en Platform::Object et peuvent remplacer [Object::ToString](../cppcx/platform-object-class.md#tostring). Toutefois, le Windows Runtime modèle d’héritage n’est pas conçu comme un modèle d’héritage général ; dans C++/CX, cela signifie qu’une classe ref publique définie par l’utilisateur ne peut pas servir de classe de base.
 
 Si vous créez un contrôle utilisateur XAML et que l'objet participe au système de propriétés de dépendance, vous pouvez utiliser `Windows::UI::Xaml::DependencyObject` comme classe de base.
 
@@ -109,15 +109,15 @@ Après avoir défini une classe `MyBase` déverrouillée qui hérite de `Depende
 
 Une classe ref de base privée n'est pas obligatoire pour dériver d'une classe non verrouillée existante. Si vous avez besoin d'une hiérarchie d'objets pour modéliser votre propre structure de programme ou pour activer la réutilisation de code, utilisez les classes ref privées ou internes, ou mieux encore, les classes C++ standard. Vous pouvez exposer la fonctionnalité de la hiérarchie d'objets privée via un wrapper de classe ref verrouillée publique.
 
-Une classe ref qui a un constructeur public ou protégé en C / c++ / CX doit être déclarée comme sealed. Cette restriction signifie qu’il n’existe aucun moyen pour les classes qui sont écrits dans d’autres langages tels que c# ou Visual Basic d’hériter de types que vous déclarez dans un composant Windows Runtime qui est écrit en C / c++ / CX.
+Une classe ref qui a un constructeur public ou protégé dans C++/CX doit être déclarée comme sealed. Cette restriction signifie qu’il n’existe aucun moyen de faire en sorte que les classes écrites dans C# d’autres langages, telles que ou Visual Basic, héritent des types que vous déclarez dans un composant Windows Runtime qui est écrit dans C++/CX.
 
-Voici les règles de base pour l’héritage en C / c++ / CX :
+Voici les règles de base pour l’héritage C++dans/CX :
 
 - Les classes ref peuvent hériter directement au plus d'une classe ref de base, mais peuvent implémenter un nombre quelconque d'interfaces.
 
 - Si une classe est dotée d'un constructeur public, elle doit être déclarée comme verrouillée pour empêcher une dérivation supplémentaire.
 
-- Vous pouvez créer des classes de base déverrouillée qui ont des constructeurs privés ou internes protégés, à condition que la classe de base dérive directement ou indirectement d'une classe de base déverrouillée existante comme `Windows::UI::Xaml::DependencyObject`. L'héritage de classes ref définies par l'utilisateur dans les fichiers .winmd n'est pas pris en charge ; toutefois, une classe ref peut hériter d'une interface définie dans un autre fichier .winmd. Vous pouvez créer des classes dérivées d’une classe ref de base défini par l’utilisateur uniquement dans le même composant Windows Runtime ou une application de plateforme Windows universelle.
+- Vous pouvez créer des classes de base déverrouillée qui ont des constructeurs privés ou internes protégés, à condition que la classe de base dérive directement ou indirectement d'une classe de base déverrouillée existante comme `Windows::UI::Xaml::DependencyObject`. L'héritage de classes ref définies par l'utilisateur dans les fichiers .winmd n'est pas pris en charge ; toutefois, une classe ref peut hériter d'une interface définie dans un autre fichier .winmd. Vous pouvez créer des classes dérivées à partir d’une classe ref de base définie par l’utilisateur uniquement dans le même composant Windows Runtime ou plateforme Windows universelle application.
 
 - Pour les classes ref, seul l'héritage public est pris en charge.
 
@@ -131,5 +131,5 @@ L'exemple suivant montre comment exposer une classe ref publique qui dérive d'a
 
 [Système de type](../cppcx/type-system-c-cx.md)<br/>
 [Classes et structures de valeur](../cppcx/value-classes-and-structs-c-cx.md)<br/>
-[Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)

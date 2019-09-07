@@ -2,24 +2,24 @@
 title: Intégration CLR (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
-ms.openlocfilehash: df0c5e9cfaf9a4148c8d16b68ee04b4e9ce82e6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44ef35d1a62706cae37285c06547a8b9b7deb35c
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257775"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740292"
 ---
 # <a name="clr-integration-ccx"></a>Intégration CLR (C++/CX)
 
-Certains types de Runtime de Windows reçoivent un traitement spécial en C / c++ / CX et les langues qui sont basées sur le common language runtime (CLR). Cet article décrit comment plusieurs types dans un langage sont mappés à un autre langage. Par exemple, le CLR mappe Windows.Foundation.IVector à System.Collections.IList, Windows.Foundation.IMap à System.Collections.IDictionary, et ainsi de suite. De même, C++ / c++ / CX mappe spécialement des types tels que Platform::Delegate et Platform::String.
+Certains types de Windows Runtime reçoivent un traitement C++spécial dans/CX et les langages basés sur le Common Language Runtime (CLR). Cet article décrit comment plusieurs types dans un langage sont mappés à un autre langage. Par exemple, le CLR mappe Windows.Foundation.IVector à System.Collections.IList, Windows.Foundation.IMap à System.Collections.IDictionary, et ainsi de suite. De même, C++/CX est spécialement mappé aux types tels que platform ::D délégué et Platform :: String.
 
-## <a name="mapping-the-windows-runtime-to-ccx"></a>Mappage de l’exécution de Windows à C++ / c++ / CX
+## <a name="mapping-the-windows-runtime-to-ccx"></a>Mappage de la Windows Runtime C++à/CX
 
-Lorsque C++ / c++ / CX lit un fichier de métadonnées (.winmd) Windows, le compilateur mappe automatiquement les types et les espaces de noms communs Windows Runtime C + c++ / CX espaces de noms et types. Par exemple, le type Windows Runtime numérique `UInt32` est automatiquement mappé à `default::uint32`.
+Quand C++/CX lit un fichier de métadonnées Windows (. winmd), le compilateur mappe automatiquement les types et les espaces C++de noms Windows Runtime communs aux espaces de noms et aux types/CX. Par exemple, le type `UInt32` de Windows Runtime numérique est mappé automatiquement à. `default::uint32`
 
-C++ / c++ / CX mappe plusieurs autres types Windows Runtime pour le **plateforme** espace de noms. Par exemple, le **Windows::Foundation** handle HSTRING, qui représente une chaîne de texte Unicode en lecture seule, est mappé à C++ / c++ / CX `Platform::String` classe. Lorsqu’une opération Windows Runtime retourne une erreur HRESULT, il est mappé à un C + c++ / CX `Platform::Exception`.
+C++/CX mappe plusieurs autres types de Windows Runtime à l’espace de noms de **plateforme** . Par exemple, le handle **Windows :: Foundation** HSTRING, qui représente une chaîne de texte Unicode en lecture seule, est mappé à la C++classe `Platform::String` /CX. Lorsqu’une opération de Windows Runtime retourne une erreur HRESULT, elle est mappée à C++un `Platform::Exception`/CX.
 
-C++ / c++ / CX mappe également certains types dans les espaces de noms Windows Runtime pour améliorer les fonctionnalités du type. Pour ces types, C++ / c++ / CX fournit des constructeurs d’assistance et des méthodes qui sont spécifiques à C++ et ne sont pas disponibles dans le fichier du type .winmd standard.
+Le C++/CX mappe également certains types dans Windows Runtime espaces de noms pour améliorer les fonctionnalités du type. Pour ces types, C++/CX fournit des constructeurs et des méthodes d’assistance qui sont spécifiques C++ à et ne sont pas disponibles dans le fichier. winmd standard du type.
 
 Les listes suivantes présentent les structs de valeurs qui prennent en charge les nouvelles méthodes d’assistance et les nouveaux constructeurs. Si vous avez déjà écrit du code qui utilise des listes d’initialisation de struct, modifiez-le pour utiliser les constructeurs qui viennent d’être ajoutés.
 
@@ -63,11 +63,11 @@ Les listes suivantes présentent les structs de valeurs qui prennent en charge l
 
 - Matrix3D
 
-## <a name="mapping-the-clr-to-ccx"></a>Mappage du CLR pour C++ / c++ / CX
+## <a name="mapping-the-clr-to-ccx"></a>Mappage du CLR à C++/CX
 
-Lorsque les compilateurs Visual C++ ou c# lisent un fichier .winmd, ils mappent automatiquement certains types dans le fichier de métadonnées approprié C + c++ / CX ou CLR types. Par exemple, dans le CLR, le IVector\<T > interface est mappée à IList\<T >. Mais en C / c++ / CX, le IVector\<T > interface n’est pas mappée à un autre type.
+Lorsque Microsoft C++ ou C# les compilateurs lisent un fichier. winmd, ils mappent automatiquement certains types dans le fichier de métadonnées aux types/CX ou CLR appropriés. C++ Par exemple, dans le CLR, l’interface\<IVector t > est mappée à IList\<t >. Toutefois, C++dans/CX, l'\<interface IVector T > n’est pas mappée à un autre type.
 
-IReference\<T > dans le Windows Runtime est mappée à Nullable\<T > dans .NET.
+IReference\<t > dans le Windows Runtime est mappé à\<Nullable t > dans .net.
 
 ## <a name="see-also"></a>Voir aussi
 

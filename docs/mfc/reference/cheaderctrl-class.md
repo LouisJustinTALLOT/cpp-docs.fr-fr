@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 407ba2747ed4d6e56e56fe4ccb2ccb828240a732
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62915da703e1c938e65643ab389999b83c72d459
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506708"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741530"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (classe)
 
@@ -128,7 +128,7 @@ Un contrôle header est une fenêtre généralement placée au-dessus d’un ens
 
 Ce contrôle (et par conséquent `CHeaderCtrl` la classe) est uniquement disponible pour les programmes qui s’exécutent sous Windows 95/98 et Windows NT version 3,51 et versions ultérieures.
 
-La fonctionnalité ajoutée pour les contrôles communs Windows 95/Internet Explorer 4,0 comprend les éléments suivants:
+La fonctionnalité ajoutée pour les contrôles communs Windows 95/Internet Explorer 4,0 comprend les éléments suivants :
 
 - Classement personnalisé de l’élément d’en-tête.
 
@@ -164,7 +164,7 @@ Construit un objet `CHeaderCtrl`.
 CHeaderCtrl();
 ```
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_1.cpp)]
 
@@ -178,13 +178,13 @@ BOOL ClearAllFilters();
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si cette méthode réussit; Sinon, FALSe.
+TRUE si cette méthode réussit ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 Cette méthode implémente le comportement du [HDM_CLEARFILTER](/windows/win32/Controls/hdm-clearfilter) de message Win32 avec une valeur de colonne de-1, comme décrit dans la SDK Windows.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]
 
@@ -203,7 +203,7 @@ Valeur de colonne indiquant le filtre à effacer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si cette méthode réussit; Sinon, FALSe.
+TRUE si cette méthode réussit ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -241,13 +241,13 @@ Spécifie l’ID du contrôle d’en-tête.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si l’initialisation a réussi; Sinon, zéro.
+Valeur différente de zéro si l’initialisation a réussi ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
 Vous construisez `CHeaderCtrl` un objet en deux étapes. Tout d’abord, appelez le constructeur, `Create`puis appelez, qui crée le contrôle header et l’attache `CHeaderCtrl` à l’objet.
 
-Outre les styles de contrôle d’en-tête, vous pouvez utiliser les styles de contrôle communs suivants pour déterminer comment le contrôle d’en-tête se positionne et se redimensionne lui-même (voir les [styles de contrôle courants](/windows/win32/Controls/common-control-styles) pour plus d’informations):
+Outre les styles de contrôle d’en-tête, vous pouvez utiliser les styles de contrôle communs suivants pour déterminer comment le contrôle d’en-tête se positionne et se redimensionne lui-même (voir les [styles de contrôle courants](/windows/win32/Controls/common-control-styles) pour plus d’informations) :
 
 - CCS_BOTTOM force le contrôle à se positionner en bas de la zone cliente de la fenêtre parente et définit la largeur de manière à ce qu’elle soit identique à la largeur de la fenêtre parente.
 
@@ -261,7 +261,7 @@ Outre les styles de contrôle d’en-tête, vous pouvez utiliser les styles de c
 
 - CCS_TOP force le contrôle à se positionner en haut de la zone cliente de la fenêtre parente et définit la largeur de manière à ce qu’elle soit identique à la largeur de la fenêtre parente.
 
-Vous pouvez également appliquer les styles de fenêtre suivants à un contrôle header (consultez [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) pour plus d’informations):
+Vous pouvez également appliquer les styles de fenêtre suivants à un contrôle header (consultez [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) pour plus d’informations) :
 
 - WS_CHILD crée une fenêtre enfant. Ne peut pas être utilisé avec le style WS_POPUP.
 
@@ -275,7 +275,7 @@ Vous pouvez également appliquer les styles de fenêtre suivants à un contrôle
 
 Si vous souhaitez utiliser des styles Windows étendus avec votre contrôle, appelez [CreateEx](#createex) au `Create`lieu de.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]
 
@@ -332,7 +332,7 @@ Index de base zéro de l’élément dans le contrôle header. L’image assign�
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) en cas de réussite; Sinon, NULL. La liste retournée contient une seule image.
+Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) en cas de réussite ; Sinon, NULL. La liste retournée contient une seule image.
 
 ### <a name="remarks"></a>Notes
 
@@ -382,7 +382,7 @@ Par défaut, cette fonction membre ne fait rien. Substituez cette fonction membr
 
 L’application doit restaurer tous les objets GDI (Graphics Device Interface) sélectionnés pour le contexte d’affichage fourni dans *lpDrawItemStruct* avant la fin de cette fonction membre.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]
 
@@ -408,7 +408,7 @@ Spécifiez TRUE pour ignorer les modifications apportées par l’utilisateur ou
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si cette méthode réussit; Sinon, FALSe.
+TRUE si cette méthode réussit ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -454,7 +454,7 @@ Index de base zéro de l’élément d’en-tête qui a le focus.
 
 Cette méthode envoie le message [HDM_GETFOCUSEDITEM](/windows/win32/Controls/hdm-getfocuseditem) , qui est décrit dans le SDK Windows.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 L’exemple de code suivant définit la variable `m_headerCtrl`,, qui est utilisée pour accéder au contrôle header actuel. Cette variable est utilisée dans l'exemple suivant.
 
@@ -502,7 +502,7 @@ BOOL GetItem(
 Spécifie l’index de base zéro de l’élément à récupérer.
 
 *pHeaderItem*<br/>
-Pointeur vers une structure [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) qui reçoit le nouvel élément. Cette structure est utilisée avec les `InsertItem` fonctions `SetItem` membres et. Tous les indicateurs définis dans `mask` l’élément garantissent que les valeurs des éléments correspondants sont correctement remplies lors du retour. Si l' `mask` élément a la valeur zéro, les valeurs des autres éléments de structure ne sont pas significatives.
+Pointeur vers une structure [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) qui reçoit le nouvel élément. Cette structure est utilisée avec les `InsertItem` fonctions `SetItem` membres et. Tous les indicateurs définis dans `mask` l’élément garantissent que les valeurs des éléments correspondants sont correctement remplies lors du retour. Si l' `mask` élément a la valeur zéro, les valeurs des autres éléments de structure ne sont pas significatives.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -522,11 +522,11 @@ int GetItemCount() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nombre d’éléments de contrôle d’en-tête en cas de réussite; sinon-1.
+Nombre d’éléments de contrôle d’en-tête en cas de réussite ; sinon-1.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CHeaderCtrl::D eleteitem](#deleteitem).
+  Consultez l’exemple de [CHeaderCtrl ::D eleteitem](#deleteitem).
 
 ##  <a name="getitemdropdownrect"></a>  CHeaderCtrl::GetItemDropDownRect
 
@@ -542,12 +542,12 @@ BOOL GetItemDropDownRect(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*iItem*|dans Index de base zéro d’un élément d’en-tête dont le style est HDF_SPLITBUTTON. Pour plus d’informations, consultez `fmt` le membre de la structure [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) .|
+|*iItem*|dans Index de base zéro d’un élément d’en-tête dont le style est HDF_SPLITBUTTON. Pour plus d’informations, consultez `fmt` le membre de la structure [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) .|
 |*lpRect*|à Pointeur vers une structure [Rect](/previous-versions/dd162897\(v=vs.85\)) pour recevoir les informations de rectangle englobant.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si cette fonction est réussie; Sinon, FALSe.
+TRUE si cette fonction est réussie ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -637,7 +637,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si cette fonction est réussie; Sinon, FALSe.
+TRUE si cette fonction est réussie ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -645,7 +645,7 @@ Si le contrôle header contient plus d’éléments que ce qui peut être affich
 
 Cette méthode envoie le message [HDM_GETOVERFLOWRECT](/windows/win32/Controls/hdm-getoverflowrect) , qui est décrit dans le SDK Windows.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 L’exemple de code suivant définit la variable `m_headerCtrl`,, qui est utilisée pour accéder au contrôle header actuel. Cette variable est utilisée dans l'exemple suivant.
 
@@ -669,23 +669,23 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*phdhti*|[in, out] Pointeur vers une structure [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-_hd_hittestinfo) qui spécifie le point à tester et reçoit les résultats du test.|
+|*phdhti*|[in, out] Pointeur vers une structure [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo) qui spécifie le point à tester et reçoit les résultats du test.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-Index de base zéro de l’élément d’en-tête, le cas échéant, à la position spécifiée; Sinon,-1.
+Index de base zéro de l’élément d’en-tête, le cas échéant, à la position spécifiée ; Sinon,-1.
 
 ### <a name="remarks"></a>Notes
 
 Cette méthode envoie le message [HDM_HITTEST](/windows/win32/Controls/hdm-hittest) , qui est décrit dans le SDK Windows.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 L’exemple de code suivant définit la variable `m_headerCtrl`,, qui est utilisée pour accéder au contrôle header actuel. Cette variable est utilisée dans l'exemple suivant.
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 L’exemple de code suivant illustre `HitTest` la méthode. Dans une section précédente de cet exemple de code, nous avons créé un contrôle header avec cinq colonnes. Toutefois, vous pouvez faire glisser un séparateur de colonne pour que la colonne ne soit pas visible. Cet exemple signale l’index de la colonne s’il est visible et-1 si la colonne n’est pas visible.
 
@@ -707,11 +707,11 @@ int InsertItem(
 Index de base zéro de l'élément à insérer. Si la valeur est égale à zéro, l’élément est inséré au début du contrôle d’en-tête. Si la valeur est supérieure à la valeur maximale, l’élément est inséré à la fin du contrôle d’en-tête.
 
 *phdi*<br/>
-Pointeur vers une structure [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) qui contient des informations sur l’élément à insérer.
+Pointeur vers une structure [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) qui contient des informations sur l’élément à insérer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Index du nouvel élément en cas de réussite; sinon-1.
+Index du nouvel élément en cas de réussite ; sinon-1.
 
 ### <a name="example"></a>Exemples
 
@@ -728,7 +728,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="parameters"></a>Paramètres
 
 *pHeaderLayout*<br/>
-Pointeur vers une structure [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-_hd_layout) , qui contient des informations utilisées pour définir la taille et la position d’un contrôle header.
+Pointeur vers une structure [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-hdlayout) , qui contient des informations utilisées pour définir la taille et la position d’un contrôle header.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -829,7 +829,7 @@ BOOL SetFocusedItem(int iItem);
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si cette méthode réussit; Sinon, FALSe.
+TRUE si cette méthode réussit ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -841,7 +841,7 @@ L’exemple de code suivant définit la variable `m_headerCtrl`,, qui est utilis
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 L’exemple de code suivant illustre `SetFocusedItem` les `GetFocusedItem` méthodes et. Dans une section précédente du code, nous avons créé un contrôle header avec cinq colonnes. Toutefois, vous pouvez faire glisser un séparateur de colonne pour que la colonne ne soit pas visible. L’exemple suivant définit puis confirme le dernier en-tête de colonne comme élément de focus.
 
@@ -897,9 +897,9 @@ Pointeur vers l’objet [CImageList](../../mfc/reference/cimagelist-class.md) pr
 
 Cette fonction membre implémente le comportement du [HDM_SETIMAGELIST](/windows/win32/Controls/hdm-setimagelist)de message Win32, comme décrit dans la SDK Windows. L' `CImageList` objet vers lequel pointe le pointeur retourné est un objet temporaire et il est supprimé lors du traitement suivant du temps d’inactivité.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CHeaderCtrl:: GetImageList](#getimagelist).
+  Consultez l’exemple de [CHeaderCtrl :: GetImageList](#getimagelist).
 
 ##  <a name="setitem"></a>  CHeaderCtrl::SetItem
 
@@ -917,15 +917,15 @@ BOOL SetItem(
 Index de base zéro de l’élément à manipuler.
 
 *pHeaderItem*<br/>
-Pointeur vers une structure [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) qui contient des informations sur le nouvel élément.
+Pointeur vers une structure [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) qui contient des informations sur le nouvel élément.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-  Consultez l’exemple pour [CHeaderCtrl:: GetItem](#getitem).
+  Consultez l’exemple pour [CHeaderCtrl :: GetItem](#getitem).
 
 ##  <a name="setorderarray"></a>  CHeaderCtrl::SetOrderArray
 
@@ -955,7 +955,7 @@ Cette fonction membre implémente le comportement de la macro Win32 [HDM_SETORDE
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CHeaderCtrl:: GetOrderArray](#getorderarray).
+  Consultez l’exemple de [CHeaderCtrl :: GetOrderArray](#getorderarray).
 
 ## <a name="see-also"></a>Voir aussi
 

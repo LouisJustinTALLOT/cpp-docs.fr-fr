@@ -2,12 +2,12 @@
 title: Classes ref de modèle (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: a24d5f45-8dbb-4540-958f-c76c90d8ed93
-ms.openlocfilehash: 4398cc2c545a57277289a6aa41fc4664d9734eed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e9c233b5227b4ad86eb632db740001bc2a3a8bd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396032"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740850"
 ---
 # <a name="template-ref-classes-ccx"></a>Classes ref de modèle (C++/CX)
 
@@ -15,12 +15,12 @@ Les modèles C++ ne sont pas publiés aux métadonnées et ne peuvent donc pas a
 
 ## <a name="authoring-ref-class-templates"></a>Création de modèles de classe ref
 
-L'exemple suivant indique comment déclarer une classe ref privée comme modèle, et également comment déclarer un modèle C++ standard et comment déclarer les deux en tant que membres d'une classe ref publique. Notez que la norme C++ modèle peut être spécialisé par un type Windows Runtime, dans ce cas un Platform::String ^.
+L'exemple suivant indique comment déclarer une classe ref privée comme modèle, et également comment déclarer un modèle C++ standard et comment déclarer les deux en tant que membres d'une classe ref publique. Notez que le modèle C++ standard peut être spécialisé par un type de Windows Runtime, dans le cas présent, Platform :: String ^.
 
 [!code-cpp[cx_templates#01](../cppcx/codesnippet/CPP/templatedemo/class1.h#01)]
 
 ## <a name="see-also"></a>Voir aussi
 
 [Système de type (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)

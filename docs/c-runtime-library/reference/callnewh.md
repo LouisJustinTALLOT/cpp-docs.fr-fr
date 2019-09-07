@@ -22,13 +22,13 @@ helpviewer_keywords:
 - _callnewh
 ms.assetid: 4dcb73e9-6384-4d12-a973-a8807d4de7a8
 ms.openlocfilehash: 98526f6c8c40b71104345563db71ef098b6cfb8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643662"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739819"
 ---
-# <a name="callnewh"></a>_callnewh
+# <a name="_callnewh"></a>_callnewh
 
 Appelle le *nouveau gestionnaire* installé.
 
@@ -47,10 +47,10 @@ Quantité de mémoire que l’[opérateur new](../../cpp/new-operator-cpp.md) a 
 
 ## <a name="return-value"></a>Valeur de retour
 
-|Value|Description|
+|Valeur|Description|
 |-----------|-----------------|
-|0|Échec : aucun nouveau gestionnaire n’est installé ou actif.|
-|1|Réussite : le nouveau gestionnaire est installé et activé. L’allocation de mémoire peut être retentée.|
+|0|Toute Aucun nouveau gestionnaire n’est installé ou aucun nouveau gestionnaire n’est actif.|
+|1|Fructueux Le nouveau gestionnaire est installé et actif. L’allocation de mémoire peut être retentée.|
 
 ## <a name="exceptions"></a>Exceptions
 

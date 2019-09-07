@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 56cff04d64f2f0a64fc216fbd418954b4c11b0f2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514740"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740653"
 ---
 # <a name="how-to-manage-resources-c"></a>Procédure : Gérer les ressourcesC++()
 
@@ -46,7 +46,7 @@ Vous pouvez copier des ressources d’un fichier vers un autre sans les modifier
 Vous pouvez facilement copier des ressources à partir d’une ressource ou d’un fichier exécutable existant dans votre fichier de ressources actuel. Pour copier des ressources, vous devez ouvrir les deux fichiers contenant les ressources en même temps et faire glisser les éléments d’un fichier vers un autre ou les copier et les coller entre les deux fichiers. Cette méthode fonctionne pour les fichiers de script de ressources (. RC) et les fichiers de modèle de ressource (. RCT) et comme fichiers exécutables (. exe).
 
 > [!NOTE]
-> Visual C++ contient des exemples de fichiers de ressources que vous pouvez utiliser dans votre propre application. Pour plus d’informations, [consultez Clipart: Ressources](https://github.com/Microsoft/VCSamples)communes.
+> Visual C++ contient des exemples de fichiers de ressources que vous pouvez utiliser dans votre propre application. Pour plus d’informations, [consultez Clipart : Ressources](https://github.com/Microsoft/VCSamples)communes.
 
 Vous ne pouvez pas effectuer des opérations de glisser-déplacer, copier, couper ou coller entre les fichiers de ressources du projet (**affichage des ressources**) et les fichiers. RC autonomes ouverts dans les fenêtres de document. Vous pouvez le faire dans les versions précédentes du produit. Utilisez uniquement la méthode de glisser-déplacer entre les fichiers. RC qui sont ouverts en dehors du projet.
 
@@ -54,7 +54,7 @@ Vous ne pouvez pas effectuer des opérations de glisser-déplacer, copier, coupe
 
 1. Ouvrez les deux fichiers de ressources en mode autonome. (Voir [utiliser des fichiers de script de ressources](how-to-create-a-resource-script-file.md#use-resource-script-files)). Par exemple, ouvrez *source1. RC* et *source2. RC*.
 
-1. Dans le premier fichier. RC, soit:
+1. Dans le premier fichier. RC, soit :
 
    - Utiliser la méthode de glisser-déplacer
 
@@ -76,7 +76,7 @@ Vous ne pouvez pas effectuer des opérations de glisser-déplacer, copier, coupe
 
 Durant la copie d'une ressource, vous pouvez changer sa propriété language ou sa propriété condition, ou les deux.
 
-- La langue d’une ressource spécifie la langue utilisée par [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew) pour aider à identifier la ressource que vous recherchez. Les ressources peuvent avoir des différences pour chaque langue qui ne sont pas liées à du texte, par exemple, des accélérateurs qui peuvent uniquement fonctionner sur un clavier japonais ou une bitmap qui serait uniquement appropriée pour les versions localisées en chinois.
+- La langue d’une ressource spécifie la langue utilisée par [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea) pour aider à identifier la ressource que vous recherchez. Les ressources peuvent avoir des différences pour chaque langue qui ne sont pas liées à du texte, par exemple, des accélérateurs qui peuvent uniquement fonctionner sur un clavier japonais ou une bitmap qui serait uniquement appropriée pour les versions localisées en chinois.
 
 - La condition d'une ressource est un symbole défini qui identifie une condition dans laquelle cette copie particulière de la ressource doit être utilisée.
 
@@ -88,7 +88,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Pour copier une ressource existante et modifier sa langue ou sa condition
 
-Dans le fichier *. RC* ou dans la fenêtre de [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources) , cliquez avec le bouton droit sur la ressource que vous souhaitez copier, puis choisissez **Insérer une copie**. Ensuite, définissez les éléments suivants:
+Dans le fichier *. RC* ou dans la fenêtre de [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources) , cliquez avec le bouton droit sur la ressource que vous souhaitez copier, puis choisissez **Insérer une copie**. Ensuite, définissez les éléments suivants :
 
 - Pour la zone de liste **langue** , sélectionnez la langue.
 
@@ -129,5 +129,5 @@ Win32
 ## <a name="see-also"></a>Voir aussi
 
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
-[Guide pratique : Créer des ressources](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Guide pratique pour Créer des ressources](../windows/how-to-create-a-resource-script-file.md)<br/>
 [Guide pratique : inclure des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md)<br/>

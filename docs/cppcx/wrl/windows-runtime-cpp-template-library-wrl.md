@@ -3,12 +3,12 @@ title: Bibliothèque de modèles Windows Runtime C++ (WRL)
 ms.date: 11/04/2016
 ms.topic: landing-page
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: bff4c0721903f20bd5d09c25e358126f42d47651
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 7a92676d198ed9ddffeae9a834ebd358c2c58e90
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218392"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740841"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Bibliothèque de modèles Windows Runtime C++ (WRL)
 
@@ -25,7 +25,7 @@ La bibliothèque C++ de modèles Windows Runtime vous permet d’implémenter et
 
 Le C++/CX est un moyen de haut niveau basé sur le langage d’utiliser Windows Runtime composants. La bibliothèque de C++ modèles Windows Runtime et C++/CX simplifient l’écriture de code pour le Windows Runtime en effectuant automatiquement des tâches de maintenance en votre nom.
 
-La bibliothèque C++ de modèles Windows Runtime C++et/CX offrent des avantages différents. Voici quelques raisons pour lesquelles vous souhaiterez peut-être C++ utiliser la bibliothèque de C++modèles Windows Runtime au lieu de/CX:
+La bibliothèque C++ de modèles Windows Runtime C++et/CX offrent des avantages différents. Voici quelques raisons pour lesquelles vous souhaiterez peut-être C++ utiliser la bibliothèque de C++modèles Windows Runtime au lieu de/CX :
 
 - Windows Runtime C++ bibliothèque de modèles ajoute peu d’abstraction sur l’interface Abi (Application Binary Interface) Windows Runtime, ce qui vous donne la possibilité de contrôler le code sous-jacent pour mieux créer ou consommer des API Windows Runtime.
 
@@ -68,7 +68,7 @@ Montre comment consommer des composants Windows Runtime personnalisées à parti
 Montre comment utiliser les interfaces [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2) et [IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback) avec des tâches pour envoyer des requêtes http et de publication à un service Web dans une application UWP.
 
 [Exemple d’optimiseur de voyage Bing Maps](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
-Utilise la `HttpRequest` classe définie dans [la procédure pas à pas: Connexion à l’aide de tâches et](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) de requêtes http XML dans le contexte d’une application UWP complète.
+Utilise la `HttpRequest` classe définie dans [la procédure pas à pas : Connexion à l’aide de tâches et](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) de requêtes http XML dans le contexte d’une application UWP complète.
 
 [Création d’un composant Windows Runtime DLL C++ avec un exemple](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Montre comment utiliser la bibliothèque de C++ modèles Windows Runtime pour créer un composant dll in-process et le consommer à C++partir de/CX, JavaScript C#et.
@@ -147,5 +147,5 @@ Un objet `WeakRef` représente généralement un objet dont l'existence est cont
 |-|-|
 |[API clés par catégorie](key-wrl-apis-by-category.md)|Met en surbrillance les types, les fonctions et les macros principales de la bibliothèque de modèles Windows Runtime C++ .|
 |[Référence](wrl-reference.md)|Contient des informations de référence pour C++ la bibliothèque de modèles Windows Runtime.|
-|[Aide-mémoire (Windows Runtime et C++visuel)](../../cppcx/quick-reference-c-cx.md)|Décrit brièvement les C++fonctionnalités de/CX qui prennent en charge le Windows Runtime.|
+|[Aide C++-mémoire/CX)](../../cppcx/quick-reference-c-cx.md)|Décrit brièvement les C++fonctionnalités de/CX qui prennent en charge le Windows Runtime.|
 |[Utilisation des composants Windows Runtime dans VisualC++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Montre comment utiliser C++/CX pour créer un composant de base Windows Runtime.|

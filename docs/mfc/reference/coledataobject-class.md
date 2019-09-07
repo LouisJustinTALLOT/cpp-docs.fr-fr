@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: c25fd7e91c59d7bea06325fbb27471d8f90f589d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e706489a84ad564949e2c2d3d193173fc19b9828
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504248"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741628"
 ---
 # <a name="coledataobject-class"></a>COleDataObject, classe
 
@@ -64,7 +64,7 @@ class COleDataObject
 |[COleDataObject::GetData](#getdata)|Copie les données de l’objet de données OLE attaché dans un format spécifié.|
 |[COleDataObject::GetFileData](#getfiledata)|Copie les données de l’objet de données OLE attaché `CFile` dans un pointeur dans le format spécifié.|
 |[COleDataObject::GetGlobalData](#getglobaldata)|Copie les données de l’objet de données OLE attaché `HGLOBAL` dans un dans le format spécifié.|
-|[COleDataObject:: GetNextFormat](#getnextformat)|Retourne le format de données suivant disponible.|
+|[COleDataObject :: GetNextFormat](#getnextformat)|Retourne le format de données suivant disponible.|
 |[COleDataObject::IsDataAvailable](#isdataavailable)|Vérifie si les données sont disponibles dans un format spécifié.|
 |[COleDataObject::Release](#release)|Détache et libère l’objet associé `IDataObject` .|
 
@@ -76,7 +76,7 @@ Ces types de transferts de données incluent une source et une destination. La s
 
 Cette classe vous permet de déterminer si les données existent dans un format spécifié. Vous pouvez également énumérer les formats de données disponibles ou vérifier si un format donné est disponible, puis récupérer les données dans le format par défaut. La récupération d’objets peut être accomplie de plusieurs façons différentes, notamment l’utilisation d’un [CFile](../../mfc/reference/cfile-class.md), d’un HGLOBAL `STGMEDIUM` ou d’une structure.
 
-Pour plus d’informations, consultez la structure [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) dans le SDK Windows.
+Pour plus d’informations, consultez la structure [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) dans le SDK Windows.
 
 Pour plus d’informations sur l’utilisation des objets de données dans votre application, consultez l’article [objets de données et sources de données (OLE)](../../mfc/data-objects-and-data-sources-ole.md).
 
@@ -86,7 +86,7 @@ Pour plus d’informations sur l’utilisation des objets de données dans votre
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête:** AFXOLE. h
+**En-tête :** AFXOLE. h
 
 ##  <a name="attach"></a>  COleDataObject::Attach
 
@@ -104,7 +104,7 @@ void Attach(
 Pointe vers un objet de données OLE.
 
 *bAutoRelease*<br/>
-TRUE si l’objet de données OLE doit être libéré lorsque `COleDataObject` l’objet est détruit; sinon, false.
+TRUE si l’objet de données OLE doit être libéré lorsque `COleDataObject` l’objet est détruit ; sinon, false.
 
 ### <a name="remarks"></a>Notes
 
@@ -139,9 +139,9 @@ void BeginEnumFormats();
 
 Après un appel à `BeginEnumFormats`, la position du premier format pris en charge par cet objet de données est stockée. Les appels successifs à `GetNextFormat` énumèrent la liste des formats disponibles dans l’objet de données.
 
-Pour vérifier la disponibilité des données dans un format donné, utilisez [COleDataObject:: IsDataAvailable](#isdataavailable).
+Pour vérifier la disponibilité des données dans un format donné, utilisez [COleDataObject :: IsDataAvailable](#isdataavailable).
 
-Pour plus d’informations, consultez [IDataObject:: EnumFormatEtc](/windows/win32/api/objidl/nf-objidl-idataobject-enumformatetc) dans la SDK Windows.
+Pour plus d’informations, consultez [IDataObject :: EnumFormatEtc](/windows/win32/api/objidl/nf-objidl-idataobject-enumformatetc) dans la SDK Windows.
 
 ##  <a name="coledataobject"></a>  COleDataObject::COleDataObject
 
@@ -153,7 +153,7 @@ COleDataObject();
 
 ### <a name="remarks"></a>Notes
 
-Un appel à [COleDataObject:: Attach](#attach) ou [COleDataObject:: AttachClipboard](#attachclipboard) doit être effectué avant d’appeler `COleDataObject` d’autres fonctions.
+Un appel à [COleDataObject :: Attach](#attach) ou [COleDataObject :: AttachClipboard](#attachclipboard) doit être effectué avant d’appeler `COleDataObject` d’autres fonctions.
 
 > [!NOTE]
 >  Étant donné que l’un des paramètres des gestionnaires de glisser-déplacer est un pointeur vers un `COleDataObject`, il n’est pas nécessaire d’appeler ce constructeur pour prendre en charge le glisser-déplacer.
@@ -189,7 +189,7 @@ BOOL GetData(
 Format dans lequel les données doivent être retournées. Ce paramètre peut être l’un des formats de presse-papiers prédéfinis ou la valeur retournée par la fonction Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) native.
 
 *lpStgMedium*<br/>
-Pointe vers une structure [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) qui recevra des données.
+Pointe vers une structure [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) qui recevra des données.
 
 *lpFormatEtc*<br/>
 Pointe vers une structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) décrivant le format dans lequel les données doivent être retournées. Fournissez une valeur pour ce paramètre si vous souhaitez spécifier des informations de mise en forme supplémentaires au-delà du format du presse-papiers spécifié par *cfFormat*. Si la valeur est null, les valeurs par défaut sont utilisées pour les autres champs `FORMATETC` de la structure.
@@ -200,7 +200,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium)et [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) dans le SDK Windows.
+Pour plus d’informations, consultez [IDataObject :: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)et [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) dans le SDK Windows.
 
 Pour plus d’informations, consultez [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) dans le SDK Windows.
 
@@ -224,7 +224,7 @@ Pointe vers une structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-format
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers le nouvel `CFile` objet `CFile`ou dérivé contenant les données en cas de réussite; sinon, null.
+Pointeur vers le nouvel `CFile` objet `CFile`ou dérivé contenant les données en cas de réussite ; sinon, null.
 
 ### <a name="remarks"></a>Notes
 
@@ -257,7 +257,7 @@ Pointe vers une structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-format
 
 ### <a name="return-value"></a>Valeur de retour
 
-Handle du bloc de mémoire globale contenant les données en cas de réussite; Sinon, NULL.
+Handle du bloc de mémoire globale contenant les données en cas de réussite ; Sinon, NULL.
 
 ### <a name="remarks"></a>Notes
 
@@ -280,15 +280,15 @@ Pointe vers la structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-formate
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si un autre format est disponible; Sinon, 0.
+Différent de zéro si un autre format est disponible ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Après un appel à [COleDataObject:: BeginEnumFormats](#beginenumformats), la position du premier format pris en charge par cet objet de données est stockée. Les appels successifs à `GetNextFormat` énumèrent la liste des formats disponibles dans l’objet de données. Utilisez ces fonctions pour répertorier les formats disponibles.
+Après un appel à [COleDataObject :: BeginEnumFormats](#beginenumformats), la position du premier format pris en charge par cet objet de données est stockée. Les appels successifs à `GetNextFormat` énumèrent la liste des formats disponibles dans l’objet de données. Utilisez ces fonctions pour répertorier les formats disponibles.
 
-Pour vérifier la disponibilité d’un format donné, appelez [COleDataObject:: IsDataAvailable](#isdataavailable).
+Pour vérifier la disponibilité d’un format donné, appelez [COleDataObject :: IsDataAvailable](#isdataavailable).
 
-Pour plus d’informations, consultez [IEnumXXXX:: Next](/previous-versions//ms695273\(v=vs.85\)) dans le SDK Windows.
+Pour plus d’informations, consultez [IEnumXXXX :: Next](/previous-versions//ms695273\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="isdataavailable"></a>  COleDataObject::IsDataAvailable
 
@@ -310,19 +310,19 @@ Pointe vers une structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-format
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si les données sont disponibles dans le format spécifié; Sinon, 0.
+Différent de zéro si les données sont disponibles dans le format spécifié ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
 Cette fonction est utile avant d' `GetData`appeler `GetFileData`, ou `GetGlobalData`.
 
-Pour plus d’informations, consultez [IDataObject:: QueryGetData](/windows/win32/api/objidl/nf-objidl-idataobject-querygetdata) et [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) dans le SDK Windows.
+Pour plus d’informations, consultez [IDataObject :: QueryGetData](/windows/win32/api/objidl/nf-objidl-idataobject-querygetdata) et [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) dans le SDK Windows.
 
 Pour plus d’informations, consultez [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) dans le SDK Windows.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-  Consultez l’exemple pour [CRichEditView:: QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).
+  Consultez l’exemple pour [CRichEditView :: QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).
 
 ##  <a name="release"></a>  COleDataObject::Release
 
@@ -334,7 +334,7 @@ void Release();
 
 ### <a name="remarks"></a>Notes
 
-Le `IDataObject` a été associé `COleDataObject` au en appelant `Attach` ou `AttachClipboard` explicitement ou par l’infrastructure. Si le paramètre *bAutoRelease* de `Attach` a la valeur false, l' `IDataObject` objet n’est pas libéré. Dans ce cas, l’appelant est responsable de la `IDataObject` libération de en appelant [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release).
+Le `IDataObject` a été associé `COleDataObject` au en appelant `Attach` ou `AttachClipboard` explicitement ou par l’infrastructure. Si le paramètre *bAutoRelease* de `Attach` a la valeur false, l' `IDataObject` objet n’est pas libéré. Dans ce cas, l’appelant est responsable de la `IDataObject` libération de en appelant [IUnknown :: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release).
 
 ## <a name="see-also"></a>Voir aussi
 

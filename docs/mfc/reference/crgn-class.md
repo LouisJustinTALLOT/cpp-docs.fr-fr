@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 34dcc618f603302c5598e42588ffad78d61ee222
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 97266ac9e4f1885149ce521f554ad2f22daee6e0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502714"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741503"
 ---
 # <a name="crgn-class"></a>CRgn, classe
 
@@ -78,7 +78,7 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Définit un `CRgn` objet de manière à ce qu’il soit équivalent à l’Union `CRgn` de deux objets spécifiés.|
 |[CRgn::CopyRgn](#copyrgn)|Définit un `CRgn` objet afin qu’il s’agit d’une copie d' `CRgn` un objet spécifié.|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Initialise un `CRgn` objet avec une zone elliptique.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initialise un `CRgn` objet avec une zone elliptique définie par une structure [Rect](/windows/win32/api/windef/ns-windef-tagrect) .|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initialise un `CRgn` objet avec une zone elliptique définie par une structure [Rect](/windows/win32/api/windef/ns-windef-rect) .|
 |[CRgn::CreateFromData](#createfromdata)|Crée une région à partir de la région donnée et des données de transformation.|
 |[CRgn::CreateFromPath](#createfrompath)|Crée une région à partir du chemin d’accès sélectionné dans le contexte de périphérique donné.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|Initialise un `CRgn` objet avec une région polygonale. Le système ferme automatiquement le polygone, si nécessaire, en dessinant une ligne du dernier vertex jusqu’au premier.|
@@ -91,7 +91,7 @@ class CRgn : public CGdiObject
 |[CRgn::GetRegionData](#getregiondata)|Remplit la mémoire tampon spécifiée avec des données décrivant la région donnée.|
 |[CRgn::GetRgnBox](#getrgnbox)|Récupère les coordonnées du rectangle englobant d’un `CRgn` objet.|
 |[CRgn::OffsetRgn](#offsetrgn)|Déplace un `CRgn` objet selon les décalages spécifiés.|
-|[CRgn::P tInRegion](#ptinregion)|Détermine si un point spécifié se trouve dans la zone.|
+|[CRgn ::P tInRegion](#ptinregion)|Détermine si un point spécifié se trouve dans la zone.|
 |[CRgn::RectInRegion](#rectinregion)|Détermine si une partie d’un rectangle spécifié se trouve dans les limites de la zone.|
 |[CRgn::SetRectRgn](#setrectrgn)|Définit l' `CRgn` objet sur la zone rectangulaire spécifiée.|
 
@@ -99,7 +99,7 @@ class CRgn : public CGdiObject
 
 |Nom|Description|
 |----------|-----------------|
-|[CRgn:: Operator HRGN](#operator_hrgn)|Retourne le handle Windows contenu dans l' `CRgn` objet.|
+|[CRgn :: Operator HRGN](#operator_hrgn)|Retourne le handle Windows contenu dans l' `CRgn` objet.|
 
 ## <a name="remarks"></a>Notes
 
@@ -141,7 +141,7 @@ Identifie une région existante.
 Identifie une région existante.
 
 *nCombineMode*<br/>
-Spécifie l’opération à effectuer lors de la combinaison des deux régions sources. Il peut s’agir de l’une des valeurs suivantes:
+Spécifie l’opération à effectuer lors de la combinaison des deux régions sources. Il peut s’agir de l’une des valeurs suivantes :
 
 - RGN_AND utilise des zones qui se chevauchent des deux régions (intersection).
 
@@ -155,11 +155,11 @@ Spécifie l’opération à effectuer lors de la combinaison des deux régions s
 
 ### <a name="return-value"></a>Valeur de retour
 
-Spécifie le type de la zone résultante. Il peut s’agir de l’une des valeurs suivantes:
+Spécifie le type de la zone résultante. Il peut s’agir de l’une des valeurs suivantes :
 
 - COMPLEXREGION nouvelle région a des bordures qui se chevauchent.
 
-- ERREUR: aucune nouvelle région créée.
+- ERREUR : aucune nouvelle région créée.
 
 - NULLREGION nouvelle région est vide.
 
@@ -175,7 +175,7 @@ La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 
 
 Utilisez [CopyRgn](#copyrgn) pour copier simplement une région dans une autre région.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]
 
@@ -194,11 +194,11 @@ Identifie une région existante.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Spécifie le type de la zone résultante. Il peut s’agir de l’une des valeurs suivantes:
+Spécifie le type de la zone résultante. Il peut s’agir de l’une des valeurs suivantes :
 
 - COMPLEXREGION nouvelle région a des bordures qui se chevauchent.
 
-- ERREUR: aucune nouvelle région créée.
+- ERREUR : aucune nouvelle région créée.
 
 - NULLREGION nouvelle région est vide.
 
@@ -208,9 +208,9 @@ Spécifie le type de la zone résultante. Il peut s’agir de l’une des valeur
 
 La nouvelle région remplace la région précédemment stockée dans `CRgn` l’objet. Cette fonction est un cas particulier de la fonction membre [CombineRgn](#combinergn) .
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-  Consultez l’exemple de [CRgn:: CreateEllipticRgn](#createellipticrgn).
+  Consultez l’exemple de [CRgn :: CreateEllipticRgn](#createellipticrgn).
 
 ##  <a name="createellipticrgn"></a>  CRgn::CreateEllipticRgn
 
@@ -240,7 +240,7 @@ Spécifie la coordonnée y logique du coin inférieur droit du rectangle engloba
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si l’opération a réussi; Sinon, 0.
+Valeur différente de zéro si l’opération a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -269,7 +269,7 @@ Pointe vers une `RECT` structure ou un `CRect` objet qui contient les coordonné
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si l’opération a réussi; Sinon, 0.
+Valeur différente de zéro si l’opération a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -279,9 +279,9 @@ La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 
 
 Lorsqu’il a fini d’utiliser une région créée avec `CreateEllipticRgnIndirect` la fonction, une application doit sélectionner la région hors du contexte de périphérique et utiliser `DeleteObject` la fonction pour la supprimer.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-  Consultez l’exemple de [CRgn:: CreateRectRgnIndirect](#createrectrgnindirect).
+  Consultez l’exemple de [CRgn :: CreateRectRgnIndirect](#createrectrgnindirect).
 
 ##  <a name="createfromdata"></a>  CRgn::CreateFromData
 
@@ -348,7 +348,7 @@ BOOL CreatePolygonRgn(
 ### <a name="parameters"></a>Paramètres
 
 *lpPoints*<br/>
-Pointe vers un tableau de `POINT` structures ou un tableau d' `CPoint` objets. Chaque structure spécifie la coordonnée x et la coordonnée y d’un vertex du polygone. La `POINT` structure se présente sous la forme suivante:
+Pointe vers un tableau de `POINT` structures ou un tableau d' `CPoint` objets. Chaque structure spécifie la coordonnée x et la coordonnée y d’un vertex du polygone. La `POINT` structure se présente sous la forme suivante :
 
 ```cpp
 typedef struct tagPOINT {
@@ -365,7 +365,7 @@ Spécifie le mode de remplissage pour la région. Il peut s’agir d’un param�
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si l’opération a réussi; Sinon, 0.
+Valeur différente de zéro si l’opération a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -379,7 +379,7 @@ Lorsque le mode de remplissage de polygone est en cours d’enroulement, le syst
 
 Lorsqu’une application a fini d’utiliser une région créée à `CreatePolygonRgn` l’aide de la fonction, elle doit sélectionner la région hors du contexte de `DeleteObject` périphérique et utiliser la fonction pour la supprimer.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#146](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]
 
@@ -398,7 +398,7 @@ BOOL CreatePolyPolygonRgn(
 ### <a name="parameters"></a>Paramètres
 
 *lpPoints*<br/>
-Pointe vers un tableau de `POINT` structures ou un tableau d' `CPoint` objets qui définit les vertex des polygones. Chaque polygone doit être explicitement fermé, car le système ne les ferme pas automatiquement. Les polygones sont spécifiés consécutivement. La `POINT` structure se présente sous la forme suivante:
+Pointe vers un tableau de `POINT` structures ou un tableau d' `CPoint` objets qui définit les vertex des polygones. Chaque polygone doit être explicitement fermé, car le système ne les ferme pas automatiquement. Les polygones sont spécifiés consécutivement. La `POINT` structure se présente sous la forme suivante :
 
 ```cpp
 typedef struct tagPOINT {
@@ -418,7 +418,7 @@ Spécifie le mode de remplissage du polygone. Cette valeur peut être alternativ
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si l’opération a réussi; Sinon, 0.
+Valeur différente de zéro si l’opération a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -432,7 +432,7 @@ Lorsque le mode de remplissage polygone est alternatif, le système remplit la z
 
 Lorsque le mode de remplissage de polygone est en cours d’enroulement, le système utilise la direction dans laquelle une figure a été dessinée pour déterminer s’il faut remplir une zone. Chaque segment de ligne d’un polygone est dessiné dans le sens horaire ou dans le sens inverse des aiguilles d’une montre. Chaque fois qu’une ligne imaginaire dessinée à partir d’une zone fermée à l’extérieur d’une figure passe par un segment de ligne dans le sens des aiguilles d’une montre, un nombre est incrémenté. Lorsque la ligne passe par un segment de ligne dans le sens inverse, le nombre est décrémenté. La zone est remplie si le nombre est différent de zéro lorsque la ligne atteint l’extérieur de la figure.
 
-Lorsqu’une application a fini d’utiliser une région créée à `CreatePolyPolygonRgn` l’aide de la fonction, elle doit sélectionner la région hors du contexte de périphérique et utiliser la fonction membre [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour la supprimer.
+Lorsqu’une application a fini d’utiliser une région créée à `CreatePolyPolygonRgn` l’aide de la fonction, elle doit sélectionner la région hors du contexte de périphérique et utiliser la fonction membre [CGDIObject ::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour la supprimer.
 
 ##  <a name="createrectrgn"></a>  CRgn::CreateRectRgn
 
@@ -462,19 +462,19 @@ Spécifie la coordonnée y logique du coin inférieur droit de la zone.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si l’opération a réussi; Sinon, 0.
+Valeur différente de zéro si l’opération a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
 La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 64 Ko de mémoire, la valeur la plus petite étant retenue.
 
-Lorsqu’il a fini d’utiliser une région créée `CreateRectRgn`par, une application doit utiliser la fonction membre [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour supprimer la région.
+Lorsqu’il a fini d’utiliser une région créée `CreateRectRgn`par, une application doit utiliser la fonction membre [CGDIObject ::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour supprimer la région.
 
 ### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCDocView#147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]
 
-Pour obtenir un exemple supplémentaire, consultez [CRgn:: CombineRgn](#combinergn).
+Pour obtenir un exemple supplémentaire, consultez [CRgn :: CombineRgn](#combinergn).
 
 ##  <a name="createrectrgnindirect"></a>  CRgn::CreateRectRgnIndirect
 
@@ -487,7 +487,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-Pointe vers une `RECT` structure ou `CRect` un objet qui contient les coordonnées logiques des angles supérieur gauche et inférieur droit de la zone. La `RECT` structure se présente sous la forme suivante:
+Pointe vers une `RECT` structure ou `CRect` un objet qui contient les coordonnées logiques des angles supérieur gauche et inférieur droit de la zone. La `RECT` structure se présente sous la forme suivante :
 
 ```cpp
 typedef struct tagRECT {
@@ -500,13 +500,13 @@ typedef struct tagRECT {
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si l’opération a réussi; Sinon, 0.
+Valeur différente de zéro si l’opération a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
 La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 64 Ko de mémoire, la valeur la plus petite étant retenue.
 
-Lorsqu’il a fini d’utiliser une région créée `CreateRectRgnIndirect`par, une application doit utiliser la fonction membre [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour supprimer la région.
+Lorsqu’il a fini d’utiliser une région créée `CreateRectRgnIndirect`par, une application doit utiliser la fonction membre [CGDIObject ::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour supprimer la région.
 
 ### <a name="example"></a>Exemple
 
@@ -548,15 +548,15 @@ Spécifie la hauteur de l’ellipse utilisée pour créer les angles arrondis.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si l’opération a réussi; Sinon, 0.
+Valeur différente de zéro si l’opération a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
 La taille d’une région est limitée à 32 767 par 32 767 unités logiques ou 64 Ko de mémoire, la valeur la plus petite étant retenue.
 
-Lorsqu’une application a fini d’utiliser une région créée à `CreateRoundRectRgn` l’aide de la fonction, elle doit sélectionner la région hors du contexte de périphérique et utiliser la fonction membre [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour la supprimer.
+Lorsqu’une application a fini d’utiliser une région créée à `CreateRoundRectRgn` l’aide de la fonction, elle doit sélectionner la région hors du contexte de périphérique et utiliser la fonction membre [CGDIObject ::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) pour la supprimer.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#149](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]
 
@@ -572,9 +572,9 @@ CRgn();
 
 Le `m_hObject` membre de données ne contient pas de région GDI Windows valide tant que l’objet n’est pas initialisé avec une ou plusieurs `CRgn` autres fonctions membres.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-  Consultez l’exemple de [CRgn:: CreateRoundRectRgn](#createroundrectrgn).
+  Consultez l’exemple de [CRgn :: CreateRoundRectRgn](#createroundrectrgn).
 
 ##  <a name="equalrgn"></a>  CRgn::EqualRgn
 
@@ -591,9 +591,9 @@ Identifie une région.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si les deux régions sont équivalentes; Sinon, 0.
+Différent de zéro si les deux régions sont équivalentes ; Sinon, 0.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCDocView#150](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]
 
@@ -655,7 +655,7 @@ int GetRgnBox(LPRECT lpRect) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-Pointe vers une `RECT` structure ou `CRect` un objet pour recevoir les coordonnées du rectangle englobant. La `RECT` structure se présente sous la forme suivante:
+Pointe vers une `RECT` structure ou `CRect` un objet pour recevoir les coordonnées du rectangle englobant. La `RECT` structure se présente sous la forme suivante :
 
 `typedef struct tagRECT {`
 
@@ -671,7 +671,7 @@ Pointe vers une `RECT` structure ou `CRect` un objet pour recevoir les coordonn�
 
 ### <a name="return-value"></a>Valeur de retour
 
-Spécifie le type de la région. Il peut s’agir de l’une des valeurs suivantes:
+Spécifie le type de la région. Il peut s’agir de l’une des valeurs suivantes :
 
 - La région COMPLEXREGION a des bordures qui se chevauchent.
 
@@ -683,7 +683,7 @@ Spécifie le type de la région. Il peut s’agir de l’une des valeurs suivant
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CRgn:: CreatePolygonRgn](#createpolygonrgn).
+  Consultez l’exemple de [CRgn :: CreatePolygonRgn](#createpolygonrgn).
 
 ##  <a name="offsetrgn"></a>  CRgn::OffsetRgn
 
@@ -710,7 +710,7 @@ La coordonnée x du *point* spécifie le nombre d’unités à déplacer vers la
 
 ### <a name="return-value"></a>Valeur de retour
 
-Type de la nouvelle région. Il peut s’agir de l’une des valeurs suivantes:
+Type de la nouvelle région. Il peut s’agir de l’une des valeurs suivantes :
 
 - La région COMPLEXREGION a des bordures qui se chevauchent.
 
@@ -728,9 +728,9 @@ Les valeurs de coordonnée d’une région doivent être inférieures ou égales
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CRgn:: CreateEllipticRgn](#createellipticrgn).
+  Consultez l’exemple de [CRgn :: CreateEllipticRgn](#createellipticrgn).
 
-##  <a name="operator_hrgn"></a>CRgn:: Operator HRGN
+##  <a name="operator_hrgn"></a>CRgn :: Operator HRGN
 
 Utilisez cet opérateur pour récupérer le handle Windows GDI attaché de l' `CRgn` objet.
 
@@ -740,7 +740,7 @@ operator HRGN() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, handle vers l’objet Windows GDI représenté par `CRgn` l’objet; sinon, null.
+En cas de réussite, handle vers l’objet Windows GDI représenté par `CRgn` l’objet ; sinon, null.
 
 ### <a name="remarks"></a>Notes
 
@@ -773,7 +773,7 @@ Les coordonnées x et y du *point* spécifient les coordonnées x et y du point 
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le point se trouve dans la région; Sinon, 0.
+Différent de zéro si le point se trouve dans la région ; Sinon, 0.
 
 ##  <a name="rectinregion"></a>  CRgn::RectInRegion
 
@@ -786,7 +786,7 @@ BOOL RectInRegion(LPCRECT lpRect) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-Pointe vers une `RECT` structure ou `CRect` un objet. La `RECT` structure se présente sous la forme suivante:
+Pointe vers une `RECT` structure ou `CRect` un objet. La `RECT` structure se présente sous la forme suivante :
 
 ```cpp
 typedef struct tagRECT {
@@ -799,7 +799,7 @@ typedef struct tagRECT {
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si une partie du rectangle spécifié se trouve dans les limites de la zone; Sinon, 0.
+Valeur différente de zéro si une partie du rectangle spécifié se trouve dans les limites de la zone ; Sinon, 0.
 
 ##  <a name="setrectrgn"></a>  CRgn::SetRectRgn
 

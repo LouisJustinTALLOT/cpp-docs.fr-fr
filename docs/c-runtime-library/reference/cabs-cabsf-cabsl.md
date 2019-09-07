@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
 ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623959"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739876"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -68,17 +68,17 @@ Nombre complexe.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur absolue de *z*.
+Valeur absolue de *z*.
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **cabs** acceptant **_Fcomplex** ou **_Lcomplex** valeurs et retournent **float** ou **long** **double** valeurs. Dans un programme C, **cabs** prend toujours un **_Dcomplex** valeur et retourne un **double** valeur.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **CAB** qui acceptent des valeurs **_Fcomplex** ou **_Lcomplex** , et qui retournent des valeurs **float** ou **long** **double** . Dans un programme C, les **cabines** prennent toujours une valeur **_Dcomplex** et retournent une valeur **double** .
 
 ## <a name="requirements"></a>Configuration requise
 
-|Routine|En-tête C|En-tête C++|
+|Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**fichiers CAB**, **cabsf**, **cabsl**|\<complex.h>|\<ccomplex>|
+|**CAB**, **cabsf**, **taxi**|\<complex.h>|\<ccomplex>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

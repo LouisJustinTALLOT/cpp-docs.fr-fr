@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: b538acd564402459a05cc96303b63a35a99ba243
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0d0c37d055d9b337f7b709b4ee3d299daae7658
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506471"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741554"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog, classe
 
@@ -63,12 +63,12 @@ class CFontDialog : public CCommonDialog
 
 |Nom|Description|
 |----------|-----------------|
-|[CFontDialog::D oModal](#domodal)|Affiche la boîte de dialogue et permet à l’utilisateur d’effectuer une sélection.|
+|[CFontDialog ::D oModal](#domodal)|Affiche la boîte de dialogue et permet à l’utilisateur d’effectuer une sélection.|
 |[CFontDialog::GetCharFormat](#getcharformat)|Récupère la mise en forme des caractères de la police sélectionnée.|
-|[CFontDialog:: GetColor](#getcolor)|Retourne la couleur de la police sélectionnée.|
+|[CFontDialog :: GetColor](#getcolor)|Retourne la couleur de la police sélectionnée.|
 |[CFontDialog::GetCurrentFont](#getcurrentfont)|Assigne les caractéristiques de la police actuellement sélectionnée à une `LOGFONT` structure.|
 |[CFontDialog::GetFaceName](#getfacename)|Retourne le nom de police de la police sélectionnée.|
-|[CFontDialog:: est à obtenir](#getsize)|Retourne la taille en points de la police sélectionnée.|
+|[CFontDialog :: est à obtenir](#getsize)|Retourne la taille en points de la police sélectionnée.|
 |[CFontDialog::GetStyleName](#getstylename)|Retourne le nom du style de la police sélectionnée.|
 |[CFontDialog::GetWeight](#getweight)|Retourne l’épaisseur de la police sélectionnée.|
 |[CFontDialog::IsBold](#isbold)|Détermine si la police est en gras.|
@@ -120,7 +120,7 @@ Pour plus d’informations sur `CFontDialog`l’utilisation de, consultez [class
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête:** afxdlgs. h
+**En-tête :** afxdlgs. h
 
 ##  <a name="cfontdialog"></a>CFontDialog::CFontDialog
 
@@ -146,7 +146,7 @@ CFontDialog(
 Pointeur vers une structure de données [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) qui vous permet de définir certaines caractéristiques de la police.
 
 *charFormat*<br/>
-Pointeur vers une structure de données [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) qui vous permet de définir certaines caractéristiques de la police dans un contrôle RichEdit.
+Pointeur vers une structure de données [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) qui vous permet de définir certaines caractéristiques de la police dans un contrôle RichEdit.
 
 *dwFlags*<br/>
 Spécifie un ou plusieurs indicateurs de choix de police. Une ou plusieurs valeurs prédéfinies peuvent être combinées à l'aide de l'opérateur de bits OR. Si vous changez le membre de structure de `m_cf.Flag`, veillez à utiliser un opérateur de bits OR dans les changements pour préserver le comportement par défaut. Pour plus d’informations sur chacun de ces indicateurs, consultez la description de la structure [CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw) dans le SDK Windows.
@@ -188,9 +188,9 @@ Si vous souhaitez initialiser les différents contrôles de boîte de dialogue d
 
 Si `DoModal` retourne IDOK, vous pouvez appeler d’autres fonctions membres pour récupérer les paramètres ou les informations entrées par l’utilisateur dans la boîte de dialogue.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-  Consultez les exemples pour [CFontDialog:: CFontDialog](#cfontdialog) et [CFontDialog:: GetColor](#getcolor).
+  Consultez les exemples pour [CFontDialog :: CFontDialog](#cfontdialog) et [CFontDialog :: GetColor](#getcolor).
 
 ##  <a name="getcharformat"></a>  CFontDialog::GetCharFormat
 
@@ -203,9 +203,9 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ### <a name="parameters"></a>Paramètres
 
 *cf*<br/>
-Structure [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) contenant des informations sur la mise en forme des caractères de la police sélectionnée.
+Structure [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) contenant des informations sur la mise en forme des caractères de la police sélectionnée.
 
-##  <a name="getcolor"></a>CFontDialog:: GetColor
+##  <a name="getcolor"></a>CFontDialog :: GetColor
 
 Appelez cette fonction pour récupérer la couleur de police sélectionnée.
 
@@ -256,11 +256,11 @@ CString GetFaceName() const;
 
 Nom de police de la police sélectionnée dans la `CFontDialog` boîte de dialogue.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#81](../../mfc/codesnippet/cpp/cfontdialog-class_4.cpp)]
 
-##  <a name="getsize"></a>CFontDialog:: est à obtenir
+##  <a name="getsize"></a>CFontDialog :: est à obtenir
 
 Appelez cette fonction pour récupérer la taille de la police sélectionnée.
 
@@ -306,7 +306,7 @@ Poids de la police sélectionnée.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur le poids d’une police, consultez [CFont:: CreateFont](../../mfc/reference/cfont-class.md#createfont).
+Pour plus d’informations sur le poids d’une police, consultez [CFont :: CreateFont](../../mfc/reference/cfont-class.md#createfont).
 
 ### <a name="example"></a>Exemples
 
@@ -322,7 +322,7 @@ BOOL IsBold() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la police sélectionnée a la caractéristique gras activée; Sinon, 0.
+Différent de zéro si la police sélectionnée a la caractéristique gras activée ; Sinon, 0.
 
 ### <a name="example"></a>Exemple
 
@@ -338,7 +338,7 @@ BOOL IsItalic() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la police sélectionnée a la caractéristique italique activée; Sinon, 0.
+Différent de zéro si la police sélectionnée a la caractéristique italique activée ; Sinon, 0.
 
 ### <a name="example"></a>Exemples
 
@@ -354,9 +354,9 @@ BOOL IsStrikeOut() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la police sélectionnée a la caractéristique de barré activée; Sinon, 0.
+Différent de zéro si la police sélectionnée a la caractéristique de barré activée ; Sinon, 0.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#87](../../mfc/codesnippet/cpp/cfontdialog-class_10.cpp)]
 
@@ -370,7 +370,7 @@ BOOL IsUnderline() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la police sélectionnée a la caractéristique souligné activée; Sinon, 0.
+Différent de zéro si la police sélectionnée a la caractéristique souligné activée ; Sinon, 0.
 
 ### <a name="example"></a>Exemple
 
