@@ -2,19 +2,19 @@
 title: Déconseiller des types et des membres (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 7f488dfa522c0b48c75150d40584b0946baae806
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd880af7e206b4c7338e53615594ec2c65c59fc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301498"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740498"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Déconseiller des types et des membres (C++/CX)
 
-En C / c++ / CX, le fait de déconseiller des types Windows Runtime et des membres pour les producteurs et consommateurs à l’aide de la [déconseillées](/uwp/api/windows.foundation.metadata.deprecatedattribute) attribut est pris en charge. Si vous consommez une API à laquelle cet attribut a été appliqué, vous recevez un message d'avertissement au moment de la compilation qui indique que l'API est déconseillée et recommande l'utilisation d'une autre API. Dans vos propres types et méthodes publics, vous pouvez appliquer cet attribut et fournir votre message personnalisé.
+Dans C++/CX, la désapprobation de types et de membres de Windows Runtime pour les producteurs et les consommateurs à l’aide de l’attribut [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute) est prise en charge. Si vous consommez une API à laquelle cet attribut a été appliqué, vous recevez un message d'avertissement au moment de la compilation qui indique que l'API est déconseillée et recommande l'utilisation d'une autre API. Dans vos propres types et méthodes publics, vous pouvez appliquer cet attribut et fournir votre message personnalisé.
 
 > [!CAUTION]
-> Le [déconseillées](/uwp/api/windows.foundation.metadata.deprecatedattribute) attribut doit être utilisé uniquement avec les types Windows Runtime. Pour les classes et les membres C++ standard, utilisez [__declspec(deprecated)](../cpp/deprecated-cpp.md).
+> L’attribut [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute) est destiné à être utilisé uniquement avec les types de Windows Runtime. Pour les classes et les membres C++ standard, utilisez [__declspec(deprecated)](../cpp/deprecated-cpp.md).
 
 ### <a name="example"></a>Exemple
 
@@ -47,7 +47,7 @@ Le tableau suivant répertorie les constructions auxquelles l'attribut Deprecate
 |champ enum|
 |enum|
 |struct|
-|méthode|
+|method|
 |class|
 |interface|
 |propriété|
@@ -57,5 +57,5 @@ Le tableau suivant répertorie les constructions auxquelles l'attribut Deprecate
 ## <a name="see-also"></a>Voir aussi
 
 [Système de type](../cppcx/type-system-c-cx.md)<br/>
-[Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)

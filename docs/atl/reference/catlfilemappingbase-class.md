@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 3d9627c7a19cccc0cd3aec46d71b23c8a84711bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a20a8f6c00f9404aa819b87a6a69ad2c08fb4561
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497772"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739545"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase, classe
 
@@ -72,7 +72,7 @@ Pour plus d’informations, consultez [mappage de fichiers](/windows/win32/Memor
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête:** atlfile. h
+**En-tête :** atlfile. h
 
 ##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase
 
@@ -90,7 +90,7 @@ Objet de mappage de fichier d’origine à copier pour créer le nouvel objet.
 
 ### <a name="remarks"></a>Notes
 
-Crée un objet de mappage de fichiers, éventuellement à l’aide d’un objet existant. Il est toujours nécessaire d’appeler [CAtlFileMappingBase::](#mapfile) fichier de mappage pour ouvrir ou créer l’objet de mappage de fichiers pour un fichier particulier.
+Crée un objet de mappage de fichiers, éventuellement à l’aide d’un objet existant. Il est toujours nécessaire d’appeler [CAtlFileMappingBase ::](#mapfile) fichier de mappage pour ouvrir ou créer l’objet de mappage de fichiers pour un fichier particulier.
 
 ### <a name="example"></a>Exemple
 
@@ -106,7 +106,7 @@ Destructeur.
 
 ### <a name="remarks"></a>Notes
 
-Libère toutes les ressources allouées par la classe et appelle la méthode [CAtlFileMappingBase::](#unmap) unout.
+Libère toutes les ressources allouées par la classe et appelle la méthode [CAtlFileMappingBase ::](#unmap) unout.
 
 ##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom
 
@@ -163,7 +163,7 @@ Retourne la taille du mappage.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase).
+Consultez l’exemple de [CAtlFileMappingBase :: CAtlFileMappingBase](#catlfilemappingbase).
 
 ##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile
 
@@ -190,7 +190,7 @@ Taille du mappage. Si la valeur est 0, la taille maximale de l’objet de mappag
 Offset de fichier où le mappage doit commencer. La valeur de décalage doit être un multiple de la granularité d’allocation de mémoire du système.
 
 *dwMappingProtection*<br/>
-Protection souhaitée pour la vue de fichier lorsque le fichier est mappé. Consultez *flProtect* dans [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) dans le SDK Windows.
+Protection souhaitée pour la vue de fichier lorsque le fichier est mappé. Consultez *flProtect* dans [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) dans le SDK Windows.
 
 *dwViewDesiredAccess*<br/>
 Spécifie le type d’accès à la vue de fichier et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le SDK Windows.
@@ -201,11 +201,11 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Après la création d’un objet de mappage de fichiers, la taille du fichier ne doit pas dépasser la taille de l’objet de mappage de fichiers; Si c’est le cas, tout le contenu du fichier ne sera pas disponible pour le partage. Pour plus d’informations, consultez [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) et [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le SDK Windows.
+Après la création d’un objet de mappage de fichiers, la taille du fichier ne doit pas dépasser la taille de l’objet de mappage de fichiers ; Si c’est le cas, tout le contenu du fichier ne sera pas disponible pour le partage. Pour plus d’informations, consultez [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) et [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase).
+Consultez l’exemple de [CAtlFileMappingBase :: CAtlFileMappingBase](#catlfilemappingbase).
 
 ##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem
 
@@ -233,7 +233,7 @@ Nom de l’objet de mappage.
 Pointe vers une valeur BOOL qui a la valeur TRUE si l’objet de mappage existait déjà.
 
 *lpsa*<br/>
-Pointeur vers une `SECURITY_ATTRIBUTES` structure qui détermine si le handle retourné peut être hérité par les processus enfants. Consultez *lpAttributes* dans [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) dans le SDK Windows.
+Pointeur vers une `SECURITY_ATTRIBUTES` structure qui détermine si le handle retourné peut être hérité par les processus enfants. Consultez *lpAttributes* dans [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) dans le SDK Windows.
 
 *dwMappingProtection*<br/>
 Protection souhaitée pour la vue de fichier, lorsque le fichier est mappé. Consultez *flProtect* dans `CreateFileMapping` dans le SDK Windows.
@@ -247,7 +247,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-`MapShareMem`permet à un objet de mappage de fichiers existant, créé par [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw), d’être partagé entre des processus.
+`MapShareMem`permet à un objet de mappage de fichiers existant, créé par [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga), d’être partagé entre des processus.
 
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping
 

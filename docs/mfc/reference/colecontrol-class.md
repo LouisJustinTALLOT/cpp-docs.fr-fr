@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 14a195b22c2b26ee0180c68741fab623623fc36e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 97c605426ed0ac869714f0f83d4957f7f6ce7d87
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504755"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741396"
 ---
 # <a name="colecontrol-class"></a>Classe COleControl
 
@@ -472,7 +472,7 @@ class COleControl : public CWnd
 |[COleControl::OnKeyUpEvent](#onkeyupevent)|Appelée après le déclenchement de l’événement de retouche de stock.|
 |[COleControl::OnMapPropertyToPage](#onmappropertytopage)|Indique la page de propriétés à utiliser pour modifier une propriété.|
 |[COleControl::OnMnemonic](#onmnemonic)|Appelée lorsqu’une touche mnémonique du contrôle a été enfoncée.|
-|[COleControl::OnProperties](#onproperties)|Appelé lorsque le verbe «Properties» du contrôle a été appelé.|
+|[COleControl::OnProperties](#onproperties)|Appelé lorsque le verbe « Properties » du contrôle a été appelé.|
 |[COleControl::OnQueryHitPoint](#onqueryhitpoint)|Substituez pour demander si l’affichage d’un contrôle chevauche un point donné.|
 |[COleControl::OnQueryHitRect](#onqueryhitrect)|Substituez pour demander si l’affichage d’un contrôle chevauche un point quelconque dans un rectangle donné.|
 |[COleControl::OnRenderData](#onrenderdata)|Appelé par le Framework pour récupérer des données dans le format spécifié.|
@@ -540,7 +540,7 @@ Les contrôles OLE peuvent être insérés dans des applications de conteneur OL
 
 ## <a name="windowless-controls"></a>Contrôles sans fenêtre
 
-Les contrôles OLE peuvent être utilisés sur place sans fenêtre. Les contrôles sans fenêtre présentent des avantages significatifs:
+Les contrôles OLE peuvent être utilisés sur place sans fenêtre. Les contrôles sans fenêtre présentent des avantages significatifs :
 
 - Les contrôles sans fenêtre peuvent être transparents et non rectangulaires
 
@@ -554,9 +554,9 @@ Lorsque l’activation sans fenêtre est activée, le conteneur délègue les me
 
 Dans un contrôle sans fenêtre, vous devez toujours utiliser les `COleControl` fonctions membres à la place des `CWnd` fonctions membres correspondantes ou des fonctions d’API Windows associées.
 
-Les objets de contrôle OLE peuvent également créer une fenêtre uniquement lorsqu’ils deviennent actifs, mais la quantité de travail nécessaire pour la transition inactive-active s’affiche et la vitesse de la transition diminue. Il y a des cas où il s’agit d’un problème: par exemple, envisagez une grille de zones de texte. En cas de curseur vers le haut et vers le haut dans la colonne, chaque contrôle doit être activé sur place, puis désactivé. La vitesse de la transition inactive/active aura une incidence directe sur la vitesse de défilement.
+Les objets de contrôle OLE peuvent également créer une fenêtre uniquement lorsqu’ils deviennent actifs, mais la quantité de travail nécessaire pour la transition inactive-active s’affiche et la vitesse de la transition diminue. Il y a des cas où il s’agit d’un problème : par exemple, envisagez une grille de zones de texte. En cas de curseur vers le haut et vers le haut dans la colonne, chaque contrôle doit être activé sur place, puis désactivé. La vitesse de la transition inactive/active aura une incidence directe sur la vitesse de défilement.
 
-Pour plus d’informations sur le développement d’une infrastructure de contrôle OLE, consultez les articles [ [contrôles ActiveX MFC](../../mfc/mfc-activex-controls.md) et vue d’ensemble: Création d’un programme](../../mfc/reference/mfc-activex-control-wizard.md)de contrôle ActiveX MFC. Pour plus d’informations sur l’optimisation des contrôles OLE, y compris les contrôles sans fenêtre et sans [scintillement, consultez contrôles ActiveX MFC: Optimisation](../../mfc/mfc-activex-controls-optimization.md).
+Pour plus d’informations sur le développement d’une infrastructure de contrôle OLE, consultez les articles [ [contrôles ActiveX MFC](../../mfc/mfc-activex-controls.md) et vue d’ensemble : Création d’un programme](../../mfc/reference/mfc-activex-control-wizard.md)de contrôle ActiveX MFC. Pour plus d’informations sur l’optimisation des contrôles OLE, y compris les contrôles sans fenêtre et sans [scintillement, consultez contrôles ActiveX MFC : Optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -570,7 +570,7 @@ Pour plus d’informations sur le développement d’une infrastructure de contr
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête:** afxctl. h
+**En-tête :** afxctl. h
 
 ##  <a name="ambientbackcolor"></a>  COleControl::AmbientBackColor
 
@@ -614,7 +614,7 @@ LPFONTDISP AmbientFont();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’interface de distribution de polices ambiantes du conteneur. La valeur par défaut est NULL. Si le retour n’est pas égal à NULL, vous êtes chargé de libérer la police en appelant sa fonction membre [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) .
+Pointeur vers l’interface de distribution de polices ambiantes du conteneur. La valeur par défaut est NULL. Si le retour n’est pas égal à NULL, vous êtes chargé de libérer la police en appelant sa fonction membre [IUnknown :: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) .
 
 ### <a name="remarks"></a>Notes
 
@@ -662,7 +662,7 @@ short AmbientAppearance();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Apparence du contrôle:
+Apparence du contrôle :
 
 - **0** apparence plate
 
@@ -698,7 +698,7 @@ BOOL AmbientShowGrabHandles();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si les poignées de manipulation doivent être affichées; Sinon, 0. Si cette propriété n’est pas prise en charge, cette fonction retourne une valeur différente de zéro.
+Différent de zéro si les poignées de manipulation doivent être affichées ; Sinon, 0. Si cette propriété n’est pas prise en charge, cette fonction retourne une valeur différente de zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -732,7 +732,7 @@ short AmbientTextAlign();
 
 État de la propriété TextAlign ambiante du conteneur. Si cette propriété n’est pas prise en charge, cette fonction retourne 0.
 
-La liste suivante répertorie les valeurs de retour valides:
+La liste suivante répertorie les valeurs de retour valides :
 
 |Valeur de retour|Signification|
 |------------------|-------------|
@@ -755,7 +755,7 @@ BOOL AmbientUIDead();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le contrôle doit répondre aux actions de l’interface utilisateur; Sinon, 0. Si cette propriété n’est pas prise en charge, cette fonction retourne 0.
+Différent de zéro si le contrôle doit répondre aux actions de l’interface utilisateur ; Sinon, 0. Si cette propriété n’est pas prise en charge, cette fonction retourne 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -771,7 +771,7 @@ BOOL AmbientUserMode();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le conteneur est en mode utilisateur; Sinon, 0 (en mode création). Si cette propriété n’est pas prise en charge, cette fonction retourne TRUE.
+Différent de zéro si le conteneur est en mode utilisateur ; Sinon, 0 (en mode création). Si cette propriété n’est pas prise en charge, cette fonction retourne TRUE.
 
 ### <a name="remarks"></a>Notes
 
@@ -809,7 +809,7 @@ ID de dispatch d’une propriété liée du contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la modification est autorisée; Sinon, 0. La valeur par défaut est différente de zéro.
+Différent de zéro si la modification est autorisée ; Sinon, 0. La valeur par défaut est différente de zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -884,7 +884,7 @@ void ControlInfoChanged();
 
 ### <a name="remarks"></a>Notes
 
-Lors de la réception de cette notification, le conteneur du contrôle obtient le nouvel ensemble de mnémoniques en effectuant un appel à [IOleControl:: GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo). Notez que le conteneur n’est pas requis pour répondre à cette notification.
+Lors de la réception de cette notification, le conteneur du contrôle obtient le nouvel ensemble de mnémoniques en effectuant un appel à [IOleControl :: GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo). Notez que le conteneur n’est pas requis pour répondre à cette notification.
 
 ##  <a name="displayerror"></a>  COleControl::DisplayError
 
@@ -902,7 +902,7 @@ virtual void DisplayError(
 ### <a name="parameters"></a>Paramètres
 
 *scode*<br/>
-Valeur de code d’État à signaler. Pour obtenir la liste complète des codes possibles, consultez l' [article contrôles ActiveX: Rubriques](../../mfc/mfc-activex-controls-advanced-topics.md)avancées.
+Valeur de code d’État à signaler. Pour obtenir la liste complète des codes possibles, consultez l' [article contrôles ActiveX : Rubriques](../../mfc/mfc-activex-controls-advanced-topics.md)avancées.
 
 *lpszDescription*<br/>
 Description de l’erreur signalée.
@@ -934,7 +934,7 @@ void DoClick();
 
 La fonction `COleControl::OnClick` membre Overridable sera appelée et un événement de clic sur les actions sera déclenché, s’il est pris en charge par le contrôle.
 
-Cette fonction est prise en charge `COleControl` par la classe de base comme méthode stock, appelée inclick. Pour plus d’informations, consultez l' [article contrôles ActiveX: Méthodes](../../mfc/mfc-activex-controls-methods.md).
+Cette fonction est prise en charge `COleControl` par la classe de base comme méthode stock, appelée inclick. Pour plus d’informations, consultez l' [article contrôles ActiveX : Méthodes](../../mfc/mfc-activex-controls-methods.md).
 
 ##  <a name="dopropexchange"></a>  COleControl::DoPropExchange
 
@@ -953,7 +953,7 @@ Pointeur vers un objet `CPropExchange` . L’infrastructure fournit cet objet po
 
 Cette fonction effectue normalement des appels à la famille de fonctions **PX_** pour charger ou stocker des propriétés spécifiques définies par l’utilisateur d’un contrôle OLE.
 
-Si l’Assistant contrôle a été utilisé pour créer le projet de contrôle OLE, la version substituée de cette fonction sérialise les propriétés stock prises en `COleControl` charge par avec un appel à la fonction de `COleControl::DoPropExchange`classe de base,. Lorsque vous ajoutez des propriétés définies par l’utilisateur à votre contrôle OLE, vous devez modifier cette fonction pour sérialiser vos nouvelles propriétés. Pour plus d’informations sur la sérialisation, consultez l' [article contrôles ActiveX: Sérialisation en impossible.](../../mfc/mfc-activex-controls-serializing.md)
+Si l’Assistant contrôle a été utilisé pour créer le projet de contrôle OLE, la version substituée de cette fonction sérialise les propriétés stock prises en `COleControl` charge par avec un appel à la fonction de `COleControl::DoPropExchange`classe de base,. Lorsque vous ajoutez des propriétés définies par l’utilisateur à votre contrôle OLE, vous devez modifier cette fonction pour sérialiser vos nouvelles propriétés. Pour plus d’informations sur la sérialisation, consultez l' [article contrôles ActiveX : Sérialisation en impossible.](../../mfc/mfc-activex-controls-serializing.md)
 
 ##  <a name="dosuperclasspaint"></a>  COleControl::DoSuperclassPaint
 
@@ -977,7 +977,7 @@ Zone dans laquelle le contrôle doit être dessiné.
 
 Appelez cette fonction pour gérer correctement la peinture d’un contrôle OLE non actif. Cette fonction doit être utilisée uniquement si le contrôle OLE sous-classe un contrôle Windows et doit être appelé dans la `OnDraw` fonction de votre contrôle.
 
-Pour plus d’informations sur cette fonction et sur la sous-classe d’un contrôle Windows [, consultez l’article contrôles ActiveX: Sous-classement d’un](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)contrôle Windows.
+Pour plus d’informations sur cette fonction et sur la sous-classe d’un contrôle Windows [, consultez l’article contrôles ActiveX : Sous-classement d’un](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)contrôle Windows.
 
 ##  <a name="drawcontent"></a>  COleControl::DrawContent
 
@@ -1046,7 +1046,7 @@ Pointeur vers un objet [CPropExchange](../../mfc/reference/cpropexchange-class.m
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la fonction a réussi; Sinon, 0.
+Différent de zéro si la fonction a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -1093,13 +1093,13 @@ Indique si les données persistantes doivent être converties au format le plus 
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur différente de zéro de la fonction a réussi; Sinon, 0.
+Une valeur différente de zéro de la fonction a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
 En général, il s’agit de la première fonction appelée par la substitution d’un `COleControl::DoPropExchange`contrôle de. Lors du chargement, cette fonction lit le numéro de version des données persistantes et définit l’attribut de version de l’objet [CPropExchange](../../mfc/reference/cpropexchange-class.md) en conséquence. Lors de l’enregistrement, cette fonction écrit le numéro de version des données persistantes.
 
-Pour plus d’informations sur la persistance et le contrôle de version [, consultez l’article contrôles ActiveX: Sérialisation en impossible.](../../mfc/mfc-activex-controls-serializing.md)
+Pour plus d’informations sur la persistance et le contrôle de version [, consultez l’article contrôles ActiveX : Sérialisation en impossible.](../../mfc/mfc-activex-controls-serializing.md)
 
 ##  <a name="fireclick"></a>  COleControl::FireClick
 
@@ -1143,7 +1143,7 @@ void FireError(
 ### <a name="parameters"></a>Paramètres
 
 *scode*<br/>
-Valeur de code d’État à signaler. Pour obtenir la liste complète des codes possibles, consultez l' [article contrôles ActiveX: Rubriques](../../mfc/mfc-activex-controls-advanced-topics.md)avancées.
+Valeur de code d’État à signaler. Pour obtenir la liste complète des codes possibles, consultez l' [article contrôles ActiveX : Rubriques](../../mfc/mfc-activex-controls-advanced-topics.md)avancées.
 
 *lpszDescription*<br/>
 Description de l’erreur signalée.
@@ -1155,7 +1155,7 @@ ID d’aide de l’erreur signalée.
 
 Cet événement permet de signaler, à des emplacements appropriés dans votre code, qu’une erreur s’est produite dans votre contrôle. Contrairement à d’autres événements stock, tels que Click ou MouseMove, l’erreur n’est jamais déclenchée par l’infrastructure.
 
-Pour signaler une erreur qui se produit pendant une fonction d’extraction de propriété, une fonction de jeu de propriétés ou une méthode Automation, appelez [COleControl:: ThrowError](#throwerror).
+Pour signaler une erreur qui se produit pendant une fonction d’extraction de propriété, une fonction de jeu de propriétés ou une méthode Automation, appelez [COleControl :: ThrowError](#throwerror).
 
 L’implémentation d’un événement d’erreur stock d’un contrôle OLE utilise une valeur SCODE. Si votre contrôle utilise cet événement et s’il est destiné à être utilisé dans Visual Basic 4,0, vous recevrez des erreurs, car la valeur SCODE n’est pas prise en charge dans Visual Basic.
 
@@ -1222,7 +1222,7 @@ void FireKeyDown(
 Pointeur vers la valeur de code de la touche virtuelle de la touche enfoncée. Pour obtenir la liste des codes de touches virtuelles standard, consultez Winuser. h
 
 *nShiftState*<br/>
-Contient une combinaison des indicateurs suivants:
+Contient une combinaison des indicateurs suivants :
 
 - SHIFT_MASK la touche Maj a été enfoncée pendant l’action.
 
@@ -1273,7 +1273,7 @@ void FireKeyUp(
 Pointeur vers la valeur de code de la touche virtuelle de la clé publiée. Pour obtenir la liste des codes de touches virtuelles standard, consultez Winuser. h
 
 *nShiftState*<br/>
-Contient une combinaison des indicateurs suivants:
+Contient une combinaison des indicateurs suivants :
 
 - SHIFT_MASK la touche Maj a été enfoncée pendant l’action.
 
@@ -1302,7 +1302,7 @@ void FireMouseDown(
 ### <a name="parameters"></a>Paramètres
 
 *nButton*<br/>
-Valeur numérique du bouton de la souris enfoncé. Il peut contenir l’une des valeurs suivantes:
+Valeur numérique du bouton de la souris enfoncé. Il peut contenir l’une des valeurs suivantes :
 
 - LEFT_BUTTON le bouton gauche de la souris a été enfoncé.
 
@@ -1311,7 +1311,7 @@ Valeur numérique du bouton de la souris enfoncé. Il peut contenir l’une des 
 - RIGHT_BUTTON le bouton droit de la souris a été enfoncé.
 
 *nShiftState*<br/>
-Contient une combinaison des indicateurs suivants:
+Contient une combinaison des indicateurs suivants :
 
 - SHIFT_MASK la touche Maj a été enfoncée pendant l’action.
 
@@ -1346,7 +1346,7 @@ void FireMouseMove(
 ### <a name="parameters"></a>Paramètres
 
 *nButton*<br/>
-Valeur numérique des boutons de la souris appuyée. Contient une combinaison des valeurs suivantes:
+Valeur numérique des boutons de la souris appuyée. Contient une combinaison des valeurs suivantes :
 
 - LEFT_BUTTON le bouton gauche de la souris a été enfoncé pendant l’action.
 
@@ -1355,7 +1355,7 @@ Valeur numérique des boutons de la souris appuyée. Contient une combinaison de
 - RIGHT_BUTTON le bouton droit de la souris a été enfoncé pendant l’action.
 
 *nShiftState*<br/>
-Contient une combinaison des indicateurs suivants:
+Contient une combinaison des indicateurs suivants :
 
 - SHIFT_MASK la touche Maj a été enfoncée pendant l’action.
 
@@ -1390,7 +1390,7 @@ void FireMouseUp(
 ### <a name="parameters"></a>Paramètres
 
 *nButton*<br/>
-Valeur numérique du bouton de la souris relâché. Il peut prendre l’une des valeurs suivantes:
+Valeur numérique du bouton de la souris relâché. Il peut prendre l’une des valeurs suivantes :
 
 - LEFT_BUTTON le bouton gauche de la souris a été relâché.
 
@@ -1399,7 +1399,7 @@ Valeur numérique du bouton de la souris relâché. Il peut prendre l’une des 
 - RIGHT_BUTTON le bouton droit de la souris a été relâché.
 
 *nShiftState*<br/>
-Contient une combinaison des indicateurs suivants:
+Contient une combinaison des indicateurs suivants :
 
 - SHIFT_MASK la touche Maj a été enfoncée pendant l’action.
 
@@ -1429,7 +1429,7 @@ void FireReadyStateChange();
 
 ### <a name="remarks"></a>Notes
 
-L’état prêt peut prendre l’une des valeurs suivantes:
+L’état prêt peut prendre l’une des valeurs suivantes :
 
 |||
 |-|-|
@@ -1453,7 +1453,7 @@ virtual DWORD GetActivationPolicy();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Combinaison d’indicateurs de l’énumération POINTERINACTIVE. Les indicateurs possibles sont les suivants:
+Combinaison d’indicateurs de l’énumération POINTERINACTIVE. Les indicateurs possibles sont les suivants :
 
 |||
 |-|-|
@@ -1473,7 +1473,7 @@ Tout objet destiné à faire plus que définir le curseur de la souris et/ou dé
 
 Si les deux indicateurs POINTERINACTIVE_ACTIVATEONENTRY et POINTERINACTIVE_DEACTIVATEONLEAVE sont retournés, l’objet est activé uniquement lorsque la souris se trouve sur l’objet. Si seul l’indicateur POINTERINACTIVE_ACTIVATEONENTRY est retourné, l’objet n’est activé qu’une seule fois lorsque la souris entre pour la première fois dans l’objet.
 
-Vous pouvez également souhaiter qu’un contrôle inactif soit la cible d’une opération glisser-déplacer OLE. Cela nécessite l’activation du contrôle au moment où l’utilisateur fait glisser un objet sur lui, afin que la fenêtre du contrôle puisse être enregistrée en tant que cible de déplacement. Pour faire en sorte que l’activation se produise pendant un glisser-déplacer, retournez l’indicateur POINTERINACTIVE_ACTIVATEONDRAG:
+Vous pouvez également souhaiter qu’un contrôle inactif soit la cible d’une opération glisser-déplacer OLE. Cela nécessite l’activation du contrôle au moment où l’utilisateur fait glisser un objet sur lui, afin que la fenêtre du contrôle puisse être enregistrée en tant que cible de déplacement. Pour faire en sorte que l’activation se produise pendant un glisser-déplacer, retournez l’indicateur POINTERINACTIVE_ACTIVATEONDRAG :
 
 [!code-cpp[NVC_MFCAxCtl#1](../../mfc/reference/codesnippet/cpp/colecontrol-class_1.cpp)]
 
@@ -1481,7 +1481,7 @@ Les informations communiquées `GetActivationPolicy` par ne doivent pas être mi
 
 Si un objet inactif ne demande pas à être activé sur place lorsque la souris l’entre, son conteneur doit distribuer les messages WM_SETCURSOR suivants à cet objet en appelant [OnInactiveSetCursor](#oninactivesetcursor) tant que le pointeur de la souris reste sur l’objet.
 
-L’activation `IPointerInactive` de l’interface signifie généralement que vous souhaitez que le contrôle soit capable de traiter des messages de souris à tout moment. Pour obtenir ce comportement dans un conteneur qui ne prend pas `IPointerInactive` en charge l’interface, vous devez que votre contrôle soit toujours activé quand il est visible, ce qui signifie que le contrôle doit avoir l’indicateur OLEMISC_ACTIVATEWHENVISIBLE parmi ses différents indicateurs. Toutefois, pour éviter que cet indicateur prenne effet dans un conteneur qui prend `IPointerInactive`en charge, vous pouvez également spécifier l’indicateur OLEMISC_IGNOREACTIVATEWHENVISIBLE:
+L’activation `IPointerInactive` de l’interface signifie généralement que vous souhaitez que le contrôle soit capable de traiter des messages de souris à tout moment. Pour obtenir ce comportement dans un conteneur qui ne prend pas `IPointerInactive` en charge l’interface, vous devez que votre contrôle soit toujours activé quand il est visible, ce qui signifie que le contrôle doit avoir l’indicateur OLEMISC_ACTIVATEWHENVISIBLE parmi ses différents indicateurs. Toutefois, pour éviter que cet indicateur prenne effet dans un conteneur qui prend `IPointerInactive`en charge, vous pouvez également spécifier l’indicateur OLEMISC_IGNOREACTIVATEWHENVISIBLE :
 
 [!code-cpp[NVC_MFCAxCtl#10](../../mfc/reference/codesnippet/cpp/colecontrol-class_2.cpp)]
 
@@ -1522,7 +1522,7 @@ Pointeur vers l’adresse de la variable qui recevra la valeur de propriété ou
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la propriété ambiante est prise en charge; Sinon, 0.
+Différent de zéro si la propriété ambiante est prise en charge ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -1564,7 +1564,7 @@ short GetBorderStyle();
 
 ### <a name="return-value"></a>Valeur de retour
 
-1 si le contrôle a une bordure normale; 0 si le contrôle n’a pas de bordure.
+1 si le contrôle a une bordure normale ; 0 si le contrôle n’a pas de bordure.
 
 ##  <a name="getcapture"></a>  COleControl::GetCapture
 
@@ -1599,7 +1599,7 @@ Pointeur vers l’emplacement de l’ID de classe.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’appel a échoué; Sinon, 0.
+Différent de zéro si l’appel a échoué ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -1636,7 +1636,7 @@ virtual void GetClientRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-Pointeur vers une `RECT` structure contenant les dimensions de la zone cliente du contrôle sans fenêtre; autrement dit, la taille du contrôle moins les bordures de la fenêtre, les cadres, les barres de défilement, etc. Le paramètre *lpRect* indique la taille du rectangle client du contrôle, et non sa position.
+Pointeur vers une `RECT` structure contenant les dimensions de la zone cliente du contrôle sans fenêtre ; autrement dit, la taille du contrôle moins les bordures de la fenêtre, les cadres, les barres de défilement, etc. Le paramètre *lpRect* indique la taille du rectangle client du contrôle, et non sa position.
 
 ##  <a name="getclientsite"></a>  COleControl::GetClientSite
 
@@ -1652,7 +1652,7 @@ Pointeur vers le site client actuel du contrôle dans son conteneur.
 
 ### <a name="remarks"></a>Notes
 
-Le pointeur retourné pointe vers une instance de `IOleClientSite`. L' `IOleClientSite` interface, implémentée par les conteneurs, est la vue de l’objet de son contexte: où elle est ancrée dans le document, où elle obtient son stockage, son interface utilisateur et d’autres ressources.
+Le pointeur retourné pointe vers une instance de `IOleClientSite`. L' `IOleClientSite` interface, implémentée par les conteneurs, est la vue de l’objet de son contexte : où elle est ancrée dans le document, où elle obtient son stockage, son interface utilisateur et d’autres ressources.
 
 ##  <a name="getcontrolflags"></a>  COleControl::GetControlFlags
 
@@ -1664,7 +1664,7 @@ virtual DWORD GetControlFlags();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Combinaison associée des indicateurs dans l’énumération ControlFlags:
+Combinaison associée des indicateurs dans l’énumération ControlFlags :
 
 ```
 enum ControlFlags {
@@ -1690,7 +1690,7 @@ Par défaut, `GetControlFlags` retourne `fastBeginPaint | clipPaintDC`.
 |`windowlessActivate`|Si cette valeur est définie, votre contrôle utilise l’activation sans fenêtre.|
 |`canOptimizeDraw`|S’il est défini, indique que le contrôle effectuera un dessin optimisé, si le conteneur le prend en charge.|
 
-Pour plus d’informations `GetControlFlags` sur et d’autres optimisations des contrôles OLE [, consultez contrôles ActiveX: Optimisation](../../mfc/mfc-activex-controls-optimization.md).
+Pour plus d’informations `GetControlFlags` sur et d’autres optimisations des contrôles OLE [, consultez contrôles ActiveX : Optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="getcontrolsize"></a>  COleControl::GetControlSize
 
@@ -1730,7 +1730,7 @@ CDC* GetDC(
 Pointeur vers le rectangle que le contrôle sans fenêtre souhaite redessiner, dans les coordonnées clientes du contrôle. NULL correspond à l’étendue de l’objet complet.
 
 *dwFlags*<br/>
-Attributs de dessin du contexte de périphérique. Les choix sont les suivants:
+Attributs de dessin du contexte de périphérique. Les choix sont les suivants :
 
 - OLEDC_NODRAW indique que l’objet n’utilise pas le contexte de périphérique pour effectuer un dessin, mais simplement pour obtenir des informations sur le périphérique d’affichage. Le conteneur doit simplement passer le DC de la fenêtre sans traitement supplémentaire.
 
@@ -1740,7 +1740,7 @@ Attributs de dessin du contexte de périphérique. Les choix sont les suivants:
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers le contexte de périphérique d’affichage pour `CWnd` la zone de client conteneur en cas de réussite; sinon, la valeur de retour est null. Le contexte de périphérique d’affichage peut être utilisé dans les fonctions GDI suivantes pour dessiner dans la zone cliente de la fenêtre du conteneur.
+Pointeur vers le contexte de périphérique d’affichage pour `CWnd` la zone de client conteneur en cas de réussite ; sinon, la valeur de retour est null. Le contexte de périphérique d’affichage peut être utilisé dans les fonctions GDI suivantes pour dessiner dans la zone cliente de la fenêtre du conteneur.
 
 ### <a name="remarks"></a>Notes
 
@@ -1756,7 +1756,7 @@ BOOL GetEnabled();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le contrôle est activé; Sinon, 0.
+Différent de zéro si le contrôle est activé ; Sinon, 0.
 
 ##  <a name="getextendedcontrol"></a>  COleControl::GetExtendedControl
 
@@ -1808,7 +1808,7 @@ Pointeur vers l’interface de dispatch de police de la propriété stock font d
 
 ### <a name="remarks"></a>Notes
 
-Notez que l’appelant doit libérer l’objet une fois l’opération terminée. Dans l’implémentation du contrôle, utilisez `InternalGetFont` pour accéder à l’objet de police stock du contrôle. Pour plus d’informations sur l’utilisation des polices dans votre contrôle, [consultez l’article contrôles ActiveX: Utilisation de polices dans un contrôle](../../mfc/mfc-activex-controls-using-fonts.md)ActiveX.
+Notez que l’appelant doit libérer l’objet une fois l’opération terminée. Dans l’implémentation du contrôle, utilisez `InternalGetFont` pour accéder à l’objet de police stock du contrôle. Pour plus d’informations sur l’utilisation des polices dans votre contrôle, [consultez l’article contrôles ActiveX : Utilisation de polices dans un contrôle](../../mfc/mfc-activex-controls-using-fonts.md)ActiveX.
 
 ##  <a name="getfonttextmetrics"></a>  COleControl::GetFontTextMetrics
 
@@ -1830,7 +1830,7 @@ Référence à un objet [CFontHolder](../../mfc/reference/cfontholder-class.md) 
 
 ### <a name="remarks"></a>Notes
 
-Une telle police peut être sélectionnée avec la fonction [COleControl:: SelectFontObject](#selectfontobject) . `GetFontTextMetrics`Initialise la `TEXTMETRIC` structure vers laquelle pointe *lptm* avec des informations de métriques valides `fontHolder`sur la police de en cas de réussite, ou remplit la structure avec des zéros si elle échoue. Vous devez utiliser cette fonction à la place de [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) quand vous peignez votre contrôle, car des contrôles, comme tout objet OLE incorporé, peuvent être nécessaires pour s’afficher dans un métafichier.
+Une telle police peut être sélectionnée avec la fonction [COleControl :: SelectFontObject](#selectfontobject) . `GetFontTextMetrics`Initialise la `TEXTMETRIC` structure vers laquelle pointe *lptm* avec des informations de métriques valides `fontHolder`sur la police de en cas de réussite, ou remplit la structure avec des zéros si elle échoue. Vous devez utiliser cette fonction à la place de [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) quand vous peignez votre contrôle, car des contrôles, comme tout objet OLE incorporé, peuvent être nécessaires pour s’afficher dans un métafichier.
 
 La `TEXTMETRIC` structure de la police par défaut est actualisée lorsque la fonction [SelectFontObject](#selectfontobject) est appelée. Vous devez appeler `GetFontTextMetrics` uniquement après avoir sélectionné la propriété stock font pour vous assurer que les informations qu’elle fournit sont valides.
 
@@ -1856,7 +1856,7 @@ OLE_HANDLE GetHwnd();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Handle de fenêtre du contrôle OLE, le cas échéant; Sinon, NULL.
+Handle de fenêtre du contrôle OLE, le cas échéant ; Sinon, NULL.
 
 ##  <a name="getmessagestring"></a>  COleControl::GetMessageString
 
@@ -1902,7 +1902,7 @@ long GetReadyState();
 
 ### <a name="return-value"></a>Valeur de retour
 
-État de préparation du contrôle, l’une des valeurs suivantes:
+État de préparation du contrôle, l’une des valeurs suivantes :
 
 |||
 |-|-|
@@ -1931,7 +1931,7 @@ Pointeur vers la structure Rectangle dans laquelle les coordonnées du contrôle
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le contrôle est actif sur place; Sinon, 0.
+Différent de zéro si le contrôle est actif sur place ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -2050,7 +2050,7 @@ void InternalSetReadyState(long lNewReadyState);
 ### <a name="parameters"></a>Paramètres
 
 *lNewReadyState*<br/>
-État de préparation à définir pour le contrôle, l’une des valeurs suivantes:
+État de préparation à définir pour le contrôle, l’une des valeurs suivantes :
 
 |||
 |-|-|
@@ -2084,7 +2084,7 @@ Spécifie si l’arrière-plan dans la région de mise à jour doit être effac�
 
 ### <a name="remarks"></a>Notes
 
-Si *lpRect* a une valeur null, le contrôle entier est redessiné. Si *lpRect* n’a pas la valeur null, cela indique la partie du rectangle du contrôle qui doit être invalidée. Dans les cas où le contrôle n’a pas de fenêtre ou n’est pas actif, le rectangle est ignoré et un appel est effectué vers la fonction membre [IAdviseSink:: OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange) du site client. Utilisez cette fonction à la `CWnd::InvalidateRect` place `InvalidateRect`de ou.
+Si *lpRect* a une valeur null, le contrôle entier est redessiné. Si *lpRect* n’a pas la valeur null, cela indique la partie du rectangle du contrôle qui doit être invalidée. Dans les cas où le contrôle n’a pas de fenêtre ou n’est pas actif, le rectangle est ignoré et un appel est effectué vers la fonction membre [IAdviseSink :: OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange) du site client. Utilisez cette fonction à la `CWnd::InvalidateRect` place `InvalidateRect`de ou.
 
 ##  <a name="invalidatergn"></a>  COleControl::InvalidateRgn
 
@@ -2118,7 +2118,7 @@ BOOL IsConvertingVBX();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le contrôle est en cours de conversion; Sinon, 0.
+Différent de zéro si le contrôle est en cours de conversion ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -2126,7 +2126,7 @@ Lors de la conversion d’un formulaire qui utilise des contrôles VBX en un for
 
 [!code-cpp[NVC_MFCAxCtl#3](../../mfc/reference/codesnippet/cpp/colecontrol-class_4.cpp)]
 
-Toutefois, les contrôles VBX n’avaient pas d’objet font; chaque propriété de police a été enregistrée individuellement. Dans ce cas, vous devez utiliser `IsConvertingVBX` pour faire la distinction entre ces deux cas:
+Toutefois, les contrôles VBX n’avaient pas d’objet font ; chaque propriété de police a été enregistrée individuellement. Dans ce cas, vous devez utiliser `IsConvertingVBX` pour faire la distinction entre ces deux cas :
 
 [!code-cpp[NVC_MFCAxCtl#4](../../mfc/reference/codesnippet/cpp/colecontrol-class_5.cpp)]
 
@@ -2144,11 +2144,11 @@ BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le contrôle a été initialisé; Sinon, 0.
+Différent de zéro si le contrôle a été initialisé ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation de l’infrastructure `IDispatch::Invoke` des `IsInvokeAllowed` appels pour déterminer si une fonction donnée (identifiée par `dispid`) peut être appelée. Le comportement par défaut d’un contrôle OLE est de permettre aux méthodes Automation d’être appelées uniquement si le contrôle a été initialisé; Toutefois, `IsInvokeAllowed` est une fonction virtuelle qui peut être substituée si nécessaire (par exemple, lorsque le contrôle est utilisé en tant que serveur Automation).
+L’implémentation de l’infrastructure `IDispatch::Invoke` des `IsInvokeAllowed` appels pour déterminer si une fonction donnée (identifiée par `dispid`) peut être appelée. Le comportement par défaut d’un contrôle OLE est de permettre aux méthodes Automation d’être appelées uniquement si le contrôle a été initialisé ; Toutefois, `IsInvokeAllowed` est une fonction virtuelle qui peut être substituée si nécessaire (par exemple, lorsque le contrôle est utilisé en tant que serveur Automation).
 
 ##  <a name="ismodified"></a>  COleControl::IsModified
 
@@ -2160,7 +2160,7 @@ BOOL IsModified();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’état du contrôle a été modifié depuis son dernier enregistrement; Sinon, 0.
+Différent de zéro si l’état du contrôle a été modifié depuis son dernier enregistrement ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -2176,7 +2176,7 @@ BOOL IsOptimizedDraw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le conteneur prend en charge le dessin optimisé pour l’opération de dessin en cours; Sinon, FALSe.
+TRUE si le conteneur prend en charge le dessin optimisé pour l’opération de dessin en cours ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -2192,7 +2192,7 @@ virtual BOOL IsSubclassedControl();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le contrôle est sous-classé; Sinon, 0.
+Différent de zéro si le contrôle est sous-classé ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -2225,11 +2225,11 @@ BOOL LockInPlaceActive(BOOL bLock);
 ### <a name="parameters"></a>Paramètres
 
 *bLock*<br/>
-TRUE si l’état actif sur place du contrôle doit être verrouillé; FALSe si elle doit être déverrouillée.
+TRUE si l’état actif sur place du contrôle doit être verrouillé ; FALSe si elle doit être déverrouillée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le verrou a réussi; Sinon, 0.
+Différent de zéro si le verrou a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -2297,7 +2297,7 @@ virtual void OnClick(USHORT iButton);
 ### <a name="parameters"></a>Paramètres
 
 *iButton*<br/>
-Index du bouton de la souris. Peut avoir l’une des valeurs suivantes:
+Index du bouton de la souris. Peut avoir l’une des valeurs suivantes :
 
 - LEFT_BUTTON l’utilisateur a cliqué sur le bouton gauche de la souris.
 
@@ -2362,7 +2362,7 @@ Pointeur vers une structure RECT dans laquelle les coordonnées du contrôle, re
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’appel a réussi; Sinon, 0.
+Différent de zéro si l’appel a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -2442,13 +2442,13 @@ Pointeur vers le rectangle utilisé par le contrôle dans le conteneur.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’appel réussit; Sinon, 0.
+Différent de zéro si l’appel réussit ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
 Cela a le même effet que l’appel du verbe OLEIVERB_UIACTIVATE du contrôle.
 
-Cette fonction est généralement utilisée comme fonction de gestionnaire pour une entrée de la table des messages ON_OLEVERB. Un verbe «Edit» est alors disponible dans le menu «Object» (objet) du contrôle. Par exemple :
+Cette fonction est généralement utilisée comme fonction de gestionnaire pour une entrée de la table des messages ON_OLEVERB. Un verbe « Edit » est alors disponible dans le menu « Object » (objet) du contrôle. Par exemple :
 
 [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]
 
@@ -2479,7 +2479,7 @@ Pointeur vers l' `IEnumOLEVERB` objet qui énumère les verbes du contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si les verbes sont disponibles; Sinon, 0.
+Différent de zéro si les verbes sont disponibles ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -2543,7 +2543,7 @@ virtual void OnFreezeEvents(BOOL bFreeze);
 ### <a name="parameters"></a>Paramètres
 
 *bFreeze*<br/>
-TRUE si la gestion des événements du contrôle est figée; Sinon, FALSe.
+TRUE si la gestion des événements du contrôle est figée ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -2575,7 +2575,7 @@ Pointeur vers l’emplacement dans lequel le jeu de couleurs qui serait utilisé
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si un jeu de couleurs valide est retourné; Sinon, 0.
+Différent de zéro si un jeu de couleurs valide est retourné ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -2622,7 +2622,7 @@ Référence à un objet [CString](../../atl-mfc-shared/reference/cstringt-class.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si une chaîne a été retournée dans *strValue;* sinon, 0.
+Valeur différente de zéro si une chaîne a été retournée dans *strValue ;* sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -2673,7 +2673,7 @@ Pointe vers la structure [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dv
 Spécifie le contexte d’informations pour le périphérique cible indiqué par le paramètre *PTD* à partir duquel l’objet peut extraire les métriques de l’appareil et tester les fonctionnalités de l’appareil. Si *PTD* a la valeur null, l’objet doit ignorer la valeur dans le paramètre *hicTargetDev* .
 
 *pExtentInfo*<br/>
-Pointe vers la `DVEXTENTINFO` structure qui spécifie les données de dimensionnement. La `DVEXTENTINFO` structure est la suivante:
+Pointe vers la `DVEXTENTINFO` structure qui spécifie les données de dimensionnement. La `DVEXTENTINFO` structure est la suivante :
 
 ```cpp
 typedef struct tagExtentInfo
@@ -2684,7 +2684,7 @@ typedef struct tagExtentInfo
 }   DVEXTENTINFO;
 ```
 
-Le membre `dwExtentMode` de structure peut prendre l’une des deux valeurs suivantes:
+Le membre `dwExtentMode` de structure peut prendre l’une des deux valeurs suivantes :
 
 - DVEXTENT_CONTENT Rechercher la taille du contrôle pour qu’il corresponde exactement au contenu (alignement sur la taille)
 
@@ -2695,7 +2695,7 @@ Pointe vers le dimensionnement des données retournées par le contrôle. Les do
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si elle retourne ou ajuste correctement la taille; Sinon, 0.
+Valeur différente de zéro si elle retourne ou ajuste correctement la taille ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -2729,7 +2729,7 @@ Valeur différente de zéro si des éléments ont été ajoutés à *pStringArra
 
 ### <a name="remarks"></a>Notes
 
-Substituez cette fonction si votre contrôle a une propriété avec un ensemble de valeurs possibles qui peuvent être représentées par des chaînes. Pour chaque élément ajouté à *pStringArray*, vous devez ajouter un élément «cookie» correspondant à *pCookieArray.* Ces valeurs de «cookie» peuvent être passées ultérieurement par l’infrastructure à `COleControl::OnGetPredefinedValue` la fonction.
+Substituez cette fonction si votre contrôle a une propriété avec un ensemble de valeurs possibles qui peuvent être représentées par des chaînes. Pour chaque élément ajouté à *pStringArray*, vous devez ajouter un élément « cookie » correspondant à *pCookieArray.* Ces valeurs de « cookie » peuvent être passées ultérieurement par l’infrastructure à `COleControl::OnGetPredefinedValue` la fonction.
 
 ##  <a name="ongetpredefinedvalue"></a>  COleControl::OnGetPredefinedValue
 
@@ -2759,7 +2759,7 @@ Différent de zéro si une valeur a été retournée dans *lpvarOut*; Sinon, 0.
 
 ##  <a name="ongetviewextent"></a>  COleControl::OnGetViewExtent
 
-Appelée par l’infrastructure en réponse à la demande [IViewObject2:: GetExtent](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent) d’un conteneur.
+Appelée par l’infrastructure en réponse à la demande [IViewObject2 :: GetExtent](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent) d’un conteneur.
 
 ```
 virtual BOOL OnGetViewExtent(
@@ -2785,7 +2785,7 @@ Pointe vers l’emplacement où la taille de l’objet est retournée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si les informations d’étendue sont correctement retournées; Sinon, 0.
+Valeur différente de zéro si les informations d’étendue sont correctement retournées ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -2802,7 +2802,7 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 ### <a name="parameters"></a>Paramètres
 
 *dwAspect*<br/>
-DWORD décrivant le formulaire ou l’aspect d’un objet à afficher. Les valeurs valides sont extraites de l’énumération [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) ou DVASPECT2:
+DWORD décrivant le formulaire ou l’aspect d’un objet à afficher. Les valeurs valides sont extraites de l’énumération [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) ou DVASPECT2 :
 
 - DVASPECT_CONTENT rectangle englobant de l’objet entier. L’angle supérieur gauche à l’origine de l’objet et la taille égale à l’étendue `GetViewExtent`retournée par *.*
 
@@ -2815,7 +2815,7 @@ Pointe vers la structure [Rect](/previous-versions/dd162907\(v=vs.85\)) qui spé
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le rectangle dimensionné à l’objet est retourné avec succès; Sinon, 0.
+Différent de zéro si le rectangle dimensionné à l’objet est retourné avec succès ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -2831,7 +2831,7 @@ virtual DWORD OnGetViewStatus();
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’une des valeurs de l’énumération VIEWSTATUS en cas de réussite; Sinon, 0. Les valeurs possibles sont n’importe quelle combinaison des éléments suivants:
+L’une des valeurs de l’énumération VIEWSTATUS en cas de réussite ; Sinon, 0. Les valeurs possibles sont n’importe quelle combinaison des éléments suivants :
 
 |||
 |-|-|
@@ -2914,7 +2914,7 @@ Coordonnée y de l’emplacement de la souris dans les coordonnées clientes de 
 Identificateur du message de souris pour lequel un WM_SETCURSOR s’est produit.
 
 *bSetAlways*<br/>
-Spécifie si l’objet doit définir le curseur. Si la valeur est TRUE, l’objet doit définir le curseur; Si la valeur est FALSe, le curseur n’est pas obligé de définir le curseur et doit retourner S_FALSE dans ce cas.
+Spécifie si l’objet doit définir le curseur. Si la valeur est TRUE, l’objet doit définir le curseur ; Si la valeur est FALSe, le curseur n’est pas obligé de définir le curseur et doit retourner S_FALSE dans ce cas.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2940,7 +2940,7 @@ virtual void OnKeyDownEvent(
 Valeur de code de la touche virtuelle de la touche enfoncée. Pour obtenir la liste des codes de touches virtuelles standard, consultez Winuser. h
 
 *nShiftState*<br/>
-Contient une combinaison des indicateurs suivants:
+Contient une combinaison des indicateurs suivants :
 
 - SHIFT_MASK la touche Maj a été enfoncée pendant l’action.
 
@@ -2987,7 +2987,7 @@ virtual void OnKeyUpEvent(
 Valeur de code de la touche virtuelle de la touche enfoncée. Pour obtenir la liste des codes de touches virtuelles standard, consultez Winuser. h
 
 *nShiftState*<br/>
-Contient une combinaison des indicateurs suivants:
+Contient une combinaison des indicateurs suivants :
 
 - SHIFT_MASK la touche Maj a été enfoncée pendant l’action.
 
@@ -3066,7 +3066,7 @@ Pointeur vers le rectangle utilisé par le contrôle dans le conteneur.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’appel réussit; Sinon, 0.
+Différent de zéro si l’appel réussit ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -3099,7 +3099,7 @@ Pointeur vers une `RECT` structure qui spécifie le rectangle englobant de la zo
 Pointeur vers la `POINT` structure spécifiant le point à vérifier pour un accès. Le point est spécifié dans les coordonnées de la zone cliente OLE.
 
 *lCloseHint*<br/>
-Distance qui définit «Close» sur le point vérifié pour un accès.
+Distance qui définit « Close » sur le point vérifié pour un accès.
 
 *pHitResult*<br/>
 Pointeur vers le résultat de la requête d’accès. L’une des valeurs suivantes :
@@ -3114,7 +3114,7 @@ Pointeur vers le résultat de la requête d’accès. L’une des valeurs suivan
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si un résultat atteint est retourné avec succès; Sinon, 0. Un accès est un chevauchement avec la zone d’affichage du contrôle OLE.
+Différent de zéro si un résultat atteint est retourné avec succès ; Sinon, 0. Un accès est un chevauchement avec la zone d’affichage du contrôle OLE.
 
 ### <a name="remarks"></a>Notes
 
@@ -3156,7 +3156,7 @@ Pointeur vers le résultat de la requête d’accès. L’une des valeurs suivan
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si un résultat atteint est retourné avec succès; Sinon, 0.
+Différent de zéro si un résultat atteint est retourné avec succès ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -3178,7 +3178,7 @@ virtual BOOL OnRenderData(
 Pointe vers la structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) en spécifiant le format dans lequel les informations sont demandées.
 
 *lpStgMedium*<br/>
-Pointe vers une structure [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) dans laquelle les données doivent être retournées.
+Pointe vers une structure [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) dans laquelle les données doivent être retournées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -3268,7 +3268,7 @@ virtual void OnResetState();
 
 L’implémentation par défaut appelle [DoPropExchange](#dopropexchange), en `CPropExchange` passant un objet qui entraîne la définition des valeurs par défaut des propriétés.
 
-Le writer de contrôle peut insérer le code d’initialisation pour le contrôle OLE dans ce substituable. Cette fonction est appelée quand [IPersistStream:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststream-load) ou [IPersistStorage:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) échoue, ou si [IPersistStreamInit:: InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) ou [IPersistStorage:: InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) `IPersistStream::Load` est appelé, sans appeler d’abord ou `IPersistStorage::Load`.
+Le writer de contrôle peut insérer le code d’initialisation pour le contrôle OLE dans ce substituable. Cette fonction est appelée quand [IPersistStream :: Load](/windows/win32/api/objidl/nf-objidl-ipersiststream-load) ou [IPersistStorage :: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) échoue, ou si [IPersistStreamInit :: InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) ou [IPersistStorage :: InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) `IPersistStream::Load` est appelé, sans appeler d’abord ou `IPersistStorage::Load`.
 
 ##  <a name="onsetclientsite"></a>  COleControl::OnSetClientSite
 
@@ -3301,10 +3301,10 @@ virtual BOOL OnSetData(
 Pointeur vers une structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) spécifiant le format des données.
 
 *lpStgMedium*<br/>
-Pointeur vers une structure [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) dans laquelle les données résident.
+Pointeur vers une structure [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) dans laquelle les données résident.
 
 *bRelease*<br/>
-TRUE si le contrôle doit libérer le support de stockage; FALSe si le contrôle ne doit pas libérer le support de stockage.
+TRUE si le contrôle doit libérer le support de stockage ; FALSe si le contrôle ne doit pas libérer le support de stockage.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -3312,7 +3312,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Si les données sont au format de jeu de propriétés persistant, l’implémentation par défaut modifie l’état du contrôle en conséquence. Dans le cas contraire, l’implémentation par défaut ne fait rien. Si *bRelease* a la valeur true, un appel `ReleaseStgMedium` à est effectué; sinon,.
+Si les données sont au format de jeu de propriétés persistant, l’implémentation par défaut modifie l’état du contrôle en conséquence. Dans le cas contraire, l’implémentation par défaut ne fait rien. Si *bRelease* a la valeur true, un appel `ReleaseStgMedium` à est effectué ; sinon,.
 
 Substituez cette fonction pour remplacer les données du contrôle par les données spécifiées.
 
@@ -3320,7 +3320,7 @@ Pour plus d’informations, consultez `FORMATETC` les `STGMEDIUM` structures et 
 
 ##  <a name="onsetextent"></a>  COleControl::OnSetExtent
 
-Appelé par le Framework lorsque l’étendue du contrôle doit être modifiée, à la suite d’un appel à [IOleObject::](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent)seversion.
+Appelé par le Framework lorsque l’étendue du contrôle doit être modifiée, à la suite d’un appel à [IOleObject ::](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent)seversion.
 
 ```
 virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
@@ -3333,7 +3333,7 @@ Pointeur vers la `SIZEL` structure qui utilise des entiers longs pour représent
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la modification de la taille a été acceptée; Sinon, 0.
+Différent de zéro si la modification de la taille a été acceptée ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -3343,7 +3343,7 @@ Substituez cette fonction pour modifier le redimensionnement par défaut de votr
 
 ##  <a name="onsetobjectrects"></a>  COleControl::OnSetObjectRects
 
-Appelé par l’infrastructure pour implémenter un appel à [IOleInPlaceObject:: SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects).
+Appelé par l’infrastructure pour implémenter un appel à [IOleInPlaceObject :: SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects).
 
 ```
 virtual BOOL OnSetObjectRects(
@@ -3361,7 +3361,7 @@ Pointeur vers une `RECT` structure indiquant une zone rectangulaire dans laquell
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le repositionnement a été accepté; Sinon, 0.
+Différent de zéro si le repositionnement a été accepté ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -3455,7 +3455,7 @@ Spécifie si le test de positionnement doit être effectué sur le point.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si *bHitTest* a la valeur false, retourne HTNOWHERE. Si *bHitTest* a la valeur true, retourne l’emplacement où le point parent (conteneur) est placé dans la zone cliente du contrôle OLE et est l’une des valeurs de test de positionnement de souris suivantes:
+Si *bHitTest* a la valeur false, retourne HTNOWHERE. Si *bHitTest* a la valeur true, retourne l’emplacement où le point parent (conteneur) est placé dans la zone cliente du contrôle OLE et est l’une des valeurs de test de positionnement de souris suivantes :
 
 - HTBORDER dans la bordure d’une fenêtre qui n’a pas de bordure de redimensionnement.
 
@@ -3565,7 +3565,7 @@ void Refresh();
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction est prise en charge `COleControl` par la classe de base comme méthode stock, appelée Refresh. Cela permet aux utilisateurs de votre contrôle OLE de repeindre le contrôle à un moment donné. Pour plus d’informations sur cette méthode, consultez l' [article contrôles ActiveX: Méthodes](../../mfc/mfc-activex-controls-methods.md).
+Cette fonction est prise en charge `COleControl` par la classe de base comme méthode stock, appelée Refresh. Cela permet aux utilisateurs de votre contrôle OLE de repeindre le contrôle à un moment donné. Pour plus d’informations sur cette méthode, consultez l' [article contrôles ActiveX : Méthodes](../../mfc/mfc-activex-controls-methods.md).
 
 ##  <a name="releasecapture"></a>  COleControl::ReleaseCapture
 
@@ -3636,9 +3636,9 @@ void ResetStockProps();
 
 ### <a name="remarks"></a>Notes
 
-Il s’agit des propriétés suivantes : Appearance, BackColor, BorderStyle, Caption, Enabled, font, ForeColor, hWnd et Text. Pour obtenir une description des propriétés stock, [consultez contrôles ActiveX: Ajout de propriétés](../../mfc/mfc-activex-controls-adding-stock-properties.md)stock.
+Il s’agit des propriétés suivantes : Appearance, BackColor, BorderStyle, Caption, Enabled, font, ForeColor, hWnd et Text. Pour obtenir une description des propriétés stock, [consultez contrôles ActiveX : Ajout de propriétés](../../mfc/mfc-activex-controls-adding-stock-properties.md)stock.
 
-Vous pouvez améliorer les performances d’initialisation binaire d’un contrôle à `ResetStockProps` l' `ResetVersion` aide de et `COleControl::OnResetState`de substituer. Lisez l'exemple ci-dessous. Pour plus d’informations sur l’optimisation de l’initialisation [, consultez contrôles ActiveX: Optimisation](../../mfc/mfc-activex-controls-optimization.md).
+Vous pouvez améliorer les performances d’initialisation binaire d’un contrôle à `ResetStockProps` l' `ResetVersion` aide de et `COleControl::OnResetState`de substituer. Lisez l'exemple ci-dessous. Pour plus d’informations sur l’optimisation de l’initialisation [, consultez contrôles ActiveX : Optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Exemples
 
@@ -3659,7 +3659,7 @@ Numéro de version à assigner au contrôle.
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez améliorer les performances d’initialisation binaire d’un contrôle à `ResetVersion` l' `ResetStockProps` aide de et `COleControl::OnResetState`de substituer. Consultez l’exemple sur [ResetStockProps](#resetstockprops). Pour plus d’informations sur l’optimisation de l’initialisation [, consultez contrôles ActiveX: Optimisation](../../mfc/mfc-activex-controls-optimization.md).
+Vous pouvez améliorer les performances d’initialisation binaire d’un contrôle à `ResetVersion` l' `ResetStockProps` aide de et `COleControl::OnResetState`de substituer. Consultez l’exemple sur [ResetStockProps](#resetstockprops). Pour plus d’informations sur l’optimisation de l’initialisation [, consultez contrôles ActiveX : Optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="scrollwindow"></a>  COleControl::ScrollWindow
 
@@ -3707,7 +3707,7 @@ Référence à l’objet [CFontHolder](../../mfc/reference/cfontholder-class.md)
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers la police précédemment sélectionnée. Lorsque l’appelant a terminé toutes les opérations de dessin qui utilisent *fontHolder,* il doit resélectionner la police sélectionnée précédemment en la transmettant en tant que paramètre à [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject).
+Pointeur vers la police précédemment sélectionnée. Lorsque l’appelant a terminé toutes les opérations de dessin qui utilisent *fontHolder,* il doit resélectionner la police sélectionnée précédemment en la transmettant en tant que paramètre à [CDC :: SelectObject](../../mfc/reference/cdc-class.md#selectobject).
 
 ##  <a name="selectstockfont"></a>  COleControl::SelectStockFont
 
@@ -3724,7 +3724,7 @@ Contexte de périphérique dans lequel la police sera sélectionnée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’objet précédemment sélectionné `CFont` . Vous devez utiliser [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) pour sélectionner de nouveau cette police dans le contexte de périphérique lorsque vous avez terminé.
+Pointeur vers l’objet précédemment sélectionné `CFont` . Vous devez utiliser [CDC :: SelectObject](../../mfc/reference/cdc-class.md#selectobject) pour sélectionner de nouveau cette police dans le contexte de périphérique lorsque vous avez terminé.
 
 ##  <a name="serializeextent"></a>  COleControl::SerializeExtent
 
@@ -3741,7 +3741,7 @@ void SerializeExtent(CArchive& ar);
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez améliorer les performances de persistance binaire d’un contrôle `SerializeExtent`à `SerializeStockProps`l’aide `SerializeVersion` de, et `COleControl::Serialize`pour remplacer. Lisez l'exemple ci-dessous. Pour plus d’informations sur l’optimisation de l’initialisation [, consultez contrôles ActiveX: Optimisation](../../mfc/mfc-activex-controls-optimization.md).
+Vous pouvez améliorer les performances de persistance binaire d’un contrôle `SerializeExtent`à `SerializeStockProps`l’aide `SerializeVersion` de, et `COleControl::Serialize`pour remplacer. Lisez l'exemple ci-dessous. Pour plus d’informations sur l’optimisation de l’initialisation [, consultez contrôles ActiveX : Optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Exemples
 
@@ -3749,7 +3749,7 @@ Vous pouvez améliorer les performances de persistance binaire d’un contrôle 
 
 ##  <a name="serializestockprops"></a>  COleControl::SerializeStockProps
 
-Sérialise ou Initialise l’état des `COleControl` propriétés stock: Appearance, BackColor, BorderStyle, Caption, Enabled, font, ForeColor et Text.
+Sérialise ou Initialise l’état des `COleControl` propriétés stock : Appearance, BackColor, BorderStyle, Caption, Enabled, font, ForeColor et Text.
 
 ```
 void SerializeStockProps(CArchive& ar);
@@ -3762,9 +3762,9 @@ void SerializeStockProps(CArchive& ar);
 
 ### <a name="remarks"></a>Notes
 
-Pour obtenir une description des propriétés stock, [consultez contrôles ActiveX: Ajout de propriétés](../../mfc/mfc-activex-controls-adding-stock-properties.md)stock.
+Pour obtenir une description des propriétés stock, [consultez contrôles ActiveX : Ajout de propriétés](../../mfc/mfc-activex-controls-adding-stock-properties.md)stock.
 
-Vous pouvez améliorer les performances de persistance binaire d’un contrôle `SerializeStockProps`à `SerializeExtent`l’aide `SerializeVersion` de, et `COleControl::Serialize`pour remplacer. Pour obtenir un exemple, consultez le code sur [SerializeExtent](#serializeextent). Pour plus d’informations sur l’optimisation de l’initialisation [, consultez contrôles ActiveX: Optimisation](../../mfc/mfc-activex-controls-optimization.md).
+Vous pouvez améliorer les performances de persistance binaire d’un contrôle `SerializeStockProps`à `SerializeExtent`l’aide `SerializeVersion` de, et `COleControl::Serialize`pour remplacer. Pour obtenir un exemple, consultez le code sur [SerializeExtent](#serializeextent). Pour plus d’informations sur l’optimisation de l’initialisation [, consultez contrôles ActiveX : Optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="serializeversion"></a>  COleControl::SerializeVersion
 
@@ -3794,7 +3794,7 @@ Numéro de version du contrôle. Si l’archive spécifiée est en cours `Serial
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez améliorer les performances de persistance binaire d’un contrôle `SerializeVersion`à `SerializeExtent`l’aide `SerializeStockProps` de, et `COleControl::Serialize`pour remplacer. Pour obtenir un exemple, consultez le code sur [SerializeExtent](#serializeextent). Pour plus d’informations sur l’optimisation de l’initialisation [, consultez contrôles ActiveX: Optimisation](../../mfc/mfc-activex-controls-optimization.md).
+Vous pouvez améliorer les performances de persistance binaire d’un contrôle `SerializeVersion`à `SerializeExtent`l’aide `SerializeStockProps` de, et `COleControl::Serialize`pour remplacer. Pour obtenir un exemple, consultez le code sur [SerializeExtent](#serializeextent). Pour plus d’informations sur l’optimisation de l’initialisation [, consultez contrôles ActiveX : Optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="setappearance"></a>  COleControl::SetAppearance
 
@@ -3811,7 +3811,7 @@ Valeur **short** (VT_I2) à utiliser pour l’apparence de votre contrôle. La v
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur les propriétés [stock, consultez contrôles ActiveX: Propriétés](../../mfc/mfc-activex-controls-properties.md).
+Pour plus d’informations sur les propriétés [stock, consultez contrôles ActiveX : Propriétés](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setbackcolor"></a>  COleControl::SetBackColor
 
@@ -3828,7 +3828,7 @@ Valeur de OLE_COLOR à utiliser pour le dessin en arrière-plan de votre contrô
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur l’utilisation de cette propriété et d’autres propriétés associées [, consultez l’article contrôles ActiveX: Propriétés](../../mfc/mfc-activex-controls-properties.md).
+Pour plus d’informations sur l’utilisation de cette propriété et d’autres propriétés associées [, consultez l’article contrôles ActiveX : Propriétés](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setborderstyle"></a>  COleControl::SetBorderStyle
 
@@ -3841,7 +3841,7 @@ void SetBorderStyle(short sBorderStyle);
 ### <a name="parameters"></a>Paramètres
 
 *sBorderStyle*<br/>
-Nouveau style de bordure pour le contrôle; 0 indique qu’il n’y a aucune bordure et 1 indique une bordure normale.
+Nouveau style de bordure pour le contrôle ; 0 indique qu’il n’y a aucune bordure et 1 indique une bordure normale.
 
 ### <a name="remarks"></a>Notes
 
@@ -3881,7 +3881,7 @@ Spécifie la nouvelle hauteur du contrôle en pixels.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’appel a réussi; Sinon, 0.
+Différent de zéro si l’appel a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -3900,7 +3900,7 @@ void SetEnabled(BOOL bEnabled);
 ### <a name="parameters"></a>Paramètres
 
 *bEnabled*<br/>
-TRUE si le contrôle doit être activé; Sinon, FALSe.
+TRUE si le contrôle doit être activé ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -3952,7 +3952,7 @@ Valeur de OLE_COLOR à utiliser pour le dessin de premier plan de votre contrôl
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur l’utilisation de cette propriété et d’autres propriétés associées [, consultez l’article contrôles ActiveX: Propriétés](../../mfc/mfc-activex-controls-properties.md).
+Pour plus d’informations sur l’utilisation de cette propriété et d’autres propriétés associées [, consultez l’article contrôles ActiveX : Propriétés](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setinitialdataformats"></a>  COleControl::SetInitialDataFormats
 
@@ -3964,7 +3964,7 @@ virtual void SetInitialDataFormats();
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation par défaut spécifie deux formats: CF_METAFILEPICT et le jeu de propriétés persistantes.
+L’implémentation par défaut spécifie deux formats : CF_METAFILEPICT et le jeu de propriétés persistantes.
 
 ##  <a name="setinitialsize"></a>  COleControl::SetInitialSize
 
@@ -3999,7 +3999,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bModified*<br/>
-Nouvelle valeur de l’indicateur modifié du contrôle. TRUE indique que l’état du contrôle a été modifié; FALSe indique que l’état du contrôle vient d’être enregistré.
+Nouvelle valeur de l’indicateur modifié du contrôle. TRUE indique que l’état du contrôle a été modifié ; FALSe indique que l’état du contrôle vient d’être enregistré.
 
 ### <a name="remarks"></a>Notes
 
@@ -4044,7 +4044,7 @@ Pointeur vers un rectangle contenant les nouvelles coordonnées du contrôle par
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’appel a réussi; Sinon, 0.
+Différent de zéro si l’appel a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -4086,7 +4086,7 @@ void ThrowError(
 ### <a name="parameters"></a>Paramètres
 
 *sc*<br/>
-Valeur de code d’État à signaler. Pour obtenir la liste complète des codes possibles, consultez l' [article contrôles ActiveX: Rubriques](../../mfc/mfc-activex-controls-advanced-topics.md)avancées.
+Valeur de code d’État à signaler. Pour obtenir la liste complète des codes possibles, consultez l' [article contrôles ActiveX : Rubriques](../../mfc/mfc-activex-controls-advanced-topics.md)avancées.
 
 *nDescriptionID*<br/>
 ID de ressource de chaîne de l’exception à signaler.
@@ -4121,7 +4121,7 @@ Pointeur vers une `POINTL` structure contenant des coordonnées en unités HIMET
 Pointeur vers une `POINTF` structure contenant des coordonnées dans la taille d’unité du conteneur.
 
 *flags*<br/>
-Une combinaison des valeurs suivantes:
+Une combinaison des valeurs suivantes :
 
 - XFORMCOORDS_POSITION position dans le conteneur.
 
@@ -4151,7 +4151,7 @@ COLORREF TranslateColor(
 Type de données OLE_COLOR. Pour plus d’informations, consultez la fonction [OleTranslateColor](/windows/win32/api/olectl/nf-olectl-oletranslatecolor) de Windows.
 
 *hpal*<br/>
-Handle d’une palette facultative; peut avoir la valeur NULL.
+Handle d’une palette facultative ; peut avoir la valeur NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -4171,11 +4171,11 @@ BOOL WillAmbientsBeValidDuringLoad();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur différente de zéro indique que les propriétés ambiantes sont valides; Sinon, les propriétés ambiantes ne sont pas valides.
+Une valeur différente de zéro indique que les propriétés ambiantes sont valides ; Sinon, les propriétés ambiantes ne sont pas valides.
 
 ### <a name="remarks"></a>Notes
 
-Dans certains conteneurs, votre contrôle peut ne pas avoir accès à ses propriétés ambiantes lors de l’appel initial à la `COleControl::DoPropExchange`substitution de. C’est le cas si le conteneur appelle [IPersistStreamInit:: Load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) ou [IPersistStorage:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) avant d’appeler [IOleObject:: SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) (autrement dit, s’il n’honore pas le bit d’État OLEMISC_SETCLIENTSITEFIRST).
+Dans certains conteneurs, votre contrôle peut ne pas avoir accès à ses propriétés ambiantes lors de l’appel initial à la `COleControl::DoPropExchange`substitution de. C’est le cas si le conteneur appelle [IPersistStreamInit :: Load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) ou [IPersistStorage :: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) avant d’appeler [IOleObject :: SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) (autrement dit, s’il n’honore pas le bit d’État OLEMISC_SETCLIENTSITEFIRST).
 
 ##  <a name="windowproc"></a>  COleControl::WindowProc
 

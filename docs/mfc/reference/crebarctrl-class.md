@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 9a8c989988801bc7af993fbc69717ac7cff07dcf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 14befb819a30238abb5780b1bdcc6d74402e8976
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502736"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741191"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl (classe)
 
@@ -181,7 +181,7 @@ Les contrôles Rebar contiennent une ou plusieurs bandes. Chaque bande peut cont
 
 Le contrôle rebar peut afficher la fenêtre enfant sur une image d’arrière-plan spécifiée. Toutes les bandes de contrôle rebar peuvent être redimensionnées, à l’exception de celles qui utilisent le style RBBS_FIXEDSIZE. Lorsque vous repositionnez ou redimensionnez une bande de contrôle rebar, le contrôle rebar gère la taille et la position de la fenêtre enfant assignée à cette bande. Pour redimensionner ou modifier l’ordre des bandes dans le contrôle, cliquez et faites glisser la barre de redimensionnement d’une bande.
 
-L’illustration suivante montre un contrôle rebar qui a trois bandes:
+L’illustration suivante montre un contrôle rebar qui a trois bandes :
 
 - La bande 0 contient un contrôle de barre d’outils plat et transparent.
 
@@ -193,7 +193,7 @@ L’illustration suivante montre un contrôle rebar qui a trois bandes:
 
 ## <a name="rebar-control"></a>Contrôle rebar
 
-Les contrôles Rebar prennent en charge:
+Les contrôles Rebar prennent en charge :
 
 - Listes d’images.
 
@@ -265,11 +265,11 @@ Spécifie l’ID de contrôle du contrôle rebar.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’objet a été créé avec succès; Sinon, 0.
+Différent de zéro si l’objet a été créé avec succès ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Créez un contrôle rebar en deux étapes:
+Créez un contrôle rebar en deux étapes :
 
 1. Appelez [CReBarCtrl](#crebarctrl) pour construire un `CReBarCtrl` objet.
 
@@ -329,7 +329,7 @@ CReBarCtrl();
 
 ### <a name="example"></a>Exemples
 
-  Consultez l’exemple de [CReBarCtrl:: Create](#create).
+  Consultez l’exemple de [CReBarCtrl :: Create](#create).
 
 ##  <a name="deleteband"></a>  CReBarCtrl::DeleteBand
 
@@ -346,7 +346,7 @@ Index de base zéro de la bande à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la bande a été supprimée avec succès; Sinon, zéro.
+Différent de zéro si la bande a été supprimée avec succès ; Sinon, zéro.
 
 ### <a name="example"></a>Exemple
 
@@ -526,7 +526,7 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Combinaison d’opérations de bits d’indicateurs qui indiquent les styles étendus. Les indicateurs possibles sont RBS_EX_SPLITTER et RBS_EX_TRANSPARENT. Pour plus d’informations, consultez le paramètre *dwMask* de la méthode [CReBarCtrl:: SetExtendedStyle](#setextendedstyle) .
+Combinaison d’opérations de bits d’indicateurs qui indiquent les styles étendus. Les indicateurs possibles sont RBS_EX_SPLITTER et RBS_EX_TRANSPARENT. Pour plus d’informations, consultez le paramètre *dwMask* de la méthode [CReBarCtrl :: SetExtendedStyle](#setextendedstyle) .
 
 ### <a name="remarks"></a>Notes
 
@@ -670,7 +670,7 @@ int HitTest(RBHITTESTINFO* prbht);
 ### <a name="parameters"></a>Paramètres
 
 *prbht*<br/>
-Pointeur vers une structure [RBHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-_rb_hittestinfo) . Avant d’envoyer le message, `pt` le membre de cette structure doit être initialisé au point qui sera testé, en coordonnées clientes.
+Pointeur vers une structure [RBHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-rbhittestinfo) . Avant d’envoyer le message, `pt` le membre de cette structure doit être initialisé au point qui sera testé, en coordonnées clientes.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -867,7 +867,7 @@ BOOL SetBandWidth(
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la méthode réussit; Sinon, FALSe.
+TRUE si la méthode réussit ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -958,7 +958,7 @@ DWORD SetExtendedStyle(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*dwMask*|dans Combinaison de bits (OR) d’indicateurs qui spécifie les indicateurs du paramètre *dwStyleEx* qui s’appliquent. Utilisez une ou plusieurs des valeurs suivantes:<br /><br /> RBS_EX_SPLITTER: Par défaut, affichez le séparateur en bas en mode horizontal et à droite en mode vertical.<br /><br /> RBS_EX_TRANSPARENT: Transférez le message [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) à la fenêtre parente.|
+|*dwMask*|dans Combinaison de bits (OR) d’indicateurs qui spécifie les indicateurs du paramètre *dwStyleEx* qui s’appliquent. Utilisez une ou plusieurs des valeurs suivantes :<br /><br /> RBS_EX_SPLITTER: Par défaut, affichez le séparateur en bas en mode horizontal et à droite en mode vertical.<br /><br /> RBS_EX_TRANSPARENT: Transférez le message [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) à la fenêtre parente.|
 |*dwStyleEx*|dans Combinaison de bits (OR) d’indicateurs qui spécifient les styles à appliquer. Pour définir un style, spécifiez le même indicateur que celui utilisé dans le paramètre *dwMask* . Pour réinitialiser un style, spécifiez zéro binaire.|
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1008,7 +1008,7 @@ Pointeur vers un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est le prop
 Notez que cette fonction membre utilise des pointeurs `CWnd` vers des objets pour le propriétaire actuel et le propriétaire sélectionné du contrôle rebar, plutôt que des handles vers Windows.
 
 > [!NOTE]
->  Cette fonction membre ne change pas le parent réel qui a été défini lors de la création du contrôle; au lieu de cela, il envoie des messages de notification à la fenêtre que vous spécifiez.
+>  Cette fonction membre ne change pas le parent réel qui a été défini lors de la création du contrôle ; au lieu de cela, il envoie des messages de notification à la fenêtre que vous spécifiez.
 
 ##  <a name="setpalette"></a>  CReBarCtrl::SetPalette
 

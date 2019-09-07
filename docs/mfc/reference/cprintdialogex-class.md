@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 2334fb0a420e14aa4fa8b8b570671fb9a611de32
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 76c3968b20a66e9653fd769339e23ede2a756bbd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502881"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741331"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx, classe
 
@@ -92,9 +92,9 @@ class CPrintDialogEx : public CCommonDialog
 
 Vous pouvez vous appuyer sur l’infrastructure pour gérer de nombreux aspects du processus d’impression pour votre application. Pour plus d’informations sur l’utilisation de l’infrastructure pour gérer les tâches d’impression, consultez l’article [impression](../../mfc/printing.md).
 
-Si vous souhaitez que votre application gère l’impression sans l’implication de l’infrastructure, vous pouvez `CPrintDialogEx` utiliser la classe «telle quelle» avec le constructeur fourni, ou vous pouvez dériver votre propre `CPrintDialogEx` classe de boîte de dialogue à partir de et écrire un constructeur pour répondre à vos besoins. Dans les deux cas, ces boîtes de dialogue se comportent comme des boîtes de dialogue MFC standard `CCommonDialog`, car elles sont dérivées de la classe.
+Si vous souhaitez que votre application gère l’impression sans l’implication de l’infrastructure, vous pouvez `CPrintDialogEx` utiliser la classe « telle quelle » avec le constructeur fourni, ou vous pouvez dériver votre propre `CPrintDialogEx` classe de boîte de dialogue à partir de et écrire un constructeur pour répondre à vos besoins. Dans les deux cas, ces boîtes de dialogue se comportent comme des boîtes de dialogue MFC standard `CCommonDialog`, car elles sont dérivées de la classe.
 
-Pour utiliser un `CPrintDialogEx` objet, commencez par créer l’objet à `CPrintDialogEx` l’aide du constructeur. Une fois la boîte de dialogue construite, vous pouvez définir ou modifier les valeurs de la structure [m_pdex](#m_pdex) pour initialiser les valeurs des contrôles de la boîte de dialogue. La `m_pdex` structure est de type [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw). Pour plus d’informations sur cette structure, consultez la SDK Windows.
+Pour utiliser un `CPrintDialogEx` objet, commencez par créer l’objet à `CPrintDialogEx` l’aide du constructeur. Une fois la boîte de dialogue construite, vous pouvez définir ou modifier les valeurs de la structure [m_pdex](#m_pdex) pour initialiser les valeurs des contrôles de la boîte de dialogue. La `m_pdex` structure est de type [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw). Pour plus d’informations sur cette structure, consultez la SDK Windows.
 
 Si vous `m_pdex` ne fournissez pas vos propres handles dans pour `hDevNames` les `hDevMode` membres et, veillez à appeler la `GlobalFree` fonction Windows pour ces handles lorsque vous avez fini d’utiliser la boîte de dialogue.
 
@@ -128,7 +128,7 @@ Pour plus d’informations sur `CPrintDialogEx`l’utilisation de, consultez [cl
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête:** afxdlgs. h
+**En-tête :** afxdlgs. h
 
 ##  <a name="cprintdialogex"></a>  CPrintDialogEx::CPrintDialogEx
 
@@ -143,7 +143,7 @@ CPrintDialogEx(
 ### <a name="parameters"></a>Paramètres
 
 *dwFlags*<br/>
-Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les paramètres de la boîte de dialogue, combinés à l’aide de l’opérateur de bits or. Par exemple, l’indicateur PD_ALLPAGES définit la plage d’impression par défaut sur toutes les pages du document. Pour plus d’informations sur ces indicateurs, consultez la structure [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw) dans le SDK Windows.
+Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les paramètres de la boîte de dialogue, combinés à l’aide de l’opérateur de bits or. Par exemple, l’indicateur PD_ALLPAGES définit la plage d’impression par défaut sur toutes les pages du document. Pour plus d’informations sur ces indicateurs, consultez la structure [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) dans le SDK Windows.
 
 *pParentWnd*<br/>
 Pointeur vers la fenêtre parente ou propriétaire de la boîte de dialogue.
@@ -212,7 +212,7 @@ BOOL GetDefaults();
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE en cas de réussite; sinon, FALSe.
+TRUE en cas de réussite ; sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -236,7 +236,7 @@ Nom de l’imprimante actuellement sélectionnée.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez un pointeur vers l' `CString` objet retourné par `GetDeviceName` comme valeur de `lpszDeviceName` dans un appel à [CDC:: CreateDC](../../mfc/reference/cdc-class.md#createdc).
+Utilisez un pointeur vers l' `CString` objet retourné par `GetDeviceName` comme valeur de `lpszDeviceName` dans un appel à [CDC :: CreateDC](../../mfc/reference/cdc-class.md#createdc).
 
 ##  <a name="getdevmode"></a>  CPrintDialogEx::GetDevMode
 
@@ -264,7 +264,7 @@ CString GetDriverName() const;
 
 ### <a name="remarks"></a>Notes
 
-Utilisez un pointeur vers l' `CString` objet retourné par `GetDriverName` comme valeur de *lpszDriverName* dans un appel à [CDC:: CreateDC](../../mfc/reference/cdc-class.md#createdc).
+Utilisez un pointeur vers l' `CString` objet retourné par `GetDriverName` comme valeur de *lpszDriverName* dans un appel à [CDC :: CreateDC](../../mfc/reference/cdc-class.md#createdc).
 
 ##  <a name="getportname"></a>  CPrintDialogEx::GetPortName
 
@@ -304,7 +304,7 @@ PRINTDLGEX m_pdex;
 
 ### <a name="remarks"></a>Notes
 
-Après avoir construit un `CPrintDialogEx` objet, vous pouvez utiliser `m_pdex` pour définir différents aspects de la boîte de dialogue avant d’appeler la fonction membre [DoModal](#domodal) . Pour plus d’informations sur `m_pdex` la structure, consultez [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw) dans le SDK Windows.
+Après avoir construit un `CPrintDialogEx` objet, vous pouvez utiliser `m_pdex` pour définir différents aspects de la boîte de dialogue avant d’appeler la fonction membre [DoModal](#domodal) . Pour plus d’informations sur `m_pdex` la structure, consultez [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) dans le SDK Windows.
 
 Si vous modifiez directement `m_pdex` le membre de données, vous remplacerez tout comportement par défaut.
 
@@ -318,7 +318,7 @@ BOOL PrintAll() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si toutes les pages du document doivent être imprimées; Sinon, FALSe.
+TRUE si toutes les pages du document doivent être imprimées ; Sinon, FALSe.
 
 ##  <a name="printcollate"></a>  CPrintDialogEx::PrintCollate
 
@@ -330,7 +330,7 @@ BOOL PrintCollate() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’utilisateur active la case à cocher assembler dans la boîte de dialogue; Sinon, FALSe.
+TRUE si l’utilisateur active la case à cocher assembler dans la boîte de dialogue ; Sinon, FALSe.
 
 ##  <a name="printcurrentpage"></a>  CPrintDialogEx::PrintCurrentPage
 
@@ -342,7 +342,7 @@ BOOL PrintCurrentPage() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’option **imprimer la page active** est sélectionnée dans la boîte de dialogue Imprimer; Sinon, FALSe.
+TRUE si l’option **imprimer la page active** est sélectionnée dans la boîte de dialogue Imprimer ; Sinon, FALSe.
 
 ##  <a name="printrange"></a>  CPrintDialogEx::PrintRange
 
@@ -354,11 +354,11 @@ BOOL PrintRange() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si seule une plage de pages dans le document doit être imprimée; Sinon, FALSe.
+TRUE si seule une plage de pages dans le document doit être imprimée ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Les plages de pages spécifiées peuvent être déterminées `nPageRanges`à `nMaxPageRanges`partir de `lpPageRanges` [m_pdex](#m_pdex) (consultez, et dans la structure [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw) du SDK Windows).
+Les plages de pages spécifiées peuvent être déterminées `nPageRanges`à `nMaxPageRanges`partir de `lpPageRanges` [m_pdex](#m_pdex) (consultez, et dans la structure [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) du SDK Windows).
 
 ##  <a name="printselection"></a>  CPrintDialogEx::PrintSelection
 
@@ -370,7 +370,7 @@ BOOL PrintSelection() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si seuls les éléments sélectionnés doivent être imprimés; Sinon, FALSe.
+TRUE si seuls les éléments sélectionnés doivent être imprimés ; Sinon, FALSe.
 
 ## <a name="see-also"></a>Voir aussi
 

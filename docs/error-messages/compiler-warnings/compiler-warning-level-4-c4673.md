@@ -7,19 +7,19 @@ helpviewer_keywords:
 - C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
 ms.openlocfilehash: ceaa5cd647dfb527713613b9ce3b5cd81a780fd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657728"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741386"
 ---
 # <a name="compiler-warning-level-4-c4673"></a>Avertissement du compilateur (niveau 4) C4673
 
-lever des types suivants de 'identificateur' ne sera plus utilisé que sur le site catch
+levée de’identifier’les types suivants ne seront pas pris en compte sur le site d’interception
 
-Un objet levé ne peut pas être traité dans le **catch** bloc. Chaque type qui ne peut pas être gérée est répertorié dans la sortie d’erreur immédiatement après la ligne contenant cet avertissement. Chaque type non gérée a son propre avertissement. Lisez l’avertissement pour chaque type spécifique pour plus d’informations.
+Un objet Throw ne peut pas être géré dans le bloc **catch** . Chaque type qui ne peut pas être géré est listé dans la sortie d’erreur immédiatement après la ligne contenant cet avertissement. Chaque type non géré a son propre avertissement. Pour plus d’informations, lisez l’avertissement pour chaque type spécifique.
 
-L’exemple suivant génère l’erreur C4673 :
+L’exemple suivant génère l’C4673 :
 
 ```
 // C4673.cpp

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-ms.openlocfilehash: da2df7758ef01d03380e8f8a2a79c8adec591d6d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6010066b449727034918039e817012a2f31cf60b
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511393"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741430"
 ---
 # <a name="structures-used-by-mfc"></a>Structures utilisées par MFC
 
@@ -29,13 +29,13 @@ Le tableau suivant répertorie les structures qui sont appelées à partir de di
 |[CDaoIndexFieldInfo, structure](../../mfc/reference/cdaoindexfieldinfo-structure.md)|[PAINTSTRUCT, structure](/windows/win32/api/winuser/ns-winuser-paintstruct)|
 |[CDaoIndexInfo, structure](../../mfc/reference/cdaoindexinfo-structure.md)|[POINT, structure](/windows/win32/api/windef/ns-windef-point)|
 |[CDaoParameterInfo, structure](../../mfc/reference/cdaoparameterinfo-structure.md)|[RECT, structure](/windows/win32/api/windef/ns-windef-rect)|
-|[CDaoQueryDefInfo, structure](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA, structure](/windows/win32/api/wingdi/ns-wingdi-rgndatw)|
+|[CDaoQueryDefInfo, structure](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA, structure](/windows/win32/api/wingdi/ns-wingdi-rgndata)|
 |[CDaoRelationFieldInfo, structure](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[SOCKADDR, structure](/windows/win32/winsock/sockaddr-2)|
 |[CDaoRelationInfo, structure](../../mfc/reference/cdaorelationinfo-structure.md)|[SOCKADDR_IN, structure](/windows/win32/winsock/sockaddr-2)|
 |[CDaoTableDefInfo, structure](../../mfc/reference/cdaotabledefinfo-structure.md)|[SYSTEMTIME, structure](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)
 |[CDaoWorkspaceInfo, structure](../../mfc/reference/cdaoworkspaceinfo-structure.md)|[WINDOWPLACEMENT, structure](/windows/win32/api/winuser/ns-winuser-windowplacement)|
 |[CODBCFieldInfo, structure](../../mfc/reference/codbcfieldinfo-structure.md)|[WINDOWPOS, structure](/windows/win32/api/winuser/ns-winuser-windowpos)
-|[COLORADJUSTMENT, structure](/windows/win32/api/wingdi/ns-wingdi-coloradjustment)|[WSADATA, structure](/windows/win32/api/winsock2/ns-winsock2-wsadatw)|
+|[COLORADJUSTMENT, structure](/windows/win32/api/wingdi/ns-wingdi-coloradjustment)|[WSADATA, structure](/windows/win32/api/winsock2/ns-winsock2-wsadata)|
 |[COMPAREITEMSTRUCT, structure](/windows/win32/api/winuser/ns-winuser-compareitemstruct)|[XFORM, structure](/windows/win32/api/wingdi/ns-wingdi-xform)|
 |[CREATESTRUCT, structure](/windows/win32/api/winuser/ns-winuser-createstructw)||
 |[DELETEITEMSTRUCT, structure](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)||

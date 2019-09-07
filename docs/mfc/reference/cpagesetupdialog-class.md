@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 18b17d0f40aaab6ba2a018a568950549eda23016
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b81e2a65d09bf5dadbc0860d692caee7a4bd386f
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503011"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739763"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog, classe
 
@@ -105,7 +105,7 @@ Si `DoModal` retourne IDOK, vous pouvez utiliser plusieurs fonctions `CPageSetup
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête:** afxdlgs. h
+**En-tête :** afxdlgs. h
 
 ##  <a name="cpagesetupdialog"></a>  CPageSetupDialog::CPageSetupDialog
 
@@ -120,7 +120,7 @@ CPageSetupDialog(
 ### <a name="parameters"></a>Paramètres
 
 *dwFlags*<br/>
-Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les paramètres de la boîte de dialogue. Les valeurs peuvent être combinées à l’aide de l’opérateur or au niveau du bit. Ces valeurs ont les significations suivantes:
+Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les paramètres de la boîte de dialogue. Les valeurs peuvent être combinées à l’aide de l’opérateur or au niveau du bit. Ces valeurs ont les significations suivantes :
 
 - PSD_DEFAULTMINMARGINS définit la largeur minimale autorisée pour les marges de la page afin qu’elles soient identiques aux valeurs minimales de l’imprimante. Cet indicateur est ignoré si les indicateurs PSD_MARGINS et PSD_MINMARGINS sont également spécifiés.
 
@@ -142,7 +142,7 @@ Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les para
 
 - PSD_DISABLEORIENTATION désactive le contrôle de boîte de dialogue d’orientation de page.
 
-- PSD_RETURNDEFAULT oblige `CPageSetupDialog` à retourner des structures [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) et [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) initialisées pour l’imprimante système par défaut sans afficher de boîte de dialogue. Il est supposé que et `hDevNames` `hDevMode` ont tous deux la valeur null; dans le cas contraire, la fonction retourne une erreur. Si l’imprimante par défaut du système est prise en charge par un ancien pilote d’imprimante (antérieur à la `hDevNames` version 3,0 de Windows), seul est retourné; `hDevMode` a la valeur null.
+- PSD_RETURNDEFAULT oblige `CPageSetupDialog` à retourner des structures [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) et [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) initialisées pour l’imprimante système par défaut sans afficher de boîte de dialogue. Il est supposé que et `hDevNames` `hDevMode` ont tous deux la valeur null ; dans le cas contraire, la fonction retourne une erreur. Si l’imprimante par défaut du système est prise en charge par un ancien pilote d’imprimante (antérieur à la `hDevNames` version 3,0 de Windows), seul est retourné ; `hDevMode` a la valeur null.
 
 - PSD_DISABLEPAPER désactive le contrôle de sélection de papier.
 
@@ -165,7 +165,7 @@ Pointeur vers le parent ou le propriétaire de la boîte de dialogue.
 
 Utilisez la fonction [DoModal](../../mfc/reference/cdialog-class.md#domodal) pour afficher la boîte de dialogue.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]
 
@@ -201,13 +201,13 @@ En outre, l’utilisateur peut accéder aux options de configuration de l’impr
 
 Si vous souhaitez initialiser les différentes options de la boîte de dialogue de mise en page `m_psd` en définissant les membres de la structure `DoModal`, vous devez le faire avant d’appeler, et après la construction de l’objet de boîte de dialogue. Après l' `DoModal`appel de, appelez d’autres fonctions membres pour récupérer les paramètres ou les informations entrées par l’utilisateur dans la boîte de dialogue.
 
-Si vous souhaitez propager les paramètres actuels entrés par l’utilisateur, effectuez un appel à [CWinApp:: SelectPrinter](../../mfc/reference/cwinapp-class.md#selectprinter). Cette fonction prend les informations de l' `CPageSetupDialog` objet et initialise et sélectionne un nouveau contrôleur de contexte d’imprimante avec les attributs appropriés.
+Si vous souhaitez propager les paramètres actuels entrés par l’utilisateur, effectuez un appel à [CWinApp :: SelectPrinter](../../mfc/reference/cwinapp-class.md#selectprinter). Cette fonction prend les informations de l' `CPageSetupDialog` objet et initialise et sélectionne un nouveau contrôleur de contexte d’imprimante avec les attributs appropriés.
 
 [!code-cpp[NVC_MFCDocView#95](../../mfc/codesnippet/cpp/cpagesetupdialog-class_2.cpp)]
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog).
+  Consultez l’exemple de [CPageSetupDialog :: CPageSetupDialog](#cpagesetupdialog).
 
 ##  <a name="getdevicename"></a>  CPageSetupDialog::GetDeviceName
 
@@ -247,7 +247,7 @@ CString GetDriverName() const;
 
 ### <a name="remarks"></a>Notes
 
-Utilisez un pointeur vers l' `CString` objet retourné par `GetDriverName` comme valeur de `lpszDriverName` dans un appel à [CDC:: CreateDC](../../mfc/reference/cdc-class.md#createdc).
+Utilisez un pointeur vers l' `CString` objet retourné par `GetDriverName` comme valeur de `lpszDriverName` dans un appel à [CDC :: CreateDC](../../mfc/reference/cdc-class.md#createdc).
 
 ##  <a name="getmargins"></a>  CPageSetupDialog::GetMargins
 
@@ -305,9 +305,9 @@ Après avoir construit un `CPageSetupDialog` objet, vous pouvez utiliser `m_psd`
 
 Si vous modifiez directement `m_psd` le membre de données, vous remplacerez tout comportement par défaut.
 
-Pour plus d’informations sur la structure [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw) , reportez-vous à la SDK Windows.
+Pour plus d’informations sur la structure [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw) , reportez-vous à la SDK Windows.
 
-Consultez l’exemple de [CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog).
+Consultez l’exemple de [CPageSetupDialog :: CPageSetupDialog](#cpagesetupdialog).
 
 ##  <a name="ondrawpage"></a>  CPageSetupDialog::OnDrawPage
 
@@ -345,13 +345,13 @@ Pointeur vers un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si elle est gérée; Sinon, 0.
+Valeur différente de zéro si elle est gérée ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
 Cette image s’affiche alors dans la boîte de dialogue mise en page OLE courante. L’implémentation par défaut dessine une image d’une page de texte.
 
-Substituez cette fonction pour personnaliser le dessin d’une zone spécifique de l’image ou de la totalité de l’image. Pour ce faire, vous pouvez utiliser une instruction **switch** avec des instructions **case** vérifiant la valeur de *nsuivant*. Par exemple, pour personnaliser le rendu du contenu de l’image de page, vous pouvez utiliser l’exemple de code suivant:
+Substituez cette fonction pour personnaliser le dessin d’une zone spécifique de l’image ou de la totalité de l’image. Pour ce faire, vous pouvez utiliser une instruction **switch** avec des instructions **case** vérifiant la valeur de *nsuivant*. Par exemple, pour personnaliser le rendu du contenu de l’image de page, vous pouvez utiliser l’exemple de code suivant :
 
 [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]
 
@@ -393,11 +393,11 @@ Indique l’orientation du papier ou de l’enveloppe, et si l’imprimante est 
 - Enveloppe 0x01f en mode Portrait (matricielle)
 
 *pPSD*<br/>
-Pointeur désignant une structure `PAGESETUPDLG`. Pour plus d’informations sur [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw), consultez la SDK Windows.
+Pointeur désignant une structure `PAGESETUPDLG`. Pour plus d’informations sur [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw), consultez la SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si elle est gérée; Sinon, 0.
+Valeur différente de zéro si elle est gérée ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 

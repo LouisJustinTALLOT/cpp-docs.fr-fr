@@ -44,13 +44,13 @@ helpviewer_keywords:
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
 ms.openlocfilehash: 3652587c9622c2eb9fe316782d1b1c7c9644dc8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606517"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739824"
 ---
-# <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
+# <a name="_cprintf_s-_cprintf_s_l-_cwprintf_s-_cwprintf_s_l"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 
 Met en forme et affiche les informations dans la console. Ces versions de [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -97,16 +97,16 @@ Nombre de caractères affichés.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions mettre en forme et affichent toute une série de caractères et les valeurs directement dans la console, à l’aide de la **_putch** (fonction) (**_putwch** pour **_cwprintf_s**) à la sortie caractères. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le format a la même forme et fonction que le *format* paramètre pour le [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) (fonction). Contrairement à la **fprintf_s**, **printf_s**, et **sprintf_s** fonctions ni **_cprintf_s** ni **_cwprintf_s** convertit les caractères de saut de ligne en combinaisons retour-saut de ligne (CR-LF) de transport lors de sortie.
+Ces fonctions mettent en forme et impriment une série de caractères et de valeurs directement dans la console, en utilisant la fonction **_putch** ( **_putwch** pour **_cwprintf_s**) pour les caractères de sortie. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante au *format*. Le format a la même forme et la même fonction que le paramètre *format* pour la fonction [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) . Contrairement aux fonctions **fprintf_s**, **printf_s**et **sprintf_s** , ni **_cprintf_s** ni **_cwprintf_s** ne convertit les caractères de saut de ligne en combinaisons retour chariot-saut de ligne (CR-LF) lors de la sortie.
 
-Une différence importante est que **_cwprintf_s** affiche les caractères Unicode dans Windows NT. Contrairement aux **_cprintf_s**, **_cwprintf_s** utilise les paramètres régionaux actuels de la console
+Une distinction importante est que **_cwprintf_s** affiche les caractères Unicode lorsqu’il est utilisé dans Windows NT. Contrairement à **_cprintf_s**, **_cwprintf_s** utilise les paramètres régionaux de la console actuelle
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
 
 > [!IMPORTANT]
 > Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur.
 
-Comme les versions non sécurisées (voir [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)), ces fonctions valident leurs paramètres et appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md)si *format* est un pointeur null. Ces fonctions diffèrent des versions non sécurisées en ce sens que la chaîne de format elle-même est également validée. S’il existe des spécificateurs de mise en forme inconnus ou incorrects, ces fonctions appellent le gestionnaire de paramètres non valides. Dans tous les cas, si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Comme les versions non sécurisées (voir [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)), ces fonctions valident leurs paramètres et appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md), si le *format* est une valeur null. dirigé. Ces fonctions diffèrent des versions non sécurisées en ce sens que la chaîne de format elle-même est également validée. S’il existe des spécificateurs de mise en forme inconnus ou incorrects, ces fonctions appellent le gestionnaire de paramètres non valides. Dans tous les cas, si l’exécution est autorisée à se poursuivre, les fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

@@ -2,16 +2,16 @@
 title: Array et WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: fd616487bd3c11544f12e84a7dc64f41e63d501a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ade7981d391288edd78f622b4753d546c5eaa04
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209414"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740688"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array et WriteOnlyArray (C++/CX)
 
-Vous pouvez utiliser librement des tableaux de style C normaux ou [std::array](../standard-library/array-class-stl.md) en C / c++ / programme CX (bien que [std::vector](../standard-library/vector-class.md) est souvent un meilleur choix), mais dans n’importe quelle API qui est publié dans les métadonnées, vous devez convertir un tableau de style C ou vector, à un [Platform::Array](../cppcx/platform-array-class.md) ou [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) type en fonction de son utilisation. Le type [Platform::Array](../cppcx/platform-array-class.md) n'est pas aussi efficace ni aussi puissant que le type [std::vector](../standard-library/vector-class.md), donc en règle générale, vous devez éviter de l'utiliser dans le code interne qui exécute un grand nombre d'opérations sur les éléments de tableau.
+Vous pouvez utiliser librement des tableaux de style C normaux ou [std :: Array](../standard-library/array-class-stl.md) dans un C++programme/CX (bien que [std :: Vector](../standard-library/vector-class.md) soit souvent un meilleur choix), mais dans toute API publiée dans les métadonnées, vous devez convertir un tableau ou un vecteur de style c en un type [Platform :: Array ](../cppcx/platform-array-class.md)ou [Platform :: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) selon la façon dont il est utilisé. Le type [Platform::Array](../cppcx/platform-array-class.md) n'est pas aussi efficace ni aussi puissant que le type [std::vector](../standard-library/vector-class.md), donc en règle générale, vous devez éviter de l'utiliser dans le code interne qui exécute un grand nombre d'opérations sur les éléments de tableau.
 
 Les types de tableau suivants peuvent être passés à travers l'ABI :
 
@@ -23,17 +23,17 @@ Les types de tableau suivants peuvent être passés à travers l'ABI :
 
 1. valeur de retour de Platform::Array^
 
-Vous utilisez ces types de tableau pour implémenter les trois types de modèles de tableau sont définis par l’exécution de Windows.
+Vous utilisez ces types de tableau pour implémenter les trois types de modèles de tableau définis par le Windows Runtime.
 
-PassArray utilisé lorsque l’appelant passe un tableau à une méthode. Le type de paramètre d’entrée C++ est `const` [Platform::Array](../cppcx/platform-array-class.md)\<T >.
+PassArray utilisé lorsque l’appelant passe un tableau à une méthode. Le C++ type de paramètre d' `const`entrée est [Platform :: Array](../cppcx/platform-array-class.md)\<T >.
 
-FillArray utilisée lorsque l’appelant passe un tableau à remplir par la méthode. Le type de paramètre d’entrée C++ est [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md)\<T >.
+FillArray utilisé lorsque l’appelant passe un tableau à remplir par la méthode. Le C++ type de paramètre d’entrée est [Platform :: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md)\<T >.
 
-ReceiveArray utilisé lorsque l’appelant reçoit un tableau alloué par la méthode. En langage C++/CX, vous pouvez retourner un tableau en valeur de retour comme un Array^, ou vous pouvez le retourner comme paramètre de sortie de type Array^*.
+ReceiveArray utilisé lorsque l’appelant reçoit un tableau que la méthode alloue. En langage C++/CX, vous pouvez retourner un tableau en valeur de retour comme un Array^, ou vous pouvez le retourner comme paramètre de sortie de type Array^*.
 
 ## <a name="passarray-pattern"></a>Modèle PassArray
 
-Lorsque le code client passe un tableau à une méthode C++ et que la méthode ne le modifie pas, la méthode accepte le tableau comme constante Array^. Au niveau des applications Windows Runtime binaire ABI (interface), il s’agit un passarray. L'exemple ci-dessous montre comment passer un tableau alloué en JavaScript à la fonction C++ qui le lit.
+Lorsque le code client passe un tableau à une méthode C++ et que la méthode ne le modifie pas, la méthode accepte le tableau comme constante Array^. Au niveau de l’interface binaire d’application (ABI) Windows Runtime, il s’agit d’un PassArray. L'exemple ci-dessous montre comment passer un tableau alloué en JavaScript à la fonction C++ qui le lit.
 
 [!code-javascript[cx_arrays#101](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_1.js)]
 
@@ -43,7 +43,7 @@ L'extrait de code suivant illustre la méthode C++ :
 
 ## <a name="receivearray-pattern"></a>Modèle ReceiveArray
 
-Dans le modèle ReceiveArray, le code client déclare un tableau et le passe à une méthode qui lui alloue de la mémoire et l'initialise. Le type de paramètre d’entrée C++ est un pointeur chapeau : `Array<T>^*`. L'exemple suivant indique comment déclarer un objet tableau dans JavaScript et le passer à une fonction C++ qui alloue de la mémoire, initialise les éléments et le retourne à JavaScript. JavaScript traite le tableau alloué comme une valeur de retour, mais la fonction C++ le traite comme un paramètre de sortie.
+Dans le modèle ReceiveArray, le code client déclare un tableau et le passe à une méthode qui lui alloue de la mémoire et l'initialise. Le C++ type de paramètre d’entrée est pointeur vers chapeau : `Array<T>^*`. L'exemple suivant indique comment déclarer un objet tableau dans JavaScript et le passer à une fonction C++ qui alloue de la mémoire, initialise les éléments et le retourne à JavaScript. JavaScript traite le tableau alloué comme une valeur de retour, mais la fonction C++ le traite comme un paramètre de sortie.
 
 [!code-javascript[cx_arrays#102](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_3.js)]
 
@@ -90,5 +90,5 @@ En général, vous devez éviter d'exposer un type `Platform::Array` en tant que
 ## <a name="see-also"></a>Voir aussi
 
 [Système de type](../cppcx/type-system-c-cx.md)<br/>
-[Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)

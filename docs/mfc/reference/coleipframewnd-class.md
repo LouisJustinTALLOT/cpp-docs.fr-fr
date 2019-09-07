@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-ms.openlocfilehash: 483998529b83d9b28c6ab1b219c4f5288dbd8ec7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8eab2ddfc778900b53d77105f1d8215a2c095e9f
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503829"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741569"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd, classe
 
@@ -64,7 +64,7 @@ Pour plus d’informations sur `COleIPFrameWnd`l’utilisation de, consultez l�
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête:** AFXOLE. h
+**En-tête :** AFXOLE. h
 
 ##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd
 
@@ -76,7 +76,7 @@ COleIPFrameWnd();
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oifi) dans le SDK Windows.
+Pour plus d’informations, consultez [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oleinplaceframeinfo) dans le SDK Windows.
 
 ##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars
 
@@ -102,7 +102,7 @@ Pointeur désignant la fenêtre au niveau du document du conteneur. Peut avoir l
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro en cas de réussite; Sinon, 0.
+Valeur différente de zéro en cas de réussite ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -128,7 +128,7 @@ Pointeur vers une `RECT` structure ou un `CRect` objet contenant les coordonnée
 
 ### <a name="remarks"></a>Notes
 
-La disposition des barres de contrôle dans la fenêtre de conteneur diffère de celle effectuée par une fenêtre frame non OLE. La fenêtre frame non OLE calcule les positions des barres de contrôles et d’autres objets à partir d’une taille de fenêtre frame donnée, comme dans un appel à [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout). La zone cliente est ce qui reste après la soustraction de l’espace pour les barres de contrôle et d’autres objets. Une `COleIPFrameWnd` fenêtre, en revanche, place les barres d’outils en fonction d’une zone client donnée. En d’autres termes `CFrameWnd::RecalcLayout` , fonctionne «de l’extérieur dans,» `COleIPFrameWnd::RepositionFrame` , tandis que fonctionne «de l’intérieur vers l’extérieur».
+La disposition des barres de contrôle dans la fenêtre de conteneur diffère de celle effectuée par une fenêtre frame non OLE. La fenêtre frame non OLE calcule les positions des barres de contrôles et d’autres objets à partir d’une taille de fenêtre frame donnée, comme dans un appel à [CFrameWnd :: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout). La zone cliente est ce qui reste après la soustraction de l’espace pour les barres de contrôle et d’autres objets. Une `COleIPFrameWnd` fenêtre, en revanche, place les barres d’outils en fonction d’une zone client donnée. En d’autres termes `CFrameWnd::RecalcLayout` , fonctionne « de l’extérieur dans, » `COleIPFrameWnd::RepositionFrame` , tandis que fonctionne « de l’intérieur vers l’extérieur ».
 
 ## <a name="see-also"></a>Voir aussi
 

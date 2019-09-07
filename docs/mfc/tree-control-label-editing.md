@@ -7,12 +7,12 @@ helpviewer_keywords:
 - label editing in CTreeCtrl class [MFC]
 - tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
-ms.openlocfilehash: 10148ef0dd8ccb2cf82c14c1c80ade6e8e5aa2b2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4b53d2c8e5a26a4dc37dfd7ae0710748bcd27bf6
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513306"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741231"
 ---
 # <a name="tree-control-label-editing"></a>Modification des étiquettes de contrôles d’arborescence
 
@@ -20,7 +20,7 @@ L’utilisateur peut modifier directement les étiquettes des éléments dans un
 
 Lorsque la modification d’étiquette commence, un contrôle d’arborescence envoie un message de notification [TVN_BEGINLABELEDIT](/windows/win32/Controls/tvn-beginlabeledit) . En traitant cette notification, vous pouvez autoriser la modification de certaines étiquettes et empêcher la modification des autres. Si la valeur 0 est retournée, la modification est retournée et une valeur différente de zéro l’empêche.
 
-Lorsque la modification d’étiquette est annulée ou terminée, un contrôle d’arborescence envoie un message de notification [TVN_ENDLABELEDIT](/windows/win32/Controls/tvn-endlabeledit) . Le paramètre *lParam* est l’adresse d’une structure [NMTVDISPINFO](/windows/win32/api/commctrl/ns-commctrl-tvdispinfow) . Le membre de l' **élément** est une structure [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) qui identifie l’élément et qui comprend le texte modifié. Vous êtes responsable de la mise à jour de l’étiquette de l’élément, le cas échéant, éventuellement après la validation de la chaîne modifiée. Le membre *pszText* de `TV_ITEM` est 0 si la modification est annulée.
+Lorsque la modification d’étiquette est annulée ou terminée, un contrôle d’arborescence envoie un message de notification [TVN_ENDLABELEDIT](/windows/win32/Controls/tvn-endlabeledit) . Le paramètre *lParam* est l’adresse d’une structure [NMTVDISPINFO](/windows/win32/api/commctrl/ns-commctrl-nmtvdispinfow) . Le membre de l' **élément** est une structure [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) qui identifie l’élément et qui comprend le texte modifié. Vous êtes responsable de la mise à jour de l’étiquette de l’élément, le cas échéant, éventuellement après la validation de la chaîne modifiée. Le membre *pszText* de `TV_ITEM` est 0 si la modification est annulée.
 
 Pendant la modification des étiquettes, en général en réponse au message de notification [TVN_BEGINLABELEDIT](/windows/win32/Controls/tvn-beginlabeledit) , vous pouvez obtenir un pointeur vers le contrôle d’édition utilisé pour la modification d’étiquette à l’aide de la fonction membre [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) . Vous pouvez appeler la fonction membre [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) du contrôle d’édition pour limiter la quantité de texte qu’un utilisateur peut entrer ou sous-classer dans le contrôle d’édition pour intercepter et ignorer les caractères non valides. Notez, toutefois, que le contrôle d’édition s’affiche uniquement *après* l’envoi de **TVN_BEGINLABELEDIT** .
 

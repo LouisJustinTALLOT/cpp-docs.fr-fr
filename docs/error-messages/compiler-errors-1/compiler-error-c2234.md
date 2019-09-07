@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2234
 ms.assetid: cfa42458-c803-4717-a017-9eca1c0cbfb0
 ms.openlocfilehash: 16cc09f43f8705452c207e5218f4cc274557e825
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611469"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741131"
 ---
 # <a name="compiler-error-c2234"></a>Erreur du compilateur C2234
 
@@ -19,7 +19,7 @@ ms.locfileid: "50611469"
 
 Étant donné que les pointeurs vers des références ne sont pas autorisés, les tableaux de références ne sont pas possibles.
 
-L’exemple suivant génère l’erreur C2234 :
+L’exemple suivant génère l’C2234 :
 
 ```
 // C2234.cpp

@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 36750990dc62d5b24cf1107ac8a2724df787a47d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 79b1dc844f53f739dc48eb6177e57810ff0c8412
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496992"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739590"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray, classe
 
@@ -88,7 +88,7 @@ Type de données à stocker dans le tableau.
 
 |Nom|Description|
 |----------|-----------------|
-|[CComSafeArray:: Operator LPSAFEARRAY](#operator_lpsafearray)|Convertit une valeur en `SAFEARRAY` pointeur.|
+|[CComSafeArray :: Operator LPSAFEARRAY](#operator_lpsafearray)|Convertit une valeur en `SAFEARRAY` pointeur.|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Récupère un élément du tableau.|
 |[CComSafeArray::operator =](#operator_eq)|Opérateur d'assignation.|
 
@@ -100,7 +100,7 @@ Type de données à stocker dans le tableau.
 
 ## <a name="remarks"></a>Notes
 
-`CComSafeArray` fournit un wrapper pour la classe [SAFEARRAY Data Type](/windows/win32/api/oaidl/ns-oaidl-tagsafearray) , ce qui simplifie la création et la gestion des tableaux unidimensionnels et multidimensionnels de pratiquement n’importe quel type prenant en charge VARIANT.
+`CComSafeArray` fournit un wrapper pour la classe [SAFEARRAY Data Type](/windows/win32/api/oaidl/ns-oaidl-safearray) , ce qui simplifie la création et la gestion des tableaux unidimensionnels et multidimensionnels de pratiquement n’importe quel type prenant en charge VARIANT.
 
 `CComSafeArray` simplifie le transmission de tableaux entre processus et offre en outre une sécurité renforcée en vérifiant les valeurs d’index de tableau par rapport aux limites inférieure et supérieure.
 
@@ -217,7 +217,7 @@ Structure `SAFEARRAYBOUND`.
 Nombre d’éléments dans le tableau.
 
 *lLBound*<br/>
-Valeur limite inférieure; autrement dit, l’index du premier élément dans le tableau.
+Valeur limite inférieure ; autrement dit, l’index du premier élément dans le tableau.
 
 *pBound*<br/>
 Pointeur vers une `SAFEARRAYBOUND` structure.
@@ -310,7 +310,7 @@ Nombre de dimensions dans le tableau.
 Nombre d’éléments dans le tableau.
 
 *lLBound*<br/>
-Valeur limite inférieure; autrement dit, l’index du premier élément dans le tableau.
+Valeur limite inférieure ; autrement dit, l’index du premier élément dans le tableau.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -433,7 +433,7 @@ LPSAFEARRAY* GetSafeArrayPtr() throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers le membre de données [CComSafeArray:: m_psa](#m_psa) .
+Retourne un pointeur vers le membre de données [CComSafeArray :: m_psa](#m_psa) .
 
 ##  <a name="gettype"></a>  CComSafeArray::GetType
 
@@ -445,7 +445,7 @@ VARTYPE GetType() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le type de données stockées dans le tableau, qui peut être l’un des types suivants:
+Retourne le type de données stockées dans le tableau, qui peut être l’un des types suivants :
 
 |VARTYPE|Description|
 |-------------|-----------------|
@@ -548,7 +548,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Il s’agit d’une version multidimensionnelle de [CComSafeArray:: setat](#setat).
+Il s’agit d’une version multidimensionnelle de [CComSafeArray :: setat](#setat).
 
 ##  <a name="operator_at"></a>  CComSafeArray::operator \[\]
 
@@ -570,7 +570,7 @@ Retourne l’élément de tableau approprié.
 
 ### <a name="remarks"></a>Notes
 
-Exécute une fonction similaire à [CComSafeArray:: GetAt](#getat), mais cet opérateur fonctionne uniquement avec les tableaux unidimensionnels.
+Exécute une fonction similaire à [CComSafeArray :: GetAt](#getat), mais cet opérateur fonctionne uniquement avec les tableaux unidimensionnels.
 
 ##  <a name="operator_eq"></a>  CComSafeArray::operator =
 
@@ -593,7 +593,7 @@ Pointeur vers un objet `SAFEARRAY` .
 
 Retourne le type de données stocké dans le tableau.
 
-##  <a name="operator_lpsafearray"></a>CComSafeArray:: Operator LPSAFEARRAY
+##  <a name="operator_lpsafearray"></a>CComSafeArray :: Operator LPSAFEARRAY
 
 Convertit une valeur en `SAFEARRAY` pointeur.
 
@@ -662,7 +662,7 @@ L’indicateur *bCopy* est pris en compte lorsque des éléments de type BSTR ou
 
 ## <a name="see-also"></a>Voir aussi
 
-[SAFEARRAY (type de données)](/windows/win32/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[SAFEARRAY (type de données)](/windows/win32/api/oaidl/ns-oaidl-safearray)<br/>
 [CComSafeArray::Create](#create)<br/>
 [CComSafeArray::Destroy](#destroy)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
