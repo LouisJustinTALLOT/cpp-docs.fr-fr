@@ -1,21 +1,21 @@
 ---
-title: switch_type (C++ attribut COM)
+title: switch_type (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: b461769d3d988efae0be7380e1e0112e3f3cf801
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3a4187c629238fa464a607c0b653f857fa44b6a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407118"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513949"
 ---
-# <a name="switchtype"></a>switch_type
+# <a name="switch_type"></a>switch_type
 
-Identifie le type de la variable utilisée en tant que l’union discriminante.
+Identifie le type de la variable utilisée en tant qu’Union discriminante.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,13 +28,13 @@ type
 ### <a name="parameters"></a>Paramètres
 
 *type*<br/>
-Le type de commutateur, peut être un type entier, caractère, booléen ou d’énumération.
+Le type de commutateur peut être un type entier, caractère, booléen ou énumération.
 
 ## <a name="remarks"></a>Notes
 
-Le **switch_type** C++ attribut a les mêmes fonctionnalités que le [switch_type](/windows/desktop/Midl/switch-type) attribut MIDL.
+L’attribut **switch_type** C++ a les mêmes fonctionnalités que l’attribut MIDL [switch_type](/windows/win32/Midl/switch-type) .
 
-Attributs C++ ne gèrent pas [encapsulé unions](/windows/desktop/Midl/encapsulated-unions). [Unions nonencapsulated](/windows/desktop/Midl/nonencapsulated-unions) sont pris en charge uniquement sous la forme suivante :
+C++les attributs ne prennent pas en charge les [unions encapsulées](/windows/win32/Midl/encapsulated-unions). Les unions qui ne sont pas [encapsulées](/windows/win32/Midl/nonencapsulated-unions) sont prises en charge uniquement sous la forme suivante :
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -55,7 +55,7 @@ struct SizedValue2 {
 
 ## <a name="example"></a>Exemple
 
-Consultez le [cas](case-cpp.md) exemple pour un exemple d’utilisation de **switch_type**.
+Pour obtenir un exemple d’utilisation de **switch_type**, consultez l’exemple de [cas](case-cpp.md) .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -65,8 +65,8 @@ Consultez le [cas](case-cpp.md) exemple pour un exemple d’utilisation de **swi
 |-|-|
 |**S'applique à**|**typedef**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

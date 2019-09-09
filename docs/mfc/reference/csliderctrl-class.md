@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 4db27112daf65b2c3f477527cd7b4351b91d7f18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fffdfc002b25fdcd72dcbbf53e7e6c321f55296
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324413"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502518"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl (classe)
 
@@ -103,53 +103,53 @@ class CSliderCtrl : public CWnd
 
 |Nom|Description|
 |----------|-----------------|
-|[CSliderCtrl::ClearSel](#clearsel)|Efface la sélection actuelle d’un contrôle slider.|
-|[CSliderCtrl::ClearTics](#cleartics)|Supprime les marques de graduation actuelle à partir d’un contrôle slider.|
-|[CSliderCtrl::Create](#create)|Crée un contrôle slider et l’attache à un `CSliderCtrl` objet.|
-|[CSliderCtrl::CreateEx](#createex)|Crée un contrôle slider avec les styles étendus Windows spécifiés et l’attache à un `CSliderCtrl` objet.|
-|[CSliderCtrl::GetBuddy](#getbuddy)|Récupère le handle de fenêtre associée contrôle slider à un emplacement donné.|
-|[CSliderCtrl::GetChannelRect](#getchannelrect)|Récupère la taille de canal du contrôle de curseur.|
-|[CSliderCtrl::GetLineSize](#getlinesize)|Récupère la taille de ligne d’un contrôle slider.|
-|[CSliderCtrl::GetNumTics](#getnumtics)|Récupère le nombre de graduations dans un contrôle slider.|
-|[CSliderCtrl::GetPageSize](#getpagesize)|Récupère la taille de page d’un contrôle slider.|
+|[CSliderCtrl::ClearSel](#clearsel)|Efface la sélection actuelle dans un contrôle Slider.|
+|[CSliderCtrl::ClearTics](#cleartics)|Supprime les graduations actuelles d’un contrôle Slider.|
+|[CSliderCtrl::Create](#create)|Crée un contrôle Slider et l’attache à un `CSliderCtrl` objet.|
+|[CSliderCtrl::CreateEx](#createex)|Crée un contrôle Slider avec les styles étendus Windows spécifiés et l’attache à un `CSliderCtrl` objet.|
+|[CSliderCtrl::GetBuddy](#getbuddy)|Récupère le handle d’une fenêtre associée de contrôle Slider à un emplacement donné.|
+|[CSliderCtrl::GetChannelRect](#getchannelrect)|Récupère la taille du canal du contrôle Slider.|
+|[CSliderCtrl::GetLineSize](#getlinesize)|Récupère la taille de ligne d’un contrôle Slider.|
+|[CSliderCtrl::GetNumTics](#getnumtics)|Récupère le nombre de graduations dans un contrôle Slider.|
+|[CSliderCtrl::GetPageSize](#getpagesize)|Récupère la taille de page d’un contrôle Slider.|
 |[CSliderCtrl::GetPos](#getpos)|Récupère la position actuelle du curseur.|
-|[CSliderCtrl::GetRange](#getrange)|Récupère les positions minimales et maximales pour un curseur.|
-|[CSliderCtrl::GetRangeMax](#getrangemax)|Récupère la position maximale pour un curseur.|
+|[CSliderCtrl::GetRange](#getrange)|Récupère les positions minimale et maximale d’un curseur.|
+|[CSliderCtrl::GetRangeMax](#getrangemax)|Récupère la position maximale d’un curseur.|
 |[CSliderCtrl::GetRangeMin](#getrangemin)|Récupère la position minimale pour un curseur.|
 |[CSliderCtrl::GetSelection](#getselection)|Récupère la plage de la sélection actuelle.|
-|[CSliderCtrl::GetThumbLength](#getthumblength)|Récupère la longueur du curseur dans le contrôle de barre de suivi actuel.|
-|[CSliderCtrl::GetThumbRect](#getthumbrect)|Récupère la taille du curseur de défilement du contrôle slider.|
-|[CSliderCtrl::GetTic](#gettic)|Récupère la position de la graduation spécifié.|
-|[CSliderCtrl::GetTicArray](#getticarray)|Récupère le tableau d’interrogation de positions de graduations pour un contrôle slider.|
-|[CSliderCtrl::GetTicPos](#getticpos)|Récupère la position de la graduation spécifié dans les coordonnées clientes.|
-|[CSliderCtrl::GetToolTips](#gettooltips)|Récupère le handle pour le contrôle d’info-bulle assigné au contrôle de curseur, le cas échéant.|
-|[CSliderCtrl::SetBuddy](#setbuddy)|Assigne une fenêtre en tant que la fenêtre associée pour un contrôle slider.|
-|[CSliderCtrl::SetLineSize](#setlinesize)|Définit la taille de ligne d’un contrôle slider.|
-|[CSliderCtrl::SetPageSize](#setpagesize)|Définit la taille de page d’un contrôle slider.|
+|[CSliderCtrl::GetThumbLength](#getthumblength)|Récupère la longueur du curseur dans le contrôle TrackBar actuel.|
+|[CSliderCtrl::GetThumbRect](#getthumbrect)|Récupère la taille du curseur du contrôle Slider.|
+|[CSliderCtrl::GetTic](#gettic)|Récupère la position de la graduation spécifiée.|
+|[CSliderCtrl::GetTicArray](#getticarray)|Récupère le tableau des positions des graduations pour un contrôle Slider.|
+|[CSliderCtrl::GetTicPos](#getticpos)|Récupère la position de la graduation spécifiée, en coordonnées clientes.|
+|[CSliderCtrl::GetToolTips](#gettooltips)|Récupère le handle du contrôle ToolTip affecté au contrôle Slider, le cas échéant.|
+|[CSliderCtrl::SetBuddy](#setbuddy)|Assigne une fenêtre comme fenêtre associée pour un contrôle Slider.|
+|[CSliderCtrl::SetLineSize](#setlinesize)|Définit la taille de ligne d’un contrôle Slider.|
+|[CSliderCtrl::SetPageSize](#setpagesize)|Définit la taille de page d’un contrôle Slider.|
 |[CSliderCtrl::SetPos](#setpos)|Définit la position actuelle du curseur.|
-|[CSliderCtrl::SetRange](#setrange)|Définit les positions minimales et maximales pour un curseur.|
-|[CSliderCtrl::SetRangeMax](#setrangemax)|Définit la position maximale pour un curseur.|
-|[CSliderCtrl::SetRangeMin](#setrangemin)|Définit la position minimale pour un curseur.|
-|[CSliderCtrl::SetSelection](#setselection)|Définit la durée de la sélection actuelle.|
-|[CSliderCtrl::SetThumbLength](#setthumblength)|Définit la longueur du curseur dans le contrôle de barre de suivi actuel.|
-|[CSliderCtrl::SetTic](#settic)|Définit la position de la graduation spécifié.|
-|[CSliderCtrl::SetTicFreq](#setticfreq)|Définit la fréquence des graduations marques par incrément de contrôle slider.|
-|[CSliderCtrl::SetTipSide](#settipside)|Positions un contrôle d’info-bulle utilisée par un contrôle de barre de suivi.|
-|[CSliderCtrl::SetToolTips](#settooltips)|Affecte un contrôle d’info-bulle à un contrôle slider.|
+|[CSliderCtrl::SetRange](#setrange)|Définit les positions minimale et maximale d’un curseur.|
+|[CSliderCtrl::SetRangeMax](#setrangemax)|Définit la position maximale d’un curseur.|
+|[CSliderCtrl::SetRangeMin](#setrangemin)|Définit la position minimale d’un curseur.|
+|[CSliderCtrl::SetSelection](#setselection)|Définit la plage de la sélection actuelle.|
+|[CSliderCtrl::SetThumbLength](#setthumblength)|Définit la longueur du curseur dans le contrôle TrackBar actuel.|
+|[CSliderCtrl::SetTic](#settic)|Définit la position de la graduation spécifiée.|
+|[CSliderCtrl::SetTicFreq](#setticfreq)|Définit la fréquence des graduations par incrément du contrôle Slider.|
+|[CSliderCtrl::SetTipSide](#settipside)|Positionne un contrôle ToolTip utilisé par un contrôle TrackBar.|
+|[CSliderCtrl::SetToolTips](#settooltips)|Assigne un contrôle ToolTip à un contrôle Slider.|
 
 ## <a name="remarks"></a>Notes
 
-Un « contrôle de curseur » (également appelé barre de suivi) est une fenêtre contenant un curseur et des coches facultatives. Lorsque l’utilisateur déplace le curseur, à l’aide de la souris ou les touches de direction, le contrôle envoie des messages de notification pour indiquer la modification.
+Un « contrôle Slider » (également appelé TrackBar) est une fenêtre contenant un curseur et des graduations facultatives. Lorsque l’utilisateur déplace le curseur, à l’aide de la souris ou des touches de direction, le contrôle envoie des messages de notification pour indiquer la modification.
 
-Contrôles Slider sont utiles lorsque vous souhaitez que l’utilisateur de sélectionner une valeur discrète ou un ensemble de valeurs consécutives dans une plage. Par exemple, vous pouvez utiliser un contrôle slider pour autoriser l’utilisateur à définir la fréquence de répétition du clavier en déplaçant le curseur jusqu'à une graduation donnée.
+Les contrôles Slider sont utiles lorsque vous souhaitez que l’utilisateur sélectionne une valeur discrète ou un ensemble de valeurs consécutives dans une plage. Par exemple, vous pouvez utiliser un contrôle Slider pour permettre à l’utilisateur de définir la vitesse de répétition du clavier en déplaçant le curseur vers une graduation donnée.
 
-Ce contrôle (et par conséquent la `CSliderCtrl` classe) est disponible uniquement pour les programmes s’exécutant sous Windows 95/98 et Windows NT version 3.51 et ultérieures.
+Ce contrôle (et par conséquent `CSliderCtrl` la classe) est uniquement disponible pour les programmes qui s’exécutent sous Windows 95/98 et Windows NT version 3,51 et versions ultérieures.
 
-Le curseur se déplace en incréments que vous spécifiez lors de sa création. Par exemple, si vous spécifiez que le curseur doit avoir une plage de cinq, le curseur ne peut occuper six positions : une position sur le côté gauche du contrôle slider et une position pour chaque incrément dans la plage. En règle générale, chacune de ces positions est identifiée par une graduation.
+Le curseur se déplace par incréments que vous spécifiez au moment de sa création. Par exemple, si vous spécifiez que le curseur doit avoir une plage de cinq, le curseur ne peut occuper que six positions : une position à gauche du contrôle Slider et une position pour chaque incrément de la plage. En règle générale, chacune de ces positions est identifiée par une graduation.
 
-Vous créez un curseur à l’aide du constructeur et le `Create` fonction membre de `CSliderCtrl`. Une fois que vous avez créé un contrôle slider, vous pouvez utiliser les fonctions membres dans `CSliderCtrl` changer un grand nombre de ses propriétés. Les modifications que vous pouvez effectuer incluent définissant les positions minimales et maximales pour le curseur, le dessin des graduations, la définition d’une plage de sélection et le repositionnement du curseur.
+Vous créez un curseur à l’aide du constructeur et de `Create` la fonction membre `CSliderCtrl`de. Une fois que vous avez créé un contrôle Slider, vous pouvez utiliser des fonctions `CSliderCtrl` membres dans pour modifier un grand nombre de ses propriétés. Les modifications que vous pouvez apporter incluent la définition des positions minimale et maximale pour le curseur, le dessin des graduations, la définition d’une plage de sélection et le repositionnement du curseur.
 
-Pour plus d’informations sur l’utilisation de `CSliderCtrl`, consultez [contrôles](../../mfc/controls-mfc.md) et [à l’aide de CSliderCtrl](../../mfc/using-csliderctrl.md).
+Pour plus d’informations sur `CSliderCtrl`l’utilisation de, consultez [contrôles](../../mfc/controls-mfc.md) et [utilisation de CSliderCtrl](../../mfc/using-csliderctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -167,7 +167,7 @@ Pour plus d’informations sur l’utilisation de `CSliderCtrl`, consultez [cont
 
 ##  <a name="clearsel"></a>  CSliderCtrl::ClearSel
 
-Efface la sélection actuelle d’un contrôle slider.
+Efface la sélection actuelle dans un contrôle Slider.
 
 ```
 void ClearSel(BOOL bRedraw = FALSE);
@@ -176,11 +176,11 @@ void ClearSel(BOOL bRedraw = FALSE);
 ### <a name="parameters"></a>Paramètres
 
 *bRedraw*<br/>
-Indicateur de renouvellement. Si ce paramètre est TRUE, le curseur est redessiné après que la sélection est désactivée ; Sinon, le curseur n’est pas redessiné.
+Indicateur de redessin. Si ce paramètre a la valeur TRUE, le curseur est redessiné après l’effacement de la sélection ; dans le cas contraire, le curseur n’est pas redessiné.
 
 ##  <a name="cleartics"></a>  CSliderCtrl::ClearTics
 
-Supprime les marques de graduation actuelle à partir d’un contrôle slider.
+Supprime les graduations actuelles d’un contrôle Slider.
 
 ```
 void ClearTics(BOOL bRedraw = FALSE);
@@ -189,11 +189,11 @@ void ClearTics(BOOL bRedraw = FALSE);
 ### <a name="parameters"></a>Paramètres
 
 *bRedraw*<br/>
-Indicateur de renouvellement. Si ce paramètre est TRUE, le curseur est redessiné après que les graduations sont désactivées ; Sinon, le curseur n’est pas redessiné.
+Indicateur de redessin. Si ce paramètre a la valeur TRUE, le curseur est redessiné après l’effacement des graduations ; dans le cas contraire, le curseur n’est pas redessiné.
 
 ##  <a name="create"></a>  CSliderCtrl::Create
 
-Crée un contrôle slider et l’attache à un `CSliderCtrl` objet.
+Crée un contrôle Slider et l’attache à un `CSliderCtrl` objet.
 
 ```
 virtual BOOL Create(
@@ -206,32 +206,32 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Paramètres
 
 *dwStyle*<br/>
-Spécifie le style du contrôle slider. Appliquer n’importe quelle combinaison de [styles de contrôle slider](/windows/desktop/Controls/trackbar-control-styles), comme décrit dans le Kit de développement logiciel Windows, au contrôle.
+Spécifie le style du contrôle Slider. Appliquez une combinaison quelconque de [styles de contrôle Slider](/windows/win32/Controls/trackbar-control-styles), décrite dans le SDK Windows, au contrôle.
 
 *rect*<br/>
-Spécifie la taille et la position du curseur. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure.
+Spécifie la taille et la position du contrôle Slider. Il peut s’agir d’un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou d’une structure [Rect](/previous-versions/dd162897\(v=vs.85\)) .
 
 *pParentWnd*<br/>
-Spécifie les fenêtre du parent du contrôle slider, généralement un `CDialog`. Il ne doit pas être NULL.
+Spécifie la fenêtre parente du contrôle Slider, généralement `CDialog`. Il ne doit pas être NULL.
 
 *nID*<br/>
-Spécifie l’ID. du contrôle de curseur
+Spécifie l’ID du contrôle Slider.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’initialisation a abouti ; sinon 0.
+Valeur différente de zéro si l’initialisation a réussi ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Vous construisez un `CSliderCtrl` en deux étapes. Tout d’abord, appelez le constructeur, puis `Create`, ce qui crée le contrôle slider et l’attache à la `CSliderCtrl` objet.
+Vous construisez `CSliderCtrl` un en deux étapes. Tout d’abord, appelez le constructeur, puis `Create`appelez, qui crée le contrôle Slider et l’attache à l' `CSliderCtrl` objet.
 
-Selon les valeurs définies pour *dwStyle*, le contrôle de curseur peut avoir une orientation verticale ou horizontale. Il peut avoir des graduations sur un côté, les deux côtés, ou aucune des deux. Il peut également être utilisé pour spécifier une plage de valeurs consécutives.
+Selon les valeurs définies pour *dwStyle*, le contrôle Slider peut avoir une orientation verticale ou horizontale. Elle peut avoir des graduations de part et d’autre, ou aucune des deux. Elle peut également être utilisée pour spécifier une plage de valeurs consécutives.
 
-Pour appliquer des styles de fenêtre étendus au contrôle de curseur, appelez [CreateEx](#createex) au lieu de `Create`.
+Pour appliquer des styles de fenêtre étendus au contrôle Slider, appelez [CreateEx](#createex) au `Create`lieu de.
 
 ##  <a name="createex"></a>  CSliderCtrl::CreateEx
 
-Crée un contrôle (une fenêtre enfant) et l’associe le `CSliderCtrl` objet.
+Crée un contrôle (une fenêtre enfant) et l’associe à `CSliderCtrl` l’objet.
 
 ```
 virtual BOOL CreateEx(
@@ -245,19 +245,19 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Paramètres
 
 *dwExStyle*<br/>
-Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) dans le SDK Windows.
+Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles Windows étendus, consultez le paramètre *dwExStyle* pour [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) dans le SDK Windows.
 
 *dwStyle*<br/>
-Spécifie le style du contrôle slider. Appliquer n’importe quelle combinaison de [styles de contrôle slider](/windows/desktop/Controls/trackbar-control-styles), comme décrit dans le Kit de développement logiciel Windows, au contrôle.
+Spécifie le style du contrôle Slider. Appliquez une combinaison quelconque de [styles de contrôle Slider](/windows/win32/Controls/trackbar-control-styles), décrite dans le SDK Windows, au contrôle.
 
 *rect*<br/>
-Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
+Référence à une structure [Rect](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, en coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
 Pointeur vers la fenêtre qui est le parent du contrôle.
 
 *nID*<br/>
-ID de fenêtre enfant. du contrôle
+ID de la fenêtre enfant du contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -265,7 +265,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus de Windows, spécifiés par la préface de style étendu Windows **WS_EX_**.
+Utilisez `CreateEx` au lieu de [Create](#create) pour appliquer des styles Windows étendus, spécifiés par la préface de style étendu Windows **WS_EX_** .
 
 ##  <a name="csliderctrl"></a>  CSliderCtrl::CSliderCtrl
 
@@ -277,7 +277,7 @@ CSliderCtrl();
 
 ##  <a name="getbuddy"></a>  CSliderCtrl::GetBuddy
 
-Récupère le handle de fenêtre associée contrôle slider à un emplacement donné.
+Récupère le handle d’une fenêtre associée de contrôle Slider à un emplacement donné.
 
 ```
 CWnd* GetBuddy(BOOL fLocation = TRUE) const;
@@ -286,23 +286,23 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 ### <a name="parameters"></a>Paramètres
 
 *fLocation*<br/>
-Une valeur booléenne qui indique les deux handles de fenêtre associé à récupérer. Peut avoir l'une des valeurs suivantes :
+Valeur booléenne qui indique le ou les deux handles de fenêtre associée à récupérer. Peut avoir l'une des valeurs suivantes :
 
-- TRUE récupère le handle pour l’ami à gauche du curseur. Si le contrôle de curseur utilise le style TBS_VERT, le message récupérera l’ami au-dessus du curseur.
+- TRUE récupère le handle de l’ami à gauche du curseur. Si le contrôle Slider utilise le style TBS_VERT, le message récupère l’ami au-dessus du curseur.
 
-- FALSE récupère le handle pour l’ami à droite du curseur. Si le contrôle de curseur utilise le style TBS_VERT, le message récupérera l’ami sous le curseur.
+- FALSe récupère le handle de l’ami à droite du curseur. Si le contrôle Slider utilise le style TBS_VERT, le message récupère l’ami sous le curseur.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre associée à l’emplacement spécifié par *fLocation*, ou NULL si aucune fenêtre associée n’existe à cet emplacement.
+Pointeur vers un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fenêtre associée à l’emplacement spécifié par *FLOCATION*, ou null si aucune fenêtre associée n’existe à cet emplacement.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du message Win32 [TBM_GETBUDDY](/windows/desktop/Controls/tbm-getbuddy), comme décrit dans le SDK Windows. Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](/windows/desktop/Controls/trackbar-control-styles) dans le SDK Windows.
+Cette fonction membre implémente le comportement du [TBM_GETBUDDY](/windows/win32/Controls/tbm-getbuddy)de message Win32, comme décrit dans la SDK Windows. Pour obtenir une description des styles de contrôle Slider, consultez la rubrique [styles de contrôle TrackBar](/windows/win32/Controls/trackbar-control-styles) dans le SDK Windows.
 
 ##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect
 
-Récupère la taille et la position du rectangle englobant pour les canaux d’un contrôle slider.
+Récupère la taille et la position du rectangle englobant pour le canal d’un contrôle Slider.
 
 ```
 void GetChannelRect(LPRECT lprc) const;
@@ -311,15 +311,15 @@ void GetChannelRect(LPRECT lprc) const;
 ### <a name="parameters"></a>Paramètres
 
 *lprc*<br/>
-Un pointeur vers un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui contient la taille et la position du canal de rectangle englobant de la fonction retourne.
+Pointeur vers un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui contient la taille et la position du rectangle englobant du canal quand la fonction retourne une valeur.
 
 ### <a name="remarks"></a>Notes
 
-Le canal est la zone sur laquelle le curseur se déplace et qui contient la mise en surbrillance lorsqu’une plage est sélectionnée.
+Le canal est la zone sur laquelle le curseur se déplace et qui contient la surbrillance lorsqu’une plage est sélectionnée.
 
 ##  <a name="getlinesize"></a>  CSliderCtrl::GetLineSize
 
-Récupère la taille de la ligne pour un contrôle slider.
+Récupère la taille de la ligne pour un contrôle Slider.
 
 ```
 int GetLineSize() const;
@@ -327,15 +327,15 @@ int GetLineSize() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La taille d’une ligne pour le contrôle slider.
+Taille d’une ligne pour le contrôle Slider.
 
 ### <a name="remarks"></a>Notes
 
-La taille de ligne affecte la quantité le curseur se déplace pour les notifications TB_LINEUP et quel. Le paramètre par défaut pour la taille de ligne est 1.
+La taille de ligne affecte le déplacement du curseur pour les notifications TB_LINEUP et TB_LINEDOWN. La valeur par défaut de la taille de ligne est 1.
 
 ##  <a name="getnumtics"></a>  CSliderCtrl::GetNumTics
 
-Récupère le nombre de graduations dans un contrôle slider.
+Récupère le nombre de graduations dans un contrôle Slider.
 
 ```
 UINT GetNumTics() const;
@@ -343,11 +343,11 @@ UINT GetNumTics() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre de graduations dans le contrôle slider.
+Nombre de graduations dans le contrôle Slider.
 
 ##  <a name="getpagesize"></a>  CSliderCtrl::GetPageSize
 
-Récupère la taille de la page pour un contrôle slider.
+Récupère la taille de la page pour un contrôle Slider.
 
 ```
 int GetPageSize() const;
@@ -355,15 +355,15 @@ int GetPageSize() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La taille d’une page pour le contrôle slider.
+Taille d’une page pour le contrôle Slider.
 
 ### <a name="remarks"></a>Notes
 
-La taille de page affecte la quantité le curseur se déplace pour les notifications TB_PAGEUP et TB_PAGEDOWN.
+La taille de la page a une incidence sur le déplacement du curseur pour les notifications TB_PAGEUP et TB_PAGEDOWN.
 
 ##  <a name="getpos"></a>  CSliderCtrl::GetPos
 
-Récupère la position actuelle du curseur dans un contrôle slider.
+Récupère la position actuelle du curseur dans un contrôle Slider.
 
 ```
 int GetPos() const;
@@ -375,7 +375,7 @@ Position actuelle.
 
 ##  <a name="getrange"></a>  CSliderCtrl::GetRange
 
-Récupère les positions minimales et maximales pour le curseur d’un contrôle slider.
+Récupère les positions maximale et minimale du curseur dans un contrôle Slider.
 
 ```
 void GetRange(
@@ -393,11 +393,11 @@ Référence à un entier qui reçoit la position maximale.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction copie les valeurs dans les entiers référencés par *nMin* et *nMax*.
+Cette fonction copie les valeurs dans les entiers référencés par *nMin* et *nmax*.
 
 ##  <a name="getrangemax"></a>  CSliderCtrl::GetRangeMax
 
-Récupère la position maximale pour le curseur d’un contrôle slider.
+Récupère la position maximale du curseur dans un contrôle Slider.
 
 ```
 int GetRangeMax() const;
@@ -409,7 +409,7 @@ Position maximale du contrôle.
 
 ##  <a name="getrangemin"></a>  CSliderCtrl::GetRangeMin
 
-Récupère la position minimale pour le curseur d’un contrôle slider.
+Récupère la position minimale du curseur dans un contrôle Slider.
 
 ```
 int GetRangeMin() const;
@@ -421,7 +421,7 @@ Position minimale du contrôle.
 
 ##  <a name="getselection"></a>  CSliderCtrl::GetSelection
 
-Récupère les positions de début et de fin de la sélection actuelle d’un contrôle slider.
+Récupère les positions de début et de fin de la sélection actuelle dans un contrôle Slider.
 
 ```
 void GetSelection(
@@ -439,7 +439,7 @@ Référence à un entier qui reçoit la position de fin de la sélection actuell
 
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
 
-Récupère la longueur du curseur dans le contrôle de barre de suivi actuel.
+Récupère la longueur du curseur dans le contrôle TrackBar actuel.
 
 ```
 int GetThumbLength() const;
@@ -447,15 +447,15 @@ int GetThumbLength() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La longueur du curseur, en pixels.
+Longueur du curseur, en pixels.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [TBM_GETTHUMBLENGTH](/windows/desktop/Controls/tbm-getthumblength) message, qui est décrite dans le SDK Windows.
+Cette méthode envoie le message [TBM_GETTHUMBLENGTH](/windows/win32/Controls/tbm-getthumblength) , qui est décrit dans le SDK Windows.
 
 ##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect
 
-Récupère la taille et la position du rectangle englobant pour le slider (curseur de défilement) d’un contrôle slider.
+Récupère la taille et la position du rectangle englobant pour le curseur (Thumb) dans un contrôle Slider.
 
 ```
 void GetThumbRect(LPRECT lprc) const;
@@ -464,11 +464,11 @@ void GetThumbRect(LPRECT lprc) const;
 ### <a name="parameters"></a>Paramètres
 
 *lprc*<br/>
-Un pointeur vers un `CRect` objet qui contient le rectangle englobant pour le curseur lors de la fonction retourne.
+Pointeur vers un `CRect` objet qui contient le rectangle englobant pour le curseur lorsque la fonction retourne.
 
 ##  <a name="gettic"></a>  CSliderCtrl::GetTic
 
-Récupère la position d’une graduation d’un contrôle slider.
+Récupère la position d’une graduation dans un contrôle Slider.
 
 ```
 int GetTic(int nTic) const;
@@ -481,11 +481,11 @@ Index de base zéro identifiant une graduation.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La position de la graduation spécifié ou - 1 si *nTic* ne spécifie pas un index valide.
+Position de la graduation spécifiée, ou-1 si *nTic* ne spécifie pas d’index valide.
 
 ##  <a name="getticarray"></a>  CSliderCtrl::GetTicArray
 
-Récupère l’adresse du tableau qui contient les positions des graduations pour un contrôle slider.
+Récupère l’adresse du tableau contenant les positions des graduations pour un contrôle Slider.
 
 ```
 DWORD* GetTicArray() const;
@@ -493,11 +493,11 @@ DWORD* GetTicArray() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’adresse du tableau qui contient les positions de marque de graduation pour le contrôle slider.
+Adresse du tableau contenant les positions des graduations du contrôle Slider.
 
 ##  <a name="getticpos"></a>  CSliderCtrl::GetTicPos
 
-Récupère la position physique actuelle d’une graduation d’un contrôle slider.
+Récupère la position physique actuelle d’une graduation dans un contrôle Slider.
 
 ```
 int GetTicPos(int nTic) const;
@@ -510,11 +510,11 @@ Index de base zéro identifiant une graduation.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La position physique, en coordonnées clientes, de la graduation spécifié ou - 1 si *nTic* ne spécifie pas un index valide.
+Position physique, en coordonnées clientes, de la graduation spécifiée ou-1 si *nTic* ne spécifie pas d’index valide.
 
 ##  <a name="gettooltips"></a>  CSliderCtrl::GetToolTips
 
-Récupère le handle pour le contrôle d’info-bulle assigné au contrôle de curseur, le cas échéant.
+Récupère le handle du contrôle ToolTip affecté au contrôle Slider, le cas échéant.
 
 ```
 CToolTipCtrl* GetToolTips() const;
@@ -522,17 +522,17 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) de l’objet, ou NULL si l’info-bulles ne sont pas en cours d’utilisation. Si le contrôle slider n’utilise pas le style TBS_TOOLTIPS, la valeur de retour est NULL.
+Pointeur vers un objet [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) , ou null si les info-bulles ne sont pas utilisées. Si le contrôle Slider n’utilise pas le style TBS_TOOLTIPS, la valeur de retour est NULL.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du message Win32 [TBM_GETTOOLTIPS](/windows/desktop/Controls/tbm-gettooltips), comme décrit dans le SDK Windows. Notez que cette fonction membre retourne un `CToolTipCtrl` objet au lieu d’un handle à un contrôle.
+Cette fonction membre implémente le comportement du [TBM_GETTOOLTIPS](/windows/win32/Controls/tbm-gettooltips)de message Win32, comme décrit dans la SDK Windows. Notez que cette fonction membre retourne un `CToolTipCtrl` objet au lieu d’un handle vers un contrôle.
 
-Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](/windows/desktop/Controls/trackbar-control-styles) dans le SDK Windows.
+Pour obtenir une description des styles de contrôle Slider, consultez la rubrique [styles de contrôle TrackBar](/windows/win32/Controls/trackbar-control-styles) dans le SDK Windows.
 
 ##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy
 
-Assigne une fenêtre en tant que la fenêtre associée pour un contrôle slider.
+Assigne une fenêtre comme fenêtre associée pour un contrôle Slider.
 
 ```
 CWnd* SetBuddy(
@@ -543,28 +543,28 @@ CWnd* SetBuddy(
 ### <a name="parameters"></a>Paramètres
 
 *pWndBuddy*<br/>
-Un pointeur vers un `CWnd` objet qui sera définie en tant qu’ami du contrôle slider.
+Pointeur vers un `CWnd` objet qui sera défini en tant que associé du contrôle Slider.
 
 *fLocation*<br/>
-Valeur qui spécifie l’emplacement d’affichage de la fenêtre associée. Cette valeur peut être une des opérations suivantes :
+Valeur spécifiant l’emplacement d’affichage de la fenêtre associée. Cette valeur peut être l’une des suivantes :
 
-- TRUE l’ami apparaît à gauche de la barre de suivi si le contrôle de barre de suivi utilise le style de styles TBS_HORZ. Si la barre de suivi utilise le style TBS_VERT, les contacts s’affiche au-dessus du contrôle de barre de suivi.
+- TRUE l’ami s’affiche à gauche du TrackBar si le contrôle TrackBar utilise le style TBS_HORZ. Si le TrackBar utilise le style TBS_VERT, l’ami s’affiche au-dessus du contrôle TrackBar.
 
-- FALSE l’ami s’affiche à droite de la barre de suivi si le contrôle de barre de suivi utilise le style de styles TBS_HORZ. Si la barre de suivi utilise le style TBS_VERT, l’ami apparaît sous le contrôle de barre de suivi.
+- FALSe, l’ami apparaît à droite du TrackBar si le contrôle TrackBar utilise le style TBS_HORZ. Si le TrackBar utilise le style TBS_VERT, l’ami apparaît sous le contrôle TrackBar.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui a été précédemment affecté au contrôle de curseur à cet emplacement.
+Pointeur vers un objet [CWnd](../../mfc/reference/cwnd-class.md) précédemment assigné au contrôle Slider à cet emplacement.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du message Win32 [TBM_SETBUDDY](/windows/desktop/Controls/tbm-setbuddy), comme décrit dans le SDK Windows. Notez que cette fonction membre utilise des pointeurs vers `CWnd` objets, plutôt que des handles de fenêtre pour sa valeur de retour et le paramètre.
+Cette fonction membre implémente le comportement du [TBM_SETBUDDY](/windows/win32/Controls/tbm-setbuddy)de message Win32, comme décrit dans la SDK Windows. Notez que cette fonction membre utilise des pointeurs `CWnd` vers des objets plutôt que des handles de fenêtre pour la valeur de retour et le paramètre.
 
-Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](/windows/desktop/Controls/trackbar-control-styles) dans le SDK Windows.
+Pour obtenir une description des styles de contrôle Slider, consultez la rubrique [styles de contrôle TrackBar](/windows/win32/Controls/trackbar-control-styles) dans le SDK Windows.
 
 ##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize
 
-Définit la taille de la ligne pour un contrôle slider.
+Définit la taille de la ligne d’un contrôle Slider.
 
 ```
 int SetLineSize(int nSize);
@@ -573,19 +573,19 @@ int SetLineSize(int nSize);
 ### <a name="parameters"></a>Paramètres
 
 *nSize*<br/>
-La nouvelle taille de ligne du contrôle slider.
+Nouvelle taille de ligne du contrôle Slider.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La taille de la ligne précédente.
+Taille de ligne précédente.
 
 ### <a name="remarks"></a>Notes
 
-La taille de ligne affecte la quantité le curseur se déplace pour les notifications TB_LINEUP et quel.
+La taille de ligne affecte le déplacement du curseur pour les notifications TB_LINEUP et TB_LINEDOWN.
 
 ##  <a name="setpagesize"></a>  CSliderCtrl::SetPageSize
 
-Définit la taille de la page pour un contrôle slider.
+Définit la taille de la page pour un contrôle Slider.
 
 ```
 int SetPageSize(int nSize);
@@ -594,19 +594,19 @@ int SetPageSize(int nSize);
 ### <a name="parameters"></a>Paramètres
 
 *nSize*<br/>
-La nouvelle taille de page du contrôle slider.
+Nouvelle taille de page du contrôle Slider.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La taille de page précédente.
+Taille de page précédente.
 
 ### <a name="remarks"></a>Notes
 
-La taille de page affecte la quantité le curseur se déplace pour les notifications TB_PAGEUP et TB_PAGEDOWN.
+La taille de la page a une incidence sur le déplacement du curseur pour les notifications TB_PAGEUP et TB_PAGEDOWN.
 
 ##  <a name="setpos"></a>  CSliderCtrl::SetPos
 
-Définit la position actuelle du curseur dans un contrôle slider.
+Définit la position actuelle du curseur dans un contrôle Slider.
 
 ```
 void SetPos(int nPos);
@@ -619,7 +619,7 @@ Spécifie la nouvelle position du curseur.
 
 ##  <a name="setrange"></a>  CSliderCtrl::SetRange
 
-Définit la durée (positions minimales et maximales) pour le curseur d’un contrôle slider.
+Définit la plage (positions minimale et maximale) du curseur dans un contrôle Slider.
 
 ```
 void SetRange(
@@ -631,17 +631,17 @@ void SetRange(
 ### <a name="parameters"></a>Paramètres
 
 *nMin*<br/>
-Position minimale pour le curseur.
+Position minimale du curseur.
 
 *nMax*<br/>
-Position maximale pour le curseur.
+Position maximale du curseur.
 
 *bRedraw*<br/>
-L’indicateur de renouvellement. Si ce paramètre est TRUE, le curseur est redessiné après que la plage est définie ; Sinon, le curseur n’est pas redessiné.
+Indicateur de redessin. Si ce paramètre a la valeur TRUE, le curseur est redessiné après la définition de la plage ; dans le cas contraire, le curseur n’est pas redessiné.
 
 ##  <a name="setrangemax"></a>  CSliderCtrl::SetRangeMax
 
-Définit la durée maximale pour le curseur d’un contrôle slider.
+Définit la plage maximale du curseur dans un contrôle Slider.
 
 ```
 void SetRangeMax(
@@ -652,14 +652,14 @@ void SetRangeMax(
 ### <a name="parameters"></a>Paramètres
 
 *nMax*<br/>
-Position maximale pour le curseur.
+Position maximale du curseur.
 
 *bRedraw*<br/>
-L’indicateur de renouvellement. Si ce paramètre est TRUE, le curseur est redessiné après que la plage est définie ; Sinon, le curseur n’est pas redessiné.
+Indicateur de redessin. Si ce paramètre a la valeur TRUE, le curseur est redessiné après la définition de la plage ; dans le cas contraire, le curseur n’est pas redessiné.
 
 ##  <a name="setrangemin"></a>  CSliderCtrl::SetRangeMin
 
-Définit la durée minimale pour le curseur d’un contrôle slider.
+Définit la plage minimale du curseur dans un contrôle Slider.
 
 ```
 void SetRangeMin(
@@ -670,14 +670,14 @@ void SetRangeMin(
 ### <a name="parameters"></a>Paramètres
 
 *nMin*<br/>
-Position minimale pour le curseur.
+Position minimale du curseur.
 
 *bRedraw*<br/>
-L’indicateur de renouvellement. Si ce paramètre est TRUE, le curseur est redessiné après que la plage est définie ; Sinon, le curseur n’est pas redessiné.
+Indicateur de redessin. Si ce paramètre a la valeur TRUE, le curseur est redessiné après la définition de la plage ; dans le cas contraire, le curseur n’est pas redessiné.
 
 ##  <a name="setselection"></a>  CSliderCtrl::SetSelection
 
-Définit les positions de début et de fin pour la sélection actuelle d’un contrôle slider.
+Définit les positions de début et de fin de la sélection actuelle dans un contrôle Slider.
 
 ```
 void SetSelection(
@@ -688,14 +688,14 @@ void SetSelection(
 ### <a name="parameters"></a>Paramètres
 
 *nMin*<br/>
-Position de départ pour le curseur.
+Position de départ du curseur.
 
 *nMax*<br/>
-Position de fin pour le curseur.
+Position de fin du curseur.
 
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
 
-Définit la longueur du curseur dans le contrôle de barre de suivi actuel.
+Définit la longueur du curseur dans le contrôle TrackBar actuel.
 
 ```
 void SetThumbLength(int nLength);
@@ -705,29 +705,29 @@ void SetThumbLength(int nLength);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*nLength*|[in] Longueur du curseur, en pixels.|
+|*nLength*|dans Longueur du curseur, en pixels.|
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode exige que le contrôle de barre de suivi [TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles) style.
+Cette méthode exige que le contrôle TrackBar soit défini sur [TBS_FIXEDLENGTH](/windows/win32/Controls/trackbar-control-styles) style.
 
-Cette méthode envoie le [TBM_SETTHUMBLENGTH](/windows/desktop/Controls/tbm-setthumblength) message, qui est décrite dans le SDK Windows.
+Cette méthode envoie le message [TBM_SETTHUMBLENGTH](/windows/win32/Controls/tbm-setthumblength) , qui est décrit dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
-L’exemple de code suivant définit la variable, `m_sliderCtrl`, qui est utilisé pour accéder au contrôle de barre de suivi actuel. L’exemple définit également une variable, `thumbLength`, qui est utilisé pour stocker la longueur par défaut du composant de curseur de défilement du contrôle trackbar. Ces variables sont utilisées dans l’exemple suivant.
+L’exemple de code suivant définit la variable `m_sliderCtrl`,, qui est utilisée pour accéder au contrôle TrackBar actuel. L’exemple définit également une variable, `thumbLength`, qui est utilisée pour stocker la longueur par défaut du composant Thumb du contrôle TrackBar. Ces variables sont utilisées dans l’exemple suivant.
 
 [!code-cpp[NVC_MFC_CSliderCtrl_s1#1](../../mfc/reference/codesnippet/cpp/csliderctrl-class_1.h)]
 
 ### <a name="example"></a>Exemple
 
-L’exemple de code suivant définit le composant de curseur de défilement du contrôle trackbar à deux fois sa longueur par défaut.
+L’exemple de code suivant définit le composant Thumb du contrôle TrackBar à deux fois sa longueur par défaut.
 
 [!code-cpp[NVC_MFC_CSliderCtrl_s1#2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]
 
 ##  <a name="settic"></a>  CSliderCtrl::SetTic
 
-Définit la position d’une graduation d’un contrôle slider.
+Définit la position d’une graduation dans un contrôle Slider.
 
 ```
 BOOL SetTic(int nTic);
@@ -740,11 +740,11 @@ Position de la graduation. Ce paramètre doit spécifier une valeur positive.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la graduation est définie ; sinon 0.
+Différent de zéro si la graduation est définie ; Sinon, 0.
 
 ##  <a name="setticfreq"></a>  CSliderCtrl::SetTicFreq
 
-Définit la fréquence avec graduée marques sont affichés dans un contrôle slider.
+Définit la fréquence d’affichage des graduations dans un curseur.
 
 ```
 void SetTicFreq(int nFreq);
@@ -757,13 +757,13 @@ Fréquence des graduations.
 
 ### <a name="remarks"></a>Notes
 
-Par exemple, si la fréquence est définie sur 2, une graduation est affichée pour chaque incrément autres dans la plage du curseur. Le paramètre par défaut pour la fréquence est 1 (autrement dit, chaque incrément dans la plage est associé à une graduation).
+Par exemple, si la fréquence est définie sur 2, une graduation est affichée pour chaque autre incrément dans la plage du curseur. La valeur par défaut de la fréquence est 1 (autrement dit, chaque incrément de la plage est associé à une graduation).
 
-Vous devez créer le contrôle avec le style TBS_AUTOTICKS pour utiliser cette fonction. Pour plus d’informations, consultez [CSliderCtrl::Create](#create).
+Vous devez créer le contrôle avec le style TBS_AUTOTICKS pour utiliser cette fonction. Pour plus d’informations, consultez [CSliderCtrl :: Create](#create).
 
 ##  <a name="settipside"></a>  CSliderCtrl::SetTipSide
 
-Positions un contrôle d’info-bulle utilisée par un contrôle de barre de suivi.
+Positionne un contrôle ToolTip utilisé par un contrôle TrackBar.
 
 ```
 int SetTipSide(int nLocation);
@@ -772,19 +772,19 @@ int SetTipSide(int nLocation);
 ### <a name="parameters"></a>Paramètres
 
 *nLocation*<br/>
-Valeur représentant l’emplacement auquel afficher le contrôle d’info-bulle. Pour obtenir la liste des valeurs possibles, consultez le message Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), comme décrit dans le SDK Windows.
+Valeur représentant l’emplacement d’affichage du contrôle ToolTip. Pour obtenir la liste des valeurs possibles, consultez le message Win32 [TBM_SETTIPSIDE](/windows/win32/Controls/tbm-settipside), comme décrit dans la SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur qui représente l’emplacement précédent du contrôle d’info-bulle. La valeur de retour correspond à l’une des valeurs possibles pour *%nemplacement*.
+Valeur qui représente l’emplacement précédent du contrôle ToolTip. La valeur de retour est égale à l’une des valeurs possibles de *nemplacement*.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du message Win32 TBM_SETTIPSIDE, comme décrit dans le SDK Windows. Les contrôles de curseur qui utilisent le style TBS_TOOLTIPS affichent des info-bulles. Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](/windows/desktop/Controls/trackbar-control-styles) dans le SDK Windows.
+Cette fonction membre implémente le comportement du TBM_SETTIPSIDE de message Win32, comme décrit dans la SDK Windows. Les contrôles Slider qui utilisent le style TBS_TOOLTIPS affichent des info-bulles. Pour obtenir une description des styles de contrôle Slider, consultez la rubrique [styles de contrôle TrackBar](/windows/win32/Controls/trackbar-control-styles) dans le SDK Windows.
 
 ##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips
 
-Affecte un contrôle d’info-bulle à un contrôle slider.
+Assigne un contrôle ToolTip à un contrôle Slider.
 
 ```
 void SetToolTips(CToolTipCtrl* pWndTip);
@@ -793,15 +793,15 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 ### <a name="parameters"></a>Paramètres
 
 *pWndTip*<br/>
-Un pointeur vers un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objet contenant les info-bulles à utiliser avec le contrôle slider.
+Pointeur vers un objet [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) contenant les info-bulles à utiliser avec le contrôle Slider.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du message Win32 [TBM_SETTOOLTIPS](/windows/desktop/Controls/tbm-settooltips), comme décrit dans le SDK Windows. Création d’un contrôle slider avec le style TBS_TOOLTIPS, il crée un contrôle d’info-bulle par défaut qui s’affiche à côté du curseur, en affichant la position actuelle du curseur. Pour obtenir une description des styles de contrôle de curseur, consultez [Styles du contrôle Trackbar](/windows/desktop/Controls/trackbar-control-styles) dans le SDK Windows.
+Cette fonction membre implémente le comportement du [TBM_SETTOOLTIPS](/windows/win32/Controls/tbm-settooltips)de message Win32, comme décrit dans la SDK Windows. Lorsqu’un contrôle Slider est créé avec le style TBS_TOOLTIPS, il crée un contrôle ToolTip par défaut qui apparaît à côté du curseur, affichant la position actuelle du curseur. Pour obtenir une description des styles de contrôle Slider, consultez la rubrique [styles de contrôle TrackBar](/windows/win32/Controls/trackbar-control-styles) dans le SDK Windows.
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC exemple CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CProgressCtrl, classe](../../mfc/reference/cprogressctrl-class.md)

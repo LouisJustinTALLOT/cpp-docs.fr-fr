@@ -170,7 +170,7 @@ Al         653.7
 Stan      4358.2
 ```
 
-Si vous remplacez l' `ios::fixed` indicateur par `ios::scientific`, le programme imprime ce qui suit:
+Si vous remplacez l' `ios::fixed` indicateur par `ios::scientific`, le programme imprime ce qui suit :
 
 ```cpp
 Zoot    1.2e+00
@@ -203,11 +203,11 @@ std::cout << extracted;    //  This
 
 Ce comportement peut être résolu manuellement, mais pour rendre l’aller-retour de chaîne plus pratique, c++ 14 ajoute `std::quoted` le manipulateur de \<flux dans iomanip >. Lors de l'insertion, `quoted()` entoure la chaîne avec un séparateur (guillemet double " par défaut) et lors de l'extraction il manipule le flux pour extraire tous les caractères jusqu'au séparateur final. Les guillemets incorporés sont précédés d’un caractère d’échappement (\\\\ par défaut).
 
-Les délimiteurs sont présents uniquement dans l’objet de flux; ils ne sont pas présents dans la chaîne extraite, mais ils sont présents dans la chaîne retournée par [basic_stringstream:: Str](../standard-library/basic-stringstream-class.md#str).
+Les délimiteurs sont présents uniquement dans l’objet de flux ; ils ne sont pas présents dans la chaîne extraite, mais ils sont présents dans la chaîne retournée par [basic_stringstream :: Str](../standard-library/basic-stringstream-class.md#str).
 
 Le comportement d'espace blanc des opérations d'insertion et d'extraction est indépendant de la façon dont la chaîne est représentée dans le code. L'opérateur quoted est donc utile que la chaîne d'entrée soit un littéral de chaîne brut ou une chaîne standard. La chaîne d'entrée, quel que soit son format, peut avoir des guillemets incorporés, des sauts de ligne, des tabulations, et ainsi de suite, qui seront tous conservés par le manipulateur quoted().
 
-Pour plus d’informations et pour obtenir des exemples [](../standard-library/iomanip-functions.md#quoted)de code complets, consultez quoted.
+Pour plus d’informations et pour obtenir des exemples de code complets, consultez [quoted](../standard-library/iomanip-functions.md#quoted).
 
 ## <a name="see-also"></a>Voir aussi
 
