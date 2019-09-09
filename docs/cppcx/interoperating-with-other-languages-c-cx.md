@@ -2,16 +2,16 @@
 title: Interopérabilité avec d'autres langages (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
-ms.openlocfilehash: 72e1f08464085197bd3581405f6b8d31749dbeff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfd4509a55b969aa6a120a8d2c75cddc87d715e2
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375234"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740475"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>Interopérabilité avec d'autres langages (C++/CX)
 
-Cette partie de la documentation décrit comment utiliser C++ / c++ / CX pour créer des composants Windows Runtime qui peuvent être consommées par d’autres langages de programmation et bibliothèques. Vous pouvez également créer des composants qui ne peuvent pas être utilisés par toutes les langages. Cette section décrit les différents aspects à prendre en compte lorsque votre C + c++ / application de CX interagit avec des composants qui sont écrits à l’aide de JavaScript, un langage .NET Framework managés ou la bibliothèque de modèles C++ Windows Runtime.
+Cette partie de la documentation explique comment utiliser C++/CX pour créer Windows Runtime composants qui peuvent être utilisés par d’autres langages et bibliothèques de programmation. Vous pouvez également créer des composants qui ne peuvent pas être utilisés par toutes les langages. Cette section décrit les différents aspects à prendre en C++compte lorsque votre application/CX interagit avec les composants écrits à l’aide de JavaScript, d’un langage managé .NET Framework C++ ou de la bibliothèque de modèles Windows Runtime.
 
 ## <a name="related-topics"></a>Rubriques connexes
 
@@ -21,4 +21,4 @@ Cette partie de la documentation décrit comment utiliser C++ / c++ / CX pour cr
 
 - [Intégration WRL](../cppcx/wrl-integration-c-cx.md)
 
-- [Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
+- [Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)

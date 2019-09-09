@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-ms.openlocfilehash: 57363dbe2a1e7166b8da401900c3a7f913e63a9d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c57d983e9680ce6d2cab375e427b80f4d3b6c2d6
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495111"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739577"
 ---
 # <a name="_u_stringorid-class"></a>_U_STRINGorID, classe
 
@@ -45,13 +45,13 @@ class _U_STRINGorID
 
 ## <a name="remarks"></a>Notes
 
-Cette classe est conçue pour implémenter des wrappers à l’API de gestion des ressources Windows, telles que les fonctions [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew), [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)et [LoadMenu](/windows/win32/api/winuser/nf-winuser-loadmenuw) , qui acceptent un argument LPCTSTR qui peut être le nom d’une ressource ou son ID.
+Cette classe est conçue pour implémenter des wrappers à l’API de gestion des ressources Windows, telles que les fonctions [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea), [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)et [LoadMenu](/windows/win32/api/winuser/nf-winuser-loadmenuw) , qui acceptent un argument LPCTSTR qui peut être le nom d’une ressource ou son ID.
 
-La classe définit deux surcharges de constructeur: l’une accepte un argument LPCTSTR et l’autre accepte un argument UINT. L’argument UINT est converti en un type de ressource compatible avec les fonctions de gestion de ressources de Windows à l’aide de la macro MAKEINTRESOURCE et le résultat stocké dans le membre de données unique de la classe, [m_lpstr](#_u_stringorid__m_lpstr). L’argument du constructeur LPCTSTR est stocké directement sans conversion.
+La classe définit deux surcharges de constructeur : l’une accepte un argument LPCTSTR et l’autre accepte un argument UINT. L’argument UINT est converti en un type de ressource compatible avec les fonctions de gestion de ressources de Windows à l’aide de la macro MAKEINTRESOURCE et le résultat stocké dans le membre de données unique de la classe, [m_lpstr](#_u_stringorid__m_lpstr). L’argument du constructeur LPCTSTR est stocké directement sans conversion.
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête:** atlwin. h
+**En-tête :** atlwin. h
 
 ##  <a name="_u_stringorid__m_lpstr"></a>  _U_STRINGorID::m_lpstr
 
