@@ -17,19 +17,19 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 1124630d8ee15dd284893516bef8057f852b4632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc39a5deeb270b0426a4b199fc9ba01917c292bc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245753"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496811"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (classe)
 
-Cette classe fournit des méthodes pour la création d’une boîte de dialogue modale ou non modale.
+Cette classe fournit des méthodes pour créer une boîte de dialogue modale ou non modale.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+>  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,10 +42,10 @@ template <class T,
 #### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Votre classe, dérivée de `CDialogImpl`.
+Votre classe, dérivée `CDialogImpl`de.
 
 *TBase*<br/>
-La classe de base de votre nouvelle classe. La classe de base par défaut est [CWindow](../../atl/reference/cwindow-class.md).
+Classe de base de votre nouvelle classe. La classe de base par défaut est [CWindow](../../atl/reference/cwindow-class.md).
 
 ## <a name="members"></a>Membres
 
@@ -53,7 +53,7 @@ La classe de base de votre nouvelle classe. La classe de base par défaut est [C
 
 |||
 |-|-|
-|[Create](#create)|Crée une boîte de dialogue non modale.|
+|[Créés](#create)|Crée une boîte de dialogue non modale.|
 |[DestroyWindow](#destroywindow)|Détruit une boîte de dialogue non modale.|
 |[DoModal](#domodal)|Crée une boîte de dialogue modale.|
 |[EndDialog](#enddialog)|Détruit une boîte de dialogue modale.|
@@ -62,42 +62,42 @@ La classe de base de votre nouvelle classe. La classe de base par défaut est [C
 
 |||
 |-|-|
-|[GetDialogProc](#getdialogproc)|Retourne la procédure de boîte de dialogue actuelle.|
-|[MapDialogRect](#mapdialogrect)|Mappe les unités de boîte de dialogue du rectangle spécifié pour les unités de l’écran (pixels).|
-|[OnFinalMessage](#onfinalmessage)|Appelé après réception du dernier message, généralement WM_NCDESTROY.|
+|[GetDialogProc](#getdialogproc)|Retourne la procédure de la boîte de dialogue active.|
+|[MapDialogRect](#mapdialogrect)|Mappe les unités de boîte de dialogue du rectangle spécifié aux unités d’écran (pixels).|
+|[OnFinalMessage](#onfinalmessage)|Appelé après la réception du dernier message, généralement WM_NCDESTROY.|
 
 ### <a name="static-functions"></a>Fonctions statiques
 
 |||
 |-|-|
 |[DialogProc](#dialogproc)|Traite les messages envoyés à la boîte de dialogue.|
-|[StartDialogProc](#startdialogproc)|Appelée lorsque le premier message est reçu pour traiter les messages envoyés à la boîte de dialogue.|
+|[StartDialogProc](#startdialogproc)|Appelé lorsque le premier message est reçu pour traiter les messages envoyés à la boîte de dialogue.|
 
 ## <a name="remarks"></a>Notes
 
-Avec `CDialogImpl` vous pouvez créer une boîte de dialogue modale ou non modale. `CDialogImpl` Fournit la procédure de boîte de dialogue, qui utilise la table des messages par défaut pour diriger les messages vers les gestionnaires appropriés.
+Avec `CDialogImpl` , vous pouvez créer une boîte de dialogue modale ou non modale. `CDialogImpl`fournit la procédure de boîte de dialogue, qui utilise la table des messages par défaut pour diriger les messages vers les gestionnaires appropriés.
 
-Le destructeur de classe de base `~CWindowImplRoot` garantit que la fenêtre a disparu avant de détruire l’objet.
+Le destructeur `~CWindowImplRoot` de classe de base garantit que la fenêtre a disparu avant de détruire l’objet.
 
-`CDialogImpl` dérive de `CDialogImplBaseT`, qui dérive à son tour de `CWindowImplRoot`.
+`CDialogImpl`dérive `CWindowImplRoot`de ,quidériveà`CDialogImplBaseT`son tour de.
 
 > [!NOTE]
->  Votre classe doit définir un `IDD` membre qui spécifie l’ID de ressource de modèle boîte de dialogue. Par exemple, l’Assistant Projet ATL ajoute automatiquement la ligne suivante à votre classe :
+>  Votre classe doit définir un `IDD` membre qui spécifie l’ID de ressource du modèle de boîte de dialogue. Par exemple, l’Assistant Projet ATL ajoute automatiquement la ligne suivante à votre classe :
 
 [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]
 
-où `MyDlg` est la **nom court** entré dans l’Assistant **noms** page.
+où `MyDlg` est le **nom abrégé** entré dans la page **noms** de l’Assistant.
 
-|Pour plus d'informations sur|Voir|
+|Pour plus d'informations sur|Consultez|
 |--------------------------------|---------|
-|Création de contrôles|[Didacticiel ATL](../../atl/active-template-library-atl-tutorial.md)|
-|À l’aide des boîtes de dialogue dans ATL|[ATL, classes de fenêtre](../../atl/atl-window-classes.md)|
+|Création de contrôles|[Tutoriel ATL](../../atl/active-template-library-atl-tutorial.md)|
+|Utilisation des boîtes de dialogue dans ATL|[ATL, classes de fenêtre](../../atl/atl-window-classes.md)|
 |Assistant Projet ATL|[Création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)|
-|Boîtes de dialogue|[Boîtes de dialogue](/windows/desktop/dlgbox/dialog-boxes) et les rubriques suivantes dans le SDK Windows|
+|Boîtes de dialogue|[Boîtes de dialogue](/windows/win32/dlgbox/dialog-boxes) et rubriques suivantes de la SDK Windows|
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête :** atlwin. h
 
 ##  <a name="create"></a>  CDialogImpl::Create
 
@@ -117,20 +117,20 @@ HWND Create(
 ### <a name="parameters"></a>Paramètres
 
 *hWndParent*<br/>
-[in] Le handle vers la fenêtre propriétaire.
+dans Handle de la fenêtre propriétaire.
 
-**RECT &** *rect* [in] A [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui spécifie la taille et la position de la boîte de dialogue.
+**RECT &** *Rect* dans Structure [Rect](/previous-versions/dd162897\(v=vs.85\)) spécifiant la taille et la position de la boîte de dialogue.
 
 *dwInitParam*<br/>
-[in] Spécifie la valeur à passer à la boîte de dialogue dans le *lParam* paramètre du message WM_INITDIALOG.
+dans Spécifie la valeur à passer à la boîte de dialogue dans le paramètre *lParam* du message WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Handle de la boîte de dialogue nouvellement créé.
+Handle de la boîte de dialogue nouvellement créée.
 
 ### <a name="remarks"></a>Notes
 
-Cette boîte de dialogue est automatiquement joint à la `CDialogImpl` objet. Pour créer une boîte de dialogue modale, appelez [DoModal](#domodal). Le deuxième remplacement ci-dessus est utilisé uniquement avec [CComControl](../../atl/reference/ccomcontrol-class.md).
+Cette boîte de dialogue est automatiquement jointe `CDialogImpl` à l’objet. Pour créer une boîte de dialogue modale [, appelez DoModal](#domodal). Le deuxième remplacement ci-dessus est utilisé uniquement avec [CComControl](../../atl/reference/ccomcontrol-class.md).
 
 ##  <a name="destroywindow"></a>  CDialogImpl::DestroyWindow
 
@@ -142,11 +142,11 @@ BOOL DestroyWindow();
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la boîte de dialogue a été détruite avec succès ; Sinon, FALSE.
+TRUE si la boîte de dialogue a été détruite avec succès ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Retourne la valeur TRUE si la boîte de dialogue a été correctement détruite ; Sinon, FALSE.
+Retourne la valeur TRUE si la boîte de dialogue a été détruite avec succès ; Sinon, FALSe.
 
 ##  <a name="dialogproc"></a>  CDialogImpl::DialogProc
 
@@ -163,24 +163,24 @@ static LRESULT CALLBACK DialogProc(
 ### <a name="parameters"></a>Paramètres
 
 *hWnd*<br/>
-[in] Handle de la boîte de dialogue.
+dans Handle de la boîte de dialogue.
 
 *uMsg*<br/>
-[in] Le message envoyé à la boîte de dialogue.
+dans Message envoyé à la boîte de dialogue.
 
 *wParam*<br/>
-[in] Informations supplémentaires spécifiques au message.
+dans Informations supplémentaires spécifiques au message.
 
 *lParam*<br/>
-[in] Informations supplémentaires spécifiques au message.
+dans Informations supplémentaires spécifiques au message.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le message est traité ; Sinon, FALSE.
+TRUE si le message est traité ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-`DialogProc` utilise la table des messages par défaut pour diriger les messages vers les gestionnaires appropriés.
+`DialogProc`utilise la table des messages par défaut pour diriger les messages vers les gestionnaires appropriés.
 
 Vous pouvez remplacer `DialogProc` pour fournir un mécanisme différent pour la gestion des messages.
 
@@ -197,20 +197,20 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>Paramètres
 
 *hWndParent*<br/>
-[in] Le handle vers la fenêtre propriétaire. La valeur par défaut est la valeur de retour de la [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) fonction Win32.
+dans Handle de la fenêtre propriétaire. La valeur par défaut est la valeur de retour de la fonction Win32 [GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) .
 
 *dwInitParam*<br/>
-[in] Spécifie la valeur à passer à la boîte de dialogue dans le *lParam* paramètre du message WM_INITDIALOG.
+dans Spécifie la valeur à passer à la boîte de dialogue dans le paramètre *lParam* du message WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, la valeur de la *nRetCode* paramètre spécifié dans l’appel à [EndDialog](#enddialog). Sinon, -1.
+En cas de réussite, la valeur du paramètre *nRetCode* spécifiée dans l’appel à [EndDialog](#enddialog). Sinon,-1.
 
 ### <a name="remarks"></a>Notes
 
-Cette boîte de dialogue est automatiquement joint à la `CDialogImpl` objet.
+Cette boîte de dialogue est automatiquement jointe `CDialogImpl` à l’objet.
 
-Pour créer une boîte de dialogue non modale, appelez [créer](#create).
+Pour créer une boîte de dialogue non modale, appelez [Create](#create).
 
 ##  <a name="enddialog"></a>  CDialogImpl::EndDialog
 
@@ -223,22 +223,22 @@ BOOL EndDialog(int nRetCode);
 ### <a name="parameters"></a>Paramètres
 
 *nRetCode*<br/>
-[in] La valeur doit être retourné par [CDialogImpl::DoModal](#domodal).
+dans Valeur à retourner par [CDialogImpl ::D omodal](#domodal).
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la boîte de dialogue est détruite ; Sinon, FALSE.
+TRUE si la boîte de dialogue est détruite ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-`EndDialog` doit être appelé via la procédure de boîte de dialogue. Une fois que la boîte de dialogue est détruite, Windows utilise la valeur de *nRetCode* comme valeur de retour pour `DoModal`, lequel créée de la boîte de dialogue.
+`EndDialog`doit être appelé par le biais de la procédure de dialogue. Une fois la boîte de dialogue détruite, Windows utilise la valeur de *nRetCode* comme valeur de `DoModal`retour pour, qui a créé la boîte de dialogue.
 
 > [!NOTE]
->  N’appelez pas `EndDialog` pour détruire une boîte de dialogue non modale. Appelez [CWindow::DestroyWindow](../../atl/reference/cwindow-class.md#destroywindow) à la place.
+>  N’appelez `EndDialog` pas pour détruire une boîte de dialogue non modale. Appelez [CWindow ::D estroywindow](../../atl/reference/cwindow-class.md#destroywindow) à la place.
 
 ##  <a name="getdialogproc"></a>  CDialogImpl::GetDialogProc
 
-Retourne `DialogProc`, la procédure de boîte de dialogue actuelle.
+Retourne `DialogProc`, la procédure de la boîte de dialogue active.
 
 ```
 virtual WNDPROC GetDialogProc();
@@ -246,15 +246,15 @@ virtual WNDPROC GetDialogProc();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Procédure de boîte de dialogue actuelle.
+Procédure de la boîte de dialogue active.
 
 ### <a name="remarks"></a>Notes
 
-Substituez cette méthode pour remplacer la procédure de boîte de dialogue par les vôtres.
+Substituez cette méthode pour remplacer la procédure de dialogue par la vôtre.
 
 ##  <a name="mapdialogrect"></a>  CDialogImpl::MapDialogRect
 
-Convertit en unités (maps) les unités de boîte de dialogue du rectangle spécifié à l’écran (pixels).
+Convertit (mappe) les unités de boîte de dialogue du rectangle spécifié en unités d’écran (pixels).
 
 ```
 BOOL MapDialogRect(LPRECT lpRect);
@@ -263,19 +263,19 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-Pointe vers un `CRect` objet ou [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure qui doit recevoir les coordonnées clientes de la mise à jour qui englobe la région de mise à jour.
+Pointe vers un `CRect` objet ou une structure [Rect](/windows/win32/api/windef/ns-windef-rect) qui doit recevoir les coordonnées clientes de la mise à jour qui englobe la région de mise à jour.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la mise à jour réussit ; 0 si la mise à jour échoue. Pour obtenir des informations plus complètes sur les erreurs, appelez `GetLastError`.
+Différent de zéro si la mise à jour est réussie ; 0 si la mise à jour échoue. Pour obtenir des informations plus complètes sur les erreurs, appelez `GetLastError`.
 
 ### <a name="remarks"></a>Notes
 
-La fonction remplace les coordonnées dans le texte spécifié `RECT` structure avec les coordonnées converties, ce qui permet la structure à utiliser pour créer une boîte de dialogue et positionner un contrôle dans une boîte de dialogue.
+La fonction remplace les coordonnées de la structure `RECT` spécifiée par les coordonnées converties, ce qui permet à la structure d’être utilisée pour créer une boîte de dialogue ou positionner un contrôle dans une boîte de dialogue.
 
 ##  <a name="onfinalmessage"></a>  CDialogImpl::OnFinalMessage
 
-Appelé après réception du dernier message (généralement `WM_NCDESTROY`).
+Appelé après la réception du dernier message ( `WM_NCDESTROY`en général).
 
 ```
 virtual void OnFinalMessage(HWND hWnd);
@@ -284,11 +284,11 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="parameters"></a>Paramètres
 
 *hWnd*<br/>
-[in] Handle vers la fenêtre en cours de destruction.
+dans Handle de la fenêtre en cours de destruction.
 
 ### <a name="remarks"></a>Notes
 
-Notez que si vous souhaitez supprimer automatiquement votre objet lors de la destruction de la fenêtre, vous pouvez appeler **supprimer cela ;** ici.
+Notez que, si vous souhaitez supprimer automatiquement votre objet lors de la destruction de la fenêtre, vous pouvez appeler **Delete this ;** ici.
 
 ##  <a name="startdialogproc"></a>  CDialogImpl::StartDialogProc
 
@@ -305,16 +305,16 @@ static LRESULT CALLBACK StartDialogProc(
 ### <a name="parameters"></a>Paramètres
 
 *hWnd*<br/>
-[in] Handle de la boîte de dialogue.
+dans Handle de la boîte de dialogue.
 
 *uMsg*<br/>
-[in] Le message envoyé à la boîte de dialogue.
+dans Message envoyé à la boîte de dialogue.
 
 *wParam*<br/>
-[in] Informations supplémentaires spécifiques au message.
+dans Informations supplémentaires spécifiques au message.
 
 *lParam*<br/>
-[in] Informations supplémentaires spécifiques au message.
+dans Informations supplémentaires spécifiques au message.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -322,7 +322,7 @@ La procédure de fenêtre.
 
 ### <a name="remarks"></a>Notes
 
-Après l’appel initial à `StartDialogProc`, `DialogProc` est défini comme une procédure de la boîte de dialogue et les appels plus y accéder.
+Après l’appel initial à `StartDialogProc`, `DialogProc` est défini comme une procédure de dialogue et d’autres appels y sont effectués.
 
 ## <a name="see-also"></a>Voir aussi
 

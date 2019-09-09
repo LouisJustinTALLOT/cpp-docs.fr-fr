@@ -1,5 +1,5 @@
 ---
-title: Cautorevertimpersonation, classe
+title: CAutoRevertImpersonation, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoRevertImpersonation
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: 78488fba080e397b06eb67ebe8039fb3e8d5e035
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1941bfcd7689ab9d22f5094af0eb833a84dab6b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259935"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497684"
 ---
-# <a name="cautorevertimpersonation-class"></a>Cautorevertimpersonation, classe
+# <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation, classe
 
-Cette classe rétablit [CAccessToken](../../atl/reference/caccesstoken-class.md) objets à un état nonimpersonating lorsqu’il devient hors de portée.
+Cette classe restaure les objets [caccesstoken,](../../atl/reference/caccesstoken-class.md) à un État sans emprunt d’identité lorsqu’ils sont hors de portée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,31 +35,31 @@ class CAutoRevertImpersonation
 |Nom|Description|
 |----------|-----------------|
 |[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Construit un `CAutoRevertImpersonation` objet|
-|[CAutoRevertImpersonation :: ~ CAutoRevertImpersonation](#dtor)|Détruit l’objet et rétablit le jeton d’emprunt d’identité de l’accès.|
+|[CAutoRevertImpersonation :: ~ CAutoRevertImpersonation](#dtor)|Détruit l’objet et rétablit l’emprunt d’identité du jeton d’accès.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CAutoRevertImpersonation::Attach](#attach)|Automatise le rétablissement de l’emprunt d’identité d’un jeton d’accès.|
-|[CAutoRevertImpersonation::Detach](#detach)|Annule le rétablissement de l’emprunt d’identité automatique.|
-|[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Récupère l’actuel jeton accès associé à cet objet.|
+|[CAutoRevertImpersonation :: Attach](#attach)|Automatise la reconversion d’emprunt d’identité d’un jeton d’accès.|
+|[CAutoRevertImpersonation ::D Etach](#detach)|Annule la réversion automatique de l’emprunt d’identité.|
+|[CAutoRevertImpersonation :: GetAccessToken](#getaccesstoken)|Récupère le jeton d’accès actuel associé à cet objet.|
 
 ## <a name="remarks"></a>Notes
 
-Un [jeton d’accès](/windows/desktop/SecAuthZ/access-tokens) est un objet qui décrit le contexte de sécurité d’un processus ou un thread et est alloué à chaque utilisateur connecté à un système Windows NT ou Windows 2000. Ces jetons d’accès peuvent être représentées avec la `CAccessToken` classe.
+Un [jeton d’accès](/windows/win32/SecAuthZ/access-tokens) est un objet qui décrit le contexte de sécurité d’un processus ou d’un thread et qui est alloué à chaque utilisateur connecté à un système Windows NT ou Windows 2000. Ces jetons d’accès peuvent être représentés avec la `CAccessToken` classe.
 
-Il est parfois nécessaire d’emprunter l’identité des jetons d’accès. Cette classe est fournie pour des raisons pratiques, mais il n’effectue pas l’emprunt d’identité des jetons d’accès ; Il effectue uniquement le rétablissement automatique à un état nonimpersonated. Il s’agit, car l’emprunt d’identité du jeton d’accès peut être effectuée de différentes manières.
+Il est parfois nécessaire d’emprunter l’identité des jetons d’accès. Cette classe est fournie à des fins pratiques, mais elle n’effectue pas l’emprunt d’identité des jetons d’accès ; il effectue uniquement la reconversion automatique vers un État sans emprunt d’identité. Cela est dû au fait que l’emprunt d’identité d’accès au jeton peut être effectué de plusieurs façons différentes.
 
-Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
+Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/win32/SecAuthZ/access-control) dans le SDK Windows.
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlsecurity.h
+**En-tête :** ATLSecurity. h
 
 ##  <a name="attach"></a>  CAutoRevertImpersonation::Attach
 
-Automatise le rétablissement de l’emprunt d’identité d’un jeton d’accès.
+Automatise la reconversion d’emprunt d’identité d’un jeton d’accès.
 
 ```
 void Attach(const CAccessToken* pAT) throw();
@@ -68,11 +68,11 @@ void Attach(const CAccessToken* pAT) throw();
 ### <a name="parameters"></a>Paramètres
 
 *pAT*<br/>
-L’adresse de la [CAccessToken](../../atl/reference/caccesstoken-class.md) objet à être rétablis automatiquement
+Adresse de l’objet [caccesstoken,](../../atl/reference/caccesstoken-class.md) à rétablir automatiquement
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode doit uniquement être utilisée si le [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) objet a été créé avec une valeur NULL `CAccessToken` pointeur, ou si [détachement](#detach) a été appelée précédemment. Pour les cas simples, il n’est pas nécessaire d’utiliser cette méthode.
+Cette méthode doit être utilisée uniquement si l’objet [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) a été créé avec un `CAccessToken` pointeur null ou si [Detach](#detach) a été appelé précédemment. Pour les cas simples, il n’est pas nécessaire d’utiliser cette méthode.
 
 ##  <a name="cautorevertimpersonation"></a>  CAutoRevertImpersonation::CAutoRevertImpersonation
 
@@ -85,15 +85,15 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="parameters"></a>Paramètres
 
 *pAT*<br/>
-L’adresse de la [CAccessToken](../../atl/reference/caccesstoken-class.md) objet à être restauré automatiquement.
+Adresse de l’objet [caccesstoken,](../../atl/reference/caccesstoken-class.md) à rétablir automatiquement.
 
 ### <a name="remarks"></a>Notes
 
-L’emprunt d’identité réelle du jeton d’accès doit s’effectuer séparément à partir d’et de préférence avant la création d’un `CAutoRevertImpersonation` objet. Cet emprunt d’identité est automatiquement restauré lorsque la `CAutoRevertImpersonation` objet est hors de portée.
+L’emprunt d’identité réel du jeton d’accès doit être effectué séparément de et de préférence avant la création d' `CAutoRevertImpersonation` un objet. Cet emprunt d’identité est rétabli automatiquement lorsque l' `CAutoRevertImpersonation` objet est hors de portée.
 
-##  <a name="dtor"></a>  CAutoRevertImpersonation::~CAutoRevertImpersonation
+##  <a name="dtor"></a>CAutoRevertImpersonation :: ~ CAutoRevertImpersonation
 
-Détruit l’objet et rétablit le jeton d’emprunt d’identité de l’accès.
+Détruit l’objet et rétablit l’emprunt d’identité du jeton d’accès.
 
 ```
 ~CAutoRevertImpersonation() throw();
@@ -101,11 +101,11 @@ Détruit l’objet et rétablit le jeton d’emprunt d’identité de l’accès
 
 ### <a name="remarks"></a>Notes
 
-Annule un emprunt d’identité actuellement en vigueur pour le [CAccessToken](../../atl/reference/caccesstoken-class.md) objet fourni à la construction ou via le [attacher](#attach) (méthode). Si aucun `CAccessToken` est associé, le destructeur n’a aucun effet.
+Rétablit les emprunts d’identité actuellement appliqués pour l’objet [caccesstoken,](../../atl/reference/caccesstoken-class.md) fourni à la construction ou via la méthode d' [attachement](#attach) . Si aucun `CAccessToken` n’est associé, le destructeur n’a aucun effet.
 
 ##  <a name="detach"></a>  CAutoRevertImpersonation::Detach
 
-Annule le rétablissement de l’emprunt d’identité automatique.
+Annule la réversion automatique de l’emprunt d’identité.
 
 ```
 const CAccessToken* Detach() throw();
@@ -113,15 +113,15 @@ const CAccessToken* Detach() throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’adresse associé précédemment [CAccessToken](../../atl/reference/caccesstoken-class.md), ou NULL si aucune association n’existe.
+Adresse du [caccesstoken,](../../atl/reference/caccesstoken-class.md)précédemment associé, ou null si aucune association n’existait.
 
 ### <a name="remarks"></a>Notes
 
-Appel **détachement** empêche le `CAutoRevertImpersonation` objet possible de rétrograder un emprunt d’identité actuellement en vigueur pour le [CAccessToken](../../atl/reference/caccesstoken-class.md) objet associé à cet objet. `CAutoRevertImpersonation` peut être détruit sans aucune incidence ou réassociés à la même ou un autre `CAccessToken` à l’aide de l’objet [attacher](#attach).
+L' appel de Detach `CAutoRevertImpersonation` empêche l’objet de rétablir un emprunt d’identité actuellement en vigueur pour l’objet [caccesstoken,](../../atl/reference/caccesstoken-class.md) associé à cet objet. `CAutoRevertImpersonation`peut ensuite être détruit sans effet ni réassocié au même objet ou à un `CAccessToken` autre objet à l’aide de l' [attachement](#attach).
 
-##  <a name="getaccesstoken"></a>  CAutoRevertImpersonation::GetAccessToken
+##  <a name="getaccesstoken"></a>CAutoRevertImpersonation :: GetAccessToken
 
-Récupère l’actuel jeton accès associé à cet objet.
+Récupère le jeton d’accès actuel associé à cet objet.
 
 ```
 const CAccessToken* GetAccessToken() throw();
@@ -129,14 +129,14 @@ const CAccessToken* GetAccessToken() throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’adresse associé précédemment [CAccessToken](../../atl/reference/caccesstoken-class.md), ou NULL si aucune association n’existe.
+Adresse du [caccesstoken,](../../atl/reference/caccesstoken-class.md)précédemment associé, ou null si aucune association n’existait.
 
 ### <a name="remarks"></a>Notes
 
-Si cette méthode est appelée dans le cadre qui incluent le rétablissement d’un emprunt d’identité de le `CAccessToken` objet, le [détachement](#detach) méthode doit être utilisée à la place.
+Si cette méthode est appelée à des fins qui incluent la réversion d’un emprunt d’identité de `CAccessToken` l’objet, la méthode de [détachement](#detach) doit être utilisée à la place.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
-[Jetons d’accès](/windows/desktop/SecAuthZ/access-tokens)<br/>
+[ATLSecurity, exemple](../../overview/visual-cpp-samples.md)<br/>
+[Jetons d’accès](/windows/win32/SecAuthZ/access-tokens)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

@@ -115,7 +115,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68449184"
 ---
-# <a name="iosbase-class"></a>ios_base, classe
+# <a name="ios_base-class"></a>ios_base, classe
 
 La classe décrit les fonctions membres et de stockage communes aux flux d'entrée et de sortie qui ne dépendent pas des paramètres du modèle. (La classe de modèle [basic_ios](../standard-library/basic-ios-class.md) décrit ce qui est commun et qui dépend des paramètres de modèle.)
 
@@ -247,7 +247,7 @@ Le type est un type énuméré qui décrit un objet capable de stocker l’évé
 
 - `imbue_event`, pour identifier un rappel qui se produit à la fin d’un appel à [imbue](#imbue), juste avant le retour de la fonction.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Pour obtenir un exemple, consultez [register_callback](#register_callback).
 
@@ -357,7 +357,7 @@ Pour obtenir la liste des indicateurs, consultez [ios_base::fmtflags](#fmtflags)
 
 La première fonction membre retourne les indicateurs de format stockés. La deuxième fonction membre stocke *fmtfl* dans les indicateurs de format et retourne sa valeur stockée précédente.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // ios_base_flags.cpp
@@ -506,7 +506,7 @@ Paramètres régionaux précédents.
 
 La fonction membre stocke *_Loc* dans l’objet de paramètres régionaux, puis signale l' `imbue_event`événement de rappel et. Elle retourne la valeur stockée précédente.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Pour obtenir un exemple, consultez [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue).
 
@@ -682,7 +682,7 @@ La première fonction membre retourne la [précision d’affichage](../standard-
 
 Les chiffres à virgule flottante sont affichés dans la notation fixe avec [fixed](../standard-library/ios-functions.md#fixed).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // ios_base_precision.cpp
@@ -727,7 +727,7 @@ Si _ *Idx* est négatif ou si aucun stockage unique n’est disponible pour l’
 
 Pour obtenir un index unique, pour une utilisation parmi tous les objets de type `ios_base`, appelez [xalloc](#xalloc).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Pour obtenir un exemple d’utilisation de `pword`, consultez [xalloc](#xalloc).
 
@@ -750,9 +750,9 @@ Nombre défini par l’utilisateur.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre exécute un push de `{pfn, idx}` la paire sur la [pile](../standard-library/ios-base-class.md)de rappels de la pile de rappels stockée. Lorsqu’un événement de rappel **ev** est signalé, les fonctions sont appelées, dans l’ordre inverse du Registre, `(*pfn)(ev, *this, idx)`par l’expression.
+La fonction membre exécute un push de `{pfn, idx}` la paire sur la [pile de rappels](../standard-library/ios-base-class.md)de la pile de rappels stockée. Lorsqu’un événement de rappel **ev** est signalé, les fonctions sont appelées, dans l’ordre inverse du Registre, `(*pfn)(ev, *this, idx)`par l’expression.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // ios_base_register_callback.cpp
@@ -916,9 +916,9 @@ Indicateurs de format précédents
 
 ### <a name="remarks"></a>Notes
 
-La première fonction membre appelle efficacement [Flags](#flags)(  *\_indicateurs*de  *\_masque* &#124; ) (définissez les bits sélectionnés), puis retourne les indicateurs de format précédents. La deuxième fonction membre appelle `flags(_Mask & fmtfl, flags & ~_Mask)` effectivement (remplacer les bits sélectionnés sous un masque), puis retourne les indicateurs de format précédents.
+La première fonction membre appelle efficacement [Flags](#flags)( &#124;  *\_indicateurs*de  *\_masque* ) (définissez les bits sélectionnés), puis retourne les indicateurs de format précédents. La deuxième fonction membre appelle `flags(_Mask & fmtfl, flags & ~_Mask)` effectivement (remplacer les bits sélectionnés sous un masque), puis retourne les indicateurs de format précédents.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // ios_base_setf.cpp
@@ -982,11 +982,11 @@ Indicateurs que vous souhaitez désactiver.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle efficacement [](#flags)Flags`~`( *_Mask* **& Flags**) (effacer les bits sélectionnés).
+La fonction membre appelle efficacement [Flags](#flags)(`~` *_Mask* **& Flags**) (effacer les bits sélectionnés).
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation `unsetf`de, consultez [ios_base:: SETF](#setf) .
+Pour obtenir un exemple d’utilisation `unsetf`de, consultez [ios_base :: SETF](#setf) .
 
 ## <a name="width"></a>Largeur
 
@@ -1049,7 +1049,7 @@ La fonction membre statique retourne une valeur statique stockée, qu’elle inc
 
 Vous pouvez utiliser la valeur de retour comme argument d’index unique lors de l’appel des fonctions membres [iword](#iword) ou [pWord](#pword).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // ios_base_xalloc.cpp

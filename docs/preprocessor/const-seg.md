@@ -1,6 +1,6 @@
 ---
-title: const_seg
-ms.date: 09/17/2018
+title: const_seg, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.const_seg
 - const_seg_CPP
@@ -8,50 +8,52 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 845583889eb922ba97d145eefe6bca280a83817b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366587"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220433"
 ---
-# <a name="constseg"></a>const_seg
-Spécifie le segment où [const](../cpp/const-cpp.md) variables sont stockées dans le fichier .obj.
+# <a name="const_seg-pragma"></a>const_seg, pragma
+
+Spécifie la section (segment) où les variables [const](../cpp/const-cpp.md) sont stockées dans le fichier objet (. obj).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
-```
+> **#pragma const_seg (** ["*section-Name*" [ **,** "*section-Class*"]] **)** \
+> **#pragma const_seg (** { **Push** | **pop** } [ **,** *identificateur* ] [ **,** "*section-Name*" [ **,** "*section-Class*"]] **)**
 
 ### <a name="parameters"></a>Paramètres
 
-**push**<br/>
-(Facultatif) Place un enregistrement sur la pile interne du compilateur. Un **push** peut avoir un *identificateur* et *segment-name*.
+**souleve**\
+Facultatif Place un enregistrement sur la pile interne du compilateur. Un **Push** peut avoir un *identificateur* et un *nom de section*.
 
-**pop**<br/>
-(Facultatif) Supprime un enregistrement à partir du haut de la pile interne du compilateur.
+**roulant**\
+Facultatif Supprime un enregistrement du haut de la pile interne du compilateur. Une **liste déroulante** peut avoir un *identificateur* et un *nom de section*. Vous pouvez dépiler plusieurs enregistrements à l’aide d’une seule commande **pop** en utilisant l' *identificateur*. La *section-Name* devient le nom de la section Const active après le pop.
 
-*identifier*<br/>
-(Facultatif) Lorsqu’il est utilisé avec **push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec **pop**, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.
+*identificateur*\
+Facultatif En cas d’utilisation avec **Push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’elle est utilisée avec **pop**, la directive dépile les enregistrements de la pile interne jusqu’à ce que l' *identificateur* soit supprimé. Si l' *identificateur* est introuvable sur la pile interne, rien n’est dépilé.
 
-À l’aide de *identificateur* permet à plusieurs enregistrements à dépiler avec une seule **pop** commande.
+«*section-Name*» \
+Facultatif Nom d’une section. Lorsqu’elle est utilisée avec **pop**, la pile est dépilée et la *section-Name* devient le nom de la section Const active.
 
-"*segment-name*"<br/>
-(Facultatif) Le nom d’un segment. Lorsqu’il est utilisé avec **pop**, la pile est dépilée et *segment-name* devient le nom de segment actif.
-
-"*segment-class*"<br/>
-(Facultatif) Inclus pour la compatibilité avec C++ antérieures à la version 2.0. Elle est ignorée.
+«*section-Class*» \
+Facultatif Ignoré, mais inclus pour la compatibilité avec les versions C++ de Microsoft antérieures à la version 2,0.
 
 ## <a name="remarks"></a>Notes
 
-La signification des termes du contrat *segment* et *section* sont interchangeables dans cette rubrique.
+Une *section* dans un fichier objet est un bloc de données nommé qui est chargé en mémoire en tant qu’unité. Une *section const* est une section qui contient des données constantes. Dans cet article, les termes *segment* et *section* ont la même signification.
 
-Les fichiers OBJ peuvent être affichés avec le [dumpbin](../build/reference/dumpbin-command-line.md) application. Dans le fichier .obj, le segment par défaut pour les variables `const` est .rdata. Certaines variables `const`, telles que les scalaires, sont automatiquement incluses en ligne dans le flux de code. Le code inline n'apparaîtra pas dans .rdata.
+La directive pragma **const_seg** indique au compilateur de placer tous les éléments de données constantes à partir de l’unité de traduction dans une section const nommée *section-Name*. La section par défaut du fichier objet pour les variables **const** est `.rdata`. Certaines variables **const** , telles que les scalaires, sont automatiquement incorporées dans le flux de code. Le code inline n’apparaît pas `.rdata`dans. Une directive pragma **const_seg** sans paramètre *section-Name* réinitialise le nom de la section pour les éléments de données **const** suivants `.rdata`sur.
 
-La définition d'un objet qui requiert une initialisation dynamique dans un `const_seg` entraîne un comportement non défini.
+Si vous définissez un objet qui nécessite une initialisation dynamique dans un `const_seg`, le résultat est un comportement indéfini.
 
-`#pragma const_seg` sans paramètre réinitialise le segment sur .rdata.
+Pour obtenir la liste des noms qui ne doivent pas être utilisés pour créer une section, consultez [/section](../build/reference/section-specify-section-attributes.md).
+
+Vous pouvez également spécifier des sections pour les données initialisées ([data_seg](../preprocessor/data-seg.md)), les données non initialisées ([bss_seg](../preprocessor/bss-seg.md)) et les fonctions ([code_seg](../preprocessor/code-seg.md)).
+
+Vous pouvez utiliser [DUMPBIN. EXE](../build/reference/dumpbin-command-line.md) pour afficher les fichiers objets. Les versions de DUMPBIN pour chaque architecture cible prise en charge sont incluses dans Visual Studio.
 
 ## <a name="example"></a>Exemple
 
@@ -89,12 +91,6 @@ test3
 test4
 ```
 
-## <a name="comments"></a>Commentaires
-
-Consultez [/SECTION](../build/reference/section-specify-section-attributes.md) pour obtenir la liste des noms que vous ne devez pas utiliser lors de la création d’une section.
-
-Vous pouvez également spécifier des sections pour les données initialisées ([data_seg](../preprocessor/data-seg.md)), données non initialisées ([bss_seg](../preprocessor/bss-seg.md)) et les fonctions ([code_seg](../preprocessor/code-seg.md)).
-
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

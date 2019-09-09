@@ -17,19 +17,19 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-ms.openlocfilehash: d6f08553a9eff421923ef348caee2022849674ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 548d2aed0644187b4b8dee1e472b581f1f92d6a1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259961"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497669"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl, classe
 
 Cette classe implémente une boîte de dialogue (modale ou non modale) qui héberge des contrôles ActiveX.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+>  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,10 +41,10 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 #### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Votre classe, dérivée de `CAxDialogImpl`.
+Votre classe, dérivée `CAxDialogImpl`de.
 
 *TBase*<br/>
-La classe de fenêtre de base pour `CDialogImplBaseT`.
+Classe de fenêtre de base `CDialogImplBaseT`pour.
 
 ## <a name="members"></a>Membres
 
@@ -52,38 +52,38 @@ La classe de fenêtre de base pour `CDialogImplBaseT`.
 
 |Nom|Description|
 |----------|-----------------|
-|[CAxDialogImpl::AdviseSinkMap](#advisesinkmap)|Appelez cette méthode pour conseiller ou déconseiller toutes les entrées dans la table d’événements de l’objet récepteur map.|
+|[CAxDialogImpl::AdviseSinkMap](#advisesinkmap)|Appelez cette méthode pour informer ou déconseiller toutes les entrées dans la table des événements de la table de récepteurs de l’objet.|
 |[CAxDialogImpl::Create](#create)|Appelez cette méthode pour créer une boîte de dialogue non modale.|
 |[CAxDialogImpl::DestroyWindow](#destroywindow)|Appelez cette méthode pour détruire une boîte de dialogue non modale.|
 |[CAxDialogImpl::DoModal](#domodal)|Appelez cette méthode pour créer une boîte de dialogue modale.|
 |[CAxDialogImpl::EndDialog](#enddialog)|Appelez cette méthode pour détruire une boîte de dialogue modale.|
-|[CAxDialogImpl::GetDialogProc](#getdialogproc)|Appelez cette méthode pour obtenir un pointeur vers le `DialogProc` fonction de rappel.|
-|[CAxDialogImpl::GetIDD](#getidd)|Appelez cette méthode pour obtenir l’ID de ressource de modèle de boîte de dialogue|
-|[CAxDialogImpl::IsDialogMessage](#isdialogmessage)|Appelez cette méthode pour déterminer si un message est destiné à cette boîte de dialogue et, dans le cas, traiter le message.|
+|[CAxDialogImpl::GetDialogProc](#getdialogproc)|Appelez cette méthode pour obtenir un pointeur vers la `DialogProc` fonction de rappel.|
+|[CAxDialogImpl::GetIDD](#getidd)|Appelez cette méthode pour accéder à l’ID de ressource du modèle de boîte de dialogue|
+|[CAxDialogImpl::IsDialogMessage](#isdialogmessage)|Appelez cette méthode pour déterminer si un message est destiné à cette boîte de dialogue et, si c’est le cas, traiter le message.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
 |Nom|Description|
 |----------|-----------------|
-|[CAxDialogImpl::m_bModal](#m_bmodal)|Une variable qui existe uniquement en mode de débogage génère et est définie sur true si la boîte de dialogue est modale.|
+|[CAxDialogImpl::m_bModal](#m_bmodal)|Variable qui existe uniquement dans les versions Debug et qui a la valeur true si la boîte de dialogue est modale.|
 
 ## <a name="remarks"></a>Notes
 
-`CAxDialogImpl` vous permet de créer une boîte de dialogue modale ou non modale. `CAxDialogImpl` Fournit la procédure de boîte de dialogue, qui utilise la table des messages par défaut pour diriger les messages vers les gestionnaires appropriés.
+`CAxDialogImpl`vous permet de créer une boîte de dialogue modale ou non modale. `CAxDialogImpl`fournit la procédure de boîte de dialogue, qui utilise la table des messages par défaut pour diriger les messages vers les gestionnaires appropriés.
 
-`CAxDialogImpl` dérive de `CDialogImplBaseT`, qui dérive à son tour de *TBase* (par défaut, `CWindow`) et `CMessageMap`.
+`CAxDialogImpl`dérive `CWindow` `CMessageMap`de ,quidériveàsontourdeTBase(`CDialogImplBaseT`par défaut,) et.
 
-Votre classe doit définir un membre IDD qui spécifie l’ID de ressource de modèle boîte de dialogue. Par exemple, ajout d’un objet de boîte de dialogue ATL à l’aide de la **ajouter une classe** boîte de dialogue ajoute automatiquement la ligne suivante à votre classe :
+Votre classe doit définir un membre IDD qui spécifie l’ID de ressource du modèle de boîte de dialogue. Par exemple, l’ajout d’un objet de boîte de dialogue ATL à l’aide de la boîte de dialogue **Ajouter une classe** ajoute automatiquement la ligne suivante à votre classe :
 
 [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/caxdialogimpl-class_1.h)]
 
-où `MyDialog` est la **nom court** entré dans l’Assistant dialogue ATL.
+où `MyDialog` est le **nom abrégé** entré dans l’Assistant boîte de dialogue ATL.
 
-Consultez [mise en œuvre d’une boîte de dialogue](../../atl/implementing-a-dialog-box.md) pour plus d’informations.
+Pour plus d’informations, consultez [implémentation d’une boîte de dialogue](../../atl/implementing-a-dialog-box.md) .
 
-Notez qu’un contrôle ActiveX dans une boîte de dialogue modale créé avec `CAxDialogImpl` ne prendra pas en charge des touches accélérateur. Pour prendre en charge des touches accélérateur sur une boîte de dialogue créée avec `CAxDialogImpl`, créer une boîte de dialogue non modale et, à l’aide de votre propre boucle de message, utilisez [CAxDialogImpl::IsDialogMessage](#isdialogmessage) après avoir obtenu un message à partir de la file d’attente pour gérer un touche d’accès rapide.
+Notez qu’un contrôle ActiveX dans une boîte de dialogue modale `CAxDialogImpl` créée avec ne prend pas en charge les touches d’accès rapide. Pour prendre en charge les touches d’accès rapide sur `CAxDialogImpl`une boîte de dialogue créée avec, créez une boîte de dialogue non modale et, à l’aide de votre propre boucle de message, utilisez [CAxDialogImpl :: IsDialogMessage](#isdialogmessage) après avoir obtenu un message de la file d’attente pour gérer une touche accélérateur.
 
-Pour plus d’informations sur `CAxDialogImpl`, consultez [Forum aux questions de relation contenant-contenu de contrôle ATL](../../atl/atl-control-containment-faq.md).
+Pour plus d’informations `CAxDialogImpl`sur, consultez [Forum aux questions sur la relation contenant-contenu des contrôles ATL](../../atl/atl-control-containment-faq.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -99,11 +99,11 @@ Pour plus d’informations sur `CAxDialogImpl`, consultez [Forum aux questions d
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h
+**En-tête :** atlwin. h
 
 ##  <a name="advisesinkmap"></a>  CAxDialogImpl::AdviseSinkMap
 
-Appelez cette méthode pour conseiller ou déconseiller toutes les entrées dans la table d’événements de l’objet récepteur map.
+Appelez cette méthode pour informer ou déconseiller toutes les entrées dans la table des événements de la table de récepteurs de l’objet.
 
 ```
 HRESULT AdviseSinkMap(bool bAdvise);
@@ -112,7 +112,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="parameters"></a>Paramètres
 
 *bAdvise*<br/>
-La valeur true si toutes les entrées de récepteur doivent être avertie ; les entrées de False si tous les récepteurs doivent être arrêter.
+A la valeur true si toutes les entrées de récepteur doivent être notifiées ; false si toutes les entrées de récepteur ne doivent pas être avisées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -130,23 +130,23 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 ### <a name="parameters"></a>Paramètres
 
 *hWndParent*<br/>
-[in] Le handle vers la fenêtre propriétaire.
+dans Handle de la fenêtre propriétaire.
 
 *dwInitParam*<br/>
-[in] Spécifie la valeur à passer à la boîte de dialogue dans le *lParam* paramètre du message WM_INITDIALOG.
+dans Spécifie la valeur à passer à la boîte de dialogue dans le paramètre *lParam* du message WM_INITDIALOG.
 
-*RECT &AMP;*<br/>
+*RECT &*<br/>
 Ce paramètre n'est pas utilisé. Ce paramètre est passé par `CComControl`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Handle de la boîte de dialogue nouvellement créé.
+Handle de la boîte de dialogue nouvellement créée.
 
 ### <a name="remarks"></a>Notes
 
-Cette boîte de dialogue est automatiquement joint à la `CAxDialogImpl` objet. Pour créer une boîte de dialogue modale, appelez [DoModal](#domodal).
+Cette boîte de dialogue est automatiquement jointe `CAxDialogImpl` à l’objet. Pour créer une boîte de dialogue modale [, appelez DoModal](#domodal).
 
-Le deuxième remplacement est fourni uniquement pour les boîtes de dialogue peuvent être utilisées avec [CComControl](../../atl/reference/ccomcontrol-class.md).
+La deuxième substitution est fournie uniquement si les boîtes de dialogue peuvent être utilisées avec [CComControl](../../atl/reference/ccomcontrol-class.md).
 
 ##  <a name="destroywindow"></a>  CAxDialogImpl::DestroyWindow
 
@@ -158,11 +158,11 @@ BOOL DestroyWindow();
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la fenêtre est détruite avec succès ; Sinon, FALSE.
+TRUE si la fenêtre est détruite avec succès ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-N’appelez pas `DestroyWindow` pour détruire une boîte de dialogue modale. Appelez [EndDialog](#enddialog) à la place.
+N’appelez `DestroyWindow` pas pour détruire une boîte de dialogue modale. Appelez à la place [EndDialog](#enddialog) .
 
 ##  <a name="domodal"></a>  CAxDialogImpl::DoModal
 
@@ -177,20 +177,20 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>Paramètres
 
 *hWndParent*<br/>
-[in] Le handle vers la fenêtre propriétaire. La valeur par défaut est la valeur de retour de la [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) fonction Win32.
+dans Handle de la fenêtre propriétaire. La valeur par défaut est la valeur de retour de la fonction Win32 [GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) .
 
 *dwInitParam*<br/>
-[in] Spécifie la valeur à passer à la boîte de dialogue dans le *lParam* paramètre du message WM_INITDIALOG.
+dans Spécifie la valeur à passer à la boîte de dialogue dans le paramètre *lParam* du message WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, la valeur de la *nRetCode* paramètre spécifié dans l’appel à [EndDialog](#enddialog); sinon, -1.
+En cas de réussite, la valeur du paramètre *nRetCode* spécifié dans l’appel à [EndDialog](#enddialog); Sinon,-1.
 
 ### <a name="remarks"></a>Notes
 
-Cette boîte de dialogue est automatiquement joint à la `CAxDialogImpl` objet.
+Cette boîte de dialogue est automatiquement jointe `CAxDialogImpl` à l’objet.
 
-Pour créer une boîte de dialogue non modale, appelez [créer](#create).
+Pour créer une boîte de dialogue non modale, appelez [Create](#create).
 
 ##  <a name="enddialog"></a>  CAxDialogImpl::EndDialog
 
@@ -203,22 +203,22 @@ BOOL EndDialog(int nRetCode);
 ### <a name="parameters"></a>Paramètres
 
 *nRetCode*<br/>
-[in] La valeur doit être retourné par [DoModal](#domodal).
+dans Valeur à retourner par [DoModal](#domodal).
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la boîte de dialogue est détruite ; Sinon, FALSE.
+TRUE si la boîte de dialogue est détruite ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-`EndDialog` doit être appelé via la procédure de boîte de dialogue. Une fois que la boîte de dialogue est détruite, Windows utilise la valeur de *nRetCode* comme valeur de retour pour `DoModal`, lequel créée de la boîte de dialogue.
+`EndDialog`doit être appelé par le biais de la procédure de la boîte de dialogue. Une fois la boîte de dialogue détruite, Windows utilise la valeur de *nRetCode* comme valeur de `DoModal`retour pour, qui a créé la boîte de dialogue.
 
 > [!NOTE]
->  N’appelez pas `EndDialog` pour détruire une boîte de dialogue non modale. Appelez [DestroyWindow](#destroywindow) à la place.
+>  N’appelez `EndDialog` pas pour détruire une boîte de dialogue non modale. Appelez [DestroyWindow](#destroywindow) à la place.
 
 ##  <a name="getdialogproc"></a>  CAxDialogImpl::GetDialogProc
 
-Appelez cette méthode pour obtenir un pointeur vers le `DialogProc` fonction de rappel.
+Appelez cette méthode pour obtenir un pointeur vers la `DialogProc` fonction de rappel.
 
 ```
 virtual DLGPROC GetDialogProc();
@@ -226,15 +226,15 @@ virtual DLGPROC GetDialogProc();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers le `DialogProc` fonction de rappel.
+Retourne un pointeur vers la `DialogProc` fonction de rappel.
 
 ### <a name="remarks"></a>Notes
 
-Le `DialogProc` fonction est une fonction de rappel défini par l’application.
+La `DialogProc` fonction est une fonction de rappel définie par l’application.
 
 ##  <a name="getidd"></a>  CAxDialogImpl::GetIDD
 
-Appelez cette méthode pour obtenir l’ID de ressource de modèle boîte de dialogue.
+Appelez cette méthode pour accéder à l’ID de ressource du modèle de boîte de dialogue.
 
 ```
 int GetIDD();
@@ -242,11 +242,11 @@ int GetIDD();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne l’ID de ressource de modèle boîte de dialogue.
+Retourne l’ID de ressource du modèle de boîte de dialogue.
 
 ##  <a name="isdialogmessage"></a>  CAxDialogImpl::IsDialogMessage
 
-Appelez cette méthode pour déterminer si un message est destiné à cette boîte de dialogue et, dans le cas, traiter le message.
+Appelez cette méthode pour déterminer si un message est destiné à cette boîte de dialogue et, si c’est le cas, traiter le message.
 
 ```
 BOOL IsDialogMessage(LPMSG pMsg);
@@ -255,11 +255,11 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="parameters"></a>Paramètres
 
 *pMsg*<br/>
-Pointeur vers un [MSG](/windows/desktop/api/winuser/ns-winuser-msg) structure qui contient le message à vérifier.
+Pointeur vers une structure [MSG](/windows/win32/api/winuser/ns-winuser-msg) qui contient le message à vérifier.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si le message a été traité, FALSE sinon.
+Retourne la valeur TRUE si le message a été traité ; sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -267,7 +267,7 @@ Cette méthode est destinée à être appelée à partir d’une boucle de messa
 
 ##  <a name="m_bmodal"></a>  CAxDialogImpl::m_bModal
 
-Une variable qui existe uniquement en mode de débogage génère et est définie sur true si la boîte de dialogue est modale.
+Variable qui existe uniquement dans les versions Debug et qui a la valeur true si la boîte de dialogue est modale.
 
 ```
 bool m_bModal;

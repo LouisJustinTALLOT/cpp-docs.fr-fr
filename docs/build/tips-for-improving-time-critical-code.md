@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _lfind function
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
-ms.openlocfilehash: 97a9a54be1b322edfe8cfeca84e03f9a6766b8fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 828a0c49440b4fd2e1f3ae10514ffb86b2315ebd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314713"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498109"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Conseils pour l'amélioration du code à durée critique
 
@@ -55,25 +55,25 @@ Pour rassembler des informations sur les performances de votre code, vous pouvez
 
 ## <a name="sections-in-this-article"></a>Sections de cet article
 
-- [Absences dans le cache et défauts de Page](#_core_cache_hits_and_page_faults)
+- [Absences dans le cache et défauts de page](#_core_cache_hits_and_page_faults)
 
 - [Tri et recherche](#_core_sorting_and_searching)
 
-- [MFC et les bibliothèques de classes](#_core_mfc_and_class_libraries)
+- [MFC et bibliothèques de classes](#_core_mfc_and_class_libraries)
 
 - [Bibliothèques partagées](#vcovrsharedlibraries)
 
-- [Segments de mémoire](#_core_heaps)
+- [Tas](#_core_heaps)
 
 - [Threads](#_core_threads)
 
-- [Petite plage de travail](#_core_small_working_set)
+- [Plage de travail réduite](#_core_small_working_set)
 
-##  <a name="_core_cache_hits_and_page_faults"></a> Absences dans le cache et défauts de Page
+##  <a name="_core_cache_hits_and_page_faults"></a>Absences dans le cache et défauts de page
 
 Les correspondances manquées dans le cache, à la fois dans le cache interne et le cache externe, ainsi que les défauts de page (accès à la mémoire auxiliaire pour les données et les instructions du programme) ralentissent les performances d'un programme.
 
-Un accès au cache de processeur peut coûter à votre programme 10-20 cycles d’horloge. Un accès au cache externe peut coûter 20-40 cycles d’horloge. Un défaut de page peut coûter un million de cycles d'horloge (dans l'hypothèse d'un processeur traitant 500 millions d'instructions par seconde et d'une durée de 2 millisecondes pour un défaut de page). Par conséquent, il est dans l'intérêt de l'exécution du programme d'écrire du code permettant de réduire le nombre de correspondances manquées dans le cache et de défauts de page.
+Un accès au cache de l’UC peut coûter vos cycles d’horloge du programme 10-20. Un accès au cache externe peut coûter 20-40 cycles d’horloge. Un défaut de page peut coûter un million de cycles d'horloge (dans l'hypothèse d'un processeur traitant 500 millions d'instructions par seconde et d'une durée de 2 millisecondes pour un défaut de page). Par conséquent, il est dans l'intérêt de l'exécution du programme d'écrire du code permettant de réduire le nombre de correspondances manquées dans le cache et de défauts de page.
 
 Une des raisons de la lenteur de certains programmes peut être qu'ils acceptent plus de défauts de page ou manquent le cache plus souvent que nécessaire. Pour éviter cela, il est important d'utiliser des structures de données dotées d'une bonne localité de référence, c'est-à-dire qui maintient ensemble les éléments associés. Parfois, une structure de données qui semble appropriée s'avère désastreuse en raison d'une médiocre localité de référence, et l'inverse est parfois vrai. Voici deux exemples :
 
@@ -81,13 +81,13 @@ Une des raisons de la lenteur de certains programmes peut être qu'ils acceptent
 
 - Les tables de hachage qui utilisent des listes liées allouées dynamiquement peuvent dégrader les performances. Par extension, les tables de hachage qui utilisent des listes liées allouées dynamiquement pour stocker leur contenu peuvent fonctionner nettement moins bien. En fait, dans l'analyse finale, une recherche linéaire simple dans un tableau peut effectivement être plus rapide (selon les circonstances). Les tables de hachage basées sur tableau (on parle de « hachage fermé ») constituent une implémentation souvent négligée qui affiche fréquemment des performances supérieures.
 
-##  <a name="_core_sorting_and_searching"></a> Tri et recherche
+##  <a name="_core_sorting_and_searching"></a>Tri et recherche
 
 Le tri est intrinsèquement un processus long par rapport à de nombreuses opérations standard. La meilleure façon d'éviter un ralentissement inutile consiste à éviter d'effectuer des tris aux moments critiques. Vous pouvez éventuellement :
 
-- Différer un tri jusqu'à un moment non critique de performances.
+- Différer le tri jusqu’à une heure non critique pour les performances.
 
-- Trier les données à un moment antérieur, non critiques de performances.
+- Triez les données à une heure antérieure, non critique pour les performances.
 
 - trier uniquement la partie des données qui a réellement besoin d'être triée.
 
@@ -103,29 +103,29 @@ Voici quelques conseils généraux en matière de tri :
 
 Il existe moins d'alternatives pour les recherches que pour le tri. Si la recherche dépend de façon critique du temps, une recherche binaire ou une recherche dans une table de hachage est quasiment toujours la meilleure solution, mais pour ce qui est du tri, vous devez garder à l’esprit la localité. Une recherche linéaire dans un petit tableau peut être plus rapide qu'une recherche binaire dans une structure de données avec de nombreux pointeurs qui génère des défauts de page ou des échecs dans le cache.
 
-##  <a name="_core_mfc_and_class_libraries"></a> MFC et les bibliothèques de classes
+##  <a name="_core_mfc_and_class_libraries"></a>MFC et bibliothèques de classes
 
 La bibliothèque MFC (Microsoft Foundation Classes) peut grandement simplifier l'écriture de code. Lorsque vous écrivez du code fortement dépendant du temps, vous devez être conscient de la surcharge inhérente à certaines classes. Examinez le code MFC qu’utilise votre code fortement dépendant du temps pour voir s’il satisfait à vos exigences en matière de performances. La liste suivante identifie les fonctions et classes MFC dont vous devez être conscient :
 
-- `CString` MFC appelle la bibliothèque Runtime C pour allouer de mémoire pour un [CString](../atl-mfc-shared/reference/cstringt-class.md) dynamiquement. Dans l'ensemble, `CString` est aussi efficace que toute autre chaîne allouée dynamiquement. Comme pour toute chaîne allouée dynamiquement, il a la surcharge de l’allocation et de la mise en production dynamiques. Souvent, un tableau `char` simple sur la pile peut servir le même objectif et être plus rapide. N'utilisez pas `CString` pour stocker une chaîne constante. Utilisez plutôt `const char *`. Toute opération que vous effectuez avec un objet `CString` présente une certaine surcharge. À l’aide de la bibliothèque du run-time [fonctions de chaîne](../c-runtime-library/string-manipulation-crt.md) peut être plus rapide.
+- `CString`MFC appelle la bibliothèque Runtime C pour allouer dynamiquement de la mémoire pour un [CString](../atl-mfc-shared/reference/cstringt-class.md) . Dans l'ensemble, `CString` est aussi efficace que toute autre chaîne allouée dynamiquement. Comme pour toute chaîne allouée dynamiquement, il a la surcharge de l’allocation et de la mise en production dynamiques. Souvent, un tableau `char` simple sur la pile peut servir le même objectif et être plus rapide. N'utilisez pas `CString` pour stocker une chaîne constante. Utilisez plutôt `const char *`. Toute opération que vous effectuez avec un objet `CString` présente une certaine surcharge. L’utilisation des [fonctions de chaîne](../c-runtime-library/string-manipulation-crt.md) de la bibliothèque Runtime peut être plus rapide.
 
-- `CArray` Un [CArray](../mfc/reference/carray-class.md) fournit un tableau standard ne que votre programme a ne peut-être pas besoin de souplesse. Si vous connaissez les limites spécifiques du tableau, vous pouvez utiliser un tableau fixe global à la place. Si vous utilisez `CArray`, utilisez `CArray::SetSize` pour établir sa taille et spécifiez le nombre d'éléments dont il croîtra quand une réallocation sera nécessaire. Dans le cas contraire, l'ajout d'éléments peut entraîner la réallocation et la copie fréquentes de votre tableau, ce qui est inefficace et peut fragmenter la mémoire. De plus, sachez que si vous insérez un élément dans un tableau, l'objet `CArray` déplace les éléments suivants dans la mémoire et peut être amené à augmenter la taille du tableau. Ces actions peuvent provoquer des défauts de page et des échecs dans le cache. Si vous examinez le code que la bibliothèque MFC utilise, vous pouvez voir que vous pouvez écrire quelque chose de plus spécifique dans votre scénario pour améliorer les performances. Comme `CArray` est un modèle, par exemple, vous pouvez fournir des spécialisations de `CArray` pour des types spécifiques.
+- `CArray`Un [CArray](../mfc/reference/carray-class.md) offre une certaine flexibilité qu’un tableau normal, mais votre programme n’en a peut-être pas besoin. Si vous connaissez les limites spécifiques du tableau, vous pouvez utiliser un tableau fixe global à la place. Si vous utilisez `CArray`, utilisez `CArray::SetSize` pour établir sa taille et spécifiez le nombre d'éléments dont il croîtra quand une réallocation sera nécessaire. Dans le cas contraire, l'ajout d'éléments peut entraîner la réallocation et la copie fréquentes de votre tableau, ce qui est inefficace et peut fragmenter la mémoire. De plus, sachez que si vous insérez un élément dans un tableau, l'objet `CArray` déplace les éléments suivants dans la mémoire et peut être amené à augmenter la taille du tableau. Ces actions peuvent provoquer des défauts de page et des échecs dans le cache. Si vous examinez le code que la bibliothèque MFC utilise, vous pouvez voir que vous pouvez écrire quelque chose de plus spécifique dans votre scénario pour améliorer les performances. Comme `CArray` est un modèle, par exemple, vous pouvez fournir des spécialisations de `CArray` pour des types spécifiques.
 
-- `CList` [CList](../mfc/reference/clist-class.md) est une liste doublement liée, afin de l’insertion d’éléments est rapide au début, fin et à une position connue (`POSITION`) dans la liste. La recherche d'un élément par valeur ou index exige une recherche séquentielle, toutefois, laquelle peut être lente si la liste est longue. Si votre code ne requiert pas de liste à double liaison, vous voudrez peut-être reconsidérer l'utilisation de `CList`. L'utilisation d'une liste à liaison unique économise la surcharge liée à la mise à jour d'un pointeur supplémentaire pour toutes les opérations, ainsi que la mémoire pour ce pointeur. La mémoire supplémentaire n’est pas de grande ampleur, mais elle représente une autre opportunité de défauts de page ou d’échecs dans le cache.
+- `CList`[CList](../mfc/reference/clist-class.md) est une liste doublement liée. par conséquent, l’insertion d’éléments est rapide à la tête, à la fin et à`POSITION`une position connue () dans la liste. La recherche d'un élément par valeur ou index exige une recherche séquentielle, toutefois, laquelle peut être lente si la liste est longue. Si votre code ne requiert pas de liste à double liaison, vous voudrez peut-être reconsidérer l'utilisation de `CList`. L'utilisation d'une liste à liaison unique économise la surcharge liée à la mise à jour d'un pointeur supplémentaire pour toutes les opérations, ainsi que la mémoire pour ce pointeur. La mémoire supplémentaire n’est pas de grande ampleur, mais elle représente une autre opportunité de défauts de page ou d’échecs dans le cache.
 
-- `IsKindOf` Cette fonction peut générer de nombreux appels et accéder à beaucoup de mémoire dans différentes zones de données, ce qui conduit à la localité de référence incorrecte. Il est utile pour une version Debug (dans un appel ASSERT, par exemple), mais essayez d’éviter de l’utiliser dans une version Release.
+- `IsKindOf`Cette fonction peut générer de nombreux appels et accéder à une grande quantité de mémoire dans différentes zones de données, ce qui se traduit par une localité de référence incorrecte. Il est utile pour une version Debug (dans un appel ASSERT, par exemple), mais essayez d’éviter de l’utiliser dans une version Release.
 
-- `PreTranslateMessage` Utilisez `PreTranslateMessage` quand une arborescence particulière de windows a besoin d’autres accélérateurs clavier ou lorsque vous devez insérer la gestion des messages dans la pompe de messages. `PreTranslateMessage` modifie les messages de distribution MFC. Si vous remplacez `PreTranslateMessage`, faites-le seulement au niveau requis. Par exemple, il n'est pas nécessaire de remplacer `CMainFrame::PreTranslateMessage` si seuls les messages destinés aux enfants d'une vue particulière vous intéressent. Remplacez plutôt `PreTranslateMessage` pour la classe de vue.
+- `PreTranslateMessage`Utilisez `PreTranslateMessage` quand une arborescence particulière de fenêtres a besoin d’accélérateurs de clavier différents ou lorsque vous devez insérer la gestion des messages dans la pompe de messages. `PreTranslateMessage` modifie les messages de distribution MFC. Si vous remplacez `PreTranslateMessage`, faites-le seulement au niveau requis. Par exemple, il n'est pas nécessaire de remplacer `CMainFrame::PreTranslateMessage` si seuls les messages destinés aux enfants d'une vue particulière vous intéressent. Remplacez plutôt `PreTranslateMessage` pour la classe de vue.
 
-   Ne contournez pas le chemin de distribution normal en utilisant `PreTranslateMessage` pour traiter des messages quelconques envoyés vers des fenêtres quelconques. Utilisez [procédures de fenêtre](../mfc/registering-window-classes.md) et tables des messages MFC à cet effet.
+   Ne contournez pas le chemin de distribution normal en utilisant `PreTranslateMessage` pour traiter des messages quelconques envoyés vers des fenêtres quelconques. Utilisez les [procédures de fenêtre](../mfc/registering-window-classes.md) et les tables des messages MFC à cet effet.
 
-- `OnIdle` Événements d’inactivité peuvent se produire dans certains cas vous prévoyez, comme entre `WM_KEYDOWN` et `WM_KEYUP` événements. Les minuteries peuvent fournir un moyen plus efficace de déclencher votre code. Ne forcez pas les appels répétés à `OnIdle` en générant des messages faux ou en retournant toujours `TRUE` à partir d'une substitution d'`OnIdle`, ce qui ne permettrait jamais la mise en veille de votre thread. À nouveau, une minuterie ou un thread distinct peuvent être plus appropriés.
+- `OnIdle`Les événements inactifs peuvent se produire à des moments inattendus `WM_KEYDOWN` , `WM_KEYUP` par exemple entre des événements et. Les minuteries peuvent fournir un moyen plus efficace de déclencher votre code. Ne forcez pas les appels répétés à `OnIdle` en générant des messages faux ou en retournant toujours `TRUE` à partir d'une substitution d'`OnIdle`, ce qui ne permettrait jamais la mise en veille de votre thread. À nouveau, une minuterie ou un thread distinct peuvent être plus appropriés.
 
-##  <a name="vcovrsharedlibraries"></a> Bibliothèques partagées
+##  <a name="vcovrsharedlibraries"></a>Bibliothèques partagées
 
 La réutilisation de code est souhaitable. Toutefois, si vous envisagez d'utiliser le code de quelqu'un d'autre, vous devez vous assurer de savoir exactement ce qu'il fait dans les cas où les performances sont essentielles pour vous. La meilleure façon de comprendre cela est de parcourir pas à pas le code source ou d'effectuer des mesures à l'aide d'outils tels que PView et l'Analyseur de performances.
 
-##  <a name="_core_heaps"></a> Segments de mémoire
+##  <a name="_core_heaps"></a>Tas
 
 Utilisez plusieurs cas avec discernement. Les tas supplémentaires créés avec `HeapCreate` et `HeapAlloc` vous permettent de gérer et de disposer d'un ensemble connexe d'allocations. Ne validez pas trop de mémoire. Si vous utilisez plusieurs tas, faites particulièrement attention à la quantité de mémoire initialement validée.
 
@@ -133,7 +133,7 @@ Utilisez plusieurs cas avec discernement. Les tas supplémentaires créés avec 
 
 Dans certains cas, toutefois, l'utilisation du tas par défaut peut réduire la localité de référence. Utilisez Process Viewer, Spy++ ou l'Analyseur de performances pour mesurer les effets du déplacement des objets d'un tas à un autre.
 
-Mesurez vos tas de manière à pouvoir rendre compte de chaque allocation sur le tas. Utilisez la durée d’exécution C [les routines de tas de débogage](/visualstudio/debugger/crt-debug-heap-details) au point de contrôle votre tas et vider. Vous pouvez lire la sortie dans un tableur tel que Microsoft Excel et utiliser des tableaux croisés pour afficher les résultats. Notez le nombre total, la taille et la distribution des allocations. Comparez ces valeurs avec la taille des plages de travail. Examinez également le clustering des objets de taille connexe.
+Mesurez vos tas de manière à pouvoir rendre compte de chaque allocation sur le tas. Utilisez les [routines de tas de débogage](/visualstudio/debugger/crt-debug-heap-details) du runtime C pour effectuer un point de contrôle et vider votre tas. Vous pouvez lire la sortie dans un tableur tel que Microsoft Excel et utiliser des tableaux croisés pour afficher les résultats. Notez le nombre total, la taille et la distribution des allocations. Comparez ces valeurs avec la taille des plages de travail. Examinez également le clustering des objets de taille connexe.
 
 Vous pouvez également utiliser les compteurs de performance pour analyser l'utilisation de la mémoire.
 
@@ -145,15 +145,15 @@ Une bonne règle empirique consiste à utiliser un thread seulement si une notif
 
 Les threads présentent également des problèmes de communication. Vous devez gérer le lien de communication entre vos threads à l'aide d'une liste de messages ou en allouant et en utilisant de la mémoire partagée. La gestion du lien de communication exige habituellement une synchronisation pour éviter les conditions de concurrence critique et les problèmes de blocage. Cette complexité peut aisément donner naissance à des bogues et à des problèmes de performances.
 
-Pour plus d’informations, consultez [traitement inactif de boucle](../mfc/idle-loop-processing.md) et [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
+Pour plus d’informations, consultez [traitement des boucles inactives](../mfc/idle-loop-processing.md) et [multithreads](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-##  <a name="_core_small_working_set"></a> Petite plage de travail
+##  <a name="_core_small_working_set"></a>Plage de travail réduite
 
 De petites plages de travail induisent une meilleure localité de référence, moins de défauts de pages et plus de correspondances dans le cache. La plage de travail de processus constitue la métrique la plus proche fournie directement par le système d'exploitation pour mesurer la localité de référence.
 
-- Pour définir les limites supérieures et inférieures de la plage de travail, utilisez [SetProcessWorkingSetSize](/windows/desktop/api/winbase/nf-winbase-getprocessworkingsetsize).
+- Pour définir les limites supérieure et inférieure de la plage de travail, utilisez [SetProcessWorkingSetSize](/windows/win32/api/winbase/nf-winbase-getprocessworkingsetsize).
 
-- Pour obtenir les limites supérieures et inférieures de la plage de travail, utilisez [GetProcessWorkingSetSize](/windows/desktop/api/winbase/nf-winbase-setprocessworkingsetsize).
+- Pour connaître les limites supérieure et inférieure de la plage de travail, utilisez [GetProcessWorkingSetSize](/windows/win32/api/winbase/nf-winbase-setprocessworkingsetsize).
 
 - Pour afficher la taille de la plage de travail, utilisez Spy++.
 
