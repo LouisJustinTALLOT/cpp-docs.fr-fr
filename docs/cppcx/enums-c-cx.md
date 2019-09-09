@@ -2,22 +2,22 @@
 title: Énumérations (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-ms.openlocfilehash: f16a288a0b928b74ef42de5781fd1b54930927d6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 3bdcff03872dcfe83f0be5752cec4f567fbc6b72
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345815"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740210"
 ---
 # <a name="enums-ccx"></a>Énumérations (C++/CX)
 
-C++ / c++ / CX prend en charge la `public enum class` mot clé, ce qui est analogue à un C++ standard `scoped  enum`. Lorsque vous utilisez un énumérateur qui est déclaré à l'aide du mot clé `public enum class` , vous devez utiliser l'identificateur d'énumération pour limiter chaque valeur de l'énumérateur.
+C++/CX prend en `public enum class` charge le mot clé, qui est analogue C++ `scoped  enum`à une norme. Lorsque vous utilisez un énumérateur qui est déclaré à l'aide du mot clé `public enum class` , vous devez utiliser l'identificateur d'énumération pour limiter chaque valeur de l'énumérateur.
 
 ### <a name="remarks"></a>Notes
 
 Un `public enum class` qui n'a pas de spécificateur d'accès, tel que `public`, est traité comme un [scoped enum](../cpp/enumerations-cpp.md)C++ standard.
 
-Un `public enum class` ou `public enum struct` déclaration peut avoir un type sous-jacent de n’importe quel type intégral bien que le Runtime Windows lui-même nécessite que le type soit int32 ou uint32 pour un enum. La syntaxe suivante décrit les éléments d'un `public enum class` ou d'un `public enum struct`.
+Une `public enum class` Déclaration `public enum struct` ou peut avoir un type sous-jacent de tout type intégral bien que le Windows Runtime lui-même nécessite que le type soit Int32 ou UInt32 pour une énumération d’indicateurs. La syntaxe suivante décrit les éléments d'un `public enum class` ou d'un `public enum struct`.
 
 Cet exemple montre comment définir une classe d'énumération publique :
 
@@ -40,5 +40,5 @@ L'exemple suivant indique comment effectuer un cast en équivalents numériques 
 ## <a name="see-also"></a>Voir aussi
 
 [Système de type](../cppcx/type-system-c-cx.md)<br/>
-[Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)

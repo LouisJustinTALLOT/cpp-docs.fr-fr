@@ -2,20 +2,20 @@
 title: Événements (C++/CX)
 ms.date: 07/15/2019
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: d0a3ab01628487dcca081eb300470cbd1bf3bb83
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: aab37353b1ea8d9f81a8e9a9ae489a4dd3542cc0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894455"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740528"
 ---
 # <a name="events-ccx"></a>Événements (C++/CX)
 
-Un Runtime Windows type peut déclarer (qui est, publier) événements, le code client dans le même composant ou dans d’autres composants peut s’abonner à ces événements en associant des méthodes appelées *gestionnaires d’événements* avec l’événement. Plusieurs gestionnaires d'événements peuvent être associés à un seul événement. Lorsque l'objet de publication déclenche l'événement, il entraîne l'appel de tous les gestionnaires d'événements. Ainsi, une classe d'abonnement peut effectuer l'action personnalisée appropriée lorsque l'éditeur déclenche l'événement. Un événement a un type délégué qui spécifie la signature que tous les gestionnaires d'événements doivent posséder pour s'abonner à l'événement.
+Un type de Windows Runtime peut déclarer (autrement dit, publier) des événements, et le code client dans le même composant ou dans d’autres composants peut s’abonner à ces événements en associant des méthodes appelées *gestionnaires d’événements* à l’événement. Plusieurs gestionnaires d'événements peuvent être associés à un seul événement. Lorsque l'objet de publication déclenche l'événement, il entraîne l'appel de tous les gestionnaires d'événements. Ainsi, une classe d'abonnement peut effectuer l'action personnalisée appropriée lorsque l'éditeur déclenche l'événement. Un événement a un type délégué qui spécifie la signature que tous les gestionnaires d'événements doivent posséder pour s'abonner à l'événement.
 
 ## <a name="consuming-events-in-windows-components"></a>Utilisation d'événements dans les composants Windows
 
-De nombreux composants dans le Runtime Windows exposent des événements. Par exemple, un objet LightSensor déclenche un événement ReadingChanged lorsque le capteur signale une nouvelle valeur de luminescence. Lorsque vous utilisez un objet LightSensor dans votre programme, vous pouvez définir une méthode qui est appelée lorsque l'événement ReadingChanged se déclenche. La méthode peut faire tout ce que vous voulez faire ; la seule exigence est que sa signature doit correspondre à la signature du délégué qui est appelé. Pour plus d’informations sur la façon de créer un gestionnaire d’événements délégué et s’abonner à un événement, consultez [délégués](../cppcx/delegates-c-cx.md).
+De nombreux composants dans le Windows Runtime exposer des événements. Par exemple, un objet LightSensor déclenche un événement ReadingChanged lorsque le capteur signale une nouvelle valeur de luminescence. Lorsque vous utilisez un objet LightSensor dans votre programme, vous pouvez définir une méthode qui est appelée lorsque l'événement ReadingChanged se déclenche. La méthode peut faire tout ce que vous voulez. la seule exigence est que sa signature doit correspondre à la signature du délégué appelé. Pour plus d’informations sur la création d’un gestionnaire d’événements délégué et l’abonnement à un événement, consultez [délégués](../cppcx/delegates-c-cx.md).
 
 ## <a name="creating-custom-events"></a>Création d'événements personnalisés
 
@@ -62,5 +62,5 @@ L'ordre dans lequel la source d'événements appelle les gestionnaires d'événe
 
 [Système de type](../cppcx/type-system-c-cx.md)<br/>
 [Délégués](../cppcx/delegates-c-cx.md)<br/>
-[Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)
