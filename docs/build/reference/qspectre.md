@@ -1,16 +1,16 @@
 ---
 title: /Qspectre
-ms.date: 10/12/2018
+ms.date: 09/06/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SpectreMitigation
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: 2b784e464f98ae6a1f9285f799d903ae689bf6d5
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: e8d03075a980a9b9c345ce351413e39a3c3444cb
+ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340994"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808829"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -28,9 +28,12 @@ L’option **/Qspectre** est désactivée par défaut.
 
 Dans sa version initiale, l’option **/Qspectre** fonctionnait uniquement sur du code optimisé. Dans Visual Studio 2017 version 15.7 et ultérieure, l’option **/Qspectre** est prise en charge à tous les niveaux d’optimisation.
 
-Les bibliothèques Microsoft Visual C++ sont également disponibles dans les versions disposant de l’atténuation de Spectre. Les bibliothèques avec atténuation de Spectre pour Visual Studio 2017 et ultérieur peuvent être téléchargées dans Visual Studio Installer. Ils se trouvent sous l’onglet **composants individuels** sous **compilateurs, outils de génération et runtimes**, et contiennent «libs pour spectre» dans le nom. Les bibliothèques runtime statiques et DLL pour lesquelles l’atténuation est activée sont disponibles pour un sous-ensemble de runtimes Visual C++ : code de démarrage VC++, vcruntime140, msvcp140, concrt140 et vcamp140. Les dll sont uniquement prises en charge pour le déploiement local de l’application. Le contenu du composant redistribuable des bibliothèques Runtime Visual C++ 2017 et versions ultérieures n’a pas été modifié.
+Les bibliothèques Microsoft Visual C++ sont également disponibles dans les versions disposant de l’atténuation de Spectre. Les bibliothèques avec atténuation de Spectre pour Visual Studio 2017 et ultérieur peuvent être téléchargées dans Visual Studio Installer. Ils se trouvent sous l’onglet **composants individuels** sous **compilateurs, outils de génération et runtimes**, et contiennent « libs pour spectre » dans le nom. Les bibliothèques runtime statiques et DLL pour lesquelles l’atténuation est activée sont disponibles pour un sous-ensemble de runtimes Visual C++ : code de démarrage VC++, vcruntime140, msvcp140, concrt140 et vcamp140. Les dll sont uniquement prises en charge pour le déploiement local de l’application. Le contenu du composant redistribuable des bibliothèques Runtime Visual C++ 2017 et versions ultérieures n’a pas été modifié.
 
 Vous pouvez également installer les bibliothèques atténuées par spectre pour MFC et ATL. Ils se trouvent sous l’onglet **composants individuels** sous **Kits de développement logiciel (SDK), bibliothèques et frameworks**.
+
+> [!NOTE]
+> Il n’existe aucune version des bibliothèques atténuées par spectre pour les applications ou les composants Windows universels. Le déploiement local des applications de ces bibliothèques n’est pas possible.
 
 ### <a name="applicability"></a>Applicabilité
 
@@ -60,19 +63,33 @@ L’option de compilateur **/Qspectre** génère du code qui lie implicitement l
 - Visual C++ ATL pour \[(x86/x64) | ARM | ARM64] avec atténuations de Spectre
 - Visual C++ MFC pour \[x86/x64 | ARM | ARM64] avec atténuations de Spectre
 
-Si vous générez votre code à l’aide de **/Qspectre** et que ces bibliothèques ne sont pas **installées, le système de génération signale un avertissement MSB8038: l’atténuation de Spectre est activée mais les bibliothèques atténuées contre Spectre sont introuvables**. Si la génération de votre code MFC ou ATL échoue, et que l’éditeur de liens signale une erreur telle que **Erreur irrécupérable LNK1104: impossible d’ouvrir le fichier’oldnames. lib'** ; ces bibliothèques manquantes peuvent en être la cause.
+Si vous générez votre code à l’aide de **/Qspectre** et que ces bibliothèques ne sont pas **installées, le système de génération signale un avertissement MSB8038 : l’atténuation de Spectre est activée mais les bibliothèques atténuées contre Spectre sont introuvables**. Si la génération de votre code MFC ou ATL échoue, et que l’éditeur de liens signale une erreur telle que **Erreur irrécupérable LNK1104 : impossible d’ouvrir le fichier’oldnames. lib'** ; ces bibliothèques manquantes peuvent en être la cause.
 
 ### <a name="additional-information"></a>Informations supplémentaires
 
-Pour plus d’informations, consultez l' [avis de sécurité Microsoft officiel ADV180002, conseils pour atténuer les vulnérabilités de canal latéral d’exécution spéculative](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002). Des conseils sont également disponibles auprès d’Intel, [Speculative Execution Side Channel Mitigations](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf) (Atténuations par canal auxiliaire d’exécution spéculative), et d’ARM, [Cache Speculation Side-channels](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf) (Mettre en cache les canaux auxiliaires de spéculation). Pour obtenir une vue d’ensemble spécifique à Windows des atténuations de spectre et de Meltdown, consultez [Présentation de l’impact sur les performances des atténuations de spectre et de Meltdown sur les systèmes Windows](https://www.microsoft.com/security/blog/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/). Pour obtenir une vue d’ensemble des vulnérabilités de spectre adressées par les atténuations MSVC, consultez atténuations C++ de [spectre dans MSVC](https://devblogs.microsoft.com/cppblog/spectre-mitigations-in-msvc./) sur le blog de l’équipe.
+Pour plus d’informations, consultez l' [avis de sécurité Microsoft officiel ADV180002, conseils pour atténuer les vulnérabilités de canal latéral d’exécution spéculative](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002). Des conseils sont également disponibles auprès d’Intel, [Speculative Execution Side Channel Mitigations](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf) (Atténuations par canal auxiliaire d’exécution spéculative), et d’ARM, [Cache Speculation Side-channels](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf) (Mettre en cache les canaux auxiliaires de spéculation). Pour obtenir une vue d’ensemble spécifique à Windows des atténuations de spectre et de Meltdown, consultez [Présentation de l’impact sur les performances des atténuations de spectre et de Meltdown sur les systèmes Windows](https://www.microsoft.com/security/blog/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/). Pour obtenir une vue d’ensemble des vulnérabilités de spectre adressées par les atténuations MSVC, consultez [atténuations de spectre dans MSVC](https://devblogs.microsoft.com/cppblog/spectre-mitigations-in-msvc./) sur le blog de l' C++ équipe.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
+::: moniker range="vs-2019"
+
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés **Propriétés de configuration** > **C/C++**  > **Ligne de commande**.
+1. Sélectionnez la page de propriétés **Propriétés** > de > configuration **C/C++**  **génération de code** .
+
+1. Sélectionnez une nouvelle valeur pour la propriété d' **atténuation spectre** . Choisissez **OK** pour appliquer le changement.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
+
+1. Sélectionnez la page de propriétés **Propriétés** > de > configuration **C/C++**  **ligne de commande** .
 
 1. Entrez l’option de compilateur **/Qspectre** dans la zone **Options supplémentaires**. Choisissez **OK** pour appliquer le changement.
+
+::: moniker-end
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 
