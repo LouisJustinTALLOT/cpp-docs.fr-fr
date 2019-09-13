@@ -9,22 +9,22 @@ helpviewer_keywords:
 - handlers [MFC], command
 - handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
-ms.openlocfilehash: 0d3ed6239b638a0e161cd7e3580f4fe6e1b4a7e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25805187f88c5423ea41cd7cbe346e44e7d7d36a
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383754"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907463"
 ---
 # <a name="message-handlers"></a>Gestionnaires de messages
 
-Dans les MFC, un dédié *gestionnaire* fonction traite chaque message séparément. Les fonctions de gestionnaire de messages sont des fonctions de membre d’une classe. Cette documentation utilise les termes du contrat *fonction membre de gestionnaire de messages*, *fonction gestionnaire de messages*, *Gestionnaire de messages*, et *gestionnaire*indifféremment. Certains types de gestionnaires de messages sont également appelées « gestionnaires de commandes ».
+Dans MFC, une fonction de *Gestionnaire* dédiée traite chaque message distinct. Les fonctions de gestionnaire de messages sont des fonctions membres d’une classe. Cette documentation utilise les termes *fonction membre du gestionnaire*de messages, *fonction du gestionnaire de*messages, *Gestionnaire de messages*et *Gestionnaire* de manière interchangeable. Certains types de gestionnaires de messages sont également appelés « gestionnaires de commandes ».
 
-Écriture de gestionnaires de messages représente une proportion importante de votre travail dans l’écriture d’une application framework. Cette série d’articles décrit comment fonctionne le mécanisme de traitement des messages.
+L’écriture de gestionnaires de messages tient compte d’une grande partie de votre travail lors de l’écriture d’une application de Framework. Cette famille d’articles décrit le fonctionnement du mécanisme de traitement des messages.
 
-Ce que fait le gestionnaire pour un message qu’il n’est tout ce que vous voulez faire en réponse à ce message. Vous pouvez créer les gestionnaires à l’aide de la fenêtre Propriétés de la classe et renseignez ensuite le code du gestionnaire à l’aide de l’éditeur de code source.
+Ce que fait le gestionnaire d’un message, c’est ce que vous souhaitez faire en réponse à ce message. Vous pouvez créer les gestionnaires à l’aide de l' [Assistant classe](reference/mfc-class-wizard.md) de la classe, puis remplir le code du gestionnaire à l’aide de l’éditeur de code source.
 
-Vous pouvez utiliser toutes les fonctionnalités de Microsoft Visual C++ et MFC pour écrire des gestionnaires. Pour obtenir la liste de toutes les classes, consultez [vue d’ensemble de la bibliothèque de classes](../mfc/class-library-overview.md) dans le *référence MFC*.
+Vous pouvez utiliser toutes les fonctionnalités de Microsoft Visual C++ et MFC pour écrire vos gestionnaires. Pour obtenir la liste de toutes les classes, consultez [vue d’ensemble](../mfc/class-library-overview.md) de la bibliothèque de classes dans la *référence MFC*.
 
 ## <a name="see-also"></a>Voir aussi
 

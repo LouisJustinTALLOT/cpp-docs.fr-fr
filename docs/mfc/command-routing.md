@@ -1,6 +1,6 @@
 ---
 title: routage des commandes
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - MFC, command routing
 - command handling [MFC], routing commands
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: ae9741a66e944b60dc38c1366353e43977e1ee7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d1e1e59c56439c01655a1416df645ccc6922411
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165142"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907623"
 ---
 # <a name="command-routing"></a>routage des commandes
 
-Votre responsabilité quant à l’utilisation des commandes se limite à l’établissement de connexions de table des messages entre les commandes et leurs fonctions gestionnaires, une tâche pour laquelle vous utilisez la fenêtre Propriétés. Vous devez également écrire la plupart des gestionnaires de commandes.
+La responsabilité de l’utilisation des commandes se limite à l’établissement de connexions de table des messages entre les commandes et leurs fonctions gestionnaires, une tâche pour laquelle vous utilisez l' [Assistant classe MFC](reference/mfc-class-wizard.md). Vous devez également écrire le code pour les gestionnaires de commandes.
 
 Les messages de fenêtres sont généralement envoyés dans la fenêtre frame principale, mais les messages de commande sont ensuite routés vers d’autres objets. L’infrastructure achemine les commandes par le biais d’une séquence standard d’objets cibles de commande, dont l’un est censé avoir un responsable pour la commande. Chaque objet cible de commande consulte sa table des messages pour voir si elle peut traiter le message entrant.
 
@@ -29,7 +29,7 @@ Différentes classes de cibles de commande vérifient leurs propres tables des m
 
 1. Vers d’autres cibles de commande.
 
-Comment onéreux est ce mécanisme de routage par rapport à ce que fait votre gestionnaire en réponse à une commande, le coût du routage est faible. N’oubliez pas que l’infrastructure génère des commandes uniquement quand l’utilisateur interagit avec un objet d’interface utilisateur.
+Quel est le coût de ce mécanisme de routage par rapport à ce que fait votre gestionnaire en réponse à une commande, le coût du routage est faible. N’oubliez pas que l’infrastructure génère des commandes uniquement quand l’utilisateur interagit avec un objet d’interface utilisateur.
 
 ### <a name="_core_standard_command_route"></a> Itinéraire de commande standard
 

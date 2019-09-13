@@ -1,6 +1,6 @@
 ---
 title: 'Procédure pas à pas : Mise à jour de l’application Scribble MFC (partie 1)'
-ms.date: 04/25/2019
+ms.date: 09/09/2019
 helpviewer_keywords:
 - examples [MFC], update existing application
 - ribbon UI, porting to
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 8211111e3f9e6fff2377a62689e6f8b1e0e40990
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 23ddf92514674c32e28c259c4c7aa8f742302485
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630422"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907416"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procédure pas à pas : Mise à jour de l’application Scribble MFC (partie 1)
 
@@ -199,6 +199,7 @@ Un ruban se compose du bouton d' **application** , qui est le grand bouton sur l
 
 1. La modification suivante crée un bouton quitter qui apparaît en bas du menu du bouton de l' **application** .
 
+   1. Choisissez l’onglet **affichage des ressources** dans **Explorateur de solutions**.
    1. Dans la fenêtre **Propriétés** , cliquez sur le **bouton** de sélection ( **...** ) en regard de pour ouvrir l' **éditeur d’éléments**.
 
    1. Le **bouton** type d' **élément** étant sélectionné, cliquez sur **Ajouter** pour ajouter un bouton. Remplacez la légende `E&xit`par , ID `ID_APP_EXIT`par , image `8`par.

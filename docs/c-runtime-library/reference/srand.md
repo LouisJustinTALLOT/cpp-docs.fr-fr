@@ -1,6 +1,6 @@
 ---
 title: srand
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - srand
 apilocation:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: 6545d4eba6c17fd55bb2b8cf23fb0319d1c96bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d74ae4cbec5a76df48bb2b56acab7329e6cf8aa5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354884"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927406"
 ---
 # <a name="srand"></a>srand
 
-Définit la valeur initiale de départ pour le Générateur de nombres pseudo-aléatoires utilisé par le **rand** (fonction).
+Définit la valeur initiale de départ pour le générateur de nombres pseudo-aléatoires utilisé par la fonction **Rand** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,7 +55,7 @@ Valeur initiale pour la génération de nombres pseudo-aléatoires
 
 ## <a name="remarks"></a>Notes
 
-Le **srand** fonction définit le point de départ pour la génération d’une série d’entiers pseudo-aléatoires dans le thread actuel. Pour réinitialiser le générateur pour créer la même séquence de résultats, appelez le **srand** de fonction et utilisent le même *seed* argument à nouveau. Toute autre valeur pour *seed* définit le Générateur à un autre point de départ dans la séquence pseudo-aléatoire. **RAND** récupère les nombres pseudo-aléatoires qui sont générés. Appel **rand** avant tout appel à **srand** génère la même séquence que si vous appelez **srand** avec *seed* passé en tant que 1.
+La fonction **srand** définit le point de départ pour générer une série d’entiers Pseudo-aléatoires dans le thread actuel. Pour réinitialiser le générateur afin de créer la même séquence de résultats, appelez la fonction **srand** et réutilisez le même argument *Seed* . Toute autre valeur pour *Seed* définit le générateur à un point de départ différent dans la séquence Pseudo-aléatoire. **Rand** récupère les nombres pseudo-aléatoires qui sont générés. L’appel de **Rand** avant tout appel à **srand** génère la même séquence que l’appel de **srand** avec une *valeur de départ* passée comme 1.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -65,7 +65,7 @@ Le **srand** fonction définit le point de départ pour la génération d’une 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Consultez l’exemple relatif à [rand](rand.md).
 

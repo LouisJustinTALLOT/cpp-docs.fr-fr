@@ -1,46 +1,33 @@
 ---
 title: Mappage de messages à des fonctions
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - vc.codewiz.mapping.msg.function
 helpviewer_keywords:
 - Windows messages [MFC], adding message handlers
 - message maps [MFC], mapping messages to functions
 ms.assetid: a7727a62-f638-4b20-b7f5-131f47200d6a
-ms.openlocfilehash: 33aa12626e92eb40606e3ec9b12ebb7bcac571ec
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 4a76e28bddda0ad3385ab2110e201d652c0623df
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741650"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907876"
 ---
 # <a name="mapping-messages-to-functions"></a>Mappage de messages à des fonctions
 
-La fenêtre Propriétés vous permet de lier des gestionnaires de messages (fonctions membres des classes d’interface utilisateur MFC) les messages générés par les ressources de votre application. Ils utilisent [tables des messages MFC](../../mfc/messages-and-commands-in-the-framework.md) pour créer la liaison.
+L' [Assistant classe](mfc-class-wizard.md) vous permet de lier des gestionnaires de messages (fonctions membres de classes d’interface utilisateur MFC) aux messages générés par les ressources de votre application. Ils utilisent les [tables des messages MFC](../../mfc/messages-and-commands-in-the-framework.md) pour créer la liaison.
 
-Lorsque vous utilisez l’affichage de classes pour créer une nouvelle classe dérivée à partir d’une des classes de framework, il automatiquement place un complets et fonctionnels fichiers de classes dans l’en-tête (.h) et l’implémentation (.cpp) que vous spécifiez.
+Quand vous utilisez Affichage de classes pour créer une classe dérivée de l’une des classes d’infrastructure, il place automatiquement une classe complète et fonctionnelle dans les fichiers d’en-tête (. h) et d’implémentation (. cpp) que vous spécifiez.
 
 > [!NOTE]
->  Pour ajouter une nouvelle classe qui ne gère pas les messages, créer la classe directement dans l’éditeur de texte.
+>  Pour ajouter une nouvelle classe qui ne gère pas les messages, créez la classe directement dans l’éditeur de texte.
 
-### <a name="to-define-or-remove-a-message-handler-using-the-properties-window"></a>Pour définir ou supprimer un gestionnaire de messages à l’aide de la fenêtre Propriétés
+### <a name="to-define-or-remove-a-message-handler-using-the-class-wizard"></a>Pour définir ou supprimer un gestionnaire de messages à l’aide de l’Assistant classe
 
-1. Dans Affichage de classes, cliquez sur la classe.
+1. Dans **affichage de classes**, cliquez avec le bouton droit sur la classe.
 
-1. Dans la fenêtre Propriétés, cliquez sur le **Messages** bouton.
-
-    > [!NOTE]
-    >  Le **Messages** bouton est disponible lorsque vous sélectionnez le nom de classe dans l’affichage de classes ou lorsque vous cliquez sur dans la fenêtre source.
-
-   Si votre projet a un gestionnaire pour un message, le nom du gestionnaire apparaît dans la colonne de droite en regard du message.
-
-1. Si le message n’a aucun gestionnaire, puis cliquez sur la cellule dans la colonne de droite dans la fenêtre Propriétés pour afficher le nom proposé pour le gestionnaire en tant que \<Ajouter >*HandlerName*. (Par exemple, le Gestionnaire de messages WM_TIMER suggère \<Ajouter >`OnTimer`).
-
-1. Cliquez sur le nom suggéré pour ajouter du code stub pour la fonction.
-
-1. Pour modifier un gestionnaire de messages, double-cliquez sur le message dans l’affichage de classes et modifiez le code dans la fenêtre source.
-
-Pour supprimer un gestionnaire de messages, double-cliquez sur le gestionnaire dans la colonne de droite et sélectionnez \<Supprimer >*HandlerName*. Le code de la fonction est commenté.
+1. Dans le menu contextuel, choisissez [Assistant classe](mfc-class-wizard.md).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -50,5 +37,4 @@ Pour supprimer un gestionnaire de messages, double-cliquez sur le gestionnaire d
 [Ajout d’une fonction membre](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Ajout d’une variable membre](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Substitution d’une fonction virtuelle](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
-[Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Parcours de la structure de classe](../../ide/navigate-code-cpp.md)

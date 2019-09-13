@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], creating
 - header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
-ms.openlocfilehash: 99269214666c324214422ad989dbbd8bff6fc345
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 22739e5671fb0300011de84d976eff0ce26eaedb
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508810"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907589"
 ---
 # <a name="creating-the-header-control"></a>Création du contrôle Header
 
@@ -24,7 +24,7 @@ Le contrôle header n’est pas directement disponible dans l’éditeur de boî
 
 1. Ajoutez des éléments au contrôle header.
 
-1. Utilisez la Fenêtre Propriétés pour mapper les fonctions de gestionnaire de la classe de boîte de dialogue pour tous les messages de notification de contrôle d’en-tête que vous devez gérer (consultez [mappage de messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md)).
+1. Utilisez l' [Assistant classe](reference/mfc-class-wizard.md) pour mapper les fonctions de gestionnaire de la classe de boîte de dialogue pour tous les messages de notification de contrôle d’en-tête que vous devez gérer (consultez [mappage de messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md)).
 
 ### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>Pour placer un contrôle header dans une vue (pas un CListView)
 
@@ -34,9 +34,9 @@ Le contrôle header n’est pas directement disponible dans l’éditeur de boî
 
 1. Ajoutez des éléments au contrôle header.
 
-1. Utilisez la Fenêtre Propriétés pour mapper des fonctions de gestionnaire dans la classe de vue pour tous les messages de notification de contrôle d’en-tête que vous devez gérer (consultez [mappage de messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md)).
+1. Utilisez l' [Assistant classe](reference/mfc-class-wizard.md) pour mapper des fonctions de gestionnaire dans la classe d’affichage pour tous les messages de notification de contrôle d’en-tête que vous devez gérer (consultez [mappage de messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md)).
 
-Dans les deux cas, l’objet de contrôle incorporé est créé lors de la création de l’objet de vue ou de boîte de dialogue. Vous devez ensuite appeler [CHeaderCtrl:: Create](../mfc/reference/cheaderctrl-class.md#create) pour créer la fenêtre de contrôle. Pour positionner le contrôle, appelez [CHeaderCtrl:: Layout](../mfc/reference/cheaderctrl-class.md#layout) pour déterminer la taille et la position initiales du contrôle et [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) pour définir la position de votre choix. Ajoutez ensuite des éléments comme décrit dans [Ajout d’éléments au contrôle header](../mfc/adding-items-to-the-header-control.md).
+Dans les deux cas, l’objet de contrôle incorporé est créé lors de la création de l’objet de vue ou de boîte de dialogue. Vous devez ensuite appeler [CHeaderCtrl :: Create](../mfc/reference/cheaderctrl-class.md#create) pour créer la fenêtre de contrôle. Pour positionner le contrôle, appelez [CHeaderCtrl :: Layout](../mfc/reference/cheaderctrl-class.md#layout) pour déterminer la taille et la position initiales du contrôle et [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) pour définir la position de votre choix. Ajoutez ensuite des éléments comme décrit dans [Ajout d’éléments au contrôle header](../mfc/adding-items-to-the-header-control.md).
 
 Pour plus d’informations, consultez [création d’un contrôle header](/windows/win32/Controls/header-controls) dans le SDK Windows.
 

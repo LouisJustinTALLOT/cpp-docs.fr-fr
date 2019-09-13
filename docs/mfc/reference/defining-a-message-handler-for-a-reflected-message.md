@@ -1,51 +1,47 @@
 ---
 title: Définition d'un gestionnaire de messages pour un message réfléchi
-ms.date: 11/04/2016
+ms.date: 09/07/2019
 f1_keywords:
 - vc.codewiz.defining.msg.msghandler
 helpviewer_keywords:
 - messages [MFC], reflected
 - message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
-ms.openlocfilehash: 970dd7072cb8391d76d39536e442d5aab8e0f61d
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 1e38c63464cacf445688a1d431a65af21eac86f4
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741597"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907940"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Définition d'un gestionnaire de messages pour un message réfléchi
 
-Une fois que vous avez créé une nouvelle classe de contrôle MFC, vous pouvez définir des gestionnaires de messages pour celle-ci. Gestionnaires de messages réfléchis permettent à votre classe de contrôle pour gérer ses propres messages avant que le message est reçu par le parent. Vous pouvez utiliser la bibliothèque MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) (fonction) pour envoyer des messages à partir de votre contrôle à une fenêtre parente.
+Une fois que vous avez créé une classe de contrôle MFC, vous pouvez définir des gestionnaires de messages pour celle-ci. Les gestionnaires de messages réfléchis permettent à votre classe de contrôle de gérer ses propres messages avant que le message ne soit reçu par le parent. Vous pouvez utiliser la fonction MFC [CWnd :: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) pour envoyer des messages de votre contrôle à une fenêtre parente.
 
-Cette fonctionnalité, par exemple, vous pouvez créer une zone de liste qui se redessine elle-même plutôt que de compter sur la fenêtre parente à faire c’est le cas (owner-drawn). Pour plus d’informations sur les messages réfléchis, consultez [gestion des Messages](../../mfc/handling-reflected-messages.md).
+Avec cette fonctionnalité, vous pouvez, par exemple, créer une zone de liste qui se redessine, plutôt que de s’appuyer sur la fenêtre parente pour le faire (propriétaire dessiné). Pour plus d’informations sur les messages reflétés, consultez [gestion des messages réfléchis](../../mfc/handling-reflected-messages.md).
 
 Pour créer un [contrôle ActiveX](../../mfc/activex-controls-on-the-internet.md) avec la même fonctionnalité, vous devez créer un projet pour le contrôle ActiveX.
 
 > [!NOTE]
->  Vous ne pouvez pas ajouter un message réfléchi (OCM_*Message*) pour un ActiveX contrôler à l’aide de la fenêtre Propriétés, comme décrit ci-dessous. Vous devez ajouter ces messages manuellement.
+>  Vous ne pouvez pas ajouter un message réfléchi (*message*OCM_) pour un contrôle ActiveX à l’aide de l’Assistant classe, comme décrit ci-dessous. Vous devez ajouter ces messages manuellement.
 
-### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>Pour définir un gestionnaire de messages pour un message réfléchi à partir de la fenêtre Propriétés
+### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-class-wizard"></a>Pour définir un gestionnaire de messages pour un message réfléchi à partir de l’Assistant classe
 
-1. Ajouter un contrôle, telles qu’une liste, un contrôle rebar, une barre d’outils ou un contrôle d’arborescence, à votre projet MFC.
+1. Ajoutez un contrôle, tel qu’une liste, un contrôle rebar, une barre d’outils ou un contrôle d’arborescence, à votre projet MFC.
 
-1. Dans l’affichage de classes, cliquez sur le nom de votre classe de contrôle.
+1. Dans Affichage de classes, cliquez sur le nom de votre classe de contrôle.
 
-1. Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), le nom de classe de contrôle s’affiche dans le **nom de la classe** liste.
+1. Dans l' [Assistant classe](mfc-class-wizard.md), le nom de la classe de contrôle apparaît dans la liste nom de la **classe** .
 
-1. Cliquez sur le **Messages** bouton pour afficher les messages Windows disponibles à ajouter au contrôle.
+1. Cliquez sur l’onglet **messages** pour afficher les messages Windows que vous pouvez ajouter au contrôle.
 
-1. Défilement vers le bas de la liste des messages dans la fenêtre Propriétés jusqu'à ce que vous voyiez l’en-tête **réfléchi**. Ou bien, cliquez sur le **catégories** bouton et réduire la vue pour voir les **réfléchi** titre.
+1. Sélectionnez le message réfléchi pour lequel vous souhaitez définir un gestionnaire. Les messages réfléchis sont marqués d’un signe égal (=).
 
-1. Sélectionnez le message réfléchi pour lequel vous souhaitez définir un gestionnaire. Messages réfléchis sont marqués par un signe égal (=).
+1. Cliquez sur la cellule dans la colonne de droite de l’Assistant classe pour afficher le nom suggéré du gestionnaire \<en tant qu’ajout >*HandlerName*. (Par exemple, le gestionnaire de messages **= WM_CTLCOLOR** suggère \<Add >**CTLCOLOR**).
 
-1. Cliquez sur la cellule dans la colonne de droite dans la fenêtre Propriétés pour afficher le nom proposé pour le gestionnaire en tant que \<Ajouter >*HandlerName*. (Par exemple, le **= WM_CTLCOLOR** Gestionnaire de messages \<Ajouter >**CtlColor**).
+1. Cliquez sur le nom suggéré à accepter. Le gestionnaire est ajouté à votre projet.
 
-1. Cliquez sur le nom suggéré pour accepter. Le gestionnaire est ajouté à votre projet.
-
-   Les noms de gestionnaires de messages que vous avez ajoutés s’affichent dans la colonne de droite de la fenêtre de messages réfléchis.
-
-9. Pour modifier ou supprimer un gestionnaire de messages, répétez les étapes 4 à 7. Cliquez sur la cellule qui contient le nom du gestionnaire à modifier ou supprimer et cliquez sur la tâche appropriée.
+1. Pour modifier ou supprimer un gestionnaire de messages, répétez les étapes 4 à 7. Cliquez sur la cellule contenant le nom du gestionnaire à modifier ou à supprimer, puis cliquez sur la tâche appropriée.
 
 ## <a name="see-also"></a>Voir aussi
 

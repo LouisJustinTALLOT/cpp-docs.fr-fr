@@ -1,6 +1,6 @@
 ---
-title: Icommandui, Interface
-ms.date: 11/04/2016
+title: Interface ICommandUI
+ms.date: 09/07/2019
 f1_keywords:
 - ICommandUI
 - AFXWINFORMS/ICommandUI
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322054"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907883"
 ---
-# <a name="icommandui-interface"></a>Icommandui, Interface
+# <a name="icommandui-interface"></a>Interface ICommandUI
 
 Gère les commandes de l’interface utilisateur.
 
@@ -37,52 +37,52 @@ interface class ICommandUI
 
 |Nom|Description|
 |----------|-----------------|
-|[icommandui__Check](#check)|Définit l’élément d’interface utilisateur pour cette commande à l’état de vérification appropriée.|
-|[ICommandUI::ContinueRouting](#continuerouting)|Indique au mécanisme de routage des commandes pour continuer le message en cours dans la chaîne de gestionnaires de routage.|
+|[icommandui__Check](#check)|Affecte l’état d’activation approprié à l’élément d’interface utilisateur pour cette commande.|
+|[ICommandUI::ContinueRouting](#continuerouting)|Indique au mécanisme de routage de commande de continuer à acheminer le message actuel vers le dessous de la chaîne de gestionnaires.|
 |[ICommandUI::Enabled](#enabled)|Active ou désactive l’élément d’interface utilisateur pour cette commande.|
-|[ICommandUI::ID](#id)|Obtient l’ID de l’objet d’interface utilisateur représenté par le `ICommandUI` objet.|
-|[ICommandUI::Index](#index)|Obtient l’index de l’objet d’interface utilisateur représenté par le `ICommandUI` objet.|
-|[ICommandUI::Radio](#radio)|Définit l’élément d’interface utilisateur pour cette commande à l’état de vérification appropriée.|
+|[ICommandUI :: ID](#id)|Obtient l’ID de l’objet d’interface utilisateur représenté par `ICommandUI` l’objet.|
+|[ICommandUI::Index](#index)|Obtient l’index de l’objet d’interface utilisateur représenté par `ICommandUI` l’objet.|
+|[ICommandUI::Radio](#radio)|Affecte l’état d’activation approprié à l’élément d’interface utilisateur pour cette commande.|
 |[ICommandUI::Text](#text)|Définit le texte de l’élément d’interface utilisateur pour cette commande.|
 
 ## <a name="remarks"></a>Notes
 
-Cette interface fournit des méthodes et propriétés qui gèrent des commandes de l’interface utilisateur. `ICommandUI` est similaire à [CCmdUI, classe](../../mfc/reference/ccmdui-class.md), sauf que `ICommandUI` est utilisé pour les applications MFC qui interagissent avec des composants .NET.
+Cette interface fournit des méthodes et des propriétés qui gèrent les commandes de l’interface utilisateur. `ICommandUI`est similaire à la [classe CCmdUI](../../mfc/reference/ccmdui-class.md), sauf `ICommandUI` que est utilisé pour les applications MFC qui interagissent avec les composants .net.
 
-`ICommandUI` est utilisé au sein d’un gestionnaire ON_UPDATE_COMMAND_UI dans un [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-classe dérivée. Lorsqu’un utilisateur d’une application active (sélectionne ou clics) un menu, chaque élément de menu est affiché comme activé ou désactivé. La cible de chaque commande de menu fournit ces informations en implémentant un gestionnaire ON_UPDATE_COMMAND_UI. Pour chacun des objets d’interface utilisateur commande dans votre application, utilisez la fenêtre Propriétés pour créer une entrée de table des messages et le prototype de fonction pour chaque gestionnaire.
+`ICommandUI`est utilisé dans un gestionnaire ON_UPDATE_COMMAND_UI dans une classe dérivée de [ICommandTarget](../../mfc/reference/icommandtarget-interface.md). Lorsqu’un utilisateur d’une application active (sélectionne ou clique) un menu, chaque élément de menu est affiché comme activé ou désactivé. La cible de chaque commande de menu fournit ces informations en implémentant un gestionnaire ON_UPDATE_COMMAND_UI. Pour chacun des objets de l’interface utilisateur de commande de votre application, utilisez l' [Assistant classe](mfc-class-wizard.md) pour créer une entrée de table des messages et un prototype de fonction pour chaque gestionnaire.
 
-Pour plus d’informations sur la façon dont le `ICommandUI` interface est utilisée dans le routage des commandes, consultez [Comment : Ajoutez la commande routage pour les Windows Forms contrôle](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Pour plus d’informations sur l' `ICommandUI` utilisation de l’interface dans le routage des [commandes, consultez Procédure : Ajoutez le routage des commandes au contrôle](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)Windows Forms.
 
-Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Pour plus d’informations sur l’utilisation de Windows Forms, consultez [utilisation d’un contrôle utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-Pour plus d’informations sur la gestion des commandes de l’interface utilisateur dans MFC, consultez [CCmdUI, classe](../../mfc/reference/ccmdui-class.md).
+Pour plus d’informations sur la façon dont les commandes de l’interface utilisateur sont gérées dans MFC, consultez la [classe CCmdUI](../../mfc/reference/ccmdui-class.md).
 
-## <a name="check"></a> ICommandUI::Check
+## <a name="check"></a>ICommandUI :: Check
 
-Définit l’élément d’interface utilisateur pour cette commande à l’état de vérification appropriée.
+Affecte l’état d’activation approprié à l’élément d’interface utilisateur pour cette commande.
 ```
 property UICheckState Check;
 ```
 
 ## <a name="remarks"></a>Notes
 
-Cette propriété définit l’élément d’interface utilisateur pour cette commande à l’état de vérification appropriée. Vérification de l’ensemble les valeurs suivantes :
-- Décochez 0
+Cette propriété affecte l’état d’activation approprié à l’élément d’interface utilisateur pour cette commande. Définissez le contrôle sur les valeurs suivantes :
+- 0 décocher
 - 1 vérification
-- 2 définir indéterminé
+- 2 définir comme indéterminé
 
-## <a name="continuerouting"></a> ICommandUI::ContinueRouting
+## <a name="continuerouting"></a>ICommandUI::ContinueRouting
 
-Indique au mécanisme de routage de commande pour continuer le message en cours dans la chaîne de gestionnaires de routage.
+Indique au mécanisme de routage des commandes de continuer à acheminer le message actuel vers le dessous de la chaîne de gestionnaires.
 ```
 void ContinueRouting();
 ```
 
 ## <a name="remarks"></a>Notes
 
-Il s’agit d’une fonction membre avancé qui doit être utilisée conjointement avec un gestionnaire ON_COMMAND_EX qui retourne la valeur FALSE. Pour plus d’informations, consultez Technical Note TN006 : Tables des messages.
+Il s’agit d’une fonction membre avancée qui doit être utilisée conjointement avec un gestionnaire ON_COMMAND_EX qui retourne FALSe. Pour plus d’informations, consultez Technical note TN006 : Tables des messages.
 
-## <a name="enabled"></a> ICommandUI::Enabled
+## <a name="enabled"></a>ICommandUI :: Enabled
 
 Active ou désactive l’élément d’interface utilisateur pour cette commande.
 ```
@@ -91,9 +91,9 @@ property bool Enabled;
 
 ## <a name="remarks"></a>Notes
 
-Cette propriété Active ou désactive l’élément d’interface utilisateur pour cette commande. Définissez activé à True pour activer l’élément, FALSE pour le désactiver.
+Cette propriété active ou désactive l’élément d’interface utilisateur pour cette commande. Affectez la valeur TRUE à Enabled pour activer l’élément, FALSe pour le désactiver.
 
-## <a name="id"></a> ICommandUI::ID
+## <a name="id"></a>ICommandUI :: ID
 
 Obtient l’ID de l’objet d’interface utilisateur représenté par l’objet ICommandUI.
 ```
@@ -102,9 +102,9 @@ property unsigned int ID;
 
 ## <a name="remarks"></a>Notes
 
-Cette propriété obtient l’ID (un handle) de l’élément de menu, bouton de barre d’outils ou un autre objet d’interface utilisateur représenté par l’objet ICommandUI.
+Cette propriété obtient l’ID (un handle) de l’élément de menu, du bouton de barre d’outils ou d’un autre objet d’interface utilisateur représenté par l’objet ICommandUI.
 
-## <a name="index"></a> ICommandUI::Index
+## <a name="index"></a>ICommandUI :: index
 
 Obtient l’index de l’objet d’interface utilisateur représenté par l’objet ICommandUI.
 ```
@@ -113,20 +113,20 @@ property unsigned int Index;
 
 ## <a name="remarks"></a>Notes
 
-Cette propriété obtient l’index (un handle) de l’élément de menu, bouton de barre d’outils ou un autre objet d’interface utilisateur représenté par l’objet ICommandUI.
+Cette propriété obtient l’index (un handle) de l’élément de menu, du bouton de barre d’outils ou d’un autre objet d’interface utilisateur représenté par l’objet ICommandUI.
 
-## <a name="radio"></a> ICommandUI::Radio
+## <a name="radio"></a>ICommandUI :: radio
 
-Définit l’élément d’interface utilisateur pour cette commande à l’état de vérification appropriée.
+Affecte l’état d’activation approprié à l’élément d’interface utilisateur pour cette commande.
 ```
 property bool Radio;
 ```
 
 ## <a name="remarks"></a>Notes
 
-Cette propriété définit l’élément d’interface utilisateur pour cette commande à l’état de vérification appropriée. Case d’option de jeu à True pour activer l’élément ; Sinon, FALSE.
+Cette propriété affecte l’état d’activation approprié à l’élément d’interface utilisateur pour cette commande. Affectez la valeur TRUE à radio pour activer l’élément. Sinon, FALSe.
 
-## <a name="text"></a> ICommandUI::Text
+## <a name="text"></a>ICommandUI :: Text
 
 Définit le texte de l’élément d’interface utilisateur pour cette commande.
 ```
@@ -135,11 +135,11 @@ property String^ Text;
 
 ## <a name="remarks"></a>Notes
 
-Cette propriété définit le texte de l’élément d’interface utilisateur pour cette commande. La valeur texte est un handle de chaîne de texte.
+Cette propriété définit le texte de l’élément d’interface utilisateur pour cette commande. Définissez le texte sur un handle de chaîne de texte.
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
+**En-tête :** afxwinforms. h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
 
 ## <a name="see-also"></a>Voir aussi
 

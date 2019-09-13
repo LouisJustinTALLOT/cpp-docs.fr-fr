@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: efced3be3a0bcc7efe16aef1061c4cd9ec1ed21c
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
-ms.translationtype: HT
+ms.openlocfilehash: 360f206ff4dae0b49650e131ccd86ecf9a0ed87d
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741640"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907489"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Ajout de fonctionnalités à l’aide des Assistants Code (C++)
 
@@ -29,13 +29,13 @@ Après avoir créé un projet, vous pouvez changer ses fonctionnalités ou en aj
 
 
 > [!NOTE]
->  Vous pouvez à présent ajouter des gestionnaires de messages, mapper des messages à ceux-ci et substituer des fonctions virtuelles MFC à l’aide de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).
+>  Vous pouvez ajouter des gestionnaires de messages et y mapper des messages et remplacer des fonctions virtuelles MFC à l’aide de l' [Assistant classe MFC](../mfc/reference/mfc-class-wizard.md).
 
 ## <a name="accessing-c-code-wizards"></a>Accès aux Assistants de code C++
 
 Vous pouvez accéder aux Assistants de code C++ à partir de trois emplacements :
 
-- Dans le menu **Projet**, utilisez la commande **Ajouter un nouvel élément** pour ouvrir la boîte de dialogue `Add New Item`. Celle-ci vous permet d’ajouter de nouveaux fichiers à votre projet. Utilisez la commande **Ajouter une classe** pour afficher la boîte de dialogue [Ajouter une classe](../ide/add-class-dialog-box.md). Celle-ci ouvre des Assistants pour chaque type de classe que vous ajoutez à votre projet. Utilisez la commande **Ajouter une ressource** pour afficher la boîte de dialogue [Ajouter une ressource](../windows/add-resource-dialog-box.md). Celle-ci vous permet de créer ou de sélectionner une ressource à ajouter à votre projet.
+- Dans le menu **Projet**, utilisez la commande **Ajouter un nouvel élément** pour ouvrir la boîte de dialogue `Add New Item`. Celle-ci vous permet d’ajouter de nouveaux fichiers à votre projet. Utilisez la commande **Ajouter une classe** pour afficher la boîte de dialogue [Ajouter une classe](../ide/add-class-dialog-box.md). Celle-ci ouvre des Assistants pour chaque type de classe que vous ajoutez à votre projet. Pour les classes MFC, utilisez l' [Assistant classe MFC](../mfc/reference/mfc-class-wizard.md). Utilisez la commande **Ajouter une ressource** pour afficher la boîte de dialogue [Ajouter une ressource](../windows/add-resource-dialog-box.md). Celle-ci vous permet de créer ou de sélectionner une ressource à ajouter à votre projet.
 
    Si vous mettez en surbrillance une classe ou une interface de votre projet dans Affichage de classes, le menu **Projet** affiche également les commandes suivantes :
 

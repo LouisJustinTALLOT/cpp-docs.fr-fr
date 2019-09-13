@@ -1,58 +1,58 @@
 ---
-title: 'Procédure : Personnaliser le bouton d’Application'
-ms.date: 11/19/2018
+title: 'Procédure : Personnaliser le bouton application'
+ms.date: 09/07/2019
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: d45ceaf1cce21f77871e966e0e8f525f95cb4c37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a1d1625e80e6c6f4440864629a5123bed5744c7
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160360"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907792"
 ---
-# <a name="how-to-customize-the-application-button"></a>Procédure : Personnaliser le bouton d’Application
+# <a name="how-to-customize-the-application-button"></a>Procédure : Personnaliser le bouton application
 
-Lorsque vous cliquez sur le bouton d’Application, un menu de commandes s’affiche. En règle générale, le menu contient des commandes relatives aux fichiers tels que **Open**, **enregistrer**, **impression**, et **Exit**.
+Lorsque vous cliquez sur le bouton application, un menu de commandes s’affiche. En règle générale, le menu contient des commandes associées aux fichiers, telles que **ouvrir**, **Enregistrer**, **Imprimer**et **quitter**.
 
-![Bouton Application de ruban MFC](../mfc/media/application_button.png "bouton Application de ruban MFC")
+![Bouton d’application du ruban MFC](../mfc/media/application_button.png "Bouton d’application du ruban MFC")
 
-Pour personnaliser le bouton d’Application, ouvrez-le dans le **propriétés** fenêtre, modifier ses propriétés, puis affichez l’aperçu du contrôle de ruban.
+Pour personnaliser le bouton de l’application, ouvrez-le dans la fenêtre **Propriétés** (dans **affichage des ressources**), modifiez ses propriétés, puis affichez un aperçu du contrôle du ruban.
 
-### <a name="to-open-the-application-button-in-the-properties-window"></a>Pour ouvrir le bouton d’Application dans la fenêtre Propriétés
+### <a name="to-open-the-application-button-in-the-properties-window"></a>Pour ouvrir le bouton application dans le Fenêtre Propriétés
 
-1. Dans Visual Studio, sur le **vue** menu, cliquez sur **affichage des ressources**.
+1. Dans Visual Studio, dans le menu **affichage** , cliquez sur **affichage des ressources**.
 
-1. Dans **affichage des ressources**, double-cliquez sur la ressource de ruban pour l’afficher sur l’aire de conception.
+1. Dans **affichage des ressources**, double-cliquez sur la ressource du ruban pour l’afficher sur l’aire de conception.
 
-1. Dans l’aire de conception, cliquez sur le menu du bouton Application, puis sur **propriétés**.
+1. Dans l’aire de conception, cliquez avec le bouton droit sur le menu du bouton de l’application, puis cliquez sur **Propriétés**.
 
-## <a name="application-button-properties"></a>Propriétés de l’application
+## <a name="application-button-properties"></a>Propriétés du bouton d’application
 
-Le tableau suivant définit les propriétés du bouton d’Application.
+Le tableau suivant définit les propriétés du bouton d’application.
 
 |Propriété|Définition|
 |--------------|----------------|
-|**Boutons**|Contient la collection de trois boutons qui apparaissent dans l’angle inférieur droit du menu d’Application.|
-|**Légende**|Spécifie le texte du contrôle. Contrairement à d’autres éléments de ruban, le bouton d’Application n’affiche pas de texte de légende. Au lieu de cela, le texte est utilisé pour l’accessibilité.|
-|**HDPI Image**|Spécifie l’identificateur des haute points par pouce icône du bouton Application de (HDPI). Lorsque l’application s’exécute sur un moniteur de PPP élevé, **HDPI Image** est utilisé au lieu de **Image**.|
-|**HDPI Large Images**|Spécifie l’identificateur des haute résolution grandes images. Lorsque l’application s’exécute sur un moniteur de PPP élevé, **HDPI Large Images** est utilisé au lieu de **grandes Images**.|
-|**HDPI Small Images**|Spécifie l’identificateur des haute résolution petites images. Lorsque l’application s’exécute sur un moniteur de PPP élevé, **HDPI Small Images** est utilisé au lieu de **petites Images**.|
+|**Boutons**|Contient la collection de trois boutons au maximum qui s’affichent dans le coin inférieur droit du menu de l’application.|
+|**Légende**|Spécifie le texte du contrôle. Contrairement à d’autres éléments du ruban, le bouton d’application n’affiche pas de texte de légende. Au lieu de cela, le texte est utilisé pour l’accessibilité.|
+|**Image HDPI**|Spécifie l’identificateur de l’icône du bouton d’application points par pouce (HDPI) élevé. Lorsque l’application s’exécute sur un moniteur haute résolution, **HDPI** est utilisé à la place de l' **image**.|
+|**Images de grande taille HDPI**|Spécifie l’identificateur des grandes images haute résolution. Lorsque l’application s’exécute sur un moniteur haute résolution, **HDPI images de grande taille** est utilisée à la place d' **images volumineuses**.|
+|**HDPI petites images**|Spécifie l’identificateur des petites images haute résolution. Lorsque l’application s’exécute sur un moniteur haute résolution, **HDPI** est utilisé à la place des **petites images**.|
 |**ID**|Spécifie l’identificateur du contrôle.|
-|**Image**|Spécifie l’identificateur de l’icône de bouton d’Application. L’icône est un bitmap de 26 x 26 de 32 bits qui a la transparence alpha. Les parties transparentes de l’icône sont mises en surbrillance lorsque l’utilisateur clique sur le bouton d’Application ou le survole.|
-|**Clés**|Spécifie la chaîne qui s’affiche lorsque l’info-bulle de clé de la navigation est activée. Navigation de l’info-bulle de clé est activée lorsque vous appuyez sur ALT.|
-|**Images de grande taille**|Spécifie l’identificateur de l’image qui contient une série d’icônes de 32 x 32. Les icônes sont utilisées par les boutons dans la collection d’éléments de Main.|
-|**Éléments principaux**|Contient une collection d’éléments de menu qui s’affichent dans le menu de l’Application.|
-|**MRU Caption**|Spécifie le texte affiché dans le volet liste récente.|
-|**Petites Images**|Spécifie l’identificateur de l’image qui contient une série d’icônes 16 x 16. Les icônes sont utilisées par les boutons dans la collection de boutons.|
-|**Utilisation**|Active ou désactive le volet liste récente. Le panneau de liste récente s’affiche dans le menu de l’Application.|
-|**Width**|Spécifie la largeur en pixels du panneau liste récente.|
+|**Image**|Spécifie l’identificateur de l’icône de bouton d’application. L’icône est une bitmap 26x26 de 32 bits qui a une transparence alpha. Les parties transparentes de l’icône sont mises en surbrillance lorsque l’utilisateur clique sur le bouton de l’application ou le survole.|
+|**Légende**|Spécifie la chaîne qui s’affiche lorsque la navigation dans les clés accélératrices est activée. La navigation dans les touches accélératrices est activée lorsque vous appuyez sur ALT.|
+|**Images volumineuses**|Spécifie l’identificateur de l’image qui contient une série d’icônes 32 x 32. Les icônes sont utilisées par les boutons dans la collection d’éléments principale.|
+|**Éléments principaux**|Contient une collection d’éléments de menu qui s’affichent dans le menu de l’application.|
+|**Légende MRU**|Spécifie le texte affiché dans le panneau de liste récent.|
+|**Petites images**|Spécifie l’identificateur de l’image qui contient une série d’icônes 16x16. Les icônes sont utilisées par les boutons de la collection de boutons.|
+|**Utilisation**|Active ou désactive le panneau Liste récent. Le panneau Liste récent s’affiche dans le menu de l’application.|
+|**Width**|Spécifie la largeur en pixels du panneau de liste récent.|
 
-Le menu de l’Application n’apparaît pas sur l’aire de conception. Pour l’afficher, vous devez afficher un aperçu du ruban ou exécuter l’application.
+Le menu application n’apparaît pas sur l’aire de conception. Pour l’afficher, vous devez afficher un aperçu du ruban ou exécuter l’application.
 
-#### <a name="to-preview-the-ribbon-control"></a>Pour afficher un aperçu du contrôle de ruban
+#### <a name="to-preview-the-ribbon-control"></a>Pour afficher un aperçu du contrôle du ruban
 
-- Sur le **barre d’outils Éditeur Ribbon**, cliquez sur **Test ruban**.
+- Dans la **barre d’outils**de l’éditeur de ruban, cliquez sur **tester le ruban**.
 
 ## <a name="see-also"></a>Voir aussi
 

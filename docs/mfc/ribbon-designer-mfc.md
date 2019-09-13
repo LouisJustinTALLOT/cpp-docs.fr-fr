@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 1634eee30063a48041d60fc1b7116ca9543c9de2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a39a3a69b43eb06d67fc806e2d4fa9aec323b650
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511461"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907823"
 ---
 # <a name="ribbon-designer-mfc"></a>Concepteur de ruban (MFC)
 
@@ -60,7 +60,7 @@ Il existe deux façons d'ajouter une ressource de ruban à votre projet MFC :
 
 - Dans un projet MFC existant, créez une ressource de ruban et chargez-la. Pour plus d’informations, consultez [Procédure pas à pas : Mise à jour de l’application Scribble MFC (partie 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)).
 
-Si votre projet contient déjà un ruban codé manuellement, vous pouvez utiliser les fonctions de MFC pour convertir le ruban existant en ressource de ruban. Pour plus d'informations, voir [Procédure : Convertit un ruban MFC existant en ressource](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md)de ruban.
+Si votre projet contient déjà un ruban codé manuellement, vous pouvez utiliser les fonctions de MFC pour convertir le ruban existant en ressource de ruban. Pour plus d’informations, consultez [Guide pratique pour Convertit un ruban MFC existant en ressource](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md)de ruban.
 
 > [!NOTE]
 >  Il n'est pas possible de créer des rubans dans des applications à base de boîtes de dialogue. Pour plus d’informations, consultez [type d’application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md).
@@ -77,7 +77,7 @@ L'illustration suivante représente les différents composants du Concepteur de 
 
 - **Aire du concepteur :** Contient la représentation visuelle de la ressource de ruban.
 
-- **Fenêtre Propriétés :** Répertorie les attributs de l’élément sélectionné dans l’aire du concepteur.
+- **[Assistant classe](reference/mfc-class-wizard.md):** Répertorie les attributs de l’élément sélectionné dans l’aire du concepteur.
 
 - **Affichage des ressources fenêtre :** Affiche les ressources qui incluent des ressources de ruban dans votre projet.
 
@@ -85,13 +85,13 @@ L'illustration suivante représente les différents composants du Concepteur de 
 
 Les rubriques suivantes expliquent comment utiliser les fonctionnalités du Concepteur de ruban :
 
-- [Guide pratique pour Personnaliser le bouton Application](../mfc/how-to-customize-the-application-button.md)
+- [Guide pratique : Personnaliser le bouton Application](../mfc/how-to-customize-the-application-button.md)
 
 - [Guide pratique pour Personnaliser la barre d’outils Accès rapide](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
 - [Guide pratique : Ajouter des contrôles de ruban et des gestionnaires d’événements](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
 
-- [Guide pratique : Charger une ressource du ruban à partir d’une application MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
+- [Guide pratique pour Charger une ressource du ruban à partir d’une application MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
 
 ## <a name="definitions-of-ribbon-elements"></a>Définition des éléments de ruban
 

@@ -5,34 +5,34 @@ helpviewer_keywords:
 - DateTimePicker control [MFC], creating
 - CDateTimeCtrl class [MFC], creating
 ms.assetid: 764ec2fb-98cd-478b-a5f2-d63f0bb12279
-ms.openlocfilehash: b3dd04d917667ff04001a455263d2a2f4af9bf9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de9baf63577d163b82da1c5977a6ccba6539c73a
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242391"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907602"
 ---
 # <a name="creating-the-date-and-time-picker-control"></a>Création du contrôle de sélecteur de date et heure
 
-Comment le contrôle de sélecteur de date et d’heure est créé dépend de si vous l’utilisation du contrôle dans une boîte de dialogue ou créée dans un autre type de fenêtre.
+Le mode de création du contrôle de sélecteur de date et d’heure varie selon que vous utilisez le contrôle dans une boîte de dialogue ou que vous le créez dans une fenêtre autre que la boîte de dialogue.
 
 ### <a name="to-use-cdatetimectrl-directly-in-a-dialog-box"></a>Pour utiliser CDateTimeCtrl directement dans une boîte de dialogue
 
-1. Dans l’éditeur de boîtes de dialogue Ajouter une Date et un contrôle de sélecteur de temps à votre ressource de modèle de boîte de dialogue. Spécifier son ID de contrôle.
+1. Dans l’éditeur de boîtes de dialogue, ajoutez un contrôle de sélecteur de date et heure à votre ressource de modèle de boîte de dialogue. Spécifiez son ID de contrôle.
 
-1. Spécifiez les styles nécessaires, à l’aide de la boîte de dialogue Propriétés de contrôle de sélecteur de date et d’heure.
+1. Spécifiez les styles requis, à l’aide de la boîte de dialogue Propriétés du contrôle date et heure.
 
-1. Utilisez le [Assistant Ajout de Variable membre](../ide/adding-a-member-variable-visual-cpp.md) pour ajouter une variable membre de type [CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md) avec la propriété du contrôle. Vous pouvez utiliser ce membre pour appeler `CDateTimeCtrl` fonctions membres.
+1. Utilisez l' [Assistant Ajout de variable membre](../ide/adding-a-member-variable-visual-cpp.md) pour ajouter une variable membre de type [CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md) avec la propriété Control. Vous pouvez utiliser ce membre pour appeler `CDateTimeCtrl` des fonctions membres.
 
-1. Utilisez la fenêtre Propriétés pour mapper des fonctions de gestionnaire de la classe de boîte de dialogue pour n’importe quel contrôle date time picker [notification](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md) messages, vous devez gérer (consultez [mappage des Messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md)).
+1. Utilisez l' [Assistant classe](reference/mfc-class-wizard.md) pour mapper des fonctions de gestionnaire dans la classe de boîte de dialogue pour tous les messages de [notification](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md) de contrôle de sélecteur de date et d’heure que vous devez gérer (consultez [mappage de messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md)).
 
-1. Dans [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), définissez d’autres styles pour le `CDateTimeCtrl` objet.
+1. Dans [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), définissez des styles supplémentaires pour l' `CDateTimeCtrl` objet.
 
-### <a name="to-use-cdatetimectrl-in-a-nondialog-window"></a>Pour utiliser CDateTimeCtrl dans un autre type de fenêtre
+### <a name="to-use-cdatetimectrl-in-a-nondialog-window"></a>Pour utiliser CDateTimeCtrl dans une fenêtre qui n’est pas une boîte de dialogue
 
-1. Déclarer le contrôle dans la classe de vue ou de la fenêtre.
+1. Déclarez le contrôle dans la vue ou la classe de fenêtre.
 
-1. Le contrôle de l’appel [créer](../mfc/reference/ctabctrl-class.md#create) fonction membre, éventuellement dans [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), éventuellement en même temps que la fenêtre parente [OnCreate](../mfc/reference/cwnd-class.md#oncreate) fonction de gestionnaire (si vous êtes sous-classe le contrôle). Définir les styles pour le contrôle.
+1. Appelez la fonction membre [Create](../mfc/reference/ctabctrl-class.md#create) du contrôle, éventuellement dans [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), éventuellement aussi tôt que la fonction gestionnaire [OnCreate](../mfc/reference/cwnd-class.md#oncreate) de la fenêtre parente (si vous sous-classez le contrôle). Définissez les styles pour le contrôle.
 
 ## <a name="see-also"></a>Voir aussi
 

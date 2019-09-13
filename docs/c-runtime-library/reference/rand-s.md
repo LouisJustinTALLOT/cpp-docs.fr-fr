@@ -1,6 +1,6 @@
 ---
 title: rand_s
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - rand_s
 apilocation:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 7a2c57713d4b455971f24b64dc124862749e927a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: MT
+ms.openlocfilehash: 2bbefad60d1d54ece0b467fc411ca9b6b7fe498f
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499561"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927451"
 ---
 # <a name="rand_s"></a>rand_s
 
@@ -57,7 +57,7 @@ Zéro en cas de réussite, code d’erreur dans un autre cas. Si le pointeur d�
 
 La fonction **rand_s** écrit un entier Pseudo-aléatoire compris entre 0 et **UINT_MAX** dans le pointeur d’entrée. La fonction **rand_s** utilise le système d’exploitation pour générer des nombres aléatoires sécurisés par chiffrement. Elle n’utilise pas la valeur de départ générée par la fonction [srand](srand.md) , pas plus qu’elle n’affecte la séquence de nombres aléatoires utilisée par [Rand](rand.md).
 
-La fonction **rand_s** nécessite que la constante **_CRT_RAND_S** soit définie avant l’instruction d’inclusion pour que la fonction soit déclarée, comme dans l’exemple suivant:
+La fonction **rand_s** nécessite que la constante **_CRT_RAND_S** soit définie avant l’instruction d’inclusion pour que la fonction soit déclarée, comme dans l’exemple suivant :
 
 ```C
 #define _CRT_RAND_S
