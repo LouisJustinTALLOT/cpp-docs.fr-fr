@@ -23,7 +23,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68459601"
 ---
-# <a name="basicfstream-class"></a>basic_fstream, classe
+# <a name="basic_fstream-class"></a>basic_fstream, classe
 
 Décrit un objet qui contrôle l’insertion et l’extraction d’éléments et d’objets codés à l’aide d’une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, avec des éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`.
 
@@ -140,7 +140,7 @@ Protection d’ouverture de fichier par défaut, équivalente au paramètre *shf
 
 Le premier constructeur initialise la classe de base en appelant [basic_iostream](../standard-library/basic-iostream-class.md)(`sb`), où `sb` est l’objet stocké de la classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **elem**, **TR**>. `sb` Elle s’initialise également en appelant `basic_filebuf` \< **elem**, **TR**>.
 
-Les deuxième et troisième constructeurs initialisent la classe de base en appelant `basic_iostream`( **sb**). Elle s' `sb` initialise également en appelant `basic_filebuf`  `_Mode` [](../standard-library/basic-filebuf-class.md#open)  elem, TR >, puis SB. Open (_ fileName,). \< Si la dernière fonction retourne un pointeur null, le constructeur appelle [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`).
+Les deuxième et troisième constructeurs initialisent la classe de base en appelant `basic_iostream`( **sb**). Elle initialise également `sb` en appelant `basic_filebuf`\< **elem**, **TR** >, puis **SB.** [Open](../standard-library/basic-filebuf-class.md#open)(_ *fileName*, `_Mode`). Si la dernière fonction retourne un pointeur null, le constructeur appelle [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 Le quatrième constructeur initialise l’objet avec le contenu de `right`, traité comme une référence rvalue.
 
@@ -160,7 +160,7 @@ void close();
 
 La fonction membre appelle [rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pour obtenir un exemple d’utilisation de `close`.
 
@@ -225,7 +225,7 @@ La fonction membre appelle [rdbuf](#rdbuf) **->** [open](../standard-library/bas
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation `open`de, consultez [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) .
+Pour obtenir un exemple d’utilisation `open`de, consultez [basic_filebuf :: Open](../standard-library/basic-filebuf-class.md#open) .
 
 ## <a name="op_eq"></a>  basic_fstream::operator=
 
@@ -260,7 +260,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 Adresse de la mémoire tampon de flux stockée.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pour obtenir un exemple d’utilisation de `rdbuf`.
 

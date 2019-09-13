@@ -27,7 +27,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457869"
 ---
-# <a name="basicostream-class"></a>basic_ostream, classe
+# <a name="basic_ostream-class"></a>basic_ostream, classe
 
 Cette classe de modèle décrit un objet qui contrôle l’insertion d’éléments et d’objets encodés dans une mémoire tampon de `Elem`flux avec des éléments de type, également appelé [char_type](../standard-library/basic-ios-class.md#char_type), dont les caractéristiques sont `Tr`déterminées par la classe, également appelée [traits_type](../standard-library/basic-ios-class.md#traits_type).
 
@@ -157,7 +157,7 @@ basic_ostream(basic_ostream&& right);
 Objet de type [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
 *_Isstd*\
-**true** s’il s’agit d’un flux standard; Sinon, **false**.
+**true** s’il s’agit d’un flux standard ; Sinon, **false**.
 
 *Oui*\
 Référence rvalue à un objet de type `basic_ostream`.
@@ -166,7 +166,7 @@ Référence rvalue à un objet de type `basic_ostream`.
 
 Le premier constructeur initialise la classe de base en appelant [init](../standard-library/basic-ios-class.md#init)(`strbuf`). Le deuxième constructeur initialise la classe de base en appelant [basic_ios::move](../standard-library/basic-ios-class.md#move)`(right)`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Pour en savoir plus sur les flux de sortie, consultez l’exemple relatif à [basic_ofstream::basic_ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream).
 
@@ -270,7 +270,7 @@ La fonction
 basic_ostream<Elem, Tr>& operator<<(bool val);
 ```
 
-[](../standard-library/ios-base-class.md#getloc)`(` [](../standard-library/basic-filebuf-class.md#open) **\<** convertit en champ booléen et l’insère en appelant use_facet < num_put elem, outlt > getloc). `_Val` [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). Ici, `OutIt` est défini comme [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md) **\<elem, TR >** . La fonction retourne **\*this**.
+convertit `_Val` en champ booléen et l’insère en appelant [use_facet](../standard-library/basic-filebuf-class.md#open) **< num_put\<elem, outlt >** `(`[getloc](../standard-library/ios-base-class.md#getloc)). [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). Ici, `OutIt` est défini comme [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md) **\<elem, TR >** . La fonction retourne **\*this**.
 
 Les fonctions
 
@@ -436,7 +436,7 @@ Référence à l’objet basic_ostream.
 
 Si [Fail](../standard-library/basic-ios-class.md#fail) a la **valeur false**, la première fonction membre appelle **newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( *_Pos*) `pos_type` , pour `newpos`certains objets temporaires. Si `fail` a la valeur false, la deuxième fonction appelle **newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( *_OFF, _Way*). Dans les deux cas, si (`off_type`)**newpos ==** (`off_type`)(-1) (l’opération de positionnement échoue), la fonction appelle **istr.** [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). Les deux fonctions retournent **\*this**.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // basic_ostream_seekp.cpp
@@ -470,7 +470,7 @@ int main()
 
 La classe imbriquée décrit un objet dont la déclaration structure les fonctions de sortie mise en forme et les fonctions de sortie non mise en forme.
 
-classe Sentry {public: Explicit Sentry (basic_ostream\<elem, TR > & _Ostr); opérateur bool () const; ~ Sentry ();};
+classe Sentry {public : Explicit Sentry (basic_ostream\<elem, TR > & _Ostr); opérateur bool () const ; ~ Sentry ();};
 
 ### <a name="remarks"></a>Notes
 
@@ -493,7 +493,7 @@ Référence à un objet `basic_ostream`.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle [basic_ios:: swap](../standard-library/basic-ios-class.md#swap) `(right)` pour échanger le contenu de cet objet pour le contenu de *Right*.
+La fonction membre appelle [basic_ios :: swap](../standard-library/basic-ios-class.md#swap) `(right)` pour échanger le contenu de cet objet pour le contenu de *Right*.
 
 ## <a name="tellp"></a>  basic_ostream::tellp
 
@@ -511,7 +511,7 @@ Position dans le flux de sortie.
 
 Si [fail](../standard-library/basic-ios-class.md#fail) est **false**, la fonction membre retourne [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**). Sinon, elle retourne `pos_type`(-1).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [seekp](#seekp) pour obtenir un exemple d’utilisation de `tellp`.
 
