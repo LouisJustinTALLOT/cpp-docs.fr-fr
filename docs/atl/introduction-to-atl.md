@@ -6,26 +6,26 @@ helpviewer_keywords:
 - COM objects, creating in ATL
 - ATL
 ms.assetid: 77f565e8-c4ec-4a80-af4b-7278fcfe5c98
-ms.openlocfilehash: 8c2dcab962cd9863acf0f8e7070727f3b18117d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5eba816bc87eeebea2c41489a5d15c48645739e8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261915"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492107"
 ---
 # <a name="introduction-to-atl"></a>Introduction à ATL
 
-ATL est Active Template Library, un ensemble de C++ basées sur le modèle de classes avec lequel vous pouvez facilement créer petits et rapides des objets de composant COM (Object Model). Il prend en charge les principales fonctionnalités COM, notamment : implémentations stock de [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory), [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2), et `IDispatch`; double interfaces ; interfaces d’énumérateur COM standard ; points de connexion ; interfaces détachables ; et les contrôles ActiveX.
+ATL est le Active Template Library, un ensemble de classes basées sur C++ des modèles, avec lequel vous pouvez créer facilement des objets COM (Component Object Model) petits et rapides. Il offre une prise en charge spéciale des fonctionnalités com clés, notamment : les implémentations de l’action [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown), [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory), [IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2) et `IDispatch` ; les interfaces doubles ; les interfaces d’énumérateur com standard ; les points de connexion ; déchirer interface et les contrôles ActiveX.
 
-Le code ATL peut être utilisé pour créer des objets monothread, objets de modèle apartment, objets de modèle libre de threads ou objets libre de threads et le modèle de cloisonnement.
+Le code ATL peut être utilisé pour créer des objets à thread unique, des objets de modèle Apartment, des objets de modèle à thread libre, ou des objets de modèle cloisonné et à thread libre.
 
-Les sujets abordés dans cette section sont les suivantes :
+Les sujets abordés dans cette section sont les suivants :
 
-- Comment un [bibliothèque de modèles](../atl/using-a-template-library.md) diffère d’une bibliothèque standard.
+- Différences entre une [bibliothèque de modèles](../atl/using-a-template-library.md) et une bibliothèque standard.
 
-- Ce que vous [peut et ne peut pas faire avec ATL](../atl/scope-of-atl.md).
+- Ce que vous [pouvez et ne pouvez pas faire avec ATL](../atl/scope-of-atl.md).
 
-- [Recommandations relatives au choix entre ATL et MFC](../atl/recommendations-for-choosing-between-atl-and-mfc.md).
+- [Recommandations pour le choix entre ATL et MFC](../atl/recommendations-for-choosing-between-atl-and-mfc.md).
 
 ## <a name="see-also"></a>Voir aussi
 
