@@ -21,7 +21,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457700"
 ---
-# <a name="numput-class"></a>num_put, classe
+# <a name="num_put-class"></a>num_put, classe
 
 Classe de modèle qui décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler les conversions de valeurs numériques en séquences de type `CharType`.
 
@@ -161,9 +161,9 @@ La première fonction membre protégée virtuelle génère des éléments séque
 
 Le champ de sortie entier est généré par les mêmes règles que celles utilisées par les fonctions d’impression pour la génération d’une série d’éléments **char** dans un fichier. Chacun de ces éléments char est supposé être mappé à un élément équivalent de `CharType` type par un simple mappage un-à-un. Quand une fonction d’impression remplit un champ avec des espaces ou le chiffre 0, `do_put` elle utilise `fill`à la place. La spécification de conversion d’impression équivalente est déterminée comme suit :
 
-- Si **iosbase**. [Flags](../standard-library/ios-base-class.md#flags) & Oct,`ios_base::basefield`la spécification[](../standard-library/ios-functions.md#oct)de conversion est .`lo` == `ios_base::`
+- Si **iosbase**. [Flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[Oct](../standard-library/ios-functions.md#oct),la spécification de conversion est `lo`.
 
-- Si **iosbase. Flags** & **ios_base:: BaseField** == `ios_base::`[Hex](../standard-library/ios-functions.md#hex), la spécification de `lx`conversion est.
+- Si **iosbase. Flags** & **ios_base :: BaseField** == `ios_base::`[Hex](../standard-library/ios-functions.md#hex), la spécification de `lx`conversion est.
 
 - Autrement, la spécification de conversion est `ld`.
 
@@ -171,7 +171,7 @@ Si **iosbase**. [width](../standard-library/ios-base-class.md#width) est différ
 
 Le remplissage se produit uniquement si le nombre minimal d’éléments *N* exigé pour spécifier le champ de sortie est inférieur à **iosbase**. [width](../standard-library/ios-base-class.md#width). Ce remplissage est constitué d’une séquence de *N* - exemplaires de**largeur** de **remplissage**. Le remplissage se produit ensuite comme suit :
 
-- Si **iosbase**. **Flags** & `ios_base::adjustfield`Left,l' **indicateur-** est ajouté au début.[](../standard-library/ios-functions.md#left) == `ios_base::` (Le remplissage se produit après le texte généré.)
+- Si **iosbase**. **Flags** & `ios_base::adjustfield` == `ios_base::`[Left](../standard-library/ios-functions.md#left), l'indicateur **-** est ajouté au début. (Le remplissage se produit après le texte généré.)
 
 - Si **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[internal](../standard-library/ios-functions.md#internal), l’indicateur **0** est ajouté. (Pour un champ de sortie numérique, le remplissage se produit là où les fonctions d’impression remplissent avec 0.)
 
@@ -217,7 +217,7 @@ Se comporte comme la première, sauf qu’elle génère un champ de sortie à vi
 
 - Si **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), la spécification de conversion est `le`. Si **iosbase**.  & la valeur[majuscule](../standard-library/ios-functions.md#uppercase) des indicateurs`ios_base::`est `e` différente de zéro `E`, est remplacée par.
 
-- Autrement, la spécification de conversion est **lg**. Si **iosbase**. **Flags** & **ios_base:: uppercase** est différent de `g` zéro, est `G`remplacé par.
+- Autrement, la spécification de conversion est **lg**. Si **iosbase**. **Flags** & **ios_base :: uppercase** est différent de `g` zéro, est `G`remplacé par.
 
 Si **iosbase**. **flags** & **ios_base::fixed** est différent de zéro ou si **iosbase**. [precision](../standard-library/ios-base-class.md#precision) est supérieure à zéro, une précision avec la valeur **iosbase**. **precision** est ajoutée à la spécification de conversion. Tout remplissage se comporte comme pour un champ de sortie d’entier. Le caractère de remplissage est **fill**. Pour finir :
 
@@ -282,7 +282,7 @@ virtual iter_type do_put(iter_type next,
 
 Se comporte comme la première, sauf qu’elle remplace une spécification de conversion de `ld` par `llu`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez l’exemple relatif à [put](#put), qui appelle `do_put`.
 
@@ -313,13 +313,13 @@ Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l�
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes:
+Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes :
 
 - 0 : La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
 - 1 : La durée de vie de l’objet doit être gérée manuellement.
 
-- \>1: Ces valeurs ne sont pas définies.
+- \>1 : Ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
@@ -401,7 +401,7 @@ Itérateur de sortie qui traite la position située juste au-delà du dernier é
 
 Toutes les fonctions membres retournent [do_put](#do_put)( `next`, `_Iosbase`, `_Fill`, `val`).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // num_put_put.cpp

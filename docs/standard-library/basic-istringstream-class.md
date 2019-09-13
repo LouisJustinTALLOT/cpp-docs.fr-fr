@@ -21,7 +21,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68452532"
 ---
-# <a name="basicistringstream-class"></a>basic_istringstream, classe
+# <a name="basic_istringstream-class"></a>basic_istringstream, classe
 
 Décrit un objet qui contrôle l’extraction d’éléments et d’objets codés à partir d’une mémoire tampon de flux de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.
 
@@ -116,7 +116,7 @@ Référence rvalue d’un objet `basic_istringstream`.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise la classe de base en appelant [basic_istream](../standard-library/basic-istream-class.md)(`sb`), où `sb` est l’objet stocké de [](../standard-library/basic-stringbuf-class.md)< la classe `Tr`basic_stringbuf `Alloc``Elem`,, > . Il initialise également `sb` en appelant `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`).
+Le premier constructeur initialise la classe de base en appelant [basic_istream](../standard-library/basic-istream-class.md)(`sb`), où `sb` est l’objet stocké de la classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>. Il initialise également `sb` en appelant `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`).
 
 Le deuxième constructeur initialise la classe de base en appelant `basic_istream(sb)`. Il initialise également `sb` en appelant `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`).
 
@@ -151,7 +151,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 Adresse de la mémoire tampon de flux stockée `pointer` de type à basic_stringbuf < **elem**, `Alloc` **TR**, >.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pour obtenir un exemple d’utilisation de `rdbuf`.
 
@@ -181,7 +181,7 @@ La première fonction membre retourne [rdbuf](#rdbuf) -> [str](../standard-libra
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple qui utilise `str`, consultez [basic_stringbuf:: Str](../standard-library/basic-stringbuf-class.md#str) .
+Pour obtenir un exemple qui utilise `str`, consultez [basic_stringbuf :: Str](../standard-library/basic-stringbuf-class.md#str) .
 
 ## <a name="swap"></a>  basic_istringstream::swap
 

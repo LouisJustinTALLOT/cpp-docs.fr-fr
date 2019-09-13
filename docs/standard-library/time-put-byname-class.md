@@ -13,7 +13,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68460002"
 ---
-# <a name="timeputbyname-class"></a>time_put_byname, classe
+# <a name="time_put_byname-class"></a>time_put_byname, classe
 
 La classe de modèle dérivée décrit un objet pouvant servir de facette de paramètres régionaux du type `time_put`\< CharType, OutputIterator >.
 
@@ -48,7 +48,7 @@ Nombre initial de références.
 
 ## <a name="remarks"></a>Notes
 
-Son comportement est déterminé par les [](../standard-library/locale-class.md#name) paramètres régionaux nommés *_Locname*. Chaque constructeur initialise son objet de base avec [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
+Son comportement est déterminé par les paramètres régionaux [nommés](../standard-library/locale-class.md#name) *_Locname*. Chaque constructeur initialise son objet de base avec [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
 
 ## <a name="requirements"></a>Configuration requise
 
