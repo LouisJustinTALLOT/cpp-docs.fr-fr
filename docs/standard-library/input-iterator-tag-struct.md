@@ -14,13 +14,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68455317"
 ---
-# <a name="inputiteratortag-struct"></a>input_iterator_tag, struct
+# <a name="input_iterator_tag-struct"></a>input_iterator_tag, struct
 
 Classe qui fournit un type de retour pour `iterator_category` une fonction qui représente un itérateur d’entrée.
 
 ## <a name="syntax"></a>Syntaxe
 
-input_iterator_tag {}struct;
+input_iterator_tag {}struct ;
 
 ## <a name="remarks"></a>Notes
 
@@ -28,9 +28,9 @@ Les classes de balise de catégorie sont utilisées comme balises de compilation
 
 Le type est identique à **iterator** \< **ITER**>  **:: iterator_category** lorsque `Iter` décrit un objet pouvant servir d’itérateur d’entrée.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
-Pour obtenir un [](../standard-library/random-access-iterator-tag-struct.md) exemple d’utilisation `iterator_tag`de, consultez [iterator_traits](../standard-library/iterator-traits-struct.md) ou random_access_iterator_tag.
+Consultez [iterator_traits](../standard-library/iterator-traits-struct.md) ou [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) pour obtenir un exemple d’utilisation de `iterator_tag`.
 
 ## <a name="requirements"></a>Configuration requise
 

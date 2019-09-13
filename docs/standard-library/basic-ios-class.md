@@ -62,7 +62,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68460104"
 ---
-# <a name="basicios-class"></a>basic_ios, classe
+# <a name="basic_ios-class"></a>basic_ios, classe
 
 La classe de modèle décrit les fonctions membres et de stockage communes aux flux d’entrée (de classe de modèle [basic_istream](../standard-library/basic-istream-class.md)) et de sortie (de classe de modèle [basic_ostream](../standard-library/basic-ostream-class.md)) qui dépendent des paramètres de modèle. (La classe [ios_base](../standard-library/ios-base-class.md) décrit ce qui est commun et non dépendant des paramètres de modèle.) Objet de classe **basic_ios\<classe elem, les caractéristiques de classe >** permettent de contrôler un flux avec des éléments `Elem`de type, dont les caractéristiques sont déterminées `Traits`par la classe.
 
@@ -160,7 +160,7 @@ bool bad() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si `rdstate & badbit` est différent de zéro; sinon, false.
+**true** si `rdstate & badbit` est différent de zéro ; sinon, **false**.
 
 Pour plus d’informations sur `badbit`, consultez [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
@@ -224,7 +224,7 @@ void clear(io_state state);
 Facultatif Indicateurs à définir après l’effacement de tous les indicateurs. La valeur par défaut est `goodbit`.
 
 *reraise*\
-Facultatif Spécifie si l’exception doit être levée à nouveau. La valeur par  défaut est false (ne déclenche pas à nouveau l’exception).
+Facultatif Spécifie si l’exception doit être levée à nouveau. La valeur par défaut est **false** (ne déclenche pas à nouveau l’exception).
 
 ### <a name="remarks"></a>Notes
 
@@ -238,7 +238,7 @@ Si `state` **&** [exceptions](#exceptions) est différent de zéro, un objet de 
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir des [](../standard-library/string-functions.md#getline) exemples d’utilisation `clear`de, consultez [rdstate](#rdstate) et getline.
+Pour obtenir des exemples d’utilisation de `clear`, consultez [rdstate](#rdstate) et [getline](../standard-library/string-functions.md#getline).
 
 ## <a name="copyfmt"></a>  basic_ios::copyfmt
 
@@ -293,13 +293,13 @@ bool eof() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la fin du flux a été atteinte; sinon  , false.
+**true** si la fin du flux a été atteinte ; sinon, **false** .
 
 ### <a name="remarks"></a>Notes
 
 La fonction membre retourne la **valeur true** si [rdstate](#rdstate) `& eofbit` est différent de zéro. Pour plus d’informations sur `eofbit`, consultez [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // basic_ios_eof.cpp
@@ -390,7 +390,7 @@ bool fail() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si [rdstate](#rdstate) `& (badbit|failbit)` est différent de zéro; sinon, false.
+**true** si [rdstate](#rdstate) `& (badbit|failbit)` est différent de zéro ; sinon, **false**.
 
 Pour plus d’informations sur `failbit`, consultez [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
@@ -432,7 +432,7 @@ Caractère de remplissage actuel.
 
 La première fonction membre retourne le caractère de remplissage stocké. La deuxième fonction membre stocke *char* dans le caractère de remplissage et retourne sa valeur stockée précédente.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // basic_ios_fill.cpp
@@ -467,11 +467,11 @@ bool good() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si [rdstate](#rdstate) `== goodbit` (aucun indicateur d’État n’est défini); sinon, false.
+**true** si [rdstate](#rdstate) `== goodbit` (aucun indicateur d’État n’est défini); sinon, **false**.
 
 Pour plus d’informations sur `goodbit`, consultez [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Consultez [basic_ios::bad](#bad) pour obtenir un exemple d’utilisation de `good`.
 
@@ -542,9 +542,9 @@ La fonction membre stocke les valeurs de tous les objets membres, afin que :
 
 - [tie](#tie) retourne un pointeur null.
 
-- [rdstate](#rdstate) retourne [goodbit](../standard-library/ios-base-class.md#iostate) si *_Sb* est différent de zéro; Sinon, elle retourne [badbit](../standard-library/ios-base-class.md#iostate).
+- [rdstate](#rdstate) retourne [goodbit](../standard-library/ios-base-class.md#iostate) si *_Sb* est différent de zéro ; Sinon, elle retourne [badbit](../standard-library/ios-base-class.md#iostate).
 
-- [](#exceptions) les exceptions `goodbit`sont retournées.
+- [les exceptions](#exceptions) sont retournées `goodbit`.
 
 - [flags](../standard-library/ios-base-class.md#flags) retourne [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [dec](../standard-library/ios-base-class.md#fmtflags).
 
@@ -607,7 +607,7 @@ char narrow(char_type Char, char Default = '\0') const;
 
 La fonction membre retourne [use_facet](../standard-library/basic-filebuf-class.md#open)\<CType\<E > > ( [getloc](../standard-library/ios-base-class.md#getloc)()).`narrow` ( `Char`, `Default`).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // basic_ios_narrow.cpp
@@ -648,7 +648,7 @@ operator void *() const;
 
 L’opérateur retourne un pointeur null uniquement si [fail](#fail).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // basic_ios_opgood.cpp
@@ -678,7 +678,7 @@ bool operator!() const;
 
 Retourne [fail](#fail).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // basic_ios_opbad.cpp
@@ -737,7 +737,7 @@ La première fonction membre retourne le pointeur de mémoire tampon de flux sto
 
 La deuxième fonction membre stocke *_Sb* dans le pointeur de mémoire tampon de flux stocké et retourne la valeur précédemment stockée.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // basic_ios_rdbuf.cpp
@@ -827,7 +827,7 @@ Indicateurs supplémentaires à définir.
 
 La fonction membre appelle [clear](#clear)(_ *State* &#124; [rdstate](#rdstate)).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // basic_ios_setstate.cpp
@@ -900,7 +900,7 @@ La première fonction membre retourne le pointeur de lien stocké. La deuxième 
 
 `tie` entraîne la synchronisation de deux flux, de sorte que les opérations sur un flux se produisent après la fin des opérations sur l’autre flux.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Dans cet exemple, en liant cin à cout, vous garantissez que la chaîne « Entrer un nombre : » est transmise à la console avant que le nombre soit extrait de cin. De cette façon, vous évitez que la chaîne « Entrer un nombre : » reste dans la mémoire tampon pendant la lecture du nombre et vous êtes sûr que l’utilisateur est invité à répondre à des invites. Par défaut, cin et cout sont liés.
 

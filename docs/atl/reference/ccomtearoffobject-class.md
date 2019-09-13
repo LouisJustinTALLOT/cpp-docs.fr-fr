@@ -15,16 +15,16 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-ms.openlocfilehash: fd35b1e9e69c97402dd1ec357fd25fa1dcd5dd49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d27a6fa3c0070cd32c78971a7544327c51d4393
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259415"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496915"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject, classe
 
-Cette classe implémente une interface détachable.
+Cette classe implémente une interface détachée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,9 +36,9 @@ class CComTearOffObject : public Base
 #### <a name="parameters"></a>Paramètres
 
 *Base*<br/>
-Votre classe détachable, dérivée de `CComTearOffObjectBase` et les interfaces vous souhaitez que votre objet détachable pour prendre en charge.
+Votre classe détachée, dérivée de `CComTearOffObjectBase` et des interfaces que vous souhaitez que votre objet déchire prenne en charge.
 
-ATL implémente ses interfaces détachables en deux phases : la `CComTearOffObjectBase` méthodes gèrent le décompte de références et `QueryInterface`, tandis que `CComTearOffObject` implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).
+ATL implémente ses interfaces détachées en deux phases : les `CComTearOffObjectBase` méthodes gèrent le nombre de références et `QueryInterface`, tandis que `CComTearOffObject` implémente [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown).
 
 ## <a name="members"></a>Membres
 
@@ -47,15 +47,15 @@ ATL implémente ses interfaces détachables en deux phases : la `CComTearOffObj
 |Nom|Description|
 |----------|-----------------|
 |[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|Constructeur.|
-|[CComTearOffObject::~CComTearOffObject](#dtor)|Destructeur.|
+|[CComTearOffObject :: ~ CComTearOffObject](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CComTearOffObject::AddRef](#addref)|Incrémente le décompte de références pour un `CComTearOffObject` objet.|
+|[CComTearOffObject::AddRef](#addref)|Incrémente le décompte de références `CComTearOffObject` pour un objet.|
 |[CComTearOffObject::QueryInterface](#queryinterface)|Retourne un pointeur vers l’interface demandée sur votre classe détachable ou la classe propriétaire.|
-|[CComTearOffObject::Release](#release)|Décrémente le décompte de références pour un `CComTearOffObject` de l’objet et il détruit.|
+|[CComTearOffObject::Release](#release)|Décrémente le décompte de références pour `CComTearOffObject` un objet et le détruit.|
 
 ### <a name="ccomtearoffobjectbase-methods"></a>Méthodes CComTearOffObjectBase
 
@@ -63,21 +63,21 @@ ATL implémente ses interfaces détachables en deux phases : la `CComTearOffObj
 |-|-|
 |[CComTearOffObjectBase](#ccomtearoffobjectbase)|Constructeur.|
 
-### <a name="ccomtearoffobjectbase-data-members"></a>Membres de données de CComTearOffObjectBase
+### <a name="ccomtearoffobjectbase-data-members"></a>Membres de données CComTearOffObjectBase
 
 |||
 |-|-|
-|[m_pOwner](#m_powner)|Un pointeur vers un `CComObject` dérivés de la classe propriétaire.|
+|[m_pOwner](#m_powner)|Pointeur vers un `CComObject` dérivé de la classe propriétaire.|
 
 ## <a name="remarks"></a>Notes
 
-`CComTearOffObject` implémente une interface détachable comme un objet distinct qui est instancié que lorsque cette interface est interrogée pour. Le détachable est supprimé lorsque son décompte de références devient égal à zéro. En règle générale, vous générez une interface détachable pour une interface qui est rarement utilisée, dans la mesure où à l’aide un détachable enregistre un pointeur vtable dans toutes les instances de votre objet principal.
+`CComTearOffObject`implémente une interface détachée en tant qu’objet distinct qui est instancié uniquement lorsque cette interface est interrogée. La destruction est supprimée lorsque son nombre de références est égal à zéro. En règle générale, vous générez une interface détachée pour une interface rarement utilisée, car l’utilisation d’une déchirure enregistre un pointeur vtable dans toutes les instances de votre objet principal.
 
-Vous devez dériver la classe qui implémente le détachable de `CComTearOffObjectBase` et à partir de quelle que soit l’interfaces vous souhaitez que votre objet détachable pour prendre en charge. `CComTearOffObjectBase` transformer en modèle sur la classe propriétaire et le modèle de thread. La classe propriétaire est la classe de l’objet pour lequel un détachable est implémentée. Si vous ne spécifiez pas un modèle de thread, le modèle de thread par défaut est utilisé.
+Vous devez dériver la classe qui implémente la déchirure `CComTearOffObjectBase` à partir et à partir des interfaces que vous souhaitez que votre objet déchire prenne en charge. `CComTearOffObjectBase`est mis en modèle sur la classe propriétaire et le modèle de thread. La classe propriétaire est la classe de l’objet pour lequel une déchirure est implémentée. Si vous ne spécifiez pas de modèle de thread, le modèle de thread par défaut est utilisé.
 
-Vous devez créer un mappage COM pour votre classe détachable. Lorsque les ATL instancie le volant, il crée `CComTearOffObject<CYourTearOffClass>` ou `CComCachedTearOffObject<CYourTearOffClass>`.
+Vous devez créer une carte COM pour votre classe détachable. Lorsque ATL instancie la destruction, il crée `CComTearOffObject<CYourTearOffClass>` ou. `CComCachedTearOffObject<CYourTearOffClass>`
 
-Par exemple, dans l’exemple BEEPER, le `CBeeper2` classe est la classe détachable et `CBeeper` classe est la classe propriétaire :
+Par exemple, dans l’exemple beeper, la `CBeeper2` classe est la classe détachable et la `CBeeper` classe est la classe propriétaire :
 
 [!code-cpp[NVC_ATL_COM#43](../../atl/codesnippet/cpp/ccomtearoffobject-class_1.h)]
 
@@ -89,11 +89,11 @@ Par exemple, dans l’exemple BEEPER, le `CBeeper2` classe est la classe détach
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlcom.h
+**En-tête :** atlcom. h
 
 ##  <a name="addref"></a>  CComTearOffObject::AddRef
 
-Incrémente le décompte de références le `CComTearOffObject` objet d’une unité.
+Incrémente le décompte de références `CComTearOffObject` de l’objet d’une unité.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -101,7 +101,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur qui peut être utile pour les diagnostics et de test.
+Valeur qui peut être utile pour les diagnostics et les tests.
 
 ##  <a name="ccomtearoffobject"></a>  CComTearOffObject::CComTearOffObject
 
@@ -114,11 +114,11 @@ CComTearOffObject(void* pv);
 ### <a name="parameters"></a>Paramètres
 
 *pv*<br/>
-[in] Pointeur qui sera converti en un pointeur vers un `CComObject<Owner>` objet.
+dans Pointeur qui sera converti en pointeur vers un `CComObject<Owner>` objet.
 
 ### <a name="remarks"></a>Notes
 
-Incrémente le décompte de références du propriétaire d’une unité.
+Incrémente de un le nombre de références du propriétaire.
 
 ##  <a name="dtor"></a>  CComTearOffObject::~CComTearOffObject
 
@@ -130,7 +130,7 @@ Destructeur.
 
 ### <a name="remarks"></a>Notes
 
-Libère toutes les ressources allouées, les appels FinalRelease et décrémente le module verrouiller count.
+Libère toutes les ressources allouées, appelle FinalRelease et décrémente le nombre de verrous de module.
 
 ##  <a name="ccomtearoffobjectbase"></a>  CComTearOffObject::CComTearOffObjectBase
 
@@ -142,11 +142,11 @@ CComTearOffObjectBase();
 
 ### <a name="remarks"></a>Notes
 
-Initialise le [m_pOwner](#m_powner) membre avec la valeur NULL.
+Initialise le membre [m_pOwner](#m_powner) avec la valeur null.
 
 ##  <a name="m_powner"></a>  CComTearOffObject::m_pOwner
 
-Un pointeur vers un [CComObject](../../atl/reference/ccomobject-class.md) objet dérivé *propriétaire*.
+Pointeur vers un objet [CComObject](../../atl/reference/ccomobject-class.md) dérivé de *owner*.
 
 ```
 CComObject<Owner>* m_pOwner;
@@ -155,11 +155,11 @@ CComObject<Owner>* m_pOwner;
 ### <a name="parameters"></a>Paramètres
 
 *Propriétaire*<br/>
-[in] La classe pour laquelle un détachable est implémentée.
+dans Classe pour laquelle un déchirement est implémenté.
 
 ### <a name="remarks"></a>Notes
 
-Le pointeur est initialisé avec la valeur NULL pendant la construction.
+Le pointeur est initialisé à la valeur NULL pendant la construction.
 
 ##  <a name="queryinterface"></a>  CComTearOffObject::QueryInterface
 
@@ -172,22 +172,22 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="parameters"></a>Paramètres
 
 *iid*<br/>
-[in] IID de l’interface demandée.
+dans IID de l’interface demandée.
 
 *ppvObject*<br/>
-[out] Un pointeur vers le pointeur d’interface identifié par *iid*, ou NULL si l’interface est introuvable.
+à Pointeur vers le pointeur d’interface identifié par *IID*, ou null si l’interface est introuvable.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Demande tout d’abord les interfaces sur votre classe détachable. Si l’interface n’est pas là, les requêtes pour l’interface sur l’objet propriétaire. Si l’interface demandée est `IUnknown`, retourne le `IUnknown` du propriétaire.
+Interroge d’abord les interfaces sur votre classe détachée. Si l’interface n’est pas présente, interroge l’interface sur l’objet propriétaire. Si l’interface demandée est `IUnknown`, retourne le `IUnknown` du propriétaire.
 
 ##  <a name="release"></a>  CComTearOffObject::Release
 
-Décrémente le décompte de références d’une unité et, si le décompte de références est égal à zéro, supprime la `CComTearOffObject`.
+Décrémente le décompte de références d’une unité et, si le nombre de références est égal à `CComTearOffObject`zéro, supprime le.
 
 ```
 STDMETHOD_ULONG Release();
@@ -195,7 +195,7 @@ STDMETHOD_ULONG Release();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Dans les versions non debug retourne toujours zéro. Dans les versions debug, retourne une valeur qui peut-être être utiles pour le diagnostic ou de test.
+Dans les versions sans débogage, retourne toujours la valeur zéro. Dans les versions Debug, retourne une valeur qui peut être utile pour les diagnostics ou les tests.
 
 ## <a name="see-also"></a>Voir aussi
 

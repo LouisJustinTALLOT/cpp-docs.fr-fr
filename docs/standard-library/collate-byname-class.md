@@ -13,7 +13,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68458620"
 ---
-# <a name="collatebyname-class"></a>collate_byname, classe
+# <a name="collate_byname-class"></a>collate_byname, classe
 
 Classe de modèle dérivée qui décrit un objet susceptible de servir de facette d'assemblage de paramètres régionaux donnés, permettant ainsi la récupération d'informations spécifiques à une zone culturelle concernant les conventions de tri de chaîne.
 
@@ -47,7 +47,7 @@ Nombre initial de références.
 
 ## <a name="remarks"></a>Notes
 
-Classe de modèle qui décrit un objet pouvant servir de [facette de paramètres régionaux](../standard-library/locale-class.md#facet_class) de type [collate](../standard-library/collate-class.md#collate)\<CharType>. Son comportement est déterminé par les [](../standard-library/locale-class.md#name) paramètres régionaux nommés *_Locname*. Chaque constructeur initialise son objet de base avec [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
+Classe de modèle qui décrit un objet pouvant servir de [facette de paramètres régionaux](../standard-library/locale-class.md#facet_class) de type [collate](../standard-library/collate-class.md#collate)\<CharType>. Son comportement est déterminé par les paramètres régionaux [nommés](../standard-library/locale-class.md#name) *_Locname*. Chaque constructeur initialise son objet de base avec [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -14,13 +14,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68453016"
 ---
-# <a name="outputiteratortag-struct"></a>output_iterator_tag, struct
+# <a name="output_iterator_tag-struct"></a>output_iterator_tag, struct
 
 Classe qui fournit un type de retour pour `iterator_category` une fonction qui représente un itérateur de sortie.
 
 ## <a name="syntax"></a>Syntaxe
 
-output_iterator_tag {}struct;
+output_iterator_tag {}struct ;
 
 ## <a name="remarks"></a>Notes
 
@@ -30,9 +30,9 @@ Le type est identique à **iterator** \< **ITER**>  **:: iterator_category** lor
 
 Cette balise n’est pas paramétrable sur `value_type` ou `difference_type` pour l’itérateur, comme avec les autres balises d’itérateur, car les itérateurs de sortie n’ont pas de `value_type` ou `difference_type`.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-Pour obtenir un [](../standard-library/random-access-iterator-tag-struct.md) exemple d’utilisation `iterator_tag`de, consultez [iterator_traits](../standard-library/iterator-traits-struct.md) ou random_access_iterator_tag.
+Consultez [iterator_traits](../standard-library/iterator-traits-struct.md) ou [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) pour obtenir un exemple d’utilisation de `iterator_tag`.
 
 ## <a name="requirements"></a>Configuration requise
 

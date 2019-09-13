@@ -20,7 +20,7 @@ ms.locfileid: "68450337"
 > [!NOTE]
 > Cette rubrique se trouve dans la C++ documentation de Microsoft comme un exemple non fonctionnel de conteneurs utilisés dans C++ la bibliothèque standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
 
-Exécute swap.`(right)` [](../standard-library/container-class-swap.md) `left.`
+Exécute `left.`[swap](../standard-library/container-class-swap.md)`(right)`.
 
 ## <a name="syntax"></a>Syntaxe
 

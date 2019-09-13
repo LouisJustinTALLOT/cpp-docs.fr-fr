@@ -95,7 +95,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448798"
 ---
-# <a name="hashmap-class"></a>hash_map, classe
+# <a name="hash_map-class"></a>hash_map, classe
 
 > [!NOTE]
 > Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
@@ -170,7 +170,7 @@ L’itérateur fourni par la classe hash_map est un itérateur bidirectionnel. T
 |[const_iterator](#const_iterator)|Type qui fournit un itérateur bidirectionnel capable de lire un élément `const` dans le `hash_map`.|
 |[const_pointer](#const_pointer)|Type qui fournit un pointeur vers un élément **const** dans un `hash_map`.|
 |[const_reference](#const_reference)|Type qui fournit une référence à un élément **const** stocké dans un `hash_map` pour la lecture et l’exécution d’opérations **const** .|
-|[const_reverse_iterator](#const_reverse_iterator)|Type qui fournit un itérateur bidirectionnel capable de lire un élément const  dans le `hash_map`.|
+|[const_reverse_iterator](#const_reverse_iterator)|Type qui fournit un itérateur bidirectionnel capable de lire un élément **const** dans le `hash_map`.|
 |[difference_type](#difference_type)|Type entier signé qui peut être utilisé pour représenter le nombre d'éléments d'un `hash_map` au sein d'une plage, parmi les éléments pointés par les itérateurs.|
 |[iterator](#iterator)|Type qui fournit un itérateur bidirectionnel, qui peut lire ou modifier tout élément d'un objet `hash_map`.|
 |[key_compare](#key_compare)|Type qui fournit un objet de fonction pouvant comparer deux clés de tri pour déterminer l'ordre relatif de deux éléments au sein d'un `hash_map`.|
@@ -371,7 +371,7 @@ const_iterator cbegin() const;
 
 Itérateur bidirectionnel const qui traite le premier élément du [hash_map](../standard-library/hash-map-class.md) ou l’emplacement qui suit un `hash_map` vide.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // hash_map_cbegin.cpp
@@ -421,7 +421,7 @@ Itérateur bidirectionnel const qui traite l’emplacement suivant le dernier é
 
 La valeur retournée par `cend` ne doit pas être déréférencée.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // hash_map_cend.cpp
@@ -522,7 +522,7 @@ Pour déréférencer `const_iterator` un `cIter` pointant sur un élément dans 
 
 Pour accéder à la valeur de la clé pour l’élément, `cIter->first`utilisez, qui est équivalent `(*cIter).first`à. Pour accéder à la valeur de la référence mappée de l’élément, `cIter->second`utilisez, qui est équivalent `(*cIter).second`à.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez l’exemple de [begin](#begin) pour obtenir un exemple qui utilise `const_iterator`.
 
@@ -620,7 +620,7 @@ Pour déréférencer `const_reverse_iterator` un `crIter` pointant sur un élém
 
 Pour accéder à la valeur de la clé de l’élément, utilisez `crIter` -> **first**, ce qui équivaut à (\* `crIter`) **.first**. Pour accéder à la valeur de la référence mappée de l’élément, utilisez `crIter` -> **second**, ce qui équivaut à (\* `crIter`). **first**.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Pour savoir comment déclarer et utiliser `const_reverse_iterator`, consultez l’exemple [rend](#rend).
 
@@ -719,7 +719,7 @@ Avec la valeur de retour `crbegin`, l'objet `hash_map` ne peut pas être changé
 
 Vous pouvez utiliser `crbegin` pour itérer un `hash_map` vers l’arrière.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // hash_map_crbegin.cpp
@@ -1009,7 +1009,7 @@ bool empty() const;
 
 ### <a name="remarks"></a>Notes
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // hash_map_empty.cpp
@@ -1353,7 +1353,7 @@ Itérateur qui traite l’emplacement d’un élément ayant la clé spécifiée
 
 Si la valeur de retour `find` de est assignée à un [const_iterator](#const_iterator), l’objet hash_map ne peut pas être modifié. Si la valeur de retour `find` de est assignée à un [iterator](#iterator), l’objet hash_map peut être modifié.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // hash_map_find.cpp
@@ -1616,7 +1616,7 @@ L’insertion peut se produire dans le temps constant amorti pour la version d�
 
 La troisième fonction membre insère la séquence de valeurs d’éléments dans un hash_map qui correspond à chaque élément traité par un itérateur dans la plage *[First, Last)* d’un jeu spécifié.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // hash_map_insert.cpp
@@ -1737,7 +1737,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>Notes
 
-Le `iterator` défini par hash_map pointe vers des éléments qui sont des objets de [Value_type](#value_type), qui est de type **paire\<const clé, type >,** dont le premier membre est la clé de l’élément et dont le deuxième membre est la référence mappée détenue par le appartient.
+Le `iterator` défini par hash_map pointe vers des éléments qui sont des objets de [Value_type](#value_type), qui est de type **\<paire const clé, type >,** dont le premier membre est la clé de l’élément et dont le deuxième membre est la référence mappée détenue par le appartient.
 
 Pour déréférencer un **itérateur** `Iter` pointant vers un élément d’un multimap, `->` utilisez l’opérateur.
 
@@ -1745,7 +1745,7 @@ Pour accéder à la valeur de la clé de l’élément, utilisez `Iter` -> **fir
 
 Un type `iterator` peut être utilisé pour modifier la valeur d’un élément.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez l' `iterator`exemple de [Begin](#begin) pour obtenir un exemple de la façon de déclarer et d’utiliser.
 
@@ -1772,7 +1772,7 @@ L’objet stocké définit la fonction membre
 
 qui retourne **true** si `left` précède et n’est pas égal à `right` dans l’ordre de tri.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // hash_map_key_comp.cpp
@@ -1893,7 +1893,7 @@ Si la valeur de retour de `lower_bound` est affectée à un `const_iterator`, l�
 
 ### <a name="remarks"></a>Notes
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // hash_map_lower_bound.cpp
@@ -1961,7 +1961,7 @@ Le type `mapped_type` est un synonyme du paramètre de modèle `Type`.
 
 Pour plus d’informations sur `Type`, consultez la rubrique [hash_map, classe](../standard-library/hash-map-class.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Pour découvrir comment déclarer et utiliser `key_type`, consultez l’exemple relatif à [value_type](#value_type).
 
@@ -2039,7 +2039,7 @@ où DataValue est la valeur `mapped_type` du de l’élément avec une valeur de
 
 Quand vous utilisez `operator[]` pour insérer des éléments, la référence retournée n’indique pas si l’insertion va modifier un élément existant ou en créer un nouveau. Vous pouvez utiliser les fonctions membres [find](../standard-library/map-class.md#find) et [insert](../standard-library/map-class.md#insert) pour déterminer si un élément avec une clé spécifiée était déjà présent avant l’insertion.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // hash_map_op_ref.cpp
@@ -2124,7 +2124,7 @@ hash_map& operator=(hash_map&& right);
 
 Après l’effacement des éléments existants dans `hash_map`un `operator=` , copie ou déplace le contenu de *droite* dans le `hash_map`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // hash_map_operator_as.cpp
@@ -2437,7 +2437,7 @@ Pour déréférencer `reverse_iterator` un `rIter` pointant sur un élément dan
 
 Pour accéder à la valeur de la clé de l’élément, utilisez `rIter` -> **first**, ce qui équivaut à (\* `rIter`). **first**. Pour accéder à la valeur de la référence mappée de l’élément, utilisez `rIter` -> **second**, ce qui équivaut à (\* `rIter`). **first**.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Pour découvrir comment déclarer et utiliser `reverse_iterator`, consultez l’exemple relatif à [rbegin](#rbegin).
 
@@ -2528,7 +2528,7 @@ Argument hash_map qui fournit les éléments à échanger avec le hash_map cible
 
 La fonction membre n’invalide aucun pointeur, itérateur ou référence qui désigne des éléments dans les deux hash_maps dont les éléments sont échangés.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // hash_map_swap.cpp
@@ -2608,7 +2608,7 @@ Si la valeur de retour est affectée à un `const_iterator`, l’objet hash_map 
 
 ### <a name="remarks"></a>Notes
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 ```cpp
 // hash_map_upper_bound.cpp
@@ -2677,7 +2677,7 @@ Retourne l’objet de fonction de comparaison utilisé par un hash_map pour ordo
 
 ### <a name="remarks"></a>Notes
 
-Pour un hash_map *m*, si deux éléments *E1* (*K1*, *D1*) et *E2* (*K2*, *D2*) sont des objets de type [Value_type](#value_type), où *K1* et *K2* sont leurs clés de type [KEY_TYPE](#key_type) et *D1* et *D2* sont leurs données de type [](#mapped_type) `m.value_comp()(e1, e2)` mapped_type, et sont équivalentes `m.key_comp()(k1, k2)`à. Un objet stocké définit la fonction membre
+Pour un hash_map *m*, si deux éléments *E1* (*K1*, *D1*) et *E2* (*K2*, *D2*) sont des objets de type [Value_type](#value_type), où *K1* et *K2* sont leurs clés de type [KEY_TYPE](#key_type) et *D1* et *D2* sont leurs données de type [mapped_type](#mapped_type), alors `m.value_comp()(e1, e2)` sont équivalentes à `m.key_comp()(k1, k2)`. Un objet stocké définit la fonction membre
 
 `bool operator(value_type& left, value_type& right);`
 
@@ -2743,7 +2743,7 @@ typedef pair<const Key, Type> value_type;
 
 `value_type`est déclaré `pair<const key_type, mapped_type>` comme étant et non `pair<key_type, mapped_type>` , car les clés d’un conteneur associatif ne peuvent pas être modifiées à l’aide d’un itérateur ou d’une référence non constante.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // hash_map_value_type.cpp
