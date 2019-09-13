@@ -1,6 +1,6 @@
 ---
 title: CDialog (classe)
-ms.date: 11/04/2016
+ms.date: 09/07/2019
 f1_keywords:
 - CDialog
 - AFXWIN/CDialog
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: d9969b7dd41dc7a67e21bb2735b1d716bd988d07
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b07190c70fb11950b25aff45fb10e850c0e81b24
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506887"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907605"
 ---
 # <a name="cdialog-class"></a>CDialog (classe)
 
@@ -97,7 +97,7 @@ Les boîtes de dialogue sont de deux types : modal et non modal. Une boîte de 
 
 Un `CDialog` objet est une combinaison d’un modèle de boîte de `CDialog`dialogue et d’une classe dérivée de. Utilisez l’éditeur de boîtes de dialogue pour créer le modèle de boîte de dialogue et le stocker dans une ressource, puis utilisez l’Assistant Ajouter une `CDialog`classe pour créer une classe dérivée de.
 
-Une boîte de dialogue, comme toute autre fenêtre, reçoit des messages de Windows. Dans une boîte de dialogue, vous êtes particulièrement intéressé par la gestion des messages de notification à partir des contrôles de la boîte de dialogue, car il s’agit de la façon dont l’utilisateur interagit avec votre boîte de dialogue. Utilisez l’Fenêtre Propriétés pour sélectionner les messages à gérer et ajouter les entrées de table des messages et les fonctions membres du gestionnaire de messages appropriées à la classe pour vous. Vous devez uniquement écrire du code spécifique à l’application dans les fonctions membres du gestionnaire.
+Une boîte de dialogue, comme toute autre fenêtre, reçoit des messages de Windows. Dans une boîte de dialogue, vous êtes particulièrement intéressé par la gestion des messages de notification à partir des contrôles de la boîte de dialogue, car il s’agit de la façon dont l’utilisateur interagit avec votre boîte de dialogue. Utilisez l' [Assistant classe](mfc-class-wizard.md) pour sélectionner les messages que vous souhaitez gérer et ajouter les entrées de table de messages et les fonctions membres du gestionnaire de messages appropriées à la classe pour vous. Vous devez uniquement écrire du code spécifique à l’application dans les fonctions membres du gestionnaire.
 
 Si vous préférez, vous pouvez toujours écrire manuellement les entrées et les fonctions membres de la table des messages.
 
@@ -219,7 +219,7 @@ Utilisez le style WS_VISIBLE dans le modèle de boîte de dialogue si la boîte 
 
 Utilisez la `CWnd::DestroyWindow` fonction pour détruire une boîte de dialogue créée par `Create` la fonction.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]
 
@@ -444,7 +444,7 @@ Si vous implémentez le bouton **Annuler** dans une boîte de dialogue non modal
 > [!NOTE]
 >  Vous ne pouvez pas substituer cette méthode quand vous `CFileDialog` utilisez un objet dans un programme qui est compilé sous Windows XP. Pour plus d’informations `CFileDialog`sur, consultez [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCControlLadenDialog#66](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]
 
@@ -471,7 +471,7 @@ Windows appelle la `OnInitDialog` fonction à l’aide de la procédure de boît
 > [!NOTE]
 > Vous ne pouvez pas substituer cette méthode quand vous `CFileDialog` utilisez un objet dans un programme qui est compilé sous Windows Vista ou des systèmes d’exploitation ultérieurs. Pour plus d’informations sur les `CFileDialog` modifications apportées à sous Windows Vista et versions ultérieures, consultez [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCControlLadenDialog#67](../../mfc/codesnippet/cpp/cdialog-class_6.cpp)]
 

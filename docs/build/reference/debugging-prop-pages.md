@@ -1,6 +1,6 @@
 ---
 title: C++Pages de propriétés de débogage
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 78115a6b-3799-4515-814e-8566b5bdc55d
 f1_keywords:
@@ -35,16 +35,16 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: a63ac181b4ef281d6d78d951a46bba85103ba636
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 5f7a7bc0e2c696365daa38696fde6f1a480644b4
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537795"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927736"
 ---
 # <a name="c-debugging-property-pages"></a>C++Pages de propriétés de débogage
 
-Ces pages de propriétés se trouvent sous **propriétés du**  > **projet** > **Configuration Propriétés** > **du débogage**. Choisissez le type de débogueur dans le contrôle déroulant. Pour plus d’informations sur le débogage de C++ code [, consultez Didacticiel: Apprenez à déboguer C++ du code](/visualstudio/debugger/getting-started-with-the-debugger-cpp) à l’aide de Visual Studio et à déboguer du [code natif](/visualstudio/debugger/debugging-native-code).
+Ces pages de propriétés se trouvent**sous propriétés du** >  **projet** > **Configuration Propriétés** > du**débogage**. Choisissez le type de débogueur dans le contrôle déroulant. Pour plus d’informations sur le débogage de C++ code [, consultez Didacticiel : Apprenez à déboguer C++ du code](/visualstudio/debugger/getting-started-with-the-debugger-cpp) à l’aide de Visual Studio et à [Déboguer du code natif](/visualstudio/debugger/debugging-native-code).
 
 ## <a name="local-windows-debugger-property-page"></a>Page de propriétés du débogueur Windows local
 
@@ -72,9 +72,9 @@ Spécifie le type de débogueur à utiliser. Quand cette option est définie sur
 
 - **Natif uniquement** -natif uniquement
 - **Géré uniquement** -géré uniquement
-- Mixte **-mixte**
+- **Mixte-mixte**
 - Automatique auto
-- Script **-script**
+- **Script-script**
 - **GPU uniquement (C++ amp)** -GPU uniquement (C++ amp)
 
 ### <a name="environment"></a>Environnement
@@ -143,9 +143,9 @@ Spécifie le type de débogueur à utiliser. Quand cette option est définie sur
 
 - **Natif uniquement** -natif uniquement
 - **Géré uniquement** -géré uniquement
-- Mixte **-mixte**
+- **Mixte-mixte**
 - Automatique auto
-- Script **-script**
+- **Script-script**
 - **GPU uniquement (C++ amp)** -GPU uniquement (C++ amp)
 
 ### <a name="environment"></a>Environnement
@@ -203,9 +203,9 @@ Spécifie le type de débogueur à utiliser. Quand cette option est définie sur
 
 - **Natif uniquement** -natif uniquement
 - **Géré uniquement** -géré uniquement
-- Mixte **-mixte**
+- **Mixte-mixte**
 - Automatique auto
-- Script **-script**
+- **Script-script**
 
 ## <a name="web-service-debugger-property-page"></a>Page de propriétés du débogueur de service Web
 
@@ -221,9 +221,9 @@ Spécifie le type de débogueur à utiliser. Quand cette option est définie sur
 
 - **Natif uniquement** -natif uniquement
 - **Géré uniquement** -géré uniquement
-- Mixte **-mixte**
+- **Mixte-mixte**
 - Automatique auto
-- Script **-script**
+- **Script-script**
 
 ### <a name="sql-debugging"></a>Débogage SQL
 

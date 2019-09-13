@@ -1,6 +1,6 @@
 ---
 title: Pages de propriétés de l'outil Manifeste
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 f1_keywords:
 - VC.Project.VCManifestTool.SuppressStartupBanner
@@ -24,12 +24,12 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: c8413a28024361db82ca74858453202393987e60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492686"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927677"
 ---
 # <a name="manifest-tool-property-pages"></a>Pages de propriétés de l'outil Manifeste
 
@@ -49,7 +49,7 @@ Utilisez ces pages pour spécifier les options générales pour [Mt. exe](/windo
 
 Utilise l’option /identity afin de spécifier une chaîne d’identité qui comprend les attributs pour [l’élément \<assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Une chaîne d’identité commence par la valeur de l’attribut `name`, suivie des paires *attribut* = *valeur*. Les attributs dans une chaîne d’identité sont délimités par une virgule.
 
-Voici un exemple de chaîne d’identité:`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+Voici un exemple de chaîne d’identité :`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
 ## <a name="input-and-output-property-page"></a>Page de propriétés d’entrée et de sortie     
 
@@ -71,7 +71,7 @@ Utilise l’option **/inputresource** pour spécifier le chemin complet d’une 
 
 ###  <a name="output-manifest-file"></a>Fichier manifeste de sortie
 
-Spécifie le nom du fichier manifeste de sortie. Cette propriété est facultative quand un seul fichier manifeste est traité par l’outil Manifeste. (-out: [fichier]; # [ID ressource])
+Spécifie le nom du fichier manifeste de sortie. Cette propriété est facultative quand un seul fichier manifeste est traité par l’outil Manifeste. (-out : [fichier]; # [ID ressource])
 
 ###  <a name="manifest-resource-file"></a>Fichier de ressources de manifeste
 
@@ -83,7 +83,7 @@ Utilise l’option **/makecdfs** pour spécifier que l’outil Manifeste génér
 
 ###  <a name="generate-manifest-from-managedassembly"></a>Générer le manifeste à partir de ManagedAssembly
 
-Génère un manifeste à partir d’un assembly managé. (-managedassemblyname: [fichier])
+Génère un manifeste à partir d’un assembly managé. (-managedassemblyname : [fichier])
 
 ###  <a name="suppress-dependency-element"></a>Supprimer l’élément de dépendance
 
@@ -105,29 +105,29 @@ Spécifie si l’application prend en charge DPI. Par défaut, le paramètre a l
 
 ## <a name="isolated-com-property-page"></a>Page de propriétés COM isolé
 
-Pour plus d’informations sur le modèle COM isolé, consultez [ [applications isolées](/windows/win32/SbsCs/isolated-applications) et procédure: Générez des applications isolées pour](../how-to-build-isolated-applications-to-consume-com-components.md)consommer des composants com.
+Pour plus d’informations sur le modèle COM isolé, consultez [ [applications isolées](/windows/win32/SbsCs/isolated-applications) et procédure : Générez des applications isolées pour](../how-to-build-isolated-applications-to-consume-com-components.md)consommer des composants com.
 
 ###  <a name="type-library-file"></a>Fichier bibliothèque de types
 
-Spécifie la bibliothèque de types à utiliser pour la prise en charge du manifeste COM sans inscription. (-TLB: [fichier])
+Spécifie la bibliothèque de types à utiliser pour la prise en charge du manifeste COM sans inscription. (-TLB : [fichier])
 
 ###  <a name="registrar-script-file"></a>Fichier de script d’inscription
 
-Spécifie le fichier de script d’inscription à utiliser pour la prise en charge du manifeste COM sans inscription. (-RGS: [fichier])
+Spécifie le fichier de script d’inscription à utiliser pour la prise en charge du manifeste COM sans inscription. (-RGS : [fichier])
 
 ###  <a name="component-file-name"></a>Nom du fichier de composant
 
-Spécifie le nom de fichier du composant qui est généré à partir du fichier. tlb ou. RGS spécifié. (-dll: [fichier])
+Spécifie le nom de fichier du composant qui est généré à partir du fichier. tlb ou. RGS spécifié. (-dll : [fichier])
 
 ###  <a name="replacements-file"></a>Fichier de remplacement
 
-Spécifie le fichier qui contient des valeurs pour les chaînes remplaçables dans le fichier RGS. (remplacements: [fichier])
+Spécifie le fichier qui contient des valeurs pour les chaînes remplaçables dans le fichier RGS. (remplacements : [fichier])
 
 ## <a name="advanced-property-page"></a>Page de propriétés avancé
 
 ###  <a name="update-file-hashes"></a>Mettre à jour les hachages de fichiers
 
-Calcule le hachage des fichiers spécifiés dans les éléments de fichier et met à jour l’attribut de hachage avec cette valeur. (hashupdate: [chemin])
+Calcule le hachage des fichiers spécifiés dans les éléments de fichier et met à jour l’attribut de hachage avec cette valeur. (hashupdate : [chemin])
 
 ###  <a name="update-file-hashes-search-path"></a>Mettre à jour le chemin de recherche des hachages de fichiers
 

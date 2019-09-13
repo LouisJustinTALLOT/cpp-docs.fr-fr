@@ -1,24 +1,24 @@
 ---
 title: Conteneurs (Modern C++)
-ms.date: 1/18/2018
+ms.date: 01/18/2018
 ms.topic: conceptual
-ms.openlocfilehash: 2da57bfca8b04f50a223dddfb886835c69f746a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37b540132fc9ddc03d5eaafd33c545b5db5e7935
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392334"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926259"
 ---
 # <a name="containers-modern-c"></a>Conteneurs (Modern C++)
 
-Par défaut, utilisez [vecteur](../standard-library/vector-class.md) comme conteneur séquentiel par défaut dans C++. Cela équivaut à `List<T>` dans les langages .NET.
+Par défaut, utilisez [Vector](../standard-library/vector-class.md) comme conteneur séquentiel par défaut dans C++. Cela équivaut à `List<T>` dans les langages .net.
 
 ```cpp
 vector<string> apples;
 apples.push_back("Granny Smith");
 ```
 
-Utilisez [carte](../standard-library/map-class.md) (pas `unordered_map`) comme conteneur associatif par défaut. Utilisez [définir](../standard-library/set-class.md), [multimap](../standard-library/multimap-class.md), et [multiset](../standard-library/multiset-class.md) pour dégénérée & plusieurs cas.
+Utilisez [Map](../standard-library/map-class.md) (not `unordered_map`) comme conteneur associatif par défaut. Utilisez [Set](../standard-library/set-class.md), [Multimap](../standard-library/multimap-class.md)et [multijeu](../standard-library/multiset-class.md) pour dégénérer & plusieurs cas.
 
 ```cpp
 map<string, string> apple_color;
@@ -26,17 +26,17 @@ map<string, string> apple_color;
 apple_color["Granny Smith"] = "Green";
 ```
 
-Lorsque l’optimisation des performances est nécessaire, utilisez :
+Lorsque vous avez besoin de l’optimisation des performances, envisagez d’utiliser :
 
-- Le [tableau](../standard-library/array-class-stl.md) tapez lorsque l’incorporation est importante, par exemple, comme un membre de classe.
+- Le type de [tableau](../standard-library/array-class-stl.md) lorsque l’incorporation est important, par exemple, en tant que membre de classe.
 
-- Désordonnées tels que les conteneurs associatifs [unordered_map](../standard-library/unordered-map-class.md). Ces messages ont une surcharge inférieure par élément et recherche de temps constant, mais ils peuvent être plus difficile à utiliser correctement et efficacement.
+- Conteneurs associatifs non ordonnés, tels que [unordered_map](../standard-library/unordered-map-class.md). Celles-ci ont une surcharge par élément réduite et une recherche à temps constant, mais elles peuvent être plus difficiles à utiliser correctement et efficacement.
 
-- Triés `vector`. Pour plus d’informations, consultez [Algorithmes](../cpp/algorithms-modern-cpp.md).
+- Trié `vector`. Pour plus d’informations, consultez [Algorithmes](../cpp/algorithms-modern-cpp.md).
 
-N’utilisez pas les tableaux de style C. Pour les API plus anciennes qui doivent pouvoir accéder aux données directement, utilisez des méthodes d’accesseur tels que `f(vec.data(), vec.size());` à la place.
+N’utilisez pas de tableaux de style C. Pour les API plus anciennes qui nécessitent un accès direct aux données, utilisez `f(vec.data(), vec.size());` plutôt des méthodes d’accesseur.
 
-Pour plus d’informations sur les conteneurs, consultez [conteneurs de bibliothèque Standard C++](../standard-library/stl-containers.md).
+Pour plus d’informations sur les conteneurs, consultez [ C++ conteneurs de bibliothèque standard](../standard-library/stl-containers.md).
 
 ## <a name="see-also"></a>Voir aussi
 

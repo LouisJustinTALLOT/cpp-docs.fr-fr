@@ -1,6 +1,6 @@
 ---
 title: ON_UPDATE_COMMAND_UI, macro
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - ON_UPDATE_COMMAND_UI
 helpviewer_keywords:
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - command-handler macros
 - updating user-interface objects [MFC]
 ms.assetid: 3e72b50f-4119-4c82-81cf-6e09b132de05
-ms.openlocfilehash: 986bc4f12223048a20f88da5d164b24dc1c08ace
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 467e130f3e6518cc4ec554f6574fb9fcbabaf1f3
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385350"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907953"
 ---
-# <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI, macro
+# <a name="on_update_command_ui-macro"></a>ON_UPDATE_COMMAND_UI, macro
 
-Utilisez le **propriétés** fenêtre pour connecter un objet d’interface utilisateur à un gestionnaire de mise à jour de la commande dans un objet cible de commande. Il sera automatiquement connect-ID de l’objet d’interface utilisateur dans la macro ON_UPDATE_COMMAND_UI et créer un gestionnaire dans l’objet qui gère la mise à jour. Consultez [mappage des Messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md) pour plus d’informations.
+Pour connecter un objet d’interface utilisateur à un gestionnaire de mise à jour de commande dans un objet cible de commande, ouvrez **affichage de classes**, cliquez avec le bouton droit sur la classe à laquelle le gestionnaire sera ajouté, puis choisissez **Assistant classe**. Recherchez l’ID de l’objet d’interface utilisateur dans la liste située à gauche, puis choisissez **UPDATE_COMMAND_UI** dans le volet droit, puis cliquez sur **Ajouter un gestionnaire**. Cela crée une fonction de gestionnaire dans la classe et ajoute l’entrée appropriée dans la table des messages. Pour plus d’informations, consultez [mappage de messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md) . Vous pouvez spécifier des messages supplémentaires à gérer dans le volet **messages** . 
 
-Par exemple, pour mettre à jour une commande Effacer tout dans le menu Edition de votre programme, utilisez la **propriétés** fenêtre pour ajouter une entrée de table des messages dans la classe choisie, une déclaration de fonction pour un gestionnaire de mise à jour de la commande appelée `OnUpdateEditClearAll` dans la classe déclaration et un modèle de fonction vide dans le fichier d’implémentation de la classe. Le prototype de fonction ressemble à ceci :
+Par exemple, pour mettre à jour une commande Clear All dans le menu Edition de votre programme, utilisez l' **Assistant classe** pour ajouter une entrée de table des messages dans la classe sélectionnée, une déclaration de fonction pour un `OnUpdateEditClearAll` gestionnaire de mise à jour de commande appelé dans la déclaration de classe et un modèle de fonction dans le fichier d’implémentation de la classe. Le prototype de la fonction se présente comme suit :
 
 [!code-cpp[NVC_MFCDocView#2](../mfc/codesnippet/cpp/on-update-command-ui-macro_1.h)]
 
-Comme tous les gestionnaires, la fonction montre le **afx_msg** mot clé. Comme les gestionnaires de mise à jour, il prend un seul argument, un pointeur vers un `CCmdUI` objet.
+Comme tous les gestionnaires, la déclaration de fonction affiche le mot clé **afx_msg** . Comme tous les gestionnaires de mise à jour, il accepte un argument, un `CCmdUI` pointeur vers un objet.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide pratique pour Mettre à jour des objets d’interface utilisateur](../mfc/how-to-update-user-interface-objects.md)
+[Guide pratique : Mettre à jour des objets d’interface utilisateur](../mfc/how-to-update-user-interface-objects.md)

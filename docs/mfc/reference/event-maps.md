@@ -1,15 +1,15 @@
 ---
 title: Tables d'événements
-ms.date: 06/20/2018
+ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef730574b26a4c3619df886b72770ce7e035a40e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916464"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907891"
 ---
 # <a name="event-maps"></a>Tables d'événements
 
@@ -19,9 +19,9 @@ La bibliothèque MFC (Microsoft Foundation Class) offre un modèle de programmat
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-La `EVENT_STOCK_CLICK` macro indique que le contrôle déclenchera un événement de clic sur une action chaque fois qu’il détecte un clic de souris. Pour obtenir une liste plus détaillée des autres événements stock, consultez l' [article contrôles ActiveX: Événements](../../mfc/mfc-activex-controls-events.md). Les macros sont également disponibles pour afficher les événements personnalisés.
+La `EVENT_STOCK_CLICK` macro indique que le contrôle déclenchera un événement de clic sur une action chaque fois qu’il détecte un clic de souris. Pour obtenir une liste plus détaillée des autres événements stock, consultez l' [article contrôles ActiveX : Événements](../../mfc/mfc-activex-controls-events.md). Les macros sont également disponibles pour afficher les événements personnalisés.
 
-Bien que les macros de table d'événements sont importantes, elles ne sont généralement pas insérées directement. Ceci est dû au fait que la fenêtre Propriétés crée automatiquement des entrées dans la table des événements de vos fichiers sources lorsque vous l'utilisez pour associer des fonctions de déclenchement d'événement avec des événements. Lorsque vous souhaitez modifier ou ajouter une entrée dans la table des événements, utilisez la fenêtre Propriétés.
+Bien que les macros de table d'événements sont importantes, elles ne sont généralement pas insérées directement. Cela est dû au fait que la fenêtre **Propriétés** (dans **affichage de classes**) crée automatiquement des entrées de mappage d’événements dans vos fichiers sources quand vous l’utilisez pour associer des fonctions de déclenchement d’événements à des événements. Chaque fois que vous souhaitez modifier ou ajouter une entrée de la table des événements, vous pouvez utiliser la fenêtre **Propriétés** .
 
 Pour prendre en charge les tables d'événements, MFC fournit les macros suivantes :
 
@@ -61,7 +61,7 @@ DECLARE_EVENT_MAP()
 
 Utilisez la macro DECLARE_EVENT_MAP à la fin de votre déclaration de classe. Ensuite, dans le fichier. cpp qui définit les fonctions membres de la classe, utilisez la macro BEGIN_EVENT_MAP, les entrées de macro pour chacun des événements du contrôle et la macro END_EVENT_MAP pour déclarer la fin de la liste d’événements.
 
-Pour plus d’informations sur les tables d’événements, [consultez l’article contrôles ActiveX: Événements](../../mfc/mfc-activex-controls-events.md).
+Pour plus d’informations sur les tables d’événements, [consultez l’article contrôles ActiveX : Événements](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -87,7 +87,7 @@ Spécifie le nom de la classe de base de *les*.
 
 Dans le fichier d’implémentation (. cpp) qui définit les fonctions membres pour votre classe, démarrez la table des événements avec la macro BEGIN_EVENT_MAP, puis ajoutez des entrées de macro pour chacun de vos événements et complétez la table des événements avec la macro END_EVENT_MAP.
 
-Pour plus d’informations sur les tables d’événements et la macro BEGIN_EVENT_MAP, [consultez l’article contrôles ActiveX: Événements](../../mfc/mfc-activex-controls-events.md).
+Pour plus d’informations sur les tables d’événements et la macro BEGIN_EVENT_MAP, [consultez l’article contrôles ActiveX : Événements](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -132,7 +132,7 @@ Le paramètre *vtsParams* est une liste de valeurs `VTS_` séparées par des esp
 
 spécifie une liste contenant un entier 32 bits représentant une valeur de couleur RVB, suivi d’un pointeur vers `IFontDisp` l’interface d’un objet OLE font.
 
-Les `VTS_` constantes et leurs significations sont les suivantes:
+Les `VTS_` constantes et leurs significations sont les suivantes :
 
 |Symbole|Type de paramètre|
 |------------|--------------------|
@@ -231,7 +231,7 @@ Fonction appelée par le Framework lorsque le verbe est appelé.
 
 L’éditeur de ressources peut être utilisé pour créer des noms de verbes personnalisés qui sont ajoutés à votre table de chaînes.
 
-Le prototype de fonction pour *memberFxn* est:
+Le prototype de fonction pour *memberFxn* est :
 
 ```cpp
 BOOL memberFxn(

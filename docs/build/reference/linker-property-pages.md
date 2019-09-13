@@ -1,14 +1,14 @@
 ---
 title: pages de propriétés de l'Éditeur de liens
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 17880d50ae012b640cb83f3766883ab2b1bcbe73
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537595"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927701"
 ---
 # <a name="linker-property-pages"></a>pages de propriétés de l'Éditeur de liens
 
@@ -28,8 +28,8 @@ Affiche les messages de progression de l’éditeur de liens
 
 - **Non défini** -pas de commentaires.
 - **Afficher tous les messages de progression** -affiche tous les messages d’avancement. 
-- **Pour les bibliothèques** recherchées, affiche les messages de progression indiquant uniquement les bibliothèques recherchées.
-- **À propos du repli COMDAT lors** de la liaison optimisée: affiche des informations sur le repli COMDAT pendant la liaison optimisée.
+- **Pour les bibliothèques recherchées** , affiche les messages de progression indiquant uniquement les bibliothèques recherchées.
+- **À propos du repli COMDAT lors de la liaison optimisée** : affiche des informations sur le repli COMDAT pendant la liaison optimisée.
 - **À propos des données supprimées pendant la liaison optimisée** : affiche des informations sur les fonctions et les données supprimées pendant la liaison optimisée.
 - **À propos des modules incompatibles avec SEH** -affiche des informations sur les modules incompatibles avec la gestion sécurisée des exceptions.
 - **À propos de l’activité de l’éditeur de liens liée au code managé-permet** d’afficher des informations sur l’activité de l’éditeur de liens liée au code managé.
@@ -40,7 +40,7 @@ L’option [/version](version-version-information.md) indique à l’éditeur de
 
 ### <a name="enable-incremental-linking"></a>Activation des liens incrémentiels
 
-Active les liens incrémentiels. ([/INCREMENTAL](incremental-link-incrementally.md),/INCREMENTAL: NO)
+Active les liens incrémentiels. ([/INCREMENTAL](incremental-link-incrementally.md),/INCREMENTAL : NO)
 
 ### <a name="suppress-startup-banner"></a>Supprimer la bannière de démarrage
 
@@ -48,7 +48,7 @@ L’option [/nologo](nologo-suppress-startup-banner-linker.md) empêche l’affi
 
 ### <a name="ignore-import-library"></a>Bibliothèque d’importation ignorée
 
-Cette propriété indique à l’éditeur de liens ne pas lier de sortie .lib générée à partir de cette build dans n’importe quel projet dépendant. Vous autorisez ainsi le système de projet à gérer les fichiers .dll qui ne créent pas de fichier .lib lors de la génération. Si un projet dépend d’un autre projet créant une DLL, le système de projet lie automatiquement le fichier .lib produit par ce projet enfant. Il se peut que cette propriété ne soit pas nécessaire pour les projets créant des DLL COM ou des DLL de ressource uniquement. En effet, ces DLL ne possèdent pas d’exportation significative. Si une DLL ne possède aucune exportation, l’éditeur de liens ne crée pas de fichier .lib. Si aucun fichier .lib d’exportation n’est présent sur le disque et si le système de projet indique à l’éditeur de liens d’établir la liaison à cette DLL (manquante), la liaison échoue. Utilisez la propriété **Bibliothèque d’importation ignorée** pour résoudre ce problème. Si elle a la valeur **Oui**, le système de projet ignore la présence ou l’absence de ce fichier .lib et empêche la liaison d’un projet dépendant de ce projet au fichier .lib manquant.
+Cette propriété indique à l’éditeur de liens ne pas lier de sortie .lib générée à partir de cette build dans n’importe quel projet dépendant. Elle permet au système de projet de gérer les fichiers. dll qui ne produisent pas de fichier. lib lors de la génération. Si un projet dépend d’un autre projet créant une DLL, le système de projet lie automatiquement le fichier .lib produit par ce projet enfant. Cette propriété peut ne pas être nécessaire dans les projets qui produisent des DLL COM ou des dll de ressources uniquement, car ces dll n’ont aucune exportation significative. Si une DLL n’a pas d’exportation, l’éditeur de liens ne génère pas de fichier. lib. Si aucun fichier. lib d’exportation n’est présent et que le système de projet indique à l’éditeur de liens de créer un lien avec la DLL manquante, le lien échoue. Utilisez la propriété **Bibliothèque d’importation ignorée** pour résoudre ce problème. Lorsque la valeur est **Oui**, le système de projet ignore la présence ou l’absence du fichier. lib, et entraîne l’absence de liaison entre tout projet qui dépend de ce projet et le fichier. lib inexistant.
 
 Pour accéder par programmation à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>.
 
@@ -60,7 +60,7 @@ Pour accéder par programmation à cette propriété, consultez <xref:Microsoft.
 
 ### <a name="per-user-redirection"></a>Redirection par utilisateur
 
-L’inscription dans Visual Studio s’effectue traditionnellement dans HKEY_CLASSES_ROOT (HKCR). Avec Windows Vista et les systèmes d’exploitation ultérieurs, vous devez exécuter Visual Studio en mode élevé pour accéder à HKCR. Les développeurs ne souhaitent pas toujours exécuter l’application en mode élevé, mais sont toujours obligés de s’inscrire. La redirection par utilisateur vous permet de vous inscrire sans avoir à exécuter ce mode.
+L’inscription dans Visual Studio s’effectue traditionnellement dans HKEY_CLASSES_ROOT (HKCR). Avec Windows Vista et les systèmes d’exploitation ultérieurs, vous devez exécuter Visual Studio en mode élevé pour accéder à HKCR. Les développeurs ne veulent pas toujours s’exécuter en mode élevé, mais doivent toujours travailler avec l’inscription. La redirection par utilisateur vous permet de vous inscrire sans avoir à s’exécuter en mode élevé.
 
 La redirection par utilisateur force toutes les écritures dans HKCR à être redirigées vers HKEY\_CURRENT\_USER (HKCU). Si la redirection par utilisateur est désactivée, [Erreur de génération de projet PRJ0050](../../error-messages/tool-errors/project-build-error-prj0050.md) peut survenir quand le programme essaie d’écrire dans HKCR.
 
@@ -70,21 +70,21 @@ Permet à l’utilisateur de substituer le chemin de la bibliothèque d’enviro
 
 ### <a name="link-library-dependencies"></a>Lier les dépendances de la bibliothèque
 
-Indique s’il convient de lier les fichiers .lib produits par les projets dépendants. En règle générale, vous souhaitez lier les fichiers .lib, mais cela peut ne pas être le cas pour certaines DLL.
+Indique s’il convient de lier les fichiers .lib produits par les projets dépendants. En général, vous souhaitez créer un lien dans les fichiers. lib, mais ce n’est peut-être pas le cas pour certaines dll.
 
-Vous pouvez également spécifier un fichier .obj en fournissant le nom de fichier et le chemin relatif, par exemple « ..\\..\MyLibProject\MyObjFile.obj ». Si le code source du fichier .obj inclut (#include) un en-tête précompilé, par exemple pch.h, le fichier pch.obj est situé dans le même dossier que MyObjFile.obj et vous devez également ajouter pch.obj comme dépendance supplémentaire.
+Vous pouvez également spécifier un fichier .obj en fournissant le nom de fichier et le chemin relatif, par exemple « ..\\..\MyLibProject\MyObjFile.obj ». Si le code source du fichier. obj #includes un en-tête précompilé, par exemple pch. h, le fichier PCH. obj se trouve dans le même dossier que MyObjFile. obj. Vous devez également ajouter pch. obj comme dépendance supplémentaire.
 
 ### <a name="use-library-dependency-inputs"></a>Utiliser les entrées de dépendance de la bibliothèque
 
-Spécifie si les entrées de l’outil générateur de bibliothèques sont utilisées à la place du fichier bibliothèque lui-même lors de la liaison des sorties de bibliothèque des dépendances du projet. Dans un grand projet, quand un projet dépendant produit un fichier .lib, la liaison incrémentielle est désactivée. Si de nombreux projets dépendants génèrent des fichiers .lib, la génération de l’application peut prendre un certain temps. Quand cette propriété a la valeur **Oui**, le système de projet lie les fichiers .obj des fichiers .lib produits par les projets dépendants, activant ainsi la liaison incrémentielle.
+Spécifie s’il faut utiliser les entrées de l’outil bibliothécaire, plutôt que le fichier bibliothèque lui-même, lors de la liaison des sorties de bibliothèque des dépendances du projet. Dans un grand projet, quand un projet dépendant produit un fichier .lib, la liaison incrémentielle est désactivée. Si de nombreux projets dépendants génèrent des fichiers .lib, la génération de l’application peut prendre un certain temps. Quand cette propriété a la valeur **Oui**, le système de projet lie les fichiers. obj des fichiers. libs produits par des projets dépendants, ce qui permet d’effectuer des liens incrémentiels.
 
-Pour plus d’informations sur l’accès à la page de propriétés **général** de l’éditeur de liens, consultez [définir C++ les propriétés du compilateur et des builds dans Visual Studio](../working-with-project-properties.md).
+Pour plus d’informations sur l’accès à la page de propriétés **général** de l’éditeur de liens, consultez [ C++ définir les propriétés du compilateur et des builds dans Visual Studio](../working-with-project-properties.md).
 
 ### <a name="link-status"></a>État du lien
 
-Spécifie si l’éditeur de liens doit afficher un indicateur de progression indiquant quel pourcentage du lien est terminé. La valeur par défaut est de ne pas afficher ces informations d’État. ([/LTCG](ltcg-link-time-code-generation.md): ÉTAT | LTCG: NOSTATUS)
+Spécifie si l’éditeur de liens doit afficher un indicateur de progression indiquant quel pourcentage du lien est terminé. La valeur par défaut est de ne pas afficher ces informations d’État. ([/LTCG](ltcg-link-time-code-generation.md): ÉTAT | LTCG : NOSTATUS)
 
-### <a name="prevent-dll-binding"></a>Empêcher la liaison de dll
+### <a name="prevent-dll-binding"></a>Empêcher la liaison de DLL
 
 [/ALLOWBIND](allowbind-prevent-dll-binding.md): no définit un bit dans l’en-tête d’une dll qui indique à bind. exe que l’image n’est pas autorisée à être liée. Vous ne voulez peut-être pas qu’une DLL soit liée si elle a été signée numériquement (la liaison invalide la signature).
 
@@ -94,13 +94,13 @@ Spécifie si l’éditeur de liens doit afficher un indicateur de progression in
 
 ### <a name="force-file-output"></a>Forcer la sortie du fichier
 
-L’option [/force](force-force-file-output.md) indique à l’éditeur de liens de créer un fichier. exe ou une dll même si un symbole est référencé mais pas défini ou s’il est multiplié par plusieurs. Il peut créer un fichier. exe non valide.
+L’option [/force](force-force-file-output.md) indique à l’éditeur de liens de créer un fichier. exe ou une dll même si un symbole est référencé mais pas défini, ou s’il est défini sur multiplier. Il peut créer un fichier. exe non valide.
 
 **Choix**
 
 - **Activé** -/force sans argument implique à la fois plusieurs et non résolus.
-- **Symbole défini par multiplication uniquement** -utilisez/force: multiple pour créer un fichier de sortie, que la liaison trouve ou non plusieurs définitions pour un symbole.
-- **Symbole non défini uniquement** -utilisez/force: Unresolved pour créer un fichier de sortie si Link trouve un symbole non défini. /FORCE: Unresolved est ignoré si le symbole de point d’entrée n’est pas résolu.
+- **Symbole défini par multiplication uniquement** -utilisez/force : multiple pour créer un fichier de sortie, même si Link trouve plusieurs définitions pour un symbole.
+- **Symbole non défini uniquement** -utilisez/force : Unresolved pour créer un fichier de sortie si Link trouve un symbole non défini. /FORCE: Unresolved est ignoré si le symbole de point d’entrée n’est pas résolu.
 
 ### <a name="create-hot-patchable-image"></a>Créer une image corrigeable à chaud
 
@@ -129,7 +129,7 @@ L’option [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) indique à l’édi
 
 ### <a name="ignore-specific-default-libraries"></a>Bibliothèques par défaut spécifiques ignorées
 
-Spécifie un ou plusieurs noms de bibliothèques par défaut à ignorer. Séparez plusieurs bibliothèques par des points-virgules. (/NODEFAULTLIB: [nom, nom,...])
+Spécifie un ou plusieurs noms de bibliothèques par défaut à ignorer. Séparez plusieurs bibliothèques par des points-virgules. (/NODEFAULTLIB : [nom, nom,...])
 
 ### <a name="module-definition-file"></a>Fichier de définition de module
 
@@ -153,7 +153,7 @@ L’option [/delayload](delayload-delay-load-import.md) entraîne le chargement 
 
 ### <a name="assembly-link-resource"></a>Ressource de lien d’assembly
 
-L’option [/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md) crée un lien vers une ressource .NET Framework dans le fichier de sortie; le fichier de ressources n’est pas placé dans le fichier de sortie.
+L’option [/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md) crée un lien vers une ressource .NET Framework dans le fichier de sortie ; le fichier de ressources n’est pas placé dans le fichier de sortie.
 
 ## <a name="manifest-file-property-page"></a>Page de propriétés du fichier manifeste
 
@@ -175,21 +175,21 @@ Spécifie un comportement pour la recherche de manifeste. ([/ALLOWISOLATION](all
 
 ### <a name="enable-user-account-control-uac"></a>Activer le contrôle de compte d’utilisateur (UAC)
 
-Spécifie si le contrôle de compte d’utilisateur est activé ou non.  ([/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md),/MANIFESTUAC: NO)
+Spécifie si le contrôle de compte d’utilisateur est activé ou non.  ([/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md),/MANIFESTUAC : NO)
 
 ### <a name="uac-execution-level"></a>Niveau d’exécution du contrôle de compte d’utilisateur
 
-Spécifie le niveau d’exécution demandé pour l’application lors de l’exécution avec le contrôle de compte d’utilisateur.  (/MANIFESTUAC: Level = [valeur])
+Spécifie le niveau d’exécution demandé pour l’application lors de l’exécution avec le contrôle de compte d’utilisateur.  (/MANIFESTUAC : Level = [valeur])
 
 **Choix**
 
-- asInvoker-niveau d’exécution UAC: en tant que demandeur.
-- **highestAvailable** -niveau d’exécution du contrôle de compte d’utilisateur: disponible le plus élevé.
-- **requireAdministrator** -niveau d’exécution du contrôle de compte d’utilisateur: exiger un administrateur.
+- **asInvoker** -niveau d’exécution UAC : en tant que demandeur.
+- **highestAvailable** -niveau d’exécution du contrôle de compte d’utilisateur : disponible le plus élevé.
+- **requireAdministrator** -niveau d’exécution du contrôle de compte d’utilisateur : exiger un administrateur.
 
 ### <a name="uac-bypass-ui-protection"></a>Contourner le contrôle de compte d’utilisateur protection
 
-Spécifie s’il faut ignorer les niveaux de protection de l’interface utilisateur pour les autres fenêtres sur le bureau.  Définissez cette propriété sur «Oui» uniquement pour les applications d’accessibilité.  ([/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md): UIAccess = [true | false])
+Spécifie s’il faut ignorer les niveaux de protection de l’interface utilisateur pour les autres fenêtres sur le bureau.  Définissez cette propriété sur « Oui » uniquement pour les applications d’accessibilité.  ([/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md): UIAccess = [true | false])
 
 ## <a name="debugging-property-page"></a>Page de propriétés de débogage
 
@@ -200,7 +200,7 @@ Cette option permet de créer des informations de débogage pour le fichier. exe
 **Choix**
 
 - **Non** : ne produit aucune information de débogage.
-- **Générer des informations** de débogage-créer une base de données de programme (PDB) complète idéale pour la distribution vers le serveur de symboles Microsoft.
+- **Générer des informations de débogage** -créer une base de données de programme (PDB) complète idéale pour la distribution vers le serveur de symboles Microsoft.
 - **Générer des informations de débogage optimisées pour des liens plus rapides** : produit une base de données de programme (PDB) idéale pour le cycle de modification-lien-débogage. 
 - **Générer des informations de débogage optimisées pour le partage et la publication** : produit une base de données de programme (PDB) idéale pour le cycle de modification-lien-débogage. 
 
@@ -239,7 +239,7 @@ L’option [/Subsystem](subsystem-specify-subsystem.md) indique au système d’
 - **Non défini** -aucun sous-système défini.
 - **Console** : application en mode caractères Win32. Les applications console reçoivent une console par le système d’exploitation. Si main ou wmain est défini, CONSOLE est la valeur par défaut.
 - **Windows** -l’application ne nécessite pas de console, probablement parce qu’elle crée ses propres fenêtres pour l’interaction avec l’utilisateur. Si WinMain ou wWinMain est défini, WINDOWS est la valeur par défaut.
-- **Native** -pilotes de périphérique pour Windows NT. Si/DRIVER: WDM est spécifié, NATIVE est la valeur par défaut.
+- **Native** -pilotes de périphérique pour Windows NT. Si/DRIVER : WDM est spécifié, NATIVE est la valeur par défaut.
 - Application **EFI** -application EFI.
 - **Pilote de service de démarrage EFI** -pilote de service de démarrage EFI.
 - ROM **EFI** -ROM EFI.
@@ -268,7 +268,7 @@ Spécifie la taille totale d’allocation de piles dans la mémoire physique. La
 
 ### <a name="enable-large-addresses"></a>Activer les adresses volumineuses
 
-L’option [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md) indique à l’éditeur de liens que l’application peut gérer des adresses supérieures à 2 gigaoctets. Par défaut,/LARGEADDRESSAWARE: NO est activé si/LARGEADDRESSAWARE n’est pas spécifié sur la ligne de l’éditeur de liens.
+L’option [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md) indique à l’éditeur de liens que l’application peut gérer des adresses supérieures à 2 gigaoctets. Par défaut,/LARGEADDRESSAWARE : NO est activé si/LARGEADDRESSAWARE n’est pas spécifié sur la ligne de l’éditeur de liens.
 
 ### <a name="terminal-server"></a>Terminal Server
 
@@ -276,11 +276,11 @@ L’option [/TSAWARE](tsaware-create-terminal-server-aware-application.md) défi
 
 ### <a name="swap-run-from-cd"></a>Échange d’exécution à partir du CD
 
-L’option [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) indique au système d’exploitation de copier la sortie de l’éditeur de liens dans un fichier d’échange, puis d’exécuter l’image à partir de là. Il s’agit d’une fonctionnalité de Windows NT 4,0 (et versions ultérieures). Si vous spécifiez **CD** , le système d’exploitation copie l’image sur un disque amovible dans un fichier d’échange, puis la charge.
+L’option [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) indique au système d’exploitation de copier la sortie de l’éditeur de liens dans un fichier d’échange, puis d’exécuter l’image à partir de là. Cette option est une fonctionnalité de Windows NT 4,0 (et versions ultérieures). Si vous spécifiez **CD** , le système d’exploitation copie l’image sur un disque amovible dans un fichier d’échange, puis la charge.
 
 ### <a name="swap-run-from-network"></a>Échange d’exécution à partir du réseau
 
-L’option [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) indique au système d’exploitation de copier la sortie de l’éditeur de liens dans un fichier d’échange, puis d’exécuter l’image à partir de là. Il s’agit d’une fonctionnalité de Windows NT 4,0 (et versions ultérieures). Si **net** est spécifié, le système d’exploitation copie tout d’abord l’image binaire du réseau dans un fichier d’échange et la charge à partir de là. Cette option est utile pour exécuter des applications sur le réseau.
+L’option [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) indique au système d’exploitation de copier la sortie de l’éditeur de liens dans un fichier d’échange, puis d’exécuter l’image à partir de là. Cette option est une fonctionnalité de Windows NT 4,0 (et versions ultérieures). Si **net** est spécifié, le système d’exploitation copie tout d’abord l’image binaire du réseau dans un fichier d’échange et la charge à partir de là. Cette option est utile pour exécuter des applications sur le réseau.
 
 ### <a name="driver"></a>Pilote
 
@@ -289,19 +289,19 @@ Utilisez l’option [/Driver](driver-windows-nt-kernel-mode-driver.md) de l’é
 **Choix**
 
 - **Non défini** -paramètre de pilote par défaut.
-- Pilote **-pilote**
-- **Up** -/Driver: en fait, l’éditeur de liens ajoute le bit IMAGE_FILE_UP_SYSTEM_ONLY aux caractéristiques de l’en-tête de sortie pour spécifier qu’il s’agit d’un pilote monoprocesseur (up). Le système d’exploitation refuse de charger un pilote UP sur un système multiprocesseur (MP).
-- **WDM** -/Driver: WDM force l’éditeur de liens à définir le bit IMAGE_DLLCHARACTERISTICS_WDM_DRIVER dans le champ DLLCHARACTERISTICS de l’en-tête facultatif.
+- **Pilote-pilote**
+- **Up** -/Driver : en fait, l’éditeur de liens ajoute le bit IMAGE_FILE_UP_SYSTEM_ONLY aux caractéristiques de l’en-tête de sortie pour spécifier qu’il s’agit d’un pilote monoprocesseur (up). Le système d’exploitation refuse de charger un pilote UP sur un système multiprocesseur (MP).
+- **WDM** -/Driver : WDM force l’éditeur de liens à définir le bit IMAGE_DLLCHARACTERISTICS_WDM_DRIVER dans le champ DLLCHARACTERISTICS de l’en-tête facultatif.
 
 ## <a name="optimization-property-page"></a>Page de propriétés optimisation
 
 ### <a name="references"></a>Références
 
-[/OPT](opt-optimizations.md): Ref élimine les fonctions et/ou les données qui ne sont jamais référencées alors que/opt: NOREF conserve les fonctions et/ou les données qui ne sont jamais référencées. 
+[/OPT](opt-optimizations.md): Ref élimine les fonctions et/ou les données qui ne sont jamais référencées alors que/opt : NOREF conserve les fonctions et/ou les données qui ne sont jamais référencées.
 
 ### <a name="enable-comdat-folding"></a>Activer le pliage COMDAT
 
-Utilisez [/OPT](opt-optimizations.md): ICF\[= iterations] pour effectuer un repli COMDAT identique. 
+Utilisez [/OPT](opt-optimizations.md): ICF\[= iterations] pour effectuer un repli COMDAT identique.
 
 ### <a name="function-order"></a>Ordre des fonctions
 
@@ -320,9 +320,9 @@ Spécifie la génération du code durant l’édition de liens. ([/LTCG](ltcg-li
 - **Default** -paramètre LTCG par défaut.
 - Utiliser la génération de **code durant l’édition de liens rapide** : utilisez la génération de code durant l’édition de liens avec [/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md).
 - **Utilisez la génération de code durant l’édition de liens** -utilisez la [génération de code durant l’édition de liens](ltcg-link-time-code-generation.md).
-- **Optimisation guidée par profil-instrumenter** -utiliser l' [optimisation guidée par profil](../profile-guided-optimizations.md) avec:P ginstrument.
+- **Optimisation guidée par profil-instrumenter** -utiliser l' [optimisation guidée par profil](../profile-guided-optimizations.md) avec :P ginstrument.
 - **Optimisation guidée par profil-optimisation** : spécifie que l’éditeur de liens doit utiliser les données de profil créées après l’exécution du fichier binaire instrumenté pour créer une image optimisée.
-- **Optimisation guidée par profil-mettre à jour** : permet et effectue le suivi de la liste des fichiers d’entrée à ajouter ou à modifier à partir de ce qui a été spécifié dans la phase:P ginstrument.
+- **Optimisation guidée par profil-mettre à jour** : permet et effectue le suivi de la liste des fichiers d’entrée à ajouter ou à modifier à partir de ce qui a été spécifié dans la phase :P ginstrument.
 
 ## <a name="embedded-idl-property-page"></a>Page de propriétés IDL incorporé
 
@@ -371,7 +371,7 @@ Spécifiez un conteneur de clé pour signer les métadonnées Windows. ([/WINMDK
 
 ### <a name="windows-metadata-delay-sign"></a>Signature de délai des métadonnées Windows
 
-Signer partiellement les métadonnées Windows. Utilisez [/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md) si vous souhaitez uniquement placer la clé publique dans les métadonnées Windows. La valeur par défaut est/WINMDDELAYSIGN: NO.
+Signer partiellement les métadonnées Windows. Utilisez [/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md) si vous souhaitez uniquement placer la clé publique dans les métadonnées Windows. La valeur par défaut est/WINMDDELAYSIGN : NO.
 
 ## <a name="advanced-property-page"></a>Page de propriétés avancé
 
@@ -409,11 +409,11 @@ L’option [/noAssembly](noassembly-create-a-msil-module.md) indique à l’édi
 
 ### <a name="unload-delay-loaded-dll"></a>Décharger la DLL à chargement différé
 
-Le qualificateur Unload indique à la fonction d’assistance de chargement différé de prendre en charge le déchargement explicite de la dll. ([/DELAY](delay-delay-load-import-settings.md): UNLOAD)
+Le qualificateur **Unload** indique à la fonction d’assistance de chargement différé de prendre en charge le déchargement explicite de la dll. ([/DELAY](delay-delay-load-import-settings.md): UNLOAD)
 
 ### <a name="nobind-delay-loaded-dll"></a>DLL à chargement différé NOBIND
 
-Le QUALIFICATEUR NOBIND indique à l’éditeur de liens de ne pas inclure une IAT pouvant être liée dans l’image finale. L'option par défaut consiste à créer la table IAT pouvant être liée pour les DLL chargées en différé. ([/DELAY](delay-delay-load-import-settings.md): NOBIND)
+Le qualificateur **NOBIND** indique à l’éditeur de liens de ne pas inclure une IAT pouvant être liée dans l’image finale. L'option par défaut consiste à créer la table IAT pouvant être liée pour les DLL chargées en différé. ([/DELAY](delay-delay-load-import-settings.md): NOBIND)
 
 ### <a name="import-library"></a>Importer la bibliothèque
 
@@ -421,7 +421,7 @@ Remplace le nom par défaut de la bibliothèque d’importation. ([/IMPLIB](impl
 
 ### <a name="merge-sections"></a>Fusionner les sections
 
-L’option [/Merge](merge-combine-sections.md) combine la première section (from) à la deuxième section (to), en nommant la section résultante en. Par exemple,/Merge:. rdata =. Text.
+L’option [/Merge](merge-combine-sections.md) combine la première section (from) à la deuxième section (to), en nommant la section résultante en. Par exemple,/Merge :. rdata =. Text.
 
 ### <a name="target-machine"></a>Ordinateur cible
 
@@ -478,7 +478,7 @@ Spécifiez un conteneur de clé pour signer un assembly. ([/Keycontainer](keycon
 
 ### <a name="delay-sign"></a>Temporisation de la signature
 
-Signer partiellement un assembly. Utilisez [/delaysign](delaysign-partially-sign-an-assembly.md) si vous souhaitez uniquement placer la clé publique dans l’assembly. La valeur par défaut est/DELAYSIGN: NO.
+Signer partiellement un assembly. Utilisez [/delaysign](delaysign-partially-sign-an-assembly.md) si vous souhaitez uniquement placer la clé publique dans l’assembly. La valeur par défaut est/DELAYSIGN : NO.
 
 ### <a name="clr-unmanaged-code-check"></a>Vérification du code non managé CLR
 

@@ -1,6 +1,6 @@
 ---
 title: Erreurs et avertissements des outils Éditeur de liens
-ms.date: 04/17/2019
+ms.date: 09/10/2019
 f1_keywords:
 - LNK1100
 - LNK1101
@@ -139,7 +139,54 @@ f1_keywords:
 - LNK1329
 - LNK1330
 - LNK1331
-- LNK1332
+- LNK1333
+- LNK1334
+- LNK1335
+- LNK1336
+- LNK1337
+- LNK1338
+- LNK1339
+- LNK1340
+- LNK1341
+- LNK1342
+- LNK1343
+- LNK1344
+- LNK1345
+- LNK1346
+- LNK1347
+- LNK1348
+- LNK1349
+- LNK1350
+- LNK1351
+- LNK1353
+- LNK1354
+- LNK1355
+- LNK1356
+- LNK1360
+- LNK1361
+- LNK1362
+- LNK1363
+- LNK1364
+- LNK1365
+- LNK1366
+- LNK1367
+- LNK1368
+- LNK1369
+- LNK1370
+- LNK1371
+- LNK1372
+- LNK1373
+- LNK1375
+- LNK1376
+- LNK1377
+- LNK1378
+- LNK1379
+- LNK1380
+- LNK1381
+- LNK1382
+- LNK1383
+- LNK1384
+- LNK1385
 - LNK2002
 - LNK2003
 - LNK2009
@@ -156,7 +203,13 @@ f1_keywords:
 - LNK2035
 - LNK2036
 - LNK2037
-- LNK2039
+- LNK2038
+- LNK2040
+- LNK2041
+- LNK2042
+- LNK2043
+- LNK2044
+- LNK2045
 - LNK4003
 - LNK4012
 - LNK4013
@@ -234,25 +287,50 @@ f1_keywords:
 - LNK4262
 - LNK4263
 - LNK4264
+- LNK4265
+- LNK4266
+- LNK4267
+- LNK4268
+- LNK4269
+- LNK4270
+- LNK4271
+- LNK4272
+- LNK4273
+- LNK4274
+- LNK4275
+- LNK4276
+- LNK4277
+- LNK4278
+- LNK4279
+- LNK4280
+- LNK4281
+- LNK4282
+- LNK4283
+- LNK4284
+- LNK4285
+- LNK4287
+- LNK4288
+- LNK4289
+- LNK4290
 helpviewer_keywords:
 - errors [C++]
 - linker [C++], errors and warnings
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
-ms.openlocfilehash: 064f469dc7dd133c6f17f38da1bb9c2eb1907918
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 8e611cd20374c912de8d648f51c97177e0d070f1
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857478"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907847"
 ---
 # <a name="linker-tools-errors-and-warnings-lnkxxxx"></a>Erreurs et avertissements des outils Éditeur de liens (LNKxxxx)
 
-Les outils de l’éditeur de liens de liaison, LIB, DUMPBIN et EDITBIN partagent un fichier exécutable commun qui génère ces erreurs et avertissements. Les outils génèrent des avertissements sous la forme LNK*xxxx*, où *xxxx* est un nombre à quatre chiffres.
+Les outils de l’éditeur de liens LINK, LIB, DUMPBIN et EDITBIN partagent un exécutable commun qui génère ces erreurs et avertissements. Les outils génèrent des avertissements au format LNK*xxxx*, où *xxxx* est un nombre à quatre chiffres.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-## <a name="linker-tools-errors"></a>Erreur des outils Éditeur de liens
+## <a name="linker-tools-errors"></a>Erreurs des outils Éditeur de liens
 
 [Erreur des outils Éditeur de liens LNK1000](../../error-messages/tool-errors/linker-tools-error-lnk1000.md) \
 [Erreur des outils Éditeur de liens LNK1103](../../error-messages/tool-errors/linker-tools-error-lnk1103.md) \
@@ -293,7 +371,7 @@ Les outils de l’éditeur de liens de liaison, LIB, DUMPBIN et EDITBIN partagen
 [Erreur des outils Éditeur de liens LNK1245](../../error-messages/tool-errors/linker-tools-error-lnk1245.md) \
 [Erreur des outils Éditeur de liens LNK1248](../../error-messages/tool-errors/linker-tools-error-lnk1248.md) \
 [Erreur des outils Éditeur de liens LNK1256](../../error-messages/tool-errors/linker-tools-error-lnk1256.md) \
-[L’éditeur de liens outils erreur LNK1264](../../error-messages/tool-errors/linker-tools-error-lnk1264.md) \
+[Erreur des outils Éditeur de liens LNK1264](../../error-messages/tool-errors/linker-tools-error-lnk1264.md) \
 [Erreur des outils Éditeur de liens LNK1277](../../error-messages/tool-errors/linker-tools-error-lnk1277.md) \
 [Erreur des outils Éditeur de liens LNK1282](../../error-messages/tool-errors/linker-tools-error-lnk1282.md) \
 [Erreur des outils Éditeur de liens LNK1287](../../error-messages/tool-errors/linker-tools-error-lnk1287.md) \
@@ -305,8 +383,9 @@ Les outils de l’éditeur de liens de liaison, LIB, DUMPBIN et EDITBIN partagen
 [Erreur des outils Éditeur de liens LNK1312](../../error-messages/tool-errors/linker-tools-error-lnk1312.md) \
 [Erreur des outils Éditeur de liens LNK1313](../../error-messages/tool-errors/linker-tools-error-lnk1313.md) \
 [Erreur des outils Éditeur de liens LNK1314](../../error-messages/tool-errors/linker-tools-error-lnk1314.md) \
-[L’éditeur de liens outils erreur LNK1318](../../error-messages/tool-errors/linker-tools-error-lnk1318.md) \
+[Erreur des outils Éditeur de liens LNK1318](../../error-messages/tool-errors/linker-tools-error-lnk1318.md) \
 [Erreur des outils Éditeur de liens LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md) \
+[Erreur des outils Éditeur de liens LNK1352](../../error-messages/tool-errors/linker-tools-error-lnk1352.md) \
 [Erreur des outils Éditeur de liens LNK1561](../../error-messages/tool-errors/linker-tools-error-lnk1561.md) \
 [Erreur des outils Éditeur de liens LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) \
 [Erreur des outils Éditeur de liens LNK2004](../../error-messages/tool-errors/linker-tools-error-lnk2004.md) \
@@ -328,55 +407,55 @@ Les outils de l’éditeur de liens de liaison, LIB, DUMPBIN et EDITBIN partagen
 
 ## <a name="linker-tools-warnings"></a>Avertissements des outils Éditeur de liens
 
-[Outils de l’éditeur de liens LNK4001 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4001.md) \
-[Outils de l’éditeur de liens LNK4002 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) \
-[Outils de l’éditeur de liens LNK4006 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4006.md) \
-[Outils de l’éditeur de liens LNK4010 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4010.md) \
-[Outils de l’éditeur de liens LNK4014 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md) \
-[Avertissement LNK4020 des outils de l’éditeur de liens](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md) \
-[Outils de l’éditeur de liens LNK4022 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) \
-[Outils de l’éditeur de liens LNK4039 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4039.md) \
-[Outils de l’éditeur de liens LNK4044 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md) \
-[Outils de l’éditeur de liens LNK4049 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4049.md) \
-[Outils de l’éditeur de liens LNK4065 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4065.md) \
-[Outils de l’éditeur de liens LNK4070 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4070.md) \
-[Outils de l’éditeur de liens LNK4071 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4071.md) \
-[Outils de l’éditeur de liens LNK4073 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4073.md) \
-[Avertissement LNK4075 des outils de l’éditeur de liens](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) \
-[Outils de l’éditeur de liens LNK4076 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4076.md) \
-[Outils de l’éditeur de liens LNK4078 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4078.md) \
-[Outils de l’éditeur de liens LNK4086 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md) \
-[Outils de l’éditeur de liens LNK4092 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4092.md) \
-[Outils de l’éditeur de liens LNK4096 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4096.md) \
-[Outils de l’éditeur de liens LNK4098 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4098.md) \
-[Outils de l’éditeur de liens LNK4099 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4099.md) \
-[Outils de l’éditeur de liens LNK4102 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4102.md) \
-[Outils de l’éditeur de liens LNK4104 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4104.md) \
-[Outils de l’éditeur de liens LNK4105 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md) \
-[Outils de l’éditeur de liens LNK4194 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4194.md) \
-[Outils de l’éditeur de liens LNK4197 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4197.md) \
-[Outils de l’éditeur de liens LNK4199 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4199.md) \
-[Outils de l’éditeur de liens LNK4200 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4200.md) \
-[Outils de l’éditeur de liens LNK4204 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4204.md) \
-[Outils de l’éditeur de liens LNK4205 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4205.md) \
-[Outils de l’éditeur de liens LNK4206 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) \
-[Outils de l’éditeur de liens LNK4210 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4210.md) \
-[Outils de l’éditeur de liens LNK4216 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4216.md) \
-[Outils de l’éditeur de liens LNK4217 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md) \
-[Outils de l’éditeur de liens LNK4219 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4219.md) \
-[Outils de l’éditeur de liens LNK4220 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4220.md) \
-[Outils de l’éditeur de liens LNK4221 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4221.md) \
-[Outils de l’éditeur de liens LNK4222 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4222.md) \
-[Outils de l’éditeur de liens LNK4224 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4224.md) \
-[Outils de l’éditeur de liens LNK4227 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4227.md) \
-[Outils de l’éditeur de liens LNK4229 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md) \
-[Outils de l’éditeur de liens LNK4237 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4237.md) \
-[Outils de l’éditeur de liens LNK4247 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4247.md) \
-[Outils de l’éditeur de liens LNK4248 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4248.md) \
-[Outils de l’éditeur de liens LNK4253 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4253.md) \
-[Outils de l’éditeur de liens LNK4254 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4254.md) \
+[Avertissement des outils Éditeur de liens LNK4001](../../error-messages/tool-errors/linker-tools-warning-lnk4001.md) \
+[Avertissement des outils Éditeur de liens LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) \
+[Avertissement des outils Éditeur de liens LNK4006](../../error-messages/tool-errors/linker-tools-warning-lnk4006.md) \
+[Avertissement des outils Éditeur de liens LNK4010](../../error-messages/tool-errors/linker-tools-warning-lnk4010.md) \
+[Avertissement des outils Éditeur de liens LNK4014](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md) \
+[Avertissement des outils Éditeur de liens LNK4020](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md) \
+[Avertissement des outils Éditeur de liens LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) \
+[Avertissement des outils Éditeur de liens LNK4039](../../error-messages/tool-errors/linker-tools-warning-lnk4039.md) \
+[Avertissement des outils Éditeur de liens LNK4044](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md) \
+[Avertissement des outils Éditeur de liens LNK4049](../../error-messages/tool-errors/linker-tools-warning-lnk4049.md) \
+[Avertissement des outils Éditeur de liens LNK4065](../../error-messages/tool-errors/linker-tools-warning-lnk4065.md) \
+[Avertissement des outils Éditeur de liens LNK4070](../../error-messages/tool-errors/linker-tools-warning-lnk4070.md) \
+[Avertissement des outils Éditeur de liens LNK4071](../../error-messages/tool-errors/linker-tools-warning-lnk4071.md) \
+[Avertissement des outils Éditeur de liens LNK4073](../../error-messages/tool-errors/linker-tools-warning-lnk4073.md) \
+[Avertissement des outils Éditeur de liens LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) \
+[Avertissement des outils Éditeur de liens LNK4076](../../error-messages/tool-errors/linker-tools-warning-lnk4076.md) \
+[Avertissement des outils Éditeur de liens LNK4078](../../error-messages/tool-errors/linker-tools-warning-lnk4078.md) \
+[Avertissement des outils Éditeur de liens LNK4086](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md) \
+[Avertissement des outils Éditeur de liens LNK4092](../../error-messages/tool-errors/linker-tools-warning-lnk4092.md) \
+[Avertissement des outils Éditeur de liens LNK4096](../../error-messages/tool-errors/linker-tools-warning-lnk4096.md) \
+[Avertissement des outils Éditeur de liens LNK4098](../../error-messages/tool-errors/linker-tools-warning-lnk4098.md) \
+[Avertissement des outils Éditeur de liens LNK4099](../../error-messages/tool-errors/linker-tools-warning-lnk4099.md) \
+[Avertissement des outils Éditeur de liens LNK4102](../../error-messages/tool-errors/linker-tools-warning-lnk4102.md) \
+[Avertissement des outils Éditeur de liens LNK4104](../../error-messages/tool-errors/linker-tools-warning-lnk4104.md) \
+[Avertissement des outils Éditeur de liens LNK4105](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md) \
+[Avertissement des outils Éditeur de liens LNK4194](../../error-messages/tool-errors/linker-tools-warning-lnk4194.md) \
+[Avertissement des outils Éditeur de liens LNK4197](../../error-messages/tool-errors/linker-tools-warning-lnk4197.md) \
+[Avertissement des outils Éditeur de liens LNK4199](../../error-messages/tool-errors/linker-tools-warning-lnk4199.md) \
+[Avertissement des outils Éditeur de liens LNK4200](../../error-messages/tool-errors/linker-tools-warning-lnk4200.md) \
+[Avertissement des outils Éditeur de liens LNK4204](../../error-messages/tool-errors/linker-tools-warning-lnk4204.md) \
+[Avertissement des outils Éditeur de liens LNK4205](../../error-messages/tool-errors/linker-tools-warning-lnk4205.md) \
+[Avertissement des outils Éditeur de liens LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) \
+[Avertissement des outils Éditeur de liens LNK4210](../../error-messages/tool-errors/linker-tools-warning-lnk4210.md) \
+[Avertissement des outils Éditeur de liens LNK4216](../../error-messages/tool-errors/linker-tools-warning-lnk4216.md) \
+[Avertissement des outils Éditeur de liens LNK4217](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md) \
+[Avertissement des outils Éditeur de liens LNK4219](../../error-messages/tool-errors/linker-tools-warning-lnk4219.md) \
+[Avertissement des outils Éditeur de liens LNK4220](../../error-messages/tool-errors/linker-tools-warning-lnk4220.md) \
+[Avertissement des outils Éditeur de liens LNK4221](../../error-messages/tool-errors/linker-tools-warning-lnk4221.md) \
+[Avertissement des outils Éditeur de liens LNK4222](../../error-messages/tool-errors/linker-tools-warning-lnk4222.md) \
+[Avertissement des outils Éditeur de liens LNK4224](../../error-messages/tool-errors/linker-tools-warning-lnk4224.md) \
+[Avertissement des outils Éditeur de liens LNK4227](../../error-messages/tool-errors/linker-tools-warning-lnk4227.md) \
+[Avertissement des outils Éditeur de liens LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md) \
+[Avertissement des outils Éditeur de liens LNK4237](../../error-messages/tool-errors/linker-tools-warning-lnk4237.md) \
+[Avertissement des outils Éditeur de liens LNK4247](../../error-messages/tool-errors/linker-tools-warning-lnk4247.md) \
+[Avertissement des outils Éditeur de liens LNK4248](../../error-messages/tool-errors/linker-tools-warning-lnk4248.md) \
+[Avertissement des outils Éditeur de liens LNK4253](../../error-messages/tool-errors/linker-tools-warning-lnk4253.md) \
+[Avertissement des outils Éditeur de liens LNK4254](../../error-messages/tool-errors/linker-tools-warning-lnk4254.md) \
 [Avertissement des outils Éditeur de liens LNK4286](../../error-messages/tool-errors/linker-tools-warning-lnk4286.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[C /C++ compilateur et build erreurs et avertissements des outils](../compiler-errors-1/c-cpp-build-errors.md)
+[Erreurs etC++ avertissements du compilateur C/du compilateur et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md)

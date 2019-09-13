@@ -1,18 +1,18 @@
 ---
 title: C/C++ propriétés du projet (Visual Studio)
-ms.date: 7/18/2019
+ms.date: 07/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 2f7fe025eb69fc1977713c638eef0742074bd9fb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537561"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927750"
 ---
 # <a name="cc-property-pages"></a>C/C++ pages de propriétés
 
-Les pages de propriétés suivantes se trouvent sous propriétés du **projet** > **Propriétés** > **de configuration** > **C/C++** :
+Les pages de propriétés suivantes se trouvent sous propriétés du **projet** >  > **Propriétés** > de configuration**C/C++** :
 
 ## <a name="cc-general-properties"></a>Propriétés CC++ /General
 
@@ -223,7 +223,7 @@ Spécifiez la bibliothèque Runtime pour la liaison. Définit [/MT,/MTD,/MD,/MDD
 - Multithread **-fait** en sorte que votre application utilise la version statique multithread de la bibliothèque Runtime.
 - **Débogage multithread** -définit _ Debug et _ Mt. Cette option indique également au compilateur d'ajouter le nom de bibliothèque LIBCMTD.lib dans le fichier .obj afin que l'Éditeur de liens utilise LIBCMTD.lib pour résoudre les symboles externes.
 - **Dll** multithread-fait en sorte que votre application utilise la version multithread propre à la dll de la bibliothèque Runtime. Définit _MT et _DLL, puis indique au compilateur de placer le nom de la bibliothèque MSVCRT.lib dans le fichier .obj.
-- **Dll** de débogage multithread-définit _ DEBUG, _ MT et _DLL et fait en sorte que votre application utilise la version de débogage multithread et spécifique à la dll de la bibliothèque Runtime. Le compilateur place également le nom de la bibliothèque MSVCRTD.lib dans le fichier .obj.
+- **Dll de débogage** multithread-définit _ DEBUG, _ MT et _DLL et fait en sorte que votre application utilise la version de débogage multithread et spécifique à la dll de la bibliothèque Runtime. Le compilateur place également le nom de la bibliothèque MSVCRTD.lib dans le fichier .obj.
 
 ### <a name="struct-member-alignment"></a>Alignement des membres de la structure
 
@@ -284,7 +284,7 @@ Définit le modèle de virgule flottante. Définit [/FP: precise,/FP: strict,/FP
 **Choix**
 
 - **Précision** : valeur par défaut. Améliore la cohérence des tests à virgule flottante pour l’égalité et l’inégalité.
-- **Strict** : modèle à virgule flottante le plus strict. /FP: strict fait en sorte que fp_contract soit désactivé et que fenv_access soit activé. /FP: except est implicite et peut être désactivé en spécifiant de manière explicite/FP: except-. En cas d’utilisation avec/FP: Except-,/FP: strict applique une sémantique à virgule flottante stricte, mais sans respect des événements exceptionnels.
+- **Strict** : modèle à virgule flottante le plus strict. /FP : strict fait en sorte que fp_contract soit désactivé et que fenv_access soit activé. /FP: except est implicite et peut être désactivé en spécifiant de manière explicite/FP: except-. En cas d’utilisation avec/FP: Except-,/FP: strict applique une sémantique à virgule flottante stricte, mais sans respect des événements exceptionnels.
 - **Fast** -crée le code le plus rapide dans la majorité des cas.
 
 ### <a name="enable-floating-point-exceptions"></a>Activer les exceptions à virgule flottante
@@ -314,9 +314,9 @@ Supprime ou active les extensions de langage. Définit [/za](za-ze-disable-langu
 
 Active ou supprime le mode de conformité. Définit [/permissive-](permissive-standards-conformance.md).
 
-### <a name="treat-wchart-as-built-in-type"></a>Traitement de WChar_t en tant que type intégré
+### <a name="treat-wchar_t-as-built-in-type"></a>Traitement de WChar_t en tant que type intégré
 
-Lorsqu’il est spécifié, le type wchar_t devient un type natif qui correspond à __wchar_t de la même façon que Short est mappé à __int16. [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) est activé par défaut.
+Lorsqu’il est spécifié, le type wchar_t devient un type natif qui correspond à __wchar_t de la même façon que Short est mappé à __int16. [/Zc : wchar_t](zc-wchar-t-wchar-t-is-native-type.md) est activé par défaut.
 
 ### <a name="force-conformance-in-for-loop-scope"></a>Conformité forcée dans la portée de la boucle for
 
@@ -474,14 +474,14 @@ N’incluez pas les noms de bibliothèque par défaut dans les fichiers. obj. D�
 
 ### <a name="internal-compiler-error-reporting"></a>Rapport d’erreurs du compilateur interne
 
-Spécifie comment les erreurs internes de l’outil doivent être signalées à Microsoft.  La valeur par défaut dans l’IDE est prompt.  La valeur par défaut de la ligne de commande builds est queue. Définit [/errorreport:\[Method]] (errorreport-Report-Internal-Compiler-Errors.MD).
+Spécifie comment les erreurs internes de l’outil doivent être signalées à Microsoft.  La valeur par défaut dans l’IDE est prompt.  La valeur par défaut de la ligne de commande builds est queue. Définit [/errorreport :\[Method]] (errorreport-Report-Internal-Compiler-Errors.MD).
 
 **Choix**
 
 - **Ne pas envoyer** de rapports: les rapports sur les erreurs internes du compilateur ne seront pas collectés ni envoyés à Microsoft.
 - **Invite immédiatement** : vous invite à envoyer un rapport lorsque vous recevez une erreur interne du compilateur.
 - **File d’attente pour la prochaine connexion** : met en file d’attente le rapport d’erreurs. Lorsque vous vous connectez avec des privilèges d’administrateur, une fenêtre contextuelle s’affiche et vous permet de signaler les échecs depuis la dernière connexion (vous n’êtes pas invité à envoyer des rapports pour les défaillances plus d’une fois tous les trois jours). la file d’attente est la valeur par défaut lors de la compilation d’une application sur la ligne de commande.
-- **Envoyer automatiquement** : envoie automatiquement les rapports d’erreurs internes du compilateur à Microsoft. Pour activer cette option, vous devez d’abord accepter la stratégie de collecte de données Microsoft% 27s. La première fois que vous spécifiez/errorReport: send sur un ordinateur, un message du compilateur vous renverra vers un site Web qui contient la stratégie de collecte de données Microsoft% 27s.
+- **Envoyer automatiquement** : envoie automatiquement les rapports d’erreurs internes du compilateur à Microsoft. Pour activer cette option, vous devez d’abord accepter la stratégie de collecte de données Microsoft% 27s. La première fois que vous spécifiez/errorReport : send sur un ordinateur, un message du compilateur vous renverra vers un site Web qui contient la stratégie de collecte de données Microsoft% 27s.
 
 ### <a name="treat-specific-warnings-as-errors"></a>Traiter des avertissements spécifiques comme des erreurs
 

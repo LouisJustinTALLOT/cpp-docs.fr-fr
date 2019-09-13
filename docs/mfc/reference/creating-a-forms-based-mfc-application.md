@@ -1,18 +1,18 @@
 ---
 title: Création d'une application MFC basée sur les formulaires
-ms.date: 08/19/2019
+ms.date: 09/09/2019
 f1_keywords:
 - vc.appwiz.mfcforms.project
 helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-ms.openlocfilehash: 95c7f6061933245b2eb2b796e7a678e1e6b010a6
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 1dbbc5c29f85ced846cb3e07a02a5d6a55c94b20
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108459"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908054"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Création d'une application MFC basée sur les formulaires
 
@@ -30,7 +30,7 @@ Une application basée sur des boîtes de dialogue, par définition, est basée 
 
 La classe de base pour les applications basées sur les formulaires est [CFormView](cformview-class.md). Si votre application prend en charge les bases de données, vous pouvez également sélectionner une classe qui `CFormView`dérive de. Un formulaire est une fenêtre dérivée `CFormView` de ou de n’importe quelle classe qui `CFormView`hérite de.
 
-Même si vous utilisez une classe de base telle que [CView](cview-class.md), vous pouvez ultérieurement rendre vos applications basées sur les formulaires en [ajoutant une classe MFC](adding-an-mfc-class.md) dérivée de `CFormView` et en activant la case à cocher générer des **ressources DocTemplate** dans l' [Assistant classe MFC](document-template-strings-mfc-add-class-wizard.md).
+Même si vous utilisez une classe de base telle que [CView](cview-class.md), vous pouvez ultérieurement rendre vos applications basées sur les formulaires en [ajoutant une classe MFC](adding-an-mfc-class.md) dérivée de `CFormView`.
 
 Une fois que vous avez terminé avec l’Assistant, votre projet s’ouvre et `CFormView` , si vous avez sélectionné (ou une `CFormView`classe qui hérite de) comme classe de base ou si vous avez créé une C++ application basée sur des boîtes de dialogue, le visuel ouvre l’éditeur de boîtes de dialogue. À ce stade, vous êtes prêt à concevoir votre premier formulaire.
 

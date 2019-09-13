@@ -1,6 +1,6 @@
 ---
 title: spectre
-ms.date: 1/23/2018
+ms.date: 01/23/2018
 f1_keywords:
 - spectre_cpp
 - spectre
@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword (C++), spectre
 - spectre __declspec keyword
-ms.openlocfilehash: 2377a3c23be1e27bfe4f2df23eb00823635fa05d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40eee25dec867ae3fce7a6b2d4715f0be81bfe76
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267256"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926368"
 ---
 # <a name="spectre"></a>spectre
 
 **Section spécifique à Microsoft**
 
-Indique au compilateur de ne pas insérer des instructions de cloisonnement Spectre variante 1 exécution spéculative pour une fonction.
+Indique au compilateur de ne pas insérer d’instructions de barrière d’exécution spéculative spectre variant 1 pour une fonction.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,12 +27,12 @@ Indique au compilateur de ne pas insérer des instructions de cloisonnement Spec
 
 ## <a name="remarks"></a>Notes
 
-Le [/qspectre](../build/reference/qspectre.md) option du compilateur, le compilateur insérer des instructions de cloisonnement de l’exécution spéculative où analyse indique un problème de sécurité Spectre variante 1. Les instructions spécifiques émises varient selon le processeur. Bien que ces instructions doivent avoir un impact minime sur la taille du code ou des performances, il peut arriver dans lequel votre code n’est pas affectée par la vulnérabilité et nécessite des performances maximales.
+Avec l’option [/Qspectre](../build/reference/qspectre.md) du compilateur, le compilateur insère des instructions de barrière d’exécution spéculative. Ils sont insérés là où l’analyse indique qu’une faille de sécurité de la variante spectre 1 existe. Les instructions spécifiques émises dépendent du processeur. Bien que ces instructions aient un impact minimal sur la taille du code ou les performances, il peut arriver que votre code ne soit pas affecté par la vulnérabilité et nécessite des performances maximales.
 
-Analyses d’experts peuvent déterminer qu’une fonction est protégée à partir d’un défaut de contournement de vérification de Spectre variante 1 limites. Dans ce cas, vous pouvez supprimer la génération de code d’atténuation dans une fonction en appliquant `__declspec(spectre(nomitigation))` à la déclaration de fonction.
+L’analyse d’experts peut déterminer qu’une fonction est sécurisée à partir d’une erreur de contournement de validation de la variante spectre 1. Dans ce cas, vous pouvez supprimer la génération du code d’atténuation dans une fonction en appliquant `__declspec(spectre(nomitigation))` à la déclaration de fonction.
 
 > [!CAUTION]
-> Le **/qspectre** obtenir des instructions de l’exécution spéculative barrière assure la protection de sécurité importants et ont un impact négligeable sur les performances. Par conséquent, nous vous recommandons de ne pas les supprimer, sauf dans la rare éventualité où les performances d'une fonction est un problème critique et où la fonction est réputée pour être sécurisée.
+> Les instructions de barrière d’exécution spéculative **/Qspectre** fournissent une protection de sécurité importante et ont une incidence négligeable sur les performances. Par conséquent, nous vous recommandons de ne pas les supprimer, sauf dans la rare éventualité où les performances d'une fonction est un problème critique et où la fonction est réputée pour être sécurisée.
 
 ## <a name="example"></a>Exemple
 

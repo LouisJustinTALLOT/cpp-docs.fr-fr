@@ -1,28 +1,28 @@
 ---
 title: Avertissement du compilateur (niveau 1) C4305
-ms.date: 1/17/2018
+ms.date: 01/17/2018
 f1_keywords:
 - C4305
 helpviewer_keywords:
 - C4305
-ms.openlocfilehash: 3f9116b0e7bdd9ee13c42b48f44da4b090f41ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc718e5f7ebe9478ed1bf2a7323db940935cb1d6
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327468"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926116"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>Avertissement du compilateur (niveau 1) C4305
 
-> '*context*' : truncation from '*type1*' to '*type2*'
+> '*Context*' : troncation de'*type1*'en'*type2*'
 
 ## <a name="remarks"></a>Notes
 
-Cet avertissement est émis lorsqu’une valeur est convertie en un type plus petit dans une initialisation ou comme un argument de constructeur, ce qui entraîne une perte d’informations.
+Cet avertissement est émis lorsqu’une valeur est convertie en un type plus petit dans une initialisation ou en tant qu’argument de constructeur, ce qui entraîne une perte d’informations.
 
 ## <a name="example"></a>Exemple
 
-Cet exemple montre deux façons cet avertissement peut s’afficher :
+Cet exemple montre deux façons d’afficher cet avertissement :
 
 ```cpp
 // C4305.cpp
@@ -41,4 +41,4 @@ int main()
 }
 ```
 
-Pour résoudre ce problème, initialiser à l’aide d’une valeur du type correct, ou utilisez un cast explicite en type correct. Par exemple, utiliser un **float** littéral comme 2.71828f au lieu d’un **double** (le type par défaut pour les littéraux à virgule flottante) pour initialiser un **float** variable, ou à passer à un constructeur qui accepte un **float** argument.
+Pour résoudre ce problème, initialisez à l’aide d’une valeur du type correct ou utilisez un cast explicite vers le type approprié. Par exemple, utilisez un littéral à **virgule flottante** tel que 2,71828, f au lieu d’un **double** (type par défaut pour les littéraux à virgule flottante) pour initialiser une variable **float** , ou pour passer à un constructeur qui accepte un argument **float** .

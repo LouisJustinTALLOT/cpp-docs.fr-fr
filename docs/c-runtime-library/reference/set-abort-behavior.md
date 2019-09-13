@@ -1,6 +1,6 @@
 ---
 title: _set_abort_behavior
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - _set_abort_behavior
 apilocation:
@@ -23,19 +23,19 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: 8b36a771a3694c6d01573d619990743c7ddc0f3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b72a485287684fc85f1e232e89774e07a5e3f42b
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356684"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927492"
 ---
-# <a name="setabortbehavior"></a>_set_abort_behavior
+# <a name="_set_abort_behavior"></a>_set_abort_behavior
 
 Spécifie l’action à entreprendre quand un programme s’arrête anormalement.
 
 > [!NOTE]
-> N’utilisez pas le [abandonner](abort.md) (fonction) pour arrêter une application Microsoft Store, à l’exception de test ou de scénarios de débogage. Méthodes de programmation ou l’interface utilisateur pour fermer une application de Store ne sont pas autorisées en fonction de la [les stratégies de Microsoft Store](/legal/windows/agreements/store-policies). Pour plus d’informations, consultez [cycle de vie des applications UWP](/windows/uwp/launch-resume/app-lifecycle).
+> N’utilisez pas la fonction [Abort](abort.md) pour arrêter une application Microsoft Store, sauf dans les scénarios de test ou de débogage. Les méthodes de programmation ou d’interface utilisateur pour fermer une application du Windows Store ne sont pas autorisées selon les [stratégies de Microsoft Store](/legal/windows/agreements/store-policies). Pour plus d’informations, consultez la page relative au [cycle de vie des applications UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,10 +49,10 @@ unsigned int _set_abort_behavior(
 ### <a name="parameters"></a>Paramètres
 
 *flags*<br/>
-Nouvelle valeur de la [abandonner](abort.md) indicateurs.
+Nouvelle valeur des indicateurs d' [abandon](abort.md) .
 
 *mask*<br/>
-Masque pour le [abandonner](abort.md) indicateurs de bits à définir.
+Masque pour les bits d’indicateurs d' [abandon](abort.md) à définir.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -60,7 +60,7 @@ Ancienne valeur des indicateurs.
 
 ## <a name="remarks"></a>Notes
 
-Il existe deux [abandonner](abort.md) indicateurs : **_WRITE_ABORT_MSG** et **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** détermine si un message texte utile est imprimé quand un programme s’arrête anormalement. Le message indique que l’application a appelé la [abandonner](abort.md) (fonction). Le comportement par défaut consiste à imprimer le message. **_CALL_REPORTFAULT**, si définie, spécifie qu’un vidage sur incident de Watson est généré et signalé quand [abandonner](abort.md) est appelée. Par défaut, le signalement de vidage sur incident est activé dans les builds non DEBUG.
+Il existe deux indicateurs d' [abandon](abort.md) : **_WRITE_ABORT_MSG** et **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** détermine si un message texte utile est imprimé lorsqu’un programme se termine anormalement. Le message indique que l’application a appelé la fonction d' [abandon](abort.md) . Le comportement par défaut consiste à imprimer le message. **_CALL_REPORTFAULT**, s’il est défini, spécifie qu’un vidage sur incident Watson est généré et signalé lorsque [Abort](abort.md) est appelé. Par défaut, le signalement de vidage sur incident est activé dans les builds non DEBUG.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -70,7 +70,7 @@ Il existe deux [abandonner](abort.md) indicateurs : **_WRITE_ABORT_MSG** et **_
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_set_abort_behavior.c

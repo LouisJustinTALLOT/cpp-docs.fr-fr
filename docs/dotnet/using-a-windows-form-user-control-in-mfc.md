@@ -1,6 +1,6 @@
 ---
 title: Utilisation d'un contrôle utilisateur Windows Form dans MFC
-ms.date: 1/08/2018
+ms.date: 01/08/2018
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - interoperability [C++], Windows Forms in MFC
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efabbf84778d925ec1de03f5f4ea0ca09185bd81
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384489"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926057"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Utilisation d'un contrôle utilisateur Windows Form dans MFC
 
-En utilisant les classes de prise en charge de MFC Windows Forms, vous pouvez héberger des contrôles Windows Forms dans vos applications MFC comme un contrôle ActiveX dans des vues ou des boîtes de dialogue MFC. En outre, les formulaires Windows Forms peuvent être hébergés en tant que boîtes de dialogue MFC.
+À l’aide des classes de prise en charge MFC Windows Forms, vous pouvez héberger des contrôles Windows Forms dans vos applications MFC en tant que contrôle ActiveX dans des boîtes de dialogue ou des vues MFC. En outre, les formulaires Windows Forms peuvent être hébergés en tant que boîtes de dialogue MFC.
 
 Les sections suivantes décrivent comment :
 
-- Héberger un contrôle Windows Forms dans une boîte de dialogue MFC.
+- Héberger un contrôle de Windows Forms dans une boîte de dialogue MFC.
 
-- Héberger un contrôle utilisateur Windows Forms en tant que vue MFC.
+- Hébergez un contrôle utilisateur Windows Forms en tant que vue MFC.
 
-- Héberger un formulaire Windows Forms en tant que boîte de dialogue MFC.
-
-> [!NOTE]
-> Intégration de MFC Windows Forms fonctionne uniquement dans les projets qui se lient dynamiquement avec MFC (projets dans lesquels `_AFXDLL` est défini).
+- Hébergez un formulaire de Windows Forms en tant que boîte de dialogue MFC.
 
 > [!NOTE]
-> Lorsque vous générez votre application à l’aide d’une copie privée (modifiée) des interfaces MFC Windows Forms DLL (mfcmifc80.dll), il échouera à installer dans le GAC, sauf si vous remplacez la clé Microsoft par votre propre clé de fournisseur. Pour plus d’informations sur la signature d’assembly, consultez [programmation avec des assemblys](/dotnet/framework/app-domains/programming-with-assemblies) et [les assemblys de nom fort (signature d’Assembly) (C++ / c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+> L’intégration des Windows Forms MFC fonctionne uniquement dans les projets qui sont liés de manière dynamique aux `_AFXDLL` MFC (projets dans lesquels est défini).
 
-Si votre application MFC utilise Windows Forms, vous devez redistribuer mfcmifc80.dll avec votre application. Pour plus d’informations, consultez [redistribution de la bibliothèque MFC](../windows/redistributing-the-mfc-library.md).
+> [!NOTE]
+> Quand vous générez votre application à l’aide d’une copie privée (modifiée) de la DLL des interfaces MFC Windows Forms (mfcmifc80. dll), l’installation échoue dans le GAC, sauf si vous remplacez la clé Microsoft par votre propre clé de fournisseur. Pour plus d’informations sur la signature d’assembly, consultez [programmation à l’aide d’assemblys](/dotnet/framework/app-domains/programming-with-assemblies) et d' [assemblys de nom fort (signature d’assembly) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+
+Si votre application MFC utilise Windows Forms, vous devez redistribuer mfcmifc80. dll avec votre application. Pour plus d’informations, consultez [redistribution de la bibliothèque MFC](../windows/redistributing-the-mfc-library.md).
 
 ## <a name="in-this-section"></a>Dans cette section
 
@@ -74,5 +74,5 @@ Si votre application MFC utilise Windows Forms, vous devez redistribuer mfcmifc8
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)<br/>
-[Mode formulaire](../mfc/form-views-mfc.md)
+[Éléments de l’interface utilisateur](../mfc/user-interface-elements-mfc.md)<br/>
+[Modes formulaire](../mfc/form-views-mfc.md)

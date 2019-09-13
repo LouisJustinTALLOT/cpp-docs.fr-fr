@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 2d00a7216778f4a9a40b9d503bce7d26982669e0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9643379136398de7ce4d98aaa9ab5f22fa488c0e
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506062"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927934"
 ---
 # <a name="chtmlview-class"></a>CHtmlView, classe
 
@@ -237,22 +237,22 @@ class CHtmlView : public CFormView
 |[CHtmlView::GetParentBrowser](#getparentbrowser)|Récupère un pointeur vers l’interface `IDispatch` . Pour plus d'informations, consultez [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).|
 |[CHtmlView::GetProperty](#getproperty)|Récupère la valeur actuelle d’une propriété associée à l’objet donné.|
 |[CHtmlView::GetReadyState](#getreadystate)|Récupère l’état Prêt de l’objet WebBrowser.|
-|[CHtmlView:: GetRegisterAsBrowser](#getregisterasbrowser)|Indique si le contrôle WebBrowser est inscrit en tant que navigateur de niveau supérieur pour la résolution de nom cible.|
+|[CHtmlView :: GetRegisterAsBrowser](#getregisterasbrowser)|Indique si le contrôle WebBrowser est inscrit en tant que navigateur de niveau supérieur pour la résolution de nom cible.|
 |[CHtmlView::GetRegisterAsDropTarget](#getregisterasdroptarget)|Indique si le contrôle WebBrowser est inscrit en tant que cible de déplacement pour la navigation.|
-|[CHtmlView:: GetSilent](#getsilent)|Indique si les boîtes de dialogue peuvent être affichées.|
+|[CHtmlView :: GetSilent](#getsilent)|Indique si les boîtes de dialogue peuvent être affichées.|
 |[CHtmlView::GetSource](#getsource)|Code source HTML de la page web.|
 |[CHtmlView::GetStatusBar](#getstatusbar)|Indique si la barre d’état d’Internet Explorer est visible. (Contrôle WebBrowser ignoré ; Internet Explorer uniquement.)|
 |[CHtmlView::GetTheaterMode](#gettheatermode)|Indique si le contrôle WebBrowser est en mode Cinéma.|
 |[CHtmlView::GetToolBar](#gettoolbar)|Récupère une valeur qui détermine si la barre d’outils est visible.|
-|[CHtmlView:: GetTop](#gettop)|Récupère les coordonnées d’écran du bord supérieur de la fenêtre principale d’Internet Explorer.|
-|[CHtmlView:: GetTopLevelContainer](#gettoplevelcontainer)|Récupère une valeur indiquant si l’objet actuel est le conteneur de niveau supérieur du contrôle WebBrowser.|
+|[CHtmlView :: GetTop](#gettop)|Récupère les coordonnées d’écran du bord supérieur de la fenêtre principale d’Internet Explorer.|
+|[CHtmlView :: GetTopLevelContainer](#gettoplevelcontainer)|Récupère une valeur indiquant si l’objet actuel est le conteneur de niveau supérieur du contrôle WebBrowser.|
 |[CHtmlView::GetType](#gettype)|Récupère le nom de type de l’objet document.|
 |[CHtmlView::GetVisible](#getvisible)|Récupère une valeur indiquant si l’objet est visible ou masqué.|
 |[CHtmlView::GetWidth](#getwidth)|Récupère la largeur de la fenêtre principale d’Internet Explorer.|
-|[CHtmlView:: GoBack](#goback)|Accède à l’élément précédent de l’historique.|
-|[CHtmlView:: GoForward](#goforward)|Accède à l’élément suivant de l’historique.|
-|[CHtmlView:: GoHome](#gohome)|Accède à la page d’accueil ou de démarrage actuelle.|
-|[CHtmlView:: GoSearch](#gosearch)|Accède à la page de recherche actuelle.|
+|[CHtmlView :: GoBack](#goback)|Accède à l’élément précédent de l’historique.|
+|[CHtmlView :: GoForward](#goforward)|Accède à l’élément suivant de l’historique.|
+|[CHtmlView :: GoHome](#gohome)|Accède à la page d’accueil ou de démarrage actuelle.|
+|[CHtmlView :: GoSearch](#gosearch)|Accède à la page de recherche actuelle.|
 |[CHtmlView::LoadFromResource](#loadfromresource)|Charge une ressource dans le contrôle WebBrowser.|
 |[CHtmlView::Navigate](#navigate)|Accède à la ressource identifiée par une URL.|
 |[CHtmlView::Navigate2](#navigate2)|Accède à la ressource identifiée par une URL ou au fichier identifié par un chemin complet.|
@@ -286,14 +286,14 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnTheaterMode](#ontheatermode)|Appelé quand la propriété TheaterMode est modifiée.|
 |[CHtmlView::OnTitleChange](#ontitlechange)|Appelé pour avertir une application que le titre d’un document contenu dans le contrôle WebBrowser est disponible ou a été modifié.|
 |[CHtmlView::OnToolBar](#ontoolbar)|Appelé quand la propriété ToolBar est modifiée.|
-|[CHtmlView:: OnTranslateAccelerator](#ontranslateaccelerator)|Appelé par Internet Explorer ou MSHTML quand [IOleInPlaceActiveObject::TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) ou [IOleControlSite::TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) est appelé pour traiter les messages de touche d’accès rapide de menu à partir de la file d’attente de messages du conteneur.|
+|[CHtmlView :: OnTranslateAccelerator](#ontranslateaccelerator)|Appelé par Internet Explorer ou MSHTML quand [IOleInPlaceActiveObject::TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) ou [IOleControlSite::TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) est appelé pour traiter les messages de touche d’accès rapide de menu à partir de la file d’attente de messages du conteneur.|
 |[CHtmlView::OnTranslateUrl](#ontranslateurl)|Appelé par Internet Explorer ou MSHTML pour permettre à l’hôte de modifier l’URL à charger.|
 |[CHtmlView::OnUpdateUI](#onupdateui)|Avertit l’hôte que l’état de la commande a changé.|
 |[CHtmlView::OnVisible](#onvisible)|Appelé quand la fenêtre du contrôle WebBrowser doit être affichée/masquée.|
 |[CHtmlView::PutProperty](#putproperty)|Définit la valeur d’une propriété associée à l’objet donné.|
 |[CHtmlView::QueryFormsCommand](#queryformscommand)|Demande l’état d’une ou plusieurs commandes générées par des événements d’interface utilisateur.|
 |[CHtmlView::QueryStatusWB](#querystatuswb)|Demande l’état d’une commande actuellement traitée par le contrôle WebBrowser.|
-|[CHtmlView:: Refresh](#refresh)|Recharge le fichier actif.|
+|[CHtmlView :: Refresh](#refresh)|Recharge le fichier actif.|
 |[CHtmlView::Refresh2](#refresh2)|Recharge le fichier actif et empêche éventuellement l’envoi de l’en-tête `pragma:nocache` .|
 |[CHtmlView::SetAddressBar](#setaddressbar)|Affiche ou masque la barre d’adresse de l’objet Internet Explorer. (Contrôle WebBrowser ignoré ; Internet Explorer uniquement.)|
 |[CHtmlView::SetFullScreen](#setfullscreen)|Définit une valeur pour déterminer si le contrôle fonctionne en mode Plein écran ou en mode Fenêtre normal. (Contrôle WebBrowser ignoré ; Internet Explorer uniquement.)|
@@ -301,9 +301,9 @@ class CHtmlView : public CFormView
 |[CHtmlView::SetLeft](#setleft)|Définit la position horizontale de la fenêtre principale d’Internet Explorer.|
 |[CHtmlView::SetMenuBar](#setmenubar)|Définit une valeur pour déterminer si la barre de menus du contrôle est visible. (Contrôle WebBrowser ignoré ; Internet Explorer uniquement.)|
 |[CHtmlView::SetOffline](#setoffline)|Définit une valeur pour déterminer si le contrôle est hors connexion.|
-|[CHtmlView:: SetRegisterAsBrowser](#setregisterasbrowser)|Définit une valeur indiquant si le contrôle WebBrowser est inscrit en tant que navigateur de niveau supérieur pour la résolution de nom cible.|
+|[CHtmlView :: SetRegisterAsBrowser](#setregisterasbrowser)|Définit une valeur indiquant si le contrôle WebBrowser est inscrit en tant que navigateur de niveau supérieur pour la résolution de nom cible.|
 |[CHtmlView::SetRegisterAsDropTarget](#setregisterasdroptarget)|Définit une valeur indiquant si le contrôle WebBrowser est inscrit en tant que cible de déplacement pour la navigation.|
-|[CHtmlView:: SetSilent](#setsilent)|Définit une valeur pour déterminer si le contrôle affiche les boîtes de dialogue.|
+|[CHtmlView :: SetSilent](#setsilent)|Définit une valeur pour déterminer si le contrôle affiche les boîtes de dialogue.|
 |[CHtmlView::SetStatusBar](#setstatusbar)|Définit une valeur pour déterminer si la barre d’état d’Internet Explorer est visible. (Contrôle WebBrowser ignoré ; Internet Explorer uniquement.)|
 |[CHtmlView::SetTheaterMode](#settheatermode)|Définit une valeur indiquant si le contrôle WebBrowser est en mode Cinéma.|
 |[CHtmlView::SetToolBar](#settoolbar)|Définit une valeur pour déterminer si la barre d’outils du contrôle est visible. (Contrôle WebBrowser ignoré ; Internet Explorer uniquement.)|
@@ -459,11 +459,11 @@ Pointeur vers une `VARIANT` structure pour recevoir la sortie de commande. Peut 
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard. Pour obtenir la liste complète des valeurs possibles, consultez [IOleCommandTarget:: exec](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec) dans le SDK Windows.
+Valeur HRESULT standard. Pour obtenir la liste complète des valeurs possibles, consultez [IOleCommandTarget :: exec](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec) dans le SDK Windows.
 
 ### <a name="remarks"></a>Notes
 
-`ExecFormsCommand`implémente le comportement de la méthode [IOleCommandTarget:: exec](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec) .
+`ExecFormsCommand`implémente le comportement de la méthode [IOleCommandTarget :: exec](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec) .
 
 ##  <a name="execwb"></a>  CHtmlView::ExecWB
 
@@ -493,7 +493,7 @@ Variant utilisé pour spécifier les arguments de sortie de la commande.
 
 ### <a name="remarks"></a>Notes
 
-Consultez [IWebBrowser2:: ExecWB](/previous-versions//aa752117\(v=vs.85\)) dans la SDK Windows.
+Consultez [IWebBrowser2 :: ExecWB](/previous-versions//aa752117\(v=vs.85\)) dans la SDK Windows.
 
 ##  <a name="getaddressbar"></a>  CHtmlView::GetAddressBar
 
@@ -505,7 +505,7 @@ BOOL GetAddressBar() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la barre d’adresses est visible; Sinon, zéro.
+Différent de zéro si la barre d’adresses est visible ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -537,7 +537,7 @@ BOOL GetBusy() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le navigateur Web est occupé; Sinon, zéro.
+Différent de zéro si le navigateur Web est occupé ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -585,7 +585,7 @@ BOOL GetFullScreen() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le WebBrowser fonctionne en mode plein écran; Sinon, zéro.
+Différent de zéro si le WebBrowser fonctionne en mode plein écran ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -683,7 +683,7 @@ BOOL GetMenuBar() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la barre de menus est visible; Sinon, zéro.
+Différent de zéro si la barre de menus est visible ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -699,7 +699,7 @@ BOOL GetOffline() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le navigateur Web est actuellement hors connexion; Sinon, zéro.
+Différent de zéro si le navigateur Web est actuellement hors connexion ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -743,7 +743,7 @@ Référence à un objet [CString](../../atl-mfc-shared/reference/cstringt-class.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Dans la première version, valeur différente de zéro si l’opération a réussi; Sinon, zéro. Dans la deuxième version, un objet [COleVariant](../../mfc/reference/colevariant-class.md) .
+Dans la première version, valeur différente de zéro si l’opération a réussi ; Sinon, zéro. Dans la deuxième version, un objet [COleVariant](../../mfc/reference/colevariant-class.md) .
 
 ### <a name="remarks"></a>Notes
 
@@ -765,7 +765,7 @@ Valeur [ReadyState](/previous-versions//aa768362\(v=vs.85\)) , comme décrit dan
 
 S’applique à Internet Explorer et à WebBrowser.
 
-##  <a name="getregisterasbrowser"></a>CHtmlView:: GetRegisterAsBrowser
+##  <a name="getregisterasbrowser"></a>CHtmlView :: GetRegisterAsBrowser
 
 Appelez cette fonction membre pour déterminer si l’objet WebBrowser est inscrit en tant que navigateur de niveau supérieur pour la résolution de nom cible.
 
@@ -775,7 +775,7 @@ BOOL GetRegisterAsBrowser() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le navigateur est inscrit en tant que navigateur de niveau supérieur; Sinon, zéro.
+Différent de zéro si le navigateur est inscrit en tant que navigateur de niveau supérieur ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -791,7 +791,7 @@ BOOL GetRegisterAsDropTarget() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le navigateur est inscrit en tant que cible de déplacement; Sinon, zéro.
+Différent de zéro si le navigateur est inscrit en tant que cible de déplacement ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -807,7 +807,7 @@ BOOL GetSilent() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si les boîtes de dialogue ne peuvent pas être affichées à partir du contrôle WebBrowser; Sinon, zéro.
+Différent de zéro si les boîtes de dialogue ne peuvent pas être affichées à partir du contrôle WebBrowser ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -832,7 +832,7 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction est équivalente à la commande «Afficher la source» dans Internet Explorer, sauf que le code source est retourné `CString`dans un.
+Cette fonction est équivalente à la commande « Afficher la source » dans Internet Explorer, sauf que le code source est retourné `CString`dans un.
 
 ##  <a name="getstatusbar"></a>  CHtmlView::GetStatusBar
 
@@ -844,7 +844,7 @@ BOOL GetStatusBar() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la barre d’État peut être affichée; Sinon, zéro.
+Différent de zéro si la barre d’État peut être affichée ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -860,7 +860,7 @@ BOOL GetTheaterMode() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le navigateur Web est en mode théâtre; Sinon, zéro.
+Différent de zéro si le navigateur Web est en mode théâtre ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -878,7 +878,7 @@ int GetToolBar() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur indiquant si la barre d’outils est visible. Différent de zéro si la barre d’outils est visible; Sinon, zéro.
+Valeur indiquant si la barre d’outils est visible. Différent de zéro si la barre d’outils est visible ; Sinon, zéro.
 
 ##  <a name="gettop"></a>  CHtmlView::GetTop
 
@@ -906,7 +906,7 @@ BOOL GetTopLevelContainer() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro, le conteneur est le conteneur de niveau supérieur; Sinon, zéro.
+Différent de zéro, le conteneur est le conteneur de niveau supérieur ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -938,7 +938,7 @@ BOOL GetVisible() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’objet est visible; Sinon, zéro.
+Différent de zéro si l’objet est visible ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -1194,7 +1194,7 @@ Pointeur vers une chaîne qui prend la valeur de l’URL, du nom de fichier UNC 
 
 Tous les frames déclenchent cet événement, mais chaque frame qui active un événement [OnDownloadBegin](#ondownloadbegin) déclenchera un `OnDocumentComplete` événement correspondant.
 
-L’URL indiquée par *lpszURL* peut être différente de l’URL à laquelle le navigateur a été invité à accéder, car cette URL est l’URL canonique et qualifiée. Par exemple, si une application spécifie une URL de «www.Microsoft.com» dans un appel à [Navigate](#navigate) ou [Navigate2](#navigate2), l’URL passée par `OnNavigateComplete2` sera « <http://www.microsoft.com/> ». En outre, si le serveur a redirigé le navigateur vers une autre URL, l’URL redirigée sera reflétée ici.
+L’URL indiquée par *lpszURL* peut être différente de l’URL à laquelle le navigateur a été invité à accéder, car cette URL est l’URL canonique et qualifiée. Par exemple, si une application spécifie une URL `"www.microsoft.com"` de dans un appel à [Navigate](#navigate) ou [Navigate2](#navigate2), `"<https://www.microsoft.com/>"`l’URL `OnNavigateComplete2` passée par sera. En outre, si le serveur a redirigé le navigateur vers une autre URL, l’URL redirigée sera reflétée ici.
 
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate
 
@@ -1215,7 +1215,7 @@ S_OK en cas de réussite, ou un code d’erreur défini par OLE dans le cas cont
 
 ### <a name="remarks"></a>Notes
 
-Remplacement `OnDocWindowActivate` pour réagir à la `OnDocWindowActivate` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler:: OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) dans le SDK Windows.
+Remplacement `OnDocWindowActivate` pour réagir à la `OnDocWindowActivate` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler :: OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="ondownloadbegin"></a>  CHtmlView::OnDownloadBegin
 
@@ -1227,7 +1227,7 @@ virtual void OnDownloadBegin();
 
 ### <a name="remarks"></a>Notes
 
-Cet événement est déclenché peu après l’événement [OnBeforeNavigate2](#onbeforenavigate2) , sauf si la navigation est annulée. Toute animation ou indication «occupée» que le conteneur doit afficher doit être connectée à cet événement.
+Cet événement est déclenché peu après l’événement [OnBeforeNavigate2](#onbeforenavigate2) , sauf si la navigation est annulée. Toute animation ou indication « occupée » que le conteneur doit afficher doit être connectée à cet événement.
 
 ##  <a name="ondownloadcomplete"></a>  CHtmlView::OnDownloadComplete
 
@@ -1256,7 +1256,7 @@ S_OK en cas de réussite, ou un code d’erreur défini par OLE dans le cas cont
 
 ### <a name="remarks"></a>Notes
 
-Active ou désactive les boîtes de dialogue non modales quand le conteneur crée ou détruit une boîte de dialogue modale. Remplacement `OnEnableModeless` pour réagir à la `EnableModeless` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler:: EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) dans le SDK Windows.
+Active ou désactive les boîtes de dialogue non modales quand le conteneur crée ou détruit une boîte de dialogue modale. Remplacement `OnEnableModeless` pour réagir à la `EnableModeless` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler :: EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="onfilterdataobject"></a>  CHtmlView::OnFilterDataObject
 
@@ -1282,7 +1282,7 @@ S_OK si l’objet de données est remplacé, S_FALSE si l’objet de données n�
 
 ### <a name="remarks"></a>Notes
 
-Remplacement `OnFilterDataObject` pour réagir à la `FilterDataObject` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler:: FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) dans le SDK Windows.
+Remplacement `OnFilterDataObject` pour réagir à la `FilterDataObject` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler :: FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate
 
@@ -1303,7 +1303,7 @@ S_OK en cas de réussite, ou un code d’erreur défini par OLE dans le cas cont
 
 ### <a name="remarks"></a>Notes
 
-Remplacement `OnFrameWindowActivate` pour réagir à la `OnFrameWindowActivate` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler:: OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) dans le SDK Windows.
+Remplacement `OnFrameWindowActivate` pour réagir à la `OnFrameWindowActivate` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler :: OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
 
@@ -1316,7 +1316,7 @@ virtual void OnFullScreen(BOOL bFullScreen);
 ### <a name="parameters"></a>Paramètres
 
 *bFullScreen*<br/>
-Différent de zéro si Internet Explorer est en mode plein écran; Sinon, zéro.
+Différent de zéro si Internet Explorer est en mode plein écran ; Sinon, zéro.
 
 ##  <a name="ongetdroptarget"></a>  CHtmlView::OnGetDropTarget
 
@@ -1338,11 +1338,11 @@ Adresse du `IDropTarget` qui reçoit le `IDropTarget` pointeur d’interface que
 
 ### <a name="return-value"></a>Valeur de retour
 
-Consultez [IDocHostUIHandler:: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) dans la SDK Windows pour obtenir la liste des codes de retour.
+Consultez [IDocHostUIHandler :: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) dans la SDK Windows pour obtenir la liste des codes de retour.
 
 ### <a name="remarks"></a>Notes
 
-Remplacement `OnGetDropTarget` pour réagir à la `GetDropTarget` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler:: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) dans le SDK Windows.
+Remplacement `OnGetDropTarget` pour réagir à la `GetDropTarget` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler :: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="ongetexternal"></a>  CHtmlView::OnGetExternal
 
@@ -1363,7 +1363,7 @@ S_OK en cas de réussite, ou un code d’erreur défini par OLE dans le cas cont
 
 ### <a name="remarks"></a>Notes
 
-Remplacement `OnGetExternal` pour réagir à la `GetExternal` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler:: GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) dans le SDK Windows.
+Remplacement `OnGetExternal` pour réagir à la `GetExternal` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler :: GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="ongethostinfo"></a>  CHtmlView::OnGetHostInfo
 
@@ -1384,7 +1384,7 @@ S_OK en cas de réussite, ou un code d’erreur défini par OLE dans le cas cont
 
 ### <a name="remarks"></a>Notes
 
-Remplacement `OnGetHostInfo` pour réagir à la `GetHostInfo` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler:: GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) dans le SDK Windows.
+Remplacement `OnGetHostInfo` pour réagir à la `GetHostInfo` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler :: GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="ongetoptionkeypath"></a>  CHtmlView::OnGetOptionKeyPath
 
@@ -1410,7 +1410,7 @@ S_OK en cas de réussite, ou S_FALSE dans le cas contraire. Si S_FALSE, Internet
 
 ### <a name="remarks"></a>Notes
 
-Remplacement `OnGetOptionKeyPath` pour réagir à la `GetOptionKeyPath` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler:: GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) dans le SDK Windows.
+Remplacement `OnGetOptionKeyPath` pour réagir à la `GetOptionKeyPath` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler :: GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="onhideui"></a>  CHtmlView::OnHideUI
 
@@ -1426,7 +1426,7 @@ S_OK en cas de réussite, ou un code d’erreur défini par OLE dans le cas cont
 
 ### <a name="remarks"></a>Notes
 
-Remplacement `OnHideUI` pour réagir à la `HideUI` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler:: HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)) dans le SDK Windows.
+Remplacement `OnHideUI` pour réagir à la `HideUI` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler :: HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
 
@@ -1439,7 +1439,7 @@ virtual void OnMenuBar(BOOL bMenuBar);
 ### <a name="parameters"></a>Paramètres
 
 *bMenuBar*<br/>
-Différent de zéro si la barre de menus d’Internet Explorer est visible; Sinon, zéro.
+Différent de zéro si la barre de menus d’Internet Explorer est visible ; Sinon, zéro.
 
 ##  <a name="onnavigatecomplete2"></a>  CHtmlView::OnNavigateComplete2
 
@@ -1458,7 +1458,7 @@ Expression de chaîne qui prend la valeur de l’URL, du nom de fichier UNC ou d
 
 Le paramètre URL peut être un PIDL dans le cas d’une entité espace de noms de l’interpréteur de commandes pour laquelle il n’existe aucune représentation d’URL.
 
-Notez que l’URL contenue dans *strURL* peut être différente de l’URL à laquelle le navigateur a été invité à accéder, car cette URL est l’URL canonique et qualifiée. Par exemple, si une application spécifie une URL de «www.Microsoft.com» dans un appel à [Navigate](#navigate) ou [Navigate2](#navigate2), l’URL passée par `OnNavigateComplete2` sera « <http://www.microsoft.com/> ». En outre, si le serveur a redirigé le navigateur vers une autre URL, l’URL redirigée sera reflétée ici.
+Notez que l’URL contenue dans *strURL* peut être différente de l’URL à laquelle le navigateur a été invité à accéder, car cette URL est l’URL canonique et qualifiée. Par exemple, si une application spécifie une URL `"www.microsoft.com"` de dans un appel à [Navigate](#navigate) ou [Navigate2](#navigate2), `"<https://www.microsoft.com/>"`l’URL `OnNavigateComplete2` passée par sera. En outre, si le serveur a redirigé le navigateur vers une autre URL, l’URL redirigée sera reflétée ici.
 
 ##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError
 
@@ -1484,13 +1484,13 @@ Nom du frame dans lequel la ressource doit être affichée, ou NULL si aucune im
 Code d’état d’erreur, s’il est disponible. Pour obtenir la liste des codes d’État HRESULT et HTTP possibles, consultez Codes d’état de l' [événement NavigateError.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768365\(v=vs.85\))
 
 *pbCancel*<br/>
-Spécifie s’il faut annuler la navigation vers une page d’erreur ou d’autres recherches supplémentaires. Si la valeur est TRUE (valeur par défaut), poursuivre la navigation vers une page d’erreur ou la recherche AutoSearch; Si la valeur est FALSe, annuler la navigation vers une page d’erreur ou une recherche AutoSearch.
+Spécifie s’il faut annuler la navigation vers une page d’erreur ou d’autres recherches supplémentaires. Si la valeur est TRUE (valeur par défaut), poursuivre la navigation vers une page d’erreur ou la recherche AutoSearch ; Si la valeur est FALSe, annuler la navigation vers une page d’erreur ou une recherche AutoSearch.
 
 ### <a name="remarks"></a>Notes
 
 Substituez cette méthode pour fournir une gestion des erreurs de navigation personnalisée.
 
-Pour plus d’informations, consultez [DWebBrowserEvents2:: NavigateError](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768286\(v=vs.85\))
+Pour plus d’informations, consultez [DWebBrowserEvents2 :: NavigateError](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768286\(v=vs.85\))
 
 ##  <a name="onnewwindow2"></a>  CHtmlView::OnNewWindow2
 
@@ -1577,7 +1577,7 @@ Nouveau rectangle externe pour l’espace de bordure.
 Pointeur vers l’interface pour le frame ou l’objet de fenêtre de document dont la bordure a changé.
 
 *fFrameWindow*<br/>
-TRUE si la fenêtre frame appelle [IOleInPlaceActiveObject:: ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), sinon false.
+TRUE si la fenêtre frame appelle [IOleInPlaceActiveObject :: ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), sinon false.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1585,7 +1585,7 @@ S_OK en cas de réussite, ou un code d’erreur défini par OLE dans le cas cont
 
 ### <a name="remarks"></a>Notes
 
-Remplacement `OnResizeBorder` pour réagir à la `ResizeBorder` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler:: ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) dans le SDK Windows.
+Remplacement `OnResizeBorder` pour réagir à la `ResizeBorder` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler :: ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="onshowcontextmenu"></a>  CHtmlView::OnShowContextMenu
 
@@ -1615,11 +1615,11 @@ Interface IDispatch de l’objet aux coordonnées d’écran. Cela permet à un 
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pour obtenir la liste des valeurs, consultez [IDocHostUIHandler:: ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) dans la SDK Windows.
+Pour obtenir la liste des valeurs, consultez [IDocHostUIHandler :: ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) dans la SDK Windows.
 
 ### <a name="remarks"></a>Notes
 
-Remplacement `OnShowContextMenu` pour réagir à la `ShowContextMenu` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler:: ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) dans le SDK Windows.
+Remplacement `OnShowContextMenu` pour réagir à la `ShowContextMenu` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler :: ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="onshowui"></a>  CHtmlView::OnShowUI
 
@@ -1653,11 +1653,11 @@ Interface [IOleInPlaceUIWindow](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceu
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pour obtenir la liste des valeurs, consultez [IDocHostUIHandler:: ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) dans le SDK Windows.
+Pour obtenir la liste des valeurs, consultez [IDocHostUIHandler :: ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) dans le SDK Windows.
 
 ### <a name="remarks"></a>Notes
 
-Remplacement `OnShowUI` pour réagir à la `ShowUI` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler:: ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) dans le SDK Windows.
+Remplacement `OnShowUI` pour réagir à la `ShowUI` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler :: ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
 
@@ -1696,7 +1696,7 @@ virtual void OnTheaterMode(BOOL bTheaterMode);
 ### <a name="parameters"></a>Paramètres
 
 *bTheaterMode*<br/>
-Différent de zéro si Internet Explorer est en mode théâtre; Sinon, zéro.
+Différent de zéro si Internet Explorer est en mode théâtre ; Sinon, zéro.
 
 ##  <a name="ontitlechange"></a>  CHtmlView::OnTitleChange
 
@@ -1713,7 +1713,7 @@ Nouveau titre du document.
 
 ### <a name="remarks"></a>Notes
 
-Pour le format HTML, le titre peut changer; tandis que le format HTML est encore en cours de téléchargement, l’URL du document est définie en tant que titre. Une fois le titre réel (le cas échéant) analysé à partir du code HTML, le titre est modifié pour refléter le titre réel.
+Pour le format HTML, le titre peut changer ; tandis que le format HTML est encore en cours de téléchargement, l’URL du document est définie en tant que titre. Une fois le titre réel (le cas échéant) analysé à partir du code HTML, le titre est modifié pour refléter le titre réel.
 
 ##  <a name="ontoolbar"></a>  CHtmlView::OnToolBar
 
@@ -1756,7 +1756,7 @@ S_OK en cas de réussite, ou S_FALSE dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Remplacement `OnTranslateAccelerator` pour réagir à la `TranslateAccelerator` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler:: TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) dans le SDK Windows.
+Remplacement `OnTranslateAccelerator` pour réagir à la `TranslateAccelerator` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler :: TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="ontranslateurl"></a>  CHtmlView::OnTranslateUrl
 
@@ -1786,7 +1786,7 @@ Adresse d’un pointeur de chaîne qui reçoit l’adresse de l’URL traduite. 
 
 ### <a name="remarks"></a>Notes
 
-Remplacement `OnTranslateUrl` pour réagir à la `TranslateUrl` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler:: TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) dans le SDK Windows.
+Remplacement `OnTranslateUrl` pour réagir à la `TranslateUrl` notification à partir du contrôle de navigateur Web Microsoft. Pour plus d’informations, consultez [IDocHostUIHandler :: TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) dans le SDK Windows.
 
 ##  <a name="onupdateui"></a>  CHtmlView::OnUpdateUI
 
@@ -1892,21 +1892,21 @@ HRESULT QueryFormsCommand(
 Identificateur de la commande en cours d’interrogation.
 
 *pbSupported*<br/>
-Pointeur vers un booléen spécifiant si la commande (identifiée par *dwCommandID*) est prise en charge. Si la valeur est TRUE, la commande est prise en charge; Sinon, FALSe.
+Pointeur vers un booléen spécifiant si la commande (identifiée par *dwCommandID*) est prise en charge. Si la valeur est TRUE, la commande est prise en charge ; Sinon, FALSe.
 
 *pbEnabled*<br/>
-Pointeur vers un booléen spécifiant si la commande (identifiée par *dwCommandID*) est activée. Si la valeur est TRUE, la commande est prise en charge; Sinon, FALSe.
+Pointeur vers un booléen spécifiant si la commande (identifiée par *dwCommandID*) est activée. Si la valeur est TRUE, la commande est prise en charge ; Sinon, FALSe.
 
 *pbChecked*<br/>
-Pointeur vers un booléen spécifiant si la commande (identifiée par *dwCommandID*) est vérifiée. Si la valeur est TRUE, la commande est prise en charge; Sinon, FALSe.
+Pointeur vers un booléen spécifiant si la commande (identifiée par *dwCommandID*) est vérifiée. Si la valeur est TRUE, la commande est prise en charge ; Sinon, FALSe.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard. Pour obtenir la liste complète des valeurs possibles, consultez [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) dans le SDK Windows.
+Valeur HRESULT standard. Pour obtenir la liste complète des valeurs possibles, consultez [IOleCommandTarget :: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) dans le SDK Windows.
 
 ### <a name="remarks"></a>Notes
 
-`QueryFormsCommand`implémente le comportement de la méthode [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) .
+`QueryFormsCommand`implémente le comportement de la méthode [IOleCommandTarget :: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) .
 
 ##  <a name="querystatuswb"></a>  CHtmlView::QueryStatusWB
 
@@ -1927,7 +1927,7 @@ Adresse de la valeur [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf) qui 
 
 ### <a name="remarks"></a>Notes
 
-`QueryStatusWB`implémente le comportement de la méthode [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) .
+`QueryStatusWB`implémente le comportement de la méthode [IOleCommandTarget :: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) .
 
 S’applique à Internet Explorer et à WebBrowser.
 
@@ -1975,7 +1975,7 @@ void SetAddressBar(BOOL bNewValue);
 ### <a name="parameters"></a>Paramètres
 
 *bNewValue*<br/>
-Différent de zéro pour afficher la barre d’adresses; Sinon, zéro.
+Différent de zéro pour afficher la barre d’adresses ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -1992,7 +1992,7 @@ void SetFullScreen(BOOL bNewValue);
 ### <a name="parameters"></a>Paramètres
 
 *bNewValue*<br/>
-Différent de zéro pour le mode plein écran; Sinon, zéro.
+Différent de zéro pour le mode plein écran ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -2041,7 +2041,7 @@ void SetMenuBar(BOOL bNewValue);
 ### <a name="parameters"></a>Paramètres
 
 *bNewValue*<br/>
-Valeur différente de zéro pour afficher la barre de menus; Sinon, zéro.
+Valeur différente de zéro pour afficher la barre de menus ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -2058,7 +2058,7 @@ void SetOffline(BOOL bNewValue);
 ### <a name="parameters"></a>Paramètres
 
 *bNewValue*<br/>
-Valeur différente de zéro pour lire à partir du cache local; Sinon, zéro.
+Valeur différente de zéro pour lire à partir du cache local ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -2066,7 +2066,7 @@ En mode hors connexion, le navigateur lit les pages HTML à partir du cache loca
 
 S’applique à Internet Explorer et à WebBrowser.
 
-##  <a name="setregisterasbrowser"></a>CHtmlView:: SetRegisterAsBrowser
+##  <a name="setregisterasbrowser"></a>CHtmlView :: SetRegisterAsBrowser
 
 Appelez cette fonction membre pour définir une valeur indiquant si le contrôle WebBrowser est inscrit en tant que navigateur de niveau supérieur pour la résolution de nom cible.
 
@@ -2130,7 +2130,7 @@ void SetStatusBar(BOOL bNewValue);
 ### <a name="parameters"></a>Paramètres
 
 *bNewValue*<br/>
-Différent de zéro si la barre d’État est visible; Sinon, zéro.
+Différent de zéro si la barre d’État est visible ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -2147,7 +2147,7 @@ void SetTheaterMode(BOOL bNewValue);
 ### <a name="parameters"></a>Paramètres
 
 *bNewValue*<br/>
-Différent de zéro pour définir le contrôle WebBrowser en mode cinéma; Sinon, zéro. La valeur par défaut est 0.
+Différent de zéro pour définir le contrôle WebBrowser en mode cinéma ; Sinon, zéro. La valeur par défaut est 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -2166,7 +2166,7 @@ void SetToolBar(int nNewValue);
 ### <a name="parameters"></a>Paramètres
 
 *nNewValue*<br/>
-Indique s’il faut afficher la barre d’outils. Différent de zéro si la barre d’outils doit être affichée; Sinon, zéro.
+Indique s’il faut afficher la barre d’outils. Différent de zéro si la barre d’outils doit être affichée ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -2200,7 +2200,7 @@ void SetVisible(BOOL bNewValue);
 ### <a name="parameters"></a>Paramètres
 
 *bNewValue*<br/>
-Différent de zéro si le contrôle est visible; Sinon, zéro.
+Différent de zéro si le contrôle est visible ; Sinon, zéro.
 
 ### <a name="remarks"></a>Notes
 

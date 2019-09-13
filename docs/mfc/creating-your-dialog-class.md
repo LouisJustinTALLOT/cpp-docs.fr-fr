@@ -1,6 +1,6 @@
 ---
 title: Création de votre classe de boîte de dialogue
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], creating
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: bacedc49fcdabdd5dc7fb0f392a66afd3baadd06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 424d18196063456245e2a4841b42e6e447bded17
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241756"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907325"
 ---
 # <a name="creating-your-dialog-class"></a>Création de votre classe de boîte de dialogue
 
-Pour chaque boîte de dialogue dans votre programme, créez une nouvelle classe de boîte de dialogue pour travailler avec la ressource de boîte de dialogue.
+Pour chaque boîte de dialogue de votre programme, créez une nouvelle classe de boîte de dialogue pour travailler avec la ressource de boîte de dialogue.
 
-[Ajout d’une classe](../ide/adding-a-class-visual-cpp.md) explique comment créer une nouvelle classe de boîte de dialogue. Lorsque vous créez une classe de boîte de dialogue avec l’Assistant Ajouter une classe, il écrit les éléments suivants le. H et. Fichiers CPP que vous spécifiez :
+L' [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md) explique comment créer une classe de boîte de dialogue. Quand vous créez une classe de boîte de dialogue avec l' [Assistant classe](reference/mfc-class-wizard.md), elle écrit les éléments suivants dans les fichiers. h et. cpp que vous spécifiez :
 
-Dans le. Fichier de H :
+Dans le fichier. h :
 
-- Une déclaration de classe pour la classe de boîte de dialogue. La classe est dérivée de [CDialog](../mfc/reference/cdialog-class.md).
+- Déclaration de classe pour la classe dialog. La classe est dérivée de [CDialog](../mfc/reference/cdialog-class.md).
 
-Dans le. Fichier CPP :
+Dans le fichier. cpp :
 
 - Une table des messages pour la classe.
 
-- Un constructeur standard pour la boîte de dialogue.
+- Constructeur standard pour la boîte de dialogue.
 
-- Une substitution de la [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) fonction membre. Modifiez cette fonction. Il est utilisé pour les fonctionnalités d’échange et validation de données de boîte de dialogue, comme décrit ultérieurement dans [échange de données de boîtes de dialogue et la validation](../mfc/dialog-data-exchange-and-validation.md).
+- Substitution de la fonction membre [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) . Modifiez cette fonction. Il est utilisé pour l’échange de données de boîtes de dialogue et les fonctionnalités de validation, comme décrit plus loin dans [échange et validation de données de boîtes de dialogue](../mfc/dialog-data-exchange-and-validation.md).
 
 ## <a name="see-also"></a>Voir aussi
 

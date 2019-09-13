@@ -1,6 +1,6 @@
 ---
 title: Fonctions membres couramment substituées
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - CDialog class [MFC], members
 - OnInitDialog function
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - OnOK function
 - MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
-ms.openlocfilehash: 26a1527dbdac4b2a9deb57fb13481f8d2f9cb5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f63dd6079b96181305f3207d4a1ef823df8d8ba4
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152024"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907690"
 ---
 # <a name="commonly-overridden-member-functions"></a>Fonctions membres couramment substituées
 
-Le tableau suivant répertorie la plus vraisemblable de fonctions membres à remplacer dans votre `CDialog`-classe dérivée.
+Le tableau suivant répertorie les fonctions membres les plus probables à substituer dans votre `CDialog`classe dérivée de.
 
-### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Les fonctions membres de la classe CDialog couramment substituées
+### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Fonctions membres couramment substituées de la classe CDialog
 
-|Fonction membre|Il répond à des messages|Objet du remplacement|
+|Fonction membre|Message auquel il répond|Objectif du remplacement|
 |---------------------|----------------------------|-----------------------------|
-|`OnInitDialog`|**WM_INITDIALOG**|Initialiser les contrôles de la boîte de dialogue.|
-|`OnOK`|**BN_CLICKED** bouton **IDOK**|Répondre quand l’utilisateur clique sur le bouton OK.|
-|`OnCancel`|**BN_CLICKED** bouton **IDCANCEL**|Répondre quand l’utilisateur clique sur le bouton Annuler.|
+|`OnInitDialog`|**WM_INITDIALOG**|Initialisez les contrôles de la boîte de dialogue.|
+|`OnOK`|**BN_CLICKED** pour le bouton **IDOK**|Répondre quand l’utilisateur clique sur le bouton OK.|
+|`OnCancel`|**BN_CLICKED** pour le bouton **IDCANCEL**|Répondre quand l’utilisateur clique sur le bouton Annuler.|
 
-`OnInitDialog`, `OnOK`, et `OnCancel` sont des fonctions virtuelles. Pour les remplacer, vous déclarez une fonction de substitution dans votre classe de boîte de dialogue dérivée à l’aide de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).
+`OnInitDialog`, `OnOK` et`OnCancel` sont des fonctions virtuelles. Pour les remplacer, vous déclarez une fonction de substitution dans votre classe de boîte de dialogue dérivée à l’aide de l ['Assistant classe MFC](reference/mfc-class-wizard.md).
 
-`OnInitDialog` est appelé juste avant que la boîte de dialogue s’affiche. Vous devez appeler la valeur par défaut `OnInitDialog` gestionnaire à partir de votre remplacement, généralement en tant que la première action dans le gestionnaire. Par défaut, `OnInitDialog` retourne **TRUE** pour indiquer que le focus doit être défini pour le premier contrôle dans la boîte de dialogue.
+`OnInitDialog`est appelé juste avant que la boîte de dialogue ne s’affiche. Vous devez appeler le gestionnaire `OnInitDialog` par défaut à partir de votre remplacement, généralement en tant que première action dans le gestionnaire. Par défaut, `OnInitDialog` retourne la **valeur true** pour indiquer que le focus doit être défini sur le premier contrôle de la boîte de dialogue.
 
-`OnOK` est généralement substituée pour les boîtes de dialogue non modale, mais non modale. Si vous remplacez ce gestionnaire pour une boîte de dialogue modale, appelez la version de la classe de base à partir de votre remplacement, pour vous assurer que `EndDialog` est appelée, ou appeler `EndDialog` vous-même.
+`OnOK`est généralement substitué pour les boîtes de dialogue non modales, mais pas pour les boîtes de dialogue modales. Si vous substituez ce gestionnaire pour une boîte de dialogue modale, appelez la version de la classe de base à partir de `EndDialog` votre remplacement, pour vous `EndDialog` assurer que est appelé, ou appelez-vous.
 
-`OnCancel` est généralement substituée pour les boîtes de dialogue non modale.
+`OnCancel`est généralement substitué pour les boîtes de dialogue non modales.
 
-Pour plus d’informations sur ces fonctions membres, consultez la classe [CDialog](../mfc/reference/cdialog-class.md) dans le *référence MFC* et la discussion sur [Cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md).
+Pour plus d’informations sur ces fonctions membres, consultez la classe [CDialog](../mfc/reference/cdialog-class.md) dans la *référence MFC* et la discussion sur le [cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md).
 
 ## <a name="see-also"></a>Voir aussi
 

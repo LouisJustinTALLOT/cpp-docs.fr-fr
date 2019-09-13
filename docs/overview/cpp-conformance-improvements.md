@@ -5,12 +5,12 @@ description: Microsoft C++ dans Visual Studio arrive progressivement à une con
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: aeaaab704706bee575e3ae44726522cd04c17433
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 8eae104d21de271f11c727262939121c20050092
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222315"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927947"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Améliorations de la conformité de C++ dans Visual Studio
 
@@ -268,7 +268,7 @@ int main() {
 
 ### <a name="binary-expressions-with-different-enum-types"></a>Expressions binaires avec différents types ENUM
 
-La possibilité d’appliquer les conversions arithmétiques habituelles sur les opérandes dont l’un est de type énumération et l’autre est d’un type d’énumération différent ou un type à virgule flottante est déconseillé en C++ 20 ([P1120R0](http://wg21.link/p1120r0)). Dans Visual Studio 2019 version 16,2 et versions ultérieures, le code suivant génère un avertissement de niveau 4 lorsque l’option de compilateur [/std : c + + la plus récente](../build/reference/std-specify-language-standard-version.md) est activée :
+La possibilité d’appliquer les conversions arithmétiques habituelles sur les opérandes dont l’un est de type énumération et l’autre est d’un type d’énumération différent ou un type à virgule flottante est déconseillé en C++ 20 ([P1120R0](https://wg21.link/p1120r0)). Dans Visual Studio 2019 version 16,2 et versions ultérieures, le code suivant génère un avertissement de niveau 4 lorsque l’option de compilateur [/std : c + + la plus récente](../build/reference/std-specify-language-standard-version.md) est activée :
 
 ```cpp
 enum E1 { a };
@@ -290,7 +290,7 @@ int main() {
 
 ### <a name="binary-expressions-with-enumeration-and-floating-point-types"></a>Expressions binaires avec énumération et types à virgule flottante
 
-La possibilité d’appliquer les conversions arithmétiques habituelles sur les opérandes dont l’un est de type énumération et l’autre est d’un type d’énumération différent ou un type à virgule flottante est déconseillé en C++ 20 ([P1120R0](http://wg21.link/p1120r0)). En d’autres termes, l’utilisation d’une opération binaire entre une énumération et un type à virgule flottante est désormais un avertissement lorsque l’option de compilateur [/std : c + + la plus récente](../build/reference/std-specify-language-standard-version.md) est activée :
+La possibilité d’appliquer les conversions arithmétiques habituelles sur les opérandes dont l’un est de type énumération et l’autre est d’un type d’énumération différent ou un type à virgule flottante est déconseillé en C++ 20 ([P1120R0](https://wg21.link/p1120r0)). En d’autres termes, l’utilisation d’une opération binaire entre une énumération et un type à virgule flottante est désormais un avertissement lorsque l’option de compilateur [/std : c + + la plus récente](../build/reference/std-specify-language-standard-version.md) est activée :
 
 ```cpp
 enum E1 { a };
@@ -310,7 +310,7 @@ int main() {
 
 ### <a name="equality-and-relational-comparisons-of-arrays"></a>Comparaisons d’égalité et relationnelles de tableaux
 
-Les comparaisons d’égalité et relationnelles entre deux opérandes de type tableau sont dépréciées en C++ 20 ([P1120R0](http://wg21.link/p1120r0)). En d’autres termes, une opération de comparaison entre deux tableaux (indépendamment du rang et des similarités d’extensions) est désormais un avertissement. À compter de Visual Studio 2019 version 16,2, le code suivant génère *C5056 : Operator' = = ' : déconseillé pour les types tableau* lorsque l’option de compilateur [/std : c + + la plus récente](../build/reference/std-specify-language-standard-version.md) est activée :
+Les comparaisons d’égalité et relationnelles entre deux opérandes de type tableau sont dépréciées en C++ 20 ([P1120R0](https://wg21.link/p1120r0)). En d’autres termes, une opération de comparaison entre deux tableaux (indépendamment du rang et des similarités d’extensions) est désormais un avertissement. À compter de Visual Studio 2019 version 16,2, le code suivant génère *C5056 : Operator' = = ' : déconseillé pour les types tableau* lorsque l’option de compilateur [/std : c + + la plus récente](../build/reference/std-specify-language-standard-version.md) est activée :
 
 ```cpp
 int main() {
