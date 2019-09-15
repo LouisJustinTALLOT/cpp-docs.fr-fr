@@ -1,12 +1,12 @@
 ---
 title: _strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strtoui64
 - _strtoui64_l
 - _wcstoui64
 - _wcstoui64_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcstoui64_l
 - strtoui64_l
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - strtoui64_l function
 - strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
-ms.openlocfilehash: dec7debff809f8b3d61856f9be77bc590d845c12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be7d779bac50d332dde879c9d5b070fd2bf7e7e5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269015"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946424"
 ---
-# <a name="strtoui64-wcstoui64-strtoui64l-wcstoui64l"></a>_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
+# <a name="_strtoui64-_wcstoui64-_strtoui64_l-_wcstoui64_l"></a>_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
 
-Convertir une chaîne non signée **__int64** valeur.
+Convertit une chaîne **en valeur _** _ Int64 non signée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -94,19 +97,19 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_strtoui64** retourne la valeur représentée dans la chaîne *strSource*, sauf lors de la représentation entraînerait un dépassement de capacité, auquel cas il retourne **_UI64_MAX**. **_strtoui64** retourne 0 si aucune conversion ne peut être effectuée.
+**_strtoui64** retourne la valeur représentée dans la chaîne *strSource*, sauf lorsque la représentation provoque un dépassement de capacité, auquel cas elle retourne **_UI64_MAX**. **_strtoui64** retourne 0 si aucune conversion ne peut être effectuée.
 
-**_UI64_MAX** est défini dans les limites. H.
+**_UI64_MAX** est défini dans les limites. Manutention.
 
-Si *strSource* est **NULL** ou *base* est différent de zéro et inférieur à 2 ou supérieur à 36, **errno** a la valeur **EINVAL** .
+Si *strSource* a la **valeur null** ou si la *base* est différente de zéro et inférieure à 2 ou supérieure à 36, **errno** a la valeur **EINVAL**.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_strtoui64** fonction convertit *strSource* à un **non signé** **__int64**. **_wcstoui64** est une version à caractères larges de **_strtoui64**; son *strSource* argument est une chaîne de caractères larges. Sinon, ces fonctions se comportent de façon identique.
+La fonction **_strtoui64** convertit *strSource* en _ _ Int64 **non signé** **.** **_wcstoui64** est une version à caractères larges de **_strtoui64**; son argument *strSource* est une chaîne de caractères larges. Sinon, ces fonctions se comportent de façon identique.
 
-Les deux fonctions arrêtent de lire la chaîne *strSource* au premier caractère qu’ils ne peuvent pas reconnaître comme faisant partie d’un nombre. Cela peut être le caractère null de fin, ou il peut être le premier caractère numérique supérieur ou égal à *base*.
+Les deux fonctions cessent de lire la chaîne *strSource* au premier caractère qu’elles ne peuvent pas reconnaître dans le cadre d’un nombre. Il peut s’agir du caractère null de fin, ou il peut s’agir du premier caractère numérique supérieur ou égal à *base*.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -115,15 +118,15 @@ Les deux fonctions arrêtent de lire la chaîne *strSource* au premier caractèr
 |**_tcstoui64**|**_strtoui64**|**_strtoui64**|**_wstrtoui64**|
 |**_tcstoui64_l**|**_strtoui64_l**|**_strtoui64_l**|**_wstrtoui64_l**|
 
-Les paramètres régionaux actuels **LC_NUMERIC** paramètre de catégorie détermine la reconnaissance du caractère de base dans *strSource*; pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les fonctions sans suffixe _l utilisent les paramètres régionaux actifs ; **_strtoui64_l** et **_wcstoui64_l** sont identiques aux fonctions correspondantes sans le **_l** suffixe, sauf qu’ils utilisent les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Le paramètre de catégorie **LC_NUMERIC** des paramètres régionaux actuels détermine la reconnaissance du caractère de base dans *strSource*; Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les fonctions sans le suffixe _L utilisent les paramètres régionaux actuels. **_strtoui64_l** et **_wcstoui64_l** sont identiques aux fonctions correspondantes sans le suffixe **_L** , sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Si *endptr* n’est pas **NULL**, un pointeur désignant le caractère qui a arrêté l’analyse est stocké à l’emplacement vers lequel pointé *endptr*. Si aucune conversion ne peut être effectuée (aucun chiffre valide a été trouvé ou une base non valide a été spécifiée), la valeur de *strSource* est stocké à l’emplacement vers lequel pointé *endptr*.
+Si *endptr* n’a pas la **valeur null**, un pointeur vers le caractère qui a arrêté l’analyse est stocké à l’emplacement désigné par *endptr*. Si aucune conversion ne peut être effectuée (aucun chiffre valide n’a été trouvé ou une base non valide a été spécifiée), la valeur de *strSource* est stockée à l’emplacement désigné par *endptr*.
 
-**_strtoui64** attend *strSource* pour pointer vers une chaîne au format suivant :
+**_strtoui64** attend que *strSource* pointe vers une chaîne au format suivant :
 
-> [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*digits*  &#124; *letters*]
+> [*whitespace*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **X** }]] [*digits*  &#124; *letters*]
 
-Un *espace blanc* peut se composer d’espaces et tabulations, qui sont ignorés. *chiffres* représente un ou plusieurs chiffres décimaux. *lettres* sont un ou plusieurs des lettres « a » 'z' via (ou un « A » à « Z »). Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse. Si *base* est comprise entre 2 et 36, elle est utilisée comme base du nombre. Si *base* est 0, les premiers caractères de la chaîne pointée par *strSource* servent à déterminer la base. Si le premier caractère est 0 et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, si *base* est égal à 0 et le premier caractère analysé est « 0 », un entier octal est supposé et un caractère « 8 » ou « 9 » s’arrête l’analyse.
+Un espace *blanc* peut se composer d’espaces et de caractères de tabulation, qui sont ignorés. les *chiffres* correspondent à un ou plusieurs chiffres décimaux. les *lettres* sont une ou plusieurs lettres de « a » à « z » (ou de « a » à « z »). Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse. Si la *base* est comprise entre 2 et 36, elle est utilisée comme base du nombre. Si *base* a la valeur 0, les caractères initiaux de la chaîne vers laquelle pointe *strSource* sont utilisés pour déterminer la base. Si le premier caractère est 0 et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, si *base* a la valeur 0 et que le premier caractère analysé est « 0 », un entier octal est supposé et un caractère « 8 » ou « 9 » arrête l’analyse.
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -1,11 +1,11 @@
 ---
 title: csinh, csinhf, csinhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - csinh
 - csinhf
 - csinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - csinh
 - csinhf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - csinhf function
 - csinhl function
 ms.assetid: cc616e55-d14d-4cd3-91f0-fbee03ce5edf
-ms.openlocfilehash: 2ea6eaedc7eae7256310bf55b06fde0ecb2c64de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b377b34ee1a9f60f502c59b8c4ea1eed19c7500
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289401"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938535"
 ---
 # <a name="csinh-csinhf-csinhl"></a>csinh, csinhf, csinhl
 
@@ -68,11 +71,11 @@ Nombre complexe qui représente un angle, en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le sinus hyperbolique de *z*, en radians.
+Sinus hyperbolique de *z*, en radians.
 
 ## <a name="remarks"></a>Notes
 
-Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **csinh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **csinh** accepte et retourne toujours un **_Dcomplex** valeur.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **csinh** qui acceptent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, **csinh** accepte et retourne toujours une valeur **_Dcomplex** .
 
 ## <a name="requirements"></a>Configuration requise
 

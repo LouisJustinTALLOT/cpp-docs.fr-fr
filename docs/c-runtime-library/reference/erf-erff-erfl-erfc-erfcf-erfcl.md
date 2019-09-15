@@ -1,14 +1,14 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
 ms.date: 01/31/2019
-apiname:
+api_name:
 - erff
 - erfl
 - erf
 - erfc
 - erfcf
 - erfcl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - erfl
 - erf
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 4270d8366686ea282a4dd37741d9f8e37991b88f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289201"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937621"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -89,17 +92,17 @@ Valeur à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **erf** fonctions retournent le Gauss fonction d’erreur de *x*. Le **erfc** fonctions retournent de Gauss complémentaire la fonction d’erreur de *x*.
+Les fonctions **ERF** retournent la fonction d’erreur Gauss de *x*. Les fonctions **ERFC** retournent la fonction d’erreur Gauss complémentaire de *x*.
 
 ## <a name="remarks"></a>Notes
 
-Le **erf** fonctions calculent la fonction d’erreur de Gauss de *x*, qui est définie comme :
+Les fonctions **ERF** calculent la fonction d’erreur Gauss de *x*, qui est définie comme suit :
 
-![La fonction d’erreur de x](media/crt_erf_formula.PNG "la fonction d’erreur de x")
+![Fonction d’erreur de x](media/crt_erf_formula.PNG "Fonction d’erreur de x")
 
-La fonction d’erreur de Gauss complémentaire est définie en tant que 1 - ERF. Le **erf** fonctions retournent une valeur dans la plage -1,0 à 1,0. Aucun retour d'erreur. Le **erfc** fonctions retournent une valeur dans la plage 0 à 2. Si *x* est trop grande pour **erfc**, le **errno** variable est définie sur **ERANGE**.
+La fonction d’erreur Gauss complémentaire est définie comme 1-ERF (x). Les fonctions **ERF** retournent une valeur comprise entre-1,0 et 1,0. Aucun retour d'erreur. Les fonctions **ERFC** retournent une valeur comprise dans la plage 0 à 2. Si *x* est trop grand pour **ERFC**, la variable **errno** est définie sur **ERANGE**.
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **erf** et **erfc** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **erf** et **erfc** acceptent et retournent toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges d' **ERF** et de **ERFC** qui acceptent et retournent des types **double** de type **float** et **long** . Dans un programme C, **ERF** et **ERFC** prennent toujours et retournent un **double**.
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -1,7 +1,7 @@
 ---
 title: _ismbb, routines
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr80.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbb
 - ismbb
@@ -17,14 +20,14 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: d70604ce71d74bd73a3fea1b99beaf93f052e344
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 374c78ca222f9c63f6b37f26d4cf3a00f48f845e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750505"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944530"
 ---
-# <a name="ismbb-routines"></a>_ismbb, routines
+# <a name="_ismbb-routines"></a>_ismbb, routines
 
 Teste la valeur d’entier donnée `c` pour une condition particulière, en utilisant les paramètres régionaux actuels ou une catégorie d’état de conversion LC_CTYPE spécifiée.
 
@@ -37,7 +40,7 @@ Teste la valeur d’entier donnée `c` pour une condition particulière, en util
 |[_ismbbkalnum, _ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|[_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|
 |[_ismbbkana, _ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|[_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Chaque routine dans la famille `_ismbb` teste la valeur d’entier donné `c` pour une condition particulière. Le résultat du test dépend de la page de codes multioctets en vigueur. Par défaut, la page de codes multioctets est définie sur la page de codes ANSI obtenue à partir du système d’exploitation au démarrage du programme. Vous pouvez utiliser [_getmbcp](../c-runtime-library/reference/getmbcp.md) pour interroger la page de codes multioctets en cours d’utilisation, ou [_setmbcp](../c-runtime-library/reference/setmbcp.md) pour la modifier.
 
@@ -62,7 +65,7 @@ Les routines de la famille `_ismbb` testent l’entier donné `c` comme suit.
 
 Le tableau suivant indique les valeurs ORed qui composent les conditions de test pour ces routines. Les constantes de manifeste `_BLANK`, `_DIGIT`, `_LOWER`, `_PUNCT`et `_UPPER` sont définies dans Ctype.h.
 
-|Routine|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|Texte<br /><br /> non<br /><br /> ASCII|Texte<br /><br /> non<br /><br /> ASCII|
+|Routine|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|Texte<br /><br /> ASCII<br /><br /> ASCII|Texte<br /><br /> non<br /><br /> ASCII|
 |-------------|-------------|-------------|-----------|-------------|-----------|------------------------------|-------------------------------|
 |`_ismbbalnum`|—|x|x|—|x|x|—|
 |`_ismbbalpha`|—|—|x|—|x|x|—|

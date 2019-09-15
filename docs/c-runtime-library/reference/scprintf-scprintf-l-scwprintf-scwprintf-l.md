@@ -1,12 +1,12 @@
 ---
 title: _scprintf, _scprintf_l, _scwprintf, _scwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _scprintf_l
 - _scwprintf
 - _scwprintf_l
 - _scprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scprintf
 - _scprintf_l
@@ -44,14 +47,14 @@ helpviewer_keywords:
 - _scprintf function
 - scwprintf function
 ms.assetid: ecbb0ba6-5f4c-4ce6-a64b-144ad8b5fe92
-ms.openlocfilehash: 09c44bbf6f918211c1aa2ee875a23bfcc7ca2da5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d7f682156d37538f6ac152e6d93814877631a5c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357068"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948807"
 ---
-# <a name="scprintf-scprintfl-scwprintf-scwprintfl"></a>_scprintf, _scprintf_l, _scwprintf, _scwprintf_l
+# <a name="_scprintf-_scprintf_l-_scwprintf-_scwprintf_l"></a>_scprintf, _scprintf_l, _scwprintf, _scwprintf_l
 
 Retourne le nombre de caractères présents dans la chaîne mise en forme.
 
@@ -95,15 +98,15 @@ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-
 
 Retourne le nombre de caractères qui seraient générés si la chaîne devait était imprimée ou envoyée vers un fichier ou une mémoire tampon en utilisant les codes de mise en forme spécifiés. La valeur retournée n’inclut pas le caractère Null de fin. **_scwprintf** effectue la même fonction pour les caractères larges.
 
-Si *format* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Si *format* est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Chaque *argument* (le cas échéant) est converti selon la spécification de format correspondante dans *format*. Le format se compose de caractères ordinaires et a les mêmes forme et fonction que le *format* argument pour [printf](printf-printf-l-wprintf-wprintf-l.md).
+Chaque *argument* (le cas échéant) est converti selon la spécification de format correspondante au *format*. Le format se compose de caractères ordinaires et a la même forme et fonction que l’argument *format* pour [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 > [!IMPORTANT]
 > Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur.

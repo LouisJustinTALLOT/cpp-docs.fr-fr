@@ -1,10 +1,10 @@
 ---
 title: _access, _waccess
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _access
 - _waccess
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _waccess
 - _access
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 37c5760eb5231d17a8b17fe5d21f1459a865c067
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 90092b5d1c250fd79be107b0c36ee5641f70b30c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500016"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943938"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -65,7 +68,7 @@ Attribut de lecture/écriture.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction retourne 0 si le fichier a le mode donné. La fonction retourne-1 si le fichier nommé n’existe pas ou s’il n’a pas le mode donné; dans ce cas, `errno` est défini comme indiqué dans le tableau suivant.
+Chaque fonction retourne 0 si le fichier a le mode donné. La fonction retourne-1 si le fichier nommé n’existe pas ou s’il n’a pas le mode donné ; dans ce cas, `errno` est défini comme indiqué dans le tableau suivant.
 
 |||
 |-|-|
@@ -77,7 +80,7 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 ## <a name="remarks"></a>Notes
 
-Lorsqu’elle est utilisée avec des fichiers, la fonction **_access** détermine si le fichier ou le répertoire spécifié existe et possède les attributs spécifiés par la valeur de *mode*. En cas d’utilisation avec des répertoires, **_access** détermine uniquement si le répertoire spécifié existe; dans les systèmes d’exploitation Windows 2000 et versions ultérieures, tous les répertoires disposent d’un accès en lecture et en écriture.
+Lorsqu’elle est utilisée avec des fichiers, la fonction **_access** détermine si le fichier ou le répertoire spécifié existe et possède les attributs spécifiés par la valeur de *mode*. En cas d’utilisation avec des répertoires, **_access** détermine uniquement si le répertoire spécifié existe ; dans les systèmes d’exploitation Windows 2000 et versions ultérieures, tous les répertoires disposent d’un accès en lecture et en écriture.
 
 |valeur du *mode*|Test réalisé sur le fichier|
 |------------------|---------------------|
@@ -105,7 +108,7 @@ Cette fonction valide ses paramètres. Si *path* a la valeur null ou que le *mod
 |**_access**|\<io.h>|\<errno.h>|
 |**_waccess**|\<wchar.h> ou \<io.h>|\<errno.h>|
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 L’exemple suivant utilise **_access** pour vérifier le fichier nommé crt_ACCESS. C pour voir s’il existe et si l’écriture est autorisée.
 

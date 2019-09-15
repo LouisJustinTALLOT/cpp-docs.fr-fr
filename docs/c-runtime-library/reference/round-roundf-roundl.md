@@ -1,11 +1,11 @@
 ---
 title: round, roundf, roundl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - round
 - roundl
 - roundf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - roundf
 - roundl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b92f4a94fff06fe6948701240b61040a610981f3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357445"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949105"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -65,7 +68,7 @@ Valeur à virgule flottante à arrondir.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **arrondir** fonctions retournent une valeur à virgule flottante qui représente l’entier le plus proche à *x*. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Aucun retour d'erreur.
+Les fonctions **Round** retournent une valeur à virgule flottante qui représente l’entier le plus proche de *x*. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Aucun retour d'erreur.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
@@ -73,7 +76,7 @@ Le **arrondir** fonctions retournent une valeur à virgule flottante qui représ
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **arrondir** qui acceptent et retournent **float** et **long** **double** valeurs. Dans un programme C, **arrondir** accepte et retourne toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges d' **arrondi** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **Round** prend toujours et retourne un **double**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -83,7 +86,7 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **a
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_round.c

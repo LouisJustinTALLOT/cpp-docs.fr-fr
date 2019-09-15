@@ -1,9 +1,9 @@
 ---
 title: fpclassify
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fpclassify
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,8 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - fpclassify
 - math/fpclassify
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-ms.openlocfilehash: a25897a110d96923a45695d61f923dc7818c7e3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9b5aa1f7dc20cc920a51c2c36371eb907469875
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287939"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957063"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -60,9 +61,9 @@ Valeur à virgule flottante à tester.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**fpclassify** retourne une valeur entière qui indique la classe à virgule flottante de l’argument *x*. Ce tableau montre les valeurs possibles retournées par **fpclassify**, défini dans \<math.h >.
+**fpclassify** retourne une valeur entière qui indique la classe à virgule flottante de l’argument *x*. Ce tableau montre les valeurs possibles retournées par **fpclassify**, \<définies dans Math. h >.
 
-|Value|Description|
+|Valeur|Description|
 |-----------|-----------------|
 |**FP_NAN**|NaN silencieux, signalant ou indéterminé|
 |**FP_INFINITE**|Infini positif ou négatif|
@@ -72,7 +73,7 @@ Valeur à virgule flottante à tester.
 
 ## <a name="remarks"></a>Notes
 
-En C, **fpclassify** est une macro ; en C++, **fpclassify** est une fonction surchargée à l’aide des types d’arguments de **float**, **double**, ou **long** **double**. Dans les deux cas, la valeur retournée dépend du type effectif de l’expression d’argument et non d’une représentation intermédiaire. Par exemple, un élément normal **double** ou **long** **double** valeur permettre devenir un nombre infini, denormal ou égal à zéro valeur lorsque converti en un **float**.
+En C, **fpclassify** est une macro ; dans C++, **fpclassify** est une fonction surchargée à l’aide des types d’arguments **float**, **double**ou **long** **double**. Dans les deux cas, la valeur retournée dépend du type effectif de l’expression d’argument et non d’une représentation intermédiaire. Par exemple, une valeur normale **double** ou **long** **double** peut devenir une valeur infinie, dénormalisée ou nulle lorsqu’elle est convertie en valeur **float**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -80,7 +81,7 @@ En C, **fpclassify** est une macro ; en C++, **fpclassify** est une fonction su
 |---------------------|---------------------------|-------------------------------|
 |**fpclassify**|\<math.h>|\<math.h> ou \<cmath>|
 
-Le **fpclassify** macro et **fpclassify** fonctions sont conformes à la norme ISO C99 et C ++ 11 spécifications. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La macro **fpclassify** et les fonctions **fpclassify** sont conformes aux spécifications ISO C99 et c++ 11. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

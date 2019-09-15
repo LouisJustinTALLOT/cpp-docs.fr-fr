@@ -1,14 +1,14 @@
 ---
 title: ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ctime64_s
 - _wctime32_s
 - ctime_s
 - _wctime64_s
 - _ctime32_s
 - _wctime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctime64_s
 - _ctime32_s
@@ -51,14 +54,14 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: 0410aeda4bbec33738d01a9514181c19f351e2c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d983ee4219985c7b213812a69f6f83f49dbf389b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288359"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942002"
 ---
-# <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
+# <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
 Convertissent une valeur de temps en une chaîne et ajustent les paramètres de fuseau horaire local. Il s’agit des versions de [ctime, _ctime64, _wctime, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -123,13 +126,13 @@ errno_t _wctime64_s(
 ### <a name="parameters"></a>Paramètres
 
 *buffer*<br/>
-Doit être suffisamment grand pour contenir 26 caractères. Un pointeur désignant le résultat de chaîne de caractères, ou **NULL** si :
+Doit être suffisamment grand pour contenir 26 caractères. Pointeur vers le résultat de chaîne de caractères, ou **null** si :
 
-- *sourceTime* représente une date antérieure au 1er janvier 1970 à minuit UTC.
+- *sourceTime* représente une date antérieure au 1er janvier 1970 à minuit, heure UTC.
 
-- Si vous utilisez **_ctime32_s** ou **_wctime32_s** et *sourceTime* représente une date postérieure à 23:59:59 le 18 janvier 2038, UTC.
+- Si vous utilisez **_ctime32_s** ou **_wctime32_s** et *sourceTime* représente une date postérieure 23:59:59 au 18 janvier 2038, UTC.
 
-- Si vous utilisez **_ctime64_s** ou **_wctime64_s** et *sourceTime* représente une date postérieure à 23:59:59 le 31 décembre 3000, UTC.
+- Si vous utilisez **_ctime64_s** ou **_wctime64_s** et *sourceTime* représente une date après le 23:59:59, le 31 décembre 3000, UTC.
 
 - Si vous utilisez **_ctime_s** ou **_wctime_s**, ces fonctions sont des wrappers pour les fonctions précédentes. Consultez la section Notes.
 
@@ -145,27 +148,27 @@ Zéro si l’opération réussit. En cas d’échec en raison d’un paramètre 
 
 ## <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*numberOfElements*|*sourceTime*|Retourner|Valeur dans *mémoire tampon*|
+|*buffer*|*numberOfElements*|*sourceTime*|Renvoie|Valeur dans la *mémoire tampon*|
 |--------------|------------------------|------------|------------|-----------------------|
 |**NULL**|any|any|**EINVAL**|Non modifiée|
-|Pas **NULL** (pointe vers une mémoire valide)|0|any|**EINVAL**|Non modifiée|
-|Pas **NULL**|0 < taille < 26|any|**EINVAL**|Chaîne vide|
-|Pas **NULL**|>= 26|NULL|**EINVAL**|Chaîne vide|
-|Pas **NULL**|>= 26|< 0|**EINVAL**|Chaîne vide|
+|not **null** (pointe vers une mémoire valide)|0|any|**EINVAL**|Non modifiée|
+|Non **null**|0 < taille < 26|any|**EINVAL**|Chaîne vide|
+|Non **null**|>= 26|NULL|**EINVAL**|Chaîne vide|
+|Non **null**|>= 26|< 0|**EINVAL**|Chaîne vide|
 
 ## <a name="remarks"></a>Notes
 
-Le **ctime_s** fonction convertit une valeur de temps stockée en tant qu’un [time_t](../../c-runtime-library/standard-types.md) structure dans une chaîne de caractères. Le *sourceTime* valeur est généralement obtenue à partir d’un appel à [temps](time-time32-time64.md), qui retourne le nombre de secondes écoulé depuis minuit (00 : 00:00), le 1er janvier 1970, temps universel coordonné (UTC). La chaîne de valeur de retour contient exactement 26 caractères et présente la forme suivante :
+La fonction **ctime_s** convertit une valeur de temps stockée en tant que structure [time_t](../../c-runtime-library/standard-types.md) en une chaîne de caractères. La valeur *sourceTime* est généralement obtenue à partir d’un appel à [Time](time-time32-time64.md), qui retourne le nombre de secondes écoulées depuis minuit (00:00:00), le 1er janvier 1970, le temps universel coordonné (UTC). La chaîne de valeur de retour contient exactement 26 caractères et présente la forme suivante :
 
 `Wed Jan 02 02:03:55 1980\n\0`
 
 Une horloge de 24 heures est utilisée. Tous les champs ont une largeur constante. Le caractère de saut de ligne (« \n ») et le caractère null (« \0 ») occupent les deux dernières positions de la chaîne.
 
-La chaîne de caractères convertie est également ajustée en fonction des paramètres de fuseau horaire local. Consultez le [temps](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md), et [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) fonctions pour plus d’informations sur la configuration de l’heure locale et le [_tzset](tzset.md) fonction pour plus d’informations sur la définition de l’environnement des fuseaux horaires et les variables globales.
+La chaîne de caractères convertie est également ajustée en fonction des paramètres de fuseau horaire local. Consultez les fonctions [Time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)et [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) pour plus d’informations sur la configuration de l’heure locale et la fonction [_tzset](tzset.md) pour plus d’informations sur la définition de l’environnement de fuseau horaire et des variables globales.
 
-**_wctime32_s** et **_wctime64_s** sont la version à caractères larges de **_ctime32_s** et **_ctime64_s**; renvoyant un pointeur vers une chaîne à caractères larges. Sinon, **_ctime64_s**, **_wctime32_s**, et **_wctime64_s** se comportent de façon identique **_ctime32_s**.
+**_wctime32_s** et **_wctime64_s** sont la version à caractères larges de **_ctime32_s** et **_ctime64_s**; retour d’un pointeur vers une chaîne de caractères larges. Sinon, **_ctime64_s**, **_wctime32_s**et **_wctime64_s** se comportent de la même façon que **_ctime32_s**.
 
-**ctime_s** est une fonction inline qui prend la valeur **_ctime64_s** et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** l’ancien 32-bit **time_t**, vous pouvez définir **_USE_32BIT_TIME_T**. Ainsi, **ctime_s** soit évaluée comme **_ctime32_s**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
+**ctime_s** est une fonction inline qui prend la valeur **_ctime64_s** et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t**32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. **Ctime_s** sera alors évalué à **_ctime32_s**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; celles-ci peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -190,7 +193,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_wctime_s.c

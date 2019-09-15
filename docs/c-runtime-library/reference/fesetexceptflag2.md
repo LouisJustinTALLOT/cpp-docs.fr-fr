@@ -1,9 +1,9 @@
 ---
 title: fesetexceptflag
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fesetexceptflag
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fesetexceptflag
 - fenv/fesetexceptflag
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-ms.openlocfilehash: 9ac79e790f0b1e7a89413a0d4974f6053c95616e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29a6b36b0744bec30463fe55df05fe26180b93fe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333993"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941088"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -45,7 +48,7 @@ int fesetexceptflag(
 ### <a name="parameters"></a>Paramètres
 
 *pstatus*<br/>
-Pointeur vers un **fexcept_t** objet contenant les valeurs pour définir des indicateurs d’état de l’exception. L’objet peut être défini par un appel précédent à [fegetexceptflag](fegetexceptflag2.md).
+Pointeur vers un objet **fexcept_t** contenant les valeurs pour lesquelles définir les indicateurs d’état d’exception. L’objet peut être défini par un appel précédent à [fegetexceptflag](fegetexceptflag2.md).
 
 *excepts*<br/>
 Indicateurs d’état d’exception de virgule flottante à définir.
@@ -56,7 +59,7 @@ Si tous les indicateurs d’état d’exception spécifiés sont définis correc
 
 ## <a name="remarks"></a>Notes
 
-Le **fesetexceptflag** fonction définit l’état des indicateurs d’état de l’exception de virgule flottante spécifié par *, sauf* pour les valeurs correspondantes définies le **fexcept_t** objet vers lequel pointe *pstatus*.  Elle ne déclenche pas les exceptions. Le *pstatus* pointeur doit pointer vers un valide **fexcept_t** objet ou le comportement suivant n’est pas défini. Le **fesetexceptflag** fonction prend en charge ces valeurs de macros d’exception dans *, sauf*, défini dans \<fenv.h > :
+La fonction **fesetexceptflag** définit l’état des indicateurs d’état d’exception de virgule flottante spécifiés par à l' *exception* des valeurs correspondantes définies dans l’objet **fexcept_t** pointé par *pstatus*.  Elle ne déclenche pas les exceptions. Le pointeur *pstatus* doit pointer vers un objet **fexcept_t** valide, ou le comportement suivant n’est pas défini. La fonction **fesetexceptflag** prend en charge ces valeurs de macros d’exception dans \< *except*, défini dans fenv. h >:
 
 |Macros d’exception|Description|
 |---------------------|-----------------|
@@ -67,7 +70,7 @@ Le **fesetexceptflag** fonction définit l’état des indicateurs d’état de 
 |FE_UNDERFLOW|Le résultat d’une opération à virgule flottante précédente était trop petit pour être représenté avec une précision complète ; une valeur dénormalisée a été créée.|
 |FE_ALLEXCEPT|Opération OR au niveau du bit de toutes les exceptions de virgule flottante prises en charge.|
 
-Le *, sauf* argument peut être égal à zéro, une des macros d’exception à virgule flottante prises en charge, ou l’opérateur de bits ou de deux ou plusieurs des macros. L’effet de toute autre valeur d’argument est indéfini.
+L’argument *EXCEPTS* peut être égal à zéro, l’une des macros d’exception de virgule flottante prises en charge ou l’opération de bits or d’au moins deux macros. L’effet de toute autre valeur d’argument est indéfini.
 
 Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
 

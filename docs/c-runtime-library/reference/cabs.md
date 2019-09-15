@@ -1,9 +1,9 @@
 ---
 title: _cabs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cabsl
 - _cabs
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 3e95b6f568ce66b8e9e5483bd1dcbcfaa7af3d28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341065"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943409"
 ---
-# <a name="cabs"></a>_cabs
+# <a name="_cabs"></a>_cabs
 
 Calcule la valeur absolue d’un nombre complexe.
 
@@ -54,11 +57,11 @@ Nombre complexe.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_cabs** retourne la valeur absolue de son argument en cas de réussite. En cas de dépassement, **_cabs** retourne **HUGE_VAL** et définit **errno** à **ERANGE**. Vous pouvez modifier la gestion des erreurs avec [_matherr](matherr.md).
+**_cabs** retourne la valeur absolue de son argument en cas de réussite. En cas de dépassement de capacité, **_cabs** retourne **HUGE_VAL** et définit **errno** sur **ERANGE**. Vous pouvez modifier la gestion des erreurs avec [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_cabs** fonction calcule la valeur absolue d’un nombre complexe, qui doit être une structure de type [_complex](../../c-runtime-library/standard-types.md). La structure *z* est composé d’un composant réel *x* et un composant imaginaire *y*. Un appel à **_cabs** génère une valeur équivalente à celle de l’expression `sqrt( z.x * z.x + z.y * z.y )`.
+La fonction **_cabs** calcule la valeur absolue d’un nombre complexe, qui doit être une structure de type [_complex](../../c-runtime-library/standard-types.md). La structure *z* est composée d’un composant réel *x* et d’un composant imaginaire *y*. Un appel à **_cabs** produit une valeur équivalant à celle de l' `sqrt( z.x * z.x + z.y * z.y )`expression.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -68,7 +71,7 @@ Le **_cabs** fonction calcule la valeur absolue d’un nombre complexe, qui doit
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_cabs.c

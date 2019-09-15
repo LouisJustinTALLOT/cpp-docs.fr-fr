@@ -1,11 +1,11 @@
 ---
 title: asinh, asinhf, asinhl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - asinh
 - asinhf
 - asinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asinhf
 - asinhl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4d93f121c0124293a5bdff9041d0adfaab5d83c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341780"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939639"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -58,21 +61,21 @@ Valeur à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **asinh** fonctions retournent le sinus hyperbolique inverse (arc le sinus hyperbolique) de *x*. Cette fonction est valide sur le domaine à virgule flottante. Si *x* est une valeur NaN silencieuse, indéfini, ou l’infini, la même valeur est retournée.
+Les fonctions **asinh** retournent le sinus hyperbolique inverse (arc sinus hyperbolique) de *x*. Cette fonction est valide sur le domaine à virgule flottante. Si *x* est une valeur NaN, indéfinie ou infinie silencieuse, la même valeur est retournée.
 
-|Entrée|Exception SEH|**_matherr** Exception|
+|Entrée|Exception SEH|_ **matherr** Titre|
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|none|none|
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous utilisez C++, vous pouvez appeler des surcharges de **asinh** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **asinh** accepte et retourne toujours **double**.
+Lorsque vous utilisez C++, vous pouvez appeler des surcharges de **asinh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **asinh** accepte et retourne toujours la valeur **double**.
 
 ## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C requis|En-tête C++ requis|
 |--------------|--------------|------------------|
-|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath > ou \<math.h <|
+|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath > ou \<Math. h <|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

@@ -1,9 +1,9 @@
 ---
 title: div, ldiv, lldiv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - div
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - div
 helpviewer_keywords:
@@ -25,12 +28,12 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 0ee1b3b6a5d7b15470ffe1e667b4077d1f9581e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b40fa0c4cc9cdf0c0de0f6af21da04b0c70369f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339258"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937692"
 ---
 # <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
 
@@ -74,13 +77,13 @@ Dénominateur.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**div** appelée à l’aide des arguments de type **int** retourne une structure de type **div_t**, qui comprend le quotient et le reste. La valeur de retour avec des arguments de type **long** est **ldiv_t**et la valeur de retour avec des arguments de type **long** **long** est **lldiv_t**. **div_t**, **ldiv_t**, et **lldiv_t** sont définis dans \<stdlib.h >.
+la **balise div** appelée à l’aide d’arguments de type **int** retourne une structure de type **div_t**, qui comprend le quotient et le reste. La valeur de retour avec des arguments de type **long** est **ldiv_t**, et la valeur de retour avec des arguments de type **long** **long est** **lldiv_t**. **div_t**, **ldiv_t**et **lldiv_t** sont définis dans \<stdlib. h >.
 
 ## <a name="remarks"></a>Notes
 
-Le **div** fonction divise *nombre* par *denom* et ce qui calcule le quotient et le reste. Le [div_t](../../c-runtime-library/standard-types.md) structure contient le quotient, **quot**et le reste, **rem**. Le signe du quotient est identique à celui du quotient mathématique. Sa valeur absolue est le plus grand entier qui est inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.
+La fonction **div** divise le *chiffre* par *denom* et calcule donc le quotient et le reste. La structure [div_t](../../c-runtime-library/standard-types.md) contient le quotient, le **guillemet**et le reste, **REM**. Le signe du quotient est identique à celui du quotient mathématique. Sa valeur absolue est le plus grand entier qui est inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.
 
-Les surcharges de **div** qui acceptent des arguments de type **long** ou **long** **long** sont uniquement disponibles pour le code C++. Les types de retour [ldiv_t](../../c-runtime-library/standard-types.md) et [lldiv_t](../../c-runtime-library/standard-types.md) contient des membres **quot** et **rem**, qui ont la même signification que les membres de **div_t**.
+Les surcharges de **div** qui **prennent des arguments** de type **long** **ou long long sont** uniquement disponibles C++ pour le code. Les types de retour [ldiv_t](../../c-runtime-library/standard-types.md) et [lldiv_t](../../c-runtime-library/standard-types.md) contiennent les membres **quote** et **REM**, qui ont la même signification que les membres de **div_t**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -90,7 +93,7 @@ Les surcharges de **div** qui acceptent des arguments de type **long** ou **long
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_div.c

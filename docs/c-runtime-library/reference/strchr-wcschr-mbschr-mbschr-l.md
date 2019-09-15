@@ -1,12 +1,12 @@
 ---
 title: strchr, wcschr, _mbschr, _mbschr_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strchr
 - wcschr
 - _mbschr_l
 - _mbschr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftcschr
 - strchr
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-ms.openlocfilehash: 8668c186a16dc3f3dc2c7223eb10c100fa6d72fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb0b170473ae48b8d339f5e3db8350087997bfeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354261"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940827"
 ---
-# <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
+# <a name="strchr-wcschr-_mbschr-_mbschr_l"></a>strchr, wcschr, _mbschr, _mbschr_l
 
 Recherche un caractère dans une chaîne en utilisant les paramètres régionaux actifs ou une catégorie d’état de conversion LC_CTYPE spécifiée.
 
@@ -124,17 +127,17 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne un pointeur désignant la première occurrence de *c* dans *str*, ou NULL si *c* est introuvable.
+Chacune de ces fonctions retourne un pointeur vers la première occurrence de *c* dans *Str*, ou null si *c* est introuvable.
 
 ## <a name="remarks"></a>Notes
 
-Le `strchr` fonction recherche la première occurrence de *c* dans *str*, ou valeur NULL est retournée si *c* est introuvable. Le caractère Null de fin est inclus dans la recherche.
+La `strchr` fonction recherche la première occurrence de *c* dans *Str*ou retourne la valeur null si *c* est introuvable. Le caractère Null de fin est inclus dans la recherche.
 
-`wcschr`, `_mbschr` et `_mbschr_l` sont des versions à caractères larges et à caractères multioctets de `strchr`. Les arguments et la valeur de retour de `wcschr` sont des chaînes de caractères larges ; ceux de `_mbschr` sont des chaînes de caractères multioctets. `_mbschr` reconnaît les séquences de caractères multioctets. De même, si la chaîne est un pointeur Null, `_mbschr` appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `_mbschr` renvoie la valeur NULL et définit `errno` à EINVAL. `strchr` et `wcschr` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
+`wcschr`, `_mbschr` et `_mbschr_l` sont des versions à caractères larges et à caractères multioctets de `strchr`. Les arguments et la valeur de retour de `wcschr` sont des chaînes de caractères larges ; ceux de `_mbschr` sont des chaînes de caractères multioctets. `_mbschr` reconnaît les séquences de caractères multioctets. De même, si la chaîne est un pointeur Null, `_mbschr` appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se `_mbschr` poursuivre, retourne null `errno` et définit sur EINVAL. `strchr` et `wcschr` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie LC_CTYPE des paramètres régionaux ; Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie LC_CTYPE des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-En C, ces fonctions prennent une **const** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non -**const** retourne un pointeur vers non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS est défini si les deux le **const** et non-**const** versions de ces fonctions sont disponibles. Si vous avez besoin non -**const** comportement pour les deux C++ surcharges, définissez le symbole _CONST_RETURN.
+En C, ces fonctions acceptent un pointeur **const** pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non**const** retourne un pointeur vers non**const**. La macro _CRT_CONST_CORRECT_OVERLOADS est définie si les versions **const** et non**const** de ces fonctions sont disponibles. Si vous avez besoin du comportement non**const** pour les C++ deux surcharges, définissez le symbole _CONST_RETURN.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

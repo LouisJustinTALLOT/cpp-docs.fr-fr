@@ -1,12 +1,12 @@
 ---
 title: strtof, _strtof_l, wcstof, _wcstof_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _strtof_l
 - wcstof
 - strtof
 - _wcstof_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstof
 - _tcstof_l
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: 10a50a175685f3e8f7f1241683c7705fd9a9b142
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2b2e7d230074b5a464260d36b41c28b9951d65b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376430"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957750"
 ---
-# <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
+# <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
 Convertit les chaînes en valeur à virgule flottante simple précision.
 
@@ -85,15 +88,15 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**strtof** retourne la valeur du nombre à virgule flottante, sauf lorsque la représentation entraînerait un dépassement de capacité, dans lequel cas la fonction retourne +/-**HUGE_VALF**. Le signe de **HUGE_VALF** correspond au signe de la valeur ne peut pas être représenté. **strtof** retourne 0 si aucune conversion ne peut être effectuée ou de dépassement de capacité négatif se produit.
+**strtof** retourne la valeur du nombre à virgule flottante, sauf lorsque la représentation provoque un dépassement de capacité, auquel cas la fonction retourne +/-**HUGE_VALF**. Le signe de **HUGE_VALF** correspond au signe de la valeur qui ne peut pas être représentée. **strtof** retourne 0 si aucune conversion ne peut être effectuée ou si un dépassement de capacité négatif se produit.
 
-**wcstof** retourne des valeurs de façon analogue à **strtof**. Pour les deux fonctions, **errno** a la valeur **ERANGE** si dépassement de capacité positif ou négatif se produit et le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+**wcstof** retourne des valeurs de façon analogue à **strtof**. Pour les deux fonctions, **errno** a la valeur **ERANGE** si le dépassement de capacité positif ou négatif se produit et que le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Chaque fonction convertit la chaîne d’entrée *strSource* à un **float**. Le **strtof** fonction convertit *strSource* à une valeur simple précision. **strtof** arrête la lecture de la chaîne *strSource* au premier caractère qu’il ne peut pas identifier comme partie d’un nombre. Il peut s’agir du caractère Null de fin. **wcstof** est une version à caractères larges de **strtof**; son *strSource* argument est une chaîne de caractères larges. Sinon, ces fonctions se comportent de façon identique.
+Chaque fonction convertit la chaîne d’entrée *strSource* en valeur **float**. La fonction **strtof** convertit *strSource* en valeur à précision simple. **strtof** arrête de lire la chaîne *strSource* au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Il peut s’agir du caractère Null de fin. **wcstof** est une version à caractères larges de **strtof**; son argument *strSource* est une chaîne de caractères larges. Sinon, ces fonctions se comportent de façon identique.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -102,17 +105,17 @@ Chaque fonction convertit la chaîne d’entrée *strSource* à un **float**. Le
 |**_tcstof**|**strtof**|**strtof**|**wcstof**|
 |**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
-Le **LC_NUMERIC** paramètre de catégorie de paramètres régionaux actuels détermine la reconnaissance du caractère de base dans *strSource*; pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les fonctions qui n’ont pas la **_l** suffixe utiliser les paramètres régionaux actifs ; celles qui ont le suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux qui sont passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Le paramètre de catégorie **LC_NUMERIC** des paramètres régionaux actuels détermine la reconnaissance du caractère de base dans *strSource*; Pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les fonctions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels. celles qui ont le suffixe sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Si *endptr* n’est pas **NULL**, un pointeur désignant le caractère qui a arrêté l’analyse est stocké à l’emplacement désigné par *endptr*. Si aucune conversion ne peut être effectuée (aucun chiffre valide a été trouvé ou une base non valide a été spécifiée), la valeur de *strSource* est stocké à l’emplacement désigné par *endptr*.
+Si *endptr* n’a pas la **valeur null**, un pointeur vers le caractère qui a arrêté l’analyse est stocké à l’emplacement désigné par *endptr*. Si aucune conversion ne peut être effectuée (aucun chiffre valide n’a été trouvé ou une base non valide a été spécifiée), la valeur de *strSource* est stockée à l’emplacement désigné par *endptr*.
 
-**strtof** attend *strSource* pour pointer vers une chaîne au format suivant :
+**strtof** attend que *strSource* pointe vers une chaîne au format suivant :
 
-[*whitespace*] [*sign*] [*digits*] [__.__*digits*] [{**e** &#124; **E**} [*sign*] *digits*]
+[*whitespace*] [*sign*] [*digits*] [ __.__ *digits*] [{**e** &#124; **E**} [*sign*] *digits*]
 
-Un *espace blanc* peut se composer d’espaces et tabulations, qui sont ignorés ; *connexion* est soit plus (**+**) ou moins (**-**) ; et *chiffres* représente un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivies d’un exposant, qui se compose d’une lettre d’introduction (**e** ou **E**) et un entier signé si vous le souhaitez. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.
+Un espace *blanc* peut se composer d’espaces et de caractères de tabulation, qui sont ignorés ; *Sign* est un signe plus **+** () ou moins **-** (); et les *chiffres* correspondent à un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**e** ou **e**) et d’un entier signé éventuellement. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.
 
-Les versions UCRT de ces fonctions ne prennent pas en charge la conversion de style Fortran (**d** ou **D**) lettres d’exposants. Cette extension non standard était prise en charge par les versions antérieures de la bibliothèque CRT et peut être une modification avec rupture pour votre code.
+Les versions UCRT de ces fonctions ne prennent pas en charge la conversion des lettres d’exposant de style Fortran (**d** ou **d**). Cette extension non standard était prise en charge par les versions antérieures de la bibliothèque CRT et peut être une modification avec rupture pour votre code.
 
 ## <a name="requirements"></a>Configuration requise
 

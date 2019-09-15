@@ -1,9 +1,9 @@
 ---
 title: _ecvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _ecvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ecvt_s
 - _ecvt_s
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: 0123c618eb5ba614bd8e5b5b3f1f4b0aff539c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c50200d16a5e542c247d1c85f8c104381af4a883
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288247"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937724"
 ---
-# <a name="ecvts"></a>_ecvt_s
+# <a name="_ecvt_s"></a>_ecvt_s
 
-Convertit un **double** nombre en une chaîne. Il s’agit d’une version de [_ecvt](ecvt.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Convertit un nombre **double** en une chaîne. Il s’agit d’une version de [_ecvt](ecvt.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,30 +84,30 @@ Signe du nombre converti.
 
 Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un code d’erreur. Les codes d’erreur sont définis dans Errno.h. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-En cas de paramètre non valide, comme indiqué dans le tableau suivant, cette fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **EINVAL**.
+En cas de paramètre non valide, comme indiqué dans le tableau suivant, cette fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Valeur de retour|Valeur dans *mémoire tampon*|
+|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Valeur de retour|Valeur dans la *mémoire tampon*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
 |**NULL**|any|any|any|any|any|**EINVAL**|Non modifiée.|
-|Pas **NULL** (pointe vers une mémoire valide)|<=0|any|any|any|any|**EINVAL**|Non modifiée.|
+|not **null** (pointe vers une mémoire valide)|<=0|any|any|any|any|**EINVAL**|Non modifiée.|
 |any|any|any|any|**NULL**|any|**EINVAL**|Non modifiée.|
 |any|any|any|any|any|**NULL**|**EINVAL**|Non modifiée.|
 
 ## <a name="security-issues"></a>Problèmes de sécurité
 
-**_ecvt_s** peut générer une violation d’accès si *tampon* ne pointe pas vers une mémoire valide et n’est pas **NULL**.
+**_ecvt_s** peut générer une violation d’accès si la *mémoire tampon* ne pointe pas vers une mémoire valide et n’a pas la **valeur null**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_ecvt_s** fonction convertit un nombre à virgule flottante en une chaîne de caractères. Le *_Value* paramètre correspond au nombre à virgule flottante à convertir. Cette fonction stocke jusqu'à *nombre* chiffres de *_Value* sous forme de chaîne et ajoute un caractère null ('\0'). Si le nombre de chiffres dans *_Value* dépasse *_Count*, le chiffre de poids faible est arrondi. S’il existe moins de *nombre* chiffres, la chaîne est remplie de zéros.
+La fonction **_ecvt_s** convertit un nombre à virgule flottante en une chaîne de caractères. Le paramètre _ *value* est le nombre à virgule flottante à convertir. Cette fonction stocke jusqu’à *Count* chiffres de _ *value* sous forme de chaîne et ajoute un caractère null (' \ 0 '). Si le nombre de chiffres dans _ *value* dépasse *_count*, le chiffre de poids faible est arrondi. Si le *nombre* de chiffres est inférieur à, la chaîne est complétée par des zéros.
 
-Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de *_Value* peut être obtenu à partir de *_Dec* et *_se* après l’appel. Le *_Dec* paramètre pointe vers une valeur entière indiquant la position de la virgule décimale par rapport au début de la chaîne. Une valeur entière ou 0 indique que la virgule décimale est située à gauche du premier chiffre. Le *_se* paramètre pointe vers un entier qui indique le signe du nombre converti. Si la valeur entière est 0, le nombre est positif. Sinon, le nombre est négatif.
+Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de _ *value* peuvent être obtenus à partir de *_Dec* et *_Sign* après l’appel. Le paramètre *_Dec* pointe vers une valeur entière indiquant la position de la virgule décimale par rapport au début de la chaîne. Une valeur entière ou 0 indique que la virgule décimale est située à gauche du premier chiffre. Le paramètre *_Sign* pointe vers un entier qui indique le signe du nombre converti. Si la valeur entière est 0, le nombre est positif. Sinon, le nombre est négatif.
 
-Une mémoire tampon de longueur **_CVTBUFSIZE** est suffisante pour n’importe quelle valeur à virgule flottante.
+Une mémoire tampon de longueur **_CVTBUFSIZE** est suffisante pour toute valeur à virgule flottante.
 
-La différence entre **_ecvt_s** et **_fcvt_s** est dans l’interprétation de la *_Count* paramètre. **_ecvt_s** interprète *_Count* comme le nombre total de chiffres dans la chaîne de sortie, tandis que **_fcvt_s** interprète *_Count* en tant que le nombre de chiffres après la virgule décimale.
+La différence entre **_ecvt_s** et **_fcvt_s** est l’interprétation du paramètre *_count* . **_ecvt_s** interprète *_count* comme le nombre total de chiffres dans la chaîne de sortie, tandis que **_fcvt_s** interprète *_count* comme le nombre de chiffres après la virgule décimale.
 
 En C++, l’utilisation de cette fonction est simplifiée par une surcharge de modèle ; la surcharge peut déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -118,7 +121,7 @@ La version de débogage de cette fonction remplit d’abord la mémoire tampon a
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // ecvt_s.c

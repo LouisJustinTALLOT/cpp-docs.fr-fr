@@ -1,11 +1,11 @@
 ---
 title: _Cmulcr, _FCmulcr, _LCmulcr
 ms.date: 03/30/2018
-apiname:
+api_name:
 - _Cmulcr
 - _FCmulcr
 - _LCmulcr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _Cmulcr
 - _FCmulcr
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - _Cmulcr function
 - _FCmulcr function
 - _LCmulcr function
-ms.openlocfilehash: ce45b1b1081faba18d8532d3a55d1be877cf84e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbff1c2cb0e66da77b6fdc8127b78fb475aa5080
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340402"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942898"
 ---
-# <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
+# <a name="_cmulcr-_fcmulcr-_lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
 
 Multiplie un nombre complexe par un nombre à virgule flottante.
 
@@ -54,15 +57,15 @@ _Lcomplex _LCmulcr( _Lcomplex x, long double y );
 Un des opérandes complexes à multiplier.
 
 *y*<br/>
-L’opérande à virgule flottante à multiplier.
+Opérande à virgule flottante à multiplier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Un **_Dcomplex**, **_Fcomplex**, ou **_Lcomplex** structure qui représente le produit complex du nombre complexe *x* et nombre à virgule flaoting *y*.
+Structure **_Dcomplex**, **_Fcomplex**ou **_Lcomplex** qui représente le produit complexe du nombre complexe *x* et du nombre de points de flaoting *y*.
 
 ## <a name="remarks"></a>Notes
 
-Étant donné que les opérateurs arithmétiques intégrés ne fonctionnent pas sur l’implémentation Microsoft des types complexes, le **_Cmulcr**, **_FCmulcr**, et **_LCmulcr** fonctions Simplifiez la multiplication des types complexes par des types à virgule flottante.
+Étant donné que les opérateurs arithmétiques intégrés ne fonctionnent pas sur l’implémentation Microsoft des types complexes, les fonctions **_Cmulcr**, **_FCmulcr**et **_LCmulcr** simplifient la multiplication des types complexes par les types à virgule flottante.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -70,7 +73,7 @@ Un **_Dcomplex**, **_Fcomplex**, ou **_Lcomplex** structure qui représente le p
 |-------------|--------------|------------------|
 |**_Cmulcr**, **_FCmulcr**, **_LCmulcr**|\<complex.h>|\<complex.h>|
 
-Ces fonctions sont spécifiques à Microsoft. Les types **_Dcomplex**, **_Fcomplex**, et **_Lcomplex** sont équivalents spécifiques à Microsoft pour les types natifs C99 non implémentées **double _Complex** , **float _Complex**, et **long double _Complex**, respectivement. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Ces fonctions sont spécifiques à Microsoft. Les types **_Dcomplex**, **_Fcomplex**et **_Lcomplex** sont des équivalents spécifiques de Microsoft aux types natifs C99 non implémentés **double _Complex**, **float _Complex**et **long double _Complex**, respectivement. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

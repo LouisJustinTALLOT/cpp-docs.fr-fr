@@ -1,10 +1,10 @@
 ---
 title: _CrtDbgReport, _CrtDbgReportW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtDbgReport
 - _CrtDbgReportW
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtDbgReport
 - CrtDbgReportW
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - CrtDbgReportW function
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
-ms.openlocfilehash: b5579a8996950c5f3e923f67ed2a5e667bb566fa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 986777f755a749e858f7e51b5aa19f10090db13a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500000"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938836"
 ---
 # <a name="_crtdbgreport-_crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -63,7 +66,7 @@ int _CrtDbgReportW(
 ### <a name="parameters"></a>Paramètres
 
 *reportType*<br/>
-Type de rapport: **_CRT_WARN**, **_CRT_ERROR**et **_CRT_ASSERT**.
+Type de rapport : **_CRT_WARN**, **_CRT_ERROR**et **_CRT_ASSERT**.
 
 *filename*<br/>
 Pointeur vers le nom du fichier source où l’assertion/rapport s’est produit ou **null**.
@@ -84,11 +87,11 @@ Arguments de substitution facultatifs utilisés par le *format*.
 
 Pour toutes les destinations de rapport, _ **CrtDbgReport** et **_CrtDbgReportW** retournent-1 si une erreur se produit et 0 si aucune erreur n’est rencontrée. Cependant, quand la destination du rapport est une fenêtre de message de débogage et que l’utilisateur clique sur le bouton **Réessayer**, ces fonctions retournent 1. Si l’utilisateur clique sur le bouton **Abandonner** dans la fenêtre Message de débogage, ces fonctions sont immédiatement abandonnées et ne retournent aucune valeur.
 
-Les macros de débogage [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) appellent _ **CrtDbgReport** pour générer leurs rapports de débogage. Les versions à caractères larges de ces macros, ainsi que _ Assert [,](assert-asserte-assert-expr-macros.md)_ asserte, [_RPTW](rpt-rptf-rptw-rptfw-macros.md) et [_RPTFW](rpt-rptf-rptw-rptfw-macros.md), utilisent **_CrtDbgReportW** pour générer leurs rapports de débogage. Quand _ **CrtDbgReport** ou **_CrtDbgReportW** retourne 1, ces macros démarrent le débogueur, à condition que le débogage juste-à-temps (JIT) soit activé.
+Les macros de débogage [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) appellent _ **CrtDbgReport** pour générer leurs rapports de débogage. Les versions à caractères larges de ces macros, ainsi que _ Assert [, _ ASserte](assert-asserte-assert-expr-macros.md), [_RPTW](rpt-rptf-rptw-rptfw-macros.md) et [_RPTFW](rpt-rptf-rptw-rptfw-macros.md), utilisent **_CrtDbgReportW** pour générer leurs rapports de débogage. Quand _ **CrtDbgReport** ou **_CrtDbgReportW** retourne 1, ces macros démarrent le débogueur, à condition que le débogage juste-à-temps (JIT) soit activé.
 
 ## <a name="remarks"></a>Notes
 
-_ **CrtDbgReport** et **_CrtDbgReportW** peuvent envoyer le rapport de débogage vers trois destinations différentes: un fichier de rapport de débogage, un moniteur de débogage (le débogueur Visual Studio) ou une fenêtre de message de débogage. Deux fonctions de configuration, [_CrtSetReportMode](crtsetreportmode.md) et [_CrtSetReportFile](crtsetreportfile.md), sont utilisées pour spécifier la ou les destinations de chaque type de rapport. Ces fonctions permettent de contrôler séparément la ou les destinations de chaque type de rapport. Par exemple, il est possible de spécifier qu’un *reportType* de **_CRT_WARN** est envoyé à l’analyse de débogage uniquement, tandis qu’un *reportType* de **_CRT_ASSERT** être envoyé à une fenêtre de message de débogage et à un fichier de rapport défini par l’utilisateur.
+_ **CrtDbgReport** et **_CrtDbgReportW** peuvent envoyer le rapport de débogage vers trois destinations différentes : un fichier de rapport de débogage, un moniteur de débogage (le débogueur Visual Studio) ou une fenêtre de message de débogage. Deux fonctions de configuration, [_CrtSetReportMode](crtsetreportmode.md) et [_CrtSetReportFile](crtsetreportfile.md), sont utilisées pour spécifier la ou les destinations de chaque type de rapport. Ces fonctions permettent de contrôler séparément la ou les destinations de chaque type de rapport. Par exemple, il est possible de spécifier qu’un *reportType* de **_CRT_WARN** est envoyé à l’analyse de débogage uniquement, tandis qu’un *reportType* de **_CRT_ASSERT** être envoyé à une fenêtre de message de débogage et à un fichier de rapport défini par l’utilisateur.
 
 **_CrtDbgReportW** est la version à caractères larges de _ **CrtDbgReport**. Tous ses paramètres de sortie et de chaîne se trouvent dans des chaînes à caractères larges ; sinon, il est identique à la version à caractères codés sur un octet.
 
@@ -121,7 +124,7 @@ _ **CrtDbgReport** et **_CrtDbgReportW** sont des extensions Microsoft. Pour plu
 
 Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_crtdbgreport.c

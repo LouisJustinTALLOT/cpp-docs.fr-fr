@@ -1,10 +1,10 @@
 ---
 title: _ungetc_nolock, _ungetwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ungetwc_nolock
 - _ungetc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungettc_nolock
 - ungetwc_nolock
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: 55888f122af0848c92204168a23cca93e2517904
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4228a573a0277c9bacc8beea81cbff6a70e3fe83
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268882"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945928"
 ---
-# <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
+# <a name="_ungetc_nolock-_ungetwc_nolock"></a>_ungetc_nolock, _ungetwc_nolock
 
 Renvoie un caractère dans le flux via une transmission de type push.
 
@@ -66,13 +69,13 @@ Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si réussite, chacune de ces fonctions retourne l’argument de caractère *c*. Si *c* ne peut pas être déplacé ou si aucun caractère n’a été lu, le flux d’entrée est inchangé et **_ungetc_nolock** retourne **EOF**; **_ungetwc_nolock** retourne **WEOF**. Si *flux* est **NULL**, **EOF** ou **WEOF** est retourné et **errno** est défini sur  **EINVAL**.
+En cas de réussite, chacune de ces fonctions retourne l’argument de caractère *c*. Si *c* ne peut pas faire l’objet d’un push ou si aucun caractère n’a été lu, le flux d’entrée est inchangé et **_ungetc_nolock** retourne **EOF**; **_ungetwc_nolock** retourne **WEOF**. Si *Stream* a la **valeur null**, **EOF** ou **WEOF** est retourné et **errno** a la valeur **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions sont sans verrouillage versions de **ungetc** et **ungetwc**. Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Elles peuvent être plus rapides, car elles n’entraînent pas la surcharge liée au verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+Ces fonctions sont des versions sans verrouillage de **ungetc** et **ungetwc**. Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Elles peuvent être plus rapides, car elles n’entraînent pas la surcharge liée au verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

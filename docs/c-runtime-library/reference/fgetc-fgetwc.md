@@ -1,10 +1,10 @@
 ---
 title: fgetc, fgetwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fgetwc
 - fgetc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgettc
 - fgetwc
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92f44c65802f3baed37078574577bf108bbcd09a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334006"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940894"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -59,15 +62,15 @@ Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**fgetc** retourne le caractère lu comme un **int** ou retourne **EOF** pour indiquer une erreur ou la fin du fichier. **fgetwc** retourne, comme un [wint_t](../../c-runtime-library/standard-types.md), le caractère large qui correspond au caractère lu ou retourne **WEOF** pour indiquer une erreur ou la fin du fichier. Pour les deux fonctions, utilisez **feof** ou **ferror** faire la distinction entre une erreur et une condition de fin de fichier. Si une erreur de lecture se produit, l’indicateur d’erreur pour le flux est défini. Si *flux* est **NULL**, **fgetc** et **fgetwc** appellent le Gestionnaire de paramètre non valide, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retourner **EOF**.
+**fgetc** retourne le caractère lu en tant que **int** ou retourne **EOF** pour indiquer une erreur ou la fin du fichier. **fgetwc** retourne, sous la forme d’un [wint_t](../../c-runtime-library/standard-types.md), le caractère élargi qui correspond au caractère lu ou retourne **WEOF** pour indiquer une erreur ou la fin du fichier. Pour les deux fonctions, utilisez feof **ou un** pour faire la distinction entre une erreur et une condition de fin de fichier. Si une erreur de lecture se produit, l’indicateur d’erreur pour le flux est défini. Si *Stream* a la **valeur null**, **fgetc** et **fgetwc** appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent **EOF**.
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions lit un caractère unique à partir de la position actuelle du fichier associé à *flux*. Ensuite, la fonction incrémente le pointeur de fichier associé (si défini) pour désigner le caractère suivant. Si le flux est à la fin du fichier, l’indicateur de fin de fichier pour le flux est défini.
+Chacune de ces fonctions lit un caractère unique à partir de la position actuelle du fichier associé au *flux*. Ensuite, la fonction incrémente le pointeur de fichier associé (si défini) pour désigner le caractère suivant. Si le flux est à la fin du fichier, l’indicateur de fin de fichier pour le flux est défini.
 
-**fgetc** équivaut à **getc**, mais est implémentée uniquement comme une fonction, plutôt que comme une fonction et une macro.
+**fgetc** est équivalent à **GETC**, mais est implémenté uniquement comme une fonction, plutôt que comme une fonction et une macro.
 
-**fgetwc** est la version à caractères larges de **fgetc**; il lit **c** comme un caractère multioctet ou large selon que *flux* est ouvert dans mode texte ou binaire.
+**fgetwc** est la version à caractères larges de **fgetc**; Il lit **c** sous la forme d’un caractère multioctet ou d’un caractère élargi selon que le *flux* est ouvert en mode texte ou binaire.
 
 Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads.
 
@@ -125,7 +128,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetctxt"></a>Entrée : crt_fgetc.txt
+## <a name="input-crt_fgetctxt"></a>Entrée : crt_fgetc.txt
 
 ```Input
 Line one.

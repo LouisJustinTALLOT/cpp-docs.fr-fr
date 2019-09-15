@@ -1,7 +1,7 @@
 ---
 title: Fonctions et variables globales CRT internes
 ms.date: 01/22/2019
-apiname:
+api_name:
 - __acrt_iob_func
 - __AdjustPointer
 - _assert
@@ -277,7 +277,7 @@ apiname:
 - _wsopen_dispatch
 - _Xbad_alloc
 - _Xlength_error
-apilocation:
+api_location:
 - api-ms-win-crt-math-l1-1-0.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
@@ -294,7 +294,10 @@ apilocation:
 - msvcp140_app.dll
 - ntdll.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __acrt_iob_func
 - __AdjustPointer
@@ -848,12 +851,12 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 462b9d80b61b8bda3afc5aec4d819e355adbbbd7
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 252065039597b6176b42008b31b7082740bcc265
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746810"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940243"
 ---
 # <a name="internal-crt-globals-and-functions"></a>Fonctions et variables globales CRT internes
 
@@ -863,7 +866,7 @@ La bibliothèque Runtime C (CRT) contient des fonctions et des variables globale
 
 Ces variables globales et définitions de macro permettent d'implémenter la bibliothèque CRT.
 
-|Name|
+|Nom|
 |----------|
 |__badioinfo|
 |[_acmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|

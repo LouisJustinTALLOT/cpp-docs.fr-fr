@@ -1,9 +1,9 @@
 ---
 title: _set_errno
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_errno
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_errno
 - _set_errno
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - set_errno function
 - _set_errno function
 ms.assetid: d338914a-1894-4cf3-ae45-f2c4eb26590b
-ms.openlocfilehash: f8dace04a5328c423af21327eb540abc8b062e86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09800276886ecf1c2fdd2ffee63ddcb8cc57f61e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356587"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948603"
 ---
-# <a name="seterrno"></a>_set_errno
+# <a name="_set_errno"></a>_set_errno
 
-Définissez la valeur de la **errno** (variable globale).
+Définissez la valeur de la variable globale **errno** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,7 +47,7 @@ errno_t _set_errno( int error_value );
 ### <a name="parameters"></a>Paramètres
 
 *error_value*<br/>
-La nouvelle valeur de **errno**.
+Nouvelle valeur de **errno**.
 
 ## <a name="return-value"></a>Valeur de retour
 

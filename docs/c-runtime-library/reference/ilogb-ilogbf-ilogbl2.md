@@ -1,11 +1,11 @@
 ---
 title: ilogb, ilogbf, ilogbl2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - ilogb
 - ilogbf
 - ilogbl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ilogb
 - ilogbf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: 272544124dd8a8a666fc434516d3c45c73b1d011
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdafba039537358c9b6a1de21dc176ceea38b4fa
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331673"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954762"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -72,22 +75,22 @@ Valeur spécifiée.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne l’exposant de base 2 de *x* comme signé **int** valeur.
+En cas de réussite, retourne l’exposant de base 2 de *x* sous la forme d’une valeur **int** signée.
 
 Sinon, retourne une des valeurs suivantes, définies dans \<math.h> :
 
 |Entrée|Résultat|
 |-----------|------------|
 |±0|FP_ILOGB0|
-|±inf, ±nan, indefinite|FP_ILOGBNAN|
+|\+ INF, ± Nan, indéfini|FP_ILOGBNAN|
 
 Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **ilogb** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **ilogb** accepte et retourne toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **ilogb** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **ilogb** accepte et retourne toujours un **double**.
 
-Appel de cette fonction ressemble à appeler l’équivalent **logb** (fonction), puis un cast de la valeur de retour pour **int**.
+L’appel de cette fonction est similaire à l’appel de la fonction **logb** équivalente, puis au cast de la valeur de retour en **int**.
 
 ## <a name="requirements"></a>Configuration requise
 

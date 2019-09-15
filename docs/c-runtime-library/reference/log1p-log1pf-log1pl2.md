@@ -1,11 +1,11 @@
 ---
 title: log1p, log1pf, log1pl2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log1p
 - log1pf
 - log1pl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - log1p
 - log1pf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: 2ac864d7e28823c95b0202c0a8f2454d03c64aff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aad6675a832e1715c505026fe11ffe77f1f6d275
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285984"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953218"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -72,7 +75,7 @@ Argument à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne le naturel (base -*e*) dans le journal de (*x* + 1).
+En cas de réussite, retourne le logarithme naturel (base-*e*) de (*x* + 1).
 
 Sinon, peut retourner l’une des valeurs suivantes :
 
@@ -85,17 +88,17 @@ Sinon, peut retourner l’une des valeurs suivantes :
 |< -1|nan|INVALID|EDOM|
 |-inf|nan|INVALID|EDOM|
 |±SNaN|Identique à l’entrée|INVALID||
-|±QNaN, indefinite|Identique à l’entrée|||
+|± QNaN, indéfini|Identique à l’entrée|||
 
-Le **errno** a la valeur ERANGE si *x* = -1. Le **errno** a la valeur **EDOM** si *x* < -1.
+La valeur **errno** est définie sur ERANGE si *x* =-1. La valeur **errno** est définie sur **EDOM** si *x* <-1.
 
 ## <a name="remarks"></a>Notes
 
-Le **log1p** fonctions peuvent être plus précises que l’utilisation de `log(x + 1)` lorsque *x* est proche de 0.
+Les fonctions **log1p** peuvent être plus précises que l' `log(x + 1)` utilisation de lorsque *x* est proche de 0.
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **log1p** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **log1p** accepte et retourne toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **log1p** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **log1p** accepte et retourne toujours un **double**.
 
-Si *x* est un nombre naturel, cette fonction retourne le logarithme de la factorielle de (*x* - 1).
+Si *x* est un nombre naturel, cette fonction retourne le logarithme de la factorielle de (*x* -1).
 
 ## <a name="requirements"></a>Configuration requise
 

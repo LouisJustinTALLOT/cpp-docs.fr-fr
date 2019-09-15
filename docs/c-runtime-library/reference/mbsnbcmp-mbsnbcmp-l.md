@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcmp, _mbsnbcmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcmp
 - _mbsnbcmp_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcmp
 - tcsnbmp
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-ms.openlocfilehash: 4b21fde122f9804633ac037efaf1f343b5cb9440
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 512fd2dae54afa4a37b2b3d3103ab090d81909fa
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285302"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952301"
 ---
-# <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
+# <a name="_mbsnbcmp-_mbsnbcmp_l"></a>_mbsnbcmp, _mbsnbcmp_l
 
-Compare la première **n** octets de deux chaînes de caractères multioctets.
+Compare les **n** premiers octets de deux chaînes de caractères multioctets.
 
 > [!IMPORTANT]
 > Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -74,25 +77,25 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de retour indique la relation ordinale entre les sous-chaînes de *string1* et *string2*.
+La valeur de retour indique la relation ordinale entre les sous-chaînes de *Chaîne1* et *Chaîne2*.
 
 |Valeur de retour|Description|
 |------------------|-----------------|
-|< 0|*string1* sous-chaîne est inférieure à *string2* sous-chaîne.|
-|0|*string1* est identique à *string2* sous-chaîne.|
-|> 0|*string1* est supérieure à *string2* sous-chaîne.|
+|< 0|*Chaîne1* SUBSTRING est inférieure à la sous-chaîne *Chaîne2* .|
+|0|*Chaîne1* SUBSTRING est identique à la sous-chaîne *string2* .|
+|> 0|la sous-chaîne *Chaîne1* est supérieure à la sous-chaîne *Chaîne2* .|
 
-Une erreur de validation de paramètre, **_mbsnbcmp** et **_mbsnbcmp_l** retourner **_NLSCMPERROR**, qui est défini dans \<string.h > et \< Mbstring.h >.
+Dans le cas d’une erreur de validation de paramètre, **_mbsnbcmp** et **_mbsnbcmp_l** retournent **_NLSCMPERROR**, qui est \<défini dans \<String. h > et mbstring. h >.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbsnbcmp** fonctions comparent au plus la première *nombre* octets dans *string1* et *string2* et retourner une valeur qui indique le relation entre les sous-chaînes. **_mbsnbcmp** est une version de la casse de **_mbsnbicmp**. Contrairement aux **_mbsnbcoll**, **_mbsnbcmp** n’est pas affectée par l’ordre de classement des paramètres régionaux. **_mbsnbcmp** reconnaît les séquences de caractères multioctets selon la multioctet active [page de codes](../../c-runtime-library/code-pages.md).
+Les fonctions **_mbsnbcmp** comparent au plus les premiers octets *Count* dans *Chaîne1* et *Chaîne2* et retournent une valeur qui indique la relation entre les sous-chaînes. **_mbsnbcmp** est une version de **_mbsnbicmp**qui respecte la casse. Contrairement à **_mbsnbcoll**, **_mbsnbcmp** n’est pas affecté par l’ordre de classement des paramètres régionaux. **_mbsnbcmp** reconnaît les séquences de caractères multioctets en fonction de la [page de codes](../../c-runtime-library/code-pages.md)multioctets actuelle.
 
-**_mbsnbcmp** ressemble à **_mbsncmp**, sauf que **_mbsncmp** compare des chaînes en caractères plutôt qu’en octets.
+**_mbsnbcmp** ressemble à **_mbsncmp**, sauf que **_mbsncmp** compare les chaînes par caractères plutôt qu’en octets.
 
-La valeur de sortie est affectée par le **LC_CTYPE** catégorie définissant des paramètres régionaux, qui spécifie les octets de tête et de fin des octets de caractères multioctets. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Le **_mbsnbcmp** fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. Le **_mbsnbcmp_l** fonction est identique, sauf qu’elle utilise le *paramètres régionaux* paramètre à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par le paramètre de catégorie **LC_CTYPE** des paramètres régionaux, qui spécifie les octets de tête et les octets de fin des caractères multioctets. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La fonction **_mbsnbcmp** utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. La fonction **_mbsnbcmp_l** est identique, à ceci près qu’elle utilise à la place les paramètres *régionaux* . Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Si *string1* ou *string2* est un pointeur null, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent **_NLSCMPERROR** et **errno** a la valeur **EINVAL**.
+Si *string1* ou *string2* est un pointeur null, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent **_NLSCMPERROR** et **errno** a la valeur **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

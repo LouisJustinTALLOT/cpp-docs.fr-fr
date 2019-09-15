@@ -1,10 +1,10 @@
 ---
 title: _strdate, _wstrdate
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdate
 - _wstrdate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstrdate
 - wstrdate
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1164db5857643bac649e96493a3d66cdee3b6e2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353961"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958226"
 ---
-# <a name="strdate-wstrdate"></a>_strdate, _wstrdate
+# <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
 Copient la date système actuelle dans une mémoire tampon. Il existe des versions plus sécurisées de ces fonctions. Consultez [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md).
 
@@ -70,17 +73,17 @@ Pointeur désignant une mémoire tampon contenant la chaîne de date mise en for
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne un pointeur vers la chaîne de caractères *datestr*.
+Chacune de ces fonctions retourne un pointeur vers la chaîne de caractères résultante *dateStr*.
 
 ## <a name="remarks"></a>Notes
 
 Il existe des versions plus sécurisées de ces fonctions. Consultez [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). Il est recommandé d’utiliser les fonctions les plus sécurisées, dans la mesure du possible.
 
-Le **_strdate** fonction copie la date système actuelle dans la mémoire tampon vers laquelle pointée *datestr*, mise en forme **mm**/**jj** / **yy**, où **mm** comprend deux chiffres représentant le mois, **jj** comprend deux chiffres représentant le jour, et **AA**  est les deux derniers chiffres de l’année. Par exemple, la chaîne **05/12/99** représente le 5 décembre 1999. La mémoire tampon doit avoir une longueur au moins égale à 9 octets.
+La fonction **_strdate** copie la date système actuelle dans la mémoire tampon vers laquelle pointe *dateStr*, au format **mm**/**JJ**/**AA**, où **mm** est deux chiffres représentant le mois, **JJ** est deux chiffres représentant le jour et **YY** les deux derniers chiffres de l’année. Par exemple, la chaîne **12/05/99** représente le 5 décembre 1999. La mémoire tampon doit avoir une longueur au moins égale à 9 octets.
 
-Si *datestr* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Si *dateStr* est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
-**_wstrdate** est une version à caractères larges de **_strdate**; l’argument et valeur de retour de **_wstrdate** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique.
+**_wstrdate** est une version à caractères larges de **_strdate**; l’argument et la valeur de retour de **_wstrdate** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -99,7 +102,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // strdate.c

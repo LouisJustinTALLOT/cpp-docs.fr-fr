@@ -1,12 +1,12 @@
 ---
 title: ispunct, iswpunct, _ispunct_l, _iswpunct_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ispunct
 - _iswpunct_l
 - iswpunct
 - _ispunct_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswpunct
 - _istpunct
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _iswpunct_l function
 - iswpunct_l function
 ms.assetid: 94403240-85c8-40a4-9c2b-e3e95c729c76
-ms.openlocfilehash: 209f94bb8f9d3338f62b719d4d4b94b152ed5ab7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54c51c612cf3b491b49d7e141df34ed5b4415520
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286533"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953701"
 ---
-# <a name="ispunct-iswpunct-ispunctl-iswpunctl"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
+# <a name="ispunct-iswpunct-_ispunct_l-_iswpunct_l"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
 
 Détermine si un entier représente un caractère de ponctuation.
 
@@ -73,11 +76,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne différente de zéro si *c* est une représentation particulière d’un caractère de ponctuation. **ispunct** retourne une valeur différente de zéro pour tout caractère imprimable qui n’est pas un espace ou un caractère pour lequel **isalnum** est différent de zéro. **iswpunct** retourne une valeur différente de zéro pour tout caractère large imprimable qui n’est ni le caractère large espace ni un caractère large pour lequel **iswalnum** est différent de zéro. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
+Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un caractère de ponctuation. **ispunct** retourne une valeur différente de zéro pour tout caractère imprimable qui n’est pas un espace ou un caractère pour lequel **isalnum** est différent de zéro. **iswpunct** retourne une valeur différente de zéro pour tout caractère élargi imprimable qui n’est ni le caractère grand espace ni un caractère élargi pour lequel **iswalnum** est différent de zéro. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
-Le résultat de la condition de test pour le **ispunct** fonction varie selon le **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions qui n’ont pas la **_l** suffixe utilisent les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; les versions qui ont le **_l** suffixe sont identiques, sauf qu’ils utilisent le paramètres régionaux qui sont passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Le résultat de la condition de test pour la fonction **ispunct** dépend du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations [, consultez setlocale, _wsetlocale](setlocale-wsetlocale.md) . Les versions de ces fonctions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; les versions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Le comportement de **ispunct** et **_ispunct_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Quand une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.
+Le comportement de **ispunct** et **_ispunct_l** n’est pas défini si *c* n’est pas EOF ni dans la plage 0 à 0xFF, inclus. Quand une bibliothèque CRT de débogage est utilisée et que *c* n’est pas l’une de ces valeurs, les fonctions déclenchent une assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

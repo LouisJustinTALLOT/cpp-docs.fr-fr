@@ -1,9 +1,9 @@
 ---
 title: _get_current_locale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_current_locale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_current_locale
 - __get_current_locale
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - locales, getting information on
 - __get_current_locale function
 ms.assetid: 572217f2-a37a-4105-a293-a250b4fabd99
-ms.openlocfilehash: 87c30ee701d8f7d3a89a0aa61ba18a7f854bc9b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a17e730b350eaf88cf1c51502fda3df5ae30f611
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332287"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956095"
 ---
-# <a name="getcurrentlocale"></a>_get_current_locale
+# <a name="_get_current_locale"></a>_get_current_locale
 
 Obtient un objet de paramètres régionaux qui représente les paramètres régionaux actuels.
 
@@ -49,9 +52,9 @@ Objet de paramètres régionaux qui représente les paramètres régionaux actue
 
 ## <a name="remarks"></a>Notes
 
-Le **_get_current_locale** fonction obtient actuellement définis aux paramètres régionaux du thread et retourne un objet de paramètres régionaux qui représente ces paramètres régionaux.
+La fonction **_get_current_locale** obtient les paramètres régionaux actuellement définis pour le thread et retourne un objet de paramètres régionaux représentant les paramètres régionaux.
 
-Le nom précédent de cette fonction, **__get_current_locale** (avec deux traits de soulignement début) a été déconseillé.
+Le nom précédent de cette fonction, **__get_current_locale** (avec deux traits de soulignement de début), est déconseillé.
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -1,10 +1,10 @@
 ---
 title: _execlpe, _wexeclpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execlpe
 - _wexeclpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wexeclpe
 - execlpe
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-ms.openlocfilehash: e3aa4189d2a384a0092c742909e97c5efc52b5ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 960d148963aa9c6410fec03b5a6f265a6e4ab9d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339362"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941909"
 ---
-# <a name="execlpe-wexeclpe"></a>_execlpe, _wexeclpe
+# <a name="_execlpe-_wexeclpe"></a>_execlpe, _wexeclpe
 
 Charge et exécute les nouveaux processus enfant.
 
@@ -66,7 +69,7 @@ intptr_t _wexeclpe(
 *cmdname*<br/>
 Chemin d’accès du fichier à exécuter.
 
-*arg0*, ... *argn*<br/>
+*arg0*,... *argN*<br/>
 Liste des pointeurs désignant les paramètres.
 
 *envp*<br/>
@@ -74,9 +77,9 @@ Tableau de pointeurs vers les paramètres d'environnement.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de retour de -1 indique une erreur, auquel cas la **errno** variable globale est définie.
+En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de retour de-1 indique une erreur, auquel cas la variable globale **errno** est définie.
 
-|**errno** valeur|Description|
+|valeur **errno**|Description|
 |-------------------|-----------------|
 |**E2BIG**|L’espace requis pour les arguments et les paramètres d’environnement dépasse 32 Ko.|
 |**EACCES**|Le fichier spécifié possède un verrou ou une violation de partage.|
@@ -90,9 +93,9 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions charge et exécute un nouveau processus, passant chaque argument de ligne de commande en tant que paramètre distinct et passant également un tableau de pointeurs aux paramètres d’environnement. Ces fonctions utilisent la **chemin d’accès** variable d’environnement pour rechercher le fichier à exécuter.
+Chacune de ces fonctions charge et exécute un nouveau processus, passant chaque argument de ligne de commande en tant que paramètre distinct et passant également un tableau de pointeurs aux paramètres d’environnement. Ces fonctions utilisent la variable **d’environnement PATH** pour rechercher le fichier à exécuter.
 
-Le **_execlpe** fonctions valident leurs paramètres. Si *cmdname* ou *arg0* est une valeur null des pointeurs ou chaîne vide, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1. Aucun nouveau processus n'est lancé.
+Les fonctions **_execlpe** valident leurs paramètres. Si *CmdName* ou *arg0* est un pointeur null ou une chaîne vide, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent-1. Aucun nouveau processus n'est lancé.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -103,7 +106,7 @@ Le **_execlpe** fonctions valident leurs paramètres. Si *cmdname* ou *arg0* est
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Consultez l’exemple dans [_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md).
 

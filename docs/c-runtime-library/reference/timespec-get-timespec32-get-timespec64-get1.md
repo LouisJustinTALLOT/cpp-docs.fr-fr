@@ -1,11 +1,11 @@
 ---
 title: timespec_get, _timespec32_get, _timespec64_get1
 ms.date: 11/04/2016
-apiname:
+api_name:
 - timespec_get
 - _timespec32_get
 - _timespec64_get
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - timespec_get
 - _timespec32_get
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: 1591189ff2db78605c334e72ac3be13876afc81d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0517c974bf58d502133ccd9868149bd178790d6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155548"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957621"
 ---
-# <a name="timespecget-timespec32get-timespec64get"></a>timespec_get, _timespec32_get, _timespec64_get
+# <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get, _timespec32_get, _timespec64_get
 
 Affecte à l’intervalle indiqué par le premier argument l’heure de calendrier actuelle, en fonction de la base de temps spécifiée.
 
@@ -71,15 +74,15 @@ Valeur propre à l’implémentation différente de zéro qui spécifie la base 
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de *base* cas de réussite, sinon il retourne zéro.
+La valeur de *base* en cas de réussite ; sinon, elle retourne zéro.
 
 ## <a name="remarks"></a>Notes
 
-Le **timespec_get** fonctions définissent l’heure actuelle dans le struct vers lequel pointé le *time_spec* argument. Toutes les versions de ce struct ont deux membres, **tv_sec** et **tv_nsec**. Le **tv_sec** a la valeur au nombre entier de secondes et **tv_nsec** au nombre entier de nanosecondes, arrondi à la résolution de l’horloge système, depuis le début de l’époque spécifiée par *base*.
+Les fonctions **timespec_get** définissent l’heure actuelle dans le struct vers lequel pointe l’argument *time_spec* . Toutes les versions de ce struct ont deux membres, **tv_sec** et **tv_nsec**. La valeur **tv_sec** est définie sur le nombre entier de secondes et **tv_nsec** sur le nombre entier de nanosecondes, arrondi à la résolution de l’horloge système, depuis le début de l’époque spécifiée par *base*.
 
 **Section spécifique à Microsoft**
 
-Ces fonctions prennent uniquement en charge **TIME_UTC** en tant que le *base* valeur. Cela définit le *time_spec* valeur au nombre de secondes et nanosecondes depuis le démarrage de l’époque, minuit, le 1er janvier 1970, temps universel coordonné (UTC). Dans un **struct** **_timespec32**, **tv_sec** est un **__time32_t** valeur. Dans un **struct** **_timespec64**, **tv_sec** est un **__time64_t** valeur. Dans un **struct** **timespec**, **tv_sec** est un **time_t** type, qui est de 32 bits ou 64 bits de longueur selon que le préprocesseur macro _USE_32BIT_TIME_T est défini. Le **timespec_get** fonction est une fonction inline qui appelle **_timespec32_get** si _USE_32BIT_TIME_T est définie ; sinon, elle appelle **_timespec64_get**.
+Ces fonctions prennent uniquement en charge **TIME_UTC** comme valeur de *base* . Cela définit la valeur *time_spec* sur le nombre de secondes et de nanosecondes depuis le début de l’époque, à partir du 1er janvier 1970, en temps universel coordonné (UTC). Dans un **_timespec32**de struct, **tv_sec** est une valeur **__time32_t** . Dans un **_timespec64**de struct, **tv_sec** est une valeur **__time64_t** . Dans un **struct** **timespec**, **tv_sec** est un type **time_t** , qui est de 32 bits ou 64 bits en longueur selon que la macro de préprocesseur _USE_32BIT_TIME_T est définie ou non. La fonction **timespec_get** est une fonction inline qui appelle **_timespec32_get** si _USE_32BIT_TIME_T est défini ; Sinon, elle appelle **_timespec64_get**.
 
 **Fin de la section spécifique à Microsoft**
 

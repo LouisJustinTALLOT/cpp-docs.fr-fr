@@ -1,10 +1,10 @@
 ---
 title: _getch, _getwch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getch
 - _getwch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwch
 - _getch
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-ms.openlocfilehash: 0b8f8ed4985810526552a3b66e81462fd656bb23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 122892945e8542afa7f9f944f984387db7c5ec8a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331843"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955475"
 ---
-# <a name="getch-getwch"></a>_getch, _getwch
+# <a name="_getch-_getwch"></a>_getch, _getwch
 
 Obtient un caractère à partir de la console sans l’afficher.
 
@@ -56,7 +59,7 @@ Retourne le caractère lu. Aucun retour d'erreur.
 
 ## <a name="remarks"></a>Notes
 
-Le **_getch** et **_getwch** fonctions lisent un caractère unique à partir de la console sans l’afficher. Aucune de ces fonctions ne peut être utilisée pour lire Ctrl+C. Pour la lecture d’une touche de fonction ou de direction, chaque fonction doit être appelée deux fois ; le premier appel retourne 0 ou 0xE0, tandis que le second retourne le code de la touche.
+Les fonctions **_getch** et **_getwch** lisent un caractère unique à partir de la console sans renvoyer le caractère. Aucune de ces fonctions ne peut être utilisée pour lire Ctrl+C. Pour la lecture d’une touche de fonction ou de direction, chaque fonction doit être appelée deux fois ; le premier appel retourne 0 ou 0xE0, tandis que le second retourne le code de la touche.
 
 Ces fonctions verrouillent le thread appelant et sont donc thread-safe. Pour les versions sans verrouillage, consultez [_getch_nolock, _getwch_nolock](getch-nolock-getwch-nolock.md).
 

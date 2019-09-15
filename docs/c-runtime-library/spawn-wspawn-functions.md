@@ -1,7 +1,7 @@
 ---
 title: _spawn, _wspawn, fonctions
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr120.dll
 - msvcr100.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _spawn
 - _tspawnlp
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 8ab368378775102b708635b551c046a326adfecb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: c4a8b33c2233dc0c680ddbe5063ab6fe25a729b0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498909"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957276"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn, _wspawn, fonctions
 
@@ -72,7 +75,7 @@ Les lettres à la fin du nom de la fonction déterminent la variation.
 | `p`  | La variable d'environnement `PATH` est utilisée pour rechercher le fichier à exécuter.  |
 | `v`  | `argv`, un tableau de pointeurs vers les arguments de ligne de commande, est passé à la fonction `_spawn`. Ce suffixe est généralement utilisé lorsque plusieurs paramètres d'un nouveau processus sont variables.  |
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les fonctions `_spawn` créent et exécutent chacune un nouveau processus. Elles gèrent automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d'utilisation. Les fonctions `_wspawn` sont des versions à caractères larges des fonctions `_spawn` ; elles ne gèrent pas les chaînes de caractères multioctets. Sinon, les fonctions `_wspawn` se comportent de la même manière que leurs fonctions équivalentes `_spawn`.
 

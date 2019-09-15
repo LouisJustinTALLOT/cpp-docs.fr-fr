@@ -1,12 +1,12 @@
 ---
 title: strstr, wcsstr, _mbsstr, _mbsstr_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsstr
 - wcsstr
 - _mbsstr_l
 - strstr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrstr
 - _ftcsstr
@@ -44,12 +47,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 003e5fd88bdfaafff539c5c993a99cd9ecca0b82
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8c113e02f308b634b6bcb8aea6e46fc14b9abd92
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500818"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946587"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
@@ -136,9 +139,9 @@ La `strstr` fonction retourne un pointeur vers la première occurrence de *strSe
 > [!IMPORTANT]
 > Ces fonctions peuvent être exposées à un risque lié à un dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être exploités dans le cadre d’une attaque de système, car ils permettent d’exécuter du code arbitraire, ce qui peut entraîner une élévation injustifiée des privilèges. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-En C, ces fonctions acceptent un pointeur const pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui accepte un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non**const** retourne un pointeur vers non const. La macro _CRT_CONST_CORRECT_OVERLOADS est définie si les versions **const** et non**const** de ces fonctions sont disponibles. Si vous avez besoin du comportement non const pour les C++ deux surcharges, définissez le symbole _CONST_RETURN.
+En C, ces fonctions acceptent un pointeur **const** pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui accepte un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non**const** retourne un pointeur vers non**const**. La macro _CRT_CONST_CORRECT_OVERLOADS est définie si les versions **const** et non**const** de ces fonctions sont disponibles. Si vous avez besoin du comportement non**const** pour les C++ deux surcharges, définissez le symbole _CONST_RETURN.
 
-La valeur de sortie est affectée par le paramètre de catégorie de paramètres régionaux LC_CTYPE; Pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les versions de ces fonctions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux; les versions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par le paramètre de catégorie de paramètres régionaux LC_CTYPE ; Pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les versions de ces fonctions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; les versions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

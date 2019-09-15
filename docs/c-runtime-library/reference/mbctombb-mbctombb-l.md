@@ -1,10 +1,10 @@
 ---
 title: _mbctombb, _mbctombb_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbctombb_l
 - _mbctombb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbctombb_l
 - _mbctombb
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-ms.openlocfilehash: 7395d94a6ec18f989d4a7153425b7af406a0bf45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b449dfae04f875c819f34422b9a0ae92e2b8a7c2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331595"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952529"
 ---
-# <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
+# <a name="_mbctombb-_mbctombb_l"></a>_mbctombb, _mbctombb_l
 
 Convertit un caractère multioctet codé sur deux octets en caractère multioctet codé sur un octet correspondant.
 
@@ -64,15 +67,15 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **_mbctombb** et **_mbctombb_l** retourne le caractère d’un octet qui correspond à *c*; sinon, elle retourne *c* .
+En cas de réussite, **_mbctombb** et **_mbctombb_l** retourne le caractère codé sur un octet qui correspond à *c*; Sinon, elle retourne *c*.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbctombb** et **_mbctombb_l** fonctions convertissent un caractère multioctet donné en un caractère multioctet codés sur un octet correspondant. Caractères doivent correspondre à caractères codés sur un octet dans la plage 0 x 20-0x7E ou 0xA1 - 0xDF à convertir.
+Les fonctions **_mbctombb** et **_mbctombb_l** convertissent un caractère multioctet donné en caractère multioctet codé sur un octet correspondant. Les caractères doivent correspondre aux caractères codés sur un octet dans la plage 0x20-0x7E ou 0xA1-0xDF à convertir.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version de cette fonction sans le **_l** suffixe utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le **_l** suffixe est identique, à ceci près qu’elle utilise les paramètres régionaux passés dans à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version de cette fonction sans le suffixe **_L** utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le suffixe **_L** est identique, à ceci près qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Dans les versions précédentes, **_mbctombb** a été appelée **zentohan**. Utilisez **_mbctombb** à la place.
+Dans les versions précédentes, **_mbctombb** était appelé **zentohan**. Utilisez **_mbctombb** à la place.
 
 ## <a name="requirements"></a>Configuration requise
 

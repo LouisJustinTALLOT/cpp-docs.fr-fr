@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcat, _mbsnbcat_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcat_l
 - _mbsnbcat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcat
 - mbsnbcat_l
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-ms.openlocfilehash: 476909858a8537fb96d56d3230fd48719d5564ed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 117171ec75ec0dddc3d7447f4110556165343258
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499832"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952343"
 ---
 # <a name="_mbsnbcat-_mbsnbcat_l"></a>_mbsnbcat, _mbsnbcat_l
 
@@ -97,7 +100,7 @@ Paramètres régionaux à utiliser.
 
 La fonction **_mbsnbcat** ajoute, au plus, le premier *nombre* d’octets de *src* à *dest*. Si l’octet qui précède immédiatement le caractère NULL dans *dest* est un octet de tête, l’octet initial de *src* remplace cet octet de tête. Dans le cas contraire, l’octet initial de *src* remplace le caractère null de fin de *dest*. Si un octet NULL apparaît dans *src* avant que le *nombre* d’octets soit ajouté, **_mbsnbcat** ajoute tous les octets de *src*, jusqu’au caractère null. Si *Count* est supérieur à la longueur de *src*, la longueur de *src* est utilisée à la place de *Count*. La chaîne obtenue se termine par un caractère Null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version **_mbsnbcat** de la fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux; la version **_mbsnbcat_l** est identique, sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version **_mbsnbcat** de la fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version **_mbsnbcat_l** est identique, sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 **Remarque relative à la sécurité** Utilisez une chaîne se terminant par un caractère Null. La chaîne ne doit pas dépasser la taille de la mémoire tampon de destination. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 

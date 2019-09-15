@@ -1,11 +1,11 @@
 ---
 title: asin, asinf, asinl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - asinf
 - asinl
 - asin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asin
 - asinl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e70c9b2187b97d3dea589c1757081da8bf2bd10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347962"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943647"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -60,9 +63,9 @@ Valeur dont l’arc sinus doit être calculé.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **asin** fonction retourne l’arc sinus (la fonction sinus inverse) de *x* dans la plage π/2 et π/2 radians.
+La fonction **ASIN** retourne l’arc sinus (fonction sinus inverse) de *x* dans la plage-π/2 à π/2 radians.
 
-Par défaut, si *x* est inférieur à -1 ou supérieur à 1, **asin** retourne un indéfini.
+Par défaut, si *x* est inférieur à-1 ou supérieur à 1, **ASIN** retourne un indéfini.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
@@ -72,7 +75,7 @@ Par défaut, si *x* est inférieur à -1 ou supérieur à 1, **asin** retourne u
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **asin** avec **float** et **long** **double** valeurs. Dans un programme C, **asin** accepte et retourne toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **ASIN** avec des valeurs **float** et **long** **double** . Dans un programme C, **ASIN** prend toujours et retourne un **double**.
 
 ## <a name="requirements"></a>Configuration requise
 

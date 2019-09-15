@@ -1,11 +1,11 @@
 ---
 title: fma, fmaf, fmal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fma
 - fmaf
 - fmal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fma
 - fmaf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: f96592e245e443bae2f3334da51cae5572753708
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ddc4061e5a24ee3b5176aedc569d134d85e0002
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333493"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957107"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -92,20 +95,20 @@ Retourne `(x * y) + z`. La valeur de retour est ensuite arrondie à l’aide du 
 
 Sinon, peut retourner l’une des valeurs suivantes :
 
-|Problème|Retourner|
+|Problème|Renvoie|
 |-----------|------------|
-|*x* = INFINITY, *y* = 0 ou<br /><br /> *x* = 0, *y* = INFINITY|NaN|
-|*x* ou *y* = exacte + infini, *z* = infini avec le signe opposé|NaN|
-|*x* ou *y* = NaN|NaN|
-|pas (*x* = 0, *y*= indéfini) et *z* = NaN<br /><br /> pas (*x*= indéfini, *y*= 0) et *z* = NaN|NaN|
-|Erreur de plage avec dépassement|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|
+|*x* = Infinity, *y* = 0 ou<br /><br /> *x* = 0, *y* = infini|NaN|
+|*x* ou *y* = exact ± infini, *z* = infini avec le signe opposé|NaN|
+|*x* ou *y* = Nan|NaN|
+|Not (*x* = 0, *y*= indéfini) et *z* = Nan<br /><br /> Not (*x*= indéterminé, *y*= 0) et *z* = Nan|NaN|
+|Erreur de plage avec dépassement|± HUGE_VAL, ± HUGE_VALF ou ± HUGE_VALL|
 |Erreur de plage avec soupassement|valeur correcte, après arrondi.|
 
 Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **fma** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **fma** accepte et retourne toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **FMA** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **FMA** accepte et retourne toujours un **double**.
 
 Cette fonction calcule la valeur avec une précision infinie, puis arrondit le résultat final.
 

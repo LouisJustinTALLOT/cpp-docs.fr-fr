@@ -1,9 +1,9 @@
 ---
 title: _CrtIsMemoryBlock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtIsMemoryBlock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtlsMemoryBlock
 - _CrtIsMemoryBlock
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CrtIsMemoryBlock function
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
-ms.openlocfilehash: c4a85ebeb45552c6f5355853de2a45766d6bc984
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f29745acd06f6f5b3fa96367444e800bdc3e8e3a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339895"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938736"
 ---
-# <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
+# <a name="_crtismemoryblock"></a>_CrtIsMemoryBlock
 
 Vérifie qu’un bloc de mémoire spécifié est dans le tas local et qu’il a un identificateur de type de bloc de tas de débogage valide (version de débogage uniquement).
 
@@ -54,23 +57,23 @@ Pointeur indiquant le début d’un bloc de mémoire à vérifier.
 Taille du bloc spécifié (en octets).
 
 *requestNumber*<br/>
-Pointeur vers le numéro d’allocation du bloc ou **NULL**.
+Pointeur vers le numéro d’allocation du bloc ou **null**.
 
 *filename*<br/>
-Pointeur vers le nom du fichier source qui a demandé le bloc ou **NULL**.
+Pointeur vers le nom du fichier source qui a demandé le bloc ou **null**.
 
 *linenumber*<br/>
-Pointeur vers le numéro de ligne dans le fichier source ou **NULL**.
+Pointeur vers le numéro de ligne dans le fichier source ou **null**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_CrtIsMemoryBlock** retourne **TRUE** si le bloc de mémoire spécifié se trouve dans le tas local et a un identificateur de type bloc du tas de débogage valide ; sinon, la fonction retourne **FALSE**.
+**_CrtIsMemoryBlock** retourne la **valeur true** si le bloc de mémoire spécifié se trouve dans le tas local et possède un identificateur de type de bloc de tas de débogage valide. dans le cas contraire, la fonction retourne **false**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_CrtIsMemoryBlock** fonction vérifie qu’un bloc de mémoire spécifié se trouve dans le tas local de l’application et qu’il a un identificateur de type de bloc valide. Cette fonction peut également être utilisée pour obtenir le numéro d’ordre d’allocation d’objet et le numéro de ligne/nom du fichier source où l’allocation de bloc de mémoire a été initialement demandée. Transmission non -**NULL** valeurs pour le *requestNumber*, *filename*, ou *linenumber* causes de paramètres **_ CrtIsMemoryBlock** pour définir ces paramètres pour les valeurs dans l’en-tête de débogage du bloc de mémoire, s’il trouve le bloc dans le tas local. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtIsMemoryBlock** sont supprimés lors du prétraitement.
+La fonction **_CrtIsMemoryBlock** vérifie qu’un bloc de mémoire spécifié se trouve dans le tas local de l’application et qu’il a un identificateur de type de bloc valide. Cette fonction peut également être utilisée pour obtenir le numéro d’ordre d’allocation d’objet et le numéro de ligne/nom du fichier source où l’allocation de bloc de mémoire a été initialement demandée. Si vous transmettez des valeurs non**null** pour les paramètres *requestNumber*, *filename*ou *LineNumber* , **_CrtIsMemoryBlock** définit ces paramètres sur les valeurs de l’en-tête debug du bloc de mémoire, s’il trouve le bloc dans segment de mémoire local. Lorsque [_ DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtIsMemoryBlock** sont supprimés lors du prétraitement.
 
-Si **_CrtIsMemoryBlock** échoue, elle retourne **FALSE** et les paramètres de sortie sont initialisés aux valeurs par défaut : *requestNumber* et **lineNumber**  sont définies sur 0 et *filename* a la valeur **NULL**.
+Si **_CrtIsMemoryBlock** échoue, elle retourne **false** et les paramètres de sortie sont initialisés aux valeurs par défaut : *requestNumber* et **LineNumber** ont la valeur 0 et le *nom de fichier* a la valeur **null**.
 
 Comme cette fonction retourne **TRUE** ou **FALSE**, elle peut être passée à l’une des macros [_ASSERT](assert-asserte-assert-expr-macros.md) pour créer un mécanisme de gestion des erreurs de débogage simple. L'exemple suivant provoque un échec d'assertion si l'adresse spécifiée n'est pas située dans le tas local :
 
@@ -79,7 +82,7 @@ _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
           &filename, &linenumber ) );
 ```
 
-Pour plus d’informations sur la façon **_CrtIsMemoryBlock** peut être utilisé avec d’autres fonctions de débogage et les macros, consultez [Macros pour la création de rapports](/visualstudio/debugger/macros-for-reporting). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Pour plus d’informations sur la façon dont **_CrtIsMemoryBlock** peut être utilisé avec d’autres fonctions et macros de débogage, consultez [macros pour la création de rapports](/visualstudio/debugger/macros-for-reporting). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Configuration requise
 

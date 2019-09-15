@@ -1,9 +1,9 @@
 ---
 title: _get_errno
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_errno
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_errno
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-ms.openlocfilehash: fb0897451c72020cd72a821ec9928ed655d84b7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d60f7ea7a36b4a8c4be678d26c0b0c59e5ec534
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287731"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955973"
 ---
-# <a name="geterrno"></a>_get_errno
+# <a name="_get_errno"></a>_get_errno
 
 Obtient la valeur actuelle de la variable globale errno.
 
@@ -45,17 +48,17 @@ errno_t _get_errno(
 ### <a name="parameters"></a>Paramètres
 
 *pValue*<br/>
-Un pointeur vers un entier à remplir avec la valeur actuelle de la **errno** variable.
+Pointeur vers un entier à remplir avec la valeur actuelle de la variable **errno** .
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne zéro si l'opération a réussi et un code d'erreur en cas d'échec. Si *pValue* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **EINVAL**.
+Retourne zéro si l'opération a réussi et un code d'erreur en cas d'échec. Si *pValue* a la **valeur null**, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Les valeurs possibles de **errno** sont définies dans Errno.h. Voir aussi [errno, constantes](../../c-runtime-library/errno-constants.md).
+Les valeurs possibles de **errno** sont définies dans errno. h. Voir aussi [errno, constantes](../../c-runtime-library/errno-constants.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_get_errno.c

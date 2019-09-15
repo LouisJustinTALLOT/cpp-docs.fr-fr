@@ -1,14 +1,14 @@
 ---
 title: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncpy
 - _strncpy_l
 - _mbsncpy
 - wcsncpy
 - _mbsncpy_l
 - _wcsncpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrncpy
 - strncpy
@@ -62,12 +65,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: fac7e052c5c1d5525946bdbc599404ac56d47f5a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 82e88a48752cb96cca5cb636332fa477aef13d50
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499452"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947209"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -176,7 +179,7 @@ Retourne *strDest*. Aucune valeur de retour n'est réservée pour indiquer une e
 La fonction **strncpy** copie les caractères *de nombre* initiaux de *StrSource* vers *strDest* et retourne *strDest*. Si *Count* est inférieur ou égal à la longueur de *strSource*, un caractère NULL n’est pas ajouté automatiquement à la chaîne copiée. Si le *nombre* est supérieur à la longueur de *strSource*, la chaîne de destination est complétée avec un *nombre*de caractères null jusqu’à la longueur. Le comportement de **strncpy** n’est pas défini si les chaînes source et de destination se chevauchent.
 
 > [!IMPORTANT]
-> **strncpy** ne vérifie pas si l’espace est suffisant dans *strDest*; cela en fait une cause potentielle de dépassements de mémoire tampon. L’argument *Count* limite le nombre de caractères copiés; il ne s’agit pas d’une limite de la taille de *strDest*. Consultez l’exemple qui suit. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
+> **strncpy** ne vérifie pas si l’espace est suffisant dans *strDest*; cela en fait une cause potentielle de dépassements de mémoire tampon. L’argument *Count* limite le nombre de caractères copiés ; il ne s’agit pas d’une limite de la taille de *strDest*. Consultez l’exemple qui suit. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 Si *strDest* ou *strSource* est un pointeur **null** ou si *Count* est inférieur ou égal à zéro, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
@@ -194,7 +197,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l** et **_wcsncpy_l** n’ont aucune dépendance des paramètres régionaux; elles sont fournies uniquement pour **_tcsncpy_l** et ne sont pas destinées à être appelées directement.
+> **_strncpy_l** et **_wcsncpy_l** n’ont aucune dépendance des paramètres régionaux ; elles sont fournies uniquement pour **_tcsncpy_l** et ne sont pas destinées à être appelées directement.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -208,7 +211,7 @@ Pour plus d'informations sur la compatibilité de plateforme, consultez [Compati
 
 ## <a name="example"></a>Exemples
 
-L’exemple suivant illustre l’utilisation de **strncpy** et la façon dont il peut être utilisé de manière inutilisée pour provoquer des bogues de programme et des problèmes de sécurité. Le compilateur génère un avertissement pour chaque appel à **strncpy** similaire à **crt_strncpy_x86. c (15): avertissement C4996: 'strncpy': Cette fonction ou cette variable peut être non sécurisée. Envisagez d’utiliser strncpy_s à la place. Pour désactiver le message déconseillant l’utilisation, utilisez _CRT_SECURE_NO_WARNINGS. Consultez l’aide en ligne pour plus d’informations.**
+L’exemple suivant illustre l’utilisation de **strncpy** et la façon dont il peut être utilisé de manière inutilisée pour provoquer des bogues de programme et des problèmes de sécurité. Le compilateur génère un avertissement pour chaque appel à **strncpy** similaire à **crt_strncpy_x86. c (15) : avertissement C4996 : 'strncpy' : Cette fonction ou cette variable peut être non sécurisée. Envisagez d’utiliser strncpy_s à la place. Pour désactiver le message déconseillant l’utilisation, utilisez _CRT_SECURE_NO_WARNINGS. Consultez l’aide en ligne pour plus d’informations.**
 
 ```C
 // crt_strncpy_x86.c

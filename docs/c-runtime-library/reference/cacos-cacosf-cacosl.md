@@ -1,11 +1,11 @@
 ---
 title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacos
 - cacosf
 - cacosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacos
 - cacosf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b0751703b9b9cdcdb50e265a6b5d3c929d89ae1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348573"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939398"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
-Récupère l’arc cosinus d’un nombre complexe, avec des coupures en dehors de l’intervalle [-1, + 1] sur l’axe des réels.
+Récupère l’arc cosinus d’un nombre complexe, avec des coupes en dehors de l’intervalle [-1, + 1] le long de l’axe réel.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,11 +64,11 @@ Nombre complexe qui représente un angle, en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-L’arc cosinus de *z*, en radians. Le résultat est illimité sur l’axe des imaginaires et dans le dans l’intervalle [0, π] sur l’axe des réels. Une erreur de domaine se produit si *z* est en dehors de l’intervalle [-1, + 1].
+Arccosinus de *z*, en radians. Le résultat est illimité le long de l’axe imaginaire, et dans l’intervalle [0, π] le long de l’axe réel. Une erreur de domaine se produit si *z* est en dehors de l’intervalle [-1, + 1].
 
 ## <a name="remarks"></a>Notes
 
-Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **cacos** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **cacos** accepte et retourne toujours un **_Dcomplex** valeur.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **Cacos** qui acceptent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, **Cacos** accepte et retourne toujours une valeur **_Dcomplex** .
 
 ## <a name="requirements"></a>Configuration requise
 

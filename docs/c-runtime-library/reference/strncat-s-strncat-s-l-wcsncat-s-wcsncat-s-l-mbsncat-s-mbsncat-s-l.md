@@ -1,14 +1,14 @@
 ---
 title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsncat_s_l
 - wcsncat_s
 - _mbsncat_s_l
 - _mbsncat_s
 - strncat_s
 - _strncat_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strncat_s_l
 - _mbsncat_s_l
@@ -48,19 +51,19 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 6651bb6ac405ed51945f021e8d1e19f1db05d5e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a3c8d7019c271b2673e85e124d50139d34866c6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209894"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947405"
 ---
-# <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
+# <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
 Ajoute des caractères à une chaîne. Ces versions de [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsncat_s** et **_mbsncat_s_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncat_s** et **_mbsncat_s_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -170,17 +173,17 @@ Retourne 0 si l’opération aboutit et un code d’erreur en cas d’échec.
 
 |*strDestination*|*numberOfElements*|*strSource*|Valeur de retour|Contenu de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL** ou inachevé|any|any|**EINVAL**|non modifié|
+|**Null** ou inachevé|any|any|**EINVAL**|non modifié|
 |any|any|**NULL**|**EINVAL**|non modifié|
 |any|0 ou trop petit|any|**ERANGE**|non modifié|
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions essaient d’ajouter le premier *D* caractères de *strSource* à la fin de *strDest*, où *D* est le plus petit de *nombre* et la longueur de *strSource*. Si l’ajout de ceux *D* caractères tiennent dans *strDest* (dont la taille est indiquée comme *numberOfElements*) et le reste de l’espace pour un terminateur null, alors que ces caractères sont ajoutés, en commençant à l’original null de fin d’exécution *strDest*, et un nouveau caractère null de fin est ajouté ; sinon, *strDest*[0] est définie sur le caractère null et le paramètre non valide gestionnaire est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+Ces fonctions essaient d’ajouter les premiers caractères *d* de *strSource* à la fin de *strDest*, où *D* est le plus petit de *Count* et la longueur de *strSource*. Si le fait d’ajouter ces caractères *D* correspond à *strDest* (dont la taille est indiquée en tant que *NumberOfElements*) tout en laissant de l’espace pour une marque de fin null, ces caractères sont ajoutés, à partir de la valeur null de fin d’origine de  *strDest*, et une nouvelle valeur null de fin est ajoutée ; Sinon, *strDest*[0] est défini sur le caractère null et le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
-Il existe une exception au paragraphe ci-dessus. Si *nombre* est [_TRUNCATE](../../c-runtime-library/truncate.md) puis autant de *strSource* en tant que va est ajouté à *strDest* tout en laissant la place pour ajouter un Abandon de null.
+Il existe une exception au paragraphe ci-dessus. Si le *nombre* est [_TRUNCATE](../../c-runtime-library/truncate.md) , la plus grande partie de *strSource* est ajoutée à *strDest* , tout en laissant de l’espace pour ajouter une valeur null de fin.
 
-Par exemple :
+Par exemple,
 
 ```C
 char dst[5];
@@ -188,15 +191,15 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-signifie que nous demandons **strncat_s** d’ajouter trois caractères à deux caractères dans une mémoire tampon de cinq caractères long ; ce qui ne permet pas d’accueillir le terminateur null, par conséquent, **strncat_s** zéros la chaîne et appelle le Gestionnaire de paramètre non valide.
+signifie que nous demandons à **strncat_s** d’ajouter trois caractères à deux caractères dans une mémoire tampon de cinq caractères. Cela ne laisse aucun espace pour la marque de fin null ; par conséquent, **strncat_s** remet la chaîne à zéro et appelle le gestionnaire de paramètre non valide.
 
-Si le comportement de troncation est nécessaire, utilisez **_TRUNCATE** ou ajuster la *taille* paramètre en conséquence :
+Si le comportement de troncation est nécessaire, utilisez **_TRUNCATE** ou ajustez le paramètre de *taille* en conséquence :
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
 ```
 
-ou
+ou Gestionnaire de configuration
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
@@ -204,9 +207,9 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 Dans tous les cas, la chaîne obtenue se termine par un caractère null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
-Si *strSource* ou *strDest* est **NULL**, ou est *numberOfElements* est égal à zéro, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, la fonction retourne **EINVAL** sans modifier ses paramètres.
+Si *strSource* ou *StrDest* a la **valeur null**, ou si est *NumberOfElements* est égal à zéro, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, la fonction retourne **EINVAL** sans modifier ses paramètres.
 
-**wcsncat_s** et **_mbsncat_s** sont des versions à caractères larges et à caractères multioctets de **strncat_s**. Les arguments de chaîne et la valeur de retour de **wcsncat_s** sont des caractères larges chaînes ; ceux de **_mbsncat_s** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**wcsncat_s** et **_mbsncat_s** sont des versions à caractères larges et à caractères multioctets de **strncat_s**. Les arguments de chaîne et la valeur de retour de **wcsncat_s** sont des chaînes à caractères larges ; ceux de **_mbsncat_s** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -221,7 +224,7 @@ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 
 |**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l** et **_wcsncat_s_l** n’ont aucune dépendance vis-à-vis de paramètres régionaux ; elles sont uniquement fournies pour **_tcsncat_s_l**.
+**_strncat_s_l** et **_wcsncat_s_l** n’ont aucune dépendance des paramètres régionaux ; ils sont fournis uniquement pour **_tcsncat_s_l**.
 
 ## <a name="requirements"></a>Configuration requise
 

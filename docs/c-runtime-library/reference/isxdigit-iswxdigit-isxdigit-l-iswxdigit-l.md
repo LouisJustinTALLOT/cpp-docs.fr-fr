@@ -1,12 +1,12 @@
 ---
 title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _iswxdigit_l
 - iswxdigit
 - isxdigit
 - _isxdigit_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswxdigit
 - isxdigit
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-ms.openlocfilehash: 29429aa636d3a06b0ee6ceddfcc8a91a7db0e009
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18f360e66583dfbf5033f813deed0b56abc71260
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157350"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953574"
 ---
-# <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
+# <a name="isxdigit-iswxdigit-_isxdigit_l-_iswxdigit_l"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 
 Détermine si un entier représente un caractère qui est un chiffre hexadécimal.
 
@@ -75,13 +78,13 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne différente de zéro si *c* est une représentation particulière d’un chiffre hexadécimal. **isxdigit** retourne une valeur différente de zéro si *c* est un chiffre hexadécimal (A - F, a - f ou 0 - 9). **iswxdigit** retourne une valeur différente de zéro si *c* est un caractère large qui correspond à un caractère numérique hexadécimal. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
+Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un chiffre hexadécimal. **isxdigit** retourne une valeur différente de zéro si *c* est un chiffre hexadécimal (a-f, a-f ou 0-9). **iswxdigit** retourne une valeur différente de zéro si *c* est un caractère élargi qui correspond à un chiffre hexadécimal. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
-Pour les paramètres régionaux « C », le **iswxdigit** fonction ne prend pas en charge les caractères hexadécimaux à pleine chasse Unicode.
+Pour les paramètres régionaux « C », la fonction **iswxdigit** ne prend pas en charge les caractères hexadécimaux en largeur entière Unicode.
 
-Les versions de ces fonctions qui ont le **_l** suffixe utiliser les paramètres régionaux qui sont passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions qui ont le suffixe **_L** utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Le comportement de **isxdigit** et **_isxdigit_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Quand une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.
+Le comportement de **isxdigit** et **_isxdigit_l** n’est pas défini si *c* n’est pas EOF ni dans la plage 0 à 0xFF, inclus. Quand une bibliothèque CRT de débogage est utilisée et que *c* n’est pas l’une de ces valeurs, les fonctions déclenchent une assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

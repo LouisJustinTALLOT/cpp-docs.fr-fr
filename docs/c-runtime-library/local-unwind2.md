@@ -1,9 +1,9 @@
 ---
 title: _local_unwind2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _local_unwind2
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcrt.dll
 - msvcr100.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcr80.dll
 - msvcr90.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _local_unwind2
 - local_unwind2
@@ -19,14 +22,14 @@ helpviewer_keywords:
 - _local_unwind2 function
 - local_unwind2 function
 ms.assetid: 44f1fa82-e01e-490f-a6e6-18fc6811c28c
-ms.openlocfilehash: c62763ecbdd2c05e8cd7b6733ec1df4254362527
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 64ed92af32caaf579e7c6951250e3bf692d1cf43
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743997"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944209"
 ---
-# <a name="localunwind2"></a>_local_unwind2
+# <a name="_local_unwind2"></a>_local_unwind2
 
 Fonction CRT interne. Exécute tous les gestionnaires de terminaisons répertoriés dans la table d'étendue.
 
@@ -47,7 +50,7 @@ void _local_unwind2(
 *stop*<br/>
 [in] Niveau lexical qui indique là où `_local_unwind2` doit s’arrêter.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Cette méthode est employé uniquement par l'environnement d'exécution. N'appelez pas la méthode dans votre code.
 

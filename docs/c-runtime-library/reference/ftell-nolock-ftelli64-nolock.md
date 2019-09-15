@@ -1,10 +1,10 @@
 ---
 title: _ftell_nolock, _ftelli64_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ftelli64_nolock
 - _ftell_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftelli64_nolock
 - ftelli64_nolock
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-ms.openlocfilehash: 58bfc8c7a8b8e820fdec09d52e24dfcb07f328f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e72687077cc5401bb411fca81a3ccec48a6258f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332934"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956364"
 ---
-# <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock, _ftelli64_nolock
+# <a name="_ftell_nolock-_ftelli64_nolock"></a>_ftell_nolock, _ftelli64_nolock
 
 Obtient la position actuelle du pointeur de fichier, sans verrouiller le thread.
 
@@ -54,7 +57,7 @@ __int64 _ftelli64_nolock(
 ### <a name="parameters"></a>Paramètres
 
 *stream*<br/>
-Cible la **fichier** structure.
+Ciblez la structure de **fichiers** .
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -62,7 +65,7 @@ Identique à **ftell** et **_ftelli64**. Pour plus d’informations, consultez [
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions sont sans verrouillage versions de **ftell** et **_ftelli64**, respectivement. Elles sont identiques aux **ftell** et **_ftelli64** , à ceci près qu’elles ne sont pas protégées contre les interférences par d’autres threads. Ces fonctions peuvent être plus rapides, car elles n’entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+Ces fonctions sont les versions sans verrouillage de **ftell** et **_ftelli64**, respectivement. Elles sont identiques à **ftell** et **_ftelli64** , à ceci près qu’elles ne sont pas protégées contre les interférences par d’autres threads. Ces fonctions peuvent être plus rapides, car elles n’entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 
 ## <a name="requirements"></a>Configuration requise
 

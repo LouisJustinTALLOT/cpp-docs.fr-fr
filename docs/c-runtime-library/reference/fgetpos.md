@@ -1,9 +1,9 @@
 ---
 title: fgetpos
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fgetpos
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fgetpos
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27d25b29f656d1df889e5f83857ca437f609a07a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333928"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940846"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -47,16 +50,16 @@ int fgetpos(
 *stream*<br/>
 Flux cible.
 
-*pos*<br/>
+*imprim*<br/>
 Stockage de l’indicateur de position.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **fgetpos** retourne 0. En cas d’échec, elle retourne une valeur différente de zéro et définit **errno** sur une des opérations suivantes (définies dans STDIO des constantes manifestes. (H) : **EBADF**, ce qui signifie que le flux spécifié n’est pas un pointeur de fichier valide ou n’est pas accessible, ou **EINVAL**, ce qui signifie que le *flux* valeur ou la valeur de *pos*est non valide, par exemple si est un pointeur null. Si *flux* ou *pos* est un **NULL** pointeur, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+En cas de réussite, **fgetpos** retourne 0. En cas d’échec, elle retourne une valeur différente de zéro et définit **errno** sur l’une des constantes manifestes suivantes (définies dans stdio. H) : **EBADF**, ce qui signifie que le flux spécifié n’est pas un pointeur de fichier valide ou n’est pas accessible, ou **EINVAL**, ce qui signifie que la valeur de *flux* ou la valeur de *pos* n’est pas valide, par exemple si est un pointeur null. Si *Stream* ou *pos* est un pointeur **null** , la fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **fgetpos** fonction obtient la valeur actuelle de la *flux* indicateur de position de fichier et le stocke dans l’objet vers lequel pointe l’argument *pos*. Le **fsetpos** fonction peut utiliser ultérieurement les informations stockées dans *pos* pour réinitialiser le *flux* pointeur à sa position au moment de l’argument **fgetpos** a été appelée. Le *pos* valeur est stockée dans un format interne et est destinée uniquement par **fgetpos** et **fsetpos**.
+La fonction **fgetpos** obtient la valeur actuelle de l’indicateur de position de fichier de l’argument de *flux* et la stocke dans l’objet désigné par *pos*. La fonction **fsetpos** peut utiliser ultérieurement les informations stockées dans *pos* pour réinitialiser le pointeur de l’argument de *flux* à sa position au moment de l’appel de **fgetpos** . La valeur *pos* est stockée dans un format interne et est destinée à être utilisée uniquement par **fgetpos** et **fsetpos**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -66,7 +69,7 @@ Le **fgetpos** fonction obtient la valeur actuelle de la *flux* indicateur de po
 
 Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_fgetpos.c
@@ -108,13 +111,13 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetpostxt"></a>Entrée : crt_fgetpos.txt
+## <a name="input-crt_fgetpostxt"></a>Entrée : crt_fgetpos.txt
 
 ```Input
 fgetpos gets a stream's file-position indicator.
 ```
 
-### <a name="output-crtfgetpostxt"></a>Sortie : crt_fgetpos.txt
+### <a name="output-crt_fgetpostxt"></a>Sortie : crt_fgetpos.txt
 
 ```Output
 after fgetpos: gets a stream

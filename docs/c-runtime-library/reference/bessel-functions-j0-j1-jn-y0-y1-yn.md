@@ -1,14 +1,14 @@
 ---
 title: 'Fonctions de Bessel : _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _j0
 - _j1
 - _jn
 - _y0
 - _y1
 - _yn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c.bessel
 - _j0
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341111"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939458"
 ---
-# <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Fonctions de Bessel : _j0, _j1, _jn, _y0, _y1, _yn
+# <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Fonctions de Bessel : _j0, _j1, _jn, _y0, _y1, _yn
 
 Calcule la fonction de Bessel de première ou deuxième espèce, d’ordre 0, 1 ou n. Les fonctions de Bessel sont couramment utilisées dans les calculs mathématiques de la théorie sur les ondes électromagnétiques.
 
@@ -84,23 +87,23 @@ Ordre d’entier de la fonction de Bessel.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne une fonction de Bessel de *x*. Si *x* est un nombre négatif dans le **_y0**, **_y1**, ou **_yn** fonctions, la routine affecte **errno** à  **EDOM**, imprime un **_domaine** message d’erreur à **stderr**et retourne **_HUGE_VAL**. Vous pouvez modifier à l’aide de gestion des erreurs **_matherr**.
+Chacune de ces routines retourne une fonction de Bessel de *x*. Si *x* est négatif dans les **fonctions _y0**, **_Y1**ou **_Yn** , la routine définit **errno** sur **Edom**, imprime un message d’erreur **_DOMAIN** sur **stderr**et retourne **_HUGE_VAL**. Vous pouvez modifier la gestion des erreurs à l’aide de _ **matherr**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_j0**, **_j1**, et **_jn** retournent des routines de Bessel fonctions de première espèce : respectivement d’ordre n, 0 et 1.
+Les routines **_j0**, **_j1**et **_jn** retournent les fonctions de Bessel du premier genre : Orders 0, 1 et n, respectivement.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|**NON VALIDE**|**_DOMAIN**|
 
-Le **_y0**, **_y1**, et **_yn** retournent des routines de Bessel functions de deuxième espèce : respectivement d’ordre n, 0 et 1.
+Les routines **_y0**, **_Y1**et **_yn** retournent des fonctions de Bessel du deuxième genre : Orders 0, 1 et n, respectivement.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|**NON VALIDE**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**NON VALIDE**|**_DOMAIN**|
+|&#124;x&#124; < 0,0|**NON VALIDE**|**_DOMAIN**|
 
 ## <a name="requirements"></a>Configuration requise
 

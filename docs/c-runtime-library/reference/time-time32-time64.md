@@ -1,11 +1,11 @@
 ---
 title: time, _time32, _time64
 ms.date: 11/06/2018
-apiname:
+api_name:
 - time
 - _time64
 - _time32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - time
 - _time64
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-ms.openlocfilehash: 693b70b3682876d7e6c3721f5d06aa13d31abb96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02dc7f250fe26d9ed7abfd89ca9a4c2163312e6d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155587"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946086"
 ---
-# <a name="time-time32-time64"></a>time, _time32, _time64
+# <a name="time-_time32-_time64"></a>time, _time32, _time64
 
 Obtient l’heure système.
 
@@ -59,19 +62,19 @@ Pointeur vers l’emplacement de stockage pour le moment.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne la durée en secondes écoulées depuis le 1er janvier 1970 à minuit ou -1 en cas d’erreur.
+Retourne la durée en secondes écoulées depuis le 1er janvier 1970 à minuit, ou-1 en cas d’erreur.
 
 ## <a name="remarks"></a>Notes
 
-Le **temps** fonction retourne le nombre de secondes écoulées depuis minuit (00 : 00:00), le 1er janvier 1970, temps universel coordonné (UTC), en fonction de l’horloge système. La valeur de retournée est stockée dans l’emplacement indiqué par *destTime*. Ce paramètre peut être **NULL**, auquel cas la valeur de retour n’est pas stockée.
+La fonction **Time** retourne le nombre de secondes écoulées depuis minuit (00:00:00), le 1er janvier 1970, le temps universel coordonné (UTC, Coordinated Universal Time), en fonction de l’horloge système. La valeur de retour est stockée dans l’emplacement donné par *destTime*. Ce paramètre peut être **null**, auquel cas la valeur de retour n’est pas stockée.
 
-**temps** est un wrapper pour **_time64** et **time_t** est, par défaut, équivalente à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** l’ancien 32-bit **time_t**, vous pouvez définir **_USE_32BIT_TIME_T**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 ; l’utilisation de cette macro n’est pas autorisée sur les plateformes 64 bits.
+l' **heure** est un wrapper pour **_time64** et **time_t** est, par défaut, équivalent à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t**32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 ; l’utilisation de cette macro n’est pas autorisée sur les plateformes 64 bits.
 
 ## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------|------|---------------------|
-|**time**, **\_time32**, **\_time64**|\<time.h>|\<CTime > ou \<time.h >|
+|**time**, **\_time32**, **\_time64**|\<time.h>|\<CTime > ou \<Time. h >|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
