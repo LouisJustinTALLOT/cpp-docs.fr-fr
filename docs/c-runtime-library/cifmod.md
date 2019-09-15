@@ -1,9 +1,9 @@
 ---
 title: _CIfmod
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CIfmod
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr110_clr0400.dll
 - msvcr100.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CIfmod
 - CIfmod
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - CIfmod intrinsic
 - _CIfmod intrinsic
 ms.assetid: 7c050653-7ec6-4810-b3a7-7a0057ea65ed
-ms.openlocfilehash: b3f667c24a4b02a23d045a5061b41ac4acc4095b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: ca869a3033e4186ff6029a832c22bc4149ea1010
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746836"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944648"
 ---
-# <a name="cifmod"></a>_CIfmod
+# <a name="_cifmod"></a>_CIfmod
 
 Calcule le reste à virgule flottante des deux valeurs supérieures de la pile.
 
@@ -37,13 +40,13 @@ Calcule le reste à virgule flottante des deux valeurs supérieures de la pile.
 void __cdecl _CIfmod();
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Cette version de la fonction `fmod` a une convention d’appel spécialisée que le compilateur comprend. Elle accélère l’exécution, car elle empêche la génération de copies et facilite l’allocation de registres.
 
 La valeur obtenue est placée en haut de la pile.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateforme :** x86
 

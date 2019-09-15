@@ -1,7 +1,7 @@
 ---
 title: _STATIC_ASSERT, macro
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,22 +12,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _STATIC_ASSERT
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-ms.openlocfilehash: 5d3aa1d9665b48a0690d8eb62353fc98c5a550f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac609fc7af937b6f56cd5b310341409187df7de4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354691"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957929"
 ---
-# <a name="staticassert-macro"></a>_STATIC_ASSERT, macro
+# <a name="_static_assert-macro"></a>_STATIC_ASSERT, macro
 
-Évalue une expression au moment de la compilation et génère une erreur lorsque le résultat est **FALSE**.
+Évaluer une expression au moment de la compilation et générer une erreur lorsque le résultat est **false**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,15 +43,15 @@ _STATIC_ASSERT(
 ### <a name="parameters"></a>Paramètres
 
 *booleanExpression*<br/>
-Expression (pointeurs inclus) qui prend la valeur différente de zéro à (**TRUE**) ou 0 (**FALSE**).
+Expression (pointeurs inclus) qui prend une valeur différente de zéro (**true**) ou 0 (**false**).
 
 ## <a name="remarks"></a>Notes
 
-Cette macro ressemble à la [macros Assert et _ASSERTE](assert-asserte-assert-expr-macros.md), sauf que *booleanExpression* est évaluée au moment de la compilation et non lors de l’exécution. Si *booleanExpression* prend la valeur **FALSE** (0), [erreur du compilateur C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) est généré.
+Cette macro ressemble aux [macros _ Assert et Assert](assert-asserte-assert-expr-macros.md), sauf que *booleanExpression* est évalué au moment de la compilation plutôt qu’au moment de l’exécution. Si *booleanExpression* prend la **valeur false** (0), l' [Erreur du compilateur C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) est générée.
 
 ## <a name="example"></a>Exemple
 
-Dans cet exemple, nous vérifions si le [sizeof](../../c-language/sizeof-operator-c.md) un **int** est supérieure ou égale à 2 octets et si le [sizeof](../../c-language/sizeof-operator-c.md) un **long** est 1 octet. Le programme ne peut pas être compilé et générera [erreur du compilateur C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) , car un **long** est supérieure à 1 octet.
+Dans cet exemple, nous vérifions si le [sizeof](../../c-language/sizeof-operator-c.md) ( **entier** ) est supérieur ou égal à 2 octets et si le [sizeof](../../c-language/sizeof-operator-c.md) de **type long** est 1 octet. Le programme ne se compilera pas et générera une [Erreur du compilateur C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) , car une **valeur long** est supérieure à 1 octet.
 
 ```C
 // crt__static_assert.c

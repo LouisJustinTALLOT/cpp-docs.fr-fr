@@ -1,12 +1,12 @@
 ---
 title: fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fprintf_s_l
 - fwprintf_s
 - fprintf_s
 - _fwprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftprintf_s
 - fprintf_s
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - _fwprintf_s_l function
 - print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
-ms.openlocfilehash: 05886dc4ce7de771749f157913a222b6b01a5c5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48f15bee685b058c0c059d676bea48e2bc32d699
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333155"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956967"
 ---
-# <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
+# <a name="fprintf_s-_fprintf_s_l-fwprintf_s-_fwprintf_s_l"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 
 Envoient les données mises en forme vers un flux. Ces versions de [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -82,7 +85,7 @@ Pointeur désignant la structure **FILE**.
 Chaîne de contrôle de format.
 
 *argument_list*<br/>
-Arguments facultatifs à la chaîne de format.
+Arguments facultatifs de la chaîne de format.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
@@ -93,16 +96,16 @@ Paramètres régionaux à utiliser.
 
 ## <a name="remarks"></a>Notes
 
-**fprintf_s** met en forme et imprime une série de caractères et de valeurs à la sortie *flux*. Chaque argument dans *argument_list* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le *format* argument utilise le [syntaxe de spécification pour les fonctions printf et wprintf format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+**fprintf_s** formate et imprime une série de caractères et de valeurs dans le *flux*de sortie. Chaque argument dans *argument_list* (le cas échéant) est converti et sorti selon la spécification de format correspondante au *format*. L’argument *format* utilise la [syntaxe de spécification de format pour les fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-**fwprintf_s** est une version à caractères larges de **fprintf_s**; dans **fwprintf_s**, *format* est une chaîne de caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **fprintf_s** ne prend actuellement en charge la sortie vers un flux UNICODE.
+**fwprintf_s** est une version à caractères larges de **fprintf_s**; dans **fwprintf_s**, *format* est une chaîne de caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **fprintf_s** ne prend pas actuellement en charge la sortie dans un flux Unicode.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
 
 > [!IMPORTANT]
 > Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur.
 
-Comme les versions non sécurisées (voir [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), ces fonctions valident leurs paramètres et appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md), si *flux* ou *format* est un pointeur null. La chaîne de format est également validée. S’il existe des spécificateurs de mise en forme inconnus ou incorrects, ces fonctions génèrent l’exception de paramètre non valide. Dans tous les cas, si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et la valeur **errno** à **EINVAL**. Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Comme les versions non sécurisées (voir [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), ces fonctions valident leurs paramètres et appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md), si *Stream* ou  *le format* est un pointeur null. La chaîne de format elle-même est également validée. S’il existe des spécificateurs de mise en forme inconnus ou incorrects, ces fonctions génèrent l’exception de paramètre non valide. Dans tous les cas, si l’exécution est autorisée à se poursuivre, les fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**. Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

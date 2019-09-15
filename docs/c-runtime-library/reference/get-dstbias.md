@@ -1,10 +1,10 @@
 ---
 title: _get_dstbias
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_dstbias
 - __dstbias
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __dstbias
 - _get_dstbias
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: 61807f854dc9c2f7de6f0acd5bbf4668987ce49e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a48cc4fe35a1bbd18342750571214ed0977cf3ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332375"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955947"
 ---
-# <a name="getdstbias"></a>_get_dstbias
+# <a name="_get_dstbias"></a>_get_dstbias
 
 Récupère le décalage de l'heure d'été en secondes.
 
@@ -46,20 +49,20 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>Paramètres
 
-*seconds*<br/>
+*durée*<br/>
 Décalage en secondes de l'heure d'été.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro en cas de réussite ou un **errno** valeur si une erreur se produit.
+Zéro en cas de réussite ou une valeur **errno** si une erreur se produit.
 
 ## <a name="remarks"></a>Notes
 
-Le **_get_dstbias** fonction récupère le nombre de secondes dans l’heure d’été sous forme d’entier. Si l'heure d'été est en vigueur, le décalage par défaut est de 3 600 secondes, ce qui correspond au nombre de secondes dans une heure (même si quelques régions observent un décalage de deux heures).
+La fonction **_get_dstbias** récupère le nombre de secondes de l’heure d’été sous la forme d’un entier. Si l'heure d'été est en vigueur, le décalage par défaut est de 3 600 secondes, ce qui correspond au nombre de secondes dans une heure (même si quelques régions observent un décalage de deux heures).
 
-Si *secondes* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **EINVAL**.
+Si *seconds* a la **valeur null**, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
 
-Nous vous recommandons d’utiliser cette fonction au lieu de la macro **_dstbias** ou la fonction déconseillée **__dstbias**.
+Nous vous recommandons d’utiliser cette fonction au lieu de la macro **_dstbias** ou de la fonction déconseillée **__dstbias**.
 
 ## <a name="requirements"></a>Configuration requise
 

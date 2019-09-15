@@ -1,12 +1,12 @@
 ---
 title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncmp
 - _mbsncmp
 - wcsncmp
 - _mbsncmp_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftcsnccmp
 - _ftcsncmp
@@ -49,19 +52,19 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: 8f022dec6c161814ade5c6be5aaccfcd239a4af4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 597db3825d1d6165fb6bd4b98b8d469ea8947b59
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209853"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947348"
 ---
-# <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
+# <a name="strncmp-wcsncmp-_mbsncmp-_mbsncmp_l"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
 Compare jusqu'au nombre spécifié de caractères de deux chaînes.
 
 > [!IMPORTANT]
-> **_mbsncmp** et **_mbsncmp_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncmp** et **_mbsncmp_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -106,25 +109,25 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de retour indique la relation entre les sous-chaînes de *string1* et *string2* comme suit.
+La valeur de retour indique la relation des sous-chaînes de *Chaîne1* et *Chaîne2* comme suit.
 
 |Valeur de retour|Description|
 |------------------|-----------------|
-|< 0|*string1* sous-chaîne inférieure à *string2* sous-chaîne|
-|0|*string1* sous-chaîne identique à *string2* sous-chaîne|
-|> 0|*string1* sous-chaîne supérieur *string2* sous-chaîne|
+|< 0|*Chaîne1* sous-chaîne inférieure à *Chaîne2* sous-chaîne|
+|0|*Chaîne1* sous-chaîne identique à la sous-chaîne *Chaîne2*|
+|> 0|*Chaîne1* sous-chaîne supérieure à la sous-chaîne *Chaîne2*|
 
-Une erreur de validation de paramètre, **_mbsncmp** et **_mbsncmp_l** retourner **_NLSCMPERROR**, qui est défini dans \<string.h > et \< Mbstring.h >.
+Dans le cas d’une erreur de validation de paramètre, **_mbsncmp** et **_mbsncmp_l** retournent **_NLSCMPERROR**, qui est \<défini dans \<String. h > et mbstring. h >.
 
 ## <a name="remarks"></a>Notes
 
-Le **strncmp** fonction effectue une comparaison ordinale du premier au maximum *nombre* les caractères de *string1* et *string2* et Retourne une valeur qui indique la relation entre les sous-chaînes. **strncmp** est une version de la casse de **_strnicmp**. **wcsncmp** et **_mbsncmp** sont des versions respectant la casse de **_wcsnicmp** et **_mbsnicmp**.
+La fonction **strncmp** effectue une comparaison ordinale d’au plus les *premiers caractères* dans *Chaîne1* et *Chaîne2* et retourne une valeur indiquant la relation entre les sous-chaînes. **strncmp** est une version de **_strnicmp**qui respecte la casse. **wcsncmp** et **_mbsncmp** sont des versions sensibles à la casse de **_wcsnicmp** et **_mbsnicmp**.
 
-**wcsncmp** et **_mbsncmp** sont des versions à caractères larges et à caractères multioctets de **strncmp**. Les arguments de **wcsncmp** sont des caractères larges chaînes ; ceux de **_mbsncmp** sont des chaînes de caractères multioctets. **_mbsncmp** reconnaît les séquences de caractères multioctets en fonction d’une page de codes multioctets et retourne **_NLSCMPERROR** en cas d’erreur.
+**wcsncmp** et **_mbsncmp** sont des versions à caractères larges et à caractères multioctets de **strncmp**. Les arguments de **wcsncmp** sont des chaînes à caractères larges ; ceux de **_mbsncmp** sont des chaînes de caractères multioctets. **_mbsncmp** reconnaît les séquences de caractères multioctets en fonction d’une page de codes multioctets et retourne **_NLSCMPERROR** sur une erreur.
 
-En outre, **_mbsncmp** et **_mbsncmp_l** valider les paramètres. Si *string1* ou *string2* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_mbsncmp** et **_mbsncmp_l** retourner **_NLSCMPERROR** et définissez **errno** à  **EINVAL**. **strncmp** et **wcsncmp** ne valident pas leurs paramètres. Ces fonctions se comportent sinon de façon identique.
+En outre, **_mbsncmp** et **_mbsncmp_l** valident les paramètres. Si *Chaîne1* ou *string2* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_mbsncmp** et **_mbsncmp_l** retournent **_NLSCMPERROR** et attribuent à **errno** la valeur **EINVAL**. **strncmp** et **wcsncmp** ne valident pas leurs paramètres. Ces fonctions se comportent sinon de façon identique.
 
-Le comportement de comparaison de **_mbsncmp** et **_mbsncmp_l** est affectée par la valeur de la **LC_CTYPE** paramètre de catégorie de paramètres régionaux. Ce paramètre contrôle la détection des octets de début et de fin des caractères multioctets. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Le **_mbsncmp** fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. Le **_mbsncmp_l** fonction est identique, sauf qu’elle utilise le *paramètres régionaux* paramètre à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md). Si les paramètres régionaux sont des paramètres régionaux d’un octet, le comportement de ces fonctions est identique à **strncmp**.
+Le comportement de comparaison de **_mbsncmp** et **_mbsncmp_l** est affecté par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Ce paramètre contrôle la détection des octets de début et de fin des caractères multioctets. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La fonction **_mbsncmp** utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. La fonction **_mbsncmp_l** est identique, à ceci près qu’elle utilise à la place les paramètres *régionaux* . Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md). Si les paramètres régionaux sont des paramètres régionaux codés sur un octet, le comportement de ces fonctions est identique à celui de **strncmp**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

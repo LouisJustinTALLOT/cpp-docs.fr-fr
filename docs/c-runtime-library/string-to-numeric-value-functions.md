@@ -1,14 +1,17 @@
 ---
 title: Fonctions de valeur chaîne en valeur numérique
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr110.dll
 - msvcr120.dll
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstoui64
 - _tcstoi64
@@ -16,12 +19,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: 3f24b75c2fdb3aa0d84b16874d2d01f1cb96d4b9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: b9d8218bd5a3151e17b7ac380bb86c85dac3e6a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743886"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944730"
 ---
 # <a name="string-to-numeric-value-functions"></a>Fonctions de valeur chaîne en valeur numérique
 
@@ -35,7 +38,7 @@ ms.locfileid: "57743886"
 
 - [_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l](../c-runtime-library/reference/strtoui64-wcstoui64-strtoui64-l-wcstoui64-l.md)
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Chaque fonction de la famille **strtod** convertit une chaîne terminée par Null en une valeur numérique. Les fonctions disponibles sont listées dans le tableau suivant.
 
@@ -57,15 +60,15 @@ Si le pointeur fourni par l’utilisateur qui pointe vers un caractère de fin d
 
 `strtod` attend une chaîne au format suivant :
 
-[*espace blanc*] [*signe*] [`digits`] [**.**`digits`] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*signe*]`digits`]
+[*espace blanc*] [*signe*] [`digits`] [ **.** `digits`] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*signe*]`digits`]
 
-Un *espace blanc* peut se composer d’espaces et de tabulations, qui sont ignorés ; un *signe* est un signe plus (**+**) ou moins (**-**) ; et `digits` représente un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**d**, **D**, **e** ou **E**) et éventuellement d’un entier signé. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.
+Un *espace blanc* peut se composer d’espaces et de tabulations, qui sont ignorés ; un *signe* est un signe plus ( **+** ) ou moins ( **-** ) ; et `digits` représente un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**d**, **D**, **e** ou **E**) et éventuellement d’un entier signé. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.
 
 Les fonctions `strtol`, `strtoul`, `_strtoi64` et `_strtoui64` attendent une chaîne au format suivant :
 
-[*espace blanc*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [`digits`]
+[*espace blanc*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **X** }]] [`digits`]
 
-Si l’argument de base a une valeur comprise entre 2 et 36, elle est utilisée comme base numérique. Si sa valeur est de 0, les caractères initiaux référencés par le pointeur de fin de conversion sont utilisés pour déterminer la base. Si le premier caractère est 0 et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Sinon, elle est interprétée comme un nombre décimal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. `strtoul` et `_strtoui64` autorise la présence d’un signe plus (**+**) ou moins (**-**) en guise de préfixe ; la présence d’un signe moins de début indique que le signe de la valeur de retour est négative.
+Si l’argument de base a une valeur comprise entre 2 et 36, elle est utilisée comme base numérique. Si sa valeur est de 0, les caractères initiaux référencés par le pointeur de fin de conversion sont utilisés pour déterminer la base. Si le premier caractère est 0 et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Sinon, elle est interprétée comme un nombre décimal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. `strtoul` et `_strtoui64` autorise la présence d’un signe plus ( **+** ) ou moins ( **-** ) en guise de préfixe ; la présence d’un signe moins de début indique que le signe de la valeur de retour est négative.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_NUMERIC` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis.
 

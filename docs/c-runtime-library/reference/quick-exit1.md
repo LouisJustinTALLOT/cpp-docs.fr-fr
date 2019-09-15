@@ -1,9 +1,9 @@
 ---
 title: quick_exit1
 ms.date: 11/04/2016
-apiname:
+api_name:
 - quick_exit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - quick_exit
 - process/quick_exit
@@ -23,14 +26,14 @@ f1_keywords:
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86246ed7a32dcd2f12b38aa4148570fc5fb3b7a6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358032"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949663"
 ---
-# <a name="quickexit"></a>quick_exit
+# <a name="quick_exit"></a>quick_exit
 
 Provoque l’arrêt normal du programme.
 
@@ -49,15 +52,15 @@ Code d’état à retourner à l’environnement hôte.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **quick_exit** fonction ne peut pas retourner à son appelant.
+La fonction **quick_exit** ne peut pas retourner à son appelant.
 
 ## <a name="remarks"></a>Notes
 
-Le **quick_exit** fonction provoque l’arrêt normal du programme. Il n’appelle aucune fonction inscrite par **atexit**, **_onexit** ou manipulateurs de signaux inscrits par le **signal** (fonction). Comportement est indéfini si **quick_exit** est appelée plusieurs fois ou si le **quitter** fonction est également appelée.
+La fonction **quick_exit** provoque l’arrêt normal du programme. Elle n’appelle aucune fonction inscrite par **atexit**, **_onexit** ou les gestionnaires de signal enregistrés par la fonction **signal** . Le comportement n’est pas défini si **quick_exit** est appelé plusieurs fois, ou si la fonction **Exit** est également appelée.
 
-Le **quick_exit** appels de fonctions, dans le dernier entré, premier sorti (LIFO) ordre, les fonctions inscrites par **at_quick_exit**, sauf pour les fonctions déjà appelées lorsque la fonction a été enregistrée.  Le comportement n’est pas défini si un appel à [longjmp](longjmp.md) est effectué pendant un appel à une fonction inscrite qui terminerait l’appel à la fonction.
+La fonction **quick_exit** appelle, dans l’ordre LIFO (dernier entré, premier sorti), les fonctions inscrites par **at_quick_exit**, à l’exception des fonctions déjà appelées lorsque la fonction a été inscrite.  Le comportement n’est pas défini si un appel à [longjmp](longjmp.md) est effectué pendant un appel à une fonction inscrite qui terminerait l’appel à la fonction.
 
-Une fois que les fonctions inscrites ont été appelées, **quick_exit** appelle **_Exit** à l’aide de la *état* valeur pour retourner le contrôle à l’environnement hôte.
+Une fois que les fonctions inscrites ont été appelées, **quick_exit** appelle **_Exit** à l’aide de la valeur d' *État* pour retourner le contrôle à l’environnement hôte.
 
 ## <a name="requirements"></a>Configuration requise
 

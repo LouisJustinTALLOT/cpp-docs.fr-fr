@@ -1,9 +1,9 @@
 ---
 title: _set_fmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_fmode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_fmode
 - set_fmode
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: af83f22ebfaf274b73ca9e891563d3775e28925f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef3b811a607184de54bb736bddcc456af53ac089
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356574"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948547"
 ---
-# <a name="setfmode"></a>_set_fmode
+# <a name="_set_fmode"></a>_set_fmode
 
 Définit le mode de traduction de fichier par défaut pour les opérations d’E/S de fichier.
 
@@ -47,17 +50,17 @@ errno_t _set_fmode(
 ### <a name="parameters"></a>Paramètres
 
 *mode*<br/>
-Le mode de traduction de fichier souhaité : **_O_TEXT** ou **_O_BINARY**.
+Mode de traduction de fichier souhaité : **_O_TEXT** ou **_O_BINARY**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne zéro si l’opération a réussi et un code d’erreur en cas d’échec. Si *mode* n’est pas **_O_TEXT** ou **_O_BINARY** ou **_O_WTEXT**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **EINVAL**.
+Retourne zéro si l’opération a réussi et un code d’erreur en cas d’échec. Si le *mode* n’est pas **_O_TEXT** ou **_O_BINARY** ou **_O_WTEXT**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-La fonction définit la variable globale [_fmode](../../c-runtime-library/fmode.md). Cette variable Spécifie le mode de traduction de fichier par défaut pour les opérations d’e/s de fichier **_open** et **_pipe**.
+La fonction définit la variable globale [_fmode](../../c-runtime-library/fmode.md). Cette variable spécifie le mode de traduction de fichier par défaut pour les opérations d’e/s de fichier **_open** et **_pipe**.
 
-**_O_TEXT** et **_O_BINARY** sont définies dans Fcntl.h. **EINVAL** est défini dans Errno.h.
+**_O_TEXT** et **_O_BINARY** sont définis dans fcntl. h. **EINVAL** est défini dans errno. h.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -67,7 +70,7 @@ La fonction définit la variable globale [_fmode](../../c-runtime-library/fmode.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_set_fmode.c

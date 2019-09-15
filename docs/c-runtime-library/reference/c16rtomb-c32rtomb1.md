@@ -1,10 +1,10 @@
 ---
 title: c16rtomb, c32rtomb
 ms.date: 01/22/2018
-apiname:
+api_name:
 - c16rtomb
 - c32rtomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c16rtomb
 - c32rtomb
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: ad58184c7bab6f95a842bda5f9eb545f09434a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16effe48442ccbb5144b57ead2fb15c908fe898
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341754"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943426"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -61,19 +64,19 @@ Pointeur vers un tableau pour stocker le caractère multioctet converti.
 Caractère large à convertir.
 
 *state*<br/>
-Un pointeur vers un **mbstate_t** objet.
+Pointeur vers un objet **mbstate_t** .
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le nombre d’octets stockés dans un objet tableau *mbchar*, y compris les séquences de décalage. Si *wchar* n’est pas un caractère large valid, la valeur (**size_t**)(-1) est retourné, **errno** a la valeur **EILSEQ**et la valeur de *état* n’est pas spécifié.
+Nombre d’octets stockés dans le tableau d’objets *mbchar*, y compris les séquences de décalage. Si *WCHAR* n’est pas un caractère élargi valide, la valeur (**size_t**) (-1) est retournée, **errno** a la valeur **EILSEQ**et la valeur de *State* n’est pas spécifiée.
 
 ## <a name="remarks"></a>Notes
 
-Le **c16rtomb** fonction convertit le caractère UTF-16 *wchar* à la séquence de caractères étroits multioctets équivalente dans les paramètres régionaux actuels. Si *mbchar* n’est pas un pointeur null, la fonction stocke la séquence convertie dans l’objet tableau vers lequel pointe *mbchar*. Jusqu'à **MB_CUR_MAX** octets sont stockés dans *mbchar*, et *état* est défini sur l’état du décalage multioctet qui en résulte.    Si *wchar* est un caractère large null, une séquence nécessaire pour restaurer l’état de décalage initial est stocké, si nécessaire, suivi par le caractère null, et *état* est défini sur l’état de conversion initial. Le **c32rtomb** fonction est identique, mais convertit un caractère UTF-32.
+La fonction **c16rtomb** convertit le caractère UTF-16 *WCHAR* en séquence de caractères étroits multioctets équivalente dans les paramètres régionaux actuels. Si *mbchar* n’est pas un pointeur null, la fonction stocke la séquence convertie dans l’objet tableau pointé par *mbchar*. Jusqu’à **MB_CUR_MAX** octets sont stockés dans *mbchar* *, et l’État est* défini sur l’état de décalage multioctet résultant.    Si *WCHAR* est un caractère élargi null, une séquence nécessaire pour restaurer l’état de décalage initial est stockée, si nécessaire, suivie du caractère null, *et l’État est* défini sur l’état de conversion initial. La fonction **c32rtomb** est identique, mais convertit un caractère UTF-32.
 
-Si *mbchar* est un pointeur null, le comportement équivaut à un appel à la fonction qui substitue un tampon interne pour *mbchar* et un caractère null large pour *wchar*.
+Si *mbchar* est un pointeur null, le comportement est équivalent à un appel à la fonction qui substitue une mémoire tampon interne pour *mbchar* et un caractère null étendu pour *WCHAR*.
 
-Le *état* objet d’état de conversion vous permet de faire des appels ultérieurs à cette fonction et d’autres fonctions redémarrables qui maintiennent l’état du décalage de caractères multioctets de sortie. Résultats ne sont pas définis lorsque vous combinez l’utilisation de fonctions redémarrables et non redémarrables, ou si un appel à **setlocale** est faite entre les appels de fonctions redémarrables.
+L’objet d’état de conversion d' *État* vous permet d’effectuer des appels ultérieurs à cette fonction et à d’autres fonctions redémarrables qui maintiennent l’état de décalage des caractères multioctets de sortie. Les résultats ne sont pas définis lorsque vous combinez l’utilisation de fonctions redémarrables et non redémarrables, ou si un appel à **setlocale** est effectué entre des appels de fonctions redémarrables.
 
 ## <a name="requirements"></a>Configuration requise
 

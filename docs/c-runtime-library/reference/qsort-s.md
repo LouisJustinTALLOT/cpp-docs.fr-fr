@@ -1,9 +1,9 @@
 ---
 title: qsort_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - qsort_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - qsort_s
 helpviewer_keywords:
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: f3b8bbfeb8079322a174233f3d8048a6d1b51804
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa911dbf2990bb976341a19cdb1eb88707c90e79
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358110"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949756"
 ---
-# <a name="qsorts"></a>qsort_s
+# <a name="qsort_s"></a>qsort_s
 
 Effectue un tri rapide. Version de [qsort](qsort.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -53,21 +56,21 @@ void qsort_s(
 *base*<br/>
 Début du tableau cible.
 
-*number*<br/>
+*certain*<br/>
 Taille du tableau dans les éléments.
 
 *width*<br/>
 Taille d’élément en octets.
 
 *compare*<br/>
-Fonction de comparaison. Le premier argument est le *contexte* pointeur. Le deuxième argument est un pointeur vers le *clé* pour la recherche. Le troisième argument est un pointeur vers l’élément de tableau doit être comparée à *clé*.
+Fonction de comparaison. Le premier argument est le pointeur de *contexte* . Le deuxième argument est un pointeur vers la *clé* de la recherche. Le troisième argument est un pointeur vers l’élément de tableau à comparer à la *clé*.
 
 *context*<br/>
-Un pointeur vers un contexte, ce qui peut être tout objet qui le *comparer* routine doit accéder.
+Pointeur vers un contexte, qui peut être n’importe quel objet auquel la routine de *comparaison* doit accéder.
 
 ## <a name="remarks"></a>Notes
 
-Le **qsort_s** fonction implémente un algorithme de tri rapide pour trier un tableau de *nombre* éléments, chacun des *largeur* octets. L’argument *base* est un pointeur vers la base du tableau à trier. **qsort_s** remplace ce tableau avec les éléments triés. L’argument *comparer* est un pointeur désignant une routine fournie par l’utilisateur qui compare deux éléments de tableau et retourne une valeur spécifiant leur relation. **qsort_s** appelle le *comparer* routine une ou plusieurs fois pendant le tri, passant les pointeurs désignant deux éléments de tableau à chaque appel :
+La fonction **qsort_s** implémente un algorithme de tri rapide pour trier un tableau d’éléments *Number* , chacun d’un octet *Width* . La *base* de l’argument est un pointeur vers la base du tableau à trier. **qsort_s** remplace ce tableau par les éléments triés. L’argument *compare* est un pointeur vers une routine fournie par l’utilisateur qui compare deux éléments de tableau et retourne une valeur spécifiant leur relation. **qsort_s** appelle la routine de *comparaison* une ou plusieurs fois pendant le tri, en passant des pointeurs à deux éléments de tableau à chaque appel :
 
 ```C
 compare( context, (void *) & elem1, (void *) & elem2 );
@@ -77,9 +80,9 @@ La routine doit comparer les éléments et retourner l’une des valeurs suivant
 
 |Valeur de retour|Description|
 |------------------|-----------------|
-|< 0|**elem1** inférieure à **elem2**|
+|< 0|**elem1** inférieur à **elem2**|
 |0|**elem1** équivalent à **elem2**|
-|> 0|**elem1** supérieur **elem2**|
+|> 0|**elem1** supérieur à **elem2**|
 
 Le tableau est trié par ordre croissant, comme défini par la fonction de comparaison. Pour trier un tableau par ordre décroissant, changez le sens de « supérieur à » et « inférieur à » dans la fonction de comparaison.
 
@@ -94,7 +97,7 @@ Si des paramètres non valides sont passés à la fonction, le gestionnaire de p
 |any|any|any|any|<= 0|**EINVAL**|
 |any|any|**NULL**|any|any|**EINVAL**|
 
-**qsort_s** a le même comportement que **qsort** mais a le *contexte* paramètre et définit **errno**. En passant un *contexte* paramètre, les fonctions de comparaison peuvent utiliser un pointeur d’objet pour accéder aux fonctionnalités de l’objet ou d’autres informations non accessibles via un pointeur d’élément. L’ajout de la *contexte* paramètre rend **qsort_s** plus sécurisé car *contexte* peut être utilisé pour éviter les bogues de réentrance introduits par des variables statiques et pour rendre les informations disponibles à partagé le *comparer* (fonction).
+**qsort_s** a le même comportement que **qsort** , mais il a le paramètre *Context* et définit **errno**. En passant un paramètre de *contexte* , les fonctions de comparaison peuvent utiliser un pointeur d’objet pour accéder aux fonctionnalités d’objet ou à d’autres informations qui ne sont pas accessibles via un pointeur d’élément. L’ajout du paramètre de *contexte* rend **qsort_s** plus sécurisé car le *contexte* peut être utilisé pour éviter les bogues de réentrance introduits à l’aide de variables statiques pour rendre les informations partagées disponibles pour la fonction de *comparaison* .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -104,11 +107,11 @@ Si des paramètres non valides sont passés à la fonction, le gestionnaire de p
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-**Bibliothèques :** Toutes les versions de la [fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliotheque** Toutes les versions des [fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le *contexte* paramètre dans le **qsort_s** (fonction). Le *contexte* paramètre rend plus facile d’effectuer des tris thread-safe. Au lieu d’utiliser des variables statiques qui doivent être synchronisées pour garantir la cohérence de thread, passez à un autre *contexte* paramètre dans chaque tri. Dans cet exemple, un objet de paramètres régionaux est utilisé en tant que le *contexte* paramètre.
+L’exemple suivant montre comment utiliser le paramètre *Context* dans la fonction **qsort_s** . Le paramètre de *contexte* facilite l’exécution de tris thread-safe. Au lieu d’utiliser des variables statiques qui doivent être synchronisées pour garantir la sécurité des threads, transmettez un paramètre de *contexte* différent dans chaque tri. Dans cet exemple, un objet de paramètres régionaux est utilisé comme paramètre de *contexte* .
 
 ```cpp
 // crt_qsort_s.cpp

@@ -1,9 +1,9 @@
 ---
 title: _close
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _close
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _close
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e274cd45c42a5cf49430ecce69e111cbbf6fe88b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340012"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942932"
 ---
-# <a name="close"></a>_close
+# <a name="_close"></a>_close
 
 Ferme un fichier.
 
@@ -49,15 +52,15 @@ Descripteur de fichier faisant référence au fichier ouvert.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_close** retourne 0 si le fichier a été fermé. Une valeur de retour de -1 indique une erreur.
+**Fermer** retourne 0 si le fichier a été fermé avec succès. Une valeur de retour de-1 indique une erreur.
 
 ## <a name="remarks"></a>Notes
 
-Le **_close** fonction ferme le fichier associé *fd*.
+La fonction **Fermer** ferme le fichier associé à *FD*.
 
-Le descripteur de fichier et le handle de fichier du système d’exploitation sous-jacent sont fermés. Par conséquent, il n’est pas nécessaire d’appeler **CloseHandle** si le fichier a été ouvert à l’origine à l’aide de la fonction Win32 **CreateFile** et converti en un descripteur de fichier en utilisant **_open_osfhandle**.
+Le descripteur de fichier et le handle de fichier du système d’exploitation sous-jacent sont fermés. Par conséquent, il n’est pas nécessaire d’appeler **CloseHandle** si le fichier a été ouvert à l’origine à l’aide de la fonction **CreateFile** de Win32 et converti en descripteur de fichier à l’aide de **_open_osfhandle**.
 
-Cette fonction valide ses paramètres. Si *fd* est un descripteur de fichier incorrect, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et **errno** a la valeur **EBADF**.
+Cette fonction valide ses paramètres. Si *FD* est un descripteur de fichier incorrect, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent-1 et **errno** a la valeur **EBADF**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -67,7 +70,7 @@ Cette fonction valide ses paramètres. Si *fd* est un descripteur de fichier inc
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Consultez l’exemple relatif à [_open](open-wopen.md).
 

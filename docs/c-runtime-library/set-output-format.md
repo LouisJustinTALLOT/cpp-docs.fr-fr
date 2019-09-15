@@ -1,9 +1,9 @@
 ---
 title: _set_output_format
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_output_format
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr120.dll
 - msvcr100.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcr90.dll
 - msvcr110.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_output_format
 - _set_output_format
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: 173c1bbae3009ffb4ee10b7b32ec7751f47c56c8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: b67abb58f4d62c7c54b61d1b1699f09c1bd51b40
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749228"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957312"
 ---
-# <a name="setoutputformat"></a>_set_output_format
+# <a name="_set_output_format"></a>_set_output_format
 
 Personnalise les formats de sortie utilisés par les fonctions d’E-S mises en forme.
 
@@ -53,7 +56,7 @@ unsigned int _set_output_format(
 
 Le format de sortie précédent.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 `_set_output_format` est utilisé pour configurer la sortie de fonctions d’E-S mises en forme, comme [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). Actuellement, la seule convention de mise en forme qui peut être changée par cette fonction est le nombre de chiffres affichés dans les exposants dans la sortie des nombres à virgule flottante.
 
@@ -61,7 +64,7 @@ Par défaut, la sortie des nombres à virgule flottante par des fonctions comme 
 
 Pour activer des exposants à deux chiffres, appelez cette fonction avec le paramètre `_TWO_DIGIT_EXPONENT`, comme illustré dans l’exemple. Pour désactiver les exposants à deux chiffres, appelez cette fonction avec un argument ayant la valeur 0.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -69,7 +72,7 @@ Pour activer des exposants à deux chiffres, appelez cette fonction avec le para
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../c-runtime-library/compatibility.md) dans l'introduction.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_set_output_format.c

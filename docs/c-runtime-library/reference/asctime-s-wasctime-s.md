@@ -1,10 +1,10 @@
 ---
 title: asctime_s, _wasctime_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wasctime_s
 - asctime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asctime_s
 - _wasctime_s
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: fe6ada0d50865897e791fc04b99ec0bb486f5a55
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0a40dad34d607bb52b062fc2cec163dfc8b62219
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499996"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943665"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -86,7 +89,7 @@ Zéro si l’opération réussit. En cas d’échec, le gestionnaire de paramèt
 |*buffer*|*numberOfElements*|*tmSource*|Renvoie|Valeur dans la *mémoire tampon*|
 |--------------|------------------------|----------|------------|-----------------------|
 |**NULL**|Quelconque|Quelconque|**EINVAL**|Non modifiée|
-|Not **null** (pointe vers une mémoire valide)|0|Quelconque|**EINVAL**|Non modifiée|
+|not **null** (pointe vers une mémoire valide)|0|Quelconque|**EINVAL**|Non modifiée|
 |Non **null**|0 < taille < 26|Quelconque|**EINVAL**|Chaîne vide|
 |Non **null**|>= 26|**NULL**|**EINVAL**|Chaîne vide|
 |Non **null**|>= 26|Structure de temps non valide ou hors de la plage de valeurs pour les composants de temps|**EINVAL**|Chaîne vide|
@@ -104,10 +107,10 @@ La fonction **asctime** convertit une heure stockée sous la forme d’une struc
 |**tm_isdst**|Positif si l’heure d’été est en vigueur ; 0 si l’heure d’été n’est pas appliquée ; négatif si l’état de l’heure d’été est inconnu. La bibliothèque runtime C suppose que les règles de calcul de l’heure d’été sont celles des États-Unis.|
 |**tm_mday**|Jour du mois (1-31)|
 |**tm_min**|Minutes après l’heure (0-59)|
-|**tm_mon**|Mois (0-11; Janvier = 0)|
+|**tm_mon**|Mois (0-11 ; Janvier = 0)|
 |**tm_sec**|Secondes après la minute (0-59)|
-|**tm_wday**|Jour de la semaine (0-6; Dimanche = 0)|
-|**tm_yday**|Jour de l’année (0-365; 1er janvier = 0)|
+|**tm_wday**|Jour de la semaine (0-6 ; Dimanche = 0)|
+|**tm_yday**|Jour de l’année (0-365 ; 1er janvier = 0)|
 |**tm_year**|Année (année en cours moins 1900)|
 
 La chaîne de caractères convertie est également ajustée en fonction des paramètres de fuseau horaire local. Consultez les fonctions [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) et [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md) pour plus d’informations sur la configuration de l’heure locale, et la fonction [_tzset](tzset.md) pour plus d’informations sur la définition des variables globales et d’environnement des fuseaux horaires.
@@ -137,7 +140,7 @@ Si le pointeur de la mémoire tampon n’est pas **null** et que le pointeur ne 
 
 Un [dépassement de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns) peut se produire si l’argument de la taille passé est supérieur à la taille réelle de la mémoire tampon.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Ce programme place l’heure système dans l’entier long **aclock**, le convertit en structure **Newtime** , puis le convertit sous forme de chaîne pour la sortie, à l’aide de la fonction **asctime_s** .
 

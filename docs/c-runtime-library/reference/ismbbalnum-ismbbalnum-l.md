@@ -1,10 +1,10 @@
 ---
 title: _ismbbalnum, _ismbbalnum_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbalnum
 - _ismbbalnum_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbalnum
 - ismbbalnum
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-ms.openlocfilehash: 5b5f54754907c09a34b0f4c3bae3e5c27336ca36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d817ea6875149f9342854b0c22b27b0c93d29636
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286559"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954297"
 ---
-# <a name="ismbbalnum-ismbbalnuml"></a>_ismbbalnum, _ismbbalnum_l
+# <a name="_ismbbalnum-_ismbbalnum_l"></a>_ismbbalnum, _ismbbalnum_l
 
 Détermine si un caractère multioctet spécifié est alphabétique ou numérique.
 
@@ -64,9 +67,9 @@ Paramètres régionaux à utiliser.
 
 `isalnum(c) || _ismbbkalnum(c)`
 
-est différent de zéro pour *c*, ou 0 si ce n’est pas.
+est différent de zéro pour *c*, ou 0 si ce n’est pas le cas.
 
-La version de cette fonction avec la **_l** suffixe est identique, sauf qu’elle utilise les paramètres régionaux passé au lieu des paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux.
+La version de cette fonction avec le suffixe **_L** est identique, à ceci près qu’elle utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux.
 
 ## <a name="requirements"></a>Configuration requise
 

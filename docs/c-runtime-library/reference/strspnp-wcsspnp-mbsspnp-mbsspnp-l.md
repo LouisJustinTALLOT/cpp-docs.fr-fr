@@ -1,12 +1,12 @@
 ---
 title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsspnp
 - _wcsspnp
 - _mbsspnp_l
 - _strspnp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsspnp
 - _mbsspnp
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: 9a4a0d2f9b9940e181625b129e5ded8bb9644c39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af80f4970e5aad4355b0287c901f130809cc4f79
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223129"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946678"
 ---
-# <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
+# <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
 Retourne un pointeur désignant le premier caractère dans une chaîne donnée différente d’une autre chaîne donnée.
 
 > [!IMPORTANT]
-> **_mbsspnp** et **_mbsspnp_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspnp** et **_mbsspnp_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -91,13 +94,13 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_strspnp**, **_wcsspnp**, et **_mbsspnp** retourner un pointeur vers le premier caractère dans *str* qui n’appartient pas au jeu de caractères dans *charset*. Chacune de ces fonctions retourne **NULL** si *str* est entièrement composé de caractères à partir de *charset*. Pour chacune de ces routines, aucune valeur de retour n’est réservée pour indiquer une erreur.
+**_strspnp**, **_wcsspnp**et **_mbsspnp** retournent un pointeur désignant le premier caractère de *Str* qui n’appartient pas au jeu de caractères dans *charset*. Chacune de ces fonctions retourne la **valeur null** si *Str* est entièrement composé de caractères de *charset*. Pour chacune de ces routines, aucune valeur de retour n’est réservée pour indiquer une erreur.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbsspnp** fonction retourne un pointeur désignant le caractère multioctet qui est le premier caractère dans *str* qui n’appartient pas au jeu de caractères dans *charset*. **_mbsspnp** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation. La recherche n’inclut pas les caractères Null de fin.
+La fonction **_mbsspnp** retourne un pointeur vers le caractère multioctet qui est le premier caractère de *Str* qui n’appartient pas au jeu de caractères dans *charset*. **_mbsspnp** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation. La recherche n’inclut pas les caractères Null de fin.
 
-Si *str* ou *charset* est un pointeur null, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **NULL** et définit **errno** à **EINVAL**.
+Si *Str* ou *charset* est un pointeur null, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne la **valeur null** et définit **errno** sur **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -105,9 +108,9 @@ Si *str* ou *charset* est un pointeur null, cette fonction appelle le Gestionnai
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp** et **_wcsspnp** sont les caractères codés sur un octet et les versions à caractères larges de **_mbsspnp**. **_strspnp** et **_wcsspnp** se comportent de façon identique **_mbsspnp** ; sinon, ils sont fournis uniquement pour ce mappage et ne doit pas être utilisés pour toute autre raison. Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** et **_wcsspnp** sont des versions à caractères codés sur un octet et à caractères larges de **_mbsspnp**. **_strspnp** et **_wcsspnp** se comportent de la même façon que **_mbsspnp** dans le cas contraire ; elles sont fournies uniquement pour ce mappage et ne doivent pas être utilisées pour une autre raison. Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsspnp_l** est identique, sauf qu’elle utilise les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_mbsspnp_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Configuration requise
 

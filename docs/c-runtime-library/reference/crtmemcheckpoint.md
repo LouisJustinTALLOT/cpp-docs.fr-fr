@@ -1,9 +1,9 @@
 ---
 title: _CrtMemCheckpoint
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtMemCheckpoint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtMemCheckpoint
 - _CrtMemCheckpoint
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - CrtMemCheckpoint function
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
-ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edf91cd8c76fd080326e2e5eeac98f7f81ab90cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339869"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942365"
 ---
-# <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
+# <a name="_crtmemcheckpoint"></a>_CrtMemCheckpoint
 
-Obtient l’état actuel du tas de débogage et les stocke dans un fournie par l’application **_CrtMemState** structure (version debug uniquement).
+Obtient l’état actuel du tas de débogage et stocke dans une structure _ **crtmemstate** fournie par l’application (version de débogage uniquement).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,17 +48,17 @@ void _CrtMemCheckpoint(
 ### <a name="parameters"></a>Paramètres
 
 *state*<br/>
-Pointeur vers **_CrtMemState** structure à remplir avec le point de contrôle de mémoire.
+Pointeur vers la structure _ **crtmemstate** à remplir avec le point de contrôle de mémoire.
 
 ## <a name="remarks"></a>Notes
 
-Le **_CrtMemCheckpoint** fonction crée un instantané de l’état actuel du tas de débogage à un moment donné. Cet instantané peut être utilisé par d’autres fonctions d’état du tas, comme [_CrtMemDifference](crtmemdifference.md) , pour aider à détecter les fuites de mémoire et d’autres problèmes. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtMemState** sont supprimés lors du prétraitement.
+La fonction **_CrtMemCheckpoint** crée un instantané de l’état actuel du tas de débogage à un moment donné. Cet instantané peut être utilisé par d’autres fonctions d’état du tas, comme [_CrtMemDifference](crtmemdifference.md) , pour aider à détecter les fuites de mémoire et d’autres problèmes. Lorsque [_ DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à _ **crtmemstate** sont supprimés lors du prétraitement.
 
-L’application doit passer un pointeur vers une instance précédemment allouée de la **_CrtMemState** structure, définie dans Crtdbg.h, dans le *état* paramètre. Si **_CrtMemCheckpoint** rencontre une erreur lors de la création de point de contrôle, la fonction génère une **_CRT_WARN** décrivant le problème de rapport de débogage.
+L’application doit passer un pointeur vers une instance précédemment allouée de la structure _ **crtmemstate** , définie dans CRTDBG. h, dans le paramètre *State* . Si **_CrtMemCheckpoint** rencontre une erreur lors de la création du point de contrôle, la fonction génère un rapport de débogage **_CRT_WARN** décrivant le problème.
 
-Pour plus d’informations sur les fonctions d’état du tas et le **_CrtMemState** structure, consultez [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Pour plus d’informations sur les fonctions d’État du tas et la structure _ **crtmemstate** , consultez [fonctions de rapport d’État du tas](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-Si *état* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) a la valeur **EINVAL** et la fonction retourne.
+Si *State* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ont la valeur **EINVAL** et la fonction retourne.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -65,7 +68,7 @@ Si *état* est **NULL**, le Gestionnaire de paramètre non valide est appelé, c
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-**Bibliothèques :** Les versions Debug de la bibliothèque UCRT uniquement.
+**Bibliotheque** Versions de débogage de UCRT uniquement.
 
 ## <a name="see-also"></a>Voir aussi
 

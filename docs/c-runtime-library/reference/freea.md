@@ -1,9 +1,9 @@
 ---
 title: _freea
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _freea
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - freea
 - _freea
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - freea function
 - memory deallocation
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
-ms.openlocfilehash: ac9c5528755898b0de131bccf94185b501b0e720
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcad8bea4f8cec28d8cb15a9937b1032593ef0cc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333066"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956708"
 ---
-# <a name="freea"></a>_freea
+# <a name="_freea"></a>_freea
 
 Libère un bloc de mémoire.
 
@@ -53,17 +56,17 @@ Aucun
 
 ## <a name="remarks"></a>Notes
 
-Le **_freea** fonction libère un bloc de mémoire (*memblock*) qui a été précédemment alloué par un appel à [_malloca](malloca.md). **_freea** vérifie si la mémoire a été allouée sur le tas ou la pile. Si elle a été allouée sur la pile, **_freea** ne fait rien. Si elle a été allouée sur le tas, le nombre d’octets libérés est équivalent au nombre d’octets demandés quand le bloc a été alloué. Si *memblock* est **NULL**, le pointeur est ignoré et **_freea** retourne immédiatement. Tenter de libérer un pointeur non valide (un pointeur désignant un bloc de mémoire qui n’était pas alloué par **_malloca**) peut affecter les demandes d’allocation ultérieures et provoquer des erreurs.
+La fonction **_freea** libère un bloc de mémoire (*memblock*) précédemment alloué par un appel à [_malloca](malloca.md). **_freea** vérifie si la mémoire a été allouée sur le tas ou la pile. S’il a été alloué sur la pile, **_freea** ne fait rien. Si elle a été allouée sur le tas, le nombre d’octets libérés est équivalent au nombre d’octets demandés quand le bloc a été alloué. Si *memblock* a la **valeur null**, le pointeur est ignoré et **_freea** est retourné immédiatement. Toute tentative de libération d’un pointeur non valide (pointeur vers un bloc de mémoire qui n’a pas été alloué par **_malloca**) peut affecter les demandes d’allocation ultérieures et provoquer des erreurs.
 
-**_freea** appels **gratuit** en interne si elle détecte que la mémoire est allouée sur le tas. Un marqueur placé en mémoire à l’adresse qui précède immédiatement la mémoire allouée détermine si celle-ci est sur le tas ou la pile.
+**_freea** appelle **gratuitement** en interne s’il détecte que la mémoire est allouée sur le tas. Un marqueur placé en mémoire à l’adresse qui précède immédiatement la mémoire allouée détermine si celle-ci est sur le tas ou la pile.
 
-Si une erreur se produit pendant la libération de la mémoire, **errno** est définie avec des informations sur la nature de la défaillance du système d’exploitation. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si une erreur se produit lors de la libération de la mémoire, **errno** est défini avec les informations du système d’exploitation sur la nature de la défaillance. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Une fois qu’un bloc de mémoire a été libéré, [_heapmin](heapmin.md) réduit la quantité de mémoire disponible sur le tas en fusionnant les régions inutilisées et en les libérant pour le système d’exploitation. La mémoire libérée qui n’est pas mise à la disposition du système d’exploitation est restaurée vers le pool libre et peut être réallouée.
 
-Un appel à **_freea** doit accompagner tous les appels à **_malloca**. Il est également une erreur d’appeler **_freea** deux fois sur la même mémoire. Lorsque l’application est liée à une version debug des bibliothèques Runtime C, en particulier avec [_malloc_dbg](malloc-dbg.md) fonctionnalités activées en définissant **_CRTDBG_MAP_ALLOC**, il est plus facile à trouver manquant ou dupliqué d’appels à **_freea**. Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
+Un appel à **_freea** doit accompagner tous les appels à **_malloca**. C’est également une erreur d’appeler **_freea** deux fois sur la même mémoire. Lorsque l’application est liée à une version Debug des bibliothèques Runtime C, en particulier avec les fonctionnalités _ [malloc_dbg](malloc-dbg.md) activées en définissant _ **CRTDBG_MAP_ALLOC**, il est plus facile de trouver des appels manquants ou dupliqués à **_freea**. Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**_freea** est marqué `__declspec(noalias)`, ce qui signifie que la fonction ne peut ne pas modifier les variables globales. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md).
+**_freea** est marqué `__declspec(noalias)`, ce qui signifie que la fonction ne peut pas modifier les variables globales. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md).
 
 ## <a name="requirements"></a>Configuration requise
 
