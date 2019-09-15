@@ -1,9 +1,9 @@
 ---
 title: _heapadd
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapadd
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr120.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcrt.dll
 - msvcr110.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - heapadd
 - _heapadd
@@ -21,14 +24,14 @@ helpviewer_keywords:
 - heaps, adding memory
 - heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
-ms.openlocfilehash: 8cfd2a5a112a7a5b578f7b6dfcdcc3998596bc86
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 4be87710519c9a389adbaf41fefddb9ea8dfb1e6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738508"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940286"
 ---
-# <a name="heapadd"></a>_heapadd
+# <a name="_heapadd"></a>_heapadd
 
 Ajoute de la mémoire au tas.
 
@@ -58,11 +61,11 @@ En cas de réussite, `_heapadd` retourne 0 ; sinon, la fonction retourne -1 et 
 
 Pour plus d’informations sur ce code de retour et sur les autres codes, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Depuis Visual C++ version 4.0, la structure sous-jacente du tas a été déplacée dans les bibliothèques Runtime C pour prendre en charge les nouvelles fonctionnalités de débogage. Par conséquent, `_heapadd` n’est plus pris en charge sur aucune des plateformes basées sur l’API Win32.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|

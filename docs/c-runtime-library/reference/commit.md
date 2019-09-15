@@ -1,9 +1,9 @@
 ---
 title: _commit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _commit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _commit
 - commit
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: 8408158cb3d4ef0d29d9af24d8a2acbd28e00192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5a417deef48c89751f56feec480e90444728687
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340352"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939050"
 ---
-# <a name="commit"></a>_commit
+# <a name="_commit"></a>_commit
 
 Vide un fichier directement sur le disque.
 
@@ -52,13 +55,13 @@ Descripteur de fichier faisant référence au fichier ouvert.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_commit** retourne 0 si le fichier a été correctement vidé sur le disque. Une valeur de retour de -1 indique une erreur.
+**_commit** retourne 0 si le fichier a été correctement vidé sur le disque. Une valeur de retour de-1 indique une erreur.
 
 ## <a name="remarks"></a>Notes
 
-Le **_commit** fonction force le système d’exploitation pour écrire le fichier associé *fd* sur le disque. Grâce à cet appel, le fichier spécifié est vidé immédiatement, et non quand le système d’exploitation le souhaite.
+La fonction **_commit** force le système d’exploitation à écrire le fichier associé à *FD* sur le disque. Grâce à cet appel, le fichier spécifié est vidé immédiatement, et non quand le système d’exploitation le souhaite.
 
-Si *fd* est un descripteur de fichier non valide, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et **errno** a la valeur **EBADF**.
+Si *FD* est un descripteur de fichier non valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne-1 et **errno** a la valeur **EBADF**.
 
 ## <a name="requirements"></a>Configuration requise
 

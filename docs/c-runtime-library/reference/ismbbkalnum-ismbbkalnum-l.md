@@ -1,10 +1,10 @@
 ---
 title: _ismbbkalnum, _ismbbkalnum_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkalnum
 - _ismbbkalnum_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkalnum
 - ismbbkalnum
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 4eca5738068dab7393f70edf619629b179637e73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b7f188e38a2d13bf08210d6c2408ab996f18849
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158005"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954177"
 ---
-# <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
+# <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
 Détermine si un caractère multioctet particulier est un symbole de texte non ASCII.
 
@@ -61,7 +64,7 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ismbbkalnum** retourne une valeur différente de zéro si l’entier *c* est un symbole de texte non-ASCII autre qu’un signe de ponctuation ou 0 si ce n’est pas. **_ismbbkalnum** utilise les paramètres régionaux actuels pour les informations sur les caractères de dépendant des paramètres régionaux. **_ismbbkalnum_l** est identique à **_ismbbkalnum** , à ceci près qu’elle prend les paramètres régionaux en tant que paramètre. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_ismbbkalnum** retourne une valeur différente de zéro si l’entier *c* est un symbole de texte non-ASCII autre que la ponctuation, ou 0 dans le cas contraire. **_ismbbkalnum** utilise les paramètres régionaux actifs pour les informations sur les caractères dépendants des paramètres régionaux. **_ismbbkalnum_l** est identique à **_ismbbkalnum** , sauf qu’il prend les paramètres régionaux en tant que paramètre. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Configuration requise
 

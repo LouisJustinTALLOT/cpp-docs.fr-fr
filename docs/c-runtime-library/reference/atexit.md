@@ -1,9 +1,9 @@
 ---
 title: atexit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - atexit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atexit
 helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-ms.openlocfilehash: 48f0fbfa1f3350f73899fcdbb3bf7922f1c6174d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b91e6dad81f006b0b94ac17a940e840386f6d2b1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341585"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939661"
 ---
 # <a name="atexit"></a>atexit
 
@@ -51,11 +54,11 @@ Fonction à appeler.
 
 ## <a name="remarks"></a>Notes
 
-Le **atexit** l’adresse d’une fonction est passé à la fonction *func* à appeler lorsque le programme se termine normalement. Les appels successifs à **atexit** créent un registre des fonctions qui sont exécutées par ordre dernier entré, premier sorti (LIFO). Les fonctions transmises à **atexit** ne peut pas prendre de paramètres. **atexit** et **_onexit** utilisent le tas pour conserver le Registre des fonctions. Le nombre de fonctions pouvant être enregistrées n’est donc limité que par la mémoire de tas.
+La fonction **atexit** reçoit l’adresse d’une fonction *Func* à appeler lorsque le programme se termine normalement. Les appels successifs à **atexient** créent un registre des fonctions qui sont exécutées dans l’ordre LIFO (dernier entré, premier sorti). Les fonctions passées à **atexient** ne peuvent pas prendre de paramètres. **atexit** et **_onexit** utilisent le tas pour contenir le registre des fonctions. Le nombre de fonctions pouvant être enregistrées n’est donc limité que par la mémoire de tas.
 
-Le code dans le **atexit** fonction ne doit pas contenir toute dépendance vis-à-vis d’une DLL qui peut avoir déjà été déchargée quand le **atexit** fonction est appelée.
+Le code de la fonction **atexit** ne doit pas contenir de dépendances sur une dll qui aurait pu être déjà déchargée lorsque la fonction **atexit** est appelée.
 
-Pour générer une application compatible ANSI, utilisez la norme ANSI **atexit** (fonction) (au lieu du similaire **_onexit** fonction).
+Pour générer une application compatible ANSI, utilisez la fonction **atexit** standard de la norme ANSI (plutôt que la fonction **_onexit** similaire).
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -65,7 +68,7 @@ Pour générer une application compatible ANSI, utilisez la norme ANSI **atexit*
 
 ## <a name="example"></a>Exemple
 
-Ce programme place quatre fonctions dans la pile de fonctions à exécuter lorsque **atexit** est appelée. Quand le programme s’arrête, ces programmes sont exécutés dans l’ordre « dernier entré, premier sorti ».
+Ce programme exécute un push de quatre fonctions sur la pile de fonctions à exécuter lorsque **atexit** est appelé. Quand le programme s’arrête, ces programmes sont exécutés dans l’ordre « dernier entré, premier sorti ».
 
 ```C
 // crt_atexit.c

@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorFuncW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorFuncW
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _RTC_SetErrorFuncW
 - RTC_SetErrorFuncW
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - _RTC_SetErrorFuncW function
 - RTC_error_fnW typedef
 ms.assetid: b3e0d71f-1bd3-4c37-9ede-2f638eb3c81a
-ms.openlocfilehash: 03e9f540a215550a698700f28e5722b33b119149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d45e5c857e917ca23b62482c64a06314565226e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357224"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948963"
 ---
-# <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
+# <a name="_rtc_seterrorfuncw"></a>_RTC_SetErrorFuncW
 
 Désigne une fonction comme gestionnaire pour signaler les vérifications d’erreurs au moment de l’exécution (RTC).
 
@@ -51,17 +54,17 @@ L’adresse de la fonction qui va gérer les vérifications d’erreurs au momen
 
 ## <a name="return-value"></a>Valeur de retour
 
-La fonction d’erreur définie précédemment ; ou **NULL** s’il n’existe aucune fonction définie précédemment.
+La fonction d’erreur définie précédemment ; ou **null** s’il n’existe aucune fonction définie précédemment.
 
 ## <a name="remarks"></a>Notes
 
-Dans le nouveau code, utilisez uniquement **_RTC_SetErrorFuncW**. **_RTC_SetErrorFunc** est uniquement inclus dans la bibliothèque pour la compatibilité descendante.
+Dans le nouveau code, utilisez uniquement **_RTC_SetErrorFuncW**. **_RTC_SetErrorFunc** est inclus uniquement dans la bibliothèque à des fins de compatibilité descendante.
 
-Le **_RTC_SetErrorFuncW** rappel s’applique uniquement au composant auquel il a été lié, mais pas dans le monde entier.
+Le rappel **_RTC_SetErrorFuncW** s’applique uniquement au composant auquel il était lié, mais pas globalement.
 
-Assurez-vous que l’adresse que vous passez à **_RTC_SetErrorFuncW** est celle d’une fonction de gestion d’erreur valide.
+Assurez-vous que l’adresse que vous passez à **_RTC_SetErrorFuncW** est celle d’une fonction de gestion des erreurs valide.
 
-Si une erreur a été affectée un type de -1 à l’aide de [_RTC_SetErrorType](rtc-seterrortype.md), la fonction de gestion d’erreur n’est pas appelée.
+Si un type de-1 a été affecté à une erreur à l’aide de [_RTC_SetErrorType](rtc-seterrortype.md), la fonction de gestion des erreurs n’est pas appelée.
 
 Avant d’appeler cette fonction, vous devez d’abord appeler une des fonctions d’initialisation de vérification d’erreurs au moment de l’exécution. Pour plus d'informations, consultez [Using Run-Time Checks Without the C Run-Time Library](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
 

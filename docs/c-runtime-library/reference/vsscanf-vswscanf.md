@@ -1,10 +1,10 @@
 ---
 title: vsscanf, vswscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vsscanf
 - vswscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vstscanf
 - vsscanf
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - vswscanf function
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
-ms.openlocfilehash: 5bbe80cd2463c5c5b9b4ea55b8d6574675e42054
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dabe603c1cd0c95411fec87b9c0344f28c5c698
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188858"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945102"
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
 
@@ -65,18 +68,18 @@ Liste d’arguments de variable.
 
 Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. La valeur de retour est **EOF** pour une erreur ou si la fin de la chaîne est atteinte avant la première conversion.
 
-Si *tampon* ou *format* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Si la *mémoire tampon* ou le *format* est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **vsscanf** fonction lit les données à partir de *tampon* dans les emplacements qui sont fournis par chaque argument dans le *arglist* liste d’arguments. Chaque argument dans la liste doit être un pointeur vers une variable qui a un type qui correspond à un spécificateur de type dans *format*. Le *format* contrôles d’argument des champs de l’interprétation de l’entrée et a les mêmes forme et fonction que le *format* argument pour le **scanf** (fonction). Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+La fonction **vsscanf** lit les données de la *mémoire tampon* dans les emplacements fournis par chaque argument dans la liste d’arguments *arglist* . Chaque argument de la liste doit être un pointeur vers une variable dont le type correspond à un spécificateur de type au *format*. L’argument *format* contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que l’argument *format* pour la fonction **scanf** . Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> Lorsque vous utilisez **vsscanf** pour lire une chaîne, spécifiez toujours une largeur pour les **%s** format (par exemple, **« % 32s »** au lieu de **« %s »**) ; Sinon, entrée mal formatée peut provoquer un dépassement de mémoire tampon.
+> Quand vous utilisez **vsscanf** pour lire une chaîne, spécifiez toujours une largeur pour le format **% s** (par exemple, **« % 32s »** au lieu de **« % s »** ); dans le cas contraire, une entrée incorrectement mise en forme peut provoquer un dépassement de mémoire tampon.
 
-**vswscanf** est une version à caractères larges de **vsscanf**; les arguments de **vswscanf** sont des chaînes à caractères larges. **vsscanf** ne gère pas les caractères hexadécimaux multioctets. **vswscanf** ne gère pas hexadécimaux entiers Unicode ou caractères de « zone de compatibilité ». Sinon, **vswscanf** et **vsscanf** ont un comportement identique.
+**vswscanf** est une version à caractères larges de **vsscanf**; les arguments de **vswscanf** sont des chaînes à caractères larges. **vsscanf** ne gère pas les caractères hexadécimaux multioctets. **vswscanf** ne gère pas les caractères hexadécimaux ou « zone de compatibilité » Unicode à pleine chasse. Sinon, **vswscanf** et **vsscanf** se comportent de la même façon.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -93,7 +96,7 @@ Le **vsscanf** fonction lit les données à partir de *tampon* dans les emplacem
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_vsscanf.c

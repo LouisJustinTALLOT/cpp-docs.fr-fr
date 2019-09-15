@@ -1,10 +1,10 @@
 ---
 title: memcmp, wmemcmp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcmp
 - wmemcmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,8 +17,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
-topictype: APIRef
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memcmp
 - wmemcmp
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 228a74ac8cc83bca169779f1afd6936f5be59bee
-ms.sourcegitcommit: 010ecc2bb9a15deea192a34975176ec0426aa3d8
+ms.openlocfilehash: 2fa902c0fa5a4a78f6fd3e46edeb3799aaf92569
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265626"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951932"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -61,21 +63,21 @@ Première mémoire tampon.
 Seconde mémoire tampon.
 
 *count*<br/>
-Nombre de caractères à comparer. (Compare les octets pour **memcmp**, caractères larges pour **wmemcmp**).
+Nombre de caractères à comparer. (Compare les octets pour **memcmp**, les caractères larges pour **wmemcmp**).
 
 ## <a name="return-value"></a>Valeur de retour
 
 La valeur de retour indique la relation entre les mémoires tampons.
 
-|Valeur de retour|Relation de première *nombre* caractères de buf1 et buf2|
+|Valeur de retour|Relation des premiers caractères *Count* de buf1 et buf2|
 |------------------|---------------------------------------------------------------|
-|< 0|*buffer1* inférieure à *buffer2*|
-|0|*buffer1* identique à *buffer2*|
-|> 0|*buffer1* supérieur *buffer2*|
+|< 0|*Buffer1* inférieur à *buffer2*|
+|0|*Buffer1* identique à *buffer2*|
+|> 0|*Buffer1* supérieur à *buffer2*|
 
 ## <a name="remarks"></a>Notes
 
-Compare la première *nombre* caractères de *buffer1* et *buffer2* et retourne une valeur qui indique leur relation. Le signe d’une valeur de retour non Nulle est le signe de la différence entre la première paire de valeurs différente dans les mémoires tampons. Les valeurs sont interprétées en tant que **non signé** **char** pour **memcmp**et en tant que **wchar_t** pour **wmemcmp**.
+Compare les premiers caractères *Count* de *Buffer1* et *buffer2* et retourne une valeur qui indique leur relation. Le signe d’une valeur de retour non Nulle est le signe de la différence entre la première paire de valeurs différente dans les mémoires tampons. Les valeurs sont interprétées comme **unsigned** **char** pour **memcmp**et comme **wchar_t** pour **wmemcmp**.
 
 ## <a name="requirements"></a>Configuration requise
 

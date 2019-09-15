@@ -1,10 +1,10 @@
 ---
 title: _filelength, _filelengthi64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _filelengthi64
 - _filelength
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _filelength
 - _filelengthi64
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-ms.openlocfilehash: 00d755138b9293145865b832994a25062edd883e
-ms.sourcegitcommit: fc6bdffcf7d5521609da629621cc8459b200b004
+ms.openlocfilehash: d7cf7f5bea5ed8964ec1a714a2a70d289daf085f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351774"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957221"
 ---
-# <a name="filelength-filelengthi64"></a>_filelength, _filelengthi64
+# <a name="_filelength-_filelengthi64"></a>_filelength, _filelengthi64
 
 Obtient la longueur d’un fichier.
 
@@ -58,7 +61,7 @@ Descripteur de fichier cible.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les deux **_filelength** et **_filelengthi64** retournent la longueur du fichier, en octets, du fichier cible associé *fd*. Si *fd* est un descripteur de fichier non valide, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces deux fonctions retournent-1 L pour indiquer une erreur et de définir **errno** à **EBADF**.
+**_Filelength** et **_filelengthi64** retournent la longueur du fichier, en octets, du fichier cible associé à *FD*. Si *FD* est un descripteur de fichier non valide, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les deux fonctions retournent-1L pour indiquer une erreur et affecter à **errno** la valeur **EBADF**.
 
 ## <a name="requirements"></a>Configuration requise
 

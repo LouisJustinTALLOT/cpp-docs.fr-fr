@@ -1,10 +1,10 @@
 ---
 title: _fullpath_dbg, _wfullpath_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfullpath_dbg
 - _fullpath_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wfullpath_dbg
 - _wfullpath_dbg
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-ms.openlocfilehash: b84c5b77d0a9bfb298d4c597e372cd39a92441f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9271e26bcf4a78ff8d2e4fcf108f1e483c22c1d7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332947"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956314"
 ---
-# <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
+# <a name="_fullpath_dbg-_wfullpath_dbg"></a>_fullpath_dbg, _wfullpath_dbg
 
-Versions de [_fullpath, _wfullpath](fullpath-wfullpath.md) qui utilisent la version debug de **malloc** d’allocation de mémoire.
+Versions de [_fullpath, _wfullpath](fullpath-wfullpath.md) qui utilisent la version de débogage de **malloc** pour allouer de la mémoire.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,32 +67,32 @@ wchar_t *_wfullpath_dbg(
 ### <a name="parameters"></a>Paramètres
 
 *absPath*<br/>
-Pointeur vers une mémoire tampon contenant le nom de chemin d’accès absolu ou complet, ou **NULL**.
+Pointeur vers une mémoire tampon contenant le nom de chemin d’accès absolu ou complet, ou **null**.
 
 *relPath*<br/>
 Nom de chemin d’accès relatif.
 
 *maxLength*<br/>
-Longueur maximale du tampon du nom de chemin d’accès absolu (*absPath*). Cette durée est exprimée en octets pour **_fullpath** mais en caractères larges (**wchar_t**) pour **_wfullpath**.
+Longueur maximale de la mémoire tampon du nom de chemin d’accès absolu (*absPath*). Cette longueur est en octets pour **_fullpath** , mais en caractères larges (**wchar_t**) pour **_wfullpath**.
 
 *blockType*<br/>
-Type de bloc de mémoire demandé : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
+Type de bloc de mémoire demandé : _ **client_block** ou **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Pointeur vers le nom du fichier source qui a demandé l’opération d’allocation ou **NULL**.
+Pointeur vers le nom du fichier source qui a demandé l’opération d’allocation ou **null**.
 
 *linenumber*<br/>
-Numéro de ligne dans le fichier source où l’opération d’allocation a été demandée ou **NULL**.
+Numéro de ligne dans le fichier source où l’opération d’allocation a été demandée ou **null**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction retourne un pointeur vers une mémoire tampon contenant le nom de chemin d’accès absolu (*absPath*). S’il existe une erreur (par exemple, si la valeur passée dans *relPath* comprend une lettre de lecteur qui n’est pas valide ou est introuvable, ou si la longueur du nom de chemin d’accès absolu créé (*absPath*) est supérieur à *maxLength*) la fonction retourne **NULL**.
+Chaque fonction retourne un pointeur vers une mémoire tampon contenant le nom du chemin d’accès absolu (*absPath*). En cas d’erreur (par exemple, si la valeur passée dans *relPath* inclut une lettre de lecteur qui n’est pas valide ou est introuvable, ou si la longueur du nom de chemin d’accès absolu créé (*absPath*) est supérieure à *MaxLength*), la fonction retourne  **Valeur NULL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_fullpath_dbg** et **_wfullpath_dbg** fonctions sont identiques aux **_fullpath** et **_wfullpath** , à ceci près que, lorsque **_DEBUG** est défini, ces fonctions utilisent la version debug de **malloc**, **_malloc_dbg**, pour allouer la mémoire si **NULL** est passée en tant que premier paramètre. Pour plus d’informations sur les fonctionnalités de débogage de **_malloc_dbg**, consultez [_malloc_dbg](malloc-dbg.md).
+Les fonctions **_fullpath_dbg** et **_wfullpath_dbg** sont identiques à **_fullpath** et **_wfullpath** , à ceci près que, quand **_ DEBUG** est défini, ces fonctions utilisent la version Debug de **malloc**, _ **malloc_dbg**, pour allouer de la mémoire si la **valeur null** est passée comme premier paramètre. Pour plus d’informations sur les fonctionnalités de débogage de _ **malloc_dbg**, consultez _ [malloc_dbg](malloc-dbg.md).
 
-Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir le **_CRTDBG_MAP_ALLOC** indicateur. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_fullpath** et **_wfullpath** sont remappés à **_fullpath_dbg** et **_wfullpath_dbg**, respectivement, avec le *blockType* définie sur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions explicitement, sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
+Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir l’indicateur _ **CRTDBG_MAP_ALLOC** . Quand _ **CRTDBG_MAP_ALLOC** est défini, les appels à **_fullpath** et **_wfullpath** sont remappés à **_fullpath_dbg** et **_Wfullpath_dbg**, respectivement, avec le *Blocktype* défini sur **_NORMAL_BLOCK**. Vous n’avez donc pas besoin d’appeler ces fonctions de manière explicite, sauf si vous souhaitez marquer les blocs du tas comme _ **client_block**. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

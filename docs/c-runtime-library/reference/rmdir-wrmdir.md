@@ -1,10 +1,10 @@
 ---
 title: _rmdir, _wrmdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wrmdir
 - _rmdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - trmdir
 - _trmdir
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 0d0d9a25b70746174a66abbe088b297a5d9a0942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 396e620bfabe240638dc070ff87582b16287ff60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357458"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949215"
 ---
-# <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
+# <a name="_rmdir-_wrmdir"></a>_rmdir, _wrmdir
 
 Supprime un répertoire.
 
@@ -62,7 +65,7 @@ Chemin du répertoire à supprimer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne 0 si le répertoire est bien supprimé. Une valeur de retour de -1 indique une erreur et **errno** est défini sur l’une des valeurs suivantes :
+Chacune de ces fonctions retourne 0 si le répertoire est bien supprimé. Une valeur de retour de-1 indique une erreur et **errno** est défini sur l’une des valeurs suivantes :
 
 |Valeur de la variable errno|Condition|
 |-|-|
@@ -74,9 +77,9 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 ## <a name="remarks"></a>Notes
 
-Le **_rmdir** fonction supprime le répertoire spécifié par *dirname*. Le répertoire doit être vide et ne doit pas être le répertoire de travail actif ou le répertoire racine.
+La fonction **_rmdir** supprime le répertoire spécifié par *dirname*. Le répertoire doit être vide et ne doit pas être le répertoire de travail actif ou le répertoire racine.
 
-**_wrmdir** est une version à caractères larges de **_rmdir**; le *dirname* l’argument de **_wrmdir** est une chaîne de caractères larges. **_wrmdir** et **_rmdir** se comportent de façon identique dans le cas contraire.
+**_wrmdir** est une version à caractères larges de **_rmdir**; l’argument *dirname* de **_wrmdir** est une chaîne de caractères larges. dans le cas contraire, **_wrmdir** et **_rmdir** se comportent de la même façon.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

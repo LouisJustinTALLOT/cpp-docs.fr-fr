@@ -1,25 +1,28 @@
 ---
 title: Spécification de largeur scanf
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scanf
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 1431002a7e7d0054ac20c05c76b05cabc96177c5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 3b00996f3a17ab9298b1edba5a8e60826e19fdcc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743263"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957347"
 ---
 # <a name="scanf-width-specification"></a>Spécification de largeur scanf
 
@@ -79,13 +82,13 @@ Si vous utilisez une fonction non sécurisée dans la famille `scanf`, omettez l
 
 ## <a name="reading-undelimited-strings"></a>Lecture de chaînes non délimitées
 
-Pour la lecture des chaînes non délimitées par des espaces blancs, un jeu de caractères entre crochets (**[ ]**) peut remplacer le caractère de type **s** (string). Le jeu de caractères entre crochets est appelé chaîne de contrôle. Le champ d'entrée correspondant est lu jusqu'au premier caractère non visible dans la chaîne de contrôle. Si le premier caractère dans le jeu est un accent circonflexe (**^**), l’effet est inversé : Le champ d’entrée est lu jusqu’au premier caractère qui apparaît dans le reste du jeu de caractères.
+Pour la lecture des chaînes non délimitées par des espaces blancs, un jeu de caractères entre crochets ( **[ ]** ) peut remplacer le caractère de type **s** (string). Le jeu de caractères entre crochets est appelé chaîne de contrôle. Le champ d'entrée correspondant est lu jusqu'au premier caractère non visible dans la chaîne de contrôle. Si le premier caractère dans le jeu est un accent circonflexe ( **^** ), l’effet est inversé : Le champ d’entrée est lu jusqu’au premier caractère qui apparaît dans le reste du jeu de caractères.
 
-Notez que **%[a-z]** et **%[z-a]** sont interprétés comme étant équivalents à **%[abcde...z]**. Il s'agit d'une extension de fonction `scanf` commune. Toutefois, notez que la norme ANSI ne l'impose pas.
+Notez que **%[a-z]** et **%[z-a]** sont interprétés comme étant équivalents à **%[abcde...z]** . Il s'agit d'une extension de fonction `scanf` commune. Toutefois, notez que la norme ANSI ne l'impose pas.
 
 ## <a name="reading-unterminated-strings"></a>Lecture de chaînes non terminées
 
-Pour stocker une chaîne sans stocker un caractère Null de fin ('\0'), utilisez la spécification **%**<em>n</em>**c** où *n* est un entier décimal. Dans ce cas, le caractère de type **c** indique que l’argument est un pointeur vers un tableau de caractères. Les *n* prochains caractères sont lus à partir du flux d’entrée dans l’emplacement spécifié, et aucun caractère Null ('\0') n’est ajouté. Si *n* n’est pas spécifié, sa valeur par défaut est 1.
+Pour stocker une chaîne sans stocker un caractère Null de fin ('\0'), utilisez la spécification **%** <em>n</em>**c** où *n* est un entier décimal. Dans ce cas, le caractère de type **c** indique que l’argument est un pointeur vers un tableau de caractères. Les *n* prochains caractères sont lus à partir du flux d’entrée dans l’emplacement spécifié, et aucun caractère Null ('\0') n’est ajouté. Si *n* n’est pas spécifié, sa valeur par défaut est 1.
 
 ## <a name="when-scanf-stops-reading-a-field"></a>Quand scanf arrête de lire un champ
 

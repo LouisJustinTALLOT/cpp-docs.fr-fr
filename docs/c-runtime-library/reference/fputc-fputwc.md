@@ -1,10 +1,10 @@
 ---
 title: fputc, fputwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fputc
 - fputwc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fputc
 - fputwc
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-ms.openlocfilehash: fc06c9f2060baae63071339768cef11fc5f34023
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d289e54bca53be52d0b308d759f4200eca8599c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288017"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956962"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
@@ -62,15 +65,15 @@ Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne le caractère écrit. Pour **fputc**, une valeur de retour de **EOF** indique une erreur. Pour **fputwc**, une valeur de retour de **WEOF** indique une erreur. Si *flux* est **NULL**, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, elles retournent **EOF** et définissez **errno** à **EINVAL**.
+Chacune de ces fonctions retourne le caractère écrit. Pour **fputc**, une valeur de retour de **EOF** indique une erreur. Pour **fputwc**, une valeur de retour de **WEOF** indique une erreur. Si *Stream* a la **valeur null**, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, elles retournent **EOF** et attribuent à **errno** la valeur **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions écrit le caractère unique *c* dans un fichier à la position indiquée par l’indicateur de position de fichier associé (si défini) et avance l’indicateur comme il convient. Dans le cas de **fputc** et **fputwc**, le fichier est associé *flux*. Si le fichier ne peut pas prendre en charge les demandes de positionnement ou a été ouvert en mode ajout, le caractère est ajouté à la fin du flux.
+Chacune de ces fonctions écrit le caractère unique *c* dans un fichier à l’emplacement indiqué par l’indicateur de position de fichier associé (Si défini) et avance l’indicateur comme il convient. Dans le cas de **fputc** et de **fputwc**, le fichier est associé au *flux*. Si le fichier ne peut pas prendre en charge les demandes de positionnement ou a été ouvert en mode ajout, le caractère est ajouté à la fin du flux.
 
-Les deux fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **fputc** ne prend pas en charge sortie vers un flux UNICODE.
+Les deux fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **fputc** ne prend pas actuellement en charge la sortie dans un flux Unicode.
 
 Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Pour plus d’informations, consultez [_fputc_nolock, _fputwc_nolock](fputc-nolock-fputwc-nolock.md).
 
@@ -78,8 +81,8 @@ Voici une série de notes spécifiques aux routines.
 
 |Routine|Notes|
 |-------------|-------------|
-|**fputc**|Équivalent à **putc**, mais implémentée uniquement comme une fonction, plutôt que comme une fonction et une macro.|
-|**fputwc**|Version à caractères larges de **fputc**. Écrit *c* comme un caractère multioctet ou large selon que *flux* est ouvert en mode texte ou binaire.|
+|**fputc**|Équivalent à **putc**, mais implémenté uniquement comme une fonction, plutôt que comme une fonction et une macro.|
+|**fputwc**|Version à caractères larges de **fputc**. Écrit *c* sous la forme d’un caractère multioctet ou d’un caractère élargi selon que le *flux* est ouvert en mode texte ou binaire.|
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -94,9 +97,9 @@ Voici une série de notes spécifiques aux routines.
 |**fputc**|\<stdio.h>|
 |**fputwc**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console,**stdin**, **stdout**, et **stderr**— doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console (**stdin**, **stdout**et **stderr**) doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_fputc.c

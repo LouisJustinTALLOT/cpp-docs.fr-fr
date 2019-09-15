@@ -1,9 +1,9 @@
 ---
 title: _aligned_msize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_msize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_msize
 - aligned_msize
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-ms.openlocfilehash: 97c739eed1f54f0c6705d37542eb13c6ec6879d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 922224dc81858076770a36551df26c89940b3282
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341923"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943911"
 ---
-# <a name="alignedmsize"></a>_aligned_msize
+# <a name="_aligned_msize"></a>_aligned_msize
 
 Retourne la taille d’un bloc de mémoire alloué dans le tas.
 
@@ -61,11 +64,11 @@ Retourne la taille (en octets) sous la forme d’un entier non signé.
 
 ## <a name="remarks"></a>Notes
 
-Le **_aligned_msize** fonction retourne la taille, en octets, du bloc de mémoire alloué par un appel à [_aligned_malloc](aligned-malloc.md) ou [_aligned_realloc](aligned-realloc.md). Le *alignement* et *décalage* valeurs doivent être le même que les valeurs passées à la fonction que le bloc alloué.
+La fonction **_aligned_msize** retourne la taille, en octets, du bloc de mémoire alloué par un appel à [_aligned_malloc](aligned-malloc.md) ou [_aligned_realloc](aligned-realloc.md). L' *alignement* et les valeurs de *décalage* doivent être les mêmes que les valeurs passées à la fonction qui a alloué le bloc.
 
-Lorsque l’application est liée à une version debug des bibliothèques Runtime C, **_aligned_msize** se résout en [_aligned_msize_dbg](aligned-msize-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
+Lorsque l’application est liée à une version Debug des bibliothèques Runtime C, **_aligned_msize** se résout en [_aligned_msize_dbg](aligned-msize-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Cette fonction valide son paramètre. Si *memblock* est un pointeur null ou *alignement* n’est pas une puissance de 2, **_msize** appelle un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre ](../../c-runtime-library/parameter-validation.md). Si l’erreur est gérée, la fonction définit **errno** à **EINVAL** et retourne -1.
+Cette fonction valide son paramètre. Si *memblock* est un pointeur null ou si l' *alignement* n’est pas une puissance de 2, **_msize** appelle un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’erreur est gérée, la fonction affecte à **errno** la valeur **EINVAL** et retourne-1.
 
 ## <a name="requirements"></a>Configuration requise
 

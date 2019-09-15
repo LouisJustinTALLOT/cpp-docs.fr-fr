@@ -1,14 +1,14 @@
 ---
 title: log, logf, logl, log10, log10f, log10l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log10f
 - logf
 - log10
 - log
 - log10l
 - logl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - logf
 - logl
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286010"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953232"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -76,7 +79,7 @@ Valeur dont le logarithme doit être recherché.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **journal** fonctions retournent le logarithme népérien (base *e*) de *x* en cas de réussite. Le **log10** fonctions retournent le logarithme en base 10. Si *x* est négatif, ces fonctions retournent un indéfini (IND), par défaut. Si *x* est 0, elles retournent l’infini (INF).
+Les fonctions de **journalisation** retournent le logarithme népérien (base *e*) de *x* en cas de réussite. Les fonctions **log10** retournent le logarithme en base 10. Si *x* est négatif, ces fonctions retournent une valeur indéfinie (IND) par défaut. Si *x* est égal à 0, elles retournent l’infini (INF).
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
@@ -84,11 +87,11 @@ Le **journal** fonctions retournent le logarithme népérien (base *e*) de *x* e
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**journal** et **log10** ont une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
+**log** et **log10** ont une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **journal** et **log10** qui acceptent et retournent **float** ou **long double** valeurs. Dans un programme C, **journal** et **log10** acceptent et retournent toujours un **double**.
+C++autorise la surcharge, de sorte que vous pouvez appeler des surcharges de **log** et **log10** qui acceptent et retournent des valeurs **float** ou **long double** . Dans un programme C, **log** et **log10** prennent et retournent toujours un **double**.
 
 ## <a name="requirements"></a>Configuration requise
 

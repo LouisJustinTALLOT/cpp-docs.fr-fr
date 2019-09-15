@@ -1,11 +1,11 @@
 ---
 title: trunc, truncf, truncl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - trunc
 - truncf
 - truncl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - trunc
 - truncf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0c615c91e562fa45f791d8cc20f39a830013aeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268934"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946004"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -61,21 +64,21 @@ Valeur à tronquer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne une valeur entière de *x*, arrondie vers zéro.
+En cas de réussite, retourne une valeur entière de *x*, arrondie à zéro.
 
 Sinon, peut retourner l’une des valeurs suivantes :
 
-|Problème|Retourner|
+|Problème|Renvoie|
 |-----------|------------|
-|*x* = ±INFINITY|x|
+|*x* = ± infini|x|
 |*x* =  ±0|x|
-|*x* = NaN|NaN|
+|*x* = Nan|NaN|
 
 Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **trunc** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **trunc** accepte et retourne toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **trunc** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **trunc** prend toujours et retourne un **double**.
 
 Comme les valeurs à virgule flottante les plus grandes sont des entiers exacts, cette fonction ne provoque pas de dépassement de capacité. Cependant, vous pouvez causer le dépassement de capacité de la fonction en retournant une valeur sous dans un type entier.
 

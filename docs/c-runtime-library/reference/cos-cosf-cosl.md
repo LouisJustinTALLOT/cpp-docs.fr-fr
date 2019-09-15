@@ -1,11 +1,11 @@
 ---
 title: cos, cosf, cosl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - cos
 - cosf
 - cosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cos
 - cosf
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335358"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942834"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -62,16 +65,16 @@ Angle en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le cosinus de *x*. Si *x* est supérieur ou égal à 263 ou inférieur ou égal à -263, une perte de précision dans le résultat se produit.
+Cosinus de *x*. Si *x* est supérieur ou égal à 263, ou inférieur ou égal à-263, une perte de précision dans le résultat se produit.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN, IND|none|**_DOMAIN**|
-|+ INF|**NON VALIDE**|**_DOMAIN**|
+|FICHIER INF ±|**NON VALIDE**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **cos** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **cos** accepte et retourne toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **COS** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **COS** prend toujours et retourne une valeur **double**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -81,9 +84,9 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **c
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-Consultez l’exemple dans [sin, sinf, sinl](sin-sinf-sinl.md).
+Consultez l’exemple dans [Sin, sinf, sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Voir aussi
 

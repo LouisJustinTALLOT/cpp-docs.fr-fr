@@ -1,12 +1,12 @@
 ---
 title: abs, labs, llabs, _abs64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - abs
 - _abs64
 - labs
 - llabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - stdlib/_abs64
 - math/abs
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf5b4be654a3bd48b3e0d43ac97ce02b348942bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341988"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939930"
 ---
-# <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
+# <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
 Calcule la valeur absolue de l’argument.
 
@@ -71,13 +74,13 @@ Valeur numérique.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **abs**, **labs**, **llabs** et **_abs64** fonctions retournent la valeur absolue du paramètre *n*. Aucun retour d'erreur.
+Les fonctions **ABS**, **Labs**, **LLabs** et **_abs64** retournent la valeur absolue du paramètre *n*. Aucun retour d'erreur.
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **abs** qui acceptent et retournent **long**, **long** **long**,  **float**, **double**, et **long** **double** valeurs. Ces surcharges sont définies dans l’en-tête \<cmath>. Dans un programme C, **abs** accepte et retourne toujours un **int**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges d' **ABS** qui acceptent et retournent des valeurs **long**, **long** **long**, **float**, **double**et **long** **double** . Ces surcharges sont définies dans l’en-tête \<cmath>. Dans un programme C, **ABS** prend toujours et retourne un **int**.
 
-**Spécifique à Microsoft**: Étant donné que la plage d’entiers négatifs qui peuvent être représentés à l’aide de n’importe quel type intégral est supérieure à la plage d’entiers positifs qui peuvent être représentés à l’aide de ce type, il est possible de fournir un argument à ces fonctions qui ne peut pas être converti. Si la valeur absolue de l’argument ne peut pas être représentée par le type de retour, le **abs** fonctions retournent la valeur d’argument inchangée. Plus précisément, `abs(INT_MIN)` retourne `INT_MIN`, `labs(LONG_MIN)` retourne `LONG_MIN`, `llabs(LLONG_MIN)` retourne `LLONG_MIN`, tandis que `_abs64(_I64_MIN)` retourne `_I64_MIN`. Cela signifie que le **abs** fonctions ne peuvent pas être utilisées pour garantir une valeur positive.
+**Spécifique à Microsoft**: Étant donné que la plage d’entiers négatifs qui peuvent être représentés à l’aide de n’importe quel type intégral est supérieure à la plage d’entiers positifs qui peuvent être représentés à l’aide de ce type, il est possible de fournir un argument à ces fonctions qui ne peut pas être converti. Si la valeur absolue de l’argument ne peut pas être représentée par le type de retour, les fonctions **ABS** retournent la valeur d’argument inchangée. Plus précisément, `abs(INT_MIN)` retourne `INT_MIN`, `labs(LONG_MIN)` retourne `LONG_MIN`, `llabs(LLONG_MIN)` retourne `LLONG_MIN`, tandis que `_abs64(_I64_MIN)` retourne `_I64_MIN`. Cela signifie que les fonctions **ABS** ne peuvent pas être utilisées pour garantir une valeur positive.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -86,9 +89,9 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **a
 |**abs**, **labs**, **llabs**|\<math.h> ou \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> ou \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> ou \<stdlib.h>|
 
-Pour utiliser les versions surchargées de **abs** en C++, vous devez inclure le \<cmath > en-tête.
+Pour utiliser les versions surchargées de l’ABS C++dans, vous devez inclure \<l’en-tête > cmath.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Ce programme calcule et affiche les valeurs absolues de plusieurs nombres.
 

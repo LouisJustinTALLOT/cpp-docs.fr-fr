@@ -1,14 +1,14 @@
 ---
 title: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnset_s_l
 - _strnset_s
 - _mbsnset_s
 - _strnset_s_l
 - _wcsnset_s_l
 - _wcsnset_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbsnset_s_l
 - wcsnset_s
@@ -55,19 +58,19 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: 9fc8149bcabb2708f644c80837a93cee72658b8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3542d2272282a9c3f6b2aed8cc443bef85dfe883
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209621"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946987"
 ---
-# <a name="strnsets-strnsetsl-wcsnsets-wcsnsetsl-mbsnsets-mbsnsetsl"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
+# <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 
 Initialise les caractères d’une chaîne à un caractère donné. Ces versions de [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsnset_s** et **_mbsnset_s_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnset_s** et **_mbsnset_s_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -119,7 +122,7 @@ errno_t _mbsnset_s_l(
 Chaîne à modifier.
 
 *numberOfElements*<br/>
-La taille de la *str* mémoire tampon.
+Taille de la mémoire tampon *Str* .
 
 *c*<br/>
 Paramètre de caractère.
@@ -134,13 +137,13 @@ Paramètres régionaux à utiliser.
 
 Zéro en cas de réussite ; code d’erreur dans un autre cas.
 
-Ces fonctions valident leurs arguments. Si *str* n’est pas une chaîne se terminant par null valide ou l’argument de taille est inférieure ou égale à 0, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent un code d’erreur et un ensemble **errno** à ce code d’erreur. Le code d’erreur par défaut est **EINVAL** si une valeur plus spécifique ne s’applique pas.
+Ces fonctions valident leurs arguments. Si *Str* n’est pas une chaîne terminée par le caractère null valide ou si l’argument Size est inférieur ou égal à 0, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent un code d’erreur et attribuent à **errno** la valeur de ce code d’erreur. Le code d’erreur par défaut est **EINVAL** si une valeur plus spécifique ne s’applique pas.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions remplacent, au maximum, la première *nombre* caractères de *str* à *c*. Si *nombre* est supérieure à la taille de *str*, la taille de *str* est utilisé au lieu de *nombre*. Une erreur se produit si *nombre* est supérieur à *numberOfElements* et ces deux paramètres est supérieures à la taille de *str*.
+Ces fonctions définissent, au plus, les *premiers caractères de* *Str* en *c*. Si *Count* est supérieur à la taille de *Str*, la taille de *Str* est utilisée à la place de *Count*. Une erreur se produit si le *nombre* est supérieur à *NumberOfElements* et si ces deux paramètres sont supérieurs à la taille de *Str*.
 
-**_wcsnset_s** et **_mbsnset_s** sont des versions à caractères larges et à caractères multioctets de **_strnset_s**. L’argument de chaîne de **_wcsnset_s** est un caractère large chaîne ; celle de **_mbsnset_s** est la chaîne de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**_wcsnset_s** et **_mbsnset_s** sont des versions à caractères larges et à caractères multioctets de **_strnset_s**. L’argument de chaîne de **_wcsnset_s** est une chaîne de caractères larges ; la chaîne de caractères de **_mbsnset_s** est multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

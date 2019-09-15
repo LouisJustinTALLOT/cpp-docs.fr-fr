@@ -1,9 +1,9 @@
 ---
 title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-apiname:
+api_name:
 - _CrtSetDebugFillThreshold
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fe7d998a44502709edde33d22c1b1e88cf5ecbee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342968"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942293"
 ---
-# <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
+# <a name="_crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
 Récupère ou modifie le seuil de contrôle du comportement de remplissage de la mémoire tampon dans les fonctions de débogage.
 
@@ -49,11 +52,11 @@ Nouvelle taille de seuil en octets.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de seuil précédente.
+Valeur de seuil précédente.
 
 ## <a name="remarks"></a>Notes
 
-Les versions de débogage de certaines fonctions CRT sécurisées remplissent la mémoire tampon passée par un caractère spécial (0xFE). Cela permet de rechercher les cas où une taille incorrecte a été passée à la fonction. Malheureusement, cela réduit aussi les performances. Pour améliorer les performances, utilisez **_CrtSetDebugFillThreshold** pour désactiver le remplissage de la mémoire tampon pour les mémoires tampons qui dépassent le *newThreshold* seuil. Un *newThreshold* la valeur 0 désactive pour toutes les mémoires tampons.
+Les versions Debug de certaines fonctions CRT de sécurité améliorées remplissent la mémoire tampon qui leur est transmise avec un caractère spécial (0xFE). Cela permet de rechercher les cas où une taille incorrecte a été passée à la fonction. Malheureusement, cela réduit aussi les performances. Pour améliorer les performances, utilisez **_CrtSetDebugFillThreshold** pour désactiver le remplissage de mémoire tampon pour les mémoires tampons supérieures au seuil *newThreshold* . Une valeur *newThreshold* égale à 0 la désactive pour toutes les mémoires tampons.
 
 Le seuil par défaut est **SIZE_T_MAX**.
 
@@ -105,7 +108,7 @@ Cette fonction est spécifique à Microsoft. Pour plus d'informations sur la com
 
 ## <a name="libraries"></a>Bibliothèques
 
-Les versions Debug de la [les bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md) uniquement.
+Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Exemple
 

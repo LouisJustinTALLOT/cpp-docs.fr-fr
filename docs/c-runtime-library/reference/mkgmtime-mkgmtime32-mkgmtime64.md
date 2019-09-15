@@ -1,11 +1,11 @@
 ---
 title: _mkgmtime, _mkgmtime32, _mkgmtime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mkgmtime32
 - _mkgmtime64
 - _mkgmtime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mkgmtime64
 - mkgmtime32
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: 65d96d79a45e05e4b371315c0612ed086f6ea2a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcd1e3fdcca37d7e5bb381c234a6d8555ce2766c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156497"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951667"
 ---
-# <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
+# <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
-Convertit une heure UTC représentée par un **struct** **tm** en heure UTC représentée par un **time_t** type.
+Convertit une heure UTC représentée par un **struct** **TM** en heure UTC représentée par un type **time_t** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,19 +67,19 @@ __time64_t _mkgmtime64(
 ### <a name="parameters"></a>Paramètres
 
 *timeptr*<br/>
-Un pointeur vers l’heure UTC en tant qu’un **struct** **tm** à convertir.
+Pointeur vers l’heure UTC en tant que **struct** **TM** à convertir.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Une quantité de type **__time32_t** ou **__time64_t** représentant le nombre de secondes écoulées depuis minuit, le 1er janvier 1970, temps universel coordonné (UTC). Si la date est hors limites (voir la section Notes) ou l’entrée ne peut pas être interprétée comme une heure valide, la valeur de retour est -1.
+Quantité de type **__time32_t** ou **__time64_t** représentant le nombre de secondes écoulées depuis le 1er janvier 1970 à minuit, en temps universel coordonné (UTC). Si la date est hors limites (consultez la section Notes) ou si l’entrée ne peut pas être interprétée comme une heure valide, la valeur de retour est-1.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mkgmtime32** et **_mkgmtime64** fonctions convertissent une heure UTC en un **__time32_t** ou **__time64_t** type représentant l’heure dans HEURE UTC. Pour convertir une heure locale en heure UTC, utilisez **mktime**, **_mktime32**, et **_mktime64** à la place.
+Les fonctions **_mkgmtime32** et **_mkgmtime64** convertissent une heure UTC en un type **__time32_t** ou **__time64_t** représentant l’heure UTC. Pour convertir une heure locale en heure UTC, utilisez **mktime**, **_mktime32**et **_mktime64** à la place.
 
-**_mkgmtime** est une fonction inline qui prend la valeur **_mkgmtime64**, et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** l’ancien 32-bit **time_t**, vous pouvez définir **_USE_32BIT_TIME_T**. Cela n’est pas recommandée, car votre application peut échouer après le 18 janvier 2038 (la plage maximale de 32 bits **time_t**), et il n’est pas autorisée à tout sur les plateformes 64 bits.
+**_mkgmtime** est une fonction inline qui prend la valeur **_mkgmtime64**et **time_t** est équivalent à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t**32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 (la plage maximale d’un 32-bit **time_t**) et n’est pas autorisée du tout sur les plateformes 64 bits.
 
-La structure de temps passée sera modifiée comme suit, dans la même façon qu’elle est modifiée avec le **_mktime** fonctions : le **tm_wday** et **tm_yday** champs sont définis nouveau valeurs en fonction des valeurs de **tm_mday** et **tm_year**. Lorsque vous spécifiez un **tm** heure de structure, définissez la **tm_isdst** champ :
+La structure de temps passée est modifiée comme suit, de la même façon qu’elles sont modifiées avec les fonctions **_mktime** : les champs **tm_wday** et **tm_yday** sont définis sur de nouvelles valeurs en fonction des valeurs de **tm_mday** et **tm_year**. Lorsque vous spécifiez une durée de structure **TM** , définissez le champ **tm_isdst** sur :
 
 - zéro (0) pour indiquer que l'heure d'hiver est active ;
 
@@ -84,11 +87,11 @@ La structure de temps passée sera modifiée comme suit, dans la même façon qu
 
 - une valeur inférieure à zéro pour que le code de la bibliothèque Runtime C calcule si l'heure active est l'heure d'hiver ou l'heure d'été.
 
-La bibliothèque Runtime C utilise la variable d’environnement TZ pour déterminer l’heure d’été correcte. Si TZ n’est pas définie, le système d’exploitation est interrogé pour obtenir le comportement d’heure d’été régionale correct. **tm_isdst** est un champ obligatoire. S’il est ne pas définie, sa valeur est indéfinie et la valeur de retour à partir de **mktime** est imprévisible.
+La bibliothèque Runtime C utilise la variable d’environnement TZ pour déterminer l’heure d’été correcte. Si TZ n’est pas définie, le système d’exploitation est interrogé pour obtenir le comportement d’heure d’été régionale correct. **tm_isdst** est un champ obligatoire. S’il n’est pas défini, sa valeur est indéfinie et la valeur de retour de **mktime** est imprévisible.
 
-La plage de la **_mkgmtime32** fonction est à partir du 1er janvier 1970 à minuit UTC à 23:59:59 le 18 janvier 2038, UTC. La plage de **_mkgmtime64** se situe entre le 1er janvier 1970 à minuit UTC et 23:59:59 le 31 décembre 3000, UTC. Une valeur de retour de -1 entraîne une date hors limites. La plage de **_mkgmtime** varie selon que **_USE_32BIT_TIME_T** est défini. Si non définie (la valeur par défaut) la plage est celle de **_mkgmtime64**; sinon, la plage est limitée à la plage de 32 bits de **_mkgmtime32**.
+La plage de la fonction **_mkgmtime32** est comprise entre le 1er janvier 1970, utc et 23:59:59 le 18 janvier 2038, heure UTC. La plage de **_mkgmtime64** est comprise entre le 1er janvier 1970, utc et 23:59:59, le 31 décembre 3000, heure UTC. Une date hors limites produit une valeur de retour de-1. La plage de **_mkgmtime** varie selon que **_USE_32BIT_TIME_T** est défini ou non. S’il n’est pas défini (valeur par défaut), la plage est celle de **_mkgmtime64**; dans le cas contraire, la plage est limitée à la plage 32 bits de **_mkgmtime32**.
 
-Notez que **gmtime** et **localtime** utilisent un seul tampon alloué de manière statique pour la conversion. Si vous fournissez cette mémoire tampon à **mkgmtime**, le contenu précédent est détruit.
+Notez que **gmtime** et **localtime** utilisent une seule mémoire tampon allouée de manière statique pour la conversion. Si vous fournissez cette mémoire tampon à **mkgmtime**, le contenu précédent est détruit.
 
 ## <a name="example"></a>Exemple
 

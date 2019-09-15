@@ -1,9 +1,9 @@
 ---
 title: rand
 ms.date: 01/02/2018
-apiname:
+api_name:
 - rand
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rand
 helpviewer_keywords:
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 407640c5f00ae54c43450abcbbe8c2e3ba0fcf95
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
-ms.translationtype: HT
+ms.openlocfilehash: 6042ab917083cf4131c16012b84afbbe43a7d834
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927529"
+ms.locfileid: "70949555"
 ---
 # <a name="rand"></a>rand
 
@@ -61,7 +64,7 @@ La fonction **Rand** génère une séquence connue et ne convient pas pour une u
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_rand.c

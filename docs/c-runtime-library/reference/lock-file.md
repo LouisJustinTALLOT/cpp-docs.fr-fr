@@ -1,9 +1,9 @@
 ---
 title: _lock_file
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lock_file
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lock_file
 - lock_file
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 4c6d9ef3ae9e2f63e702dd3fc6b01f7edea40626
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157433"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953306"
 ---
-# <a name="lockfile"></a>_lock_file
+# <a name="_lock_file"></a>_lock_file
 
-Verrouille un **fichier** objet pour garantir la cohérence des threads qui accèdent à la **fichier** objet simultanément.
+Verrouille un objet **fichier** pour garantir la cohérence des threads qui accèdent simultanément à l’objet **fichier** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,7 +51,7 @@ Descripteur de fichier.
 
 ## <a name="remarks"></a>Notes
 
-Le **_lock_file** fonctionner les verrous le **fichier** objet spécifié par *fichier*. Le fichier sous-jacent n’est pas verrouillé par **_lock_file**. Utilisez [_unlock_file](unlock-file.md) pour libérer le verrou sur le fichier. Les appels à **_lock_file** et **_unlock_file** doit être mise en correspondance dans un thread.
+La fonction **_lock_file** verrouille l’objet **fichier** spécifié par le *fichier*. Le fichier sous-jacent n’est pas verrouillé par **_lock_file**. Utilisez [_unlock_file](unlock-file.md) pour libérer le verrou sur le fichier. Les appels à **_lock_file** et **_unlock_file** doivent être mis en correspondance dans un thread.
 
 ## <a name="requirements"></a>Configuration requise
 

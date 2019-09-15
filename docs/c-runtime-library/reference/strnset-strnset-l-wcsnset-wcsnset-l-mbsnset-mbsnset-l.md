@@ -1,14 +1,14 @@
 ---
 title: _strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnset
 - _strnset
 - _mbsnset_l
 - _wcsnset_l
 - _wcsnset
 - _strnset_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncset_l
 - mbsnset_l
@@ -66,19 +69,19 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: 3389213b423857fa0a8561c1d6bd13ae2d9d6d5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb2365684f9c35e1523b34aaad30c9ae6875b5c1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209608"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946970"
 ---
-# <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
+# <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
 Initialise les caractères d’une chaîne à un caractère donné. Il existe des versions plus sécurisées de ces fonctions. Consultez [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsnset** et **_mbsnset_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnset** et **_mbsnset_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -138,11 +141,11 @@ Retourne un pointeur vers la chaîne modifiée.
 
 ## <a name="remarks"></a>Notes
 
-Le **_strnset** affecte la fonction, au maximum, la première *nombre* caractères de *str* à *c* (converti en **char**). Si *nombre* est supérieur à la longueur de *str*, la longueur de *str* est utilisé au lieu de *nombre*.
+La fonction **_strnset** définit, au plus, les premiers *caractères de* *Str* en *c* (convertis en **char**). Si *Count* est supérieur à la longueur de *Str*, la longueur de *Str* est utilisée à la place de *Count*.
 
-**_wcsnset** et **_mbsnset** sont des versions à caractères larges et à caractères multioctets de **_strnset**. Les arguments de chaîne et la valeur de retour de **_wcsnset** sont des caractères larges chaînes ; ceux de **_mbsnset** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**_wcsnset** et **_mbsnset** sont des versions à caractères larges et à caractères multioctets de **_strnset**. Les arguments de chaîne et la valeur de retour de **_wcsnset** sont des chaînes à caractères larges ; ceux de **_mbsnset** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
-**_mbsnset** valide ses paramètres ; si *str* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, **_mbsnset** retourne **NULL** et définit **errno** à **EINVAL**. **_strnset** et **_wcsnset** ne valident pas leurs paramètres.
+**_mbsnset** valide ses paramètres ; Si *Str* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, **_mbsnset** retourne la **valeur null** et définit **errno** sur **EINVAL**. **_strnset** et **_wcsnset** ne valident pas leurs paramètres.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

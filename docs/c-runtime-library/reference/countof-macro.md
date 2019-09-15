@@ -1,7 +1,7 @@
 ---
 title: _countof Macro
 ms.date: 03/22/2018
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _countof
 - countof
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3debd63da7d218e29f31847034c69d89b4691643
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335345"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942684"
 ---
-# <a name="countof-macro"></a>_countof Macro
+# <a name="_countof-macro"></a>_countof Macro
 
-Calcule le nombre d’éléments dans un tableau alloué de manière statique.
+Calcule le nombre d’éléments dans un tableau alloué statiquement.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,13 +47,13 @@ Nom d'un tableau.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le nombre d’éléments dans le tableau, exprimé sous la forme un **size_t**.
+Nombre d’éléments dans le tableau, exprimé sous la forme d’un **size_t**.
 
 ## <a name="remarks"></a>Notes
 
-**_countof** est implémenté comme une macro de préprocesseur de type fonction. La version C++ a un mécanisme de modèle supplémentaire pour détecter au moment de la compilation si un pointeur est passé au lieu d’un tableau déclaré statiquement.
+**_countof** est implémenté en tant que macro de préprocesseur de type fonction. La C++ version possède des modèles de machines supplémentaires à détecter au moment de la compilation si un pointeur est passé au lieu d’un tableau déclaré statiquement.
 
-Vérifiez que *tableau* est en fait un tableau, et non un pointeur. En C, **_countof** produit des résultats erronés si *tableau* est un pointeur. Dans C++, **_countof** ne parvient pas à compiler si *tableau* est un pointeur.  Un tableau passé en tant que paramètre à une fonction *décline vers un autre pointeur*, ce qui signifie que dans la fonction, vous ne pouvez pas utiliser **_countof** pour déterminer l’étendue du tableau.
+Assurez-vous que le *tableau* est en fait un tableau, et non un pointeur. En C, **_countof** génère des résultats erronés si *Array* est un pointeur. Dans C++, la compilation de **_countof** échoue si le *tableau* est un pointeur.  Un tableau passé en tant que paramètre à une fonction s' *atténue à un pointeur*, ce qui signifie que dans la fonction, vous ne pouvez pas utiliser **_countof** pour déterminer l’étendue du tableau.
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorFunc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorFunc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_SetErrorFunc
 - _RTC_SetErrorFunc
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-ms.openlocfilehash: 6b292d685eea8eccb9e9b2a3c3e6cd903d501005
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b173dd9af9fe11146341468c44a0abc10ce90bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357204"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949011"
 ---
-# <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
+# <a name="_rtc_seterrorfunc"></a>_RTC_SetErrorFunc
 
 Désigne une fonction comme gestionnaire pour signaler les vérifications d’erreurs au moment de l’exécution (RTC). Cette fonction est déconseillée ; Utilisez **_RTC_SetErrorFuncW** à la place.
 
@@ -48,11 +51,11 @@ L’adresse de la fonction qui va gérer les vérifications d’erreurs au momen
 
 ## <a name="return-value"></a>Valeur de retour
 
-La fonction d’erreur définie précédemment. S’il n’existe aucune fonction définie précédemment, retourne **NULL**.
+La fonction d’erreur définie précédemment. S’il n’existe aucune fonction définie précédemment, retourne la **valeur null**.
 
 ## <a name="remarks"></a>Notes
 
-N’utilisez pas cette fonction ; au lieu de cela, utilisez **_RTC_SetErrorFuncW**. Elle est conservée uniquement pour assurer la compatibilité descendante.
+N’utilisez pas cette fonction. Utilisez plutôt **_RTC_SetErrorFuncW**. Elle est conservée uniquement pour assurer la compatibilité descendante.
 
 ## <a name="requirements"></a>Configuration requise
 

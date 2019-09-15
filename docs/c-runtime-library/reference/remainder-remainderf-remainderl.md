@@ -1,11 +1,11 @@
 ---
 title: remainder, remainderf, remainderl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - remainderl
 - remainder
 - remainderf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remainderf
 - remainder
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 9a9abe82e69122ca87f44e293e1da725c97045d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 851f022325bb617cb2b0ae9a331b680b9d9fd303
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357640"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949422"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -61,13 +64,13 @@ Dénominateur.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le reste à virgule flottante de *x* / *y*. Si la valeur de *y* est 0.0, **reste** retourne une valeur NaN silencieuse. Pour plus d’informations sur la représentation d’un NaN silencieux par la **printf** famille, consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Reste à virgule flottante de *x* / *y*. Si la valeur de *y* est 0,0, la fonction **Remainder** retourne une valeur NaN calme. Pour plus d’informations sur la représentation d’une NaN calme par la famille **printf** , consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **reste** fonctions calculent le reste à virgule flottante *r* de *x* / *y* tels que *x*   =  *n* \* *y* + *r*, où *n*est le entier le plus proche dans la valeur à *x* / *y* et *n*est pair chaque fois que &#124; *n*  -  *x* / *y* &#124; = 1/2. Lorsque *r* = 0, *r* a le même signe que *x*.
+Les **fonctions restantes** calculent le reste à virgule flottante *r* de *x* / *y* , de telle sorte que *x* = *n* \* *y* + *r*, où *n* est l’entier le plus proche de la valeur de *x* / *y* et *n*est &#124; même chaque fois que *n* - *x* / *y* &#124; = 1/2. Lorsque *r* = 0, *r* a le même signe que *x*.
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **reste** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **reste** accepte toujours deux **double** arguments et retourne un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **reste** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, le **reste** prend toujours deux arguments **double** et retourne un **double**.
 
 ## <a name="requirements"></a>Configuration requise
 

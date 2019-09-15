@@ -1,10 +1,10 @@
 ---
 title: _spawnvp, _wspawnvp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wspawnvp
 - _spawnvp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wspawnvp
 - _spawnvp
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - process creation
 - _spawnvp function
 ms.assetid: 8d8774ec-6ad4-4680-a5aa-440cde1e0249
-ms.openlocfilehash: b697eabd7a45eedbf9c892acee570a9e8b818d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c54de21c2bfac693b3555c86eea98a32f132576
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355131"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958075"
 ---
-# <a name="spawnvp-wspawnvp"></a>_spawnvp, _wspawnvp
+# <a name="_spawnvp-_wspawnvp"></a>_spawnvp, _wspawnvp
 
 Crée un processus et l'exécute.
 
@@ -68,16 +71,16 @@ Mode d'exécution de l'appel du processus.
 Chemin d'accès du fichier à exécuter.
 
 *argv*<br/>
-Tableau de pointeurs vers les arguments. L’argument *argv*[0] est généralement un pointeur vers un chemin d’accès en mode réel ou pour le nom du programme en mode protégé, et *argv*[1] via *argv*[**n**] sont des pointeurs vers les chaînes de caractères qui forment la nouvelle liste d’arguments. L’argument *argv*[**n** + 1] doit être un **NULL** pointeur pour marquer la fin de la liste d’arguments.
+Tableau de pointeurs vers les arguments. L’argument *argv*[0] est généralement un pointeur vers un chemin d’accès en mode réel ou le nom du programme en mode protégé, et *argv*[1] à *argv*[**n**] sont des pointeurs vers les chaînes de caractères qui forment la nouvelle liste d’arguments. L’argument *argv*[**n** + 1] doit être un pointeur **null** pour marquer la fin de la liste d’arguments.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de retour à partir d’une commande synchrone **_spawnvp** ou **_wspawnvp** (**_P_WAIT** spécifié pour *mode*) est l’état de la sortie du nouveau processus . La valeur de retour à partir d’une commande asynchrone **_spawnvp** ou **_wspawnvp** (**_P_NOWAIT** ou **_P_NOWAITO** spécifié pour  *mode*) est le handle de processus. L'état de sortie est 0 si le processus s'est terminé normalement. Vous pouvez définir l’état de sortie à une valeur différente de zéro si le processus engendré utilise spécifiquement un argument différent de zéro pour appeler le **quitter** routine. Si le nouveau processus ne définissait pas explicitement un état de sortie positif, un état de sortie positif indique une sortie anormale avec arrêt ou interruption. Une valeur de retour de -1 indique une erreur (le nouveau processus n’est pas démarré). Dans ce cas, **errno** est défini sur l’une des valeurs suivantes :
+La valeur de retour d’un **_spawnvp** ou d’un **_wspawnvp** synchrone ( **_P_WAIT** spécifié pour le *mode*) est l’état de sortie du nouveau processus. La valeur de retour d’un **_spawnvp** ou d’un **_wspawnvp** asynchrone ( **_P_NOWAIT** ou **_P_NOWAITO** spécifié pour le *mode*) est le handle de processus. L'état de sortie est 0 si le processus s'est terminé normalement. Vous pouvez définir l’état de sortie à une valeur différente de zéro si le processus généré utilise spécifiquement un argument différent de zéro pour appeler la routine de **sortie** . Si le nouveau processus ne définissait pas explicitement un état de sortie positif, un état de sortie positif indique une sortie anormale avec arrêt ou interruption. Une valeur de retour de-1 indique une erreur (le nouveau processus n’est pas démarré). Dans ce cas, **errno** est défini sur l’une des valeurs suivantes :
 
 |||
 |-|-|
 | **E2BIG** | La liste des arguments dépasse 1024 octets. |
-| **EINVAL** | *mode* argument n’est pas valide. |
+| **EINVAL** | l’argument *mode* n’est pas valide. |
 | **ENOENT** | Fichier ou chemin d'accès introuvable. |
 | **ENOEXEC** | Le fichier spécifié n'est pas exécutable ou a un format de fichier exécutable non valide. |
 | **ENOMEM** | Mémoire insuffisante pour exécuter le nouveau processus. |
@@ -86,9 +89,9 @@ Pour plus d’informations sur ces codes de retour et les autres, consultez [err
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions crée un nouveau processus et l’exécute et passe un tableau de pointeurs à des arguments de ligne de commande et utilise le **chemin d’accès** variable d’environnement pour rechercher le fichier à exécuter.
+Chacune de ces fonctions crée un processus et l’exécute, passe un tableau de pointeurs à des arguments de ligne de commande et utilise la variable **d’environnement PATH** pour rechercher le fichier à exécuter.
 
-Ces fonctions valident leurs paramètres. Si *cmdname* ou *argv* est un pointeur null, ou si *argv* pointe vers un pointeur null, ou *argv*[0] est une chaîne vide, le non valide Gestionnaire de paramètres est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL**et retournent -1. Aucun nouveau processus généré.
+Ces fonctions valident leurs paramètres. Si *CmdName* ou *argv* est un pointeur null, si *argv* pointe vers un pointeur null ou si *argv*[0] est une chaîne vide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL**et retournent-1. Aucun nouveau processus généré.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -99,7 +102,7 @@ Ces fonctions valident leurs paramètres. Si *cmdname* ou *argv* est un pointeur
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Consultez l'exemple de [Fonctions _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).
 

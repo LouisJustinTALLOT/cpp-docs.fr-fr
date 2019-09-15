@@ -1,9 +1,9 @@
 ---
 title: fwrite
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwrite
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fwrite
 helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: f05e39390f3a2d0ad41627f6aed1aecd77b57cca
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 8149e0f2cbc84c2c28093d86fecd5ff2a9db7aba
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376063"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956198"
 ---
 # <a name="fwrite"></a>fwrite
 

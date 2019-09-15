@@ -1,11 +1,11 @@
 ---
 title: _Cbuild, _FCbuild, _LCbuild
 ms.date: 03/30/2018
-apiname:
+api_name:
 - _Cbuild
 - _FCbuild
 - _LCbuild
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _Cbuild
 - _FCbuild
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: 5565c87a3cccd1715a1357f417238587f3fba4d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0ae50f40f0ca0a926e1eef586c6610a04b6ea7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340464"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943216"
 ---
-# <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
+# <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
 Construit un nombre complexe à partir de parties réelles et imaginaires.
 
@@ -51,18 +54,18 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 ### <a name="parameters"></a>Paramètres
 
 *real*<br/>
-La partie réelle du nombre complexe à construire.
+Partie réelle du nombre complexe à construire.
 
 *imaginary*<br/>
-La partie imaginaire du nombre complexe à construire.
+Partie imaginaire du nombre complexe à construire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Un **_Dcomplex**, **_Fcomplex**, ou **_Lcomplex** structure qui représente le nombre complexe (*réel*, *imaginaire*  \* je) pour les valeurs du type à virgule flottante spécifié.
+Structure **_Dcomplex**, **_Fcomplex**ou **_Lcomplex** qui représente le nombre complexe \* (i*réel*et imaginaire) pour les valeurs du type à virgule flottante spécifié.
 
 ## <a name="remarks"></a>Notes
 
-Le **_Cbuild**, **_FCbuild**, et **_LCbuild** fonctions simplifiant la création de types complexes. Utilisez le [creal, crealf, creall](creal-crealf-creall.md) et [cimag, cimagf, cimagl](cimag-cimagf-cimagl.md) fonctions pour récupérer les parties réelles et imaginaires des nombres complexes représentés.
+Les fonctions **_Cbuild**, **_FCbuild**et **_LCbuild** simplifient la création de types complexes. Utilisez les fonctions [CREAL, crealf, Creall](creal-crealf-creall.md) et [Cimag, cimagf, cimagl](cimag-cimagf-cimagl.md) pour récupérer les portions réelles et imaginaires des nombres complexes représentés.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -70,7 +73,7 @@ Le **_Cbuild**, **_FCbuild**, et **_LCbuild** fonctions simplifiant la création
 |-------------|--------------|------------------|
 |**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-Ces fonctions sont spécifiques à Microsoft. Les types **_Dcomplex**, **_Fcomplex**, et **_Lcomplex** sont équivalents spécifiques à Microsoft pour les types natifs C99 non implémentées **double _Complex** , **float _Complex**, et **long double _Complex**, respectivement. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Ces fonctions sont spécifiques à Microsoft. Les types **_Dcomplex**, **_Fcomplex**et **_Lcomplex** sont des équivalents spécifiques de Microsoft aux types natifs C99 non implémentés **double _Complex**, **float _Complex**et **long double _Complex**, respectivement. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

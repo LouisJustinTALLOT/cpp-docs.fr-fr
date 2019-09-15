@@ -1,11 +1,11 @@
 ---
 title: acosh, acoshf, acoshl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - acoshf
 - acosh
 - acoshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - acosh
 - acoshf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: e61b9ed4222898e3f2340a5e54f6983fb0411c72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b547bc0db23f446672c8838419aeb9b0f32c16c3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341689"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944080"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -61,16 +64,16 @@ Valeur à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **acosh** fonctions retournent le cosinus hyperbolique inverse (arc le cosinus hyperbolique) de *x*. Ces fonctions sont valides sur le domaine *x* ≥ 1. Si *x* est inférieur à 1, `errno` a la valeur `EDOM` et le résultat est une valeur NaN silencieuse. Si *x* est une valeur NaN silencieuse, indéfini, ou l’infini, la même valeur est retournée.
+Les fonctions **acosh** retournent le cosinus hyperbolique inverse (arc cosinus hyperbolique) de *x*. Ces fonctions sont valides sur le domaine *x* ≥ 1. Si *x* est inférieur à 1, `errno` a la valeur `EDOM` et le résultat est une valeur NaN silencieuse. Si *x* est une valeur NaN, indéfinie ou infinie silencieuse, la même valeur est retournée.
 
-|Entrée|Exception SEH|`_matherr` |
+|Entrée|Exception SEH|`_matherr`|
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|none|none|
 |*x* < 1|none|none|
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous utilisez C++, vous pouvez appeler des surcharges de **acosh** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **acosh** accepte et retourne toujours **double**.
+Lorsque vous utilisez C++, vous pouvez appeler des surcharges de **acosh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **acosh** accepte et retourne toujours la valeur **double**.
 
 ## <a name="requirements"></a>Configuration requise
 

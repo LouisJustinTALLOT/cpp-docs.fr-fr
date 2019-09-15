@@ -1,7 +1,7 @@
 ---
 title: Fonctions obsolètes
 ms.date: 01/22/2019
-apiname:
+api_name:
 - _beep
 - _sleep
 - _loaddll
@@ -10,7 +10,7 @@ apiname:
 - is_wctype
 - _getsystime
 - _setsystime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -25,7 +25,10 @@ apilocation:
 - api-ms-win-crt-runtime-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - is_wctype
 - _loaddll
@@ -50,12 +53,12 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: ff0e4376c021fcfd46d4631d1598a3826e9f2851
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: da5bd0569e7116bfd45e6112da8231d6fc2c9b44
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500035"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940141"
 ---
 # <a name="obsolete-functions"></a>Fonctions obsolètes
 
@@ -81,14 +84,14 @@ Certaines fonctions de la bibliothèque sont obsolètes et ont des équivalents 
 |-----------------------|-----------------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
 |[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
-|[_get_output_format](../c-runtime-library/get-output-format.md)|Aucun.|
-|[_heapadd](../c-runtime-library/heapadd.md)|Aucun.|
-|[_heapset](../c-runtime-library/heapset.md)|Aucun.|
-|[inp, inpw](../c-runtime-library/inp-inpw.md)|Aucun.|
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Aucun.|
-|[outp, outpw](../c-runtime-library/outp-outpw.md)|Aucun.|
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Aucun.|
-|[_set_output_format](../c-runtime-library/set-output-format.md)|Aucun.|
+|[_get_output_format](../c-runtime-library/get-output-format.md)|Aucun|
+|[_heapadd](../c-runtime-library/heapadd.md)|Aucun|
+|[_heapset](../c-runtime-library/heapset.md)|Aucun|
+|[inp, inpw](../c-runtime-library/inp-inpw.md)|Aucun|
+|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Aucun|
+|[outp, outpw](../c-runtime-library/outp-outpw.md)|Aucun|
+|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Aucun|
+|[_set_output_format](../c-runtime-library/set-output-format.md)|Aucun|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Supprimées du CRT dans les versions antérieures de Visual Studio
 

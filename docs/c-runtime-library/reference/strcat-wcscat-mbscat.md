@@ -1,11 +1,11 @@
 ---
 title: strcat, wcscat, _mbscat
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbscat
 - wcscat
 - strcat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscat
 - _ftcscat
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-ms.openlocfilehash: 629b66a5c9dded3a910919f5e302a97c4f731240
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 973c54c18e941b29526cb3e9b1cadb98f6582c4a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354338"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958272"
 ---
-# <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
+# <a name="strcat-wcscat-_mbscat"></a>strcat, wcscat, _mbscat
 
 Ajoute une chaîne. Il existe des versions plus sécurisées de ces fonctions. Consultez [strcpy_s, wcscpy_s, _mbscpy_s](strcat-s-wcscat-s-mbscat-s.md).
 
@@ -100,12 +103,12 @@ Chacune de ces fonctions retourne la chaîne de destination (*strDestination*). 
 
 ## <a name="remarks"></a>Notes
 
-Le **strcat** fonction ajoute *strSource* à *strDestination* et termine la chaîne obtenue par un caractère null. Le caractère initial de *strSource* remplace le caractère null de fin de *strDestination*. Le comportement de **strcat** n’est pas défini si les chaînes source et de destination se chevauchent.
+La fonction **strcat** ajoute *strSource* à *strDestination* et met fin à la chaîne résultante avec un caractère null. Le caractère initial de *strSource* remplace le caractère null de fin de *strDestination*. Le comportement de **strcat** n’est pas défini si les chaînes source et de destination se chevauchent.
 
 > [!IMPORTANT]
-> Étant donné que **strcat** ne vérifie pas suffisamment d’espace *strDestination* avant d’ajouter *strSource*, il est une cause potentielle de dépassements de mémoire tampon. Envisagez d’utiliser plutôt [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
+> Comme **strcat** ne vérifie pas suffisamment d’espace dans *strDestination* avant d’ajouter *strSource*, il s’agit d’une cause potentielle de dépassements de mémoire tampon. Envisagez d’utiliser plutôt [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
 
-**wcscat** et **_mbscat** sont des versions à caractères larges et à caractères multioctets de **strcat**. Les arguments et la valeur de retour de **wcscat** sont des caractères larges chaînes ; ceux de **_mbscat** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**wcscat** et **_mbscat** sont des versions à caractères larges et à caractères multioctets de **strcat**. Les arguments et la valeur de retour de **wcscat** sont des chaînes à caractères larges ; ceux de **_mbscat** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

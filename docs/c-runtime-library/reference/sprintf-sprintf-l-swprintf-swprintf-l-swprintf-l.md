@@ -1,13 +1,13 @@
 ---
 title: sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __swprintf_l
 - sprintf
 - _sprintf_l
 - _swprintf_l
 - swprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _stprintf_l
 - __swprintf_l
@@ -46,16 +49,16 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: f32b1622539e73ab04c19d6d46ffdbc58b9961d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9a306788045fc6fe52da835029d32cfc42c0ed4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354871"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958289"
 ---
-# <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
+# <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
-Écrire des données mises en forme dans une chaîne. Il existe des versions plus sécurisées de certaines de ces fonctions. Consultez [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). Les versions sécurisées de **swprintf** et **_swprintf_l** ne prennent pas une *nombre* paramètre.
+Écrire des données mises en forme dans une chaîne. Il existe des versions plus sécurisées de certaines de ces fonctions. Consultez [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). Les versions sécurisées de **swprintf** et **_swprintf_l** ne prennent pas de paramètre *Count* .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -126,20 +129,20 @@ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le nombre de caractères écrits, ou -1 si une erreur s’est produite. Si *tampon* ou *format* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Nombre de caractères écrits, ou-1 si une erreur s’est produite. Si la *mémoire tampon* ou le *format* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
-**sprintf** retourne le nombre d’octets stockés dans *tampon*, sans compter le caractère null de fin. **swprintf** retourne le nombre de caractères larges stockés dans *tampon*, sans compter le caractère large null de fin.
+**sprintf** retourne le nombre d’octets stockés dans la *mémoire tampon*, sans compter le caractère null de fin. **swprintf** retourne le nombre de caractères larges stockés dans la *mémoire tampon*, sans compter le caractère élargi de la valeur null de fin.
 
 ## <a name="remarks"></a>Notes
 
-Le **sprintf** fonction met en forme et stocke une série de caractères et de valeurs dans *tampon*. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le format se compose de caractères ordinaires et a les mêmes forme et fonction que le *format* argument pour [printf](printf-printf-l-wprintf-wprintf-l.md). Un caractère null est ajouté après le dernier caractère écrit. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+La fonction **sprintf** met en forme et stocke une série de caractères et de valeurs dans *buffer*. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante au *format*. Le format se compose de caractères ordinaires et a la même forme et fonction que l’argument *format* pour [printf](printf-printf-l-wprintf-wprintf-l.md). Un caractère null est ajouté après le dernier caractère écrit. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> À l’aide de **sprintf**, il n’existe aucun moyen de limiter le nombre de caractères écrits, ce qui signifie qu’à l’aide de code **sprintf** est vulnérable à des dépassements de mémoire tampon. Envisagez d’utiliser la fonction related [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), qui spécifie un nombre maximal de caractères à écrire dans *tampon*, ou utilisez [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) pour déterminer quelle taille un mémoire tampon est requise. En outre, vérifiez que *format* n’est pas une chaîne définie par l’utilisateur.
+> À l’aide de **sprintf**, il n’existe aucun moyen de limiter le nombre de caractères écrits, ce qui signifie que le code utilisant **sprintf** est vulnérable aux dépassements de mémoire tampon. Envisagez d’utiliser la fonction associée [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), qui spécifie un nombre maximal de caractères à écrire dans la *mémoire tampon*, ou utilisez [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) pour déterminer la taille nécessaire d’une mémoire tampon. En outre, assurez-vous que *format* n’est pas une chaîne définie par l’utilisateur.
 
-**swprintf** est une version à caractères larges de **sprintf**; les arguments de pointeur à **swprintf** sont des chaînes à caractères larges. Détection d’erreurs dans d’encodage **swprintf** peut différer de celle dans **sprintf**. **swprintf** et **fwprintf** ont un comportement identique, sauf que **swprintf** écrit la sortie vers une chaîne plutôt que vers une destination de type **fichier**et **swprintf** nécessite le *nombre* paramètre pour spécifier le nombre maximal de caractères à écrire. Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+**swprintf** est une version à caractères larges de **sprintf**; les arguments de pointeur vers **swprintf** sont des chaînes à caractères larges. La détection des erreurs d’encodage dans **swprintf** peut différer de celle dans **sprintf**. **swprintf** et **fwprintf** se comportent de la même manière, sauf que **swprintf** écrit la sortie dans une chaîne plutôt que dans une destination de type **file**, et **swprintf** nécessite que le paramètre *Count* spécifie le nombre maximal de caractères à écrire. Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
-**swprintf** conforme au Standard ISO C, ce qui nécessite le deuxième paramètre, *nombre*, de type **size_t**. Pour forcer l’ancien comportement non standard, définissez **_CRT_NON_CONFORMING_SWPRINTFS**. Sachant que l'ancien comportement risque d'être retiré dans une version ultérieure, il est conseillé de modifier le code pour utiliser le nouveau comportement conforme.
+**swprintf** est conforme à la norme ISO C, qui exige le deuxième paramètre, *Count*, de type **size_t**. Pour forcer l’ancien comportement non standard, définissez **_CRT_NON_CONFORMING_SWPRINTFS**. Sachant que l'ancien comportement risque d'être retiré dans une version ultérieure, il est conseillé de modifier le code pour utiliser le nouveau comportement conforme.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -196,7 +199,7 @@ Output:
 character count = 79
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_swprintf.c

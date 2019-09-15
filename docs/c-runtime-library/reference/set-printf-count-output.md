@@ -1,9 +1,9 @@
 ---
 title: _set_printf_count_output
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_printf_count_output
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_printf_count_output
 - _set_printf_count_output
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-ms.openlocfilehash: 0d4847d850b39c7c03ea92a98499715b1e6a4913
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d53b4e4c56a69582a4eb517fa1a5c9e10cd7d2f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356522"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948418"
 ---
-# <a name="setprintfcountoutput"></a>_set_printf_count_output
+# <a name="_set_printf_count_output"></a>_set_printf_count_output
 
-Activer ou désactiver la prise en charge de la **%n** mettre en forme de [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-fonctions de famille.
+Active ou désactive la prise en charge du format **% n** dans les fonctions [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)Family.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,15 +49,15 @@ int _set_printf_count_output(
 ### <a name="parameters"></a>Paramètres
 
 *enable*<br/>
-Une valeur différente de zéro pour activer **%n** prennent en charge, 0 pour désactiver **%n** prennent en charge.
+Valeur différente de zéro pour activer la prise en charge de **% n** , 0 pour désactiver la prise en charge de **% n** .
 
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour
 
-L’état de **%n** prennent en charge avant d’appeler cette fonction : zéro if **%n** prise en charge a été activée, 0 si elle a été désactivée.
+L’état de la prise en charge de **% n** avant d’appeler cette fonction : différent de zéro si la prise en charge de **% n** a été activée, 0 si elle a été désactivée.
 
 ## <a name="remarks"></a>Notes
 
-Pour des raisons de sécurité, la prise en charge pour le **%n** spécificateur de format est désactivé par défaut dans **printf** et toutes ses variantes. Si **%n** est rencontré dans un **printf** spécification de format, le comportement par défaut consiste à appeler le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Appel **_set_printf_count_output** avec un argument différent de zéro entraîne **printf**-fonctions de famille pour interpréter **%n** comme décrit dans [Format Syntaxe de spécification : les fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Pour des raisons de sécurité, la prise en charge du spécificateur de format **% n** est désactivée par défaut dans **printf** et toutes ses variantes. Si **% n** est rencontré dans une spécification de format **printf** , le comportement par défaut consiste à appeler le gestionnaire de paramètre non valide comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). L’appel de **_set_printf_count_output** avec un argument différent de zéro entraîne l’interprétation de **% n** par les fonctions de la famille **printf**, comme décrit dans la [syntaxe de spécification de format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Configuration requise
 

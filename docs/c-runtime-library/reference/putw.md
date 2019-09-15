@@ -1,9 +1,9 @@
 ---
 title: _putw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putw
 - putw
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0515ae911a653bde1208b1711bf33dd8b4e2f8e1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358047"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949753"
 ---
-# <a name="putw"></a>_putw
+# <a name="_putw"></a>_putw
 
 Écrit un entier dans un flux.
 
@@ -55,13 +58,13 @@ Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur écrite. La valeur de retour **EOF** peut indiquer une erreur. Étant donné que **EOF** est également une valeur d’entier légitime, utilisez **ferror** pour vérifier une erreur. Si *flux* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **EOF**.
+Retourne la valeur écrite. Une valeur de retour de **EOF** peut indiquer une erreur. Comme **EOF** est également une valeur entière légitime **, utilisez l'** attaquant pour vérifier une erreur. Si *Stream* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EOF**.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_putw** fonction écrit une valeur binaire de type **int** à la position actuelle du *flux.* **_putw** n’affecte pas l’alignement des éléments dans le flux alignés ni ne présume aucun alignement spécial. **_putw** est principalement utilisé pour la compatibilité avec les bibliothèques précédentes. Problèmes de portabilité peuvent se produire avec **_putw** , car la taille d’un **int** et l’ordre des octets dans un **int** diffèrent entre les systèmes.
+La fonction **_putw** écrit une valeur binaire de type **int** à la position actuelle du *flux.* **_putw** n’affecte pas l’alignement des éléments dans le flux et n’assume pas l’alignement spécial. **_putw** est principalement destiné à la compatibilité avec les bibliothèques précédentes. Des problèmes de portabilité peuvent survenir avec **_putw** , car la taille d’un **int** et l’ordre des octets dans un **int** diffèrent entre les systèmes.
 
 ## <a name="requirements"></a>Configuration requise
 

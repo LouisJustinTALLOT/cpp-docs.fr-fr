@@ -1,9 +1,9 @@
 ---
 title: __max
 ms.date: 04/05/2018
-apiname:
+api_name:
 - __max
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - max
 - __max
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156862"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952748"
 ---
-# <a name="max"></a>__max
+# <a name="__max"></a>__max
 
-Macro de préprocesseur qui retourne le plus grand de deux valeurs.
+Macro de préprocesseur qui retourne la plus grande de deux valeurs.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,9 +54,9 @@ Valeurs de tout type numérique à comparer.
 
 ## <a name="remarks"></a>Notes
 
-Le **__max** macro compare deux valeurs et retourne la valeur la plus grande. Les arguments peuvent être de n’importe quel type de données numérique, signé ou non signé. Les deux arguments et la valeur de retour doivent être du même type de données.
+La macro **__max** compare deux valeurs et retourne la valeur de la plus grande. Les arguments peuvent être de n’importe quel type de données numérique, signé ou non signé. Les deux arguments et la valeur de retour doivent être du même type de données.
 
-L’argument retourné est évaluée deux fois par la macro. Cela peut entraîner des résultats inattendus si l’argument est une expression qui modifie sa valeur lorsqu’elle est évaluée, tel que `*p++`.
+L’argument retourné est évalué deux fois par la macro. Cela peut entraîner des résultats inattendus si l’argument est une expression qui modifie sa valeur lors de son évaluation, par `*p++`exemple.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -61,7 +64,7 @@ L’argument retourné est évaluée deux fois par la macro. Cela peut entraîne
 |-------------|---------------------|
 |**__max**|\<stdlib.h>|
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Pour plus d’informations, consultez l’exemple pour [__min](min.md).
 

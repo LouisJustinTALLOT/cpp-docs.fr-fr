@@ -1,10 +1,10 @@
 ---
 title: _clear87, _clearfp
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _clearfp
 - _clear87
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clearfp
 - _clearfp
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-ms.openlocfilehash: 4148f85d82a4210033686455c73046081832e3c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ca49895b881d9e307c1116681bc36f86b167c25
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340546"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942957"
 ---
-# <a name="clear87-clearfp"></a>_clear87, _clearfp
+# <a name="_clear87-_clearfp"></a>_clear87, _clearfp
 
 Obtient et efface le mot d'état à virgule flottante.
 
@@ -49,15 +52,15 @@ unsigned int _clearfp( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les bits dans la valeur retournée indiquent l’état à virgule flottante avant l’appel à **_clear87** ou **_clearfp**. Pour obtenir une définition complète des bits retournés par **_clear87**, consultez Float.h. Une part importante des fonctions de bibliothèque mathématique modifie le mot d'état 8087/80287, avec des résultats imprévisibles. Valeurs de retour de **_clear87** et **_status87** deviennent plus fiable que moins d’opérations à virgule flottante sont effectuées entre les états connus du mot d’état à virgule flottante.
+Les bits de la valeur retournée indiquent l’État à virgule flottante avant l’appel à **_clear87** ou **_clearfp**. Pour obtenir une définition complète des bits retournés par **_clear87**, consultez float. h. Une part importante des fonctions de bibliothèque mathématique modifie le mot d'état 8087/80287, avec des résultats imprévisibles. Les valeurs de retour de **_clear87** et **_status87** deviennent plus fiables, car moins d’opérations à virgule flottante sont effectuées entre les États connus du mot d’État à virgule flottante.
 
 ## <a name="remarks"></a>Notes
 
-Le **_clear87** fonction efface les indicateurs d’exception dans le mot d’état à virgule flottante, définit le bit occupé à 0 et retourne le mot d’état. Le mot d'état à virgule flottante est une combinaison du mot d'état 8087/80287 et d'autres conditions détectées par le gestionnaire d'exceptions 8087/80287, telles que le dépassement de capacité positif et négatif de pile à virgule flottante.
+La fonction **_clear87** efface les indicateurs d’exception dans le mot d’État à virgule flottante, définit le bit occupé sur 0 et retourne le mot d’État. Le mot d'état à virgule flottante est une combinaison du mot d'état 8087/80287 et d'autres conditions détectées par le gestionnaire d'exceptions 8087/80287, telles que le dépassement de capacité positif et négatif de pile à virgule flottante.
 
-**_clearfp** est une version portable indépendante de la plateforme de la **_clear87** routine. Il est identique à **_clear87** sur les plateformes Intel (x86) et prend également en charge les x64 et les plateformes ARM. Pour vous assurer que votre code en virgule flottante peut être transféré à x64 et ARM, utilisez **_clearfp**. Si vous ciblez uniquement x86 plateformes, vous pouvez utiliser **_clear87** ou **_clearfp**.
+**_clearfp** est une version portable, indépendante de la plateforme, de la routine **_clear87** . Elle est identique à **_clear87** sur les plateformes Intel (x86) et est également prise en charge par les plateformes x64 et ARM. Pour vous assurer que votre code à virgule flottante est portable vers x64 et ARM, utilisez **_clearfp**. Si vous ciblez uniquement des plateformes x86, vous pouvez utiliser **_clear87** ou **_clearfp**.
 
-Ces fonctions sont déconseillées lors de la compilation avec [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , car le common language runtime prend uniquement en charge la précision à virgule flottante par défaut.
+Ces fonctions sont déconseillées lors de la compilation avec [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , car la Common Language Runtime prend en charge uniquement la précision en virgule flottante par défaut.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -68,7 +71,7 @@ Ces fonctions sont déconseillées lors de la compilation avec [/clr (Compilatio
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_clear87.c

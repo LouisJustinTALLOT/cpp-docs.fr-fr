@@ -1,11 +1,11 @@
 ---
 title: fmin, fminf, fminl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmin
 - fminf
 - fminl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmin
 - fminf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333376"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957091"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -80,19 +83,19 @@ Deuxième valeur à comparer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne le plus petit de *x* ou *y*.
+En cas de réussite, retourne la valeur la plus petite de *x* ou *y*.
 
 |Entrée|Résultat|
 |-----------|------------|
 |*x* est NaN|*y*|
 |*y* est NaN|*x*|
-|*x* et *y* sont des valeurs NaN|NaN|
+|*x* et *y* sont des Nan|NaN|
 
-La fonction ne provoque pas [_matherr](matherr.md) pour être appelé, provoquer des exceptions à virgule flottante, ou de modifier la valeur de **errno**.
+La fonction ne provoque pas l’appel de _ [matherr](matherr.md) , provoquer des exceptions à virgule flottante ou modifier la valeur de **errno**.
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **Fmax** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **Fmax** accepte et retourne toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **fmin,** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **fmin,** accepte et retourne toujours un **double**.
 
 ## <a name="requirements"></a>Configuration requise
 

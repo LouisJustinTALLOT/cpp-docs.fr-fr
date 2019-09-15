@@ -1,23 +1,26 @@
 ---
 title: _set_app_type
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_app_type
-apilocation:
+api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_app_type
 - corecrt_startup/_set_app_type
 ms.assetid: 1e7fe786-b587-4116-8c05-f7d762350100
-ms.openlocfilehash: 5a29fd94cca7fdbf6bbb24699b7f510bf1465f15
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 7e04d88d9e9981e35b7d4c80c11d27c868219f65
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749189"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957920"
 ---
-# <a name="setapptype"></a>_set_app_type
+# <a name="_set_app_type"></a>_set_app_type
 
 Fonction interne utilisée au démarrage pour indiquer à la bibliothèque CRT si l’application est une application console ou une application GUI.
 
@@ -41,17 +44,17 @@ void __cdecl _set_app_type(
 *appType*<br/>
 Valeur qui indique le type d’application. Les valeurs possibles sont :
 
-|Value|Description|
+|Valeur|Description|
 |----------------|-----------------|
 |_crt_unknown_app|Type d’application inconnu.|
 |_crt_console_app|Application console (ligne de commande).|
 |_crt_gui_app|Application GUI (Windows).|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Normalement, il est inutile d’appeler cette fonction. Elle fait partie du code de démarrage du runtime C qui s’exécute avant que `main` ne soit appelé dans votre application.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

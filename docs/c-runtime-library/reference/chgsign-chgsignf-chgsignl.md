@@ -1,11 +1,11 @@
 ---
 title: _chgsign, _chgsignf, _chgsignl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _chgsignl
 - _chgsign
 - _chgsignf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _chgsignf
 - chgsign
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - chgsign function
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
-ms.openlocfilehash: dad60b1fec4d402d340eeb4c87028975ef09e3ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17c8cc05efbcf2ab338d6032eded4ba13ec6197a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340239"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943125"
 ---
-# <a name="chgsign-chgsignf-chgsignl"></a>_chgsign, _chgsignf, _chgsignl
+# <a name="_chgsign-_chgsignf-_chgsignl"></a>_chgsign, _chgsignf, _chgsignl
 
 Inverse le signe d’un argument à virgule flottante.
 
@@ -61,7 +64,7 @@ Valeur à virgule flottante à modifier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **_chgsign** fonctions retournent une valeur qui est égale à l’argument à virgule flottante *x*, mais avec son signe inversé. Aucun retour d'erreur.
+Les fonctions **_chgsign** retournent une valeur qui est égale à l’argument à virgule flottante *x*, mais avec son signe inversé. Aucun retour d'erreur.
 
 ## <a name="requirements"></a>Configuration requise
 

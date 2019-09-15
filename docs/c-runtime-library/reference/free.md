@@ -1,9 +1,9 @@
 ---
-title: free
+title: gratuit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - free
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,21 +15,24 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - free
 helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-ms.openlocfilehash: f56212874f05ea5d4ab7bd826a7a4c145551dfc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e09bec7c83eae64064e3997f2e8d5632a47258a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287757"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956725"
 ---
-# <a name="free"></a>free
+# <a name="free"></a>gratuit
 
 Libère un bloc de mémoire.
 
@@ -48,15 +51,15 @@ Bloc mémoire précédemment alloué à libérer.
 
 ## <a name="remarks"></a>Notes
 
-Le **gratuit** fonction libère un bloc de mémoire (*memblock*) qui a été précédemment alloué par un appel à **calloc**, **malloc**, ou **realloc**. Le nombre d’octets libérés est équivalent au nombre d’octets demandés quand le bloc a été alloué (ou réalloué, dans le cas de **realloc**). Si *memblock* est **NULL**, le pointeur est ignoré et **gratuit** retourne immédiatement. Tenter de libérer un pointeur non valide (un pointeur désignant un bloc de mémoire qui n’était pas alloué par **calloc**, **malloc**, ou **realloc**) peut affecter les demandes d’allocation ultérieures et provoquer des erreurs.
+La fonction **Free libère** un bloc de mémoire (*memblock*) qui a été précédemment alloué par un appel à **calloc**, **malloc**ou **realloc**. Le nombre d’octets libérés est équivalent au nombre d’octets demandés quand le bloc a été alloué (ou réalloué, dans le cas de **realloc**). Si *memblock* a la **valeur null**, le pointeur est ignoré et la fonction **Free** retourne immédiatement la valeur. Toute tentative de libération d’un pointeur non valide (un pointeur vers un bloc de mémoire qui n’a pas été alloué par **calloc**, **malloc**ou **realloc**) peut affecter les demandes d’allocation ultérieures et provoquer des erreurs.
 
-Si une erreur se produit pendant la libération de la mémoire, **errno** est définie avec des informations sur la nature de la défaillance du système d’exploitation. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si une erreur se produit lors de la libération de la mémoire, **errno** est défini avec les informations du système d’exploitation sur la nature de la défaillance. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Une fois qu’un bloc de mémoire a été libéré, [_heapmin](heapmin.md) réduit la quantité de mémoire disponible sur le tas en fusionnant les régions inutilisées et en les libérant pour le système d’exploitation. La mémoire libérée qui n’est pas mise à la disposition du système d’exploitation est restaurée vers le pool libre et peut être réallouée.
 
-Lorsque l’application est liée à une version debug des bibliothèques Runtime C, **gratuit** se résout en [_free_dbg](free-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
+Lorsque l’application est liée à une version Debug des bibliothèques Runtime C, la valeur **Free** est résolue en [_free_dbg](free-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**gratuit** est marqué `__declspec(noalias)`, ce qui signifie que la fonction ne peut ne pas modifier les variables globales. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md).
+**Free** est marqué `__declspec(noalias)`, ce qui signifie que la fonction ne peut pas modifier les variables globales. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md).
 
 Pour libérer de la mémoire allouée avec [_malloca](malloca.md), utilisez [_freea](freea.md).
 
@@ -68,7 +71,7 @@ Pour libérer de la mémoire allouée avec [_malloca](malloca.md), utilisez [_fr
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Consultez l’exemple relatif à [malloc](malloc.md).
 

@@ -1,9 +1,9 @@
 ---
 title: _CrtReportBlockType
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtReportBlockType
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtReportBlockType
 - CrtReportBlockType
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: 186c63ce1619d6427436ff1458ca551e464d0bce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347413"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942336"
 ---
-# <a name="crtreportblocktype"></a>_CrtReportBlockType
+# <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
 Retourne le type/sous-type de bloc associé à un pointeur de bloc de tas de débogage donné.
 
@@ -52,11 +55,11 @@ Pointeur désignant un bloc de tas de débogage valide.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Quand il est passé d’un pointeur de tas de débogage valide, le **_CrtReportBlockType** fonction retourne le type de bloc et le sous-type sous la forme d’un **int**. Quand elle reçoit un pointeur non valide, elle retourne -1.
+Lorsqu’il reçoit un pointeur de tas de débogage valide, la fonction **_CrtReportBlockType** retourne le type de bloc et le sous-type sous la forme d’un **int**. Quand elle reçoit un pointeur non valide, elle retourne -1.
 
 ## <a name="remarks"></a>Notes
 
-Pour extraire le type et le sous-type retournés par **_CrtReportBlockType**, utilisez les macros **_BLOCK_TYPE** et **_BLOCK_SUBTYPE** (tous deux définis dans Crtdbg.h) sur la valeur de retour.
+Pour extraire le type et le sous-type retournés par **_CrtReportBlockType**, utilisez les macros **_BLOCK_TYPE** et **_BLOCK_SUBTYPE** (toutes deux définies dans CRTDBG. h) sur la valeur de retour.
 
 Pour plus d’informations sur les types de blocs d’allocation et sur leur utilisation, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
 

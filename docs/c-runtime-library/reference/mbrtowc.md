@@ -1,9 +1,9 @@
 ---
 title: mbrtowc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbrtowc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbrtowc
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: bd719e7b336333f6e06a1db9b1e34784575a1602
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4c68ae8df9821d862b9f742d8a8ef7ace19c981
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331523"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952452"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -46,7 +49,7 @@ size_t mbrtowc(
 ### <a name="parameters"></a>Paramètres
 
 *wchar*<br/>
-Adresse d’un caractère large pour recevoir la chaîne de caractères larges convertie (type **wchar_t**). Cette valeur peut être un pointeur null si un caractère large n'est pas requis en retour.
+Adresse d’un caractère élargi devant recevoir la chaîne de caractères larges convertie (type **wchar_t**). Cette valeur peut être un pointeur null si un caractère large n'est pas requis en retour.
 
 *mbchar*<br/>
 Adresse d'une séquence d'octets (un caractère multioctet).
@@ -55,19 +58,19 @@ Adresse d'une séquence d'octets (un caractère multioctet).
 Nombre d'octets à vérifier.
 
 *mbstate*<br/>
-Pointeur vers un objet d'état de conversion. Si cette valeur est un pointeur null, la fonction utilise un objet d'état de conversion interne statique. Étant donné que le texte interne **mbstate_t** objet n’est pas thread-safe, nous vous recommandons de toujours passer votre propre *mbstate* argument.
+Pointeur vers un objet d'état de conversion. Si cette valeur est un pointeur null, la fonction utilise un objet d'état de conversion interne statique. Étant donné que l’objet **mbstate_t** interne n’est pas thread-safe, nous vous recommandons de toujours passer votre propre argument *mbstate* .
 
 ## <a name="return-value"></a>Valeur de retour
 
-Une des valeurs suivantes :
+L’une des valeurs suivantes :
 
-0 la prochaine *nombre* ou moins d’octets terminent le caractère multioctet qui représente le caractère large null, ce qui est stocké dans *wchar*si *wchar* n’est pas un pointeur null.
+0 le *nombre* suivant ou moins d’octets termine le caractère multioctet qui représente le caractère élargi null, qui est stocké dans *WCHAR*, si *WCHAR* n’est pas un pointeur null.
 
-1 à *nombre*inclus, la prochaine *nombre* ou moins d’octets terminent un caractère multioctet valide. La valeur retournée est le nombre d'octets qui terminent le caractère multioctet. Le caractère large équivalent est stocké dans *wchar*si *wchar* n’est pas un pointeur null.
+1 à *compter*, inclus le *nombre* suivant ou un nombre d’octets inférieur termine un caractère multioctet valide. La valeur retournée est le nombre d'octets qui terminent le caractère multioctet. L’équivalent en caractères larges est stocké dans *WCHAR*, si *WCHAR* n’est pas un pointeur null.
 
-(size_t) (-1) Une erreur d’encodage s’est produite. La prochaine *nombre* ou moins d’octets ne contribuent pas à un caractère multioctet complet et valid. Dans ce cas, **errno** est défini à EILSEQ et l’état du décalage de conversion dans *mbstate* n’est pas spécifié.
+(size_t) (-1) Une erreur d’encodage s’est produite. Le *nombre* suivant ou un nombre d’octets inférieur ne contribue pas à un caractère multioctet complet et valide. Dans ce cas, **errno** a la valeur EILSEQ et l’état de décalage de la conversion dans *mbstate* n’est pas spécifié.
 
-(size_t) -(2) La prochaine *nombre* octets suivants contribuent à un caractère multioctets incomplet mais potentiellement valide et tous les *nombre* octets ont été traités. Aucune valeur n’est stockée dans *wchar*, mais *mbstate* est mis à jour pour redémarrer la fonction.
+(size_t) (-2) Les octets *suivants contribuent* à un caractère multioctet incomplet mais potentiellement valide, et tous les octets de *nombre* ont été traités. Aucune valeur n’est stockée dans *WCHAR*, mais *mbstate* est mis à jour pour redémarrer la fonction.
 
 ## <a name="remarks"></a>Notes
 
@@ -75,11 +78,11 @@ Si *mbchar* est un pointeur null, la fonction est équivalente à l’appel :
 
 `mbrtowc(NULL, "", 1, &mbstate)`
 
-Dans ce cas, la valeur des arguments *wchar* et *nombre* sont ignorés.
+Dans ce cas, la valeur des arguments *WCHAR* et *Count* est ignorée.
 
-Si *mbchar* n’est pas un pointeur null, la fonction examine *nombre* octets à partir de *mbchar* pour déterminer le nombre d’octets qui sont requis pour terminer la prochaine caractère multioctet. Si le caractère suivant est valid, le caractère multioctet correspondant est stocké dans *wchar* si elle n’est pas un pointeur null. Si le caractère est le null large correspondant de caractères, l’état résultant de *mbstate* est l’état de conversion initial.
+Si *mbchar* n’est pas un pointeur null, la fonction examine *le nombre d’octets à* partir de *mbchar* pour déterminer le nombre d’octets requis pour terminer le caractère multioctet suivant. Si le caractère suivant est valide, le caractère multioctet correspondant est stocké dans *WCHAR* s’il ne s’agit pas d’un pointeur null. Si le caractère est le caractère null étendu correspondant, l’état résultant de *mbstate* est l’état de conversion initial.
 
-Le **mbrtowc** diffère de la fonction [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) par sa capacité à redémarrer. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables.  Par exemple, une application doit utiliser **wcsrlen** au lieu de **wcslen** si un appel ultérieur à **wcsrtombs** est utilisé au lieu de **wcstombs**.
+La fonction **mbrtowc** diffère de [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) par son redémarrage. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou à d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables.  Par exemple, une application doit utiliser **wcsrlen** au lieu de **wcslen** si un appel ultérieur à **wcsrtombs** est utilisé à la place de **wcstombs**.
 
 ## <a name="example"></a>Exemple
 

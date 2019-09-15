@@ -1,12 +1,12 @@
 ---
 title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _printf_p
 - _wprintf_p
 - _printf_p_l
 - _wprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wprintf_p
 - _wprintf_p
@@ -39,14 +42,14 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 555739fbcdd3503461d7b831660a94602f244aa3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345185"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950265"
 ---
-# <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
+# <a name="_printf_p-_printf_p_l-_wprintf_p-_wprintf_p_l"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 
 Imprime la sortie mise en forme dans le flux de sortie standard et active la spécification de l’ordre dans lequel les paramètres sont utilisés dans la chaîne de format.
 
@@ -90,18 +93,18 @@ Retourne le nombre de caractères imprimés ou une valeur négative si une erreu
 
 ## <a name="remarks"></a>Notes
 
-Le **_printf_p** fonction met en forme et imprime une série de caractères et de valeurs dans le flux de sortie standard, **stdout**. Si des arguments suivent la *format* chaîne, le *format* chaîne doit contenir des spécifications qui déterminent le format de sortie pour les arguments (consultez [paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md)).
+La fonction **_printf_p** met en forme et imprime une série de caractères et de valeurs dans le flux de sortie standard, **stdout**. Si les arguments suivent la chaîne de *format* , la chaîne de *format* doit contenir des spécifications qui déterminent le format de sortie des arguments (consultez [paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md)).
 
-La différence entre **_printf_p** et **printf_s** qui est **_printf_p** prend en charge les paramètres positionnels, ce qui permet de spécifier l’ordre dans lequel les arguments sont utilisé dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+La différence entre **_printf_p** et **printf_s** est que **_printf_p** prend en charge les paramètres positionnels, ce qui permet de spécifier l’ordre dans lequel les arguments sont utilisés dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_wprintf_p** est la version à caractères larges de **_printf_p**; ils se comportent comme si le flux est ouvert en mode ANSI. **_printf_p** ne prend actuellement en charge la sortie vers un flux UNICODE.
+**_wprintf_p** est la version à caractères larges de **_printf_p**; ils se comportent de la même manière si le flux est ouvert en mode ANSI. **_printf_p** ne prend pas actuellement en charge la sortie dans un flux Unicode.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 > [!IMPORTANT]
 > Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur.
 
-Si *format* ou *argument* sont **NULL**, ou du format de chaîne contient des caractères de mise en forme non valides, **_printf_p** et **_wprintf_p** fonctions appellent un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et affecte **errno** à **EINVAL**.
+Si *format* ou *argument* a la **valeur null**, ou si la chaîne de format contient des caractères de mise en forme non valides, les fonctions **_printf_p** et **_wprintf_p** appellent un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre. ](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne-1 et définit **errno** sur **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -117,9 +120,9 @@ Si *format* ou *argument* sont **NULL**, ou du format de chaîne contient des ca
 |**_printf_p**, **_printf_p_l**|\<stdio.h>|
 |**_wprintf_p**, **_wprintf_p_l**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_printf_p.c

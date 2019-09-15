@@ -1,10 +1,10 @@
 ---
 title: _ismbbgraph, _ismbbgraph_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbgraph_l
 - _ismbbgraph
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbgraph
 - _ismbbgraph_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-ms.openlocfilehash: d5b5dace39e674744148a1ddf0c692692fb889f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 096450869f9a150585b3102cea155ecd948c5751
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286770"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954186"
 ---
-# <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph, _ismbbgraph_l
+# <a name="_ismbbgraph-_ismbbgraph_l"></a>_ismbbgraph, _ismbbgraph_l
 
 Détermine si un caractère multioctet particulier est un caractère graphique.
 
@@ -65,7 +68,7 @@ Retourne une valeur différente de zéro si l’expression :
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-est différent de zéro pour *c*, ou 0 si ce n’est pas. **_ismbbgraph** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux. **_ismbbgraph_l** est identique, sauf qu’elle utilise les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+est différent de zéro pour *c*, ou 0 si ce n’est pas le cas. **_ismbbgraph** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux. **_ismbbgraph_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Configuration requise
 

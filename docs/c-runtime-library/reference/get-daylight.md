@@ -1,10 +1,10 @@
 ---
 title: _get_daylight
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __daylight
 - _get_daylight
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_daylight
 - _get_daylight
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-ms.openlocfilehash: 03c3386e59379f460d3c07dc310153d990c02b05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f63d3baa1e9411039d1482b4cbfbf4bce4e9872
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332312"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956045"
 ---
-# <a name="getdaylight"></a>_get_daylight
+# <a name="_get_daylight"></a>_get_daylight
 
 Récupère le décalage de l'heure d'été en heures.
 
@@ -44,20 +47,20 @@ error_t _get_daylight( int* hours );
 
 ### <a name="parameters"></a>Paramètres
 
-*Heures*<br/>
+*travaillé*<br/>
 Décalage en heures de l'heure d'été.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro en cas de réussite ou un **errno** valeur si une erreur se produit.
+Zéro en cas de réussite ou une valeur **errno** si une erreur se produit.
 
 ## <a name="remarks"></a>Notes
 
-Le **_get_daylight** fonction récupère le nombre d’heures à l’heure sous forme d’entier. Si l'heure d'été est en vigueur, le décalage par défaut est d'une heure (même si quelques régions observent un décalage de deux heures).
+La fonction **_get_daylight** récupère le nombre d’heures de l’heure d’été sous la forme d’un entier. Si l'heure d'été est en vigueur, le décalage par défaut est d'une heure (même si quelques régions observent un décalage de deux heures).
 
-Si *heures* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **EINVAL**.
+Si *hours* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
 
-Nous vous recommandons d’utiliser cette fonction au lieu de la macro **_daylight** ou la fonction déconseillée **__daylight**.
+Nous vous recommandons d’utiliser cette fonction au lieu de la macro **_daylight** ou de la fonction déconseillée **__daylight**.
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -1,10 +1,10 @@
 ---
 title: fopen_s, _wfopen_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfopen_s
 - fopen_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fopen_s
 - _tfopen_s
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: e4ccce3c4a4fe1e327b7830ef03f6ab69f2d7814
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 2a400918a171c0009e40be8a20b814e8ded336ce
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376214"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957123"
 ---
-# <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
+# <a name="fopen_s-_wfopen_s"></a>fopen_s, _wfopen_s
 
 Ouvre un fichier. Ces versions de [fopen, _wfopen](fopen-wfopen.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -88,7 +91,7 @@ Les fichiers ouverts par **fopen_s** et **_wfopen_s** ne peuvent pas être parta
 
 La fonction **fopen_s** ouvre le fichier spécifié par *filename*. **_wfopen_s** est une version à caractères larges de **fopen_s**; les arguments de **_wfopen_s** sont des chaînes à caractères larges. dans le cas contraire, **_wfopen_s** et **fopen_s** se comportent de la même façon.
 
-**fopen_s** accepte les chemins d’accès qui sont valides sur le système de fichiers au point d’exécution; Les chemins d’accès UNC et les chemins d’accès qui impliquent des lecteurs réseau mappés sont acceptés par **fopen_s** tant que le système qui exécute le code a accès au partage ou au lecteur réseau mappé au moment de l’exécution. Lorsque vous construisez des chemins d’accès pour **fopen_s**, ne faites pas de suppositions quant à la disponibilité des lecteurs, chemins d’accès ou partages réseau dans l’environnement d’exécution. Vous pouvez utiliser des barres obliques (/) ou des barres obliques inverses (\\) comme séparateurs de répertoire dans un chemin.
+**fopen_s** accepte les chemins d’accès qui sont valides sur le système de fichiers au point d’exécution ; Les chemins d’accès UNC et les chemins d’accès qui impliquent des lecteurs réseau mappés sont acceptés par **fopen_s** tant que le système qui exécute le code a accès au partage ou au lecteur réseau mappé au moment de l’exécution. Lorsque vous construisez des chemins d’accès pour **fopen_s**, ne faites pas de suppositions quant à la disponibilité des lecteurs, chemins d’accès ou partages réseau dans l’environnement d’exécution. Vous pouvez utiliser des barres obliques (/) ou des barres obliques inverses (\\) comme séparateurs de répertoire dans un chemin.
 
 Ces fonctions valident leurs paramètres. Si *pFile*, *filename*ou *mode* est un pointeur null, ces fonctions génèrent une exception de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
@@ -100,7 +103,7 @@ Vérifiez toujours la valeur de retour pour savoir si la fonction a abouti avant
 
 **fopen_s(&fp, "newfile.txt", "rw, ccs=** _encoding_ **");**
 
-Les valeurs d' *encodage* autorisées sont **Unicode**, **UTF-8**et **UTF-16LE**. Si aucune valeur n’est spécifiée pour l’encodage, **fopen_s** utilise l’encodage ANSI.
+Les valeurs d' *encodage* autorisées sont **Unicode**, **UTF-8**et **UTF-16LE**. Si aucune valeur n’est spécifiée pour l' *encodage*, **fopen_s** utilise l’encodage ANSI.
 
 Si le fichier existe déjà et qu'il est ouvert pour lecture ou ajout, la marque d'ordre d'octet (BOM, Byte Order Mark), si elle est présente dans le fichier, détermine le codage. L’encodage BOM est prioritaire sur l’encodage spécifié par l’indicateur *CCS* . L’encodage *CCS* est utilisé uniquement quand aucune marque Bom n’est présente ou si le fichier est un nouveau fichier.
 
@@ -119,7 +122,7 @@ Le tableau suivant récapitule les modes pour différents indicateurs *CCS* four
 
 Une marque BOM est écrite automatiquement dans les fichiers ouverts pour écriture en mode Unicode.
 
-Si le *mode* est **«a, CCS =** _Encoding_ **»** , **fopen_s** tente d’abord d’ouvrir le fichier avec un accès en lecture et un accès en écriture. En cas de réussite, la fonction lit la marque BOM pour déterminer le codage du fichier ; en cas d'échec, elle utilise le codage par défaut pour le fichier. Dans les deux cas, **fopen_s** ouvre à nouveau le fichier avec un accès en écriture seule. (Cela s’applique uniquement à **un** mode, et non à **un +** .)
+Si le *mode* est **« a, CCS =** _Encoding_ **»** , **fopen_s** tente d’abord d’ouvrir le fichier avec un accès en lecture et un accès en écriture. En cas de réussite, la fonction lit la marque BOM pour déterminer le codage du fichier ; en cas d'échec, elle utilise le codage par défaut pour le fichier. Dans les deux cas, **fopen_s** ouvre à nouveau le fichier avec un accès en écriture seule. (Cela s’applique uniquement à **un** mode, et non à **un +** .)
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -151,7 +154,7 @@ Outre les valeurs ci-dessus, les caractères suivants peuvent être inclus dans 
 | **t** | Ouvrir en mode texte (traduit). |
 | **b** | Ouvrir en mode binaire (non traduit); les traductions qui impliquent des caractères de retour chariot et de saut de ligne sont supprimées. |
 
-En mode texte (traduit), CTRL + Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture/écriture avec **«a +»** , **FOPEN_S** recherche un Ctrl + Z à la fin du fichier et le supprime, si possible. Cela est dû au fait que l’utilisation de [fseek](fseek-fseeki64.md) et de **ftell** pour se déplacer dans un fichier qui se termine par un Ctrl + Z peut provoquer un comportement incorrect de [fseek](fseek-fseeki64.md) vers la fin du fichier.
+En mode texte (traduit), CTRL + Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture/écriture avec **« a + »** , **FOPEN_S** recherche un Ctrl + Z à la fin du fichier et le supprime, si possible. Cela est dû au fait que l’utilisation de [fseek](fseek-fseeki64.md) et de **ftell** pour se déplacer dans un fichier qui se termine par un Ctrl + Z peut provoquer un comportement incorrect de [fseek](fseek-fseeki64.md) vers la fin du fichier.
 
 En outre, en mode texte, les combinaisons retour chariot-saut de ligne sont traduites en flux à ligne unique en entrée, et les caractères de saut de ligne sont traduits en combinaisons retour chariot-saut de ligne en sortie. Lorsqu'une fonction d'E/S de flux Unicode s'exécute en mode texte (comportement par défaut), on suppose que le flux source ou de destination est une séquence de caractères multioctets. Par conséquent, les fonctions d’entrée de flux Unicode convertissent les caractères multioctets en caractères larges (comme après un appel à la fonction **mbtowc**). Pour la même raison, les fonctions de flux de sortie Unicode convertissent les caractères larges en caractères multioctets (comme après un appel à la fonction **wctomb**).
 

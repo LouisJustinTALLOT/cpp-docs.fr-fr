@@ -1,10 +1,10 @@
 ---
 title: _popen, _wpopen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _popen
 - _wpopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tpopen
 - popen
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 03eb36573abe8e26c47e6dd38c009e5819e60f8f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0e58ffd523c6919d70c68454f3547736afdef565
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499597"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950994"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
@@ -86,7 +89,7 @@ La fonction **_popen** crée un canal et exécute de façon asynchrone une copie
 |**"t"**|Ouvre en mode texte.|
 
 > [!NOTE]
-> Si elle est utilisée dans un programme Windows, la fonction **_popen** retourne un pointeur de fichier non valide qui amène le programme à cesser de répondre indéfiniment. **_popen** fonctionne correctement dans une application console. Pour créer une application Windows qui redirige l’entrée et la sortie, consultez [création d’un processus enfant avec une entrée et une sortie](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) redirigées dans le SDK Windows.
+> Si elle est utilisée dans un programme Windows, la fonction **_popen** retourne un pointeur de fichier non valide qui amène le programme à cesser de répondre indéfiniment. **_popen** fonctionne correctement dans une application console. Pour créer une application Windows qui redirige l’entrée et la sortie, consultez [création d’un processus enfant avec une entrée et une sortie redirigées](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) dans le SDK Windows.
 
 **_wpopen** est une version à caractères larges de **_popen**; l’argument *path* de **_wpopen** est une chaîne de caractères larges. dans le cas contraire, **_wpopen** et **_popen** se comportent de la même façon.
 

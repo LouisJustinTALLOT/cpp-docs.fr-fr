@@ -1,11 +1,11 @@
 ---
 title: sinh, sinhf, sinhl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinhl
 - sinhf
 - sinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - sinh
 - sinhf
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae500cf595707acf9022b1c52232314c36cfe4d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356275"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948108"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
@@ -62,18 +65,18 @@ Angle en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **sinh** fonctions retournent le sinus hyperbolique de *x*. Par défaut, si le résultat est trop volumineux, **sinh** définit **errno** à **ERANGE** et retourne +**HUGE_VAL**.
+Les fonctions **sinh** retournent le sinus hyperbolique de *x*. Par défaut, si le résultat est trop grand, **sinh** définit **errno** sur **ERANGE** et retourne ±**HUGE_VAL**.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|Aucun.|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760e + 002|OVERFLOW+INEXACT|OVERFLOW|
+|± QNAN,IND|Aucun|_DOMAIN|
+|&#124;x&#124; ≥ 7.104760 e + 002|OVERFLOW+INEXACT|OVERFLOW|
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **sinh** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **sinh** accepte et retourne toujours **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **sinh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **sinh** prend toujours et retourne **double**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -83,7 +86,7 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **s
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_sinhcosh.c
