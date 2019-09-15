@@ -1,11 +1,11 @@
 ---
 title: acos, acosf, acosl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - acosf
 - acos
 - acosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - acos
 - acosl
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 22149e9ff552015238d34a15166d04115438534b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335670"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939993"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -58,13 +61,13 @@ long double acos( long double x );   // C++ only
 ### <a name="parameters"></a>Paramètres
 
 *x*<br/>
-Valeur comprise entre -1 et 1, pour lesquelles calculer l’arc cosinus (cosinus inverse).
+Valeur comprise entre-1 et 1, pour laquelle calculer l’arccosinus (cosinus inverse).
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **acos** fonction retourne l’arc cosinus de *x* dans la plage 0 en radians la mesure π.
+La fonction **ACOS** retourne l’arc cosinus de *x* dans la plage de 0 à π radians.
 
-Par défaut, si *x* est inférieur à -1 ou supérieur à 1, **acos** retourne un indéfini.
+Par défaut, si *x* est inférieur à-1 ou supérieur à 1, **ACOS** retourne un indéfini.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
@@ -74,7 +77,7 @@ Par défaut, si *x* est inférieur à -1 ou supérieur à 1, **acos** retourne u
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **acos** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **acos** accepte et retourne toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **ACOS** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **ACOS** prend toujours et retourne un **double**.
 
 ## <a name="requirements"></a>Configuration requise
 

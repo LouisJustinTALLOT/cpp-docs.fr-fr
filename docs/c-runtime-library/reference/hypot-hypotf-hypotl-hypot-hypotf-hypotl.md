@@ -1,14 +1,14 @@
 ---
 title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _hypotf
 - hypot
 - hypotf
 - _hypot
 - _hypotl
 - hypotl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - hypotf
 - hypotl
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cee9e217b23c43a9ce5a1521b52215301b932fe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157395"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954794"
 ---
-# <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
+# <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
 Calcule l’hypoténuse.
 
@@ -84,13 +87,13 @@ Valeurs à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **hypot** retourne la longueur de l’hypoténuse ; en cas de dépassement, **hypot** retourne INF (infini) et le **errno** variable est définie sur **ERANGE** . Vous pouvez utiliser **_matherr** pour modifier la gestion des erreurs.
+En cas de réussite, **hypot** retourne la longueur de l’hypoténuse ; en cas de dépassement de capacité, **hypot** retourne INF (infini) et la variable **errno** est définie sur **ERANGE**. Vous pouvez utiliser _ **matherr** pour modifier la gestion des erreurs.
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **hypot** fonctions calculent la longueur de l’hypoténuse d’un triangle rectangle, d’après la longueur des deux côtés *x* et *y* (en d’autres termes, la racine carrée de *x*<sup>2</sup> + *y*<sup>2</sup>).
+Les fonctions **hypot** calculent la longueur de l’hypoténuse d’un triangle rectangle, en fonction de la longueur des deux côtés *x* et *y* (en d’autres termes, la racine carrée de *x*<sup>2</sup> + *y*<sup>2</sup>).
 
 Les versions des fonctions qui comportent des traits de soulignement de début sont fournies à des fins de compatibilité avec les normes précédentes. Elles ont le même comportement que les versions qui n’en ont pas. Nous vous recommandons d’utiliser les versions sans traits de soulignement de début pour le nouveau code.
 

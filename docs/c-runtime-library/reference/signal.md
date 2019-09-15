@@ -1,9 +1,9 @@
 ---
 title: signal
 ms.date: 04/12/2018
-apiname:
+api_name:
 - signal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,24 +15,27 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 351bdbe1d787fc5e5d741460adfe415df7fda756
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04869412272725108911f13857585e650ad20ab9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356288"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948107"
 ---
 # <a name="signal"></a>signal
 
 Définit la gestion du signal d'interruption.
 
 > [!IMPORTANT]
-> N’utilisez pas cette méthode pour arrêter une application Microsoft Store, à l’exception de test ou de scénarios de débogage. Méthodes de programmation ou l’interface utilisateur pour fermer une application de Store ne sont pas autorisées en fonction de la [les stratégies de Microsoft Store](/legal/windows/agreements/store-policies). Pour plus d’informations, consultez [cycle de vie des applications UWP](/windows/uwp/launch-resume/app-lifecycle).
+> N’utilisez pas cette méthode pour arrêter une application Microsoft Store, sauf dans les scénarios de test ou de débogage. Les méthodes de programmation ou d’interface utilisateur pour fermer une application du Windows Store ne sont pas autorisées selon les [stratégies de Microsoft Store](/legal/windows/agreements/store-policies). Pour plus d’informations, consultez la page relative au [cycle de vie des applications UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,15 +53,15 @@ Le deuxième paramètre est un pointeur vers la fonction à exécuter. Le premie
 
 ## <a name="return-value"></a>Valeur de retour
 
-**signal** retourne la valeur précédente de func qui est associé au signal donné. Par exemple, si la valeur précédente de *func* a été **SIG_IGN**, la valeur de retour est également **SIG_IGN**. La valeur de retour **SIG_ERR** indique une erreur ; dans ce cas, **errno** a la valeur **EINVAL**.
+**signal** retourne la valeur précédente de Func associée au signal donné. Par exemple, si la valeur précédente de *Func* était **SIG_IGN**, la valeur de retour est également **SIG_IGN**. Une valeur de retour de **SIG_ERR** indique une erreur ; dans ce cas, **errno** a la valeur **EINVAL**.
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **signal** (fonction) permet à un processus choisir une des différentes méthodes pour gérer un signal d’interruption à partir du système d’exploitation. Le *sig* argument est l’interruption à laquelle **signal** répond ; il doit être une des constantes manifestes suivantes, qui sont définies dans le SIGNAL. H.
+La fonction **signal** permet à un processus de choisir l’une des méthodes permettant de gérer un signal d’interruption à partir du système d’exploitation. L’argument *SIG* est l’interruption sur laquelle le **signal** répond ; il doit s’agir de l’une des constantes manifestes suivantes, qui sont définies dans SIGNAL. Manutention.
 
-|*SIG* valeur|Description|
+|valeur *SIG*|Description|
 |-----------------|-----------------|
 |**SIGABRT**|Arrêt anormal|
 |**SIGFPE**|Erreur de virgule flottante|
@@ -67,44 +70,44 @@ Le **signal** (fonction) permet à un processus choisir une des différentes mé
 |**SIGSEGV**|Accès au stockage non conforme|
 |**SIGTERM**|Demande d'arrêt|
 
-Si *sig* ne fait pas partie des valeurs ci-dessus, le Gestionnaire de paramètre non valide est appelé, comme défini dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **SIG_ERR**.
+Si *SIG* ne fait pas partie des valeurs ci-dessus, le gestionnaire de paramètre non valide est appelé, comme défini dans [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **SIG_ERR**.
 
-Par défaut, **signal** termine le programme appelant avec le code de sortie 3, quelle que soit la valeur de *sig*.
+Par défaut, le **signal** met fin au programme appelant avec le code de sortie 3, quelle que soit la valeur de *SIG*.
 
 > [!NOTE]
-> **SIGINT** n’est pas pris en charge pour toutes les applications Win32. Lorsqu'une interruption CTRL+C se produit, les systèmes d'exploitation Win32 génèrent un nouveau thread pour gérer spécifiquement cette interruption. Cela peut amener une application à un seul thread, par exemple celle dans UNIX, à devenir multithread et à provoquer un comportement inattendu.
+> **SIGINT** n’est pris en charge pour aucune application Win32. Lorsqu'une interruption CTRL+C se produit, les systèmes d'exploitation Win32 génèrent un nouveau thread pour gérer spécifiquement cette interruption. Cela peut amener une application à un seul thread, par exemple celle dans UNIX, à devenir multithread et à provoquer un comportement inattendu.
 
-Le *func* argument est une adresse à un gestionnaire de signal que vous écrivez, ou à une des constantes prédéfinies **SIG_DFL** ou **SIG_IGN**, qui sont également définis dans le SIGNAL. H. Si *func* est une fonction, il est installé en tant que gestionnaire de signal pour le signal donné. Prototype du Gestionnaire de signal requiert un argument formel, *sig*, de type **int**. Le système d’exploitation fournit l’argument réel via *sig* lorsqu’une interruption se produit ; l’argument est le signal qui a généré l’interruption. Par conséquent, vous pouvez utiliser les six constantes de manifeste (répertoriées dans le tableau précédent) de votre gestionnaire de signal pour déterminer le type d'interruption et prendre les mesures appropriées. Par exemple, vous pouvez appeler **signal** à deux reprises pour assigner le même gestionnaire à deux signaux différents, puis tester la *sig* argument dans le gestionnaire pour prendre des mesures différentes selon le signal reçu.
+L’argument *Func* est une adresse à un gestionnaire de signal que vous écrivez, ou à l’une des constantes prédéfinies **SIG_DFL** ou **SIG_IGN**, qui sont également définies dans signal. Manutention. Si *Func* est une fonction, elle est installée en tant que gestionnaire de signal pour le signal donné. Le prototype du gestionnaire de signal requiert un argument formel, *SIG*, de type **int**. Le système d’exploitation fournit l’argument réel via *SIG* lorsqu’une interruption se produit ; l’argument est le signal qui a généré l’interruption. Par conséquent, vous pouvez utiliser les six constantes de manifeste (répertoriées dans le tableau précédent) de votre gestionnaire de signal pour déterminer le type d'interruption et prendre les mesures appropriées. Par exemple, vous pouvez appeler **signal** deux fois pour assigner le même gestionnaire à deux signaux différents, puis tester l’argument *SIG* dans le gestionnaire pour prendre des mesures différentes selon le signal reçu.
 
-Si vous testez pour les exceptions de virgule flottante (**SIGFPE**), *func* pointe vers une fonction qui accepte un deuxième argument facultatif qui est une de plusieurs constantes manifestes, définies dans FLOAT. H, sous la forme **FPE_xxx**. Quand un **SIGFPE** signal se produit, vous pouvez tester la valeur du deuxième argument pour déterminer le type d’exception à virgule flottante et agir en conséquence. Cet argument et ses valeurs possibles sont des extensions Microsoft.
+Si vous testez des exceptions à virgule flottante (**SIGFPE**), *Func* pointe vers une fonction qui accepte un deuxième argument facultatif qui est l’une des nombreuses constantes de manifeste, définies en valeur float. H, de la forme **FPE_xxx**. Quand un signal **SIGFPE** se produit, vous pouvez tester la valeur du deuxième argument pour déterminer le type d’exception à virgule flottante, puis prendre les mesures appropriées. Cet argument et ses valeurs possibles sont des extensions Microsoft.
 
-Pour les exceptions à virgule flottante, la valeur de *func* n’est pas réinitialisée lorsque le signal est reçu. Pour récupérer des exceptions à virgule flottante, utilisez les clauses try/except pour cerner les opérations à virgule flottante. Il est aussi possible d’effectuer une récupération en utilisant [setjmp](setjmp.md) avec [longjmp](longjmp.md). Dans les deux cas, le processus appelant reprend l'exécution et quitte l'état à virgule flottante du processus non défini.
+Pour les exceptions à virgule flottante, la valeur de *Func* n’est pas réinitialisée lorsque le signal est reçu. Pour récupérer des exceptions à virgule flottante, utilisez les clauses try/except pour cerner les opérations à virgule flottante. Il est aussi possible d’effectuer une récupération en utilisant [setjmp](setjmp.md) avec [longjmp](longjmp.md). Dans les deux cas, le processus appelant reprend l'exécution et quitte l'état à virgule flottante du processus non défini.
 
 Si le gestionnaire de signal retourne, le processus appelant reprend l'exécution immédiatement après le moment où il a reçu le signal d'interruption. Cela est vrai quel que soit le type de signal ou le mode de fonctionnement.
 
-Avant l’exécution de la fonction spécifiée, la valeur de *func* a la valeur **SIG_DFL**. Le signal d’interruption suivant est traité comme décrit pour **SIG_DFL**, sauf si un appel d’intervention à **signal** spécifie autrement. Vous pouvez utiliser cette fonctionnalité pour réinitialiser les signaux dans la fonction appelée.
+Avant que la fonction spécifiée soit exécutée, la valeur de *Func* est définie sur **SIG_DFL**. Le signal d’interruption suivant est traité comme décrit pour **SIG_DFL**, sauf si un appel d’interrogation à **signal** spécifie autrement. Vous pouvez utiliser cette fonctionnalité pour réinitialiser les signaux dans la fonction appelée.
 
 Dans la mesure où les routines de gestion de signal sont généralement appelées de façon asynchrone lorsqu'une interruption se produit, votre fonction de gestion de signal peut obtenir le contrôle lorsqu'une opération du runtime est incomplète et dans un état inconnu. La liste suivante résume les restrictions qui déterminent les fonctions que vous pouvez utiliser dans votre routine de gestion de signal.
 
-- Effectuez pas les problème de bas niveau STDIO. Les routines d’e/s H (par exemple, **printf** ou **fread**).
+- N’émettez pas de niveau inférieur ou STDIO. Routines d’e/s (par exemple, **printf** ou **fread**).
 
-- N’appelez pas les routines du tas ou toute routine qui utilise les routines du tas (par exemple, **malloc**, **_strdup**, ou **_putenv**). Pour plus d’informations, consultez [malloc](malloc.md).
+- N’appelez pas les routines de tas ou toute routine qui utilise les routines de tas (par exemple, **malloc**, **_strdup**ou **_putenv**). Pour plus d’informations, consultez [malloc](malloc.md).
 
-- N’utilisez pas de n’importe quelle fonction qui génère un appel système (par exemple, **_getcwd** ou **temps**).
+- N’utilisez aucune fonction qui génère un appel système (par exemple, **_getcwd** ou **Time**).
 
-- N’utilisez pas **longjmp** , sauf si l’interruption est provoquée par une exception de virgule flottante (autrement dit, *sig* est **SIGFPE**). Dans ce cas, réinitialisez d’abord le package à virgule flottante à l’aide d’un appel à **_fpreset**.
+- N’utilisez pas **longjmp** à moins que l’interruption soit provoquée par une exception à virgule flottante (c’est-à-dire que *SIG* est **SIGFPE**). Dans ce cas, réinitialisez d’abord le package à virgule flottante à l’aide d’un appel à **_fpreset**.
 
 - N'utilisez aucune routine de superposition.
 
-Un programme doit contenir un code à virgule flottante s’il doit intercepter le **SIGFPE** exception à l’aide de la fonction. Si votre programme ne contient pas de code à virgule flottante et qu'il requiert le code de gestion de signal de la bibliothèque runtime, déclarez un chiffre de type double volatile et initialisez-le à zéro :
+Un programme doit contenir du code à virgule flottante s’il doit intercepter l’exception **SIGFPE** à l’aide de la fonction. Si votre programme ne contient pas de code à virgule flottante et qu'il requiert le code de gestion de signal de la bibliothèque runtime, déclarez un chiffre de type double volatile et initialisez-le à zéro :
 
 ```C
 volatile double d = 0.0f;
 ```
 
-Le **SIGILL** et **SIGTERM** signaux ne sont pas générés sous Windows. Ils sont inclus pour la compatibilité ANSI. Par conséquent, vous pouvez définir des gestionnaires de signal pour ces signaux à l’aide de **signal**, et vous pouvez générer également explicitement ces signaux en appelant [déclencher](raise.md).
+Les signaux **SIGILL** et **SIGTERM** ne sont pas générés sous Windows. Ils sont inclus pour la compatibilité ANSI. Par conséquent, vous pouvez définir des gestionnaires de signal pour ces signaux à l’aide de **signal**, et vous pouvez également générer explicitement ces signaux en appelant [Raise](raise.md).
 
-Paramètres de signal ne sont pas conservés dans les processus engendrés qui sont créés par les appels à [_exec](../../c-runtime-library/exec-wexec-functions.md) ou [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) fonctions. Les valeurs par défaut des paramètres de signal sont réinitialisées dans le nouveau processus.
+Les paramètres de signal ne sont pas conservés dans les processus générés créés par les appels aux fonctions [_exec](../../c-runtime-library/exec-wexec-functions.md) ou [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) . Les valeurs par défaut des paramètres de signal sont réinitialisées dans le nouveau processus.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -116,7 +119,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser **signal** pour ajouter un comportement personnalisé pour le **SIGABRT** signal. Pour plus d’informations sur le comportement d’arrêt, consultez [_set_abort_behavior](set-abort-behavior.md).
+L’exemple suivant montre comment utiliser **signal** pour ajouter un comportement personnalisé au signal **SIGABRT** . Pour plus d’informations sur le comportement d’arrêt, consultez [_set_abort_behavior](set-abort-behavior.md).
 
 ```C
 // crt_signal.c

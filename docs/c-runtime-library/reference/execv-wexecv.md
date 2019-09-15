@@ -1,10 +1,10 @@
 ---
 title: _execv, _wexecv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wexecv
 - _execv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execv
 - _wexecv
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-ms.openlocfilehash: fd0447e7863e25571a968a821b45614d5d76d1bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb18603c618342f67bad28ebf0b99bd173ee5293
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339245"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941856"
 ---
-# <a name="execv-wexecv"></a>_execv, _wexecv
+# <a name="_execv-_wexecv"></a>_execv, _wexecv
 
 Charge et exécute les nouveaux processus enfant.
 
@@ -64,9 +67,9 @@ Tableau de pointeurs vers les paramètres.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de retour de -1 indique une erreur, auquel cas la **errno** variable globale est définie.
+En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de retour de-1 indique une erreur, auquel cas la variable globale **errno** est définie.
 
-|**errno** valeur|Description|
+|valeur **errno**|Description|
 |-------------------|-----------------|
 |**E2BIG**|L’espace requis pour les arguments et les paramètres d’environnement dépasse 32 Ko.|
 |**EACCES**|Le fichier spécifié possède un verrou ou une violation de partage.|
@@ -82,7 +85,7 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 Chacune de ces fonctions charge et exécute un nouveau processus, passant un tableau de pointeurs à des arguments de ligne de commande.
 
-Le **_execv** fonctions valident leurs paramètres. Si *cmdname* est un pointeur null, ou si *argv* est un pointeur null, pointeur vers un tableau vide, ou si le tableau contient une chaîne vide comme premier argument, le **_execv** fonctions appellent le Gestionnaire de paramètre non valide comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1. Aucun processus lancé.
+Les fonctions **_execv** valident leurs paramètres. Si *CmdName* est un pointeur null, si *argv* est un pointeur null, un pointeur vers un tableau vide ou si le tableau contient une chaîne vide comme premier argument, les fonctions **_execv** appellent le gestionnaire de paramètre non valide comme décrit dans le [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent-1. Aucun processus lancé.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -93,7 +96,7 @@ Le **_execv** fonctions valident leurs paramètres. Si *cmdname* est un pointeur
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Consultez l’exemple dans [_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md).
 

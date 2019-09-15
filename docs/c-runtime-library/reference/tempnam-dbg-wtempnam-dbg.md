@@ -1,10 +1,10 @@
 ---
 title: _tempnam_dbg, _wtempnam_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtempnam_dbg
 - _tempnam_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wtempnam_dbg
 - tempnam_dbg
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - _tempnam_dbg function
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
-ms.openlocfilehash: 804c8ad1f17c6ee1df563cafc69ee7aef494d1cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73642730995ac5c0b47519fac64b30400d47767c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258134"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946253"
 ---
-# <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
+# <a name="_tempnam_dbg-_wtempnam_dbg"></a>_tempnam_dbg, _wtempnam_dbg
 
-Versions de fonction [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) qui utilisent la version debug de **malloc**, **_malloc_dbg**.
+Les versions de fonction de [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) qui utilisent la version Debug de **malloc**, _ **malloc_dbg**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,29 +69,29 @@ wchar_t *_wtempnam_dbg(
 Chemin d’accès utilisé dans le nom de fichier en l’absence de variable d’environnement TMP ou si TMP n’est pas un répertoire valide.
 
 *prefix*<br/>
-La chaîne qui sera ajouté aux noms retournés par **_tempnam**.
+Chaîne qui sera précédée des noms retournés par **_tempnam**.
 
 *blockType*<br/>
-Type de bloc de mémoire demandé : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
+Type de bloc de mémoire demandé : _ **client_block** ou **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Pointeur vers le nom du fichier source qui a demandé l’opération d’allocation ou **NULL**.
+Pointeur vers le nom du fichier source qui a demandé l’opération d’allocation ou **null**.
 
 *linenumber*<br/>
-Numéro de ligne dans le fichier source où l’opération d’allocation a été demandée ou **NULL**.
+Numéro de ligne dans le fichier source où l’opération d’allocation a été demandée ou **null**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction retourne un pointeur vers le nom généré ou **NULL** s’il existe un échec. Échec peut se produire s’il existe un nom de répertoire non valide spécifié dans la variable d’environnement TMP et dans le *dir* paramètre.
+Chaque fonction retourne un pointeur vers le nom généré ou **null** en cas d’échec. Une défaillance peut se produire si un nom de répertoire non valide est spécifié dans la variable d’environnement TMP et dans le paramètre *dir* .
 
 > [!NOTE]
-> **gratuit** (ou **free_dbg**) n’a besoin d’être appelée pour les pointeurs alloués par **_tempnam_dbg** et **_wtempnam_dbg**.
+> **gratuit** (ou **free_dbg**) doit être appelé pour les pointeurs alloués par **_tempnam_dbg** et **_wtempnam_dbg**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_tempnam_dbg** et **_wtempnam_dbg** fonctions sont identiques aux **_tempnam** et **_wtempnam** , à ceci près que, lorsque **_DEBUG** est défini, ces fonctions utilisent la version debug de **malloc** et **_malloc_dbg**, pour allouer la mémoire si **NULL** est passé comme premier paramètre. Pour plus d’informations, consultez [_malloc_dbg](malloc-dbg.md).
+Les fonctions **_tempnam_dbg** et **_wtempnam_dbg** sont identiques à **_tempnam** et **_wtempnam** , à ceci près que, quand **_ DEBUG** est défini, ces fonctions utilisent la version Debug de **malloc** et _ **malloc_dbg**, pour Allouez de la mémoire si la **valeur null** est passée comme premier paramètre. Pour plus d’informations, consultez [_malloc_dbg](malloc-dbg.md).
 
-Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir l’indicateur **_CRTDBG_MAP_ALLOC**. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_tempnam** et **_wtempnam** sont remappés à **_tempnam_dbg** et **_ wtempnam_dbg**, respectivement, avec le *blockType* définie sur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions explicitement, sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
+Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir l’indicateur _ **CRTDBG_MAP_ALLOC**. Quand _ **CRTDBG_MAP_ALLOC** est défini, les appels à **_tempnam** et **_wtempnam** sont remappés à **_tempnam_dbg** et **_Wtempnam_dbg**, respectivement, avec le *Blocktype* défini sur **_NORMAL_BLOCK**. Vous n’avez donc pas besoin d’appeler ces fonctions de manière explicite, sauf si vous souhaitez marquer les blocs du tas comme _ **client_block**. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

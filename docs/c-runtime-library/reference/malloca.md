@@ -1,9 +1,9 @@
 ---
 title: _malloca
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _malloca
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - malloca
 - _malloca
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 22a63002c900d69e8a7706a54acedf0b4b4f6376
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b12b4adde710f2fc46b3a3790519006fabbb1fc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156869"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952771"
 ---
-# <a name="malloca"></a>_malloca
+# <a name="_malloca"></a>_malloca
 
 Alloue de la mémoire sur la pile. Il s’agit d’une version de [_alloca](alloca.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -49,28 +52,28 @@ Octets à allouer à partir de la pile.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **_malloca** routine retourne un **void** pointeur vers l’espace alloué, qui est obligatoirement correctement aligné pour le stockage de n’importe quel type d’objet. Si *taille* est 0, **_malloca** alloue un élément de longueur nulle et retourne un pointeur valide vers cet élément.
+La routine **_malloca** retourne un pointeur **void** vers l’espace alloué, qui est garanti correctement aligné pour le stockage de tout type d’objet. Si la *taille* est égale à 0, **_malloca** alloue un élément de longueur zéro et retourne un pointeur valide vers cet élément.
 
-Si *taille* est supérieur à **_ALLOCA_S_THRESHOLD**, puis **_malloca** tente d’allouer sur le tas et retourne un pointeur null si l’espace ne peut pas être alloué. Si *taille* est inférieure ou égale à **_ALLOCA_S_THRESHOLD**, puis **_malloca** tente d’allouer de la pile et une exception de dépassement de capacité de pile est générée si l’espace ne peut pas être allouée. L’exception de dépassement de capacité de pile n’est pas une exception C++ ; Il est une exception structurée. Au lieu d’utiliser la gestion des exceptions C++, vous devez utiliser [Structured Exception Handling](../../cpp/structured-exception-handling-c-cpp.md) (SEH) pour intercepter cette exception.
+Si la *taille* est supérieure à **_ALLOCA_S_THRESHOLD**, **_malloca** tente d’allouer sur le tas et retourne un pointeur null si l’espace ne peut pas être alloué. Si la *taille* est inférieure ou égale à **_ALLOCA_S_THRESHOLD**, **_malloca** tente d’allouer sur la pile et une exception de dépassement de capacité de la pile est générée si l’espace ne peut pas être alloué. L’exception de dépassement de capacité C++ de la pile n’est pas une exception. Il s’agit d’une exception structurée. Au lieu d' C++ utiliser la gestion des exceptions, vous devez utiliser la [gestion structurée des exceptions](../../cpp/structured-exception-handling-c-cpp.md) (SEH) pour intercepter cette exception.
 
 ## <a name="remarks"></a>Notes
 
-**_malloca** alloue *taille* octets à partir de la pile du programme ou le tas si la demande dépasse une certaine taille en octets fournie par **_ALLOCA_S_THRESHOLD**. La différence entre **_malloca** et **_alloca** qui est **_alloca** alloue toujours sur la pile, quelle que soit la taille. Contrairement aux **_alloca**, qui ne requièrent pas ou n’autoriser un appel à **gratuit** pour libérer la mémoire ainsi allouée, **_malloca** nécessite l’utilisation de [_freea](freea.md)pour libérer la mémoire. En mode débogage, **_malloca** toujours alloue de la mémoire à partir du tas.
+**_malloca** alloue la *taille* en octets de la pile du programme ou du segment de mémoire si la requête dépasse une certaine taille en octets, spécifiée par **_ALLOCA_S_THRESHOLD**. La différence entre **_malloca** et **_** AlwaysOn est que **_ alloca** est toujours alloué sur la pile, quelle que soit la taille. Contrairement à **_ alloca**, qui ne requiert pas ou n’autorise pas un **appel à libérer** pour libérer la mémoire ainsi allouée, **_malloca** nécessite l’utilisation de [_freea](freea.md) pour libérer de la mémoire. En mode débogage, **_malloca** alloue toujours de la mémoire à partir du tas.
 
-Il existe des restrictions à l’appel explicite **_malloca** dans un gestionnaire d’exceptions (EH). Les routines EH qui s’exécutent sur des processeurs de classe x86 fonctionnent dans le cadre de leur propre mémoire : Elles effectuent leurs tâches dans l’espace de mémoire qui n’est pas basé sur l’emplacement actuel du pointeur de pile de la fonction englobante. Les implémentations les plus courantes incluent les expressions de gestion des exceptions structurées Windows NT (SEH) et les expressions de clause catch C++. Par conséquent, appeler explicitement **_malloca** dans un des scénarios suivants entraîne l’échec du programme pendant le retour à la routine EH appelante :
+Il existe des restrictions relatives à l’appel explicite de **_malloca** dans un gestionnaire d’exceptions (Eh). Les routines EH qui s’exécutent sur des processeurs de classe x86 fonctionnent dans leur propre trame de mémoire : Ils effectuent leurs tâches dans un espace mémoire qui n’est pas basé sur l’emplacement actuel du pointeur de pile de la fonction englobante. Les implémentations les plus courantes incluent les expressions de gestion des exceptions structurées Windows NT (SEH) et les expressions de clause catch C++. Par conséquent, l’appel explicite de **_malloca** dans l’un des scénarios suivants entraîne l’échec d’un programme pendant le retour à la routine Eh appelante :
 
-- Expression de filtre d’exception SEH Windows NT : **__except** (`_malloca ()` )
+- Expression de filtre d’exception SEH Windows NT :`_malloca ()` **_ _ except** ()
 
-- Gestionnaire d’exceptions finales SEH Windows NT : **__finally** {`_malloca ()` }
+- Gestionnaire d’exceptions finales SEH Windows NT :`_malloca ()` **_ _ finally** {}
 
 - Expression de clause catch EH C++
 
-Toutefois, **_malloca** peut être appelée directement à partir d’une routine EH ou à partir d’un rappel fourni par l’application qui est appelé par un des scénarios EH répertoriés précédemment.
+Toutefois, **_malloca** peut être appelée directement à partir d’une routine Eh ou à partir d’un rappel fourni par l’application qui est appelé par l’un des scénarios Eh précédemment listés.
 
 > [!IMPORTANT]
-> Dans Windows XP, si **_malloca** est appelée à l’intérieur d’un bloc try/catch, vous devez appeler [_resetstkoflw](resetstkoflw.md) dans le bloc catch.
+> Dans Windows XP, si **_malloca** est appelé à l’intérieur d’un bloc try/catch, vous devez appeler [_resetstkoflw](resetstkoflw.md) dans le bloc catch.
 
-Outre les restrictions ci-dessus, lorsque vous utilisez le [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) option, **_malloca** ne peut pas être utilisé dans **__except** blocs. Pour plus d'informations, consultez [/clr Restrictions](../../build/reference/clr-restrictions.md).
+Outre les restrictions ci-dessus, lors de l’utilisation de l’option [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , **_malloca** ne peut pas être utilisé dans les blocs **_ _ except** . Pour plus d'informations, consultez [/clr Restrictions](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -98,7 +101,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_malloca_exception.c

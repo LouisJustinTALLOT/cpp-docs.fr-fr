@@ -1,26 +1,29 @@
 ---
 title: Paramètres positionnels printf_p
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 helpviewer_keywords:
 - _printf_p function, positional parameters
 - printf_p function, positional parameters
 ms.assetid: beb4fd85-a7aa-4665-9085-2c907a5b9ab0
-ms.openlocfilehash: f6ee84a68b2f40e535ed1dc76e4617a21bb29a6e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 156baa1a91931199ebca5f6200e239aa944fee1e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751464"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944048"
 ---
-# <a name="printfp-positional-parameters"></a>Paramètres positionnels printf_p
+# <a name="printf_p-positional-parameters"></a>Paramètres positionnels printf_p
 
 Les paramètres positionnels permettent de spécifier à l’aide d’un nombre l’argument à remplacer dans un champ de chaîne de format. Voici les fonctions `printf` avec paramètres positionnels disponibles :
 
@@ -64,7 +67,7 @@ Cela imprime :
 10 November
 ```
 
-Contrairement aux chaînes de format classiques, vous pouvez utiliser des paramètres positionnels plusieurs fois dans une chaîne de format. Par exemple :
+Contrairement aux chaînes de format classiques, vous pouvez utiliser des paramètres positionnels plusieurs fois dans une chaîne de format. Par exemple,
 
 ```C
 _printf_p("%1$d times %1$d is %2$d", 10, 100);
@@ -80,13 +83,13 @@ Tous les arguments doivent être utilisés au moins une fois dans la chaîne de 
 
 ### <a name="width-and-precision"></a>Largeur et précision
 
-Vous pouvez utiliser `*n$` pour spécifier un paramètre positionnel comme spécificateur de largeur ou de précision, où `n` est la position du paramètre de largeur ou de précision dans la liste de paramètres. La position de la valeur de largeur ou de précision doit apparaître immédiatement après le symbole \*. Par exemple :
+Vous pouvez utiliser `*n$` pour spécifier un paramètre positionnel comme spécificateur de largeur ou de précision, où `n` est la position du paramètre de largeur ou de précision dans la liste de paramètres. La position de la valeur de largeur ou de précision doit apparaître immédiatement après le symbole \*. Par exemple,
 
 ```C
 _printf_p("%1$*2$s","Hello", 10);
 ```
 
-ou
+ou Gestionnaire de configuration
 
 ```C
 _printf_p("%2$*1$s", 10, "Hello");
@@ -96,7 +99,7 @@ _printf_p("%2$*1$s", 10, "Hello");
 
 Les paramètres positionnels ne doivent pas être mélangés avec des paramètres non positionnels dans la même chaîne de format. Si aucune mise en forme positionnelle n’est utilisée, tous les spécificateurs de format doivent utiliser la mise en forme positionnelle. Toutefois, `printf_p` et les fonctions connexes prennent toujours en charge les paramètres non positionnels dans les chaînes de format qui contiennent des paramètres positionnels.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // positional_args.c

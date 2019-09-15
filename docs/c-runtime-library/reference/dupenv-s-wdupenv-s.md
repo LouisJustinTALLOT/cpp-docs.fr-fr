@@ -1,10 +1,10 @@
 ---
 title: _dupenv_s, _wdupenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dupenv_s
 - _wdupenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tdupenv_s
 - _dupenv_s
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: bc8af3282b57c9fa411aac97f5fa4d414bc3305b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f66828e0941c2324d75797cbb1fa77bdfa184205
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288860"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942023"
 ---
-# <a name="dupenvs-wdupenvs"></a>_dupenv_s, _wdupenv_s
+# <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s, _wdupenv_s
 
 Obtient une valeur à partir de l'environnement actuel.
 
@@ -68,35 +71,35 @@ errno_t _wdupenv_s(
 Mémoire tampon pour stocker la valeur de la variable.
 
 *numberOfElements*<br/>
-Taille de *tampon*.
+Taille de la *mémoire tampon*.
 
-*varname*<br/>
+*argument*<br/>
 Nom de la variable d'environnement.
 
 ## <a name="return-value"></a>Valeur de retour
 
 Zéro en cas de réussite, code d'erreur en cas d'échec.
 
-Ces fonctions valident leurs paramètres ; Si *tampon* ou *varname* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions définissent **errno** à **EINVAL** et retourner **EINVAL**.
+Ces fonctions valident leurs paramètres ; Si *buffer* ou *varname* a la **valeur null**, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions définissent **errno** sur **EINVAL** et retournent **EINVAL**.
 
-Si ces fonctions ne peut pas allouer suffisamment de mémoire, elles définies *tampon* à **NULL** et *numberOfElements* à 0 et retournent **ENOMEM**.
+Si ces fonctions ne peuvent pas allouer suffisamment de mémoire, elles définissent la valeur de *buffer* à **null** et *NumberOfElements* sur 0, et retournent **ENOMEM**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_dupenv_s** fonction recherche dans la liste des variables d’environnement pour *varname*. Si la variable est trouvée, **_dupenv_s** alloue une mémoire tampon et copie la valeur de la variable dans la mémoire tampon. Adresse et la longueur de la mémoire tampon sont retournées dans *tampon* et *numberOfElements*. En allouant la mémoire tampon elle-même, **_dupenv_s** fournit une alternative plus pratique à [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
+La fonction **_dupenv_s** recherche la liste de variables d’environnement pour *varname*. Si la variable est trouvée, **_dupenv_s** alloue une mémoire tampon et copie la valeur de la variable dans la mémoire tampon. L’adresse et la longueur de la mémoire tampon sont retournées dans *buffer* et *NumberOfElements*. En allouant la mémoire tampon elle-même, **_dupenv_s** offre une alternative plus pratique à [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
 > [!NOTE]
 > Il revient au programme appelant de libérer la mémoire en appelant [free](free.md).
 
-Si la variable est introuvable, puis *tampon* a la valeur **NULL**, *numberOfElements* est définie sur 0, et la valeur de retour est 0, car cette situation n’est pas considérée comme une erreur condition.
+Si la variable est introuvable, la *mémoire tampon* est définie sur **null**, *NumberOfElements* a la valeur 0 et la valeur de retour est 0, car cette situation n’est pas considérée comme une condition d’erreur.
 
-Si vous n’êtes pas intéressé par la taille de la mémoire tampon, vous pouvez passer **NULL** pour *numberOfElements*.
+Si vous n’êtes pas intéressé par la taille de la mémoire tampon, vous pouvez passer la **valeur null** pour *NumberOfElements*.
 
-**_dupenv_s** n’est pas sensible à la casse dans le système d’exploitation Windows. **_dupenv_s** utilise la copie de l’environnement vers lequel pointé la variable globale **_environ** pour accéder à l’environnement. Consultez les notes dans [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) pour une présentation de **_environ**.
+**_dupenv_s** ne respecte pas la casse dans le système d’exploitation Windows. **_dupenv_s** utilise la copie de l’environnement vers laquelle pointe la variable globale **_environ** pour accéder à l’environnement. Consultez les notes dans [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) pour en savoir plus sur **_environ**.
 
-La valeur dans *tampon* est une copie de la valeur de la variable d’environnement ; modification n’a aucun effet sur l’environnement. Utilisez la fonction [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md) pour modifier la valeur d’une variable d’environnement.
+La valeur de *buffer* est une copie de la valeur de la variable d’environnement ; sa modification n’a aucun effet sur l’environnement. Utilisez la fonction [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md) pour modifier la valeur d’une variable d’environnement.
 
-**_wdupenv_s** est une version à caractères larges de **_dupenv_s**; les arguments de **_wdupenv_s** sont des chaînes à caractères larges. Le **_wenviron** (variable globale) est une version à caractères larges de **_environ**. Consultez les notes dans [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) pour en savoir plus sur **_wenviron**.
+**_wdupenv_s** est une version à caractères larges de **_dupenv_s**; les arguments de **_wdupenv_s** sont des chaînes à caractères larges. La variable globale **_wenviron** est une version à caractères larges de **_environ**. Consultez les notes dans [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) pour plus d’informations sur **_wenviron**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

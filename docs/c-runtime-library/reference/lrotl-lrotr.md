@@ -1,10 +1,10 @@
 ---
 title: _lrotl, _lrotr
 ms.date: 04/04/2018
-apiname:
+api_name:
 - _lrotl
 - _lrotr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrotr
 - lrotl
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea78aeb8829a80abae345b4e9e6ac3a7bbaddf8b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156965"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953029"
 ---
-# <a name="lrotl-lrotr"></a>_lrotl, _lrotr
+# <a name="_lrotl-_lrotr"></a>_lrotl, _lrotr
 
-Fait pivoter les bits vers la gauche (**_lrotl**) ou vers la droite (**_lrotr**).
+Fait pivoter les bits vers la gauche ( **_lrotl**) ou vers la droite ( **_lrotr**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,7 +66,7 @@ Les deux fonctions retournent la valeur soumise à un décalage circulaire. Aucu
 
 ## <a name="remarks"></a>Notes
 
-Le **_lrotl** et **_lrotr** faire pivoter des fonctions *valeur* par *MAJ* bits. **_lrotl** fait pivoter la valeur restante vers les bits les plus significatifs. **_lrotr** fait pivoter à droite de la valeur, vers les bits les moins significatifs. Les deux fonctions enveloppent les bits ayant fait l’objet d’une rotation d’un bout à l’autre de *value*.
+Les fonctions **_lrotl** et **_lrotr** font pivoter la *valeur* par *décalage* bits. **_lrotl** fait pivoter la valeur restante, vers des bits plus significatifs. **_lrotr** fait pivoter la valeur vers la droite, vers les bits moins significatifs. Les deux fonctions enveloppent les bits ayant fait l’objet d’une rotation d’un bout à l’autre de *value*.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -73,7 +76,7 @@ Le **_lrotl** et **_lrotr** faire pivoter des fonctions *valeur* par *MAJ* bits.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_lrot.c

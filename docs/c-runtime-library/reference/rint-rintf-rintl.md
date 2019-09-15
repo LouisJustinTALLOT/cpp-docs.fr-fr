@@ -1,11 +1,11 @@
 ---
 title: rint, rintf, rintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - rintf
 - rintl
 - rint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rintf
 - rintl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357588"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949268"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -58,16 +61,16 @@ Valeur à virgule flottante à arrondir.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **Imp** fonctions retournent une valeur à virgule flottante qui représente l’entier le plus proche à *x*. Valeurs médianes sont arrondies en fonction du paramètre actuel de mode d’arrondi à virgule flottante, le même que le **nearbyint** fonctions. Contrairement à la **nearbyint** fonctions, le **Imp** peuvent déclencher des fonctions le **FE_INEXACT** exception de virgule flottante si le résultat est différent de la valeur à partir de l’argument. Aucun retour d'erreur.
+Les fonctions **Primer** retournent une valeur à virgule flottante qui représente l’entier le plus proche de *x*. Les valeurs à mi-chemin sont arrondies en fonction du paramètre actuel du mode d’arrondi à virgule flottante, comme les fonctions **nearbyint** . Contrairement aux fonctions **nearbyint** , les fonctions d' **Imprimer** peuvent déclencher l’exception de virgule flottante **FE_INEXACT** si le résultat est différent de la valeur de l’argument. Aucun retour d'erreur.
 
-|Entrée|Exception SEH|**_matherr** Exception|
+|Entrée|Exception SEH|_ **matherr** Titre|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|none|none|
 |Nombres dénormalisés|EXCEPTION_FLT_UNDERFLOW|none|
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **Imp** qui acceptent et retournent **float** et **long** **double** valeurs. Dans un programme C, **Imp** accepte et retourne toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges d' **Imprimer** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **Primer** accepte et retourne toujours un **double**.
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -1,10 +1,10 @@
 ---
 title: _execvpe, _wexecvpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execvpe
 - _wexecvpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wexecvpe
 - execvpe
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eab63cd54d410daf1dd4d09fb3d904feca0a230d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339401"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941738"
 ---
-# <a name="execvpe-wexecvpe"></a>_execvpe, _wexecvpe
+# <a name="_execvpe-_wexecvpe"></a>_execvpe, _wexecvpe
 
 Charge et exécute les nouveaux processus enfant.
 
@@ -70,9 +73,9 @@ Tableau de pointeurs vers les paramètres d'environnement.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de retour de -1 indique une erreur, auquel cas la **errno** variable globale est définie.
+En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de retour de-1 indique une erreur, auquel cas la variable globale **errno** est définie.
 
-|**errno** valeur|Description|
+|valeur **errno**|Description|
 |-------------------|-----------------|
 |**E2BIG**|L’espace nécessaire aux arguments et aux paramètres d’environnement dépasse 32 Ko.|
 |**EACCES**|Le fichier spécifié possède un verrou ou une violation de partage.|
@@ -85,9 +88,9 @@ Pour plus d’informations sur ces codes de retour et d’autres, consultez [err
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions charge et exécute un nouveau processus, passe un tableau de pointeurs à des arguments de ligne de commande et un tableau de pointeurs aux paramètres d’environnement. Ces fonctions utilisent la **chemin d’accès** variable d’environnement pour rechercher le fichier à exécuter.
+Chacune de ces fonctions charge et exécute un nouveau processus, passe un tableau de pointeurs à des arguments de ligne de commande et un tableau de pointeurs aux paramètres d’environnement. Ces fonctions utilisent la variable **d’environnement PATH** pour rechercher le fichier à exécuter.
 
-Le **_execvpe** fonctions valident leurs paramètres. Si le *cmdname* est un pointeur null, ou si *argv* est un pointeur null, un pointeur désignant un tableau vide ou un pointeur vers un tableau qui contient une chaîne vide comme premier argument, ces fonctions appellent le non valide Gestionnaire de paramètres, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1. Aucun processus lancé.
+Les fonctions **_execvpe** valident leurs paramètres. Si *CmdName* est un pointeur null ou si *argv* est un pointeur null, un pointeur désignant un tableau vide ou un pointeur vers un tableau qui contient une chaîne vide comme premier argument, ces fonctions appellent le gestionnaire de paramètre non valide, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent-1. Aucun processus lancé.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -98,7 +101,7 @@ Le **_execvpe** fonctions valident leurs paramètres. Si le *cmdname* est un poi
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Consultez l’exemple dans [_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md).
 

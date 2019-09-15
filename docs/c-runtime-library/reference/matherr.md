@@ -1,9 +1,9 @@
 ---
 title: _matherr
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _matherr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _matherr
 - matherr
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 340e3b8562e1f0f564810bc63cf6bd2e87ffdf63
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156906"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952755"
 ---
-# <a name="matherr"></a>_matherr
+# <a name="_matherr"></a>_matherr
 
 Gère les erreurs mathématiques.
 
@@ -46,17 +49,17 @@ Pointeur vers la structure contenant des informations sur l’erreur.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_matherr** retourne 0 pour indiquer une erreur ou une valeur différente de zéro pour indiquer la réussite. Si **_matherr** retourne 0, un message d’erreur peut être affichés et **errno** est définie sur une valeur d’erreur approprié. Si **_matherr** renvoie une valeur différente de zéro, aucun message d’erreur s’affiche et **errno** reste inchangé.
+_ **matherr** retourne 0 pour indiquer une erreur, ou une valeur différente de zéro pour indiquer la réussite. Si _ **matherr** retourne 0, un message d’erreur peut s’afficher et **errno** est défini sur une valeur d’erreur appropriée. Si _ **matherr** retourne une valeur différente de zéro, aucun message d’erreur n’est affiché et **errno** reste inchangé.
 
 Pour plus d’informations sur ces codes de retour, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_matherr** fonction traite les erreurs générées par les fonctions à virgule flottante de la bibliothèque mathématique. Ces fonctions appellent **_matherr** quand une erreur est détectée.
+La fonction _ **matherr** traite les erreurs générées par les fonctions à virgule flottante de la bibliothèque mathématique. Ces fonctions appellent _ **matherr** quand une erreur est détectée.
 
-Pour une gestion particulière des erreurs, vous pouvez fournir une autre définition de **_matherr**. Si vous utilisez la version liée dynamiquement de la bibliothèque d’exécution C (CRT), vous pouvez remplacer la valeur par défaut **_matherr** routine dans un fichier exécutable avec une version défini par l’utilisateur du client. Toutefois, vous ne pouvez pas remplacer la valeur par défaut **_matherr** routine dans un client de la DLL de la DLL CRT.
+Pour une gestion des erreurs spéciale, vous pouvez fournir une définition différente de _ **matherr**. Si vous utilisez la version liée dynamiquement de la bibliothèque Runtime C (CRT), vous pouvez remplacer la routine _ **matherr** par défaut dans un exécutable client par une version définie par l’utilisateur. Toutefois, vous ne pouvez pas remplacer la routine _ **matherr** par défaut dans un client dll de la dll CRT.
 
-Lorsqu’une erreur se produit dans une routine mathématique, **_matherr** est appelée avec un pointeur vers un **_exception** structure de type (défini dans \<math.h >) en tant qu’argument. La structure **_exception** contient les éléments suivants.
+Lorsqu’une erreur se produit dans une routine mathématique, _ **matherr** est appelé avec un pointeur vers une structure de \<type _Exception (définie dans Math. h >) en tant qu’argument. La structure **_exception** contient les éléments suivants.
 
 ```C
 struct _exception
@@ -69,7 +72,7 @@ struct _exception
 };
 ```
 
-Le **type** membre spécifie le type d’erreur mathématique. C’est une des valeurs suivantes, définies dans \<math.h > :
+Le membre de **type** spécifie le type d’erreur mathématique. Il s’agit de l’une des valeurs suivantes, \<définies dans Math. h >:
 
 |Macro|Signification|
 |-|-|
@@ -80,7 +83,7 @@ Le **type** membre spécifie le type d’erreur mathématique. C’est une des v
 | **_TLOSS** | Perte totale de précision |
 | **_UNDERFLOW** | Le résultat est trop petit pour être représenté. (Cette condition n’est pas prise en charge.) |
 
-Le membre de structure **name** est un pointeur désignant une chaîne terminée par le caractère Null qui contient le nom de la fonction ayant provoqué l’erreur. Les membres de structure **arg1** et **arg2** spécifient les valeurs qui ont provoqué l’erreur. Si seul un seul argument est fourni, il est stocké dans **arg1**.
+Le membre de structure **name** est un pointeur désignant une chaîne terminée par le caractère Null qui contient le nom de la fonction ayant provoqué l’erreur. Les membres de structure **arg1** et **arg2** spécifient les valeurs qui ont provoqué l’erreur. Si un seul argument est fourni, il est stocké dans **Arg1**.
 
 La valeur de retour par défaut pour l’erreur donnée est **retval**. Si vous modifiez la valeur de retour, elle doit spécifier si une erreur s’est effectivement produite.
 

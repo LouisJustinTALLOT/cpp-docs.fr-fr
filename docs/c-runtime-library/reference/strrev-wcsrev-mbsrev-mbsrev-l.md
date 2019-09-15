@@ -1,12 +1,12 @@
 ---
 title: _strrev, _wcsrev, _mbsrev, _mbsrev_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsrev
 - _mbsrev
 - _strrev
 - _mbsrev_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strrev
 - _ftcsrev
@@ -47,12 +50,12 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: 36cbf78c4645c22209892be77f3bf77e7c93c76b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3a7255d173e369b4269459a0cea4de8e7867c7c0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499413"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946832"
 ---
 # <a name="_strrev-_wcsrev-_mbsrev-_mbsrev_l"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 
@@ -93,7 +96,7 @@ Retourne un pointeur vers la chaîne modifiée. Aucune valeur de retour n'est r�
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_strrev** inverse l’ordre des caractères dans *Str*. Le caractère Null de fin reste en place. **_wcsrev** et _ **mbsrev** sont des versions à caractères larges et à caractères multioctets de **_strrev**. Les arguments et la valeur de retour de **_wcsrev** sont des chaînes à caractères larges; celles de _ **mbsrev** sont des chaînes de caractères multioctets. Pour _ **mbsrev**, l’ordre des octets dans chaque caractère multioctet de *Str* n’est pas modifié. Ces trois fonctions se comportent sinon de façon identique.
+La fonction **_strrev** inverse l’ordre des caractères dans *Str*. Le caractère Null de fin reste en place. **_wcsrev** et _ **mbsrev** sont des versions à caractères larges et à caractères multioctets de **_strrev**. Les arguments et la valeur de retour de **_wcsrev** sont des chaînes à caractères larges ; celles de _ **mbsrev** sont des chaînes de caractères multioctets. Pour _ **mbsrev**, l’ordre des octets dans chaque caractère multioctet de *Str* n’est pas modifié. Ces trois fonctions se comportent sinon de façon identique.
 
 _ **mbsrev** valide ses paramètres. Si *Chaîne1* ou *Chaîne2* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, _ **mbsrev** retourne la **valeur null** et définit **errno** sur **EINVAL**. **_strrev** et **_wcsrev** ne valident pas leurs paramètres.
 

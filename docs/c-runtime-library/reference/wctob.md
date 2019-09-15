@@ -1,9 +1,9 @@
 ---
 title: wctob
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wctob
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctob
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 9c977bc204f4c9428a4aae09300269b1ed82d53e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 151325b0d66e6d57156cdf94828ca1d4b151d437
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498951"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944932"
 ---
 # <a name="wctob"></a>wctob
 
@@ -65,7 +68,7 @@ Si **wctob** a échoué et qu’aucun caractère multioctet correspondant n’a 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Ce programme illustre le comportement de la fonction **wcstombs** .
 

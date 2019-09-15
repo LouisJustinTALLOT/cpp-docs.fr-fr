@@ -1,12 +1,12 @@
 ---
 title: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 ms.date: 01/22/2019
-apiname:
+api_name:
 - strcat_s
 - _mbscat_s
 - _mbscat_s_l
 - wcscat_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcat_s
 - wcscat_s
@@ -35,19 +38,19 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: bd7894ba77e7fa67fa3844587394bd3e2e821391
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4449ec788b33a541a04a46d972f56f792797a16e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354377"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957993"
 ---
-# <a name="strcats-wcscats-mbscats-mbscatsl"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
+# <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
 Ajoute une chaîne. Ces versions de [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscat_s** et **_mbscat_s_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** et **_mbscat_s_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -118,13 +121,13 @@ Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 
 |*strDestination*|*numberOfElements*|*strSource*|Valeur de retour|Contenu de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL** ou inachevé|any|any|**EINVAL**|non modifié|
-|any|any|**NULL**|**EINVAL**|*strDestination*[0] défini sur 0|
-|any|0 ou trop petit|any|**ERANGE**|*strDestination*[0] défini sur 0|
+|**Null** ou inachevé|any|any|**EINVAL**|non modifié|
+|any|any|**NULL**|**EINVAL**|*strDestination* [0] a la valeur 0|
+|any|0 ou trop petit|any|**ERANGE**|*strDestination* [0] a la valeur 0|
 
 ## <a name="remarks"></a>Notes
 
-Le **strcat_s** fonction ajoute *strSource* à *strDestination* et termine la chaîne obtenue par un caractère null. Le caractère initial de *strSource* remplace le caractère null de fin de *strDestination*. Le comportement de **strcat_s** n’est pas défini si les chaînes source et de destination se chevauchent.
+La fonction **strcat_s** ajoute *strSource* à *strDestination* et met fin à la chaîne résultante avec un caractère null. Le caractère initial de *strSource* remplace le caractère null de fin de *strDestination*. Le comportement de **strcat_s** n’est pas défini si les chaînes source et de destination se chevauchent.
 
 Notez que le deuxième paramètre est la taille totale de la mémoire tampon, et non la taille restante :
 
@@ -135,11 +138,11 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s** et **_mbscat_s** sont des versions à caractères larges et à caractères multioctets de **strcat_s**. Les arguments et la valeur de retour de **wcscat_s** sont des caractères larges chaînes ; ceux de **_mbscat_s** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**wcscat_s** et **_mbscat_s** sont des versions à caractères larges et à caractères multioctets de **strcat_s**. Les arguments et la valeur de retour de **wcscat_s** sont des chaînes à caractères larges ; ceux de **_mbscat_s** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
-Si *strDestination* est un pointeur null ou n’est pas nul, ou si *strSource* est un **NULL** pointeur, ou si la chaîne de destination est trop petite, le paramètre non valide gestionnaire est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et définissez **errno** à **EINVAL**.
+Si *strDestination* est un pointeur null, si n’est pas terminé par le caractère null, si *strSource* est un pointeur **null** ou si la chaîne de destination est trop petite, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et attribuent à **errno** la valeur **EINVAL**.
 
-Les versions de fonctions qui ont le **_l** suffixe ont le même comportement, mais utilisez les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions des fonctions qui ont le suffixe **_L** ont le même comportement, mais utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

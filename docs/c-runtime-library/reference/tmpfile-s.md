@@ -1,9 +1,9 @@
 ---
 title: tmpfile_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - tmpfile_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tmpfile_s
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64107f26fa651739f4d5bdd7521b15d9d458df65
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155574"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946056"
 ---
-# <a name="tmpfiles"></a>tmpfile_s
+# <a name="tmpfile_s"></a>tmpfile_s
 
 Crée un fichier temporaire. Il s’agit d’une version de [tmpfile](tmpfile.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -53,7 +56,7 @@ Retourne 0 si l’opération aboutit et un code d’erreur en cas d’échec.
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*pFilePtr*|**Valeur de retour**|**Contents of**  *pFilePtr*|
+|*pFilePtr*|**Valeur de retour**|**Contenu de** *pFilePtr*|
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|inchangé|
 
@@ -61,11 +64,11 @@ Si l’erreur de validation de paramètre ci-dessus se produit, le gestionnaire 
 
 ## <a name="remarks"></a>Notes
 
-Le **tmpfile_s** fonction crée un fichier temporaire et place un pointeur vers ce flux de données dans le *pFilePtr* argument. Le fichier temporaire est créé dans le répertoire racine. Pour créer un fichier temporaire dans un répertoire autre que la racine, utilisez [tmpnam_s](tmpnam-s-wtmpnam-s.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) en association avec [fopen](fopen-wfopen.md).
+La fonction **tmpfile_s** crée un fichier temporaire et place un pointeur vers ce flux dans l’argument *pFilePtr* . Le fichier temporaire est créé dans le répertoire racine. Pour créer un fichier temporaire dans un répertoire autre que la racine, utilisez [tmpnam_s](tmpnam-s-wtmpnam-s.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) en association avec [fopen](fopen-wfopen.md).
 
-Si le fichier ne peut pas être ouvert, **tmpfile_s** écrit **NULL** à la *pFilePtr* paramètre. Ce fichier temporaire est automatiquement supprimé quand le fichier est fermé lorsque le programme se termine normalement ou lorsque **_rmtmp** est appelée, en supposant que le répertoire de travail actif ne change pas. Le fichier temporaire est ouvert dans **w + b** mode (lecture/écriture binaire).
+Si le fichier ne peut pas être ouvert, **tmpfile_s** écrit la **valeur null** dans le paramètre *pFilePtr* . Ce fichier temporaire est automatiquement supprimé lorsque le fichier est fermé, lorsque le programme se termine normalement ou lorsque **_rmtmp** est appelé, en supposant que le répertoire de travail actuel ne change pas. Le fichier temporaire est ouvert dans le mode **w + b** (lecture/écriture binaire).
 
-Échec peut se produire si vous essayez de plus de **TMP_MAX_S** (voir STDIO. (H) appels avec **tmpfile_s**.
+Une défaillance peut se produire si vous tentez plus de **TMP_MAX_S** (voir stdio. H) appels avec **tmpfile_s**.
 
 ## <a name="requirements"></a>Configuration requise
 

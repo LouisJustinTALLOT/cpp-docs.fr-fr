@@ -1,14 +1,14 @@
 ---
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _atoldbl
 - _atoldbl_l
 - _atodbl
 - _atoflt
 - _atoflt_l
 - _atodbl_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atoflt
 - _atoflt_l
@@ -49,16 +52,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f3b164042006cab22d0dfd9a7968e2d2e494f5c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349275"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943622"
 ---
-# <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
+# <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-Convertit une chaîne en valeur double (**_atodbl**), long double (**_atoldbl**), ou float (**_atoflt**).
+Convertit une chaîne en double ( **_atodbl**), long double ( **_atoldbl**) ou float ( **_atoflt**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -84,15 +87,15 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne 0 en cas de réussite. Codes d’erreur possibles sont **_UNDERFLOW** ou **_OVERFLOW**, qui sont définies dans le fichier d’en-tête \<math.h >.
+Retourne 0 en cas de réussite. Les codes d’erreur possibles sont **_UNDERFLOW** ou **_OVERFLOW**, qui sont définis dans le \<fichier d’en-tête Math. h >.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions convertissent une chaîne en une valeur à virgule flottante. La différence entre ces fonctions et les **atof** famille de fonctions est que ces fonctions ne génèrent pas de code en virgule flottante et ne lèvent pas d’exceptions de matériel. Au lieu de cela, les conditions d’erreur sont signalées en tant que codes d’erreur.
+Ces fonctions convertissent une chaîne en une valeur à virgule flottante. La différence entre ces fonctions et la famille de fonctions **atof** est que ces fonctions ne génèrent pas de code à virgule flottante et n’entraînent pas d’exceptions matérielles. Au lieu de cela, les conditions d’erreur sont signalées en tant que codes d’erreur.
 
-Si une chaîne n’est pas une interprétation valide en tant que valeur à virgule flottante, *valeur* est définie sur zéro et la valeur de retour la valeur est zéro.
+Si une chaîne n’a pas d’interprétation valide comme valeur à virgule flottante, la *valeur* est définie à zéro et la valeur de retour est zéro.
 
-Les versions de ces fonctions qui ont le **_l** suffixe sont identiques les versions qui n’ont pas le suffixe, à ceci près qu’elles utilisent le *paramètres régionaux* paramètre qui est passé au lieu du thread actuel paramètres régionaux.
+Les versions de ces fonctions qui ont le suffixe **_L** sont identiques aux versions qui n’ont pas le suffixe, à ceci près qu’elles utilisent les paramètres *régionaux* qui sont passés au lieu des paramètres régionaux du thread actuel.
 
 ## <a name="requirements"></a>Configuration requise
 

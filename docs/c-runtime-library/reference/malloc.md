@@ -1,9 +1,9 @@
 ---
 title: malloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - malloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - malloc
 helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: e6a007fb6f089ebf1c9f5fc9ce59cbcbf0b13888
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8001726bcc2f1b384d527c6f4edcbf8eb92b0d2a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157176"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952828"
 ---
 # <a name="malloc"></a>malloc
 
@@ -48,15 +51,15 @@ Octets à allouer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**malloc** retourne un pointeur void vers l’espace alloué, ou **NULL** si la mémoire est insuffisante disponible. Pour retourner un pointeur vers un type autre que **void**, utilisez un cast de type sur la valeur de retour. L’espace de stockage désigné par la valeur de retour est obligatoirement correctement aligné pour le stockage de tout type d’objet dont la spécification d’alignement est inférieure ou égale à celle de l’alignement fondamental. (Dans Visual C++, l’alignement fondamental est l’alignement qui est requis pour un **double**, ou 8 octets. Dans un code qui cible les plateformes 64 bits, il s’agit de 16 octets.) Utilisez [_aligned_malloc](aligned-malloc.md) pour allouer le stockage pour les objets qui ont une plus grande spécification d’alignement, par exemple, les types de SSE [__m128](../../cpp/m128.md) et **__m256**et les types qui sont déclaré à l’aide de `__declspec(align( n ))` où **n** est supérieur à 8. Si *taille* est 0, **malloc** alloue un élément de longueur nulle dans le tas et retourne un pointeur valide vers cet élément. Vérifiez toujours le retour à partir de **malloc**, même si la quantité de mémoire demandée est faible.
+**malloc** retourne un pointeur void vers l’espace alloué, ou **null** si la mémoire disponible est insuffisante. Pour retourner un pointeur vers un type autre que **void**, utilisez un cast de type sur la valeur de retour. L’espace de stockage désigné par la valeur de retour est obligatoirement correctement aligné pour le stockage de tout type d’objet dont la spécification d’alignement est inférieure ou égale à celle de l’alignement fondamental. (En Visual C++, l’alignement fondamental est l’alignement requis pour un **double**, ou 8 octets. Dans un code qui cible les plateformes 64 bits, il s’agit de 16 octets.) Utilisez [_aligned_malloc](aligned-malloc.md) pour allouer du stockage pour les objets qui ont une exigence d’alignement plus grande, par exemple les types SSE [__m128](../../cpp/m128.md) et **__m256**, ainsi que les `__declspec(align( n ))` types déclarés à l’aide de où **n** est supérieur à 8. Si la *taille* est égale à 0, **malloc** alloue un élément de longueur zéro dans le tas et retourne un pointeur valide vers cet élément. Vérifiez toujours le retour de **malloc**, même si la quantité de mémoire demandée est faible.
 
 ## <a name="remarks"></a>Notes
 
-Le **malloc** fonction alloue un bloc de mémoire d’au moins *taille* octets. Le bloc peut être supérieur à *taille* octets, en raison de l’espace requis pour l’alignement et gestion des informations.
+La fonction **malloc** alloue un bloc de mémoire d’au moins octets de *taille* . Le bloc peut être supérieur à la *taille* en octets en raison de l’espace requis pour les informations d’alignement et de maintenance.
 
-**malloc** définit **errno** à **ENOMEM** si une allocation de mémoire échoue ou si la quantité de mémoire demandée dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ces codes d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**malloc** affecte à **errno** la valeur **ENOMEM** si l’allocation de mémoire échoue ou si la quantité de mémoire demandée dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ces codes d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Le code de démarrage utilise **malloc** pour allouer le stockage pour le **_environ**, *envp*, et *argv* variables. Les fonctions suivantes et leurs équivalents à caractères larges également appellent **malloc**.
+Le code de démarrage utilise **malloc** pour allouer le stockage pour les variables **_environ**, *envp*et *argv* . Les fonctions suivantes et leurs équivalents à caractères larges appellent également **malloc**.
 
 |||||
 |-|-|-|-|
@@ -71,11 +74,11 @@ Le code de démarrage utilise **malloc** pour allouer le stockage pour le **_env
 |[fputs](fputs-fputws.md)|[_getdcwd](getcwd-wgetcwd.md)|[scanf](scanf-scanf-l-wscanf-wscanf-l.md)||
 |[fread](fread.md)|[gets](../../c-runtime-library/gets-getws.md)|[_searchenv](searchenv-wsearchenv.md)||
 
-La fonction C++ [_set_new_mode](set-new-mode.md) définit le mode de nouveau gestionnaire pour **malloc**. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** consiste à appeler la routine de nouveau gestionnaire telle que définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut afin que, lorsque **malloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que le **nouveau** opérateur Quand elle échoue pour la même raison. Pour substituer la valeur par défaut, appelez `_set_new_mode(1)` au début de votre programme, ou créez un lien avec NEWMODE. OBJ (consultez [Options de lien](../../c-runtime-library/link-options.md)).
+La fonction C++ [_set_new_mode](set-new-mode.md) définit le mode de nouveau gestionnaire pour **malloc**. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, lorsque **malloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que l’opérateur **New** lorsqu’il échoue pour la même raison. Pour remplacer la valeur par défaut, `_set_new_mode(1)` appelez au début de votre programme ou liez-la à NEWMODE. OBJ (consultez [options de liaison](../../c-runtime-library/link-options.md)).
 
-Lorsque l’application est liée à une version debug des bibliothèques Runtime C, **malloc** se résout en [_malloc_dbg](malloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
+Lorsque l’application est liée à une version de débogage des bibliothèques Runtime C, **malloc** se résout en _ [malloc_dbg](malloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**malloc** est marquée `__declspec(noalias)` et `__declspec(restrict)`; cela signifie que la fonction ne peut ne pas modifier les variables globales et que le pointeur retourné n’est pas un alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
+**malloc** est marqué `__declspec(noalias)` et `__declspec(restrict)`; cela signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’a pas d’alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Configuration requise
 

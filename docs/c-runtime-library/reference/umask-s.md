@@ -1,9 +1,9 @@
 ---
 title: _umask_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _umask_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - unmask_s
 - _umask_s
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-ms.openlocfilehash: 878a22cb2884c36e792ff8dead1453582addb5b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21d9ba194f85e40c3c5a4d67d16ebca9721f68f8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268909"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945986"
 ---
-# <a name="umasks"></a>_umask_s
+# <a name="_umask_s"></a>_umask_s
 
 Définit le masque d’autorisation de fichier par défaut. Version de [_umask](umask.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -57,7 +60,7 @@ Valeur précédente du paramètre d’autorisation.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un code d’erreur si *mode* ne spécifie pas un mode valide ou le *pOldMode* pointeur est **NULL**.
+Retourne un code d’erreur si le *mode* ne spécifie pas de mode valide ou si le pointeur *POldMode* a la **valeur null**.
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
@@ -66,13 +69,13 @@ Retourne un code d’erreur si *mode* ne spécifie pas un mode valide ou le *pOl
 |any|**NULL**|**EINVAL**|non modifié|
 |mode non valide|any|**EINVAL**|non modifié|
 
-Si l’une des conditions ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_umask_s** retourne **EINVAL** et définit **errno** à **EINVAL**.
+Si l’une des conditions ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_umask_s** retourne **EINVAL** et définit **errno** sur **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_umask_s** fonction définit le masque d’autorisation de fichier du processus en cours pour le mode spécifié par *mode*. Le masque d’autorisation de fichier modifie le paramètre d’autorisation de nouveaux fichiers créés par **_creat**, **_open**, ou **_sopen**. Si un bit a la valeur 1 dans le masque, le bit correspondant dans la valeur d’autorisation demandée du fichier prend la valeur 0 (non autorisé). Si un bit a la valeur 0 dans le masque, le bit correspondant est inchangé. Le paramètre d’autorisation d’un nouveau fichier n’est pas défini tant qu’il n’est pas fermé pour la première fois.
+La fonction **_umask_s** définit le masque d’autorisation de fichier du processus en cours sur le mode spécifié par *mode*. Le masque d’autorisation de fichier modifie le paramètre d’autorisation des nouveaux fichiers créés par **_creat**, **_open**ou **_sopen**. Si un bit a la valeur 1 dans le masque, le bit correspondant dans la valeur d’autorisation demandée du fichier prend la valeur 0 (non autorisé). Si un bit a la valeur 0 dans le masque, le bit correspondant est inchangé. Le paramètre d’autorisation d’un nouveau fichier n’est pas défini tant qu’il n’est pas fermé pour la première fois.
 
-L’expression d’entier *pmode* contient moins le des constantes manifestes suivantes, définies dans SYS\STAT. H :
+L’expression entière *PMODE* contient l’une des constantes manifestes suivantes (ou les deux), définie dans SYS\STAT. Manutention
 
 |*pmode*||
 |-|-|
@@ -80,9 +83,9 @@ L’expression d’entier *pmode* contient moins le des constantes manifestes su
 |**_S_IREAD**|Lecture autorisée.|
 |**_S_IREAD** \| **_S_IWRITE**|Lecture et écriture autorisées.|
 
-Quand les deux constantes sont données, elles sont jointes avec l’opérateur OR au niveau du bit ( **|** ). Si le *mode* argument est **_S_IREAD**, lecture n’est pas autorisée (le fichier est en écriture seule). Si le *mode* argument est **_S_IWRITE**, écriture n’est pas autorisée (le fichier est en lecture seule). Par exemple, si le bit d’écriture est défini dans le masque, les nouveaux fichiers sont en lecture seule. Notez qu’avec les systèmes d’exploitation MS-DOS et Windows, tous les fichiers sont lisibles ; il est impossible d’accorder une autorisation en écriture seule. Par conséquent, si la bit de lecture avec **_umask_s** n’a aucun effet sur les modes du fichier.
+Quand les deux constantes sont données, elles sont jointes avec l’opérateur or au **|** niveau du bit (). Si l’argument de *mode* est **_S_IREAD**, la lecture n’est pas autorisée (le fichier est en écriture seule). Si l’argument de *mode* est **_S_IWRITE**, l’écriture n’est pas autorisée (le fichier est en lecture seule). Par exemple, si le bit d’écriture est défini dans le masque, les nouveaux fichiers sont en lecture seule. Notez qu’avec les systèmes d’exploitation MS-DOS et Windows, tous les fichiers sont lisibles ; il est impossible d’accorder une autorisation en écriture seule. Par conséquent, la définition du bit de lecture avec **_umask_s** n’a aucun effet sur les modes du fichier.
 
-Si *pmode* n’est pas une combinaison de l’une des constantes manifestes ou incorpore un autre ensemble de constantes, la fonction les ignore simplement.
+Si *PMODE* n’est pas une combinaison de l’une des constantes manifestes ou incorpore un autre ensemble de constantes, la fonction ignore simplement celles-ci.
 
 ## <a name="requirements"></a>Configuration requise
 

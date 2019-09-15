@@ -1,11 +1,14 @@
 ---
 title: errno, _doserrno, _sys_errlist et _sys_nerr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _errno
-apilocation:
+api_location:
 - msvcrt.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sys_errlist
 - errno
@@ -21,14 +24,14 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 57d04fe5867c6a969b6aeca40f26b18b5dcd7a61
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 5b10d98dab41151290d4e44e031f659108b0c73c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750778"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944552"
 ---
-# <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist et _sys_nerr
+# <a name="errno-_doserrno-_sys_errlist-and-_sys_nerr"></a>errno, _doserrno, _sys_errlist et _sys_nerr
 
 Macros globales qui contiennent des codes d'erreur définis pendant l'exécution du programme et équivalents chaîne des codes d'erreur pour l'affichage.
 
@@ -41,7 +44,7 @@ Macros globales qui contiennent des codes d'erreur définis pendant l'exécution
 #define _sys_nerr (*__sys_nerr())
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les éléments `errno` et `_doserrno` sont définis à 0 par l'exécution lors du démarrage du programme. L'élément `errno` est déclenché en cas d'erreur lors d'un appel au niveau système. Comme `errno` contient la valeur du dernier appel qui le définit, cette valeur peut être modifiée par les appels suivants. Les appels de la bibliothèque Runtime qui déclenchent `errno` en cas d'erreur ne suppriment pas `errno` en cas de réussite. Supprimez toujours `errno` en appelant `_set_errno(0)` juste avant un appel qui peut le déclencher, puis vérifiez-le immédiatement après celui-ci.
 
@@ -59,14 +62,14 @@ Les routines mathématiques des bibliothèques définissent `errno` en appelant 
 
 Toutes les valeurs `errno` du tableau suivant sont des constantes prédéfinies dans \<errno.h> et compatibles avec UNIX. Seuls `ERANGE`, `EILSEQ`, et `EDOM` sont spécifiés dans la norme ISO C99.
 
-|Constante|Message d'erreur système|Value|
+|Constante|Message d'erreur système|Valeur|
 |--------------|--------------------------|-----------|
 |`EPERM`|Opération non autorisée|1|
 |`ENOENT`|Aucun fichier ou répertoire de ce type|2|
 |`ESRCH`|Aucun de ces processus|3|
 |`EINTR`|Fonction interrompue|4|
-|`EIO`|Erreur d'E/S|5|
-|`ENXIO`|Aucun périphérique ou adresse de ce type|6|
+|`EIO`|Erreur d'E/S|5\.|
+|`ENXIO`|Aucun périphérique ou adresse de ce type|6\.|
 |`E2BIG`|Liste d'arguments trop longue|7|
 |`ENOEXEC`|Erreur de format exec|8|
 |`EBADF`|Numéro de fichier erroné|9|
@@ -102,7 +105,7 @@ Toutes les valeurs `errno` du tableau suivant sont des constantes prédéfinies 
 |`EILSEQ`|Séquence d'octets non conforme|42|
 |`STRUNCATE`|La chaîne a été tronquée|80|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Macro globale|En-tête requis|En-tête facultatif|
 |------------------|---------------------|---------------------|

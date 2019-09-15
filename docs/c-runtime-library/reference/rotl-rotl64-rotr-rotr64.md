@@ -1,12 +1,12 @@
 ---
 title: _rotl, _rotl64, _rotr, _rotr64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _rotr64
 - _rotl
 - _rotr
 - _rotl64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _rotr64
 - rotl64
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-ms.openlocfilehash: c8cf61ecd8ffab9433f5c6ad077ddba39401c0e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ae2df7d80778cd4c573192a13b1fd91fb358eef
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357406"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949146"
 ---
-# <a name="rotl-rotl64-rotr-rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
+# <a name="_rotl-_rotl64-_rotr-_rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 
-Fait pivoter les bits vers la gauche (**_rotl**) ou vers la droite (**_rotr**).
+Fait pivoter les bits vers la gauche ( **_rotl**) ou vers la droite ( **_rotr**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -87,7 +90,7 @@ Valeur ayant fait l'objet d'une rotation. Aucun retour d'erreur.
 
 ## <a name="remarks"></a>Notes
 
-Le **_rotl** et **_rotr** fonctions faire pivoter l’entier non signé *valeur* par *MAJ* bits. **_rotl** fait pivoter la valeur gauche. **_rotr** fait pivoter à droite de la valeur. Les deux fonctions enveloppent les bits ayant fait l’objet d’une rotation d’un bout à l’autre de *value*.
+Les fonctions **_rotl** et **_rotr** font pivoter la *valeur* non signée par *décalage* de bits. **_rotl** fait pivoter la valeur vers la gauche. **_rotr** fait pivoter la valeur vers la droite. Les deux fonctions enveloppent les bits ayant fait l’objet d’une rotation d’un bout à l’autre de *value*.
 
 ## <a name="requirements"></a>Configuration requise
 

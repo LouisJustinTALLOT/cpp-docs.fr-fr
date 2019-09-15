@@ -1,14 +1,14 @@
 ---
 title: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncat
 - _strncat_l
 - _mbsncat
 - _mbsncat_l
 - wcsncat
 - wcsncat_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncat_l
 - _wcsncat_l
@@ -58,12 +61,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 2165ab1c379c89be658341b154f2d5823b2add0b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f27c2cb9b59d789e34da19b531a20d13475e62ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499437"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947351"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
@@ -143,12 +146,12 @@ Retourne un pointeur désignant la chaîne de destination. Aucune valeur de reto
 
 ## <a name="remarks"></a>Notes
 
-La fonction **strncat** ajoute, au plus, les premiers caractères de *strSource* à *strDest*. Le caractère initial de *strSource* remplace le caractère null de fin de *strDest*. Si un caractère NULL apparaît dans *strSource* avant que le *nombre* de caractères soit ajouté, **strncat** ajoute tous les caractères de *strSource*, jusqu’au caractère null. Si *Count* est supérieur à la longueur de *strSource*, la longueur de *strSource* est utilisée à la place de *Count*. Dans tous les cas, la chaîne obtenue se termine par un caractère Null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+La fonction **strncat** ajoute, au plus, les *premiers caractères de* *strSource* à *strDest*. Le caractère initial de *strSource* remplace le caractère null de fin de *strDest*. Si un caractère NULL apparaît dans *strSource* avant que le *nombre* de caractères soit ajouté, **strncat** ajoute tous les caractères de *strSource*, jusqu’au caractère null. Si *Count* est supérieur à la longueur de *strSource*, la longueur de *strSource* est utilisée à la place de *Count*. Dans tous les cas, la chaîne obtenue se termine par un caractère Null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> **strncat** ne vérifie pas si l’espace est suffisant dans *strDest*; Il s’agit donc d’une cause potentielle de dépassements de mémoire tampon. Gardez à l’esprit que le nombre limite le nombre de caractères ajoutés. il ne s’agit pas d’une limite de la taille de *strDest*. Lisez l'exemple ci-dessous. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
+> **strncat** ne vérifie pas si l’espace est suffisant dans *strDest*; Il s’agit donc d’une cause potentielle de dépassements de mémoire tampon. Gardez à l’esprit *que le nombre limite* le nombre de caractères ajoutés. il ne s’agit pas d’une limite de la taille de *strDest*. Lisez l'exemple ci-dessous. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-**wcsncat** et **_mbsncat** sont des versions à caractères larges et à caractères multioctets de **strncat**. Les arguments de chaîne et la valeur de retour de **wcsncat** sont des chaînes à caractères larges; ceux de **_mbsncat** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**wcsncat** et **_mbsncat** sont des versions à caractères larges et à caractères multioctets de **strncat**. Les arguments de chaîne et la valeur de retour de **wcsncat** sont des chaînes à caractères larges ; ceux de **_mbsncat** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

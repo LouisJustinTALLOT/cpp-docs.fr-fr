@@ -1,10 +1,10 @@
 ---
 title: _cgets_s, _cgetws_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cgetws_s
 - _cgets_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cgets_s
 - cgets_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2039fc32cecb768c3c3fbc239446abedeb48f188
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340583"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939263"
 ---
-# <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
+# <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
 Obtient une chaîne de caractères à partir de la console. Ces versions de [_cgets et _cgetws](../../c-runtime-library/cgets-cgetws.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -86,15 +89,15 @@ La valeur de retour est égale à zéro en cas de réussite ; sinon, un code d'
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*numberOfElements*|*pSizeRead*|Retourner|Contenu de *mémoire tampon*|
+|*buffer*|*numberOfElements*|*pSizeRead*|Renvoie|Contenu de la *mémoire tampon*|
 |--------------|------------------------|-----------------|------------|--------------------------|
 |**NULL**|any|any|**EINVAL**|N/A|
-|Pas **NULL**|zéro|any|**EINVAL**|non modifié|
-|Pas **NULL**|any|**NULL**|**EINVAL**|chaîne de longueur nulle|
+|Non **null**|zéro|any|**EINVAL**|non modifié|
+|Non **null**|any|**NULL**|**EINVAL**|chaîne de longueur nulle|
 
 ## <a name="remarks"></a>Notes
 
-**_cgets_s** et **_cgetws_s** lire une chaîne à partir de la console et copiez la chaîne (avec une marque de fin null) dans *tampon*. **_cgetws_s** est la version à caractères larges de la fonction ; hormis la taille des caractères, le comportement de ces deux fonctions est identique. La taille maximale de la chaîne à lire est passée dans en tant que le *numberOfElements* paramètre. Cette taille doit inclure un caractère supplémentaire pour le caractère null de fin. Le nombre réel de caractères lus est placé dans *pSizeRead*.
+**_cgets_s** et **_cgetws_s** lisent une chaîne à partir de la console et copient la chaîne (avec une marque de fin null) dans la *mémoire tampon*. **_cgetws_s** est la version à caractères larges de la fonction ; en dehors de la taille des caractères, le comportement de ces deux fonctions est identique. La taille maximale de la chaîne à lire est transmise en tant que paramètre *NumberOfElements* . Cette taille doit inclure un caractère supplémentaire pour le caractère null de fin. Le nombre réel de caractères lus est placé dans *pSizeRead*.
 
 Si une erreur se produit pendant l’opération ou durant la validation des paramètres, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et **EINVAL** est retourné.
 

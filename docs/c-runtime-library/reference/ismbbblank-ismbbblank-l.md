@@ -1,10 +1,10 @@
 ---
 title: _ismbbblank, _ismbbblank_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbblank_l
 - _ismbbblank
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,16 +16,19 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: c6709d5a5870c44d200b704e4a34043ff9c37226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21f4c88b00774159f8e6945973641e67718494e6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286943"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954243"
 ---
-# <a name="ismbbblank-ismbbblankl"></a>_ismbbblank, _ismbbblank_l
+# <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank, _ismbbblank_l
 
 Détermine si un caractère multioctet spécifié est un caractère vide.
 
@@ -54,7 +57,7 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ismbbblank** retourne une valeur différente de zéro si *c* représente un espace (0 x 20), un caractère de tabulation horizontale (0 x 09) ou un caractère spécifique aux paramètres régionaux qui est utilisé pour séparer les mots d’une ligne de texte pour les **isspace** est true ; sinon, retourne 0. **_ismbbblank** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux. **_ismbbblank_l** est identique, à ceci près qu’elle utilise les paramètres régionaux qui sont passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_ismbbblank** retourne une valeur différente de zéro si *c* représente un caractère d’espace (0x20), un caractère de tabulation horizontale (0x09) ou un caractère spécifique aux paramètres régionaux qui est utilisé pour séparer les mots dans une ligne de texte pour laquelle **isspace** a la valeur true. Sinon, retourne 0. **_ismbbblank** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux. **_ismbbblank_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Configuration requise
 

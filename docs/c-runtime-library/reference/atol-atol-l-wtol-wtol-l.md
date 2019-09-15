@@ -1,12 +1,12 @@
 ---
 title: atol, _atol_l, _wtol, _wtol_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - atol
 - _wtol_l
 - _wtol
 - _atol_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atol_l
 - _ttol_l
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04a2951a48e6dd2c3820551e0fc603ad4ed81086
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347806"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943578"
 ---
-# <a name="atol-atoll-wtol-wtoll"></a>atol, _atol_l, _wtol, _wtol_l
+# <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol, _atol_l, _wtol, _wtol_l
 
 Convertissent une chaîne en un entier long.
 
@@ -83,25 +86,25 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction retourne le **long** valeur produite en interprétant les caractères d’entrée en tant que nombre. La valeur de retour est 0L pour **atol** si l’entrée ne peut pas être convertie en une valeur de ce type.
+Chaque fonction retourne la valeur **longue** produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0L pour **ATOL** si l’entrée ne peut pas être convertie en valeur de ce type.
 
-Dans le cas de dépassement de capacité avec grandes valeurs intégrales positives, **atol** retourne **LONG_MAX**; dans le cas de dépassement de capacité avec grandes valeurs intégrales négatives, **LONG_MIN** est retourné. Dans tous les cas hors limites, **errno** a la valeur **ERANGE**. Si le paramètre passé est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent 0.
+Dans le cas d’un dépassement de capacité avec de grandes valeurs intégrales positives, **ATOL** retourne **LONG_MAX**; dans le cas d’un dépassement de capacité avec de grandes valeurs intégrales négatives, **LONG_MIN** est retourné. Dans tous les cas hors limites, **errno** a la valeur **ERANGE**. Si le paramètre passé a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent 0.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions convertissent une chaîne de caractères en une valeur d’entier long (**atol**).
+Ces fonctions convertissent une chaîne de caractères en valeur entière longue (**ATOL**).
 
 La chaîne d’entrée est une séquence de caractères qui peut être interprétée comme une valeur numérique du type spécifié. La fonction arrête de lire la chaîne d’entrée au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Ce caractère peut être le caractère Null ('\0' ou L'\0') terminant la chaîne.
 
-Le *str* l’argument de **atol** a la forme suivante :
+L’argument *Str* de **ATOL** se présente sous la forme suivante :
 
 > [*whitespace*] [*sign*] [*digits*]]
 
-Un *espace blanc* se compose de caractères espace ou tabulation, qui sont ignorés ; *connexion* est soit plus (+) ou moins (-) ; et *chiffres* sont un ou plusieurs chiffres.
+Un espace est constitué de caractères d’espace *ou de tabulation* , qui sont ignorés ; le *signe* est plus (+) ou moins (-); et les *chiffres* correspondent à un ou plusieurs chiffres.
 
-**_wtol** est identique à **atol** , à ceci près qu’elle prend une chaîne de caractères larges.
+**_wtol** est identique à **ATOL** , à ceci près qu’elle prend une chaîne de caractères larges.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -119,7 +122,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 
 ## <a name="example"></a>Exemple
 
-Ce programme montre comment nombres stockés sous forme de chaînes peuvent être convertis en valeurs numériques à l’aide de la **atol** (fonction).
+Ce programme montre comment les nombres stockés sous forme de chaînes peuvent être convertis en valeurs numériques à l’aide de la fonction **ATOL** .
 
 ```C
 // crt_atol.c

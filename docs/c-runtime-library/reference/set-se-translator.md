@@ -1,9 +1,9 @@
 ---
 title: _set_se_translator
 ms.date: 02/21/2018
-apiname:
+api_name:
 - _set_se_translator
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_se_translator
 - set_se_translator
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 23eb4e9016666567771832cefed686cb9197b02f
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 781deaad091b6aed72350100f7575c566bbae793
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299709"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948392"
 ---
-# <a name="setsetranslator"></a>_set_se_translator
+# <a name="_set_se_translator"></a>_set_se_translator
 
 Définissez une fonction de rappel par thread pour traduire des exceptions Win32 (exceptions structurées C C++ ) en exceptions typées.
 
@@ -61,7 +64,7 @@ Pour spécifier une fonction de traduction personnalisée, appelez _ **set_se_tr
 
 Votre fonction de traduction se contente de lever une exception typée C++. Si elle effectue d'autres actions (écrire dans un fichier journal, par exemple), votre programme risque de ne pas se comporter comme prévu, car le nombre de fois où la fonction de traduction est appelée dépend de la plateforme.
 
-Dans un environnement multithread, les fonctions de traduction sont gérées séparément pour chaque thread. Chaque nouveau thread doit installer sa propre fonction de traduction. Par conséquent, chaque thread est responsable de sa propre gestion de traduction. _ **set_se_translator** est spécifique à un thread; une autre DLL peut installer une fonction de traduction différente.
+Dans un environnement multithread, les fonctions de traduction sont gérées séparément pour chaque thread. Chaque nouveau thread doit installer sa propre fonction de traduction. Par conséquent, chaque thread est responsable de sa propre gestion de traduction. _ **set_se_translator** est spécifique à un thread ; une autre DLL peut installer une fonction de traduction différente.
 
 La fonction *seTransFunction* que vous écrivez doit être une fonction compilée native (non compilée avec/CLR). Il doit prendre un entier non signé et un pointeur vers une structure **_EXCEPTION_POINTERS** Win32 comme arguments. Les arguments sont les valeurs de retour des appels aux fonctions API Win32 **GetExceptionCode** et **GetExceptionInformation** , respectivement.
 
@@ -69,7 +72,7 @@ La fonction *seTransFunction* que vous écrivez doit être une fonction compilé
 typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );
 ```
 
-Pour _ **set_se_translator**, il y a des implications lors de la liaison dynamique au CRT; une autre DLL du processus peut appeler _ **set_se_translator** et remplacer votre gestionnaire par le sien.
+Pour _ **set_se_translator**, il y a des implications lors de la liaison dynamique au CRT ; une autre DLL du processus peut appeler _ **set_se_translator** et remplacer votre gestionnaire par le sien.
 
 Lorsque vous utilisez _ **set_se_translator** à partir du code managé (code compilé avec/CLR) ou du code natif et managé mixte, sachez que le traducteur affecte les exceptions générées uniquement en code natif. Les exceptions managées générées en code managé (par exemple, en déclenchant `System::Exception`) ne sont pas acheminées par le biais de la fonction de traduction. Les exceptions levées dans le code managé à l’aide de la fonction Win32 **RaiseException** ou provoquées par une exception système telle qu’une exception de division par zéro sont acheminées via le traducteur.
 

@@ -1,11 +1,11 @@
 ---
 title: fdim, fdimf, fdiml
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fdim
 - fdimf
 - fdiml
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fdim
 - fdimf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 263635a32b21b01faa84405ab97bd5518f054ba5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334786"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941299"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -89,7 +92,7 @@ Retourne la différence positive entre *x* et *y*:
 
 Sinon, peut retourner l’une des erreurs suivantes :
 
-|Problème|Retourner|
+|Problème|Renvoie|
 |-----------|------------|
 |Erreur de plage avec dépassement|+HUGE_VAL, +HUGE_VALF ou +HUGE_VALL|
 |Erreur de plage avec soupassement|valeur correcte (après arrondi)|
@@ -99,9 +102,9 @@ Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **fdim** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **fdim** accepte et retourne toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **FDIM** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **FDIM** accepte et retourne toujours un **double**.
 
-À l’exception de la gestion des NaN, cette fonction est équivalente à `fmax(x - y, 0)`.
+À l’exception de la gestion NaN, cette fonction est `fmax(x - y, 0)`équivalente à.
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -1,14 +1,17 @@
 ---
 title: to, fonctions
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - To
 helpviewer_keywords:
@@ -20,12 +23,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: f7a898d70e506ed4707ea718faa0ed618682c2c7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742536"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944820"
 ---
 # <a name="to-functions"></a>to, fonctions
 
@@ -36,7 +39,7 @@ Chaque fonction **to** et sa macro associée, le cas échéant, convertissent un
 |[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
 |[tolower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les fonctions **to** et les conversions de macro sont les suivantes.
 
@@ -45,10 +48,10 @@ Les fonctions **to** et les conversions de macro sont les suivantes.
 |`__toascii`|`__toascii`|Convertit `c` en caractère ASCII|
 |`tolower`|`tolower`|Convertit `c` en minuscules si besoin|
 |`_tolower`|`_tolower`|Convertit `c` en minuscules|
-|`towlower`|Aucun.|Convertit `c` en lettre minuscule à caractères larges correspondante|
+|`towlower`|Aucun|Convertit `c` en lettre minuscule à caractères larges correspondante|
 |`toupper`|`toupper`|Convertit `c` en majuscules si besoin|
 |`_toupper`|`_toupper`|Convertit `c` en majuscules|
-|`towupper`|Aucun.|Convertit c en lettre majuscule à caractères larges correspondante|
+|`towupper`|Aucun|Convertit c en lettre majuscule à caractères larges correspondante|
 
 Pour utiliser les versions de fonction des routines **to** également définies en tant que macros, supprimez les définitions de macro avec des directives `#undef` ou n’incluez pas CTYPE.H. Si vous utilisez l’option de compilateur /Za, le compilateur utilise la version de fonction `toupper` ou `tolower`. Les déclarations des fonctions `toupper` et `tolower` sont dans STDLIB.H.
 
@@ -64,7 +67,7 @@ Les routines `_tolower` et `_toupper` :
 
 - sont des versions indépendantes des paramètres régionaux et beaucoup plus rapides de `tolower` et **toupper** ;
 
-- peuvent être utilisées uniquement quand **isascii (**`c`**)** et **isupper (**`c`**)** ou **islower (**`c`**)**, respectivement, sont différents de zéro ;
+- peuvent être utilisées uniquement quand **isascii (** `c` **)** et **isupper (** `c` **)** ou **islower (** `c` **)** , respectivement, sont différents de zéro ;
 
 - produisent des résultats inattendus si `c` n’est pas une lettre ASCII de la casse appropriée à la conversion.
 

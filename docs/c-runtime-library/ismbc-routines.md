@@ -1,7 +1,7 @@
 ---
 title: _ismbc, routines
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr100.dll
@@ -9,21 +9,24 @@ apilocation:
 - msvcr90.dll
 - msvcr120.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbc
 helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: dd187be93b5df0160686fe765f65c25e14800b75
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 6dc14f269cafa8ccc343c5403ab0e23d319c71c3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748682"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940167"
 ---
-# <a name="ismbc-routines"></a>_ismbc, routines
+# <a name="_ismbc-routines"></a>_ismbc, routines
 
 Chacune des routines **_ismbc** teste un caractère multioctet `c` pour une condition donnée.
 
@@ -33,7 +36,7 @@ Chacune des routines **_ismbc** teste un caractère multioctet `c` pour une cond
 |[_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l](../c-runtime-library/reference/ismbcgraph-functions.md)|[_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|
 |[_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Le résultat de chaque routine **_ismbc** dépend de la page de codes multioctet utilisée. Les pages de codes multioctets comportent des caractères alphabétiques sur un octet. Par défaut, la page de codes multioctet est définie sur la page de codes ANSI par défaut du système, obtenue du système d’exploitation au démarrage du programme. Vous pouvez interroger la page de codes multioctet utilisée, ou la remplacer par [_getmbcp](../c-runtime-library/reference/getmbcp.md) ou [_setmbcp](../c-runtime-library/reference/setmbcp.md), respectivement.
 
@@ -44,7 +47,7 @@ La valeur de sortie est affectée par le paramètre de catégorie `LC_CTYPE` des
 |[_ismbcalnum, _ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alphanumérique|Retourne une valeur différente de zéro si et seulement si `c` est une représentation sur un octet d’une lettre de l’alphabet anglais ASCII : Consultez des exemples pour `_ismbcdigit` et `_ismbcalpha`.|
 |[_ismbcalpha, _ismbcalpha_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alphabétique|Retourne une valeur différente de zéro si et seulement si `c` est une représentation sur un octet d’une lettre de l’alphabet anglais ASCII : Consultez des exemples pour `_ismbcupper` et `_ismbclower`, ou une lettre katakana : 0xA6<=`c`<=0xDF.|
 |[_ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Chiffre|Retourne une valeur différente de zéro si et seulement si `c` est une représentation sur un octet d’un chiffre ASCII : 0x30<=`c`<=0x39.|
-|[_ismbcgraph, _ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Graphique|Retourne une valeur différente de zéro si et seulement si `c` est une représentation sur un octet d’un caractère imprimable ASCII ou katakana, à l’exception d’un espace blanc ( ). Afficher des exemples pour `_ismbcdigit`, `_ismbcalpha` et `_ismbcpunct`|
+|[_ismbcgraph, _ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Graphic|Retourne une valeur différente de zéro si et seulement si `c` est une représentation sur un octet d’un caractère imprimable ASCII ou katakana, à l’exception d’un espace blanc ( ). Afficher des exemples pour `_ismbcdigit`, `_ismbcalpha` et `_ismbcpunct`|
 |[_ismbclegal, _ismbclegal_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Caractère multioctet valide|Retourne une valeur différente de zéro si, et seulement si, le premier octet de `c` appartient à la plage 0x81-0x9F ou 0xE0-0xFC et que le deuxième octet appartient à la plage 0x40-0x7E ou 0x80-FC.|
 |[_ismbclower, _ismbclower_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Caractère alphabétique minuscule|Retourne une valeur différente de zéro si et seulement si `c` est une représentation sur un octet d’une lettre minuscule de l’alphabet anglais ASCII : 0x61<=`c`<=0x7A.|
 |[_ismbcprint, _ismbcprint_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Imprimable|Retourne une valeur différente de zéro si et seulement si `c` est une représentation sur un octet d’un caractère ASCII ou katakana imprimable, comprenant un espace blanc ( ) : Consultez des exemples pour `_ismbcspace`, `_ismbcdigit`, `_ismbcalpha` et `_ismbcpunct`.|

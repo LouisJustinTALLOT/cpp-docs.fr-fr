@@ -1,9 +1,9 @@
 ---
 title: rewind
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rewind
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rewind
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: d2e50c34d48b5a9570691a8a702cd05c1a48242d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 084a6f3d7e817498bffb510d865f4a32021e4ce8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357562"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949274"
 ---
 # <a name="rewind"></a>rewind
 
@@ -50,15 +53,15 @@ Pointeur désignant la structure **FILE**.
 
 ## <a name="remarks"></a>Notes
 
-Le **rewind** fonction repositionne le pointeur de fichier associé *flux* au début du fichier. Un appel à **rewind** produit les mêmes effets que
+La fonction **rembobiner** repositionne le pointeur de fichier associé au *flux* au début du fichier. Un appel à **rewind** produit les mêmes effets que
 
-**fseek (void) (** _flux_**, 0 L, SEEK_SET) ;**
+**(void) fseek (** _Stream_ **, 0L, SEEK_SET);**
 
-Cependant, contrairement à [fseek](fseek-fseeki64.md), **rewind** efface les indicateurs d’erreur pour le flux, ainsi que l’indicateur de fin de fichier. En outre, contrairement à [fseek](fseek-fseeki64.md), **rewind** ne retourne pas de valeur pour indiquer si le pointeur a bien été déplacé.
+Toutefois, contrairement à [fseek](fseek-fseeki64.md), le **rembobinage** efface les indicateurs d’erreur pour le flux, ainsi que l’indicateur de fin de fichier. En outre, contrairement à [fseek](fseek-fseeki64.md), **Rewind** ne retourne pas de valeur pour indiquer si le pointeur a été déplacé avec succès.
 
-Pour effacer la mémoire tampon du clavier, utilisez **rewind** avec le flux **stdin**, qui est associé à l’aide du clavier par défaut.
+Pour effacer la mémoire tampon du clavier, utilisez **rembobiner** avec le flux **stdin**, qui est associé au clavier par défaut.
 
-Si le flux est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne et **errno** a la valeur **EINVAL**.
+Si Stream est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne et **errno** a la valeur **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

@@ -1,9 +1,9 @@
 ---
 title: _heapmin
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapmin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapmin
 - heapmin
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: 130986894d1e2a68415e6ab9218641eff484ffd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c36a1028e42d59217586cc50adcb612e78072b03
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157222"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954803"
 ---
-# <a name="heapmin"></a>_heapmin
+# <a name="_heapmin"></a>_heapmin
 
 Libère la mémoire de tas inutilisée au profit du système d’exploitation.
 
@@ -46,13 +49,13 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **_heapmin** retourne 0 ; sinon, la fonction retourne -1 et définit **errno** à **ENOSYS**.
+En cas de réussite, **_heapmin** retourne 0 ; dans le cas contraire, la fonction retourne-1 et définit **errno** sur **ENOSYS**.
 
 Pour plus d’informations sur ce code de retour et sur les autres codes, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_heapmin** fonction réduit le tas en libérant la mémoire de tas inutilisée au système d’exploitation. Si le système d’exploitation ne prend pas en charge **_heapmin**(par exemple, Windows 98), la fonction retourne -1 et définit **errno** à **ENOSYS**.
+La fonction **_heapmin** minimise le tas en libérant de la mémoire du tas inutilisé dans le système d’exploitation. Si le système d’exploitation ne prend pas en charge **_heapmin**(par exemple, Windows 98), la fonction retourne-1 et définit **errno** sur **ENOSYS**.
 
 ## <a name="requirements"></a>Configuration requise
 

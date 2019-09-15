@@ -1,11 +1,11 @@
 ---
 title: strcpy, wcscpy, _mbscpy
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strcpy
 - wcscpy
 - _mbscpy
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscpy
 - _ftcscpy
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: fa6c0122f2e62c5b39b3da7b9b7c25aa8974f768
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b54bdc2f930b805df036a1fa5d5b1595ea738b88
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354105"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958262"
 ---
-# <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
+# <a name="strcpy-wcscpy-_mbscpy"></a>strcpy, wcscpy, _mbscpy
 
 Copie une chaîne. Il existe des versions plus sécurisées de ces fonctions. Consultez [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
@@ -98,12 +101,12 @@ Chacune de ces fonctions retourne la chaîne de destination. Aucune valeur de re
 
 ## <a name="remarks"></a>Notes
 
-Le **strcpy** fonction copies *strSource*, y compris le caractère null de fin, à l’emplacement spécifié par *strDestination*. Le comportement de **strcpy** n’est pas défini si les chaînes source et de destination se chevauchent.
+La fonction **strcpy** copie *strSource*, y compris le caractère null de fin, à l’emplacement spécifié par *strDestination*. Le comportement de **strcpy** n’est pas défini si les chaînes source et de destination se chevauchent.
 
 > [!IMPORTANT]
-> Étant donné que **strcpy** ne vérifie pas suffisamment d’espace *strDestination* avant de copier *strSource*, il est une cause potentielle de dépassements de mémoire tampon. Par conséquent, nous vous recommandons d’utiliser plutôt [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
+> Étant donné que **strcpy** ne vérifie pas l’espace suffisant dans *strDestination* avant de copier *strSource*, il s’agit d’une cause potentielle de dépassements de mémoire tampon. Par conséquent, nous vous recommandons d’utiliser plutôt [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
-**wcscpy** et **_mbscpy** sont, respectivement, les versions de caractères larges et à caractères multioctets **strcpy**. Les arguments et la valeur de retour de **wcscpy** sont des caractères larges chaînes ; ceux de **_mbscpy** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**wcscpy** et **_mbscpy** sont, respectivement, des versions à caractères larges et à caractères multioctets de **strcpy**. Les arguments et la valeur de retour de **wcscpy** sont des chaînes à caractères larges ; ceux de **_mbscpy** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

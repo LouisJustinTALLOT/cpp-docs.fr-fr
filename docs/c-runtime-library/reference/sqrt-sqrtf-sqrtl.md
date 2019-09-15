@@ -1,11 +1,11 @@
 ---
 title: sqrt, sqrtf, sqrtl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - sqrtl
 - sqrtf
 - sqrt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - sqrt
 - sqrtf
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 7c17c973b98638195e2e2d2a5f793578437d11ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354897"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958108"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -69,13 +72,13 @@ Valeur à virgule flottante non négative
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **sqrt** acceptant **float** ou **long** **double** types. Dans un programme C, **sqrt** accepte et retourne toujours **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **sqrt** qui acceptent des types **float** ou **long** **double** . Dans un programme C, **sqrt** prend toujours et retourne **double**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **sqrt** fonctions retournent la racine carrée de *x*. Par défaut, si *x* est négatif, **sqrt** retourne une valeur NaN indéfinie.
+Les fonctions **sqrt** retournent la racine carrée de *x*. Par défaut, si *x* est négatif, **sqrt** retourne une valeur NaN indéfinie.
 
-|Entrée|Exception SEH|**_matherr** Exception|
+|Entrée|Exception SEH|_ **matherr** Titre|
 |-----------|-------------------|--------------------------|
 |± QNAN,IND|none|_DOMAIN|
 |- ∞|none|_DOMAIN|

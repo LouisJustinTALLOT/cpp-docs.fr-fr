@@ -1,14 +1,14 @@
 ---
 title: _strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strncoll
 - _mbsncoll_l
 - _wcsncoll
 - _wcsncoll_l
 - _mbsncoll
 - _strncoll_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsncoll_l
 - strncoll
@@ -60,19 +63,19 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-ms.openlocfilehash: fe6c3283c9379b370911cc63184535e813b96d8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5120b37cd06266752194ec826a173474f6902fd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209773"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947260"
 ---
-# <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
+# <a name="_strncoll-_wcsncoll-_mbsncoll-_strncoll_l-_wcsncoll_l-_mbsncoll_l"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 
 Compare les chaînes à partir des informations propres aux paramètres régionaux.
 
 > [!IMPORTANT]
-> **_mbsncoll** et **_mbsncoll_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncoll** et **_mbsncoll_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -125,21 +128,21 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne une valeur qui indique la relation entre les sous-chaînes de *string1* et *string2*, comme suit.
+Chacune de ces fonctions retourne une valeur qui indique la relation des sous-chaînes de *Chaîne1* et *Chaîne2*, comme suit.
 
 |Valeur de retour|Relation de chaîne1 à chaîne2|
 |------------------|----------------------------------------|
-|< 0|*string1* est inférieure à *string2*.|
-|0|*string1* est identique à *string2*.|
-|> 0|*string1* est supérieur à *string2*.|
+|< 0|*Chaîne1* est inférieur à *Chaîne2*.|
+|0|*Chaîne1* est identique à *string2*.|
+|> 0|*Chaîne1* est supérieur à *Chaîne2*.|
 
-Chacune de ces fonctions retourne **_NLSCMPERROR**. Pour utiliser **_NLSCMPERROR**, incluez STRING.h ou MBSTRING.h. **_wcsncoll** peut échouer si *string1* ou *string2* contient des codes à caractères larges qui sont en dehors du domaine de l’ordre de tri. Lorsqu’une erreur se produit, **_wcsncoll** peut définir **errno** à **EINVAL**. Pour rechercher une erreur dans un appel à **_wcsncoll**, affectez la valeur **errno** à 0, puis vérifiez **errno** après avoir appelé **_wcsncoll**.
+Chacune de ces fonctions retourne **_NLSCMPERROR**. Pour utiliser **_NLSCMPERROR**, incluez String. h ou mbstring. h. **_wcsncoll** peut échouer si *Chaîne1* ou *string2* contient des codes à caractères larges qui se trouvent en dehors du domaine de la séquence de classement. Lorsqu’une erreur se produit, **_wcsncoll** peut définir **errno** sur **EINVAL**. Pour rechercher une erreur lors d’un appel à **_wcsncoll**, attribuez la valeur 0 à **errno** , puis activez la case à cocher **errno** après avoir appelé **_wcsncoll**.
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions effectue une comparaison respectant la casse de la première *nombre* les caractères de *string1* et *string2*, en fonction de la page de codes qui se trouve actuellement dans utiliser. N'utilisez ces fonctions que s'il existe une différence entre l'ordre du jeu de caractères et l'ordre lexicographique des caractères dans la page de codes, et si cette différence présente un intérêt pour la comparaison de chaînes. L'ordre du jeu de caractères dépend des paramètres régionaux. Les versions de ces fonctions qui n’ont pas la **_l** utilisez suffixe les paramètres régionaux actuels, mais les versions qui ont le **_l** suffixe utiliser les paramètres régionaux qui sont passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Chacune de ces fonctions effectue une comparaison sensible à la casse des premiers caractères de *nombre* dans *Chaîne1* et *Chaîne2*, en fonction de la page de codes en cours d’utilisation. N'utilisez ces fonctions que s'il existe une différence entre l'ordre du jeu de caractères et l'ordre lexicographique des caractères dans la page de codes, et si cette différence présente un intérêt pour la comparaison de chaînes. L'ordre du jeu de caractères dépend des paramètres régionaux. Les versions de ces fonctions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels, mais les versions qui ont le suffixe **_L** utilisent les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Toutes ces fonctions valident leurs paramètres. Si *string1* ou *string2* est un pointeur null, ou *nombre* est supérieur à **INT_MAX**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et définissez **errno** à **EINVAL**.
+Toutes ces fonctions valident leurs paramètres. Si *Chaîne1* ou *Chaîne2* est un pointeur null ou si *Count* est supérieur à **INT_MAX**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et attribuent à **errno** la valeur **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

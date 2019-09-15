@@ -1,9 +1,9 @@
 ---
 title: imaxabs
 ms.date: 04/05/2018
-apiname:
+api_name:
 - imaxabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - imaxabs
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-ms.openlocfilehash: a7492e08c3a078698292923ce395524ab5327ecf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1f20c4de2ff9070bae3bfaeb8ba2d97d87d2d4d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157491"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954689"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -47,10 +50,10 @@ Valeur entière.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **imaxabs** fonction retourne la valeur absolue de l’argument. Aucun retour d'erreur.
+La fonction **imaxabs** retourne la valeur absolue de l’argument. Aucun retour d'erreur.
 
 > [!NOTE]
-> Étant donné que la plage d’entiers négatifs qui peuvent être représentés à l’aide de **intmax_t** est supérieure à la plage d’entiers positifs qui peuvent être représentés, il est possible de fournir un argument à **imaxabs** qui ne peut pas être converti. Tapez si la valeur absolue de l’argument ne peut pas être représentée par la valeur de retour, le comportement de **imaxabs** n’est pas défini.
+> Étant donné que la plage d’entiers négatifs qui peuvent être représentés à l’aide de **intmax_t** est supérieure à la plage d’entiers positifs qui peuvent être représentés, il est possible de fournir un argument à **imaxabs** qui ne peut pas être converti. Si la valeur absolue de l’argument ne peut pas être représentée par le type de retour, le comportement de **imaxabs** n’est pas défini.
 
 ## <a name="requirements"></a>Configuration requise
 

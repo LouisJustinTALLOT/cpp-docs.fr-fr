@@ -1,10 +1,10 @@
 ---
 title: memchr, wmemchr
 ms.date: 03/31/2019
-apiname:
+api_name:
 - wmemchr
 - memchr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memchr
 - wmemchr
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285259"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951945"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -83,13 +86,13 @@ Nombre de caractères à vérifier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne un pointeur vers le premier emplacement de *c* dans *tampon*. Sinon, elle retourne NULL.
+En cas de réussite, retourne un pointeur vers le premier emplacement de *c* dans la *mémoire tampon*. Sinon, elle retourne la valeur NULL.
 
 ## <a name="remarks"></a>Notes
 
-`memchr` et `wmemchr` rechercher la première occurrence de *c* dans la première *nombre* caractères de *tampon*. Il s’arrête lorsqu’il trouve *c* ou qu’elles ont vérifié la première *nombre* caractères.
+`memchr`et `wmemchr` recherchez la première occurrence de *c* dans les *premiers caractères de* la *mémoire tampon*. Il s’arrête lorsqu’il trouve *c* ou lorsqu’il a vérifié les *premiers caractères.*
 
-En C, ces fonctions prennent une **const** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non -**const** retourne un pointeur vers non -**const** . La macro \_CRT\_CONST\_CORRECT\_surcharges est défini si les deux le **const** et non-**const** versions de ces fonctions sont disponibles. Si vous avez besoin non -**const** comportement pour les deux surcharges C++ dans C++, définissez le symbole \_CONST\_retourner.
+En C, ces fonctions acceptent un pointeur **const** pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non**const** retourne un pointeur vers non**const**. Les \_surcharges\_\_correctes\_de la macro CRT const sont définies si les versions **const** et non**const** de ces fonctions sont disponibles. Si vous avez besoin du comportement non**const** pour les C++ deux surcharges C++dans, \_\_définissez le retour de symbole const.
 
 ## <a name="requirements"></a>Configuration requise
 

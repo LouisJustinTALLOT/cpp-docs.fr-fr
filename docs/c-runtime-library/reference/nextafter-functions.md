@@ -1,7 +1,7 @@
 ---
 title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - nextafterf
 - _nextafterf
 - nextafter
@@ -10,7 +10,7 @@ apiname:
 - nexttoward
 - nexttowardf
 - nexttowardl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - nextafter
 - _nextafter
@@ -48,14 +51,14 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: 0e0a60dc9f7c068d8c18c10f3c6b819b9e06d3b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c56c9f8032c9af2ed4404428abe3b9ee26b4b603
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156185"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951354"
 ---
-# <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
+# <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
 Retourne la valeur à virgule flottante représentable suivante.
 
@@ -92,15 +95,15 @@ Valeur à virgule flottante d’arrivée.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur à virgule flottante représentable suivante du type de retour après *x* dans la direction de *y*. Si *x* et *y* sont égales, la fonction retourne *y*, converti en type de retour, avec aucune exception ne soit déclenchée. Si *x* n’est pas égal à *y*, et le résultat est une valeur dénormalisée ou égale à zéro, le **FE_UNDERFLOW** et **FE_INEXACT** les États d’exception de virgule flottante sont définies, et le résultat correct est retourné. Si *x* ou *y* est une valeur NAN, la valeur de retour est un des NaN d’entrée. Si *x* est fixe et le résultat est infini ou n’est pas représentable dans le type, une valeur infinie correctement signée ou NAN est retourné, le **FE_OVERFLOW** et **FE_INEXACT** États d’exception de virgule flottante sont définis, et **errno** a la valeur **ERANGE**.
+Retourne la valeur à virgule flottante représentable suivante du type de retour après *x* dans la direction de *y*. Si les valeurs *x* et *y* sont égales, la fonction retourne *y*, converti en type de retour, sans qu’aucune exception ne soit déclenchée. Si *x* n’est pas égal à *y*et que le résultat est une valeur normal ou zéro, les États d’exception de virgule flottante **FE_UNDERFLOW** et **FE_INEXACT** sont définis et le résultat correct est retourné. Si *x* ou *y* est un Nan, la valeur de retour est l’une des valeurs NaN d’entrée. Si *x* est fini et que le résultat est infini ou n’est pas représentable dans le type, une valeur Infinite ou Nan correctement signée est retournée, les États d’exception de virgule flottante **FE_OVERFLOW** et **FE_INEXACT** sont définis, et **errno** a la valeur **ERANGE** .
 
 ## <a name="remarks"></a>Notes
 
-Le **nextafter** et **nexttoward** familles de fonctions sont identiques, sauf le type de paramètre de *y*. Si *x* et *y* sont égaux, la valeur retournée est *y* converti au type de retour.
+Les familles de fonctions **nextafter** et **nexttoward** sont équivalentes, à l’exception du type de paramètre de *y*. Si les valeurs *x* et *y* sont égales, la valeur retournée est *y* convertie dans le type de retour.
 
-C++ autorisant la surcharge, si vous incluez \<cmath > vous pouvez appeler des surcharges de **nextafter** et **nexttoward** qui retournent **float** et **long** **double** types. Dans un programme C, **nextafter** et **nexttoward** retournent toujours **double**.
+Étant C++ donné que autorise la surcharge, si vous \<incluez cmath > vous pouvez appeler des surcharges de **nextafter** et **nexttoward** qui retournent des types **float** et **long** **double** . Dans un programme C, **nextafter** et **nexttoward** retournent toujours **double**.
 
-Le **_nextafter** et **_nextafterf** fonctions sont propres à Microsoft. Le **_nextafterf** fonction est disponible uniquement lors de la compilation pour x64.
+Les fonctions **_nextafter** et **_nextafterf** sont spécifiques à Microsoft. La fonction **_nextafterf** est disponible uniquement lors de la compilation pour x64.
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -1,10 +1,10 @@
 ---
 title: _strtime_s, _wstrtime_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstrtime_s
 - _strtime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime_s
 - strtime_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 855c88f22e00cad398f6357b8e35931598041aeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375325"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946579"
 ---
-# <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
+# <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
 Copient l’heure actuelle dans une mémoire tampon. Ces versions de [_strtime, _wstrtime](strtime-wstrtime.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -78,24 +81,24 @@ Si une condition d’erreur se présente, le gestionnaire de paramètre non vali
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*numberOfElements*|Retourner|Contenu de *mémoire tampon*|
+|*buffer*|*numberOfElements*|Renvoie|Contenu de la *mémoire tampon*|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|(indifférent)|**EINVAL**|Non modifiée|
-|Pas **NULL** (pointant vers la mémoire tampon valide)|0|**EINVAL**|Non modifiée|
-|Pas **NULL** (pointant vers la mémoire tampon valide)|0 < taille < 9|**EINVAL**|Chaîne vide|
-|Pas **NULL** (pointant vers la mémoire tampon valide)|Taille > 9|0|Heure actuelle au format spécifié dans la section Notes|
+|Not **null** (pointant vers une mémoire tampon valide)|0|**EINVAL**|Non modifiée|
+|Not **null** (pointant vers une mémoire tampon valide)|0 < taille < 9|**EINVAL**|Chaîne vide|
+|Not **null** (pointant vers une mémoire tampon valide)|Taille > 9|0|Heure actuelle au format spécifié dans la section Notes|
 
 ## <a name="security-issues"></a>Problèmes de sécurité
 
-En passant un non valide non -**NULL** valeur pour la mémoire tampon entraîne une violation d’accès si le *numberOfElements* paramètre est supérieur à 9.
+Le passage d’une valeur non**null** non valide pour la mémoire tampon entraîne une violation d’accès si le paramètre *NumberOfElements* est supérieur à 9.
 
-Passer une valeur pour *numberOfElements* qui est supérieure à la taille réelle de la mémoire tampon entraîne le dépassement de mémoire tampon.
+Le passage d’une valeur pour *NumberOfElements* qui est supérieure à la taille réelle de la mémoire tampon entraîne un dépassement de mémoire tampon.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions fournissent des versions plus sécurisées de [_strtime](strtime-wstrtime.md) et [_wstrtime](strtime-wstrtime.md). Le **_strtime_s** fonction copie l’heure locale actuelle dans la mémoire tampon vers laquelle pointée *timestr*. L’heure sous la forme **hh : mm :** où **hh** comprend deux chiffres représentant l’heure en notation de 24 heures, **mm** comprend deux chiffres qui représentent les minutes l’heure et les **ss** comprend deux chiffres qui représentent les secondes. Par exemple, la chaîne **18:23:44** représente 23 minutes et 44 secondes après 6 heures. La mémoire tampon doit avoir une longueur au moins égale à 9 octets. La taille réelle est spécifiée par le deuxième paramètre.
+Ces fonctions fournissent des versions plus sécurisées de [_strtime](strtime-wstrtime.md) et [_wstrtime](strtime-wstrtime.md). La fonction **_strtime_s** copie l’heure locale actuelle dans la mémoire tampon pointée par *timestr*. L’heure est au format **hh : mm : SS** , où **hh** est deux chiffres représentant l’heure dans une notation de 24 heures, **mm** est deux chiffres représentant les minutes après l’heure et **SS** deux chiffres représentant les secondes. Par exemple, la chaîne **18:23:44** représente 23 minutes et 44 secondes après 6 h 00. La mémoire tampon doit avoir une longueur au moins égale à 9 octets. La taille réelle est spécifiée par le deuxième paramètre.
 
-**_wstrtime** est une version à caractères larges de **_strtime**; l’argument et valeur de retour de **_wstrtime** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique.
+**_wstrtime** est une version à caractères larges de **_strtime**; l’argument et la valeur de retour de **_wstrtime** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

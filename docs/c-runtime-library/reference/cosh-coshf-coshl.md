@@ -1,11 +1,11 @@
 ---
 title: cosh, coshf, coshl
 ms.date: 04/11/2018
-apiname:
+api_name:
 - cosh
 - coshf
 - coshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cosh
 - coshf
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 446988e67ca6e3b4a3839a9336f1ea4e2755c124
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347442"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938993"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
@@ -59,18 +62,18 @@ Angle en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le cosinus hyperbolique de *x*.
+Cosinus hyperbolique de *x*.
 
-Par défaut, si le résultat est trop grand dans un **cosh**, **coshf**, ou **coshl** appeler, la fonction retourne **HUGE_VAL** et définit **errno** à **ERANGE**.
+Par défaut, si le résultat est trop grand dans un appel **cosh**, **coshf,** ou **COSL** , la fonction retourne **HUGE_VAL** et définit **errno** sur **ERANGE**.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|none|**_DOMAIN**|
-|*x* ≥ 7.104760e + 002|**INEXACT**+**OVERFLOW**|**OVERFLOW**|
+|*x* ≥ 7.104760 e + 002|**INEXACT**+**OVERFLOW**|**OVERFLOW**|
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **cosh** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **cosh** accepte et retourne toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **cosh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **cosh** prend toujours et retourne un **double**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -80,9 +83,9 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **c
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
-Consultez l’exemple dans [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md).
+Consultez l’exemple dans [Sinh, sinhf,, sinhl](sinh-sinhf-sinhl.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,14 +1,14 @@
 ---
 title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsncpy_s_l
 - wcsncpy_s
 - _strncpy_s_l
 - strncpy_s
 - _mbsncpy_s
 - _wcsncpy_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncpy_s
 - _wcsncpy_s_l
@@ -46,19 +49,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 2372cab4cfb689aa52de81d9e15602f2478ddde7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 196a3aac09db790da6b8137029383cca77c3d2ad
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209759"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947278"
 ---
-# <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
+# <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
 Copie les caractères d’une chaîne dans une autre.  Ces versions de [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsncpy_s** et **_mbsncpy_s_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncpy_s** et **_mbsncpy_s_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -162,44 +165,44 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro en cas de réussite, **STRUNCATE** si une troncation s’est produite, sinon un code d’erreur.
+Zéro en cas de réussite, **STRUNCATE** si la troncation s’est produite, sinon un code d’erreur.
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
 |*strDest*|*numberOfElements*|*strSource*|Valeur de retour|Contenu de *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
 |**NULL**|any|any|**EINVAL**|non modifié|
-|any|any|**NULL**|**EINVAL**|*strDest*[0] défini sur 0|
+|any|any|**NULL**|**EINVAL**|*strDest* [0] a la valeur 0|
 |any|0|any|**EINVAL**|non modifié|
-|Pas **NULL**|trop petit|any|**ERANGE**|*strDest*[0] défini sur 0|
+|Non **null**|trop petit|any|**ERANGE**|*strDest* [0] a la valeur 0|
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions essaient de copier la première *D* caractères de *strSource* à *strDest*, où *D* est la plus petite entre *nombre*  et la longueur de *strSource*. Si ces *D* caractères tiennent dans *strDest* (dont la taille est indiquée comme *numberOfElements*) et le reste de l’espace pour un terminateur null, alors ces caractères sont copiés et un caractère null de fin n’est ajouté ; Sinon, *strDest*[0] est défini pour le caractère null et le paramètre non valide gestionnaire est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+Ces fonctions essaient de copier les premiers caractères *d* de *strSource* dans *strDest*, où *D* est le plus petit de *Count* et la longueur de *strSource*. Si ces caractères *D* tiennent dans *strDest* (dont la taille est spécifiée comme *NumberOfElements*) tout en laissant de l’espace pour une marque de fin null, ces caractères sont copiés et une valeur null de fin est ajoutée ; Sinon, *strDest*[0] est défini sur le caractère null et le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
-Il existe une exception au paragraphe ci-dessus. Si *nombre* est **_TRUNCATE**, puis autant de *strSource* comme tiendra dans *strDest* est copié tout en laissant la place pour le valeur null qui est toujours ajouté de fin.
+Il existe une exception au paragraphe ci-dessus. Si le *nombre* est **_TRUNCATE**, la quantité de *strSource* telle qu’elle sera contenue dans *strDest* est copiée tout en laissant de l’espace pour la valeur null de fin qui est toujours ajoutée.
 
-Par exemple :
+Par exemple,
 
 ```C
 char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-signifie que nous demandons **strncpy_s** de copier cinq caractères dans une mémoire tampon de longueur de cinq octets ; ce qui ne permet pas d’accueillir le terminateur null, par conséquent, **strncpy_s** remet à zéro la chaîne et appelle le non valide Gestionnaire de paramètres.
+signifie que nous demandons à **strncpy_s** de copier cinq caractères dans une mémoire tampon d’une longueur de cinq octets. Cela ne laisse aucun espace pour la marque de fin null ; par conséquent, **strncpy_s** remet la chaîne à zéro et appelle le gestionnaire de paramètre non valide.
 
-Si le comportement de troncation est nécessaire, utilisez **_TRUNCATE** ou (*taille* - 1) :
+Si le comportement de troncation est nécessaire, utilisez **_TRUNCATE** ou (*Size* -1) :
 
 ```C
 strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-Notez que contrairement à **strncpy**si *nombre* est supérieur à la longueur de *strSource*, la chaîne de destination n’est pas complétée avec des caractères null sur toute la longueur *nombre*.
+Notez que, contrairement à **strncpy**, si *Count* est supérieur à *la longueur de* *strSource*, la chaîne de destination n’est pas complétée avec des caractères null jusqu’à la longueur.
 
 Le comportement de **strncpy_s** n’est pas défini si les chaînes source et de destination se chevauchent.
 
-Si *strDest* ou *strSource* est **NULL**, ou *numberOfElements* est 0, le Gestionnaire de paramètre non valide est appelé. Si l’exécution est autorisée à se poursuivre, la fonction retourne **EINVAL** et définit **errno** à **EINVAL**.
+Si *strDest* ou *StrSource* a la **valeur null**, ou *NumberOfElements* est égal à 0, le gestionnaire de paramètre non valide est appelé. Si l’exécution est autorisée à se poursuivre, la fonction retourne **EINVAL** et définit **errno** sur **EINVAL**.
 
 **wcsncpy_s** et **_mbsncpy_s** sont des versions à caractères larges et à caractères multioctets de **strncpy_s**. Les arguments et la valeur de retour de **wcsncpy_s** et **mbsncpy_s** varient en conséquence. Sinon, ces six fonctions se comportent à l'identique.
 
@@ -217,7 +220,7 @@ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 
 |**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **_strncpy_s_l**, **_wcsncpy_s_l** et **_mbsncpy_s_l** n’ont aucune dépendance vis-à-vis de paramètres régionaux et sont uniquement fournies pour **_tcsncpy_s_l** et ne sont pas destinées à être appelée directement.
+> **_strncpy_s_l**, **_wcsncpy_s_l** et **_mbsncpy_s_l** n’ont aucune dépendance des paramètres régionaux et sont fournis uniquement pour **_tcsncpy_s_l** et ne sont pas destinés à être appelés directement.
 
 ## <a name="requirements"></a>Configuration requise
 

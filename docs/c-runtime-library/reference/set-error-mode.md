@@ -1,9 +1,9 @@
 ---
 title: _set_error_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_error_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_error_mode
 - _set_error_mode
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-ms.openlocfilehash: 8c95ed45423b791a688f05ea30f48e188826a797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15a6d72a79f0498fb7d81094ed3595dea1cf444f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356646"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948560"
 ---
-# <a name="seterrormode"></a>_set_error_mode
+# <a name="_set_error_mode"></a>_set_error_mode
 
-Modifie **__error_mode** pour déterminer un emplacement non défini par défaut dans lequel le runtime C écrit un message d’erreur pour une erreur qui peut mettre fin au programme.
+Modifie **__error_mode** pour déterminer un emplacement autre que celui par défaut dans lequel le runtime C écrit un message d’erreur pour une erreur qui peut mettre fin au programme.
 
 > [!IMPORTANT]
 > Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -56,20 +59,20 @@ Retourne l'ancien paramètre ou -1 si une erreur se produit.
 
 ## <a name="remarks"></a>Notes
 
-Contrôle le récepteur de sortie d’erreur en définissant la valeur de **__error_mode**. Par exemple, vous pouvez diriger la sortie vers une erreur standard ou utiliser le **MessageBox** API.
+Contrôle le récepteur de sortie d’erreur en définissant la valeur de **__error_mode**. Par exemple, vous pouvez diriger la sortie vers une erreur standard ou utiliser l’API **MessageBox** .
 
-Le *mode_val* paramètre peut être défini à une des valeurs suivantes.
+Le paramètre *mode_val* peut être défini sur l’une des valeurs suivantes.
 
 |Paramètre|Description|
 |---------------|-----------------|
-|**_OUT_TO_DEFAULT**|L’intercepteur d’erreurs est déterminé par **__app_type**.|
+|**_OUT_TO_DEFAULT**|Le récepteur d’erreurs est déterminé par **__app_type**.|
 |**_OUT_TO_STDERR**|L'intercepteur d'erreurs est une erreur standard.|
 |**_OUT_TO_MSGBOX**|L'intercepteur d'erreurs est une boîte de message.|
-|**_REPORT_ERRMODE**|Rapport actuel **__error_mode** valeur.|
+|**_REPORT_ERRMODE**|Signalez la valeur **__error_mode** actuelle.|
 
-Si la valeur transmise est différente de celles répertoriées, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_set_error_mode** définit **errno** à **EINVAL** et retourne -1.
+Si la valeur transmise est différente de celles répertoriées, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_set_error_mode** affecte à **errno** la valeur **EINVAL** et retourne-1.
 
-Lorsqu’il est utilisé avec un [assert](assert-macro-assert-wassert.md), **_set_error_mode** affiche l’instruction en échec dans la boîte de dialogue et vous donne la possibilité de choisir le **ignorer** bouton afin que vous puissiez continuer à exécuter le programme.
+Lorsqu’il est utilisé avec une [assertion](assert-macro-assert-wassert.md), **_set_error_mode** affiche l’instruction failed dans la boîte de dialogue et vous donne la possibilité de choisir le bouton **Ignorer** afin que vous puissiez continuer à exécuter le programme.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -77,7 +80,7 @@ Lorsqu’il est utilisé avec un [assert](assert-macro-assert-wassert.md), **_se
 |-------------|---------------------|
 |**_set_error_mode**|\<stdlib.h>|
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_set_error_mode.c

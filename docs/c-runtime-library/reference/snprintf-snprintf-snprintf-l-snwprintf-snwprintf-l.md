@@ -1,13 +1,13 @@
 ---
 title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwprintf
 - _snprintf
 - _snprintf_l
 - _snwprintf_l
 - snprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _snprintf
 - snprintf_l
@@ -48,12 +51,12 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: 8f7ce565467321c8e2ea5c80cae9ef41297ccaed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a1d11efebad57bdcf44ca959384f449640dad701
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499514"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948001"
 ---
 # <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
@@ -149,11 +152,11 @@ Pour plus d’informations, consultez [Syntaxe de spécification de format : fo
 
 Laissez **Len** la longueur de la chaîne de données mise en forme, à l’exclusion de la valeur null de fin. **Len** et *Count* sont tous deux en octets pour **snprintf** et **_snprintf**, caractères larges pour **_snwprintf**.
 
-Pour toutes les fonctions, < si le*nombre*de nbcars, les caractères **Len** sont stockés dans la *mémoire tampon*, un terminateur null est ajouté et **Len** est retourné.
+Pour toutes les fonctions, si le*nombre*de **nbcars** < , les caractères **Len** sont stockés dans la *mémoire tampon*, un terminateur null est ajouté et **Len** est retourné.
 
 La fonction **snprintf** tronque la sortie quand **Len** est supérieur ou égal à *Count*, en plaçant une marque de fin null à `buffer[count-1]`. La valeur retournée est **Len**, le nombre de caractères qui auraient été générés si *Count* était suffisamment grand. La fonction **snprintf** retourne une valeur négative si une erreur d’encodage se produit.
 
-Pour toutes les fonctions autres que **snprintf**, si **Len** = *Count*, les caractères **Len** sont stockés dans *buffer*, aucun terminateur NULL n’est ajouté, et **Len** est retourné. Si > le*nombre*de nbcars, le *nombre* de caractères est stocké dans la *mémoire tampon*, aucun terminateur NULL n’est ajouté, et une valeur négative est retournée.
+Pour toutes les fonctions autres que **snprintf**, si **Len** = *Count*, les caractères **Len** sont stockés dans *buffer*, aucun terminateur NULL n’est ajouté, et **Len** est retourné. Si le*nombre*de **nbcars** > , le *nombre* de caractères est stocké dans la *mémoire tampon*, aucun terminateur NULL n’est ajouté, et une valeur négative est retournée.
 
 Si *buffer* est un pointeur null et que *Count* est égal à zéro, **Len** est retourné comme nombre de caractères requis pour mettre en forme la sortie, à l’exclusion de la valeur null de fin. Pour effectuer un appel réussi avec les mêmes paramètres d' *argument* et paramètres *régionaux* , allouez une mémoire tampon contenant au moins **Len** + 1 caractères.
 
@@ -192,7 +195,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_snprintf.c

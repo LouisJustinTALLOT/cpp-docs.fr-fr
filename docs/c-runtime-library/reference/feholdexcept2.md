@@ -1,9 +1,9 @@
 ---
 title: feholdexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feholdexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feholdexcept
 - fenv/feholdexcept
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-ms.openlocfilehash: 26097398b9f9d498ab4c56690dc9c6cbb950bafb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd55a4ed627d731f7246d589d4b74b4173e31d4e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334383"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941188"
 ---
 # <a name="feholdexcept"></a>feholdexcept
 
@@ -44,17 +47,17 @@ int feholdexcept(
 ### <a name="parameters"></a>Paramètres
 
 *penv*<br/>
-Pointeur vers un **fenv_t** objet destiné à contenir une copie de l’environnement à virgule flottante.
+Pointeur vers un objet **fenv_t** pour contenir une copie de l’environnement à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne zéro si et seulement si la fonction peut correctement activer la gestion des exceptions à virgule flottante sans interruption.
+Retourne zéro si et seulement si la fonction est en mesure d’activer la gestion des exceptions de virgule flottante non arrêtée.
 
 ## <a name="remarks"></a>Notes
 
-Le **feholdexcept** fonction est utilisée pour stocker l’état de l’environnement à virgule flottante actuel dans le **fenv_t** objet vers lequel pointe *penv*, définir l’environnement interrompt pas l’exécution sur les exceptions de virgule flottante. Il s’agit du mode sans interruption.  Ce mode reste actif jusqu’à ce que l’environnement soit restauré à l’aide de [fesetenv](fesetenv1.md) ou [feupdateenv](feupdateenv.md).
+La fonction **feholdexcept** est utilisée pour stocker l’état de l’environnement à virgule flottante actuel dans l’objet **fenv_t** pointé par *penv*et pour définir l’environnement de façon à ce qu’il n’interrompe pas l’exécution sur les exceptions à virgule flottante. Il s’agit du mode sans interruption.  Ce mode reste actif jusqu’à ce que l’environnement soit restauré à l’aide de [fesetenv](fesetenv1.md) ou [feupdateenv](feupdateenv.md).
 
-Vous pouvez utiliser cette fonction au début d’une sous-routine qui a besoin de masquer une ou plusieurs exceptions de virgule flottante à l’appelant. Pour signaler une exception, vous pouvez simplement désactiver les exceptions indésirables à l’aide de [feclearexcept](feclearexcept1.md) puis mettre fin à la mode sans interruption avec un appel à **feupdateenv**.
+Vous pouvez utiliser cette fonction au début d’une sous-routine qui a besoin de masquer une ou plusieurs exceptions de virgule flottante à l’appelant. Pour signaler une exception, vous pouvez simplement effacer les exceptions indésirables à l’aide de [feclearexcept,](feclearexcept1.md) puis mettre fin au mode non-arrêt avec un appel à **feupdateenv**.
 
 Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
 

@@ -1,11 +1,11 @@
 ---
 title: pow, powf, powl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - powl
 - pow
 - powf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - powl
 - pow
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 863d2b76ec131670b10eefc086fa3485bd0a983d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232232"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950288"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -74,19 +77,19 @@ Retourne la valeur de *x*<sup>*y*</sup>. Aucun message d’erreur n’est imprim
 
 |Valeurs de x et y|Valeur de retour de pow|
 |-----------------------|-------------------------|
-|*x* ! = 0,0 et *y* == 0.0|1|
-|*x* == 0.0 et *y* == 0.0|1|
-|*x* == 0.0 et *y* < 0|INF|
+|*x* ! = 0,0 et *y* = = 0,0|1|
+|*x* = = 0,0 et *y* = = 0,0|1|
+|*x* = = 0,0 et *y* < 0|INF|
 
 ## <a name="remarks"></a>Notes
 
-**Pow** ne reconnaît pas les valeurs à virgule flottante intégrales supérieures à 2<sup>64</sup> (par exemple, 1.0E100).
+**Pow** ne reconnaît pas les valeurs à virgule flottante intégrales supérieures à 2<sup>64</sup> (par exemple, 1.0 E100).
 
-**Pow** a une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
+**Pow** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler une des diverses surcharges de **pow**. Dans un programme C, **pow** accepte toujours deux **double** valeurs et retourne un **double** valeur.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler l’une des différentes surcharges de **Pow**. Dans un programme C, **Pow** prend toujours deux valeurs **doubles** et retourne une valeur **double** .
 
-La surcharge `pow(int, int)` n’est plus disponible. Si vous utilisez cette surcharge, le compilateur peut émettre [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Pour éviter ce problème, effectuez un cast le premier paramètre de **double**, **float**, ou **long** **double**.
+La surcharge `pow(int, int)` n’est plus disponible. Si vous utilisez cette surcharge, le compilateur peut émettre des [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Pour éviter ce problème, effectuez un cast du premier paramètre en **double**, **float**ou **long** **double**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -96,7 +99,7 @@ La surcharge `pow(int, int)` n’est plus disponible. Si vous utilisez cette sur
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_pow.c

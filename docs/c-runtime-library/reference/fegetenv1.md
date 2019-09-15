@@ -1,9 +1,9 @@
 ---
 title: fegetenv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fetegenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fegetenv
 - fenv/fegetenv
 helpviewer_keywords:
 - fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-ms.openlocfilehash: d3985e4dd2b3944bcdddb79605887def7ba15473
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2e3566eb96174d0f0ccd6beb401824cc052c995
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334409"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941247"
 ---
 # <a name="fegetenv"></a>fegetenv
 
@@ -44,15 +47,15 @@ int fegetenv(
 ### <a name="parameters"></a>Paramètres
 
 *penv*<br/>
-Pointeur vers un **fenv_t** objet destiné à contenir les valeurs d’environnement à virgule flottante actuel.
+Pointeur vers un objet **fenv_t** pour contenir les valeurs d’environnement à virgule flottante actuelles.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne 0 si l’environnement à virgule flottante a été stockée dans *penv*. Sinon, retourne une valeur différente de zéro.
+Retourne 0 si l’environnement à virgule flottante a été correctement stocké dans *penv*. Sinon, retourne une valeur différente de zéro.
 
 ## <a name="remarks"></a>Notes
 
-Le **fegetenv** fonction stocke l’environnement à virgule flottante actuel dans l’objet vers lequel pointé *penv*. L’environnement à virgule flottante rassemble les indicateurs d’état et les modes de contrôle qui affectent les calculs à virgule flottante. Cela inclut le mode de la direction de l’arrondi et les indicateurs d’état pour les exceptions de virgule flottante.  Si *penv* ne pointe pas vers une valide **fenv_t** de l’objet, le comportement suivant n’est pas défini.
+La fonction **fegetenv** stocke l’environnement à virgule flottante actuel dans l’objet désigné par *penv*. L’environnement à virgule flottante rassemble les indicateurs d’état et les modes de contrôle qui affectent les calculs à virgule flottante. Cela inclut le mode de la direction de l’arrondi et les indicateurs d’état pour les exceptions de virgule flottante.  Si *penv* ne pointe pas vers un objet **fenv_t** valide, le comportement suivant n’est pas défini.
 
 Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
 

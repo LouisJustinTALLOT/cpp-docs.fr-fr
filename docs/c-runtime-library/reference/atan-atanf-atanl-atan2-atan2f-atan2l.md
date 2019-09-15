@@ -1,14 +1,14 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - atan2f
 - atan2l
 - atan2
 - atanf
 - atan
 - atanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atan
 - atan2l
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c485dea281d2b754628c9663e38ea10a9b6ab57
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341715"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939606"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Calcule l’arc tangente de **x** (**atan**, **atanf**, et **atanl**) ou l’arc tangente de **y** / **x** (**atan2**, **atan2f**, et **atan2l**).
+Calcule l’arc tangente de **x** (**atan**, **atanf,** et **atanl**) ou l’arc tangente de **y**/**x** (**atan2**, **atan2f,** et **atan2l**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,9 +79,9 @@ N’importe quels nombres.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**ATAN** renvoie l’arc tangente de *x* dans la plage π/2 et π/2 radians. **ATAN2** renvoie l’arc tangente de *y*/*x* dans la plage - π en radians la mesure π. Si *x* est 0, **atan** retourne 0. Si les deux paramètres de **atan2** sont 0, la fonction retourne 0. Tous les résultats sont en radians.
+**atan** retourne l’arc tangente de *x* dans la plage-π/2 à π/2 radians. **atan2** retourne l’arc tangente de *y*/*dans la* plage-π à π radians. Si *x* est égal à 0, **atan** retourne 0. Si les deux paramètres de **atan2** sont 0, la fonction retourne 0. Tous les résultats sont en radians.
 
-**ATAN2** utilise les signes des deux paramètres pour déterminer le quadrant de la valeur de retour.
+**atan2** utilise les signes des deux paramètres pour déterminer le quadrant de la valeur de retour.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
@@ -86,11 +89,11 @@ N’importe quels nombres.
 
 ## <a name="remarks"></a>Notes
 
-Le **atan** fonction calcule l’arc tangente (fonction tangente inverse) de *x*. **ATAN2** calcule l’arc tangente de *y*/*x* (si *x* est égal à 0, **atan2** retourne π/2 si *y* est un nombre positif, - π/2 si *y* est négatif, ou 0 si *y* est 0.)
+La fonction **atan** calcule l’arc tangente (fonction tangente inverse) de *x*. **atan2** calcule l’arc tangente de *y*/ *(si* *x* est égal à 0, **atan2** retourne π/2 Si *y* est positif,-π/2 Si *y* est négatif, ou 0 si *y* est égal à 0.)
 
-**ATAN** a une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
+**atan** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **atan** et **atan2** acceptant **float** ou **long** **double**  arguments. Dans un programme C, **atan** et **atan2** prennent toujours **double** arguments et retournent un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **atan** et **atan2** qui acceptent des arguments **float** ou **long** **double** . Dans un programme C, **atan** et **atan2** prennent toujours des arguments **double** et retournent un **double**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -98,7 +101,7 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **a
 |-------------|---------------------|-|
 |**atan**, **atan2**, **atanf**, **atan2f**, **atanl**, **atan2l**|\<math.h>|\<cmath> ou \<math.h>|
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_atan.c

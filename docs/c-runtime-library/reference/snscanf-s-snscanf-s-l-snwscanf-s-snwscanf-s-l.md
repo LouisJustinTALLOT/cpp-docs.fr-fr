@@ -1,12 +1,12 @@
 ---
 title: _snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwscanf_s_l
 - _snwscanf_s
 - _snscanf_s
 - _snscanf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sntscanf_s
 - snscanf_s
@@ -49,14 +52,14 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 8d56999aea69c4674070410774d5a2fa11abb178
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33507990c1b7e2c6fd1b30e2bdb9277ab611ef2a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355690"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947949"
 ---
-# <a name="snscanfs-snscanfsl-snwscanfs-snwscanfsl"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
+# <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 
 Lit des données mises en forme d’une longueur spécifiée à partir d’une chaîne. Ces versions de [_snscanf, _snscanf_l, _snwscanf, _snwscanf_l](snscanf-snscanf-l-snwscanf-snwscanf-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -93,7 +96,7 @@ int __cdecl _snwscanf_s_l(
 Chaîne d’entrée à examiner.
 
 *length*<br/>
-Nombre de caractères à examiner dans *d’entrée*.
+Nombre de caractères à examiner dans l' *entrée*.
 
 *format*<br/>
 Un ou plusieurs spécificateurs de format.
@@ -102,26 +105,26 @@ Un ou plusieurs spécificateurs de format.
 Paramètres régionaux à utiliser.
 
 *argument_list*<br/>
-Arguments facultatifs à affecter en fonction de la chaîne de format.
+Arguments facultatifs à assigner selon la chaîne de format.
 
 ## <a name="return-value"></a>Valeur de retour
 
 Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. La valeur de retour est **EOF** pour une erreur ou si la fin de la chaîne est atteinte avant la première conversion. Pour plus d’informations, consultez [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Si *d’entrée* ou *format* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et définissez **errno** à **EINVAL**.
+Si l' *entrée* ou le *format* est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et attribuent à **errno** la valeur **EINVAL**.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Cette fonction est similaire à **sscanf_s** , à ceci près qu’il offre la possibilité de spécifier un nombre fixe de caractères à examiner à partir de la chaîne d’entrée. Pour plus d’informations, consultez [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Cette fonction est similaire à **sscanf_s** , à ceci près qu’elle permet de spécifier un nombre fixe de caractères à examiner à partir de la chaîne d’entrée. Pour plus d’informations, consultez [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Le paramètre de taille de mémoire tampon est nécessaire avec les caractères de champ de type **c**, **C**, **s**, **S**, et **[** . Pour plus d’informations, consultez [Caractères du champ de type printf](../../c-runtime-library/scanf-type-field-characters.md).
+Le paramètre de taille de mémoire tampon est requis avec les caractères de champ de type **c**, **c**, **s**, **s**et **[** . Pour plus d’informations, consultez [Caractères du champ de type printf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Le paramètre de taille est de type **non signé**, et non **size_t**.
+> Le paramètre size est de type **unsigned**, et non **size_t**.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -139,7 +142,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_snscanf_s.c

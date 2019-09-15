@@ -1,9 +1,9 @@
 ---
 title: _free_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _free_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _free_dbg
 - free_dbg
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _free_dbg function
 - free_dbg function
 ms.assetid: fc5e8299-616d-48a0-b979-e037117278c6
-ms.openlocfilehash: 5a0024101e4f5a74f1573b271d444b27738db8e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43591ce8710dd25ad33832a5f084ca6e84bba979
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287861"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956807"
 ---
-# <a name="freedbg"></a>_free_dbg
+# <a name="_free_dbg"></a>_free_dbg
 
 Libère un bloc de mémoire dans le tas (version de débogage uniquement).
 
@@ -50,15 +53,15 @@ void _free_dbg(
 Pointeur désignant le bloc de mémoire alloué à libérer.
 
 *blockType*<br/>
-Type de bloc de mémoire alloué à libérer : **_CLIENT_BLOCK**, **_NORMAL_BLOCK**, ou **_IGNORE_BLOCK**.
+Type de bloc de mémoire alloué à libérer : _ **client_block**, **_NORMAL_BLOCK**ou **_IGNORE_BLOCK**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_free_dbg** (fonction) est une version debug de la [gratuit](free.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_free_dbg** est réduite à un appel à **gratuit**. Les deux **gratuit** et **_free_dbg** libérer un bloc de mémoire dans le tas de base, mais **_free_dbg** gère deux fonctionnalités de débogage : la capacité à conserver libérés blocs dans le tas liste liée pour simuler des conditions de mémoire insuffisante et un paramètre de type de bloc pour libérer des types d’allocation spécifiques.
+La fonction **_free_dbg** est une version de débogage de la fonction [Free](free.md) . Lorsque [_ DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_free_dbg** est réduit à un appel à **Free**. **Free** et **_free_dbg** libèrent tous deux un bloc de mémoire dans le tas de base, mais **_free_dbg** prend en charge deux fonctionnalités de débogage : la capacité à conserver les blocs libérés dans la liste liée du tas pour simuler des conditions de mémoire insuffisante et un paramètre de type de bloc pour types d’allocation spécifiques gratuits.
 
-**_free_dbg** effectue une vérification de validité sur tous les fichiers spécifiés et les emplacements de blocs avant d’effectuer l’opération gratuite. Il n'est pas prévu que l'application fournisse ces informations. Quand un bloc de mémoire est libéré, le gestionnaire de tas de débogage vérifie automatiquement l'intégrité des mémoires tampons de chaque côté de la partie utilisateur et émet un rapport d'erreurs si un remplacement a eu lieu. Si le **_CRTDBG_DELAY_FREE_MEM_DF** champ de bits de le [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) indicateur est défini, le bloc libéré est renseigné avec la valeur 0xDD, affectée le **_FREE_BLOCK** type, de bloc et conservés dans la liste du tas liée de blocs de mémoire.
+**_free_dbg** effectue une vérification de validité sur tous les fichiers et emplacements de blocs spécifiés avant d’effectuer l’opération libre. Il n'est pas prévu que l'application fournisse ces informations. Quand un bloc de mémoire est libéré, le gestionnaire de tas de débogage vérifie automatiquement l'intégrité des mémoires tampons de chaque côté de la partie utilisateur et émet un rapport d'erreurs si un remplacement a eu lieu. Si le champ de bits **_CRTDBG_DELAY_FREE_MEM_DF** de l’indicateur _ [crtdbgflag](../../c-runtime-library/crtdbgflag.md) est défini, le bloc libéré est rempli avec la valeur 0xDD, le type de bloc **_FREE_BLOCK** est affecté et il est conservé dans la liste liée du tas des blocs de mémoire.
 
-Si une erreur se produit pendant la libération de la mémoire, **errno** est définie avec des informations sur la nature de la défaillance du système d’exploitation. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si une erreur se produit lors de la libération de la mémoire, **errno** est défini avec les informations du système d’exploitation sur la nature de la défaillance. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les types de bloc d’allocation et sur leur utilisation, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les différences entre l’appel à une fonction de tas standard et sa version de débogage dans la build de débogage d’une application, consultez [Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
@@ -72,7 +75,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="example"></a>Exemple
 
-Pour obtenir un exemple montrant comment utiliser **_free_dbg**, consultez [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
+Pour obtenir un exemple d’utilisation de **_free_dbg**, consultez [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
 
 ## <a name="see-also"></a>Voir aussi
 

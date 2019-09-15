@@ -1,11 +1,11 @@
 ---
 title: exp, expf, expl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - expf
 - expl
 - exp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _expl
 - expf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 380f3e861b3ae1ba2f57aa781c32829771612b9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288186"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941639"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -64,24 +67,24 @@ long double expl(
 ### <a name="parameters"></a>Paramètres
 
 *x*<br/>
-La virgule flottante valeur Elever à la puissance la base du logarithme népérien *e* par.
+Valeur à virgule flottante pour exponentiate le logarithme népérien de base *e* par.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **exp** fonctions retournent la valeur exponentielle du paramètre à virgule flottante, *x*, en cas de réussite. Autrement dit, le résultat est *e*<sup>*x*</sup>, où *e* est la base du logarithme népérien. De dépassement de capacité, la fonction retourne INF (infini) et sur le dépassement de capacité négatif, **exp** retourne 0.
+Les fonctions **exp** retournent la valeur exponentielle du paramètre à virgule flottante, *x*, en cas de réussite. Autrement dit, le résultat est *e*<sup>*x*</sup>, où *e* est la base du logarithme népérien. En cas de dépassement de capacité, la fonction retourne INF (infini) et en négatif, **exp** retourne 0.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|+ Valeur NaN silencieuse, indéterminé|Aucun.|_DOMAIN|
-|+ Infini|INVALID|_DOMAIN|
+|± NaN quiet, indéterminé|Aucun|_DOMAIN|
+|± Infini|INVALID|_DOMAIN|
 |x ≥ 7,097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7,083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
 
-Le **exp** possède une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
+La fonction **exp** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **exp** qui prennent un **float** ou **long double** argument. Dans un programme C, **exp** accepte et retourne toujours un **double**.
+C++autorise la surcharge, donc vous pouvez appeler des surcharges de **exp** qui acceptent un argument **float** ou **long double** . Dans un programme C, **exp** prend toujours et retourne une valeur **double**.
 
 ## <a name="requirements"></a>Configuration requise
 

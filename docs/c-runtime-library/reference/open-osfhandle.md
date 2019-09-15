@@ -1,9 +1,9 @@
 ---
 title: _open_osfhandle
 ms.date: 05/21/2019
-apiname:
+api_name:
 - _open_osfhandle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _open_osfhandle
 - open_osfhandle
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: 9e940844eb5e37755c10999feb294981afc8683a
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 2fa2d8190082967d14dd780aa9be7286996b1f9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821601"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951216"
 ---
-# <a name="openosfhandle"></a>_open_osfhandle
+# <a name="_open_osfhandle"></a>_open_osfhandle
 
-Associe un descripteur de fichier Runtime C à un descripteur de fichier du système d’exploitation existant.
+Associe un descripteur de fichier Runtime C à un descripteur de fichier de système d’exploitation existant.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,7 +50,7 @@ int _open_osfhandle (
 ### <a name="parameters"></a>Paramètres
 
 *osfhandle*<br/>
-Handle de fichier du système d’exploitation.
+Descripteur de fichier du système d’exploitation.
 
 *flags*<br/>
 Types d’opération autorisés.
@@ -58,7 +61,7 @@ En cas de réussite, **_open_osfhandle** retourne un descripteur de fichier Runt
 
 ## <a name="remarks"></a>Notes
 
-Le **_open_osfhandle** fonction alloue un descripteur de fichier Runtime C. Il associe ce descripteur de fichier avec le handle de fichier de système d’exploitation spécifié par *osfhandle*. Pour éviter un avertissement du compilateur, castez l’argument *osfhandle* de **HANDLE** en **intptr_t**. L’argument *flags* est une expression d’entier formée à partir d’une ou plusieurs des constantes de manifeste définies dans \<fcntl.h>. Vous pouvez utiliser l’opérateur OR au niveau du bit ( **&#124;** ) pour combiner deux ou plusieurs constantes manifestes pour former le *indicateurs* argument.
+La fonction **_open_osfhandle** alloue un descripteur de fichier Runtime C. Il associe ce descripteur de fichier au descripteur de fichier du système d’exploitation spécifié par *osfhandle*. Pour éviter un avertissement du compilateur, castez l’argument *osfhandle* de **HANDLE** en **intptr_t**. L’argument *flags* est une expression d’entier formée à partir d’une ou plusieurs des constantes de manifeste définies dans \<fcntl.h>. Vous pouvez utiliser l’opérateur or au niveau du **&#124;** bit () pour combiner deux ou plusieurs constantes manifestes pour former l’argument *Flags* .
 
 Les constantes de manifeste sont définies dans \<fcntl.h> :
 
@@ -69,7 +72,7 @@ Les constantes de manifeste sont définies dans \<fcntl.h> :
 | **\_O\_TEXT** | Ouvre le fichier en mode texte (traduit). |
 | **\_O\_WTEXT** | Ouvre le fichier en mode Unicode (UTF-16 traduit). |
 
-L’appel de **_open_osfhandle** transfère la propriété du handle de fichier Win32 au descripteur de fichier. Pour fermer un fichier ouvert avec **_open_osfhandle**, appelez [\_close](close.md). Le handle de fichier du système d’exploitation sous-jacent est également fermé par un appel à **_close**. N’appelez pas la fonction Win32 **CloseHandle** sur le handle d’origine. Si le descripteur de fichier est détenu par un **fichier &#42;**  flux, puis un appel à [fclose](fclose-fcloseall.md) ferme le descripteur de fichier et le handle sous-jacent. Dans ce cas, n’appelez pas **_close** sur le descripteur de fichier ou **CloseHandle** sur le handle d’origine.
+L’appel de **_open_osfhandle** transfère la propriété du handle de fichier Win32 au descripteur de fichier. Pour fermer un fichier ouvert avec **_open_osfhandle**, appelez [\_close](close.md). Le handle de fichier du système d’exploitation sous-jacent est également fermé par un appel à **_close**. N’appelez pas la fonction Win32 **CloseHandle** sur le handle d’origine. Si le descripteur de fichier appartient à un flux de **fichier &#42;**  , un appel à [fclose](fclose-fcloseall.md) ferme le descripteur de fichier et le handle sous-jacent. Dans ce cas, n’appelez pas **_close** sur le descripteur de fichier ou **CloseHandle** sur le handle d’origine.
 
 ## <a name="requirements"></a>Configuration requise
 

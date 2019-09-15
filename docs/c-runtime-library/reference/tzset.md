@@ -1,9 +1,9 @@
 ---
 title: _tzset
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _tzset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tzset
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9ea454ede370a20779b5852b426b418db81757c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385191"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957563"
 ---
-# <a name="tzset"></a>_tzset
+# <a name="_tzset"></a>_tzset
 
 Définit des variables d’environnement de date/heure.
 
@@ -45,39 +48,39 @@ void _tzset( void );
 
 ## <a name="remarks"></a>Notes
 
-Le **_tzset** fonction utilise le paramètre actuel de la variable d’environnement **TZ** pour affecter des valeurs à trois variables globales : **_daylight**, **_timezone** , et **_tzname**. Ces variables sont utilisées par le [_ftime](ftime-ftime32-ftime64.md) et [localtime](localtime-localtime32-localtime64.md) fonctions pour apporter des corrections à partir du temps universel coordonné (UTC) en heure locale et à la [temps](time-time32-time64.md) à fonction calculer l’heure UTC à partir de l’heure système. Utilisez la syntaxe suivante pour définir le **TZ** variable d’environnement :
+La fonction **_tzset** utilise la valeur actuelle de la variable d' **environnement TZ** pour assigner des valeurs à trois variables globales : **_daylight**, **_timezone**et **_tzname**. Ces variables sont utilisées par les fonctions [_ftime](ftime-ftime32-ftime64.md) et [localtime](localtime-localtime32-localtime64.md) pour apporter des corrections du temps universel coordonné (UTC, Universal Time Coordinated) à l’heure locale, et par la fonction [Time](time-time32-time64.md) pour calculer l’heure UTC à partir de l’heure système. Pour définir la variable d’environnement **TZ** , utilisez la syntaxe ci-après :
 
-> **set TZ=**_tzn_ \[**+**&#124;**-**]*hh*\[**:**_mm_\[**:**_ss_] ][*dzn*]
+> **set TZ=** _tzn_ \[ **+** &#124; **-** ]*hh*\[ **:** _mm_\[ **:** _ss_] ][*dzn*]
 
 |Paramètre|Description|
 |-|-|
 | *tzn* | Nom du fuseau horaire en trois lettres, comme PST. Vous devez spécifier le décalage correct de l’heure locale à l’heure UTC. |
 | *hh* | Différence en heures entre l’heure UTC et l’heure locale. Signe (+) facultatif pour les valeurs positives. |
-| *mm* | Minutes. Séparé de *hh* par un signe deux-points (**:**). |
-| *ss* | Secondes. Séparé de *mm* par un signe deux-points (**:**). |
-| *dzn* | Fuseau horaire de l’heure d’été en trois lettres, comme PDT. Si l’heure d’été n’est jamais en vigueur dans la localité, définissez **TZ** sans valeur pour *dzn*. La bibliothèque runtime C suppose que les règles de calcul de l’heure d’été sont celles des États-Unis. |
+| *mm* | Minutes. Séparés par *un* signe deux-points ( **:** ). |
+| *ss* | Secondes. Séparé de *mm* par un signe deux-points ( **:** ). |
+| *dzn* | Fuseau horaire de l’heure d’été en trois lettres, comme PDT. Si l’heure d’été n’est jamais en vigueur dans la localité, définissez **TZ** sans valeur pour *DZN*. La bibliothèque runtime C suppose que les règles de calcul de l’heure d’été sont celles des États-Unis. |
 
 > [!NOTE]
 > Soyez attentif au calcul du signe de la différence d’heure. Comme la différence d’heure est le décalage de l’heure locale avec l’heure UTC (plutôt que l’inverse), son signe peut être l’opposé de ce que vous attendez de façon intuitive. Pour les fuseaux horaires en avance sur l’heure UTC, la différence de temps est négative ; pour ceux qui sont en retard sur l’heure UTC, la différence est positive.
 
-Par exemple, pour définir le **TZ** variable d’environnement pour qu’elles correspondent au fuseau horaire actuel en Allemagne, entrez les informations suivantes sur la ligne de commande :
+Par exemple, pour définir la variable d’environnement **TZ** pour correspondre au fuseau horaire actuel en Allemagne, entrez ce qui suit sur la ligne de commande :
 
-> **set TZ=GST-1GDT**
+> **définir TZ = TPS-1GDT**
 
 Cette commande utilise GST pour indiquer l’heure standard allemande, suppose que l’heure UTC est en retard d’une heure sur l’Allemagne (ou autrement dit, que l’Allemagne est en avance d’une heure sur l’heure UTC) et suppose qu’Allemagne observe l’heure d’été.
 
-Si le **TZ** valeur n’est pas définie, **_tzset** tente d’utiliser les informations de fuseau horaire spécifiées par le système d’exploitation. Dans le système d’exploitation Windows, ces informations sont spécifiées dans l’application Date et heure du Panneau de configuration. Si **_tzset** ne peut pas obtenir ces informations, elle utilise PST8PDT par défaut, ce qui signifie le fuseau horaire Pacifique.
+Si la valeur **TZ** n’est pas définie, **_tzset** tente d’utiliser les informations de fuseau horaire spécifiées par le système d’exploitation. Dans le système d’exploitation Windows, ces informations sont spécifiées dans l’application Date et heure du Panneau de configuration. Si **_tzset** ne parvient pas à obtenir ces informations, il utilise PST8PDT par défaut, ce qui signifie le fuseau horaire Pacifique.
 
-Selon le **TZ** valeur de variable d’environnement, les valeurs suivantes sont affectées aux variables globales **_daylight**, **_timezone**, et **_tzname** lorsque **_tzset** est appelée :
+En fonction de la valeur de la variable d’environnement **TZ** , les valeurs suivantes sont affectées aux variables globales **_daylight**, **_timezone**et **_tzname** lorsque **_tzset** est appelé :
 
 |Variable globale|Description|Valeur par défaut|
 |---------------------|-----------------|-------------------|
-|**_daylight**|Une valeur différente de zéro si un fuseau horaire de l’heure d’été est spécifié dans **TZ** configuration ; sinon, 0.|1|
+|**_daylight**|Valeur différente de zéro si un fuseau horaire de l’heure d’été est spécifié dans le paramètre **TZ** ; Sinon, 0.|1|
 |**_timezone**|Différence en secondes entre l’heure locale et l’heure UTC.|28 800 (28 800 secondes est égal à 8 heures)|
-|**_tzname**[0]|Valeur de chaîne de nom de fuseau horaire à partir de **TZ** variable d’environnement ; vide si **TZ** n’a pas été définie.|PST|
-|**_tzname**[1]|Valeur de chaîne de la zone de l’heure ; vide si le fuseau horaire de l’enregistrement de l’heure d’été est omis du **TZ** variable d’environnement.|PDT|
+|**_tzname**[0]|Valeur de chaîne du nom du fuseau horaire à partir de la variable d’environnement **TZ** ; vide si **TZ** n’a pas été défini.|PST|
+|**_tzname**[1]|Valeur de chaîne du fuseau horaire de l’heure d’été ; vide si le fuseau horaire de l’heure d’été est omis de la variable d’environnement **TZ** .|PDT|
 
-Les valeurs par défaut indiqués dans le tableau précédent pour **_daylight** et **_tzname** tableau correspondent à « PST8PDT ». Si le fuseau horaire DST est omis à partir de la **TZ** variable d’environnement, la valeur de **_daylight** est égal à 0 et le [_ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)et [localtime](localtime-localtime32-localtime64.md) fonctions retournent 0 pour les indicateurs DST.
+Les valeurs par défaut indiquées dans le tableau précédent pour **_daylight** et le tableau **_tzname** correspondent à « PST8PDT ». Si la zone DST est omise de la variable d’environnement **TZ** , la valeur de **_daylight** est 0 et les fonctions [_ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)et [localtime](localtime-localtime32-localtime64.md) retournent 0 pour les indicateurs DST.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -85,7 +88,7 @@ Les valeurs par défaut indiqués dans le tableau précédent pour **_daylight**
 |-------------|---------------------|
 |**_tzset**|\<time.h>|
 
-Le **_tzset** fonction est spécifique à Microsoft. Pour plus d'informations, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La fonction **_tzset** est spécifique à Microsoft. Pour plus d'informations, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

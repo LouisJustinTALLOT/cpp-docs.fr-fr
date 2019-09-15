@@ -1,9 +1,9 @@
 ---
 title: _getdiskfree
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getdiskfree
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getdiskfree
 - _getdiskfree
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0feee21ee76d076263ea3750d00fd0142f26b7d9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331764"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955095"
 ---
-# <a name="getdiskfree"></a>_getdiskfree
+# <a name="_getdiskfree"></a>_getdiskfree
 
-Utilise les informations sur un lecteur de disque pour remplir un **_diskfree_t** structure.
+Utilise les informations relatives à un lecteur de disque pour remplir une structure **_diskfree_t** .
 
 > [!IMPORTANT]
 > Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -55,15 +58,15 @@ unsigned _getdiskfree(
 Lecteur de disque pour lequel vous voulez obtenir des informations.
 
 *driveinfo*<br/>
-Un **_diskfree_t** structure qui sera remplie avec les informations sur le lecteur.
+Structure **_diskfree_t** qui sera remplie avec des informations sur le lecteur.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si la fonction aboutit, la valeur de retour est égale à zéro. Si la fonction échoue, la valeur de retour est le code d'erreur. La valeur **errno** est définie pour toutes les erreurs qui sont retournées par le système d’exploitation. Pour plus d’informations sur les conditions d’erreur sont indiqués par **errno**, consultez [constantes errno](../../c-runtime-library/errno-constants.md).
+Si la fonction aboutit, la valeur de retour est égale à zéro. Si la fonction échoue, la valeur de retour est le code d'erreur. La valeur **errno** est définie pour toutes les erreurs retournées par le système d’exploitation. Pour plus d’informations sur les conditions d’erreur signalées par **errno**, consultez [constantes errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_diskfree_t** structure est définie dans Direct.h.
+La structure **_diskfree_t** est définie dans direct. h.
 
 ```C
 struct _diskfree_t {
@@ -74,7 +77,7 @@ struct _diskfree_t {
 };
 ```
 
-Cette fonction valide ses paramètres. Si le *driveinfo* pointeur est **NULL** ou *lecteur* spécifie un lecteur non valide, cette fonction appelle un gestionnaire de paramètre non valide, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **EINVAL** et définit **errno** à **EINVAL**. Plage de lecteurs valide de 0 à 26. Un *lecteur* la valeur 0 spécifie le lecteur actif ; par la suite, les nombres sont mappés aux lettres de l’alphabet anglais tel que 1 indique le lecteur A, 3 indique que le lecteur C et ainsi de suite.
+Cette fonction valide ses paramètres. Si le pointeur *DriveInfo* a la **valeur null** ou si le *lecteur* spécifie un lecteur non valide, cette fonction appelle un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **EINVAL** et définit **errno** sur **EINVAL**. Plage de lecteurs valide de 0 à 26. Une valeur de *lecteur* égale à 0 spécifie le lecteur actif ; par la suite, les nombres sont mappés aux lettres de l’alphabet anglais, ce qui signifie que 1 indique le lecteur A, 3 indique le lecteur C, et ainsi de suite.
 
 ## <a name="requirements"></a>Configuration requise
 

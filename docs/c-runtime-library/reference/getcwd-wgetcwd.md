@@ -1,10 +1,10 @@
 ---
 title: _getcwd, _wgetcwd
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wgetcwd
 - _getcwd
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getcwd
 - wgetcwd
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 4c533f0e716cb9a13c152b9be3c46f60291118d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78b02871aafca85db50df2eea74a2210c578c204
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331790"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955248"
 ---
-# <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
+# <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
 Obtient le répertoire de travail actuel.
 
@@ -63,23 +66,23 @@ wchar_t *_wgetcwd(
 Emplacement de stockage pour le chemin.
 
 *maxlen*<br/>
-Longueur maximale du chemin en caractères : **char** pour **_getcwd** et **wchar_t** pour **_wgetcwd**.
+Longueur maximale du chemin d’accès en caractères : **char** pour **_getcwd** et **wchar_t** pour **_wgetcwd**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers *tampon*. Un **NULL** valeur renvoyée indique une erreur, et **errno** prend la valeur **ENOMEM**, indiquant qu’il existe une mémoire insuffisante pour allouer *maxlen* octets (quand un **NULL** argument est fourni en tant que *tampon*), ou la valeur **ERANGE**, indiquant que le chemin d’accès est plus long que *maxlen*  caractères. Si *maxlen* est inférieure ou égale à zéro, cette fonction appelle un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+Retourne un pointeur vers la *mémoire tampon*. Une valeur de retour **null** indique une erreur, et **errno** a la valeur **ENOMEM**, ce qui indique que la mémoire est insuffisante pour allouer *MaxLen* octets (quand un argument **null** est fourni comme *buffer*) ou à **ERANGE** , indiquant que le chemin d’accès dépasse *MaxLen* caractères. Si *MaxLen* est inférieur ou égal à zéro, cette fonction appelle un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_getcwd** fonction obtient le chemin complet du répertoire de travail actuel pour le lecteur par défaut et le stocke à *tampon*. L’argument entier *maxlen* spécifie la longueur maximale pour le chemin d’accès. Une erreur se produit si la longueur du chemin d’accès (y compris le caractère null de fin) dépasse *maxlen*. Le *tampon* argument peut être **NULL**; une mémoire tampon de taille d’au moins *maxlen* (plus seulement si nécessaire) est allouée automatiquement, à l’aide de **malloc**, pour stocker le chemin d’accès. Cette mémoire tampon ultérieurement peut être libéré en appelant **gratuit** et en lui passant le **_getcwd** retourner de valeur (un pointeur vers la mémoire tampon allouée).
+La fonction **_getcwd** obtient le chemin d’accès complet du répertoire de travail actuel pour le lecteur par défaut et le stocke au niveau de la *mémoire tampon*. L’argument entier *MaxLen* spécifie la longueur maximale du chemin d’accès. Une erreur se produit si la longueur du chemin d’accès (y compris le caractère null de fin) dépasse *MaxLen*. L’argument de *mémoire tampon* peut avoir la **valeur null**; une mémoire tampon d’une taille d’au moins *MaxLen* (plus uniquement si nécessaire) est allouée automatiquement, à l’aide de **malloc**, pour stocker le chemin d’accès. Cette mémoire tampon peut être libérée ultérieurement en appelant **Free** et en lui passant la valeur de retour **_getcwd** (un pointeur vers la mémoire tampon allouée).
 
-**_getcwd** retourne une chaîne qui représente le chemin d’accès du répertoire de travail actuel. Si le répertoire de travail actuel est la racine, la chaîne se termine par une barre oblique inverse ( **\\** ). Si le répertoire de travail actuel est un répertoire autre que la racine, la chaîne se termine par le nom du répertoire, et non pas par une barre oblique inverse.
+**_getcwd** retourne une chaîne qui représente le chemin d’accès du répertoire de travail actuel. Si le répertoire de travail actuel est la racine, la chaîne se termine par **\\** une barre oblique inverse (). Si le répertoire de travail actuel est un répertoire autre que la racine, la chaîne se termine par le nom du répertoire, et non pas par une barre oblique inverse.
 
-**_wgetcwd** est une version à caractères larges de **_getcwd**; le *tampon* argument et valeur de retour de **_wgetcwd** sont des chaînes à caractères larges. **_wgetcwd** et **_getcwd** se comportent de façon identique dans le cas contraire.
+**_wgetcwd** est une version à caractères larges de **_getcwd**; l’argument de *mémoire tampon* et la valeur de retour de **_wgetcwd** sont des chaînes à caractères larges. dans le cas contraire, **_wgetcwd** et **_getcwd** se comportent de la même façon.
 
-Lorsque **_DEBUG** et **_CRTDBG_MAP_ALLOC** sont définis, les appels à **_getcwd** et **_wgetcwd** sont remplacés par les appels à **_ getcwd_dbg** et **_wgetcwd_dbg** pour permettre le débogage des allocations de mémoire. Pour plus d’informations, consultez [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
+Lorsque **_ Debug et _** **CRTDBG_MAP_ALLOC** sont définis, les appels à **_getcwd** et **_wgetcwd** sont remplacés par les appels à **_getcwd_dbg** et **_wgetcwd_dbg** pour permettre le débogage des allocations de mémoire. Pour plus d’informations, consultez [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

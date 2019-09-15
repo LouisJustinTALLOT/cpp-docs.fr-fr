@@ -1,12 +1,12 @@
 ---
 title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _sprintf_p
 - _swprintf_p_l
 - _swprintf_p
 - _sprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sprintf_p
 - _swprintf_p_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-ms.openlocfilehash: c55dce7d37d63c79e8c8d9976a76adf331412812
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bb8993293236a20c87707db06715e9a012e643e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354948"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958027"
 ---
-# <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
+# <a name="_sprintf_p-_sprintf_p_l-_swprintf_p-_swprintf_p_l"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
 Écrivent des données mises en forme dans une chaîne avec la possibilité de spécifier l’ordre dans lequel les paramètres sont utilisés dans la chaîne de format.
 
@@ -96,7 +99,7 @@ Nombre maximal de caractères à stocker.
 Chaîne de contrôle de format.
 
 *argument_list*<br/>
-Arguments facultatifs à la chaîne de format.
+Arguments facultatifs de la chaîne de format.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
@@ -105,15 +108,15 @@ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le nombre de caractères écrits, ou -1 si une erreur s’est produite.
+Nombre de caractères écrits, ou-1 si une erreur s’est produite.
 
 ## <a name="remarks"></a>Notes
 
-Le **_sprintf_p** fonction met en forme et stocke une série de caractères et de valeurs dans *tampon*. Chaque argument dans le *argument_list* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le *format* argument utilise le [syntaxe de spécification pour les fonctions printf et wprintf format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un caractère null est ajouté après le dernier caractère écrit. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini. La différence entre **_sprintf_p** et **sprintf_s** qui est **_sprintf_p** prend en charge les paramètres positionnels, ce qui permet de spécifier l’ordre dans lequel les arguments sont utilisé dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+La fonction **_sprintf_p** met en forme et stocke une série de caractères et de valeurs dans *buffer*. Chaque argument dans le *argument_list* (le cas échéant) est converti et sorti selon la spécification de format correspondante au *format*. L’argument *format* utilise la [syntaxe de spécification de format pour les fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un caractère null est ajouté après le dernier caractère écrit. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini. La différence entre **_sprintf_p** et **sprintf_s** est que **_sprintf_p** prend en charge les paramètres positionnels, ce qui permet de spécifier l’ordre dans lequel les arguments sont utilisés dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_swprintf_p** est une version à caractères larges de **_sprintf_p**; les arguments de pointeur à **_swprintf_p** sont des chaînes à caractères larges. Détection d’erreurs dans d’encodage **_swprintf_p** peut différer de celle dans **_sprintf_p**. **_swprintf_p** et **fwprintf_p** ont un comportement identique, sauf que **_swprintf_p** écrit la sortie vers une chaîne plutôt que vers une destination de type **fichier**, et **_swprintf_p** nécessite le *nombre* paramètre pour spécifier le nombre maximal de caractères à écrire. Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+**_swprintf_p** est une version à caractères larges de **_sprintf_p**; les arguments de pointeur vers **_swprintf_p** sont des chaînes à caractères larges. La détection des erreurs d’encodage dans **_swprintf_p** peut différer de celle de **_sprintf_p**. **_swprintf_p** et **fwprintf_p** se comportent de la même manière, sauf que **_swprintf_p** écrit la sortie dans une chaîne plutôt que dans une destination de type **file**, et **_swprintf_p** nécessite que le paramètre *Count* spécifie le paramètre nombre maximal de caractères à écrire. Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
-**_sprintf_p** retourne le nombre d’octets stockés dans *tampon*, sans compter le caractère null de fin. **_swprintf_p** retourne le nombre de caractères larges stockés dans *tampon*, sans compter le caractère large null de fin. Si *tampon* ou *format* est un pointeur null, ou si la chaîne de format contient des caractères de mise en forme non valides, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre ](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+**_sprintf_p** retourne le nombre d’octets stockés dans la *mémoire tampon*, sans compter le caractère null de fin. **_swprintf_p** retourne le nombre de caractères larges stockés dans la *mémoire tampon*, sans compter le caractère élargi de la valeur null de fin. Si la *mémoire tampon* ou le *format* est un pointeur null, ou si la chaîne de format contient des caractères de mise en forme non valides, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -174,7 +177,7 @@ Output:
 character count = 79
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_swprintf_p.c
