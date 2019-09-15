@@ -1,12 +1,12 @@
 ---
 title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbctohira
 - _mbctohira_l
 - _mbctokata
 - _mbctokata_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbctokata
 - mbctohira
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: 11b08449a7d27015c4ffe0ce398c471bbd6069f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e158e933442256b1d712ba42afc28b94e2b123c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285611"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952558"
 ---
-# <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
+# <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
 Convertit des caractères Hiragana en caractères Katakana et inversement
 
@@ -81,20 +84,20 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne le caractère converti *c*, si possible. Sinon, elle retourne le caractère *c* inchangé.
+Chacune de ces fonctions retourne le caractère converti *c*, si possible. Dans le cas contraire, elle retourne le caractère *c* inchangé.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbctohira** et **_mbctokata** fonctions testent un caractère *c* et, dans la mesure du possible, appliquez une des conversions suivantes.
+Les fonctions **_mbctohira** et **_mbctokata** testent un caractère *c* et, si possible, appliquent l’une des conversions suivantes.
 
 |Routines|Conversion|
 |--------------|--------------|
 |**_mbctohira**, **_mbctohira_l**|Katakana multioctet en hiragana multioctet.|
 |**_mbctokata**, **_mbctokata_l**|Hiragana multioctet en katakana multioctet.|
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sont identiques, à ceci près que celles qui n’ont le **_l** suffixe utiliser les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux et celles qui ont le **_l** suffixe à la place Utilisez les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sont identiques, sauf que celles qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux et celles qui ont le suffixe **_L** utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Dans les versions antérieures, **_mbctohira** s’appelait **jtohira** et **_mbctokata** s’appelait **jtokata**. Pour le nouveau code, utilisez les nouveaux noms.
+Dans les versions antérieures, **_mbctohira** était nommé **jtohira** et **_mbctokata** était nommé **jtokata**. Pour le nouveau code, utilisez les nouveaux noms.
 
 ## <a name="requirements"></a>Configuration requise
 

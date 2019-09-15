@@ -1,10 +1,10 @@
 ---
 title: _CrtSetReportHook2, _CrtSetReportHookW2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtSetReportHookW2
 - CrtSetReportHook2
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37ec0cea3fb558a5926e6f9c707e0e5033a17222
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335320"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942219"
 ---
-# <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
+# <a name="_crtsetreporthook2-_crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 
 Installe ou désinstalle une fonction de création de rapports définie par le client en la raccordant au processus de création de rapports de débogage du runtime C (version de débogage uniquement).
 
@@ -54,22 +57,22 @@ int _CrtSetReportHookW2(
 ### <a name="parameters"></a>Paramètres
 
 *mode*<br/>
-L’action à entreprendre : **_CRT_RPTHOOK_INSTALL** ou **_CRT_RPTHOOK_REMOVE**.
+Action à entreprendre : **_CRT_RPTHOOK_INSTALL** ou **_CRT_RPTHOOK_REMOVE**.
 
 *pfnNewHook*<br/>
-Raccordement de rapport à installer ou supprimer dans la version de caractère étroits ou caractères larges de cette fonction.
+Raccordement de rapport à installer ou à supprimer dans la version à caractères étroits ou à caractères larges de cette fonction.
 
 ## <a name="return-value"></a>Valeur de retour
 
--1 si une erreur s’est produite, avec **EINVAL** ou **ENOMEM** définie ; sinon, retourne le décompte de références *pfnNewHook* après l’appel.
+-1 si une erreur a été rencontrée, avec **EINVAL** ou **ENOMEM** défini ; Sinon, retourne le décompte de références de *pfnNewHook* après l’appel.
 
 ## <a name="remarks"></a>Notes
 
-**_CrtSetReportHook2** et **_CrtSetReportHookW2** vous permettent de raccorder ou décrocher une fonction, tandis que [_CrtSetReportHook](crtsetreporthook.md) vous permet uniquement de raccorder une fonction.
+**_CrtSetReportHook2** et **_CrtSetReportHookW2** vous permettent de raccorder ou de décrocher une fonction, tandis que _ [crtsetreporthook](crtsetreporthook.md) vous permet de raccorder une fonction uniquement.
 
-**_CrtSetReportHook2** ou **_CrtSetReportHookW2** doit être utilisé au lieu de **_CrtSetReportHook** lorsque l’appel de raccordement est effectué dans une DLL et quand plusieurs DLL peuvent être chargées et définir leurs propres fonctions de raccordement. Dans une situation de ce type, les DLL peuvent être déchargées dans un ordre différent de leur chargement et la fonction de raccordement pointer vers une DLL non chargée. Toute sortie de débogage bloque le processus si les fonctions de raccordement ont été ajoutées avec **_CrtSetReportHook**.
+**_CrtSetReportHook2** ou **_CrtSetReportHookW2** doit être utilisé à la place de _ **crtsetreporthook** lorsque l’appel de hook est effectué dans une dll et lorsque plusieurs dll peuvent être chargées et définir leurs propres fonctions de raccordement. Dans une situation de ce type, les DLL peuvent être déchargées dans un ordre différent de leur chargement et la fonction de raccordement pointer vers une DLL non chargée. Toute sortie de débogage bloque le processus si les fonctions de raccordement ont été ajoutées avec _ **crtsetreporthook**.
 
-Les fonctions de raccordement ajoutées avec **_CrtSetReportHook** sont appelées si il n’y a aucun fonctions ajoutées avec raccordement **_CrtSetReportHook2** ou **_CrtSetReportHookW2** ou si tous les raccordement fonctions ajoutées avec **_CrtSetReportHook2** et **_CrtSetReportHookW2** retourner **FALSE**.
+Toutes les fonctions de raccordement ajoutées à _ **crtsetreporthook** sont appelées s’il n’y a aucune fonction de raccordement ajoutée avec **_CrtSetReportHook2** ou **_CrtSetReportHookW2** , ou si toutes les fonctions de raccordement ajoutées avec **_CrtSetReportHook2** et **_ CrtSetReportHookW2** retourne **false**.
 
 La version à caractères larges de cette fonction est disponible. Les fonctions de raccordement de rapport prennent une chaîne dont le type (caractères larges ou étroits) doit correspondre à la version de cette fonction utilisée. Utilisez le prototype de fonction suivant pour les raccordements de rapport utilisés avec la version à caractères larges de cette fonction :
 
@@ -83,10 +86,10 @@ Utilisez le prototype suivant pour les raccordements de rapport à caractère é
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-Ces fonctions valident leurs paramètres. Si *mode* ou **pfnNewNook** est non valide, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1.
+Ces fonctions valident leurs paramètres. Si le *mode* ou le **pfnNewNook** n’est pas valide, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent-1.
 
 > [!NOTE]
-> Si votre application est compilée avec **/CLR** et la fonction de création de rapports est appelée après que l’application a quitté principale, le CLR lève une exception si la fonction de création de rapports appelle des fonctions CRT.
+> Si votre application est compilée avec **/CLR** et que la fonction de création de rapports est appelée une fois que l’application a quitté main, le CLR lève une exception si la fonction de création de rapports appelle des fonctions CRT.
 
 ## <a name="requirements"></a>Configuration requise
 

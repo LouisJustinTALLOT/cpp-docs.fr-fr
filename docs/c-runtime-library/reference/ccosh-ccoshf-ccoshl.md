@@ -1,11 +1,11 @@
 ---
 title: ccosh, ccoshf, ccoshl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ccosh
 - ccoshf
 - ccoshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ccosh
 - ccoshf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ccoshf function
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
-ms.openlocfilehash: c25441d4f25f9e77a0cb71d942e132f34c4c1f5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 978db0141ecd6799c3a8d19a3b4621ae1a2e8b43
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335553"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943285"
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh, ccoshf, ccoshl
 
@@ -68,11 +71,11 @@ Nombre complexe qui représente l’angle, en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le cosinus hyperbolique de *z*, en radians.
+Cosinus hyperbolique de *z*, en radians.
 
 ## <a name="remarks"></a>Notes
 
-Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ccosh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **ccosh** accepte et retourne toujours un **_Dcomplex** valeur.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **ccosh** qui acceptent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, **ccosh** accepte et retourne toujours une valeur **_Dcomplex** .
 
 ## <a name="requirements"></a>Configuration requise
 

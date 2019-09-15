@@ -1,11 +1,11 @@
 ---
 title: difftime, _difftime32, _difftime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _difftime32
 - difftime
 - _difftime64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _difftime64
 - difftime
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: 80aaac1696fc82db248b097e73a2d89d81a20346
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51d74ae447e87e91e9be3c27864b8dfe7f490b14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288521"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937645"
 ---
-# <a name="difftime-difftime32-difftime64"></a>difftime, _difftime32, _difftime64
+# <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
 Recherche la différence entre deux heures.
 
@@ -61,17 +64,17 @@ Heure de début
 
 ## <a name="return-value"></a>Valeur de retour
 
-**difftime** renvoie le temps écoulé en secondes, à partir de *timeStart* à *débutHeure de fin*. La valeur retournée est un nombre à virgule flottante double précision. Cette valeur peut être 0, indiquant alors une erreur.
+**difftime** retourne le temps écoulé en secondes, de *timeStart* à *timeEnd*. La valeur retournée est un nombre à virgule flottante double précision. Cette valeur peut être 0, indiquant alors une erreur.
 
 ## <a name="remarks"></a>Notes
 
-Le **difftime** fonction calcule la différence entre les deux valeurs d’heure fournie *timeStart* et *débutHeure de fin*.
+La fonction **difftime** calcule la différence entre les deux valeurs d’heure fournies *timeStart* et *timeEnd*.
 
-La valeur de temps fournie doit appartenir à la plage de **time_t**. **time_t** est une valeur 64 bits. Ainsi, la fin de la plage a été repoussée du 18 janvier 2038 à 23:59:59, heure UTC au 31 décembre 3000 à 23:59:59. La plage inférieure de **time_t** est toujours le 1er janvier 1970 à minuit.
+La valeur de temps fournie doit être comprise dans la plage de **time_t**. **time_t** est une valeur de 64 bits. Ainsi, la fin de la plage a été repoussée du 18 janvier 2038 à 23:59:59, heure UTC au 31 décembre 3000 à 23:59:59. La plage inférieure de **time_t** est toujours le 1er janvier 1970.
 
-**difftime** est une fonction inline qui prend la valeur **_difftime32** ou **_difftime64** selon que **_USE_32BIT_TIME_T** est défini. _difftime32 et _difftime64 peuvent être utilisés directement pour forcer l’utilisation d’une taille particulière du type d’heure.
+**difftime** est une fonction inline qui prend la valeur **_difftime32** ou **_difftime64** , selon que **_USE_32BIT_TIME_T** est défini ou non. _difftime32 et _difftime64 peuvent être utilisés directement pour forcer l’utilisation d’une taille particulière du type d’heure.
 
-Ces fonctions valident leurs paramètres. Si l’un des paramètres est zéro ou négatif, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent 0 et définissez **errno** à **EINVAL**.
+Ces fonctions valident leurs paramètres. Si l’un des paramètres est zéro ou négatif, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent 0 et attribuent à **errno** la valeur **EINVAL**.
 
 ## <a name="requirements"></a>Configuration requise
 

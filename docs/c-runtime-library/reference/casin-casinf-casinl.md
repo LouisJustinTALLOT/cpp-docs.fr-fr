@@ -1,11 +1,11 @@
 ---
 title: casin, casinf, casinl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - casin
 - casinf
 - casinl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - casin
 - casinf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3ae944c9808fd0fc6e8d1ffbd02da2a69454cc6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335592"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943390"
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
 
-Récupère l’arc sinus d’un nombre complexe, avec des coupures en dehors de l’intervalle [-1, + 1] sur l’axe des réels.
+Récupère l’arc sinus d’un nombre complexe, avec des coupes situées en dehors de l’intervalle [-1, + 1] le long de l’axe réel.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,11 +71,11 @@ Nombre complexe qui représente un angle, en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-L’arc sinus de *z*, en radians. Le résultat est illimité sur l’axe des imaginaires et dans l’intervalle [-π/2 + π/2] sur l’axe des réels.
+Arcsinus de *z*, en radians. Le résultat est illimité le long de l’axe imaginaire, et dans l’intervalle [-π/2, + π/2] le long de l’axe réel.
 
 ## <a name="remarks"></a>Notes
 
-Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **casin** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **casin** accepte et retourne toujours un **_Dcomplex** valeur.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **Casin** qui acceptent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, **Casin** accepte et retourne toujours une valeur **_Dcomplex** .
 
 ## <a name="requirements"></a>Configuration requise
 

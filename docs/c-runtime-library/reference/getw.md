@@ -1,9 +1,9 @@
 ---
 title: _getw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getw
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: 615d3ac9bdc73ad200368eaeabf7c84951bc91ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad03c92ce90542ecae13609ee228ad094f64fc07
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157628"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954877"
 ---
-# <a name="getw"></a>_getw
+# <a name="_getw"></a>_getw
 
 Obtient un entier à partir d’un flux.
 
@@ -49,11 +52,11 @@ Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_getw** retourne la valeur entière lue. La valeur de retour **EOF** indique une erreur ou la fin du fichier. Toutefois, étant donné que le **EOF** valeur est également une valeur entière légitime, utilisez **feof** ou **ferror** pour vérifier une condition d’erreur ou de fin de fichier. Si *flux* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **EOF**.
+**_getw** retourne la valeur entière lue. Une valeur de retour de **EOF** indique une erreur ou la fin du fichier. Toutefois, étant donné que la valeur **EOF** est également une valeur entière légitime, utilisez **feof** ou un pour vérifier une condition d’erreur **ou de fin** de fichier. Si *Stream* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **EOF**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_getw** fonction lit la valeur binaire suivante de type **int** à partir du fichier associé *flux* et incrémente le pointeur de fichier associé (le cas échéant) pour pointer le caractère non lu suivant. **_getw** n’assume pas aucun alignement spécial d’éléments dans le flux de données. Des problèmes de portage peuvent se produire avec **_getw** , car la taille de la **int** type et l’ordre des octets dans le **int** type diffèrent entre les systèmes.
+La fonction **_getw** lit la valeur binaire suivante de type **int** à partir du fichier associé au *flux* et incrémente le pointeur de fichier associé (le cas échéant) pour pointer vers le caractère non lu suivant. **_getw** ne prend pas en considération l’alignement spécial des éléments dans le flux. Des problèmes de Portage peuvent survenir avec **_getw** , car la taille du type **int** et l’ordre des octets dans le type **int** diffèrent entre les systèmes.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -98,7 +101,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtgetwtxt"></a>Entrée : crt_getw.txt
+### <a name="input-crt_getwtxt"></a>Entrée : crt_getw.txt
 
 ```Input
 Line one.

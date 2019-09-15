@@ -1,9 +1,9 @@
 ---
 title: imaxdiv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - imaxdiv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - imaxdiv
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72bbb1198b79d79bb81acc35ce6c2a836fdd5f1d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157329"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954635"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -51,11 +54,11 @@ Dénominateur.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**imaxdiv** appelée avec des arguments de type [intmax_t](../../c-runtime-library/standard-types.md) retourne une structure de type [imaxdiv_t](../../c-runtime-library/standard-types.md) qui comprend le quotient et le reste.
+**imaxdiv** appelé avec des arguments de type [intmax_t](../../c-runtime-library/standard-types.md) retourne une structure de type [imaxdiv_t](../../c-runtime-library/standard-types.md) qui comprend le quotient et le reste.
 
 ## <a name="remarks"></a>Notes
 
-Le **imaxdiv** fonction divise *nombre* par *denom* et ce qui calcule le quotient et le reste. Le **imaxdiv_t** structure contient le quotient, **intmax_t** **quot**et le reste, **intmax_t** **rem**. Le signe du quotient est identique à celui du quotient mathématique. Sa valeur absolue est le plus grand entier qui est inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.
+La fonction **imaxdiv** divise le *chiffre* par *denom* et calcule donc le quotient et le reste. La structure **imaxdiv_t** contient le quotient, **intmax_t** **quote**et le reste, **intmax_t** **REM**. Le signe du quotient est identique à celui du quotient mathématique. Sa valeur absolue est le plus grand entier qui est inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -65,7 +68,7 @@ Le **imaxdiv** fonction divise *nombre* par *denom* et ce qui calcule le quotien
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_imaxdiv.c

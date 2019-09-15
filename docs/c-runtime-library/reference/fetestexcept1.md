@@ -1,9 +1,9 @@
 ---
 title: fetestexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fetestexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fetestexcept
 - fenv/fetestexcept
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-ms.openlocfilehash: ed75ab0ff13029f6ec10c1aafbcb7f7b23b46fd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61a68b4569d52b550da3fad12c077b82bb067fa9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334163"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941010"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -52,7 +55,7 @@ En cas de réussite, retourne un masque de bits qui contient une opération OR a
 
 ## <a name="remarks"></a>Notes
 
-La fonction fetestexcept permet de déterminer les exceptions levées par une opération à virgule flottante. Utilisez le *, sauf* paramètre pour spécifier les indicateurs d’état d’exception à tester. Le **fetestexcept** fonction utilise des macros d’exception suivantes définies dans \<fenv.h > dans *, sauf* et la valeur de retour :
+La fonction fetestexcept permet de déterminer les exceptions levées par une opération à virgule flottante. Utilisez le paramètre *EXCEPTS* pour spécifier les indicateurs d’état d’exception à tester. La fonction **fetestexcept** utilise les macros d’exception définies \<dans fenv. h > dans *except* et la valeur de retour :
 
 |Macros d’exception|Description|
 |---------------------|-----------------|
@@ -63,7 +66,7 @@ La fonction fetestexcept permet de déterminer les exceptions levées par une op
 |FE_UNDERFLOW|Le résultat d’une opération à virgule flottante précédente était trop petit pour être représenté avec une précision complète ; une valeur dénormalisée a été créée.|
 |FE_ALLEXCEPT|Opération OR au niveau du bit de toutes les exceptions de virgule flottante prises en charge.|
 
-Spécifié *, sauf* argument peut être 0, les macros d’exception à virgule flottante prises en charge, ou l’opérateur de bits ou du moins deux macros. L’effet de n’importe quel autre *, sauf* valeur d’argument n’est pas définie.
+L’argument *EXCEPTS* spécifié peut être 0, l’une des macros d’exception de virgule flottante prises en charge ou l’opération or au niveau du bit d’au moins deux macros. L’effet de toute autre valeur d’argument *except* n’est pas défini.
 
 Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
 

@@ -1,11 +1,11 @@
 ---
 title: floor, floorf, floorl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - floorf
 - floorl
 - floor
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - floor
 - floorl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c646437b4a1d79ef79e53d79fcbc342e5360f3cd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333584"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957157"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -67,17 +70,17 @@ Valeur à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **floor** fonctions retournent une valeur à virgule flottante qui représente le plus grand entier inférieur ou égal à *x*. Aucun retour d'erreur.
+Les fonctions **Floor** retournent une valeur à virgule flottante qui représente le plus grand entier inférieur ou égal à *x*. Aucun retour d'erreur.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|none|_DOMAIN|
 
-**floor** a une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
+**Floor** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **floor** qui acceptent et retournent **float** et **long** **double** valeurs. Dans un programme C, **floor** accepte et retourne toujours un **double**.
+C++autorise la surcharge, de sorte que vous pouvez appeler des surcharges de **plancher** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **Floor** prend toujours et retourne un **double**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -87,7 +90,7 @@ C++ autorisant la surcharge, vous pouvez appeler des surcharges de **floor** qui
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_floor.c

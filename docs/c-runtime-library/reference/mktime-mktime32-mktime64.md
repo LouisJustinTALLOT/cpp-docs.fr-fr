@@ -1,11 +1,11 @@
 ---
 title: mktime, _mktime32, _mktime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mktime32
 - mktime
 - _mktime64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mktime
 - _mktime64
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-ms.openlocfilehash: c45b69f84a0aec159ed59a480e9358f27c8e85e2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a282e9f27a0e8f2a91219facda96a5929d3982ea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501006"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951520"
 ---
 # <a name="mktime-_mktime32-_mktime64"></a>mktime, _mktime32, _mktime64
 
@@ -75,7 +78,7 @@ Les fonctions **mktime**, **_mktime32** et **_mktime64** convertissent la struct
 
 Après un ajustement à l’heure UTC, **_mktime32** gère les dates comprises entre le 1er janvier 1970 et le 23:59:59 le 18 janvier 2038, heure UTC. **_mktime64** gère les dates comprises entre le 1er janvier 1970 et 23:59:59, le 31 décembre 3000. Cet ajustement peut amener ces fonctions à retourner-1 (cast en **time_t**, **__time32_t** ou **__time64_t**) même si la date que vous spécifiez est comprise dans la plage. Par exemple, si vous êtes au Caire en Égypte, où le décalage horaire est de +2 heures par rapport à l’heure UTC, deux heures sont d’abord soustraites de la date que vous spécifiez dans *timeptr*, ce qui risque de faire sortir votre date de la plage.
 
-Ces fonctions peuvent être utilisées pour valider et compléter une structure tm. En cas de réussite, ces fonctions définissent les valeurs de **tm_wday** et de **tm_yday** selon les besoins et définissent les autres composants pour représenter l’heure de calendrier spécifiée, mais avec leurs valeurs imposées aux plages normales. La valeur finale de **tm_mday** n’est pas définie tant que **tm_mon** et **tm_year** ne sont pas déterminés. Lorsque vous spécifiez une durée de structure **TM** , définissez le champ **tm_isdst** sur:
+Ces fonctions peuvent être utilisées pour valider et compléter une structure tm. En cas de réussite, ces fonctions définissent les valeurs de **tm_wday** et de **tm_yday** selon les besoins et définissent les autres composants pour représenter l’heure de calendrier spécifiée, mais avec leurs valeurs imposées aux plages normales. La valeur finale de **tm_mday** n’est pas définie tant que **tm_mon** et **tm_year** ne sont pas déterminés. Lorsque vous spécifiez une durée de structure **TM** , définissez le champ **tm_isdst** sur :
 
 - zéro (0) pour indiquer que l'heure d'hiver est active ;
 

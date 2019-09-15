@@ -1,10 +1,10 @@
 ---
 title: _mbccpy_s, _mbccpy_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbccpy_s
 - _mbccpy_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbccpy_s_l
 - mbccpy_s_l
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26fad83c5b7847e0050fe490cad30e0643aefd74
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156848"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952633"
 ---
-# <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
+# <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s, _mbccpy_s_l
 
 Copier un caractère multioctet d’une chaîne vers une autre chaîne. Ces versions de [_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -86,7 +89,7 @@ Destination de la copie.
 Taille de la mémoire tampon de destination.
 
 *pCopied*<br/>
-Rempli avec le nombre d’octets copiés (1 ou 2 en cas de réussite). Passer **NULL** si le nombre ne vous intéressent.
+Rempli avec le nombre d’octets copiés (1 ou 2 en cas de réussite). Transmettez la **valeur null** si vous ne vous souciez pas du nombre.
 
 *src*<br/>
 Caractère multioctet à copier.
@@ -96,26 +99,26 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro si l'opération a réussi ; code d'erreur en cas de échec. Si *src* ou *dest* est **NULL**, ou si plusieurs **buffSizeinBytes** octets sont copiés à *dest*, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent **EINVAL** et **errno** a la valeur **EINVAL**.
+Zéro si l'opération a réussi ; code d'erreur en cas de échec. Si *src* ou *dest* a la **valeur null**, ou si plus de **buffSizeinBytes** octets sont copiés vers *dest*, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent **EINVAL** et **errno** a la valeur **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbccpy_s** fonction copie un caractère multioctet depuis *src* à *dest*. Si *src* ne pointe pas vers l’octet de tête d’un caractère multioctet comme déterminé par un appel implicite à [_ismbblead](ismbblead-ismbblead-l.md), puis l’octet unique qui *src* est copié. Si *src* pointe vers un octet de tête, mais l’octet suivant est 0 et donc non valide, 0 est copié vers *dest*, **errno** a la valeur **EILSEQ**et le fonction renvoie **EILSEQ**.
+La fonction **_mbccpy_s** copie un caractère multioctet de *src* vers *dest*. Si *src* ne pointe pas vers l’octet de tête d’un caractère multioctet comme déterminé par un appel implicite à [_ismbblead](ismbblead-ismbblead-l.md), alors le seul octet vers lequel pointe *src* est copié. Si *src* pointe vers un octet de tête, mais que l’octet suivant est 0 et donc non valide, 0 est copié vers *dest*, **errno** a la valeur **EILSEQ**et la fonction retourne **EILSEQ**.
 
-**_mbccpy_s** n’ajoute pas d’une marque de fin null ; Cependant, si *src* pointe vers un caractère null, cette valeur null est copié vers *dest* (c’est juste une copie d’un octet normale).
+**_mbccpy_s** n’ajoute pas de terminateur null ; Toutefois, si *src* pointe vers un caractère null, alors cette valeur null est copiée vers *dest* (il s’agit simplement d’une copie sur un octet standard).
 
-La valeur dans *pCopied* est rempli avec le nombre d’octets copiés. Les valeurs possibles sont 1 et 2 si l’opération réussit. Si **NULL** est passée, ce paramètre est ignoré.
+La valeur de *pCopied* est remplie avec le nombre d’octets copiés. Les valeurs possibles sont 1 et 2 si l’opération réussit. Si la **valeur null** est passée, ce paramètre est ignoré.
 
-|*src*|copié dans *dest*|*pCopied*|Valeur de retour|
+|*src*|copié vers *dest* .|*pCopied*|Valeur de retour|
 |-----------|----------------------|---------------|------------------|
 |Octet autre qu’un octet de tête|Octet autre qu’un octet de tête|1|0|
 |0|0|1|0|
 |Octet de tête suivi d’une valeur différente de 0|Octet de tête suivi d’une valeur différente de 0|2|0|
 |Octet de tête suivi de 0|0|1|**EILSEQ**|
 
-Notez que la deuxième ligne est simplement un cas spécial de la première. Notez également que ce tableau suppose *buffSizeInBytes* >= *pCopied*.
+Notez que la deuxième ligne est simplement un cas spécial de la première. Notez également que le tableau suppose que *buffSizeInBytes* >= *pCopied*.
 
-**_mbccpy_s** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux. **_mbccpy_s_l** est identique à **_mbccpy_s** , à ceci près que **_mbccpy_s_l** utilise les paramètres régionaux passé pour n’importe quel comportement dépendant des paramètres régionaux.
+**_mbccpy_s** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux. **_mbccpy_s_l** est identique à **_mbccpy_s** , sauf que **_mbccpy_s_l** utilise les paramètres régionaux passés pour tout comportement dépendant des paramètres régionaux.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; celles-ci peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

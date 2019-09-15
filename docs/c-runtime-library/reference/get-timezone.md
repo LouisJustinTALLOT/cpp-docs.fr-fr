@@ -1,9 +1,9 @@
 ---
 title: _get_timezone
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_timezone
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_timezone
 - get_timezone
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: 26cf8114ab766bdb394d2db9ad5842622a447bd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf77ca21383bcae6919b6c1d00b99c082ef99919
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287441"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955633"
 ---
-# <a name="gettimezone"></a>_get_timezone
+# <a name="_get_timezone"></a>_get_timezone
 
 Récupère la différence en secondes entre le temps universel coordonné (UTC) et l’heure locale.
 
@@ -45,18 +48,18 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Paramètres
 
-*seconds*<br/>
+*durée*<br/>
 Différence en secondes entre l’heure UTC et l’heure locale.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro en cas de réussite ou un **errno** valeur si une erreur se produit.
+Zéro en cas de réussite ou une valeur **errno** si une erreur se produit.
 
 ## <a name="remarks"></a>Notes
 
-Le **_get_timezone** fonction récupère la différence en secondes entre l’heure UTC et l’heure locale sous forme d’entier. La valeur par défaut est de 28 800 secondes, pour l’heure du Pacifique (huit heures après l’heure UTC).
+La fonction **_get_timezone** récupère la différence en secondes entre l’heure UTC et l’heure locale sous la forme d’un entier. La valeur par défaut est de 28 800 secondes, pour l’heure du Pacifique (huit heures après l’heure UTC).
 
-Si *secondes* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **EINVAL**.
+Si *seconds* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
 
 ## <a name="requirements"></a>Configuration requise
 

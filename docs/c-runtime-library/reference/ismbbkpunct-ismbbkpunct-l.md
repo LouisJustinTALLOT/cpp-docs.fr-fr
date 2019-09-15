@@ -1,10 +1,10 @@
 ---
 title: _ismbbkpunct, _ismbbkpunct_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkpunct_l
 - _ismbbkpunct
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbbkpunct_l
 - _ismbbkpunct_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-ms.openlocfilehash: 24a82bdf0dde2beb0978226208c151689e06ed72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35f09013fbbe522a1eb747f2d2131a5fbb23f765
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287028"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954088"
 ---
-# <a name="ismbbkpunct-ismbbkpunctl"></a>_ismbbkpunct, _ismbbkpunct_l
+# <a name="_ismbbkpunct-_ismbbkpunct_l"></a>_ismbbkpunct, _ismbbkpunct_l
 
 Vérifie si un caractère multioctet est un caractère de ponctuation.
 
@@ -61,7 +64,7 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ismbbkpunct** retourne une valeur différente de zéro si l’entier *c* est un symbole de ponctuation non ASCII, ou 0 si ce n’est pas. Par exemple, dans la page de codes 932 uniquement, **_ismbbkpunct** teste la présence d’une ponctuation katakana. **_ismbbkpunct** utilise les paramètres régionaux actuels pour les paramètres de caractères dépendant des paramètres régionaux. **_ismbbkpunct_l** est identique, sauf qu’elle utilise les paramètres régionaux qui sont passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_ismbbkpunct** retourne une valeur différente de zéro si l’entier *c* est un symbole de ponctuation non-ASCII, ou 0 dans le cas contraire. Par exemple, dans la page de codes 932 uniquement, **_ismbbkpunct** teste la présence d’une ponctuation katakana. **_ismbbkpunct** utilise les paramètres régionaux actuels pour tous les paramètres de caractères dépendants des paramètres régionaux. **_ismbbkpunct_l** est identique, à ceci près qu’il utilise les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Configuration requise
 

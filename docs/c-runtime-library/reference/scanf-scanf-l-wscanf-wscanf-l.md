@@ -1,12 +1,12 @@
 ---
 title: scanf, _scanf_l, wscanf, _wscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wscanf_l
 - scanf
 - _scanf_l
 - wscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tscanf
 - _scanf_l
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: 48aa0bb3348a3336de9ee0eb9f9ec0d3e1a2b3cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c3b0f73561dcd41ef1643042baeac7fff0728b4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357120"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948829"
 ---
-# <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf, _scanf_l, wscanf, _wscanf_l
+# <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
 Lit les données mises en forme du flux d'entrée standard. Il existe des versions plus sécurisées de ces fonctions. Consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
@@ -89,20 +92,20 @@ Paramètres régionaux à utiliser.
 
 Retourne le nombre de champs correctement convertis et assignés. La valeur de retour n'inclut pas les champs qui ont été lus mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné.
 
-Si *format* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et définissez **errno** à **EINVAL**.
+Si *format* est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et attribuent à **errno** la valeur **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **scanf** fonction lit les données à partir du flux d’entrée standard **stdin** et écrit les données dans l’emplacement indiqué par *argument*. Chaque *argument* doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type dans *format*. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+La fonction **scanf** lit les données à partir du flux d’entrée standard **stdin** et écrit les données dans l’emplacement donné par *argument*. Chaque *argument* doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type au *format*. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> Lors de la lecture une chaîne avec **scanf**, toujours spécifier une largeur pour les **%s** format (par exemple, **« % 32s »** au lieu de **« %s »**) ; sinon, une entrée mal formatée peut facilement provoquer un dépassement de mémoire tampon. Vous pouvez aussi envisager d’utiliser [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) ou [fgets](fgets-fgetws.md).
+> Lors de la lecture d’une chaîne avec **scanf**, spécifiez toujours une largeur pour le format **% s** (par exemple, **« % 32s »** au lieu de **« % s »** ); dans le cas contraire, une entrée mal mise en forme peut facilement provoquer un dépassement de mémoire tampon. Vous pouvez aussi envisager d’utiliser [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) ou [fgets](fgets-fgetws.md).
 
-**wscanf** est une version à caractères larges de **scanf**; le *format* l’argument de **wscanf** est une chaîne de caractères larges. **wscanf** et **scanf** se comportent comme si le flux est ouvert en mode ANSI. **scanf** ne prend actuellement en charge d’entrée à partir d’un flux de données UNICODE.
+**wscanf** est une version à caractères larges de **scanf**; l’argument *format* de **wscanf** est une chaîne de caractères larges. **wscanf** et **scanf** se comportent de la même manière si le flux est ouvert en mode ANSI. **scanf** ne prend pas actuellement en charge l’entrée d’un flux Unicode.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -120,9 +123,9 @@ Pour plus d’informations, consultez [Champs de spécification de format : fon
 |**scanf**, **_scanf_l**|\<stdio.h>|
 |**wscanf**, **_wscanf_l**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_scanf.c

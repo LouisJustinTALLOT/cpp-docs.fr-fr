@@ -1,12 +1,12 @@
 ---
 title: fscanf, _fscanf_l, fwscanf, _fwscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fscanf
 - _fwscanf_l
 - _fscanf_l
 - fwscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fscanf
 - fwscanf
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - _ftscanf function
 - fwscanf_l function
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
-ms.openlocfilehash: 5be3f4107d2f05c1863c9c8303ac89e184590baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c143cbc1bf642e7efc6f10b9615fdaca8a236d1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287835"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956620"
 ---
-# <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
+# <a name="fscanf-_fscanf_l-fwscanf-_fwscanf_l"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
 
 Lisent les données mises en forme d’un flux. Il existe des versions plus sécurisées de ces fonctions. Consultez [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md).
 
@@ -94,17 +97,17 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. Si une erreur se produit, ou si la fin du flux de fichier est atteinte avant la première conversion, la valeur de retour est **EOF** pour **fscanf** et **fwscanf**.
+Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. Si une erreur se produit ou si la fin du flux de fichier est atteinte avant la première conversion, la valeur de retour est **EOF** pour **fscanf** et **fwscanf**.
 
-Ces fonctions valident leurs paramètres. Si *flux* ou *format* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et définissez **errno** à **EINVAL**.
+Ces fonctions valident leurs paramètres. Si *Stream* ou *format* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et attribuent à **errno** la valeur **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **fscanf** fonction lit les données à partir de la position actuelle du *flux* dans les emplacements donnés par *argument* (le cas échéant). Chaque *argument* doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type dans *format*. *format* contrôle l’interprétation de l’entrée champs et a la même forme et fonction que le *format* argument pour **scanf**; consultez [scanf](scanf-scanf-l-wscanf-wscanf-l.md) pour un Description de *format*.
+La fonction **fscanf** lit les données à partir de la position actuelle du *flux* dans les emplacements donnés par *argument* (le cas échéant). Chaque *argument* doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type au *format*. le *format* contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que l’argument *format* pour **scanf**; pour obtenir une description du *format*, consultez [scanf](scanf-scanf-l-wscanf-wscanf-l.md) .
 
-**fwscanf** est une version à caractères larges de **fscanf**; l’argument format pour **fwscanf** est une chaîne de caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **fscanf** ne prend actuellement en charge d’entrée à partir d’un flux de données UNICODE.
+**fwscanf** est une version à caractères larges de **fscanf**; l’argument format de **fwscanf** est une chaîne de caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **fscanf** ne prend pas actuellement en charge l’entrée d’un flux Unicode.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -113,7 +116,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |**_ftscanf**|**fscanf**|**fscanf**|**fwscanf**|
 |**_ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
 
-Pour plus d’informations, consultez [les champs de spécification de Format : fonctions scanf et Wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Pour plus d’informations, consultez [champs de spécification de format-fonctions scanf et fonctions wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 ## <a name="requirements"></a>Configuration requise
 

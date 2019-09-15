@@ -1,9 +1,9 @@
 ---
 title: _gcvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _gcvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gcvt_s
 - gcvt_s
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ecb6fe105d8a976979f91d38c9e536b10989310
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332292"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956120"
 ---
-# <a name="gcvts"></a>_gcvt_s
+# <a name="_gcvt_s"></a>_gcvt_s
 
 Convertit une valeur à virgule flottante en chaîne. Il s’agit d’une version de [_gcvt](gcvt.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -77,19 +80,19 @@ Zéro si l’opération réussit. En cas d’échec en raison d’un paramètre 
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*sizeInBytes*|*value*|*digits*|Retourner|Valeur dans *mémoire tampon*|
+|*buffer*|*sizeInBytes*|*value*|*digits*|Renvoie|Valeur dans la *mémoire tampon*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|any|any|any|**EINVAL**|Non modifiée.|
-|Pas **NULL** (pointe vers une mémoire valide)|zéro|any|any|**EINVAL**|Non modifiée.|
-|Pas **NULL** (pointe vers une mémoire valide)|any|any|>= *sizeInBytes*|**EINVAL**|Non modifiée.|
+|not **null** (pointe vers une mémoire valide)|zéro|any|any|**EINVAL**|Non modifiée.|
+|not **null** (pointe vers une mémoire valide)|any|any|>= *sizeInBytes*|**EINVAL**|Non modifiée.|
 
 **Problèmes de sécurité**
 
-**_gcvt_s** peut générer une violation d’accès si *tampon* ne pointe pas vers une mémoire valide et n’est pas **NULL**.
+**_gcvt_s** peut générer une violation d’accès si la *mémoire tampon* ne pointe pas vers une mémoire valide et n’a pas la **valeur null**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_gcvt_s** fonction convertit un à virgule flottante *valeur* en une chaîne de caractères (qui inclut une virgule décimale et un octet de signe possible) et stocke la chaîne dans *tampon* . *mémoire tampon* doit être suffisamment grande pour contenir la valeur convertie, plus un caractère null de fin, qui est ajouté automatiquement. Une mémoire tampon de longueur **_CVTBUFSIZE** est suffisante pour n’importe quel flottante valeur de point. Si la taille de mémoire tampon *chiffres* + 1 est utilisé, la fonction ne remplace pas la fin de la mémoire tampon, par conséquent, veillez à fournir une mémoire tampon suffisante pour cette opération. **_gcvt_s** tente de produire *chiffres* chiffres au format décimal. Si elle ne peut pas, elle produit *chiffres* chiffres au format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.
+La fonction **_gcvt_s** convertit une *valeur* à virgule flottante en une chaîne de caractères (qui comprend une virgule décimale et un octet de signe possible) et stocke la chaîne dans la *mémoire tampon*. la *mémoire tampon* doit être suffisamment grande pour accueillir la valeur convertie plus un caractère null de fin, qui est ajouté automatiquement. Une mémoire tampon de longueur **_CVTBUFSIZE** est suffisante pour toute valeur à virgule flottante. Si une taille de mémoire tampon de *chiffres* + 1 est utilisée, la fonction ne remplace pas la fin de la mémoire tampon. Veillez donc à fournir une mémoire tampon suffisante pour cette opération. **_gcvt_s** tente de produire des chiffres de *chiffres* au format décimal. Si ce n’est pas le cas, il génère des chiffres de *chiffres* au format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.
 
 En C++, l’utilisation de cette fonction est simplifiée par une surcharge de modèle ; la surcharge peut déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -103,7 +106,7 @@ La version de débogage de cette fonction remplit d’abord la mémoire tampon a
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_gcvt_s.c

@@ -1,12 +1,12 @@
 ---
 title: isprint, iswprint, _isprint_l, _iswprint_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswprint
 - isprint
 - _isprint_l
 - _iswprint_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswprint
 - _istprint
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-ms.openlocfilehash: aab604076f8a2e2eee0eefe20f08f46ae5388a34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 282b72fcec84f8096ce0d54cd114e756aeafbc85
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157196"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953747"
 ---
-# <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint, iswprint, _isprint_l, _iswprint_l
+# <a name="isprint-iswprint-_isprint_l-_iswprint_l"></a>isprint, iswprint, _isprint_l, _iswprint_l
 
 Détermine si un entier représente un caractère imprimable.
 
@@ -74,11 +77,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne différente de zéro si *c* est une représentation particulière d’un caractère imprimable. **isprint** retourne une valeur différente de zéro si *c* est un caractère imprimable, cela inclut le caractère espace (0 x 20 - 0x7E). **iswprint** retourne une valeur différente de zéro si *c* est un caractère large imprimable, cela inclut le caractères larges d’espace. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
+Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un caractère imprimable. **isprint** retourne une valeur différente de zéro si *c* est un caractère imprimable, y compris le caractère espace (0x20-0x7E). **iswprint** retourne une valeur différente de zéro si *c* est un caractère élargi imprimable, y compris le caractère élargi de l’espace. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
-Le résultat de la condition de test pour ces fonctions varie selon le **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions qui n’ont pas la **_l** suffixe utilisent les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; les versions qui ont le **_l** suffixe sont identiques, sauf qu’ils utilisent le paramètres régionaux qui sont passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Le résultat de la condition de test pour ces fonctions dépend du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations [, consultez setlocale, _wsetlocale](setlocale-wsetlocale.md) . Les versions de ces fonctions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; les versions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Le comportement de **isprint** et **_isprint_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Quand une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.
+Le comportement de **isprint** et **_isprint_l** n’est pas défini si *c* n’est pas EOF ni dans la plage 0 à 0xFF, inclus. Quand une bibliothèque CRT de débogage est utilisée et que *c* n’est pas l’une de ces valeurs, les fonctions déclenchent une assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

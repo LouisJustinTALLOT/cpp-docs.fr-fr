@@ -1,11 +1,11 @@
 ---
 title: nearbyint, nearbyintf, nearbyintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - nearbyint
 - nearbyintf
 - nearbyintl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - nearbyint
 - nearbyintf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: 827286c840c6564c8c3f8b351197b0201509d241
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0a7d00c5019dd1e483d555df6db8d9770e61c1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156198"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951390"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -61,23 +64,23 @@ Valeur à arrondir.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne *x*, arrondi à l’entier le plus proche, à l’aide du format d’arrondi actuel, comme indiqué par [fegetround](fegetround-fesetround2.md). Sinon, la fonction peut retourner l’une des valeurs suivantes :
+En cas de réussite, retourne *x*, arrondi à l’entier le plus proche, en utilisant le format d’arrondi actuel comme indiqué par [fegetround](fegetround-fesetround2.md). Sinon, la fonction peut retourner l’une des valeurs suivantes :
 
-|Problème|Retourner|
+|Problème|Renvoie|
 |-----------|------------|
-|*x* = ±INFINITY|±Infinity, non modifiée|
-|*x* = ±0|±0, non modifiée|
-|*x* = NaN|NaN|
+|*x* = ± infini|± INFINI, non modifié|
+|*x* = ±0|± 0, non modifié|
+|*x* = Nan|NaN|
 
-Erreurs ne sont pas signalées via [_matherr](matherr.md); plus précisément, cette fonction ne signale pas les **FE_INEXACT** exceptions.
+Les erreurs ne sont pas signalées par _ [Mather](matherr.md); plus précisément, cette fonction ne signale aucune exception **FE_INEXACT** .
 
 ## <a name="remarks"></a>Notes
 
-La principale différence entre cette fonction et [Imp](rint-rintf-rintl.md) est que cette fonction ne déclenche pas l’exception de virgule flottante inexact.
+La principale différence entre cette fonction et l' [Imprimer](rint-rintf-rintl.md) est que cette fonction ne génère pas l’exception à virgule flottante inexacte.
 
 Étant donné que les valeurs à virgule flottante maximales sont des entiers exacts, cette fonction ne provoque jamais de dépassement par elle-même. Cependant, la sortie peut dépasser la valeur de retour, selon la version de la fonction que vous utilisez.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **nearbyint** qui acceptent et retournent **float** ou **long** **double** paramètres. Dans un programme C, **nearbyint** toujours prend deux valeurs doubles et retourne une valeur double.
+C++autorise la surcharge, de sorte que vous pouvez appeler des surcharges de **nearbyint** qui acceptent et retournent des paramètres **float** ou **long** **double** . Dans un programme C, **nearbyint** accepte toujours deux valeurs de type double et retourne une valeur double.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -90,4 +93,4 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 ## <a name="see-also"></a>Voir aussi
 
 [Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
-[Mathématiques et prise en charge à virgule flottante](../floating-point-support.md)<br/>
+[Prise en charge des fonctions mathématiques et à virgule flottante](../floating-point-support.md)<br/>

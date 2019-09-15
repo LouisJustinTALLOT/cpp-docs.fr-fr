@@ -1,9 +1,9 @@
 ---
 title: ___lc_collate_cp_func
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ___lc_collate_cp_func
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcrt.dll
 - msvcr100.dll
@@ -11,20 +11,23 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ___lc_collate_cp_func
 helpviewer_keywords:
 - ___lc_collate_cp_func
 ms.assetid: 46ccc084-7ac9-4e5d-9138-e12cb5845615
-ms.openlocfilehash: fac8b7ba2e9568dd53509e5cccbb96a6b2f1df8d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: d6a857760bf3b76481cc608ef8f015bca207f35f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738882"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940153"
 ---
-# <a name="lccollatecpfunc"></a>___lc_collate_cp_func
+# <a name="___lc_collate_cp_func"></a>___lc_collate_cp_func
 
 Fonction CRT interne. Récupère la page de code de classement active du thread.
 
@@ -38,13 +41,13 @@ UINT ___lc_codepage_func(void);
 
 Page de code de classement active du thread.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 `___lc_collate_cp_func` est une fonction CRT interne utilisée par d'autres fonctions CRT pour obtenir la page de code de classement active à partir du stockage local des threads pour les données CRT. Ces informations sont également disponibles à l'aide de la fonction [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
 
 Les fonctions CRT internes sont spécifiques à l'implémentation et sont susceptibles d'être modifiées à chaque nouvelle version. Nous vous déconseillons de les utiliser dans votre code.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

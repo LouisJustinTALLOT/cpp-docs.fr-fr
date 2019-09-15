@@ -1,9 +1,9 @@
 ---
 title: mbsinit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbsinit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsinit
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3b1eecc252a2bee83997aa6f2f6f47a96d3321a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331543"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952370"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -46,11 +49,11 @@ Pointeur désignant une variable [mbstate_t](../../c-runtime-library/standard-ty
 
 ## <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si *ps* est **NULL** ou est pas en cours d’une conversion.
+Différent de zéro si *PS* a la **valeur null** ou si elle ne se trouve pas au milieu d’une conversion.
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous utilisez une des fonctions ANSI qui prend un **mbstate_t** pointeur, en passant l’adresse de votre **mbstate_t** retourne des informations sur indique si le dernier octet de la mémoire tampon a été converti.
+Lorsque vous utilisez l’une des fonctions ANSI qui prennent un pointeur **mbstate_t** , le passage de l’adresse de votre **mbstate_t** renvoie des informations indiquant si le dernier octet de la mémoire tampon a été converti.
 
 La page de codes appropriée doit être installée pour prendre en charge vos caractères multioctets.
 

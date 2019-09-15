@@ -1,10 +1,10 @@
 ---
 title: _searchenv_s, _wsearchenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wsearchenv_s
 - _searchenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _searchenv_s
 - _wsearchenv_s
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 606215fb7a2cce7929b29e2035f8e03556ca25e0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356821"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948800"
 ---
-# <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
+# <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s, _wsearchenv_s
 
 Recherche un fichier en utilisant des chemins d’environnement. Ces versions de [getenv, _wgetenv](searchenv-wsearchenv.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -84,14 +87,14 @@ errno_t _wsearchenv_s(
 *filename*<br/>
 Nom du fichier à rechercher.
 
-*varname*<br/>
+*argument*<br/>
 Environnement dans lequel effectuer la recherche.
 
 *pathname*<br/>
 Mémoire tampon destinée à stocker le chemin d’accès complet.
 
 *numberOfElements*<br/>
-Taille de la *pathname* mémoire tampon.
+Taille de la mémoire tampon du *chemin d’accès* .
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -101,23 +104,23 @@ Si *filename* est une chaîne vide, la valeur de retour est **ENOENT**.
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*filename*|*varname*|*pathname*|*numberOfElements*|Valeur de retour|Contenu de *chemin d’accès*|
+|*filename*|*argument*|*pathname*|*numberOfElements*|Valeur de retour|Contenu du *chemin d’accès*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
 |any|any|**NULL**|any|**EINVAL**|N/A|
 |**NULL**|any|any|any|**EINVAL**|inchangé|
 |any|any|any|<= 0|**EINVAL**|inchangé|
 
-Si l’une de ces conditions d’erreur se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retourner **EINVAL**.
+Si l’une de ces conditions d’erreur se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_searchenv_s** routine recherche le fichier cible dans le domaine spécifié. Le *varname* variable peut être n’importe quel environnement ou une variable définie par l’utilisateur qui spécifie une liste de chemins d’accès de répertoire, tel que **chemin d’accès**, **LIB**, et **INCLUDE** . Étant donné que **_searchenv_s** respecte la casse, *varname* doit correspondre à la casse de la variable d’environnement. Si *varname* ne correspond pas au nom d’une variable d’environnement défini dans l’environnement du processus, la fonction retourne zéro et le *pathname* variable reste inchangée.
+La routine **_searchenv_s** recherche le fichier cible dans le domaine spécifié. La variable *varname* peut être n’importe quel environnement ou variable définie par l’utilisateur qui spécifie une liste de chemins d’accès aux répertoires, tels que **path**, **lib**et **include**. Comme **_searchenv_s** respecte la casse, *varname* doit correspondre à la casse de la variable d’environnement. Si *varname* ne correspond pas au nom d’une variable d’environnement définie dans l’environnement du processus, la fonction retourne zéro et la variable de *chemin d’accès* est inchangée.
 
-La routine recherche d’abord le fichier dans le répertoire de travail actif. Si elle ne le trouve pas, elle parcourt ensuite les répertoires spécifiés par la variable d’environnement. Si le fichier cible est dans un de ces répertoires, le chemin d’accès qui vient d’être créé est copié dans *pathname*. Si le *filename* fichier est introuvable, *pathname* contient une chaîne vide se terminant par null.
+La routine recherche d’abord le fichier dans le répertoire de travail actif. Si elle ne le trouve pas, elle parcourt ensuite les répertoires spécifiés par la variable d’environnement. Si le fichier cible se trouve dans l’un de ces répertoires, le chemin d’accès qui vient d’être créé est copié dans le *nom de chemin*d’accès. Si le fichier de *nom* de fichier est introuvable, *pathname* contient une chaîne vide se terminant par null.
 
-Le *pathname* mémoire tampon doit être au moins **_MAX_PATH** caractères pour prendre en compte la longueur totale du nom de chemin d’accès construit. Sinon, **_searchenv_s** risque de saturer le *pathname* tampon, ce qui entraîne un comportement inattendu.
+La mémoire tampon du *chemin d’accès* doit comporter au moins _ **MAX_PATH** caractères pour contenir la longueur totale du nom de chemin d’accès construit. Sinon, **_searchenv_s** peut saturer la mémoire tampon de *chemin d’accès* , ce qui se traduit par un comportement inattendu.
 
-**_wsearchenv_s** est une version à caractères larges de **_searchenv_s**; les arguments de **_wsearchenv_s** sont des chaînes à caractères larges. **_wsearchenv_s** et **_searchenv_s** se comportent de façon identique dans le cas contraire.
+**_wsearchenv_s** est une version à caractères larges de **_searchenv_s**; les arguments de **_wsearchenv_s** sont des chaînes à caractères larges. dans le cas contraire, **_wsearchenv_s** et **_searchenv_s** se comportent de la même façon.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

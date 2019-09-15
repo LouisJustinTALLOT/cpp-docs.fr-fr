@@ -1,10 +1,10 @@
 ---
 title: _fullpath, _wfullpath
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fullpath
 - _wfullpath
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wfullpath
 - fullpath
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: aeacaf581b7f33ee893754c192ae547376ce73ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30e62716c496ebb1a39b53a420f372a6e743c2c0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287640"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956266"
 ---
-# <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
+# <a name="_fullpath-_wfullpath"></a>_fullpath, _wfullpath
 
 Créer un nom de chemin absolu ou complet pour le nom de chemin relatif spécifié.
 
@@ -59,21 +62,21 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>Paramètres
 
 *absPath*<br/>
-Pointeur vers une mémoire tampon contenant le nom de chemin d’accès absolu ou complet, ou **NULL**.
+Pointeur vers une mémoire tampon contenant le nom de chemin d’accès absolu ou complet, ou **null**.
 
 *relPath*<br/>
 Nom de chemin d’accès relatif.
 
 *maxLength*<br/>
-Longueur maximale du tampon du nom de chemin d’accès absolu (*absPath*). Cette durée est exprimée en octets pour **_fullpath** mais en caractères larges (**wchar_t**) pour **_wfullpath**.
+Longueur maximale de la mémoire tampon du nom de chemin d’accès absolu (*absPath*). Cette longueur est en octets pour **_fullpath** , mais en caractères larges (**wchar_t**) pour **_wfullpath**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne un pointeur vers une mémoire tampon contenant le nom de chemin d’accès absolu (*absPath*). S’il existe une erreur (par exemple, si la valeur passée dans *relPath* comprend une lettre de lecteur qui n’est pas valide ou est introuvable, ou si la longueur du nom de chemin d’accès absolu créé (*absPath*) est supérieur à *maxLength*), la fonction retourne **NULL**.
+Chacune de ces fonctions retourne un pointeur vers une mémoire tampon contenant le nom de chemin d’accès absolu (*absPath*). En cas d’erreur (par exemple, si la valeur passée dans *relPath* inclut une lettre de lecteur qui n’est pas valide ou est introuvable, ou si la longueur du nom de chemin d’accès absolu créé (*absPath*) est supérieure à *MaxLength*), la fonction retourne **Valeur null**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_fullpath** développe le nom de chemin d’accès relatif dans *relPath* à son chemin d’accès complet ou absolu et le stocke ce nom dans *absPath*. Si *absPath* est **NULL**, **malloc** est utilisé pour allouer une mémoire tampon de longueur suffisante pour contenir le nom de chemin d’accès. Il incombe à l’appelant de libérer cette mémoire tampon. Un nom de chemin relatif spécifie un chemin vers un autre emplacement à partir de l’emplacement actuel (tel que le répertoire de travail actuel : « . »). Un nom de chemin absolu est l’extension d’un nom de chemin relatif qui indique le chemin complet requis pour atteindre l’emplacement souhaité à partir de la racine du système de fichiers. Contrairement aux **_makepath**, **_fullpath** peut être utilisé pour obtenir le nom de chemin d’accès absolu pour les chemins relatifs (*relPath*) qui incluent «. / « ou ».. / » dans leurs noms.
+La fonction **_fullpath** développe le nom de chemin d’accès relatif dans *relPath* vers son chemin d’accès complet ou absolu et stocke ce nom dans *absPath*. Si *absPath* a la **valeur null**, **malloc** est utilisé pour allouer une mémoire tampon d’une longueur suffisante pour contenir le nom du chemin d’accès. Il incombe à l’appelant de libérer cette mémoire tampon. Un nom de chemin relatif spécifie un chemin vers un autre emplacement à partir de l’emplacement actuel (tel que le répertoire de travail actuel : « . »). Un nom de chemin absolu est l’extension d’un nom de chemin relatif qui indique le chemin complet requis pour atteindre l’emplacement souhaité à partir de la racine du système de fichiers. Contrairement à **_makepath**, **_fullpath** peut être utilisé pour obtenir le nom de chemin d’accès absolu pour les chemins d’accès relatifs (*relPath*) qui incluent « ./ » ou «.. /» dans leur nom.
 
 Par exemple, pour utiliser les routines du runtime C, l’application doit inclure les fichiers d’en-tête qui contiennent les déclarations pour les routines. Chaque instruction include du fichier d’en-tête référence l’emplacement du fichier de manière relative (à partir du répertoire de travail de l’application) :
 
@@ -85,11 +88,11 @@ quand le chemin absolu (emplacement de système de fichiers actuel) du fichier p
 
 `\\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h`
 
-**_fullpath** gère automatiquement les arguments de chaîne de caractères multioctets comme il convient, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d’utilisation. **_wfullpath** est une version à caractères larges de **_fullpath**; les arguments de chaîne pour **_wfullpath** sont des chaînes à caractères larges. **_wfullpath** et **_fullpath** ont un comportement identique, sauf que **_wfullpath** ne gère pas les chaînes de caractères multioctets.
+**_fullpath** gère automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d’utilisation. **_wfullpath** est une version à caractères larges de **_fullpath**; les arguments de chaîne de **_wfullpath** sont des chaînes à caractères larges. **_wfullpath** et **_fullpath** se comportent de la même manière, sauf que **_wfullpath** ne gère pas les chaînes de caractères multioctets.
 
-Si **_DEBUG** et **_CRTDBG_MAP_ALLOC** sont tous deux définis, les appels à **_fullpath** et **_wfullpath** sont remplacés par les appels à **_fullpath_dbg** et **_wfullpath_dbg** pour permettre le débogage des allocations de mémoire. Pour plus d’informations, consultez [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
+Si **_ Debug et _** **CRTDBG_MAP_ALLOC** sont tous deux définis, les appels à **_fullpath** et **_wfullpath** sont remplacés par les appels à **_fullpath_dbg** et **_wfullpath_dbg** pour permettre le débogage des allocations de mémoire. Pour plus d’informations, consultez [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
 
-Cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md)si *maxlen* est inférieure ou égale à 0. Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **NULL**.
+Cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md), si *MaxLen* est inférieur ou égal à 0. Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la **valeur** **EINVAL** et retourne null.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -97,7 +100,7 @@ Cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit d
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfullpath**|**_fullpath**|**_fullpath**|**_wfullpath**|
 
-Si le *absPath* mémoire tampon est **NULL**, **_fullpath** appels [malloc](malloc.md) pour allouer une mémoire tampon et ignore le *maxLength*  argument. Il incombe à l’appelant de libérer cette mémoire tampon (à l’aide de [free](free.md)) selon les besoins. Si le *relPath* argument spécifie un lecteur de disque, le répertoire actuel de ce lecteur est combiné avec le chemin d’accès.
+Si la mémoire tampon *absPath* a la **valeur null**, **_fullpath** appelle [malloc](malloc.md) pour allouer une mémoire tampon et ignore l’argument *MaxLength* . Il incombe à l’appelant de libérer cette mémoire tampon (à l’aide de [free](free.md)) selon les besoins. Si l’argument *relPath* spécifie un lecteur de disque, le répertoire actif de ce lecteur est combiné avec le chemin d’accès.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -108,7 +111,7 @@ Si le *absPath* mémoire tampon est **NULL**, **_fullpath** appels [malloc](mall
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_fullpath.c

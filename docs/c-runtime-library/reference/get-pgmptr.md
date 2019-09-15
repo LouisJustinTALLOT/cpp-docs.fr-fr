@@ -1,9 +1,9 @@
 ---
 title: _get_pgmptr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_pgmptr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_pgmptr
 - _get_pgmptr
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-ms.openlocfilehash: 2d3959a69d85fca38e4d099d3365553f88fd015f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f9a3b19cc7eb1870b87ec46b7923987ec646e32
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287500"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955766"
 ---
-# <a name="getpgmptr"></a>_get_pgmptr
+# <a name="_get_pgmptr"></a>_get_pgmptr
 
-Obtient la valeur actuelle de la **_pgmptr** (variable globale).
+Obtient la valeur actuelle de la variable globale **_pgmptr** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,15 +50,15 @@ errno_t _get_pgmptr(
 ### <a name="parameters"></a>Paramètres
 
 *pValue*<br/>
-Un pointeur vers une chaîne à remplir avec la valeur actuelle de la **_pgmptr** variable.
+Pointeur vers une chaîne à remplir avec la valeur actuelle de la variable **_pgmptr** .
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne zéro si l'opération a réussi et un code d'erreur en cas d'échec. Si *pValue* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **EINVAL**.
+Retourne zéro si l'opération a réussi et un code d'erreur en cas d'échec. Si *pValue* a la **valeur null**, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Appelez uniquement **_get_pgmptr** si votre programme comporte un point d’entrée étroit, tel que **main()** ou **WinMain()**. Le **_pgmptr** (variable globale) contient le chemin d’accès complet au fichier exécutable associé au processus. Pour plus d’informations, consultez [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
+Appelez **_get_pgmptr** uniquement si votre programme a un point d’entrée étroit, par exemple **main ()** ou **WinMain ()** . La variable globale **_pgmptr** contient le chemin d’accès complet au fichier exécutable associé au processus. Pour plus d’informations, consultez [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
 
 ## <a name="requirements"></a>Configuration requise
 

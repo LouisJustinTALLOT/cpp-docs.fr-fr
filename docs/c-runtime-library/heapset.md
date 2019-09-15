@@ -1,9 +1,9 @@
 ---
 title: _heapset
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapset
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr80.dll
 - msvcr110.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcrt.dll
 - msvcr120.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapset
 - heapset
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 41c39914964de74401dcdef847b2c44f623af249
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 65b74798c4b3b513acea0b51ecc0cb7df98391c1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742107"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944306"
 ---
-# <a name="heapset"></a>_heapset
+# <a name="_heapset"></a>_heapset
 
 Vérifie la cohérence minimale des tas et définit les entrées libres sur une valeur spécifiée.
 
@@ -62,13 +65,13 @@ Caractère de remplissage.
 
 En outre, si une erreur se produit, `_heapset` définit `errno` sur `ENOSYS`.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La fonction `_heapset` affiche les emplacements de mémoire disponible ou les nœuds qui ont été remplacés accidentellement.
 
 `_heapset` vérifie la cohérence minimale sur le tas, puis définit chaque octet des entrées libres du tas sur la valeur `fill` . Cette valeur connue indique les emplacements de mémoire du tas qui contiennent des nœuds libres et ceux qui contiennent des données qui ont été écrites accidentellement dans de la mémoire libérée. Si le système d’exploitation ne prend pas en charge `_heapset`(par exemple Windows 98), la fonction resururne `_HEAPOK` et définit `errno` sur `ENOSYS`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|

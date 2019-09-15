@@ -1,11 +1,11 @@
 ---
 title: lgamma, lgammaf, lgammal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - lgamma
 - lgammaf
 - lgammal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lgamma
 - lgammaf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9baf8f0fefb50cea6a5301aac9ffd48ff3cd5bde
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157281"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953370"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -63,22 +66,22 @@ Valeur à calculer.
 
 En cas de réussite, retourne le logarithme népérien de la valeur absolue de la fonction gamma de *x*.
 
-|Problème|Retourner|
+|Problème|Renvoie|
 |-----------|------------|
-|*x* = NaN|NaN|
+|*x* = Nan|NaN|
 |*x* = ±0|+INFINITY|
 |*x*= entier négatif|+INFINITY|
-|±INFINITY|+INFINITY|
+|± INFINI|+INFINITY|
 |Erreur de pôle|+HUGE_VAL, +HUGE_VALF ou +HUGE_VALL|
-|Erreur de plage avec dépassement|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|
+|Erreur de plage avec dépassement|± HUGE_VAL, ± HUGE_VALF ou ± HUGE_VALL|
 
 Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **lgamma** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **lgamma** accepte et retourne toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **lgamma** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **lgamma** accepte et retourne toujours un **double**.
 
-Si x est un nombre rationnel, cette fonction retourne le logarithme de la factorielle de (x - 1).
+Si x est un nombre rationnel, cette fonction retourne le logarithme de la factorielle de (x-1).
 
 ## <a name="requirements"></a>Configuration requise
 

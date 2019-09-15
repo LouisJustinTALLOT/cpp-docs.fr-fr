@@ -1,7 +1,7 @@
 ---
 title: vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsnprintf
 - _vsnprintf_l
 - _vsnwprintf
@@ -12,7 +12,7 @@ apiname:
 - _vsnwprintf;
 - _vsnprintf_l;
 - _vsnwprintf_l;
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -24,7 +24,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntoskrnl.exe
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vsnprintf
 - _vsnwprintf
@@ -52,12 +55,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 2e665562f3dd8ee0be70b4e50068955a91233c60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 721ea80272f7a76e959528ec4114d69bd0e80507
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499077"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945307"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -160,7 +163,7 @@ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-
 
 La fonction **vsnprintf** retourne le nombre de caractères écrits, sans compter le caractère null de fin. Si la taille de la mémoire tampon spécifiée par *Count* n’est pas suffisamment grande pour contenir la sortie spécifiée par *format* et *argptr*, la valeur de retour de **vsnprintf** est le nombre de caractères qui seraient écrits, sans compter la valeur null caractère, si *Count* est suffisamment grand. Si la valeur de retour est supérieure à *Count* -1, la sortie a été tronquée. La valeur de retour -1 indique qu’une erreur de codage s’est produite.
 
-Les fonctions **_vsnprintf** et **_vsnwprintf** retournent le nombre de caractères écrits si le nombre de caractères à écrire est inférieur ou égal à *Count*; Si le nombre de caractères à écrire est supérieur aunombre, ces fonctions retournent-1, ce qui indique que la sortie a été tronquée.
+Les fonctions **_vsnprintf** et **_vsnwprintf** retournent le nombre de caractères écrits si le nombre de caractères à écrire est inférieur ou égal à *Count*; Si le nombre de caractères à écrire est supérieur au *nombre, ces*fonctions retournent-1, ce qui indique que la sortie a été tronquée.
 
 La valeur retournée par toutes ces fonctions n’inclut pas le caractère null de fin, qu’il soit écrit ou pas. Lorsque *Count* est égal à zéro, la valeur retournée est le nombre de caractères que les fonctions écriraient, à l’exclusion de la valeur null de fin. Vous pouvez utiliser ce résultat pour allouer un espace de mémoire tampon suffisant pour la chaîne et son caractère null de fin et rappeler ensuite la fonction pour remplir la mémoire tampon.
 
@@ -178,7 +181,7 @@ Chacune de ces fonctions prend un pointeur désignant une liste d’arguments, m
 >
 > Étant donné que **vsnprintf** écrit toujours la valeur null de fin, le paramètre *Count* peut être égal à la taille de la mémoire tampon.
 
-À compter de UCRT dans Visual Studio 2015 et Windows 10, **vsnprintf** n’est plus identique à **_vsnprintf**. La fonction **vsnprintf** est conforme à la norme C99; **_vnsprintf** est conservé pour la compatibilité descendante avec les versions antérieures de Visual Studio code.
+À compter de UCRT dans Visual Studio 2015 et Windows 10, **vsnprintf** n’est plus identique à **_vsnprintf**. La fonction **vsnprintf** est conforme à la norme C99 ; **_vnsprintf** est conservé pour la compatibilité descendante avec les versions antérieures de Visual Studio code.
 
 Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
@@ -200,7 +203,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 
 Les fonctions **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** et **_vsnwprintf_l** sont spécifiques à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_vsnwprintf.c
@@ -240,9 +243,9 @@ nSize: 9, buff: Hi there!
 nSize: -1, buff: Hi there!
 ```
 
-Le comportement change si vous utilisez à la place vsnprintf avec des paramètres à chaîne étroite. Le paramètre *Count* peut être la taille totale de la mémoire tampon, et la valeur de retour est le nombre de caractères qui auraient été écrits si *Count* était suffisamment grand:
+Le comportement change si vous utilisez à la place vsnprintf avec des paramètres à chaîne étroite. Le paramètre *Count* peut être la taille totale de la mémoire tampon, et la valeur de retour est le nombre de caractères qui auraient été écrits si *Count* était suffisamment grand :
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_vsnprintf.c

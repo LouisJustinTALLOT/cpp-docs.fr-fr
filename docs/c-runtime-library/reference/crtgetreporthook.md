@@ -1,9 +1,9 @@
 ---
 title: _CrtGetReportHook
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtGetReportHook
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtGetReportHook
 - _CrtGetReportHook
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-ms.openlocfilehash: 0b8b666093807c95312d4328ca9b3043ad1e09df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc005dda435b5e11d6c3c886de180ed85b9c2a04
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339414"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942404"
 ---
-# <a name="crtgetreporthook"></a>_CrtGetReportHook
+# <a name="_crtgetreporthook"></a>_CrtGetReportHook
 
 Récupère la fonction de création de rapports définie par le client pour la raccorder au runtime C pour le processus de création de rapports de débogage (version de débogage uniquement).
 
@@ -45,7 +48,7 @@ Retourne la fonction de création de rapports actuelle définie par le client.
 
 ## <a name="remarks"></a>Notes
 
-**_CrtGetReportHook** permet à une application récupérer la fonction de création de rapports actuelle pour la bibliothèque de débogage runtime C processus de création de rapports.
+**_CrtGetReportHook** permet à une application de récupérer la fonction de création de rapports actuelle pour le processus de création de rapports de la bibliothèque de débogage Runtime C.
 
 Pour plus d’informations sur l’utilisation d’autres fonctions d’exécution compatibles avec le raccordement et sur l’écriture de vos propres fonctions de raccordement définies par le client, consultez [Écriture de fonctions de raccordement de débogage](/visualstudio/debugger/debug-hook-function-writing).
 
@@ -63,7 +66,7 @@ Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-run
 
 ## <a name="example"></a>Exemple
 
-Pour obtenir un exemple montrant comment utiliser **_CrtSetReportHook**, consultez [rapport](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report).
+Pour obtenir un exemple d’utilisation de _ **crtsetreporthook**, consultez [rapport](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,11 +1,11 @@
 ---
 title: remquo, remquof, remquol
 ms.date: 04/05/2018
-apiname:
+api_name:
 - remquof
 - remquo
 - remquol
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remquof
 - remquol
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: 4c7e93806600ff674baf186a66662aafdeceeaca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96357dda007e9bf12ddaf6091af47794bfc0630
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357549"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949374"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -59,18 +62,18 @@ Numérateur.
 *denom*<br/>
 Dénominateur.
 
-*quo*<br/>
+*devenu*<br/>
 Pointeur désignant un entier pour stocker une valeur qui a le signe et la grandeur approximative du quotient.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**remquo** renvoie le reste à virgule flottante de *x* / *y*. Si la valeur de *y* est 0.0, **remquo** retourne une valeur NaN silencieuse. Pour plus d’informations sur la représentation d’un NaN silencieux par la **printf** famille, consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** retourne le reste à virgule flottante de *x* / *y*. Si la valeur de *y* est 0,0, **remquo** retourne une valeur NaN calme. Pour plus d’informations sur la représentation d’une NaN calme par la famille **printf** , consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **remquo** fonction calcule le reste à virgule flottante *f* de *x* / *y* tels que *x*   =  *je* \* *y* + *f*, où *je* est un entier , *f* a le même signe que *x*et la valeur absolue de *f* est inférieure à la valeur absolue de *y*.
+La fonction **remquo** calcule le reste à virgule flottante *f* de *x* / *y* , de telle sorte que *x* = *i* \* *y* + *f*, où *i* est un entier, *f* a le même signe que *x*et la valeur absolue de *f* est inférieure à la valeur absolue de *y*.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **remquo** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **remquo** accepte toujours deux **double** arguments et retourne un **double**.
+C++autorise la surcharge, de sorte que vous pouvez appeler des surcharges de **remquo** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **remquo** prend toujours deux arguments **double** et retourne un **double**.
 
 ## <a name="requirements"></a>Configuration requise
 

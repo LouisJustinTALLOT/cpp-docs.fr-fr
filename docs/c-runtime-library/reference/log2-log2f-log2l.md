@@ -1,11 +1,11 @@
 ---
 title: log2, log2f, log2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log2
 - log2l
 - log2f
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,14 +17,17 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: d70d074b13b0f24f1f040ef0e861e073e303ac7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf1734ea2f96fa1c09b3b0d1f43b681fc31c8f9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285937"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953166"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -61,11 +64,11 @@ Valeur dont le logarithme base 2 doit être déterminé.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne LOG2 *x*.
+En cas de réussite, retourne la valeur retournée log2 *x*.
 
 Sinon, peut retourner l’une des valeurs suivantes :
 
-|Problème|Retourner|
+|Problème|Renvoie|
 |-----------|------------|
 |*x* < 0|NaN|
 |*x* = ±0|-INFINITY|
@@ -79,7 +82,7 @@ Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-Si x est un entier, cette fonction retourne essentiellement l’index de base zéro du bit 1 plus significatif de *x*.
+Si x est un entier, cette fonction retourne essentiellement l’index de base zéro du bit le plus significatif 1 de *x*.
 
 ## <a name="requirements"></a>Configuration requise
 

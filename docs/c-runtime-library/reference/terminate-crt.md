@@ -1,9 +1,9 @@
 ---
 title: terminate (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - terminate
 helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: 1f655d328b4d97a2989ad49005ed8a9f44fd9d79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b76ce42817fa1a6b79ef32965fcfa550a508e88d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155626"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946201"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-Appels [abandonner](abort.md) ou une fonction que vous spécifiez à l’aide de **set_terminate**.
+Appelle [Abort](abort.md) ou une fonction que vous spécifiez à l’aide de **set_terminate**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +44,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>Notes
 
-Le **Terminer** fonction est utilisée avec la gestion des exceptions C++ et est appelée dans les cas suivants :
+La fonction **Terminate** est utilisée avec C++ la gestion des exceptions et est appelée dans les cas suivants :
 
 - Gestionnaire catch correspondant introuvable pour une exception C++ levée.
 
@@ -49,7 +52,7 @@ Le **Terminer** fonction est utilisée avec la gestion des exceptions C++ et est
 
 - Pile endommagée après la levée d’une exception.
 
-**mettre fin à** appels [abandonner](abort.md) par défaut. Vous pouvez modifier cette valeur par défaut en écrivant votre propre fonction d’arrêt et en appelant **set_terminate** avec le nom de votre fonction comme argument. **mettre fin à** appelle la dernière fonction donnée comme argument à **set_terminate**. Pour plus d’informations, consultez [Exceptions C++ non gérées](../../cpp/unhandled-cpp-exceptions.md).
+**arrêter** les appels [abandonnés](abort.md) par défaut. Vous pouvez modifier cette valeur par défaut en écrivant votre propre fonction d’arrêt et en appelant **set_terminate** avec le nom de votre fonction comme argument. **Terminate** appelle la dernière fonction donnée comme argument de **set_terminate**. Pour plus d’informations, consultez [Exceptions C++ non gérées](../../cpp/unhandled-cpp-exceptions.md).
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -59,7 +62,7 @@ Le **Terminer** fonction est utilisée avec la gestion des exceptions C++ et est
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```cpp
 // crt_terminate.cpp

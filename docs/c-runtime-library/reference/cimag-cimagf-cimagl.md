@@ -1,11 +1,11 @@
 ---
 title: cimag, cimagf, cimagl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cimag
 - cimagf
 - cimagl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cimagf
 - cimagl
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-ms.openlocfilehash: 6f5067967aa62894abb5316f60074b5125b1cba1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38eef416afb078614ef26ab5d7c8810f46dd9a85
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347598"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939161"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
 
@@ -61,11 +64,11 @@ Nombre complexe.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La partie imaginaire de *z*.
+Partie imaginaire de *z*.
 
 ## <a name="remarks"></a>Notes
 
-Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **cimag** acceptant **_Fcomplex** ou **_Lcomplex** valeurs et retournent **float**ou **long** **double** valeurs. Dans un programme C, **cimag** prend toujours un **_Dcomplex** valeur et retourne un **double** valeur.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **Cimag** qui acceptent des valeurs **_Fcomplex** ou **_Lcomplex** , et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **Cimag** prend toujours une valeur **_Dcomplex** et retourne une valeur **double** .
 
 ## <a name="requirements"></a>Configuration requise
 

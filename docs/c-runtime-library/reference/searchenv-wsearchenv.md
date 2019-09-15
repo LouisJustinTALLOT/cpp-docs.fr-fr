@@ -1,10 +1,10 @@
 ---
 title: _searchenv, _wsearchenv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _searchenv
 - _wsearchenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsearchenv
 - _tsearchenv
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: c1d2361fceec448c98fd9e5a368653aac38c83e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3139ab87335ba581ef65707602c5da1819ce4a1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356769"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948771"
 ---
-# <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
+# <a name="_searchenv-_wsearchenv"></a>_searchenv, _wsearchenv
 
 Utilise des chemins d’accès d’environnement pour rechercher un fichier. Il existe des versions plus sécurisées de ces fonctions. Consultez [_searchenv_s, _wsearchenv_s](searchenv-s-wsearchenv-s.md).
 
@@ -80,7 +83,7 @@ void _wsearchenv(
 *filename*<br/>
 Nom du fichier à rechercher.
 
-*varname*<br/>
+*argument*<br/>
 Environnement dans lequel effectuer la recherche.
 
 *pathname*<br/>
@@ -88,19 +91,19 @@ Mémoire tampon destinée à stocker le chemin d’accès complet.
 
 ## <a name="remarks"></a>Notes
 
-Le **_searchenv** routine recherche le fichier cible dans le domaine spécifié. Le *varname* variable peut être n’importe quel environnement ou une variable définie par l’utilisateur, par exemple, **chemin d’accès**, **LIB**, ou **INCLUDE**, qui spécifie un liste de chemins d’accès de répertoire. Étant donné que **_searchenv** respecte la casse, *varname* doit correspondre à la casse de la variable d’environnement.
+La routine **_searchenv** recherche le fichier cible dans le domaine spécifié. La variable *varname* peut être n’importe quel environnement ou variable définie par l’utilisateur, par exemple **path**, **lib**ou **include**, qui spécifie une liste de chemins d’accès aux répertoires. Comme **_searchenv** respecte la casse, *varname* doit correspondre à la casse de la variable d’environnement.
 
-La routine recherche d'abord le fichier dans le répertoire de travail actuel. Si elle ne le trouve pas, elle parcourt les répertoires spécifiés par la variable d'environnement. Si le fichier cible est dans un de ces répertoires, le chemin d’accès qui vient d’être créé est copié dans *pathname*. Si le *filename* fichier est introuvable, *pathname* contient une chaîne vide se terminant par null.
+La routine recherche d'abord le fichier dans le répertoire de travail actuel. Si elle ne le trouve pas, elle parcourt les répertoires spécifiés par la variable d'environnement. Si le fichier cible se trouve dans l’un de ces répertoires, le chemin d’accès qui vient d’être créé est copié dans le *nom de chemin*d’accès. Si le fichier de *nom* de fichier est introuvable, *pathname* contient une chaîne vide se terminant par null.
 
-Le *pathname* mémoire tampon doit être au moins **_MAX_PATH** caractères pour prendre en compte la longueur totale du nom de chemin d’accès construit. Sinon, **_searchenv** risque de saturer le *pathname* mettre en mémoire tampon et entraîner un comportement inattendu.
+La mémoire tampon du *chemin d’accès* doit comporter au moins _ **MAX_PATH** caractères pour contenir la longueur totale du nom de chemin d’accès construit. Sinon, **_searchenv** peut saturer la mémoire tampon de *chemin d’accès* et provoquer un comportement inattendu.
 
-**_wsearchenv** est une version à caractères larges de **_searchenv**et les arguments de **_wsearchenv** sont des chaînes à caractères larges. **_wsearchenv** et **_searchenv** se comportent de façon identique dans le cas contraire.
+**_wsearchenv** est une version à caractères larges de **_searchenv**, et les arguments de **_wsearchenv** sont des chaînes à caractères larges. dans le cas contraire, **_wsearchenv** et **_searchenv** se comportent de la même façon.
 
 Si *filename* est une chaîne vide, ces fonctions retournent **ENOENT**.
 
-Si *filename* ou *pathname* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Si *filename* ou *pathname* est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
-Pour plus d’informations sur **errno** et les codes d’erreur, consultez [constantes errno](../../c-runtime-library/errno-constants.md).
+Pour plus d’informations **sur les codes d’erreur et d'** erreur, consultez [errno, constantes](../../c-runtime-library/errno-constants.md).
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et plus sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

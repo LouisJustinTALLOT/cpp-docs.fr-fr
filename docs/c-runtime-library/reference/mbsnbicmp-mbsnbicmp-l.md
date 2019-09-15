@@ -1,10 +1,10 @@
 ---
 title: _mbsnbicmp, _mbsnbicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbicmp_l
 - _mbsnbicmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strnicmp
 - _wcsnicmp_l
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 059d0781e465f6491f27fd634bbc4479104bc12f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19ffa4c47f0144ba136607fe5cef09e9bd65374f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331296"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952190"
 ---
-# <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp, _mbsnbicmp_l
+# <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
-Compare **n** octets de caractères multioctets deux chaînes, en ignorant la casse.
+Compare **n** octets de deux chaînes de caractères multioctets et ignore la casse.
 
 > [!IMPORTANT]
 > Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -78,23 +81,23 @@ La valeur de retour indique la relation entre les sous-chaînes.
 
 |Valeur de retour|Description|
 |------------------|-----------------|
-|< 0|*string1* sous-chaîne inférieure à *string2* sous-chaîne.|
-|0|*string1* sous-chaîne identique à *string2* sous-chaîne.|
-|> 0|*string1* sous-chaîne supérieur *string2* sous-chaîne.|
+|< 0|*Chaîne1* sous-chaîne inférieure à *Chaîne2* sous-chaîne.|
+|0|*Chaîne1* sous-chaîne identique à la sous-chaîne *Chaîne2* .|
+|> 0|*Chaîne1* SUBSTRING supérieure à la sous-chaîne *Chaîne2* .|
 
-En cas d’erreur, **_mbsnbicmp** retourne **_NLSCMPERROR**, qui est défini dans String.h et Mbstring.h.
+En cas d’erreur, **_mbsnbicmp** retourne **_NLSCMPERROR**, qui est défini dans String. h et mbstring. h.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbsnbicmp** fonction effectue une comparaison ordinale du premier au maximum *nombre* octets de *string1* et *string2*. La comparaison est effectuée en convertissant chaque caractère en minuscule ; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) est une version de la casse de **_mbsnbicmp**. La comparaison se termine si un caractère null de fin est atteint dans une chaîne avant *nombre* caractères soient comparés. Si les chaînes sont égales quand un caractère null de fin est atteinte dans une chaîne avant *nombre* caractères soient comparés, la chaîne plus courte est moindre.
+La fonction **_mbsnbicmp** effectue une comparaison ordinale d’au plus le premier *nombre* d’octets de *string1* et *Chaîne2*. La comparaison est effectuée en convertissant chaque caractère en minuscules ; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) est une version de **_mbsnbicmp**qui respecte la casse. La comparaison se termine si un caractère null de fin est atteint dans l’une ou l’autre des chaînes avant que les caractères *Count* soient comparés. Si les chaînes sont égales lorsqu’un caractère null de fin est atteint dans l’une ou l’autre des chaînes avant que les caractères *Count* soient comparés, la chaîne la plus courte est inférieure.
 
-**_mbsnbicmp** est similaire à [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), à ceci près qu’elle compare des chaînes jusqu'à *nombre* octets au lieu de caractères.
+**_mbsnbicmp** est similaire à [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), à ceci près qu’elle compare des chaînes jusqu’au *nombre* d’octets au lieu de caractères.
 
-La comparaison de deux chaînes contenant des caractères qui se trouvent entre « Z » et « a » dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») donne des résultats différents selon leur casse. Par exemple, les deux chaînes « ABCDE » et « ABCD ^ « comparent différemment selon si la comparaison est en minuscule (« abcde » > « abcd ^ ») et l’autre sens (« ABCDE » < « ABCD ^ ») si elle est en majuscules.
+La comparaison de deux chaînes contenant des caractères qui se trouvent entre « Z » et « a » dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») donne des résultats différents selon leur casse. Par exemple, les deux chaînes « ABCDe » et « ABCD ^ » sont comparées de façon unidirectionnelle si la comparaison est en minuscules (« ABCDE » > « ABCD ^ ») et l’autre méthode (« ABCDe » < « ABCD ^ ») si elle est en majuscules.
 
 **_mbsnbicmp** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation. Elle n'est pas affectée par les paramètres régionaux actuels.
 
-Si *string1* ou *string2* est un pointeur null, **_mbsnbicmp** appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **_NLSCMPERROR** et définit **errno** à **EINVAL**.
+Si *Chaîne1* ou *Chaîne2* est un pointeur null, **_mbsnbicmp** appelle le gestionnaire de paramètre non valide comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **_NLSCMPERROR** et définit **errno** sur **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

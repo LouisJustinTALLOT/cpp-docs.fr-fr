@@ -1,10 +1,10 @@
 ---
 title: isleadbyte, _isleadbyte_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isleadbyte_l
 - isleadbyte
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b853dcea82c2afea91b2e0545d253786c88ae5e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286916"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954316"
 ---
-# <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
+# <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
 Détermine si un caractère est l’octet de tête d’un caractère multioctet.
 
@@ -56,15 +59,15 @@ Entier à tester.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**isleadbyte** retourne une valeur différente de zéro si l’argument satisfait la condition de test ou 0 si elle n’est pas le cas. Jeu de paramètres régionaux (SBCS), dans les paramètres régionaux « C » et dans un octet caractères **isleadbyte** retourne toujours 0.
+**isleadbyte** retourne une valeur différente de zéro si l’argument satisfait la condition de test ou 0 dans le cas contraire. Dans les paramètres régionaux « C » et dans les paramètres régionaux SBCS (jeu de caractères codés sur un octet), **isleadbyte** retourne toujours 0.
 
 ## <a name="remarks"></a>Notes
 
-Le **isleadbyte** macro retourne une valeur différente de zéro si son argument est le premier octet d’un caractère multioctet. **isleadbyte** produit un résultat significatif pour n’importe quel argument entier compris entre -1 (**EOF**) à **UCHAR_MAX** (0xFF), inclus.
+La macro **isleadbyte** retourne une valeur différente de zéro si son argument est le premier octet d’un caractère multioctet. **isleadbyte** produit un résultat significatif pour tout argument entier compris entre-1 (**EOF**) et **UCHAR_MAX** (0xFF), inclus.
 
-Type d’argument attendu de **isleadbyte** est **int**; si un caractère signé est passé, le compilateur peut le convertir en un entier par extension de signe, produisant des résultats imprévisibles.
+Le type d’argument attendu de **isleadbyte** est **int**; Si un caractère signé est passé, le compilateur peut le convertir en un entier par extension de signe, ce qui produit des résultats imprévisibles.
 
-La version de cette fonction avec la **_l** suffixe est identique, sauf qu’elle utilise les paramètres régionaux passé au lieu des paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux.
+La version de cette fonction avec le suffixe **_L** est identique, à ceci près qu’elle utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

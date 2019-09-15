@@ -1,10 +1,10 @@
 ---
 title: _tell, _telli64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _telli64
 - _tell
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tell
 - telli64
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258570"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946255"
 ---
-# <a name="tell-telli64"></a>_tell, _telli64
+# <a name="_tell-_telli64"></a>_tell, _telli64
 
 Obtiennent la position du pointeur de fichier.
 
@@ -61,13 +64,13 @@ Descripteur de fichier faisant référence au fichier ouvert.
 
 Position actuelle du pointeur de fichier. Sur les appareils incapables de rechercher, la valeur de retour n’est pas définie.
 
-Une valeur de retour de-1 L indique une erreur. Si *gérer* est un descripteur de fichier non valide, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EBADF** et retournent-1 L.
+Une valeur de retour de-1L indique une erreur. Si *handle* est un descripteur de fichier non valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EBADF** et retournent-1L.
 
 Pour plus d’informations sur ce code de retour et sur les autres codes, consultez [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Notes
 
-Le **_tell** fonction obtient la position actuelle du pointeur de fichier (le cas échéant) associée à la *gérer* argument. La position est exprimée en nombre d’octets à partir du début du fichier. Pour le **_telli64** (fonction), cette valeur est exprimée sous la forme d’un entier 64 bits.
+La fonction **_tell** obtient la position actuelle du pointeur de fichier (le cas échéant) associé à l’argument de *handle* . La position est exprimée en nombre d’octets à partir du début du fichier. Pour la fonction **_telli64** , cette valeur est exprimée sous la forme d’un entier 64 bits.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -110,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crttelltxt"></a>Entrée : crt_tell.txt
+### <a name="input-crt_telltxt"></a>Entrée : crt_tell.txt
 
 ```Input
 Line one.

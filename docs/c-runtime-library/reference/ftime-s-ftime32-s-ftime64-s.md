@@ -1,11 +1,11 @@
 ---
 title: _ftime_s, _ftime32_s, _ftime64_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ftime_s
 - _ftime64_s
 - _ftime32_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftime_s
 - _ftime64_s
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-ms.openlocfilehash: 696b461cdb6b8d58bb668b996a99c5d0bb774d6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b45a22afc824a33e81170f954e6f99088b629f83
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287679"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956322"
 ---
-# <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s, _ftime32_s, _ftime64_s
+# <a name="_ftime_s-_ftime32_s-_ftime64_s"></a>_ftime_s, _ftime32_s, _ftime64_s
 
 Obtient l’heure actuelle. Ces versions de [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -57,28 +60,28 @@ errno_t _ftime64_s( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>Paramètres
 
 *timeptr*<br/>
-Pointeur vers un **_timeb**, **__timeb32**, ou **__timeb64** structure.
+Pointeur vers une structure **_timeb**, **__timeb32**ou **__timeb64** .
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro si l'opération a réussi, un code d'erreur en cas d'échec. Si *timeptr* est **NULL**, la valeur de retour est **EINVAL**.
+Zéro si l'opération a réussi, un code d'erreur en cas d'échec. Si *timeptr* a la valeur **null**, la valeur de retour est **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_ftime_s** fonction obtient l’heure locale actuelle et le stocke dans la structure vers laquelle pointée *timeptr*. Le **_timeb**, **__timeb32**, et **__timeb64** structures sont définies dans sys\timeb.h. Elles contiennent quatre champs, qui sont présentés dans le tableau suivant.
+La fonction **_ftime_s** obtient l’heure locale actuelle et la stocke dans la structure vers laquelle pointe *timeptr*. Les structures **_timeb**, **__timeb32**et **__timeb64** sont définies dans SYS\Timeb.h. Elles contiennent quatre champs, qui sont présentés dans le tableau suivant.
 
 |Champ|Description|
 |-|-|
 |**dstflag**|Valeur non nulle si l’heure d’été est en vigueur pour le fuseau horaire local. (Consultez [_tzset](tzset.md) pour une explication de la détermination de l’heure d’été.)|
 |**millitm**|Fraction de seconde en millisecondes.|
 |**time**|Durée en secondes depuis le 1er janvier 1970, minuit (00:00:00), temps universel (UTC).|
-|**timezone**|Différence en minutes, en direction de l’ouest, entre les heures UTC et locale. La valeur de **fuseau horaire** est définie à partir de la valeur de la variable globale **_timezone** (consultez **_tzset**).|
+|**timezone**|Différence en minutes, en direction de l’ouest, entre les heures UTC et locale. La valeur **TimeZone** est définie à partir de la valeur de la variable globale **_timezone** (voir **_tzset**).|
 
-Le **_ftime64_s** (fonction), qui utilise le **__timeb64** structure, permet d’exprimer à 23:59:59 le 31 décembre 3000, UTC ; des dates de création de fichiers tandis que **_ftime32_s** représente uniquement les dates jusqu’à 23:59:59 le 18 janvier 2038, UTC. Le 1er janvier 1970 à minuit est la limite inférieure de la plage de dates pour toutes ces fonctions.
+La fonction **_ftime64_s** , qui utilise la structure **__timeb64** , permet d’exprimer les dates de création de fichiers jusqu’au 31 décembre 3000 à 23:59:59, heure UTC ; tandis que **_ftime32_s** représente uniquement les dates jusqu' 23:59:59 au 18 janvier 2038, heure UTC. Le 1er janvier 1970 à minuit est la limite inférieure de la plage de dates pour toutes ces fonctions.
 
-Le **_ftime_s** fonction est équivalente à **_ftime64_s**, et **_timeb** contient une heure 64 bits, à moins que **_USE_32BIT_TIME_T** est défini, auquel cas l’ancien comportement est appliqué. **_ftime_s** utilise une heure 32 bits et **_timeb** contient une heure 32 bits.
+La fonction **_ftime_s** est équivalente à **_ftime64_s**et **_timeb** contient une heure de 64 bits, sauf si **_USE_32BIT_TIME_T** est défini, auquel cas l’ancien comportement est appliqué. **_ftime_s** utilise une heure de 32 bits et **_timeb** contient une heure de 32 bits.
 
-**_ftime_s** valide ses paramètres. Si reçoit un pointeur null en tant que *timeptr*, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction définit **errno** à **EINVAL**.
+**_ftime_s** valide ses paramètres. Si un pointeur null est passé en tant que *timeptr*, la fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction affecte à **errno** la valeur **EINVAL**.
 
 ## <a name="requirements"></a>Configuration requise
 

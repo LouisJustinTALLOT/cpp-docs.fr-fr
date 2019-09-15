@@ -1,9 +1,9 @@
 ---
 title: _heapchk
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapchk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapchk
 - heapchk
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: bdc0137761664a668d6ef95d739f09501e8290e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 857feb66d89d5dc406042478156483ecb86a2474
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331712"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954818"
 ---
-# <a name="heapchk"></a>_heapchk
+# <a name="_heapchk"></a>_heapchk
 
 Exécute des vérifications de cohérence sur le tas.
 
@@ -45,7 +48,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_heapchk** retourne une des constantes manifestes entières suivantes définies dans Malloc.h.
+**_heapchk** retourne l’une des constantes de manifeste entières suivantes définies dans malloc. h.
 
 |Valeur de retour|Condition|
 |-|-|
@@ -55,11 +58,11 @@ int _heapchk( void );
 | **_HEAPEMPTY** | Le tas n’a pas été initialisé. |
 | **_HEAPOK** | Le tas est cohérent. |
 
-En outre, si une erreur se produit, **_heapchk** définit **errno** à **ENOSYS**.
+En outre, si une erreur se produit, **_heapchk** affecte à **errno** la valeur **ENOSYS**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_heapchk** fonction permet de déboguer les problèmes liés au tas en vérifiant la cohérence minimale du tas. Si le système d’exploitation ne prend pas en charge **_heapchk**(par exemple, Windows 98), la fonction retourne **_HEAPOK** et définit **errno** à **ENOSYS**.
+La fonction **_heapchk** permet de déboguer les problèmes liés au tas en vérifiant une cohérence minimale du tas. Si le système d’exploitation ne prend pas en charge **_heapchk**(par exemple, Windows 98), la fonction retourne **_HEAPOK** et définit **errno** sur **ENOSYS**.
 
 ## <a name="requirements"></a>Configuration requise
 

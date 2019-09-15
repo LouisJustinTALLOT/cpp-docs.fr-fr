@@ -1,9 +1,9 @@
 ---
 title: _fcvt
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fcvt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fcvt
 helpviewer_keywords:
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-ms.openlocfilehash: ae9323e3bb629fd61b35a8c844b00bfcc73235bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a90f8510e734c8459867d323eccccc75e94983d1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334838"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941319"
 ---
-# <a name="fcvt"></a>_fcvt
+# <a name="_fcvt"></a>_fcvt
 
 Convertir un nombre à virgule flottante en chaîne. Une version plus sécurisée de cette fonction est disponible. Consultez [_fcvt_s](fcvt-s.md).
 
@@ -63,21 +66,21 @@ Pointeur désignant l’indicateur de signe stocké.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_fcvt** retourne un pointeur vers la chaîne de chiffres, **NULL** en cas d’erreur.
+**_fcvt** retourne un pointeur vers la chaîne de chiffres, **null** en cas d’erreur.
 
 ## <a name="remarks"></a>Notes
 
-Le **_fcvt** fonction convertit un nombre à virgule flottante en une chaîne de caractères se terminant par null. Le *valeur* paramètre correspond au nombre à virgule flottante à convertir. **_fcvt** stocke les chiffres de *valeur* sous forme de chaîne et ajoute un caractère null ('\0'). Le *nombre* paramètre spécifie le nombre de chiffres à stocker après la virgule décimale. Chiffres en trop sont arrondis à *nombre* place. S’il existe moins de *nombre* chiffres de précision, la chaîne est remplie de zéros.
+La fonction **_fcvt** convertit un nombre à virgule flottante en une chaîne de caractères terminée par le caractère null. Le paramètre de *valeur* est le nombre à virgule flottante à convertir. **_fcvt** stocke les chiffres de *valeur* sous forme de chaîne et ajoute un caractère null (' \ 0 '). Le paramètre *Count* spécifie le nombre de chiffres à stocker après la virgule décimale. Les chiffres excédentaires sont arrondis à la *valeur nombre* d’emplacements. Si le *nombre* de chiffres de précision est inférieur à, la chaîne est remplie de zéros.
 
-Le nombre total de chiffres retournés par **_fcvt** n’excédera pas **_CVTBUFSIZE**.
+Le nombre total de chiffres renvoyés par **_fcvt** ne dépasse pas **_CVTBUFSIZE**.
 
-Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de *valeur* peut être obtenu à partir de *dec* et sign après l’appel. Le *dec* paramètre pointe vers une valeur entière ; celle-ci indique la position de la virgule décimale par rapport au début de la chaîne. Une valeur entière ou zéro indique que la virgule décimale est située à gauche du premier chiffre. Le paramètre *connexion* pointe vers un entier indiquant le signe de *valeur*. L’entier est défini sur 0 si *valeur* est un nombre positif et est défini sur un nombre différent de zéro si *valeur* est un nombre négatif.
+Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de la *valeur* peuvent être obtenus à partir de *Dec* et du signe après l’appel. Le paramètre *Dec* pointe sur une valeur entière ; Cette valeur entière indique la position de la virgule décimale par rapport au début de la chaîne. Une valeur entière ou zéro indique que la virgule décimale est située à gauche du premier chiffre. Le paramètre *signe* pointe sur un entier indiquant le signe de la *valeur*. L’entier est défini sur 0 si la *valeur* est positive et est définie sur un nombre différent de zéro si la *valeur* est négative.
 
-La différence entre **_ecvt** et **_fcvt** est dans l’interprétation de la *nombre* paramètre. **_ecvt** interprète *nombre* comme le nombre total de chiffres dans la chaîne de sortie, tandis que **_fcvt** interprète *nombre* en tant que le nombre de chiffres après le virgule décimale.
+La différence entre **_ecvt** et **_fcvt** est l’interprétation du paramètre *Count* . **_ecvt** interprète le *nombre comme le* nombre total de chiffres dans la chaîne de sortie, tandis que **_fcvt** interprète le nombre comme le nombre de chiffres après la virgule décimale.
 
-**_ecvt** et **_fcvt** utilisent un seul tampon alloué de manière statique pour la conversion. Chaque appel à une de ces routines détruit les résultats de l’appel précédent.
+**_ecvt** et **_fcvt** utilisent une seule mémoire tampon allouée de manière statique pour la conversion. Chaque appel à une de ces routines détruit les résultats de l’appel précédent.
 
-Cette fonction valide ses paramètres. Si *dec* ou *connexion* est **NULL**, ou *nombre* est 0, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et **NULL** est retourné.
+Cette fonction valide ses paramètres. Si *Dec* ou *Sign* est **null**ou si *Count* a la valeur 0, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la **valeur null** est retournée.
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -1,9 +1,9 @@
 ---
 title: _locking
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _locking
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _locking
 helpviewer_keywords:
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4450c511b9d98c31b7e6a777f54f3bd8e0affbb7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157461"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953270"
 ---
-# <a name="locking"></a>_locking
+# <a name="_locking"></a>_locking
 
 Verrouille ou déverrouille les octets d’un fichier.
 
@@ -59,24 +62,24 @@ Nombre d’octets à verrouiller.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_Locking** retourne 0 en cas de réussite. Une valeur de retour de -1 indique un échec, auquel cas [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) est défini sur l’une des valeurs suivantes.
+**_locking** retourne 0 en cas de réussite. Une valeur de retour de-1 indique un échec, auquel cas [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) est défini sur l’une des valeurs suivantes.
 
 |Valeur de la variable errno|Condition|
 |-|-|
 | **EACCES** | Violation de verrouillage (fichier déjà verrouillé ou déverrouillé). |
 | **EBADF** | Descripteur de fichier non valide. |
-| **EDEADLOCK** | Violation de verrouillage. Retourné lorsque la **_LK_LOCK** ou **_LK_RLCK** indicateur est spécifié et le fichier ne peut pas être verrouillé après 10 tentatives. |
+| **EDEADLOCK** | Violation de verrouillage. Renvoyé lorsque l’indicateur **_LK_LOCK** ou **_LK_RLCK** est spécifié et que le fichier ne peut pas être verrouillé après 10 tentatives. |
 | **EINVAL** | Un argument non valide a été donné à **_locking**. |
 
 Si l’échec est dû à un paramètre incorrect, tel qu’un descripteur de fichier non valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_locking** fonction verrouille ou déverrouille *nbytes* octets du fichier spécifié par *fd*. Le verrouillage d’octets dans un fichier empêche l’accès à ces octets par d’autres processus. Tout verrouillage ou déverrouillage commence à la position actuelle du pointeur de fichier et se poursuit sur les *nbytes* octets suivants. Il est possible de verrouiller des octets au-delà de la fin du fichier.
+La fonction **_locking** verrouille ou déverrouille les octets *nbytes* du fichier spécifié par *FD*. Le verrouillage d’octets dans un fichier empêche l’accès à ces octets par d’autres processus. Tout verrouillage ou déverrouillage commence à la position actuelle du pointeur de fichier et se poursuit sur les *nbytes* octets suivants. Il est possible de verrouiller des octets au-delà de la fin du fichier.
 
 *mode* doit être une des constantes manifestes suivantes, qui sont définies dans Locking.h.
 
-|*mode* valeur|Effet|
+|valeur du *mode*|Résultat|
 |-|-|
 | **_LK_LOCK** | Verrouille les octets spécifiés. Si les octets ne peuvent pas être verrouillés, le programme réessaie après 1 seconde. Si, après 10 tentatives, les octets ne peuvent pas être verrouillés, la constante retourne une erreur. |
 | **_LK_NBLCK** | Verrouille les octets spécifiés. Si les octets ne peuvent pas être verrouillés, la constante retourne une erreur. |
@@ -84,7 +87,7 @@ Le **_locking** fonction verrouille ou déverrouille *nbytes* octets du fichier 
 | **_LK_RLCK** | Identique à **_LK_LOCK**. |
 | **_LK_UNLCK** | Déverrouille les octets spécifiés, qui doivent avoir été verrouillés auparavant. |
 
-Vous ne pouvez pas verrouiller plusieurs zones d’un fichier qui ne se chevauchent pas. Une zone ne peut être déverrouillée que si elle a été verrouillée. **_Locking** ne pas fusionner les zones adjacentes ; Si deux zones verrouillées sont adjacentes, chaque région doit être déverrouillée séparément. Le verrouillage des zones doit être de courte durée et celles-ci doivent être déverrouillées avant de fermer un fichier ou de quitter le programme.
+Vous ne pouvez pas verrouiller plusieurs zones d’un fichier qui ne se chevauchent pas. Une zone ne peut être déverrouillée que si elle a été verrouillée. **_locking** ne fusionne pas les régions adjacentes ; Si deux régions verrouillées sont adjacentes, chaque région doit être déverrouillée séparément. Le verrouillage des zones doit être de courte durée et celles-ci doivent être déverrouillées avant de fermer un fichier ou de quitter le programme.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -149,7 +152,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtlockingtxt"></a>Entrée : crt_locking.txt
+### <a name="input-crt_lockingtxt"></a>Entrée : crt_locking.txt
 
 ```Input
 The first thirty bytes of this file will be locked.

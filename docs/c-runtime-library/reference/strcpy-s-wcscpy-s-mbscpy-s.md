@@ -1,12 +1,12 @@
 ---
 title: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 ms.date: 01/22/2019
-apiname:
+api_name:
 - wcscpy_s
 - _mbscpy_s
 - _mbscpy_s_l
 - strcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcpy_s
 - _mbscpy_s
@@ -37,19 +40,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: 9763ba66867faba080ed8729b4fe07b96c56ee0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12c20abc13846388b7a303af4e29de3cd2a60fed
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354169"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957854"
 ---
-# <a name="strcpys-wcscpys-mbscpys-mbscpysl"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
+# <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
 Copie une chaîne. Ces versions de [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscpy_s** et **_mbscpy_s_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy_s** et **_mbscpy_s_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -108,7 +111,7 @@ errno_t _mbscpy_s_l(
 Emplacement de la mémoire tampon de chaîne de destination.
 
 *dest_size*<br/>
-Taille du tampon de chaîne de destination dans **char** unités pour les fonctions étroites et multioctets, et **wchar_t** unités pour les fonctions larges. Cette valeur doit être supérieure à zéro et inférieure ou égale à **RSIZE_MAX**.
+Taille de la mémoire tampon de la chaîne de destination en unités de **caractères** pour les fonctions étroites et multioctets, et unités **wchar_t** pour les fonctions larges. Cette valeur doit être supérieure à zéro et n’est pas supérieure à **RSIZE_MAX**.
 
 *src*<br/>
 Mémoire tampon de chaîne source se terminant par null.
@@ -125,22 +128,22 @@ Zéro en cas de réussite ; erreur dans un autre cas.
 |*dest*|*dest_size*|*src*|Valeur de retour|Contenu de *dest*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL**|any|any|**EINVAL**|non modifié|
-|any|any|**NULL**|**EINVAL**|*dest*[0] défini sur 0|
-|any|0 ou trop petit|any|**ERANGE**|*dest*[0] défini sur 0|
+|any|any|**NULL**|**EINVAL**|*dest* . [0] a la valeur 0|
+|any|0 ou trop petit|any|**ERANGE**|*dest* . [0] a la valeur 0|
 
 ## <a name="remarks"></a>Notes
 
-Le **strcpy_s** fonction copie le contenu dans l’adresse de *src*, y compris le caractère null de fin, à l’emplacement spécifié par *dest*. La chaîne de destination doit être suffisamment grande pour contenir la chaîne source et son caractère null de fin. Le comportement de **strcpy_s** n’est pas défini si les chaînes source et de destination se chevauchent.
+La fonction **strcpy_s** copie le contenu de l’adresse de *src*, y compris le caractère null de fin, à l’emplacement spécifié par *dest*. La chaîne de destination doit être suffisamment grande pour contenir la chaîne source et son caractère null de fin. Le comportement de **strcpy_s** n’est pas défini si les chaînes source et de destination se chevauchent.
 
-**wcscpy_s** est la version à caractères larges de **strcpy_s**, et **_mbscpy_s** est la version à caractères multioctets. Les arguments de **wcscpy_s** sont des caractères larges chaînes ; ceux de **_mbscpy_s** et **_mbscpy_s_l** sont des chaînes de caractères multioctets. Ces fonctions se comportent sinon de façon identique. **_mbscpy_s_l** est identique à **_mbscpy_s** sauf qu’elle utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**wcscpy_s** est la version à caractères larges de **strcpy_s**et **_mbscpy_s** est la version à caractères multioctets. Les arguments de **wcscpy_s** sont des chaînes à caractères larges ; ceux de **_mbscpy_s** et **_mbscpy_s_l** sont des chaînes de caractères multioctets. Ces fonctions se comportent sinon de façon identique. **_mbscpy_s_l** est identique à **_mbscpy_s** , sauf qu’il utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Si *dest* ou *src* est un pointeur null, ou si la destination de chaîne de taille *dest_size* est trop petite, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et définissez **errno** à **EINVAL** lorsque *dest* ou  *src* est un pointeur null, et elles retournent **ERANGE** et définissez **errno** à **ERANGE** lorsque la chaîne de destination est trop petite.
+Si *dest* ou *src* est un pointeur null, ou si la taille de la chaîne de destination *dest_size* est trop petite, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et attribuent à **errno** la valeur **EINVAL** lorsque *dest* ou *src* est un pointeur null, et ils retournent **ERANGE** et attribuent à **errno** la valeur **ERANGE** lorsque la chaîne de destination est trop petite.
 
 Si l'exécution aboutit, la chaîne de destination se termine toujours par un caractère null.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle qui peuvent déduire la longueur de la mémoire tampon automatiquement, ce qui vous évite ainsi d’avoir à spécifier un argument de taille, et elles peuvent remplacer automatiquement les fonctions plus anciennes et moins sécurisées par leurs équivalents plus récents et sécurisés. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Les versions debug des bibliothèques de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -160,7 +163,7 @@ Ces fonctions sont spécifiques à Microsoft. Pour plus d'informations sur la co
 
 ## <a name="example"></a>Exemple
 
-Contrairement au code de qualité production, cet exemple appelle les fonctions de chaîne sécurisée sans vérification des erreurs :
+Contrairement au code de qualité de production, cet exemple appelle les fonctions de chaîne sécurisée sans rechercher les erreurs :
 
 ```C
 // crt_strcpy_s.c
@@ -190,7 +193,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-Lors de la génération de code C++, les versions de modèle peuvent être plus faciles à utiliser.
+Lors de C++ la génération de code, les versions de modèle peuvent être plus faciles à utiliser.
 
 ```cpp
 // crt_wcscpy_s.cpp

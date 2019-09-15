@@ -1,9 +1,9 @@
 ---
 title: wcsrtombs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcsrtombs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcsrtombs
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-ms.openlocfilehash: 46ef195ec4685c327c4b5951ec44e5c363214b59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6640a027b03b7aa0dceaf8e61af6cb43a44d6e0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155327"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945046"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
@@ -64,7 +67,7 @@ Pointe indirectement vers l’emplacement de la chaîne de caractères larges à
 Nombre de caractères à convertir.
 
 *mbstate*<br/>
-Un pointeur vers un **mbstate_t** objet d’état de conversion.
+Pointeur vers un objet d’état de conversion **mbstate_t** .
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -72,19 +75,19 @@ Retourne le nombre d’octets correctement convertis, sans l’octet Null de fin
 
 ## <a name="remarks"></a>Notes
 
-Le **wcsrtombs** fonction convertit une chaîne de caractères larges, à compter de l’état de conversion spécifié contenu dans *mbstate*, à partir des valeurs indirects désignés dans *wcstr*, à l’adresse de *mbstr*. La conversion se poursuit pour chaque caractère jusqu'à ce que : après la rencontre d’un caractère large de fin de null, lorsqu’un caractère non correspondant est rencontré ou lorsque le caractère suivant dépasse la limite contenue dans *nombre*. Si **wcsrtombs** rencontre le caractère null de caractères larges (L '\0') avant ou quand *nombre* se produit, il est converti en un 0 de 8 bits et s’arrête.
+La fonction **wcsrtombs** convertit une chaîne de caractères larges, en commençant dans l’état de conversion spécifié contenu dans *mbstate*, à partir des valeurs indirectes pointées vers *wcstr*, dans l’adresse de *mbstr*. La conversion se poursuit pour chaque caractère jusqu’à : après la détection d’un caractère élargi de fin null, lorsqu’un caractère non correspondant est rencontré ou lorsque le caractère suivant dépasse la limite contenue dans *Count*. Si **wcsrtombs** rencontre le caractère null à caractères larges (L' \ 0 ') avant ou quand *Count* se produit, il le convertit en un 0 8 bits et s’arrête.
 
-Par conséquent, la chaîne de caractères multioctets à *mbstr* est nul uniquement si **wcsrtombs** rencontre un caractère large null lors de la conversion. Si les séquences pointées par *wcstr* et *mbstr* se chevauchent, le comportement de **wcsrtombs** n’est pas défini. **wcsrtombs** est affectée par la catégorie LC_TYPE des paramètres régionaux actuels.
+Par conséquent, la chaîne de caractères multioctets sur *mbstr* est terminée par un caractère NULL uniquement si **wcsrtombs** rencontre un caractère null à caractères larges au cours de la conversion. Si les séquences pointées par *wcstr* et *mbstr* se chevauchent, le comportement de **wcsrtombs** n’est pas défini. **wcsrtombs** est affecté par la catégorie LC_TYPE des paramètres régionaux actuels.
 
-Le **wcsrtombs** diffère de la fonction [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md) par sa capacité à redémarrer. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables.  Par exemple, une application utiliserait **wcsrlen** plutôt que **wcsnlen**, si un appel ultérieur à **wcsrtombs** était utilisé au lieu de **wcstombs**.
+La fonction **wcsrtombs** diffère de [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md) par son redémarrage. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou à d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables.  Par exemple, une application utilise **wcsrlen** plutôt que **wcsnlen**, si un appel ultérieur à **wcsrtombs** était utilisé à la place de **wcstombs**.
 
-Si le *mbstr* argument est **NULL**, **wcsrtombs** retourne la taille en octets de la chaîne de destination. Si *mbstate* a la valeur null, le texte interne **mbstate_t** état de la conversion est utilisé. Si la séquence de caractères *wchar* n’a pas un multioctets correspondants représentation sous forme de caractère, une valeur -1 est retournée et le **errno** a la valeur **EILSEQ**.
+Si l’argument *mbstr* a la **valeur null**, **wcsrtombs** retourne la taille requise en octets de la chaîne de destination. Si *mbstate* a la valeur null, l’état de conversion **mbstate_t** interne est utilisé. Si la séquence de caractères *WCHAR* n’a pas de représentation de caractères multioctets correspondante, la valeur-1 est retournée et le **errno** est défini sur **EILSEQ**.
 
 En C++, cette fonction a une surcharge de modèle qui appelle l'équivalent plus récent et sécurisé de cette fonction. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Exceptions
 
-Le **wcsrtombs** fonction est multithread-safe tant qu’aucune fonction dans le thread actuel n’appelle **setlocale** pendant l’exécution de cette fonction et le *mbstate* n’est pas null.
+La fonction **wcsrtombs** est multithread Safe tant qu’aucune fonction dans le thread actuel n’appelle **setlocale** pendant que cette fonction s’exécute et que *mbstate* n’a pas la valeur null.
 
 ## <a name="example"></a>Exemple
 

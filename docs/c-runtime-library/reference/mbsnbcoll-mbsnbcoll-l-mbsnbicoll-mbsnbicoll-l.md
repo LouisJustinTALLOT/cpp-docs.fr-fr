@@ -1,12 +1,12 @@
 ---
 title: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbicoll_l
 - _mbsnbcoll_l
 - _mbsnbcoll
 - _mbsnbicoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbicoll
 - mbsnbcoll
@@ -42,16 +45,16 @@ helpviewer_keywords:
 - tcsncoll function
 - tcsnicoll function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-ms.openlocfilehash: c18faa3c93969a683b3ee3ef58dd02e1c1ae61f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72c435060a6ac62213a50ba1d9fb9ef7d83fcb33
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156718"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952279"
 ---
-# <a name="mbsnbcoll-mbsnbcolll-mbsnbicoll-mbsnbicolll"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
+# <a name="_mbsnbcoll-_mbsnbcoll_l-_mbsnbicoll-_mbsnbicoll_l"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 
-Compare *n* octets de deux chaînes de caractères multioctets en utilisant les informations de la page de codes multioctets.
+Compare *n* octets de deux chaînes de caractères multioctets à l’aide des informations de page de codes multioctets.
 
 > [!IMPORTANT]
 > Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -96,23 +99,23 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de retour indique la relation entre les sous-chaînes de *string1* et *string2*.
+La valeur de retour indique la relation des sous-chaînes de *Chaîne1* et *Chaîne2*.
 
 |Valeur de retour|Description|
 |------------------|-----------------|
-|< 0|*string1* sous-chaîne inférieure à *string2* sous-chaîne.|
-|0|*string1* sous-chaîne identique à *string2* sous-chaîne.|
-|> 0|*string1* sous-chaîne supérieur *string2* sous-chaîne.|
+|< 0|*Chaîne1* sous-chaîne inférieure à *Chaîne2* sous-chaîne.|
+|0|*Chaîne1* sous-chaîne identique à la sous-chaîne *Chaîne2* .|
+|> 0|*Chaîne1* SUBSTRING supérieure à la sous-chaîne *Chaîne2* .|
 
-Si *string1* ou *string2* est **NULL** ou *nombre* est supérieur à **INT_MAX**, le non valide Gestionnaire de paramètres est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et définissez **errno** à **EINVAL**. Pour utiliser **_NLSCMPERROR**, incluez String.h ou Mbstring.h.
+Si *Chaîne1* ou *Chaîne2* a la **valeur null** ou si le *nombre* est supérieur à **INT_MAX**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et attribuent à **errno** la valeur **EINVAL**. Pour utiliser **_NLSCMPERROR**, incluez String. h ou mbstring. h.
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions assemble, au maximum, la première *nombre* octets dans *string1* et *string2* et retourne une valeur qui indique la relation entre résultant les sous-chaînes de *string1* et *string2*. Si le dernier octet de la sous-chaîne de *string1* ou *string2* est un octet de tête, il n’est pas inclus dans la comparaison ; ces fonctions comparent uniquement des caractères complets dans les sous-chaînes. **_mbsnbicoll** est une version de non-respect de la casse de **_mbsnbcoll**. Comme [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) et [_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **_mbsnbcoll** et **_mbsnbicoll** collate, les deux chaînes de caractères multioctets en fonction de la l’ordre lexicographique spécifié par le multioctets [page de codes](../../c-runtime-library/code-pages.md) en cours d’utilisation.
+Chacune de ces fonctions rassemble, au plus, le premier *nombre* d’octets dans *Chaîne1* et *Chaîne2* et retourne une valeur indiquant la relation entre les sous-chaînes résultantes de *string1* et *string2*. Si le dernier octet de la sous-chaîne de *string1* ou *string2* est un octet de tête, il n’est pas inclus dans la comparaison ; ces fonctions comparent uniquement les caractères complets dans les sous-chaînes. **_mbsnbicoll** est une version de **_mbsnbcoll**qui ne respecte pas la casse. Comme [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) et [_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **_mbsnbcoll** et **_mbsnbicoll** classent les deux chaînes de caractères multioctets en fonction de l’ordre lexicographique spécifié par la [page de codes](../../c-runtime-library/code-pages.md) multioctets en cours d’utilisation.
 
-Pour certaines pages de codes et les jeux de caractères correspondants, l’ordre des caractères dans le jeu de caractères peut différer de l’ordre lexicographique des caractères. Dans les paramètres régionaux « C », ce n’est pas le cas : l’ordre des caractères dans le jeu de caractères ASCII est le même que l’ordre lexicographique des caractères. Cependant, dans certaines pages de code européennes, par exemple, le caractère « a » (valeur 0x61) précède le caractère « ä » (valeur 0xE4) dans le jeu de caractères, alors que d’un point de vue lexicographique, le caractère « ä » précède le caractère « a ». Pour effectuer une comparaison lexicographique de chaînes par octets dans ce cas, utilisez **_mbsnbcoll** plutôt que **_mbsnbcmp**; pour vérifier uniquement l’égalité des chaînes, utilisez **_mbsnbcmp**.
+Pour certaines pages de codes et les jeux de caractères correspondants, l’ordre des caractères dans le jeu de caractères peut différer de l’ordre lexicographique des caractères. Dans les paramètres régionaux « C », ce n’est pas le cas : l’ordre des caractères dans le jeu de caractères ASCII est le même que l’ordre lexicographique des caractères. Cependant, dans certaines pages de code européennes, par exemple, le caractère « a » (valeur 0x61) précède le caractère « ä » (valeur 0xE4) dans le jeu de caractères, alors que d’un point de vue lexicographique, le caractère « ä » précède le caractère « a ». Pour effectuer une comparaison lexicographique de chaînes par octets dans une telle instance, utilisez **_mbsnbcoll** plutôt que **_mbsnbcmp**; pour vérifier uniquement l’égalité des chaînes, utilisez **_mbsnbcmp**.
 
-Étant donné que le **coll** fonctions assembler des chaînes lexicographiquement pour la comparaison, tandis que le **cmp** fonctions testent simplement l’égalité des chaînes, la **coll** sont des fonctions beaucoup plus lent que le correspondantes **cmp** versions. Par conséquent, le **coll** fonctions doivent être utilisées uniquement lorsqu’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et cette différence présente un intérêt pour la comparaison.
+Étant donné que les fonctions **coll** rassemblent les chaînes vue lexicographique à des fins de comparaison, tandis que les fonctions **CMP** testent simplement l’égalité des chaînes, les fonctions **coll** sont beaucoup plus lentes que les versions **CMP** correspondantes. Par conséquent, les fonctions **coll** ne doivent être utilisées que s’il existe une différence entre l’ordre du jeu de caractères et l’ordre des caractères lexicographique dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

@@ -1,9 +1,9 @@
 ---
 title: _set_new_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_new_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_new_handler
 - set_new_handler
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1f340887efd657dd9ff9bf219534d77fdd90aa3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356496"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948471"
 ---
-# <a name="setnewhandler"></a>_set_new_handler
+# <a name="_set_new_handler"></a>_set_new_handler
 
 Transfère le contrôle à votre mécanisme de gestion des erreurs si l’opérateur **new** ne peut pas allouer de mémoire.
 
@@ -49,17 +52,17 @@ Pointeur vers la fonction de gestion de la mémoire fournie par l'application. L
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers la précédente fonction inscrite par des exceptions **_set_new_handler**, de sorte que la fonction précédente peut être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **NULL**.
+Retourne un pointeur vers la fonction de gestion des exceptions précédente enregistrée par **_set_new_handler**, afin que la fonction précédente puisse être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **null**.
 
 ## <a name="remarks"></a>Notes
 
-Le C++ **_set_new_handler** fonction spécifie une fonction de gestion des exceptions qui prend le contrôle si le **nouveau** opérateur ne parvient pas à allouer de la mémoire. Si **nouveau** échoue, le système runtime appelle automatiquement la fonction de gestion des exceptions a été passée en tant qu’argument à **_set_new_handler**. **_PNH**, défini dans New.h, est un pointeur vers une fonction qui retourne le type **int** et prend un argument de type **size_t**. Utilisez **size_t** pour spécifier la quantité d’espace à allouer.
+La C++ fonction **_set_new_handler** spécifie une fonction de gestion des exceptions qui gagne le contrôle si l’opérateur **New** ne parvient pas à allouer de la mémoire. Si **New** échoue, le système Runtime appelle automatiquement la fonction de gestion des exceptions qui a été passée comme argument à **_set_new_handler**. **_PNH**, défini dans New. h, est un pointeur vers une fonction qui retourne le type **int** et accepte un argument de type **size_t**. Utilisez **size_t** pour spécifier la quantité d’espace à allouer.
 
 Il n'existe pas de gestionnaire par défaut.
 
-**_set_new_handler** est essentiellement un schéma du garbage collection. Le système runtime réexécute l'allocation chaque fois que la fonction retourne une valeur différente de zéro, et échoue si votre fonction retourne 0.
+**_set_new_handler** est essentiellement un schéma de garbage collection. Le système runtime réexécute l'allocation chaque fois que la fonction retourne une valeur différente de zéro, et échoue si votre fonction retourne 0.
 
-Une occurrence de la **_set_new_handler** (fonction) dans un programme enregistre la fonction de gestion des exceptions spécifiée dans la liste d’arguments avec le système d’exécution :
+Une occurrence de la fonction **_set_new_handler** dans un programme enregistre la fonction de gestion des exceptions spécifiée dans la liste d’arguments avec le système Runtime :
 
 ```cpp
 // set_new_handler1.cpp
@@ -77,7 +80,7 @@ int main( void )
 }
 ```
 
-Vous pouvez enregistrer l’adresse de la fonction dernière passée à la **_set_new_handler** de fonction et la rétablir ultérieurement :
+Vous pouvez enregistrer la dernière adresse de fonction passée à la fonction **_set_new_handler** et la rétablir ultérieurement :
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -88,7 +91,7 @@ Vous pouvez enregistrer l’adresse de la fonction dernière passée à la **_se
    // . . .
 ```
 
-La fonction C++ [_set_new_mode](set-new-mode.md) définit le mode de nouveau gestionnaire pour [malloc](malloc.md). Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** consiste à appeler la routine de nouveau gestionnaire telle que définie par **_set_new_handler**. Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut afin que, lorsque **malloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que le **nouveau** opérateur Quand elle échoue pour la même raison. Pour substituer la valeur par défaut, appelez :
+La fonction C++ [_set_new_mode](set-new-mode.md) définit le mode de nouveau gestionnaire pour [malloc](malloc.md). Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé la routine de nouveau gestionnaire telle qu’elle est définie par **_set_new_handler**. Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, lorsque **malloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que l’opérateur **New** lorsqu’il échoue pour la même raison. Pour substituer la valeur par défaut, appelez :
 
 ```cpp
 _set_new_mode(1);
@@ -96,11 +99,11 @@ _set_new_mode(1);
 
 au début de votre programme, ou créez un lien avec Newmode.obj.
 
-Si défini par l’utilisateur `operator new` est fourni, les nouvelles fonctions du gestionnaire ne sont pas automatiquement appelées en cas d’échec.
+Si un défini par `operator new` l’utilisateur est fourni, les nouvelles fonctions du gestionnaire ne sont pas automatiquement appelées en cas d’échec.
 
-Pour plus d’informations, voir [new](../../cpp/new-operator-cpp.md) et [delete](../../cpp/delete-operator-cpp.md) dans la *Référence du langage C++*.
+Pour plus d’informations, voir [new](../../cpp/new-operator-cpp.md) et [delete](../../cpp/delete-operator-cpp.md) dans la *Référence du langage C++* .
 
-Il existe un seul **_set_new_handler** gestionnaire pour tout dynamiquement DLL ou exécutables liés ; même si vous appelez **_set_new_handler** votre gestionnaire peut être remplacé par un autre, ou que vous remplacez un gestionnaire défini par une autre DLL ou un exécutable.
+Il existe un seul gestionnaire **_set_new_handler** pour toutes les dll ou tous les exécutables liés de manière dynamique ; même si vous appelez **_set_new_handler** , votre gestionnaire peut être remplacé par un autre ou vous pouvez remplacer un gestionnaire défini par une autre dll ou un autre exécutable.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -110,7 +113,7 @@ Il existe un seul **_set_new_handler** gestionnaire pour tout dynamiquement DLL 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Dans cet exemple, lorsque l'allocation échoue, le contrôle est transféré à MyNewHandler. L'argument passé à MyNewHandler est le nombre d'octets demandés. La valeur retournée par MyNewHandler est un indicateur qui spécifie si l'allocation doit être réexécutée : une valeur autre que zéro indique que l'allocation doit être réexécutée, une valeur zéro indique que l'allocation a échoué.
 

@@ -1,12 +1,12 @@
 ---
 title: _tempnam, _wtempnam, tmpnam, _wtmpnam
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtempnam
 - _wtmpnam
 - tmpnam
 - _tempnam
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wtempnam
 - _wtmpnam
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-ms.openlocfilehash: 0e8e11182948e9bccf1c55685cc7c3d55ff697c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9fd1eb9f2f718afec5b7d5555145fcd7e5cc17cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500767"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957516"
 ---
 # <a name="_tempnam-_wtempnam-tmpnam-_wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 
@@ -94,7 +97,7 @@ Chacune de ces fonctions retourne le nom d’un fichier qui n’existe pas actue
 
 Pour **tmpnam**, vous pouvez stocker ce nom de fichier généré dans *Str*. Si *Str* a la **valeur null**, **tmpnam** laisse le résultat dans une mémoire tampon statique interne. Par conséquent, tous les appels suivants détruisent cette valeur. Le nom généré par **tmpnam** se compose d’un nom de fichier généré par le programme et, après le premier appel à **tmpnam**, une extension de fichier de nombres séquentiels dans la base 32 (. 1-4. vvu, quand **TMP_MAX** dans stdio. H est 32 767).
 
-**_tempnam** génère un nom de fichier unique pour un répertoire choisi par les règles suivantes:
+**_tempnam** génère un nom de fichier unique pour un répertoire choisi par les règles suivantes :
 
 - Si la variable d’environnement TMP est définie avec un nom de répertoire valide, des noms de fichiers uniques sont générés pour le répertoire spécifié par TMP.
 
@@ -102,7 +105,7 @@ Pour **tmpnam**, vous pouvez stocker ce nom de fichier généré dans *Str*. Si 
 
 - Si la variable d’environnement TMP n’est pas définie ou si elle est définie sur le nom d’un répertoire qui n’existe pas, et si *dir* a la valeur **null** ou est défini sur le nom d’un répertoire qui n’existe pas, **_tempnam** utilise le répertoire de travail actuel dans le gène Évaluez les noms uniques. Actuellement, si TMP et *dir* spécifient tous deux des noms de répertoires qui n’existent pas, l’appel de la fonction **_tempnam** échoue.
 
-Le nom retourné par **_tempnam** sera une concaténation de *préfixe* et un nombre séquentiel, qui sera combiné pour créer un nom de fichier unique pour le répertoire spécifié. **_tempnam** génère des noms de fichiers qui n’ont pas d’extension. **_tempnam** utilise [malloc](malloc.md) pour allouer de l’espace pour le nom de fichier; le programme est chargé de libérer cet espace lorsqu’il n’est plus nécessaire.
+Le nom retourné par **_tempnam** sera une concaténation de *préfixe* et un nombre séquentiel, qui sera combiné pour créer un nom de fichier unique pour le répertoire spécifié. **_tempnam** génère des noms de fichiers qui n’ont pas d’extension. **_tempnam** utilise [malloc](malloc.md) pour allouer de l’espace pour le nom de fichier ; le programme est chargé de libérer cet espace lorsqu’il n’est plus nécessaire.
 
 **_tempnam** et **tmpnam** gèrent automatiquement les arguments de chaîne de caractères multioctets comme il convient, en identifiant les séquences de caractères multioctets en fonction de la page de codes OEM obtenue du système d’exploitation. **_wtempnam** est une version à caractères larges de **_tempnam**; les arguments et la valeur de retour de **_wtempnam** sont des chaînes à caractères larges. **_wtempnam** et **_tempnam** se comportent de la même manière, sauf que **_wtempnam** ne gère pas les chaînes de caractères multioctets. **_wtmpnam** est une version à caractères larges de **tmpnam**; l’argument et la valeur de retour de **_wtmpnam** sont des chaînes à caractères larges. **_wtmpnam** et **tmpnam** se comportent de la même manière, sauf que **_wtmpnam** ne gère pas les chaînes de caractères multioctets.
 
@@ -125,7 +128,7 @@ Si **_ Debug et _** **CRTDBG_MAP_ALLOC** sont définis, **_tempnam** et **_wtemp
 
 Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_tempnam.c

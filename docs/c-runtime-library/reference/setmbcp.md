@@ -1,9 +1,9 @@
 ---
 title: _setmbcp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _setmbcp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _setmbcp
 - setmbcp
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: c1f4967baa5fda68a7df33bcd08935dca23fab16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1db6a83bd864180d513f61cf255bd862283a6cd0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356457"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948211"
 ---
-# <a name="setmbcp"></a>_setmbcp
+# <a name="_setmbcp"></a>_setmbcp
 
 Définit une nouvelle page de codes multioctets.
 
@@ -50,11 +53,11 @@ Nouveau paramètre de page de codes pour les routines multioctets indépendantes
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne 0 si la page de codes est correctement définie. Si une valeur de page de code non valide est fournie pour *page de codes*, retourne -1 et le paramètre de page de code est inchangé. Jeux **errno** à **EINVAL** si un échec d’allocation de mémoire se produit.
+Retourne 0 si la page de codes est correctement définie. Si une valeur de page de codes non valide est fournie pour *codepage*, retourne-1 et le paramètre de la page de codes est inchangé. Définit **errno** sur **EINVAL** si un échec d’allocation de mémoire se produit.
 
 ## <a name="remarks"></a>Notes
 
-Le **_setmbcp** fonction spécifie une nouvelle page de codes multioctets. Par défaut, le système de runtime définit automatiquement la page de codes multioctets comme étant la page de codes ANSI par défaut du système. Le paramètre de page de codes multioctets influe sur toutes les routines multioctets qui ne sont pas dépendantes des paramètres régionaux. Toutefois, il est possible d’indiquer à **_setmbcp** à utiliser la page de codes définie pour les paramètres régionaux (consultez la liste suivante des constantes manifestes et associés les résultats de comportement). Pour obtenir la liste des routines multioctets qui dépendent de la page de codes des paramètres régionaux et non de la page de codes multioctets, consultez [Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
+La fonction **_setmbcp** spécifie une nouvelle page de codes multioctets. Par défaut, le système de runtime définit automatiquement la page de codes multioctets comme étant la page de codes ANSI par défaut du système. Le paramètre de page de codes multioctets influe sur toutes les routines multioctets qui ne sont pas dépendantes des paramètres régionaux. Toutefois, il est possible d’ordonner à **_setmbcp** d’utiliser la page de codes définie pour les paramètres régionaux actuels (consultez la liste suivante des constantes de manifeste et les résultats de comportement associés). Pour obtenir la liste des routines multioctets qui dépendent de la page de codes des paramètres régionaux et non de la page de codes multioctets, consultez [Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
 
 La page de codes multioctets a aussi un impact sur le traitement des caractères multioctets assuré par les routines de bibliothèque Runtime suivantes :
 
@@ -64,17 +67,17 @@ La page de codes multioctets a aussi un impact sur le traitement des caractères
 |[_fullpath](fullpath-wfullpath.md)|[fonctions _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 |[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 
-En outre, toutes les routines de bibliothèque Runtime qui reçoivent des caractères multioctets *argv* ou *envp* arguments en tant que paramètres de programme (tel que le **_exec** et **_spawn** familles) traitent ces chaînes en fonction de la page de codes multioctets. Par conséquent, ces routines sont également affectés par un appel à **_setmbcp** qui modifie la page de codes multioctets.
+En outre, toutes les routines de la bibliothèque Runtime qui reçoivent des arguments de programme *argv* ou *envp* à caractères multioctets comme paramètres (tels que les familles **_exec** et **_spawn** ) traitent ces chaînes en fonction de la page de codes multioctets. Par conséquent, ces routines sont également affectées par un appel à **_setmbcp** qui modifie la page de codes multioctets.
 
-Le *page de codes* argument peut être défini à une des valeurs suivantes :
+L’argument *codepage* peut être défini sur l’une des valeurs suivantes :
 
-- **_MB_CP_ANSI** page de codes ANSI de l’utilisation est obtenu à partir du système d’exploitation au démarrage du programme.
+- **_MB_CP_ANSI** Utilisez la page de codes ANSI obtenue à partir du système d’exploitation au démarrage du programme.
 
-- **_MB_CP_LOCALE** utilisez page de codes de paramètres régionaux actuels obtenu à partir d’un appel précédent à [setlocale](setlocale-wsetlocale.md).
+- **_MB_CP_LOCALE** Utilisez la page de codes des paramètres régionaux actuels obtenue à partir d’un appel précédent à [setlocale](setlocale-wsetlocale.md).
 
-- **_MB_CP_OEM** page de codes OEM de l’utilisation est obtenu à partir du système d’exploitation au démarrage du programme.
+- **_MB_CP_OEM** Utilisez la page de codes OEM obtenue à partir du système d’exploitation au démarrage du programme.
 
-- **_MB_CP_SBCS** utilise la page de codes à octet unique. Quand la page de codes est définie sur **_MB_CP_SBCS**, une routine telle que [_ismbblead](ismbblead-ismbblead-l.md) retourne toujours false.
+- **_MB_CP_SBCS** Utilisez la page de codes sur un octet. Lorsque la page de codes est définie sur **_MB_CP_SBCS**, une routine telle que [_ismbblead](ismbblead-ismbblead-l.md) retourne toujours false.
 
 - N’importe quelle autre valeur de page de codes valide, que ce soit ANSI, OEM ou toute autre page de codes prise en charge par le système d’exploitation (à l’exception de UTF-7 et UTF-8, qui ne sont pas pris en charge).
 

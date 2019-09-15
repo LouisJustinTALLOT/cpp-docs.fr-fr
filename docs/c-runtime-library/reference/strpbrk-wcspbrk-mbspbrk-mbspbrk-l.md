@@ -1,12 +1,12 @@
 ---
 title: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbspbrk
 - wcspbrk
 - _mbspbrk_l
 - strpbrk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrpbrk
 - _mbspbrk
@@ -44,14 +47,14 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: 059b0659a8088783c6d169288de486b41a6e8d82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6b18ab6dabfb1181f3e65507d27f6afe98a5b9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209565"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947159"
 ---
-# <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
+# <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
 Analyse des chaînes à la recherche de caractères présents dans les jeux de caractères spécifiés.
 
@@ -127,21 +130,21 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur désignant la première occurrence de n’importe quel caractère à partir de *strCharSet* dans *str*, ou un pointeur NULL si les deux arguments de chaîne n’ont aucun caractère en commun.
+Retourne un pointeur vers la première occurrence d’un caractère de *strCharSet* dans *Str*, ou un pointeur null si les deux arguments de chaîne n’ont pas de caractères en commun.
 
 ## <a name="remarks"></a>Notes
 
-Le `strpbrk` fonction retourne un pointeur désignant la première occurrence d’un caractère dans *str* qui appartient au jeu de caractères dans *strCharSet*. La recherche n’inclut pas le caractère Null de fin.
+La `strpbrk` fonction retourne un pointeur vers la première occurrence d’un caractère dans *Str* qui appartient au jeu de caractères dans *strCharSet*. La recherche n’inclut pas le caractère Null de fin.
 
 `wcspbrk` et `_mbspbrk` sont des versions à caractères larges et à caractères multioctets de `strpbrk`. Les arguments et la valeur de retour de `wcspbrk` sont des chaînes de caractères larges ; ceux de `_mbspbrk` sont des chaînes de caractères multioctets.
 
-`_mbspbrk` valide ses paramètres. Si *str* ou *strCharSet* est NULL, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `_mbspbrk` renvoie la valeur NULL et définit `errno` à EINVAL. `strpbrk` et `wcspbrk` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
+`_mbspbrk` valide ses paramètres. Si *Str* ou *strCharSet* a la valeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se `_mbspbrk` poursuivre, retourne null `errno` et définit sur EINVAL. `strpbrk` et `wcspbrk` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
 
 `_mbspbrk` est similaire à `_mbscspn`, sauf que `_mbspbrk` retourne un pointeur et non une valeur de type [size_t](../../c-runtime-library/standard-types.md).
 
-En C, ces fonctions prennent une **const** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non -**const** retourne un pointeur vers non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS est défini si les deux le **const** et non-**const** versions de ces fonctions sont disponibles. Si vous avez besoin non -**const** comportement pour les deux C++ surcharges, définissez le symbole _CONST_RETURN.
+En C, ces fonctions acceptent un pointeur **const** pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non**const** retourne un pointeur vers non**const**. La macro _CRT_CONST_CORRECT_OVERLOADS est définie si les versions **const** et non**const** de ces fonctions sont disponibles. Si vous avez besoin du comportement non**const** pour les C++ deux surcharges, définissez le symbole _CONST_RETURN.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie LC_CTYPE des paramètres régionaux ; Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le **_l** utilisez suffixe les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le **_l** suffixe est identique, sauf qu’elle utilise les paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie LC_CTYPE des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_L** utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le suffixe **_L** est identique, à ceci près qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

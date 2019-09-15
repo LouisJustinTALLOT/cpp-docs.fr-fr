@@ -1,12 +1,12 @@
 ---
 title: scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 ms.date: 03/26/2019
-apiname:
+api_name:
 - wscanf_s
 - _wscanf_s_l
 - scanf_s
 - _scanf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wscanf_s
 - _tscanf_s_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-ms.openlocfilehash: 28697cac20181c3dda0581c7486ebb673aec1241
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e869f9e0d4fa87c87878ffea987e4b6d85a75616
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357081"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948876"
 ---
-# <a name="scanfs-scanfsl-wscanfs-wscanfsl"></a>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
+# <a name="scanf_s-_scanf_s_l-wscanf_s-_wscanf_s_l"></a>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 
 Lit les données mises en forme du flux d'entrée standard. Ces versions de [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -89,38 +92,38 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus mais pas assignés. Une valeur de retour 0 indique aucune champs ont été affectées. La valeur de retour est **EOF** pour une erreur, ou si le caractère de fin de fichier ou le caractère de fin de chaîne est introuvable dans la première tentative de lecture d’un caractère. Si *format* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **scanf_s** et **wscanf_s** retourner **EOF** et définissez **errno** à **EINVAL**.
+Retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus mais qui n’ont pas été assignés. Une valeur de retour de 0 indique qu’aucun champ n’a été assigné. La valeur de retour est **EOF** pour une erreur, ou si le caractère de fin de fichier ou le caractère de fin de chaîne est trouvé lors de la première tentative de lecture d’un caractère. Si *format* est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **scanf_s** et **wscanf_s** retournent **EOF** et attribuent à **errno** la valeur **EINVAL**.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **scanf_s** fonction lit les données à partir du flux d’entrée standard, **stdin**et l’écrit dans *argument*. Chaque *argument* doit être un pointeur vers un type de variable qui correspond au spécificateur de type dans *format*. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+La fonction **scanf_s** lit les données du flux d’entrée standard, **stdin**, et les écrit dans un *argument*. Chaque *argument* doit être un pointeur vers un type de variable qui correspond au spécificateur de type dans le *format*. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
-**wscanf_s** est une version à caractères larges de **scanf_s**; le *format* l’argument de **wscanf_s** est une chaîne de caractères larges. **wscanf_s** et **scanf_s** se comportent comme si le flux est ouvert en mode ANSI. **scanf_s** ne prend actuellement en charge d’entrée à partir d’un flux de données UNICODE.
+**wscanf_s** est une version à caractères larges de **scanf_s**; l’argument *format* de **wscanf_s** est une chaîne de caractères larges. **wscanf_s** et **scanf_s** se comportent de la même manière si le flux est ouvert en mode ANSI. **scanf_s** ne prend pas actuellement en charge l’entrée d’un flux Unicode.
 
-Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, à ceci près qu’ils utilisent le *paramètres régionaux* paramètre au lieu de paramètres régionaux du thread actuel.
+Les versions de ces fonctions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres *régionaux* à la place des paramètres régionaux du thread actuel.
 
-Contrairement aux **scanf** et **wscanf**, **scanf_s** et **wscanf_s** nécessaire de spécifier les tailles des mémoires tampon pour certains paramètres. Spécifier les tailles pour toutes les **c**, **C**, **s**, **S**, ou jeu de contrôles de chaîne **[]** paramètres. La taille du tampon en caractères est passée comme paramètre supplémentaire. Il suit immédiatement le pointeur vers la mémoire tampon ou d’une variable. Par exemple, si vous lisez une chaîne, la taille du tampon pour cette chaîne est passée comme suit :
+Contrairement à **scanf** et **wscanf**, **scanf_s** et **wscanf_s** nécessitent que vous spécifiiez des tailles de mémoire tampon pour certains paramètres. Spécifiez les tailles pour tous les paramètres **c**, **c**, **s** **, ou**jeu de contrôle de chaîne **[]** . La taille de la mémoire tampon en caractères est passée en tant que paramètre supplémentaire. Il suit immédiatement le pointeur vers la mémoire tampon ou la variable. Par exemple, si vous lisez une chaîne, la taille de la mémoire tampon pour cette chaîne est passée comme suit :
 
 ```C
 char s[10];
 scanf_s("%9s", s, (unsigned)_countof(s)); // buffer size is 10, width specification is 9
 ```
 
-La taille du tampon inclut le terminal null de fin. Vous pouvez utiliser un champ de spécification de largeur pour garantir le jeton qui est lu s’adapte à la mémoire tampon. Lorsqu’un jeton est trop grand pour tenir, rien n’est écrit dans la mémoire tampon sauf s’il existe une spécification de largeur.
+La taille de la mémoire tampon comprend le terminal null. Vous pouvez utiliser un champ de spécification de largeur pour vous assurer que le jeton lu s’intègre dans la mémoire tampon. Lorsqu’un jeton est trop grand pour tenir, rien n’est écrit dans la mémoire tampon, sauf s’il existe une spécification de largeur.
 
 > [!NOTE]
-> Le paramètre de taille est de type **non signé**, et non **size_t**. Utilisez un cast statique pour convertir un **size_t** valeur **non signé** pour 64 bits des configurations de build.
+> Le paramètre size est de type **unsigned**, et non **size_t**. Utilisez un cast statique pour convertir une valeur **size_t** en **non signée** pour les configurations de build 64 bits.
 
-Le paramètre de taille de mémoire tampon décrit le nombre maximal de caractères, et non en octets. Dans cet exemple, la largeur du type de mémoire tampon ne correspond pas à la largeur du spécificateur de format.
+Le paramètre taille de la mémoire tampon décrit le nombre maximal de caractères, pas les octets. Dans cet exemple, la largeur du type de mémoire tampon ne correspond pas à la largeur du spécificateur de format.
 
 ```C
 wchar_t ws[10];
 wscanf_s(L"%9S", ws, (unsigned)_countof(ws));
 ```
 
-Le **S** spécificateur de format signifie utiliser la largeur des caractères « inverse » à la largeur par défaut pris en charge par la fonction. La largeur des caractères est le seul octet, mais la fonction prend en charge des caractères codés. Cet exemple lit une chaîne de jusqu'à neuf caractères de largeur de l’octet unique et les place dans une mémoire tampon de double-caractère octets. Les caractères sont traités comme des valeurs codées sur un octet. Les deux premiers caractères sont stockés dans `ws[0]`, alors que les deux derniers sont stockés dans `ws[1]`, et ainsi de suite.
+Le spécificateur de format **S** signifie utiliser la largeur de caractère « opposé » à la largeur par défaut prise en charge par la fonction. La largeur des caractères est un octet unique, mais la fonction prend en charge les caractères codés sur deux octets. Cet exemple lit une chaîne allant jusqu’à neuf caractères codés sur un octet, et les place dans une mémoire tampon de caractères codés sur deux octets. Les caractères sont traités comme des valeurs codées sur un octet. Les deux premiers caractères sont stockés dans `ws[0]`, alors que les deux derniers sont stockés dans `ws[1]`, et ainsi de suite.
 
 Cet exemple lit un caractère unique :
 
@@ -129,7 +132,7 @@ char c;
 scanf_s("%c", &c, 1);
 ```
 
-Lors de la lecture de plusieurs caractères pour les chaînes non nul, les entiers sont utilisés pour la spécification de largeur et la taille du tampon.
+Lorsque plusieurs caractères pour les chaînes qui se terminent par un caractère NULL sont lus, des entiers sont utilisés pour la spécification de largeur et la taille de la mémoire tampon.
 
 ```C
 char c[4];
@@ -154,7 +157,7 @@ Pour plus d’informations, consultez [Champs de spécification de format : fon
 |**scanf_s**, **_scanf_s_l**|\<stdio.h>|
 |**wscanf_s**, **_wscanf_s_l**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard **stdin**, **stdout**, et **stderr** doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard **stdin**, **stdout**et **stderr** doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

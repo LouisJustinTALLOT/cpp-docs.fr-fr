@@ -1,10 +1,10 @@
 ---
 title: _getche_nolock, _getwche_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getche_nolock
 - _getwche_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getche_nolock
 - _gettche_nolock
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _getwche_nolock function
 - gettche_nolock function
 ms.assetid: 9e853ad4-4d8a-4442-9ae5-da4b434f0b8c
-ms.openlocfilehash: b5745d85ec1a7338a4625d0c3eaf54da498e2af4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23f16199314ef1c9834e559631b7299dd1c55c2e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287252"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955296"
 ---
-# <a name="getchenolock-getwchenolock"></a>_getche_nolock, _getwche_nolock
+# <a name="_getche_nolock-_getwche_nolock"></a>_getche_nolock, _getwche_nolock
 
 Obtient un caractère de la console, avec affichage, sans verrouiller le thread.
 
@@ -61,7 +64,7 @@ Retourne le caractère lu. Aucun retour d'erreur.
 
 ## <a name="remarks"></a>Notes
 
-**_getche_nolock** et **_getwche_nolock** sont identiques aux **_getche** et **_getwche** , à ceci près qu’elles ne pas protégées contre les interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+**_getche_nolock** et **_getwche_nolock** sont identiques à **_getche** et **_getwche** , à ceci près qu’ils ne sont pas protégés contre les interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

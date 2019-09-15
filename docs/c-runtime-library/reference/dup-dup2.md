@@ -1,10 +1,10 @@
 ---
 title: _dup, _dup2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dup
 - _dup2
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _dup2
 - _dup
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-ms.openlocfilehash: a00b9506102e6b274a9aa87c33c144d75cfc2508
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da47d6f040b62906d30107f9036ffa2a3ea05a1c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288964"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937784"
 ---
-# <a name="dup-dup2"></a>_dup, _dup2
+# <a name="_dup-_dup2"></a>_dup, _dup2
 
-Crée un second descripteur de fichier pour un fichier ouvert (**_dup**), ou réaffecte un descripteur de fichier (**_dup2**).
+Crée un deuxième descripteur de fichier pour un fichier ouvert ( **_dup**) ou réassigne un descripteur de fichier ( **_dup2**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,15 +59,15 @@ Un descripteur de fichier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_dup** retourne un nouveau descripteur de fichier. **_dup2** retourne 0 pour indiquer la réussite. Si une erreur se produit, chaque fonction retourne -1 et les jeux **errno** à **EBADF** si le descripteur de fichier n’est pas valide ou à **EMFILE** si aucun autre descripteur de fichier est disponible. En cas de descripteur de fichier non valide, la fonction appelle également le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+**_dup** retourne un nouveau descripteur de fichier. **_dup2** retourne 0 pour indiquer la réussite. Si une erreur se produit, chaque fonction retourne-1 et définit **errno** sur **EBADF** si le descripteur de fichier n’est pas valide ou **EMFILE** si aucun descripteur de fichier n’est disponible. En cas de descripteur de fichier non valide, la fonction appelle également le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_dup** et **_dup2** fonctions associer un second descripteur de fichier à un fichier ouvert. Ces fonctions peuvent être utilisées pour associer un descripteur de fichier prédéfini, tel que celui pour **stdout**, avec un autre fichier. Les opérations sur le fichier peuvent être effectuées à l’aide de l’un des descripteurs de fichier. Le type d’accès autorisé pour le fichier n’est pas affecté par la création d’un descripteur. **_dup** retourne le descripteur de fichier disponible suivant pour le fichier donné. **_dup2** force *FD2 Répartiteurs* pour faire référence au même fichier en tant que *fd1*. Si *FD2 Répartiteurs* est associé avec un fichier ouvert au moment de l’appel, ce fichier est fermé.
+Les fonctions **_dup** et **_dup2** associent un deuxième descripteur de fichier à un fichier actuellement ouvert. Ces fonctions peuvent être utilisées pour associer un descripteur de fichier prédéfini, tel que pour **stdout**, à un fichier différent. Les opérations sur le fichier peuvent être effectuées à l’aide de l’un des descripteurs de fichier. Le type d’accès autorisé pour le fichier n’est pas affecté par la création d’un descripteur. **_dup** retourne le descripteur de fichier disponible suivant pour le fichier donné. **_dup2** force *FD2* à faire référence au même fichier que *FD1 en*. Si *FD2* est associé à un fichier ouvert au moment de l’appel, ce fichier est fermé.
 
-Les deux **_dup** et **_dup2** accepter les descripteurs de fichier en tant que paramètres. Pour passer un flux (`FILE *`) à une de ces fonctions, utilisez [_fileno](fileno.md). Le **fileno** routine retourne le descripteur de fichier actuellement associé le flux donné. L’exemple suivant montre comment associer **stderr** (défini comme `FILE *` dans Stdio.h) avec un descripteur de fichier :
+**_Dup** et **_dup2** acceptent les descripteurs de fichiers en tant que paramètres. Pour passer un flux (`FILE *`) à l’une de ces fonctions, utilisez [_fileno](fileno.md). La routine **Fileno** retourne le descripteur de fichier actuellement associé au flux donné. L’exemple suivant montre comment associer **stderr** (défini comme `FILE *` dans stdio. h) à un descripteur de fichier :
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
@@ -77,7 +80,7 @@ int cstderr = _dup( _fileno( stderr ));
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

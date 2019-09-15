@@ -1,10 +1,10 @@
 ---
 title: rename, _wrename
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rename
 - _wrename
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wrename
 - _trename
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3d88c46fc055fb173264b40a56c755c360c7adf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357490"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949301"
 ---
-# <a name="rename-wrename"></a>rename, _wrename
+# <a name="rename-_wrename"></a>rename, _wrename
 
 Suppriment un fichier ou un répertoire.
 
@@ -68,7 +71,7 @@ Pointeur désignant le nouveau nom.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne 0 en cas de réussite. En cas d’erreur, la fonction retourne une valeur différente de zéro et définit **errno** à une des valeurs suivantes :
+Chacune de ces fonctions retourne 0 en cas de réussite. En cas d’erreur, la fonction retourne une valeur différente de zéro et définit **errno** sur l’une des valeurs suivantes :
 
 |Valeur de la variable errno|Condition|
 |-|-|
@@ -82,7 +85,7 @@ Pour connaître les autres valeurs de retour possibles, consultez [_doserrno, _e
 
 La fonction **rename** renomme le fichier ou le répertoire spécifié par *oldname* avec le nom fourni par *newname*. L’ancien nom doit être le chemin d’un fichier ou répertoire existant. Le nouveau nom doit être le nom d’un fichier ou répertoire existant. Vous pouvez utiliser **rename** pour déplacer un fichier d’un répertoire ou appareil vers un autre en indiquant un autre chemin dans l’argument *newname*. Cependant, vous ne pouvez pas utiliser **rename** pour déplacer un répertoire. Les répertoires peuvent être renommés, mais pas déplacés.
 
-**_wrename** est une version à caractères larges de **_rename**; les arguments de **_wrename** sont des chaînes à caractères larges. **_wrename** et **_rename** se comportent de façon identique dans le cas contraire.
+**_wrename** est une version à caractères larges de **_rename**; les arguments de **_wrename** sont des chaînes à caractères larges. dans le cas contraire, **_wrename** et **_rename** se comportent de la même façon.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -103,7 +106,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_renamer.c

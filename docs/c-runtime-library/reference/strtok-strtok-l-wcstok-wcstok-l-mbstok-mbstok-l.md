@@ -1,14 +1,14 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 ms.date: 03/25/2019
-apiname:
+api_name:
 - _mbstok_l
 - _mbstok
 - wcstok
 - _mbstok
 - strtok
 - _wcstok_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbstok
 - strtok
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 13fbc0e305f7ad183db06ec0060b2059b4964fe7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62ed9edc6ec5a7ee60223f1c5e908aa14f421a25
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500793"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957651"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -108,7 +111,7 @@ Retourne un pointeur vers le jeton suivant trouvé dans *strToken*. Les fonction
 
 ## <a name="remarks"></a>Notes
 
-La fonction **strtok** recherche le jeton suivant dans *strToken*. Le jeu de caractères dans *strDelimit* spécifie les délimiteurs possibles du jeton à trouver dans *strToken* sur l’appel en cours. **wcstok** et **_mbstok** sont des versions à caractères larges et à caractères multioctets de **strtok**. Les arguments et la valeur de retour de **wcstok** sont des chaînes à caractères larges; ceux de **_mbstok** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+La fonction **strtok** recherche le jeton suivant dans *strToken*. Le jeu de caractères dans *strDelimit* spécifie les délimiteurs possibles du jeton à trouver dans *strToken* sur l’appel en cours. **wcstok** et **_mbstok** sont des versions à caractères larges et à caractères multioctets de **strtok**. Les arguments et la valeur de retour de **wcstok** sont des chaînes à caractères larges ; ceux de **_mbstok** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
 > [!IMPORTANT]
 > Ces fonctions sont exposées à une menace potentielle liée à un problème de dépassement de mémoire tampon. Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).

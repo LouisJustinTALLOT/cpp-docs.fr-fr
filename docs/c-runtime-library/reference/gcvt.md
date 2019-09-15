@@ -1,9 +1,9 @@
 ---
 title: _gcvt
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _gcvt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gcvt
 helpviewer_keywords:
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: 9cf966b455af601d09b4444a5c590e305a6681c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3618f5571275783131c74c89f29218f89023f70e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332247"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956101"
 ---
-# <a name="gcvt"></a>_gcvt
+# <a name="_gcvt"></a>_gcvt
 
 Convertir une valeur à virgule flottante en chaîne, qui est stockée dans une mémoire tampon. Une version plus sécurisée de cette fonction est disponible. Consultez [_gcvt_s](gcvt-s.md).
 
@@ -66,11 +69,11 @@ Emplacement de stockage pour le résultat.
 
 ## <a name="remarks"></a>Notes
 
-Le **_gcvt** fonction convertit un à virgule flottante *valeur* en une chaîne de caractères (qui inclut une virgule décimale et un octet de signe possible) et stocke la chaîne dans *tampon*. Le *tampon* doit être suffisamment grande pour contenir la valeur convertie, plus un caractère null de fin, qui est ajouté automatiquement. Si la taille de mémoire tampon *chiffres* + 1 est utilisé, cette fonction remplace la fin de la mémoire tampon. En effet, la chaîne convertie comprend une virgule décimale et peut contenir des informations de signe et d’exposant. Le dépassement n’est pas pris en charge. **_gcvt** tente de produire *chiffres* chiffres au format décimal. Si elle ne peut pas, elle produit *chiffres* chiffres au format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.
+La fonction **_gcvt** convertit une *valeur* à virgule flottante en une chaîne de caractères (qui comprend une virgule décimale et un octet de signe possible) et stocke la chaîne dans la *mémoire tampon*. La *mémoire tampon* doit être suffisamment grande pour accueillir la valeur convertie plus un caractère null de fin, qui est ajouté automatiquement. Si une taille de mémoire tampon de *chiffres* + 1 est utilisée, la fonction remplace la fin de la mémoire tampon. En effet, la chaîne convertie comprend une virgule décimale et peut contenir des informations de signe et d’exposant. Le dépassement n’est pas pris en charge. **_gcvt** tente de produire des chiffres de *chiffres* au format décimal. Si ce n’est pas le cas, il génère des chiffres de *chiffres* au format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.
 
-Un *tampon* de longueur **_CVTBUFSIZE** est suffisante pour n’importe quel flottante valeur de point.
+Une *mémoire tampon* de longueur **_CVTBUFSIZE** est suffisante pour toute valeur à virgule flottante.
 
-Cette fonction valide ses paramètres. Si *tampon* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **NULL**.
+Cette fonction valide ses paramètres. Si *buffer* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la **valeur** **EINVAL** et retourne null.
 
 ## <a name="requirements"></a>Configuration requise
 

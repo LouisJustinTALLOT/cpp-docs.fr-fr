@@ -1,10 +1,10 @@
 ---
 title: _strtime, _wstrtime
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstrtime
 - _strtime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime
 - _strtime
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 9d874321418854a703886eb80ee23ac1cba57fa4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea4a2b304dc30ec167f8a9094bcf278ff0d31f77
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223090"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946557"
 ---
-# <a name="strtime-wstrtime"></a>_strtime, _wstrtime
+# <a name="_strtime-_wstrtime"></a>_strtime, _wstrtime
 
 Copient l’heure dans une mémoire tampon. Il existe des versions plus sécurisées de ces fonctions. Consultez [_strtime_s, _wstrtime_s](strtime-s-wstrtime-s.md).
 
@@ -70,13 +73,13 @@ Chaîne d’heure.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers la chaîne de caractères *timestr*.
+Retourne un pointeur vers la chaîne de caractères résultante *timestr*.
 
 ## <a name="remarks"></a>Notes
 
-Le **_strtime** fonction copie l’heure locale actuelle dans la mémoire tampon vers laquelle pointée *timestr*. L’heure sous la forme **hh : mm :** où **hh** comprend deux chiffres représentant l’heure en notation de 24 heures, **mm** comprend deux chiffres qui représentent les minutes l’heure et les **ss** comprend deux chiffres qui représentent les secondes. Par exemple, la chaîne **18:23:44** représente 23 minutes et 44 secondes après 6 heures. La mémoire tampon doit avoir une longueur au moins égale à 9 octets.
+La fonction **_strtime** copie l’heure locale actuelle dans la mémoire tampon pointée par *timestr*. L’heure est au format **hh : mm : SS** , où **hh** est deux chiffres représentant l’heure dans une notation de 24 heures, **mm** est deux chiffres représentant les minutes après l’heure et **SS** deux chiffres représentant les secondes. Par exemple, la chaîne **18:23:44** représente 23 minutes et 44 secondes après 6 h 00. La mémoire tampon doit avoir une longueur au moins égale à 9 octets.
 
-**_wstrtime** est une version à caractères larges de **_strtime**; l’argument et valeur de retour de **_wstrtime** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique. Si *timestr* est un **NULL** pointeur ou si *timestr* est incorrect, le non valide Gestionnaire de paramètres est appelé, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exception est autorisée à se poursuivre, ces fonctions retournent un **NULL** et définissez **errno** à **EINVAL** si *timestr* a été un **NULL** ou définir **errno** à **ERANGE** si *timestr* est incorrect.
+**_wstrtime** est une version à caractères larges de **_strtime**; l’argument et la valeur de retour de **_wstrtime** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique. Si *timestr* est un pointeur **null** ou si le format de *timestr* est incorrect, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exception est autorisée à se poursuivre, ces fonctions retournent une **valeur null** et attribuent à **errno** la valeur **EINVAL** si *timestr* était **null** ou défini **errno** sur **ERANGE** si *timestr* n’est pas mis en forme correctement.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -95,7 +98,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_strtime.c

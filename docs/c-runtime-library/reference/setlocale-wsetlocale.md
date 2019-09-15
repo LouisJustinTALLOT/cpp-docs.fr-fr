@@ -1,10 +1,10 @@
 ---
 title: setlocale, _wsetlocale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wsetlocale
 - setlocale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsetlocale
 - _tsetlocale
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-ms.openlocfilehash: 618b3e58a52e89561439fe76bf1b30e3cbbce001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 375b1de82f72447d7e41b051c2aa1307716fb0dd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356353"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948232"
 ---
-# <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
+# <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
 
 Définit ou extrait les paramètres régionaux d'exécution.
 
@@ -64,7 +67,7 @@ Spécificateur de paramètres régionaux.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si une commande valide *paramètres régionaux* et *catégorie* sont fournies, retourne un pointeur vers la chaîne associée spécifié *paramètres régionaux* et *catégorie*. Si le *paramètres régionaux* ou *catégorie* n’est pas valide, retourne un pointeur null et les paramètres régionaux actuels du programme ne sont pas modifiés.
+Si des *paramètres régionaux* et une *catégorie* valides sont fournis, retourne un pointeur vers la chaîne associée aux *paramètres régionaux* et à la *catégorie*spécifiés. Si les paramètres *régionaux* ou la *catégorie* ne sont pas valides, retourne un pointeur null et les paramètres régionaux actuels du programme ne sont pas modifiés.
 
 Par exemple, l'appel
 
@@ -78,13 +81,13 @@ définit toutes les catégories, en retournant uniquement la chaîne
 en-US
 ```
 
-Vous pouvez copier la chaîne retournée par **setlocale** pour restaurer cette partie des informations de paramètres régionaux du programme. Global ou thread stockage local est utilisé pour la chaîne retournée par **setlocale**. Appels ultérieurs à **setlocale** remplacent la chaîne, ce qui invalide les pointeurs de chaîne renvoyés par les appels antérieurs.
+Vous pouvez copier la chaîne retournée par **setlocale** pour restaurer cette partie des informations de paramètres régionaux du programme. Le stockage local des threads ou globaux est utilisé pour la chaîne retournée par **setlocale**. Les appels ultérieurs à **setlocale** remplacent la chaîne, ce qui invalide les pointeurs de chaîne retournés par les appels antérieurs.
 
 ## <a name="remarks"></a>Notes
 
-Utilisez le **setlocale** fonction permettant de définir, modifier ou interroger certaines ou toutes les informations de paramètres régionaux de programme actuel spécifiées par *paramètres régionaux* et *catégorie*. *paramètres régionaux* fait référence à la localité (pays/région et langue) pour lequel vous pouvez personnaliser certains aspects de votre programme. Certaines catégories dépendent des paramètres régionaux, notamment la mise en forme des dates et le format d'affichage des valeurs monétaires. Si vous définissez *paramètres régionaux* à la chaîne par défaut pour une langue qui a plusieurs formes prises en charge sur votre ordinateur, vous devez vérifier le **setlocale** retourner de valeur pour connaître la langue en vigueur. Par exemple, si vous définissez *paramètres régionaux* à « chinois » la valeur de retour peut être « chinois simplifié » ou « chinois traditionnel ».
+Utilisez la fonction **setlocale** pour définir, modifier ou interroger certaines ou toutes les informations de paramètres régionaux du programme en cours spécifiées par les *paramètres régionaux* et la *catégorie*. les *paramètres régionaux* font référence à la localité (pays/région et langue) pour laquelle vous pouvez personnaliser certains aspects de votre programme. Certaines catégories dépendent des paramètres régionaux, notamment la mise en forme des dates et le format d'affichage des valeurs monétaires. Si vous définissez les *paramètres régionaux* sur la chaîne par défaut pour une langue qui a plusieurs formulaires pris en charge sur votre ordinateur, vous devez vérifier la valeur de retour de **setlocale** pour connaître la langue en vigueur. Par exemple, si vous affectez à *paramètres régionaux* la valeur « chinois », la valeur de retour peut être « chinois simplifié » ou « chinois traditionnel ».
 
-**_wsetlocale** est une version à caractères larges de **setlocale**; le *paramètres régionaux* argument et valeur de retour de **_wsetlocale** sont des chaînes à caractères larges. **_wsetlocale** et **setlocale** se comportent de façon identique dans le cas contraire.
+**_wsetlocale** est une version à caractères larges de **setlocale**; l’argument de *paramètres régionaux* et la valeur de retour de **_wsetlocale** sont des chaînes à caractères larges. **_wsetlocale** et **setlocale** se comportent de la même manière dans le cas contraire.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -92,28 +95,28 @@ Utilisez le **setlocale** fonction permettant de définir, modifier ou interroge
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsetlocale**|**setlocale**|**setlocale**|**_wsetlocale**|
 
-Le *catégorie* argument spécifie les parties d’informations de paramètres régionaux d’un programme qui sont affectées. Les macros utilisées pour *catégorie* et les parties du programme qu’ils affectent sont les suivantes :
+L’argument *Category* spécifie les parties des informations relatives aux paramètres régionaux d’un programme qui sont affectées. Les macros utilisées pour la *catégorie* et les parties du programme qu’elles affectent sont les suivantes :
 
-|*catégorie* indicateur|Affecte|
+|indicateur de *catégorie*|Affecte|
 |-|-|
 | **LC_ALL** | Toutes les catégories, comme indiqué ci-dessous. |
-| **LC_COLLATE** | Le **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_ strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**, et **wcsxfrm** fonctions. |
-| **LC_CTYPE** | Les fonctions de gestion de caractères (sauf **isdigit**, **isxdigit**, **mbstowcs**, et **mbtowc**, qui ne sont pas affecté). |
-| **LC_MONETARY** | Informations de mise en forme monétaire retournées par la **localeconv** (fonction). |
-| **LC_NUMERIC** | Caractère pour les routines de sortie mise en forme de virgule décimale (tel que **printf**), pour les routines de conversion de données et pour les informations de mise en forme non monétaire retournées par **localeconv**. Outre le caractère de virgule décimale, **LC_NUMERIC** séparateur de milliers de jeux et le contrôle de regroupement chaîne retournée par [localeconv](localeconv.md). |
-| **LC_TIME** | Le **strftime** et **wcsftime** fonctions. |
+| **LC_COLLATE** | Les fonctions **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**et **wcsxfrm** . |
+| **LC_CTYPE** | Fonctions de gestion de caractères (à l’exception de **IsDigit**, **isxdigit**, **mbstowcs**et **mbtowc**, qui ne sont pas affectées). |
+| **LC_MONETARY** | Informations de mise en forme monétaire retournées par la fonction **localeconv** . |
+| **LC_NUMERIC** | Caractère de virgule décimale pour les routines de sortie mises en forme (telles que **printf**), pour les routines de conversion de données et pour les informations de mise en forme non monétaire retournées par **localeconv**. Outre le caractère de virgule décimale, **LC_NUMERIC** définit le séparateur de milliers et la chaîne de contrôle de regroupement retournés par [localeconv](localeconv.md). |
+| **LC_TIME** | Fonctions **strftime** et **wcsftime** . |
 
-Cette fonction valide le paramètre de catégorie. Si le paramètre de catégorie ne fait pas partie des valeurs fournies dans le tableau précédent, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction définit **errno** à **EINVAL** et retourne **NULL**.
+Cette fonction valide le paramètre de catégorie. Si le paramètre de catégorie ne fait pas partie des valeurs fournies dans le tableau précédent, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction définit **errno** sur **EINVAL** et retourne **null**.
 
-Le *paramètres régionaux* argument est un pointeur vers une chaîne qui spécifie les paramètres régionaux. Pour plus d’informations sur le format de la *paramètres régionaux* argument, consultez [noms de paramètres régionaux, langues et chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Si *locale* pointe vers une chaîne vide, les paramètres régionaux sont donnés par l'environnement défini lors de l'implémentation. La valeur **C** Spécifie l’environnement de conformation minimal ANSI pour la conversion en C. Le **C** paramètres régionaux part du principe que tous les **char** types de données sont de 1 octet et que leur valeur est toujours inférieure à 256.
+L’argument de *paramètres régionaux* est un pointeur vers une chaîne qui spécifie les paramètres régionaux. Pour plus d’informations sur le format de l’argument de *paramètres régionaux* , consultez [noms de paramètres régionaux, langues et chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Si *locale* pointe vers une chaîne vide, les paramètres régionaux sont donnés par l'environnement défini lors de l'implémentation. La valeur **c** spécifie l’environnement de conformité ANSI minimal pour la traduction C. Les paramètres régionaux **C** partent du principe que tous les types de données **char** sont 1 octet et que leur valeur est toujours inférieure à 256.
 
 Au démarrage du programme, l'équivalent de l'instruction suivante est exécuté :
 
 `setlocale( LC_ALL, "C" );`
 
-Le *paramètres régionaux* argument peut prendre un nom de paramètres régionaux, une chaîne de langage, une chaîne de langue et code de pays/région, une page de codes, ou une chaîne de langue, code de pays/région et page de codes. L'ensemble des noms de paramètres régionaux, des langages, des pays ou codes zone, et de pages de codes disponibles inclut tous ceux pris en charge par l'API Windows NLS, à l'exception des pages de codes qui requièrent plus de deux octets par caractère, telles que UTF-7 et UTF-8. Si vous fournissez une valeur de page de code de UTF-7 ou UTF-8, **setlocale** échoue et génère **NULL**. L’ensemble des noms de paramètres régionaux pris en charge par **setlocale** sont décrites dans [noms de paramètres régionaux, langues et chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). L’ensemble de chaînes de langue et de pays/région pris en charge par **setlocale** sont répertoriés dans [chaînes de langue](../../c-runtime-library/language-strings.md) et [chaînes pays/région](../../c-runtime-library/country-region-strings.md). Nous recommandons d'utiliser la forme de nom des paramètres régionaux pour des questions de performance et de maintenance des chaînes de paramètres régionaux incorporées dans le code ou sérialisées du stockage. Les chaînes de nom des paramètres régionaux sont moins susceptibles d'être modifiées par une mise à niveau du système d'exploitation que la forme de nom de la langue et du pays ou de la région.
+L’argument des *paramètres régionaux* peut accepter un nom de paramètres régionaux, une chaîne de langue, une chaîne de langue et un pays/région, une page de codes ou une chaîne de langue, un pays/région et une page de codes. L'ensemble des noms de paramètres régionaux, des langages, des pays ou codes zone, et de pages de codes disponibles inclut tous ceux pris en charge par l'API Windows NLS, à l'exception des pages de codes qui requièrent plus de deux octets par caractère, telles que UTF-7 et UTF-8. Si vous fournissez une valeur de page de codes UTF-7 ou UTF-8, **setlocale** échouera et retournera la valeur **null**. Le jeu de noms de paramètres régionaux pris en charge par **setlocale** est décrit dans [noms de paramètres régionaux, langues et chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). L’ensemble de chaînes de langue et de pays/région pris en charge par **setlocale** est répertorié dans [chaînes de langue](../../c-runtime-library/language-strings.md) et [chaînes de pays/région](../../c-runtime-library/country-region-strings.md). Nous recommandons d'utiliser la forme de nom des paramètres régionaux pour des questions de performance et de maintenance des chaînes de paramètres régionaux incorporées dans le code ou sérialisées du stockage. Les chaînes de nom des paramètres régionaux sont moins susceptibles d'être modifiées par une mise à niveau du système d'exploitation que la forme de nom de la langue et du pays ou de la région.
 
-Un pointeur null est passé en tant que le *paramètres régionaux* argument indique à **setlocale** à interroger au lieu de définir l’environnement international. Si le *paramètres régionaux* argument est un pointeur null, les paramètres régionaux actuels du programme ne sont pas modifié. Au lieu de cela, **setlocale** retourne un pointeur désignant la chaîne qui est associée à la *catégorie* des paramètres régionaux actuels du thread. Si le *catégorie* argument est **LC_ALL**, la fonction retourne une chaîne qui indique le paramètre actuel de chaque catégorie, séparé par des points-virgules. Par exemple, la séquence d'appels
+Un pointeur null passé comme argument de *paramètres régionaux* indique à **setlocale** d’interroger au lieu de définir l’environnement international. Si l’argument de *paramètres régionaux* est un pointeur null, les paramètres régionaux actuels du programme ne sont pas modifiés. Au lieu de cela, **setlocale** retourne un pointeur vers la chaîne associée à la *catégorie* des paramètres régionaux actuels du thread. Si l’argument *Category* est **LC_ALL**, la fonction retourne une chaîne qui indique le paramètre actuel de chaque catégorie, en les séparant par des points-virgules. Par exemple, la séquence d'appels
 
 ```C
 // Set all categories and return "en-US"
@@ -129,9 +132,9 @@ retourne
 LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 ```
 
-qui est la chaîne qui est associée à la **LC_ALL** catégorie.
+qui est la chaîne associée à la catégorie **LC_ALL** .
 
-Les exemples suivants se rapportent à la **LC_ALL** catégorie. Les deux chaînes « .OCP » et « .ACP » peuvent être utilisées à la place du numéro de page de codes pour spécifier, respectivement, l'utilisation de la page de codes OEM utilisateur par défaut et la page de codes ANSI utilisateur par défaut.
+Les exemples suivants appartiennent à la catégorie **LC_ALL** . Les deux chaînes « .OCP » et « .ACP » peuvent être utilisées à la place du numéro de page de codes pour spécifier, respectivement, l'utilisation de la page de codes OEM utilisateur par défaut et la page de codes ANSI utilisateur par défaut.
 
 - `setlocale( LC_ALL, "" );`
 
@@ -147,7 +150,7 @@ Les exemples suivants se rapportent à la **LC_ALL** catégorie. Les deux chaîn
 
 - `setlocale( LC_ALL, "<localename>" );`
 
-   Définit les paramètres régionaux en fonction du nom de paramètres régionaux indiqué par *\<localename>*.
+   Définit les paramètres régionaux en fonction du nom de paramètres régionaux indiqué par *\<localename>* .
 
 - `setlocale( LC_ALL, "<language>_<country>" );`
 
@@ -155,7 +158,7 @@ Les exemples suivants se rapportent à la **LC_ALL** catégorie. Les deux chaîn
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   Définit les paramètres régionaux de la langue, le pays/région et la page de codes indiqué par le  *\<langue >*,  *\<pays >*, et  *\<code_page >* chaînes. Vous pouvez utiliser différentes combinaisons de langues, pays/région et page de codes. Par exemple, cet appel définit les paramètres régionaux à français du Canada avec la page de codes 1252 :
+   Définit les paramètres régionaux de la langue, du pays/de la région et de la page  *\<* de codes indiqués par les chaînes >,  *\<Country >* et  *\<code_page >* . Vous pouvez utiliser différentes combinaisons de langues, pays/région et page de codes. Par exemple, cet appel définit les paramètres régionaux à français du Canada avec la page de codes 1252 :
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 
@@ -181,9 +184,9 @@ Les exemples suivants se rapportent à la **LC_ALL** catégorie. Les deux chaîn
 
 - `setlocale( LC_ALL, ".<code_page>" );`
 
-   Définit la page de codes en fonction de la valeur indiquée par *<code_page>*, ainsi que du pays/région et de la langue par défaut (tels que définis par le système d’exploitation hôte) pour la page de codes spécifiée.
+   Définit la page de codes en fonction de la valeur indiquée par *<code_page>* , ainsi que du pays/région et de la langue par défaut (tels que définis par le système d’exploitation hôte) pour la page de codes spécifiée.
 
-La catégorie doit être **LC_ALL** ou **LC_CTYPE** pour effectuer un changement de page de codes. Par exemple, si le pays/région par défaut et la langue du système d’exploitation hôte sont « États-Unis » et « Anglais », les deux appels suivants à **setlocale** sont fonctionnellement équivalents :
+La catégorie doit être **LC_ALL** ou **LC_CTYPE** pour appliquer une modification de la page de codes. Par exemple, si le pays/la région et la langue par défaut du système d’exploitation hôte sont « États-Unis » et « anglais », les deux appels suivants à **setlocale** sont fonctionnellement équivalents :
 
 `setlocale( LC_ALL, ".1252" );`
 
@@ -191,7 +194,7 @@ La catégorie doit être **LC_ALL** ou **LC_CTYPE** pour effectuer un changement
 
 Pour plus d’informations, consultez la directive pragma [setlocale](../../preprocessor/setlocale.md) dans [Référence du préprocesseur C/C++](../../preprocessor/c-cpp-preprocessor-reference.md).
 
-La fonction [_configthreadlocale](configthreadlocale.md) est utilisée pour déterminer si **setlocale** affecte les paramètres régionaux de tous les threads dans un programme ou uniquement les paramètres régionaux du thread appelant.
+La fonction [_configthreadlocale](configthreadlocale.md) est utilisée pour contrôler si **setlocale** affecte les paramètres régionaux de tous les threads d’un programme ou uniquement les paramètres régionaux du thread appelant.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -202,7 +205,7 @@ La fonction [_configthreadlocale](configthreadlocale.md) est utilisée pour dét
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_setlocale.c

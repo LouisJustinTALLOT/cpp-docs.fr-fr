@@ -1,12 +1,12 @@
 ---
 title: _mbclen, mblen, _mblen_l, _mbclen_l
 ms.date: 01/22/2019
-apiname:
+api_name:
 - _mbclen
 - mblen
 - _mblen_l
 - _mbclen_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mblen
 - ftclen
@@ -39,14 +42,14 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: b7888b0b8c87a632dcbb63f54ade11080c7a309a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96775f513b33eb407981480c17cb609dd85383f6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156783"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952560"
 ---
-# <a name="mbclen-mblen-mblenl-mbclenl"></a>_mbclen, mblen, _mblen_l, _mbclen_l
+# <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
 Obtient la longueur et détermine la validité d’un caractère multioctet.
 
@@ -90,15 +93,15 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_mbclen** retourne 1 ou 2, selon que le caractère multioctet *c* est 1 ou 2 octets. Aucune erreur n’est renvoyée pour **_mbclen**. Si *mbstr* n’est pas **NULL**, **mblen** retourne la longueur, en octets, du caractère multioctet. Si *mbstr* est **NULL** ou qu’il pointe vers le caractère null de caractères larges, **mblen** retourne 0. Lorsque l’objet qui *mbstr* pointe vers ne forme pas un caractère multioctet valide au sein du premier *nombre* caractères, **mblen** retourne -1.
+**_mbclen** retourne 1 ou 2, selon que le caractère multioctet *c* a une longueur de 1 ou 2 octets. Il n’y a pas de retour d’erreur pour **_mbclen**. Si *mbstr* n’est pas **null**, **mblen** retourne la longueur, en octets, du caractère multioctet. Si *mbstr* a la **valeur null** ou qu’il pointe vers le caractère null à caractères larges, **mblen** retourne 0. Lorsque l’objet sur lequel pointe *mbstr* ne forme pas un caractère multioctet valide dans les *premiers caractères* , **mblen** retourne-1.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbclen** fonction retourne la longueur, en octets, du caractère multioctet *c*. Si *c* ne pointe pas vers l’octet de tête d’un caractère multioctet comme déterminé par un appel implicite à **_ismbblead**, le résultat de **_mbclen** est imprévisible.
+La fonction **_mbclen** retourne la longueur, en octets, du caractère multioctet *c*. Si *c* ne pointe pas vers l’octet de tête d’un caractère multioctet comme déterminé par un appel implicite à **_ismbblead**, le résultat de **_mbclen** est imprévisible.
 
-**mblen** retourne la longueur en octets de *mbstr* si elle est un caractère multioctet valide et détermine la validité des caractères multioctets associée à la page de codes. **mblen** examine *nombre* ou moins d’octets contenus dans *mbstr*, mais pas plus de **MB_CUR_MAX** octets.
+**mblen** retourne la longueur en octets de *mbstr* s’il s’agit d’un caractère multioctet valide et détermine la validité des caractères multioctets associée à la page de codes. **mblen** examine le *nombre* ou moins d’octets contenus dans *mbstr*, mais pas plus de **MB_CUR_MAX** octets.
 
-La valeur de sortie est affectée par le **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions sans le **_l** suffixe utiliser les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. Le **_l** versions suffixes ont le même comportement, mais ils utilisent les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par le paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md) . Les versions de ces fonctions sans le suffixe **_L** utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. Les versions avec suffixe **_L** se comportent de la même façon, mais elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

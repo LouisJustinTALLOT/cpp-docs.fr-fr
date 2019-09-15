@@ -1,10 +1,10 @@
 ---
 title: _ismbbkana, _ismbbkana_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkana_l
 - _ismbbkana
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkana_l
 - ismbbkana_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-ms.openlocfilehash: 723b914f5df92f20e4982bf6f7f04d1b251606f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ac05940f6ae9d0c0bd3cb2f6ea73fe301557be4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287015"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954146"
 ---
-# <a name="ismbbkana-ismbbkanal"></a>_ismbbkana, _ismbbkana_l
+# <a name="_ismbbkana-_ismbbkana_l"></a>_ismbbkana, _ismbbkana_l
 
 Teste un symbole katakana, et est spécifique à la page de codes 932.
 
@@ -61,7 +64,7 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ismbbkana** retourne une valeur différente de zéro si l’entier *c* est un symbole katakana, ou 0 si ce n’est pas. **_ismbbkana** utilise les paramètres régionaux actuels pour les informations sur les caractères de dépendant des paramètres régionaux. **_ismbbkana_l** est identique, sauf qu’elle utilise l’objet de paramètres régionaux passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_ismbbkana** retourne une valeur différente de zéro si l’entier *c* est un symbole katakana, ou 0 dans le cas contraire. **_ismbbkana** utilise les paramètres régionaux actifs pour les informations sur les caractères dépendants des paramètres régionaux. **_ismbbkana_l** est identique, à ceci près qu’il utilise l’objet de paramètres régionaux passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Configuration requise
 

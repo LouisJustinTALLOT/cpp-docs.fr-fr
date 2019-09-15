@@ -1,12 +1,12 @@
 ---
 title: _cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cprintf_p_l
 - _cwprintf_p_l
 - _cwprintf_p
 - _cprintf_p
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cprintf_p
 - cwprintf_p
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - tcprintf_p function
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
-ms.openlocfilehash: ef4ac6a89749c2784e4935fcf83810e81b61ae11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a02de28a61812147c192495c4794830f85567a10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348287"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942650"
 ---
-# <a name="cprintfp-cprintfpl-cwprintfp-cwprintfpl"></a>_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
+# <a name="_cprintf_p-_cprintf_p_l-_cwprintf_p-_cwprintf_p_l"></a>_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 
 Met en forme et affiche les informations sur la console, et prend en charge les paramètres positionnels dans la chaîne de format.
 
@@ -97,16 +100,16 @@ Nombre de caractères affichés ou valeur négative en cas d'erreur.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions mettre en forme et affichent toute une série de caractères et les valeurs directement dans la console, à l’aide de la **_putch** et **_putwch** fonctions aux caractères de sortie. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le format a la même forme et fonction que le *format* paramètre pour le [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) (fonction). La différence entre **_cprintf_p** et **cprintf_s** qui est **_cprintf_p** prend en charge les paramètres positionnels, ce qui permet de spécifier l’ordre dans lequel les arguments sont utilisé dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Ces fonctions mettent en forme et impriment une série de caractères et de valeurs directement dans la console, à l’aide des fonctions **_putch** et **_putwch** pour les caractères de sortie. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante au *format*. Le format a la même forme et la même fonction que le paramètre *format* pour la fonction [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) . La différence entre **_cprintf_p** et **cprintf_s** est que **_cprintf_p** prend en charge les paramètres positionnels, ce qui permet de spécifier l’ordre dans lequel les arguments sont utilisés dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Contrairement à la **fprintf_p**, **printf_p**, et **sprintf_p** fonctions ni **_cprintf_p** ni **_cwprintf_p** convertit les caractères de saut de ligne en combinaisons retour-saut de ligne (CR-LF) de transport lors de sortie. Une différence importante est que **_cwprintf_p** affiche les caractères Unicode dans Windows NT. Contrairement aux **_cprintf_p**, **_cwprintf_p** utilise les paramètres régionaux de console en cours.
+Contrairement aux fonctions **fprintf_p**, **printf_p**et **sprintf_p** , ni **_cprintf_p** ni **_cwprintf_p** ne convertit les caractères de saut de ligne en combinaisons retour chariot-saut de ligne (CR-LF) lors de la sortie. Une distinction importante est que **_cwprintf_p** affiche les caractères Unicode lorsqu’il est utilisé dans Windows NT. Contrairement à **_cprintf_p**, **_cwprintf_p** utilise les paramètres régionaux de la console actuelle.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
 
 > [!IMPORTANT]
 > Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur.
 
-En outre, comme **_cprintf_s** et **_cwprintf_s**, ils valident le pointeur d’entrée et la chaîne de format. Si *format* ou *argument* sont **NULL**, ou du format de chaîne contient des caractères de mise en forme non valides, ces fonctions appellent le Gestionnaire de paramètre non valide, en tant que décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+De plus, comme **_cprintf_s** et **_cwprintf_s**, ils valident le pointeur d’entrée et la chaîne de format. Si *format* ou *argument* a la **valeur null**, ou si la chaîne de format contient des caractères de mise en forme non valides, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

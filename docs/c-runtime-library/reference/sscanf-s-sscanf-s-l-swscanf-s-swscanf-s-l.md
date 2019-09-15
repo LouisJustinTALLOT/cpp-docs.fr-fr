@@ -1,12 +1,12 @@
 ---
 title: sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _sscanf_s_l
 - sscanf_s
 - _swscanf_s_l
 - swscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _stscanf_s
 - sscanf_s
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: 07911b7254e74c28310669a697c7492b69567b7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14707b64a9c5c49837391be59d83ee39b79d5065
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354795"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957963"
 ---
-# <a name="sscanfs-sscanfsl-swscanfs-swscanfsl"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
+# <a name="sscanf_s-_sscanf_s_l-swscanf_s-_swscanf_s_l"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 
 Lit les données mises en forme d’une chaîne. Ces versions de [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -97,13 +100,13 @@ Paramètres régionaux à utiliser
 
 Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. La valeur de retour est **EOF** pour une erreur ou si la fin de la chaîne est atteinte avant la première conversion.
 
-Si *tampon* ou *format* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**
+Si la *mémoire tampon* ou le *format* est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **sscanf_s** fonction lit les données à partir de *tampon* dans l’emplacement indiqué par chaque *argument*. Les arguments après la chaîne de format spécifient des pointeurs vers des variables qui ont un type qui correspond à un spécificateur de type dans *format*. Contrairement à la version moins sécurisée [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), un paramètre de taille de mémoire tampon est nécessaire lorsque vous utilisez les caractères de champ de type **c**, **C**, **s**, **S**, ou chaîne de jeux de contrôle qui sont entourés de **[]**. La taille de mémoire tampon en caractères doit être fournie comme paramètre supplémentaire de suite après chaque paramètre de mémoire tampon qui le nécessite. Par exemple, si vous lisez une chaîne, la taille de la mémoire tampon pour cette chaîne est passée comme suit :
+La fonction **sscanf_s** lit les données de la *mémoire tampon* dans l’emplacement donné par chaque *argument*. Les arguments qui suivent la chaîne de format spécifient des pointeurs vers des variables dont le type correspond à un spécificateur de type au *format*. Contrairement à la version moins sécurisée [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), un paramètre de taille de mémoire tampon est requis lorsque vous utilisez les jeux de contrôles de type **c**, **c**, **s**, **s**ou String placés dans **[]** . La taille de mémoire tampon en caractères doit être fournie comme paramètre supplémentaire de suite après chaque paramètre de mémoire tampon qui le nécessite. Par exemple, si vous lisez une chaîne, la taille de la mémoire tampon pour cette chaîne est passée comme suit :
 
 ```C
 wchar_t ws[10];
@@ -129,13 +132,13 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) et [Caractères du champ de type scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Le paramètre de taille est de type **non signé**, et non **size_t**. Lors de la compilation pour des cibles 64 bits, utilisez un cast statique pour convertir **_countof** ou **sizeof** résultats à la taille correcte.
+> Le paramètre size est de type **unsigned**, et non **size_t**. Lors de la compilation pour les cibles 64 bits, utilisez un cast statique pour convertir les résultats **_countof** ou **sizeof** à la taille correcte.
 
-Le *format* contrôles d’argument des champs de l’interprétation de l’entrée et a les mêmes forme et fonction que le *format* argument pour le **scanf_s** (fonction). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+L’argument *format* contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que l’argument *format* pour la fonction **scanf_s** . Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
-**swscanf_s** est une version à caractères larges de **sscanf_s**; les arguments de **swscanf_s** sont des chaînes à caractères larges. **sscanf_s** ne gère pas les caractères hexadécimaux multioctets. **swscanf_s** ne gère pas hexadécimaux entiers Unicode ou caractères de « zone de compatibilité ». Sinon, **swscanf_s** et **sscanf_s** ont un comportement identique.
+**swscanf_s** est une version à caractères larges de **sscanf_s**; les arguments de **swscanf_s** sont des chaînes à caractères larges. **sscanf_s** ne gère pas les caractères hexadécimaux multioctets. **swscanf_s** ne gère pas les caractères hexadécimaux ou « zone de compatibilité » Unicode à pleine chasse. Sinon, **swscanf_s** et **sscanf_s** se comportent de la même façon.
 
-Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux qui sont passés au lieu de paramètres régionaux du thread actuel.
+Les versions de ces fonctions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -153,7 +156,7 @@ Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, sauf qu
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_sscanf_s.c

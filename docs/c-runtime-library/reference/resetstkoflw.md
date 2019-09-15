@@ -1,9 +1,9 @@
 ---
 title: _resetstkoflw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _resetstkoflw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - resetstkoflw
 - _resetstkoflw
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-ms.openlocfilehash: fc8a625e767daeb964f838c91f74732c9bd337a4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 55ac25cda5e6c442e96cae025657454747d571d9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499495"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949294"
 ---
 # <a name="_resetstkoflw"></a>_resetstkoflw
 
@@ -74,7 +77,7 @@ Lorsque cette taille de pile maximale est dépassée, le système exécute les t
 
 Notez que, à ce stade, la pile ne contient plus de page de garde. La prochaine fois que le programme augmentera la pile jusqu'à la fin, où devra se trouver une page de garde, il écrira au-delà de la fin de la pile et provoquera une violation d'accès.
 
-Appelez **_resetstkoflw** pour restaurer la page de garde chaque fois que la récupération est effectuée après une exception de dépassement de capacité de la pile. Cette fonction peut être appelée à partir du corps principal d’un bloc **_ _ except** ou à l’extérieur d’un bloc **_ _ except** . Toutefois, il existe quelques restrictions sur son utilisation. **_resetstkoflw** ne doit jamais être appelé à partir de:
+Appelez **_resetstkoflw** pour restaurer la page de garde chaque fois que la récupération est effectuée après une exception de dépassement de capacité de la pile. Cette fonction peut être appelée à partir du corps principal d’un bloc **_ _ except** ou à l’extérieur d’un bloc **_ _ except** . Toutefois, il existe quelques restrictions sur son utilisation. **_resetstkoflw** ne doit jamais être appelé à partir de :
 
 - Une expression de filtre.
 
@@ -106,7 +109,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 **Bibliotheque** Toutes les versions des [fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 L’exemple suivant montre l’utilisation recommandée de la fonction **_resetstkoflw** .
 
@@ -177,7 +180,7 @@ int main(int ac)
 }
 ```
 
-Exemple de sortie sans argument de programme:
+Exemple de sortie sans argument de programme :
 
 ```Output
 loop #1

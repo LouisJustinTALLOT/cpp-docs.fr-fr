@@ -1,14 +1,14 @@
 ---
 title: _strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsnicmp
 - _strnicmp_l
 - _wcsnicmp_l
 - _strnicmp
 - _mbsnicmp
 - _mbsnicmp_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcsnicmp_l
 - _strnicmp
@@ -66,19 +69,19 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-ms.openlocfilehash: 38f5697e0c7fe147a481249888595b7d51cfe93c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d1645c33684f5a0fbabc2119592c39a7df97ca3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209686"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947132"
 ---
-# <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
+# <a name="_strnicmp-_wcsnicmp-_mbsnicmp-_strnicmp_l-_wcsnicmp_l-_mbsnicmp_l"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 
 Compare le nombre spécifié de caractères de deux chaînes sans tenir compte de la casse.
 
 > [!IMPORTANT]
-> **_mbsnicmp** et **_mbsnicmp_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnicmp** et **_mbsnicmp_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -135,21 +138,21 @@ Indique la relation entre les sous-chaînes, comme suit.
 
 |Valeur de retour|Description|
 |------------------|-----------------|
-|< 0|*string1* sous-chaîne est inférieure à *string2* sous-chaîne.|
-|0|*string1* est identique à *string2* sous-chaîne.|
-|> 0|*string1* est supérieure à *string2* sous-chaîne.|
+|< 0|*Chaîne1* SUBSTRING est inférieure à la sous-chaîne *Chaîne2* .|
+|0|*Chaîne1* SUBSTRING est identique à la sous-chaîne *string2* .|
+|> 0|la sous-chaîne *Chaîne1* est supérieure à la sous-chaîne *Chaîne2* .|
 
-Une erreur de validation de paramètre, ces fonctions retournent **_NLSCMPERROR**, qui est défini dans \<string.h > et \<mbstring.h >.
+Dans le cas d’une erreur de validation de paramètre, ces fonctions retournent **_NLSCMPERROR**, qui est \<défini dans \<String. h > et mbstring. h >.
 
 ## <a name="remarks"></a>Notes
 
-Le **_strnicmp** fonction ordinale compare, au maximum, la première *nombre* caractères de *string1* et *string2*. La comparaison est effectuée sans tenir compte de la casse, en convertissant chaque caractère en minuscule. **_strnicmp** est une version de non-respect de la casse de **strncmp**. La comparaison se termine si un caractère null de fin est atteint dans une chaîne avant *nombre* caractères soient comparés. Si les chaînes sont égales quand un caractère null de fin est atteinte dans une chaîne avant *nombre* caractères soient comparés, la chaîne plus courte est moindre.
+La fonction **_strnicmp** compare, au plus, les premiers caractères de *nombre* de *string1* et *Chaîne2*. La comparaison est effectuée sans tenir compte de la casse, en convertissant chaque caractère en minuscule. **_strnicmp** est une version de **strncmp**qui ne respecte pas la casse. La comparaison se termine si un caractère null de fin est atteint dans l’une ou l’autre des chaînes avant que les caractères *Count* soient comparés. Si les chaînes sont égales lorsqu’un caractère null de fin est atteint dans l’une ou l’autre des chaînes avant que les caractères *Count* soient comparés, la chaîne la plus courte est inférieure.
 
-Les caractères compris entre 91 et 96 dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») sont évalués comme étant inférieurs à n’importe quel caractère alphabétique. Ce classement est identique à celle de **stricmp**.
+Les caractères compris entre 91 et 96 dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») sont évalués comme étant inférieurs à n’importe quel caractère alphabétique. Ce classement est identique à celui de **stricmp**.
 
-**_wcsnicmp** et **_mbsnicmp** sont des versions à caractères larges et à caractères multioctets de **_strnicmp**. Les arguments de **_wcsnicmp** sont des caractères larges chaînes ; ceux de **_mbsnicmp** sont des chaînes de caractères multioctets. **_mbsnicmp** reconnaît les séquences de caractères multioctets en fonction de la page de codes multioctets actuelle et retourne **_NLSCMPERROR** en cas d’erreur. Pour plus d’informations, consultez [Pages de codes](../../c-runtime-library/code-pages.md). Ces trois fonctions se comportent sinon de façon identique. Ces fonctions sont affectées par les paramètres régionaux, les versions qui n’ont pas la **_l** suffixe utilisent les paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux ; les versions qui ont le **_l** suffixe Utilisez plutôt le *paramètres régionaux* qui est passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_wcsnicmp** et **_mbsnicmp** sont des versions à caractères larges et à caractères multioctets de **_strnicmp**. Les arguments de **_wcsnicmp** sont des chaînes à caractères larges ; ceux de **_mbsnicmp** sont des chaînes de caractères multioctets. **_mbsnicmp** reconnaît les séquences de caractères multioctets en fonction de la page de codes multioctets actuelle et retourne **_NLSCMPERROR** sur une erreur. Pour plus d’informations, consultez [Pages de codes](../../c-runtime-library/code-pages.md). Ces trois fonctions se comportent sinon de façon identique. Ces fonctions sont affectées par les paramètres régionaux : les versions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux ; les versions qui ont le suffixe **_L** utilisent à la place les *paramètres régionaux* qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Toutes ces fonctions valident leurs paramètres. Si *string1* ou *string2* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et définissez **errno** à **EINVAL**.
+Toutes ces fonctions valident leurs paramètres. Si *Chaîne1* ou *Chaîne2* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et attribuent à **errno** la valeur **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -169,7 +172,7 @@ Toutes ces fonctions valident leurs paramètres. Si *string1* ou *string2* est u
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Consultez l’exemple relatif à [strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md).
 

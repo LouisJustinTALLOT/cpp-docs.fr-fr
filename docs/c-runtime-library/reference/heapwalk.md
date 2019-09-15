@@ -1,9 +1,9 @@
 ---
 title: _heapwalk
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapwalk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - heapwalk
 - _heapwalk
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dc7ee9335f227bde93a414748ff70b165c44f8d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331686"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954778"
 ---
-# <a name="heapwalk"></a>_heapwalk
+# <a name="_heapwalk"></a>_heapwalk
 
 Parcourt le tas et retourne des informations sur l’entrée suivante.
 
@@ -51,22 +54,22 @@ Mémoire tampon destinée à contenir les informations relatives au tas.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_heapwalk** retourne une des constantes manifestes entières suivantes définies dans Malloc.h.
+**_heapwalk** retourne l’une des constantes de manifeste entières suivantes définies dans malloc. h.
 
 |Valeur de retour|Signification|
 |-|-|
 |**_HEAPBADBEGIN**| Informations d’en-tête initiales non valides ou introuvables.|
 |**_HEAPBADNODE**| Tas endommagé ou nœud incorrect trouvé.|
-|**_HEAPBADPTR**| Le **_pentry** champ la **_HEAPINFO** structure ne contient pas un pointeur valide vers le tas ou *entryinfo* est un pointeur null.|
+|**_HEAPBADPTR**| Le champ **_pentry** de la structure **_HEAPINFO** ne contient pas de pointeur valide dans le tas ou *entryinfo* est un pointeur null.|
 |**_HEAPEND**| Fin du tas atteinte avec succès.|
 |**_HEAPEMPTY**| Tas non initialisé.|
-|**_HEAPOK**| Aucune erreur jusqu'à présent ; *entryinfo* est mis à jour avec des informations sur l’entrée suivante du tas.|
+|**_HEAPOK**| Aucune erreur jusqu’à présent ; *entryinfo* est mis à jour avec les informations relatives à l’entrée suivante du tas.|
 
-En outre, si une erreur se produit, **_heapwalk** définit **errno** à **ENOSYS**.
+En outre, si une erreur se produit, **_heapwalk** affecte à **errno** la valeur **ENOSYS**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_heapwalk** fonction permet de déboguer les problèmes liés au tas dans les programmes. La fonction parcourt le tas, en raison d’une entrée par appel et retourne un pointeur vers une structure de type **_HEAPINFO** qui contient des informations sur l’entrée suivante du tas. Le **_HEAPINFO** type, défini dans Malloc.h, contient les éléments suivants.
+La fonction **_heapwalk** permet de déboguer les problèmes liés au tas dans les programmes. La fonction parcourt le tas, en parcourant une entrée par appel, et retourne un pointeur vers une structure de type **_HEAPINFO** qui contient des informations sur l’entrée suivante du tas. Le type **_HEAPINFO** , défini dans malloc. h, contient les éléments suivants.
 
 |Champ|Signification|
 |-|-|
@@ -74,9 +77,9 @@ Le **_heapwalk** fonction permet de déboguer les problèmes liés au tas dans l
 |`size_t _size`|Taille de l’entrée du tas.|
 |`int _useflag`|Indicateur qui indique si l’entrée du tas est en cours d’utilisation.|
 
-Un appel à **_heapwalk** qui retourne **_HEAPOK** stocke la taille de l’entrée dans le **_Taille** champ et définit le **_useflag** champ soit **_FREEENTRY** ou **_USEDENTRY** (les deux sont des constantes définies dans Malloc.h). Pour obtenir ces informations sur la première entrée dans le tas, passez **_heapwalk** un pointeur vers un **_HEAPINFO** dont la propriété **_pentry** membre est **NULL** . Si le système d’exploitation ne prend pas en charge **_heapwalk**(par exemple, Windows 98), la fonction retourne **_HEAPEND** et définit **errno** à **ENOSYS**.
+Un appel à **_heapwalk** qui retourne **_HEAPOK** stocke la taille de l’entrée dans le champ **_size** et définit le champ **_useflag** sur **_FREEENTRY** ou **_USEDENTRY** (les deux sont des constantes définies dans malloc. h). Pour obtenir ces informations sur la première entrée du tas, transmettez **_heapwalk** un pointeur vers une structure **_HEAPINFO** dont le membre **_pentry** a la **valeur null**. Si le système d’exploitation ne prend pas en charge **_heapwalk**(par exemple, Windows 98), la fonction retourne **_HEAPEND** et définit **errno** sur **ENOSYS**.
 
-Cette fonction valide son paramètre. Si *entryinfo* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **_HEAPBADPTR**.
+Cette fonction valide son paramètre. Si *entryinfo* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **_HEAPBADPTR**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -86,7 +89,7 @@ Cette fonction valide son paramètre. Si *entryinfo* est un pointeur null, le Ge
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_heapwalk.c

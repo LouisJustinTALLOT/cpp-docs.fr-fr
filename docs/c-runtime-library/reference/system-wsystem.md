@@ -1,10 +1,10 @@
 ---
 title: system, _wsystem
 ms.date: 11/04/2016
-apiname:
+api_name:
 - system
 - _wsystem
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tsystem
 - _wsystem
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82b39f012bebb41772cdc7350eb08dba48678fdd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259090"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957677"
 ---
-# <a name="system-wsystem"></a>system, _wsystem
+# <a name="system-_wsystem"></a>system, _wsystem
 
 Exécute une commande.
 
@@ -61,7 +64,7 @@ Commande à exécuter.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si *commande* est **NULL** et l’interpréteur de commandes est trouvée, retourne une valeur différente de zéro. Si l’interpréteur de commandes n’est trouvée, retourne 0 et attribue **errno** à **ENOENT**. Si *commande* n’est pas **NULL**, **système** retourne la valeur retournée par l’interpréteur de commandes. Elle retourne la valeur 0 uniquement si l'interpréteur de commande retourne la valeur 0. Une valeur de retour de - 1 indique une erreur, et **errno** est défini sur l’une des valeurs suivantes :
+Si la *commande* a la valeur **null** et que l’interpréteur de commande est trouvé, retourne une valeur différente de zéro. Si l’interpréteur de commande est introuvable, retourne 0 et définit **errno** sur **ENOENT**. Si la *commande* n’est pas **null**, **System** retourne la valeur retournée par l’interpréteur de commande. Elle retourne la valeur 0 uniquement si l'interpréteur de commande retourne la valeur 0. Une valeur de retour de-1 indique une erreur et **errno** est défini sur l’une des valeurs suivantes :
 
 |||
 |-|-|
@@ -74,11 +77,11 @@ Pour plus d’informations sur ces codes de retour, consultez [_doserrno, errno,
 
 ## <a name="remarks"></a>Notes
 
-Le **système** fonction passe *commande* à l’interpréteur de commandes, qui s’exécute à la chaîne comme une commande de système d’exploitation. **système** utilise le **COMSPEC** et **chemin d’accès** variables d’environnement pour localiser l’interpréteur de commandes CMD.exe de fichiers. Si *commande* est **NULL**, la fonction vérifie uniquement l’existence de l’interpréteur de commandes.
+La fonction **système** passe la *commande* à l’interpréteur de commande, qui exécute la chaîne en tant que commande du système d’exploitation. le **système** utilise les variables d’environnement **COMSPEC** et **path** pour localiser le fichier de l’interpréteur de commandes cmd. exe. Si la *commande* a la **valeur null**, la fonction vérifie simplement si l’interpréteur de commandes existe.
 
-Vous devez explicitement vider, à l’aide de [fflush](fflush.md) ou [_flushall](flushall.md), ou fermer tout flux avant d’appeler **système**.
+Vous devez explicitement vider, en utilisant [fflush](fflush.md) ou [_flushall](flushall.md), ou fermer un flux avant d’appeler **System**.
 
-**_wsystem** est une version à caractères larges de **système**; le *commande* l’argument de **_wsystem** est une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.
+**_wsystem** est une version à caractères larges du **système**. l’argument de *commande* pour **_wsystem** est une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -97,7 +100,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="example"></a>Exemple
 
-Cet exemple utilise **système** vers le TYPE d’un fichier texte.
+Cet exemple utilise le **système** pour taper un fichier texte.
 
 ```C
 // crt_system.c
@@ -110,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtsystemtxt"></a>Entrée : crt_system.txt
+### <a name="input-crt_systemtxt"></a>Entrée : crt_system.txt
 
 ```Input
 Line one.

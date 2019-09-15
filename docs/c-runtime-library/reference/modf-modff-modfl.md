@@ -1,11 +1,11 @@
 ---
 title: modf, modff, modfl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - modff
 - modf
 - modfl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - modff
 - _modfl
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32caadb787031dca0b0726c546a11c5cd6722b82
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156328"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951538"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -69,11 +72,11 @@ Cette fonction retourne la partie fractionnaire signée de *x*. Aucun retour d'e
 
 ## <a name="remarks"></a>Notes
 
-Le **modf** fonctions décomposent la valeur à virgule flottante *x* en une partie fractionnaire et une partie entière, chacune ayant le même signe que *x*. La partie fractionnaire signée de *x* est retourné. La partie entière est stockée en tant que valeur à virgule flottante à *intptr*.
+Les fonctions **modf,** décomposent la valeur à virgule flottante *x* en parties fractionnaires et entières, chacune ayant le même signe que *x*. La partie fractionnaire signée de *x* est retournée. La partie entière est stockée sous la forme d’une valeur à virgule flottante à *IntPtr*.
 
-**modf** a une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
+**modf,** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **modf** qui acceptent et retournent **float** ou **long** **double** paramètres. Dans un programme C, **modf** toujours prend deux valeurs doubles et retourne une valeur double.
+C++autorise la surcharge, de sorte que vous pouvez appeler des surcharges de **modf,** qui acceptent et retournent des paramètres **float** ou **long** **double** . Dans un programme C, **modf,** accepte toujours deux valeurs de type double et retourne une valeur double.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -83,7 +86,7 @@ C++ autorisant la surcharge, vous pouvez appeler des surcharges de **modf** qui 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_modf.c

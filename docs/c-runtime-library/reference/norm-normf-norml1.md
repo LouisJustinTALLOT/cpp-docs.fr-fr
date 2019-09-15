@@ -1,11 +1,11 @@
 ---
 title: norm, normf, norml
 ms.date: 04/05/2018
-apiname:
+api_name:
 - norm
 - normf
 - norml
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - norm
 - normf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-ms.openlocfilehash: 3c1803a54f0dfc27975af5bb0eeb7e5c042b2579
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8deaa07d984a3840c73e594535ffffc9078d4716
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156134"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951318"
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -61,11 +64,11 @@ Nombre complexe.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La grandeur au carré de *z*.
+Amplitude carrée de *z*.
 
 ## <a name="remarks"></a>Notes
 
-Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **norm** acceptant **_Fcomplex** ou **_Lcomplex** valeurs et retournent **float**ou **long double** valeurs. Dans un programme C, **norm** prend toujours un **_Dcomplex** valeur et retourne un **double** valeur.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **norme** qui acceptent des valeurs **_Fcomplex** ou **_Lcomplex** , et qui retournent des valeurs **float** ou **long double** . Dans un programme C, la **norme** prend toujours une valeur **_Dcomplex** et retourne une valeur **double** .
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -73,7 +76,7 @@ La grandeur au carré de *z*.
 |-------------|--------------|------------------|
 |**norm**, **normf**, **norml**|\<complex.h>|\<complex.h>|
 
-Le **_Fcomplex**, **_Dcomplex**, et **_Lcomplex** types sont équivalents spécifiques à Microsoft des types natifs C99 non implémentées **float _Complex** , **double _Complex**, et **long double _Complex**, respectivement.  Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Les types **_Fcomplex**, **_Dcomplex**et **_Lcomplex** sont des équivalents propres à Microsoft des types C99 natifs non implémentés **float _Complex**, **double _Complex**et **long double _Complex**, respectivement.  Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

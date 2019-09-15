@@ -1,9 +1,9 @@
 ---
 title: calloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - calloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - calloc
 helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: 59aa535136cf32ea5dd68b8917ec969eee41e2ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba498b35106f9ff1636bb1bc0764088a434b5b01
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347728"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939335"
 ---
 # <a name="calloc"></a>calloc
 
@@ -44,7 +47,7 @@ void *calloc(
 
 ### <a name="parameters"></a>Paramètres
 
-*number*<br/>
+*certain*<br/>
 Nombre d'éléments.
 
 *size*<br/>
@@ -56,11 +59,11 @@ Longueur en octets de chaque élément.
 
 ## <a name="remarks"></a>Notes
 
-Le **calloc** fonction alloue de l’espace de stockage pour un tableau de *nombre* éléments, chacun de longueur *taille* octets. Chaque élément est initialisé à 0.
+La fonction **calloc** alloue de l’espace de stockage pour un tableau d’éléments *Number* , chacun d’octets de *taille* longueur. Chaque élément est initialisé à 0.
 
-**calloc** définit **errno** à **ENOMEM** si une allocation de mémoire échoue ou si la quantité de mémoire demandée dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ce code d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**calloc** affecte à **errno** la valeur **ENOMEM** si l’allocation de mémoire échoue ou si la quantité de mémoire demandée dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ce code d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**calloc** appels **malloc** à utiliser le C++ [_set_new_mode](set-new-mode.md) fonction permettant de définir le mode de nouveau gestionnaire. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** consiste à appeler la routine de nouveau gestionnaire telle que définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut afin que, lorsque **calloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que le **nouveau** opérateur Quand elle échoue pour la même raison. Pour remplacer la valeur par défaut, appelez
+**calloc** appelle **malloc** pour utiliser la C++ fonction [_set_new_mode](set-new-mode.md) pour définir le nouveau mode de gestionnaire. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, lorsque **calloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que le **nouvel** opérateur lorsqu’il échoue pour la même raison. Pour remplacer la valeur par défaut, appelez
 
 ```C
 _set_new_mode(1);
@@ -68,9 +71,9 @@ _set_new_mode(1);
 
 au début de votre programme, ou créez un lien avec NEWMODE.OBJ (consultez [Options de lien](../../c-runtime-library/link-options.md)).
 
-Lorsque l’application est liée à une version debug des bibliothèques Runtime C, **calloc** se résout en [_calloc_dbg](calloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
+Lorsque l’application est liée à une version Debug des bibliothèques Runtime C, **calloc** est résolu en [_calloc_dbg](calloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**calloc** est marquée `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction ne peut ne pas modifier les variables globales et que le pointeur retourné n’est pas un alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
+**calloc** est marqué `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’a pas d’alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -1,10 +1,10 @@
 ---
 title: _cexit, _c_exit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _c_exit
 - _cexit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cexit
 - c_exit
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-ms.openlocfilehash: a075e8a8e965a195765b86ffa21fed0915dbf5ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa25d73bef1d85adfed77ba926e2d381e02e45e8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335488"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939256"
 ---
-# <a name="cexit-cexit"></a>_cexit, _c_exit
+# <a name="_cexit-_c_exit"></a>_cexit, _c_exit
 
 Effectue des opérations de nettoyage et retourne le contrôle sans mettre fin au processus.
 
@@ -49,7 +52,7 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>Notes
 
-Le **_cexit** appels de fonctions, dans le dernier entré, premier sorti (LIFO) ordre, les fonctions inscrites par **atexit** et **_onexit**. Puis **_cexit** vide toutes les mémoires tampons d’e/s et ferme tous les flux ouverts avant de retourner. **_c_exit** est identique à **_exit** mais retourne au processus appelant sans traitement **atexit** ou **_onexit** ou vider les mémoires tampons de flux de données. Le comportement de **quitter**, **_exit**, **_cexit**, et **_c_exit** est indiqué dans le tableau suivant.
+La fonction **_cexit** appelle, dans l’ordre LIFO (dernier entré, premier sorti), les fonctions inscrites par **atexit** et **_onexit**. Ensuite, **_cexit** vide toutes les mémoires tampons d’e/s et ferme tous les flux ouverts avant de retourner. **_c_exit** est identique à **_exit** , mais retourne au processus appelant sans traitement de **atexit** ou **_onexit** ou de tampons de flux de vidage. Le comportement de **Exit**, **_exit**, **_cexit**et **_c_exit** est indiqué dans le tableau suivant.
 
 |Fonction|Comportement|
 |--------------|--------------|
@@ -58,7 +61,7 @@ Le **_cexit** appels de fonctions, dans le dernier entré, premier sorti (LIFO) 
 |**_cexit**|Exécute les procédures d’arrêt complètes de la bibliothèque C et retourne à l’appelant, mais ne termine pas le processus.|
 |**_c_exit**|Exécute les procédures d’arrêt rapides de la bibliothèque C et retourne à l’appelant, mais ne termine pas le processus.|
 
-Lorsque vous appelez le **_cexit** ou **_c_exit** fonctions, les destructeurs pour les objets temporaires ou automatiques qui existent au moment de l’appel ne sont pas appelées. Un objet automatique est un objet défini dans une fonction où l’objet n’est pas déclaré comme statique. Un objet temporaire est un objet créé par le compilateur. Pour détruire un objet automatique avant d’appeler **_cexit** ou **_c_exit**, explicitement appelle le destructeur pour l’objet, comme suit :
+Quand vous appelez les fonctions **_cexit** ou **_c_exit** , les destructeurs pour les objets temporaires ou automatiques qui existent au moment de l’appel ne sont pas appelés. Un objet automatique est un objet défini dans une fonction où l’objet n’est pas déclaré comme statique. Un objet temporaire est un objet créé par le compilateur. Pour détruire un objet automatique avant d’appeler **_cexit** ou **_c_exit**, appelez explicitement le destructeur de l’objet, comme suit :
 
 ```cpp
 myObject.myClass::~myClass( );

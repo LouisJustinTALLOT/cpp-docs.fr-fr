@@ -1,12 +1,12 @@
 ---
 title: ___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 - ___mb_cur_max_func
 - __mb_cur_max
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr80.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr90.dll
 - msvcr120.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ___mb_cur_max_func
 - ___mb_cur_max_l_func
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 ms.assetid: 60d36108-1ca7-45a6-8ce7-68a91f13e3a1
-ms.openlocfilehash: 9d5178a9a0801767019b713696ddf809c3fe6f0c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a37ae2134d92310d6a530c759559b5e4b4af00f6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744515"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944194"
 ---
-# <a name="mbcurmaxfunc-mbcurmaxlfunc-pmbcurmax-mbcurmax"></a>___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
+# <a name="___mb_cur_max_func-___mb_cur_max_l_func-__p___mb_cur_max-__mb_cur_max"></a>___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
 
 Fonction CRT interne. Récupère le nombre maximal d'octets dans un caractère multioctets pour les paramètres régionaux actifs ou spécifiés.
 
@@ -55,7 +58,7 @@ locale Structure de paramètres régionaux auprès de laquelle le résultat doit
 
 Nombre maximal d’octets dans un caractère multioctets pour les paramètres régionaux de thread actifs ou les paramètres régionaux spécifiés.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Il s'agit d'une fonction interne qu'utilise le CRT pour récupérer la valeur actuelle de la macro [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md) auprès du stockage local de threads. Nous vous recommandons d'utiliser la macro `MB_CUR_MAX` dans votre code à des fins de portabilité.
 
@@ -63,7 +66,7 @@ La macro `__mb_cur_max` est un moyen pratique d'appeler la fonction `___mb_cur_m
 
 Les fonctions CRT internes sont spécifiques à l'implémentation et sont susceptibles d'être modifiées à chaque nouvelle version. Nous vous déconseillons de les utiliser dans votre code.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

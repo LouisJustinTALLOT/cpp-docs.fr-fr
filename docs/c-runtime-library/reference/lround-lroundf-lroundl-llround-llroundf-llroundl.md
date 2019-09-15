@@ -1,14 +1,14 @@
 ---
 title: lround, lroundf, lroundl, llround, llroundf, llroundl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - llround
 - llroundf
 - llroundl
 - lroundf
 - lround
 - lroundl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lround
 - lroundl
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: a1406f84179df555125b908caa13a0cde6516597
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d849e838811abbed83499d6da283148650bab875
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285843"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953017"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -89,7 +92,7 @@ Valeur à virgule flottante à arrondir.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **lround** et **llround** fonctions retournent le plus proche **long** ou **long** **long** entier *x*. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Aucun retour d'erreur.
+Les **fonctions lround** et **llround** retournent **l’entier** **long** **ou long long le** plus proche en *x*. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Aucun retour d'erreur.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
@@ -97,7 +100,7 @@ Le **lround** et **llround** fonctions retournent le plus proche **long** ou **l
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **lround** ou **llround** qui acceptent et retournent **float** et **long** **double** valeurs. Dans un programme C, **lround** et **llround** acceptent et retournent toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **lround** ou **llround** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **lround** et **llround** prennent toujours et retournent un **double**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -107,7 +110,7 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **l
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_lround.c

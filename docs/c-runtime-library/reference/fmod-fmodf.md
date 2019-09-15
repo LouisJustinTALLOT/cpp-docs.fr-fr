@@ -1,11 +1,11 @@
 ---
 title: fmod, fmodf, fmodl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmod
 - fmodf
 - fmodl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmod
 - _fmodl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 78677be1a0c9921c35e54d43a00b8956a9d858b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333350"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957081"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -72,13 +75,13 @@ Valeurs à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**fmod** renvoie le reste à virgule flottante de *x* / *y*. Si la valeur de *y* est 0.0, **fmod** retourne une valeur NaN silencieuse. Pour plus d’informations sur la représentation sous forme d’un NaN silencieux par la **printf** famille, consultez [printf](printf-printf-l-wprintf-wprintf-l.md).
+**fmod** retourne le reste à virgule flottante de *x* / *y*. Si la valeur de *y* est 0,0, **fmod** retourne une valeur NaN calme. Pour plus d’informations sur la représentation d’une NaN calme par la famille **printf** , consultez [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **fmod** fonction calcule le reste à virgule flottante *f* de *x* / *y* tels que *x*  =  *je* \* *y* + *f*, où *je* est un entier, *f* a le même signe que *x*et la valeur absolue de *f* est inférieure à la valeur absolue de *y*.
+La fonction **fmod** calcule le reste à virgule flottante *f* de *x* / *y* , de telle sorte que *x* = *i* \* *y* + *f*, où *i* est un entier, *f* a le même signe que *x*et la valeur absolue de *f* est inférieure à la valeur absolue de *y*.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **fmod** qui acceptent et retournent **float** et **long** **double** valeurs. Dans un programme C, **fmod** accepte toujours deux **double** arguments et retourne un **double**.
+C++autorise la surcharge, de sorte que vous pouvez appeler des surcharges de **fmod** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **fmod** prend toujours deux arguments **double** et retourne un **double**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -88,7 +91,7 @@ C++ autorisant la surcharge, vous pouvez appeler des surcharges de **fmod** qui 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_fmod.c

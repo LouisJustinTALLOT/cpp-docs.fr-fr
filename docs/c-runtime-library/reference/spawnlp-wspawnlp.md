@@ -1,10 +1,10 @@
 ---
 title: _spawnlp, _wspawnlp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wspawnlp
 - _spawnlp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wspawnlp
 - wspawnlp
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - process creation
 - spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
-ms.openlocfilehash: 44137aefcec8f6658a90117288a47696f4d31903
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98d5609d17f5932a81be916b878eb25333869591
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355235"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947740"
 ---
-# <a name="spawnlp-wspawnlp"></a>_spawnlp, _wspawnlp
+# <a name="_spawnlp-_wspawnlp"></a>_spawnlp, _wspawnlp
 
 Crée et exécute un nouveau processus.
 
@@ -73,17 +76,17 @@ Mode d'exécution du processus appelant.
 *cmdname*<br/>
 Chemin d'accès du fichier à exécuter.
 
-*arg0*, *arg1*, ... *argn*<br/>
-Liste des pointeurs vers les arguments. Le *arg0* argument est généralement un pointeur vers *cmdname*. Les arguments *arg1* via *argn* sont des pointeurs vers les chaînes de caractères formant la nouvelle liste d’arguments. Suivant *argn*, il doit y avoir un **NULL** pointeur pour marquer la fin de la liste d’arguments.
+*arg0*, *Arg1*,... *argN*<br/>
+Liste des pointeurs vers les arguments. L’argument *arg0* est généralement un pointeur vers *CmdName*. Les arguments *Arg1* à *argN* sont des pointeurs vers les chaînes de caractères formant la nouvelle liste d’arguments. Après *argN*, il doit exister un pointeur **null** pour marquer la fin de la liste d’arguments.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de retour à partir d’une commande synchrone **_spawnlp** ou **_wspawnlp** (**_P_WAIT** spécifié pour *mode*) est l’état de la sortie du nouveau processus . La valeur de retour à partir d’une commande asynchrone **_spawnlp** ou **_wspawnlp** (**_P_NOWAIT** ou **_P_NOWAITO** spécifié pour  *mode*) est le handle de processus. L'état de sortie est 0 si le processus s'est terminé normalement. Vous pouvez définir l’état de sortie à une valeur différente de zéro si le processus engendré appelle spécifiquement la **quitter** routine avec un argument différent de zéro. Si le nouveau processus ne définissait pas explicitement un état de sortie positif, un état de sortie positif indique une sortie anormale avec arrêt ou interruption. Une valeur de retour de -1 indique une erreur (le nouveau processus n’est pas démarré). Dans ce cas, **errno** est défini sur l’une des valeurs suivantes.
+La valeur de retour d’un **_spawnlp** ou d’un **_wspawnlp** synchrone ( **_P_WAIT** spécifié pour le *mode*) est l’état de sortie du nouveau processus. La valeur de retour d’un **_spawnlp** ou d’un **_wspawnlp** asynchrone ( **_P_NOWAIT** ou **_P_NOWAITO** spécifié pour le *mode*) est le handle de processus. L'état de sortie est 0 si le processus s'est terminé normalement. Vous pouvez définir l’état de sortie à une valeur différente de zéro si le processus généré appelle spécifiquement la routine de **sortie** avec un argument différent de zéro. Si le nouveau processus ne définissait pas explicitement un état de sortie positif, un état de sortie positif indique une sortie anormale avec arrêt ou interruption. Une valeur de retour de-1 indique une erreur (le nouveau processus n’est pas démarré). Dans ce cas, **errno** est défini sur l’une des valeurs suivantes.
 
 |||
 |-|-|
 | **E2BIG** | La liste des arguments dépasse 1024 octets. |
-| **EINVAL** | *mode* argument n’est pas valide. |
+| **EINVAL** | l’argument *mode* n’est pas valide. |
 | **ENOENT** | Fichier ou chemin d'accès introuvable. |
 | **ENOEXEC** | Le fichier spécifié n'est pas exécutable ou a un format de fichier exécutable non valide. |
 | **ENOMEM** | Mémoire insuffisante pour exécuter le nouveau processus. |
@@ -92,9 +95,9 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions crée et exécute un nouveau processus, passant chaque argument de ligne de commande en tant que paramètre distinct et utilisant le **chemin d’accès** variable d’environnement pour rechercher le fichier à exécuter.
+Chacune de ces fonctions crée et exécute un nouveau processus, passant chaque argument de ligne de commande en tant que paramètre distinct et en utilisant la variable **d’environnement PATH** pour rechercher le fichier à exécuter.
 
-Ces fonctions valident leurs paramètres. Si *cmdname* ou *arg0* est une chaîne vide ou un pointeur null, ces fonctions génèrent une exception de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL**et retournent -1. Aucun nouveau processus généré.
+Ces fonctions valident leurs paramètres. Si *CmdName* ou *arg0* est une chaîne vide ou un pointeur null, ces fonctions génèrent une exception de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL**et retournent-1. Aucun nouveau processus généré.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -105,7 +108,7 @@ Ces fonctions valident leurs paramètres. Si *cmdname* ou *arg0* est une chaîne
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Consultez l'exemple de [Fonctions _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).
 

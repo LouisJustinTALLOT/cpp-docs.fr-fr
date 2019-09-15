@@ -1,12 +1,12 @@
 ---
 title: sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _swprintf_s_l
 - _sprintf_s_l
 - swprintf_s
 - sprintf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - swprintf_s
 - sprintf_s
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-ms.openlocfilehash: 4d4bec339caccf9b0843afada4b56b435243dd11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34b3ddce68563479b26abff34e8fa31f6298558a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354945"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958011"
 ---
-# <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
+# <a name="sprintf_s-_sprintf_s_l-swprintf_s-_swprintf_s_l"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 
 Écrire des données mises en forme dans une chaîne. Ces versions de [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -116,23 +119,23 @@ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le nombre de caractères écrits, ou -1 si une erreur s’est produite. Si *tampon* ou *format* est un pointeur null, **sprintf_s** et **swprintf_s** retournent -1 et définissez **errno**à **EINVAL**.
+Nombre de caractères écrits, ou-1 si une erreur s’est produite. Si *buffer* ou *format* est un pointeur null, **sprintf_s** et **swprintf_s** retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
-**sprintf_s** retourne le nombre d’octets stockés dans *tampon*, sans compter le caractère null de fin. **swprintf_s** retourne le nombre de caractères larges stockés dans *tampon*, sans compter le caractère large null de fin.
+**sprintf_s** retourne le nombre d’octets stockés dans la *mémoire tampon*, sans compter le caractère null de fin. **swprintf_s** retourne le nombre de caractères larges stockés dans la *mémoire tampon*, sans compter le caractère élargi de la valeur null de fin.
 
 ## <a name="remarks"></a>Notes
 
-Le **sprintf_s** fonction met en forme et stocke une série de caractères et de valeurs dans *tampon*. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le format se compose de caractères ordinaires et a les mêmes forme et fonction que le *format* argument pour [printf](printf-printf-l-wprintf-wprintf-l.md). Un caractère null est ajouté après le dernier caractère écrit. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+La fonction **sprintf_s** met en forme et stocke une série de caractères et de valeurs dans *buffer*. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante au *format*. Le format se compose de caractères ordinaires et a la même forme et fonction que l’argument *format* pour [printf](printf-printf-l-wprintf-wprintf-l.md). Un caractère null est ajouté après le dernier caractère écrit. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
-Une des principales différences entre **sprintf_s** et [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) qui est **sprintf_s** vérifie la chaîne de format pour les caractères de mise en forme valides, tandis que [ sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) vérifie uniquement si la chaîne de format ou la mémoire tampon sont **NULL** pointeurs. Si l’une des vérifications échoue, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Parameter Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et affecte **errno** à **EINVAL**.
+L’une des principales différences entre **sprintf_s** et [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) est que **sprintf_s** vérifie la chaîne de format pour les caractères de mise en forme valides, tandis que [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) vérifie uniquement si la chaîne de format ou la mémoire tampon sont des pointeurs **null** . Si l’une des vérifications échoue, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Parameter Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne-1 et définit **errno** sur **EINVAL**.
 
-L’autre différence principale entre **sprintf_s** et [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) qui est **sprintf_s** prend un paramètre de longueur spécifiant la taille de la mémoire tampon de sortie en caractères. Si la mémoire tampon est trop petite pour le texte mis en forme, y compris le caractère null, alors que la mémoire tampon est définie sur une chaîne vide en plaçant un caractère null à *tampon*[0], et le Gestionnaire de paramètre non valide est appelé. Contrairement aux **_snprintf**, **sprintf_s** garantit que la mémoire tampon sera être nul, sauf si la taille du tampon est égale à zéro.
+L’autre différence principale entre **sprintf_s** et [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) est que **sprintf_s** prend un paramètre de longueur spécifiant la taille de la mémoire tampon de sortie en caractères. Si la mémoire tampon est trop petite pour le texte mis en forme, y compris la valeur null de fin, la mémoire tampon est définie sur une chaîne vide en plaçant un caractère null à la *mémoire tampon*[0], et le gestionnaire de paramètre non valide est appelé. Contrairement à **_snprintf**, **sprintf_s** garantit que la mémoire tampon se termine par un caractère null, sauf si la taille de la mémoire tampon est égale à zéro.
 
-**swprintf_s** est une version à caractères larges de **sprintf_s**; les arguments de pointeur à **swprintf_s** sont des chaînes à caractères larges. Détection d’erreurs dans d’encodage **swprintf_s** peut différer de celle dans **sprintf_s**. Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+**swprintf_s** est une version à caractères larges de **sprintf_s**; les arguments de pointeur vers **swprintf_s** sont des chaînes à caractères larges. La détection des erreurs d’encodage dans **swprintf_s** peut différer de celle de **sprintf_s**. Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle. Les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement, ce qui évite d’avoir à spécifier un argument taille, et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Il existe des versions de **sprintf_s** qui offrent un contrôle supplémentaire sur ce qui se passe si la mémoire tampon est trop petite. Pour plus d'informations, consultez [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
+Il existe des versions de **sprintf_s** qui offrent un contrôle supplémentaire sur ce qui se produit si la mémoire tampon est trop petite. Pour plus d'informations, consultez [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -150,7 +153,7 @@ Il existe des versions de **sprintf_s** qui offrent un contrôle supplémentaire
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt_sprintf_s.c

@@ -1,14 +1,14 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - lrint
 - lrintl
 - lrintf
 - llrint
 - llrintf
 - llrintl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrint
 - lrintf
@@ -42,12 +45,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72870c3548f0fd6972183b0c090708c6eddc591e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285770"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953122"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -106,13 +109,13 @@ Valeur à arrondir.
 
 En cas de réussite, retourne la valeur intégrale arrondie de *x*.
 
-|Problème|Retourner|
+|Problème|Renvoie|
 |-----------|------------|
-|*x* est en dehors de la plage du type de retour<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Déclenche **FE_INVALID** et retourne zéro (0).|
+|*x* est en dehors de la plage du type de retour<br /><br /> *x* = ±∞<br /><br /> *x* = Nan|Déclenche **FE_INVALID** et retourne zéro (0).|
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **lrint** et **llrint** acceptant **float** et **long**  **Double** types. Dans un programme C, **lrint** et **llrint** ont toujours un **double**.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **lrint** et **llrint** qui prennent des types **float** et **long** **double** . Dans un programme C, **lrint** et **llrint** prennent toujours un **double**.
 
 Si *x* ne représente pas l’équivalent à virgule flottante d’une valeur intégrale, ces fonctions déclenchent **FE_INEXACT**.
 

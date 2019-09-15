@@ -1,9 +1,9 @@
 ---
 title: _fclose_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fclose_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fclose_nolock
 - _fclose_nolock
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - fclose_nolock function
 - _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
-ms.openlocfilehash: 440582bb42a1795721eab17b24be3e0bc3daf80f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e19604f09cdb3ac2a5bfc1635c2b98a8d5218c5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334968"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941427"
 ---
-# <a name="fclosenolock"></a>_fclose_nolock
+# <a name="_fclose_nolock"></a>_fclose_nolock
 
 Ferme un flux sans verrouillage de threads.
 
@@ -50,7 +53,7 @@ Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**fclose** retourne 0 si le flux est fermé correctement. Retourne **EOF** pour indiquer une erreur.
+**fclose** retourne 0 si le flux est fermé avec succès. Retourne **EOF** pour indiquer une erreur.
 
 ## <a name="remarks"></a>Notes
 

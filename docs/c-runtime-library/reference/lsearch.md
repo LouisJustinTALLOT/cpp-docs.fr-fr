@@ -1,9 +1,9 @@
 ---
 title: _lsearch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lsearch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lsearch
 - lsearch
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 340e8ac382972b15acc52013d5d6a51352db969c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92973536df478f4176970929c5f4dd48352bed13
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285654"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954074"
 ---
-# <a name="lsearch"></a>_lsearch
+# <a name="_lsearch"></a>_lsearch
 
 Effectue une recherche linéaire portant sur une valeur ; l’ajoute en fin de liste si elle est introuvable. Une version plus sécurisée de cette fonction est disponible. Consultez [_lsearch_s](lsearch-s.md).
 
@@ -59,7 +62,7 @@ Objet à rechercher.
 *base*<br/>
 Pointeur désignant la base du tableau à explorer.
 
-*number*<br/>
+*certain*<br/>
 Nombre d'éléments.
 
 *width*<br/>
@@ -70,15 +73,15 @@ Pointeur désignant la routine de comparaison. Le premier paramètre est un poin
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si la clé est trouvée, **_lsearch** retourne un pointeur vers l’élément du tableau à *base* qui correspond à *clé*. Si la clé est introuvable, **_lsearch** retourne un pointeur vers l’élément qui vient d’être ajouté à la fin du tableau.
+Si la clé est trouvée, **_lsearch** retourne un pointeur vers l’élément du tableau au niveau de *base* qui correspond à la *clé*. Si la clé est introuvable, **_lsearch** retourne un pointeur vers l’élément qui vient d’être ajouté à la fin du tableau.
 
 ## <a name="remarks"></a>Notes
 
-Le **_lsearch** fonction effectue une recherche linéaire portant sur la valeur *clé* dans un tableau de *nombre* éléments, chacun des *largeur* octets. Contrairement aux **bsearch**, **_lsearch** ne nécessite pas de tableau à trier. Si *clé* n’est trouvée, **_lsearch** ajoute à la fin du tableau et incrémente *nombre*.
+La fonction **_lsearch** effectue une recherche linéaire sur la *clé* de valeur dans un tableau d’éléments *Number* , chacun d’octets de *largeur* . Contrairement à **ensuite bsearch**, **_lsearch** ne nécessite pas le tri du tableau. Si la *clé* est introuvable, **_lsearch** l’ajoute à la fin du tableau et incrémente le *nombre*.
 
-Le *comparer* argument est un pointeur désignant une routine fournie par l’utilisateur qui compare deux éléments de tableau et retourne une valeur spécifiant leur relation. **_lsearch** appelle le *comparer* routines une ou plusieurs fois pendant la recherche, en passant les pointeurs désignant deux éléments de tableau à chaque appel. *comparer* doit comparer les éléments et retourner une valeur différente de zéro (les éléments sont différents) ou 0 (ce qui signifie que les éléments sont identiques).
+L’argument de *comparaison* est un pointeur vers une routine fournie par l’utilisateur qui compare deux éléments de tableau et retourne une valeur spécifiant leur relation. **_lsearch** appelle la routine de *comparaison* une ou plusieurs fois pendant la recherche, en passant des pointeurs à deux éléments de tableau à chaque appel. *compare* doit comparer les éléments et retourner une valeur différente de zéro (ce qui signifie que les éléments sont différents) ou 0 (ce qui signifie que les éléments sont identiques).
 
-Cette fonction valide ses paramètres. Si *comparer*, *clé* ou *nombre* est **NULL**, ou si *base* est **NULL**et *nombre* est différent de zéro, ou si *largeur* est inférieur à zéro, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **NULL**.
+Cette fonction valide ses paramètres. Si *compare*, *Key* ou *Number* a la **valeur null**, ou si *base* a la **valeur null** et que le *nombre* est différent de zéro, ou si *Width* est inférieur à zéro, le gestionnaire de paramètres non valides est appelé, comme décrit dans le [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne la **valeur null**.
 
 ## <a name="requirements"></a>Configuration requise
 

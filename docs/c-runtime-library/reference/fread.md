@@ -1,9 +1,9 @@
 ---
 title: fread
 ms.date: 11/28/2018
-apiname:
+api_name:
 - fread
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fread
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: da3828142a06ed89a6447ccaef4a0d8ff0063cca
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 7cf4542a656798f7e2431b2f939df1b5d6396144
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376183"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956814"
 ---
 # <a name="fread"></a>fread
 
@@ -70,7 +73,7 @@ Pour plus d’informations sur ces codes d’erreur [ \_,\_consultez doserrno, e
 
 La fonction **fread** lit le *nombre* d’éléments de *taille* octets à partir du *flux* d’entrée et les stocke dans la *mémoire tampon*. Le pointeur de fichier associé au *flux* (le cas échéant) est augmenté du nombre d’octets réellement lus. Si le flux donné est ouvert en [mode texte](../../c-runtime-library/text-and-binary-mode-file-i-o.md), les nouvelles lignes de style Windows sont converties en nouvelles lignes de style UNIX. Autrement dit, les paires CRLF (retour chariot-saut de ligne) sont remplacées par des caractères de saut de ligne unique (LF). Le remplacement n’a aucun effet sur le pointeur de fichier ou la valeur de retour. La position du pointeur de fichier est indéterminée si une erreur se produit. La valeur d’un élément partiellement lu ne peut pas être déterminée.
 
-En cas d’utilisation sur un flux en mode texte, si la quantité de données demandées (autrement dit, le *nombre*de *tailles* \* ) est supérieure ou égale à la taille de la mémoire tampon du **fichier** \* interne (par défaut, il s’agit de 4096 octets, configurable à l’aide [de setvbuf](../../c-runtime-library/reference/setvbuf.md)), les données de flux sont copiées directement dans la mémoire tampon fournie par l’utilisateur, et la conversion de nouvelle ligne est effectuée dans cette mémoire tampon. Étant donné que les données converties peuvent être plus courtes que les données de flux copiées dans la mémoire tampon, les données sont passées à la *taille* *return_value* \* de la *mémoire tampon*\[] (où *return_value* est la valeur de retour de **fread**) peut contient des données non converties du fichier. Pour cette raison, nous vous recommandons de terminer par null les données de type caractère au niveau de la *mémoire tampon*\[*return_value* \* . si l’objectif de la mémoire tampon est d’agir en tant que chaîne de style C. Pour plus d’informations sur les effets du mode texte et du mode binaire, consultez [fopen](fopen-wfopen.md) .
+En cas d’utilisation sur un flux en mode texte, si la quantité de données demandées (autrement dit, le *nombre*de *tailles* \* ) est supérieure ou égale à la taille de la mémoire tampon du **fichier** \* interne (par défaut, il s’agit de 4096 octets, configurable à l’aide [de setvbuf](../../c-runtime-library/reference/setvbuf.md)), les données de flux sont copiées directement dans la mémoire tampon fournie par l’utilisateur, et la conversion de nouvelle ligne est effectuée dans cette mémoire tampon. Étant donné que les données converties peuvent être plus courtes que les données de flux copiées dans la mémoire tampon, les données sont passées à la *taille* *return_value* \* de la *mémoire tampon*\[] (où *return_value* est la valeur de retour de **fread**) peut contient des données non converties du fichier. Pour cette raison, nous vous recommandons de terminer par null les données de type caractère au niveau dela *mémoire tampon*\[*return_value* \* . si l’objectif de la mémoire tampon est d’agir en tant que chaîne de style C. Pour plus d’informations sur les effets du mode texte et du mode binaire, consultez [fopen](fopen-wfopen.md) .
 
 Cette fonction verrouille les autres threads. Si vous avez besoin d’une version sans verrouillage, utilisez **_fread_nolock**.
 
@@ -82,7 +85,7 @@ Cette fonction verrouille les autres threads. Si vous avez besoin d’une versio
 
 Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_fread.c

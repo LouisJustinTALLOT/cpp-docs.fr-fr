@@ -1,9 +1,9 @@
 ---
 title: feupdateenv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feupdateenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,20 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - feupdateenv
 - fenv/feupdateenv
 helpviewer_keywords:
 - feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-ms.openlocfilehash: 6d553d6899f55f5bdfb3ff313e88abfcb56ab4ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f40cab42e4a89b1fc5a100587b11b0e2aeeb55c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334072"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940987"
 ---
 # <a name="feupdateenv"></a>feupdateenv
 
@@ -43,7 +44,7 @@ int feupdateenv(
 ### <a name="parameters"></a>Paramètres
 
 *penv*<br/>
-Pointeur vers un **fenv_t** objet qui contient un environnement à virgule flottante en tant que jeu par un appel à [fegetenv](fegetenv1.md) ou [feholdexcept](feholdexcept2.md). Vous pouvez également spécifier l’environnement à virgule flottante de démarrage par défaut à l’aide de la macro FE_DFL_ENV.
+Pointeur vers un objet **fenv_t** qui contient un environnement à virgule flottante tel qu’il est défini par un appel à [fegetenv](fegetenv1.md) ou [feholdexcept](feholdexcept2.md). Vous pouvez également spécifier l’environnement à virgule flottante de démarrage par défaut à l’aide de la macro FE_DFL_ENV.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -51,7 +52,7 @@ Retourne 0 si toutes les actions se sont déroulées correctement. Sinon, retour
 
 ## <a name="remarks"></a>Notes
 
-Le **feupdateenv** fonction effectue plusieurs actions. Tout d’abord, elle stocke automatiquement les indicateurs d’état d’exception de virgule flottante déclenchés actuels. Ensuite, il définit l’environnement à virgule flottante actuel à partir de la valeur stockée dans le **fenv_t** objet vers lequel pointe *penv*. Si *penv* n’est pas **FE_DFL_ENV** ou ne pointe pas vers une valide **fenv_t** de l’objet, le comportement suivant n’est pas défini. Enfin, **feupdateenv** lève les exceptions de virgule flottante stockées localement.
+La fonction **feupdateenv** exécute plusieurs actions. Tout d’abord, elle stocke automatiquement les indicateurs d’état d’exception de virgule flottante déclenchés actuels. Ensuite, il définit l’environnement à virgule flottante actuel à partir de la valeur stockée dans l’objet **fenv_t** pointé par *penv*. Si *penv* n’est pas **FE_DFL_ENV** ou ne pointe pas vers un objet **fenv_t** valide, le comportement suivant n’est pas défini. Enfin, **feupdateenv** déclenche les exceptions à virgule flottante stockées localement.
 
 Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
 

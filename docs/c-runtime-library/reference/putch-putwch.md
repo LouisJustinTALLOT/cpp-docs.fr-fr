@@ -1,10 +1,10 @@
 ---
 title: _putch, _putwch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putwch
 - _putch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putch
 - putwch
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: da45744fe56c198cc97228cae8043abbb5436fbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e7d7d57f5418e8c15aa02f015d3346298fa0422
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358145"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950050"
 ---
-# <a name="putch-putwch"></a>_putch, _putwch
+# <a name="_putch-_putwch"></a>_putch, _putwch
 
 Écrit un caractère dans la console.
 
@@ -62,11 +65,11 @@ Caractère à sortir.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne *c* en cas de réussite. Si **_putch** échoue, elle retourne **EOF**; si **_putwch** échoue, elle retourne **WEOF**.
+Retourne *c* en cas de réussite. Si **_putch** échoue, elle retourne **EOF**; Si **_putwch** échoue, elle retourne **WEOF**.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions écrivent le caractère *c* directement, sans mise en mémoire tampon, à la console. Dans Windows NT, **_putwch** écrit des caractères Unicode en utilisant les paramètres régionaux actifs de la console.
+Ces fonctions écrivent le caractère *c* directement, sans mise en mémoire tampon, sur la console. Dans Windows NT, **_putwch** écrit des caractères Unicode en utilisant les paramètres régionaux actifs de la console.
 
 Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Pour plus d’informations, consultez **_putch_nolock**, **_putwch_nolock**.
 
@@ -89,7 +92,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Consultez l’exemple relatif à [_getch](getch-getwch.md).
 

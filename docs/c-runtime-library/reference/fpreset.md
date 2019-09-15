@@ -1,9 +1,9 @@
 ---
 title: _fpreset
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpreset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fpreset
 - fpreset
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 842b9c794d04d71f8f6ca97e35fb3cac2f7bb1ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333233"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957013"
 ---
-# <a name="fpreset"></a>_fpreset
+# <a name="_fpreset"></a>_fpreset
 
 Réinitialise le package à virgule flottante.
 
@@ -43,9 +46,9 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>Notes
 
-Le **_fpreset** fonction réinitialise le package mathématique à virgule flottante. **_fpreset** est généralement utilisée avec **signal**, **système**, ou le **_exec** ou **_spawn** fonctions. Si un programme intercepte des signaux d’erreur de virgule flottante (**SIGFPE**) avec **signal**, il peut récupérer en toute sécurité à partir d’erreurs à virgule flottante en appelant **_fpreset** et à l’aide de **longjmp**.
+La fonction **_fpreset** réinitialise le package mathématique à virgule flottante. **_fpreset** est généralement utilisé avec les fonctions **signal**, **System**ou **_exec** ou **_spawn** . Si un programme intercepte des signaux d’erreur à virgule flottante (**SIGFPE**) avec **signal**, il peut récupérer en toute sécurité des erreurs à virgule flottante en appelant **_fpreset** et en utilisant **longjmp**.
 
-Cette fonction est déconseillée lors de la compilation avec [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , car le common language runtime prend uniquement en charge la précision à virgule flottante par défaut.
+Cette fonction est déconseillée lors de la compilation avec [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , car la Common Language Runtime prend en charge uniquement la précision en virgule flottante par défaut.
 
 ## <a name="requirements"></a>Configuration requise
 

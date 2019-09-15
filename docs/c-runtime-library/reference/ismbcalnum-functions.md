@@ -1,14 +1,14 @@
 ---
 title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbcalpha
 - _ismbcalnum
 - _ismbcdigit
 - _ismbcalnum_l
 - _ismbcdigit_l
 - _ismbcalpha_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcdigit
 - ismbcalnum_l
@@ -46,14 +49,14 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f13d1faab2923827707d8749a8783a10cf989b88
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157282"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953951"
 ---
-# <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
+# <a name="_ismbcalnum-_ismbcalnum_l-_ismbcalpha-_ismbcalpha_l-_ismbcdigit-_ismbcdigit_l"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
 Vérifie si un caractère multioctet est un caractère alphanumérique, alphabétique ou numérique.
 
@@ -102,19 +105,19 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c*< = 255 et qu’il existe un correspondant **_ismbb** routine (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), le Il en résulte la valeur de retour correspondantes **_ismbb** routine.
+Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c*< = 255 et qu’il existe une routine **_ismbb** correspondante (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), le résultat est la valeur de retour de la routine **_ismbb** correspondante.
 
 ## <a name="remarks"></a>Notes
 
 Chacune de ces routines teste un caractère multioctet fourni pour un état donné.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 |Routine|Condition de test|Exemple de page de codes 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum**, **_ismbcalnum_l**|Alphanumérique|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’une lettre en anglais ASCII : Consultez les exemples pour **_ismbcdigit** et **_ismbcalpha**.|
-|**_ismbcalpha**, **_ismbcalpha_l**|Alphabétique|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’une lettre en anglais ASCII : 0 x 41 < =*c*< = 0x5A ou 0 x 61 < =*c*< = 0x7A ; ou une lettre katakana : 0xA6 < =*c*< = 0xDF.|
-|**_ismbcdigit**, **_ismbcdigit**|Chiffre|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’un chiffre ASCII : 0x30<=*c*<=0x39.|
+|**_ismbcalnum**, **_ismbcalnum_l**|Alphanumérique|Retourne une valeur différente de zéro si et seulement si *c* est une représentation sur un octet d’une lettre ASCII ASCII : Consultez les exemples pour **_ismbcdigit** et **_ismbcalpha**.|
+|**_ismbcalpha**, **_ismbcalpha_l**|Alphabétique|Retourne une valeur différente de zéro si et seulement si *c* est une représentation sur un octet d’une lettre ASCII ASCII : 0x41 vers < =*c*< = 0x5A ou 0x61 < =*c*< = 0x7a ; ou une lettre Katakana : 0xA6 < =*c*< = 0xDF.|
+|**_ismbcdigit**, **_ismbcdigit**|Chiffre|Retourne une valeur différente de zéro si et seulement si *c* est une représentation sur un octet d’un chiffre ASCII : 0x30 < =*c*< = 0x39.|
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -1,10 +1,10 @@
 ---
 title: _execle, _wexecle
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execle
 - _wexecle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wexecle
 - _execle
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _wexecle function
 - _execle function
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
-ms.openlocfilehash: dbd84dd8d8e150a063dad4dc89a572c317bce544
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3480b2220c71984dcc30cec54d00deac1f4dfbc7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288160"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937388"
 ---
-# <a name="execle-wexecle"></a>_execle, _wexecle
+# <a name="_execle-_wexecle"></a>_execle, _wexecle
 
 Charge et exécute les nouveaux processus enfant.
 
@@ -65,7 +68,7 @@ intptr_t _wexecle(
 *cmdname*<br/>
 Chemin d’accès du fichier à exécuter.
 
-*arg0*, ... *argn*<br/>
+*arg0*,... *argN*<br/>
 Liste des pointeurs désignant les paramètres.
 
 *envp*<br/>
@@ -73,9 +76,9 @@ Tableau de pointeurs vers les paramètres d'environnement.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de retour de -1 indique une erreur, auquel cas la **errno** variable globale est définie.
+En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de retour de-1 indique une erreur, auquel cas la variable globale **errno** est définie.
 
-|**errno** valeur|Description|
+|valeur **errno**|Description|
 |-------------------|-----------------|
 |**E2BIG**|L’espace nécessaire aux arguments et aux paramètres d’environnement dépasse 32 Ko.|
 |**EACCES**|Le fichier spécifié possède un verrou ou une violation de partage.|
@@ -91,7 +94,7 @@ Pour plus d’informations sur ces codes de retour, consultez [_doserrno, errno,
 
 Chacune de ces fonctions charge et exécute un nouveau processus, passe chaque argument de ligne de commande en tant que paramètre distinct et passe un tableau de pointeurs aux paramètres d’environnement.
 
-Le **_execle** fonctions valident leurs paramètres. Si *cmdname* ou *arg0* est un pointeur null ou une chaîne vide, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1. Aucun nouveau processus n'est lancé.
+Les fonctions **_execle** valident leurs paramètres. Si *CmdName* ou *arg0* est un pointeur null ou une chaîne vide, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent-1. Aucun nouveau processus n'est lancé.
 
 ## <a name="requirements"></a>Configuration requise
 

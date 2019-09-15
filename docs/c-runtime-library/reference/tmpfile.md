@@ -1,9 +1,9 @@
 ---
 title: tmpfile
 ms.date: 11/04/2016
-apiname:
+api_name:
 - tmpfile
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tmpfile
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f58c23050fe89f84f283c3784a7c0cee72637bf2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155561"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957541"
 ---
 # <a name="tmpfile"></a>tmpfile
 
@@ -42,15 +45,15 @@ FILE *tmpfile( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **tmpfile** retourne un pointeur de flux de données. Sinon, elle retourne un **NULL** pointeur.
+En cas de réussite, **tmpfile** retourne un pointeur de flux. Sinon, elle retourne un pointeur **null** .
 
 ## <a name="remarks"></a>Notes
 
-Le **tmpfile** fonction crée un fichier temporaire et retourne un pointeur vers ce flux de données. Le fichier temporaire est créé dans le répertoire racine. Pour créer un fichier temporaire dans un répertoire autre que la racine, utilisez [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) en association avec [fopen](fopen-wfopen.md).
+La fonction **tmpfile** crée un fichier temporaire et retourne un pointeur vers ce flux. Le fichier temporaire est créé dans le répertoire racine. Pour créer un fichier temporaire dans un répertoire autre que la racine, utilisez [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) en association avec [fopen](fopen-wfopen.md).
 
-Si le fichier ne peut pas être ouvert, **tmpfile** retourne un **NULL** pointeur. Ce fichier temporaire est automatiquement supprimé quand le fichier est fermé lorsque le programme se termine normalement ou lorsque **_rmtmp** est appelée, en supposant que le répertoire de travail actif ne change pas. Le fichier temporaire est ouvert dans **w + b** mode (lecture/écriture binaire).
+Si le fichier ne peut pas être ouvert, **tmpfile** retourne un pointeur **null** . Ce fichier temporaire est automatiquement supprimé lorsque le fichier est fermé, lorsque le programme se termine normalement ou lorsque **_rmtmp** est appelé, en supposant que le répertoire de travail actuel ne change pas. Le fichier temporaire est ouvert dans le mode **w + b** (lecture/écriture binaire).
 
-Échec peut se produire si vous essayez de plus de TMP_MAX (voir STDIO. (H) appels avec **tmpfile**.
+Une défaillance peut se produire si vous tentez plus de TMP_MAX (voir STDIO. H) appels avec **tmpfile**.
 
 ## <a name="requirements"></a>Configuration requise
 

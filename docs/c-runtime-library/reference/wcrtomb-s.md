@@ -1,9 +1,9 @@
 ---
 title: wcrtomb_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcrtomb_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcrtomb_s
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-ms.openlocfilehash: 7fe7fba861eecec562928cf381973f62a4db60fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1612e7fc4e40e05c46f06d8a29b69534c359421
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155470"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945843"
 ---
-# <a name="wcrtombs"></a>wcrtomb_s
+# <a name="wcrtomb_s"></a>wcrtomb_s
 
 Convertit un caractère large dans sa représentation de caractère multioctet. Version de [wcrtomb](wcrtomb.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -63,31 +66,31 @@ Retourne le nombre de caractères écrits ou -1 si une erreur s’est produite.
 Résultat de la conversion du caractère multioctet.
 
 *sizeOfmbchar*<br/>
-La taille de la *mbchar* variable en octets.
+Taille de la variable *mbchar* en octets.
 
 *wchar*<br/>
 Caractère large à convertir.
 
 *mbstate*<br/>
-Un pointeur vers un **mbstate_t** objet.
+Pointeur vers un objet **mbstate_t** .
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne zéro ou un **errno** valeur si une erreur se produit.
+Retourne zéro ou une valeur **errno** si une erreur se produit.
 
 ## <a name="remarks"></a>Notes
 
-Le **wcrtomb_s** fonction convertit un caractère large, à compter de l’état de conversion spécifié contenu dans *mbstate*, à partir de la valeur contenue dans *wchar*, dans le adresse représentée par *mbchar*. Le *pReturnValue* valeur sera le nombre d’octets convertis, mais pas plus de **MB_CUR_MAX** octets, ou -1 si une erreur s’est produite.
+La fonction **wcrtomb_s** convertit un caractère élargi, en commençant dans l’état de conversion spécifié dans *mbstate*, à partir de la valeur contenue dans *WCHAR*, dans l’adresse représentée par *mbchar*. La valeur *pReturnValue* est le nombre d’octets convertis, mais pas plus de **MB_CUR_MAX** octets, ou-1 si une erreur s’est produite.
 
-Si *mbstate* a la valeur null, le texte interne **mbstate_t** état de la conversion est utilisé. Si le caractère contenu dans *wchar* n’a pas un caractère multioctet correspondant, la valeur de *pReturnValue* sera -1 et la fonction retournera le **errno** valeur de **EILSEQ**.
+Si *mbstate* a la valeur null, l’état de conversion **mbstate_t** interne est utilisé. Si le caractère contenu dans *WCHAR* n’a pas de caractère multioctet correspondant, la valeur de *pReturnValue* est-1 et la fonction retourne la valeur **errno** de **EILSEQ**.
 
-Le **wcrtomb_s** diffère de la fonction [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) par sa capacité à redémarrer. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables. Par exemple, une application utiliserait **wcsrlen** plutôt que **wcslen**, si un appel ultérieur à **wcsrtombs_s** était utilisé au lieu de **wcstombs_s**.
+La fonction **wcrtomb_s** diffère de [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) par son redémarrage. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou à d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables. Par exemple, une application utilise **wcsrlen** plutôt que **wcslen**, si un appel ultérieur à **wcsrtombs_s** était utilisé à la place de **wcstombs_s**.
 
 En C++, l’utilisation de cette fonction est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument de taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalents plus récents et sécurisés. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Exceptions
 
-Le **wcrtomb_s** fonction est multithread-safe tant qu’aucune fonction dans le thread actuel n’appelle **setlocale** pendant l’exécution de cette fonction et le *mbstate* a la valeur null.
+La fonction **wcrtomb_s** est multithread Safe tant qu’aucune fonction dans le thread actuel n’appelle **setlocale** pendant que cette fonction s’exécute et que *mbstate* a la valeur null.
 
 ## <a name="example"></a>Exemple
 

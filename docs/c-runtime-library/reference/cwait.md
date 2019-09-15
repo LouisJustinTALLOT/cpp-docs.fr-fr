@@ -1,9 +1,9 @@
 ---
 title: _cwait
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwait
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwait
 helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-ms.openlocfilehash: f356afc91f794753f12b5b673c609ef03fbaa5ec
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b4be342ef528959bae22917bc59eef5a953aa4ae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499977"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937750"
 ---
 # <a name="_cwait"></a>_cwait
 
@@ -55,13 +58,13 @@ Pointeur vers une mémoire tampon où le code de résultat du processus spécifi
 Handle vers le processus à attendre (autrement dit, le processus qui doit se terminer avant que **_cwait** puisse retourner).
 
 *action*<br/>
-NULL : Ignoré par les applications du système d’exploitation Windows; pour d’autres applications: code d’action à effectuer sur *procHandle*.
+NULL : Ignoré par les applications du système d’exploitation Windows ; pour d’autres applications : code d’action à effectuer sur *procHandle*.
 
 ## <a name="return-value"></a>Valeur de retour
 
 Quand le processus spécifié s’est terminé avec succès, retourne le handle du processus spécifié et affecte à *termstat* le code de résultat retourné par le processus spécifié. Sinon, retourne-1 et définit **errno** comme suit.
 
-|`Value`|Description|
+|Valeur|Description|
 |-----------|-----------------|
 |**ECHILD**|Il n’existe aucun processus spécifié, *procHandle* n’est pas valide ou l’appel à l’API [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) ou [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) a échoué.|
 |**EINVAL**|*action* non valide.|

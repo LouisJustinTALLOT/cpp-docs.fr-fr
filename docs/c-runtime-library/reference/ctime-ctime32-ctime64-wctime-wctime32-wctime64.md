@@ -1,14 +1,14 @@
 ---
 title: ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ctime64
 - _wctime32
 - ctime
 - _wctime64
 - _ctime32
 - _wctime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wctime64
 - _ctime32
@@ -50,14 +53,14 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-ms.openlocfilehash: d1858a36c68a2ca5cedf70a1d74d5f250cbac8df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee802e9e6ddef839f08cf6dab6573f404328b2c6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288601"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937761"
 ---
-# <a name="ctime-ctime32-ctime64-wctime-wctime32-wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
+# <a name="ctime-_ctime32-_ctime64-_wctime-_wctime32-_wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 
 Convertissent une valeur de temps en une chaîne et ajustent les paramètres de fuseau horaire local. Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md).
 
@@ -75,23 +78,23 @@ wchar_t *_wctime64( const __time64_t *sourceTime );
 ### <a name="parameters"></a>Paramètres
 
 *sourceTime*<br/>
-Pointeur vers une heure stockée à convertir.
+Pointeur vers le temps stocké à convertir.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Pointeur désignant le résultat de chaîne de caractères. **NULL** sera retourné si :
+Pointeur désignant le résultat de chaîne de caractères. La **valeur null** est retournée si :
 
-- *sourceTime* représente une date antérieure au 1er janvier 1970 à minuit UTC.
+- *sourceTime* représente une date antérieure au 1er janvier 1970 à minuit, heure UTC.
 
-- Si vous utilisez **_ctime32** ou **_wctime32** et *sourceTime* représente une date postérieure à 23:59:59 le 18 janvier 2038, UTC.
+- Si vous utilisez **_ctime32** ou **_wctime32** et *sourceTime* représente une date postérieure 23:59:59 au 18 janvier 2038, UTC.
 
-- Si vous utilisez **_ctime64** ou **_wctime64** et *sourceTime* représente une date postérieure à 23:59:59 le 31 décembre 3000, UTC.
+- Si vous utilisez **_ctime64** ou **_wctime64** et *sourceTime* représente une date après le 23:59:59, le 31 décembre 3000, UTC.
 
-**CTime** est une fonction inline qui prend la valeur **_ctime64** et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** l’ancien 32-bit **time_t**, vous pouvez définir **_USE_32BIT_TIME_T**. Ainsi, **ctime** soit évaluée comme **_ctime32**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
+**ctime** est une fonction inline qui prend la valeur **_ctime64** et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t**32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. En procédant ainsi, **ctime** est évalué à **_ctime32**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
 
 ## <a name="remarks"></a>Notes
 
-Le **ctime** fonction convertit une valeur de temps stockée en tant qu’un [time_t](../../c-runtime-library/standard-types.md) valeur dans une chaîne de caractères. Le *sourceTime* valeur est généralement obtenue à partir d’un appel à [temps](time-time32-time64.md), qui retourne le nombre de secondes écoulé depuis minuit (00 : 00:00), le 1er janvier 1970, temps universel coordonné (UTC). La chaîne de valeur de retour contient exactement 26 caractères et présente la forme suivante :
+La fonction **ctime** convertit une valeur de temps stockée en tant que valeur [time_t](../../c-runtime-library/standard-types.md) en une chaîne de caractères. La valeur *sourceTime* est généralement obtenue à partir d’un appel à [Time](time-time32-time64.md), qui retourne le nombre de secondes écoulées depuis minuit (00:00:00), le 1er janvier 1970, le temps universel coordonné (UTC). La chaîne de valeur de retour contient exactement 26 caractères et présente la forme suivante :
 
 ```Output
 Wed Jan 02 02:03:55 1980\n\0
@@ -99,13 +102,13 @@ Wed Jan 02 02:03:55 1980\n\0
 
 Une horloge de 24 heures est utilisée. Tous les champs ont une largeur constante. Le caractère de saut de ligne (« \n ») et le caractère null (« \0 ») occupent les deux dernières positions de la chaîne.
 
-La chaîne de caractères convertie est également ajustée en fonction des paramètres de fuseau horaire local. Consultez le [temps](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md), et [localtime](localtime-localtime32-localtime64.md) fonctions pour plus d’informations sur la configuration de l’heure locale et le [_tzset](tzset.md) fonctionner pour détails sur la définition de l’environnement des fuseaux horaires et les variables globales.
+La chaîne de caractères convertie est également ajustée en fonction des paramètres de fuseau horaire local. Consultez les fonctions [Time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)et [localtime](localtime-localtime32-localtime64.md) pour plus d’informations sur la configuration de l’heure locale et la fonction [_tzset](tzset.md) pour plus d’informations sur la définition de l’environnement de fuseau horaire et des variables globales.
 
-Un appel à **ctime** modifie la mémoire tampon unique allouée de manière statique utilisée par le **gmtime** et **localtime** fonctions. Chaque appel à une de ces routines détruit le résultat de l’appel précédent. **CTime** partage une mémoire tampon statique avec le **asctime** (fonction). Par conséquent, un appel à **ctime** détruit les résultats d’un appel précédent à **asctime**, **localtime**, ou **gmtime**.
+Un appel à **ctime** modifie la mémoire tampon unique allouée statiquement utilisée par les fonctions **gmtime** et **localtime** . Chaque appel à une de ces routines détruit le résultat de l’appel précédent. **ctime** partage une mémoire tampon statique avec la fonction **asctime** . Ainsi, un appel à **ctime** détruit les résultats de tout appel précédent à **asctime**, **localtime**ou **gmtime**.
 
-**_wctime** et **_wctime64** sont la version à caractères larges de **ctime** et **_ctime64**; renvoyant un pointeur vers une chaîne à caractères larges. Sinon, **_ctime64**, **_wctime**, et **_wctime64** se comportent de façon identique **ctime**.
+**_wctime** et **_wctime64** sont la version à caractères larges de **ctime** et **_ctime64**; retour d’un pointeur vers une chaîne de caractères larges. Sinon, **_ctime64**, **_wctime**et **_wctime64** se comportent de la même façon que **ctime**.
 
-Ces fonctions valident leurs paramètres. Si *sourceTime* est un pointeur null, ou si le *sourceTime* valeur est négative, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent **NULL** et définissez **errno** à **EINVAL**.
+Ces fonctions valident leurs paramètres. Si *sourceTime* est un pointeur null ou si la valeur *sourceTime* est négative, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent la **valeur null** et attribuent à **errno** la valeur **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

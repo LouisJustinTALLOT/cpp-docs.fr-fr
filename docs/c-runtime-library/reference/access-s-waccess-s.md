@@ -1,10 +1,10 @@
 ---
 title: _access_s, _waccess_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _access_s
 - _waccess_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - waccess_s
 - access_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 17d19527323f3e97edecd22ca7c0a0262b1cfbad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0550b8fb42cb62d1a175960d6b0d4ed4dbecdcac
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335683"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939906"
 ---
-# <a name="accesss-waccesss"></a>_access_s, _waccess_s
+# <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
 Détermine les autorisations de lecture/écriture de fichier. Il s’agit d’une version de [_access, _waccess](access-waccess.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -76,7 +79,7 @@ Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_ne
 
 ## <a name="remarks"></a>Notes
 
-Lorsqu’il est utilisé avec des fichiers, le **_access_s** fonction détermine si le fichier spécifié existe et qu’il est accessible comme spécifié par la valeur de *mode*. Lorsqu’il est utilisé avec les répertoires, **_access_s** détermine uniquement si le répertoire spécifié existe. Dans Windows 2000 et les systèmes d’exploitation ultérieurs, tous les répertoires ont lu et l’accès en écriture.
+Lorsqu’elle est utilisée avec des fichiers, la fonction **_access_s** détermine si le fichier spécifié existe et est accessible comme spécifié par la valeur de *mode*. Lorsqu’il est utilisé avec des répertoires, **_access_s** détermine uniquement si le répertoire spécifié existe. Dans les systèmes d’exploitation Windows 2000 et versions ultérieures, tous les répertoires disposent d’un accès en lecture et en écriture.
 
 |Valeur du mode|Test réalisé sur le fichier|
 |----------------|---------------------|
@@ -85,11 +88,11 @@ Lorsqu’il est utilisé avec des fichiers, le **_access_s** fonction détermine
 |04|Autorisation de lecture.|
 |06|Autorisations de lecture et d’écriture.|
 
-L’autorisation de lecture ou d’écriture dans le fichier n’est pas suffisante pour assurer la possibilité d’ouvrir un fichier. Par exemple, si un fichier est verrouillé par un autre processus, il ne peut pas être accessible même si **_access_s** retourne 0.
+L’autorisation de lecture ou d’écriture dans le fichier n’est pas suffisante pour assurer la possibilité d’ouvrir un fichier. Par exemple, si un fichier est verrouillé par un autre processus, il n’est peut-être pas accessible même si **_access_s** retourne 0.
 
-**_waccess_s** est une version à caractères larges de **_access_s**, où le *chemin d’accès* l’argument de **_waccess_s** est une chaîne de caractères larges. Sinon, **_waccess_s** et **_access_s** ont un comportement identique.
+**_waccess_s** est une version à caractères larges de **_access_s**, où l’argument de *chemin d’accès* à **_waccess_s** est une chaîne de caractères larges. Sinon, **_waccess_s** et **_access_s** se comportent de la même façon.
 
-Ces fonctions valident leurs paramètres. Si *chemin d’accès* est NULL ou *mode* ne spécifie pas un mode valide, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions attribuent à `errno` la valeur `EINVAL` et retournent `EINVAL`.
+Ces fonctions valident leurs paramètres. Si *path* a la valeur null ou que le *mode* ne spécifie pas de mode valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions attribuent à `errno` la valeur `EINVAL` et retournent `EINVAL`.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -106,7 +109,7 @@ Ces fonctions valident leurs paramètres. Si *chemin d’accès* est NULL ou *mo
 
 ## <a name="example"></a>Exemple
 
-Cet exemple utilise **_access_s** pour vérifier si le fichier nommé crt_access_s.c existe et si l’écriture est autorisée.
+Cet exemple utilise **_access_s** pour vérifier le fichier nommé crt_access_s. c afin de déterminer s’il existe et si l’écriture est autorisée.
 
 ```C
 // crt_access_s.c

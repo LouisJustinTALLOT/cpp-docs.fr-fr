@@ -1,10 +1,10 @@
 ---
 title: _strdup_dbg, _wcsdup_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdup_dbg
 - _wcsdup_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcsdup_dbg
 - strdup_dbg
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _strdup_dbg function
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
-ms.openlocfilehash: 3092c27df1e39c7b719f6e7037efa202d29c9e81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f7d4fd8781269ee37f7515fdcab72e5195fdf00
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353877"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958199"
 ---
-# <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
+# <a name="_strdup_dbg-_wcsdup_dbg"></a>_strdup_dbg, _wcsdup_dbg
 
-Versions de [_strdup et _wcsdup](strdup-wcsdup-mbsdup.md) qui utilisent la version debug de **malloc**.
+Versions de [_strdup et _wcsdup](strdup-wcsdup-mbsdup.md) qui utilisent la version de débogage de **malloc**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,23 +68,23 @@ wchar_t *_wcsdup_dbg(
 Chaîne source se terminant par null.
 
 *blockType*<br/>
-Type de bloc de mémoire demandé : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
+Type de bloc de mémoire demandé : _ **client_block** ou **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Pointeur vers le nom du fichier source qui a demandé l’opération d’allocation ou **NULL**.
+Pointeur vers le nom du fichier source qui a demandé l’opération d’allocation ou **null**.
 
 *linenumber*<br/>
-Numéro de ligne dans le fichier source où l’opération d’allocation a été demandée ou **NULL**.
+Numéro de ligne dans le fichier source où l’opération d’allocation a été demandée ou **null**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne un pointeur vers l’emplacement de stockage de la chaîne copiée ou **NULL** si le stockage ne peut pas être alloué.
+Chacune de ces fonctions retourne un pointeur vers l’emplacement de stockage de la chaîne copiée ou **null** si le stockage ne peut pas être alloué.
 
 ## <a name="remarks"></a>Notes
 
-Le **_strdup_dbg** et **_wcsdup_dbg** fonctions sont identiques aux **_strdup** et **_wcsdup** , à ceci près que, lorsque **_ DÉBOGUER** est défini, ces fonctions utilisent la version debug de **malloc**, **_malloc_dbg**pour allouer la mémoire pour la chaîne dupliquée. Pour plus d’informations sur les fonctionnalités de débogage de **_malloc_dbg**, consultez [_malloc_dbg](malloc-dbg.md).
+Les fonctions **_strdup_dbg** et **_wcsdup_dbg** sont identiques à **_strdup** et **_wcsdup** , à ceci près que, quand **_ DEBUG** est défini, ces fonctions utilisent la version Debug de **malloc**, _ **malloc_dbg**, à allouer. mémoire pour la chaîne dupliquée. Pour plus d’informations sur les fonctionnalités de débogage de _ **malloc_dbg**, consultez _ [malloc_dbg](malloc-dbg.md).
 
-Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir l’indicateur **_CRTDBG_MAP_ALLOC**. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_strdup** et **_wcsdup** sont remappés à **_strdup_dbg** et **_ wcsdup_dbg**, respectivement, avec le *blockType* définie sur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions explicitement, sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations sur les types de bloc, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
+Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir l’indicateur _ **CRTDBG_MAP_ALLOC**. Quand _ **CRTDBG_MAP_ALLOC** est défini, les appels à **_strdup** et **_wcsdup** sont remappés à **_strdup_dbg** et **_Wcsdup_dbg**, respectivement, avec le *Blocktype* défini sur **_NORMAL_BLOCK**. Vous n’avez donc pas besoin d’appeler ces fonctions de manière explicite, sauf si vous souhaitez marquer les blocs du tas comme _ **client_block**. Pour plus d’informations sur les types de bloc, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
