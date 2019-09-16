@@ -1,12 +1,12 @@
 ---
 title: _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsprintf_p
 - _vswprintf_p
 - _vsprintf_p_l
 - _vswprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vsprintf_p
 - _vswprintf_p
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-ms.openlocfilehash: 15f368da84eb9cbf8c394a0e9b5eeec2611c3f7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e684bebc0a997e25963366b64fbab6d4f958e8eb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383436"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945238"
 ---
-# <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
+# <a name="_vsprintf_p-_vsprintf_p_l-_vswprintf_p-_vswprintf_p_l"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 
 Écrivent la sortie mise en forme à l’aide d’un pointeur vers une liste d’arguments, avec la possibilité de spécifier l’ordre dans lequel les arguments sont utilisés.
 
@@ -88,7 +91,7 @@ int _vswprintf_p_l(
 Emplacement de stockage pour la sortie.
 
 *sizeInBytes*<br/>
-Taille de *tampon* en caractères.
+Taille de la *mémoire tampon* en caractères.
 
 *count*<br/>
 Nombre maximal de caractères à stocker, dans la version UNICODE de cette fonction.
@@ -104,17 +107,17 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_vsprintf_p** et **_vswprintf_p** retourner le nombre de caractères écrits, sans le caractère null de fin, ou une valeur négative si une erreur de sortie se produit.
+**_vsprintf_p** et **_vswprintf_p** retournent le nombre de caractères écrits, à l’exclusion du caractère null de fin, ou une valeur négative si une erreur de sortie se produit.
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions prend un pointeur désignant une liste d’arguments et puis met en forme et écrit les données fournies à la mémoire vers laquelle pointée *tampon*.
+Chacune de ces fonctions prend un pointeur désignant une liste d’arguments, puis met en forme et écrit les données fournies dans la mémoire vers laquelle pointe la *mémoire tampon*.
 
-Ces fonctions se distinguent de la **vsprintf_s** et **vswprintf_s** uniquement car ils prennent en charge les paramètres positionnels. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Ces fonctions diffèrent uniquement de **vsprintf_s** et **vswprintf_s** , car elles prennent en charge les paramètres positionnels. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
-Si le *tampon* ou *format* sont des paramètres **NULL** pointeurs, si count est égal à zéro, ou si la chaîne de format contient non valide de la mise en forme des caractères, le paramètre non valide gestionnaire est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Si les paramètres de mise en *mémoire tampon* ou de *format* sont des pointeurs **null** , si Count est égal à zéro, ou si la chaîne de format contient des caractères de mise en forme non valides, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -130,11 +133,11 @@ Si le *tampon* ou *format* sont des paramètres **NULL** pointeurs, si count est
 |**_vsprintf_p**, **_vsprintf_p_l**|\<stdio.h> et \<stdarg.h>|\<varargs.h>*|
 |**_vswprintf_p**, **_vswprintf_p_l**|\<stdio.h> ou \<wchar.h> et \<stdarg.h>|\<varargs.h>*|
 
-\* Nécessaire pour la compatibilité avec UNIX V.
+\** Nécessaire pour la compatibilité avec UNIX V.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 ```C
 // crt__vsprintf_p.c

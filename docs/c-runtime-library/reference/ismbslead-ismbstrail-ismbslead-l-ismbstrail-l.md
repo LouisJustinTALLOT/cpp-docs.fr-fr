@@ -1,12 +1,12 @@
 ---
 title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbstrail
 - _ismbslead_l
 - _ismbslead
 - _ismbstrail_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbslead
 - ismbs
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 5b4d3f371f4be640cc22a1bdc3d920acf88e2585
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71a5d2a82c01a41f945ef3fa8c7652f846f05103
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287355"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953779"
 ---
-# <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
+# <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
 Effectue des tests contextuels pour les octets de tête et de fin des chaînes de caractères multioctets et détermine si un pointeur de sous-chaîne pointe vers un octet de tête ou un octet de fin.
 
@@ -90,13 +93,13 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ismbslead** retourne -1 si le caractère est un octet de tête et **_ismbstrail** retourne -1 si le caractère est un octet de fin. Si les chaînes d'entrée sont valides mais qu'elles ne correspondent ni à un octet de tête ni à un octet de fin, ces fonctions retournent zéro. Si des arguments sont **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **NULL** et définissez **errno** à **EINVAL**.
+**_ismbslead** retourne-1 si le caractère est un octet de tête et **_ismbstrail** retourne-1 si le caractère est un octet de fin. Si les chaînes d'entrée sont valides mais qu'elles ne correspondent ni à un octet de tête ni à un octet de fin, ces fonctions retournent zéro. Si l’un des arguments a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la **valeur null** et attribuent à **errno** la valeur **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-**_ismbslead** et **_ismbstrail** sont plus lentes que la **_ismbblead** et **_ismbbtrail** versions, car elles prennent le contexte de chaîne en compte.
+**_ismbslead** et **_ismbstrail** sont plus lents que les versions **_ismbblead** et **_ismbbtrail** , car ils prennent en compte le contexte de chaîne.
 
-Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, sauf que pour leur comportement dépendant des paramètres régionaux, ils utilisent les paramètres régionaux qui sont passé au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions qui ont le suffixe **_L** sont identiques, sauf que pour leur comportement dépendant des paramètres régionaux, elles utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Configuration requise
 
