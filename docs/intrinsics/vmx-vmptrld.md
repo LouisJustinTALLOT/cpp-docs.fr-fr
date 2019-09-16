@@ -35,13 +35,13 @@ dans Adresse où le pointeur VMCS est stocké.
 
 ## <a name="return-value"></a>Valeur de retour
 
-entre
+0\
 L’opération a réussi.
 
-1,0
+1\
 L’opération a échoué avec l’état étendu disponible dans le `VM-instruction error field` de la VMCS actuelle.
 
-2
+2\
 L’opération a échoué sans état disponible.
 
 ## <a name="remarks"></a>Notes
