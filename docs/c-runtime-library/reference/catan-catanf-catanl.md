@@ -1,11 +1,11 @@
 ---
 title: catan, catanf, catanl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - catan
 - catanf
 - catanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - catan
 - catanf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204a05b4293fefa4378e54ce93a625bf890cf4d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335514"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943367"
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
 
-Récupère l’arc tangente d’un nombre complexe avec des coupures en dehors de l’intervalle [-1 ; + 1] sur l’axe des imaginaires.
+Récupère l’arc tangente d’un nombre complexe avec des coupes en dehors de l’intervalle [-1 ; + 1] le long de l’axe imaginaire.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,11 +64,11 @@ Nombre complexe qui représente un angle, en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-L’arc tangente de *z*, en radians. Le résultat est illimité sur l’axe des imaginaires et dans l’intervalle [-π/2 ; + π/2] sur l’axe des réels.
+Arctangente de *z*, en radians. Le résultat est illimité le long de l’axe imaginaire, et dans l’intervalle [-π/2 ; + π/2] le long de l’axe réel.
 
 ## <a name="remarks"></a>Notes
 
-Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **catan** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **catan** accepte et retourne toujours un **_Dcomplex** valeur.
+Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **Catan** qui acceptent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, **Catan** accepte et retourne toujours une valeur **_Dcomplex** .
 
 ## <a name="requirements"></a>Configuration requise
 

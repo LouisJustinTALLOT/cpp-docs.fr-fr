@@ -1,9 +1,9 @@
 ---
 title: _msize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _msize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - msize
 - _msize
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: 0321e42face817a0a9f12d780f72c86c67ba308d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1760cfa6a416e2eb4cd7b549cb5ae9bed00a609
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156289"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951433"
 ---
-# <a name="msize"></a>_msize
+# <a name="_msize"></a>_msize
 
 Retourne la taille d’un bloc de mémoire alloué dans le tas.
 
@@ -50,15 +53,15 @@ Pointeur désignant le bloc de mémoire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_msize** retourne la taille (en octets) sous forme d’entier non signé.
+**_msize** retourne la taille (en octets) sous la forme d’un entier non signé.
 
 ## <a name="remarks"></a>Notes
 
-Le **_msize** fonction retourne la taille, en octets, du bloc de mémoire alloué par un appel à **calloc**, **malloc**, ou **realloc**.
+La fonction **_msize** retourne la taille, en octets, du bloc de mémoire alloué par un appel à **calloc**, **malloc**ou **realloc**.
 
-Lorsque l’application est liée à une version debug des bibliothèques Runtime C, **_msize** se résout en [_msize_dbg](msize-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
+Lorsque l’application est liée à une version Debug des bibliothèques Runtime C, **_msize** se résout en [_msize_dbg](msize-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Cette fonction valide son paramètre. Si *memblock* est un pointeur null, **_msize** appelle un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’erreur est gérée, la fonction définit **errno** à **EINVAL** et retourne -1.
+Cette fonction valide son paramètre. Si *memblock* est un pointeur null, **_msize** appelle un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’erreur est gérée, la fonction affecte à **errno** la valeur **EINVAL** et retourne-1.
 
 ## <a name="requirements"></a>Configuration requise
 
