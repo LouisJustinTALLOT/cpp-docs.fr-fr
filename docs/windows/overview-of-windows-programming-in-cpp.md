@@ -1,13 +1,13 @@
 ---
 title: Vue d'ensemble de la programmation Windows en C++
-ms.date: 07/28/2019
+ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96a03194059f59f57780bfd70cab3065d6a1aff0
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514795"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127192"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Vue d'ensemble de la programmation Windows en C++
 
@@ -17,17 +17,17 @@ Cette section explique comment utiliser Visual Studio et les bibliothèques wrap
 
 ## <a name="command-line-console-applications"></a>Applications de ligne de commande (console)
 
-C++les applications console s’exécutent à partir de la ligne de commande dans une fenêtre de console et peuvent afficher une sortie texte uniquement. Pour plus d’informations, consultez [applications console](console-applications-in-visual-cpp.md).
+C++les applications console s’exécutent à partir de la ligne de commande dans une fenêtre de console et peuvent afficher une sortie texte uniquement. Pour plus d’informations, consultez [créer C++ un projet d’application console](../get-started/tutorial-console-cpp.md).
 
 ## <a name="native-desktop-client-applications"></a>Applications clientes Native Desktop
 
-Une *application cliente de bureau Native* est une C++ application c ou Window qui utilise les API Windows c natives d’origine [ou les API COM (Component Object Model)](/windows/win32/apiindex/windows-api-list) pour accéder au système d’exploitation. Ces API sont elles-mêmes écrites principalement en C. Il existe plusieurs façons de créer une application de bureau Native: Vous pouvez programmer en utilisant directement les API Win32, à l’aide d’une boucle de message de style C qui traite les événements du système d’exploitation. Ou vous pouvez programmer à l’aide de *Microsoft Foundation classes* (MFC), une bibliothèque orientée C++ objet légère qui encapsule Win32. Aucune approche n’est considérée comme «moderne» par rapport à la plateforme Windows universelle (UWP), mais les deux sont toujours entièrement prises en charge et ont des millions de lignes de code s’exécutant dans le monde aujourd’hui. Une application Win32 qui s’exécute dans une fenêtre exige que le développeur travaille explicitement avec des messages Windows dans une fonction de procédure Windows. Malgré le nom, une application Win32 peut être compilée en tant que binaire 32 bits (x86) ou 64 bits (x64). Dans l’IDE de Visual Studio, les termes x86 et Win32 sont synonymes.
+Une *application cliente de bureau Native* est une C++ application c ou Window qui utilise les API Windows c natives d’origine [ou les API COM (Component Object Model)](/windows/win32/apiindex/windows-api-list) pour accéder au système d’exploitation. Ces API sont elles-mêmes écrites principalement en C. Il existe plusieurs façons de créer une application de bureau Native : Vous pouvez programmer en utilisant directement les API Win32, à l’aide d’une boucle de message de style C qui traite les événements du système d’exploitation. Ou vous pouvez programmer à l’aide de *Microsoft Foundation classes* (MFC), une bibliothèque orientée C++ objet légère qui encapsule Win32. Aucune approche n’est considérée comme « moderne » par rapport à la plateforme Windows universelle (UWP), mais les deux sont toujours entièrement prises en charge et ont des millions de lignes de code s’exécutant dans le monde aujourd’hui. Une application Win32 qui s’exécute dans une fenêtre exige que le développeur travaille explicitement avec des messages Windows dans une fonction de procédure Windows. Malgré le nom, une application Win32 peut être compilée en tant que binaire 32 bits (x86) ou 64 bits (x64). Dans l’IDE de Visual Studio, les termes x86 et Win32 sont synonymes.
 
-Pour vous familiariser avec la C++ programmation Windows traditionnelle, consultez [prise en main C++de Win32 et ](/windows/win32/LearnWin32/learn-to-program-for-windows). Une fois que vous aurez appris à utiliser Win32, il sera plus facile d’en savoir plus sur les [applications de bureau MFC](../mfc/mfc-desktop-applications.md). Pour obtenir un exemple d’application C++ de bureau classique qui utilise des graphiques sophistiqués, consultez [Hilo: Développement C++ d’applications pour](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
+Pour vous familiariser avec la C++ programmation Windows traditionnelle, consultez [prise en main C++de Win32 et ](/windows/win32/LearnWin32/learn-to-program-for-windows). Une fois que vous aurez appris à utiliser Win32, il sera plus facile d’en savoir plus sur les [applications de bureau MFC](../mfc/mfc-desktop-applications.md). Pour obtenir un exemple d’application C++ de bureau classique qui utilise des graphiques sophistiqués, consultez [Hilo : Développement C++ d’applications pour](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
 
-### <a name="c-or-net"></a>C++ou .NET?
+### <a name="c-or-net"></a>C++ou .NET ?
 
-En général, la programmation .NET C# dans est moins complexe, moins sujette aux erreurs et a une API orientée objet plus moderne que Win32 ou MFC. Dans la plupart des cas, ses performances sont plus que adéquates. .NET propose le Windows Presentation Foundation (WPF) pour les graphiques enrichis, et vous pouvez utiliser Win32 et l’API Windows Runtime moderne. En règle générale, nous vous recommandons d' C++ utiliser pour les applications de bureau lorsque vous avez besoin des éléments suivants:
+En général, la programmation .NET C# dans est moins complexe, moins sujette aux erreurs et a une API orientée objet plus moderne que Win32 ou MFC. Dans la plupart des cas, ses performances sont plus que adéquates. .NET propose le Windows Presentation Foundation (WPF) pour les graphiques enrichis, et vous pouvez utiliser Win32 et l’API Windows Runtime moderne. En règle générale, nous vous recommandons d' C++ utiliser pour les applications de bureau lorsque vous avez besoin des éléments suivants :
 
 - contrôle précis de l’utilisation de la mémoire
 - la plus grande économie de la consommation d’énergie
@@ -75,15 +75,15 @@ Visual Studio comprend la bibliothèque Runtime C (CRT), la C++ bibliothèque st
 
 Le [Gestionnaire de package vcpkg](../build/vcpkg.md) vous permet d’installer facilement des centaines de bibliothèques Open source tierces pour Windows.
 
-Les bibliothèques Microsoft incluent:
+Les bibliothèques Microsoft incluent :
 
-- Microsoft Foundation Classes (MFC): Une infrastructure orientée objet pour la création de programmes Windows traditionnels (notamment des applications d’entreprise) qui possèdent des interfaces utilisateur riches qui présentent des boutons, des zones de liste, des arborescences et d’autres contrôles. Pour plus d'informations, consultez [MFC Desktop Applications](../mfc/mfc-desktop-applications.md).
+- Microsoft Foundation Classes (MFC) : Une infrastructure orientée objet pour la création de programmes Windows traditionnels (notamment des applications d’entreprise) qui possèdent des interfaces utilisateur riches qui présentent des boutons, des zones de liste, des arborescences et d’autres contrôles. Pour plus d'informations, consultez [MFC Desktop Applications](../mfc/mfc-desktop-applications.md).
 
-- Active Template Library (ATL): Bibliothèque d’assistance puissante pour créer des composants COM. Pour plus d'informations, consultez [ATL COM Desktop Components](../atl/atl-com-desktop-components.md).
+- Active Template Library (ATL) : Bibliothèque d’assistance puissante pour créer des composants COM. Pour plus d'informations, consultez [ATL COM Desktop Components](../atl/atl-com-desktop-components.md).
 
-- C++AMP (C++ Accelerated massive parallelism): Bibliothèque qui permet un travail de calcul général à hautes performances sur le GPU. Pour plus d'informations, consultez [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md).
+- C++AMP (C++ Accelerated massive parallelism) : Bibliothèque qui permet un travail de calcul général à hautes performances sur le GPU. Pour plus d'informations, consultez [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md).
 
-- Runtime d’accès concurrentiel: Bibliothèque qui simplifie le travail de programmation parallèle et asynchrone pour les appareils multicœur et à plusieurs cœurs. Pour plus d'informations, consultez [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
+- Runtime d’accès concurrentiel : Bibliothèque qui simplifie le travail de programmation parallèle et asynchrone pour les appareils multicœur et à plusieurs cœurs. Pour plus d'informations, consultez [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
 
 De nombreux scénarios de programmation Windows requièrent également le Kit de développement logiciel Windows, qui inclut les fichiers d'en-tête qui permettent l'accès aux composants du système d'exploitation Windows. Par défaut, Visual Studio installe le SDK Windows en tant que composant de C++ la charge de travail de bureau, ce qui permet le développement d’applications Windows universelles. Pour développer des applications UWP, vous avez besoin de la version Windows 10 du SDK Windows. Pour plus d’informations, consultez [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). (Pour plus d’informations sur les kits de développement logiciel (SDK) Windows pour les versions antérieures de Windows, consultez l' [archive SDK Windows](https://developer.microsoft.com/windows/downloads/sdk-archive)).
 
