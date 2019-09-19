@@ -1,6 +1,6 @@
 ---
 title: Vue d'ensemble de la bibliothèque de classes
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - vc.classes.mfc
 helpviewer_keywords:
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23097c0bf3399a4dced6640f41c0d46dba101b26
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327312"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095946"
 ---
 # <a name="class-library-overview"></a>Vue d'ensemble de la bibliothèque de classes
 
-Cette vue d’ensemble de classe et décrit les classes dans les MFC Microsoft Foundation Class Library () version 9.0. Les classes dans MFC, ensemble, constituent une infrastructure d’application, l’infrastructure d’une application écrite pour l’API Windows. Votre tâche de programmation consiste à fournir le code qui est spécifique à votre application.
+Cette vue d’ensemble classe et décrit les classes de la bibliothèque MFC (Microsoft Foundation Class) (MFC) version 9,0. Les classes dans MFC, prises ensemble, constituent une infrastructure d’application, l’infrastructure d’une application écrite pour l’API Windows. Votre tâche de programmation consiste à remplir le code spécifique à votre application.
 
 Les classes de la bibliothèque sont présentées ici dans les catégories suivantes :
 
@@ -109,13 +109,13 @@ Les classes de la bibliothèque sont présentées ici dans les catégories suiva
 
    - [Classes d’exceptions](../mfc/exception-classes.md)
 
-La section [philosophie de conception de classe général](../mfc/general-class-design-philosophy.md) explique comment la bibliothèque MFC a été conçue.
+La section [Généralités sur la conception de classes générale](../mfc/general-class-design-philosophy.md) explique comment la bibliothèque MFC a été conçue.
 
-Pour une vue d’ensemble du framework, consultez [utilisation des Classes pour écrire des Applications pour Windows](../mfc/using-the-classes-to-write-applications-for-windows.md). Certaines des classes répertoriées ci-dessus sont des classes à usage général qui peuvent être utilisées en dehors de l’infrastructure et fournissent des abstractions utiles telles que les collections, les exceptions, les fichiers et les chaînes.
+Pour obtenir une vue d’ensemble de l’infrastructure, consultez [utilisation des classes pour écrire des applications pour Windows](../mfc/using-the-classes-to-write-applications-for-windows.md). Certaines des classes répertoriées ci-dessus sont des classes à usage général qui peuvent être utilisées en dehors de l’infrastructure et fournissent des abstractions utiles, telles que des collections, des exceptions, des fichiers et des chaînes.
 
-Pour afficher l’héritage d’une classe, utilisez le [graphique de hiérarchie de classe](../mfc/hierarchy-chart.md).
+Pour afficher l’héritage d’une classe, utilisez le [graphique de hiérarchie de classes](../mfc/hierarchy-chart.md).
 
-En plus des classes répertoriées dans cette vue d’ensemble, la bibliothèque MFC contient un nombre de fonctions globales, les variables globales et les macros. Il existe une vue d’ensemble et une liste détaillée de celles-ci dans la rubrique [MFC Macros and Globals](../mfc/reference/mfc-macros-and-globals.md), ce qui suit la référence alphabétique aux classes MFC.
+En plus des classes listées dans cette vue d’ensemble, la bibliothèque MFC contient un certain nombre de fonctions globales, de variables globales et de macros. Il existe une vue d’ensemble et une liste détaillée de celles-ci dans la rubrique [macros et globales MFC](../mfc/reference/mfc-macros-and-globals.md), qui suit la référence alphabétique aux classes MFC.
 
 ## <a name="see-also"></a>Voir aussi
 

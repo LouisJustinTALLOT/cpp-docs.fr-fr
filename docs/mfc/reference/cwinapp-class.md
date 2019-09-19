@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: c35cc01b352285402885587f6d0b91e2c2bdd4ae
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: e65ad8b5d8b14ff747adc55b517d9e695d9cbb66
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741235"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095755"
 ---
 # <a name="cwinapp-class"></a>CWinApp (classe)
 
@@ -586,7 +586,7 @@ Même si vous n’appelez `DoWaitCursor` pas directement, vous pouvez remplacer 
 
 Pour une façon plus simple et rationalisée d’implémenter un curseur d’attente `CWaitCursor`, utilisez.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#37](../../mfc/reference/codesnippet/cpp/cwinapp-class_3.cpp)]
 
@@ -636,7 +636,7 @@ void EnableShellOpen();
 
 Appelez la `RegisterShellFileTypes` fonction membre conjointement avec cette fonction ou fournissez un. Fichier REG avec votre application pour l’inscription manuelle des types de documents.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#38](../../mfc/reference/codesnippet/cpp/cwinapp-class_4.cpp)]
 
@@ -679,7 +679,7 @@ N’appelez pas cette fonction membre à partir de n’importe `Run` où, mais d
 
 L’implémentation par défaut de cette fonction écrit les options du Framework dans le de l’application. Fichier INI. Remplacez cette fonction pour nettoyer quand votre application se termine.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCWindowing#39](../../mfc/reference/codesnippet/cpp/cwinapp-class_5.cpp)]
 
@@ -860,7 +860,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Récupère les valeurs par défaut de l’imprimante en cours à partir de Windows. INI, si nécessaire, ou utilise la dernière configuration d’imprimante définie par l’utilisateur lors de la configuration de l’impression.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#40](../../mfc/reference/codesnippet/cpp/cwinapp-class_6.cpp)]
 
@@ -904,7 +904,7 @@ Cette fonction membre ne respecte pas la casse ; par conséquent, les chaînes 
 > [!IMPORTANT]
 > Les données retournées par cette fonction ne sont pas nécessairement terminées par une valeur NULL, et l’appelant doit effectuer la validation. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#41](../../mfc/reference/codesnippet/cpp/cwinapp-class_7.cpp)]
 
@@ -982,7 +982,7 @@ La valeur de retour est la chaîne du de l’application. Fichier INI ou *lpszDe
 > [!IMPORTANT]
 > Les données retournées par cette fonction ne sont pas nécessairement terminées par une valeur NULL, et l’appelant doit effectuer la validation. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#43](../../mfc/reference/codesnippet/cpp/cwinapp-class_9.cpp)]
 
@@ -1036,7 +1036,7 @@ virtual void HtmlHelp(
 Spécifie des données supplémentaires. La valeur utilisée dépend de la valeur du paramètre *nCmd* . La valeur par `0x000F` défaut correspond à [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command).
 
 *nCmd*<br/>
-Spécifie le type d’aide demandée. Pour obtenir une liste des valeurs possibles et savoir comment elles affectent le paramètre *dwData* , consultez le paramètre *uCommand* décrit dans les fonctions de l’API [HtmlHelpW](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw) ou [HtmlHelpA](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) dans la SDK Windows.  
+Spécifie le type d’aide demandée. Pour obtenir une liste des valeurs possibles et savoir comment elles affectent le paramètre *dwData* , consultez le paramètre *uCommand* décrit dans les fonctions de l’API [HtmlHelpW](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw) ou [HtmlHelpA](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) dans la SDK Windows. 
 
 ### <a name="remarks"></a>Notes
 
@@ -1054,7 +1054,7 @@ virtual BOOL InitInstance();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si l’initialisation réussit ; Sinon, 0.
+Valeur différente de zéro si l’initialisation réussit; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
@@ -1065,7 +1065,7 @@ Substituez `InitInstance` pour initialiser chaque nouvelle instance de votre app
 > [!NOTE]
 > Les applications MFC doivent être initialisées en tant que thread unique cloisonné (STA). Si vous appelez [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) dans votre `InitInstance` remplacement, spécifiez COINIT_APARTMENTTHREADED (au lieu de COINIT_MULTITHREADED).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCListView#9](../../atl/reference/codesnippet/cpp/cwinapp-class_10.cpp)]
 
@@ -1165,7 +1165,7 @@ Handle vers un curseur en cas de réussite ; Sinon, NULL.
 
 Utilisez la `LoadOEMCursor` fonction membre ou [LoadStandardCursor](#loadstandardcursor) pour accéder aux curseurs Windows prédéfinis.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCWindowing#45](../../mfc/reference/codesnippet/cpp/cwinapp-class_12.h)]
 
@@ -1237,7 +1237,7 @@ Handle vers un curseur en cas de réussite ; Sinon, NULL.
 
 Utilisez la `LoadStandardCursor` fonction membre ou [LoadOEMCursor](#loadoemcursor) pour accéder aux curseurs Windows prédéfinis.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCWindowing#47](../../mfc/reference/codesnippet/cpp/cwinapp-class_14.cpp)]
 
@@ -1352,7 +1352,7 @@ HINSTANCE m_hInstance;
 
 Le `m_hInstance` membre de données est un handle de l’instance actuelle de l’application s’exécutant sous Windows. Elle est retournée par la fonction globale [AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle). `m_hInstance`variable publique de type HINSTANCE.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#55](../../mfc/reference/codesnippet/cpp/cwinapp-class_15.cpp)]
 
@@ -1368,7 +1368,7 @@ LPTSTR m_lpCmdLine;
 
 Pointe vers une chaîne se terminant par un caractère null qui spécifie la ligne de commande pour l’application. Utilisez `m_lpCmdLine` pour accéder à tous les arguments de ligne de commande entrés par l’utilisateur au démarrage de l’application. `m_lpCmdLine`est une variable publique de type LPTSTR.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCWindowing#52](../../mfc/reference/codesnippet/cpp/cwinapp-class_16.cpp)]
 
@@ -1597,7 +1597,7 @@ Vous devez ajouter une `ON_COMMAND( ID_FILE_OPEN, OnFileOpen )` instruction à v
 
 Pour plus d’informations sur le comportement par défaut et des conseils sur la façon de remplacer cette fonction membre, consultez la [note technique 22](../../mfc/tn022-standard-commands-implementation.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#49](../../mfc/reference/codesnippet/cpp/cwinapp-class_25.cpp)]
 
@@ -1617,7 +1617,7 @@ Vous devez ajouter une `ON_COMMAND( ID_FILE_PRINT_SETUP, OnFilePrintSetup )` ins
 
 Pour plus d’informations sur le comportement par défaut et des conseils sur la façon de remplacer cette fonction membre, consultez la [note technique 22](../../mfc/tn022-standard-commands-implementation.md).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 [!code-cpp[NVC_MFCWindowing#49](../../mfc/reference/codesnippet/cpp/cwinapp-class_25.cpp)]
 
@@ -2302,7 +2302,7 @@ Contient le nombre d’octets à écrire.
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Cet exemple utilise `CWinApp* pApp = AfxGetApp();` pour obtenir la classe CWinApp illustrant une façon dont `WriteProfileBinary` et `GetProfileBinary` peuvent être utilisés à partir de n’importe quelle fonction dans une application MFC.
 
@@ -2395,4 +2395,4 @@ Spécifie l’ID du modèle utilisateur de l’application.
 
 [CWinThread, classe](../../mfc/reference/cwinthread-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[Guide pratique pour Ajouter la prise en charge du Gestionnaire de redémarrage](../../mfc/how-to-add-restart-manager-support.md)
+[Guide pratique : Ajouter la prise en charge du Gestionnaire de redémarrage](../../mfc/how-to-add-restart-manager-support.md)
