@@ -4,12 +4,12 @@ ms.date: 04/25/2019
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: cf0a6bd230364b48c78c72b8e453e7e641fb2d0e
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: e371368d4e588de5f94f6a252c6db291ec851e0a
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907407"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096019"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Procédure pas à pas : Utilisation des nouveaux contrôles d’environnement MFC
 
@@ -31,14 +31,14 @@ Ces étapes varient en fonction de la version de Visual Studio que vous utilisez
 
 1. Dans le menu principal, choisissez **Fichier** > **Nouveau** > **Projet** pour ouvrir la boîte de dialogue **Créer un projet**.
 
-1. Dans la zone de recherche située en haut, tapez **MFC** , puis choisissez **application MFC** dans la liste des résultats. 
+1. Dans la zone de recherche située en haut, tapez **MFC** , puis choisissez **application MFC** dans la liste des résultats.
 
 1. Cliquez sur **Suivant**. Dans la page suivante, entrez un nom pour le projet, puis spécifiez l’emplacement du projet si vous le souhaitez.
 
 1. Choisissez le bouton **Créer** pour créer le projet.
 
    Après l’affichage de l' **Assistant Application MFC** , utilisez les options suivantes :
- 
+
    1. Choisissez le **type d’application** sur la gauche. Sélectionnez ensuite **document unique** et sélectionnez **document/vue architecture prise en charge**. Sous **style du projet**, **Sélectionnez Visual Studio**, puis dans la liste déroulante **style visuel et couleurs** , sélectionnez **Office 2007 (thème Blue)** .
 
    1. Dans le volet **prise en charge des documents composés** , sélectionnez **aucun**.
@@ -59,7 +59,7 @@ Ces étapes varient en fonction de la version de Visual Studio que vous utilisez
 
 1. Utilisez l **'Assistant Application MFC** pour créer une application MFC. Pour exécuter l’Assistant, dans le menu **fichier** , sélectionnez **nouveau**, puis sélectionnez **projet**. La boîte **de dialogue Nouveau projet** s’affiche.
 
-1. Dans la boîte de dialogue **nouveau projet** , développez le nœud **visuel C++**  dans le volet **types de projets** , puis sélectionnez **MFC**. Ensuite, dans le volet **modèles** , sélectionnez **application MFC**. Tapez un nom pour le projet, par exemple `MFCShellControls` , puis cliquez sur **OK**. 
+1. Dans la boîte de dialogue **nouveau projet** , développez le nœud **visuel C++**  dans le volet **types de projets** , puis sélectionnez **MFC**. Ensuite, dans le volet **modèles** , sélectionnez **application MFC**. Tapez un nom pour le projet, par exemple `MFCShellControls` , puis cliquez sur **OK**.
 
    Après l’affichage de l' **Assistant Application MFC** , utilisez les options suivantes :
 
