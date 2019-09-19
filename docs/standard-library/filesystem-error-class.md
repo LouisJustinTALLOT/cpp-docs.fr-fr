@@ -4,14 +4,14 @@ ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-ms.openlocfilehash: c3dbfc080f0a1494950016f42189d932be05b0f1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7bd6b2d3d716ba25999388d44e7bd5a8d0750eb5
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240741"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127200"
 ---
-# <a name="filesystemerror-class"></a>filesystem_error, classe
+# <a name="filesystem_error-class"></a>filesystem_error, classe
 
 Classe de base pour toutes les exceptions qui sont levées pour signaler un dépassement de capacité du système de bas niveau.
 
@@ -23,7 +23,7 @@ class filesystem_error    : public system_error;
 
 ## <a name="remarks"></a>Notes
 
-La classe sert de classe de base pour toutes les exceptions levées afin de signaler une erreur dans des fonctions \<filesystem>. Il stocke un objet de type `string`, appelée `mymesg` ici aux fins de démonstration. Il stocke également deux objets de type `path`, appelé `mypval1` et `mypval2`.
+La classe sert de classe de base pour toutes les exceptions levées afin de signaler une erreur dans des fonctions \<filesystem>. Il stocke un objet de `string`type, `mymesg` appelé ici pour les besoins de l’exposition. Il stocke également deux objets de `path`type, `mypval1` appelés `mypval2`et.
 
 ## <a name="members"></a>Membres
 
@@ -43,13 +43,13 @@ La classe sert de classe de base pour toutes les exceptions levées afin de sign
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<filesystem >
+**En-tête :** \<> de système de fichiers
 
 **Espace de noms :** std::experimental::filesystem
 
-## <a name="filesystem_error"></a> filesystem_error
+## <a name="filesystem_error"></a>filesystem_error
 
-Le premier constructeur construit son message à partir de *what_arg* et *ec*. Le deuxième constructeur construit également son message à partir de *pval1*, qui est stockée dans `mypval1`. Le troisième constructeur construit également son message à partir de *pval1*, qui est stockée dans `mypval1`et à partir de *pval2*, qui est stockée dans `mypval2`.
+Le premier constructeur construit son message à partir de *what_arg* et *EC*. Le deuxième constructeur construit également son message à partir de *pval1*, qu’il stocke dans `mypval1`. Le troisième constructeur construit également son message à partir de *pval1*, qu’il stocke dans `mypval1`et à partir de *pval2*, qu' `mypval2`il stocke dans.
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -74,12 +74,12 @@ Message spécifié.
 Code d’erreur spécifié.
 
 *mypval1*\
-Davantage de paramètre de message spécifié.
+Paramètre de message spécifié supplémentaire.
 
 *mypval2*\
-Davantage de paramètre de message spécifié.
+Paramètre de message spécifié supplémentaire.
 
-## <a name="path1"></a> chemin1
+## <a name="path1"></a>chemin1
 
 La fonction membre retourne `mypval1`
 
@@ -87,7 +87,7 @@ La fonction membre retourne `mypval1`
 const path& path1() const noexcept;
 ```
 
-## <a name="path2"></a> chemin2
+## <a name="path2"></a>chemin2
 
 La fonction membre retourne `mypval2`
 
@@ -95,9 +95,9 @@ La fonction membre retourne `mypval2`
 const path& path2() const noexcept;
 ```
 
-## <a name="what"></a> ce que
+## <a name="what"></a>données
 
-La fonction membre retourne un pointeur vers un `NTBS`, de préférence, composé à partir de, `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, et `mypval2.native_string()`.
+La fonction membre retourne un pointeur vers un `NTBS`, de préférence composé `runtime_error::what()`de `system_error::what()`, `mymesg` `mypval1.native_string()`,, et `mypval2.native_string()`.
 
 ```cpp
 const char *what() const noexcept;

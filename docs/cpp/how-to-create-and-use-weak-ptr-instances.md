@@ -1,23 +1,23 @@
 ---
 title: 'Procédure : Créer et utiliser des instances weak_ptr'
 ms.custom: how-to
-ms.date: 07/12/2018
+ms.date: 09/18/2019
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: 63eed40117d1a79c69bd05e5bd1503d4222f556d
-ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
+ms.openlocfilehash: e5d1b13d894a617ca514e26f14fde3f514540d34
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787087"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127180"
 ---
 # <a name="how-to-create-and-use-weak_ptr-instances"></a>Procédure : Créer et utiliser des instances weak_ptr
 
 Parfois, un objet doit stocker un moyen d’accéder à l’objet sous `shared_ptr` -jacent d’un sans entraîner l’incrémentation du décompte de références. En général, cette situation se produit lorsque vous avez des `shared_ptr` Références cycliques entre des instances.
 
-La meilleure conception consiste à éviter la propriété partagée des pointeurs chaque fois que vous le pouvez. Toutefois, si vous devez disposer d’une propriété `shared_ptr` partagée d’instances, évitez les références cycliques entre elles. Lorsque les références cycliques sont inévitables, voire préférables pour une raison quelconque, `weak_ptr` utilisez pour attribuer à un ou plusieurs propriétaires une référence faible à une `shared_ptr`autre. À l’aide `weak_ptr`d’un, vous pouvez `shared_ptr` créer un qui se joint à un ensemble existant d’instances associées, mais uniquement si la ressource de mémoire sous-jacente est toujours valide. Un `weak_ptr` lui-même ne participe pas au décompte de références et, par conséquent, il ne peut pas empêcher le décompte de références de passer à zéro. Toutefois, vous pouvez utiliser un `weak_ptr` pour essayer d’obtenir une nouvelle copie `shared_ptr` de avec laquelle il a été initialisé. Si la mémoire a déjà été supprimée, `bad_weak_ptr` une exception est levée. Si la mémoire est toujours valide, le nouveau pointeur partagé incrémente le décompte de références et garantit que la mémoire sera valide tant que la `shared_ptr` variable reste dans la portée.
+La meilleure conception consiste à éviter la propriété partagée des pointeurs chaque fois que vous le pouvez. Toutefois, si vous devez disposer d’une propriété `shared_ptr` partagée d’instances, évitez les références cycliques entre elles. Lorsque les références cycliques sont inévitables, voire préférables pour une raison quelconque, `weak_ptr` utilisez pour attribuer à un ou plusieurs propriétaires une référence faible à une `shared_ptr`autre. À l’aide `weak_ptr`d’un, vous pouvez `shared_ptr` créer un qui se joint à un ensemble existant d’instances associées, mais uniquement si la ressource de mémoire sous-jacente est toujours valide. Un `weak_ptr` lui-même ne participe pas au décompte de références et, par conséquent, il ne peut pas empêcher le décompte de références de passer à zéro. Toutefois, vous pouvez utiliser un `weak_ptr` pour essayer d’obtenir une nouvelle copie `shared_ptr` de avec laquelle il a été initialisé. Si la mémoire a déjà été supprimée, `weak_ptr`l’opérateur bool de `false`est retourné. Si la mémoire est toujours valide, le nouveau pointeur partagé incrémente le décompte de références et garantit que la mémoire sera valide tant que la `shared_ptr` variable reste dans la portée.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 L’exemple de code suivant montre un cas `weak_ptr` dans lequel est utilisé pour garantir la suppression correcte des objets qui ont des dépendances circulaires. Lorsque vous examinez l’exemple, supposons qu’il a été créé uniquement après la prise en compte de solutions alternatives. Les `Controller` objets représentent un aspect d’un processus d’ordinateur et ils fonctionnent de manière indépendante. Chaque contrôleur doit être en mesure d’interroger l’état des autres contrôleurs à tout moment, et chacun d’eux `vector<weak_ptr<Controller>>` contient un privé à cet effet. Chaque vecteur contient une référence circulaire et, par conséquent `weak_ptr` , les instances sont utilisées `shared_ptr`à la place de.
 
