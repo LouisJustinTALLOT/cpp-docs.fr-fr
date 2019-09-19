@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: f33365fffc9a4addb0f22a90b87f8a03fdf2c1a9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8bc2a42c5a9006065e2f0f4ecb70911e0055823e
+ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513738"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062068"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procédure pas à pas : Créer une application de bureau Windows traditionnelleC++()
 
-Cette procédure pas à pas montre comment créer une application de bureau Windows traditionnelle dans Visual Studio. L’exemple d’application que vous allez créer utilise l’API Windows pour afficher «Hello, Windows Desktop!» dans une fenêtre. Vous pouvez utiliser le code que vous développez dans cette procédure pas à pas comme modèle pour créer d’autres applications de bureau Windows.
+Cette procédure pas à pas montre comment créer une application de bureau Windows traditionnelle dans Visual Studio. L’exemple d’application que vous allez créer utilise l’API Windows pour afficher « Hello, Windows Desktop ! » dans une fenêtre. Vous pouvez utiliser le code que vous développez dans cette procédure pas à pas comme modèle pour créer d’autres applications de bureau Windows.
 
 L’API Windows (également appelée API Win32, Windows Desktop API et Windows API classique) est une infrastructure basée sur le langage C pour la création d’applications Windows. Il existe depuis les années 1980 et a été utilisé pour créer des applications Windows depuis des décennies. Des frameworks plus avancés et plus faciles à programmer ont été créés sur l’API Windows, tels que MFC, ATL et le .NET Framework. Même le code le plus moderne pour UWP et les applications du C++Windows Store écrites en/WinRT utilise l’API Windows ci-dessous. Pour plus d’informations sur l’API Windows, consultez index de l' [API Windows](/windows/win32/apiindex/windows-api-list). Il existe de nombreuses façons de créer des applications Windows, mais le processus ci-dessus a été le premier.
 
@@ -98,7 +98,7 @@ Votre projet est maintenant créé et votre fichier source s’ouvre dans l’é
 
 1. Dans le menu **Fichier**, choisissez **Nouveau**, puis **Projet**.
 
-1. Dans le volet gauche de la boîte de dialogue **nouveau projet** , développez**modèles** >  > **C++** installés, puis sélectionnez **Win32**. Dans le volet central, sélectionnez **Projet Win32**.
+1. Dans le volet gauche de la boîte de dialogue **nouveau projet** , développez**modèles** >  > **C++installés, puis**sélectionnez **Win32**. Dans le volet central, sélectionnez **Projet Win32**.
 
    Dans la zone **nom** , tapez un nom pour le projet, par exemple, *DesktopApp*. Cliquez sur **OK**.
 
@@ -144,7 +144,7 @@ Ensuite, vous apprendrez à créer le code d’une application de bureau Windows
    Pour plus d’informations sur les paramètres et la valeur de retour de cette fonction, consultez [point d’entrée WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Quels sont les mots supplémentaires, tels que `CALLBACK`, ou? `HINSTANCE` `_In_` L’API Windows traditionnelle utilise les typedefs et les macros de préprocesseur pour résumer les détails des types et du code spécifique à la plateforme, comme les conventions d’appel, les déclarations **_ _ declspec** et les pragmas de compilateur. Dans Visual Studio, vous pouvez utiliser la fonctionnalité [Info Express](/visualstudio/ide/using-intellisense#quick-info) IntelliSense pour voir ce que les typedefs et les macros définissent. Pointez votre souris sur le mot qui vous intéresse, ou sélectionnez-le et appuyez sur **CTRL**+**K**, **CTRL**+**I** pour une petite fenêtre contextuelle contenant la définition. Pour plus d’informations, consultez [Utilisation d’IntelliSense](/visualstudio/ide/using-intellisense). Les paramètres et les types de retour utilisent souvent des annotations *SAL* pour vous aider à intercepter les erreurs de programmation. Pour plus d’informations, consultez [utilisation d’annotations SAL pourC++ réduire les défauts C/code](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Quels sont les mots supplémentaires, tels que `CALLBACK`, ou ? `HINSTANCE` `_In_` L’API Windows traditionnelle utilise les typedefs et les macros de préprocesseur pour résumer les détails des types et du code spécifique à la plateforme, comme les conventions d’appel, les déclarations **_ _ declspec** et les pragmas de compilateur. Dans Visual Studio, vous pouvez utiliser la fonctionnalité [Info Express](/visualstudio/ide/using-intellisense#quick-info) IntelliSense pour voir ce que les typedefs et les macros définissent. Pointez votre souris sur le mot qui vous intéresse, ou sélectionnez-le et appuyez sur **CTRL**+**K**, **CTRL**+**I** pour une petite fenêtre contextuelle contenant la définition. Pour plus d’informations, consultez [Utilisation d’IntelliSense](/visualstudio/ide/using-intellisense). Les paramètres et les types de retour utilisent souvent des *Annotations SAL* pour vous aider à intercepter les erreurs de programmation. Pour plus d’informations, consultez [utilisation d’annotations SAL pourC++ réduire les défauts C/code](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
 1. Les programmes de bureau &lt;Windows nécessitent Windows. h >. &lt;Tchar. h > définit la `TCHAR` macro, qui correspond finalement à **wchar_t** si le symbole Unicode est défini dans votre projet. dans le cas contraire, elle est résolue en **char**.  Si vous générez toujours avec UNICODE activé, vous n’avez pas besoin de TCHAR et pouvez simplement utiliser **wchar_t** directement.
 
@@ -157,8 +157,8 @@ Ensuite, vous apprendrez à créer le code d’une application de bureau Windows
 
    ```cpp
    LRESULT CALLBACK WndProc(
-      _In_ HWND   hwnd,
-      _In_ UINT   uMsg,
+      _In_ HWND   hWnd,
+      _In_ UINT   message,
       _In_ WPARAM wParam,
       _In_ LPARAM lParam
    );
@@ -245,7 +245,7 @@ Ensuite, vous apprendrez à créer le code d’une application de bureau Windows
 
    Cette fonction retourne un `HWND`, qui est un handle vers une fenêtre. Un descripteur est un peu comme un pointeur que Windows utilise pour effectuer le suivi des fenêtres ouvertes. Pour plus d'informations, consultez [Types de données Windows](/windows/win32/WinProg/windows-data-types).
 
-1. À ce stade, la fenêtre a été créée, mais nous devons toujours indiquer à Windows de le rendre visible. C’est ce que fait ce code:
+1. À ce stade, la fenêtre a été créée, mais nous devons toujours indiquer à Windows de le rendre visible. C’est ce que fait ce code :
 
    ```cpp
    // The parameters to ShowWindow explained:
@@ -366,7 +366,7 @@ Ensuite, vous apprendrez à créer le code d’une application de bureau Windows
 
    Un message important à gérer est le message [WM_PAINT](/windows/win32/gdi/wm-paint) . L’application reçoit le `WM_PAINT` message quand une partie de sa fenêtre affichée doit être mise à jour. L’événement peut se produire lorsqu’un utilisateur déplace une fenêtre devant votre fenêtre, puis la replace et votre application ne sait pas quand ces événements se produisent. Seul Windows sait qu’il vous avertit par `WM_PAINT`. Quand la fenêtre est affichée pour la première fois, elle doit être mise à jour.
 
-   Pour traiter un message `WM_PAINT` , appelez d’abord [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint), puis traitez toute la logique pour disposer le texte, les boutons et autres contrôles dans la fenêtre, puis appelez [EndPaint](/windows/win32/api/winuser/nf-winuser-endpaint). Pour l’application, la logique entre l’appel de début et l’appel de fin consiste à afficher la chaîne «Hello, Windows Desktop!» dans la fenêtre. Dans le code suivant, notez que la fonction [TextOut](/windows/win32/api/wingdi/nf-wingdi-textoutw) est utilisée pour afficher la chaîne.
+   Pour traiter un message `WM_PAINT` , appelez d’abord [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint), puis traitez toute la logique pour disposer le texte, les boutons et autres contrôles dans la fenêtre, puis appelez [EndPaint](/windows/win32/api/winuser/nf-winuser-endpaint). Pour l’application, la logique entre l’appel de début et l’appel de fin consiste à afficher la chaîne « Hello, Windows Desktop ! » dans la fenêtre. Dans le code suivant, notez que la fonction [TextOut](/windows/win32/api/wingdi/nf-wingdi-textoutw) est utilisée pour afficher la chaîne.
 
    ```cpp
    PAINTSTRUCT ps;
@@ -587,7 +587,7 @@ Comme promis, voici le code complet de l’application opérationnelle.
 
    ![Générer le projet DesktopApp](../build/media/desktop-app-project-build-150.gif "Générer le projet DesktopApp")
 
-1. Pour exécuter l’application, appuyez sur **F5**. Une fenêtre qui contient le texte «Hello, Windows Desktop!» doit apparaître dans le coin supérieur gauche de l’affichage.
+1. Pour exécuter l’application, appuyez sur **F5**. Une fenêtre qui contient le texte « Hello, Windows Desktop ! » doit apparaître dans le coin supérieur gauche de l’affichage.
 
    ![Exécuter le projet DesktopApp](../build/media/desktop-app-project-run-157.PNG "Exécuter le projet DesktopApp")
 

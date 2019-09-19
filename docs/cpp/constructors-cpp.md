@@ -1,17 +1,17 @@
 ---
 title: Constructeurs (C++)
-ms.date: 07/02/2019
+ms.date: 09/05/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: a2afa605fe110f7dc84d528330417ef3a1fc47e7
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 0e2e3536c8eb0a5b111ff18e43044783ea684f1f
+ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926266"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062026"
 ---
 # <a name="constructors-c"></a>Constructeurs (C++)
 
@@ -518,47 +518,6 @@ BaseClass1 ctor
 BaseClass2 ctor
 BaseClass3 ctor
 DerivedClass ctor
-```
-
-## <a name="virtual_functions_in_constructors"></a>Fonctions virtuelles dans les constructeurs
-
-Nous vous recommandons d'être prudent lorsque vous appelez des fonctions virtuelles dans des constructeurs. Le constructeur de classe de base étant toujours appelé avant le constructeur de classe dérivée, la fonction qui est appelée dans le constructeur de base est la version de classe de base, et non la version de classe dérivée. Dans l'exemple suivant, la construction d'un objet `DerivedClass` provoque l'exécution de l'implémentation `BaseClass` de `print_it()` avant que le constructeur `DerivedClass` provoque l'exécution de l'implémentation `DerivedClass` de `print_it()` :
-
-```cpp
-#include <iostream>
-using namespace std;
-
-class BaseClass{
-public:
-    BaseClass(){
-        print_it();
-    }
-    virtual void print_it() {
-        cout << "BaseClass print_it" << endl;
-    }
-};
-
-class DerivedClass : public BaseClass {
-public:
-    DerivedClass() {
-        print_it();
-    }
-    virtual void print_it(){
-        cout << "Derived Class print_it" << endl;
-    }
-};
-
-int main() {
-
-    DerivedClass dc;
-}
-```
-
-Voici la sortie :
-
-```Output
-BaseClass print_it
-Derived Class print_it
 ```
 
 ## <a name="delegating_constructors"></a>Constructeurs de délégation
