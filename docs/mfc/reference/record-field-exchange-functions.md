@@ -1,6 +1,6 @@
 ---
 title: Fonctions Record Field Exchange (RFX)
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - AFXDB/RFX_Binary
 - AFXDB/RFX_Bool
@@ -45,28 +45,28 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: 865c67b88c37e32ef33fa410ef178b81b7a6ecac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 491b00fe65634acf7c8805dd471fa6e3cc62acf0
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310160"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095833"
 ---
 # <a name="record-field-exchange-functions"></a>Fonctions Record Field Exchange (RFX)
 
-Record Field Exchange (RFX en bloc RFX et DFX) cette rubrique répertorie les fonctions utilisées pour automatiser le transfert de données entre un objet recordset et sa source de données et effectuer d’autres opérations sur les données.
+Cette rubrique répertorie les fonctions d’échange de champs d’enregistrements (RFX, RFX en bloc et DFX) utilisées pour automatiser le transfert de données entre un objet Recordset et sa source de données, et pour effectuer d’autres opérations sur les données.
 
 Si vous utilisez les classes ODBC et que vous avez implémenté l’extraction de lignes en bloc, vous devez remplacer manuellement la fonction membre `DoBulkFieldExchange` de `CRecordset` en appelant les fonctions RFX en bloc pour chaque membre de données correspondant à une colonne de source de données.
 
-Si vous n’avez pas implémenté l’extraction de lignes en bloc dans les classes ODBC, ou si vous utilisez les classes DAO, ClassWizard remplace la fonction membre `DoFieldExchange` de `CRecordset` ou `CDaoRecordset` en appelant les fonctions RFX (pour les classes ODBC) ou les fonctions DFX (pour les classes DAO) pour chaque membre de données de champ de votre recordset.
+Si vous n’avez pas implémenté l’extraction de lignes en bloc dans les classes basées sur ODBC, ou si vous utilisez les classes basées sur DAO (obsolètes), ClassWizard remplace la `DoFieldExchange` fonction membre de `CRecordset` ou `CDaoRecordset` en appelant les fonctions RFX (pour Les classes ODBC) ou les fonctions DFX (pour les classes DAO) pour chaque membre de données de champ dans votre Recordset.
 
 Les fonctions d’échange de champs d’enregistrements transfèrent des données chaque fois que l’infrastructure appelle `DoFieldExchange` ou `DoBulkFieldExchange`. Chaque fonction transfère un type de données spécifique.
 
-Pour plus d’informations sur l’utilisation de ces fonctions, consultez les articles [Record Field Exchange : Fonctionnement de RFX (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md). Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pour plus d’informations sur l’utilisation de ces fonctions, consultez les [Articles Record Field Exchange : Fonctionnement de RFX (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md). Pour plus d’informations sur l’extraction de lignes en bloc, [consultez l’article Recordset : récupération d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Pour les colonnes de données que vous liez dynamiquement, vous pouvez également appeler les fonctions RFX et DFX vous-même, comme expliqué dans les articles [jeu d’enregistrements : Liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Par ailleurs, vous pouvez écrire vos propres routines RFX ou DFX personnalisées, comme l’explique la Note technique [43](../../mfc/tn043-rfx-routines.md) (pour ODBC) et la Note technique [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (pour DAO).
+Pour les colonnes de données que vous liez dynamiquement, vous pouvez également appeler les fonctions RFX ou DFX vous-même, comme expliqué [dans l’article Recordset : liaison dynamique de colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Par ailleurs, vous pouvez écrire vos propres routines RFX ou DFX personnalisées, comme l’explique la Note technique [43](../../mfc/tn043-rfx-routines.md) (pour ODBC) et la Note technique [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (pour DAO).
 
-Pour un exemple de RFX et RFX en bloc des fonctions telles qu’elles apparaissent dans le `DoFieldExchange` et `DoBulkFieldExchange` fonctions, consultez [RFX_Text](#rfx_text) et [RFX_Text_Bulk] #rfx_text_bulk). Les fonctions DFX sont très similaires aux fonctions RFX.
+Pour obtenir un exemple de fonctions RFX et RFX en bloc telles qu’elles `DoFieldExchange` apparaissent `DoBulkFieldExchange` dans les fonctions et, consultez [RFX_Text](#rfx_text) et [RFX_Text_Bulk] #rfx_text_bulk). Les fonctions DFX sont très similaires aux fonctions RFX.
 
 ### <a name="rfx-functions-odbc"></a>Fonctions RFX (ODBC)
 
@@ -75,7 +75,7 @@ Pour un exemple de RFX et RFX en bloc des fonctions telles qu’elles apparaisse
 |[RFX_Binary](#rfx_binary)|Transfère les tableaux d’octets de type [CByteArray](cbytearray-class.md).|
 |[RFX_Bool](#rfx_bool)|Transfère les données de type Boolean.|
 |[RFX_Byte](#rfx_byte)|Transfère un seul octet de données.|
-|[RFX_Date](#rfx_date)|Transfère les heure et date à l’aide de données [CTime](../../atl-mfc-shared/reference/ctime-class.md) ou TIMESTAMP_STRUCT.|
+|[RFX_Date](#rfx_date)|Transfère les données d’heure et de date à l’aide de [ctime](../../atl-mfc-shared/reference/ctime-class.md) ou TIMESTAMP_STRUCT.|
 |[RFX_Double](#rfx_double)|Transfère les données de type Float double précision.|
 |[RFX_Int](#rfx_int)|Transfère les données de type Integer.|
 |[RFX_Long](#rfx_long)|Transfère les données de type Long Integer.|
@@ -117,7 +117,7 @@ Pour un exemple de RFX et RFX en bloc des fonctions telles qu’elles apparaisse
 
 ## <a name="rfx_binary"></a>  RFX_Binary
 
-Transfère les tableaux d’octets entre les membres de données de champ d’un `CRecordset` objet et les colonnes d’un enregistrement sur la source de données d’ODBC SQL_BINARY ou type SQL_VARBINARY SQL_LONGVARBINARY.
+Transfère les tableaux d’octets entre les données membres de champ d' `CRecordset` un objet et les colonnes d’un enregistrement sur la source de données de type ODBC SQL_BINARY, SQL_VARBINARY ou SQL_LONGVARBINARY.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -132,20 +132,20 @@ void RFX_Binary(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations sur les opérations un `CFieldExchange` objet peut spécifier, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations sur les opérations `CFieldExchange` qu’un objet peut spécifier, consultez [l’article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type [CByteArray](cbytearray-class.md), provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur de type [CByteArray](cbytearray-class.md)est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 *nMaxLength*<br/>
-La longueur maximale autorisée de la chaîne ou un tableau en cours de transfert. La valeur par défaut *nMaxLength* est 255. Valeurs autorisées vont de 1 à INT_MAX. Le framework alloue cette quantité d’espace pour les données. Pour de meilleures performances, passez une valeur suffisamment grande pour contenir l’élément de données plus grand que prévu.
+Longueur maximale autorisée de la chaîne ou du tableau en cours de transfert. La valeur par défaut de *nMaxLength* est 255. Les valeurs autorisées sont comprises entre 1 et INT_MAX. L’infrastructure alloue cette quantité d’espace pour les données. Pour des performances optimales, transmettez une valeur suffisamment grande pour accueillir le plus grand élément de données que vous attendez.
 
 ### <a name="remarks"></a>Notes
 
-Les données dans la source de données de ces types sont mappées vers et à partir du type `CByteArray` dans le jeu d’enregistrements.
+Les données de la source de données de ces types sont mappées vers et `CByteArray` à partir du type dans le Recordset.
 
 ### <a name="example"></a>Exemple
 
@@ -153,11 +153,11 @@ Consultez [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_bool"></a>  RFX_Bool
 
-Transfère les données booléennes entre les membres de données de champ d’un `CRecordset` objet et les colonnes d’un enregistrement sur la source de données d’ODBC tapez SQL_BIT.
+Transfère des données booléennes entre les membres de données `CRecordset` de champ d’un objet et les colonnes d’un enregistrement sur la source de données de type ODBC SQL_BIT.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -171,25 +171,25 @@ void RFX_Bool(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations sur les opérations un `CFieldExchange` objet peut spécifier, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations sur les opérations `CFieldExchange` qu’un objet peut spécifier, consultez [l’article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert à partir du jeu d’enregistrements à la source de données, la valeur de type BOOL, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur, de type BOOL, provient du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_byte"></a>  RFX_Byte
 
-Transferts unique octets entre les membres de données de champ d’un `CRecordset` objet et les colonnes d’un enregistrement sur la source de données d’ODBC tapez SQL_TINYINT.
+Transfère un seul octet entre les données membres de champ `CRecordset` d’un objet et les colonnes d’un enregistrement sur la source de données de type ODBC SQL_TINYINT.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -203,13 +203,13 @@ void RFX_Byte(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations sur les opérations un `CFieldExchange` objet peut spécifier, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations sur les opérations `CFieldExchange` qu’un objet peut spécifier, consultez [l’article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert à partir du jeu d’enregistrements à la source de données, la valeur de type BYTE, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur, de type BYTE, est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 ### <a name="example"></a>Exemple
 
@@ -217,11 +217,11 @@ Consultez [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_date"></a>  RFX_Date
 
-Transferts `CTime` TIMESTAMP_STRUCT des données entre les membres de données de champ ou une `CRecordset` objet et les colonnes d’un enregistrement sur la source de données d’ODBC tapez SQL_DATE, SQL_TIME ou SQL_TIMESTAMP.
+Transfère `CTime` ou TIMESTAMP_STRUCT les données entre les membres de données de `CRecordset` champ d’un objet et les colonnes d’un enregistrement sur la source de données de type ODBC SQL_DATE, SQL_TIME ou SQL_TIMESTAMP.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -245,33 +245,33 @@ void RFX_Date(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations sur les opérations un `CFieldExchange` objet peut spécifier, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations sur les opérations `CFieldExchange` qu’un objet peut spécifier, consultez [l’article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué ; la valeur doit être transféré. Les différentes versions de la fonction prennent différents types de données pour la valeur :
+Valeur stockée dans le membre de données indiqué ; valeur à transférer. Les différentes versions de la fonction prennent des types de données différents pour la valeur :
 
-La première version de la fonction accepte une référence à un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objet. Pour un transfert à partir du jeu d’enregistrements à la source de données, cette valeur provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+La première version de la fonction prend une référence à un objet [ctime](../../atl-mfc-shared/reference/ctime-class.md) . Pour un transfert d’un jeu d’enregistrements à une source de données, cette valeur est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
-La deuxième version de la fonction accepte une référence à un `TIMESTAMP_STRUCT` structure. Vous devez définir cette structure vous-même avant l’appel. Aucun échange de données de boîtes de dialogue (DDX) prennent en charge ni prise en charge de code Assistant est disponible pour cette version. La troisième version de la fonction fonctionne de manière similaire à la première version, à ceci près qu’elle prend une référence à un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objet.
+La deuxième version de la fonction prend une référence à une `TIMESTAMP_STRUCT` structure. Vous devez configurer cette structure vous-même avant l’appel. Aucune prise en charge de l’échange de données de boîtes de dialogue (DDX) ni prise en charge de l’Assistant code n’est disponible pour cette version. La troisième version de la fonction fonctionne de la même façon que la première version, sauf qu’elle prend une référence à un objet [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) .
 
 ### <a name="remarks"></a>Notes
 
-Le `CTime` version de la fonction impose la surcharge liée à un traitement intermédiaire et a une plage quelque peu limitée. Si vous trouvez un de ces facteurs trop limitée, utilisez la deuxième version de la fonction. Mais notez l’absence de l’Assistant de code et de prise en charge DDX et de l’exigence que vous avez configuré la structure vous-même.
+La `CTime` version de la fonction impose la surcharge liée à un traitement intermédiaire et a une plage relativement limitée. Si vous constatez que l’un de ces facteurs est trop restrictif, utilisez la deuxième version de la fonction. Mais notez l’absence de l’Assistant Code et la prise en charge de DDX et la nécessité de configurer vous-même la structure.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_double"></a>  RFX_Double
 
-Transferts **float double** des données entre les membres de données de champ d’un `CRecordset` objet et les colonnes d’un enregistrement sur la source de données d’ODBC SQL_DOUBLE de type.
+Transfère les données à **double flotte** entre les données membres de `CRecordset` champ d’un objet et les colonnes d’un enregistrement sur la source de données de type ODBC SQL_DOUBLE.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -285,13 +285,13 @@ void RFX_Double(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations sur les opérations un `CFieldExchange` objet peut spécifier, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations sur les opérations `CFieldExchange` qu’un objet peut spécifier, consultez [l’article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type **double**, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur, de type **double**, est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 ### <a name="example"></a>Exemple
 
@@ -299,11 +299,11 @@ Consultez [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_int"></a>  RFX_Int
 
-Transfère les données d’entier entre les membres de données de champ d’un `CRecordset` objet et les colonnes d’un enregistrement sur la source de données d’ODBC tapez SQL_SMALLINT.
+Transfère les données de type entier entre les membres de `CRecordset` données de champ d’un objet et les colonnes d’un enregistrement sur la source de données de type ODBC SQL_SMALLINT.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -317,25 +317,25 @@ void RFX_Int(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations sur les opérations un `CFieldExchange` objet peut spécifier, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations sur les opérations `CFieldExchange` qu’un objet peut spécifier, consultez [l’article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type **int**, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur de type **int**est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_long"></a>  RFX_Long
 
-Transfère les données de type entier long entre les membres de données de champ d’un `CRecordset` objet et les colonnes d’un enregistrement sur la source de données d’ODBC tapez SQL_INTEGER.
+Transfère les données d’entier long entre les membres de données `CRecordset` de champ d’un objet et les colonnes d’un enregistrement sur la source de données de type ODBC SQL_INTEGER.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -350,25 +350,25 @@ value );
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations sur les opérations un `CFieldExchange` objet peut spécifier, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations sur les opérations `CFieldExchange` qu’un objet peut spécifier, consultez [l’article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type **long**, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur de type **long**est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_longbinary"></a>  RFX_LongBinary
 
-Transfère les données d’objet binaire volumineux (BLOB) à l’aide de la classe [CLongBinary](clongbinary-class.md) entre les membres de données de champ d’un `CRecordset` objet et les colonnes d’un enregistrement sur la source de données d’ODBC tapez SQL_LONGVARBINARY ou SQL_LONGVARCHAR.
+Transfère les données BLOB (Binary Large Object) à l’aide de la classe [CLongBinary](clongbinary-class.md) entre les `CRecordset` données membres de champ d’un objet et les colonnes d’un enregistrement sur la source de données de type ODBC SQL_LONGVARBINARY ou SQL_LONGVARCHAR.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -382,13 +382,13 @@ void RFX_LongBinary(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations sur les opérations un `CFieldExchange` objet peut spécifier, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations sur les opérations `CFieldExchange` qu’un objet peut spécifier, consultez [l’article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type `CLongBinary`, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la `CLongBinary`valeur, de type, provient du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 ### <a name="example"></a>Exemple
 
@@ -396,11 +396,11 @@ Consultez [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_single"></a>  RFX_Single
 
-Transfère les données à virgule flottante entre les membres de données de champ d’un `CRecordset` objet et les colonnes d’un enregistrement sur la source de données d’ODBC tapez SQL_REAL.
+Transfère les données à virgule flottante entre les membres de données `CRecordset` de champ d’un objet et les colonnes d’un enregistrement sur la source de données de type ODBC SQL_REAL.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -414,25 +414,25 @@ void RFX_Single(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations sur les opérations un `CFieldExchange` objet peut spécifier, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations sur les opérations `CFieldExchange` qu’un objet peut spécifier, consultez [l’article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type **float**, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur de type **float**est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_text"></a>  RFX_Text
 
-Transferts `CString` des données entre les membres de données de champ d’un `CRecordset` objet et les colonnes d’un enregistrement sur la source de données d’ODBC type SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL ou SQL_NUMERIC.
+Transfère `CString` des données entre les membres de données de `CRecordset` champ d’un objet et les colonnes d’un enregistrement sur la source de données de type ODBC SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, Sql_Decimal ou Sql_Numeric.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -449,30 +449,30 @@ void RFX_Text(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe `CFieldExchange`. Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations sur les opérations un `CFieldExchange` objet peut spécifier, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet de classe `CFieldExchange`. Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations sur les opérations `CFieldExchange` qu’un objet peut spécifier, consultez [l’article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type `CString`, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la `CString`valeur, de type, provient du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 *nMaxLength*<br/>
-La longueur maximale autorisée de la chaîne ou un tableau en cours de transfert. La valeur par défaut *nMaxLength* est 255. Valeurs autorisées sont 1 à INT_MAX). Le framework alloue cette quantité d’espace pour les données. Pour de meilleures performances, passez une valeur suffisamment grande pour contenir l’élément de données plus grand que prévu.
+Longueur maximale autorisée de la chaîne ou du tableau en cours de transfert. La valeur par défaut de *nMaxLength* est 255. Les valeurs autorisées sont comprises entre 1 et INT_MAX). L’infrastructure alloue cette quantité d’espace pour les données. Pour des performances optimales, transmettez une valeur suffisamment grande pour accueillir le plus grand élément de données que vous attendez.
 
 *nColumnType*<br/>
-Utilisé principalement pour les paramètres. Entier indiquant le type de données du paramètre. Le type est un type de données ODBC sous la forme **SQL_XXX**.
+Utilisé principalement pour les paramètres. Entier qui indique le type de données du paramètre. Le type est un type de données ODBC de la forme **SQL_XXX**.
 
 *nScale*<br/>
-Spécifie l’échelle des valeurs de type ODBC SQL_DECIMAL ou SQL_NUMERIC. *nScale* est utile uniquement lors de la définition des valeurs de paramètre. Pour plus d’informations, consultez la rubrique « Précision, échelle, longueur et taille d’affichage » dans l’annexe D de la *de référence du programmeur ODBC SDK*.
+Spécifie l’échelle pour les valeurs de type ODBC SQL_DECIMAL ou SQL_NUMERIC. *nScale* est utile uniquement lors de la définition de valeurs de paramètre. Pour plus d’informations, consultez la rubrique sur la précision, l’échelle, la longueur et la taille d’affichage dans l’annexe D du *Guide de référence du programmeur du kit de développement logiciel (SDK) ODBC*.
 
 ### <a name="remarks"></a>Notes
 
-Les données dans la source de données de tous ces types sont mappées vers et depuis `CString` dans le jeu d’enregistrements.
+Les données de la source de données de tous ces types sont mappées vers et `CString` à partir de dans le Recordset.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple illustre plusieurs appels à `RFX_Text`. Notez également les deux appels à `CFieldExchange::SetFieldType`. Pour les paramètres, vous devez écrire l’appel à `SetFieldType` et son appel RFX. L’appel de colonne de sortie et de ses appels RFX associés sont normalement écrits par un Assistant code.
+Cet exemple illustre plusieurs appels à `RFX_Text`. Notez également les deux appels à `CFieldExchange::SetFieldType`. Pour les paramètres, vous devez écrire l' `SetFieldType` appel à et son appel RFX. L’appel de colonne de sortie et ses appels RFX associés sont généralement écrits par un assistant de code.
 
 ```cpp
 void CCustomer::DoFieldExchange(CFieldExchange* pFX)
@@ -494,11 +494,11 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_binary_bulk"></a>  RFX_Binary_Bulk
 
-Transferts de plusieurs lignes de données de type octet à partir d’une colonne d’une source de données ODBC dans un tableau correspondant dans un `CRecordset`-objet dérivé.
+Transfère plusieurs lignes de données d’octets d’une colonne d’une source de données ODBC vers un tableau correspondant `CRecordset`dans un objet dérivé de.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -514,42 +514,42 @@ void RFX_Binary_Bulk(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un [CFieldExchange](cfieldexchange-class.md) objet. Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet [CFieldExchange](cfieldexchange-class.md) . Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations, consultez l' [article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *prgByteVals*<br/>
-Pointeur vers un tableau de valeurs d’octets. Ce tableau stocke les données seront transférés à partir de la source de données vers le jeu d’enregistrements.
+Pointeur vers un tableau de valeurs d’octets. Ce tableau stocke les données à transférer de la source de données vers le Recordset.
 
 *prgLengths*<br/>
-Pointeur vers un tableau d’entiers longs. Ce tableau stockera la longueur en octets de chaque valeur dans le tableau vers lequel pointé *prgByteVals*. Notez que la valeur de SQL_NULL_DATA sera stockée si l’élément de données correspondante contienne une valeur Null. Pour plus d’informations, consultez la fonction API ODBC `SQLBindCol` dans le *de référence du programmeur ODBC SDK*.
+Pointeur vers un tableau d’entiers longs. Ce tableau stocke la longueur en octets de chaque valeur du tableau pointé par *prgByteVals*. Notez que la valeur SQL_NULL_DATA sera stockée si l’élément de données correspondant contient une valeur null. Pour plus d’informations, consultez la fonction `SQLBindCol` API ODBC dans le *Guide de référence du programmeur ODBC SDK*.
 
 *nMaxLength*<br/>
-La longueur des valeurs stockées dans le tableau vers lequel pointé maximale autorisée *prgByteVals*. Pour vous assurer que les données ne seront pas tronquées, passez une valeur suffisamment grande pour contenir l’élément de données plus grand que prévu.
+Longueur maximale autorisée des valeurs stockées dans le tableau pointé par *prgByteVals*. Pour vous assurer que les données ne seront pas tronquées, transmettez une valeur suffisamment grande pour accueillir le plus grand élément de données attendu.
 
 ### <a name="remarks"></a>Notes
 
-La colonne de source de données peut avoir un type ODBC de SQL_BINARY ou SQL_VARBINARY SQL_LONGVARBINARY. Le jeu d’enregistrements doit définir un membre de données de champ de type pointeur en octet.
+La colonne de source de données peut avoir un type ODBC SQL_BINARY, SQL_VARBINARY ou SQL_LONGVARBINARY. Le jeu d’enregistrements doit définir un membre de données de champ de type pointeur vers octet.
 
-Si vous initialisez *prgByteVals* et *prgLengths* avec la valeur NULL, puis les tableaux ils pointent vers seront allouées automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
+Si vous initialisez *prgByteVals* et *prgLengths* sur null, les tableaux vers lesquels ils pointent sont alloués automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
 
 > [!NOTE]
->  RFX en bloc transfère uniquement les données à partir de la source de données à l’objet recordset. Pour rendre votre jeu d’enregistrements modifiables, vous devez utiliser la fonction API ODBC `SQLSetPos`.
+>  L’échange de champs d’enregistrements en bloc transfère uniquement les données de la source de données vers l’objet Recordset. Pour que votre jeu d’enregistrements puisse être mis à jour, vous devez utiliser la fonction `SQLSetPos`API ODBC.
 
-Pour plus d’informations, consultez les articles [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Pour plus d’informations, consultez l' [article Recordset : Récupération d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [RFX (Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md)).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_bool_bulk"></a>  RFX_Bool_Bulk
 
-Transferts de plusieurs lignes de données booléen à partir d’une colonne d’une source de données ODBC dans un tableau correspondant dans un `CRecordset`-objet dérivé.
+Transfère plusieurs lignes de données booléennes d’une colonne d’une source de données ODBC vers un tableau correspondant `CRecordset`dans un objet dérivé de.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -564,27 +564,27 @@ void RFX_Bool_Bulk(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un [CFieldExchange](cfieldexchange-class.md) objet. Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet [CFieldExchange](cfieldexchange-class.md) . Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations, consultez l' [article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *prgBoolVals*<br/>
-Un pointeur vers un tableau de valeurs de type BOOL. Ce tableau stocke les données seront transférés à partir de la source de données vers le jeu d’enregistrements.
+Pointeur vers un tableau de valeurs BOOL. Ce tableau stocke les données à transférer de la source de données vers le Recordset.
 
 *prgLengths*<br/>
-Pointeur vers un tableau d’entiers longs. Ce tableau stockera la longueur en octets de chaque valeur dans le tableau vers lequel pointé *prgBoolVals*. Notez que la valeur de SQL_NULL_DATA sera stockée si l’élément de données correspondante contienne une valeur Null. Pour plus d’informations, consultez la fonction API ODBC `SQLBindCol` dans le *de référence du programmeur ODBC SDK*.
+Pointeur vers un tableau d’entiers longs. Ce tableau stocke la longueur en octets de chaque valeur du tableau pointé par *prgBoolVals*. Notez que la valeur SQL_NULL_DATA sera stockée si l’élément de données correspondant contient une valeur null. Pour plus d’informations, consultez la fonction `SQLBindCol` API ODBC dans le *Guide de référence du programmeur ODBC SDK*.
 
 ### <a name="remarks"></a>Notes
 
-La colonne de source de données doit avoir un type ODBC de SQL_BIT. Le jeu d’enregistrements doit définir un membre de données de champ de type pointeur en BOOL.
+La colonne de source de données doit avoir un type ODBC SQL_BIT. Le Recordset doit définir un membre de données de champ de type pointeur sur BOOL.
 
-Si vous initialisez *prgBoolVals* et *prgLengths* avec la valeur NULL, puis les tableaux ils pointent vers seront allouées automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
+Si vous initialisez *prgBoolVals* et *prgLengths* sur null, les tableaux vers lesquels ils pointent sont alloués automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
 
 > [!NOTE]
->  RFX en bloc transfère uniquement les données à partir de la source de données à l’objet recordset. Pour rendre votre jeu d’enregistrements modifiables, vous devez utiliser la fonction API ODBC `SQLSetPos`.
+>  L’échange de champs d’enregistrements en bloc transfère uniquement les données de la source de données vers l’objet Recordset. Pour mettre à jour votre jeu d’enregistrements, vous devez utiliser la fonction `SQLSetPos`API ODBC.
 
-Pour plus d’informations, consultez les articles [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Pour plus d’informations, consultez l' [article Recordset : Récupération d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [RFX (Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md)).
 
 ### <a name="example"></a>Exemple
 
@@ -592,11 +592,11 @@ Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_byte_bulk"></a>  RFX_Byte_Bulk
 
-Transferts de plusieurs lignes d’octets uniques à partir d’une colonne d’une source de données ODBC dans un tableau correspondant dans un `CRecordset`-objet dérivé.
+Transfère plusieurs lignes d’un seul octet d’une colonne d’une source de données ODBC vers un tableau correspondant `CRecordset`dans un objet dérivé de.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -611,39 +611,39 @@ void RFX_Byte_Bulk(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un [CFieldExchange](cfieldexchange-class.md) objet. Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet [CFieldExchange](cfieldexchange-class.md) . Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations, consultez l' [article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *prgByteVals*<br/>
-Pointeur vers un tableau de valeurs d’octets. Ce tableau stocke les données seront transférés à partir de la source de données vers le jeu d’enregistrements.
+Pointeur vers un tableau de valeurs d’octets. Ce tableau stocke les données à transférer de la source de données vers le Recordset.
 
 *prgLengths*<br/>
-Pointeur vers un tableau d’entiers longs. Ce tableau stockera la longueur en octets de chaque valeur dans le tableau vers lequel pointé *prgByteVals*. Notez que la valeur de SQL_NULL_DATA sera stockée si l’élément de données correspondante contienne une valeur Null. Pour plus d’informations, consultez la fonction API ODBC `SQLBindCol` dans le *de référence du programmeur ODBC SDK*.
+Pointeur vers un tableau d’entiers longs. Ce tableau stocke la longueur en octets de chaque valeur du tableau pointé par *prgByteVals*. Notez que la valeur SQL_NULL_DATA sera stockée si l’élément de données correspondant contient une valeur null. Pour plus d’informations, consultez la fonction `SQLBindCol` API ODBC dans le *Guide de référence du programmeur ODBC SDK*.
 
 ### <a name="remarks"></a>Notes
 
-La colonne de source de données doit avoir un type ODBC de SQL_TINYINT. Le jeu d’enregistrements doit définir un membre de données de champ de type pointeur en octet.
+La colonne de source de données doit avoir un type ODBC SQL_TINYINT. Le jeu d’enregistrements doit définir un membre de données de champ de type pointeur vers octet.
 
-Si vous initialisez *prgByteVals* et *prgLengths* avec la valeur NULL, puis les tableaux ils pointent vers seront allouées automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
+Si vous initialisez *prgByteVals* et *prgLengths* sur null, les tableaux vers lesquels ils pointent sont alloués automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
 
 > [!NOTE]
->  RFX en bloc transfère uniquement les données à partir de la source de données à l’objet recordset. Pour rendre votre jeu d’enregistrements modifiables, vous devez utiliser la fonction API ODBC `SQLSetPos`.
+>  L’échange de champs d’enregistrements en bloc transfère uniquement les données de la source de données vers l’objet Recordset. Pour mettre à jour votre jeu d’enregistrements, vous devez utiliser la fonction `SQLSetPos`API ODBC.
 
-Pour plus d’informations, consultez les articles [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Pour plus d’informations, consultez l' [article Recordset : Récupération d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [RFX (Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md)).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_date_bulk"></a>  RFX_Date_Bulk
 
-Transferts de plusieurs lignes de données TIMESTAMP_STRUCT à partir d’une colonne d’une source de données ODBC dans un tableau correspondant dans un `CRecordset`-objet dérivé.
+Transfère plusieurs lignes de données TIMESTAMP_STRUCT à partir d’une colonne d’une source de données ODBC vers un tableau `CRecordset`correspondant dans un objet dérivé de.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -658,27 +658,27 @@ void RFX_Date_Bulk(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un [CFieldExchange](cfieldexchange-class.md) objet. Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet [CFieldExchange](cfieldexchange-class.md) . Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations, consultez l' [article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *prgTSVals*<br/>
-Pointeur vers un tableau de valeurs TIMESTAMP_STRUCT. Ce tableau stocke les données seront transférés à partir de la source de données vers le jeu d’enregistrements. Pour plus d’informations sur le type de données TIMESTAMP_STRUCT, consultez la rubrique « Types de données C » dans l’annexe D de la *de référence du programmeur ODBC SDK*.
+Pointeur vers un tableau de valeurs TIMESTAMP_STRUCT. Ce tableau stocke les données à transférer de la source de données vers le Recordset. Pour plus d’informations sur le type de données TIMESTAMP_STRUCT, consultez la rubrique « types de données C » dans l’annexe D du *Guide de référence du programmeur du kit de développement logiciel (SDK) ODBC*.
 
 *prgLengths*<br/>
-Pointeur vers un tableau d’entiers longs. Ce tableau stockera la longueur en octets de chaque valeur dans le tableau vers lequel pointé *prgTSVals*. Notez que la valeur de SQL_NULL_DATA sera stockée si l’élément de données correspondante contienne une valeur Null. Pour plus d’informations, consultez la fonction API ODBC `SQLBindCol` dans le *de référence du programmeur ODBC SDK*.
+Pointeur vers un tableau d’entiers longs. Ce tableau stocke la longueur en octets de chaque valeur du tableau pointé par *prgTSVals*. Notez que la valeur SQL_NULL_DATA sera stockée si l’élément de données correspondant contient une valeur null. Pour plus d’informations, consultez la fonction `SQLBindCol` API ODBC dans le *Guide de référence du programmeur ODBC SDK*.
 
 ### <a name="remarks"></a>Notes
 
-La colonne de source de données peut avoir un type ODBC de SQL_DATE, SQL_TIME ou SQL_TIMESTAMP. Le jeu d’enregistrements doit définir un membre de données de champ de type pointeur à TIMESTAMP_STRUCT.
+La colonne de source de données peut avoir un type ODBC SQL_DATE, SQL_TIME ou SQL_TIMESTAMP. Le jeu d’enregistrements doit définir un membre de données de champ de type pointeur vers TIMESTAMP_STRUCT.
 
-Si vous initialisez *prgTSVals* et *prgLengths* avec la valeur NULL, puis les tableaux ils pointent vers seront allouées automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
+Si vous initialisez *prgTSVals* et *prgLengths* sur null, les tableaux vers lesquels ils pointent sont alloués automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
 
 > [!NOTE]
->  RFX en bloc transfère uniquement les données à partir de la source de données à l’objet recordset. Pour rendre votre jeu d’enregistrements modifiables, vous devez utiliser la fonction API ODBC `SQLSetPos`.
+>  L’échange de champs d’enregistrements en bloc transfère uniquement les données de la source de données vers l’objet Recordset. Pour mettre à jour votre jeu d’enregistrements, vous devez utiliser la fonction `SQLSetPos`API ODBC.
 
-Pour plus d’informations, consultez les articles [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Pour plus d’informations, consultez l' [article Recordset : Récupération d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [RFX (Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md)).
 
 ### <a name="example"></a>Exemple
 
@@ -686,11 +686,11 @@ Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_double_bulk"></a>  RFX_Double_Bulk
 
-Transferts de plusieurs lignes de données à virgule flottante double précision à partir d’une colonne d’une source de données ODBC dans un tableau correspondant dans un `CRecordset`-objet dérivé.
+Transfère plusieurs lignes de données à virgule flottante double précision d’une colonne d’une source de données ODBC vers un tableau correspondant dans un `CRecordset`objet dérivé de.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -705,27 +705,27 @@ void RFX_Double_Bulk(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un [CFieldExchange](cfieldexchange-class.md) objet. Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet [CFieldExchange](cfieldexchange-class.md) . Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations, consultez l' [article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *prgDblVals*<br/>
-Un pointeur vers un tableau de **double** valeurs. Ce tableau stocke les données seront transférés à partir de la source de données vers le jeu d’enregistrements.
+Pointeur vers un tableau de valeurs **doubles** . Ce tableau stocke les données à transférer de la source de données vers le Recordset.
 
 *prgLengths*<br/>
-Pointeur vers un tableau d’entiers longs. Ce tableau stockera la longueur en octets de chaque valeur dans le tableau vers lequel pointé *prgDblVals*. Notez que la valeur de SQL_NULL_DATA sera stockée si l’élément de données correspondante contienne une valeur Null. Pour plus d’informations, consultez la fonction API ODBC `SQLBindCol` dans le *de référence du programmeur ODBC SDK*.
+Pointeur vers un tableau d’entiers longs. Ce tableau stocke la longueur en octets de chaque valeur du tableau pointé par *prgDblVals*. Notez que la valeur SQL_NULL_DATA sera stockée si l’élément de données correspondant contient une valeur null. Pour plus d’informations, consultez la fonction `SQLBindCol` API ODBC dans le *Guide de référence du programmeur ODBC SDK*.
 
 ### <a name="remarks"></a>Notes
 
-La colonne de source de données doit avoir un type ODBC de SQL_DOUBLE. Le jeu d’enregistrements doit définir un membre de données de champ de type pointeur vers **double**.
+La colonne de source de données doit avoir un type ODBC SQL_DOUBLE. Le jeu d’enregistrements doit définir un membre de données de champ de type pointeur sur **double**.
 
-Si vous initialisez *prgDblVals* et *prgLengths* avec la valeur NULL, puis les tableaux ils pointent vers seront allouées automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
+Si vous initialisez *prgDblVals* et *prgLengths* sur null, les tableaux vers lesquels ils pointent sont alloués automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
 
 > [!NOTE]
->  RFX en bloc transfère uniquement les données à partir de la source de données à l’objet recordset. Pour rendre votre jeu d’enregistrements modifiables, vous devez utiliser la fonction API ODBC `SQLSetPos`.
+>  L’échange de champs d’enregistrements en bloc transfère uniquement les données de la source de données vers l’objet Recordset. Pour mettre à jour votre jeu d’enregistrements, vous devez utiliser la fonction `SQLSetPos`API ODBC.
 
-Pour plus d’informations, consultez les articles [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Pour plus d’informations, consultez l' [article Recordset : Récupération d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [RFX (Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md)).
 
 ### <a name="example"></a>Exemple
 
@@ -733,11 +733,11 @@ Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_int_bulk"></a>  RFX_Int_Bulk
 
-Transfère les données d’entier entre les membres de données de champ d’un `CRecordset` objet et les colonnes d’un enregistrement sur la source de données d’ODBC tapez SQL_SMALLINT.
+Transfère les données de type entier entre les membres de `CRecordset` données de champ d’un objet et les colonnes d’un enregistrement sur la source de données de type ODBC SQL_SMALLINT.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -751,13 +751,13 @@ void RFX_Int(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations sur les opérations un `CFieldExchange` objet peut spécifier, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet de classe [CFieldExchange](cfieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations sur les opérations `CFieldExchange` qu’un objet peut spécifier, consultez [l’article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type **int**, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur de type **int**est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 ### <a name="example"></a>Exemple
 
@@ -765,11 +765,11 @@ Consultez [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_long_bulk"></a>  RFX_Long_Bulk
 
-Transferts de plusieurs lignes de données de type entier long d’une colonne d’une source de données ODBC dans un tableau correspondant dans un `CRecordset`-objet dérivé.
+Transfère plusieurs lignes de données de type entier long d’une colonne d’une source de données ODBC vers un tableau `CRecordset`correspondant dans un objet dérivé de.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -784,27 +784,27 @@ void RFX_Long_Bulk(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un [CFieldExchange](cfieldexchange-class.md) objet. Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet [CFieldExchange](cfieldexchange-class.md) . Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations, consultez l' [article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *prgLongVals*<br/>
-Pointeur vers un tableau d’entiers longs. Ce tableau stocke les données seront transférés à partir de la source de données vers le jeu d’enregistrements.
+Pointeur vers un tableau d’entiers longs. Ce tableau stocke les données à transférer de la source de données vers le Recordset.
 
 *prgLengths*<br/>
-Pointeur vers un tableau d’entiers longs. Ce tableau stockera la longueur en octets de chaque valeur dans le tableau vers lequel pointé *prgLongVals*. Notez que la valeur de SQL_NULL_DATA sera stockée si l’élément de données correspondante contienne une valeur Null. Pour plus d’informations, consultez la fonction API ODBC `SQLBindCol` dans le *de référence du programmeur ODBC SDK*.
+Pointeur vers un tableau d’entiers longs. Ce tableau stocke la longueur en octets de chaque valeur du tableau pointé par *prgLongVals*. Notez que la valeur SQL_NULL_DATA sera stockée si l’élément de données correspondant contient une valeur null. Pour plus d’informations, consultez la fonction `SQLBindCol` API ODBC dans le *Guide de référence du programmeur ODBC SDK*.
 
 ### <a name="remarks"></a>Notes
 
-La colonne de source de données doit avoir un type ODBC de SQL_INTEGER. Le jeu d’enregistrements doit définir un membre de données de champ de type pointeur vers **long**.
+La colonne de source de données doit avoir un type ODBC SQL_INTEGER. Le jeu d’enregistrements doit définir un membre de données de champ de type pointeur à **long**.
 
-Si vous initialisez *prgLongVals* et *prgLengths* avec la valeur NULL, puis les tableaux ils pointent vers seront allouées automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
+Si vous initialisez *prgLongVals* et *prgLengths* sur null, les tableaux vers lesquels ils pointent sont alloués automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
 
 > [!NOTE]
->  RFX en bloc transfère uniquement les données à partir de la source de données à l’objet recordset. Pour rendre votre jeu d’enregistrements modifiables, vous devez utiliser la fonction API ODBC `SQLSetPos`.
+>  L’échange de champs d’enregistrements en bloc transfère uniquement les données de la source de données vers l’objet Recordset. Pour mettre à jour votre jeu d’enregistrements, vous devez utiliser la fonction `SQLSetPos`API ODBC.
 
-Pour plus d’informations, consultez les articles [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Pour plus d’informations, consultez l' [article Recordset : Récupération d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [RFX (Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md)).
 
 ### <a name="example"></a>Exemple
 
@@ -812,11 +812,11 @@ Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_single_bulk"></a>  RFX_Single_Bulk
 
-Transferts de plusieurs lignes de données à virgule flottante à partir d’une colonne d’une source de données ODBC dans un tableau correspondant dans un `CRecordset`-objet dérivé.
+Transfère plusieurs lignes de données à virgule flottante à partir d’une colonne d’une source de données ODBC vers un `CRecordset`tableau correspondant dans un objet dérivé de.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -831,27 +831,27 @@ void RFX_Single_Bulk(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un [CFieldExchange](cfieldexchange-class.md) objet. Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet [CFieldExchange](cfieldexchange-class.md) . Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations, consultez l' [article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *prgFltVals*<br/>
-Un pointeur vers un tableau de **float** valeurs. Ce tableau stocke les données seront transférés à partir de la source de données vers le jeu d’enregistrements.
+Pointeur vers un tableau de valeurs **float** . Ce tableau stocke les données à transférer de la source de données vers le Recordset.
 
 *prgLengths*<br/>
-Pointeur vers un tableau d’entiers longs. Ce tableau stockera la longueur en octets de chaque valeur dans le tableau vers lequel pointé *prgFltVals*. Notez que la valeur de SQL_NULL_DATA sera stockée si l’élément de données correspondante contienne une valeur Null. Pour plus d’informations, consultez la fonction API ODBC `SQLBindCol` dans le *de référence du programmeur ODBC SDK*.
+Pointeur vers un tableau d’entiers longs. Ce tableau stocke la longueur en octets de chaque valeur du tableau pointé par *prgFltVals*. Notez que la valeur SQL_NULL_DATA sera stockée si l’élément de données correspondant contient une valeur null. Pour plus d’informations, consultez la fonction `SQLBindCol` API ODBC dans le *Guide de référence du programmeur ODBC SDK*.
 
 ### <a name="remarks"></a>Notes
 
-La colonne de source de données doit avoir un type ODBC de SQL_REAL. Le jeu d’enregistrements doit définir un membre de données de champ de type pointeur vers **float**.
+La colonne de source de données doit avoir un type ODBC SQL_REAL. Le Recordset doit définir un membre de données de champ de type pointeur sur **float**.
 
-Si vous initialisez *prgFltVals* et *prgLengths* avec la valeur NULL, puis les tableaux ils pointent vers seront allouées automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
+Si vous initialisez *prgFltVals* et *prgLengths* sur null, les tableaux vers lesquels ils pointent sont alloués automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
 
 > [!NOTE]
->  RFX en bloc transfère uniquement les données à partir de la source de données à l’objet recordset. Pour rendre votre jeu d’enregistrements modifiables, vous devez utiliser la fonction API ODBC `SQLSetPos`.
+>  L’échange de champs d’enregistrements en bloc transfère uniquement les données de la source de données vers l’objet Recordset. Pour mettre à jour votre jeu d’enregistrements, vous devez utiliser la fonction `SQLSetPos`API ODBC.
 
-Pour plus d’informations, consultez les articles [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Pour plus d’informations, consultez l' [article Recordset : Récupération d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [RFX (Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md)).
 
 ### <a name="example"></a>Exemple
 
@@ -859,11 +859,11 @@ Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="rfx_text_bulk"></a>  RFX_Text_Bulk
 
-Transferts de plusieurs lignes de données de type caractère à partir d’une colonne d’une source de données ODBC dans un tableau correspondant dans un `CRecordset`-objet dérivé.
+Transfère plusieurs lignes de données de caractères à partir d’une colonne d’une source de données ODBC vers un `CRecordset`tableau correspondant dans un objet dérivé de.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -879,34 +879,34 @@ void RFX_Text_Bulk(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un [CFieldExchange](cfieldexchange-class.md) objet. Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction. Pour plus d’informations, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Pointeur vers un objet [CFieldExchange](cfieldexchange-class.md) . Cet objet contient des informations pour définir le contexte de chaque appel de la fonction. Pour plus d’informations, consultez l' [article échange de champs d’enregistrement : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *prgStrVals*<br/>
-Pointeur vers un tableau de valeurs LPSTR. Ce tableau stocke les données seront transférés à partir de la source de données vers le jeu d’enregistrements. Notez qu’avec la version actuelle d’ODBC, ces valeurs ne peut pas être Unicode.
+Pointeur vers un tableau de valeurs LPSTR. Ce tableau stocke les données à transférer de la source de données vers le Recordset. Notez qu’avec la version actuelle d’ODBC, ces valeurs ne peuvent pas être au format Unicode.
 
 *prgLengths*<br/>
-Pointeur vers un tableau d’entiers longs. Ce tableau stockera la longueur en octets de chaque valeur dans le tableau vers lequel pointé *prgStrVals*. Cette durée exclut le caractère de fin null. Notez que la valeur de SQL_NULL_DATA sera stockée si l’élément de données correspondante contienne une valeur Null. Pour plus d’informations, consultez la fonction API ODBC `SQLBindCol` dans le *de référence du programmeur ODBC SDK*.
+Pointeur vers un tableau d’entiers longs. Ce tableau stocke la longueur en octets de chaque valeur du tableau pointé par *prgStrVals*. Cette longueur exclut le caractère de fin null. Notez que la valeur SQL_NULL_DATA sera stockée si l’élément de données correspondant contient une valeur null. Pour plus d’informations, consultez la fonction `SQLBindCol` API ODBC dans le *Guide de référence du programmeur ODBC SDK*.
 
 *nMaxLength*<br/>
-La longueur des valeurs stockées dans le tableau vers lequel pointé maximale autorisée *prgStrVals*, y compris le caractère de fin null. Pour vous assurer que les données ne seront pas tronquées, passez une valeur suffisamment grande pour contenir l’élément de données plus grand que prévu.
+Longueur maximale autorisée des valeurs stockées dans le tableau pointé par *prgStrVals*, y compris le caractère de fin null. Pour vous assurer que les données ne seront pas tronquées, transmettez une valeur suffisamment grande pour accueillir le plus grand élément de données attendu.
 
 ### <a name="remarks"></a>Notes
 
-La colonne de source de données peut avoir un type ODBC de SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL ou SQL_NUMERIC. Le jeu d’enregistrements doit définir un membre de données de champ de type LPSTR.
+La colonne de source de données peut avoir un type ODBC SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL ou SQL_NUMERIC. Le jeu d’enregistrements doit définir un membre de données de champ de type LPSTR.
 
-Si vous initialisez *prgStrVals* et *prgLengths* avec la valeur NULL, puis les tableaux ils pointent vers seront allouées automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
+Si vous initialisez *prgStrVals* et *prgLengths* sur null, les tableaux vers lesquels ils pointent sont alloués automatiquement, avec des tailles égales à la taille de l’ensemble de lignes.
 
 > [!NOTE]
->  RFX en bloc transfère uniquement les données à partir de la source de données à l’objet recordset. Pour rendre votre jeu d’enregistrements modifiables, vous devez utiliser la fonction API ODBC `SQLSetPos`.
+>  L’échange de champs d’enregistrements en bloc transfère uniquement les données de la source de données vers l’objet Recordset. Pour mettre à jour votre jeu d’enregistrements, vous devez utiliser la fonction `SQLSetPos`API ODBC.
 
-Pour plus d’informations, consultez les articles [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Pour plus d’informations, consultez l' [article Recordset : Récupération d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) et [RFX (Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md)).
 
 ### <a name="example"></a>Exemple
 
-Vous devez écrire manuellement les appels votre `DoBulkFieldExchange` remplacer. Cet exemple montre un appel à `RFX_Text_Bulk`, ainsi qu’un appel à `RFX_Long_Bulk`, pour le transfert de données. Ces appels sont précédées par un appel à [CFieldExchange::SetFieldType](CFieldExchange::SetFieldType.md). Notez que pour les paramètres, vous devez appeler les fonctions RFX au lieu des fonctions RFX en bloc.
+Vous devez écrire manuellement les appels dans `DoBulkFieldExchange` votre remplacement. Cet exemple montre un appel à `RFX_Text_Bulk`, ainsi qu’un appel à `RFX_Long_Bulk`, pour le transfert de données. Ces appels sont précédés d’un appel à [CFieldExchange :: SetFieldType](CFieldExchange::SetFieldType.md). Notez que pour les paramètres, vous devez appeler les fonctions RFX à la place des fonctions RFX en bloc.
 
 ```cpp
 void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
@@ -925,11 +925,11 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdb.h
+**En-tête :** AFXDB. h
 
 ## <a name="dfx_binary"></a>  DFX_Binary
 
-Transfère les tableaux d’octets entre les membres de données de champ d’un [CDaoRecordset](cdaorecordset-class.md) objet et les colonnes d’un enregistrement sur la source de données.
+Transfère les tableaux d’octets entre les membres de données de champ d’un objet [CDaoRecordset](cdaorecordset-class.md) et les colonnes d’un enregistrement sur la source de données.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -945,26 +945,26 @@ void AFXAPI DFX_Binary(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction.
+Pointeur vers un objet de la classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction.
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type [CByteArray](cbytearray-class.md), provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur de type [CByteArray](cbytearray-class.md)est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 *nPreAllocSize*<br/>
-Le framework Préalloue cette quantité de mémoire. Si vos données sont supérieure, le framework sera allouée davantage d’espace en fonction des besoins. Pour de meilleures performances, définissez cette taille à une valeur suffisamment élevée pour empêcher les réallocations. La taille par défaut est définie dans le AFXDAO. Fichier H comme AFX_DAO_BINARY_DEFAULT_SIZE.
+L’infrastructure Préalloue cette quantité de mémoire. Si vos données sont plus volumineuses, l’infrastructure allouera plus d’espace en fonction des besoins. Pour de meilleures performances, définissez cette taille sur une valeur suffisamment grande pour empêcher les réallocations. La taille par défaut est définie dans AFXDAO. Fichier H en tant que AFX_DAO_BINARY_DEFAULT_SIZE.
 
 *dwBindOptions*<br/>
-Une option qui vous permet de tirer parti des mécanisme de double tampon du MFC pour la détection des champs de jeu d’enregistrements qui ont été modifiés. La valeur par défaut, AFX_DAO_DISABLE_FIELD_CACHE le mécanisme, n’utilise pas de mécanisme de double tampon, et vous devez appeler [SetFieldDirty](cdaorecordset-class.md#setfielddirty) et [SetFieldNull](cdaorecordset-class.md#setfieldnull) vous-même. L’autre valeur possible, AFX_DAO_ENABLE_FIELD_CACHE, utilise la double mise en tampon, et vous n’avez pas à effectuer un travail supplémentaire pour marquer des champs modifiés ou Null. Pour des raisons de la mémoire et des performances, évitez cette valeur sauf si vos données binaire sont relativement faible.
+Option qui vous permet de tirer parti du mécanisme de double mise en mémoire tampon de MFC pour la détection des champs du Recordset qui ont changé. La valeur par défaut, AFX_DAO_DISABLE_FIELD_CACHE, n’utilise pas la double mise en mémoire tampon et vous devez appeler [SetFieldDirty](cdaorecordset-class.md#setfielddirty) et [SetFieldNull](cdaorecordset-class.md#setfieldnull) vous-même. L’autre valeur possible, AFX_DAO_ENABLE_FIELD_CACHE, utilise la double mise en mémoire tampon et vous n’avez pas à effectuer de travail supplémentaire pour marquer les champs comme modifiés ou null. Pour des raisons de performances et de mémoire, évitez cette valeur, sauf si vos données binaires sont relativement petites.
 
 > [!NOTE]
->  Vous pouvez contrôler si les données sont double tampon pour tous les champs par défaut en définissant [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Vous pouvez contrôler si les données sont double mise en mémoire tampon pour tous les champs par défaut en définissant [CDaoRecordset :: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Notes
 
-Données sont mappées entre le type DAO_BYTES dans DAO et [CByteArray](cbytearray-class.md) dans le jeu d’enregistrements.
+Les données sont mappées entre le type DAO_BYTES dans DAO et le type [CByteArray](cbytearray-class.md) dans le jeu d’enregistrements.
 
 ### <a name="example"></a>Exemple
 
@@ -972,11 +972,11 @@ Consultez [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdao.h
+**En-tête :** afxdao. h
 
 ## <a name="dfx_bool"></a>  DFX_Bool
 
-Transfère les données booléennes entre les membres de données de champ d’un [CDaoRecordset](cdaorecordset-class.md) objet et les colonnes d’un enregistrement sur la source de données.
+Transfère des données booléennes entre les membres de données de champ d’un objet [CDaoRecordset](cdaorecordset-class.md) et les colonnes d’un enregistrement sur la source de données.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -991,23 +991,23 @@ void AFXAPI DFX_Bool(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction.
+Pointeur vers un objet de la classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction.
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert à partir du jeu d’enregistrements à la source de données, la valeur de type BOOL, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur, de type BOOL, provient du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 *dwBindOptions*<br/>
-Une option qui vous permet de tirer parti des mécanisme de double tampon du MFC pour la détection des champs de jeu d’enregistrements qui ont été modifiés. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise le mécanisme de double tampon. La valeur est également possible AFX_DAO_DISABLE_FIELD_CACHE le mécanisme. Si vous spécifiez cette valeur, MFC n’effectue aucun contrôle sur ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
+Option qui vous permet de tirer parti du mécanisme de double mise en mémoire tampon de MFC pour la détection des champs du Recordset qui ont changé. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise la double mise en mémoire tampon. L’autre valeur possible est AFX_DAO_DISABLE_FIELD_CACHE. Si vous spécifiez cette valeur, MFC ne vérifie pas ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
 
 > [!NOTE]
->  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset :: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Notes
 
-Données sont mappées entre DAO_BOOL dans DAO de type et le type BOOL dans le jeu d’enregistrements.
+Les données sont mappées entre le type DAO_BOOL dans DAO et le type BOOL dans le jeu d’enregistrements.
 
 ### <a name="example"></a>Exemple
 
@@ -1015,11 +1015,11 @@ Consultez [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdao.h
+**En-tête :** afxdao. h
 
 ## <a name="dfx_byte"></a>  DFX_Byte
 
-Transferts unique octets entre les membres de données de champ d’un [CDaoRecordset](cdaorecordset-class.md) objet et les colonnes d’un enregistrement sur la source de données.
+Transfère un seul octet entre les données membres de champ d’un objet [CDaoRecordset](cdaorecordset-class.md) et les colonnes d’un enregistrement sur la source de données.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1034,35 +1034,35 @@ void AFXAPI DFX_Byte(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction.
+Pointeur vers un objet de la classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction.
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert à partir du jeu d’enregistrements à la source de données, la valeur de type BYTE, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur, de type BYTE, est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 *dwBindOptions*<br/>
-Une option qui vous permet de tirer parti des mécanisme de double tampon du MFC pour la détection des champs de jeu d’enregistrements qui ont été modifiés. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise le mécanisme de double tampon. La valeur est également possible AFX_DAO_DISABLE_FIELD_CACHE le mécanisme. Si vous spécifiez cette valeur, MFC n’effectue aucun contrôle sur ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
+Option qui vous permet de tirer parti du mécanisme de double mise en mémoire tampon de MFC pour la détection des champs du Recordset qui ont changé. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise la double mise en mémoire tampon. L’autre valeur possible est AFX_DAO_DISABLE_FIELD_CACHE. Si vous spécifiez cette valeur, MFC ne vérifie pas ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
 
 > [!NOTE]
->  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset :: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Notes
 
-Données sont mappées entre DAO_BYTES dans DAO de type et de type BYTE dans le jeu d’enregistrements.
+Les données sont mappées entre le type DAO_BYTES dans DAO et le type BYTE dans le Recordset.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdao.h
+**En-tête :** afxdao. h
 
 ## <a name="dfx_currency"></a>  DFX_Currency
 
-Transfère les données de devise entre les membres de données de champ d’un [CDaoRecordset](cdaorecordset-class.md) objet et les colonnes d’un enregistrement sur la source de données.
+Transfère les données monétaires entre les membres de données de champ d’un objet [CDaoRecordset](cdaorecordset-class.md) et les colonnes d’un enregistrement sur la source de données.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1077,23 +1077,23 @@ void AFXAPI DFX_Currency(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction.
+Pointeur vers un objet de la classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction.
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert à partir du jeu d’enregistrements à la source de données, cette valeur est prise à partir du membre de données spécifié, de type [COleCurrency](colecurrency-class.md). Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, cette valeur est extraite du membre de données spécifié, de type [COleCurrency](colecurrency-class.md). Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 *dwBindOptions*<br/>
-Une option qui vous permet de tirer parti des mécanisme de double tampon du MFC pour la détection des champs de jeu d’enregistrements qui ont été modifiés. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise le mécanisme de double tampon. La valeur est également possible AFX_DAO_DISABLE_FIELD_CACHE le mécanisme. Si vous spécifiez cette valeur, MFC n’effectue aucun contrôle sur ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
+Option qui vous permet de tirer parti du mécanisme de double mise en mémoire tampon de MFC pour la détection des champs du Recordset qui ont changé. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise la double mise en mémoire tampon. L’autre valeur possible est AFX_DAO_DISABLE_FIELD_CACHE. Si vous spécifiez cette valeur, MFC ne vérifie pas ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
 
 > [!NOTE]
->  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset :: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Notes
 
-Données sont mappées entre le type DAO_CURRENCY dans DAO et [COleCurrency](colecurrency-class.md) dans le jeu d’enregistrements.
+Les données sont mappées entre le type DAO_CURRENCY dans DAO et le type [COleCurrency](colecurrency-class.md) dans le jeu d’enregistrements.
 
 ### <a name="example"></a>Exemple
 
@@ -1101,11 +1101,11 @@ Consultez [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdao.h
+**En-tête :** afxdao. h
 
 ## <a name="dfx_datetime"></a>  DFX_DateTime
 
-Transfère les données de date et l’heure entre les membres de données de champ d’un [CDaoRecordset](cdaorecordset-class.md) objet et les colonnes d’un enregistrement sur la source de données.
+Transfère les données de date et d’heure entre les membres de données de champ d’un objet [CDaoRecordset](cdaorecordset-class.md) et les colonnes d’un enregistrement sur la source de données.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1120,38 +1120,38 @@ void AFXAPI DFX_DateTime(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction.
+Pointeur vers un objet de la classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction.
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. La fonction accepte une référence à un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objet. Pour un transfert à partir du jeu d’enregistrements à la source de données, cette valeur provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. La fonction prend une référence à un objet [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) . Pour un transfert d’un jeu d’enregistrements à une source de données, cette valeur est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 *dwBindOptions*<br/>
-Une option qui vous permet de tirer parti des mécanisme de double tampon du MFC pour la détection des champs de jeu d’enregistrements qui ont été modifiés. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise le mécanisme de double tampon. La valeur est également possible AFX_DAO_DISABLE_FIELD_CACHE le mécanisme. Si vous spécifiez cette valeur, MFC n’effectue aucun contrôle sur ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
+Option qui vous permet de tirer parti du mécanisme de double mise en mémoire tampon de MFC pour la détection des champs du Recordset qui ont changé. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise la double mise en mémoire tampon. L’autre valeur possible est AFX_DAO_DISABLE_FIELD_CACHE. Si vous spécifiez cette valeur, MFC ne vérifie pas ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
 
 > [!NOTE]
->  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset :: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Notes
 
-Données sont mappées entre le type DAO_DATE dans DAO et [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) dans le jeu d’enregistrements.
+Les données sont mappées entre le type DAO_DATE dans DAO et le type [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) dans le jeu d’enregistrements.
 
 > [!NOTE]
->  `COleDateTime` remplace [CTime](../../atl-mfc-shared/reference/ctime-class.md) et TIMESTAMP_STRUCT à cet effet dans les classes DAO. `CTime` et TIMESTAMP_STRUCT sont toujours utilisés pour les classes d’accès aux données basées sur ODBC.
+>  `COleDateTime`remplace [ctime](../../atl-mfc-shared/reference/ctime-class.md) et TIMESTAMP_STRUCT à cet effet dans les classes DAO. `CTime`et TIMESTAMP_STRUCT sont toujours utilisés pour les classes d’accès aux données basées sur ODBC.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdao.h
+**En-tête :** afxdao. h
 
 ## <a name="dfx_double"></a>  DFX_Double
 
-Transferts **float double** des données entre les membres de données de champ d’un [CDaoRecordset](cdaorecordset-class.md) objet et les colonnes d’un enregistrement sur la source de données.
+Transfère les données de **type float double** entre les membres de données de champ d’un objet [CDaoRecordset](cdaorecordset-class.md) et les colonnes d’un enregistrement sur la source de données.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1166,23 +1166,23 @@ void AFXAPI DFX_Double(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction.
+Pointeur vers un objet de la classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction.
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type **double**, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur, de type **double**, est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 *dwBindOptions*<br/>
-Une option qui vous permet de tirer parti des mécanisme de double tampon du MFC pour la détection des champs de jeu d’enregistrements qui ont été modifiés. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise le mécanisme de double tampon. La valeur est également possible AFX_DAO_DISABLE_FIELD_CACHE le mécanisme. Si vous spécifiez cette valeur, MFC n’effectue aucun contrôle sur ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
+Option qui vous permet de tirer parti du mécanisme de double mise en mémoire tampon de MFC pour la détection des champs du Recordset qui ont changé. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise la double mise en mémoire tampon. L’autre valeur possible est AFX_DAO_DISABLE_FIELD_CACHE. Si vous spécifiez cette valeur, MFC ne vérifie pas ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
 
 > [!NOTE]
->  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset :: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Notes
 
-Données sont mappées entre le type DAO_R8 dans DAO et type **float double** dans le jeu d’enregistrements.
+Les données sont mappées entre le type DAO_R8 dans DAO et le type **double float** dans le jeu d’enregistrements.
 
 ### <a name="example"></a>Exemple
 
@@ -1190,11 +1190,11 @@ Consultez [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdao.h
+**En-tête :** afxdao. h
 
 ## <a name="dfx_long"></a>  DFX_Long
 
-Transfère les données de type entier long entre les membres de données de champ d’un [CDaoRecordset](cdaorecordset-class.md) objet et les colonnes d’un enregistrement sur la source de données.
+Transfère les données de type entier long entre les membres de données de champ d’un objet [CDaoRecordset](cdaorecordset-class.md) et les colonnes d’un enregistrement sur la source de données.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1209,23 +1209,23 @@ void AFXAPI DFX_Long(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction.
+Pointeur vers un objet de la classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction.
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type **long**, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur de type **long**est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 *dwBindOptions*<br/>
-Une option qui vous permet de tirer parti des mécanisme de double tampon du MFC pour la détection des champs de jeu d’enregistrements qui ont été modifiés. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise le mécanisme de double tampon. La valeur est également possible AFX_DAO_DISABLE_FIELD_CACHE le mécanisme. Si vous spécifiez cette valeur, MFC n’effectue aucun contrôle sur ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
+Option qui vous permet de tirer parti du mécanisme de double mise en mémoire tampon de MFC pour la détection des champs du Recordset qui ont changé. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise la double mise en mémoire tampon. L’autre valeur possible est AFX_DAO_DISABLE_FIELD_CACHE. Si vous spécifiez cette valeur, MFC ne vérifie pas ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
 
 > [!NOTE]
->  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset :: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Notes
 
-Données sont mappées entre le type DAO_I4 dans DAO et type **long** dans le jeu d’enregistrements.
+Les données sont mappées entre le type DAO_I4 dans DAO et le type **long** dans le Recordset.
 
 ### <a name="example"></a>Exemple
 
@@ -1233,11 +1233,11 @@ Consultez [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdao.h
+**En-tête :** afxdao. h
 
 ## <a name="dfx_longbinary"></a>  DFX_LongBinary
 
-**Important** il est recommandé d’utiliser [DFX_Binary](#dfx_binary) au lieu de cette fonction.
+**Important** Nous vous recommandons d’utiliser [DFX_Binary](#dfx_binary) au lieu de cette fonction.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1253,38 +1253,38 @@ void AFXAPI DFX_LongBinary(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction.
+Pointeur vers un objet de la classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction.
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type [CLongBinary](clongbinary-class.md), provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur, de type [CLongBinary](clongbinary-class.md), est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 *dwPreAllocSize*<br/>
-Le framework Préalloue cette quantité de mémoire. Si vos données sont supérieure, le framework sera allouée davantage d’espace en fonction des besoins. Pour de meilleures performances, définissez cette taille à une valeur suffisamment élevée pour empêcher les réallocations.
+L’infrastructure Préalloue cette quantité de mémoire. Si vos données sont plus volumineuses, l’infrastructure allouera plus d’espace en fonction des besoins. Pour de meilleures performances, définissez cette taille sur une valeur suffisamment grande pour empêcher les réallocations.
 
 *dwBindOptions*<br/>
-Une option qui vous permet de tirer parti des mécanisme de double tampon du MFC pour la détection des champs de jeu d’enregistrements qui ont été modifiés. La valeur par défaut, AFX_DISABLE_FIELD_CACHE, n’utilise pas de mécanisme de double tampon. La valeur est également possible AFX_DAO_ENABLE_FIELD_CACHE. Le mécanisme de double tampon utilise et vous n’avez pas à effectuer un travail supplémentaire pour marquer des champs modifiés ou Null. Pour des raisons de la mémoire et des performances, évitez cette valeur sauf si vos données binaire sont relativement faible.
+Option qui vous permet de tirer parti du mécanisme de double mise en mémoire tampon de MFC pour la détection des champs du Recordset qui ont changé. La valeur par défaut, AFX_DISABLE_FIELD_CACHE, n’utilise pas la double mise en mémoire tampon. L’autre valeur possible est AFX_DAO_ENABLE_FIELD_CACHE. Utilise la double mise en mémoire tampon, et il n’est pas nécessaire d’effectuer un travail supplémentaire pour marquer les champs comme modifiés ou null. Pour des raisons de performances et de mémoire, évitez cette valeur, sauf si vos données binaires sont relativement petites.
 
 > [!NOTE]
->  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset :: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Notes
 
-`DFX_LongBinary` est fourni pour la compatibilité avec les classes ODBC MFC. Le `DFX_LongBinary` fonction transfère les données binaires-objets volumineux (BLOB) à l’aide de la classe `CLongBinary` entre les membres de données de champ d’un [CDaoRecordset](cdaorecordset-class.md) objet et les colonnes d’un enregistrement sur la source de données. Données sont mappées entre le type DAO_BYTES dans DAO et [CLongBinary](clongbinary-class.md) dans le jeu d’enregistrements.
+`DFX_LongBinary`est fourni pour la compatibilité avec les classes ODBC MFC. La `DFX_LongBinary` fonction transfère les données BLOB (Binary Large Object) à l' `CLongBinary` aide de la classe entre les membres de données de champ d’un objet [CDaoRecordset](cdaorecordset-class.md) et les colonnes d’un enregistrement sur la source de données. Les données sont mappées entre le type DAO_BYTES dans DAO et le type [CLongBinary](clongbinary-class.md) dans le jeu d’enregistrements.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdao.h
+**En-tête :** afxdao. h
 
 ## <a name="dfx_short"></a>  DFX_Short
 
-Transferts abrégée des données de type entier entre les membres de données de champ d’un [CDaoRecordset](cdaorecordset-class.md) objet et les colonnes d’un enregistrement sur la source de données.
+Transfère des données de type entier Short entre les membres de données de champ d’un objet [CDaoRecordset](cdaorecordset-class.md) et les colonnes d’un enregistrement sur la source de données.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1299,38 +1299,38 @@ void AFXAPI DFX_Short(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction.
+Pointeur vers un objet de la classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction.
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type **court**, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur de type **short**est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 *dwBindOptions*<br/>
-Une option qui vous permet de tirer parti des mécanisme de double tampon du MFC pour la détection des champs de jeu d’enregistrements qui ont été modifiés. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise le mécanisme de double tampon. La valeur est également possible AFX_DAO_DISABLE_FIELD_CACHE le mécanisme. Si vous spécifiez cette valeur, MFC n’effectue aucun contrôle sur ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
+Option qui vous permet de tirer parti du mécanisme de double mise en mémoire tampon de MFC pour la détection des champs du Recordset qui ont changé. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise la double mise en mémoire tampon. L’autre valeur possible est AFX_DAO_DISABLE_FIELD_CACHE. Si vous spécifiez cette valeur, MFC ne vérifie pas ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
 
 > [!NOTE]
->  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset :: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Notes
 
-Données sont mappées entre le type DAO_I2 dans DAO et type **court** dans le jeu d’enregistrements.
+Les données sont mappées entre le type DAO_I2 dans DAO et le type **short** dans le jeu d’enregistrements.
 
 > [!NOTE]
->  `DFX_Short` équivaut à [RFX_Int](#rfx_int) pour les classes basées sur ODBC.
+>  `DFX_Short`équivaut à [RFX_Int](#rfx_int) pour les classes basées sur ODBC.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Consultez [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdao.h
+**En-tête :** afxdao. h
 
 ## <a name="dfx_single"></a>  DFX_Single
 
-Transfère les données à virgule flottante entre les membres de données de champ d’un [CDaoRecordset](cdaorecordset-class.md) objet et les colonnes d’un enregistrement sur la source de données.
+Transfère les données à virgule flottante entre les membres de données de champ d’un objet [CDaoRecordset](cdaorecordset-class.md) et les colonnes d’un enregistrement sur la source de données.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1345,23 +1345,23 @@ void AFXAPI DFX_Single(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction.
+Pointeur vers un objet de la classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction.
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type **float**, provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur de type **float**est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 *dwBindOptions*<br/>
-Une option qui vous permet de tirer parti des mécanisme de double tampon du MFC pour la détection des champs de jeu d’enregistrements qui ont été modifiés. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise le mécanisme de double tampon. La valeur est également possible AFX_DAO_DISABLE_FIELD_CACHE le mécanisme. Si vous spécifiez cette valeur, MFC n’effectue aucun contrôle sur ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
+Option qui vous permet de tirer parti du mécanisme de double mise en mémoire tampon de MFC pour la détection des champs du Recordset qui ont changé. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise la double mise en mémoire tampon. L’autre valeur possible est AFX_DAO_DISABLE_FIELD_CACHE. Si vous spécifiez cette valeur, MFC ne vérifie pas ce champ. Vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.
 
 > [!NOTE]
->  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset :: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Notes
 
-Données sont mappées entre le type DAO_R4 dans DAO et type **float** dans le jeu d’enregistrements.
+Les données sont mappées entre le type DAO_R4 dans DAO et le type **float** dans le jeu d’enregistrements.
 
 ### <a name="example"></a>Exemple
 
@@ -1369,11 +1369,11 @@ Consultez [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdao.h
+**En-tête :** afxdao. h
 
 ## <a name="dfx_text"></a>  DFX_Text
 
-Transferts `CString` des données entre les membres de données de champ d’un [CDaoRecordset](cdaorecordset-class.md) objet et les colonnes d’un enregistrement sur la source de données.
+Transfère `CString` des données entre les membres de données de champ d’un objet [CDaoRecordset](cdaorecordset-class.md) et les colonnes d’un enregistrement sur la source de données.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1389,30 +1389,30 @@ void AFXAPI DFX_Text(
 ### <a name="parameters"></a>Paramètres
 
 *pFX*<br/>
-Un pointeur vers un objet de classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte pour chaque appel de la fonction.
+Pointeur vers un objet de la classe [CDaoFieldExchange](cdaofieldexchange-class.md). Cet objet contient des informations pour définir le contexte de chaque appel de la fonction.
 
 *szName*<br/>
-Le nom d’une colonne de données.
+Nom d’une colonne de données.
 
 *value*<br/>
-La valeur stockée dans le membre de données indiqué, la valeur doit être transféré. Pour un transfert de jeu d’enregistrements à la source de données, la valeur de type [CString](../../atl-mfc-shared/reference/cstringt-class.md), provient de la donnée membre spécifiée. Pour un transfert à partir de la source de données vers le recordset, la valeur est stockée dans le membre de données spécifié.
+Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour un transfert d’un jeu d’enregistrements à une source de données, la valeur de type [CString](../../atl-mfc-shared/reference/cstringt-class.md)est extraite du membre de données spécifié. Pour un transfert à partir de la source de données vers le Recordset, la valeur est stockée dans le membre de données spécifié.
 
 *nPreAllocSize*<br/>
-Le framework Préalloue cette quantité de mémoire. Si vos données sont supérieure, le framework sera allouée davantage d’espace en fonction des besoins. Pour de meilleures performances, définissez cette taille à une valeur suffisamment élevée pour empêcher les réallocations.
+L’infrastructure Préalloue cette quantité de mémoire. Si vos données sont plus volumineuses, l’infrastructure allouera plus d’espace en fonction des besoins. Pour de meilleures performances, définissez cette taille sur une valeur suffisamment grande pour empêcher les réallocations.
 
 *dwBindOptions*<br/>
-Une option qui vous permet de tirer parti des mécanisme de double tampon du MFC pour la détection des champs de jeu d’enregistrements qui ont été modifiés. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise le mécanisme de double tampon. La valeur est également possible AFX_DAO_DISABLE_FIELD_CACHE le mécanisme. Si vous spécifiez cette valeur, MFC n’effectue aucun contrôle sur ce champ. Vous devez appeler [SetFieldDirty](cdaorecordset-class.md#setfielddirty) et [SetFieldNull](cdaorecordset-class.md#setfieldnull) vous-même.
+Option qui vous permet de tirer parti du mécanisme de double mise en mémoire tampon de MFC pour la détection des champs du Recordset qui ont changé. La valeur par défaut, AFX_DAO_ENABLE_FIELD_CACHE, utilise la double mise en mémoire tampon. L’autre valeur possible est AFX_DAO_DISABLE_FIELD_CACHE. Si vous spécifiez cette valeur, MFC ne vérifie pas ce champ. Vous devez appeler [SetFieldDirty](cdaorecordset-class.md#setfielddirty) et [SetFieldNull](cdaorecordset-class.md#setfieldnull) vous-même.
 
 > [!NOTE]
->  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Vous pouvez contrôler si les données sont double mise en mémoire tampon par défaut en définissant [CDaoRecordset :: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Notes
 
-Les données sont mappées entre type DAO_CHAR dans DAO (ou, si le symbole _UNICODE est défini, DAO_WCHAR) et le type [CString](../../atl-mfc-shared/reference/cstringt-class.md) dans le jeu d’enregistrements.  n
+Les données sont mappées entre le type DAO_CHAR dans DAO (ou, si le symbole _ Unicode est défini, DAO_WCHAR) et le type [CString](../../atl-mfc-shared/reference/cstringt-class.md) dans le jeu d’enregistrements.  n
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
-Cet exemple illustre plusieurs appels à `DFX_Text`. Notez également les deux appels à [CDaoFieldExchange::SetFieldType](cdaofieldexchange-class.md#setfieldtype). Vous devez écrire le premier appel à `SetFieldType` et son **DFX** appeler. Le deuxième appel et elle est associée **DFX** appels sont normalement écrits par l’Assistant de code qui a généré la classe.
+Cet exemple illustre plusieurs appels à `DFX_Text`. Notez également les deux appels à [CDaoFieldExchange :: SetFieldType](cdaofieldexchange-class.md#setfieldtype). Vous devez écrire le premier appel à `SetFieldType` et son appel **DFX** . Le deuxième appel et ses appels **DFX** associés sont généralement écrits par l’Assistant code qui a généré la classe.
 
 ```cpp
 void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
@@ -1432,11 +1432,11 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** afxdao.h
+**En-tête :** afxdao. h
 
 ## <a name="see-also"></a>Voir aussi
 
-[Macros et objet Globals](mfc-macros-and-globals.md)<br/>
+[Macros et globales](mfc-macros-and-globals.md)<br/>
 [CRecordset::DoFieldExchange](crecordset-class.md#dofieldexchange)<br/>
 [CRecordset::DoBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)<br/>
 [CDaoRecordset::DoFieldExchange](cdaorecordset-class.md#dofieldexchange)

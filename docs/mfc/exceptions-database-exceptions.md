@@ -1,6 +1,6 @@
 ---
 title: 'Exceptions : Exceptions de base de données'
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 helpviewer_keywords:
 - DAO [MFC], exceptions
 - exceptions [MFC], database
@@ -11,68 +11,68 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 2f7f3bff9f28968361ecfa7374a235a727443004
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c279c5b788cc7bd8a68fe36128c116d8df91c2eb
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405896"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095817"
 ---
 # <a name="exceptions-database-exceptions"></a>Exceptions : Exceptions de base de données
 
-Cet article explique comment gérer les exceptions de base de données. La plupart des informations présentées dans cet article s’applique si vous travaillez avec les classes MFC pour Open Database Connectivity (ODBC) ou les classes MFC pour les objets DAO (Data Access). Matériel spécifique à un ou l’autre modèle est explicitement marqué. Les rubriques traitées ici sont les suivantes :
+Cet article explique comment gérer les exceptions de base de données. La plupart des informations contenues dans cet article s’appliquent si vous utilisez les classes MFC pour Open Database Connectivity (ODBC) ou les classes MFC pour les objets d’accès aux données (DAO). Le matériel spécifique à l’un ou l’autre modèle est explicitement marqué. Les rubriques traitées ici sont les suivantes :
 
-- [Approches de gestion des exceptions](#_core_approaches_to_exception_handling)
+- [Approches de la gestion des exceptions](#_core_approaches_to_exception_handling)
 
-- [Un exemple de gestion des exceptions de base de données](#_core_a_database_exception.2d.handling_example)
+- [Exemple de gestion des exceptions de base de données](#_core_a_database_exception.2d.handling_example)
 
-##  <a name="_core_approaches_to_exception_handling"></a> Approches de gestion des exceptions
+##  <a name="_core_approaches_to_exception_handling"></a>Approches de la gestion des exceptions
 
-L’approche est la même si vous travaillez avec DAO ou ODBC.
+L’approche est la même que vous utilisiez DAO (obsolète) ou ODBC.
 
 Vous devez toujours écrire des gestionnaires d’exceptions pour gérer des conditions exceptionnelles.
 
-L’approche la plus pragmatique pour intercepter des exceptions de base de données consiste à tester votre application avec des scénarios d’exception. Déterminer les exceptions susceptibles de qui peuvent se produire pour une opération dans votre code et forcer l’exception se produise. Puis examiner la sortie de trace pour voir quelle exception est levée, ou examiner les informations d’erreur retourné dans le débogueur. Cela vous permet de savoir quels s’affiche pour les scénarios d’exception que vous utilisez des codes de retour.
+L’approche la plus pragmatique pour intercepter les exceptions de base de données consiste à tester votre application avec des scénarios d’exception. Déterminez les exceptions probables qui peuvent se produire pour une opération dans votre code et forcez l’exception à se produire. Examinez ensuite la sortie de trace pour voir quelle exception est levée, ou examinez les informations d’erreur retournées dans le débogueur. Cela vous permet de savoir quels codes de retour s’affichent pour les scénarios d’exception que vous utilisez.
 
-### <a name="error-codes-used-for-odbc-exceptions"></a>Codes d’erreur utilisés pour les Exceptions d’ODBC
+### <a name="error-codes-used-for-odbc-exceptions"></a>Codes d’erreur utilisés pour les exceptions ODBC
 
-En plus des codes de retour définies par l’infrastructure, qui ont des noms au format **AFX_SQL_ERROR_XXX**, certaines [CDBExceptions](../mfc/reference/cdbexception-class.md) sont basées sur [ODBC](../data/odbc/odbc-basics.md) codes de retour. Les codes de retour pour ces exceptions ont des noms au format **SQL_ERROR_XXX**.
+En plus des codes de retour définis par le Framework, dont les noms se présentent sous la forme **AFX_SQL_ERROR_XXX**, certains [CDBExceptions](../mfc/reference/cdbexception-class.md) sont basés sur des codes de retour [ODBC](../data/odbc/odbc-basics.md) . Les codes de retour pour ces exceptions ont des noms au format **SQL_ERROR_XXX**.
 
-Les codes de retour, à la fois définies par l’infrastructure et définie par ODBC — que les classes de base de données peuvent retourner sont documentés sous le [m_nRetCode](../mfc/reference/cdbexception-class.md#m_nretcode) membre de données de la classe `CDBException`. Des informations supplémentaires sur les codes de retour définis par ODBC sont disponibles dans le SDK ODBC *de référence du programmeur* dans MSDN Library.
+Les codes de retour (à la fois définis par l’infrastructure et définis par ODBC) que les classes de base de données peuvent retourner sont documentés sous le membre de données [m_nRetCode](../mfc/reference/cdbexception-class.md#m_nretcode) de la classe `CDBException`. Des informations supplémentaires sur les codes de retour définis par ODBC sont disponibles dans le *Guide de référence du programmeur* ODBC SDK de MSDN Library.
 
-### <a name="error-codes-used-for-dao-exceptions"></a>Codes d’erreur utilisés pour les Exceptions DAO
+### <a name="error-codes-used-for-dao-exceptions"></a>Codes d’erreur utilisés pour les exceptions DAO
 
-Pour les exceptions DAO, plus d’informations sont généralement disponibles. Vous pouvez accéder à des informations d’erreur entre les membres de données de trois d’un interceptée [CDaoException](../mfc/reference/cdaoexception-class.md) objet :
+Pour les exceptions DAO, des informations supplémentaires sont généralement disponibles. Vous pouvez accéder aux informations d’erreur par le biais de trois membres de données d’un objet [CDaoException](../mfc/reference/cdaoexception-class.md) intercepté :
 
-- [m_pErrorInfo](../mfc/reference/cdaoexception-class.md#m_perrorinfo) contient un pointeur vers un [objet CDaoErrorInfo](../mfc/reference/cdaoerrorinfo-structure.md) objet qui encapsule des informations sur l’erreur dans la collection DAO d’objets d’erreur associé à la base de données.
+- [m_pErrorInfo](../mfc/reference/cdaoexception-class.md#m_perrorinfo) contient un pointeur vers un objet [CDaoErrorInfo](../mfc/reference/cdaoerrorinfo-structure.md) qui encapsule les informations d’erreur dans la collection DAO d’objets Error associés à la base de données.
 
-- [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror) contient un code d’erreur étendu à partir des classes DAO MFC. Ces codes d’erreur, qui ont des noms au format **AFX_DAO_ERROR_XXX**, sont documentés sous le membre de données dans `CDaoException`.
+- [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror) contient un code d’erreur étendu des classes DAO MFC. Ces codes d’erreur, dont les noms se présentent sous la forme **AFX_DAO_ERROR_XXX**, sont documentés sous `CDaoException`le membre de données dans.
 
-- [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) contient OLE **SCODE** de DAO, le cas échéant. Vous devez rarement travailler avec ce code d’erreur, toutefois. Généralement les informations supplémentaires sont disponibles dans les autres membres de données de deux. Consultez le membre de données pour en savoir plus **SCODE** valeurs.
+- [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) contient un **SCODE** OLE de DAO, le cas échéant. Toutefois, vous devrez rarement utiliser ce code d’erreur. En général, des informations supplémentaires sont disponibles dans les deux autres membres de données. Consultez le membre de données pour plus d’informations sur les valeurs **SCODE** .
 
-Informations supplémentaires sur les erreurs DAO, le type d’objet DAO Error et la collection d’erreurs de DAO sont disponibles sous la classe [CDaoException](../mfc/reference/cdaoexception-class.md).
+Des informations supplémentaires sur les erreurs DAO, le type d’objet d’erreur DAO et la collection d’erreurs DAO sont disponibles sous la classe [CDaoException](../mfc/reference/cdaoexception-class.md).
 
-##  <a name="_core_a_database_exception.2d.handling_example"></a> Un exemple de gestion des exceptions de base de données
+##  <a name="_core_a_database_exception.2d.handling_example"></a>Exemple de gestion des exceptions de base de données
 
-L’exemple suivant tente de construire un [CRecordset](../mfc/reference/crecordset-class.md)-objet dans le tas avec dérivé le **nouveau** opérateur, puis ouvrez le jeu d’enregistrements (pour une source de données ODBC). Pour obtenir un exemple similaire pour les classes DAO, consultez « Exemple d’Exception DAO » ci-dessous.
+L’exemple suivant tente de construire un objet dérivé de [CRecordset](../mfc/reference/crecordset-class.md)sur le tas à l’aide de l’opérateur **New** , puis d’ouvrir le jeu d’enregistrements (pour une source de données ODBC). Pour obtenir un exemple similaire pour les classes DAO, consultez « exemple d’exception DAO » ci-dessous.
 
-### <a name="odbc-exception-example"></a>Exemple d’Exception ODBC
+### <a name="odbc-exception-example"></a>Exemple d’exception ODBC
 
-Le [Open](../mfc/reference/crecordset-class.md#open) fonction membre pouvait lever une exception (de type [CDBException](../mfc/reference/cdbexception-class.md) pour les classes ODBC), par conséquent, ce code crochets le `Open` appeler avec une **essayez** bloc. Les informations suivantes **catch** bloc interceptera un `CDBException`. Vous pouvez examiner l’objet exception lui-même, appelé `e`, mais dans ce cas, il est suffisant de savoir que la tentative de création d’un jeu d’enregistrements a échoué. Le **catch** bloc affiche une boîte de message et nettoie en supprimant l’objet recordset.
+La fonction membre [Open](../mfc/reference/crecordset-class.md#open) peut lever une exception (de type [CDBException](../mfc/reference/cdbexception-class.md) pour les classes ODBC). ce `Open` code entre en parenthèses avec un bloc **try** . Le bloc **catch** suivant intercepte un `CDBException`. Vous pouvez examiner l’objet exception lui-même `e`, appelé, mais dans ce cas, il suffit de savoir que la tentative de création d’un jeu d’enregistrements a échoué. Le bloc **catch** affiche une boîte de message et nettoie en supprimant l’objet Recordset.
 
 [!code-cpp[NVC_MFCDatabase#36](../mfc/codesnippet/cpp/exceptions-database-exceptions_1.cpp)]
 
-### <a name="dao-exception-example"></a>Exemple d’Exception DAO
+### <a name="dao-exception-example"></a>Exemple d’exception DAO
 
-L’exemple DAO est similaire à l’exemple pour ODBC, mais vous pouvez généralement récupérer plusieurs types d’informations. Le code suivant tente également ouvrir un jeu d’enregistrements. Si cette tentative lève une exception, vous pouvez examiner un membre de données de l’objet d’exception des informations d’erreur. Comme avec l’exemple ODBC précédent, il est probablement suffisant de savoir que la tentative de création d’un jeu d’enregistrements a échoué.
+L’exemple DAO est similaire à l’exemple pour ODBC, mais vous pouvez généralement récupérer plus de types d’informations. Le code suivant tente également d’ouvrir un Recordset. Si cette tentative lève une exception, vous pouvez examiner les données membres de l’objet exception pour obtenir des informations sur l’erreur. Comme pour l’exemple ODBC précédent, il est probablement suffisant de savoir que la tentative de création d’un jeu d’enregistrements a échoué.
 
 [!code-cpp[NVC_MFCDatabase#37](../mfc/codesnippet/cpp/exceptions-database-exceptions_2.cpp)]
 
-Ce code obtient une chaîne de message d’erreur à partir de la [m_pErrorInfo](../mfc/reference/cdaoexception-class.md#m_perrorinfo) membre de l’objet exception. MFC remplit ce membre lorsqu’il lève l’exception.
+Ce code obtient une chaîne de message d’erreur du membre [m_pErrorInfo](../mfc/reference/cdaoexception-class.md#m_perrorinfo) de l’objet exception. MFC remplit ce membre lorsqu’il lève l’exception.
 
-Pour une discussion sur les informations d’erreur retournées par un `CDaoException` d’objets, consultez les classes [CDaoException](../mfc/reference/cdaoexception-class.md) et [objet CDaoErrorInfo](../mfc/reference/cdaoerrorinfo-structure.md).
+Pour une description des informations d’erreur retournées `CDaoException` par un objet, consultez les classes [CDaoException](../mfc/reference/cdaoexception-class.md) et [CDaoErrorInfo](../mfc/reference/cdaoerrorinfo-structure.md).
 
-Lorsque vous travaillez avec des bases de données Microsoft Jet (.mdb) et dans la plupart des cas lorsque vous travaillez avec ODBC, il y aura qu’un seul objet d’erreur. Dans les rares cas lorsque vous utilisez une source de données ODBC et il existe plusieurs erreurs, vous pouvez itérer sur la collection d’erreurs DAO en fonction du nombre d’erreurs renvoyées par [CDaoException::GetErrorCount](../mfc/reference/cdaoexception-class.md#geterrorcount). Chaque fois que la boucle, appelez [CDaoException::GetErrorInfo](../mfc/reference/cdaoexception-class.md#geterrorinfo) pour recharger le `m_pErrorInfo` membre de données.
+Lorsque vous utilisez des bases de données Microsoft Jet (. mdb) et, dans la plupart des cas, lorsque vous travaillez avec ODBC, il n’y aura qu’un seul objet d’erreur. Dans les rares cas où vous utilisez une source de données ODBC et il y a plusieurs erreurs, vous pouvez parcourir la collection d’erreurs de DAO en fonction du nombre d’erreurs retournées par [CDaoException :: GetErrorCount](../mfc/reference/cdaoexception-class.md#geterrorcount). Chaque fois que vous exécutez la boucle, appelez [CDaoException :: GetErrorInfo](../mfc/reference/cdaoexception-class.md#geterrorinfo) pour `m_pErrorInfo` recharger le membre de données.
 
 ## <a name="see-also"></a>Voir aussi
 
