@@ -7,10 +7,10 @@ helpviewer_keywords:
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
 ms.openlocfilehash: b11b56578cadc4b3bd037acf84014a718f9fad84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69512137"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Procédure pas à pas : Connexion à l’aide de tâches et de requêtes HTTP XML
@@ -18,13 +18,13 @@ ms.locfileid: "69512137"
 Cet exemple montre comment utiliser les interfaces [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2) et [IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback) avec des tâches pour envoyer des requêtes http et de publication à un service web dans une application plateforme Windows universelle (UWP). En combinant `IXMLHTTPRequest2` avec des tâches, vous pouvez écrire du code qui s’adapte à d’autres tâches. Par exemple, vous pouvez utiliser la tâche de téléchargement dans le cadre d’une chaîne des tâches. La tâche de téléchargements peut également répondre quand le travail est annulé.
 
 > [!TIP]
->  Vous pouvez également utiliser le C++ Kit de développement logiciel (SDK) REST pour effectuer des C++ requêtes http à partir d' C++ une application UWP à l’aide d’une application ou d’une application de bureau. Pour plus d’informations, consultez [ C++ Kit de développement logiciel REST (nom de nom «Casablanca»)](https://github.com/Microsoft/cpprestsdk).
+>  Vous pouvez également utiliser le C++ Kit de développement logiciel (SDK) REST pour effectuer des C++ requêtes http à partir d' C++ une application UWP à l’aide d’une application ou d’une application de bureau. Pour plus d’informations, consultez [ C++ Kit de développement logiciel REST (nom de nom « Casablanca »)](https://github.com/Microsoft/cpprestsdk).
 
 Pour plus d’informations sur les tâches, consultez [parallélisme des tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Pour plus d’informations sur l’utilisation des tâches dans une application UWP, consultez [programmation asynchrone C++ dans](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) et [création d’opérations C++ asynchrones dans pour les applications UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
 
 Ce document explique d'abord comment créer une `HttpRequest` et ses classes de prise en charge. Il montre ensuite comment utiliser cette classe à partir d’une application UWP qui C++ utilise et XAML.
 
-Pour obtenir un exemple qui `IXMLHTTPRequest2` utilise mais n’utilise pas de tâches [, consultez démarrage rapide: Connexion à l’aide de la requête HTTP](/previous-versions/windows/apps/hh770550\(v=win.10\))XML (IXMLHTTPRequest2).
+Pour obtenir un exemple qui `IXMLHTTPRequest2` utilise mais n’utilise pas de tâches [, consultez démarrage rapide : Connexion à l’aide de la requête HTTP](/previous-versions/windows/apps/hh770550\(v=win.10\))XML (IXMLHTTPRequest2).
 
 > [!TIP]
 >  `IXMLHTTPRequest2`et `IXMLHTTPRequest2Callback` sont les interfaces que nous recommandons d’utiliser dans une application UWP. Vous pouvez également adapter cet exemple pour l'utilisation dans une application de bureau.
@@ -37,11 +37,11 @@ La prise en charge UWP est facultative dans Visual Studio 2017 et versions ulté
 
 Lorsque vous utilisez l'interface `IXMLHTTPRequest2` pour créer des requêtes Web via HTTP, vous implémentez l'interface `IXMLHTTPRequest2Callback` pour recevoir la réponse du serveur et réagir à d'autres événements. Cet exemple définit la classe `HttpRequest` pour créer des applications Web, et les classes `HttpRequestBuffersCallback` et `HttpRequestStringCallback` afin de traiter des réponses. Les classes `HttpRequestBuffersCallback` et `HttpRequestStringCallback` prennent en charge la classe `HttpRequest` ; vous travaillez uniquement avec la classe `HttpRequest` du code d'application.
 
-Les méthodes `GetAsync`, `PostAsync` de la classe `HttpRequest` vous permettent de démarrer respectivement les opérations HTTP GET et POST. Ces méthodes utilisent la classe `HttpRequestStringCallback` pour lire la réponse du serveur comme une chaîne. Les méthodes `SendAsync` et `ReadAsync` vous permettent de transmettre un grand contenu en gros fragments. Ces méthodes retournent chaque [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) pour représenter l’opération. Les méthodes `GetAsync` et `PostAsync` produisent la valeur de `task<std::wstring>`, où la partie `wstring` représente la réponse du serveur. Les méthodes `SendAsync` et `ReadAsync` produisent des valeurs `task<void>` ; ces tâches se terminent lorsque les opérations d’envoi et de lecture se terminent.
+Les méthodes `GetAsync`, `PostAsync` de la classe `HttpRequest` vous permettent de démarrer respectivement les opérations HTTP GET et POST. Ces méthodes utilisent la classe `HttpRequestStringCallback` pour lire la réponse du serveur comme une chaîne. Les méthodes `SendAsync` et `ReadAsync` vous permettent de transmettre un grand contenu en gros fragments. Ces méthodes retournent chaque [Concurrency :: Task](../../parallel/concrt/reference/task-class.md) pour représenter l’opération. Les méthodes `GetAsync` et `PostAsync` produisent la valeur de `task<std::wstring>`, où la partie `wstring` représente la réponse du serveur. Les méthodes `SendAsync` et `ReadAsync` produisent des valeurs `task<void>` ; ces tâches se terminent lorsque les opérations d’envoi et de lecture se terminent.
 
-Étant donné `IXMLHTTPRequest2` que les interfaces agissent de façon asynchrone, cet exemple utilise Concurrency [:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) pour créer une tâche qui se termine après l’achèvement de l’objet de rappel ou annule l’opération de téléchargement. La classe `HttpRequest` crée une continuation basée sur des tâches depuis cette tâche afin de définir le résultat final. La classe `HttpRequest` utilise une continuation basée sur des tâches pour garantir que la tâche de continuation s"exécute même si la tâche précédente génère une erreur ou est annulée. Pour plus d’informations sur les continuations basées sur les tâches, consultez [parallélisme des tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md) .
+Étant donné `IXMLHTTPRequest2` que les interfaces agissent de façon asynchrone, cet exemple utilise [Concurrency :: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) pour créer une tâche qui se termine après l’achèvement de l’objet de rappel ou annule l’opération de téléchargement. La classe `HttpRequest` crée une continuation basée sur des tâches depuis cette tâche afin de définir le résultat final. La classe `HttpRequest` utilise une continuation basée sur des tâches pour garantir que la tâche de continuation s"exécute même si la tâche précédente génère une erreur ou est annulée. Pour plus d’informations sur les continuations basées sur les tâches, consultez [parallélisme des tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md) .
 
-Pour prendre en charge l'annulation, les classes `HttpRequest`, `HttpRequestBuffersCallback`, et `HttpRequestStringCallback` utilisent des jetons d'annulation. Les `HttpRequestBuffersCallback` classes `HttpRequestStringCallback` et utilisent la méthode [Concurrency:: cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) pour permettre à l’événement d’achèvement de tâche de répondre à l’annulation. Ce rappel d'annulation abandonne le téléchargement. Pour plus d’informations sur l’annulation, consultez [annulation](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
+Pour prendre en charge l'annulation, les classes `HttpRequest`, `HttpRequestBuffersCallback`, et `HttpRequestStringCallback` utilisent des jetons d'annulation. Les `HttpRequestBuffersCallback` classes `HttpRequestStringCallback` et utilisent la méthode [Concurrency :: cancellation_token :: register_callback](reference/cancellation-token-class.md#register_callback) pour permettre à l’événement d’achèvement de tâche de répondre à l’annulation. Ce rappel d'annulation abandonne le téléchargement. Pour plus d’informations sur l’annulation, consultez [annulation](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
 #### <a name="to-define-the-httprequest-class"></a>Pour définir la classe HttpRequest
 
@@ -94,7 +94,7 @@ Cette section montre comment utiliser la `HttpRequest` classe dans une applicati
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
    > [!TIP]
-   > Si votre application ne requiert pas la prise en charge de l' `HttpRequest::GetAsync` annulation, vous devez passer Concurrency [:: cancellation_token:: None](reference/cancellation-token-class.md#none) aux méthodes et. `HttpRequest::PostAsync`
+   > Si votre application ne requiert pas la prise en charge de l' `HttpRequest::GetAsync` annulation, vous devez passer [Concurrency :: cancellation_token :: None](reference/cancellation-token-class.md#none) aux méthodes et. `HttpRequest::PostAsync`
 
 1. Dans MainPage.xaml.cpp, implémentez la méthode `MainPage::ProcessHttpRequest`.
 

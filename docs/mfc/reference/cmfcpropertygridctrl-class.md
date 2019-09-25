@@ -151,10 +151,10 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 ms.openlocfilehash: 20b3bafcdbaf02b0f7e40f0092d7f6661855114d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69505170"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl, classe
@@ -182,9 +182,9 @@ class CMFCPropertyGridCtrl : public CWnd
 
 |Nom|Description|
 |----------|-----------------|
-|`CMFCPropertyGridCtrl::accHitTest`|Appelé par l'infrastructure pour récupérer l'élément enfant ou l'objet enfant à un point déterminé de l'écran. (Substitue [CWnd:: accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
-|`CMFCPropertyGridCtrl::accLocation`|Appelé par l'infrastructure pour récupérer l'emplacement d'affichage actuel de l'objet spécifié. (Substitue [CWnd:: accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
-|[CMFCPropertyGridCtrl::accSelect](#accselect)|Appelé par l'infrastructure pour modifier la sélection ou déplacer le focus clavier de l'objet spécifié. (Substitue [CWnd:: accSelect](../../mfc/reference/cwnd-class.md#accselect).)|
+|`CMFCPropertyGridCtrl::accHitTest`|Appelé par l'infrastructure pour récupérer l'élément enfant ou l'objet enfant à un point déterminé de l'écran. (Substitue [CWnd :: accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
+|`CMFCPropertyGridCtrl::accLocation`|Appelé par l'infrastructure pour récupérer l'emplacement d'affichage actuel de l'objet spécifié. (Substitue [CWnd :: accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
+|[CMFCPropertyGridCtrl::accSelect](#accselect)|Appelé par l'infrastructure pour modifier la sélection ou déplacer le focus clavier de l'objet spécifié. (Substitue [CWnd :: accSelect](../../mfc/reference/cwnd-class.md#accselect).)|
 |[CMFCPropertyGridCtrl::AddProperty](#addproperty)|Ajoute une nouvelle propriété à un contrôle de grille de propriétés.|
 |[CMFCPropertyGridCtrl::AlwaysShowUserToolTip](#alwaysshowusertooltip)||
 |[CMFCPropertyGridCtrl::CloseColorPopup](#closecolorpopup)|Ferme la boîte de dialogue de sélection de couleur.|
@@ -196,19 +196,19 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::EnsureVisible](#ensurevisible)|Fait défiler un contrôle de grille de propriétés et développe des éléments de propriété jusqu’à ce que la propriété spécifiée soit visible.|
 |[CMFCPropertyGridCtrl::ExpandAll](#expandall)|Développe ou réduit tous les nœuds de contrôle de grille de propriétés.|
 |[CMFCPropertyGridCtrl::FindItemByData](#finditembydata)|Récupère la propriété qui est associée à une valeur DWORD définie par l’utilisateur.|
-|`CMFCPropertyGridCtrl::get_accChild`|Appelé par l'infrastructure pour récupérer l'adresse d'une interface `IDispatch` pour l'enfant spécifié. (Substitue [CWnd:: get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|
-|[CMFCPropertyGridCtrl::get_accChildCount](#get_accchildcount)|Appelé par l'infrastructure pour récupérer le nombre d'enfants appartenant à cet objet. (Substitue [CWnd:: get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|
-|`CMFCPropertyGridCtrl::get_accDefaultAction`|Appelé par l'infrastructure pour récupérer une chaîne qui décrit l'action par défaut de l'objet. (Substitue [CWnd:: get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|
-|`CMFCPropertyGridCtrl::get_accDescription`|Appelé par l'infrastructure pour récupérer une chaîne qui décrit l'aspect visuel de l'objet spécifié. (Substitue [CWnd:: get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|
-|[CMFCPropertyGridCtrl::get_accFocus](#get_accfocus)|Appelé par l'infrastructure pour récupérer l'objet qui a le focus clavier. (Substitue [CWnd:: get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|
-|[CMFCPropertyGridCtrl::get_accHelp](#get_acchelp)|Appelé par l’infrastructure pour récupérer la chaîne de `Help` propriété d’un objet. (Substitue [CWnd:: get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|
-|[CMFCPropertyGridCtrl::get_accHelpTopic](#get_acchelptopic)|Appelé par l’infrastructure pour récupérer le chemin d’accès complet du fichier **WinHelp** associé à l’objet spécifié et l’identificateur de la rubrique appropriée dans ce fichier. (Substitue [CWnd:: get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|
-|[CMFCPropertyGridCtrl::get_accKeyboardShortcut](#get_acckeyboardshortcut)|Appelé par l'infrastructure pour récupérer la touche de raccourci ou la touche d'accès rapide de l'objet spécifié. (Substitue [CWnd:: get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|
-|`CMFCPropertyGridCtrl::get_accName`|Appelé par l'infrastructure pour récupérer le nom de l'objet spécifié. (Substitue [CWnd:: get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|
-|`CMFCPropertyGridCtrl::get_accRole`|Appelé par l'infrastructure pour récupérer les informations qui décrivent le rôle de l'objet spécifié. (Substitue [CWnd:: get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|
-|[CMFCPropertyGridCtrl::get_accSelection](#get_accselection)|Appelé par l'infrastructure pour récupérer les enfants sélectionnés de cet objet. (Substitue [CWnd:: get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
-|`CMFCPropertyGridCtrl::get_accState`|Appelé par l'infrastructure pour récupérer l'état actuel de l'objet spécifié. (Substitue [CWnd:: get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
-|`CMFCPropertyGridCtrl::get_accValue`|Appelé par l'infrastructure pour récupérer la valeur de l'objet spécifié. (Substitue [CWnd:: get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
+|`CMFCPropertyGridCtrl::get_accChild`|Appelé par l'infrastructure pour récupérer l'adresse d'une interface `IDispatch` pour l'enfant spécifié. (Substitue [CWnd :: get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|
+|[CMFCPropertyGridCtrl::get_accChildCount](#get_accchildcount)|Appelé par l'infrastructure pour récupérer le nombre d'enfants appartenant à cet objet. (Substitue [CWnd :: get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|
+|`CMFCPropertyGridCtrl::get_accDefaultAction`|Appelé par l'infrastructure pour récupérer une chaîne qui décrit l'action par défaut de l'objet. (Substitue [CWnd :: get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|
+|`CMFCPropertyGridCtrl::get_accDescription`|Appelé par l'infrastructure pour récupérer une chaîne qui décrit l'aspect visuel de l'objet spécifié. (Substitue [CWnd :: get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|
+|[CMFCPropertyGridCtrl::get_accFocus](#get_accfocus)|Appelé par l'infrastructure pour récupérer l'objet qui a le focus clavier. (Substitue [CWnd :: get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|
+|[CMFCPropertyGridCtrl::get_accHelp](#get_acchelp)|Appelé par l’infrastructure pour récupérer la chaîne de `Help` propriété d’un objet. (Substitue [CWnd :: get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|
+|[CMFCPropertyGridCtrl::get_accHelpTopic](#get_acchelptopic)|Appelé par l’infrastructure pour récupérer le chemin d’accès complet du fichier **WinHelp** associé à l’objet spécifié et l’identificateur de la rubrique appropriée dans ce fichier. (Substitue [CWnd :: get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|
+|[CMFCPropertyGridCtrl::get_accKeyboardShortcut](#get_acckeyboardshortcut)|Appelé par l'infrastructure pour récupérer la touche de raccourci ou la touche d'accès rapide de l'objet spécifié. (Substitue [CWnd :: get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|
+|`CMFCPropertyGridCtrl::get_accName`|Appelé par l'infrastructure pour récupérer le nom de l'objet spécifié. (Substitue [CWnd :: get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|
+|`CMFCPropertyGridCtrl::get_accRole`|Appelé par l'infrastructure pour récupérer les informations qui décrivent le rôle de l'objet spécifié. (Substitue [CWnd :: get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|
+|[CMFCPropertyGridCtrl::get_accSelection](#get_accselection)|Appelé par l'infrastructure pour récupérer les enfants sélectionnés de cet objet. (Substitue [CWnd :: get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
+|`CMFCPropertyGridCtrl::get_accState`|Appelé par l'infrastructure pour récupérer l'état actuel de l'objet spécifié. (Substitue [CWnd :: get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
+|`CMFCPropertyGridCtrl::get_accValue`|Appelé par l'infrastructure pour récupérer la valeur de l'objet spécifié. (Substitue [CWnd :: get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
 |[CMFCPropertyGridCtrl::GetBkColor](#getbkcolor)|Récupère la couleur d’arrière-plan du contrôle de grille de propriétés actuel.|
 |[CMFCPropertyGridCtrl::GetBoldFont](#getboldfont)|Récupère dans le style gras la police Windows du texte du contrôle de grille de propriétés actuel.|
 |[CMFCPropertyGridCtrl::GetCurSel](#getcursel)|Récupère la propriété actuellement sélectionnée.|
@@ -223,7 +223,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::GetPropertyColumnWidth](#getpropertycolumnwidth)|Récupère la largeur actuelle de la colonne qui contient les valeurs de propriété.|
 |[CMFCPropertyGridCtrl::GetPropertyCount](#getpropertycount)|Récupère le nombre de propriétés dans un contrôle de grille de propriétés.|
 |[CMFCPropertyGridCtrl::GetRowHeight](#getrowheight)|Récupère la hauteur d’une ligne dans le contrôle de la grille des propriétés.|
-|[CMFCPropertyGridCtrl::GetScrollBarCtrl](#getscrollbarctrl)|Récupère un pointeur désignant le contrôle de barre de défilement dans le contrôle de grille de propriétés. (Substitue [CWnd:: GetScrollBarCtrl](../../mfc/reference/cwnd-class.md#getscrollbarctrl).)|
+|[CMFCPropertyGridCtrl::GetScrollBarCtrl](#getscrollbarctrl)|Récupère un pointeur désignant le contrôle de barre de défilement dans le contrôle de grille de propriétés. (Substitue [CWnd :: GetScrollBarCtrl](../../mfc/reference/cwnd-class.md#getscrollbarctrl).)|
 |[CMFCPropertyGridCtrl::GetTextColor](#gettextcolor)|Récupère la couleur du texte des éléments de propriété dans le contrôle de grille de propriétés actuel.|
 |`CMFCPropertyGridCtrl::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers l’objet [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associé à ce type de classe.|
 |[CMFCPropertyGridCtrl::HitTest](#hittest)|Récupère un pointeur vers l’objet de propriété qui correspond à un élément de contrôle de grille de propriétés si un point spécifié se trouve dans l’élément. Cette méthode indique également la zone dans le contrôle de grille de propriétés qui contient le point.|
@@ -241,7 +241,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Supprime tous les objets de propriété d’un contrôle de grille de propriétés.|
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Restaure la valeur d’origine de toutes les propriétés.|
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Définit ou réinitialise le mode alphabétique.|
-|[CMFCPropertyGridCtrl:: SetBoolLabels](#setboollabels)|Spécifie le texte des étiquettes booléennes.|
+|[CMFCPropertyGridCtrl :: SetBoolLabels](#setboollabels)|Spécifie le texte des étiquettes booléennes.|
 |[CMFCPropertyGridCtrl::SetCurSel](#setcursel)|Sélectionne une propriété dans un contrôle de grille de propriétés.|
 |[CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors)|Spécifie des couleurs personnalisées pour différents éléments de contrôle de la grille des propriétés.|
 |[CMFCPropertyGridCtrl::SetDescriptionRows](#setdescriptionrows)|Spécifie le nombre de lignes à afficher dans la section Description du contrôle de grille de propriétés actuel.|
@@ -255,7 +255,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCPropertyGridCtrl:: AdjustLayout](#adjustlayout)|Redessine le contrôle de grille de propriétés et ses propriétés.|
+|[CMFCPropertyGridCtrl :: AdjustLayout](#adjustlayout)|Redessine le contrôle de grille de propriétés et ses propriétés.|
 |[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Appelée par le contrôle de grille de propriétés pour trier les propriétés.|
 |[CMFCPropertyGridCtrl::EditItem](#edititem)|Appelé par le Framework lorsque l’utilisateur commence à modifier une propriété.|
 |[CMFCPropertyGridCtrl::EndEditItem](#endedititem)|Appelée par l’infrastructure lorsque l’utilisateur cesse de modifier une propriété.|
@@ -274,13 +274,13 @@ class CMFCPropertyGridCtrl : public CWnd
 
 La `CMFCPropertyGridCtrl` classe affiche un contrôle de grille de propriétés qui contient des propriétés modifiables dérivées de la classe [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) . Chaque propriété peut représenter un type et elle peut contenir des sous-éléments. Le contrôle de grille de propriétés prend en charge une zone redimensionnable en bas qui peut afficher la description d’une propriété sélectionnée.
 
-Pour utiliser un contrôle de grille de propriétés, `CMFCPropertyGridCtrl` construisez un objet, puis appelez la méthode [CMFCPropertyGridCtrl:: Create](#create) . Utilisez la méthode [CMFCPropertyGridCtrl:: AddProperty](#addproperty) pour ajouter des propriétés à la liste.
+Pour utiliser un contrôle de grille de propriétés, `CMFCPropertyGridCtrl` construisez un objet, puis appelez la méthode [CMFCPropertyGridCtrl :: Create](#create) . Utilisez la méthode [CMFCPropertyGridCtrl :: AddProperty](#addproperty) pour ajouter des propriétés à la liste.
 
 ## <a name="selection-properties"></a>Propriétés de la sélection
 
 Au lieu de représenter une valeur, un élément de propriété peut démarrer une boîte de dialogue qui permet à l’utilisateur de sélectionner une couleur, un fichier ou une police.
 
-Le tableau suivant répertorie quatre types de propriétés de sélection:
+Le tableau suivant répertorie quatre types de propriétés de sélection :
 
 |Classe|Description|
 |-----------|-----------------|
@@ -295,7 +295,7 @@ Les illustrations suivantes décrivent un contrôle de grille de propriétés qu
 
 ![Liste des propriétés feuille](../../mfc/reference/media/proplist.png "Liste des propriétés feuille")
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 L’exemple suivant montre comment configurer un objet de contrôle de grille de propriétés à l’aide de `CMFCPropertyGridCtrl` diverses méthodes de la classe. L’exemple montre comment activer le contrôle header, activer la zone de description et définir l’apparence du contrôle de grille de propriétés. L’exemple montre également comment définir le mode alphabétique pour le contrôle dans lequel le contrôle trie toutes les propriétés qu’il contient par son nom de propriété et comment définir les couleurs personnalisées pour les différents éléments du contrôle de grille de propriétés. Cet exemple fait partie de l' [exemple New Controls](../../overview/visual-cpp-samples.md).
 
@@ -317,7 +317,7 @@ L’exemple suivant montre comment configurer un objet de contrôle de grille de
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête:** afxpropertygridctrl. h
+**En-tête :** afxpropertygridctrl. h
 
 ##  <a name="accselect"></a>  CMFCPropertyGridCtrl::accSelect
 
@@ -353,20 +353,20 @@ int AddProperty(
 dans Pointeur vers une propriété.
 
 *bRedraw*<br/>
-dans TRUE pour redessiner immédiatement la propriété; Sinon, FALSe. La valeur par défaut est TRUE.
+dans TRUE pour redessiner immédiatement la propriété ; Sinon, FALSe. La valeur par défaut est TRUE.
 
 *bAdjustLayout*<br/>
-dans TRUE pour recalculer le texte et la valeur de la propriété, puis dessiner la propriété; FALSe pour utiliser des calculs existants pour dessiner la propriété. La valeur par défaut est TRUE.
+dans TRUE pour recalculer le texte et la valeur de la propriété, puis dessiner la propriété ; FALSe pour utiliser des calculs existants pour dessiner la propriété. La valeur par défaut est TRUE.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si cette méthode est réussie, index de base zéro de la position dans le contrôle de grille de propriétés où la propriété est ajoutée; Sinon,-1.
+Si cette méthode est réussie, index de base zéro de la position dans le contrôle de grille de propriétés où la propriété est ajoutée ; Sinon,-1.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode ajoute un pointeur vers la propriété spécifiée à la fin de la liste de propriétés dans le contrôle de grille de propriétés. Ne détruisez pas les propriétés ou ne les autorisez pas à se trouver hors de portée avant la destruction du contrôle de grille. Quand vous avez fini d’utiliser le contrôle de grille de propriétés, appelez [CMFCPropertyGridCtrl:: RemoveAll](#removeall) pour supprimer toutes les propriétés ajoutées. La méthode AddProperty échoue si la propriété spécifiée a déjà été ajoutée à la liste.
+Cette méthode ajoute un pointeur vers la propriété spécifiée à la fin de la liste de propriétés dans le contrôle de grille de propriétés. Ne détruisez pas les propriétés ou ne les autorisez pas à se trouver hors de portée avant la destruction du contrôle de grille. Quand vous avez fini d’utiliser le contrôle de grille de propriétés, appelez [CMFCPropertyGridCtrl :: RemoveAll](#removeall) pour supprimer toutes les propriétés ajoutées. La méthode AddProperty échoue si la propriété spécifiée a déjà été ajoutée à la liste.
 
-##  <a name="adjustlayout"></a>CMFCPropertyGridCtrl:: AdjustLayout
+##  <a name="adjustlayout"></a>CMFCPropertyGridCtrl :: AdjustLayout
 
 Redessine le contrôle de grille de propriétés et ses propriétés.
 
@@ -442,7 +442,7 @@ Pointeur vers une propriété.
 
 ### <a name="remarks"></a>Notes
 
-Par défaut, cette méthode utilise la méthode [CString:: compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) pour comparer `CMFCPropertyGridProperty::m_strName` les membres des paramètres spécifiés.
+Par défaut, cette méthode utilise la méthode [CString :: compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) pour comparer `CMFCPropertyGridProperty::m_strName` les membres des paramètres spécifiés.
 
 ##  <a name="create"></a>  CMFCPropertyGridCtrl::Create
 
@@ -472,11 +472,11 @@ dans ID de la fenêtre enfant.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la fenêtre a été créée avec succès; Sinon, FALSe.
+TRUE si la fenêtre a été créée avec succès ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Pour créer un contrôle de grille de propriétés, appelez d’abord [CMFCPropertyGridCtrl:: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) pour construire un objet de grille de propriétés. Appelez `CMFCPropertyGridCtrl::Create`ensuite.
+Pour créer un contrôle de grille de propriétés, appelez d’abord [CMFCPropertyGridCtrl :: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) pour construire un objet de grille de propriétés. Appelez `CMFCPropertyGridCtrl::Create`ensuite.
 
 ### <a name="example"></a>Exemple
 
@@ -501,10 +501,10 @@ BOOL DeleteProperty(
 dans Pointeur vers une propriété.
 
 *bRedraw*<br/>
-dans TRUE pour redessiner le contrôle de grille de propriétés; Sinon, FALSe. La valeur par défaut est TRUE.
+dans TRUE pour redessiner le contrôle de grille de propriétés ; Sinon, FALSe. La valeur par défaut est TRUE.
 
 *bAdjustLayout*<br/>
-dans TRUE pour recalculer la façon de dessiner l’ensemble du texte, des images et des éléments dans le contrôle de grille de propriétés, puis de dessiner le contrôle; Sinon, FALSe. La valeur par défaut est TRUE.
+dans TRUE pour recalculer la façon de dessiner l’ensemble du texte, des images et des éléments dans le contrôle de grille de propriétés, puis de dessiner le contrôle ; Sinon, FALSe. La valeur par défaut est TRUE.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -544,7 +544,7 @@ dans Point sur le contrôle de grille de propriétés sur lequel l’utilisateur
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la méthode réussit; Sinon, FALSe.
+TRUE si la méthode réussit ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -559,7 +559,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-dans TRUE pour activer la zone de description; FALSe pour désactiver la zone de description. La valeur par défaut est TRUE.
+dans TRUE pour activer la zone de description ; FALSe pour désactiver la zone de description. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
 
@@ -579,7 +579,7 @@ void EnableHeaderCtrl(
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-dans TRUE pour activer le contrôle header; FALSe pour désactiver le contrôle header. La valeur par défaut est TRUE.
+dans TRUE pour activer le contrôle header ; FALSe pour désactiver le contrôle header. La valeur par défaut est TRUE.
 
 *lpszLeftColumn*<br/>
 dans Titre de la colonne de gauche du contrôle d’en-tête. La valeur par défaut est **Property**.
@@ -598,11 +598,11 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bUpdateData*<br/>
-dans TRUE pour spécifier que les données de propriété modifiées doivent être validées lorsque l’opération de modification est terminée; Sinon, FALSe. La valeur par défaut est TRUE.
+dans TRUE pour spécifier que les données de propriété modifiées doivent être validées lorsque l’opération de modification est terminée ; Sinon, FALSe. La valeur par défaut est TRUE.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’opération de modification se termine correctement; FALSe si les données de propriété modifiées ne sont pas valides ou si l’opération de modification doit continuer.
+TRUE si l’opération de modification se termine correctement ; FALSe si les données de propriété modifiées ne sont pas valides ou si l’opération de modification doit continuer.
 
 ### <a name="remarks"></a>Notes
 
@@ -622,7 +622,7 @@ void EnsureVisible(
 dans Pointeur vers une propriété.
 
 *bExpandParents*<br/>
-dans TRUE pour développer les éléments parents et rendre la propriété spécifiée visible; Sinon, FALSe. La valeur par défaut est FALSe.
+dans TRUE pour développer les éléments parents et rendre la propriété spécifiée visible ; Sinon, FALSe. La valeur par défaut est FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -637,7 +637,7 @@ void ExpandAll(BOOL bExpand=TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bExpand*<br/>
-dans TRUE pour développer tous les nœuds; FALSe pour réduire tous les nœuds. La valeur par défaut est TRUE.
+dans TRUE pour développer tous les nœuds ; FALSe pour réduire tous les nœuds. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
 
@@ -657,15 +657,15 @@ CMFCPropertyGridProperty* FindItemByData(
 dans Valeur DWORD.
 
 *bSearchSubItems*<br/>
-dans TRUE pour rechercher des sous-éléments de propriété; Sinon, FALSe. La valeur par défaut est TRUE.
+dans TRUE pour rechercher des sous-éléments de propriété ; Sinon, FALSe. La valeur par défaut est TRUE.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’objet de propriété associé si cette méthode est réussie; Sinon, NULL.
+Pointeur vers l’objet de propriété associé si cette méthode est réussie ; Sinon, NULL.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez la méthode [CMFCPropertyGridCtrl:: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) ou [CMFCPropertyGridProperty:: SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata) pour associer une valeur DWORD à une propriété.
+Utilisez la méthode [CMFCPropertyGridCtrl :: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) ou [CMFCPropertyGridProperty :: SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata) pour associer une valeur DWORD à une propriété.
 
 ##  <a name="get_accchildcount"></a>  CMFCPropertyGridCtrl::get_accChildCount
 
@@ -776,7 +776,7 @@ Valeur de couleur RVB.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode récupère la couleur utilisée par l’infrastructure pour dessiner l’arrière-plan du contrôle de grille de propriétés actuel. La méthode [CMFCPropertyGridCtrl:: GetTextColor](#gettextcolor) récupère la couleur de premier plan.
+Cette méthode récupère la couleur utilisée par l’infrastructure pour dessiner l’arrière-plan du contrôle de grille de propriétés actuel. La méthode [CMFCPropertyGridCtrl :: GetTextColor](#gettextcolor) récupère la couleur de premier plan.
 
 ##  <a name="getboldfont"></a>  CMFCPropertyGridCtrl::GetBoldFont
 
@@ -844,7 +844,7 @@ void GetCustomColors(
 
 ### <a name="remarks"></a>Notes
 
-Utilisez la méthode [CMFCPropertyGridCtrl:: SetCustomColors](#setcustomcolors) pour définir des couleurs personnalisées.
+Utilisez la méthode [CMFCPropertyGridCtrl :: SetCustomColors](#setcustomcolors) pour définir des couleurs personnalisées.
 
 ##  <a name="getdescriptionheight"></a>  CMFCPropertyGridCtrl::GetDescriptionHeight
 
@@ -862,7 +862,7 @@ Hauteur, en pixels, de la zone de description.
 
 La hauteur de la zone de description est calculée automatiquement et est définie sur 1/4 la hauteur du contrôle de grille de propriétés.
 
-Utilisez la méthode [CMFCPropertyGridCtrl:: EnableDescriptionArea](#enabledescriptionarea) pour afficher ou masquer la zone de description. Utilisez la méthode [CMFCPropertyGridCtrl:: IsDescriptionArea](#isdescriptionarea) pour déterminer si la zone de description est affichée ou masquée.
+Utilisez la méthode [CMFCPropertyGridCtrl :: EnableDescriptionArea](#enabledescriptionarea) pour afficher ou masquer la zone de description. Utilisez la méthode [CMFCPropertyGridCtrl :: IsDescriptionArea](#isdescriptionarea) pour déterminer si la zone de description est affichée ou masquée.
 
 ##  <a name="getdescriptionrows"></a>  CMFCPropertyGridCtrl::GetDescriptionRows
 
@@ -878,7 +878,7 @@ Nombre de lignes dans la zone de description du contrôle de grille de propriét
 
 ### <a name="remarks"></a>Notes
 
-Le constructeur [CMFCPropertyGridCtrl:: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) initialise la zone de description à 3 lignes.
+Le constructeur [CMFCPropertyGridCtrl :: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) initialise la zone de description à 3 lignes.
 
 ##  <a name="getheaderctrl"></a>  CMFCPropertyGridCtrl::GetHeaderCtrl
 
@@ -953,7 +953,7 @@ Cette méthode déclare si le paramètre *nIndex* est inférieur à zéro ou sup
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’objet de propriété qui correspond à l’index spécifié si cette méthode réussit; Sinon, `NULL`.
+Pointeur vers l’objet de propriété qui correspond à l’index spécifié si cette méthode réussit ; Sinon, `NULL`.
 
 ### <a name="remarks"></a>Notes
 
@@ -1038,7 +1038,7 @@ Valeur de couleur RVB.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode récupère la couleur utilisée par l’infrastructure pour dessiner le premier plan du contrôle de grille de propriétés actuel. La méthode [CMFCPropertyGridCtrl:: GetBkColor](#getbkcolor) récupère la couleur d’arrière-plan.
+Cette méthode récupère la couleur utilisée par l’infrastructure pour dessiner le premier plan du contrôle de grille de propriétés actuel. La méthode [CMFCPropertyGridCtrl :: GetBkColor](#getbkcolor) récupère la couleur d’arrière-plan.
 
 ##  <a name="hittest"></a>  CMFCPropertyGridCtrl::HitTest
 
@@ -1060,7 +1060,7 @@ dans Point, dans les coordonnées clientes.
 [in, out] Pointeur vers une `ClickArea` variable. Lorsque cette méthode est retournée, la variable indique la *zone de propriété* qui contient le point spécifié. Pour plus d’informations sur une zone de propriété, consultez la section Notes.
 
 *bPropsOnly*<br/>
-dans TRUE pour tester uniquement la zone de propriété; FALSe pour tester la *zone de description* si le point spécifié n’est pas dans la zone de propriété. La valeur par défaut est FALSe. Pour plus d’informations sur la zone Description, consultez la section Notes.
+dans TRUE pour tester uniquement la zone de propriété ; FALSe pour tester la *zone de description* si le point spécifié n’est pas dans la zone de propriété. La valeur par défaut est FALSe. Pour plus d’informations sur la zone Description, consultez la section Notes.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1074,7 +1074,7 @@ Le terme *zone de propriété* fait référence à l’une des zones de nom, de 
 
 Cette méthode définit la valeur de la variable vers laquelle pointe le paramètre *pnArea* . Le tableau suivant répertorie les valeurs possibles et les zones correspondantes.
 
-|Valeur|Domaine|
+|Value|Domaine|
 |-----------|----------|
 |`ClickArea::ClickExpandBox`|Contrôle de zone de développement de propriété.|
 |`ClickArea::ClickName`|Nom de propriété.|
@@ -1109,13 +1109,13 @@ BOOL IsAlphabeticMode() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le contrôle de grille de propriétés est en mode alphabétique; Sinon, FALSe.
+TRUE si le contrôle de grille de propriétés est en mode alphabétique ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 Lorsque le contrôle de grille de propriétés est en mode alphabétique, toutes les propriétés sont triées par ordre alphabétique en fonction de leur nom. Sinon, les propriétés sont regroupées sous leurs nœuds parents.
 
-Utilisez la méthode [CMFCPropertyGridCtrl:: SetAlphabeticMode](#setalphabeticmode) pour activer ou désactiver le mode alphabétique.
+Utilisez la méthode [CMFCPropertyGridCtrl :: SetAlphabeticMode](#setalphabeticmode) pour activer ou désactiver le mode alphabétique.
 
 ##  <a name="isalwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
 
@@ -1137,11 +1137,11 @@ BOOL IsDescriptionArea() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la zone de description est affichée; Sinon, FALSe.
+TRUE si la zone de description est affichée ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez la méthode [CMFCPropertyGridCtrl:: EnableDescriptionArea](#enabledescriptionarea) pour masquer ou afficher la zone de description.
+Utilisez la méthode [CMFCPropertyGridCtrl :: EnableDescriptionArea](#enabledescriptionarea) pour masquer ou afficher la zone de description.
 
 ##  <a name="isgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::IsGroupNameFullWidth
 
@@ -1153,7 +1153,7 @@ BOOL IsGroupNameFullWidth() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si les noms de groupes sont affichés sur la largeur du contrôle de grille de propriétés; FALSe si les noms de groupes sont tronqués par la colonne de droite (valeur) du contrôle.
+TRUE si les noms de groupes sont affichés sur la largeur du contrôle de grille de propriétés ; FALSe si les noms de groupes sont tronqués par la colonne de droite (valeur) du contrôle.
 
 ### <a name="remarks"></a>Notes
 
@@ -1169,11 +1169,11 @@ BOOL IsHeaderCtrl() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le contrôle header est affiché; Sinon, FALSe.
+TRUE si le contrôle header est affiché ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez la méthode [CMFCPropertyGridCtrl:: EnableHeaderCtrl](#enableheaderctrl) pour masquer ou afficher le contrôle header.
+Utilisez la méthode [CMFCPropertyGridCtrl :: EnableHeaderCtrl](#enableheaderctrl) pour masquer ou afficher le contrôle header.
 
 ##  <a name="ismarkmodifiedproperties"></a>  CMFCPropertyGridCtrl::IsMarkModifiedProperties
 
@@ -1185,7 +1185,7 @@ BOOL IsMarkModifiedProperties() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le style gras est utilisé pour afficher les propriétés modifiées; FALSe si le style normal est utilisé pour afficher les propriétés modifiées.
+TRUE si le style gras est utilisé pour afficher les propriétés modifiées ; FALSe si le style normal est utilisé pour afficher les propriétés modifiées.
 
 ### <a name="remarks"></a>Notes
 
@@ -1199,7 +1199,7 @@ BOOL IsShowDragContext() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le Framework redessine les colonnes Name et value pendant une opération de redimensionnement; FALSe si le Framework redessine les colonnes une fois l’opération glisser terminée.
+TRUE si le Framework redessine les colonnes Name et value pendant une opération de redimensionnement ; FALSe si le Framework redessine les colonnes une fois l’opération glisser terminée.
 
 ### <a name="remarks"></a>Notes
 
@@ -1215,11 +1215,11 @@ BOOL IsVSDotNetLook() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le contrôle de grille de propriétés est dans le style de Visual Studio .NET; Sinon, FALSe.
+TRUE si le contrôle de grille de propriétés est dans le style de Visual Studio .NET ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez la méthode [CMFCPropertyGridCtrl:: SetVSDotNetLook](#setvsdotnetlook) pour définir le contrôle de la grille des propriétés sur le style de Visual Studio .net.
+Utilisez la méthode [CMFCPropertyGridCtrl :: SetVSDotNetLook](#setvsdotnetlook) pour définir le contrôle de la grille des propriétés sur le style de Visual Studio .net.
 
 ##  <a name="markmodifiedproperties"></a>  CMFCPropertyGridCtrl::MarkModifiedProperties
 
@@ -1234,10 +1234,10 @@ void MarkModifiedProperties(
 ### <a name="parameters"></a>Paramètres
 
 *bMark*<br/>
-dans TRUE pour afficher les propriétés modifiées en style gras; FALSe pour afficher les propriétés modifiées dans un style normal. La valeur par défaut est TRUE.
+dans TRUE pour afficher les propriétés modifiées en style gras ; FALSe pour afficher les propriétés modifiées dans un style normal. La valeur par défaut est TRUE.
 
 *bRedraw*<br/>
-dans TRUE pour redessiner immédiatement le contrôle de grille de propriétés; Sinon, FALSe. La valeur par défaut est TRUE.
+dans TRUE pour redessiner immédiatement le contrôle de grille de propriétés ; Sinon, FALSe. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
 
@@ -1314,7 +1314,7 @@ dans Rectangle qui spécifie où dessiner la zone de description.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez la méthode [CMFCPropertyGridCtrl:: EnableDescriptionArea](#enabledescriptionarea) pour afficher la zone de description.
+Utilisez la méthode [CMFCPropertyGridCtrl :: EnableDescriptionArea](#enabledescriptionarea) pour afficher la zone de description.
 
 ##  <a name="ondrawlist"></a>  CMFCPropertyGridCtrl::OnDrawList
 
@@ -1403,7 +1403,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bRedraw*<br/>
-dans TRUE pour redessiner la liste de propriétés; Sinon, FALSe. La valeur par défaut est TRUE.
+dans TRUE pour redessiner la liste de propriétés ; Sinon, FALSe. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
 
@@ -1418,7 +1418,7 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bSet*<br/>
-dans TRUE pour définir le mode alphabétique; FAUX mode de réinitialisation alphabétique. La valeur par défaut est TRUE.
+dans TRUE pour définir le mode alphabétique ; FAUX mode de réinitialisation alphabétique. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
 
@@ -1460,7 +1460,7 @@ void SetCurSel(
 dans Pointeur vers un objet de propriété.
 
 *bRedraw*<br/>
-dans TRUE pour redessiner immédiatement le contrôle de grille de propriétés; Sinon, FALSe. La valeur par défaut est TRUE.
+dans TRUE pour redessiner immédiatement le contrôle de grille de propriétés ; Sinon, FALSe. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
 
@@ -1508,7 +1508,7 @@ dans Couleur des lignes qui sont dessinées entre les propriétés.
 
 Pour n’importe quel paramètre, `((COLORREF)-1)` spécifiez la valeur de couleur pour utiliser la couleur par défaut de cet élément du contrôle de grille de propriétés.
 
-Pour personnaliser l’apparence d’une propriété spécifique, dérivez une classe de la classe [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) , puis remplacez [CMFCPropertyGridProperty:: OnDrawName](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [CMFCPropertyGridProperty:: OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [ Méthodes CMFCPropertyGridProperty:: OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)et [CMFCPropertyGridProperty:: OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) .
+Pour personnaliser l’apparence d’une propriété spécifique, dérivez une classe de la classe [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) , puis remplacez [CMFCPropertyGridProperty :: OnDrawName](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [CMFCPropertyGridProperty :: OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [ Méthodes CMFCPropertyGridProperty :: OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)et [CMFCPropertyGridProperty :: OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) .
 
 ##  <a name="setdescriptionrows"></a>  CMFCPropertyGridCtrl::SetDescriptionRows
 
@@ -1539,7 +1539,7 @@ void SetGroupNameFullWidth(
 dans TRUE pour afficher la largeur complète du nom de catégorie, quelle que soit la largeur de la colonne de nom de propriété. FALSe pour limiter la largeur du nom de la catégorie à la largeur de la colonne du nom de la propriété. La valeur par défaut est TRUE.
 
 *bRedraw*<br/>
-dans TRUE pour mettre à jour immédiatement le contrôle de grille de propriétés; FALSe pour mettre à jour le contrôle lorsque l’événement redessin suivant se produit. La valeur par défaut est TRUE.
+dans TRUE pour mettre à jour immédiatement le contrôle de grille de propriétés ; FALSe pour mettre à jour le contrôle lorsque l’événement redessin suivant se produit. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
 
@@ -1562,9 +1562,9 @@ dans Caractère à servir de délimiteur.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour définir un caractère délimiteur dans une liste de valeurs de propriété utilisées dans le constructeur [CMFCPropertyGridProperty:: CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) . Dans ce constructeur, affectez la valeur TRUE au paramètre *bIsValueList* .
+Utilisez cette méthode pour définir un caractère délimiteur dans une liste de valeurs de propriété utilisées dans le constructeur [CMFCPropertyGridProperty :: CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) . Dans ce constructeur, affectez la valeur TRUE au paramètre *bIsValueList* .
 
-Par défaut, le constructeur [CMFCPropertyGridCtrl:: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) définit le caractère délimiteur sur une virgule (', ').
+Par défaut, le constructeur [CMFCPropertyGridCtrl :: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) définit le caractère délimiteur sur une virgule (', ').
 
 ##  <a name="setshowdragcontext"></a>  CMFCPropertyGridCtrl::SetShowDragContext
 
@@ -1577,7 +1577,7 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bShowDragContext*<br/>
-dans TRUE pour redessiner les colonnes Name et value pendant une opération de redimensionnement; FALSe pour redessiner les colonnes une fois l’opération glisser terminée. La valeur par défaut est TRUE.
+dans TRUE pour redessiner les colonnes Name et value pendant une opération de redimensionnement ; FALSe pour redessiner les colonnes une fois l’opération glisser terminée. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
 
@@ -1594,7 +1594,7 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bSet*<br/>
-dans TRUE pour définir le contrôle de la grille des propriétés sur le style utilisé dans Visual Studio .NET; Sinon, FALSe. La valeur par défaut est TRUE.
+dans TRUE pour définir le contrôle de la grille des propriétés sur le style utilisé dans Visual Studio .NET ; Sinon, FALSe. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
 
@@ -1635,7 +1635,7 @@ Toujours TRUE.
 
 ### <a name="remarks"></a>Notes
 
-La méthode [CMFCPropertyGridCtrl:: EndEditItem](#endedititem) appelle cette méthode pour valider des données. Par défaut, cette méthode n’utilise pas son paramètre *pProp* et sa valeur de retour est toujours true.
+La méthode [CMFCPropertyGridCtrl :: EndEditItem](#endedititem) appelle cette méthode pour valider des données. Par défaut, cette méthode n’utilise pas son paramètre *pProp* et sa valeur de retour est toujours true.
 
 Si vous substituez cette méthode, retourne la valeur TRUE si les données de propriété spécifiées sont valides. Sinon, retourne FALSe, auquel cas l’infrastructure ne met pas à jour la propriété.
 

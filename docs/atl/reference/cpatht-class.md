@@ -50,10 +50,10 @@ helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
 ms.openlocfilehash: ba1c831d772deef34449d17adc2c8e7a6f90eaef
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69496619"
 ---
 # <a name="cpatht-class"></a>CPathT, classe
@@ -79,7 +79,7 @@ Classe de chaîne ATL/MFC à utiliser pour le chemin d’accès (consultez [CStr
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CPathT::PCXSTR](#pcxstr)|Type chaîne constante.|
 |[CPathT::PXSTR](#pxstr)|Type chaîne.|
@@ -107,7 +107,7 @@ Classe de chaîne ATL/MFC à utiliser pour le chemin d’accès (consultez [CStr
 |[CPathT::FileExists](#fileexists)|Appelez cette méthode pour vérifier si le fichier se trouve à ce nom de chemin d’accès.|
 |[CPathT::FindExtension](#findextension)|Appelez cette méthode pour rechercher la position de l’extension de fichier dans le chemin d’accès.|
 |[CPathT::FindFileName](#findfilename)|Appelez cette méthode pour rechercher la position du nom de fichier dans le chemin d’accès.|
-|[CPathT::GetDriveNumber](#getdrivenumber)|Appelez cette méthode pour rechercher dans le chemin d’accès une lettre de lecteur comprise entre «A» et «Z» et retourner le numéro de lecteur correspondant.|
+|[CPathT::GetDriveNumber](#getdrivenumber)|Appelez cette méthode pour rechercher dans le chemin d’accès une lettre de lecteur comprise entre « A » et « Z » et retourner le numéro de lecteur correspondant.|
 |[CPathT::GetExtension](#getextension)|Appelez cette méthode pour récupérer l’extension de fichier à partir du chemin d’accès.|
 |[CPathT::IsDirectory](#isdirectory)|Appelez cette méthode pour vérifier si le chemin d’accès est un répertoire valide.|
 |[CPathT::IsFileSpec](#isfilespec)|Appelez cette méthode pour rechercher un chemin d’accès pour les caractères délimitant les chemins d’accès (par exemple, '\\: 'ou' '). Si aucun caractère de délimitation de chemin d’accès n’est présent, le chemin d’accès est considéré comme un chemin d’accès de spécifications de fichier.|
@@ -137,9 +137,9 @@ Classe de chaîne ATL/MFC à utiliser pour le chemin d’accès (consultez [CStr
 
 |Nom|Description|
 |----------|-----------------|
-|[CPathT:: Operator const StringType &](#operator_const_stringtype_amp)|Cet opérateur permet à l’objet d’être traité comme une chaîne.|
-|[CPathT:: Operator CPathT::P CXSTR](#operator_cpatht__pcxstr)|Cet opérateur permet à l’objet d’être traité comme une chaîne.|
-|[CPathT:: Operator StringType &](#operator_stringtype_amp)|Cet opérateur permet à l’objet d’être traité comme une chaîne.|
+|[CPathT :: Operator const StringType &](#operator_const_stringtype_amp)|Cet opérateur permet à l’objet d’être traité comme une chaîne.|
+|[CPathT :: Operator CPathT ::P CXSTR](#operator_cpatht__pcxstr)|Cet opérateur permet à l’objet d’être traité comme une chaîne.|
+|[CPathT :: Operator StringType &](#operator_stringtype_amp)|Cet opérateur permet à l’objet d’être traité comme une chaîne.|
 |[CPathT::operator +=](#operator_add_eq)|Cet opérateur ajoute une chaîne au chemin d’accès.|
 
 ### <a name="public-data-members"></a>Membres de données publics
@@ -150,7 +150,7 @@ Classe de chaîne ATL/MFC à utiliser pour le chemin d’accès (consultez [CStr
 
 ## <a name="remarks"></a>Notes
 
-`CPath`, `CPathA` `CPathT` et `CPathW` sont des instanciations de définies comme suit:
+`CPath`, `CPathA` `CPathT` et `CPathW` sont des instanciations de définies comme suit :
 
 `typedef CPathT< CString > CPath;`
 
@@ -160,7 +160,7 @@ Classe de chaîne ATL/MFC à utiliser pour le chemin d’accès (consultez [CStr
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête:** atlpath. h
+**En-tête :** atlpath. h
 
 ##  <a name="addbackslash"></a>  CPathT::AddBackslash
 
@@ -227,7 +227,7 @@ void BuildRoot(int iDrive);
 ### <a name="parameters"></a>Paramètres
 
 *iDrive*<br/>
-Le numéro de lecteur (0 est un:, 1 est B:, etc.).
+Le numéro de lecteur (0 est un :, 1 est B :, etc.).
 
 ### <a name="remarks"></a>Notes
 
@@ -284,7 +284,7 @@ Retourne le préfixe commun.
 
 ### <a name="remarks"></a>Notes
 
-Un préfixe est l’un des types suivants: "C:\\\\", ".", "..", ".. \\\\". Pour plus d’informations, consultez [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
+Un préfixe est l’un des types suivants : "C :\\\\", ".", "..", ".. \\\\". Pour plus d’informations, consultez [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
 
 ##  <a name="compactpath"></a>  CPathT::CompactPath
 
@@ -362,7 +362,7 @@ BOOL FileExists() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si le fichier existe; sinon, FALSe.
+Retourne la valeur TRUE si le fichier existe ; sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -378,7 +378,7 @@ int FindExtension() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la position du «.» précédant l’extension. Si aucune extension n’est trouvée, retourne-1.
+Retourne la position du « . » précédant l’extension. Si aucune extension n’est trouvée, retourne-1.
 
 ### <a name="remarks"></a>Notes
 
@@ -402,7 +402,7 @@ Pour plus d’informations, consultez [PathFindFileName](/windows/win32/api/shlw
 
 ##  <a name="getdrivenumber"></a>  CPathT::GetDriveNumber
 
-Appelez cette méthode pour rechercher dans le chemin d’accès une lettre de lecteur comprise entre «A» et «Z» et retourner le numéro de lecteur correspondant.
+Appelez cette méthode pour rechercher dans le chemin d’accès une lettre de lecteur comprise entre « A » et « Z » et retourner le numéro de lecteur correspondant.
 
 ```
 int GetDriveNumber() const;
@@ -410,7 +410,7 @@ int GetDriveNumber() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le numéro de lecteur sous la forme d’un entier compris entre 0 et 25 (correspondant à «A» à «Z») si le chemin d’accès a une lettre de lecteur, ou-1 dans le cas contraire.
+Retourne le numéro de lecteur sous la forme d’un entier compris entre 0 et 25 (correspondant à « A » à « Z ») si le chemin d’accès a une lettre de lecteur, ou-1 dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
@@ -438,7 +438,7 @@ BOOL IsDirectory() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne une valeur différente de zéro (16) si le chemin d’accès est un répertoire; sinon, FALSe.
+Retourne une valeur différente de zéro (16) si le chemin d’accès est un répertoire ; sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -471,7 +471,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="parameters"></a>Paramètres
 
 *pszPrefix*<br/>
-Préfixe à rechercher. Un préfixe est l’un des types suivants: "C:\\\\", ".", "..", ".. \\\\".
+Préfixe à rechercher. Un préfixe est l’un des types suivants : "C :\\\\", ".", "..", ".. \\\\".
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -621,7 +621,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 ### <a name="parameters"></a>Paramètres
 
 *pszSpec*<br/>
-Pointeur vers une chaîne se terminant par un caractère NULL avec le type de fichier à rechercher. Par exemple, pour tester si le fichier situé dans le chemin d’accès actuel est un fichier DOC, *pszSpec* doit être défini sur «*. doc».
+Pointeur vers une chaîne se terminant par un caractère NULL avec le type de fichier à rechercher. Par exemple, pour tester si le fichier situé dans le chemin d’accès actuel est un fichier DOC, *pszSpec* doit être défini sur « *. doc ».
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -648,7 +648,7 @@ Chaîne à ajouter.
 
 Retourne le chemin d’accès mis à jour.
 
-##  <a name="operator_const_stringtype_amp"></a>CPathT:: Operator const StringType&amp;
+##  <a name="operator_const_stringtype_amp"></a>CPathT :: Operator const StringType&amp;
 
 Cet opérateur permet à l’objet d’être traité comme une chaîne.
 
@@ -660,7 +660,7 @@ operator const StringType&() const throw();
 
 Retourne une chaîne représentant le chemin d’accès actuel managé par cet objet.
 
-##  <a name="operator_cpatht__pcxstr"></a>CPathT:: Operator CPathT::P CXSTR
+##  <a name="operator_cpatht__pcxstr"></a>CPathT :: Operator CPathT ::P CXSTR
 
 Cet opérateur permet à l’objet d’être traité comme une chaîne.
 
@@ -672,7 +672,7 @@ operator PCXSTR() const throw();
 
 Retourne une chaîne représentant le chemin d’accès actuel managé par cet objet.
 
-##  <a name="operator_stringtype_amp"></a>CPathT:: Operator StringType&amp;
+##  <a name="operator_stringtype_amp"></a>CPathT :: Operator StringType&amp;
 
 Cet opérateur permet à l’objet d’être traité comme une chaîne.
 
@@ -738,13 +738,13 @@ BOOL RelativePathTo(
 Début du chemin d’accès relatif.
 
 *dwAttrFrom*<br/>
-Attributs de fichier de *pszFrom*. Si cette valeur contient FILE_ATTRIBUTE_DIRECTORY, *pszFrom* est supposé être un répertoire; dans le cas contraire, *pszFrom* est supposé être un fichier.
+Attributs de fichier de *pszFrom*. Si cette valeur contient FILE_ATTRIBUTE_DIRECTORY, *pszFrom* est supposé être un répertoire ; dans le cas contraire, *pszFrom* est supposé être un fichier.
 
 *pszTo*<br/>
 Point de terminaison du chemin d’accès relatif.
 
 *dwAttrTo*<br/>
-Attributs de fichier de *pszTo*. Si cette valeur contient FILE_ATTRIBUTE_DIRECTORY, *pszTo* est supposé être un répertoire; dans le cas contraire, *pszTo* est supposé être un fichier.
+Attributs de fichier de *pszTo*. Si cette valeur contient FILE_ATTRIBUTE_DIRECTORY, *pszTo* est supposé être un répertoire ; dans le cas contraire, *pszTo* est supposé être un fichier.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -829,7 +829,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
 ### <a name="parameters"></a>Paramètres
 
 *pszExtension*<br/>
-Nouvelle extension de nom de fichier, précédée d’un caractère «.».
+Nouvelle extension de nom de fichier, précédée d’un caractère « . ».
 
 ### <a name="return-value"></a>Valeur de retour
 

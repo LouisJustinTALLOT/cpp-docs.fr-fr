@@ -4,10 +4,10 @@ ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
 ms.openlocfilehash: 8dbf18d24c0369507743c3c1da624838f9ab4703
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69513823"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procédure : Utiliser le kit de développement logiciel (SDK) Windows 10 dans une application de bureau Windows
@@ -24,7 +24,7 @@ Si vous souhaitez cibler une version antérieure du kit de développement logici
 
 2. Ouvrez le menu contextuel du nœud du projet, puis sélectionnez **Recibler la version du Kit de développement logiciel (SDK)** .
 
-   Recibler la ![version du SDK](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
+   ![Recibler la version du SDK](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
 
    La boîte de dialogue **Examiner les actions de la solution** apparaît.
 
@@ -42,7 +42,7 @@ Si vous souhaitez cibler une version antérieure du kit de développement logici
 
    ![Version de la plateforme cible](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 
-   Cette action change les valeurs des macros du projet qui incluent des chemins d'accès aux fichiers d'en-tête et aux fichiers de la bibliothèque. Pour voir ce qui a été modifié, dans la section **répertoires C++ visuels** de la boîte de dialogue **Propriétés du projet** , choisissez l’une des propriétés, telles que les répertoires Include \<, choisissez d’ouvrir la liste déroulante, puis choisissez Modifier les >. La boîte de dialogue **Répertoires Include** apparaît.
+   Cette action change les valeurs des macros du projet qui incluent des chemins d'accès aux fichiers d'en-tête et aux fichiers de la bibliothèque. Pour voir ce qui a été modifié, dans la section **répertoires visuels C++**  de la boîte de dialogue **Propriétés du projet** , choisissez l’une des propriétés, telles que les **répertoires Include**, choisissez d’ouvrir la liste déroulante, puis choisissez \<modifier les >. La boîte de dialogue **Répertoires Include** apparaît.
 
    ![Boîte de dialogue répertoires Include](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
 

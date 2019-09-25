@@ -40,10 +40,10 @@ helpviewer_keywords:
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
 ms.openlocfilehash: f2a5f1ac63007bf44dc331e2104c6e9e5cac23da
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514824"
 ---
 # <a name="menu-editor-c"></a>Éditeur de menusC++()
@@ -55,7 +55,7 @@ Les menus permettent d’organiser les commandes de manière logique et de les t
 
 ## <a name="how-to"></a>Comment
 
-L' **éditeur de menus** vous permet d’activer les éléments suivants:
+L' **éditeur de menus** vous permet d’activer les éléments suivants :
 
 ### <a name="to-create-a-standard-menu"></a>Pour créer un menu standard
 
@@ -76,7 +76,7 @@ L' **éditeur de menus** vous permet d’activer les éléments suivants:
    Zone **nouvel élément** avec le focus déplacé après que vous avez tapé le nom du menu
 
    > [!NOTE]
-   > Pour créer un menu à un seul élément dans la barre de menus, affectez lavaleur false à la propriété **Popup** .
+   > Pour créer un menu à un seul élément dans la barre de menus, affectez la valeur **false**à la propriété **Popup** .
 
 ### <a name="to-create-a-submenu"></a>Pour créer un sous-menu
 
@@ -125,7 +125,7 @@ Tout en maintenant la touche **CTRL** enfoncée, sélectionnez les menus ou les 
 
 ### <a name="to-move-and-copy-menus-and-menu-commands"></a>Pour déplacer et copier des menus et des commandes de menu
 
-- Utilisez la méthode de glisser-déplacer:
+- Utilisez la méthode de glisser-déplacer :
 
    1. Faites glisser ou copiez l'élément que vous souhaitez déplacer vers :
 
@@ -135,7 +135,7 @@ Tout en maintenant la touche **CTRL** enfoncée, sélectionnez les menus ou les 
 
    1. Déplacez la commande de menu quand le guide d'insertion affiche la position souhaitée.
 
-- Utilisez les commandes du menu contextuel:
+- Utilisez les commandes du menu contextuel :
 
    1. Cliquez avec le bouton droit sur un ou plusieurs menus ou commandes de menu, puis choisissez **couper** (pour déplacer) ou **copier**.
 
@@ -168,7 +168,7 @@ Une fois que vous avez créé la ressource de menu, votre code d’application d
 
    Répétez cette procédure pour toutes les autres commandes de menu du menu contextuel et veillez à enregistrer la ressource de menu.
 
-- Pour connecter un menu contextuel à votre application, par exemple, ajoutez un gestionnaire de messages pour WM_CONTEXTMENU, puis ajoutez le code suivant au gestionnaire de messages:
+- Pour connecter un menu contextuel à votre application, par exemple, ajoutez un gestionnaire de messages pour WM_CONTEXTMENU, puis ajoutez le code suivant au gestionnaire de messages :
 
     ```cpp
     CMenu menu;

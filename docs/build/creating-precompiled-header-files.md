@@ -8,10 +8,10 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 273d8cf996c2717339dd20dcbc7512f9c62afa8d
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69630488"
 ---
 # <a name="precompiled-header-files"></a>Fichiers d'en-tête précompilés
@@ -26,7 +26,7 @@ Pour les grands projets dont la génération prend beaucoup de temps, vous pouve
 
 ## <a name="when-to-precompile-source-code"></a>Quand précompiler le code source
 
-Le code précompilé est utile pendant le cycle de développement afin de réduire le temps de compilation, en particulier dans les cas suivants:
+Le code précompilé est utile pendant le cycle de développement afin de réduire le temps de compilation, en particulier dans les cas suivants :
 
 - Vous utilisez toujours un grand corps de code qui change rarement.
 
@@ -59,11 +59,11 @@ Les rubriques de référence de l’option du compilateur pour **/Yu** et **/Yc*
 
 L’option du compilateur [/Yu](reference/yu-use-precompiled-header-file.md) vous permet de spécifier le fichier PCH à utiliser.
 
-Quand vous utilisez un fichier PCH, le compilateur suppose qu’il s’agit du même environnement de compilation (un qui utilise des options de compilateur cohérentes, des pragmas, etc.) qui était en vigueur lors de la création du fichier PCH, sauf indication contraire. Si le compilateur détecte une incohérence, il émet un avertissement et identifie l’incohérence dans la mesure du possible. Ces avertissements n’indiquent pas nécessairement un problème avec le fichier PCH; ils vous avertissent simplement des éventuels conflits. Les exigences de cohérence pour les fichiers PCH sont décrites dans les sections suivantes.
+Quand vous utilisez un fichier PCH, le compilateur suppose qu’il s’agit du même environnement de compilation (un qui utilise des options de compilateur cohérentes, des pragmas, etc.) qui était en vigueur lors de la création du fichier PCH, sauf indication contraire. Si le compilateur détecte une incohérence, il émet un avertissement et identifie l’incohérence dans la mesure du possible. Ces avertissements n’indiquent pas nécessairement un problème avec le fichier PCH ; ils vous avertissent simplement des éventuels conflits. Les exigences de cohérence pour les fichiers PCH sont décrites dans les sections suivantes.
 
 ### <a name="compiler-option-consistency"></a>Cohérence des options du compilateur
 
-Les options de compilateur suivantes peuvent déclencher un avertissement d’incohérence lors de l’utilisation d’un fichier PCH:
+Les options de compilateur suivantes peuvent déclencher un avertissement d’incohérence lors de l’utilisation d’un fichier PCH :
 
 - Les macros créées à l’aide de l’option de préprocesseur (/D) doivent être identiques entre la compilation qui a créé le fichier PCH et la compilation en cours. L’état des constantes définies n’est pas vérifié, mais des résultats imprévisibles peuvent se produire en cas de modification.
 
@@ -89,7 +89,7 @@ Lorsque vous spécifiez l’option utiliser le fichier d’en-tête précompilé
 
 Les pragmas traités lors de la création d’un fichier PCH affectent généralement le fichier avec lequel le fichier PCH est utilisé par la suite. Les `comment` pragmas `message` et n’affectent pas le reste de la compilation.
 
-Ces pragmas affectent uniquement le code dans le fichier PCH; ils n’affectent pas le code qui utilise par la suite le fichier PCH:
+Ces pragmas affectent uniquement le code dans le fichier PCH ; ils n’affectent pas le code qui utilise par la suite le fichier PCH :
 
 ||||
 |-|-|-|
@@ -97,7 +97,7 @@ Ces pragmas affectent uniquement le code dans le fichier PCH; ils n’affectent 
 |`linesize`|`pagesize`|`title`|
 |`message`|`skip`||
 
-Ces pragmas sont conservés dans le cadre d’un en-tête précompilé et affectent le reste d’une compilation qui utilise l’en-tête précompilé:
+Ces pragmas sont conservés dans le cadre d’un en-tête précompilé et affectent le reste d’une compilation qui utilise l’en-tête précompilé :
 
 ||||
 |-|-|-|
@@ -110,11 +110,11 @@ Ces pragmas sont conservés dans le cadre d’un en-tête précompilé et affect
 
 ## <a name="consistency-rules-for-yc-and-yu"></a>Règles de cohérence pour /Yc et /Yu
 
-Quand vous utilisez un en-tête précompilé créé à l’aide de/YC ou/Yu, le compilateur compare l’environnement de compilation actuel à celui qui existait lors de la création du fichier PCH. Veillez à spécifier un environnement cohérent avec le précédent (à l’aide d’options de compilateur cohérentes, de pragmas, etc.) pour la compilation en cours. Si le compilateur détecte une incohérence, il émet un avertissement et identifie l’incohérence dans la mesure du possible. Ces avertissements n’indiquent pas nécessairement un problème avec le fichier PCH; ils vous avertissent simplement des éventuels conflits. Les sections suivantes expliquent les exigences de cohérence pour les en-têtes précompilés.
+Quand vous utilisez un en-tête précompilé créé à l’aide de/YC ou/Yu, le compilateur compare l’environnement de compilation actuel à celui qui existait lors de la création du fichier PCH. Veillez à spécifier un environnement cohérent avec le précédent (à l’aide d’options de compilateur cohérentes, de pragmas, etc.) pour la compilation en cours. Si le compilateur détecte une incohérence, il émet un avertissement et identifie l’incohérence dans la mesure du possible. Ces avertissements n’indiquent pas nécessairement un problème avec le fichier PCH ; ils vous avertissent simplement des éventuels conflits. Les sections suivantes expliquent les exigences de cohérence pour les en-têtes précompilés.
 
 ### <a name="compiler-option-consistency"></a>Cohérence des options du compilateur
 
-Ce tableau répertorie les options du compilateur qui peuvent déclencher un avertissement d’incohérence lors de l’utilisation d’un en-tête précompilé:
+Ce tableau répertorie les options du compilateur qui peuvent déclencher un avertissement d’incohérence lors de l’utilisation d’un en-tête précompilé :
 
 |Option|Name|Règle|
 |------------|----------|----------|
@@ -158,7 +158,7 @@ Enfin, le fichier exécutable (MYAPP. EXE) est créé en liant les fichiers list
 
 ## <a name="sample-makefile-for-pch"></a>Exemple de makefile pour PCH
 
-Le Makefile suivant utilise des macros et un! Si,! Sinon,! ENDIF structure de commande Flow-of-Control pour simplifier son adaptation à votre projet.
+Le Makefile suivant utilise des macros et un ! Si, ! Sinon, ! ENDIF structure de commande Flow-of-Control pour simplifier son adaptation à votre projet.
 
 ```NMAKE
 # Makefile : Illustrates the effective use of precompiled
@@ -204,15 +204,15 @@ stable.pch : $(STABLEHDRS)
     $(CPP) $(CLFLAGS) /Yc$(BOUNDRY)    applib.cpp myapp.cpp
 ```
 
-À part les macros de STABLEHDRS, de limite et UNSTABLEHDRS présentées dans la figure «structure d’un Makefile qui utilise un fichier d’en-tête précompilé» dans les [fichiers PCH du processus de génération](#pch-files-in-the-build-process), ce makefile fournit une macro CLFLAGS et une macro LINKFLAGS. Vous devez utiliser ces macros pour répertorier les options du compilateur et de l’éditeur de liens qui s’appliquent si vous générez une version Debug ou une version finale du fichier exécutable de l’application. Il existe également une macro LIBS dans laquelle vous répertoriez les bibliothèques dont votre projet a besoin.
+À part les macros de STABLEHDRS, de limite et UNSTABLEHDRS présentées dans la figure « structure d’un Makefile qui utilise un fichier d’en-tête précompilé » dans les [fichiers PCH du processus de génération](#pch-files-in-the-build-process), ce makefile fournit une macro CLFLAGS et une macro LINKFLAGS. Vous devez utiliser ces macros pour répertorier les options du compilateur et de l’éditeur de liens qui s’appliquent si vous générez une version Debug ou une version finale du fichier exécutable de l’application. Il existe également une macro LIBS dans laquelle vous répertoriez les bibliothèques dont votre projet a besoin.
 
-Le Makefile utilise également! Si,! Sinon,! ENDIF pour détecter si vous définissez un symbole de débogage sur la ligne de commande NMAKE:
+Le Makefile utilise également ! Si, ! Sinon, ! ENDIF pour détecter si vous définissez un symbole de débogage sur la ligne de commande NMAKE :
 
 ```NMAKE
 NMAKE DEBUG=[1|0]
 ```
 
-Grâce à cette fonctionnalité, vous pouvez utiliser le même Makefile pendant le développement et pour les versions finales de votre programme. Utilisez DEBUG = 0 pour les versions finales. Les lignes de commande suivantes sont équivalentes:
+Grâce à cette fonctionnalité, vous pouvez utiliser le même Makefile pendant le développement et pour les versions finales de votre programme. Utilisez DEBUG = 0 pour les versions finales. Les lignes de commande suivantes sont équivalentes :
 
 ```NMAKE
 NMAKE

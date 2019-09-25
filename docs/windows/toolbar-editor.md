@@ -51,10 +51,10 @@ helpviewer_keywords:
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
 ms.openlocfilehash: 72c42a06da8276d118c6c204f838ed4b31d142b9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514692"
 ---
 # <a name="toolbar-editor-c"></a>Éditeur de barresC++d’outils ()
@@ -74,9 +74,9 @@ La boîte de dialogue **nouvelle ressource de barre d’outils** vous permet de 
 
 Une image bitmap utilisée pour créer une barre d’outils a une largeur maximale de 2048. par conséquent, si vous définissez la **largeur du bouton** sur *512*, vous ne pouvez avoir que quatre boutons. Si vous définissez la largeur sur *513*, vous ne pouvez avoir que trois boutons.
 
-La boîte **de dialogue nouvelle ressource de barre d’outils** présente les propriétés suivantes:
+La boîte **de dialogue nouvelle ressource de barre d’outils** présente les propriétés suivantes :
 
-|Propriété|Description|
+|Property|Description|
 |---|---------------|
 |**Largeur du bouton**|Offre un espace vous permettant d’entrer la largeur des boutons de la barre d’outils que vous convertissez d’une ressource bitmap en ressource de barre d’outils.|
 |**Hauteur du bouton**|Offre un espace vous permettant d’entrer la hauteur des boutons de la barre d’outils que vous convertissez d’une ressource bitmap en ressource de barre d’outils.|
@@ -86,9 +86,9 @@ La boîte **de dialogue nouvelle ressource de barre d’outils** présente les p
 
 Par défaut, un bouton nouveau ou vide s’affiche à l’extrémité droite de la barre d’outils. Vous pouvez déplacer ce bouton avant de le modifier. Lorsque vous créez un nouveau bouton, un autre bouton vide apparaît à droite du bouton modifié. Lorsque vous enregistrez une barre d’outils, le bouton vide n’est pas enregistré.
 
-Un bouton de barre d’outils a les propriétés suivantes:
+Un bouton de barre d’outils a les propriétés suivantes :
 
-|Propriété|Description|
+|Property|Description|
 |--------------|-----------------|
 |**ID**|Définit l’ID du bouton. La liste déroulante répertorie les noms d' **ID** courants.|
 |**Width**|Définit la largeur du bouton. 16 pixels recommandés.|
@@ -99,7 +99,7 @@ Un bouton de barre d’outils a les propriétés suivantes:
 
 ## <a name="how-to"></a>Comment
 
-L' **éditeur de barres d’outils** vous permet d’activer les éléments suivants:
+L' **éditeur de barres d’outils** vous permet d’activer les éléments suivants :
 
 ### <a name="to-create-new-toolbars"></a>Pour créer des barres d’outils
 
@@ -130,7 +130,7 @@ L' **éditeur de barres d’outils** vous permet d’activer les éléments suiv
 
 1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources) développez le dossier des ressources (par exemple, *Project1. RC*).
 
-1. Développez le dossier de la **barre d’outils** et sélectionnez une barre d’outils à modifier, puis effectuez l’une des opérations suivantes:
+1. Développez le dossier de la **barre d’outils** et sélectionnez une barre d’outils à modifier, puis effectuez l’une des opérations suivantes :
 
    - Attribuez un ID au bouton vide à l’extrémité droite de la barre d’outils. Pour ce faire, vous pouvez modifier la propriété **ID** dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Par exemple, il se peut que vous souhaitiez attribuer à un bouton de barre d’outils le même ID qu’une option de menu. Dans ce cas, utilisez la zone de liste déroulante pour sélectionner l' **ID** de l’option de menu.
 

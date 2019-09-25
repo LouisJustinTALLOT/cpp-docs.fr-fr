@@ -4,10 +4,10 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: b947bd6955a80e051d1dab81061b4b2bf2ab19c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69498630"
 ---
 # <a name="c-type-system-modern-c"></a>Système de type C++ (Modern C++)
@@ -63,10 +63,10 @@ L'illustration suivante montre les tailles relatives des types intégrés :
 
 Le tableau suivant répertorie les types fondamentaux les plus souvent utilisés :
 
-|Type|Taille|Commentaire|
+|Type|Size|Commentaire|
 |----------|----------|-------------|
 |int|4 octets|Choix par défaut pour les valeurs intégrales.|
-|Double|8 octets|Choix par défaut pour les valeurs à virgule flottante.|
+|double|8 octets|Choix par défaut pour les valeurs à virgule flottante.|
 |bool|1 octet|Représente des valeurs qui peuvent être true ou false.|
 |char|1 octet|À utiliser pour les caractères ASCII dans les chaînes de style C plus anciennes ou les objets std::string qui ne devront jamais être convertis en UNICODE.|
 |wchar_t|2 octets|Représente les valeurs à caractères « larges » qui peuvent être encodées au format UNICODE (UTF-16 sur Windows, mais peut varier sur les autres systèmes d'exploitation). Type de caractère utilisé dans les chaînes de type `std::wstring`.|

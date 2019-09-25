@@ -43,10 +43,10 @@ helpviewer_keywords:
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
 ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514222"
 ---
 # <a name="image-editor-for-icons-c"></a>Éditeur d’images pour lesC++icônes ()
@@ -93,7 +93,7 @@ Le menu **image** , qui s’affiche uniquement lorsque l' **éditeur d’images*
 
 La boîte de dialogue Paramètres de la **grille** vous permet de spécifier les paramètres de grille pour votre image et d’afficher des quadrillages sur l’image modifiée. Les lignes sont utiles pour la modification de l’image, mais elles ne sont pas enregistrées dans le cadre de l’image elle-même.
 
-|Propriété|Description|
+|Property|Description|
 |---|---|
 |**Grille de pixels**|Lorsque cette option est activée, une grille apparaît autour de chaque pixel de l' **éditeur d’images**.<br/><br/>La grille s’affiche uniquement avec une résolution de 4 × et supérieure.|
 |**Grille mosaïque**|Lorsqu’elle est sélectionnée, cette option affiche une grille autour des blocs de pixels dans l' **éditeur d’images**, spécifiée par les valeurs d’espacement de la grille.|
@@ -137,9 +137,9 @@ Pour accéder à cette boîte de dialogue, ouvrez l' **éditeur d’images** et 
 
 Ouvrez la boîte de dialogue police de l' **outil texte** pour modifier la police, le style ou la taille de la police du curseur. Les modifications sont appliquées au texte affiché dans la zone de **texte** .
 
-Pour accéder à cette boîte de dialogue, sélectionnez le bouton **police** dans la boîte de dialogue **outil texte** . Les propriétés disponibles sont les suivantes:
+Pour accéder à cette boîte de dialogue, sélectionnez le bouton **police** dans la boîte de dialogue **outil texte** . Les propriétés disponibles sont les suivantes :
 
-|Propriété|Description|
+|Property|Description|
 |---|---|
 |**Police**|Répertorie les polices disponibles.|
 |**Style de police**|Répertorie les styles disponibles pour la police spécifiée.|
@@ -186,7 +186,7 @@ La fenêtre de l' **éditeur d’images** affiche deux vues d’une image, avec 
 
 Une vue est la taille réelle et l’autre est agrandie par un facteur d’agrandissement par défaut de 6. Les affichages de ces deux volets sont mis à jour automatiquement, toutes les modifications que vous apportez dans un volet sont immédiatement affichées dans l’autre. Les deux volets vous permettent de travailler facilement sur une vue agrandie de votre image, dans laquelle vous pouvez distinguer des pixels individuels et, en même temps, observer l’effet de votre travail sur la vue de taille réelle de l’image.
 
-Le volet gauche utilise autant d’espace que nécessaire (jusqu’à la moitié de la fenêtre **image** ) pour afficher la vue d’agrandissement 1:1 par défaut de votre image. Le volet droit affiche une image de zoom par défaut 6:1 Zoom. Vous pouvez modifier l’agrandissement dans chaque volet à l' aide de l’outil Loupe de la barre d’outils de l' **éditeur d’images** ou à l’aide des touches accélérateur.
+Le volet gauche utilise autant d’espace que nécessaire (jusqu’à la moitié de la fenêtre **image** ) pour afficher la vue d’agrandissement 1:1 par défaut de votre image. Le volet droit affiche une image de zoom par défaut 6:1 Zoom. Vous pouvez modifier l’agrandissement dans chaque volet à l’aide de l’outil **loupe** de la barre d’outils de l' **éditeur d’images** ou à l’aide des touches accélérateur.
 
 Vous pouvez agrandir le plus petit volet de la fenêtre de l' **éditeur d’images** et utiliser les deux volets pour afficher différentes régions d’une grande image. Sélectionnez dans le volet pour le choisir.
 
@@ -200,10 +200,10 @@ Par défaut, l' **éditeur d’images** affiche la vue dans le volet gauche à l
 
 1. Sélectionnez le volet de l' **éditeur d’images** dont vous souhaitez modifier le facteur d’agrandissement.
 
-1. Dans la barre d’outils de l' **éditeur d’images** , sélectionnez la flèche à droite de l’outil **loupe** et sélectionnez le facteur d’agrandissement dans le sous-menu: **1x**, **2x**, **6**ou **8x**.
+1. Dans la barre d’outils de l' **éditeur d’images** , sélectionnez la flèche à droite de l’outil **loupe** et sélectionnez le facteur d’agrandissement dans le sous-menu : **1x**, **2x**, **6**ou **8x**.
 
    > [!NOTE]
-   > Pour sélectionner un facteur d’agrandissement différent de ceux listés dans l’outil loupe, utilisez les touches accélérateur.
+   > Pour sélectionner un facteur d’agrandissement différent de ceux listés dans l’outil **loupe** , utilisez les touches accélérateur.
 
 ### <a name="to-display-or-hide-the-pixel-grid"></a>Pour afficher ou masquer la grille de pixels
 
@@ -215,7 +215,7 @@ Pour tous les volets de l' **éditeur d’images** dont le facteur d’agrandiss
 
 ## <a name="requirements"></a>Configuration requise
 
-Aucun
+Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
 ms.openlocfilehash: 7bc0cb58cbbe995aa9d74e3ccb627ddc442bd4fb
-ms.sourcegitcommit: ec524d1f87bcce2b26b02e6d297f42c94b3db36e
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70026021"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procédure pas à pas : Créer et utiliser votre propre bibliothèque de liens dynamiques (C++)
@@ -32,13 +32,13 @@ Cette procédure pas à pas couvre les tâches suivantes :
 
 - Téléchargez l’application terminée.
 
-À l’instar d’une bibliothèque liée de manière statique, une dll exporte des variables, des fonctions et des ressources par nom. Une application cliente _importe_ les noms pour utiliser ces variables, fonctions et ressources. Contrairement à une bibliothèque liée statiquement, Windows connecte les importations dans votre application aux exportations dans une DLL au moment du chargement ou au moment de l’exécution, au lieu de les connecter au moment de la liaison. Windows requiert des informations supplémentaires qui ne font pas partie du modèle de compilation standard C++ pour établir ces connexions. Le compilateur MSVC implémente certaines extensions spécifiques dans C++ pour fournir ces informations supplémentaires. Nous allons expliquer ces extensions au fur et à mesure.
+À l’instar d’une bibliothèque liée de manière statique, une DLL _exporte_ des variables, des fonctions et des ressources par nom. Une application cliente _importe_ les noms pour utiliser ces variables, fonctions et ressources. Contrairement à une bibliothèque liée statiquement, Windows connecte les importations dans votre application aux exportations dans une DLL au moment du chargement ou au moment de l’exécution, au lieu de les connecter au moment de la liaison. Windows requiert des informations supplémentaires qui ne font pas partie du modèle de compilation standard C++ pour établir ces connexions. Le compilateur MSVC implémente certaines extensions spécifiques dans C++ pour fournir ces informations supplémentaires. Nous allons expliquer ces extensions au fur et à mesure.
 
 Cette procédure pas à pas crée deux solutions Visual Studio ; une qui crée la DLL et une qui crée l’application cliente. La DLL utilise la Convention d’appel C. Il peut être appelé à partir d’applications écrites dans d’autres langages de programmation, à condition que la plateforme, les conventions d’appel et les conventions de liaison correspondent. L’application cliente utilise _liaison implicite_, où Windows lie l’application à la DLL au moment du chargement. Cette liaison permet à l’application d’appeler les fonctions fournies par la DLL, telles que les fonctions dans une bibliothèque liée statiquement.
 
 Cette procédure pas à pas n’aborde pas quelques situations courantes. Le code n’affiche pas l’utilisation C++ des dll par d’autres langages de programmation. Il n’indique pas comment [créer une dll de ressource uniquement](creating-a-resource-only-dll.md), ou comment utiliser la [liaison explicite](linking-an-executable-to-a-dll.md#linking-explicitly) pour charger des dll au moment de l’exécution plutôt qu’au moment du chargement. Rest garantis, vous pouvez utiliser MSVC et Visual Studio pour effectuer toutes ces opérations.
 
-Pour obtenir des liens vers d’autres informations sur les DLL, consultez [Créer des DLL C/C++ DLL dans Visual Studio](dlls-in-visual-cpp.md). Pour plus d’informations sur la liaison implicite et la liaison explicite, consultez [déterminer la méthode de liaison à utiliser](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Pour plus d’informations C++ sur la création de dll à utiliser avec les langages de programmation qui utilisent des conventions de liaison de langage c, consultez [ C++ exportation de fonctions à utiliser dans des exécutables en langage c](exporting-cpp-functions-for-use-in-c-language-executables.md). Pour plus d’informations sur la création de DLL à utiliser avec les langages .NET, consultez [Appel de fonctions DLL à partir d’applications Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
+Pour obtenir des liens vers d’autres informations sur les DLL, consultez [Créer des DLL C/C++ DLL dans Visual Studio](dlls-in-visual-cpp.md). Pour plus d’informations sur la liaison implicite et la liaison explicite, consultez [déterminer la méthode de liaison à utiliser](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Pour plus d’informations C++ sur la création de dll à utiliser avec les langages de programmation qui utilisent des conventions de liaison de langage c, consultez [exportation C++ de fonctions à utiliser dans des exécutables en langage c](exporting-cpp-functions-for-use-in-c-language-executables.md). Pour plus d’informations sur la création de DLL à utiliser avec les langages .NET, consultez [Appel de fonctions DLL à partir d’applications Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -336,7 +336,7 @@ Lorsque le macro **MATHLIBRARY&#95;EXPORTS** est défini, le macro **MATHLIBRARY
 
 ::: moniker-end
 
-Pour vérifier que tout fonctionne à ce stade, compilez la bibliothèque de liens dynamiques. Pour ce faire, choisissez **Créer** > **Créer des solution** dans la barre de menus. La DLL et la sortie de compilateur associée sont placées dans un dossier appelé *Debug* juste sous le dossier de la solution. Si vous créez une version Release, la sortie est placée dans un dossier appelé *Release*. La sortie doit ressembler à ceci:
+Pour vérifier que tout fonctionne à ce stade, compilez la bibliothèque de liens dynamiques. Pour ce faire, choisissez **Créer** > **Créer des solution** dans la barre de menus. La DLL et la sortie de compilateur associée sont placées dans un dossier appelé *Debug* juste sous le dossier de la solution. Si vous créez une version Release, la sortie est placée dans un dossier appelé *Release*. La sortie doit ressembler à ceci :
 
 ::: moniker range=">=vs-2019"
 
@@ -467,11 +467,11 @@ Ensuite, pour appeler les fonctions MathLibrary dans votre code source, votre pr
 
 1. Dans le contrôle d’édition, spécifiez le chemin de l’emplacement du fichier d'en-tête **MathLibrary.h**. Vous pouvez choisir le contrôle des points de suspension ( **...** ) pour accéder au dossier approprié.
 
-   Vous pouvez également entrer un chemin d’accès relatif à partir de vos fichiers sources du client vers le dossier qui contient les fichiers d’en-tête de DLL. Si vous avez suivi les instructions pour placer votre projet client dans une solution distincte de la DLL, le chemin d’accès relatif doit se présenter comme suit:
+   Vous pouvez également entrer un chemin d’accès relatif à partir de vos fichiers sources du client vers le dossier qui contient les fichiers d’en-tête de DLL. Si vous avez suivi les instructions pour placer votre projet client dans une solution distincte de la DLL, le chemin d’accès relatif doit se présenter comme suit :
 
    `..\..\MathLibrary\MathLibrary`
 
-   Si vos projets DLL et client se trouvent dans la même solution, le chemin d’accès relatif peut se présenter comme suit:
+   Si vos projets DLL et client se trouvent dans la même solution, le chemin d’accès relatif peut se présenter comme suit :
 
    `..\MathLibrary`
 
@@ -505,9 +505,9 @@ int main()
 }
 ```
 
-Ce code peut être compilé, mais pas lié. Si vous générez l’application cliente maintenant, la liste d’erreurs affiche plusieurs erreurs LNK2019. Cela est dû au fait que votre projet ne contient pas certaines informations: Vous n’avez pas encore spécifié que votre projet a une dépendance vis-à-vis de la bibliothèque *MathLibrary. lib* . Et, vous n’avez pas indiqué à l’éditeur de liens comment trouver le fichier *MathLibrary. lib* .
+Ce code peut être compilé, mais pas lié. Si vous générez l’application cliente maintenant, la liste d’erreurs affiche plusieurs erreurs LNK2019. Cela est dû au fait que votre projet ne contient pas certaines informations : Vous n’avez pas encore spécifié que votre projet a une dépendance vis-à-vis de la bibliothèque *MathLibrary. lib* . Et, vous n’avez pas indiqué à l’éditeur de liens comment trouver le fichier *MathLibrary. lib* .
 
-Pour résoudre ce problème, vous pouvez copier le fichier de bibliothèque directement dans votre projet d’application cliente. L’éditeur de liens le trouvera et l’utilisera automatiquement. Toutefois, si la bibliothèque et l’application cliente sont en cours de développement, cela peut entraîner des modifications dans une copie qui ne sont pas affichées dans l’autre. Pour éviter ce problème, vous pouvez définir la propriété **dépendances supplémentaires** pour indiquer au système de génération que votre projet dépend de *MathLibrary. lib*. Vous pouvez également définir un chemin d’accès aux répertoires de **bibliothèque supplémentaire** dans votre projet pour inclure le chemin d’accès à la bibliothèque d’origine lorsque vous établissez une liaison.
+Pour résoudre ce problème, vous pouvez copier le fichier de bibliothèque directement dans votre projet d’application cliente. L’éditeur de liens le trouvera et l’utilisera automatiquement. Toutefois, si la bibliothèque et l’application cliente sont en cours de développement, cela peut entraîner des modifications dans une copie qui ne sont pas affichées dans l’autre. Pour éviter ce problème, vous pouvez définir la propriété **dépendances supplémentaires** pour indiquer au système de génération que votre projet dépend de *MathLibrary. lib*. Vous pouvez également définir un chemin d’accès aux **répertoires de bibliothèque supplémentaire** dans votre projet pour inclure le chemin d’accès à la bibliothèque d’origine lorsque vous établissez une liaison.
 
 ### <a name="to-add-the-dll-import-library-to-your-project"></a>Pour ajouter la bibliothèque d’importation DLL à votre projet
 
@@ -529,11 +529,11 @@ Pour résoudre ce problème, vous pouvez copier le fichier de bibliothèque dire
 
    ![Modifier la propriété Répertoires de bibliothèques supplémentaires](media/mathclient-additional-library-directories-property.png "Modifier la propriété Répertoires de bibliothèques supplémentaires")
 
-1. Double-cliquez dans le volet supérieur de la boîte de dialogue **Répertoires de bibliothèques supplémentaires** pour activer un contrôle d’édition. Dans le contrôle d’édition, spécifiez le chemin de l’emplacement du fichier **MathLibrary.lib**. Par défaut, il se trouve dans un dossier appelé *Debug* directement sous le dossier de la solution dll. Si vous créez une version Release, le fichier est placé dans un dossier appelé *Release*. Vous pouvez utiliser la `$(IntDir)` macro pour que l’éditeur de liens puisse trouver votre dll, quel que soit le type de build que vous créez. Si vous avez suivi les instructions pour placer votre projet client dans une solution distincte du projet DLL, le chemin d’accès relatif doit se présenter comme suit:
+1. Double-cliquez dans le volet supérieur de la boîte de dialogue **Répertoires de bibliothèques supplémentaires** pour activer un contrôle d’édition. Dans le contrôle d’édition, spécifiez le chemin de l’emplacement du fichier **MathLibrary.lib**. Par défaut, il se trouve dans un dossier appelé *Debug* directement sous le dossier de la solution dll. Si vous créez une version Release, le fichier est placé dans un dossier appelé *Release*. Vous pouvez utiliser la `$(IntDir)` macro pour que l’éditeur de liens puisse trouver votre dll, quel que soit le type de build que vous créez. Si vous avez suivi les instructions pour placer votre projet client dans une solution distincte du projet DLL, le chemin d’accès relatif doit se présenter comme suit :
 
    `..\..\MathLibrary\$(IntDir)`
 
-   Si vos projets DLL et client se trouvent dans la même solution, le chemin d’accès relatif doit se présenter comme suit:
+   Si vos projets DLL et client se trouvent dans la même solution, le chemin d’accès relatif doit se présenter comme suit :
 
    `..\MathLibrary\$(IntDir)`
 
@@ -541,9 +541,9 @@ Pour résoudre ce problème, vous pouvez copier le fichier de bibliothèque dire
 
 1. Une fois que vous avez saisi le chemin du fichier de bibliothèque dans la boîte de dialogue **Répertoires de bibliothèques supplémentaires**, choisissez le bouton **OK** pour revenir à la boîte de dialogue **Pages de propriétés**. Choisissez **OK** pour enregistrer les modifications apportées aux propriétés.
 
-Votre application cliente peut maintenant compiler et lier correctement, mais elle n’a toujours pas tout ce dont elle a besoin pour s’exécuter. Lorsque le système d’exploitation charge votre application, il recherche la DLL MathLibrary. S’il ne la trouve pas dans certains répertoires du système, dans le chemin de l’environnement ou dans le répertoire de l’application locale, le chargement échoue. Selon le système d’exploitation, un message d’erreur semblable à celui-ci s’affiche:
+Votre application cliente peut maintenant compiler et lier correctement, mais elle n’a toujours pas tout ce dont elle a besoin pour s’exécuter. Lorsque le système d’exploitation charge votre application, il recherche la DLL MathLibrary. S’il ne la trouve pas dans certains répertoires du système, dans le chemin de l’environnement ou dans le répertoire de l’application locale, le chargement échoue. Selon le système d’exploitation, un message d’erreur semblable à celui-ci s’affiche :
 
-![Erreur MATHLIBRARY dll] introuvable (media/mathclient-system-error-mathlibrary-dll-not-found.png "Erreur MATHLIBRARY dll") introuvable
+![Erreur MATHLIBRARY dll introuvable](media/mathclient-system-error-mathlibrary-dll-not-found.png "Erreur MATHLIBRARY dll introuvable")
 
 Une façon d’éviter ce problème consiste à copier la DLL dans le répertoire qui contient votre exécutable client dans le cadre du processus de création. Vous pouvez ajouter un **événement après génération** à votre projet, pour ajouter une commande qui copie la dll dans votre répertoire de sortie de génération. La commande spécifiée ici copie la DLL uniquement si elle est manquante ou a été modifiée. Il utilise des macros pour copier vers et depuis les emplacements de débogage ou de version, en fonction de votre configuration de Build.
 
@@ -555,11 +555,11 @@ Une façon d’éviter ce problème consiste à copier la DLL dans le répertoir
 
 1. Dans le volet gauche, sélectionnez **Propriétés** > de configuration**événements de build événements** > **après génération**.
 
-1. Dans le volet des propriétés, sélectionnez le contrôle d’édition dans le champ **ligne de commande** . Si vous avez suivi les instructions pour placer votre projet client dans une solution distincte du projet DLL, entrez la commande suivante:
+1. Dans le volet des propriétés, sélectionnez le contrôle d’édition dans le champ **ligne de commande** . Si vous avez suivi les instructions pour placer votre projet client dans une solution distincte du projet DLL, entrez la commande suivante :
 
    `xcopy /y /d "..\..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
 
-   Si vos projets DLL et client se trouvent dans le même répertoire de solution, entrez la commande suivante:
+   Si vos projets DLL et client se trouvent dans le même répertoire de solution, entrez la commande suivante :
 
    `xcopy /y /d "..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
 
