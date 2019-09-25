@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69498604"
 ---
 # <a name="try-finally-statement"></a>try-finally, instruction
@@ -60,19 +60,19 @@ Le contrôle atteint une instruction **_ _ try** par exécution séquentielle si
 
 1. Le gestionnaire de terminaisons est appelé.
 
-1. Lorsque le gestionnaire de terminaisons se termine, l’exécution se poursuit après l’instruction **_ _ finally** . Quelle que soit la façon dont la section protégée se termine (par exemple, via une instruction **goto** dans le corps protégé ou une instruction Return), le gestionnaire de terminaisons est exécuté *avant que* le déroulement du contrôle ne quitte la section protégée.
+1. Lorsque le gestionnaire de terminaisons se termine, l’exécution se poursuit après l’instruction **_ _ finally** . Quelle que soit la façon dont la section protégée se termine (par exemple, via une instruction **goto** dans le corps protégé ou une instruction **Return** ), le gestionnaire de terminaisons est exécuté *avant que* le déroulement du contrôle ne quitte la section protégée.
 
    Une instruction **_ _ finally** ne bloque pas la recherche d’un gestionnaire d’exceptions approprié.
 
 Si une exception se produit dans le bloc **_ _ try** , le système d’exploitation doit trouver un gestionnaire pour l’exception ou le programme va échouer. Si un gestionnaire est trouvé, tous les blocs **_ _ finally** sont exécutés et l’exécution reprend dans le gestionnaire.
 
-Par exemple, supposons qu'une série d'appels de fonction lie la fonction A à la fonction D, comme indiqué dans l'illustration suivante. Chaque fonction a un gestionnaire de terminaisons. Si une exception est levée dans la fonction D et gérée dans un, les gestionnaires de terminaisons sont appelés dans cet ordre lorsque le système déroule la pile: D, C, B.
+Par exemple, supposons qu'une série d'appels de fonction lie la fonction A à la fonction D, comme indiqué dans l'illustration suivante. Chaque fonction a un gestionnaire de terminaisons. Si une exception est levée dans la fonction D et gérée dans un, les gestionnaires de terminaisons sont appelés dans cet ordre lorsque le système déroule la pile : D, C, B.
 
 ![Ordre d’arrêt&#45;]de(../cpp/media/vc38cx1.gif "l’exécution du gestionnaire&#45;de fin d’exécution du") gestionnaire <br/>
 Fin de l'ordre d'exécution du gestionnaire
 
 > [!NOTE]
-> Le comportement de try-finally est différent de celui des autres langages qui prennenten charge l’utilisation C#de finally, tels que.  Un seul **_ _ try** peut avoir, mais pas les deux, **_ _ finally** et **_ _ except**.  Si les deux doivent être utilisés conjointement, une instruction try-except externe doit entourer l'instruction try-finally interne.  Les règles qui spécifient le moment d'exécution de chaque blocs sont également différentes.
+> Le comportement de try-finally est différent de celui des autres langages qui prennent en charge l’utilisation C#de **finally**, tels que.  Un seul **_ _ try** peut avoir, mais pas les deux, **_ _ finally** et **_ _ except**.  Si les deux doivent être utilisés conjointement, une instruction try-except externe doit entourer l'instruction try-finally interne.  Les règles qui spécifient le moment d'exécution de chaque blocs sont également différentes.
 
 Pour la compatibilité avec les versions antérieures, **_try**, **_finally**et **_leave** sont des synonymes pour **_ _ try**, **_ _ final**et **__leave** sauf si l’option de compilateur [/za \(désactive les extensions de langage) ](../build/reference/za-ze-disable-language-extensions.md)est spécifié.
 
@@ -86,7 +86,7 @@ Une instruction **goto** peut également sortir de la section protégée, mais e
 
 La sortie d’une instruction **try-finally** à l’aide de la fonction runtime [longjmp](../c-runtime-library/reference/longjmp.md) est considérée comme un arrêt anormal. Il n’est pas non plus possible d’accéder à une instruction **_ _ try** , mais d’en sortir une. Toutes les instructions **_ _ finally** qui sont actives entre le point de départ (fin normale du bloc **_ try** ) et la destination (le bloc **_ _ except** qui gère l’exception) doivent être exécutées. Cela s'appelle un déroulement local.
 
-Si un bloc **try** s’arrête prématurément pour une raison quelconque, y compris un saut hors du bloc, le système exécute le bloc finally associé dans le cadre du processus de déroulement de la pile. Dans ce cas, la fonction [AbnormalTermination](/windows/win32/Debug/abnormaltermination) retourne **true** si elle est appelée depuis le bloc **finally** ; Sinon, elle retourne **false**.
+Si un bloc **try** s’arrête prématurément pour une raison quelconque, y compris un saut hors du bloc, le système exécute le bloc **finally** associé dans le cadre du processus de déroulement de la pile. Dans ce cas, la fonction [AbnormalTermination](/windows/win32/Debug/abnormaltermination) retourne **true** si elle est appelée depuis le bloc **finally** ; Sinon, elle retourne **false**.
 
 Le gestionnaire de terminaisons n’est pas appelé si un processus est supprimé au milieu de l’exécution d’une instruction **try-finally** .
 
