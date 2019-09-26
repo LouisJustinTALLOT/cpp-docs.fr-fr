@@ -1,7 +1,7 @@
 ---
 title: Extensions de composants pour .NET et UWP
 ms.date: 10/12/2018
-ms.topic: landing-page
+ms.topic: overview
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 76cbb20d108745984490e67b53db39f58e34d327
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1e47a138fece021cf015884222d8cf5c766655fd
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70311836"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274679"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Extensions de composants pour .NET et UWP
 
@@ -49,12 +49,12 @@ Le tableau suivant répertorie les mots clés de l'extension du langage C++.
 
 ## <a name="override-specifiers"></a>Spécificateurs de substitution
 
-Vous pouvez utiliser les mots clés suivants pour qualifier le comportement de substitution pour la dérivation. Bien que le mot clé **new** ne soit pas une extension de C++, il est répertorié ici car il peut être utilisé dans un autre contexte. Certains spécificateurs sont également valides pour la programmation native. Pour plus d’informations, consultez [Guide pratique pour déclarer des spécificateurs de substitution dans les compilations natives (C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Vous pouvez utiliser les mots clés suivants pour qualifier le comportement de substitution pour la dérivation. Bien que le mot clé **new** ne soit pas une extension de C++, il est répertorié ici car il peut être utilisé dans un autre contexte. Certains spécificateurs sont également valides pour la programmation native. Pour plus d'informations, voir [Procédure : déclarer des spécificateurs de substitution dans les compilations natives (C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 |Mot clé|Contextuel|Objectif|Référence|
 |-------------|-----------------------|-------------|---------------|
 |**abstract**|Oui|Indique que les fonctions ou classes sont abstraites.|[abstract](abstract-cpp-component-extensions.md)|
-|**nouveau**|Non|Indique qu'une fonction n'est pas une substitution d'une version de la classe de base.|[new (nouvel emplacement dans vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
+|**new**|Non|Indique qu'une fonction n'est pas une substitution d'une version de la classe de base.|[new (nouvel emplacement dans vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
 |**override**|Oui|Indique qu'une méthode doit être une substitution d'une version de la classe de base.|[override](override-cpp-component-extensions.md)|
 |**sealed**|Oui|Empêche les classes d'être utilisées comme classes de base.|[sealed](sealed-cpp-component-extensions.md)|
 

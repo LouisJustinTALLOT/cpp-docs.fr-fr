@@ -2,13 +2,13 @@
 title: Applications de bureau ( C++visuel)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.topic: landing-page
-ms.openlocfilehash: 1d0e725cce42785357232312d21ce37e18d9c73d
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.topic: overview
+ms.openlocfilehash: 91fcc596a4c30e3fa74043c846eda6f06b666f2c
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217002"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274721"
 ---
 # <a name="desktop-applications-visual-c"></a>Applications de bureau ( C++visuel)
 

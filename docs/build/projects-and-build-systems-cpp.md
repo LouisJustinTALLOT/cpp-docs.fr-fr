@@ -9,13 +9,13 @@ helpviewer_keywords:
 - builds [C++], options
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.topic: landing-page
-ms.openlocfilehash: b0ca5f28aea30ccf1e66ecd354ab15aae3e2d38a
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.topic: overview
+ms.openlocfilehash: 1548f82b62163600b5220c553bebcea72020abbc
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216434"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274741"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/C++ Projects et systèmes de génération dans Visual Studio
 
