@@ -2,13 +2,13 @@
 title: Applications de plateforme Windows universelle (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
-ms.topic: landing-page
-ms.openlocfilehash: 68952e93e4f91ac3653a9991802ad42854d9d25a
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.topic: overview
+ms.openlocfilehash: 11a32504dfdd380f621c380994f4f53073547a57
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741028"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274705"
 ---
 # <a name="universal-windows-apps-c"></a>Applications de plateforme Windows universelle (C++)
 
@@ -26,7 +26,7 @@ Vous pouvez utiliser le convertisseur d’application Desktop Bridge pour empaqu
 |-|-|
 |[C++Référence du langage/CX](visual-c-language-reference-c-cx.md)|Décrit l’ensemble des extensions qui simplifient C++ la consommation des API Windows Runtime et activent la gestion des erreurs basée sur les exceptions.|
 |[Génération d’applications et de bibliothèques (C++/CX)](building-apps-and-libraries-c-cx.md)|Décrit comment créer des DLL et des bibliothèques statiques qui sont accessibles à partir d’une application ou d’un composant C++/CX.|
-|[Tutoriel : Créer une application UWP « Hello, World » dans C++/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Une procédure pas à pas qui présente les concepts de base du C++développement d’applications UWP dans/CX. |
+|[Tutoriel : Créer une application UWP « Hello, World » dans C++/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Une procédure pas à pas qui présente les concepts de base du C++développement d’applications UWP dans/CX. |
 |[Création de composants Windows Runtime C++dans/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Décrit comment créer des dll que d’autres applications et composants UWP peuvent consommer.|
 |[Programmation de jeux UWP](/windows/uwp/gaming/)|Décrit comment utiliser DirectX et/CX C++pour créer des jeux.|
 

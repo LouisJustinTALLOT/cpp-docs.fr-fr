@@ -1,6 +1,7 @@
 ---
 title: _getcwd, _wgetcwd
-ms.date: 11/04/2016
+description: Fonctions de la bibliothèque Runtime C _getcwd, _wgetcwd obtient le répertoire de travail actuel.
+ms.date: 09/24/2019
 api_name:
 - _wgetcwd
 - _getcwd
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 78b02871aafca85db50df2eea74a2210c578c204
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 27cfdc1eb59c2de788bbe5963a6fccffcb62cba0
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955248"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274634"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -62,10 +63,10 @@ wchar_t *_wgetcwd(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*\
 Emplacement de stockage pour le chemin.
 
-*maxlen*<br/>
+*MaxLen*\
 Longueur maximale du chemin d’accès en caractères : **char** pour **_getcwd** et **wchar_t** pour **_wgetcwd**.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -78,7 +79,7 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 La fonction **_getcwd** obtient le chemin d’accès complet du répertoire de travail actuel pour le lecteur par défaut et le stocke au niveau de la *mémoire tampon*. L’argument entier *MaxLen* spécifie la longueur maximale du chemin d’accès. Une erreur se produit si la longueur du chemin d’accès (y compris le caractère null de fin) dépasse *MaxLen*. L’argument de *mémoire tampon* peut avoir la **valeur null**; une mémoire tampon d’une taille d’au moins *MaxLen* (plus uniquement si nécessaire) est allouée automatiquement, à l’aide de **malloc**, pour stocker le chemin d’accès. Cette mémoire tampon peut être libérée ultérieurement en appelant **Free** et en lui passant la valeur de retour **_getcwd** (un pointeur vers la mémoire tampon allouée).
 
-**_getcwd** retourne une chaîne qui représente le chemin d’accès du répertoire de travail actuel. Si le répertoire de travail actuel est la racine, la chaîne se termine par **\\** une barre oblique inverse (). Si le répertoire de travail actuel est un répertoire autre que la racine, la chaîne se termine par le nom du répertoire, et non pas par une barre oblique inverse.
+**_getcwd** retourne une chaîne qui représente le chemin d’accès du répertoire de travail actuel. Si le répertoire de travail actuel est la racine, la chaîne se termine par`\`une barre oblique inverse (). Si le répertoire de travail actuel est un répertoire autre que la racine, la chaîne se termine par le nom du répertoire, et non pas par une barre oblique inverse.
 
 **_wgetcwd** est une version à caractères larges de **_getcwd**; l’argument de *mémoire tampon* et la valeur de retour de **_wgetcwd** sont des chaînes à caractères larges. dans le cas contraire, **_wgetcwd** et **_getcwd** se comportent de la même façon.
 
@@ -103,26 +104,28 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ```C
 // crt_getcwd.c
+// Compile with: cl /W4 crt_getcwd.c
 // This program places the name of the current directory in the
 // buffer array, then displays the name of the current directory
 // on the screen. Passing NULL as the buffer forces getcwd to allocate
 // memory for the path, which allows the code to support file paths
 // longer than _MAX_PATH, which are supported by NTFS.
 
-#include <direct.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include <direct.h> // _getcwd
+#include <stdlib.h> // free, perror
+#include <stdio.h>  // printf
+#include <string.h> // strlen
 
 int main( void )
 {
    char* buffer;
 
    // Get the current working directory:
-   if( (buffer = _getcwd( NULL, 0 )) == NULL )
+   if ( (buffer = _getcwd( NULL, 0 )) == NULL )
       perror( "_getcwd error" );
    else
    {
-      printf( "%s \nLength: %d\n", buffer, strnlen(buffer) );
+      printf( "%s \nLength: %zu\n", buffer, strlen(buffer) );
       free(buffer);
    }
 }
@@ -134,7 +137,7 @@ C:\Code
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle de répertoire](../../c-runtime-library/directory-control.md)<br/>
-[_chdir, _wchdir](chdir-wchdir.md)<br/>
-[_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
-[_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>
+[Contrôle de répertoire](../../c-runtime-library/directory-control.md)\
+[_chdir, _wchdir](chdir-wchdir.md)\
+[_mkdir, _wmkdir](mkdir-wmkdir.md)\
+[_rmdir, _wrmdir](rmdir-wrmdir.md)
