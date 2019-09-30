@@ -10,37 +10,37 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: fa3d87e2cc17e297c3e6387920c6d527d8ddbe39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 997bfc0bda05f5a2520c102cb38777b533bcef95
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153409"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685776"
 ---
 # <a name="dialog-boxes-in-ole"></a>Boîtes de dialogue dans OLE
 
-Lorsqu’un utilisateur exécute une application prenant en charge OLE, voici les heures lorsque l’application a besoin d’informations à partir de l’utilisateur afin d’effectuer l’opération. Les classes OLE MFC fournissent un nombre de boîtes de dialogue pour recueillir les informations requises. Cette rubrique répertorie les tâches gérées par les boîtes de dialogue OLE et les classes nécessaires pour afficher ces boîtes de dialogue. Pour plus d’informations sur les boîtes de dialogue OLE et les structures utilisées pour personnaliser leur comportement, consultez [référence MFC](../mfc/mfc-desktop-applications.md).
+Lorsqu’un utilisateur exécute une application OLE, il peut arriver que l’application ait besoin d’informations de la part de l’utilisateur pour effectuer l’opération. Les classes OLE MFC fournissent un certain nombre de boîtes de dialogue pour recueillir les informations nécessaires. Cette rubrique répertorie les tâches gérées par les boîtes de dialogue OLE et les classes nécessaires à l’affichage de ces boîtes de dialogue. Pour plus d’informations sur les boîtes de dialogue OLE et les structures utilisées pour personnaliser leur comportement, consultez [MFC Reference](../mfc/mfc-desktop-applications.md).
 
 *Insérer un objet*<br/>
-Cette boîte de dialogue permet à l’utilisateur d’insérer nouvellement créés ou les objets existants dans le document composé. Il permet à l’utilisateur de choisir d’afficher l’élément sous forme d’icône et Active le bouton de commande Changer d’icône. Afficher cette boîte de dialogue lorsque l’utilisateur choisit d’insérer un objet dans le menu Edition. Utilisez le [classe COleInsertDialog](../mfc/reference/coleinsertdialog-class.md) classe pour afficher cette boîte de dialogue. Notez que vous ne pouvez pas insérer une application MDI en elle-même. Une application qui est conteneur/serveur ne peut pas être insérée dans elle-même à moins d'être une application SDI.
+Cette boîte de dialogue permet à l’utilisateur d’insérer des objets nouvellement créés ou existants dans le document composé. Il permet également à l’utilisateur de choisir d’afficher l’élément sous la forme d’une icône et active le bouton de commande modifier l’icône. Affichez cette boîte de dialogue lorsque l’utilisateur choisit insérer un objet dans le menu Edition. Utilisez la classe [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md) pour afficher cette boîte de dialogue. Notez que vous ne pouvez pas insérer une application MDI en elle-même. Une application qui est conteneur/serveur ne peut pas être insérée dans elle-même à moins d'être une application SDI.
 
 *Collage spécial*<br/>
-Cette boîte de dialogue permet à l’utilisateur contrôler le format utilisé lors du collage des données dans un document composé. L’utilisateur peut choisir le format des données, d’incorporer ou de lier les données et l’afficher sous forme d’icône. Afficher cette boîte de dialogue lorsque l’utilisateur choisit Collage spécial dans le menu Edition. Utilisez le [classe COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md) classe pour afficher cette boîte de dialogue.
+Cette boîte de dialogue permet à l’utilisateur de contrôler le format utilisé lors du collage de données dans un document composé. L’utilisateur peut choisir le format des données, s’il faut incorporer ou lier les données et s’il faut l’afficher sous forme d’icône. Affichez cette boîte de dialogue lorsque l’utilisateur choisit Collage spécial dans le menu Edition. Utilisez la classe [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md) pour afficher cette boîte de dialogue.
 
 *Changer d’icône*<br/>
-Cette boîte de dialogue permet à l’utilisateur sélectionner l’icône qui s’affiche pour représenter l’élément lié ou incorporé. Afficher cette boîte de dialogue lorsque l’utilisateur choisit de changer d’icône dans le menu Edition ou clique sur le bouton Changer d’icône dans le collage spécial ou convertir les boîtes de dialogue. Affichez-la également lorsque l’utilisateur ouvre la boîte de dialogue Insérer un objet et choisit afficher sous forme d’icône. Utilisez le [classe COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md) classe pour afficher cette boîte de dialogue.
+Cette boîte de dialogue permet à l’utilisateur de sélectionner l’icône qui est affichée pour représenter l’élément lié ou incorporé. Affichez cette boîte de dialogue lorsque l’utilisateur choisit modifier l’icône dans le menu Edition ou bien choisit le bouton modifier l’icône dans les boîtes de dialogue coller spécial ou convertir. Affichez-la également lorsque l’utilisateur ouvre la boîte de dialogue Insérer un objet et choisit afficher en tant qu’icône. Utilisez la classe [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md) pour afficher cette boîte de dialogue.
 
-*Convert*<br/>
-Cette boîte de dialogue permet à l’utilisateur modifier le type d’un élément incorporé ou lié. Par exemple, si vous avez incorporé un métafichier dans un document composé et que vous souhaitez utiliser une autre application pour modifier le métafichier incorporé plus tard, vous pouvez utiliser la boîte de dialogue Convertir. Cette boîte de dialogue s’affiche généralement en cliquant sur *type d’élément* objet dans le menu Edition, puis, dans le menu en cascade, puis sur Convertir. Utilisez le [classe COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) classe pour afficher cette boîte de dialogue. Pour obtenir un exemple, exécutez l’exemple OLE MFC [OCLIENT](../overview/visual-cpp-samples.md).
+*Passer*<br/>
+Cette boîte de dialogue permet à l’utilisateur de modifier le type d’un élément incorporé ou lié. Par exemple, si vous avez incorporé un métafichier dans un document composé et que vous souhaitez utiliser ultérieurement une autre application pour modifier le métafichier incorporé, vous pouvez utiliser la boîte de dialogue convertir. Pour afficher cette boîte de dialogue, dans le menu Edition, cliquez sur objet de *type d’élément* , puis, dans le menu en cascade, cliquez sur convertir. Utilisez la classe [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) pour afficher cette boîte de dialogue. Pour obtenir un exemple, exécutez l’exemple MFC OLE [OCLIENT](../overview/visual-cpp-samples.md).
 
-*Modifier les liens ou les liens de la mise à jour*<br/>
-La boîte de dialogue Modifier les liens permet à l’utilisateur modifier les informations sur la source d’un objet lié. La boîte de dialogue Mise à jour vérifie les sources de tous les éléments liés dans la boîte de dialogue et affiche la boîte de dialogue Modifier les liens si nécessaire. Afficher la boîte de dialogue Modifier les liens quand l’utilisateur choisit les liens dans le menu Edition. La boîte de dialogue Mise à jour s’affiche généralement lors de la première ouverture d’un document composé. Utilisez le [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) ou [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) class, selon quelle boîte de dialogue que vous souhaitez afficher.
+*Modifier les liens ou mettre à jour les liens*<br/>
+La boîte de dialogue Modifier les liens permet à l’utilisateur de modifier les informations relatives à la source d’un objet lié. La boîte de dialogue mettre à jour les liens vérifie les sources de tous les éléments liés dans la boîte de dialogue active et affiche la boîte de dialogue Modifier les liens si nécessaire. Affiche la boîte de dialogue Modifier les liens lorsque l’utilisateur choisit des liens dans le menu Edition. La boîte de dialogue mettre à jour les liens s’affiche généralement lorsqu’un document composé est ouvert pour la première fois. Utilisez la classe [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) ou [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) , selon la boîte de dialogue que vous souhaitez afficher.
 
-*Serveur occupé ou le serveur ne répond ne pas*<br/>
-La boîte de dialogue serveur occupé s’affiche lorsque l’utilisateur tente d’activer un élément et le serveur est actuellement incapable de traiter la demande, généralement parce que le serveur est en cours d’utilisation par un autre utilisateur ou de tâches. La boîte de dialogue serveur ne répond pas s’affiche si le serveur ne répond pas du tout à la demande d’activation. Ces boîtes de dialogue sont affichées `COleMessageFilter`, en se basant sur une implémentation de l’interface OLE `IMessageFilter`, et l’utilisateur peut décider s’il faut tenter à nouveau de la demande d’activation. Utilisez le [classe COleBusyDialog](../mfc/reference/colebusydialog-class.md) classe pour afficher cette boîte de dialogue.
+*Serveur occupé ou serveur ne répond pas*<br/>
+La boîte de dialogue serveur occupé s’affiche lorsque l’utilisateur tente d’activer un élément et que le serveur ne parvient pas à traiter la demande, généralement parce que le serveur est en cours d’utilisation par un autre utilisateur ou une autre tâche. La boîte de dialogue le serveur ne répond pas s’affiche si le serveur ne répond pas du tout à la demande d’activation. Ces boîtes de dialogue sont affichées via `COleMessageFilter`, en fonction d’une implémentation de l’interface OLE `IMessageFilter`, et l’utilisateur peut décider s’il faut retenter la demande d’activation. Utilisez la classe [COleBusyDialog](../mfc/reference/colebusydialog-class.md) pour afficher cette boîte de dialogue.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Boîtes de dialogue](../mfc/dialog-boxes.md)<br/>
-[Cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Utilisation des boîtes de dialogue dans MFC](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [OLE](../mfc/ole-in-mfc.md)

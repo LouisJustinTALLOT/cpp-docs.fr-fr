@@ -8,26 +8,26 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], displaying
 ms.assetid: 1c5219ee-8b46-44bc-9708-83705d4f248b
-ms.openlocfilehash: e0b7ff31576b345ac2911e62a6e10469845eecba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d23e4d2c9249ce248eb8092963036f2ba5cacac
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175028"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685738"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Création et affichage de boîtes de dialogue
 
-Création d’un objet de la boîte de dialogue est une opération en deux phases. Tout d’abord, construisez l’objet de la boîte de dialogue, puis créer la fenêtre de la boîte de dialogue. Boîtes de dialogue modales et non modales diffèrent légèrement dans le processus utilisé pour créer et de les afficher. Le tableau suivant répertorie comment modales et non modales boîtes de dialogue sont normalement construites et affichées.
+La création d’un objet de boîte de dialogue est une opération en deux phases. Tout d’abord, construisez l’objet Dialog, puis créez la fenêtre de dialogue. Les boîtes de dialogue modales et non modales diffèrent quelque peu dans le processus utilisé pour les créer et les afficher. Le tableau suivant indique comment les boîtes de dialogue modales et non modales sont normalement construites et affichées.
 
-### <a name="dialog-creation"></a>Création de la boîte de dialogue
+### <a name="dialog-creation"></a>Création de dialogue
 
-|Type de la boîte de dialogue|Méthode de création|
+|Type de dialogue|Comment le créer|
 |-----------------|----------------------|
-|[Non modal](../mfc/creating-modeless-dialog-boxes.md)|Construire `CDialog`, puis appelez `Create` fonction membre.|
-|[Modal](../mfc/creating-modal-dialog-boxes.md)|Construire `CDialog`, puis appelez `DoModal` fonction membre.|
+|[Non modale](../mfc/creating-modeless-dialog-boxes.md)|Construisez `CDialog`, puis appelez la fonction membre `Create`.|
+|[Exigeant](../mfc/creating-modal-dialog-boxes.md)|Construisez `CDialog`, puis appelez la fonction membre `DoModal`.|
 
-Vous pouvez, si vous le souhaitez, votre boîte de dialogue Créer à partir d’un [modèle de boîte de dialogue en mémoire](../mfc/using-a-dialog-template-in-memory.md) que vous avez construit plutôt qu’à partir d’une ressource de modèle de boîte de dialogue. Il s’agit toutefois une rubrique avancée.
+Si vous le souhaitez, vous pouvez créer votre boîte de dialogue à partir d’un [modèle de boîte de dialogue en mémoire](../mfc/using-a-dialog-template-in-memory.md) que vous avez construit plutôt qu’à partir d’une ressource de modèle de boîte de dialogue. Il s’agit toutefois d’une rubrique avancée.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)
+[Utilisation des boîtes de dialogue dans MFC](../mfc/life-cycle-of-a-dialog-box.md)

@@ -9,30 +9,30 @@ helpviewer_keywords:
 - resources [MFC], creating dialog boxes
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 0b83bd33-14d3-4611-8129-fccdae18053e
-ms.openlocfilehash: d0df76c506d4e6f2267e3a7628825e7b47a56c8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1e6c81a0f4bd6983c2a76baf6148941a4fa21d
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242326"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685642"
 ---
 # <a name="creating-the-dialog-resource"></a>Création des ressources de boîte de dialogue
 
-À la conception de la [boîte de dialogue](../mfc/dialog-boxes.md) et créer la ressource de boîte de dialogue, vous utilisez le [éditeur de boîte de dialogue](../windows/dialog-editor.md). Dans l’éditeur de boîtes de dialogue, vous pouvez :
+Pour concevoir la [boîte de dialogue](../mfc/dialog-boxes.md) et créer la ressource de boîte de dialogue, vous utilisez l' [éditeur de boîtes](../windows/dialog-editor.md)de dialogue. Dans l’éditeur de boîtes de dialogue, vous pouvez :
 
-- Ajuster la taille et l’emplacement de que votre boîte de dialogue aura lorsqu’il apparaît.
+- Ajustez la taille et l’emplacement de votre boîte de dialogue lorsqu’elle s’affiche.
 
-- Différents types de contrôles à partir d’une palette de contrôles glisser -déplacer les où vous le souhaitez dans la boîte de dialogue.
+- Faites glisser différents genres de contrôles à partir d’une palette de contrôles et déposez-les là où vous le souhaitez dans la boîte de dialogue.
 
-- Positionner les contrôles avec des boutons d’alignement sur la barre d’outils.
+- Placez les contrôles à l’aide des boutons d’alignement sur la barre d’outils.
 
-- Tester votre boîte de dialogue en simulant l’apparence et le comportement dans votre programme. En mode Test, vous pouvez manipuler les contrôles de la boîte de dialogue en tapant du texte dans les zones de texte, en cliquant sur les boutons de commande et ainsi de suite.
+- Testez votre boîte de dialogue en simulant l’apparence et le comportement de votre programme. En mode test, vous pouvez manipuler les contrôles de la boîte de dialogue en tapant du texte dans les zones de texte, en cliquant sur les boutons de commande, et ainsi de suite.
 
-Lorsque vous avez terminé, votre ressource de modèle est stocké dans le fichier de script de ressources de votre application. Vous pouvez la modifier ultérieurement si nécessaire. Pour obtenir une description complète de la création et de modifier des ressources de la boîte de dialogue, consultez la [éditeur de boîte de dialogue](../windows/dialog-editor.md) rubriques. Cette technique est également utilisée pour créer les ressources de modèle de boîte de dialogue de [CFormView](../mfc/reference/cformview-class.md) et [CRecordView](../mfc/reference/crecordview-class.md) classes.
+Lorsque vous avez terminé, votre ressource de modèle de boîte de dialogue est stockée dans le fichier de script de ressources de votre application. Vous pouvez le modifier ultérieurement si nécessaire. Pour obtenir une description complète de la façon de créer et de modifier des ressources de boîte de dialogue, consultez les rubriques de l' [éditeur de boîtes de dialogue](../windows/dialog-editor.md) . Cette technique est également utilisée pour créer les ressources de modèle de boîte de dialogue pour les classes [CFormView](../mfc/reference/cformview-class.md) et [CRecordView](../mfc/reference/crecordview-class.md) .
 
-Lors de l’apparence de la boîte de dialogue vous convient le mieux, créez une classe de boîte de dialogue et mappez ses messages, comme indiqué dans [création d’une classe de boîte de dialogue avec les Assistants Code](../mfc/creating-a-dialog-class-with-code-wizards.md).
+Lorsque l’apparence de la boîte de dialogue vous convient, créez une classe de boîte de dialogue et mappez ses messages, comme décrit dans [création d’une classe de boîte de dialogue avec des assistants de code](../mfc/creating-a-dialog-class-with-code-wizards.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Boîtes de dialogue](../mfc/dialog-boxes.md)<br/>
-[Cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)
+[Utilisation des boîtes de dialogue dans MFC](../mfc/life-cycle-of-a-dialog-box.md)
