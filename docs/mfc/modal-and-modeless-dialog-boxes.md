@@ -7,34 +7,34 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: c3a5263736324d7fe25066e8879d13b3a41768de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 886229a2b66968bf76129ecb1da838bd36e66215
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238409"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685181"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>Boîtes de dialogue modales et non modales
 
 Vous pouvez utiliser la classe [CDialog](../mfc/reference/cdialog-class.md) pour gérer deux types de boîtes de dialogue :
 
-- *Boîtes de dialogue modales*, ce qui oblige l’utilisateur à répondre avant de poursuivre le programme
+- *Boîtes de dialogue modales*, qui requièrent que l’utilisateur réponde avant de poursuivre le programme
 
-- *Boîtes de dialogue non modale*, qui restent sur l’écran et sont disponibles pour une utilisation à tout moment, mais autoriser d’autres activités des utilisateurs
+- *Boîtes de dialogue non modales*, qui restent à l’écran et peuvent être utilisées à tout moment, mais permettent à d’autres activités de l’utilisateur
 
 La modification des ressources et les procédures de création d’un modèle de boîte de dialogue sont les mêmes pour les boîtes de dialogue modales et non modales.
 
-Création d’une boîte de dialogue pour votre programme, effectuez les étapes suivantes :
+La création d’une boîte de dialogue pour votre programme requiert les étapes suivantes :
 
-1. Utilisez le [éditeur de boîte de dialogue](../windows/dialog-editor.md) pour concevoir la boîte de dialogue et créer sa ressource modèle de boîte de dialogue.
+1. Utilisez l' [éditeur de boîtes](../windows/dialog-editor.md) de dialogue pour concevoir la boîte de dialogue et créer sa ressource de modèle de boîte de dialogue.
 
-1. Créez une classe de boîte de dialogue.
+1. Créer une classe de dialogue.
 
-1. Connecter le [des contrôles de la ressource de la boîte de dialogue pour les gestionnaires de messages](../windows/adding-event-handlers-for-dialog-box-controls.md) dans la classe de boîte de dialogue.
+1. Connectez les [contrôles de la ressource de boîte de dialogue aux gestionnaires de messages](../windows/adding-event-handlers-for-dialog-box-controls.md) dans la classe dialog.
 
-1. Ajouter des membres de données associées aux contrôles de la boîte de dialogue et spécifier [échange de données de boîtes de dialogue](../mfc/dialog-data-exchange.md) et [des validations de données de boîte de dialogue](../mfc/dialog-data-validation.md) pour les contrôles.
+1. Ajoutez des membres de données associés aux contrôles de la boîte de dialogue et spécifiez les [validations](../mfc/dialog-data-validation.md) d' [échange de données](../mfc/dialog-data-exchange.md) de boîtes de dialogue et de boîtes de dialogue pour les contrôles.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Boîtes de dialogue](../mfc/dialog-boxes.md)<br/>
-[Cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)
+[Utilisation des boîtes de dialogue dans MFC](../mfc/life-cycle-of-a-dialog-box.md)

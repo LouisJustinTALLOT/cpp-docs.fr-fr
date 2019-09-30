@@ -5,19 +5,19 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], closing
 - dialog boxes [MFC], closing
 ms.assetid: 946f5675-c482-46a4-a5dd-34fe138ffae5
-ms.openlocfilehash: 07e4159eccde1fab89d4a5ffadee4e6d11fc20f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48ea954552b3ea9aa7193a47fc2a66d731312d77
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326844"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685372"
 ---
 # <a name="closing-the-dialog-box"></a>Fermeture de la boîte de dialogue
 
-Une boîte de dialogue modale se ferme lorsque l’utilisateur choisit l’un de ses boutons, généralement le bouton OK ou annuler. En choisissant le bouton OK ou Annuler entraîne Windows envoyer l’objet de la boîte de dialogue un **BN_CLICKED** message de notification de contrôle avec le bouton ID de l’élément, soit **IDOK** ou **IDCANCEL**. `CDialog` Fournit des fonctions de gestionnaire par défaut pour ces messages : `OnOK` et `OnCancel`. L’appel de gestionnaires par défaut le `EndDialog` fonction membre pour fermer la boîte de dialogue. Vous pouvez également appeler `EndDialog` à partir de votre propre code. Pour plus d’informations, consultez le [EndDialog](../mfc/reference/cdialog-class.md#enddialog) fonction membre de classe `CDialog` dans le *référence MFC*.
+Une boîte de dialogue modale se ferme lorsque l’utilisateur choisit l’un de ses boutons, généralement le bouton OK ou annuler. Si vous choisissez le bouton OK ou annuler, Windows envoie l’objet de boîte de dialogue à un message de notification de contrôle **BN_CLICKED** avec l’ID du bouton, **IDOK** ou **IDCANCEL**. `CDialog` fournit des fonctions de gestionnaire par défaut pour ces messages : `OnOK` et `OnCancel`. Les gestionnaires par défaut appellent la fonction membre `EndDialog` pour fermer la fenêtre de dialogue. Vous pouvez également appeler `EndDialog` à partir de votre propre code. Pour plus d’informations, consultez la fonction membre [EndDialog](../mfc/reference/cdialog-class.md#enddialog) de la classe `CDialog` dans la *référence MFC*.
 
-Pour réorganiser pour clôture et suppression d’une boîte de dialogue non modale, vous devez substituer `PostNcDestroy` et appeler le **supprimer** opérateur sur le **cela** pointeur. [Destruction de la boîte de dialogue](../mfc/destroying-the-dialog-box.md) explique ce qui se passe ensuite.
+Pour organiser la fermeture et la suppression d’une boîte de dialogue non modale, substituez `PostNcDestroy` et appelez l’opérateur **Delete** sur le pointeur **This** . [La destruction de la boîte de dialogue](../mfc/destroying-the-dialog-box.md) explique ce qui se passe ensuite.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)
+[Utilisation des boîtes de dialogue dans MFC](../mfc/life-cycle-of-a-dialog-box.md)

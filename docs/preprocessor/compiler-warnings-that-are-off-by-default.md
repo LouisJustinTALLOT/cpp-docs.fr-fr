@@ -5,16 +5,16 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: d497886b22c7a90ab7cda47e46dc13daf297b192
-ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
+ms.openlocfilehash: ac6ad3b5bbe5f3a738dc0019a43ff08a17cf27ca
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314460"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685718"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avertissements du compilateur désactivés par défaut
 
-Le compilateur prend en charge les avertissements qui sont désactivés par défaut, car la plupart des développeurs ne les trouvent pas utiles. Dans certains cas, ils signalent un choix stylistique ou des idiomes courants dans du code plus ancien. D’autres avertissements concernent l’utilisation d’une extension Microsoft pour le langage. Dans d’autres cas, elles indiquent une zone dans laquelle les programmeurs font souvent des hypothèses incorrectes, ce qui peut entraîner un comportement inattendu ou non défini. S’il est activé, certains de ces avertissements peuvent apparaître plusieurs fois dans les en-têtes de la bibliothèque. Les bibliothèques Runtime C et les C++ bibliothèques standard sont destinées à émettre aucun avertissement uniquement au niveau d’avertissement [/W4](../build/reference/compiler-option-warning-level.md).
+Le compilateur prend en charge les avertissements qui sont désactivés par défaut, car la plupart des développeurs ne les trouvent pas utiles. Dans certains cas, ils signalent un choix stylistique ou des idiomes courants dans du code plus ancien. D’autres avertissements concernent l’utilisation d’une extension Microsoft pour le langage. Certains avertissements indiquent une zone dans laquelle les programmeurs font souvent des hypothèses incorrectes, ce qui peut entraîner un comportement inattendu ou non défini. Si tous ces avertissements sont activés, certains d’entre eux peuvent apparaître plusieurs fois dans les en-têtes de bibliothèque. Les bibliothèques Runtime C et les C++ bibliothèques standard sont destinées à émettre aucun avertissement uniquement au niveau d’avertissement [/W4](../build/reference/compiler-option-warning-level.md).
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>Activer les avertissements qui sont désactivés par défaut
 
@@ -89,7 +89,7 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |C4587 (niveau 1)|'*anonymous_structure*' : changement de comportement : le constructeur n’est plus appelé de manière implicite|
 |C4588 (niveau 1)|'*anonymous_structure*' : changement de comportement : le destructeur n’est plus appelé de manière implicite|
 |[C4596](../error-messages/compiler-warnings/c4596.md) (niveau 4)|'*identificateur*' : nom qualifié non conforme dans la déclaration de membre <sup>14,3</sup> <sup>Perm</sup>|
-|C4598 (niveau 1 et niveau 3)|« #include »*en-tête*«» : le *numéro* du numéro d’en-tête dans l’en-tête précompilé ne correspond pas à la compilation actuelle à cette position <sup>14,3</sup>|
+|C4598 (niveau 1 et niveau 3)|*en-* tête « #include » «» : le numéro d’en- *tête* du numéro d’en-tête dans l’en-tête précompilé ne correspond pas à la compilation actuelle à cette position <sup>14,3</sup>|
 |C4599 (niveau 3)|'*option* *path*' : le numéro d’argument de ligne de commande ne correspond pas au *nombre* d’en-tête précompilé <sup>14,3</sup>|
 |C4605 (niveau 1)|'/D*macro*'spécifié sur la ligne de commande actuelle, mais n’a pas été spécifié quand l’en-tête précompilé a été généré|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (niveau 3)|'*union_member*'a déjà été initialisé par un autre membre Union dans la liste d’initialiseurs, '*union_member*' <sup>Perm</sup>|
@@ -108,7 +108,7 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (niveau 1)|'*fonction*' : la signature d’un membre non privé contient un type natif privé d’assembly'*NATIVE_TYPE*'|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (niveau 4)|'*fonction*' : fonction non inline|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (niveau 3)|stockage de résultat flottant 32 bits en mémoire, perte possible de performances|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|l’accès volatile de'*expression*'est soumis au paramètre\</volatile&#124;: ISO MS >; envisagez d’utiliser des fonctions intrinsèques __iso_volatile_load/Store|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|l’accès volatile de'*expression*'est soumis au paramètre/volatile : @no__t&#124;-1ISO MS >; envisagez d’utiliser des fonctions intrinsèques __iso_volatile_load/Store|
 |C4749 (niveau 4)|pris en charge de manière conditionnelle : OffsetOf appliqué au type de disposition non standard'*type*'|
 |C4767 (niveau 4)|le nom de section'*symbol*'comporte plus de 8 caractères et sera tronqué par l’éditeur de liens|
 |C4768 (niveau 3)|les attributs _ _ declspec avant la spécification de liaison sont ignorés|
@@ -142,15 +142,22 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |C5029 (niveau 4)|extension non standard utilisée : les attributs d' C++ alignement dans s’appliquent aux variables, aux données membres et aux types de balises uniquement|
 |C5031 (niveau 4)|#pragma avertissement (POP) : incompatibilité probable, état d’avertissement envoyé dans un autre fichier <sup>14,1</sup>|
 |C5032 (niveau 4)|alerte de #pragma détectée (push) sans avertissement de #pragma correspondant (POP) <sup>14,1</sup>|
-|C5034|l’utilisation de'*intrinsic*'intrinsèque entraîne la compilation de la *fonction* de fonction en tant que code invité <sup>15,3</sup>|
-|C5035|l’utilisation de la fonctionnalité «*fonctionnalité*» entraîne la compilation de la *fonction* de fonction en tant que code invité <sup>15,3</sup>|
+|C5034|l’utilisation de «*intrinsic*» intrinsèque entraîne la compilation de la fonction function *-Name* en tant que code invité <sup>15,3</sup>|
+|C5035|l’utilisation de la fonctionnalité «*fonctionnalité*» entraîne la compilation de la fonction function *-Name* en tant que code invité <sup>15,3</sup>|
 |C5036 (niveau 1)|conversion du pointeur de fonction VarArgs lors de la compilation avec/Hybrid : x86arm64, '*type1*'en'*type2*' <sup>15,3</sup>|
 |[C5038](../error-messages/compiler-warnings/c5038.md) (niveau 4)|le membre de données'*membre1*'sera initialisé après le membre de données'*membre2*' <sup>15,3</sup>|
 |C5039 (niveau 4)|'*fonction*' : pointeur ou référence à une fonction de déclenchement potentiellement passée à une fonction C extern sous-EHC. Un comportement non défini peut se produire si cette fonction lève une exception. <sup>15.5</sup>|
 |C5042 (niveau 3)|'*fonction*' : les déclarations de fonction au niveau de la portée de bloc ne peuvent pas C++être spécifiées’inline’en standard ; supprimer le spécificateur’inline' <sup>15,5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Le compilateur insère l’atténuation spectre pour la charge de mémoire si le commutateur/Qspectre spécifié <sup>15,7</sup>|
 
-<sup>14,1</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 1.\\ <sup>14,3</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 3.\\ <sup>15,3</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,3.\\ <sup>15,5</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,5.\\ <sup>15,7</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,7.\\ <sup>15,8</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,8.\\ <sup>16,0</sup> cet avertissement est disponible à partir de Visual Studio 2019 RTM.\\ <sup></sup> Autorisation Cet avertissement est désactivé, sauf si l’option du compilateur [/permissive-](../build/reference/permissive-standards-conformance.md) est définie.
+<sup>14,1</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 1. <br/>
+<sup>14,3</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 3. <br/>
+<sup>15,3</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,3. <br/>
+<sup>15,5</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,5. <br/>
+<sup>15,7</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,7. <br/>
+<sup>15,8</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,8. <br/>
+<sup>16,0</sup> cet avertissement est disponible à partir de Visual Studio 2019 RTM. <br/>
+<sup></sup> Autorisation Cet avertissement est désactivé, sauf si l’option du compilateur [/permissive-](../build/reference/permissive-standards-conformance.md) est définie.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avertissements désactivés par défaut dans les versions antérieures
 

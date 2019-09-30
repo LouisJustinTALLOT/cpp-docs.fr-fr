@@ -7,17 +7,17 @@ helpviewer_keywords:
 - dialog templates [MFC], in memory
 - MFC dialog boxes [MFC], dialog templates
 ms.assetid: edb443bb-e614-4f77-8a3b-74d93871e9bd
-ms.openlocfilehash: de694f6561dfe1423c7758ae572ccf6be1c8fd17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7250ea628f371cac16e0a34e81d8bab0828db73e
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180555"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685032"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Utilisation d'un modèle de boîte de dialogue en mémoire
 
-Au lieu d’utiliser les méthodes indiquées par le [table de la création de la boîte de dialogue](../mfc/creating-a-dialog-class-with-code-wizards.md), vous pouvez créer indirectement un de ces types de boîte de dialogue à partir d’un modèle de boîte de dialogue en mémoire. Pour plus d’informations, consultez la classe [CDialog](../mfc/reference/cdialog-class.md) dans le *référence MFC*.
+Au lieu d’utiliser les méthodes indiquées dans le [tableau de création de boîte de dialogue](../mfc/creating-a-dialog-class-with-code-wizards.md), vous pouvez créer un type de boîte de dialogue indirectement à partir d’un modèle de boîte de dialogue en mémoire. Pour plus d’informations, consultez la classe [CDialog](../mfc/reference/cdialog-class.md) dans la *référence MFC*.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)
+[Utilisation des boîtes de dialogue dans MFC](../mfc/life-cycle-of-a-dialog-box.md)

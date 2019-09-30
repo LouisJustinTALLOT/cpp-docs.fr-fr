@@ -10,19 +10,19 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], destroying
 - modal dialog boxes [MFC], destroying
 ms.assetid: dabceee7-3639-4d85-bf34-73515441b3d0
-ms.openlocfilehash: 84ae5b336bb8eeac4f8ab7b6e5b9f00246f9ca15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b407c6e832dde7a5865146e7cc12d1840d3234a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254304"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685846"
 ---
 # <a name="destroying-the-dialog-box"></a>Destruction de la boîte de dialogue
 
-Boîtes de dialogue modales sont normalement créés sur le frame de pile et détruits à la fin de la fonction qui les a créés. Destructeur de l’objet de la boîte de dialogue est appelé lorsque l’objet est hors de portée.
+Les boîtes de dialogue modales sont normalement créées sur le frame de pile et détruites lorsque la fonction qui les a créées se termine. Le destructeur de l’objet Dialog est appelé lorsque l’objet est hors de portée.
 
-Boîtes de dialogue non modales sont généralement créés et détenus par une fenêtre d’affichage ou le frame parent : fenêtre frame principale de l’application ou une fenêtre frame de document. La valeur par défaut [OnClose](../mfc/reference/cwnd-class.md#onclose) appels du gestionnaire [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow), qui détruit la fenêtre de la boîte de dialogue. Si la boîte de dialogue est autonome, aucun pointeur ou autres sémantiques d’appartenance particulières, vous devez substituer [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) pour détruire l’objet de la boîte de dialogue C++. Vous devez également substituer [OnCancel](../mfc/reference/cdialog-class.md#oncancel) et appelez `DestroyWindow` à partir de qu’il contient. Si ce n’est pas le cas, le propriétaire de la boîte de dialogue doit détruire l’objet C++ lorsqu’il n’est plus nécessaire.
+Les boîtes de dialogue non modales sont normalement créées et détenues par une fenêtre frame ou une vue parente : la fenêtre frame principale de l’application ou une fenêtre frame de document. Le gestionnaire [OnClose](../mfc/reference/cwnd-class.md#onclose) par défaut appelle [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow), qui détruit la fenêtre de la boîte de dialogue. Si la boîte de dialogue est autonome, sans aucun pointeurs ni aucune autre sémantique de propriété spéciale, vous devez remplacer [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) pour détruire l' C++ objet de boîte de dialogue. Vous devez également remplacer [OnCancel](../mfc/reference/cdialog-class.md#oncancel) et appeler `DestroyWindow` à partir de celui-ci. Si ce n’est pas le cas, le propriétaire de la C++ boîte de dialogue doit détruire l’objet lorsqu’il n’est plus nécessaire.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)
+[Utilisation des boîtes de dialogue dans MFC](../mfc/life-cycle-of-a-dialog-box.md)

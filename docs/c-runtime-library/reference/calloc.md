@@ -1,6 +1,7 @@
 ---
 title: calloc
-ms.date: 11/04/2016
+description: La fonction de la bibliothèque Runtime C calloc alloue de la mémoire initialisée à zéro.
+ms.date: 09/27/2019
 api_name:
 - calloc
 api_location:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: ba498b35106f9ff1636bb1bc0764088a434b5b01
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 228ec6d01a6f57ff98a9030f5a6d82e4c57388cd
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939335"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685369"
 ---
 # <a name="calloc"></a>calloc
 
@@ -40,7 +41,7 @@ Alloue un tableau dans la mémoire avec des éléments initialisés à 0.
 
 ```C
 void *calloc(
-   size_t num,
+   size_t number,
    size_t size
 );
 ```
@@ -63,17 +64,19 @@ La fonction **calloc** alloue de l’espace de stockage pour un tableau d’él�
 
 **calloc** affecte à **errno** la valeur **ENOMEM** si l’allocation de mémoire échoue ou si la quantité de mémoire demandée dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ce code d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**calloc** appelle **malloc** pour utiliser la C++ fonction [_set_new_mode](set-new-mode.md) pour définir le nouveau mode de gestionnaire. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, lorsque **calloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que le **nouvel** opérateur lorsqu’il échoue pour la même raison. Pour remplacer la valeur par défaut, appelez
+Dans l’implémentation Microsoft, si le *nombre* ou la *taille* est égal à zéro, **calloc** retourne un pointeur vers un bloc alloué d’une taille différente de zéro. Une tentative de lecture ou d’écriture dans le pointeur retourné provoque un comportement non défini.
+
+**calloc** utilise la C++ fonction [_set_new_mode](set-new-mode.md) pour définir le *nouveau mode de gestionnaire*. Le nouveau mode de gestionnaire indique si, en cas d’échec, **calloc** doit appeler la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **calloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, lorsque **calloc** ne parvient pas à allouer de la mémoire, il appelle la routine de nouveau gestionnaire de la même façon que le **nouvel** opérateur quand il échoue pour la même raison. Pour remplacer la valeur par défaut, appelez
 
 ```C
 _set_new_mode(1);
 ```
 
-au début de votre programme, ou créez un lien avec NEWMODE.OBJ (consultez [Options de lien](../../c-runtime-library/link-options.md)).
+tôt dans votre programme, ou lien avec *NEWMODE. OBJ* (consultez [options de liaison](../../c-runtime-library/link-options.md)).
 
 Lorsque l’application est liée à une version Debug des bibliothèques Runtime C, **calloc** est résolu en [_calloc_dbg](calloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**calloc** est marqué `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’a pas d’alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
+**calloc** est marqué `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction ne peut pas modifier les variables globales et que le pointeur retourné n’est pas un alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Configuration requise
 

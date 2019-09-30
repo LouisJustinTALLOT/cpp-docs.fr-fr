@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OnOK function
 - MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
-ms.openlocfilehash: f63dd6079b96181305f3207d4a1ef823df8d8ba4
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 51a647bb50415af71d6d148d3139f906f503ee2a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907690"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685815"
 ---
 # <a name="commonly-overridden-member-functions"></a>Fonctions membres couramment substituées
 
@@ -37,7 +37,7 @@ Le tableau suivant répertorie les fonctions membres les plus probables à subst
 
 `OnCancel`est généralement substitué pour les boîtes de dialogue non modales.
 
-Pour plus d’informations sur ces fonctions membres, consultez la classe [CDialog](../mfc/reference/cdialog-class.md) dans la *référence MFC* et la discussion sur le [cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md).
+Pour plus d’informations sur ces fonctions membres, consultez la classe [CDialog](../mfc/reference/cdialog-class.md) dans la *référence MFC* et la discussion sur l' [utilisation des boîtes de dialogue dans MFC](../mfc/life-cycle-of-a-dialog-box.md).
 
 ## <a name="see-also"></a>Voir aussi
 

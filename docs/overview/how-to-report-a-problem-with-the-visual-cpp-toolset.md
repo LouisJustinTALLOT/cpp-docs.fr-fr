@@ -1,15 +1,16 @@
 ---
 title: Guide pratique pour signaler un problème avec l’ensemble d’outils Microsoft C++
-ms.date: 06/21/2019
+description: Comment créer un rapport de problème et des informations de reproduction corrects C++ pour l’ensemble d’outils Microsoft.
+ms.date: 09/24/2019
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 13826349836e4c58b7d6a7ce8936186930bc7100
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
-ms.translationtype: HT
+ms.openlocfilehash: 350e902501aca5cbe2b4022ec1f977719844644b
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344381"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685701"
 ---
 # <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>Guide pratique pour signaler un problème avec la documentation ou l’ensemble d’outils Microsoft C++
 
@@ -317,9 +318,9 @@ Enfin, attachez à votre rapport les fichiers de reproduction prétraités (*fil
 
 ### <a name="link-repros"></a>Reproductions de liens
 
-Une *reproduction de lien* est le contenu généré par l’éditeur de liens d’un répertoire spécifié par la variable d’environnement **link\_repro**. Il contient des artefacts de build qui illustrent collectivement un problème qui se produit au moment de la liaison. Les exemples incluent un blocage de serveur principal impliquant la génération de code durant l’édition de liens (LTCG) ou un blocage de l’éditeur de liens. Ces artefacts de build sont ceux nécessaires comme entrée de l’éditeur de liens pour que le problème puisse être reproduit. Une reproduction de lien peut être créée facilement à l’aide de cette variable d’environnement. Elle active la fonctionnalité de génération de reproduction intégrée de l’éditeur de liens.
+Une *reproduction de lien* est le contenu généré par l’éditeur de liens d’un répertoire, spécifié par la variable d’environnement **Link @ no__t-2repro** ou en tant qu’argument de l’option de l’éditeur de liens [/LINKREPRO](../build/reference/linkrepro.md) . Il contient des artefacts de build qui illustrent collectivement un problème qui se produit au moment de la liaison. Les exemples incluent un blocage de serveur principal impliquant la génération de code durant l’édition de liens (LTCG) ou un blocage de l’éditeur de liens. Ces artefacts de build sont ceux qui sont nécessaires comme entrée de l’éditeur de liens pour que le problème puisse être reproduit. Une reproduction de lien peut être facilement créée à l’aide de cette variable d’environnement. Elle active la fonctionnalité de génération de reproduction intégrée de l’éditeur de liens.
 
-#### <a name="to-generate-a-link-repro"></a>Pour générer une reproduction de lien
+#### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>Pour générer une reproduction de lien à l’aide de la variable d’environnement LINK_REPRO
 
 1. Capturez les arguments de ligne de commande utilisés pour générer votre reproduction, comme décrit dans [Pour signaler le contenu de la ligne de commande](#to-report-the-contents-of-the-command-line).
 
@@ -327,9 +328,9 @@ Une *reproduction de lien* est le contenu généré par l’éditeur de liens d�
 
 1. Dans la fenêtre de console de l’invite de commandes développeur, accédez au répertoire qui contient votre projet de reproduction.
 
-1. Entrez **mkdir linkrepro** pour créer un répertoire dédié à la reproduction de lien.
+1. Entrez **mkdir linkrepro** pour créer un répertoire nommé *linkrepro* pour la reproduction de lien. Vous pouvez utiliser un autre nom pour capturer une autre reproduction de lien.
 
-1. Entrez la commande **set link\_repro=linkrepro** pour définir la variable d’environnement **link\_repro** sur le répertoire que vous avez créé. Si votre build s’exécute à partir d’un autre répertoire, comme cela est souvent le cas pour les projets plus complexes, affectez plutôt le chemin complet du répertoire linkrepro à **link\_repro**.
+1. Entrez la commande **set link\_repro=linkrepro** pour définir la variable d’environnement **link\_repro** sur le répertoire que vous avez créé. Si votre Build est exécutée à partir d’un autre répertoire, comme c’est souvent le cas pour des projets plus complexes, définissez plutôt **Link @ no__t-1repro** sur le chemin d’accès complet à votre répertoire de reproduction de lien.
 
 1. Pour générer le projet de reproduction dans Visual Studio, dans la fenêtre de la console de l’invite de commandes développeur, entrez la commande **devenv**. Cela garantit que la valeur de la variable d’environnement **link\_repro** est visible dans Visual Studio. Pour générer le projet sur la ligne de commande, utilisez les arguments de ligne de commande capturés au-dessus pour dupliquer la build de reproduction.
 
@@ -339,11 +340,23 @@ Une *reproduction de lien* est le contenu généré par l’éditeur de liens d�
 
 1. Dans la fenêtre de la console de l’invite de commandes développeur, entrez la commande **set link\_repro=** pour effacer la variable d’environnement **link\_repro**.
 
-Enfin, empaquetez la reproduction en compressant l’ensemble du répertoire linkrepro dans un fichier .zip ou similaire et attachez-la à votre rapport.
+Enfin, empaquetez la reproduction en compressant l’intégralité du répertoire linkrepro dans un fichier. zip ou similaire, et joignez-le à votre rapport.
+
+L’option de l’éditeur de liens **/LINKREPRO** a le même effet que la variable d’environnement **Link @ no__t-2repro** . Vous pouvez utiliser l’option [/LINKREPROTARGET](../build/reference/linkreprotarget.md) pour spécifier le nom du filtre pour la reproduction de lien générée. Pour utiliser **/LINKREPROTARGET**, vous devez également spécifier l’option **/out** de l’éditeur de liens.
+
+#### <a name="to-generate-a-link-repro-using-the-linkrepro-option"></a>Pour générer une reproduction de lien à l’aide de l’option/LINKREPRO
+
+1. Créez un répertoire pour contenir la reproduction de lien. Nous allons faire référence au chemin d’accès complet au répertoire que vous créez en tant que _chemin d’accès au répertoire_. Utilisez des guillemets doubles autour du chemin d’accès s’il contient des espaces.
+
+1. Ajoutez la commande **/LINKREPRO :** _Directory-Path_ à la ligne de commande de l’éditeur de liens. Dans Visual Studio, ouvrez la boîte de dialogue **pages de propriétés** de votre projet. Sélectionnez les **Propriétés de Configuration** > **éditeur de liens**@no__t page de propriétés ligne de**commande** -3. Ensuite, entrez l’option **/LINKREPRO :** _Directory-Path_ dans la zone **options supplémentaires** . Choisissez **OK** pour enregistrer vos modifications.
+
+1. Générez votre projet de reproduction et confirmez que le problème attendu s’est produit.
+
+Enfin, empaquetez la reproduction en compressant l’intégralité du répertoire de reproduction du lien de _chemin d’accès au répertoire_ dans un fichier. zip ou similaire, et joignez-le à votre rapport.
 
 ### <a name="other-repros"></a>Autres reproductions
 
-Si vous ne pouvez pas réduire le problème à un seul fichier source ou une reproduction prétraitée et que le problème ne nécessite pas une reproduction de lien, nous pouvons examiner un projet IDE. Tous les conseils sur la création d’une bonne reproduction s’appliquent toujours : Le code doit être minimaliste et autonome. Le problème doit se produire dans nos outils les plus récents et, le cas échéant, ne doit pas se produire dans d’autres compilateurs.
+Si vous ne pouvez pas réduire le problème à un fichier source unique ou à une reproduction prétraitée et que le problème ne nécessite pas de reproduction de lien, nous pouvons examiner un projet IDE. Tous les conseils sur la création d’une bonne reproduction s’appliquent toujours : Le code doit être minimaliste et autonome. Le problème doit se produire dans nos outils les plus récents et, le cas échéant, ne doit pas se produire dans d’autres compilateurs.
 
 Créez votre reproduction comme un projet IDE minimal, puis empaquetez-la en compressant l’intégralité de la structure de répertoire dans un fichier .zip ou similaire et attachez-la à votre rapport.
 
