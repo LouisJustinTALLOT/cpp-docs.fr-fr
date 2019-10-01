@@ -1,5 +1,5 @@
 ---
-title: /LINKREPROTARGET (nom du fichier de reproduction du lien)
+title: /LINKREPROTARGET (Lier le nom du fichier de reproduction)
 description: Option de l’éditeur de liens ou de l’outil bibliothèque pour définir un nom de fichier cible pour une reproduction de lien.
 ms.date: 09/24/2019
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - /LINKREPROTARGET linker option
 - -LINKREPROTARGET linker option
 - linker repro reporting
-ms.openlocfilehash: 4912e8bc64d31e3ecc97ea25783c7329e7d7861c
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: d629c4c2665239d03f38569677fa579b6c8d37e0
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686837"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712680"
 ---
-# <a name="linkreprotarget-link-repro-file-name"></a>/LINKREPROTARGET (nom du fichier de reproduction du lien)
+# <a name="linkreprotarget-link-repro-file-name"></a>/LINKREPROTARGET (Lier le nom du fichier de reproduction)
 
 Indique à l’éditeur de liens ou à l’outil de bibliothèque de générer une reproduction de lien uniquement lorsque la cible porte le nom de fichier spécifié.
 
@@ -38,6 +38,8 @@ L’option **/LINKREPROTARGET** est utile dans les builds complexes qui appellen
 Pour plus d’informations sur la façon et le moment de créer une reproduction de lien, consultez la section relative aux reproductions de [liens](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md#link-repros) dans Guide pratique [pour signaler un problème avec l’ensemble d’outils Microsoft C++ ](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
 Les options **/LINKREPRO** et [/out](out-output-file-name.md) doivent être définies pour que l’option **/LINKREPROTARGET** ait un effet.
+
+**/LINKREPROTARGET** est disponible à partir de Visual Studio 2019 version 16,1.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
