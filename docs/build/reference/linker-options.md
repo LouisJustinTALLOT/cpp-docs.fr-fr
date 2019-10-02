@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 23cd1c3ce767cf8046e3439432db795f032dc370
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685584"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712700"
 ---
 # <a name="linker-options"></a>Options de l’éditeur de liens
 
@@ -88,7 +88,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|Indique au compilateur que l’application prend en charge les adresses supérieures à deux giga-octets|
 |[/LIBPATH](libpath-additional-libpath.md)|Spécifie un chemin d’accès pour effectuer la recherche avant le chemin d’accès de la bibliothèque d’environnement.|
 |[/LINKREPRO](linkrepro.md)|Spécifie un chemin d’accès pour générer des artefacts de reproduction de lien dans.|
-|[/LINKREPROTARGET](linkreprotarget.md)|Génère une reproduction de lien uniquement lors de la génération de la cible spécifiée.|
+|[/LINKREPROTARGET](linkreprotarget.md)|Génère une reproduction de lien uniquement lors de la génération de la cible spécifiée. <sup>16,1</sup>|
 |[/LTCG](ltcg-link-time-code-generation.md)|Spécifie la génération du code durant l’édition de liens.|
 |[/MACHINE](machine-specify-target-platform.md)|Spécifie la plateforme cible.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Crée un fichier manifeste côte à côte et l’incorpore éventuellement dans le fichier binaire.|
@@ -137,7 +137,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|Signe partiellement un fichier de métadonnées Windows Runtime (.winmd) en plaçant la clé publique dans le fichier winmd.|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|Traite les avertissements de l’éditeur de liens en tant qu’erreurs.|
 
-Pour plus d’informations, consultez [Compiler-Controlled LINK Options](compiler-controlled-link-options.md).
+<sup>16,1</sup> cette option est disponible à partir de Visual Studio 2019 version 16,1.
 
 ## <a name="see-also"></a>Voir aussi
 
