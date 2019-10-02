@@ -5,12 +5,12 @@ description: Microsoft C++ dans Visual Studio arrive progressivement à une con
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 4825317b07535d98b1b5db4442f935e9b2cfb632
-ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
+ms.openlocfilehash: 02cf57666c3bffd1adabb912f042f22b71e8d8f5
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314478"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816353"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Améliorations de la conformité de C++ dans Visual Studio
 
@@ -383,7 +383,7 @@ bool neq(const S& lhs, const S& rhs) {
 - [P0020R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html): Atomic\<float >, double\<> atomique, Atomic\<long double >
 - [P0463R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html): endian
 - [P0482R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html): Prise en charge de la bibliothèque pour char8_t
-- [P0600R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf): [\[noignore]] pour la bibliothèque STL, partie 1
+- [P0600R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf): [\[nodiscard]] pour la bibliothèque STL, partie 1
 - [P0653R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html): to_address ()
 - [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf): \<version >
 - [P0771R1](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0771r1.pdf): Noexcept pour le constructeur de déplacement de std :: function
@@ -392,7 +392,7 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="stream-extraction-operators-for-char-removed"></a>Opérateurs d’extraction de flux pour char * supprimés
 
-Les opérateurs d’extraction de flux de pointeur vers des caractères ont été supprimés et remplacés par les opérateurs d’extraction pour les tableaux de caractères (par [P0487R1](http://http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 considère que les surcharges supprimées sont risquées. En mode [/std : c + + le plus récent](../build/reference/std-specify-language-standard-version.md) , l’exemple suivant génère désormais *C2679 : Binary' > > ' : aucun opérateur trouvé qui accepte un opérande de partie droite de type\*'Char' (ou il n’y a pas de conversion acceptable)* :
+Les opérateurs d’extraction de flux de pointeur vers des caractères ont été supprimés et remplacés par les opérateurs d’extraction pour les tableaux de caractères (par [P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 considère que les surcharges supprimées sont risquées. En mode [/std : c + + le plus récent](../build/reference/std-specify-language-standard-version.md) , l’exemple suivant génère désormais *C2679 : Binary' > > ' : aucun opérateur trouvé qui accepte un opérande de partie droite de type\*'Char' (ou il n’y a pas de conversion acceptable)* :
 
 ```cpp
    char x[42];
