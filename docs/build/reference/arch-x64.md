@@ -1,22 +1,22 @@
 ---
 title: /arch (x64)
-ms.date: 11/04/2016
+ms.date: 10/01/2019
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
-ms.openlocfilehash: c515307ee3a49ef746eea939e90d7aecbd661b95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ade6d9f744339ebaf38981d81334340b56080cb
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295280"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816220"
 ---
 # <a name="arch-x64"></a>/arch (x64)
 
-Spécifie l'architecture pour la génération de code sur x64. Consultez également [/arch (x86)](arch-x86.md) et [/arch (ARM)](arch-arm.md).
+Spécifie l'architecture pour la génération de code sur x64. Consultez également [/Arch (x86)](arch-x86.md) et [/Arch (ARM)](arch-arm.md).
 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-/arch:[AVX|AVX2]
+/arch:[AVX|AVX2|AVX512]
 ```
 
 ## <a name="arguments"></a>Arguments
@@ -27,21 +27,38 @@ Active l'utilisation des instructions Intel Advanced Vector Extensions.
 **/arch:AVX2**<br/>
 Active l’utilisation des instructions Intel Advanced Vector Extensions 2.
 
+**/Arch : AVX512**<br/>
+Active l’utilisation des instructions Intel Advanced Vector Extensions 512.
+
 ## <a name="remarks"></a>Notes
 
-**/ arch** uniquement affecte la génération pour les fonctions natives de code. Lorsque vous utilisez [/CLR](clr-common-language-runtime-compilation.md) à compiler, **/arch** n’a aucun effet sur la génération de code pour les fonctions managées.
+L’option **/ARCH** permet l’utilisation de certaines extensions de jeu d’instructions, en particulier pour le calcul de vecteurs, disponibles dans les processeurs d’Intel et AMD. En général, les processeurs plus récemment introduits peuvent prendre en charge des extensions supplémentaires par rapport à celles prises en charge par les anciens processeurs, même si vous devez consulter la documentation d’un processeur particulier ou tester la prise en charge d’extension de jeu d’instructions avec [_ _ CPUID](../../intrinsics/cpuid-cpuidex.md) avant d’exécuter du code à l’aide d’une extension de jeu d’instructions.
 
-Le `__AVX__` symbole de préprocesseur est défini lors de la **/arch : AVX** option du compilateur est spécifiée. Le `__AVX2__` symbole de préprocesseur est défini lors de la **/arch : avx2** option du compilateur est spécifiée. Pour plus d'informations, consultez [Predefined Macros](../../preprocessor/predefined-macros.md). Le **/arch : avx2** option a été introduite dans Visual Studio 2013 Update 2, version 12.0.34567.1.
+**/ARCH** affecte uniquement la génération de code pour les fonctions natives. Quand vous utilisez [/CLR](clr-common-language-runtime-compilation.md) pour compiler, **/ARCH** n’a aucun effet sur la génération de code pour les fonctions managées.
 
-### <a name="to-set-the-archavx-or-archavx2-compiler-option-in-visual-studio"></a>Pour définir l'option de compilateur /arch:AVX ou /arch:AVX2 dans Visual Studio
+Les extensions du processeur présentent les caractéristiques suivantes :
 
-1. Ouvrez le **Pages de propriétés** boîte de dialogue pour le projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+- Le mode par défaut utilise des instructions SSE2 pour les calculs à virgule flottante scalaire et les calculs de vecteur. Ces instructions permettent le calcul avec des vecteurs 128 bits de valeurs entières à simple précision, à double précision et à 1, 2, 4 ou 8 octets, ainsi que des valeurs à virgule flottante scalaires à simple précision et à double précision.
 
-1. Sélectionnez le **propriétés de Configuration**, **C/C++** dossier.
+- **AVX** a introduit un autre encodage d’instruction pour les instructions scalaires vectorielles et à virgule flottante qui autorisent les vecteurs de 128 bits ou 256 bits, et qui étend tous les résultats de vecteurs à la taille vectorielle complète. (Pour la compatibilité héritée, les instructions de Vector de style SSE préservent tous les bits au-delà du bit 127.) La plupart des opérations à virgule flottante sont étendues à 256 bits.
 
-1. Sélectionnez le **génération de Code** page de propriétés.
+- **AVX2** étend la plupart des opérations d’entiers aux vecteurs 256 bits et permet l’utilisation des instructions de multiplication-Add (FMA) fusionnées.
 
-1. Dans le **activer du jeu d’instructions amélioré** liste déroulante, sélectionnez **Advanced Vector Extensions (/ arch : AVX)** ou **Advanced Vector Extensions 2 (/ arch : AVX2)**.
+- **AVX-512** a introduit un autre formulaire d’encodage d’instruction qui autorise les vecteurs 512 bits, ainsi que certaines autres fonctionnalités facultatives. Des instructions relatives à des opérations supplémentaires ont également été ajoutées.
+
+Chaque option **/ARCH** peut également permettre l’utilisation d’autres instructions non vectorielles associées à cette option. Un exemple est l’utilisation de certaines instructions IMC quand **/arch : AVX2** est spécifié.
+
+Le symbole de préprocesseur `__AVX__` est défini quand l’option de compilateur **/arch : AVX**, **/arch : AVX2** ou **/arch : AVX512** est spécifiée. Le symbole de préprocesseur `__AVX2__` est défini quand l’option de compilateur **/arch : AVX2** ou **/arch : AVX512** est spécifiée. Les symboles de préprocesseur `__AVX512F__`, `__AVX512CD__`, `__AVX512BW__`, `__AVX512DQ__` et `__AVX512VL__` sont définis lorsque l’option de compilateur **/arch : AVX512** est spécifiée. Pour plus d'informations, consultez [Predefined Macros](../../preprocessor/predefined-macros.md). L’option **/arch : AVX2** a été introduite dans Visual Studio 2013 Update 2, version 12.0.34567.1. Prise en charge limitée de **/arch : AVX512** a été ajoutée dans visual studio 2017 et développée dans visual studio 2019.
+
+### <a name="to-set-the-archavx-archavx2-or-archavx512-compiler-option-in-visual-studio"></a>Pour définir l’option de compilateur/arch : AVX,/Arch : AVX2 ou/arch : AVX512 dans Visual Studio
+
+1. Ouvrez la boîte de dialogue **pages de propriétés** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
+
+1. Sélectionnez les **Propriétés de configuration**, **CC++ /** dossier.
+
+1. Sélectionnez la page de propriétés **génération de code** .
+
+1. Dans la zone de liste déroulante **activer le jeu d’instructions amélioré** , choisissez **Advanced Vector Extensions (/Arch : AVX)** et **Advanced Vector Extensions 2 (/Arch : AVX2)** ou **Advanced Vector Extensions 512 (/Arch : AVX512)** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 
