@@ -2,12 +2,12 @@
 title: Configurer un projet Linux C++ dans Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
-ms.translationtype: HT
+ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
+ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042635"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960665"
 ---
 # <a name="configure-a-linux-project"></a>Configurer un projet Linux
 
@@ -93,12 +93,6 @@ Lors de la génération sur des systèmes distants, les fichiers sources sur vot
 ![Événements de build](media/settings_buildevents.png)
 
 ## <a name="remote_intellisense"></a> IntelliSense pour les en-têtes sur les systèmes distants
-
-::: moniker range="vs-2019"
-
-Cette section ne s’applique pas quand vous ciblez WSL.
-
-::: moniker-end
 
 Quand vous ajoutez une nouvelle connexion dans le **Gestionnaire de connexions**, Visual Studio détecte automatiquement les répertoires include pour le compilateur sur le système distant. Visual Studio compresse ensuite ces fichiers et les copie dans un répertoire sur votre ordinateur Windows local. Après cela, chaque fois que vous utilisez cette connexion dans un projet Visual Studio ou CMake, les en-têtes dans ces répertoires sont utilisés pour fournir IntelliSense.
 
