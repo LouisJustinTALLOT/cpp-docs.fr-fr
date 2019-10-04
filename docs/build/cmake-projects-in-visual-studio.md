@@ -4,12 +4,12 @@ ms.date: 10/01/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 52ca34ef8522ada1881e2f7f5df212167c64c919
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: 168f5b0aac34757a9c2d73bcebc908a0d58721fe
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816536"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925569"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projets CMake dans Visual Studio
 
@@ -58,12 +58,6 @@ Si vous devez passer des arguments à un exécutable au moment du débogage, vou
 
 > [!NOTE]
 > Pour les autres types de projets de dossiers ouverts, deux fichiers JSON supplémentaires sont utilisés : **CppProperties. JSON** et **Tasks. vs. JSON**. Aucun des deux n’est pertinent pour les projets CMake.
-
-## <a name="import-an-existing-cache"></a>Importer un cache existant
-
-Quand vous importez un fichier CMakeCache.txt existant, Visual Studio extrait automatiquement des variables personnalisées à partir desquelles il crée un fichier **CMakeSettings.json** prérempli. Le cache d’origine n’est modifié en aucune façon et peut encore être utilisé à partir de la ligne de commande ou avec n’importe quel outil ou IDE qui a été utilisé pour sa génération. Le nouveau fichier **CMakeSettings. JSON** est placé à côté de la racine du projet fichier CMakeLists. txt. Visual Studio génère un nouveau cache en fonction du fichier de paramètres. Vous pouvez remplacer la génération automatique du cache dans la boîte de dialogue **outils > Options > CMake > général** .
-
-Le contenu du cache n’est pas importé en totalité. Des propriétés comme le générateur et l’emplacement des compilateurs sont remplacées par les valeurs par défaut qui fonctionnent avec l’IDE.
 
 ## <a name="open-an-existing-cache"></a>Ouvrir un cache existant
 
