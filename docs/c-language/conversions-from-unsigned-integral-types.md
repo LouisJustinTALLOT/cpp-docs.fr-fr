@@ -1,6 +1,6 @@
 ---
 title: Conversions depuis les types intégraux non signés
-ms.date: 03/27/2019
+ms.date: 10/02/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,67 +8,83 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 3f6136a721f84332451184baa648ebc7c909d5d7
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
-ms.translationtype: HT
+ms.openlocfilehash: 3099f0113103223e392dc20560899b4a6e3ebf20
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565020"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998792"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Conversions depuis les types intégraux non signés
 
-Un entier non signé est converti en entier non signé ou signé plus court en tronquant les bits de poids fort, ou en entier non signé ou signé plus long par extension zéro. Pour plus d’informations, consultez le tableau [Conversions depuis les types intégraux non signés](#conversions-from-unsigned-integral-types-table).
+Lorsqu’un entier non signé est converti en un type entier ou à virgule flottante, si la valeur d’origine est représentable dans le type de résultat, la valeur est inchangée.
 
-Lorsque la valeur ayant le type intégral est rétrogradée en entier signé plus petit, ou qu'un entier non signé est converti en son entier signé correspondant, la valeur est inchangée si elle peut être représentée dans le nouveau type. Toutefois, la valeur change si le bit de signe est défini, comme dans l'exemple suivant.
+Lors de la conversion d’un entier non signé en entier de plus grande taille, la valeur est étendue à zéro. Lors de la conversion en un entier de plus petite taille, les bits de poids fort sont tronqués. Le résultat est interprété à l’aide du type de résultat, comme indiqué dans cet exemple.
 
 ```C
-int j;
-unsigned short k = 65533;
+unsigned k = 65533;
+short j;
 
 j = k;
 printf_s( "%hd\n", j );   // Prints -3
 ```
 
-Si elle ne peut pas être représentée, le résultat est défini par l'implémentation. Consultez [Conversions de cast de type](../c-language/type-cast-conversions.md) pour obtenir plus d'informations sur la façon dont le compilateur Microsoft C gère la rétrogradation des entiers. La conversion en entier ou la conversion de type de l'entier provoque le même comportement.
+Lors de la conversion d’un entier non signé en type à virgule flottante, si la valeur d’origine ne peut pas être représentée exactement dans le type de résultat, le résultat est la valeur représentable supérieure ou inférieure suivante.
 
-Les valeurs non signées sont converties de manière à conserver leur valeur et ne sont pas représentables directement en C. La seule exception est une conversion **d’unsigned long** en **float** qui, au maximum, perd les bits de poids faible. Sinon, la valeur est conservée, signée ou non signée. Lorsqu'une valeur de type intégral est convertie en valeur flottante et que la valeur est en dehors de la plage qui peut être représentée, le résultat n'est pas défini. (Consultez [Stockage des types de base](../c-language/storage-of-basic-types.md) pour plus d'informations sur la plage des types intégraux et à virgule flottante.)
+Consultez [stockage des types de base](../c-language/storage-of-basic-types.md) pour plus d’informations sur les tailles des types intégraux et à virgule flottante.
+
+**Section spécifique à Microsoft**
+
+Dans le compilateur Microsoft, **non signé** (ou **unsigned int**) et **unsigned long** sont des types distincts, mais équivalents. La conversion d’une valeur **unsigned int** s’effectue de la même façon que la conversion d’une valeur **unsigned long**.
+
+**FIN de la section spécifique à Microsoft**
 
 Le tableau suivant répertorie les conversions de types intégraux non signés.
 
-## <a name="conversions-from-unsigned-integral-types-table"></a>Tableau des conversions de types intégraux non signés
+## <a name="table-of-conversions-from-unsigned-integral-types"></a>Tableau des conversions des types intégraux non signés
 
 |From|À|Méthode|
 |----------|--------|------------|
 |**unsigned char**|**char**|Conserver le modèle binaire. Le bit de poids fort devient un bit de signe|
 |**unsigned char**|**short**|Extension zéro|
 |**unsigned char**|**long**|Extension zéro|
+|**unsigned char**|**long long**|Extension zéro|
 |**unsigned char**|**unsigned short**|Extension zéro|
 |**unsigned char**|**unsigned long**|Extension zéro|
+|**unsigned char**|**long long non signé**|Extension zéro|
 |**unsigned char**|**float**|Convertir en **long**. Convertir **long** en **float**|
 |**unsigned char**|**double**|Convertir en **long**. Convertir **long** en **double**|
 |**unsigned char**|**long double**|Convertir en **long**. Convertir **long** en **double**|
 |**unsigned short**|**char**|Conserver l'octet de poids faible|
 |**unsigned short**|**short**|Conserver le modèle binaire. Le bit de poids fort devient un bit de signe|
 |**unsigned short**|**long**|Extension zéro|
+|**unsigned short**|**long long**|Extension zéro|
 |**unsigned short**|**unsigned char**|Conserver l'octet de poids faible|
 |**unsigned short**|**unsigned long**|Extension zéro|
+|**unsigned short**|**long long non signé**|Extension zéro|
 |**unsigned short**|**float**|Convertir en **long**. Convertir **long** en **float**|
 |**unsigned short**|**double**|Convertir en **long**. Convertir **long** en **double**|
 |**unsigned short**|**long double**|Convertir en **long**. Convertir **long** en **double**|
 |**unsigned long**|**char**|Conserver l'octet de poids faible|
 |**unsigned long**|**short**|Conserver le mot de poids faible|
 |**unsigned long**|**long**|Conserver le modèle binaire. Le bit de poids fort devient un bit de signe|
+|**unsigned long**|**long long**|Extension zéro|
 |**unsigned long**|**unsigned char**|Conserver l'octet de poids faible|
 |**unsigned long**|**unsigned short**|Conserver le mot de poids faible|
+|**unsigned long**|**long long non signé**|Extension zéro|
 |**unsigned long**|**float**|Convertir en **long**. Convertir **long** en **float**|
 |**unsigned long**|**double**|Convertir directement en **double**|
 |**unsigned long**|**long double**|Convertir en **long**. Convertir **long** en **double**|
-
-**Section spécifique à Microsoft**
-
-Pour le compilateur Microsoft C, le type **unsigned int** est équivalent au type **unsigned long**. La conversion d’une valeur **unsigned int** s’effectue de la même façon que la conversion d’une valeur **unsigned long**. Les conversions de valeurs **unsigned long** en **float** ne sont pas exactes si la valeur convertie est supérieure à la valeur **long** signée positive maximale.
-
-**FIN de la section spécifique à Microsoft**
+|**long long non signé**|**char**|Conserver l'octet de poids faible|
+|**long long non signé**|**short**|Conserver le mot de poids faible|
+|**long long non signé**|**long**|Conserver le DWORD de poids faible|
+|**long long non signé**|**long long**|Conserver le modèle binaire. Le bit de poids fort devient un bit de signe|
+|**long long non signé**|**unsigned char**|Conserver l'octet de poids faible|
+|**long long non signé**|**unsigned short**|Conserver le mot de poids faible|
+|**long long non signé**|**unsigned long**|Conserver le DWORD de poids faible|
+|**long long non signé**|**float**|Convertir en **long**. Convertir **long** en **float**|
+|**long long non signé**|**double**|Convertir directement en **double**|
+|**long long non signé**|**long double**|Convertir en **long**. Convertir **long** en **double**|
 
 ## <a name="see-also"></a>Voir aussi
 
