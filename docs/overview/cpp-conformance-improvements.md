@@ -1,16 +1,16 @@
 ---
 title: Améliorations de la conformité de C++
-ms.date: 09/25/2019
+ms.date: 10/04/2019
 description: Microsoft C++ dans Visual Studio arrive progressivement à une conformité totale avec la norme du langage C ++20.
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 02cf57666c3bffd1adabb912f042f22b71e8d8f5
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: d313a9a1f9f2bc1aa091935658ca1214f929c048
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816353"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998883"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Améliorations de la conformité de C++ dans Visual Studio
 
@@ -132,7 +132,7 @@ int main()
 }
 ```
 
-Pour éviter cette erreur, supprimez le qualificateur **constexpr** ou remplacez le mode de conformité par `/std:c++17`.
+Pour éviter cette erreur, supprimez le qualificateur **constexpr** ou modifiez le mode de conformité en `/std:c++17`.
 
 ### <a name="stdcreate_directory-failure-codes"></a>Codes d’échec `std::create_directory`
 
@@ -338,7 +338,7 @@ std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
 
 ### <a name="effect-of-defining-spaceship-operator-on--and-"></a>Effet de la définition de l’opérateur d’espacement sur = = et ! =
 
-Une définition de l’opérateur d’espacement **<=>** () seul ne réécrit plus les expressions **==** impliquant ou **! =** à moins que l’opérateur d’espacement soit marqué comme `= default` ([P1185R2](https://wg21.link/p1185r2)). L’exemple suivant compile dans Visual Studio 2019 RTW et la version 16,1, mais produit C2678 dans Visual Studio 2019 version 16,2 :
+Une définition de l’opérateur d’espacement ( **<=>** ) seul ne réécrit plus les expressions qui impliquent **==** ou **! =** , sauf si l’opérateur d’espacement est marqué comme `= default` ([P1185R2](https://wg21.link/p1185r2)). L’exemple suivant compile dans Visual Studio 2019 RTW et la version 16,1, mais produit C2678 dans Visual Studio 2019 version 16,2 :
 
 ```cpp
 #include <compare>
@@ -380,7 +380,7 @@ bool neq(const S& lhs, const S& rhs) {
 ### <a name="standard-library-improvements"></a>Améliorations de la bibliothèque standard
 
 - \<charconv > `to_chars()` avec une précision fixe/scientifique. (La précision générale est actuellement planifiée pour 16,4.)
-- [P0020R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html): Atomic\<float >, double\<> atomique, Atomic\<long double >
+- [P0020R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html): Atomic @ no__t-1float >, atomique @ no__t-2Double >, Atomic @ no__t-3long double >
 - [P0463R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html): endian
 - [P0482R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html): Prise en charge de la bibliothèque pour char8_t
 - [P0600R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf): [\[nodiscard]] pour la bibliothèque STL, partie 1
@@ -392,7 +392,7 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="stream-extraction-operators-for-char-removed"></a>Opérateurs d’extraction de flux pour char * supprimés
 
-Les opérateurs d’extraction de flux de pointeur vers des caractères ont été supprimés et remplacés par les opérateurs d’extraction pour les tableaux de caractères (par [P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 considère que les surcharges supprimées sont risquées. En mode [/std : c + + le plus récent](../build/reference/std-specify-language-standard-version.md) , l’exemple suivant génère désormais *C2679 : Binary' > > ' : aucun opérateur trouvé qui accepte un opérande de partie droite de type\*'Char' (ou il n’y a pas de conversion acceptable)* :
+Les opérateurs d’extraction de flux de pointeur vers des caractères ont été supprimés et remplacés par les opérateurs d’extraction pour les tableaux de caractères (par [P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 considère que les surcharges supprimées sont risquées. Dans [/std : c + + mode le plus récent](../build/reference/std-specify-language-standard-version.md) , l’exemple suivant génère désormais *C2679 : binary' > > ' : aucun opérateur trouvé qui accepte un opérande de partie droite de type’Char @ no__t-2 ' (ou il n’existe aucune conversion acceptable)* :
 
 ```cpp
    char x[42];
@@ -414,7 +414,7 @@ Les nouveaux mots clés **Requires** and **concept** ont été ajoutés C++ au c
 
 ### <a name="constructors-as-type-names-disallowed"></a>Constructeurs en tant que noms de types interdits
 
-Les noms de constructeurs ne sont plus considérés comme des noms de classe injectés lorsqu’ils apparaissent dans un nom qualifié après un alias d’une spécialisation de modèle de classe. Cela permettait précédemment d’utiliser des constructeurs comme nom de type pour déclarer d’autres entités. L’exemple suivant produit *désormais C3646 : 'TotalDuration' : spécificateur*de substitution inconnu :
+Les noms de constructeurs ne sont plus considérés comme des noms de classe injectés lorsqu’ils apparaissent dans un nom qualifié après un alias d’une spécialisation de modèle de classe. Cela permettait précédemment d’utiliser des constructeurs comme nom de type pour déclarer d’autres entités. L’exemple suivant génère à présent *C3646 : 'TotalDuration' : spécificateur de substitution inconnu @ no__t-0 :
 
 ```cpp
 #include <chrono>
@@ -455,7 +455,11 @@ void g()
 extern "C" void f(int, int, int, BOOL){}
 ```
 
-Pour éviter les erreurs dans l’exemple précédent, utilisez **bool** au lieu de **bool** de manière cohérente `f`dans les deux déclarations de.
+Pour éviter les erreurs dans l’exemple précédent, utilisez **bool** au lieu de **bool** de manière cohérente dans les deux déclarations de `f`.
+
+### <a name="standard-library-improvements"></a>Améliorations de la bibliothèque standard
+
+Les en-têtes non standard \<stdexcpt. h > et \<typeinfo. h > ont été supprimés. Le code qui les inclut doit plutôt inclure les en-têtes standard \<exception > et \<typeinfo >, respectivement.
 
 ## <a name="update_160"></a>Correctifs de bogues et modifications de comportement dans Visual Studio 2019
 
@@ -474,7 +478,7 @@ Pour éviter cette erreur, supprimez le modificateur **constexpr** de la déclar
 
 ### <a name="correct-diagnostics-for-basic_string-range-constructor"></a>Diagnostics corrects pour le constructeur de plage basic_string
 
-Dans Visual Studio 2019, le constructeur de plage `basic_string` ne supprime plus les diagnostics du compilateur avec `static_cast`. Le code suivant compile sans avertissements dans Visual Studio 2017, en dépit de la possibilité de perdre des données `wchar_t` de à **char** lors de `out`l’initialisation :
+Dans Visual Studio 2019, le constructeur de plage `basic_string` ne supprime plus les diagnostics du compilateur avec `static_cast`. Le code suivant compile sans avertissements dans Visual Studio 2017, en dépit de la perte possible de données de `wchar_t` à **char** lors de l’initialisation `out` :
 
 ```cpp
 std::wstring ws = /* … */;
@@ -578,7 +582,7 @@ void example()
 
 ### <a name="function-template-bodies-containing-constexpr-if-statements"></a>Corps de modèle de fonction contenant des instructions if constexpr
 
-Les corps de fonction de modèle qui contiennent si des instructions **constexpr** ont des vérifications liées à l’analyse des [/permissive-](../build/reference/permissive-standards-conformance.md) activées. Par exemple, dans Visual Studio 2017, le code suivant *génère C7510 : 'Type' : l’utilisation d’un nom de type dépendant doit être précédée* de’TypeName’uniquement si l’option **/permissive-** n’est pas définie. Dans Visual Studio 2019, le même code déclenche des erreurs même quand l’option **/permissive-** est définie :
+Les corps de fonction de modèle qui contiennent si des instructions **constexpr** ont des vérifications liées à l’analyse des [/permissive-](../build/reference/permissive-standards-conformance.md) activées. Par exemple, dans Visual Studio 2017, le code suivant génère *C7510 : 'Type' : l’utilisation d’un nom de type dépendant doit être précédée de’TypeName'*  uniquement si l’option **/permissive-** n’est pas définie. Dans Visual Studio 2019, le même code déclenche des erreurs même quand l’option **/permissive-** est définie :
 
 ```cpp
 template <typename T>
@@ -609,11 +613,11 @@ int main()
 }
 ```
 
-Pour éviter cette erreur, ajoutez le mot clé**TypeName** à la Déclaration `a`de `typename T::Type a;`:.
+Pour éviter cette erreur, ajoutez le mot clé**TypeName** à la déclaration de `a` : `typename T::Type a;`.
 
 ### <a name="inline-assembly-code-isnt-supported-in-a-lambda-expression"></a>Le code de l’assembleur inline n’est pas pris en charge dans une expression lambda
 
-L’équipe C++ Microsoft a récemment été informée d’un problème de sécurité dans lequel l’utilisation de l’assembleur inline dans une expression lambda pouvait entraîner l’altération `ebp` de (le registre de l’adresse de retour) au moment de l’exécution. Une personne malveillante pouvait éventuellement tirer parti de ce scénario. Étant donné la nature du problème, le fait que l’assembleur inline est uniquement pris en charge sur x86 et l’interaction médiocre de l’assembleur inline avec le reste du compilateur, nous en avons conclu que la solution la plus sûre à ce problème était d’interdire l’assembleur inline dans une expression lambda.
+L’équipe C++ Microsoft a récemment eu connaissance d’un problème de sécurité dans lequel l’utilisation de l’assembleur inline dans une expression lambda pouvait entraîner l’altération de `ebp` (le registre d’adresses de retour) au moment de l’exécution. Une personne malveillante pouvait éventuellement tirer parti de ce scénario. Étant donné la nature du problème, le fait que l’assembleur inline est uniquement pris en charge sur x86 et l’interaction médiocre de l’assembleur inline avec le reste du compilateur, nous en avons conclu que la solution la plus sûre à ce problème était d’interdire l’assembleur inline dans une expression lambda.
 
 La seule utilisation de l’assembleur inline dans une expression lambda que nous avons rencontrée avait pour but de capturer l’adresse de retour. Dans ce scénario, vous pouvez capturer l’adresse de retour sur toutes les plateformes simplement à l’aide de `_ReturnAddress()` intrinsèque au compilateur.
 
@@ -722,7 +726,7 @@ La fonction de réserve de conteneur non ordonnée `reserve` maintenant pour N �
 
 - Avant, certaines valeurs de temps passées à la bibliothèque de concurrence provoquaient un dépassement, par exemple, `condition_variable::wait_for(seconds::max())`. Ces dépassements, maintenant corrigés, changeaient le comportement selon un cycle apparemment aléatoire de 29 jours (quand les millisecondes uint32_t acceptées par les API Win32 sous-jacentes dépassaient).
 
-- L’en-tête <ctime> déclare correctement `timespec` et `timespec_get` dans l’espace de noms `std`, en plus de les déclarer dans l’espace de noms global.
+- L’en-tête \<ctime > déclare désormais correctement `timespec` et `timespec_get` dans l’espace de noms `std`, en plus de les déclarer dans l’espace de noms global.
 
 ### <a name="various-fixes-for-containers"></a>Divers correctifs pour les conteneurs
 
@@ -866,9 +870,9 @@ Il existe désormais une conversion implicite/non restrictive à partir du type 
 
 L’objet `*this` dans une expression lambda peut désormais être capturé par sa valeur. Ce changement permet des scénarios dans lesquels l’expression lambda est invoquée dans des opérations parallèles et asynchrones, en particulier sur des architectures de machines plus récentes. Pour plus d’informations, consultez [Lambda Capture of \*this by Value as \[=,\*this\]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html).
 
-### <a name="removing-operator-for-bool"></a>Supprimer `operator++` pour **bool**
+### <a name="removing-operator-for-bool"></a>Suppression de `operator++` pour **bool**
 
-`operator++`n’est plus pris en charge sur les types **bool** . Pour plus d’informations, consultez [Remove Deprecated operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html).
+`operator++` n’est plus pris en charge sur les types **bool** . Pour plus d’informations, consultez [Remove Deprecated operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html).
 
 ### <a name="removing-deprecated-register-keyword"></a>Suppression du mot clé **Register** déconseillé
 
@@ -1116,7 +1120,7 @@ void sample(A<0> *p)
 
 [P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html) Déplace les nouvelles fonctions de conversion de chaîne élémentaire de P0067R5 vers un nouvel en-tête \<charconv> et apporte d’autres améliorations, notamment l’utilisation de `std::errc` pour la gestion des erreurs au lieu de `std::error_code`.
 
-### <a name="c17-constexpr-for-char_traits-partial"></a>C++ 17 : **constexpr** pour `char_traits` (partiel)
+### <a name="c17-constexpr-for-char_traits-partial"></a>C++ 17 : **constexpr** pour `char_traits` (partielle)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) Changements apportés aux fonctions membres `std::traits_type` `length`, `compare` et `find` pour rendre `std::string_view` utilisable dans les expressions constantes. (Dans Visual Studio 2017 version 15.6, prise en charge pour Clang/LLVM uniquement. Dans la version 15.7 Preview 2, la prise en charge est presque complète pour ClXX.)
 
@@ -1268,7 +1272,7 @@ constexpr bool f(const array<1> &arr)
 }
 ```
 
-Pour corriger l’erreur, déclarez la `array::size()` fonction en tant que **constexpr** ou supprimez le qualificateur `f` **constexpr** de.
+Pour corriger l’erreur, déclarez la fonction `array::size()` en tant que **constexpr** ou supprimez le qualificateur **constexpr** de `f`.
 
 ### <a name="class-types-passed-to-variadic-functions"></a>Types de classe transmis aux fonctions variadiques
 
@@ -2105,7 +2109,7 @@ extern constexpr int x = 10;
 error LNK2005: "int const x" already defined
 ```
 
-Si un fichier d’en-tête contient une variable **extern constexpr**, il doit être `__declspec(selectany)` marqué pour que ses déclarations dupliquées soient correctement combinées :
+Si un fichier d’en-tête contient une variable **extern constexpr**, il doit être marqué `__declspec(selectany)` pour que ses déclarations dupliquées soient correctement combinées :
 
 ```cpp
 extern constexpr __declspec(selectany) int x = 10;
@@ -2153,7 +2157,7 @@ static_assert(std::is_convertible<D *, B *>::value, "fail");
 
 ### <a name="noexcept_removal"></a>Suppression des spécifications d’exceptions dynamiques et **noexcept**
 
-En c++ 17, `throw()` est un alias pour **noexcept**, `throw(<type list>)` et `throw(...)` sont supprimés, et certains types peuvent inclure **noexcept**. Ces changements entraînent parfois des problèmes de compatibilité avec le code conforme à C++14 ou une version antérieure. Le commutateur **/Zc : noexceptTypes-** peut être utilisé pour revenir à la version c++ 14 de **nosauf** en mode c++ 17 en général. Cela vous permet de mettre à jour votre code source pour le rendre conforme à C++17 sans pour autant avoir à réécrire tout votre code `throw()`.
+En C++ 17, `throw()` est un alias pour **noexcept**, `throw(<type list>)` et `throw(...)` sont supprimés, et certains types peuvent inclure **noexcept**. Ces changements entraînent parfois des problèmes de compatibilité avec le code conforme à C++14 ou une version antérieure. Le commutateur **/Zc : noexceptTypes-** peut être utilisé pour revenir à la version c++ 14 de **nosauf** en mode c++ 17 en général. Cela vous permet de mettre à jour votre code source pour le rendre conforme à C++17 sans pour autant avoir à réécrire tout votre code `throw()`.
 
 Avec le nouvel avertissement C5043, le compilateur diagnostique également maintenant davantage de spécifications d’exceptions incompatibles dans les déclarations en mode C++17 ou avec [/permissive-](../build/reference/permissive-standards-conformance.md).
 
@@ -2632,7 +2636,7 @@ struct X : Base<T>
 };
 ```
 
-Pour corriger l’erreur, ajoutez le mot clé **template** à `Base<T>::example<int>();` l’instruction, comme illustré dans l’exemple suivant :
+Pour corriger l’erreur, ajoutez le mot clé **template** à l’instruction `Base<T>::example<int>();`, comme indiqué dans l’exemple suivant :
 
 ```cpp
 template<typename T> struct Base
@@ -2832,7 +2836,7 @@ note: failure was caused by call of undefined function or one not declared 'cons
 note: see usage of 'g'.
 ```
 
-Pour éviter cette erreur, supprimez le qualificateur **constexpr** de l’instanciation explicite de la `f()`fonction.
+Pour éviter cette erreur, supprimez le qualificateur **constexpr** de l’instanciation explicite de la fonction `f()`.
 
 ::: moniker-end
 

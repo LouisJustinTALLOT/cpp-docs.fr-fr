@@ -1,6 +1,6 @@
 ---
-title: Stockage de types de base
-ms.date: 11/04/2016
+title: Stockage des types de base
+ms.date: 10/02/2019
 helpviewer_keywords:
 - specifiers [C++], type
 - integral types, storage
@@ -21,30 +21,31 @@ helpviewer_keywords:
 - unsigned types [C++], storage
 - data types [C], storage
 ms.assetid: bd1f33c1-c6b9-4558-8a72-afb21aef3318
-ms.openlocfilehash: 51b67b375cf7a4608d3080e5922cabbf3135ddfe
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 64c642df4dd85e4aa09f90a143b8aa67c28b7dc2
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152246"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998758"
 ---
-# <a name="storage-of-basic-types"></a>Stockage de types de base
+# <a name="storage-of-basic-types"></a>Stockage des types de base
 
 Le tableau suivant résume le stockage associé à chaque type de base.
 
-### <a name="sizes-of-fundamental-types"></a>Tailles des types fondamentaux
+## <a name="sizes-of-fundamental-types"></a>Tailles des types fondamentaux
 
 |Type|Stockage|
 |----------|-------------|
-|`char`, `unsigned char`, **signed char**|1 octet|
+|**char**, **unsigned char**, signed **char**|1 octet|
 |**short**, **unsigned short**|2 octets|
-|`int`, `unsigned int`|4 octets|
-|**long**, `unsigned long`|4 octets|
+|**int**, **unsigned int**|4 octets|
+|**long**, **unsigned long**|4 octets|
+|**long long**, **unsigned long long**|8 octets|
 |**float**|4 octets|
 |**double**|8 octets|
-|`long double`|8 octets|
+|**long double**|8 octets|
 
-Les types de données C sont répartis dans des catégories générales. Les « types intégraux » incluent `char`, `int`, **short**, **long**, **signed**, `unsigned` et `enum`. Les « types flottants » sont **float**, **double** et `long double`. Les « types arithmétiques » incluent tous les types flottants et intégraux.
+Les types de données C sont répartis dans des catégories générales. Les *types intégraux* incluent **int**, **char**, **short**, **long**et **long long**. Ces types peuvent être **qualifiés avec** signed ou **unsigned**, et **unsigned** by lui-même peut être utilisé comme raccourci pour **unsigned int**. Les types énumération (**enum**) sont également traités comme des types intégraux dans la plupart des cas. Les *types flottants* sont **float**, **double**et **long double**. Les *types arithmétiques* incluent tous les types flottants et intégraux.
 
 ## <a name="see-also"></a>Voir aussi
 
