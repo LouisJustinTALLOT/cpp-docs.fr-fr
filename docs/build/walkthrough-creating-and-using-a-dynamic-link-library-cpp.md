@@ -194,7 +194,7 @@ Pour l’instant, cette DLL ne fait pas grand-chose. Ensuite, vous allez créer 
 
 Ce fichier d’en-tête déclare certaines fonctions pour produire une séquence Fibonacci généralisée avec deux valeurs initiales. Un appel à `fibonacci_init(1, 1)` génère la séquence familière de nombres Fibonacci.
 
-Notez les instructions du préprocesseur en haut du fichier. Le nouveau modèle de projet d’un projet dll ajoute les **exportations _ProjectName_&#95; aux macros de préprocesseur définies. Dans cet exemple, Visual Studio définit **MATHLIBRARY&#95;EXPORTS** lorsque votre projet de DLL MathLibrary est créé.
+Notez les instructions du préprocesseur en haut du fichier. Le nouveau modèle de projet d’un projet dll ajoute les **exportations _ProjectName_&#95;exportation** aux macros de préprocesseur définies. Dans cet exemple, Visual Studio définit **MATHLIBRARY&#95;EXPORTS** lorsque votre projet de DLL MathLibrary est créé.
 
 Lorsque le macro **MATHLIBRARY&#95;EXPORTS** est défini, le macro **MATHLIBRARY&#95;API** définit le modificateur `__declspec(dllexport)` sur les déclarations de fonctions. Ce modificateur indique au compilateur et à l’éditeur de liens d’exporter une fonction ou une variable à partir de la DLL pour une utilisation par d’autres applications. Lorsque **MATHLIBRARY&#95;EXPORTS** n’est pas défini, par exemple, lorsque le fichier d’en-tête est inclus dans une application cliente, **MATHLIBRARY&#95;API** applique le modificateur `__declspec(dllimport)` aux déclarations. Ce modificateur optimise l'importation de la fonction dans une application. Pour plus d’informations, consultez [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
