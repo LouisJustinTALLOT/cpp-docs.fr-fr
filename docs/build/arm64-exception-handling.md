@@ -1,60 +1,61 @@
 ---
-title: La gestion des exceptions ARM64
+title: Gestion des exceptions ARM64
+description: Décrit les conventions de gestion des exceptions et les données utilisées par Windows sur ARM64.
 ms.date: 11/19/2018
-ms.openlocfilehash: 55476119499a3216f6801877dba692b2a0d1d9ee
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1ed147a27cfeb545e2a5fe265df8113a5befac73
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342296"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72276837"
 ---
-# <a name="arm64-exception-handling"></a>La gestion des exceptions ARM64
+# <a name="arm64-exception-handling"></a>Gestion des exceptions ARM64
 
-Windows sur ARM64 utilise la même gestion structurée des exceptions mécanisme pour asynchrones exceptions générées par le matériel et des exceptions synchrones générées par les logiciels. Les gestionnaires d'exceptions propres aux langages s'appuient sur la gestion des exceptions structurées Windows en utilisant des fonctions d'assistance de langage. Ce document décrit la gestion des exceptions dans Windows sur ARM64 et les programmes d’assistance de langage utilisés par le code généré par l’assembleur Microsoft ARM et le compilateur MSVC.
+Windows sur ARM64 utilise le même mécanisme de gestion structurée des exceptions pour les exceptions générées par le matériel asynchrones et les exceptions générées par les logiciels synchrones. Les gestionnaires d'exceptions propres aux langages s'appuient sur la gestion des exceptions structurées Windows en utilisant des fonctions d'assistance de langage. Ce document décrit la gestion des exceptions dans Windows sur ARM64, ainsi que les applications auxiliaires de langage utilisées par le code généré par l’assembleur Microsoft ARM et le compilateur MSVC.
 
 ## <a name="goals-and-motivation"></a>Objectifs et motivation
 
-Les conventions de données de déroulement exception et cette description, sont destinés à :
+L’exception qui déroule les conventions de données, et cette description, sont destinées à :
 
-1. Fournissez suffisamment description pour permettre le déroulement sans code dans tous les cas de détection.
+1. Fournissez suffisamment de description pour permettre le déroulement sans la détection de code dans tous les cas.
 
-   - L’analyse du code requiert que le code soit paginée à. Cela empêche le déroulement dans certaines circonstances, il est utile (le suivi, d’échantillonnage, le débogage).
+   - L’analyse du code requiert que le code soit paginé dans. Cela évite le déroulement dans certaines circonstances où il est utile (traçage, échantillonnage, débogage).
 
-   - L’analyse du code est complexe ; le compilateur doit être prudent générer uniquement des instructions que le dérouleur est capable de décoder.
+   - L’analyse du code est complexe. le compilateur doit veiller à générer uniquement des instructions que le dérouleur peut décoder.
 
-   - Si le déroulement ne peut pas être décrit en détail grâce à l’utilisation de codes de déroulement, puis dans certains cas il doit revenir à décodage de l’instruction. Cela accroît la complexité globale et dans l’idéal, cela permet d’éviter.
+   - Si le déroulement ne peut pas être entièrement décrit à l’aide d’un code de déroulement, dans certains cas, il doit revenir au décodage d’instruction. Cela augmente la complexité globale et, idéalement, est évité.
 
-1. Prise en charge déroulement dans le milieu de prologue et épilogue intermédiaire.
+1. Prendre en charge le déroulement dans le prologue intermédiaire et l’épilogue intermédiaire.
 
-   - Le déroulement est utilisé dans Windows depuis plus de la gestion des exceptions, il est donc essentiel que nous être en mesure d’effectuer une liste précise déroulement même quand au milieu d’une séquence de code de prologue ni d’épilogue.
+   - Le déroulement est utilisé dans Windows pour plus que la gestion des exceptions. Il est essentiel que le code puisse se dérouler correctement même quand il se trouve au milieu d’une séquence de code de prologue ou d’épilogue.
 
-1. Prendre une quantité minimale d’espace.
+1. Occupent une quantité minimale d’espace.
 
-   - Les codes de déroulement ne doivent pas agréger pour augmenter considérablement la taille du binaire.
+   - Les codes de déroulement ne doivent pas être agrégés pour augmenter considérablement la taille binaire.
 
-   - Étant donné que les codes de déroulement sont susceptibles d’être verrouillé en mémoire, un faible encombrement mémoire garantit une surcharge minimale pour chaque fichier binaire chargé.
+   - Étant donné que les codes de déroulement sont susceptibles d’être verrouillés en mémoire, un faible encombrement garantit une surcharge minimale pour chaque binaire chargé.
 
 ## <a name="assumptions"></a>Assumptions (Hypothèses)
 
-Il s’agit de la description des exceptions hypothèses :
+Ces hypothèses sont prises dans la description de la gestion des exceptions :
 
-1. Les prologues et épilogues ont tendance à mettre en miroir de deux autres. En tirant parti de cette caractéristique commune, la taille des métadonnées nécessaires pour décrire le déroulement peut être considérablement réduite. Dans le corps de la fonction, peu importe si les opérations du prologue sont annulées ou les opérations de l’épilogue sont effectuées à l’avance. Les deux doivent produire des résultats identiques.
+1. Les journaux et les épilogues ont tendance à refléter l’un ou l’autre. En tirant parti de cette caractéristique commune, la taille des métadonnées requises pour décrire le déroulement peut être sensiblement réduite. Dans le corps de la fonction, peu importe si les opérations du prologue sont annulées ou si les opérations de l’épilogue sont effectuées de manière anticipée. Les deux doivent produire des résultats identiques.
 
-1. Les fonctions sont généralement dans l’ensemble relativement faible. Plusieurs optimisations pour espace s’appuient sur ce afin d’optimiser la compression la plus efficace de données.
+1. Les fonctions ont tendance à être relativement petites. Plusieurs optimisations de l’espace reposent sur ce fait pour obtenir le compactage de données le plus efficace.
 
-1. Il n’y a aucun code conditionnel dans épilogues.
+1. Il n’y a pas de code conditionnel dans épilogues.
 
-1. Registre de pointeur de frame dédié : Si la procédure stockée est enregistrée dans un autre registre (x29) dans le prologue, ce qui s’inscrivent reste inchangée tout au long de la fonction, afin que le sp d’origine peut être libéré à tout moment.
+1. Registre de pointeur de frame dédié : Si le SP est enregistré dans un autre registre (x29) dans le prologue, ce registre reste intact tout au long de la fonction. Cela signifie que le SP d’origine peut être récupéré à tout moment.
 
-1. À moins que le sp soit enregistré dans un autre registre, toutes les manipulations dont le pointeur de pile se produit strictement dans le prologue et épilogue.
+1. À moins que le SP ne soit enregistré dans un autre registre, toute manipulation du pointeur de pile se produit strictement dans le prologue et l’épilogue.
 
-1. La disposition du frame de pile est organisée comme décrit dans la section suivante.
+1. La disposition des frames de pile est organisée comme décrit dans la section suivante.
 
-## <a name="arm64-stack-frame-layout"></a>Disposition du frame de pile ARM64
+## <a name="arm64-stack-frame-layout"></a>Disposition des frames de pile ARM64
 
-![disposition du frame de pile](media/arm64-exception-handling-stack-frame.png "disposition du frame de pile")
+(media/arm64-exception-handling-stack-frame.png "disposition du frame de pile") de la ![disposition Frame Frame]
 
-Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée à n’importe quelle position dans la zone de variable locale en fonction des considérations d’optimisation. L’objectif est de maximiser le nombre de variables locales qui peut être atteint par une instruction unique basée sur le pointeur de frame (x29) ou le pointeur de pile (sp). Toutefois pour `alloca` fonctions, il doit être chaîné et x29 doit pointer vers le bas de pile. Pour permettre une meilleure couverture register-paire-adressage-mode, un Registre non volatil zones de sauvegarde sont positionnés en haut de la pile de réseau Local. Voici des exemples qui illustrent certains des séquences de prologue plus efficaces. Par souci de clarté une meilleure localité de cache, l’ordre de stockage de registres enregistrés des appelés dans tous les prologues canoniques est dans l’ordre « croissante des ». `#framesz` ci-dessous représente la taille de pile entière (à l’exclusion de la zone d’alloca). `#localsz` et `#outsz` indiquent la taille de la zone locale (y compris l’enregistrement concernant la \<x29, lr > paire) et sortant de taille de paramètre, respectivement.
+Pour les fonctions chaînées de frame, les paires FP et LR peuvent être enregistrées à n’importe quel emplacement dans la zone de variable locale, en fonction des considérations relatives à l’optimisation. L’objectif est d’optimiser le nombre de variables locales qui peuvent être atteintes par une seule instruction basée sur le pointeur de frame (x29) ou le pointeur de pile (SP). Toutefois, pour les fonctions `alloca`, il doit être chaîné et x29 doit pointer vers le bas de la pile. Pour permettre une meilleure couverture du mode de Registre-paire-adressage, les zones d’enregistrement des registres non volatiles sont positionnées en haut de la pile de la zone locale. Voici des exemples qui illustrent plusieurs des séquences de prologue les plus efficaces. Par souci de clarté et de meilleure localité de cache, l’ordre de stockage des registres enregistrés par l’appelé dans tous les projournals canoniques est dans l’ordre croissant. `#framesz` représente la taille de la pile entière (à l’exception de la zone allouée). `#localsz` et `#outsz` indiquent la taille de la zone locale (y compris la zone d’enregistrement pour la paire \<x29, LR >) et la taille du paramètre sortant, respectivement.
 
 1. Chained, #localsz \<= 512
 
@@ -70,7 +71,7 @@ Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée
         sub    sp,sp,#outsz             // (optional for #outsz != 0)
     ```
 
-1. Chained, #localsz > 512
+1. Chaîné, #localsz > 512
 
     ```asm
         stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -84,7 +85,7 @@ Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée
         add    x29,sp,#outsz            // setup x29 points to bottom of local area
     ```
 
-1. Fonctions de feuille non chaîné, (lr ne sont pas enregistré)
+1. Non chaîné, fonctions feuille (LR non enregistrées)
 
     ```asm
         stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
@@ -95,9 +96,9 @@ Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Toutes les variables locales sont accessibles selon le fournisseur de services. \<x29, lr > pointe vers le frame précédent. Pour la taille de trame \<= 512, la « sub sp,... » peuvent être optimisées, si la zone de réglementations enregistrées est déplacée vers le bas de la pile. L’inconvénient de qui est qu’il n’est pas cohérente avec les autres dispositions ci-dessus et réglementations enregistrées tirer partie de la plage pour le respect de la paire et mode d’adressage de décalage pré- et post-indexé.
+   Toutes les variables locales sont accessibles en fonction du SP. \<x29, LR > pointe vers le frame précédent. Pour la taille de trame \< = 512, « Sub SP,... » peut être optimisé si la zone enregistrée regs est déplacée en bas de la pile. L’inconvénient est qu’elle n’est pas cohérente avec les autres dispositions ci-dessus et que les regs enregistrés prennent partie de la plage pour le mode d’adressage de décalage pré-et-regs et après index.
 
-1. Fonctions non chaînées, non terminaux (lr est enregistrée dans la zone de Int enregistré)
+1. Fonctions non-feuille et non chaînées (la LR est enregistrée dans la zone enregistrée int)
 
     ```asm
         stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
@@ -108,7 +109,7 @@ Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Ou, avec un nombre pair enregistré Int registres,
+   Ou, avec un nombre pair de registres int enregistrés,
 
     ```asm
         stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
@@ -119,7 +120,7 @@ Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   X19 uniquement enregistré :
+   Uniquement x19 enregistrées :
 
     ```asm
         sub    sp,sp,#16                // reg save area allocation*
@@ -127,9 +128,9 @@ Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée
         sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
-   \* Le reg enregistrer l’allocation de la zone n’est pas assemblée dans le protocole stp, car un stp reg-lr préalable indexée ne peut pas être représentée avec les codes de déroulement.
+   \* l’allocation de la zone d’enregistrement reg n’est pas pliée dans le protocole STP, car un STP reg-LR préconfiguré ne peut pas être représenté avec les codes de déroulement.
 
-   Toutes les variables locales sont accessibles selon le fournisseur de services. \<x29 > pointe vers le frame précédent.
+   Toutes les variables locales sont accessibles en fonction du SP. @no__t > 0x29 pointe vers le frame précédent.
 
 1. Chained, #framesz \<= 512, #outsz = 0
 
@@ -140,9 +141,9 @@ Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée
         stp    d8,d9,[sp,#(framesz-16)]     // save FP pair
     ```
 
-   Comparaison de prologue #1 ci-dessus, l’avantage est que register toutes les instructions d’enregistrement sont prêtes à être exécutées immédiatement après la pile qu’une seule allocation d’instruction. Ainsi, il n’existe aucune dépendance anti-vis-à-vis des SP qui empêche le parallélisme au niveau instruction.
+   Par rapport au premier exemple de prologue ci-dessus, l’avantage est que toutes les instructions Register Save sont prêtes à s’exécuter après une seule instruction d’allocation de pile. Cela signifie qu’il n’y a pas d’anti-dépendance sur le SP qui empêche le parallélisme au niveau des instructions.
 
-1. Taille d’image chaînées, 512 > (facultatif pour les fonctions sans alloca)
+1. Chaîné, taille de cadre > 512 (facultatif pour les fonctions sans alloca)
 
     ```asm
         stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
@@ -154,9 +155,9 @@ Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée
         sub    sp,sp,#(framesz-80)          // allocate the remaining local area
     ```
 
-   À des fins d’optimisation, x29 peuvent être placés à n’importe quelle position dans la zone locale pour offrir une meilleure couverture « reg-paire » et pré/post indexed décalage mode d’adressage. Variables locales ci-dessous des pointeurs de frame sont accessibles selon le fournisseur de services.
+   À des fins d’optimisation, x29 peut être placé à n’importe quelle position dans la zone locale pour offrir une meilleure couverture pour les modes « reg-pair » et d’adressage de décalage antérieur à/post-Indexed. Les variables locales sous les pointeurs de frame sont accessibles en fonction du SP.
 
-1. Taille d’image chaînées, > 4K, avec ou sans alloca(),
+1. Chaîné, taille de trame > 4K, avec ou sans alloca (),
 
     ```asm
         stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
@@ -179,67 +180,67 @@ Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée
         ldp    x29,lr,[sp],#80              // post-indexed, reload <x29,lr>
     ```
 
-## <a name="arm64-exception-handling-information"></a>Informations de gestion d’exception ARM64
+## <a name="arm64-exception-handling-information"></a>Informations de gestion des exceptions ARM64
 
-### <a name="pdata-records"></a>enregistrements .pdata
+### <a name="pdata-records"></a>enregistrements. pdata
 
-Les enregistrements .pdata sont un tableau ordonné d’éléments de longueur fixe qui décrivent chaque fonction de manipulation de pile dans un fichier binaire PE. Notez soigneusement la phrase « manipulation de pile » : les fonctions de feuille qui ne nécessitent pas de n’importe quel stockage local et qui n’ont pas besoin enregistrer/restaurer des registres non volatils ne nécessitent pas un enregistrement .pdata. Il doivent être explicitement omis pour économiser de l’espace. Un déroulement à partir d’une de ces fonctions peut simplement obtenir l’adresse de retour LR à déplacer vers le haut à l’appelant.
+Les enregistrements. pdata sont un tableau ordonné d’éléments de longueur fixe qui décrivent chaque fonction de manipulation de pile dans un fichier binaire PE. L’expression « manipulation de pile » est importante : les fonctions feuille qui ne nécessitent pas de stockage local et qui n’ont pas besoin d’enregistrer/restaurer des registres non volatiles, ne nécessitent pas d’enregistrement. pData. Ces enregistrements doivent être explicitement omis pour économiser de l’espace. Un déroulement de l’une de ces fonctions peut obtenir l’adresse de retour directement à partir de LR pour remonter jusqu’à l’appelant.
 
-Chaque enregistrement .pdata pour ARM64 est la longueur de 8 octets. Le format général des chaque enregistrement endroits l’adresse RVA 32 bits de la fonction Démarrer dans le premier mot, suivi d’une seconde comportant qui contient un pointeur vers un bloc .xdata de longueur variable, ou un mot compressé qui décrit une séquence de déroulement canonique.
+Chaque enregistrement. pdata pour ARM64 a une longueur de 8 octets. Le format général de chaque enregistrement place l’adresse RVA 32 bits de la fonction Start dans le premier mot, suivi d’un second mot qui contient soit un pointeur vers un bloc. XData de longueur variable, soit un mot compressé qui décrit une séquence de déroulement de fonction canonique.
 
-![disposition des enregistrements .pdata](media/arm64-exception-handling-pdata-record.png "disposition des enregistrements .pdata")
+mise en page de l’enregistrement ![. pdata]disposition(media/arm64-exception-handling-pdata-record.png ". pdata")
 
-Les champs sont les suivantes :
+Les champs sont les suivants :
 
-- **Fonction RVA Démarrer** est l’adresse RVA 32 bits du début de la fonction.
+- **RVA Start Function** est l’adresse RVA 32 bits du début de la fonction.
 
-- **Indicateur** est un champ de 2 bits qui indique comment interpréter les 30 bits restants du deuxième mot .pdata. Si **indicateur** est égal à 0, puis les bits restants forment un **Exception informations RVA** (avec les deux bits inférieurs ayant implicitement la valeur 0). Si **indicateur** est différente de zéro, puis les bits restants forment un **données de déroulement compressées** structure.
+- L' **indicateur** est un champ de 2 bits qui indique comment interpréter les 30 bits restants du deuxième mot. pData. Si l' **indicateur** a la valeur 0, les bits restants forment un **RVA d’informations sur l’exception** (avec les deux bits les plus bas implicitement 0). Si l' **indicateur** est différent de zéro, les bits restants forment une structure de **données de déroulement compressées** .
 
-- **Exception informations RVA** est l’adresse de la structure d’informations d’exceptions de longueur variable stockée dans la section .xdata. Ces données doivent être alignées sur 4 octets.
+- Les **informations d’exception RVA** sont l’adresse de la structure d’informations sur les exceptions de longueur variable, stockée dans la section. XData. Ces données doivent être alignées sur 4 octets.
 
-- **Compressé des données de déroulement** est une description compressée des opérations nécessaires au déroulement à partir d’une fonction, en supposant que la forme canonique. Dans ce cas, aucun enregistrement .xdata n'est nécessaire.
+- Les **données de déroulement** compressées sont une description compressée des opérations nécessaires au déroulement d’une fonction, en supposant une forme canonique. Dans ce cas, aucun enregistrement .xdata n'est nécessaire.
 
-### <a name="xdata-records"></a>enregistrements .xdata
+### <a name="xdata-records"></a>enregistrements. XData
 
-Quand le format de déroulement compressé ne suffit pas à décrire le déroulement d'une fonction, un enregistrement .xdata de longueur variable doit être créé. L'adresse de cet enregistrement est stockée dans le deuxième mot de l'enregistrement .pdata. Le format de l’enregistrement .xdata est un ensemble de longueur variable compressé de mots :
+Quand le format de déroulement compressé ne suffit pas à décrire le déroulement d'une fonction, un enregistrement .xdata de longueur variable doit être créé. L'adresse de cet enregistrement est stockée dans le deuxième mot de l'enregistrement .pdata. Le format du. XData est un ensemble de mots condensé de longueur variable :
 
-![disposition d’enregistrement .xdata](media/arm64-exception-handling-xdata-record.png "disposition des enregistrements .xdata")
+![. XData disposition]de l’enregistrement(media/arm64-exception-handling-xdata-record.png ". XData")
 
-Ces données sont divisées en quatre sections :
+Ces données sont réparties en quatre sections :
 
-1. Un en-tête 1 ou 2 mots décrivant la taille globale de la structure et de fournir des données de la clé de fonction. Le deuxième mot est présent uniquement si les deux le **épilogue nombre** et **Code mots** champs sont définis sur 0. Voici les champs de bits dans l’en-tête :
+1. En-tête 1 ou 2-Word décrivant la taille globale de la structure et fournissant les données de fonction clés. Le deuxième mot est présent uniquement si les champs **nombre d’épilogues** et **mots de code** ont la valeur 0. L’en-tête contient les champs de bits suivants :
 
-   A. **Longueur de la fonction** est un champ de 18 bits qui indique la longueur totale de la fonction en octets, divisé par 4. Si une fonction est supérieure à 1 million, plusieurs enregistrements pdata et xdata doivent être utilisés pour décrire la fonction. Consultez le [les fonctions volumineuses](#large-functions) section pour plus d’informations.
+   a. La longueur de la **fonction** est un champ de 18 bits. Elle indique la longueur totale de la fonction en octets, divisée par 4. Si une fonction est supérieure à 1M, plusieurs enregistrements. pdata et. XData doivent être utilisés pour décrire la fonction. Pour plus d’informations, consultez la section [fonctions volumineuses](#large-functions) .
 
-   B. **Vers** est un champ de 2 bits qui décrit la version de l’enregistrement xdata restant. À ce jour, seule la version 0 est définie, et par conséquent, les valeurs de 1 à 3 ne sont pas autorisées.
+   b. **Vers** est un champ de 2 bits. Il décrit la version du. XData restants. À l’heure actuelle, seule la version 0 est définie. les valeurs de 1-3 ne sont donc pas autorisées.
 
-   c. **X** est un champ de 1 bit qui indique la présence (1) ou non (0) des données d’exception.
+   c. **X** est un champ de 1 bit. Elle indique la présence (1) ou l’absence (0) de données d’exception.
 
-   d. **E** est un champ de bits indique que les informations décrivant un épilogue unique est compressé dans l’en-tête (1) au lieu de demander l’étendue supplémentaire mots ultérieures (0).
+   d. **E** est un champ de 1 bit. Elle indique que les informations décrivant un épilogue unique sont empaquetées dans l’en-tête (1) au lieu d’exiger des mots d’étendue supplémentaires plus tard (0).
 
-   e. **Nombre d’épilogue** est un champ de 5 bits qui a deux significations, selon l’état de **E** bits :
+   e. Le **nombre d’épilogues** est un champ de 5 bits qui a deux significations, en fonction de l’état du bit **E** :
 
-      1. Si **E** est définie sur 0 : elle spécifie le nombre du nombre total de portées d’épilogue décrit dans la section 2. Si plus de 31 portées existent dans la fonction, puis le **Code mots** champ doit être défini sur 0 pour indiquer qu’un mot d’extension est nécessaire.
+      1. Si **E** est égal à 0, il spécifie le nombre total de portées d’épilogue décrites dans la section 2. S’il existe plus de 31 portées dans la fonction, le champ **code** Words doit avoir la valeur 0 pour indiquer qu’un mot d’extension est nécessaire.
 
-      2. Si **E** est définie sur 1, ce champ spécifie l’index du premier code de déroulement qui décrit l’et épilogue uniquement.
+      2. Si **E** est 1, ce champ spécifie l’index du premier code de déroulement qui décrit l’un et l’épilogue uniquement.
 
-   f. **Les mots de code** est un champ de 5 bits qui spécifie le nombre de mots de 32 bits nécessaires pour contenir tous les codes de déroulement dans la section 3. Si plus de 31 mots sont nécessaires (par exemple, plus de 124 dérouler les octets de code), puis ce champ doit être défini sur 0 pour indiquer qu’un mot d’extension est nécessaire.
+   f. Les **mots de code** sont un champ de 5 bits qui spécifie le nombre de mots de 32 bits nécessaires pour contenir tous les codes de déroulement de la section 3. Si plus de 31 mots sont requis (autrement dit, s’il y a plus de 124 d’octets de code de déroulement), ce champ doit avoir la valeur 0 pour indiquer qu’un mot d’extension est nécessaire.
 
-   g. **Étendue épilogue nombre** et **mots de Code étendu** sont des champs de 16 bits et 8 bits, respectivement, qui fournissent davantage d’espace pour l’encodage d’un nombre anormalement élevé d’épilogues ou un nombre exceptionnellement élevé de mots de code de déroulement. Le mot d’extension qui contient ces champs est présent uniquement si les deux le **épilogue nombre** et **Code mots** champs dans le premier mot d’en-tête sont définies sur 0.
+   g. Le **nombre étendu d’épilogues** et les **mots de code étendu** sont respectivement des champs 16 bits et 8 bits. Ils fournissent davantage d’espace pour l’encodage d’un nombre anormalement élevé de épilogues, ou un nombre anormalement élevé de mots de code de déroulement. Le mot d’extension qui contient ces champs est présent uniquement si les champs **nombre d’épilogues** et **mots de code** du premier mot d’en-tête sont 0.
 
-1. Après l’en-tête et les décrit ci-dessus, si l’en-tête étendu facultatif **épilogue nombre** n’est pas égal à zéro, est une liste d’informations sur les portées d’épilogue, compressés dans un mot et stockées par ordre croissant de décalage de départ. Chaque portée contient les bits suivants :
+1. Si le **nombre d’épilogues** n’est pas égal à zéro, une liste d’informations sur les étendues d’épilogue, compressées en un mot, vient après l’en-tête et l’en-tête étendu facultatif. Elles sont stockées dans l’ordre d’incrémentation du décalage de début. Chaque étendue contient les bits suivants :
 
-   A. **Décalage de début d’épilogue** est un champ de 18 bits qui décrit le décalage en octets, divisé par 4, de l’épilogue par rapport au début de la fonction
+   a. L' **offset de début d’épilogue** est un champ de 18 bits qui a le décalage en octets, divisé par 4, de l’épilogue par rapport au début de la fonction.
 
-   B. **Res** est un champ de 4 bits réservé pour l’extension future. Il doit avoir la valeur 0.
+   b. **Res** est un champ de 4 bits réservé pour un développement futur. Il doit avoir la valeur 0.
 
-   c. **Index de début d’épilogue** est de 10 bits (plus de 2 bits que **mots de Code étendu**) champ indiquant l’index d’octet du premier code qui décrit cet épilogue de déroulement.
+   c. L' **index de début d’épilogue** est un champ de 10 bits (2 plus de bits que les **mots de code étendus**). Elle indique l’index d’octets du premier code de déroulement qui décrit cet épilogue.
 
-1. Une fois que la liste des portées d’épilogue figure un tableau d’octets qui contient les codes de déroulement, décrits en détail dans une section ultérieure. Ce tableau est rempli à la fin jusqu'à la limite du mot complet le plus proche. Dérouler les codes sont écrits dans ce tableau, en commençant par la plus proche au corps de la fonction, le déplacement vers les bords de la fonction. Les octets pour chaque code de déroulement sont stockés dans l’ordre de primauté afin qu’ils peuvent être extraites directement, en commençant par l’octet le plus significatif en premier, qui identifie l’opération et la longueur du reste du code.
+1. Une fois que la liste des étendues d’épilogue est un tableau d’octets qui contiennent des codes de déroulement, décrits en détail dans une section ultérieure. Ce tableau est rempli à la fin jusqu'à la limite du mot complet le plus proche. Les codes de déroulement sont écrits dans ce tableau. Ils commencent par le plus proche du corps de la fonction et se déplacent vers les bords de la fonction. Les octets de chaque code de déroulement sont stockés par ordre de primauté des octets de poids fort, afin de pouvoir être récupérés directement, en commençant par l’octet le plus significatif en premier, qui identifie l’opération et la longueur du reste du code.
 
-1. Enfin, après les octets de code de déroulement, si le **X** bit dans l’en-tête a été défini sur 1, est fourni les informations de gestionnaire d’exception. Il s’agit d’un seul **RVA de gestionnaire d’Exception** en fournissant l’adresse du Gestionnaire d’exceptions lui-même, immédiatement suivi d’une quantité de longueur variable de données requises par le Gestionnaire d’exceptions.
+1. Enfin, après le code de déroulement bytes, si le bit **X** dans l’en-tête a la valeur 1, les informations du gestionnaire d’exceptions sont fournies. Il se compose d’un **RVA de gestionnaire d’exceptions** unique qui fournit l’adresse du gestionnaire d’exceptions lui-même. Il est immédiatement suivi d’un volume de données de longueur variable requis par le gestionnaire d’exceptions.
 
-L’enregistrement .xdata ci-dessus est conçu tel qu’il soit possible d’extraire les 8 premiers octets et de celui calculer la taille totale de l’enregistrement (moins la longueur des données d’exception de taille variable qui suit). L’extrait de code suivant calcule la taille d’enregistrement :
+L’enregistrement. XData est conçu de sorte qu’il est possible de récupérer les 8 premiers octets et de les utiliser pour calculer la taille complète de l’enregistrement, moins la longueur des données d’exception de taille variable qui suit. L’extrait de code suivant calcule la taille de l’enregistrement :
 
 ```cpp
 ULONG ComputeXdataSize(PULONG *Xdata)
@@ -267,134 +268,135 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Il convient de noter que bien que le prologue et chaque épilogue a son propre index dans les codes de déroulement, la table est partagée entre eux, et il est tout à fait possible (et pas complètement rare) qu’ils puissent tous partager les mêmes codes (voir l’exemple 2 dans le bel de section d’exemples Comment puis-je). Writers de compilateur doivent optimiser dans ce cas, en particulier, car le plus grand index peut être spécifié est de 255, ce qui limite le nombre total de codes de déroulement pour une fonction particulière.
+Bien que le prologue et chaque épilogue aient son propre index dans les codes de déroulement, la table est partagée entre eux. Il est tout à fait possible (et pas totalement rare) qu’ils puissent tous partager les mêmes codes. (Pour obtenir un exemple, consultez l’exemple 2 de la section [exemples](#examples) .) Les writers de compilateur doivent optimiser dans ce cas, en particulier parce que l’index le plus volumineux qui peut être spécifié est 255, ce qui limite le nombre total de codes de déroulement pour une fonction particulière.
 
 ### <a name="unwind-codes"></a>Codes de déroulement
 
-Le tableau de codes de déroulement est un pool de séquences qui indiquent exactement comment annuler les effets du prologue, dans l’ordre dans lequel les opérations doivent être annulées. Les codes de déroulement peuvent être considérés comme un jeu d’instructions mini, encodé sous forme de chaîne d’octets. Lors de l’exécution est terminée, l’adresse de retour à la fonction appelante est dans le Registre lr, et tous les registres non volatils sont restaurés sur leurs valeurs au moment de que la fonction a été appelée.
+Le tableau des codes de déroulement est un pool de séquences qui décrivent exactement comment annuler les effets du prologue, stockés dans le même ordre que les opérations doivent être annulées. Les codes de déroulement peuvent être considérés comme un petit ensemble d’instructions, encodé sous la forme d’une chaîne d’octets. Une fois l’exécution terminée, l’adresse de retour à la fonction appelante se trouve dans le registre LR. De plus, tous les registres non volatils sont restaurés sur leurs valeurs au moment où la fonction a été appelée.
 
-Si les exceptions ont été garanties ne se produisaient au sein d’un corps de fonction (et jamais avec un prologue ou un épilogue), uniquement une seule séquence serait nécessaire. Toutefois, le modèle de déroulement Windows requiert que nous être en mesure de déroulement à partir un prologue partiellement exécuté ni d’épilogue. Afin de satisfaire cette exigence, les codes de déroulement ont été soigneusement conçus tels qu’ils sont mappés sans ambiguïté 1:1 à chaque opcode approprié dans le prologue et épilogue. Cela a plusieurs conséquences :
+S’il est garanti que les exceptions se produisent uniquement dans un corps de fonction, et jamais dans un prologue ou un épilogue, une seule séquence est nécessaire. Toutefois, le modèle de déroulement Windows requiert que le code puisse se dérouler à partir d’un prologue ou d’un épilogue partiellement exécuté. Pour répondre à cette exigence, les codes de déroulement ont été soigneusement conçus afin de mapper de manière non ambiguë 1:1 à chaque opcode approprié dans le prologue et l’épilogue. Cette conception a plusieurs implications :
 
-1. En comptant le nombre de codes de déroulement, il est possible de calculer la longueur du prologue et épilogue.
+1. En comptant le nombre de codes de déroulement, il est possible de calculer la longueur du prologue et d’épilogue.
 
-1. En comptant le nombre d’instructions après le début d’une portée d’épilogue, il est possible d’ignorer le nombre équivalent de codes de déroulement et d’exécuter le reste d’une séquence pour terminer le partiellement exécuté déroulement de l’exécution de l’épilogue.
+1. En comptant le nombre d’instructions au-delà du début d’une portée d’épilogue, il est possible d’ignorer le nombre équivalent de codes de déroulement. Ensuite, nous pouvons exécuter le reste d’une séquence pour terminer le déroulement partiellement exécuté par l’épilogue.
 
-1. En comptant le nombre d’instructions avant la fin du prologue, il est possible d’ignorer le nombre équivalent de codes de déroulement et d’exécuter le reste de la séquence à annuler uniquement les parties du prologue qui ont terminé leur exécution.
+1. En comptant le nombre d’instructions avant la fin du prologue, il est possible d’ignorer le nombre équivalent de codes de déroulement. Ensuite, nous pouvons exécuter le reste de la séquence pour annuler uniquement les parties du prologue dont l’exécution est terminée.
 
-Les codes de déroulement sont encodées selon le tableau ci-dessous. Tous les codes de déroulement sont un octet unique/double, sauf celui qui alloue une énorme. Voici les totalement 21 code de déroulement. Chaque déroulement code maps exactement une seule instruction dans le prologue/épilogue afin de permettre le déroulement de partiellement exécuté les prologues et épilogues.
+Les codes de déroulement sont encodés selon le tableau ci-dessous. Tous les codes de déroulement sont un octet unique/double, à l’exception de celui qui alloue une énorme pile. Il y a entièrement 21 code de déroulement. Chaque code de déroulement mappe exactement une instruction dans le prologue/épilogue, afin de permettre le déroulement des projournaux et épilogues partiellement exécutés.
 
-|Code de déroulement|Bits et l’interprétation|
+|Code de déroulement|Bits et interprétation|
 |-|-|
-|`alloc_s`|000xxxxx : allouer de la petite pile avec taille \< 512 (2 ^ 5 * 16).|
-|`save_r19r20_x`|    001zzzzz : enregistrer \<x19, x20 > la paire à [Z sp-# * 8] !, décalage préalable indexée > =-248 |
-|`save_fplr`|        01zzzzzz : enregistrer \<x29, lr > coupler à [sp + #Z * 8], décalage \<= 504. |
-|`save_fplr_x`|        10zzzzzz : enregistrer \<x29, lr > coupler à [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -512 |
-|`alloc_m`|        11000xxx'xxxxxxxx : allouer de la pile volumineuses avec taille \< 16 k (2 ^ 11 * 16). |
-|`save_regp`|        110010xx'xxzzzzzz : enregistrer la paire de x(19+#X) à [sp + #Z * 8], décalage \<= 504 |
-|`save_regp_x`|        110011xx'xxzzzzzz : enregistrer x(19+#X) paire à [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -512 |
-|`save_reg`|        110100xx'xxzzzzzz : enregistrer x(19+#X) reg à [sp + #Z * 8], décalage \<= 504 |
-|`save_reg_x`|        x 1101010'xxxzzzzz : enregistrer x(19+#X) reg à [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -256 |
-|`save_lrpair`|         x 1101011'xxzzzzzz : enregistrer la paire \<x (19 + 2 *#X), lr > à [sp + #Z*8], décalage \<= 504 |
-|`save_fregp`|        x 1101100'xxzzzzzz : enregistrer d(8+#X) paire à [sp + #Z * 8], décalage \<= 504 |
-|`save_fregp_x`|        x 1101101'xxzzzzzz : enregistrer d(8+#X) paire, [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -512 |
-|`save_freg`|        x 1101110'xxzzzzzz : enregistrer d(8+#X) reg à [sp + #Z * 8], décalage \<= 504 |
-|`save_freg_x`|        11011110' xxxzzzzz : enregistrer d(8+#X) reg à [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -256 |
-|`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx : allouer de la pile volumineuses avec taille \< M 256 (2 ^ 24 * 16) |
-|`set_fp`|        11100001 : configurer x29 : avec : mov x29, sp |
-|`add_fp`|        11100010' xxxxxxxx : configurer x29 avec : ajouter x29, sp, #x * 8 |
-|`nop`|            11100011 : aucun déroulement de l’opération est nécessaire. |
-|`end`|            11100100 : fin du code de déroulement. Implique ret dans l’épilogue. |
+|`alloc_s`|000xxxxx : allouez une petite pile de taille \< 512 (2 ^ 5 * 16).|
+|`save_r19r20_x`|    001zzzzz : Save \<x19, X20 > paire à `[sp-#Z*8]!`, offset pré-indexé > =-248 |
+|`save_fplr`|        01zzzzzz : Save \<x29, LR > paire à `[sp+#Z*8]`, offset \< = 504. |
+|`save_fplr_x`|        10zzzzzz : Save \<x29, LR > paire au `[sp-(#Z+1)*8]!`, offset pré-indexé > =-512 |
+|`alloc_m`|        11000xxx’xxxxxxxx : allouez une grande pile de taille \< 16 Ko (2 ^ 11 * 16). |
+|`save_regp`|        110010xx’xxzzzzzz : enregistrer la paire x (19 + #X) à `[sp+#Z*8]`, décalage \< = 504 |
+|`save_regp_x`|        110011xx’xxzzzzzz : enregistrer la paire x (19 + #X) à `[sp-(#Z+1)*8]!`, décalage pré-index > =-512 |
+|`save_reg`|        110100xx’xxzzzzzz : enregistrer reg x (19 + #X) à `[sp+#Z*8]`, décalage \< = 504 |
+|`save_reg_x`|        1101010x’xxxzzzzz : enregistrer reg x (19 + #X) à `[sp-(#Z+1)*8]!`, décalage pré-index > =-256 |
+|`save_lrpair`|         1101011x’xxzzzzzz : Save pair \<x (19 + 2 * #X), LR > au `[sp+#Z*8]`, offset \< = 504 |
+|`save_fregp`|        1101100x’xxzzzzzz : enregistrer la paire d (8 + #X) à `[sp+#Z*8]`, décalage \< = 504 |
+|`save_fregp_x`|        1101101x’xxzzzzzz : enregistrer la paire d (8 + #X), à `[sp-(#Z+1)*8]!`, décalage pré-index > =-512 |
+|`save_freg`|        1101110x’xxzzzzzz : enregistrer reg d (8 + #X) à `[sp+#Z*8]`, décalage \< = 504 |
+|`save_freg_x`|        11011110 'xxxzzzzz : Save reg d (8 + #X) à `[sp-(#Z+1)*8]!`, offset pré-indexé > =-256 |
+|`alloc_l`|         11100000 'xxxxxxxx’xxxxxxxx’xxxxxxxx : allouer une grande pile avec une taille \< 256M (2 ^ 24 * 16) |
+|`set_fp`|        11100001 : configurer x29 : avec : `mov x29,sp` |
+|`add_fp`|        11100010 'xxxxxxxx : configurer x29 avec : `add x29,sp,#x*8` |
+|`nop`|            11100011 : aucune opération de déroulage n’est requise. |
+|`end`|            11100100 : fin du code de déroulement. Implique RET dans épilogue. |
 |`end_c`|        11100101 : fin du code de déroulement dans la portée chaînée actuelle. |
-|`save_next`|        11100110 : Enregistrer suivant Int non volatile ou FP inscrire paire. |
-|`arithmetic(add)`|    11100111' 000zxxxx : ajouter un cookie reg(z) à lr (0 = x28, 1 = sp) ; Ajouter lr, lr, reg(z) |
-|`arithmetic(sub)`|    11100111' 001zxxxx : sub reg(z) de cookie à partir de lr (0 = x28, 1 = sp) ; Sub lr, lr, reg(z) |
-|`arithmetic(eor)`|    11100111' 010zxxxx : lr eor avec cookie reg(z) (0 = x28, 1 = sp) ; EOR lr, lr, reg(z) |
-|`arithmetic(rol)`|    11100111' 0110xxxx : rol simulé de lr avec reg cookie (x28) ; xip0 = neg x28 ; ROR lr, xip0 |
-|`arithmetic(ror)`|    11100111' 100zxxxx : lr ror avec cookie reg(z) (0 = x28, 1 = sp) ; ROR lr, lr, reg(z) |
-| |            11100111 : xxxz--- :---réservé |
-| |              11101xxx : réservé pour les cas de pile personnalisée ci-dessous générés uniquement pour les routines asm |
-| |              11101001: Pile personnalisée pour MSFT_OP_TRAP_FRAME |
-| |              11101010: Pile personnalisée pour MSFT_OP_MACHINE_FRAME |
-| |              11101011: Pile personnalisée pour MSFT_OP_CONTEXT |
-| |              1111xxxx: reserved |
+|`save_next`|        11100110 : enregistrez la paire de registres int ou FP non volatile suivante. |
+|`arithmetic(add)`|    11100111 ' 000zxxxx : ajoutez le cookie reg (z) à LR (0 = x28, 1 = SP); `add lr, lr, reg(z)` |
+|`arithmetic(sub)`|    11100111 ' 001zxxxx : Sub cookie reg (z) from LR (0 = x28, 1 = SP); `sub lr, lr, reg(z)` |
+|`arithmetic(eor)`|    11100111 ' 010zxxxx : EOR LR avec le cookie reg (z) (0 = x28, 1 = SP); `eor lr, lr, reg(z)` |
+|`arithmetic(rol)`|    11100111 ' 0110xxxx : ROL simulé de LR avec le cookie reg (x28); xip0 = nég x28 ; `ror lr, xip0` |
+|`arithmetic(ror)`|    11100111 ' 100zxxxx : ROR LR avec le cookie reg (z) (0 = x28, 1 = SP); `ror lr, lr, reg(z)` |
+| |            11100111 : XXXZ---- :----réservé |
+| |              11101xxx : réservé pour les cas de pile personnalisés ci-dessous uniquement générés pour les routines ASM |
+| |              11101000 : Pile personnalisée pour MSFT_OP_TRAP_FRAME |
+| |              11101001 : Pile personnalisée pour MSFT_OP_MACHINE_FRAME |
+| |              11101010 : Pile personnalisée pour MSFT_OP_CONTEXT |
+| |              11101100 : Pile personnalisée pour MSFT_OP_CLEAR_UNWOUND_TO_CALL |
+| |              1111xxxx : réservé |
 
-Dans les instructions avec des valeurs élevées couvrant plusieurs octets, les bits les plus significatifs sont enregistrés en premier. Les codes de déroulement ci-dessus soient conçus pour en recherchant simplement le premier octet du code, il est possible de connaître la taille totale en octets du code de déroulement. Étant donné que chaque code de déroulement est mappée exactement à une instruction de prologue/épilogue, pour calculer la taille du prologue ou de l’épilogue, doit être effectuée qu’à remonter à partir du début de la séquence à la fin, à l’aide d’une table de recherche ou un dispositif similaire pour déterminer la durée pendant laquelle le cor est de l’opcode répond.
+Dans les instructions avec des valeurs importantes couvrant plusieurs octets, les bits les plus significatifs sont stockés en premier. Grâce à cette conception, il est possible de trouver la taille totale en octets du code de déroulement en recherchant uniquement le premier octet du code. Étant donné que chaque code de déroulement est mappé exactement à une instruction d’un prologue ou d’un épilogue, vous pouvez calculer la taille du prologue ou de l’épilogue. Vous pouvez vous lancer à partir du début de la séquence jusqu’à la fin, et utiliser une table de choix ou un appareil similaire pour déterminer la durée de l’opcode correspondant.
 
-Notez qu’addressing décalage postérieures indexée n’est pas autorisée dans le prologue. Toutes les plages d’offsets (#Z) correspond à l’encodage de STP/STR addressing sauf `save_r19r20_x` dans quels 248 est suffisante pour toutes les entités des zones (des registres Int 10 + 8 registres FP + 8 registres d’entrée).
+L’adressage de décalage après indexation n’est pas autorisé dans un prologue. Toutes les plages de décalage (#Z) correspondent à l’encodage de l’adressage STP/STR, à l’exception de `save_r19r20_x`, dans lequel 248 est suffisant pour toutes les zones d’enregistrement (10 registres int + 8 registres FP + 8 registres d’entrée).
 
-`save_next` doit suivre un enregistrement pour Int ou volatile FP inscrire paire : `save_regp`, `save_regp_x`, `save_fregp`, `save_fregp_x`, `save_r19r20_x`, ou un autre `save_next`. Elle enregistre la paire de Registre suivante à la prochaine plage de 16 octets dans l’ordre « expansion ». `save-next` suivant une `save_next` qui désigne la dernière paire de Registre Int fait référence à la première paire de registres de virgule flottante.
+`save_next` doit suivre un enregistrement pour la paire de registres volatiles int ou FP : `save_regp`, `save_regp_x`, `save_fregp`, `save_fregp_x`, `save_r19r20_x` ou un autre `save_next`. Elle enregistre la paire de registres suivante à l’emplacement suivant de 16 octets dans l’ordre croissant. Une `save_next` fait référence à la première paire de registres FP lorsqu’elle suit le `save-next` qui désigne la dernière paire de registres int.
 
-Étant donné que la taille de regular retourner et instructions de saut de sont les mêmes, n’est pas nécessaire d’un séparées `end` code pour les scénarios d’appel tail de déroulement.
+Étant donné que la taille des instructions de retour et de saut standard est la même, il n’est pas nécessaire de disposer d’un code de déroulement `end` séparé pour les scénarios d’appel tail.
 
-`end_c` est conçu pour traiter les fragments de fonction non contigus fins d’optimisation. Un `end_c` qui indique la fin de codes de déroulement dans la portée actuelle doit être suivie d’une autre série de code de déroulement s’est terminée avec une véritable `end`. Les codes de déroulement entre `end_c` et `end` représentent les opérations de prologue dans la zone parente (prologue « fantôme »).  Plus de détails et d’exemples sont décrites dans la section ci-dessous.
+`end_c` est conçu pour gérer des fragments de fonction non contigus à des fins d’optimisation. @No__t-0 qui indique que la fin des codes de déroulement dans l’étendue actuelle doit être suivie par une autre série de code de déroulement se terminant par un réel `end`. Les codes de déroulement entre `end_c` et `end` représentent les opérations de prologue dans la région parente (Prologue « fantôme »).  Pour plus d’informations et d’exemples, voir la section ci-dessous.
 
-### <a name="packed-unwind-data"></a>Emballés données de déroulement
+### <a name="packed-unwind-data"></a>Données de déroulement compressées
 
-Pour les fonctions emballées dont suivi les prologues et épilogues la forme canonique décrite ci-dessous, déroulement données peuvent être utilisées, éliminant la nécessité d’un enregistrement .xdata entièrement et ce qui réduit considérablement le coût de la fourniture de données de déroulement. Le canoniques prologues et épilogues sont conçus pour répondre aux besoins courants d’une fonction simple qui ne nécessite pas d’un gestionnaire d’exceptions, et qui effectue ses opérations setup et teardown dans un ordre standard.
+Pour les fonctions dont les proépiloguess et les suivent la forme canonique décrite ci-dessous, les données de déroulement compressées peuvent être utilisées. Elle élimine la nécessité d’un enregistrement. XData entièrement et réduit considérablement le coût de la fourniture de données de déroulement. Les projournaux et épilogues canoniques sont conçus pour répondre aux exigences courantes d’une fonction simple : Un qui ne requiert pas de gestionnaire d’exceptions et qui effectue ses opérations de configuration et de démontage dans un ordre standard.
 
-Le format d’un enregistrement .pdata avec compressé de déroulement données ressemble à ceci :
+Le format d’un enregistrement. pdata avec des données de déroulement compressées ressemble à ceci :
 
-![données de déroulement enregistrement .pdata avec compressé](media/arm64-exception-handling-packed-unwind-data.png "enregistrement .pdata avec compressée des données de déroulement")
+![enregistrement. pdata avec les données de déroulement compressées](media/arm64-exception-handling-packed-unwind-data.png "enregistrement. pdata avec les données de déroulement compressées")
 
-Les champs sont les suivantes :
+Les champs sont les suivants :
 
-- **Fonction RVA Démarrer** est l’adresse RVA 32 bits du début de la fonction.
-- **Indicateur** est un champ de 2 bits comme décrit ci-dessus, avec les significations suivantes :
-  - 00 = compressé déroulement des données non utilisées ; bits restants pointent vers un enregistrement .xdata
-  - 01 = compressée utilisées comme décrit ci-dessous, avec un seul prologue et épilogue au début et à la fin de l’étendue des données de déroulement
-  - 10 = compressée utilisées comme décrit ci-dessous pour le code sans prologue et épilogue ; des données de déroulement Cela est utile pour décrire les segments de la fonction séparés.
-  - 11 = réservés ;
-- **Longueur de la fonction** est un champ de 11 bits fournissant la longueur de la fonction entière en octets, divisé par 4. Si la fonction est supérieure à 8 Ko, un enregistrement .xdata complet doit être utilisé à la place.
-- **La taille de trame** est un champ de 9 bits indiquant le nombre d’octets de pile est allouée pour cette fonction, divisée par 16. Les fonctions qui allouent supérieure (8k-16) des octets de pile doivent utiliser un enregistrement .xdata complet. Cela inclut le réseau local variable, sortant de zone de paramètres, enregistrées par l’appelé Int et FP zone et zone de paramètres de base, mais à l’exclusion de la zone d’allocation dynamique.
-- **CR** est un indicateur de 2 bits qui indique si la fonction inclut des instructions supplémentaires pour définir une chaîne de frames et un lien de retour :
-  - 00 = fonction non chaînée, \<x29, lr > paire n’est pas enregistrée dans la pile.
-  - 01 = fonction non chaînée, \<lr > est enregistré dans la pile
-  - 10 = réservés ;
-  - 11 = fonction chaînée, une instruction de paire de magasin/charge est utilisée dans le prologue/épilogue \<x29, lr >
-- **H** est un indicateur de 1 bit qui indique si la fonction héberge le paramètre entier inscrit (x0 x7) en les stockant dès le début de la fonction. (0 = n’héberge pas les registres, 1 = héberge les registres).
-- **RegI** est un champ de 4 bits indiquant le nombre d’INT les registres non volatils (x19 x28) enregistré dans l’emplacement de pile canonique.
-- **RegF** est un champ de 3 bits indiquant le nombre de FP les registres non volatils (d8-d15) enregistré dans l’emplacement de pile canonique. (RegF = 0 : aucun registre FP n’est enregistré ; RegF > 0 : RegF + 1 registres de virgule flottante sont enregistrées). Conditionnés de déroulement données ne peut pas être utilisées pour la fonction qui n'enregistrer qu’un seul registre FP.
+- **RVA Start Function** est l’adresse RVA 32 bits du début de la fonction.
+- L' **indicateur** est un champ de 2 bits comme décrit ci-dessus, avec les significations suivantes :
+  - 00 = données de déroulement compressées non utilisées ; points de bits restants vers un enregistrement. XData
+  - 01 = données de déroulement compressées utilisées avec un seul prologue et épilogue au début et à la fin de l’étendue
+  - 10 = données de déroulement compressées utilisées pour le code sans prologue et épilogue. Utile pour décrire des segments de fonction séparés
+  - 11 = réservé.
+- La **longueur de fonction** est un champ de 11 bits qui fournit la longueur de la fonction entière en octets, divisée par 4. Si la taille de la fonction est supérieure à 8 Ko, un enregistrement complet. XData doit être utilisé à la place.
+- La **taille de frame** est un champ de 9 bits indiquant le nombre d’octets de la pile alloués pour cette fonction, divisé par 16. Les fonctions qui allouent plus de (8 Ko-16) octets de pile doivent utiliser un enregistrement. XData complet. Il inclut la zone de variables locales, la zone de paramètres sortants, l’appelant-saved zone int et FP et la zone de paramètres de démarrage, mais exclut la zone d’allocation dynamique.
+- **CR** est un indicateur de 2 bits indiquant si la fonction comprend des instructions supplémentaires pour configurer une chaîne de frames et un lien de retour :
+  - 00 = fonction non chaînée, \<x29, LR > paire n’est pas enregistrée dans la pile.
+  - 01 = fonction non chaînée, \<lr > est enregistrée dans la pile
+  - 10 = réservée ;
+  - 11 = fonction chaînée, une instruction de paire magasin/chargement est utilisée dans le prologue/épilogue \<x29, LR >
+- **H** est un indicateur de 1 bit qui indique si la fonction maison les registres de paramètres entiers (x0-x 7) en les stockant au début de la fonction. (0 = pas de registres personnels, 1 = maisons inscrites).
+- **Gion** est un champ de 4 bits indiquant le nombre de registres int non volatiles (x19-x28) enregistrés à l’emplacement de pile canonique.
+- **RegF** est un champ de 3 bits indiquant le nombre de registres FP non volatils (D8-D15) enregistrés à l’emplacement de pile canonique. (RegF = 0 : aucun registre FP n’est enregistré ; RegF > 0 : RegF + 1 les registres FP sont enregistrés). Les données de déroulement compressées ne peuvent pas être utilisées pour la fonction qui enregistre un seul registre FP.
 
-Les prologues canoniques qui appartiennent aux catégories 1, 2 (sans zone de paramètres sortants), 3 et 4 dans la section ci-dessus peuvent être représentés par le format de déroulement compressé.  Les épilogues pour les fonctions canoniques suivent une forme très similaire, sauf **H** n’a aucun effet, la `set_fp` instruction est omise, ainsi que l’ordre des étapes, ainsi que des instructions dans chaque étape dans l’épilogue. L’algorithme pour xdata compressé suit ces étapes détaillées dans le tableau suivant :
+Les projournaux canoniques qui appartiennent à des catégories 1, 2 (sans zone de paramètres sortants), 3 et 4 dans la section ci-dessus peuvent être représentés par un format de déroulement compressé.  Les épilogues pour les fonctions canoniques suivent un formulaire similaire, sauf que **H** n’a aucun effet, que l’instruction `set_fp` est omise et que l’ordre des étapes et les instructions de chaque étape sont inversés dans l’épilogue. L’algorithme de compression. XData suit ces étapes, détaillées dans le tableau suivant :
 
-Étape 0 : Effectuer le calcul préalable de la taille de chaque zone.
+Étape 0 : Précalcul de la taille de chaque zone.
 
-Étape 1 : Enregistrer des registres enregistrés des appelés de Int.
+Étape 1 : Enregistrer un appelé int-registres enregistrés.
 
-Étape 2 : Cette étape est spécifique de type 4 dans les premières sections. LR est enregistré à la fin de la zone de type Int.
+Étape 2 : Cette étape est spécifique au type 4 dans les premières sections. LR est enregistré à la fin de la zone int.
 
-Étape 3 : Enregistrer des registres enregistrés des appelés FP.
+Étape 3 : Enregistrer l’appelé FP-registres enregistrés.
 
-Étape 4 : Enregistrer des arguments d’entrée dans la zone paramètre domestique.
+Étape 4 : Enregistrez les arguments d’entrée dans la zone de paramètres de démarrage.
 
-Étape 5 : Allouer de la pile restante, y compris le réseau local, \<x29, lr > paire et zone de paramètres sortants. 5 a correspond au type canonique 1. 5 b et c de 5 sont pour le type canonique 2. 5D 5e concernent à la fois type 3 et tapez 4.
+Étape 5 : Allouez la pile restante, y compris la zone locale, la paire @no__t 0x29, LR > et la zone de paramètres sortants. 5a correspond au type canonique 1. 5b et 5c sont pour le type canonique 2. 5J et 5e sont pour les types 3 et 4.
 
-Étape #|Valeurs d’indicateur|nombre d’instructions|Opcode|Code de déroulement
+Première #|Valeurs d’indicateur|nombre d’instructions|Opcode|Code de déroulement
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **regI** < = 10|RegI / 2 + **RegI** % 2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+1|0 < **gion** < = 10|Gion/2 + **gion** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
 2|**CR**==01*|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
-3|0 < **RegF** <=7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
+3|0 < **RegF** < = 7|(RegF + 1)/2 +<br/>(RegF + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
 4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
 5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
 5b|**CR** == 11 &&<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** == 11 && #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5d|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5C|**CR** == 11 && #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5D|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\* Si **CR** == 01 et **RegI** est un nombre impair, étape 2 et dernière save_rep à l’étape 1 sont fusionnées dans un save_regp.
+\* si **CR** = = 01 et **gion** est un nombre impair, l’étape 2 et la dernière save_rep de l’étape 1 sont fusionnées dans un save_regp.
 
-\*\* Si **RegI** == **CR** == 0, et **RegF** ! = 0, le premier protocole stp pour la virgule flottante ne la décrémentation préfixée.
+\* @ no__t-1 si **gion** == **CR** = = 0 et **RegF** ! = 0, le premier STP pour la virgule flottante effectue le prédécrémentation.
 
-\*\*\* Aucune instruction correspondant à `mov x29,sp` est présent dans l’épilogue. Conditionnés de déroulement données ne peut pas être utilisées si une fonction requiert la restauration de procédure stockée à partir de x29.
+\* @ no__t-1 @ no__t-2 aucune instruction correspondant à `mov x29,sp` est présente dans l’épilogue. Les données de déroulement compressées ne peuvent pas être utilisées si une fonction requiert la restauration du SP à partir de x29.
 
-### <a name="unwinding-partial-prologs-and-epilogs"></a>Épilogues et le déroulement des prologues partielles
+### <a name="unwinding-partial-prologs-and-epilogs"></a>Déroulement partiel des projournalions et des épilogues
 
-La situation de déroulement plus courante est une où l’appel ou une exception s’est produite dans le corps de la fonction, le prologue et tous les épilogues. Dans ce cas, le déroulement est simple : le dérouleur simplement commence les codes dans le tableau de déroulement, commençant à l’index 0 et en continuant jusqu'à ce qu’un opcode de fin est détecté.
+La situation de déroulement le plus courant est celle dans laquelle l’exception ou l’appel s’est produit dans le corps de la fonction, en dehors du prologue et de tous les épilogues. Dans ce cas, le déroulement est simple : le dérouleur commence simplement à exécuter les codes dans le tableau de déroulement en commençant à l’index 0 et en continuant jusqu’à ce qu’un opcode de fin soit détecté.
 
-Il est plus difficile de se dérouler correctement dans le cas où une exception ou une interruption se produit lors de l’exécution d’un prologue ni épilogue. Dans ces situations, le frame de pile n'est que partiellement construit, et l’astuce consiste à déterminer exactement ce qui a été fait pour l’annuler correctement.
+Il est plus difficile de le dérouler correctement dans le cas où une exception ou une interruption se produit lors de l’exécution d’un prologue ou d’un épilogue. Dans ce cas, le frame de pile n’est que partiellement construit. Le problème est de déterminer exactement ce qui a été fait, de l’annuler correctement.
 
-Par exemple, prenez cette séquence de prologue et épilogue :
+Par exemple, prenez ce prologue et la séquence d’épilogue :
 
 ```asm
 0000:    stp    x29,lr,[sp,#-256]!          // save_fplr_x  256 (pre-indexed store)
@@ -409,37 +411,37 @@ Par exemple, prenez cette séquence de prologue et épilogue :
 0110:    ret    lr                          // end
 ```
 
-En regard de chaque opcode est le code de déroulement approprié qui décrit cette opération. La première chose à noter est que la série de codes de déroulement du prologue est une image miroir exacte de codes de déroulement de l’épilogue (sans compter l’instruction finale de l’épilogue). Il s’agit d’une situation courante, et c’est pourquoi le déroulement codes pour le prologue sont toujours considérées comme être stockées dans l’ordre inverse à partir de l’ordre d’exécution du prologue.
+En regard de chaque opcode se trouve le code de déroulement approprié qui décrit cette opération. Vous pouvez voir comment la série de codes de déroulement du prologue est une image miroir exacte des codes de déroulement pour l’épilogue (sans compter l’instruction finale de l’épilogue). C’est une situation courante. c’est pourquoi nous supposons toujours que les codes de déroulement du prologue sont stockés dans l’ordre inverse à partir de l’ordre d’exécution du prologue.
 
-Par conséquent, pour le prologue et épilogue, nous restons confrontés à un ensemble commun de codes de déroulement :
+Ainsi, pour le prologue et l’épilogue, nous avons laissé un ensemble commun de codes de déroulement :
 
 `set_fp`, `save_regp 0,240`, `save_fregp,0,224`, `save_fplr_x_256`, `end`
 
-À partir de la casse de l’épilogue (plus simple car il est dans l’ordre normal), au décalage 0 dans l’épilogue (qui démarre au décalage 0 x 100 dans la fonction), on attendait exécuter la séquence de déroulement complète, comme aucun nettoyage n’a encore été effectuée. Si nous nous trouvons une seule instruction dans (à l’offset 2 dans l’épilogue), nous pouvons procéder au déroulement en ignorant le premier code de déroulement. La généralisation de cette situation, en supposant qu’un mappage 1:1 entre les opcodes et codes de déroulement, nous pouvons d’état que si nous sommes le déroulement démarre à partir de n instruction dans l’épilogue, nous devons ignorer les codes de déroulement n premier et commencer l’exécution à partir de là.
+Le cas d’épilogue est simple, car il est dans l’ordre normal. En commençant à l’offset 0 dans l’épilogue (qui commence à l’offset 0x100 dans la fonction), nous attendions l’exécution de la séquence de déroulement complète, car aucun nettoyage n’a encore été effectué. Si nous nous trouvons une instruction dans (au décalage 2 dans l’épilogue), nous pouvons effectuer une déroulation en ignorant le premier code de déroulement. Nous pouvons généraliser cette situation et supposer un mappage de 1:1 entre les OpCodes et les codes de déroulement. Ensuite, pour commencer le déroulement à partir de l’instruction *n* dans l’épilogue, nous devrions ignorer les *n* premiers codes de déroulement et commencer à exécuter à partir de là.
 
-Il s’avère qu’une logique similaire fonctionne pour le prologue, à l’exception dans l’ordre inverse. Si nous sommes le déroulement démarre à partir de l’offset 0 dans le prologue, nous voulons exécuter rien. Si nous déroulée décalage 2, qui est la première instruction, puis nous voulons démarrer l’exécution du code de déroulement un déroulement séquence à partir de la fin (n’oubliez pas, les codes sont stockés dans l’ordre inverse). Et ici trop nous pouvons généraliser que si nous sommes le déroulement démarre à partir de n instruction dans le prologue, nous devons démarrer l’exécution de codes de déroulement n à partir de la fin de la liste des codes.
+Il s’avère qu’une logique similaire fonctionne pour le prologue, sauf en sens inverse. Si nous commençons à dérouler du décalage 0 dans le prologue, nous souhaitons n’exécuter aucune action. Si nous déroulons du décalage 2, qui est une instruction dans, nous souhaitons commencer à exécuter la séquence de déroulement un code de déroulement à partir de la fin. (N’oubliez pas que les codes sont stockés dans l’ordre inverse.) Et ici également, nous pouvons généraliser : si nous commençons le déroulement à partir de l’instruction n dans le prologue, nous devrions commencer à exécuter n codes de déroulement à partir de la fin de la liste de codes.
 
-À présent, il n’est pas toujours le cas où les codes de prologue et épilogue correspondent exactement. Pour cette raison, le tableau de déroulement devons peut contenir plusieurs séquences de codes. Pour déterminer le décalage de l’emplacement où commencer le traitement des codes, utilisez la logique suivante :
+Ce n’est pas toujours le cas si les codes de prologue et d’épilogue correspondent exactement. C’est pourquoi le tableau de déroulement peut avoir besoin de contenir plusieurs séquences de codes. Pour déterminer le décalage de l’emplacement où commencer le traitement des codes, utilisez la logique suivante :
 
-1. Si le déroulement démarre dans le corps de la fonction, simplement commencer l’exécution de codes de déroulement à l’index 0 et continuer jusqu'à atteindre un opcode de « fin ».
+1. Si vous effectuez un déroulement à partir du corps de la fonction, commencez à exécuter les codes de déroulement à l’index 0 et continuez jusqu’à ce que vous atteigniez un opcode « end ».
 
-1. Si le déroulement démarre dans un épilogue, utilisez l’index de départ spécifique à l’épilogue fourni avec la portée d’épilogue comme point de départ. Calculer le nombre d’octets le PC en question est à partir du début de l’épilogue. Avancer vers l’avant via les codes de déroulement, en ignorant les codes de déroulement jusqu'à ce que toutes les instructions déjà exécutées sont pris en compte. Puis exécutez en commençant à ce stade.
+1. En cas de déroulement à partir d’un épilogue, utilisez l’index de départ spécifique à l’épilogu fourni avec la portée d’épilogue comme point de départ. Calculez le nombre d’octets du PC en question à partir du début de l’épilogue. Ensuite, avancez dans les codes de déroulement, en ignorant les codes de déroulement jusqu’à ce que toutes les instructions déjà exécutées soient prises en compte. Exécutez ensuite à partir de ce point.
 
-1. Si le déroulement démarre dans le prologue, utilisez l’index 0 comme point de départ. Calculer la longueur du code de prologue de la séquence et vous devez calculer le nombre d’octets le PC en question est à la fin du prologue. Avancer vers l’avant via les codes de déroulement, en ignorant les codes de déroulement jusqu'à ce que toutes les instructions non encore exécutés sont pris en compte. Puis exécutez en commençant à ce stade.
+1. Si vous procédez à un déroulement à partir du prologue, utilisez l’index 0 comme point de départ. Calculez la longueur du code de prologue à partir de la séquence, puis calculez le nombre d’octets du PC en question à partir de la fin du prologue. Ensuite, avancez dans les codes de déroulement, en ignorant les codes de déroulement jusqu’à ce que toutes les instructions qui n’ont pas encore été exécutées soient prises en compte. Exécutez ensuite à partir de ce point.
 
-Par conséquent de ces règles, les codes de déroulement du prologue doivent toujours être le premier dans le tableau, et ils sont également les codes de déroulement général déroulements dans le corps. Les séquences de code spécifique à l’épilogue doivent suivre immédiatement.
+Ces règles signifient que les codes de déroulement du prologue doivent toujours être le premier dans le tableau. Ils sont également les codes utilisés pour se dérouler dans le cas général du déroulement à partir du corps. Toutes les séquences de code spécifiques à un épilogue doivent suivre immédiatement après.
 
 ### <a name="function-fragments"></a>Fragments de fonction
 
-Pour des raisons de l’optimisation de code et d’autres raisons, il peut être préférable de scinder une fonction en fragments séparés (également appelés régions). Dans ce cas, chaque fragment de fonction qui en résulte exige son propre distinct .pdata (et éventuellement .xdata) enregistrement.
+À des fins d’optimisation du code et pour d’autres raisons, il peut être préférable de fractionner une fonction en fragments séparés (également appelés régions). Lors du fractionnement, chaque fragment de fonction résultant requiert son propre enregistrement. pdata (et éventuellement. XData).
 
-Pour séparées fragment secondaire qui a son propre prologue, il est probable qu’aucun ajustement de pile ne s’effectue par son prologue. Tout espace requis par la base de données secondaire de pile régions doivent être pré-allouée par son parent (ou région région appelé hôte). Cela permet de conserver les manipulations de pointeur de pile strictement dans le prologue d’origine de la fonction.
+Pour chaque fragment secondaire séparé ayant son propre prologue, il est prévu qu’aucun ajustement de la pile ne soit effectué dans son prologue. Tout l’espace de pile requis par une région secondaire doit être pré-alloué par sa région parente (ou région hôte). Cela conserve strictement la manipulation du pointeur de pile dans le prologue d’origine de la fonction.
 
-Un cas ordinaire de fragments de fonction est « séparation de code » avec ce compilateur peut déplacer une région de code en dehors de sa fonction de l’hôte. Il existe trois cas inhabituels qui a pu être provoqués par la séparation de code.
+Un cas typique de fragments de fonction est la « séparation de code » avec ce compilateur qui peut déplacer une région de code hors de sa fonction hôte. Il existe trois cas inhabituels qui peuvent résulter de la séparation de code.
 
-#### <a name="example"></a>Exemple :
+#### <a name="example"></a>Exemple
 
-- (zone 1 : commencer)
+- (région 1 : début)
 
     ```asm
         stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
@@ -448,45 +450,47 @@ Un cas ordinaire de fragments de fonction est « séparation de code » avec c
         ...
     ```
 
-- (zone 1 : fin)
-- (zone 3 : commencer)
+- (région 1 : fin)
+
+- (région 3 : début)
 
     ```asm
         ...
     ```
 
-- (zone 3 : fin)
-- (zone 2 : commencer)
+- (région 3 : fin)
+
+- (région 2 : début)
 
     ```asm
-    ...
+        ...
         mov     sp,x29                  // set_fp
         ldp     x19,x20,[sp,#240]       // save_regp 0, 240
         ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
-- (zone 2 : fin)
+- (région 2 : fin)
 
-1. Prologue uniquement (région 1 : tous les épilogues se trouvent dans des régions séparées) :
+1. Prologue uniquement (région 1 : toutes les épilogues se trouvent dans des régions séparées) :
 
-   Uniquement dans le prologue doit être décrit. Ceci ne peut pas être représenté par .pdata compact format. Dans le cas .xdata complet, il peut être représenté en définissant le nombre d’épilogue = 0. Consultez la région 1 dans l’exemple ci-dessus.
+   Seul le prologue doit être décrit. Cela ne peut pas être représenté au format compact. pData. Dans le cas complet. XData, il peut être représenté en définissant l’épilogue Count = 0. Consultez la région 1 dans l’exemple ci-dessus.
 
    Codes de déroulement : `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
-1. Épilogues uniquement (région 2 : prologue est dans la région de l’hôte)
+1. Épilogues uniquement (région 2 : le prologue est dans la région hôte)
 
-   Il est supposé que par le contrôle de temps passer à cette région, tous les codes de prologue ont été exécutées. Déroulement partiel peut se produire dans les épilogues la même façon que dans une fonction normale. Ce type de région ne peut pas être représenté par .pdata compact. Dans l’enregistrement xdata complète, il peut être encodé avec un prologue « fantôme », encadrée par une `end_c` et `end` paire de code de déroulement.  Le caractère de début `end_c` indique la taille du prologue est égal à zéro. Épilogue démarrer index des points épilogue unique à `set_fp`.
+   Il est supposé que, lors du saut de contrôle dans cette région, tous les codes de prologue ont été exécutés. Un déroulement partiel peut se produire dans épilogues de la même façon que dans une fonction normale. Ce type de région ne peut pas être représenté par compact. pData. Dans l’enregistrement Full. XData, il peut être encodé à l’aide d’un prologue « fantôme », entre une paire de codes de déroulement `end_c` et `end`.  Le @no__t de début-0 indique que la taille du prologue est égale à zéro. L’index de début d’épilogue de l’épilogue unique pointe vers `set_fp`.
 
-   Code de région 2 de déroulement : `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
+   Code de déroulement pour la région 2 : `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
-1. Aucun prologues ou les épilogues (zone 3 : les prologues et épilogues tous sont dans d’autres fragments) :
+1. Aucun projournal ou épilogues (région 3 : les projournals et tous les épilogues se trouvent dans d’autres fragments) :
 
-   Format de .pdata Compact peut être appliquée via la définition d’indicateur = 10. Avec l’enregistrement .xdata complet, nombre d’épilogue = 1. Déroulement code est le même que pour la région 2 ci-dessus, mais les Index de début d’épilogue pointe également vers `end_c`. Déroulement partiel se produira jamais dans cette région de code.
+   Le format compact. pdata peut être appliqué via l’indicateur de paramètre = 10. Avec l’enregistrement Full. XData, épilogue Count = 1. Le code de déroulement est le même que celui de la région 2 ci-dessus, mais l’index de début d’épilogue pointe également vers `end_c`. Le déroulement partiel ne se produira jamais dans cette région de code.
 
-Un autre cas plus complexe de fragments de fonction est « réduire d’habillage » avec ce compilateur peut choisir de différer l’enregistrement des registres enregistrés appelé jusqu'à ce qu’en dehors du prologue d’entrée de fonction.
+Un autre cas plus compliqué de fragments de fonction est « réduire l’habillage ». Le compilateur peut choisir de différer l’enregistrement de certains registres enregistrés par l’appelé jusqu’à l’extérieur du prologue de l’entrée de la fonction.
 
-- (zone 1 : commencer)
+- (région 1 : début)
 
     ```asm
         stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
@@ -495,7 +499,7 @@ Un autre cas plus complexe de fragments de fonction est « réduire d’habilla
         ...
     ```
 
-- (zone 2 : commencer)
+- (région 2 : début)
 
     ```asm
         stp     x21,x22,[sp,#224]       // save_regp 2, 224
@@ -503,7 +507,7 @@ Un autre cas plus complexe de fragments de fonction est « réduire d’habilla
         ldp     x21,x22,[sp,#224]       // save_regp 2, 224
     ```
 
-- (zone 2 : fin)
+- (région 2 : fin)
 
     ```asm
         ...
@@ -513,25 +517,25 @@ Un autre cas plus complexe de fragments de fonction est « réduire d’habilla
         ret     lr                      // end
     ```
 
-- (zone 1 : fin)
+- (région 1 : fin)
 
-Dans le prologue de la région 1, l’espace de pile est alloué au préalable. Notez que cette région 2 ont le même code de déroulement que même s’il est déplacé en dehors de sa fonction de l’hôte.
+Dans le prologue de la région 1, l’espace de pile est pré-alloué. Vous pouvez voir que la région 2 aura le même code de déroulement, même si elle est déplacée hors de sa fonction hôte.
 
-Zone 1 : `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end` avec Index de début d’épilogue pointe vers `set_fp` comme d’habitude.
+Région 1 : `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end` avec l’index de début d’épilogue pointe vers `set_fp` comme d’habitude.
 
-Zone 2 : `save_regp 2, 224`, `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`. Index de début d’épilogue pointe pour le code de déroulement tout d’abord `save_regp 2, 224`.
+Région 2 : `save_regp 2, 224`, `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`. L’index de début d’épilogue pointe vers le premier code de déroulement `save_regp 2, 224`.
 
 ### <a name="large-functions"></a>Fonctions volumineuses
 
-Fragments peuvent être exploitées pour décrire les fonctions dont la taille dépasse la limite de 1 million imposée par les champs de bits dans l’en-tête .xdata. Pour décrire une fonction très volumineuse comme cela, elle doit simplement être divisé en fragments inférieure à 1 million. Chaque fragment doit être ajusté afin qu’il ne divise pas un épilogue en plusieurs parties.
+Les fragments peuvent être utilisés pour décrire des fonctions supérieures à la limite de 1 million imposée par les champs de bits dans l’en-tête. XData. Pour décrire une fonction très volumineuse comme celle-ci, elle doit être divisée en fragments inférieurs à 1M. Chaque fragment doit être ajusté pour ne pas fractionner un épilogu en plusieurs parties.
 
-Seul le premier fragment de la fonction contiendra un prologue ; tous les autres fragments sont marqués comme n’ayant aucune prologue. Selon le nombre d’épilogues présent, chaque fragment peut contenir zéro ou plusieurs épilogues. N’oubliez pas que chaque portée d’épilogue dans un fragment spécifie son décalage de départ par rapport au début du fragment, et non au début de la fonction.
+Seul le premier fragment de la fonction contiendra un prologue ; tous les autres fragments sont marqués comme n’ayant aucun prologue. Selon le nombre de épilogues présents, chaque fragment peut contenir zéro ou plusieurs épilogues. Gardez à l’esprit que chaque portée d’épilogue dans un fragment spécifie son décalage de départ par rapport au début du fragment, et non le début de la fonction.
 
-Si un fragment ne contient aucun prologue et aucun épilogue, elle nécessite toujours ses propres .pdata (et éventuellement .xdata) enregistrement, de décrire le déroulement à partir du corps de la fonction.
+Si un fragment n’a pas de prologue ni d’épilogue, il requiert toujours son propre enregistrement. pdata (et éventuellement. XData) pour décrire comment se dérouler dans le corps de la fonction.
 
 ## <a name="examples"></a>Exemples
 
-### <a name="example-1-frame-chained-compact-form"></a>Exemple 1 : Forme compact frame en série
+### <a name="example-1-frame-chained-compact-form"></a>Exemple 1 : Image chaînée, compact-Form
 
 ```asm
 |Foo|     PROC
@@ -549,7 +553,7 @@ Si un fragment ne contient aucun prologue et aucun épilogue, elle nécessite to
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Exemple 2 : Frame en série, forme complète avec miroir prologue et épilogue
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Exemple 2 : Mise en miroir de la trame, pleine forme avec mise en miroir & épilogue
 
 ```asm
 |Bar|     PROC
@@ -581,9 +585,9 @@ Si un fragment ne contient aucun prologue et aucun épilogue, elle nécessite to
     ;end
 ```
 
-Notez que l’EpilogStart Index [0] pointe vers la même séquence de code de déroulement de prologue.
+L’index de début d’épilogue [0] pointe vers la même séquence de code de déroulement de prologue.
 
-### <a name="example-3-variadic-unchained-function"></a>Exemple 3 : Variadiques chaîné (fonction)
+### <a name="example-3-variadic-unchained-function"></a>Exemple 3 : Variadiques fonction déchaînée
 
 ```asm
 |Delegate| PROC
@@ -622,9 +626,9 @@ Notez que l’EpilogStart Index [0] pointe vers la même séquence de code de d�
     ;end
 ```
 
-Remarque : EpilogStart Index [4] pointe vers le milieu de code de déroulement de prologue (partiellement un tableau de déroulement de réutilisation).
+L’index de début d’épilogue [4] pointe vers le milieu du code de déroulement du Prologue (réutilisation partielle du tableau de déroulement).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble des conventions ABI de ARM64](arm64-windows-abi-conventions.md)<br/>
+[Vue d’ensemble des conventions ABI ARM64](arm64-windows-abi-conventions.md)<br/>
 [Gestion des exceptions ARM](arm-exception-handling.md)

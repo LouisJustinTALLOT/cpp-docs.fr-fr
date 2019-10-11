@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: b84c51bc6adbb4fd879aadbca2856887e51fc401
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2e307bbbf79e6340d4090e471fe643726b5366f9
+ms.sourcegitcommit: a9f1a1ba078c2b8c66c3d285accad8e57dc4539a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311835"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72037811"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Différences du comportement de gestion des exceptions dans /CLR
 
@@ -97,7 +97,7 @@ We should execute this handler if compiled to native
 
 ##  <a name="vccondisassociatedrethrows"></a>Réexceptions dissociées
 
-**/CLR** ne prend pas en charge la levée à nouveau d’une exception en dehors d’un gestionnaire catch (appelée régénération dissociée). Les exceptions de ce type sont traitées comme une C++ nouvelle levée standard. Si une nouvelle levée dissociée est détectée lorsqu’il existe une exception managée active, l’exception est encapsulée en tant qu' C++ exception, puis levée de nouveau. Les exceptions de ce type ne peuvent être interceptées qu’en tant <xref:System.Runtime.InteropServices.SEHException>qu’exception de type.
+**/CLR** ne prend pas en charge la levée à nouveau d’une exception en dehors d’un gestionnaire catch (appelée régénération dissociée). Les exceptions de ce type sont traitées comme une C++ nouvelle levée standard. Si une nouvelle levée dissociée est détectée lorsqu’il existe une exception managée active, l’exception est encapsulée en tant qu' C++ exception, puis levée de nouveau. Les exceptions de ce type ne peuvent être interceptées qu’en tant qu’exception de type <xref:System.Runtime.InteropServices.SEHException>.
 
 L’exemple suivant illustre une exception managée levée à nouveau en C++ tant qu’exception :
 
@@ -149,7 +149,7 @@ caught an SEH Exception
 
 ##  <a name="vcconexceptionfiltersandexception_continue_execution"></a>Filtres d’exception et EXCEPTION_CONTINUE_EXECUTION
 
-Si un filtre retourne `EXCEPTION_CONTINUE_EXECUTION` dans une application managée, il est traité comme si le filtre `EXCEPTION_CONTINUE_SEARCH`avait été retourné. Pour plus d’informations sur ces constantes, consultez [instruction try-except](../cpp/try-except-statement.md).
+Si un filtre retourne `EXCEPTION_CONTINUE_EXECUTION` dans une application managée, il est traité comme si le filtre retournait `EXCEPTION_CONTINUE_SEARCH`. Pour plus d’informations sur ces constantes, consultez [instruction try-except](../cpp/try-except-statement.md).
 
 L’exemple suivant illustre cette différence :
 
@@ -190,7 +190,7 @@ Counter=-3
 
 ##  <a name="vcconthe_set_se_translatorfunction"></a>Fonction _ set_se_translator
 
-La fonction de traduction, définie par un appel `_set_se_translator`à, affecte uniquement les captures dans le code non managé. L’exemple suivant illustre cette limitation :
+La fonction de traduction, définie par un appel à `_set_se_translator`, affecte uniquement les interceptions dans le code non managé. L’exemple suivant illustre cette limitation :
 
 ```cpp
 // clr_exception_handling_8.cpp
@@ -279,4 +279,4 @@ Caught an SEH exception with exception code: e0000101
 
 [Gestion des exceptions](../extensions/exception-handling-cpp-component-extensions.md)<br/>
 [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)<br/>
-[Gestion des exceptions](../cpp/exception-handling-in-visual-cpp.md)
+[Gestion des exceptions dans MSVC](../cpp/exception-handling-in-visual-cpp.md)
