@@ -1,5 +1,5 @@
 ---
-title: 'Opérateur conditionnel : ? :'
+title: 'Opérateur conditionnel : &quest; :'
 ms.date: 11/04/2016
 f1_keywords:
 - '?:'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 8744ca8546d48e9283cc0dfa9d80babf5076f8b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a66b82682f90345518a2d520945e3aff1f78f89
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399146"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72276806"
 ---
-# <a name="conditional-operator--"></a>Opérateur conditionnel : ? :
+# <a name="conditional-operator-quest-"></a>Opérateur conditionnel : &quest; :
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,13 +25,13 @@ expression ? expression : expression
 
 ## <a name="remarks"></a>Notes
 
-L’opérateur conditionnel (**? :**) est un opérateur ternaire (il prend trois opérandes). L'opérateur conditionnel fonctionne comme suit :
+L’opérateur conditionnel ( **?:** ) est un opérateur ternaire (il prend trois opérandes). L'opérateur conditionnel fonctionne comme suit :
 
-- Le premier opérande est converti implicitement en **bool**. Il est évalué et tous les effets secondaires sont résolus avant de continuer.
+- Le premier opérande est implicitement converti en **bool**. Il est évalué et tous les effets secondaires sont résolus avant de continuer.
 
-- Si le premier opérande prend la valeur **true** (1), le second opérande est évalué.
+- Si le premier opérande prend la **valeur true** (1), le deuxième opérande est évalué.
 
-- Si le premier opérande prend la valeur **false** (0), le troisième opérande est évalué.
+- Si le premier opérande a la **valeur false** (0), le troisième opérande est évalué.
 
 Le résultat de l’opérateur conditionnel est que le résultat de tout opérande est évalué — le deuxième ou le troisième. Seul l’un des deux derniers opérandes est évalué dans une expression conditionnelle.
 
@@ -39,7 +39,7 @@ Les expressions conditionnelles ont une associativité de droite à gauche. Le p
 
 - Si les deux opérandes sont du même type, le résultat est de ce type.
 
-- Si les deux opérandes sont de type arithmétique ou énumération, les conversions arithmétiques classiques (traitées dans [Conversions Standard](standard-conversions.md)) sont exécutées pour les convertir en un type commun.
+- Si les deux opérandes sont de types arithmétiques ou d’énumération, les conversions arithmétiques habituelles (couvertes dans les [conversions standard](standard-conversions.md)) sont exécutées pour les convertir en un type commun.
 
 - Si les deux opérandes sont des types pointeur ou si l'un est de type pointeur et l'autre une expression constante qui correspond à 0, les conversions de pointeur sont exécutées pour les convertir en un type commun.
 
