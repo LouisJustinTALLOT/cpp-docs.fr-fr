@@ -105,7 +105,7 @@ Spécifie si l’application prend en charge DPI. Par défaut, le paramètre a l
 
 ## <a name="isolated-com-property-page"></a>Page de propriétés COM isolé
 
-Pour plus d’informations sur le modèle COM isolé, consultez [ [applications isolées](/windows/win32/SbsCs/isolated-applications) et procédure : Générez des applications isolées pour](../how-to-build-isolated-applications-to-consume-com-components.md)consommer des composants com.
+Pour plus d’informations sur le modèle COM isolé, consultez [applications isolées](/windows/win32/SbsCs/isolated-applications) et [procédure : Générez des applications isolées pour](../how-to-build-isolated-applications-to-consume-com-components.md)consommer des composants com.
 
 ###  <a name="type-library-file"></a>Fichier bibliothèque de types
 
