@@ -2,12 +2,12 @@
 title: Référence de bibliothèque OpenMP
 ms.date: 07/30/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-ms.openlocfilehash: c78c2677741714ab48d49a4443ad753369ec4500
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: c63ae5ba7f04d8ee6bd02418792804373fa71e6b
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682594"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72348220"
 ---
 # <a name="openmp-library-reference"></a>Référence de bibliothèque OpenMP
 
@@ -29,7 +29,7 @@ Les fonctions C++ de la bibliothèque Runtime OpenMP Visual sont contenues dans 
 |VCOMP. LIB|Multithread, liaison dynamique, (bibliothèque d’importation pour VCOMP. LIB).|
 |VCOMPD. LIB|Multithread, liaison dynamique, (bibliothèque d’importation pour VCOMPD. CAPOT) (débogage)|
 
-Si _ DEBUG est défini dans une compilation et `#include omp.h` si est dans le code source, VCOMPD. LIB sera la bibliothèque par défaut, sinon, VCOMP. LIB sera utilisé.
+Si _ DEBUG est défini dans une compilation et si `#include <omp.h>` est dans le code source, VCOMPD. LIB sera la bibliothèque par défaut, sinon, VCOMP. LIB sera utilisé.
 
 Vous pouvez utiliser [/NODEFAULTLIB (ignorer les bibliothèques)](../../../build/reference/nodefaultlib-ignore-libraries.md) pour supprimer la bibliothèque par défaut et établir une liaison explicite avec la bibliothèque de votre choix.
 
