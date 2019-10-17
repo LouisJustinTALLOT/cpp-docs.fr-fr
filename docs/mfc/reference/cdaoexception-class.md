@@ -72,7 +72,7 @@ Dans MFC, toutes les erreurs DAO sont exprimées en tant qu' `CDaoException`exce
 
 Pour les codes d’erreur DAO, consultez le fichier DAOERR. Manutention. Pour obtenir des informations connexes, consultez la rubrique « Erreurs d’accès aux données récupérables » dans l’aide de DAO.
 
-Pour plus d’informations sur la gestion des exceptions en général `CDaoException` , ou sur les objets, consultez les articles sur la [ [gestion des exceptions (MFC)](../../mfc/exception-handling-in-mfc.md) et les exceptions : Exceptions](../../mfc/exceptions-database-exceptions.md)de base de données. Le deuxième article contient un exemple de code qui illustre la gestion des exceptions dans DAO.
+Pour plus d’informations sur la gestion des exceptions en général `CDaoException` , ou sur les objets, consultez les articles sur la [gestion des exceptions (MFC)](../../mfc/exception-handling-in-mfc.md) et les [exceptions : Exceptions](../../mfc/exceptions-database-exceptions.md)de base de données. Le deuxième article contient un exemple de code qui illustre la gestion des exceptions dans DAO.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 

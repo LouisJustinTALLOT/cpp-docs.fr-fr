@@ -133,7 +133,7 @@ Si les paramètres de mise en *mémoire tampon* ou de *format* sont des pointeur
 |**_vsprintf_p**, **_vsprintf_p_l**|\<stdio.h> et \<stdarg.h>|\<varargs.h>*|
 |**_vswprintf_p**, **_vswprintf_p_l**|\<stdio.h> ou \<wchar.h> et \<stdarg.h>|\<varargs.h>*|
 
-\** Nécessaire pour la compatibilité avec UNIX V.
+\*Nécessaire pour la compatibilité avec UNIX V.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
