@@ -1,13 +1,13 @@
 ---
 title: Copier les sources, propriétés de projet (Linux C++)
-ms.date: 06/07/2019
+ms.date: 10/16/2019
 ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
-ms.openlocfilehash: afc65fb7fbc3866081fbf7da6d3c5014ba1c268d
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
-ms.translationtype: HT
+ms.openlocfilehash: ceaa1240f08b83ebc83bd7fdc25a3215467eb3f1
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821328"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444943"
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>Copier les sources, propriétés de projet (Linux C++)
 
@@ -26,5 +26,15 @@ Property | Description
 Sources à copier | Spécifie les sources devant être copiées sur le système distant. Tout changement apporté à cette liste peut entraîner un décalage ou des répercussions dans la structure des répertoires où sont copiés les fichiers sur le système distant.
 Copier les sources | Spécifie si les sources doivent être copiées sur le système distant.
 Sources supplémentaires à copier | Spécifie les sources supplémentaires à copier sur le système distant. Vous pouvez éventuellement fournir la liste sous forme de paires de mappage entre l’emplacement local et l’emplacement distant en utilisant la syntaxe suivante : fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2, où un fichier local peut être copié vers l’emplacement distant spécifié sur le système distant.
+
+@SourcesToCopyRemotely et @DataFilesToCopyRemotely font référence à des groupes d’éléments dans le fichier projet. Pour modifier les sources ou les fichiers de données qui sont copiés à distance, modifiez le fichier *vcxproj* de la façon suivante :
+
+```xml
+<ItemGroup>
+   <MyItems Include=“foo.txt” />
+   <MyItems Include=“bar.txt” />
+   <DataFilesToCopyRemotely Include=”@(MyItems)” />
+</ItemGroup>
+```
 
 ::: moniker-end
