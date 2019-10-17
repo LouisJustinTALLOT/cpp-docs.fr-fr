@@ -1,40 +1,40 @@
 ---
-title: x64 la gestion des exceptions
-ms.date: 12/17/2018
+title: Gestion d’exceptions x64
+ms.date: 10/14/2019
 helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 7dab7f3b6593bf4eaed1b8c804deb915677ccf5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1936e51630c78de3e7b9dc8a5c7d141ea01ad4b
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195203"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444860"
 ---
-# <a name="x64-exception-handling"></a>x64 la gestion des exceptions
+# <a name="x64-exception-handling"></a>Gestion d’exceptions x64
 
-Vue d’ensemble de la gestion structurée des exceptions et les conventions de codage et comportement sur le x64 des exceptions C++. Pour obtenir des informations générales sur la gestion des exceptions, consultez [gestion des exceptions dans Visual C++](../cpp/exception-handling-in-visual-cpp.md).
+Vue d’ensemble de la gestion structurée des exceptions et C++ des conventions de codage et du comportement de gestion des exceptions sur le x64. Pour obtenir des informations générales sur la gestion des exceptions, consultez [gestion des exceptions dans Visual C++ ](../cpp/exception-handling-in-visual-cpp.md).
 
-## <a name="unwind-data-for-exception-handling-debugger-support"></a>Données pour la gestion des exceptions, prise en charge du débogueur de déroulement
+## <a name="unwind-data-for-exception-handling-debugger-support"></a>Données de déroulement pour la gestion des exceptions, prise en charge du débogueur
 
-Plusieurs structures de données sont requises pour la gestion des exceptions et la prise en charge le débogage.
+Plusieurs structures de données sont requises pour la gestion des exceptions et la prise en charge du débogage.
 
-### <a name="struct-runtimefunction"></a>RUNTIME_FUNCTION, structure
+### <a name="struct-runtime_function"></a>RUNTIME_FUNCTION, structure
 
-Gestion des exceptions basée sur une table nécessite une entrée de table pour toutes les fonctions qui allouent des espace de pile ou appellent une autre fonction (par exemple, les fonctions non-feuille). Les entrées de table de fonction ont le format :
+La gestion des exceptions basée sur les tables requiert une entrée de table pour toutes les fonctions qui allouent de l’espace de pile ou appellent une autre fonction (par exemple, les fonctions non-feuille). Le format des entrées de la table de fonctions est le suivant :
 
 |||
 |-|-|
-|ULONG|Adresse de début (fonction)|
-|ULONG|Adresse de fin (fonction)|
+|ULONG|Adresse de début de la fonction|
+|ULONG|Adresse de fin de la fonction|
 |ULONG|Adresse des informations de déroulement|
 
-La structure RUNTIME_FUNCTION doit être DWORD aligné en mémoire. Toutes les adresses sont relatives à l’image, autrement dit, ils sont des décalages de 32 bits à partir de l’adresse de départ de l’image qui contient l’entrée de table de fonction. Ces entrées sont triées et placées dans la section .pdata d’une image PE32 +. Pour les fonctions générées dynamiquement [compilateurs JIT], le runtime pour prendre en charge ces fonctions doit utiliser RtlInstallFunctionTableCallback ou RtlAddFunctionTable pour fournir ces informations pour le système d’exploitation. Cela entraîne non fiables gestion des exceptions et débogage de processus.
+La structure RUNTIME_FUNCTION doit être alignée sur le DWORD en mémoire. Toutes les adresses sont relatives à l’image, c’est-à-dire qu’elles sont des décalages de 32 bits par rapport à l’adresse de départ de l’image qui contient l’entrée de la table de fonctions. Ces entrées sont triées et placées dans la section. pdata d’une image PE32 +. Pour les fonctions générées dynamiquement [compilateurs JIT], le runtime pour prendre en charge ces fonctions doit utiliser RtlInstallFunctionTableCallback ou RtlAddFunctionTable pour fournir ces informations au système d’exploitation. Dans le cas contraire, la gestion des exceptions et le débogage des processus ne sont pas fiables.
 
-### <a name="struct-unwindinfo"></a>struct UNWIND_INFO
+### <a name="struct-unwind_info"></a>struct UNWIND_INFO
 
-La structure d’informations de données de déroulement est utilisée pour enregistrer les effets de qu'une fonction a sur le pointeur de pile et où les registres non volatils sont enregistrés sur la pile :
+La structure d’informations sur les données de déroulement est utilisée pour enregistrer les effets d’une fonction sur le pointeur de pile, et où les registres non volatils sont enregistrés sur la pile :
 
 |||
 |-|-|
@@ -42,31 +42,31 @@ La structure d’informations de données de déroulement est utilisée pour enr
 |UBYTE : 5|Indicateurs|
 |UBYTE|Taille du prologue|
 |UBYTE|Nombre de codes de déroulement|
-|UBYTE : 4|Registre du frame|
-|UBYTE : 4|Décalage de trame du Registre (mis à l’échelle)|
-|USHORT \* n|Tableau de codes de déroulement|
-|variable|Peut être de forme (1) ou (2) ci-dessous|
+|UBYTE : 4|Registre de frames|
+|UBYTE : 4|Décalage du Registre du frame (mis à l’échelle)|
+|USHORT \* n|Tableau des codes de déroulement|
+|variable|Peut avoir la forme (1) ou (2) ci-dessous|
 
-(1) Gestionnaire d’exceptions
-
-|||
-|-|-|
-|ULONG|Adresse du Gestionnaire d’exceptions|
-|variable|Données de gestionnaire spécifique au langage (facultatives)|
-
-(2) chaînées informations de déroulement
+(1) gestionnaire d’exceptions
 
 |||
 |-|-|
-|ULONG|Adresse de début (fonction)|
-|ULONG|Adresse de fin (fonction)|
+|ULONG|Adresse du gestionnaire d’exceptions|
+|variable|Données du gestionnaire spécifique à une langue (facultatif)|
+
+(2) informations de déroulement chaînées
+
+|||
+|-|-|
+|ULONG|Adresse de début de la fonction|
+|ULONG|Adresse de fin de la fonction|
 |ULONG|Adresse des informations de déroulement|
 
-La structure UNWIND_INFO doit être DWORD aligné en mémoire. Voici ce que signifie chaque champ :
+La structure UNWIND_INFO doit être alignée sur DWORD en mémoire. Voici ce que signifie chaque champ :
 
 - **Version**
 
-   Numéro de version des données de déroulement, 1 actuellement.
+   Numéro de version des données de déroulement, actuellement 1.
 
 - **Indicateurs**
 
@@ -74,9 +74,9 @@ La structure UNWIND_INFO doit être DWORD aligné en mémoire. Voici ce que sign
 
    |Indicateur|Description|
    |-|-|
-   |`UNW_FLAG_EHANDLER`| La fonction a un gestionnaire d’exceptions qui doit être appelé lors de la recherche pour les fonctions que vous avez besoin d’examiner les exceptions.|
-   |`UNW_FLAG_UHANDLER`| La fonction a un gestionnaire de terminaisons qui doit être appelé lors du déroulement d’une exception.|
-   |`UNW_FLAG_CHAININFO`| Cette structure n’est pas le principal pour la procédure d’informations de déroulement. Au lieu de cela, les informations de déroulement chaînées entrée est le contenu d’une entrée RUNTIME_FUNCTION antérieure. Pour plus d’informations, consultez [structures d’informations de déroulement chaînées](#chained-unwind-info-structures). Si cet indicateur est défini, les indicateurs UNW_FLAG_EHANDLER et UNW_FLAG_UHANDLER doivent être effacées. En outre, les champs de d’allocation de Registre et de pile fixe frame doivent avoir les mêmes valeurs que dans le réplica principal d’informations de déroulement.|
+   |`UNW_FLAG_EHANDLER`| La fonction a un gestionnaire d’exceptions qui doit être appelé lors de la recherche de fonctions qui doivent examiner des exceptions.|
+   |`UNW_FLAG_UHANDLER`| La fonction a un gestionnaire de terminaison qui doit être appelé lors du déroulement d’une exception.|
+   |`UNW_FLAG_CHAININFO`| Cette structure d’informations de déroulement n’est pas la structure principale de la procédure. Au lieu de cela, l’entrée d’informations de déroulement chaînées est le contenu d’une entrée RUNTIME_FUNCTION précédente. Pour plus d’informations, consultez [structures d’informations de déroulement chaînées](#chained-unwind-info-structures). Si cet indicateur est défini, les indicateurs UNW_FLAG_EHANDLER et UNW_FLAG_UHANDLER doivent être effacés. En outre, le registre de frame et les champs d’allocation de pile fixe doivent avoir les mêmes valeurs que dans les informations de déroulement principales.|
 
 - **Taille du prologue**
 
@@ -84,142 +84,142 @@ La structure UNWIND_INFO doit être DWORD aligné en mémoire. Voici ce que sign
 
 - **Nombre de codes de déroulement**
 
-   Le nombre d’emplacements dans le tableau de codes de déroulement. Certains codes de déroulement, par exemple, UWOP_SAVE_NONVOL, nécessitent plus d’un emplacement dans le tableau.
+   Nombre d’emplacements dans le tableau des codes de déroulement. Certains codes de déroulement, par exemple, UWOP_SAVE_NONVOL, requièrent plusieurs emplacements dans le tableau.
 
-- **Registre du frame**
+- **Registre de frames**
 
-   Si elle est différente de zéro, la fonction utilise un pointeur de frame (FP), et ce champ est le nombre de Registre non volatil utilisé comme pointeur de frame, à l’aide de l’encodage même pour le champ d’information opération des nœuds UNWIND_CODE.
+   Si la valeur est différente de zéro, la fonction utilise un pointeur de frame (FP) et ce champ est le numéro du Registre non volatil utilisé comme pointeur de frame, en utilisant le même codage pour le champ d’informations sur l’opération des nœuds UNWIND_CODE.
 
-- **Registre du frame décalage (mis à l’échelle)**
+- **Décalage du Registre du frame (mis à l’échelle)**
 
-   Si le champ du Registre du frame est différent de zéro, ce champ est le décalage à l’échelle de RSP qui est appliqué à FP inscrire lorsqu’il est établi. Le registre FP réel a la valeur RSP + 16 \* ce nombre, autorisant des offsets compris entre 0 et 240. Ce décalage permet pointant vers le registre FP au milieu de l’allocation de pile locale pour les frames de pile dynamique, ce qui permet une meilleure densité de code via des instructions plus courtes (davantage d’instructions permettre utiliser le format d’offset signé 8 bits).
+   Si le champ du registre des frames est différent de zéro, ce champ est le décalage à l’échelle de RSP appliqué au registre FP lorsqu’il est établi. Le registre FP réel a la valeur RSP + 16 \* ce nombre, ce qui permet de décaler de 0 à 240. Ce décalage permet de pointer le registre FP au milieu de l’allocation de pile locale pour les frames de pile dynamiques, ce qui permet une meilleure densité de code par le biais d’instructions plus courtes. (Autrement dit, d’autres instructions peuvent utiliser le format de décalage signé 8 bits.)
 
-- **Tableau de codes de déroulement**
+- **Tableau des codes de déroulement**
 
-   Un tableau d’éléments qui explique l’effet du prologue sur les registres non volatils et RSP. Consultez la section sur UNWIND_CODE pour la signification des différents éléments. À des fins d’alignement, ce tableau a toujours un nombre pair d’entrées, et la dernière entrée est potentiellement inutilisée. Dans ce cas, le tableau est une plus longue que ceux indiqués par le nombre de champs de codes de déroulement.
+   Tableau d’éléments qui explique l’effet du prologue sur les registres non volatils et RSP. Consultez la section sur UNWIND_CODE pour obtenir la signification des éléments individuels. À des fins d’alignement, ce tableau a toujours un nombre pair d’entrées, et l’entrée finale est potentiellement inutilisée. Dans ce cas, le tableau est plus long que ce qui est indiqué par le champ nombre de codes de déroulement.
 
-- **Adresse du Gestionnaire d’exceptions**
+- **Adresse du gestionnaire d’exceptions**
 
-   Un pointeur relatif à l’image de la fonction exception spécifique au langage ou Gestionnaire de terminaisons, si l’indicateur UNW_FLAG_CHAININFO est désactivé et un des indicateurs UNW_FLAG_EHANDLER ou UNW_FLAG_UHANDLER est défini.
+   Pointeur relatif à une image vers le gestionnaire d’exceptions ou d’arrêt spécifique au langage de la fonction, si l’indicateur UNW_FLAG_CHAININFO est Clear et l’un des indicateurs UNW_FLAG_EHANDLER ou UNW_FLAG_UHANDLER est défini.
 
 - **Données du gestionnaire spécifique au langage**
 
-   Données de gestionnaire d’exception spécifique au langage de la fonction. Le format de ces données est non spécifié et complètement déterminé par le Gestionnaire d’exceptions spécifiques en cours d’utilisation.
+   Données du gestionnaire d’exceptions spécifiques au langage de la fonction. Le format de ces données n’est pas spécifié et est entièrement déterminé par le gestionnaire d’exceptions spécifique utilisé.
 
-- **Chaîne d’informations de déroulement**
+- **Informations de déroulement chaînées**
 
-   Si l’indicateur UNW_FLAG_CHAININFO est défini la structure UNWIND_INFO se termine par trois UWORD.  Ces UWORD représentent les informations RUNTIME_FUNCTION pour la fonction du déroulement chaîné.
+   Si l’indicateur UNW_FLAG_CHAININFO est défini, la structure UNWIND_INFO se termine par trois UWORDs.  Ces UWORDs représentent les informations RUNTIME_FUNCTION pour la fonction du déroulement chaîné.
 
-### <a name="struct-unwindcode"></a>struct UNWIND_CODE
+### <a name="struct-unwind_code"></a>struct UNWIND_CODE
 
-Le tableau des codes de déroulement est utilisé pour enregistrer la séquence des opérations dans le prologue qui affectent les registres non volatils et RSP. Chaque élément de code a ce format :
+Le tableau de codes de déroulement est utilisé pour enregistrer la séquence d’opérations dans le prologue qui affectent les registres non volatils et RSP. Chaque élément de code a le format suivant :
 
 |||
 |-|-|
-|UBYTE|Offset dans le prologue|
+|UBYTE|Décalage dans le prologue|
 |UBYTE : 4|Code d’opération de déroulement|
 |UBYTE : 4|Informations sur l’opération|
 
-Le tableau est trié par ordre décroissant d’offset dans le prologue.
+Le tableau est trié par ordre décroissant de décalage dans le prologue.
 
-#### <a name="offset-in-prolog"></a>Offset dans le prologue
+#### <a name="offset-in-prolog"></a>Décalage dans le prologue
 
-Décalage à partir du début du prologue de la fin de l’instruction qui effectue cette opération, plus 1 (autrement dit, le décalage du début de l’instruction suivante).
+Offset (à partir du début du prologue) de la fin de l’instruction qui effectue cette opération, plus 1 (autrement dit, l’offset du début de l’instruction suivante).
 
 #### <a name="unwind-operation-code"></a>Code d’opération de déroulement
 
-Remarque : Certains codes d’opération exigent un offset non signé à une valeur dans le frame de pile locales. Ce décalage est dès le départ, autrement dit, l’adresse la plus basse de l’allocation de pile fixe. Si le champ du Registre du Frame dans UNWIND_INFO est égal à zéro, ce décalage est from RSP. Si le champ du Registre du Frame est différent de zéro, il s’agit de l’offset à partir d’où se situait RSP lorsque le registre FP a été établi. Cela équivaut au registre FP moins l’offset du Registre FP (16 \* offset du Registre le frame à l’échelle dans UNWIND_INFO). Si un registre FP est utilisé, puis n’importe quel code de déroulement prenant un offset doit uniquement servir une fois le registre FP est établi dans le prologue.
+Remarque : certains codes d’opération requièrent un décalage non signé vers une valeur dans le frame de pile local. Cet offset est compris entre le début, c’est-à-dire l’adresse la plus basse de l’allocation de pile fixe. Si le champ du registre des frames dans UNWIND_INFO est égal à zéro, cet offset est de RSP. Si le champ du registre des frames est différent de zéro, il s’agit de l’emplacement à partir duquel RSP a été trouvé lors de l’établissement du Registre FP. Il est égal au registre FP moins l’offset du Registre FP (16 \* le décalage du registre de frames mis à l’échelle dans UNWIND_INFO). Si un registre FP est utilisé, tout code de déroulement qui prend un offset doit être utilisé uniquement après l’établissement du Registre FP dans le prologue.
 
-Pour tous les opcodes sauf `UWOP_SAVE_XMM128` et `UWOP_SAVE_XMM128_FAR`, l’offset est toujours un multiple de 8, car tous de la pile des valeurs d’intérêt sont stockées sur des limites de 8 octets (la pile proprement dite est toujours alignée sur 16 octets). Pour les codes d’opération qui prennent un offset court (moins de 512 Ko), le dernier USHORT dans les nœuds pour ce code conserve l’offset divisé par 8. Pour les codes d’opération qui prennent un offset long (512 Ko < = décalage < 4 Go), les deux nœuds USHORT finals pour ce code contiennent le décalage (en format little-endian).
+Pour tous les OpCodes à l’exception de `UWOP_SAVE_XMM128` et `UWOP_SAVE_XMM128_FAR`, le décalage est toujours un multiple de 8, car toutes les valeurs de pile d’intérêt sont stockées sur des limites de 8 octets (la pile elle-même est toujours alignée sur 16 octets). Pour les codes d’opération qui prennent un décalage bref (inférieur à 512 Ko), le dernier USHORT des nœuds pour ce code contient le décalage divisé par 8. Pour les codes d’opération qui prennent un décalage long (512 Ko < = décalage < 4 Go), les deux derniers nœuds USHORT pour ce code contiennent le décalage (au format Little endian).
 
-Pour les opcodes `UWOP_SAVE_XMM128` et `UWOP_SAVE_XMM128_FAR`, l’offset est toujours un multiple de 16, car toutes les opérations XMM de 128 bits doivent se produire sur mémoire alignée sur 16 octets. Par conséquent, un facteur d’échelle de 16 est utilisé pour `UWOP_SAVE_XMM128`, autorisant des offsets de moins de 1 M.
+Pour les OpCodes `UWOP_SAVE_XMM128` et `UWOP_SAVE_XMM128_FAR`, le décalage est toujours un multiple de 16, étant donné que toutes les opérations XMM 128 bits doivent se produire sur une mémoire alignée sur 16 octets. Par conséquent, un facteur d’échelle de 16 est utilisé pour `UWOP_SAVE_XMM128`, ce qui permet d’obtenir des décalages inférieurs à 1M.
 
-Le code d’opération de déroulement est une des valeurs suivantes :
+Le code d’opération de déroulement est l’une des valeurs suivantes :
 
 - `UWOP_PUSH_NONVOL` (0) 1 nœud
 
-  Envoyez un registre entier non volatil, en décrémentant RSP de 8. Les informations de l’opération sont le numéro de l’historique. En raison de contraintes sur les épilogues, `UWOP_PUSH_NONVOL` codes de déroulement doivent apparaître en premier dans le prologue et également en dernier dans le tableau des codes de déroulement. Ce classement relatif s’applique à tous les autres codes de déroulement à l’exception `UWOP_PUSH_MACHFRAME`.
+  Exécute un push d’un registre entier non volatil, en décrémentant RSP de 8. Les informations sur l’opération sont le numéro du Registre. En raison des contraintes sur épilogues, les codes de déroulement `UWOP_PUSH_NONVOL` doivent apparaître en premier dans le prologue et en conséquence, en dernier dans le tableau de codes de déroulement. Ce classement relatif s’applique à tous les autres codes de déroulement, à l’exception de `UWOP_PUSH_MACHFRAME`.
 
 - `UWOP_ALLOC_LARGE` (1) 2 ou 3 nœuds
 
-  Allouez une zone de grande taille sur la pile. Il existe deux formes. Si les informations de l’opération est égale à 0, alors que la taille de l’allocation divisée par 8 est enregistrée dans l’emplacement suivant, en autorisant une allocation jusqu'à 512 Ko - 8. Si les informations de l’opération est égal à 1, la taille non ajustée de l’allocation est enregistrée dans les deux emplacements dans un format little-endian, ce qui permet les allocations jusqu'à 4 Go - 8.
+  Allouez une zone de grande taille sur la pile. Il existe deux formes. Si les informations sur l’opération sont égales à 0, la taille de l’allocation divisée par 8 est enregistrée dans l’emplacement suivant, ce qui permet une allocation allant jusqu’à 512 Ko-8. Si les informations sur l’opération sont égales à 1, la taille non mise à l’échelle de l’allocation est enregistrée dans les deux emplacements suivants au format Little endian, ce qui permet d’allouer jusqu’à 4 Go-8.
 
-- `UWOP_ALLOC_SMALL` (2) nœud 1
+- `UWOP_ALLOC_SMALL` (2) 1 nœud
 
-  Allouez une zone de petite taille sur la pile. La taille de l’allocation est le champ informations opération \* 8 + 8, autorisant les allocations de 8 à 128 octets.
+  Allouez une zone de petite taille sur la pile. La taille de l’allocation est le champ d’informations sur l’opération \* 8 + 8, ce qui permet d’allouer de 8 à 128 octets.
 
-  Le code de déroulement pour une allocation de pile doit toujours utiliser l’encodage le plus court possible :
+  Le code de déroulement pour une allocation de pile doit toujours utiliser le plus petit encodage possible :
 
   |**Taille d’allocation**|**Code de déroulement**|
   |-|-|
   |8 à 128 octets|`UWOP_ALLOC_SMALL`|
-  |136 à 512 Ko - 8 octets|`UWOP_ALLOC_LARGE`, informations sur l’opération = 0|
-  |512 Ko à 4 Go - 8 octets|`UWOP_ALLOC_LARGE`, informations sur l’opération = 1|
+  |136 à 512 Ko-8 octets|`UWOP_ALLOC_LARGE`, informations sur l’opération = 0|
+  |512 Ko à 4G-8 octets|`UWOP_ALLOC_LARGE`, informations sur l’opération = 1|
 
 - `UWOP_SET_FPREG` (3) 1 nœud
 
-  Établir le Registre de pointeur de frame en définissant le Registre à un certain offset du RSP actuel. Le décalage est égal au champ de l’offset du Registre du Frame (mis à l’échelle) dans UNWIND_INFO \* 16, ce qui permet des offsets de 0 à 240. L’utilisation d’un offset autorise l’établissement d’un pointeur de frame qui pointe vers le milieu de la pile allocation fixe, permettant ainsi de densité de code en permettant à plus d’accès à utiliser des formulaires d’instruction courts. Le champ informations opération est réservé et ne doit pas être utilisé.
+  Établissez le Registre du pointeur de frame en affectant au registre un décalage de la RSP actuelle. Le décalage est égal au champ décalage du Registre du frame (mis à l’échelle) dans le @no__t UNWIND_INFO-0 16, ce qui permet des décalages de 0 à 240. L’utilisation d’un décalage permet d’établir un pointeur de frame qui pointe vers le milieu de l’allocation de pile fixe, ce qui contribue à la densité de code en permettant à d’autres accès d’utiliser des formes d’instructions courtes. Le champ informations sur l’opération est réservé et ne doit pas être utilisé.
 
 - `UWOP_SAVE_NONVOL` (4) 2 nœuds
 
-  Enregistrez un registre entier non volatil sur la pile à l’aide de MOV au lieu d’un PUSH. Ce code est principalement utilisé pour *rétraction*, où un Registre non volatil est enregistré à la pile dans une position qui a été précédemment allouée. Les informations de l’opération sont le numéro de l’historique. Le décalage de la pile de mise à l’échelle par 8 est enregistré dans l’autre emplacement de code d’opération de déroulement, comme décrit dans la Remarque ci-dessus.
+  Enregistrez un registre entier non volatile sur la pile à l’aide d’un MOV au lieu d’un PUSH. Ce code est principalement utilisé pour l' *encapsulage*, où un registre non volatil est enregistré dans la pile à une position précédemment allouée. Les informations sur l’opération sont le numéro du Registre. Le décalage de la pile mis à l’échelle par 8 est enregistré dans l’emplacement du code de l’opération de déroulement suivant, comme décrit dans la remarque ci-dessus.
 
 - `UWOP_SAVE_NONVOL_FAR` (5) 3 nœuds
 
-  Enregistrez un registre entier non volatil sur la pile avec un offset long, à l’aide de MOV au lieu d’un PUSH. Ce code est principalement utilisé pour *rétraction*, où un Registre non volatil est enregistré à la pile dans une position qui a été précédemment allouée. Les informations de l’opération sont le numéro de l’historique. Le décalage de la pile sans échelle est enregistré aux deux emplacements de code d’opération de déroulement comme décrit dans la Remarque ci-dessus.
+  Enregistrez un registre entier non volatile sur la pile avec un décalage long, à l’aide d’un MOV au lieu d’un PUSH. Ce code est principalement utilisé pour l' *encapsulage*, où un registre non volatil est enregistré dans la pile à une position précédemment allouée. Les informations sur l’opération sont le numéro du Registre. Le décalage de la pile non mis à l’échelle est enregistré dans les deux emplacements de code d’opération de déroulement suivants, comme décrit dans la remarque ci-dessus.
 
-- `UWOP_SAVE_XMM128` (8) nœuds 2
+- nœuds `UWOP_SAVE_XMM128` (8) 2
 
-  Enregistrez les 128 bits d’un registre XMM non volatil sur la pile. Les informations de l’opération sont le numéro de l’historique. L’offset de la pile de mise à l’échelle par 16 est enregistré dans l’emplacement suivant.
+  Enregistrez tous les 128 bits d’un registre XMM non volatil sur la pile. Les informations sur l’opération sont le numéro du Registre. Le décalage de la pile mis à l’échelle par 16 est enregistré dans l’emplacement suivant.
 
 - `UWOP_SAVE_XMM128_FAR` (9) 3 nœuds
 
-  Enregistrez les 128 bits d’un registre XMM non volatil sur la pile avec un offset long. Les informations de l’opération sont le numéro de l’historique. L’offset de pile non ajustée est enregistrée dans les deux emplacements.
+  Enregistrez tous les 128 bits d’un registre XMM non volatil sur la pile avec un décalage long. Les informations sur l’opération sont le numéro du Registre. Le décalage de la pile non mis à l’échelle est enregistré dans les deux emplacements suivants.
 
-- `UWOP_PUSH_MACHFRAME` (10) nœud 1
+- nœud `UWOP_PUSH_MACHFRAME` (10) 1
 
-  Envoyer une image de machine.  Cela sert à enregistrer l’effet d’une interruption matérielle ou d’exception. Il existe deux formes. Si les informations de l’opération est égale à 0, un de ces frames a été ajouté à la pile :
-
-  |||
-  |-|-|
-  |RSP+32|SS|
-  |RSP+24|Ancien RSP|
-  |RSP+16|EFLAGS|
-  |RSP+8|CS|
-  |RSP|RIP|
-
-  Si les informations de l’opération est égale à 1, un de ces frames ont été envoyé :
+  Exécute un push d’un frame de machine.  Ce code de déroulement est utilisé pour enregistrer l’effet d’une interruption ou d’une exception matérielle. Il existe deux formes. Si les informations sur l’opération sont égales à 0, l’un de ces frames a fait l’objet d’un push sur la pile :
 
   |||
   |-|-|
-  |RSP+40|SS|
-  |RSP+32|Ancien RSP|
-  |RSP+24|EFLAGS|
-  |RSP+16|CS|
-  |RSP+8|RIP|
+  |RSP + 32|SS|
+  |RSP + 24|Ancien RSP|
+  |RSP + 16|EFLAGS|
+  |RSP + 8|C|
+  |RSP|PROTOCOLES|
+
+  Si les informations sur l’opération sont égales à 1, cela signifie que l’un de ces frames a fait l’objet d’un push :
+
+  |||
+  |-|-|
+  |RSP + 40|SS|
+  |RSP + 32|Ancien RSP|
+  |RSP + 24|EFLAGS|
+  |RSP + 16|C|
+  |RSP + 8|PROTOCOLES|
   |RSP|Code d'erreur|
 
-  Ce code de déroulement s’affiche toujours dans un prologue factice, ce qui n’est jamais réellement exécuté, mais au lieu de cela apparaît avant le point d’entrée réelle d’une routine d’interruption et existe uniquement pour fournir un emplacement pour simuler le push d’un frame de la machine. `UWOP_PUSH_MACHFRAME` enregistre cette simulation, ce qui indique que l’ordinateur a effectuée sur le plan conceptuel de cette opération :
+  Ce code de déroulement apparaît toujours dans un prologue factice, qui n’est jamais réellement exécuté, mais il apparaît à la place avant le point d’entrée réel d’une routine d’interruption, et existe uniquement pour fournir un emplacement pour simuler la transmission de type push d’un frame de machine. `UWOP_PUSH_MACHFRAME` enregistre cette simulation, qui indique que l’ordinateur a effectué cette opération de manière conceptuelle :
 
-  1. Affiche l’adresse de retour de RIP à partir du haut de la pile dans *Temp*
+  1. Adresse de retour RIP du haut de la pile dans *temp*
   
   1. Push SS
 
-  1. Push ancien RSP
+  1. Envoyer l’ancien RSP
 
-  1. Push EFLAGS
+  1. EFLAGS Push
 
-  1. Push CS
+  1. Notifications push CS
 
-  1. Push *Temp*
+  1. Envoi *temporaire*
 
-  1. Envoyer le Code d’erreur (si l’information sur l’opération est égal à 1)
+  1. Code d’erreur push (si les informations d’op sont égales à 1)
 
-  La simulation `UWOP_PUSH_MACHFRAME` décrémente d’opération RSP de 40 (information sur l’opération est égal à 0) ou 48 (information sur l’opération est égal à 1).
+  L’opération simulée `UWOP_PUSH_MACHFRAME` décrémente RSP de 40 (op info est égal à 0) ou 48 (op info est égal à 1).
 
 #### <a name="operation-info"></a>Informations sur l’opération
 
-La signification des bits info opération varie selon le code d’opération. Pour encoder un Registre à usage général (entier), ce mappage est utilisé :
+La signification des bits d’informations sur l’opération dépend du code d’opération. Pour encoder un registre à usage général (entier), ce mappage est utilisé :
 
 |||
 |-|-|
@@ -233,47 +233,47 @@ La signification des bits info opération varie selon le code d’opération. Po
 |7|RDI|
 |8 à 15|R8 à R15|
 
-### <a name="chained-unwind-info-structures"></a>Chaînées structures d’informations de déroulement
+### <a name="chained-unwind-info-structures"></a>Structures d’informations de déroulement chaînées
 
-Si l’indicateur UNW_FLAG_CHAININFO est défini, puis une structure d’informations de déroulement est secondaire, et le champ adresse exception-Gestionnaire/informations chaînées partagée contient les informations de déroulement principales. Cet exemple de code récupère le réplica principal informations de déroulement, en supposant que `unwindInfo` est la structure qui a le UNW_FLAG_CHAININFO l’indicateur est défini.
+Si l’indicateur UNW_FLAG_CHAININFO est défini, une structure d’informations de déroulement est une structure secondaire et le champ de l’adresse du gestionnaire d’exceptions partagées/d’informations chaînées contient les informations de déroulement principales. Cet exemple de code récupère les informations de déroulement principales, en supposant que `unwindInfo` est la structure avec l’indicateur UNW_FLAG_CHAININFO défini.
 
 ```cpp
 PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode[( unwindInfo->CountOfCodes + 1 ) & ~1]);
 ```
 
-Informations chaînées sont utile dans deux situations. Tout d’abord, il peut être utilisé pour les segments de code non contigus. À l’aide des informations chaînées, vous pouvez réduire la taille des informations de déroulement requises, car vous n’êtes pas obligé de dupliquer le tableau de codes de déroulement à partir des informations de déroulement principales.
+Les informations chaînées sont utiles dans deux situations. Tout d’abord, elle peut être utilisée pour les segments de code non contigus. En utilisant des informations chaînées, vous pouvez réduire la taille des informations de déroulement requises, car vous n’avez pas besoin de dupliquer le tableau des codes de déroulement à partir des informations de déroulement principales.
 
-Vous pouvez également utiliser des informations chaînées pour regrouper les registres volatils. Le compilateur peut différer de l’enregistrement des registres volatils jusqu'à ce qu’il se trouve en dehors du prologue d’entrée de fonction. Vous pouvez l’enregistrer en ayant les informations de déroulement principales pour la partie de la fonction avant le code groupé et configuration des informations chaînées avec une taille différente de zéro du prologue, où les codes de déroulement dans les informations chaînées reflètent les enregistrements des registres non volatils. Dans ce cas, les codes de déroulement sont toutes les instances de UWOP_SAVE_NONVOL. Un regroupement qui enregistre les registres non volatils à l’aide d’un PUSH ou modifie le registre RSP à l’aide d’une allocation de pile fixe supplémentaire n’est pas pris en charge.
+Vous pouvez également utiliser des informations chaînées pour regrouper les enregistrements de Registre volatils. Le compilateur peut retarder l’enregistrement de certains registres volatiles jusqu’à ce qu’il se trouve en dehors du prologue d’entrée de fonction. Vous pouvez les enregistrer en ayant des informations de déroulement principales pour la partie de la fonction avant le code groupé, puis en configurant les informations chaînées avec une taille différente de zéro, où les codes de déroulement dans les informations chaînées reflètent les enregistrements des registres non volatiles. Dans ce cas, les codes de déroulement correspondent à toutes les instances de UWOP_SAVE_NONVOL. Un regroupement qui enregistre des registres non volatils à l’aide d’un PUSH ou modifie le registre RSP à l’aide d’une allocation de pile fixe supplémentaire n’est pas pris en charge.
 
-Élément UNWIND_INFO dont UNW_FLAG_CHAININFO définie peut contenir une entrée RUNTIME_FUNCTION dont l’élément UNWIND_INFO possède également un UNW_FLAG_CHAININFO défini, parfois appelé *rétraction plusieurs*. Au final, les informations de déroulement chaînées pointeurs arrivent à un élément UNWIND_INFO avec UNW_FLAG_CHAININFO désactivée ; Il s’agit de l’élément UNWIND_INFO principal pointant vers le point d’entrée de procédure réel.
+Un élément UNWIND_INFO qui a un UNW_FLAG_CHAININFO défini peut contenir une entrée RUNTIME_FUNCTION dont l’élément UNWIND_INFO a également un UNW_FLAG_CHAININFO défini, parfois appelé *plusieurs retours à*la ligne. En fin de compte, les pointeurs d’informations de déroulement chaînés arrivent sur un élément UNWIND_INFO qui a un UNW_FLAG_CHAININFO effacé. Cet élément est l’élément UNWIND_INFO principal, qui pointe vers le point d’entrée de procédure réel.
 
 ## <a name="unwind-procedure"></a>Procédure de déroulement
 
-Le tableau des codes de déroulement est trié dans l’ordre décroissant. Lorsqu’une exception se produit, le contexte complet est stocké par le système d’exploitation dans un enregistrement de contexte. La logique de répartition d’exception est appelée, qui exécute plusieurs fois ces étapes pour rechercher un gestionnaire d’exceptions :
+Le tableau de codes de déroulement est trié par ordre décroissant. Lorsqu’une exception se produit, le contexte complet est stocké par le système d’exploitation dans un enregistrement de contexte. La logique de distribution des exceptions est ensuite appelée, ce qui exécute à plusieurs reprises ces étapes pour rechercher un gestionnaire d’exceptions :
 
-1. Utilisez le RIP actuel stocké dans l’enregistrement de contexte pour rechercher une entrée de table RUNTIME_FUNCTION qui décrit la fonction active (ou une partie de la fonction, pour les entrées UNWIND_INFO chaînées).
+1. Utilisez le RIP actuel stocké dans l’enregistrement de contexte pour rechercher une entrée de table RUNTIME_FUNCTION qui décrit la fonction active (ou la partie de fonction pour les entrées UNWIND_INFO chaînées).
 
-1. Si aucune entrée de table de fonction est trouvée, puis il se trouve dans une fonction de feuille, et RSP répond directement le pointeur de retour. Le pointeur de retour à [RSP] est stocké dans le contexte mis à jour, le RSP simulé est incrémenté de 8 et l’étape 1 est répétée.
+1. Si aucune entrée de table de fonctions n’est trouvée, elle se trouve dans une fonction feuille et RSP traite directement le pointeur de retour. Le pointeur de retour sur [RSP] est stocké dans le contexte mis à jour, le RSP simulé est incrémenté de 8, et l’étape 1 est répétée.
 
-1. Si une entrée de table de fonction est trouvée, RIP peut se trouver dans trois régions : a) dans un épilogue, b) dans le prologue ou c) dans le code qui peut être couvert par un gestionnaire d’exceptions.
+1. Si une entrée de table de fonctions est trouvée, le RIP peut se trouver dans trois régions : a) dans un épilogue, b) dans le prologue, ou c) dans le code qui peut être couvert par un gestionnaire d’exceptions.
 
-   - Cas un) si le protocole RIP est dans un épilogue, puis contrôle quitte la fonction, il ne peut y avoir aucun gestionnaire d’exceptions associé à cette exception pour cette fonction et les effets de l’épilogue doivent continuer à utiliser le contexte de la fonction d’appelant de calcul. Pour déterminer si le protocole RIP est dans un épilogue, le flux de code à partir de RIP sur est examiné. Ce flux de code peut être mis en correspondance avec la partie finale d’un épilogue, il se trouve dans un épilogue, puis sur la partie restante de l’épilogue est simulée, avec l’enregistrement de contexte mis à jour en tant que chaque instruction est traitée. Après cela, l’étape 1 est répétée.
+   - Cas a) si le RIP se trouve dans un épilogue, alors que le contrôle quitte la fonction, aucun gestionnaire d’exceptions ne peut être associé à cette exception pour cette fonction, et les effets de l’épilogue doivent être poursuivis pour calculer le contexte de la fonction d’appelant. Pour déterminer si le RIP se trouve dans un épilogue, le flux de code du RIP est examiné. Si ce flux de code peut être mis en correspondance avec la partie de fin d’un épilogue légitime, il se trouve dans un épilogue, et la partie restante de l’épilogue est simulée, avec l’enregistrement de contexte mis à jour lors du traitement de chaque instruction. Après ce traitement, l’étape 1 est répétée.
 
-   - Cas b) si le protocole RIP se trouve dans le prologue, contrôle n’a pas accédé à la fonction, il ne peut y avoir aucun gestionnaire d’exceptions associé à cette exception pour cette fonction et les effets du prologue doivent être annulés pour calculer le contexte de la fonction d’appelant. Le protocole RIP se trouve dans le prologue si la distance entre le début de la fonction et le protocole RIP est inférieure ou égale à la taille du prologue encodée dans les informations de déroulement. Les effets du prologue sont déroulés en recherchant, dans le tableau de codes de déroulement pour la première entrée avec un décalage inférieur ou égal à l’offset du RIP à partir du début de la fonction, puis en annulant l’effet de tous les éléments restants dans le tableau des codes de déroulement. Étape 1 est ensuite répétée.
+   - Cas b) si le RIP se trouve dans le prologue, alors que le contrôle n’a pas entré la fonction, aucun gestionnaire d’exceptions ne peut être associé à cette exception pour cette fonction, et les effets du prologue doivent être annulés pour calculer le contexte de la fonction d’appelant. Le RIP est dans le prologue si la distance entre la fonction et le RIP est inférieure ou égale à la taille du prologue encodée dans les informations de déroulement. Les effets du prologue sont déroulés en balayant vers l’avant le tableau des codes de déroulement pour la première entrée avec un offset inférieur ou égal au décalage de l’extraction à partir du début de la fonction, puis en annulant l’effet de tous les éléments restants dans le tableau de codes de déroulement. L’étape 1 est ensuite répétée.
 
-   - Cas c) si le protocole RIP n’est pas dans un prologue ou épilogue et la fonction a un gestionnaire d’exceptions (UNW_FLAG_EHANDLER est défini), alors le gestionnaire spécifique au langage est appelé. Le Gestionnaire d’analyse ses données et appelle des fonctions comme il convient de filtre. Le gestionnaire spécifique au langage peut retourner que l’exception a été gérée ou que la recherche doit être poursuivie. Elle peut également initier un déroulement directement.
+   - Cas c) si le RIP ne fait pas partie d’un prologue ou d’un épilogue, et que la fonction a un gestionnaire d’exceptions (UNW_FLAG_EHANDLER est défini), le gestionnaire spécifique au langage est appelé. Le gestionnaire analyse ses données et appelle les fonctions de filtre en fonction des besoins. Le gestionnaire spécifique au langage peut retourner que l’exception a été gérée ou que la recherche doit être poursuivie. Elle peut également initier un déroulement directement.
 
-1. Si le gestionnaire spécifique au langage retourne un état géré, l’exécution se poursuite à l’aide de l’enregistrement de contexte d’origine.
+1. Si le gestionnaire propre au langage retourne un état géré, l’exécution se poursuit à l’aide de l’enregistrement de contexte d’origine.
 
-1. Si aucun gestionnaire spécifique à la langue ou le gestionnaire renvoie l’état « continuer la recherche », l’enregistrement de contexte doit être déroulé à l’état de l’appelant. Pour cela, vous devez traiter tous les éléments du tableau du code de déroulement, annulant l’effet de chacune. Étape 1 est ensuite répétée.
+1. S’il n’existe pas de gestionnaire spécifique à une langue ou si le gestionnaire retourne un État « continuer la recherche », l’enregistrement de contexte doit être déroulé à l’état de l’appelant. Pour ce faire, vous traitez tous les éléments du tableau de code de déroulement, en annulant l’effet de chacun d’entre eux. L’étape 1 est ensuite répétée.
 
-Lorsqu’il est chaîné déroulement info est impliqué, ces étapes de base sont toujours suivies. La seule différence est que, tandis que de parcourir le tableau des codes de déroulement pour dérouler les effets d’un prologue, une fois que la fin du tableau est atteinte, il est ensuite lié les informations de déroulement parent et le tableau de code de déroulement ensemble qu’il contient est parcouru. Cette liaison continue jusqu'à arrivant aux informations de déroulement sans l’indicateur UNW_CHAINED_INFO, et il finit ensuite parcourir son tableau des codes de déroulement.
+Lorsque les informations de déroulement chaînées sont impliquées, ces étapes de base sont toujours suivies. La seule différence est que, lorsque vous parcourez le tableau de code de déroulement pour dérouler les effets d’un prologue, lorsque la fin du tableau est atteinte, il est ensuite lié aux informations de déroulement parent et le tableau de code de déroulement entier trouvé est parcouru. Cette liaison se poursuit jusqu’à ce qu’elle arrive à une information de déroulement sans l’indicateur UNW_CHAINED_INFO, puis qu’elle finit par parcourir son tableau de code de déroulement.
 
-Données de déroulement le plus petit ensemble de 8 octets. Cela représente une fonction qui a affecté uniquement 128 octets de pile ou moins et éventuellement enregistré un Registre non volatil. Il s’agit également la taille de chaînées structure d’informations pour un prologue de longueur nulle avec sans code de déroulement de déroulement.
+Le plus petit ensemble de données de déroulement est de 8 octets. Cela représente une fonction qui n’a alloué que 128 octets de la pile ou moins, et qui a peut-être enregistré un registre non volatile. C’est également la taille d’une structure d’informations de déroulement chaîné pour un prologue de longueur nulle sans code de déroulement.
 
 ## <a name="language-specific-handler"></a>Gestionnaire spécifique au langage
 
-L’adresse relative du gestionnaire spécifique au langage est présente dans UNWIND_INFO chaque fois que les indicateurs UNW_FLAG_EHANDLER ou UNW_FLAG_UHANDLER sont définis. Comme décrit dans la section précédente, le gestionnaire spécifique au langage est appelé dans le cadre de la recherche d’un gestionnaire d’exceptions ou dans le cadre d’un déroulement. Il possède ce prototype :
+L’adresse relative du gestionnaire spécifique au langage est présente dans UNWIND_INFO chaque fois que les indicateurs UNW_FLAG_EHANDLER ou UNW_FLAG_UHANDLER sont définis. Comme décrit dans la section précédente, le gestionnaire spécifique au langage est appelé dans le cadre de la recherche d’un gestionnaire d’exceptions ou dans le cadre d’un déroulement. Il a ce prototype :
 
 ```cpp
 typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (
@@ -284,13 +284,13 @@ typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (
 );
 ```
 
-**ExceptionRecord** fournit un pointeur vers un enregistrement d’exception possédant la définition Win64 standard.
+**ExceptionRecord** fournit un pointeur vers un enregistrement d’exception, qui a la définition Win64 standard.
 
 **EstablisherFrame** est l’adresse de la base de l’allocation de pile fixe pour cette fonction.
 
-**ContextRecord** pointe vers le contexte d’exception au moment de l’exception a été levée (dans le cas de gestionnaire d’exceptions) ou en cours « contexte de déroulement » (dans le cas de gestionnaire de terminaisons).
+**ContextRecord** pointe vers le contexte d’exception au moment où l’exception a été levée (dans le cas du gestionnaire d’exceptions) ou dans le contexte de « déroulement » actuel (dans le cas du gestionnaire de terminaisons).
 
-**DispatcherContext** pointe vers le contexte de répartiteur de cette fonction. Il a cette définition :
+**DispatcherContext** pointe vers le contexte du répartiteur pour cette fonction. Il a cette définition :
 
 ```cpp
 typedef struct _DISPATCHER_CONTEXT {
@@ -305,40 +305,40 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** est la valeur de RIP dans cette fonction. Cette valeur est une adresse de l’exception ou l’adresse à laquelle le contrôle gauche la fonction de l’établissement d’une. Le protocole RIP est utilisé pour déterminer si contrôle est dans une construction protégée à l’intérieur de cette fonction, par exemple, un `__try` bloquer pour `__try` / `__except` ou `__try` / `__finally`.
+**ControlPc** est la valeur de RIP dans cette fonction. Cette valeur est soit une adresse d’exception, soit l’adresse à laquelle le contrôle a quitté la fonction d’établissement. Le RIP est utilisé pour déterminer si le contrôle se trouve dans une construction protégée à l’intérieur de cette fonction, par exemple un bloc `__try` pour `__try` @ no__t-2 @ no__t-3 ou `__try` @ no__t-5 @ no__t-6.
 
-**ImageBase** est l’image de base (adresse de chargement) du module contenant cette fonction, à ajouter aux offsets de 32 bits utilisés dans l’entrée de fonction et informations de déroulement pour enregistrer des adresses relatives.
+**ImageBase** est la base d’image (adresse de chargement) du module contenant cette fonction, à ajouter aux offsets 32 bits utilisés dans l’entrée de fonction et les informations de déroulement pour enregistrer les adresses relatives.
 
-**FunctionEntry** fournit un pointeur vers le RUNTIME_FUNCTION fonction d’entrée de la fonction info base d’image adresses relatives et déroulement de cette fonction.
+**FunctionEntry** fournit un pointeur vers l’entrée de la fonction RUNTIME_FUNCTION contenant les informations relatives à la fonction et au déroulement image de base de cette fonction.
 
 **EstablisherFrame** est l’adresse de la base de l’allocation de pile fixe pour cette fonction.
 
-**TargetIp** fournit une adresse d’instruction facultatif qui spécifie l’adresse de continuation du déroulement. Cette adresse est ignorée si **EstablisherFrame** n’est pas spécifié.
+**TargetIp** Fournit une adresse d’instruction facultative qui spécifie l’adresse de continuation du déroulement. Cette adresse est ignorée si **EstablisherFrame** n’est pas spécifié.
 
-**ContextRecord** pointe vers le contexte de l’exception, pour une utilisation par le code de répartition/déroulement d’exception système.
+**ContextRecord** pointe vers le contexte d’exception, pour une utilisation par le code de dispatch/déroulement de l’exception système.
 
-**LanguageHandler** pointe vers la routine du gestionnaire spécifique au langage appelé.
+**LanguageHandler** pointe vers la routine du gestionnaire de langage spécifique au langage qui est appelée.
 
-**HandlerData** pointe vers les données du gestionnaire spécifique au langage pour cette fonction.
+**HandlerData** pointe vers les données de gestionnaire spécifiques au langage pour cette fonction.
 
-## <a name="unwind-helpers-for-masm"></a>Déroulement de l’assistance pour MASM
+## <a name="unwind-helpers-for-masm"></a>Dérouler des applications d’assistance pour MASM
 
-Pour pouvoir écrire des routines d’assembly approprié, il existe un ensemble de pseudo-opérations qui peut être utilisé en parallèle avec les instructions d’assembly proprement dit pour créer l’approprié .pdata et .xdata. Il existe également un ensemble de macros qui fournissent une utilisation simplifiée des pseudo-opérations pour leurs utilisations les plus courantes.
+Pour écrire les routines d’assembly appropriées, il existe un ensemble de Pseudo-opérations qui peuvent être utilisées en parallèle avec les instructions d’assembly réelles pour créer les. pdata et. XData appropriés. Et il existe un ensemble de macros qui fournissent une utilisation simplifiée des pseudo-opérations pour leurs utilisations les plus courantes.
 
 ### <a name="raw-pseudo-operations"></a>Pseudo-opérations brutes
 
-|Opération de pseudo|Description|
+|Pseudo-opération|Description|
 |-|-|
-|FRAME de PROC \[:*ehandler*]|Causes MASM pour générer une fonction table d’entrée dans .pdata et .xdata d’informations de déroulement pour une fonction de structuré comportement de déroulement de la gestion des exceptions.  Si *ehandler* est présent, cette procédure est entrée dans l’enregistrement .xdata comme gestionnaire spécifique au langage.<br /><br /> Lorsque l’attribut FRAME est utilisé, il doit être suivi par un. Directive ENDPROLOG.  Si la fonction est une fonction de feuille (tel que défini dans [types de fonction](../build/stack-usage.md#function-types)) l’attribut FRAME n’est pas nécessaire, tout comme le reste de ces pseudo-opérations.|
-|. PUSHREG *inscrire*|Génère une entrée de code de déroulement UWOP_PUSH_NONVOL pour le numéro de Registre spécifié à l’aide de l’offset actuel dans le prologue.<br /><br /> Cela doit uniquement être utilisé avec les registres d’entiers non volatile.  Pour obtenir des notifications Push registres volatils, utilisez un. 8 ALLOCSTACK, à la place|
-|.SETFRAME *register*, *offset*|Renseigne le frame inscrire champ et le décalage dans les informations de déroulement en utilisant le Registre spécifié et le décalage. Le décalage doit être un multiple de 16 et inférieur ou égal à 240. Cette directive génère également une entrée de code de déroulement UWOP_SET_FPREG pour le Registre spécifié à l’aide de l’offset de prologue actuel.|
-|. ALLOCSTACK *taille*|Génère un UWOP_ALLOC_SMALL ou UWOP_ALLOC_LARGE avec la taille spécifiée pour l’offset actuel dans le prologue.<br /><br /> Le *taille* opérande doit être un multiple de 8.|
-|. SAVEREG *inscrire*, *offset*|Génère un UWOP_SAVE_NONVOL ou une entrée de code de déroulement UWOP_SAVE_NONVOL_FAR pour le Registre spécifié et l’offset à l’aide de l’offset de prologue actuel. MASM choisit l’encodage plus efficace.<br /><br /> *décalage* doit être positif et un multiple de 8. *décalage* est relative à la base du frame de la procédure, qui est généralement dans RSP, ou, si vous utilisez un pointeur de frame, le pointeur de frame non ajustée.|
-|.SAVEXMM128 *register*, *offset*|Génère un UWOP_SAVE_XMM128 ou une entrée de code de déroulement UWOP_SAVE_XMM128_FAR pour le registre XMM spécifié et l’offset à l’aide de l’offset de prologue actuel. MASM choisit l’encodage plus efficace.<br /><br /> *décalage* doit être positif et un multiple de 16.  *décalage* est relative à la base du frame de la procédure, qui est généralement dans RSP, ou, si vous utilisez un pointeur de frame, le pointeur de frame non ajustée.|
-|.PUSHFRAME \[*code*]|Génère une entrée de code de déroulement UWOP_PUSH_MACHFRAME. Si le paramètre facultatif *code* est spécifié, l’écriture de code de déroulement reçoit un modificateur de 1. Sinon, le modificateur est 0.|
+|@No__t de la TRAMe de traitement-0 :*ehandler*]|Fait en sorte que MASM génère une entrée de table de fonctions dans. pdata et les informations de déroulement dans. XData pour le comportement de déroulement de la gestion structurée des exceptions d’une fonction.  Si *ehandler* est présent, cette procédure est entrée dans le. XData comme gestionnaire spécifique au langage.<br /><br /> Lorsque l’attribut FRAME est utilisé, il doit être suivi d’un. Directive ENDPROLOG.  Si la fonction est une fonction feuille (telle que définie dans les [types de fonction](../build/stack-usage.md#function-types)), l’attribut Frame n’est pas nécessaire, comme le reste de ces pseudo-opérations.|
+|. *Registre* PUSHREG|Génère une entrée de code de déroulement UWOP_PUSH_NONVOL pour le numéro de Registre spécifié à l’aide de l’offset actuel dans le prologue.<br /><br /> Utilisez-le uniquement avec des registres d’entiers non volatils.  Pour les notifications push de registres volatils, utilisez un. ALLOCSTACK 8, à la place|
+|. *Registre*SETFRAME, *décalage*|Remplit le champ du Registre du frame et le décalage dans les informations de déroulement à l’aide du Registre et de l’offset spécifiés. Le décalage doit être un multiple de 16 et inférieur ou égal à 240. Cette directive génère également une entrée de code de déroulement UWOP_SET_FPREG pour le registre spécifié à l’aide de l’offset de prologue actuel.|
+|. *Taille* de ALLOCSTACK|Génère un UWOP_ALLOC_SMALL ou un UWOP_ALLOC_LARGE avec la taille spécifiée pour l’offset actuel dans le prologue.<br /><br /> L’opérande de *taille* doit être un multiple de 8.|
+|. *Registre*SAVEREG, *décalage*|Génère une entrée de code de déroulement UWOP_SAVE_NONVOL ou UWOP_SAVE_NONVOL_FAR pour le registre et l’offset spécifiés à l’aide de l’offset de prologue actuel. MASM choisit le codage le plus efficace.<br /><br /> *offset* doit être positif et un multiple de 8. l' *offset* est relatif à la base du frame de la procédure, qui est généralement dans RSP ou, si vous utilisez un pointeur de frame, le pointeur de frame non mis à l’échelle.|
+|. *Registre*SAVEXMM128, *décalage*|Génère une entrée de code de déroulement UWOP_SAVE_XMM128 ou UWOP_SAVE_XMM128_FAR pour le registre XMM et le décalage spécifiés à l’aide de l’offset de prologue actuel. MASM choisit le codage le plus efficace.<br /><br /> *offset* doit être positif et un multiple de 16.  l' *offset* est relatif à la base du frame de la procédure, qui est généralement dans RSP ou, si vous utilisez un pointeur de frame, le pointeur de frame non mis à l’échelle.|
+|. PUSHFRAME \[*code*]|Génère une entrée de code de déroulement UWOP_PUSH_MACHFRAME. Si le *code* facultatif est spécifié, le modificateur 1 est attribué à l’entrée du code de déroulement. Sinon, le modificateur est 0.|
 |.ENDPROLOG|Signale la fin des déclarations de prologue.  Doit se produire dans les 255 premiers octets de la fonction.|
 
-Voici un exemple de prologue de fonction avec une utilisation correcte de la plupart des codes d’opération :
+Voici un exemple de prologue de fonction avec une utilisation correcte de la plupart des OpCodes :
 
 ```MASM
 sample PROC FRAME
@@ -381,39 +381,35 @@ sample PROC FRAME
 
 ; Here’s the official epilog
 
-    lea rsp, [rbp-020h]
+    lea rsp, [rbp+020h] ; deallocate both fixed and dynamic portions of the frame
     pop rbp
     ret
 sample ENDP
 ```
 
-### <a name="masm-macros"></a>Macros MASM
+Pour plus d’informations sur l’exemple d’épilogue, consultez [code d’épilogue](prolog-and-epilog.md#epilog-code) dans le [prologue x64 et épilogue](prolog-and-epilog.md).
 
-Afin de simplifier l’utilisation de la [pseudo-opérations brutes](#raw-pseudo-operations), il existe un ensemble de macros, défini dans ksamd64.inc, qui peut être utilisé pour créer des prologues et épilogues.
+### <a name="masm-macros"></a>MASM (macros)
+
+Pour simplifier l’utilisation des [Pseudo-opérations brutes](#raw-pseudo-operations), il existe un ensemble de macros, défini dans ksamd64. Inc, qui peut être utilisé pour créer des prologues et des épilogues de procédure classiques.
 
 |Macro|Description|
 |-|-|
-|alloc_stack(n)|Alloue un frame de pile de n octets (à l’aide de `sub rsp, n`) et qui émet des informations (.allocstack n) de déroulement appropriées|
-|save_reg *reg*, *loc*|Enregistre un Registre non volatil *reg* sur la pile RSP décalage *loc*et qui émet des informations de déroulement appropriées. (.savereg reg, loc)|
-|push_reg *reg*|Exécute un push d’un Registre non volatil *reg* sur la pile et émet des informations de déroulement appropriées. (.pushreg reg)|
-|rex_push_reg *reg*|Enregistrer un Registre non volatil sur la pile à l’aide d’un push de 2 octets et émet des informations (.pushreg reg) doit être utilisée que si la notification push est la première instruction dans la fonction pour vous assurer que la fonction est corrigeable en chaud-mémoire de déroulement appropriées.|
-|save_xmm128 *reg*, *loc*|Enregistre un registre XMM non volatil *reg* sur la pile RSP décalage *loc*et qui émet des informations (.savexmm128 reg, loc) de déroulement appropriées|
-|set_frame *reg*, *offset*|Définit le Registre de frame *reg* pour le RSP + *décalage* (à l’aide d’un `mov`, ou un `lea`) et émet des informations (.set_frame reg, offset) de déroulement appropriées|
-|push_eflags|Pousse les eflags avec un `pushfq` obtenir des instructions et émet des informations (.alloc_stack 8) de déroulement appropriées|
+|alloc_stack (n)|Alloue un frame de pile de n octets (à l’aide de `sub rsp, n`) et émet les informations de déroulement appropriées (. allocstack n)|
+|save_reg *reg*, *loc*|Enregistre *un registre de registres non* volatil sur la pile à l’emplacement RSP offset *loc*et émet les informations de déroulement appropriées. (. savereg reg, loc)|
+|push_reg *reg*|Exécute un *push d’un registre de registres non* volatil sur la pile et émet les informations de déroulement appropriées. (. pushreg reg)|
+|rex_push_reg *reg*|Enregistre un registre non volatil sur la pile à l’aide d’un push de 2 octets et émet les informations de déroulement appropriées (. pushreg reg).  Utilisez cette macro si l’envoi est la première instruction de la fonction, afin de garantir que la fonction peut être corrigée à chaud.|
+|save_xmm128 *reg*, *loc*|Enregistre un fichier de Registre XMM non *volatil sur la* pile à l’emplacement RSP offset *loc*et émet les informations de déroulement appropriées (. savexmm128 reg, loc)|
+|set_frame *reg*, *décalage*|Définit *le Registre du registre des* frames comme étant le *décalage* RSP + (à l’aide d’un `mov` ou d’un `lea`), et émet les informations de déroulement appropriées (. set_frame reg, offset)|
+|push_eflags|Exécute un push du eflags avec une instruction `pushfq` et émet les informations de déroulement appropriées (. alloc_stack 8)|
 
 Voici un exemple de prologue de fonction avec une utilisation correcte des macros :
 
 ```MASM
-SkFrame struct
-    Fill    dq ?; fill to 8 mod 16
-    SavedRdi dq ?; saved register RDI
-    SavedRsi dq ?; saved register RSI
-SkFrame ends
-
 sampleFrame struct
-    Filldq?; fill to 8 mod 16
-    SavedRdidq?; Saved Register RDI
-    SavedRsi  dq?; Saved Register RSI
+    Fill     dq ?; fill to 8 mod 16
+    SavedRdi dq ?; Saved Register RDI
+    SavedRsi dq ?; Saved Register RSI
 sampleFrame ends
 
 sample2 PROC FRAME
@@ -434,7 +430,7 @@ sample2 PROC FRAME
 sample2 ENDP
 ```
 
-## <a name="unwind-data-definitions-in-c"></a>Déroulement des définitions de données en C
+## <a name="unwind-data-definitions-in-c"></a>Dérouler les définitions de données en C
 
 Voici une description C des données de déroulement :
 
