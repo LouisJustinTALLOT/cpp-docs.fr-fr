@@ -21,31 +21,31 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69498604"
 ---
 # <a name="try-finally-statement"></a>try-finally, instruction
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 La syntaxe suivante décrit l’instruction **try-finally** :
 
-> **\_\_Essayez**<br/>
+> **\_ \_try**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;code protégé<br/>
+> &nbsp; &nbsp; &nbsp; &nbsp;//code protégé<br/>
 > }<br/>
-> **\_\_suivie**<br/>
+> **\_ \_finally**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;Code de fin<br/>
+> &nbsp; &nbsp; &nbsp; &nbsp;//code d’arrêt<br/>
 > }
 
 ## <a name="grammar"></a>Grammaire
 
 *try-finally-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;try Compound *-* **Statement finally\_Compound-Statement \_**  **\_ \_**
+&nbsp; &nbsp; &nbsp; &nbsp; **\_** \_try *composée-instruction* **\_ 0finally** *composée-Statement*
 
 L’instruction **try-finally** est une extension Microsoft du langage C C++ et des langages qui permet aux applications cibles de garantir l’exécution du code de nettoyage lorsque l’exécution d’un bloc de code est interrompue. Le nettoyage se compose de tâches telles que la désallocation de mémoire, la fermeture de fichiers et la libération des handles de fichiers. L’instruction **try-finally** est particulièrement utile pour les routines qui ont plusieurs endroits où un contrôle est effectué pour une erreur susceptible de provoquer un retour prématuré de la routine.
 
@@ -66,15 +66,15 @@ Le contrôle atteint une instruction **_ _ try** par exécution séquentielle si
 
 Si une exception se produit dans le bloc **_ _ try** , le système d’exploitation doit trouver un gestionnaire pour l’exception ou le programme va échouer. Si un gestionnaire est trouvé, tous les blocs **_ _ finally** sont exécutés et l’exécution reprend dans le gestionnaire.
 
-Par exemple, supposons qu'une série d'appels de fonction lie la fonction A à la fonction D, comme indiqué dans l'illustration suivante. Chaque fonction a un gestionnaire de terminaisons. Si une exception est levée dans la fonction D et gérée dans un, les gestionnaires de terminaisons sont appelés dans cet ordre lorsque le système déroule la pile : D, C, B.
+Par exemple, supposons qu'une série d'appels de fonction lie la fonction A à la fonction D, comme indiqué dans l'illustration suivante. Chaque fonction a un gestionnaire de terminaisons. Si une exception est levée dans la fonction D et gérée dans A, les gestionnaires de terminaisons sont appelés dans l'ordre suivant à mesure que le système déroule la pile : D, C, B.
 
-![Ordre d’arrêt&#45;]de(../cpp/media/vc38cx1.gif "l’exécution du gestionnaire&#45;de fin d’exécution du") gestionnaire <br/>
+![Ordre d’exécution&#45;du gestionnaire de terminaisons](../cpp/media/vc38cx1.gif "Ordre d’exécution&#45;du gestionnaire de terminaisons") <br/>
 Fin de l'ordre d'exécution du gestionnaire
 
 > [!NOTE]
 > Le comportement de try-finally est différent de celui des autres langages qui prennent en charge l’utilisation C#de **finally**, tels que.  Un seul **_ _ try** peut avoir, mais pas les deux, **_ _ finally** et **_ _ except**.  Si les deux doivent être utilisés conjointement, une instruction try-except externe doit entourer l'instruction try-finally interne.  Les règles qui spécifient le moment d'exécution de chaque blocs sont également différentes.
 
-Pour la compatibilité avec les versions antérieures, **_try**, **_finally**et **_leave** sont des synonymes pour **_ _ try**, **_ _ final**et **__leave** sauf si l’option de compilateur [/za \(désactive les extensions de langage) ](../build/reference/za-ze-disable-language-extensions.md)est spécifié.
+Pour la compatibilité avec les versions antérieures, **_try**, **_finally**et **_leave** sont des synonymes pour **_ _ try**, **_ _ final**et **__leave** sauf si l’option de compilateur [/za \(Disable les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est prescrit.
 
 ## <a name="the-__leave-keyword"></a>Mot clé __leave
 
@@ -90,7 +90,7 @@ Si un bloc **try** s’arrête prématurément pour une raison quelconque, y com
 
 Le gestionnaire de terminaisons n’est pas appelé si un processus est supprimé au milieu de l’exécution d’une instruction **try-finally** .
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

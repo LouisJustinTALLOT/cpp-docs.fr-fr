@@ -4,10 +4,10 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: b947bd6955a80e051d1dab81061b4b2bf2ab19c8
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69498630"
 ---
 # <a name="c-type-system-modern-c"></a>Système de type C++ (Modern C++)
@@ -16,11 +16,11 @@ Le concept de *type* est très important dans C++. Chaque variable, argument de 
 
 ## <a name="terminology"></a>Terminologie
 
-**Variable**: Nom symbolique d’une quantité de données afin que le nom puisse être utilisé pour accéder aux données auxquelles il fait référence dans l’étendue du code où il est défini. Dans C++, la *variable* est généralement utilisée pour faire référence à des instances de types de données scalaires, tandis que les instances d’autres types sont généralement appelées *objets*.
+**Variable**: nom symbolique d’une quantité de données afin que le nom puisse être utilisé pour accéder aux données auxquelles il fait référence dans l’étendue du code où il est défini. Dans C++, la *variable* est généralement utilisée pour faire référence à des instances de types de données scalaires, tandis que les instances d’autres types sont généralement appelées *objets*.
 
-**Objet**: Pour des raisons de simplicité et de cohérence, cet article utilise le terme *objet* pour faire référence à toute instance d’une classe ou d’une structure, et lorsqu’il est utilisé dans le sens général, il comprend tous les types, y compris les variables scalaires.
+**Objet**: pour des raisons de simplicité et de cohérence, cet article utilise le terme *objet* pour faire référence à toute instance d’une classe ou d’une structure, et lorsqu’il est utilisé dans le sens général, il comprend tous les types, y compris les variables scalaires.
 
-**Type Pod** (Plain Old Data) : Cette catégorie informelle de types de C++ données dans fait référence aux types qui sont scalaires (consultez la section types fondamentaux) ou à des *classes Pod*. Une classe POD ne comporte pas de données membres static qui ne sont pas également des POD et ne comporte également aucun constructeur défini par l'utilisateur, aucun destructeur défini par l'utilisateur ou aucun opérateur d'assignation défini par l'utilisateur. En outre, une classe POD n'a aucune fonction virtuelle, aucune classe de base et aucune donnée membre non static privée ou protégée. Les types POD sont souvent utilisés pour l'échange de données externes, par exemple avec un module écrit en langage C (disposant de types POD uniquement).
+**Type Pod** (Plain Old Data) : cette catégorie informelle de types de C++ données dans fait référence à des types qui sont scalaires (consultez la section types fondamentaux) ou des *classes Pod*. Une classe POD ne comporte pas de données membres static qui ne sont pas également des POD et ne comporte également aucun constructeur défini par l'utilisateur, aucun destructeur défini par l'utilisateur ou aucun opérateur d'assignation défini par l'utilisateur. En outre, une classe POD n'a aucune fonction virtuelle, aucune classe de base et aucune donnée membre non static privée ou protégée. Les types POD sont souvent utilisés pour l'échange de données externes, par exemple avec un module écrit en langage C (disposant de types POD uniquement).
 
 ## <a name="specifying-variable-and-function-types"></a>Spécification des types de variable et de fonction
 
@@ -59,24 +59,24 @@ Les types fondamentaux sont identifiés par le compilateur, qui dispose de règl
 
 L'illustration suivante montre les tailles relatives des types intégrés :
 
-![Taille en octets des types&#45;intégrés](../cpp/media/built-intypesizes.png "taille en octets des types intégrés&#45;")
+![Taille en octets des types&#45;intégrés](../cpp/media/built-intypesizes.png "Taille en octets des types&#45;intégrés")
 
 Le tableau suivant répertorie les types fondamentaux les plus souvent utilisés :
 
-|Type|Size|Commentaire|
+|Tapez|Size|Commentaire|
 |----------|----------|-------------|
 |int|4 octets|Choix par défaut pour les valeurs intégrales.|
 |double|8 octets|Choix par défaut pour les valeurs à virgule flottante.|
 |bool|1 octet|Représente des valeurs qui peuvent être true ou false.|
 |char|1 octet|À utiliser pour les caractères ASCII dans les chaînes de style C plus anciennes ou les objets std::string qui ne devront jamais être convertis en UNICODE.|
 |wchar_t|2 octets|Représente les valeurs à caractères « larges » qui peuvent être encodées au format UNICODE (UTF-16 sur Windows, mais peut varier sur les autres systèmes d'exploitation). Type de caractère utilisé dans les chaînes de type `std::wstring`.|
-|unsigned&nbsp;char|1 octet|C++ n'a aucun type `byte` intégré.  Utilisez le caractère non signé pour représenter une valeur d'octet.|
+|&nbsp;char non signé|1 octet|C++ n'a aucun type `byte` intégré.  Utilisez le caractère non signé pour représenter une valeur d'octet.|
 |unsigned int|4 octets|Option par défaut pour les bits indicateurs.|
 |long long|8 octets|Représente des valeurs entières très grandes.|
 
 ## <a name="the-void-type"></a>Type void
 
-Le type **void** est un type spécial ; vous ne pouvez pas déclarer une variable de type **void**, mais vous pouvez déclarer une variable de type __void \*__  (pointeur vers **void**), ce qui est parfois nécessaire lors de l’allocation de mémoire brute (non typée). Toutefois, les pointeurs vers **void** ne sont pas de type sécurisé et, en général, leur utilisation est vivement déconseillée dans moderne C++. Dans une déclaration de fonction, une valeur de retour **void** signifie que la fonction ne retourne pas de valeur ; Il s’agit d’une utilisation courante et acceptable de **void**. Si le langage C nécessitait des fonctions qui ont des paramètres nuls pour déclarer **void** dans la liste de paramètres `fou(void)`, par exemple, cette pratique est déconseillée dans moderne C++ et `fou()`doit être déclarée. Pour plus d’informations, consultez [conversions de types et sécurité de type](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+Le type **void** est un type spécial ; vous ne pouvez pas déclarer une variable de type **void**, mais vous pouvez déclarer une variable de type __void \*__ (pointeur vers **void**), ce qui est parfois nécessaire lors de l’allocation de mémoire brute (non typée). Toutefois, les pointeurs vers **void** ne sont pas de type sécurisé et, en général, leur utilisation est vivement déconseillée dans moderne C++. Dans une déclaration de fonction, une valeur de retour **void** signifie que la fonction ne retourne pas de valeur ; Il s’agit d’une utilisation courante et acceptable de **void**. Si le langage C nécessitait des fonctions qui ont des paramètres nuls pour déclarer **void** dans la liste de paramètres, par exemple, `fou(void)`, cette pratique est déconseillée dans moderne C++ et doit être déclarée `fou()`. Pour plus d’informations, consultez [conversions de types et sécurité de type](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="const-type-qualifier"></a>qualificateur de type const
 
@@ -94,7 +94,7 @@ Un type **const** est différent de sa version non const ; par exemple, **const
 
 ## <a name="string-types"></a>Types chaîne
 
-Strictement parlant, le C++ langage n’a aucun type de chaîne intégré ; **char** et **wchar_t** stockent des caractères uniques. vous devez déclarer un tableau de ces types pour rapprocher une chaîne, en ajoutant une valeur null de fin (par `'\0'`exemple, ASCII) à l’élément de tableau situé un après le dernier caractère valide (également appelé *Chaîne de style C*). Les chaînes de style C exigent beaucoup plus de code pour être écrites ou l'utilisation de fonctions de bibliothèque d'utilitaires de chaînes externes. Mais dans moderne C++ `std::string` , nous disposons des types de bibliothèque standard (pour les chaînes de caractères de type **char**8 bits `std::wstring` ) ou (pour les chaînes de caractères de type **wchar_t**16 bits). Ces C++ conteneurs de bibliothèque standard peuvent être considérés comme des types de chaîne natifs, car ils font partie des bibliothèques standard incluses dans tout C++ environnement de génération conforme. Utilisez simplement la directive `#include <string>` pour rendre ces types disponibles dans votre programme. (Si vous utilisez MFC ou ATL, la classe CString est également disponible, mais ne fait pas partie de la norme C++.) L'utilisation de tableaux de caractères se terminant par null (les chaînes de style C susmentionnées) est vivement déconseillée en C++ moderne.
+Strictement parlant, le C++ langage n’a aucun type de chaîne intégré ; **char** et **wchar_t** stockent des caractères uniques. vous devez déclarer un tableau de ces types pour rapprocher une chaîne, en ajoutant une valeur null de fin (par exemple, ASCII `'\0'`) à l’élément de tableau situé un après le dernier caractère valide (également appelé  *Chaîne de style C*). Les chaînes de style C exigent beaucoup plus de code pour être écrites ou l'utilisation de fonctions de bibliothèque d'utilitaires de chaînes externes. Mais dans moderne C++, nous disposons des types de bibliothèque standard `std::string` (pour les chaînes de caractères de type **char**8 bits) ou `std::wstring` (pour les chaînes de caractères de type **wchar_t**16 bits). Ces C++ conteneurs de bibliothèque standard peuvent être considérés comme des types de chaîne natifs, car ils font partie des bibliothèques standard incluses dans tout C++ environnement de génération conforme. Utilisez simplement la directive `#include <string>` pour rendre ces types disponibles dans votre programme. (Si vous utilisez MFC ou ATL, la classe CString est également disponible, mais ne fait pas partie de la C++ norme.) L’utilisation de tableaux de caractères se terminant par un caractère null (les chaînes de style C mentionnées précédemment) est vivement déconseillée dans moderne C++.
 
 ## <a name="user-defined-types"></a>Types définis par l'utilisateur
 
@@ -106,7 +106,7 @@ Lorsque vous définissez une **classe**, une **structure**, une **Union**ou une 
 
 ## <a name="pointer-types"></a>Types de pointeur
 
-Comme dans les toutes premières versions du langage C, C++ continue à vous permettre de déclarer une variable d'un type pointeur en utilisant le déclarateur spécial `*` (astérisque). Un type pointeur stocke l'adresse de l'emplacement dans la mémoire où la valeur réelle des données est stockée. Dans moderne C++, ils sont appelés *pointeurs bruts*et sont accessibles dans votre code par le biais d’opérateurs `*` spéciaux (astérisque) `->` ou (tiret avec supérieur à). C’est ce que l’on appelle le *déréférencement*et celui que vous utilisez varie selon que vous déréférencez un pointeur vers un scalaire ou un pointeur vers un membre d’un objet. L'utilisation des types pointeur a longtemps été l'un des aspects les plus importants et les plus perturbants du développement de programmes en C et C++. Cette section décrit quelques faits et pratiques pour vous aider à utiliser les pointeurs bruts si vous le souhaitez, mais C++ dans moderne, il n’est plus nécessaire (ou recommandé) d’utiliser des pointeurs bruts pour la propriété de l’objet, en raison de l’évolution du [pointeur intelligent](../cpp/smart-pointers-modern-cpp.md) (abordé plus loin). à la fin de cette section). Il est toujours utile et plus sûr d’utiliser des pointeurs bruts pour observer les objets. Toutefois, si vous devez les utiliser pour la propriété des objets, agissez avec précaution et tenez compte de la façon dont les objets détenus sont créés et détruits.
+Comme dans les toutes premières versions du langage C, C++ continue à vous permettre de déclarer une variable d'un type pointeur en utilisant le déclarateur spécial `*` (astérisque). Un type pointeur stocke l'adresse de l'emplacement dans la mémoire où la valeur réelle des données est stockée. Dans moderne C++, ils sont appelés *pointeurs bruts*, et sont accessibles dans votre code par le biais d’opérateurs spéciaux `*` (astérisque) ou `->` (tiret avec supérieur à). C’est ce que l’on appelle le *déréférencement*et celui que vous utilisez varie selon que vous déréférencez un pointeur vers un scalaire ou un pointeur vers un membre d’un objet. L'utilisation des types pointeur a longtemps été l'un des aspects les plus importants et les plus perturbants du développement de programmes en C et C++. Cette section décrit quelques faits et pratiques pour vous aider à utiliser les pointeurs bruts si vous le souhaitez, mais C++ dans moderne, il n’est plus nécessaire (ou recommandé) d’utiliser des pointeurs bruts pour la propriété de l’objet, en raison de l’évolution du [pointeur intelligent](../cpp/smart-pointers-modern-cpp.md) (abordé plus loin). à la fin de cette section). Il est toujours utile et plus sûr d’utiliser des pointeurs bruts pour observer les objets. Toutefois, si vous devez les utiliser pour la propriété des objets, agissez avec précaution et tenez compte de la façon dont les objets détenus sont créés et détruits.
 
 La première chose que vous devez savoir est que la déclaration d'une variable pointeur brut alloue uniquement la mémoire requise pour stocker une adresse de l'emplacement mémoire auquel le pointeur fait référence lorsqu'il est déréférencé. L’allocation de la mémoire pour la valeur de données elle-même (également appelée *magasin*de stockage) n’est pas encore allouée. En d'autres termes, lorsque vous déclarez une variable de pointeur brut, vous créez une variable d'adresse mémoire et pas une variable de données réelle. Déréférencer une variable de pointeur avant de s'assurer qu'elle contient une adresse valide pour un magasin de stockage provoque un comportement indéfini (généralement une erreur irrécupérable) dans votre programme. L'exemple suivant illustre ce type d'erreur :
 
@@ -134,7 +134,7 @@ L'exemple déréférence un type pointeur sans avoir de mémoire allouée pour s
                               // "pNumber".
 ```
 
-L'exemple de code corrigé utilise la mémoire de la pile locale pour créer le magasin de stockage vers lequel pointe `pNumber`. Nous utilisons un type fondamental pour des raisons de simplicité. En pratique, le magasin de stockage pour les pointeurs sont le plus souvent des types définis par l’utilisateur qui sont alloués dynamiquement dans une zone de mémoire appelée *tas* (ou *magasin libre*) à l’aide d’une **nouvelle** expression de mot clé (dans la programmation de style C, l’ancien `malloc()` La fonction de la bibliothèque Runtime C a été utilisée). Une fois allouées, ces variables sont généralement appelées objets, surtout si elles sont basées sur une définition de classe. La mémoire allouée avec **New** doit être supprimée par une instruction **Delete** correspondante (ou, si vous `malloc()` avez utilisé la fonction pour l’allouer, `free()`la fonction C Runtime).
+L'exemple de code corrigé utilise la mémoire de la pile locale pour créer le magasin de stockage vers lequel pointe `pNumber`. Nous utilisons un type fondamental pour des raisons de simplicité. En pratique, le magasin de stockage pour les pointeurs sont le plus souvent des types définis par l’utilisateur qui sont alloués dynamiquement dans une zone de mémoire appelée *tas* (ou *magasin libre*) à l’aide d’une **nouvelle** expression de mot clé (dans la programmation de style C, l’ancienne @no_ la fonction de la bibliothèque Runtime C _t_3 a été utilisée). Une fois allouées, ces variables sont généralement appelées objets, surtout si elles sont basées sur une définition de classe. La mémoire allouée avec **New** doit être supprimée par une instruction **Delete** correspondante (ou, si vous avez utilisé la fonction `malloc()` pour l’allouer, la fonction C Runtime `free()`).
 
 Toutefois, il est facile d’oublier de supprimer un objet alloué dynamiquement, en particulier dans le code complexe, ce qui provoque un bogue de ressource appelé une *fuite de mémoire*. Pour cette raison, l'utilisation des pointeurs bruts est vivement déconseillée dans le C++ moderne. Il est presque toujours préférable d’inclure dans un wrapper un pointeur brut dans un [pointeur intelligent](../cpp/smart-pointers-modern-cpp.md), ce qui libère automatiquement la mémoire lorsque son destructeur est appelé (quand le code sort de l’étendue du pointeur intelligent). en utilisant des pointeurs intelligents, vous éliminez pratiquement toute une classe de C++ bogues dans vos programmes. Dans l'exemple suivant, supposez que `MyClass` est un type défini par l'utilisateur qui a une méthode `DoSomeWork();`publique
 
