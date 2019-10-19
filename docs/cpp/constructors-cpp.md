@@ -1,17 +1,17 @@
 ---
 title: Constructeurs (C++)
-ms.date: 09/05/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 0e2e3536c8eb0a5b111ff18e43044783ea684f1f
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.openlocfilehash: 799be6cfd4b14061ba61586f361dd884ad59224c
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062026"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587940"
 ---
 # <a name="constructors-c"></a>Constructeurs (C++)
 
@@ -64,11 +64,11 @@ int main()
 
 - Les constructeurs peuvent être déclarés comme **inline**, [Explicit](#explicit_constructors), **Friend** ou [constexpr](#constexpr_constructors).
 - Un constructeur peut initialiser un objet qui a été déclaré comme **const**, **volatile** ou **const volatile**. L’objet devient **const** une fois le constructeur terminé.
-- Pour définir un constructeur dans un fichier d’implémentation, donnez-lui un nom qualifié comme avec toute autre fonction `Box::Box(){...}`membre :.
+- Pour définir un constructeur dans un fichier d’implémentation, donnez-lui un nom qualifié comme avec toute autre fonction membre : `Box::Box(){...}`.
 
 ## <a name="member_init_list"></a>Listes d’initialiseurs de membres
 
-Un constructeur peut éventuellement avoir une liste d’initialiseurs de membre, qui initialise les membres de classe avant l’exécution du corps du constructeur. (Notez qu’une liste d’initialiseurs de membre n’est pas la même chose qu’une *liste d’initialiseurs* de type [std ::\<initializer_list T >](../standard-library/initializer-list-class.md).)
+Un constructeur peut éventuellement avoir une liste d’initialiseurs de membre, qui initialise les membres de classe avant l’exécution du corps du constructeur. (Notez qu’une liste d’initialiseurs de membre n’est pas la même chose qu’une *liste d’initialiseurs* de type [std :: initializer_list \<T >](../standard-library/initializer-list-class.md).)
 
 Il est préférable d’utiliser une liste d’initialiseurs de membre pour assigner des valeurs dans le corps du constructeur, car il initialise directement le membre. Dans l’exemple suivant, la liste d’initialiseurs de membre se compose de toutes les expressions d' **identificateur (argument)** après les deux-points :
 
@@ -78,7 +78,7 @@ Il est préférable d’utiliser une liste d’initialiseurs de membre pour assi
     {}
 ```
 
-L’identificateur doit faire référence à un membre de classe ; elle est initialisée avec la valeur de l’argument. L’argument peut être l’un des paramètres de constructeur, un appel de fonction ou un [std :\<: initializer_list T >](../standard-library/initializer-list-class.md).
+L’identificateur doit faire référence à un membre de classe ; elle est initialisée avec la valeur de l’argument. L’argument peut être l’un des paramètres de constructeur, un appel de fonction ou un [std :: initializer_list \<T >](../standard-library/initializer-list-class.md).
 
 les membres **const** et les membres du type référence doivent être initialisés dans la liste d’initialiseurs de membres.
 
@@ -206,13 +206,13 @@ La tentative de copie de l’objet génère *une erreur C2280 : tentative de r�
 
 ## <a name="move_constructors"></a>Constructeurs de déplacement
 
-Un *constructeur de déplacement* est une fonction membre spéciale qui déplace la propriété des données d’un objet existant vers une nouvelle variable sans copier les données d’origine. Elle prend une référence rvalue comme premier paramètre, et tous les paramètres supplémentaires doivent avoir des valeurs par défaut. Les constructeurs de déplacement peuvent augmenter considérablement l’efficacité de votre programme lors du passage autour d’objets volumineux. Un constructeur de déplacement accepte une référence rvalue comme premier paramètre. Tous les autres paramètres doivent avoir des valeurs par défaut.
+Un *constructeur de déplacement* est une fonction membre spéciale qui déplace la propriété des données d’un objet existant vers une nouvelle variable sans copier les données d’origine. Elle prend une référence rvalue comme premier paramètre, et tous les paramètres supplémentaires doivent avoir des valeurs par défaut. Les constructeurs de déplacement peuvent augmenter considérablement l’efficacité de votre programme lors du passage autour d’objets volumineux.
 
 ```cpp
 Box(Box&& other);
 ```
 
-Le compilateur choisit un constructeur de déplacement dans certaines situations où l’objet est initialisé par un autre objet du même type qui va être détruit et n’a plus besoin de ressources informatiques. L’exemple suivant illustre un cas où un constructeur de déplacement est sélectionné par la résolution de surcharge. La *zone* variable retournée par get_Box () est un *xValue* (valeur d’expiration) qui est sur le point de sortir de l’étendue. Pour fournir de la motivation pour cet exemple, nous allons donner à Box un grand vecteur de chaînes qui représentent son contenu. Au lieu de copier le vecteur et ses chaînes, le constructeur de déplacement le « vole » de la valeur d’expiration « Box » afin que le vecteur appartienne à présent au nouvel objet. L’appel à `std::move` est tout ce qui est nécessaire, `vector` car `string` les classes et implémentent leurs propres constructeurs de déplacement.
+Le compilateur choisit un constructeur de déplacement dans certaines situations où l’objet est initialisé par un autre objet du même type qui va être détruit et n’a plus besoin de ses ressources. L’exemple suivant illustre un cas où un constructeur de déplacement est sélectionné par la résolution de surcharge. Dans le constructeur qui appelle `get_Box()`, la valeur retournée est un *xValue* (valeur d’expiration). Elle n’est assignée à aucune variable et est donc sur le point de sortir de la portée. Pour fournir de la motivation pour cet exemple, nous allons donner à Box un grand vecteur de chaînes qui représentent son contenu. Au lieu de copier le vecteur et ses chaînes, le constructeur de déplacement le « vole » de la valeur d’expiration « Box » afin que le vecteur appartienne à présent au nouvel objet. L’appel à `std::move` est tout ce qui est nécessaire, car les classes `vector` et `string` implémentent leurs propres constructeurs de déplacement.
 
 ```cpp
 #include <iostream>
@@ -318,7 +318,7 @@ Un constructeur peut être déclaré comme [constexpr](constexpr-cpp.md) si
 
 ## <a name="init_list_constructors"></a>Constructeurs de liste d’initialiseurs
 
-Si un constructeur prend un [std :: initializer_list\<T\> ](../standard-library/initializer-list-class.md) comme paramètre et que tous les autres paramètres ont des arguments par défaut, ce constructeur est sélectionné dans la résolution de surcharge lorsque la classe est instanciée par le biais de direct d’initialisation. Vous pouvez utiliser initializer_list pour initialiser tout membre qui peut l’accepter. Par exemple, supposons que la classe Box (indiquée précédemment) `std::vector<string>` a `m_contents`un membre. Vous pouvez fournir un constructeur comme suit :
+Si un constructeur prend un [std :: initializer_list \<T \>](../standard-library/initializer-list-class.md) comme paramètre et que tous les autres paramètres ont des arguments par défaut, ce constructeur est sélectionné dans la résolution de surcharge lorsque la classe est instanciée par le biais de direct d’initialisation. Vous pouvez utiliser initializer_list pour initialiser tout membre qui peut l’accepter. Par exemple, supposons que la classe Box (indiquée précédemment) a un membre `std::vector<string>` `m_contents`. Vous pouvez fournir un constructeur comme suit :
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -435,7 +435,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-Un constructeur de classe dérivée appelle toujours un constructeur de classe de base, afin de pouvoir s'appuyer sur des classes de base complètement construites avant d'effectuer tout travail supplémentaire. Les constructeurs de classe de base sont appelés par ordre de dérivation, par exemple, `ClassA` si est dérivé `ClassB`de, qui est dérivé `ClassC`de, `ClassC` le constructeur est appelé en premier, `ClassB` puis le constructeur, puis le `ClassA` constructeur.
+Un constructeur de classe dérivée appelle toujours un constructeur de classe de base, afin de pouvoir s'appuyer sur des classes de base complètement construites avant d'effectuer tout travail supplémentaire. Les constructeurs de classe de base sont appelés par ordre de dérivation, par exemple, si `ClassA` est dérivée de `ClassB`, qui est dérivée de `ClassC`, le constructeur `ClassC` est appelé en premier, puis le constructeur `ClassB`, puis le constructeur `ClassA`.
 
 Si une classe de base n'a pas de constructeur par défaut, vous devez fournir les paramètres du constructeur de classe de base dans le constructeur de classe dérivée :
 
@@ -597,7 +597,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 15.7 et versions ultérieures :** L’instruction **using** dans **/std : le mode c++ 17** met en portée tous les constructeurs de la classe de base, à l’exception de ceux qui ont une signature identique aux constructeurs de la classe dérivée. En général, il est préférable d'utiliser les constructeurs d'héritage quand la classe dérivée ne déclare aucun nouveau constructeur ni aucune nouvelle donnée membre. Consultez également [améliorations dans Visual Studio 2017 version 15,7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
+**Visual Studio 2017 version 15,7 et versions ultérieures**: l’instruction **using** dans **/std : le mode c++ 17** met en portée tous les constructeurs de la classe de base, à l’exception de ceux qui ont une signature identique aux constructeurs de la classe dérivée. En général, il est préférable d'utiliser les constructeurs d'héritage quand la classe dérivée ne déclare aucun nouveau constructeur ni aucune nouvelle donnée membre. Consultez également [améliorations dans Visual Studio 2017 version 15,7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
 
 ::: moniker-end
 

@@ -3,10 +3,10 @@ title: Disposition dynamique
 ms.date: 09/09/2019
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 1b0d035d3c551fd309d515ccb8b22159218c1b0a
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70907548"
 ---
 # <a name="dynamic-layout"></a>Disposition dynamique
@@ -17,13 +17,13 @@ Avec MFC dans Visual Studio 2015, vous pouvez créer des boîtes de dialogue que
 
 Quand l'utilisateur redimensionne une boîte de dialogue, les contrôles qui y figurent peuvent être redimensionnés ou déplacés dans les directions X et Y. Le changement de la taille ou de l'emplacement d'un contrôle quand l'utilisateur redimensionne une boîte de dialogue est appelé disposition dynamique. Par exemple, voici une boîte de dialogue initiale, avant un redimensionnement :
 
-![Boîte de dialogue avant le redimensionnement.](../mfc/media/mfcdynamiclayout4.png "Boîte de dialogue avant le redimensionnement.")
+![Boîte de dialogue avant le redimensionnement.](../mfc/media/mfcdynamiclayout4.png "Boîte de dialogue avant redimensionnement.")
 
 Après le redimensionnement de la boîte de dialogue, nous voyons que la zone de liste a été agrandie pour afficher davantage d'éléments et que les boutons ont été déplacés vers le coin inférieur droit :
 
-![Boîte de dialogue après le redimensionnement.](../mfc/media/mfcdynamiclayout5.png "Boîte de dialogue après le redimensionnement.")
+![Boîte de dialogue après le redimensionnement.](../mfc/media/mfcdynamiclayout5.png "Boîte de dialogue après redimensionnement.")
 
-Vous pouvez contrôler la disposition dynamique en spécifiant les détails de chaque contrôle dans l’éditeur de ressources dans l’IDE, ou vous pouvez le faire par programmation en accédant à l' `CMFCDynamicLayout` objet pour un contrôle particulier et en définissant les propriétés.
+Vous pouvez contrôler la disposition dynamique en spécifiant les détails de chaque contrôle dans l’éditeur de ressources dans l’IDE, ou vous pouvez le faire par programmation en accédant à l’objet `CMFCDynamicLayout` pour un contrôle particulier et en définissant les propriétés.
 
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Définition des propriétés de disposition dynamique dans l'éditeur de ressources
 
@@ -33,7 +33,7 @@ L'éditeur de ressources vous permet de définir le comportement de disposition 
 
 1. Dans un projet MFC ouvert, ouvrez la boîte de dialogue à configurer dans l'éditeur de boîtes de dialogue.
 
-   ![Ouvrez la boîte de dialogue dans l’éditeur de ressources.](../mfc/media/mfcdynamiclayout3.png "Ouvrez la boîte de dialogue dans l’éditeur de ressources.")
+   ![Ouvrez la boîte de dialogue dans l’éditeur de ressources.](../mfc/media/mfcdynamiclayout3.png "Ouvrez la boîte de dialogue dans l'éditeur de ressources.")
 
 1. Sélectionnez un contrôle et, dans la fenêtre **Propriétés** (dans **affichage de classes**), définissez ses propriétés de disposition dynamique. La section **disposition dynamique** de la fenêtre **Propriétés** contient les propriétés **type de déplacement**, type de **redimensionnement**et, en fonction des valeurs sélectionnées pour ces propriétés, des propriétés spécifiques qui définissent le nombre de contrôles qui déplacent ou Modifiez la taille. Le **type de déplacement** détermine la façon dont un contrôle est déplacé lorsque la taille de la boîte de dialogue est modifiée. Le **type de dimensionnement** détermine la façon dont un contrôle est redimensionné lorsque la taille de la boîte de dialogue est modifiée. Le type de **déplacement** et le **type de dimensionnement** peuvent être **horizontaux**, **verticaux**, **les deux**ou **aucun** en fonction des dimensions que vous souhaitez modifier dynamiquement. Le type Horizontal correspond à la dimension X et le type Vertical, à la dimension Y.
 
@@ -55,13 +55,13 @@ La procédure précédente permet de spécifier les propriétés de disposition 
 
 1. Recherchez ou ajoutez un emplacement dans le code d'implémentation de votre classe de boîte de dialogue où vous souhaitez spécifier la disposition dynamique de la boîte de dialogue. Par exemple, vous pouvez ajouter la méthode `AdjustLayout` dans votre boîte de dialogue et l'appeler à chaque endroit où la disposition doit être modifiée. Vous pouvez l'appeler d'abord à partir du constructeur ou après avoir apporté les modifications à la boîte de dialogue.
 
-1. Pour la boîte de dialogue, appelez [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), une méthode `CWnd` de la classe. `GetDynamicLayout` retourne un pointeur vers un objet `CMFCDynamicLayout` .
+1. Pour la boîte de dialogue, appelez [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), une méthode de la classe `CWnd`. `GetDynamicLayout` retourne un pointeur vers un objet `CMFCDynamicLayout` .
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. Pour le premier contrôle auquel vous souhaitez ajouter un comportement dynamique, utilisez les méthodes statiques sur la classe de disposition dynamique pour créer la structure [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) qui encode la manière dont le contrôle doit être ajusté. Pour ce faire, vous devez d’abord choisir la méthode statique appropriée : [CMFCDynamicLayout :: MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout :: MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout :: MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)ou [CMFCDynamicLayout :: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Vous passez ensuite le pourcentage du déplacement horizontal et/ou du déplacement vertical. Toutes ces méthodes statiques retournent un nouvel objet MoveSettings que vous pouvez ensuite utiliser pour spécifier le comportement de déplacement d'un contrôle.
+1. Pour le premier contrôle auquel vous souhaitez ajouter un comportement dynamique, utilisez les méthodes statiques sur la classe de disposition dynamique pour créer la structure [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) qui encode la manière dont le contrôle doit être ajusté. Pour ce faire, vous devez d’abord choisir la méthode statique appropriée : [CMFCDynamicLayout :: MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout :: MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout :: MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)ou [CMFCDynamicLayout :: MoveHorizontalAndVertical ](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Vous passez ensuite le pourcentage du déplacement horizontal et/ou du déplacement vertical. Toutes ces méthodes statiques retournent un nouvel objet MoveSettings que vous pouvez ensuite utiliser pour spécifier le comportement de déplacement d'un contrôle.
 
    N'oubliez pas que la valeur 100 signifie que le contrôle sera déplacé autant que nécessaire par rapport à la taille modifiée de la boîte de dialogue. L'un des bords du contrôle restera donc à une distance fixe de la nouvelle bordure.
 

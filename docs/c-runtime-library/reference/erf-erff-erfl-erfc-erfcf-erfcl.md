@@ -40,10 +40,10 @@ helpviewer_keywords:
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
 ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70937621"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
@@ -98,19 +98,19 @@ Les fonctions **ERF** retournent la fonction d’erreur Gauss de *x*. Les foncti
 
 Les fonctions **ERF** calculent la fonction d’erreur Gauss de *x*, qui est définie comme suit :
 
-![Fonction d’erreur de x](media/crt_erf_formula.PNG "Fonction d’erreur de x")
+![Fonction d’erreur de x](media/crt_erf_formula.PNG "Fonction d'erreur de x")
 
 La fonction d’erreur Gauss complémentaire est définie comme 1-ERF (x). Les fonctions **ERF** retournent une valeur comprise entre-1,0 et 1,0. Aucun retour d'erreur. Les fonctions **ERFC** retournent une valeur comprise dans la plage 0 à 2. Si *x* est trop grand pour **ERFC**, la variable **errno** est définie sur **ERANGE**.
 
 Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges d' **ERF** et de **ERFC** qui acceptent et retournent des types **double** de type **float** et **long** . Dans un programme C, **ERF** et **ERFC** prennent toujours et retournent un **double**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
-|**erf**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
+|**ERF**, **ERFF**, **erfl**, **ERFC**, **erfcf**, **erfcl**|\<math.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,16 +1,16 @@
 ---
 title: Variadiques, macros
-ms.date: 08/29/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: 171ea797adc1e407a8b7ef0592508653f758df64
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: de4d3a7f03f613cb058e564664f01837df23aefb
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216523"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587879"
 ---
 # <a name="variadic-macros"></a>Variadiques, macros
 
@@ -18,9 +18,9 @@ Les macros variadiques sont des macros de type fonction qui contiennent un nombr
 
 ## <a name="remarks"></a>Notes
 
-Pour utiliser les macros variadiques, les points de suspension peuvent être spécifiés comme argument formel final dans une définition de macro, et `__VA_ARGS__` l’identificateur de remplacement peut être utilisé dans la définition pour insérer les arguments supplémentaires.  `__VA_ARGS__`est remplacé par tous les arguments qui correspondent aux points de suspension, y compris les virgules entre eux.
+Pour utiliser les macros variadiques, les points de suspension peuvent être spécifiés comme argument formel final dans une définition de macro, et l’identificateur de remplacement `__VA_ARGS__` peut être utilisé dans la définition pour insérer les arguments supplémentaires.  `__VA_ARGS__` est remplacé par tous les arguments qui correspondent aux points de suspension, y compris les virgules entre eux.
 
-La norme C spécifie qu’au moins un argument doit être passé aux points de suspension, pour garantir que la macro n’est pas résolue en une expression avec une virgule de fin. L’implémentation Microsoft C++ traditionnelle supprime une virgule de fin si aucun argument n’est passé aux points de suspension.
+La norme C spécifie qu’au moins un argument doit être passé aux points de suspension, pour garantir que la macro n’est pas résolue en une expression avec une virgule de fin. L’implémentation Microsoft C++ traditionnelle supprime une virgule de fin si aucun argument n’est passé aux points de suspension. Lorsque l’option de compilateur `/experimental:preprocessor` est définie, la virgule de fin n’est pas supprimée.
 
 ## <a name="example"></a>Exemple
 
