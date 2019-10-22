@@ -11,12 +11,12 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-ms.openlocfilehash: 6144826254c6acc509db2c0285b21811fe37bd4e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3f4104b28f5becfdbf62ede16faa81e855fcac8c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454044"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689653"
 ---
 # <a name="ltfstreamgt-typedefs"></a>&lt;fstream&gt;, typedefs
 
@@ -36,7 +36,7 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_filebuf](../standard-library/basic-filebuf-class.md), spécialisé pour les éléments de type **char** avec des caractéristiques de caractère par défaut.
+Le type est un synonyme du modèle de classe [basic_filebuf](../standard-library/basic-filebuf-class.md), spécialisé pour les éléments de type **char** avec des caractéristiques de caractère par défaut.
 
 ## <a name="fstream"></a>  fstream
 
@@ -48,13 +48,13 @@ typedef basic_fstream<char, char_traits<char>> fstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_fstream](../standard-library/basic-fstream-class.md), spécialisé pour les éléments de type **char** avec des caractéristiques de caractère par défaut.
+Le type est un synonyme du modèle de classe [basic_fstream](../standard-library/basic-fstream-class.md), spécialisé pour les éléments de type **char** avec des caractéristiques de caractère par défaut.
 
 ## <a name="ifstream"></a>  ifstream
 
-Définit un flux à utiliser pour lire les données codées sur un octet de façon séquentielle dans un fichier. `ifstream`est un typedef qui spécialise la classe `basic_ifstream` de modèle pour **char**.
+Définit un flux à utiliser pour lire les données codées sur un octet de façon séquentielle dans un fichier. `ifstream` est un typedef qui spécialise le modèle de classe `basic_ifstream` pour **char**.
 
-Il existe également `wifstream`un typedef qui `basic_ifstream` spécialise la lecture des caractères à double larges **wchar_t** . Pour plus d’informations, consultez [wifstream](../standard-library/fstream-typedefs.md#wifstream).
+Il existe également `wifstream`, un typedef qui spécialise `basic_ifstream` lire des caractères à double larges **wchar_t** . Pour plus d’informations, consultez [wifstream](../standard-library/fstream-typedefs.md#wifstream).
 
 ```cpp
 typedef basic_ifstream<char, char_traits<char>> ifstream;
@@ -62,7 +62,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_ifstream](../standard-library/basic-ifstream-class.md), spécialisé pour les éléments de type char avec des caractéristiques de caractère par défaut. Voici un exemple :
+Le type est un synonyme du modèle de classe [basic_ifstream](../standard-library/basic-ifstream-class.md), spécialisé pour les éléments de type char avec des caractéristiques de caractère par défaut. Voici un exemple :
 
 ```cpp
 using namespace std;
@@ -86,7 +86,7 @@ typedef basic_ofstream<char, char_traits<char>> ofstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_ofstream](../standard-library/basic-ofstream-class.md), spécialisé pour les éléments de type **char** avec des caractéristiques de caractère par défaut.
+Le type est un synonyme du modèle de classe [basic_ofstream](../standard-library/basic-ofstream-class.md), spécialisé pour les éléments de type **char** avec des caractéristiques de caractère par défaut.
 
 ## <a name="wfstream"></a>  wfstream
 
@@ -98,7 +98,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_fstream](../standard-library/basic-fstream-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
+Le type est un synonyme du modèle de classe [basic_fstream](../standard-library/basic-fstream-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
 
 ## <a name="wifstream"></a>  wifstream
 
@@ -110,7 +110,7 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_ifstream](../standard-library/basic-ifstream-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
+Le type est un synonyme du modèle de classe [basic_ifstream](../standard-library/basic-ifstream-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
 
 ## <a name="wofstream"></a>  wofstream
 
@@ -122,7 +122,7 @@ typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_ofstream](../standard-library/basic-ofstream-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
+Le type est un synonyme du modèle de classe [basic_ofstream](../standard-library/basic-ofstream-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
 
 ## <a name="wfilebuf"></a>  wfilebuf
 
@@ -134,7 +134,7 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_filebuf](../standard-library/basic-filebuf-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
+Le type est un synonyme du modèle de classe [basic_filebuf](../standard-library/basic-filebuf-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
 
 ## <a name="see-also"></a>Voir aussi
 
