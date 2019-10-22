@@ -9,16 +9,16 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 88244879be9ab27c826c0b051b724fa1c3ed4784
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456765"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688471"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt;, opérateurs
 
-L' \<en-tête de > de tableau comprend ces fonctions de modèle de comparaison de non-membre de **tableau** .
+L’en-tête \<array > comprend ces fonctions de modèle de comparaison de non-membre de **tableau** .
 
 ||||
 |-|-|-|
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*\
-Type d’un élément.
+*Ty* \
+Type d'un élément.
 
-*N*\
+*N* \
 Taille du tableau.
 
-*gauche*\
+\ *gauche*
 Conteneur de gauche à comparer.
 
-*Oui*\
+\ *droit*
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
@@ -111,23 +111,23 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*\
-Type d’un élément.
+*Ty* \
+Type d'un élément.
 
-*N*\
+*N* \
 Taille du tableau.
 
-*gauche*\
+\ *gauche*
 Conteneur de gauche à comparer.
 
-*Oui*\
+\ *droit*
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle surcharge `operator<` pour comparer deux objets de la classe de modèle [classe array](../standard-library/array-class-stl.md). La fonction retourne `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+La fonction de modèle surcharge `operator<` pour comparer deux objets de [classe de tableau](../standard-library/array-class-stl.md)de modèles de classe. La fonction retourne `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__array__operator_lt.cpp
@@ -184,23 +184,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*\
-Type d’un élément.
+*Ty* \
+Type d'un élément.
 
-*N*\
+*N* \
 Taille du tableau.
 
-*gauche*\
+\ *gauche*
 Conteneur de gauche à comparer.
 
-*Oui*\
+\ *droit*
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
 La fonction de modèle retourne `!(right < left)`.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__array__operator_le.cpp
@@ -257,21 +257,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*\
-Type d’un élément.
+*Ty* \
+Type d'un élément.
 
-*N*\
+*N* \
 Taille du tableau.
 
-*gauche*\
+\ *gauche*
 Conteneur de gauche à comparer.
 
-*Oui*\
+\ *droit*
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle surcharge `operator==` pour comparer deux objets de la classe de modèle [classe array](../standard-library/array-class-stl.md). La fonction retourne `equal(left.begin(), left.end(), right.begin())`.
+La fonction de modèle surcharge `operator==` pour comparer deux objets de [classe de tableau](../standard-library/array-class-stl.md)de modèles de classe. La fonction retourne `equal(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Exemple
 
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*\
-Type d’un élément.
+*Ty* \
+Type d'un élément.
 
-*N*\
+*N* \
 Taille du tableau.
 
-*gauche*\
+\ *gauche*
 Conteneur de gauche à comparer.
 
-*Oui*\
+\ *droit*
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*\
-Type d’un élément.
+*Ty* \
+Type d'un élément.
 
-*N*\
+*N* \
 Taille du tableau.
 
-*gauche*\
+\ *gauche*
 Conteneur de gauche à comparer.
 
-*Oui*\
+\ *droit*
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes

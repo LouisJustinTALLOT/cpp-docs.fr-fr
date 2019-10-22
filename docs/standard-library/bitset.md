@@ -7,18 +7,18 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: 5de13e66523ee5a5dbcb4c2c54d38037909a4c95
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e017cad251f57cb477b0bf711cdd6243d7fd9893
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449703"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689928"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 
-Définit la classe de modèle bitset et deux fonctions de modèle de prise en charge pour la représentation et la manipulation de séquences de bits de taille fixe.
+Définit le modèle de classe BitSet et deux fonctions de modèle de prise en charge pour la représentation et la manipulation de séquences de bits de taille fixe.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<bitset>
 
@@ -40,9 +40,9 @@ Définit la classe de modèle bitset et deux fonctions de modèle de prise en ch
 
 |||
 |-|-|
-|[bitset](../standard-library/bitset-class.md)|La classe de modèle décrit un type d'objet qui stocke une séquence composée d'un nombre fixe de bits qui offrent un moyen compact de conserver des indicateurs pour un ensemble d'éléments ou de conditions.|
+|[bitset](../standard-library/bitset-class.md)|Le modèle de classe décrit un type d’objet qui stocke une séquence composée d’un nombre fixe de bits qui offrent un moyen compact de conserver des indicateurs pour un ensemble d’éléments ou de conditions.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

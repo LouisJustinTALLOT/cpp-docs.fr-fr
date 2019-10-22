@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: 7ac7fbaa8c50eb13457271cf96ddc3412733c833
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: c8d787fe03dfe6f67fb8e228308ec74b6e7f620a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245879"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688530"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt;, classe
 
-Une spécialisation de la classe de modèle allocator en type **void**, définir les types qui sont pertinents dans ce contexte.
+Spécialisation de l’allocateur de modèle de classe en type **void**, définissant les types qui ont un sens dans ce contexte.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +41,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>Notes
 
-La classe spécialise explicitement la classe de modèle [allocateur](../standard-library/allocator-class.md) pour le type **void**. Ses constructeurs et l’opérateur d’assignation se comportent de la même façon que la classe de modèle, mais elle définit uniquement les types suivants :
+La classe spécialise explicitement l' [allocateur](../standard-library/allocator-class.md) de modèle de classe pour le type **void**. Ses constructeurs et son opérateur d’assignation se comportent de la même façon que pour le modèle de classe, mais il définit uniquement les types suivants :
 
 - [const_pointer](../standard-library/allocator-class.md#const_pointer).
 
@@ -49,4 +49,4 @@ La classe spécialise explicitement la classe de modèle [allocateur](../standar
 
 - [value_type](../standard-library/allocator-class.md#value_type).
 
-- [rebind](../standard-library/allocator-class.md#rebind), une classe de modèle imbriquée.
+- une [reliaison](../standard-library/allocator-class.md#rebind), modèle de classe imbriquée.

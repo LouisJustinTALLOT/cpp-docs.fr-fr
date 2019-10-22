@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 72a948c7f8422b36b94a16cdb2c815bca92d20c7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c282791fb0ff85c0c8818c6905c51703614f4675
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456385"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689383"
 ---
-# <a name="matchresults-class"></a>match_results, classe
+# <a name="match_results-class"></a>match_results, classe
 
 Contient une séquence de sous-correspondances.
 
@@ -26,15 +26,15 @@ class match_results
 
 ## <a name="parameters"></a>Paramètres
 
-*BidIt*\
+@No__t_1 *bidit*
 Type d'itérateur pour les sous-correspondances.
 
-*Utilis*\
+@No__t_1 *Alloc*
 Type d'un allocateur pour la gestion du stockage.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit un objet qui contrôle une séquence non modifiable d’éléments de type `sub_match<BidIt>` , générés par une recherche d’expression régulière. Chaque élément pointe vers la sous-séquence qui correspond au groupe de capture correspondant à cet élément.
+Le modèle de classe décrit un objet qui contrôle une séquence non modifiable d’éléments de type `sub_match<BidIt>` générés par une recherche d’expression régulière. Chaque élément pointe vers la sous-séquence qui correspond au groupe de capture correspondant à cet élément.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -47,7 +47,7 @@ La classe de modèle décrit un objet qui contrôle une séquence non modifiable
 |Nom de type|Description|
 |-|-|
 |[allocator_type](#allocator_type)|Type d'un allocateur pour la gestion du stockage.|
-|[char_type](#char_type)|Type d’un élément.|
+|[char_type](#char_type)|Type d'un élément.|
 |[const_iterator](#const_iterator)|Type d’itérateur const pour les sous-correspondances.|
 |[const_reference](#const_reference)|Type d'une référence constante d'élément.|
 |[difference_type](#difference_type)|Type d’une différence d’itérateur.|
@@ -68,21 +68,21 @@ La classe de modèle décrit un objet qui contrôle une séquence non modifiable
 |[get_allocator](#get_allocator)|Retourne l'allocateur stocké.|
 |[length](#length)|Retourne la longueur d’une sous-correspondance.|
 |[max_size](#max_size)|Obtient le plus grand nombre de sous-correspondances.|
-|[position](#position)|Obtenez l’offset de démarrage d’un sous-groupe.|
-|[prefix](#prefix)|Obtient la séquence avant la première sous-correspondance.|
+|[endroit](#position)|Obtenez l’offset de démarrage d’un sous-groupe.|
+|[céder](#prefix)|Obtient la séquence avant la première sous-correspondance.|
 |[size](#size)|Compte le nombre de sous-correspondances.|
 |[str](#str)|Retourne une sous-correspondance.|
-|[suffix](#suffix)|Obtient la séquence après la dernière sous-correspondance.|
+|[suffixe](#suffix)|Obtient la séquence après la dernière sous-correspondance.|
 |[swap](#swap)|Échange deux objets match_results.|
 
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|opérateur|Description|
 |-|-|
 |[operator=](#op_eq)|Copier un objet match_results.|
 |[operator\[\]](#op_at)|Accédez à un sous-objet.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<regex>
 
@@ -190,7 +190,7 @@ empty == false
 
 ## <a name="allocator_type"></a>  match_results::allocator_type
 
-Type d’un allocateur pour la gestion du stockage.
+Type d'un allocateur pour la gestion du stockage.
 
 ```cpp
 typedef Alloc allocator_type;
@@ -214,7 +214,7 @@ La fonction membre retourne un itérateur d’accès aléatoire qui pointe vers 
 
 ## <a name="char_type"></a>  match_results::char_type
 
-Type d’un élément.
+Type d'un élément.
 
 ```cpp
 typedef typename iterator_traits<BidIt>::value_type char_type;
@@ -298,21 +298,21 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Paramètres
 
-*Outlt*\
+*Outlt* \
 Type d'itérateur de sortie.
 
 *out*\
 Flux de sortie dans lequel écrire.
 
-*fmt*\
+*fmt* \
 Chaîne de format.
 
-*père*\
+*indicateurs* \
 Indicateurs de format.
 
 ### <a name="remarks"></a>Notes
 
-Chaque fonction membre génère du texte mis en forme sous le contrôle du format *fmt*. La première fonction membre écrit le texte mis en forme dans la séquence définie par  son argument out *et retourne.* La deuxième fonction membre retourne un objet chaîne contenant une copie du texte mis en forme.
+Chaque fonction membre génère du texte mis en forme sous le contrôle du format *fmt*. La première fonction membre écrit le texte mis en forme dans la séquence définie par son argument out *et retourne.* La deuxième fonction membre retourne un objet chaîne contenant une copie du texte mis en forme.
 
 Pour générer du texte mis en forme, le texte littéral dans la chaîne de format est habituellement copié dans la séquence cible. Chaque séquence d'échappement dans la chaîne de format est remplacée par le texte qu'elle représente. Les détails de la copie et du remplacement sont contrôlés par les indicateurs de format transmis à la fonction.
 
@@ -350,7 +350,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*indice*\
+*sous* \
 Index de la sous-correspondance.
 
 ### <a name="remarks"></a>Notes
@@ -369,15 +369,15 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*utilis*\
+\ *Alloc*
 Objet allocateur à stocker.
 
-*Oui*\
+\ *droit*
 Objet match_results à copier.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur construit un objet `match_results` qui ne contient aucune sous-correspondance. Le deuxième constructeur construit un `match_results` objet qui est une copie de *droite*.
+Le premier constructeur construit un objet `match_results` qui ne contient aucune sous-correspondance. Le deuxième constructeur construit un objet `match_results` qui est une copie de *Right*.
 
 ## <a name="max_size"></a>  match_results::max_size
 
@@ -389,7 +389,7 @@ size_type max_size() const;
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la longueur de la séquence la plus longue que l'objet peut contrôler.
+La fonction membre retourne la longueur de la séquence la plus longue que l’objet peut contrôler.
 
 ## <a name="op_eq"></a>  match_results::operator=
 
@@ -401,7 +401,7 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Oui*\
+\ *droit*
 Objet match_results à copier.
 
 ### <a name="remarks"></a>Notes
@@ -423,7 +423,7 @@ Index de la sous-correspondance.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne une référence à l’élément *n* de la séquence contrôlée, ou une référence à un `sub_match` objet vide `size() <= n` si ou si le groupe de capture *n* ne fait pas partie de la correspondance.
+La fonction membre retourne une référence à l’élément *n* de la séquence contrôlée, ou une référence à un objet `sub_match` vide si `size() <= n` ou si le groupe de capture *n* ne fait pas partie de la correspondance.
 
 ## <a name="position"></a>  match_results::position
 
@@ -435,7 +435,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*indice*\
+*sous* \
 Index de la sous-correspondance.
 
 ### <a name="remarks"></a>Notes
@@ -500,7 +500,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*indice*\
+*sous* \
 Index de la sous-correspondance.
 
 ### <a name="remarks"></a>Notes
@@ -541,12 +541,12 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Oui*\
+\ *droit*
 Objet match_results à échanger.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre échange le contenu de `*this` et de *droite* en temps constant et ne lève pas d’exceptions.
+La fonction membre échange le contenu de `*this` et *juste* en temps constant et ne lève pas d’exceptions.
 
 ## <a name="value_type"></a>  match_results::value_type
 

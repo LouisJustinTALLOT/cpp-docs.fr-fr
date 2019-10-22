@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 17091e33c504df60c0b6b8e346d2a6fd3893679c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 63cbbb3a1a508b41c1e0632eda3eeabe4fda6696
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447416"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685818"
 ---
-# <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine, classe
+# <a name="subtract_with_carry_engine-class"></a>subtract_with_carry_engine, classe
 
 Génère une séquence aléatoire en utilisant l'algorithme Substract With Carry (Lagged Fibonacci).
 
@@ -36,13 +36,13 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Paramètres
 
-*UIntType*\
-Type des résultats entiers non signés. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*UIntType* \
+Type des résultats entiers non signés. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*S*\
+*W* \
 **Taille de mot**. Taille de chaque mot, en bits, de la séquence d'état. **Condition préalable** : `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*X*\
+*S* \
 **Décalage court**. Nombre de valeurs entières. **Condition préalable** : `0 < S < R`
 
 *R*\
@@ -60,23 +60,23 @@ Pour plus d’informations sur les membres moteurs, consultez [\<random>](../sta
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle `substract_with_carry_engine` est une version améliorée du [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Aucun de ces moteurs n’est aussi rapide ni ne produit des résultats d’aussi bonne qualité que [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
+Le modèle de classe `substract_with_carry_engine` est une amélioration par rapport à [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Aucun de ces moteurs n’est aussi rapide ni ne produit des résultats d’aussi bonne qualité que [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Ce moteur produit des valeurs d’un type intégral non signé, spécifié par l’utilisateur, à l’aide de la relation de périodicité ( *période*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, où `cy(i)` a la valeur `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`, sinon `0`, et `M` a la valeur `2`<sup>W</sup>. L’état du moteur est un indicateur de transport plus des valeurs *R* . Ces valeurs sont constituées des dernières valeurs *r* retournées si `operator()` a été appelé au moins une fois `N` *r* , sinon les valeurs qui ont été retournées et les dernières `R - N` valeurs de la valeur initiale.
+Ce moteur produit des valeurs d’un type intégral non signé spécifié par l’utilisateur à l’aide de la relation de périodicité ( *période*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, où `cy(i)` a la valeur `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`, sinon `0` et `M` a la valeur `2`<sup>W</sup>. L’état du moteur est un indicateur de transport plus des valeurs *R* . Ces valeurs sont constituées des dernières valeurs *r* retournées si `operator()` a été appelée au moins une fois *r* , sinon les valeurs `N` qui ont été retournées et les dernières valeurs de `R - N` de la valeur initiale.
 
 L'argument de modèle `UIntType` doit être assez volumineux pour contenir des valeurs jusqu'à `M - 1`.
 
 Bien que vous puissiez construire un générateur directement à partir de ce moteur, vous pouvez aussi utiliser l’un des typedefs prédéfinis suivants :
 
-`ranlux24_base`: Utilisé comme base pour `ranlux24`.
+`ranlux24_base` : utilisé comme base pour `ranlux24`.
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-`ranlux48_base`: Utilisé comme base pour `ranlux48`.
+`ranlux48_base` : utilisé comme base pour `ranlux48`.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
 Pour plus d’informations sur l’algorithme du moteur Substract With Carry, consultez l’article Wikipedia [Lagged Fibonacci generator](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 

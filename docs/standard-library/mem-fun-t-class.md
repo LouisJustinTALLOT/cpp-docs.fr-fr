@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun_t class
 ms.assetid: 242566d4-750c-4c87-9d63-2e2c9d19ca2a
-ms.openlocfilehash: 19ccd4835c4257a7f409bcf0f7bda1a898567458
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3c6606fe4d2df3b6068c3bb8194dc380344f7d97
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245084"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689382"
 ---
-# <a name="memfunt-class"></a>mem_fun_t, classe
+# <a name="mem_fun_t-class"></a>mem_fun_t, classe
 
-Classe d’adaptateur qui permet un `non_const` fonction membre qui n’accepte aucun argument d’être appelée comme objet de fonction unaire lors de l’initialisation avec un argument de pointeur. Dépréciées dans C ++ 11, supprimée dans C ++ 17.
+Classe d’adaptateur qui permet à une fonction membre `non_const` qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de pointeur. Déconseillé dans C++ 11, supprimé en C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,11 +30,11 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ### <a name="parameters"></a>Paramètres
 
-*_Pm*\
+*_Pm* \
 Pointeur vers la fonction membre de la classe `Type` à convertir en objet de fonction.
 
-*_Pleft*\
-L’objet qui le *_Pm* fonction membre est appelée sur.
+*_Pleft* \
+Objet sur lequel la fonction membre *_Pm* est appelée.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -42,7 +42,7 @@ Fonction unaire adaptable.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie de *_Pm*, qui doit être un pointeur vers une fonction membre de classe `Type`, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant (`_Pleft`->* `_Pm`) ().
+Le modèle de classe stocke une copie de *_Pm*, qui doit être un pointeur vers une fonction membre de la classe `Type`, dans un objet membre privé. Elle définit sa fonction membre `operator()` comme retournant (`_Pleft` ->*  `_Pm`) ().
 
 ## <a name="example"></a>Exemple
 

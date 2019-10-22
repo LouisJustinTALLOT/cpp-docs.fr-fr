@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: 4c35d34c9c51c8ebd6885b1a1cd07c28bcb61d1b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bdf9209b18328735f15393687528a40a94198730
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456751"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690038"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
-Définit le **tableau** de la classe de modèle de conteneur et plusieurs modèles de prise en charge.
+Définit le **tableau** de modèles de classe de conteneur et plusieurs modèles de prise en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<array>
 
 **Espace de noms :** std
 
 > [!NOTE]
-> La \<bibliothèque de > de tableau utilise `#include <initializer_list>` également l’instruction.
+> La bibliothèque de > \<array utilise également l’instruction `#include <initializer_list>`.
 
 ## <a name="members"></a>Membres
 

@@ -5,20 +5,20 @@ f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.openlocfilehash: f3b4896a3cb4774e46b36480dd9769fa131fc287
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: bce31811c98d351f3c561b3136d41f7ed23d13e0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957180"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687259"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-Définit la classe de modèle de conteneur `optional` et plusieurs modèles de prise en charge.
+Définit le modèle de classe de conteneur `optional` et plusieurs modèles de prise en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
-**En-tête:** \<> facultative
+**En-tête :** \<optional >
 
 **Espace de noms :** std
 
@@ -36,14 +36,14 @@ Définit la classe de modèle de conteneur `optional` et plusieurs modèles de p
 |[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Teste si l’objet situé à gauche est supérieur ou égal à l’objet situé à droite.|
 
 > [!NOTE]
-> Outre les comparaisons relationnelles, \<les opérateurs > facultatifs prennent également en charge la comparaison avec **nullopt** et. `T`
+> Outre les comparaisons relationnelles, les opérateurs \<optional > prennent également en charge la comparaison avec **nullopt** et `T`.
 
 ### <a name="functions"></a>Fonctions
 
 |||
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|Rend un objet facultatif.|
-|[swap](../standard-library/optional-functions.md#swap)|Échange les valeurs contenues de deux `optional` objets.|
+|[swap](../standard-library/optional-functions.md#swap)|Échange les valeurs contenues de deux objets `optional`.|
 
 ### <a name="classes-and-structs"></a>Classes et structs
 
@@ -58,7 +58,7 @@ Définit la classe de modèle de conteneur `optional` et plusieurs modèles de p
 
 |||
 |-|-|
-|[nullopt](../standard-library/optional-functions.md#nullopt)|Instance de `nullopt_t` pour les comparaisons.|
+|[nullopt](../standard-library/optional-functions.md#nullopt)|Une instance de `nullopt_t` pour les comparaisons.|
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 19fab66c3ffca428114e4586c4ad6d6de3fdbf83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 180b84c6ac7bef94a93f73c0bdefc6a6f95164f0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458466"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689127"
 ---
-# <a name="poissondistribution-class"></a>poisson_distribution, classe
+# <a name="poisson_distribution-class"></a>poisson_distribution, classe
 
 Génère une probabilité d'une variable aléatoire suivant une loi de Poisson.
 
@@ -67,12 +67,12 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType*\
-Le type de résultat entier, par défaut, est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*IntType* \
+Le type de résultat entier, par défaut, est **int**. Pour connaître les types possibles, consultez [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d'un type intégral spécifié par l'utilisateur avec une probabilité d'une variable aléatoire suivant une loi de Poisson. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur avec une distribution de poisson. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -81,7 +81,7 @@ La classe de modèle décrit une distribution qui produit des valeurs d'un type 
 
 La fonction de propriété `mean()` retourne la valeur du paramètre de distribution stocké *mean*.
 
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.
 
@@ -190,7 +190,7 @@ Distribution for 100 samples:
    17 :
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 
@@ -207,10 +207,10 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*interprété*\
+*moyenne* \
 Paramètre de distribution `mean`.
 
-*Parm*\
+*param* \
 Structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes

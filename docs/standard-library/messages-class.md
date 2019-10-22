@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449936"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687684"
 ---
 # <a name="messages-class"></a>messages, classe
 
-Cette classe de modèle décrit un objet pouvant servir de facette de paramètres régionaux pour récupérer des messages localisés à partir d'un catalogue de messages internationalisés pour des paramètres régionaux donnés.
+Le modèle de classe décrit un objet pouvant servir de facette de paramètres régionaux pour récupérer des messages localisés à partir d’un catalogue de messages internationalisés pour des paramètres régionaux donnés.
 
 Actuellement, lorsque la classe de messages est implémentée, il n'y a aucun message.
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType*\
+*CharType* \
 Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
 ## <a name="remarks"></a>Notes
@@ -77,7 +77,7 @@ Cette facette ouvre un catalogue de messages définis dans la classe de base mes
 |[get](#get)|Récupère le catalogue de messages.|
 |[open](#open)|Ouvre le catalogue de messages.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval*\
+*_Catval* \
 Catalogue à fermer.
 
 ### <a name="remarks"></a>Notes
@@ -122,7 +122,7 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval*\
+*_Catval* \
 Catalogue à fermer.
 
 ### <a name="remarks"></a>Notes
@@ -149,16 +149,16 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval*\
+*_Catval* \
 Valeur d’identification spécifiant le catalogue de messages dans lequel rechercher.
 
-*Écart*\
+*_* Définir \
 Premier identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*Corps*\
+*Corps* \
 Deuxième identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*_Dfault*\
+*_Dfault* \
 Chaîne à retourner en cas d’échec.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catname*\
+*_Catname* \
 Nom du catalogue dans lequel rechercher.
 
-*_Loc*\
+*_Loc* \
 Paramètres régionaux recherchés dans le catalogue.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -201,7 +201,7 @@ La fonction membre protégée tente d’ouvrir un catalogue de messages dont le 
 
 La valeur de retour doit être utilisée comme argument lors d’un appel ultérieur à [close](#close).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [open](#open), qui appelle `do_open`.
 
@@ -219,16 +219,16 @@ string_type get(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval*\
+*_Catval* \
 Valeur d’identification spécifiant le catalogue de messages dans lequel rechercher.
 
-*Écart*\
+*_* Définir \
 Premier identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*Corps*\
+*Corps* \
 Deuxième identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*_Dfault*\
+*_Dfault* \
 Chaîne à retourner en cas d’échec.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -254,21 +254,21 @@ protected: messages(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs*\
+*_Refs* \
 Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
-*_Locname*\
+*_Locname* \
 Nom des paramètres régionaux.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes:
+Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes :
 
-- 0 : La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
-- 1 : La durée de vie de l’objet doit être gérée manuellement.
+- 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \>1: Ces valeurs ne sont pas définies.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catname*\
+*_Catname* \
 Nom du catalogue dans lequel rechercher.
 
-*_Loc*\
+*_Loc* \
 Paramètres régionaux recherchés dans le catalogue.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -310,10 +310,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit une spécialisation de la classe de modèle [basic_string](../standard-library/basic-string-class.md) dont les objets peuvent stocker des copies des séquences de messages.
+Le type décrit une spécialisation du modèle de classe [basic_string](../standard-library/basic-string-class.md) dont les objets peuvent stocker des copies des séquences de messages.
 
 ## <a name="see-also"></a>Voir aussi
 
 [\<locale>](../standard-library/locale.md)\
 [messages_base, classe](../standard-library/messages-base-class.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

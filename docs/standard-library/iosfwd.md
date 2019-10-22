@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: e66c3e869f01775512419c877cd52c7f0e0fa2c4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8d257a57100615e592f6ebd62b5c91c6c59df408
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449081"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687866"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
-Déclare des références anticipées à plusieurs classes de modèles utilisées dans des iostreams. Toutes ces classes de modèle sont définies dans d’autres en-têtes standard. Vous incluez cet en-tête explicitement uniquement quand vous avez besoin de l’une de ses déclarations, mais pas de sa définition.
+Déclare des références anticipées à plusieurs modèles de classe utilisés dans iostreams. Tous ces modèles de classe sont définis dans d’autres en-têtes standard. Vous incluez cet en-tête explicitement uniquement quand vous avez besoin de l’une de ses déclarations, mais pas de sa définition.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,7 +62,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
 ```
 
-## <a name="forward-declarationstemplate-classes"></a>Déclarations anticipées/Classes de modèles
+## <a name="forward-declarations-and-class-templates"></a>Déclarations anticipées et modèles de classe
 
 ```cpp
 template <class _Statetype>
@@ -128,7 +128,7 @@ class basic_fstream;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream, programmation](../standard-library/iostream-programming.md)\
 [iostreams, conventions](../standard-library/iostreams-conventions.md)

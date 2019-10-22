@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: 20967204d1df40d2b8dbb21c499e45404f44a4ae
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bcf587c5029fdf0b61da45dbd4ee9250f4c3a43b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453808"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687787"
 ---
-# <a name="lognormaldistribution-class"></a>lognormal_distribution, classe
+# <a name="lognormal_distribution-class"></a>lognormal_distribution, classe
 
 Génère une distribution suivant une loi log-normale.
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType*\
-Le type de résultat à virgule flottante, par défaut, est **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* \
+Le type de résultat à virgule flottante, par défaut, est **double**. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la distribution normale du journal. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la distribution normale du journal. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -82,7 +82,7 @@ La classe de modèle décrit une distribution qui produit des valeurs d’un typ
 
 Les fonctions de propriété `m()` et `s()` retournent les valeurs des paramètres de distribution stockés *m* et *s*, respectivement.
 
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.
 
@@ -94,7 +94,7 @@ Pour plus d’informations sur les classes de distribution et leurs membres, con
 
 Pour plus d’informations sur la distribution suivant une loi log-normale, consultez l’article de Wolfram MathWorld [LogNormal Distribution](https://go.microsoft.com/fwlink/p/?linkid=400917).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // compile with: /EHsc /W4
@@ -178,7 +178,7 @@ Distribution for 10 samples:
     10: 5.4406507912
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 
@@ -195,13 +195,13 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*lecteur*\
+*m* \
 Paramètre de distribution `m`.
 
-*x*\
+*s* \
 Paramètre de distribution `s`.
 
-*Parm*\
+*param* \
 Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -210,7 +210,7 @@ Structure `param_type` utilisée pour construire la distribution.
 
 Le premier constructeur construit un objet dont la valeur `m` stockée contient la valeur *m* et dont la valeur `s` stockée contient la valeur *s*.
 
-Le second constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
+Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
 ## <a name="param_type"></a>  lognormal_distribution::param_type
 
@@ -230,13 +230,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*lecteur*\
+*m* \
 Paramètre de distribution `m`.
 
-*x*\
+*s* \
 Paramètre de distribution `s`.
 
-*Oui*\
+\ *droit*
 Structure `param_type` utilisée pour comparer.
 
 ### <a name="remarks"></a>Notes

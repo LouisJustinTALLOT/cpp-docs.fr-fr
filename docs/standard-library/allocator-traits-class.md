@@ -40,16 +40,16 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 795fd17c2c5b3c7fa92e62088b8f2fd126094df9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 470b3086b4bdfa776558122eda9e496fa6c4bcdc
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245889"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690075"
 ---
-# <a name="allocatortraits-class"></a>allocator_traits, classe
+# <a name="allocator_traits-class"></a>allocator_traits, classe
 
-La classe de modèle décrit un objet qui complète un *type d’allocateur*. Un type d’allocateur est tout type qui décrit un objet allocateur utilisé pour la gestion de stockage alloué. Plus précisément, pour tout type d’allocateur `Alloc`, vous pouvez utiliser `allocator_traits<Alloc>` afin de déterminer toutes les informations nécessaires pour un conteneur compatible avec l’allocateur. Pour plus d’informations, consultez [allocator, classe](../standard-library/allocator-class.md).
+Le modèle de classe décrit un objet qui complète un *type d’allocateur*. Un type d’allocateur est tout type qui décrit un objet allocateur utilisé pour la gestion de stockage alloué. Plus précisément, pour tout type d’allocateur `Alloc`, vous pouvez utiliser `allocator_traits<Alloc>` afin de déterminer toutes les informations nécessaires pour un conteneur compatible avec l’allocateur. Pour plus d’informations, consultez [allocator, classe](../standard-library/allocator-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -89,7 +89,7 @@ Les méthodes statiques suivantes appellent la méthode correspondante sur un pa
 |[max_size](#max_size)|Méthode statique qui utilise un allocateur spécifié pour déterminer le nombre maximal d’objets pouvant être alloués.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Méthode statique qui appelle `select_on_container_copy_construction` sur l’allocateur spécifié.|
 
-### <a name="allocate"></a> allouer
+### <a name="allocate"></a>lui
 
 Méthode statique qui alloue de la mémoire en utilisant le paramètre d’allocateur donné.
 
@@ -102,13 +102,13 @@ static pointer allocate(Alloc& al, size_type count,
 
 #### <a name="parameters"></a>Paramètres
 
-*Al*\
+*al* \
 Objet allocateur.
 
-*Nombre*\
+*nombre* \
 Nombre d’éléments à allouer.
 
-*indicateur*\
+*indicateur* \
 `const_pointer` pouvant aider l’objet allocateur à satisfaire la demande de stockage en recherchant l’adresse d’un objet alloué avant la demande. Un pointeur null est traité comme s’il n’y avait aucun argument hint.
 
 #### <a name="return-value"></a>Valeur de retour
@@ -119,7 +119,7 @@ La première méthode statique retourne `al.allocate(count)`.
 
 La seconde méthode retourne `al.allocate(count, hint)`, si cette expression est correctement construite ; sinon, `al.allocate(count)`.
 
-### <a name="construct"></a> Construction
+### <a name="construct"></a>composer
 
 Méthode statique qui utilise un allocateur spécifié pour construire un objet.
 
@@ -130,20 +130,20 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 #### <a name="parameters"></a>Paramètres
 
-*Al*\
+*al* \
 Objet allocateur.
 
-*PTR*\
+\ *ptr*
 Pointeur vers l’emplacement où l’objet doit être construit.
 
-*args*\
+*arguments* \
 Liste d’arguments passée au constructeur d’objet.
 
 #### <a name="remarks"></a>Notes
 
 La fonction membre statique appelle `al.construct(ptr, args...)`, si cette expression est correctement construite ; sinon, elle retourne la valeur `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.
 
-### <a name="deallocate"></a> DEALLOCATE
+### <a name="deallocate"></a>libérer
 
 Méthode statique qui utilise un allocateur spécifié pour désallouer un nombre spécifié d’objets.
 
@@ -155,14 +155,14 @@ static void deallocate(Alloc al,
 
 #### <a name="parameters"></a>Paramètres
 
-*Al*\
+*al* \
 Objet allocateur.
 
-*PTR*\
+\ *ptr*
 Pointeur vers l’emplacement de départ des objets à libérer.
 
-*Nombre*\
-Nombre d’objets à désallouer.
+*nombre* \
+Nombre d’objets à libérer.
 
 #### <a name="remarks"></a>Notes
 
@@ -170,7 +170,7 @@ Cette méthode appelle `al.deallocate(ptr, count)`.
 
 Cette méthode ne lève aucune exception.
 
-### <a name="destroy"></a> détruire
+### <a name="destroy"></a>suppression
 
 Méthode statique qui utilise un allocateur spécifié pour appeler le destructeur sur un objet sans désallouer sa mémoire.
 
@@ -181,17 +181,17 @@ template <class Uty>
 
 #### <a name="parameters"></a>Paramètres
 
-*Al*\
+*al* \
 Objet allocateur.
 
-*PTR*\
+\ *ptr*
 Pointeur vers l’emplacement de l’objet.
 
 #### <a name="remarks"></a>Notes
 
 Cette méthode appelle `al.destroy(ptr)`, si cette expression est correctement construite ; sinon, elle retourne la valeur `ptr->~Uty()`.
 
-### <a name="max_size"></a> max_size
+### <a name="max_size"></a>max_size
 
 Méthode statique qui utilise un allocateur spécifié pour déterminer le nombre maximal d’objets pouvant être alloués.
 
@@ -201,14 +201,14 @@ static size_type max_size(const Alloc& al);
 
 #### <a name="parameters"></a>Paramètres
 
-*Al*\
+*al* \
 Objet allocateur.
 
 #### <a name="remarks"></a>Notes
 
 Cette méthode retourne `al.max_size()`, si cette expression est correctement construite ; sinon, `numeric_limits<size_type>::max()`.
 
-### <a name="select_on_container_copy_construction"></a> select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
 
 Méthode statique qui appelle `select_on_container_copy_construction` sur l’allocateur spécifié.
 
@@ -218,12 +218,12 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 #### <a name="parameters"></a>Paramètres
 
-*Al*\
+*al* \
 Objet allocateur.
 
 #### <a name="return-value"></a>Valeur de retour
 
-Cette méthode retourne `al.select_on_container_copy_construction()`, si ce type est correctement construite ; sinon, elle retourne *al*.
+Cette méthode retourne `al.select_on_container_copy_construction()`, si ce type est correctement construit ; Sinon, elle retourne *al*.
 
 #### <a name="remarks"></a>Notes
 
