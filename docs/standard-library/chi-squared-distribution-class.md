@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 2eac3324516cf88a114064cf0145593c7bf4806b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f7f6f038c0e8bc922874388065ce06d76854bc1b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459466"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688306"
 ---
-# <a name="chisquareddistribution-class"></a>chi_squared_distribution, classe
+# <a name="chi_squared_distribution-class"></a>chi_squared_distribution, classe
 
 Génère une distribution suivant la loi unilatérale du Khi-deux.
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType*\
-Le type de résultat à virgule flottante, par défaut, est **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* \
+Le type de résultat à virgule flottante, par défaut, est **double**. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*GÉNÉRATEUR URNG*\
-Moteur de générateur de nombres aléatoires uniformes. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*Générateur urng* \
+Moteur de générateur de nombres aléatoires uniformes. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la loi du Khi-deux. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la loi du Khi-deux. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -83,7 +83,7 @@ La classe de modèle décrit une distribution qui produit des valeurs d’un typ
 
 La fonction de propriété `n()` retourne la valeur du paramètre de distribution stocké `n`.
 
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.
 
@@ -218,7 +218,7 @@ Distribution for 10 samples:
     10: 1054.7051509381
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 
@@ -238,7 +238,7 @@ explicit chi_squared_distribution(const param_type& parm);
 *n*\
 Paramètre de distribution `n`.
 
-*Parm*\
+*param* \
 Structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -269,7 +269,7 @@ struct param_type {
 *n*\
 Paramètre de distribution `n`.
 
-*Oui*\
+\ *droit*
 Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes

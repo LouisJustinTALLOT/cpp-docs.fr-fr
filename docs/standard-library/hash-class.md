@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::hash [C++]
 - std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
-ms.openlocfilehash: 61446ab6b79496024d44a99fcf5f500bb871bb80
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e30810412db29473597da144d2dd42bdb8184f7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448816"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688003"
 ---
 # <a name="hash-class"></a>hash, classe
 
@@ -45,7 +45,7 @@ struct hash {
 
 ## <a name="remarks"></a>Notes
 
-L’objet de fonction définit une fonction de hachage appropriée pour mapper des valeurs de type *Ty* à une distribution de valeurs d’index. Le membre `operator()` retourne un code de hachage pour *val*, pouvant être utilisé avec les classes de modèle `unordered_map`, `unordered_multimap`, `unordered_set` et `unordered_multiset`. La bibliothèque standard fournit des spécialisations pour les types de base: *Ty* peut être n’importe quel type scalaire, y compris les types pointeur et les types énumération. De plus, il existe des spécialisations pour les types de bibliothèque `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant` et `vector<bool>`.
+L’objet de fonction définit une fonction de hachage appropriée pour mapper des valeurs de type *Ty* à une distribution de valeurs d’index. Le membre `operator()` retourne un code de hachage pour *Val*, approprié pour une utilisation avec les modèles de classe `unordered_map`, `unordered_multimap`, `unordered_set` et `unordered_multiset`. La bibliothèque standard fournit des spécialisations de types de base : *Ty* peut être tout type scalaire, notamment les types pointeur et les types énumération. De plus, il existe des spécialisations pour les types de bibliothèque `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant` et `vector<bool>`.
 
 ## <a name="example"></a>Exemple
 
@@ -70,7 +70,7 @@ int main()
 3
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<functional>
 

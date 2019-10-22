@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 11e705629675903803f7230d540417846417cc77
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d8e71b351d88a1c4dee61f88c18aec513d776cd3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456958"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689253"
 ---
-# <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution, classe
+# <a name="negative_binomial_distribution-class"></a>negative_binomial_distribution, classe
 
 Génère une distribution négative binomiale.
 
@@ -71,21 +71,21 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType*\
-Le type de résultat entier, par défaut, est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*IntType* \
+Le type de résultat entier, par défaut, est **int**. Pour connaître les types possibles, consultez [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou un type **int** si aucun n’est fourni, distribuées selon la fonction de probabilité discrète de distribution négative binomiale. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou un type **int** si aucun n’est fourni, distribuées selon la fonction de probabilité discrète de distribution négative binomiale. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-Les membres `k()` de propriété `p()` et retournent les valeurs de paramètre de distribution actuellement stockées, *k* et *p* , respectivement.
+Les membres de propriété `k()` et `p()` retournent les valeurs de paramètres de distribution actuellement stockées, *k* et *p* , respectivement.
 
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.
 
@@ -215,7 +215,7 @@ Histogram for 100 samples:
     69 ::::
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 
@@ -232,13 +232,13 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*DK*\
+*k* \
 Paramètre de distribution `k`.
 
-*p*\
+\ *p*
 Paramètre de distribution `p`.
 
-*Parm*\
+*param* \
 Structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -253,19 +253,19 @@ Le deuxième constructeur construit un objet dont les paramètres stockés sont 
 
 Stocke les paramètres de la distribution.
 
-struct param_type { typedef negative_binomial_distribution`<`result_type> distribution_type; param_type(result_type k = 1, double p = 0.5); result_type k() const; double p() const;
+struct param_type {typedef negative_binomial_distribution `<`result_type > distribution_type ; param_type (result_type k = 1, double p = 0,5); result_type k () const ; double p () const ;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Paramètres
 
-*DK*\
+*k* \
 Paramètre de distribution `k`.
 
-*p*\
+\ *p*
 Paramètre de distribution `p`.
 
-*Oui*\
+\ *droit*
 Structure `param_type` utilisée pour comparer.
 
 ### <a name="remarks"></a>Notes

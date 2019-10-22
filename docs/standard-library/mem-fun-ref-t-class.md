@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun_ref_t class
 ms.assetid: 7dadcac3-8d33-4e4b-a792-81bd53d3df39
-ms.openlocfilehash: 0879736863a9b8052d19cc86dc5636ba14bcf993
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d8f5ef05d1bdeec694cdf22d7e7a163478127dfc
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240609"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687757"
 ---
-# <a name="memfunreft-class"></a>mem_fun_ref_t, classe
+# <a name="mem_fun_ref_t-class"></a>mem_fun_ref_t, classe
 
-Classe d’adaptateur qui permet un `non_const` fonction membre qui n’accepte aucun argument d’être appelée comme objet de fonction unaire lors de l’initialisation avec un argument de référence. Dépréciées dans C ++ 11, supprimée dans C ++ 17.
+Classe d’adaptateur qui permet à une fonction membre `non_const` qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de référence. Déconseillé dans C++ 11, supprimé en C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,11 +31,11 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ### <a name="parameters"></a>Paramètres
 
-*_Pm*\
+*_Pm* \
 Pointeur vers la fonction membre de la classe `Type` à convertir en objet de fonction.
 
-*Gauche*\
-L’objet qui le *_Pm* fonction membre est appelée sur.
+\ *gauche*
+Objet sur lequel la fonction membre *_Pm* est appelée.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -43,8 +43,8 @@ Fonction unaire adaptable.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie de *_Pm*, qui doit être un pointeur vers une fonction membre de classe `Type`, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant (**gauche**. * `_Pm`) ().
+Le modèle de classe stocke une copie de *_Pm*, qui doit être un pointeur vers une fonction membre de la classe `Type`, dans un objet membre privé. Elle définit sa fonction membre `operator()` comme retournant (**Left**. * `_Pm`) ().
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Le constructeur de `mem_fun_ref_t` n’est généralement pas utilisé directement ; la fonction d’assistance `mem_fun_ref` est utilisée pour adapter les fonctions membres. Pour obtenir un exemple d’utilisation des adaptateurs de fonction membre, consultez [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).

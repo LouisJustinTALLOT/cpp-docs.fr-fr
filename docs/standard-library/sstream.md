@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: 8284e56e8afb1e5518cbcbb772079b4f19d57b18
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3f1fb202692d09fa87eb775677e46e1c3f36dbad
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451732"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688947"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
-Définit plusieurs classes de modèle qui prennent en charge les opérations iostreams sur les séquences stockées dans un objet tableau alloué. Ces séquences sont facilement converties vers et depuis les objets de la classe de modèle [basic_string](../standard-library/basic-string-class.md).
+Définit plusieurs modèles de classe qui prennent en charge les opérations iostreams sur les séquences stockées dans un objet de tableau alloué. Ces séquences sont facilement converties vers et à partir des objets du modèle de classe [basic_string](../standard-library/basic-string-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -100,14 +100,14 @@ Les objets de type `char *` peuvent utiliser la fonctionnalité de [ \<strstream
 
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|Class|Description|
 |-|-|
 |[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Décrit une mémoire tampon de flux qui contrôle la transmission d'éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`, vers et à partir d'une séquence d'éléments stockés dans un objet de tableau.|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Décrit un objet qui contrôle l’extraction d’éléments et d’objets encodés à partir d’une mémoire tampon de flux de `Alloc`classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**elem**, **TR**, `Elem`>, avec des éléments de type, dont le caractère les caractéristiques sont déterminées par `Tr`la classe, et dont les éléments sont alloués par un `Alloc`allocateur de classe.|
-|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Décrit un objet qui contrôle l’insertion d’éléments et d’objets encodés dans une mémoire tampon de flux de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**elem**, **TR**, `Alloc`>, avec des éléments de type `Elem`, dont les caractéristiques sont déterminés par la classe `Tr`, et dont les éléments sont alloués par un allocateur de classe `Alloc`.|
-|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Décrit un objet qui contrôle l’insertion et l’extraction d’éléments et d’objets encodés à l’aide d’une mémoire tampon de `Alloc`flux de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**elem**, `Elem` **TR**, >, avec des éléments de type, dont les caractéristiques de caractère sont déterminées `Tr`par la classe, et dont les éléments sont alloués par `Alloc`un allocateur de classe.|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Décrit un objet qui contrôle l’extraction d’éléments et d’objets encodés à partir d’une mémoire tampon de flux de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**elem**, **TR**, `Alloc` >, avec des éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`, et dont les éléments sont alloués par un allocateur de la classe `Alloc`.|
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Décrit un objet qui contrôle l’insertion d’éléments et d’objets encodés dans une mémoire tampon de flux de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**elem**, **TR**, `Alloc` >, avec des éléments de type `Elem`, dont les caractéristiques sont déterminées par l’élément la classe `Tr`, et dont les éléments sont alloués par un allocateur de la classe `Alloc`.|
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Décrit un objet qui contrôle l’insertion et l’extraction d’éléments et d’objets encodés à l’aide d’une mémoire tampon de flux de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**elem**, **TR**, `Alloc` >, avec des éléments de type `Elem`, dont les caractéristiques sont déterminé par la classe `Tr`, et dont les éléments sont alloués par un allocateur de la classe `Alloc`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 - **En-tête :** \<sstream>
 
@@ -115,7 +115,7 @@ Les objets de type `char *` peuvent utiliser la fonctionnalité de [ \<strstream
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream, programmation](../standard-library/iostream-programming.md)\
 [iostreams, conventions](../standard-library/iostreams-conventions.md)

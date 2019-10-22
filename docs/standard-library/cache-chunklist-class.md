@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 73730e0a4a22e7f5e63809cc2c1603cbda1ab596
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 035e5153b4e4c84743a64bcc9cec24920a6a0336
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449667"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688367"
 ---
-# <a name="cachechunklist-class"></a>cache_chunklist, classe
+# <a name="cache_chunklist-class"></a>cache_chunklist, classe
 
 Définit un [allocateur de blocs](../standard-library/allocators-header.md) qui alloue et désalloue des blocs de mémoire de taille unique.
 
@@ -36,9 +36,9 @@ class cache_chunklist
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle utilise **operator new** pour allouer des blocs de mémoire brute, sous-allouer des blocs pour allouer du stockage pour un bloc de mémoire si nécessaire. elle stocke les blocs de mémoire désalloués dans une liste de libération distincte pour chaque segment, et utilise l' **opérateur delete** pour libérer un bloc quand aucun de ses blocs de mémoire n’est utilisé.
+Ce modèle de classe utilise **operator new** pour allouer des blocs de mémoire brute, sous-allouer des blocs pour allouer du stockage pour un bloc de mémoire si nécessaire. elle stocke les blocs de mémoire désalloués dans une liste de libération distincte pour chaque segment, et utilise l' **opérateur delete** pour libérer un bloc quand aucun de ses blocs de mémoire n’est utilisé.
 
-Chaque bloc de mémoire contient des octets *SZ* de mémoire utilisable et un pointeur vers le segment auquel il appartient. Chaque bloc contient `Nelts` des blocs de mémoire, trois pointeurs, un entier et les données que l' **opérateur New** et l' **opérateur delete** requièrent.
+Chaque bloc de mémoire contient des octets *SZ* de mémoire utilisable et un pointeur vers le segment auquel il appartient. Chaque bloc contient des blocs de mémoire `Nelts`, trois pointeurs, un entier et les données que l' **opérateur New** et l' **opérateur delete** requièrent.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -53,7 +53,7 @@ Chaque bloc de mémoire contient des octets *SZ* de mémoire utilisable et un po
 |[allocate](#allocate)|Alloue un bloc de mémoire.|
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<allocators>
 

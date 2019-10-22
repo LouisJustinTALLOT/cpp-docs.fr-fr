@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun1_t class
 ms.assetid: 01a8c2c2-b2f7-4e3f-869c-5b5b9f06ea54
-ms.openlocfilehash: 822de97849750a72948137ba8fe23beab8554ff5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 00d9322a8f0530da2e48b3f16fb52c00f9d1b075
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245096"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687734"
 ---
-# <a name="memfun1t-class"></a>mem_fun1_t, classe
+# <a name="mem_fun1_t-class"></a>mem_fun1_t, classe
 
-Classe d’adaptateur qui permet un `non_const` fonction membre qui accepte un seul argument d’être appelée comme objet de fonction binaire lors de l’initialisation avec un argument de pointeur. Dépréciées dans C ++ 11, supprimée dans C ++ 17.
+Classe d’adaptateur qui permet à une fonction membre `non_const` qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de pointeur. Déconseillé dans C++ 11, supprimé en C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,14 +33,14 @@ class mem_fun1_t : public binary_function<Type *, Arg, Result> {
 
 ### <a name="parameters"></a>Paramètres
 
-*_Pm*\
+*_Pm* \
 Pointeur vers la fonction membre de la classe `Type` à convertir en objet de fonction.
 
-*_Pleft*\
-L’objet qui le *_Pm* fonction membre est appelée sur.
+*_Pleft* \
+Objet sur lequel la fonction membre *_Pm* est appelée.
 
-*Oui*\
-L’argument donné à *_Pm*.
+\ *droit*
+Argument qui est donné à *_Pm*.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -48,7 +48,7 @@ Fonction binaire adaptable.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie de *_Pm*, qui doit être un pointeur vers une fonction membre de classe `Type`, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant ( **_Pleft** -> \* `_Pm`) (**droit**).
+Le modèle de classe stocke une copie de *_Pm*, qui doit être un pointeur vers une fonction membre de la classe `Type`, dans un objet membre privé. Elle définit sa fonction membre `operator()` comme retournant ( **_Pleft** -> \* `_Pm`) (**Right**).
 
 ## <a name="example"></a>Exemple
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: f23b9528cf9a921e1d005756aa82751f3fdb745e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fac75d90c4e40a22e8ceae974c3f49c3d50a1d3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449358"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688190"
 ---
-# <a name="ctypebase-class"></a>ctype_base, classe
+# <a name="ctype_base-class"></a>ctype_base, classe
 
-La classe sert de classe de base pour les facettes de la classe de modèle [ctype](../standard-library/ctype-class.md). Classe de base de la classe ctype utilisée pour définir des types énumération utilisés pour classifier ou tester les caractères, individuellement ou dans des plages entières.
+La classe sert de classe de base pour les facettes du modèle de classe [CType](../standard-library/ctype-class.md). Classe de base de la classe ctype utilisée pour définir des types énumération utilisés pour classifier ou tester les caractères, individuellement ou dans des plages entières.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -69,9 +69,9 @@ Elle définit un masque d’énumération. Chaque constante d’énumération ca
 
 - **graph** (fonction [isgraph](../standard-library/locale-functions.md#isgraph))
 
-Vous pouvez caractériser une combinaison de classifications en reliant ces constantes par une opération OR. En particulier, il est toujours vrai que **alnum** = = (  &#124; **digit** \) alpha et **Graph** \= \= \( **alnum** &#124; **punct**).
+Vous pouvez caractériser une combinaison de classifications en reliant ces constantes par une opération OR. En particulier, il est toujours vrai que **alnum** = = ( &#124; **chiffre** alpha \) et **graphique** \= \= \( **alnum** &#124; **punct**).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -79,4 +79,4 @@ Vous pouvez caractériser une combinaison de classifications en reliant ces cons
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

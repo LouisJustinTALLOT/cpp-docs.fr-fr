@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 065c0eaf936a438f48dbb8aa28704e0f53926a03
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b0ec7d4d3dbe5ef1334bf3c394819a4f5235c28c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451137"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688984"
 ---
-# <a name="rtsalloc-class"></a>rts_alloc, classe
+# <a name="rts_alloc-class"></a>rts_alloc, classe
 
-La classe de modèle rts_alloc décrit un [filtre](../standard-library/allocators-header.md) qui contient un tableau d’instances de cache et détermine l’instance à utiliser pour l’allocation et la libération au moment de l’exécution plutôt qu’au moment de la compilation.
+Le modèle de classe rts_alloc décrit un [filtre](../standard-library/allocators-header.md) qui contient un tableau d’instances de cache et détermine l’instance à utiliser pour l’allocation et la désallocation au moment de l’exécution plutôt qu’au moment de la compilation.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,7 +38,7 @@ class rts_alloc
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle contient plusieurs instances d'allocateur de bloc et détermine quelle instance utiliser pour l'allocation ou la désallocation au moment de l'exécution plutôt qu'au moment de la compilation. Elle est utilisée avec les compilateurs qui ne peuvent pas compiler la reliaison.
+Ce modèle de classe contient plusieurs instances d’allocateur de bloc et détermine l’instance à utiliser pour l’allocation ou la désallocation au moment de l’exécution plutôt qu’au moment de la compilation. Elle est utilisée avec les compilateurs qui ne peuvent pas compiler la reliaison.
 
 ### <a name="member-functions"></a>Fonctions membres
 
@@ -48,7 +48,7 @@ Cette classe de modèle contient plusieurs instances d'allocateur de bloc et dé
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 |[equals](#equals)|Compare l'égalité de deux caches.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<allocators>
 
@@ -74,7 +74,7 @@ Un pointeur vers l’objet alloué.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne `caches[_IDX].allocate(count)`, où l’index `_IDX` est déterminé par le *nombre*de tailles de bloc demandé, ou, si *Count* est trop grand, `operator new(count)`il retourne. `cache`, qui représente l’objet cache.
+La fonction membre retourne `caches[_IDX].allocate(count)`, où l’index `_IDX` est déterminé par le *nombre*de tailles de bloc demandé, ou, si *Count* est trop grand, elle retourne `operator new(count)`. `cache`, qui représente l’objet cache.
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -93,7 +93,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle `caches[_IDX].deallocate(ptr, count)`, où l’index `_IDX` est déterminé par le *nombre*de tailles de bloc demandé, ou, si *Count* est trop grand, `operator delete(ptr)`il retourne.
+La fonction membre appelle `caches[_IDX].deallocate(ptr, count)`, où l’index `_IDX` est déterminé par le *nombre*de tailles de bloc demandé, ou, si *Count* est trop grand, elle retourne `operator delete(ptr)`.
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -112,7 +112,7 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="remarks"></a>Notes
 
-**true** si le résultat de `caches[0].equals(other.caches[0])`; sinon, **false**. `caches` représente le tableau d’objets cache.
+**true** si le résultat de `caches[0].equals(other.caches[0])` ; Sinon, **false**. `caches` représente le tableau d’objets cache.
 
 ## <a name="see-also"></a>Voir aussi
 

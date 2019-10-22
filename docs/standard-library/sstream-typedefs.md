@@ -11,12 +11,12 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-ms.openlocfilehash: 27aed1d92b4893e054d7416dc5933ab23b843297
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e8f5a20b976d196090ac9300510044e84470c462
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451825"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686279"
 ---
 # <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt;, typedefs
 
@@ -36,7 +36,7 @@ typedef basic_istringstream<char> istringstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_istringstream](../standard-library/basic-istringstream-class.md), spécialisé pour les éléments de type **char**.
+Le type est un synonyme du modèle de classe [basic_istringstream](../standard-library/basic-istringstream-class.md), spécialisé pour les éléments de type **char**.
 
 ## <a name="ostringstream"></a>  ostringstream
 
@@ -48,7 +48,7 @@ typedef basic_ostringstream<char> ostringstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_ostringstream](../standard-library/basic-ostringstream-class.md), spécialisé pour les éléments de type **char**.
+Le type est un synonyme du modèle de classe [basic_ostringstream](../standard-library/basic-ostringstream-class.md), spécialisé pour les éléments de type **char**.
 
 ## <a name="stringbuf"></a>  stringbuf
 
@@ -60,7 +60,7 @@ typedef basic_stringbuf<char> stringbuf;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_stringbuf](../standard-library/basic-stringbuf-class.md), spécialisé pour les éléments de type **char**.
+Le type est un synonyme du modèle de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md), spécialisé pour les éléments de type **char**.
 
 ## <a name="stringstream"></a>  stringstream
 
@@ -72,7 +72,7 @@ typedef basic_stringstream<char> stringstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_stringstream](../standard-library/basic-stringstream-class.md), spécialisé pour les éléments de type **char**.
+Le type est un synonyme du modèle de classe [basic_stringstream](../standard-library/basic-stringstream-class.md), spécialisé pour les éléments de type **char**.
 
 ## <a name="wistringstream"></a>  wistringstream
 
@@ -84,7 +84,7 @@ typedef basic_istringstream<wchar_t> wistringstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_istringstream](../standard-library/basic-istringstream-class.md), spécialisé pour les éléments de type **wchar_t**.
+Le type est un synonyme du modèle de classe [basic_istringstream](../standard-library/basic-istringstream-class.md), spécialisé pour les éléments de type **wchar_t**.
 
 ## <a name="wostringstream"></a>  wostringstream
 
@@ -96,7 +96,7 @@ typedef basic_ostringstream<wchar_t> wostringstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_ostringstream](../standard-library/basic-ostringstream-class.md), spécialisé pour les éléments de type **wchar_t**.
+Le type est un synonyme du modèle de classe [basic_ostringstream](../standard-library/basic-ostringstream-class.md), spécialisé pour les éléments de type **wchar_t**.
 
 ## <a name="wstringbuf"></a>  wstringbuf
 
@@ -108,7 +108,7 @@ typedef basic_stringbuf<wchar_t> wstringbuf;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_stringbuf](../standard-library/basic-stringbuf-class.md), spécialisé pour les éléments de type **wchar_t**.
+Le type est un synonyme du modèle de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md), spécialisé pour les éléments de type **wchar_t**.
 
 ## <a name="wstringstream"></a>  wstringstream
 
@@ -120,7 +120,7 @@ typedef basic_stringstream<wchar_t> wstringstream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la classe de modèle [basic_stringstream](../standard-library/basic-stringstream-class.md), spécialisé pour les éléments de type **wchar_t**.
+Le type est un synonyme du modèle de classe [basic_stringstream](../standard-library/basic-stringstream-class.md), spécialisé pour les éléments de type **wchar_t**.
 
 ## <a name="see-also"></a>Voir aussi
 

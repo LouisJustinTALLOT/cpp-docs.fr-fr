@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: ed5380e36e71d7366d2b4b84528bbd35b87cc775
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 79613c76b3ea6dc15643e83a15d5bd6d90b60c6a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451865"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687704"
 ---
-# <a name="mersennetwisterengine-class"></a>mersenne_twister_engine, classe
+# <a name="mersenne_twister_engine-class"></a>mersenne_twister_engine, classe
 
 Génère une séquence aléatoire d'entiers de haute qualité selon l'algorithme twister de Mersenne.
 
@@ -29,31 +29,31 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Paramètres
 
-*UIntType*\
-Type des résultats entiers non signés. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*UIntType* \
+Type des résultats entiers non signés. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*S*\
+*W* \
 **Taille de mot**. Taille de chaque mot, en bits, de la séquence d'état. **Condition préalable** : `2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N*\
+*N* \
 **Taille de l’état**. Nombre d'éléments (valeurs) dans la séquence d'état.
 
-*LECTEUR*\
+*M* \
 **Taille de décalage**. Nombre d'éléments à ignorer pendant chaque torsion. **Condition préalable** : `0 < M ≤ N`
 
 *R*\
 **Bits du masque**. **Condition préalable** : `R ≤ W`
 
-*UN*\
+*@No__t_1*
 **Masque XOR**. **Condition préalable** : `A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *L*\
+*U*, *S*, *T*, *L* \
 **Paramètres de décalage d’altération**. Utilisés comme valeurs de décalage pendant le brouillage (altération). Condition préalable :`U,S,T,L ≤ W`
 
-*D*, *B*, *C*\
+*D*, *B*, *C* \
 **Paramètres de masque de bits d’altération**. Utilisés comme valeurs de masque de bits pendant le brouillage (altération). Condition préalable :`D,B,C ≤ (1u<<W) - 1u`
 
-*FA*\
+@No__t_1 *F*
 **Multiplicateur d’initialisation**. Aide à l'initialisation de la séquence. Condition préalable :`F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Membres
@@ -69,7 +69,7 @@ Pour plus d’informations sur les membres moteurs, consultez [\<random>](../sta
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle décrit un moteur de nombres aléatoires, avec retour de valeurs sur l’intervalle fermé [ `0`, `2`<sup>W</sup> - `1`]. Il contient une valeur intégrale élevée avec `W * (N - 1) + R` bits. Il extrait *W* bits à la fois de cette valeur élevée et, quand il a utilisé tous les bits, il déforme la valeur élevée en décalant et en combinant les bits afin qu’il dispose d’un nouvel ensemble de bits à extraire. L’état du moteur est les valeurs `N` de dernier `W`bit utilisées si `operator()` a été appelé au moins *N* fois, sinon les `M` `W`valeurs de bits utilisées et les dernières `N - M` valeurs de initiales.
+Ce modèle de classe décrit un moteur de nombres aléatoires, en retournant des valeurs sur l’intervalle fermé [`0`, `2`<sup>W</sup>  -  `1`]. Il contient une valeur intégrale élevée avec `W * (N - 1) + R` bits. Il extrait *W* bits à la fois de cette valeur élevée et, quand il a utilisé tous les bits, il déforme la valeur élevée en décalant et en combinant les bits afin qu’il dispose d’un nouvel ensemble de bits à extraire. L’état du moteur est le dernier `N` valeurs `W` bits utilisées si `operator()` a été appelé au moins *N* fois, sinon les valeurs `M` `W` bits qui ont été utilisées et les dernières valeurs `N - M` de la valeur initiale.
 
 Le générateur déforme la valeur élevée qu’il contient à l’aide d’un registre de décalage de commentaires généralisés, défini par les valeurs de décalage *N* et *M*, une valeur de torsion *R*et un masque XOR conditionnel *a*. En outre, les bits du Registre à décalage brut sont brouillés (tempérés) selon une matrice de brouillage des bits définie par les valeurs *U*, *D*, *S*, *B*, *T*, *C*et *L*.
 
@@ -77,7 +77,7 @@ L’argument de modèle `UIntType` doit être assez volumineux pour contenir des
 
 Bien que vous puissiez construire un générateur directement à partir de ce moteur, nous vous conseillons d’utiliser l’un des typedefs prédéfinis suivants :
 
-`mt19937`: Moteur twister Mersenne 32 bits (Matsumoto et Nishimura, 1998).
+`mt19937` : moteur twister Mersenne 32 bits (Matsumoto et Nishimura, 1998).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
@@ -88,7 +88,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;
 ```
 
-`mt19937_64`: Moteur twister Mersenne 64 bits (Matsumoto et Nishimura, 2000).
+`mt19937_64` : moteur twister Mersenne 64 bits (Matsumoto et Nishimura, 2000).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
@@ -105,7 +105,7 @@ Pour plus d’informations sur l’algorithme twister de Mersenne, consultez l�
 
 Pour obtenir un exemple de code, consultez [\<random>](../standard-library/random.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 

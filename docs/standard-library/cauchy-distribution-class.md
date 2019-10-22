@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 628d79c8026c11c7583448ce021a6aaee4ace6d9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6a2bbdc9cc5ef8b633842bca3d94e0d8073c9abb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449860"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688337"
 ---
-# <a name="cauchydistribution-class"></a>cauchy_distribution, classe
+# <a name="cauchy_distribution-class"></a>cauchy_distribution, classe
 
 Génère une distribution suivant une loi de Cauchy.
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType*\
-Le type de résultat à virgule flottante, par défaut, est **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* \
+Le type de résultat à virgule flottante, par défaut, est **double**. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*GÉNÉRATEUR URNG*\
-Moteur de générateur de nombres aléatoires uniformes. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*Générateur urng* \
+Moteur de générateur de nombres aléatoires uniformes. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la distribution Cauchy. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la distribution Cauchy. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -87,7 +87,7 @@ La classe de modèle décrit une distribution qui produit des valeurs d’un typ
 
 Les fonctions de propriété `a()` et `b()` retournent leurs valeurs respectives pour les paramètres de distribution stockés `a` et `b`.
 
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.
 
@@ -99,7 +99,7 @@ Pour plus d’informations sur les classes de distribution et leurs membres, con
 
 Pour plus d’informations sur la loi de Cauchy, consultez l’article de Wolfram MathWorld [Cauchy Distribution](https://go.microsoft.com/fwlink/p/?linkid=400523).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // compile with: /EHsc /W4
@@ -234,7 +234,7 @@ Distribution for 10 samples:
     10: 35.2531547063
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 
@@ -251,13 +251,13 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*un*\
+*\*
 Paramètre de distribution `a`.
 
-*p*\
+*b* \
 Paramètre de distribution `b`.
 
-*Parm*\
+*param* \
 Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -286,13 +286,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*un*\
+*\*
 Paramètre de distribution `a`.
 
-*p*\
+*b* \
 Paramètre de distribution `b`.
 
-*Oui*\
+\ *droit*
 Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes

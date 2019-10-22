@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5f6919c84c3fb125e149ba6bcd69b6b7f996d17f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458164"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687063"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-Le modèle `ratio` définit les `num` constantes statiques `den` et, `num` par exemple  /  `den` , = = numérateur `num` / `den` dénominateur et n’a aucun facteur commun. `num` / `den`est la valeur représentée par la classe de modèle. Par conséquent `type` , désigne l’instanciation. `ratio<num, den>`
+Le modèle `ratio` définit les constantes statiques `num` et `den` telles que `num`  /  `den` = = numérateur/dénominateur et `num` et `den` n’ont aucun facteur commun. `num`  /  `den` est la valeur représentée par le modèle de classe. Par conséquent, `type` désigne le `ratio<num, den>` d’instanciation.
 
 ### <a name="specializations"></a>Spécialisations
 
@@ -70,7 +70,7 @@ Le modèle `ratio` définit les `num` constantes statiques `den` et, `num` par e
 
 Chaque spécialisation prend deux paramètres de modèle qui doivent également être des spécialisations de `ratio`. La valeur de `type` est déterminée par une opération logique associée.
 
-|Nom|Valeur `type`|
+|Name|Valeur `type`|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|
@@ -85,7 +85,7 @@ Chaque spécialisation prend deux paramètres de modèle qui doivent également 
 
 ### <a name="typedefs"></a>typedefs
 
-Pour plus de commodité, l’en-tête définit les ratios pour les préfixes SI standard:
+Pour plus de commodité, l’en-tête définit les ratios pour les préfixes SI standard :
 
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;

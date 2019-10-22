@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
-ms.openlocfilehash: cf33c5f627a88698c84947f9b803edaebccf5566
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 358348a57b823fcea82cd296967c83778819361d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450401"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688962"
 ---
-# <a name="slicearray-class"></a>slice_array, classe
+# <a name="slice_array-class"></a>slice_array, classe
 
-Classe de modèle interne auxiliaire qui prend en charge les objets de secteurs en fournissant des opérations entre des tableaux de sous-ensembles définis par le secteur d'un valarray.
+Modèle de classe auxiliaire interne qui prend en charge les objets Slice en fournissant des opérations entre les tableaux de sous-ensembles définis par le secteur d’un valarray.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,17 +44,17 @@ public:
 
 La classe décrit un objet qui stocke une référence à un objet de la classe [valarray](../standard-library/valarray-class.md) **\<Type>** , ainsi qu’un objet de la classe [slice](../standard-library/slice-class.md), qui décrit la séquence d’éléments à sélectionner à partir de l’objet **valarray\<Type>** .
 
-La classe de modèle est créée indirectement par certaines opérations valarray. Elle ne peut pas être utilisée directement dans le programme. Classe de modèle interne auxiliaire qui est utilisée par l’opérateur slice subscript :
+Le modèle de classe est créé indirectement par certaines opérations valarray et ne peut pas être utilisé directement dans le programme. Modèle de classe auxiliaire interne utilisé par l’opérateur d’indice de secteur :
 
 `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`).
 
-Vous construisez `slice_array<Type>` un objet uniquement en écrivant une expression de la forme [va&#91;SL&#93;](../standard-library/valarray-class.md#op_at), pour `sl` une tranche `va`de valarray. Les fonctions membres de la classe slice_array se comportent ensuite comme les signatures `valarray<Type>`de fonctions correspondantes définies pour, sauf que seule la séquence d’éléments sélectionnés est affectée. La séquence contrôlée par le slice_array est définie par les trois paramètres du constructeur slice, l’index du premier élément dans la section (slice), le nombre d’éléments et la distance entre les éléments. Un slice_array Cut from valarray `va` déclaré par **va**[ `slice`(2, 5, 3)] sélectionne les éléments avec les index 2, 5, 8, 11 et 14 de. `va` Les index doivent être valides pour que la procédure soit valide.
+Vous construisez un objet `slice_array<Type>` uniquement en écrivant une expression de [la&#91;forme&#93;va SL](../standard-library/valarray-class.md#op_at), pour une tranche `sl` de valarray `va`. Les fonctions membres de la classe slice_array se comportent ensuite comme les signatures de fonctions correspondantes définies pour `valarray<Type>`, sauf que seule la séquence d’éléments sélectionnés est affectée. La séquence contrôlée par le slice_array est définie par les trois paramètres du constructeur slice, l’index du premier élément dans la section (slice), le nombre d’éléments et la distance entre les éléments. Un slice_array Cut from valarray `va` déclaré par la fonction **va**[`slice` (2, 5, 3)] sélectionne les éléments avec les index 2, 5, 8, 11 et 14 de `va`. Les index doivent être valides pour que la procédure soit valide.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Consultez l’exemple [slice::slice](../standard-library/slice-class.md#slice) pour savoir comment déclarer et utiliser un slice_array.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<valarray>
 
@@ -62,4 +62,4 @@ Consultez l’exemple [slice::slice](../standard-library/slice-class.md#slice) p
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

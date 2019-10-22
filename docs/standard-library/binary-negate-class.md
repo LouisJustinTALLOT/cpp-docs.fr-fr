@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: d93ead4f301b6c5df918a6f402cea6963a9535e1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 01396384cbd551cca5682c7ffd1b31d89e6d1dc2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243367"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688400"
 ---
-# <a name="binarynegate-class"></a>binary_negate, classe
+# <a name="binary_negate-class"></a>binary_negate, classe
 
-Classe de modèle fournissant une fonction membre qui inverse la valeur de retour d'une fonction binaire spécifiée. Déconseillées dans C ++ 17 en faveur du [not_fn](functional-functions.md#not_fn).
+Modèle de classe fournissant une fonction membre qui inverse la valeur de retour d’une fonction binaire spécifiée. Déconseillé dans C++ 17 en faveur de [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ class binary_negate
 
 ### <a name="parameters"></a>Paramètres
 
-*Func*\
+@No__t_1 *Func*
 Fonction binaire à rendre négative.
 
-*Gauche*\
+\ *gauche*
 Opérande de gauche de la fonction binaire à rendre négative.
 
-*Oui*\
+\ *droit*
 Opérande de droite de la fonction binaire à rendre négative.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -48,7 +48,7 @@ Négation de la fonction binaire.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie d’un objet de fonction binaire *Func*. Elle définit sa fonction membre `operator()` comme retournant `!Func(left, right)`.
+Le modèle de classe stocke une copie d’un objet de fonction binaire *Func*. Elle définit sa fonction membre `operator()` comme retournant `!Func(left, right)`.
 
 Le constructeur de `binary_negate` est rarement utilisé directement. La fonction d’assistance [not2](../standard-library/functional-functions.md#not2) est généralement utilisée en priorité pour déclarer et utiliser le prédicat d’adaptateur **binary_negator**.
 

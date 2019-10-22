@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: 8a504f58f9f64aa8b0d26b17090387c5c2b5de21
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e37b2371238211033d6a8a0847a41677b4e908a2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454142"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688051"
 ---
 # <a name="freelist-class"></a>freelist, classe
 
@@ -37,7 +37,7 @@ class freelist : public Max
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle gère une liste de blocs de mémoire de taille *SZ* avec la longueur maximale de la liste déterminée par la classe Max passée dans *Max*.
+Ce modèle de classe gère une liste de blocs de mémoire de taille *SZ* avec la longueur maximale de la liste déterminée par la classe Max passée dans *Max*.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -52,7 +52,7 @@ Cette classe de modèle gère une liste de blocs de mémoire de taille *SZ* avec
 |[pop](#pop)|Supprime le premier bloc de mémoire de la liste de libération.|
 |[push](#push)|Ajoute un bloc de mémoire à la liste.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<allocators>
 
@@ -100,11 +100,11 @@ bool push(void* ptr);
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la `full` fonction de la classe Max retourne la **valeur false**; `push` sinon, la fonction retourne **false**.
+**true** si la fonction `full` de la classe Max retourne la **valeur false**; dans le cas contraire, la fonction `push` retourne **false**.
 
 ### <a name="remarks"></a>Notes
 
-Si la `full` fonction de la classe Max retourne la **valeur false**, cette fonction membre ajoute le bloc de mémoire désigné par *ptr* au début de la liste.
+Si la fonction `full` de la classe Max retourne la **valeur false**, cette fonction membre ajoute le bloc de mémoire désigné par *ptr* au début de la liste.
 
 ## <a name="see-also"></a>Voir aussi
 

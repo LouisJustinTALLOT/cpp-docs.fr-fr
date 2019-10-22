@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-ms.openlocfilehash: d19abf74bd9f794bc39ce04e5ed22e360cde75b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de0091af93120290105ce7603fae5acff257b76
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410887"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688544"
 ---
-# <a name="wbufferconvert-class"></a>wbuffer_convert, classe
+# <a name="wbuffer_convert-class"></a>wbuffer_convert, classe
 
 Décrit une mémoire tampon de flux qui contrôle la transmission des éléments vers et à partir d'une mémoire tampon de flux d'octets.
 
@@ -35,11 +35,11 @@ class wbuffer_convert
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle décrit une mémoire tampon de flux qui contrôle la transmission d'éléments de type `_Elem`, dont les caractéristiques sont décrites par la classe `Traits`, vers et à partir d'une mémoire tampon de flux d'octets de type `std::streambuf`.
+Ce modèle de classe décrit une mémoire tampon de flux qui contrôle la transmission d’éléments de type `_Elem`, dont les caractéristiques sont décrites par la classe `Traits`, vers et à partir d’une mémoire tampon de flux d’octets de type `std::streambuf`.
 
 La conversion entre une séquence de valeurs `Elem` et des séquences multioctets est effectuée par un objet de classe `Codecvt<Elem, char, std::mbstate_t>`, qui répond aux exigences de la facette de conversion de code standard `std::codecvt<Elem, char, std::mbstate_t>`.
 
-Un objet de cette classe de modèle stocke :
+Un objet de ce modèle de classe stocke les éléments suivants :
 
 - un pointeur vers sa mémoire tampon de flux d'octets sous-jacente ;
 

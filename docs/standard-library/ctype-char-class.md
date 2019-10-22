@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: 7fe1eef32741d63e7b2e2c2320d18f445784c44f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 08bf2c5c814eaed7b409295fcf50c66577f6a5d9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455466"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688151"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt;, classe
 
-La classe est une spécialisation explicite de la `ctype\<CharType>` classe de modèle pour le type **char**, décrivant un objet pouvant servir de facette de paramètres régionaux pour caractériser diverses propriétés d’un caractère de type **char**.
+La classe est une spécialisation explicite du modèle de classe `ctype\<CharType>` au type **char**, décrivant un objet pouvant servir de facette de paramètres régionaux pour caractériser diverses propriétés d’un caractère de type **char**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -106,23 +106,23 @@ protected:
 
 ## <a name="remarks"></a>Notes
 
-La spécialisation explicite diffère de la classe de modèle de plusieurs façons :
+La spécialisation explicite diffère du modèle de classe de plusieurs façons :
 
-- Un objet de classe CType < `char`> stocke un pointeur vers le premier élément d’une table de masque CType, un tableau d’éléments UCHAR_MAX + 1 `ctype_base::mask`de type. Il stocke également un objet booléen qui indique si le tableau doit être supprimé (à l’aide de `operator delete[]`) quand l’objet ctype\< **Elem**> est détruit.
+- Un objet de classe CType < `char` > stocke un pointeur vers le premier élément d’une table de masque CType, un tableau d’éléments UCHAR_MAX + 1 de type `ctype_base::mask`. Il stocke également un objet booléen qui indique si le tableau doit être supprimé (à l’aide de `operator delete[]`) quand l’objet ctype\< **Elem**> est détruit.
 
-- Son seul constructeur public vous permet de `tab`spécifier, la table de masque CType `del`et, l’objet booléen qui est true si le tableau doit être supprimé lorsque le < `char`CType > objet est détruit, ainsi que le nombre de références références de paramètres.
+- Son seul constructeur public vous permet de spécifier `tab`, la table de masque CType et `del`, l’objet Boolean qui est true si le tableau doit être supprimé lorsque le < CType `char` > objet est détruit, ainsi que les références de paramètre de nombre de références.
 
-- La fonction `table` membre protégée retourne la table de masque CType stockée.
+- La fonction membre protégée `table` retourne la table de masques CType stockée.
 
-- L’objet `table_size` de membre statique spécifie le nombre minimal d’éléments dans une table de masque CType.
+- L’objet de membre statique `table_size` spécifie le nombre minimal d’éléments dans une table de masque CType.
 
-- La fonction `classic_table`membre statique protégée (retourne la table du masque CType appropriée aux paramètres régionaux «C».
+- La fonction membre statique protégée `classic_table` (retourne la table du masque CType appropriée aux paramètres régionaux « C ».
 
 - Il n’y a aucune fonction membre virtuelle protégée [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) ou [do_scan_not](../standard-library/ctype-class.md#do_scan_not). Les fonctions membres publiques correspondantes effectuent les opérations équivalentes.
 
 Les fonctions membres [do_narrow](../standard-library/ctype-class.md#do_narrow) et [do_widen](../standard-library/ctype-class.md#do_widen) copient des éléments non modifiés.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -132,4 +132,4 @@ Les fonctions membres [do_narrow](../standard-library/ctype-class.md#do_narrow) 
 
 [facet, classe](locale-class.md#facet_class)\
 [ctype_base, classe](../standard-library/ctype-base-class.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

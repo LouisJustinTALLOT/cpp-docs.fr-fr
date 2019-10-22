@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 1c03c02dde3178a257a83720ff437f7981f5f7ed
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 361545bee020d6c3624d1d45743abcb9c2b4ac85
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241555"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688852"
 ---
-# <a name="tuplesize-class"></a>tuple_size, classe ;
+# <a name="tuple_size-class"></a>tuple_size, classe ;
 
 Indique le nombre d’éléments qu’un `tuple` contient.
 
@@ -60,19 +60,19 @@ template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
 
 ### <a name="parameters"></a>Paramètres
 
-*Tuple*\
+@No__t_1 de *Tuple*
 Type du tuple.
 
-*Elem*\
+@No__t_1 *elem*
 Type des éléments du tableau.
 
-*Taille*\
+*Taille* \
 Taille du tableau.
 
-*T1*\
+@No__t_1 *T1*
 Type du premier membre de la paire.
 
-*T2*\
+*T2* \
 Type du second membre de la paire.
 
 *Types*\
@@ -80,9 +80,9 @@ Types des éléments de tuple.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle a un membre `value` qui est une expression constante intégrale dont la valeur est l’étendue du type de tuple *Tuple*.
+Le modèle de classe a un membre `value` qui est une expression constante intégrale dont la valeur est l’étendue du *Tuple*de type de Tuple.
 
-La spécialisation du modèle pour les tableaux possède un membre `value` qui est une expression constante intégrale dont la valeur est *taille*, qui est la taille du tableau.
+La spécialisation de modèle pour les tableaux a un membre `value` qui est une expression constante intégrale dont la valeur est *taille*, qui est la taille du tableau.
 
 La spécialisation de modèle pour une paire possède un membre `value` qui est une expression constante intégrale dont la valeur est 2.
 
@@ -115,7 +115,7 @@ int main()
 4
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<tuple>
 

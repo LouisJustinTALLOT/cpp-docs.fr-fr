@@ -77,12 +77,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 4d33240edc326b03b0ef184ac14e233a90acd5f4
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 2aceb96fcda49df8a1fd40a1bd8011170dccd8ef
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821316"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687725"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt;, fonctions
 
@@ -111,7 +111,7 @@ Objet ou fonction desquels obtenir l'adresse exacte.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Adresse réelle de l’objet ou de la fonction référencée par *valeur*, même si une surcharge `operator&()` existe.
+Adresse réelle de l’objet ou de la fonction référencée par *valeur*, même si un `operator&()` surchargé existe.
 
 ### <a name="remarks"></a>Notes
 
@@ -130,23 +130,23 @@ void* align(
 
 ### <a name="parameters"></a>Paramètres
 
-*repère*\
+\ d' *alignement*
 Limite d'alignement à tenter.
 
-*corps*\
+*taille* \
 Taille en octets du stockage aligné.
 
-*effectués*\
+\ *ptr*
 Adresse de départ du pool de stockage contigu disponible à utiliser. Ce paramètre est également un paramètre de sortie qui est défini pour contenir la nouvelle adresse de départ si l’alignement est réussi. Si `align()` échoue, ce paramètre n’est pas modifié.
 
-*space*\
+*espace* \
 Espace total disponible pour `align()` pour la création du stockage aligné. Ce paramètre est également un paramètre de sortie. Il contient l'espace ajusté restant dans la mémoire tampon de stockage une fois le stockage aligné et toute surcharge associée soustraite.
 
 Si `align()` échoue, ce paramètre n’est pas modifié.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur null si la mémoire tampon alignée demandée ne tient pas dans l’espace disponible; Sinon, la nouvelle valeur de *ptr*.
+Pointeur null si la mémoire tampon alignée demandée ne tient pas dans l’espace disponible ; Sinon, la nouvelle valeur de *ptr*.
 
 ### <a name="remarks"></a>Notes
 
@@ -188,10 +188,10 @@ shared_ptr<T> allocate_shared(
 
 ### <a name="parameters"></a>Paramètres
 
-*utilis*\
+\ *Alloc*
 Allocateur utilisé pour créer les objets.
 
-*attend*\
+*arguments* \
 Zéro ou plusieurs arguments qui deviennent les objets.
 
 ### <a name="remarks"></a>Notes
@@ -321,20 +321,20 @@ shared_ptr<T> const_pointer_cast(
 
 ### <a name="parameters"></a>Paramètres
 
-*T*\
+*T* \
 Type contrôlé par le pointeur partagé retourné.
 
-*Autres*\
+*Autres* \
 Type contrôlé par le pointeur partagé d’argument.
 
-*SR*\
+*sp* \
 Pointeur partagé d’argument.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne un `shared_ptr` objet vide `const_cast<T*>(sp.get())` si retourne un pointeur NULL; sinon, elle `shared_ptr<T>` retourne un objet qui possède la ressource détenue par *SP*. L'expression `const_cast<T*>(sp.get())` doit être valide.
+La fonction de modèle retourne un objet `shared_ptr` vide si `const_cast<T*>(sp.get())` retourne un pointeur null ; dans le cas contraire, elle retourne un objet `shared_ptr<T>` qui possède la ressource détenue par *SP*. L'expression `const_cast<T*>(sp.get())` doit être valide.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__memory__const_pointer_cast.cpp
@@ -371,10 +371,10 @@ void declare_no_pointers(
 
 ### <a name="parameters"></a>Paramètres
 
-*effectués*\
+\ *ptr*
 Adresse du premier caractère qui ne contient plus de pointeur traçable.
 
-*corps*\
+*taille* \
 Taille du bloc qui commence à *ptr* et qui ne contient pas de pointeurs traçables.
 
 ### <a name="remarks"></a>Notes
@@ -392,7 +392,7 @@ void declare_reachable(
 
 ### <a name="parameters"></a>Paramètres
 
-*effectués*\
+\ *ptr*
 Pointeur vers une zone de stockage accessible, allouée et valide.
 
 ### <a name="remarks"></a>Notes
@@ -417,15 +417,15 @@ struct default_delete
 
 ### <a name="parameters"></a>Paramètres
 
-*effectués*\
+\ *ptr*
 Pointeur vers l'objet à supprimer.
 
-*Autres*\
+*Autres* \
 Type des éléments dans le tableau à supprimer.
 
 ### <a name="remarks"></a>Notes
 
-La classe de modèle décrit un effaceur qui supprime les objets scalaires alloués avec l' **opérateur New**, adapté `unique_ptr`à une utilisation avec la classe de modèle. Il possède également la spécialisation explicite `default_delete<T[]>`.
+Le modèle de classe décrit un effaceur qui supprime les objets scalaires alloués avec l' **opérateur New**, approprié pour une utilisation avec le modèle de classe `unique_ptr`. Il possède également la spécialisation explicite `default_delete<T[]>`.
 
 ## <a name="destroy_at"></a>destroy_at
 
@@ -446,7 +446,7 @@ void destroy(
     ForwardIterator last);
 ```
 
-Identique à:
+Identique à :
 
 ```cpp
 for (; first != last; ++first)
@@ -462,7 +462,7 @@ ForwardIterator destroy_n(
     Size count);
 ```
 
-Identique à:
+Identique à :
 
 ```cpp
 for (; count > 0; (void)++first, --count)
@@ -486,18 +486,18 @@ shared_ptr<T> dynamic_pointer_cast(
 
 ### <a name="parameters"></a>Paramètres
 
-*T*\
+*T* \
 Type contrôlé par le pointeur partagé retourné.
 
-*Autres*\
+*Autres* \
 Type contrôlé par le pointeur partagé d’argument.
 
-*SR*\
+*sp* \
 Pointeur partagé d’argument.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne un `shared_ptr` objet vide `dynamic_cast<T*>(sp.get())` si retourne un pointeur NULL; sinon, elle `shared_ptr<T>` retourne un objet qui possède la ressource détenue par *SP*. L'expression `dynamic_cast<T*>(sp.get())` doit être valide.
+La fonction de modèle retourne un objet `shared_ptr` vide si `dynamic_cast<T*>(sp.get())` retourne un pointeur null ; dans le cas contraire, elle retourne un objet `shared_ptr<T>` qui possède la ressource détenue par *SP*. L'expression `dynamic_cast<T*>(sp.get())` doit être valide.
 
 ### <a name="example"></a>Exemple
 
@@ -547,18 +547,18 @@ Deleter* get_deleter(
 
 ### <a name="parameters"></a>Paramètres
 
-*Suppresseur*\
+@No__t_1 de la *suppression*
 Type du suppresseur.
 
-*T*\
+*T* \
 Type contrôlé par le pointeur partagé.
 
-*SR*\
+*sp* \
 Pointeur partagé.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne un pointeur vers le supprimer du type de *suppression* qui appartient à l' `shared_ptr` objet *SP*. Si *SP* n’a pas de suppression, ou si son supprimeur n’est pas de type *supprimer*, la fonction retourne 0.
+La fonction de modèle retourne un pointeur vers le supprimer du type de *suppression* qui appartient à l’objet `shared_ptr` *SP*. Si *SP* n’a pas de suppression, ou si son supprimeur n’est pas de type *supprimer*, la fonction retourne 0.
 
 ### <a name="example"></a>Exemple
 
@@ -628,7 +628,7 @@ pair<T *, ptrdiff_t> get_temporary_buffer(
 
 ### <a name="parameters"></a>Paramètres
 
-*saut*\
+*nombre* \
 Nombre maximal d’éléments demandés pour lesquels la mémoire doit être allouée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -686,7 +686,7 @@ shared_ptr<T> make_shared(
 
 ### <a name="parameters"></a>Paramètres
 
-*attend*\
+*arguments* \
 Zéro ou plusieurs arguments de constructeur. Selon les arguments fournis, la fonction déduit la surcharge de constructeur à appeler.
 
 ### <a name="remarks"></a>Notes
@@ -700,11 +700,11 @@ auto msp = std::make_shared<Example>(argument);
 
 Toutefois, la première instruction crée deux allocations, et si l'allocation du pointeur `shared_ptr` échoue alors que l'allocation de l'objet `Example` a réussi, l'objet sans nom `Example` est victime d'une fuite. L'instruction qui utilise `make_shared` est plus simple car un seul appel de fonction est impliqué. Elle est plus efficace car la bibliothèque peut effectuer une allocation unique pour l'objet et le pointeur intelligent. Cette fonction est à la fois plus rapide et provoque moins de fragmentation de la mémoire, et il n’y a aucun risque d’exception sur une allocation, mais pas sur l’autre. Les performances sont améliorées grâce à une meilleure localité du code qui fait référence à l'objet et qui met à jour les décomptes de références dans le pointeur intelligent.
 
-Envisagez d’utiliser [make_unique](memory-functions.md#make_unique) si vous n’avez pas besoin d’un accès partagé à l’objet. Utilisez [allocate_shared](memory-functions.md#allocate_shared) si vous devez spécifier un allocateur personnalisé pour l’objet. Vous ne pouvez `make_shared` pas utiliser si votre objet nécessite un effaceur personnalisé, car il n’existe aucun moyen de passer le supprimeur en tant qu’argument.
+Envisagez d’utiliser [make_unique](memory-functions.md#make_unique) si vous n’avez pas besoin d’un accès partagé à l’objet. Utilisez [allocate_shared](memory-functions.md#allocate_shared) si vous devez spécifier un allocateur personnalisé pour l’objet. Vous ne pouvez pas utiliser `make_shared` si votre objet nécessite un effaceur personnalisé, car il n’existe aucun moyen de passer le supprimeur en tant qu’argument.
 
 L'exemple suivant illustre la création de pointeurs partagés vers un type en appelant des surcharges de constructeur spécifiques.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // stl_make_shared.cpp
@@ -791,30 +791,30 @@ template <class T, class... Args>
 
 ### <a name="parameters"></a>Paramètres
 
-*T*\
+*T* \
 Type de l’objet vers lequel pointera le `unique_ptr`.
 
-*Attend*\
+*Arguments* \
 Types des arguments de constructeur spécifiés par *args*.
 
-*attend*\
+*arguments* \
 Arguments à passer au constructeur de l’objet de type *T*.
 
-*html*\
+*éléments* \
 Tableau d’éléments de type *T*.
 
-*corps*\
+*taille* \
 Nombre d’éléments pour lesquels allouer de l’espace dans le nouveau tableau.
 
 ### <a name="remarks"></a>Notes
 
-La première surcharge est utilisée pour les objets uniques. La deuxième surcharge est appelée pour les tableaux. La troisième surcharge vous empêche de spécifier une taille de tableau dans l’argument de type\<(make_unique T [N] >); cette construction n’est pas prise en charge par la norme actuelle. Quand vous utilisez `make_unique` pour créer un `unique_ptr` dans un tableau, vous devez initialiser les éléments du tableau séparément. Au lieu d’utiliser cette surcharge, il est peut-être préférable d’utiliser un [std:: Vector](vector-class.md).
+La première surcharge est utilisée pour les objets uniques. La deuxième surcharge est appelée pour les tableaux. La troisième surcharge vous empêche de spécifier une taille de tableau dans l’argument de type (make_unique \<T [N] >); Cette construction n’est pas prise en charge par la norme actuelle. Quand vous utilisez `make_unique` pour créer un `unique_ptr` dans un tableau, vous devez initialiser les éléments du tableau séparément. Au lieu d’utiliser cette surcharge, il est peut-être préférable d’utiliser un [std :: Vector](vector-class.md).
 
 `make_unique` étant implémentée soigneusement pour la protection contre les exceptions, nous vous recommandons d’utiliser `make_unique` au lieu d’appeler directement des constructeurs `unique_ptr`.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-L'exemple suivant montre comment utiliser `make_unique`. Pour plus d'exemples, consultez [Procédure : Créez et utilisez des instances](../cpp/how-to-create-and-use-unique-ptr-instances.md)unique_ptr.
+L'exemple suivant montre comment utiliser `make_unique`. Pour obtenir plus d’exemples, consultez [Guide pratique pour créer et utiliser des instances unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md).
 
 [!code-cpp[stl_smart_pointers#214](../cpp/codesnippet/CPP/memory-functions_1.cpp)]
 
@@ -822,7 +822,7 @@ Quand vous voyez l’erreur C2280 en lien avec `unique_ptr`, il est presque cert
 
 ## <a name="owner_less"></a>owner_less
 
-Permet des comparaisons mixtes basées sur la propriété de pointeurs partagés et faibles. Retourne la **valeur true** si le paramètre de gauche est ordonné avant le paramètre Right `owner_before`par la fonction membre.
+Permet des comparaisons mixtes basées sur la propriété de pointeurs partagés et faibles. Retourne la **valeur true** si le paramètre de gauche est ordonné avant le paramètre Right par la fonction membre `owner_before`.
 
 ```cpp
 template <class T>
@@ -885,15 +885,15 @@ template<> struct owner_less<void>
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche*\
+\ *gauche*
 Pointeur partagé ou faible.
 
-*Oui*\
+\ *droit*
 Pointeur partagé ou faible.
 
 ### <a name="remarks"></a>Notes
 
-Les classes de modèle définissent tous leurs opérateurs membres comme retournant `left.owner_before(right)`.
+Les modèles de classe définissent tous leurs opérateurs membres comme renvoyant des `left.owner_before(right)`.
 
 ## <a name="reinterpret_pointer_cast"></a>reinterpret_pointer_cast
 
@@ -911,12 +911,12 @@ shared_ptr<T> reinterpret_pointer_cast(
 
 ### <a name="parameters"></a>Paramètres
 
-*effectués*\
+\ *ptr*
 Référence à un `shared_ptr<U>`.
 
 ### <a name="remarks"></a>Notes
 
-Si *ptr* est vide, le nouveau `shared_ptr` est également vide, sinon il partage la propriété avec *ptr*. Le nouveau pointeur partagé est le résultat de l' `reinterpret_cast<Y*>(ptr.get())`évaluation de `Y` , `typename std::shared_ptr<T>::element_type`où est. Le comportement est indéfini si `reinterpret_cast<T*>((U*)nullptr)` n’est pas bien formé.
+Si *ptr* est vide, le nouveau `shared_ptr` est également vide, sinon il partage la propriété avec *ptr*. Le nouveau pointeur partagé est le résultat de l’évaluation de `reinterpret_cast<Y*>(ptr.get())`, où `Y` est `typename std::shared_ptr<T>::element_type`. Le comportement n’est pas défini si `reinterpret_cast<T*>((U*)nullptr)` n’est pas bien formé.
 
 La fonction de modèle qui accepte une référence lvalue est nouvelle dans C++ 17. La fonction de modèle qui accepte une référence rvalue est nouvelle dans C++ 20.
 
@@ -932,7 +932,7 @@ void return_temporary_buffer(
 
 ### <a name="parameters"></a>Paramètres
 
-*mémoire tampon*\
+\ de la *mémoire tampon*
 Pointeur vers la mémoire à libérer.
 
 ### <a name="remarks"></a>Notes
@@ -993,18 +993,18 @@ shared_ptr<T> static_pointer_cast(
 
 ### <a name="parameters"></a>Paramètres
 
-*T*\
+*T* \
 Type contrôlé par le pointeur partagé retourné.
 
-*Autres*\
+*Autres* \
 Type contrôlé par le pointeur partagé d’argument.
 
-*SR*\
+*sp* \
 Pointeur partagé d’argument.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne un `shared_ptr` objet vide si *SP* est un `shared_ptr` objet vide; sinon, elle `shared_ptr<T>` retourne un objet qui possède la ressource appartenant à *SP*. L'expression `static_cast<T*>(sp.get())` doit être valide.
+La fonction de modèle retourne un objet `shared_ptr` vide si *SP* est un objet `shared_ptr` vide. dans le cas contraire, elle retourne un objet `shared_ptr<T>` qui possède la ressource détenue par *SP*. L'expression `static_cast<T*>(sp.get())` doit être valide.
 
 ### <a name="example"></a>Exemple
 
@@ -1065,16 +1065,16 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*T*\
+*T* \
 Type contrôlé par le pointeur d’argument.
 
-*Suppresseur*\
+@No__t_1 de la *suppression*
 Suppression du type de pointeur unique.
 
-*gauche*\
+\ *gauche*
 Pointeur gauche.
 
-*Oui*\
+\ *droit*
 Pointeur droit.
 
 ### <a name="remarks"></a>Notes
@@ -1138,11 +1138,11 @@ void undeclare_no_pointers(
 
 ### <a name="parameters"></a>Paramètres
 
-*effectués*\
+\ *ptr*
 Pointeur vers l’adresse mémoire précédemment marquée à l’aide de [declare_no_pointers](#declare_no_pointers).
 
-*corps*\
-Nombre d’octets dans la plage de mémoire. Cette valeur doit être égale au nombre utilisé dans `declare_no_pointers` l’appel.
+*taille* \
+Nombre d’octets dans la plage de mémoire. Cette valeur doit être égale au nombre utilisé dans l’appel de `declare_no_pointers`.
 
 ### <a name="remarks"></a>Notes
 
@@ -1160,7 +1160,7 @@ T *undeclare_reachable(
 
 ### <a name="parameters"></a>Paramètres
 
-*effectués*\
+\ *ptr*
 Pointeur vers l’adresse mémoire précédemment marquée à l’aide de [declare_reachable](#declare_reachable).
 
 ### <a name="remarks"></a>Notes
@@ -1188,16 +1188,16 @@ ForwardIterator uninitialized_copy(
 
 ### <a name="parameters"></a>Paramètres
 
-*renvoi*\
+\ de *stratégie*
 Stratégie d’exécution à utiliser.
 
-*premier*\
+*premier* \
 Itérateur d'entrée qui traite le premier élément de la plage source.
 
-*famille*\
+*dernier* \
 Itérateur d'entrée qui traite le dernier élément de la plage source.
 
-*dest*\
+*dest* \
 Itérateur vers l’avant qui traite le premier élément de la plage de destination.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1289,7 +1289,7 @@ int main()
 
 ## <a name="uninitialized_copy_n"></a>uninitialized_copy_n
 
-Crée une copie d'un nombre spécifié d'éléments à partir d'un itérateur d'entrée. Les copies sont placées dans un itérateur vers l’avant.
+Crée une copie d'un nombre spécifié d'éléments à partir d'un itérateur d'entrée. Les copies sont placées dans un itérateur forward.
 
 ```cpp
 template <class InputIterator, class Size, class ForwardIterator>
@@ -1308,16 +1308,16 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>Paramètres
 
-*renvoi*\
+\ de *stratégie*
 Stratégie d’exécution à utiliser.
 
-*premier*\
+*premier* \
 Itérateur d'entrée qui fait référence à l'objet à copier.
 
-*saut*\
+*nombre* \
 Type entier signé ou non signé spécifiant le nombre de fois que l'objet doit être copié.
 
-*dest*\
+*dest* \
 Itérateur vers l’avant qui fait référence à l'emplacement des nouvelles copies.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1326,7 +1326,7 @@ Itérateur vers l’avant qui traite la première position au-delà de la destin
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle exécute efficacement le code suivant:
+La fonction de modèle exécute efficacement le code suivant :
 
 ```cpp
     for (; 0 < count; --count)
@@ -1341,7 +1341,7 @@ La surcharge avec une stratégie d’exécution est nouvelle dans C++ 17.
 
 ## <a name="uninitialized_default_construct"></a>uninitialized_default_construct
 
-Construit par défaut les objets des itérateurs `value_type` dans la plage spécifiée.
+Construit par défaut les objets des itérateurs' `value_type` dans la plage spécifiée.
 
 ```cpp
 template <class ForwardIterator>
@@ -1358,18 +1358,18 @@ void uninitialized_default_construct(
 
 ### <a name="parameters"></a>Paramètres
 
-*renvoi*\
+\ de *stratégie*
 Stratégie d’exécution à utiliser.
 
-*premier*\
+*premier* \
 Itérateur qui traite le premier élément de la plage à construire.
 
-*famille*\
+*dernier* \
 Itérateur qui traite un après le dernier élément de la plage à construire.
 
 ### <a name="remarks"></a>Notes
 
-La version sans stratégie d’exécution est la même que celle-ci:
+La version sans stratégie d’exécution est la même que celle-ci :
 
 ```cpp
 for (; first != last; ++first)
@@ -1385,7 +1385,7 @@ Ces fonctions sont nouvelles dans C++ 17.
 
 ## <a name="uninitialized_default_construct_n"></a>uninitialized_default_construct_n
 
-La valeur par défaut construit un nombre spécifié d’objets de l' `value_type`itérateur, en commençant à l’emplacement spécifié.
+La valeur par défaut construit un nombre spécifié d’objets du `value_type` de l’itérateur, en commençant à l’emplacement spécifié.
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -1402,13 +1402,13 @@ ForwardIterator uninitialized_default_construct_n(
 
 ### <a name="parameters"></a>Paramètres
 
-*renvoi*\
+\ de *stratégie*
 Stratégie d’exécution à utiliser.
 
-*premier*\
+*premier* \
 Itérateur qui traite le premier élément de la plage de destination à construire.
 
-*saut*\
+*nombre* \
 Nombre d’éléments dans la plage de destination à construire.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1417,7 +1417,7 @@ Itérateur vers l’avant qui traite la première position au-delà de la plage 
 
 ### <a name="remarks"></a>Notes
 
-La version sans stratégie d’exécution est la même que celle-ci:
+La version sans stratégie d’exécution est la même que celle-ci :
 
 ```cpp
 for (; count>0; (void)++first, --count)
@@ -1453,13 +1453,13 @@ void uninitialized_fill(
 
 ### <a name="parameters"></a>Paramètres
 
-*renvoi*\
+\ de *stratégie*
 Stratégie d’exécution à utiliser.
 
-*premier*\
+*premier* \
 Itérateur vers l’avant qui traite le premier élément de la plage de destination à initialiser.
 
-*famille*\
+*dernier* \
 Itérateur vers l’avant qui traite le dernier élément de la plage de destination à initialiser.
 
 *value*\
@@ -1541,13 +1541,13 @@ ForwardIterator uninitialized_fill_n(
 
 ### <a name="parameters"></a>Paramètres
 
-*renvoi*\
+\ de *stratégie*
 Stratégie d’exécution à utiliser.
 
-*premier*\
+*premier* \
 Itérateur vers l’avant qui traite le premier élément de la plage de destination à initialiser.
 
-*saut*\
+*nombre* \
 Nombre d’éléments à initialiser.
 
 *value*\
@@ -1623,21 +1623,21 @@ ForwardIterator uninitialized_move(
 
 ### <a name="parameters"></a>Paramètres
 
-*renvoi*\
+\ de *stratégie*
 Stratégie d’exécution à utiliser.
 
-*premier*\
+*premier* \
 Itérateur d’entrée qui traite le premier élément de la plage source à déplacer.
 
-*famille*\
+*dernier* \
 Itérateur d’entrée qui traite un après le dernier élément de la plage source à déplacer.
 
-*dest*\
+*dest* \
 Début de la plage de destination.
 
 ### <a name="remarks"></a>Notes
 
-La version sans stratégie d’exécution est la même que celle-ci:
+La version sans stratégie d’exécution est la même que celle-ci :
 
 ```cpp
 for (; first != last; (void)++dest, ++first)
@@ -1673,21 +1673,21 @@ pair<InputIterator, ForwardIterator> uninitialized_move_n(
 
 ### <a name="parameters"></a>Paramètres
 
-*renvoi*\
+\ de *stratégie*
 Stratégie d’exécution à utiliser.
 
-*premier*\
+*premier* \
 Itérateur d’entrée qui traite le premier élément de la plage source à déplacer.
 
-*saut*\
+*nombre* \
 Nombre d’éléments dans la plage source à déplacer.
 
-*dest*\
+*dest* \
 Début de la plage de destination.
 
 ### <a name="remarks"></a>Notes
 
-La version sans stratégie d’exécution est la même que celle-ci:
+La version sans stratégie d’exécution est la même que celle-ci :
 
 ```cpp
 for (; count > 0; ++dest, (void) ++first, --count)
@@ -1704,7 +1704,7 @@ Ces fonctions sont nouvelles dans C++ 17.
 
 ## <a name="uninitialized_value_construct"></a>uninitialized_value_construct
 
-Construit des objets des itérateurs `value_type` par initialisation de valeur, dans la plage spécifiée.
+Construit des objets des itérateurs' `value_type` par initialisation de valeur, dans la plage spécifiée.
 
 ```cpp
 template <class ForwardIterator>
@@ -1721,18 +1721,18 @@ void uninitialized_value_construct(
 
 ### <a name="parameters"></a>Paramètres
 
-*renvoi*\
+\ de *stratégie*
 Stratégie d’exécution à utiliser.
 
-*premier*\
+*premier* \
 Itérateur qui traite le premier élément de la plage à la construction de valeur.
 
-*famille*\
+*dernier* \
 Itérateur qui traite un après le dernier élément de la construction de la plage à la valeur.
 
 ### <a name="remarks"></a>Notes
 
-La version sans stratégie d’exécution est la même que celle-ci:
+La version sans stratégie d’exécution est la même que celle-ci :
 
 ```cpp
 for (; first != last; ++first)
@@ -1744,13 +1744,13 @@ Si une exception est levée, les objets construits précédemment sont détruits
 
 La version avec une stratégie d’exécution a le même résultat, mais s’exécute en fonction de la *stratégie*spécifiée.
 
-Si un échec d’allocation de mémoire se `std::bad_alloc` produit, une exception est levée.
+Si un échec d’allocation de mémoire se produit, une exception `std::bad_alloc` est levée.
 
 Ces fonctions sont nouvelles dans C++ 17.
 
 ## <a name="uninitialized_value_construct_n"></a>uninitialized_value_construct_n
 
-Construit un nombre spécifié d’objets de l’objet Iterator `value_type` par initialisation de valeur, en commençant à l’emplacement spécifié.
+Construit un nombre spécifié d’objets du `value_type` de l’itérateur par initialisation de valeur, en commençant à l’emplacement spécifié.
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -1767,18 +1767,18 @@ ForwardIterator uninitialized_value_construct_n(
 
 ### <a name="parameters"></a>Paramètres
 
-*renvoi*\
+\ de *stratégie*
 Stratégie d’exécution à utiliser.
 
-*premier*\
+*premier* \
 Itérateur qui traite le premier élément de la plage de destination à construire.
 
-*saut*\
+*nombre* \
 Nombre d’éléments dans la plage de destination à construire.
 
 ### <a name="remarks"></a>Notes
 
-La version sans stratégie d’exécution est la même que celle-ci:
+La version sans stratégie d’exécution est la même que celle-ci :
 
 ```cpp
 for (; count > 0; (void)++first, --count)
@@ -1791,13 +1791,13 @@ Si une exception est levée, les objets construits précédemment sont détruits
 
 La version avec une stratégie d’exécution a le même résultat, mais s’exécute en fonction de la *stratégie*spécifiée.
 
-Si un échec d’allocation de mémoire se `std::bad_alloc` produit, une exception est levée.
+Si un échec d’allocation de mémoire se produit, une exception `std::bad_alloc` est levée.
 
 Ces fonctions sont nouvelles dans C++ 17.
 
 ## <a name="uses_allocator_v"></a>uses_allocator_v
 
-Un modèle de variable d’assistance pour accéder à la valeur `uses_allocator` du modèle.
+Un modèle de variable d’assistance pour accéder à la valeur du modèle de `uses_allocator`.
 
 ```cpp
 template <class T, class Alloc>

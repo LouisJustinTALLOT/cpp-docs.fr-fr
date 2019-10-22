@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: daf9ab6b91eb4af19fdd563937b626515c4bc99b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 39c5321d5bc22e14ace3335e4a925bf7284d1cb0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457664"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689248"
 ---
-# <a name="normaldistribution-class"></a>normal_distribution, classe
+# <a name="normal_distribution-class"></a>normal_distribution, classe
 
 Génère une distribution normale.
 
@@ -71,21 +71,21 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType*\
-Le type de résultat à virgule flottante, par défaut, est **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* \
+Le type de résultat à virgule flottante, par défaut, est **double**. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la distribution normale. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la distribution normale. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-Les fonctions `mean()` de propriété `stddev()` et retournent respectivement les valeurs des paramètres de distribution stockés *Mean* et *STDDEV* .
+Les fonctions de propriété `mean()` et `stddev()` retournent respectivement les valeurs des paramètres de distribution stockés *Mean* et *STDDEV* .
 
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.
 
@@ -181,7 +181,7 @@ Distribution for 10 samples:
     10: 2.7821317338
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 
@@ -198,13 +198,13 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*interprété*\
+*moyenne* \
 Paramètre de distribution `mean`.
 
-*StdDev*\
+\ *STDDEV*
 Paramètre de distribution `stddev`.
 
-*Parm*\
+*param* \
 Structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -233,13 +233,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*interprété*\
+*moyenne* \
 Paramètre de distribution `mean`.
 
-*StdDev*\
+\ *STDDEV*
 Paramètre de distribution `stddev`.
 
-*Oui*\
+\ *droit*
 Structure `param_type` utilisée pour comparer.
 
 ### <a name="remarks"></a>Notes

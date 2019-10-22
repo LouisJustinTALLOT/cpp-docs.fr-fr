@@ -2,15 +2,15 @@
 title: Conteneurs de la bibliothèque standard C++
 ms.date: 11/04/2016
 helpviewer_keywords:
-- C++ Standard Library, template class containers
+- C++ Standard Library, class template containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: 6077ff76e04e6f078946eed0856723e2a9998f58
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1119947534c030afaad64e4905e58365ffffd05e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449594"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686102"
 ---
 # <a name="c-standard-library-containers"></a>Conteneurs de la bibliothèque standard C++
 
@@ -155,7 +155,7 @@ Certaines opérations sur les conteneurs peuvent également nécessiter un const
 
 ## <a name="accessing-container-elements"></a>Accès aux éléments de conteneurs
 
-Les éléments des conteneurs sont accessibles à l'aide d'itérateurs. Pour plus d'informations, consultez [Itérateurs](../standard-library/iterators.md).
+Les éléments des conteneurs sont accessibles à l'aide d'itérateurs. Pour plus d’informations, consultez [Itérateurs](../standard-library/iterators.md).
 
 > [!NOTE]
 > Vous pouvez également utiliser des [boucles for basées sur une plage](../cpp/range-based-for-statement-cpp.md) pour itérer des collections de la bibliothèque standard C++.
@@ -166,11 +166,11 @@ Tous les conteneurs surchargent l'opérateur == pour la comparaison de deux cont
 
 ### <a name="comparing-dissimilar-containers-c14"></a>Comparaison de conteneurs différents (C++14)
 
-En c++ 14 et versions ultérieures, vous pouvez comparer des conteneurs et/ou des types d’éléments dissemblables à `std::equal`l' `std::mismatch`aide de `std::is_permutation` l’une des surcharges de fonction, ou qui prennent deux plages complètes. Ces surcharges vous permettent de comparer des conteneurs ayant des longueurs différentes. Elles sont beaucoup moins vulnérables aux erreurs des utilisateurs et sont optimisées pour retourner la valeur false en temps fixe quand des conteneurs de longueurs différentes sont comparés. C’est pourquoi nous vous recommandons d’utiliser ces surcharges sauf si (1) vous avez une raison très précise de ne pas le faire ou (2) vous utilisez un conteneur [std::list](../standard-library/list-class.md), qui ne tire pas profit des optimisations de double plage.
+En C++ 14 et versions ultérieures, vous pouvez comparer des conteneurs dissemblables et/ou des types d’éléments dissemblables à l’aide de l’une des surcharges de fonction `std::equal`, `std::mismatch` ou `std::is_permutation` qui prennent deux plages complètes. Ces surcharges vous permettent de comparer des conteneurs ayant des longueurs différentes. Elles sont beaucoup moins vulnérables aux erreurs des utilisateurs et sont optimisées pour retourner la valeur false en temps fixe quand des conteneurs de longueurs différentes sont comparés. C’est pourquoi nous vous recommandons d’utiliser ces surcharges sauf si (1) vous avez une raison très précise de ne pas le faire ou (2) vous utilisez un conteneur [std::list](../standard-library/list-class.md), qui ne tire pas profit des optimisations de double plage.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Conteneurs](../cpp/containers-modern-cpp.md)\
 [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)\
 [\<sample container>](../standard-library/sample-container.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

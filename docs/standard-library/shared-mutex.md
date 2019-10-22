@@ -45,24 +45,24 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 7dd72550bc8658158b399e88573526269202f8f4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bd5df2917d377e7bc119d1aa85a32c4d5149c305
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450434"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686433"
 ---
-# <a name="ltsharedmutex"></a>&lt;shared_mutex>
+# <a name="ltshared_mutex"></a>&lt;shared_mutex >
 
-L' &lt;en-tête > shared_mutex fournit des primitives de synchronisation pour la protection des données partagées accessibles par plusieurs threads. En plus du contrôle d’accès exclusif fourni par les classes mutex, les classes mutex partagé prennent en charge la propriété partagée par plusieurs threads pour permettre un accès non exclusif. Les mutex partagés s’utilisent pour contrôler les ressources qui peuvent être lues par plusieurs threads sans provoquer de condition critique, mais qui doivent être écrites en mode exclusif par un seul thread.
+L’en-tête &lt;shared_mutex > fournit des primitives de synchronisation pour la protection des données partagées accessibles par plusieurs threads. En plus du contrôle d’accès exclusif fourni par les classes mutex, les classes mutex partagé prennent en charge la propriété partagée par plusieurs threads pour permettre un accès non exclusif. Les mutex partagés s’utilisent pour contrôler les ressources qui peuvent être lues par plusieurs threads sans provoquer de condition critique, mais qui doivent être écrites en mode exclusif par un seul thread.
 
-L’en &lt;-tête shared_mutex > définit `shared_mutex` les `shared_timed_mutex`classes et, la `shared_lock`classe de modèle et la `swap` fonction de modèle pour la prise en charge des mutex partagés.
+L’en-tête &lt;shared_mutex > définit les classes `shared_mutex` et `shared_timed_mutex`, le modèle de classe `shared_lock` et la fonction de modèle `swap` pour la prise en charge des mutex partagés.
 
 |Classes|Description|
 |-------------|-----------------|
 |[shared_mutex, classe](#class_shared_mutex)|Type de mutex partagé qui peut être verrouillé en mode exclusif par un seul agent ou être partagé en mode non exclusif par plusieurs agents.|
 |[shared_timed_mutex, classe](#class_shared_timed_mutex)|Type de mutex temporisé partagé qui peut être verrouillé en mode exclusif par un seul agent ou être partagé en mode non exclusif par plusieurs agents.|
-|[shared_lock, classe](#class_shared_lock)|Classe de modèle qui inclut un mutex partagé dans un wrapper pour prendre en charge les opérations de verrouillage temporisées et le partage non exclusif par plusieurs agents.|
+|[shared_lock, classe](#class_shared_lock)|Modèle de classe qui encapsule un mutex partagé pour prendre en charge les opérations de verrouillage chronométrées et le partage non exclusif par plusieurs agents.|
 
 |Fonctions|Description|
 |---------------|-----------------|
@@ -101,10 +101,10 @@ Le type mutex temporisé partagé prend en charge les méthodes supplémentaires
 
 - La méthode `try_lock_shared_until` tente d’obtenir la propriété partagée du mutex jusqu’à ce que le temps absolu spécifié soit écoulé. Si le temps spécifié est écoulé, la méthode est équivalente à `try_lock_shared`. La méthode ne retourne pas de valeur avant le temps spécifié, sauf si elle obtient la propriété partagée. Sa valeur de retour est **true** si la méthode obtient la propriété, mais **false**dans le cas contraire.
 
-La classe de modèle `shared_lock` étend la prise en charge du verrouillage temporisé et du transfert de propriété à un mutex partagé. La propriété du mutex peut être obtenue au moment ou après la construction, et être transférée à un autre objet `shared_lock`. Les objets de type `shared_lock` peuvent être déplacés, mais pas copiés.
+Le modèle de classe `shared_lock` étend la prise en charge du verrouillage et du transfert de propriété vers un mutex partagé. La propriété du mutex peut être obtenue au moment ou après la construction, et être transférée à un autre objet `shared_lock`. Les objets de type `shared_lock` peuvent être déplacés, mais pas copiés.
 
 > [!WARNING]
-> À compter de Visual Studio 2015, C++ les types de synchronisation de la bibliothèque standard sont basés sur les primitives de synchronisation Windows et n’utilisent plus ConcRT (sauf si la plateforme cible est Windows XP). Les types définis dans &lt;shared_mutex > ne doivent pas être utilisés avec des fonctions ou des types concrt.
+> À compter de Visual Studio 2015, C++ les types de synchronisation de la bibliothèque standard sont basés sur les primitives de synchronisation Windows et n’utilisent plus ConcRT (sauf si la plateforme cible est Windows XP). Les types définis dans &lt;shared_mutex > ne doivent pas être utilisés avec des fonctions ou types ConcRT.
 
 ## <a name="classes"></a>Classes
 
@@ -169,7 +169,7 @@ public:
 
 ###  <a name="class_shared_lock"></a> shared_lock, classe
 
-La classe de modèle `shared_lock` contrôle la propriété partagée d’un objet mutex partagé dans une portée. Le paramètre de modèle doit être un type mutex partagé.
+Le modèle de classe `shared_lock` contrôle la propriété partagée d’un objet mutex partagé dans une étendue. Le paramètre de modèle doit être un type mutex partagé.
 
 ```cpp
 class shared_lock {
@@ -226,7 +226,7 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 Échange le contenu de deux objets `shared_lock`. Fonctionne comme `x.swap(y)`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** &lt;shared_mutex>
 
@@ -234,5 +234,5 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
 [&lt;mutex>](../standard-library/mutex.md)

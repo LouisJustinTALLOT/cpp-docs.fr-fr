@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: 67aef1ce52b6717ce6d6381429982cf660aa5e20
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5c6fec7002541b519d7cf7d043eed3e5c932bcb9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457640"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689234"
 ---
 # <a name="num_get-class"></a>num_get, classe
 
-Classe de modèle qui décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler les conversions de séquences de type `CharType` en valeurs numériques.
+Modèle de classe qui décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler les conversions de séquences de type `CharType` en valeurs numériques.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,10 +34,10 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType*\
+*CharType* \
 Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
-*InputIterator*\
+*InputIterator* \
 Type d'itérateur depuis lequel les fonctions get numériques lisent leur entrée.
 
 ## <a name="remarks"></a>Notes
@@ -64,7 +64,7 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |[do_get](#do_get)|Fonction virtuelle appelée pour extraire une valeur numérique ou booléenne depuis une séquence de caractères.|
 |[get](#get)|Extrait une valeur numérique ou booléenne d'une séquence de caractères.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -167,19 +167,19 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Paramètres
 
-*premier*\
+*premier* \
 Début de la plage de caractères à partir de laquelle lire le nombre.
 
-*famille*\
+*dernier* \
 Fin de la plage de caractères à partir de laquelle lire le nombre.
 
-*_Iosbase*\
+*_Iosbase* \
 [ios_base](../standard-library/ios-base-class.md) dont les indicateurs sont utilisés par la conversion.
 
-*_ State*\
+@No__t_1 _ *State*
 État auquel failbit (voir [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) est ajouté en cas d’échec.
 
-*multiples*\
+\ *Val*
 Valeur qui a été lue.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -199,9 +199,9 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-met en correspondance les éléments séquentiels en commençant `[first, last)` au premier dans la séquence jusqu’à ce qu’il ait reconnu un champ d’entrée d’entier non vide complet. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que type **long**et stocke le résultat dans *Val*. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée numérique. Sinon, la fonction ne stocke rien dans Val `ios_base::failbit` et `state`définit dans. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée d’entier valide. Dans les deux cas, si la valeur de retour est égale à `last`, la fonction définit `ios_base::eofbit` dans `state`.
+met en correspondance les éléments séquentiels en commençant au *premier* dans la séquence `[first, last)` jusqu’à ce qu’il ait reconnu un champ d’entrée d’entier non vide complet. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que type **long**et stocke le résultat dans *Val*. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée numérique. Sinon, la fonction ne stocke rien dans *Val* et définit `ios_base::failbit` dans `state`. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée d’entier valide. Dans les deux cas, si la valeur de retour est égale à `last`, la fonction définit `ios_base::eofbit` dans `state`.
 
-Le champ d’entrée d’entier est converti par les mêmes règles que celles utilisées par les fonctions d’analyse pour la correspondance et la conversion d’une série d’éléments **char** à partir d’un fichier. (Chaque élément de type **char** est supposé être mappé à un élément équivalent de `Elem` type par un mappage simple, un-à-un.) La spécification de conversion d’analyse équivalente est déterminée comme suit :
+Le champ d’entrée d’entier est converti par les mêmes règles que celles utilisées par les fonctions d’analyse pour la correspondance et la conversion d’une série d’éléments **char** à partir d’un fichier. (Chaque élément **char** est supposé être mappé à un élément équivalent de type `Elem` par un mappage simple, un-à-un.) La spécification de conversion d’analyse équivalente est déterminée comme suit :
 
 Si `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct), la spécification de conversion est `lo`.
 
@@ -414,19 +414,19 @@ iter_type get(
 
 ### <a name="parameters"></a>Paramètres
 
-*premier*\
+*premier* \
 Début de la plage de caractères à partir de laquelle lire le nombre.
 
-*famille*\
+*dernier* \
 Fin de la plage de caractères à partir de laquelle lire le nombre.
 
-*_Iosbase*\
+*_Iosbase* \
 [ios_base](../standard-library/ios-base-class.md) dont les indicateurs sont utilisés par la conversion.
 
-*_ State*\
+@No__t_1 _ *State*
 État auquel failbit (voir [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) est ajouté en cas d’échec.
 
-*multiples*\
+\ *Val*
 Valeur qui a été lue.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -437,13 +437,13 @@ Itérateur une fois que la valeur a été lue.
 
 Toutes les fonctions membres retournent [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`).
 
-La première fonction membre protégée virtuelle tente de faire correspondre des éléments séquentiels en commençant au premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée d’entier complet et non vide. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que type **long** et stocke le résultat dans *Val*. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée numérique. Sinon, la fonction ne stocke rien dans Val `ios_base::failbit` et définit dans l' *État*_. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée d’entier valide. Dans les deux cas, si la valeur de retour est égale à *Last*, `ios_base::eofbit` la fonction définit dans _ *State*.
+La première fonction membre protégée virtuelle tente de faire correspondre des éléments séquentiels en commençant au premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée d’entier complet et non vide. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que type **long** et stocke le résultat dans *Val*. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée numérique. Dans le cas contraire, la fonction ne stocke rien dans *Val* et définit `ios_base::failbit` dans _ *State*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée d’entier valide. Dans les deux cas, si la valeur de retour est égale à *Last*, la fonction définit `ios_base::eofbit` dans _ *State*.
 
-Le champ d’entrée d’entier est converti par les mêmes règles que celles utilisées par les fonctions d’analyse pour la correspondance et la conversion d’une série d’éléments **char** à partir d’un fichier. Chacun de ces éléments **char** est supposé être mappé à un élément équivalent de `CharType` type par un simple mappage un-à-un. La spécification de conversion d’analyse équivalente est déterminée comme suit :
+Le champ d’entrée d’entier est converti par les mêmes règles que celles utilisées par les fonctions d’analyse pour la correspondance et la conversion d’une série d’éléments **char** à partir d’un fichier. Chacun de ces éléments **char** est supposé être mappé à un élément équivalent de type `CharType` par un simple mappage un-à-un. La spécification de conversion d’analyse équivalente est déterminée comme suit :
 
-- Si `iosbase`. [Flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[Oct](../standard-library/ios-functions.md#oct),la spécification de conversion est `lo`.
+- Si `iosbase`. [indicateurs](../standard-library/ios-base-class.md#flags)  &  `ios_base::basefield`  ==  `ios_base::`[Oct](../standard-library/ios-functions.md#oct), la spécification de conversion est `lo`.
 
-- Si **iosbase. Flags** & **ios_base :: BaseField** == `ios_base::`[Hex](../standard-library/ios-functions.md#hex), la spécification de `lx`conversion est.
+- Si **iosbase. flags**  & **ios_base :: BaseField**  ==  `ios_base::`[Hex](../standard-library/ios-functions.md#hex), la spécification de conversion est `lx`.
 
 - Si **iosbase.flags** & **ios_base::basefield** == 0, la spécification de conversion est `li`.
 
@@ -491,7 +491,7 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```
 
-se comporte de la même façon que le troisième, sauf que le spécificateur de conversion d' `Lf`analyse équivalent est.
+se comporte de la même façon que le troisième, sauf que le spécificateur de conversion d’analyse équivalent est `Lf`.
 
 La cinquième fonction membre protégée virtuelle :
 
@@ -573,18 +573,18 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs*\
+*_Refs* \
 Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
 Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes :
 
-- 0 : La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
-- 1 : La durée de vie de l’objet doit être gérée manuellement.
+- 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \>1 : Ces valeurs ne sont pas définies.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
@@ -594,4 +594,4 @@ Le constructeur initialise son objet de base avec **locale::** [facet](../standa
 
 [\<locale>](../standard-library/locale.md)\
 [facet, classe](../standard-library/locale-class.md#facet_class)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

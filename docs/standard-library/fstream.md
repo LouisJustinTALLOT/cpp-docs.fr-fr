@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - fstream header
 ms.assetid: 660de351-0489-41df-b239-40e0cdcab46b
-ms.openlocfilehash: ba6a4152b8d37f5b0186f9d05c6ba850e8c2e54c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1f85367b9ae527c9387d085acc1496bfbbf7cc9e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454019"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688035"
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 
@@ -38,16 +38,16 @@ Définit plusieurs classes qui prennent en charge les opérations iostreams sur 
 
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|Class|Description|
 |-|-|
-|[basic_filebuf](../standard-library/basic-filebuf-class.md)|La classe de modèle décrit une mémoire tampon de flux qui contrôle la transmission d'éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`, vers et à partir d'une séquence d'éléments stockés dans un fichier externe.|
-|[basic_fstream](../standard-library/basic-fstream-class.md)|La classe de modèle décrit un objet qui contrôle l’insertion et l’extraction d’éléments et d’objets encodés à l'aide d’une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, avec des éléments de type `Elem`, dont les caractéristiques de caractère sont déterminées par la classe `Tr`.|
-|[basic_ifstream](../standard-library/basic-ifstream-class.md)|La classe de modèle décrit un objet qui contrôle l’extraction d’éléments et d’objets encodés à partir d’une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**elem**, `Elem` **TR**>, avec des éléments de type, dont les caractéristiques sont déterminés par la classe `Tr`.|
-|[basic_ofstream](../standard-library/basic-ofstream-class.md)|La classe de modèle décrit un objet qui contrôle l’insertion d’éléments et d’objets encodés dans une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**elem**, **TR**> `Elem`, avec des éléments de type, dont les caractéristiques sont déterminés par la classe `Tr`.|
+|[basic_filebuf](../standard-library/basic-filebuf-class.md)|Le modèle de classe décrit une mémoire tampon de flux qui contrôle la transmission d’éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`, vers et à partir d’une séquence d’éléments stockés dans un fichier externe.|
+|[basic_fstream](../standard-library/basic-fstream-class.md)|Le modèle de classe décrit un objet qui contrôle l’insertion et l’extraction d’éléments et d’objets encodés à l’aide d’une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \<**Elem**, **TR**>, avec des éléments de type `Elem`, dont le caractère les caractéristiques sont déterminées par la classe `Tr`.|
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|Le modèle de classe décrit un objet qui contrôle l’extraction d’éléments et d’objets encodés à partir d’une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \<**Elem**, **TR**>, avec des éléments de type `Elem`, dont les caractéristiques sont déterminé par la classe `Tr`.|
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|Le modèle de classe décrit un objet qui contrôle l’insertion d’éléments et d’objets encodés dans une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \<**Elem**, **TR**>, avec des éléments de type `Elem`, dont les caractéristiques sont déterminées. par la classe `Tr`.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream, programmation](../standard-library/iostream-programming.md)\
 [iostreams, conventions](../standard-library/iostreams-conventions.md)

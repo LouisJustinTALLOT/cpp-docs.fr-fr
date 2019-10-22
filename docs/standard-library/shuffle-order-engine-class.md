@@ -15,14 +15,14 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: 972ba83afb5478cd89314817ba823b8d5657c9c8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d72cfaae2e7f6768a68439fbc30aa5ab0d38f270
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450417"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686430"
 ---
-# <a name="shuffleorderengine-class"></a>shuffle_order_engine, classe
+# <a name="shuffle_order_engine-class"></a>shuffle_order_engine, classe
 
 Génère une séquence aléatoire en réordonnançant les valeurs retournées à partir de son moteur de base.
 
@@ -35,10 +35,10 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Paramètres
 
-*Rotation*\
+@No__t_1 du *moteur*
 Type de moteur de base.
 
-*DK*\
+*K* \
 **Taille de table**. Nombre d'éléments dans la mémoire tampon (table). **Condition préalable** : `0 < K`
 
 ## <a name="members"></a>Membres
@@ -52,9 +52,9 @@ Pour plus d’informations sur les membres moteurs, consultez [\<random>](../sta
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle décrit un *adaptateur de moteur* qui produit des valeurs en réordonnançant les valeurs retournées par son moteur de base. Chaque constructeur remplit la table interne avec des valeurs *K* retournées par le moteur de base et un élément aléatoire est sélectionné à partir de la table quand une valeur est demandée.
+Ce modèle de classe décrit un *adaptateur de moteur* qui produit des valeurs en réordonnant les valeurs retournées par son moteur de base. Chaque constructeur remplit la table interne avec des valeurs *K* retournées par le moteur de base et un élément aléatoire est sélectionné à partir de la table quand une valeur est demandée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 

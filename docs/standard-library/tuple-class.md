@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: aca5cc90566fb1fa602b96568d4cda9dd5ab26b9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1727d3a12b7186d3cc868ef6bb78711774057407
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241824"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688861"
 ---
 # <a name="tuple-class"></a>tuple, classe
 
@@ -41,14 +41,14 @@ class tuple {
 
 ### <a name="parameters"></a>Paramètres
 
-*TN*\
+@No__t_1 *TN*
 Type du Nième élément de tuple.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit un objet qui stocke des objets de N de types `T1`, `T2`,..., `TN`, respectivement, où `0 <= N <= Nmax`. L’étendue d’une instance de tuple `tuple<T1, T2, ..., TN>` correspond au nombre `N` de ses arguments template. L’index de l’argument template `Ti` et de la valeur stockée correspondante de ce type est `i - 1`. Par conséquent, pendant que nous numéroter les types à partir de 1 à N dans cette documentation, l’index correspondant les valeurs comprises entre 0 et N - 1.
+Le modèle de classe décrit un objet qui stocke N objets de types `T1`, `T2`,..., `TN`, respectivement, où `0 <= N <= Nmax`. L’étendue d’une instance de tuple `tuple<T1, T2, ..., TN>` est le nombre `N` de ses arguments template. L’index de l’argument de modèle `Ti` et de la valeur stockée correspondante de ce type est `i - 1`. Ainsi, pendant que nous numérotons les types de 1 à N dans cette documentation, les valeurs d’index correspondantes sont comprises entre 0 et N-1.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // tuple.cpp
@@ -116,7 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="op_eq"></a> opérateur =
+## <a name="op_eq"></a>opérateur =
 
 Assigne un objet `tuple`.
 
@@ -137,19 +137,19 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Paramètres
 
-*ANNULER*\
+*UN* \
 Type du Nième élément de tuple copié.
 
-*Oui*\
+\ *droit*
 Tuple à partir duquel effectuer la copie.
 
 ### <a name="remarks"></a>Notes
 
-Les deux premiers opérateurs membres assignent les éléments de *droit* aux éléments correspondants de `*this`. Le troisième opérateur membre assigne `right.first` à l’élément à l’index 0 de `*this` et `right.second` à l’élément à l’index 1. Ces trois opérateurs membres retournent `*this`.
+Les deux premiers opérateurs membres assignent les éléments de *Right* aux éléments correspondants de `*this`. Le troisième opérateur membre assigne `right.first` à l’élément à l’index 0 de `*this` et `right.second` à l’élément à l’index 1. Ces trois opérateurs membres retournent `*this`.
 
 Les opérateurs membres restants sont analogues aux précédents, mais avec le [déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__tuple__tuple_operator_as.cpp
@@ -198,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a> échange
+## <a name="tuple_swap"></a>échange
 
 Échange les éléments de deux tuples.
 
@@ -209,17 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Un tuple dont les éléments doivent être échangés avec ceux du tuple *droit*.
+\ *gauche*
+Tuple dont les éléments doivent être échangés avec ceux du *droit*de Tuple.
 
-*Oui*\
-Un tuple dont les éléments doivent être échangés avec ceux du tuple *gauche*.
+\ *droit*
+Tuple dont les éléments doivent être échangés avec ceux du Tuple *restant*.
 
 ### <a name="remarks"></a>Notes
 
 La fonction exécute `left.swap(right)`.
 
-## <a name="tuple"></a> Tuple
+## <a name="tuple"></a>passent
 
 Construit un objet `tuple`.
 
@@ -246,10 +246,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Paramètres
 
-*ANNULER*\
+*UN* \
 Type du Nième élément de tuple copié.
 
-*Oui*\
+\ *droit*
 Tuple à partir duquel effectuer la copie.
 
 ### <a name="remarks"></a>Notes
@@ -258,7 +258,7 @@ Le premier constructeur construit un objet dont les éléments sont construits p
 
 Le second constructeur construit un objet dont les éléments sont construits par copie à partir des arguments `P1`, `P2`, ..., `PN` avec chaque `Pi` initialisant l'élément à l'index `i - 1`.
 
-Les troisième et quatrième constructeurs construisent un objet dont les éléments sont construits à partir de l’élément correspondant par copie *droit*.
+Les troisième et quatrième constructeurs construisent un objet dont les éléments sont construits par copie à partir de l’élément correspondant de *Right*.
 
 Le cinquième constructeur construit un objet dont l'élément à l'index 0 est construit par copie à partir de `right.first` et dont l'élément à l'index 1 est construit par copie à partir de `right.second`.
 
