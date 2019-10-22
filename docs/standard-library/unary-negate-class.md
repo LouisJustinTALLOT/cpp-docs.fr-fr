@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: 2a7ce9a8593b0dd93b1c3cfe58f2d87fe10ea997
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2d9f0bedd9e541e65f04ac20375f16f41413cf03
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240547"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684431"
 ---
-# <a name="unarynegate-class"></a>unary_negate, classe
+# <a name="unary_negate-class"></a>unary_negate, classe
 
-Classe de modèle fournissant une fonction membre qui inverse la valeur de retour d'une fonction unaire spécifiée. Déconseillées dans C ++ 17 en faveur du [not_fn](functional-functions.md#not_fn).
+Modèle de classe fournissant une fonction membre qui inverse la valeur de retour d’une fonction unaire spécifiée. Déconseillé dans C++ 17 en faveur de [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,10 +31,10 @@ class unary_negate
 
 ### <a name="parameters"></a>Paramètres
 
-*Func*\
+@No__t_1 *Func*
 Fonction unaire à inverser.
 
-*Gauche*\
+\ *gauche*
 Opérande de la fonction unaire à inverser.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -43,7 +43,7 @@ Négation de la fonction unaire.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie d’un objet de fonction unaire  *\_Func*. Elle définit sa fonction membre `operator()` comme retournant `!_Func(left)`.
+Le modèle de classe stocke une copie d’un objet de fonction unaire *\_Func*. Elle définit sa fonction membre `operator()` comme retournant `!_Func(left)`.
 
 Le constructeur de `unary_negate` est rarement utilisé directement. La fonction d’assistance [not1](../standard-library/functional-functions.md#not1) simplifie la manière de déclarer et d’utiliser le prédicat de l’adaptateur **unary_negator**.
 

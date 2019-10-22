@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 3c3c7fc34e75772c10ba39ecc51f6d2ac59d7ad5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2e861d2250585fbcdf3e1ef63d92f18185fc7f1c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456289"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687774"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
-Définit les classes de modèle de conteneur map et multimap et leurs modèles de prise en charge.
+Définit le mappage des modèles de classe de conteneur et Multimap et leurs modèles de prise en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<map>
 
 **Espace de noms :** std
 
 > [!NOTE]
-> La \<bibliothèque de > de mappage utilise `#include <initializer_list>` également l’instruction.
+> La bibliothèque de > \<map utilise également l’instruction `#include <initializer_list>`.
 
 ## <a name="members"></a>Membres
 
@@ -55,6 +55,6 @@ Définit les classes de modèle de conteneur map et multimap et leurs modèles d
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

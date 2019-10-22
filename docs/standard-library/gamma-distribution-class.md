@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: ac6a82cc7f342f6a96b5f79f36b23d23a1d27097
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ab71ada5b1fb8b604b94ed098a46820b86a65c63
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453936"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689609"
 ---
-# <a name="gammadistribution-class"></a>gamma_distribution, classe
+# <a name="gamma_distribution-class"></a>gamma_distribution, classe
 
 Génère une distribution Gamma.
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType*\
-Le type de résultat à virgule flottante, par défaut, est **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* \
+Le type de résultat à virgule flottante, par défaut, est **double**. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*GÉNÉRATEUR URNG*\
-Moteur de générateur de nombres aléatoires uniformes. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*Générateur urng* \
+Moteur de générateur de nombres aléatoires uniformes. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la distribution gamma. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la loi gamma. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -87,7 +87,7 @@ La classe de modèle décrit une distribution qui produit des valeurs d’un typ
 
 Les fonctions de propriété `alpha()` et `beta()` retournent leurs valeurs respectives pour les paramètres de distribution stockés *alpha* et *beta*.
 
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.
 
@@ -182,7 +182,7 @@ Distribution for 10 samples:
     10: 2.1201210996
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 
@@ -199,13 +199,13 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*lettres*\
+\ *alpha*
 Paramètre de distribution `alpha`.
 
-*Bêta*\
+\ *bêta*
 Paramètre de distribution `beta`.
 
-*Parm*\
+*param* \
 Structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -234,13 +234,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*lettres*\
+\ *alpha*
 Paramètre de distribution `alpha`.
 
-*Bêta*\
+\ *bêta*
 Paramètre de distribution `beta`.
 
-*Oui*\
+\ *droit*
 Instance `param_type` à comparer.
 
 ### <a name="remarks"></a>Notes

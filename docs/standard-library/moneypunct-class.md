@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: b6cd2524f8ae010e81d06a30d9a001398a106622
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460191"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689296"
 ---
 # <a name="moneypunct-class"></a>moneypunct, classe
 
-La classe de modèle décrit un objet pouvant servir de facette de paramètres régionaux pour décrire les séquences de type *CharType* utilisées pour représenter un champ d’entrée monétaire ou un champ de sortie monétaire. Si le paramètre de modèle *Intl* a la *valeur true*, les conventions internationales sont respectées.
+Le modèle de classe décrit un objet pouvant servir de facette de paramètres régionaux pour décrire les séquences de type *CharType* utilisées pour représenter un champ d’entrée monétaire ou un champ de sortie monétaire. Si le paramètre de modèle *Intl* a la *valeur true*, les conventions internationales sont respectées.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType*\
+*CharType* \
 Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
-*IU*\
+@No__t_1 *Intl*
 Indicateur spécifiant si les conventions internationales doivent être respectées.
 
 ## <a name="remarks"></a>Notes
@@ -114,7 +114,7 @@ L’objet statique const intl stocke la valeur du paramètre de modèle *Intl*.
 |[positive_sign](#positive_sign)|Retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole du signe positif.|
 |[thousands_sep](#thousands_sep)|Retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole de séparateur des milliers.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -243,7 +243,7 @@ virtual CharType do_decimal_point() const;
 
 Séquence propre aux paramètres régionaux d’éléments à utiliser comme symbole de virgule décimale.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [decimal_point](#decimal_point), où la fonction membre virtuelle est appelée par `decimal_point`.
 
@@ -259,7 +259,7 @@ virtual int do_frac_digits() const;
 
 Décompte propre aux paramètres régionaux du nombre de chiffres à afficher à droite de la virgule décimale.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [frac_digits](#frac_digits), où la fonction membre virtuelle est appelée par `frac_digits`.
 
@@ -289,19 +289,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La fonction membre virtuelle protégée retourne une règle propre aux paramètres régionaux pour déterminer comment générer un champ de sortie monétaire pour un montant négatif. Chacun des quatre éléments de `pattern::field` peut avoir les valeurs suivantes:
+La fonction membre virtuelle protégée retourne une règle propre aux paramètres régionaux pour déterminer comment générer un champ de sortie monétaire pour un montant négatif. Chacun des quatre éléments de `pattern::field` peut avoir les valeurs suivantes :
 
-- `none`pour faire correspondre zéro, un ou plusieurs espaces ou générer Nothing.
+- `none` pour qu’il corresponde à zéro ou plusieurs espaces ou ne génère rien.
 
-- `sign`pour faire correspondre ou générer un signe positif ou négatif.
+- `sign` de correspondance ou de génération d’un signe positif ou négatif.
 
-- `space`pour faire correspondre zéro, un ou plusieurs espaces ou générer un espace.
+- `space` pour qu’il corresponde à zéro ou plusieurs espaces ou pour générer un espace.
 
-- `symbol`pour faire correspondre ou générer un symbole monétaire.
+- `symbol` pour la correspondance ou la génération d’un symbole monétaire.
 
-- `value`pour faire correspondre ou générer une valeur monétaire.
+- `value` pour la correspondance ou la génération d’une valeur monétaire.
 
-Les composants d’un champ de sortie monétaire sont générés et les composants d’un champ d’entrée monétaire sont mis en correspondance dans l’ordre `pattern::field`dans lequel ces éléments apparaissent dans. Chacune `sign`des valeurs, `value` ,et`none` doit apparaître une seule fois. `space` `symbol` La valeur `none` ne doit pas apparaître en premier. La valeur space **ne doit pas** apparaître en premier ou en dernier. Si `Intl` a la valeur true, l' `symbol`ordre `sign`est `none`,, `value`, puis.
+Les composants d’un champ de sortie monétaire sont générés et les composants d’un champ d’entrée monétaire sont mis en correspondance dans l’ordre dans lequel ces éléments apparaissent dans `pattern::field`. Chacune des valeurs `sign`, `symbol`, `value` et `none` ou `space` doit apparaître exactement une fois. La valeur `none` ne doit pas apparaître en premier. La valeur space **ne doit pas** apparaître en premier ou en dernier. Si `Intl` a la valeur true, l’ordre est `symbol`, `sign`, `none`, puis `value`.
 
 La version de modèle de `moneypunct`\< **CharType**, **Intl**> retourne `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -335,7 +335,7 @@ virtual pattern do_pos_format() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La fonction membre virtuelle protégée retourne une règle propre aux paramètres régionaux pour déterminer comment générer un champ de sortie monétaire pour un montant positif. (Elle détermine également comment mettre en correspondance les composants d’un champ d’entrée monétaire.) L’encodage est le même que pour [do_neg_format](#do_neg_format).
+La fonction membre virtuelle protégée retourne une règle propre aux paramètres régionaux pour déterminer comment générer un champ de sortie monétaire pour un montant positif. (Il détermine également comment faire correspondre les composants d’un champ d’entrée monétaire.) L’encodage est le même que pour [do_neg_format](#do_neg_format).
 
 La version de modèle de moneypunct\< **CharType**, **Inputlterator**> retourne `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -355,7 +355,7 @@ virtual string_type do_positive_sign() const;
 
 Séquence propre aux paramètres régionaux d’éléments à utiliser comme signe positif.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [positive_sign](#positive_sign), où la fonction membre virtuelle est appelée par `positive_sign`.
 
@@ -371,9 +371,9 @@ virtual CharType do_thousands_sep() const;
 
 Élément propre aux paramètres régionaux à utiliser comme séparateur de groupes à gauche de la virgule décimale.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-Consultez l’exemple relatif à [group separator](#thousands_sep), où la fonction membre virtuelle est appelée par `thousands_sep`.
+Consultez l’exemple relatif à [thousands_sep](#thousands_sep), où la fonction membre virtuelle est appelée par `thousands_sep`.
 
 ## <a name="frac_digits"></a>  moneypunct::frac_digits
 
@@ -523,18 +523,18 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs*\
+*_Refs* \
 Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes:
+Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes :
 
-- 0 : La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
-- 1 : La durée de vie de l’objet doit être gérée manuellement.
+- 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \>1: Ces valeurs ne sont pas définies.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
@@ -556,7 +556,7 @@ Règle propre aux paramètres régionaux pour mettre en forme les sorties avec d
 
 La fonction membre retourne [do_neg_format](#do_neg_format).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // moneypunct_neg_format.cpp
@@ -770,7 +770,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit une spécialisation de la classe de modèle [basic_string](../standard-library/basic-string-class.md) dont les objets peuvent stocker des copies des séquences de ponctuation.
+Le type décrit une spécialisation du modèle de classe [basic_string](../standard-library/basic-string-class.md) dont les objets peuvent stocker des copies des séquences de ponctuation.
 
 ## <a name="thousands_sep"></a>  moneypunct::thousands_sep
 
@@ -836,4 +836,4 @@ English_Canada.1252 domestic thousands separator: ,
 ## <a name="see-also"></a>Voir aussi
 
 [\<locale>](../standard-library/locale.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
