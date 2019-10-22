@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 59424a9f6a9434b5d7d3f4298cbb0bc03926621c
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 19068de41cfdcb17ae624858c137bf624851479f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957062"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684072"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
-Définit la classe de modèle de conteneur vector et plusieurs modèles de prise en charge.
+Définit le vecteur de modèle de classe de conteneur et plusieurs modèles de prise en charge.
 
 Le conteneur `vector` permet d'organiser les éléments d'un type donné dans une séquence linéaire. Il fournit un accès aléatoire rapide à chaque élément, et gère les ajouts et suppressions dynamiques dans la séquence. Il est recommandé d'utiliser le conteneur `vector` pour une séquence si votre priorité est de garantir des performances optimales au niveau de l'accès aléatoire.
 
 > [!NOTE]
-> La \<bibliothèque Vector > utilise également l' `#include <initializer_list>` instruction.
+> La bibliothèque de > \<vector utilise également l’instruction `#include <initializer_list>`.
 
 Pour plus d’informations sur la classe `vector`, consultez [vector, classe](../standard-library/vector-class.md). Pour plus d’informations sur la spécialisation `vector<bool>`, consultez [vector\<bool>, classe](../standard-library/vector-bool-class.md).
 
@@ -77,16 +77,16 @@ void swap (
 
 ### <a name="parameters"></a>Paramètres
 
-*Type*\
+@No__t_1 de *type*
 Paramètre de modèle pour le type de données stockées dans le vecteur.
 
-*Allocateur*\
+@No__t_1 *Allocator*
 Paramètre de modèle pour l'objet allocateur stocké qui gère l'allocation et la libération de mémoire.
 
-*gauche*\
+\ *gauche*
 Premier vecteur (à gauche) dans une opération de comparaison.
 
-*Oui*\
+\ *droit*
 Deuxième vecteur (à droite) dans une opération de comparaison.
 
 ## <a name="members"></a>Membres
@@ -106,16 +106,16 @@ Deuxième vecteur (à droite) dans une opération de comparaison.
 
 |||
 |-|-|
-|[vector, classe](../standard-library/vector-class.md)|Classe de modèle de conteneurs de séquence qui organisent les éléments d'un type donné dans une disposition linéaire et fournissent un accès aléatoire rapide à chaque élément.|
+|[vector, classe](../standard-library/vector-class.md)|Modèle de classe de conteneurs de séquence qui organisent les éléments d'un type donné dans une disposition linéaire et fournissent un accès aléatoire rapide à chaque élément.|
 
 ### <a name="specializations"></a>Spécialisations
 
 |||
 |-|-|
 |hash|Retourne un hachage du vecteur.|
-|[vector\<bool>, classe](../standard-library/vector-bool-class.md)|Spécialisation complète de la classe de modèle vector pour les éléments de type `bool` possédant un allocateur pour le type sous-jacent utilisé par la spécialisation.|
+|[vector\<bool>, classe](../standard-library/vector-bool-class.md)|Spécialisation complète du vecteur de modèle de classe pour les éléments de type `bool` avec un allocateur pour le type sous-jacent utilisé par la spécialisation.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<vector>
 
@@ -123,6 +123,6 @@ Deuxième vecteur (à droite) dans une opération de comparaison.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

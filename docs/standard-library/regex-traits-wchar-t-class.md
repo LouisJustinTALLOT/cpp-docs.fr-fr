@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - regex_traits<wchar_t> class
 ms.assetid: 288d6fdb-fb8e-4a4d-904a-53916be7f95b
-ms.openlocfilehash: 1a1f08509a20b5a0eabb26b715e22bf7c6de544c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 31c47e43996ee0d6d8a495c0ff294e296b4b5888
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451476"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686656"
 ---
-# <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt;, classe
+# <a name="regex_traitsltwchar_tgt-class"></a>regex_traits&lt;wchar_t&gt;, classe
 
-Spécialisation `regex_traits` de pour **wchar_t**.
+Spécialisation de `regex_traits` pour **wchar_t**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,7 +28,7 @@ class regex_traits<wchar_t>
 
 La classe est une spécialisation explicite de la classe de modèle [regex_traits](../standard-library/regex-traits-class.md) pour les éléments de type **wchar_t** (afin qu’elle puisse tirer parti des fonctions de bibliothèque qui manipulent des objets de ce type).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<regex>
 
@@ -37,11 +37,11 @@ La classe est une spécialisation explicite de la classe de modèle [regex_trait
 ## <a name="see-also"></a>Voir aussi
 
 [\<regex>](../standard-library/regex.md)\
-[regex_constants, classe](../standard-library/regex-constants-class.md)\
-[regex_error, classe](../standard-library/regex-error-class.md)\
-[\<fonctions Regex >](../standard-library/regex-functions.md)\
-[regex_iterator, classe](../standard-library/regex-iterator-class.md)\
-[\<opérateurs > Regex](../standard-library/regex-operators.md)\
-[regex_token_iterator, classe](../standard-library/regex-token-iterator-class.md)\
-[regex_traits, classe](../standard-library/regex-traits-class.md)\
+\ de la [classe regex_constants](../standard-library/regex-constants-class.md)
+\ de la [classe regex_error](../standard-library/regex-error-class.md)
+[fonctions de > \<regex](../standard-library/regex-functions.md) \
+\ de la [classe regex_iterator](../standard-library/regex-iterator-class.md)
+[\<regex > opérateurs](../standard-library/regex-operators.md) \
+\ de la [classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)
+\ de la [classe regex_traits](../standard-library/regex-traits-class.md)
 [\<regex>, typedefs](../standard-library/regex-typedefs.md)

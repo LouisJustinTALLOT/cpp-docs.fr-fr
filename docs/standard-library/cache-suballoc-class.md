@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7a21f0c4f81277200ff069baf751fa013a3c0cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449654"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688347"
 ---
-# <a name="cachesuballoc-class"></a>cache_suballoc, classe
+# <a name="cache_suballoc-class"></a>cache_suballoc, classe
 
 Définit un [allocateur de blocs](../standard-library/allocators-header.md) qui alloue et désalloue des blocs de mémoire de taille unique.
 
@@ -36,9 +36,9 @@ class cache_suballoc
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle cache_suballoc stocke les blocs de mémoire désalloués dans une liste libre avec une `freelist<sizeof(Type), max_unbounded>`longueur illimitée, à l’aide de et sous-alloue des blocs de mémoire à partir d’un plus grand segment alloué avec l' **opérateur New** lorsque la liste libre est vide.
+Le modèle de classe cache_suballoc stocke les blocs de mémoire désalloués dans une liste libre avec une longueur illimitée, à l’aide de `freelist<sizeof(Type), max_unbounded>` et sous-alloue des blocs de mémoire à partir d’un plus grand segment alloué avec l' **opérateur New** lorsque la liste libre est vide.
 
-Chaque bloc contient `Sz * Nelts` des octets de mémoire utilisable et les données que l’opérateur **New** et l' **opérateur delete** requièrent. Les segments alloués ne sont jamais libérés.
+Chaque bloc contient `Sz * Nelts` octets de mémoire utilisable et les données que l’opérateur **New** et l' **opérateur delete** requièrent. Les segments alloués ne sont jamais libérés.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -53,7 +53,7 @@ Chaque bloc contient `Sz * Nelts` des octets de mémoire utilisable et les donn�
 |[allocate](#allocate)|Alloue un bloc de mémoire.|
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<allocators>
 

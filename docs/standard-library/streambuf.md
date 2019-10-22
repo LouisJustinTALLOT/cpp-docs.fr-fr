@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - streambuf header
 ms.assetid: 4365b25c-5831-488b-b9c2-867bfe961b89
-ms.openlocfilehash: 87fb74f62abffdd62b8c0179b13f53d96439d6c6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ca5f53d67bb32e59c20d1d440879144f0a617c66
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449579"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686024"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
-Incluez l’en-tête standard iostreams \<streambuf> pour définir la classe de modèle [basic_streambuf](../standard-library/basic-streambuf-class.md), qui est essentielle au fonctionnement des classes iostreams. Cet en-tête est généralement inclus pour vous par l'un des autres en-tête iostream ; vous devez rarement l'inclure directement.
+Incluez l’en-tête standard iostreams \<streambuf > pour définir le modèle de classe [basic_streambuf](../standard-library/basic-streambuf-class.md), qui est de base au fonctionnement des classes iostreams. Cet en-tête est généralement inclus pour vous par l'un des autres en-tête iostream ; vous devez rarement l'inclure directement.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,17 +28,17 @@ Incluez l’en-tête standard iostreams \<streambuf> pour définir la classe de 
 |Nom de type|Description|
 |-|-|
 |[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Spécialisation de `basic_streambuf` qui utilise **char** comme paramètres de modèle.|
-|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Spécialisation de `basic_streambuf` qui utilise **wchar_t** comme paramètres de modèle.|
+|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Une spécialisation de `basic_streambuf` qui utilise **wchar_t** comme paramètres de modèle.|
 
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|Class|Description|
 |-|-|
-|[basic_streambuf, classe](basic-streambuf-class.md)|La classe de modèle décrit une classe de base abstraite pour dériver une mémoire tampon de flux qui contrôle la transmission des éléments depuis et vers une représentation spécifique d'un flux.|
+|[basic_streambuf, classe](basic-streambuf-class.md)|Le modèle de classe décrit une classe de base abstraite pour dériver une mémoire tampon de flux qui contrôle la transmission d’éléments vers et à partir d’une représentation spécifique d’un flux.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream, programmation](../standard-library/iostream-programming.md)\
 [iostreams, conventions](../standard-library/iostreams-conventions.md)

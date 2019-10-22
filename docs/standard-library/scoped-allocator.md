@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - scoped_allocator Header
 ms.assetid: d20175b8-96be-4896-8141-3faba45e0005
-ms.openlocfilehash: 8e1a51f1f9f5693b422ec1e680784a199541bb4a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 403a05a75fe3ce7bc006c903af00e7536f4a6ea2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451800"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686478"
 ---
-# <a name="ltscopedallocatorgt"></a>&lt;scoped_allocator&gt;
+# <a name="ltscoped_allocatorgt"></a>&lt;scoped_allocator&gt;
 
-Définit la classe de modèle de conteneur scoped_allocator.
+Définit le modèle de classe de conteneur scoped_allocator.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,19 +25,19 @@ Définit la classe de modèle de conteneur scoped_allocator.
 
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|opérateur|Description|
 |-|-|
 |[!=, opérateur](../standard-library/scoped-allocator-operators.md#op_neq)|Teste si l’objet scoped_allocator à gauche de l’opérateur n’est pas égal à l’objet list à droite.|
 |[operator==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Teste si l’objet scoped_allocator à gauche de l’opérateur est égal à l’objet list à droite.|
 
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|Class|Description|
 |-|-|
-|[scoped_allocator_adaptor, classe](../standard-library/scoped-allocator-adaptor-class.md)|Classe de modèle qui encapsule une imbrication d’un ou de plusieurs allocateurs.|
+|[scoped_allocator_adaptor, classe](../standard-library/scoped-allocator-adaptor-class.md)|Modèle de classe qui encapsule une imbrication d’un ou de plusieurs allocateurs.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

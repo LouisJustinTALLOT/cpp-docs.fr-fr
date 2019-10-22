@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: 585f970f1a3482412ff225454b7acce9060e2d7c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 071e9369cdd0469d8ddc1c6649a3801732d8e23f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449432"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688218"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-Définit la classe `complex` de modèle de conteneur et ses modèles de prise en charge.
+Définit le `complex` de modèle de classe de conteneur et ses modèles de prise en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête** : \<complex>
 
@@ -28,9 +28,9 @@ Définit la classe `complex` de modèle de conteneur et ses modèles de prise en
 
 Un nombre complexe est une paire ordonnée de nombres réels. En termes purement géométriques, le plan complexe est le plan réel à deux dimensions. Les qualités spéciales du plan complexe qui le distinguent du plan réel sont dues au fait qu'il a une structure algébrique supplémentaire. Cette structure algébrique a deux opérations fondamentales :
 
-- Addition définie comme (*a*, *b*) + (*c*, *d*) = (*a* + *c*, *b* + *d*)
+- Addition définie comme (*a*, *b*) + (*c*, *d*) = (*a*  + *c*, *b*  + *d*)
 
-- Multiplication définie comme (*a*, *b*) \* (*c*, *d*) = (*AC* - *BD*, *ad* + *BC*)
+- Multiplication définie comme (*a*, *b*) \* (*c*, *d*) = (*AC*  - *BD*, *ad*  + *BC*)
 
 L'ensemble de nombres complexes avec les opérations d'addition complexe et de multiplication complexe est un domaine au sens algébrique standard :
 
@@ -40,21 +40,21 @@ L'ensemble de nombres complexes avec les opérations d'addition complexe et de m
 
 - L’inverse additif pour un nombre complexe (*a*, *b*) est (-*a*,-*b*) et l’inverse multiplicatif pour tous les nombres complexes, à l’exception de (0, 0) est
 
-   (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
+   (*a/* (*a*<sup>2</sup>  + *b*<sup>2</sup>),-*b*/(*a*<sup>2</sup>  + *b*<sup>2</sup>))
 
-En représentant un nombre complexe *z* = (*a*, *b*) sous la forme *z* = *a* + *bi*, où *i*<sup>2</sup> =-1, les règles de l’algèbre de l’ensemble des nombres réels peuvent être appliquées au ensemble de nombres complexes et à leurs composants. Par exemple :
+En représentant un nombre complexe *z* = (*a*, *b*) sous la forme *z*  = *un*  + *bi*, où *i*<sup>2</sup> =-1, les règles de l’algèbre de l’ensemble des nombres réels peuvent être appliquées au jeu de valeurs complexes. les nombres et leurs composants. Exemple :
 
-   (1 + 2*i*)  \* \* <sup></sup>    (2 + 3 i) = 1 (2 + 3 i) + 2 i (2 + 3 i) = (2 + 3 i) + (4 i + 6 i 2) = (2-6) + (3 + 4) i =-4 + 7 i \*
+   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7*i*
 
 Le système des nombres complexes est un domaine, mais il n'est pas un domaine ordonné. Il n’y a pas d’ordre des nombres complexes, en ce qui concerne le champ des nombres réels et de ses sous-ensembles. les inégalités ne peuvent donc pas être appliquées aux nombres complexes comme c’est le cas des nombres réels.
 
 Il existe trois formes courantes de représentation d’un nombre complexe *z* :
 
-- Cartésien: *z* = a*bi*  + 
+- Cartésien : *z*  = *un*  + *bi*
 
-- Polaire: *z* = *r* (COS *p* + *i* Sin *p*)
+- Polaire : *z*  = *r* (COS *p*  + *i* Sin *p*)
 
-- Exponentiel: *z* = *r* \* *e*<sup>*IP*</sup>
+- Exponentiel : *z*  = *r* \* *e*<sup>*IP*</sup>
 
 Les termes utilisés dans ces représentations standard d'un nombre complexe s'entendent comme suit :
 
@@ -117,10 +117,10 @@ Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs
 
 |||
 |-|-|
-|[complex\<double>](../standard-library/complex-double.md)|La classe de modèle explicitement spécialisée décrit un objet qui stocke une paire ordonnée d’objets, tous deux de type **double**, où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
-|[complex\<float>](../standard-library/complex-float.md)|La classe de modèle explicitement spécialisée décrit un objet qui stocke une paire ordonnée d’objets, tous deux de type **float**, où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
-|[complex\<long double>](../standard-library/complex-long-double.md)|La classe de modèle explicitement spécialisée décrit un objet qui stocke une paire ordonnée d’objets, tous deux de type **long double**, où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
-|[complex](../standard-library/complex-class.md)|La classe de modèle décrit un objet utilisé pour représenter le système des nombres complexes et pour effectuer des opérations arithmétiques complexes.|
+|[complex\<double>](../standard-library/complex-double.md)|Le modèle de classe explicitement spécialisé décrit un objet qui stocke une paire ordonnée d’objets, tous deux de type **double**, où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
+|[complex\<float>](../standard-library/complex-float.md)|Le modèle de classe explicitement spécialisé décrit un objet qui stocke une paire ordonnée d’objets, tous deux de type **float**, où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
+|[complex\<long double>](../standard-library/complex-long-double.md)|Le modèle de classe explicitement spécialisé décrit un objet qui stocke une paire ordonnée d’objets, tous deux de type **long double**, où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
+|[complex](../standard-library/complex-class.md)|Le modèle de classe décrit un objet utilisé pour représenter le système de nombres complexes et effectuer des opérations arithmétiques complexes.|
 
 ### <a name="literals"></a>Littéraux
 
@@ -128,11 +128,11 @@ L’en-tête \<complex> définit les [littéraux définis par l’utilisateur](.
 
 |||
 |-|-|
-|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Cette`complex<long double>{0.0L, static_cast<long double>(d)}`|
+|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Retourne : `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|Retourne : `complex<double>{0.0, static_cast<double>(d)}`.|
 |`constexpr complex<float> operator""if(long double d)`<br />`constexpr complex<float> operator""if(unsigned long long d)`|Retourne : `complex<float>{0.0f, static_cast<float>(d)}`.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

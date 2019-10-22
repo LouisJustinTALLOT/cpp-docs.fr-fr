@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: 752226c9cacfdd36b93890502d62187f7b44a8da
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1c63002db7de4ebce348505c4e757e6901861a93
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454937"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688821"
 ---
-# <a name="uniformrealdistribution-class"></a>uniform_real_distribution, classe
+# <a name="uniform_real_distribution-class"></a>uniform_real_distribution, classe
 
 Génère une distribution à virgule flottante uniforme (toutes les valeurs ont le même degré de probabilité) dans une plage de sortie qui est inclusive-exclusive.
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType*\
-Le type de résultat à virgule flottante, par défaut, est **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* \
+Le type de résultat à virgule flottante, par défaut, est **double**. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution inclusive-exclusive qui produit des valeurs d'un type à virgule flottante intégral spécifié par l'utilisateur avec une distribution pour que toutes les valeurs aient le même degré de probabilité. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution inclusive et exclusive qui produit des valeurs d’un type à virgule flottante intégral spécifié par l’utilisateur avec une distribution afin que chaque valeur soit également probable. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -85,7 +85,7 @@ La classe de modèle décrit une distribution inclusive-exclusive qui produit de
 
 Le membre de propriété `a()` retourne la limite minimale de la distribution stockée actuellement, tandis que `b()` retourne la limite maximale stockée actuellement. Pour cette classe de distribution, ces valeurs minimales et maximales sont les mêmes que celles retournées par les fonctions de propriété courantes `min()` et `max()` décrites dans la rubrique [\<random>](../standard-library/random.md).
 
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.
 
@@ -172,7 +172,7 @@ Distribution for 10 samples:
          10: 0.8795716566
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 
@@ -189,13 +189,13 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*un*\
+*\*
 Limite inférieure pour les valeurs aléatoires, valeur comprise.
 
-*p*\
+*b* \
 Limite supérieure pour les valeurs aléatoires, valeur non comprise.
 
-*Parm*\
+*param* \
 Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -224,13 +224,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*un*\
+*\*
 Limite inférieure pour les valeurs aléatoires, valeur comprise.
 
-*p*\
+*b* \
 Limite supérieure pour les valeurs aléatoires, valeur non comprise.
 
-*Oui*\
+\ *droit*
 Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - std::ctype [C++], toupper
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
-ms.openlocfilehash: 15efae85baf3f03b764c7117538d7cc179553050
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 640b2cc8506e498006feedbea6825a0e51a88209
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450888"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688165"
 ---
 # <a name="ctype-class"></a>ctype, classe
 
@@ -56,26 +56,26 @@ class ctype : public ctype_base;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType*\
+*CharType* \
 Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
 ## <a name="remarks"></a>Notes
 
 Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet statique possède une valeur stockée initiale de zéro. La première tentative d’accès à sa valeur stockée entraîne le stockage d’une valeur positive unique dans `id`. Les critères de classification sont fournis par un type de masque de bits imbriqué dans la classe de base ctype_base.
 
-La bibliothèque C++ Standard définit deux spécialisations explicites de cette classe de modèle :
+La C++ bibliothèque standard définit deux spécialisations explicites de ce modèle de classe :
 
-- `ctype<char>`, une spécialisation explicite dont les différences sont décrites séparément. Pour plus d’informations, [consultez&lt;CType&gt; char Class](../standard-library/ctype-char-class.md).
+- `ctype<char>`, une spécialisation explicite dont les différences sont décrites séparément. Pour plus d’informations, consultez [ctype &lt;char &gt; Class](../standard-library/ctype-char-class.md).
 
 - `ctype<wchar_t>`, qui traite les éléments comme des caractères larges.
 
-Autres spécialisations de la classe `ctype<CharType>`de modèle:
+Autres spécialisations du modèle de classe `ctype<CharType>` :
 
-- Convertit une valeur *ch* de type *CharType* en une valeur de type **char** avec `(char)ch`l’expression.
+- Convertit une valeur *ch* de type *CharType* en une valeur de type **char** avec l’expression `(char)ch`.
 
-- Convertit une valeur *Byte* de type **char** en une valeur de type *CharType* avec `CharType(byte)`l’expression.
+- Convertit une valeur *Byte* de type **char** en une valeur de type *CharType* avec l’expression `CharType(byte)`.
 
-Toutes les autres opérations sont effectuées sur les valeurs **char** de la même façon que pour la `ctype<char>`spécialisation explicite.
+Toutes les autres opérations sont effectuées sur les valeurs **char** de la même façon que pour la spécialisation explicite `ctype<char>`.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -94,21 +94,21 @@ Toutes les autres opérations sont effectuées sur les valeurs **char** de la m�
 |Fonction membre|Description|
 |-|-|
 |[do_is](#do_is)|Fonction virtuelle appelée pour vérifier si un caractère unique possède un attribut particulier, ou pour classer les attributs de chaque caractère dans une plage et les stocker dans un tableau.|
-|[do_narrow](#do_narrow)|Fonction virtuelle appelée pour convertir un caractère de type `CharType` utilisé par les paramètres régionaux en caractère correspondant de type **char** dans le jeu de caractères natif.|
+|[do_narrow](#do_narrow)|Fonction virtuelle appelée pour convertir un caractère de type `CharType` utilisé par des paramètres régionaux au caractère correspondant de type **char** dans le jeu de caractères natif.|
 |[do_scan_is](#do_scan_is)|Fonction virtuelle appelée pour rechercher le premier caractère d'une plage qui correspond au masque spécifié.|
 |[do_scan_not](#do_scan_not)|Fonction virtuelle appelée pour rechercher le premier caractère d'une plage qui ne correspond pas au masque spécifié.|
 |[do_tolower](#do_tolower)|Fonction virtuelle appelée pour convertir un caractère ou une plage de caractères en minuscules.|
 |[do_toupper](#do_toupper)|Fonction virtuelle appelée pour convertir un caractère ou une plage de caractères en majuscules.|
-|[do_widen](#do_widen)|Fonction virtuelle appelée pour convertir un caractère de type **char** dans le jeu de caractères natif en caractère correspondant de type `CharType` utilisé par les paramètres régionaux.|
+|[do_widen](#do_widen)|Fonction virtuelle appelée pour convertir un caractère de type **char** dans le jeu de caractères natif en caractère correspondant de type `CharType` utilisé par des paramètres régionaux.|
 |[is](#is)|Vérifie si un caractère possède un attribut spécifique, ou classe les attributs de chaque caractère dans une plage et les stocke dans un tableau.|
 |[narrow](#narrow)|Convertit un caractère de type `CharType` utilisé par les paramètres régionaux en caractère correspondant de type char dans le jeu de caractères natif.|
 |[scan_is](#scan_is)|Localise le premier caractère d'une plage qui correspond au masque spécifié.|
 |[scan_not](#scan_not)|Localise le premier caractère d'une plage qui ne correspond pas au masque spécifié.|
 |[tolower](#tolower)|Convertit un caractère ou une plage de caractères en minuscules.|
 |[toupper](#toupper)|Convertit un caractère ou une plage de caractères en majuscules.|
-|[widen](#widen)|Convertit un caractère de type **char** dans le jeu de caractères natif en caractère correspondant de `CharType` type utilisé par les paramètres régionaux.|
+|[widen](#widen)|Convertit un caractère de type **char** dans le jeu de caractères natif en caractère correspondant de type `CharType` utilisé par des paramètres régionaux.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -140,18 +140,18 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs*\
+*_Refs* \
 Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes:
+Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes :
 
-- 0 : La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
-- 1 : La durée de vie de l’objet doit être gérée manuellement.
+- 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \>1: Ces valeurs ne sont pas définies.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
@@ -174,19 +174,19 @@ virtual const CharType *do_is(
 
 ### <a name="parameters"></a>Paramètres
 
-*maskVal*\
+*maskVal* \
 Valeur de masque pour laquelle le caractère doit être vérifié.
 
-*cascade*\
+*ch* \
 Caractère dont les attributs doivent être vérifiés.
 
-*premier*\
+*premier* \
 Pointeur vers le premier caractère de la plage dont les attributs doivent être classés.
 
-*famille*\
+*dernier* \
 Pointeur vers le caractère juste après le dernier caractère de la plage dont les attributs doivent être classés.
 
-*dest*\
+*dest* \
 Pointeur vers le début du tableau dans lequel les valeurs de masque qui caractérisent les attributs de chaque caractère doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -199,13 +199,13 @@ La seconde fonction membre retourne un tableau contenant les valeurs de masque q
 
 Les valeurs de masque qui classent les attributs des caractères sont fournies par la classe [ctype_base](../standard-library/ctype-base-class.md) de laquelle dérive ctype. La première fonction membre peut accepter pour son premier paramètre des expressions appelées masques de bits et formées à partir de la combinaison de valeurs de masque par les opérateurs logiques au niveau du bit (&#124; , & , ^ , ~).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [is](#is), qui appelle `do_is`.
 
 ## <a name="do_narrow"></a>  ctype::do_narrow
 
-Fonction virtuelle appelée pour convertir un caractère de type `CharType` utilisé par les paramètres régionaux en caractère correspondant de type **char** dans le jeu de caractères natif.
+Fonction virtuelle appelée pour convertir un caractère de type `CharType` utilisé par des paramètres régionaux au caractère correspondant de type **char** dans le jeu de caractères natif.
 
 ```cpp
 virtual char do_narrow(
@@ -221,30 +221,30 @@ virtual const CharType* do_narrow(
 
 ### <a name="parameters"></a>Paramètres
 
-*cascade*\
+*ch* \
 Caractère de type `Chartype` utilisé par les paramètres régionaux à convertir.
 
-*valeurs*\
+\ *par défaut*
 Valeur par défaut assignée par la fonction membre aux caractères de type `CharType` qui n’ont pas de caractères équivalents de type **char**.
 
-*premier*\
+*premier* \
 Pointeur vers le premier caractère de la plage de caractères à convertir.
 
-*famille*\
+*dernier* \
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
 
-*dest*\
+*dest* \
 Pointeur const vers le premier caractère de type **char** dans la plage de destination qui stocke la plage de caractères convertie.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La première fonction membre protégée retourne le caractère natif de type char qui correspond au caractère de paramètre de type `CharType` ou *default* si aucun équivalent n’est défini.
+La première fonction membre protégée retourne le caractère natif de type char qui correspond au caractère de paramètre de type `CharType` ou *par défaut* si aucun équivalent n’est défini.
 
 La deuxième fonction membre protégée retourne un pointeur vers la plage de destination de caractères natifs convertis à partir de caractères de type `CharType`.
 
 ### <a name="remarks"></a>Notes
 
-La deuxième fonction de modèle de membre protégée `dest`stocke dans [ `do_narrow` `I`] `first` la `I`valeur ( `default`[], `I` ) pour dans l’intervalle [ `last` 0,  -  `first`).
+La deuxième fonction de modèle de membre protégée stocke dans `dest` [`I`] la valeur `do_narrow` (`first` [`I`], `default`), pour `I` dans l’intervalle [0, `last`  -  `first`).
 
 ### <a name="example"></a>Exemple
 
@@ -263,13 +263,13 @@ virtual const CharType *do_scan_is(
 
 ### <a name="parameters"></a>Paramètres
 
-*maskVal*\
+*maskVal* \
 Valeur de masque qui doit correspondre à un caractère.
 
-*premier*\
+*premier* \
 Pointeur vers le premier caractère de la plage à analyser.
 
-*famille*\
+*dernier* \
 Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -278,7 +278,7 @@ Pointeur vers le premier caractère d’une plage qui correspond à un masque sp
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée retourne le plus petit pointeur `ptr` de la plage [ `first`, `last`) pour lequel [do_is](#do_is)( `maskVal`, \* `ptr`) a la valeur true.
+La fonction membre protégée retourne le plus petit pointeur `ptr` dans la plage [`first`, `last`) pour lequel [do_is](#do_is)(`maskVal`, \* `ptr`) a la valeur true.
 
 ### <a name="example"></a>Exemple
 
@@ -297,13 +297,13 @@ virtual const CharType *do_scan_not(
 
 ### <a name="parameters"></a>Paramètres
 
-*maskVal*\
+*maskVal* \
 Valeur de masque qui ne doit pas correspondre à un caractère.
 
-*premier*\
+*premier* \
 Pointeur vers le premier caractère de la plage à analyser.
 
-*famille*\
+*dernier* \
 Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -312,7 +312,7 @@ Pointeur vers le premier caractère d’une plage qui ne correspond pas à un ma
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée retourne le plus petit pointeur `ptr` de la plage [ `first`, `last`) pour lequel [do_is](#do_is)( `maskVal`, \* `ptr`) a la valeur false.
+La fonction membre protégée retourne le plus petit pointeur `ptr` dans la plage [`first`, `last`) pour lequel [do_is](#do_is)(`maskVal`, \* `ptr`) a la valeur false.
 
 ### <a name="example"></a>Exemple
 
@@ -332,13 +332,13 @@ virtual const CharType *do_tolower(
 
 ### <a name="parameters"></a>Paramètres
 
-*cascade*\
+*ch* \
 Caractère à convertir en minuscule.
 
-*premier*\
+*premier* \
 Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
 
-*famille*\
+*dernier* \
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -347,7 +347,7 @@ La première fonction membre protégée retourne la forme minuscule du paramètr
 
 ### <a name="remarks"></a>Notes
 
-La deuxième fonction de modèle de membre protégé remplace `first` chaque `I`élément [] `I` , pour dans l’intervalle [ `last`0,  -  `first`) `do_tolower`, `first` par ([ `I`]).
+La deuxième fonction de modèle de membre protégé remplace chaque élément `first` [`I`], par `I` dans l’intervalle [0, `last`  -  `first`), avec `do_tolower` (`first` [`I`]).
 
 ### <a name="example"></a>Exemple
 
@@ -367,13 +367,13 @@ virtual const CharType *do_toupper(
 
 ### <a name="parameters"></a>Paramètres
 
-*cascade*\
+*ch* \
 Caractère à convertir en majuscule.
 
-*premier*\
+*premier* \
 Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
 
-*famille*\
+*dernier* \
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -382,7 +382,7 @@ La première fonction membre protégée retourne la forme majuscule du paramètr
 
 ### <a name="remarks"></a>Notes
 
-La deuxième fonction de modèle de membre protégé remplace `first` chaque `I`élément [] `I` , pour dans l’intervalle [ `last`0,  -  `first`) `do_toupper`, `first` par ([ `I`]).
+La deuxième fonction de modèle de membre protégé remplace chaque élément `first` [`I`], par `I` dans l’intervalle [0, `last`  -  `first`), avec `do_toupper` (`first` [`I`]).
 
 ### <a name="example"></a>Exemple
 
@@ -390,7 +390,7 @@ Consultez l’exemple relatif à [toupper](#toupper), qui appelle `do_toupper`.
 
 ## <a name="do_widen"></a>  ctype::do_widen
 
-Fonction virtuelle appelée pour convertir un caractère de type **char** dans le jeu de caractères natif en caractère correspondant de type `CharType` utilisé par les paramètres régionaux.
+Fonction virtuelle appelée pour convertir un caractère de type **char** dans le jeu de caractères natif en caractère correspondant de type `CharType` utilisé par des paramètres régionaux.
 
 ```cpp
 virtual CharType do_widen(char byte) const;
@@ -406,26 +406,26 @@ virtual const char *do_widen(
 *byte*\
 Caractère de type **char** dans le jeu de caractères natif à convertir.
 
-*premier*\
+*premier* \
 Pointeur vers le premier caractère de la plage de caractères à convertir.
 
-*famille*\
+*dernier* \
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
 
-*dest*\
+*dest* \
 Pointeur vers le premier caractère de type `CharType` dans la plage de destination qui stocke la plage de caractères convertis.
 
 ### <a name="return-value"></a>Valeur de retour
 
 La première fonction membre protégée retourne le caractère de type `CharType` qui correspond au caractère de paramètre de type natif **char**.
 
-La deuxième fonction membre protégée retourne un pointeur vers la plage de destination de caractères de `CharType` type utilisés par des paramètres régionaux convertis à partir de caractères natifs de type **char**.
+La deuxième fonction membre protégée retourne un pointeur vers la plage de destination de caractères de type `CharType` utilisés par des paramètres régionaux convertis à partir de caractères natifs de type **char**.
 
 ### <a name="remarks"></a>Notes
 
 La deuxième fonction membre de modèle protégée stocke dans `dest`[ `I`] la valeur `do_widen`( `first`[ `I`]) pour `I` dans l’intervalle [0, `last` - `first`).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [widen](#widen), qui appelle `do_widen`.
 
@@ -444,24 +444,24 @@ const CharType *is(
 
 ### <a name="parameters"></a>Paramètres
 
-*maskVal*\
+*maskVal* \
 Valeur de masque pour laquelle le caractère doit être vérifié.
 
-*cascade*\
+*ch* \
 Caractère dont les attributs doivent être vérifiés.
 
-*premier*\
+*premier* \
 Pointeur vers le premier caractère de la plage dont les attributs doivent être classés.
 
-*famille*\
+*dernier* \
 Pointeur vers le caractère juste après le dernier caractère de la plage dont les attributs doivent être classés.
 
-*dest*\
+*dest* \
 Pointeur vers le début du tableau dans lequel les valeurs de masque qui caractérisent les attributs de chaque caractère doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La première fonction membre retourne la **valeur true** si le caractère testé a l’attribut décrit par la valeur de masque; **false** s’il ne peut pas avoir l’attribut.
+La première fonction membre retourne la **valeur true** si le caractère testé a l’attribut décrit par la valeur de masque ; **false** s’il ne peut pas avoir l’attribut.
 
 La deuxième fonction membre retourne un pointeur vers le dernier caractère de la plage dont les attributs doivent être classés.
 
@@ -510,7 +510,7 @@ int main() {
 
 ## <a name="narrow"></a>  ctype::narrow
 
-Convertit des caractères `CharType` de type utilisés par des paramètres régionaux en caractères correspondants de type **char** dans le jeu de caractères natif.
+Convertit les caractères de type `CharType` utilisés par des paramètres régionaux en caractères correspondants de type **char** dans le jeu de caractères natif.
 
 ```cpp
 char narrow(CharType ch, char default = '\0') const;
@@ -524,19 +524,19 @@ const CharType* narrow(
 
 ### <a name="parameters"></a>Paramètres
 
-*cascade*\
+*ch* \
 Caractère de type `Chartype` utilisé par les paramètres régionaux à convertir.
 
-*valeurs*\
+\ *par défaut*
 Valeur par défaut assignée par la fonction membre aux caractères de type `CharType` qui n’ont pas de caractères équivalents de type **char**.
 
-*premier*\
+*premier* \
 Pointeur vers le premier caractère de la plage de caractères à convertir.
 
-*famille*\
+*dernier* \
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
 
-*dest*\
+*dest* \
 Pointeur const vers le premier caractère de type **char** dans la plage de destination qui stocke la plage de caractères convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -549,7 +549,7 @@ La deuxième fonction membre retourne un pointeur vers la plage de destination d
 
 La première fonction membre retourne [do_narrow](#do_narrow)(`ch`, `default`). La deuxième fonction membre retourne [do_narrow](#do_narrow) (`first`, `last`, `default`, `dest`). Seuls les caractères sources de base ont la garantie d’avoir une image unique inverse `CharType` sous `narrow`. Pour ces caractères sources de base, l’invariant suivant contient : `narrow` ( [élargir](#widen) ( **c** ), 0) == **c**.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // ctype_narrow.cpp
@@ -588,13 +588,13 @@ const CharType *scan_is(
 
 ### <a name="parameters"></a>Paramètres
 
-*maskVal*\
+*maskVal* \
 Valeur de masque qui doit correspondre à un caractère.
 
-*premier*\
+*premier* \
 Pointeur vers le premier caractère de la plage à analyser.
 
-*famille*\
+*dernier* \
 Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -605,7 +605,7 @@ Pointeur vers le premier caractère d’une plage qui correspond à un masque sp
 
 La fonction membre retourne [do_scan_is](#do_scan_is)(`maskVal`, `first`, `last`).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // ctype_scan_is.cpp
@@ -644,13 +644,13 @@ const CharType *scan_not(
 
 ### <a name="parameters"></a>Paramètres
 
-*maskVal*\
+*maskVal* \
 Valeur de masque qui ne doit pas correspondre à un caractère.
 
-*premier*\
+*premier* \
 Pointeur vers le premier caractère de la plage à analyser.
 
-*famille*\
+*dernier* \
 Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -661,7 +661,7 @@ Pointeur vers le premier caractère d’une plage qui ne correspond pas à un ma
 
 La fonction membre retourne [do_scan_not](#do_scan_not)(`maskVal`, `first`, `last`).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // ctype_scan_not.cpp
@@ -699,13 +699,13 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*cascade*\
+*ch* \
 Caractère à convertir en minuscule.
 
-*premier*\
+*premier* \
 Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
 
-*famille*\
+*dernier* \
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -754,13 +754,13 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*cascade*\
+*ch* \
 Caractère à convertir en majuscule.
 
-*premier*\
+*premier* \
 Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
 
-*famille*\
+*dernier* \
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -800,7 +800,7 @@ The uppercase string is: HELLO, MY NAME IS JOHN
 
 ## <a name="widen"></a>  ctype::widen
 
-Convertit un caractère de type **char** dans le jeu de caractères natif en caractère correspondant de `CharType` type utilisé par les paramètres régionaux.
+Convertit un caractère de type **char** dans le jeu de caractères natif en caractère correspondant de type `CharType` utilisé par des paramètres régionaux.
 
 ```cpp
 CharType widen(char byte) const;
@@ -812,20 +812,20 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 *byte*\
 Caractère de type char du jeu de caractères natifs à convertir.
 
-*premier*\
+*premier* \
 Pointeur vers le premier caractère de la plage de caractères à convertir.
 
-*famille*\
+*dernier* \
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
 
-*dest*\
+*dest* \
 Pointeur vers le premier caractère de type `CharType` dans la plage de destination qui stocke la plage de caractères convertis.
 
 ### <a name="return-value"></a>Valeur de retour
 
 La première fonction membre retourne le caractère de type `CharType` qui correspond au caractère de paramètre de type natif **char**.
 
-La deuxième fonction membre retourne un pointeur vers la plage de destination de caractères de `CharType` type utilisés par des paramètres régionaux convertis à partir de caractères natifs de type **char**.
+La deuxième fonction membre retourne un pointeur vers la plage de destination de caractères de type `CharType` utilisés par des paramètres régionaux convertis à partir de caractères natifs de type **char**.
 
 ### <a name="remarks"></a>Notes
 
@@ -864,4 +864,4 @@ Hello everyone!
 ## <a name="see-also"></a>Voir aussi
 
 [\<locale>](../standard-library/locale.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

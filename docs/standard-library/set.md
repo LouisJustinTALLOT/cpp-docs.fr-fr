@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fed6219c483bdade0132d5faae8b6597bcc5d732
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450522"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686457"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
-Définit les classes de modèle de conteneur set et multiset et leurs modèles de prise en charge.
+Définit l’ensemble de modèles de classe de conteneur et le multiensemble et leurs modèles de prise en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<set>
 
 **Espace de noms :** std
 
 > [!NOTE]
-> La \<bibliothèque set > utilise également l' `#include <initializer_list>` instruction.
+> La bibliothèque de > \<set utilise également l’instruction `#include <initializer_list>`.
 
 ## <a name="members"></a>Membres
 
@@ -54,6 +54,6 @@ Définit les classes de modèle de conteneur set et multiset et leurs modèles d
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

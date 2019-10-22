@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-ms.openlocfilehash: eb5e1a7b83db561687f83be96c79add8b54589e8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d882edd5ce55b15d03512ca9a55a49bc3424ee7a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455558"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687669"
 ---
-# <a name="moneyget-class"></a>money_get, classe
+# <a name="money_get-class"></a>money_get, classe
 
-La classe de modèle décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler les conversions de séquences de type `CharType` en valeurs monétaires.
+Le modèle de classe décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler les conversions de séquences de type `CharType` en valeurs monétaires.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,10 +36,10 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType*\
+*CharType* \
 Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
-*InputIterator*\
+*InputIterator* \
 Type d'itérateur depuis lequel les fonctions get lisent leur entrée.
 
 ## <a name="remarks"></a>Notes
@@ -67,7 +67,7 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |[do_get](#do_get)|Fonction virtuelle appelée pour extraire une valeur numérique d'une séquence de caractères représentant une valeur monétaire.|
 |[get](#get)|Extrait une valeur numérique d'une séquence de caractères représentant une valeur monétaire.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -105,22 +105,22 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*premier*\
+*premier* \
 Itérateur d’entrée traitant le début de la séquence à convertir.
 
-*famille*\
+*dernier* \
 Itérateur d’entrée traitant la fin de la séquence à convertir.
 
-*IU*\
+@No__t_1 *Intl*
 Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
 
-*Iosbase*\
-Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+*Iosbase* \
+Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
-*Département*\
+@No__t_1 d' *État*
 Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*multiples*\
+\ *Val*
 Chaîne stockant la séquence convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -129,7 +129,7 @@ Itérateur d’entrée qui traite le premier élément au-delà du champ d’ent
 
 ### <a name="remarks"></a>Notes
 
-La première fonction membre protégée virtuelle tente de faire correspondre des éléments séquentiels en commençant au premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée monétaire complet et non vide. En cas de réussite, elle convertit ce champ en une séquence d’un ou plusieurs chiffres décimaux, éventuellement précédée d’un `-`signe moins (), pour représenter le montant et stocke le résultat dans l’objet [STRING_TYPE](#string_type) *Val*. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée monétaire. Dans le cas contraire, la fonction stocke une séquence vide `ios_base::failbit` dans *Val* et définit l' *État*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée monétaire valide. Dans les deux cas, si la valeur de retour est égale à `last`, la fonction définit `ios_base::eofbit` dans `State`.
+La première fonction membre protégée virtuelle tente de faire correspondre des éléments séquentiels en commençant au premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée monétaire complet et non vide. En cas de réussite, elle convertit ce champ en une séquence d’un ou de plusieurs chiffres décimaux, éventuellement précédée d’un signe moins (`-`), pour représenter le montant et stocke le résultat dans l’objet [STRING_TYPE](#string_type) *Val*. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée monétaire. Dans le cas contraire, la fonction stocke une séquence vide dans *Val* et définit `ios_base::failbit` dans *État*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée monétaire valide. Dans les deux cas, si la valeur de retour est égale à `last`, la fonction définit `ios_base::eofbit` dans `State`.
 
 La deuxième fonction membre protégée virtuelle se comporte comme la première, sauf qu’en cas de réussite, elle convertit la séquence de chiffres éventuellement signée en une valeur de type **long double** et stocke cette valeur dans *Val*.
 
@@ -187,22 +187,22 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*premier*\
+*premier* \
 Itérateur d’entrée traitant le début de la séquence à convertir.
 
-*famille*\
+*dernier* \
 Itérateur d’entrée traitant la fin de la séquence à convertir.
 
-*IU*\
+@No__t_1 *Intl*
 Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
 
-*Iosbase*\
+*Iosbase* \
 Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
-*Département*\
+@No__t_1 d' *État*
 Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*multiples*\
+\ *Val*
 Chaîne stockant la séquence convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -211,7 +211,7 @@ Itérateur d’entrée qui traite le premier élément au-delà du champ d’ent
 
 ### <a name="remarks"></a>Notes
 
-Les deux fonctions membres retournent [do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`.
+Les deux fonctions membres retournent [do_get](#do_get) `(first, last, Intl, Iosbase, State, val)`.
 
 ### <a name="example"></a>Exemple
 
@@ -284,22 +284,22 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs*\
+*_Refs* \
 Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes:
+Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes :
 
-- 0 : La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
-- 1 : La durée de vie de l’objet doit être gérée manuellement.
+- 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \>1: Ces valeurs ne sont pas définies.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
-Le constructeur initialise son objet de base avec **locale::** [facette](../standard-library/locale-class.md#facet_class)( *_Refs*).
+Le constructeur initialise son objet de base avec **locale ::** [facette](../standard-library/locale-class.md#facet_class)( *_Refs*).
 
 ## <a name="string_type"></a>  money_get::string_type
 
@@ -311,10 +311,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit une spécialisation de la classe de modèle [basic_string](../standard-library/basic-string-class.md).
+Le type décrit une spécialisation du modèle de classe [basic_string](../standard-library/basic-string-class.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [\<locale>](../standard-library/locale.md)\
 [facet, classe](../standard-library/locale-class.md#facet_class)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

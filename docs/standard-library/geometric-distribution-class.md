@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: ead6382e61066a72f97eacea91bba5b38aa00677
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 66af7aba99d1510b6d4416543e54890a9e891f7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453932"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688004"
 ---
-# <a name="geometricdistribution-class"></a>geometric_distribution, classe
+# <a name="geometric_distribution-class"></a>geometric_distribution, classe
 
 Génère une distribution géométrique.
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType*\
-Le type de résultat entier, par défaut, est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*IntType* \
+Le type de résultat entier, par défaut, est **int**. Pour connaître les types possibles, consultez [\<random >](../standard-library/random.md).
 
-*GÉNÉRATEUR URNG*\
-Moteur de générateur de nombres aléatoires uniformes. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*Générateur urng* \
+Moteur de générateur de nombres aléatoires uniformes. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d'un type intégral spécifié par l'utilisateur avec une distribution géométrique. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur avec une distribution géométrique. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -203,7 +203,7 @@ Distribution for 100 samples:
    35 :
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*p*\
+\ *p*
 Paramètre de distribution `p`.
 
-*Parm*\
+*param* \
 Structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -251,10 +251,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*p*\
+\ *p*
 Paramètre de distribution `p`.
 
-*Oui*\
+\ *droit*
 Instance `param_type` à comparer.
 
 ### <a name="remarks"></a>Notes

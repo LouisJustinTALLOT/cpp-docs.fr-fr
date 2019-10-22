@@ -7,25 +7,25 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: f6c51d85aa4a9f5516fe08dad163274051d94c13
-ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.openlocfilehash: e8c468da35ae23e5a37c2dfc5ac3fbdf47408c71
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71195827"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686084"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
-Définit la pile de classe de modèle et les deux modèles de prise en charge.
+Définit la pile de modèles de classe et deux modèles de prise en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<stack>
 
 **Espace de noms :** std
 
 > [!NOTE]
-> La \<bibliothèque de > de pile utilise `#include <initializer_list>` également l’instruction.
+> La bibliothèque de > \<stack utilise également l’instruction `#include <initializer_list>`.
 
 ## <a name="members"></a>Membres
 
@@ -48,6 +48,6 @@ Définit la pile de classe de modèle et les deux modèles de prise en charge.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

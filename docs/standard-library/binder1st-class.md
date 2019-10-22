@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: 384a870a10c9f806684443d8c67647e924b6b2aa
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 15b704134d47b7bf7d8857bf380c756b0b03a1b0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243381"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688388"
 ---
 # <a name="binder1st-class"></a>binder1st, classe
 
-Classe de modèle fournissant un constructeur qui convertit un objet de fonction binaire en objet de fonction unaire en liant le premier argument de la fonction binaire à une valeur spécifiée. Dépréciées dans C ++ 11 en faveur du [lier](functional-functions.md#bind)et supprimée dans C ++ 17.
+Modèle de classe fournissant un constructeur qui convertit un objet de fonction binaire en objet de fonction unaire en liant le premier argument de la fonction binaire à une valeur spécifiée. Déconseillé dans C++ 11 au profit de [Bind](functional-functions.md#bind)et supprimé en c++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,24 +43,24 @@ protected:
 
 ### <a name="parameters"></a>Paramètres
 
-*binary_fn*\
+*binary_fn* \
 Objet de fonction binaire à convertir en un objet de fonction unaire.
 
-*Gauche*\
+\ *gauche*
 Valeur à laquelle le premier argument de l’objet de fonction binaire doit être lié.
 
-*Oui*\
+\ *droit*
 Valeur de l’argument que l’objet binaire adapté compare à la valeur fixe du deuxième argument.
 
 ## <a name="return-value"></a>Valeur de retour
 
-L’objet de fonction unaire qui résulte de la liaison du premier argument de l’objet de fonction binaire à la valeur *gauche*.
+Objet de fonction unaire qui résulte de la liaison du premier argument de l’objet de fonction binaire à la valeur *restante*.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie d’un objet de fonction binaire *binary_fn* dans `op`et une copie de *gauche* dans `value`. Elle définit sa fonction membre `operator()` comme retournant `op(value, right)`.
+Le modèle de classe stocke une copie d’un objet de fonction binaire *binary_fn* dans `op`, et une copie de *Left* dans `value`. Elle définit sa fonction membre `operator()` comme retournant `op(value, right)`.
 
-Si *binary_fn* est un objet de type `Operation` et `c` est une constante, puis `bind1st(binary_fn, c)` équivaut à une plus pratique à `binder1st<Operation>(binary_fn, c)`. Pour plus d’informations, consultez [bind1st](../standard-library/functional-functions.md#bind1st).
+Si *binary_fn* est un objet de type `Operation` et que `c` est une constante, `bind1st(binary_fn, c)` est un équivalent plus pratique de `binder1st<Operation>(binary_fn, c)`. Pour plus d’informations, consultez [bind1st](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Exemple
 

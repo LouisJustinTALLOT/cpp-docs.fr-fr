@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: bb66e7c0120da9f140ce33da7ecc61299a4d2867
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459260"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685998"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt;, opérateurs
 
@@ -103,10 +103,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche*\
+\ *gauche*
 Chaîne de style C ou objet de type `basic_string` à concaténer.
 
-*Oui*\
+\ *droit*
 Chaîne de style C ou objet de type `basic_string` à concaténer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -115,7 +115,7 @@ Chaîne qui est la concaténation des chaînes d'entrée.
 
 ### <a name="remarks"></a>Notes
 
-Les fonctions surchargent toutes `operator+` pour concaténer deux objets de classe de modèle [basic_string](../standard-library/basic-string-class.md). Tout retourne `basic_string< CharType, Traits, Allocator>(Left).append(right)`effectivement. Pour plus d’informations, consultez [Append](../standard-library/basic-string-class.md#append).
+La fonction chaque surcharge `operator+` pour concaténer deux objets de la [classe basic_string](../standard-library/basic-string-class.md)du modèle de classe. Toutes les `basic_string< CharType, Traits, Allocator>(Left).append(right)` retournent efficacement. Pour plus d’informations, consultez [Append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Exemple
 
@@ -192,10 +192,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche*\
+\ *gauche*
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-*Oui*\
+\ *droit*
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -283,10 +283,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche*\
+\ *gauche*
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-*Oui*\
+\ *droit*
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -297,7 +297,7 @@ Chaîne de style C ou objet de type `basic_string` à comparer.
 
 La comparaison entre les objets string est basée sur une comparaison lexicographique par paire de leurs caractères. Deux chaînes sont égales si elles ont le même nombre de caractères et que les valeurs respectives de leurs caractères sont identiques. Sinon, elles sont inégales.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // string_op_eq.cpp
@@ -374,10 +374,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche*\
+\ *gauche*
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-*Oui*\
+\ *droit*
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -394,7 +394,7 @@ Une comparaison lexicographique entre des chaînes les compare caractère par ca
 
 - Elle ne trouve aucune inégalité et les chaînes ont le même nombre de caractères, si bien que les chaînes sont égales.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // string_op_lt.cpp
@@ -470,10 +470,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche*\
+\ *gauche*
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-*Oui*\
+\ *droit*
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -563,10 +563,10 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ostr*\
+*_Ostr* \
 Flux de sortie dans lequel s’effectue l’écriture.
 
-*Str*\
+*str* \
 Chaîne à entrer dans le flux de sortie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -575,7 +575,7 @@ Chaîne à entrer dans le flux de sortie.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur de fonction de modèle Overloads **< <** pour insérer un objet *Str* de la classe de modèle [basic_string](../standard-library/basic-string-class.md) dans le  *\_OSTR*de flux. La fonction retourne effectivement `_Ostr.write( str.c_str, str.size )`la valeur.
+L’opérateur de fonction de modèle Overloads **< <** pour insérer un objet *Str* de la classe template [basic_string](../standard-library/basic-string-class.md) dans le *\_Ostr*de flux. La fonction retourne effectivement `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -600,10 +600,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche*\
+\ *gauche*
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-*Oui*\
+\ *droit*
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -703,10 +703,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche*\
+\ *gauche*
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-*Oui*\
+\ *droit*
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -796,10 +796,10 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Istr*\
+*_Istr* \
 Le flux d’entrée utilisé pour extraire la séquence.
 
-*Oui*\
+\ *droit*
 La chaîne qui est extraite du flux d’entrée.
 
 ### <a name="return-value"></a>Valeur de retour

@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 810a02e620e6b38732daf611d3b44a4a277322a5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a9d83bee5a9186ba35a7cce81600947dd1cf4141
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457759"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688081"
 ---
-# <a name="extremevaluedistribution-class"></a>extreme_value_distribution, classe
+# <a name="extreme_value_distribution-class"></a>extreme_value_distribution, classe
 
 Génère une distribution suivant la loi d'extremum.
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType*\
-Le type de résultat à virgule flottante, par défaut, est **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* \
+Le type de résultat à virgule flottante, par défaut, est **double**. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*GÉNÉRATEUR URNG*\
-Moteur du générateur de nombres aléatoires. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*Générateur urng* \
+Moteur du générateur de nombres aléatoires. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la distribution de valeurs extrêmes. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la distribution de valeurs extrêmes. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -175,7 +175,7 @@ Distribution for 10 samples:
     10: 2.0568757061
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 
@@ -192,13 +192,13 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*a_value*\
+*a_value* \
 Paramètre de distribution `a`.
 
-*b_value*\
+*b_value* \
 Paramètre de distribution `b`.
 
-*Parm*\
+*param* \
 Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*a_value*\
+*a_value* \
 Paramètre de distribution `a`.
 
-*b_value*\
+*b_value* \
 Paramètre de distribution `b`.
 
-*Oui*\
+\ *droit*
 Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes

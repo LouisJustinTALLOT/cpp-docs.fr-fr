@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: de8f815cd59b84a1e63c231e18e4882d0b5d6f09
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3ad740975cfff4f65f9e1c800a709cfaca3367db
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447572"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687819"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
-Définit la classe de modèle `numeric_limits` et deux énumérations concernant les représentations et l'arrondi des valeurs à virgule flottante.
+Définit le `numeric_limits` de modèle de classe et deux énumérations concernant les représentations à virgule flottante et l’arrondi.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<limits>
 
@@ -26,7 +26,7 @@ Définit la classe de modèle `numeric_limits` et deux énumérations concernant
 
 ## <a name="remarks"></a>Notes
 
-Les spécialisations explicites `numeric_limits` de la classe décrivent de nombreuses propriétés des types fondamentaux, y compris le caractère, l’entier et les types à virgule flottante et **bool** qui sont définis par l’implémentation plutôt que fixés par les règles du C++langue. Les propriétés décrites dans \<limits> incluent la précision, les représentations de taille minimale et maximale, l’arrondi et le signalement des erreurs de type.
+Les spécialisations explicites de la classe `numeric_limits` décrivent de nombreuses propriétés des types fondamentaux, y compris le caractère, l’entier et les types à virgule flottante et **bool** qui sont définis par l’implémentation C++ plutôt que fixés par les règles du sous. Les propriétés décrites dans \<limits> incluent la précision, les représentations de taille minimale et maximale, l’arrondi et le signalement des erreurs de type.
 
 ## <a name="members"></a>Membres
 
@@ -41,9 +41,9 @@ Les spécialisations explicites `numeric_limits` de la classe décrivent de nomb
 
 |||
 |-|-|
-|[numeric_limits, classe](../standard-library/numeric-limits-class.md)|La classe de modèle décrit les propriétés arithmétiques des types numériques intégrés.|
+|[numeric_limits, classe](../standard-library/numeric-limits-class.md)|Le modèle de classe décrit les propriétés arithmétiques des types numériques intégrés.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

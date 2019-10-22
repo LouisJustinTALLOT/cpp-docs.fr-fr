@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-ms.openlocfilehash: d33b67ed17a95b6717878aaca2f61682b1807c15
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c852b3040a94035f6a84b1f717c3583fababbb2c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454009"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688021"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
-Incluez l’en-tête standard \<future> pour définir des classes de modèle et des modèles de prise en charge qui simplifient l’exécution d’une fonction (éventuellement dans un thread séparé) et la récupération de son résultat. Le résultat est la valeur retournée par la fonction ou une exception émise par la fonction, mais qui n’est pas interceptée dans la fonction.
+Incluez l’en-tête standard \<future > pour définir des modèles de classe et des modèles de prise en charge qui simplifient l’exécution d’une fonction, éventuellement dans un thread séparé, et la récupération de son résultat. Le résultat est la valeur retournée par la fonction ou une exception émise par la fonction, mais qui n’est pas interceptée dans la fonction.
 
 Cet en-tête utilise le runtime d’accès concurrentiel (ConcRT) pour pouvoir l’utiliser avec d’autres mécanismes ConcRT. Pour plus d’informations sur ConcRT, consultez [Runtime d’accès concurrentiel](../parallel/concrt/concurrency-runtime.md).
 
@@ -36,17 +36,17 @@ Un fournisseur asynchrone ou un objet de retour asynchrone qui n’a aucun état
 
 Un état asynchrone associé est *prêt* uniquement si son fournisseur asynchrone a stocké une valeur de retour ou une exception.
 
-La fonction de modèle `async` et les classes de modèle `promise` et `packaged_task` sont des fournisseurs asynchrones. Les classes de modèle `future` et `shared_future` décrivent des objets de retour asynchrones.
+La fonction de modèle `async` et les modèles de classe `promise` et `packaged_task` sont des fournisseurs asynchrones. Les modèles de classe `future` et `shared_future` décrivent des objets de retour asynchrones.
 
-Chacune des classes `promise`de modèle, `future`et `shared_future` a une spécialisation pour le type **void** et une spécialisation partielle pour le stockage et la récupération d’une valeur par référence. Ces spécialisations diffèrent du modèle principal uniquement dans les signatures et la sémantique des fonctions qui stockent et récupèrent la valeur retournée.
+Chacun des modèles de classe `promise`, `future` et `shared_future` a une spécialisation pour le type **void** et une spécialisation partielle pour le stockage et la récupération d’une valeur par référence. Ces spécialisations diffèrent du modèle principal uniquement dans les signatures et la sémantique des fonctions qui stockent et récupèrent la valeur retournée.
 
-Les classes `future` de modèle `shared_future` et ne sont jamais bloquées dans leurs destructeurs, sauf dans un cas conservé pour la compatibilité descendante: Contrairement à tous les autres futurs, pour `future`un, ou le `shared_future`dernier, attaché à une tâche démarrée avec `std::async`, le destructeur se bloque si la tâche n’est pas terminée; autrement dit, il bloque si ce thread n' `.get()` a pas encore appelé ou `.wait()`et la tâche est toujours en cours d’exécution. La note d’utilisation suivante a été ajoutée à la description `std::async` de dans le brouillon standard: «[Remarque: Si une future obtenue à partir de std:: Async est déplacée en dehors de la portée locale, un autre code qui utilise le futur doit être conscient que le destructeur du futur risque de bloquer l’état partagé pour être prêt. — fin de la `future` Remarque `shared_future` ] "dans tous les autres cas, et les destructeurs sont requis et sont assurés de ne jamais se bloquer.
+Les modèles de classe `future` et `shared_future` jamais bloqués dans leurs destructeurs, sauf dans un cas conservé pour la compatibilité descendante : contrairement à tous les autres futurs, pour un `future`, ou le dernier `shared_future`, qui est attaché à une tâche démarrée avec `std::async` , le destructeur se bloque si la tâche n’est pas terminée ; autrement dit, il bloque si ce thread n’a pas encore appelé `.get()` ou `.wait()` et que la tâche est toujours en cours d’exécution. La note d’utilisation suivante a été ajoutée à la description de `std::async` dans le projet de norme : « [Remarque : Si un objet future obtenu à partir de std::async est déplacé en dehors de la portée locale, tout autre code qui utilise l’objet future doit être conscient que le destructeur de cet objet peut empêcher l’état partagé d’être prêt. Fin de la remarque] ». Dans tous les autres cas, les destructeurs `future` et `shared_future` sont nécessaires et ne se bloquent jamais.
 
 ## <a name="members"></a>Membres
 
 ### <a name="classes"></a>Classes
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[future, classe](../standard-library/future-class.md)|Décrit un objet de retour asynchrone.|
 |[future_error, classe](../standard-library/future-error-class.md)|Décrit un objet d’exception qui peut être levé par des méthodes dont les types gèrent les objets `future`.|
@@ -56,14 +56,14 @@ Les classes `future` de modèle `shared_future` et ne sont jamais bloquées dans
 
 ### <a name="structures"></a>Structures
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[is_error_code_enum, structure](../standard-library/is-error-code-enum-structure.md)|Spécialisation qui indique que `future_errc` est adapté au stockage d’un `error_code`.|
 |[uses_allocator, structure](../standard-library/uses-allocator-structure.md)|Spécialisation qui contient toujours la valeur true.|
 
 ### <a name="functions"></a>Fonctions
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[async](../standard-library/future-functions.md#async)|Représente un fournisseur asynchrone.|
 |[future_category](../standard-library/future-functions.md#future_category)|Retourne une référence à l’objet `error_category` qui caractérise les erreurs associées aux objets `future`.|
@@ -73,7 +73,7 @@ Les classes `future` de modèle `shared_future` et ne sont jamais bloquées dans
 
 ### <a name="enumerations"></a>Énumérations
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|Fournit des noms symboliques pour toutes les erreurs signalées par la classe `future_error`.|
 |[future_status](../standard-library/future-enums.md#future_status)|Fournit les noms symboliques pour les raisons qu’une fonction d’attente chronométrée peut retourner.|

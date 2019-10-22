@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - valarray<bool> class
 ms.assetid: fc0e7121-4758-4ea5-86c3-f04448f04acf
-ms.openlocfilehash: b597bbe5327eb95c8c2be1016a2a036ed7ef2baa
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c0fc15920018104147b6fd7ea39ab04bbc8862ad
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452296"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688758"
 ---
 # <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt;, classe
 
-Une version spécialisée de la classe de **modèle\<valarray type >** aux éléments de type **bool**.
+Une version spécialisée du modèle de classe **valarray \<Type >** à des éléments de type **bool**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,7 +71,7 @@ valarray<bool>: ( 0 0 1 0 1 0 1 0 1 0 ).
 */
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<valarray>
 
@@ -80,4 +80,4 @@ valarray<bool>: ( 0 0 1 0 1 0 1 0 1 0 ).
 ## <a name="see-also"></a>Voir aussi
 
 [valarray, classe](../standard-library/valarray-class.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: 76a78a2f47bd160c6b2b981b1ccdda2ef3a90575
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: eb00945084affb2be9299953e5ca9352c56d3b32
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454396"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688104"
 ---
-# <a name="discardblockengine-class"></a>discard_block_engine, classe
+# <a name="discard_block_engine-class"></a>discard_block_engine, classe
 
 Génère une séquence aléatoire en ignorant les valeurs retournées par son moteur de base.
 
@@ -26,14 +26,14 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>Paramètres
 
-*Rotation*\
+@No__t_1 du *moteur*
 Type de moteur de base.
 
-*P*\
+@No__t_1 *P*
 **Taille de bloc**. Nombre de valeurs dans chaque bloc.
 
 *R*\
-**Bloc utilisé**. Nombre de valeurs dans chaque bloc qui sont utilisées. Les autres sont ignorés (`P` - `R`). **Condition préalable** : `0 < R ≤ P`
+**Bloc utilisé**. Nombre de valeurs dans chaque bloc qui sont utilisées. Les autres sont ignorés (`P`  -  `R`). **Condition préalable** : `0 < R ≤ P`
 
 ## <a name="members"></a>Membres
 
@@ -46,9 +46,9 @@ Pour plus d’informations sur les membres moteurs, consultez [\<random>](../sta
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle décrit un adaptateur de moteur qui produit des valeurs en écartant certaines des valeurs retournées par son moteur de base.
+Ce modèle de classe décrit un adaptateur de moteur qui produit des valeurs en ignorant certaines des valeurs retournées par son moteur de base.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 
