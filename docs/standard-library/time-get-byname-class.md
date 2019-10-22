@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_get_byname class
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
-ms.openlocfilehash: b466f8a893a14f7a94ee7b9e54b72e43aa6cf6e3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9df3831e085f1dea1df45ff9368479fa516b944e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460026"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685755"
 ---
-# <a name="timegetbyname-class"></a>time_get_byname, classe
+# <a name="time_get_byname-class"></a>time_get_byname, classe
 
-La classe de modèle dérivée décrit un objet pouvant servir de facette de paramètres régionaux de type `time_get`\<CharType, InputIterator>.
+Le modèle de classe dérivée décrit un objet pouvant servir de facette de paramètres régionaux de type `time_get` \<CharType, InputIterator >.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,17 +40,17 @@ protected:
 
 ### <a name="parameters"></a>Paramètres
 
-*_Locname*\
+*_Locname* \
 Paramètres régionaux nommés.
 
-*_Refs*\
+*_Refs* \
 Nombre initial de références.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 Son comportement est déterminé par les paramètres régionaux nommés *_Locname*. Chaque constructeur initialise son objet de base avec [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -58,4 +58,4 @@ Son comportement est déterminé par les paramètres régionaux nommés *_Locnam
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

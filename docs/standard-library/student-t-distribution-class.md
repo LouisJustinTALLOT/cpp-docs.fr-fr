@@ -21,14 +21,14 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 42e7337a2a0803af51e7dd11f53c482dbfc2aa0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459000"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685868"
 ---
-# <a name="studenttdistribution-class"></a>student_t_distribution, classe
+# <a name="student_t_distribution-class"></a>student_t_distribution, classe
 
 Génère une distribution *T* de Student.
 
@@ -64,12 +64,12 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType*\
-Le type de résultat à virgule flottante, par défaut, est **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType* \
+Le type de résultat à virgule flottante, par défaut, est **double**. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la distribution *t*de Student. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la distribution *t*de Student. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -82,7 +82,7 @@ Pour plus d’informations sur les classes de distribution et leurs membres, con
 
 Pour obtenir des informations détaillées sur la distribution *T* de Student, consultez l’article de Wolfram MathWorld sur la [distribution T de Student](http://mathworld.wolfram.com/Studentst-Distribution.html).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // compile with: /EHsc /W4
@@ -157,7 +157,7 @@ Distribution for 10 samples:
     10: 92.7084335614
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 
@@ -177,7 +177,7 @@ explicit student_t_distribution(const param_type& parm);
 *n*\
 Paramètre de distribution `n`.
 
-*Parm*\
+*param* \
 Package de paramètres utilisé pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -208,7 +208,7 @@ struct param_type {
 *n*\
 Paramètre de distribution `n`.
 
-*Oui*\
+\ *droit*
 Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes

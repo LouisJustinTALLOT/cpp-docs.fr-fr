@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a322e517a4adb51879fc2a60f6c08f6561276de9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449130"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689509"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
 Définit plusieurs types et fonctions de base pour l'opération d'iostreams. Cet en-tête est généralement inclus pour vous par un autre en-tête iostream ; vous l'incluez rarement directement.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
-**En-tête**: \<iOS >
+**En-tête**: \<ios >
 
 **Espace de noms :** std
 
 > [!NOTE]
-> La \<bibliothèque de > iOS utilise `#include <iosfwd>` l’instruction.
+> La bibliothèque de > \<ios utilise l’instruction `#include <iosfwd>`.
 
 ## <a name="remarks"></a>Notes
 
-Un grand nombre de fonctions sont des manipulateurs. Un manipulateur déclaré dans \<ios> modifie les valeurs stockées dans son objet d’argument de classe [ios_base](../standard-library/ios-base-class.md). D’autres manipulateurs effectuent des actions sur des flux contrôlés par des objets d’un type dérivé de cette classe, comme une spécialisation de l’une des classes de modèle [basic_istream](../standard-library/basic-istream-class.md) ou [basic_ostream](../standard-library/basic-ostream-class.md). Par exemple, [noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) efface l’indicateur `ios_base::skipws` de format dans l’objet `str`, qui peut être de l’un de ces types.
+Un grand nombre de fonctions sont des manipulateurs. Un manipulateur déclaré dans \<ios> modifie les valeurs stockées dans son objet d’argument de classe [ios_base](../standard-library/ios-base-class.md). D’autres manipulateurs effectuent des actions sur des flux contrôlés par des objets d’un type dérivé de cette classe, comme une spécialisation de l’un des modèles de classe [basic_istream](../standard-library/basic-istream-class.md) ou [basic_ostream](../standard-library/basic-ostream-class.md). Par exemple, [noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) efface l’indicateur de format `ios_base::skipws` dans l' `str` d’objet, qui peut être de l’un de ces types.
 
-Vous pouvez également appeler un manipulateur en l'insérant dans un flux de sortie ou en l'extrayant d'un flux d'entrée, grâce à des opérations d'insertion et d'extraction spéciales fournies pour les classes dérivées de `ios_base`. Par exemple :
+Vous pouvez également appeler un manipulateur en l'insérant dans un flux de sortie ou en l'extrayant d'un flux d'entrée, grâce à des opérations d'insertion et d'extraction spéciales fournies pour les classes dérivées de `ios_base`. Exemple :
 
 ```cpp
 istr>> noskipws;
@@ -95,13 +95,13 @@ appelle [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 |||
 |-|-|
-|[basic_ios](../standard-library/basic-ios-class.md)|La classe de modèle décrit les fonctions membres et de stockage communes aux flux d’entrée (de classe de modèle [basic_istream](../standard-library/basic-istream-class.md)) et de sortie (de classe de modèle [basic_ostream](../standard-library/basic-ostream-class.md)) qui dépendent des paramètres du modèle.|
-|[fpos](../standard-library/fpos-class.md)|La classe de modèle décrit un objet qui peut stocker toutes les informations nécessaires à la restauration d'un indicateur de position de fichier arbitraire dans n'importe quel flux.|
+|[basic_ios](../standard-library/basic-ios-class.md)|Le modèle de classe décrit les fonctions membres et de stockage communes aux flux d’entrée (de classe de modèle [basic_istream](../standard-library/basic-istream-class.md)) et les flux de sortie (de classe de modèle [basic_ostream](../standard-library/basic-ostream-class.md)) qui dépendent des paramètres du modèle.|
+|[fpos](../standard-library/fpos-class.md)|Le modèle de classe décrit un objet qui peut stocker toutes les informations nécessaires à la restauration d’un indicateur de position de fichier arbitraire dans n’importe quel flux.|
 |[ios_base](../standard-library/ios-base-class.md)|La classe décrit les fonctions membres et de stockage communes aux flux d'entrée et de sortie qui ne dépendent pas des paramètres du modèle.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream, programmation](../standard-library/iostream-programming.md)\
 [iostreams, conventions](../standard-library/iostreams-conventions.md)

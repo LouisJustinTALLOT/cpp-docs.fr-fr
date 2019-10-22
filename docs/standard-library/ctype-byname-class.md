@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-ms.openlocfilehash: 0b0f33781cc9f1f54661a44a5434c94316432a45
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: dcaaff45fb33155710f788af4ceb657eff97464e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457897"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689734"
 ---
-# <a name="ctypebyname-class"></a>ctype_byname, classe
+# <a name="ctype_byname-class"></a>ctype_byname, classe
 
-Classe de modèle dérivée qui décrit un objet pouvant servir de facette ctype de paramètres régionaux donnés, permettant ainsi la classification des caractères et la conversion des caractères entre des jeux de caractères natifs, de casse ou de paramètres régionaux spécifiés.
+Le modèle de classe dérivée décrit un objet pouvant servir de facette CType de paramètres régionaux donnés, permettant ainsi la classification des caractères et la conversion de caractères entre les jeux de caractères et les jeux de caractères spécifiés.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,7 +42,7 @@ protected:
 
 Son comportement est déterminé par les paramètres régionaux nommés `_Locname`. Chaque constructeur initialise son objet de base avec [ctype](../standard-library/ctype-class.md)\<CharType>( `_Refs`) ou l’équivalent pour la classe de base `ctype<char>`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -50,4 +50,4 @@ Son comportement est déterminé par les paramètres régionaux nommés `_Locnam
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

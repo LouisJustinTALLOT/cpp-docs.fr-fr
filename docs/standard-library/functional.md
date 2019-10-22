@@ -9,18 +9,18 @@ helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: 2f8ef031731e4213ce8cda326d05f1241cd03625
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 67b2ccf70b4d3045cecd13d9096875f77c4cde9a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447391"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689619"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
 Définit C++ des fonctions de bibliothèque standard qui aident à construire des *objets de fonction*, également appelés *functors*, et leurs classeurs. Un objet de fonction est un objet d'un type qui définit `operator()`. Un objet de fonction peut être un pointeur fonction, mais en général il sert à stocker des informations supplémentaires accessibles pendant un appel de fonction.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<functional>
 
@@ -28,11 +28,11 @@ Définit C++ des fonctions de bibliothèque standard qui aident à construire de
 
 ## <a name="remarks"></a>Notes
 
-Les algorithmes nécessitent deux types d’objets de  fonction: unaire et *binaire*. Les objets de fonction unaires nécessitent un argument et les objets de fonction binaires nécessitent deux arguments. Un objet de fonction et des pointeurs fonction peuvent être passés sous forme de prédicat à un algorithme, mais les objets de fonction sont également adaptables et augmentent la portée, la flexibilité et l’efficacité de la bibliothèque C++ Standard. Si, par exemple, une valeur doit être liée à une fonction avant d'être passée à un algorithme, vous ne pouvez pas utiliser un pointeur fonction. Les adaptateurs de fonction convertissent des pointeurs fonction en objets de fonction adaptables qui peuvent être liés à une valeur. L’en-tête \<functional> contient aussi des adaptateurs de fonction membre qui permettent aux fonctions membres d’être appelées comme des objets de fonction adaptables. Les fonctions sont adaptables si elles ont des déclarations de type imbriquées spécifiant leur argument et leurs types de retour. Les objets de fonction et leurs adaptateurs permettent à la bibliothèque C++ Standard de mettre à niveau les applications existantes et aident à son intégration dans l’environnement de programmation C++.
+Les algorithmes nécessitent deux types d’objets de fonction : *unaire* et *binaire*. Les objets de fonction unaires nécessitent un argument et les objets de fonction binaires nécessitent deux arguments. Un objet de fonction et des pointeurs fonction peuvent être passés sous forme de prédicat à un algorithme, mais les objets de fonction sont également adaptables et augmentent la portée, la flexibilité et l’efficacité de la bibliothèque C++ Standard. Si, par exemple, une valeur doit être liée à une fonction avant d'être passée à un algorithme, vous ne pouvez pas utiliser un pointeur fonction. Les adaptateurs de fonction convertissent des pointeurs fonction en objets de fonction adaptables qui peuvent être liés à une valeur. L’en-tête \<functional> contient aussi des adaptateurs de fonction membre qui permettent aux fonctions membres d’être appelées comme des objets de fonction adaptables. Les fonctions sont adaptables si elles ont des déclarations de type imbriquées spécifiant leur argument et leurs types de retour. Les objets de fonction et leurs adaptateurs permettent à la bibliothèque C++ Standard de mettre à niveau les applications existantes et aident à son intégration dans l’environnement de programmation C++.
 
-L’implémentation des objets de fonction dans \<les > fonctionnels comprend des *functors d’opérateur transparent*. qui sont des spécialisations d’objets de fonction standard et ne prennent pas de paramètres de modèle, et effectuent un transfert parfait des arguments de fonction et un retour parfait du résultat. Ces spécialisations de modèle ne vous obligent pas à spécifier des types d'arguments quand vous appelez des foncteurs d'opérateurs arithmétiques, de comparaison, logiques et au niveau du bit. Vous pouvez surcharger des opérateurs arithmétiques, de comparaison, logiques ou au niveau du bit pour vos propres types, ou pour des combinaisons hétérogènes de types, puis utiliser les foncteurs d’opérateurs transparents en tant qu’arguments de fonction. Par exemple, si votre type *MyType* implémente `operator<`, vous pouvez appeler `sort(my_collection.begin(), my_collection.end(), less<>())` au lieu de spécifier explicitement le type `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
+L’implémentation des objets de fonction dans \<functional > comprend des *functors d’opérateur transparent*. qui sont des spécialisations d’objets de fonction standard et ne prennent pas de paramètres de modèle, et effectuent un transfert parfait des arguments de fonction et un retour parfait du résultat. Ces spécialisations de modèle ne vous obligent pas à spécifier des types d'arguments quand vous appelez des foncteurs d'opérateurs arithmétiques, de comparaison, logiques et au niveau du bit. Vous pouvez surcharger des opérateurs arithmétiques, de comparaison, logiques ou au niveau du bit pour vos propres types, ou pour des combinaisons hétérogènes de types, puis utiliser les foncteurs d’opérateurs transparents en tant qu’arguments de fonction. Par exemple, si votre type *MyType* implémente `operator<`, vous pouvez appeler `sort(my_collection.begin(), my_collection.end(), less<>())` au lieu de spécifier explicitement le type `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
 
-Les fonctionnalités suivantes sont ajoutées dans C++ 11, C++ 14 et C++ 17:
+Les fonctionnalités suivantes sont ajoutées dans C++ 11, C++ 14 et C++ 17 :
 
 - Une *signature d’appel* est le nom d’un type de retour suivi d’une liste entre parenthèses de zéro, un ou plusieurs types d’arguments séparés par une virgule.
 
@@ -79,9 +79,9 @@ Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de c
 |||
 |-|-|
 |[bad_function_call](../standard-library/bad-function-call-class.md)|Classe qui décrit une exception levée pour indiquer qu’un appel à `operator()` sur un objet [function](../standard-library/function-class.md) a échoué car l’objet est vide.|
-|[binary_negate](../standard-library/binary-negate-class.md)|Classe de modèle fournissant une fonction membre qui inverse la valeur de retour d'une fonction binaire spécifiée.<br/> (Déconseillé dans C++ 17.) |
-|[binder1st](../standard-library/binder1st-class.md)|Classe de modèle fournissant un constructeur qui convertit un objet de fonction binaire en objet de fonction unaire en liant le premier argument de la fonction binaire à une valeur spécifiée.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
-|[binder2nd](../standard-library/binder2nd-class.md)|Classe de modèle fournissant un constructeur qui convertit un objet de fonction binaire en objet de fonction unaire en liant le second argument de la fonction binaire à une valeur spécifiée.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
+|[binary_negate](../standard-library/binary-negate-class.md)|Modèle de classe fournissant une fonction membre qui inverse la valeur de retour d’une fonction binaire spécifiée.<br/> (Déconseillé dans C++ 17.) |
+|[binder1st](../standard-library/binder1st-class.md)|Modèle de classe fournissant un constructeur qui convertit un objet de fonction binaire en objet de fonction unaire en liant le premier argument de la fonction binaire à une valeur spécifiée.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
+|[binder2nd](../standard-library/binder2nd-class.md)|Modèle de classe fournissant un constructeur qui convertit un objet de fonction binaire en objet de fonction unaire en liant le second argument de la fonction binaire à une valeur spécifiée.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
 |[boyer_moore_horspool_searcher](../standard-library/boyer-moore-horspool-searcher-class.md)||
 |[boyer_moore_searcher](../standard-library/boyer-moore-searcher-class.md)||
 |[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|Classe d’adaptateur qui permet à une fonction membre const qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de référence.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
@@ -93,14 +93,14 @@ Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de c
 |[hash](../standard-library/hash-class.md)|Classe qui calcule un code de hachage pour une valeur.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|Classe qui teste si un type particulier est généré en appelant `bind`.|
 |[is_placeholder](../standard-library/is-placeholder-class.md)|Classe qui teste si un type particulier est un espace réservé.|
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Classe d’adaptateur qui permet à `non_const` une fonction membre qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de référence.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Classe d’adaptateur qui permet à `non_const` une fonction membre qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de pointeur.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Classe d’adaptateur qui permet à `non_const` une fonction membre qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de référence.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Classe d’adaptateur qui permet à `non_const` une fonction membre qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de pointeur.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Classe d’adaptateur qui permet à une fonction membre `non_const` qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de référence.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Classe d’adaptateur qui permet à une fonction membre `non_const` qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de pointeur.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Classe d’adaptateur qui permet à une fonction membre `non_const` qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de référence.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Classe d’adaptateur qui permet à une fonction membre `non_const` qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de pointeur.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
 |[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|Convertit un pointeur de fonction binaire en fonction binaire adaptable.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
 |[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|Convertit un pointeur de fonction unaire en fonction unaire adaptable.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Classe qui encapsule une référence.|
-|[unary_negate](../standard-library/unary-negate-class.md)|Classe de modèle fournissant une fonction membre qui inverse la valeur de retour d'une fonction unaire spécifiée.<br/> (Déconseillé dans C++ 17.)  |
+|[unary_negate](../standard-library/unary-negate-class.md)|Modèle de classe fournissant une fonction membre qui inverse la valeur de retour d’une fonction unaire spécifiée.<br/> (Déconseillé dans C++ 17.)  |
 
 ### <a name="functions"></a>Fonctions
 
@@ -114,7 +114,7 @@ Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de c
 |[bit_or](../standard-library/functional-functions.md#bit_or)|Retourne le résultat de l’opération OR logique au niveau du bit (opérateur &#124;) des deux paramètres.|
 |[bit_xor](../standard-library/functional-functions.md#bit_xor)|Retourne le résultat de l'opération XOR logique au niveau du bit (opérateur ^) des deux paramètres.|
 |[cref](../standard-library/functional-functions.md#cref)|Construit un `reference_wrapper` const à partir d'un argument.|
-|[invoke](../standard-library/functional-functions.md#invoke)||
+|[déclenché](../standard-library/functional-functions.md#invoke)||
 |[mem_fn](../standard-library/functional-functions.md#mem_fn)|Génère un wrapper d'appel simple.|
 |[mem_fun](../standard-library/functional-functions.md#mem_fun)|Fonctions de modèle d’assistance utilisées pour construire des adaptateurs d’objets de fonction pour des fonctions membres en cas d’initialisation avec des arguments de pointeur.<br/> (Déconseillé dans C++ 11, supprimé en C++ 17.) |
 |[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Fonction de modèle d’assistance utilisée pour construire des adaptateurs d’objets de fonction pour des fonctions membres en cas d’initialisation avec des arguments de référence.|
@@ -125,7 +125,7 @@ Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de c
 |[ref](../standard-library/functional-functions.md#ref)|Construit un `reference_wrapper` à partir d'un argument.|
 |[swap](../standard-library/functional-functions.md#swap)|Échange deux objets `function`.|
 
-### <a name="structs"></a>Structs
+### <a name="structs"></a>Structures
 
 |||
 |-|-|
@@ -162,6 +162,6 @@ Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de c
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

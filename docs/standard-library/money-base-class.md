@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: 5b19635cf4d2cce58ec50226c463a075cfac5b0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c614832b0cbb1cc23e42ecb3a939ccf1334a5cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455568"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689322"
 ---
-# <a name="moneybase-class"></a>money_base, classe
+# <a name="money_base-class"></a>money_base, classe
 
-Cette classe décrit une énumération et une structure communes à toutes les spécialisations de la classe de modèle [moneypunct](../standard-library/moneypunct-class.md).
+La classe décrit une énumération et une structure commune à toutes les spécialisations du modèle de classe [moneypunct](../standard-library/moneypunct-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,19 +28,19 @@ struct pattern
 
 ## <a name="remarks"></a>Notes
 
-L’énumération `part` décrit les valeurs possibles dans les éléments du champ de tableau dans le modèle de structure. Les valeurs de `part` sont les suivantes:
+L’énumération `part` décrit les valeurs possibles dans les éléments du champ de tableau dans le modèle de structure. Les valeurs de `part` sont les suivantes :
 
-- `none`pour faire correspondre zéro, un ou plusieurs espaces ou générer Nothing.
+- `none` pour qu’il corresponde à zéro ou plusieurs espaces ou ne génère rien.
 
-- `sign`pour faire correspondre ou générer un signe positif ou négatif.
+- `sign` de correspondance ou de génération d’un signe positif ou négatif.
 
-- `space`pour faire correspondre zéro, un ou plusieurs espaces ou générer un espace.
+- `space` pour qu’il corresponde à zéro ou plusieurs espaces ou pour générer un espace.
 
-- `symbol`pour faire correspondre ou générer un symbole monétaire.
+- `symbol` pour la correspondance ou la génération d’un symbole monétaire.
 
-- `value`pour faire correspondre ou générer une valeur monétaire.
+- `value` pour la correspondance ou la génération d’une valeur monétaire.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -48,4 +48,4 @@ L’énumération `part` décrit les valeurs possibles dans les éléments du ch
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

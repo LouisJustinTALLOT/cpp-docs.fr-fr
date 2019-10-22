@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: f5b448fbf158cf9e9cfb8331c6ec7a228859fffc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3c1824eb22ed97e65e0556bc63b374f705f5c591
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447589"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689440"
 ---
-# <a name="linearcongruentialengine-class"></a>linear_congruential_engine, classe
+# <a name="linear_congruential_engine-class"></a>linear_congruential_engine, classe
 
 Génère une séquence aléatoire en utilisant l'algorithme congruentiel linéaire.
 
@@ -45,17 +45,17 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Paramètres
 
-*UIntType*\
-Type des résultats entiers non signés. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*UIntType* \
+Type des résultats entiers non signés. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*UN*\
-**Multiplier**. **Condition préalable**: Consultez la section Notes.
+*@No__t_1*
+**Multiplier**. **Condition préalable** : consultez la section Notes.
 
-*SECTEUR*\
-**Increment**. **Condition préalable**: Consultez la section Notes.
+@No__t_1 *C*
+**Increment**. **Condition préalable** : consultez la section Notes.
 
-*LECTEUR*\
-**Modulus**. **Condition préalable**: Consultez la section Notes.
+*M* \
+**Modulus**. **Condition préalable** : consultez la section Notes.
 
 ## <a name="members"></a>Membres
 
@@ -70,23 +70,23 @@ Pour plus d’informations sur les membres moteurs, consultez [\<random>](../sta
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle `linear_congruential_engine` est le moteur de générateur le plus simple, mais pas le plus rapide ni avec la qualité la plus élevée. [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md) est une version améliorée de ce moteur. Aucun de ces moteurs n’est aussi rapide ni ne produit des résultats d’aussi bonne qualité que [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
+Le modèle de classe `linear_congruential_engine` est le moteur de générateur le plus simple, mais pas la qualité la plus rapide ou la plus élevée. [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md) est une version améliorée de ce moteur. Aucun de ces moteurs n’est aussi rapide ni ne produit des résultats d’aussi bonne qualité que [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
 Ce moteur produit des valeurs d’un type intégral non signé spécifié par l’utilisateur à l’aide de la relation de périodicité ( *period*) `x(i) = (A * x(i-1) + C) mod M`.
 
-Si *M* est égal à zéro, la valeur utilisée pour cette opération `numeric_limits<result_type>::max() + 1`de modulo est. L'état du moteur est représenté par la dernière valeur retournée ou la valeur initiale si aucun appel n'a été passé à `operator()`.
+Si *M* est égal à zéro, la valeur utilisée pour cette opération modulo est `numeric_limits<result_type>::max() + 1`. L'état du moteur est représenté par la dernière valeur retournée ou la valeur initiale si aucun appel n'a été passé à `operator()`.
 
 Si *M* n’est pas égal à zéro, les valeurs des arguments template *A* et *C* doivent être inférieures à *M*.
 
 Bien que vous puissiez construire un générateur directement à partir de ce moteur, vous pouvez aussi utiliser l’un des typedefs prédéfinis suivants.
 
-`minstd_rand0`: Moteur standard minimal 1988 (Lewis, Goodman et Miller, 1969).
+`minstd_rand0` : moteur standard minimal 1988 (Lewis, Goodman et Miller, 1969).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
 ```
 
-`minstd_rand`: Moteur standard minimal mis à jour `minstd_rand0` (Park, Miller et Stockmeyer, 1993).
+`minstd_rand` : moteur standard minimal mis à jour `minstd_rand0` (Park, Miller et Stockmeyer, 1993).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;
@@ -94,7 +94,7 @@ typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_ra
 
 Pour plus d’informations sur l’algorithme du moteur congruentiel linéaire, voir l’article de Wikipedia [Linear congruential generator](https://go.microsoft.com/fwlink/p/?linkid=402446).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 

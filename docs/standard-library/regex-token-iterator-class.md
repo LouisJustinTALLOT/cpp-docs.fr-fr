@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 78d01ed8606e65e55af7e0c8dc24c02b51c53a39
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 57fac1d9d5c73c2644a679402809933290dd3fc3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451554"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689057"
 ---
-# <a name="regextokeniterator-class"></a>regex_token_iterator, classe
+# <a name="regex_token_iterator-class"></a>regex_token_iterator, classe
 
 Classe d’itérateur pour les sous-correspondances.
 
@@ -45,18 +45,18 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>Paramètres
 
-*BidIt*\
+@No__t_1 *bidit*
 Type d'itérateur pour les sous-correspondances.
 
-*Elem*\
+@No__t_1 *elem*
 Type des éléments à faire correspondre.
 
-*RXtraits*\
+*RXtraits* \
 Classe Traits des éléments.
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle décrit un objet itérateur forward constant. D’un point de vue conceptuel, elle contient un objet `regex_iterator` utilisé pour la recherche d’expressions régulières dans une séquence de caractères. Elle extrait des objets de type `sub_match<BidIt>` représentant les sous-correspondances identifiées par les valeurs d’index dans le vecteur stocké `subs` pour chaque correspondance d’expression régulière.
+Le modèle de classe décrit un objet itérateur Forward constant. D’un point de vue conceptuel, elle contient un objet `regex_iterator` utilisé pour la recherche d’expressions régulières dans une séquence de caractères. Elle extrait des objets de type `sub_match<BidIt>` représentant les sous-correspondances identifiées par les valeurs d’index dans le vecteur stocké `subs` pour chaque correspondance d’expression régulière.
 
 La valeur d’index -1 désigne la séquence de caractères qui commence immédiatement après la fin de la correspondance d’expression régulière précédente, ou le début de la séquence de caractères en l’absence de correspondance d’expression régulière précédente. Par ailleurs, la séquence s’étend jusqu’au premier caractère (sans l’inclure) de la correspondance d’expression régulière actuelle, ou jusqu’à la fin de la séquence de caractères en l’absence de correspondance actuelle. Toute autre valeur d’index `idx` désigne le contenu du groupe de capture situé dans `it.match[idx]`.
 
@@ -87,7 +87,7 @@ La valeur d’index -1 désigne la séquence de caractères qui commence immédi
 
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|opérateur|Description|
 |-|-|
 |[!=, opérateur](#op_neq)|Compare l’inégalité d’itérateurs.|
 |[operator*](#op_star)|Accède à la sous-correspondance désignée.|
@@ -95,7 +95,7 @@ La valeur d’index -1 désigne la séquence de caractères qui commence immédi
 |[operator==](#op_eq_eq)|Compare des itérateurs pour déterminer s’ils sont égaux.|
 |[operator->](#op_arrow)|Accède à la sous-correspondance désignée.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<regex>
 
@@ -231,7 +231,7 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Oui*\
+\ *droit*
 Itérateur auquel comparer.
 
 ### <a name="remarks"></a>Notes
@@ -276,7 +276,7 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Oui*\
+\ *droit*
 Itérateur auquel comparer.
 
 ### <a name="remarks"></a>Notes
@@ -342,16 +342,16 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Paramètres
 
-*premier*\
+*premier* \
 Début de la séquence à mettre en correspondance.
 
-*famille*\
+*dernier* \
 Fin de la séquence à mettre en correspondance.
 
-*rouvert*\
+*\*
 Expression régulière pour les correspondances.
 
-*FA*\
+\ *f*
 Indicateurs pour les correspondances.
 
 ### <a name="remarks"></a>Notes
@@ -391,10 +391,10 @@ Le type est un synonyme de `sub_match<BidIt>`, où `BidIt` est le paramètre de 
 ## <a name="see-also"></a>Voir aussi
 
 [\<regex>](../standard-library/regex.md)\
-[regex_constants, classe](../standard-library/regex-constants-class.md)\
-[regex_error, classe](../standard-library/regex-error-class.md)\
-[\<fonctions Regex >](../standard-library/regex-functions.md)\
-[regex_iterator, classe](../standard-library/regex-iterator-class.md)\
-[\<opérateurs > Regex](../standard-library/regex-operators.md)\
-[regex_traits, classe](../standard-library/regex-traits-class.md)\
+\ de la [classe regex_constants](../standard-library/regex-constants-class.md)
+\ de la [classe regex_error](../standard-library/regex-error-class.md)
+[fonctions de > \<regex](../standard-library/regex-functions.md) \
+\ de la [classe regex_iterator](../standard-library/regex-iterator-class.md)
+[\<regex > opérateurs](../standard-library/regex-operators.md) \
+\ de la [classe regex_traits](../standard-library/regex-traits-class.md)
 [\<regex>, typedefs](../standard-library/regex-typedefs.md)

@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 1307f64fb5f92b59337665d108d950b28c6ff63e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7e24c320e909bb2d0471acdd275f89c43d3e44de
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454955"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684514"
 ---
-# <a name="uniformintdistribution-class"></a>uniform_int_distribution, classe
+# <a name="uniform_int_distribution-class"></a>uniform_int_distribution, classe
 
 Génère une distribution d'entiers uniforme (toutes les valeurs ont le même degré de probabilité) dans une plage de sortie qui est inclusive-inclusive.
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType*\
-Le type de résultat entier, par défaut, est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*IntType* \
+Le type de résultat entier, par défaut, est **int**. Pour connaître les types possibles, consultez [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit une distribution inclusive-inclusive qui produit des valeurs d'un type intégral spécifié par l'utilisateur avec une distribution pour que toutes les valeurs aient le même degré de probabilité. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution inclusive qui produit des valeurs d’un type intégral spécifié par l’utilisateur avec une distribution afin que chaque valeur soit également probable. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -85,7 +85,7 @@ La classe de modèle décrit une distribution inclusive-inclusive qui produit de
 
 Le membre de propriété `a()` retourne la limite minimale de la distribution stockée actuellement, tandis que `b()` retourne la limite maximale stockée actuellement. Pour cette classe de distribution, ces valeurs minimales et maximales sont les mêmes que celles retournées par les fonctions de propriété courantes `min()` et `max()`.
 
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.
 
@@ -95,7 +95,7 @@ Les fonctions membres `operator()` retournent la valeur générée suivante d’
 
 Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // compile with: /EHsc /W4
@@ -173,7 +173,7 @@ Distribution for 200 samples:
    12 :::::::::::::::::
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 
@@ -191,13 +191,13 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*un*\
+*\*
 Limite inférieure pour les valeurs aléatoires, valeur comprise.
 
-*p*\
+*b* \
 Limite supérieure pour les valeurs aléatoires, valeur comprise.
 
-*Parm*\
+*param* \
 Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*un*\
+*\*
 Limite inférieure pour les valeurs aléatoires, valeur comprise.
 
-*p*\
+*b* \
 Limite supérieure pour les valeurs aléatoires, valeur comprise.
 
-*Oui*\
+\ *droit*
 Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes

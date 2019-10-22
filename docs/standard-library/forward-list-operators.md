@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 64a49273cafd72158f176ee34ec271557ebee097
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240661"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689687"
 ---
-# <a name="ltforwardlistgt-operators"></a>&lt;forward_list&gt;, opérateurs
+# <a name="ltforward_listgt-operators"></a>&lt;forward_list&gt;, opérateurs
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>opérateur = =
 
 Vérifie si l’objet de liste forward_list à gauche de l’opérateur est égal à l’objet de liste forward_list situé à droite.
 
@@ -37,17 +37,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet de type `forward_list`.
 
-*Oui*\
+\ *droit*
 Objet de type `forward_list`.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction de modèle surcharge `operator==` pour comparer deux objets de la classe de modèle `forward_list`. La fonction retourne `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
+Cette fonction de modèle surcharge `operator==` pour comparer deux objets de `forward_list` de modèle de classe. La fonction retourne `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
 
-## <a name="op_neq"></a> opérateur ! =
+## <a name="op_neq"></a>opérateur ! =
 
 Vérifie si l’objet de liste forward_list à gauche de l’opérateur n’est pas égal à l’objet de liste forward_list situé à droite.
 
@@ -59,10 +59,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet de type `forward_list`.
 
-*Oui*\
+\ *droit*
 Objet de type `forward_list`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -85,10 +85,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet de type `forward_list`.
 
-*Oui*\
+\ *droit*
 Objet de type `forward_list`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -97,9 +97,9 @@ Objet de type `forward_list`.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction de modèle surcharge `operator<` pour comparer deux objets de la classe de modèle `forward_list`. La fonction retourne `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
+Cette fonction de modèle surcharge `operator<` pour comparer deux objets de `forward_list` de modèle de classe. La fonction retourne `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a> Opérateur&lt;=
+## <a name="op_lt_eq"></a>&lt; d’opérateur =
 
 Vérifie si l’objet de liste forward_list à gauche de l’opérateur est inférieur ou égal à l’objet de liste forward_list situé à droite.
 
@@ -111,10 +111,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet de type `forward_list`.
 
-*Oui*\
+\ *droit*
 Objet de type `forward_list`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -137,10 +137,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet de type `forward_list`.
 
-*Oui*\
+\ *droit*
 Objet de type `forward_list`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -151,7 +151,7 @@ Objet de type `forward_list`.
 
 Cette fonction de modèle retourne `right < left`.
 
-## <a name="op_gt_eq"></a> Opérateur&gt;=
+## <a name="op_gt_eq"></a>&gt; d’opérateur =
 
 Vérifie si l’objet de liste forward_list à gauche de l’opérateur est supérieur ou égal à l’objet de liste forward_list situé à droite.
 
@@ -163,15 +163,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet de type `forward_list`.
 
-*Oui*\
+\ *droit*
 Objet de type `forward_list`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la liste forward_list situé à gauche de l’opérateur est supérieure ou égale à la liste vers l’avant sur le côté droit de l’opérateur ; sinon **false**.
+**true** si la liste de transferts sur le côté gauche de l’opérateur est supérieure ou égale à la liste de transferts à droite de l’opérateur. Sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-ms.openlocfilehash: 85565dc0c0ec904551eb8dd981cfacc9a2e1f256
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ddaf9905e859c062031940d35adfa2a3393dbb5a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460038"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685786"
 ---
-# <a name="timebase-class"></a>time_base, classe
+# <a name="time_base-class"></a>time_base, classe
 
-La classe sert de classe de base pour les facettes de la classe de modèle time_get, en définissant `dateorder` uniquement le type énuméré et plusieurs constantes de ce type.
+La classe sert de classe de base pour les facettes du modèle de classe time_get, en définissant uniquement le type énuméré `dateorder` et plusieurs constantes de ce type.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,17 +38,17 @@ public:
 
 Chaque constante caractérise une manière différente d’ordonner les composants d’une date. Les constantes sont :
 
-- `no_order`ne spécifie aucun ordre particulier.
+- `no_order` spécifie aucun ordre particulier.
 
-- `dmy`Spécifie le jour, le mois et l’année de la commande, comme dans 2 décembre 1979.
+- `dmy` spécifie le jour, le mois et l’année de la commande, comme dans 2 décembre 1979.
 
-- `mdy`Spécifie l’ordre mois, jour, année, comme le 2 décembre 1979.
+- `mdy` spécifie l’ordre mois, jour, année, comme le 2 décembre 1979.
 
-- `ymd`Spécifie l’année, le mois, le jour de la commande, comme dans 1979/12/2.
+- `ymd` spécifie l’année, le mois, le jour de la commande, comme dans 1979/12/2.
 
-- `ydm`Spécifie l’année, le jour et le mois de la commande, comme dans 1979: 2 déc.
+- `ydm` spécifie l’année, le jour et le mois de la commande, comme dans 1979:2 Dec.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -56,4 +56,4 @@ Chaque constante caractérise une manière différente d’ordonner les composan
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

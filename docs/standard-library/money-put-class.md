@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: b9dff8a871895eee6774b75ca1c83dca6fd42ff3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: aafa6f9498ee315c25e73833baf3c13d99d36743
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460230"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689301"
 ---
-# <a name="moneyput-class"></a>money_put, classe
+# <a name="money_put-class"></a>money_put, classe
 
-La classe de modèle décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler les conversions de valeurs monétaires en séquences de type `CharType`.
+Le modèle de classe décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler les conversions de valeurs monétaires en séquences de type `CharType`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,10 +37,10 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType*\
+*CharType* \
 Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
-*OutputIterator*\
+*OutputIterator* \
 Type d'itérateur dans lequel les fonctions put monétaires enregistrent leur sortie.
 
 ## <a name="remarks"></a>Notes
@@ -68,7 +68,7 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |[do_put](#do_put)|Fonction virtuelle appelée pour convertir un nombre ou une chaîne en une séquence de caractères représentant une valeur monétaire.|
 |[put](#put)|Convertit un nombre ou une chaîne en une séquence de caractères représentant une valeur monétaire.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Paramètres
 
-*Situé*\
+\ *suivant*
 Itérateur qui traite le premier élément de la chaîne insérée.
 
-*_Intl*\
+*_Intl* \
 Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
 
-*_Iosbase*\
+*_Iosbase* \
 Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
-*_Fill*\
+*_Fill* \
 Caractère utilisé pour l’espacement.
 
-*multiples*\
+\ *Val*
 Objet de chaîne à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -191,18 +191,18 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs*\
+*_Refs* \
 Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes:
+Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes :
 
 - 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \>1: ces valeurs ne sont pas définies.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
@@ -230,19 +230,19 @@ iter_type put(
 
 ### <a name="parameters"></a>Paramètres
 
-*Situé*\
+\ *suivant*
 Itérateur qui traite le premier élément de la chaîne insérée.
 
-*_Intl*\
+*_Intl* \
 Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
 
-*_Iosbase*\
+*_Iosbase* \
 Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
-*_Fill*\
+*_Fill* \
 Caractère utilisé pour l’espacement.
 
-*multiples*\
+\ *Val*
 Objet de chaîne à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -291,10 +291,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit une spécialisation de la classe de modèle [basic_string](../standard-library/basic-string-class.md) dont les objets peuvent stocker des séquences d’éléments à partir de la séquence source.
+Le type décrit une spécialisation du modèle de classe [basic_string](../standard-library/basic-string-class.md) dont les objets peuvent stocker des séquences d’éléments à partir de la séquence source.
 
 ## <a name="see-also"></a>Voir aussi
 
 [\<locale>](../standard-library/locale.md)\
 [facet, classe](../standard-library/locale-class.md#facet_class)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

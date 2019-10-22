@@ -40,16 +40,16 @@ helpviewer_keywords:
 - std::codecvt [C++], out
 - std::codecvt [C++], unshift
 ms.assetid: 37d3efa1-2b7f-42b6-b04f-7a972c8c2c86
-ms.openlocfilehash: 936b3ab63b454e8f7e0490c2d155356a7c3b240f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: de7a520dea8510d3e865b4faecd50eb60d2d47a2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459833"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689850"
 ---
 # <a name="codecvt-class"></a>codecvt, classe
 
-Classe de modèle qui décrit un objet pouvant servir de facette de paramètres régionaux. Elle peut contrôler les conversions d'une séquence de valeurs utilisées pour encoder des caractères au sein du programme en une séquence de valeurs utilisées pour encoder des caractères en dehors du programme.
+Modèle de classe qui décrit un objet pouvant servir de facette de paramètres régionaux. Elle peut contrôler les conversions d'une séquence de valeurs utilisées pour encoder des caractères au sein du programme en une séquence de valeurs utilisées pour encoder des caractères en dehors du programme.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,18 +60,18 @@ class codecvt : public locale::facet, codecvt_base;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType*\
+*CharType* \
 Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
-*Poids*\
+@No__t_1 d' *octets*
 Type utilisé pour encoder des caractères en dehors d'un programme.
 
-*StateType*\
+*StateType* \
 Type qui peut être utilisé pour représenter les états intermédiaires d'une conversion entre types internes et types externes de représentations de caractères.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit un objet pouvant servir de facette de [paramètres régionaux](../standard-library/locale-class.md#facet_class)pour contrôler les conversions entre une séquence de valeurs de type *CharType* et une séquence de valeurs de type *Byte*. La classe *StateType* caractérise la transformation--et un objet de la classe *StateType* stocke toutes les informations d’État nécessaires pendant une conversion.
+Le modèle de classe décrit un objet pouvant servir de [facette de paramètres régionaux](../standard-library/locale-class.md#facet_class)pour contrôler les conversions entre une séquence de valeurs de type *CharType* et une séquence de valeurs de type *Byte*. La classe *StateType* caractérise la transformation--et un objet de la classe *StateType* stocke toutes les informations d’État nécessaires pendant une conversion.
 
 L’encodage interne utilise une représentation avec un nombre fixe d’octets par caractère, généralement de type **char** ou **wchar_t**.
 
@@ -93,14 +93,14 @@ template<>
 codecvt<char16_t, char, mbstate_t>
 ```
 
-effectue une conversion `char16_t` entre des séquences encodées au format UTF-16 et des séquences de **caractères** encodées au format UTF-8.
+effectue une conversion entre des séquences de `char16_t` encodées au format UTF-16 et des séquences de **caractères** encodées au format UTF-8.
 
 ```cpp
 template<>
 codecvt<char32_t, char, mbstate_t>
 ```
 
-effectue une conversion `char32_t` entre des séquences encodées au format UTF-32 (UCS-4) et des séquences de **caractères** encodées au format UTF-8.
+effectue une conversion entre des séquences de `char32_t` encodées au format UTF-32 (UCS-4) et des séquences de **caractères** encodées au format UTF-8.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -135,7 +135,7 @@ effectue une conversion `char32_t` entre des séquences encodées au format UTF-
 |[out](#out)|Convertit une séquence de `CharType` internes en une séquence de `Byte` externes.|
 |[unshift](#unshift)|Fournit les `Byte` externes nécessaires pour une conversion avec dépendance d'état, afin d'ajouter le dernier caractère de la séquence de `Byte`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -157,7 +157,7 @@ Valeur booléenne qui est **true** si aucune conversion ne doit être effectuée
 
 La fonction membre retourne [do_always_noconv](#do_always_noconv).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // codecvt_always_noconv.cpp
@@ -202,20 +202,20 @@ explicit codecvt(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs*\
+*_Refs* \
 Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes:
+Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes :
 
-- 0 : La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
-- 1 : La durée de vie de l’objet doit être gérée manuellement.
+- 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- 2 : Ces valeurs ne sont pas définies.
+- 2 : ces valeurs ne sont pas définies.
 
-`locale::facet` Le constructeur initialise son objet de base avec **locale::** [facette](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Le constructeur initialise son objet de base `locale::facet` avec **locale ::** [facette](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="do_always_noconv"></a>  codecvt::do_always_noconv
 
@@ -231,13 +231,13 @@ La fonction membre virtuelle protégée retourne **true** uniquement si chaque a
 
 La version de modèle retourne toujours **true**.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [always_noconv](#always_noconv), qui appelle la méthode `do_always_noconv`.
 
 ## <a name="do_encoding"></a>  codecvt::do_encoding
 
-Fonction virtuelle qui vérifie si l’encodage du `Byte` flux est dépendant de l’État, si le rapport entre les `Byte`s utilisé et `CharType`les s produits est constant et, le cas échéant, détermine la valeur de ce ratio.
+Fonction virtuelle qui vérifie si l’encodage du flux de `Byte` est dépendant de l’État, si le ratio entre le `Byte`s utilisé et le `CharType`s produit est constant et, le cas échéant, détermine la valeur de ce ratio.
 
 ```cpp
 virtual int do_encoding() const throw();
@@ -247,7 +247,7 @@ virtual int do_encoding() const throw();
 
 La fonction membre virtuelle protégée retourne :
 
-- -1, si l’encodage des séquences de `extern_type` type est dépendant de l’État.
+- -1, si l’encodage des séquences de type `extern_type` est dépendant de l’État.
 
 - 0, si le codage implique des séquences de longueur variable.
 
@@ -259,7 +259,7 @@ Consultez l’exemple relatif à [encoding](#encoding), qui appelle `do_encoding
 
 ## <a name="do_in"></a>  codecvt::do_in
 
-Fonction virtuelle appelée pour convertir une séquence de s externes `Byte`en une séquence de s internes `CharType`.
+Fonction virtuelle appelée pour convertir une séquence de `Byte`s externes en une séquence de `CharType`s interne.
 
 ```cpp
 virtual result do_in(
@@ -274,38 +274,38 @@ virtual result do_in(
 
 ### <a name="parameters"></a>Paramètres
 
-*_ State*\
+@No__t_1 _ *State*
 État de conversion conservé entre les appels à la fonction membre.
 
-*First1*\
+*first1* \
 Pointeur vers le début de la séquence à convertir.
 
-*last1*\
+*last1* \
 Pointeur vers la fin de la séquence à convertir.
 
-*next1*\
+*next1* \
 Pointeur situé après la fin de la séquence convertie, vers le premier caractère non converti.
 
-*First2*\
+*first2* \
 Pointeur vers le début de la séquence convertie.
 
-*last2*\
+*last2* \
 Pointeur vers la fin de la séquence convertie.
 
-*next2*\
-Pointeur vers le `CharType` qui vient après le dernier converti `CharType`, jusqu’au premier caractère non modifié dans la séquence de destination.
+*next2* \
+Pointeur vers le `CharType` qui vient après le dernier `CharType` converti, vers le premier caractère non modifié dans la séquence de destination.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Retour qui indique la réussite, la réussite partielle ou l’échec de l’opération. La fonction retourne :
 
-- `codecvt_base::error`Si la séquence source est incorrecte.
+- `codecvt_base::error` si la séquence source est incorrecte.
 
 - `codecvt_base::noconv` si la fonction n’exécute aucune conversion.
 
-- `codecvt_base::ok`Si la conversion a échoué.
+- `codecvt_base::ok` si la conversion a échoué.
 
-- `codecvt_base::partial`Si la source est insuffisante ou si la destination n’est pas assez grande, pour que la conversion aboutisse.
+- `codecvt_base::partial` si la source est insuffisante ou si la destination n’est pas assez grande pour que la conversion aboutisse.
 
 ### <a name="remarks"></a>Notes
 
@@ -329,37 +329,37 @@ virtual int do_length(
 
 ### <a name="parameters"></a>Paramètres
 
-*_ State*\
+@No__t_1 _ *State*
 État de conversion conservé entre les appels à la fonction membre.
 
-*First1*\
+*first1* \
 Pointeur vers le début de la séquence externe.
 
-*last1*\
+*last1* \
 Pointeur vers la fin de la séquence externe.
 
-*_Len2*\
-Nombre maximal de `Byte`savesets qui peuvent être retournés par la fonction membre.
+*_Len2* \
+Nombre maximal de `Byte`s qui peuvent être retournés par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Entier qui représente le nombre maximal de conversions, non supérieur à *_Len2*, défini par la séquence source externe à [ `first1`, `last1`).
+Entier qui représente le nombre maximal de conversions, non supérieur à *_Len2*, défini par la séquence source externe à [`first1`, `last1`).
 
 ### <a name="remarks"></a>Notes
 
-La fonction `do_in`membre virtuelle protégée appelle effectivement ( `_State`, `first1`, `last1`, `next1`, `_Buf`, `_Buf`  +  ,)`next2`pour _ `_Len2`  *State* (une copie de l’État), une `_Buf`mémoire tampon `next1`et des pointeurs et `next2`.
+La fonction membre virtuelle protégée appelle efficacement `do_in` (`_State`, `first1`, `last1`, `next1`, `_Buf`, `_Buf`  +  `_Len2`, `next2`) pour _ *State* (une copie de l’État), une mémoire tampon 1 , et les pointeurs 2and 3.
 
-Elle retourne `next2`  - ensuite .`buf` Par conséquent, il compte le nombre maximal de conversions, non supérieur à *_Len2*, défini par la séquence source sur `first1`[ `last1`,).
+Elle retourne ensuite `next2`  -  `buf`. Par conséquent, il compte le nombre maximal de conversions, non supérieur à *_Len2*, défini par la séquence source à l’adresse [`first1`, `last1`).
 
-La version de modèle retourne toujours la valeur la plus petite de *last1* - *First1* et *_Len2*.
+La version de modèle retourne toujours la valeur la plus petite de *last1*  - *First1* et *_Len2*.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple correspondant à [Length](#length), qui `do_length`appelle.
+Consultez l’exemple de [longueur](#length), qui appelle `do_length`.
 
 ## <a name="do_max_length"></a>  codecvt::do_max_length
 
-Fonction virtuelle qui retourne le nombre maximal de externes `Byte`nécessaires pour produire un interne. `CharType`
+Fonction virtuelle qui retourne le nombre maximal de `Byte`s externes nécessaires pour produire un `CharType` interne.
 
 ```cpp
 virtual int do_max_length() const throw();
@@ -367,11 +367,11 @@ virtual int do_max_length() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre maximal de `Byte`s nécessaires pour en créer `CharType`un.
+Nombre maximal de `Byte`s nécessaires pour produire un `CharType`.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre virtuelle protégée retourne la plus grande valeur autorisée qui peut être retournée par `first1` [do_length](#do_length)(, `last1`, 1) pour les valeurs valides arbitraires de *First1* et *last1*.
+La fonction membre virtuelle protégée retourne la plus grande valeur autorisée qui peut être retournée par [do_length](#do_length)(`first1`, `last1`, 1) pour les valeurs valides arbitraires de *First1* et *last1*.
 
 ### <a name="example"></a>Exemple
 
@@ -394,38 +394,38 @@ virtual result do_out(
 
 ### <a name="parameters"></a>Paramètres
 
-*_ State*\
+@No__t_1 _ *State*
 État de conversion conservé entre les appels à la fonction membre.
 
-*First1*\
+*first1* \
 Pointeur vers le début de la séquence à convertir.
 
-*last1*\
+*last1* \
 Pointeur vers la fin de la séquence à convertir.
 
-*next1*\
-Référence à un pointeur vers le premier non converti `CharType`, après le dernier `CharType` converti.
+*next1* \
+Référence à un pointeur vers le premier `CharType` non converti, après la dernière `CharType` convertie.
 
-*First2*\
+*first2* \
 Pointeur vers le début de la séquence convertie.
 
-*last2*\
+*last2* \
 Pointeur vers la fin de la séquence convertie.
 
-*next2*\
-Référence à un pointeur vers le premier non converti `Byte`, après le dernier `Byte` converti.
+*next2* \
+Référence à un pointeur vers le premier `Byte` non converti, après la dernière `Byte` convertie.
 
 ### <a name="return-value"></a>Valeur de retour
 
 La fonction retourne :
 
-- `codecvt_base::error`Si la séquence source est incorrecte.
+- `codecvt_base::error` si la séquence source est incorrecte.
 
 - `codecvt_base::noconv` si la fonction n’exécute aucune conversion.
 
-- `codecvt_base::ok`Si la conversion a échoué.
+- `codecvt_base::ok` si la conversion a échoué.
 
-- `codecvt_base::partial`Si la source est insuffisante ou si la destination n’est pas assez grande pour que la conversion aboutisse.
+- `codecvt_base::partial` si la source est insuffisante ou si la destination n’est pas assez grande pour que la conversion aboutisse.
 
 ### <a name="remarks"></a>Notes
 
@@ -449,35 +449,35 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>Paramètres
 
-*_ State*\
+@No__t_1 _ *State*
 État de conversion conservé entre les appels à la fonction membre.
 
-*First2*\
+*first2* \
 Pointeur vers la première position dans la plage de destination.
 
-*last2*\
+*last2* \
 Pointeur vers la dernière position dans la plage de destination.
 
-*next2*\
+*next2* \
 Pointeur vers le premier élément non modifié dans la séquence de destination.
 
 ### <a name="return-value"></a>Valeur de retour
 
 La fonction retourne :
 
-- `codecvt_base::error`Si _ *State* représente un État non valide
+- `codecvt_base::error` si _ *State* représente un État non valide
 
 - `codecvt_base::noconv` si la fonction n’exécute aucune conversion
 
-- `codecvt_base::ok`Si la conversion a échoué
+- `codecvt_base::ok` si la conversion a échoué
 
-- `codecvt_base::partial`Si la destination n’est pas assez grande pour que la conversion aboutisse
+- `codecvt_base::partial` si la destination n’est pas assez grande pour que la conversion aboutisse.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre virtuelle protégée tente de convertir l’élément `CharType`source (0) en séquence de destination qu’il stocke dans [ `last2` `first2`,), à l’exception de l' `Byte`élément de fin (0). Elle stocke toujours dans *Next2* un pointeur vers le premier élément non modifié dans la séquence de destination.
+La fonction membre virtuelle protégée tente de convertir l’élément source `CharType` (0) en séquence de destination qu’il stocke dans [`first2`, `last2`), à l’exception de l’élément de fin `Byte` (0). Elle stocke toujours dans *Next2* un pointeur vers le premier élément non modifié dans la séquence de destination.
 
-_ *State* doit représenter l’état initial de la conversion au début d’une nouvelle séquence source. La fonction modifie sa valeur stockée selon les besoins pour refléter l’état actuel d’une conversion réussie. En règle générale, la conversion `CharType`de l’élément source (0) conserve l’état actuel dans l’état de conversion initial.
+_ *State* doit représenter l’état initial de la conversion au début d’une nouvelle séquence source. La fonction modifie sa valeur stockée selon les besoins pour refléter l’état actuel d’une conversion réussie. En règle générale, la conversion de l’élément source `CharType` (0) laisse l’état actuel dans l’état de conversion initial.
 
 ### <a name="example"></a>Exemple
 
@@ -493,11 +493,11 @@ int encoding() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la valeur de retour est positive, alors cette valeur est le nombre `Byte` constant de caractères requis pour `CharType` produire le caractère.
+Si la valeur de retour est positive, cette valeur est le nombre constant de caractères `Byte` requis pour produire le caractère `CharType`.
 
 La fonction membre virtuelle protégée retourne :
 
-- -1, si l’encodage des séquences de `extern_type` type est dépendant de l’État.
+- -1, si l’encodage des séquences de type `extern_type` est dépendant de l’État.
 
 - 0, si le codage implique des séquences de longueur variable.
 
@@ -507,7 +507,7 @@ La fonction membre virtuelle protégée retourne :
 
 La fonction membre retourne [do_encoding](#do_encoding).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // codecvt_encoding.cpp
@@ -563,38 +563,38 @@ result in(
 
 ### <a name="parameters"></a>Paramètres
 
-*_ State*\
+@No__t_1 _ *State*
 État de conversion conservé entre les appels à la fonction membre.
 
-*First1*\
+*first1* \
 Pointeur vers le début de la séquence à convertir.
 
-*last1*\
+*last1* \
 Pointeur vers la fin de la séquence à convertir.
 
-*next1*\
+*next1* \
 Pointeur situé après la fin de la séquence convertie, vers le premier caractère non converti.
 
-*First2*\
+*first2* \
 Pointeur vers le début de la séquence convertie.
 
-*last2*\
+*last2* \
 Pointeur vers la fin de la séquence convertie.
 
-*next2*\
-Pointeur vers `CharType` qui vient après le dernier converti `Chartype` au premier caractère non modifié dans la séquence de destination.
+*next2* \
+Pointeur vers le `CharType` qui vient après le dernier `Chartype` converti en premier caractère non modifié dans la séquence de destination.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Retour qui indique la réussite, la réussite partielle ou l’échec de l’opération. La fonction retourne :
 
-- `codecvt_base::error`Si la séquence source est incorrecte.
+- `codecvt_base::error` si la séquence source est incorrecte.
 
 - `codecvt_base::noconv` si la fonction n’exécute aucune conversion.
 
-- `codecvt_base::ok`Si la conversion a échoué.
+- `codecvt_base::ok` si la conversion a échoué.
 
-- `codecvt_base::partial`Si la source est insuffisante ou si la destination n’est pas assez grande pour que la conversion aboutisse.
+- `codecvt_base::partial` si la source est insuffisante ou si la destination n’est pas assez grande pour que la conversion aboutisse.
 
 ### <a name="remarks"></a>Notes
 
@@ -665,27 +665,27 @@ int length(
 
 ### <a name="parameters"></a>Paramètres
 
-*_ State*\
+@No__t_1 _ *State*
 État de conversion conservé entre les appels à la fonction membre.
 
-*First1*\
+*first1* \
 Pointeur vers le début de la séquence externe.
 
-*last1*\
+*last1* \
 Pointeur vers la fin de la séquence externe.
 
-*_Len2*\
+*_Len2* \
 Nombre maximal d’objets Byte qui peuvent être retournés par la fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Entier qui représente le nombre maximal de conversions, non supérieur à *_Len2*, défini par la séquence source externe à [ `first1`, `last1`).
+Entier qui représente le nombre maximal de conversions, non supérieur à *_Len2*, défini par la séquence source externe à [`first1`, `last1`).
 
 ### <a name="remarks"></a>Notes
 
 La fonction membre retourne [do_length](#do_length)( *_State,  first1*, `last1`, `_Len2`).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // codecvt_length.cpp
@@ -724,7 +724,7 @@ int max_length() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre maximal de `Byte`s nécessaires pour en créer `CharType`un.
+Nombre maximal de `Byte`s nécessaires pour produire un `CharType`.
 
 ### <a name="remarks"></a>Notes
 
@@ -770,26 +770,26 @@ result out(
 
 ### <a name="parameters"></a>Paramètres
 
-*_ State*\
+@No__t_1 _ *State*
 État de conversion conservé entre les appels à la fonction membre.
 
-*First1*\
+*first1* \
 Pointeur vers le début de la séquence à convertir.
 
-*last1*\
+*last1* \
 Pointeur vers la fin de la séquence à convertir.
 
-*next1*\
-Référence à un pointeur vers le premier non converti `CharType` après le dernier `CharType` converti.
+*next1* \
+Référence à un pointeur vers le premier `CharType` non converti après la dernière `CharType` convertie.
 
-*First2*\
+*first2* \
 Pointeur vers le début de la séquence convertie.
 
-*last2*\
+*last2* \
 Pointeur vers la fin de la séquence convertie.
 
-*next2*\
-Référence à un pointeur vers le premier non converti `Byte` après le dernier converti. `Byte`
+*next2* \
+Référence à un pointeur vers le premier `Byte` non converti après le dernier `Byte` converti.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -850,7 +850,7 @@ Le type est un synonyme du paramètre de modèle `StateType`.
 
 ## <a name="unshift"></a>  codecvt::unshift
 
-Fournit les `Byte`nécessaires dans une conversion dépendante de l’État pour terminer le dernier caractère d’une `Byte`séquence de.
+Fournit les `Byte`s nécessaires dans une conversion dépendante de l’État pour terminer le dernier caractère d’une séquence de `Byte`s.
 
 ```cpp
 result unshift(
@@ -862,41 +862,41 @@ result unshift(
 
 ### <a name="parameters"></a>Paramètres
 
-*_ State*\
+@No__t_1 _ *State*
 État de conversion conservé entre les appels à la fonction membre.
 
-*First2*\
+*first2* \
 Pointeur vers la première position dans la plage de destination.
 
-*last2*\
+*last2* \
 Pointeur vers la dernière position dans la plage de destination.
 
-*next2*\
+*next2* \
 Pointeur vers le premier élément non modifié dans la séquence de destination.
 
 ### <a name="return-value"></a>Valeur de retour
 
 La fonction retourne :
 
-- `codecvt_base::error`Si l’état représente un État non valide.
+- `codecvt_base::error` si l’état représente un État non valide.
 
 - `codecvt_base::noconv` si la fonction n’exécute aucune conversion.
 
-- `codecvt_base::ok`Si la conversion a échoué.
+- `codecvt_base::ok` si la conversion a échoué.
 
-- `codecvt_base::partial`Si la destination n’est pas assez grande pour que la conversion aboutisse.
+- `codecvt_base::partial` si la destination n’est pas assez grande pour que la conversion aboutisse.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre virtuelle protégée tente de convertir l’élément `CharType`source (0) en séquence de destination qu’il stocke dans [ `last2` `first2`,), à l’exception de l' `Byte`élément de fin (0). Elle stocke toujours dans *Next2* un pointeur vers le premier élément non modifié dans la séquence de destination.
+La fonction membre virtuelle protégée tente de convertir l’élément source `CharType` (0) en séquence de destination qu’il stocke dans [`first2`, `last2`), à l’exception de l’élément de fin `Byte` (0). Elle stocke toujours dans *Next2* un pointeur vers le premier élément non modifié dans la séquence de destination.
 
-_ *State* doit représenter l’état de conversion initial au début d’une nouvelle séquence source. La fonction modifie sa valeur stockée selon les besoins pour refléter l’état actuel d’une conversion réussie. En règle générale, la conversion `CharType`de l’élément source (0) conserve l’état actuel dans l’état de conversion initial.
+_ *State* doit représenter l’état de conversion initial au début d’une nouvelle séquence source. La fonction modifie sa valeur stockée selon les besoins pour refléter l’état actuel d’une conversion réussie. En règle générale, la conversion de l’élément source `CharType` (0) laisse l’état actuel dans l’état de conversion initial.
 
 La fonction membre retourne [do_unshift](#do_unshift)( `_State`, `first2`, `last2`, `next2` ).
 
 ## <a name="see-also"></a>Voir aussi
 
 [\<locale>](../standard-library/locale.md)\
-[Pages de code](../c-runtime-library/code-pages.md)\
-[Chaînes relatives aux noms, aux langues, au pays et à la région des paramètres régionaux](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Pages de codes](../c-runtime-library/code-pages.md)\
+[Chaînes relatives aux noms, aux langues, au pays et à la région](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

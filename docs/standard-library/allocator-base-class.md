@@ -38,14 +38,14 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cbc1a9eb9432a454ca5dc04205b9d0c7b631a430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456436"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690093"
 ---
-# <a name="allocatorbase-class"></a>allocator_base, classe
+# <a name="allocator_base-class"></a>allocator_base, classe
 
 Définit la classe de base et les fonctions communes nécessaires à la création d’un allocateur défini par l’utilisateur à partir d’un filtre de synchronisation.
 
@@ -78,7 +78,7 @@ class allocator_base
 |[difference_type](#difference_type)|Type intégral signé qui peut représenter la différence entre des valeurs de pointeurs vers le type d'objet géré par l'allocateur.|
 |[pointer](#pointer)|Type qui fournit un pointeur vers le type d'objet géré par l'allocateur.|
 |[reference](#reference)|Type qui fournit une référence au type d'objet géré par l'allocateur.|
-|[size_type](#size_type)|Type intégral non signé qui peut représenter la longueur d'une séquence qu'un objet de classe de modèle `allocator_base` peut allouer.|
+|[size_type](#size_type)|Type intégral non signé qui peut représenter la longueur d’une séquence qu’un objet de type `allocator_base` peut allouer.|
 |[value_type](#value_type)|Type géré par l'allocateur.|
 
 ### <a name="member-functions"></a>Fonctions membres
@@ -94,7 +94,7 @@ class allocator_base
 |[destroy](#destroy)|Appelle un destructeur d'objets sans libérer la mémoire où l'objet était stocké.|
 |[max_size](#max_size)|Retourne le nombre d’éléments de type *Type* qui pourraient être alloués par un objet de classe allocator avant que la mémoire libre soit complètement utilisée.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<allocators>
 
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Paramètres
 
-*multiples*\
+\ *Val*
 Valeur const ou nonconst de l’objet dont l’adresse est recherchée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -325,7 +325,7 @@ typedef Type& reference;
 
 ## <a name="size_type"></a>  allocator_base::size_type
 
-Type intégral non signé qui peut représenter la longueur d'une séquence qu'un objet de classe de modèle `allocator_base` peut allouer.
+Type intégral non signé qui peut représenter la longueur d’une séquence qu’un objet de type `allocator_base` peut allouer.
 
 ```cpp
 typedef std::size_t size_type;

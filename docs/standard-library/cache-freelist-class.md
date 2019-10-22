@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: 05260d6800597b64908ff0aeffac47b09fed9a0e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d7840d114acfa0f3daa01c8dfdb6c6114829d93d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449684"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689915"
 ---
-# <a name="cachefreelist-class"></a>cache_freelist, classe
+# <a name="cache_freelist-class"></a>cache_freelist, classe
 
 Définit un [allocateur de blocs](../standard-library/allocators-header.md) qui alloue et désalloue des blocs de mémoire de taille unique.
 
@@ -37,7 +37,7 @@ class cache_freelist
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle cache_freelist conserve une liste libre des blocs de mémoire de taille *SZ*. Lorsque la liste libre est pleine, elle utilise l' **opérateur delete** pour libérer des blocs de mémoire. Lorsque la liste libre est vide, elle utilise **operator new** pour allouer de nouveaux blocs de mémoire. La taille maximale de la liste libre est déterminée par la classe Max Class passée dans le paramètre *Max* .
+Le modèle de classe cache_freelist conserve une liste libre des blocs de mémoire de taille *SZ*. Lorsque la liste libre est pleine, elle utilise l' **opérateur delete** pour libérer des blocs de mémoire. Lorsque la liste libre est vide, elle utilise **operator new** pour allouer de nouveaux blocs de mémoire. La taille maximale de la liste libre est déterminée par la classe Max Class passée dans le paramètre *Max* .
 
 Chaque bloc de mémoire contient des octets *SZ* de mémoire utilisable et les données que l’opérateur **New** et l' **opérateur delete** requièrent.
 
@@ -54,7 +54,7 @@ Chaque bloc de mémoire contient des octets *SZ* de mémoire utilisable et les d
 |[allocate](#allocate)|Alloue un bloc de mémoire.|
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<allocators>
 

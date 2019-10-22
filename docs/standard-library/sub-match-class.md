@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 776dfe67367b932435f76af94880111cad61341d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447426"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685842"
 ---
-# <a name="submatch-class"></a>sub_match, classe
+# <a name="sub_match-class"></a>sub_match, classe
 
 Décrit une sous-correspondance.
 
@@ -41,16 +41,16 @@ class sub_match
 
 ## <a name="parameters"></a>Paramètres
 
-*BidIt*\
+@No__t_1 *bidit*
 Type d'itérateur pour les sous-correspondances.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle décrit un objet qui désigne une séquence de caractères correspondant à un groupe de capture dans un appel à [regex_match](../standard-library/regex-functions.md#regex_match) ou [regex_search](../standard-library/regex-functions.md#regex_search). Les objets de type de [classe match_results](../standard-library/match-results-class.md) contiennent un tableau de ces objets, un pour chaque groupe de capture de l’expression régulière utilisée dans la recherche.
+Le modèle de classe décrit un objet qui désigne une séquence de caractères correspondant à un groupe de capture dans un appel à [regex_match](../standard-library/regex-functions.md#regex_match) ou à [regex_search](../standard-library/regex-functions.md#regex_search). Les objets de type de [classe match_results](../standard-library/match-results-class.md) contiennent un tableau de ces objets, un pour chaque groupe de capture de l’expression régulière utilisée dans la recherche.
 
 Si le groupe de capture n’a aucune correspondance, le membre de données `matched` de l’objet a la valeur false, et les deux itérateurs `first` et `second` (hérités du `std::pair`de base) sont égaux. Si le groupe de capture a une correspondance, `matched` a la valeur true et l’itérateur `first` pointe vers le premier caractère de la séquence cible correspondant au groupe de capture. En outre, l’itérateur `second` pointe vers la position située après le dernier caractère de la séquence cible correspondant au groupe de capture. Notez que pour une correspondance de longueur nulle, le membre `matched` a la valeur true. Par ailleurs, les deux itérateurs sont égaux et pointent vers la position de la correspondance.
 
-Une correspondance de longueur nulle peut se produire quand un groupe de capture se compose uniquement d’une assertion, ou d’une répétition n’autorisant aucune répétition. Par exemple :
+Une correspondance de longueur nulle peut se produire quand un groupe de capture se compose uniquement d’une assertion, ou d’une répétition n’autorisant aucune répétition. Exemple :
 
 « ^ » correspond à la séquence cible « a ». L’objet `sub_match` correspondant au groupe de capture 0 contient les itérateurs qui pointent vers le premier caractère de la séquence.
 
@@ -62,7 +62,7 @@ Une correspondance de longueur nulle peut se produire quand un groupe de capture
 |-|-|
 |[difference_type](#difference_type)|Type d’une différence d’itérateur.|
 |[iterator](#iterator)|Type d'un itérateur.|
-|[value_type](#value_type)|Type d’un élément.|
+|[value_type](#value_type)|Type d'un élément.|
 
 ### <a name="member-functions"></a>Fonctions membres
 
@@ -75,11 +75,11 @@ Une correspondance de longueur nulle peut se produire quand un groupe de capture
 
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|opérateur|Description|
 |-|-|
 |[opérateur basic_string < Value_type >](#op_basic_string_lt_value_type_gt)|Effectue un cast de la sous-correspondance en chaîne.|
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // std__regex__sub_match.cpp
@@ -131,7 +131,7 @@ compare(string) == 1
 compare(sub) == 0
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<regex>
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Oui*\
+\ *droit*
 Sous-correspondance avec laquelle effectuer la comparaison.
 
-*Str*\
+*str* \
 Chaîne de comparaison.
 
-*effectués*\
+\ *ptr*
 Séquence terminée par un caractère null avec laquelle effectuer la comparaison.
 
 ### <a name="remarks"></a>Notes
@@ -216,7 +216,7 @@ bool matched;
 
 ### <a name="remarks"></a>Notes
 
-Le membre `*this` a la **valeur true** uniquement si le groupe de capture associé à faisait partie de la correspondance d’expression régulière.
+Le membre a la **valeur true** uniquement si le groupe de capture associé à `*this` faisait partie de la correspondance d’expression régulière.
 
 ## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
 
@@ -244,7 +244,7 @@ La fonction membre retourne `basic_string<value_type>(first, second)`.
 
 ## <a name="value_type"></a>  sub_match::value_type
 
-Type d’un élément.
+Type d'un élément.
 
 ```cpp
 typedef typename iterator_traits<BidIt>::value_type value_type;

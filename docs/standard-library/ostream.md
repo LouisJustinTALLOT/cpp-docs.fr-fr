@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: 8de66718dab10b5c95e8c1ab7fd0bd17e9b4ee5e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3838e215ffac42ec6902ab6a9837f638153cf184
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448169"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689163"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
-Définit la classe de modèle [basic_ostream](../standard-library/basic-ostream-class.md), qui sert d’intermédiaire pour les insertions des iostreams. L'en-tête définit également plusieurs manipulateurs associés. Cet en-tête est généralement inclus pour vous par l’un des autres en-têtes iostream. Vous devez rarement l'inclure directement.)
+Définit le modèle de classe [basic_ostream](../standard-library/basic-ostream-class.md), qui médiation les insertions pour le iostreams. L'en-tête définit également plusieurs manipulateurs associés. Cet en-tête est généralement inclus pour vous par l’un des autres en-têtes iostream. Vous devez rarement l'inclure directement.)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,8 +29,8 @@ Définit la classe de modèle [basic_ostream](../standard-library/basic-ostream-
 
 |Nom de type|Description|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|Crée un type à `basic_ostream` partir de qui est spécialisé sur `char_traits` **char** et spécialisé sur **char**.|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|Crée un type à `basic_ostream` partir de qui est spécialisé sur `char_traits` **wchar_t** et spécialisé sur **wchar_t**.|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|Crée un type à partir de `basic_ostream` qui est spécialisé sur **char** et `char_traits` spécialisé sur **char**.|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|Crée un type à partir de `basic_ostream` qui est spécialisé sur **wchar_t** et `char_traits` spécialisé sur **wchar_t**.|
 
 ### <a name="manipulators"></a>Manipulateurs
 
@@ -43,19 +43,19 @@ Définit la classe de modèle [basic_ostream](../standard-library/basic-ostream-
 
 ### <a name="operators"></a>Opérateurs
 
-|Opérateur|Description|
+|opérateur|Description|
 |-|-|
 |[operator<<](../standard-library/ostream-operators.md#op_lt_lt)|Écrit différents types dans le flux.|
 
 ### <a name="classes"></a>Classes
 
-|Classe|Description|
+|Class|Description|
 |-|-|
-|[basic_ostream](../standard-library/basic-ostream-class.md)|La classe de modèle décrit un objet qui contrôle l'insertion d'éléments et d'objets encodés dans une mémoire tampon de flux.|
+|[basic_ostream](../standard-library/basic-ostream-class.md)|Le modèle de classe décrit un objet qui contrôle l’insertion d’éléments et d’objets encodés dans une mémoire tampon de flux.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream, programmation](../standard-library/iostream-programming.md)\
 [iostreams, conventions](../standard-library/iostreams-conventions.md)

@@ -10,12 +10,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 829b4cf50b02db0a88d61a8801c1e21ddb470344
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8795d0f1c387fb87c44f2d68c45aa27d1edbfb79
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460134"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689070"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt;, opérateurs
 
@@ -66,19 +66,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Paramètres
 
-*BidIt*\
+@No__t_1 *bidit*
 Type d'itérateur.
 
-*IOtraits*\
+*IOtraits* \
 Classe de caractéristiques des chaînes.
 
-*Utilis*\
+@No__t_1 *Alloc*
 Classe allocator.
 
-*gauche*\
+\ *gauche*
 Objet de gauche à comparer.
 
-*Oui*\
+\ *droit*
 Objet de droite à comparer.
 
 ### <a name="remarks"></a>Notes
@@ -181,26 +181,26 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Paramètres
 
-*BidIt*\
+@No__t_1 *bidit*
 Type d'itérateur.
 
-*IOtraits*\
+*IOtraits* \
 Classe de caractéristiques des chaînes.
 
-*Utilis*\
+@No__t_1 *Alloc*
 Classe allocator.
 
-*gauche*\
+\ *gauche*
 Objet de gauche à comparer.
 
-*Oui*\
+\ *droit*
 Objet de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
 Chaque opérateur de modèle convertit ses arguments en un type chaîne et retourne true uniquement si la valeur convertie de *Left* est inférieure à la valeur convertie de *Right*.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__regex__operator_lt.cpp
@@ -266,22 +266,22 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Paramètres
 
-*Elem*\
+@No__t_1 *elem*
 Type de l’élément.
 
-*IOtraits*\
+*IOtraits* \
 Classe de caractéristiques des chaînes.
 
-*Utilis*\
+@No__t_1 *Alloc*
 Classe allocator.
 
-*BidIt*\
+@No__t_1 *bidit*
 Type d'itérateur.
 
-*système d’exploitation*\
+\ *du système d’exploitation*
 Flux de sortie.
 
-*Oui*\
+\ *droit*
 Objet à insérer.
 
 ### <a name="remarks"></a>Notes
@@ -351,19 +351,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Paramètres
 
-*BidIt*\
+@No__t_1 *bidit*
 Type d'itérateur.
 
-*IOtraits*\
+*IOtraits* \
 Classe de caractéristiques des chaînes.
 
-*Utilis*\
+@No__t_1 *Alloc*
 Classe allocator.
 
-*gauche*\
+\ *gauche*
 Objet de gauche à comparer.
 
-*Oui*\
+\ *droit*
 Objet de droite à comparer.
 
 ### <a name="remarks"></a>Notes
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Paramètres
 
-*BidIt*\
+@No__t_1 *bidit*
 Type d'itérateur.
 
-*IOtraits*\
+*IOtraits* \
 Classe de caractéristiques des chaînes.
 
-*Utilis*\
+@No__t_1 *Alloc*
 Classe allocator.
 
-*gauche*\
+\ *gauche*
 Objet de gauche à comparer.
 
-*Oui*\
+\ *droit*
 Objet de droite à comparer.
 
 ### <a name="remarks"></a>Notes
@@ -486,11 +486,11 @@ Chaque opérateur de modèle convertit chacun de ses arguments en type chaîne e
 
 Quand un opérateur de modèle convertit ses arguments en type chaîne, il utilise la première des transformations suivantes qui s’applique :
 
-les arguments dont les types sont une spécialisation de la classe de modèle `match_results` ou `sub_match` sont convertis en appelant la fonction membre `str` ;
+les arguments dont les types sont une spécialisation du modèle de classe `match_results` ou `sub_match` sont convertis en appelant la fonction membre `str` ;
 
-les arguments dont les types sont une spécialisation de la classe de modèle `basic_string` restent inchangés ;
+les arguments dont les types sont une spécialisation du modèle de classe `basic_string` sont inchangés ;
 
-tous les autres types d’arguments sont convertis en passant la valeur d’argument au constructeur pour une spécialisation appropriée de la classe de modèle `basic_string`.
+tous les autres types d’arguments sont convertis en passant la valeur d’argument au constructeur pour une spécialisation appropriée du modèle de classe `basic_string`.
 
 ### <a name="example"></a>Exemple
 
@@ -588,26 +588,26 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Paramètres
 
-*BidIt*\
+@No__t_1 *bidit*
 Type d'itérateur.
 
-*IOtraits*\
+*IOtraits* \
 Classe de caractéristiques des chaînes.
 
-*Utilis*\
+@No__t_1 *Alloc*
 Classe allocator.
 
-*gauche*\
+\ *gauche*
 Objet de gauche à comparer.
 
-*Oui*\
+\ *droit*
 Objet de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
 Chaque opérateur de modèle retourne `right < left`.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__regex__operator_gt.cpp
@@ -698,19 +698,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Paramètres
 
-*BidIt*\
+@No__t_1 *bidit*
 Type d'itérateur.
 
-*IOtraits*\
+*IOtraits* \
 Classe de caractéristiques des chaînes.
 
-*Utilis*\
+@No__t_1 *Alloc*
 Classe allocator.
 
-*gauche*\
+\ *gauche*
 Objet de gauche à comparer.
 
-*Oui*\
+\ *droit*
 Objet de droite à comparer.
 
 ### <a name="remarks"></a>Notes
@@ -774,10 +774,10 @@ sub >= 'a' == true
 ## <a name="see-also"></a>Voir aussi
 
 [\<regex>](../standard-library/regex.md)\
-[regex_constants, classe](../standard-library/regex-constants-class.md)\
-[regex_error, classe](../standard-library/regex-error-class.md)\
-[\<fonctions Regex >](../standard-library/regex-functions.md)\
-[regex_iterator, classe](../standard-library/regex-iterator-class.md)\
-[regex_token_iterator, classe](../standard-library/regex-token-iterator-class.md)\
-[regex_traits, classe](../standard-library/regex-traits-class.md)\
+\ de la [classe regex_constants](../standard-library/regex-constants-class.md)
+\ de la [classe regex_error](../standard-library/regex-error-class.md)
+[fonctions de > \<regex](../standard-library/regex-functions.md) \
+\ de la [classe regex_iterator](../standard-library/regex-iterator-class.md)
+\ de la [classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)
+\ de la [classe regex_traits](../standard-library/regex-traits-class.md)
 [\<regex>, typedefs](../standard-library/regex-typedefs.md)

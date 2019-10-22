@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-ms.openlocfilehash: 47c9d2281973cb57288bfdcf865926fb6dd9ed0e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c687bc870e4d78cfe9174eb04ea09c34d6a9c955
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460212"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687659"
 ---
-# <a name="moneypunctbyname-class"></a>moneypunct_byname, classe
+# <a name="moneypunct_byname-class"></a>moneypunct_byname, classe
 
-Classe de modèle dérivée qui décrit un objet pouvant servir de facette `moneypunct` de paramètres régionaux donnés, permettant ainsi la mise en forme de champs d’entrée ou de sortie monétaires.
+Modèle de classe dérivée qui décrit un objet pouvant servir de facette `moneypunct` des paramètres régionaux donnés, permettant ainsi de mettre en forme le champ d’entrée monétaire ou les champs de sortie monétaire.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,7 +42,7 @@ protected:
 
 Son comportement est déterminé par les paramètres régionaux nommés `_Locname`. Chaque constructeur initialise son objet de base avec [moneypunct](../standard-library/moneypunct-class.md#moneypunct)\<CharType, Intl>( `_Refs`).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -50,4 +50,4 @@ Son comportement est déterminé par les paramètres régionaux nommés `_Locnam
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

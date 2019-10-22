@@ -34,16 +34,16 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 09c30eb58655113ef3daa8338829ad43b37bc415
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8cd49051a25148c1c3289de9f0d7046ad27818c9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456405"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690084"
 ---
 # <a name="allocator-class"></a>allocator, classe
 
-La classe de modèle décrit un objet qui gère l’allocation et la libération de stockage pour des tableaux d' `Type`objets de type. Un objet de classe `allocator` est l’objet allocateur par défaut spécifié dans les constructeurs pour plusieurs classes de modèle de conteneur C++ dans la bibliothèque standard.
+Le modèle de classe décrit un objet qui gère l’allocation et la libération de stockage pour des tableaux d’objets de type `Type`. Un objet de la classe `allocator` est l’objet allocateur par défaut spécifié dans les constructeurs pour plusieurs modèles de classe de C++ conteneur dans la bibliothèque standard.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,12 +54,12 @@ class allocator
 
 ### <a name="parameters"></a>Paramètres
 
-*Type*\
+@No__t_1 de *type*
 Type d'objet pour lequel le stockage est alloué ou libéré.
 
 ## <a name="remarks"></a>Notes
 
-Tous les C++ conteneurs de bibliothèque standard ont un paramètre de modèle dont la `allocator`valeur par défaut est. La construction d'un conteneur avec un allocateur personnalisé permet de contrôler l'allocation et la libération des éléments de ce conteneur.
+Tous les C++ conteneurs de bibliothèque standard ont un paramètre de modèle dont la valeur par défaut est `allocator`. La construction d'un conteneur avec un allocateur personnalisé permet de contrôler l'allocation et la libération des éléments de ce conteneur.
 
 Par exemple, un objet allocateur peut allouer du stockage sur un segment de mémoire privé ou dans la mémoire partagée, ou il peut optimiser la mémoire pour les objets de petite ou de grande taille. Il peut également spécifier, via les définitions de types qu’il fournit, que les éléments soient accessibles via des objets d’accesseur spéciaux qui gèrent la mémoire partagée, ou effectuer un nettoyage de la mémoire automatique. Ainsi, une classe qui alloue du stockage à l’aide d’un objet allocateur doit utiliser ces types pour déclarer des objets pointeur et référence, comme le font les conteneurs dans la bibliothèque C++ Standard.
 
@@ -75,9 +75,9 @@ Ainsi, un allocateur définit les types suivants :
 
 - [const_reference](#const_reference) se comporte comme une référence const à `Type`.
 
-Ces `Type`s spécifient la forme que les pointeurs et les références doivent prendre pour les éléments alloués. ( [Allocator ::p ointer](#pointer) n’est pas nécessairement le même que `Type*` pour tous les objets allocateur, même s’il a cette définition évidente pour `allocator`la classe.)
+Ces `Type`s spécifient la forme que les pointeurs et les références doivent prendre pour les éléments alloués. ( [Allocator ::p ointer](#pointer) n’est pas nécessairement le même que `Type*` pour tous les objets allocateur, même s’il a cette définition évidente pour la classe `allocator`.)
 
-**C++ 11 et versions ultérieures :**  Pour activer les opérations de déplacement dans votre allocateur, utilisez l’interface d’allocateur minimale et implémentez le constructeur de copie, les opérateurs = = et ! =, allouez et Désallouez. Pour plus d’informations et pour obtenir un exemple, consultez [Allocateurs](../standard-library/allocators.md)
+**C++11 et versions ultérieures :** Pour autoriser les opérations de déplacement dans votre allocateur, utilisez l’interface d’allocateur minimale et implémentez le constructeur de copie, les opérateurs == et !=, allocate et deallocate. Pour plus d’informations et pour obtenir un exemple, consultez [Allocateurs](../standard-library/allocators.md)
 
 ## <a name="members"></a>Membres
 
@@ -96,7 +96,7 @@ Ces `Type`s spécifient la forme que les pointeurs et les références doivent p
 |[difference_type](#difference_type)|Type intégral signé qui peut représenter la différence entre des valeurs de pointeurs vers le type d'objet géré par l'allocateur.|
 |[pointer](#pointer)|Type qui fournit un pointeur vers le type d'objet géré par l'allocateur.|
 |[reference](#reference)|Type qui fournit une référence au type d'objet géré par l'allocateur.|
-|[size_type](#size_type)|Type intégral non signé qui peut représenter la longueur d'une séquence qu'un objet de classe de modèle `allocator` peut allouer.|
+|[size_type](#size_type)|Type intégral non signé qui peut représenter la longueur d’une séquence qu’un objet de type `allocator` peut allouer.|
 |[value_type](#value_type)|Type géré par l'allocateur.|
 
 ### <a name="functions"></a>Fonctions
@@ -128,7 +128,7 @@ const_pointer address(const_reference val) const;
 
 #### <a name="parameters"></a>Paramètres
 
-*multiples*\
+\ *Val*
 Valeur const ou nonconst de l’objet dont l’adresse est recherchée.
 
 #### <a name="return-value"></a>Valeur de retour
@@ -193,10 +193,10 @@ pointer allocate(size_type count, const void* _Hint);
 
 #### <a name="parameters"></a>Paramètres
 
-*saut*\
+*nombre* \
 Nombre d’éléments pour lesquels la quantité de stockage appropriée doit être allouée.
 
-*_Hint*\
+*_Hint* \
 Pointeur const pouvant aider l’objet allocateur à satisfaire la demande de stockage en recherchant l’adresse d’un objet alloué avant la demande.
 
 #### <a name="return-value"></a>Valeur de retour
@@ -207,7 +207,7 @@ Pointeur vers l’objet alloué ou null si la mémoire n’a pas été allouée.
 
 La fonction membre alloue le stockage pour un tableau d’éléments Count de type `Type`, en appelant operator new (*Count*). Retourne un pointeur vers l’objet alloué. L’argument hint permet d’aider certains allocateurs à améliorer la localité de référence. Un choix valide est l’adresse d’un objet précédemment alloué par le même objet allocateur et pas encore désalloué. Si vous ne voulez pas fournir d’argument hint, utilisez plutôt un argument de pointeur null.
 
-#### <a name="example"></a>Exemples
+#### <a name="example"></a>Exemple
 
 ```cpp
 // allocator_allocate.cpp
@@ -256,14 +256,14 @@ template <class Other>
 
 #### <a name="parameters"></a>Paramètres
 
-*Oui*\
+\ *droit*
 Objet allocateur à copier.
 
 #### <a name="remarks"></a>Notes
 
 Le constructeur n’effectue aucune opération. En général, toutefois, un objet allocateur construit à partir d’un autre objet allocateur doit avoir la même valeur et autoriser l’échange d’allocation et de libération d’objets entre les deux objets allocateur.
 
-#### <a name="example"></a>Exemples
+#### <a name="example"></a>Exemple
 
 ```cpp
 // allocator_allocator.cpp
@@ -336,7 +336,7 @@ typedef const value_type *const_pointer;
 
 #### <a name="remarks"></a>Notes
 
-Le type pointeur décrit un objet `ptr` qui peut désigner, via l’expression `*ptr`, tout objet const qu’un objet de la classe de modèle Allocator peut allouer.
+Le type pointeur décrit un objet `ptr` qui peut désigner, via l’expression `*ptr`, tout objet const qu’un objet de type `allocator` peut allouer.
 
 #### <a name="example"></a>Exemple
 
@@ -391,7 +391,7 @@ typedef const value_type& const_reference;
 
 #### <a name="remarks"></a>Notes
 
-Le type référence décrit un objet qui peut désigner tout objet const qu’un objet de classe de modèle allocator peut allouer.
+Le type référence décrit un objet qui peut désigner tout objet const qu’un objet de type `allocator` peut allouer.
 
 #### <a name="example"></a>Exemple
 
@@ -460,15 +460,15 @@ template <class _Other>
 
 #### <a name="parameters"></a>Paramètres
 
-*effectués*\
+\ *ptr*
 Pointeur vers l’emplacement où l’objet doit être construit.
 
-*multiples*\
+\ *Val*
 Valeur avec laquelle l’objet en cours de construction doit être initialisé.
 
 #### <a name="remarks"></a>Notes
 
-La première fonction membre est équivalente **à New** (`void` ( `ptr` \*)) **type** (`val`).
+La première fonction membre est équivalente au **type** **new** ((`void` \*) `ptr`) (`val`).
 
 #### <a name="example"></a>Exemple
 
@@ -529,15 +529,15 @@ void deallocate(pointer ptr, size_type count);
 
 #### <a name="parameters"></a>Paramètres
 
-*effectués*\
+\ *ptr*
 Pointeur vers le premier objet à désallouer dans le stockage.
 
-*saut*\
+*nombre* \
 Nombre d’objets à désallouer dans le stockage.
 
 #### <a name="remarks"></a>Notes
 
-La fonction membre libère le stockage pour le tableau d’objets Count de type `Type` en commençant par *ptr*, en `operator delete(ptr)`appelant. Le pointeur *ptr* doit avoir été retourné précédemment par un appel à [allouer](#allocate) pour un objet allocateur dont la valeur est égale à  **\*This**, en allouant un objet tableau de même taille et de même type. `deallocate` ne lève jamais d’exception.
+La fonction membre libère du stockage pour le tableau d’objets Count de type `Type` en commençant par *ptr*, en appelant `operator delete(ptr)`. Le pointeur *ptr* doit avoir été retourné précédemment par un appel à [allouer](#allocate) pour un objet allocateur qui est égal à **\*this**, en allouant un objet tableau de même taille et de même type. `deallocate` ne lève jamais d’exception.
 
 #### <a name="example"></a>Exemple
 
@@ -553,12 +553,12 @@ void destroy(pointer ptr);
 
 #### <a name="parameters"></a>Paramètres
 
-*effectués*\
+\ *ptr*
 Pointeur désignant l’adresse de l’objet à détruire.
 
 #### <a name="remarks"></a>Notes
 
-La fonction membre détruit l’objet désigné par *ptr*, en appelant le type de destructeur `ptr->` **::** **~ type**.
+La fonction membre détruit l’objet désigné par *ptr*, en appelant le destructeur `ptr->`**type**:: **~ type**.
 
 #### <a name="example"></a>Exemple
 
@@ -619,9 +619,9 @@ typedef ptrdiff_t difference_type;
 
 #### <a name="remarks"></a>Notes
 
-Le type d’entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments dans une séquence qu’un objet de classe de modèle allocator peut allouer.
+Le type d’entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments dans une séquence qu’un objet de type `allocator` peut allouer.
 
-#### <a name="example"></a>Exemples
+#### <a name="example"></a>Exemple
 
 ```cpp
 // allocator_diff_type.cpp
@@ -750,7 +750,7 @@ template <class Other>
 
 #### <a name="parameters"></a>Paramètres
 
-*Oui*\
+\ *droit*
 Objet allocateur à assigner à un autre objet allocateur.
 
 #### <a name="return-value"></a>Valeur de retour
@@ -812,7 +812,7 @@ typedef value_type *pointer;
 
 #### <a name="remarks"></a>Notes
 
-Le type pointeur décrit un objet `ptr` qui peut désigner, par l’expression  **\*PTR**, tout objet qu’un objet de la classe de modèle Allocator peut allouer.
+Le type pointeur décrit un objet `ptr` qui peut désigner, via l’expression **\*ptr**, tout objet qu’un objet de type `allocator` peut allouer.
 
 #### <a name="example"></a>Exemple
 
@@ -867,16 +867,16 @@ struct rebind { typedef allocator<_Other> other; };
 
 #### <a name="parameters"></a>Paramètres
 
-*autres*\
+*autres* \
 Type d’élément pour lequel la mémoire est allouée.
 
 #### <a name="remarks"></a>Notes
 
 Cette structure est utile pour allouer de la mémoire au type qui diffère du type d’élément du conteneur en cours d’implémentation.
 
-La classe de modèle membre définit le type other. Son seul but est de fournir le nom du type **allocator**\<_ **Other**>, étant donné le nom de type **allocator**\< **Type**>.
+Le modèle de classe membre définit le type other. Son seul but est de fournir le nom du type **allocator**\<_ **Other**>, étant donné le nom de type **allocator**\< **Type**>.
 
-Par exemple, étant donné un objet `al` Allocator de type `A`, vous pouvez allouer un objet de type `_Other` avec l’expression :
+Par exemple, étant donné un objet Allocator `al` de type `A`, vous pouvez allouer un objet de type `_Other` avec l’expression :
 
 ```cpp
 A::rebind<Other>::other(al).allocate(1, (Other *)0)
@@ -923,7 +923,7 @@ typedef value_type& reference;
 
 #### <a name="remarks"></a>Notes
 
-Le type référence décrit un objet qui peut désigner tout objet qu’un objet de la classe de modèle allocator peut allouer.
+Le type référence décrit un objet qui peut désigner tout objet qu’un objet de type `allocator` peut allouer.
 
 #### <a name="example"></a>Exemple
 
@@ -975,7 +975,7 @@ The element referred to by vref after being modified is: 150.
 
 ### <a name="size_type"></a>size_type
 
-Type intégral non signé qui peut représenter la longueur d’une séquence qu’un objet de la classe de modèle allocator peut allouer.
+Type intégral non signé qui peut représenter la longueur d’une séquence qu’un objet de type `allocator` peut allouer.
 
 ```cpp
 typedef size_t size_type;
@@ -1030,7 +1030,7 @@ typedef Type value_type;
 
 Le type est un synonyme du paramètre de modèle `Type`.
 
-#### <a name="example"></a>Exemples
+#### <a name="example"></a>Exemple
 
 ```cpp
 // allocator_value_type.cpp

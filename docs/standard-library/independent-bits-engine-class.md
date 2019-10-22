@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-ms.openlocfilehash: a90e4be4ff6e92734f6b2e6804f8059be78e66b9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 28c9301d270ef516a1acc59f6ab06f0e61a1c9c5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456343"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687927"
 ---
-# <a name="independentbitsengine-class"></a>independent_bits_engine, classe
+# <a name="independent_bits_engine-class"></a>independent_bits_engine, classe
 
 Génère une séquence aléatoire de nombres avec un nombre spécifié de bits en recompressant les bits des valeurs retournées par son moteur de base.
 
@@ -26,14 +26,14 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Paramètres
 
-*Rotation*\
+@No__t_1 du *moteur*
 Type de moteur de base.
 
-*S*\
+*W* \
 **Taille de mot**. Taille, en bits, de chaque nombre généré. **Condition préalable** : `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType*\
-Type des résultats entiers non signés. Pour plus d’informations sur les types possibles, consultez [\<random>](../standard-library/random.md).
+*UIntType* \
+Type des résultats entiers non signés. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="members"></a>Membres
 
@@ -46,9 +46,9 @@ Pour plus d’informations sur les membres moteurs, consultez [\<random>](../sta
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de modèle décrit un *adaptateur de moteur* qui produit des valeurs en reballant les bits à partir des valeurs retournées par son moteur de base, ce qui a pour résultat des valeurs de type *W*-bit.
+Ce modèle de classe décrit un *adaptateur de moteur* qui produit des valeurs en reballant les bits à partir des valeurs retournées par son moteur de base, ce qui donne des valeurs de type *W*-bit.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<random>
 

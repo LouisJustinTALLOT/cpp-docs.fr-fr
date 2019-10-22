@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6fca9b2130407b165a7a7bfb1fb2a9ec81774e20
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459387"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689891"
 ---
-# <a name="codecvtbase-class"></a>codecvt_base, classe
+# <a name="codecvt_base-class"></a>codecvt_base, classe
 
 Classe de base pour la classe codecvt utilisée pour définir un type énumération appelé `result`, utilisé comme type de retour pour les fonctions membres de facette pour indiquer le résultat d’une conversion.
 
@@ -38,17 +38,17 @@ protected:
 
 ## <a name="remarks"></a>Notes
 
-Cette classe décrit une énumération commune à toutes les spécialisations de la classe de modèle [codecvt](../standard-library/codecvt-class.md). Le résultat de l’énumération décrit les valeurs de retour possibles de [do_in](../standard-library/codecvt-class.md#do_in) ou [do_out](../standard-library/codecvt-class.md#do_out) :
+La classe décrit une énumération commune à toutes les spécialisations du modèle de classe [codecvt](../standard-library/codecvt-class.md). Le résultat de l’énumération décrit les valeurs de retour possibles de [do_in](../standard-library/codecvt-class.md#do_in) ou [do_out](../standard-library/codecvt-class.md#do_out) :
 
-- `ok`Si la conversion entre les encodages de caractères internes et externes est réussie.
+- `ok` si la conversion entre les encodages de caractères internes et externes s’effectue correctement.
 
-- `partial`Si la destination n’est pas assez grande pour que la conversion aboutisse.
+- `partial` si la destination n’est pas assez grande pour que la conversion aboutisse.
 
-- `error`Si la séquence source est incorrecte.
+- `error` si la séquence source est incorrecte.
 
 - `noconv` si la fonction n’exécute aucune conversion.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 **En-tête :** \<locale>
 
@@ -56,4 +56,4 @@ Cette classe décrit une énumération commune à toutes les spécialisations de
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
