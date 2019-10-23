@@ -142,7 +142,7 @@ Dans C++, l’utilisation de ces fonctions est simplifiée par les surcharges de
 |**vsprintf_s**, **_vsprintf_s_l**|\<stdio.h> et \<stdarg.h>|\<varargs.h>*|
 |**vswprintf_s**, **_vswprintf_s_l**|\<stdio.h> ou \<wchar.h> et \<stdarg.h>|\<varargs.h>*|
 
-\** Nécessaire pour la compatibilité avec UNIX V.
+\* Nécessaire pour la compatibilité avec UNIX V.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
