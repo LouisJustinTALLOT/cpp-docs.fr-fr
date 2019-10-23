@@ -581,7 +581,7 @@ Itérateur bidirectionnel inversé const qui traite le premier élément d’un 
 
 Avec la valeur de retour `crbegin`, l'objet `multimap` ne peut pas être changé.
 
-Vous pouvez utiliser `crbegin` pour itérer un `multimap` vers l’arrière.
+Vous pouvez utiliser `crbegin` pour itérer un objet `multimap` vers l’arrière.
 
 ### <a name="example"></a>Exemple
 
@@ -910,7 +910,7 @@ Clé d’argument à comparer à la clé de tri d’un élément du multimap dan
 
 Paire d’itérateurs telle que le premier est la [lower_bound](#lower_bound) de la clé et le second est la [upper_bound](#upper_bound) de la clé.
 
-Pour accéder au premier itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **first**, et pour déréférencer l’itérateur de la limite inférieure, utilisez \*( `pr`. **first**). Pour accéder au deuxième itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **second**, et pour déréférencer l’itérateur de la limite supérieure, utilisez \*( `pr`. **second**).
+Pour accéder au premier itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **first**, et pour déréférencer l’itérateur de la limite inférieure, utilisez \*( `pr`. **first**). Pour accéder au second itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **second**, et pour déréférencer l’itérateur de la limite supérieure, utilisez \*( `pr`. **second**).
 
 ### <a name="example"></a>Exemple
 
