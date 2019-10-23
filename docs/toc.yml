@@ -2969,7 +2969,7 @@
                           href: c-language/c-integer-constants.md
                         - name: Types d'entier
                           href: c-language/integer-types.md
-                        - name: Limites d’entier C++
+                        - name: Limites d’entier C et C++
                           href: c-language/cpp-integer-limits.md
                     - name: Constantes caractère C
                       expanded: false
