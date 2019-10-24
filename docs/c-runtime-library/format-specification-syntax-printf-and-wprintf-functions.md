@@ -1,6 +1,6 @@
 ---
 title: 'Syntaxe de spécification de format : fonctions printf et wprintf'
-ms.date: 07/30/2019
+ms.date: 10/21/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: db144703a89fe1a6a76ed15f1cf77395c4565fab
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: e4def787dc5792921298999eb643ff56dd2c9f3d
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500089"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778388"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntaxe de spécification de format : fonctions printf et wprintf
 
-Les différentes fonctions `printf` et `wprintf` acceptent une chaîne de format et des arguments facultatifs, et génèrent en sortie une séquence de caractères mise en forme. La chaîne de format contient zéro ou plusieurs *directives* qui sont soit des caractères littéraux pour la sortie, soit des *spécifications de conversion* codées qui décrivent comment mettre en forme un argument dans la sortie. Cet article décrit la syntaxe utilisée pour encoder les spécifications de conversion dans la chaîne de format. Pour obtenir la liste de ces fonctions, consultez [E/S de flux](../c-runtime-library/stream-i-o.md).
+Les différentes fonctions `printf` et `wprintf` acceptent une chaîne de format et des arguments facultatifs, et génèrent en sortie une séquence de caractères mise en forme. La chaîne de format contient zéro ou plusieurs *directives* qui sont soit des caractères littéraux pour la sortie, soit des *spécifications de conversion* codées qui décrivent comment mettre en forme un argument dans la sortie. Cet article décrit la syntaxe utilisée pour encoder les spécifications de conversion dans la chaîne de format. Pour obtenir la liste de ces fonctions, consultez [E/S de flux](../c-runtime-library/stream-i-o.md). 
 
 Une spécification de conversion se compose de champs facultatifs et obligatoires mis en forme comme suit :
 
@@ -39,13 +39,16 @@ Une spécification de conversion de base contient uniquement le symbole de pourc
 
 <a name="type"></a>
 
+> [!NOTE] 
+> Dans Visual Studio 2015, la famille de fonctions `printf` et `scanf` a été déclarée comme **inline** et déplacée vers les en-têtes `<stdio.h>` et `<conio.h>`. Si vous migrez du code plus ancien, vous pouvez voir l’erreur *LNK2019* en relation avec ces fonctions. Pour plus d’informations, [consultez C++ historique des modifications visuelles 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
+
 ## <a name="type-conversion-specifier"></a>Spécificateur de conversion de type
 
 Le caractère spécificateur de conversion *type* précise si l’argument correspondant doit être interprété comme un caractère, une chaîne, un pointeur, un entier ou un nombre à virgule flottante. Le caractère *type*, qui est le seul champ de spécification de conversion obligatoire, apparaît après tous les champs facultatifs.
 
 Les arguments qui suivent la chaîne de format sont interprétés en fonction du caractère *type* correspondant et du préfixe [size](#size) facultatif. Les conversions pour les types de caractères `char` et `wchar_t` sont spécifiées à l’aide de **c** ou **C**, tandis que les chaînes de caractères codés sur un octet et multioctets ou à caractères larges sont spécifiées à l’aide de **s** ou **S**, selon la fonction de mise en forme utilisée. Les arguments de caractère et de chaîne spécifiés à l’aide de **c** et **s** sont interprétés comme `char` et `char*` par les fonctions de la famille `printf` ou comme `wchar_t` et `wchar_t*` par les fonctions de la famille `wprintf`. Les arguments de caractère et de chaîne spécifiés à l’aide de **C** et **S** sont interprétés comme `wchar_t` et `wchar_t*` par les fonctions de la famille `printf` ou comme`char` et `char*` par les fonctions de la famille `wprintf`. Ce comportement est spécifique à Microsoft.
 
-Les types entier tels que `short`, `int`, `long`, `long long`, ainsi que leurs variantes `unsigned`, sont spécifiés à l’aide de **d**, **i**, **o**, **u**, **x** et **X**. Les types virgule flottante, tels que `float`, `double` et `long double`, sont spécifiés à l’aide de **a**, **A**, **e**, **E**, **f**, **F**, **g** et **G**. Par défaut, à moins d’être modifiés par un préfixe *size*, les arguments entiers sont forcés en type `int` et les arguments à virgule flottante sont forcés en `double`. Sur les systèmes 64 bits, un `int` est une valeur 32 bits ; les entiers 64 bits sont donc tronqués quand ils sont mis en forme pour la sortie, à moins qu’un préfixe *size* égal à **ll** ou **I64** soit utilisé. Les types de pointeur spécifiés par **p** utilisent la taille du pointeur par défaut pour la plateforme.
+Les types d’entiers tels que `short`, `int`, `long`, `long long` et leurs `unsigned` variantes, sont spécifiés à l’aide **d**, **i**, **o**, **u**, **x**et **x**. Les types à virgule flottante, tels que 1, 2 et 3, sont spécifiés à l’aide **de**, **a**, **e**, **e**, **f**, **f**, **g**et **g**. Par défaut, à moins qu’ils ne soient modifiés par un préfixe de *taille* , les arguments entiers sont forcés à 3 type, et les arguments à virgule flottante sont forcés à 4. Sur les systèmes 64 bits, un `int` est une valeur 32 bits ; les entiers 64 bits sont donc tronqués quand ils sont mis en forme pour la sortie, à moins qu’un préfixe *size* égal à **ll** ou **I64** soit utilisé. Les types de pointeur spécifiés par **p** utilisent la taille du pointeur par défaut pour la plateforme.
 
 > [!NOTE]
 > **Section spécifique à Microsoft** Les caractères de type **Z** et le comportement des caractères de type **c**, **C**, **s** et **S** (quand ils sont utilisés avec les fonctions `printf` et `wprintf`) sont des extensions Microsoft. La norme ISO C utilise systématiquement **c** et **s** pour les chaînes et les caractères étroits, et **C** et **S** pour les chaînes et les caractères larges, dans toutes les fonctions de mise en forme.
@@ -78,7 +81,7 @@ Les types entier tels que `short`, `int`, `long`, `long long`, ainsi que leurs v
 
 À compter de Visual Studio 2015, si l’argument qui correspond à un spécificateur de conversion de valeurs à virgule flottante (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) est infini, indéfini ou NaN, la sortie mise en forme est conforme à la norme C99. Ce tableau répertorie les sorties mises en forme :
 
-|Value|Sortie|
+|valeur|Sortie|
 |-----------|------------|
 |infinity|`inf`|
 |NaN silencieux|`nan`|
@@ -89,7 +92,7 @@ Ces valeurs peuvent toutes être précédées d’un signe. Si un caractère sp�
 
 Avant Visual Studio 2015, le CRT utilisait un autre format non standard pour la sortie des valeurs infinies, indéfinies et NaN :
 
-|Value|Sortie|
+|valeur|Sortie|
 |-----------|------------|
 |+ infini|`1.#INF` *chiffres aléatoires*|
 |- infini|`-1.#INF` *chiffres aléatoires*|
@@ -115,7 +118,7 @@ Dans une spécification de conversion, le premier champ facultatif contient des 
 
 ### <a name="flag-characters"></a>Caractères d’indicateur
 
-|Indicateur|Signification|Par défaut|
+|Indicateur|Signification|Valeur par défaut|
 |----------|-------------|-------------|
 |**-**|Aligner à gauche le résultat selon la largeur de champ donnée.|Aligner à droite.|
 |**+**|Utilisez un signe (+ ou -) pour préfixer la valeur de sortie s’il s’agit d’un type signé.|Le signe apparaît uniquement pour les valeurs signées négatives (-).|
@@ -157,7 +160,7 @@ Le caractère *type* détermine soit l’interprétation de *precision*, soit la
 
 ### <a name="how-precision-values-affect-type"></a>Impact des valeurs de précision sur le type
 
-|Type|Signification|Par défaut|
+|Tapez|Signification|Valeur par défaut|
 |----------|-------------|-------------|
 |**a**, **A**|La précision indique le nombre de chiffres après la virgule.|La précision par défaut s’élève à 13. Si la précision a la valeur 0, aucune virgule décimale n’est imprimée, sauf si l’indicateur **#** est utilisé.|
 |**c**, **C**|La précision n’a aucun effet.|Le caractère est imprimé.|
