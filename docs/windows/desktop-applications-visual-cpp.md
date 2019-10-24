@@ -3,26 +3,26 @@ title: Applications de bureau ( C++visuel)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: 91fcc596a4c30e3fa74043c846eda6f06b666f2c
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 98909097cf791d55f5971a89643839e07b0c60d1
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274721"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778504"
 ---
 # <a name="desktop-applications-visual-c"></a>Applications de bureau ( C++visuel)
 
-Une *application* de bureau C++ dans est une application native qui peut accéder à l’ensemble des API Windows et s’exécute dans une fenêtre ou dans la console système. Les applications de C++ Bureau dans peuvent s’exécuter sur Windows XP via Windows 10 (même si Windows XP n’est plus officiellement pris en charge et que de nombreuses API Windows ont été introduites depuis). 
+Une *application* de bureau C++ dans est une application native qui peut accéder à l’ensemble des API Windows et s’exécute dans une fenêtre ou dans la console système. Les applications de C++ Bureau dans peuvent s’exécuter sur Windows XP via Windows 10 (même si Windows XP n’est plus officiellement pris en charge et que de nombreuses API Windows ont été introduites depuis).
 
-Une application de bureau est distincte d’une application de plateforme Windows universelle (UWP), qui peut s’exécuter sur des PC exécutant Windows 10 et également sur XBox, Windows Phone, Surface Hub et d’autres appareils. Pour plus d’informations sur les ordinateurs de bureau et Les applications UWP, consultez [choisir votre technologie](/windows/win32/choose-your-technology).
+Une application de bureau est distincte d’une application de plateforme Windows universelle (UWP), qui peut s’exécuter sur des PC exécutant Windows 10 et également sur XBox, Windows Phone, Surface Hub et d’autres appareils. Pour plus d’informations sur les applications Desktop et UWP, consultez [choisir votre technologie](/windows/win32/choose-your-technology).
 
-### <a name="desktop-bridge"></a>Pont Desktop
+## <a name="desktop-bridge"></a>Pont Desktop
 
 Dans Windows 10, vous pouvez empaqueter votre application de bureau ou votre objet COM existant en tant qu’application UWP et ajouter des fonctionnalités UWP, telles que Touch, ou appeler des API à partir du jeu d’API Windows moderne. Vous pouvez également ajouter une application UWP à une solution de bureau dans Visual Studio et les empaqueter dans un package unique et utiliser des API Windows pour communiquer entre elles.
 
 Dans Visual Studio 2017 version 15,4 et versions ultérieures, vous pouvez créer un projet de package d’application Windows pour simplifier de manière considérable le travail d’empaquetage de votre application de bureau existante. Quelques restrictions s’appliquent en ce qui concerne les appels de registre ou les API utilisés par votre application de bureau, mais dans de nombreux cas, vous pouvez créer d’autres chemins de code pour obtenir des fonctionnalités similaires lors de l’exécution dans un package d’application. Pour plus d’informations, consultez [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
-### <a name="terminology"></a>Terminologie
+## <a name="terminology"></a>Terminologie
 
 - Une application *Win32* est une application de bureau Windows C++ dans qui peut utiliser des API [Windows C natives et/ou](/windows/win32/apiindex/windows-api-list) des API de bibliothèque CRT et d’API com, ainsi que des bibliothèques tierces. Une application Win32 qui s’exécute dans une fenêtre exige que le développeur travaille explicitement avec des messages Windows dans une fonction de procédure Windows. Malgré le nom, une application Win32 peut être compilée en tant que binaire 32 bits (x86) ou 64 bits (x64). Dans l’IDE de Visual Studio, les termes x86 et Win32 sont synonymes.
 
@@ -44,15 +44,15 @@ Toute application de bureau C++ dans peut utiliser C Runtime (CRT) et des classe
 |[Ajout de fichiers à des applications Win32 vides](adding-files-to-an-empty-win32-applications.md)|Comment ajouter des fichiers à un projet vide.|
 |[Utilisation des fichiers de ressources](working-with-resource-files.md)|Comment ajouter des images, des icônes, des tables de chaînes et d’autres ressources à une application de bureau.|
 |[Ressources pour la création d’un jeu àC++l’aide de DirectX ()](resources-for-creating-a-game-using-directx.md)|Liens vers du contenu pour la création C++de jeux dans.|
-|[Procédure pas à pas : Création et utilisation d’une bibliothèque statique](walkthrough-creating-and-using-a-static-library-cpp.md)|Comment créer un fichier binaire. lib.|
-|[Guide pratique pour utiliser le kit SDK Windows 10 dans une application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contient les étapes pour configurer votre projet à générer avec le Kit de développement logiciel (SDK) Windows 10.|
+|[Procédure pas à pas : création et utilisation d’une bibliothèque statique](walkthrough-creating-and-using-a-static-library-cpp.md)|Comment créer un fichier binaire. lib.|
+|[Procédure : utilisation du kit SDK Windows 10 dans une application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contient les étapes pour configurer votre projet à générer avec le Kit de développement logiciel (SDK) Windows 10.|
 
 ## <a name="related-articles"></a>Articles connexes
 
 |Titre|Description|
 |-----------|-----------------|
 |[Développement Windows](/windows/win32/index)|Contient des informations sur l'API Windows et COM. (Certaines API Windows et DLL tierces sont implémentées comme objets COM.)|
-|[Hilo Développement C++ d’applications pour Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Explique comment créer une application de bureau Windows cliente enrichie, qui utilise l’animation Windows et Direct2D pour créer une interface utilisateur de type carrousel.  Ce didacticiel n’a pas été mis à jour depuis Windows 7, mais il fournit toujours une introduction complète à la programmation Win32.|
+|[Hilo : développement d’applications C++ pour Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Explique comment créer une application de bureau Windows cliente enrichie, qui utilise l’animation Windows et Direct2D pour créer une interface utilisateur de type carrousel.  Ce didacticiel n’a pas été mis à jour depuis Windows 7, mais il fournit toujours une introduction complète à la programmation Win32.|
 |[Vue d’ensemble de la programmation Windows en C++](overview-of-windows-programming-in-cpp.md)|Décrit les principales fonctionnalités de la programmation Windows C++Desktop dans.|
 
 ## <a name="see-also"></a>Voir aussi
