@@ -1,27 +1,29 @@
 ---
-title: Limites d'entier C++
-ms.date: 01/29/2018
+title: Limites C C++ et Integer
+ms.date: 10/21/2019
 helpviewer_keywords:
 - limits, integer
 - limits, integer constants
 - integer limits
 ms.assetid: 0c23cbd6-29fb-4d9c-b689-5984e19748de
-ms.openlocfilehash: 057da1ac8e4549a05d10a01cc3aead678045d9c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 6940f36e37ec58ca8fe23c9062928cbf90b125bd
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548289"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778372"
 ---
-# <a name="c-integer-limits"></a>Limites d'entier C++
+# <a name="c-and-c-integer-limits"></a>Limites C C++ et Integer
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Les limites pour les types d'entiers sont répertoriées dans le tableau ci-dessous. Ces limites sont définies dans le fichier d'en-tête standard LIMITS.H. Microsoft C permet également la déclaration de variables de type entier dimensionnées, qui sont des types intégraux d'une taille de 8, 16 ou 32 bits. Pour plus d'informations sur les entiers dimensionnés, consultez [Types d'entiers dimensionnés](../c-language/c-sized-integer-types.md).
+Les limites pour les types d’entiers C++ en C et sont répertoriées dans le tableau suivant. Ces limites sont définies dans le fichier d’en-tête standard C `<limits.h>`. L' C++ en-tête de la bibliothèque standard `<limits>` comprend `<climits>`, qui comprend `<limits.h>`.
+
+Microsoft C permet également la déclaration de variables de type entier dimensionnées, qui sont des types intégraux de 8, 16, 32 ou 64 bits. Pour plus d’informations sur les entiers dimensionnés en C, consultez [types d’entiers dimensionnés](../c-language/c-sized-integer-types.md).
 
 ## <a name="limits-on-integer-constants"></a>Limites appliquées aux constantes entières
 
-|**Constante**|Signification|Value|
+|**Constante**|Signification|valeur|
 |------------------|-------------|-----------|
 |**CHAR_BIT**|Nombre de bits dans la plus petite variable qui n'est pas un champ de bits|8|
 |**SCHAR_MIN**|Valeur minimale d'une variable de type **signed char**.|-128|
@@ -39,10 +41,13 @@ Les limites pour les types d'entiers sont répertoriées dans le tableau ci-dess
 |**LONG_MIN**|Valeur minimale d'une variable de type **long**.|-2147483647 - 1|
 |**LONG_MAX**|Valeur maximale d'une variable de type **long**.|2147483647|
 |**ULONG_MAX**|Valeur maximale d’une variable de type **unsigned long**.|4294967295 (0xffffffff)|
+|**LLONG_MIN**|Valeur minimale d’une variable de type **long**long.|-9 223 372 036 854 775 807-1|
+|**LLONG_MAX**|Valeur maximale d’une variable de type **long**long.|9,223,372,036,854,775,807|
+|**ULLONG_MAX**|Valeur maximale d’une variable de type **unsigned long long**.|18446744073709551615 (0xFFFFFFFFFFFFFFFF)|
 
 Si une valeur dépasse la plus grande représentation d'entier, le compilateur Microsoft génère une erreur.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-ms.openlocfilehash: 848c9799e7ab5cfdfd2b25cc84e55de02c673f3e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: c69d2308abe2ee3d7e6b392f5a9e78a004791501
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150010"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778356"
 ---
 # <a name="type-int"></a>Type int
 
@@ -20,11 +20,11 @@ La taille d'un élément `int` signé ou non signé est la taille standard d'un 
 
 Les spécificateurs de type `int` et `unsigned int` (ou simplement `unsigned`) définissent certaines fonctionnalités du langage C (par exemple, le type `enum`). Dans ces cas, les définitions des types `int` et unsigned int pour une implémentation particulière déterminent le stockage réel.
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Les entiers signés sont représentés sous la forme d'un complément à deux. Le bit le plus significatif contient le signe : 1 pour les nombres négatifs, 0 pour les nombres positifs et zéro. La plage de valeurs est fournie dans les [Limites d’entier C++](../c-language/cpp-integer-limits.md), qui proviennent du fichier d'en-tête LIMITS.H.
+Les entiers signés sont représentés sous la forme d'un complément à deux. Le bit le plus significatif indique le signe : 1 pour les nombres négatifs, 0 pour les nombres positifs et zéro. La plage de valeurs est donnée en [C et C++ en limites entières](../c-language/cpp-integer-limits.md), qui est extraite des limites. Fichier d’en-tête H.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 > [!NOTE]
 >  Les spécificateurs de type int et unsigned int sont couramment utilisés dans les programmes C car ils permettent à un ordinateur particulier de traiter les valeurs entières de la façon la plus efficace possible pour cet ordinateur. Toutefois, puisque les tailles des types int et unsigned int varient, les programmes qui dépendent d'une taille d'entier spécifique peuvent ne pas être transposables à d'autres ordinateurs. Pour améliorer la portabilité des programmes, vous pouvez utiliser des expressions avec l'opérateur sizeof (comme indiqué dans [Opérateur sizeof](../c-language/sizeof-operator-c.md)) au lieu de tailles de données codées en dur.
