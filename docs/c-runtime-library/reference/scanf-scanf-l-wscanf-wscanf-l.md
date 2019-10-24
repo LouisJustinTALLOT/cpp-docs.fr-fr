@@ -1,6 +1,6 @@
 ---
 title: scanf, _scanf_l, wscanf, _wscanf_l
-ms.date: 11/04/2016
+ms.date: 10/21/2019
 api_name:
 - _wscanf_l
 - scanf
@@ -43,16 +43,19 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: 5c3b0f73561dcd41ef1643042baeac7fff0728b4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: acb336827a669a867b937806a6cdb9aa51d75cbe
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948829"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778319"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
 Lit les données mises en forme du flux d'entrée standard. Il existe des versions plus sécurisées de ces fonctions. Consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
+
+> [!NOTE] 
+> Dans Visual Studio 2015, la famille de fonctions `printf` et `scanf` a été déclarée comme **inline** et déplacée vers les en-têtes `<stdio.h>` et `<conio.h>`. Si vous migrez du code plus ancien, vous pouvez voir l’erreur *LNK2019* en relation avec ces fonctions. Pour plus d’informations, [consultez C++ historique des modifications visuelles 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -94,7 +97,7 @@ Retourne le nombre de champs correctement convertis et assignés. La valeur de r
 
 Si *format* est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et attribuent à **errno** la valeur **EINVAL**.
 
-Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -116,16 +119,16 @@ Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’
 
 Pour plus d’informations, consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**scanf**, **_scanf_l**|\<stdio.h>|
 |**wscanf**, **_wscanf_l**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_scanf.c
