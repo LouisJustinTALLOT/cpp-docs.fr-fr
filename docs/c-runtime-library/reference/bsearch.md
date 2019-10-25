@@ -1,6 +1,6 @@
 ---
 title: bsearch
-ms.date: 11/04/2016
+ms.date: 10/22/2019
 api_name:
 - bsearch
 api_location:
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 9e44e85d1c6d73a68da2edd099cdeb6156f9759d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6b476cbdd5e9c072cae03ad1091a96e2d0b7422b
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939433"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811090"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -51,20 +51,20 @@ void *bsearch(
 
 ### <a name="parameters"></a>Paramètres
 
-*key*<br/>
-Objet à rechercher.
+\ de *clé*
+Pointeur vers la clé à rechercher.
 
-*base*<br/>
-Pointeur vers la base de données de recherche.
+*base*\
+Pointeur vers la base des données de recherche.
 
-*certain*<br/>
+*nombre*\
 Nombre d'éléments.
 
-*width*<br/>
+*largeur*\
 Largeur des éléments.
 
-*compare*<br/>
-Fonction de rappel qui compare deux éléments. Le premier est un pointeur vers la clé de la recherche et le deuxième est un pointeur vers l’élément de tableau à comparer à la clé.
+*comparer*\
+Fonction de rappel qui compare deux éléments. Le premier est un pointeur vers la clé de la recherche, tandis que le second est un pointeur vers l’élément de tableau à comparer à la clé.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -72,7 +72,7 @@ Fonction de rappel qui compare deux éléments. Le premier est un pointeur vers 
 
 ## <a name="remarks"></a>Notes
 
-La fonction **ensuite bsearch** effectue une recherche binaire d’un tableau trié d’éléments Number, chacun d’un *nombre* d’octets de *largeur* . La valeur de *base* est un pointeur vers la base du tableau dans lequel effectuer la recherche, et *Key* est la valeur recherchée. Le paramètre de *comparaison* est un pointeur vers une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau et retourne l’une des valeurs suivantes en spécifiant leur relation :
+La fonction **ensuite bsearch** effectue une recherche binaire d’un tableau trié d’éléments Number, chacun d’un *nombre* d’octets de *largeur* . La valeur de *base* est un pointeur vers la base du tableau dans lequel effectuer la recherche, et *Key* est la valeur recherchée. Le paramètre de *comparaison* est un pointeur vers une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau. Elle retourne l’une des valeurs suivantes qui spécifient leur relation :
 
 |Valeur retournée par la routine de *comparaison*|Description|
 |-----------------------------------------|-----------------|
@@ -80,15 +80,15 @@ La fonction **ensuite bsearch** effectue une recherche binaire d’un tableau tr
 |0|La clé est égale à l’élément de tableau.|
 |> 0|La clé est supérieure à l’élément de tableau.|
 
-Cette fonction valide ses paramètres. Si *compare*, *Key* ou *Number* a la **valeur null**, ou si *base* a la **valeur null** et que le *nombre* est différent de zéro, ou si *Width* est égal à zéro, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre. ](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a `EINVAL` la valeur et la fonction retourne la **valeur null**.
+Cette fonction valide ses paramètres. Si *compare*, *Key* ou *Number* a la **valeur null**, ou si *base* a la **valeur null** et que le *nombre* est différent de zéro, ou si *Width* est égal à zéro, la fonction appelle le gestionnaire de paramètre non valide, comme décrit dans le [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur `EINVAL` et la fonction retourne la **valeur null**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**bsearch**|\<stdlib.h> et \<search.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -137,7 +137,7 @@ cat found at 002F0F04
 
 ## <a name="see-also"></a>Voir aussi
 
-[Recherche et tri](../../c-runtime-library/searching-and-sorting.md)<br/>
-[_lfind](lfind.md)<br/>
-[_lsearch](lsearch.md)<br/>
-[qsort](qsort.md)<br/>
+[Recherche et tri](../../c-runtime-library/searching-and-sorting.md)\
+[_lfind](lfind.md)\
+[_lsearch](lsearch.md)\
+[qsort](qsort.md)
