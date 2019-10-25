@@ -28,7 +28,7 @@ Si vous souhaitez cibler une version antérieure du kit de développement logici
 
    La boîte de dialogue **Examiner les actions de la solution** apparaît.
 
-   ![Examiner les actions] de la solution (../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")
+   ![Examiner les actions de la solution ](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")
 
 3. Dans la liste déroulante version de la **plateforme cible** , choisissez la version du kit de développement logiciel (SDK) Windows 10 que vous souhaitez cibler. Cliquez sur le bouton OK pour appliquer la modification.
 

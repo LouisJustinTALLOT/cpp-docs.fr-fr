@@ -152,7 +152,7 @@ L'exemple de code suivant illustre l'exemple complet. La `wmain` fonction gère 
 
 L’illustration suivante montre un exemple de sortie. Chaque image source est au-dessus de son image modifiée correspondante.
 
-Exemple ![de sortie pour l’exemple] Exemple (../../parallel/concrt/media/concrt_imageout.png "de sortie pour l’exemple")
+![Exemple de sortie pour l’exemple](../../parallel/concrt/media/concrt_imageout.png "Exemple de sortie pour l’exemple")
 
 `Lighthouse`est créée par Tom Alphin et est donc convertie en nuances de gris. `Chrysanthemum`, `Desert`, et`Tulips` ont rouge comme couleur dominante et les composants de couleur bleu et vert sont donc supprimés et sont obscurcis. `Koala` `Hydrangeas`, `Jellyfish` et`Penguins` correspondent aux critères par défaut ; par conséquent, il s’agit de sépia toned.
 
