@@ -1,6 +1,6 @@
 ---
 title: bsearch_s
-ms.date: 11/04/2016
+ms.date: 10/22/2019
 api_name:
 - bsearch_s
 api_location:
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 9bcd18add216bb0fc2f203183d82e37ede65dba5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943485"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811146"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
-Effectue une recherche binaire dans un tableau trié. Il s’agit d’une version de [bsearch](bsearch.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Effectue une recherche binaire dans un tableau trié. Cette fonction est une version de [ensuite bsearch](bsearch.md) avec des améliorations de sécurité, comme décrit dans [fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,39 +52,39 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*key*<br/>
-Objet à rechercher.
+\ de *clé*
+Pointeur vers la clé à rechercher.
 
-*base*<br/>
-Pointeur vers la base de données de recherche.
+*base*\
+Pointeur vers la base des données de recherche.
 
-*certain*<br/>
+*nombre*\
 Nombre d'éléments.
 
-*width*<br/>
+*largeur*\
 Largeur des éléments.
 
-*compare*<br/>
+*comparer*\
 Fonction de rappel qui compare deux éléments. Le premier argument est le pointeur de *contexte* . Le deuxième argument est un pointeur vers la *clé* de la recherche. Le troisième argument est un pointeur vers l’élément de tableau à comparer à la *clé*.
 
-*context*<br/>
+\ de *contexte*
 Pointeur vers un objet accessible dans la fonction de comparaison.
 
 ## <a name="return-value"></a>Valeur de retour
 
 **bsearch_s** retourne un pointeur vers une occurrence de la *clé* dans le tableau désigné par *base*. Si la *clé* est introuvable, la fonction retourne la **valeur null**. Si le tableau n’est pas trié par ordre croissant ou qu’il contient des enregistrements en double avec des clés identiques, le résultat est imprévisible.
 
-Si des paramètres non valides sont passés à la fonction, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Parameter Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne la **valeur null**. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si des paramètres non valides sont passés à la fonction, elle appelle le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne la **valeur null**. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
 |||||||
 |-|-|-|-|-|-|
 |*key*|*base*|*compare*|*certain*|*width*|**errno**|
-|**NULL**|any|any|any|any|**EINVAL**|
-|any|**NULL**|any|!= 0|any|**EINVAL**|
-|any|any|any|any|= 0|**EINVAL**|
-|any|any|**NULL**|an|any|**EINVAL**|
+|**NULL**|indifférent|indifférent|indifférent|indifférent|**EINVAL**|
+|indifférent|**NULL**|indifférent|!= 0|indifférent|**EINVAL**|
+|indifférent|indifférent|indifférent|indifférent|= 0|**EINVAL**|
+|indifférent|indifférent|**NULL**|an|indifférent|**EINVAL**|
 
 ## <a name="remarks"></a>Notes
 
@@ -98,13 +98,13 @@ La fonction **bsearch_s** effectue une recherche binaire d’un tableau trié d�
 
 Le pointeur de *contexte* peut être utile si la structure de données recherchée fait partie d’un objet et que la fonction de comparaison doit accéder aux membres de l’objet. La fonction *compare* peut effectuer un cast du pointeur void vers le type d’objet approprié et accéder aux membres de cet objet. L’ajout du paramètre de *contexte* rend **bsearch_s** plus sécurisé, car un contexte supplémentaire peut être utilisé pour éviter les bogues de réentrance associés à l’utilisation de variables statiques pour rendre les données disponibles pour la fonction de *comparaison* .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**bsearch_s**|\<stdlib.h> et \<search.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -194,7 +194,7 @@ cat found at 002F0F04
 
 ## <a name="see-also"></a>Voir aussi
 
-[Recherche et tri](../../c-runtime-library/searching-and-sorting.md)<br/>
-[_lfind](lfind.md)<br/>
-[_lsearch](lsearch.md)<br/>
-[qsort](qsort.md)<br/>
+[Recherche et tri](../../c-runtime-library/searching-and-sorting.md)\
+[_lfind](lfind.md)\
+[_lsearch](lsearch.md)\
+[qsort](qsort.md)
