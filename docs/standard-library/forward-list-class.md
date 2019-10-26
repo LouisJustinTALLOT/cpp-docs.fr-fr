@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: f1015e53e137b9001bd90233c281345d474bc03f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689699"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890204"
 ---
 # <a name="forward_list-class"></a>forward_list, classe
 
@@ -103,7 +103,7 @@ class forward_list
 Tapez * \
 Type de données d'élément à stocker dans le forward_list.
 
-@No__t_1 *Allocator*
+\ *Allocator*
 Objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire du forward_list. Ce paramètre est optionnel. La valeur par défaut est allocator<`Type`>.
 
 ## <a name="remarks"></a>Notes
@@ -220,7 +220,7 @@ Nombre d’éléments à assigner.
 \ *Val*
 Valeur à assigner à chaque élément.
 
-@No__t_1 de *type*
+\ de *type*
 Type de la valeur.
 
 *IList* \
@@ -521,10 +521,10 @@ Classe allocator à utiliser avec cet objet.
 *Nombre* \
 Nombre d'éléments dans la liste construite.
 
-@No__t_1 *Val*
+\ *Val*
 Valeur des éléments contenus dans la liste construite.
 
-@No__t_1 *droit*
+\ *droit*
 Liste dont la liste construite doit être une copie.
 
 *Premier* \
@@ -604,7 +604,7 @@ Début de la plage d’insertion.
 *Dernier* \
 Fin de la plage d’insertion.
 
-@No__t_1 *Val*
+\ *Val*
 Élément ajouté à la liste forward_list.
 
 *IList* \
@@ -678,7 +678,7 @@ Objet de fonction de comparaison utilisé pour trier les éléments.
 
 ### <a name="remarks"></a>Notes
 
-`forward_list::merge` supprime les éléments de la `right` `forward_list` et les insère dans ce `forward_list`. Les deux séquences doivent être triées par le même prédicat, décrit ci-dessous. La séquence combinée est également ordonnée par cet objet de fonction de comparaison.
+`forward_list::merge` supprime les éléments de la `right``forward_list` et les insère dans ce `forward_list`. Les deux séquences doivent être triées par le même prédicat, décrit ci-dessous. La séquence combinée est également ordonnée par cet objet de fonction de comparaison.
 
 Pour les itérateurs `Pi` et `Pj` désignant des éléments aux positions `i` et `j`, la première fonction membre impose l’ordre `!(*Pj < *Pi)` chaque fois que `i < j`. (Les éléments sont triés dans l’ordre `ascending`.) La deuxième fonction membre impose l’ordre `! comp(*Pj, *Pi)` chaque fois que `i < j`.
 
@@ -810,7 +810,7 @@ void resize(size_type _Newsize, const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Newsize* \
+*_Newsize*\
 Nombre d’éléments dans la liste forward_list redimensionnée.
 
 \ *Val*
@@ -1044,4 +1044,4 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du paramètre de modèle _ `Ty`.
+Le type est un synonyme du paramètre de modèle `Type`.

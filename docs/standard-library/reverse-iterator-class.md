@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-ms.openlocfilehash: aadc5cffd6f88de175ff04f50d6572e38ba05533
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 99fe323177c0aff29f5f01e6835bd800616e2e16
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686586"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889975"
 ---
 # <a name="reverse_iterator-class"></a>reverse_iterator, classe
 
@@ -44,11 +44,11 @@ RandomIterator type qui représente l’itérateur à adapter pour fonctionner e
 
 Les conteneurs fournis dans la bibliothèque standard C++ définissent également les types `reverse_iterator` et `const_reverse_iterator`, et possèdent les fonctions membres `rbegin` et `rend` qui retournent des itérateurs inverses. Ces itérateurs ont une sémantique de remplacement. L’adaptateur `reverse_iterator` complète cette fonctionnalité car il offre une sémantique d’insertion et peut également être utilisé avec des flux.
 
-Le `reverse_iterator` qui requiert un itérateur bidirectionnel ne doit pas appeler les fonctions membres `operator+=`, `operator+`, `operator-=`, `operator-` ou `operator[]`, qui peuvent uniquement être utilisées avec des itérateurs à accès aléatoire.
+Le `reverse_iterator` qui requiert un itérateur bidirectionnel ne doit pas appeler les fonctions membres `operator+=`, `operator+`, `operator-=`, `operator-`ou `operator[]`, qui peuvent uniquement être utilisées avec des itérateurs à accès aléatoire.
 
-La plage d’un itérateur est [*First*, *Last*), où le crochet de gauche indique l’inclusion de *First* et la parenthèse à droite indique l’inclusion des éléments jusqu’à l’exclusion de la *dernière* . Les mêmes éléments sont inclus dans la séquence inversée [ **rev**  - *first*, **Rev**  - *Last*), de sorte que si *Last* est l’élément le plus ancien dans une séquence, le premier élément **Rev**  -  *tout d’abord* , dans la séquence inversée, pointe vers 0 (*Last* -1). L'identité qui associe tous les itérateurs inverses à leurs itérateurs sous-jacents est :
+La plage d’un itérateur est [*First*, *Last*), où le crochet de gauche indique l’inclusion de *First* et la parenthèse à droite indique l’inclusion des éléments jusqu’à l’exclusion de la *dernière* . Les mêmes éléments sont inclus dans la séquence inversée [ **rev** - *first*, **Rev** - *Last*), de sorte que si *Last* est l’élément le plus ancien dans une séquence, le premier élément **Rev** -  *tout d’abord* , dans la séquence inversée, pointe vers \*(*Last* -1). L'identité qui associe tous les itérateurs inverses à leurs itérateurs sous-jacents est :
 
-& \* ( **reverse_iterator** ( *i* )) = = & \* ( *i* -1).
+&\*( **reverse_iterator** ( *i* )) = = &\*( *i* -1).
 
 En pratique, cela signifie que dans la séquence inversée le reverse_iterator se rapportera à l'élément situé une position au-delà (à droite) de l'élément auquel l'itérateur se rapportait dans la séquence d'origine. Ainsi, si un itérateur se rapportait à l'élément 6 dans la séquence (2, 4, 6, 8), le `reverse_iterator` se rapporte à l'élément 4 dans la séquence inversée (8, 6, 4, 2).
 
@@ -109,7 +109,7 @@ Itérateur sous-jacent à `reverse_iterator`.
 
 L’identité qui associe tous les itérateurs inverses à leurs itérateurs sous-jacents est :
 
-& \* (`reverse_iterator` ( *i* )) = = & \* ( *i* -1).
+&\*(`reverse_iterator` ( *i* )) = = &\*( *i* -1).
 
 En pratique, cela signifie que dans la séquence inversée, `reverse_iterator` se rapporte à l’élément situé une position à droite de l’élément auquel l’itérateur se rapportait dans la séquence d’origine. Ainsi, si un itérateur se rapportait à l'élément 6 dans la séquence (2, 4, 6, 8), le `reverse_iterator` se rapporte à l'élément 4 dans la séquence inversée (8, 6, 4, 2).
 
@@ -196,7 +196,7 @@ Le type est un synonyme du paramètre de modèle `Iterator`.
 
 Consultez [reverse_iterator::base](#base) pour obtenir un exemple montrant comment déclarer et utiliser `iterator_type`.
 
-## <a name="op_star"></a>reverse_iterator :: Operator \*
+## <a name="op_star"></a>reverse_iterator :: Operator\*
 
 Retourne l’élément traité par un reverse_iterator.
 
@@ -644,7 +644,7 @@ Décalage à soustraire du `reverse_iterator`.
 
 Cette fonction membre peut uniquement être utilisée si le `reverse_iterator` remplit les conditions pour un itérateur d’accès aléatoire.
 
-L’opérateur évalue **current** + _ *Off*. Il retourne ensuite **\*this**.
+L’opérateur évalue *le + * **actif** , puis retourne **\*** .
 
 ### <a name="example"></a>Exemple
 
@@ -945,7 +945,7 @@ Le type est un synonyme du typename des caractéristiques de l’itérateur `ite
 
 ### <a name="example"></a>Exemple
 
-Consultez [reverse_iterator :: Operator&#91; ](#op_at) ou [reverse_iterator :: Operator *](#op_star) pour obtenir des exemples sur la façon de déclarer et d’utiliser `reference`.
+Consultez [reverse_iterator :: Operator&#91; ](#op_at) ou [reverse_iterator :: Operator *](#op_star) pour obtenir des exemples sur la façon de déclarer et d’utiliser`reference`.
 
 ## <a name="reverse_iterator"></a>  reverse_iterator::reverse_iterator
 
@@ -972,7 +972,7 @@ Itérateur devant être adapté à un `reverse_iterator`.
 
 L'identité qui associe tous les itérateurs inverses à leurs itérateurs sous-jacents est :
 
-& \* (`reverse_iterator` ( *i* )) = = & \* ( *i* -1).
+&\*(`reverse_iterator` ( *i* )) = = &\*( *i* -1).
 
 En pratique, cela signifie que dans la séquence inversée le reverse_iterator se rapportera à l'élément situé une position au-delà (à droite) de l'élément auquel l'itérateur se rapportait dans la séquence d'origine. Ainsi, si un itérateur se rapportait à l'élément 6 dans la séquence (2, 4, 6, 8), le `reverse_iterator` se rapporte à l'élément 4 dans la séquence inversée (8, 6, 4, 2).
 
