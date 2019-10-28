@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-ms.openlocfilehash: 2da2bf4ea1c709b820c1a82dc20e288634139a83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4471c0df352a4d40d863ac36f0245cf8194f588c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460002"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685466"
 ---
 # <a name="time_put_byname-class"></a>time_put_byname, classe
 
-La classe de modèle dérivée décrit un objet pouvant servir de facette de paramètres régionaux du type `time_put`\< CharType, OutputIterator >.
+Le modèle de classe dérivée décrit un objet pouvant servir de facette de paramètres régionaux de type `time_put`\< CharType, OutputIterator >.
 
 ## <a name="syntax"></a>Syntaxe
 
