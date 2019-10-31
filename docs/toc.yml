@@ -1157,34 +1157,7 @@
                     - name: Exemple de makefile
                       href: build/reference/sample-makefile.md
                 - name: Blocs de description
-                  expanded: false
-                  items:
-                    - name: Blocs de description
-                      href: build/reference/description-blocks.md
-                    - name: Cibles
-                      expanded: false
-                      items:
-                        - name: Cibles
-                          href: build/reference/targets.md
-                        - name: Pseudocibles
-                          href: build/reference/pseudotargets.md
-                        - name: Cibles multiples
-                          href: build/reference/multiple-targets.md
-                        - name: Dépendances cumulatives
-                          href: build/reference/cumulative-dependencies.md
-                        - name: Cibles dans des blocs de description multiples
-                          href: build/reference/targets-in-multiple-description-blocks.md
-                        - name: Effets secondaires des dépendances
-                          href: build/reference/dependency-side-effects.md
-                    - name: Dépendants
-                      expanded: false
-                      items:
-                        - name: Dépendants
-                          href: build/reference/dependents.md
-                        - name: Dépendants inférés
-                          href: build/reference/inferred-dependents.md
-                        - name: Chemins de recherche des dépendants
-                          href: build/reference/search-paths-for-dependents.md
+                  href: build/reference/description-blocks.md
                 - name: Commandes dans un makefile
                   expanded: false
                   items:
@@ -1410,6 +1383,8 @@
                       href: build/reference/linkermember.md
                     - name: /LOADCONFIG
                       href: build/reference/loadconfig.md
+                    - name: /NOPDB
+                      href: build/reference/nopdb.md
                     - name: /OUT (DUMPBIN)
                       href: build/reference/out-dumpbin.md
                     - name: /PDATA
@@ -3995,7 +3970,7 @@
                     - name: Opérateurs de cast
                       expanded: false
                       items:
-                        - name: Opérateurs de casting
+                        - name: Opérateurs de cast
                           href: cpp/casting-operators.md
                         - name: 'dynamic_cast, opérateur'
                           href: cpp/dynamic-cast-operator.md
@@ -10425,7 +10400,7 @@
                           href: parallel/concrt/reference/scheduler-worker-creation-error-class.md
                         - name: 'SchedulerPolicy, classe'
                           href: parallel/concrt/reference/schedulerpolicy-class.md
-                        - name: simple_partitioner (classe)
+                        - name: 'simple_partitioner, classe'
                           href: parallel/concrt/reference/simple-partitioner-class.md
                         - name: 'single_assignment, classe'
                           href: parallel/concrt/reference/single-assignment-class.md
@@ -10447,7 +10422,7 @@
                           href: parallel/concrt/reference/task-canceled-class.md
                         - name: 'task_completion_event, classe'
                           href: parallel/concrt/reference/task-completion-event-class.md
-                        - name: 'task_continuation_context, classe'
+                        - name: task_continuation_context (classe)
                           href: parallel/concrt/reference/task-continuation-context-class.md
                         - name: 'task_group, classe'
                           href: parallel/concrt/reference/task-group-class.md
