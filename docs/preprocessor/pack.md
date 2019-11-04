@@ -21,20 +21,20 @@ Spécifie l’alignement de la compression pour les membres de la structure, de 
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma Pack (afficher)** \
-> **#pragma Pack (push** [ **,** *identificateur* ] [ **,** *n* ] **)** \
-> **#pragma Pack (pop** [ **,**  | { *identifier* *n* }] **)** \
-> **#pragma Pack (** [ *n* ] **)**
+> **#pragma pack( show )** \
+> **#pragma pack( push** [ **,** *identificateur* ] [ **,** *n* ] **)** \
+> **#pragma pack( pop** [ **,**  | { *identifier* *n* }] **)** \
+> **#pragma pack (** [ *n* ] **)**
 
 ### <a name="parameters"></a>Paramètres
 
-**afficher**\
+**show**\
 Facultatif Affiche la valeur d’octet actuelle pour l’alignement de compression. La valeur est affichée par un message d'avertissement.
 
-**souleve**\
+**push**\
 Facultatif Exécute un push de la valeur d’alignement de compression actuelle sur la pile interne du compilateur et définit la valeur d’alignement de la compression actuelle sur *n*. Si *n* n’est pas spécifié, la valeur actuelle de l’alignement de compression fait l’objet d’un push.
 
-**roulant**\
+**pop**\
 Facultatif Supprime l’enregistrement du haut de la pile interne du compilateur. Si *n* n’est pas spécifié avec **pop**, la valeur de compression associée à l’enregistrement obtenu en haut de la pile est la nouvelle valeur d’alignement de la compression. Si *n* est spécifié, par exemple `#pragma pack(pop, 16)`, *n* devient la nouvelle valeur d’alignement de la compression. Si vous utilisez un *identificateur*, par exemple `#pragma pack(pop, r1)`,, tous les enregistrements de la pile sont dépilés jusqu’à ce que l’enregistrement qui a l' *identificateur* soit trouvé. Cet enregistrement est dépilé et la valeur de compression associée à l’enregistrement obtenu en haut de la pile est la nouvelle valeur d’alignement de la compression. Si vous utilisez un *identificateur* qui n’est trouvé dans aucun enregistrement sur la pile, le **pop** est ignoré.
 
 *identificateur*\
