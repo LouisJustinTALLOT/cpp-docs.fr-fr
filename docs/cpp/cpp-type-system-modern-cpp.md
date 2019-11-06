@@ -70,7 +70,7 @@ Le tableau suivant répertorie les types fondamentaux les plus souvent utilisés
 |bool|1 octet|Représente des valeurs qui peuvent être true ou false.|
 |char|1 octet|À utiliser pour les caractères ASCII dans les chaînes de style C plus anciennes ou les objets std::string qui ne devront jamais être convertis en UNICODE.|
 |wchar_t|2 octets|Représente les valeurs à caractères « larges » qui peuvent être encodées au format UNICODE (UTF-16 sur Windows, mais peut varier sur les autres systèmes d'exploitation). Type de caractère utilisé dans les chaînes de type `std::wstring`.|
-|&nbsp;char non signé|1 octet|C++ n'a aucun type `byte` intégré.  Utilisez le caractère non signé pour représenter une valeur d'octet.|
+|unsigned&nbsp;char|1 octet|C++ n'a aucun type `byte` intégré.  Utilisez le caractère non signé pour représenter une valeur d'octet.|
 |unsigned int|4 octets|Option par défaut pour les bits indicateurs.|
 |long long|8 octets|Représente des valeurs entières très grandes.|
 
