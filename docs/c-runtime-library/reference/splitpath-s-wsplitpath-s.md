@@ -34,12 +34,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: f97c07ed01ae629fe3eb61346c6c0fcd8fa803f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8eeb6a0f43827578c5d5ba900c35a3ac30f4ae7c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958053"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625839"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
@@ -93,14 +93,14 @@ errno_t _wsplitpath_s(
 *path*<br/>
 Chemin complet.
 
-*drive*<br/>
+*unités*<br/>
 Lettre de lecteur, suivie d’un signe deux-points ( **:** ). Vous pouvez passer la **valeur null** pour ce paramètre si vous n’avez pas besoin de la lettre de lecteur.
 
 *driveNumberOfElements*<br/>
 Taille de la mémoire tampon du *lecteur* en caractères codés sur un octet ou larges. Si le *lecteur* est **null**, cette valeur doit être 0.
 
-*dir*<br/>
-Chemin de répertoire incluant une barre oblique de fin. Les barres obliques **/** (), les barres obliques inverses ( **\\** ) ou les deux peuvent être utilisées. Vous pouvez passer la **valeur null** pour ce paramètre si vous n’avez pas besoin du chemin d’accès au répertoire.
+*public*<br/>
+Chemin de répertoire incluant une barre oblique de fin. Les barres obliques ( **/** ), les barres obliques inverses ( **\\** ) ou les deux peuvent être utilisées. Vous pouvez passer la **valeur null** pour ce paramètre si vous n’avez pas besoin du chemin d’accès au répertoire.
 
 *dirNumberOfElements*<br/>
 Taille de la mémoire tampon de *répertoire* en caractères codés sur un octet ou larges. Si *dir* est **null**, cette valeur doit être 0.
@@ -153,7 +153,7 @@ Chaque composant du chemin d’accès complet est stocké dans une mémoire tamp
 
 Le tableau suivant répertorie les valeurs des constantes manifestes.
 
-|Nom|Valeur|
+|Name|valeur|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
@@ -162,18 +162,18 @@ Le tableau suivant répertorie les valeurs des constantes manifestes.
 
 Si le chemin d’accès complet ne contient pas de composant (par exemple, un nom de fichier), **_splitpath_s** assigne une chaîne vide à la mémoire tampon correspondante.
 
-En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; celles-ci peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_splitpath_s**|\<stdlib.h>|
 |**_wsplitpath_s**|\<stdlib.h> ou \<wchar.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

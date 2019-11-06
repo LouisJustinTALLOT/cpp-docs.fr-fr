@@ -1,29 +1,29 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4288
+title: Avertissement du compilateur (niveau 1) C4288
 ms.date: 11/04/2016
 f1_keywords:
 - C4288
 helpviewer_keywords:
 - C4288
 ms.assetid: 6aaeb139-90cd-457a-9d37-65687042736f
-ms.openlocfilehash: d8769f5663ca0bde9048e52d4579012dfccab0a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81094bf019060b56337347f7d364ead7c78c8128
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207093"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626659"
 ---
-# <a name="compiler-warning-level-1-c4288"></a>Avertissement du compilateur (niveau 1) C4288
+# <a name="compiler-warning-level-1-c4288"></a>Avertissement du compilateur (niveau 1) C4288
 
-extension non standard utilisée : 'var' : variable de contrôle de boucle déclarée dans la boucle for est utilisée en dehors de la portée de la boucle ; Il est en conflit avec la déclaration de la portée externe
+extension non standard utilisée : 'var' : la variable de contrôle de boucle déclarée dans la boucle for est utilisée à l’extérieur de la portée de la boucle. Il est en conflit avec la déclaration dans la portée externe
 
-Lors de la compilation avec [/Ze](../../build/reference/za-ze-disable-language-extensions.md) et **/Zc**, une variable déclarée dans une **pour** boucle a été utilisée après la [pour](../../cpp/for-statement-cpp.md)-portée de la boucle. Une extension Microsoft du langage C++ permet à cette variable de rester dans la portée et C4288 vous rappelle que la première déclaration de la variable n’est pas utilisée.
+Lors de la compilation avec [/Ze](../../build/reference/za-ze-disable-language-extensions.md) et **/Zc : forScope-** , une variable déclarée dans une boucle **for** a été utilisée après l’étendue de la boucle [for](../../cpp/for-statement-cpp.md). Une extension Microsoft du langage C++ permet à cette variable de rester dans la portée, et C4288 vous rappelle que la première déclaration de la variable n’est pas utilisée.
 
-Consultez [/Zc : forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) pour plus d’informations sur la spécification de l’extension de Microsoft dans **pour** boucles avec /Ze.
+Pour plus d’informations sur la spécification de l’extension Microsoft dans les boucles **for** avec/Ze., consultez [/Zc : forScope.](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)
 
-L’exemple suivant génère l’erreur C4288 :
+L’exemple suivant génère l’C4288 :
 
-```
+```cpp
 // C4288.cpp
 // compile with: /W1 /c /Zc:forScope-
 int main() {

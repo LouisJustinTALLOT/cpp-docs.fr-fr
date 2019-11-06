@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 29e99da02aa0144699d3c20e523b5e5e4b6b8f72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d3f72ddf7675ea7ad73022dc55a60fdc74d4390
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363529"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623627"
 ---
 # <a name="compiler-warning-c4484"></a>Avertissement du compilateur C4484
 
-'fonction_substitution' : correspond à la méthode de classe ref de base 'fonction_classe_base', mais n’est pas marqué 'virtual', 'new' ou 'override' ; 'new' (et non 'virtual') sont supposé.
+'override_function' : correspond à la méthode de classe ref de base’base_class_function', mais n’est pas marqué comme’Virtual', 'New’ou’override'; 'New' (et non’Virtual') est pris par défaut
 
-Lors de la compilation avec **/CLR**, le compilateur ne substitue pas implicitement une fonction de classe de base, ce qui signifie que la fonction aura un nouvel emplacement dans vtable. Pour résoudre, spécifiez explicitement si une fonction est un remplacement.
+Lors de la compilation avec **/CLR**, le compilateur ne substituera pas implicitement une fonction de classe de base, ce qui signifie que la fonction obtiendra un nouvel emplacement dans la vtable. Pour résoudre le, spécifiez explicitement si une fonction est une substitution.
 
 Pour plus d'informations, voir :
 
@@ -27,13 +27,13 @@ Pour plus d'informations, voir :
 
 - [new (nouvel emplacement dans vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
-C4484 est toujours émis en tant qu’erreur. Utilisez le [avertissement](../../preprocessor/warning.md) pragma pour supprimer l’erreur C4484.
+C4484 est toujours émis en tant qu’erreur. Utilisez le pragma [Warning](../../preprocessor/warning.md) pour supprimer C4484.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4484.
+L’exemple suivant génère l’C4484.
 
-```
+```cpp
 // C4484.cpp
 // compile with: /clr
 ref struct A {

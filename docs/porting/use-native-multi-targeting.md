@@ -1,16 +1,16 @@
 ---
 title: Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets
-ms.date: 11/04/2016
+ms.date: 10/25/2019
 helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: 35f6ac980a451b375d5005c20853fdd29c78d96d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: aff21121c181131b04ad22d75f03b7cbb222228a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448938"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627149"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets
 
@@ -44,15 +44,18 @@ Si vous choisissez de ne pas effectuer de mise à niveau, Visual Studio n’appo
 
 ## <a name="instructions-for-visual-studio-2008"></a>Instructions pour Visual Studio 2008
 
-Visual Studio 2008 avait son propre système de build dédié pour C++ appelé **VCBuild**. À compter de Visual Studio 2010, les projets Visual Studio C++ ont été changés pour utiliser **MSBuild**. Cela signifie que vous devez passer par une étape de mise à jour pour générer vos projets Visual Studio 2008 dans la dernière version de Visual Studio. Votre projet mis à jour génère toujours des fichiers binaires qui sont entièrement compatibles avec les fichiers binaires créés à l’aide de l’IDE de Visual Studio 2008.
+Visual Studio 2008 avait son propre système de build dédié pour C++ appelé **VCBuild**. À compter de Visual Studio 2010, les projets Visual Studio C++ ont été changés pour utiliser **MSBuild**. Cela signifie que si vous effectuez une mise à niveau de manière permanente ou multiple, vous devez passer par une étape de mise à jour pour générer vos projets Visual Studio 2008 dans la dernière version de Visual Studio. Votre projet mis à jour génère toujours des fichiers binaires qui sont entièrement compatibles avec les fichiers binaires créés à l’aide de l’IDE de Visual Studio 2008.
 
 Tout d’abord, outre la version actuelle de Visual Studio, vous devez installer Visual Studio 2010 sur le même ordinateur que Visual Studio 2008. Seul Visual Studio 2010 installe les scripts **MSBuild** nécessaires au ciblage des projets Visual Studio 2008.
 
 Ensuite, vous devez mettre à jour vos projets et solution Visual Studio 2008 vers la version actuelle de Visual Studio. Nous vous recommandons de créer une sauvegarde de vos projets et de vos fichiers solution avant d’effectuer la mise à niveau. Pour démarrer le processus de mise à niveau, ouvrez la solution dans la version actuelle de Visual Studio. Quand vous obtenez l’invite de mise à niveau, passez en revue les informations présentées, puis choisissez **OK** pour démarrer la mise à niveau. Si la solution comporte plusieurs projets, vous devez mettre à jour L’Assistant crée les fichiers projet .vcxproj côté à côte avec les fichiers .vcproj existants. Tant que vous avez également une copie du fichier .sln d’origine, la mise à niveau n’a aucun autre impact sur vos projets Visual Studio 2008 existants.
 
+> [!NOTE]
+> Les étapes suivantes s’appliquent uniquement aux scénarios de multi-ciblage. Si vous envisagez de mettre à niveau de façon permanente le projet vers un ensemble d’outils ultérieur, l’étape suivante consiste à enregistrer le projet, à l’ouvrir dans Visual Studio 2019 et à résoudre les problèmes de build qui s’y trouvent.
+
 Une fois la mise à niveau terminée, si le rapport de journal contient des erreurs ou des avertissements pour l’un de vos projets, examinez-les attentivement. La conversion de **VCBuild** vers **MSBuild** peut entraîner des problèmes. Veillez à comprendre et à implémenter toutes les actions répertoriées dans le rapport. Pour plus d’informations sur le rapport de journal de mise à niveau et sur les problèmes qui peuvent se produire durant la conversion de **VCBuild** vers **MSBuild**, consultez ce billet de blog consacré au [multiciblage natif C++](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/).
 
-Une fois que la mise à niveau du projet est terminée et que vous avez résolu les problèmes éventuellement signalés dans le fichier journal, votre solution cible réellement le dernier ensemble d’outils. En guise d’étape finale, modifiez les propriétés de chaque projet dans la solution pour utiliser l’ensemble d’outils de Visual Studio 2008. Une fois la solution chargée dans la version actuelle de Visual Studio, pour chaque projet dans la solution, ouvrez la boîte de dialogue **Pages de propriétés** du projet : cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions**, puis sélectionnez **Propriétés**. Dans la boîte de dialogue **Pages de propriétés**, définissez la valeur de la liste déroulante **Configuration** sur **Toutes les configurations**. Dans **Propriétés de configuration**, sélectionnez **Général**, puis définissez **Ensemble d’outils de plateforme** sur **Visual Studio 2008 (v90)** .
+Une fois que la mise à niveau du projet est terminée et que vous avez résolu les problèmes éventuellement signalés dans le fichier journal, votre solution cible réellement le dernier ensemble d’outils. En guise d’étape finale, modifiez les propriétés de chaque projet dans la solution pour utiliser l’ensemble d’outils de Visual Studio 2008. Une fois la solution chargée dans la version actuelle de Visual Studio, pour chaque projet dans la solution, ouvrez la boîte de dialogue **Pages de propriétés** liée au projet : cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions**, puis sélectionnez **Propriétés**. Dans la boîte de dialogue **Pages de propriétés**, définissez la valeur de la liste déroulante **Configuration** sur **Toutes les configurations**. Dans **Propriétés de configuration**, sélectionnez **Général**, puis définissez **Ensemble d’outils de plateforme** sur **Visual Studio 2008 (v90)** .
 
 Après cette modification, le compilateur et les bibliothèques Visual Studio 2008 sont utilisés pour générer les fichiers binaires du projet quand vous générez la solution dans la version actuelle de Visual Studio.
 
@@ -66,5 +69,5 @@ Quand ces produits sont installés, la liste déroulante de propriétés **Ensem
 
 ## <a name="see-also"></a>Voir aussi
 
-[Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Mise à niveau de projets à partir de versions antérieures de VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Améliorations de la conformité de C++ dans Visual Studio](../overview/cpp-conformance-improvements.md)

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 855c88f22e00cad398f6357b8e35931598041aeb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c74e7359f68469fd8322ba1c9348acffd636282a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946579"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625918"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
@@ -81,10 +81,10 @@ Si une condition d’erreur se présente, le gestionnaire de paramètre non vali
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*numberOfElements*|Renvoie|Contenu de la *mémoire tampon*|
+|*buffer*|*numberOfElements*|Return|Contenu de la *mémoire tampon*|
 |--------------|------------------------|------------|--------------------------|
-|**NULL**|(indifférent)|**EINVAL**|Non modifiée|
-|Not **null** (pointant vers une mémoire tampon valide)|0|**EINVAL**|Non modifiée|
+|**NULL**|(indifférent)|**EINVAL**|Non modifié|
+|Not **null** (pointant vers une mémoire tampon valide)|0|**EINVAL**|Non modifié|
 |Not **null** (pointant vers une mémoire tampon valide)|0 < taille < 9|**EINVAL**|Chaîne vide|
 |Not **null** (pointant vers une mémoire tampon valide)|Taille > 9|0|Heure actuelle au format spécifié dans la section Notes|
 
@@ -100,7 +100,9 @@ Ces fonctions fournissent des versions plus sécurisées de [_strtime](strtime-w
 
 **_wstrtime** est une version à caractères larges de **_strtime**; l’argument et la valeur de retour de **_wstrtime** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique.
 
-En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
+
+Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mappage de routines de texte générique :
 
@@ -108,14 +110,14 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrtime_s**|**_strtime_s**|**_strtime_s**|**_wstrtime_s**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_strtime_s**|\<time.h>|
 |**_wstrtime_s**|\<time.h> ou \<wchar.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

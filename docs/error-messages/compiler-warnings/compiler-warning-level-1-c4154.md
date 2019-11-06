@@ -1,27 +1,27 @@
 ---
-title: Compilateur avertissement (niveau 1) C4154
+title: Avertissement du compilateur (niveau 1) C4154
 ms.date: 11/04/2016
 f1_keywords:
 - C4154
 helpviewer_keywords:
 - C4154
 ms.assetid: 4511afeb-e893-4cc6-83b6-4c7a0477f76b
-ms.openlocfilehash: 5d2d6316838e8f3ef4acdf60494a0450a5efbdbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f0d56f6ae4b4ca92bc330d72176266e3196ea6a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324556"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625025"
 ---
-# <a name="compiler-warning-level-1-c4154"></a>Compilateur avertissement (niveau 1) C4154
+# <a name="compiler-warning-level-1-c4154"></a>Avertissement du compilateur (niveau 1) C4154
 
 suppression d’une expression de tableau ; conversion en pointeur fournie
 
-Vous ne pouvez pas utiliser `delete` sur un tableau, par conséquent, le compilateur convertit le tableau en un pointeur.
+Comme vous ne pouvez pas utiliser `delete` sur un tableau, le compilateur convertit le tableau en pointeur.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // C4154.cpp
 // compile with: /c /W1
 int main() {

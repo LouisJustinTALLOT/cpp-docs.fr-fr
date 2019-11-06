@@ -1,51 +1,73 @@
 ---
-title: Mise à niveau de projets à partir de versions antérieures de Visual C++
+title: Mettre C++ à niveau des projets à partir de versions antérieures de Visual Studio
 description: Découvrez comment mettre à niveau des projets Microsoft C++ à partir de versions antérieures de Visual Studio.
-ms.date: 05/03/2019
+ms.date: 10/29/2019
 helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: 25cf8d451c0efb5234fba5e56b6bfe7ceb7c2c08
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.openlocfilehash: b317271a9cd0873e60a6dd9acd1b73a766aaea19
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400814"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627164"
 ---
-# <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Mise à niveau de projets à partir de versions antérieures de Visual C++
+# <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>Mettre C++ à niveau des projets à partir de versions antérieures de Visual Studio
 
-Dans la plupart des cas, vous pouvez ouvrir un projet créé dans une version antérieure de Visual Studio. Toutefois, pour ce faire, Visual Studio met à niveau le projet. Si vous enregistrez le projet mis à niveau, il ne pourra plus être ouvert dans une version antérieure.
+Pour mettre à niveau un projet créé dans Visual Studio 2008 ou une version antérieure, vous devez d’abord utiliser Visual Studio 2010 pour convertir le projet du format VCBuild (. vcproj) au format MSBuild (. vcxproj). Pour plus d’informations, consultez [instructions pour Visual Studio 2008](use-native-multi-targeting.md#instructions-for-visual-studio-2008).
 
-> [!IMPORTANT]
-> Si vous essayez de convertir un projet qui l'a déjà été, Visual Studio vous demandera une confirmation car la reconversion supprime les fichiers existants.
+Pour mettre à niveau un projet créé dans Visual Studio 2010 ou une version ultérieure, il vous suffit d’ouvrir le projet dans la dernière version de Visual Studio. Visual Studio propose de mettre à niveau le projet vers le schéma actuel. Si vous choisissez **non**et que vous disposez de la version antérieure de Visual Studio sur votre ordinateur, vous pouvez travailler dans le projet dans une version plus récente de Visual Studio et continuer à cibler l’ensemble d’outils antérieur. Par exemple, si votre projet doit continuer à s’exécuter sur Windows XP, vous pouvez le mettre à niveau vers Visual Studio 2019, mais vous devez spécifier l’ensemble d’outils comme V141 ou version antérieure. Pour plus d’informations, consultez [Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets](use-native-multi-targeting.md). Si vous choisissez **Oui**, le projet sera converti et ne pourra pas être reconverti dans la version antérieure. Par conséquent, dans les scénarios de mise à niveau, il est recommandé d’effectuer une copie des fichiers projet et solution existants.
 
-De nombreux projets et solutions mis à niveau peuvent être générés avec succès et sans modification. Toutefois, certains projets peuvent requérir des modifications des paramètres, du code source, ou des deux. Nous vous recommandons de respecter les consignes suivantes pour résoudre les problèmes de paramètres en premier, puis si le projet demeure impossible à générer, les problèmes de code. Pour plus d’informations, consultez [Vue d’ensemble des problèmes de mise à niveau potentiels](../porting/overview-of-potential-upgrade-issues-visual-cpp.md).
+## <a name="upgrade-reports"></a>Rapports de mise à niveau
 
-1. Faites une copie des fichiers projet et solution existants. Installez la version actuelle de Visual Studio et la version antérieure côte à côte de façon à pouvoir comparer des versions de fichier si vous le souhaitez.
+Quand vous mettez à niveau un projet, un rapport de mise à niveau est généré et enregistré dans votre dossier de projet sous le nom UpgradeLog.htm. Le rapport de mise à niveau affiche un résumé des problèmes rencontrés et des informations sur les modifications apportées, notamment :
 
-2. Dans la version actuelle de Visual Studio, ouvrez puis mettez à niveau la copie du projet ou de la solution et enregistrez-la.
+1. Propriétés de projet
 
-3. Pour chaque projet converti, ouvrez le menu contextuel du projet, puis choisissez **Propriétés**. Sous **Propriétés de configuration**, sélectionnez **Général** , puis pour **Ensemble d'outils de plateforme**, sélectionnez la version actuelle. (Par exemple, pour Visual Studio 2017, sélectionnez **v141**.)
+2. Fichiers Include
 
-4. Générez la solution. Si la génération échoue, modifiez les paramètres et régénérez.
+3. Code qui ne se compile plus correctement en raison des améliorations de la conformité du compilateur ou des modifications apportées à la norme
 
-Les sources de données sont contenues dans un projet de base de données distinct afin que vous puissiez plus facilement modifier et déboguer les procédures stockées dans ces sources. Si vous mettez à niveau un projet C++ qui contient des sources de données, il est procédé automatiquement à la création d’un projet de base de données différent.
+4. Code qui fait appel à des fonctionnalités Visual Studio ou Windows qui ne sont plus disponibles, ou à des fichiers d’en-tête qui ne sont pas inclus dans une installation par défaut de Visual Studio ou qui ont été supprimés du produit.
 
-Pour plus d’informations sur la façon de mettre à jour les versions de Windows ciblées, consultez [Modification de WINVER et _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md).
+5. Code qui ne se compile plus à cause des modifications apportées aux API (par exemple, API renommées, signatures de fonction modifiées ou fonctions déconseillées).
+
+6. Code qui ne se compile plus en raison de modifications apportées aux diagnostics, comme un avertissement qui devient une erreur
+
+7. Erreurs de l'éditeur de liens dues aux modifications de bibliothèques, en particulier quand /NODEFAULTLIB est utilisé.
+
+8. Erreurs d'exécution ou résultats inattendus dus à des changements de comportement.
+
+9. Erreurs qui ont été introduites dans les outils. Si vous rencontrez un problème, signalez-le à l’équipe Visual C++ par le biais de vos modes de contact du support technique habituels ou de la page [Communauté de développeurs Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html).
+
+Certains projets et solutions mis à niveau peuvent être générés correctement sans modification. Toutefois, la plupart des projets requièrent probablement des modifications des paramètres du projet et du code source. Il n’existe pas de méthode correcte pour corriger ces informations, mais il est recommandé d’utiliser un type d’approche échelonnée. Avant de commencer, consultez [vue d’ensemble des problèmes de mise à niveau potentiels](../porting/overview-of-potential-upgrade-issues-visual-cpp.md) pour plus d’informations sur de nombreux types d’erreurs courantes.
+
+ 1. Définissez l’ensemble d’outils C++ de plateforme, le langage standard et la version de SDK Windows (le cas échéant) sur les versions souhaitées. ( **Propriétés** de la > de**projet** > **Propriétés de configuration** > **général**)
+ 1. Si vous avez un grand nombre d’erreurs, désactivez l’option [permissif](../build/reference/permissive-standards-conformance.md) ( **Propriétés** du**projet** >  > **Propriétés de configuration** > **langage** **CC++ /**  > ) et l’analyse du [code ](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)( **Propriétés** de la > de**projet** > **Propriétés de configuration** > analyse du **code**) temporairement pour réduire le nombre d’erreurs.
+ 1. Vérifiez que toutes les dépendances sont présentes et que les chemins d’accès include ou les emplacements de bibliothèque sont corrects. ( **Propriétés** du**projet** >  > **Propriétés de configuration** > **Répertoires VC + +** )
+ 1. Identifiez et corrigez les erreurs dues à des références aux API qui n’existent plus.
+ 1. Corrigez toutes les erreurs restantes qui empêchent la compilation. Reportez-vous à [vue d’ensemble des problèmes de mise à niveau potentiels](../porting/overview-of-potential-upgrade-issues-visual-cpp.md) pour les erreurs courantes.
+ 1. Désactivez **-** la et corrigez les nouvelles erreurs qui apparaissent en raison du code non conforme qui a été précédemment compilé dans MSVC.
+ 1. Activez l’analyse du code pour identifier les problèmes potentiels ou les modèles de codage obsolètes qui ne sont plus considérés comme acceptables. Si l’analyse du code signale de nombreuses erreurs, vous pouvez désactiver certains des avertissements pour vous concentrer en priorité sur les plus importants. L’IDE peut aider à résoudre des problèmes rapides pour certains types de problèmes.
+ 1. Pensez à d’autres opportunités de la modernisation du code, par exemple en remplaçant des structures de données personnalisées et des C++ algorithmes par ceux de la bibliothèque standard ou de la bibliothèque open source de Boost. En utilisant les fonctionnalités standard, vous facilitez la gestion du code par d’autres personnes, ainsi que l’assurance que le code a été testé et revu par de nombreux experts du Comité des normes et de la C++ communauté plus large.
+
+Pour les erreurs difficiles à corriger, essayez de rechercher ou de publier une question sur Stack Overflow [ C++ ](https://developercommunity.visualstudio.com/spaces/62/index.html)ou la communauté des développeurs.
 
 ## <a name="in-this-section"></a>Dans cette section
 
+[Vue d’ensemble des problèmes de mise à niveau potentiels](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Mettre à niveau votre code vers la bibliothèque Universal CRT](upgrade-your-code-to-the-universal-crt.md)<br/>
-[Modification de WINVER et _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
+[Mettre à jour WINVER et _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
 [Résoudre vos dépendances aux éléments internes de bibliothèque](fix-your-dependencies-on-library-internals.md)<br/>
 [Problèmes de migration de virgule flottante](floating-point-migration-issues.md)<br/>
-[Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets](use-native-multi-targeting.md)<br/>
-[Fonctionnalités Visual C++ dépréciées dans la préversion de Visual Studio 2019](features-deprecated-in-visual-studio.md)<br/>
-[Modifications du système de génération](build-system-changes.md)
+[C++fonctionnalités dépréciées dans Visual Studio 2019](features-deprecated-in-visual-studio.md)<br/>
+[VCBuild et MSBuild](build-system-changes.md)<br/>
+[Bibliothèques tierces de port](porting-third-party-libraries.md)<br/>
 
 ## <a name="see-also"></a>Voir aussi
 
 [Nouveautés de Visual C++ dans Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Historique des modifications de Visual C++ entre 2003 et 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
-[Comportement non standard](../cpp/nonstandard-behavior.md)
+[Comportement non standard](../cpp/nonstandard-behavior.md)<br/>
+[Applications de données de port](../data/data-access-programming-mfc-atl.md)<br/>

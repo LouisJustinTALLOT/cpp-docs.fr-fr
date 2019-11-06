@@ -28,12 +28,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: a63b542333717a57097da455fb514eeef80344b4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a7dcb9b7acc462d9570ee2cb7adb0dbd06df77c9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941351"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623833"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -68,7 +68,7 @@ La mémoire tampon fournie destinée à contenir le résultat de la conversion.
 *sizeInBytes*<br/>
 Taille de la mémoire tampon en octets.
 
-*value*<br/>
+*valeur*<br/>
 Nombre à convertir.
 
 *count*<br/>
@@ -82,18 +82,18 @@ Pointeur désignant l’indicateur de signe stocké.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un code d’erreur. Les codes d’erreur sont définis dans Errno.h. Pour obtenir la liste de ces erreurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Zéro si l’opération aboutit. En cas d’échec, la valeur de retour est un code d’erreur. Les codes d’erreur sont définis dans Errno.h. Pour obtenir la liste de ces erreurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 En cas de paramètre non valide, comme indiqué dans le tableau suivant, cette fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*sizeInBytes*|value|count|dec|sign|Renvoie|Valeur dans la *mémoire tampon*|
+|*buffer*|*sizeInBytes*|valeur|count|dec|sign|Return|Valeur dans la *mémoire tampon*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
-|**NULL**|any|any|any|any|any|**EINVAL**|Non modifiée.|
-|not **null** (pointe vers une mémoire valide)|<=0|any|any|any|any|**EINVAL**|Non modifiée.|
-|any|any|any|any|**NULL**|any|**EINVAL**|Non modifiée.|
-|any|any|any|any|any|**NULL**|**EINVAL**|Non modifiée.|
+|**NULL**|indifférent|indifférent|indifférent|indifférent|indifférent|**EINVAL**|Non modifiée.|
+|Not **null** (pointe vers une mémoire valide)|<=0|indifférent|indifférent|indifférent|indifférent|**EINVAL**|Non modifiée.|
+|indifférent|indifférent|indifférent|indifférent|**NULL**|indifférent|**EINVAL**|Non modifiée.|
+|indifférent|indifférent|indifférent|indifférent|indifférent|**NULL**|**EINVAL**|Non modifiée.|
 
 ## <a name="security-issues"></a>Problèmes de sécurité
 
@@ -109,21 +109,21 @@ Une mémoire tampon de longueur **_CVTBUFSIZE** est suffisante pour toute valeur
 
 La différence entre **_ecvt_s** et **_fcvt_s** est l’interprétation du paramètre *Count* . **_ecvt_s** interprète le *nombre comme le* nombre total de chiffres dans la chaîne de sortie, tandis que **_fcvt_s** interprète le *nombre comme le nombre de* chiffres après la virgule décimale.
 
-En C++, l’utilisation de cette fonction est simplifiée par une surcharge de modèle ; la surcharge peut déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de cette fonction est simplifiée par une surcharge de modèle ; la surcharge peut déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-La version de débogage de cette fonction remplit d’abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+La version de débogage de cette fonction remplit d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 |Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|
 |**_fcvt_s**|\<stdlib.h>|\<errno.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-**Bibliotheque** Toutes les versions des [fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliothèques :** toutes les versions des [fonctionnalités de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // fcvt_s.c

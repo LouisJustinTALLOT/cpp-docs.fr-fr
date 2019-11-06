@@ -1,29 +1,29 @@
 ---
-title: Compilateur Warning (level 1) C4096
+title: Avertissement du compilateur (niveau 1) C4096
 ms.date: 11/04/2016
 f1_keywords:
 - C4096
 helpviewer_keywords:
 - C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
-ms.openlocfilehash: 287465e9a3f5681f459f0823a4409b0906309a55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f526b26eda4c02825d225aa007c6029cc4b03dd
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280454"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627079"
 ---
-# <a name="compiler-warning-level-1-c4096"></a>Compilateur Warning (level 1) C4096
+# <a name="compiler-warning-level-1-c4096"></a>Avertissement du compilateur (niveau 1) C4096
 
-« a » : interface n’est pas une interface COM ; ne sera pas émise vers IDL
+'a' : l’interface n’est pas une interface COM ; ne sera pas émis dans IDL
 
-Une définition d’interface que vous aviez prévu comme une interface COM n’a pas été définie comme une interface COM et ne sera donc pas émise pour le fichier IDL.
+Une définition d’interface que vous avez peut-être conçue comme interface COM n’a pas été définie comme interface COM et, par conséquent, n’est pas émise dans le fichier IDL.
 
-Consultez [attributs d’Interface](../../windows/attributes/interface-attributes.md) pour une liste d’attributs qui indiquent une interface est une interface COM.
+Consultez [attributs d’interface](../../windows/attributes/interface-attributes.md) pour les attributs de liste indiquant qu’une interface est une interface com.
 
-L’exemple suivant génère l’erreur C4096 :
+L’exemple suivant génère l’C4096 :
 
-```
+```cpp
 // C4096.cpp
 // compile with: /W1 /LD
 #include "windows.h"

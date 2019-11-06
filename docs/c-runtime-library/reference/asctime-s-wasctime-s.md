@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 0a40dad34d607bb52b062fc2cec163dfc8b62219
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1cd2a15db0a27dedd88b9abf24b98d338515c949
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943665"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624783"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -82,17 +82,17 @@ Structure date/heure. Cette fonction suppose un pointeur vers un objet **struct*
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro si l’opération réussit. En cas d’échec, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la valeur de retour est un code d’erreur. Les codes d’erreur sont définis dans ERRNO.H. Pour plus d’informations, consultez [Constantes errno](../../c-runtime-library/errno-constants.md). Les codes d’erreur retournés pour chaque condition d’erreur sont répertoriés dans le tableau suivant.
+Zéro si l’opération aboutit. En cas d’échec, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la valeur de retour est un code d’erreur. Les codes d’erreur sont définis dans ERRNO.H. Pour plus d’informations, consultez [Constantes errno](../../c-runtime-library/errno-constants.md). Les codes d’erreur retournés pour chaque condition d’erreur sont répertoriés dans le tableau suivant.
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*numberOfElements*|*tmSource*|Renvoie|Valeur dans la *mémoire tampon*|
+|*buffer*|*numberOfElements*|*tmSource*|Return|Valeur dans la *mémoire tampon*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|Quelconque|Quelconque|**EINVAL**|Non modifiée|
-|not **null** (pointe vers une mémoire valide)|0|Quelconque|**EINVAL**|Non modifiée|
-|Non **null**|0 < taille < 26|Quelconque|**EINVAL**|Chaîne vide|
-|Non **null**|>= 26|**NULL**|**EINVAL**|Chaîne vide|
-|Non **null**|>= 26|Structure de temps non valide ou hors de la plage de valeurs pour les composants de temps|**EINVAL**|Chaîne vide|
+|**NULL**|Any|Any|**EINVAL**|Non modifié|
+|Not **null** (pointe vers une mémoire valide)|0|Any|**EINVAL**|Non modifié|
+|non **null**|0 < taille < 26|Any|**EINVAL**|Chaîne vide|
+|non **null**|>= 26|**NULL**|**EINVAL**|Chaîne vide|
+|non **null**|>= 26|Structure de temps non valide ou hors de la plage de valeurs pour les composants de temps|**EINVAL**|Chaîne vide|
 
 > [!NOTE]
 > Les conditions d’erreur pour **wasctime_s** sont similaires à **asctime_s** , sauf que la limite de taille est mesurée en mots.
@@ -101,7 +101,7 @@ Zéro si l’opération réussit. En cas d’échec, le gestionnaire de paramèt
 
 La fonction **asctime** convertit une heure stockée sous la forme d’une structure en une chaîne de caractères. La valeur *tmSource* est généralement obtenue à partir d’un appel à **gmtime** ou **localtime**. Les deux fonctions peuvent être utilisées pour remplir une structure **TM** , comme défini dans Time. Manutention.
 
-|Membre de timeptr|Valeur|
+|Membre de timeptr|valeur|
 |--------------------|-----------|
 |**tm_hour**|Heures depuis minuit (0-23)|
 |**tm_isdst**|Positif si l’heure d’été est en vigueur ; 0 si l’heure d’été n’est pas appliquée ; négatif si l’état de l’heure d’été est inconnu. La bibliothèque runtime C suppose que les règles de calcul de l’heure d’été sont celles des États-Unis.|
@@ -115,9 +115,11 @@ La fonction **asctime** convertit une heure stockée sous la forme d’une struc
 
 La chaîne de caractères convertie est également ajustée en fonction des paramètres de fuseau horaire local. Consultez les fonctions [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) et [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md) pour plus d’informations sur la configuration de l’heure locale, et la fonction [_tzset](tzset.md) pour plus d’informations sur la définition des variables globales et d’environnement des fuseaux horaires.
 
-Le résultat de chaîne produit par **asctime_s** contient exactement 26 caractères et se présente `Wed Jan 02 02:03:55 1980\n\0`sous la forme. Une horloge de 24 heures est utilisée. Tous les champs ont une largeur constante. Le caractère de saut de ligne et le caractère null occupent les deux dernières positions de la chaîne. La valeur passée comme deuxième paramètre doit être au moins de cette taille. S’il est inférieur, un code d’erreur, **EINVAL**, est retourné.
+Le résultat de chaîne produit par **asctime_s** contient exactement 26 caractères et se présente sous la forme `Wed Jan 02 02:03:55 1980\n\0`. Une horloge de 24 heures est utilisée. Tous les champs ont une largeur constante. Le caractère de saut de ligne et le caractère null occupent les deux dernières positions de la chaîne. La valeur passée comme deuxième paramètre doit être au moins de cette taille. S’il est inférieur, un code d’erreur, **EINVAL**, est retourné.
 
 **_wasctime_s** est une version à caractères larges de **asctime_s**. dans le cas contraire, **_wasctime_s** et **asctime_s** se comportent de la même façon.
+
+Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mappage de routines de texte générique
 
@@ -125,9 +127,9 @@ Le résultat de chaîne produit par **asctime_s** contient exactement 26 caract�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tasctime_s**|**asctime_s**|**asctime_s**|**_wasctime_s**|
 
-En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; celles-ci peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

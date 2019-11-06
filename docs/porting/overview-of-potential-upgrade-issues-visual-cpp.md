@@ -2,12 +2,12 @@
 title: Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 10c2de547611cf7b1b47de2b1ec05dcf419c6225
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 2b310760b1a6623a18a00e36e3bd5378d2ebb76e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511551"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627241"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 
@@ -33,7 +33,7 @@ C++ ne dispose pas d’une interface ABI (Application Binary Interface) stable. 
 
 Si vous avez un fichier objet qui contient des symboles externes avec une liaison C++, ce fichier objet peut ne pas être lié correctement aux fichiers objets générés par une version principale différente de l’ensemble d’outils. Il existe plusieurs résultats possibles : le lien peut échouer complètement (par exemple si la décoration de nom a changé). Le lien peut aboutir et des dysfonctionnements peuvent apparaître lors de l’exécution (par exemple si la disposition de type a changé). Ou, dans de nombreux cas, tout fonctionne et aucun problème ne survient. Notez également que si l’interface ABI C++ n’est pas stable, l’interface ABI C et le sous-ensemble de l’interface ABI C++ requis pour COM sont stables.
 
-Si vous créez un lien à une bibliothèque d’importation, les versions ultérieures des bibliothèques redistribuables Visual Studio qui conservent une compatibilité avec l’ABI peuvent être utilisées lors de l’exécution. Par exemple, si votre application est compilée et liée à l’aide de l’ensemble d’outils Visual Studio 2015 Update 3, vous pouvez utiliser n’importe quel package redistribuable de Visual Studio 2017 ou Visual Studio 2019, car les bibliothèques 2015, 2017 et 2019 ont conservé une compatibilité binaire descendante. L’inverse n’est pas vrai : vous ne pouvez pas utiliser un package redistribuable d’une version antérieure de l’ensemble d’outils que vous avez utilisé pour générer votre code, même s’il a une ABI compatible.
+Si vous créez un lien à une bibliothèque d’importation, les versions ultérieures des bibliothèques redistribuables Visual Studio qui conservent une compatibilité avec l’ABI peuvent être utilisées lors de l’exécution. Par exemple, si votre application est compilée et liée à l’aide de l’ensemble d’outils Visual Studio 2015 Update 3, vous pouvez utiliser n’importe quel package redistribuable de Visual Studio 2017 ou Visual Studio 2019, car les bibliothèques 2015, 2017 et 2019 ont conservé une compatibilité binaire descendante. L’inverse n’est pas vrai : vous ne pouvez pas utiliser un package redistribuable pour une version antérieure de l’ensemble d’outils que celui que vous avez utilisé pour générer votre code, même s’ils ont un ABI compatible.
 
 ### <a name="libraries"></a>Bibliothèques
 
@@ -68,7 +68,7 @@ En général, c’est maintenant le moment idéal d’organiser votre code de pr
 <PlatformToolset Condition="'$(VisualStudioVersion)'=='15.0'">v141</PlatformToolset>
 ```
 
-### <a name="lnk2019-unresolved-external"></a>LNK2019 : Externes non résolues
+### <a name="lnk2019-unresolved-external"></a>LNK2019 : Symbole externe non résolu
 
 Pour les symboles non résolus, vous devez peut-être corriger les paramètres de votre projet.
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t est un type natif)
 
-(Dans Microsoft Visual C++ 6.0 et les versions antérieures, **wchar_t** n’était pas implémenté en tant que type intégré, mais il était déclaré dans wchar.h en tant que typedef pour unsigned short.) Conformément à la norme C++, **wchar_t** doit être un type intégré. L’utilisation de la version typedef peut entraîner des problèmes de portabilité. Si vous effectuez une mise à niveau à partir de versions antérieures de Visual Studio et si vous rencontrez l’erreur de compilateur C2664, car le code essaie de convertir implicitement **wchar_t** en **unsigned short**, nous vous recommandons de changer le code pour corriger cette erreur, au lieu de définir `/Zc:wchar_t-`. Pour plus d’informations, consultez [/Zc:wchar_t (wchar_t est un type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+(Dans Microsoft Visual C++ 6,0 et versions antérieures, **wchar_t** n’a pas été implémenté en tant que type intégré, mais a été déclaré dans WCHAR. h comme typedef pour unsigned short.) La C++ norme requiert que **wchar_t** soit un type intégré. L’utilisation de la version typedef peut entraîner des problèmes de portabilité. Si vous effectuez une mise à niveau à partir de versions antérieures de Visual Studio et si vous rencontrez l’erreur de compilateur C2664, car le code essaie de convertir implicitement **wchar_t** en **unsigned short**, nous vous recommandons de changer le code pour corriger cette erreur, au lieu de définir `/Zc:wchar_t-`. Pour plus d’informations, consultez [/Zc:wchar_t (wchar_t est un type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Mise à niveau avec les options de l’éditeur de liens /NODEFAULTLIB, /ENTRY et /NOENTRY
 
@@ -150,7 +150,7 @@ La norme C++ indique désormais que les conversions entre les valeurs intégral
 
 ## <a name="warnings-to-use-secure-crt-functions"></a>Avertissements pour utiliser des fonctions CRT sécurisées
 
-Au fil des années, des versions sécurisées de fonctions Runtime C ont été introduites. Bien que les anciennes versions non sécurisées soient toujours disponibles, nous vous recommandons de modifier votre code pour utiliser les versions sécurisées. Le compilateur émet un avertissement pour l’utilisation des versions non sécurisées. Vous pouvez choisir de désactiver ou d’ignorer ces avertissements. Pour désactiver l’avertissement pour tous les projets dans votre solution, ouvrez **View (Afficher)**  > **Gestionnaire de propriétés**, sélectionnez tous les projets pour lesquels vous souhaitez désactiver l’avertissement, puis cliquez avec le bouton droit sur les éléments sélectionnés et choisissez **Propriétés**. Dans la boîte de dialogue **Pages de propriétés** sous **Propriétés de configuration** > **C/C++**  > **Avancé**, Sélectionnez **Désactivation des avertissements spécifiques**. Cliquez sur la flèche déroulante, puis sur **Modifier**. Entrez 4996 dans la zone de texte. (N’incluez pas le préfixe « C ».) Pour plus d’informations, consultez [Portage pour utiliser les fonctions CRT sécurisées](porting-guide-spy-increment.md#porting_to_secure_crt).
+Au fil des années, des versions sécurisées de fonctions Runtime C ont été introduites. Bien que les anciennes versions non sécurisées soient toujours disponibles, nous vous recommandons de modifier votre code pour utiliser les versions sécurisées. Le compilateur émet un avertissement pour l’utilisation des versions non sécurisées. Vous pouvez choisir de désactiver ou d’ignorer ces avertissements. Pour désactiver l’avertissement pour tous les projets dans votre solution, ouvrez **View (Afficher)**  > **Gestionnaire de propriétés**, sélectionnez tous les projets pour lesquels vous souhaitez désactiver l’avertissement, puis cliquez avec le bouton droit sur les éléments sélectionnés et choisissez **Propriétés**. Dans la boîte de dialogue **Pages de propriétés** sous **Propriétés de configuration** > **C/C++**  > **Avancé**, Sélectionnez **Désactivation des avertissements spécifiques**. Cliquez sur la flèche déroulante, puis sur **Modifier**. Entrez 4996 dans la zone de texte. (N’incluez pas le préfixe « C ».) Pour plus d’informations, consultez [Portage pour utiliser le CRT sécurisé](porting-guide-spy-increment.md#porting_to_secure_crt).
 
 ## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>Erreurs dues à des modifications des API Windows ou à des SDK obsolètes
 
@@ -182,9 +182,9 @@ En outre, vous devez garder à l’esprit les éventuels problèmes lors de la c
 
 Avant la standardisation d’Unicode, de nombreux programmes utilisaient le jeu de caractères multioctets (MBCS) pour représenter les caractères qui n’étaient pas inclus dans le jeu de caractères ASCII. Dans les anciens projets MFC, MBCS était le paramètre par défaut et, lors de la mise à niveau d’un tel programme, vous recevez des avertissements qui vous demandent d’utiliser Unicode à la place. Vous pouvez choisir de désactiver ou d’ignorer l’avertissement si vous pensez que la conversion au format Unicode ne vaut pas le coût de développement. Pour le désactiver pour tous les projets dans votre solution, ouvrez **View (Afficher)**  > **Gestionnaire de propriétés**, sélectionnez tous les projets pour lesquels vous souhaitez désactiver l’avertissement, puis cliquez avec le bouton droit sur les éléments sélectionnés et choisissez **Propriétés**. Dans la boîte de dialogue **Pages de propriétés**, sélectionnez **Propriétés de configuration** > **C/C++**  > **Avancé**. Dans la propriété **Désactivation des avertissements spécifiques**, ouvrez la flèche déroulante, puis choisissez **Modifier**. Entrez 4996 dans la zone de texte. (N’incluez pas le préfixe « C ».) Choisissez **OK** pour enregistrer la propriété, puis choisissez **OK** pour enregistrer vos modifications.
 
-Pour plus d’informations, consultez [Portage de MBCS vers Unicode](porting-guide-spy-increment.md#porting_to_unicode). Pour plus d’informations d’ordre général sur MBCS et Unicode, consultez [Texte et chaînes en Visual C++](../text/text-and-strings-in-visual-cpp.md) et [Internationalisation](../c-runtime-library/internationalization.md).
+Pour plus d’informations, consultez [Portage de MBCS vers Unicode](porting-guide-spy-increment.md#porting_to_unicode). Pour obtenir des informations générales sur MBCS et Unicode, consultez [texte et chaînes en C++ Visual](../text/text-and-strings-in-visual-cpp.md) et [internationalisation](../c-runtime-library/internationalization.md) .
 
 ## <a name="see-also"></a>Voir aussi
 
-[Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Mise à niveau de projets à partir de versions antérieures de VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Améliorations de la conformité de C++ dans Visual Studio](../overview/cpp-conformance-improvements.md)

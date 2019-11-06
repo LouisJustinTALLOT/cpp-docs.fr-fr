@@ -1,31 +1,31 @@
 ---
-title: Compilateur avertissement (niveau 1) C4129
+title: Avertissement du compilateur (niveau 1) C4129
 ms.date: 11/04/2016
 f1_keywords:
 - C4129
 helpviewer_keywords:
 - C4129
 ms.assetid: a4190c64-4bfb-48fd-8e98-52720bc0d878
-ms.openlocfilehash: dc4f4c4c1feeba543ce0baa71e1ee5dfd81fdcae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab3108c60c18276e8e4797c7cfde1b66535dbaaa
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310946"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627422"
 ---
-# <a name="compiler-warning-level-1-c4129"></a>Compilateur avertissement (niveau 1) C4129
+# <a name="compiler-warning-level-1-c4129"></a>Avertissement du compilateur (niveau 1) C4129
 
-'character' : caractère de séquence d’échappement non reconnu
+'caractère' : séquence d’échappement de caractère non reconnue
 
-Le `character` après une barre oblique inverse (\\) dans un caractère ou une chaîne constante n’est pas reconnu comme une séquence d’échappement valide. La barre oblique inverse est ignorée et pas imprimée. Le caractère qui suit la barre oblique inverse est imprimé.
+La `character` qui suit une barre oblique inverse (\\) dans une constante caractère ou chaîne n’est pas reconnue comme une séquence d’échappement valide. La barre oblique inverse est ignorée et n’est pas imprimée. Le caractère qui suit la barre oblique inverse est imprimé.
 
-Pour imprimer une barre oblique inverse unique, spécifier une double barre oblique inverse (\\\\).
+Pour imprimer une seule barre oblique inverse, spécifiez une double barre oblique inverse (\\\\).
 
-La norme C++, dans la section 2.13.2 traite des séquences d’échappement.
+La C++ norme, dans la section 2.13.2, présente les séquences d’échappement.
 
-L’exemple suivant génère l’erreur C4129 :
+L’exemple suivant génère l’C4129 :
 
-```
+```cpp
 // C4129.cpp
 // compile with: /W1
 int main() {

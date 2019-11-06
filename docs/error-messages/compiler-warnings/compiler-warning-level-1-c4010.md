@@ -1,29 +1,29 @@
 ---
-title: Compilateur avertissement (niveau 1) C4010
+title: Avertissement du compilateur (niveau 1) C4010
 ms.date: 11/04/2016
 f1_keywords:
 - C4010
 helpviewer_keywords:
 - C4010
 ms.assetid: d607a9ff-8f8f-45c0-b07b-3b2f439e5485
-ms.openlocfilehash: 40c6724daf17c1c0b546bb7bc64bb704f732e8d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 045b3f6e615e11c24caa9a088baf6ea9f6448efb
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386549"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627320"
 ---
-# <a name="compiler-warning-level-1-c4010"></a>Compilateur avertissement (niveau 1) C4010
+# <a name="compiler-warning-level-1-c4010"></a>Avertissement du compilateur (niveau 1) C4010
 
-commentaire sur une ligne contient le caractère de continuation de ligne
+un commentaire sur une seule ligne contient un caractère de continuation de ligne
 
-Un commentaire sur une ligne, qui est introduit par / /, contient une barre oblique inverse (\\) qui sert d’un caractère de continuation de ligne. Le compilateur considère que la ligne suivante est une suite et la traite comme un commentaire.
+Un commentaire sur une seule ligne, qui est introduit par//, contient une barre oblique inverse (\\) qui sert de caractère de continuation de ligne. Le compilateur considère que la ligne suivante est une continuation et la traite comme un commentaire.
 
-Certains syntaxiques éditeurs n’indiquent pas la ligne qui suit le caractère de continuation en tant que commentaire. Ignorer les couleurs de syntaxe sur toutes les lignes qui provoquent cet avertissement.
+Certains éditeurs orientés syntaxe n’indiquent pas la ligne qui suit le caractère de continuation en tant que commentaire. Ignore la coloration de la syntaxe sur les lignes qui provoquent cet avertissement.
 
-L’exemple suivant génère l’erreur C4010 :
+L’exemple suivant génère l’C4010 :
 
-```
+```cpp
 // C4010.cpp
 // compile with: /WX
 int main() {

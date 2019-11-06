@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 799be6cfd4b14061ba61586f361dd884ad59224c
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 8fa7f02f8537f60b71ff21a476589cab9fcf595b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587940"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625088"
 ---
 # <a name="constructors-c"></a>Constructeurs (C++)
 
@@ -68,7 +68,7 @@ int main()
 
 ## <a name="member_init_list"></a>Listes d’initialiseurs de membres
 
-Un constructeur peut éventuellement avoir une liste d’initialiseurs de membre, qui initialise les membres de classe avant l’exécution du corps du constructeur. (Notez qu’une liste d’initialiseurs de membre n’est pas la même chose qu’une *liste d’initialiseurs* de type [std :: initializer_list \<T >](../standard-library/initializer-list-class.md).)
+Un constructeur peut éventuellement avoir une liste d’initialiseurs de membre, qui initialise les membres de classe avant l’exécution du corps du constructeur. (Notez qu’une liste d’initialiseurs de membre n’est pas la même chose qu’une *liste d’initialiseurs* de type [std :: initializer_list\<t >](../standard-library/initializer-list-class.md).)
 
 Il est préférable d’utiliser une liste d’initialiseurs de membre pour assigner des valeurs dans le corps du constructeur, car il initialise directement le membre. Dans l’exemple suivant, la liste d’initialiseurs de membre se compose de toutes les expressions d' **identificateur (argument)** après les deux-points :
 
@@ -78,7 +78,7 @@ Il est préférable d’utiliser une liste d’initialiseurs de membre pour assi
     {}
 ```
 
-L’identificateur doit faire référence à un membre de classe ; elle est initialisée avec la valeur de l’argument. L’argument peut être l’un des paramètres de constructeur, un appel de fonction ou un [std :: initializer_list \<T >](../standard-library/initializer-list-class.md).
+L’identificateur doit faire référence à un membre de classe ; elle est initialisée avec la valeur de l’argument. L’argument peut être l’un des paramètres de constructeur, un appel de fonction ou un [std :: initializer_list\<t >](../standard-library/initializer-list-class.md).
 
 les membres **const** et les membres du type référence doivent être initialisés dans la liste d’initialiseurs de membres.
 
@@ -318,7 +318,7 @@ Un constructeur peut être déclaré comme [constexpr](constexpr-cpp.md) si
 
 ## <a name="init_list_constructors"></a>Constructeurs de liste d’initialiseurs
 
-Si un constructeur prend un [std :: initializer_list \<T \>](../standard-library/initializer-list-class.md) comme paramètre et que tous les autres paramètres ont des arguments par défaut, ce constructeur est sélectionné dans la résolution de surcharge lorsque la classe est instanciée par le biais de direct d’initialisation. Vous pouvez utiliser initializer_list pour initialiser tout membre qui peut l’accepter. Par exemple, supposons que la classe Box (indiquée précédemment) a un membre `std::vector<string>` `m_contents`. Vous pouvez fournir un constructeur comme suit :
+Si un constructeur prend un [std :: initializer_list\<t\>](../standard-library/initializer-list-class.md) comme paramètre et que tous les autres paramètres ont des arguments par défaut, ce constructeur est sélectionné dans la résolution de surcharge lorsque la classe est instanciée par le biais de direct d’initialisation. Vous pouvez utiliser initializer_list pour initialiser tout membre qui peut l’accepter. Par exemple, supposons que la classe Box (indiquée précédemment) a un membre `std::vector<string>` `m_contents`. Vous pouvez fournir un constructeur comme suit :
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)

@@ -1,29 +1,29 @@
 ---
-title: Compilateur avertissement (niveau 1) C4172
+title: Avertissement du compilateur (niveau 1) C4172
 ms.date: 11/04/2016
 f1_keywords:
 - C4172
 helpviewer_keywords:
 - C4172
 ms.assetid: a8d2bf65-d8b1-4fe3-8340-a223d7e7fde6
-ms.openlocfilehash: caa71da9182c1da1d17d87d901084d0ee9badf73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d53972dbcb2e3ab6a95b0b874cc6bb98cd66840
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391788"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624828"
 ---
-# <a name="compiler-warning-level-1-c4172"></a>Compilateur avertissement (niveau 1) C4172
+# <a name="compiler-warning-level-1-c4172"></a>Avertissement du compilateur (niveau 1) C4172
 
-Retourne l’adresse de variable locale ou temporaire
+retour de l’adresse d’une variable locale ou temporaire
 
-Une fonction retourne l’adresse d’un objet temporaire ou de variable local. Variables locales et des objets temporaires sont détruits quand une fonction est retournée, l’adresse retournée n’est pas valide.
+Une fonction retourne l’adresse d’une variable locale ou d’un objet temporaire. Les variables locales et les objets temporaires sont détruits lorsqu’une fonction est retournée, de sorte que l’adresse retournée n’est pas valide.
 
-Remaniez la fonction afin qu’elle ne retourne pas l’adresse d’un objet local.
+Reconcevez la fonction afin qu’elle ne retourne pas l’adresse d’un objet local.
 
-L’exemple suivant génère l’erreur C4172 :
+L’exemple suivant génère l’C4172 :
 
-```
+```cpp
 // C4172.cpp
 // compile with: /W1 /LD
 float f = 10;

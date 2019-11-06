@@ -1,33 +1,33 @@
 ---
-title: Compilateur avertissement (niveau 1) C4142
+title: Avertissement du compilateur (niveau 1) C4142
 ms.date: 11/04/2016
 f1_keywords:
 - C4142
 helpviewer_keywords:
 - C4142
 ms.assetid: 1fdfc3dc-60a2-4f00-b133-20e400f9b7a6
-ms.openlocfilehash: 762f52c9f051a660cce68d424e02fc45422376e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97b13ad65335df435d071c106f577aefca7e072d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302278"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625006"
 ---
-# <a name="compiler-warning-level-1-c4142"></a>Compilateur avertissement (niveau 1) C4142
+# <a name="compiler-warning-level-1-c4142"></a>Avertissement du compilateur (niveau 1) C4142
 
 redéfinition bénigne du type
 
-Un type est redéfini d’une manière qui n’a aucun effet sur le code généré.
+Un type est redéfini de manière à ne pas avoir d’effet sur le code généré.
 
 Les causes possibles sont les suivantes :
 
-- Une fonction membre d’une classe dérivée a un type de retour différent à partir de la fonction membre correspondante de la classe de base.
+- Une fonction membre d’une classe dérivée a un type de retour différent de la fonction membre correspondante de la classe de base.
 
-- Un type défini avec la `typedef` commande est redéfinie avec une syntaxe différente.
+- Un type défini avec la commande `typedef` est redéfini à l’aide d’une syntaxe différente.
 
-L’exemple suivant génère l’erreur C4142 :
+L’exemple suivant génère l’C4142 :
 
-```
+```c
 // C4142.c
 // compile with: /W1
 float X2;

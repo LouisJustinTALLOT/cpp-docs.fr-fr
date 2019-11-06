@@ -1,29 +1,29 @@
 ---
-title: Compilateur avertissement (niveau 1) C4047
+title: Avertissement du compilateur (niveau 1) C4047
 ms.date: 11/04/2016
 f1_keywords:
 - C4047
 helpviewer_keywords:
 - C4047
 ms.assetid: b75ad6fb-5c93-4434-a85f-c4083051a5de
-ms.openlocfilehash: 87c9e39e5dac40341adc63af45cc0e460806c736
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bfbcb0e88380dfcc21eb724fc3682ac66b655e6
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388824"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624940"
 ---
-# <a name="compiler-warning-level-1-c4047"></a>Compilateur avertissement (niveau 1) C4047
+# <a name="compiler-warning-level-1-c4047"></a>Avertissement du compilateur (niveau 1) C4047
 
 'opérateur' : les niveaux d'indirection de 'identificateur1' et de 'identificateur2' sont différents
 
-Un pointeur peut pointer vers une variable (un niveau d’indirection), vers un autre pointeur qui pointe vers une variable (deux niveaux d’indirection) et ainsi de suite.
+Un pointeur peut pointer vers une variable (un niveau d’indirection) vers un autre pointeur qui pointe vers une variable (deux niveaux d’indirection), et ainsi de suite.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4047 :
+L’exemple suivant génère l’C4047 :
 
-```
+```c
 // C4047.c
 // compile with: /W1
 
@@ -41,9 +41,9 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4047 :
+L’exemple suivant génère l’C4047 :
 
-```
+```c
 // C4047b.c
 // compile with: /W1
 #include <stdio.h>

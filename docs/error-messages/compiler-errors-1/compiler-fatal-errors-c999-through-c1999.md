@@ -6,7 +6,6 @@ f1_keywords:
 - C1036
 - C1041
 - C1048
-- C1049
 - C1063
 - C1069
 - C1101
@@ -31,7 +30,6 @@ helpviewer_keywords:
 - C1036
 - C1041
 - C1048
-- C1049
 - C1063
 - C1069
 - C1101
@@ -52,22 +50,22 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 5ffa1a2633877c8a16eb424f1ddc100bfd6142b8
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 395d7403ef4fe04b671a84a61d320b27ad8ad1c7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857392"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626572"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Erreurs irrécupérables du compilateur C999 à C1999
 
-Les articles de cette section de la documentation expliquent un sous-ensemble des messages d’erreur générés par le Microsoft C /C++ compilateur.
+Les Articles de cette section de la documentation expliquent un sous-ensemble des messages d’erreur générés par le compilateurC++ Microsoft C/.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="error-messages"></a>Messages d’erreur
 
-|Error|Message|
+|Erreur|Message|
 |-----------|-------------|
 |[Erreur irrécupérable C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|MESSAGE INCONNU Choisissez la commande Support technique du menu ? (Aide) de Visual C++ ou ouvrez le fichier d'aide du Support technique pour plus d'informations|
 |[Erreur irrécupérable C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Une erreur interne s’est produite dans le compilateur.<br /> (fichier du compilateur '*file*', ligne *number*)<br /> Pour résoudre ce problème, essayez de simplifier ou de modifier le programme à proximité des emplacements répertoriés ci-dessus. Choisissez la commande Support technique du menu ? (Aide) de Visual C++ ou ouvrez le fichier d'aide du Support technique pour plus d'informations|
@@ -78,7 +76,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur irrécupérable C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|indicateur '*string*' non reconnu dans '*option*'|
 |[Erreur irrécupérable C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|aucun fichier d'entrée spécifié|
 |[Erreur irrécupérable C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|limite du compilateur : macros imbriquées trop profondément|
-|[Erreur irrécupérable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fin de fichier inattendue lors de la recherche d'un en-tête précompilé. Avez-vous oublié d’ajouter ' #include \< *fichier*>' à votre source ?|
+|[Erreur irrécupérable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fin de fichier inattendue lors de la recherche d'un en-tête précompilé. Avez-vous oublié d’ajouter « #include \<> de *fichier*» à votre source ?|
 |[Erreur irrécupérable C1012](fatal-error-c1012.md)|parenthèses non équilibrées : '*character*" manquant(e)|
 |[Erreur irrécupérable C1013](fatal-error-c1013.md)|limite du compilateur : parenthèses ouvertes trop nombreuses|
 |[Erreur irrécupérable C1014](fatal-error-c1014.md)|fichiers Include trop nombreux : profondeur = *number*|
@@ -89,7 +87,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur irrécupérable C1020](fatal-error-c1020.md)|#endif inattendu|
 |[Erreur irrécupérable C1021](fatal-error-c1021.md)|commande de préprocesseur non valide '*string*'|
 |[Erreur irrécupérable C1022](fatal-error-c1022.md)|#endif attendu|
-|[Erreur irrécupérable C1023](fatal-error-c1023.md)|'*file*' : erreur inattendue avec l'en-tête précompilé, essayez de régénérer l'en-tête précompilé|
+|[Erreur irrécupérable l’erreur C1023](fatal-error-c1023.md)|'*file*' : erreur inattendue avec l'en-tête précompilé, essayez de régénérer l'en-tête précompilé|
 |[Erreur irrécupérable C1026](../../error-messages/compiler-errors-1/fatal-error-c1026.md)|dépassement de capacité de la pile de l'analyseur, programme trop complexe|
 |[Erreur irrécupérable C1033](../../error-messages/compiler-errors-1/fatal-error-c1033.md)|impossible d'ouvrir la base de données du programme '*file*'|
 |Erreur irrécupérable C1034|*file*: pas de chemin d'accès include défini|
@@ -100,21 +98,21 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur irrécupérable C1041|impossible d'ouvrir la base de données du programme '*file*' ; si plusieurs CL.EXE écrivent dans le même fichier .PDB, utilisez /FS.|
 |[Erreur irrécupérable C1045](fatal-error-c1045.md)|limite du compilateur : spécifications de la liaison imbriquées trop profondément|
 |[Erreur irrécupérable C1046](../../error-messages/compiler-errors-1/fatal-error-c1046.md)|limite du compilateur : *structure* imbriqué(e) trop profondément|
-|[Erreur irrécupérable C1047](fatal-error-c1047.md)|Le fichier objet ou le fichier bibliothèque '*file*' a été créé à l'aide d'un compilateur antérieur à celui d'autres objets ; régénérez les objets et bibliothèques obsolètes|
+|[Erreur irrécupérable l’erreur C1047](fatal-error-c1047.md)|Le fichier objet ou le fichier bibliothèque '*file*' a été créé à l'aide d'un compilateur antérieur à celui d'autres objets ; régénérez les objets et bibliothèques obsolètes|
 |Erreur irrécupérable C1048|option '*string*' inconnue dans '*option*'|
-|Erreur irrécupérable C1049|argument numérique non valide '*value*'|
+|[Erreur irrécupérable C1049](fatal-error-c1049.md)|argument numérique non valide '*value*'|
 |[Erreur irrécupérable C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|le fichier '*file*' de la base de données du programme a un format obsolète, supprimez-le et recompilez-le|
-|[Erreur irrécupérable C1052](fatal-error-c1052.md)|fichier de base de données de programme, «*filename*», a été généré par l’éditeur de liens avec/Debug : Fastlink ; compilateur ne peut pas mettre à jour ces fichiers PDB ; Veuillez le supprimer ou utilisez /Fd pour spécifier un autre nom de fichier PDB|
+|[Erreur irrécupérable C1052](fatal-error-c1052.md)|le fichier de base de données du programme, '*nom_fichier*', a été généré par l’éditeur de liens avec/Debug : Fastlink ; le compilateur ne peut pas mettre à jour ces fichiers PDB ; Supprimez-la ou utilisez/FD pour spécifier un autre nom de fichier PDB|
 |[Erreur irrécupérable C1053](fatal-error-c1053.md)|'*function*' : fonction trop grande|
 |[Erreur irrécupérable C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|limite du compilateur : initialiseurs imbriqués trop profondément|
 |[Erreur irrécupérable C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|limite du compilateur : clés insuffisantes|
 |[Erreur irrécupérable C1057](../../error-messages/compiler-errors-1/fatal-error-c1057.md)|fin de fichier inattendue dans une expansion macro|
 |[Erreur irrécupérable C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)|espace du tas insuffisant pour le compilateur|
-|[Erreur irrécupérable C1061](../../error-messages/compiler-errors-1/fatal-error-c1061.md)|limite du compilateur : blocs imbriqués trop profondément|
+|[Erreur irrécupérable c1061](../../error-messages/compiler-errors-1/fatal-error-c1061.md)|limite du compilateur : blocs imbriqués trop profondément|
 |Erreur irrécupérable C1063|limite du compilateur : dépassement de capacité de la pile du compilateur|
 |[Erreur irrécupérable C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|limite du compilateur : dépassement de jetons dans la mémoire tampon interne|
 |[Erreur irrécupérable C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|limite du compilateur : balises insuffisantes|
-|[Erreur irrécupérable C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|limite du compilateur : Limite de 64 Ko sur la taille d’un enregistrement de type a été dépassé.|
+|[Erreur irrécupérable C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|limite du compilateur : un enregistrement de type a dépassé la taille maximale de 64 Ko|
 |[Erreur irrécupérable C1068](fatal-error-c1068.md)|impossible d'ouvrir le fichier '*file*'|
 |Erreur irrécupérable C1069|impossible de lire la ligne de commande du compilateur|
 |[Erreur irrécupérable C1070](fatal-error-c1070.md)|non concordance #if/#endif dans le fichier '*file*'|
@@ -124,7 +122,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur irrécupérable C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|l'élément *token* gauche n'est pas apparié en fin du fichier|
 |[Erreur irrécupérable C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|limite du compilateur : la limite du tas interne a été atteinte ; utilisez /Zm pour spécifier une limite plus élevée|
 |[Erreur irrécupérable C1077](fatal-error-c1077.md)|limite du compilateur : impossible d'avoir plus de *number* options de ligne de commande|
-|[Erreur irrécupérable C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|limite du compilateur : Limite de taille de fichier PCH est dépassée|
+|[Erreur irrécupérable C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|limite du compilateur : la taille limite du fichier PCH est dépassée|
 |[Erreur irrécupérable C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|limite du compilateur : l'option de ligne de commande dépasse la limite autorisée de *number* caractères|
 |[Erreur irrécupérable C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|'*file*' : nom de fichier trop long|
 |[Erreur irrécupérable C1082](fatal-error-c1082.md)|Impossible de fermer le fichier *type* : '*file*' : *message*|
@@ -155,9 +153,9 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur irrécupérable C1111|paramètres modèle/générique trop nombreux|
 |Erreur irrécupérable C1112|limite du compilateur : `'number`' arguments de macro en trop, ' *number* ' arguments autorisés au maximum|
 |[Erreur irrécupérable C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|Échec de #using sur '*file*'|
-|Erreur irrécupérable C1114|«*fichier*» : WinRT ne prend pas en charge #using un assembly managé|
+|Erreur irrécupérable C1114|'*file*' : WinRT ne prend pas en charge #using pour un assembly managé|
 |[Erreur irrécupérable C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|échec de l'appel à GetProcAddress pour '*function*'|
-|[Erreur irrécupérable C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|échec de l'appel à CryptoAPI|
+|[Erreur irrécupérable c1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|échec de l'appel à CryptoAPI|
 |[Erreur irrécupérable C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|l'allocation automatique dépasse *size*|
 |[Erreur irrécupérable C1128](../../error-messages/compiler-errors-1/fatal-error-c1128.md)|le nombre de sections a dépassé la limite du format de fichier objet : compilez avec /bigobj|
 |[Erreur irrécupérable C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#erreur : *message*|
@@ -199,10 +197,10 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur irrécupérable C1451|Échec de la génération des informations de débogage lors de la compilation du graphique des appels pour concurrency::parallel_for_each à l'emplacement '*callsite*'|
 |Erreur irrécupérable C1505|impossible de récupérer les erreurs de l'analyseur|
 |[Erreur irrécupérable C1506](../../error-messages/compiler-errors-1/fatal-error-c1506.md)|impossible de récupérer l'erreur relative à la portée du bloc|
-|[Erreur irrécupérable C1508](fatal-error-c1508.md)|limite du compilateur : '*function*' : argument(s) supérieur(s) à 65535 octets|
+|[Erreur irrécupérable c1508](fatal-error-c1508.md)|limite du compilateur : '*function*' : argument(s) supérieur(s) à 65535 octets|
 |[Erreur irrécupérable C1509](../../error-messages/compiler-errors-1/fatal-error-c1509.md)|limite du compilateur : trop d'états de gestionnaire d'exceptions dans la fonction '*function*'. Simplifiez la fonction|
 |[Erreur irrécupérable C1510](../../error-messages/compiler-errors-1/fatal-error-c1510.md)|Impossible d'ouvrir la ressource de langage clui.dll|
-|[Erreur irrécupérable C1601](../../error-messages/compiler-errors-1/fatal-error-c1601.md)|opcode d'assembly inline non pris en charge|
+|[Erreur irrécupérable c1601](../../error-messages/compiler-errors-1/fatal-error-c1601.md)|opcode d'assembly inline non pris en charge|
 |[Erreur irrécupérable C1602](../../error-messages/compiler-errors-1/fatal-error-c1602.md)|intrinsèque non pris en charge|
 |[Erreur irrécupérable C1603](../../error-messages/compiler-errors-1/fatal-error-c1603.md)|cible branche assembly inline dépasse de *number* octets|
 |[Erreur irrécupérable C1852](fatal-error-c1852.md)|'*file*' n'est pas un fichier d'en-tête précompilé valide|
@@ -213,8 +211,8 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur irrécupérable C1902](../../error-messages/compiler-errors-1/fatal-error-c1902.md)|incompatibilité de gestionnaire de bases de données du programme ; vérifiez votre installation|
 |[Erreur irrécupérable C1903](fatal-error-c1903.md)|impossible de récupérer à partir des erreurs précédentes ; arrêt de la compilation|
 |[Erreur irrécupérable C1904](fatal-error-c1904.md)|interaction de fournisseurs incorrecte : '*file*'|
-|[Erreur irrécupérable C1905](../../error-messages/compiler-errors-1/fatal-error-c1905.md)|Front end et back end non compatibles (doivent cibler le même processeur).|
+|[Erreur irrécupérable c1905](../../error-messages/compiler-errors-1/fatal-error-c1905.md)|Front end et back end non compatibles (doivent cibler le même processeur).|
 
 ## <a name="see-also"></a>Voir aussi
 
-[C /C++ compilateur et build erreurs et avertissements des outils](../compiler-errors-1/c-cpp-build-errors.md)
+[Erreurs etC++ avertissements du compilateur C/du compilateur et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md)
