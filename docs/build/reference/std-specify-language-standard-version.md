@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 9bdeb92e03b3ae00258ac48a29cec42ef7e18e81
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 4583bef3ef3033b6ba493ccac1c4fc5360c70e35
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241213"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624891"
 ---
 # <a name="std-specify-language-standard-version"></a>/std (Spécifier la version de la norme du langage)
 
@@ -23,7 +23,7 @@ Activez les fonctionnalités du langage C++ prises en charge dans la version sp�
 
 ## <a name="remarks"></a>Notes
 
-L’option **/std** est disponible dans Visual Studio 2017 et ultérieur. Elle sert à contrôler les fonctionnalités de la norme du langage de programmation C++ spécifiques à une version ISO qui sont activées durant la compilation de votre code. Cette option vous permet de désactiver la prise en charge de certaines nouvelles fonctionnalités de langage et de bibliothèque susceptibles de casser votre code existant si celui-ci est conforme à une version particulière de la norme du langage. Spécifiée par défaut, l’option **/std:c++14** désactive les fonctionnalités de langage et de bibliothèque standard présentes dans les versions ultérieures de la norme du langage C++. Utilisez **/std:c++17** pour activer les fonctionnalités et le comportement spécifiques à la norme C++17. Pour activer explicitement les fonctionnalités de compilateur et de bibliothèque standard actuellement implémentées et figurant dans le prochain brouillon de la norme, utilisez **/std:c++latest**. Nécessitent des fonctionnalités C ++ 20 tous les **/std : c ++ dernière**; lorsque l’implémentation est terminée, un nouveau **/std : c ++ 20** option est activée.
+L’option **/std** est disponible dans Visual Studio 2017 et ultérieur. Elle sert à contrôler les fonctionnalités de la norme du langage de programmation C++ spécifiques à une version ISO qui sont activées durant la compilation de votre code. Cette option vous permet de désactiver la prise en charge de certaines nouvelles fonctionnalités de langage et de bibliothèque susceptibles de casser votre code existant si celui-ci est conforme à une version particulière de la norme du langage. Spécifiée par défaut, l’option **/std:c++14** désactive les fonctionnalités de langage et de bibliothèque standard présentes dans les versions ultérieures de la norme du langage C++. Utilisez **/std:c++17** pour activer les fonctionnalités et le comportement spécifiques à la norme C++17. Pour activer explicitement les fonctionnalités de compilateur et de bibliothèque standard actuellement implémentées et figurant dans le prochain brouillon de la norme, utilisez **/std:c++latest**. Toutes les fonctionnalités C++ 20 requièrent **/std : C + + latest**. une fois l’implémentation terminée, une nouvelle option **/std : c++ 20** est activée.
 
 L’option par défaut **/std:c++14** active l’ensemble des fonctionnalités C++14 implémentées par le compilateur MSVC. Cette option désactive la prise en charge par le compilateur et la bibliothèque standard des fonctionnalités qui ont été changées ou introduites dans les versions plus récentes de la norme du langage, à l’exception de certaines fonctionnalités C++17 déjà implémentées dans les versions précédentes du compilateur MSVC. Pour éviter que les utilisateurs ayant déjà créé des dépendances sur les fonctionnalités disponibles à compter de Visual Studio 2015 Update 2 ne subissent de changements cassants, ces fonctionnalités restent activées quand l’option **/std:c++14** est spécifiée :
 
@@ -37,7 +37,7 @@ L’option par défaut **/std:c++14** active l’ensemble des fonctionnalités C
 
 - [Littéraux de caractère u8](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
 
-Pour plus d’informations sur les fonctionnalités C++14 et C++17 qui sont activées quand **/std:c++14**est spécifié, consultez les notes disponibles dans [Conformité du langage Visual C++](../../overview/visual-cpp-language-conformance.md).
+Pour plus d’informations sur les fonctionnalités C++ 14 et C++ 17 qui sont activées quand **/std : c++ 14** est spécifié, consultez les notes dans la [table de conformité du langage Microsoft C++ ](../../overview/visual-cpp-language-conformance.md).
 
 L’option **/std:c++17** active l’ensemble complet des fonctionnalités C++17 implémentées par le compilateur MSVC. Cette option désactive la prise en charge par le compilateur et la bibliothèque standard des fonctionnalités modifiées ou nouvelles dans les versions de Working Draft et les mises à jour des défauts de C++ Standard postérieures à C++17.
 
@@ -51,7 +51,7 @@ L’option **/std** en vigueur durant une compilation C++ peut être détectée 
 Les options **/std:c++14** et **/std:c++latest** sont disponibles à compter de Visual Studio 2015 Update 3. L’option **/std:c++17** est disponible à compter de Visual Studio 2017 version 15.3. Comme indiqué ci-dessus, certains comportements de la norme C++17 sont activés par l’option **/std:c++14**, mais toutes les autres fonctionnalités C++17 sont activées par **/std:c++17**. Les fonctionnalités C++20 sont activées par **/std:latest** jusqu’à ce que l’implémentation soit terminée.
 
 > [!NOTE]
-> Selon le niveau de mise à jour ou la version du compilateur MSVC, les fonctionnalités C++17 peuvent ne pas être entièrement implémentées ou conformes quand vous spécifiez les options **/std:c++17**. Pour une vue d’ensemble de la conformité du langage C++ dans Visual C++ par version, consultez [Conformité du langage Visual C++](../../overview/visual-cpp-language-conformance.md).
+> Selon le niveau de mise à jour ou la version du compilateur MSVC, les fonctionnalités C++17 peuvent ne pas être entièrement implémentées ou conformes quand vous spécifiez les options **/std:c++17**. Pour obtenir une vue C++ d’ensemble de la conformité de C++ la langue dans Visual par version Release, consultez [table de conformité linguistique Microsoft C++ ](../../overview/visual-cpp-language-conformance.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 

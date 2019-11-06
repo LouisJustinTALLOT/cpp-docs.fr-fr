@@ -1,22 +1,22 @@
 ---
-title: Modification de WINVER et _WIN32_WINNT
+title: Mettre à jour WINVER et _WIN32_WINNT
 ms.date: 09/04/2017
 helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: a83e92444e7010e4d3b65153b2e60e1c5d952cef
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 0cfdb3d065a85bd02ef21de9c4c5282cf54fcb2a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511603"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627258"
 ---
-# <a name="modifying-winver-and-_win32_winnt"></a>Modification de WINVER et _WIN32_WINNT
+# <a name="update-winver-and-_win32_winnt"></a>Mettre à jour WINVER et _WIN32_WINNT
 
 Visual C++ ne prend plus en charge le ciblage de Windows 95, Windows 98, Windows ME, Windows NT ou Windows 2000. Si vos macros **WINVER** ou **_WIN32_WINNT** sont affectées à l'une de ces versions de Windows, vous devez les changer. Quand vous mettez à niveau un projet créé à l'aide d'une version antérieure de Visual C ++, vous pouvez voir s'afficher des erreurs de compilation liées aux macros **WINVER** ou **_WIN32_WINNT** , si ces dernières sont affectées à une version de Windows qui n'est plus prise en charge.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Pour modifier les macros, ajoutez les lignes suivantes à un fichier d'en-tête (par exemple, targetver.h, qui est inclus quand vous créez un projet ciblant Windows).
 
@@ -51,7 +51,7 @@ Si vous ne voyez pas toutes ces versions de Windows dans votre copie de SDKDDKVe
 > [!NOTE]
 > Il n'est pas certain que les valeurs fonctionnent si vous incluez des en-têtes MFC internes dans votre application.
 
-Vous pouvez également définir cette macro à l'aide de l'option de compilateur `/D`. Pour plus d'informations, consultez [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).
+Vous pouvez également définir cette macro à l'aide de l'option de compilateur `/D`. Pour plus d’informations, consultez [/D (Définitions de préprocesseur)](../build/reference/d-preprocessor-definitions.md).
 
 Pour plus d’informations sur les significations de ces macros, consultez [Utilisation des en-têtes Windows](/windows/win32/WinProg/using-the-windows-headers).
 

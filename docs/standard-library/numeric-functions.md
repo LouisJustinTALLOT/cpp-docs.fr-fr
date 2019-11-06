@@ -1,12 +1,21 @@
 ---
 title: '&lt;numeric&gt;, fonctions'
-ms.date: 11/04/2016
+description: Décrit les modèles de fonction fournis par l’en-tête de&gt;C++ numérique &lt;dans la bibliothèque standard.
+ms.date: 10/30/2019
 f1_keywords:
 - numeric/std::accumulate
 - numeric/std::adjacent_difference
+- numeric/std::exclusive_scan
+- numeric/std::gcd
+- numeric/std::inclusive_scan
 - numeric/std::inner_product
 - numeric/std::iota
+- numeric/std::lcm
 - numeric/std::partial_sum
+- numeric/std::reduce
+- numeric/std::transform_exclusive_scan
+- numeric/std::transform_inclusive_scan
+- numeric/std::transform_reduce
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
 helpviewer_keywords:
 - std::accumulate [C++]
@@ -22,52 +31,55 @@ helpviewer_keywords:
 - std::transform_exclusive_scan [C++]
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
-ms.openlocfilehash: ab1e2942cbcfe568dd4c280c059fe0768493794c
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889970"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627444"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt;, fonctions
 
 ## <a name="accumulate"></a>accumuler
 
-Calcule la somme de tous les éléments d’une plage spécifiée incluant une valeur initiale en calculant des sommes partielles successives, ou calcule le résultat des résultats partiels successifs obtenus de la même façon en utilisant une opération binaire spécifiée autre que la somme.
+Calcule la somme de tous les éléments d’une plage spécifiée, y compris une valeur initiale, en calculant des sommes partielles successives. Ou calcule le résultat des résultats partiels successifs d’une opération binaire spécifiée.
 
 ```cpp
 template <class InputIterator, class Type>
-Type accumulate(InputIterator first, InputIterator last, Type val);
+Type accumulate(
+    InputIterator first,
+    InputIterator last,
+    Type init);
 
 template <class InputIterator, class Type, class BinaryOperation>
 Type accumulate(
     InputIterator first,
     InputIterator last,
-    Type val,
+    Type init,
     BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *premier* \
-Itérateur d’entrée qui traite le premier élément de la plage qui doit être additionné ou combiné, selon l’opération binaire spécifiée.
+Itérateur d’entrée qui traite le premier élément de la plage à additionner ou à combiner à l’aide de *binary_op*.
 
 *dernier* \
-Itérateur d’entrée qui traite le dernier élément d’une plage qui doit être additionné ou combiné selon une opération binaire spécifiée et dont la position se trouve immédiatement après le dernier élément inclus dans l’accumulation itérée.
+Itérateur d’entrée qui traite le dernier élément de la plage pour additionner ou combiner à l’aide de *binary_op*, il s’agit d’une position au-delà de l’élément final réellement inclus dans l’accumulation itérée.
 
-\ *Val*
-Valeur initiale à laquelle chaque élément est à son tour ajouté ou combiné selon une opération binaire spécifiée.
+\ *init*
+Valeur initiale à laquelle chaque élément est ajouté à son tour ou combiné à l’aide de *binary_op*.
 
 *binary_op*\
-Opération binaire qui doit être appliquée à chaque élément dans la plage spécifiée et le résultat de ses applications précédentes.
+Opération binaire à appliquer à chaque élément de la plage spécifiée et au résultat de ses applications précédentes.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Somme de *Val* et de tous les éléments de la plage spécifiée pour la première fonction de modèle, ou pour la deuxième fonction de modèle, résultat de l’application de l’opération binaire spécifiée, au lieu de l’opération de somme, à (*PartialResult, \*ITER* ), où *PartialResult* est le résultat des applications précédentes de l’opération et `Iter` est un itérateur pointant vers un élément de la plage.
+La somme de *init* et de tous les éléments de la plage spécifiée pour la première fonction de modèle, ou, pour la deuxième fonction de modèle, le résultat de l’application de l’opération binaire *binary_op* au lieu de l’opération Sum, à (* PartialResult, *in_ ITER*), où *PartialResult* est le résultat des applications précédentes de l’opération et *in_iter* est un itérateur pointant vers l’élément suivant de la plage.
 
 ### <a name="remarks"></a>Notes
 
-La valeur initiale garantit qu’il y aura un résultat bien défini quand la plage est vide, auquel cas *Val* est retourné. Il n’est pas nécessaire que l’opération binaire soit associative ou commutative. Le résultat est initialisé à la valeur initiale *Val* , puis *result* = `binary_op` (*result*, <strong>\*</strong>`Iter`) est calculé de façon itérative dans la plage, où `Iter` est un itérateur pointant vers successivement élément de la plage. La plage doit être valide et la complexité est linéaire par rapport à la taille de la plage. Le type de retour de l’opérateur binaire doit être convertible en **Type** pour assurer la fermeture pendant l’itération.
+La valeur initiale garantit qu’il y a un résultat bien défini quand la plage est vide, auquel cas *init* est retourné. Il n’est pas nécessaire que l’opération binaire soit associative ou commutative. Le résultat est initialisé à la valeur initiale *init* , puis *result* = *binary_op*(*result*, *in_iter*) est calculé de façon itérative dans la plage, où *in_iter* est un itérateur pointant vers chaque élément successif dans la plage. La plage doit être valide et la complexité est linéaire avec la taille de la plage. Le type de retour de l’opérateur binaire doit être convertible en **Type** pour assurer la fermeture pendant l’itération.
 
 ### <a name="example"></a>Exemple
 
@@ -170,7 +182,7 @@ The vector of partial products is:
 
 ## <a name="adjacent_difference"></a>adjacent_difference
 
-Détermine les différences successives entre chaque élément et son prédécesseur au sein d'une plage d'entrée, puis génère les résultats dans une plage de destination ou calcule le résultat d'une procédure généralisée dans laquelle l'opération de différence est remplacée par une autre opération binaire spécifiée.
+Calcule les différences successives entre chaque élément et son prédécesseur dans une plage d’entrée. Génère les résultats dans une plage de destination. Ou calcule le résultat d’une procédure généralisée dans laquelle l’opération de différence est remplacée par une autre opération binaire spécifiée.
 
 ```cpp
 template <class InputIterator, class OutIterator>
@@ -205,6 +217,9 @@ ForwardIterator2 adjacent_difference(
 
 ### <a name="parameters"></a>Paramètres
 
+\ d' *exécution*
+Stratégie d’exécution.
+
 *premier* \
 Itérateur d'entrée qui traite le premier élément d'une plage d'entrée dont les éléments doivent être différenciés de leurs prédécesseurs respectifs, ou bien, dont la paire de valeurs doit être utilisée dans le cadre d'une opération par une opération binaire spécifiée.
 
@@ -215,7 +230,7 @@ Itérateur d'entrée qui traite le dernier élément d'une plage d'entrée dont 
 Itérateur de sortie qui traite le premier élément d'une plage de destination dans laquelle les différences ou les résultats de l'opération spécifiée doivent être enregistrés.
 
 *binary_op*\
-Opération binaire qui doit être appliquée dans l'opération généralisée par le remplacement de l'opération de soustraction de la procédure de différenciation.
+Opération binaire à appliquer dans l’opération généralisée, en remplaçant l’opération de soustraction dans la procédure de différenciation.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -225,11 +240,11 @@ Itérateur de sortie ciblant la fin de la plage de destination : `result` + (`l
 
 Le *résultat* de l’itérateur de sortie peut être le même que l’itérateur d’entrée en *premier*, afin que les valeurs `adjacent_difference` puissent être calculées sur place.
 
-Pour une séquence *de valeurs 1, a 2* *,* *a*3, dans une plage d’entrée, la première fonction de modèle stocke les valeurs de `partial_difference` successives 1, *a*2- *a*1, a3- *a*2, dans la *plage de destination*.
+Pour une séquence *de valeurs 1, a 2* *,* *a*3, dans une plage d’entrée, la première fonction de modèle stocke les valeurs de `adjacent_difference` successives 1, *a*2- *a*1, a3- *a*2, dans la *plage de destination*.
 
-Pour une séquence *de valeurs 1, a 2* *,* *a*3, dans une plage d’entrée, la deuxième fonction de modèle stocke les valeurs *de*`partial_difference` successives 1, *a* *2 `binary_op` 1*, *a*3 `binary_op` *a*2, dans la destination vont.
+Pour une séquence *de valeurs 1, a 2* *,* *a*3, dans une plage d’entrée, la deuxième fonction de modèle stocke les valeurs *de*`adjacent_difference` successives 1, *a*2 *binary_op* *1,* *a*3 *binary_op* *a*2, dans plage de destination.
 
-L’opération binaire `binary_op` ne doit pas être associative ou commutative, car l’ordre des opérations appliquées est spécifié.
+L’opération binaire *binary_op* ne doit pas être associative ou commutative, car l’ordre des opérations appliquées est spécifié.
 
 ### <a name="example"></a>Exemple
 
@@ -294,66 +309,160 @@ int main( )
 
 ## <a name="exclusive_scan"></a>exclusive_scan
 
+Calcule une opération de somme de préfixe exclusive à l’aide d' `std::plus<>()` ou d’un opérateur binaire spécifié sur une plage, en fonction d’une valeur initiale. Écrit les résultats dans la plage en commençant à la destination spécifiée. Une somme de *préfixe exclusive* signifie que le *n*ième élément d’entrée n’est pas inclus dans la *n*ième somme. Les surcharges qui incluent un argument de stratégie d’exécution s’exécutent conformément à la stratégie spécifiée.
+
 ```cpp
-template<class InputIterator, class OutputIterator, class T>
-OutputIterator exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init);
-template<class InputIterator, class OutputIterator, class T, class BinaryOperation>
-OutputIterator exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init, BinaryOperation binary_op);
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T>
-ForwardIterator2 exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init);
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation>
-ForwardIterator2 exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init, BinaryOperation binary_op);
+template<class InputIterator, class OutputIterator, class Type>
+OutputIterator exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init);
+
+template<class InputIterator, class OutputIterator, class Type, class BinaryOperation>
+OutputIterator exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init,
+    BinaryOperation binary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
+ForwardIterator2 exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation>
+ForwardIterator2 exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init,
+    BinaryOperation binary_op);
 ```
 
+### <a name="parameters"></a>Paramètres
+
+\ d' *exécution*
+Stratégie d’exécution.
+
+*premier* \
+Itérateur d’entrée qui traite le premier élément de la plage à additionner ou à combiner à l’aide de *binary_op*.
+
+*dernier* \
+Itérateur d’entrée qui traite le dernier élément de la plage pour additionner ou combiner à l’aide de *binary_op*, il s’agit d’une position au-delà de l’élément final réellement inclus dans l’accumulation itérée.
+
+\ de *résultats*
+Itérateur de sortie qui traite le premier élément d’une plage de destination où les séries de sommes ou les résultats de l’opération spécifiée doivent être stockés.
+
+\ *init*
+Valeur initiale à laquelle chaque élément est ajouté à son tour ou combiné à l’aide de *binary_op*.
+
+*binary_op*\
+Opération binaire à appliquer à chaque élément de la plage spécifiée et au résultat de ses applications précédentes.
+
+### <a name="return-value"></a>Valeur de retour
+
+Itérateur de sortie ciblant la fin de la plage de destination : *résultat* + (*dernier* - en *premier*).
+
 ## <a name="gcd"></a>GCD
+
+Calcule le plus grand commun diviseur des entiers m et n.
 
 ```cpp
 template <class M, class N>
 constexpr common_type_t<M,N> gcd(M m, N n);
 ```
 
+### <a name="parameters"></a>Paramètres
+
+*m*, *n*\
+Valeurs de type intégral.
+
+### <a name="return-value"></a>Valeur de retour
+
+Retourne le plus grand commun dénominateur des valeurs absolues de *m* et *n*, ou zéro si *m* et *n* sont nuls. Les résultats sont indéfinis si les valeurs absolues de *m* ou *n* ne peuvent pas être représentées en tant que valeurs de type `common_type_t<M,N>`.
+
 ## <a name="inclusive_scan"></a>inclusive_scan
+
+Calcule une opération de somme de préfixe inclusive à l’aide d' `std::plus<>()` ou d’un opérateur binaire spécifié sur une plage, en fonction d’une valeur initiale. Écrit les résultats dans la plage en commençant à la destination spécifiée. Une somme de *préfixes inclusive* signifie que le *n*ième élément d’entrée est inclus dans la *n*ième somme. Les surcharges qui incluent un argument de stratégie d’exécution s’exécutent conformément à la stratégie spécifiée.
 
 ```cpp
 template<class InputIterator, class OutputIterator>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result);
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result);
+
 template<class InputIterator, class OutputIterator, class BinaryOperation>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op);
-template<class InputIterator, class OutputIterator, class BinaryOperation, class T>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op, T init);
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation, class Type>
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    Type init);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result);
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
 class BinaryOperation>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op);
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class T>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op, T init);
+class BinaryOperation, class Type>
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    Type init);
 ```
+
+### <a name="parameters"></a>Paramètres
+
+\ d' *exécution*
+Stratégie d’exécution.
+
+*premier* \
+Itérateur d’entrée qui traite le premier élément de la plage à additionner ou à combiner à l’aide de *binary_op*.
+
+*dernier* \
+Itérateur d’entrée qui traite le dernier élément de la plage pour additionner ou combiner à l’aide de *binary_op*, il s’agit d’une position au-delà de l’élément final réellement inclus dans l’accumulation itérée.
+
+\ de *résultats*
+Itérateur de sortie qui traite le premier élément d’une plage de destination où les séries de sommes ou les résultats de l’opération spécifiée doivent être stockés.
+
+\ *init*
+Valeur initiale à laquelle chaque élément est ajouté à son tour ou combiné à l’aide de *binary_op*.
+
+*binary_op*\
+Opération binaire à appliquer à chaque élément de la plage spécifiée et au résultat de ses applications précédentes.
+
+### <a name="return-value"></a>Valeur de retour
+
+Itérateur de sortie ciblant la fin de la plage de destination : *résultat* + (*dernier* - en *premier*).
 
 ## <a name="inner_product"></a>inner_product
 
@@ -365,16 +474,16 @@ Type inner_product(
     InputIterator1   first1,
     InputIterator1   last1,
     InputIterator2   first2,
-    Type             val);
+    Type             init);
 
 template <class InputIterator1, class InputIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
 Type inner_product(
     InputIterator1   first1,
     InputIterator1   last1,
     InputIterator2   first2,
-    Type             val,
-    BinaryOperation1  binary_op1,
-    BinaryOperation2  binary_op2);
+    Type             init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -388,7 +497,7 @@ Itérateur d’entrée qui traite le dernier élément de la première plage don
 *first2* \
 Itérateur d’entrée qui traite le premier élément de la deuxième plage dont le produit interne ou le produit interne généralisé avec la première plage est à calculer.
 
-\ *Val*
+\ *init*
 Valeur initiale à laquelle ajouter le produit interne ou le produit interne généralisé entre les plages.
 
 *binary_op1*\
@@ -401,19 +510,19 @@ Opération binaire qui remplace l’opération de multiplication des éléments 
 
 La première fonction membre retourne la somme des produits d’éléments et y ajoute la valeur initiale spécifiée. Pour les plages de valeurs *a*i et *b*i, elle retourne :
 
-`val` + (*a*1 \* *b*1) + (*a*2 \* *b*2) +... + (*a*n \* *b*n)
+*init* + (*a*1 \* *b*1) + (*a*2 \* *b*2) +... + (*a*n \* *b*n)
 
-en remplaçant de manière itérative *Val* par `val` + (*a*i \* *b*i).
+en remplaçant de manière itérative *init* par *init* + (*a*i \* *b*i).
 
 La deuxième fonction membre retourne :
 
-`val` *binary_op1* (*a*1 *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
+*init* *binary_op1* (*a*1 *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
 
-en remplaçant de manière *itérative Val* par `val` *binary_op1* (*a*i *binary_op2* *b*).
+en remplaçant de manière itérative *init* par *init* *binary_op1* (*a*i *binary_op2* *b*).
 
 ### <a name="remarks"></a>Notes
 
-La valeur initiale garantit qu’il y aura un résultat bien défini quand la plage est vide, auquel cas *Val* est retourné. Les opérations binaires n’ont pas besoin d’être associatives ou commutates. La plage doit être valide et la complexité est linéaire par rapport à la taille de la plage. Le type de retour de l’opérateur binaire doit être convertible en **Type** pour assurer la fermeture pendant l’itération.
+La valeur initiale garantit qu’il y a un résultat bien défini quand la plage est vide. Dans ce cas, *init* est retourné. Les opérations binaires n’ont pas besoin d’être associatives ou commutates. La plage doit être valide et la complexité est linéaire avec la taille de la plage. Le type de retour de l’opérateur binaire doit être convertible en **Type** pour assurer la fermeture pendant l’itération.
 
 ### <a name="example"></a>Exemple
 
@@ -507,7 +616,7 @@ int main()
 
 ## <a name="iota"></a>culbut
 
-Stocke une valeur de départ, en commençant par le premier élément et en remplissant les incréments successifs de cette valeur (` value++`) dans chacun des éléments de l’intervalle `[first,  last)`.
+Stocke une valeur de départ, en commençant par le premier élément et en remplissant les incréments successifs de cette valeur (`value++`) dans chacun des éléments de l’intervalle `[first,  last)`.
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -576,7 +685,7 @@ constexpr common_type_t<M,N> lcm(M m, N n);
 
 ## <a name="partial_sum"></a>partial_sum
 
-Calcule une série de sommes dans une plage d’entrée à partir du premier élément jusqu’à l’élément numéro *i*, puis stocke le résultat de chaque somme dans l’élément numéro *i* d’une plage de destination, ou calcule le résultat d’une procédure généralisée où l’opération de somme est remplacée par une autre opération binaire spécifiée.
+Calcule une série de sommes dans une plage d’entrée à partir du premier élément dans le *n*ième élément et stocke le résultat de chaque somme dans le *n*ième élément d’une plage de destination. Ou calcule le résultat d’une procédure généralisée où l’opération Sum est remplacée par une autre opération binaire spécifiée.
 
 ```cpp
 template <class InputIterator, class OutIt>
@@ -602,24 +711,24 @@ Itérateur d'entrée qui traite le premier élément de la plage qui doit être 
 Itérateur d'entrée qui traite le dernier élément d'une plage qui doit être partiellement additionné ou combiné selon une opération binaire spécifiée, et dont la position se trouve immédiatement après le dernier élément inclus dans l'accumulation itérée.
 
 \ de *résultats*
-Itérateur de sortie qui traite le premier élément d'une plage de destination dans laquelle les sommes partielles ou les résultats de l'opération spécifiée doivent être enregistrés.
+Itérateur de sortie qui traite le premier élément d’une plage de destination pour stocker la série de sommes partielles ou les résultats successifs de l’opération binaire spécifiée.
 
 *binary_op*\
-Opération binaire qui doit être appliquée dans l'opération généralisée par le remplacement de l'opération de somme de la procédure de somme partielle.
+Opération binaire à appliquer dans l’opération généralisée, en remplaçant l’opération de Sum dans la procédure de somme partielle.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un itérateur de sortie qui traite la fin de la plage de destination : `result` + (`last` - `first`).
+Itérateur de sortie ciblant la fin de la plage de destination : *résultat* + (*dernier* - en *premier*).
 
 ### <a name="remarks"></a>Notes
 
 Le *résultat* de l’itérateur de sortie peut être le même que l’itérateur d’entrée en *premier*, afin que les sommes partielles puissent être calculées sur place.
 
-Pour une séquence *de valeurs 1, a 2* *,* *a*3, dans une plage d’entrée, la première fonction de modèle stocke des sommes partielles successives dans la plage de destination, où l’élément *i*est fourni par (((*a*1 + *a*2) + *a*3) *a* i).
+Pour *une séquence de valeurs 1*, *a*2,... *un*x, dans une plage d’entrée, la première fonction de modèle stocke des sommes partielles successives dans la plage de destination. Le *n*ième élément est fourni par (*a*1 + *a*2 + *a*3 +... + *a*n).
 
-Pour une séquence *de valeurs 1, a 2* *,* *a*3, dans une plage d’entrée, la deuxième fonction de modèle stocke des sommes partielles successives dans la plage de destination, où le ième élément est donné par (((*a* *1 `binary_op` 2*) `binary_op` *a* 3) *a*i).
+Pour une séquence *de valeurs 1, a 2* *,* *a*3, dans une plage d’entrée, la deuxième fonction de modèle stocke des résultats partiels successifs dans la plage de destination. Le *n*ième élément est fourni par ((... ((*a*1 *binary_op* *a*2) *binary_op* *a*3) *binary_op* ...) *binary_op* *a*n).
 
-L’opération binaire *binary_op* ne doit pas être associative ou commutative, car l’ordre des opérations s’applique est spécifié.
+L’opération binaire *binary_op* ne doit pas être associative ou commutative, car l’ordre des opérations appliquées est spécifié.
 
 ### <a name="example"></a>Exemple
 
@@ -683,123 +792,276 @@ int main( )
 
 ## <a name="reduce"></a>abaisse
 
+Réduit tous les éléments d’une plage spécifiée, y compris éventuellement une valeur initiale, en calculant des sommes dans un ordre arbitraire et éventuellement permuté. Ou réduit en calculant les résultats d’une opération binaire spécifiée. Les surcharges qui incluent un argument de stratégie d’exécution s’exécutent conformément à la stratégie spécifiée.
+
 ```cpp
 template<class InputIterator>
-typename iterator_traits<InputIterator>::value_type
-reduce(InputIterator first, InputIterator last);
-template<class InputIterator, class T>
-T reduce(InputIterator first, InputIterator last, T init);
-template<class InputIterator, class T, class BinaryOperation>
-T reduce(InputIterator first, InputIterator last, T init,
-BinaryOperation binary_op);
+typename iterator_traits<InputIterator>::value_type reduce(
+    InputIterator first,
+    InputIterator last);
+
+template<class InputIterator, class Type>
+Type reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init);
+
+template<class InputIterator, class Type, class BinaryOperation>
+Type reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init,
+    BinaryOperation binary_op);
+
 template<class ExecutionPolicy, class ForwardIterator>
-typename iterator_traits<ForwardIterator>::value_type
-reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last);
-template<class ExecutionPolicy, class ForwardIterator, class T>
-T reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last, T init);
-template<class ExecutionPolicy, class ForwardIterator, class T, class BinaryOperation>
-T reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last, T init,
-BinaryOperation binary_op);
+typename iterator_traits<ForwardIterator>::value_type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type>
+Type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type, class BinaryOperation>
+Type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init,
+    BinaryOperation binary_op);
 ```
+
+### <a name="parameters"></a>Paramètres
+
+\ d' *exécution*
+Stratégie d’exécution.
+
+*premier* \
+Itérateur d’entrée qui traite le premier élément de la plage à additionner ou à combiner à l’aide de *binary_op*.
+
+*dernier* \
+Itérateur d’entrée qui traite le dernier élément de la plage pour additionner ou combiner à l’aide de *binary_op*, il s’agit d’une position au-delà de l’élément final réellement inclus dans l’accumulation itérée.
+
+\ de *résultats*
+Itérateur de sortie qui traite le premier élément d’une plage de destination où les séries de sommes ou les résultats de l’opération spécifiée doivent être stockés.
+
+\ *init*
+Valeur initiale à laquelle chaque élément est ajouté à son tour ou combiné à l’aide de *binary_op*.
+
+*binary_op*\
+Opération binaire à appliquer à chaque élément de la plage spécifiée et au résultat de ses applications précédentes.
+
+### <a name="return-value"></a>Valeur de retour
+
+Résultat de l’application de *binary_op* ou `std::plus<>()` à *init* et de tous les éléments de la plage spécifiée à (* PartialResult, *in_iter*), où *PartialResult* est le résultat des applications précédentes de l’opération, et *in_iter* est un itérateur pointant sur un élément de la plage. Dans les surcharges qui ne spécifient pas *init*, la valeur *init* utilisée équivaut à `typename iterator_traits<InputIterator>::value_type{}`.
+
+### <a name="remarks"></a>Notes
+
+`reduce` comportement n’est pas déterministe, sauf si *binary_op* est associatif et mutate. Le comportement n’est pas défini si *binary_op* modifie tout élément, ou invalide tout itérateur dans l’intervalle \[*premier*, *dernier*] inclus.
 
 ## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
 
+Transforme les éléments d’une plage avec un opérateur unaire spécifié, puis calcule une opération de somme de préfixe exclusive à l’aide d' `std::plus<>()` ou d’un opérateur binaire spécifié sur la plage, en fonction d’une valeur initiale. Écrit les résultats dans la plage en commençant à la destination spécifiée. Une somme de *préfixe exclusive* signifie que le *n*ième élément d’entrée n’est pas inclus dans la *n*ième somme. Les surcharges qui incluent un argument de stratégie d’exécution s’exécutent conformément à la stratégie spécifiée. La somme peut être effectuée dans un ordre arbitraire.
+
 ```cpp
-template<class InputIterator, class OutputIterator, class T,
-class BinaryOperation, class UnaryOperation>
-OutputIterator transform_exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation, class UnaryOperation>
-ForwardIterator2 transform_exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
+template<class InputIterator, class OutputIterator, class Type, class BinaryOperation, class UnaryOperation>
+OutputIterator transform_exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
 ```
+
+### <a name="parameters"></a>Paramètres
+
+\ d' *exécution*
+Stratégie d’exécution.
+
+*premier* \
+Itérateur d’entrée qui traite le premier élément de la plage à additionner ou à combiner à l’aide de *binary_op*.
+
+*dernier* \
+Itérateur d’entrée qui traite le dernier élément de la plage pour additionner ou combiner à l’aide de *binary_op*, il s’agit d’une position au-delà de l’élément final réellement inclus dans l’accumulation itérée.
+
+\ de *résultats*
+Itérateur de sortie qui traite le premier élément d’une plage de destination où les séries de sommes ou les résultats de l’opération spécifiée doivent être stockés.
+
+\ *init*
+Valeur initiale à laquelle chaque élément est ajouté à son tour ou combiné à l’aide de *binary_op*.
+
+*binary_op*\
+Opération binaire à appliquer à chaque élément de la plage spécifiée et au résultat de ses applications précédentes.
+
+*unary_op*\
+Opération unaire à appliquer à chaque élément de la plage spécifiée.
 
 ## <a name="transform_inclusive_scan"></a>transform_inclusive_scan
 
+Transforme les éléments d’une plage avec un opérateur unaire spécifié, puis calcule une opération de somme de préfixe inclusive à l’aide d' `std::plus<>()` ou d’un opérateur binaire spécifié sur la plage, en fonction d’une valeur initiale. Écrit les résultats dans la plage en commençant à la destination spécifiée. Une somme de *préfixes inclusive* signifie que le *n*ième élément d’entrée est inclus dans la *n*ième somme. Les surcharges qui incluent un argument de stratégie d’exécution s’exécutent conformément à la stratégie spécifiée. La somme peut être effectuée dans un ordre arbitraire.
+
 ```cpp
-template<class InputIterator, class OutputIterator,
-class BinaryOperation, class UnaryOperation>
-OutputIterator transform_inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class InputIterator, class OutputIterator,
-class BinaryOperation, class UnaryOperation, class T>
-OutputIterator transform_inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op,
-UnaryOperation unary_op,
-T init);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class UnaryOperation>
-ForwardIterator2 transform_inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class UnaryOperation, class T>
-ForwardIterator2 transform_inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op,
-UnaryOperation unary_op,
-T init);
+template<class InputIterator, class OutputIterator, class BinaryOperation, class UnaryOperation>
+OutputIterator transform_inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation, class UnaryOperation, class Type>
+OutputIterator transform_inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryOperation, class UnaryOperation, class Type>
+ForwardIterator2 transform_inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op,
+    Type init);
 ```
+
+### <a name="parameters"></a>Paramètres
+
+\ d' *exécution*
+Stratégie d’exécution.
+
+*premier* \
+Itérateur d’entrée qui traite le premier élément de la plage à additionner ou à combiner à l’aide de *binary_op*.
+
+*dernier* \
+Itérateur d’entrée qui traite le dernier élément de la plage pour additionner ou combiner à l’aide de *binary_op*, il s’agit d’une position au-delà de l’élément final réellement inclus dans l’accumulation itérée.
+
+\ de *résultats*
+Itérateur de sortie qui traite le premier élément d’une plage de destination où les séries de sommes ou les résultats de l’opération spécifiée doivent être stockés.
+
+*binary_op*\
+Opération binaire à appliquer à chaque élément de la plage spécifiée et au résultat de ses applications précédentes.
+
+*unary_op*\
+Opération unaire à appliquer à chaque élément de la plage spécifiée.
+
+\ *init*
+Valeur initiale à laquelle chaque élément est ajouté à son tour ou combiné à l’aide de *binary_op*.
 
 ## <a name="transform_reduce"></a>transform_reduce
 
+Transforme une plage d’éléments, puis applique un functor qui réduit les éléments transformés dans l’ordre arbitraire. En effet, une `transform` suivie d’une `reduce`.
+
 ```cpp
-template<class InputIterator1, class InputIterator2, class T>
-T transform_reduce(InputIterator1 first1, InputIterator1 last1,
-InputIterator2 first2,
-T init);
-template<class InputIterator1, class InputIterator2, class T,
-class BinaryOperation1, class BinaryOperation2>
-T transform_reduce(InputIterator1 first1, InputIterator1 last1,
-InputIterator2 first2,
-T init,
-BinaryOperation1 binary_op1,
-BinaryOperation2 binary_op2);
-template<class InputIterator, class T,
-class BinaryOperation, class UnaryOperation>
-T transform_reduce(InputIterator first, InputIterator last,
-T init,
-BinaryOperation binary_op, UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator1 first1, ForwardIterator1 last1,
-ForwardIterator2 first2,
-T init);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation1, class BinaryOperation2>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator1 first1, ForwardIterator1 last1,
-ForwardIterator2 first2,
-T init,
-BinaryOperation1 binary_op1,
-BinaryOperation2 binary_op2);
-template<class ExecutionPolicy,
-class ForwardIterator, class T,
-class BinaryOperation, class UnaryOperation>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last,
-T init,
-BinaryOperation binary_op, UnaryOperation unary_op);
+template<class InputIterator1, class InputIterator2, class Type>
+Type transform_reduce(
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    Type init);
+
+template<class InputIterator1, class InputIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
+Type transform_reduce(
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    Type init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
+
+template<class InputIterator, class Type, class BinaryOperation, class UnaryOperation>
+Type transform_reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    Type init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type, class BinaryOperation, class UnaryOperation>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
 ```
+
+### <a name="parameters"></a>Paramètres
+
+\ d' *exécution*
+Stratégie d’exécution.
+
+*premier* \
+Itérateur d’entrée qui traite le premier élément de la plage à additionner ou à combiner à l’aide de *binary_op*.
+
+*first1* \
+Itérateur d’entrée qui traite le premier élément de la plage à additionner ou à combiner à l’aide de *binary_op1*.
+
+*dernier* \
+Itérateur d’entrée qui traite le dernier élément de la plage pour additionner ou combiner à l’aide de *binary_op*, il s’agit d’une position au-delà de l’élément final réellement inclus dans l’accumulation itérée.
+
+*last1* \
+Itérateur d’entrée qui traite le dernier élément de la plage pour additionner ou combiner à l’aide de *binary_op1*, il s’agit d’une position au-delà de l’élément final réellement inclus dans l’accumulation itérée.
+
+\ de *résultats*
+Itérateur de sortie qui traite le premier élément d’une plage de destination où les séries de sommes ou les résultats de l’opération spécifiée doivent être stockés.
+
+\ *init*
+Valeur initiale à laquelle chaque élément est ajouté à son tour ou combiné à l’aide de *binary_op*.
+
+*binary_op*\
+Opération binaire à appliquer à chaque élément de la plage spécifiée et au résultat de ses applications précédentes.
+
+*unary_op*\
+Opération unaire à appliquer à chaque élément de la plage spécifiée.
+
+### <a name="return-value"></a>Valeur de retour
+
+Résultat réduit, puis réduit.

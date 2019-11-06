@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: d983ee4219985c7b213812a69f6f83f49dbf389b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a6329319be5d002c8f0a35ceb0258cb9081923f7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942002"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624411"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -144,17 +144,17 @@ Pointeur désignant la valeur de temps stockée.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro si l’opération réussit. En cas d’échec en raison d’un paramètre non valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, un code d’erreur est retourné. Les codes d’erreur sont définis dans ERRNO.H ; pour obtenir la liste de ces erreurs, consultez [errno](../../c-runtime-library/errno-constants.md). Les codes d’erreur levés pour chaque condition d’erreur sont répertoriés dans le tableau suivant.
+Zéro si l’opération aboutit. En cas d’échec en raison d’un paramètre non valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, un code d’erreur est retourné. Les codes d’erreur sont définis dans ERRNO.H ; pour obtenir la liste de ces erreurs, consultez [errno](../../c-runtime-library/errno-constants.md). Les codes d’erreur levés pour chaque condition d’erreur sont répertoriés dans le tableau suivant.
 
 ## <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*numberOfElements*|*sourceTime*|Renvoie|Valeur dans la *mémoire tampon*|
+|*buffer*|*numberOfElements*|*sourceTime*|Return|Valeur dans la *mémoire tampon*|
 |--------------|------------------------|------------|------------|-----------------------|
-|**NULL**|any|any|**EINVAL**|Non modifiée|
-|not **null** (pointe vers une mémoire valide)|0|any|**EINVAL**|Non modifiée|
-|Non **null**|0 < taille < 26|any|**EINVAL**|Chaîne vide|
-|Non **null**|>= 26|NULL|**EINVAL**|Chaîne vide|
-|Non **null**|>= 26|< 0|**EINVAL**|Chaîne vide|
+|**NULL**|indifférent|indifférent|**EINVAL**|Non modifié|
+|Not **null** (pointe vers une mémoire valide)|0|indifférent|**EINVAL**|Non modifié|
+|non **null**|0 < taille < 26|indifférent|**EINVAL**|Chaîne vide|
+|non **null**|>= 26|NULL|**EINVAL**|Chaîne vide|
+|non **null**|>= 26|< 0|**EINVAL**|Chaîne vide|
 
 ## <a name="remarks"></a>Notes
 
@@ -170,7 +170,9 @@ La chaîne de caractères convertie est également ajustée en fonction des para
 
 **ctime_s** est une fonction inline qui prend la valeur **_ctime64_s** et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t**32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. **Ctime_s** sera alors évalué à **_ctime32_s**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
 
-En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; celles-ci peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
+
+Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -180,20 +182,20 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 |**_tctime32_s**|**_ctime32_s**|**_ctime32_s**|**_wctime32_s**|
 |**_tctime64_s**|**_ctime64_s**|**_ctime64_s**|**_wctime64_s**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time.h>|
 |**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<time.h> ou \<wchar.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_wctime_s.c

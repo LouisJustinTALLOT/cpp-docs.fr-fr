@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4867
 ms.assetid: 8a257d70-c3a7-462d-b285-e57c952a8bf7
-ms.openlocfilehash: 0fd5de46f713aed08508f8755c9e54c3ff46366b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e093d262bc26cf0acfbb181d621fffc1aa391ee9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447207"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626588"
 ---
 # <a name="compiler-warning-c4867"></a>Avertissement du compilateur C4867
 
-'fonction' : appel de fonction manquant de liste d’arguments ; Utilisez 'appel' pour créer un pointeur vers membre
+'fonction' : liste d’arguments manquante dans l’appel de fonction ; Utilisez’Call’pour créer un pointeur vers un membre
 
-Un pointeur vers la fonction membre a été initialisé correctement.
+Un pointeur vers une fonction membre a été initialisé de manière incorrecte.
 
-Cet avertissement peut être due à la mise en conformité du compilateur pour Visual Studio 2005 : conformité pointeur vers membre améliorée.  Le code compilé avant Visual Studio 2005 génère désormais C4867.
+Cet avertissement peut être généré à la suite du travail de conformité du compilateur pour Visual Studio 2005 : conformité de pointeur vers membre améliorée.  Le code compilé avant Visual Studio 2005 génère désormais C4867.
 
-Cet avertissement est toujours émis en tant qu’erreur. Pour désactiver cet avertissement, utilisez le pragma [warning](../../preprocessor/warning.md) . Pour plus d’informations sur l’erreur C4867 et MFC/ATL, consultez [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).
+Cet avertissement est toujours émis en tant qu’erreur. Pour désactiver cet avertissement, utilisez le pragma [warning](../../preprocessor/warning.md) . Pour plus d’informations sur C4867 et MFC/ATL, consultez [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4867.
+L’exemple suivant génère l’C4867.
 
-```
+```cpp
 // C4867.cpp
 // compile with: /c
 class A {

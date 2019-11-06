@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4052
 ms.assetid: f9955421-16ab-46e5-8f9d-bf1639a519ef
-ms.openlocfilehash: c7d2a603b7ec97889b075c7a67e5b8439ad487af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 848db5df19908150d9f869bf2995ed69c24a1ec0
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388642"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626968"
 ---
 # <a name="compiler-warning-level-1-c4052"></a>Avertissement du compilateur (niveau 1) C4052
 
@@ -21,7 +21,7 @@ L’une des déclarations de la fonction ne contient pas d’arguments de variab
 
 L’exemple suivant génère l’avertissement C4052 :
 
-```
+```c
 // C4052.c
 // compile with: /W4 /c
 int f();

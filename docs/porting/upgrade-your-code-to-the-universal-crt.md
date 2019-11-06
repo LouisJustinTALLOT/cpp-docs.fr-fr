@@ -2,12 +2,12 @@
 title: Mettre à niveau votre code vers le CRT universel
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 0554ff713b499f99e7e7508faf687c1635e6d912
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448993"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627172"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Mettre à niveau votre code vers le CRT universel
 
@@ -35,7 +35,7 @@ Quand vous mettez à jour vos projets Visual Studio C++, si vous avez affecté �
 
 L’UCRT étant à présent un composant du système d’exploitation Microsoft Windows, il est inclus dans le cadre du système d’exploitation dans Windows 10 et est disponible par le biais de Windows Update pour les anciens systèmes d’exploitation allant de Windows Vista à Windows 8.1. Une version redistribuable est disponible pour Windows XP. En tant que composant du système d’exploitation, les mises à jour et maintenance de l’UCRT sont gérées par Windows Update indépendamment des versions du compilateur de Microsoft C++ et de Visual Studio. L’UCRT étant un composant Windows, nous vous recommandons vivement de déployer l’UCRT pour votre application de manière centralisée ; la sécurité s’en trouvera améliorée, les mises à jour simplifiées et la taille d’image réduite.
 
-Vous pouvez utiliser l’UCRT sur n’importe quelle version de Windows prise en charge par Visual Studio 2015 ou Visual Studio 2017. Vous pouvez la redistribuer à l’aide d’un package vcredist pour les versions prises en charge de Windows distinctes de Windows 10. Les packages vcredist incluent les composants UCRT et les installent automatiquement sur les systèmes d’exploitation Windows qui en sont dépourvus par défaut. Pour plus d’informations, consultez [Redistribution des fichiers Visual C++](../windows/redistributing-visual-cpp-files.md).
+Vous pouvez utiliser l’UCRT sur n’importe quelle version de Windows prise en charge par Visual Studio 2015 ou Visual Studio 2017. Vous pouvez la redistribuer à l’aide d’un package vcredist pour les versions prises en charge de Windows distinctes de Windows 10. Les packages vcredist incluent les composants UCRT et les installent automatiquement sur les systèmes d’exploitation Windows qui en sont dépourvus par défaut. Pour plus d'informations, consultez [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md).
 
 Le déploiement local de l’application de l’UCRT est pris en charge, bien que non recommandé pour des raisons de performances et de sécurité. Les DLL pour un déploiement local de l’application sont incluses dans le cadre du SDK Windows, dans le sous-répertoire **redist**. Les DLL requises incluent ucrtbase.dll et un jeu de DLL de type **redirecteur APISet** nommé -ms-win-_sous-ensemble_.dll. Comme le jeu de DLL requis varie d’un système d’exploitation à l’autre, nous vous recommandons d’inclure toutes les DLL quand vous utilisez le déploiement local de l’application. Pour plus de détails et mises en garde concernant le déploiement local de l’application, consultez [Déploiement dans Visual C++](../windows/deployment-in-visual-cpp.md).
 
@@ -47,6 +47,6 @@ De nombreuses fonctions ont été ajoutées ou mises à jour dans l’UCRT pour 
 
 [Guide du portage et de la mise à niveau de Visual C++](visual-cpp-porting-and-upgrading-guide.md)<br/>
 [Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
-[Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Mise à niveau de projets à partir de versions antérieures de VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md)<br/>
 [Améliorations de la conformité de C++ dans Visual Studio](../overview/cpp-conformance-improvements.md)

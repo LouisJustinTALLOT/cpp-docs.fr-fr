@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 196a3aac09db790da6b8137029383cca77c3d2ad
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ccfde34d12dadb76bc8b4058a3f9b52c3d1f4bc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947278"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626151"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -171,10 +171,10 @@ Zéro en cas de réussite, **STRUNCATE** si la troncation s’est produite, sino
 
 |*strDest*|*numberOfElements*|*strSource*|Valeur de retour|Contenu de *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**NULL**|any|any|**EINVAL**|non modifié|
-|any|any|**NULL**|**EINVAL**|*strDest* [0] a la valeur 0|
-|any|0|any|**EINVAL**|non modifié|
-|Non **null**|trop petit|any|**ERANGE**|*strDest* [0] a la valeur 0|
+|**NULL**|indifférent|indifférent|**EINVAL**|non modifié|
+|indifférent|indifférent|**NULL**|**EINVAL**|*strDest*[0] a la valeur 0|
+|indifférent|0|indifférent|**EINVAL**|non modifié|
+|non **null**|trop petit|indifférent|**ERANGE**|*strDest*[0] a la valeur 0|
 
 ## <a name="remarks"></a>Notes
 
@@ -182,7 +182,7 @@ Ces fonctions essaient de copier les premiers caractères *d* de *strSource* dan
 
 Il existe une exception au paragraphe ci-dessus. Si le *nombre* est **_TRUNCATE**, la quantité de *strSource* telle qu’elle sera contenue dans *strDest* est copiée tout en laissant de l’espace pour la valeur null de fin qui est toujours ajoutée.
 
-Par exemple,
+Par exemple :
 
 ```C
 char dst[5];
@@ -206,11 +206,11 @@ Si *strDest* ou *StrSource* a la **valeur null**, ou *NumberOfElements* est éga
 
 **wcsncpy_s** et **_mbsncpy_s** sont des versions à caractères larges et à caractères multioctets de **strncpy_s**. Les arguments et la valeur de retour de **wcsncpy_s** et **mbsncpy_s** varient en conséquence. Sinon, ces six fonctions se comportent à l'identique.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d'informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -222,7 +222,7 @@ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 
 > [!NOTE]
 > **_strncpy_s_l**, **_wcsncpy_s_l** et **_mbsncpy_s_l** n’ont aucune dépendance des paramètres régionaux et sont fournis uniquement pour **_tcsncpy_s_l** et ne sont pas destinés à être appelés directement.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -230,7 +230,7 @@ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 
 |**wcsncpy_s**, **_wcsncpy_s_l**|\<string.h> ou \<wchar.h>|
 |**_mbsncpy_s**, **_mbsncpy_s_l**|\<mbstring.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

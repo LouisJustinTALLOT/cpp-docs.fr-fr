@@ -1,17 +1,18 @@
 ---
 title: 'Procédure pas à pas : création d’une applicationC++de bureau Windows traditionnelle ()'
+description: Comment créer une application de bureau Windows minimale et traditionnelle à l’aide de C++Visual Studio, et de l’API Win32
 ms.custom: get-started-article
-ms.date: 10/21/2019
+ms.date: 11/03/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 080c4cd9612058a0a54f19e5d0f4b8add4a03bce
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 6f219a0c199971b563b1c0ff291f2f5d12803023
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778550"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627479"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procédure pas à pas : création d’une applicationC++de bureau Windows traditionnelle ()
 
@@ -76,9 +77,7 @@ Votre projet est maintenant créé et votre fichier source s’ouvre dans l’é
 
    ![Nommer le projet DesktopApp](../build/media/desktop-app-new-project-name-153.png "Nommer le projet DesktopApp")
 
-1. Dans la boîte de dialogue **projet de bureau Windows** , sous **type d’application**, sélectionnez **application Windows (. exe)** . Sous **Options supplémentaires**, sélectionnez **Projet vide**. Choisissez **OK** pour créer le projet.
-
-   ![Assistant créer un DesktopApp dans un projet de bureau Windows](../build/media/desktop-app-new-project-wizard-153.png "Assistant créer un DesktopApp dans un projet de bureau Windows")
+1. Dans la boîte de dialogue **projet de bureau Windows** , sous **type d’application**, sélectionnez **application Windows (. exe)** . Sous **Options supplémentaires**, sélectionnez **Projet vide**. Assurez-vous que l' **en-tête précompilé** n’est pas sélectionné. Choisissez **OK** pour créer le projet.
 
 1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet **DesktopApp** , choisissez **Ajouter**, puis **nouvel élément**.
 
@@ -108,9 +107,7 @@ Votre projet est maintenant créé et votre fichier source s’ouvre dans l’é
 
    ![Vue d’ensemble de l’assistant créer un DesktopApp dans l’application Win32](../build/media/desktop-app-win32-wizard-overview-150.png "Vue d’ensemble de l’assistant créer un DesktopApp dans l’application Win32")
 
-1. Sur la page Paramètres de l' **application** , sous **type d’application**, sélectionnez **application Windows**. Sous **Options supplémentaires**, sélectionnez **Projet vide**. Choisissez **Terminer** pour créer le projet.
-
-   ![Paramètres de l’assistant créer un DesktopApp dans l’application Win32](../build/media/desktop-app-win32-wizard-settings-150.png "Paramètres de l’assistant créer un DesktopApp dans l’application Win32")
+1. Sur la page Paramètres de l' **application** , sous **type d’application**, sélectionnez **application Windows**. Sous **options supplémentaires**, désactivez l’option **en-tête précompilé**, puis sélectionnez **projet vide**. Choisissez **Terminer** pour créer le projet.
 
 1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet DesktopApp, choisissez **Ajouter**, puis **nouvel élément**.
 
@@ -144,9 +141,9 @@ Ensuite, vous apprendrez à créer le code d’une application de bureau Windows
    Pour plus d’informations sur les paramètres et la valeur de retour de cette fonction, consultez [point d’entrée WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Quels sont les mots supplémentaires, tels que `CALLBACK` ou `HINSTANCE` ou `_In_` ? L’API Windows traditionnelle utilise les typedefs et les macros de préprocesseur pour résumer les détails des types et du code spécifique à la plateforme, comme les conventions d’appel, les déclarations **_ _ declspec** et les pragmas de compilateur. Dans Visual Studio, vous pouvez utiliser la fonctionnalité [Info Express](/visualstudio/ide/using-intellisense#quick-info) IntelliSense pour voir ce que les typedefs et les macros définissent. Pointez votre souris sur le mot qui vous intéresse, ou sélectionnez-le et appuyez sur **ctrl** +**K**, **CTRL** +**I** pour une petite fenêtre contextuelle contenant la définition. Pour plus d’informations, consultez [Utilisation d’IntelliSense](/visualstudio/ide/using-intellisense). Les paramètres et les types de retour utilisent souvent des *Annotations SAL* pour vous aider à intercepter les erreurs de programmation. Pour plus d’informations, consultez [utilisation d’annotations SAL pourC++ réduire les défauts C/code](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Quels sont les mots supplémentaires, tels que `CALLBACK`ou `HINSTANCE`ou `_In_`? L’API Windows traditionnelle utilise les typedefs et les macros de préprocesseur pour résumer les détails des types et du code spécifique à la plateforme, comme les conventions d’appel, les déclarations **_ _ declspec** et les pragmas de compilateur. Dans Visual Studio, vous pouvez utiliser la fonctionnalité [Info Express](/visualstudio/ide/using-intellisense#quick-info) IntelliSense pour voir ce que les typedefs et les macros définissent. Pointez votre souris sur le mot qui vous intéresse, ou sélectionnez-le et appuyez sur **ctrl** +**K**, **CTRL** +**I** pour une petite fenêtre contextuelle contenant la définition. Pour plus d’informations, consultez [Utilisation d’IntelliSense](/visualstudio/ide/using-intellisense). Les paramètres et les types de retour utilisent souvent des *Annotations SAL* pour vous aider à intercepter les erreurs de programmation. Pour plus d’informations, consultez [utilisation d’annotations SAL pourC++ réduire les défauts C/code](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-1. Les programmes de bureau Windows requièrent &lt;windows. h >. &lt;tchar. h > définit la macro `TCHAR`, qui correspond finalement à **wchar_t** si le symbole Unicode est défini dans votre projet, sinon elle est résolue en **char**.  Si vous générez toujours avec UNICODE activé, vous n’avez pas besoin de TCHAR et pouvez simplement utiliser **wchar_t** directement.
+1. Les programmes de bureau Windows requièrent &lt;windows. h >. &lt;Tchar. h > définit la macro `TCHAR`, qui correspond finalement à **wchar_t** si le symbole Unicode est défini dans votre projet, sinon elle est résolue en **char**.  Si vous générez toujours avec UNICODE activé, vous n’avez pas besoin de TCHAR et pouvez simplement utiliser **wchar_t** directement.
 
    ```cpp
    #include <windows.h>

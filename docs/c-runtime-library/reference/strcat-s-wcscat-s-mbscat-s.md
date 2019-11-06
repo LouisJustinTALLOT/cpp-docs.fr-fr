@@ -38,12 +38,12 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 4449ec788b33a541a04a46d972f56f792797a16e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b0f2d1a295908ba2f0c8a89f57e81d6f822f3535
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957993"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625792"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
@@ -121,9 +121,9 @@ Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 
 |*strDestination*|*numberOfElements*|*strSource*|Valeur de retour|Contenu de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null** ou inachevé|any|any|**EINVAL**|non modifié|
-|any|any|**NULL**|**EINVAL**|*strDestination* [0] a la valeur 0|
-|any|0 ou trop petit|any|**ERANGE**|*strDestination* [0] a la valeur 0|
+|**Null** ou inachevé|indifférent|indifférent|**EINVAL**|non modifié|
+|indifférent|indifférent|**NULL**|**EINVAL**|*strDestination*[0] a la valeur 0|
+|indifférent|0 ou trop petit|indifférent|**ERANGE**|*strDestination*[0] a la valeur 0|
 
 ## <a name="remarks"></a>Notes
 
@@ -142,11 +142,11 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 
 Si *strDestination* est un pointeur null, si n’est pas terminé par le caractère null, si *strSource* est un pointeur **null** ou si la chaîne de destination est trop petite, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et attribuent à **errno** la valeur **EINVAL**.
 
-Les versions des fonctions qui ont le suffixe **_L** ont le même comportement, mais utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions des fonctions qui ont le suffixe **_L** ont le même comportement, mais utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d'informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -154,7 +154,7 @@ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat_s**|**strcat_s**|**_mbscat_s**|**wcscat_s**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -162,7 +162,7 @@ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 
 |**wcscat_s**|\<string.h> ou \<wchar.h>|
 |**_mbscat_s**|\<mbstring.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

@@ -1,8 +1,7 @@
 ---
-title: Modifications du système de génération dans Visual Studio 2010
-ms.date: 11/04/2016
-f1_keywords:
-- vc.msbuild.changes
+title: VCBuild et MSBuild
+description: Le système de C++ génération Visual Studio a été modifié de VCBUILD en MSBuild dans VIsual Studio 2010.
+ms.date: 10/25/2019
 helpviewer_keywords:
 - Build system changes, project file (.vcxprog)
 - Build system changes, custom build rules
@@ -12,43 +11,41 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: c3e51aa7e5a4346137e94191b551b0d53452e460
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: afa9324d6074db72fd065cfa07c16349f86a615c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449010"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626600"
 ---
-# <a name="build-system-changes"></a>Modifications du système de génération
+# <a name="vcbuild-vs-msbuild-build-system-changes-in-visual-studio-2010"></a>VCBuild et MSBuild : générer des modifications du système dans Visual Studio 2010
 
-Le système MSBuild est utilisé pour générer des projets Visual Studio C++. Toutefois, dans Visual Studio 2008 et les versions antérieures, c’est le système VCBuild qui était utilisé. Certains types de fichiers et concepts qui dépendaient de VCBuild n’existent pas ou sont représentés différemment dans le système actuel. Ce document présente les différences du système de génération actuel.
+Le système MSBuild pour C++ les projets a été introduit dans Visual Studio 2010. Dans Visual Studio 2008 et les versions antérieures, le système VCBuild était utilisé. Certains types de fichiers et concepts qui dépendent de VCBuild n’existent pas ou sont représentés différemment dans MSBuild. Ce document présente les différences du système de génération actuel. Pour convertir un projet Visual Studio 2008 en MSBuild, vous devez utiliser Visual Studio 2010. Une fois le projet converti, vous devez utiliser la version la plus récente de Visual Studio pour effectuer une mise à niveau vers l’ensemble d’outils de compilateur et l’IDE actuel. Pour plus d’informations, notamment sur la façon d’obtenir Visual Studio 2010, consultez [instructions pour Visual studio 2008](use-native-multi-targeting.md#instructions-for-visual-studio-2008).
+
+Les sections suivantes résument les modifications de VCBuild à MSBuild. Si votre projet VCBUILD contient des macros ou des règles de génération personnalisées qui ne sont pas reconnues par MSBuild, consultez [projets Visual Studio- C++ ](../build/creating-and-managing-visual-cpp-projects.md) pour apprendre à traduire ces instructions dans le système MSBuild. La conversion initiale de VCBuild en MSBuild n’est qu’une étape intermédiaire. Il n’est pas nécessaire d’avoir un fichier projet entièrement correct ou d’effectuer la compilation du programme sans erreurs. Vous utilisez uniquement Visual Studio 2010 pour convertir le projet au format MSBuild pour que le projet fonctionne dans la dernière version de Visual Studio.
 
 ## <a name="vcproj-is-now-vcxproj"></a>.vcproj devient maintenant .vcxproj
 
-Les fichiers projet n’utilisent plus l’extension de nom de fichier .vcproj. Visual Studio convertit automatiquement les fichiers projet créés par une version antérieure de Visual C++ au format utilisé par le système actuel. Pour plus d’informations sur la mise à niveau manuelle d’un projet, consultez [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe).
-
-Dans la version actuelle, l’extension de nom de fichier d’un fichier projet est .vcxproj.
+Les fichiers projet n’utilisent plus l’extension de nom de fichier .vcproj. Visual Studio 2010 convertit automatiquement les fichiers projet qui ont été créés par une version C++ antérieure de Visual au format MSBuild, qui utilise l’extension. vcxproj pour les fichiers projet.
 
 ## <a name="vsprops-is-now-props"></a>.vsprops devient maintenant .props
 
-Dans les versions antérieures, une *feuille de propriétés de projet* est un fichier XML qui porte une extension de nom de fichier .vsprops. Une feuille de propriétés de projet permet de spécifier des commutateurs pour les outils de génération tels que le compilateur ou l’éditeur de liens, ainsi que de créer des macros définies par l’utilisateur.
+Dans Visual Studio 2008 et versions antérieures, une *feuille de propriétés de projet* est un fichier XML qui a une extension de nom de fichier. vsprops. Une feuille de propriétés de projet permet de spécifier des commutateurs pour les outils de génération tels que le compilateur ou l’éditeur de liens, ainsi que de créer des macros définies par l’utilisateur. Dans MSBuild, l’extension de nom de fichier d’une feuille de propriétés de projet est. props.
 
-Dans la version actuelle, l’extension de nom de fichier d’une feuille de propriétés de projet est .props.
+## <a name="custom-build-rules-and-rules-files"></a>Règles de génération personnalisée et fichiers. Rules
 
-## <a name="custom-build-rules-and-rules-files"></a>Règles de génération personnalisées et fichiers .rules
+Dans Visual Studio 2008 et versions antérieures, un *fichier de règles* est un fichier XML dont l’extension de nom de fichier est. Rules. Un fichier de règles permet de définir des règles de génération personnalisées et de les incorporer dans le processus de génération d’un projet Visual Studio C++. Une règle de génération personnalisée, que vous pouvez associer à une ou plusieurs extensions de nom de fichier, vous permet de passer des fichiers d’entrée à un outil qui crée un ou plusieurs fichiers de sortie.
 
-Dans les versions antérieures, un *fichier de règles* est un fichier XML qui porte une extension de nom de fichier .rules. Un fichier de règles permet de définir des règles de génération personnalisées et de les incorporer dans le processus de génération d’un projet Visual Studio C++. Une règle de génération personnalisée, que vous pouvez associer à une ou plusieurs extensions de nom de fichier, vous permet de passer des fichiers d’entrée à un outil qui crée un ou plusieurs fichiers de sortie.
-
-Dans cette version, les règles de génération personnalisées sont représentées par trois types de fichiers, à savoir .xml, .props et .targets, au lieu d’un fichier .rules. Quand un fichier .rules créé à l’aide d’une version antérieure de Visual C++ migre vers la version actuelle, des fichiers .xml, .props et .targets équivalents sont créés et stockés dans votre projet avec le fichier .rules d’origine.
+Dans le système MSBuild, les règles de génération personnalisées sont représentées par trois types de fichiers,. xml,. props et. targets, au lieu d’un fichier. Rules. Lorsqu’un fichier. Rules qui a été créé à l’aide d’une C++ version antérieure de Visual est migré vers Visual Studio 2010, les fichiers. xml,. props et. targets équivalents sont créés et stockés dans votre projet avec le fichier. Rules d’origine.
 
 > [!IMPORTANT]
->  Dans la version actuelle, l’IDE ne prend pas en charge la création de nouvelles règles. C’est pourquoi la manière la plus simple d’utiliser un fichier de règles d’un projet créé à l’aide d’une version antérieure de Visual C++ consiste à migrer le projet vers la version actuelle.
+> Dans Visual Studio 2010, l’IDE ne prend pas en charge la création de nouvelles règles. Pour cette raison, le moyen le plus simple d’utiliser un fichier de règles à partir d’un projet qui a été créé à C++ l’aide d’une version antérieure de Visual est de migrer le projet vers visual studio 2010.
 
 ## <a name="inheritance-macros"></a>Macros d’héritage
 
-Dans les versions antérieures, la macro **$(Inherit)** spécifie l’ordre dans lequel les propriétés héritées apparaissent sur la ligne de commande composée par le système de génération de projet. La macro **$(NoInherit)** permet d’ignorer toutes les occurrences de $(Inherit) et de rendre non héritées toutes les propriétés qui seraient sinon héritées. Par exemple, la macro $(Inherit) entraîne par défaut l’ajout à la ligne de commande des fichiers spécifiés à l’aide de l’option de compilateur [/I (Additional Include Directories)](../build/reference/i-additional-include-directories.md).
+Dans Visual Studio 2008 et les versions antérieures, la macro **$ (Inherit)** spécifie l’ordre dans lequel les propriétés héritées apparaissent sur la ligne de commande qui est composée par le système de génération de projet. La macro **$(NoInherit)** permet d’ignorer toutes les occurrences de $(Inherit) et de rendre non héritées toutes les propriétés qui seraient sinon héritées. Par exemple, la macro $(Inherit) entraîne par défaut l’ajout à la ligne de commande des fichiers spécifiés à l’aide de l’option de compilateur [/I (Additional Include Directories)](../build/reference/i-additional-include-directories.md).
 
-Dans la version actuelle, l’héritage est pris en charge en spécifiant la valeur d’une propriété sous forme de concaténation d’une ou plusieurs valeurs littérales et macros de propriété. Les macros **$(Inherit)** et **$(NoInherit)** ne sont pas prises en charge.
+Dans Visual Studio 2010, l’héritage est pris en charge en spécifiant la valeur d’une propriété en tant que concaténation d’une ou plusieurs valeurs littérales et macros de propriété. Les macros **$(Inherit)** et **$(NoInherit)** ne sont pas prises en charge.
 
 Dans l’exemple suivant, une liste délimitée par des points-virgules est affectée à une propriété dans une page de propriétés. La liste est constituée de la concaténation du littéral de la *\<valeur>* et de la valeur de la propriété `MyProperty`, accessible à l’aide de la notation de macro, **$(** <em>MyProperty</em> **)** .
 
@@ -56,21 +53,25 @@ Dans l’exemple suivant, une liste délimitée par des points-virgules est affe
 Property=<value>;$(MyProperty)
 ```
 
-## <a name="vcxprojuser-files"></a>Fichiers .vcxproj.user
+## <a name="vcxprojuser-files"></a>fichiers. vcxproj. User
 
-Un fichier utilisateur (.vcxproj.user) stocke des propriétés propres à l’utilisateur, par exemple, des paramètres de débogage et de déploiement. Le fichier vcxproj.user s’applique à tous les projets d’un utilisateur particulier.
+Un fichier utilisateur (.vcxproj.user) stocke des propriétés propres à l’utilisateur, par exemple, des paramètres de débogage et de déploiement. Le fichier *vcxproj. User* s’applique à tous les projets pour un utilisateur particulier.
 
-## <a name="vcxprojfilters-file"></a>Fichier .vcxproj.filters
+## <a name="vcxprojfilters-file"></a>fichier. vcxproj. filters
 
-Quand vous ajoutez un fichier à un projet par le biais de l’**Explorateur de solutions**, le fichier de filtres (.vcxproj.filters) détermine à quel emplacement le fichier est ajouté dans l’arborescence de l’**Explorateur de solutions**, en fonction de son extension de nom de fichier.
+Lorsque **Explorateur de solutions** est utilisé pour ajouter un fichier à un projet, le fichier de filtres ( *. vcxproj. filters*) définit l’emplacement où le fichier est ajouté dans l’arborescence de **Explorateur de solutions** , en fonction de son extension de nom de fichier.
 
-## <a name="vc-directories-settings"></a>Paramètres des répertoires VC++
+## <a name="vc-directories-settings"></a>Paramètres des répertoires VC + +
 
-Les paramètres des répertoires Visual C++ sont spécifiés dans la [page de propriétés des répertoires VC++](../ide/vcpp-directories-property-page.md). Dans les versions antérieures de Visual Studio, les paramètres des répertoires s’appliquent par utilisateur et la liste des répertoires exclus est spécifiée dans le fichier sysincl.dat.
+Les paramètres des répertoires Visual C++ sont spécifiés dans la [page de propriétés des répertoires VC++](../ide/vcpp-directories-property-page.md). Dans Visual Studio 2008 et versions antérieures, les paramètres des répertoires s’appliquent par utilisateur et la liste des répertoires exclus est spécifiée dans le fichier *SYSINCL. dat* . 
 
 Vous ne pouvez pas changer les paramètres des répertoires VC++ si vous exécutez [devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe) sur la ligne de commande. Vous ne pouvez pas non plus changer les paramètres si vous ouvrez le menu **Outils**, cliquez sur **Importation et exportation de paramètres**, puis sélectionnez l’option **Réinitialiser tous les paramètres**.
 
-Migrez les paramètres des répertoires VC++ d’un fichier .vssettings créé par une version antérieure de Visual C++. Ouvrez le menu **Outils**, cliquez sur **Importation et exportation de paramètres**, sélectionnez **Importer les paramètres d’environnement sélectionnés**, puis suivez les instructions de l’Assistant. Ou bien, au premier démarrage de Visual Studio, dans la boîte de dialogue **Choisir les paramètres d’environnement par défaut**, sélectionnez **Migrer mes paramètres éligibles depuis une version précédente et les ajouter aux paramètres par défaut sélectionnés ci-dessous**.
+Pour migrer les paramètres des répertoires VC + + à partir d’un fichier *. vssettings* créé par une version antérieure de Visual Studio :
+
+1. Ouvrez le menu **Outils** , cliquez sur **importation et exportation de paramètres** .
+2. Sélectionnez **Importer les paramètres d’environnement sélectionnés**
+3. Suivez les instructions de l’Assistant.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,92 +1,64 @@
 ---
-title: Guide du portage et de la mise à niveau de Visual C++
-ms.date: 09/18/2018
+title: Guide C++ de Portage et de mise à niveau Microsoft
+description: Mettez à C++ niveau Microsoft code vers la dernière version de Visual Studio.
+ms.date: 10/29/2019
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.topic: overview
-ms.openlocfilehash: 55bfb9a1ad23a0e4a3efa7f0a9361523c6c9754d
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: d67c2665574242a46d697f6e9f24321556146958
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274688"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625682"
 ---
-# <a name="visual-c-porting-and-upgrading-guide"></a>Guide du portage et de la mise à niveau de Visual C++
+# <a name="microsoft-c-porting-and-upgrading-guide"></a>Guide C++ de Portage et de mise à niveau Microsoft
 
-Cette rubrique est destinée à vous guider lors de la mise à niveau du code Visual C++. Elle explique comment convertir le code pour qu'il se compile et s'exécute correctement sur une version plus récente des outils, et comment tirer parti des nouvelles fonctionnalités de langage et de Visual Studio. Cette rubrique inclut également des informations sur la migration des applications héritées vers des plateformes plus récentes.
+Cette rubrique fournit un guide pour la mise à C++ niveau de Microsoft code vers la dernière version de Visual Studio. Si vous effectuez une mise à niveau à partir d’un projet créé dans Visual Studio 2008 ou version antérieure, vous devez d’abord utiliser Visual Studio 2010 pour convertir le projet au format MSBuild, puis ouvrir le projet dans Visual Studio 2019. Pour les projets créés dans Visual Studio 2010 à 2015, il vous suffit d’ouvrir le projet dans Visual Studio 2019. Pour obtenir des instructions complètes, consultez [mise à niveau de C++ projets à partir de versions antérieures de Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md).
 
-## <a name="reasons-to-upgrade-visual-c-code"></a>Raisons justifiant la mise à niveau du code Visual C++
+Les ensembles d’outils de Visual Studio 2015, Visual Studio 2017 et Visual Studio 2019 sont compatibles binaires, ce qui vous permet d’effectuer une mise à niveau vers une version plus récente du compilateur sans avoir à mettre à niveau les dépendances de bibliothèque. Pour plus d’informations, consultez [ C++ compatibilité binaire entre 2015 et 2019](binary-compat-2015-2017.md).
 
-Vous devez envisager la mise à niveau de votre code pour les raisons suivantes :
+Lors de la mise à niveau de projets qui utilisent des bibliothèques Open source ou qui sont destinés à être exécutés sur plusieurs plateformes, nous vous recommandons de migrer vers un projet basé sur CMake. Pour plus d’informations, consultez [projets cmake dans Visual Studio](../build/cmake-projects-in-visual-studio.md) .
 
-- Code plus rapide, grâce à de nouvelles optimisations apportées au compilateur.
+## <a name="reasons-to-upgrade-c-code"></a>Raisons justifiant C++ la mise à niveau du code
 
-- Builds plus rapides, grâce à l'amélioration des performances du compilateur.
+Si une application héritée s’exécute de manière satisfaisante, dans un environnement sécurisé et qu’elle n’est pas en cours de développement actif, il est possible qu’il n’y ait pas d’incentives pour la mettre à niveau. Toutefois, si une application nécessite une maintenance continue ou un nouveau développement de fonctionnalités, y compris des améliorations en matière de performances ou de sécurité, vous pouvez envisager de mettre à niveau le code pour l’une des raisons suivantes :
 
-- Conformité aux normes améliorée. Visual C++ implémente désormais de nombreuses fonctionnalités conformes aux normes C++ les plus récentes.
+- Le même code peut s’exécuter plus rapidement en raison des optimisations du compilateur améliorées.
 
-- Sécurité renforcée, grâce aux fonctionnalités de sécurité, telles que la protection du flux de contrôle.
+- Les C++ fonctionnalités et les pratiques de programmation modernes éliminent de nombreuses causes courantes des bogues et sont beaucoup plus faciles à gérer que les plus anciens idiomes de style C.
 
-### <a name="porting-your-code"></a>Déplacement de votre code
+- Les temps de génération sont beaucoup plus rapides, en raison des améliorations des performances du compilateur et de l’éditeur de liens.
 
-Dans le cadre de la mise à niveau, commencez par faire le point sur le code et les projets de votre application. Votre application a-t-elle été développée avec Visual Studio ? Dans ce cas, identifiez les projets concernés.  Utilisez-vous des scripts de compilation personnalisés ? Si vous utilisez des scripts de compilation personnalisés au lieu du système de génération de Visual Studio, vous aurez plus de tâches à effectuer vous-même pendant la mise à niveau, car Visual Studio ne pourra pas mettre à jour vos fichiers projet et paramètres de génération automatiquement.
+- Meilleure conformité aux normes. L’option du compilateur [/permissive-](../build/reference/permissive-standards-conformance.md) vous permet d’identifier le code qui était précédemment autorisé par C++ le compilateur Microsoft, mais qui n’est C++ pas conforme à la norme actuelle.
 
-Le format du système de génération et des fichiers projet a changé dans Visual Studio. Depuis Visual Studio 2010, MSBuild a remplacé vcbuild qui était utilisé dans Visual Studio 2008 et les versions antérieures. Si vous effectuez la mise à niveau d'une solution créée dans une version antérieure à 2010 et que vous utilisez un système de génération très personnalisé, le processus de mise à niveau sera sans doute plus complexe. Si vous mettez à niveau une solution créée dans Visual Studio 2010 ou une version ultérieure, votre projet est déjà basé sur MSBuild. Le processus de mise à niveau et de compilation de votre application sera donc plus facile en principe.
+- Meilleure sécurité à l’exécution, notamment des fonctionnalités de la [bibliothèque Runtime C]() plus sécurisées et des fonctionnalités du compilateur, telles que la vérification de la [protection](../build/reference/guard-enable-guard-checks.md) et l’adressage des assainiurs (Visual Studio 2019 version 16,4).
 
-Si vous n'utilisez pas le système de génération de Visual Studio, vous devez envisager la mise à niveau vers MSBuild. Si vous faites ce choix, vous pourrez effectuer les futures mises à niveau plus rapidement et vous aurez plus facilement accès à divers services, tels que Visual Studio Online. MSBuild prend en charge toutes les plateformes cibles prises en charge par Visual Studio.
+## <a name="multitargeting-vs-upgrading"></a>MULTICIBLAGE et mise à niveau
 
-### <a name="porting-visual-studio-projects"></a>Déplacement de projets Visual Studio
+Si la mise à niveau de votre base de code vers un nouvel ensemble d’outils n’est pas une option, vous pouvez toujours utiliser une version récente de Visual Studio pour générer et modifier des projets qui se compilent avec des bibliothèques et des ensembles d’outils plus anciens. Dans Visual Studio 2019, vous pouvez tirer parti de fonctionnalités telles que :
 
-Pour commencer la mise à niveau d'un projet ou d'une solution, ouvrez simplement la solution dans la nouvelle version de Visual Studio et suivez les indications affichées.  Quand vous mettez à niveau un projet, un rapport de mise à niveau est généré et enregistré dans votre dossier de projet sous le nom UpgradeLog.htm. Ce rapport récapitule les problèmes rencontrés pendant la mise à niveau, et fournit des informations sur les modifications apportées ou sur les problèmes qui n'ont pas pu être résolus automatiquement.
+- les outils d’analyse statique modernes, C++ y compris les principaux outils de vérification et Clang-Tidy, permettent d’identifier les problèmes potentiels dans votre code source.
 
-1. Propriétés de projet
+- la mise en forme automatique en fonction de votre choix de styles modernes peut aider à rendre le code hérité bien plus lisible.
 
-2. Fichiers Include
+Pour plus d’informations, consultez [Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets](use-native-multi-targeting.md).
 
-3. Code qui ne se compile plus correctement en raison des améliorations de la conformité du compilateur ou des modifications de la norme
-
-4. Code qui fait appel à des fonctionnalités Visual Studio ou Windows qui ne sont plus disponibles, ou à des fichiers d’en-tête qui ne sont pas inclus dans une installation par défaut de Visual Studio ou qui ont été supprimés du produit.
-
-5. Code qui ne se compile plus à cause des modifications apportées aux API (par exemple, API renommées, signatures de fonction modifiées ou fonctions déconseillées).
-
-6. Code qui ne se compile plus à cause des modifications apportées aux diagnostics (par exemple, un avertissement transformé en erreur).
-
-7. Erreurs de l'éditeur de liens dues aux modifications de bibliothèques, en particulier quand /NODEFAULTLIB est utilisé.
-
-8. Erreurs d'exécution ou résultats inattendus dus à des changements de comportement.
-
-9. Erreurs elles-mêmes provoquées par des erreurs introduites dans les outils. Si vous rencontrez un problème, signalez-le à l’équipe Visual C++ par le biais de vos modes de contact du support technique habituels ou de la page [Communauté de développeurs Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html).
-
-Certaines modifications sont inévitables pour résoudre les erreurs de compilateur, d'autres sont facultatives dans un processus de mise à niveau. Par exemple :
-
-1. L'affichage de nouveaux avertissements peut être le signe qu'un nettoyage de votre code est nécessaire. En fonction des diagnostics spécifiques, cela peut améliorer la portabilité, la conformité aux normes et la sécurité de votre code.
-
-2. Vous pouvez exploiter les nouvelles fonctionnalités du compilateur, telles que l’option de compilateur [/guard:cf (Activer la protection du flux de contrôle)](../build/reference/guard-enable-control-flow-guard.md), qui permet de vérifier si du code non autorisé est exécuté.
-
-3. Vous pouvez mettre à jour le code pour utiliser les nouvelles fonctionnalités de langage qui simplifient l’écriture du code, améliorer les performances de vos programmes, utiliser les bibliothèques actuelles, et rendre le code conforme aux normes et meilleures pratiques récentes.
-
-Une fois que vous avez mis à niveau et testé votre projet, vous pouvez également songer à améliorer encore votre code ou planifier sa future orientation, ou même reconsidérer l’architecture de votre projet. Fera-t-il l’objet de travaux de développement suivis ? Est-ce important que votre code puisse s'exécuter sur d'autres plateformes ?  Et sur quelles plateformes ?  C++ est un langage normalisé conçu pour faciliter le développement d'applications multiplateforme et garantir leur portabilité. Pourtant, le code de nombreuses applications Windows dépend encore étroitement de la plate-forme Windows. Souhaitez-vous refactoriser votre code pour isoler les parties de code qui sont le plus liées à la plateforme Windows ?
-
-Qu'en est-il de votre interface utilisateur ? Si vous utilisez MFC, vous pouvez mettre à jour l'interface utilisateur. Utilisez-vous l'une des nouvelles fonctionnalités MFC introduites dans Visual Studio 2008 sous forme de Feature Pack ? Si vous souhaitez seulement donner à votre application une apparence plus actuelle, sans réécrire entièrement le code, vous pouvez envisager d’utiliser des API de ruban dans MFC ou certaines nouvelles fonctionnalités de MFC.
-
-Si vous souhaitez donner à votre programme une interface utilisateur XAML, mais ne voulez pas créer une application UWP, vous pouvez utiliser C# avec WPF pour créer la couche d’interface utilisateur et refactoriser votre logique C++ standard en DLL. Créez une couche d’interopérabilité en C++/CLI pour connecter C# à votre code natif. Une autre option consiste à créer une application UWP avec [C++/CX](../cppcx/visual-c-language-reference-c-cx.md) ou [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/). Dans Windows 10, vous pouvez utiliser [Desktop App Converter](/windows/msix/desktop/desktop-to-uwp-run-desktop-app-converter) pour empaqueter votre application de bureau existante comme application UWP sans avoir à modifier le code.
-
-Ou bien, vous avez peut-être maintenant de nouvelles exigences à respecter, ou vous voulez préparer votre application pour le ciblage d’autres plateformes que le Bureau Windows, telles que Windows Phone ou des appareils Android. Vous pouvez déplacer votre code d'interface utilisateur vers une bibliothèque d'interface utilisateur multiplateforme. Avec toutes ces infrastructures d’interface utilisateur, vous pouvez cibler divers appareils, tout en continuant d’utiliser Visual Studio et le débogueur Visual Studio comme environnement de développement.
-
-## <a name="related-topics"></a>Rubriques connexes
+## <a name="in-this-section"></a>Dans cette section
 
 |Titre|Description|
 |-----------|-----------------|
-|[Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Explique comment utiliser des projets créés dans les versions antérieures de Visual Studio.|
-|[Nouveautés du compilateur C++ dans Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Modifications de l’IDE et des outils par rapport à la version actuelle de Visual Studio|
-|[Améliorations de la conformité de C++ dans Visual Studio](../overview/cpp-conformance-improvements.md)|Améliorations de la conformité aux standards entre Visual Studio 2015 et Visual Studio|
-|[Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md)|Liste de toutes les modifications apportées aux bibliothèques Visual C++ et outils de génération entre Visual Studio 2003 et 2015 qui pourraient vous contraindre à modifier votre code.|
-|[Nouveautés de Visual C++ entre 2003 et 2015](visual-cpp-what-s-new-2003-through-2015.md)|Toutes les informations relatives aux « nouveautés » pour Visual C++ de Visual Studio 2003 à Visual Studio 2015.|
-|[Portage de bibliothèques tierces](porting-third-party-libraries.md)|Mode d’utilisation de l’outil en ligne de commande **vcpkg** pour transférer d’anciennes bibliothèques open source vers des versions compilées avec des ensembles d’outils Visual C++ plus récents.|
-|[Portage et mise à niveau : Exemples et études de cas](porting-and-upgrading-examples-and-case-studies.md)|Dans cette section, nous avons déplacé et mis à niveau plusieurs exemples et applications, puis présenté nos expériences et résultats. Cela vous donnera une idée de ce qu'impliquent les processus de déplacement et de mise à niveau. Nous donnons des conseils et astuces à suivre pendant toute la mise à niveau, et indiquons des solutions pour corriger certaines erreurs courantes.|
+|[Mise à C++ niveau de projets à partir de versions antérieures de Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Comment mettre à niveau votre base de code vers Visual Studio 2019 et V142 du compilateur.|
+|[C++Compatibilité binaire entre 2015 et 2019](binary-compat-2015-2017.md)|Consommez les bibliothèques V140 en l’des projets V142.|
+|[Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets](use-native-multi-targeting.md)|Utilisez Visual Studio 2019 avec des compilateurs et des bibliothèques plus anciens.|
+|[Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md)|Liste de toutes les modifications apportées aux C++ bibliothèques Microsoft et aux outils de génération de Visual Studio 2003 à 2015, qui peuvent nécessiter des modifications dans votre code.|
+|[Nouveautés de Visual C++ entre 2003 et 2015](visual-cpp-what-s-new-2003-through-2015.md)|Toutes les informations sur les nouveautés de Microsoft C++ de visual studio 2003 à visual studio 2015.|
+|[Portage et mise à niveau : exemples et études de cas](porting-and-upgrading-examples-and-case-studies.md)|Dans cette section, nous avons déplacé et mis à niveau plusieurs exemples et applications, puis présenté nos expériences et résultats. Cela vous donnera une idée de ce qu'impliquent les processus de déplacement et de mise à niveau. Nous donnons des conseils et astuces à suivre pendant toute la mise à niveau, et indiquons des solutions pour corriger certaines erreurs courantes.|
 |[Portage vers la plateforme universelle Windows](porting-to-the-universal-windows-platform-cpp.md)|Contient des informations sur le déplacement de code vers Windows 10|
 |[Introduction à Visual C++ pour les utilisateurs UNIX](introduction-to-visual-cpp-for-unix-users.md)|Fournit des informations aux utilisateurs UNIX qui débutent avec Visual C++ et souhaitent être plus productifs.|
-|[Portage d’UNIX vers Win32](porting-from-unix-to-win32.md)|Présente les différentes options pour migrer des applications UNIX vers Windows.|
+|[Exécution de programmes Linux sur Windows](porting-from-unix-to-win32.md)|Présente les différentes options pour migrer des applications UNIX vers Windows.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[C++ dans Visual Studio](../overview/visual-cpp-in-visual-studio.md)
+[C++ dans Visual Studio](../overview/visual-cpp-in-visual-studio.md)<br/>
+[Nouveautés du compilateur C++ dans Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Améliorations de la conformité de C++ dans Visual Studio](../overview/cpp-conformance-improvements.md)<br/>

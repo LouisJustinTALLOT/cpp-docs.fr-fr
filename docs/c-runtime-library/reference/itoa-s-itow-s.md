@@ -1,5 +1,5 @@
 ---
-title: _itoa_s, _itow_s functions
+title: _itoa_s, _itow_s, fonctions
 ms.date: 03/21/2018
 api_name:
 - _itoa_s
@@ -79,14 +79,14 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: 204abd65981371a970623879ec94ff77db6728b2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df7f3ec970e0205ab999d1a04299a22dcc422d42
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953556"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625068"
 ---
-# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
+# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
 
 Convertit un entier en chaîne. Il s’agit de versions des [fonctions _itoa, _itow](itoa-itow.md) avec des améliorations de sécurité, comme décrit dans [fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -135,7 +135,7 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="parameters"></a>Paramètres
 
-*value*<br/>
+*valeur*<br/>
 Nombre à convertir.
 
 *buffer*<br/>
@@ -153,12 +153,12 @@ Zéro si l'opération a réussi ; code d'erreur en cas de échec. Si l’une de
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|value|buffer|size|radix|Renvoie|
+|valeur|buffer|size|radix|Return|
 |-----------|------------|----------------------|-----------|------------|
-|any|**NULL**|any|any|**EINVAL**|
-|any|any|<=0|any|**EINVAL**|
-|any|any|<= longueur de la chaîne de résultat requise|any|**EINVAL**|
-|any|any|any|*base* < 2 ou *base* > 36|**EINVAL**|
+|indifférent|**NULL**|indifférent|indifférent|**EINVAL**|
+|indifférent|indifférent|<=0|indifférent|**EINVAL**|
+|indifférent|indifférent|<= longueur de la chaîne de résultat requise|indifférent|**EINVAL**|
+|indifférent|indifférent|indifférent|*base* < 2 ou *base* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>Problèmes de sécurité
 
@@ -168,9 +168,9 @@ Ces fonctions peuvent générer une violation d’accès si la mémoire *tampon*
 
 À l’exception des paramètres et de la valeur de retour, les familles de fonctions **_itoa_s** et **_itow_s** ont le même comportement que les versions **_itoa** et **_itow** les moins sécurisées correspondantes.
 
-En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 Le CRT inclut des macros pratiques pour définir la taille de la mémoire tampon requise pour convertir la valeur la plus longue possible de chaque type entier, y compris le terminateur null et le signe, pour plusieurs bases communes. Pour plus d’informations, consultez [macros nombre maximal de conversions](itoa-itow.md#maximum-conversion-count-macros).
 
@@ -184,16 +184,16 @@ Le CRT inclut des macros pratiques pour définir la taille de la mémoire tampon
 |**_i64tot_s**|**_i64toa_s**|**_i64toa_s**|**_i64tow_s**|
 |**_ui64tot_s**|**_ui64toa_s**|**_ui64toa_s**|**_ui64tow_s**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
 |**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h> ou \<wchar.h>|
 
-Ces fonctions sont spécifiques à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Ces fonctions sont spécifiques à Microsoft. Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Cet exemple illustre l’utilisation de quelques fonctions de conversion d’entier. Notez que la macro [_countof](countof-macro.md) ne fonctionne que pour déterminer la taille de la mémoire tampon lorsque la déclaration de tableau est visible pour le compilateur, et non pour les paramètres qui ont été déconseillés pour les pointeurs.
 

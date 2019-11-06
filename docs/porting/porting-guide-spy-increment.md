@@ -1,13 +1,13 @@
 ---
 title: 'Guide du portage : Spy++'
-ms.date: 11/19/2018
+ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.openlocfilehash: 5505e0dbf23dd02f4ae5924ff4f2bacff3f11eea
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630447"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627231"
 ---
 # <a name="porting-guide-spy"></a>Guide du portage : Spy++
 
@@ -15,7 +15,7 @@ Cette étude de cas de portage vise à vous donner une idée de ce qu'est un pro
 
 ## <a name="spy"></a>Spy++
 
-Spy++ est un outil de diagnostic GUI couramment utilisé qui fournit diverses informations sur les éléments d'interface utilisateur du Bureau Windows. Il montre la structure hiérarchique complète des fenêtres, et permet d'accéder aux métadonnées de chaque fenêtre et contrôle. Cette application utile est fournie avec Visual Studio depuis de nombreuses années. Nous avons trouvé une ancienne version de cette application qui avait été compilée dans Visual C++ 6.0 et portée vers Visual Studio 2015. L’expérience pour Visual Studio 2017 doit être presque identique.
+Spy++ est un outil de diagnostic GUI couramment utilisé qui fournit diverses informations sur les éléments d'interface utilisateur du Bureau Windows. Il montre la structure hiérarchique complète des fenêtres, et permet d'accéder aux métadonnées de chaque fenêtre et contrôle. Cette application utile est fournie avec Visual Studio depuis de nombreuses années. Nous avons trouvé une ancienne version de cette application qui avait été compilée dans Visual C++ 6.0 et portée vers Visual Studio 2015. L’expérience de Visual Studio 2017 ou de Visual Studio 2019 doit être presque identique.
 
 Cette étude de cas nous semble représentative des scénarios de portage des applications de bureau Windows qui utilisent MFC et l’API Win32, en particulier pour les anciens projets qui n’ont pas été mis à jour avec chaque mise en production de Visual C++ depuis Visual C++ 6.0.
 
@@ -25,7 +25,7 @@ Le fichier projet, constitué de deux anciens fichiers .dsw de Visual C++ 6.0, 
 
 Une fois la mise à niveau des deux projets terminée, notre solution se présentait ainsi :
 
-![Solution Spy&#43;&#43;](../porting/media/spyxxsolution.PNG "Solution Spy&#43;&#43;")
+![La solution&#43; &#43; Spy](../porting/media/spyxxsolution.PNG "La solution&#43; &#43; Spy")
 
 Nous avons ici deux projets, l'un avec un grand nombre de fichiers C++ et l'autre une DLL écrite en C.
 
@@ -280,7 +280,7 @@ En regardant la définition de cette macro, nous voyons qu’elle fait référen
 (static_cast< LRESULT (AFX_MSG_CALL CWnd::*)(CPoint) > (&ThisClass :: OnNcHitTest)) },
 ```
 
-Le problème est dû à une incompatibilité du pointeur avec les types de fonctions membres. Le problème n’est pas la conversion du type de classe `CHotLinkCtrl` en type de classe `CWnd`, car il s’agit d’une conversion classe dérivée-classe de base valide. Le problème provient du type de retour UINT, utilisé à la place de LRESULT. LRESULT se résout en LONG_PTR, qui est un pointeur 64 bits ou 32 bits selon le type du fichier binaire cible, mais UINT ne peut pas être converti en ce type. Cette erreur n'est pas rare lors des mises à niveau de code ayant été écrit avant 2005. En effet, le type de retour de nombreuses méthodes de la table des messages a été changé de UINT en LRESULT dans Visual Studio 2005 pour garantir la compatibilité 64 bits. Nous changeons le type de retour UINT en LRESULT dans le code suivant :
+Le problème est dû à une incompatibilité du pointeur avec les types de fonctions membres. Le problème n’est pas la conversion du type de classe `CHotLinkCtrl` en type de classe `CWnd`, car il s’agit d’une conversion classe dérivée-classe de base valide. Le problème est le type de retour : UINT et LRESULT. LRESULT se résout en LONG_PTR, qui est un pointeur 64 bits ou 32 bits selon le type du fichier binaire cible, mais UINT ne peut pas être converti en ce type. Cette erreur n'est pas rare lors des mises à niveau de code ayant été écrit avant 2005. En effet, le type de retour de nombreuses méthodes de la table des messages a été changé de UINT en LRESULT dans Visual Studio 2005 pour garantir la compatibilité 64 bits. Nous changeons le type de retour UINT en LRESULT dans le code suivant :
 
 ```cpp
 afx_msg UINT OnNcHitTest(CPoint point);
@@ -292,7 +292,7 @@ Après la modification, nous obtenons le code suivant :
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-Dans la mesure où il y a environ dix occurrences de cette fonction dans différentes classes dérivées de CWnd, il est conseillé d’utiliser la commande **Atteindre la définition** (touche **F12**) et la commande **Atteindre la déclaration** (touches **Ctrl**+**F12**) quand le curseur se trouve sur la fonction dans l’éditeur pour localiser ces occurrences et y accéder à partir de la fenêtre Outil **Rechercher un symbole**. La commande **Atteindre la définition** est généralement la plus pratique des deux. La commande **Atteindre la déclaration** permet de trouver les déclarations autres que la déclaration de la classe de définition, par exemple les déclarations de classe Friend ou les références anticipées.
+Étant donné qu’il y a environ 10 occurrences de cette fonction dans les différentes classes dérivées de CWnd, le plus rapide est d’utiliser les commandes **Atteindre la définition** (raccourci clavier : **F12**) et **Atteindre la déclaration** (raccourci clavier : **Ctrl**+**CtrlF12**) quand le curseur est placé sur la fonction dans l’éditeur. Cela permet de localiser ces occurrences et d’y accéder à partir de la fenêtre Outil **Rechercher un symbole**. La commande **Atteindre la définition** est généralement la plus pratique des deux. La commande **Atteindre la déclaration** permet de trouver les déclarations autres que la déclaration de la classe de définition, par exemple les déclarations de classe Friend ou les références anticipées.
 
 ##  <a name="mfc_changes"></a> Étape 9. Modifications MFC
 
@@ -466,7 +466,7 @@ class CTreeListBox : public CListBox
   BOOL m_bStdMouse : 1;
 ```
 
-Ce code a été écrit avant que le type bool intégré soit pris en charge dans Visual C++. Dans ce code, BOOL était un **typedef** pour **int**. Le type **int** est un type **signé** et la représentation binaire d’un **int signé** est d’utiliser le premier bit comme bit de signe. Ainsi, un champ de bits de type int pouvait être interprété comme représentant 0 ou -1, ce qui n’était probablement pas le comportement prévu.
+Ce code a été écrit avant que le type bool intégré soit pris en charge dans Visual C++. Dans ce code, BOOL était un **typedef** pour **int**. Le type **int** est un type **signé** et la représentation binaire d’un **int signé** est d’utiliser le premier bit comme bit de signe. ainsi, un champ de bits de type int pouvait être interprété comme représentant 0 ou-1, ce qui n’était probablement pas ce qui était prévu.
 
 Vous ne pourriez pas savoir que ce sont des champs de bits simplement en examinant le code. Était-ce voulu de conserver l'objet à une petite taille, ou la disposition binaire de l'objet était-elle utilisée ailleurs ? Nous avons remplacé ces objets par des membres BOOL ordinaires, car nous ne voyions pas de raison justifiant l'utilisation d'un champ de bits. L'utilisation de champs de bits pour limiter la taille d'un objet ne donne pas toujours le résultat escompté. Cela dépend de la façon dont le compilateur dispose le type.
 
@@ -542,7 +542,7 @@ Nous avons ajouté \_T autour du littéral de chaîne pour supprimer l’erreur.
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-Avec la macro \_T, un littéral de chaîne se compile en chaîne **char** ou **wchar_t**, selon le paramètre MBCS ou UNICODE choisi. Pour remplacer toutes les chaînes par \_T dans Visual Studio, ouvrez d’abord la zone **Remplacement rapide** (touches **Ctrl**+**F**) ou la zone **Remplacer dans les fichiers** (touches **Ctrl**+**Maj**+**H**), puis cochez la case **Utiliser des expressions régulières** . Entrez le texte recherché `((\".*?\")|('.+?'))` et le texte de remplacement `_T($1)`. Si la macro \_T existe déjà autour de certaines chaînes, cette procédure en ajoute une nouvelle. Pour les cas où la macro \_T n’est pas nécessaire (par exemple, avec `#include`), utilisez **Suivant** plutôt que **Remplacer tout**.
+Avec la macro \_T, un littéral de chaîne se compile en chaîne **char** ou **wchar_t**, selon le paramètre MBCS ou UNICODE choisi. Pour remplacer toutes les chaînes par \_T dans Visual Studio, ouvrez d’abord la zone **Remplacement rapide** (raccourci clavier : **Ctrl**+**F**) ou **Remplacer dans les fichiers** (raccourci clavier : **Ctrl**+**Maj**+**H**), puis cochez la case **Utiliser des expressions régulières**. Entrez le texte recherché `((\".*?\")|('.+?'))` et le texte de remplacement `_T($1)`. Si la macro \_T existe déjà autour de certaines chaînes, cette procédure en ajoute une nouvelle. Pour les cas où la macro \_T n’est pas nécessaire (par exemple, avec `#include`), utilisez **Suivant** plutôt que **Remplacer tout**.
 
 Cette fonction spécifique, [wsprintf](/windows/win32/api/winuser/nf-winuser-wsprintfw), est définie dans les en-têtes Windows, mais la documentation la concernant recommande de ne pas l’utiliser, en raison d’un risque de dépassement de mémoire. Aucune taille n'étant spécifiée pour la mémoire tampon `szTmp`, la fonction n'est pas en mesure de vérifier si la mémoire tampon sera suffisante pour contenir toutes les données qui y seront écrites. Consultez la section suivante sur le portage vers les fonctions CRT sécurisées, où nous verrons comment résoudre d'autres problèmes similaires. Nous l’avons finalement remplacée par [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
 
@@ -673,5 +673,5 @@ Il nous a fallu environ 20 heures de codage pendant une semaine pour porter la 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Portage et mise à niveau : Exemples et études de cas](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[Étude de cas précédente : COM Spy](../porting/porting-guide-com-spy.md)
+[Portage et mise à niveau : exemples et études de cas](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Étude de cas précédente : COMSpy](../porting/porting-guide-com-spy.md)

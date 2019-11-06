@@ -1,24 +1,24 @@
 ---
-title: Résoudre vos dépendances aux éléments internes de bibliothèque
+title: Corriger vos dépendances C++ sur les éléments internes de bibliothèque
 ms.date: 05/24/2017
 helpviewer_keywords:
 - library internals in an upgraded Visual Studio C++ project
 - _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: af395ea6f8c8e6a88bd2b003f0eee948bde8b6a9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 5486cd65a34e3ef69f3b2e948ba0ad020e68b326
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449103"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627010"
 ---
-# <a name="fix-your-dependencies-on-library-internals"></a>Résoudre vos dépendances aux éléments internes de bibliothèque
+# <a name="fix-your-dependencies-on-c-library-internals"></a>Corriger vos dépendances C++ sur les éléments internes de bibliothèque
 
 Microsoft a publié le code source de la bibliothèque standard, la majeure partie de la bibliothèque Runtime C ainsi que d’autres bibliothèques Microsoft de nombreuses versions de Visual Studio. L’objectif est de vous aider à comprendre le comportement de la bibliothèque pour que vous puissiez déboguer votre code. Un effet secondaire de la publication du code source de la bibliothèque fait que même si elles ne font pas partie de l’interface de la bibliothèque, certaines structures de données, fonctions et valeurs internes sont exposées. Celles-ci portent généralement un nom commençant par deux traits de soulignement, ou un trait de soulignement suivi d’une lettre majuscule, des noms que la norme C++ réserve aux implémentations. Ces valeurs, structures et fonctions sont des détails d’implémentation susceptibles de changer au fur et à mesure que les bibliothèques évoluent au fil du temps, c’est pourquoi nous vous déconseillons fortement de prendre des dépendances à elles. Si vous le faites, vous risquez d’avoir des problèmes et d’obtenir un code non portable lorsque vous tenterez de migrer votre code vers les nouvelles versions des bibliothèques.
 
 Dans la plupart des cas, la documentation sur les nouveautés ou les changements importants de chaque version de Visual Studio ne mentionne pas les modifications apportées aux éléments internes des bibliothèques. De toute façon, ces détails d’implémentation ne sont pas censés avoir une quelconque incidence pour vous. Toutefois, il est parfois très tentant d’utiliser le code qui est visible dans la bibliothèque. Cette rubrique décrit les dépendances à des éléments internes de la bibliothèque standard ou CRT sur lesquels vous avez pu vous appuyer, ainsi que la manière de mettre à jour votre code pour supprimer ces dépendances et le rendre plus portable, ou de migrer vers de nouvelles versions de la bibliothèque.
 
-## <a name="hashseq"></a>_Hash_seq
+## <a name="_hash_seq"></a>_Hash_seq
 
 La fonction de hachage interne `std::_Hash_seq(const unsigned char *, size_t)`, utilisée pour implémenter `std::hash` dans certains types de chaînes, était visible dans les versions récentes de la bibliothèque standard. Cette fonction implémentait un [hachage FNV-1a]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) dans une séquence de caractères.
 
@@ -76,6 +76,6 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Mise à niveau de projets à partir de versions antérieures de VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Mettre à niveau votre code vers la bibliothèque Universal CRT](upgrade-your-code-to-the-universal-crt.md)

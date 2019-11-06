@@ -51,12 +51,12 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 2a3c8d7019c271b2673e85e124d50139d34866c6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7b76f20516cbf20530f20d3f5b6d1978cfeaaef4
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947405"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626181"
 ---
 # <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
@@ -151,13 +151,13 @@ errno_t _mbsncat_s_l(
 ### <a name="parameters"></a>Paramètres
 
 *strDest*<br/>
-Chaîne de destination se terminant par un caractère Null.
+Chaîne de destination se terminant par un caractère null.
 
 *numberOfElements*<br/>
 Taille de la mémoire tampon de destination.
 
 *strSource*<br/>
-Chaîne source se terminant par null.
+Chaîne source se terminant par Null.
 
 *count*<br/>
 Nombre de caractères à ajouter ou [_TRUNCATE](../../c-runtime-library/truncate.md).
@@ -173,9 +173,9 @@ Retourne 0 si l’opération aboutit et un code d’erreur en cas d’échec.
 
 |*strDestination*|*numberOfElements*|*strSource*|Valeur de retour|Contenu de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null** ou inachevé|any|any|**EINVAL**|non modifié|
-|any|any|**NULL**|**EINVAL**|non modifié|
-|any|0 ou trop petit|any|**ERANGE**|non modifié|
+|**Null** ou inachevé|indifférent|indifférent|**EINVAL**|non modifié|
+|indifférent|indifférent|**NULL**|**EINVAL**|non modifié|
+|indifférent|0 ou trop petit|indifférent|**ERANGE**|non modifié|
 
 ## <a name="remarks"></a>Notes
 
@@ -183,7 +183,7 @@ Ces fonctions essaient d’ajouter les premiers caractères *d* de *strSource* �
 
 Il existe une exception au paragraphe ci-dessus. Si le *nombre* est [_TRUNCATE](../../c-runtime-library/truncate.md) , la plus grande partie de *strSource* est ajoutée à *strDest* , tout en laissant de l’espace pour ajouter une valeur null de fin.
 
-Par exemple,
+Par exemple :
 
 ```C
 char dst[5];
@@ -199,7 +199,7 @@ Si le comportement de troncation est nécessaire, utilisez **_TRUNCATE** ou ajus
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
 ```
 
-ou Gestionnaire de configuration
+or
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
@@ -211,11 +211,11 @@ Si *strSource* ou *StrDest* a la **valeur null**, ou si est *NumberOfElements* e
 
 **wcsncat_s** et **_mbsncat_s** sont des versions à caractères larges et à caractères multioctets de **strncat_s**. Les arguments de chaîne et la valeur de retour de **wcsncat_s** sont des chaînes à caractères larges ; ceux de **_mbsncat_s** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d'informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -226,7 +226,7 @@ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 
 
 **_strncat_s_l** et **_wcsncat_s_l** n’ont aucune dépendance des paramètres régionaux ; ils sont fournis uniquement pour **_tcsncat_s_l**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -234,7 +234,7 @@ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 
 |**wcsncat_s**|\<string.h> ou \<wchar.h>|
 |**_mbsncat_s**, **_mbsncat_s_l**|\<mbstring.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

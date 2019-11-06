@@ -3,12 +3,12 @@ title: Connexion à votre système Linux cible dans Visual Studio
 description: Comment se connecter à un ordinateur Linux distant ou WSL à partir d’un projet C++ Visual Studio.
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 3d91faa7aa83c86e8c2f3544ee61c16f75f8c346
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925560"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626776"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Connexion à votre système Linux cible dans Visual Studio
 
@@ -79,6 +79,20 @@ Pour configurer cette connexion distante :
    Les journaux incluent les connexions, toutes les commandes envoyées à la machine distante (leur texte, le code de sortie et la durée d’exécution) et toutes les sorties de Visual Studio à dans l’interpréteur de commandes. La journalisation fonctionne pour n’importe quel projet CMake multiplateforme ou projet Linux basé sur MSBuild dans Visual Studio.
 
    Vous pouvez configurer la sortie pour qu’elle soit écrite dans un fichier ou dans le volet de **Journalisation multiplateforme** dans la fenêtre Sortie. Pour les projets Linux basés sur MSBuild, les commandes émises par MSBuild sur la machine distante ne sont pas acheminées vers la **fenêtre Sortie**, car elles sont émises en dehors du processus. Au lieu de cela, elles sont enregistrées dans un fichier avec le préfixe « msbuild_ ».
+   
+## <a name="tcp-port-forwarding"></a>Réacheminement de port TCP
+
+Le support Linux de Visual Studio dépend de la réacheminement de port TCP. La **synchronisation** et la **gdbserver** sont affectées si le transfert de port TCP est désactivé sur votre système distant. 
+
+La synchronisation est utilisée par les projets Linux basés sur MSBuild et les projets CMake pour [copier les en-têtes de votre système distant vers Windows à utiliser pour IntelliSense](configure-a-linux-project.md#remote_intellisense). Si vous n’êtes pas en mesure d’activer le transfert de port TCP, vous pouvez désactiver le téléchargement automatique des en-têtes distants via Outils > Options > inter-plateforme > Gestionnaire de connexions > Gestionnaire d’en-têtes distants IntelliSense. Si le réacheminement de port TCP n’est pas activé sur le système distant auquel vous essayez de vous connecter, l’erreur suivante s’affiche lorsque le téléchargement des en-têtes distants pour IntelliSense démarre.
+
+![Erreur en-têtes](media/port-forwarding-headers-error.png)
+
+La synchronisation de la synchronisation est également utilisée par la prise en charge CMake de Visual Studio pour copier les fichiers sources sur le système distant. Si vous n’êtes pas en mesure d’activer le transfert de port TCP, vous pouvez utiliser SFTP comme méthode de copie distante de sources. Sftp est généralement plus lent que la synchronisation d’annuaire, mais ne dépend pas du transfert de port TCP. Vous pouvez gérer votre méthode de copie distante de sources à l’aide de la propriété remoteCopySourcesMethod dans l' [éditeur de paramètres cmake](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects). Si le transfert de port TCP est désactivé sur votre système distant, vous verrez une erreur dans la fenêtre de sortie CMake lors de la première exécution de la synchronisation.
+
+![Erreur de synchronisation](media/port-forwarding-copy-error.png)
+
+Gdbserver peut être utilisé pour le débogage sur des appareils intégrés. Si vous n’êtes pas en mesure d’activer le transfert de port TCP, vous devez utiliser gdb pour tous les scénarios de débogage distant. Gdb est utilisé par défaut lors du débogage de projets sur un système distant. 
 
    ::: moniker-end
 

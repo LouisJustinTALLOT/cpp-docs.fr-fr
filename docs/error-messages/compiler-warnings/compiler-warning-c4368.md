@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4368
 ms.assetid: cb85bcee-fd3d-4aa5-b626-2324f07a4f1b
-ms.openlocfilehash: b2af1166738d867c84ff4ebae832f831af7940ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1870d076d21c02574793a8079c4658b39ebf121
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311492"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623646"
 ---
 # <a name="compiler-warning-c4368"></a>Avertissement du compilateur C4368
 
-Impossible de définir 'membre' en tant que membre de 'type' managé : les types mixtes ne sont pas pris en charge.
+Impossible de définir’Member’en tant que membre de’type’managé : les types mixtes ne sont pas pris en charge
 
-Vous ne pouvez pas incorporer un membre de données native dans un type CLR.
+Vous ne pouvez pas incorporer un membre de données natif dans un type CLR.
 
-Toutefois, vous pouvez déclarer un pointeur vers un type natif et contrôler sa durée de vie dans le constructeur et le destructeur et le finaliseur de votre classe managée. Pour plus d’informations, consultez [destructeurs et finaliseurs](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Toutefois, vous pouvez déclarer un pointeur vers un type natif et contrôler sa durée de vie dans le constructeur et le destructeur et le finaliseur de votre classe managée. Pour plus d’informations [, consultez destructeurs et finaliseurs](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
-Cet avertissement est toujours émis en tant qu’erreur. Utilisez le [avertissement](../../preprocessor/warning.md) pragma pour désactiver l’erreur C4368.
+Cet avertissement est toujours émis en tant qu’erreur. Utilisez le pragma [Warning](../../preprocessor/warning.md) pour désactiver C4368.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4368.
+L’exemple suivant génère l’C4368.
 
-```
+```cpp
 // C4368.cpp
 // compile with: /clr /c
 struct N {};
