@@ -1,21 +1,21 @@
 ---
 title: .MMX
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .MMX
 helpviewer_keywords:
 - .MMX directive
 ms.assetid: 69d360cb-b530-46e3-9cfe-204d71baa38d
-ms.openlocfilehash: f9851ca0f778543c81948e65bcbb234adc22a198
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a65aead34c34bee0cf3cdc3825cc568aa5690d1a
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178486"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703659"
 ---
-# <a name="mmx"></a>.MMX
+# <a name="mmx-32-bit-masm"></a>. MMX (MASM 32 bits)
 
-Permet d’assembly de MMX ou instruction unique, plusieurs instructions de données (SIMD).
+Active l’assemblage d’instructions MMX ou à instruction unique, à plusieurs données (SIMD). (uniquement MASM 32 bits.)
 
 ## <a name="syntax"></a>Syntaxe
 

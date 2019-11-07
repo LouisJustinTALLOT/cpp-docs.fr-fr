@@ -1,29 +1,29 @@
 ---
 title: INVOKE
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - Invoke
 helpviewer_keywords:
 - INVOKE directive
 ms.assetid: 12d9bb40-33b9-411e-b801-45a1d675967e
-ms.openlocfilehash: efa8f710701e15845c3a6a22ba024c9cf1882457
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853bc9cd22d866357a4cd2d695beccc3efc20acf
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202616"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703959"
 ---
-# <a name="invoke"></a>INVOKE
+# <a name="invoke-32-bit-masm"></a>INVOKE (MASM 32 bits)
 
-Appelle la procédure à l’adresse indiquée par *expression*, en transmettant les arguments sur la pile ou dans les registres selon les conventions d’appel standards du type de langage.
+Appelle la procédure à l’adresse donnée par l' *expression*, en passant les arguments sur la pile ou dans les registres en fonction des conventions d’appel standard du type de langage. (uniquement MASM 32 bits.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> INVOKE *expression* [[, *arguments*]]
+> INVOKE, *expression* [[, *arguments*]]
 
 ## <a name="remarks"></a>Notes
 
-Chaque argument passé à la procédure peut être une expression, une paire de registres ou une expression d’adresse (précédé d’une expression `ADDR`).
+Chaque argument passé à la procédure peut être une expression, une paire de registres ou une expression d’adresse (une expression précédée de `ADDR`).
 
 ## <a name="see-also"></a>Voir aussi
 

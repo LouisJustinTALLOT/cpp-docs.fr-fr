@@ -1,21 +1,21 @@
 ---
 title: .DOSSEG
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .DOSSEG
 helpviewer_keywords:
 - .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
-ms.openlocfilehash: 28b3e351030ee83693c0fec5568aacf9b4b77c27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f0388c3df9804c0cdb105162a962a44fe207345
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204359"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703319"
 ---
-# <a name="dosseg"></a>.DOSSEG
+# <a name="dosseg-32-bit-masm"></a>. DOSSEG ((MASM 32 bits)
 
-Les segments conformément à la convention de segment MS-DOS des commandes : CODE first, puis DGROUP de segments et puis segments dans DGROUP.
+Classe les segments en fonction de la Convention de segment MS-DOS : CODE First, puis segments not in DGROUP, puis segments in DGROUP. (uniquement MASM 32 bits.)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,7 +23,7 @@ Les segments conformément à la convention de segment MS-DOS des commandes : C
 
 ## <a name="remarks"></a>Notes
 
-Les segments dans DGROUP suivent cet ordre : segments hors BSS ou de la pile, les segments BSS et segments de pile. Principalement utilisé pour garantir la prise en charge de CodeView dans les programmes autonomes MASM. Identique à [DOSSEG](../../assembler/masm/dosseg.md).
+Les segments dans DGROUP suivent cet ordre : les segments non dans BSS ou STACK, les segments BSS et enfin les segments de pile. Principalement utilisé pour garantir la prise en charge de CodeView dans les programmes autonomes MASM. Identique à [dosseg (](../../assembler/masm/dosseg.md).
 
 ## <a name="see-also"></a>Voir aussi
 

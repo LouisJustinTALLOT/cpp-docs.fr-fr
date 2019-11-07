@@ -6,33 +6,33 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-ms.openlocfilehash: 22f2c5c6c162e459470f9babab66c61c096540ec
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1a688870f4700e8e3b935245f2c9243f8d5aa823
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "70311869"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73704092"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hébergement d'un contrôle utilisateur Windows Form dans une boîte de dialogue MFC
 
-MFC héberge un contrôle de Windows Forms comme un type spécial de contrôle ActiveX et communique avec le contrôle à l’aide d’interfaces ActiveX, ainsi que des <xref:System.Windows.Forms.Control> propriétés et des méthodes de la classe. Nous vous recommandons d’utiliser des propriétés et des méthodes .NET Framework pour fonctionner sur le contrôle.
+MFC héberge un contrôle de Windows Forms comme un type spécial de contrôle ActiveX et communique avec le contrôle à l’aide d’interfaces ActiveX, ainsi que des propriétés et des méthodes de la classe <xref:System.Windows.Forms.Control>. Nous vous recommandons d’utiliser des propriétés et des méthodes .NET Framework pour fonctionner sur le contrôle.
 
-Pour obtenir un exemple d’application qui montre Windows Forms utilisé avec MFC, consultez [MFC and Windows Forms Integration](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Pour obtenir un exemple d’application qui montre Windows Forms utilisé avec MFC, consultez [MFC and Windows Forms Integration](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
 
 > [!NOTE]
->  Dans la version actuelle, un `CDialogBar` objet ne peut pas héberger des contrôles Windows Forms.
+>  Dans la version actuelle, un objet `CDialogBar` ne peut pas héberger des contrôles Windows Forms.
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Guide pratique : créer le contrôle utilisateur et l’héberger dans une boîte de dialogue](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)
+[Guide pratique pour créer le contrôle utilisateur et l’héberger dans une boîte de dialogue](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)
 
-[Guide pratique pour Liaison de données DDX/DDV avec Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
+[Comment : effectuer une liaison de données DDX/DDV avec Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
 
 [Guide pratique pour recevoir des événements Windows Forms de classes C++ natives](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
-## <a name="reference"></a>Référence
+## <a name="reference"></a>Reference
 
-[CWinFormsControl, classe](../mfc/reference/cwinformscontrol-class.md) &#124; [CDialog, classe](../mfc/reference/cdialog-class.md) &#124; [CWnd, classe](../mfc/reference/cwnd-class.md) &#124; <xref:System.Windows.Forms.Control>
+&#124; Classe [CWinFormsControl](../mfc/reference/cwinformscontrol-class.md) [CDialog](../mfc/reference/cdialog-class.md) &#124; Class [CWnd](../mfc/reference/cwnd-class.md) &#124; <xref:System.Windows.Forms.Control>
 
 ## <a name="see-also"></a>Voir aussi
 
