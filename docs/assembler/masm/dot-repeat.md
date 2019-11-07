@@ -1,27 +1,27 @@
 ---
 title: .REPEAT
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .REPEAT
 helpviewer_keywords:
 - .REPEAT directive
 ms.assetid: cb8ad8c6-587b-42f9-a0ad-b5316a24918c
-ms.openlocfilehash: ac136bba4c349c84f81248bed12570c02e91577b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0533397c60c83f22b10c84ec72aa6eb65a71e4c0
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203996"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703574"
 ---
-# <a name="repeat"></a>.REPEAT
+# <a name="repeat-32-bit-masm"></a>. REPEAT (MASM 32 bits)
 
-Génère du code qui répète l’exécution du bloc de *instructions* jusqu'à ce que `condition` prend la valeur true. [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), qui prend la valeur true lorsque CX est égal à zéro, peut être remplacé par [. Jusqu'à ce que](../../assembler/masm/dot-until.md). Le `condition` est facultatif avec **. UNTILCXZ**.
+Génère du code qui répète l’exécution du bloc d' *instructions* jusqu’à ce que `condition` devienne true. [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), qui devient true lorsque CX est égal à zéro, peut être substitué à [. JUSQU’à](../../assembler/masm/dot-until.md). La `condition` est facultative avec **. UNTILCXZ**. (uniquement MASM 32 bits.)
 
 ## <a name="syntax"></a>Syntaxe
 
 > .REPEAT<br/>
 > instructions<br/>
-> . Jusqu'à ce que la condition
+> . Condition UNTIL
 
 ## <a name="see-also"></a>Voir aussi
 
