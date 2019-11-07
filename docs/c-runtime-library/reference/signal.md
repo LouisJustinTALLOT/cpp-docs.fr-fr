@@ -23,12 +23,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 04869412272725108911f13857585e650ad20ab9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 232bf7bc518907db8744fbb85e0f3a33c9296006
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948107"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625853"
 ---
 # <a name="signal"></a>signal
 
@@ -109,13 +109,13 @@ Les signaux **SIGILL** et **SIGTERM** ne sont pas générés sous Windows. Ils s
 
 Les paramètres de signal ne sont pas conservés dans les processus générés créés par les appels aux fonctions [_exec](../../c-runtime-library/exec-wexec-functions.md) ou [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) . Les valeurs par défaut des paramètres de signal sont réinitialisées dans le nouveau processus.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**signal**|\<signal.h>|
+|**signal**|\<signal.h >|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -127,7 +127,6 @@ L’exemple suivant montre comment utiliser **signal** pour ajouter un comportem
 // Use signal to attach a signal handler to the abort routine
 #include <stdlib.h>
 #include <signal.h>
-#include <tchar.h>
 
 void SignalHandler(int signal)
 {
@@ -149,9 +148,16 @@ int main()
 }
 ```
 
+La sortie dépend de la version du runtime utilisée, du fait que l’application soit une console ou une application Windows, et sur les paramètres du Registre Windows. Pour une application console, un message semblable à celui-ci peut être envoyé à stderr :
+
 ```Output
-This application has requested the Runtime to terminate it in an unusual way.
-Please contact the application's support team for more information.
+Debug Error!
+
+Program: c:\Projects\crt_signal\Debug\crt_signal.exe
+
+R6010
+
+- abort() has been called
 ```
 
 ## <a name="see-also"></a>Voir aussi
