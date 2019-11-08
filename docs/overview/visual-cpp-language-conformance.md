@@ -1,16 +1,16 @@
 ---
 title: Tableau de conformité du langage Microsoft C++
-ms.date: 08/12/2019
+ms.date: 10/31/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.openlocfilehash: e3e86acb81120af1b663b56681ff0f8c41036b5a
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631646"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754072"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tableau de conformité du langage Microsoft C++
 
@@ -172,7 +172,7 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[P0463R1 endian](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|Non|
 |&nbsp;&nbsp;[P0475R1 Élision de copie garantie pour la construction par morceaux](https://wg21.link/P0475R1)|Non|
 |&nbsp;&nbsp;[P0476R2 <bit> bit_cast](https://wg21.link/P0476R2)|Non|
-|&nbsp;&nbsp;[P0482R6 char8_t : Un type pour les caractères et chaînes UTF-8](https://wg21.link/P0482R6)|Non|
+|&nbsp;&nbsp;[P0482R6 char8_t : type pour les chaînes et les caractères UTF-8](https://wg21.link/P0482R6)|Non|
 |&nbsp;&nbsp;[P0487R1 Opérateur de résolution>>(basic_istream &,CharT*)](https://wg21.link/P0487R1)|Non|
 |&nbsp;&nbsp;[P0528R3 Comparaison et échange atomique avec remplissage de Bits](https://wg21.link/P0528R3)|Non|
 |&nbsp;&nbsp;[P0556R3 <bit> ispow2(), ceil2(), floor2(), log2p1()](https://wg21.link/P0556R3)|Non|
@@ -233,7 +233,7 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[N4562 Notions de base des bibliothèques : \<optional>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#optional)|VS 2017 15.0|
 |&nbsp;&nbsp;[N4562 Notions de base des bibliothèques : \<string_view>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#string.view)|VS 2017 15.0|
 |&nbsp;&nbsp;[N4562 Notions de base des bibliothèques : \<tuple> apply()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#tuple)|VS 2017 15.0|
-|&nbsp;&nbsp;[N4562 Library Fundamentals: Boyer-Moore search()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 Résolution des types de retour de la fonction de recherche](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[N4562 Notions de base des bibliothèques : Boyer-Moore search()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 Résolution des types de retour de la fonction de recherche](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0003R5 Suppression des spécifications d’exceptions dynamiques](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0004R1 Suppression d’alias iostreams déconseillés](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0004r1.html)|VS 2015.2 <sup>[rem](#note_rem)</sup>|
 |&nbsp;&nbsp;[P0005R4 not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)<br/>&nbsp;&nbsp;[P0358R1 Correctifs pour not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
@@ -346,7 +346,7 @@ L’option de compilateur [/Zc:noexceptTypes](../build/reference/zc-noexcepttype
 
 <a name="note_B"></a>__B__ Pris en charge dans le mode [/permissive-](../build/reference/permissive-standards-conformance.md) dans Visual Studio 2017 15.7. Pour plus d’informations, consultez [Prise en charge d’une recherche de nom en deux phases avec MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/).
 
-<a name="note_C"></a>__C__ La prise en charge par le compilateur des règles de préprocesseur C99 est incomplète dans Visual Studio 2017. Les macros variadiques sont prises en charge, mais le comportement du préprocesseur présente de nombreux bogues. Nous restructurons actuellement le préprocesseur, et nous distribuerons à titre expérimental ces changements en mode [/permissive-](../build/reference/permissive-standards-conformance.md) sous peu.
+<a name="note_C"></a>__C__ La prise en charge par le compilateur des règles de préprocesseur C99 est incomplète dans Visual Studio 2017. Nous recherchons le préprocesseur et avons commencé à expédier ces modifications dans Visual Studio 2017 version 15,8 avec le commutateur de compilateur de [préprocesseur/experimental :](../build/reference/experimental-preprocessor.md) .
 
 <a name="note_D"></a>__D__ Pris en charge sous [/std:c++14](../build/reference/std-specify-language-standard-version.md) avec un avertissement pouvant être supprimé, [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md).
 
@@ -367,14 +367,14 @@ L’option de compilateur [/Zc:noexceptTypes](../build/reference/zc-noexcepttype
 <a name="note_rem"></a>__rem__ Fonctionnalités supprimées lorsque l’option du compilateur [/std:c++17](../build/reference/std-specify-language-standard-version.md) (ou [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) est spécifiée. Ces fonctionnalités peuvent être réactivées pour faciliter la transition vers des modes de langage plus récents à l’aide des macros suivants : `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS`, et `_HAS_UNEXPECTED`.
 
 <a name="note_charconv"></a>__charconv__ `from_chars()` et `to_chars()` sont disponibles pour les entiers. La chronologie correspondant aux virgules flottantes `from_chars()` et `to_chars()` se présente comme suit :
-- VS 2017 15.7 : Entier `from_chars()` et `to_chars()`.
-- VS 2017 15.8 : Virgule flottante `from_chars()`.
-- VS 2017 15.9 : La virgule flottante `to_chars()` est surchargée pour la décimale la plus courte.
-- VS 2019 16.0 : La virgule flottante `to_chars()` est surchargée pour l’hexadécimale la plus courte et l’hexadécimale de précision.
-- VS 2019 16.2 : La virgule flottante `to_chars()` est surchargée pour les précisions corrigées et scientifiques.
-- Pas encore implémenté : La virgule flottante `to_chars()` est surchargée pour la précision générale. 
+- VS 2017 15,7 : entier `from_chars()` et `to_chars()`.
+- VS 2017 15,8 : `from_chars()`à virgule flottante.
+- VS 2017 15,9 : virgule flottante `to_chars()` surcharges pour la valeur décimale la plus petite.
+- VS 2019 16,0 : virgule flottante `to_chars()` surcharges pour les valeurs hexadécimales hex et de précision les plus courtes.
+- VS 2019 16,2 : virgule flottante `to_chars()` surcharges pour la précision fixe et la précision scientifique.
+- Pas encore implémenté : la surcharge de `to_chars()` à virgule flottante pour la précision générale. 
 
-<a name ="note_parallel"></a> __parallel__ La bibliothèque d’algorithmes parallèles de C++17 est terminée. Cela ne signifie pas que chaque algorithme est parallélisé dans chaque cas. Les algorithmes les plus importants ont été parallélisés, et des signatures de stratégie d’exécution sont fournies même lorsque les algorithmes ne sont pas parallélisés. L’en-tête interne central de notre implémentation, yvals_core.h, contient les « notes d’algorithmes parallèles » suivantes : C++ permet une implémentation qui implémente des algorithmes parallèles comme appels aux algorithmes de série.  Cette implémentation parallélise plusieurs appels d’algorithme courants, mais pas tous.
+<a name ="note_parallel"></a> __parallel__ La bibliothèque d’algorithmes parallèles de C++17 est terminée. Cela ne signifie pas que chaque algorithme est parallélisé dans chaque cas. Les algorithmes les plus importants ont été parallélisés, et des signatures de stratégie d’exécution sont fournies même lorsque les algorithmes ne sont pas parallélisés. L’en-tête interne central de l’implémentation, yvals_core. h, contient les « remarques sur les algorithmes parallèles » suivantes : C++ permet à une implémentation d’implémenter des algorithmes parallèles comme appels aux algorithmes série.  Cette implémentation parallélise plusieurs appels d’algorithme courants, mais pas tous.
 
 Les algorithmes suivants sont parallélisés :
 
