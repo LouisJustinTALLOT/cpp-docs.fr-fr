@@ -4102,7 +4102,7 @@
                   href: cpp/binary-operators.md
                 - name: Attribution
                   href: cpp/assignment.md
-                - name: 'Appel de fonction '
+                - name: Appel de fonction
                   href: cpp/function-call-cpp.md
                 - name: Indices
                   href: cpp/subscripting.md
@@ -4714,6 +4714,8 @@
               items:
                 - name: Préprocesseur
                   href: preprocessor/preprocessor.md
+                - name: Vue d’ensemble d’un préprocesseur expérimental
+                  href: preprocessor/preprocessor-experimental-overview.md
                 - name: Phases de traduction
                   href: preprocessor/phases-of-translation.md
                 - name: Directives de préprocesseur
@@ -5715,7 +5717,7 @@
                       href: assembler/masm/operator-single-quote.md
                     - name: opérateur !
                       href: assembler/masm/operator-logical-not-masm.md
-                    - name: ';, opérateur '
+                    - name: ';, opérateur'
                       href: assembler/masm/operator-semicolon.md
                     - name: ';;, opérateur'
                       href: assembler/masm/operator-semicolons.md
@@ -8335,14 +8337,14 @@
                   items:
                     - name: <algorithm>
                       href: standard-library/algorithm.md
-                    - name: 'fonctions<algorithm> '
+                    - name: fonctions<algorithm>
                       href: standard-library/algorithm-functions.md
                 - name: <allocators>
                   expanded: false
                   items:
                     - name: <allocators>
                       href: standard-library/allocators-header.md
-                    - name: 'fonctions<allocators> '
+                    - name: fonctions<allocators>
                       href: standard-library/allocators-functions.md
                     - name: '<allocators>, opérateurs'
                       href: standard-library/allocators-operators.md
@@ -8391,7 +8393,7 @@
                   items:
                     - name: <any>
                       href: standard-library/any.md
-                    - name: 'fonctions<any> '
+                    - name: fonctions<any>
                       href: standard-library/any-functions.md
                     - name: 'any, classe (bibliothèque standard C++)'
                       href: standard-library/any-class.md
@@ -8400,7 +8402,7 @@
                   items:
                     - name: <array>
                       href: standard-library/array.md
-                    - name: 'fonctions<array> '
+                    - name: fonctions<array>
                       href: standard-library/array-functions.md
                     - name: '<array>, opérateurs'
                       href: standard-library/array-operators.md
@@ -8415,7 +8417,7 @@
                       href: standard-library/atomic-structure.md
                     - name: 'atomic_flag, struct'
                       href: standard-library/atomic-flag-structure.md
-                    - name: 'fonctions<atomic> '
+                    - name: fonctions<atomic>
                       href: standard-library/atomic-functions.md
                     - name: '<atomic>, énumérations'
                       href: standard-library/atomic-enums.md
@@ -8445,7 +8447,7 @@
                   items:
                     - name: <chrono>
                       href: standard-library/chrono.md
-                    - name: 'fonctions<chrono> '
+                    - name: fonctions<chrono>
                       href: standard-library/chrono-functions.md
                     - name: '<chrono>, opérateurs'
                       href: standard-library/chrono-operators.md
@@ -8493,7 +8495,7 @@
                   items:
                     - name: <complex>
                       href: standard-library/complex.md
-                    - name: 'fonctions<complex> '
+                    - name: fonctions<complex>
                       href: standard-library/complex-functions.md
                     - name: '<complex>, opérateurs'
                       href: standard-library/complex-operators.md
@@ -8555,7 +8557,7 @@
                   items:
                     - name: <deque>
                       href: standard-library/deque.md
-                    - name: 'fonctions<deque> '
+                    - name: fonctions<deque>
                       href: standard-library/deque-functions.md
                     - name: '<deque>, opérateurs'
                       href: standard-library/deque-operators.md
@@ -8566,7 +8568,7 @@
                   items:
                     - name: <exception>
                       href: standard-library/exception.md
-                    - name: 'fonctions<exception> '
+                    - name: fonctions<exception>
                       href: standard-library/exception-functions.md
                     - name: '<exception>, typedefs'
                       href: standard-library/exception-typedefs.md
@@ -8583,7 +8585,7 @@
                       href: standard-library/filesystem.md
                     - name: '<filesystem>, opérateurs'
                       href: standard-library/filesystem-operators.md
-                    - name: 'fonctions<filesystem> '
+                    - name: fonctions<filesystem>
                       href: standard-library/filesystem-functions.md
                     - name: '<filesystem>, énumerations'
                       href: standard-library/filesystem-enumerations.md
@@ -8632,7 +8634,7 @@
                   items:
                     - name: <functional>
                       href: standard-library/functional.md
-                    - name: 'fonctions<functional> '
+                    - name: fonctions<functional>
                       href: standard-library/functional-functions.md
                     - name: '<functional>, opérateurs'
                       href: standard-library/functional-operators.md
@@ -8717,7 +8719,7 @@
                   items:
                     - name: <future>
                       href: standard-library/future.md
-                    - name: 'fonctions<future> '
+                    - name: fonctions<future>
                       href: standard-library/future-functions.md
                     - name: '<future>, énumérations'
                       href: standard-library/future-enums.md
@@ -8777,14 +8779,14 @@
                   items:
                     - name: <iomanip>
                       href: standard-library/iomanip.md
-                    - name: 'fonctions<iomanip> '
+                    - name: fonctions<iomanip>
                       href: standard-library/iomanip-functions.md
                 - name: <ios>
                   expanded: false
                   items:
                     - name: <ios>
                       href: standard-library/ios.md
-                    - name: 'fonctions<ios> '
+                    - name: fonctions<ios>
                       href: standard-library/ios-functions.md
                     - name: '<ios>, typedefs'
                       href: standard-library/ios-typedefs.md
@@ -8803,7 +8805,7 @@
                   items:
                     - name: <istream>
                       href: standard-library/istream.md
-                    - name: 'fonctions<istream> '
+                    - name: fonctions<istream>
                       href: standard-library/istream-functions.md
                     - name: '<istream>, opérateurs'
                       href: standard-library/istream-operators.md
@@ -8818,7 +8820,7 @@
                   items:
                     - name: <iterator>
                       href: standard-library/iterator.md
-                    - name: 'fonctions<iterator> '
+                    - name: fonctions<iterator>
                       href: standard-library/iterator-functions.md
                     - name: '<iterator>, opérateurs'
                       href: standard-library/iterator-operators.md
@@ -8881,7 +8883,7 @@
                   items:
                     - name: <locale>
                       href: standard-library/locale.md
-                    - name: 'fonctions<locale> '
+                    - name: fonctions<locale>
                       href: standard-library/locale-functions.md
                     - name: 'codecvt, classe'
                       href: standard-library/codecvt-class.md
@@ -8946,7 +8948,7 @@
                   items:
                     - name: <map>
                       href: standard-library/map.md
-                    - name: 'fonctions<map> '
+                    - name: fonctions<map>
                       href: standard-library/map-functions.md
                     - name: '<map>, opérateurs'
                       href: standard-library/map-operators.md
@@ -8961,7 +8963,7 @@
                   items:
                     - name: <memory>
                       href: standard-library/memory.md
-                    - name: 'fonctions<memory> '
+                    - name: fonctions<memory>
                       href: standard-library/memory-functions.md
                     - name: '<memory>, opérateurs'
                       href: standard-library/memory-operators.md
@@ -9005,7 +9007,7 @@
                   items:
                     - name: <mutex>
                       href: standard-library/mutex.md
-                    - name: 'fonctions<mutex> '
+                    - name: fonctions<mutex>
                       href: standard-library/mutex-functions.md
                     - name: 'adopt_lock_t, struct'
                       href: standard-library/adopt-lock-t-structure.md
@@ -9032,7 +9034,7 @@
                   items:
                     - name: <new>
                       href: standard-library/new.md
-                    - name: 'fonctions<new> '
+                    - name: fonctions<new>
                       href: standard-library/new-functions.md
                     - name: '<new>, typedefs'
                       href: standard-library/new-typedefs.md
@@ -9047,14 +9049,14 @@
                   items:
                     - name: <numeric>
                       href: standard-library/numeric.md
-                    - name: 'fonctions<numeric> '
+                    - name: fonctions<numeric>
                       href: standard-library/numeric-functions.md
                 - name: <optional>
                   expanded: false
                   items:
                     - name: <optional>
                       href: standard-library/optional.md
-                    - name: 'fonctions<optional> '
+                    - name: fonctions<optional>
                       href: standard-library/optional-functions.md
                     - name: '<optional>, opérateurs'
                       href: standard-library/optional-operators.md
@@ -9067,7 +9069,7 @@
                       href: standard-library/ostream.md
                     - name: basic_ostream (classe)
                       href: standard-library/basic-ostream-class.md
-                    - name: 'fonctions<ostream> '
+                    - name: fonctions<ostream>
                       href: standard-library/ostream-functions.md
                     - name: '<ostream>, opérateurs'
                       href: standard-library/ostream-operators.md
@@ -9089,7 +9091,7 @@
                   items:
                     - name: <random>
                       href: standard-library/random.md
-                    - name: 'fonctions<random> '
+                    - name: fonctions<random>
                       href: standard-library/random-functions.md
                     - name: 'bernoulli_distribution, classe'
                       href: standard-library/bernoulli-distribution-class.md
@@ -9154,7 +9156,7 @@
                   items:
                     - name: <regex>
                       href: standard-library/regex.md
-                    - name: 'fonctions<regex> '
+                    - name: fonctions<regex>
                       href: standard-library/regex-functions.md
                     - name: '<regex>, opérateurs'
                       href: standard-library/regex-operators.md
@@ -9194,7 +9196,7 @@
                   items:
                     - name: <set>
                       href: standard-library/set.md
-                    - name: 'fonctions<set> '
+                    - name: fonctions<set>
                       href: standard-library/set-functions.md
                     - name: '<set>, opérateurs'
                       href: standard-library/set-operators.md
@@ -9209,7 +9211,7 @@
                   items:
                     - name: <sstream>
                       href: standard-library/sstream.md
-                    - name: 'fonctions<sstream> '
+                    - name: fonctions<sstream>
                       href: standard-library/sstream-functions.md
                     - name: '<sstream>, typedefs'
                       href: standard-library/sstream-typedefs.md
@@ -9267,7 +9269,7 @@
                   items:
                     - name: <string>
                       href: standard-library/string.md
-                    - name: 'fonctions<string> '
+                    - name: fonctions<string>
                       href: standard-library/string-functions.md
                     - name: '<string>, opérateurs'
                       href: standard-library/string-operators.md
@@ -9339,7 +9341,7 @@
                   items:
                     - name: <thread>
                       href: standard-library/thread.md
-                    - name: 'fonctions<thread> '
+                    - name: fonctions<thread>
                       href: standard-library/thread-functions.md
                     - name: '<thread>, opérateurs'
                       href: standard-library/thread-operators.md
@@ -9352,7 +9354,7 @@
                   items:
                     - name: <tuple>
                       href: standard-library/tuple.md
-                    - name: 'fonctions<tuple> '
+                    - name: fonctions<tuple>
                       href: standard-library/tuple-functions.md
                     - name: '<tuple>, opérateurs'
                       href: standard-library/tuple-operators.md
@@ -9595,7 +9597,7 @@
                   items:
                     - name: <utility>
                       href: standard-library/utility.md
-                    - name: 'fonctions<utility> '
+                    - name: fonctions<utility>
                       href: standard-library/utility-functions.md
                     - name: '<utility>, opérateurs'
                       href: standard-library/utility-operators.md
@@ -9608,7 +9610,7 @@
                   items:
                     - name: <valarray>
                       href: standard-library/valarray.md
-                    - name: 'fonctions<valarray> '
+                    - name: fonctions<valarray>
                       href: standard-library/valarray-functions.md
                     - name: '<valarray>, opérateurs'
                       href: standard-library/valarray-operators.md
@@ -9633,7 +9635,7 @@
                   items:
                     - name: <variant>
                       href: standard-library/variant.md
-                    - name: 'fonctions<variant> '
+                    - name: fonctions<variant>
                       href: standard-library/variant-functions.md
                     - name: '<variant>, opérateurs'
                       href: standard-library/variant-operators.md
@@ -9661,7 +9663,7 @@
                               href: standard-library/vector-bool-reference-operator-bool.md
                             - name: 'vector<bool>::reference::operator='
                               href: standard-library/vector-bool-reference-operator-assign.md
-                    - name: 'fonctions<vector> '
+                    - name: fonctions<vector>
                       href: standard-library/vector-functions.md
                     - name: '<vector>, opérateurs'
                       href: standard-library/vector-operators.md
@@ -10419,9 +10421,9 @@
                           href: parallel/concrt/reference/single-link-registry-class.md
                         - name: 'source_block, classe'
                           href: parallel/concrt/reference/source-block-class.md
-                        - name: 'source_link_manager, classe'
+                        - name: source_link_manager (classe)
                           href: parallel/concrt/reference/source-link-manager-class.md
-                        - name: static_partitioner (classe)
+                        - name: 'static_partitioner, classe'
                           href: parallel/concrt/reference/static-partitioner-class.md
                         - name: 'structured_task_group, classe'
                           href: parallel/concrt/reference/structured-task-group-class.md
