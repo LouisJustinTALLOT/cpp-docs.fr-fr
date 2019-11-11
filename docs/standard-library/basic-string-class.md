@@ -116,12 +116,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 6983baacd9cc40d916f2e1e6213dde1f92e23ea3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: c77c09394bb8997168d8a6756da69e9545dad0a2
+ms.sourcegitcommit: 4a0a108aa6f042576a777feb6dcb310dc0bb9230
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689950"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842318"
 ---
 # <a name="basic_string-class"></a>basic_string, classe
 
@@ -137,12 +137,12 @@ class basic_string;
 ### <a name="parameters"></a>Paramètres
 
 *CharType* \
-Type de données d'un seul caractère à stocker dans la chaîne. La C++ bibliothèque standard fournit des spécialisations de ce modèle de classe, avec la [chaîne](../standard-library/string-typedefs.md#string) des définitions de type pour les éléments de type **char**, [wstring](../standard-library/string-typedefs.md#wstring), pour **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) pour `char16_t` et [u32string ](../standard-library/string-typedefs.md#u32string)pour `char32_t`.
+Type de données d'un seul caractère à stocker dans la chaîne. La C++ bibliothèque standard fournit des spécialisations de ce modèle de classe, avec la [chaîne](../standard-library/string-typedefs.md#string) des définitions de type pour les éléments de type **char**, [wstring](../standard-library/string-typedefs.md#wstring), pour **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) pour `char16_t`et [u32string](../standard-library/string-typedefs.md#u32string) pour `char32_t`.
 
-@No__t_1 *traits*
+\ *traits*
 Les différentes propriétés importantes des éléments `CharType` dans une spécialisation basic_string sont décrites par la classe `Traits`. La valeur par défaut est `char_traits`< `CharType`>.
 
-@No__t_1 *Allocator*
+\ *Allocator*
 Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la libération de mémoire de la chaîne. La valeur par défaut est **allocator**< `CharType`>.
 
 ### <a name="constructors"></a>Constructeurs
@@ -313,13 +313,13 @@ Chaîne C à ajouter.
 *str* \
 Chaîne dont les caractères sont à ajouter.
 
-*_Off* \
+*_Off*\
 Index de la partie de la chaîne source fournissant les caractères à ajouter.
 
 *nombre* \
 Nombre de caractères à ajouter, au maximum, à partir de la chaîne source.
 
-*_Ch* \
+*_Ch*\
 Valeur du caractère à ajouter.
 
 *premier* \
@@ -477,7 +477,7 @@ Nombre de caractères à assigner, à partir de la chaîne source.
 *str* \
 Chaîne source dont les caractères doivent être assignés à la chaîne cible.
 
-*_Ch* \
+*_Ch*\
 Valeur du caractère à assigner.
 
 *premier* \
@@ -601,7 +601,7 @@ reference at(size_type _Off);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off* \
+*_Off*\
 Index de la position de l’élément à référencer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -750,7 +750,7 @@ basic_string(
 \ *ptr*
 Chaîne C dont les caractères doivent être utilisés pour initialiser le `string` en cours de construction. Cette valeur ne peut pas être un pointeur null.
 
-*_Al* \
+*_Al*\
 Classe d'allocateur de stockage pour l'objet String en cours de construction.
 
 *nombre* \
@@ -759,10 +759,10 @@ Nombre de caractères à initialiser.
 \ *droit*
 Chaîne pour initialiser la chaîne en cours de construction.
 
-*_Roff* \
+*_Roff*\
 Index d'un caractère dans une chaîne qui est le premier à être utilisé pour initialiser les valeurs de caractère de la chaîne en cours de construction.
 
-*_Ch* \
+*_Ch*\
 Valeur de caractère à copier dans la chaîne en cours de construction.
 
 *premier* \
@@ -894,7 +894,7 @@ Pointeur vers la version de style C de la chaîne d’appel.  La valeur du poin
 
 ### <a name="remarks"></a>Notes
 
-Les objets de type chaîne appartenant au modèle de classe basic_string \<char > ne sont pas nécessairement terminés par null. Le caractère null « \0 » est utilisé comme caractère spécial dans une chaîne C pour marquer la fin de la chaîne, mais il n’a aucune signification particulière dans un objet de type chaîne et peut faire partie de la chaîne comme tout autre caractère. Il existe une conversion automatique de **const char**  <strong>\*</strong> en chaînes, mais la classe String ne fournit pas de conversion automatique des chaînes de style C en objets de type **basic_string \<char >** .
+Les objets de type chaîne appartenant au modèle de classe basic_string\<char > ne sont pas nécessairement terminés par null. Le caractère null « \0 » est utilisé comme caractère spécial dans une chaîne C pour marquer la fin de la chaîne, mais il n’a aucune signification particulière dans un objet de type chaîne et peut faire partie de la chaîne comme tout autre caractère. Il existe une conversion automatique de **const char** <strong>\*</strong> en chaînes, mais la classe String ne fournit pas de conversion automatique des chaînes de style C en objets de type **basic_string\<char >** .
 
 La chaîne de style C retournée ne doit pas être modifiée, car cela peut invalider le pointeur vers la chaîne, ou supprimée, car la chaîne a une durée de vie limitée et appartient à la chaîne de la classe.
 
@@ -1159,16 +1159,16 @@ int compare(
 *str* \
 Chaîne à comparer à la chaîne d’opérande.
 
-*_Pos1* \
+*_Pos1*\
 Index de la chaîne d’opérande à partir duquel commence la comparaison.
 
-*_Num1* \
+*_Num1*\
 Nombre maximal de caractères de la chaîne d’opérande à comparer.
 
-*_Num2* \
+*_Num2*\
 Nombre maximal de caractères de la chaîne de paramètre à comparer.
 
-*_Off* \
+*_Off*\
 Index de la chaîne de paramètre à partir duquel commence la comparaison.
 
 *nombre* \
@@ -1490,7 +1490,7 @@ Tableau de caractères cible dans lequel les éléments doivent être copiés.
 
 _ *Count* nombre de caractères à copier, au maximum, à partir de la chaîne source.
 
-*_Off* \
+*_Off*\
 Position de début dans la chaîne source à partir de laquelle les copies doivent être effectuées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1593,12 +1593,12 @@ size_type _Copy_s(
 *dest* \
 Tableau de caractères cible dans lequel les éléments doivent être copiés.
 
-*dest_size* \
+*dest_size*\
 La taille de *dest*.
 
 _ *Count* nombre de caractères à copier, au maximum, à partir de la chaîne source.
 
-*_Off* \
+*_Off*\
 Position de début dans la chaîne source à partir de laquelle les copies doivent être effectuées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1658,23 +1658,26 @@ The copied characters array2 is: World
 
 ## <a name="data"></a>  basic_string::data
 
-Convertit le contenu d'une chaîne en tableau de caractères.
+Convertit le contenu d’une chaîne en tableau de caractères se terminant par le caractère null.
 
 ```cpp
-const value_type *data() const;
+const value_type *data() const noexcept;
+value_type *data() noexcept;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers le premier élément du tableau qui contient le contenu de la chaîne ou, pour un tableau vide, un pointeur non null qui ne peut pas être déréférencé.
+Pointeur vers le premier élément du tableau terminé par le caractère null qui contient le contenu de la chaîne. Pour une chaîne vide, le pointeur pointe vers un caractère null unique égal à `value_type()`.
 
 ### <a name="remarks"></a>Notes
 
-Les objets de type chaîne appartenant au modèle de classe basic_string \<char > ne sont pas nécessairement terminés par null. Le type de retour de `data` n’est pas une chaîne C valide, car aucun caractère NULL n’est ajouté. Le caractère null « \0 » est utilisé comme caractère spécial dans une chaîne C pour marquer la fin de la chaîne, mais il n’a aucune signification particulière dans un objet de type chaîne et peut faire partie de l’objet de chaîne comme tout autre caractère.
+Le pointeur retourné par `data` pointe vers une plage valide `[data(), data() + size()]`. Chaque élément de la plage correspond aux données actuelles de la chaîne. Autrement dit, pour chaque décalage valide *n* dans la plage, `data() + n == addressof(operator[](n))`.
 
-Il existe une conversion automatique de **const char**  <strong>\*</strong> en chaînes, mais la classe String ne fournit pas de conversion automatique des chaînes de style C en objets de type **basic_string \<char >** .
+Si vous modifiez le contenu de la chaîne retournée par la surcharge **const** de `data`, le comportement n’est pas défini. Vous bénéficiez également d’un comportement indéfini si le caractère null du terminal est remplacé par une autre valeur. Le pointeur retourné peut être invalidé si une référence non const à la chaîne est passée à une fonction de bibliothèque standard. Elle peut également être invalidée par un appel à une fonction membre non const. Les appels aux membres `at`, `back`, `begin`, `end`, `front`, `rbegin`, `rend`et `operator[]` n’invalident pas le pointeur. 
 
-La chaîne retournée ne doit pas être modifiée, car cela peut invalider le pointeur vers la chaîne, ou supprimée, car la chaîne a une durée de vie limitée et appartient à la chaîne de la classe.
+Avant C++ 11, `data` n’avait pas garanti que la chaîne retournée était terminée par un caractère null. Depuis C++ 11, `data` et `c_str` retournent toutes deux une chaîne terminée par le caractère null, et sont effectivement identiques.
+
+La surcharge non const est une nouveauté dans C++ 17. Pour l’utiliser, spécifiez l’option de compilateur **/std : c++ 17** ou **/std : c + + latest** .
 
 ### <a name="example"></a>Exemple
 
@@ -1916,10 +1919,10 @@ Itérateur qui cible la position du premier élément de la plage à effacer.
 *dernier* \
 Itérateur qui cible la position juste après le dernier élément de la plage à effacer.
 
-*_It* \
+*_It*\
 Itérateur qui cible la position de l’élément de la chaîne à effacer.
 
-*_Pos* \
+*_Pos*\
 Index du premier caractère de la chaîne à supprimer.
 
 *nombre* \
@@ -2019,10 +2022,10 @@ size_type find(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
+*_Ch*\
 Valeur de caractère que la fonction membre doit rechercher.
 
-*_Off* \
+*_Off*\
 Index de la position à laquelle la recherche doit commencer.
 
 \ *ptr*
@@ -2194,10 +2197,10 @@ size_type find_first_not_of(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
+*_Ch*\
 Valeur de caractère que la fonction membre doit rechercher.
 
-*_Off* \
+*_Off*\
 Index de la position à laquelle la recherche doit commencer.
 
 \ *ptr*
@@ -2382,10 +2385,10 @@ size_type find_first_of(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
+*_Ch*\
 Valeur de caractère que la fonction membre doit rechercher.
 
-*_Off* \
+*_Off*\
 Index de la position à laquelle la recherche doit commencer.
 
 \ *ptr*
@@ -2569,10 +2572,10 @@ size_type find_last_not_of(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
+*_Ch*\
 Valeur de caractère que la fonction membre doit rechercher.
 
-*_Off* \
+*_Off*\
 Index de la position à laquelle la recherche doit se terminer.
 
 \ *ptr*
@@ -2758,10 +2761,10 @@ size_type find_last_of(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
+*_Ch*\
 Valeur de caractère que la fonction membre doit rechercher.
 
-*_Off* \
+*_Off*\
 Index de la position à laquelle la recherche doit se terminer.
 
 \ *ptr*
@@ -3025,7 +3028,7 @@ void insert(
 
 ### <a name="parameters"></a>Paramètres
 
-*_P0* \
+*_P0*\
 Index de la position derrière le point d’insertion des nouveaux caractères.
 
 \ *ptr*
@@ -3037,13 +3040,13 @@ Nombre de caractères à insérer.
 *str* \
 Chaîne à insérer en intégralité ou en partie dans la chaîne cible.
 
-*_Off* \
+*_Off*\
 Index de la partie de la chaîne source fournissant les caractères à ajouter.
 
-*_Ch* \
+*_Ch*\
 Valeur de caractère des éléments à insérer.
 
-*_It* \
+*_It*\
 Itérateur traitant la position derrière laquelle un caractère doit être inséré.
 
 *premier* \
@@ -3307,7 +3310,7 @@ static const size_type npos = -1;
 
 ### <a name="remarks"></a>Notes
 
-Lorsque la valeur de retour doit être vérifiée pour la valeur de `npos`, elle peut ne pas fonctionner, sauf si la valeur de retour est de type [size_type](#size_type) et non **int** ou **unsigned**.
+Lorsque la valeur de retour doit être vérifiée pour la valeur `npos`, elle peut ne pas fonctionner, sauf si la valeur de retour est de type [size_type](#size_type) et non **int** ou **unsigned**.
 
 ### <a name="example"></a>Exemple
 
@@ -3330,7 +3333,7 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
+*_Ch*\
 Caractère à ajouter.
 
 \ *ptr*
@@ -3422,7 +3425,7 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
+*_Ch*\
 Valeur du caractère à assigner.
 
 \ *ptr*
@@ -3507,7 +3510,7 @@ reference operator[](size_type _Off);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off* \
+*_Off*\
 Index de la position de l’élément à référencer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3624,7 +3627,7 @@ void push_back(value_type _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
+*_Ch*\
 Caractère à ajouter à la fin de la chaîne.
 
 ### <a name="remarks"></a>Notes
@@ -3924,22 +3927,22 @@ basic_string<CharType, Traits, Allocator>& replace(
 *str* \
 Chaîne qui doit être une source de caractères pour la chaîne d’opérande.
 
-*_Pos1* \
+*_Pos1*\
 Index de la chaîne d’opérande à partir duquel commence le remplacement.
 
-*_Num1* \
+*_Num1*\
 Nombre maximal de caractères à remplacer dans la chaîne d’opérande.
 
-*_Pos2* \
+*_Pos2*\
 Index de la chaîne de paramètre à partir duquel commence la copie.
 
-*_Num2* \
+*_Num2*\
 Nombre maximal de caractères à utiliser de la chaîne C de paramètre.
 
 \ *ptr*
 Chaîne C qui doit être une source de caractères pour la chaîne d’opérande.
 
-*_Ch* \
+*_Ch*\
 Caractère à copier dans la chaîne d’opérande.
 
 *first0* \
@@ -4248,7 +4251,7 @@ void resize(
 *nombre* \
 Nouvelle taille de la chaîne.
 
-*_Ch* \
+*_Ch*\
 Valeur avec laquelle les caractères ajoutés sont initialisés si des éléments supplémentaires sont nécessaires.
 
 ### <a name="remarks"></a>Notes
@@ -4381,10 +4384,10 @@ size_type rfind(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
+*_Ch*\
 Valeur de caractère que la fonction membre doit rechercher.
 
-*_Off* \
+*_Off*\
 Index de la position à laquelle la recherche doit commencer.
 
 \ *ptr*
@@ -4664,7 +4667,7 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off* \
+*_Off*\
 Index situant l’élément à la position à partir de laquelle la copie de la chaîne est effectuée, avec une valeur par défaut égale à 0.
 
 *nombre* \
@@ -4784,7 +4787,7 @@ typedef Traits traits_type;
 
 Le type est un synonyme du deuxième paramètre de modèle `Traits`.
 
-Pour le type `string`, il est équivalent à **char_traits \<char >** .
+Pour le type `string`, il équivaut à **char_traits\<char >** .
 
 ### <a name="example"></a>Exemple
 
