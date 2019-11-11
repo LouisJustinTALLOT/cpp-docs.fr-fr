@@ -3,12 +3,12 @@ title: Installer la charge de travail Linux C++ dans Visual Studio
 description: Décrit comment télécharger, installer et configurer la charge de travail Linux pour C++ dans Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: ad0fd856fc15ce9f787ba620463480bfe3e59d47
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 68e347a4f90fc15f9d3846c82c3392213e1bd7bc
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925422"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912905"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Télécharger, installer et configurer la charge de travail Linux
 
@@ -36,7 +36,7 @@ Tous ces scénarios nécessitent la charge de travail de **développement Linux 
 
    ![Zone de recherche Windows](media/visual-studio-installer-search.png)
 
-2. Recherchez le programme d’installation dans les résultats situés sous **Applications**, puis double-cliquez dessus. Quand le programme d’installation s’ouvre, choisissez **Modifier**, puis cliquez sur l’onglet **Charges de travail**. Faites défiler vers le bas jusqu’à **Autres ensembles d’outils** et sélectionnez la charge de travail **Développement Linux en C++** .
+2. Recherchez le programme d’installation dans les résultats situés sous **Applications**, puis double-cliquez dessus. Quand le programme d’installation s’ouvre, choisissez **modifier**, puis cliquez sur l’onglet **charges de travail** . faites défiler jusqu’à d' **autres ensembles d’outils** et sélectionnez le **développement Linux avec C++**  charge de travail.
 
    ![Charge de travail Visual C++ pour le développement sous Linux](media/linuxworkload.png)
 
@@ -46,9 +46,9 @@ Tous ces scénarios nécessitent la charge de travail de **développement Linux 
 
 ## <a name="options-for-creating-a-linux-environment"></a>Options pour la création d’un environnement Linux
 
-Si vous n’avez pas encore de machine Linux, vous pouvez créer une Machine virtuelle Linux sur Azure. Pour plus d’informations, consultez [Démarrage rapide : Créer une machine virtuelle Linux dans le portail Azure](/azure/virtual-machines/linux/quick-create-portal).
+Si vous n’avez pas encore de machine Linux, vous pouvez créer une Machine virtuelle Linux sur Azure. Pour plus d’informations, consultez [Guide de démarrage rapide : Créer une machine virtuelle Linux sur le Portail Azure](/azure/virtual-machines/linux/quick-create-portal).
 
-Sur Windows 10, vous pouvez installer et cibler votre distribution Linux favorite sur le sous-système Windows pour Linux (WSL). Pour plus d’informations, consultez [Guide d’installation du sous-système Windows pour Linux pour Windows 10](/windows/wsl/install-win10). WSL est un environnement de console pratique, mais il n’est pas recommandé pour les applications graphiques. 
+Sur Windows 10, vous pouvez installer et cibler votre distribution Linux favorite sur le sous-système Windows pour Linux (WSL). Pour plus d’informations, consultez [Guide d’installation du sous-système Windows pour Linux pour Windows 10](/windows/wsl/install-win10). Si vous ne parvenez pas à accéder au Windows Store, vous pouvez [Télécharger manuellement les packages WSL distribution](/windows/wsl/install-manual). WSL est un environnement de console pratique, mais il n’est pas recommandé pour les applications graphiques. 
 
 ::: moniker-end
 
@@ -80,7 +80,7 @@ Dans Visual Studio, les projets Linux requièrent l’installation des dépendan
 
 ::: moniker range="vs-2019" 
 
-## <a name="linux-setup-ubuntu-on-wsl"></a>Installation Linux : Ubuntu sur WSL
+## <a name="linux-setup-ubuntu-on-wsl"></a>Configuration de Linux : Ubuntu sur WSL
 
 Lorsque vous ciblez WSL, il n’est pas nécessaire d’ajouter une connexion à distance ou de configurer SSH pour compiler et déboguer. **zip** et **rsync** sont nécessaires pour la synchronisation automatique des en-têtes Linux avec Visual Studio en vue de la prise en charge d’Intellisense. Si les applications requises ne sont pas déjà présentes, vous pouvez les installer comme suit :
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 0b9b259d49808002442492ce2912b4f9aa96d2b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f72969052ae3ecc0d9fb88382e1560c846e2167c
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456500"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912898"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -26,7 +26,7 @@ Définit les fonctions de modèle du conteneur de bibliothèque C++ Standard qui
 ```
 
 > [!NOTE]
-> La \<bibliothèque d' > d’algorithme `#include <initializer_list>` utilise également l’instruction.
+> La bibliothèque d' > d’algorithme \<utilise également l’instruction `#include <initializer_list>`.
 
 ## <a name="remarks"></a>Notes
 
@@ -36,7 +36,7 @@ Les algorithmes de la bibliothèque C++ Standard traitent des plages d’itérat
 
 Les algorithmes de la bibliothèque C++ Standard étendent les actions prises en charge par les opérations et les fonctions membres de chaque conteneur de bibliothèque C++ Standard, et permettent, entre autres choses, l’utilisation simultanée de plusieurs types d’objets de conteneur. Deux suffixes ont été utilisés pour transmettre des informations concernant l'usage des algorithmes.
 
-- Le suffixe `_if` indique que l'algorithme est utilisé avec des objets de fonction opérant sur les valeurs des éléments plutôt que sur les éléments eux-mêmes. L'algorithme `find_if` recherche les éléments dont les valeurs répondent au critère spécifié par un objet de fonction, et l'algorithme `find` recherche une valeur particulière.
+- Le suffixe `_if` indique que l’algorithme est utilisé avec des objets de fonction opérant sur les valeurs des éléments plutôt que sur les éléments eux-mêmes. L'algorithme `find_if` recherche les éléments dont les valeurs répondent au critère spécifié par un objet de fonction, et l'algorithme `find` recherche une valeur particulière.
 
 - Le suffixe _copy indique que l'algorithme manipule les valeurs des éléments, mais copie également les valeurs modifiées dans une plage de destination. L'algorithme `reverse` inverse l'ordre des éléments d'une plage, et l'algorithme `reverse_copy` copie également le résultat dans une plage de destination.
 
@@ -52,7 +52,7 @@ Les algorithmes numériques de la bibliothèque C++ Standard fournis pour le tra
 |[all_of](../standard-library/algorithm-functions.md#all_of)|Retourne la **valeur true** lorsqu’une condition est présente à chaque élément d’une plage donnée.|
 |[any_of](../standard-library/algorithm-functions.md#any_of)|Retourne la **valeur true** lorsqu’une condition est présente au moins une fois dans la plage d’éléments spécifiée.|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|Teste si un élément d’une plage triée est égal à une valeur spécifiée ou équivalent, selon une condition spécifiée par un prédicat binaire.|
-|[clamp](../standard-library/algorithm-functions.md#clamp)||
+|[bride](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions, du haut vers le bas.|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions vers le haut.|
 |[copy_if](../standard-library/algorithm-functions.md#copy_if)|Copier tous les éléments d’une plage donnée qui testent la **valeur true** pour une condition spécifiée|
@@ -100,7 +100,7 @@ Les algorithmes numériques de la bibliothèque C++ Standard fournis pour le tra
 |[partial_sort](../standard-library/algorithm-functions.md#partial_sort)|Réorganise un nombre spécifié d’éléments plus petits au sein d’une plage, dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire.|
 |[partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)|Copie les éléments d’une plage source dans une plage de destination. Les éléments sources sont triés par ordre croissant ou selon un autre prédicat binaire spécifié.|
 |[partition](../standard-library/algorithm-functions.md#partition)|Répartit les éléments d’une plage en deux ensembles disjoints. Les éléments qui répondent à un prédicat unaire doivent précéder ceux qui n’y répondent pas.|
-|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|Copie les éléments pour lesquels une condition a la **valeur true** pour une destination, et pour laquelle  la condition est false à une autre. Les éléments doivent provenir d'une plage spécifiée.|
+|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|Copie les éléments pour lesquels une condition a la **valeur true** pour une destination, et pour laquelle la condition est **false** à une autre. Les éléments doivent provenir d'une plage spécifiée.|
 |[partition_point](../standard-library/algorithm-functions.md#partition_point)|Retourne le premier élément d'une plage donnée qui ne répond pas à une condition. Les éléments sont triés de sorte que ceux qui répondent à la condition précèdent ceux qui n'y répondent pas.|
 |[pop_heap](../standard-library/algorithm-functions.md#pop_heap)|Retire le plus grand élément du début du tas et le place à l'avant-dernière position de la plage, puis forme un nouveau tas à partir des éléments restants.|
 |[prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)|Réorganise les éléments d’une plage, de sorte que le tri d’origine soit remplacé par la prochaine permutation plus élevée d’un point de vue lexicographique (s’il en existe une). La notion de "prochaine" peut être définie à l’aide d’un prédicat binaire.|
@@ -118,7 +118,7 @@ Les algorithmes numériques de la bibliothèque C++ Standard fournis pour le tra
 |[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)|Inverse l'ordre des éléments d'une plage source, tout en les copiant dans une plage de destination.|
 |[rotate](../standard-library/algorithm-functions.md#rotate)|Échange les éléments de deux plages adjacentes.|
 |[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|Échange les éléments de deux plages adjacentes au sein d'une plage source et copie le résultat dans une plage de destination.|
-|[sample](../standard-library/algorithm-functions.md#sample)||
+|[exemple](../standard-library/algorithm-functions.md#sample)||
 |[search](../standard-library/algorithm-functions.md#search)|Recherche la première occurrence d’une séquence au sein d’une plage cible dont les éléments sont égaux à ceux d’une séquence d’éléments donnée ou dont les éléments sont équivalents à ceux d’une séquence donnée, selon un prédicat binaire spécifié.|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|Recherche la première sous-séquence d’une plage dont un nombre spécifié d’éléments ont une valeur particulière ou une relation à cette valeur, selon un prédicat binaire spécifié.|
 |[set_difference](../standard-library/algorithm-functions.md#set_difference)|Regroupe tous les éléments qui appartiennent à une plage source triée, mais pas à une autre plage source triée, en une même plage de destination triée. Un critère de tri peut être spécifié par un prédicat binaire.|
@@ -139,6 +139,6 @@ Les algorithmes numériques de la bibliothèque C++ Standard fournis pour le tra
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
