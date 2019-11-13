@@ -1,27 +1,27 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4353
+title: Avertissement du compilateur (niveau 1) C4353
 ms.date: 11/04/2016
 f1_keywords:
 - C4353
 helpviewer_keywords:
 - C4353
 ms.assetid: 6e79f186-ed82-4c95-9923-0ad5bb9c4db1
-ms.openlocfilehash: 305c1156ae8dc664edba17287786db50bfabbd18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f04bc78e1ff6183208f888d9072bfe90b3aca083
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384190"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966549"
 ---
-# <a name="compiler-warning-level-1-c4353"></a>Avertissement du compilateur (niveau 1) C4353
+# <a name="compiler-warning-level-1-c4353"></a>Avertissement du compilateur (niveau 1) C4353
 
-extension non standard utilisée : constante 0 comme expression de fonction. Utilisez la fonction intrinsèque '__noop' à la place
+extension non standard utilisée : constante 0 comme expression de fonction. Utilisez une fonction intrinsèque' __noop’à la place
 
-Vous ne pouvez pas utiliser la constante zéro (0) comme une expression de fonction. Pour plus d’informations, consultez [__noop](../../intrinsics/noop.md).
+Vous ne pouvez pas utiliser la constante zéro (0) comme expression de fonction. Pour plus d’informations, consultez [__noop](../../intrinsics/noop.md).
 
-L’exemple suivant génère l’erreur C4353 :
+L’exemple suivant génère l’C4353 :
 
-```
+```cpp
 // C4353.cpp
 // compile with: /W1
 void MyPrintf(void){};
