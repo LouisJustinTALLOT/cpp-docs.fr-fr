@@ -1,29 +1,29 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4378
+title: Avertissement du compilateur (niveau 1) C4378
 ms.date: 11/04/2016
 f1_keywords:
 - C4378
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: 6197bd66214785d515bb1b73ceaf5a68d6751e79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc5e5365ffb53125085ce7b374f1362e93f4bb03
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410406"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966498"
 ---
-# <a name="compiler-warning-level-1-c4378"></a>Avertissement du compilateur (niveau 1) C4378
+# <a name="compiler-warning-level-1-c4378"></a>Avertissement du compilateur (niveau 1) C4378
 
-Les pointeurs de fonction pour l’exécution des initialiseurs ; envisagez de System::ModuleHandle::ResolveMethodHandle
+Doit obtenir les pointeurs de fonction pour exécuter des initialiseurs ; Prenons l’exemple de System :: ModuleHandle :: ResolveMethodHandle
 
-Sous **/CLR**, symboles d’initialiseurs contiennent des jetons de fonction, pas les pointeurs de fonctions.  Vous devez convertir les jetons à l’aide de pointeurs de <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
+Sous **/CLR**, les symboles d’initialiseur contiennent des jetons de fonction, et non des pointeurs de fonctions.  Vous devez convertir des jetons en pointeurs à l’aide de <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C4378.
+L’exemple suivant génère l’C4378.
 
-```
+```cpp
 // C4378.cpp
 // compile with: /W1 /clr /c
 typedef void (__cdecl *PF)(void);
@@ -67,7 +67,7 @@ int main () {
 
 L’exemple suivant montre comment résoudre C4378.
 
-```
+```cpp
 // C4378_b.cpp
 // compile with: /clr
 #pragma warning(disable:4378)

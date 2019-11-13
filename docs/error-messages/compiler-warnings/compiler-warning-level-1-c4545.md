@@ -1,29 +1,29 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4545
+title: Avertissement du compilateur (niveau 1) C4545
 ms.date: 11/04/2016
 f1_keywords:
 - C4545
 helpviewer_keywords:
 - C4545
 ms.assetid: 43f8f34f-ed46-4661-95c0-c588c577ff73
-ms.openlocfilehash: 59e8bf18302d94ac609773e36a782f1457c8db6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39770a8c7ad5241ed625575c94dc19bf91e3b5bd
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352885"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966432"
 ---
-# <a name="compiler-warning-level-1-c4545"></a>Avertissement du compilateur (niveau 1) C4545
+# <a name="compiler-warning-level-1-c4545"></a>Avertissement du compilateur (niveau 1) C4545
 
 l’expression avant la virgule correspond à une fonction qui n’a pas de liste d’arguments
 
-Le compilateur a détecté une expression avec virgules incorrecte.
+Le compilateur a détecté une expression de virgule mal formée.
 
 Cet avertissement est désactivé par défaut. Pour plus d'informations, consultez [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
-L’exemple suivant génère l’erreur C4545 :
+L’exemple suivant génère l’C4545 :
 
-```
+```cpp
 // C4545.cpp
 // compile with: /W1
 #pragma warning (default : 4545)

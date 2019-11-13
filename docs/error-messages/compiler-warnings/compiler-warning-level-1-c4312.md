@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4312
+title: Avertissement du compilateur (niveau 1) C4312
 ms.date: 11/04/2016
 f1_keywords:
 - C4312
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: 1983d7b89688568b8152372328216c2a814f7bc0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 83f8aa5d03bddde58f9edd4ffc9f19073045da30
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510081"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966089"
 ---
-# <a name="compiler-warning-level-1-c4312"></a>Avertissement du compilateur (niveau 1) C4312
+# <a name="compiler-warning-level-1-c4312"></a>Avertissement du compilateur (niveau 1) C4312
 
 'opération' : la conversion de 'type1' en 'type2' d'une taille supérieure
 
@@ -25,7 +25,7 @@ Cet avertissement est émis uniquement pour les cibles de compilation 64 bits. 
 
 L'exemple de code suivant génère l'erreur C4312 quand il est compilé pour des cibles 64 bits :
 
-```
+```cpp
 // C4312.cpp
 // compile by using: cl /W1 /LD C4312.cpp
 void* f(int i) {

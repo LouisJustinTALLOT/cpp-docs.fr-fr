@@ -1,29 +1,29 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4369
+title: Avertissement du compilateur (niveau 1) C4369
 ms.date: 11/04/2016
 f1_keywords:
 - C4369
 helpviewer_keywords:
 - C4369
 ms.assetid: ade87e84-36be-4e00-be99-2930af848feb
-ms.openlocfilehash: b374b67fa3319be35490358d7664bcb45bc640db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 617cb2cc3774b288581a3868125ced19b28ba45a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207028"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966510"
 ---
-# <a name="compiler-warning-level-1-c4369"></a>Avertissement du compilateur (niveau 1) C4369
+# <a name="compiler-warning-level-1-c4369"></a>Avertissement du compilateur (niveau 1) C4369
 
-'énumérateur' : valeur de l’énumérateur 'value' ne peut pas être représentée comme 'type', la valeur est 'nouvelle_valeur'
+'Enumerator' : la valeur de l’énumérateur’value’ne peut pas être représentée en tant que’type', la valeur est’new_value'
 
-Un énumérateur a été calculé est supérieure à la plus grande valeur pour le type sous-jacent spécifié.  Cela a provoqué un dépassement de capacité et le compilateur a la valeur de l’énumérateur à la plus petite valeur possible pour le type encapsulé.
+Un énumérateur a été calculé pour être supérieur à la valeur la plus élevée pour le type sous-jacent spécifié.  Cela a provoqué un dépassement de capacité et le compilateur a encapsulé la valeur de l’énumérateur à la valeur la plus basse possible pour le type.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4369 :.
+L’exemple suivant génère l’C4369.
 
-```
+```cpp
 // C4369.cpp
 // compile with: /W1
 int main() {
