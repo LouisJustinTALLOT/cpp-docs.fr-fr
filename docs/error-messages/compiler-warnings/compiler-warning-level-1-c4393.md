@@ -1,27 +1,27 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4393
+title: Avertissement du compilateur (niveau 1) C4393
 ms.date: 11/04/2016
 f1_keywords:
 - C4393
 helpviewer_keywords:
 - C4393
 ms.assetid: 353a0539-d1ea-4c1b-8849-c9b321ec9842
-ms.openlocfilehash: 4226c8ecd41e890d70fa5741decae605d45b620f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92cb9a063a2f6e4660c3f84516527c1417c55e46
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386926"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966150"
 ---
-# <a name="compiler-warning-level-1-c4393"></a>Avertissement du compilateur (niveau 1) C4393
+# <a name="compiler-warning-level-1-c4393"></a>Avertissement du compilateur (niveau 1) C4393
 
-'var' : const n’a aucun effet sur la donnée membre littérale ; ignoré
+'var' : const n’a aucun effet sur les données membres littérales ; pas
 
-Un [littéral](../../extensions/literal-cpp-component-extensions.md) membre de données a été également spécifié en tant que const.  Dans la mesure où une donnée membre littérale implique const, il est inutile ajouter const à la déclaration.
+Une donnée membre [littérale](../../extensions/literal-cpp-component-extensions.md) a également été spécifiée comme const.  Étant donné qu’un membre de données littéral implique const, vous n’avez pas besoin d’ajouter const à la déclaration.
 
-L’exemple suivant génère l’erreur C4393 :
+L’exemple suivant génère l’C4393 :
 
-```
+```cpp
 // C4393.cpp
 // compile with: /clr /W1 /c
 ref struct Y1 {

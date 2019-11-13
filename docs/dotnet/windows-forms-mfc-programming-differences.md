@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-ms.openlocfilehash: 52de36217a5ab47eddcbe1abd6617860dcb910b8
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 136549bb457cc17293d4c7201c9836d9094eea94
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704185"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965550"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Différences de programmation entre Windows Forms et MFC
 
@@ -22,7 +22,7 @@ Toutefois, si vous êtes habitué aux MFC, vous pouvez utiliser pour créer cert
 
 Pour plus d’informations sur les applications Windows Forms, consultez [Introduction à la Windows Forms](/dotnet/framework/winforms/windows-forms-overview).
 
-Pour obtenir un exemple d’application qui montre Windows Forms utilisé avec MFC, consultez [MFC and Windows Forms Integration](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
+Pour obtenir un exemple d’application qui montre Windows Forms utilisé avec MFC, consultez [MFC and Windows Forms Integration](https://www.microsoft.com/download/details.aspx?id=2113).
 
 La vue MFC ou les fonctionnalités de routage de documents et de commandes suivantes n’ont pas d’équivalents dans Windows Forms :
 

@@ -1,31 +1,31 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4581
+title: Avertissement du compilateur (niveau 1) C4581
 ms.date: 11/04/2016
 f1_keywords:
 - C4581
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 9868d33538a1f56906455f2b1772b53eb3a7734d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 5931516e3f4eba91c3b7a3ab4d0ca4979ce1ed84
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447102"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965921"
 ---
-# <a name="compiler-warning-level-1-c4581"></a>Avertissement du compilateur (niveau 1) C4581
+# <a name="compiler-warning-level-1-c4581"></a>Avertissement du compilateur (niveau 1) C4581
 
-comportement déconseillé : '« string1 »' remplacé par 'chaîne2' pour traiter l’attribut
+comportement déconseillé : ' "chaîne1" 'remplacé par’string2 'pour traiter l’attribut
 
-Cette erreur peut être due à la mise en conformité du compilateur pour Visual Studio 2005 : vérification des paramètres des Visual C++ attributs.
+Cette erreur peut être générée en raison du travail de conformité du compilateur pour Visual Studio 2005 : vérification des paramètres pour les attributs visuels C++ .
 
-Dans les versions précédentes, les valeurs d’attribut ont été acceptées s’ils ont été placés entre guillemets. Si la valeur est une énumération, elle ne doit pas figurer entre guillemets.
+Dans les versions précédentes, les valeurs d’attribut étaient acceptées, qu’elles soient ou non placées entre guillemets. Si la valeur est une énumération, elle ne doit pas être placée entre guillemets.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C4581.
+L’exemple suivant génère l’C4581.
 
-```
+```cpp
 // C4581.cpp
 // compile with: /c /W1
 #include "unknwn.h"
