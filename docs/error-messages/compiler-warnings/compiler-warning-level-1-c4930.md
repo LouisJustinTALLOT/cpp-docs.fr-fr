@@ -1,27 +1,27 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4930
+title: Avertissement du compilateur (niveau 1) C4930
 ms.date: 11/04/2016
 f1_keywords:
 - C4930
 helpviewer_keywords:
 - C4930
 ms.assetid: 89a206c9-c536-4186-8e81-1cde3e7f4f5b
-ms.openlocfilehash: 15cd1ed61c747e2c9168b9fc0fee03dca8403a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21cc6364692eb2f3b1d56b03d175df1f2ad7ee8
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242784"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050282"
 ---
-# <a name="compiler-warning-level-1-c4930"></a>Avertissement du compilateur (niveau 1) C4930
+# <a name="compiler-warning-level-1-c4930"></a>Avertissement du compilateur (niveau 1) C4930
 
-'prototype' : fonction prototypée non appelée (était une définition de variable souhaitée ?)
+'prototype' : fonction prototypée non appelée (une définition de variable est-elle prévue ?)
 
-Le compilateur a détecté un prototype de fonction non utilisées. Si le prototype a été conçu comme une déclaration de variable, supprimez les parenthèses d’ouverture/fermeture.
+Le compilateur a détecté un prototype de fonction inutilisé. Si le prototype était conçu comme une déclaration de variable, supprimez les parenthèses ouvrantes/fermantes.
 
-L’exemple suivant génère l’erreur C4930 :
+L’exemple suivant génère l’C4930 :
 
-```
+```cpp
 // C4930.cpp
 // compile with: /W1
 class Lock {
@@ -41,9 +41,9 @@ int main() {
 
 C4930 peut également se produire lorsque le compilateur ne peut pas faire la distinction entre une déclaration de prototype de fonction et un appel de fonction.
 
-L’exemple suivant génère l’erreur C4930 :
+L’exemple suivant génère l’C4930 :
 
-```
+```cpp
 // C4930b.cpp
 // compile with: /EHsc /W1
 
@@ -112,4 +112,4 @@ int main()
 }
 ```
 
-Dans l’exemple ci-dessus, le résultat d’une méthode qui n’accepte aucun argument est passé en tant qu’argument au constructeur d’une variable de classe locale sans nom. L’appel peut être éviter toute ambiguïté en nommant la variable locale ou en faisant précéder l’appel de méthode avec une instance d’objet, ainsi que l’opérateur pointeur vers membre approprié.
+Dans l’exemple ci-dessus, le résultat d’une méthode qui accepte des arguments nuls est passé comme argument au constructeur d’une variable de classe locale sans nom. L’appel peut être enlevée en nommant la variable locale ou en préfixant l’appel de méthode avec une instance d’objet, ainsi que l’opérateur pointeur vers membre approprié.

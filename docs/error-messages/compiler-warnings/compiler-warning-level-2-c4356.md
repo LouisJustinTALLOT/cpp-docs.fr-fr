@@ -1,29 +1,29 @@
 ---
-title: Avertissement du compilateur (niveau 2) C4356
+title: Avertissement du compilateur (niveau 2) C4356
 ms.date: 11/04/2016
 f1_keywords:
 - C4356
 helpviewer_keywords:
 - C4356
 ms.assetid: 3af3defe-de33-43b6-bd6c-2c2e09e34f3f
-ms.openlocfilehash: 218aac1cc98d9b119490a547d63b4b5ee83e53df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f110ee633fed1c3b43ecc06dadcc27fde4f14bde
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402461"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052024"
 ---
-# <a name="compiler-warning-level-2-c4356"></a>Avertissement du compilateur (niveau 2) C4356
+# <a name="compiler-warning-level-2-c4356"></a>Avertissement du compilateur (niveau 2) C4356
 
-'membre' : données membres static ne peuvent pas être initialisées via une classe dérivée
+'membre' : les données membres static ne peuvent pas être initialisées via une classe dérivée
 
-L’initialisation d’un membre de données statique est incorrecte. Le compilateur a accepté l’initialisation. Pour éviter l’avertissement, initialisez le membre via la classe de base.
+L’initialisation d’un membre de données statique était incorrecte. Le compilateur a accepté l’initialisation. Pour éviter l’avertissement, initialisez le membre par le biais de la classe de base.
 
-Utilisez le [avertissement](../../preprocessor/warning.md) pragma pour supprimer cet avertissement.
+Utilisez le pragma [Warning](../../preprocessor/warning.md) pour supprimer cet avertissement.
 
-L’exemple suivant génère l’erreur C4356 :
+L’exemple suivant génère l’C4356 :
 
-```
+```cpp
 // C4356.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

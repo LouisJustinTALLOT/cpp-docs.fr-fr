@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4822
 ms.assetid: 0f231a30-2eb0-4722-aaa0-e2d19d3e7eea
-ms.openlocfilehash: 02e7ba11f7bda134bcc98ce2c494a3ef367c0d6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f54f29fcbc6fb71033bc6d1d87c7ddb31622ee40
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378503"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051257"
 ---
 # <a name="compiler-warning-level-1-c4822"></a>Avertissement du compilateur (niveau 1) C4822
 
@@ -23,7 +23,7 @@ Toute définition hors classe pour une fonction membre de classe locale constitu
 
 L’exemple suivant génère l’erreur C4822 :
 
-```
+```cpp
 // C4822.cpp
 // compile with: /W1
 int main() {

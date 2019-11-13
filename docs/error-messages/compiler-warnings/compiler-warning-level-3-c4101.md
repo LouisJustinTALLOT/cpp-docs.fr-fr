@@ -1,25 +1,25 @@
 ---
-title: Compilateur avertissement (niveau 3) C4101
+title: Avertissement du compilateur (niveau 3) C4101
 ms.date: 11/04/2016
 f1_keywords:
 - C4101
 helpviewer_keywords:
 - C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
-ms.openlocfilehash: d1109a32e754a6055e5e1d90632ad85332d832f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5effdbb4c7e83999655641a248c389c7c4d260d0
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402318"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051903"
 ---
-# <a name="compiler-warning-level-3-c4101"></a>Compilateur avertissement (niveau 3) C4101
+# <a name="compiler-warning-level-3-c4101"></a>Avertissement du compilateur (niveau 3) C4101
 
 'identificateur' : variable locale non référencée
 
 La variable locale n’est jamais utilisée. Cet avertissement se produit dans la situation évidente :
 
-```
+```cpp
 // C4101a.cpp
 // compile with: /W3
 int main() {
@@ -27,9 +27,9 @@ int i;   // C4101
 }
 ```
 
-Toutefois, cet avertissement se produit également lorsque vous appelez un **statique** fonction membre via une instance de la classe :
+Toutefois, cet avertissement se produit également lors de l’appel d’une fonction membre **statique** via une instance de la classe :
 
-```
+```cpp
 // C4101b.cpp
 // compile with:  /W3
 struct S {
@@ -46,10 +46,10 @@ int main() {
 }
 ```
 
-Dans ce cas, le compilateur utilise les informations sur les `si` pour accéder à la **statique** (fonction), mais l’instance de la classe n’est pas nécessaire d’appeler le **statique** fonction ; par conséquent, l’avertissement. Pour résoudre cet avertissement, vous pouvez :
+Dans ce cas, le compilateur utilise des informations sur `si` pour accéder à la fonction **statique** , mais l’instance de la classe n’est pas nécessaire pour appeler la fonction **statique** . par conséquent, l’avertissement. Pour résoudre cet avertissement, vous pouvez :
 
-- Ajoutez un constructeur, dans lequel le compilateur utilise l’instance de `si` dans l’appel à `func`.
+- Ajoutez un constructeur, dans lequel le compilateur utiliserait l’instance de `si` dans l’appel à `func`.
 
-- Supprimer le **statique** mot clé à partir de la définition de `func`.
+- Supprimez le mot clé **static** de la définition de `func`.
 
-- Appelez le **statique** fonction explicitement : `int y = S::func();`.
+- Appelez la fonction **statique** explicitement : `int y = S::func();`.

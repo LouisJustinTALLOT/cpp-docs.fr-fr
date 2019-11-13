@@ -1,27 +1,27 @@
 ---
-title: Avertissement du compilateur (niveau 2) C4307
+title: Avertissement du compilateur (niveau 2) C4307
 ms.date: 11/04/2016
 f1_keywords:
 - C4307
 helpviewer_keywords:
 - C4307
 ms.assetid: 7cca11e9-be61-49e4-8b15-88b84f0cbf07
-ms.openlocfilehash: e9ad30f60260893130beed921aab811c894868cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5566bca22c328328a49e82268b96e8ec0fedc95
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402500"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052064"
 ---
-# <a name="compiler-warning-level-2-c4307"></a>Avertissement du compilateur (niveau 2) C4307
+# <a name="compiler-warning-level-2-c4307"></a>Avertissement du compilateur (niveau 2) C4307
 
 'opérateur' : dépassement de constante intégrale
 
-L’opérateur est utilisé dans une expression qui aboutit à une constante entière un débordement de l’espace alloué pour celui-ci. Vous devrez peut-être utiliser un type plus grand pour la constante. Un **type signed int** contient une valeur inférieure à celle un `unsigned int` , car le **type signed int** utilise un bit pour représenter le signe.
+L’opérateur est utilisé dans une expression qui entraîne un dépassement de la constante entière de l’espace qui lui est alloué. Vous devrez peut-être utiliser un plus grand type pour la constante. Un **entier signé** contient une valeur inférieure à celle d’un `unsigned int`, car l' **entier signé** utilise un bit pour représenter le signe.
 
-L’exemple suivant génère l’erreur C4307 :
+L’exemple suivant génère l’C4307 :
 
-```
+```cpp
 // C4307.cpp
 // compile with: /W2
 int i = 2000000000 + 2000000000;   // C4307

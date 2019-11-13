@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Compilation d’un C++ programme natif sur la ligne de commande'
+title: "Procédure pas à pas : compilation d'un programme C++ natif sur la ligne de commande"
 description: Utilisez le compilateur C++ Microsoft à partir d’une invite de commandes.
 ms.custom: conceptual
 ms.date: 04/23/2019
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: 36017b28ab91478da2515cd7c8588a998013171d
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960714"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051509"
 ---
-# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procédure pas à pas : Compilation d’un C++ programme natif sur la ligne de commande
+# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procédure pas à pas : compilation d'un programme C++ natif sur la ligne de commande
 
 Visual Studio inclut un compilateur de ligne C++ de commande que vous pouvez utiliser pour créer tout depuis les applications console de base vers des applications plateforme Windows universelle, des applications de bureau, des pilotes de périphériques et des composants .net.
 
-Dans cette procédure pas à pas, vous créez un programme de type C++ « Hello, World » de base à l’aide d’un éditeur de texte, puis vous le compilez sur la ligne de commande. Si vous souhaitez tester l’IDE de Visual Studio au lieu d’utiliser la ligne de commande, consultez [Walkthrough : Utilisation de projets et de solutionsC++() ](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) ou [utilisation de l’IDE de C++ Visual Studio pour le développement de postes de travail](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+Dans cette procédure pas à pas, vous créez un programme de type C++ « Hello, World » de base à l’aide d’un éditeur de texte, puis vous le compilez sur la ligne de commande. Si vous souhaitez essayer l’IDE Visual Studio au lieu d’utiliser la ligne de commande, consultez [procédure pas à pas : utilisation de projetsC++et de solutions ()](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) ou [utilisation de C++ l’IDE de Visual Studio pour le développement bureautique](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 Dans cette procédure pas à pas, vous pouvez utiliser votre propre programme Visual C++ au lieu de taper le programme illustré, ou vous pouvez utiliser un exemple de code Visual C++ provenant d'un autre article d'aide.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Configuration requise
 
 Pour effectuer cette procédure pas à pas, vous devez avoir installé Visual Studio et le **développement Desktop C++ facultatif avec** une charge de travail, ou les outils de génération en ligne de commande pour Visual Studio.
 
 Visual Studio est un puissant environnement de développement intégré (IDE) qui prend en charge un éditeur complet, les gestionnaires de ressources, les débogueurs et les compilateurs pour de nombreux langages et plateformes. Pour plus d’informations sur le téléchargement et l’installation de Visual Studio, y compris la version gratuite de Visual Studio Community Edition, etC++ pour inclure la prise en charge de C/Development, consultez [installation C++ de la prise en charge dans Visual Studio](vscpp-step-0-installation.md).
 
-Les outils de génération pour Visual Studio installent uniquement les compilateurs de ligne de commande, les outils et les bibliothèques dont vous avez besoin C++ pour générer des C et des programmes. Il est parfait pour les ateliers de génération ou les exercices de la classe et s’installe relativement rapidement. Pour installer uniquement les outils en ligne de commande, recherchez outils de génération pour Visual Studio dans la page [téléchargements Visual Studio](https://visualstudio.microsoft.com/downloads/) .
+Les outils de génération pour Visual Studio installent uniquement les compilateurs de ligne de commande, les outils et les bibliothèques dont vous avez besoin C++ pour générer des C et des programmes. Il est parfait pour les ateliers de génération ou les exercices de la classe et s’installe relativement rapidement. Pour installer uniquement les outils en ligne de commande, recherchez outils de génération pour Visual Studio dans la page [téléchargements Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) .
 
 Avant de pouvoir créer un C ou C++ un programme sur la ligne de commande, vous devez vérifier que les outils sont installés et que vous pouvez y accéder à partir de la ligne de commande. Visual C++ requiert des exigences complexes pour que l’environnement de ligne de commande recherche les outils, les en-têtes et les bibliothèques qu’il utilise. **Vous ne pouvez pas C++ utiliser Visual dans une fenêtre d’invite de commandes ordinaire** sans effectuer de préparation. Heureusement, Visual C++ installe des raccourcis vous permettant de lancer une invite de commandes développeur pour laquelle l’environnement est configuré pour les builds de ligne de commande. Malheureusement, les noms des raccourcis de l’invite de commandes développeur et de leur emplacement sont différents dans presque toutes les versions C++ de Visual et sur les différentes versions de Windows. Votre première tâche de procédure pas à pas consiste à trouver le bon à utiliser.
 
@@ -58,12 +58,12 @@ Avant de pouvoir créer un C ou C++ un programme sur la ligne de commande, vous 
    Il peut y avoir des différences au niveau du répertoire actuel ou des numéros de version, en fonction C++ de la version de Visual et des mises à jour installées. Si la sortie ci-dessus est similaire à ce que vous voyez, vous êtes prêt à générer C++ C ou des programmes sur la ligne de commande.
 
    > [!NOTE]
-   > Si vous recevez une erreur telle que « Cl » n’est pas reconnu en tant que commande interne ou externe, programme exécutable ou fichier de commandes, «erreur C1034 ou LNK1104 d’erreur lors de l’exécution de la commande **CL** , vous n’utilisez pas d’invite de commandes développeur ou un problème est incorrect avec votre installation de Visual C++. Vous devez corriger ce problème avant de pouvoir continuer.
+   > Si vous recevez une erreur telle que « Cl » n’est pas reconnu en tant que commande interne ou externe, programme exécutable ou fichier de commandes, «erreur C1034 ou LNK1104 d’erreur lors de l’exécution de la commande **CL** , vous n’utilisez pas une invite de commandes développeur ou un problème avec votre installation de C++Visual. Vous devez corriger ce problème avant de pouvoir continuer.
 
-   Si vous ne trouvez pas le raccourci de l’invite de commandes développeur ou si vous obtenez un message d’erreur lorsque vous entrez `cl` C++ , cela signifie que votre installation visuelle peut avoir un problème. Essayez de réinstaller le composant visuel C++ dans Visual Studio, ou réinstallez les outils de C++ génération Microsoft Visual. N’passez pas à la section suivante jusqu’à ce que cela fonctionne. Pour plus d’informations sur l’installation et C++la résolution des problèmes visuels, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).
+   Si vous ne trouvez pas le raccourci de l’invite de commandes développeur ou si vous recevez un message d’erreur lorsque vous entrez `cl`C++ , votre installation visuelle peut avoir un problème. Essayez de réinstaller le composant visuel C++ dans Visual Studio, ou réinstallez les outils de C++ génération Microsoft Visual. N’passez pas à la section suivante jusqu’à ce que cela fonctionne. Pour plus d’informations sur l’installation et C++la résolution des problèmes visuels, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).
 
    > [!NOTE]
-   > En fonction de la version de Windows sur l’ordinateur et de la configuration de la sécurité du système, vous devrez peut-être cliquer avec le bouton droit pour ouvrir le menu contextuel du raccourci de l’invite de commandes développeur, puis choisir **exécuter en tant qu’administrateur** pour générer et exécuter avec succès le programme que vous créez en suivant cette procédure pas à pas.
+   > Selon la version de Windows sur l’ordinateur et la configuration de la sécurité du système, vous devrez peut-être cliquer avec le bouton droit pour ouvrir le menu contextuel du raccourci d’invite de commandes développeur, puis choisir **exécuter en tant qu’administrateur** pour générer et exécuter correctement le programme que vous créez en suivant cette procédure pas à pas.
 
 ### <a name="create-a-visual-c-source-file-and-compile-it-on-the-command-line"></a>Créer un fichier C++ source visuel et le compiler sur la ligne de commande
 

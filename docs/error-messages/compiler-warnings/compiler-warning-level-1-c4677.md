@@ -1,29 +1,29 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4677
+title: Avertissement du compilateur (niveau 1) C4677
 ms.date: 11/04/2016
 f1_keywords:
 - C4677
 helpviewer_keywords:
 - C4677
 ms.assetid: a8d656a1-e2ff-4f8b-9028-201765131026
-ms.openlocfilehash: 66b8d42b63bcbf328703523c4eeda7a047f4643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8567e7392537507a25121977448ac47ec079316b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374571"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051370"
 ---
-# <a name="compiler-warning-level-1-c4677"></a>Avertissement du compilateur (niveau 1) C4677
+# <a name="compiler-warning-level-1-c4677"></a>Avertissement du compilateur (niveau 1) C4677
 
-'fonction' : signature de membre non privée contient un type privé d’assembly 'type_privé'
+'fonction' : la signature d’un membre non privé contient un type privé d’assembly’private_type'
 
-Un type qui a une accessibilité publique en dehors de l’assembly utilise un type qui possède un accès privé en dehors de l’assembly. Un composant qui fait référence au type d’assembly public ne sera pas en mesure d’utiliser le type ou les membres qui font référence au type privé d’assembly.
+Un type qui a une accessibilité publique en dehors de l’assembly utilise un type qui a un accès privé en dehors de l’assembly. Un composant qui fait référence au type d’assembly public ne pourra pas utiliser le membre de type ou les membres qui référencent le type privé de l’assembly.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4677 :.
+L’exemple suivant génère l’C4677.
 
-```
+```cpp
 // C4677.cpp
 // compile with: /clr /c /W1
 delegate void TestDel();

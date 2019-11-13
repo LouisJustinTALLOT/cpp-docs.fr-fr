@@ -1,25 +1,25 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4630
+title: Avertissement du compilateur (niveau 1) C4630
 ms.date: 11/04/2016
 f1_keywords:
 - C4630
 helpviewer_keywords:
 - C4630
 ms.assetid: d8926376-7acc-4fc7-8438-6f0de3468870
-ms.openlocfilehash: 98ea72bef0cb95163604144c1069a13c3b27d81c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 893364183594782b825377f57fa4e525338d62d8
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324530"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052554"
 ---
-# <a name="compiler-warning-level-1-c4630"></a>Avertissement du compilateur (niveau 1) C4630
+# <a name="compiler-warning-level-1-c4630"></a>Avertissement du compilateur (niveau 1) C4630
 
-'symbole' : spécificateur de classe de stockage 'extern' non conforme sur définition de membre
+'Symbol' : spécificateur de classe de stockage’extern’non conforme sur la définition de membre
 
-Un membre de données ou d’une fonction membre est définie en tant que `extern`. Les membres ne peut pas être externes, bien que les objets entiers. Le compilateur ignore le `extern` mot clé. L’exemple suivant génère l’erreur C4630 :
+Un membre de données ou une fonction membre est défini en tant que `extern`. Les membres ne peuvent pas être externes, bien que les objets entiers puissent. Le compilateur ignore le mot clé `extern`. L’exemple suivant génère l’C4630 :
 
-```
+```cpp
 // C4630.cpp
 // compile with: /W1 /LD
 class A {

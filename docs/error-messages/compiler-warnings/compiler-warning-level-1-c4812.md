@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4812
 ms.assetid: a7f5721f-2019-44de-ad62-ed30bac8b1f3
-ms.openlocfilehash: 6ba32bf3cad905d686eae78fbfbc198e911e91c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 420c44359b9e92cf8e77070bd3a270f992722d48
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406260"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051282"
 ---
 # <a name="compiler-warning-level-1-c4812"></a>Avertissement du compilateur (niveau 1) C4812
 
@@ -21,7 +21,7 @@ Dans la version actuelle de Visual C++, la spécialisation du constructeur expli
 
 L’exemple suivant génère l’erreur C4812 :
 
-```
+```cpp
 // C4812.cpp
 // compile with: /W1 /c
 template <class T>

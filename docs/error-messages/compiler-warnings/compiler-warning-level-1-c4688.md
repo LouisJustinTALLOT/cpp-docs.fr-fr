@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4688
 ms.assetid: a027df3c-b2b8-4c49-8539-c2bc42db74e8
-ms.openlocfilehash: 1c94198eca0a88174c8655e0d571c37f82a2df36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc869b7e22bc8bce0230892dc9a67d6aaec09f46
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375091"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052499"
 ---
 # <a name="compiler-warning-level-1-c4688"></a>Avertissement du compilateur (niveau 1) C4688
 
@@ -23,7 +23,7 @@ Une liste de contraintes possède un type privé d’assembly, ce qui signifie q
 
 L’exemple suivant génère l’avertissement C4688.
 
-```
+```cpp
 // C4688.cpp
 // compile with: /clr /c /W1
 ref struct A {};   // private type

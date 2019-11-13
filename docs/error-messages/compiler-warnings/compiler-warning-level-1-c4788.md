@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C4788
 ms.assetid: 47d75bda-f833-4bdd-93a0-a134df0cd303
-ms.openlocfilehash: c51a4409c2a3028823462539343654b5eac365d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03ce38aaa910a410025c5cccdf39646d34104779
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187203"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052390"
 ---
 # <a name="compiler-warning-level-1-c4788"></a>Avertissement du compilateur (niveau 1) C4788
 
-'identificateur' : identificateur tronqué à 'nombre' caractères
+'identificateur' : l’identificateur a été tronqué en caractères’nombre'
 
-Le compilateur limite la longueur maximale autorisée pour un nom de fonction. Lorsque le compilateur génère funclets pour le code EH/SEH, il constitue le nom funclet en ajoutant le préfixe le nom de fonction avec du texte, par exemple « __catch, » «\__unwind », ou une autre chaîne.
+Le compilateur limite la longueur maximale autorisée pour un nom de fonction. Lorsque le compilateur génère funclets pour le code EH/SEH, il forme le nom du funclet en ajoutant au début le nom de la fonction avec du texte, par exemple « __catch », «\__unwind » ou une autre chaîne.
 
-Le nom de funclet résultant peut être trop long, et le compilateur tronquer et générer C4788.
+Le nom de funclet résultant peut être trop long et le compilateur le tronque et génère C4788.
 
-Pour résoudre cet avertissement, raccourcissez le nom de fonction d’origine. Si la fonction est une fonction de modèle C++ ou une méthode, utilisez un typedef pour la partie du nom. Exemple :
+Pour résoudre cet avertissement, raccourcissez le nom de la fonction d’origine. Si la fonction est une C++ fonction de modèle ou une méthode, utilisez un typedef pour une partie du nom. Exemple :
 
-```
+```cpp
 C1<x, y, z<T>>::C2<a,b,c>::f
 ```
 
-peut être remplacée par :
+peut être remplacé par :
 
-```
+```cpp
 typedef C1<x, y, z<T>>::C2<a,b,c> new_class ;
 new_class::f
 ```
 
-Cet avertissement se produit uniquement dans le x64 compilateur.
+Cet avertissement se produit uniquement dans le compilateur x64.

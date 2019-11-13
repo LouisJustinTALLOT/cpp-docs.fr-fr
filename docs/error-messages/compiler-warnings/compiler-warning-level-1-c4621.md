@@ -1,27 +1,27 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4621
+title: Avertissement du compilateur (niveau 1) C4621
 ms.date: 11/04/2016
 f1_keywords:
 - C4621
 helpviewer_keywords:
 - C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-ms.openlocfilehash: d35c4143d5b90c7a6a49337931dad4ba73804f20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dd4defe18a94f65e265d02f6c26c715667cd696
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221356"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052593"
 ---
-# <a name="compiler-warning-level-1-c4621"></a>Avertissement du compilateur (niveau 1) C4621
+# <a name="compiler-warning-level-1-c4621"></a>Avertissement du compilateur (niveau 1) C4621
 
-aucune forme suffixée de l’opérateur 'operator--' trouvée pour le type 'type', utilisez la forme préfixée
+aucune forme suffixée de’operator--'trouvée pour le type’type', à l’aide d’une forme de préfixe
 
-Il n’a aucun opérateur de décrémentation suffixée défini pour le type donné. Le compilateur a utilisé l’opérateur de préfixe surchargé.
+Aucun opérateur de décrémentation postfix n’a été défini pour le type donné. Le compilateur a utilisé l’opérateur de préfixe surchargé.
 
-Pour éviter cet avertissement, vous pouvez définir un opérateur `--` postfix. Créer une version à deux arguments de la `--` opérateur comme indiqué ci-dessous :
+Pour éviter cet avertissement, vous pouvez définir un opérateur `--` postfix. Créez une version à deux arguments de l’opérateur `--` comme indiqué ci-dessous :
 
-```
+```cpp
 // C4621.cpp
 // compile with: /W1
 class A

@@ -1,29 +1,29 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4964
+title: Avertissement du compilateur (niveau 1) C4964
 ms.date: 11/04/2016
 f1_keywords:
 - C4964
 helpviewer_keywords:
 - C4964
 ms.assetid: b89c9274-8a92-4b7c-aa30-3fbb1b68ac73
-ms.openlocfilehash: 556c6e0963fc41d76cd123373cc4cd85edc66962
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a75a1b7d3738794046ac697113c3c746bb6fcff
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384138"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052249"
 ---
-# <a name="compiler-warning-level-1-c4964"></a>Avertissement du compilateur (niveau 1) C4964
+# <a name="compiler-warning-level-1-c4964"></a>Avertissement du compilateur (niveau 1) C4964
 
-Aucune option d’optimisation a été spécifiée ; informations de profil ne seront pas collectées.
+Aucune option d’optimisation n’a été spécifiée ; les informations de profil ne seront pas collectées
 
-[/GL](../../build/reference/gl-whole-program-optimization.md) et [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) ont été spécifiées, mais aucune optimisation n’ont été demandés, donc aucun fichier .pgc n’est générée et, par conséquent, aucune optimisation guidée par profil ne sera possible.
+[/GL](../../build/reference/gl-whole-program-optimization.md) et [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) ont été spécifiés, mais aucune optimisation n’a été demandée, donc aucun fichier. PGC ne sera généré et, par conséquent, aucune optimisation guidée par profil n’est possible.
 
-Si vous souhaitez que les fichiers .pgc doit être généré lorsque vous exécutez votre application, spécifiez l’une de la [/O](../../build/reference/o-options-optimize-code.md) options du compilateur.
+Si vous souhaitez que les fichiers. PGC soient générés lorsque vous exécutez votre application, spécifiez l’une des options du compilateur [/o](../../build/reference/o-options-optimize-code.md) .
 
-L’exemple suivant génère l’erreur C4964 :
+L’exemple suivant génère l’C4964 :
 
-```
+```cpp
 // C4964.cpp
 // compile with: /W1 /GL /link /ltcg:pgi
 // C4964 expected

@@ -1,27 +1,27 @@
 ---
-title: Avertissement du compilateur (niveau 2) C4756
+title: Avertissement du compilateur (niveau 2) C4756
 ms.date: 11/04/2016
 f1_keywords:
 - C4756
 helpviewer_keywords:
 - C4756
 ms.assetid: 5a16df83-6b82-4619-83bd-319af4ef1d1d
-ms.openlocfilehash: 0e4e0d5e227795a45eb22e3fcb17bdfa600d69e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 640eb77273fdbda0b12bbf2c2a326e970951cbda
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402422"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051990"
 ---
-# <a name="compiler-warning-level-2-c4756"></a>Avertissement du compilateur (niveau 2) C4756
+# <a name="compiler-warning-level-2-c4756"></a>Avertissement du compilateur (niveau 2) C4756
 
-dépassement de capacité dans une opération arithmétique de constante
+dépassement de capacité arithmétique constante
 
-Le compilateur a généré une exception en faisant une opération arithmétique de constante pendant la compilation.
+Le compilateur a généré une exception lors d’une opération arithmétique de constante pendant la compilation.
 
-L’exemple suivant génère l’erreur C4756 :
+L’exemple suivant génère l’C4756 :
 
-```
+```cpp
 // C4756.cpp
 // compile with: /W2 /Od
 int main()

@@ -1,29 +1,29 @@
 ---
-title: Avertissement du compilateur (niveau 2) C4250
+title: Avertissement du compilateur (niveau 2) C4250
 ms.date: 11/04/2016
 f1_keywords:
 - C4250
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: 8baf3c03c87dc70a80b785d7f81cbee4e1d828f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03826f10659cbdf6035cd4dedebecca3e3302e3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349709"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052112"
 ---
-# <a name="compiler-warning-level-2-c4250"></a>Avertissement du compilateur (niveau 2) C4250
+# <a name="compiler-warning-level-2-c4250"></a>Avertissement du compilateur (niveau 2) C4250
 
-'classe1' : hérite de 'classe2::membre' via la dominance
+'classe1 ' : hérite de’Class2 :: Member’via la dominance
 
-Deux ou plusieurs membres ont le même nom. Celui de `class2` est héritée car c’est une classe de base pour les autres classes qui contenaient ce membre.
+Deux membres ou plus portent le même nom. Celui de `class2` est hérité, car il s’agit d’une classe de base pour les autres classes qui contenaient ce membre.
 
-Pour supprimer l’erreur C4250, utilisez le [avertissement](../../preprocessor/warning.md) pragma.
+Pour supprimer C4250, utilisez le pragma [Warning](../../preprocessor/warning.md) .
 
-Étant donné que la classe de base virtuelle est partagée entre plusieurs classes dérivées, un nom dans une classe dérivée domine un nom dans une classe de base. Par exemple, étant donné la hiérarchie de classe suivante, il y a deux définitions de func héritées dans un losange : l’instance ::Func() via la classe faible et le dominant :: func() via la classe dominante. Un appel non qualifié de func() via un objet de classe en losange, appelle toujours l’instance dominate::func.  Si la classe faible ont été d’introduire une instance de func(), ni dépasse celle de définition et l’appel est signalée comme ambiguë.
+Étant donné qu’une classe de base virtuelle est partagée entre plusieurs classes dérivées, un nom dans une classe dérivée domine un nom dans une classe de base. Par exemple, étant donné la hiérarchie de classes suivante, il existe deux définitions de Func héritées dans Diamond : l’instance VBC :: Func () via la classe faible et la classe dominant :: Func () via la classe dominante. Un appel non qualifié de Func () via un objet de classe Diamond appelle toujours l’instance de Domin :: Func ().  Si la classe faible devait introduire une instance de Func (), aucune définition ne dominerait et l’appel serait marqué comme ambigu.
 
-```
+```cpp
 // C4250.cpp
 // compile with: /c /W2
 #include <stdio.h>
@@ -47,9 +47,9 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4250.
+L’exemple suivant génère l’C4250.
 
-```
+```cpp
 // C4250_b.cpp
 // compile with: /W2 /EHsc
 #include <iostream>
@@ -80,9 +80,9 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-Cet exemple montre une situation plus complexe. L’exemple suivant génère l’erreur C4250.
+Cet exemple présente une situation plus complexe. L’exemple suivant génère l’C4250.
 
-```
+```cpp
 // C4250_c.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

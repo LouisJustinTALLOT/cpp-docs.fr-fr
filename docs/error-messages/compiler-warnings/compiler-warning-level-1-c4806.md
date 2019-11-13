@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4806
 ms.assetid: 79eb74cd-b925-4b5b-84e1-8ae6f33e38b3
-ms.openlocfilehash: b6fc5708d4e2f9982ceaab57260f13e134e4d247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dae6ed7d7a38daf0ce525ae62409823212db711b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406403"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052364"
 ---
 # <a name="compiler-warning-level-1-c4806"></a>Avertissement du compilateur (niveau 1) C4806
 
@@ -19,7 +19,7 @@ ms.locfileid: "62406403"
 
 Ce message fournit un avertissement contre le code tel que `b == 3`, où `b` est de type `bool`. Les règles de promotion entraînent la promotion de `bool` en `int`. Cela est légal, mais ne peut jamais être **true**. L’exemple suivant génère l’erreur C4806 :
 
-```
+```cpp
 // C4806.cpp
 // compile with: /W1
 int main()
