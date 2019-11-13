@@ -1,29 +1,29 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4733
+title: Avertissement du compilateur (niveau 1) C4733
 ms.date: 11/04/2016
 f1_keywords:
 - C4733
 helpviewer_keywords:
 - C4733
 ms.assetid: 7ef4f577-772d-4b66-a7bf-8958a6b250bc
-ms.openlocfilehash: 0d0b0b912ef15294f9a4362a79dffd6d7eeabed8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbecdda481748aa77eefdab8d61e50350804e09f
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221113"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051326"
 ---
-# <a name="compiler-warning-level-1-c4733"></a>Avertissement du compilateur (niveau 1) C4733
+# <a name="compiler-warning-level-1-c4733"></a>Avertissement du compilateur (niveau 1) C4733
 
-Affectation de inline asm à 'FS : 0' : gestionnaire non inscrit en tant que gestionnaire safe
+Assignation de Inline asm à’FS : 0 ' : gestionnaire non inscrit en tant que gestionnaire sécurisé
 
-Une fonction de modification de la valeur en FS : 0 pour ajouter un nouveau gestionnaire d’exceptions peut ne pas fonctionne avec les Exceptions sécurisées, car le gestionnaire ne peut pas être inscrit en tant que gestionnaire d’exceptions valide (consultez [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).
+Fonction modifiant la valeur sur FS : 0 l’ajout d’un nouveau gestionnaire d’exceptions peut ne pas fonctionner avec des exceptions sécurisées, car il est possible que le gestionnaire ne soit pas inscrit en tant que gestionnaire d’exceptions valide (consultez [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).
 
-Pour résoudre cet avertissement, supprimez la définition FS : 0 ou désactivez cette avertissement et utilisez [. SAFESEH](../../assembler/masm/dot-safeseh.md) pour spécifier les gestionnaires d’exceptions sécurisés.
+Pour résoudre cet avertissement, supprimez le FS : 0 définition ou désactivez cet avertissement et utilisez [. SAFESEH](../../assembler/masm/dot-safeseh.md) pour spécifier les gestionnaires d’exceptions sécurisés.
 
-L’exemple suivant génère l’erreur C4733 :
+L’exemple suivant génère l’C4733 :
 
-```
+```cpp
 // C4733.cpp
 // compile with: /W1 /c
 // processor: x86

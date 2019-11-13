@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 72a485811647911207b6d048c686acdadd142b65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0d7dc57c8d3c94a52f72b536657bb3ea1c6b3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402253"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051878"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Avertissement du compilateur (niveau 3) C4191
 
@@ -27,7 +27,7 @@ Plusieurs opérations faisant appel à des pointeurs fonction sont considérées
 
 - Longueurs des listes d’arguments différentes (sur `__cdecl`, le cast de type n’est effectué que de la liste la plus longue vers la liste la plus courte, même si la plus courte est déclarée varargs).
 
-- Pointeur vers des données (autre que **void**<strong>\*</strong>) utilisé comme alias d’un pointeur vers une fonction.
+- Pointeur vers des données (autre que **void** <strong>\*</strong>) avec un alias sur un pointeur vers une fonction.
 
 - Toute autre différence de type pouvant conduire à une erreur ou un avertissement sur un `reinterpret_cast`.
 
@@ -37,7 +37,7 @@ Cet avertissement est désactivé par défaut. Consultez [Avertissements du comp
 
 L’exemple suivant génère l’avertissement C4191.
 
-```
+```cpp
 // C4191.cpp
 // compile with: /W3 /clr
 #pragma warning(default: 4191)

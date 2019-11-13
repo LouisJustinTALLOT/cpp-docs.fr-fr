@@ -2,7 +2,7 @@
 title: Utiliser l’ensemble C++ d’outils Microsoft à partir de la ligne de commande
 description: Utilisez la chaîne d’outils du compilateur Microsoft C++ (MSVC) à partir de la ligne de commande en dehors de l’environnement de développement intégré (IDE) Visual Studio.
 ms.custom: conceptual
-ms.date: 10/22/2019
+ms.date: 11/12/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,20 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 7aa8673b7bb29591c7cf1c26b96b48261db9fee4
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811158"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051495"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Utiliser l’ensemble C++ d’outils Microsoft à partir de la ligne de commande
 
-Vous pouvez générer des applications C et C++ sur la ligne de commande en utilisant les outils inclus dans Visual Studio. L’ensemble C++ d’outils du compilateur Microsoft (MSVC) est également téléchargeable sous la forme d’un package autonome à partir de la page de [téléchargements de Visual Studio](https://visualstudio.microsoft.com/downloads/) . Elle fait partie du package **outils de génération pour Visual Studio** . Vous pouvez choisir de télécharger uniquement les outils dont vous avez C++ besoin pour le développement.
+Vous pouvez générer des applications C et C++ sur la ligne de commande en utilisant les outils inclus dans Visual Studio. L’ensemble C++ d’outils du compilateur Microsoft (MSVC) est également téléchargeable sous la forme d’un package autonome qui n’inclut pas l’IDE de Visual Studio.
+
+## <a name="download-and-install-the-tools"></a>Télécharger et installer les outils
+
+Si vous avez installé Visual Studio et une C++ charge de travail, vous disposez de tous les outils en ligne de commande. Pour plus d’informations sur l' C++ installation de et de Visual Studio, consultez [installation C++ de la prise en charge dans Visual Studio](vscpp-step-0-installation.md). Si vous souhaitez uniquement l’ensemble d’outils de ligne de commande, téléchargez les [outils de génération pour Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019). Lorsque vous exécutez le fichier exécutable téléchargé, il met à jour et exécute l’Visual Studio Installer. Pour installer uniquement les outils dont vous avez C++ besoin pour le développement, sélectionnez la **C++** charge de travail outils de génération. Vous pouvez sélectionner des bibliothèques et des ensembles d’outils facultatifs à inclure dans les **Détails de l’installation**. Pour générer du code à l’aide des ensembles d’outils Visual Studio 2015 ou 2017, sélectionnez les outils de génération MSVC V140 ou MSVC V141 facultatifs. Lorsque vous êtes satisfait de vos sélections, choisissez **installer**.
 
 ## <a name="how-to-use-the-command-line-tools"></a>Comment utiliser les outils en ligne de commande
 

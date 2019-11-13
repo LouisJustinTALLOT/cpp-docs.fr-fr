@@ -1,41 +1,41 @@
 ---
-title: Compilateur avertissement (niveau 2) C4146
+title: Avertissement du compilateur (niveau 2) C4146
 ms.date: 11/04/2016
 f1_keywords:
 - C4146
 helpviewer_keywords:
 - C4146
 ms.assetid: d6c31ab1-3120-40d5-8d80-32b5f7046e32
-ms.openlocfilehash: 8b3090f1bc3a64752ede4dab2b1e1b5cd800057d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d595befc80d954c8fb84f83ad6c4e0cb5f4fcf26
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349787"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052169"
 ---
-# <a name="compiler-warning-level-2-c4146"></a>Compilateur avertissement (niveau 2) C4146
+# <a name="compiler-warning-level-2-c4146"></a>Avertissement du compilateur (niveau 2) C4146
 
-opérateur moins unaire appliqué à un type non signé, le résultat sera non signé
+opérateur moins unaire appliqué à un type non signé, résultat toujours non signé
 
-Types non signés peuvent contenir des valeurs de négative uniquement, donc unaire (négation) n’est pas généralement justifié lorsqu’il est appliqué à un type non signé. L’opérande et sont tous deux le résultat non négatif.
+Les types non signés ne peuvent contenir que des valeurs non négatives, de sorte que le moins unaire (négation) n’a généralement pas de sens lorsqu’il est appliqué à un type non signé. L’opérande et le résultat ne sont pas négatifs.
 
-En pratique, cela se produit lorsque le programmeur exprimer la valeur entière minimale, qui est -2147483648. Cette valeur ne peut pas être écrite comme -2147483648 car l’expression est traitée en deux étapes :
+Concrètement, cela se produit lorsque le programmeur tente d’exprimer la valeur entière minimale, soit-2147483648. Cette valeur ne peut pas être écrite en tant que-2147483648, car l’expression est traitée en deux étapes :
 
-1. Le nombre 2147483648 est évalué. Comme il est supérieur à la valeur entière maximale 2147483647, le type de 2147483648 n’est pas [int](../../c-language/integer-types.md), mais `unsigned int`.
+1. Le nombre 2147483648 est évalué. Étant donné qu’il est supérieur à la valeur entière maximale de 2147483647, le type de 2147483648 n’est pas [int](../../c-language/integer-types.md), mais `unsigned int`.
 
-1. Moins unaire est appliqué à la valeur, avec un résultat non signé, ce qui se trouve également être 2147483648.
+1. Le moins unaire est appliqué à la valeur, avec un résultat non signé, qui se présente également comme 2147483648.
 
-Le type non signé du résultat peut provoquer un comportement inattendu. Si le résultat est utilisé dans une comparaison, une comparaison non signée peut être utilisée, par exemple, lorsque l’autre opérande est un `int`. Ceci explique pourquoi l’exemple de programme ci-dessous imprime qu’une seule ligne.
+Le type non signé du résultat peut provoquer un comportement inattendu. Si le résultat est utilisé dans une comparaison, une comparaison non signée peut être utilisée, par exemple, lorsque l’autre opérande est un `int`. Cela explique pourquoi l’exemple de programme ci-dessous n’affiche qu’une seule ligne.
 
-La deuxième ligne attendue, `1 is greater than the most negative int`, n’est pas imprimé car `((unsigned int)1) > 2147483648` a la valeur false.
+La deuxième ligne attendue, `1 is greater than the most negative int`, n’est pas imprimée, car `((unsigned int)1) > 2147483648` a la valeur false.
 
-Vous pouvez éviter C4146 en utilisant INT_MIN défini dans limits.h, qui a le type **type signed int**.
+Vous pouvez éviter les C4146 à l’aide de INT_MIN à partir de Limits. h, qui a le type **signed int**.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C4146 :
+L’exemple suivant génère l’C4146 :
 
-```
+```cpp
 // C4146.cpp
 // compile with: /W2
 #include <stdio.h>

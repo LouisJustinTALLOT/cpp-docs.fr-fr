@@ -1,31 +1,31 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4965
+title: Avertissement du compilateur (niveau 1) C4965
 ms.date: 11/04/2016
 f1_keywords:
 - C4965
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-ms.openlocfilehash: 2e93fdeba7f9b5b10340ccd1920807a3fcb345a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac1ffc1626a8b72fd7c9026afb6c6a54bace3750
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383837"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052234"
 ---
-# <a name="compiler-warning-level-1-c4965"></a>Avertissement du compilateur (niveau 1) C4965
+# <a name="compiler-warning-level-1-c4965"></a>Avertissement du compilateur (niveau 1) C4965
 
-boxing implicite de l’entier 0 ; utilisez nullptr ou cast explicite
+zone implicite de l’entier 0 ; utiliser nullptr ou cast explicite
 
-Visual C++ boxing implicite de types valeur. Une instruction qui a entraîné une attribution de null à l’aide des Extensions managées pour C++ devient désormais une assignation à un type int converti.
+Le C++ visuel intègre une conversion boxing implicite des types valeur. Une instruction qui a entraîné une assignation null à l’aide d' C++ extensions managées pour l’instant devient une assignation à un int boxed.
 
 Pour plus d'informations, consultez [Boxing](../../extensions/boxing-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4965 :.
+L’exemple suivant génère l’C4965.
 
-```
+```cpp
 // C4965.cpp
 // compile with: /clr /W1
 int main() {

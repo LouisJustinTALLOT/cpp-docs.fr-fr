@@ -1,27 +1,27 @@
 ---
-title: Avertissement du compilateur (niveau 3) C4281
+title: Avertissement du compilateur (niveau 3) C4281
 ms.date: 11/04/2016
 f1_keywords:
 - C4281
 helpviewer_keywords:
 - C4281
 ms.assetid: a9771261-5725-4fc6-87b6-16cf92113a25
-ms.openlocfilehash: 69496438d8078ee0298bdb447fcf4f7df1b75464
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 454118aa9b9cb1fdea5fb10576ac8d26833cb08c
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402149"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051684"
 ---
-# <a name="compiler-warning-level-3-c4281"></a>Avertissement du compilateur (niveau 3) C4281
+# <a name="compiler-warning-level-3-c4281"></a>Avertissement du compilateur (niveau 3) C4281
 
-'operator ->' récurrence à travers le type 'type'
+la récursivité’operator-> 's’est produite via le type’type'
 
-Permet à votre code **operator ->** s’appeler elle-même.
+Votre code permet à **operator->** de s’appeler lui-même.
 
-L’exemple suivant génère l’erreur C4281 :
+L’exemple suivant génère l’C4281 :
 
-```
+```cpp
 // C4281.cpp
 // compile with: /W3 /WX
 struct A;

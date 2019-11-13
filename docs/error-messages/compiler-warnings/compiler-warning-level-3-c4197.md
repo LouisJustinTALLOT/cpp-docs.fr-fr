@@ -1,27 +1,27 @@
 ---
-title: Compilateur avertissement (niveau 3) C4197
+title: Avertissement du compilateur (niveau 3) C4197
 ms.date: 11/04/2016
 f1_keywords:
 - C4197
 helpviewer_keywords:
 - C4197
 ms.assetid: f766feef-82b0-4d81-8a65-33628c7db196
-ms.openlocfilehash: 15b2fba94bfc956775a1e454893e7509a32000e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7c8cee42f17ad3301980852b8333ea37f5ca6be
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402240"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051778"
 ---
-# <a name="compiler-warning-level-3-c4197"></a>Compilateur avertissement (niveau 3) C4197
+# <a name="compiler-warning-level-3-c4197"></a>Avertissement du compilateur (niveau 3) C4197
 
-'type' : volatile de niveau supérieur dans le cast est ignoré.
+'type' : la volatile de niveau supérieur dans le cast est ignorée
 
-Le compilateur a détecté un cast de type vers un type qualifié [volatile](../../cpp/volatile-cpp.md), ou un cast de type vers un type à un certain type qualifié de volatile. Selon la norme du C (6.5.3), les propriétés associées aux types qualifiés sont significatives uniquement pour les expressions l-value.
+Le compilateur a détecté un cast en un type r-value qui est qualifié avec [volatile](../../cpp/volatile-cpp.md), ou un cast d’un type r-value en un type qualifié avec volatile. Selon la norme C (6.5.3), les propriétés associées aux types qualifiés sont significatives uniquement pour les expressions l-value.
 
-L’exemple suivant génère l’erreur C4197 :
+L’exemple suivant génère l’C4197 :
 
-```
+```cpp
 // C4197.cpp
 // compile with: /W3
 #include <stdio.h>

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-ms.openlocfilehash: 4da60194deaeac3c79f8c3e9be3bd87d91bc7ca2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cdd6018afd26b09f7a4555ff8d0431c3364f09e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386354"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051337"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>Avertissement du compilateur (niveau 1) C4730
 
-« principal » : combinaison de _m64 et expressions peuvent entraîner un code erroné de virgule flottante
+'main' : le mélange d' _m64 et d’expressions à virgule flottante peut entraîner un code incorrect
 
-Utilise une fonction [__m64](../../cpp/m64.md) et **float**/**double** types. Espace du Registre, car les intrinsèques MMX et registres en virgule flottante partagent le même physique (ne peut pas être utilisés simultanément), à l’aide de `__m64` et **float**/**double** types dans le même fonction peut entraîner une altération des données, ce qui provoque peut-être une exception.
+Une fonction utilise [__m64](../../cpp/m64.md) et **float**/des types **double** . Étant donné que les registres MMX et à virgule flottante partagent le même espace de registre physique (ne peut pas être utilisé simultanément), l’utilisation de `__m64` et de **float**/des types **double** dans la même fonction peut entraîner une altération des données, provoquant éventuellement une exception.
 
-À utiliser en toute sécurité `__m64` types et les types à virgule flottante dans la même fonction, chaque instruction qui utilise un des types doit être séparée par le **_m_empty()** (pour MMX) ou **_m_femms()** (pour 3DNow !) intrinsèque.
+Pour utiliser en toute sécurité des types de `__m64` et des types à virgule flottante dans la même fonction, chaque instruction qui utilise l’un des types doit être séparée par l’intrinsèque **_m_empty ()** (pour MMX) ou **_m_femms ()** (pour 3DNow !).
 
-L’exemple suivant génère l’erreur C4730 :
+L’exemple suivant génère l’C4730 :
 
-```
+```cpp
 // C4730.cpp
 // compile with: /W1
 // processor: x86
