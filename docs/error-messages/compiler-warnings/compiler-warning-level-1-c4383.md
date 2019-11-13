@@ -1,33 +1,33 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4383
+title: Avertissement du compilateur (niveau 1) C4383
 ms.date: 11/04/2016
 f1_keywords:
 - C4383
 helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-ms.openlocfilehash: 2510dda59047632e2a4823f734feeffd0c0a5b02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9681408841173bad4aca3305e727ddde6cd98f14
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390436"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966176"
 ---
-# <a name="compiler-warning-level-1-c4383"></a>Avertissement du compilateur (niveau 1) C4383
+# <a name="compiler-warning-level-1-c4383"></a>Avertissement du compilateur (niveau 1) C4383
 
-'opérateur_déréférencement_instance' : la signification du déréférencement d’un handle peut changer lorsqu’il existe un opérateur défini par l’utilisateur 'opérateur' ; Écrivez l’opérateur comme une fonction static pour rendre l’opérande explicite
+'instance_dereference_operator' : la signification du déréférencement d’un handle peut changer, lorsqu’un opérateur’operator’défini par l’utilisateur existe ; écrire l’opérateur en tant que fonction statique pour être explicite à propos de l’opérande
 
-Lorsque vous ajoutez une substitution d’instance défini par l’utilisateur de l’opérateur de déréférencement dans un type managé, vous substituez potentiellement la possibilité de retourner l’objet du handle de l’opérateur de déréférencement du type. Envisagez d’écrire un ligne statique, défini par l’utilisateur opérateur de déréférencement.
+Quand vous ajoutez une substitution d’instance définie par l’utilisateur de l’opérateur de déréférencement dans un type managé, vous substituez potentiellement la capacité de l’opérateur de déréférence du type à retourner l’objet du handle. Envisagez d’écrire un opérateur de déréférencement statique défini par l’utilisateur.
 
-Pour plus d’informations, consultez [gérer sur l’opérateur Object (^)](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) et [opérateur de référence de suivi](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
+Pour plus d’informations, consultez [handle to Object Operator (^)](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) and [Tracking Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
-En outre, un opérateur d’instance n’est pas disponible à d’autres compilateurs de langage via les métadonnées référencées. Pour plus d’informations, consultez [les opérateurs définis par l’utilisateur (C++ / c++ / CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
+En outre, un opérateur d’instance n’est pas disponible pour d’autres compilateurs de langage par le biais de métadonnées référencées. Pour plus d’informations, consultez [opérateurs définis par l'C++utilisateur (/CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C4383.
+L’exemple suivant génère l’C4383.
 
-```
+```cpp
 // C4383.cpp
 // compile with: /clr /W1
 

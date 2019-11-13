@@ -1,31 +1,31 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4490
+title: Avertissement du compilateur (niveau 1) C4490
 ms.date: 11/04/2016
 f1_keywords:
 - C4490
 helpviewer_keywords:
 - C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
-ms.openlocfilehash: bf51994c210bd751e0d29bec169dfc4366784486
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41fa124eed365b87b419a4019262c0c673399295
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161093"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966181"
 ---
-# <a name="compiler-warning-level-1-c4490"></a>Avertissement du compilateur (niveau 1) C4490
+# <a name="compiler-warning-level-1-c4490"></a>Avertissement du compilateur (niveau 1) C4490
 
-'override' : utilisation incorrecte du spécificateur de substitution ; 'fonction' ne correspond pas à une méthode de classe ref de base
+'override' : utilisation incorrecte du spécificateur de substitution ; 'Function’ne correspond pas à une méthode de classe ref de base
 
-Un spécificateur de substitution a été utilisé incorrectement. Par exemple, vous ne substituez pas une fonction d’interface, vous l’implémenter.
+Un spécificateur de substitution a été utilisé de façon incorrecte. Par exemple, vous ne substituez pas une fonction d’interface, vous l’implémentez.
 
-Pour plus d’informations, consultez [des spécificateurs de substitution](../../extensions/override-specifiers-cpp-component-extensions.md).
+Pour plus d’informations, consultez [spécificateurs de substitution](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4490 :.
+L’exemple suivant génère l’C4490.
 
-```
+```cpp
 // C4490.cpp
 // compile with: /clr /c /W1
 

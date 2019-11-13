@@ -1,29 +1,29 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4566
+title: Avertissement du compilateur (niveau 1) C4566
 ms.date: 11/04/2016
 f1_keywords:
 - C4566
 helpviewer_keywords:
 - C4566
 ms.assetid: 65f40730-e86f-447c-b37b-16caadcfe311
-ms.openlocfilehash: c864feb2478e9f99ad6e4c0087dcef72b55de601
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6a62b399aa32ec6caf2e5a9ee6d4c5836601ba4
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397261"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965956"
 ---
-# <a name="compiler-warning-level-1-c4566"></a>Avertissement du compilateur (niveau 1) C4566
+# <a name="compiler-warning-level-1-c4566"></a>Avertissement du compilateur (niveau 1) C4566
 
-caractère représenté par le nom de caractère universel 'char' ne peut pas être représenté dans la page de codes actuelle (page)
+le caractère représenté par le nom de caractère universel’Char’ne peut pas être représenté dans la page de codes actuelle (page)
 
-Pas tous les caractères Unicode peuvent être représentés dans votre page de codes ANSI actuelle.
+Tous les caractères Unicode ne peuvent pas être représentés dans votre page de codes ANSI actuelle.
 
-Les chaînes étroites (caractères sur un octet) sont convertis en caractères multioctets, tandis que les chaînes étendues (caractères sur deux octets) ne sont pas.
+Les chaînes étroites (caractères d’un octet) sont converties en caractères multioctets, contrairement aux chaînes larges (caractères de deux octets).
 
-L’exemple suivant génère l’erreur C4566 :
+L’exemple suivant génère l’C4566 :
 
-```
+```cpp
 // C4566.cpp
 // compile with: /W1
 int main() {

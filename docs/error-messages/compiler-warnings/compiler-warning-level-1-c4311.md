@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4311
+title: Avertissement du compilateur (niveau 1) C4311
 ms.date: 11/04/2016
 f1_keywords:
 - C4311
 helpviewer_keywords:
 - C4311
 ms.assetid: ddc579d0-d051-47bc-915d-71ffb32323c9
-ms.openlocfilehash: 6e44dafb6675882a1a62fba5144f85120378421d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: adb5c4bf3103cf98fb557a5f54b6a64013356475
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510057"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966134"
 ---
-# <a name="compiler-warning-level-1-c4311"></a>Avertissement du compilateur (niveau 1) C4311
+# <a name="compiler-warning-level-1-c4311"></a>Avertissement du compilateur (niveau 1) C4311
 
 'variable' : troncation de pointeur de 'type' à 'type'
 
@@ -23,7 +23,7 @@ Pour plus d’informations sur les causes courantes des C4311 d’avertissement,
 
 L'exemple de code suivant génère l'avertissement C4311 quand il est compilé pour une cible 64 bits, puis indique comment le corriger :
 
-```
+```cpp
 // C4311.cpp
 // compile by using: cl /W1 C4311.cpp
 int main() {

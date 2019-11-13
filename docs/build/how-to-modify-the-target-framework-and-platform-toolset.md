@@ -1,28 +1,28 @@
 ---
-title: 'Procédure : Modifier le Framework cible et l’ensemble d’outils de plateforme'
+title: "comment : modifier la version cible de .Net Framework et l'ensemble d'outils de la plateforme"
 ms.custom: conceptual
 ms.date: 07/24/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: 6af7a4eb47c1d3f8b9c52eec39795c9307ca9d8e
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: c5e7172fea06f6b455422fb023a0b6462b5c4103
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492230"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964904"
 ---
-# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Procédure : Modifier le Framework cible et l’ensemble d’outils de plateforme
+# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>comment : modifier la version cible de .Net Framework et l'ensemble d'outils de la plateforme
 
 Vous pouvez modifier un fichier projet C++ Visual Studio pour cibler différentes versions de l' C++ ensemble d’outils de plateforme, le SDK Windows etC++le .NET Framework (projets/CLI uniquement). Par défaut, le système de projet utilise la version du. Net Framework et la version de l'ensemble d'outils qui correspondent à la version de Visual Studio que vous utilisez pour créer le projet. Vous pouvez modifier toutes ces valeurs dans le fichier. vcxproj afin de pouvoir utiliser la même base de code pour chaque cible de compilation.
 
 ## <a name="platform-toolset"></a>Ensemble d’outils de plateforme
 
-L’ensemble d’outils de plateforme C++ se compose du compilateur (cl. exe) et de l’éditeur de liens (Link. exe)C++ , ainsi que des bibliothèques C/standard. Depuis Visual Studio 2015, la version majeure de l’ensemble d’outils est restée à 14, ce qui signifie que les projets compilés avec Visual Studio 2019 ou Visual Studio 2017 sont compatibles ABI-Backwards avec les projets compilés avec Visual Studio 2015. La version mineure a été mise à jour de 1 pour chaque version depuis Visual Studio 2015:
+L’ensemble d’outils de plateforme C++ se compose du compilateur (cl. exe) et de l’éditeur de liens (Link. exe)C++ , ainsi que des bibliothèques C/standard. Depuis Visual Studio 2015, la version majeure de l’ensemble d’outils est restée à 14, ce qui signifie que les projets compilés avec Visual Studio 2019 ou Visual Studio 2017 sont compatibles ABI-Backwards avec les projets compilés avec Visual Studio 2015. La version mineure a été mise à jour de 1 pour chaque version depuis Visual Studio 2015 :
 
-- Visual Studio 2015: V140
-- Visual Studio 2017: V141
-- Visual Studio 2019: V142
+- Visual Studio 2015 : V140
+- Visual Studio 2017 : V141
+- Visual Studio 2019 : V142
 
 Ces ensembles d’outils prennent en charge .NET Framework 4,5 et versions ultérieures.
 
@@ -30,9 +30,9 @@ Visual Studio prend également en charge le MULTICIBLAGE pour les C++ projets. V
 
 ## <a name="target-framework-ccli-project-only"></a>Framework cible (C++projet/CLI uniquement)
 
-Lorsque vous changez le Framework cible, remplacez également l'ensemble d'outils de plateforme par une version qui prend en charge ce Framework. Par exemple, pour cibler le .NET Framework 4.5, vous devez utiliser un ensemble d’outils de plateforme compatible, comme Visual Studio 2015 (v140), Visual Studio 2013 (v120) ou Visual Studio 2012 (v110). Vous pouvez utiliser l’ensemble d’outils de plateforme du [Kit de développement logiciel (SDK) Windows 7,1](https://www.microsoft.com/en-us/download/details.aspx?id=8279) pour cibler les plates-formes .NET Framework 2,0, 3,0, 3,5 et 4, ainsi que les plateformes x86/x64.
+Lorsque vous changez le Framework cible, remplacez également l'ensemble d'outils de plateforme par une version qui prend en charge ce Framework. Par exemple, pour cibler le .NET Framework 4.5, vous devez utiliser un ensemble d’outils de plateforme compatible, comme Visual Studio 2015 (v140), Visual Studio 2013 (v120) ou Visual Studio 2012 (v110). Vous pouvez utiliser l’ensemble d’outils de plateforme du [Kit de développement logiciel (SDK) Windows 7,1](https://www.microsoft.com/download/details.aspx?id=8279) pour cibler les plates-formes .NET Framework 2,0, 3,0, 3,5 et 4, ainsi que les plateformes x86/x64.
 
-Vous pouvez étendre davantage la plateforme cible en créant un ensemble d'outils de plateforme personnalisé. Pour plus d’informations, consultez [Multiciblage natif C++](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) sur le blog de Visual C++.
+Vous pouvez étendre davantage la plateforme cible en créant un ensemble d'outils de plateforme personnalisé. Pour plus d’informations, consultez [Multiciblage natif C++](https://devblogs.microsoft.com/cppblog/c-native-multi-targeting/) sur le blog de Visual C++.
 
 ### <a name="to-change-the-target-framework"></a>Pour changer la version cible du .Net Framework
 
@@ -67,4 +67,4 @@ Vous pouvez étendre davantage la plateforme cible en créant un ensemble d'outi
 
 ## <a name="see-also"></a>Voir aussi
 
-[MSBuild sur la ligne de commande – C++](msbuild-visual-cpp.md)
+[MSBuild sur la ligne de commande - C++](msbuild-visual-cpp.md)
