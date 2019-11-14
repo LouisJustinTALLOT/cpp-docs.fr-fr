@@ -1,6 +1,6 @@
 ---
 title: basic_string, classe
-ms.date: 11/04/2016
+ms.date: 11/12/2019
 f1_keywords:
 - xstring/std::basic_string
 - xstring/std::basic_string::allocator_type
@@ -116,16 +116,16 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: c77c09394bb8997168d8a6756da69e9545dad0a2
-ms.sourcegitcommit: 4a0a108aa6f042576a777feb6dcb310dc0bb9230
+ms.openlocfilehash: 6919f2ece4ed846cd80f791af91797373dea33b2
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73842318"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051506"
 ---
 # <a name="basic_string-class"></a>basic_string, classe
 
-Les séquences contrôlées par un objet de type `basic_string` sont la C++ classe de chaîne standard et sont généralement appelées chaînes, mais elles ne doivent pas être confondues avec les chaînes de style C se terminant C++ par un caractère null utilisées dans l’ensemble de la bibliothèque standard. La chaîne C++ Standard est un conteneur qui permet d’utiliser les chaînes comme types normaux, par exemple pour les opérations de comparaison et de concaténation, les itérateurs, les algorithmes de la bibliothèque C++ Standard, ainsi que les opérations de copie et d’assignation avec la mémoire gérée par la classe allocator. Si vous devez convertir une chaîne C++ Standard en chaîne de style C se terminant par un caractère null, utilisez le membre [basic_string::c_str](#c_str).
+Les séquences contrôlées par un objet de type `basic_string` sont la C++ classe de chaîne standard et sont généralement appelées chaînes, mais elles ne doivent pas être confondues avec les chaînes de style C se terminant par un caractère null utilisées dans l’ensemble de la C++ bibliothèque standard. La chaîne C++ Standard est un conteneur qui permet d’utiliser les chaînes comme types normaux, par exemple pour les opérations de comparaison et de concaténation, les itérateurs, les algorithmes de la bibliothèque C++ Standard, ainsi que les opérations de copie et d’assignation avec la mémoire gérée par la classe allocator. Si vous devez convertir une chaîne C++ Standard en chaîne de style C se terminant par un caractère null, utilisez le membre [basic_string::c_str](#c_str).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -194,9 +194,9 @@ Type qui représente l'objet allocateur stocké qui contient des informations su
 |[end](#end)|Retourne un itérateur qui traite l'emplacement qui suit le dernier élément d'une chaîne.|
 |[erase](#erase)|Supprime un élément ou une plage d'éléments dans une chaîne à partir de l'emplacement spécifié.|
 |[find](#find)|Recherche une chaîne vers l'avant pour trouver la première occurrence d'une sous-chaîne qui correspond à une séquence spécifique de caractères.|
-|[find_first_not_of](#find_first_not_of)|Recherche dans une chaîne le premier caractère qui n'est pas un élément de la chaîne spécifiée.|
+|[find_first_not_of](#find_first_not_of)|Recherche dans une chaîne le premier caractère qui n’est pas un élément d’une chaîne spécifiée.|
 |[find_first_of](#find_first_of)|Recherche dans une chaîne le premier caractère qui correspond à un élément de la chaîne spécifiée.|
-|[find_last_not_of](#find_last_not_of)|Recherche dans une chaîne le dernier caractère qui n'est pas un élément de la chaîne spécifiée.|
+|[find_last_not_of](#find_last_not_of)|Recherche dans une chaîne le dernier caractère qui n’est pas un élément d’une chaîne spécifiée.|
 |[find_last_of](#find_last_of)|Recherche dans une chaîne le dernier caractère qui est un élément de la chaîne spécifiée.|
 |[front](#front)|Retourne une référence au premier élément d'une chaîne.|
 |[get_allocator](#get_allocator)|Retourne une copie de l'objet `allocator` utilisé pour construire la chaîne.|
@@ -281,7 +281,7 @@ basic_string<CharType, Traits, Allocator>& append(
 
 basic_string<CharType, Traits, Allocator>& append(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& append(
@@ -289,7 +289,7 @@ basic_string<CharType, Traits, Allocator>& append(
 
 basic_string<CharType, Traits, Allocator>& append(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 template <class InputIterator>
 basic_string<CharType, Traits, Allocator>& append(
@@ -313,13 +313,13 @@ Chaîne C à ajouter.
 *str* \
 Chaîne dont les caractères sont à ajouter.
 
-*_Off*\
+*décalage*\
 Index de la partie de la chaîne source fournissant les caractères à ajouter.
 
 *nombre* \
 Nombre de caractères à ajouter, au maximum, à partir de la chaîne source.
 
-*_Ch*\
+*char_value*\
 Valeur du caractère à ajouter.
 
 *premier* \
@@ -450,7 +450,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 basic_string<CharType, Traits, Allocator>& assign(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 template <class InIt>
 basic_string<CharType, Traits, Allocator>& assign(
@@ -477,7 +477,7 @@ Nombre de caractères à assigner, à partir de la chaîne source.
 *str* \
 Chaîne source dont les caractères doivent être assignés à la chaîne cible.
 
-*_Ch*\
+*char_value*\
 Valeur du caractère à assigner.
 
 *premier* \
@@ -594,14 +594,14 @@ The string str1 assigned a range of string str2f is: World.
 Fournit une référence au caractère situé à l'index spécifié dans une chaîne.
 
 ```cpp
-const_reference at(size_type _Off) const;
+const_reference at(size_type offset) const;
 
-reference at(size_type _Off);
+reference at(size_type offset);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off*\
+*décalage*\
 Index de la position de l’élément à référencer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -681,7 +681,7 @@ Construit une chaîne vide, initialisée par des caractères spécifiques ou qui
 basic_string();
 
 explicit basic_string(
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const basic_string& right);
@@ -691,14 +691,14 @@ basic_string(
 
 basic_string(
     const basic_string& right,
-    size_type _Roff,
+    size_type right_offset,
     size_type count = npos);
 
 basic_string(
     const basic_string& right,
-    size_type _Roff,
+    size_type right_offset,
     size_type count,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const value_type* ptr,
@@ -707,23 +707,23 @@ basic_string(
 basic_string(
     const value_type* ptr,
     size_type count,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const value_type* ptr);
 
 basic_string(
     const value_type* ptr,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 basic_string(
     size_type count,
-    value_type _Ch,
-    const allocator_type& _Al);
+    value_type char_value,
+    const allocator_type& alloc_type);
 
 template <class InputIterator>
 basic_string(
@@ -734,7 +734,7 @@ template <class InputIterator>
 basic_string(
     InputIterator first,
     InputIterator last,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const_pointer first,
@@ -750,7 +750,7 @@ basic_string(
 \ *ptr*
 Chaîne C dont les caractères doivent être utilisés pour initialiser le `string` en cours de construction. Cette valeur ne peut pas être un pointeur null.
 
-*_Al*\
+*alloc_type*\
 Classe d'allocateur de stockage pour l'objet String en cours de construction.
 
 *nombre* \
@@ -759,10 +759,10 @@ Nombre de caractères à initialiser.
 \ *droit*
 Chaîne pour initialiser la chaîne en cours de construction.
 
-*_Roff*\
+*right_offset*\
 Index d'un caractère dans une chaîne qui est le premier à être utilisé pour initialiser les valeurs de caractère de la chaîne en cours de construction.
 
-*_Ch*\
+*char_value*\
 Valeur de caractère à copier dans la chaîne en cours de construction.
 
 *premier* \
@@ -777,9 +777,9 @@ Référence à l'objet String qui est construit par les constructeurs.
 
 ### <a name="remarks"></a>Notes
 
-Tous les constructeurs stockent un [basic_string::allocator_type](#allocator_type) et initialisent la séquence contrôlée. L'objet allocateur est l'argument `al`, s'il est présent. Pour le constructeur de copie, il s’agit de `right.`[basic_string::get_allocator](#get_allocator)`()`. Sinon, il s'agit de `Alloc()`.
+Tous les constructeurs stockent un [basic_string::allocator_type](#allocator_type) et initialisent la séquence contrôlée. L'objet allocateur est l'argument `al`, s'il est présent. Pour le constructeur de copie, il s’agit de `right.`[basic_string :: get_allocator](#get_allocator)`()`. Dans le cas contraire, l’allocateur est `Alloc()`.
 
-La séquence contrôlée est initialisée avec une copie de la séquence d'opérandes spécifiée par les opérandes restants. Un constructeur sans séquence d’opérandes spécifie une séquence contrôlée initiale vide. Si `InputIterator` est de type entier dans un constructeur de modèle, la séquence d’opérandes _F`irst,  last` se comporte comme `(size_type) first, (value_type) last`.
+La séquence contrôlée est initialisée avec une copie de la séquence d'opérandes spécifiée par les opérandes restants. Un constructeur sans séquence d’opérandes spécifie une séquence contrôlée initiale vide. Si `InputIterator` est un type entier dans un constructeur de modèle, la séquence d’opérande `first,  last` se comporte comme `(size_type) first, (value_type) last`.
 
 ### <a name="example"></a>Exemple
 
@@ -890,13 +890,13 @@ const value_type *c_str() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers la version de style C de la chaîne d’appel.  La valeur du pointeur n’est pas valide après l’appel à une fonction non-const, y compris le destructeur, dans la classe basic_string sur l’objet.
+Pointeur vers la version de style C de la chaîne d’appel.  La valeur du pointeur n’est pas valide après l’appel d’une fonction non const, y compris le destructeur, dans la classe basic_string de l’objet.
 
 ### <a name="remarks"></a>Notes
 
 Les objets de type chaîne appartenant au modèle de classe basic_string\<char > ne sont pas nécessairement terminés par null. Le caractère null « \0 » est utilisé comme caractère spécial dans une chaîne C pour marquer la fin de la chaîne, mais il n’a aucune signification particulière dans un objet de type chaîne et peut faire partie de la chaîne comme tout autre caractère. Il existe une conversion automatique de **const char** <strong>\*</strong> en chaînes, mais la classe String ne fournit pas de conversion automatique des chaînes de style C en objets de type **basic_string\<char >** .
 
-La chaîne de style C retournée ne doit pas être modifiée, car cela peut invalider le pointeur vers la chaîne, ou supprimée, car la chaîne a une durée de vie limitée et appartient à la chaîne de la classe.
+La chaîne de style C retournée ne doit pas être modifiée, car cela peut invalider le pointeur vers la chaîne, ou supprimé, car la chaîne a une durée de vie limitée et appartient à la chaîne de la classe.
 
 ### <a name="example"></a>Exemple
 
@@ -1128,30 +1128,30 @@ int compare(
     const basic_string<CharType, Traits, Allocator>& str) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 int compare(
     const value_type* ptr) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr
-    size_type _Num2) const;
+    size_type number_2) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -1159,16 +1159,16 @@ int compare(
 *str* \
 Chaîne à comparer à la chaîne d’opérande.
 
-*_Pos1*\
+*position_1*\
 Index de la chaîne d’opérande à partir duquel commence la comparaison.
 
-*_Num1*\
+*number_1*\
 Nombre maximal de caractères de la chaîne d’opérande à comparer.
 
-*_Num2*\
+*number_2*\
 Nombre maximal de caractères de la chaîne de paramètre à comparer.
 
-*_Off*\
+*décalage*\
 Index de la chaîne de paramètre à partir duquel commence la comparaison.
 
 *nombre* \
@@ -1408,7 +1408,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 Le type est un synonyme de `allocator_type::const_pointer`.
 
-Pour le type `string`, il équivaut à `char*`.
+Pour le type `string`, il est équivalent à `char*`.
 
 Les pointeurs déclarés comme const doivent être initialisés au moment de la déclaration. Les pointeurs const pointent toujours vers le même emplacement de mémoire et peuvent pointer vers des données constantes ou non-constantes.
 
@@ -1448,7 +1448,7 @@ typedef typename allocator_type::const_reference const_reference;
 
 Un type `const_reference` ne peut pas être utilisé pour changer la valeur d'un élément.
 
-Le type est un synonyme de `allocator_type::const_reference`. Pour les `type` de chaîne, la valeur est équivalente à const `char&`.
+Le type est un synonyme de `allocator_type::const_reference`. Pour les `type`de chaîne, il est équivalent à const `char&`.
 
 ### <a name="example"></a>Exemple
 
@@ -1480,7 +1480,7 @@ Cette méthode est potentiellement dangereuse, car elle suppose que l’appelant
 size_type copy(
     value_type* ptr,
     size_type count,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -1488,9 +1488,9 @@ size_type copy(
 \ *ptr*
 Tableau de caractères cible dans lequel les éléments doivent être copiés.
 
-_ *Count* nombre de caractères à copier, au maximum, à partir de la chaîne source.
+*nombre* Nombre de caractères à copier, au maximum, à partir de la chaîne source.
 
-*_Off*\
+*décalage*\
 Position de début dans la chaîne source à partir de laquelle les copies doivent être effectuées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1499,7 +1499,7 @@ Nombre de caractères réellement copiés.
 
 ### <a name="remarks"></a>Notes
 
-Un caractère null n’est pas ajouté à la fin de la copie.
+Un caractère NULL n’est pas ajouté à la fin de la copie.
 
 ### <a name="example"></a>Exemple
 
@@ -1585,7 +1585,7 @@ size_type _Copy_s(
     value_type* dest,
     size_type dest_size,
     size_type count,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -1596,9 +1596,9 @@ Tableau de caractères cible dans lequel les éléments doivent être copiés.
 *dest_size*\
 La taille de *dest*.
 
-_ *Count* nombre de caractères à copier, au maximum, à partir de la chaîne source.
+*nombre* Nombre de caractères à copier, au maximum, à partir de la chaîne source.
 
-*_Off*\
+*décalage*\
 Position de début dans la chaîne source à partir de laquelle les copies doivent être effectuées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1607,7 +1607,7 @@ Nombre de caractères réellement copiés.
 
 ### <a name="remarks"></a>Notes
 
-Un caractère null n’est pas ajouté à la fin de la copie.
+Un caractère NULL n’est pas ajouté à la fin de la copie.
 
 ### <a name="example"></a>Exemple
 
@@ -1737,7 +1737,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 Le type d'entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments quelconques dans la séquence contrôlée.
 
-Pour le type `string`, il équivaut à `ptrdiff_t`.
+Pour le type `string`, il est équivalent à `ptrdiff_t`.
 
 ### <a name="example"></a>Exemple
 
@@ -1904,10 +1904,10 @@ iterator erase(
     iterator last);
 
 iterator erase(
-    iterator _It);
+    iterator iter);
 
 basic_string<CharType, Traits, Allocator>& erase(
-    size_type _Pos = 0,
+    size_type offset = 0,
     size_type count = npos);
 ```
 
@@ -1919,14 +1919,14 @@ Itérateur qui cible la position du premier élément de la plage à effacer.
 *dernier* \
 Itérateur qui cible la position juste après le dernier élément de la plage à effacer.
 
-*_It*\
+*iter*\
 Itérateur qui cible la position de l’élément de la chaîne à effacer.
 
-*_Pos*\
+*décalage*\
 Index du premier caractère de la chaîne à supprimer.
 
 *nombre* \
-Nombre d’éléments à supprimer s’il y en a autant dans la plage de la chaîne commençant par *_Pos*.
+Nombre d’éléments qui seront supprimés s’il y en a autant dans la plage de la chaîne commençant par *offset*.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2003,29 +2003,29 @@ Recherche une chaîne vers l'avant pour trouver la première occurrence d'une so
 
 ```cpp
 size_type find(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch*\
+*char_value*\
 Valeur de caractère que la fonction membre doit rechercher.
 
-*_Off*\
+*décalage*\
 Index de la position à laquelle la recherche doit commencer.
 
 \ *ptr*
@@ -2174,33 +2174,33 @@ The index of the 1st element of 'clear' in str4 is: 0
 
 ## <a name="find_first_not_of"></a>  basic_string::find_first_not_of
 
-Recherche dans une chaîne le premier caractère qui n’est pas un élément de la chaîne spécifiée.
+Recherche dans une chaîne le premier caractère qui n’est pas un élément d’une chaîne spécifiée.
 
 ```cpp
 size_type find_first_not_of(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find_first_not_of(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find_first_not_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_first_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch*\
+*char_value*\
 Valeur de caractère que la fonction membre doit rechercher.
 
-*_Off*\
+*décalage*\
 Index de la position à laquelle la recherche doit commencer.
 
 \ *ptr*
@@ -2366,29 +2366,29 @@ Recherche dans une chaîne le premier caractère qui correspond à un élément 
 
 ```cpp
 size_type find_first_of(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find_first_of(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find_first_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_first_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch*\
+*char_value*\
 Valeur de caractère que la fonction membre doit rechercher.
 
-*_Off*\
+*décalage*\
 Index de la position à laquelle la recherche doit commencer.
 
 \ *ptr*
@@ -2549,33 +2549,33 @@ the 0th position is: 1
 
 ## <a name="find_last_not_of"></a>  basic_string::find_last_not_of
 
-Recherche dans une chaîne le dernier caractère qui n'est pas un élément de la chaîne spécifiée.
+Recherche dans une chaîne le dernier caractère qui n’est pas un élément d’une chaîne spécifiée.
 
 ```cpp
 size_type find_last_not_of(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type find_last_not_of(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type find_last_not_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_last_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch*\
+*char_value*\
 Valeur de caractère que la fonction membre doit rechercher.
 
-*_Off*\
+*décalage*\
 Index de la position à laquelle la recherche doit se terminer.
 
 \ *ptr*
@@ -2742,29 +2742,29 @@ Recherche dans une chaîne le dernier caractère qui correspond à un élément 
 
 ```cpp
 size_type find_last_of(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type find_last_of(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type find_last_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_last_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch*\
+*char_value*\
 Valeur de caractère que la fonction membre doit rechercher.
 
-*_Off*\
+*décalage*\
 Index de la position à laquelle la recherche doit se terminer.
 
 \ *ptr*
@@ -2975,60 +2975,60 @@ Insère un élément, un certain nombre d'éléments ou une plage d'éléments d
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const value_type* ptr);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const value_type* ptr,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const basic_string<CharType, Traits, Allocator>& str);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 iterator insert(
-    iterator _It);
+    iterator iter);
 
 iterator insert(
-    iterator _It,
-    value_type _Ch)l
+    iterator iter,
+    value_type char_value)l
 template <class InputIterator>
 void insert(
-    iterator _It,
+    iterator iter,
     InputIterator first,
     InputIterator last);
 
 void insert(
-    iterator _It,
+    iterator iter,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 void insert(
-    iterator _It,
+    iterator iter,
     const_pointer first,
     const_pointer last);
 
 void insert(
-    iterator _It,
+    iterator iter,
     const_iterator first,
     const_iterator last);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*_P0*\
+*position*\
 Index de la position derrière le point d’insertion des nouveaux caractères.
 
 \ *ptr*
@@ -3040,13 +3040,13 @@ Nombre de caractères à insérer.
 *str* \
 Chaîne à insérer en intégralité ou en partie dans la chaîne cible.
 
-*_Off*\
+*décalage*\
 Index de la partie de la chaîne source fournissant les caractères à ajouter.
 
-*_Ch*\
+*char_value*\
 Valeur de caractère des éléments à insérer.
 
-*_It*\
+*iter*\
 Itérateur traitant la position derrière laquelle un caractère doit être inséré.
 
 *premier* \
@@ -3322,7 +3322,7 @@ Ajoute des caractères à une chaîne.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& operator+=(
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& operator+=(
     const value_type* ptr);
@@ -3333,7 +3333,7 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch*\
+*char_value*\
 Caractère à ajouter.
 
 \ *ptr*
@@ -3411,7 +3411,7 @@ Assigne de nouvelles valeurs de caractère au contenu d'une chaîne.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& operator=(
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& operator=(
     const value_type* ptr);
@@ -3425,7 +3425,7 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch*\
+*char_value*\
 Valeur du caractère à assigner.
 
 \ *ptr*
@@ -3504,13 +3504,13 @@ The string str1 reassigned with string str3c is: World.
 Fournit une référence au caractère situé à l'index spécifié dans une chaîne.
 
 ```cpp
-const_reference operator[](size_type _Off) const;
-reference operator[](size_type _Off);
+const_reference operator[](size_type offset) const;
+reference operator[](size_type offset);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off*\
+*décalage*\
 Index de la position de l’élément à référencer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3523,7 +3523,7 @@ Le premier élément de la chaîne a un index égal à zéro et les éléments s
 
 `operator[]` est plus rapide que la fonction membre [at](#at) pour fournir un accès en lecture et en écriture aux éléments d’une chaîne.
 
-`operator[]` ne vérifie pas si l’index passé comme paramètre est valide, mais que la fonction membre `at`e et doit donc être utilisée dans la validité n’est pas certaine. Un index non valide (un index inférieur à zéro ou supérieur ou égal à la taille de la chaîne) passé à la fonction membre `at` lève une exception de [classe out_of_range](../standard-library/out-of-range-class.md) . Un index non valide passé à `operator[]` entraîne un comportement indéfini, mais l’index égal à la longueur de la chaîne est un index valide pour les chaînes const, et l’opérateur retourne le caractère null quand il reçoit cet index.
+`operator[]` ne vérifie pas si l’index passé comme paramètre est valide, mais la fonction membre `at` ne doit pas être utilisée dans la validité. Un index non valide (un index inférieur à zéro ou supérieur ou égal à la taille de la chaîne) passé à la fonction membre `at` lève une exception de [classe out_of_range](../standard-library/out-of-range-class.md) . Un index non valide passé à `operator[]` entraîne un comportement indéfini, mais l’index égal à la longueur de la chaîne est un index valide pour les chaînes const, et l’opérateur retourne le caractère null quand il reçoit cet index.
 
 La référence retournée peut être invalidée par des réallocations ou des modifications de chaîne pour les chaînes non-**const**.
 
@@ -3580,7 +3580,7 @@ typedef typename allocator_type::pointer pointer;
 
 Le type est un synonyme de `allocator_type::pointer`.
 
-Pour le type `string`, son équivalent est  <strong>\*</strong>char.
+Pour le type `string`, son équivalent est <strong>\*</strong>char.
 
 ### <a name="example"></a>Exemple
 
@@ -3622,17 +3622,17 @@ Cette fonction membre appelle `erase(size() - 1)` pour effacer le dernier élém
 Ajoute un élément à la fin de la chaîne.
 
 ```cpp
-void push_back(value_type _Ch);
+void push_back(value_type char_value);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch*\
+*char_value*\
 Caractère à ajouter à la fin de la chaîne.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle [insert](#insert)( [end](#end), _ *Ch* ).
+La fonction membre appelle effectivement [Insert](#insert)( [end](#end), *char_value* ).
 
 ### <a name="example"></a>Exemple
 
@@ -3762,7 +3762,7 @@ Un `reference` de type peut être utilisé pour modifier la valeur d’un élém
 
 Le type est un synonyme de `allocator_type::reference`.
 
-Pour le type `string`, il équivaut à `chr&`.
+Pour le type `string`, il est équivalent à `chr&`.
 
 ### <a name="example"></a>Exemple
 
@@ -3852,33 +3852,33 @@ Remplace les éléments d'une chaîne à la position spécifiée par des caract�
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr,
-    size_type _Num2);
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Pos2,
-    size_type _Num2);
+    size_type position_2,
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
@@ -3894,13 +3894,13 @@ basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
     iterator last0,
     const value_type* ptr,
-    size_type _Num2);
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
     iterator last0,
-    size_type _Num2,
-    value_type _Ch);
+    size_type number_2,
+    value_type char_value);
 
 template <class InputIterator>
 basic_string<CharType, Traits, Allocator>& replace(
@@ -3927,22 +3927,22 @@ basic_string<CharType, Traits, Allocator>& replace(
 *str* \
 Chaîne qui doit être une source de caractères pour la chaîne d’opérande.
 
-*_Pos1*\
+*position_1*\
 Index de la chaîne d’opérande à partir duquel commence le remplacement.
 
-*_Num1*\
+*number_1*\
 Nombre maximal de caractères à remplacer dans la chaîne d’opérande.
 
-*_Pos2*\
+*position_2*\
 Index de la chaîne de paramètre à partir duquel commence la copie.
 
-*_Num2*\
+*number_2*\
 Nombre maximal de caractères à utiliser de la chaîne C de paramètre.
 
 \ *ptr*
 Chaîne C qui doit être une source de caractères pour la chaîne d’opérande.
 
-*_Ch*\
+*char_value*\
 Caractère à copier dans la chaîne d’opérande.
 
 *first0* \
@@ -3958,7 +3958,7 @@ Itérateur, const_pointer ou const_iterator qui cible le premier caractère à c
 Itérateur, const_pointer ou const_iterator qui cible le dernier caractère à copier dans la chaîne de paramètre.
 
 *nombre* \
-Nombre de fois où *_Ch* est copié dans la chaîne d’opérande.
+Nombre de fois où *char_value* est copié dans la chaîne d’opérande.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -4243,7 +4243,7 @@ void resize(
 
 void resize(
     size_type count,
-    _Elem _Ch);
+    value_type char_value);
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -4251,7 +4251,7 @@ void resize(
 *nombre* \
 Nouvelle taille de la chaîne.
 
-*_Ch*\
+*char_value*\
 Valeur avec laquelle les caractères ajoutés sont initialisés si des éléments supplémentaires sont nécessaires.
 
 ### <a name="remarks"></a>Notes
@@ -4365,29 +4365,29 @@ Recherche une chaîne vers l'arrière pour trouver la première occurrence d'une
 
 ```cpp
 size_type rfind(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type rfind(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type rfind(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type rfind(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch*\
+*char_value*\
 Valeur de caractère que la fonction membre doit rechercher.
 
-*_Off*\
+*décalage*\
 Index de la position à laquelle la recherche doit commencer.
 
 \ *ptr*
@@ -4622,9 +4622,9 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="remarks"></a>Notes
 
-Il équivaut à `allocator_type::size_type`.
+elle est équivalente à `allocator_type::size_type`.
 
-Pour le type `string`, il équivaut à `size_t`.
+Pour le type `string`, il est équivalent à `size_t`.
 
 ### <a name="example"></a>Exemple
 
@@ -4661,13 +4661,13 @@ Copie une sous-chaîne d'un certain nombre de caractères dans une chaîne qui c
 
 ```cpp
 basic_string<CharType, Traits, Allocator> substr(
-    size_type _Off = 0,
+    size_type offset = 0,
     size_type count = npos) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off*\
+*décalage*\
 Index situant l’élément à la position à partir de laquelle la copie de la chaîne est effectuée, avec une valeur par défaut égale à 0.
 
 *nombre* \
@@ -4787,7 +4787,7 @@ typedef Traits traits_type;
 
 Le type est un synonyme du deuxième paramètre de modèle `Traits`.
 
-Pour le type `string`, il équivaut à **char_traits\<char >** .
+Pour le type `string`, il est équivalent à **char_traits\<char >** .
 
 ### <a name="example"></a>Exemple
 
