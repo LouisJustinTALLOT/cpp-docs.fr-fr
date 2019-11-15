@@ -1,15 +1,15 @@
 ---
 title: Guide C++ de Portage et de mise à niveau Microsoft
 description: Mettez à C++ niveau Microsoft code vers la dernière version de Visual Studio.
-ms.date: 10/29/2019
+ms.date: 11/05/2019
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.topic: overview
-ms.openlocfilehash: d67c2665574242a46d697f6e9f24321556146958
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 04c3950d637c01031e78d0d95e13232143ceb232
+ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625682"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119490"
 ---
 # <a name="microsoft-c-porting-and-upgrading-guide"></a>Guide C++ de Portage et de mise à niveau Microsoft
 
@@ -25,7 +25,7 @@ Si une application héritée s’exécute de manière satisfaisante, dans un env
 
 - Le même code peut s’exécuter plus rapidement en raison des optimisations du compilateur améliorées.
 
-- Les C++ fonctionnalités et les pratiques de programmation modernes éliminent de nombreuses causes courantes des bogues et sont beaucoup plus faciles à gérer que les plus anciens idiomes de style C.
+- Les C++ fonctionnalités et les pratiques de programmation modernes éliminent de nombreuses causes courantes des bogues et produisent du code qui est beaucoup plus facile à gérer que les plus anciens de style C.
 
 - Les temps de génération sont beaucoup plus rapides, en raison des améliorations des performances du compilateur et de l’éditeur de liens.
 
@@ -48,6 +48,7 @@ Pour plus d’informations, consultez [Utiliser le multiciblage natif dans Visua
 |Titre|Description|
 |-----------|-----------------|
 |[Mise à C++ niveau de projets à partir de versions antérieures de Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Comment mettre à niveau votre base de code vers Visual Studio 2019 et V142 du compilateur.|
+|[Outils IDE pour la mise C++ à niveau du code](ide-tools-for-upgrading-code.md)|Fonctionnalités IDE utiles qui facilitent le processus de mise à niveau.|
 |[C++Compatibilité binaire entre 2015 et 2019](binary-compat-2015-2017.md)|Consommez les bibliothèques V140 en l’des projets V142.|
 |[Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets](use-native-multi-targeting.md)|Utilisez Visual Studio 2019 avec des compilateurs et des bibliothèques plus anciens.|
 |[Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md)|Liste de toutes les modifications apportées aux C++ bibliothèques Microsoft et aux outils de génération de Visual Studio 2003 à 2015, qui peuvent nécessiter des modifications dans votre code.|
