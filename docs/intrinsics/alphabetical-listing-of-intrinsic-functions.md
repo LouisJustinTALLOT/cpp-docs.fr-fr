@@ -6,16 +6,16 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: ff6957436ecfb86ae44388e55488981f528f2c73
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 56aad4c0b39a7a4bd2d425907023cbc8c9b335c4
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220084"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163455"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Liste alphabétique des intrinsèques
 
-Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Microsoft disponibles sur toutes les architectures ou sur certaines d'entre elles. D'autres fonctions intrinsèques prises en charge sont documentées par les fabricants de processeurs dans les fichiers d'en-tête ou sur leurs sites web. Pour plus d’informations sur les liens vers la documentation du fabricant, consultez les sections [ARM Intrinsic](../intrinsics/arm-intrinsics.md), intrinsèques [x86](../intrinsics/x86-intrinsics-list.md)et [fonctions intrinsèques x64](../intrinsics/x64-amd64-intrinsics-list.md) . Les fonctions de bibliothèque Runtime C (CRT) dont les fonctions intrinsèques sont implémentées ne sont pas documentées ici; ces fonctions sont documentées dans la référence de la [bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md).
+Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Microsoft disponibles sur toutes les architectures ou sur certaines d'entre elles. D'autres fonctions intrinsèques prises en charge sont documentées par les fabricants de processeurs dans les fichiers d'en-tête ou sur leurs sites web. Pour obtenir des liens vers la documentation du fabricant, consultez les sections [ARM Intrinsic](../intrinsics/arm-intrinsics.md), fonctions intrinsèques, intrinsèques de [ARM64](../intrinsics/arm64-intrinsics.md), [intrinsèques x86](../intrinsics/x86-intrinsics-list.md)et [fonctions intrinsèques x64](../intrinsics/x64-amd64-intrinsics-list.md) . Les fonctions de bibliothèque Runtime C (CRT) dont les fonctions intrinsèques sont implémentées ne sont pas documentées ici ; ces fonctions sont documentées dans la référence de la [bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md).
 
 [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 

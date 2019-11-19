@@ -153,12 +153,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: eb75273bc8cbe5ccbf62edc82a1e7deccc605757
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: 57982e32da75aa7f364c51146e50c3d75b4b7710
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816603"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163334"
 ---
 # <a name="predefined-macros"></a>Macros prédéfinies
 
@@ -235,7 +235,7 @@ MSVC prend en charge ces macros prédéfinies supplémentaires.
 
 - **&#95; Compteur &#95; &#95;** Se développe en un littéral d’entier qui commence à 0. La valeur est incrémentée de 1 chaque fois qu’elle est utilisée dans un fichier source ou dans les en-têtes inclus du fichier source. Le compteur mémorise son état lorsque vous utilisez des en-têtes précompilés. **&#95; &#95;&#95;** Cette macro est toujours définie.
 
-  Cet exemple utilise `__COUNTER__` pour assigner des identificateurs uniques à trois objets différents du même type. Le constructeur `exampleClass` accepte un entier comme paramètre. Dans `main`, l’application déclare trois objets de type `exampleClass`, en utilisant `__COUNTER__` comme paramètre d’identificateur unique :
+  Cet exemple utilise `__COUNTER__` pour assigner des identificateurs uniques à trois objets différents du même type. Le constructeur `exampleClass` prend un entier comme paramètre. Dans `main`, l’application déclare trois objets de type `exampleClass`, en utilisant `__COUNTER__` comme paramètre d’identificateur unique :
 
     ```cpp
     // macro__COUNTER__.cpp
@@ -304,7 +304,7 @@ MSVC prend en charge ces macros prédéfinies supplémentaires.
 
 - **&#95; FUNCDNAME &#95; &#95;** Défini en tant que littéral de chaîne qui contient le [nom décoré](../build/reference/decorated-names.md) de la fonction englobante. La macro est définie uniquement dans une fonction. **&#95;La &#95;macro&#95; FUNCDNAME** n’est pas développée si vous utilisez l’option de compilateur [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) ou [/p](../build/reference/p-preprocess-to-a-file.md) .
 
-   Cet exemple utilise les macros `__FUNCDNAME__`, `__FUNCSIG__` et `__FUNCTION__` pour afficher les informations de fonction.
+   Cet exemple utilise les macros `__FUNCDNAME__`, `__FUNCSIG__`et `__FUNCTION__` pour afficher des informations sur les fonctions.
 
    [!code-cpp[NVC_Predefined_Macros_Examples#1](../preprocessor/codesnippet/CPP/predefined-macros_1.cpp)]
 
@@ -336,7 +336,7 @@ MSVC prend en charge ces macros prédéfinies supplémentaires.
 
 - **&#95;M&#95;ARM&#95;FP** défini en tant que valeur littérale entière indiquant l’option de compilateur [/ARCH](../build/reference/arch-arm.md) définie pour les cibles de processeur ARM. Sinon, non défini.
 
-  - Valeur comprise dans la plage 30-39 si aucune option ARM `/arch` n’a été spécifiée, indiquant que l’architecture par défaut pour ARM a été définie (`VFPv3`).
+  - Valeur comprise dans la plage 30-39 si aucune `/arch` option ARM n’a été spécifiée, indiquant que l’architecture par défaut pour ARM a été définie (`VFPv3`).
 
   - Valeur comprise dans la plage 40-49 si `/arch:VFPv4` a été défini.
 
@@ -366,7 +366,7 @@ MSVC prend en charge ces macros prédéfinies supplémentaires.
 
   - 1 si l’option du compilateur `/arch:SSE` a été définie.
 
-  - 2 si l’option de compilateur `/arch:SSE2`, `/arch:AVX`, `/arch:AVX2` ou `/arch:AVX512` a été définie. Cette valeur est la valeur par défaut si aucune option du compilateur `/arch` n’a été spécifiée. Lorsque `/arch:AVX` est spécifié, la macro **&#95; &#95;AVX&#95;** est également définie. Lorsque `/arch:AVX2` est spécifié, **&#95; &#95;AVX&#95;** et **&#95; &#95;AVX2&#95;** sont également définis. Lorsque `/arch:AVX512` est spécifié,  **&#95; &#95;AVX&#95;** ,  **&#95; &#95;AVX2&#95;** ,  **&#95; &#95;AVX512BW&#95;** ,  **&#95;&#95;AVX512CD, &#95;**  **&#95;AVX512DQ&#95;, &#95;** **AVX512F&#95; AVX512VL sont également définis. &#95; &#95;** **&#95; &#95;&#95;**
+  - 2 si l’option de compilateur `/arch:SSE2`, `/arch:AVX`, `/arch:AVX2`ou `/arch:AVX512` a été définie. Cette valeur est la valeur par défaut si aucune option du compilateur `/arch` n’a été spécifiée. Lorsque `/arch:AVX` est spécifié, la macro **&#95; &#95;AVX&#95;** est également définie. Lorsque `/arch:AVX2` est spécifié, **&#95; &#95;AVX&#95;** et **&#95; &#95;AVX2&#95;** sont également définis. Lorsque `/arch:AVX512` est spécifié,  **&#95; &#95;AVX&#95;** ,  **&#95; &#95;AVX2&#95;** ,  **&#95; &#95;AVX512BW&#95;** **, &#95;AVX512CD&#95;, &#95;** **AVX512DQ,&#95;AVX512F &#95;AVX512VL sont également définis. &#95;** **&#95; &#95;&#95;** **&#95; &#95;&#95;**
 
   - Pour plus d’informations, consultez l’article [/arch (x86)](../build/reference/arch-x86.md).
 
@@ -382,7 +382,7 @@ MSVC prend en charge ces macros prédéfinies supplémentaires.
 
 - **&#95;ver&#95;MSC** Défini comme un littéral d’entier qui encode les éléments de nombre majeurs et mineurs du numéro de version du compilateur. Le numéro principal est le premier élément du numéro de version délimité par des points et le nombre secondaire est le deuxième élément. Par exemple, si le numéro de version du compilateur Microsoft CC++ /est 17.00.51106.1, la  **&#95;macro&#95;MSC ver** prend la valeur 1700. Entrez `cl /?` sur la ligne de commande pour afficher le numéro de version du compilateur. Cette macro est toujours définie.
 
-   |Version de Visual Studio|**&#95;MSC&#95;VER**|
+   |Version de Visual Studio|**&#95;VER&#95;msc**|
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7,0)|1300|
@@ -423,7 +423,7 @@ MSVC prend en charge ces macros prédéfinies supplémentaires.
 
 - **&#95;&#95;Contrôles&#95;d'&#95;exécution MSVC** définis sur 1 lorsque l’une des options du compilateur [/RTC](../build/reference/rtc-run-time-error-checks.md) est définie. Sinon, non défini.
 
-- **&#95;MSVC&#95;traditionnel** défini sur 0 lorsque le mode de conformité du préprocesseur/experimental : l’option du compilateur de [préprocesseur](../build/reference/rtc-run-time-error-checks.md) est définie. Défini par défaut sur 1, ou lorsque l’option [/experimental : preprocesseur-](../build/reference/rtc-run-time-error-checks.md) Compiler est définie, pour indiquer que le préprocesseur traditionnel est en cours d’utilisation. L'  **&#95;option&#95;** de compilateur macro traditionnelle MSVC et [/experimental : préprocesseur (activer le mode de conformité de préprocesseur)](../build/reference/experimental-preprocessor.md) est disponible à partir de Visual Studio 2017 version 15,8.
+- **&#95;MSVC&#95;traditionnel** défini sur 0 lorsque le mode de conformité du préprocesseur/experimental : l’option du compilateur de [préprocesseur](../build/reference/experimental-preprocessor.md) est définie. Défini par défaut sur 1, ou lorsque l’option [/experimental : preprocesseur-](../build/reference/experimental-preprocessor.md) Compiler est définie, pour indiquer que le préprocesseur traditionnel est en cours d’utilisation. L'  **&#95;option&#95;** de compilateur macro traditionnelle MSVC et [/experimental : préprocesseur (activer le mode de conformité de préprocesseur)](../build/reference/experimental-preprocessor.md) est disponible à partir de Visual Studio 2017 version 15,8.
 
    ```cpp
    #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
@@ -454,7 +454,7 @@ MSVC prend en charge ces macros prédéfinies supplémentaires.
 
 - **&#95;VC&#95;NODEFAULTLIB (** défini comme 1 lorsque l’option de compilateur [/zl (omettre le nom de la bibliothèque par défaut)](../build/reference/zl-omit-default-library-name.md) est définie. Sinon, non défini.
 
-- **&#95;WCHAR&#95;T&#95;défini** défini sur 1 lorsque l’option de compilateur [/Zc : wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) par défaut est définie. La  **&#95;macro&#95;définie&#95;par WCHAR T** est définie, mais elle n’a pas de valeur si l’option du compilateur `/Zc:wchar_t-` est définie et **wchar_t** est définie dans un fichier d’en-tête système inclus dans votre projet. Sinon, non défini.
+- **&#95;WCHAR&#95;T&#95;défini** défini sur 1 lorsque l’option de compilateur [/Zc : wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) par défaut est définie. La  **&#95;macro&#95;définie&#95;par WCHAR T** est définie, mais elle n’a pas de valeur si l’option de compilateur `/Zc:wchar_t-` est définie et **wchar_t** est définie dans un fichier d’en-tête système inclus dans votre projet. Sinon, non défini.
 
 - **&#95;Win32** Défini comme 1 lorsque la cible de compilation est 32-bit ARM, 64 bits ARM, x86 ou x64. Sinon, non défini.
 
@@ -466,7 +466,7 @@ Aucune macro de préprocesseur qui identifie la version de la bibliothèque ATL 
 
 - **&#95;ATL&#95;ver** Défini dans \<atldef. h > sous la forme d’un littéral entier qui encode le numéro de version ATL.
 
-- **&#95;MFC&#95;ver** Défini dans \<afxver_. h > sous la forme d’un littéral entier qui encode le numéro de version MFC.
+- **&#95;MFC&#95;ver** Défini dans \<afxver_. h > comme un littéral entier qui encode le numéro de version MFC.
 
 ## <a name="see-also"></a>Voir aussi
 

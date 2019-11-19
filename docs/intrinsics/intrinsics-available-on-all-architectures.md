@@ -4,12 +4,12 @@ ms.date: 09/02/2019
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-ms.openlocfilehash: 93f53bf90bd8defaa4559e52c00cfcd6269edee4
-ms.sourcegitcommit: 499dfcb5622c4cd1b6afaf23b9de5b09b7751579
+ms.openlocfilehash: 0293daacd717b3ae85b993729090fe363f7e0b9b
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71012247"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163470"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>Intrinsèques disponibles sur toutes les architectures
 
@@ -162,6 +162,7 @@ Les fonctions UCRT suivantes ont des formes intrinsèques sur toutes les archite
 
 ## <a name="see-also"></a>Voir aussi
 
-[ARM, fonctions intrinsèques](../intrinsics/arm-intrinsics.md)<br/>
-[x86, liste de fonctions intrinsèques](../intrinsics/x86-intrinsics-list.md)<br/>
-[x64 (amd64), liste de fonctions intrinsèques](../intrinsics/x64-amd64-intrinsics-list.md)<br/>
+[Intrinsèques ARM](../intrinsics/arm-intrinsics.md)\
+\ [intrinsèques ARM64](../intrinsics/arm64-intrinsics.md)
+\ de [liste d’intrinsèques x86](../intrinsics/x86-intrinsics-list.md)
+[liste d’intrinsèques x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)
