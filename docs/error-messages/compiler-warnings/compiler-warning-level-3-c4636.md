@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4636
 ms.assetid: 59112a0f-850f-41c6-bd84-8ae8dc84706a
-ms.openlocfilehash: 7327189a61e2545bb6003cd95e1ddb116f9f7c94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1ee63b813c8ef468291eea4575286f40f96ff6a
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401707"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189136"
 ---
 # <a name="compiler-warning-level-3-c4636"></a>Avertissement du compilateur (niveau 3) C4636
 
@@ -23,7 +23,7 @@ Une balise, telle que `cref`, ne possédait aucune valeur.
 
 L’exemple suivant génère l’avertissement C4636.
 
-```
+```cpp
 // C4636.cpp
 // compile with: /clr /doc /W3 /c
 /// <see cref=''/>
