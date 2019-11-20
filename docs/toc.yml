@@ -2854,7 +2854,7 @@
       href: porting/visual-cpp-change-history-2003-2015.md
     - name: "Nouveautés de Visual\_C++ entre\_2003 et\_2015"
       href: porting/visual-cpp-what-s-new-2003-through-2015.md
-    - name: "Compatibilité binaire de C++ entre\_2015 et\_2019"
+    - name: Compatibilité binaire C++ 2015-2019
       href: porting/binary-compat-2015-2017.md
     - name: "Portage et mise à niveau\_: exemples et études de cas"
       items:
@@ -4215,22 +4215,7 @@
                 - name: Expressions lambda constexpr
                   href: cpp/lambda-expressions-constexpr.md
             - name: Tableaux
-              expanded: false
-              items:
-                - name: Tableaux
-                  href: cpp/arrays-cpp.md
-                - name: Utilisation des tableaux
-                  href: cpp/using-arrays-cpp.md
-                - name: Initialisation des tableaux
-                  href: cpp/initializing-arrays.md
-                - name: Tableaux dans les expressions
-                  href: cpp/arrays-in-expressions.md
-                - name: Interprétation de l’opérateur Indice
-                  href: cpp/interpretation-of-subscript-operator.md
-                - name: Indirection sur les types tableau
-                  href: cpp/indirection-on-array-types.md
-                - name: Tri des tableaux en C++
-                  href: cpp/ordering-of-cpp-arrays.md
+              href: cpp/arrays-cpp.md
             - name: Références
               expanded: false
               items:
@@ -10421,7 +10406,7 @@
                           href: parallel/concrt/reference/simple-partitioner-class.md
                         - name: 'single_assignment, classe'
                           href: parallel/concrt/reference/single-assignment-class.md
-                        - name: single_link_registry (classe)
+                        - name: 'single_link_registry, classe'
                           href: parallel/concrt/reference/single-link-registry-class.md
                         - name: 'source_block, classe'
                           href: parallel/concrt/reference/source-block-class.md
@@ -10435,7 +10420,7 @@
                           href: parallel/concrt/reference/target-block-class.md
                         - name: 'task, classe (runtime d’accès concurrentiel)'
                           href: parallel/concrt/reference/task-class.md
-                        - name: 'task_canceled, classe'
+                        - name: task_canceled (classe)
                           href: parallel/concrt/reference/task-canceled-class.md
                         - name: 'task_completion_event, classe'
                           href: parallel/concrt/reference/task-completion-event-class.md
