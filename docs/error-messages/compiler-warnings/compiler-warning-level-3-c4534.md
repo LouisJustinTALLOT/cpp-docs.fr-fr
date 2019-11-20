@@ -1,29 +1,29 @@
 ---
-title: Avertissement du compilateur (niveau 3) C4534
+title: Compiler Warning (level 3) C4534
 ms.date: 11/04/2016
 f1_keywords:
 - c4534
 helpviewer_keywords:
 - C4534
 ms.assetid: ec2adf3b-d7a1-4005-bb0c-5d219df78dc8
-ms.openlocfilehash: 81445ff42aca78a8e40e9c88eff4bb76a41a8669
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e617b18f2c7ed3b51d25eb44101629bbadcef9d
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401876"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189091"
 ---
-# <a name="compiler-warning-level-3-c4534"></a>Avertissement du compilateur (niveau 3) C4534
+# <a name="compiler-warning-level-3-c4534"></a>Compiler Warning (level 3) C4534
 
-'constructeur' ne sera pas un constructeur par défaut pour la classe 'class' en raison de l’argument par défaut
+'constructor' will not be a default constructor for class 'class' due to the default argument
 
-Une classe non managée peut avoir un constructeur avec les paramètres qui ont des valeurs par défaut et le compilateur utilisera en tant que le constructeur par défaut. Une classe marquée avec le `value` mot clé n’utilise pas un constructeur avec valeurs par défaut pour ses paramètres en tant qu’un constructeur par défaut.
+An unmanaged class can have a constructor with parameters that have default values and the compiler will use this as the default constructor. A class marked with the `value` keyword will not use a constructor with default values for its parameters as a default constructor.
 
-Pour plus d’informations, consultez [les Classes et Structs](../../extensions/classes-and-structs-cpp-component-extensions.md).
+Pour plus d’informations, consultez [Classes et structs](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
-L’exemple suivant génère l’erreur C4534 :
+The following sample generates C4534:
 
-```
+```cpp
 // C4534.cpp
 // compile with: /W3 /clr /WX
 value class MyClass {

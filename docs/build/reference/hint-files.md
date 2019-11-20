@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707112"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189004"
 ---
 # <a name="hint-files"></a>Fichiers hint
 
@@ -36,8 +36,8 @@ Un fichier hint contient des indicateurs personnalisables par l’utilisateur, q
 
 > [!IMPORTANT]
 > Si vous modifiez ou ajoutez un fichier hint, vous devez effectuer des étapes supplémentaires pour que les modifications prennent effet :
-> - Dans les versions antérieures à Visual Studio 2017 version 15.6 : Supprimez le fichier .sdf et/ou le fichier VC.db dans la solution pour toutes les modifications.
-> - Dans Visual Studio 2017 version 15.6 à 15.9 : Fermez et rouvrez la solution après avoir ajouté de nouveaux fichiers hint.
+> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
+> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
 
 ## <a name="scenario"></a>Scénario
 
@@ -92,13 +92,13 @@ Il existe deux catégories de macros qui perturbent l’analyseur :
 
 - Il existe une Action rapide pour créer un fichier hint qui inclut la macro en surbrillance ou il en existe déjà un pour y ajouter la macro.
 
-![Macro en surbrillance. ](media/hint-squiggle-and-actions.png "Tilde et Actions rapides")
+![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
 
 Après l’exécution de l’une des Actions rapides, l’analyseur effectue une nouvelle analyse des fichiers affectés par le fichier hint.
 
-Par défaut, la macro à problème est mise en surbrillance comme suggestion. La mise en surbrillance peut être remplacée par quelque chose de plus notable, par exemple une ligne ondulée (tilde) rouge ou verte. Utilisez l’option **Macros dans les régions ignorées par la navigation** dans la section **Tildes du code** sous **Outils** > **Options**  >  **Éditeur de texte** > **C/C++** > **Vue**.
+Par défaut, la macro à problème est mise en surbrillance comme suggestion. La mise en surbrillance peut être remplacée par quelque chose de plus notable, par exemple une ligne ondulée (tilde) rouge ou verte. Utilisez l’option **Macros dans les régions ignorées par la navigation** dans la section **Tildes du code** sous **Outils** > **Options**  >  **Éditeur de texte** > **C/C++**  > **Vue**.
 
-![Option Macros dans les régions ignorées par la navigation. ](media/skipped-regions-squiggle-option.png "Option Tilde pour les régions ignorées.")
+![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
 
 ## <a name="display-browsing-database-errors"></a>Afficher les erreurs de la base de données de navigation
 
@@ -166,7 +166,7 @@ L’illustration montre certains des répertoires physiques d’un projet Visual
 
 ### <a name="hint-file-directories"></a>Répertoires des fichiers hint
 
-![Répertoires des fichiers hint communs et spécifiques au projet.](media/hintfile.png "HintFile")
+![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Répertoires et contenu des fichiers hint
 
@@ -214,7 +214,7 @@ Cette liste montre les répertoires de ce projet qui contiennent des fichiers hi
 
 Ce tableau liste les indicateurs effectifs pour les fichiers sources de ce projet :
 
-- Fichier source : A1_A2_B.cpp
+- Fichier source : A1_A2_B.cpp
 
 - Indicateurs effectifs :
 
