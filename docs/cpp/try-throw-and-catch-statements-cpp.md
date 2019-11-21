@@ -19,24 +19,24 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-ms.openlocfilehash: a55c1f2d5c2e73028b337d17b74fe1280f670707
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31ed5f7a17b9b45dbbecf5ccb29d2b51a7635eaa
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266780"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245141"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Instructions try, throw et catch (C++)
 
-Pour implémenter la gestion des exceptions dans C++, vous utilisez **essayez**, **lever**, et **catch** expressions.
+To implement exception handling in C++, you use **try**, **throw**, and **catch** expressions.
 
-Tout d’abord, utilisez un **essayez** bloc pour encadrer une ou plusieurs instructions susceptibles de lever une exception.
+First, use a **try** block to enclose one or more statements that might throw an exception.
 
-Un **lever** expression indique qu’une condition exceptionnelle, souvent, une erreur, s’est produite dans un **essayez** bloc. Vous pouvez utiliser un objet de n’importe quel type comme opérande d’un **lever** expression. En général, cet objet est utilisé pour transmettre des informations sur l'erreur. Dans la plupart des cas, nous vous recommandons d’utiliser le [std::exception](../standard-library/exception-class.md) classe ou l’une des classes dérivées qui sont définis dans la bibliothèque standard. Si l'une de celles-ci est inadéquate, nous vous recommandons de dériver votre propre classe d'exceptions de `std::exception`.
+A **throw** expression signals that an exceptional condition—often, an error—has occurred in a **try** block. You can use an object of any type as the operand of a **throw** expression. En général, cet objet est utilisé pour transmettre des informations sur l'erreur. In most cases, we recommend that you use the [std::exception](../standard-library/exception-class.md) class or one of the derived classes that are defined in the standard library. Si l'une de celles-ci est inadéquate, nous vous recommandons de dériver votre propre classe d'exceptions de `std::exception`.
 
-Pour gérer les exceptions qui peuvent être levées, implémenter une ou plusieurs **catch** blocs qui suit immédiatement un **essayez** bloc. Chaque **catch** bloc spécifie le type d’exception qu’il peut gérer.
+To handle exceptions that may be thrown, implement one or more **catch** blocks immediately following a **try** block. Each **catch** block specifies the type of exception it can handle.
 
-Cet exemple montre un **essayez** bloc et ses gestionnaires. Supposons que `GetNetworkResource()` acquiert des données via une connexion réseau et que les deux types d'exception sont des classes définies par l'utilisateur qui dérivent de `std::exception`. Notez que les exceptions sont interceptées par **const** référencer dans le **catch** instruction. Nous vous recommandons de lever des exceptions par valeur et de les intercepter par référence const.
+This example shows a **try** block and its handlers. Supposons que `GetNetworkResource()` acquiert des données via une connexion réseau et que les deux types d'exception sont des classes définies par l'utilisateur qui dérivent de `std::exception`. Notice that the exceptions are caught by **const** reference in the **catch** statement. Nous vous recommandons de lever des exceptions par valeur et de les intercepter par référence const.
 
 ## <a name="example"></a>Exemple
 
@@ -74,9 +74,9 @@ MyData GetNetworkResource()
 
 ## <a name="remarks"></a>Notes
 
-Le code après le **essayez** clause est la section protégée du code. Le **lever** expression *lève*, autrement dit, déclenche : une exception. Le bloc de code après le **catch** clause est le Gestionnaire d’exceptions. Il s’agit du gestionnaire qui *intercepte* l’exception est levée si les types dans les **lever** et **catch** expressions sont compatibles. Pour obtenir la liste des règles qui régissent la correspondance des types dans **catch** blocs, consultez [comment les blocs Catch sont évalués](../cpp/how-catch-blocks-are-evaluated-cpp.md). Si le **catch** instruction spécifie les points de suspension (...) au lieu d’un type, le **catch** bloc gère chaque type d’exception. Lorsque vous compilez avec le [/EHa](../build/reference/eh-exception-handling-model.md) option, ils peuvent inclure des exceptions structurées par C et les exceptions asynchrones générées par le système ou générés par l’application telles que des violations de division par zéro et à virgule flottante de protection, de mémoire . Étant donné que **catch** blocs sont traités dans l’ordre de programme pour trouver un type correspondant, un gestionnaire de points de suspension doit être le dernier gestionnaire associé **essayez** bloc. Utilisez `catch(...)` avec précaution ; n'autorisez pas un programme à continuer sans que le bloc catch sache comment gérer l'exception spécifique qui est interceptée. En général, un bloc `catch(...)` est utilisé pour enregistrer des erreurs et effectuer un nettoyage spécial avant l'arrêt de l'exécution du programme.
+The code after the **try** clause is the guarded section of code. The **throw** expression *throws*—that is, raises—an exception. The code block after the **catch** clause is the exception handler. This is the handler that *catches* the exception that's thrown if the types in the **throw** and **catch** expressions are compatible. For a list of rules that govern type-matching in **catch** blocks, see [How Catch Blocks are Evaluated](../cpp/how-catch-blocks-are-evaluated-cpp.md). If the **catch** statement specifies an ellipsis (...) instead of a type, the **catch** block handles every type of exception. When you compile with the [/EHa](../build/reference/eh-exception-handling-model.md) option, these can include C structured exceptions and system-generated or application-generated asynchronous exceptions such as memory protection, divide-by-zero, and floating-point violations. Because **catch** blocks are processed in program order to find a matching type, an ellipsis handler must be the last handler for the associated **try** block. Utilisez `catch(...)` avec précaution ; n'autorisez pas un programme à continuer sans que le bloc catch sache comment gérer l'exception spécifique qui est interceptée. En général, un bloc `catch(...)` est utilisé pour enregistrer des erreurs et effectuer un nettoyage spécial avant l'arrêt de l'exécution du programme.
 
-Un **lever** expression sans opérande lève à nouveau l’exception en cours de traitement. Nous recommandons ce format lorsqu'une exception est levée à nouveau, car celui-ci préserve les informations de type polymorphe de l'exception d'origine. Une telle expression doit uniquement être utilisée dans un **catch** gestionnaire ou dans une fonction qui est appelée à partir d’un **catch** gestionnaire. L'objet d'une exception levée à nouveau est l'objet de l'exception d'origine, pas une copie.
+A **throw** expression that has no operand re-throws the exception currently being handled. Nous recommandons ce format lorsqu'une exception est levée à nouveau, car celui-ci préserve les informations de type polymorphe de l'exception d'origine. Such an expression should only be used in a **catch** handler or in a function that's called from a **catch** handler. L'objet d'une exception levée à nouveau est l'objet de l'exception d'origine, pas une copie.
 
 ```cpp
 try {
@@ -93,7 +93,7 @@ catch(...) {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gestion d’exceptions C++](../cpp/cpp-exception-handling.md)<br/>
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
 [Exceptions C++ non gérées](../cpp/unhandled-cpp-exceptions.md)<br/>
 [__uncaught_exception](../c-runtime-library/reference/uncaught-exception.md)

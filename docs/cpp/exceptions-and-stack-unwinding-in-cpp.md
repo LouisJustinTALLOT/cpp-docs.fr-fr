@@ -1,31 +1,31 @@
 ---
 title: Exceptions et déroulement de pile en C++
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-ms.openlocfilehash: 5e094101557469a189311ce2c5344bb895696649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11657206e86dbc81eb62c1e11b49fd87777f11d8
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398886"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246569"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Exceptions et déroulement de pile en C++
 
-Dans le mécanisme d'exception C++, le contrôle passe de l'instruction Throw à la première instruction Catch qui peut gérer le type levé. Lorsque l’instruction catch est atteinte, toutes les variables automatiques qui sont dans la portée entre la levée et l’instruction catch sont détruites dans un processus connu sous le nom *de déroulement de pile*. L'exécution du déroulement de pile se déroule comme suit :
+Dans le mécanisme d'exception C++, le contrôle passe de l'instruction Throw à la première instruction Catch qui peut gérer le type levé. When the catch statement is reached, all of the automatic variables that are in scope between the throw and catch statements are destroyed in a process that is known as *stack unwinding*. L'exécution du déroulement de pile se déroule comme suit :
 
-1. Le contrôle atteint la **essayez** instruction par une exécution séquentielle normale. La section protégée dans le **essayez** bloc est exécuté.
+1. Control reaches the **try** statement by normal sequential execution. The guarded section in the **try** block is executed.
 
-1. Si aucune exception n’est levée pendant l’exécution de la section protégée, la **catch** clauses qui suivent le **essayez** bloc ne sont pas exécutées. L’exécution se poursuit à l’instruction après le dernier **catch** clause qui suit associé **essayez** bloc.
+1. If no exception is thrown during execution of the guarded section, the **catch** clauses that follow the **try** block are not executed. Execution continues at the statement after the last **catch** clause that follows the associated **try** block.
 
-1. Si une exception est levée pendant l’exécution de la section protégée ou dans toute routine de la section protégée appelle directement ou indirectement, un objet exception est créé à partir de l’objet qui est créé par le **lever** opérande. (Cela implique qu'un constructeur de copie peut être concerné.) À ce stade, le compilateur recherche un **catch** clause dans un contexte d’exécution plus élevé qui peut gérer une exception du type qui est levé, ou pour un **catch** gestionnaire qui peut gérer tout type d’exception. Le **catch** gestionnaires sont examinés dans leur ordre d’apparition après le **essayez** bloc. Si aucun gestionnaire approprié n’est trouvé, l’englobant dynamique suivant qui **essayez** bloc est examiné. Ce processus se poursuit jusqu'à ce que l’englobant le plus éloigné **essayez** bloc est examiné.
+1. If an exception is thrown during execution of the guarded section or in any routine that the guarded section calls either directly or indirectly, an exception object is created from the object that is created by the **throw** operand. (This implies that a copy constructor may be involved.) At this point, the compiler looks for a **catch** clause in a higher execution context that can handle an exception of the type that is thrown, or for a **catch** handler that can handle any type of exception. The **catch** handlers are examined in order of their appearance after the **try** block. If no appropriate handler is found, the next dynamically enclosing **try** block is examined. This process continues until the outermost enclosing **try** block is examined.
 
 1. Si aucun gestionnaire correspondant ne parvient à être trouvé, ou si une exception se produit pendant le processus de déroulement mais avant que le gestionnaire n'obtienne le contrôle, la fonction runtime `terminate` prédéfinie est appelée. Si une autre exception se produit après la levée de l'exception mais avant le début du déroulement, la fonction `terminate` est appelée.
 
-1. Si une correspondance **catch** gestionnaire est trouvé et il intercepte par valeur, son paramètre formel est initialisé en copiant l’objet exception. Si l'interception s'effectue par référence, le paramètre est initialisé pour faire référence à l'objet exception. Une fois le paramètre formel initialisé, le processus de déroulement de la pile démarre. Cela implique la destruction de tous les objets automatiques qui ont été entièrement construits — mais pas encore détruits, entre le début de la **essayez** bloc qui est associé le **catch** gestionnaire et le lever le site de l’exception. La destruction se produit dans l'ordre inverse de la construction. Le **catch** gestionnaire est exécuté et le programme reprend son exécution après le dernier gestionnaire, autrement dit, lors de la première instruction ou construction qui n’est pas un **catch** gestionnaire. Contrôle ne peut entrer un **catch** gestionnaire via une exception levée, jamais via un **goto** instruction ou un **cas** étiquette dans un **commutateur** instruction.
+1. If a matching **catch** handler is found, and it catches by value, its formal parameter is initialized by copying the exception object. Si l'interception s'effectue par référence, le paramètre est initialisé pour faire référence à l'objet exception. Une fois le paramètre formel initialisé, le processus de déroulement de la pile démarre. This involves the destruction of all automatic objects that were fully constructed—but not yet destructed—between the beginning of the **try** block that is associated with the **catch** handler and the throw site of the exception. La destruction se produit dans l'ordre inverse de la construction. The **catch** handler is executed and the program resumes execution after the last handler—that is, at the first statement or construct that is not a **catch** handler. Control can only enter a **catch** handler through a thrown exception, never through a **goto** statement or a **case** label in a **switch** statement.
 
-## <a name="stack-unwinding-example"></a>Exemple de déroulement de pile
+## <a name="stack-unwinding-example"></a>Stack unwinding example
 
-L'exemple suivant illustre le déroulement de la pile lorsqu'une exception est levée. L'exécution sur le thread passe de l'instruction Throw dans `C` à l'instruction Catch dans `main` et déroule chaque fonction pendant le processus. Notez l'ordre dans lequel les objets `Dummy` sont créés puis détruits lorsqu'ils passent hors de portée. Notez également qu'aucune fonction ne se termine, sauf `main`, qui contient l'instruction Catch. La fonction `A` ne retourne jamais d'un appel à `B()`, et `B` ne retourne jamais d'un appel à `C()`. Si vous supprimez les marques de commentaire de la définition du pointeur `Dummy` et de l'instruction Delete correspondante et que vous exécutez le programme, le pointeur n'est jamais supprimé. Cela indique ce qui peut se produire lorsque les fonctions ne fournissent pas de garantie d'exception. Pour plus d'informations, consultez Guide pratique pour Conception pour les Exceptions. Si vous commentez l'instruction Catch, vous pouvez observer ce qui se produit lorsqu'un programme se termine en raison d'une exception non gérée.
+L'exemple suivant illustre le déroulement de la pile lorsqu'une exception est levée. L'exécution sur le thread passe de l'instruction Throw dans `C` à l'instruction Catch dans `main` et déroule chaque fonction pendant le processus. Notez l'ordre dans lequel les objets `Dummy` sont créés puis détruits lorsqu'ils passent hors de portée. Notez également qu'aucune fonction ne se termine, sauf `main`, qui contient l'instruction Catch. La fonction `A` ne retourne jamais d'un appel à `B()`, et `B` ne retourne jamais d'un appel à `C()`. Si vous supprimez les marques de commentaire de la définition du pointeur `Dummy` et de l'instruction Delete correspondante et que vous exécutez le programme, le pointeur n'est jamais supprimé. Cela indique ce qui peut se produire lorsque les fonctions ne fournissent pas de garantie d'exception. Pour plus d'informations, consultez Comment : concevoir des exceptions. Si vous commentez l'instruction Catch, vous pouvez observer ce qui se produit lorsqu'un programme se termine en raison d'une exception non gérée.
 
 ```cpp
 #include <string>

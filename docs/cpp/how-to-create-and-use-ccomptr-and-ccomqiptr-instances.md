@@ -1,17 +1,17 @@
 ---
-title: 'Procédure : Créer et utiliser des instances CComPtr et CComQIPtr'
+title: 'How to: Create and use CComPtr and CComQIPtr instances'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 8dd7aa903eefd533b1dd2688f3cee46ab3787e60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e376eab75b9b1fb4a7a271d05fe037142f22e139
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498592"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246538"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Procédure : Créer et utiliser des instances CComPtr et CComQIPtr
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>How to: Create and use CComPtr and CComQIPtr instances
 
 En programmation Windows classique, les bibliothèques sont souvent implémentées en tant qu'objets COM (Component Object Model), ou plus précisément, en tant que serveurs COM. De nombreux composants du système d'exploitation Windows sont implémentés en tant que serveurs COM, et de nombreux collaborateurs fournissent des bibliothèques sous cette forme. Pour plus d’informations sur les bases du modèle COM, consultez [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal).
 
@@ -23,7 +23,7 @@ L'exemple suivant montre comment utiliser `CComPtr` pour instancier un objet COM
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr`et ses parents font partie de la bibliothèque ATL et sont définis \<dans atlcomcli. h >. `_com_ptr_t`est déclaré dans \<COMIP. h >. Le compilateur crée des spécialisations de `_com_ptr_t` lorsqu'il génère des classes wrapper pour les bibliothèques de types.
+`CComPtr` and its relatives are part of the ATL and are defined in \<atlcomcli.h>. `_com_ptr_t` is declared in \<comip.h>. Le compilateur crée des spécialisations de `_com_ptr_t` lorsqu'il génère des classes wrapper pour les bibliothèques de types.
 
 ## <a name="example"></a>Exemple
 

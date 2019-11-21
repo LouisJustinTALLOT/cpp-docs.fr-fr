@@ -1,5 +1,5 @@
 ---
-title: 'Exceptions : Interception et suppression d’Exceptions'
+title: "Exceptions : interception et suppression d'exceptions"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions [MFC], deleting
@@ -9,47 +9,47 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 511850c3c17a4eb70529202f4b0c2b36132fc8ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0142ffddfb391ae8da878d9e5fe34629cf16cb52
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173273"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246691"
 ---
-# <a name="exceptions-catching-and-deleting-exceptions"></a>Exceptions : Interception et suppression d’Exceptions
+# <a name="exceptions-catching-and-deleting-exceptions"></a>Exceptions : interception et suppression d'exceptions
 
-Les instructions et les exemples suivants montrent comment intercepter et supprimer des exceptions. Pour plus d’informations sur la **essayez**, **catch**, et **lever** mots clés, consultez [gestion des exceptions C++](../cpp/cpp-exception-handling.md).
+The following instructions and examples show you how to catch and delete exceptions. For more information on the **try**, **catch**, and **throw** keywords, see [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-Vos gestionnaires d’exceptions doivent supprimer les objets d’exception qu’ils gèrent, car échec de suppression de l’exception entraîne une fuite de mémoire chaque fois que ce code intercepte une exception.
+Your exception handlers must delete exception objects they handle, because failure to delete the exception causes a memory leak whenever that code catches an exception.
 
-Votre **catch** bloc doit supprimer une exception lorsque :
+Your **catch** block must delete an exception when:
 
-- Le **catch** bloc lève une exception.
+- The **catch** block throws a new exception.
 
-   Bien sûr, vous ne devez pas supprimer l’exception si vous levez à nouveau la même exception :
+   Of course, you must not delete the exception if you throw the same exception again:
 
    [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
-- L’exécution retourne depuis la **catch** bloc.
+- Execution returns from within the **catch** block.
 
 > [!NOTE]
->  Lorsque vous supprimez un `CException`, utilisez le `Delete` fonction membre à supprimer de l’exception. N’utilisez pas le **supprimer** mot clé, car elle peut échouer si l’exception n’est pas sur le tas.
+>  When deleting a `CException`, use the `Delete` member function to delete the exception. Do not use the **delete** keyword, because it can fail if the exception is not on the heap.
 
-#### <a name="to-catch-and-delete-exceptions"></a>Pour intercepter et supprimer des exceptions
+#### <a name="to-catch-and-delete-exceptions"></a>To catch and delete exceptions
 
-1. Utilisez le **essayez** mot clé pour configurer un **essayez** bloc. Les instructions de n’importe quel programme susceptible de lever une exception dans un **essayez** bloc.
+1. Use the **try** keyword to set up a **try** block. Execute any program statements that might throw an exception within a **try** block.
 
-   Utilisez le **catch** mot clé pour configurer un **catch** bloc. Placez le code de gestion des exceptions dans un **catch** bloc. Le code dans le **catch** bloc est exécuté uniquement si le code dans le **essayez** bloc lève une exception du type spécifié dans le **catch** instruction.
+   Use the **catch** keyword to set up a **catch** block. Place exception-handling code in a **catch** block. The code in the **catch** block is executed only if the code within the **try** block throws an exception of the type specified in the **catch** statement.
 
-   Le squelette suivant montre comment **essayez** et **catch** blocs sont organisés normalement :
+   The following skeleton shows how **try** and **catch** blocks are normally arranged:
 
    [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-   Lorsqu’une exception est levée, le contrôle passe à la première **catch** bloc dont déclaration d’exception correspond au type de l’exception. Vous pouvez gérer de manière sélective différents types d’exceptions avec séquentiel **catch** bloque comme indiqué ci-dessous :
+   When an exception is thrown, control passes to the first **catch** block whose exception-declaration matches the type of the exception. You can selectively handle different types of exceptions with sequential **catch** blocks as listed below:
 
    [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
-Pour plus d’informations, consultez [Exceptions : Conversion à partir de Macros d’Exception MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+For more information, see [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,5 +1,5 @@
 ---
-title: 'Minutage de la gestion des exceptions : Un résumé'
+title: 'Timing of exception handling: A summary'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: 7b52252454e27d622e412f490360a025dfc97838
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 870606c3661df3654581760214e48ef2bdfb1987
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221894"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246336"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Minutage de la gestion des exceptions : Un résumé
+# <a name="timing-of-exception-handling-a-summary"></a>Timing of exception handling: A summary
 
-Un gestionnaire de terminaisons est exécuté quelle que soit la façon dont le **__try** bloc d’instructions est terminé. Causes incluent hors de la **__try** bloc, un `longjmp` instruction qui transfère le contrôle hors du bloc et le déroulement de la pile en raison de la gestion des exceptions.
+A termination handler is executed no matter how the **__try** statement block is terminated. Causes include jumping out of the **__try** block, a `longjmp` statement that transfers control out of the block, and unwinding the stack due to exception handling.
 
 > [!NOTE]
->  Microsoft C++ compilateur prend en charge deux formes de la `setjmp` et `longjmp` instructions. La version rapide ignore la gestion du bloc de fin mais est plus efficace. Pour utiliser cette version, incluez le fichier \<setjmp.h >. L'autre version prend en charge la gestion du bloc de fin, comme il est décrit dans le paragraphe précédent. Pour utiliser cette version, incluez le fichier \<setjmpex.h >. L'augmentation des performances de la version rapide dépend de la configuration matérielle.
+>  The Microsoft C++ compiler supports two forms of the `setjmp` and `longjmp` statements. La version rapide ignore la gestion du bloc de fin mais est plus efficace. To use this version, include the file \<setjmp.h>. L'autre version prend en charge la gestion du bloc de fin, comme il est décrit dans le paragraphe précédent. To use this version, include the file \<setjmpex.h>. L'augmentation des performances de la version rapide dépend de la configuration matérielle.
 
 Le système d'exploitation exécute tous les gestionnaires de terminaisons dans l'ordre approprié avant que tout autre code soit exécuté, notamment le corps d'un gestionnaire d'exceptions.
 
@@ -35,7 +35,7 @@ Lorsque la cause de l'interruption est une exception, le système doit d'abord e
 
 1. Si ce filtre passe la main (retourne 0), le processus se poursuit jusqu'à ce qu'il trouve un filtre qui ne passe pas la main.
 
-1. Si ce filtre retourne -1, l’exécution continue où l’exception a été levée et aucun arrêt n’a lieu.
+1. If this filter returns -1, execution continues where the exception was raised, and no termination takes place.
 
 1. Si le filtre retourne 1, les événements suivants se produisent :
 
@@ -49,5 +49,5 @@ Lorsque la cause de l'interruption est une exception, le système doit d'abord e
 
 ## <a name="see-also"></a>Voir aussi
 
-[Écriture d’un gestionnaire de terminaisons](../cpp/writing-a-termination-handler.md)<br/>
+[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
 [Gestion structurée des exceptions (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
