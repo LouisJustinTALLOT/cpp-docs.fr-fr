@@ -1,27 +1,27 @@
 ---
-title: 'Procédure : Intercepter des Exceptions en Code natif levées à partir de MSIL'
+title: 'Comment : intercepter des exceptions en code natif levées à partir de MSIL'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 95ce7a2afabc34ea78376b12da61f419dab4af34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3afa29d8c9bee1c1f1cc2fd1869d108c08a249b
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379039"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246687"
 ---
-# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Procédure : Intercepter des Exceptions en Code natif levées à partir de MSIL
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Comment : intercepter des exceptions en code natif levées à partir de MSIL
 
-En code natif, vous pouvez intercepter des exceptions C++ native à partir de MSIL.  Vous pouvez intercepter des exceptions CLR avec `__try` et `__except`.
+In native code, you can catch native C++ exception from MSIL.  You can catch CLR exceptions with `__try` and `__except`.
 
-Pour plus d’informations, consultez [structurée des exceptions (C/C++)](../cpp/structured-exception-handling-c-cpp.md) et [gestion des exceptions C++](../cpp/cpp-exception-handling.md).
+For more information, see [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md) and [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant définit un module avec deux fonctions, qui lève une exception native et l’autre qui lève une exception de MSIL.
+The following sample defines a module with two functions, one that throws a native exception, and another that throws an MSIL exception.
 
 ```
 // catch_MSIL_in_native.cpp
@@ -37,7 +37,7 @@ void Test2() {
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant définit un module qui intercepte une exception de MSIL et les natif.
+The following sample defines a module that catches a native and MSIL exception.
 
 ```
 // catch_MSIL_in_native_2.cpp
