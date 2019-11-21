@@ -8,16 +8,16 @@ helpviewer_keywords:
 - C++ exception handling, unhandled exceptions
 - unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
-ms.openlocfilehash: 85227e0bd0ca33f925e8fe72b6489fa81305d031
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd5ce722c5159041ba8fb0a4a41b942a1bd4614f
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312208"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246068"
 ---
 # <a name="unhandled-c-exceptions"></a>Exceptions C++ non gérées
 
-Si un gestionnaire correspondant (ou points de suspension **catch** gestionnaire) est introuvable pour l’exception actuelle, le texte prédéfinie `terminate` fonction de l’exécution est appelée. (Vous pouvez également appeler explicitement `terminate` dans vos gestionnaires.) L'action par défaut de `terminate` est d'appeler `abort`. Si vous souhaitez `terminate` pour appeler une autre fonction dans votre programme avant de quitter l’application, appelez la fonction `set_terminate` avec le nom de la fonction à appeler comme unique argument. Vous pouvez appeler `set_terminate` à tout moment dans votre programme. Le `terminate` routine appelle toujours la dernière fonction donnée comme argument à `set_terminate`.
+If a matching handler (or ellipsis **catch** handler) cannot be found for the current exception, the predefined `terminate` run-time function is called. (You can also explicitly call `terminate` in any of your handlers.) The default action of `terminate` is to call `abort`. Si vous souhaitez `terminate` pour appeler une autre fonction dans votre programme avant de quitter l’application, appelez la fonction `set_terminate` avec le nom de la fonction à appeler comme unique argument. Vous pouvez appeler `set_terminate` à tout moment dans votre programme. The `terminate` routine always calls the last function given as an argument to `set_terminate`.
 
 ## <a name="example"></a>Exemple
 
@@ -56,4 +56,4 @@ La fonction `term_func` doit terminer le programme ou le thread actuel, de préf
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gestion d’exceptions C++](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)

@@ -3,24 +3,24 @@ title: Algorithmes (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
-ms.openlocfilehash: b972e575c982ae2523ec560a6237eac76ceaf834
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 9ed3b364f3fab880273c19c99bbbc7425545aec2
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345175"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246653"
 ---
 # <a name="algorithms-modern-c"></a>Algorithmes (Modern C++)
 
-Pour la programmation C++ moderne, nous vous recommandons d’utiliser les algorithmes dans le [bibliothèque Standard C++](../standard-library/cpp-standard-library-reference.md). Voici quelques exemples importants :
+For modern C++ programming, we recommend that you use the algorithms in the [C++ Standard Library](../standard-library/cpp-standard-library-reference.md). Here are some important examples:
 
-- **for_each**, qui est l’algorithme de traversée par défaut. (Également **transformer** pour la sémantique de déplacement non.)
+- **for_each**, which is the default traversal algorithm. (Also **transform** for not-in-place semantics.)
 
-- **find_if**, qui est l’algorithme de recherche par défaut.
+- **find_if**, which is the default search algorithm.
 
-- **tri**, **lower_bound**, ainsi que les autres tri et recherche des algorithmes.
+- **sort**, **lower_bound**, and the other default sorting and searching algorithms.
 
-Pour écrire un comparateur, utilisez strict **<** et utiliser *expressions lambda nommés* lorsque vous le pouvez.
+To write a comparator, use strict **<** and use *named lambdas* when you can.
 
 ```cpp
 auto comp = [](const widget& w1, const widget& w2)
@@ -31,11 +31,11 @@ sort( v.begin(), v.end(), comp );
 auto i = lower_bound( v.begin(), v.end(), comp );
 ```
 
-## <a name="loops"></a>Boucles
+## <a name="loops"></a>Loops
 
-Si possible, utilisez basé sur une plage **pour** boucles ou des appels d’algorithme ou les deux, au lieu de boucles écrites à la main. **copie**, **transformer**, **count_if**, **remove_if**, et d’autres, comme les sont préférables aux boucles manuscrites car leur intention est évident et ils rendent plus faciles à écrire du code exempte de bogues. En outre, de nombreux algorithmes de bibliothèque C++ Standard ont des optimisations d’implémentation qui les rendent plus efficace.
+When possible, use range-based **for** loops or algorithm calls, or both, instead of hand-written loops. **copy**, **transform**, **count_if**, **remove_if**, and others like them are much better than handwritten loops because their intent is obvious and they make it easier to write bug-free code. Also, many C++ Standard Library algorithms have implementation optimizations that make them more efficient.
 
-À la place de l’ancien C++ comme suit :
+Instead of old C++ like this:
 
 ```cpp
 for ( auto i = strings.begin(); i != strings.end(); ++i ) {
@@ -49,7 +49,7 @@ for ( ; i != v.end(); ++i ) {
 }
 ```
 
-Utilisez le C++ moderne comme suit :
+Use modern C++ like this:
 
 ```cpp
 for_each( begin(strings), end(strings), [](string& s) {
@@ -59,22 +59,22 @@ for_each( begin(strings), end(strings), [](string& s) {
 auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ```
 
-### <a name="range-based-for-loops"></a>Plage de boucles for basées
+### <a name="range-based-for-loops"></a>Range-based for loops
 
-Basées sur la plage **pour** boucle est une fonctionnalité de 11 langage C ++, pas un algorithme de la bibliothèque C++ Standard. Mais il mérite d’être mentionné dans cette discussion sur les boucles. Basé sur une plage **pour** boucles sont une extension de la **pour** mot clé et fournissent un moyen pratique et efficace pour tracer des boucles qui itèrent sur une plage de valeurs. Conteneurs de bibliothèque C++ Standard, les chaînes et les tableaux sont prêtes à l’emploi pour basé sur une plage **pour** boucles. Pour activer cette nouvelle syntaxe d’itération pour votre type défini par l’utilisateur, ajoutez la prise en charge suivant :
+The range-based **for** loop is a C++11 language feature, not a C++ Standard Library algorithm. But it deserves mention in this discussion about loops. Range-based **for** loops are an extension of the **for** keyword and provide a convenient and efficient way to write loops that iterate over a range of values. C++ Standard Library containers, strings, and arrays are ready-made for range-based **for** loops. To enable this new iteration syntax for your user-defined type, add the following support:
 
-- Un `begin` méthode qui retourne un itérateur au début de la structure et un `end` méthode qui retourne un itérateur à la fin de la structure.
+- A `begin` method that returns an iterator to the beginning of the structure and an `end` method that returns an iterator to the end of the structure.
 
-- Prise en charge dans l’itérateur des méthodes suivantes : **opérateur**<strong>\*</strong>, **opérateur ! =**, et **operator ++** (version préfixée).
+- Support in the iterator for these methods: **operator**<strong>\*</strong>, **operator!=** , and **operator++** (prefix version).
 
-Ces méthodes peuvent être des membres ou des fonctions autonomes.
+These methods can be either members or stand-alone functions.
 
-## <a name="random-numbers"></a>Nombres aléatoires
+## <a name="random-numbers"></a>Random Numbers
 
-Il n’existe aucun secret que l’ancien CRT `rand()` fonction présente de nombreux défauts, qui ont été abordés en détail dans la Communauté C++. En C++ moderne, vous n’êtes pas obligé de gérer ces problèmes, ni d’inventer votre propre générateur de nombres aléatoires distribué de manière uniforme, car les outils pour créer rapidement et facilement les sont disponibles dans la bibliothèque C++ Standard, comme indiqué dans [ \<aléatoire >](../standard-library/random.md).
+It's no secret that the old CRT `rand()` function has many flaws, which have been discussed at length in the C++ community. In modern C++, you don't have to deal with those shortcomings—nor do you have to invent your own uniformly distributed random number generator—because the tools for quickly and easily creating them are available in the C++ Standard Library, as shown in [\<random>](../standard-library/random.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Bienvenue dans C++ (C++ moderne)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
 [Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)<br/>

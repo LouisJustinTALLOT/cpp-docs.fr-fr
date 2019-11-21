@@ -3,20 +3,20 @@ title: Portabilité aux limites ABI (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: abbd405e-3038-427c-8c24-e00598f0936a
-ms.openlocfilehash: 3f72bc32e436c2f7a2f76ed6bbb9553b5e5be6b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 379b402354c6f08e003dffb38366d1dce20e0987
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267674"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246392"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>Portabilité aux limites ABI (Modern C++)
 
-Utiliser des conventions et types suffisamment portables aux limites de l’interface binaire. Un « type portable » est un type intégré de C ou un struct qui contient uniquement des types intégrés C. Classe types peuvent uniquement être utilisés lors de l’appelant et l’appelé d’accord sur la mise en page, appelant convention, etc. Cela est possible uniquement lorsque les deux sont compilées avec le même compilateur et les paramètres de compilateur.
+Use sufficiently portable types and conventions at binary interface boundaries. A “portable type” is a C built-in type or a struct that contains only C built-in types. Class types can only be used when caller and callee agree on layout, calling convention, etc. This is only possible when both are compiled with the same compiler and compiler settings.
 
-## <a name="how-to-flatten-a-class-for-c-portability"></a>Comment aplatir une classe pour la portabilité de C
+## <a name="how-to-flatten-a-class-for-c-portability"></a>How to flatten a class for C portability
 
-Lorsque les appelants peut être compilés avec un autre compilateur/langage, les « aplatir » un **extern « C »** API avec une convention d’appel spécifique :
+When callers may be compiled with another compiler/language, then “flatten” to an **extern "C"** API with a specific calling convention:
 
 ```cpp
 // class widget {
@@ -34,6 +34,6 @@ extern "C" {        // functions using explicit "this"
 
 ## <a name="see-also"></a>Voir aussi
 
-[Bienvenue dans C++ (C++ moderne)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
 [Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
-ms.openlocfilehash: 17775f3b2ee6dfa235c93d0bf0e3335b464aaa69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59b74f47cd86d94b50ab9213b3e517c2b08db696
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153669"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246549"
 ---
 # <a name="hardware-exceptions"></a>Exceptions matérielles
 
@@ -27,7 +27,7 @@ Les exceptions matérielles identifiées par Windows sont résumées dans le tab
 |--------------------|------------------------|
 |STATUS_ACCESS_VIOLATION|Lecture ou écriture à un emplacement mémoire inaccessible.|
 |STATUS_BREAKPOINT|Rencontre d'un point d'arrêt défini par le matériel ; utilisé uniquement par les débogueurs.|
-|STATUS_DATATYPE_MISALIGNMENT|Lecture ou écriture dans les données à une adresse qui n'est pas correctement alignée ; par exemple, des entités 16 bits doivent être alignées sur des limites de 2 octets. (Non applicable à Intel 80*x*86 processeurs.)|
+|STATUS_DATATYPE_MISALIGNMENT|Lecture ou écriture dans les données à une adresse qui n'est pas correctement alignée ; par exemple, des entités 16 bits doivent être alignées sur des limites de 2 octets. (Not applicable to Intel 80*x*86 processors.)|
 |STATUS_FLOAT_DIVIDE_BY_ZERO|Division du type à virgule flottante par 0,0.|
 |STATUS_FLOAT_OVERFLOW|Dépassement de l'exposant positif maximal du type à virgule flottante.|
 |STATUS_FLOAT_UNDERFLOW|Dépassement de la grandeur de l'exposant négatif le plus bas du type à virgule flottante.|
@@ -38,9 +38,9 @@ Les exceptions matérielles identifiées par Windows sont résumées dans le tab
 |STATUS_INTEGER_OVERFLOW|Tentative d'une opération qui dépasse la plage de l'entier.|
 |STATUS_SINGLE_STEP|Exécution d'une instruction en mode pas à pas ; utilisé uniquement par les débogueurs.|
 
-Un grand nombre des exceptions répertoriées dans le tableau précédent sont destinées à être gérées par les débogueurs, le système d'exploitation ou un autre code de bas niveau. À l'exception des erreurs relatives aux entiers et aux nombres à virgule flottante, votre code ne doit pas gérer ces erreurs. Ainsi, vous devez généralement utiliser le filtre de gestion des exceptions pour ignorer les exceptions (valeur 0). Sinon, vous risquez d'empêcher les mécanismes de niveau inférieur de réagir de manière appropriée. Vous pouvez, toutefois, prendre les précautions appropriées contre les conséquences possibles de ces erreurs de bas niveau par [écrire des gestionnaires de terminaisons](../cpp/writing-a-termination-handler.md).
+Un grand nombre des exceptions répertoriées dans le tableau précédent sont destinées à être gérées par les débogueurs, le système d'exploitation ou un autre code de bas niveau. À l'exception des erreurs relatives aux entiers et aux nombres à virgule flottante, votre code ne doit pas gérer ces erreurs. Ainsi, vous devez généralement utiliser le filtre de gestion des exceptions pour ignorer les exceptions (valeur 0). Sinon, vous risquez d'empêcher les mécanismes de niveau inférieur de réagir de manière appropriée. You can, however, take appropriate precautions against the potential effect of these low-level errors by [writing termination handlers](../cpp/writing-a-termination-handler.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Écriture d’un gestionnaire d’exceptions](../cpp/writing-an-exception-handler.md)<br/>
+[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
 [Gestion structurée des exceptions (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
