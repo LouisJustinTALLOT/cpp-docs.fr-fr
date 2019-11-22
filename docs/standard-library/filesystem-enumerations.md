@@ -11,18 +11,18 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457713"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303499"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt;, énumérations
 
 Cette rubrique décrit les énumérations de l’en-tête filesystem.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Conditions requises
 
 **En-tête :** \<experimental/filesystem>
 
@@ -86,7 +86,7 @@ enum class directory_options {
 
 ## <a name="file_type"></a>  file_type
 
-Énumération pour les types de fichiers. Les valeurs prises en charge sont Regular, Directory, NOT_FOUND et Unknown.
+Énumération pour les types de fichiers. Les valeurs prises en charge sont Regular, Directory, not_found et Unknown.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valeurs
 
-|Nom|Valeur|Description|
+|Nom|valeur|Description|
 |----------|-----------|-----------------|
 |`not_found`|-1|Représente un fichier qui n'existe pas.|
 |`none`|0|Représente un fichier qui n'a aucun attribut de type. (Non pris en charge.)|
@@ -115,14 +115,14 @@ enum class file_type {
 |`directory`|2|Représente un répertoire.|
 |`symlink`|3|Représente un lien symbolique. (Non pris en charge.)|
 |`block`|4|Représente un fichier spécial de bloc sur les systèmes UNIX. (Non pris en charge.)|
-|`character`|5\.|Représente un fichier spécial de caractères sur les systèmes UNIX. (Non pris en charge.)|
-|`fifo`|6\.|Représente un fichier FIFO sur les systèmes UNIX. (Non pris en charge.)|
+|`character`|5|Représente un fichier spécial de caractères sur les systèmes UNIX. (Non pris en charge.)|
+|`fifo`|6|Représente un fichier FIFO sur les systèmes UNIX. (Non pris en charge.)|
 |`socket`|7|Représente un socket sur les systèmes UNIX. (Non pris en charge.)|
 |`unknown`|8|Représente un fichier dont l'état ne peut pas être déterminé.|
 
 ## <a name="perm_options"></a>perm_options
 
-Comprend les `replace`valeurs `add` ,`remove`, et `nofollow`.
+Comprend les valeurs `replace`, `add`, `remove`et `nofollow`.
 
 ```cpp
 enum class perm_options;
@@ -130,7 +130,7 @@ enum class perm_options;
 
 ## <a name="perms"></a>  perms
 
-Indicateurs pour les autorisations de fichiers. Les valeurs prises en charge sont essentiellement « readonly » et all. Pour un fichier en lecture seule, aucun des bits *_write n'est défini. Sinon, le bit `all` (0x0777) est défini.
+Indicateurs pour les autorisations de fichiers. Les valeurs prises en charge sont essentiellement « ReadOnly » et All. Pour un fichier en lecture seule, aucun des bits *_write n'est défini. Sinon, le bit `all` (0x0777) est défini.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)

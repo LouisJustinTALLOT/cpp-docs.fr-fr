@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@FileCur symbol'
 ms.assetid: f00f36df-ff6a-4dc7-9800-dc23a300f1d4
-ms.openlocfilehash: 1205a975bac94c48f30f7f3d3d32f7cf1cb0b966
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8a7298a900efe2d43532984bd73a8e6354c52c5
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179144"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302628"
 ---
-# <a name="filecur"></a>@FileCur
+# <a name="filecur"></a>\@FileCur
 
-Le nom du fichier actuel (macro de texte).
+Nom du fichier actif (macro de texte).
 
 ## <a name="syntax"></a>Syntaxe
 
-> @FileCur
+> **\@FileCur**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les symboles](../../assembler/masm/symbols-reference.md)<br/>
+[Informations de référence sur les symboles](../../assembler/masm/symbols-reference.md)

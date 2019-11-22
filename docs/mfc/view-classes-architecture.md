@@ -9,16 +9,16 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: c6c1272d41eb7a01ec5a7ee10fadb4ab21547ce7
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: fda4e968a4761fcf1e2245964bd5dca3f41a82ad
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096056"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302976"
 ---
 # <a name="view-classes-architecture"></a>Classes d'affichage (Architecture)
 
-`CView`et ses classes dérivées sont des fenêtres enfants qui représentent la zone cliente d’une fenêtre frame. Les vues affichent les données et acceptent les entrées d’un document.
+`CView` et ses classes dérivées sont des fenêtres enfants qui représentent la zone cliente d’une fenêtre frame. Les vues affichent les données et acceptent les entrées d’un document.
 
 Une classe de vue est associée à une classe de document et à une classe de fenêtre frame à l’aide d’un objet de modèle de document.
 
@@ -26,7 +26,7 @@ Une classe de vue est associée à une classe de document et à une classe de fe
 Classe de base pour les vues spécifiques à l’application des données d’un document. Les vues affichent les données et acceptent les entrées utilisateur pour modifier ou sélectionner les données. Dérivez vos classes d’affichage de `CView`.
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-Classe de base pour les vues avec des fonctions de défilement. Dérivez votre classe `CScrollView` d’affichage de pour le défilement automatique.
+Classe de base pour les vues avec des fonctions de défilement. Dérivez votre classe d’affichage de `CScrollView` pour le défilement automatique.
 
 ## <a name="form-and-record-views"></a>Vues de formulaire et d’enregistrement
 
@@ -35,10 +35,10 @@ Les affichages de formulaire défilent également les vues. Ils sont basés sur 
 Les vues des enregistrements sont dérivées des modes formulaire. Outre le modèle de boîte de dialogue, ils disposent également d’une connexion à une base de données.
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-Vue de défilement dont la disposition est définie dans un modèle de boîte de dialogue. Dérivez une `CFormView` classe de pour implémenter une interface utilisateur basée sur un modèle de boîte de dialogue.
+Vue de défilement dont la disposition est définie dans un modèle de boîte de dialogue. Dérivez une classe de `CFormView` pour implémenter une interface utilisateur basée sur un modèle de boîte de dialogue.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Fournit un mode formulaire directement connecté à un objet Recordset d’objet d’accès aux données (DAO). Comme tous les affichages de `CDaoRecordView` formulaire, un est basé sur un modèle de boîte de dialogue. DAO est utilisé avec les bases de données Access et est pris en charge via Office 2013. 3,6 est la version finale et est considérée comme obsolète.
+Fournit un mode formulaire directement connecté à un objet Recordset d’objet d’accès aux données (DAO). Comme tous les affichages de formulaire, un `CDaoRecordView` est basé sur un modèle de boîte de dialogue. DAO est utilisé avec les bases de données Access et est pris en charge via Office 2013. DAO 3,6 est la version finale et est considéré comme obsolète.
 
 [CHtmlView](../mfc/reference/chtmlview-class.md)<br/>
 Prend en charge un contrôle pour la navigation Web dans une application. Le contrôle prend en charge le code HTML dynamique dans MFC.
@@ -47,7 +47,7 @@ Prend en charge un contrôle pour la navigation Web dans une application. Le con
 Fournit la prise en charge des OLE DB MFC pour les vues de formulaire.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Fournit un mode formulaire directement connecté à un objet Recordset Open Database Connectivity (ODBC). Comme tous les affichages de `CRecordView` formulaire, un est basé sur un modèle de boîte de dialogue.
+Fournit un mode formulaire directement connecté à un objet Recordset Open Database Connectivity (ODBC). Comme tous les affichages de formulaire, un `CRecordView` est basé sur un modèle de boîte de dialogue.
 
 ## <a name="control-views"></a>Vues de contrôle
 

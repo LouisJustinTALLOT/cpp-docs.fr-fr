@@ -4,12 +4,12 @@ ms.date: 10/31/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 6f8301c07f87feee80191f5db14fea5b16f02863
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2233c0767fb7fac2fe496e744750f380e1c3b698
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624427"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303236"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Informations de référence sur le schéma CMakeSettings.json
 
@@ -43,7 +43,7 @@ Une `configuration` a les propriétés suivantes :
 - `codeAnalysisRuleset` : spécifie l’ensemble de règles à utiliser lors de l’exécution de l’analyse du code. Il peut s’agir d’un chemin complet ou du nom d’un fichier d’ensemble de règles installé par Visual Studio.
 - `configurationType` : spécifie la configuration du type de build pour le générateur sélectionné. Possibilités :
 
-  - Débogage
+  - Déboguer
   - Édition
   - MinSizeRel
   - RelWithDebInfo
@@ -71,9 +71,9 @@ Une `configuration` a les propriétés suivantes :
 
 Comme Ninja est conçu pour des vitesses de génération rapides plutôt que pour la flexibilité et la fonctionnalité, il est défini par défaut. Toutefois, certains projets CMake peuvent ne pas pouvoir être générés correctement avec Ninja. Si cela se produit, vous pouvez demander à CMake de générer des projets Visual Studio à la place.
 
-Pour spécifier un générateur Visual Studio dans Visual Studio 2017, ouvrez le à partir du menu principal en choisissant **cmake | Modifiez les paramètres de CMake**. Supprimez « Ninja » et tapez « V ». Cela active IntelliSense, qui vous permet de choisir le générateur souhaité.
+Pour spécifier un générateur Visual Studio dans Visual Studio 2017, ouvrez le à partir du menu principal en choisissant **cmake | Modifiez les paramètres de CMake**. Supprimez « Ninja » et tapez « V ». Cela active IntelliSense, qui vous permet de choisir le générateur souhaité.
 
-Pour spécifier un générateur Visual Studio dans Visual Studio 2019, cliquez avec le bouton droit sur le fichier *fichier CMakeLists. txt* dans **Explorateur de solutions** et choisissez **paramètres cmake pour le projet** > **afficher les paramètres avancés** > **cmake Générateur**.
+Pour spécifier un générateur Visual Studio dans Visual Studio 2019, cliquez avec le bouton droit sur le fichier *fichier CMakeLists. txt* dans **Explorateur de solutions** et choisissez **paramètres cmake pour le projet** > **afficher les paramètres avancés** > **Générateur cmake**.
 
 Quand la configuration active spécifie un générateur Visual Studio, MSBuild.exe est appelé par défaut avec des arguments `-m -v:minimal`. Pour personnaliser la build, à l’intérieur du fichier *CMakeSettings. JSON* , vous pouvez spécifier des [arguments de ligne de commande MSBuild](../build/reference/msbuild-visual-cpp-overview.md) supplémentaires à passer au système de génération via la propriété `buildCommandArgs` :
 
@@ -83,7 +83,7 @@ Quand la configuration active spécifie un générateur Visual Studio, MSBuild.e
 
 - `configurationType` : spécifie la configuration du type de build pour le générateur sélectionné. Possibilités :
 
-  - Débogage
+  - Déboguer
   - Édition
   - MinSizeRel
   - RelWithDebInfo
@@ -167,13 +167,13 @@ Un *environnement* encapsule les variables d’environnement qui sont définies 
 - linux_x64 : ciblez Linux x64 à distance.
 - linux_x86 : ciblez Linux x86 à distance.
 - msvc_arm : ciblez les fenêtres ARM avec le compilateur MSVC.
-- msvc_arm_x64 : ciblez les fenêtres ARM avec le compilateur MSVC 64 bits.
+- msvc_arm_x64 : ciblez les fenêtres ARM avec le compilateur MSVC bits 64.
 - msvc_arm64 : ciblez Windows ARM64 avec le compilateur MSVC.
 - msvc_arm64_x64 : ciblez Windows ARM64 avec le compilateur MSVC 64 bits.
 - msvc_x64 : ciblez Windows x64 avec le compilateur MSVC.
 - msvc_x64_x64 : ciblez Windows x64 avec le compilateur MSVC 64 bits.
 - msvc_x86 : ciblez Windows x86 avec le compilateur MSVC.
-- msvc_x86_x64 : ciblez Windows x86 avec le compilateur MSVC 64 bits.
+- msvc_x86_x64 : ciblez Windows x86 avec le compilateur MSVC bits 64.
 
 ### <a name="accessing-environment-variables-from-cmakeliststxt"></a>Accès aux variables d’environnement à partir de fichier CMakeLists. txt
 
@@ -256,7 +256,7 @@ Dans l’exemple suivant, la configuration x86-Debug définit sa propre valeur p
       "generator": "Ninja",
       "configurationType": "Debug",
       "inheritEnvironments": [ "msvc_x64" ],
-      // Since this configuration doesn’t modify BuildDir, it inherits
+      // Since this configuration doesn't modify BuildDir, it inherits
       // from the one defined globally.
       "buildRoot": "${env.BuildDir}\\${name}"
     }

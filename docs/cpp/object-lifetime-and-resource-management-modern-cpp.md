@@ -1,66 +1,25 @@
 ---
-title: Gestion de la durée de vie et des ressources de l'objet (Modern C++)
-ms.date: 11/04/2016
+title: Gestion des ressources et de la durée de vie des objets (RAII)
+description: Suivez le principe de RAII dans moderne C++ pour éviter les fuites de ressources.
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 91229ea1b2d7a85f852138176d8cdb46dfa8c0df
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 01867ec0a71ba54bb6534da1b408cb0610d652a7
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246431"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303366"
 ---
-# <a name="object-lifetime-and-resource-management-modern-c"></a>Gestion de la durée de vie et des ressources de l'objet (Modern C++)
+# <a name="object-lifetime-and-resource-management-raii"></a>Gestion des ressources et de la durée de vie des objets (RAII)
 
-Contrairement aux langages managés, C++ ne possède aucun garbage collection (GC), ce qui libère automatiquement les ressources mémoire qui ne sont plus utilisées lors de l'exécution d'un programme. En C++, la gestion des ressources est directement liée à la durée de vie des objets. Ce document explique les facteurs qui affectent la durée de vie des objets en C++ et leur mode de gestion.
+Contrairement aux langages C++ managés, n’a pas de *garbage collection*automatique. Il s’agit d’un processus interne qui libère de la mémoire du tas et d’autres ressources au cours de l’exécution d’un programme. Un C++ programme est chargé de retourner toutes les ressources acquises au système d’exploitation. L’échec de la libération d’une ressource inutilisée est appelé une *fuite*. Les ressources divulguées ne sont pas disponibles pour les autres programmes jusqu’à ce que le processus se termine. En particulier, les fuites de mémoire sont une cause courante de bogues dans la programmation de style C.
 
-C++ ne comporte pas de garbage collection (GC), essentiellement parce qu'il ne gère pas les ressources non liées à la mémoire. Seuls les destructeurs déterministes comme ceux en C++ peuvent gérer de manière identique les ressources mémoire et non-mémoire. Le GC présente également d'autres problèmes, comme une surcharge plus élevée de la mémoire et une consommation de processeur, ainsi que la localité. Mais l'universalité est un problème fondamental qui ne peut pas être atténué via des optimisations intelligentes.
+Moderne C++ évite d’utiliser le tas de mémoire autant que possible en déclarant des objets sur la pile. Quand une ressource est trop volumineuse pour la pile, elle doit être *détenue* par un objet. À mesure que l’objet est initialisé, il acquiert la ressource qu’il possède. L’objet est ensuite chargé de libérer la ressource dans son destructeur. L’objet propriétaire lui-même est déclaré sur la pile. Le principe des *ressources propres aux objets* est également appelé « acquisition des ressources », ou RAII.
 
-## <a name="concepts"></a>Concepts
+Lorsqu’un objet de pile propriétaire de ressources est hors de portée, son destructeur est automatiquement appelé. De cette façon, garbage collection dans C++ est étroitement lié à la durée de vie des objets, et est déterministe. Une ressource est toujours libérée à un point connu du programme, que vous pouvez contrôler. Seuls les destructeurs déterministes comme ceux en C++ peuvent gérer de manière identique les ressources mémoire et non-mémoire.
 
-Un point essentiel de la gestion de la durée de vie des objets est l'encapsulation - la valeur à l'objet n'a pas besoin de connaître les ressources que possède l'objet, ou comment les supprimer à partir de celles-ci, ou même s'il possède la moindre ressource. Elle doit simplement détruire l’objet. Le langage principal C++ est conçu pour vous assurer que les objets sont détruits aux moments appropriés, autrement dit, lorsque les blocs sont fermés, dans l'ordre inverse de la construction. Lorsqu’un objet est détruit, ses bases et membres sont détruits dans un ordre précis.  Le langage détruit automatiquement les objets, à moins que vous ne fassiez des opérations particulières telles que l'allocation de tas ou un nouveau positionnement.  For example, [smart pointers](../cpp/smart-pointers-modern-cpp.md) like `unique_ptr` and `shared_ptr`, and C++ Standard Library containers like `vector`, encapsulate **new**/**delete** and `new[]`/`delete[]` in objects, which have destructors. That's why it's so important to use smart pointers and C++ Standard Library containers.
-
-Un autre concept important dans la gestion de la durée de vie : les destructeurs. Les destructeurs encapsulent la mise en production de la ressource.  (The commonly used mnemonic is RRID, Resource Release Is Destruction.)  A resource is something that you get from "the system" and have to give back later.  La mémoire est la ressource la plus courante, mais il existe également des fichiers, des sockets, des textures et d'autres ressources non liées à la mémoire. Être "propriétaire" d'une ressource signifie que vous pouvez l'utiliser en cas de besoin, mais que vous devez également la libérer lorsque vous avez fini de l'utiliser.  Lorsqu’un objet est détruit, le destructeur libère les ressources dont il était propriétaire.
-
-Le concept final est le DAG (Directed Acyclic Graph).  La structure de la propriété dans un programme forme un DAG. Aucun objet ne peut se posséder lui-même, c'est non seulement impossible mais cela n'a aucun sens. En revanche, deux objets peuvent partager la propriété d'un troisième objet.  Plusieurs types de liens sont possibles dans un DAG comme suit : A est un membre de B (B possède A), C stocke `vector<D>` (C possède chaque élément de D), E stocke `shared_ptr<F>` (E partage la propriété de F, éventuellement d'autres objets), etc.  Tant qu'il n'y a pas de cycles et que chaque lien dans le DAG est représenté par un objet qui possède un destructeur (au lieu d'un pointeur brut, d'un handle ou de tout autre mécanisme), d'éventuelles fuites de ressources sont impossibles car le langage les évite. Les ressources sont libérées dès qu'elles ne sont plus nécessaires, sans exécution du garbage collector. Le suivi de la durée de vie est sans surcharge pour la place de pile, les bases, les membres, les cas associés, et peu coûteuse pour `shared_ptr`.
-
-### <a name="heap-based-lifetime"></a>Durée de vie basée sur un tas
-
-For heap object lifetime, use [smart pointers](../cpp/smart-pointers-modern-cpp.md). Utilisez `shared_ptr` et `make_shared` en tant que pointeur et allocateur par défaut. Utilisez `weak_ptr` pour désactiver des cycles, effectuer la mise en cache et observer des objets sans affecter ni présumer quoique ce soit sur leurs durées de vie.
-
-```cpp
-void func() {
-
-auto p = make_shared<widget>(); // no leak, and exception safe
-...
-p->draw();
-
-} // no delete required, out-of-scope triggers smart pointer destructor
-```
-
-Use `unique_ptr` for unique ownership, for example, in the *pimpl* idiom. (See [Pimpl For Compile-Time Encapsulation](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Make a `unique_ptr` the primary target of all explicit **new** expressions.
-
-```cpp
-unique_ptr<widget> p(new widget());
-```
-
-Vous pouvez utiliser des pointeurs bruts pour une absence de propriété et une observation. Un pointeur non propriétaire peut "se balancer", mais il ne peut pas fuir.
-
-```cpp
-class node {
-  ...
-  vector<unique_ptr<node>> children; // node owns children
-  node* parent; // node observes parent, which is not a concern
-  ...
-};
-node::node() : parent(...) { children.emplace_back(new node(...) ); }
-```
-
-When performance optimization is required, you might have to use *well-encapsulated* owning pointers and explicit calls to delete. L'implémentation de votre propre structure de données de bas niveau en est la parfaite illustration.
-
-### <a name="stack-based-lifetime"></a>Durée de vie basée sur la pile
-
-In modern C++, *stack-based scope* is a powerful way to write robust code because it combines automatic *stack lifetime* and *data member lifetime* with high efficiency—lifetime tracking is essentially free of overhead. La durée de vie de l'objet heap requiert une gestion manuelle diligente et peut être la source de fuites et d'inefficacités des ressources, surtout si vous utilisez des pointeurs bruts. Tenez compte de ce code qui illustre la portée basée sur la pile :
+L’exemple suivant montre un objet simple `w`. Elle est déclarée sur la pile au niveau de la portée de la fonction et est détruite à la fin du bloc de la fonction. L’objet `w` ne possède aucune *ressource* (par exemple, la mémoire allouée par le tas). Son seul `g` membre est déclaré sur la pile et est simplement hors de portée avec `w`. Aucun code spécial n’est nécessaire dans le destructeur `widget`.
 
 ```cpp
 class widget {
@@ -81,10 +40,57 @@ void functionUsingWidget () {
   // as if "finally { w.dispose(); w.g.dispose(); }"
 ```
 
-Utilisez la durée de vie statique avec parcimonie (statique globale, fonction statique locale) car des problèmes peuvent survenir. Que se produit-il lorsque le constructeur d'un objet global lève une exception ? En général, l'application échoue d'une manière qui rend le débogage difficile. L'ordre de construction pose problème pour les objets de durée de vie statique, et n'est pas sécurisé vis à vis de la concurrence. Non seulement la construction d'un objet constitue un problème, mais l'ordre de destruction peut être complexe, surtout lorsque le polymorphisme est implicite. Même si votre objet ou variable n'est pas polymorphe et n'a pas de classement de construction ou de destruction complexes, il y a toujours la question de la sécurité du thread vis à vis de la concurrence. Une application multithread ne peut pas modifier sans risque les données des objets statiques sans avoir un stockage local des threads, des verrous de ressources, ainsi que des précautions spéciales.
+Dans l’exemple suivant, `w` possède une ressource mémoire et doit donc avoir du code dans son destructeur pour supprimer la mémoire.
+ 
+```cpp
+class widget
+{
+private:
+    int* data;
+public:
+    widget(const int size) { data = new int[size]; } // acquire
+    ~widget() { delete[] data; } // release
+    void do_something() {}
+};
+
+void functionUsingWidget() {
+    widget w(1000000);   // lifetime automatically tied to enclosing scope
+                        // constructs w, including the w.data member
+    w.do_something();
+
+} // automatic destruction and deallocation for w and w.data
+
+```
+
+Depuis C++ 11, il existe un meilleur moyen d’écrire l’exemple précédent : en utilisant un pointeur intelligent de la bibliothèque standard. Le pointeur intelligent gère l’allocation et la suppression de la mémoire qu’il détient. L’utilisation d’un pointeur intelligent élimine la nécessité d’avoir un destructeur explicite dans la classe `widget`.
+
+```cpp
+#include <memory>
+class widget
+{
+private:
+    std::unique_ptr<int> data;
+public:
+    widget(const int size) { data = std::make_unique<int>(size); }
+    void do_something() {}
+};
+
+void functionUsingWidget() {
+    widget w(1000000);   // lifetime automatically tied to enclosing scope
+                // constructs w, including the w.data gadget member
+    // ...
+    w.do_something();
+    // ...
+} // automatic destruction and deallocation for w and w.data
+
+```
+
+En utilisant des pointeurs intelligents pour l’allocation de mémoire, vous pouvez éliminer le risque de fuites de mémoire. Ce modèle fonctionne pour d’autres ressources, telles que les descripteurs de fichiers ou les sockets. Vous pouvez gérer vos propres ressources de la même façon dans vos classes. Pour plus d’informations, consultez [pointeurs intelligents](smart-pointers-modern-cpp.md).
+
+La conception de C++ garantit que les objets sont détruits lorsqu’ils sont hors de portée. Autrement dit, elles sont détruites à mesure que des blocs sont quittés, dans l’ordre inverse de la construction. Lorsqu’un objet est détruit, ses bases et membres sont détruits dans un ordre précis. Les objets déclarés en dehors de tout bloc, au niveau de la portée globale, peuvent entraîner des problèmes. Il peut être difficile à déboguer si le constructeur d’un objet global lève une exception.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)
+[Bienvenue dansC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Référence du langage C++](../cpp/cpp-language-reference.md)<br/>
+[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

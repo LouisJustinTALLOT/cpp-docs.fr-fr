@@ -2,12 +2,12 @@
 title: Copier les sources, propriétés de projet (Linux C++)
 ms.date: 10/16/2019
 ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
-ms.openlocfilehash: ceaa1240f08b83ebc83bd7fdc25a3215467eb3f1
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: bc99814e825cda091b6a0b00256ca2d8269ecdd3
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444943"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305397"
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>Copier les sources, propriétés de projet (Linux C++)
 
@@ -21,7 +21,7 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 
 Les propriétés définies dans cette page de propriétés s’appliquent à tous les fichiers contenus dans le projet, à l’exception de ceux pour lesquels des propriétés de niveau fichier sont définies.
 
-Property | Description
+Les | Description
 --- | ---
 Sources à copier | Spécifie les sources devant être copiées sur le système distant. Tout changement apporté à cette liste peut entraîner un décalage ou des répercussions dans la structure des répertoires où sont copiés les fichiers sur le système distant.
 Copier les sources | Spécifie si les sources doivent être copiées sur le système distant.
@@ -31,9 +31,9 @@ Sources supplémentaires à copier | Spécifie les sources supplémentaires à c
 
 ```xml
 <ItemGroup>
-   <MyItems Include=“foo.txt” />
-   <MyItems Include=“bar.txt” />
-   <DataFilesToCopyRemotely Include=”@(MyItems)” />
+   <MyItems Include="foo.txt" />
+   <MyItems Include="bar.txt" />
+   <DataFilesToCopyRemotely Include="@(MyItems)" />
 </ItemGroup>
 ```
 
