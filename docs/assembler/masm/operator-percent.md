@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator %
 - '% operator'
 ms.assetid: 7f07018e-b664-4655-aa93-9854eb271bbb
-ms.openlocfilehash: de759c3ac788c5c9c4037a3665c07f8a07a205f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04a887ea0766ec2b1272e618fff2c49889c02732
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176575"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396512"
 ---
 # <a name="operator-"></a>%, opérateur
 
-Traite la valeur de *expression* dans un argument de macro en tant que texte.
+Treats the value of *expression* in a macro argument as text.
 
 ## <a name="syntax"></a>Syntaxe
 
-> % *expression*
+> **%** *expression*
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)
