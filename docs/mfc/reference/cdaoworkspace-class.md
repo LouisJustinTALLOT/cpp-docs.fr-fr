@@ -62,16 +62,16 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 3e4ded466b673bff3c0630e798877b69d1ca384d
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096067"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303468"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace (classe)
 
-Gère une session de base de données nommée et protégée par mot de passe, de la connexion à la déconnexion, pour un seul utilisateur.
+Gère une session de base de données nommée et protégée par mot de passe, de la connexion à la déconnexion, pour un seul utilisateur. DAO est pris en charge via Office 2013. DAO 3,6 est la version finale et est considéré comme obsolète.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -87,7 +87,7 @@ class CDaoWorkspace : public CObject
 |----------|-----------------|
 |[CDaoWorkspace :: CDaoWorkspace](#cdaoworkspace)|Construit un objet Workspace. Ensuite, appelez `Create` ou `Open`.|
 
-### <a name="public-methods"></a>M&#233;thodes publiques
+### <a name="public-methods"></a>Méthodes publiques
 
 |Nom|Description|
 |----------|-----------------|
@@ -133,7 +133,7 @@ Dans la plupart des cas, vous n’aurez pas besoin de plusieurs espaces de trava
 
 ## <a name="capabilities"></a>Fonctionnalités
 
-La `CDaoWorkspace` classe fournit les éléments suivants :
+La `CDaoWorkspace` de la classe fournit les éléments suivants :
 
 - Accès explicite, si nécessaire, à un espace de travail par défaut, créé en initialisant le moteur de base de données. En général, vous utilisez implicitement l’espace de travail par défaut de DAO en créant des objets de base de données et d’objet Recordset.
 
@@ -147,9 +147,9 @@ La `CDaoWorkspace` classe fournit les éléments suivants :
 
 MFC n’implémente pas les collections Users et groups dans DAO, qui sont utilisées pour le contrôle de sécurité. Si vous avez besoin de ces aspects de DAO, vous devez les programmer par le biais d’appels directs à des interfaces DAO. Pour plus d’informations, consultez la [note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-## <a name="usage"></a>Usage
+## <a name="usage"></a>Utilisation
 
-Vous pouvez utiliser la `CDaoWorkspace` classe pour effectuer les opérations suivantes :
+Vous pouvez utiliser la classe `CDaoWorkspace` pour :
 
 - Ouvrir explicitement l’espace de travail par défaut.
 
@@ -163,18 +163,19 @@ La création d’un espace de travail qui n’existe pas encore dans la collecti
 
 L’ouverture explicite de l’espace de travail par défaut ou l’ouverture d’un espace de travail existant dans la collection d’espaces de travail est décrite sous la fonction membre [Open](#open) .
 
-Terminer une session d’espace de travail en fermant l’espace de travail avec la fonction membre [Close](#close) . `Close`ferme toutes les bases de données que vous n’avez pas fermées précédemment, en annulant toutes les transactions non validées.
+Terminer une session d’espace de travail en fermant l’espace de travail avec la fonction membre [Close](#close) . `Close` ferme toutes les bases de données que vous n’avez pas fermées précédemment, en annulant toutes les transactions non validées.
 
 ## <a name="transactions"></a>Transactions
-DAO 3,6 est la version finale et est considérée comme obsolète. gère les transactions au niveau de l’espace de travail. par conséquent, les transactions sur un espace de travail avec plusieurs bases de données ouvertes s’appliquent à toutes les bases de données. Par exemple, si deux bases de données comportent des mises à jour non validées et que vous appelez [CommitTrans](#committrans), toutes les mises à jour sont validées. Si vous souhaitez limiter les transactions à une base de données unique, vous devez disposer d’un objet d’espace de travail distinct.
+
+DAO gère les transactions au niveau de l’espace de travail. par conséquent, les transactions sur un espace de travail avec plusieurs bases de données ouvertes s’appliquent à toutes les bases de données. Par exemple, si deux bases de données comportent des mises à jour non validées et que vous appelez [CommitTrans](#committrans), toutes les mises à jour sont validées. Si vous souhaitez limiter les transactions à une base de données unique, vous devez disposer d’un objet d’espace de travail distinct.
 
 ## <a name="implicit-use-of-the-default-workspace"></a>Utilisation implicite de l’espace de travail par défaut
 
 MFC utilise implicitement l’espace de travail par défaut de DAO dans les circonstances suivantes :
 
-- Si vous créez un `CDaoDatabase` objet, mais que vous ne le faites pas par l’intermédiaire d’un objet existant `CDaoWorkspace` , MFC crée un objet espace de travail temporaire pour vous, qui correspond à l’espace de travail par défaut de DAO. Si vous le faites pour plusieurs bases de données, tous les objets de base de données sont associés à l’espace de travail par défaut. Vous pouvez accéder à l’espace de travail d' `CDaoDatabase` une base de données par le biais d’un membre de données.
+- Si vous créez un objet `CDaoDatabase` mais que vous ne le faites pas par l’intermédiaire d’un objet `CDaoWorkspace` existant, MFC crée un objet espace de travail temporaire pour vous, qui correspond à l’espace de travail par défaut de DAO. Si vous le faites pour plusieurs bases de données, tous les objets de base de données sont associés à l’espace de travail par défaut. Vous pouvez accéder à l’espace de travail d’une base de données par le biais d’un membre de données `CDaoDatabase`.
 
-- De même, si vous créez un `CDaoRecordset` objet sans fournir de pointeur vers un `CDaoDatabase` objet, MFC crée un objet de base de données temporaire et, par extension, un objet espace de travail temporaire. Vous pouvez accéder à la base de données d’un jeu d’enregistrements, et indirectement `CDaoRecordset` à son espace de travail, par le biais d’un membre de données.
+- De même, si vous créez un objet `CDaoRecordset` sans fournir de pointeur vers un objet `CDaoDatabase`, MFC crée un objet de base de données temporaire et, par extension, un objet espace de travail temporaire. Vous pouvez accéder à la base de données d’un jeu d’enregistrements, et indirectement à son espace de travail, par le biais d’un membre de données `CDaoRecordset`.
 
 ## <a name="other-operations"></a>Autres opérations
 
@@ -182,13 +183,13 @@ D’autres opérations de base de données sont également fournies, telles que 
 
 Pour plus d’informations sur l’appel de DAO directement et sur la sécurité DAO, consultez la [note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
 `CDaoWorkspace`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Conditions requises
 
 **En-tête :** afxdao. h
 
@@ -202,7 +203,7 @@ virtual void Append();
 
 ### <a name="remarks"></a>Notes
 
-`Append`Ajoute un nouvel objet d’espace de travail à la collection d’espaces de travail du moteur de base de données. Les espaces de travail ne sont pas conservés entre les sessions du moteur de base de données. ils sont stockés uniquement en mémoire, pas sur le disque. Vous n’avez pas besoin d’ajouter un espace de travail. Si vous ne le faites pas, vous pouvez toujours l’utiliser.
+`Append` ajoute un nouvel objet d’espace de travail à la collection d’espaces de travail du moteur de base de données. Les espaces de travail ne sont pas conservés entre les sessions du moteur de base de données. ils sont stockés uniquement en mémoire, pas sur le disque. Vous n’avez pas besoin d’ajouter un espace de travail. Si vous ne le faites pas, vous pouvez toujours l’utiliser.
 
 Un espace de travail ajouté reste dans la collection d’espaces de travail, dans un état actif et ouvert, jusqu’à ce que vous appeliez sa fonction membre [Close](#close) .
 
@@ -218,7 +219,7 @@ void BeginTrans();
 
 ### <a name="remarks"></a>Notes
 
-Une fois que `BeginTrans`vous avez appelé, les mises à jour que vous apportez à vos données ou à votre structure de base de données prennent effet lorsque vous validez la transaction. Étant donné que l’espace de travail définit un seul espace de transaction, la transaction s’applique à toutes les bases de données ouvertes dans l’espace de travail. Il existe deux façons de terminer la transaction :
+Une fois que vous avez appelé `BeginTrans`, les mises à jour que vous apportez à vos données ou à votre structure de base de données prennent effet lorsque vous validez la transaction. Étant donné que l’espace de travail définit un seul espace de transaction, la transaction s’applique à toutes les bases de données ouvertes dans l’espace de travail. Il existe deux façons de terminer la transaction :
 
 - Appelez la fonction membre [CommitTrans](#committrans) pour valider la transaction et enregistrer les modifications apportées à la source de données.
 
@@ -242,9 +243,9 @@ Après avoir construit l' C++ objet, vous avez deux options :
 
 - Appelez la fonction membre [Open](#open) de l’objet pour ouvrir l’espace de travail par défaut ou pour ouvrir un objet existant dans la collection d’espaces de travail.
 
-- Ou appelez la fonction membre [Create](#create) de l’objet pour créer un nouvel objet d’espace de travail DAO. Cette action démarre explicitement une nouvelle session d’espace de travail, à laquelle vous `CDaoWorkspace` pouvez vous référer via l’objet. Après l' `Create`appel de, vous pouvez appeler [Append](#append) si vous souhaitez ajouter l’espace de travail à la collection Workspaces du moteur de base de données.
+- Ou appelez la fonction membre [Create](#create) de l’objet pour créer un nouvel objet d’espace de travail DAO. Cette action démarre explicitement une nouvelle session d’espace de travail, à laquelle vous pouvez vous référer via l’objet `CDaoWorkspace`. Après avoir appelé `Create`, vous pouvez appeler [Append](#append) si vous souhaitez ajouter l’espace de travail à la collection Workspaces du moteur de base de données.
 
-Consultez la vue d’ensemble de la classe pour [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) pour plus d’informations sur le `CDaoWorkspace` moment où vous devez créer un objet de manière explicite. En règle générale, vous utilisez des espaces de travail créés implicitement lorsque vous ouvrez un objet [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) sans spécifier un espace de travail ou lorsque vous ouvrez un objet [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) sans spécifier d’objet de base de données. Les objets DAO MFC créés de cette façon utilisent l’espace de travail par défaut de DAO, qui est créé une fois et réutilisé.
+Consultez la vue d’ensemble de la classe pour [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) pour plus d’informations sur le moment où vous devez créer explicitement un objet `CDaoWorkspace`. En règle générale, vous utilisez des espaces de travail créés implicitement lorsque vous ouvrez un objet [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) sans spécifier un espace de travail ou lorsque vous ouvrez un objet [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) sans spécifier d’objet de base de données. Les objets DAO MFC créés de cette façon utilisent l’espace de travail par défaut de DAO, qui est créé une fois et réutilisé.
 
 Pour libérer un espace de travail et ses objets contenus, appelez la fonction membre [Close](#close) de l’objet Workspace.
 
@@ -258,7 +259,7 @@ virtual void Close();
 
 ### <a name="remarks"></a>Notes
 
-La fermeture d’un objet d’espace de travail ouvert libère l’objet DAO sous-jacent et, si l’espace de travail est membre de la collection Workspaces, le supprime de la collection. L' `Close` appel de est une bonne pratique de programmation.
+La fermeture d’un objet d’espace de travail ouvert libère l’objet DAO sous-jacent et, si l’espace de travail est membre de la collection Workspaces, le supprime de la collection. L’appel de `Close` est une bonne pratique de programmation.
 
 > [!CAUTION]
 >  La fermeture d’un objet Workspace ferme toutes les bases de données ouvertes dans l’espace de travail. Tous les jeux d’enregistrements ouverts dans les bases de données sont également fermés, et toutes les modifications ou mises à jour en attente sont annulées. Pour obtenir des informations connexes, consultez les fonctions membres [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#close):: Close, [CDaoRecordset :: Close](../../mfc/reference/cdaorecordset-class.md#close), [CDaoTableDef :: Close](../../mfc/reference/cdaotabledef-class.md#close)et [CDaoQueryDef :: Close](../../mfc/reference/cdaoquerydef-class.md#close) .
@@ -277,10 +278,10 @@ void CommitTrans();
 
 ### <a name="remarks"></a>Notes
 
-Une transaction se compose d’une série de modifications apportées aux données de la base de données ou à sa structure, en commençant par un appel à [BeginTrans](#begintrans). Une fois la transaction terminée, validez-la ou restaurez-la (annulez les modifications) avec la [restauration](#rollback). Par défaut, sans transactions, les mises à jour des enregistrements sont validées immédiatement. L' `BeginTrans` appel de entraîne le retard de l’engagement des mises à jour `CommitTrans`jusqu’à ce que vous appeliez.
+Une transaction se compose d’une série de modifications apportées aux données de la base de données ou à sa structure, en commençant par un appel à [BeginTrans](#begintrans). Une fois la transaction terminée, validez-la ou restaurez-la (annulez les modifications) avec la [restauration](#rollback). Par défaut, sans transactions, les mises à jour des enregistrements sont validées immédiatement. L’appel de `BeginTrans` entraîne le report de l’engagement des mises à jour jusqu’à ce que vous appeliez `CommitTrans`.
 
 > [!CAUTION]
->  Dans un espace de travail, les transactions sont toujours globales dans l’espace de travail et ne sont pas limitées à une seule base de données ou un seul Recordset. Si vous effectuez des opérations sur plusieurs bases de données ou jeux d’enregistrements au sein d' `CommitTrans` une transaction d’espace de travail, valide toutes `Rollback` les mises à jour en attente et restaure toutes les opérations sur ces bases de données et jeux d’enregistrements.
+>  Dans un espace de travail, les transactions sont toujours globales dans l’espace de travail et ne sont pas limitées à une seule base de données ou un seul Recordset. Si vous effectuez des opérations sur plusieurs bases de données ou jeux d’enregistrements au sein d’une transaction d’espace de travail, `CommitTrans` valide toutes les mises à jour en attente et `Rollback` restaure toutes les opérations sur ces bases de données et jeux d’enregistrements.
 
 Lorsque vous fermez une base de données ou un espace de travail avec des transactions en attente, toutes les transactions sont restaurées.
 
@@ -309,7 +310,7 @@ static void PASCAL CompactDatabase(
 ### <a name="parameters"></a>Paramètres
 
 *lpszSrcName*<br/>
-Nom d’une base de données existante et fermée. Il peut s’agir d’un chemin d’accès complet et d’un nom\\de fichier, par exemple «C : \MYDB. MDB». Si le nom de fichier a une extension, vous devez le spécifier. Si votre réseau prend en charge le format UNC (Uniform Naming Convention), vous pouvez également spécifier un chemin d’accès\\réseau\\,\\tel\\que «\\\\\monserveur \MYSHARE \MYDIR \MYDB. MDB». (Les doubles barres obliques inverses sont nécessaires dans les\\chaînes de chemin C++ d’accès, car «» est le caractère d’échappement.)
+Nom d’une base de données existante et fermée. Il peut s’agir d’un chemin d’accès complet et d’un nom de fichier, par exemple «C :\\\MYDB. MDB». Si le nom de fichier a une extension, vous devez le spécifier. Si votre réseau prend en charge le format UNC (Uniform Naming Convention), vous pouvez également spécifier un chemin d’accès réseau, par exemple «\\\\\\\MONSERVEUR\\\MYSHARE\\\MYDIR\\\MYDB. MDB». (Les doubles barres obliques inverses sont nécessaires dans les chaînes de chemin d' C++ accès car «\\» est le caractère d’échappement.)
 
 *lpszDestName*<br/>
 Chemin d’accès complet de la base de données compactée que vous créez. Vous pouvez également spécifier un chemin d’accès réseau comme avec *lpszSrcName*. Vous ne pouvez pas utiliser l’argument *lpszDestName* pour spécifier le même fichier de base de données que *lpszSrcName*.
@@ -318,54 +319,54 @@ Chemin d’accès complet de la base de données compactée que vous créez. Vou
 Un mot de passe, utilisé lorsque vous souhaitez compacter une base de données protégée par mot de passe. Notez que si vous utilisez la version de `CompactDatabase` qui prend un mot de passe, vous devez fournir tous les paramètres. En outre, comme il s’agit d’un paramètre de connexion, il requiert une mise en forme spéciale, comme suit :; PWD = *lpszPassword*. Par exemple :; PWD = « heureux ». (Le point-virgule de début est requis.)
 
 *lpszLocale*<br/>
-Expression de chaîne utilisée pour spécifier l’ordre de classement pour la création de *lpszDestName*. Si vous omettez cet argument en acceptant la valeur `dbLangGeneral` par défaut (voir ci-dessous), les paramètres régionaux de la nouvelle base de données sont les mêmes que ceux de l’ancienne base de données. Les valeurs possibles sont les suivantes :
+Expression de chaîne utilisée pour spécifier l’ordre de classement pour la création de *lpszDestName*. Si vous omettez cet argument en acceptant la valeur par défaut de `dbLangGeneral` (voir ci-dessous), les paramètres régionaux de la nouvelle base de données sont les mêmes que ceux de l’ancienne base de données. Les valeurs possibles sont :
 
-- `dbLangGeneral`Anglais, allemand, français, portugais, italien et espagnol moderne
+- `dbLangGeneral` l’anglais, l’allemand, le français, le portugais, l’italien et l’espagnol moderne
 
-- `dbLangArabic`Arabe
+- `dbLangArabic` arabe
 
-- `dbLangCyrillic`Russe
+- `dbLangCyrillic` russe
 
-- `dbLangCzech`Tchèque
+- `dbLangCzech` tchèque
 
-- `dbLangDutch`Néerlandais
+- `dbLangDutch` néerlandais
 
-- `dbLangGreek`Grec
+- `dbLangGreek` grec
 
-- `dbLangHebrew`Hébreu
+- `dbLangHebrew` Hébreu
 
-- `dbLangHungarian`Hongrois
+- `dbLangHungarian` hongrois
 
-- `dbLangIcelandic`Islandais
+- `dbLangIcelandic` islandais
 
-- `dbLangNordic`Langues nordiques (moteur de base de données Microsoft Jet version 1,0 uniquement)
+- `dbLangNordic` langues nordiques (moteur de base de données Microsoft Jet version 1,0 uniquement)
 
-- `dbLangNorwdan`Norvégien et danois
+- `dbLangNorwdan` norvégien et danois
 
-- `dbLangPolish`Polonais
+- `dbLangPolish` polonais
 
-- `dbLangSpanish`Espagnol traditionnel
+- `dbLangSpanish` espagnol traditionnel
 
-- `dbLangSwedfin`Suédois et finnois
+- `dbLangSwedfin` suédois et finnois
 
-- `dbLangTurkish`Turc
+- `dbLangTurkish` turc
 
 *nOptions*<br/>
-Indique une ou plusieurs options pour la base de données cible, *lpszDestName*. Si vous omettez cet argument en acceptant la valeur par défaut, le *lpszDestName* aura le même chiffrement et la même version que *lpszSrcName*. Vous pouvez combiner l' `dbEncrypt` option `dbDecrypt` ou avec l’une des options de version à l’aide de l’opérateur or au niveau du bit. Les valeurs possibles, qui spécifient un format de base de données, et non une version du moteur de base de données, sont les suivantes :
+Indique une ou plusieurs options pour la base de données cible, *lpszDestName*. Si vous omettez cet argument en acceptant la valeur par défaut, le *lpszDestName* aura le même chiffrement et la même version que *lpszSrcName*. Vous pouvez combiner l’option `dbEncrypt` ou `dbDecrypt` avec l’une des options de version à l’aide de l’opérateur or au niveau du bit. Les valeurs possibles, qui spécifient un format de base de données, et non une version du moteur de base de données, sont les suivantes :
 
-- `dbEncrypt`Chiffrez la base de données lors du compactage.
+- `dbEncrypt` chiffrer la base de données lors du compactage.
 
-- `dbDecrypt`Déchiffrez la base de données lors du compactage.
+- `dbDecrypt` déchiffrer la base de données lors du compactage.
 
-- `dbVersion10`Créer une base de données qui utilise le moteur de base de données Microsoft Jet version 1,0 lors du compactage.
+- `dbVersion10` créer une base de données qui utilise le moteur de base de données Microsoft Jet version 1,0 lors du compactage.
 
-- `dbVersion11`Créer une base de données qui utilise le moteur de base de données Microsoft Jet version 1,1 lors du compactage.
+- `dbVersion11` créer une base de données qui utilise le moteur de base de données Microsoft Jet version 1,1 lors du compactage.
 
-- `dbVersion20`Créer une base de données qui utilise le moteur de base de données Microsoft Jet version 2,0 lors du compactage.
+- `dbVersion20` créer une base de données qui utilise le moteur de base de données Microsoft Jet version 2,0 lors du compactage.
 
-- `dbVersion30`Créer une base de données qui utilise le moteur de base de données Microsoft Jet version 3,0 lors du compactage.
+- `dbVersion30` créer une base de données qui utilise le moteur de base de données Microsoft Jet version 3,0 lors du compactage.
 
-Vous pouvez utiliser `dbEncrypt` ou `dbDecrypt` dans l’argument options pour spécifier s’il faut chiffrer ou déchiffrer la base de données lorsqu’elle est compactée. Si vous omettez une constante de chiffrement ou si vous `dbDecrypt` incluez à la fois et `dbEncrypt`, *lpszDestName* aura le même chiffrement que *lpszSrcName*. Vous pouvez utiliser l’une des constantes de version dans l’argument options pour spécifier la version du format de données pour la base de données compactée. Cette constante affecte uniquement la version du format de données de *lpszDestName*. Vous ne pouvez spécifier qu’une seule constante de version. Si vous omettez une constante de version, *lpszDestName* aura la même version que *lpszSrcName*. Vous pouvez compacter *lpszDestName* uniquement vers une version identique ou ultérieure à celle de *lpszSrcName*.
+Vous pouvez utiliser `dbEncrypt` ou `dbDecrypt` dans l’argument options pour spécifier s’il faut chiffrer ou déchiffrer la base de données lorsqu’elle est compactée. Si vous omettez une constante de chiffrement ou si vous incluez à la fois `dbDecrypt` et `dbEncrypt`, *lpszDestName* aura le même chiffrement que *lpszSrcName*. Vous pouvez utiliser l’une des constantes de version dans l’argument options pour spécifier la version du format de données pour la base de données compactée. Cette constante affecte uniquement la version du format de données de *lpszDestName*. Vous ne pouvez spécifier qu’une seule constante de version. Si vous omettez une constante de version, *lpszDestName* aura la même version que *lpszSrcName*. Vous pouvez compacter *lpszDestName* uniquement vers une version identique ou ultérieure à celle de *lpszSrcName*.
 
 > [!CAUTION]
 >  Si une base de données n’est pas chiffrée, il est possible, même si vous implémentez la sécurité utilisateur/mot de passe, de lire directement le fichier de disque binaire qui constitue la base de données.
@@ -375,7 +376,7 @@ Vous pouvez utiliser `dbEncrypt` ou `dbDecrypt` dans l’argument options pour s
 Lorsque vous modifiez des données dans une base de données, le fichier de base de données peut être fragmenté et utiliser plus d’espace disque que nécessaire. Régulièrement, vous devez compacter votre base de données pour défragmenter le fichier de base de données. La base de données compactée est généralement plus petite. Vous pouvez également choisir de modifier l’ordre de classement, le chiffrement ou la version du format de données pendant que vous copiez et compactez la base de données.
 
 > [!CAUTION]
->  La `CompactDatabase` fonction membre ne convertit pas correctement une base de données Microsoft Access complète d’une version à une autre. Seul le format de données est converti. Les objets définis par Microsoft Access, tels que les formulaires et les rapports, ne sont pas convertis. Toutefois, les données sont correctement converties.
+>  La fonction membre `CompactDatabase` ne convertit pas correctement une base de données Microsoft Access complète d’une version à une autre. Seul le format de données est converti. Les objets définis par Microsoft Access, tels que les formulaires et les rapports, ne sont pas convertis. Toutefois, les données sont correctement converties.
 
 > [!TIP]
 >  Vous pouvez également utiliser `CompactDatabase` pour copier un fichier de base de données.
@@ -384,7 +385,7 @@ Pour plus d’informations sur le compactage des bases de données, consultez la
 
 ##  <a name="create"></a>  CDaoWorkspace::Create
 
-Appelez cette fonction membre pour créer un nouvel objet d’espace de travail DAO et l’associer `CDaoWorkspace` à l’objet MFC.
+Appelez cette fonction membre pour créer un nouvel objet d’espace de travail DAO et l’associer à l’objet MFC `CDaoWorkspace`.
 
 ```
 virtual void Create(
@@ -414,7 +415,7 @@ Le processus de création global est le suivant :
 
 1. Appelez éventuellement [Append](#append) si vous souhaitez ajouter l’espace de travail à la collection Workspaces du moteur de base de données. Vous pouvez utiliser l’espace de travail sans l’ajouter.
 
-Après l' `Create` appel, l’objet de l’espace de travail est à l’état ouvert, prêt à être utilisé. Vous n’appelez `Open` pas after `Create`. Vous n’appelez `Create` pas si l’espace de travail existe déjà dans la collection d’espaces de travail. `Create`Initialise le moteur de base de données s’il n’a pas déjà été initialisé pour votre application.
+Après l’appel de `Create`, l’objet de l’espace de travail est dans un état ouvert, prêt à être utilisé. Vous n’appelez pas `Open` après `Create`. Vous n’appelez pas `Create` si l’espace de travail existe déjà dans la collection d’espaces de travail. `Create` Initialise le moteur de base de données s’il n’a pas déjà été initialisé pour votre application.
 
 ##  <a name="getdatabasecount"></a>  CDaoWorkspace::GetDatabaseCount
 
@@ -430,7 +431,7 @@ Nombre de bases de données ouvertes dans l’espace de travail.
 
 ### <a name="remarks"></a>Notes
 
-`GetDatabaseCount`est utile si vous devez exécuter en boucle toutes les bases de données définies dans la collection de bases de données de l’espace de travail. Pour obtenir des informations sur une base de données donnée dans la collection, consultez [GetDatabaseInfo](#getdatabaseinfo). L’utilisation classique consiste à `GetDatabaseCount` appeler pour le nombre de bases de données ouvertes, puis à utiliser ce nombre comme index de boucle pour `GetDatabaseInfo`les appels répétés à.
+`GetDatabaseCount` est utile si vous devez exécuter en boucle toutes les bases de données définies dans la collection de bases de données de l’espace de travail. Pour obtenir des informations sur une base de données donnée dans la collection, consultez [GetDatabaseInfo](#getdatabaseinfo). L’utilisation courante consiste à appeler `GetDatabaseCount` pour le nombre de bases de données ouvertes, puis à utiliser ce nombre comme index de boucle pour les appels répétés à `GetDatabaseInfo`.
 
 ##  <a name="getdatabaseinfo"></a>  CDaoWorkspace::GetDatabaseInfo
 
@@ -459,11 +460,11 @@ Référence à un objet [cdaodatabaseinfo,](../../mfc/reference/cdaodatabaseinfo
 *dwInfoOptions*<br/>
 Options qui spécifient les informations relatives à la base de données à récupérer. Les options disponibles sont répertoriées ici, ainsi que ce qu’elles provoquent le retour de la fonction :
 
-- AFX_DAO_PRIMARY_INFO (par défaut) nom, pouvant être mis à jour, transactions
+- Nom du AFX_DAO_PRIMARY_INFO (par défaut), pouvant être mis à jour, transactions
 
-- Informations primaires AFX_DAO_SECONDARY_INFO plus : Version, ordre de classement, délai de requête
+- AFX_DAO_SECONDARY_INFO informations principales plus : version, ordre de classement, délai d’expiration de la requête
 
-- Informations principales et secondaires AFX_DAO_ALL_INFO plus : Connecter
+- AFX_DAO_ALL_INFO les informations primaires et secondaires plus : Connect
 
 *lpszName*<br/>
 Nom de l’objet de base de données, pour la recherche par nom. Le nom est une chaîne comportant jusqu’à 14 caractères qui nomme le nouvel objet Workspace de manière unique.
@@ -534,7 +535,7 @@ Pour obtenir des informations connexes, consultez la rubrique « propriété Lo
 
 ##  <a name="getname"></a>  CDaoWorkspace::GetName
 
-Appelez cette fonction membre pour récupérer le nom défini par l’utilisateur de l’objet espace de travail `CDaoWorkspace` DAO sous-jacent à l’objet.
+Appelez cette fonction membre pour récupérer le nom défini par l’utilisateur de l’objet espace de travail DAO sous-jacent de l’objet `CDaoWorkspace`.
 
 ```
 CString GetName();
@@ -600,7 +601,7 @@ Nombre d’espaces de travail ouverts dans la collection d’espaces de travail.
 
 ### <a name="remarks"></a>Notes
 
-Ce nombre n’inclut pas les espaces de travail ouverts qui ne sont pas ajoutés à la collection. `GetWorkspaceCount`est utile si vous devez exécuter en boucle tous les espaces de travail définis dans la collection d’espaces de travail. Pour obtenir des informations sur un espace de travail donné dans la collection, consultez [GetWorkspaceInfo](#getworkspaceinfo). L’utilisation classique consiste à `GetWorkspaceCount` appeler pour le nombre d’espaces de travail ouverts, puis à utiliser ce nombre comme index de boucle pour `GetWorkspaceInfo`les appels répétés à.
+Ce nombre n’inclut pas les espaces de travail ouverts qui ne sont pas ajoutés à la collection. `GetWorkspaceCount` est utile si vous devez parcourir tous les espaces de travail définis dans la collection d’espaces de travail. Pour obtenir des informations sur un espace de travail donné dans la collection, consultez [GetWorkspaceInfo](#getworkspaceinfo). L’utilisation courante consiste à appeler `GetWorkspaceCount` pour le nombre d’espaces de travail ouverts, puis à utiliser ce nombre comme index de boucle pour les appels répétés à `GetWorkspaceInfo`.
 
 ##  <a name="getworkspaceinfo"></a>  CDaoWorkspace::GetWorkspaceInfo
 
@@ -629,11 +630,11 @@ Référence à un objet [cdaoworkspaceinfo,](../../mfc/reference/cdaoworkspacein
 *dwInfoOptions*<br/>
 Options qui spécifient les informations relatives à l’espace de travail à récupérer. Les options disponibles sont répertoriées ici, ainsi que ce qu’elles provoquent le retour de la fonction :
 
-- Nom de AFX_DAO_PRIMARY_INFO (par défaut)
+- Nom de l’AFX_DAO_PRIMARY_INFO (par défaut)
 
-- Informations primaires AFX_DAO_SECONDARY_INFO plus : User Name
+- AFX_DAO_SECONDARY_INFO informations principales plus : nom d’utilisateur
 
-- Informations principales et secondaires AFX_DAO_ALL_INFO plus : Isoler ODBCTrans
+- AFX_DAO_ALL_INFO les informations primaires et secondaires plus : isoler ODBCTrans
 
 *lpszName*<br/>
 Nom de l’objet de l’espace de travail, pour la recherche par nom. Le nom est une chaîne comportant jusqu’à 14 caractères qui nomme le nouvel objet Workspace de manière unique.
@@ -644,7 +645,7 @@ Pour obtenir une description des informations retournées dans *wkspcinfo*, cons
 
 ##  <a name="idle"></a>  CDaoWorkspace::Idle
 
-Appelez `Idle` pour permettre au moteur de base de données d’effectuer des tâches en arrière-plan qui peuvent ne pas être à jour en raison du traitement intensif des données.
+Appelez `Idle` pour permettre au moteur de base de données d’effectuer des tâches en arrière-plan qui peuvent ne pas être à jour en raison d’un traitement intensif des données.
 
 ```
 static void PASCAL Idle(int nAction = dbFreeLocks);
@@ -653,24 +654,24 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 ### <a name="parameters"></a>Paramètres
 
 *nAction*<br/>
-Action à effectuer pendant le traitement inactif. Actuellement, la seule action valide `dbFreeLocks`est.
+Action à effectuer pendant le traitement inactif. Actuellement, la seule action valide est `dbFreeLocks`.
 
 ### <a name="remarks"></a>Notes
 
 Cela est souvent le cas dans les environnements multitâches et multi-utilisateurs dans lesquels il n’y a pas assez de temps de traitement en arrière-plan pour conserver tous les enregistrements d’un jeu d’enregistrements à jour.
 
 > [!NOTE]
->  L' `Idle` appel de n’est pas nécessaire avec les bases de données créées avec la version 3,0 du moteur de base de données Microsoft Jet. À `Idle` utiliser uniquement pour les bases de données créées avec des versions antérieures.
+>  L’appel de `Idle` n’est pas nécessaire avec les bases de données créées avec la version 3,0 du moteur de base de données Microsoft Jet. Utilisez `Idle` uniquement pour les bases de données créées avec des versions antérieures.
 
-En règle générale, les verrous de lecture sont supprimés et les données des objets Recordset de type feuille de réponse locale sont uniquement mises à jour quand aucune autre action (y compris les mouvements de la souris) ne se produit. Si vous appelez `Idle`régulièrement, vous fournissez au moteur de base de données le temps de rattraper les tâches de traitement en arrière-plan en libérant les verrous de lecture inutiles. La spécification `dbFreeLocks` de la constante en tant qu’argument retarde le traitement jusqu’à la libération de tous les verrous de lecture.
+En règle générale, les verrous de lecture sont supprimés et les données des objets Recordset de type feuille de réponse locale sont uniquement mises à jour quand aucune autre action (y compris les mouvements de la souris) ne se produit. Si vous appelez régulièrement `Idle`, vous fournissez au moteur de base de données le temps de rattraper les tâches de traitement en arrière-plan en libérant les verrous de lecture inutiles. La spécification de la constante `dbFreeLocks` comme argument retarde le traitement jusqu’à ce que tous les verrous de lecture soient libérés.
 
-Cette fonction membre n’est pas nécessaire dans les environnements à utilisateur unique, sauf si plusieurs instances d’une application sont en cours d’exécution. La `Idle` fonction membre peut augmenter les performances dans un environnement multi-utilisateur, car elle force le moteur de base de données à vider les données sur le disque et à libérer des verrous sur la mémoire. Vous pouvez également libérer des verrous en lecture en faisant partie des opérations d’une transaction.
+Cette fonction membre n’est pas nécessaire dans les environnements à utilisateur unique, sauf si plusieurs instances d’une application sont en cours d’exécution. La fonction membre `Idle` peut augmenter les performances dans un environnement multi-utilisateur, car elle force le moteur de base de données à vider les données sur le disque et à libérer des verrous sur la mémoire. Vous pouvez également libérer des verrous en lecture en faisant partie des opérations d’une transaction.
 
 Pour obtenir des informations connexes, consultez la rubrique « méthode inactive » dans l’aide de DAO.
 
 ##  <a name="isopen"></a>  CDaoWorkspace::IsOpen
 
-Appelez cette fonction membre pour déterminer si l' `CDaoWorkspace` objet est ouvert (c’est-à-dire, si l’objet MFC a été initialisé par un appel à [Open](#open) ou un appel à [Create](#create)).
+Appelez cette fonction membre pour déterminer si l’objet `CDaoWorkspace` est ouvert (c’est-à-dire, si l’objet MFC a été initialisé par un appel à [Open](#open) ou un appel à [Create](#create)).
 
 ```
 BOOL IsOpen() const;
@@ -709,19 +710,19 @@ Nom de l’objet de l’espace de travail DAO à ouvrir (chaîne comportant jusq
 
 ### <a name="remarks"></a>Notes
 
-Après avoir construit un `CDaoWorkspace` objet, appelez cette fonction membre pour effectuer l’une des opérations suivantes :
+Après avoir construit un objet `CDaoWorkspace`, appelez cette fonction membre pour effectuer l’une des opérations suivantes :
 
 - Ouvrir explicitement l’espace de travail par défaut. Passe la valeur NULL pour *lpszName*.
 
-- Ouvrez un objet `CDaoWorkspace` existant, un membre de la collection d’espaces de travail, par nom. Transmettez un nom valide pour un objet d’espace de travail existant.
+- Ouvrez un objet `CDaoWorkspace` existant, membre de la collection Workspaces, par nom. Transmettez un nom valide pour un objet d’espace de travail existant.
 
-`Open`met l’objet de l’espace de travail dans un état ouvert et initialise également le moteur de base de données s’il n’a pas déjà été initialisé pour votre application.
+`Open` met l’objet de l’espace de travail dans un état ouvert et initialise également le moteur de base de données s’il n’a pas déjà été initialisé pour votre application.
 
-Bien que `CDaoWorkspace` de nombreuses fonctions membres puissent uniquement être appelées après l’ouverture de l’espace de travail, les fonctions membres suivantes, qui opèrent sur le moteur de base C++ de données, sont disponibles après la construction de l’objet, mais avant un appel à `Open`:
+Bien que de nombreuses fonctions membres de `CDaoWorkspace` ne puissent être appelées qu’après l’ouverture de l’espace de travail, les fonctions membres suivantes, qui opèrent sur le moteur C++ de base de données, sont disponibles après la construction de l’objet, mais avant un appel à `Open`:
 
 ||||
 |-|-|-|
-|[Créés](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
+|[Créer](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
 |[GetIniPath](#getinipath)|[Idle](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 
@@ -736,7 +737,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 ### <a name="parameters"></a>Paramètres
 
 *lpszName*<br/>
-Chemin d’accès et nom de fichier d’un fichier de base de données du moteur Microsoft Jet existant. Si vous omettez le chemin d’accès, seul le répertoire actif est recherché. Si votre système prend en charge le format UNC (Uniform Naming Convention), vous pouvez également spécifier un chemin d’accès réseau\\,\\par\\exemple\\: «\\\\\monserveur \MYSHARE \MYDIR \MYDB. MDB». (Les doubles barres obliques inverses sont nécessaires dans la\\chaîne du chemin C++ d’accès, car «» est le caractère d’échappement.)
+Chemin d’accès et nom de fichier d’un fichier de base de données du moteur Microsoft Jet existant. Si vous omettez le chemin d’accès, seul le répertoire actif est recherché. Si votre système prend en charge le format UNC (Uniform Naming Convention), vous pouvez également spécifier un chemin d’accès réseau, par exemple : «\\\\\\\MONSERVEUR\\\MYSHARE\\\MYDIR\\\MYDB. MDB». (Les doubles barres obliques inverses sont nécessaires dans la chaîne du chemin d' C++ accès car «\\» est le caractère d’échappement.)
 
 ### <a name="remarks"></a>Notes
 
@@ -760,12 +761,12 @@ void Rollback();
 ### <a name="remarks"></a>Notes
 
 > [!CAUTION]
->  Dans un objet d’espace de travail, les transactions sont toujours globales dans l’espace de travail et ne sont pas limitées à une seule base de données ou un seul Recordset. Si vous effectuez des opérations sur plusieurs bases de données ou jeux d’enregistrements au sein d' `Rollback` une transaction d’espace de travail, restaure toutes les opérations sur l’ensemble des bases de données et des jeux d’enregistrements.
+>  Dans un objet d’espace de travail, les transactions sont toujours globales dans l’espace de travail et ne sont pas limitées à une seule base de données ou un seul Recordset. Si vous effectuez des opérations sur plusieurs bases de données ou jeux d’enregistrements au sein d’une transaction d’espace de travail, `Rollback` restaure toutes les opérations sur toutes ces bases de données et jeux d’enregistrements.
 
 Si vous fermez un objet Workspace sans enregistrer ou restaurer de transactions en attente, les transactions sont automatiquement restaurées. Si vous appelez [CommitTrans](#committrans) ou `Rollback` sans appeler au préalable [BeginTrans](#begintrans), une erreur se produit.
 
 > [!NOTE]
->  Lorsque vous commencez une transaction, le moteur de base de données enregistre ses opérations dans un fichier conservé dans le répertoire spécifié par la variable d’environnement TEMP sur la station de travail. Si le fichier journal de transactions épuise le stockage disponible sur votre lecteur Temp, le moteur de base de données génère une `CDaoException` exception (DAO Error 2004). À ce stade, si vous appelez `CommitTrans`, un nombre indéterminé d’opérations est validé, mais les opérations non terminées restantes sont perdues et l’opération doit être redémarrée. L' `Rollback` appel de libère le journal des transactions et restaure toutes les opérations dans la transaction.
+>  Lorsque vous commencez une transaction, le moteur de base de données enregistre ses opérations dans un fichier conservé dans le répertoire spécifié par la variable d’environnement TEMP sur la station de travail. Si le fichier journal de transactions épuise le stockage disponible sur votre lecteur TEMP, le moteur de base de données fait en sorte que MFC lève une `CDaoException` (erreur DAO 2004). À ce stade, si vous appelez `CommitTrans`, un nombre indéterminé d’opérations sont validées, mais les opérations non terminées restantes sont perdues et l’opération doit être redémarrée. L’appel de `Rollback` libère le journal des transactions et restaure toutes les opérations dans la transaction.
 
 ##  <a name="setdefaultpassword"></a>  CDaoWorkspace::SetDefaultPassword
 
@@ -786,7 +787,7 @@ Le mot de passe par défaut que vous définissez s’applique aux nouveaux espac
 
 Pour utiliser cette fonction membre :
 
-1. Construisez `CDaoWorkspace` un objet mais n’appelez `Create`pas.
+1. Construisez un objet `CDaoWorkspace` mais n’appelez pas `Create`.
 
 1. Appelez `SetDefaultPassword` et, si vous le souhaitez, [SetDefaultUser](#setdefaultuser).
 
@@ -815,7 +816,7 @@ Le nom d’utilisateur par défaut que vous définissez s’applique aux nouveau
 
 Pour utiliser cette fonction membre :
 
-1. Construisez `CDaoWorkspace` un objet mais n’appelez `Create`pas.
+1. Construisez un objet `CDaoWorkspace` mais n’appelez pas `Create`.
 
 1. Appelez `SetDefaultUser` et, si vous le souhaitez, [SetDefaultPassword](#setdefaultpassword).
 
@@ -843,7 +844,7 @@ Chaîne contenant le nom d’une sous-clé de Registre Windows pour l’emplacem
 Appelez `SetIniPath` uniquement si vous devez spécifier des paramètres spéciaux. Pour plus d’informations, consultez la rubrique « propriété IniPath » dans l’aide de DAO.
 
 > [!NOTE]
->  Appelez `SetIniPath` lors de l’installation de l’application, et non lors de l’exécution de l’application. `SetIniPath`doit être appelé avant d’ouvrir des espaces de travail, des bases de données ou des jeux d’enregistrements ; dans le cas contraire, MFC lève une exception.
+>  Appelez `SetIniPath` lors de l’installation de l’application, et non lors de l’exécution de l’application. `SetIniPath` doit être appelé avant d’ouvrir des espaces de travail, des bases de données ou des jeux d’enregistrements ; dans le cas contraire, MFC lève une exception.
 
 Vous pouvez utiliser ce mécanisme pour configurer le moteur de base de données avec les paramètres de Registre fournis par l’utilisateur. L’étendue de cet attribut est limitée à votre application et ne peut pas être modifiée sans redémarrer votre application.
 

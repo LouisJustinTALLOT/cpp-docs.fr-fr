@@ -4,12 +4,12 @@ description: Comment installer, compiler et déboguer un projet C++ cmake Open s
 author: mikeblome
 ms.topic: tutorial
 ms.date: 11/08/2019
-ms.openlocfilehash: 05f120335180d27e84a99819ee97c233dd1b39a7
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965102"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303254"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Didacticiel : créer C++ des projets multiplateformes dans Visual Studio
 
@@ -155,7 +155,7 @@ Dans cette étape, nous allons déboguer un exemple de programme qui utilise la 
 
    Si vous avez déjà ajouté une connexion à distance, vous pouvez ouvrir cette fenêtre en accédant à **outils > Options > gestionnaire de connexions inter-plateforme >** .
 
-1. Fournissez les [informations de connexion à votre machine Linux](/cpp/linux/connect-to-your-remote-linux-computer.md) , puis choisissez **se connecter**. Visual Studio ajoute cet ordinateur à CMakeSettings. JSON comme connexion par défaut pour **Linux-Debug**. Il extrait également les en-têtes de votre ordinateur distant, ce [qui vous permet d’utiliser IntelliSense spécifique à cette connexion à distance](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense). Ensuite, Visual Studio envoie vos fichiers à la machine distante et génère le cache CMake sur le système distant. Ces étapes peuvent prendre un certain temps, en fonction de la vitesse de votre réseau et de la puissance de votre machine distante. Vous savez qu’il est terminé lorsque le message « extraction des informations cibles effectuées » s’affiche dans la fenêtre sortie de CMake.
+1. Fournissez les [informations de connexion à votre machine Linux](/cpp/linux/connect-to-your-remote-linux-computer) , puis choisissez **se connecter**. Visual Studio ajoute cet ordinateur à CMakeSettings. JSON comme connexion par défaut pour **Linux-Debug**. Il extrait également les en-têtes de votre ordinateur distant, ce [qui vous permet d’utiliser IntelliSense spécifique à cette connexion à distance](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense). Ensuite, Visual Studio envoie vos fichiers à la machine distante et génère le cache CMake sur le système distant. Ces étapes peuvent prendre un certain temps, en fonction de la vitesse de votre réseau et de la puissance de votre machine distante. Vous savez qu’il est terminé lorsque le message « extraction des informations cibles effectuées » s’affiche dans la fenêtre sortie de CMake.
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>Définir un point d’arrêt, générer et exécuter sur Linux
 

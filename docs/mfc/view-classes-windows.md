@@ -8,24 +8,24 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-ms.openlocfilehash: f3e9ea2ebf3eb0ce04fde0339aaf0243686248a9
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: a3e0f837bc13c022bec91bfff6e38c1513abaf16
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096039"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302968"
 ---
 # <a name="view-classes-windows"></a>Classes d'affichage (Windows)
 
-`CView`et ses classes dérivées sont des fenêtres enfants qui représentent la zone cliente d’une fenêtre frame. Les vues affichent les données et acceptent les entrées d’un document.
+`CView` et ses classes dérivées sont des fenêtres enfants qui représentent la zone cliente d’une fenêtre frame. Les vues affichent les données et acceptent les entrées d’un document.
 
 Une classe de vue est associée à une classe de document et à une classe de fenêtre frame à l’aide d’un objet de modèle de document.
 
 [CView](../mfc/reference/cview-class.md)<br/>
-Classe de base pour les vues spécifiques à l’application des données d’un document. Les vues affichent les données et acceptent les entrées utilisateur pour modifier ou sélectionner les données. Dérivez votre classe d’affichage `CView`ou vos classes à partir de.
+Classe de base pour les vues spécifiques à l’application des données d’un document. Les vues affichent les données et acceptent les entrées utilisateur pour modifier ou sélectionner les données. Dérivez votre classe d’affichage ou vos classes de `CView`.
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-Classe de base pour les vues avec des fonctions de défilement. Dérivez votre classe `CScrollView` d’affichage de pour le défilement automatique.
+Classe de base pour les vues avec des fonctions de défilement. Dérivez votre classe d’affichage de `CScrollView` pour le défilement automatique.
 
 ## <a name="form-and-record-views"></a>Vues de formulaire et d’enregistrement
 
@@ -34,13 +34,13 @@ Les affichages de formulaire défilent également les vues. Ils sont basés sur 
 Les vues des enregistrements sont dérivées des modes formulaire. Outre le modèle de boîte de dialogue, ils disposent également d’une connexion à une base de données.
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-Vue de défilement dont la disposition est définie dans un modèle de boîte de dialogue. Dérivez une `CFormView` classe de pour implémenter une interface utilisateur basée sur un modèle de boîte de dialogue.
+Vue de défilement dont la disposition est définie dans un modèle de boîte de dialogue. Dérivez une classe de `CFormView` pour implémenter une interface utilisateur basée sur un modèle de boîte de dialogue.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Fournit un mode formulaire directement connecté à un objet Recordset d’objet d’accès aux données (DAO). Comme tous les affichages de `CDaoRecordView` formulaire, un est basé sur un modèle de boîte de dialogue. DAO est utilisé avec les bases de données Access et est pris en charge via Office 2013. 3,6 est la version finale et est considérée comme obsolète.
+Fournit un mode formulaire directement connecté à un objet Recordset d’objet d’accès aux données (DAO). Comme tous les affichages de formulaire, un `CDaoRecordView` est basé sur un modèle de boîte de dialogue. DAO est utilisé avec les bases de données Access et est pris en charge via Office 2013. DAO 3,6 est la version finale et est considéré comme obsolète.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Fournit un mode formulaire directement connecté à un objet Recordset Open Database Connectivity (ODBC). Comme tous les affichages de `CRecordView` formulaire, un est basé sur un modèle de boîte de dialogue.
+Fournit un mode formulaire directement connecté à un objet Recordset Open Database Connectivity (ODBC). Comme tous les affichages de formulaire, un `CRecordView` est basé sur un modèle de boîte de dialogue.
 
 [CHtmlEditView](../mfc/reference/chtmleditview-class.md)<br/>
 Mode formulaire qui fournit les fonctionnalités de la plateforme d’édition HTML WebBrowser.
@@ -66,7 +66,7 @@ Vue qui contient un contrôle d’arborescence Windows (consultez [CTreeCtrl](..
 
 ## <a name="related-classes"></a>Classes connexes
 
-`CSplitterWnd`vous permet d’avoir plusieurs vues dans une seule fenêtre frame. `CPrintDialog`et `CPrintInfo` prennent en charge la fonctionnalité d’impression et d’aperçu avant impression des vues. `CRichEditDoc`et `CRichEditCntrItem` sont utilisés avec `CRichEditView` pour implémenter des fonctionnalités de conteneur OLE.
+`CSplitterWnd` vous permet d’avoir plusieurs vues dans une seule fenêtre frame. `CPrintDialog` et `CPrintInfo` prennent en charge la fonctionnalité d’impression et d’aperçu avant impression des vues. `CRichEditDoc` et `CRichEditCntrItem` sont utilisés avec `CRichEditView` pour implémenter des fonctionnalités de conteneur OLE.
 
 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)<br/>
 Fenêtre que l’utilisateur peut fractionner en plusieurs volets. Ces volets peuvent être redimensionnables par l’utilisateur ou par une taille fixe.
@@ -75,13 +75,13 @@ Fenêtre que l’utilisateur peut fractionner en plusieurs volets. Ces volets pe
 Fournit une boîte de dialogue standard pour l’impression d’un fichier.
 
 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
-Structure contenant des informations sur un travail d’impression ou d’aperçu avant impression. Utilisé par `CView`l’architecture d’impression de.
+Structure contenant des informations sur un travail d’impression ou d’aperçu avant impression. Utilisé par l’architecture d’impression de `CView`.
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
-Gère la liste des éléments du client OLE qui se trouvent `CRichEditView`dans un.
+Conserve la liste des éléments du client OLE qui se trouvent dans un `CRichEditView`.
 
 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
-Fournit l’accès côté client à un élément OLE stocké dans `CRichEditView`un.
+Fournit un accès côté client à un élément OLE stocké dans un `CRichEditView`.
 
 ## <a name="see-also"></a>Voir aussi
 

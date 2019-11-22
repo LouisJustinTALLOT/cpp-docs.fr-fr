@@ -1,5 +1,5 @@
 ---
-title: 'TN053 : Routines DFX personnalisées pour les classes de base de données DAO'
+title: 'TN053 : personnaliser les routines DFX pour les classes de base de données DAO'
 ms.date: 09/17/2019
 helpviewer_keywords:
 - MFC, DAO and
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-ms.openlocfilehash: 949e1a07b2b45b01b08efb368046e0c65b1264e1
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 6dde96520d9472726da86f8da295770cccc5d42c
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095986"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303434"
 ---
-# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053 : Routines DFX personnalisées pour les classes de base de données DAO
+# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053 : personnaliser les routines DFX pour les classes de base de données DAO
 
 > [!NOTE]
->  DAO est utilisé avec les bases de données Access et est pris en charge via Office 2013. 3,6 est la version finale et est considérée comme obsolète. L’environnement C++ visuel et les assistants ne prennent pas en charge DAO (bien que les classes DAO soient incluses et vous puissiez toujours les utiliser). Microsoft vous recommande d’utiliser les [modèles OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour les nouveaux projets. Vous ne devez utiliser que DAO pour gérer les applications existantes.
+>  DAO est utilisé avec les bases de données Access et est pris en charge via Office 2013. DAO 3,6 est la version finale et est considéré comme obsolète. L’environnement C++ visuel et les assistants ne prennent pas en charge DAO (bien que les classes DAO soient incluses et vous puissiez toujours les utiliser). Microsoft vous recommande d'utiliser les [modèles OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour vos nouveaux projets. Vous ne devez utiliser que DAO pour gérer les applications existantes.
 
-Cette note technique décrit le mécanisme d’échange de champs d’enregistrements DAO (DFX). Pour mieux comprendre ce qui se passe dans les routines DFX, `DFX_Text` la fonction est expliquée en détail comme exemple. En tant que source supplémentaire d’informations pour cette note technique, vous pouvez examiner le code pour les autres fonctions DFX individuelles. Vous n’aurez probablement pas besoin d’une routine DFX personnalisée aussi souvent que vous aurez besoin d’une routine RFX personnalisée (utilisée avec les classes de base de données ODBC).
+Cette note technique décrit le mécanisme d’échange de champs d’enregistrements DAO (DFX). Pour mieux comprendre ce qui se passe dans les routines DFX, la fonction `DFX_Text` est expliquée en détail comme exemple. En tant que source supplémentaire d’informations pour cette note technique, vous pouvez examiner le code pour les autres fonctions DFX individuelles. Vous n’aurez probablement pas besoin d’une routine DFX personnalisée aussi souvent que vous aurez besoin d’une routine RFX personnalisée (utilisée avec les classes de base de données ODBC).
 
 Cette note technique contient les éléments suivants :
 
@@ -39,14 +39,14 @@ Cette note technique contient les éléments suivants :
 
 **Présentation de DFX**
 
-Le mécanisme d’échange de champs d’enregistrements DAO (DFX) est utilisé pour simplifier la procédure de récupération et de mise à jour `CDaoRecordset` des données lors de l’utilisation de la classe. Le processus est simplifié à l’aide de membres `CDaoRecordset` de données de la classe. En dérivant de, `CDaoRecordset`vous pouvez ajouter des membres de données à la classe dérivée représentant chaque champ dans une table ou une requête. Ce mécanisme de « liaison statique » est simple, mais il peut ne pas être la méthode d’extraction/mise à jour des données de votre choix pour toutes les applications. DFX récupère chaque champ lié chaque fois que l’enregistrement actif est modifié. Si vous développez une application sensible aux performances qui ne nécessite pas l’extraction de chaque champ lorsque la devise est modifiée, la « liaison `CDaoRecordset::GetFieldValue` dynamique `CDaoRecordset::SetFieldValue` » via et peut être la méthode d’accès aux données de votre choix.
+Le mécanisme d’échange de champs d’enregistrements DAO (DFX) est utilisé pour simplifier la procédure de récupération et de mise à jour des données lors de l’utilisation de la classe `CDaoRecordset`. Le processus est simplifié à l’aide de membres de données de la classe `CDaoRecordset`. En dérivant de `CDaoRecordset`, vous pouvez ajouter des membres de données à la classe dérivée représentant chaque champ d’une table ou d’une requête. Ce mécanisme de « liaison statique » est simple, mais il peut ne pas être la méthode d’extraction/mise à jour des données de votre choix pour toutes les applications. DFX récupère chaque champ lié chaque fois que l’enregistrement actif est modifié. Si vous développez une application sensible aux performances qui ne nécessite pas l’extraction de chaque champ lorsque la devise est modifiée, la « liaison dynamique » via `CDaoRecordset::GetFieldValue` et `CDaoRecordset::SetFieldValue` peut être la méthode d’accès aux données de votre choix.
 
 > [!NOTE]
 >  DFX et la liaison dynamique ne s’excluent pas mutuellement, par conséquent, une utilisation hybride des liaisons statiques et dynamiques peut être utilisée.
 
 ## <a name="_mfcnotes_tn053_examples"></a>Exemple 1 : utilisation de l’échange de champs d’enregistrements DAO uniquement
 
-(part du `CDaoRecordset` principe que la `CMySet` classe dérivée est déjà ouverte)
+(suppose `CDaoRecordset` : la classe dérivée `CMySet` déjà ouverte)
 
 ```
 // Add a new record to the customers table
@@ -61,7 +61,7 @@ myset.Update();
 
 **Exemple 2 : utilisation de la liaison dynamique uniquement**
 
-(suppose l’utilisation `CDaoRecordset` de la `rs`classe,, et elle est déjà ouverte)
+(suppose l’utilisation de la classe `CDaoRecordset`, `rs`et elle est déjà ouverte)
 
 ```
 // Add a new record to the customers table
@@ -86,7 +86,7 @@ rs.Update();
 
 **Exemple 3 : utilisation de l’échange de champs d’enregistrements DAO et de la liaison dynamique**
 
-(suppose l’exploration des données des `CDaoRecordset`employés avec la `emp`classe dérivée de)
+(suppose l’exploration des données de l’employé avec une classe dérivée `CDaoRecordset``emp`)
 
 ```
 // Get the employee's data so that it can be displayed
@@ -117,7 +117,7 @@ Le mécanisme DFX fonctionne de la même façon que le mécanisme RFX (Record Fi
 
 - DFX gère les tableaux d’état **null** et **incorrects** et définit des valeurs si nécessaire sur les mises à jour.
 
-La `CDaoRecordset` `DoFieldExchange` fonction de la classe dérivée est au cœur du mécanisme DFX. Cette fonction distribue les appels aux fonctions DFX individuelles d’un type d’opération approprié. Avant d' `DoFieldExchange` appeler les fonctions MFC internes, définissez le type d’opération. La liste suivante présente les différents types d’opérations et une brève description.
+Au cœur du mécanisme DFX se trouve le `CDaoRecordset` fonction `DoFieldExchange` de la classe dérivée. Cette fonction distribue les appels aux fonctions DFX individuelles d’un type d’opération approprié. Avant d’appeler `DoFieldExchange` les fonctions MFC internes définissent le type d’opération. La liste suivante présente les différents types d’opérations et une brève description.
 
 |Opération|Description|
 |---------------|-----------------|
@@ -137,28 +137,28 @@ La `CDaoRecordset` `DoFieldExchange` fonction de la classe dérivée est au cœu
 
 Dans la section suivante, chaque opération sera expliquée plus en détail pour `DFX_Text`.
 
-La fonctionnalité la plus importante à comprendre sur le processus d’échange de champs d’enregistrements DAO est `GetRows` qu’elle utilise `CDaoRecordset` la fonction de l’objet. La fonction `GetRows` DAO peut fonctionner de plusieurs façons. Cette note technique décrira `GetRows` brièvement le fait qu’elle ne se trouve pas dans le cadre de cette note technique.
-DAO 3,6 est la version finale et est considérée comme obsolète. `GetRows`peut fonctionner de plusieurs façons.
+La fonctionnalité la plus importante à comprendre sur le processus d’échange de champs d’enregistrements DAO est qu’elle utilise la fonction `GetRows` de l’objet `CDaoRecordset`. La fonction DAO `GetRows` peut fonctionner de plusieurs façons. Cette note technique décrira brièvement `GetRows`, car elle ne se trouve pas dans le cadre de cette note technique.
+Les `GetRows` DAO peuvent fonctionner de plusieurs façons.
 
 - Il peut extraire plusieurs enregistrements et plusieurs champs de données à la fois. Cela permet d’accélérer l’accès aux données avec une plus grande difficulté en matière de gestion d’une structure de données volumineuse et des décalages appropriés pour chaque champ et pour chaque enregistrement de données dans la structure. MFC ne tire pas parti de ce mécanisme de récupération d’enregistrements multiples.
 
-- Une autre `GetRows` solution consiste à autoriser les programmeurs à spécifier des adresses de liaison pour les données récupérées de chaque champ pour un enregistrement de données.
+- Une autre façon de `GetRows` peut être utilisée pour permettre aux programmeurs de spécifier des adresses de liaison pour les données récupérées de chaque champ pour un enregistrement de données.
 
-- DAO effectue également un « rappel » dans l’appelant pour les colonnes de longueur variable afin de permettre à l’appelant d’allouer de la mémoire. Cette deuxième fonctionnalité présente l’avantage de réduire le nombre de copies de données et d’autoriser le stockage direct des données dans les membres d’une classe ( `CDaoRecordset` classe dérivée). Ce deuxième mécanisme est la méthode utilisée par MFC pour établir une liaison avec `CDaoRecordset` les membres de données dans les classes dérivées.
+- DAO effectue également un « rappel » dans l’appelant pour les colonnes de longueur variable afin de permettre à l’appelant d’allouer de la mémoire. Cette deuxième fonctionnalité présente l’avantage de réduire le nombre de copies de données et d’autoriser le stockage direct des données dans les membres d’une classe (classe dérivée `CDaoRecordset`). Ce deuxième mécanisme est la méthode utilisée par MFC pour effectuer une liaison à des données membres dans `CDaoRecordset` classes dérivées.
 
 ##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a>Ce que fait votre routine DFX personnalisée
 
-Dans cette discussion, il est évident que l’opération la plus importante implémentée dans une fonction DFX doit être la possibilité de configurer les structures de données requises `GetRows`pour appeler avec succès. Une fonction DFX doit également prendre en charge un certain nombre d’autres opérations, mais aucune d’elles n’est aussi importante ou complexe que de `GetRows` se préparer correctement pour l’appel.
+Dans cette discussion, il est évident que l’opération la plus importante implémentée dans une fonction DFX doit être la possibilité de configurer les structures de données requises pour appeler correctement `GetRows`. Une fonction DFX doit également prendre en charge un certain nombre d’autres opérations, mais aucune n’est aussi importante ou complexe que de se préparer correctement pour l’appel de `GetRows`.
 
-L’utilisation de DFX est décrite dans la documentation en ligne. Pour l’essentiel, il existe deux exigences. Tout d’abord, les membres doivent être `CDaoRecordset` ajoutés à la classe dérivée pour chaque champ et paramètre liés. Ce `CDaoRecordset::DoFieldExchange` qui suit doit être remplacé. Notez que le type de données du membre est important. Il doit correspondre aux données du champ de la base de données ou au moins être convertibles en ce type. Par exemple, un champ numérique dans une base de données, tel qu’un entier long, peut toujours être converti en texte `CString` et lié à un membre, mais un champ de texte dans une base de données ne peut pas nécessairement être converti en une représentation numérique, telle qu’un entier long et lié à un long Integ membre er. DAO et le moteur de base de données Microsoft Jet sont responsables de la conversion (plutôt que de MFC).
+L’utilisation de DFX est décrite dans la documentation en ligne. Pour l’essentiel, il existe deux exigences. Tout d’abord, les membres doivent être ajoutés à la classe dérivée `CDaoRecordset` pour chaque champ et paramètre liés. Après cette `CDaoRecordset::DoFieldExchange` devez être substitué. Notez que le type de données du membre est important. Il doit correspondre aux données du champ de la base de données ou au moins être convertibles en ce type. Par exemple, un champ numérique dans une base de données, tel qu’un entier long, peut toujours être converti en texte et lié à un membre `CString`, mais un champ de texte dans une base de données ne peut pas nécessairement être converti en représentation numérique, comme un entier long et lié à un membre long Integer. DAO et le moteur de base de données Microsoft Jet sont responsables de la conversion (plutôt que de MFC).
 
 ##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a>Détails de DFX_Text
 
-Comme nous l’avons vu précédemment, la meilleure façon d’expliquer le fonctionnement de DFX consiste à utiliser un exemple. À cet effet, les éléments internes de `DFX_Text` doivent fonctionner correctement pour vous aider à fournir au moins une compréhension de base de DFX.
+Comme nous l’avons vu précédemment, la meilleure façon d’expliquer le fonctionnement de DFX consiste à utiliser un exemple. À cet effet, le fonctionnement des éléments internes de `DFX_Text` doit être très efficace pour vous aider à fournir au moins une compréhension élémentaire de DFX.
 
 - `AddToParameterList`
 
-   Cette opération génère la clause de **paramètres** SQL (`Parameters <param name>, <param type> ... ;`«») requise par jet. Chaque paramètre est nommé et typé (comme spécifié dans l’appel RFX). Consultez la `CDaoFieldExchange::AppendParamType` fonction function pour voir les noms des types individuels. Dans le cas de `DFX_Text`, le type utilisé est **texte**.
+   Cette opération génère la clause de **paramètres** SQL («`Parameters <param name>, <param type> ... ;`») requise par jet. Chaque paramètre est nommé et typé (comme spécifié dans l’appel RFX). Consultez la fonction `CDaoFieldExchange::AppendParamType` pour afficher les noms des types individuels. Dans le cas de `DFX_Text`, le type utilisé est **texte**.
 
 - `AddToSelectList`
 
@@ -166,11 +166,11 @@ Comme nous l’avons vu précédemment, la meilleure façon d’expliquer le fon
 
 - `BindField`
 
-   La plus complexe des opérations. Comme mentionné précédemment, c’est là que la structure de liaison `GetRows` DAO utilisée par est configurée. Comme vous pouvez le voir à partir du `DFX_Text` code dans les types d’informations de la structure, incluez le type DAO utilisé (**DAO_CHAR** ou **DAO_WCHAR** dans le cas de `DFX_Text`). En outre, le type de liaison utilisé est également configuré. Dans une section `GetRows` précédente était décrite uniquement brièvement, mais cela suffisait à expliquer que le type de liaison utilisé par MFC est toujours la liaison d’adresse directe (**DAOBINDING_DIRECT**). En outre, la liaison de rappel de colonne de `DFX_Text`longueur variable (comme) est utilisée pour que les MFC puissent contrôler l’allocation de mémoire et spécifier une adresse de longueur correcte. Cela signifie que les MFC peuvent toujours dire à DAO « WHERE » de placer les données, ce qui permet de lier directement les variables de membre. Le reste de la structure de liaison est rempli avec des éléments tels que l’adresse de la fonction de rappel d’allocation de mémoire et le type de liaison de colonne (liaison par nom de colonne).
+   La plus complexe des opérations. Comme mentionné précédemment, c’est là que la structure de liaison DAO utilisée par `GetRows` est configurée. Comme vous pouvez le voir dans le code de `DFX_Text` les types d’informations de la structure incluent le type DAO utilisé (**DAO_CHAR** ou **DAO_WCHAR** dans le cas de `DFX_Text`). En outre, le type de liaison utilisé est également configuré. Dans une section précédente `GetRows` n’a été décrit que brièvement, mais cela suffisait à expliquer que le type de liaison utilisé par MFC est toujours la liaison d’adresse directe (**DAOBINDING_DIRECT**). En outre, la liaison de rappel de colonne de longueur variable (comme `DFX_Text`) est utilisée pour que les MFC puissent contrôler l’allocation de mémoire et spécifier une adresse de longueur correcte. Cela signifie que les MFC peuvent toujours dire à DAO « WHERE » de placer les données, ce qui permet de lier directement les variables de membre. Le reste de la structure de liaison est rempli avec des éléments tels que l’adresse de la fonction de rappel d’allocation de mémoire et le type de liaison de colonne (liaison par nom de colonne).
 
 - `BindParam`
 
-   Il s’agit d’une opération simple `SetParamValue` qui appelle avec la valeur de paramètre spécifiée dans votre membre de paramètre.
+   Il s’agit d’une opération simple qui appelle `SetParamValue` avec la valeur de paramètre spécifiée dans votre membre de paramètre.
 
 - `Fixup`
 
@@ -184,7 +184,7 @@ Comme nous l’avons vu précédemment, la meilleure façon d’expliquer le fon
 
    Appelle `SetFieldValue` pour chaque champ marqué comme modifié.
 
-Toutes les opérations restantes traitent uniquement de l’utilisation du cache de données. Le cache de données est une mémoire tampon supplémentaire des données de l’enregistrement actif qui est utilisée pour simplifier certaines choses. Par exemple, les champs « modifiés » peuvent être détectés automatiquement. Comme décrit dans la documentation en ligne, il peut être désactivé complètement ou au niveau du champ. L’implémentation de la mémoire tampon utilise un mappage. Ce mappage est utilisé pour faire correspondre des copies allouées dynamiquement des données avec l’adresse du champ « lié » ( `CDaoRecordset` ou des données membres dérivées).
+Toutes les opérations restantes traitent uniquement de l’utilisation du cache de données. Le cache de données est une mémoire tampon supplémentaire des données de l’enregistrement actif qui est utilisée pour simplifier certaines choses. Par exemple, les champs « modifiés » peuvent être détectés automatiquement. Comme décrit dans la documentation en ligne, il peut être désactivé complètement ou au niveau du champ. L’implémentation de la mémoire tampon utilise un mappage. Ce mappage est utilisé pour faire correspondre des copies allouées dynamiquement des données avec l’adresse du champ « lié » (ou `CDaoRecordset` données membres dérivées).
 
 - `AllocCache`
 

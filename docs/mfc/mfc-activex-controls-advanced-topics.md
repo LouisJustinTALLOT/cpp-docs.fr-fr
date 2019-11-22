@@ -1,5 +1,5 @@
 ---
-title: 'Contrôles ActiveX MFC : Rubriques avancées'
+title: 'Contrôles ActiveX MFC : rubriques avancées'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: e0daabf3d236eb7038f22c54ea76d616baf613a0
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 9f1fa862a30a83cbda049fc63bac6c33a101587b
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095997"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305386"
 ---
-# <a name="mfc-activex-controls-advanced-topics"></a>Contrôles ActiveX MFC : Rubriques avancées
+# <a name="mfc-activex-controls-advanced-topics"></a>Contrôles ActiveX MFC : rubriques avancées
 
-Cet article traite des sujets avancés relatifs au développement de contrôles ActiveX. Elles incluent notamment :
+Cet article traite des sujets avancés relatifs au développement de contrôles ActiveX. Elles incluent notamment les suivantes :
 
 - [Utilisation des classes de base de données dans les contrôles ActiveX](#_core_using_database_classes_in_activex_controls)
 
@@ -43,7 +43,7 @@ Cet article traite des sujets avancés relatifs au développement de contrôles 
 Pour obtenir une vue d’ensemble générale des classes de base de données MFC, consultez [classes de base de données MFC (DAO et ODBC)](../data/mfc-database-classes-odbc-and-dao.md). L’article présente à la fois les classes ODBC MFC et les classes DAO MFC et vous donne plus de détails sur les deux.
 
 > [!NOTE]
->   DAO est pris en charge via Office 2013. DAO 3,6 est la version finale et est considérée comme obsolète. L’environnement C++ visuel et les assistants ne prennent pas en charge DAO (bien que les classes DAO soient incluses et vous puissiez toujours les utiliser). Microsoft vous recommande d’utiliser les [modèles OLE DB](../data/oledb/ole-db-programming.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour les nouveaux projets. Vous ne devez utiliser que DAO pour gérer les applications existantes.
+> DAO est pris en charge via Office 2013. DAO 3,6 est la version finale et est considéré comme obsolète. L’environnement C++ visuel et les assistants ne prennent pas en charge DAO (bien que les classes DAO soient incluses et vous puissiez toujours les utiliser). Microsoft vous recommande d'utiliser les [modèles OLE DB](../data/oledb/ole-db-programming.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour vos nouveaux projets. Vous ne devez utiliser que DAO pour gérer les applications existantes.
 
 ##  <a name="_core_implementing_a_parameterized_property"></a>Implémentation d’une propriété paramétrable
 
@@ -67,7 +67,7 @@ La procédure suivante ajoute une propriété paramétrable, appelée Array, qui
 
 1. Dans le menu contextuel, cliquez sur **Ajouter** , puis sur **Ajouter une propriété**.
 
-1. Dans la zone **nom** de la propriété `Array`, tapez.
+1. Dans la zone nom de la **propriété** , tapez `Array`.
 
 1. Dans la zone **type de propriété** , sélectionnez **short**.
 
@@ -95,7 +95,7 @@ En outre, l’Assistant Ajout de propriété ajoute les lignes suivantes au mapp
 
 [!code-cpp[NVC_MFC_AxUI#36](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_3.cpp)]
 
-Enfin, les implémentations des `GetArray` fonctions et `SetArray` sont ajoutées à la fin de. Fichier CPP. Dans la plupart des cas, vous allez modifier la fonction obtenir pour retourner la valeur de la propriété. La fonction Set contient généralement le code qui doit s’exécuter avant ou après la modification de la propriété.
+Enfin, les implémentations des fonctions `GetArray` et `SetArray` sont ajoutées à la fin de. Fichier CPP. Dans la plupart des cas, vous allez modifier la fonction obtenir pour retourner la valeur de la propriété. La fonction Set contient généralement le code qui doit s’exécuter avant ou après la modification de la propriété.
 
 Pour que cette propriété soit utile, vous pouvez déclarer une variable de membre de tableau à deux dimensions dans la classe de contrôle, de type **short**, pour stocker les valeurs de la propriété paramétrable. Vous pouvez ensuite modifier la fonction d’extraction pour retourner la valeur stockée au niveau de la ligne et de la colonne appropriées, comme indiqué par les paramètres, et modifier la fonction Set pour mettre à jour la valeur référencée par les paramètres de ligne et de colonne.
 
@@ -103,7 +103,7 @@ Pour que cette propriété soit utile, vous pouvez déclarer une variable de mem
 
 Si des conditions d’erreur se produisent dans le contrôle, vous devrez peut-être signaler l’erreur au conteneur de contrôle. Il existe deux méthodes pour signaler les erreurs, en fonction de la situation dans laquelle l’erreur se produit. Si l’erreur se produit dans la fonction d’extraction ou de définition d’une propriété, ou au sein de l’implémentation d’une méthode OLE Automation, le contrôle doit appeler [COleControl :: ThrowError](../mfc/reference/colecontrol-class.md#throwerror), qui signale à l’utilisateur du contrôle qu’une erreur s’est produite. Si l’erreur se produit à un autre moment, le contrôle doit appeler [COleControl :: FireError (](../mfc/reference/colecontrol-class.md#fireerror), qui déclenche un événement d’erreur stock.
 
-Pour indiquer le type d’erreur qui s’est produit, le contrôle doit passer un code d' `ThrowError` erreur `FireError`à ou. Un code d’erreur est un code d’État OLE, qui a une valeur de 32 bits. Dans la mesure du possible, choisissez un code d’erreur dans l’ensemble de codes standard défini dans le OLECTL. Fichier d’en-tête H. Le tableau suivant récapitule ces codes.
+Pour indiquer le type d’erreur qui s’est produit, le contrôle doit passer un code d’erreur à `ThrowError` ou `FireError`. Un code d’erreur est un code d’État OLE, qui a une valeur de 32 bits. Dans la mesure du possible, choisissez un code d’erreur dans l’ensemble de codes standard défini dans le OLECTL. Fichier d’en-tête H. Le tableau suivant récapitule ces codes.
 
 ### <a name="activex-control-error-codes"></a>Codes d’erreur du contrôle ActiveX
 
@@ -150,7 +150,7 @@ Pour indiquer le type d’erreur qui s’est produit, le contrôle doit passer u
 |CTL_E_SEARCHTEXTNOTFOUND|Texte recherché introuvable|
 |CTL_E_REPLACEMENTSTOOLONG|Remplacements trop longs|
 
-Si nécessaire, utilisez la macro CUSTOM_CTL_SCODE pour définir un code d’erreur personnalisé pour une condition qui n’est pas couverte par l’un des codes standard. Le paramètre de cette macro doit être un entier compris entre 1000 et 32767 inclus. Par exemple :
+Si nécessaire, utilisez la macro CUSTOM_CTL_SCODE pour définir un code d’erreur personnalisé pour une condition qui n’est pas couverte par l’un des codes standard. Le paramètre de cette macro doit être un entier compris entre 1000 et 32767 inclus. Par exemple :
 
 [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]
 
@@ -160,7 +160,7 @@ Si vous créez un contrôle ActiveX pour remplacer un contrôle VBX existant, d�
 
 Dans certains cas, vous pouvez être amené à gérer certaines combinaisons de touches d’une manière particulière. par exemple, insérez une nouvelle ligne lorsque vous appuyez sur la touche entrée dans un contrôle zone de texte multiligne ou que vous passez d’un groupe de contrôles d’édition à un autre lorsque l’ID de la touche directionnelle est enfoncé.
 
-Si la classe de base de votre contrôle ActiveX `COleControl`est, vous pouvez remplacer [CWnd ::P retranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage) pour gérer les messages avant que le conteneur ne les traite. Lors de l’utilisation de cette technique, retourne toujours **true** si vous gérez le message dans votre `PreTranslateMessage`substitution de.
+Si la classe de base de votre contrôle ActiveX est `COleControl`, vous pouvez remplacer [CWnd ::P retranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage) pour gérer les messages avant que le conteneur ne les traite. Lors de l’utilisation de cette technique, retourne toujours **true** si vous gérez le message dans votre remplacement de `PreTranslateMessage`.
 
 L’exemple de code suivant illustre une manière possible de gérer les messages liés aux touches directionnelles.
 
@@ -174,9 +174,9 @@ Vous pouvez créer des contrôles de boîte de dialogue qui n’ont pas d’inte
 
 - À l’aide de l’Assistant Ajout de variable membre, sélectionnez **variable de contrôle** , puis sélectionnez l’ID du contrôle. Entrez un nom de variable membre et sélectionnez la classe wrapper du contrôle comme **type de contrôle**.
 
-     ou
+     -ou-
 
-- Déclarez une variable locale et une sous-classe en tant qu’élément de boîte de dialogue. Insérez le code qui ressemble à ce qui`CMyCtrl` suit (est la classe wrapper, IDC_MYCTRL1 est l’ID du contrôle) :
+- Déclarez une variable locale et une sous-classe en tant qu’élément de boîte de dialogue. Insérez le code qui ressemble à ce qui suit (`CMyCtrl` est la classe wrapper, IDC_MYCTRL1 est l’ID du contrôle) :
 
    [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 

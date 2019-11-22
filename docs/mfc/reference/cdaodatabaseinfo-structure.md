@@ -7,17 +7,16 @@ helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-ms.openlocfilehash: 46d8056ee4ab478b65f3ef0bd59d88bd3af9b28c
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 60972aa3ecaef4d38c9a0d0ecc70477796aa37aa
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096156"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74304248"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo, structure
 
-La `CDaoDatabaseInfo` structure contient des informations sur un objet de base de données défini pour les objets d’accès aux données (DAO).
-DAO 3,6 est la version finale et est considérée comme obsolète.
+La structure `CDaoDatabaseInfo` contient des informations sur un objet de base de données défini pour les objets d’accès aux données (DAO). DAO 3,6 est la version finale et est considéré comme obsolète.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,41 +50,41 @@ Indique la version du moteur de base de données Microsoft Jet. Pour récupérer
 *m_lCollatingOrder*<br/>
 Spécifie la séquence de l’ordre de tri dans le texte pour la comparaison ou le tri de chaînes. Les valeurs possibles sont les suivantes :
 
-- `dbSortGeneral`Utilisez l’ordre de tri général (anglais, français, allemand, portugais, italien et espagnol moderne).
+- `dbSortGeneral` utilisez l’ordre de tri général (anglais, français, allemand, portugais, italien et espagnol moderne).
 
-- `dbSortArabic`Utilisez l’ordre de tri arabe.
+- `dbSortArabic` utiliser l’ordre de tri arabe.
 
-- `dbSortCyrillic`Utilisez l’ordre de tri russe.
+- `dbSortCyrillic` utiliser l’ordre de tri russe.
 
-- `dbSortCzech`Utilisez l’ordre de tri tchèque.
+- `dbSortCzech` utiliser l’ordre de tri tchèque.
 
-- `dbSortDutch`Utilisez l’ordre de tri néerlandais.
+- `dbSortDutch` utiliser l’ordre de tri néerlandais.
 
-- `dbSortGreek`Utilisez l’ordre de tri grec.
+- `dbSortGreek` utiliser l’ordre de tri grec.
 
-- `dbSortHebrew`Utilisez l’ordre de tri hébreu.
+- `dbSortHebrew` utiliser l’ordre de tri hébreu.
 
-- `dbSortHungarian`Utilisez l’ordre de tri hongrois.
+- `dbSortHungarian` utiliser l’ordre de tri hongrois.
 
-- `dbSortIcelandic`Utilisez l’ordre de tri islandais.
+- `dbSortIcelandic` utiliser l’ordre de tri islandais.
 
-- `dbSortNorwdan`Utilisez l’ordre de tri norvégien ou danois.
+- `dbSortNorwdan` utiliser l’ordre de tri norvégien ou danois.
 
-- `dbSortPDXIntl`Utilisez l’ordre de tri Paradox international.
+- `dbSortPDXIntl` utiliser l’ordre de tri Paradox international.
 
-- `dbSortPDXNor`Utilisez l’ordre de tri norvégien ou danois Paradox.
+- `dbSortPDXNor` utiliser l’ordre de tri norvégien ou danois Paradox.
 
-- `dbSortPDXSwe`Utilisez l’ordre de tri Paradox suédois ou finnois.
+- `dbSortPDXSwe` utiliser l’ordre de tri de l’ordre de tri (suédois ou finnois).
 
-- `dbSortPolish`Utilisez l’ordre de tri polonais.
+- `dbSortPolish` utiliser l’ordre de tri polonais.
 
-- `dbSortSpanish`Utilisez l’ordre de tri espagnol.
+- `dbSortSpanish` utiliser l’ordre de tri espagnol.
 
-- `dbSortSwedFin`Utilisez l’ordre de tri suédois ou finnois.
+- `dbSortSwedFin` utiliser l’ordre de tri suédois ou finnois.
 
-- `dbSortTurkish`Utilisez l’ordre de tri turc.
+- `dbSortTurkish` utiliser l’ordre de tri turc.
 
-- `dbSortUndefined`L’ordre de tri n’est pas défini ou est inconnu.
+- `dbSortUndefined` l’ordre de tri n’est pas défini ou est inconnu.
 
 Pour plus d’informations, consultez la rubrique « Personnalisation des paramètres du Registre Windows pour l’accès aux données » dans l’aide de DAO.
 
@@ -99,9 +98,9 @@ Fournit des informations sur la source d’une base de données ouverte. Pour pl
 
 La base de données est un objet DAO sous-jacent à un objet MFC de la classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). Les références à Primary, Secondary et All ci-dessus indiquent comment les informations sont retournées par la fonction membre [CDaoWorkspace :: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) .
 
-Les informations récupérées par la fonction membre [CDaoWorkspace :: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) sont stockées `CDaoDatabaseInfo` dans une structure. Appelez `GetDatabaseInfo` pour l' `CDaoWorkspace` objet dans la collection de bases de données dans laquelle l’objet de base de données est stocké. `CDaoDatabaseInfo`définit également une `Dump` fonction membre dans les versions Debug. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoDatabaseInfo` objet.
+Les informations récupérées par la fonction membre [CDaoWorkspace :: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) sont stockées dans une structure `CDaoDatabaseInfo`. Appelez `GetDatabaseInfo` pour l’objet `CDaoWorkspace` dans la collection de bases de données dans laquelle l’objet de base de données est stocké. `CDaoDatabaseInfo` définit également une fonction membre `Dump` dans les versions Debug. Vous pouvez utiliser `Dump` pour vider le contenu d’un objet `CDaoDatabaseInfo`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Conditions requises
 
 **En-tête :** afxdao. h
 

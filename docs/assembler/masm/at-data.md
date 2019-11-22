@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@data symbol'
 ms.assetid: d3e99fb0-4c9e-40a8-9e2d-15de3b01a2fe
-ms.openlocfilehash: 456a1f1e53fbcba47d1ef33a1fa89b0d4fdc6a37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50c8128697ab9d488be013bed10d6875ce8bd33a
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166865"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302736"
 ---
-# <a name="data"></a>@data
+# <a name="data"></a>données \@
 
-Le nom du groupe de données par défaut. Prend la valeur DGROUP pour tous les modèles à l’exception **plat**. Prend la valeur **plat** sous le **plat** le modèle de mémoire (macro de texte).
+Nom du groupe de données par défaut. Prend la valeur DGROUP pour tous les modèles, à l’exception de **Flat**. Prend la valeur **Flat** sous le modèle de mémoire **plat** (macro texte).
 
 ## <a name="syntax"></a>Syntaxe
 
-> @data
+> **données \@**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les symboles](../../assembler/masm/symbols-reference.md)<br/>
+[Informations de référence sur les symboles](../../assembler/masm/symbols-reference.md)

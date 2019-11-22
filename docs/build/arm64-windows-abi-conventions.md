@@ -1,12 +1,12 @@
 ---
 title: Vue d’ensemble des conventions ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: 3a3df475b8f814fcecaf2e67a0a62c7267a0de30
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: 07d58bbd64795235ad63a7b26b6f18fcffdcd1d2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163225"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303263"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Vue d’ensemble des conventions ABI ARM64
 
@@ -74,12 +74,12 @@ L’architecture AArch64 prend en charge les registres d’entiers 32 :
 | Registre | Volatil ? | Rôle |
 | - | - | - |
 | x0 | Volatil | Registre des paramètres/brouillons 1, registre des résultats |
-| x1-x 7 | Volatil | Paramètre/Registre de travail 2-8 |
+| x1-x7 | Volatil | Paramètre/Registre de travail 2-8 |
 | x8-x15 | Volatil | Registres de travail |
-| X16-x17 | Volatil | Registres de travail intra-procédure-appel |
+| x16-x17 | Volatil | Registres de travail intra-procédure-appel |
 | x18 | Non volatil | Registre de la plateforme : en mode noyau, pointe vers KPCR pour le processeur actuel. en mode utilisateur, pointe vers TEB |
 | x19-x28 | Non volatil | Registres de travail |
-| x29/FP | Non volatil | Pointeur de frame |
+| x29/fp | Non volatil | Pointeur de frame |
 | X30/LR | Non volatil | Lier les registres |
 
 Chaque registre est accessible en tant que valeur 64 bits complète (via x0-X30) ou en tant que valeur 32 bits (via W0-W30). 32 bits opérations zéro-étendent leurs résultats jusqu’à 64 bits.
@@ -98,7 +98,7 @@ L’architecture AArch64 prend également en charge les registres à virgule flo
 | - | - | - |
 | v0 | Volatil | Registre des paramètres/brouillons 1, registre des résultats |
 | v1-v7 | Volatil | Registres de paramètres/Scratch 2-8 |
-| V8-v15 | Non volatil | Registres de travail (seuls les 64 bits de poids faible sont non volatils) |
+| v8-v15 | Non volatil | Registres de travail (seuls les 64 bits de poids faible sont non volatils) |
 | v16-v31 | Volatil | Registres de travail |
 
 Chaque registre est accessible en tant que valeur 128 bits complète (via v0-V31 ou Q0-Q31). Elle est accessible en tant que valeur 64 bits (via D0-D31), sous la forme d’une valeur 32 bits (via S0-S31), en tant que valeur 16 bits (via H0-H31) ou en tant que valeur 8 bits (via B0-B31). Les accès inférieurs à 128 bits accèdent uniquement aux bits inférieurs du Registre 128 bits complet. Ils laissent intacts les bits restants, sauf indication contraire. (AArch64 est différent de AArch32, où les registres plus petits ont été regroupés en plus des registres plus volumineux.)

@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: a24349980e9395257f20fcfcc0987883060a7c1d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837514"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303133"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Structure des fichiers .vcxproj et .props
 
@@ -33,7 +33,7 @@ Si vous choisissez de modifier manuellement un fichier .vcxproj, tenez compte de
    <ClCompile Include="$(IntDir)\generated.cpp"/>
    ```
 
-   « pas pris en charge » signifie qu’il n’est pas garanti que les macros fonctionnent pour toutes les opérations dans l’IDE. Les macros dont la valeur ne change pas dans différentes configurations doivent fonctionner, mais elles peuvent ne pas être conservées si un élément est déplacé vers un autre filtre ou un autre projet. Les macros dont la valeur change pour différentes configurations provoquent des problèmes, car l’IDE ne s’attend pas à ce que les chemins d’élément de projet soient différents pour différentes configurations de projet.
+   « pas pris en charge » signifie qu’il n’est pas garanti que les macros fonctionnent pour toutes les opérations dans l’IDE. Les macros qui ne changent pas leur valeur dans des configurations différentes doivent fonctionner, mais elles peuvent ne pas être conservées si un élément est déplacé vers un autre filtre ou projet. Les macros dont la valeur change pour différentes configurations provoquent des problèmes, car l’IDE ne s’attend pas à ce que les chemins d’élément de projet soient différents pour différentes configurations de projet.
 
 1. Pour ajouter, supprimer ou modifier correctement les propriétés du projet quand vous les modifiez dans la boîte de dialogue **Propriétés du projet**, le fichier doit contenir des groupes distincts pour chaque configuration de projet, et les conditions doivent se présenter sous la forme suivante :
 
@@ -55,7 +55,7 @@ Vous pouvez tout de suite remarquer que les éléments de niveau supérieur s’
 
 - Plusieurs groupes de propriétés, chacun d’eux ayant une étiquette unique, suivent un ordre particulier.
 
-L’ordre des éléments dans le fichier projet est très important, car MSBuild est basé sur un modèle d’évaluation séquentiel.  Si votre fichier projet, contenant tous les fichiers .props et .targets importés, comprend plusieurs définitions d’une propriété, la dernière définition remplace les précédentes. Dans l’exemple suivant, la valeur « xyz » est définie durant la compilation, car le moteur MSBUild la rencontre en dernier durant son évaluation.
+L’ordre des éléments dans le fichier projet est très important, car MSBuild est basé sur un modèle d’évaluation séquentiel.  Si votre fichier projet, contenant tous les fichiers .props et .targets importés, comprend plusieurs définitions d’une propriété, la dernière définition remplace les précédentes. Dans l’exemple suivant, la valeur « XYZ » est définie lors de la compilation, car le moteur MSBUild le rencontre en dernier lors de son évaluation.
 
 ```xml
   <MyProperty>abc</MyProperty>
@@ -104,7 +104,7 @@ Le groupe d’éléments `ProjectConfigurations` n’est pas utilisé au moment 
 
 ### <a name="projectconfiguration-elements"></a>Éléments ProjectConfiguration
 
-L’extrait suivant montre une configuration de projet. Dans cet exemple, "Debug|x64" est le nom de la configuration. Le nom de la configuration du projet doit être au format $(Configuration)|$(Platform). Un nœud ProjectConfiguration peut avoir deux propriétés : Configuration et Platform. Ces propriétés sont automatiquement définies avec les valeurs spécifiées ici quand la configuration est active.
+L’extrait suivant montre une configuration de projet. Dans cet exemple, "Debug|x64" est le nom de la configuration. Le nom de la configuration du projet doit être au format $(Configuration)|$(Platform). Un nœud ProjectConfiguration peut avoir deux propriétés : Configuration et Platform. Ces propriétés sont automatiquement définies avec les valeurs spécifiées ici quand la configuration est active.
 
 ```xml
 <ProjectConfiguration Include="Debug|x64">
@@ -153,7 +153,7 @@ La feuille de propriétés **Microsoft.Cpp.default.props** est fournie avec Visu
 <PropertyGroup Label="Configuration" />
 ```
 
-Un groupe de propriétés `Configuration` est attaché à une condition de configuration (comme `Condition=”'$(Configuration)|$(Platform)'=='Debug|Win32'”`). Plusieurs copies sont disponibles, une par configuration. Ce groupe de propriétés héberge les propriétés définies pour une configuration spécifique. Les propriétés de configuration, dont PlatformToolset, contrôlent également l’inclusion de feuilles de propriétés système dans **Microsoft.Cpp.props**. Par exemple, si vous définissez la propriété `<CharacterSet>Unicode</CharacterSet>`, la feuille de propriétés système **microsoft.Cpp.unicodesupport.props** est incluse. Si vous inspectez **Microsoft.Cpp.props**, vous pouvez voir la ligne suivante : `<Import Condition=”'$(CharacterSet)' == 'Unicode'”   Project=”$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props”/>`.
+Un groupe de propriétés `Configuration` est attaché à une condition de configuration (comme `Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"`). Plusieurs copies sont disponibles, une par configuration. Ce groupe de propriétés héberge les propriétés définies pour une configuration spécifique. Les propriétés de configuration, dont PlatformToolset, contrôlent également l’inclusion de feuilles de propriétés système dans **Microsoft.Cpp.props**. Par exemple, si vous définissez la propriété `<CharacterSet>Unicode</CharacterSet>`, la feuille de propriétés système **microsoft.Cpp.unicodesupport.props** est incluse. Si vous inspectez **Microsoft.Cpp.props**, vous pouvez voir la ligne suivante : `<Import Condition="'$(CharacterSet)' == 'Unicode'" Project="$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props" />`.
 
 ### <a name="microsoftcppprops-import-element"></a>Élément Import Microsoft.Cpp.props
 
@@ -195,7 +195,7 @@ Le groupe `PropertySheets` contient les importations des feuilles de propriété
 
 Il existe plusieurs instances de ce groupe de propriétés, une par configuration de projet. Chaque groupe de propriétés doit être attaché à une condition de configuration. Si une configuration est manquante, la boîte de dialogue **Propriétés du projet** ne fonctionne pas correctement. Contrairement aux groupes de propriétés ci-dessus, celui-ci n’a pas d’étiquette. Ce groupe contient des paramètres au niveau de la configuration du projet. Ces paramètres s’appliquent à tous les fichiers qui font partie du groupe d’éléments spécifié. Les métadonnées de définition des éléments de personnalisation de la build sont initialisées ici.
 
-Ce PropertyGroup doit être placé après `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />`, et aucun autre PropertyGroup sans Label ne doit le précéder (sinon, la modification des propriétés du projet ne fonctionne pas correctement).
+Ce PropertyGroup doit venir après `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />` et il ne doit pas y avoir d’autre PropertyGroup sans étiquette avant (sinon, la modification des propriétés du projet ne fonctionnera pas correctement).
 
 ### <a name="per-configuration-itemdefinitiongroup-elements"></a>Éléments ItemDefinitionGroup par configuration
 
@@ -218,8 +218,8 @@ Les métadonnées doivent avoir des conditions de configuration pour chaque conf
 ```xml
 <ItemGroup>
   <ClCompile Include="stdafx.cpp">
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</TreatWarningAsError>
   </ClCompile>
 </ItemGroup>
 ```
