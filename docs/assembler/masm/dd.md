@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - DD directive
 ms.assetid: 0c238628-2fe2-437e-979d-a90bdae7b478
-ms.openlocfilehash: 6022da53ad8cde2b90431bfaf5b1ea2ddc0cac34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e87098d2536cce5d818a0759f50b42fa50cb887a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178806"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398795"
 ---
 # <a name="dd"></a>DD
 
-Alloue et initialise éventuellement un mot double (4 octets) de stockage pour chaque `initializer`. `DD` est un synonyme de [DWORD](../../assembler/masm/dword.md).
+Allocates and optionally initializes a double word (4 bytes) of storage for each *initializer*. **DD** is a synonym of [DWORD](../../assembler/masm/dword.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-> [[nom]] Initialiseur de jj [[, initialiseur]]...
+> ⟦*name*⟧ **DD** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="remarks"></a>Notes
 
-Peut également être utilisé comme un spécificateur de type n’importe où un type est autorisé.
+Can also be used as a type specifier anywhere a type is legal.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

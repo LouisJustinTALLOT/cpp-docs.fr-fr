@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - .ELSE directive
 ms.assetid: ebfec69d-7107-47d1-9cb3-87c99cc8dff7
-ms.openlocfilehash: a8143511be63031f5639e6f6014a82ef14fb0db9
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: f048901a3958066880665b76d865f926a26ffb24
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703131"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398493"
 ---
-# <a name="else-32-bit-masm"></a>. ELSE (32-bit MASM)
+# <a name="else-32-bit-masm"></a>.ELSE (32-bit MASM)
 
 ## <a name="syntax"></a>Syntaxe
 
-> .ELSE
+> **.ELSE**
 
 ## <a name="remarks"></a>Notes
 
-(uniquement MASM 32 bits.) Consultez [. Si](../../assembler/masm/dot-if.md). 
+(32-bit MASM only.) See [.IF](../../assembler/masm/dot-if.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .STARTUP directive
 ms.assetid: 3ce9c878-18bf-49a0-828c-b29928ea3e54
-ms.openlocfilehash: e8b75d0bbf467451d63958500fc6e067bebc1111
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 9d8efbdd5e38034a9f5928fc4d7a4cdb87e78187
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703525"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397893"
 ---
-# <a name="startup-32-bit-masm"></a>. STARTUP (32-bit MASM)
+# <a name="startup-32-bit-masm"></a>.STARTUP (32-bit MASM)
 
-Génère du code de démarrage du programme. (uniquement MASM 32 bits.)
+Generates program start-up code. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> .STARTUP
+> **.STARTUP**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

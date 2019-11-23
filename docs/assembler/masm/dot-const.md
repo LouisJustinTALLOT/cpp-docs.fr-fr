@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .CONST directive
 ms.assetid: d5c1d795-174c-48d2-8359-92fbbd7d4c6c
-ms.openlocfilehash: 4b3cf5a4b65c0c51655ea8eaa56400b346f7b09c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c360b8e7e008dec7ac50806b01ba3e26aa219f12
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185405"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398565"
 ---
 # <a name="const"></a>.CONST
 
-Lorsqu’il est utilisé avec [. MODÈLE](../../assembler/masm/dot-model.md), démarre un segment de données constantes (avec segment nom CONST).
+When used with [.MODEL](../../assembler/masm/dot-model.md), starts a constant data segment (with segment name **CONST**).
 
 ## <a name="syntax"></a>Syntaxe
 
-> .CONST
+> **.CONST**
 
 ## <a name="remarks"></a>Notes
 
-Ce segment est l’attribut en lecture seule.
+This segment has the read-only attribute.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

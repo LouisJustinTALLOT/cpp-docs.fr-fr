@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - GROUP directive
 ms.assetid: 55dc9548-154e-486d-849a-135e4631eca9
-ms.openlocfilehash: 1a192005c325905e6f40643c5f16e185f67265ad
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 1465d114bc2ea060e8cc8d1dd0aa3484b2f6c10d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704250"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397472"
 ---
-# <a name="group-32-bit-masm"></a>GROUP (MASM 32 bits)
+# <a name="group-32-bit-masm"></a>GROUP (32-bit MASM)
 
-Ajoutez les *segments* spécifiés au groupe appelé *Name*. (uniquement MASM 32 bits.)
+Add the specified *segments* to the group called *name*. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> nom du segment de groupe [[, segment]]...
+> *name* **GROUP** *segment* ⟦ __,__ *segment* ...⟧
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)

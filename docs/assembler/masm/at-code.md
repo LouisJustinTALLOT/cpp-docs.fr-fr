@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - '@code symbol'
 ms.assetid: 44e050e6-d254-4157-9022-cf6afbaa0515
-ms.openlocfilehash: 4ed36a94144f070bd553e8a48ce4c7dff44360c1
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 0119f6569e5537d888a5f58c5719edd732b9f7a4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302902"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399210"
 ---
-# <a name="code"></a>code \@
+# <a name="code"></a>\@code
 
-Nom du segment de code (macro de texte).
+The name of the code segment (text macro).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ Nom du segment de code (macro de texte).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les symboles](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)

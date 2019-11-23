@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - SUBSTR directive
 ms.assetid: d1aa9a7d-a03a-4213-93ad-ee92635fd58a
-ms.openlocfilehash: 93aa1bd434a645f3c7e29fc42429e48978f062fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b284ca80bc2db195c35af3e5ca45441e97d9b7f1
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217092"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393507"
 ---
 # <a name="substr"></a>SUBSTR
 
-Retourne une sous-chaîne de *textitem*, en commençant à *position*. Le *textitem* peut être une chaîne littérale, une constante précédée par un `%`, ou la chaîne retournée par une fonction de la macro.
+Returns a substring of *textitem*, starting at *position*. The *textitem* can be a literal string, a constant preceded by a `%`, or the string returned by a macro function.
 
 ## <a name="syntax"></a>Syntaxe
 
-> Nommez SUBSTR textitem, position [[, longueur]]
+> *name* **SUBSTR** *textitem* __,__ *position* ⟦ __,__ *length*⟧
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)

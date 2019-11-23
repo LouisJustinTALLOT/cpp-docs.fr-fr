@@ -8,21 +8,21 @@ helpviewer_keywords:
 - MASK operator
 - operator MASK
 ms.assetid: bf997f99-17c8-4230-ab69-7a9774a75d93
-ms.openlocfilehash: 6acd6596613e32186385568cc68b3eb498176b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ce068350ef21ce3fd03003c19ae4f2bf313c986
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199963"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396641"
 ---
 # <a name="operator-mask"></a>MASK, opérateur
 
-Retourne un masque de bits dans laquelle les bits de *recordfieldname* ou *enregistrement* sont définies et tous les autres bits sont effacées.
+Returns a bit mask in which the bits in *recordfieldname* or *record* are set and all other bits are cleared.
 
 ## <a name="syntax"></a>Syntaxe
 
-> MASQUE {recordfieldname | enregistrement}
+> **MASK** {*recordfieldname* | *record*}
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

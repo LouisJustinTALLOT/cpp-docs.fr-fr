@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - IFE directive
 ms.assetid: bac5659d-9d2e-406d-89b7-e05b335ab0fd
-ms.openlocfilehash: b623bc18634b040d928cade7a7529d08b49063a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca934671ed38abde1f188cf79f5e9074115de1d8
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184621"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397394"
 ---
 # <a name="ife"></a>IFE
 
-Accorde l’assembly si *expression* a la valeur false (0).
+Grants assembly if *expression* is false (0).
 
 ## <a name="syntax"></a>Syntaxe
 
-> Expression de IFE
+> **IFE** *expression*
 
 ## <a name="remarks"></a>Notes
 
-Consultez [IF](../../assembler/masm/if-masm.md) pour la syntaxe complète.
+See [IF](../../assembler/masm/if-masm.md) for complete syntax.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - YMMWORD directive
 ms.assetid: 955a7d23-6150-4056-befc-7f72e8258ecb
-ms.openlocfilehash: 26050c5d2498c321c0db9fc3e19d4d9e57e46255
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58f4b8d9a654a83633e2f57219356f1a4197c127
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216902"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74392766"
 ---
 # <a name="ymmword"></a>YMMWORD
 
-Utilisé pour les opérandes multimédias 256 bits avec des instructions Intel Advanced Vector Extensions (AVX).
+Used for 256-bit multimedia operands with Intel Advanced Vector Extensions (AVX) instructions.
 
 ## <a name="syntax"></a>Syntaxe
 
-> YMMWORD
+> **YMMWORD**
 
 ## <a name="remarks"></a>Notes
 
-`YMMWORD` est destiné à représenter le même type que `__m256` pour les fonctions intrinsèques AVX.
+**YMMWORD** is intended to represent the same type as `__m256` for the AVX intrinsics.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

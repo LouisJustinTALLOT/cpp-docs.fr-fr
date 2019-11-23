@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .SFCOND directive
 ms.assetid: 3a1ce2d0-cf18-4f08-b4cf-b72cded4d164
-ms.openlocfilehash: a18210c1ea45d57b7a2ee642533532ff737cae4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e42d0903afe2f84785024e4dc20a3be3b1589438
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178200"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397917"
 ---
 # <a name="sfcond"></a>.SFCOND
 
-Consultez [. NOLISTIF](../../assembler/masm/dot-nolistif.md).
+See [.NOLISTIF](../../assembler/masm/dot-nolistif.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-> .SFCOND
+> **.SFCOND**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)
