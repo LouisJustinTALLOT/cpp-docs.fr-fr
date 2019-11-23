@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - .LALL directive
 ms.assetid: 23d7baf0-6a68-44d9-a980-33100a977fc6
-ms.openlocfilehash: f7558e7a37b4b72fd9f2cb492302cd52414aa7e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8105cf378033cf3af33f77c2278a693300dea114
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186376"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398214"
 ---
 # <a name="lall"></a>.LALL
 
 ## <a name="syntax"></a>Syntaxe
 
-> .LALL
+> **.LALL**
 
 ## <a name="remarks"></a>Notes
 
-Consultez [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+See [.LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

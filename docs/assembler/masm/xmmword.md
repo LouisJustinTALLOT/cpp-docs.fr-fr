@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - XMMWORD directive
 ms.assetid: 18026d32-5cab-403e-ad7e-382fb41aa9b8
-ms.openlocfilehash: 59d1ba71260ed08b761c332e887cf27517762303
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7783049a143b19295a67cd3e9e40afeab3c814f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210103"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74392795"
 ---
 # <a name="xmmword"></a>XMMWORD
 
-Utilisé pour les opérandes multimédias de 128 bits avec des instructions MMX et SSE (XMM).
+Used for 128-bit multimedia operands with MMX and SSE (XMM) instructions.
 
 ## <a name="syntax"></a>Syntaxe
 
-> XMMWORD
+> **XMMWORD**
 
 ## <a name="remarks"></a>Notes
 
-`XMMWORD` est destiné à représenter le même type que [__m128](../../cpp/m128.md).
+**XMMWORD** is intended to represent the same type as [__m128](../../cpp/m128.md).
 
 ## <a name="example"></a>Exemple
 

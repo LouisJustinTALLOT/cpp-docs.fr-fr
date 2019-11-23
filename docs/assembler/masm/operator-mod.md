@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Mod operator
 - operator MOD
 ms.assetid: 8e05e8c2-3f07-44f9-8216-5436dcb97cc7
-ms.openlocfilehash: 843600ce9b05bcb7a99ff9c67eaca1975e9cb65f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9008f85c7b93abf7fb7534cf74c4b3d338d80cdb
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176757"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396653"
 ---
 # <a name="operator-mod"></a>MOD, opérateur
 
-Retourne la valeur entière du reste (modulo) lors d’une division *expression1* par *expression2*.
+Returns the integer value of the remainder (modulo) when dividing *expression1* by *expression2*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> expression2 MOD expression1
+> *expression1* **MOD** *expression2*
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)
