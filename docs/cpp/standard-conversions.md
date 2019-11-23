@@ -69,7 +69,7 @@ C++les promotions sont « préservation de la valeur », car la valeur de la p
 
 Les promotions de type conservation-valeur et les promotions qui conservent l'entier non signé produisent normalement les mêmes résultats. Toutefois, ils peuvent produire des résultats différents si l’objet promu apparaît comme suit :
 
-- Un opérande de `/`, `%`, `/=`, `%=`, `<`, `<=`, `>` ou `>=`
+- Opérande de `/`, `%`, `/=`, `%=`, `<`, `<=`, `>`ou `>=`
 
    Ces opérateurs se basent sur un signe pour déterminer le résultat. Les promotions de préservation de la valeur et de préconservation produisent des résultats différents lorsqu’elles sont appliquées à ces opérandes.
 
@@ -127,7 +127,7 @@ Dans l’exemple précédent, `u` est un objet entier **short non signé** qui d
 
 Un objet de type flottant peut être converti sans risque en type flottant plus précis. Cela permet de ne pas perdre de signification lors de la conversion. Par exemple, les conversions de **float** en **double** ou de **double** en **long double** sont sûres et la valeur est inchangée.
 
-Un objet de type flottant peut également être converti en un type moins précis, s’il se trouve dans une plage qui peut être représentée par ce type. (Consultez [limites flottantes](../cpp/floating-limits.md) pour les plages de types flottants.) Si la valeur d’origine n’est pas représentable précisément, elle peut être convertie en la valeur représentable supérieure ou inférieure suivante. Le résultat n’est pas défini si aucune valeur de ce type n’existe. Prenons l'exemple suivant :
+Un objet de type flottant peut également être converti en un type moins précis, s’il se trouve dans une plage qui peut être représentée par ce type. (Consultez [limites flottantes](../cpp/floating-limits.md) pour les plages de types flottants.) Si la valeur d’origine n’est pas représentable précisément, elle peut être convertie en la valeur représentable supérieure ou inférieure suivante. Le résultat n’est pas défini si aucune valeur de ce type n’existe. Prenons l'exemple suivant :
 
 ```cpp
 cout << (float)1E300 << endl;
@@ -175,7 +175,7 @@ int main() {
 
 Dans l'exemple précédent, la première instruction affiche la multiplication de deux types intégraux, `iVal` et `ulVal`. La condition remplie est qu’aucun opérande n’est de type flottant et qu’un opérande est de type **unsigned int**. Ainsi, l’autre opérande, `iVal`, est converti en type **unsigned int**. Le résultat est ensuite affecté à `dVal`. La condition remplie ici est que l’un des opérandes est de type **double**. par conséquent, le résultat de la valeur **int non signé** de la multiplication est converti en type **double**.
 
-La deuxième instruction de l’exemple précédent illustre l’ajout d’un **float** et d’un type intégral : `fVal` et `ulVal`. La variable `ulVal` est convertie vers le type **float** (troisième condition dans la table). Le résultat de l’addition est converti en type **double** (deuxième condition dans la table) et affecté à `dVal`.
+La deuxième instruction de l’exemple précédent illustre l’ajout d’un **float** et d’un type intégral : `fVal` et `ulVal`. La variable `ulVal` est convertie en type **float** (troisième condition dans le tableau). Le résultat de l’addition est converti en type **double** (deuxième condition dans la table) et affecté à `dVal`.
 
 ## <a name="pointer-conversions"></a>Conversions de pointeurs
 
@@ -194,23 +194,23 @@ Graphique d'héritage pour l'illustration de l'accessibilité de la classe de ba
 
 Le tableau suivant indique l'accessibilité de la classe de base d'après la situation illustrée.
 
-|Type de fonction|Dérivation|Conversion de<br /><br /> B * à un @ no__t-0 légal ?|
+|Type de fonction|Dérivation|Conversion de<br /><br /> B * à un\* légal ?|
 |----------------------|----------------|-------------------------------------------|
 |Fonction externe (hors portée de classe)|Private|Non|
-||Protected|Non|
+||Protégé|Non|
 ||Public|Oui|
 |Fonction membre B (dans la portée B)|Private|Oui|
-||Protected|Oui|
+||Protégé|Oui|
 ||Public|Oui|
 |Fonction membre C (dans la portée C)|Private|Non|
-||Protected|Oui|
+||Protégé|Oui|
 ||Public|Oui|
 
 Dans le second cas, un pointeur vers une classe peut être converti en pointeur vers une classe de base lorsque vous utilisez une conversion de type explicite. Pour plus d’informations sur les conversions de types explicites, consultez [opérateur de conversion de type explicite](explicit-type-conversion-operator-parens.md).
 
 Le résultat de cette conversion est un pointeur vers le sous- *objet*, la partie de l’objet qui est complètement décrite par la classe de base.
 
-Le code suivant définit deux classes, `A` et `B`, où `B` est dérivée de `A`. (Pour plus d’informations sur l’héritage, consultez [classes dérivées](../cpp/inheritance-cpp.md).) Il définit ensuite `bObject`, un objet de type `B`, et deux pointeurs (`pA` et `pB`) qui pointent vers l'objet.
+Le code suivant définit deux classes, `A` et `B`, où `B` est dérivée de `A`. (Pour plus d’informations sur l’héritage, consultez [classes dérivées](../cpp/inheritance-cpp.md).) Il définit ensuite `bObject`, un objet de type `B`et deux pointeurs (`pA` et `pB`) qui pointent vers l’objet.
 
 ```cpp
 // C2039 expected
@@ -239,7 +239,7 @@ int main()
 }
 ```
 
-Le pointeur `pA` est de type `A *`, ce qui peut être interprété comme suit : « pointeur vers un objet de type `A` ». Les membres de `bObject` (tels que `BComponent` et `BMemberFunc`) sont uniques au type `B` et sont donc inaccessibles via `pA`. Le pointeur `pA` autorise l'accès uniquement aux caractéristiques (fonctions membres et données) de l'objet définies dans la classe `A`.
+Le pointeur `pA` est de type `A *`, ce qui peut être interprété comme suit : « pointeur vers un objet de type `A` ». Les membres de `bObject` (tels que `BComponent` et `BMemberFunc`) sont uniques au type `B` et sont donc inaccessibles par le biais de `pA`. Le pointeur `pA` autorise l'accès uniquement aux caractéristiques (fonctions membres et données) de l'objet définies dans la classe `A`.
 
 ### <a name="pointer-to-function"></a>Pointeur vers fonction
 

@@ -1,5 +1,5 @@
 ---
-title: /LINKREPRO (lier le nom du répertoire de reproduction)
+title: /LINKREPRO (Lier le nom du répertoire de reproduction)
 description: Option de l’éditeur de liens ou de l’outil bibliothèque pour définir le répertoire d’une reproduction de lien.
 ms.date: 09/24/2019
 f1_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 09/30/2019
 ms.locfileid: "71686851"
 ---
-# <a name="linkrepro-link-repro-directory-name"></a>/LINKREPRO (lier le nom du répertoire de reproduction)
+# <a name="linkrepro-link-repro-directory-name"></a>/LINKREPRO (Lier le nom du répertoire de reproduction)
 
 Indique à l’éditeur de liens ou à l’outil de bibliothèque de générer une reproduction de lien dans un répertoire spécifié.
 
@@ -33,15 +33,15 @@ Répertoire spécifié par l’utilisateur dans lequel stocker la reproduction d
 
 L’option **/LINKREPRO** permet de créer une *reproduction de lien*. Il s’agit d’un ensemble d’artefacts de build qui permettent à Microsoft de reproduire un problème qui se produit au moment de la liaison ou pendant les opérations de la bibliothèque. Elle est utile pour des problèmes tels qu’un blocage de backend impliquant la génération de code durant l’édition de liens (LTCG), une erreur de l’éditeur de liens LNK1000 ou un incident de l’éditeur de liens. L’outil produit une reproduction de lien lorsque vous spécifiez l’option de l’éditeur de liens **/LINKREPRO** , ou lorsque vous définissez la variable d’environnement `link_repro` dans votre environnement de génération en ligne de commande. Pour plus d’informations, consultez la section relative aux reproductions de [liens](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md#link-repros) dans Guide pratique [pour C++ signaler un problème avec l’ensemble d’outils Microsoft](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
-L’option de l’éditeur de liens **/LINKREPRO** et la variable d’environnement `link_repro` vous obligent à spécifier un répertoire de sortie pour la reproduction de lien. Sur la ligne de commande ou dans l’IDE, spécifiez le répertoire à l’aide de l’option **/LINKREPRO :** _Directory-Name_ . Le _nom de répertoire_ que vous spécifiez peut être un chemin d’accès absolu ou relatif, mais le répertoire doit exister. L’option de ligne de commande remplace toute valeur de répertoire définie dans la variable d’environnement `link_repro`.
+L’option de l’éditeur de liens **/LINKREPRO** et la variable d’environnement `link_repro` nécessitent que vous spécifiiez un répertoire de sortie pour la reproduction de lien. Sur la ligne de commande ou dans l’IDE, spécifiez le répertoire à l’aide de l’option **/LINKREPRO :** _Directory-Name_ . Le _nom de répertoire_ que vous spécifiez peut être un chemin d’accès absolu ou relatif, mais le répertoire doit exister. L’option de ligne de commande remplace toute valeur de répertoire définie dans la variable d’environnement `link_repro`.
 
 Pour plus d’informations sur la façon de limiter la génération de la reproduction des liens à un nom de fichier cible spécifique, consultez l’option [/LINKREPROTARGET](linkreprotarget.md) . Cette option peut être utilisée pour spécifier une cible spécifique pour laquelle générer une reproduction de lien. Elle est utile dans les builds complexes qui appellent l’éditeur de liens ou l’outil de bibliothèque plusieurs fois.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez les **Propriétés de Configuration** > **éditeur de liens**@no__t page de propriétés ligne de**commande** -3.
+1. Sélectionnez **Propriétés de Configuration** > **éditeur de liens** > page de propriétés ligne de **commande** .
 
 1. Entrez l’option **/LINKREPRO :** _nom-répertoire_ dans la zone **options supplémentaires** . La valeur _de nom de répertoire_ que vous spécifiez doit exister. Choisissez **OK** pour appliquer le changement.
 
@@ -53,6 +53,6 @@ Une fois que vous avez généré la reproduction de lien, ouvrez à nouveau cett
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)\
+\ de référence de l' [éditeur de liens MSVC](linking.md)
 [Options de l’éditeur de liens MSVC](linker-options.md)\
 [/LINKREPROTARGET](linkreprotarget.md)

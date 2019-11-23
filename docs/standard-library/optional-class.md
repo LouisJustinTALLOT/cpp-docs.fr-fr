@@ -101,18 +101,18 @@ explicit optional(optional<U>&& rhs);
 ### <a name="parameters"></a>Paramètres
 
 \ *RHS*
-@No__t_0 à copier ou déplacer la valeur contenue à partir de.
+`optional` à copier ou déplacer la valeur contenue à partir de.
 
-*i_list* \
+*i_list*\
 Liste d’initialiseurs à partir de laquelle la valeur contenue doit être créée.
 
-*arguments* \
+*arguments*\
 Liste d’arguments à partir de laquelle la valeur contenue doit être créée.
 
 ### <a name="remarks"></a>Notes
 
-`constexpr optional() noexcept;` 
- `constexpr optional(nullopt_t nullopt) noexcept;` ces constructeurs construisent une `optional` qui ne contient pas de valeur.
+`constexpr optional() noexcept;`
+`constexpr optional(nullopt_t nullopt) noexcept;` ces constructeurs construisent une `optional` qui ne contient pas de valeur.
 
 `constexpr optional(const optional& rhs);` le constructeur de copie initialise la valeur contenue à partir de la valeur contenue de l’argument. Elle est définie comme **Deleted** , sauf si `is_copy_constructible_v<T>` a la valeur true, et c’est trivial si `is_trivially_copy_constructible_v<T>` a la valeur true.
 
@@ -124,9 +124,9 @@ Liste d’arguments à partir de laquelle la valeur contenue doit être créée.
 
 `template <class U = T> explicit constexpr optional(U&& rhs);` initialise la valeur contenue comme si vous utilisiez `std::forward<U>(v)`. Ce constructeur est `constexpr` si le constructeur `T` utilisé est `constexpr`. Elle ne participe pas à la résolution de surcharge, sauf si `is_constructible_v<T, U&&>` a la valeur true et `is_same_v<remove_cvref_t<U>, in_place_t>` et `is_same_v<remove_cvref_t<U>, optional>` ont la valeur false.
 
-`template <class U> explicit optional(const optional<U>& rhs);` si *RHS* contient une valeur, direct initialise la valeur contenue à partir de la valeur contenue de l’argument. Elle ne participe pas à la résolution de surcharge, sauf si `is_constructible_v<T, const U&>` a la valeur true, et `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>` et `is_convertible_v<const optional<U>&&, T>` ont tous la valeur false.
+`template <class U> explicit optional(const optional<U>& rhs);` si *RHS* contient une valeur, direct initialise la valeur contenue à partir de la valeur contenue de l’argument. Elle ne participe pas à la résolution de surcharge, sauf si `is_constructible_v<T, const U&>` a la valeur true, et `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>`et `is_convertible_v<const optional<U>&&, T>` ont tous la valeur false.
 
-`template <class U> explicit optional(optional<U>&& rhs);` si *RHS* contient une valeur, direct initialise la valeur contenue comme si vous utilisiez `std::move(*rhs)`. Elle ne participe pas à la résolution de surcharge, sauf si `is_constructible_v<T, U&&>` a la valeur true, et `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>` et `is_convertible_v<const optional<U>&&, T>` ont tous la valeur false.
+`template <class U> explicit optional(optional<U>&& rhs);` si *RHS* contient une valeur, direct initialise la valeur contenue comme si vous utilisiez `std::move(*rhs)`. Elle ne participe pas à la résolution de surcharge, sauf si `is_constructible_v<T, U&&>` a la valeur true, et `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>`et `is_convertible_v<const optional<U>&&, T>` ont tous la valeur false.
 
 ## <a name="optional-destructor"></a>~ facultatif, destructeur
 
@@ -228,4 +228,4 @@ template <class U>
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<optional >](optional.md)
+[\<facultatif >](optional.md)

@@ -55,7 +55,7 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 
 Consultez [réception de notifications](../../data/oledb/receiving-notifications.md) sur l’implémentation de l’interface de point de connexion sur le consommateur.
 
-`IRowsetNotifyImpl`fournit une implémentation factice pour `IRowsetNotify`, avec des fonctions vides pour `IRowsetNotify` les méthodes [OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)), [OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85))et [OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)). Si vous héritez de cette classe lorsque vous implémentez une `IRowsetNotify` interface, vous pouvez implémenter uniquement les méthodes dont vous avez besoin. Vous devez également fournir des implémentations vides pour les autres méthodes.
+`IRowsetNotifyImpl` fournit une implémentation factice pour `IRowsetNotify`, avec des fonctions vides pour les méthodes `IRowsetNotify` [OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)), [OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85))et [OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)). Si vous héritez de cette classe lorsque vous implémentez une interface `IRowsetNotify`, vous pouvez implémenter uniquement les méthodes dont vous avez besoin. Vous devez également fournir des implémentations vides pour les autres méthodes.
 
 ## <a name="onfieldchange"></a>IRowsetNotifyImpl :: OnFieldChange
 
