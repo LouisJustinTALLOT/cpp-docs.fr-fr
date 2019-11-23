@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - .REPEAT directive
 ms.assetid: cb8ad8c6-587b-42f9-a0ad-b5316a24918c
-ms.openlocfilehash: 0533397c60c83f22b10c84ec72aa6eb65a71e4c0
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 2a447cb13fa78b0f2ad3cf61e2d0ff77a5b8cfd9
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703574"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398011"
 ---
-# <a name="repeat-32-bit-masm"></a>. REPEAT (MASM 32 bits)
+# <a name="repeat-32-bit-masm"></a>.REPEAT (32-bit MASM)
 
-Génère du code qui répète l’exécution du bloc d' *instructions* jusqu’à ce que `condition` devienne true. [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), qui devient true lorsque CX est égal à zéro, peut être substitué à [. JUSQU’à](../../assembler/masm/dot-until.md). La `condition` est facultative avec **. UNTILCXZ**. (uniquement MASM 32 bits.)
+Generates code that repeats execution of the block of *statements* until *condition* becomes true. [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md), which becomes true when CX is zero, may be substituted for [.UNTIL](../../assembler/masm/dot-until.md). The *condition* is optional with **.UNTILCXZ**. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> .REPEAT<br/>
-> instructions<br/>
-> . Condition UNTIL
+> **.REPEAT**\
+> *statements*\
+> **.UNTIL** *condition*
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)
