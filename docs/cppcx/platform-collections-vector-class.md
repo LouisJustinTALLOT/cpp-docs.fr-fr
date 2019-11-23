@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::Vector, classe
+title: Classe Platform::Collections::Vector
 ms.date: 10/01/2019
 ms.topic: reference
 f1_keywords:
@@ -28,7 +28,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/02/2019
 ms.locfileid: "71816581"
 ---
-# <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector, classe
+# <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
 Représente une collection séquentielle d'objets accessibles séparément par index. Implémente [Windows :: Foundation :: Collections :: IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) pour faciliter la [liaison de données](/windows/uwp/data-binding/data-binding-in-depth)XAML.
 
@@ -49,17 +49,17 @@ Spécifie un prédicat binaire pour tester l’égalité avec des valeurs de typ
 
 ### <a name="remarks"></a>Notes
 
-Les types autorisés sont les suivants :
+Les types autorisés sont les suivants :
 
-1. Entiers
+1. entiers ;
 
 1. classe d’interface ^
 
-1. Classe ref publique ^
+1. classe ref publique ^ ;
 
-1. value struct
+1. struct value ;
 
-1. classe d'énumération publique
+1. classe d'énumération publique.
 
 La classe **Vector** est l' C++ implémentation concrète de l’interface [Windows :: Foundation :: Collections :: IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) .
 
@@ -73,7 +73,7 @@ Si vous tentez d’utiliser un type **Vector** dans une valeur ou un paramètre 
 |----------|-----------------|
 |[Vector::Vector](#ctor)|Initialise une nouvelle instance de la classe Vector.|
 
-### <a name="public-methods"></a>M&#233;thodes publiques
+### <a name="public-methods"></a>Méthodes publiques
 
 |Nom|Description|
 |----------|-----------------|
@@ -91,12 +91,12 @@ Si vous tentez d’utiliser un type **Vector** dans une valeur ou un paramètre 
 |[Vector::SetAt](#setat)|Assigne la valeur spécifiée à l'élément du Vector actif identifié par l'index spécifié.|
 |[Vector :: Size](#size)|Retourne le nombre d'éléments dans l'objet Vector actuel.|
 
-### <a name="events"></a>Events
+### <a name="events"></a>Événements
 
 |||
 |-|-|
-|Name|Description|
-|Event [Windows :: Foundation :: collection :: VectorChangedEventHandler @ no__t-1T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Se produit lorsque le Vector est modifié.|
+|Nom|Description|
+|Event [Windows :: Foundation :: collection :: VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Se produit lorsque le Vector est modifié.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -106,7 +106,7 @@ Si vous tentez d’utiliser un type **Vector** dans une valeur ou un paramètre 
 
 **En-tête :** collection.h
 
-**Espace de noms :** Platform::Collections
+**Espace de noms :** Platform::Collections
 
 ## <a name="append"></a>Vector :: Append, méthode
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Paramètres
 
-*value*<br/>
+*valeur*<br/>
 Élément à rechercher.
 
 *index*<br/>
@@ -367,7 +367,7 @@ Vector(std::initializer_list<T> il);
 Type d’une collection d’objets utilisée pour initialiser l’objet Vector actuel.
 
 *il*<br/>
-[Std :: initializer_list](../standard-library/initializer-list-class.md) d’objets de type *T* qui sera utilisé pour initialiser le vecteur.
+[Std :: initializer_list](../standard-library/initializer-list-class.md) d’objets de type *T* qui seront utilisés pour initialiser le vecteur.
 
 *N*<br/>
 Nombre d’éléments d’une collection d’objets utilisée pour initialiser l’objet Vector actuel.
@@ -375,7 +375,7 @@ Nombre d’éléments d’une collection d’objets utilisée pour initialiser l
 *size*<br/>
 Nombre d'éléments dans l'objet Vector.
 
-*value*<br/>
+*valeur*<br/>
 Valeur utilisée pour initialiser chaque élément de l'objet Vector actuel.
 
 *v*<br/>

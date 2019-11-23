@@ -66,8 +66,8 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |C4388 (niveau 4)|incompatibilité signed/unsigned|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (niveau 2)|'*fonction*' : la signature de fonction contient le type'*type*'; C++ les objets ne sont pas sûrs à passer entre le code pur et le code mixte ou natif|
 |C4426 (niveau 1)|indicateurs d’optimisation modifiés après l’ajout de l’en-tête, peut être dû à #pragma optimize () <sup>14,1</sup>|
-|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (niveau 4)|'*classe1*' : La disposition des objets sous/VD2 sera modifiée en raison de la base virtuelle'*Class2*'|
-|[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (niveau 4)|dynamic_cast de la base virtuelle'*classe1*'vers'*Class2*'peut échouer dans certains contextes|
+|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (niveau 4)|'*classe1*' : la disposition des objets sous/VD2 sera modifiée en raison de la base virtuelle'*Class2*'|
+|[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (niveau 4)|l’dynamic_cast de la base virtuelle «*classe1*» à «*Class2*» peut échouer dans certains contextes|
 |C4444 (niveau 3)|'__unaligned' de niveau supérieur n'est pas implémenté dans ce contexte|
 |[C4464](../error-messages/compiler-warnings/c4464.md) (niveau 4)|le chemin d’accès include relatif contient'.. '|
 |[C4471](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md) (niveau 4)|une déclaration anticipée d’une énumération non délimitée doit avoir un type sous-jacent (int supposé) <sup>Perm</sup>|
@@ -80,7 +80,7 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |[C4548](../error-messages/compiler-warnings/compiler-warning-level-1-c4548.md) (niveau 1)|l'expression avant la virgule n'a pas d'effet ; expression avec effet secondaire attendu|
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) (niveau 1)|'*operator1*' : l’opérateur avant la virgule n’a aucun effet ; souhaitiez-vous'*operator2*' ?|
 |[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) (niveau 1)|l'expression n'a pas d'effet ; attendue expression avec effets secondaires|
-|[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (niveau 3)|' _ _ assume’contient l'*effet’effect'*|
+|[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (niveau 3)|' __assume’contient l’effet *'effect'*|
 |[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (niveau 4)|informations : la sémantique catch (...) a changé depuis Visual C++ 7,1 ; les exceptions structurées (SEH) ne sont plus interceptées|
 |C4574 (niveau 4)|'*identifier*'est défini comme étant' 0 ' : vouliez-vous utiliser' #if *identificateur*' ?|
 |C4577 (niveau 1)|'noexcept’utilisé sans le mode de gestion des exceptions spécifié ; l’arrêt en cas d’exception n’est pas garanti. Spécifier/EHsc|
@@ -108,15 +108,15 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (niveau 1)|'*fonction*' : la signature d’un membre non privé contient un type natif privé d’assembly'*NATIVE_TYPE*'|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (niveau 4)|'*fonction*' : fonction non inline|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (niveau 3)|stockage de résultat flottant 32 bits en mémoire, perte possible de performances|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|l’accès volatile de'*expression*'est soumis au paramètre/volatile : @no__t&#124;-1ISO MS >; envisagez d’utiliser des fonctions intrinsèques __iso_volatile_load/Store|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|l’accès volatile de'*expression*'est soumis au paramètre/volatile :&#124;\<ISO MS >; envisagez d’utiliser __iso_volatile_load fonctions intrinsèques/Store|
 |C4749 (niveau 4)|pris en charge de manière conditionnelle : OffsetOf appliqué au type de disposition non standard'*type*'|
 |C4767 (niveau 4)|le nom de section'*symbol*'comporte plus de 8 caractères et sera tronqué par l’éditeur de liens|
-|C4768 (niveau 3)|les attributs _ _ declspec avant la spécification de liaison sont ignorés|
+|C4768 (niveau 3)|__declspec attributs avant la spécification de la liaison sont ignorés|
 |C4774 (niveau 4)|'*String*' : la chaîne de format attendue dans l’argument *Number* n’est pas un littéral de chaîne|
 |C4777 (niveau 4)|'*fonction*' : la chaîne de mise en forme'*chaîne*'requiert un argument de type'*type1*', mais le *numéro* d’argument variadiques a le type'*type2*'|
 |C4786 (niveau 3)|'*symbol*' : le nom de l’objet a été tronqué en'*Number*'caractères dans les informations de débogage|
 | [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) (niveau 4) | Conversion implicite de'*type*'en bool. Perte d’informations possible <sup>16,0</sup> |
-|[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (niveau 4)|'*bytes*'octets de remplissage ajoutés après la construction'*Member_Name*'|
+|[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (niveau 4)|le remplissage des octets'*bytes*'a été ajouté après la construction'*Member_Name*'|
 | [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md) (niveau 1) | '*membre*' : la fonction membre de classe locale n’a pas de corps |
 |C4826 (niveau 2)|La conversion de'*type1*'en'*type2*'est un signe étendu. Cela peut entraîner un comportement inattendu du Runtime.|
 |C4837 (niveau 4)|trigraphe détecté : ' ?? *caractère*'remplacé par'*caractère*'|
@@ -128,7 +128,7 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) (niveau 1)|'*déclarateur*' : un GUID ne peut être associé qu’à une classe, une interface ou un espace de noms|
 |[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md) (niveau 1)|initialisation de copie non conforme ; plusieurs conversions définies par l'utilisateur ont été appliquées implicitement|
 |[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md) (niveau 4)|bibliothèque de types présumée construite pour des pointeurs 'nombre' bits|
-|[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (niveau 1)|reinterpret_cast utilisé entre des classes connexes : '*Class1*'et'*Class2*'|
+|[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (niveau 1)|reinterpret_cast utilisées entre des classes connexes : '*Class1*'et'*Class2*'|
 |C4962|'*fonction*' : les optimisations guidées par profil sont désactivées, car les optimisations ont provoqué l’incohérence des données de profil|
 |[C4986](../error-messages/compiler-warnings/compiler-warning-c4986.md) (niveau 4)|'*symbol*' : la spécification d’exception ne correspond pas à la déclaration précédente|
 |C4987 (niveau 4)|extension non standard utilisée : 'throw (...)'|

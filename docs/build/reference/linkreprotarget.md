@@ -26,7 +26,7 @@ Indique à l’éditeur de liens ou à l’outil de bibliothèque de générer u
 
 ### <a name="arguments"></a>Arguments
 
-**/LINKREPROTARGET :** _nom-fichier_\
+**/LINKREPROTARGET :** _nom de fichier_\
 Nom du fichier cible sur lequel effectuer le filtrage. Une reproduction de lien est générée uniquement lorsque le fichier nommé est la cible de sortie. Les noms de fichiers qui contiennent des espaces doivent être placés entre guillemets doubles. Le nom de fichier doit inclure le nom de base et l’extension, mais pas le chemin d’accès.
 
 ## <a name="remarks"></a>Notes
@@ -43,9 +43,9 @@ Les options **/LINKREPRO** et [/out](out-output-file-name.md) doivent être déf
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez les **Propriétés de Configuration** > **éditeur de liens**@no__t page de propriétés ligne de**commande** -3.
+1. Sélectionnez **Propriétés de Configuration** > **éditeur de liens** > page de propriétés ligne de **commande** .
 
 1. Entrez l’option **/LINKREPROTARGET :** _nom de fichier_ dans la zone **options supplémentaires** . Choisissez **OK** pour appliquer le changement.
 
@@ -55,6 +55,6 @@ Les options **/LINKREPRO** et [/out](out-output-file-name.md) doivent être déf
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)\
+\ de référence de l' [éditeur de liens MSVC](linking.md)
 [Options de l’éditeur de liens MSVC](linker-options.md)\
 [/LINKREPRO](linkrepro.md)

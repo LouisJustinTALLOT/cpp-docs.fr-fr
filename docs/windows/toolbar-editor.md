@@ -63,7 +63,7 @@ L' **éditeur de barres d'** outils vous permet de créer des ressources de barr
 
 La fenêtre de l' **éditeur de barres d’outils** affiche deux vues d’une image de bouton, identique à la fenêtre de l' **éditeur d’images** . Une barre de fractionnement sépare les deux volets et vous pouvez faire glisser la barre de fractionnement d’un côté à l’autre pour modifier les tailles relatives des volets. Le volet actif affiche une bordure de sélection et au-dessus des deux affichages de l’image est la barre d’outils objet.
 
-![Éditeur de barres d’outils](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")<br/>
+![Éditeur de barre d’outils](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")<br/>
 **Éditeur de barres d’outils**
 
 L' **éditeur de barres d’outils** est similaire à l' **éditeur d’images** dans les fonctionnalités, et les éléments de menu, les outils graphiques et la grille bitmap entre les deux sont les mêmes. Il existe une commande de menu dans le menu **image** pour basculer entre l' **éditeur de barres d’outils** et l' **éditeur d’images**. Pour plus d’informations sur l’utilisation de la barre d’outils **graphiques** , la palette de **couleurs** ou le menu **image** , consultez [éditeur d’images](../windows/image-editor-for-icons.md).
@@ -76,7 +76,7 @@ Une image bitmap utilisée pour créer une barre d’outils a une largeur maxima
 
 La boîte **de dialogue nouvelle ressource de barre d’outils** présente les propriétés suivantes :
 
-|Property|Description|
+|Propriété|Description|
 |---|---------------|
 |**Largeur du bouton**|Offre un espace vous permettant d’entrer la largeur des boutons de la barre d’outils que vous convertissez d’une ressource bitmap en ressource de barre d’outils.|
 |**Hauteur du bouton**|Offre un espace vous permettant d’entrer la hauteur des boutons de la barre d’outils que vous convertissez d’une ressource bitmap en ressource de barre d’outils.|
@@ -88,7 +88,7 @@ Par défaut, un bouton nouveau ou vide s’affiche à l’extrémité droite de 
 
 Un bouton de barre d’outils a les propriétés suivantes :
 
-|Property|Description|
+|Propriété|Description|
 |--------------|-----------------|
 |**ID**|Définit l’ID du bouton. La liste déroulante répertorie les noms d' **ID** courants.|
 |**Width**|Définit la largeur du bouton. 16 pixels recommandés.|
@@ -113,7 +113,7 @@ L' **éditeur de barres d’outils** vous permet d’activer les éléments suiv
 
 1. Ouvrez une ressource bitmap existante dans l' [éditeur d’images](../windows/image-editor-for-icons.md). Si l’image bitmap n’est pas déjà dans votre fichier *. RC* , cliquez avec le bouton droit sur le fichier *. RC* et choisissez **Importer**, puis accédez à l’image bitmap que vous souhaitez ajouter à votre fichier *. RC* et sélectionnez **ouvrir**.
 
-1. Accédez à l'**éditeur de barre d’outils** **image** > de menu.
+1. Accédez à l' **image** de menu > **éditeur de barres d’outils**.
 
    La boîte **de dialogue nouvelle ressource de barre d’outils** s’affiche. Vous pouvez modifier la largeur et la hauteur des images d’icône pour qu’elles correspondent à la bitmap. L’image de la barre d’outils est ensuite affichée dans l' **éditeur de barres d’outils**.
 
@@ -134,7 +134,7 @@ L' **éditeur de barres d’outils** vous permet d’activer les éléments suiv
 
    - Attribuez un ID au bouton vide à l’extrémité droite de la barre d’outils. Pour ce faire, vous pouvez modifier la propriété **ID** dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Par exemple, il se peut que vous souhaitiez attribuer à un bouton de barre d’outils le même ID qu’une option de menu. Dans ce cas, utilisez la zone de liste déroulante pour sélectionner l' **ID** de l’option de menu.
 
-   - Sélectionnez le bouton vide à l’extrémité droite de la barre d’outils dans le volet **d’affichage de la barre d’outils** et commencez le dessin. Un ID de commande de bouton par défaut est\<affecté (ID_BUTTON n >).
+   - Sélectionnez le bouton vide à l’extrémité droite de la barre d’outils dans le volet **d’affichage de la barre d’outils** et commencez le dessin. Un ID de commande de bouton par défaut est affecté (ID_BUTTON\<n >).
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Pour ajouter une image à une barre d’outils sous forme de bouton
 
@@ -145,11 +145,11 @@ L' **éditeur de barres d’outils** vous permet d’activer les éléments suiv
    > [!NOTE]
    > Si vous ouvrez l’image dans Visual Studio, elle s’ouvre dans l' **éditeur d’images**. Vous pouvez également ouvrir l’image dans d’autres programmes graphiques.
 
-1. Accédez au menu **modifier** > la**copie**.
+1. Accédez au menu **modifier** > **copier**.
 
 1. Basculez vers votre barre d’outils en sélectionnant son onglet en haut de la fenêtre source.
 
-1. Accédez au menu **Edition** > **coller**.
+1. Accédez au menu **modifier** > **coller**.
 
    L’image s’affiche dans la barre d’outils en tant que nouveau bouton.
 
@@ -183,19 +183,19 @@ Dans le volet **d’affichage de la barre d’outils** , faites glisser le bouto
 
 1. Sélectionnez le bouton de barre d’outils.
 
-1. Dans le champ **invite** de la `\n` [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), ajoutez une description du bouton pour la barre d’État et après le message, ajoutez et le nom de l’info-bulle.
+1. Dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), dans le champ **invite** , ajoutez une description du bouton pour la barre d’État et après le message, ajoutez `\n` et le nom de l’info-bulle.
 
 Par exemple, pour afficher l’info-bulle du bouton **Imprimer** dans **WordPad**:
 
 1. Ouvrez **WordPad**.
 
-1. Placez le pointeur de la souris sur le bouton **Imprimer** de la barre `Print` d’outils et notez que le mot est maintenant flottant sous le pointeur de la souris.
+1. Placez le pointeur de la souris sur le bouton **Imprimer** de la barre d’outils et notez le mot `Print` maintenant est flottant sous le pointeur de la souris.
 
 1. Examinez la barre d’État en bas de la fenêtre **WordPad** et Notez qu’elle affiche maintenant le texte `Prints the active document`.
 
-`Print`est le nom de l’info `Prints the active document` -bulle et est la description du bouton pour la barre d’État.
+`Print` est le nom de l’info-bulle et `Prints the active document` est la description du bouton pour la barre d’État.
 
-Si vous souhaitez utiliser cet effet à l’aide de l' **éditeur de barres d’outils**, affectez à `Prints the active document\nPrint`la propriété **prompt** la valeur.
+Si vous souhaitez utiliser cet effet à l’aide de l' **éditeur de barres d’outils**, définissez la propriété **invite** sur `Prints the active document\nPrint`.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -203,6 +203,6 @@ MFC ou ATL
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeurs de ressources](../windows/resource-editors.md)[, menus et autres ressources](/windows/win32/menurc/resources) 
-<br/>
+[Éditeurs de ressources](../windows/resource-editors.md)
+[menus et autres ressources](/windows/win32/menurc/resources)<br/>
 [propriétés d’un bouton de barre d’outils](../windows/toolbar-button-properties.md)<br/>

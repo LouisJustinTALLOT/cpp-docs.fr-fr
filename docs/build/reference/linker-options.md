@@ -23,7 +23,7 @@ LINK.exe lie des bibliothèques et des fichiers objets COFF (Common Object File 
 
 Le tableau ci-dessous répertorie les options pour LINK.exe. Pour plus d’informations sur LINK, consultez :
 
-- [Options LINK contrôlées par le compilateur](compiler-controlled-link-options.md)
+- [Compiler-Controlled LINK Options](compiler-controlled-link-options.md)
 
 - [Fichiers d’entrée LINK](link-input-files.md)
 
@@ -92,7 +92,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/LTCG](ltcg-link-time-code-generation.md)|Spécifie la génération du code durant l’édition de liens.|
 |[/MACHINE](machine-specify-target-platform.md)|Spécifie la plateforme cible.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Crée un fichier manifeste côte à côte et l’incorpore éventuellement dans le fichier binaire.|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Spécifie une section de > @no__t 0dependentAssembly dans le fichier manifeste.|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Spécifie une section de > \<dependentAssembly dans le fichier manifeste.|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|Modifie le nom par défaut du fichier manifeste.|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|Spécifie un fichier d’entrée de manifeste pour que l’éditeur de liens le traite et l’incorpore dans le fichier binaire. Vous pouvez utiliser cette option plusieurs fois pour spécifier plusieurs fichiers d’entrée de manifeste.|
 |[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|Spécifie si les informations de contrôle de compte d’utilisateur sont incorporées dans le manifeste du programme.|

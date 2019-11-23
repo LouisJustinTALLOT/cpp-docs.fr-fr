@@ -35,7 +35,7 @@ Pour obtenir un exemple d’application qui montre Windows Forms utilisé avec M
 
    Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le nœud de projet **MFC03** , puis choisissez **Propriétés**. La boîte de dialogue **pages de propriétés** s’affiche.
 
-   Dans la boîte de dialogue **pages de propriétés** , dans le contrôle d’arborescence **Propriétés de configuration** , sélectionnez **général**, puis dans la section **paramètres par défaut du projet** , affectez à prise en charge du Common Language **Runtime** la prise **en charge du Common Language Runtime ( /CLR)** . Cliquez sur **OK**.
+   Dans la boîte de dialogue **pages de propriétés** , dans le contrôle d’arborescence **Propriétés de configuration** , sélectionnez **général**, puis dans la section **paramètres par défaut du projet** , affectez à **prise en** charge du Common Language Runtime la prise **en charge du Common Language Runtime (/CLR)** . Cliquez sur **OK**.
 
 1. Ajoutez une référence au contrôle .NET.
 

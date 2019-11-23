@@ -26,27 +26,27 @@ public value struct Guid
 
 ### <a name="members"></a>Membres
 
-`Platform::Guid` contient les méthodes `Equals()`, `GetHashCode()` et `ToString()` dérivées de la classe [Platform :: Object](../cppcx/platform-object-class.md), et la méthode `GetTypeCode()` dérivée de la [classe Platform :: type](../cppcx/platform-type-class.md). `Platform::Guid` possède également les membres suivants.
+`Platform::Guid` a les méthodes `Equals()`, `GetHashCode()`et `ToString()` dérivées de la classe [Platform :: Object](../cppcx/platform-object-class.md), et la méthode `GetTypeCode()` dérivée de la [classe Platform :: type](../cppcx/platform-type-class.md). `Platform::Guid` possède également les membres suivants.
 
 |Membre|Description|
 |------------|-----------------|
 |[Guid](#ctor)|Initialise une nouvelle instance d'une classe `Platform::Guid`.|
 |[operator==](#operator-equality)|Opérateur Equals.|
-|[!=, opérateur](#operator-inequality)|Opérateur Not Equals.|
+|[operator!=](#operator-inequality)|Opérateur Not Equals.|
 |[operator&lt;](#operator-less)|Opérateur inférieur à.|
 |[operator()](#operator-call)|Convertit une `Platform::Guid` en une `GUID`.|
 
 ### <a name="remarks"></a>Notes
 
-Pour générer un nouveau `Platform::Guid`, utilisez la méthode statique [Windows :: Foundation :: GuidHelper :: CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid) .
+Pour générer une nouvelle `Platform::Guid`, utilisez la méthode statique [Windows :: Foundation :: GuidHelper :: CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid) .
 
 ### <a name="requirements"></a>Configuration requise
 
-**Client minimal pris en charge :** Windows 8
+**Client minimal pris en charge :** Windows 8
 
 **Serveur minimal pris en charge :** Windows Server 2012
 
-**Espace de noms :** Plateforme
+**Espace de noms :** Platform
 
 **Métadonnées :** platform.winmd
 
@@ -91,34 +91,34 @@ Les 4 premiers octets du `GUID`.
 2 octets suivants du `GUID`.
 
 *d*<br/>
-L’octet suivant du `GUID`.
+Octet suivant du `GUID`.
 
 *e*<br/>
-L’octet suivant du `GUID`.
+Octet suivant du `GUID`.
 
 *f*<br/>
-L’octet suivant du `GUID`.
+Octet suivant du `GUID`.
 
 *g*<br/>
-L’octet suivant du `GUID`.
+Octet suivant du `GUID`.
 
 *h*<br/>
-L’octet suivant du `GUID`.
+Octet suivant du `GUID`.
 
 *i*<br/>
-L’octet suivant du `GUID`.
+Octet suivant du `GUID`.
 
 *j*<br/>
-L’octet suivant du `GUID`.
+Octet suivant du `GUID`.
 
 *k*<br/>
-L’octet suivant du `GUID`.
+Octet suivant du `GUID`.
 
 *m*<br/>
-Un `GUID` dans la forme une [structure GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+Une `GUID` dans le formulaire est une [structure GUID](/previous-versions/cc317743(v%3dmsdn.10)).
 
 *n*<br/>
-Les 8 octets restants du `GUID`.
+8 octets restants du `GUID`.
 
 ## <a name="operator-equality"></a>GUID :: Operator = =, opérateur
 
@@ -148,7 +148,7 @@ Préférez l’utilisation de l’opérateur `==` au lieu de la méthode statiqu
 
 ## <a name="operator-inequality"></a>GUID :: Operator ! =, opérateur
 
-Compare deux instances `Platform::Guid` pour déterminer si elles sont inégales.
+Compare l’inégalité de deux instances de `Platform::Guid`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -168,9 +168,9 @@ Deuxième `Platform::Guid` à comparer.
 
 True si les deux instances `Platform::Guid` ne sont pas égales.
 
-## <a name="operator-less"></a>GUID :: Operator @ no__t-1, opérateur
+## <a name="operator-less"></a>GUID :: Operator&lt;, opérateur
 
-Compare deux instances `Platform::Guid` pour le classement.
+Compare deux instances de `Platform::Guid` pour le classement.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -190,7 +190,7 @@ Deuxième `Platform::Guid` à comparer.
 
 True si *guid1* est ordonné avant *GUID2*. Le classement est lexicographique après le traitement de chaque `Platform::Guid` comme s’il s’agissait d’un tableau de valeurs non signées 4 32 bits. Il ne s’agit pas du classement utilisé par SQL Server ou le .NET Framework, ni du classement lexicographique par représentation sous forme de chaîne.
 
-Cet opérateur est fourni afin que les objets `Guid` puissent être plus facilement utilisés par C++ la bibliothèque standard.
+Cet opérateur est fourni afin que les objets `Guid` puissent être plus facilement consommés C++ par la bibliothèque standard.
 
 ## <a name="operator-call"></a>GUID :: Operator (), opérateur
 
