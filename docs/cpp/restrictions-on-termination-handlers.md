@@ -15,13 +15,13 @@ ms.locfileid: "74246382"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Restrictions sur les gestionnaires de terminaison
 
-You cannot use a **goto** statement to jump into a **__try** statement block or a **__finally** statement block. À la place, vous devez entrer dans le bloc d'instruction via le flux de contrôle normal. (You can, however, jump out of a **__try** statement block.) Also, you cannot nest an exception handler or termination handler inside a **__finally** block.
+Vous ne pouvez pas utiliser une instruction **goto** pour accéder à un bloc d’instructions **__try** ou à un bloc d’instructions **__finally** . À la place, vous devez entrer dans le bloc d'instruction via le flux de contrôle normal. (Vous pouvez toutefois passer d’un bloc d’instructions **__try** .) En outre, vous ne pouvez pas imbriquer un gestionnaire d’exceptions ou un gestionnaire de terminaisons à l’intérieur d’un bloc de **__finally** .
 
-Certains types de code autorisés dans un gestionnaire de terminaisons produisent des résultats incertains. Si vous en utilisez, faites-le avec précaution. One is a **goto** statement that jumps out of a **__finally** statement block. Si le bloc s'exécute dans le cadre de l'arrêt normal, rien d'inhabituel ne se produit. Mais si le système est en train de dérouler la pile, ce déroulement s'arrête, et la fonction actuelle prend le contrôle comme s'il n'y avait pas eu d'arrêt anormal.
+Certains types de code autorisés dans un gestionnaire de terminaisons produisent des résultats incertains. Si vous en utilisez, faites-le avec précaution. L’une d’elles est une instruction **goto** qui saute hors d’un bloc d’instructions **__finally** . Si le bloc s'exécute dans le cadre de l'arrêt normal, rien d'inhabituel ne se produit. Mais si le système est en train de dérouler la pile, ce déroulement s'arrête, et la fonction actuelle prend le contrôle comme s'il n'y avait pas eu d'arrêt anormal.
 
-A **return** statement inside a **__finally** statement block presents roughly the same situation. Le contrôle retourne à l'appelant immédiat de la fonction contenant le gestionnaire de terminaisons. Si le système était en train de dérouler la pile, ce processus est désactivé, et le programme continue comme si aucune exception n'était levée.
+Une instruction **Return** à l’intérieur d’un bloc d’instructions **__finally** présente à peu près la même situation. Le contrôle retourne à l'appelant immédiat de la fonction contenant le gestionnaire de terminaisons. Si le système était en train de dérouler la pile, ce processus est désactivé, et le programme continue comme si aucune exception n'était levée.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[Gestion structurée des exceptions (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Écriture d’un gestionnaire de terminaisons](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

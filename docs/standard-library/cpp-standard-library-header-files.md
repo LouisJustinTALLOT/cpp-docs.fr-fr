@@ -44,7 +44,7 @@ Fichiers d’en- C++ tête pour la bibliothèque standard et les extensions, par
 | Plages | plages de \<><sup>20</sup> |
 | Expressions régulières | [\<regex >](regex.md)<sup>11</sup> |
 | Chaînes et données caractères | [\<cctype >](cctype.md), [\<cstdlib >](cstdlib.md), [\<cstring >](cstring.md), [\<cuchar >](cuchar.md)<sup>11</sup>, [\<cwchar >](cwchar.md), [\<cwctype >](cwctype.md), [\<Regex >](regex.md)<sup>11</sup>, [\<String >](string.md), [\<string_view >](string-view.md)<sup>17</sup> |
-| réflexion | [\<chrono >](chrono.md)<sup>11</sup>, [\<ctime >](ctime.md) |
+| Heure | [\<chrono >](chrono.md)<sup>11</sup>, [\<ctime >](ctime.md) |
 
 <sup>11</sup> ajouté dans la norme c++ 11. \
 <sup>14</sup> ajouté dans la norme c++ 14. \
@@ -75,7 +75,7 @@ Fichiers d’en- C++ tête pour la bibliothèque standard et les extensions, par
 |[Gestion de la mémoire](../cpp/smart-pointers-modern-cpp.md)|[\<allocators >](allocators-header.md), [\<> de mémoire](memory.md), [\<nouvelle >](new.md) [\<scoped_allocator](scoped-allocator.md)|
 |Multithreading|[\<atomic >](atomic.md), [\<condition_variable >](condition-variable.md), [\<> future](future.md)\<, > [mutex](mutex.md)\<[, shared_mutex >\<,](shared-mutex.md) [> thread](thread.md)|
 |Autres utilitaires|[\<bitset >](bitset.md), [\<chrono >](chrono.md), [\<Functional >](functional.md) [,\<initializer_list >](initializer-list.md), [\<tuple >](tuple.md), [\<type_traits](type-traits.md)>, [\<TypeInfo >](typeinfo.md), [\<typeindex >](typeindex.md), [\<Utility >](utility.md)|
-|Chaînes et données caractères|[\<regex>](regex.md), [\<string>](string.md), [\<string_view>](string-view.md)
+|Chaînes et données caractères|[\<regex >](regex.md), [\<chaîne >](string.md), [\<string_view >](string-view.md)
 
 ::: moniker-end
 

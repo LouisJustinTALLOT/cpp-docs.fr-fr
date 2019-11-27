@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4534
+title: Avertissement du compilateur (niveau 3) C4534
 ms.date: 11/04/2016
 f1_keywords:
 - c4534
@@ -13,15 +13,15 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189091"
 ---
-# <a name="compiler-warning-level-3-c4534"></a>Compiler Warning (level 3) C4534
+# <a name="compiler-warning-level-3-c4534"></a>Avertissement du compilateur (niveau 3) C4534
 
-'constructor' will not be a default constructor for class 'class' due to the default argument
+'Constructor’ne sera pas un constructeur par défaut pour la classe’class’en raison de l’argument par défaut
 
-An unmanaged class can have a constructor with parameters that have default values and the compiler will use this as the default constructor. A class marked with the `value` keyword will not use a constructor with default values for its parameters as a default constructor.
+Une classe non managée peut avoir un constructeur avec des paramètres qui ont des valeurs par défaut et le compilateur l’utilise comme constructeur par défaut. Une classe marquée avec le mot clé `value` n’utilise pas un constructeur avec des valeurs par défaut pour ses paramètres comme constructeur par défaut.
 
 Pour plus d’informations, consultez [Classes et structs](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
-The following sample generates C4534:
+L’exemple suivant génère l’C4534 :
 
 ```cpp
 // C4534.cpp

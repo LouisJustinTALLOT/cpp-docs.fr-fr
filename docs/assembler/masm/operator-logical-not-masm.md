@@ -1,5 +1,5 @@
 ---
-title: opérateur ! (MASM)
+title: opérateur ! MASM
 ms.date: 08/30/2018
 f1_keywords:
 - operator !
@@ -15,14 +15,14 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396742"
 ---
-# <a name="operator--masm"></a>opérateur ! (MASM)
+# <a name="operator--masm"></a>opérateur ! MASM
 
-Treats *character* as a literal character rather than as an operator or symbol.
+Traite le *caractère* comme un caractère littéral plutôt que comme un opérateur ou un symbole.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **!** *character*
+> **!** *symbole*
 
 ## <a name="see-also"></a>Voir aussi
 
-[Operators reference](operators-reference.md)
+[Informations de référence sur les opérateurs](operators-reference.md)

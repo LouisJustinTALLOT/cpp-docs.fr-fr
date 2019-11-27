@@ -1,5 +1,5 @@
 ---
-title: DLL loading exception codes (C/C++)
+title: Codes d’exception de chargement de DLLC++(C/)
 ms.date: 11/19/2019
 f1_keywords:
 - ERROR_MOD_NOT_FOUND
@@ -21,13 +21,13 @@ ms.locfileid: "74243853"
 ---
 # <a name="exceptions-cc"></a>Exceptions (C/C++)
 
-Two exception codes can be raised when failures are encountered:
+Deux codes d’exception peuvent être déclenchés lorsque des erreurs sont rencontrées :
 
-- For a **LoadLibrary** failure
+- Pour une erreur **LoadLibrary**
 
-- For a **GetProcAddress** failure
+- Pour un échec **GetProcAddress**
 
-Here is the exception information:
+Les informations sur les exceptions sont les suivantes :
 
 ```
 //
@@ -37,11 +37,11 @@ Here is the exception information:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-The exception codes thrown are the standard VcppException(ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) and VcppException(ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND) values. The exception passes a pointer to a **DelayLoadInfo** structure in the LPDWORD value that can be retrieved by **GetExceptionInformation** in the [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) structure, ExceptionInformation[0] field.
+Les codes d’exception générés sont les valeurs standard VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) et VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). L’exception passe un pointeur vers une structure **DelayLoadInfo** dans la valeur LPDWORD qui peut être récupérée par **GetExceptionInformation** dans le champ de la structure [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) , ExceptionInformation [0].
 
-Additionally, if the incorrect bits are set in the grAttrs field, the exception ERROR_INVALID_PARAMETER is thrown. This exception is, for all intents and purposes, fatal.
+En outre, si les bits incorrects sont définis dans le champ grAttrs, l’exception ERROR_INVALID_PARAMETER est levée. Cette exception est, pour toutes les intentions et les objectifs, fatale.
 
-See [Structure and Constant Definitions](structure-and-constant-definitions.md) for more information.
+Pour plus d’informations, consultez [définitions de structure et de constantes](structure-and-constant-definitions.md) .
 
 ## <a name="see-also"></a>Voir aussi
 

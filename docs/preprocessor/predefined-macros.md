@@ -259,7 +259,7 @@ Le compilateur prend en charge ces macros prédéfinies spécifiées par les nor
 
 - `__DATE__` la date de compilation du fichier source actuel. La date est un littéral de chaîne de longueur constante sous la forme *mmm jj aaaa*. Le nom du mois *MMM* est le même que le nom du mois abrégé généré par la fonction [asctime](../c-runtime-library/reference/asctime-wasctime.md) de la bibliothèque Runtime C (CRT). Le premier caractère de la date *JJ* est un espace si la valeur est inférieure à 10. Cette macro est toujours définie.
 
-- `__FILE__` le nom du fichier source actuel. `__FILE__` se développe en un littéral de chaîne de caractères. Pour vous assurer que le chemin d'accès complet au fichier s'affiche, utilisez [/FC (Chemin d'accès complet du fichier de code source dans les diagnostics)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md). Cette macro est toujours définie.
+- `__FILE__` le nom du fichier source actuel. `__FILE__` se développe en un littéral de chaîne de caractères. Pour vous assurer que le chemin d’accès complet au fichier s’affiche, utilisez [/FC (chemin d’accès complet du fichier de code source dans les Diagnostics)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md). Cette macro est toujours définie.
 
 - `__LINE__` défini en tant que numéro de la ligne entière dans le fichier source actuel. La valeur de la macro `__LINE__` peut être modifiée à l’aide d’une directive `#line`. Cette macro est toujours définie.
 
@@ -306,7 +306,7 @@ MSVC prend en charge ces macros prédéfinies supplémentaires.
 
 - `_CONTROL_FLOW_GUARD` définie comme 1 lorsque l’option de compilateur [/Guard : CF (activer la protection du workflow de contrôle)](../build/reference/guard-enable-control-flow-guard.md) est définie. Sinon, non défini.
 
-- `__COUNTER__` se développe en un littéral d’entier qui commence à 0. La valeur est incrémentée de 1 chaque fois qu’elle est utilisée dans un fichier source ou dans les en-têtes inclus du fichier source. `__COUNTER__` conserve son état lorsque vous utilisez des en-têtes précompilés. Cette macro est toujours définie.
+- `__COUNTER__` se développe en un littéral d’entier qui commence à 0. La valeur est incrémentée de 1 chaque fois qu’elle est utilisée dans un fichier source ou dans les en-têtes inclus du fichier source. `__COUNTER__` mémorise son état lorsque vous utilisez des en-têtes précompilés. Cette macro est toujours définie.
 
   Cet exemple utilise `__COUNTER__` pour assigner des identificateurs uniques à trois objets différents du même type. Le constructeur `exampleClass` prend un entier comme paramètre. Dans `main`, l’application déclare trois objets de type `exampleClass`, en utilisant `__COUNTER__` comme paramètre d’identificateur unique :
 
@@ -441,7 +441,7 @@ MSVC prend en charge ces macros prédéfinies supplémentaires.
 
   - 2 si l’option de compilateur `/arch:SSE2`, `/arch:AVX`, `/arch:AVX2`ou `/arch:AVX512` a été définie. Cette valeur est la valeur par défaut si aucune option du compilateur `/arch` n’a été spécifiée. Lorsque `/arch:AVX` est spécifié, la macro `__AVX__` est également définie. Lorsque `/arch:AVX2` est spécifié, les `__AVX__` et les `__AVX2__` sont également définis. Lorsque `/arch:AVX512` est spécifié, `__AVX__`, `__AVX2__`, `__AVX512BW__`, `__AVX512CD__`, `__AVX512DQ__`, `__AVX512F__` et `__AVX512VL__` sont également définis.
 
-  - Pour plus d'informations, consultez [/arch (x86)](../build/reference/arch-x86.md).
+  - Pour plus d’informations, consultez l’article [/arch (x86)](../build/reference/arch-x86.md).
 
 - `_M_X64` défini en tant que valeur littérale entière 100 pour les compilations qui ciblent des processeurs x64. Sinon, non défini.
 

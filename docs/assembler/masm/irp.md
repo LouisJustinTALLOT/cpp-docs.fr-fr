@@ -21,8 +21,8 @@ ms.locfileid: "74397289"
 
 ## <a name="remarks"></a>Notes
 
-See [FOR](../../assembler/masm/for-masm.md).
+Consultez [pour](../../assembler/masm/for-masm.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

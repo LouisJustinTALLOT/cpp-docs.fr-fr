@@ -13,14 +13,14 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399023"
 ---
-# <a name="instr"></a>\@InStr
+# <a name="instr"></a>InStr \@
 
-Macro function that finds the first occurrence of *string2* in *string1*, beginning at *position* within *string1*. If *position* does not appear, search begins at start of *string1*. Returns a position integer or 0 if *string2* is not found.
+Fonction macro qui recherche la première occurrence de *string2* dans *Chaîne1*, en commençant à la *position* dans *Chaîne1*. Si *position* n’apparaît pas, la recherche commence au début de *string1*. Retourne un entier de position ou 0 si *Chaîne2* est introuvable.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@InStr(** ⟦*position*⟧ __,__ *string1* __,__ *string2* **)**
+> **\@InStr (** ⟦*position*⟧ __,__ *Chaîne1* __,__ *Chaîne2* **)**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Symbols reference](symbols-reference.md)
+[Référence des symboles](symbols-reference.md)

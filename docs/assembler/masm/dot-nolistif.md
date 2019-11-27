@@ -15,7 +15,7 @@ ms.locfileid: "74398065"
 ---
 # <a name="nolistif"></a>.NOLISTIF
 
-Suppresses listing of conditional blocks whose condition evaluates to false (0).
+Supprime la liste des blocs conditionnels dont la condition a la valeur false (0).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,8 +23,8 @@ Suppresses listing of conditional blocks whose condition evaluates to false (0).
 
 ## <a name="remarks"></a>Notes
 
-Il s'agit de la valeur par défaut. Same as [.SFCOND](../../assembler/masm/dot-sfcond.md).
+Il s'agit de la valeur par défaut. Identique à [. SFCOND](../../assembler/masm/dot-sfcond.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

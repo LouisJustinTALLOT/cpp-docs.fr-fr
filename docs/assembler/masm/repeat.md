@@ -15,14 +15,14 @@ ms.locfileid: "74394331"
 ---
 # <a name="repeat"></a>REPEAT
 
-Marks a block that is to be repeated *expression* times. Same as [REPT](../../assembler/masm/rept.md).
+Marque un bloc qui doit *être répété.* Identique à [REPT](../../assembler/masm/rept.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **REPEAT** *expression*\
-> *statements*\
+> **Répéter** l' *expression*\
+> *instructions*\
 > **ENDM**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

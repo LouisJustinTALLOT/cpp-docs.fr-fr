@@ -13,14 +13,14 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399210"
 ---
-# <a name="code"></a>\@code
+# <a name="code"></a>code \@
 
-The name of the code segment (text macro).
+Nom du segment de code (macro de texte).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@code**
+> **code \@**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Symbols reference](symbols-reference.md)
+[Référence des symboles](symbols-reference.md)

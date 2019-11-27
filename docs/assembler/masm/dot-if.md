@@ -13,24 +13,24 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398225"
 ---
-# <a name="if-32-bit-masm"></a>.IF (32-bit MASM)
+# <a name="if-32-bit-masm"></a>. IF (MASM 32 bits)
 
-Generates code that tests *condition1* (for example, AX > 7) and executes the *statements* if that condition is true. (32-bit MASM only.)
+Génère du code qui teste l’erreur *condition1* (par exemple, ax > 7) et exécute les *instructions* si cette condition a la valeur true. (uniquement MASM 32 bits.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.IF** *condition1*\
-> *statements*\
-> ⟦ **.ELSEIF** *condition2*\
-> *statements*⟧\
-> ⟦ **.ELSE**\
-> *statements*⟧\
+> **. Si** *condition1*\
+> *instructions*\
+> ⟦ **. ELSEIF** *condition2*\
+> *instructions*⟧ \
+> ⟦ **. SINON**\
+> *instructions*⟧ \
 > **.ENDIF**
 
 ## <a name="remarks"></a>Notes
 
-If a [.ELSE](../../assembler/masm/dot-else.md) follows, its statements are executed if the original condition was false. Note that the conditions are evaluated at run time.
+Si un [. SINON](../../assembler/masm/dot-else.md) , ses instructions sont exécutées si la condition d’origine a la valeur false. Notez que les conditions sont évaluées au moment de l’exécution.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

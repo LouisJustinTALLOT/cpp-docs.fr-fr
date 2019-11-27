@@ -1,5 +1,5 @@
 ---
-title: Substitution operator (MASM)
+title: Substitution, opérateur (MASM)
 ms.date: 08/30/2018
 f1_keywords:
 - operator &&
@@ -14,14 +14,14 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396785"
 ---
-# <a name="substitution-operator-masm"></a>Substitution operator (MASM)
+# <a name="substitution-operator-masm"></a>Substitution, opérateur (MASM)
 
-Replaces *parameter* with its corresponding argument value.
+Remplace le *paramètre* par sa valeur d’argument correspondante.
 
 ## <a name="syntax"></a>Syntaxe
 
-> __&__ *parameter* __&__
+> __&__ __&__ de paramètres
 
 ## <a name="see-also"></a>Voir aussi
 
-[Operators reference](operators-reference.md)
+[Informations de référence sur les opérateurs](operators-reference.md)

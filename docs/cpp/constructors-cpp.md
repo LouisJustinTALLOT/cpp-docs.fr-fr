@@ -15,9 +15,9 @@ ms.locfileid: "74246617"
 ---
 # <a name="constructors-c"></a>Constructeurs (C++)
 
-To customize how class members are initialized, or to invoke functions when an object of your class is created, define a *constructor*. Un constructeur porte le même nom que la classe et n'a aucune valeur de retour. You can define as many overloaded constructors as needed to customize initialization in various ways. Typically, constructors have public accessibility so that code outside the class definition or inheritance hierarchy can create objects of the class. But you can also declare a constructor as **protected** or **private**.
+Pour personnaliser la façon dont les membres de classe sont initialisés, ou pour appeler des fonctions quand un objet de votre classe est créé, définissez un *constructeur*. Un constructeur porte le même nom que la classe et n'a aucune valeur de retour. Vous pouvez définir autant de constructeurs surchargés que nécessaire pour personnaliser l’initialisation de différentes façons. En règle générale, les constructeurs ont une accessibilité publique afin que le code en dehors de la définition de classe ou de la hiérarchie d’héritage puisse créer des objets de la classe. Toutefois, vous pouvez également déclarer un constructeur comme **protected** ou **Private**.
 
-Constructors can optionally take a member init list. This is a more efficient way to initialize class members than assigning values in the constructor body. The following example shows a class `Box` with three overloaded constructors. The last two use member init lists:
+Les constructeurs peuvent éventuellement prendre une liste init de membre. Il s’agit d’un moyen plus efficace d’initialiser les membres de classe que d’assigner des valeurs dans le corps du constructeur. L’exemple suivant montre une classe `Box` avec trois constructeurs surchargés. Les deux derniers utilisent les listes init des membres :
 
 ```cpp
 class Box {
@@ -46,7 +46,7 @@ private:
 };
 ```
 
-When you declare an instance of a class, the compiler chooses which constructor to invoke based on the rules of overload resolution:
+Quand vous déclarez une instance d’une classe, le compilateur choisit le constructeur à appeler en fonction des règles de résolution de surcharge :
 
 ```cpp
 int main()
@@ -62,15 +62,15 @@ int main()
 }
 ```
 
-- Constructors may be declared as **inline**, [explicit](#explicit_constructors), **friend** or [constexpr](#constexpr_constructors).
-- A constructor can initialize an object that has been declared as **const**, **volatile** or **const volatile**. The object becomes **const** after the constructor completes.
-- To define a constructor in an implementation file, give it a qualified name as with any other member function: `Box::Box(){...}`.
+- Les constructeurs peuvent être déclarés comme **inline**, [Explicit](#explicit_constructors), **Friend** ou [constexpr](#constexpr_constructors).
+- Un constructeur peut initialiser un objet qui a été déclaré comme **const**, **volatile** ou **const volatile**. L’objet devient **const** une fois le constructeur terminé.
+- Pour définir un constructeur dans un fichier d’implémentation, donnez-lui un nom qualifié comme avec toute autre fonction membre : `Box::Box(){...}`.
 
-## <a name="member_init_list"></a> Member initializer lists
+## <a name="member_init_list"></a>Listes d’initialiseurs de membres
 
-A constructor can optionally have a member initializer list, which initializes class members prior to execution of the constructor body. (Note that a member initializer list is not the same thing as an *initializer list* of type [std::initializer_list\<T>](../standard-library/initializer-list-class.md).)
+Un constructeur peut éventuellement avoir une liste d’initialiseurs de membre, qui initialise les membres de classe avant l’exécution du corps du constructeur. (Notez qu’une liste d’initialiseurs de membre n’est pas la même chose qu’une *liste d’initialiseurs* de type [std :: initializer_list\<t >](../standard-library/initializer-list-class.md).)
 
-Using a member initializer list is preferred over assigning values in the body of the constructor because it directly initializes the member. In the following example shows the member initializer list consists of all the **identifier(argument)** expressions after the colon:
+Il est préférable d’utiliser une liste d’initialiseurs de membre pour assigner des valeurs dans le corps du constructeur, car il initialise directement le membre. Dans l’exemple suivant, la liste d’initialiseurs de membre se compose de toutes les expressions d' **identificateur (argument)** après les deux-points :
 
 ```cpp
     Box(int width, int length, int height)
@@ -78,15 +78,15 @@ Using a member initializer list is preferred over assigning values in the body o
     {}
 ```
 
-The identifier must refer to a class member; it is initialized with the value of the argument. The argument can be one of the constructor parameters, a function call or a [std::initializer_list\<T>](../standard-library/initializer-list-class.md).
+L’identificateur doit faire référence à un membre de classe ; elle est initialisée avec la valeur de l’argument. L’argument peut être l’un des paramètres de constructeur, un appel de fonction ou un [std :: initializer_list\<t >](../standard-library/initializer-list-class.md).
 
-**const** members and members of reference type must be initialized in the member initializer list.
+les membres **const** et les membres du type référence doivent être initialisés dans la liste d’initialiseurs de membres.
 
-Calls to parameterized base class constructors should be made in the initializer list to ensure the base class is fully initialized prior to execution of the derived constructor.
+Les appels aux constructeurs de classes de base paramétrables doivent être effectués dans la liste d’initialiseurs pour garantir que la classe de base est entièrement initialisée avant l’exécution du constructeur dérivé.
 
-## <a name="default_constructors"></a> Default constructors
+## <a name="default_constructors"></a>Constructeurs par défaut
 
-*Default constructors* typically have no parameters, but they can have parameters with default values.
+Les *constructeurs par défaut* n’ont généralement pas de paramètres, mais ils peuvent avoir des paramètres avec des valeurs par défaut.
 
 ```cpp
 class Box {
@@ -99,7 +99,7 @@ public:
 }
 ```
 
-Default constructors are one of the [special member functions](special-member-functions.md). If no constructors are declared in a class, the compiler provides an implicit **inline** default constructor.
+Les constructeurs par défaut sont l’une des [fonctions membres spéciales](special-member-functions.md). Si aucun constructeur n’est déclaré dans une classe, le compilateur fournit un constructeur par défaut **inline** implicite.
 
 ```cpp
 #include <iostream>
@@ -120,18 +120,18 @@ int main() {
 }
 ```
 
-If you rely on an implicit default constructor, be sure to initialize members in the class definition, as shown in the previous example. Without those initializers, the members would be uninitialized and the Volume() call would produce a garbage value. In general, it is good practice to initialize members in this way even when not relying on an implicit default constructor.
+Si vous vous fiez à un constructeur par défaut implicite, veillez à initialiser les membres dans la définition de classe, comme indiqué dans l’exemple précédent. Sans ces initialiseurs, les membres ne sont pas initialisés et l’appel de volume () produit une valeur de garbage collection. En général, il est conseillé d’initialiser les membres de cette manière, même si vous ne vous fiez pas à un constructeur par défaut implicite.
 
-You can prevent the compiler from generating an implicit default constructor by defining it as [deleted](#explicitly_defaulted_and_deleted_constructors):
+Vous pouvez empêcher le compilateur de générer un constructeur par défaut implicite en le définissant comme [supprimé](#explicitly_defaulted_and_deleted_constructors):
 
 ```cpp
     // Default constructor
     Box() = delete;
 ```
 
-A compiler-generated default constructor will be defined as deleted if any class members are not default-constructible. For example, all members of class type, and their class-type members, must have a default constructor and destructors that are accessible. All data members of reference type, as well as **const** members must have a default member initializer.
+Un constructeur par défaut généré par le compilateur sera défini comme supprimé si tous les membres de la classe ne sont pas de type constructible par défaut. Par exemple, tous les membres de type classe et leurs membres de type classe doivent avoir un constructeur par défaut et des destructeurs qui sont accessibles. Tous les membres de données de type référence, ainsi que les membres **const** doivent avoir un initialiseur de membre par défaut.
 
-When you call a compiler-generated default constructor and try to use parentheses, a warning is issued:
+Quand vous appelez un constructeur par défaut généré par le compilateur et que vous essayez d’utiliser des parenthèses, un avertissement est émis :
 
 ```cpp
 class myclass{};
@@ -140,7 +140,7 @@ myclass mc();     // warning C4930: prototyped function not called (was a variab
 }
 ```
 
-Voici un exemple de problème de type « Most Vexing Parse ». Puisque l'exemple d'expression peut être interprété comme la déclaration d'une fonction ou comme l'appel d'un constructeur par défaut, et puisque les analyseurs C++ privilégient les déclarations sur d'autres choses, l'expression est traitée comme une déclaration de fonction. For more information, see [Most Vexing Parse](https://en.wikipedia.org/wiki/Most_vexing_parse).
+Voici un exemple de problème de type « Most Vexing Parse ». Puisque l'exemple d'expression peut être interprété comme la déclaration d'une fonction ou comme l'appel d'un constructeur par défaut, et puisque les analyseurs C++ privilégient les déclarations sur d'autres choses, l'expression est traitée comme une déclaration de fonction. Pour plus d’informations, consultez [la plupart des vexing parse](https://en.wikipedia.org/wiki/Most_vexing_parse).
 
 Si des constructeurs autres que ceux par défaut sont déclarés, le compilateur ne fournit pas de constructeur par défaut :
 
@@ -170,19 +170,19 @@ Si une classe n'a aucun constructeur par défaut, un tableau d'objets de cette c
 Box boxes[3]; // C2512: no appropriate default constructor available
 ```
 
-However, you can use a set of initializer lists to initialize an array of Box objects:
+Toutefois, vous pouvez utiliser un ensemble de listes d’initialiseurs pour initialiser un tableau d’objets Box :
 
 ```cpp
 Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 ```
 
-For more information, see [Initializers](initializers.md).
+Pour plus d’informations, consultez [initialiseurs](initializers.md).
 
-## <a name="copy_and_move_constructors"></a> Copy constructors
+## <a name="copy_and_move_constructors"></a>Constructeurs de copie
 
-A *copy constructor* initializes an object by copying the member values from an object of the same type. If your class members are all simple types such as scalar values, the compiler-generated copy constructor is sufficient and you do not need to define your own. If your class requires more complex initialization, then you need to implement a custom copy constructor. For example, if a class member is a pointer then you need to define a copy constructor to allocate new memory and copy the values from the other's pointed-to object. The compiler-generated copy constructor simply copies the pointer, so that the new pointer still points to the other's memory location.
+Un *constructeur de copie* Initialise un objet en copiant les valeurs de membre à partir d’un objet du même type. Si vos membres de classe sont tous des types simples tels que des valeurs scalaires, le constructeur de copie généré par le compilateur est suffisant et vous n’avez pas besoin de définir les vôtres. Si votre classe requiert une initialisation plus complexe, vous devez implémenter un constructeur de copie personnalisé. Par exemple, si un membre de classe est un pointeur, vous devez définir un constructeur de copie pour allouer de la nouvelle mémoire et copier les valeurs de l’objet pointé vers l’autre. Le constructeur de copie généré par le compilateur copie simplement le pointeur, de sorte que le nouveau pointeur pointe toujours vers l’emplacement de mémoire de l’autre.
 
-A copy constructor may have one of these signatures:
+Un constructeur de copie peut avoir l’une des signatures suivantes :
 
 ```cpp
     Box(Box& other); // Avoid if possible--allows modification of other.
@@ -194,25 +194,25 @@ A copy constructor may have one of these signatures:
     Box(Box& other, int i = 42, string label = "Box");
 ```
 
-When you define a copy constructor, you should also define a copy assignment operator (=). For more information, see [Assignment](assignment.md) and [Copy constructors and copy assignment operators](copy-constructors-and-copy-assignment-operators-cpp.md).
+Lorsque vous définissez un constructeur de copie, vous devez également définir un opérateur d’assignation de copie (=). Pour plus d’informations, consultez constructeurs d' [assignation](assignment.md) et de [copie et opérateurs d’assignation de copie](copy-constructors-and-copy-assignment-operators-cpp.md).
 
-You can prevent your object from being copied by defining the copy constructor as deleted:
+Vous pouvez empêcher la copie de votre objet en définissant le constructeur de copie comme supprimé :
 
 ```cpp
     Box (const Box& other) = delete;
 ```
 
-Attempting to copy the object produces error *C2280: attempting to reference a deleted function*.
+La tentative de copie de l’objet génère *une erreur C2280 : tentative de référencement d’une fonction supprimée*.
 
-## <a name="move_constructors"></a> Move constructors
+## <a name="move_constructors"></a>Constructeurs de déplacement
 
-A *move constructor* is a special member function that moves ownership of an existing object's data to a new variable without copying the original data. It takes an rvalue reference as its first parameter, and any additional parameters must have default values. Move constructors can significantly increase your program's efficiency when passing around large objects.
+Un *constructeur de déplacement* est une fonction membre spéciale qui déplace la propriété des données d’un objet existant vers une nouvelle variable sans copier les données d’origine. Elle prend une référence rvalue comme premier paramètre, et tous les paramètres supplémentaires doivent avoir des valeurs par défaut. Les constructeurs de déplacement peuvent augmenter considérablement l’efficacité de votre programme lors du passage autour d’objets volumineux.
 
 ```cpp
 Box(Box&& other);
 ```
 
-The compiler chooses a move constructor in certain situations where the object is being initialized by another object of the same type that is about to be destroyed and no longer needs its resources. The following example shows one case when a move constructor is selected by overload resolution. In the constructor that calls `get_Box()`, the returned value is an *xvalue* (eXpiring value). It is not assigned to any variable and is therefore about to go out of scope. To provide motivation for this example, let's give Box a large vector of strings that represent its contents. Rather than copying the vector and its strings, the move constructor "steals" it from the expiring value "box" so that the vector now belongs to the new object. The call to `std::move` is all that's needed because both `vector` and `string` classes implement their own move constructors.
+Le compilateur choisit un constructeur de déplacement dans certaines situations où l’objet est initialisé par un autre objet du même type qui va être détruit et n’a plus besoin de ses ressources. L’exemple suivant illustre un cas où un constructeur de déplacement est sélectionné par la résolution de surcharge. Dans le constructeur qui appelle `get_Box()`, la valeur retournée est un *xValue* (valeur d’expiration). Elle n’est assignée à aucune variable et est donc sur le point de sortir de la portée. Pour fournir de la motivation pour cet exemple, nous allons donner à Box un grand vecteur de chaînes qui représentent son contenu. Au lieu de copier le vecteur et ses chaînes, le constructeur de déplacement le « vole » de la valeur d’expiration « Box » afin que le vecteur appartienne à présent au nouvel objet. L’appel à `std::move` est tout ce qui est nécessaire, car les classes `vector` et `string` implémentent leurs propres constructeurs de déplacement.
 
 ```cpp
 #include <iostream>
@@ -279,15 +279,15 @@ int main()
 }
 ```
 
-If a class does not define a move constructor, the compiler generates an implicit one if there is no user-declared copy constructor, copy assignment operator, move assignment operator, or destructor. If no explicit or implicit move constructor is defined, operations that would otherwise use a move constructor use the copy constructor instead. If a class declares a move constructor or move assignment operator, the implicitly declared copy constructor is defined as deleted.
+Si une classe ne définit pas de constructeur de déplacement, le compilateur en génère un implicite s’il n’existe aucun constructeur de copie déclaré par l’utilisateur, opérateur d’assignation de copie, opérateur d’assignation de déplacement ou destructeur. Si aucun constructeur de déplacement explicite ou implicite n’est défini, les opérations qui, autrement, utiliseraient un constructeur de déplacement, utilisent le constructeur de copie à la place. Si une classe déclare un constructeur de déplacement ou un opérateur d’assignation de déplacement, le constructeur de copie implicitement déclaré est défini comme supprimé.
 
-An implicitly declared move constructor is defined as deleted if any members that are class types lack a destructor or the compiler cannot determine which constructor to use for the move operation.
+Un constructeur de déplacement déclaré implicitement est défini comme supprimé si tous les membres qui sont des types de classe n’ont pas de destructeur ou si le compilateur ne peut pas déterminer le constructeur à utiliser pour l’opération de déplacement.
 
-For more information about how to write a non-trivial move constructor, see [Move Constructors and Move Assignment Operators (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
+Pour plus d’informations sur la façon d’écrire un constructeur de déplacement non trivial, consultez [constructeurs de déplacement et opérateurs d'C++assignation de déplacement ()](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
-## <a name="explicitly_defaulted_and_deleted_constructors"></a> Explicitly defaulted and deleted constructors
+## <a name="explicitly_defaulted_and_deleted_constructors"></a>Constructeurs explicitement par défaut et supprimés
 
-You can explicitly *default* copy constructors, default constructors, move constructors, copy assignment operators, move assignment operators, and destructors. You can explicitly *delete* all of the special member functions.
+Vous pouvez explicitement définir *par défaut* des constructeurs de copie, des constructeurs par défaut, des constructeurs de déplacement, des opérateurs d’assignation de copie, des opérateurs d’assignation de déplacement et des destructeurs. Vous pouvez *supprimer* de manière explicite toutes les fonctions membres spéciales.
 
 ```cpp
 class Box
@@ -302,23 +302,23 @@ public:
 };
 ```
 
-For more information, see [Explicitly Defaulted and Deleted Functions](../cpp/explicitly-defaulted-and-deleted-functions.md).
+Pour plus d’informations, consultez [fonctions explicitement supprimées et par défaut](../cpp/explicitly-defaulted-and-deleted-functions.md).
 
-## <a name="constexpr_constructors"></a> constexpr constructors
+## <a name="constexpr_constructors"></a>constructeurs constexpr
 
-A constructor may be declared as [constexpr](constexpr-cpp.md) if
+Un constructeur peut être déclaré comme [constexpr](constexpr-cpp.md) si
 
-- it is either declared as defaulted or else it satisfies all the conditions for [constexpr functions](constexpr-cpp.md#constexpr_functions) in general;
-- the class has no virtual base classes;
-- each of the parameters is a [literal type](trivial-standard-layout-and-pod-types.md#literal_types);
-- the body is not a function try-block;
-- all non-static data members and base class sub-objects are initialized;
-- if the class is (a) a union having variant members, or (b) has anonymous unions, only one of the union members is initialized;
-- every non-static data member of class type, and all base-class sub-objects have a constexpr constructor
+- elle est déclarée comme étant définie par défaut ou elle répond à toutes les conditions pour les [fonctions constexpr](constexpr-cpp.md#constexpr_functions) en général ;
+- la classe n’a aucune classe de base virtuelle ;
+- chacun des paramètres est un [type littéral](trivial-standard-layout-and-pod-types.md#literal_types);
+- le corps n’est pas un bloc try de fonction ;
+- tous les membres de données non statiques et les sous-objets de classe de base sont initialisés ;
+- Si la classe est (a) une Union ayant des membres variants, ou (b) a des unions anonymes, seul l’un des membres de l’Union est initialisé ;
+- chaque membre de données non statique de type classe et tous les sous-objets de la classe de base ont un constructeur constexpr
 
-## <a name="init_list_constructors"></a> Initializer list constructors
+## <a name="init_list_constructors"></a>Constructeurs de liste d’initialiseurs
 
-If a constructor takes a [std::initializer_list\<T\>](../standard-library/initializer-list-class.md) as its parameter, and any other parameters have default arguments, that constructor will be selected in overload resolution when the class is instantiated through direct initialization. You can use the initializer_list to initialize any member that can accept it. For example, assume the Box class (shown previously) has a `std::vector<string>` member `m_contents`. You can provide a constructor like this:
+Si un constructeur prend un [std :: initializer_list\<t\>](../standard-library/initializer-list-class.md) comme paramètre et que tous les autres paramètres ont des arguments par défaut, ce constructeur est sélectionné dans la résolution de surcharge lorsque la classe est instanciée via une initialisation directe. Vous pouvez utiliser la initializer_list pour initialiser tout membre qui peut l’accepter. Par exemple, supposons que la classe Box (indiquée précédemment) a un membre `std::vector<string>` `m_contents`. Vous pouvez fournir un constructeur comme suit :
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -326,14 +326,14 @@ If a constructor takes a [std::initializer_list\<T\>](../standard-library/initia
 {}
 ```
 
-And then create Box objects like this:
+Puis créez des objets Box comme suit :
 
 ```cpp
     Box b{ "apples", "oranges", "pears" }; // or ...
     Box b2(initializer_list<string> { "bread", "cheese", "wine" }, 2, 4, 6);
 ```
 
-## <a name="explicit_constructors"></a> Explicit constructors
+## <a name="explicit_constructors"></a>Constructeurs explicites
 
 Si une classe a un constructeur avec un paramètre unique, ou si tous les paramètres sauf un ont une valeur par défaut, le type de paramètre peut être implicitement converti en type de classe. Par exemple, si la classe `Box` a un constructeur semblable au suivant :
 
@@ -363,15 +363,15 @@ private:
     ShippingOrder so(42, 10.8);
 ```
 
-Ces conversions peuvent être utiles dans certains cas mais, le plus souvent, elles peuvent entraîner des erreurs subtiles mais graves dans votre code. As a general rule, you should use the **explicit** keyword on a constructor (and user-defined operators) to prevent this kind of implicit type conversion:
+Ces conversions peuvent être utiles dans certains cas mais, le plus souvent, elles peuvent entraîner des erreurs subtiles mais graves dans votre code. En règle générale, vous devez utiliser le mot clé **Explicit** sur un constructeur (et les opérateurs définis par l’utilisateur) pour éviter ce type de conversion de type implicite :
 
 ```cpp
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
-Si le constructeur est explicite, cette ligne entraîne une erreur du compilateur : `ShippingOrder so(42, 10.8);`.  For more information, see [User-Defined Type Conversions](../cpp/user-defined-type-conversions-cpp.md).
+Si le constructeur est explicite, cette ligne entraîne une erreur du compilateur : `ShippingOrder so(42, 10.8);`.  Pour plus d’informations, consultez [conversions de types définis par l’utilisateur](../cpp/user-defined-type-conversions-cpp.md).
 
-## <a name="order_of_construction"></a> Order of construction
+## <a name="order_of_construction"></a>Ordre de construction
 
 Un constructeur effectue son travail dans l'ordre suivant :
 
@@ -435,7 +435,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-Un constructeur de classe dérivée appelle toujours un constructeur de classe de base, afin de pouvoir s'appuyer sur des classes de base complètement construites avant d'effectuer tout travail supplémentaire. The base class constructors are called in order of derivation—for example, if `ClassA` is derived from `ClassB`, which is derived from `ClassC`, the `ClassC` constructor is called first, then the `ClassB` constructor, then the `ClassA` constructor.
+Un constructeur de classe dérivée appelle toujours un constructeur de classe de base, afin de pouvoir s'appuyer sur des classes de base complètement construites avant d'effectuer tout travail supplémentaire. Les constructeurs de classe de base sont appelés par ordre de dérivation, par exemple, si `ClassA` est dérivée de `ClassB`, qui est dérivée de `ClassC`, le constructeur `ClassC` est appelé en premier, puis le constructeur `ClassB`, puis le constructeur `ClassA`.
 
 Si une classe de base n'a pas de constructeur par défaut, vous devez fournir les paramètres du constructeur de classe de base dans le constructeur de classe dérivée :
 
@@ -478,7 +478,7 @@ Si un constructeur lève une exception, l'ordre de destruction est l'inverse de 
 
 1. Si le constructeur ne délègue pas, tous les membres et objets de classe de base entièrement construits sont détruits. Toutefois, l'objet lui-même n'étant pas complètement construit, le destructeur n'est pas exécuté.
 
-### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Constructors for classes that have multiple inheritance
+### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Constructeurs pour les classes ayant un héritage multiple
 
 Si une classe est dérivée de plusieurs classes de base, les constructeurs de classe de base sont appelés dans l'ordre dans lequel ils sont répertoriés dans la déclaration de la classe dérivée :
 
@@ -520,9 +520,9 @@ BaseClass3 ctor
 DerivedClass ctor
 ```
 
-## <a name="delegating_constructors"></a> Delegating constructors
+## <a name="delegating_constructors"></a>Constructeurs de délégation
 
-A *delegating constructor* calls a different constructor in the same class to do some of the work of initialization. This is useful when you have multiple constructors that all have to perform similar work. You can write the main logic in one constructor and invoke it from others. In the following trivial example, Box(int) delegates its work to Box(int,int,int):
+Un *constructeur de délégation* appelle un constructeur différent dans la même classe pour effectuer une partie du travail d’initialisation. Cela est utile lorsque vous avez plusieurs constructeurs qui doivent tous effectuer un travail similaire. Vous pouvez écrire la logique principale dans un constructeur et l’appeler à partir d’autres. Dans l’exemple trivial suivant, Box (int) délègue son travail à Box (int, int, int) :
 
 ```cpp
 class Box {
@@ -542,11 +542,11 @@ public:
 };
 ```
 
-L'objet créé par les constructeurs est entièrement initialisé dès qu'un constructeur est terminé. For more information, see [Delegating Constructors](../cpp/delegating-constructors.md).
+L'objet créé par les constructeurs est entièrement initialisé dès qu'un constructeur est terminé. Pour plus d’informations, consultez [délégation de constructeurs](../cpp/delegating-constructors.md).
 
-## <a name="inheriting_constructors"></a> Inheriting constructors (C++11)
+## <a name="inheriting_constructors"></a>Héritage des constructeurs (C++ 11)
 
-A derived class can inherit the constructors from a direct base class by using a **using** declaration as shown in the following example:
+Une classe dérivée peut hériter des constructeurs d’une classe de base directe à l’aide d’une déclaration **using** , comme indiqué dans l’exemple suivant :
 
 ```cpp
 #include <iostream>
@@ -597,7 +597,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 and later**: The **using** statement in **/std:c++17** mode brings into scope all constructors from the base class except those that have an identical signature to constructors in the derived class. En général, il est préférable d'utiliser les constructeurs d'héritage quand la classe dérivée ne déclare aucun nouveau constructeur ni aucune nouvelle donnée membre. See also [Improvements in Visual Studio 2017 version 15.7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
+**Visual Studio 2017 et versions ultérieures**: l’instruction **using** dans **/std : le mode c++ 17** met en portée tous les constructeurs de la classe de base, à l’exception de ceux qui ont une signature identique aux constructeurs dans la classe dérivée. En général, il est préférable d'utiliser les constructeurs d'héritage quand la classe dérivée ne déclare aucun nouveau constructeur ni aucune nouvelle donnée membre. Consultez également [améliorations dans Visual Studio 2017 version 15,7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
 
 ::: moniker-end
 
@@ -613,9 +613,9 @@ class Derived : T {
 
 Une classe dérivée ne peut pas hériter de plusieurs classes de base si ces classes de base possèdent des constructeurs qui ont une signature identique.
 
-## <a name="constructors_in_composite_classes"></a> Constructors and composite classes
+## <a name="constructors_in_composite_classes"></a>Constructeurs et classes composites
 
-Classes that contain class-type members are known as *composite classes*. Lorsqu'un membre de type classe d'une classe composite est créé, le constructeur est appelé avant le propre constructeur de la classe. Lorsqu'une classe contenue n'a pas de constructeur par défaut, vous devez utiliser une liste d'initialisation dans le constructeur de la classe composite. Dans l'exemple `StorageBox` précédent, si vous remplacez le type de la variable membre `m_label` par une nouvelle classe `Label`, vous devez appeler le constructeur de classe de base et initialiser la variable `m_label` dans le constructeur `StorageBox` :
+Les classes qui contiennent des membres de type classe sont appelées *classes composites*. Lorsqu'un membre de type classe d'une classe composite est créé, le constructeur est appelé avant le propre constructeur de la classe. Lorsqu'une classe contenue n'a pas de constructeur par défaut, vous devez utiliser une liste d'initialisation dans le constructeur de la classe composite. Dans l'exemple `StorageBox` précédent, si vous remplacez le type de la variable membre `m_label` par une nouvelle classe `Label`, vous devez appeler le constructeur de classe de base et initialiser la variable `m_label` dans le constructeur `StorageBox` :
 
 ```cpp
 class Label {
@@ -648,10 +648,10 @@ int main(){
 
 ## <a name="in-this-section"></a>Dans cette section
 
-- [Copy constructors and copy assignment operators](copy-constructors-and-copy-assignment-operators-cpp.md)
-- [Move constructors and move assignment operators](move-constructors-and-move-assignment-operators-cpp.md)
-- [Delegating constructors](delegating-constructors.md)
+- [Constructeurs de copie et opérateurs d’assignation de copie](copy-constructors-and-copy-assignment-operators-cpp.md)
+- [Constructeurs de déplacement et opérateurs d’assignation de déplacement](move-constructors-and-move-assignment-operators-cpp.md)
+- [Constructeurs de délégation](delegating-constructors.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classes and structs](classes-and-structs-cpp.md)
+[Classes et structs](classes-and-structs-cpp.md)

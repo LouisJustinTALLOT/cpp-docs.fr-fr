@@ -17,12 +17,12 @@ ms.locfileid: "74395878"
 ---
 # <a name="operator-sign"></a>SIGN?, opérateur
 
-Status of sign flag. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+État de l’indicateur de signe. Utilisé uniquement dans [. Si](../../assembler/masm/dot-if.md), [. WHILe](../../assembler/masm/dot-while.md), ou [. RÉPÈTE](../../assembler/masm/dot-repeat.md) les blocs et les évalue au moment de l’exécution, et non au moment de l’assembly.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **SIGN?**
+> **EXPÉDITEUR?**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Operators reference](operators-reference.md)
+[Informations de référence sur les opérateurs](operators-reference.md)

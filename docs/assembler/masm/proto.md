@@ -15,38 +15,38 @@ ms.locfileid: "74394756"
 ---
 # <a name="proto"></a>PROTO
 
-Prototypes a function or procedure. You can call the function prototyped by the PROTO directive by using the [INVOKE](invoke.md) directive.
+Prototype une fonction ou une procédure. Vous pouvez appeler la fonction prototypée par la directive PROTO à l’aide de la directive [Invoke](invoke.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
-> *label* **PROTO** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦ __,__ ⟦*parameter*⟧ __:__ *tag* ...⟧
+> *étiquette* **proto** ⟦*distance*⟧ ⟦*Language-type*⟧ ⟦ __,__ ⟦*paramètre*⟧ __:__ *tag* ... ⟧
 
 ### <a name="parameters"></a>Paramètres
 
-*label*\
-The name of the prototyped function.
+*étiquette*\
+Nom de la fonction prototypée.
 
 *distance*\
-(Optional) Used in 16-bit memory models to override the default and indicate **NEAR** or **FAR** calls.
+Facultatif Utilisé dans les modèles de mémoire 16 bits pour remplacer la valeur par défaut et indiquer des appels **proches** ou **éloignés** .
 
-*language-type*\
-(Optional) Sets the calling and naming convention for procedures and public symbols. Supported conventions are:
+*Language-type*\
+Facultatif Définit la Convention d’appel et d’affectation des noms pour les procédures et les symboles publics. Les conventions prises en charge sont les suivantes :
 
-- 32-bit **FLAT** model: **C**, **STDCALL**
+- modèle **plat** 32 bits : **C**, **StdCall**
 
-- 16-bit models: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
+- modèles 16 bits : **C**, **Basic**, **Fortran**, **Pascal**, **syscall**, **StdCall**
 
-*parameter*\
-The optional name for a function parameter.
+\ de *paramètres*
+Nom facultatif d’un paramètre de fonction.
 
-*tag*\
-The type of a function parameter.
+\ de *balise*
+Type d’un paramètre de fonction.
 
-The *parameter* and *tag* parameters may appear multiple times, once for each passed argument.
+Le *paramètre* et les paramètres de *balise* peuvent apparaître plusieurs fois, une fois pour chaque argument passé.
 
 ## <a name="example"></a>Exemple
 
-This sample shows a **PROTO** declaration for a function named `addup3` that uses a **NEAR** call to override the 16-bit model default for procedure calls, and uses the **C** calling convention for stack parameters and return values. It takes two arguments, a **WORD** and a **VARARG**.
+Cet exemple montre une déclaration **proto** pour une fonction nommée `addup3` qui utilise un appel **near** pour remplacer la valeur par défaut du modèle 16 bits pour les appels de procédure et utilise la Convention d’appel **C** pour les paramètres de la pile et les valeurs de retour. Il accepte deux arguments, un **mot** et un **vararg**.
 
 ```MASM
 addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
@@ -54,5 +54,5 @@ addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives Reference](directives-reference.md)\
-[.MODEL Reference](dot-model.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[. Référence du modèle](dot-model.md)

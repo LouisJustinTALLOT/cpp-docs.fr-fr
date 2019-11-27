@@ -36,8 +36,8 @@ Un fichier hint contient des indicateurs personnalisables par l’utilisateur, q
 
 > [!IMPORTANT]
 > Si vous modifiez ou ajoutez un fichier hint, vous devez effectuer des étapes supplémentaires pour que les modifications prennent effet :
-> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
-> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
+> - Dans les versions antérieures à Visual Studio 2017 version 15,6 : supprimez le fichier. sdf et/ou le fichier VC. db dans la solution pour toutes les modifications.
+> - Dans Visual Studio 2017 version 15,6 et versions ultérieures : fermez et rouvrez la solution après avoir ajouté de nouveaux fichiers hint.
 
 ## <a name="scenario"></a>Scénario
 
@@ -92,13 +92,13 @@ Il existe deux catégories de macros qui perturbent l’analyseur :
 
 - Il existe une Action rapide pour créer un fichier hint qui inclut la macro en surbrillance ou il en existe déjà un pour y ajouter la macro.
 
-![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
+![Macro en surbrillance.](media/hint-squiggle-and-actions.png "Indice tilde et actions rapides")
 
 Après l’exécution de l’une des Actions rapides, l’analyseur effectue une nouvelle analyse des fichiers affectés par le fichier hint.
 
 Par défaut, la macro à problème est mise en surbrillance comme suggestion. La mise en surbrillance peut être remplacée par quelque chose de plus notable, par exemple une ligne ondulée (tilde) rouge ou verte. Utilisez l’option **Macros dans les régions ignorées par la navigation** dans la section **Tildes du code** sous **Outils** > **Options**  >  **Éditeur de texte** > **C/C++**  > **Vue**.
 
-![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
+![Macros dans l’option zones de navigation ignorées.](media/skipped-regions-squiggle-option.png "Option de tilde de régions ignorée.")
 
 ## <a name="display-browsing-database-errors"></a>Afficher les erreurs de la base de données de navigation
 
@@ -166,7 +166,7 @@ L’illustration montre certains des répertoires physiques d’un projet Visual
 
 ### <a name="hint-file-directories"></a>Répertoires des fichiers hint
 
-![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
+![Répertoires de&#45;fichiers Hint communs et spécifiques au projet.](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Répertoires et contenu des fichiers hint
 

@@ -13,14 +13,14 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398878"
 ---
-# <a name="wordsize"></a>\@WordSize
+# <a name="wordsize"></a>Mot-\@
 
-Two for a 16-bit segment or four for a 32-bit segment (numeric equate).
+Deux pour un segment 16 bits ou quatre pour un segment 32 bits (équivalent numérique).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@WordSize**
+> **Mot-\@**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Symbols reference](symbols-reference.md)
+[Référence des symboles](symbols-reference.md)

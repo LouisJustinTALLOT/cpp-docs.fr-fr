@@ -43,8 +43,8 @@ Une `configuration` a les propriétés suivantes :
 - `codeAnalysisRuleset` : spécifie l’ensemble de règles à utiliser lors de l’exécution de l’analyse du code. Il peut s’agir d’un chemin complet ou du nom d’un fichier d’ensemble de règles installé par Visual Studio.
 - `configurationType` : spécifie la configuration du type de build pour le générateur sélectionné. Possibilités :
 
-  - Déboguer
-  - Édition
+  - Débogage
+  - Version finale
   - MinSizeRel
   - RelWithDebInfo
   
@@ -83,8 +83,8 @@ Quand la configuration active spécifie un générateur Visual Studio, MSBuild.e
 
 - `configurationType` : spécifie la configuration du type de build pour le générateur sélectionné. Possibilités :
 
-  - Déboguer
-  - Édition
+  - Débogage
+  - Version finale
   - MinSizeRel
   - RelWithDebInfo
  

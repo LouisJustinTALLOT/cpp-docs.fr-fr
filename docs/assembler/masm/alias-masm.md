@@ -15,19 +15,19 @@ ms.locfileid: "74399293"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
 
-The **ALIAS** directive creates an alternate name for a function.  This lets you create multiple names for a function, or create libraries that allow the linker (LINK.exe) to map an old function to a new function.
+La directive d' **alias** crée un autre nom pour une fonction.  Cela vous permet de créer plusieurs noms pour une fonction, ou de créer des bibliothèques qui permettent à l’éditeur de liens (LINK. exe) de mapper une ancienne fonction à une nouvelle fonction.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **ALIAS \<** _alias_ **> = \<** _actual-name_ **>**
+> **Alias \<** _alias_ **> = \<** _nom réel_ **>**
 
 #### <a name="parameters"></a>Paramètres
 
-*actual-name*\
-The actual name of the function or procedure.  The angle brackets are required.
+*nom réel*\
+Nom réel de la fonction ou de la procédure.  Les chevrons sont requis.
 
 *alias*\
-The alternate or alias name.  The angle brackets are required.
+Autre nom ou alias.  Les chevrons sont requis.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -15,7 +15,7 @@ ms.locfileid: "74397175"
 ---
 # <a name="mmword"></a>MMWORD
 
-Used for 64-bit multimedia operands with MMX and SSE (XMM) instructions.
+Utilisé pour les opérandes multimédias 64 bits avec des instructions MMX et SSE (XMM).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,15 +23,15 @@ Used for 64-bit multimedia operands with MMX and SSE (XMM) instructions.
 
 ## <a name="remarks"></a>Notes
 
-**MMWORD** is a type.  Prior to **MMWORD** being added to MASM, equivalent functionality could have been achieved with:
+**MMWORD** est un type.  Avant l’ajout de **MMWORD** à MASM, des fonctionnalités équivalentes pouvaient être obtenues avec :
 
 ```asm
     mov mm0, qword ptr [ebx]
 ```
 
-While both instructions work on 64-bit operands, **QWORD** is the type for 64-bit unsigned integers and **MMWORD** is the type for a 64-bit multimedia value.
+Bien que les deux instructions fonctionnent sur des opérandes 64 bits, **QWord** est le type des entiers non signés 64 bits et **MMWORD** est le type d’une valeur multimédia de 64 bits.
 
-**MMWORD** is intended to represent the same type as [__m64](../../cpp/m64.md).
+**MMWORD** est conçu pour représenter le même type que [__m64](../../cpp/m64.md).
 
 ## <a name="example"></a>Exemple
 

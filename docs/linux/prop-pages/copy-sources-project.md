@@ -21,7 +21,7 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 
 Les propriétés définies dans cette page de propriétés s’appliquent à tous les fichiers contenus dans le projet, à l’exception de ceux pour lesquels des propriétés de niveau fichier sont définies.
 
-Les | Description
+Propriété | Description
 --- | ---
 Sources à copier | Spécifie les sources devant être copiées sur le système distant. Tout changement apporté à cette liste peut entraîner un décalage ou des répercussions dans la structure des répertoires où sont copiés les fichiers sur le système distant.
 Copier les sources | Spécifie si les sources doivent être copiées sur le système distant.

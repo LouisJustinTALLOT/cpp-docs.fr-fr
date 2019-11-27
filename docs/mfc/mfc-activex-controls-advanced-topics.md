@@ -21,7 +21,7 @@ ms.locfileid: "74305386"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Contrôles ActiveX MFC : rubriques avancées
 
-Cet article traite des sujets avancés relatifs au développement de contrôles ActiveX. Elles incluent notamment les suivantes :
+Cet article traite des sujets avancés relatifs au développement de contrôles ActiveX. Elles incluent notamment :
 
 - [Utilisation des classes de base de données dans les contrôles ActiveX](#_core_using_database_classes_in_activex_controls)
 
@@ -43,7 +43,7 @@ Cet article traite des sujets avancés relatifs au développement de contrôles 
 Pour obtenir une vue d’ensemble générale des classes de base de données MFC, consultez [classes de base de données MFC (DAO et ODBC)](../data/mfc-database-classes-odbc-and-dao.md). L’article présente à la fois les classes ODBC MFC et les classes DAO MFC et vous donne plus de détails sur les deux.
 
 > [!NOTE]
-> DAO est pris en charge via Office 2013. DAO 3,6 est la version finale et est considéré comme obsolète. L’environnement C++ visuel et les assistants ne prennent pas en charge DAO (bien que les classes DAO soient incluses et vous puissiez toujours les utiliser). Microsoft vous recommande d'utiliser les [modèles OLE DB](../data/oledb/ole-db-programming.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour vos nouveaux projets. Vous ne devez utiliser que DAO pour gérer les applications existantes.
+> DAO est pris en charge via Office 2013. DAO 3,6 est la version finale et est considéré comme obsolète. L’environnement C++ visuel et les assistants ne prennent pas en charge DAO (bien que les classes DAO soient incluses et vous puissiez toujours les utiliser). Microsoft vous recommande d’utiliser les [modèles OLE DB](../data/oledb/ole-db-programming.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour les nouveaux projets. Vous ne devez utiliser que DAO pour gérer les applications existantes.
 
 ##  <a name="_core_implementing_a_parameterized_property"></a>Implémentation d’une propriété paramétrable
 
@@ -150,7 +150,7 @@ Pour indiquer le type d’erreur qui s’est produit, le contrôle doit passer u
 |CTL_E_SEARCHTEXTNOTFOUND|Texte recherché introuvable|
 |CTL_E_REPLACEMENTSTOOLONG|Remplacements trop longs|
 
-Si nécessaire, utilisez la macro CUSTOM_CTL_SCODE pour définir un code d’erreur personnalisé pour une condition qui n’est pas couverte par l’un des codes standard. Le paramètre de cette macro doit être un entier compris entre 1000 et 32767 inclus. Par exemple :
+Si nécessaire, utilisez la macro CUSTOM_CTL_SCODE pour définir un code d’erreur personnalisé pour une condition qui n’est pas couverte par l’un des codes standard. Le paramètre de cette macro doit être un entier compris entre 1000 et 32767 inclus. Exemple :
 
 [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]
 

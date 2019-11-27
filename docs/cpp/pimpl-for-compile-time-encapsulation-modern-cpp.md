@@ -12,19 +12,19 @@ ms.locfileid: "74245174"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl pour l'encapsulation au moment de la compilation (Modern C++)
 
-The *pimpl idiom* is a modern C++ technique to hide implementation, to minimize coupling, and to separate interfaces. Pimpl is short for "pointer to implementation." You may already be familiar with the concept but know it by other names like Cheshire Cat or Compiler Firewall idiom.
+L' *idiome PIMPL* est une technique C++ moderne pour masquer l’implémentation, réduire le couplage et séparer les interfaces. PIMPL est short pour « pointeur vers implémentation ». Vous vous êtes peut-être déjà familiarisé avec le concept, mais vous le connaissez par d’autres noms tels que Cheshire Cat ou un idiome de pare-feu du compilateur.
 
-## <a name="why-use-pimpl"></a>Why use pimpl?
+## <a name="why-use-pimpl"></a>Pourquoi utiliser PIMPL ?
 
-Here's how the pimpl idiom can improve the software development lifecycle:
+Voici comment l’idiome PIMPL peut améliorer le cycle de vie du développement de logiciels :
 
-- Minimization of compilation dependencies.
+- Réduction des dépendances de compilation.
 
-- Separation of interface and implementation.
+- Séparation de l’interface et de l’implémentation.
 
-- Portability.
+- Portabilité.
 
-## <a name="pimpl-header"></a>Pimpl header
+## <a name="pimpl-header"></a>En-tête PIMPL
 
 ```cpp
 // my_class.h
@@ -35,11 +35,11 @@ private:
 };
 ```
 
-The pimpl idiom avoids rebuild cascades and brittle object layouts. It's well suited for (transitively) popular types.
+L’idiome PIMPL évite les régénération des cascades et des dispositions d’objets fragiles. Il convient parfaitement aux types populaires (transitivement).
 
-## <a name="pimpl-implementation"></a>Pimpl implementation
+## <a name="pimpl-implementation"></a>Implémentation de PIMPL
 
-Define the `impl` class in the .cpp file.
+Définissez la classe `impl` dans le fichier. cpp.
 
 ```cpp
 // my_class.cpp
@@ -55,10 +55,10 @@ my_class::my_class(): pimpl( new impl )
 
 ## <a name="best-practices"></a>meilleures pratiques recommandées.
 
-Consider whether to add support for non-throwing swap specialization.
+Déterminez s’il faut ajouter la prise en charge de la spécialisation d’échange sans levée.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Bienvenue dansC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)
+[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

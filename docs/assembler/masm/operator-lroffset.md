@@ -17,12 +17,12 @@ ms.locfileid: "74396693"
 ---
 # <a name="operator-lroffset"></a>LROFFSET, opérateur
 
-Returns the offset of *expression*. Same as **OFFSET**, but it generates a loader resolved offset, which allows Windows to relocate code segments.
+Retourne le décalage de l' *expression*. Identique au **décalage**, mais génère un décalage résolu du chargeur, ce qui permet à Windows de déplacer les segments de code.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **LROFFSET** *expression*
+> *Expression* lroffset,
 
 ## <a name="see-also"></a>Voir aussi
 
-[Operators reference](operators-reference.md)
+[Informations de référence sur les opérateurs](operators-reference.md)

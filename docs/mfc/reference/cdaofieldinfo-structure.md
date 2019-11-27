@@ -152,13 +152,13 @@ Outre son utilisation pour l’examen des propriétés de l’objet, vous pouvez
 
 Les informations récupérées par la fonction membre `GetFieldInfo` (de la classe qui contient le champ) sont stockées dans une structure `CDaoFieldInfo`. Appelez la fonction membre `GetFieldInfo` de l’objet conteneur dans dont la collection de champs est stockée. `CDaoFieldInfo` définit également une fonction membre `Dump` dans les versions Debug. Vous pouvez utiliser `Dump` pour vider le contenu d’un objet `CDaoFieldInfo`.
 
-## <a name="requirements"></a>Conditions requises
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao. h
 
 ## <a name="see-also"></a>Voir aussi
 
 [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
-[CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
-[CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
+[CDaoTableDef :: GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
+[CDaoRecordset :: GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
+[CDaoQueryDef :: GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)

@@ -15,12 +15,12 @@ ms.locfileid: "74395715"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
 
-Saves part or all of the current *context*: segment register assumes, radix value, listing and cref flags, or processor/coprocessor values. The *context* can be **ASSUMES**, **RADIX**, **LISTING**, **CPU**, or **ALL**.
+Enregistre tout ou partie du *contexte*actuel : le registre des segments part des hypothèses, de la valeur de base, des indicateurs de liste et CREF ou des valeurs de processeur/coprocesseur. Le *contexte* peut être **supposé**, **base**, **répertorier**, **UC**ou **tout**.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **PUSHCONTEXT** *context*
+> *Contexte* PUSHCONTEXT
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

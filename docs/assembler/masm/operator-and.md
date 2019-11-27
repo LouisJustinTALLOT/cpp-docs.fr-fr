@@ -17,11 +17,11 @@ ms.locfileid: "74397109"
 ---
 # <a name="operator-and"></a>AND, opérateur
 
-Returns the result of a bitwise AND operation for *expression1* and *expression2*.
+Retourne le résultat d’une opération and au niveau du bit pour *expression1* et *Expression2*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* **AND** *expression2*
+> *expression1* **et** *Expression2*
 
 ## <a name="see-also"></a>Voir aussi
 

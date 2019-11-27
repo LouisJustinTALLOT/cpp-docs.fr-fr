@@ -13,9 +13,9 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397942"
 ---
-# <a name="seq-32-bit-masm"></a>.SEQ (32-bit MASM)
+# <a name="seq-32-bit-masm"></a>. SEQ (MASM 32 bits)
 
-Orders segments sequentially (the default order). (32-bit MASM only.)
+Trie les segments de manière séquentielle (ordre par défaut). (uniquement MASM 32 bits.)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ Orders segments sequentially (the default order). (32-bit MASM only.)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

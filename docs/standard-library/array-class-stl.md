@@ -140,7 +140,7 @@ class array;
 |Fonction membre|Description|
 |-|-|
 |[array](#array)|Construit un objet tableau.|
-|[assign](#assign)|(Obsolete. Use `fill`.) Replaces all elements.|
+|[assign](#assign)|Périmé. Utilisez `fill`.) Remplace tous les éléments.|
 |[at](#at)|Accède à un élément à une position spécifiée.|
 |[back](#back)|Accède au dernier élément.|
 |[begin](#begin)|Désigne le début de la séquence contrôlée.|
@@ -159,10 +159,10 @@ class array;
 |[size](#size)|Compte le nombre d'éléments.|
 |[swap](#swap)|Échange le contenu de deux conteneurs.|
 
-|opérateur|Description|
+|Opérateur|Description|
 |-|-|
 |[array::operator=](#op_eq)|Remplace la séquence contrôlée.|
-|[array::operator\[\]](#op_at)|Accède à un élément à une position spécifiée.|
+|[Tableau :: Operator\[\]](#op_at)|Accède à un élément à une position spécifiée.|
 
 ## <a name="remarks"></a>Notes
 
@@ -174,7 +174,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 crée l'objet `ai` qui contient quatre valeurs entières, initialise les trois premiers éléments respectivement aux valeurs 1, 2 et 3, et initialise le quatrième élément à la valeur 0.
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<array>
 
@@ -192,7 +192,7 @@ array(const array& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*\
+\ *droit*
 Objet ou plage à insérer.
 
 ### <a name="remarks"></a>Notes
@@ -255,12 +255,12 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*off*\
+*désactivé*\
 Position de l'élément auquel accéder.
 
 ### <a name="remarks"></a>Notes
 
-The member functions return a reference to the element of the controlled sequence at position *off*. Si cet emplacement n'est pas valide, la fonction lève un objet de classe `out_of_range`.
+Les fonctions membres retournent une référence à l’élément de la séquence contrôlée à la position *off*. Si cet emplacement n'est pas valide, la fonction lève un objet de classe `out_of_range`.
 
 ### <a name="example"></a>Exemple
 
@@ -381,7 +381,7 @@ int main()
 
 ## <a name="cbegin"></a>  array::cbegin
 
-Returns a **const** iterator that addresses the first element in the range.
+Retourne un itérateur **const** qui traite le premier élément de la plage.
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -389,13 +389,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>Valeur de retour
 
-A **const** random-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).
+Itérateur **const** à accès aléatoire qui pointe vers le premier élément de la plage, ou vers l’emplacement situé juste après la fin d’une plage vide (pour une plage vide, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Notes
 
 Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. In the example, consider `Container` to be a modifiable (non- **const**) container of any kind that supports `begin()` and `cbegin()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement au mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `begin()` et `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -407,7 +407,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  array::cend
 
-Returns a **const** iterator that addresses the location just beyond the last element in a range.
+Retourne un itérateur **const** qui traite l’emplacement juste après le dernier élément d’une plage.
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -421,7 +421,7 @@ Itérateur d'accès aléatoire qui pointe juste après la fin de la plage.
 
 `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. In the example, consider `Container` to be a modifiable (non- **const**) container of any kind that supports `end()` and `cend()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement au mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `end()` et `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -1082,14 +1082,14 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*off*\
+*désactivé*\
 Position de l'élément auquel accéder.
 
 ### <a name="remarks"></a>Notes
 
-The member functions return a reference to the element of the controlled sequence at position *off*. Si cette position n'est pas valide, le comportement est indéfini.
+Les fonctions membres retournent une référence à l’élément de la séquence contrôlée à la position *off*. Si cette position n'est pas valide, le comportement est indéfini.
 
-There is also a non-member [get](array-functions.md#get) function available to get a reference to an element of an **array**.
+Une fonction d' [extraction](array-functions.md#get) non membre est également disponible pour obtenir une référence à un élément d’un **tableau**.
 
 ### <a name="example"></a>Exemple
 
@@ -1133,12 +1133,12 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*\
+\ *droit*
 Conteneur à copier.
 
 ### <a name="remarks"></a>Notes
 
-The member operator assigns each element of *right* to the corresponding element of the controlled sequence, then returns `*this`. You use it to replace the controlled sequence with a copy of the controlled sequence in *right*.
+L’opérateur membre affecte chaque élément de *droite* à l’élément correspondant de la séquence contrôlée, puis retourne `*this`. Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
 ### <a name="example"></a>Exemple
 
@@ -1497,14 +1497,14 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*\
+\ *droit*
 Tableau avec lequel échanger le contenu.
 
 ### <a name="remarks"></a>Notes
 
-The member function swaps the controlled sequences between `*this` and *right*. Il effectue un nombre d’assignations d’élément et d’appels de constructeur proportionnel à `N`.
+La fonction membre échange les séquences contrôlées entre `*this` et *Right*. Il effectue un nombre d’assignations d’élément et d’appels de constructeur proportionnel à `N`.
 
-There is also a non-member [swap](array-functions.md#swap) function available to swap two **array** instances.
+Une fonction d' [échange](array-functions.md#swap) non membre est également disponible pour échanger deux instances de **tableau** .
 
 ### <a name="example"></a>Exemple
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4221
 ms.assetid: 8532bd68-54dc-4526-8597-f61dcb0a0129
-ms.openlocfilehash: f552a5d76d1a778cdf72cbe079138f609350ffb1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa87c240472df2926753781f0f14cbd69752de00
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401096"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541923"
 ---
 # <a name="compiler-warning-level-4-c4221"></a>Avertissement du compilateur (niveau 4) C4221
 
-extension non standard utilisée : 'identificateur' : ne peut pas être initialisée à l’aide de l’adresse de la variable automatique
+extension non standard utilisée : 'identifier' : ne peut pas être initialisé à l’aide de l’adresse de la variable automatique
 
-Avec les extensions Microsoft (/Ze), vous pouvez initialiser un type d’agrégat (**tableau**, `struct`, ou **union**) avec l’adresse d’une variable locale (automatique).
+Avec les extensions Microsoft par défaut (/Ze), vous pouvez initialiser un type d’agrégat (**tableau**, `struct`ou **Union**) avec l’adresse d’une variable locale (automatique).
 
 ## <a name="example"></a>Exemple
 
-```
+```c
 // C4221.c
 // compile with: /W4
 struct S
@@ -40,4 +40,4 @@ int main()
 }
 ```
 
-Ces initialisations ne sont pas valides sous compatibilité ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Ces initialisations ne sont pas valides sous compatibilité ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

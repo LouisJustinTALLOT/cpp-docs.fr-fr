@@ -15,7 +15,7 @@ ms.locfileid: "74399109"
 ---
 # <a name="f"></a>\@F
 
-The location of the next [\@\@:](../../assembler/masm/at-at.md) label.
+Emplacement du [\@suivant \@:](../../assembler/masm/at-at.md) label.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ The location of the next [\@\@:](../../assembler/masm/at-at.md) label.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Symbols reference](symbols-reference.md)
+[Référence des symboles](symbols-reference.md)

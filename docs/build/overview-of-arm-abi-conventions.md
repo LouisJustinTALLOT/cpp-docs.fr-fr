@@ -53,13 +53,13 @@ L'utilisation d'instructions IT dans le code Thumb-2 n'est pas autorisée, sauf 
 
 - L'instruction cible doit être l'une des suivantes :
 
-   |Opcodes 16 bits|Class|Restrictions|
+   |Opcodes 16 bits|Classe|Restrictions|
    |---------------------|-----------|------------------|
-   |MOV, MVN|Déplacement|Rm != PC, Rd != PC|
+   |MOV, MVN|Déplacer|Rm != PC, Rd != PC|
    |LDR, LDR[S]B, LDR[S]H|Chargement à partir de la mémoire|Mais pas les formes littérales LDR|
    |STR, STRB, STRH|Stockage en mémoire||
    |ADD, ADC, RSB, SBC, SUB|Ajout ou soustraction|Mais pas les formes ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-   |CMP, CMN|Comparer|Rm != PC, Rn != PC|
+   |CMP, CMN|Comparaison|Rm != PC, Rn != PC|
    |MUL|Multiplication||
    |ASR, LSL, LSR, ROR|Décalage de bits||
    |AND, BIC, EOR, ORR, TST|Arithmétique au niveau du bit||
@@ -75,12 +75,12 @@ L'utilisation des instructions de division d'entier SDIV et UDIV est entièremen
 
 Le processeur ARM prend en charge 16 registres d'entiers :
 
-|Registre|Volatil ?|Rôle|
+|Registre|Volatil ?|Role|
 |--------------|---------------|----------|
-|r0|Volatil|Paramètres, résultat, registre de travail 1|
-|r1|Volatil|Paramètres, résultat, registre de travail 2|
-|r2|Volatil|Paramètre, registre de travail 3|
-|r3|Volatil|Paramètre, registre de travail 4|
+|r0|Volatile|Paramètres, résultat, registre de travail 1|
+|r1|Volatile|Paramètres, résultat, registre de travail 2|
+|r2|Volatile|Paramètre, registre de travail 3|
+|r3|Volatile|Paramètre, registre de travail 4|
 |r4|Non volatil||
 |r5|Non volatil||
 |r6|Non volatil||
@@ -89,7 +89,7 @@ Le processeur ARM prend en charge 16 registres d'entiers :
 |r9|Non volatil||
 |r10|Non volatil||
 |r11|Non volatil|Pointeur de frame|
-|r12|Volatil|Registre de travail d'appels intra-procédure|
+|r12|Volatile|Registre de travail d'appels intra-procédure|
 |r13 (SP)|Non volatil|Pointeur de pile|
 |r14 (LR)|Non volatil|Registre de liaison|
 |r15 (PC)|Non volatil|Compteur de programme|
@@ -102,24 +102,24 @@ Windows utilise r11 pour parcourir rapidement le frame de pile. Pour plus d'info
 
 Windows prend en charge uniquement les variantes ARM qui intègrent une prise en charge du coprocesseur VFPv3-D32. Cela signifie que les registres en virgule flottante sont toujours présents, qu'ils peuvent être considérés comme des transmetteurs de paramètres fiables, et que l'ensemble complet des 32 registres est disponible. Les registres VFP et leur fonction sont résumés dans ce tableau :
 
-|Simples|Doubles|Quadruples|Volatil ?|Rôle|
+|Simples|Doubles|Quadruples|Volatil ?|Role|
 |-------------|-------------|-----------|---------------|----------|
-|s0-s3|d0-d1|q0|Volatil|Paramètres, résultat, registre de travail|
-|s4-s7|d2-d3|q1|Volatil|Paramètres, registre de travail|
-|s8-s11|d4-d5|q2|Volatil|Paramètres, registre de travail|
-|s12-s15|d6-d7|q3|Volatil|Paramètres, registre de travail|
+|s0-s3|d0-d1|q0|Volatile|Paramètres, résultat, registre de travail|
+|s4-s7|d2-d3|q1|Volatile|Paramètres, registre de travail|
+|s8-s11|d4-d5|q2|Volatile|Paramètres, registre de travail|
+|s12-s15|d6-d7|q3|Volatile|Paramètres, registre de travail|
 |s16-s19|d8-d9|q4|Non volatil||
 |s20-s23|d10-d11|q5|Non volatil||
 |s24-s27|d12-d13|q6|Non volatil||
 |s28-s31|d14-d15|q7|Non volatil||
-||d16-d31|q8-q15|Volatil||
+||d16-d31|q8-q15|Volatile||
 
 Le tableau suivant illustre les champs de bits du registre d'état et de contrôle des nombres à virgule flottante (ou FPSCR, Floating-Point Status and Control Register) :
 
-|Bits|Signification|Volatil ?|Rôle|
+|Bits|Signification|Volatil ?|Role|
 |----------|-------------|---------------|----------|
-|31-28|NZCV|Volatil|Indicateurs d'état|
-|27|QC|Volatil|Saturation cumulative|
+|31-28|NZCV|Volatile|Indicateurs d'état|
+|27|QC|Volatile|Saturation cumulative|
 |26|AHP|Non volatil|Contrôle demi-précision alternatif|
 |25|DN|Non volatil|Contrôle du mode NaN par défaut|
 |24|FZ|Non volatil|Contrôle du mode de remplacement par zéro (Flush-to-zero)|
@@ -127,7 +127,7 @@ Le tableau suivant illustre les champs de bits du registre d'état et de contrô
 |21-20|Stride|Non volatil|Pas (« stride ») vectoriel, doit toujours être égal à 0|
 |18-16|Len|Non volatil|Longueur de vecteur, doit toujours être égale à 0|
 |15, 12-8|IDE, IXE, etc.|Non volatil|Bits d'activation de l'interception d'exceptions, doit toujours être égal à 0|
-|7, 4-0|IDC, IXC, etc.|Volatil|Indicateurs d'exception cumulatifs|
+|7, 4-0|IDC, IXC, etc.|Volatile|Indicateurs d'exception cumulatifs|
 
 ## <a name="floating-point-exceptions"></a>Exceptions à virgule flottante
 
@@ -181,7 +181,7 @@ Les registres VFP ne sont pas utilisés pour les fonctions variadiques, et les r
 
 Les valeurs de type entier sont retournées dans r0, éventuellement étendues à r1 pour les valeurs de retour de 64 bits. Les valeurs de type virgule flottante VFP/NEON ou SIMD sont retournées dans s0, d0 ou q0, selon le cas.
 
-## <a name="stack"></a>Stack
+## <a name="stack"></a>Pile
 
 La pile doit toujours rester alignée sur 4 octets et être alignée sur 8 octets à n'importe quelle limite de fonction. Cela est nécessaire pour prendre en charge l'utilisation fréquente d'opérations à blocage sur les variables de pile 64 bits. L'interface EABI ARM déclare que la pile est alignée sur 8 octets dans n'importe quelle interface publique. Pour des raisons de cohérence, l'interface ABI de Windows on ARM considère les limites de fonction comme une interface publique.
 

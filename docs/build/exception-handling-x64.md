@@ -229,7 +229,7 @@ La signification des bits d’informations sur l’opération dépend du code d�
 |3|RBX|
 |4|RSP|
 |5|RBP|
-|6|RSI|
+|6\.|RSI|
 |7|RDI|
 |8 à 15|R8 à R15|
 
@@ -331,10 +331,10 @@ Pour écrire les routines d’assembly appropriées, il existe un ensemble de Ps
 |-|-|
 |\[de la TRAMe de traitement :*ehandler*]|Fait en sorte que MASM génère une entrée de table de fonctions dans. pdata et les informations de déroulement dans. XData pour le comportement de déroulement de la gestion structurée des exceptions d’une fonction.  Si *ehandler* est présent, cette procédure est entrée dans le. XData comme gestionnaire spécifique au langage.<br /><br /> Lorsque l’attribut FRAME est utilisé, il doit être suivi d’un. Directive ENDPROLOG.  Si la fonction est une fonction feuille (telle que définie dans les [types de fonction](../build/stack-usage.md#function-types)), l’attribut Frame n’est pas nécessaire, comme le reste de ces pseudo-opérations.|
 |. *Registre* PUSHREG|Génère une entrée de code de déroulement UWOP_PUSH_NONVOL pour le numéro de Registre spécifié à l’aide de l’offset actuel dans le prologue.<br /><br /> Utilisez-le uniquement avec des registres d’entiers non volatils.  Pour les notifications push de registres volatils, utilisez un. ALLOCSTACK 8, à la place|
-|.SETFRAME *register*, *offset*|Remplit le champ du Registre du frame et le décalage dans les informations de déroulement à l’aide du Registre et de l’offset spécifiés. Le décalage doit être un multiple de 16 et inférieur ou égal à 240. Cette directive génère également une entrée de code de déroulement UWOP_SET_FPREG pour le registre spécifié à l’aide de l’offset de prologue actuel.|
+|. *Registre*SETFRAME, *décalage*|Remplit le champ du Registre du frame et le décalage dans les informations de déroulement à l’aide du Registre et de l’offset spécifiés. Le décalage doit être un multiple de 16 et inférieur ou égal à 240. Cette directive génère également une entrée de code de déroulement UWOP_SET_FPREG pour le registre spécifié à l’aide de l’offset de prologue actuel.|
 |. *Taille* de ALLOCSTACK|Génère un UWOP_ALLOC_SMALL ou un UWOP_ALLOC_LARGE avec la taille spécifiée pour l’offset actuel dans le prologue.<br /><br /> L’opérande de *taille* doit être un multiple de 8.|
 |. *Registre*SAVEREG, *décalage*|Génère un UWOP_SAVE_NONVOL ou une entrée de code de déroulement UWOP_SAVE_NONVOL_FAR pour le registre et l’offset spécifiés à l’aide de l’offset de prologue actuel. MASM choisit le codage le plus efficace.<br /><br /> *offset* doit être positif et un multiple de 8. l' *offset* est relatif à la base du frame de la procédure, qui est généralement dans RSP ou, si vous utilisez un pointeur de frame, le pointeur de frame non mis à l’échelle.|
-|.SAVEXMM128 *register*, *offset*|Génère un UWOP_SAVE_XMM128 ou une entrée de code de déroulement UWOP_SAVE_XMM128_FAR pour le registre XMM et le décalage spécifiés à l’aide de l’offset de prologue actuel. MASM choisit le codage le plus efficace.<br /><br /> *offset* doit être positif et un multiple de 16.  l' *offset* est relatif à la base du frame de la procédure, qui est généralement dans RSP ou, si vous utilisez un pointeur de frame, le pointeur de frame non mis à l’échelle.|
+|. *Registre*SAVEXMM128, *décalage*|Génère un UWOP_SAVE_XMM128 ou une entrée de code de déroulement UWOP_SAVE_XMM128_FAR pour le registre XMM et le décalage spécifiés à l’aide de l’offset de prologue actuel. MASM choisit le codage le plus efficace.<br /><br /> *offset* doit être positif et un multiple de 16.  l' *offset* est relatif à la base du frame de la procédure, qui est généralement dans RSP ou, si vous utilisez un pointeur de frame, le pointeur de frame non mis à l’échelle.|
 |. PUSHFRAME \[*code*]|Génère une entrée de code de déroulement UWOP_PUSH_MACHFRAME. Si le *code* facultatif est spécifié, le modificateur 1 est attribué à l’entrée du code de déroulement. Sinon, le modificateur est 0.|
 |.ENDPROLOG|Signale la fin des déclarations de prologue.  Doit se produire dans les 255 premiers octets de la fonction.|
 
@@ -400,7 +400,7 @@ Pour simplifier l’utilisation des [Pseudo-opérations brutes](#raw-pseudo-oper
 |push_reg *reg*|Exécute un *push d’un registre de registres non* volatil sur la pile et émet les informations de déroulement appropriées. (. pushreg reg)|
 |rex_push_reg *reg*|Enregistre un registre non volatil sur la pile à l’aide d’un push de 2 octets et émet les informations de déroulement appropriées (. pushreg reg).  Utilisez cette macro si l’envoi est la première instruction de la fonction, afin de garantir que la fonction peut être corrigée à chaud.|
 |save_xmm128 *reg*, *loc*|Enregistre un fichier de Registre XMM non *volatil sur la* pile à l’emplacement RSP offset *loc*et émet les informations de déroulement appropriées (. savexmm128 reg, loc)|
-|set_frame *reg*, *offset*|Définit *la valeur de Registre du* Registre des frames sur le *décalage* RSP + (à l’aide d’un `mov`ou d’un `lea`) et émet les informations de déroulement appropriées (. set_frame reg, offset)|
+|set_frame *reg*, *décalage*|Définit *la valeur de Registre du* Registre des frames sur le *décalage* RSP + (à l’aide d’un `mov`ou d’un `lea`) et émet les informations de déroulement appropriées (. set_frame reg, offset)|
 |push_eflags|Exécute un push du eflags avec une instruction `pushfq` et émet les informations de déroulement appropriées (. alloc_stack 8)|
 
 Voici un exemple de prologue de fonction avec une utilisation correcte des macros :

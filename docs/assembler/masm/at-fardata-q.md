@@ -13,14 +13,14 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399097"
 ---
-# <a name="fardata"></a>\@fardata?
+# <a name="fardata"></a>\@fardata ?
 
-The name of the segment defined by the [.FARDATA?](../../assembler/masm/dot-fardata-q.md) directive (text macro).
+Nom du segment défini par [. FARDATA ?](../../assembler/masm/dot-fardata-q.md) directive (macro de texte).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@fardata?**
+> **\@fardata ?**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Symbols reference](symbols-reference.md)
+[Référence des symboles](symbols-reference.md)

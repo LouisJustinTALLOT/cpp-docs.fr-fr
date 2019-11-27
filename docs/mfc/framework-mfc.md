@@ -47,7 +47,7 @@ L’encapsulation signifie que C++ la classe `CWnd`, par exemple, contient une v
 
 [Gestion et mappage des messages](../mfc/message-handling-and-mapping.md)
 
-[Objets fenêtres](../mfc/window-objects.md)
+[Objets fenêtre](../mfc/window-objects.md)
 
 ## <a name="see-also"></a>Voir aussi
 

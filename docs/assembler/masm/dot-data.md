@@ -15,7 +15,7 @@ ms.locfileid: "74398515"
 ---
 # <a name="data"></a>.DATA
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), starts a near data segment for initialized data (segment name _DATA).
+En cas d’utilisation avec [. MODÈLE](../../assembler/masm/dot-model.md), démarre un segment de données near pour les données initialisées (nom de segment _data).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,8 +23,8 @@ When used with [.MODEL](../../assembler/masm/dot-model.md), starts a near data s
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
-[.DATA?](../../assembler/masm/dot-data-q.md)\
-[.CONST](../../assembler/masm/dot-const.md)\
-[.FARDATA](../../assembler/masm/dot-fardata.md)\
+Informations de référence sur les [Directives](../../assembler/masm/directives-reference.md)\
+[. DONNÉES ?](../../assembler/masm/dot-data-q.md)\
+[. CONSt](../../assembler/masm/dot-const.md)\
+[. FARDATA](../../assembler/masm/dot-fardata.md)\
 [.FARDATA?](../../assembler/masm/dot-fardata-q.md)

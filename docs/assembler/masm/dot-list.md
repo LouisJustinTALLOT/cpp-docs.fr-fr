@@ -15,7 +15,7 @@ ms.locfileid: "74398192"
 ---
 # <a name="list"></a>.LIST
 
-Starts listing of statements.
+Commence la liste des instructions.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,4 +27,4 @@ Il s'agit de la valeur par défaut.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

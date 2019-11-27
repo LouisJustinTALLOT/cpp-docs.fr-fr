@@ -41,22 +41,22 @@ class CDaoException : public CException
 
 |Nom|Description|
 |----------|-----------------|
-|[CDaoException::CDaoException](#cdaoexception)|Construit un objet `CDaoException`.|
+|[CDaoException :: CDaoException](#cdaoexception)|Construit un objet `CDaoException`.|
 
 ### <a name="public-methods"></a>Méthodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CDaoException::GetErrorCount](#geterrorcount)|Retourne le nombre d’erreurs dans la collection d’erreurs du moteur de base de données.|
-|[CDaoException::GetErrorInfo](#geterrorinfo)|Retourne des informations d’erreur sur un objet d’erreur particulier dans la collection d’erreurs.|
+|[CDaoException :: GetErrorCount](#geterrorcount)|Retourne le nombre d’erreurs dans la collection d’erreurs du moteur de base de données.|
+|[CDaoException :: GetErrorInfo](#geterrorinfo)|Retourne des informations d’erreur sur un objet d’erreur particulier dans la collection d’erreurs.|
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CDaoException::m_nAfxDaoError](#m_nafxdaoerror)|Contient un code d’erreur étendu pour toute erreur dans les classes DAO MFC.|
-|[CDaoException::m_pErrorInfo](#m_perrorinfo)|Pointeur vers un objet [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) qui contient des informations sur un objet d’erreur DAO.|
-|[CDaoException::m_scode](#m_scode)|Valeur [SCODE](#m_scode) associée à l’erreur.|
+|[CDaoException :: m_nAfxDaoError](#m_nafxdaoerror)|Contient un code d’erreur étendu pour toute erreur dans les classes DAO MFC.|
+|[CDaoException :: m_pErrorInfo](#m_perrorinfo)|Pointeur vers un objet [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) qui contient des informations sur un objet d’erreur DAO.|
+|[CDaoException :: m_scode](#m_scode)|Valeur [SCODE](#m_scode) associée à l’erreur.|
 
 ## <a name="remarks"></a>Notes
 
@@ -73,7 +73,7 @@ Pour les codes d’erreur DAO, consultez le fichier DAOERR. Manutention. Pour ob
 
 Pour plus d’informations sur la gestion des exceptions en général, ou sur les objets `CDaoException`, consultez les articles [gestion des exceptions (MFC)](../../mfc/exception-handling-in-mfc.md) et [exceptions : bases de données](../../mfc/exceptions-database-exceptions.md). Le deuxième article contient un exemple de code qui illustre la gestion des exceptions dans DAO.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -81,11 +81,11 @@ Pour plus d’informations sur la gestion des exceptions en général, ou sur le
 
 `CDaoException`
 
-## <a name="requirements"></a>Conditions requises
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao. h
 
-##  <a name="cdaoexception"></a>  CDaoException::CDaoException
+##  <a name="cdaoexception"></a>CDaoException :: CDaoException
 
 Construit un objet `CDaoException`.
 
@@ -115,7 +115,7 @@ Toutefois, vous souhaiterez peut-être créer explicitement un objet exception s
 
 Pour plus d’informations sur la gestion des erreurs dans les classes DAO MFC, consultez l’article [exceptions : exceptions de base de données](../../mfc/exceptions-database-exceptions.md).
 
-##  <a name="geterrorcount"></a>  CDaoException::GetErrorCount
+##  <a name="geterrorcount"></a>CDaoException :: GetErrorCount
 
 Appelez cette fonction membre pour récupérer le nombre d’objets d’erreur DAO dans la collection d’erreurs du moteur de base de données.
 
@@ -134,7 +134,7 @@ Ces informations sont utiles pour effectuer une boucle dans la collection Errors
 > [!NOTE]
 >  Normalement, la collection Errors ne contient qu’un seul objet Error. Toutefois, si vous utilisez une source de données ODBC, il peut y en avoir plusieurs.
 
-##  <a name="geterrorinfo"></a>  CDaoException::GetErrorInfo
+##  <a name="geterrorinfo"></a>CDaoException :: GetErrorInfo
 
 Retourne des informations d’erreur sur un objet d’erreur particulier dans la collection d’erreurs.
 
@@ -165,7 +165,7 @@ Appelez cette fonction membre pour obtenir les genres d’informations suivants 
 
 Pour plus d’informations sur les exceptions DAO et l’exemple de code, consultez l’article [exceptions : exceptions de base de données](../../mfc/exceptions-database-exceptions.md).
 
-##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError
+##  <a name="m_nafxdaoerror"></a>CDaoException :: m_nAfxDaoError
 
 Contient un code d’erreur étendu MFC.
 
@@ -173,7 +173,7 @@ Contient un code d’erreur étendu MFC.
 
 Ce code est fourni dans les cas où un composant spécifique des classes DAO MFC s’est commis.
 
-Les valeurs possibles sont :
+Les valeurs possibles sont les suivantes :
 
 - NO_AFX_DAO_ERROR l’opération la plus récente n’a pas abouti à une erreur étendue MFC. Toutefois, l’opération peut avoir produit d’autres erreurs à partir de DAO ou OLE. vous devez donc vérifier [m_pErrorInfo](#m_perrorinfo) et éventuellement [m_scode](#m_scode).
 
@@ -183,7 +183,7 @@ Les valeurs possibles sont :
 
 - AFX_DAO_ERROR_OBJECT_NOT_OPEN vous avez tenté d’ouvrir un jeu d’enregistrements basé sur un objet querydef ou TableDef qui n’était pas dans un état ouvert.
 
-##  <a name="m_perrorinfo"></a>  CDaoException::m_pErrorInfo
+##  <a name="m_perrorinfo"></a>CDaoException :: m_pErrorInfo
 
 Contient un pointeur vers une structure `CDaoErrorInfo` qui fournit des informations sur l’objet d’erreur DAO que vous avez récupéré en dernier en appelant [GetErrorInfo](#geterrorinfo).
 
@@ -201,7 +201,7 @@ Cet objet contient les informations suivantes :
 
 Pour obtenir des informations complètes sur les informations contenues dans l’objet `CDaoErrorInfo`, consultez la structure [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) .
 
-##  <a name="m_scode"></a>  CDaoException::m_scode
+##  <a name="m_scode"></a>CDaoException :: m_scode
 
 Contient une valeur de type `SCODE` qui décrit l’erreur.
 

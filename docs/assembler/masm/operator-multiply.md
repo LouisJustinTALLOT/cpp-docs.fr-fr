@@ -19,7 +19,7 @@ ms.locfileid: "74396627"
 ---
 # <a name="operator-"></a>*, opérateur
 
-Returns *expression1* times *expression2*.
+Retourne *expression1* Times *Expression2*.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,4 +27,4 @@ Returns *expression1* times *expression2*.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Operators reference](operators-reference.md)
+[Informations de référence sur les opérateurs](operators-reference.md)

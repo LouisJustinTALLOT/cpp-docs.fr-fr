@@ -12,7 +12,7 @@ ms.locfileid: "74303362"
 ---
 # <a name="smart-pointers-modern-c"></a>Pointeurs intelligents (C++ moderne)
 
-Dans la programmation C++ moderne, la bibliothèque standard inclut des *pointeurs intelligents*, utilisés pour garantir que les programmes sont exempts de fuites de mémoire et de ressources et qu'ils sont sécurisés du point de vue des exceptions.
+Dans la C++ programmation moderne, la bibliothèque standard comprend des *pointeurs intelligents*, qui permettent de s’assurer que les programmes sont exempts de fuites de mémoire et de ressources et sont sécurisés contre les exceptions.
 
 ## <a name="uses-for-smart-pointers"></a>Utilisations pour les pointeurs intelligents
 
@@ -117,5 +117,5 @@ Classe qui encapsule les méthodes de manipulation d'une liste de nœuds `CAutoP
 ## <a name="see-also"></a>Voir aussi
 
 [Pointeurs](pointers-cpp.md)<br/>
-[Référence du langage C++](../cpp/cpp-language-reference.md)<br/>
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
 [Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

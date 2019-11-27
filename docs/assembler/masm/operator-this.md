@@ -17,12 +17,12 @@ ms.locfileid: "74395466"
 ---
 # <a name="operator-this"></a>THIS, opérateur
 
-Returns an operand of specified *type* whose offset and segment values are equal to the current location counter value.
+Retourne un opérande de *type* spécifié dont les valeurs de décalage et de segment sont égales à la valeur de compteur d’emplacement actuelle.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **THIS** *type*
+> **Ce** *type*
 
 ## <a name="see-also"></a>Voir aussi
 
-[Operators reference](operators-reference.md)
+[Informations de référence sur les opérateurs](operators-reference.md)

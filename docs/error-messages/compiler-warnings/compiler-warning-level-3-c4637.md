@@ -15,9 +15,9 @@ ms.locfileid: "74189121"
 ---
 # <a name="compiler-warning-level-3-c4637"></a>Avertissement du compilateur (niveau 3) C4637
 
-XML document comment target: \<include> tag discarded.  raison
+Cible de commentaire de document XML : \<inclure > balise ignorée.  reason
 
-The syntax of an [\<include>](../../build/reference/include-visual-cpp.md) tag was not correct.
+La syntaxe d’une balise d' [\<include >](../../build/reference/include-visual-cpp.md) n’était pas correcte.
 
 L’exemple suivant génère l’avertissement C4637 :
 

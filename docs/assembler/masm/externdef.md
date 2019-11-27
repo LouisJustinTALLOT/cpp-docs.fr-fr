@@ -15,15 +15,15 @@ ms.locfileid: "74397539"
 ---
 # <a name="externdef"></a>EXTERNDEF
 
-Defines one or more external variables, labels, or symbols called *name* whose type is *type*.
+Définit une ou plusieurs variables externes, étiquettes ou symboles appelés *Name* dont le type est *type*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **EXTERNDEF** ⟦*language-type*⟧ *name* __:__ *type* ⟦ __,__ ⟦*language-type*⟧ *name* __:__ *type* ...⟧
+> **EXTERNDEF** ⟦*Language-type*⟧ __:__ *type* ⟦ __,__ ⟦*Language-type*⟧ *nom* __:__ *type* ... ⟧
 
 ## <a name="remarks"></a>Notes
 
-If *name* is defined in the module, it is treated as [PUBLIC](../../assembler/masm/public-masm.md). If *name* is referenced in the module, it is treated as [EXTERN](../../assembler/masm/extern-masm.md). If *name* is not referenced, it is ignored. The *type* can be [ABS](../../assembler/masm/operator-abs.md), which imports *name* as a constant. Normally used in include files.
+Si le *nom* est défini dans le module, il est traité comme [public](../../assembler/masm/public-masm.md). Si le *nom* est référencé dans le module, il est traité comme [extern](../../assembler/masm/extern-masm.md). Si le *nom* n’est pas référencé, il est ignoré. Le *type* peut être [ABS](../../assembler/masm/operator-abs.md), qui importe le *nom* en tant que constante. Normalement utilisé dans les fichiers include.
 
 ## <a name="see-also"></a>Voir aussi
 

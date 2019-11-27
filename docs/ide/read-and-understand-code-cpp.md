@@ -27,7 +27,7 @@ Vous pouvez personnaliser les couleurs en tapant « Polices » dans **Lancemen
 
 ## <a name="outlining"></a>Mode Plan
 
-Cliquez avec le bouton droit n’importe où dans un fichier de code source et choisissez **Mode Plan** pour réduire ou développer les blocs de code et/ou les régions personnalisées. Ceci vous permet de parcourir plus vite seulement le code qui vous intéresse. Pour plus d'informations, voir [Mode Plan](/visualstudio/ide/outlining).
+Cliquez avec le bouton droit n’importe où dans un fichier de code source et choisissez **Mode Plan** pour réduire ou développer les blocs de code et/ou les régions personnalisées. Ceci vous permet de parcourir plus vite seulement le code qui vous intéresse. Pour plus d’informations, voir [Mode Plan](/visualstudio/ide/outlining).
 
 ![Mode&#43; &#43; plan C](../ide/media/vs2015_cpp_outlining.png "Mode Plan")
 
@@ -59,7 +59,7 @@ Pointez n’importe quelle variable, fonction ou autre symbole pour obtenir des 
 
 ::: moniker range="vs-2019"
 
-![Infos Express dans C&#43;&#43;](../ide/media/quick-info-vs2019.png "Info express")
+![Infos Express dans C&#43;&#43;](../ide/media/quick-info-vs2019.png "Infos express")
 
 L’info-bulle **Info express** contient un lien **Rechercher en ligne**. Accédez à **Outils** > **Options** > **Éditeur de texte** > **C++**  > **Vue** pour spécifier le fournisseur de recherche. 
 
@@ -71,7 +71,7 @@ Si votre code contient une erreur, vous pouvez pointer celle-ci afin qu’**Info
 
 ::: moniker range="<=vs-2017"
 
-![Infos Express dans C&#43;&#43;](../ide/media/quick-info.png "Info express")
+![Infos Express dans C&#43;&#43;](../ide/media/quick-info.png "Infos express")
 
 Si votre code contient une erreur, vous pouvez pointer celle-ci afin qu’**Info express** affiche le message d’erreur correspondant. Vous trouverez également le message d’erreur dans la fenêtre **Liste d’erreurs**.
 

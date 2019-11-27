@@ -81,42 +81,42 @@ class CDaoDatabase : public CObject
 
 |Nom|Description|
 |----------|-----------------|
-|[CDaoDatabase::CDaoDatabase](#cdaodatabase)|Construit un objet `CDaoDatabase`. Appelez `Open` pour connecter l’objet à une base de données.|
+|[CDaoDatabase :: CDaoDatabase](#cdaodatabase)|Construit un objet `CDaoDatabase`. Appelez `Open` pour connecter l’objet à une base de données.|
 
 ### <a name="public-methods"></a>Méthodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CDaoDatabase::CanTransact](#cantransact)|Retourne une valeur différente de zéro si la base de données prend en charge les transactions.|
-|[CDaoDatabase::CanUpdate](#canupdate)|Retourne une valeur différente de zéro si l’objet `CDaoDatabase` peut être mis à jour (pas en lecture seule).|
-|[CDaoDatabase::Close](#close)|Ferme la connexion à la base de données.|
-|[CDaoDatabase::Create](#create)|Crée l’objet de base de données DAO sous-jacent et initialise l’objet `CDaoDatabase`.|
-|[CDaoDatabase::CreateRelation](#createrelation)|Définit une nouvelle relation entre les tables de la base de données.|
-|[CDaoDatabase::DeleteQueryDef](#deletequerydef)|Supprime un objet querydef enregistré dans la collection QueryDefs de la base de données.|
-|[CDaoDatabase::DeleteRelation](#deleterelation)|Supprime une relation existante entre les tables de la base de données.|
-|[CDaoDatabase::DeleteTableDef](#deletetabledef)|Supprime la définition d’une table dans la base de données. Cela supprime la table réelle et toutes ses données.|
-|[CDaoDatabase::Execute](#execute)|Exécute une requête d’action. L’appel de `Execute` pour une requête qui retourne des résultats lève une exception.|
+|[CDaoDatabase :: CanTransact](#cantransact)|Retourne une valeur différente de zéro si la base de données prend en charge les transactions.|
+|[CDaoDatabase :: CanUpdate](#canupdate)|Retourne une valeur différente de zéro si l’objet `CDaoDatabase` peut être mis à jour (pas en lecture seule).|
+|[CDaoDatabase :: Close](#close)|Ferme la connexion à la base de données.|
+|[CDaoDatabase :: Create](#create)|Crée l’objet de base de données DAO sous-jacent et initialise l’objet `CDaoDatabase`.|
+|[CDaoDatabase :: CreateRelation](#createrelation)|Définit une nouvelle relation entre les tables de la base de données.|
+|[CDaoDatabase ::D eleteQueryDef](#deletequerydef)|Supprime un objet querydef enregistré dans la collection QueryDefs de la base de données.|
+|[CDaoDatabase ::D eleteRelation](#deleterelation)|Supprime une relation existante entre les tables de la base de données.|
+|[CDaoDatabase ::D eleteTableDef](#deletetabledef)|Supprime la définition d’une table dans la base de données. Cela supprime la table réelle et toutes ses données.|
+|[CDaoDatabase :: Execute](#execute)|Exécute une requête d’action. L’appel de `Execute` pour une requête qui retourne des résultats lève une exception.|
 |[CDaoDatabase :: GetConnect](#getconnect)|Retourne la chaîne de connexion utilisée pour connecter l’objet `CDaoDatabase` à une base de données. Utilisé pour ODBC.|
-|[CDaoDatabase::GetName](#getname)|Retourne le nom de la base de données en cours d’utilisation.|
-|[CDaoDatabase::GetQueryDefCount](#getquerydefcount)|Retourne le nombre de requêtes définies pour la base de données.|
-|[CDaoDatabase::GetQueryDefInfo](#getquerydefinfo)|Retourne des informations sur une requête spécifiée définie dans la base de données.|
-|[CDaoDatabase::GetQueryTimeout](#getquerytimeout)|Retourne le nombre de secondes après lesquelles les opérations de requête de base de données expirent. Affecte toutes les opérations d’ouverture, d’ajout, de mise à jour et de modification suivantes, ainsi que d’autres opérations sur les sources de données ODBC (uniquement) telles que les appels de `Execute`.|
-|[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|Retourne le nombre d’enregistrements affectés par la dernière opération Update, Edit ou Add ou par un appel à `Execute`.|
-|[CDaoDatabase::GetRelationCount](#getrelationcount)|Retourne le nombre de relations définies entre les tables de la base de données.|
-|[CDaoDatabase::GetRelationInfo](#getrelationinfo)|Retourne des informations sur une relation spécifiée entre des tables dans la base de données.|
-|[CDaoDatabase::GetTableDefCount](#gettabledefcount)|Retourne le nombre de tables définies dans la base de données.|
-|[CDaoDatabase::GetTableDefInfo](#gettabledefinfo)|Retourne des informations sur une table spécifiée dans la base de données.|
-|[CDaoDatabase::GetVersion](#getversion)|Retourne la version du moteur de base de données associée à la base de données.|
-|[CDaoDatabase::IsOpen](#isopen)|Retourne une valeur différente de zéro si l’objet `CDaoDatabase` est actuellement connecté à une base de données.|
+|[CDaoDatabase :: GetName](#getname)|Retourne le nom de la base de données en cours d’utilisation.|
+|[CDaoDatabase :: GetQueryDefCount](#getquerydefcount)|Retourne le nombre de requêtes définies pour la base de données.|
+|[CDaoDatabase :: GetQueryDefInfo](#getquerydefinfo)|Retourne des informations sur une requête spécifiée définie dans la base de données.|
+|[CDaoDatabase :: GetQueryTimeout](#getquerytimeout)|Retourne le nombre de secondes après lesquelles les opérations de requête de base de données expirent. Affecte toutes les opérations d’ouverture, d’ajout, de mise à jour et de modification suivantes, ainsi que d’autres opérations sur les sources de données ODBC (uniquement) telles que les appels de `Execute`.|
+|[CDaoDatabase :: GetRecordsAffected](#getrecordsaffected)|Retourne le nombre d’enregistrements affectés par la dernière opération Update, Edit ou Add ou par un appel à `Execute`.|
+|[CDaoDatabase :: GetRelationCount](#getrelationcount)|Retourne le nombre de relations définies entre les tables de la base de données.|
+|[CDaoDatabase :: GetRelationInfo](#getrelationinfo)|Retourne des informations sur une relation spécifiée entre des tables dans la base de données.|
+|[CDaoDatabase :: GetTableDefCount](#gettabledefcount)|Retourne le nombre de tables définies dans la base de données.|
+|[CDaoDatabase :: GetTableDefInfo](#gettabledefinfo)|Retourne des informations sur une table spécifiée dans la base de données.|
+|[CDaoDatabase :: GetVersion](#getversion)|Retourne la version du moteur de base de données associée à la base de données.|
+|[CDaoDatabase :: IsOpen](#isopen)|Retourne une valeur différente de zéro si l’objet `CDaoDatabase` est actuellement connecté à une base de données.|
 |[CDaoDatabase :: Open](#open)|Établit une connexion à une base de données.|
-|[CDaoDatabase::SetQueryTimeout](#setquerytimeout)|Définit le nombre de secondes au terme desquelles les opérations de requête de base de données (sur les sources de données ODBC uniquement) expirent. Affecte toutes les opérations d’ajout, de mise à jour et de suppression suivantes.|
+|[CDaoDatabase :: SetQueryTimeout](#setquerytimeout)|Définit le nombre de secondes au terme desquelles les opérations de requête de base de données (sur les sources de données ODBC uniquement) expirent. Affecte toutes les opérations d’ajout, de mise à jour et de suppression suivantes.|
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|Pointeur vers l’objet de base de données DAO sous-jacent.|
-|[CDaoDatabase::m_pWorkspace](#m_pworkspace)|Pointeur vers l’objet [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) qui contient la base de données et définit son espace de transaction.|
+|[CDaoDatabase :: m_pDAODatabase](#m_pdaodatabase)|Pointeur vers l’objet de base de données DAO sous-jacent.|
+|[CDaoDatabase :: m_pWorkspace](#m_pworkspace)|Pointeur vers l’objet [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) qui contient la base de données et définit son espace de transaction.|
 
 ## <a name="remarks"></a>Notes
 
@@ -136,7 +136,7 @@ Pour ouvrir une base de données existante, construisez un objet `CDaoDatabase` 
 
 L’une de ces techniques ajoute l’objet de base de données DAO à la collection de bases de données de l’espace de travail et ouvre une connexion aux données. Lorsque vous construisez ensuite des objets [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)ou [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) pour fonctionner sur la base de données connectée, transmettez les constructeurs pour ces objets à un pointeur vers votre objet `CDaoDatabase`. Lorsque vous avez terminé d’utiliser la connexion, appelez la fonction membre [Close](#close) et détruisez l’objet `CDaoDatabase`. `Close` ferme tous les jeux d’enregistrements que vous n’avez pas fermés précédemment.
 
-## <a name="transactions"></a>Transactions
+## <a name="transactions"></a>transactions
 
 Le traitement des transactions de base de données est fourni au niveau de l’espace de travail : consultez les fonctions membres [BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans), [CommitTrans](../../mfc/reference/cdaoworkspace-class.md#committrans) et [ROLLBACK](../../mfc/reference/cdaoworkspace-class.md#rollback) de la classe`CDaoWorkspace`.
 
@@ -151,17 +151,17 @@ Chaque base de données gère ses propres collections d’objets TableDef, Query
 > [!NOTE]
 >  Les objets sont stockés dans DAO, et non dans l’objet de base de données MFC. MFC fournit des classes pour les objets TableDef, QueryDef et Recordset, mais pas pour les objets relation.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
 `CDaoDatabase`
 
-## <a name="requirements"></a>Conditions requises
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao. h
 
-##  <a name="cantransact"></a>  CDaoDatabase::CanTransact
+##  <a name="cantransact"></a>CDaoDatabase :: CanTransact
 
 Appelez cette fonction membre pour déterminer si la base de données autorise les transactions.
 
@@ -177,7 +177,7 @@ Différent de zéro si la base de données prend en charge les transactions ; S
 
 Les transactions sont gérées dans l’espace de travail de la base de données.
 
-##  <a name="canupdate"></a>  CDaoDatabase::CanUpdate
+##  <a name="canupdate"></a>CDaoDatabase :: CanUpdate
 
 Appelez cette fonction membre pour déterminer si l’objet `CDaoDatabase` autorise les mises à jour.
 
@@ -193,7 +193,7 @@ Différent de zéro si l’objet `CDaoDatabase` autorise les mises à jour ; Si
 
 Pour plus d’informations sur la mise à jour de la base de données, consultez la rubrique « propriété pouvant être mise à jour » dans l’aide de DAO.
 
-##  <a name="cdaodatabase"></a>  CDaoDatabase::CDaoDatabase
+##  <a name="cdaodatabase"></a>CDaoDatabase :: CDaoDatabase
 
 Construit un objet `CDaoDatabase`.
 
@@ -217,7 +217,7 @@ Il peut s’avérer pratique d’incorporer l’objet `CDaoDatabase` dans votre 
 > [!NOTE]
 >  Un objet `CDaoDatabase` est également créé implicitement si vous ouvrez un objet [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) sans passer un pointeur vers un objet `CDaoDatabase` existant. Cet objet de base de données est fermé lorsque vous fermez l’objet Recordset.
 
-##  <a name="close"></a>  CDaoDatabase::Close
+##  <a name="close"></a>CDaoDatabase :: Close
 
 Appelez cette fonction membre pour vous déconnecter d’une base de données et fermer tous les jeux d’enregistrements, les TableDefs et les querydefs ouverts associés à la base de données.
 
@@ -237,7 +237,7 @@ Il est conseillé de fermer ces objets vous-même avant d’appeler cette foncti
 
 Si l’objet de base de données est défini en dehors de la portée d’une fonction et que vous quittez la fonction sans la fermer, l’objet de base de données restera ouvert jusqu’à ce que le module dans lequel il est défini soit hors de portée.
 
-##  <a name="create"></a>  CDaoDatabase::Create
+##  <a name="create"></a>CDaoDatabase :: Create
 
 Pour créer un nouveau Microsoft Jet (. MDB), appelez cette fonction membre après avoir construit un objet `CDaoDatabase`.
 
@@ -254,7 +254,7 @@ virtual void Create(
 Expression de chaîne qui représente le nom du fichier de base de données que vous créez. Il peut s’agir du chemin d’accès complet et du nom de fichier, par exemple «C :\\\MYDB. MDB». Vous devez fournir un nom. Si vous ne fournissez pas d’extension de nom de fichier,. MDB est ajouté. Si votre réseau prend en charge le format UNC (Uniform Naming Convention), vous pouvez également spécifier un chemin d’accès réseau, tel que «\\\\\\\MONSERVEUR\\\MYSHARE\\\MYDIR\\\MYDB ». Uniquement Microsoft Jet (. MDB) les fichiers de base de données peuvent être créés à l’aide de cette fonction membre. (Les doubles barres obliques inverses sont nécessaires dans les littéraux de chaîne C++ , car «\\» est le caractère d’échappement.)
 
 *lpszLocale*<br/>
-Expression de chaîne utilisée pour spécifier l’ordre de classement pour la création de la base de données. La valeur par défaut est `dbLangGeneral`. Les valeurs possibles sont :
+Expression de chaîne utilisée pour spécifier l’ordre de classement pour la création de la base de données. La valeur par défaut est `dbLangGeneral`. Les valeurs possibles sont les suivantes :
 
 - `dbLangGeneral` l’anglais, l’allemand, le français, le portugais, l’italien et l’espagnol moderne
 
@@ -287,7 +287,7 @@ Expression de chaîne utilisée pour spécifier l’ordre de classement pour la 
 - `dbLangTurkish` turc
 
 *dwOptions*<br/>
-Entier qui indique une ou plusieurs options. Les valeurs possibles sont :
+Entier qui indique une ou plusieurs options. Les valeurs possibles sont les suivantes :
 
 - `dbEncrypt` créer une base de données chiffrée.
 
@@ -311,7 +311,7 @@ Si vous omettez la constante de chiffrement, une base de données non chiffrée 
 > [!NOTE]
 >  Avec `Create`, vous pouvez créer uniquement Microsoft Jet (. MDB). Vous ne pouvez pas créer de bases de données ISAM ou ODBC.
 
-##  <a name="createrelation"></a>  CDaoDatabase::CreateRelation
+##  <a name="createrelation"></a>CDaoDatabase :: CreateRelation
 
 Appelez cette fonction membre pour établir une relation entre un ou plusieurs champs d’une table primaire de la base de données et un ou plusieurs champs d’une table étrangère (une autre table de la base de données).
 
@@ -374,7 +374,7 @@ Supposons, par exemple, que vous établissez une relation de suppression en casc
 
 Pour obtenir des informations connexes, consultez la rubrique « CreateRelation, méthode » dans l’aide de DAO.
 
-##  <a name="deletequerydef"></a>  CDaoDatabase::DeleteQueryDef
+##  <a name="deletequerydef"></a>CDaoDatabase ::D eleteQueryDef
 
 Appelez cette fonction membre pour supprimer la querydef (requête enregistrée) spécifiée à partir de la collection QueryDefs de l’objet `CDaoDatabase`.
 
@@ -393,7 +393,7 @@ Ensuite, cette requête n’est plus définie dans la base de données.
 
 Pour plus d’informations sur la création d’objets QueryDef, consultez la classe [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Un objet querydef est associé à un objet `CDaoDatabase` particulier lorsque vous construisez l’objet `CDaoQueryDef`, en lui passant un pointeur vers l’objet de base de données.
 
-##  <a name="deleterelation"></a>  CDaoDatabase::DeleteRelation
+##  <a name="deleterelation"></a>CDaoDatabase ::D eleteRelation
 
 Appelez cette fonction membre pour supprimer une relation existante de la collection de relations de l’objet de base de données.
 
@@ -412,7 +412,7 @@ Par la suite, la relation n’existe plus.
 
 Pour obtenir des informations connexes, consultez la rubrique « méthode Delete » dans l’aide de DAO.
 
-##  <a name="deletetabledef"></a>  CDaoDatabase::DeleteTableDef
+##  <a name="deletetabledef"></a>CDaoDatabase ::D eleteTableDef
 
 Appelez cette fonction membre pour supprimer la table spécifiée et toutes ses données de la collection TableDefs de l’objet `CDaoDatabase`.
 
@@ -436,7 +436,7 @@ Pour plus d’informations sur la création d’objets TableDef, consultez la cl
 
 Pour obtenir des informations connexes, consultez la rubrique « méthode Delete » dans l’aide de DAO.
 
-##  <a name="execute"></a>  CDaoDatabase::Execute
+##  <a name="execute"></a>CDaoDatabase :: Execute
 
 Appelez cette fonction membre pour exécuter une requête d’action ou exécuter une instruction SQL sur la base de données.
 
@@ -482,7 +482,7 @@ Appelez la fonction membre [GetRecordsAffected](#getrecordsaffected) de l’obje
 
 `Execute` ne retourne pas de Recordset. L’utilisation de `Execute` sur une requête qui sélectionne des enregistrements amène les MFC à lever une exception de type `CDaoException`. (Il n’existe aucune fonction membre `ExecuteSQL` analogue à `CDatabase::ExecuteSQL`.)
 
-##  <a name="getconnect"></a>  CDaoDatabase::GetConnect
+##  <a name="getconnect"></a>CDaoDatabase :: GetConnect
 
 Appelez cette fonction membre pour récupérer la chaîne de connexion utilisée pour connecter l’objet `CDaoDatabase` à une base de données ODBC ou ISAM.
 
@@ -506,7 +506,7 @@ La chaîne fournit des informations sur la source d’une base de données ouver
 
 Consultez la fonction membre [Open](#open) pour obtenir une description de la façon dont la chaîne de connexion est créée. Une fois que la chaîne de connexion a été définie dans l’appel `Open`, vous pouvez l’utiliser ultérieurement pour vérifier le paramètre afin de déterminer le type, le chemin d’accès, l’ID utilisateur, le mot de passe ou la source de données ODBC de la base de données.
 
-##  <a name="getname"></a>  CDaoDatabase::GetName
+##  <a name="getname"></a>CDaoDatabase :: GetName
 
 Appelez cette fonction membre pour récupérer le nom de la base de données actuellement ouverte, qui est le nom d’un fichier de base de données existant ou le nom d’une source de données ODBC inscrite.
 
@@ -539,7 +539,7 @@ Le type de base de données est indiqué par le fichier ou le répertoire vers l
 
 Pour les bases de données ODBC telles que SQL Server et Oracle, la chaîne de connexion de la base de données identifie un nom de source de données (DSN) inscrit par ODBC.
 
-##  <a name="getquerydefcount"></a>  CDaoDatabase::GetQueryDefCount
+##  <a name="getquerydefcount"></a>CDaoDatabase :: GetQueryDefCount
 
 Appelez cette fonction membre pour récupérer le nombre de requêtes définies dans la collection QueryDefs de la base de données.
 
@@ -555,7 +555,7 @@ Nombre de requêtes définies dans la base de données.
 
 `GetQueryDefCount` est utile si vous devez exécuter en boucle tous les querydefs de la collection QueryDefs. Pour obtenir des informations sur une requête donnée dans la collection, consultez [GetQueryDefInfo](#getquerydefinfo).
 
-##  <a name="getquerydefinfo"></a>  CDaoDatabase::GetQueryDefInfo
+##  <a name="getquerydefinfo"></a>CDaoDatabase :: GetQueryDefInfo
 
 Appelez cette fonction membre pour obtenir différents genres d’informations sur une requête définie dans la base de données.
 
@@ -597,7 +597,7 @@ Deux versions de la fonction sont fournies pour vous permettre de sélectionner 
 
 Pour obtenir une description des informations retournées dans *querydefinfo*, consultez la structure [CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md) . Cette structure a des membres qui correspondent aux éléments d’informations énumérés ci-dessus dans la description de *dwInfoOptions*. Si vous demandez un niveau d’information, vous bénéficiez également des niveaux antérieurs d’informations.
 
-##  <a name="getquerytimeout"></a>  CDaoDatabase::GetQueryTimeout
+##  <a name="getquerytimeout"></a>CDaoDatabase :: GetQueryTimeout
 
 Appelez cette fonction membre pour récupérer le nombre de secondes en vigueur avant que les opérations suivantes sur la base de données connectée aient dépassé le délai d’attente.
 
@@ -617,7 +617,7 @@ La valeur par défaut pour les délais d’attente de requête provient du Regis
 
 Pour obtenir des informations connexes, consultez la rubrique « propriété QueryTimeout » dans l’aide de DAO.
 
-##  <a name="getrecordsaffected"></a>  CDaoDatabase::GetRecordsAffected
+##  <a name="getrecordsaffected"></a>CDaoDatabase :: GetRecordsAffected
 
 Appelez cette fonction membre pour déterminer le nombre d’enregistrements affectés par l’appel le plus récent de la fonction membre [Execute](#execute) .
 
@@ -635,7 +635,7 @@ La valeur retournée comprend le nombre d’enregistrements supprimés, mis à j
 
 Pour obtenir des informations connexes, consultez la rubrique « propriété RecordsAffected » dans l’aide de DAO.
 
-##  <a name="getrelationcount"></a>  CDaoDatabase::GetRelationCount
+##  <a name="getrelationcount"></a>CDaoDatabase :: GetRelationCount
 
 Appelez cette fonction membre pour obtenir le nombre de relations définies entre les tables de la base de données.
 
@@ -653,7 +653,7 @@ Nombre de relations définies entre les tables de la base de données.
 
 Pour illustrer le concept de relation, considérez une table Suppliers et une table Products, qui peuvent avoir une relation un-à-plusieurs. Dans cette relation, un fournisseur peut fournir plusieurs produits. Les autres relations sont un-à-un et plusieurs-à-plusieurs.
 
-##  <a name="getrelationinfo"></a>  CDaoDatabase::GetRelationInfo
+##  <a name="getrelationinfo"></a>CDaoDatabase :: GetRelationInfo
 
 Appelez cette fonction membre pour obtenir des informations sur une relation spécifiée dans la collection de relations de la base de données.
 
@@ -696,7 +696,7 @@ Deux versions de cette fonction fournissent l’accès par index ou par nom. Pou
 > [!NOTE]
 >  Si vous définissez les attributs de l’objet relation pour activer les opérations en cascade (`dbRelationUpdateCascades` ou `dbRelationDeleteCascades`), le moteur de base de données Microsoft Jet met à jour ou supprime automatiquement les enregistrements dans une ou plusieurs autres tables lorsque des modifications sont apportées aux tables de clés primaires associées. Supposons, par exemple, que vous établissez une relation de suppression en cascade entre une table Customers et une table Orders. Lorsque vous supprimez des enregistrements de la table Customers, les enregistrements de la table Orders associés à ce client sont également supprimés. En outre, si vous établissez des relations de suppression en cascade entre la table Orders et d’autres tables, les enregistrements de ces tables sont automatiquement supprimés lorsque vous supprimez des enregistrements de la table Customers.
 
-##  <a name="gettabledefcount"></a>  CDaoDatabase::GetTableDefCount
+##  <a name="gettabledefcount"></a>CDaoDatabase :: GetTableDefCount
 
 Appelez cette fonction membre pour récupérer le nombre de tables définies dans la base de données.
 
@@ -712,7 +712,7 @@ Nombre d’objets TableDefs définis dans la base de données.
 
 `GetTableDefCount` est utile si vous devez exécuter en boucle tous les TableDefs de la collection TableDefs de la base de données. Pour obtenir des informations sur une table donnée dans la collection, consultez [GetTableDefInfo](#gettabledefinfo).
 
-##  <a name="gettabledefinfo"></a>  CDaoDatabase::GetTableDefInfo
+##  <a name="gettabledefinfo"></a>CDaoDatabase :: GetTableDefInfo
 
 Appelez cette fonction membre pour obtenir différents genres d’informations sur une table définie dans la base de données.
 
@@ -757,7 +757,7 @@ Pour obtenir une description des informations retournées dans *tabledefinfo*, c
 > [!NOTE]
 >  L’option AFX_DAO_ALL_INFO fournit des informations qui peuvent être lentes à obtenir. Dans ce cas, le fait de compter les enregistrements dans la table peut prendre beaucoup de temps s’il y a de nombreux enregistrements.
 
-##  <a name="getversion"></a>  CDaoDatabase::GetVersion
+##  <a name="getversion"></a>CDaoDatabase :: GetVersion
 
 Appelez cette fonction membre pour déterminer la version du fichier de base de données Microsoft Jet.
 
@@ -775,7 +775,7 @@ La valeur retournée représente le numéro de version sous la forme « major. 
 
 Pour obtenir des informations connexes, consultez la rubrique « Version Property » dans l’aide de DAO.
 
-##  <a name="isopen"></a>  CDaoDatabase::IsOpen
+##  <a name="isopen"></a>CDaoDatabase :: IsOpen
 
 Appelez cette fonction membre pour déterminer si l’objet `CDaoDatabase` est actuellement ouvert dans une base de données.
 
@@ -789,7 +789,7 @@ Différent de zéro si l’objet `CDaoDatabase` est actuellement ouvert ; Sinon
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="m_pdaodatabase"></a>  CDaoDatabase::m_pDAODatabase
+##  <a name="m_pdaodatabase"></a>CDaoDatabase :: m_pDAODatabase
 
 Contient un pointeur vers l’interface OLE pour l’objet de base de données DAO sous-jacent de l’objet `CDaoDatabase`.
 
@@ -799,7 +799,7 @@ Utilisez ce pointeur si vous devez accéder directement à l’interface DAO.
 
 Pour plus d’informations sur l’appel direct de DAO, consultez la [note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-##  <a name="m_pworkspace"></a>  CDaoDatabase::m_pWorkspace
+##  <a name="m_pworkspace"></a>CDaoDatabase :: m_pWorkspace
 
 Contient un pointeur vers l’objet [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) qui contient l’objet de base de données.
 
@@ -869,7 +869,7 @@ Si vous le souhaitez, vous pouvez ouvrir votre propre boîte de dialogue avant d
 
 Vous pouvez également utiliser la chaîne de connexion pour plusieurs niveaux d’autorisation de connexion (chacun pour un objet `CDaoDatabase` différent) ou pour transmettre d’autres informations spécifiques à la base de données.
 
-##  <a name="setquerytimeout"></a>  CDaoDatabase::SetQueryTimeout
+##  <a name="setquerytimeout"></a>CDaoDatabase :: SetQueryTimeout
 
 Appelez cette fonction membre pour remplacer le nombre de secondes par défaut à autoriser avant les opérations suivantes sur le délai d’expiration de la base de données connectée.
 

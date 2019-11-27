@@ -46,12 +46,12 @@ Les objets d’index et les objets de champ d’index ne sont pas représentés 
 
 Appelez la fonction membre `GetIndexInfo` de l’objet TableDef ou Recordset contenant dans dont la collection d’index est stockée dans l’objet index qui vous intéresse. Ensuite, accédez au membre `m_pFieldInfos` de l’objet [cdaoindexinfo,](../../mfc/reference/cdaoindexinfo-structure.md) . La longueur du tableau de `m_pFieldInfos` est stockée dans `m_nFields`. `CDaoIndexFieldInfo` définit également une fonction membre `Dump` dans les versions Debug. Vous pouvez utiliser `Dump` pour vider le contenu d’un objet `CDaoIndexFieldInfo`.
 
-## <a name="requirements"></a>Conditions requises
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao. h
 
 ## <a name="see-also"></a>Voir aussi
 
 [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)<br/>
-[CDaoRecordset::GetIndexInfo](../../mfc/reference/cdaorecordset-class.md#getindexinfo)
+[CDaoTableDef :: GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)<br/>
+[CDaoRecordset :: GetIndexInfo](../../mfc/reference/cdaorecordset-class.md#getindexinfo)

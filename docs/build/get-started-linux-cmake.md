@@ -191,7 +191,7 @@ Dans cette étape, nous allons déboguer un exemple de programme qui utilise la 
 
 Dans ce didacticiel, vous avez cloné une base de code directement à partir de GitHub. Vous l’avez générée, exécutée et déboguée sur Windows sans modification. Ensuite, vous avez utilisé la même base de code, avec des modifications mineures de la configuration, pour générer, exécuter et déboguer sur une machine Linux distante.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Consultez les rubriques suivantes pour en savoir plus sur la configuration et le débogage des projets CMake dans Visual Studio :
 

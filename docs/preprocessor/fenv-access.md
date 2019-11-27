@@ -1,5 +1,5 @@
 ---
-title: fenv_access, pragma
+title: fenv_access (pragma)
 description: Décrit l’utilisation et les effets de la directive fenv_access pragma. La directive fenv_access contrôle l’accès à l’environnement à virgule flottante au moment de l’exécution.
 ms.date: 11/19/2019
 f1_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74305855"
 ---
-# <a name="fenv_access-pragma"></a>fenv_access, pragma
+# <a name="fenv_access-pragma"></a>fenv_access (pragma)
 
 Désactive (activé) ou active (**off**) les optimisations qui peuvent modifier les tests d’indicateur**d'** environnement à virgule flottante et les modifications de mode.
 

@@ -15,12 +15,12 @@ ms.locfileid: "74397666"
 ---
 # <a name="end-masm"></a>END (MASM)
 
-Marks the end of a module and, optionally, sets the program entry point to *address*.
+Marque la fin d’un module et, éventuellement, définit le point d’entrée du programme sur *Address*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **END** ⟦*address*⟧
+> **Fin** de l'*adresse*⟦ ⟧
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

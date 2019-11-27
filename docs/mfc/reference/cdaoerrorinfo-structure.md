@@ -56,7 +56,7 @@ Pour plus d’informations sur la gestion des erreurs DAO, consultez l’article
 
 Les informations récupérées par la fonction membre [CDaoException :: GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) sont stockées dans une structure `CDaoErrorInfo`. Examinez le membre de données [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) à partir d’un objet `CDaoException` que vous interceptez dans un gestionnaire d'exceptions, ou appelez `GetErrorInfo` à partir d’un objet `CDaoException` que vous créez explicitement afin de vérifier les erreurs qui se sont produites pendant un appel direct aux interfaces DAO. `CDaoErrorInfo` définit également une fonction membre `Dump` dans les versions Debug. Vous pouvez utiliser `Dump` pour vider le contenu d’un objet `CDaoErrorInfo`.
 
-## <a name="requirements"></a>Conditions requises
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao. h
 

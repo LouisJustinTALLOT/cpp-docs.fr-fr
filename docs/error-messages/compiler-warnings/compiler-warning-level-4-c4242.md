@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4242
 ms.assetid: 8df742e1-fbf1-42f3-8e93-c0e1c222dc7e
-ms.openlocfilehash: ed145444d6eec583c448a3a49167ca1f82644f0b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3123a414dc7a169d2a472dad96d659a9e56c9020
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510010"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541752"
 ---
 # <a name="compiler-warning-level-4-c4242"></a>Avertissement du compilateur (niveau 4) C4242
 
-'identificateur': conversion de’type1 'en’type2 ', perte possible de données
+'identificateur' : conversion de’type1 'en’type2 ', perte possible de données
 
 Les types sont différents. La conversion de type peut entraîner une perte de données. Le compilateur effectue la conversion de type.
 
@@ -23,9 +23,9 @@ Cet avertissement est désactivé par défaut. Consultez [Avertissements du comp
 
 Pour plus d’informations sur C4242, consultez [Erreurs de compilateur courantes](/windows/win32/WinProg64/common-compiler-errors).
 
-L’exemple suivant génère l’C4242:
+L’exemple suivant génère l’C4242 :
 
-```
+```cpp
 // C4242.cpp
 // compile with: /W4
 #pragma warning(4:4242)
