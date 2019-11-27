@@ -18,19 +18,19 @@ ms.locfileid: "74246646"
 ---
 # <a name="cleaning-up-resources"></a>Nettoyage des ressources
 
-Pendant l'exécution du gestionnaire de terminaisons, il est possible que vous ne sachiez pas quelles ressources ont été réellement allouées avant l'appel du gestionnaire de terminaisons. It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
+Pendant l'exécution du gestionnaire de terminaisons, il est possible que vous ne sachiez pas quelles ressources ont été réellement allouées avant l'appel du gestionnaire de terminaisons. Il est possible que le bloc d’instructions **__try** ait été interrompu avant que toutes les ressources n’aient été allouées, de sorte que toutes les ressources n’ont pas été ouvertes.
 
 Ainsi, par sécurité, vous devez vérifier les ressources qui sont réellement ouvertes avant de procéder au nettoyage de la gestion du bloc de fin. Voici une procédure recommandée :
 
 1. Initialiser les handles sur NULL.
 
-1. In the **__try** statement block, allocate resources. Les handles sont définis sur des valeurs positives lorsque la ressource est allouée.
+1. Dans le bloc d’instructions **__try** , allouez des ressources. Les handles sont définis sur des valeurs positives lorsque la ressource est allouée.
 
-1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
+1. Dans le bloc d’instructions **__finally** , libérez chaque ressource dont la variable de handle ou d’indicateur correspondante est différente de zéro ou non null.
 
 ## <a name="example"></a>Exemple
 
-For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. Avant de nettoyer une ressource, le code vérifie si elle a été allouée.
+Par exemple, le code suivant utilise un gestionnaire de terminaison pour fermer trois fichiers et un bloc de mémoire qui ont été alloués dans le bloc d’instructions **__try** . Avant de nettoyer une ressource, le code vérifie si elle a été allouée.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[Gestion structurée des exceptions (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Écriture d’un gestionnaire de terminaisons](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -17,29 +17,29 @@ ms.locfileid: "74245853"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Mode d'évaluation des blocs Catch (C++)
 
-C++ vous permet de lever des exceptions de tout type, bien qu'en général il soit recommandé de lever des types dérivés de std::exception. A C++ exception can be caught by a **catch** handler that specifies the same type as the thrown exception, or by a handler that can catch any type of exception.
+C++ vous permet de lever des exceptions de tout type, bien qu'en général il soit recommandé de lever des types dérivés de std::exception. Une C++ exception peut être interceptée par un gestionnaire **catch** qui spécifie le même type que l’exception levée, ou par un gestionnaire qui peut intercepter tout type d’exception.
 
 Si le type de l'exception levée est une classe, qui possède également une classe (ou des classes) de base, elle peut être interceptée par des gestionnaires qui acceptent les classes de base du type de l'exception, ainsi que des références aux bases du type de l'exception. Notez que lorsqu'une exception est interceptée par une référence, elle est associée à l'objet exception levée réel. Dans le cas contraire, il s'agit d'une copie (similaire à un argument pour une fonction).
 
-When an exception is thrown, it may be caught by the following types of **catch** handlers:
+Lorsqu’une exception est levée, elle peut être interceptée par les types de gestionnaires **catch** suivants :
 
 - Gestionnaire capable d'accepter tout type (à l'aide de la syntaxe avec points de suspension).
 
-- A handler that accepts the same type as the exception object; because it is a copy, **const** and **volatile** modifiers are ignored.
+- Gestionnaire qui accepte le même type que l’objet exception ; étant donné qu’il s’agit d’une copie, les modificateurs **const** et **volatile** sont ignorés.
 
 - Gestionnaire qui accepte une référence au même type que l'objet exception.
 
-- A handler that accepts a reference to a **const** or **volatile** form of the same type as the exception object.
+- Gestionnaire qui accepte une référence à une forme **const** ou **volatile** du même type que l’objet exception.
 
-- A handler that accepts a base class of the same type as the exception object; since it is a copy, **const** and **volatile** modifiers are ignored. The **catch** handler for a base class must not precede the **catch** handler for the derived class.
+- Gestionnaire qui accepte une classe de base du même type que l’objet exception ; étant donné qu’il s’agit d’une copie, les modificateurs **const** et **volatile** sont ignorés. Le gestionnaire **catch** pour une classe de base ne doit pas précéder le gestionnaire **catch** pour la classe dérivée.
 
 - Gestionnaire qui accepte une référence à une classe de base du même type que l'objet exception.
 
-- A handler that accepts a reference to a **const** or **volatile** form of a base class of the same type as the exception object.
+- Gestionnaire qui accepte une référence à une forme **const** ou **volatile** d’une classe de base du même type que l’objet exception.
 
 - Gestionnaire qui accepte un pointeur vers lequel un objet pointeur levé peut être converti via des règles de conversion de pointeur standard.
 
-The order in which **catch** handlers appear is significant, because handlers for a given **try** block are examined in order of their appearance. Par exemple, il est incorrect de placer le gestionnaire d'une classe de base avant le gestionnaire d'une classe dérivée. After a matching **catch** handler is found, subsequent handlers are not examined. As a result, an ellipsis **catch** handler must be the last handler for its **try** block. Exemple :
+L’ordre dans lequel les gestionnaires **catch** apparaissent est significatif, car les gestionnaires d’un bloc **try** donné sont examinés dans l’ordre de leur apparence. Par exemple, il est incorrect de placer le gestionnaire d'une classe de base avant le gestionnaire d'une classe dérivée. Une fois qu’un gestionnaire **catch** correspondant a été trouvé, les gestionnaires suivants ne sont pas examinés. Par conséquent, un gestionnaire **catch** de points de suspension doit être le dernier gestionnaire de son bloc **try** . Exemple :
 
 ```cpp
 // ...
@@ -62,8 +62,8 @@ catch( CExcptClass E )
 }
 ```
 
-In this example, the ellipsis **catch** handler is the only handler that is examined.
+Dans cet exemple, le gestionnaire **catch** de points de suspension est le seul gestionnaire examiné.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Meilleures C++ pratiques modernes pour les exceptions et la gestion des erreurs](../cpp/errors-and-exception-handling-modern-cpp.md)

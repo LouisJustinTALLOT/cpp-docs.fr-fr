@@ -1,5 +1,5 @@
 ---
-title: IF1 and IF2
+title: IF1 et IF2
 ms.date: 11/21/2019
 f1_keywords:
 - IF2
@@ -15,11 +15,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397446"
 ---
-# <a name="if1-and-if2"></a>IF1 and IF2
+# <a name="if1-and-if2"></a>IF1 et IF2
 
-**IF1** block is evaluated on first assembly pass.
+Le bloc **IF1** est évalué lors du premier passage de l’assembly.
 
-**IF2** block is evaluated on every assembly pass if **OPTION:SETIF2** is **TRUE**.
+Le bloc **IF2** est évalué à chaque passe d’assembly si l' **option : SETIF2** a la **valeur true**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,20 +29,20 @@ ms.locfileid: "74397446"
 
 ## <a name="remarks"></a>Notes
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Vérifiez [si](../../assembler/masm/if-masm.md) la syntaxe est complète.
 
-Unlike version 5.1, MASM 6.1 and above do most of its work on its first pass, then performs as many subsequent passes as necessary. In contrast, MASM 5.1 always assembles in two source passes. As a result, you may need to revise or delete some pass-dependent constructs under MASM 6.1 and above.
+Contrairement à la version 5,1, MASM 6,1 et versions ultérieures effectuent la majeure partie de son travail lors de sa première passe, puis effectuent autant de passes que nécessaire. En revanche, MASM 5,1 est toujours assemblé en deux passes sources. Par conséquent, vous devrez peut-être modifier ou supprimer certaines constructions dépendantes de MASM 6,1 et versions ultérieures.
 
-### <a name="two-pass-directives"></a>Two-Pass Directives
+### <a name="two-pass-directives"></a>Directives en deux passes
 
-To assure compatibility, MASM 6.1 and above support 5.1 directives referring to two passes. These include **.ERR1**, **.ERR2**, **IF1**, **IF2**, **ELSEIF1**, and **ELSEIF2**. For second-pass constructs, you must specify [OPTION SETIF2](option-masm.md). Without **OPTION SETIF2**, the **IF2** and **.ERR2** directives cause an error:
+Pour garantir la compatibilité, MASM 6,1 et versions ultérieures prennent en charge les directives 5,1 qui font référence à deux passes. Il s’agit notamment de **. ERR1**, **. ERR2**, **IF1**, **IF2**, **ELSEIF1**et **ELSEIF2**. Pour les constructions de deuxième passe, vous devez spécifier l' [option SETIF2](option-masm.md). Sans l' **option SETIF2**, **IF2** et **.** Les directives Err2 provoquent une erreur :
 
 ```output
 .ERR2 not allowed : single-pass assembler
 ```
 
-MASM 6.1 and above handle first-pass constructs differently. It treats the **.ERR1** directive as **.ERR**, and the **IF1** directive as **IF**.
+MASM 6,1 et versions ultérieures gèrent différemment les constructions de première passe. Elle traite le **. Directive ERR1** comme **. ERR**et la directive **IF1** comme **If**.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

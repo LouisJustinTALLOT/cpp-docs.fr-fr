@@ -38,7 +38,7 @@ Les instructions de création d’un nouveau projet varient en fonction de la ve
 
 1. Dans la barre de menus, choisissez **Fichier** > **Nouveau** > **Projet**. Sous **Visual C++**  > **fenêtre Windows universelle** **, choisissez bibliothèque statique (Windows universel)** .
 
-1. Dans l'**Explorateur de solutions**, ouvrez le menu contextuel du projet et choisissez **Propriétés**. Dans la boîte de dialogue **Propriétés** , dans la page **Propriétés de configuration** > **C/C++**  page, affectez la valeur **Oui (/ZW)** à **utiliser l’extension Windows Runtime** .
+1. Dans l' **Explorateur de solutions**, ouvrez le menu contextuel du projet et choisissez **Propriétés**. Dans la boîte de dialogue **Propriétés** , dans la page **Propriétés de configuration** > **C/C++**  page, affectez la valeur **Oui (/ZW)** à **utiliser l’extension Windows Runtime** .
 
 ::: moniker-end
 

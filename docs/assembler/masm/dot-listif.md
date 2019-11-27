@@ -15,7 +15,7 @@ ms.locfileid: "74398159"
 ---
 # <a name="listif"></a>.LISTIF
 
-Starts listing of statements in false conditional blocks.
+Commence la liste des instructions dans des blocs conditionnels faux.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,8 +23,8 @@ Starts listing of statements in false conditional blocks.
 
 ## <a name="remarks"></a>Notes
 
-Same as [.LFCOND](../../assembler/masm/dot-lfcond.md).
+Identique à [. LFCOND](../../assembler/masm/dot-lfcond.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

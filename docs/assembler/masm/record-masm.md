@@ -15,12 +15,12 @@ ms.locfileid: "74394599"
 ---
 # <a name="record-masm"></a>RECORD (MASM)
 
-Declares a record type consisting of the specified fields. *fieldname* names the field, *width* specifies the number of bits, and *expression* gives its initial value.
+Déclare un type d’enregistrement composé des champs spécifiés. *fieldName* nomme le champ, *Width* spécifie le nombre de bits et *expression* donne sa valeur initiale.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *recordname* **RECORD** *fieldname* __:__ *width* ⟦ __=__ *expression*⟧ ⟦ __,__ *fieldname* __:__ *width* ⟦ __=__ *expression*⟧ ...⟧
+> *RecordName* **enregistrement** *fieldName* __:__ *Width* ⟦ __=__ *expression*⟧ ⟦ __,__ *fieldName* __:__ *Width* ⟦ __=__ *expression*⟧... ⟧
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

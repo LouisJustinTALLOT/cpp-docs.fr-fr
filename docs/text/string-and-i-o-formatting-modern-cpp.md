@@ -70,7 +70,7 @@ Le code suivant illustre quelques-unes des fonctionnalités de mise en forme am�
 ## <a name="see-also"></a>Voir aussi
 
 [Bienvenue dansC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-[Référence du langage C++](../cpp/cpp-language-reference.md)<br/>
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
 [Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>
 [\<limits>](../standard-library/limits.md)<br/>

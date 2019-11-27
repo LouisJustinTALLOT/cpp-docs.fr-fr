@@ -36,5 +36,5 @@ extern "C" {        // functions using explicit "this"
 ## <a name="see-also"></a>Voir aussi
 
 [Bienvenue dansC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-[Référence du langage C++](../cpp/cpp-language-reference.md)<br/>
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
 [Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

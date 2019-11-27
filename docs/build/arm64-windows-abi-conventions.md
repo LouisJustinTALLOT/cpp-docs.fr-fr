@@ -12,7 +12,7 @@ ms.locfileid: "74303263"
 
 L’interface binaire d’application (ABI) de base pour Windows lorsqu’elle est compilée et exécutée sur des processeurs ARM en mode 64 bits (architectures ARMv8 ou ultérieures), pour la plupart, suit le interface EABI AArch64 standard de ARM. Cet article met en évidence certaines des hypothèses principales et les modifications apportées par rapport à ce qui est documenté dans le interface EABI. Pour plus d’informations sur l’ABI 32 bits, consultez [vue d’ensemble des conventions Abi ARM](overview-of-arm-abi-conventions.md). Pour plus d’informations sur le interface EABI ARM standard, consultez [interface binaire d’application (ABI) pour l’architecture ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (lien externe).
 
-## <a name="definitions"></a>Définitions
+## <a name="definitions"></a>définitions
 
 Avec l’introduction de la prise en charge de 64 bits, ARM a défini plusieurs termes :
 
@@ -71,12 +71,12 @@ Alignement de la disposition par défaut pour les valeurs globales et statiques�
 
 L’architecture AArch64 prend en charge les registres d’entiers 32 :
 
-| Registre | Volatil ? | Rôle |
+| Registre | Volatil ? | Role |
 | - | - | - |
-| x0 | Volatil | Registre des paramètres/brouillons 1, registre des résultats |
-| x1-x7 | Volatil | Paramètre/Registre de travail 2-8 |
-| x8-x15 | Volatil | Registres de travail |
-| x16-x17 | Volatil | Registres de travail intra-procédure-appel |
+| x0 | Volatile | Registre des paramètres/brouillons 1, registre des résultats |
+| x1-x7 | Volatile | Paramètre/Registre de travail 2-8 |
+| x8-x15 | Volatile | Registres de travail |
+| x16-x17 | Volatile | Registres de travail intra-procédure-appel |
 | x18 | Non volatil | Registre de la plateforme : en mode noyau, pointe vers KPCR pour le processeur actuel. en mode utilisateur, pointe vers TEB |
 | x19-x28 | Non volatil | Registres de travail |
 | x29/fp | Non volatil | Pointeur de frame |
@@ -94,18 +94,18 @@ Le pointeur de frame (x29) est requis pour la compatibilité avec le parcours de
 
 L’architecture AArch64 prend également en charge les registres à virgule flottante 32/SIMD, résumés ci-dessous :
 
-| Registre | Volatil ? | Rôle |
+| Registre | Volatil ? | Role |
 | - | - | - |
-| v0 | Volatil | Registre des paramètres/brouillons 1, registre des résultats |
-| v1-v7 | Volatil | Registres de paramètres/Scratch 2-8 |
+| v0 | Volatile | Registre des paramètres/brouillons 1, registre des résultats |
+| v1-v7 | Volatile | Registres de paramètres/Scratch 2-8 |
 | v8-v15 | Non volatil | Registres de travail (seuls les 64 bits de poids faible sont non volatils) |
-| v16-v31 | Volatil | Registres de travail |
+| v16-v31 | Volatile | Registres de travail |
 
 Chaque registre est accessible en tant que valeur 128 bits complète (via v0-V31 ou Q0-Q31). Elle est accessible en tant que valeur 64 bits (via D0-D31), sous la forme d’une valeur 32 bits (via S0-S31), en tant que valeur 16 bits (via H0-H31) ou en tant que valeur 8 bits (via B0-B31). Les accès inférieurs à 128 bits accèdent uniquement aux bits inférieurs du Registre 128 bits complet. Ils laissent intacts les bits restants, sauf indication contraire. (AArch64 est différent de AArch32, où les registres plus petits ont été regroupés en plus des registres plus volumineux.)
 
 Le registre de contrôle à virgule flottante (FPCR) a certaines exigences sur les différents champs de bits qu’il contient :
 
-| Bits | Signification | Volatil ? | Rôle |
+| Bits | Signification | Volatil ? | Role |
 | - | - | - | - |
 | 26 | AHP | Non volatile | Autre contrôle à demi-précision. |
 | 25 | DN | Non volatile | Contrôle en mode NaN par défaut. |
@@ -117,7 +117,7 @@ Le registre de contrôle à virgule flottante (FPCR) a certaines exigences sur l
 
 Comme AArch32, la spécification AArch64 fournit trois registres « ID de thread » contrôlés par le système :
 
-| Registre | Rôle |
+| Registre | Role |
 | - | - |
 | TPIDR_EL0 | Réservé. |
 | TPIDRRO_EL0 | Contient le nombre de processeurs pour le processeur actuel. |
@@ -221,7 +221,7 @@ Tous les autres types utilisent la Convention suivante :
 
 - L’appelant doit réserver un bloc de mémoire dont la taille et l’alignement sont suffisants pour contenir le résultat. L’adresse du bloc de mémoire doit être passée comme argument supplémentaire à la fonction dans x0, ou x1 si $this est passé en x0. L’appelé peut modifier le bloc de mémoire résultant à tout moment pendant l’exécution de la sous-routine. L’appelé retourne l’adresse du bloc de mémoire en x0.
 
-## <a name="stack"></a>Stack
+## <a name="stack"></a>Pile
 
 À la suite du ABI présenté par ARM, la pile doit rester alignée sur 16 octets à tout moment. AArch64 contient une fonctionnalité matérielle qui génère des erreurs d’alignement de la pile chaque fois que le SP n’est pas aligné sur 16 octets et qu’un chargement ou un magasin relatif à un SP est effectué. Windows s’exécute avec cette fonctionnalité activée à tout moment.
 

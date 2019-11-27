@@ -15,7 +15,7 @@ ms.locfileid: "74397808"
 ---
 # <a name="xlist"></a>.XLIST
 
-See [.NOLIST](../../assembler/masm/dot-nolist.md).
+Consultez [. Nolist](../../assembler/masm/dot-nolist.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ See [.NOLIST](../../assembler/masm/dot-nolist.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

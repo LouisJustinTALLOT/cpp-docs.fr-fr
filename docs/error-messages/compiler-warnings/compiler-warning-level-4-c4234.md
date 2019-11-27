@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4234
 ms.assetid: f7fecd5c-8248-4fde-8446-502aedc357ca
-ms.openlocfilehash: 314ee068fb2be6148304360b0aaa3bd8029c283b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63a22fed0832677837eb786268fc92946d295b79
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401070"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541773"
 ---
 # <a name="compiler-warning-level-4-c4234"></a>Avertissement du compilateur (niveau 4) C4234
 
-extension non standard utilisée : mot clé 'mot_clé' réservé pour une utilisation ultérieure
+extension non standard utilisée : mot clé’keyword’réservé pour un usage ultérieur
 
 Le compilateur n’implémente pas encore le mot clé que vous avez utilisé.
 
-Cet avertissement est automatiquement promu en une erreur. Si vous souhaitez modifier ce comportement, utilisez [#pragma warning](../../preprocessor/warning.md). Par exemple, pour que C4234 soit un avertissement de problème de niveau 4
+Cet avertissement est automatiquement promu en erreur. Si vous souhaitez modifier ce comportement, utilisez [#pragma AVERTISSEMENT](../../preprocessor/warning.md). Par exemple, pour faire de C4234 dans un numéro d’avertissement de niveau 4,
 
-```
+```cpp
 #pragma warning(2:4234)
 ```
 

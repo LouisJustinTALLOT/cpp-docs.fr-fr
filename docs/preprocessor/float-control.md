@@ -1,5 +1,5 @@
 ---
-title: float_control, pragma
+title: float_control (pragma)
 description: Décrit l’utilisation et les effets de la directive float_control pragma. La directive float_control contrôle l’état de la sémantique et de la sémantique d’exception précises à virgule flottante au moment de l’exécution.
 ms.date: 11/18/2019
 f1_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74305505"
 ---
-# <a name="float_control-pragma"></a>float_control, pragma
+# <a name="float_control-pragma"></a>float_control (pragma)
 
 Spécifie le comportement de virgule flottante d'une fonction.
 
@@ -37,10 +37,10 @@ Spécifie si la sémantique d’exceptions de virgule flottante doit être activ
 
 **except** ne peut avoir la valeur **on** que si **precise** a également la valeur **on**.
 
-**push**\
+\ **Push**
 Exécute un push du paramètre de **float_control** actuel sur la pile interne du compilateur.
 
-**pop**\
+\ **pop**
 Supprime le paramètre de **float_control** du haut de la pile interne du compilateur et définit le nouveau paramètre de **float_control** .
 
 ## <a name="remarks"></a>Notes
@@ -49,11 +49,11 @@ Les options **precise** et **except** n’ont pas exactement le même comporteme
 
 | | float_control (précis, \*) | float_control (sauf, \*) | fp_contract (\*) | fenv_access (\*) |
 |-|-|-|-|-|
-| /FP : strict             | sur  | sur  | Préférable | sur  |
-| /FP : strict/FP : except- | sur  | Préférable | Préférable | sur  |
-| /FP : precise            | sur  | Préférable | sur  | Préférable |
-| /FP : precise/FP : except | sur  | sur  | sur  | Préférable |
-| /FP : Fast               | Préférable | Préférable | sur  | Préférable |
+| /FP : strict             | sur  | sur  | préférable | sur  |
+| /FP : strict/FP : except- | sur  | préférable | préférable | sur  |
+| /FP : precise            | sur  | préférable | sur  | préférable |
+| /FP : precise/FP : except | sur  | sur  | sur  | préférable |
+| /FP : Fast               | préférable | préférable | sur  | préférable |
 
 En d’autres termes, vous devez utiliser plusieurs pragmas en association pour émuler les options de ligne de commande **/FP : Fast**, **/FP : precise**, **/FP : strict**et **/FP : except** .
 

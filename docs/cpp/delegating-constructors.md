@@ -1,6 +1,6 @@
 ---
-title: Delegating constructors (C++)
-description: Use delegating constructors in C++ to invoke other constructors and reduce code repetition.
+title: Constructeurs de délégation (C++)
+description: Utilisez des constructeurs de délégation dans C++ pour appeler d’autres constructeurs et réduire la répétition de code.
 ms.date: 11/19/2019
 ms.openlocfilehash: 533cdfbeb882f3770cc554b0633611a4ffc2cfbd
 ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
@@ -11,7 +11,7 @@ ms.locfileid: "74250673"
 ---
 # <a name="delegating-constructors"></a>Constructeurs effectuant une délégation
 
-Many classes have multiple constructors that do similar things—for example, validate parameters:
+De nombreuses classes ont plusieurs constructeurs qui effectuent des opérations similaires, par exemple valider des paramètres :
 
 ```cpp
 class class_c {
@@ -36,7 +36,7 @@ public:
 };
 ```
 
-You could reduce the repetitive code by adding a function that does all of the validation, but the code for `class_c` would be easier to understand and maintain if one constructor could delegate some of the work to another one. To add delegating constructors, use the `constructor (. . .) : constructor (. . .)` syntax:
+Vous pouvez réduire le code répétitif en ajoutant une fonction qui effectue toute la validation, mais le code pour `class_c` serait plus facile à comprendre et à gérer si un constructeur pourrait déléguer une partie du travail à un autre. Pour ajouter des constructeurs de délégation, utilisez la syntaxe `constructor (. . .) : constructor (. . .)` :
 
 ```cpp
 class class_c {
@@ -61,9 +61,9 @@ int main() {
 }
 ```
 
-As you step through the previous example, notice that the constructor `class_c(int, int, int)` first calls the constructor `class_c(int, int)`, which in turn calls `class_c(int)`. Each of the constructors performs only the work that is not performed by the other constructors.
+À mesure que vous parcourez l’exemple précédent, remarquez que le constructeur `class_c(int, int, int)` appelle d’abord le constructeur `class_c(int, int)`, qui à son tour appelle `class_c(int)`. Chacun des constructeurs exécute uniquement le travail qui n’est pas effectué par les autres constructeurs.
 
-The first constructor that's called initializes the object so that all of its members are initialized at that point. You can’t do member initialization in a constructor that delegates to another constructor, as shown here:
+Le premier constructeur appelé Initialise l’objet de sorte que tous ses membres soient initialisés à ce stade. Vous ne pouvez pas effectuer d’initialisation de membre dans un constructeur qui délègue à un autre constructeur, comme illustré ici :
 
 ```cpp
 class class_a {
@@ -83,7 +83,7 @@ public:
 };
 ```
 
-The next example shows the use of non-static data-member initializers. Notice that if a constructor also initializes a given data member, the member initializer is overridden:
+L’exemple suivant illustre l’utilisation d’initialiseurs de membres de données non statiques. Notez que si un constructeur initialise également un membre de données donné, l’initialiseur de membre est substitué :
 
 ```cpp
 class class_a {
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-The constructor delegation syntax doesn't prevent the accidental creation of constructor recursion—Constructor1 calls Constructor2 which calls Constructor1—and no errors are thrown until there is a stack overflow. It's your responsibility to avoid cycles.
+La syntaxe de délégation du constructeur n’empêche pas la création accidentelle de la récursivité du constructeur (constructor1 appelle Constructor2 qui appelle constructor1) et aucune erreur n’est levée tant qu’il n’y a pas de dépassement de capacité de la pile. Il vous incombe d’éviter les cycles.
 
 ```cpp
 class class_f{

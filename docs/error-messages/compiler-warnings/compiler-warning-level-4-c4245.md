@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4245
 ms.assetid: 85083d53-9cc2-4d12-b58c-6dad28f15cbe
-ms.openlocfilehash: 7f22386439803de1b59f3236775aa6cec0254eab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d55226a368f81a9506b38fe9271da4332bd1f5b
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400992"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541719"
 ---
 # <a name="compiler-warning-level-4-c4245"></a>Avertissement du compilateur (niveau 4) C4245
 
-'conversion' : conversion de 'type1' en 'type2', incompatibilité signed/unsigned
+'conversion' : conversion de’type1 'en’type2 ', incompatibilité signed/unsigned
 
-Vous avez essayé de convertir un signé **const** qui a une valeur négative à une `unsigned`.
+Vous avez essayé de convertir un **const** signé qui a une valeur négative en `unsigned`.
 
-L’exemple suivant génère l’erreur C4245 :
+L’exemple suivant génère l’C4245 :
 
-```
+```cpp
 // C4245.cpp
 // compile with: /W4 /c
 const int i = -1;

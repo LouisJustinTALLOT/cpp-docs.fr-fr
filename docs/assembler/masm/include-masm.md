@@ -15,16 +15,16 @@ ms.locfileid: "74397348"
 ---
 # <a name="include-masm"></a>INCLUDE (MASM)
 
-Inserts source code from the source file given by *filename* into the current source file during assembly.
+Insère le code source du fichier source donné par *filename* dans le fichier source actuel pendant l’assembly.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **INCLUDE** *filename*
+> **Inclure** le *nom de fichier*
 
 ## <a name="remarks"></a>Notes
 
-The *filename* must be enclosed in angle brackets if it includes a backslash, semicolon, greater-than symbol, less-than symbol, single quotation mark, or double quotation mark.
+Le *nom de fichier* doit être placé entre crochets pointus s’il comprend une barre oblique inverse, un point-virgule, un symbole supérieur à, un symbole inférieur à, un guillemet simple ou un guillemet double.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

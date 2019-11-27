@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4554
+title: Avertissement du compilateur (niveau 3) C4554
 ms.date: 11/04/2016
 f1_keywords:
 - C4554
@@ -13,11 +13,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188893"
 ---
-# <a name="compiler-warning-level-3-c4554"></a>Compiler Warning (level 3) C4554
+# <a name="compiler-warning-level-3-c4554"></a>Avertissement du compilateur (niveau 3) C4554
 
-'operator' : check operator precedence for possible error; use parentheses to clarify precedence
+'opérateur' : Vérifiez la priorité des opérateurs pour déterminer si une erreur est possible ; utiliser des parenthèses pour clarifier la précédence
 
-The following sample generates C4554:
+L’exemple suivant génère l’C4554 :
 
 ```cpp
 // C4554.cpp

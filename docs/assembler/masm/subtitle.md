@@ -15,12 +15,12 @@ ms.locfileid: "74393469"
 ---
 # <a name="subtitle"></a>SUBTITLE
 
-Defines the listing subtitle. Same as [SUBTTL](../../assembler/masm/subttl.md).
+Définit le sous-titre de la liste. Identique à [SUBTTL](../../assembler/masm/subttl.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **SUBTITLE** *text*
+> *Texte* du sous-titre
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

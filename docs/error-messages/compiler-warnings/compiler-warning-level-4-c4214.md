@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4214
 ms.assetid: 9b8db279-1f12-4a6b-a923-2db22acd1947
-ms.openlocfilehash: 31711d3709b7c2ae3658d760f538ea9e841d33a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85f37810708eff43574129f42dd8444fe7dc37c2
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401122"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541897"
 ---
 # <a name="compiler-warning-level-4-c4214"></a>Avertissement du compilateur (niveau 4) C4214
 
-extension non standard utilisée : types de champs autres qu’int de bits
+extension non standard utilisée : types de champs de bits autres que int
 
-Avec les extensions Microsoft (/Ze), les membres de structure de champ de bits peuvent être de n’importe quel type entier.
+Avec les extensions Microsoft par défaut (/Ze), les membres de structure de champ de valeurs peuvent être de n’importe quel type entier.
 
 ## <a name="example"></a>Exemple
 
-```
+```c
 // C4214.c
 // compile with: /W4
 struct bitfields
@@ -34,4 +34,4 @@ int main()
 }
 ```
 
-Ces champs de bits ne sont pas valides sous compatibilité ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Ces champs de bits ne sont pas valides sous compatibilité ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

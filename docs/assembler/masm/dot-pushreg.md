@@ -15,23 +15,23 @@ ms.locfileid: "74398033"
 ---
 # <a name="pushreg"></a>.PUSHREG
 
-Generates a `UWOP_PUSH_NONVOL` unwind code entry for the specified register number using the current offset in the prologue.
+Génère une entrée de code de déroulement `UWOP_PUSH_NONVOL` pour le numéro de Registre spécifié à l’aide de l’offset actuel dans le prologue.
 
 ## <a name="syntax"></a>Syntaxe
 
-> .PUSHREG register
+> . Registre PUSHREG
 
 ## <a name="remarks"></a>Notes
 
-**.PUSHREG** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) **FRAME** declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.PUSHREG** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**. PUSHREG** permet aux utilisateurs de ml64. exe de spécifier le déroulement d’une fonction Frame et est uniquement autorisé dans le prologue, qui s’étend de la déclaration de la **trame** [proc](../../assembler/masm/proc.md) à l' [. Directive ENDPROLOG](../../assembler/masm/dot-endprolog.md) . Ces directives ne génèrent pas de code ; ils génèrent uniquement des `.xdata` et des `.pdata`. **. Les PUSHREG** doivent être précédées d’instructions qui implémentent réellement les actions à déenrouler. Il est recommandé d’inclure dans un wrapper les directives de déroulement et le code qu’ils sont censés dérouler dans une macro pour garantir l’accord.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Pour plus d’informations, consultez [MASM pour x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Exemple
 
 ### <a name="description"></a>Description
 
-The following sample shows how to push non-volatile registers.
+L’exemple suivant montre comment envoyer des registres non volatils.
 
 ### <a name="code"></a>Code
 
@@ -57,4 +57,4 @@ END
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

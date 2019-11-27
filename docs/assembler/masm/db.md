@@ -1,5 +1,5 @@
 ---
-title: DB
+title: BdD
 ms.date: 08/30/2018
 f1_keywords:
 - DB
@@ -13,20 +13,20 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398817"
 ---
-# <a name="db"></a>DB
+# <a name="db"></a>BdD
 
-Allocates and optionally initializes a byte of storage for each *initializer*. **DB** is a synonym of [BYTE](../../assembler/masm/byte-masm.md).
+Alloue et initialise éventuellement un octet de stockage pour chaque *initialiseur*. **DB** est un synonyme de [Byte](../../assembler/masm/byte-masm.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-> ⟦*name*⟧ **DB** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*nom*de l' *initialiseur* ⟧ **DB** ⟦ __,__ *initialiseur* ... ⟧
 
 ## <a name="remarks"></a>Notes
 
-Can also be used as a type specifier anywhere a type is legal.
+Peut également être utilisé comme spécificateur de type partout où un type est légal.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
-[DB](../../assembler/masm/db.md)\
+Informations de référence sur les [Directives](../../assembler/masm/directives-reference.md)\
+\ [DB](../../assembler/masm/db.md)
 [SBYTE](../../assembler/masm/sbyte-masm.md)

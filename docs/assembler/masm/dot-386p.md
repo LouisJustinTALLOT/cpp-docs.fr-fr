@@ -13,9 +13,9 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398719"
 ---
-# <a name="386p-32-bit-masm"></a>.386P (32-bit MASM)
+# <a name="386p-32-bit-masm"></a>.386P (MASM 32 bits)
 
-Enables assembly of all instructions (including privileged) for the 80386 processor; disables assembly of instructions introduced with later processors. (32-bit MASM only.)
+Active l’assembly de toutes les instructions (y compris les privilèges) pour le processeur 80386 ; désactive l’assemblage des instructions introduites avec des processeurs ultérieurs. (uniquement MASM 32 bits.)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,7 +23,7 @@ Enables assembly of all instructions (including privileged) for the 80386 proces
 
 ## <a name="remarks"></a>Notes
 
-Also enables 80387 instructions.
+Active également les instructions 80387.
 
 ## <a name="see-also"></a>Voir aussi
 

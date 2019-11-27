@@ -1,29 +1,29 @@
 ---
-title: Compilateur avertissement (niveau 4) C4032
+title: Avertissement du compilateur (niveau 4) C4032
 ms.date: 11/04/2016
 f1_keywords:
 - C4032
 helpviewer_keywords:
 - C4032
 ms.assetid: 70dd0c85-0239-43f9-bb06-507f6a57d206
-ms.openlocfilehash: fa1602d63ed9822725fea8e1b842929f221d3926
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52e80340a5157e9350b6d4bbf3bcabea0487e089
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401460"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541257"
 ---
-# <a name="compiler-warning-level-4-c4032"></a>Compilateur avertissement (niveau 4) C4032
+# <a name="compiler-warning-level-4-c4032"></a>Avertissement du compilateur (niveau 4) C4032
 
-paramètre formel 'nombre' a un type différent lors de sa promotion
+le paramètre formel’Number’a un type différent lors de sa promotion
 
 Le type de paramètre n’est pas compatible, par le biais des promotions par défaut, avec le type dans une déclaration précédente.
 
-Il s’agit d’une erreur en C ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) et un avertissement sous extensions Microsoft (/Ze).
+Il s’agit d’une erreur en C ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)) et d’un avertissement sous les extensions Microsoft (/Ze).
 
 ## <a name="example"></a>Exemple
 
-```
+```c
 // C4032.c
 // compile with: /W4
 void func();

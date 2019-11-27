@@ -15,21 +15,21 @@ ms.locfileid: "74399274"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
 
-The **ALIGN** directive aligns the next data element or instruction on an address that is a multiple of its parameter. The parameter must be a power of 2 (for example, 1, 2, 4, and so on) that is less than or equal to the segment alignment.
+La directive **align** aligne l’élément ou l’instruction de données suivant sur une adresse qui est un multiple de son paramètre. Le paramètre doit être une puissance de 2 (par exemple, 1, 2, 4, etc.) qui est inférieure ou égale à l’alignement du segment.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **ALIGN** ⟦*number*⟧
+> **Aligner** le*numéro*⟦ ⟧
 
 ## <a name="remarks"></a>Notes
 
-The **ALIGN** directive allows you to specify the beginning offset of a data element or an instruction. Aligned data can improve performance, at the expense of wasted space between data elements. Large performance improvements can be seen when data accesses are on boundaries that fit within cache lines. Accesses on natural boundaries for native types means less time spent in internal hardware realignment microcode.
+La directive **align** vous permet de spécifier le décalage de début d’un élément de données ou d’une instruction. Les données alignées peuvent améliorer les performances, au détriment d’un gaspillage d’espace entre les éléments de données. Des améliorations importantes en matière de performances peuvent se produire lorsque les accès aux données se trouvent sur des limites qui tiennent dans les lignes du cache. Les accès aux limites naturelles pour les types natifs signifient moins de temps passé dans le microcode de réalignement matériel interne.
 
-The need for aligned instructions is rare on modern processors that use a flat addressing model, but may be required for jump targets in older code for other addressing models.
+Le besoin d’instructions alignées est rare sur les processeurs modernes qui utilisent un modèle d’adressage plat, mais peut être requis pour les cibles de saut dans du code plus ancien pour d’autres modèles d’adressage.
 
-When data is aligned, the skipped space is padded with zeroes. When instructions are aligned, the skipped space is filled with appropriately-sized NOP instructions.
+Lorsque les données sont alignées, l’espace ignoré est complété avec des zéros. Lorsque les instructions sont alignées, l’espace ignoré est rempli avec les instructions NOP de taille appropriée.
 
 ## <a name="see-also"></a>Voir aussi
 
-[EVEN](even.md)\
-[Directives reference](directives-reference.md)
+[Même](even.md)\
+[Informations de référence sur les directives](directives-reference.md)

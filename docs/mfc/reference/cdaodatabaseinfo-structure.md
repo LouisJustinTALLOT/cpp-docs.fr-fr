@@ -48,7 +48,7 @@ Indique si une source de données prend en charge les transactions (enregistreme
 Indique la version du moteur de base de données Microsoft Jet. Pour récupérer directement la valeur de cette propriété, appelez la fonction membre [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) de l’objet de base de données. Pour plus d’informations, consultez la rubrique « propriété de version » dans l’aide de DAO.
 
 *m_lCollatingOrder*<br/>
-Spécifie la séquence de l’ordre de tri dans le texte pour la comparaison ou le tri de chaînes. Les valeurs possibles sont les suivantes :
+Spécifie la séquence de l’ordre de tri dans le texte pour la comparaison ou le tri de chaînes. Les valeurs possibles incluent notamment :
 
 - `dbSortGeneral` utilisez l’ordre de tri général (anglais, français, allemand, portugais, italien et espagnol moderne).
 
@@ -100,7 +100,7 @@ La base de données est un objet DAO sous-jacent à un objet MFC de la classe [C
 
 Les informations récupérées par la fonction membre [CDaoWorkspace :: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) sont stockées dans une structure `CDaoDatabaseInfo`. Appelez `GetDatabaseInfo` pour l’objet `CDaoWorkspace` dans la collection de bases de données dans laquelle l’objet de base de données est stocké. `CDaoDatabaseInfo` définit également une fonction membre `Dump` dans les versions Debug. Vous pouvez utiliser `Dump` pour vider le contenu d’un objet `CDaoDatabaseInfo`.
 
-## <a name="requirements"></a>Conditions requises
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao. h
 

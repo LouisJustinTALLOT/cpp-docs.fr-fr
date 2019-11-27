@@ -13,34 +13,34 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398258"
 ---
-# <a name="fpo-32-bit-masm"></a>.FPO (32-bit MASM)
+# <a name="fpo-32-bit-masm"></a>. FPO (32-bit MASM)
 
-The **.FPO** directive controls the emission of debug records to the .debug$F segment or section. (32-bit MASM only.)
+**.** La directive FPO contrôle l’émission d’enregistrements de débogage dans le segment ou la section. Debug $ F. (uniquement MASM 32 bits.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.FPO** (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
+> **. FPO** (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
 
 ### <a name="parameters"></a>Paramètres
 
 *cdwLocals*\
-Number of local variables, an unsigned 32 bit value.
+Nombre de variables locales, valeur de bit 32 non signée.
 
 *cdwParams*\
-Size of the parameters in DWORDS, an unsigned 16 bit value.
+Taille des paramètres dans les valeurs DWORD, valeur 16 bits non signée.
 
 *cbProlog*\
-Number of bytes in the function prolog code, an unsigned 8 bit value.
+Nombre d’octets dans le code de prologue de la fonction, valeur 8 bits non signée.
 
 *cbRegs*\
-Number registers saved.
+Registres de nombres enregistrés.
 
 *fUseBP*\
-Indicates whether the EBP register has been allocated. either 0 or 1.
+Indique si le registre EBP a été alloué. 0 ou 1.
 
 *cbFrame*\
-Indicates the frame type.  See [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) for more information.
+Indique le type de trame.  Pour plus d’informations, consultez [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) .
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

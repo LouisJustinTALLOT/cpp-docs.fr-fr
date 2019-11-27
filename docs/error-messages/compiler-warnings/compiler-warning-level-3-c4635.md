@@ -35,4 +35,4 @@ public ref class Test {};
 
 Notez que la sortie de cet exemple indique : **La balise de fin 'member' ne correspond pas à la balise de début 'summary'.**
 
-The problem with this sample is that the end tag for \<summary> is poorly formed, and the compiler does not recognize it as the \<summary> end tag.  The \<member> tag is embedded in the .xdc file by the compiler in every /doc compilation.  So, the problem here is that the end tag \</member>, does not match the previous start tag that the compiler processed (\<summary>.
+Le problème avec cet exemple est que la balise de fin de \<Résumé > est mal formée et que le compilateur ne la reconnaît pas comme balise de fin de > de \<.  La balise de > de membre \<est incorporée dans le fichier. XDC par le compilateur dans chaque compilation/doc.  Le problème ici est que la balise de fin \</Member > ne correspond pas à la balise de début précédente traitée par le compilateur (\<Résumé >.

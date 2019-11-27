@@ -53,7 +53,7 @@ Les informations récupérées par la fonction membre [CDaoQueryDef :: GetParam
 
 `CDaoParameterInfo` définit également une fonction membre `Dump` dans les versions Debug. Vous pouvez utiliser `Dump` pour vider le contenu d’un objet `CDaoParameterInfo`.
 
-## <a name="requirements"></a>Conditions requises
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao. h
 

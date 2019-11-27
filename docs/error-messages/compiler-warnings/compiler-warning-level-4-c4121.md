@@ -1,25 +1,25 @@
 ---
-title: Compilateur avertissement (niveau 4) C4121
+title: Avertissement du compilateur (niveau 4) C4121
 ms.date: 11/04/2016
 f1_keywords:
 - C4121
 helpviewer_keywords:
 - C4121
 ms.assetid: 8c5b85c9-2543-426b-88bc-319c50158c7e
-ms.openlocfilehash: 0d02c5aff188a82062ae537f053157795d8925d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bafa16cbad2cb0a2475cae5a98c608096e296442
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401369"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541621"
 ---
-# <a name="compiler-warning-level-4-c4121"></a>Compilateur avertissement (niveau 4) C4121
+# <a name="compiler-warning-level-4-c4121"></a>Avertissement du compilateur (niveau 4) C4121
 
 'symbole' : l'alignement d'un membre était sensible à la compression
 
 Le compilateur a ajouté du remplissage pour aligner un membre de structure dans la limite de compression. Toutefois, la valeur de compression est inférieure à la taille du membre. Par exemple, l'extrait de code suivant produit l'avertissement C4121 :
 
-```
+```cpp
 // C4121.cpp
 // compile with: /W4 /c
 #pragma pack(2)
@@ -39,4 +39,4 @@ Pour résoudre ce problème, effectuez l'une des modifications suivantes :
 
 Cet avertissement se produit uniquement lorsque le compilateur ajoute du remplissage avant les membres de données. Il ne se produit pas lorsque la compression a placé des données à un emplacement de mémoire qui n'est pas aligné pour le type de données, mais qu'aucun remplissage n'a été placé avant le membre de données. Lorsque les données ne sont pas alignées sur les limites qui sont des multiples de la taille des données, les performances peuvent se dégrader. Les lectures et écritures de données non alignées provoquent des erreurs de processeur sur certaines architectures. En outre, ces erreurs peuvent nécessiter deux ou trois fois plus de temps pour être résolues. Les accès aux données non alignées ne peuvent pas être portés sur certaines architectures RISC.
 
-Vous pouvez utiliser [#pragma pack](../../preprocessor/pack.md) ou [/Zp](../../build/reference/zp-struct-member-alignment.md) pour spécifier l’alignement de structure. (Le compilateur ne génère pas cet avertissement lorsque **/Zp1** est spécifié.)
+Vous pouvez utiliser [#pragma Pack](../../preprocessor/pack.md) ou [/ZP](../../build/reference/zp-struct-member-alignment.md) pour spécifier l’alignement de la structure. (Le compilateur ne génère pas cet avertissement quand **/Zp1** est spécifié.)

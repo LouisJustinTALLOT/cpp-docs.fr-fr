@@ -1,5 +1,5 @@
 ---
-title: operator brackets
+title: crochets d’opérateur
 ms.date: 08/30/2018
 f1_keywords:
 - operator []
@@ -17,11 +17,11 @@ ms.locfileid: "74397087"
 ---
 # <a name="operator-"></a>opérateur \[\]
 
-Returns *expression1* plus \[*expression2*\].
+Retourne *expression1* plus \[\]*Expression2* .
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* **[** expression2 **]**
+> *expression1* **[** Expression2 **]**
 
 ## <a name="see-also"></a>Voir aussi
 

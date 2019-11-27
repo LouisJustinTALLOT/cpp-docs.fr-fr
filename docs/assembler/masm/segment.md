@@ -15,53 +15,53 @@ ms.locfileid: "74393727"
 ---
 # <a name="segment"></a>SEGMENT
 
-Defines a program segment called *name* having segment attributes
+Définit un segment de programme appelé *Name* ayant des attributs de segment
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **SEGMENT** ⟦**READONLY**⟧ ⟦*align*⟧ ⟦*combine*⟧ ⟦*use*⟧ ⟦*characteristics*⟧ **ALIAS(** _string_ **)** ⟦ __'__ *class* __'__ ⟧\
-> *statements*\
-> *name* **ENDS**
+> *nom* **segment** ⟦**ReadOnly**⟧ ⟦*Aligner*⟧ ⟦*combiner*⟧ ⟦*utiliser*les*caractéristiques*⟧ ⟦ ⟧ **alias (** _String_ **)** ⟦ __'__ *Class* __'__ ⟧ \
+> *instructions*\
+> **fin** du nom
 
 #### <a name="parameters"></a>Paramètres
 
 *align*<br/>
-The range of memory addresses from which a starting address for the segment can be selected. The alignment type can be any one of the following:
+Plage d’adresses mémoire à partir de laquelle une adresse de départ du segment peut être sélectionnée. Le type d’alignement peut être l’un des éléments suivants :
 
-|Align Type|Starting Address|
+|Aligner le type|Adresse de début|
 |----------------|----------------------|
-|**BYTE**|Next available byte address.|
-|**WORD**|Next available word address (2 bytes per word).|
-|**DWORD**|Next available double word address (4 bytes per double word).|
-|**PARA**|Next available paragraph address (16 bytes per paragraph).|
-|**PAGE**|Next available page address (256 bytes per page).|
-|**ALIGN**(*n*)|Next available *n*th byte address. See Remarks section for more information.|
+|**BYTE**|Adresse d’octet suivante disponible.|
+|**WORD**|Adresse du mot suivant disponible (2 octets par mot).|
+|**DWORD**|Adresse du mot double disponible suivant (4 octets par mot double).|
+|**Param**|Prochaine adresse du paragraphe disponible (16 octets par paragraphe).|
+|**PAGE**|Adresse de la page suivante disponible (256 octets par page).|
+|**Aligner**(*n*)|Prochaine adresse disponible *n*ième octets. Pour plus d’informations, consultez la section Notes.|
 
-If this parameter is not specified, **PARA** is used by default.
+Si ce paramètre n’est pas spécifié, **para** est utilisé par défaut.
 
-*combine*\
-**PUBLIC**, **STACK**, **COMMON**, **MEMORY**, **AT**<em>address</em>, **PRIVATE**
+*combiner*\
+**Public**, **Stack**, **Common**, **Memory**, **à**l'<em>adresse</em>, **privé**
 
-*use*\
-**USE16**, **USE32**, **FLAT**
+*utiliser*\
+**USE16**, **USE32**, **plat**
 
-*characteristics*\
-**INFO**, **READ**, **WRITE**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, and **DISCARD**
+*caractéristiques*\
+**Info**, **lire**, **écrire**, **exécuter**, **partagé**, **nopage**, **NoCache**et **Ignorer**
 
-These are supported for COFF only and correspond to the COFF section characteristics of similar name (for example, **SHARED** corresponds to IMAGE_SCN_MEM_SHARED). READ sets the IMAGE_SCN_MEM_READ flag. The obsolete READONLY flag caused the section to clear the IMG_SCN_MEM_WRITE flag. If any *characteristics* are set, the default characteristics are not used and only the programmer-specified flags are in effect.
+Ceux-ci sont pris en charge pour le format COFF uniquement et correspondent aux caractéristiques de la section COFF du même nom (par exemple, **Shared** correspond à IMAGE_SCN_MEM_SHARED). LIRE définit l’indicateur de IMAGE_SCN_MEM_READ. L’indicateur READONLY obsolète a provoqué l’effacement de l’indicateur IMG_SCN_MEM_WRITE par la section. Si des *caractéristiques* sont définies, les caractéristiques par défaut ne sont pas utilisées et seuls les indicateurs spécifiés par le programmeur sont appliqués.
 
 _string_\
-This string is used as the section name in the emitted COFF object.  Creates multiple sections with the same external name, with distinct MASM segment names.
+Cette chaîne est utilisée comme nom de section dans l’objet COFF émis.  Crée plusieurs sections avec le même nom externe, avec des noms de segment MASM distincts.
 
-Not supported with **/omf**.
+Non pris en charge avec **/OMF**.
 
 *class*\
-Designates how segments should be combined and ordered in the assembled file. Typical values are, `'DATA'`, `'CODE'`, `'CONST'` and `'STACK'`
+Désigne la manière dont les segments doivent être combinés et classés dans le fichier assemblé. Les valeurs standard sont, `'DATA'`, `'CODE'`, `'CONST'` et `'STACK'`
 
 ## <a name="remarks"></a>Notes
 
-For `ALIGN(n)`, *n* may be any power of 2 from 1 to 8192; not supported with **/omf**.
+Par `ALIGN(n)`, *n* peut être toute puissance de 2 comprise entre 1 et 8192 ; non pris en charge avec **/OMF**.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

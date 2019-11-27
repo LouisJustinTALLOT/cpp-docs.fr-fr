@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4289
 ms.assetid: 0dbd2863-4cde-4e16-894b-104a2d5fa724
-ms.openlocfilehash: 3a997af466ddfdaaf4631afeb53d917ce0338c3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc1a22065be6d5f7f49d6c32f6bc9b6479399e29
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400901"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541972"
 ---
 # <a name="compiler-warning-level-4-c4289"></a>Avertissement du compilateur (niveau 4) C4289
 
 extension non standard utilisée : ’var’ : variable de contrôle de boucle déclarée dans la boucle for utilisée à l’extérieur de la portée de la boucle
 
-Lors de la compilation avec [/Ze](../../build/reference/za-ze-disable-language-extensions.md) et **/Zc**, une variable déclarée dans une [pour](../../cpp/for-statement-cpp.md) boucle a été utilisée après la **pour**-portée de la boucle.
+Lors de la compilation avec [/Ze](../../build/reference/za-ze-disable-language-extensions.md) et **/Zc : forScope-** , une variable déclarée dans une boucle [for](../../cpp/for-statement-cpp.md) a été utilisée après l’étendue de la boucle **for**.
 
-Consultez [/Zc : forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) pour plus d’informations sur la façon de spécifier un comportement standard dans **pour** effectue une itération avec **/Ze**.
+Consultez [/Zc : forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) pour plus d’informations sur la spécification du comportement standard dans **les boucles for** avec **/Ze**.
 
 Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.
 
-L’exemple suivant génère l’erreur C4289 :
+L’exemple suivant génère l’C4289 :
 
-```
+```cpp
 // C4289.cpp
 // compile with: /W4 /Zc:forScope-
 #pragma warning(default:4289)

@@ -15,12 +15,12 @@ ms.locfileid: "74398018"
 ---
 # <a name="radix"></a>.RADIX
 
-Sets the default radix, in the range 2 to 16, to the value of *expression*.
+Définit la base par défaut, comprise entre 2 et 16, sur la valeur de l' *expression*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.RADIX** *expression*
+> **.**  *Expression* base
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

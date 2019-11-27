@@ -15,7 +15,7 @@ ms.locfileid: "74395107"
 ---
 # <a name="oword"></a>OWORD
 
-Used as a type specifier when an 16-byte data type is required.
+Utilisé comme spécificateur de type lorsqu’un type de données de 16 octets est requis.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ Used as a type specifier when an 16-byte data type is required.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

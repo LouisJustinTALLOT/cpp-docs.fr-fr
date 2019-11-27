@@ -13,14 +13,14 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398982"
 ---
-# <a name="interface"></a>\@Interface
+# <a name="interface"></a>Interface \@
 
-Information about the language parameters (numeric equate).
+Informations sur les paramètres de langue (équivalent numérique).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@Interface**
+> **Interface \@**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Symbols reference](symbols-reference.md)
+[Référence des symboles](symbols-reference.md)

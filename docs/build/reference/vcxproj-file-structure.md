@@ -47,7 +47,7 @@ Si vous choisissez de modifier manuellement un fichier .vcxproj, tenez compte de
 
 Vous pouvez inspecter le contenu d’un fichier .vcxproj à l’aide d’un éditeur de texte ou XML. Pour l’afficher dans Visual Studio, cliquez avec le bouton sur le projet dans l’Explorateur de solutions, choisissez **Décharger le projet**, puis **Modifier Foo.vcxproj**.
 
-Vous pouvez tout de suite remarquer que les éléments de niveau supérieur s’affichent dans un ordre particulier. Par exemple :
+Vous pouvez tout de suite remarquer que les éléments de niveau supérieur s’affichent dans un ordre particulier. Exemple :
 
 - La plupart des groupes de propriétés et des groupes de définitions d’éléments se trouvent après l’importation de Microsoft.Cpp.Default.props.
 
@@ -213,7 +213,7 @@ Contient les définitions d’éléments. Celles-ci doivent suivre les mêmes r�
 
 Contient les éléments (fichiers sources, etc.) dans le projet. Les conditions ne sont pas prises en charge pour les éléments de projet (à savoir les types d’éléments qui sont considérés comme des éléments de projet par les définitions de règles).
 
-Les métadonnées doivent avoir des conditions de configuration pour chaque configuration, même si elles sont identiques. Par exemple :
+Les métadonnées doivent avoir des conditions de configuration pour chaque configuration, même si elles sont identiques. Exemple :
 
 ```xml
 <ItemGroup>

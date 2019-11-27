@@ -15,7 +15,7 @@ ms.locfileid: "74399163"
 ---
 # <a name="curseg"></a>\@CurSeg
 
-The name of the current segment (text macro).
+Nom du segment actuel (macro de texte).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ The name of the current segment (text macro).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Symbols reference](symbols-reference.md)
+[Référence des symboles](symbols-reference.md)

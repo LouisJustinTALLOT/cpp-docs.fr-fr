@@ -15,16 +15,16 @@ ms.locfileid: "74397428"
 ---
 # <a name="ifb"></a>IFB
 
-Grants assembly if *textitem* is blank.
+Accorde un assembly si *textItem* est vide.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **IFB** *textitem*
+> *TextItem* d’appel d’offres
 
 ## <a name="remarks"></a>Notes
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Vérifiez [si](../../assembler/masm/if-masm.md) la syntaxe est complète.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

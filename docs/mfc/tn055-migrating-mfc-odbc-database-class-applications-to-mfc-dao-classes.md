@@ -22,9 +22,9 @@ ms.locfileid: "74305364"
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055 : Migration des applications de classe de base de données ODBC MFC vers des classes DAO MFC
 
 > [!NOTE]
-> DAO est utilisé avec les bases de données Access et est pris en charge via Office 2013. DAO 3,6 est la version finale et est considéré comme obsolète. L’environnement C++ visuel et les assistants ne prennent pas en charge DAO (bien que les classes DAO soient incluses et vous puissiez toujours les utiliser). Microsoft vous recommande d'utiliser les [modèles OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour vos nouveaux projets. Vous ne devez utiliser que DAO pour gérer les applications existantes.
+> DAO est utilisé avec les bases de données Access et est pris en charge via Office 2013. DAO 3,6 est la version finale et est considéré comme obsolète. L’environnement C++ visuel et les assistants ne prennent pas en charge DAO (bien que les classes DAO soient incluses et vous puissiez toujours les utiliser). Microsoft vous recommande d’utiliser les [modèles OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour les nouveaux projets. Vous ne devez utiliser que DAO pour gérer les applications existantes.
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Overview
 
 Dans de nombreux cas, il peut être souhaitable de migrer les applications qui utilisent les classes de la base de données ODBC de MFC vers les classes de bases de données DAO de MFC. Cette note technique détaillera la plupart des différences entre les classes ODBC et DAO de MFC. Avec les différences à l'esprit, il ne doit pas être très difficile de migrer des applications depuis les classes ODBC vers les classes de MFC si vous le souhaitez.
 
@@ -87,9 +87,9 @@ Les principales modifications apportées aux fonctionnalités qui peuvent affect
 
    Avec les classes ODBC, MFC avait besoin de définir ces options via des macros ou des types énumérés.
 
-   Avec les classes DAO, DAO fournit la définition de ces options dans un fichier d'en-tête (DBDAOINT.H). Ce type d'ensemble d'enregistrements est un membre énuméré de `CRecordset`, mais avec DAO il s'agit en fait d'une constante. Par exemple, vous pourriez utiliser **snapshot** en spécifiant le type de `CRecordset` dans ODBC, mais **DB_OPEN_SNAPSHOT** si vous spécifiez le type de `CDaoRecordset`.
+   Avec les classes DAO, DAO fournit la définition de ces options dans un fichier d'en-tête (DBDAOINT.H). Ce type d'ensemble d'enregistrements est un membre énuméré de `CRecordset`, mais avec DAO il s'agit en fait d'une constante. Par exemple, vous pouvez utiliser la **capture instantanée** lors de la spécification du type de `CRecordset` dans ODBC, mais **DB_OPEN_SNAPSHOT** lors de la spécification du type de `CDaoRecordset`.
 
-- Le type de l'ensemble d'enregistrements par défaut de `CRecordset` est **snapshot**, tandis que le type par défaut de l'ensemble de `CDaoRecordset` est **dynaset** (consultez la remarque ci-dessous relative aux autres problèmes liés aux instantanés de la classe ODBC).
+- Le type de jeu d’enregistrements par défaut pour `CRecordset` est **snapshot** , tandis que le type de jeu d’enregistrements par défaut pour `CDaoRecordset` est **Dynaset** (voir la remarque ci-dessous pour obtenir un autre problème concernant les instantanés de classe ODBC).
 
 - La classe ODBC `CRecordset` comporte une option permettant de créer un type de jeu d'enregistrements basé sur le transfert uniquement. Dans la classe `CDaoRecordset`, le transfert uniquement n'est pas un type de jeu d'enregistrements, mais plutôt une propriété (ou option) de certains types de jeux d'enregistrements.
 

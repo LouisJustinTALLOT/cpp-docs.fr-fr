@@ -1,5 +1,5 @@
 ---
-title: operator &quot; &quot;
+title: '&quot; d’opérateur &quot;'
 ms.date: 08/30/2018
 f1_keywords:
 - '&#34; &#34;'
@@ -15,14 +15,14 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397033"
 ---
-# <a name="operator-quot-quot"></a>operator &quot; &quot;
+# <a name="operator-quot-quot"></a>&quot; d’opérateur &quot;
 
-Treats "*text*" as a string.
+Traite «*texte*» comme une chaîne.
 
 ## <a name="syntax"></a>Syntaxe
 
-> __"__ *text* __"__
+> __«__ *texte* __»__
 
 ## <a name="see-also"></a>Voir aussi
 
-[Operators reference](operators-reference.md)
+[Informations de référence sur les opérateurs](operators-reference.md)

@@ -11,20 +11,20 @@ ms.locfileid: "74394832"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Manuels de programmation du fabricant du processeur
 
-This article provides links to websites that may contain programming information about processors that are not manufactured, sold, or supported by Microsoft. Microsoft does not own or control the websites or the content on them.
+Cet article fournit des liens vers des sites Web qui peuvent contenir des informations de programmation sur les processeurs qui ne sont pas fabriqués, vendus ou pris en charge par Microsoft. Microsoft ne possède pas ou ne contrôle pas les sites Web ou leur contenu.
 
-## <a name="processor-manufacturer-websites"></a>Processor manufacturer websites
+## <a name="processor-manufacturer-websites"></a>Sites Web du fabricant de processeurs
 
-- [AMD Developer Guides, Manuals & ISA Documents](https://developer.amd.com/resources/developer-guides-manuals/)
+- [Guides pour développeurs AMD, manuels & documents ISA](https://developer.amd.com/resources/developer-guides-manuals/)
 
 - [Manuels de développement logiciel pour les architectures Intel 64 et IA-32](https://software.intel.com/articles/intel-sdm)
 
-- [Introduction to Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
+- [Présentation d’Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
 ## <a name="remarks"></a>Notes
 
-Neither Visual Studio nor the Microsoft Macro Assembler support all processors.
+Ni Visual Studio ni l’assembleur de macros Microsoft ne prennent en charge tous les processeurs.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Référence de Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4521
+title: Avertissement du compilateur (niveau 3) C4521
 ms.date: 11/04/2016
 f1_keywords:
 - C4521
@@ -13,17 +13,17 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189358"
 ---
-# <a name="compiler-warning-level-3-c4521"></a>Compiler Warning (level 3) C4521
+# <a name="compiler-warning-level-3-c4521"></a>Avertissement du compilateur (niveau 3) C4521
 
-'class' : multiple copy constructors specified
+'classe' : plusieurs constructeurs de copie spécifiés
 
-The class has multiple copy constructors of a single type. This warning is informational; the constructors are callable in your program.
+La classe a plusieurs constructeurs de copie d’un même type. Cet avertissement est informatif. les constructeurs peuvent être appelés dans votre programme.
 
-Use the [warning](../../preprocessor/warning.md) pragma to suppress this warning.
+Utilisez le pragma [Warning](../../preprocessor/warning.md) pour supprimer cet avertissement.
 
 ## <a name="example"></a>Exemple
 
-The following sample generates C4521.
+L’exemple suivant génère l’C4521.
 
 ```cpp
 // C4521.cpp

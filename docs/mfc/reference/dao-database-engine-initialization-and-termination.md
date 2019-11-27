@@ -23,7 +23,7 @@ DAO est utilisé avec les bases de données Access et est pris en charge via Off
 |[AfxDaoInit](#afxdaoinit)|Initialise le moteur de base de données DAO.|
 |[AfxDaoTerm](#afxdaoterm)|Termine le moteur de base de données DAO.|
 
-##  <a name="afxdaoinit"></a>  AfxDaoInit
+##  <a name="afxdaoinit"></a>AfxDaoInit
 
 Cette fonction initialise le moteur de base de données DAO.
 
@@ -40,11 +40,11 @@ Dans la plupart des cas, vous n’avez pas besoin d’appeler `AfxDaoInit`, car 
 
 Pour obtenir des informations connexes et pour obtenir un exemple d’appel de `AfxDaoInit`, consultez la [note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-### <a name="requirements"></a>Conditions requises
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdao. h
 
-##  <a name="afxdaoterm"></a>  AfxDaoTerm
+##  <a name="afxdaoterm"></a>AfxDaoTerm
 
 Cette fonction termine le moteur de base de données DAO.
 
@@ -61,7 +61,7 @@ Dans les DLL MFC normales, appelez `AfxDaoTerm` avant la fonction `ExitInstance`
 
 Pour obtenir des informations connexes, consultez la [note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-### <a name="requirements"></a>Conditions requises
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdao. h
 

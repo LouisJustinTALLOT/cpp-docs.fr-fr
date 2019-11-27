@@ -15,11 +15,11 @@ ms.locfileid: "74188988"
 ---
 # <a name="arrays-c"></a>Tableaux (C++)
 
-An array is a sequence of objects of the same type that occupy a contiguous area of memory. Traditional C-style arrays are the source of many bugs, but are still common, especially in older code bases. In modern C++, we strongly recommend using [std::vector](../standard-library/vector-class.md) or [std::array](../standard-library/array-class-stl.md) instead of C-style arrays described in this section. Both of these standard library types store their elements as a contiguous block of memory but provide much greater type safety along with iterators that are guaranteed to point to a valid location within the sequence. For more information, see [Containers (Modern C++)](containers-modern-cpp.md).
+Un tableau est une séquence d’objets du même type qui occupent une zone contiguë de mémoire. Les tableaux de style C traditionnels sont la source de nombreux bogues, mais restent communs, en particulier dans les bases de code plus anciennes. Dans moderne C++, nous vous recommandons fortement d’utiliser [std :: Vector](../standard-library/vector-class.md) ou [std :: Array](../standard-library/array-class-stl.md) au lieu des tableaux de style C décrits dans cette section. Ces deux types de bibliothèques standard stockent leurs éléments sous la forme d’un bloc de mémoire contigu, mais offrent une sécurité de type nettement supérieure avec les itérateurs qui pointent vers un emplacement valide dans la séquence. Pour plus d’informations, consultez [conteneurs ( C++moderne)](containers-modern-cpp.md).
 
-## <a name="stack-declarations"></a>Stack declarations
+## <a name="stack-declarations"></a>Déclarations de pile
 
-In a C++ array declaration, the array size is specified after the variable name, not after the type name as in some other languages. The following example declares an array of 1000 doubles to be allocated on the stack. The number of elements must be supplied as an integer literal or else as a constant expression because the compiler has to know how much stack space to allocate; it cannot use a value computed at run-time. Each element in the array is assigned a default value of 0. If you do not assign a default value, each element will initially contain whatever random values happen to be at that location.
+Dans une C++ déclaration de tableau, la taille du tableau est spécifiée après le nom de la variable, et non après le nom de type, comme dans d’autres langages. L’exemple suivant déclare un tableau de 1000 doubles à allouer sur la pile. Le nombre d’éléments doit être fourni sous la forme d’un littéral entier ou d’une expression constante, car le compilateur doit connaître la quantité d’espace de pile à allouer. elle ne peut pas utiliser une valeur calculée au moment de l’exécution. La valeur par défaut 0 est affectée à chaque élément du tableau. Si vous n’affectez pas de valeur par défaut, chaque élément contient initialement les valeurs aléatoires qui se trouvent à cet emplacement.
 
 ```cpp
     constexpr size_t size = 1000;
@@ -44,20 +44,20 @@ In a C++ array declaration, the array size is specified after the variable name,
     }
 ```
 
-The first element in the array is the 0th element, and the last element is the (*n*-1) element, where *n* is the number of elements the array can contain. The number of elements in the declaration must be of an integral type and must be greater than 0. It is your responsibility to ensure that your program never passes a value to the subscript operator that is greater than `(size - 1)`.
+Le premier élément du tableau est l’élément 0, et le dernier élément est l’élément (*n*-1), où *n* est le nombre d’éléments que le tableau peut contenir. Le nombre d’éléments dans la déclaration doit être de type intégral et doit être supérieur à 0. Il vous incombe de vous assurer que votre programme ne transmet jamais une valeur à l’opérateur d’indice supérieur à `(size - 1)`.
 
-A zero-sized array is legal only when the array is the last field in a **struct** or **union** and when the Microsoft extensions (/Ze) are enabled.
+Un tableau de taille zéro est légal uniquement lorsque le tableau est le dernier champ d’un **struct** ou d’une **Union** et lorsque les extensions Microsoft (/Ze) sont activées.
 
-Stack-based arrays are faster to allocate and access than heap-based arrays, but the number of elements can't be so large that it uses up too much stack memory. How much is too much depends on your program. You can use profiling tools to determine whether an array is too large.
+Les tableaux basés sur la pile sont plus rapides à allouer et à utiliser que les tableaux basés sur les tas, mais le nombre d’éléments ne peut pas être tellement important qu’il utilise trop de mémoire de pile. Le niveau de dépendance dépend de votre programme. Vous pouvez utiliser les outils de profilage pour déterminer si un tableau est trop grand.
 
-## <a name="heap-declarations"></a>Heap declarations
+## <a name="heap-declarations"></a>Déclarations de tas
 
-If you require an array that is too large to be allocated on the stack, or whose size cannot be known at compile time, you can allocate it on the heap with a [new\[\]](new-operator-cpp.md) expression. The operator returns a pointer to the first element. You can use the subscript operator with the pointer variable just as with a stack-based array. You can also use [pointer arithmetic](../c-language/pointer-arithmetic.md) to move the pointer to any arbitrary elements in the array. It is your responsibility to ensure that:
+Si vous avez besoin d’un tableau qui est trop grand pour être alloué sur la pile, ou dont la taille ne peut pas être connue au moment de la compilation, vous pouvez l’allouer sur le tas avec une [nouvelle\[\]](new-operator-cpp.md) expression. L’opérateur retourne un pointeur vers le premier élément. Vous pouvez utiliser l’opérateur d’indice avec la variable de pointeur comme avec un tableau basé sur la pile. Vous pouvez également utiliser des [opérations arithmétiques sur les pointeurs](../c-language/pointer-arithmetic.md) pour déplacer le pointeur vers n’importe quel élément arbitraire dans le tableau. Il vous incombe de veiller à ce que :
 
-- you always keep a copy of the original pointer address so that you can delete the memory when you no longer need the array.
-- you do not increment or decrement the pointer address past the array bounds.
+- vous conservez toujours une copie de l’adresse du pointeur d’origine afin de pouvoir supprimer la mémoire lorsque vous n’avez plus besoin du tableau.
+- vous ne pouvez pas incrémenter ou décrémenter l’adresse du pointeur au-delà des limites du tableau.
 
-The following example shows how to define an array on the heap at run time, and how to access the array elements using the subscript operator or by using pointer arithmetic:
+L’exemple suivant montre comment définir un tableau sur le tas au moment de l’exécution et comment accéder aux éléments du tableau à l’aide de l’opérateur d’indice ou de l’arithmétique du pointeur :
 
 ```cpp
 
@@ -117,7 +117,7 @@ int main()
 
 ## <a name="initializing-arrays"></a>Initialisation des tableaux
 
-You can initialize an array in a loop, one element at a time, or in a single statement. The contents of the following two arrays are identical:
+Vous pouvez initialiser un tableau dans une boucle, un élément à la fois ou dans une instruction unique. Le contenu des deux tableaux suivants est identique :
 
 ```cpp
     int a[10];
@@ -129,11 +129,11 @@ You can initialize an array in a loop, one element at a time, or in a single sta
     int b[10]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 ```
 
-## <a name="passing-arrays-to-functions"></a>Passing arrays to functions
+## <a name="passing-arrays-to-functions"></a>Passage de tableaux à des fonctions
 
-When an array is passed to a function, it is passed as a pointer to the first element. This is true for both stack-based and heap-based arrays. The pointer contains no additional size or type information. This behavior is called *pointer decay*. When you pass an array to a function, you must always specify the number of elements in a separate parameter. This behavior also implies that the array elements are not copied when the array is passed to a function. To prevent the function from modifying the elements, specify the parameter as a pointer to **const** elements.
+Lorsqu’un tableau est passé à une fonction, il est passé en tant que pointeur vers le premier élément. Cela est vrai pour les tableaux basés sur la pile et sur les tas. Le pointeur ne contient aucune information de taille ou de type supplémentaire. Ce comportement est appelé *atténuation du pointeur*. Quand vous transmettez un tableau à une fonction, vous devez toujours spécifier le nombre d’éléments dans un paramètre séparé. Ce comportement implique également que les éléments de tableau ne sont pas copiés lorsque le tableau est passé à une fonction. Pour empêcher la fonction de modifier les éléments, spécifiez le paramètre en tant que pointeur vers des éléments **const** .
 
-The following example shows a function that accepts an array and a length. The pointer points to the original array, not a copy. Because the parameter is not **const**, the function can modify the array elements.
+L’exemple suivant montre une fonction qui accepte un tableau et une longueur. Le pointeur pointe vers le tableau d’origine, pas une copie. Étant donné que le paramètre n’est pas **const**, la fonction peut modifier les éléments du tableau.
 
 ```cpp
 void process(double p*, const size_t len)
@@ -146,13 +146,13 @@ void process(double p*, const size_t len)
 }
 ```
 
-Declare the array as const to make it read-only within the function block:
+Déclarez le tableau comme const pour le rendre accessible en lecture seule dans le bloc de fonction :
 
 ```cpp
 void process(const double p*, const size_t len);
 ```
 
-The same function can also be declared in these ways, with no change in behavior. The array is still passed as a pointer to the first element:
+La même fonction peut également être déclarée de cette manière, sans modification du comportement. Le tableau est toujours passé comme pointeur vers le premier élément :
 
 ```cpp
 // Unsized array
@@ -162,7 +162,7 @@ void process(const double p[] const size_t len);
 void process(const double p[1000], const size_t len);
 ```
 
-## <a name="multidimensional-arrays"></a>Multidimensional arrays
+## <a name="multidimensional-arrays"></a>Tableaux multidimensionnels
 
 Les tableaux construits à partir d'autres tableaux sont des tableaux multidimensionnels. Ces tableaux multidimensionnels sont spécifiés en plaçant dans l'ordre plusieurs expressions de constantes entre accolades. Par exemple, observez cette déclaration :
 
@@ -170,12 +170,12 @@ Les tableaux construits à partir d'autres tableaux sont des tableaux multidimen
 int i2[5][7];
 ```
 
-It specifies an array of type **int**, conceptually arranged in a two-dimensional matrix of five rows and seven columns, as shown in the following figure:
+Elle spécifie un tableau de type **int**, organisé de manière conceptuelle dans une matrice à deux dimensions de cinq lignes et sept colonnes, comme illustré dans la figure suivante :
 
-![Conceptual layout of a multi&#45;dimensional array](../cpp/media/vc38rc1.gif "Conceptual layout of a multi&#45;dimensional array") <br/>
+![Disposition conceptuelle d’un tableau&#45;multidimensionnel](../cpp/media/vc38rc1.gif "Disposition conceptuelle d’un tableau&#45;multidimensionnel") <br/>
 Disposition conceptuelle d'un tableau multidimensionnel
 
-In declarations of multidimensioned arrays that have an initializer list (as described in [Initializers](../cpp/initializers.md)), the constant expression that specifies the bounds for the first dimension can be omitted. Exemple :
+Dans les déclarations de tableaux multidimensionnels qui ont une liste d’initialiseurs (comme décrit dans [initialiseurs](../cpp/initializers.md)), l’expression constante qui spécifie les limites de la première dimension peut être omise. Exemple :
 
 ```cpp
 // arrays2.cpp
@@ -191,7 +191,7 @@ double TransportCosts[][cMarkets] = {
 
 La déclaration précédente définit un tableau composé de trois lignes et de quatre colonnes. Les lignes représentent les fabriques et les colonnes les marchés auxquels les fabriques livrent. Les valeurs sont les coûts de transport entre les fabriques et les marchés. La première dimension du tableau est omise, mais le compilateur la complète en examinant l'initialiseur.
 
-Use of the indirection operator (*) on an n-dimensional array type yields an n-1 dimensional array. If n is 1, a scalar (or array element) is yielded.
+L’utilisation de l’opérateur d’indirection (*) sur un type de tableau multidimensionnel produit un tableau à n-1 dimensions. Si n correspond à 1, une variable scalaire (ou un élément de tableau) est générée.
 
 Les tableaux C++ sont stockés dans l'ordre row-major. L'ordre row-major signifie que le dernier indice varie le plus rapidement.
 
@@ -283,7 +283,7 @@ int main()
 
 Le premier élément de `aPoint` est construit en utilisant le constructeur `Point( int, int )`. Les deux éléments restants sont construits à l'aide du constructeur par défaut.
 
-Static member arrays (whether **const** or not) can be initialized in their definitions (outside the class declaration). Exemple :
+Les tableaux membres statiques (qu’il s’agisse de **const** ou not) peuvent être initialisés dans leurs définitions (en dehors de la déclaration de classe). Exemple :
 
 ```cpp
 // initializing_arrays2.cpp
@@ -301,9 +301,9 @@ int main()
 }
 ```
 
-## <a name="accessing-array-elements"></a>Accessing array elements
+## <a name="accessing-array-elements"></a>Accès aux éléments de tableau
 
-You can access individual elements of an array by using the array subscript operator (`[ ]`). If a one-dimensional array is used in an expression that has no subscript, the array name evaluates to a pointer to the first element in the array.
+Vous pouvez accéder à des éléments individuels d’un tableau à l’aide de l’opérateur d’indice de tableau (`[ ]`). Si un tableau unidimensionnel est utilisé dans une expression qui n’a pas d’indice, le nom du tableau prend la valeur d’un pointeur vers le premier élément du tableau.
 
 ```cpp
 // using_arrays.cpp
@@ -315,7 +315,7 @@ int main() {
 }
 ```
 
-When you use multidimensional arrays, you can use various combinations in expressions.
+Lorsque vous utilisez des tableaux multidimensionnels, vous pouvez utiliser différentes combinaisons dans les expressions.
 
 ```cpp
 // using_arrays_2.cpp
@@ -336,15 +336,15 @@ int main() {
 }
 ```
 
-In the preceding code, `multi` is a three-dimensional array of type **double**. The `p2multi` pointer points to an array of type **double** of size three. In this example, the array is used with one, two, and three subscripts. Although it is more common to specify all subscripts, as in the `cout` statement, it is sometimes useful to select a specific subset of array elements, as shown in the statements that follow `cout`.
+Dans le code précédent, `multi` est un tableau à trois dimensions de type **double**. Le pointeur `p2multi` pointe vers un tableau de type **double** de la taille trois. Dans cet exemple, le tableau est utilisé avec un, deux et trois indices. Bien qu’il soit plus courant de spécifier tous les indices, comme dans l’instruction `cout`, il est parfois utile de sélectionner un sous-ensemble spécifique d’éléments de tableau, comme indiqué dans les instructions qui suivent `cout`.
 
-## <a name="overloading-subscript-operator"></a>Overloading subscript operator
+## <a name="overloading-subscript-operator"></a>Surcharge de l’opérateur d’indice
 
-Like other operators, the subscript operator (`[]`) can be redefined by the user. Le comportement par défaut de l'opérateur d'indice, s'il n'est pas surchargé, est de combiner le nom d'un tableau et l'indice à l'aide de la méthode suivante :
+Comme les autres opérateurs, l’opérateur d’indice (`[]`) peut être redéfini par l’utilisateur. Le comportement par défaut de l'opérateur d'indice, s'il n'est pas surchargé, est de combiner le nom d'un tableau et l'indice à l'aide de la méthode suivante :
 
 `*((array_name) + (subscript))`
 
-Comme dans toute addition qui implique des types pointeur, la mise à l'échelle est exécutée automatiquement pour ajuster la taille du type. Therefore, the resultant value is not *n* bytes from the origin of array-name; rather, it is the *n*th element of the array. For more information about this conversion, see [Additive operators](additive-operators-plus-and.md).
+Comme dans toute addition qui implique des types pointeur, la mise à l'échelle est exécutée automatiquement pour ajuster la taille du type. Par conséquent, la valeur résultante n’est pas *n* octets de l’origine de Array-Name ; au lieu de cela, il s’agit du *n*ième élément du tableau. Pour plus d’informations sur cette conversion, consultez [opérateurs additifs](additive-operators-plus-and.md).
 
 De même, pour des tableaux multidimensionnels, l'adresse est dérivée à l'aide de la méthode suivante :
 
@@ -352,14 +352,14 @@ De même, pour des tableaux multidimensionnels, l'adresse est dérivée à l'aid
 
 ## <a name="arrays-in-expressions"></a>Tableaux dans les expressions
 
-Lorsqu'un identificateur de type tableau apparaît dans une expression autre que `sizeof`, address-of (`&`) ou l'initialisation d'une référence, il est converti en pointeur vers le premier élément du tableau. Exemple :
+Lorsqu’un identificateur d’un type tableau apparaît dans une expression autre que `sizeof`, adresse-de (`&`) ou initialisation d’une référence, il est converti en pointeur vers le premier élément du tableau. Exemple :
 
 ```cpp
 char szError1[] = "Error: Disk drive not ready.";
 char *psz = szError1;
 ```
 
-Le pointeur `psz` pointe vers le premier élément du tableau `szError1`. Arrays, unlike pointers, are not modifiable l-values. Par conséquent, l'assignation suivante n'est pas conforme :
+Le pointeur `psz` pointe vers le premier élément du tableau `szError1`. Contrairement aux pointeurs, les tableaux ne sont pas des l-value modifiables. Par conséquent, l'assignation suivante n'est pas conforme :
 
 ```cpp
 szError1 = psz;
@@ -367,4 +367,4 @@ szError1 = psz;
 
 ## <a name="see-also"></a>Voir aussi
 
-[std::array](../standard-library/array-class-stl.md)
+[std :: Array](../standard-library/array-class-stl.md)

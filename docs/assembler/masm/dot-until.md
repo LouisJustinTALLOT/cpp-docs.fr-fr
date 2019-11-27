@@ -13,9 +13,9 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397859"
 ---
-# <a name="until-32-bit-masm"></a>.UNTIL (32-bit MASM)
+# <a name="until-32-bit-masm"></a>. UNTIL (32-bit MASM)
 
-(32-bit MASM only.) See [.REPEAT](../../assembler/masm/dot-repeat.md).
+(uniquement MASM 32 bits.) Consultez [. Répétez la procédure](../../assembler/masm/dot-repeat.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ ms.locfileid: "74397859"
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)

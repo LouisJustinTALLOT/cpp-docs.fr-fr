@@ -34,13 +34,13 @@ Le mot clé **auto** indique au compilateur d’utiliser l’expression d’init
 
 Nous vous recommandons d’utiliser le mot clé **auto** pour la plupart des situations, sauf si vous souhaitez vraiment une conversion, car elle offre les avantages suivants :
 
-- **Robustesse :** si le type de l'expression est modifié, y compris quand un type de retour de fonction est modifié, cela fonctionne.
+- **Robustesse :** Si le type de l’expression est modifié, cela comprend le moment où un type de retour de fonction est modifié, mais il fonctionne simplement.
 
-- **Performances :** vous êtes certain qu'il n'y aura aucune conversion.
+- **Performances :** Vous êtes assuré qu’il n’y aura pas de conversion.
 
-- **Usage :** vous n'avez pas à vous soucier des fautes de frappe ni des problèmes liés à l'orthographe du nom de type.
+- **Convivialité :** Vous n’avez pas à vous soucier des problèmes d’orthographe des noms de type et des fautes de frappe.
 
-- **Efficacité :** votre codage peut être plus efficace.
+- **Efficacité :** Votre codage peut être plus efficace.
 
 Cas de conversion dans lesquels vous ne souhaitez peut-être pas utiliser **auto**:
 
@@ -50,7 +50,7 @@ Cas de conversion dans lesquels vous ne souhaitez peut-être pas utiliser **auto
 
 Pour utiliser le mot clé **auto** , utilisez-le à la place d’un type pour déclarer une variable et spécifiez une expression d’initialisation. En outre, vous pouvez modifier le mot clé **auto** en utilisant des spécificateurs et des déclarateurs tels que **const**, **volatile**, le pointeur (`*`), la référence (`&`) et la référence rvalue (`&&`). Le compilateur évalue l'expression d'initialisation et utilise ensuite ces informations pour déduire le type de la variable.
 
-L’expression d’initialisation peut être une assignation (syntaxe avec signe égal), une initialisation directe (syntaxe de style fonction), une expression [operator new](new-operator-cpp.md) ou l’expression d’initialisation peut être le paramètre *for-Range-DECLARATION* dans une instruction [for (C++) basée sur une plage](../cpp/range-based-for-statement-cpp.md) . Pour plus d'informations, consultez [Initialiseurs](../cpp/initializers.md) et les exemples de code plus loin dans ce document.
+L’expression d’initialisation peut être une assignation (syntaxe avec signe égal), une initialisation directe (syntaxe de style fonction), une expression [operator new](new-operator-cpp.md) ou l’expression d’initialisation peut être le paramètre *for-Range-DECLARATION* dans une instruction [for (C++) basée sur une plage](../cpp/range-based-for-statement-cpp.md) . Pour plus d’informations, consultez [initialiseurs](../cpp/initializers.md) et exemples de code plus loin dans ce document.
 
 Le mot clé **auto** est un espace réservé pour un type, mais il n’est pas lui-même un type. Par conséquent, le mot clé **auto** ne peut pas être utilisé dans les casts ou les opérateurs C++tels que [sizeof](../cpp/sizeof-operator.md) et (for/CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
@@ -58,7 +58,7 @@ Le mot clé **auto** est un espace réservé pour un type, mais il n’est pas l
 
 Le mot clé **auto** est un moyen simple de déclarer une variable qui a un type complexe. Par exemple, vous pouvez utiliser **auto** pour déclarer une variable dans laquelle l’expression d’initialisation implique des modèles, des pointeurs vers des fonctions ou des pointeurs vers des membres.
 
-Vous pouvez également utiliser **auto** pour déclarer et initialiser une variable à une expression lambda. Vous ne pouvez pas déclarer le type de la variable vous-même, car le type d’une expression lambda est connu uniquement du compilateur. Pour plus d'informations, consultez [Exemples d'expressions lambda](../cpp/examples-of-lambda-expressions.md).
+Vous pouvez également utiliser **auto** pour déclarer et initialiser une variable à une expression lambda. Vous ne pouvez pas déclarer le type de la variable vous-même, car le type d’une expression lambda est connu uniquement du compilateur. Pour plus d’informations, consultez [exemples d’expressions lambda](../cpp/examples-of-lambda-expressions.md).
 
 ## <a name="trailing-return-types"></a>Types de retour de fin
 
@@ -66,7 +66,7 @@ Vous pouvez utiliser **auto**, ainsi que le spécificateur de type **decltype** 
 
 ## <a name="references-and-cv-qualifiers"></a>Références et qualificateurs cv
 
-Notez que l’utilisation de références **automatiques** de suppressions, de qualificateurs const et de qualificateurs volatiles. Prenons l'exemple suivant :
+Notez que l’utilisation de références **automatiques** de suppressions, de qualificateurs const et de qualificateurs volatiles. Prenons l'exemple suivant :
 
 ```cpp
 // cl.exe /analyze /EHsc /W4
@@ -123,7 +123,7 @@ int main()
 
 Le tableau suivant répertorie les restrictions sur l’utilisation du mot clé **auto** et le message d’erreur de diagnostic correspondant que le compilateur émet.
 
-|Numéro d'erreur|Description|
+|Numéro de l'erreur|Description|
 |------------------|-----------------|
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|Le mot clé **auto** ne peut pas être combiné avec un autre spécificateur de type.|
 |[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Un symbole qui est déclaré avec le mot clé **auto** doit avoir un initialiseur.|

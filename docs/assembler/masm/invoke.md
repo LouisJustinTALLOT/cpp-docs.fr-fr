@@ -13,18 +13,18 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397300"
 ---
-# <a name="invoke-32-bit-masm"></a>INVOKE (32-bit MASM)
+# <a name="invoke-32-bit-masm"></a>INVOKE (MASM 32 bits)
 
-Calls the procedure at the address given by *expression*, passing the arguments on the stack or in registers according to the standard calling conventions of the language type. (32-bit MASM only.)
+Appelle la procédure à l’adresse donnée par l' *expression*, en passant les arguments sur la pile ou dans les registres en fonction des conventions d’appel standard du type de langage. (uniquement MASM 32 bits.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **INVOKE** *expression* ⟦ __,__ *argument* ...⟧
+> **Appeler** l' *expression* ⟦ __,__ *argument* ... ⟧
 
 ## <a name="remarks"></a>Notes
 
-Each argument passed to the procedure may be an expression, a register pair, or an address expression (an expression preceded by **ADDR**).
+Chaque argument passé à la procédure peut être une expression, une paire de registres ou une expression d’adresse (une expression précédée de **addr**).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

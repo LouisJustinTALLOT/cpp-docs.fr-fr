@@ -22,7 +22,7 @@ ms.locfileid: "74303499"
 
 Cette rubrique décrit les énumérations de l’en-tête filesystem.
 
-## <a name="requirements"></a>Conditions requises
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<experimental/filesystem>
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valeurs
 
-|Nom|valeur|Description|
+|Nom|Valeur|Description|
 |----------|-----------|-----------------|
 |`not_found`|-1|Représente un fichier qui n'existe pas.|
 |`none`|0|Représente un fichier qui n'a aucun attribut de type. (Non pris en charge.)|
@@ -116,7 +116,7 @@ enum class file_type {
 |`symlink`|3|Représente un lien symbolique. (Non pris en charge.)|
 |`block`|4|Représente un fichier spécial de bloc sur les systèmes UNIX. (Non pris en charge.)|
 |`character`|5|Représente un fichier spécial de caractères sur les systèmes UNIX. (Non pris en charge.)|
-|`fifo`|6|Représente un fichier FIFO sur les systèmes UNIX. (Non pris en charge.)|
+|`fifo`|6\.|Représente un fichier FIFO sur les systèmes UNIX. (Non pris en charge.)|
 |`socket`|7|Représente un socket sur les systèmes UNIX. (Non pris en charge.)|
 |`unknown`|8|Représente un fichier dont l'état ne peut pas être déterminé.|
 

@@ -15,7 +15,7 @@ ms.locfileid: "74398055"
 ---
 # <a name="nolistmacro"></a>.NOLISTMACRO
 
-Suppresses listing of macro expansions.
+Supprime la liste des expansions de macros.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,8 +23,8 @@ Suppresses listing of macro expansions.
 
 ## <a name="remarks"></a>Notes
 
-Same as [.SALL](../../assembler/masm/dot-sall.md).
+Identique à [. STOUTES](../../assembler/masm/dot-sall.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)
