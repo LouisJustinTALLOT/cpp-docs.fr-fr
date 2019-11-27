@@ -85,7 +85,7 @@ Windows Runtime C++ bibliothèque de modèles ressemble à la Active Template Li
 
 Windows Runtime C++ Template Library prend en charge la fonctionnalité com requise pour les applications UWP. Par conséquent, elle diffère de la bibliothèque ATL car elle omet la prise en charge directe des fonctionnalités COM telles que :
 
-- agrégation
+- agrégation ;
 
 - implémentations stock ;
 
@@ -103,19 +103,19 @@ Windows Runtime C++ Template Library prend en charge la fonctionnalité com requ
 
 - COM+
 
-## <a name="concepts"></a>Concepts
+## <a name="concepts"></a>Concepts liés à la
 
 Windows Runtime C++ bibliothèque de modèles fournit des types qui représentent quelques concepts de base. Les sections suivantes décrivent ces types.
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](comptr-class.md) est un type de *pointeur intelligent* qui représente l'interface spécifiée par le paramètre de modèle. Utilisez `ComPtr` pour déclarer une variable pouvant accéder aux membres d'un objet dérivé de l'interface. `ComPtr` gère automatiquement un décompte de références pour le pointeur d’interface sous-jacent et libère l’interface lorsque le décompte de références atteint zéro.
+[ComPtr](comptr-class.md) est un type de *pointeur intelligent* qui représente l'interface spécifiée par le paramètre de modèle. Utilisez `ComPtr` pour déclarer une variable pouvant accéder aux membres d'un objet dérivé de l'interface. `ComPtr` met à jour automatiquement un décompte de références pour le pointeur d'interface sous-jacent et libère l'interface lorsque le décompte de références atteint zéro.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
 [RuntimeClass](runtimeclass-class.md) représente une classe instanciée qui hérite d'un ensemble d'interfaces spécifiées. Un objet `RuntimeClass` peut fournir une combinaison de prise en charge pour une ou plusieurs interfaces COM Windows Runtime ou une référence faible à un composant.
 
-### <a name="module"></a>Module
+### <a name="module"></a>Module, mot clé
 
 [Module](module-class.md) représente une collection d'objets connexes. Un objet `Module` gère les fabriques de classe, qui créent des objets, et l'inscription, qui permet à d'autres applications d'utiliser un objet.
 
@@ -133,7 +133,7 @@ La fonction [Callback](callback-function-wrl.md) crée un objet dont la fonction
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](ftmbase-class.md) représente un objet marshaler libre de threads. `FtmBase` crée une table GIT (Global Interface Table) et aide à gérer le marshaling et les objets proxy.
+[FtmBase](ftmbase-class.md) représente un objet marshaler libre de threads. `FtmBase` crée un tableau global d'interface (GIT) et vous permet de gérer le marshaling et les objets proxy.
 
 ### <a name="weakref"></a>WeakRef
 
