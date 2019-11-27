@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: 3e8a3ab1b11c719730016e6a0cd248770cd89af8
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e087e3cd36ab85d6f3f6b5cfed1b55cac66ea142
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447777"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541701"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>Avertissement du compilateur (niveau 4) C4256
 
-'fonction' : constructeur de classe avec bases virtuelles a '...' ; appels ne seront ne peut-être pas compatibles avec les versions antérieures de Visual C++
+'fonction' : le constructeur pour la classe avec des bases virtuelles a'... '; les appels peuvent ne pas être compatibles avec les versions antérieures de VisualC++
 
 Incompatibilité possible.
 
-Prenons l’exemple de code suivant. Si la définition du constructeur S2::S2 (int i,...) a été compilé à l’aide d’une version de Microsoft C++ compilateur avant version 7, mais l’exemple suivant est compilé à l’aide de la version actuelle, l’appel au constructeur pour S3 ne fonctionnerait pas correctement en raison d’une modification de la convention d’appel de cas spéciaux. Si les deux ont été compilés à l’aide de Visual C++ 6.0, l’appel fonctionnerait pas tout à fait à droite, sauf si aucun paramètre ont été passés pour les points de suspension.
+Prenez l'exemple du code suivant. Si la définition du constructeur S2 :: S2 (int i,...) a été compilée à l’aide d’une version C++ du compilateur Microsoft antérieure à la version 7, mais que l’exemple suivant est compilé à l’aide de la version actuelle, l’appel au constructeur pour S3 ne fonctionnera pas correctement en raison d’une modification de convention d’appel de cas spécial. Si les deux étaient compilés à C++ l’aide de Visual 6,0, l’appel ne fonctionnerait pas non plus correctement, à moins qu’aucun paramètre ne soit passé pour les points de suspension.
 
 Pour résoudre cet avertissement,
 
-1. N’utilisez pas dans un constructeur de points de suspension.
+1. N’utilisez pas de points de suspension dans un constructeur.
 
-1. Assurez-vous que tous les composants dans leur projet sont générés avec la version actuelle (y compris les bibliothèques pouvant définir ou référencer cette classe), puis désactivez l’avertissement à l’aide de la [avertissement](../../preprocessor/warning.md) pragma.
+1. Assurez-vous que tous les composants de leur projet sont générés avec la version actuelle (y compris toutes les bibliothèques pouvant définir ou référencer cette classe), puis désactivez l’avertissement à l’aide du pragma [Warning](../../preprocessor/warning.md) .
 
-L’exemple suivant génère l’erreur C4256 :
+L’exemple suivant génère l’C4256 :
 
-```
+```cpp
 // C4256.cpp
 // compile with: /W4
 // #pragma warning(disable : 4256)

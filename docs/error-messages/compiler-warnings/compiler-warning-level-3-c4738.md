@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (Level 3) C4738
+title: Avertissement du compilateur (niveau 1) C4738
 ms.date: 11/04/2016
 f1_keywords:
 - C4738
@@ -13,21 +13,21 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189397"
 ---
-# <a name="compiler-warning-level-3-c4738"></a>Compiler Warning (Level 3) C4738
+# <a name="compiler-warning-level-3-c4738"></a>Avertissement du compilateur (niveau 1) C4738
 
 stockage de résultat flottant 32 bits en mémoire, perte possible de performances
 
-C4738 warns that the result of an assignment, cast, passed argument, or other operation may need to be rounded or that the operation ran out of registers and needed to use memory (spilling). This can result in performance loss.
+C4738 vous avertit que le résultat d’une assignation, d’un cast, d’un argument passé ou d’une autre opération doit peut-être être arrondi ou que l’opération ne s’est pas déroulée et qu’elle est nécessaire à l’utilisation de la mémoire (débordement). Cela peut entraîner une perte de performances.
 
-To resolve this warning and avoid rounding, compile with [/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md) or use `double` instead of `float`.
+Pour résoudre cet avertissement et éviter l’arrondi, compilez avec [/FP : Fast](../../build/reference/fp-specify-floating-point-behavior.md) ou utilisez `double` au lieu de `float`.
 
-To resolve this warning and avoid running out of registers, change the order of computation and modify your use of inlining
+Pour résoudre cet avertissement et éviter de manquer de registres, modifiez l’ordre de calcul et modifiez votre utilisation de l’incorporation
 
 Cet avertissement est désactivé par défaut. Pour plus d'informations, consultez [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Exemple
 
-The following sample generates C4738:
+L’exemple suivant génère l’C4738 :
 
 ```cpp
 // C4738.cpp

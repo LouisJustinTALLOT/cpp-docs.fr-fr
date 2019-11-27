@@ -15,16 +15,16 @@ ms.locfileid: "74397394"
 ---
 # <a name="ife"></a>IFE
 
-Grants assembly if *expression* is false (0).
+Accorde un assembly si l' *expression* a la valeur false (0).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **IFE** *expression*
+> *Expression* IFE
 
 ## <a name="remarks"></a>Notes
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Vérifiez [si](../../assembler/masm/if-masm.md) la syntaxe est complète.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)
