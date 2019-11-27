@@ -38,7 +38,7 @@ class LocalBinding : private Engine {
 };   // C4266
 ```
 
-Résolution possible :
+Solution possible :
 
 ```cpp
 // C4266b.cpp
