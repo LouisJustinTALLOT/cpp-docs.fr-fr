@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4487
 ms.assetid: 796144cf-cd3c-4edc-b6a4-96192b7eb4f0
-ms.openlocfilehash: 231482547856fc07d43ecfb859b31c2ece49fc5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1583da44368225eabd8181be970f69f6582111e1
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206999"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74682980"
 ---
 # <a name="compiler-warning-level-4-c4487"></a>Avertissement du compilateur (niveau 4) C4487
 
-'fonction_classe_dérivée' : correspond à la méthode non virtuelle héritée 'fonction_classe_base' mais n’est pas explicitement marqué comme 'new'
+'derived_class_function' : correspond à la méthode non virtuelle héritée’base_class_function’mais n’est pas explicitement marquée comme’New'
 
-Une fonction dans une classe dérivée a la même signature qu’une fonction de la classe de base non virtuelle. C4487 vous rappelle que la fonction de la classe dérivée ne remplace pas la fonction de la classe de base. Marquer explicitement la fonction de la classe dérivée en tant que `new` pour résoudre cet avertissement.
+Une fonction dans une classe dérivée a la même signature qu’une fonction de classe de base non virtuelle. C4487 vous rappelle que la fonction de classe dérivée ne remplace pas la fonction de classe de base. Marquez explicitement la fonction de classe dérivée comme `new` pour résoudre cet avertissement.
 
-Pour plus d’informations, consultez [new (nouvel emplacement dans vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md).
+Pour plus d’informations, voir [New (nouvel emplacement dans vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C4487.
+L’exemple suivant génère l’C4487.
 
-```
+```cpp
 // C4487.cpp
 // compile with: /W4 /clr
 using namespace System;

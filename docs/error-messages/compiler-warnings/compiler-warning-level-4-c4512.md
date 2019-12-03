@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c5e84fe1d0e558e689e48fba8df112861f81acec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3b8f11b55cf6ef2df601c125a1b6629aa0554da
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220988"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683186"
 ---
 # <a name="compiler-warning-level-4-c4512"></a>Avertissement du compilateur (niveau 4) C4512
 
@@ -29,15 +29,15 @@ Vous pouvez résoudre l'avertissement C4512 pour votre code de trois manières d
 
 - Définissez explicitement un opérateur d'assignation pour la classe.
 
-- Supprimer **const** ou l’opérateur de référence de l’élément de données dans la classe.
+- Supprimez **const** ou l’opérateur de référence de l’élément de données de la classe.
 
-- Utiliser le #pragma [avertissement](../../preprocessor/warning.md) instruction pour supprimer l’avertissement.
+- Utilisez l’instruction #pragma [Warning](../../preprocessor/warning.md) pour supprimer l’avertissement.
 
 ## <a name="example"></a>Exemple
 
 L'exemple suivant génère l'erreur C4512.
 
-```
+```cpp
 // C4512.cpp
 // compile with: /EHsc /W4
 // processor: x86
