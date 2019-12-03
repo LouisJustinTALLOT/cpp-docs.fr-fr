@@ -1,95 +1,93 @@
 ---
-title: Compilateur avertissement (niveau 3) C4996
-ms.date: 11/17/2017
+title: Avertissement du compilateur (niveau 3) C4996
+description: Explique pourquoi l’avertissement du compilateur C4996 se produit et décrit la marche à suivre.
+ms.date: 11/25/2019
 f1_keywords:
 - C4996
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401499"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683325"
 ---
-# <a name="compiler-warning-level-3-c4996"></a>Compilateur avertissement (niveau 3) C4996
+# <a name="compiler-warning-level-3-c4996"></a>Avertissement du compilateur (niveau 3) C4996
 
-Le compilateur a rencontré une déclaration déconseillée. **Cet avertissement est toujours un message délibéré à partir de l’auteur de la bibliothèque ou le fichier d’en-tête inclus que vous ne devez pas utiliser le symbole déconseillé sans avoir à comprendre les conséquences.** Le message d’avertissement réelle est spécifié par l’attribut sur le site de la déclaration ou le modificateur de désapprobation.
+Votre code utilise une fonction, un membre de classe, une variable ou un typedef marqué comme *déconseillé*. Les symboles sont déconseillés à l’aide d’un modificateur [__declspec (déconseillé)](../../cpp/deprecated-cpp.md) , ou le\[c++ 14 [\[déconseillé\]\]](../../cpp/attributes.md) attribut. Le message d’avertissement C4996 réel est spécifié par le modificateur `deprecated` ou l’attribut de la déclaration.
 
-Il s’agit de quelques messages d’erreur C4996 courants générés par la bibliothèque Runtime C et la bibliothèque Standard, mais pas une liste exhaustive. Suivez les liens ou lisez la suite pour les méthodes pour résoudre le problème ou de désactiver l’avertissement.
-
-- [Le nom POSIX pour cet élément est déconseillé. Au lieu de cela, utilisez l’ISO C et C++ nom conforme : *nouveau_nom*. Consultez l’aide en ligne pour plus d’informations.](#posix-function-names)
-
-- [Cette fonction ou cette variable peut être dangereux. Envisagez d’utiliser *version_sécurisée* à la place. Pour désactiver la dépréciation, utilisez \_CRT\_SECURE\_non\_avertissements.  Consultez l’aide en ligne pour plus d’informations.](#unsafe-crt-library-functions)
-
-- [' std ::*function_name*::\_Unchecked\_itérateurs ::\_Deprecate' appel à std ::*nom_fonction*avec des paramètres qui peuvent être non sécurisés - cet appel s’appuie sur l’appelant pour vérifier que les valeurs passées sont corrects. Pour désactiver cet avertissement, utilisez -D_SCL_SECURE_NO_WARNINGS. Consultez la documentation sur l’utilisation de Visual C++ « Itérateurs vérifiés »](#unsafe-standard-library-functions)
-
-- [Cette fonction ou cette variable a été remplacée par une fonctionnalité plus récente du système d’exploitation ou de la bibliothèque. Envisagez d’utiliser *Nouvel_élément* à la place. Consultez l’aide en ligne pour plus d’informations.](#obsolete-crt-functions-and-variables)
-
-## <a name="cause"></a>Cause
-
-L’erreur C4996 se produit lorsque le compilateur rencontre une fonction ou une variable qui est marquée en tant que [déconseillée](../../cpp/deprecated-cpp.md) à l’aide un `__declspec(deprecated)` modificateur, ou lorsque vous essayez d’accéder à une fonction, un membre de classe ou un typedef qui a C ++ 14 [ \[ \[déconseillée\] \] ](../../cpp/attributes.md) attribut. Vous pouvez utiliser la `__declspec(deprecated)` modificateur ou `[[deprecated]]` attribut vous-même dans vos bibliothèques ou des fichiers d’en-tête pour informer vos clients sur les fonctions déconseillées, des variables, des membres ou des typedefs.
+> [!IMPORTANT]
+> Cet avertissement est toujours un message délibéré de l’auteur du fichier d’en-tête qui déclare le symbole. N’utilisez pas le symbole déconseillé sans comprendre les conséquences.
 
 ## <a name="remarks"></a>Notes
 
-Nombreuses fonctions, fonctions membres, les fonctions de modèle et les variables globales dans les bibliothèques dans Visual Studio sont marqués comme *déconseillée*. Ces fonctions sont déconseillées, car ils peuvent avoir un autre nom préféré, peut-être non sécurisé ou comporte une variante plus sécurisée, ou bien être obsolètes. Nombre de messages de désapprobation inclure une suggestion de remplacement pour la fonction déconseillée ou une variable globale.
+De nombreuses fonctions, fonctions membres, fonctions de modèle et variables globales dans les bibliothèques Visual Studio sont *déconseillées*. Certaines, telles que les fonctions POSIX, sont dépréciées, car elles ont un nom préféré différent. Certaines fonctions de la bibliothèque Runtime C sont dépréciées, car elles ne sont pas sécurisées et ont une variante plus sécurisée. D’autres sont dépréciées, car elles sont obsolètes. Les messages de désapprobation incluent généralement un remplacement suggéré pour la fonction ou la variable globale déconseillée.
 
-Pour résoudre ce problème, nous vous recommandons généralement de que vous modifiez votre code pour utiliser les variables globales ni des fonctions plus sûres ou mis à jour suggérées à la place. Si vous avez besoin d’utiliser les fonctions existantes ou des variables pour des raisons de portabilité, l’avertissement peut être désactivé.
+## <a name="turn-off-the-warning"></a>Désactiver l’avertissement
 
-### <a name="to-turn-the-warning-off-without-fixing-the-issue"></a>Pour désactiver l’avertissement sans résolution du problème
+Pour résoudre un problème C4996, nous vous recommandons généralement de modifier votre code. Utilisez à la place les variables globales et les fonctions suggérées. Si vous devez utiliser les fonctions ou variables existantes pour des raisons de portabilité, vous pouvez désactiver l’avertissement.
 
-Vous pouvez désactiver l’avertissement pour une ligne de code spécifique à l’aide de la [avertissement](../../preprocessor/warning.md) pragma, `#pragma warning(suppress : 4996)`. Vous pouvez également désactiver l’avertissement dans un fichier à l’aide du pragma warning, `#pragma warning(disable : 4996)`.
+Pour désactiver l’avertissement pour une ligne de code spécifique, utilisez le pragma [Warning](../../preprocessor/warning.md) , `#pragma warning(suppress : 4996)`.
 
-Vous pouvez désactiver l’avertissement dans le monde entier dans les versions de ligne de commande à l’aide de la **/wd4996** option de ligne de commande.
+Pour désactiver l’avertissement dans un fichier, utilisez le pragma warning, `#pragma warning(disable : 4996)`.
 
-Pour désactiver l’avertissement pour un projet entier dans l’IDE Visual Studio :
+Pour désactiver globalement l’avertissement dans les générations à partir de la ligne de commande, utilisez l’option de ligne de commande [/wd4996](../../build/reference/compiler-option-warning-level.md) .
 
-- Ouvrez le **Pages de propriétés** boîte de dialogue pour votre projet. Pour plus d’informations sur l’utilisation de la boîte de dialogue Pages de propriétés, consultez [Pages de propriétés](../../build/reference/property-pages-visual-cpp.md).
-- Sélectionnez le **propriétés de Configuration**, **C/C++**, **avancé** page.
-- Modifier le **désactivation des avertissements spécifiques** propriété à ajouter `4996`. Choisissez **OK** pour appliquer vos modifications.
+Pour désactiver l’avertissement pour l’intégralité d’un projet dans l’IDE de Visual Studio :
 
-Vous pouvez également utiliser des macros de préprocesseur pour désactiver certaines classes spécifiques d’avertissements de désapprobation utilisés dans les bibliothèques. Ces macros sont décrits ci-dessous.
+1. Ouvrez la boîte de dialogue **pages de propriétés** de votre projet. Pour plus d’informations sur l’utilisation de la boîte de dialogue pages de propriétés, consultez [pages de propriétés](../../build/reference/property-pages-visual-cpp.md).
+
+1. Sélectionnez les **Propriétés de configuration** > page **avancé** **CC++ /**  > .
+
+1. Modifiez la propriété **désactivation des avertissements spécifiques** pour ajouter des `4996`. Choisissez **OK** pour appliquer vos modifications.
+
+Vous pouvez également utiliser des macros de préprocesseur pour désactiver certaines classes spécifiques d’avertissements de désapprobation utilisés dans les bibliothèques. Ces macros sont décrites ci-dessous.
 
 Pour définir une macro de préprocesseur dans Visual Studio :
 
-- Ouvrez le **Pages de propriétés** boîte de dialogue pour votre projet. Pour plus d’informations sur l’utilisation de la boîte de dialogue Pages de propriétés, consultez [Pages de propriétés](../../build/reference/property-pages-visual-cpp.md).
-- Développez **propriétés de Configuration > C/C++ > préprocesseur**.
-- Dans le **définitions de préprocesseur** propriété, ajoutez le nom de macro. Choisissez **OK** pour enregistrer, puis régénérez votre projet.
+1. Ouvrez la boîte de dialogue **pages de propriétés** de votre projet. Pour plus d’informations sur l’utilisation de la boîte de dialogue pages de propriétés, consultez [pages de propriétés](../../build/reference/property-pages-visual-cpp.md).
 
-Pour définir une macro uniquement dans les fichiers source spécifique, ajoutez une ligne comme `#define EXAMPLE_MACRO_NAME` avant n’importe quelle ligne qui inclut un fichier d’en-tête.
+1. Développez **Propriétés de Configuration >C++ préprocesseur C/>** .
 
-## <a name="specific-c4996-messages"></a>Messages de l’erreur C4996 spécifiques
+1. Dans la propriété **définitions de préprocesseur** , ajoutez le nom de la macro. Choisissez **OK** pour enregistrer, puis régénérez votre projet.
 
-Voici quelques-unes des sources courantes d’erreurs et avertissements de l’erreur C4996.
+Pour définir une macro uniquement dans des fichiers sources spécifiques, ajoutez une ligne telle que `#define EXAMPLE_MACRO_NAME` avant toute ligne qui comprend un fichier d’en-tête.
 
-### <a name="posix-function-names"></a>Noms de fonction POSIX
+Voici quelques-unes des sources courantes d’avertissements et d’erreurs C4996 :
 
-**Le nom POSIX pour cet élément est déconseillé. Au lieu de cela, utilisez l’ISO C et C++ nom conforme :** *nouveau_nom*. **Consultez l’aide en ligne pour plus d’informations.**
+## <a name="posix-function-names"></a>Noms des fonctions POSIX
 
-Microsoft a renommé certaines fonctions POSIX dans le CRT se conforme à C99 et C ++ 03 règles pour les noms définis par l’implémentation de fonction globale. Seuls les noms POSIX d’origine sont déconseillés, pas les fonctions elles-mêmes. Dans la plupart des cas, un trait de soulignement de début a été ajouté au nom de fonction POSIX pour créer un nom conforme à la norme. Le compilateur émet un avertissement de désapprobation pour le nom de fonction d’origine et suggère le nom par défaut.
+**Le nom POSIX pour cet élément est déconseillé. Utilisez plutôt l’ISO C et C++ le nom conforme :** *New-Name*. **Pour plus d’informations, consultez l’aide en ligne.**
 
-Pour résoudre ce problème, nous recommandons généralement que vous modifiez votre code pour utiliser les noms des fonctions proposées à la place. Toutefois, les noms mis à jour sont spécifiques à Microsoft. Si vous avez besoin utiliser les noms de fonction existante pour des raisons de portabilité, vous pouvez désactiver ces avertissements. Les fonctions POSIX sont toujours disponibles dans la bibliothèque sous leurs noms d’origine.
+Microsoft a renommé certaines fonctions POSIX dans le CRT pour se conformer aux règles C99 et C++ 03 pour les noms de fonctions globales définies par l’implémentation. Seuls les noms sont déconseillés, pas les fonctions elles-mêmes. Dans la plupart des cas, un trait de soulignement de début a été ajouté au nom de fonction POSIX pour créer un nom conforme aux normes. Le compilateur émet un avertissement de désapprobation pour le nom de la fonction d’origine et suggère le nom préféré.
 
-Pour désactiver les avertissements de désapprobation pour ces fonctions, définissez la macro de préprocesseur  **\_CRT\_NONSTDC\_non\_avertissements**. Vous pouvez définir cette macro en ligne de commande en incluant l’option `/D_CRT_NONSTDC_NO_WARNINGS`.
+Pour résoudre ce problème, nous vous recommandons généralement de modifier votre code pour utiliser les noms de fonctions suggérés à la place. Toutefois, les noms mis à jour sont spécifiques à Microsoft. Si vous devez utiliser les noms de fonctions existants pour des raisons de portabilité, vous pouvez désactiver ces avertissements. Les fonctions POSIX sont toujours disponibles dans la bibliothèque sous leurs noms d’origine.
 
-### <a name="unsafe-crt-library-functions"></a>Fonctions de bibliothèque CRT unsafe
+Pour désactiver les avertissements de désapprobation pour ces fonctions, définissez la macro de préprocesseur **\_CRT\_NONSTDC\_aucun\_avertissements**. Vous pouvez définir cette macro sur la ligne de commande en incluant l’option `/D_CRT_NONSTDC_NO_WARNINGS`.
 
-**Cette fonction ou cette variable peut être dangereux. Envisagez d’utiliser** *version_sécurisée* **à la place. Pour désactiver la dépréciation, utilisez \_CRT\_SECURE\_non\_avertissements.  Consultez l’aide en ligne pour plus d’informations.**
+## <a name="unsafe-crt-library-functions"></a>Fonctions de la bibliothèque CRT non sécurisée
 
-Microsoft a déprécié de certaines fonctions CRT et la bibliothèque C++ Standard et les variables globales en faveur des versions plus sécurisées. Dans la plupart des cas, les fonctions dépréciées autorisent unchecked accès en lecture ou écriture aux mémoires tampons, ce qui peut entraîner des problèmes de sécurité sérieux. Le compilateur émet un avertissement indiquant que ces fonctions sont déconseillées et suggère la fonction préférée.
+**Cette fonction ou variable peut être non sécurisée. Envisagez plutôt d’utiliser** *Safe-version* **. Pour désactiver la désapprobation, utilisez \_CRT\_sécurisé\_aucun\_avertissements.  Pour plus d’informations, consultez l’aide en ligne.**
 
-Pour résoudre ce problème, nous vous recommandons d’utiliser la fonction ou variable *version_sécurisée* à la place. Si vous avez vérifié qu’il n’est pas possible pour un remplacement de la mémoire tampon ou overread se produisent dans votre code et vous ne pouvez pas modifier le code pour des raisons de portabilité, vous pouvez désactiver l’avertissement.
+Microsoft a déconseillé certaines fonctions de C++ bibliothèque CRT et standard, ainsi que les fonctions globales, car des versions plus sécurisées sont disponibles. La plupart des fonctions déconseillées autorisent un accès en lecture ou en écriture non contrôlé aux mémoires tampons. Leur utilisation abusive peut entraîner de sérieux problèmes de sécurité. Le compilateur émet un avertissement indiquant que ces fonctions sont déconseillées et suggère la fonction préférée.
 
-Pour désactiver les avertissements déconseillant ces fonctions dans le CRT, définissez  **\_CRT\_SECURE\_non\_avertissements**. Pour désactiver les avertissements concernant les variables globales déconseillées, définissez  **\_CRT\_SECURE\_non\_avertissements\_GLOBALS**. Pour plus d’informations sur ces variables globales et les fonctions déconseillées, consultez [des fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md) et [bibliothèques sécurisées : Bibliothèque Standard C++](../../standard-library/safe-libraries-cpp-standard-library.md).
+Pour résoudre ce problème, nous vous recommandons d’utiliser à la place la fonction ou la variable *Safe-version* . Parfois, vous ne pouvez pas, à des fins de portabilité ou de compatibilité descendante. Vérifiez avec soin qu’il n’est pas possible de remplacer ou de délire une mémoire tampon dans votre code. Ensuite, vous pouvez désactiver l’avertissement.
 
-### <a name="unsafe-standard-library-functions"></a>Fonctions de bibliothèque Standard unsafe
+Pour désactiver les avertissements de désapprobation pour ces fonctions dans la bibliothèque CRT, définissez **\_crt\_sécurisé\_aucun\_avertissements**.
 
-__' std ::__*function_name*__::\_Unchecked\_itérateurs ::\_Deprecate' appel à std ::__*function_name* **avec des paramètres qui peuvent être non sécurisés - cet appel s’appuie sur l’appelant pour vérifier que les valeurs passées sont corrects. Pour désactiver cet avertissement, utilisez -D\_SCL\_SECURE\_non\_avertissements. Consultez la documentation sur l’utilisation de Visual C++ « Itérateurs vérifiés »**
+Pour désactiver les avertissements concernant les variables globales déconseillées, définissez **\_CRT\_sécurisé\_aucun\_avertissements\_Globals**.
 
-Cet avertissement s’affiche dans les versions debug, car certaines fonctions de modèle de bibliothèque C++ Standard ne vérifient pas les paramètres sont corrects. Dans la plupart des cas, il s’agit pas suffisamment d’informations n’étant pas disponible pour la fonction de vérification des limites de conteneur, ou parce que les itérateurs peuvent être utilisés correctement avec la fonction. Cet avertissement permet d’identifier ces utilisations de la fonction, car ils peuvent être une source de failles de sécurité graves dans votre programme. Pour plus d'informations, consultez [Checked Iterators](../../standard-library/checked-iterators.md).
+Pour plus d’informations sur ces fonctions et globales déconseillées, consultez [fonctionnalités de sécurité dans les bibliothèques CRT](../../c-runtime-library/security-features-in-the-crt.md) et [Safe : C++ bibliothèque standard](../../standard-library/safe-libraries-cpp-standard-library.md).
 
-Par exemple, cet avertissement s’affiche en mode débogage si vous passez un pointeur d’élément à `std::copy` au lieu d’un tableau ordinaire. Pour résoudre ce problème, utilisez un tableau déclaré de manière appropriée, afin que la bibliothèque peut vérifier les extensions de tableau et effectuer la vérification des limites.
+## <a name="unsafe-standard-library-functions"></a>Fonctions de la bibliothèque standard non sécurisée
+
+__'std ::__ *function_name* __::\_non vérifié\_itérateurs ::\_déprécier’appel à std ::__ *function_name* **avec des paramètres qui peuvent être non sécurisés : cet appel s’appuie sur l’appelant pour vérifier que les valeurs passées sont correctes. Pour désactiver cet avertissement, utilisez-D\_accès SCL\_sécurisé\_aucun\_avertissements. Consultez la documentation sur la façon d' C++ utiliser les itérateurs vérifiés de Visual** '
+
+Cet avertissement apparaît dans les builds de C++ débogage, car certaines fonctions de modèle de bibliothèque standard ne vérifient pas que les paramètres sont corrects. C’est souvent parce qu’il n’y a pas assez d’informations disponibles pour la fonction pour vérifier les limites du conteneur. Ou, car les itérateurs peuvent être utilisés de manière incorrecte avec la fonction. Cet avertissement vous aide à identifier ces fonctions, car elles peuvent constituer une source de failles de sécurité importantes dans votre programme. Pour plus d’informations, consultez [itérateurs vérifiés](../../standard-library/checked-iterators.md).
+
+Par exemple, cet avertissement s’affiche en mode débogage si vous transmettez un pointeur d’élément à `std::copy`, au lieu d’un tableau simple. Pour résoudre ce problème, utilisez un tableau déclaré de manière appropriée, afin que la bibliothèque puisse vérifier les étendues du tableau et effectuer la vérification des limites.
 
 ```cpp
 // C4996_copyarray.cpp
@@ -104,7 +102,7 @@ void example(char const * const src) {
 }
 ```
 
-Plusieurs algorithmes de bibliothèque standard ont été mis à jour pour les versions « double range » dans C ++ 14. Si vous utilisez les versions de plage double, la deuxième plage fournit la vérification des limites nécessaires :
+Plusieurs algorithmes de bibliothèque standard ont été mis à jour pour avoir des versions « double plage » en C++ 14. Si vous utilisez les versions à deux plages, la deuxième plage fournit la vérification des limites nécessaires :
 
 ```cpp
 // C4996_containers.cpp
@@ -125,7 +123,7 @@ bool example(
 }
 ```
 
-Cet exemple montre plusieurs façons plus la bibliothèque standard peut être utilisée pour vérifier l’utilisation d’itérateur, et lorsque l’utilisation non contrôlée peut être dangereuse :
+Cet exemple illustre plusieurs autres façons dont la bibliothèque standard peut être utilisée pour vérifier l’utilisation de l’itérateur, et quand une utilisation non vérifiée peut être dangereuse :
 
 ```cpp
 // C4996_standard.cpp
@@ -210,11 +208,11 @@ int main()
 }
 ```
 
-Si vous avez vérifié que votre code ne peut pas avoir une mémoire tampon en erreur dans les fonctions de bibliothèque Standard qui déclenchent cet avertissement de dépassement, il pouvez que vous souhaitez désactiver cet avertissement. Pour désactiver les avertissements pour ces fonctions, définissez  **\_SCL\_SECURE\_non\_avertissements**.
+Si vous avez vérifié que votre code ne peut pas avoir une erreur de dépassement de mémoire tampon, vous pouvez désactiver cet avertissement. Pour désactiver les avertissements pour ces fonctions, définissez **\_valeur SCL\_sécurisé\_aucun\_avertissements**.
 
-### <a name="checked-iterators-enabled"></a>Itérateurs vérifiés activés
+## <a name="checked-iterators-enabled"></a>Itérateurs vérifiés activés
 
-L’erreur C4996 peut également se produire si vous n’utilisez pas un itérateur vérifié lors de la compilation avec `_ITERATOR_DEBUG_LEVEL` défini sur 1 ou 2. Il est défini à 2 par défaut pour les builds en mode débogage et la valeur 0 pour les versions commerciales. Pour plus d'informations, voir [Checked Iterators](../../standard-library/checked-iterators.md) .
+L’C4996 peut également se produire si vous n’utilisez pas d’itérateur vérifié lorsque `_ITERATOR_DEBUG_LEVEL` est défini sur 1 ou 2. Elle est définie sur 2 par défaut pour les builds en mode débogage et sur 0 pour les versions commerciales. Pour plus d’informations, consultez [itérateurs vérifiés](../../standard-library/checked-iterators.md).
 
 ```cpp
 // C4996_checked.cpp
@@ -236,29 +234,29 @@ int main() {
 }
 ```
 
-### <a name="unsafe-mfc-or-atl-code"></a>Code unsafe MFC ou ATL
+## <a name="unsafe-mfc-or-atl-code"></a>Code MFC ou ATL non sécurisé
 
-L’erreur C4996 peut également se produire si vous utilisez des fonctions MFC ou ATL qui ont été déconseillées pour des raisons de sécurité.
+L’C4996 peut se produire si vous utilisez des fonctions MFC ou ATL qui ont été dépréciées pour des raisons de sécurité.
 
-Pour résoudre ce problème, nous vous recommandons vivement de que vous modifiez votre code pour utiliser les fonctions de mise à jour à la place.
+Pour résoudre ce problème, nous vous recommandons vivement de modifier votre code pour utiliser des fonctions mises à jour à la place.
 
 Pour plus d’informations sur la façon de supprimer ces avertissements, consultez [_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings).
 
-### <a name="obsolete-crt-functions-and-variables"></a>Variables et fonctions CRT obsolètes
+## <a name="obsolete-crt-functions-and-variables"></a>Variables et fonctions CRT obsolètes
 
-**Cette fonction ou cette variable a été remplacée par une fonctionnalité plus récente du système d’exploitation ou de la bibliothèque. Envisagez d’utiliser** *Nouvel_élément* **à la place. Consultez l’aide en ligne pour plus d’informations.**
+**Cette fonction ou cette variable a été remplacée par une version plus récente du système d’exploitation ou de la bibliothèque. Envisagez plutôt d’utiliser** *new_item* **. Pour plus d’informations, consultez l’aide en ligne.**
 
 Certaines fonctions de la bibliothèque et certaines variables globales sont déconseillées, car elles sont obsolètes. Ces fonctions et variables sont susceptibles d’être supprimées dans une version future de la bibliothèque. Le compilateur émet un avertissement indiquant que ces éléments sont déconseillées et suggère l’alternative préférée.
 
-Pour résoudre ce problème, nous vous recommandons que modifier votre code pour utiliser la fonction suggérée ou la variable.
+Pour résoudre ce problème, nous vous recommandons de modifier votre code pour utiliser la fonction ou la variable suggérée.
 
-Pour désactiver les avertissements de désapprobation pour ces éléments, définissez  **\_CRT\_OBSOLETE\_non\_avertissements**. Pour plus d’informations, consultez la documentation pour la fonction ou la variable déconseillée.
+Pour désactiver les avertissements de désapprobation pour ces éléments, définissez **\_CRT\_obsolète\_aucun\_avertissements**. Pour plus d’informations, consultez la documentation pour la fonction ou la variable déconseillée.
 
-### <a name="marshalling-errors-in-clr-code"></a>Marshaling des erreurs dans le code CLR
+## <a name="marshaling-errors-in-clr-code"></a>Marshaling des erreurs dans le code CLR
 
-L’erreur C4996 peut également se produire lorsque vous utilisez la bibliothèque de marshaling CLR. Dans ce cas, C4996 est une erreur, plutôt qu'un avertissement. Cette erreur se produit lorsque vous utilisez [marshal_as](../../dotnet/marshal-as.md) effectuer une conversion entre deux types de données qui nécessitent une [marshal_context Class](../../dotnet/marshal-context-class.md). Vous pouvez également recevoir cette erreur lors de la bibliothèque de marshaling ne prend pas en charge une conversion. Pour plus d’informations sur la bibliothèque de marshaling, consultez [Overview of Marshaling in C++](../../dotnet/overview-of-marshaling-in-cpp.md).
+L’C4996 peut également se produire lorsque vous utilisez la bibliothèque de marshaling CLR. Dans ce cas, C4996 est une erreur, et non un avertissement. L’erreur se produit lorsque vous utilisez [marshal_as](../../dotnet/marshal-as.md) pour effectuer une conversion entre deux types de données qui requièrent une [classe marshal_context](../../dotnet/marshal-context-class.md). Vous pouvez également recevoir cette erreur lorsque la bibliothèque de marshaling ne prend pas en charge une conversion. Pour plus d’informations sur la bibliothèque de marshaling, consultez [vue d’ensemble C++du marshaling dans ](../../dotnet/overview-of-marshaling-in-cpp.md).
 
-Cet exemple génère l’erreur C4996, car la bibliothèque de marshaling nécessite un contexte à convertir à partir d’un `System::String` à un `const char *`.
+Cet exemple génère l’C4996, car la bibliothèque de marshaling requiert un contexte pour convertir un `System::String` en `const char *`.
 
 ```cpp
 // C4996_Marshal.cpp
@@ -279,9 +277,9 @@ int main() {
 }
 ```
 
-## <a name="example-user-defined-deprecated-function"></a>Exemple : Défini par l’utilisateur la fonction déconseillée
+## <a name="example-user-defined-deprecated-function"></a>Exemple : fonction déconseillée définie par l’utilisateur
 
-Vous pouvez utiliser l’attribut déconseillé dans votre propre code pour avertir les appelants lorsque vous n’en avez plus recommandez l’utilisation de certaines fonctions. Dans cet exemple, l’erreur C4996 est généré pour la ligne sur lequel la fonction déconseillée est déclarée et de la ligne sur laquelle la fonction est utilisée.
+Vous pouvez utiliser l’attribut deprecated dans votre propre code pour avertir les appelants lorsque vous n’êtes plus recommandé d’utiliser certaines fonctions. Dans cet exemple, l’C4996 est généré à deux emplacements : un pour la ligne sur laquelle la fonction déconseillée est déclarée, et une pour la ligne où la fonction est utilisée.
 
 ```cpp
 // C4996.cpp
@@ -294,7 +292,8 @@ void func1(void) {
    printf_s("\nIn func1");
 }
 
-__declspec(deprecated) void func1(int) {
+[[deprecated]]
+void func1(int) {
    printf_s("\nIn func2");
 }
 

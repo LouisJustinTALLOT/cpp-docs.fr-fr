@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4389
 ms.assetid: fc0e3a8e-f766-437c-b7f1-e61abb2a8765
-ms.openlocfilehash: 7490218c0af61ef3b2346fc1bee9806d87d02294
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cfb33e8a79259d0ff02dfd832a1b5943cbc0da9
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391580"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74682948"
 ---
 # <a name="compiler-warning-level-4-c4389"></a>Avertissement du compilateur (niveau 4) C4389
 
-'opérateur' : incompatibilité signed/unsigned
+'operator' : incompatibilité signed/unsigned
 
-Une opération a impliqué variables signés et non signés. Cela pourrait entraîner une perte de données.
+Une opération impliquait des variables signées et non signées. Cela peut entraîner une perte de données.
 
-L’exemple suivant génère l’erreur C4389 :
+L’exemple suivant génère l’C4389 :
 
-```
+```cpp
 // C4389.cpp
 // compile with: /W4
 #pragma warning(default: 4389)

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4337
 ms.assetid: 70bc72d9-aac5-45cd-abd3-ebe42a05897b
-ms.openlocfilehash: 2bfa5f9b30fa0325df1c3655ded53ab0525449c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f86d03e30e2776a8dae4cf56032c45d0022ca01d
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400836"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683309"
 ---
 # <a name="compiler-warning-level-4-c4337"></a>Avertissement du compilateur (niveau 4) C4337
 
-bibliothèque de types à 'références croisées biblio_types_1' dans 'biblio_types_2' est en cours d’importation automatiquement
+la bibliothèque de types à références croisées’typelib1 'dans’typelib2 'est automatiquement importée
 
-L’attribut auto_search de [la directive #import](../../preprocessor/hash-import-directive-cpp.md) a provoqué une bibliothèque de types à importer implicitement.
+L’attribut auto_search de [la directive #import](../../preprocessor/hash-import-directive-cpp.md) a provoqué l’importation implicite d’une bibliothèque de types.
 
-Donné deux bibliothèques de types sur disque créé à partir de deux fichiers suivants (compilés avec midl.exe) :
+Deux bibliothèques de types sont fournies sur le disque créé à partir des deux fichiers suivants (compilés avec MIDL. exe) :
 
 ```
 // C4337a.idl
@@ -38,7 +38,7 @@ library C4337aLib
 };
 ```
 
-et ensuite le fichier .idl deuxième,
+puis le deuxième fichier. idl,
 
 ```
 // C4337b.idl
@@ -58,9 +58,9 @@ library C4337bLib
 };
 ```
 
-L’exemple suivant génère l’erreur C4337 :
+L’exemple suivant génère l’C4337 :
 
-```
+```cpp
 // C4337.cpp
 // compile with: /W4 /LD
 #import "c4337b.tlb" auto_search   // C4337

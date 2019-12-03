@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-ms.openlocfilehash: 4946b932fa897dab057e430f16c781e2d06bebd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33c4a25618c1afcf93704b161483bc4c0a6e16a0
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400849"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683319"
 ---
 # <a name="compiler-warning-level-4-c4336"></a>Avertissement du compilateur (niveau 4) C4336
 
-Importer la bibliothèque 'biblio_types1' avant d’importer 'biblio_types2'
+importer la bibliothèque de types à références croisées’type_lib1 'avant d’importer’type_lib2 '
 
-Une bibliothèque de types a été référencée avec la [#import](../../preprocessor/hash-import-directive-cpp.md) directive. Toutefois, la bibliothèque de types contenait une référence à une autre bibliothèque de types qui n’est pas référencée avec `#import`. Cet autre fichier .tlb a été trouvé par le compilateur.
+Une bibliothèque de types a été référencée avec la directive [#import](../../preprocessor/hash-import-directive-cpp.md) . Toutefois, la bibliothèque de types contenait une référence à une autre bibliothèque de types qui n’a pas été référencée avec `#import`. Ce fichier. tlb a été trouvé par le compilateur.
 
-Donné deux bibliothèques de types sur disque créé à partir de deux fichiers suivants (compilés avec midl.exe) :
+Deux bibliothèques de types sont fournies sur le disque créé à partir des deux fichiers suivants (compilés avec MIDL. exe) :
 
 ```
 // c4336a.idl
@@ -50,9 +50,9 @@ library C4336bLib
 };
 ```
 
-L’exemple suivant génère l’erreur C4336 :
+L’exemple suivant génère l’C4336 :
 
-```
+```cpp
 // C4336.cpp
 // compile with: /W4 /LD
 // #import "C4336a.tlb"

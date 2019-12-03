@@ -3,12 +3,12 @@ title: Initialisation des accolades pour les classes, les structs et les unions
 description: Utiliser l’initialisation des accolades avec C++ n’importe quelle classe, struct ou Union
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: 41ff38bc4bcc9ebca913b5e66b5ac2f395044222
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: c746c6e4c17e5a55475d70f6dc3d927088af579f
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246501"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683005"
 ---
 # <a name="brace-initialization"></a>Initialisation de l’accolade
 
@@ -108,7 +108,7 @@ int main()
     class_d d3{ 4.5, "string", 'c' };
 
     class_d d4{ "string", 'c' }; // compiler error
-    class_d d5("string", 'c', 2.0 }; // compiler error
+    class_d d5{ "string", 'c', 2.0 }; // compiler error
 }
 ```
 
@@ -145,7 +145,7 @@ initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  Pour utiliser cette classe, vous devez inclure l’en-tête [>\<initializer_list](../standard-library/initializer-list.md) .
+>  Pour utiliser cette classe, vous devez inclure l’en-tête [\<initializer_list](../standard-library/initializer-list.md) .
 
 Une `initializer_list` peut être copiée. Dans ce cas, les membres de la nouvelle liste sont des références aux membres de la liste d’origine :
 
