@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3803
 ms.assetid: bad5fb9a-ed9a-4c15-96e7-cf06e200a50d
-ms.openlocfilehash: f6c255ec18d6dcf94f3ec022f09b173c2c66a1dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771530c2d05d378b86732938aa7a2b7881608446
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400095"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755302"
 ---
 # <a name="compiler-error-c3803"></a>Erreur du compilateur C3803
 
-'property' : propriété a un type qui n’est pas compatible avec l’un de ses accesseurs 'accesseur'
+'Property' : la propriété a un type qui est incompatible avec l’un de ses accesseurs’accessor'
 
-Le type d’une propriété définie avec [propriété](../../cpp/property-cpp.md) ne correspond pas au type de retour pour l’une de ses fonctions d’accesseur.
+Le type d’une propriété définie avec la [propriété](../../cpp/property-cpp.md) ne correspond pas au type de retour de l’une de ses fonctions d’accesseur.
 
-L’exemple suivant génère l’erreur C3803 :
+L’exemple suivant génère l’C3803 :
 
-```
+```cpp
 // C3803.cpp
 struct A
 {
