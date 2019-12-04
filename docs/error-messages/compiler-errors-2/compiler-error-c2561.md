@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2561
 ms.assetid: 0abe955b-53a6-4a3c-8362-b1a8eb40e8d1
-ms.openlocfilehash: 8350c5baf129b88c178be280d2da7fe856c6cf57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4a14be9cd32c752e2ab889417494e80b935e31b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368420"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755562"
 ---
 # <a name="compiler-error-c2561"></a>Erreur du compilateur C2561
 
-'identificateur' : fonction doit retourner une valeur
+'identificateur' : la fonction doit retourner une valeur
 
-La fonction a été déclarée comme retournant une valeur, mais la définition de fonction ne contient-elle pas un `return` instruction.
+La fonction a été déclarée comme retournant une valeur, mais la définition de fonction ne contient pas d’instruction `return`.
 
-Cette erreur peut être provoquée par un prototype de fonction incorrect :
+Cette erreur peut être due à un prototype de fonction incorrect :
 
 1. Si la fonction ne retourne pas de valeur, déclarez la fonction avec le type de retour [void](../../cpp/void-cpp.md).
 
-1. Vérifiez que toutes les branches possibles de la fonction retournent la valeur du type déclaré dans le prototype.
+1. Vérifiez que toutes les branches possibles de la fonction retournent une valeur du type déclaré dans le prototype.
 
-1. Les fonctions C++ contenant des routines d’assembly inline qui stockent la valeur de retour dans le `AX` register peut-être une instruction return. Copiez la valeur dans `AX` à une variable temporaire et retournez cette variable à partir de la fonction.
+1. C++les fonctions contenant des routines d’assembly inline qui stockent la valeur de retour dans le registre `AX` peuvent nécessiter une instruction return. Copiez la valeur de `AX` dans une variable temporaire et retournez cette variable à partir de la fonction.
 
-L’exemple suivant génère l’erreur C2561 :
+L’exemple suivant génère l’C2561 :
 
-```
+```cpp
 // C2561.cpp
 int Test(int x) {
    if (x) {

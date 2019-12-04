@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3145
 ms.assetid: f165c874-0f51-45c7-85e8-ebe321cbc168
-ms.openlocfilehash: e425402bcea3e08764a9a89abfbd9316ca254a83
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 10ce7f9e6fac09401892304f2803ea76c226fab5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345527"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746004"
 ---
 # <a name="compiler-error-c3145"></a>Erreur du compilateur C3145
 
@@ -21,7 +21,7 @@ Vous pouvez uniquement définir des objets CLR ou WinRT dans la portée de la fo
 
 L'exemple suivant génère l'erreur C3145 et montre comment la corriger :
 
-```
+```cpp
 // C3145.cpp
 // compile with: /clr
 using namespace System;
@@ -44,7 +44,7 @@ int main() {
 
 L'exemple suivant génère l'erreur C3145 :
 
-```
+```cpp
 // C3145b.cpp
 // compile with: /clr
 ref class MyClass {

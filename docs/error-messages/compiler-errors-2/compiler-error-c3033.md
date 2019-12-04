@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3033
 ms.assetid: 8628b6bb-a650-4ed2-af13-57acd2f7ddbb
-ms.openlocfilehash: 57c2cc120a5c155d02e0e601dc2ff8924badbe67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d17f10e665a2c0ac86a10d90903e890b3c53386
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400368"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746394"
 ---
 # <a name="compiler-error-c3033"></a>Erreur du compilateur C3033
 
@@ -21,7 +21,7 @@ Les valeurs passées à certaines clauses ne peuvent pas être des variables `co
 
 L’exemple suivant génère l’erreur C3033 :
 
-```
+```cpp
 // C3033.cpp
 // compile with: /openmp /link vcomps.lib
 int main() {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
-ms.openlocfilehash: abc9aa92c41947a2536e53108c1fb646792a8202
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36222b8469f5a51254c6a6172e20384ebafc89ab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300847"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747772"
 ---
 # <a name="compiler-error-c2327"></a>Erreur du compilateur C2327
 
-'symbol' : n’est pas un nom de type, statique ou énumérateur
+'Symbol' : n’est pas un nom de type, static ou Enumerator
 
 Le code dans une classe imbriquée tente d’accéder à un membre de la classe englobante qui n’est pas un nom de type, un membre statique ou un énumérateur.
 
-Lors de la compilation avec **/CLR**, une cause courante C2327 est une propriété portant le même nom que le type de propriété.
+Lors de la compilation avec **/CLR**, une cause courante pour C2327 est une propriété portant le même nom que le type de propriété.
 
-L’exemple suivant génère l’erreur C2327 :
+L’exemple suivant génère l’C2327 :
 
-```
+```cpp
 // C2327.cpp
 int x;
 class enclose {
@@ -42,7 +42,7 @@ public:
 
 C2327 peut également se produire si le nom d’un type est masqué par le nom d’un membre :
 
-```
+```cpp
 // C2327b.cpp
 class X {};
 
@@ -54,9 +54,9 @@ class S {
 };
 ```
 
-C2327 peut également se déclencher dans ce cas, où vous avez besoin pour spécifier complètement le type de données du paramètre :
+C2327 peut également se déclencher dans cette situation, où vous devez spécifier entièrement le type de données du paramètre :
 
-```
+```cpp
 // C2327c.cpp
 // compile with: /c
 struct A {};
@@ -69,9 +69,9 @@ struct B {
 };
 ```
 
-L’exemple suivant génère l’erreur C2327 :
+L’exemple suivant génère l’C2327 :
 
-```
+```cpp
 // C2327d.cpp
 // compile with: /clr /c
 using namespace System;
@@ -103,9 +103,9 @@ namespace NA {
 }
 ```
 
-L’exemple suivant montre C2327 lorsqu’une propriété a le même nom que le type de propriété :
+L’exemple suivant montre C2327 lorsqu’une propriété porte le même nom que le type de propriété :
 
-```
+```cpp
 // C2327f.cpp
 // compile with: /clr /c
 public value class Address {};

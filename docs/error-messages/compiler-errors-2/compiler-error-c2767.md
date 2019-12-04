@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2767
 ms.assetid: e8f84178-a160-4d71-a236-07e4fcc11e96
-ms.openlocfilehash: 78b171b634aea66115c4029c696fec042593bb30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 259e8a58abfa2dc5eacaa6c9f6e3d47b852f5c1f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258095"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759813"
 ---
 # <a name="compiler-error-c2767"></a>Erreur du compilateur C2767
 
-gérés ou incompatibilité de dimension WinRTarray : attendu N argument (s) - M fournis
+incompatibilité de dimension managée ou WinRTarray : N arguments attendus-M fournis
 
 La déclaration d'un tableau managé ou WinRT était incorrecte. Pour plus d'informations, consultez [tableau](../../extensions/arrays-cpp-component-extensions.md).
 
 L'exemple suivant génère l'erreur C2767 et montre comment la corriger :
 
-```
+```cpp
 // C2767.cpp
 // compile with: /clr
 int main() {

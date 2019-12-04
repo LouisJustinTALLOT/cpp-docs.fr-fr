@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2749
 ms.assetid: a81aef36-cdca-4d78-89d5-b72eff2500b2
-ms.openlocfilehash: 80ac01eaba8e5291ee5558d226ebea2c3d8ff47e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71c2f3d3a297d70501c675ac6a9f750cbdf0d421
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360214"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759618"
 ---
 # <a name="compiler-error-c2749"></a>Erreur du compilateur C2749
 
-'type' : peut seulement lever ou intercepter un handle d’une classe managée avec/clr : safe
+'type' : peut uniquement lever ou intercepter un handle d’une classe managée avec/clr : safe
 
-Lorsque vous utilisez **/CLR : safe**, vous pouvez seulement lever ou intercepter un type référence.
+Quand vous utilisez **/clr : safe**, vous pouvez uniquement lever ou intercepter un type référence.
 
 Pour plus d’informations, consultez l’article [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C2749 :
+L’exemple suivant génère l’C2749 :
 
-```
+```cpp
 // C2749.cpp
 // compile with: /clr:safe
 ref struct MyStruct {

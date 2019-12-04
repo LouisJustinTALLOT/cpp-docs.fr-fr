@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2492
 ms.assetid: 8c44c9bb-c366-4fe5-a0ab-882e38608aaa
-ms.openlocfilehash: e2b08ef3e46681147c4efd77cbffadb096bbfc16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd52b434f86bdc93124c6005bbf7fadad3cb56b2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360708"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757057"
 ---
 # <a name="compiler-error-c2492"></a>Erreur du compilateur C2492
 
-«*variable*' : les données avec une durée de stockage de thread ne peuvent pas avoir d’interface dll
+'*variable*' : les données avec une durée de stockage de thread ne peuvent pas avoir d’interface dll
 
-La variable est déclarée avec le [thread](../../cpp/thread.md) attribut et avec la DLL de l’interface. L’adresse de la `thread` variable n’est pas connue jusqu'à moment de l’exécution, il ne peut pas être liée à une importation de DLL ou d’exportation.
+La variable est déclarée avec l’attribut de [thread](../../cpp/thread.md) et avec l’interface dll. L’adresse de la variable `thread` n’est pas connue jusqu’au moment de l’exécution. elle ne peut donc pas être liée à une importation ou une exportation de DLL.
 
-L’exemple suivant génère C2492 :
+L’exemple suivant génère l’C2492 :
 
-```
+```cpp
 // C2492.cpp
 // compile with: /c
 class C {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2794
 ms.assetid: d508191c-9044-4c6a-9119-4bca668c0b93
-ms.openlocfilehash: 1e9d3ee84b72dc9a4f83337f79f38c0237e0b505
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8163a52cd95638e9d24d587f78fb9e20a0da2bb6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360136"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739270"
 ---
 # <a name="compiler-error-c2794"></a>Erreur du compilateur C2794
 
-'fonction' : n’est pas un membre de n’importe quelle classe de base directe ou indirecte de 'class'
+'fonction' : n’est membre d’aucune classe de base directe ou indirecte de’classe'
 
-Vous avez essayé d’utiliser [super](../../cpp/super.md) pour appeler une fonction membre qui n’existe pas.
+Vous avez essayé d’utiliser [Super](../../cpp/super.md) pour appeler une fonction membre inexistante.
 
-L’exemple suivant génère C2794
+L’exemple suivant génère l’C2794
 
-```
+```cpp
 // C2794.cpp
 struct B {
    void mf();

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3848
 ms.assetid: 32d3ccef-01ec-4f8b-bbff-fb9b1a76b4c4
-ms.openlocfilehash: 1d738311ada14999a5345a4e2394631254dda00a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51a5cf6d866a5e5ee914a3d70365761749f79eea
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380994"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761944"
 ---
 # <a name="compiler-error-c3848"></a>Erreur du compilateur C3848
 
-expression ayant le type 'type' perdrait certains qualificateurs const-volatile afin d’appeler 'fonction'
+l’expression ayant le type’type’perdrait certains qualificateurs const-volatile afin d’appeler’Function'
 
-Une variable avec un type spécifié de la const-volatile peut uniquement appeler des membres fonctions avec des qualifications const-volatile égales ou supérieures.
+Une variable avec un type const-volatile spécifié ne peut appeler que des fonctions membres définies avec des qualifications const-volatile identiques ou supérieures.
 
-Les exemples suivants génèrent C3848 :
+Les exemples suivants génèrent des C3848 :
 
-```
+```cpp
 // C3848.cpp
 void glbFunc1()
 {

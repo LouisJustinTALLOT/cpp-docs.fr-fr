@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3833
 ms.assetid: 8152be53-e01e-48cd-9eef-9de38723664c
-ms.openlocfilehash: 99c18e899a46c5e1d7a643ba32546f827c320373
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c762ca80dc52398d9f246ada86ab29cb6e902129
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390501"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741545"
 ---
 # <a name="compiler-error-c3833"></a>Erreur du compilateur C3833
 
-'type' : type de cible non valide pour type_pointeur
+'type' : type de cible non valide pour pointer_type
 
 Un [interior_ptr](../../extensions/interior-ptr-cpp-cli.md) ou [pin_ptr](../../extensions/pin-ptr-cpp-cli.md) a été déclaré de manière incorrecte.
 
-L’exemple suivant génère l’erreur C3833 :
+L’exemple suivant génère l’C3833 :
 
-```
+```cpp
 // C3833.cpp
 // compile with: /clr
 
@@ -41,9 +41,9 @@ int main() {
 }
 ```
 
-L’exemple suivant génère l’erreur C3833 :
+L’exemple suivant génère l’C3833 :
 
-```
+```cpp
 // C3833b.cpp
 // compile with: /clr /c
 ref class G {

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e60f3fff2ef61f4d6374072c05a2ad3e64a57031
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447700"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760926"
 ---
 # <a name="compiler-error-c2885"></a>Erreur du compilateur C2885
 
-'classe::identificateur' : pas une valide à l’aide de-déclaration de portée sans classe
+'Class :: identifier' : déclaration using non valide au niveau d’une portée sans classe
 
-Vous avez utilisé un [à l’aide de](../../cpp/using-declaration.md) déclaration de manière incorrecte.
+Vous avez utilisé une déclaration [using](../../cpp/using-declaration.md) de manière incorrecte.
 
 ## <a name="example"></a>Exemple
 
-Cette erreur peut être due à la mise en conformité du compilateur pour Visual Studio 2005 : il n’est plus valide pour avoir un `using` déclaration pour un type imbriqué ; vous devez explicitement qualifier chaque référence au type imbriqué, placer le type dans un n \\espace_de_noms, ou créer un typedef.
+Cette erreur peut être générée en raison du travail de conformité du compilateur pour Visual Studio 2005 : il n’est plus valide d’avoir une déclaration de `using` pour un type imbriqué ; vous devez qualifier explicitement chaque référence que vous apportez au type imbriqué, placer le type dans un espace de noms ou créer un typedef.
 
-L’exemple suivant génère C2885.
+L’exemple suivant génère l’C2885.
 
-```
+```cpp
 // C2885.cpp
 namespace MyNamespace {
    class X1 {};
@@ -54,11 +54,11 @@ int main () {
 
 ## <a name="example"></a>Exemple
 
-Si vous utilisez le `using` mot clé avec un membre de classe C++, vous devez définir ce membre à l’intérieur d’une autre classe (une classe dérivée).
+Si vous utilisez le mot clé `using` avec un membre de C++ classe, vous devez définir ce membre à l’intérieur d’une autre classe (classe dérivée).
 
-L’exemple suivant génère C2885.
+L’exemple suivant génère l’C2885.
 
-```
+```cpp
 // C2885_b.cpp
 // compile with: /c
 class A {

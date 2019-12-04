@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3914
 ms.assetid: 8f3190e6-ee50-4916-9ecc-3b8748b2e1e7
-ms.openlocfilehash: e7c04da2b7574d3af0e1c05ae4adc3ad513faa0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f7da67871b5e6b9d7da9a9aa4eebeb761f8cc50
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406611"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737996"
 ---
 # <a name="compiler-error-c3914"></a>Erreur du compilateur C3914
 
-une propriété par défaut ne peut pas être statique
+une propriété par défaut ne peut pas être static
 
-Une propriété par défaut a été correctement déclarée.  Pour plus d'informations, voir [Procédure : Utilisez les propriétés de C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+Une propriété par défaut a été déclarée de manière incorrecte.  Pour plus d’informations, consultez [Comment : utiliser des propriétés C++dans/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3914 : et montre comment la corriger.
+L’exemple suivant génère l’C3914 et montre comment la corriger.
 
-```
+```cpp
 // C3914.cpp
 // compile with: /clr /c
 ref struct X {

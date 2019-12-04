@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2630
 ms.assetid: 7a655a9c-bab4-495b-97a3-a3f34cf5369a
-ms.openlocfilehash: db4108961c940afe3333dc726a97a8ce6ae639a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5636b17573cd89c5a32e328aa3800d71136b84fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222723"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754704"
 ---
 # <a name="compiler-error-c2630"></a>Erreur du compilateur C2630
 
-'symbol' trouvé à la place d’une liste séparée par des virgules
+'Symbol’trouvé dans ce qui doit être une liste séparée par des virgules
 
-Le symbole apparaît dans un contexte qui exige une virgule.
+Le symbole apparaît dans un contexte qui requiert une virgule.
 
-L’exemple suivant génère l’erreur C2630 :
+L’exemple suivant génère l’C2630 :
 
-```
+```cpp
 // C2630.cpp
 // compile with: /c
 struct D {

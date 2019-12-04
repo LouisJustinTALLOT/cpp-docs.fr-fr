@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2503
 ms.assetid: da86cc89-fd04-400b-aa8d-a5ffaf7e3918
-ms.openlocfilehash: c481a27f19a92f47a19f0cfaa7b59cd509bb3c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cfe574f79eae2e45dc62315245a1b8b773d04df
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164939"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746901"
 ---
 # <a name="compiler-error-c2503"></a>Erreur du compilateur C2503
 
-'class' : les classes de base ne peut pas contenir de tableaux de taille zéro
+'classe' : les classes de base ne peuvent pas contenir de tableaux de taille zéro
 
-Une classe de base ou une structure contient un tableau de taille zéro. Un tableau dans une classe doit avoir au moins un élément.
+Une classe ou une structure de base contient un tableau de taille zéro. Un tableau dans une classe doit avoir au moins un élément.
 
-L’exemple suivant génère l’erreur C2503 :
+L’exemple suivant génère l’C2503 :
 
-```
+```cpp
 // C2503.cpp
 // compile with: /c
 class A {

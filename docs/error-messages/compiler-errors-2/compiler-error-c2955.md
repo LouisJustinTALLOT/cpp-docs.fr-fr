@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-ms.openlocfilehash: c012e5189b9ca1d0b0e786cbddacedee7c6728d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8afdeaf43c0c9789753b9165f1e8a8287aaac76d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300737"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742871"
 ---
 # <a name="compiler-error-c2955"></a>Erreur du compilateur C2955
 
@@ -23,7 +23,7 @@ Pour plus d’informations, consultez [modèles de classe](../../cpp/class-templ
 
 L'exemple suivant génère l'erreur C2955 et montre comment la corriger :
 
-```
+```cpp
 // C2955.cpp
 // compile with: /c
 template<class T>
@@ -35,7 +35,7 @@ X<int> x2;   // OK - this is how to fix it.
 
 L'erreur C2955 peut également se produire lors de la tentative d'une définition hors ligne d'une fonction déclarée dans un modèle de classe :
 
-```
+```cpp
 // C2955_b.cpp
 // compile with: /c
 template <class T>
@@ -54,7 +54,7 @@ void CT<T>::CTFunc2() {}
 
 L'erreur C2955 peut également se produire lors de l'utilisation de génériques :
 
-```
+```cpp
 // C2955_c.cpp
 // compile with: /clr
 generic <class T>
@@ -70,7 +70,7 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-**Visual Studio 2017 et versions ultérieur :** Le compilateur diagnostique correctement les listes d’arguments de modèle manquantes quand le modèle apparaît dans une liste de paramètres de modèle (par exemple dans le cadre d’un argument de modèle par défaut ou d’un paramètre de modèle sans type). Le code suivant se compile dans Visual Studio 2015, mais génère une erreur dans Visual Studio 2017 :
+**Visual Studio 2017 et versions ultérieures :** Le compilateur diagnostique correctement les listes d’arguments de modèle manquantes lorsque le modèle apparaît dans une liste de paramètres de modèle (par exemple, dans le cadre d’un argument de modèle par défaut ou d’un paramètre de modèle sans type). Le code suivant se compile dans Visual Studio 2015, mais génère une erreur dans Visual Studio 2017 :
 
 ```
 template <class T> class ListNode;

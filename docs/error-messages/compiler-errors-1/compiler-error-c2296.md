@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
-ms.openlocfilehash: ab9c9450b6e906a47a66f6c28c42ca016c98381b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 020f046648488ca67923b7035acaa6c79ce495e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182676"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759072"
 ---
 # <a name="compiler-error-c2296"></a>Erreur du compilateur C2296
 
@@ -19,11 +19,11 @@ ms.locfileid: "62182676"
 
 L’opérande gauche utilisé avec `operator` n’est pas valide.
 
-Par exemple, le compilateur peut afficher une déclaration, où vous aviez l’intention un appel de fonction.
+Par exemple, le compilateur peut voir une déclaration dans laquelle vous avez prévu un appel de fonction.
 
-L’exemple suivant génère C2296 :
+L’exemple suivant génère l’C2296 :
 
-```
+```cpp
 // C2296.cpp
 struct MyStruct {
    struct Help {

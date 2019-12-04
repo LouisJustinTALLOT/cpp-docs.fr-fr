@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2913
 ms.assetid: c6cf6090-02e8-49a5-913f-5bc6f864b769
-ms.openlocfilehash: deeabdb08f4b0fb3cd722d5d33a4d2cfffb15d61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89f9e9393d0b4ee4075b24c20f0755a5317e94eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256945"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761070"
 ---
 # <a name="compiler-error-c2913"></a>Erreur du compilateur C2913
 
-spécialisation explicite ; 'déclaration' n’est pas une spécialisation de modèle de classe
+spécialisation explicite ; 'Déclaration’n’est pas une spécialisation d’un modèle de classe
 
-Vous ne pouvez pas spécialiser une classe sans modèle.
+Vous ne pouvez pas spécialiser une classe non-modèle.
 
-L’exemple suivant génère l’erreur C2913 :
+L’exemple suivant génère l’C2913 :
 
-```
+```cpp
 // C2913.cpp
 // compile with: /c
 class X{};

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3853
 ms.assetid: 5b71805d-52b4-44ec-80ae-37c68d876f6a
-ms.openlocfilehash: c2282196d045ffd88696149f7d22d4ed7f9603ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef6a57b7528a07756a5a9034482bf99ed3f8cc87
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265475"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754860"
 ---
 # <a name="compiler-error-c3853"></a>Erreur du compilateur C3853
 
-'=' : l’initialisation de nouveau une référence ou une assignation via une référence de fonction n’est pas conforme
+' = ' : la réinitialisation d’une référence ou d’une assignation via une référence à la fonction n’est pas conforme
 
-Impossible d’assigner à une référence via une fonction, car les fonctions ne sont pas lvalues.
+Impossible d’assigner à une référence par le biais d’une fonction, car les fonctions ne sont pas lvalues.
 
-Les exemples suivants génèrent C3853 :
+Les exemples suivants génèrent des C3853 :
 
-```
+```cpp
 // C3853.cpp
 // compile with: /EHsc
 #include <iostream>

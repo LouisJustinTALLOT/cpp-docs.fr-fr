@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2593
 ms.assetid: 4a0fe9bb-2163-447d-91f6-1890ed8250f6
-ms.openlocfilehash: c358553a36104b5c389076f5a5ce02f94f85e85a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a385e35376ddce528678980705595bfb98aca95
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386913"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759345"
 ---
 # <a name="compiler-error-c2593"></a>Erreur du compilateur C2593
 
-'identificateur de l’opérateur' est ambigu
+'operator identifier’est ambigu
 
-Plusieurs opérateurs possibles est défini pour un opérateur surchargé.
+Plus d’un opérateur possible est défini pour un opérateur surchargé.
 
 Cette erreur peut être résolue si vous utilisez un cast explicite sur un ou plusieurs paramètres réels.
 
-L’exemple suivant génère l’erreur C2593 :
+L’exemple suivant génère l’C2593 :
 
-```
+```cpp
 // C2593.cpp
 struct A {};
 struct B : A {};
@@ -39,9 +39,9 @@ int main() {
 }
 ```
 
-Cette erreur peut être provoquée par la sérialisation d’une variable à virgule flottante à l’aide un `CArchive` objet. Le compilateur identifie le `<<` opérateur comme ambiguë. Le C++ primitifs uniquement les types qui `CArchive` peut sérialiser sont les types de taille fixe `BYTE`, `WORD`, `DWORD`, et `LONG`. Tous les types d’entier doivent être castés en un de ces types pour la sérialisation. Les types à virgule flottante doivent être archivés à l’aide de la `CArchive::Write()` fonction membre.
+Cette erreur peut être causée par la sérialisation d’une variable à virgule flottante à l’aide d’un objet `CArchive`. Le compilateur identifie l’opérateur `<<` comme ambigu. Les seuls types C++ primitifs que `CArchive` pouvez sérialiser sont les types de taille fixe `BYTE`, `WORD`, `DWORD`et `LONG`. Tous les types d’entiers doivent être castés en l’un de ces types pour la sérialisation. Les types à virgule flottante doivent être archivés à l’aide de la fonction membre `CArchive::Write()`.
 
-L’exemple suivant montre comment archiver une variable à virgule flottante (`f`) à archive `ar`:
+L’exemple suivant montre comment archiver une variable à virgule flottante (`f`) pour archiver des `ar`:
 
 ```
 ar.Write(&f, sizeof( float ));

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3397
 ms.assetid: a8536e87-79c4-4ed7-bd96-42704d06391f
-ms.openlocfilehash: c6ca48eb53cf1c6d661a201fa8c4d2539669b9bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e00b5cb63d97e023c092f675dbe07a68d9a2548
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328612"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737528"
 ---
 # <a name="compiler-error-c3397"></a>Erreur du compilateur C3397
 
 L'initialisation d'agrégats n'est pas autorisée dans les arguments par défaut
 
-Un tableau a été déclaré de manière incorrecte.  Consultez [tableaux](../../extensions/arrays-cpp-component-extensions.md) pour plus d’informations.
+Un tableau a été déclaré de manière incorrecte.  Pour plus d’informations, consultez [tableaux](../../extensions/arrays-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’erreur C3397 :
 
-```
+```cpp
 // C3397.cpp
 // compile with: /clr
 // /clr /c

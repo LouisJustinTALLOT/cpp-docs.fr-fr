@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3133
 ms.assetid: 4a709405-b67b-4061-8a2a-19fa5fb34a2a
-ms.openlocfilehash: 0a0c30203f886934a19fde35e51602b57cc1b14d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 003befa97b033eec38d7187966da15e4a275f310
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164850"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760710"
 ---
 # <a name="compiler-error-c3133"></a>Erreur du compilateur C3133
 
-Les attributs ne peuvent pas être appliqués aux varargs C++
+Les attributs ne peuvent pas C++ être appliqués à varargs
 
-Un attribut a été appliqué de façon incorrecte. Attributs ne peuvent pas être appliqués à des points de suspension représentant les arguments de variables.
+Un attribut a été appliqué de façon incorrecte. Les attributs ne peuvent pas être appliqués à des points de suspension représentant des arguments de variables.
 
 Pour plus d'informations, consultez [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3133.
+L’exemple suivant génère l’C3133.
 
-```
+```cpp
 // C3133.cpp
 // compile with: /clr /c
 ref struct MyAttr: System::Attribute {};

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2312
 ms.assetid: c8bcfd06-12c1-4323-bb53-ba392d36daa4
-ms.openlocfilehash: 2c8d360be43c46b1a26c833dbb8aa95a7e3740e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a0fbefcb1122e5c3395580a2508420b1ccea17c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302044"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748136"
 ---
 # <a name="compiler-error-c2312"></a>Erreur du compilateur C2312
 
@@ -21,7 +21,7 @@ Deux gestionnaires interceptent le même type d’exception.
 
 L’exemple suivant génère l’erreur C2312 :
 
-```
+```cpp
 // C2312.cpp
 // compile with: /EHsc
 #include <eh.h>

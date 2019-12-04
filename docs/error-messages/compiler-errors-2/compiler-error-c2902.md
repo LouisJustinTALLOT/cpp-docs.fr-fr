@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2902
 ms.assetid: 89d78d0e-78e5-4c2c-a0f9-a60110e9395e
-ms.openlocfilehash: 09a418d5a6f8b95ed55f1dc5d573b2176d0d0ccf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43ba7f6ddb18d86410de852ffc3e2834083f031c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378555"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735875"
 ---
 # <a name="compiler-error-c2902"></a>Erreur du compilateur C2902
 
@@ -21,7 +21,7 @@ Le jeton qui suit le mot clé `template` n’est pas un identificateur.
 
 L’exemple suivant génère l’erreur C2902 :
 
-```
+```cpp
 // C2902.cpp
 // compile with: /c
 namespace N {
@@ -39,7 +39,7 @@ void f() {
 
 L’erreur C2902 peut également se produire lors de l’utilisation de génériques :
 
-```
+```cpp
 // C2902b.cpp
 // compile with: /clr /c
 namespace N {

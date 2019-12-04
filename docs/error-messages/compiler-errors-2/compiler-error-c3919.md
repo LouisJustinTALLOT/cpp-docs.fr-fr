@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3919
 ms.assetid: 5f8eddda-d751-478b-930d-e18f7191ddfb
-ms.openlocfilehash: 05ac2fc9258a078f352b6012e64e86fe4b70c3f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78a42b264129ee365e664b1242c8aa58dd1244bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386575"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758474"
 ---
 # <a name="compiler-error-c3919"></a>Erreur du compilateur C3919
 
-'méthode_événement' : fonction doit avoir le type 'type'
+'event_method' : la fonction doit avoir le type’type'
 
-Une méthode d’accesseur événement n’a pas été correctement déclarée.
+Une méthode d’accesseur d’événement n’a pas été déclarée correctement.
 
-Pour plus d’informations sur les événements, consultez [événement](../../extensions/event-cpp-component-extensions.md).
+Pour plus d’informations sur les événements, consultez [Event](../../extensions/event-cpp-component-extensions.md).
 
-L’exemple suivant génère l’erreur C3919 :
+L’exemple suivant génère l’C3919 :
 
-```
+```cpp
 // C3919.cpp
 // compile with: /clr /c
 using namespace System;

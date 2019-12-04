@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2898
 ms.assetid: 68466e11-2541-4f6b-b772-13a642f30dfb
-ms.openlocfilehash: 14cef7e23e48f2b5caf4fae12cac511c58ba1f1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d06741735f6358856b70c4264755fe559d4f88a9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378828"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735760"
 ---
 # <a name="compiler-error-c2898"></a>Erreur du compilateur C2898
 
-'déclaration' : les modèles de fonction membre ne peut pas être virtuels
+'Déclaration' : les modèles de fonction membre ne peuvent pas être virtuels
 
-L’exemple suivant génère l’erreur C2898 :
+L’exemple suivant génère l’C2898 :
 
-```
+```cpp
 // C2898.cpp
 // compile with: /c
 class X {

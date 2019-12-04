@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3734
 ms.assetid: 4e2afdcc-7da9-45a1-9c96-85f25e2986e8
-ms.openlocfilehash: 78b3d1a57d358eb11ba2f01ec184c5487a578228
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 381bb59dae523c05cdc67e33ba9d326e247abc7d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327923"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752858"
 ---
 # <a name="compiler-error-c3734"></a>Erreur du compilateur C3734
 
 'classe' : une classe managée ou WinRT ne peut pas être une coclasse
 
-Le [coclasse](../../windows/coclass.md) attribut ne peut pas être utilisé avec gérés ou les classes WinRT.
+L’attribut [coclass](../../windows/coclass.md) ne peut pas être utilisé avec des classes managées ou WinRT.
 
 L'exemple suivant génère l'erreur C3734 et montre comment la corriger :
 
-```
+```cpp
 // C3734.cpp
 // compile with: /clr /c
 [module(name="x")];

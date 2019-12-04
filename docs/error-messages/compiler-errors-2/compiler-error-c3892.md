@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3892
 ms.assetid: 83fff42c-ea48-442f-bc2e-b33a6b99d890
-ms.openlocfilehash: 07f34efa4ecf1445665fccf60dba10ea12dbff3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73d96c61e918da3aabbfc00b83213fa79a2eedf9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281584"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736384"
 ---
 # <a name="compiler-error-c3892"></a>Erreur du compilateur C3892
 
-'var' : vous ne pouvez pas affecter à une variable const
+'var' : vous ne pouvez pas assigner une variable const
 
-Une variable const ne peut pas être modifiée après que elle est déclarée et initialisée.
+Une variable const ne peut pas être modifiée une fois qu’elle a été déclarée et initialisée.
 
-L’exemple suivant génère l’erreur C3892 :
+L’exemple suivant génère l’C3892 :
 
-```
+```cpp
 // C3892.cpp
 // compile with: /clr
 ref struct Y1 {

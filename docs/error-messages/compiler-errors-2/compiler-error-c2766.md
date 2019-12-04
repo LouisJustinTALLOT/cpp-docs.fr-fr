@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2766
 ms.assetid: 8032f4ca-6827-4f04-9c61-c44643c85cc4
-ms.openlocfilehash: 87ea9f693265080d744746c6a8014b2b8b6db13a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48faee02bba18754972954a2ca464417bd552758
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257554"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759800"
 ---
 # <a name="compiler-error-c2766"></a>Erreur du compilateur C2766
 
-spécialisation explicite ; 'specialization' a déjà été définie
+spécialisation explicite ; 'spécialisation’a déjà été défini
 
-Les spécialisations explicites en double ne sont pas autorisées. Pour plus d’informations, consultez [spécialisation explicite des modèles de fonction](../../cpp/explicit-specialization-of-function-templates.md).
+Les spécialisations explicites dupliquées ne sont pas autorisées. Pour plus d’informations, consultez [spécialisation explicite des modèles de fonction](../../cpp/explicit-specialization-of-function-templates.md).
 
-L’exemple suivant génère l’erreur C2766 :
+L’exemple suivant génère l’C2766 :
 
-```
+```cpp
 // C2766.cpp
 // compile with: /c
 template<class T>

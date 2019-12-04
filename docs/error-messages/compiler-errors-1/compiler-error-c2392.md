@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2392
 ms.assetid: 98ced473-6383-46ed-b79c-21857d65dcb2
-ms.openlocfilehash: 5977d9bf41d55ef6db8409e0187153fdbf91149e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15fa4a19cdd791ddb3636f30a636cc084bdc4a5f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393595"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745003"
 ---
 # <a name="compiler-error-c2392"></a>Erreur du compilateur C2392
 
-'méthode1' : retours covariants types ne sont pas pris en charge dans managed ou WinRTtypes, sinon 'méthode2' est substitué
+'Method1 ' : les types de retour covariants ne sont pas pris en charge dans Managed ou WinRTtypes, sinon’méthode2 'est substitué
 
-Types de retour covariants ne sont pas autorisés pour les fonctions membres Windows Runtime ou lors de la compilation avec le [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) option.
+Les types de retour covariants ne sont pas autorisés pour les fonctions membres Windows Runtime ou lors de la compilation avec l’option [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) .
 
 ## <a name="example"></a>Exemple
 
 L'exemple suivant génère l'erreur C2392 et montre comment la corriger.
 
-```
+```cpp
 // C2392.cpp
 // compile with: /clr
 public ref struct B {

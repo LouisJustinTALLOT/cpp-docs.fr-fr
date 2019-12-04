@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3461
 ms.assetid: bd66833a-545d-445a-bdfe-dee771a450a4
-ms.openlocfilehash: a674ce7819c88dd4e26355c0129a6c181da5c276
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1bf4af63bac2aaee1da4bb98f23c3b15e98c671
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222304"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756628"
 ---
 # <a name="compiler-error-c3461"></a>Erreur du compilateur C3461
 
 'type' : seul un type managé peut être transféré
 
-Le transfert de type se produit uniquement sur les types CLR.  Consultez [les Classes et Structs](../../extensions/classes-and-structs-cpp-component-extensions.md) pour plus d’informations.
+Le transfert de type se produit uniquement sur les types CLR.  Pour plus d’informations, consultez [classes et structs](../../extensions/classes-and-structs-cpp-component-extensions.md) .
 
-Pour plus d’informations, consultez [transfert de Type (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Pour plus d’informations, consultez [transfert de typeC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 
 L’exemple suivant crée un composant.
 
-```
+```cpp
 // C3461.cpp
 // compile with: /clr /LD
 public ref class R {};
@@ -35,7 +35,7 @@ public ref class R {};
 
 L’exemple suivant génère l’erreur C3461.
 
-```
+```cpp
 // C3461b.cpp
 // compile with: /clr /c
 #using "C3461.dll"

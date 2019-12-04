@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3493
 ms.assetid: 734b4257-12a3-436f-8488-c8c55ec81634
-ms.openlocfilehash: 1bbf9b269075717ae397b7d29ee28c278b1e4ec8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 178d1221886dc62edd9785d211e2189fa50962f4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381034"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738295"
 ---
 # <a name="compiler-error-c3493"></a>Erreur du compilateur C3493
 
@@ -29,7 +29,7 @@ La capture de l’expression lambda vide, `[]`, spécifie que l’expression lam
 
 L’exemple suivant génère l’erreur C3493 parce qu’il modifie une variable externe, alors qu’il spécifie la clause de capture vide :
 
-```
+```cpp
 // C3493a.cpp
 
 int main()
@@ -43,7 +43,7 @@ int main()
 
 L’exemple suivant corrige C3493 en spécifiant la capture par référence comme mode de capture par défaut.
 
-```
+```cpp
 // C3493b.cpp
 
 int main()

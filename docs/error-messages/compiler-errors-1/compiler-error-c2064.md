@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2064
 ms.assetid: 6cda05da-f437-4f50-9813-ae69538713a3
-ms.openlocfilehash: 8af20c5172cddd0194ed018c13960bbed7859674
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd62ea825e3ae7d9e4acc1cb6d93d4bc102be0eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386029"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737320"
 ---
 # <a name="compiler-error-c2064"></a>Erreur du compilateur C2064
 
@@ -21,7 +21,7 @@ Un appel est passé à une fonction via une expression. L'expression ne correspo
 
 Dans cet exemple, le code tente d'appeler des éléments autres que des fonctions en tant que fonctions. L'exemple suivant génère l'erreur C2064 :
 
-```
+```cpp
 // C2064.cpp
 int i, j;
 char* p;
@@ -33,7 +33,7 @@ void func() {
 
 Vous devez appeler des pointeurs vers des fonctions membres non static à partir du contexte d'une instance d'objet. L'exemple suivant génère l'erreur C2064 et montre comment la corriger :
 
-```
+```cpp
 // C2064b.cpp
 struct C {
    void func1(){}
@@ -52,7 +52,7 @@ int main() {
 
 Dans une classe, les pointeurs fonction membre doivent également indiquer le contexte de l'objet appelant. L'exemple suivant génère l'erreur C2064 et montre comment la corriger :
 
-```
+```cpp
 // C2064d.cpp
 // Compile by using: cl /c /W4 C2064d.cpp
 struct C {

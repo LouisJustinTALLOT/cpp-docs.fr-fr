@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2785
 ms.assetid: d8d13360-0d00-4815-8475-b49c7f0dc0f3
-ms.openlocfilehash: fcf2bbb01f2aac668ff52884a6ccfb36c66aa89d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6aff2e5c96e3c79fc748d8a95779d6a08647ab03
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395376"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739621"
 ---
 # <a name="compiler-error-c2785"></a>Erreur du compilateur C2785
 
-'déclaration1' et 'déclaration2' ont des types de retournés différents
+'déclaration1 'et’déclaration2 'ont des types de retour différents
 
-Le type de retour de la spécialisation de modèle de fonction est différent du type de retour du modèle de fonction principale.
+Le type de retour de la spécialisation de modèle de fonction diffère du type de retour du modèle de fonction principal.
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 
-1. Vérifiez toutes les spécialisations du modèle de fonction par souci de cohérence.
+1. Vérifiez la cohérence de toutes les spécialisations du modèle de fonction.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C2785 :
+L’exemple suivant génère l’C2785 :
 
-```
+```cpp
 // C2785.cpp
 // compile with: /c
 template<class T> void f(T);

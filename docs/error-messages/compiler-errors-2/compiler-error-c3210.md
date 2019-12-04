@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3210
 ms.assetid: c6e9d309-fabc-4e7d-b526-be20d9fe3f6a
-ms.openlocfilehash: 9e0ac1aded7eef40be0e923b3ac1ebc9ef00c7a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 513f08d4dddc37d36a240ee0d72b24383f951cdf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182533"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755120"
 ---
 # <a name="compiler-error-c3210"></a>Erreur du compilateur C3210
 
-'type' : déclaration d’accès peut uniquement être appliquée à un membre de classe de base
+'type' : la déclaration d’accès ne peut être appliquée qu’à un membre de classe de base
 
-Un [à l’aide de la déclaration](../../cpp/using-declaration.md) a été spécifié de manière incorrecte.
+Une [déclaration using](../../cpp/using-declaration.md) a été spécifiée de manière incorrecte.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3210.
+L’exemple suivant génère l’C3210.
 
-```
+```cpp
 // C3210.cpp
 // compile with: /c
 struct A {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3628
 ms.assetid: 0ff5a4a4-fcc9-47a0-a4d8-8af9cf2815f6
-ms.openlocfilehash: 581aae7e1f979b3dd39caf2ce3d263fdb856c56a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9976cb2425f8f855ffb2903c07de22822c781e20
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221683"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755822"
 ---
 # <a name="compiler-error-c3628"></a>Erreur du compilateur C3628
 
-'base' classe' : géré ou WinRTclasses prennent uniquement en charge l’héritage public
+'classe de base' : Managed ou WinRTclasses prend uniquement en charge l’héritage public
 
-Une tentative a tenté d’utiliser un managé ou WinRT classe en tant qu’un [privé](../../cpp/private-cpp.md) ou [protégé](../../cpp/protected-cpp.md) classe de base. Managé ou WinRT classe peut uniquement être utilisée comme classe de base avec [public](../../cpp/public-cpp.md) accès.
+Une tentative d’utilisation d’une classe managée ou WinRT en tant que classe de base [privée](../../cpp/private-cpp.md) ou [protégée](../../cpp/protected-cpp.md) a été effectuée. Une classe managée ou WinRT ne peut être utilisée qu’en tant que classe de base avec un accès [public](../../cpp/public-cpp.md) .
 
 L'exemple suivant génère l'erreur C3628 et montre comment la corriger :
 
-```
+```cpp
 // C3628a.cpp
 // compile with: /clr
 ref class B {

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3366
 ms.assetid: efc55bcf-c16d-43c1-a36f-87a6165fa2a8
-ms.openlocfilehash: 4d1cd510cda9957ced1d9dd5fd8fea267f39220d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5173b1c0df7de6a4e8d9993e680b961a82bb10a7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300555"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738464"
 ---
 # <a name="compiler-error-c3366"></a>Erreur du compilateur C3366
 
-'variable' : données membres static des gérés ou WinRTtypes doivent être définies dans la définition de classe
+'variable' : les données membres static de managé ou WinRTtypes doivent être définies dans la définition de classe
 
 Vous avez tenté de référencer un membre statique d'une interface ou d'une classe WinRT ou .NET à l'extérieur de la définition de cette classe ou interface.
 
@@ -23,7 +23,7 @@ Le compilateur doit connaître la définition complète de la classe (pour émet
 
 Par exemple, l'exemple suivant génère l'erreur C3366 et montre comment la corriger :
 
-```
+```cpp
 // C3366.cpp
 // compile with: /clr /c
 ref class X {

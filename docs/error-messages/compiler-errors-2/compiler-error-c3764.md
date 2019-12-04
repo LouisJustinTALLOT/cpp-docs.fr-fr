@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3764
 ms.assetid: af5d254c-8d4a-4dda-aad9-3c5c1257c868
-ms.openlocfilehash: 2570ee9abb148b919242de7786cd6fa91765286f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ede846c9068978ad5d283e97b1c96d3527bf67c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400251"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757230"
 ---
 # <a name="compiler-error-c3764"></a>Erreur du compilateur C3764
 
-'fonction_substitution' : ne peut pas substituer la méthode de classe de base 'fonction_classe_base'
+'override_function' : impossible de substituer la méthode de la classe de base’base_class_function'
 
-Le compilateur a détecté une substitution incorrecte. Par exemple, la fonction de la classe de base n’était pas `virtual`. Pour plus d’informations, consultez [remplacer](../../extensions/override-cpp-component-extensions.md).
+Le compilateur a détecté une substitution incorrecte. Par exemple, la fonction de classe de base n’a pas été `virtual`. Pour plus d’informations, consultez [override](../../extensions/override-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3764.
+L’exemple suivant génère l’C3764.
 
-```
+```cpp
 // C3764.cpp
 // compile with: /clr /c
 public ref struct A {
@@ -39,9 +39,9 @@ public ref struct B : A {
 
 ## <a name="example"></a>Exemple
 
-C3764 peut également se produire lorsqu’une méthode de classe de base est à la fois explicitement et nommé substitution. L’exemple suivant génère C3764.
+C3764 peut également se produire quand une méthode de classe de base est à la fois explicitement et nommée substituée. L’exemple suivant génère l’C3764.
 
-```
+```cpp
 // C3764_b.cpp
 // compile with: /clr /c
 ref struct A {

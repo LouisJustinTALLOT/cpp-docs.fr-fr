@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2815
 ms.assetid: d0256fd6-0721-4c99-b03c-52d96e77a613
-ms.openlocfilehash: ab6708e7ae0a56bd71adebad4fb42d6ea9abe116
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 579fc94f3b16056b5f26dd0b9ea16b5fc36fda22
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175405"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750713"
 ---
 # <a name="compiler-error-c2815"></a>Erreur du compilateur C2815
 
-'operator delete' : le premier paramètre formel doit être ' void *', mais 'param' a été utilisé.
+'operator delete' : le premier paramètre formel doit être’void * ', mais’param’a été utilisé
 
-Un est défini par l’utilisateur [opérateur delete](../../standard-library/new-operators.md#op_delete) fonction doit prendre un premier paramètre formel de type `void *`.
+Toute fonction d' [opérateur delete](../../standard-library/new-operators.md#op_delete) définie par l’utilisateur doit accepter un premier paramètre formel de type `void *`.
 
-L’exemple suivant génère l’erreur C2815 :
+L’exemple suivant génère l’C2815 :
 
-```
+```cpp
 // C2815.cpp
 // compile with: /c
 class CMyClass {

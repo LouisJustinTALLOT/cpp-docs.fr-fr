@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2009
 ms.assetid: fe9d94ed-20a5-4d83-b9c4-60ee69d2f30a
-ms.openlocfilehash: d2216b3fe990109828492fb2b2055e9425c1e306
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 434ae830e78c8fb5fe4e56438a557afb027d264f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361904"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752442"
 ---
 # <a name="compiler-error-c2009"></a>Erreur du compilateur C2009
 
 réutilisation de 'identificateur' de macro formelle
 
-La liste de paramètres formels d’une définition de macro utilise l’identificateur plusieurs fois. Identificateurs dans la liste des paramètres de la macro doivent être uniques.
+La liste de paramètres formels d’une définition de macro utilise l’identificateur plusieurs fois. Les identificateurs dans la liste de paramètres de la macro doivent être uniques.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C2009 :
+L’exemple suivant génère l’C2009 :
 
-```
+```cpp
 // C2009.cpp
 #include <stdio.h>
 
@@ -39,7 +39,7 @@ int main()
 
 Solution possible :
 
-```
+```cpp
 // C2009b.cpp
 #include <stdio.h>
 

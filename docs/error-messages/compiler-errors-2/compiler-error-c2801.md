@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - C2801
 ms.assetid: 35dfc7ea-9e37-4e30-baa1-944dc61302f5
-ms.openlocfilehash: 44f7988f9fedb882972b2823f2fe70d9512d4e87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d2ea3677d883fa4843c37a41d733872b23cbba0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408678"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760671"
 ---
 # <a name="compiler-error-c2801"></a>Erreur du compilateur C2801
 
-'operator opérateur' doit être un membre non static
+'operator opérateur’doit être un membre non static
 
-Les opérateurs suivants peuvent être surchargées uniquement en tant que membres non statiques :
+Les opérateurs suivants peuvent être surchargés uniquement en tant que membres non statiques :
 
-- Affectation `=`
+- `=` d’affectation
 
-- Accès au membre de classe `->`
+- `->` d’accès au membre de classe
 
-- Mettre en indice `[]`
+- `[]` de script
 
 - Appel de fonction `()`
 
-Causes possibles de l’erreur C2801 :
+Causes possibles de C2801 :
 
-- Opérateur surchargé n’est pas une classe, une structure ou un membre d’union.
+- L’opérateur surchargé n’est pas un membre de classe, de structure ou d’Union.
 
-- Opérateur surchargé est déclaré `static`.
+- L’opérateur surchargé est déclaré `static`.
 
-- L’exemple suivant génère l’erreur C2801 :
+- L’exemple suivant génère l’C2801 :
 
-```
+```cpp
 // C2801.cpp
 // compile with: /c
 operator[]();   // C2801 not a member

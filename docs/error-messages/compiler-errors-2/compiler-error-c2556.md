@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2556
 ms.assetid: fc4399ad-45b3-49fd-be1f-0b13956a595a
-ms.openlocfilehash: 4a2b4dc9dcd71d518845651dee97c566b778eb0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b6f08ac52eff355f0857968817a681818e3c3dc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353064"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756771"
 ---
 # <a name="compiler-error-c2556"></a>Erreur du compilateur C2556
 
-'identificateur' : les fonctions surchargées ne diffèrent que par le type de retour
+'identificateur' : les fonctions surchargées diffèrent uniquement par le type de retour
 
-Les fonctions surchargées ont des types de retour différents mais la même liste de paramètres. Chaque fonction surchargée doit avoir une liste de paramètres formels distincte.
+Les fonctions surchargées ont des types de retour différents, mais la même liste de paramètres. Chaque fonction surchargée doit avoir une liste de paramètres formels distincte.
 
-L’exemple suivant génère l’erreur C2556 :
+L’exemple suivant génère l’C2556 :
 
-```
+```cpp
 // C2556.cpp
 // compile with: /c
 class C {

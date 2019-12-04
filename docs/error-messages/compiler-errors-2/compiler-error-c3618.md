@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3618
 ms.assetid: cacc105d-4389-4cb8-ae6c-41a3622e9a86
-ms.openlocfilehash: 97f2738a67ee84196a49b96301c885c28c41050b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f0edf1addf753054fbc50a1591b5b1a37394087
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222063"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759722"
 ---
 # <a name="compiler-error-c3618"></a>Erreur du compilateur C3618
 
-'fonction' : Impossible de définir une méthode marquée DllImport
+'fonction' : impossible de définir une méthode marquée DllImport
 
-Une méthode marquée avec <xref:System.Runtime.InteropServices.DllImportAttribute> est défini dans le texte spécifié. DLL.
+Une méthode marquée avec <xref:System.Runtime.InteropServices.DllImportAttribute> est définie dans le spécifié. DLL.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3618.
+L’exemple suivant génère l’C3618.
 
-```
+```cpp
 // C3618.cpp
 // compile with: /clr /c
 using namespace System;

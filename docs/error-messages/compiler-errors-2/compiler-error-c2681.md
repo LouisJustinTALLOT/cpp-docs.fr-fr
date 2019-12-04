@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2681
 ms.assetid: eb42da6d-8d2c-43fd-986b-e73e2b004885
-ms.openlocfilehash: 8b311052d3a3525090d954c0dc8cee20e985b1b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7cf39e89f70f27471fb3a251aac12793f1fb33b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282138"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760294"
 ---
 # <a name="compiler-error-c2681"></a>Erreur du compilateur C2681
 
 'type' : type d’expression non valide pour le nom
 
-Un opérateur de cast a essayé de convertir à partir d’un type non valide. Par exemple, si vous utilisez le [dynamic_cast](../../cpp/dynamic-cast-operator.md) opérateur pour convertir une expression en un type pointeur, l’expression source doit être un pointeur.
+Un opérateur de cast a tenté d’effectuer une conversion à partir d’un type non valide. Par exemple, si vous utilisez l’opérateur [dynamic_cast](../../cpp/dynamic-cast-operator.md) pour convertir une expression en un type pointeur, l’expression source doit être un pointeur.
 
-L’exemple suivant génère l’erreur C2681 :
+L’exemple suivant génère l’C2681 :
 
-```
+```cpp
 // C2681.cpp
 class A { virtual void f(); };
 

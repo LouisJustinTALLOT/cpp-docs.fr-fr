@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2514
 ms.assetid: 4b7085e5-6714-4261-80b7-bc72e64ab3e8
-ms.openlocfilehash: aef9df0718d013378f88c1a34d08d1b1e05e214c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0153ec9d48225d153221f2192761da4023fab96
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243755"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746511"
 ---
 # <a name="compiler-error-c2514"></a>Erreur du compilateur C2514
 
-'classe' : classe n’a aucun constructeur
+'classe' : la classe n’a aucun constructeur
 
-La classe, une structure ou une union n’a aucun constructeur avec une liste de paramètres qui correspond aux paramètres utilisés pour l’instancier.
+La classe, la structure ou l’Union n’a aucun constructeur avec une liste de paramètres qui correspond aux paramètres utilisés pour l’instancier.
 
-Une classe doit être entièrement déclarée avant de pouvoir être instancié.
+Une classe doit être entièrement déclarée avant de pouvoir être instanciée.
 
-L’exemple suivant génère l’erreur C2514 :
+L’exemple suivant génère l’C2514 :
 
-```
+```cpp
 // C2514.cpp
 // compile with: /c
 class f;

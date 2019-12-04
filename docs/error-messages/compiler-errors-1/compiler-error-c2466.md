@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2466
 ms.assetid: 75b251d1-7d0b-4a86-afca-26adedf74486
-ms.openlocfilehash: 516f9b024947e0100a753e4e010a5b51b1fb24a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aba4de518b9296fadc4746540e4e738c74908617
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230527"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743820"
 ---
 # <a name="compiler-error-c2466"></a>Erreur du compilateur C2466
 
 Impossible d’allouer un tableau de taille constante 0
 
-Un tableau est alloué ou déclaré avec une taille égale à zéro. L’expression de constante pour la taille du tableau doit être un entier supérieur à zéro. Une déclaration de tableau avec un indice zéro est autorisée uniquement pour une classe, structure ou membre d’union et uniquement avec les extensions Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+Un tableau est alloué ou déclaré avec la taille zéro. L’expression constante pour la taille du tableau doit être un entier supérieur à zéro. Une déclaration de tableau avec un indice zéro est légale uniquement pour un membre de classe, de structure ou d’Union et uniquement avec les extensions Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
 
-L’exemple suivant génère l’erreur C2466 :
+L’exemple suivant génère l’C2466 :
 
-```
+```cpp
 // C2466.cpp
 // compile with: /c
 int i[0];   // C2466

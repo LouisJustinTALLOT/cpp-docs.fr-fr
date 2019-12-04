@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3798
 ms.assetid: b2f8b1d8-8812-49b8-a346-28e48f02ba5c
-ms.openlocfilehash: a11c88f536e3282e887e32ef437077e61f4424cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc21f0bdcc8e2171dd0c87fc31396e6caab9e6fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400147"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755315"
 ---
 # <a name="compiler-error-c3798"></a>Erreur du compilateur C3798
 
-'spécificateur' : déclaration de propriété ne peut pas avoir de spécificateur de substitution (doivent être placés sur les méthodes get/set à la place de propriété)
+'specifier' : la déclaration de propriété ne peut pas avoir de spécificateur de substitution (doit être placé sur les méthodes Property/Set à la place)
 
-Une propriété n’a pas été correctement déclarée. Pour plus d'informations, consultez
+Une propriété n’a pas été correctement déclarée. Pour plus d’informations, voir .
 
 - [propriété](../../extensions/property-cpp-component-extensions.md)
 
@@ -27,9 +27,9 @@ Une propriété n’a pas été correctement déclarée. Pour plus d'information
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3798
+L’exemple suivant génère l’C3798
 
-```
+```cpp
 // C3798.cpp
 // compile with: /clr /c
 ref struct A {
