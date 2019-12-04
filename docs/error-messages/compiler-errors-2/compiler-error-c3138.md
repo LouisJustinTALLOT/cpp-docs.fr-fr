@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
-ms.openlocfilehash: d812c14c2f364681fe28a58bdaed68fe3ed8ad30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3980bebdae0301dfbbb3cea91d6631053a118995
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374987"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761248"
 ---
 # <a name="compiler-error-c3138"></a>Erreur du compilateur C3138
 
-'interface' : une interface 'attribut' doit hériter de IDispatch ou d’une interface qui hérite de IDispatch
+'interface' : une interface’Attribute’doit hériter de IDispatch ou d’une interface qui hérite de IDispatch
 
-Une interface avec le [double](../../windows/dual.md) ou [dispinterface](../../windows/dispinterface.md) attributs n’a pas `IDispatch` comme interface de base directe ou indirecte.
+Une interface avec les attributs [Dual](../../windows/dual.md) ou [dispinterface](../../windows/dispinterface.md) n’a pas de `IDispatch` comme une interface de base directe ou indirecte.
 
-L’exemple suivant génère C3138 :
+L’exemple suivant génère l’C3138 :
 
-```
+```cpp
 // C3138.cpp
 #include <unknwn.h>
 

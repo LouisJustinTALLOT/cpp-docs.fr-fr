@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2137
 ms.assetid: 984687ee-7766-4f6b-ae15-0c9a010e2366
-ms.openlocfilehash: 7051fbe788790f1e91a3f54720f72d8370d1e9a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2bc0ed5a47900b8d64e59d1b2c745b1e51e37db4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350619"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757473"
 ---
 # <a name="compiler-error-c2137"></a>Erreur du compilateur C2137
 
@@ -21,7 +21,7 @@ La constante caractère vide (' ') n’est pas autorisée.
 
 L’exemple suivant génère l’erreur C2137 :
 
-```
+```cpp
 // C2137.cpp
 int main() {
    char c = '';   // C2137

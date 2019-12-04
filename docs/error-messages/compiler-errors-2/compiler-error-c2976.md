@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2976
 ms.assetid: d9bf9836-325e-4f72-a7e3-a67cf19d32e7
-ms.openlocfilehash: 02771d7419c58ee4f0b6d7db46ba91fde253d9a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76fd2363b6139bc1bc04aa4d4949a12522e31aa6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395363"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751792"
 ---
 # <a name="compiler-error-c2976"></a>Erreur du compilateur C2976
 
-'identificateur' : trop peu d’arguments de type
+'identificateur' : arguments de type insuffisants
 
-Un générique ou un modèle il manque un ou plusieurs arguments réels. Vérifiez la déclaration du générique ou du modèle pour connaître le nombre de paramètres approprié.
+Un ou plusieurs arguments réels sont manquants dans un générique ou un modèle. Vérifiez la déclaration du générique ou du modèle pour connaître le nombre de paramètres approprié.
 
-Cette erreur peut être due à l’absence d’arguments template dans les composants de la bibliothèque C++ Standard.
+Cette erreur peut être due à l’absence d’arguments C++ template dans les composants de la bibliothèque standard.
 
-L’exemple suivant génère l’erreur C2976 :
+L’exemple suivant génère l’C2976 :
 
-```
+```cpp
 // C2976.cpp
 template <class T>
 struct TC {
@@ -37,7 +37,7 @@ int main() {
 
 C2976 peut également se produire lors de l’utilisation de génériques :
 
-```
+```cpp
 // C2976b.cpp
 // compile with: /clr
 generic <class T>

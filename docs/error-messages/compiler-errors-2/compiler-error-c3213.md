@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3213
 ms.assetid: 1f079e36-b3e9-40f8-8e95-08eeba3adc82
-ms.openlocfilehash: 1b08b0ef5b8fefcfa1dd55ef3a16ee4ef5d027e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c172ebbc133690eabe5ca25e4427c2c22e8221bf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182507"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756199"
 ---
 # <a name="compiler-error-c3213"></a>Erreur du compilateur C3213
 
@@ -21,7 +21,7 @@ Un type qui sera visible à partir d’un assembly doit utiliser des classes de 
 
 L’exemple suivant génère l’erreur C3213 :
 
-```
+```cpp
 // C3213.cpp
 // compile with: /clr
 private ref struct privateG {

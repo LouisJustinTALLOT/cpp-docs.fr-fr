@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3035
 ms.assetid: af34fad2-2b45-42d0-a9ff-04eab3e91c37
-ms.openlocfilehash: e6d42c53407e1047d299e82566c7fadeb639641d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0064d07d0e6d8adaa41d81272e315685dd32a74f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393569"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755016"
 ---
 # <a name="compiler-error-c3035"></a>Erreur du compilateur C3035
 
@@ -21,7 +21,7 @@ Une clause ordered incorrecte a été rencontrée.
 
 L’exemple suivant génère l’erreur C3035 :
 
-```
+```cpp
 // C3035.cpp
 // compile with: /openmp /link vcomps.lib
 int main() {

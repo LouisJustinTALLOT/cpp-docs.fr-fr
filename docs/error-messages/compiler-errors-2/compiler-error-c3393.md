@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3393
 ms.assetid: d57f7c69-0a02-4fe3-9e45-bc62644fd77c
-ms.openlocfilehash: 5147e3e406fde73a05b7069e2a9336f27b3db622
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f6952de20c27a811b85694ae13892eff9231f83
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328664"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757538"
 ---
 # <a name="compiler-error-c3393"></a>Erreur du compilateur C3393
 
 erreur de syntaxe dans la clause de contrainte : 'identificateur' n’est pas un type
 
-L’identificateur passé à une contrainte, qui doit être un type, n’était pas un type.  Pour plus d’informations, consultez [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
+L’identificateur passé à une contrainte, qui doit être un type, n’était pas un type.  Pour plus d’informations, consultez [Contraintes sur les paramètres de type générique (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’erreur C3393 :
 
-```
+```cpp
 // C3393.cpp
 // compile with: /clr /c
 void MyInterface() {}

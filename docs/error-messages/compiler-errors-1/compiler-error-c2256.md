@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2256
 ms.assetid: 171fa2bc-8c72-49cd-afe5-d723b7acd3c5
-ms.openlocfilehash: 56c4df338feb2c0f406835c1ef2ffeeb7caf8bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b362a236953701278c57d2b738a6303e83b7637c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387044"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758812"
 ---
 # <a name="compiler-error-c2256"></a>Erreur du compilateur C2256
 
-utilisation non conforme du spécificateur friend sur 'function'
+utilisation non conforme du spécificateur Friend sur’Function'
 
-Un destructeur ou un constructeur ne peut pas être spécifié comme un [friend](../../cpp/friend-cpp.md).
+Un destructeur ou un constructeur ne peut pas être spécifié en tant que [Friend](../../cpp/friend-cpp.md).
 
-L’exemple suivant génère l’erreur C2256 :
+L’exemple suivant génère l’C2256 :
 
-```
+```cpp
 // C2256.cpp
 // compile with: /c
 class C {

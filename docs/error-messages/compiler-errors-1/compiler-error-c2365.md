@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2365
 ms.assetid: 35839b0b-4055-4b79-8957-b3a0871bdd02
-ms.openlocfilehash: 9d862fb06041b01c306560264758d13f8f75b491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a25277f631ba51c43cde55510bf21be5b9720cc4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230371"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759865"
 ---
 # <a name="compiler-error-c2365"></a>Erreur du compilateur C2365
 
@@ -21,7 +21,7 @@ Vous avez essayé de redéfinir un membre de classe.
 
 L’exemple suivant génère l’erreur C2365.
 
-```
+```cpp
 // C2365.cpp
 // compile with: /c
 class C1 {

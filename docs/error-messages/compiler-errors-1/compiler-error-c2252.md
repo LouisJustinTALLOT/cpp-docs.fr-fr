@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2252
 ms.assetid: fee74ab9-1997-4615-82fe-e6d1fe3aacd9
-ms.openlocfilehash: 9f24e6dfeb6544e5a6173fd844e3fe8b9ae8698e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fe64292ce6463b3b628367ef0052208e74b24d3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379003"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758877"
 ---
 # <a name="compiler-error-c2252"></a>Erreur du compilateur C2252
 
-Impossible d’instancier explicitement dans la portée actuelle
+Impossible d’instancier explicitement le modèle dans la portée actuelle
 
 Le compilateur a détecté un problème avec une instanciation explicite d’un modèle.  Par exemple, vous ne pouvez pas instancier explicitement un modèle dans une fonction.
 
-L’exemple suivant génère l’erreur C2252 :
+L’exemple suivant génère l’C2252 :
 
-```
+```cpp
 // C2252.cpp
 class A {
 public:

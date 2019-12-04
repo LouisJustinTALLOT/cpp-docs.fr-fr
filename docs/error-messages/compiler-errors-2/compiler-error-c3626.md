@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3626
 ms.assetid: 43926e2b-1ba9-4a43-9343-c58449cbb336
-ms.openlocfilehash: d0360b16c2e59bd01c3a5dd4be9c49b578b9c45b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d86f0f650f6a13ac764497d6d5b52f001f5c35d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221805"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757667"
 ---
 # <a name="compiler-error-c3626"></a>Erreur du compilateur C3626
 
-'keyword' : mot clé '__event' peut uniquement être utilisé sur les interfaces COM, les fonctions membres et les membres de données qui sont des pointeurs vers les délégués
+'keyword' : le mot clé' __event’ne peut être utilisé que sur les interfaces COM, les fonctions membres et les données membres qui sont des pointeurs vers les délégués
 
-Un mot clé a été utilisé incorrectement.
+Un mot clé a été utilisé de façon incorrecte.
 
-L’exemple suivant génère l’erreur C3626 :
+L’exemple suivant génère l’C3626 :
 
-```
+```cpp
 // C3626.cpp
 // compile with: /c
 struct A {

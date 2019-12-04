@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 562882f50edfe2d44ab1f08ee9dbe88fe468af63
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 403d674eae696eb42a837aef9d6e97c4b5b8f6c2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447384"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758786"
 ---
 # <a name="compiler-error-c2259"></a>Erreur du compilateur C2259
 
-'classe' : ne peut pas instancier une classe abstraite
+'class' : impossible d’instancier une classe abstraite
 
-Code déclare une instance d’une structure ou une classe abstraite.
+Le code déclare une instance d’une classe ou d’une structure abstraite.
 
-Vous ne pouvez pas instancier une classe ou structure avec un ou plusieurs fonctions virtuelles pures. Pour instancier des objets d’une classe dérivée, la classe dérivée doit substituer chaque fonction virtuelle pure.
+Vous ne pouvez pas instancier une classe ou une structure avec une ou plusieurs fonctions virtuelles pures. Pour instancier des objets d’une classe dérivée, la classe dérivée doit substituer chaque fonction virtuelle pure.
 
 Pour plus d’informations, consultez [classes implicitement abstraites](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).
 
-L’exemple suivant génère l’erreur C2259 :
+L’exemple suivant génère l’C2259 :
 
-```
+```cpp
 // C2259.cpp
 // compile with: /c
 class V {
@@ -42,19 +42,19 @@ A a;  // C2259, A inherits func() as pure virtual
 B b;  // OK, B defines func()
 ```
 
-Chaque fois que vous dérivez à partir d’une interface et implémentez les méthodes d’interface dans la classe dérivée avec des autorisations d’accès autre que public, vous pouvez recevoir l’erreur C2259.  Cela se produit, car le compilateur attend les méthodes d’interface implémentées dans la classe dérivée pour avoir un accès public. Lorsque vous implémentez les fonctions membres pour une interface avec des autorisations d’accès plus restrictives, le compilateur ne considère pas les implémentations des méthodes d’interface définies dans l’interface, qui à son tour la classe dérivée une classe abstraite.
+Chaque fois que vous dérivez d’une interface et implémentez les méthodes d’interface dans la classe dérivée avec des autorisations d’accès autres que public, vous pouvez recevoir C2259.  Cela est dû au fait que le compilateur s’attend à ce que les méthodes d’interface implémentées dans la classe dérivée aient un accès public. Lorsque vous implémentez les fonctions membres pour une interface avec des autorisations d’accès plus restrictives, le compilateur ne les considère pas comme des implémentations pour les méthodes d’interface définies dans l’interface, qui à son tour fait de la classe dérivée une classe abstraite.
 
-Il existe deux manières de contourner le problème :
+Il existe deux solutions possibles pour le problème :
 
-- Vérifiez les autorisations d’accès public pour les méthodes implémentées.
+- Rendez les autorisations d’accès publiques pour les méthodes implémentées.
 
-- Utiliser l’opérateur de résolution de portée pour les méthodes d’interface implémentées dans la classe dérivée pour qualifier le nom de la méthode implémentée par le nom de l’interface.
+- Utilisez l’opérateur de résolution de portée pour les méthodes d’interface implémentées dans la classe dérivée pour qualifier le nom de la méthode implémentée avec le nom de l’interface.
 
-C2259 peut également se produire en raison de la conformité a été effectuée dans Visual Studio 2005, **/Zc : wchar_t** est maintenant activée par défaut. Dans ce cas, l’erreur C2599 peut être résolue en compilant avec **/Zc :wchar_t-)**, afin d’obtenir le comportement des versions précédentes, ou de préférence en mettant à jour vos types afin qu’ils soient compatibles. Pour plus d’informations, consultez [/Zc:wchar_t (wchar_t est un type natif)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+C2259 peut également se produire en raison du travail de conformité effectué dans Visual Studio 2005, **/Zc : wchar_t** est désormais activé par défaut. Dans ce cas, C2599 peut être résolu en compilant avec **/Zc : wchar_t-** , pour connaître le comportement des versions précédentes, ou de préférence, en mettant à jour vos types de manière à ce qu’ils soient compatibles. Pour plus d’informations, consultez [/Zc:wchar_t (wchar_t est un type natif)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
-L’exemple suivant génère l’erreur C2259 :
+L’exemple suivant génère l’C2259 :
 
-```
+```cpp
 // C2259b.cpp
 // compile with: /c
 #include <windows.h>
@@ -90,9 +90,9 @@ public:
 MyClass4 y;
 ```
 
-L’exemple suivant génère l’erreur C2259 :
+L’exemple suivant génère l’C2259 :
 
-```
+```cpp
 // C2259c.cpp
 // compile with: /clr
 interface class MyInterface {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
-ms.openlocfilehash: f3f82549cf5d9230adfee7e83248e92f8e93e769
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24db84c9205173f098e493c4ea6393fb96592276
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301342"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758890"
 ---
 # <a name="compiler-error-c2249"></a>Erreur du compilateur C2249
 
-'membre' : aucun chemin accessible pour accéder à un membre déclaré dans la base virtuelle 'class'
+'membre' : aucun chemin d’accès accessible au membre d’accès déclaré dans la base virtuelle’classe'
 
-Le `member` est héritée d’un nonpublic `virtual` classe de base ou une structure.
+La `member` est héritée d’une classe ou d’une structure de base `virtual` non publique.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C2249.
+L’exemple suivant génère l’C2249.
 
-```
+```cpp
 // C2249.cpp
 class A {
 private:
@@ -42,9 +42,9 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-C2249 peut également se produire si vous essayez d’assigner un flux de données à partir de la bibliothèque C++ Standard dans un autre flux.  L’exemple suivant génère C2249.
+C2249 peut également se produire si vous essayez d’assigner un C++ flux de la bibliothèque standard à un autre flux.  L’exemple suivant génère l’C2249.
 
-```
+```cpp
 // C2249_2.cpp
 #include <iostream>
 using namespace std;

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3048
 ms.assetid: 48e07091-94d9-471d-befe-7e2507631edd
-ms.openlocfilehash: 451ae87f26357f47df4efdaa4393450f660a9000
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bec5921ea3d44c60d5d385da811beb6674c1a8d5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187612"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761310"
 ---
 # <a name="compiler-error-c3048"></a>Erreur du compilateur C3048
 
@@ -21,7 +21,7 @@ Une directive atomic a été spécifiée incorrectement.
 
 L’exemple suivant génère l’erreur C3048 :
 
-```
+```cpp
 // C3048.cpp
 // compile with: /openmp vcomps.lib
 #include "omp.h"

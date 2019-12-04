@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2274
 ms.assetid: 8e874903-f499-45ef-8291-f821eee4cc1c
-ms.openlocfilehash: f2fcb75098f18ad113ba68959035b37d9cddd6e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd807dedb6c300860611d07212b8fc8952a90a65
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388857"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758669"
 ---
 # <a name="compiler-error-c2274"></a>Erreur du compilateur C2274
 
-'type' : non conforme à droite de '.' opérateur
+'type' : non conforme à droite de l’opérateur'. '
 
-Un type apparaît comme l’opérande de droite d’un opérateur d’accès aux membres (.).
+Un type apparaît en tant qu’opérande droit d’un opérateur d’accès aux membres (.).
 
-Cette erreur peut résulter en essayant d’accéder à une conversion de type défini par l’utilisateur. Utilisez le mot clé `operator` entre la période et `type`.
+Cette erreur peut être due à une tentative d’accès à une conversion de type défini par l’utilisateur. Utilisez le mot clé `operator` entre le point et `type`.
 
 L’exemple suivant génère l’erreur C2286 :
 
-```
+```cpp
 // C2274.cpp
 struct MyClass {
    operator int() {

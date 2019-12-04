@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3865
 ms.assetid: 9bc62bb0-4fb8-4856-a5cf-c7cb4029a596
-ms.openlocfilehash: 846657d3598e268d78ff3c39f2bfc901756ad370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 960c795fe934433e4e3cf79e4c01c49d00205b9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302018"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761489"
 ---
 # <a name="compiler-error-c3865"></a>Erreur du compilateur C3865
 
-'convention_appel' : peut uniquement être utilisé sur des fonctions membres natives
+'calling_convention' : ne peut être utilisé que sur des fonctions membres natives
 
-Une convention d’appel a été utilisée sur une fonction qui a été soit une fonction globale ou sur une fonction membre managée. La convention d’appel peut uniquement être utilisée sur une fonction membre (non géré) natif.
+Une convention d’appel a été utilisée sur une fonction qui était soit une fonction globale, soit une fonction membre managée. La Convention d’appel ne peut être utilisée que sur une fonction membre native (non managée).
 
-Pour plus d’informations, consultez [Conventions d’appel](../../cpp/calling-conventions.md).
+Pour plus d’informations, consultez [conventions d’appel](../../cpp/calling-conventions.md).
 
-L’exemple suivant génère l’erreur C3865 :
+L’exemple suivant génère l’C3865 :
 
-```
+```cpp
 // C3865.cpp
 // compile with: /clr
 // processor: x86

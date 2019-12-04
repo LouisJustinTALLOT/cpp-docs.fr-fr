@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C1094
 ms.assetid: 9e1193b2-cb95-44f9-bf6f-019e0d41dd97
-ms.openlocfilehash: 23891a783a018f6d84ea820af98992f61632984c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99bfeea47ff46b6dadac9b32fa61306d54520d0f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366496"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747395"
 ---
 # <a name="fatal-error-c1094"></a>Erreur irrécupérable C1094
 
-'-Zmval1' : option de ligne de commande est cohérente avec la valeur utilisée pour générer l’en-tête précompilé ('-Zmval2')
+'-Zmval1 ' : l’option de ligne de commande n’est pas cohérente avec la valeur utilisée pour générer l’en-tête précompilé ('-Zmval2 ')
 
-La valeur est passée à [/Yc](../../build/reference/yc-create-precompiled-header-file.md) doit être la même valeur que celle qui est passée à [/Yu](../../build/reference/yu-use-precompiled-header-file.md) (**/Zm** valeurs doivent être identiques dans toutes les compilations qui utilisent ou créer les mêmes précompilé fichier d’en-tête).
+La valeur passée à [/Yc](../../build/reference/yc-create-precompiled-header-file.md) doit être la même que celle passée à [/Yu](../../build/reference/yu-use-precompiled-header-file.md) (les valeurs **/ZM** doivent être identiques dans toutes les compilations qui utilisent ou créent le même fichier d’en-tête précompilé).
 
-L’exemple suivant génère l’erreur C1094 :
+L’exemple suivant génère l’C1094 :
 
 ```
 // C1094.h
@@ -28,7 +28,7 @@ int func1();
 
 Puis,
 
-```
+```cpp
 // C1094.cpp
 // compile with: /Yc"C1094.h" /Zm200
 int u;
@@ -40,7 +40,7 @@ int main() {
 
 Puis,
 
-```
+```cpp
 // C1094b.cpp
 // compile with: /Yu"C1094.h" /Zm300 /c
 #include "C1094.h"   // C1094 compile with /Zm200
