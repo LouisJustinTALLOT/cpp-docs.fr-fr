@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: 381e665745f79f6156350f66e412f0580a06f6fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e50aaeac4a9f02cf3e67c25a08afdc2df0f1c62f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381018"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738009"
 ---
 # <a name="compiler-error-c3499"></a>Erreur du compilateur C3499
 
@@ -31,7 +31,7 @@ Le compilateur génère cette erreur quand une expression lambda qui spécifie `
 
 L’exemple suivant génère l’erreur C3499, car le corps d’une expression lambda contient plusieurs instructions et retourne une valeur, mais l’expression lambda ne spécifie pas le type de retour :
 
-```
+```cpp
 // C3499a.cpp
 
 int main()
@@ -44,7 +44,7 @@ int main()
 
 L’exemple suivant montre deux résolutions possibles pour l’erreur C3499. La première résolution fournit le type de retour de l’expression lambda. La seconde résolution combine les instructions qui composent le corps de l’expression lambda dans une instruction unique.
 
-```
+```cpp
 // C3499b.cpp
 
 int main()

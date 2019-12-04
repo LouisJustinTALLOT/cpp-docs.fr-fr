@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3459
 ms.assetid: 3d290a20-d313-4c07-9bd8-c5c159cb169f
-ms.openlocfilehash: aaad9610ffec3efc73b1ff5650472689a2d2e82a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fe21414fcadef13b7af3acf4f8e1635fb12802e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363737"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756641"
 ---
 # <a name="compiler-error-c3459"></a>Erreur du compilateur C3459
 
@@ -19,13 +19,13 @@ ms.locfileid: "62363737"
 
 Un attribut conçu pour être appliqué à une propriété d’indexeur de classe a été utilisé incorrectement.
 
-Pour plus d'informations, voir [Procédure : Utilisez les propriétés de C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+Pour plus d’informations, consultez [Comment : utiliser des propriétés C++dans/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’erreur C3459 :
 
-```
+```cpp
 // C3459.cpp
 // compile with: /clr /c
 public ref class MyString {

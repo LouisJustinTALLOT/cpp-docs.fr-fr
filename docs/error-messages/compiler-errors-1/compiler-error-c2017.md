@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2017
 ms.assetid: 1083eed9-9906-4a97-883c-54e52d7e82cd
-ms.openlocfilehash: f4a17557e5e4ca1eb3f69561c964c9bbe24bb70d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3911ef9af2eb0fab7d0f9296ddce8a0f9b32ae0d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303781"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751051"
 ---
 # <a name="compiler-error-c2017"></a>Erreur du compilateur C2017
 
 séquence d’échappement non conforme
 
-Une séquence d’échappement, tels que \t, apparaît en dehors d’un caractère ou une chaîne constante.
+Une séquence d’échappement, telle que \t, apparaît en dehors d’une constante de chaîne ou de caractère.
 
-L’exemple suivant génère l’erreur C2017 :
+L’exemple suivant génère l’C2017 :
 
-```
+```cpp
 // C2017.cpp
 int main() {
    char test1='a'\n;   // C2017
@@ -29,11 +29,11 @@ int main() {
 }
 ```
 
-C2017 peut se produire lorsque l’opérateur stringize est utilisé avec des chaînes qui incluent des séquences d’échappement.
+C2017 peut se produire lorsque l’opérateur String est utilisé avec des chaînes qui incluent des séquences d’échappement.
 
-L’exemple suivant génère l’erreur C2017 :
+L’exemple suivant génère l’C2017 :
 
-```
+```cpp
 // C2017b.cpp
 #define TestDfn(x) AfxMessageBox(#x)
 TestDfn(CString("\\") + CString(".h\"\n\n"));   // C2017

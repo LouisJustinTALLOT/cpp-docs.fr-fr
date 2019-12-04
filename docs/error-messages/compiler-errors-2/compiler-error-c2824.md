@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2824
 ms.assetid: 5bd865f7-e0af-404e-80fe-e2b798b44a59
-ms.openlocfilehash: 226fc078312a214c561e80064474ee237245c0f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee012d7244079fd881210eb969f4844a2c6e85d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406936"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750635"
 ---
 # <a name="compiler-error-c2824"></a>Erreur du compilateur C2824
 
-type de retour de 'operator new' doit être ' void *'
+le type de retour de’operator new’doit être’void * '
 
-Avec des pointeurs non based, les surcharges de l’opérateur `new` doit retourner `void *`.
+Avec les pointeurs non basés sur, les surcharges de l’opérateur `new` doivent retourner `void *`.
 
-L’exemple suivant génère l’erreur C2824 :
+L’exemple suivant génère l’C2824 :
 
-```
+```cpp
 // C2824.cpp
 // compile with: /c
 class   A {

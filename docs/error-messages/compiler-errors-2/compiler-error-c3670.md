@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3670
 ms.assetid: d0fa9c6e-8f90-48c7-9066-31b4fa5942eb
-ms.openlocfilehash: a9fe72501152891d3f82567f09922dda9a9b711a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b52f58f47027d88d9b0e150ebd2bf4588161553
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214944"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758123"
 ---
 # <a name="compiler-error-c3670"></a>Erreur du compilateur C3670
 
-'override' : substitution de méthode de classe de base inaccessible 'méthode' Impossible
+'override' : impossible de substituer la méthode de classe de base inaccessible’Method'
 
-Une substitution ne peut se place sur une fonction dont le niveau d’accès met à disposition dans un type dérivé. Pour plus d’informations, consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Une substitution ne peut avoir lieu que sur une fonction dont le niveau d’accès le rend disponible dans un type dérivé. Pour plus d’informations, consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-L’exemple suivant génère l’erreur C3670 :
+L’exemple suivant génère l’C3670 :
 
-```
+```cpp
 // C3670.cpp
 // compile with: /clr /c
 public ref class C {

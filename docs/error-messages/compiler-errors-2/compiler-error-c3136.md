@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3136
 ms.assetid: c77103cd-00f7-408e-b74b-4f8562039d31
-ms.openlocfilehash: e32ffca067c3b25120301527e7a708d53001d541
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75862f3b80d617b607a7b3e735cb3e16e9a40bb7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376248"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757382"
 ---
 # <a name="compiler-error-c3136"></a>Erreur du compilateur C3136
 
-'interface' : une interface COM ne peut hériter que d’une autre interface COM, 'interface' n’est pas une interface COM
+'interface' : une interface COM ne peut hériter que d’une autre interface COM, 'interface’n’est pas une interface COM
 
-Une interface à laquelle vous avez appliqué une [attribut interface](../../windows/attributes/interface-attributes.md) hérite d’une interface qui n’est pas une interface COM. Finalement, une interface COM hérite `IUnknown`. N’importe quelle interface précédé par un attribut de l’interface est une interface COM.
+Une interface à laquelle vous avez appliqué un [attribut d’interface](../../windows/attributes/interface-attributes.md) hérite d’une interface qui n’est pas une interface com. Une interface COM hérite finalement de `IUnknown`. Toute interface précédée d’un attribut d’interface est une interface COM.
 
-L’exemple suivant génère l’erreur C3136 :
+L’exemple suivant génère l’C3136 :
 
-```
+```cpp
 // C3136.cpp
 #include "unknwn.h"
 

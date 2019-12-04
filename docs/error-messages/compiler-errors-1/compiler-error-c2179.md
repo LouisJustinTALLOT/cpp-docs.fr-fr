@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2179
 ms.assetid: f929bfc6-3964-4e54-87d6-7529b9b6c0b9
-ms.openlocfilehash: 4a8abd8d862d4d6b08b1d0efd1d47d0413b60a81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b9b5382ab934f8d870e58189a447775a1e9a415
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385990"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737164"
 ---
 # <a name="compiler-error-c2179"></a>Erreur du compilateur C2179
 
-'type' : un argument d’attribut ne peut pas utiliser les paramètres de type
+'type' : un argument d’attribut ne peut pas utiliser de paramètres de type
 
-Un paramètre de type générique est résolu pendant l’exécution. Toutefois, un paramètre d’attribut doit être résolu au moment de la compilation. Par conséquent, vous ne pouvez pas utiliser un paramètre de type générique en tant qu’argument à un attribut.
+Un paramètre de type générique est résolu au moment de l’exécution. Toutefois, un paramètre d’attribut doit être résolu au moment de la compilation. Par conséquent, vous ne pouvez pas utiliser un paramètre de type générique en tant qu’argument d’un attribut.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C2179.
+L’exemple suivant génère l’C2179.
 
-```
+```cpp
 // C2179.cpp
 // compile with: /clr
 using namespace System;

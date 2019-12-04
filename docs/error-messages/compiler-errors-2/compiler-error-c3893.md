@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3893
 ms.assetid: 90d52eae-6ef2-4db1-b7ad-92f9e8b140fb
-ms.openlocfilehash: 45a140d3fd5f510ee2434950ca3c4b47c0756d75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20c17eaa6555b5511ecbc930eacdb2ec92475b23
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385496"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749501"
 ---
 # <a name="compiler-error-c3893"></a>Erreur du compilateur C3893
 
-'var' : utilisation comme l-value des données membres initonly n’est autorisée uniquement dans un constructeur d’instance de classe 'nom_type'
+'var' : l’utilisation de l-value des données membres initonly n’est autorisée que dans un constructeur d’instance de la classe’type_name'
 
-Statique [initonly](../../dotnet/initonly-cpp-cli.md) membres de données peuvent avoir uniquement leur adresse effectuée dans un constructeur statique.
+L’adresse des membres de données [initonly](../../dotnet/initonly-cpp-cli.md) statiques ne peut être utilisée que dans un constructeur statique.
 
-Instance (non statique) les données membres initonly n’admet qu’adresse est acceptée dans les constructeurs d’instance (non statique).
+Les membres de données initonly de l’instance (non statiques) ne peuvent avoir qu’une adresse prise dans des constructeurs d’instance (non statiques).
 
-L’exemple suivant génère l’erreur C3893 :
+L’exemple suivant génère l’C3893 :
 
-```
+```cpp
 // C3893.cpp
 // compile with: /clr
 ref struct Y1 {

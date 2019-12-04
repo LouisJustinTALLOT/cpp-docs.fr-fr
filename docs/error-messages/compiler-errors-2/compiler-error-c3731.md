@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3731
 ms.assetid: 45f89fcd-464c-4bc8-8a42-edcb5416d26c
-ms.openlocfilehash: 5acc33869648f83cd44bc557128c685f521ddf88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9acf80eec0d36db64fa070d691533e7085754ac0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328066"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752949"
 ---
 # <a name="compiler-error-c3731"></a>Erreur du compilateur C3731
 
-événement incompatible 'fonction1' et le gestionnaire 'fonction2' ; source d’événement et le Gestionnaire d’événements doivent être du même type
+événement’fonction1 'et gestionnaire’fonction2 'incompatibles ; la source d’événements et le gestionnaire d’événements doivent être du même type
 
-La source d’événements et un récepteur d’événements doivent avoir le même type (par exemple `native` et `com` types). Pour corriger cette erreur, vérifiez les types de la source d’événements et la correspondance de gestionnaire d’événements.
+La source de l’événement et le récepteur d’événements doivent avoir le même type (par exemple `native` et les types de `com`). Pour corriger cette erreur, définissez les types de la source de l’événement et celui du gestionnaire d’événements.
 
-L’exemple suivant génère C3731 :
+L’exemple suivant génère l’C3731 :
 
-```
+```cpp
 // C3731.cpp
 // compile with: /clr
 #using <mscorlib.dll>

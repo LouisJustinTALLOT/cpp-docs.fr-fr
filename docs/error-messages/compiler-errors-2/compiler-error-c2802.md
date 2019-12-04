@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2802
 ms.assetid: 08b68c0e-9382-40ac-8949-39a7a2749e05
-ms.openlocfilehash: 9024a13b0e4fdbc4174f94e6c0c8736b03f3c221
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12ce65def043a05f5f154130b64326797a974137
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408444"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758292"
 ---
 # <a name="compiler-error-c2802"></a>Erreur du compilateur C2802
 
-un membre static 'operator opérateur' n’a aucun paramètre formel
+le membre static’operator opérateur’n’a pas de paramètres formels
 
-Un opérateur déclaré par une `static` fonction membre doit avoir au moins un paramètre.
+Un opérateur déclaré par une fonction membre `static` doit avoir au moins un paramètre.
 
-L’exemple suivant génère C2802 :
+L’exemple suivant génère l’C2802 :
 
-```
+```cpp
 // C2802.cpp
 // compile with: /clr /c
 ref class A {

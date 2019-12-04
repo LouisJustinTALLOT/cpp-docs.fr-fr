@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2750
 ms.assetid: 30450034-feb5-448c-9655-b8c5f3639695
-ms.openlocfilehash: 34d19e8e9f51c90c48ec0d429f98bb82e3d829d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56f4e6e1d6c392fc377fe5fdf11643ae8a2e503a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228536"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759605"
 ---
 # <a name="compiler-error-c2750"></a>Erreur du compilateur C2750
 
-'type' : Impossible d’utiliser 'new' sur le type de référence ; Utilisez 'gcnew' à la place
+'type' : impossible d’utiliser’New’sur le type référence ; Utilisez’gcnew’à la place
 
-Pour créer une instance d’un type CLR, ce qui provoque l’instance peut être placée sur le tas de garbage collection, vous devez utiliser [gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md).
+Pour créer une instance d’un type CLR, ce qui provoque le placement de l’instance sur le tas récupéré par le garbage collector, vous devez utiliser [gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md).
 
-L’exemple suivant génère l’erreur C2750 :
+L’exemple suivant génère l’C2750 :
 
-```
+```cpp
 // C2750.cpp
 // compile with: /clr
 ref struct Y1 {};

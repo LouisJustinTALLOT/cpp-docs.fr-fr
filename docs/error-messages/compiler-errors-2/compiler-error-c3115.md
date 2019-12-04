@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3115
 ms.assetid: 51726145-9782-4ec9-84b9-286f366d9cbd
-ms.openlocfilehash: e334836986548d4f854dd9a5760bd8315b769d03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c03361f08ffd54396d307ed8c075a327c576d49b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404089"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760737"
 ---
 # <a name="compiler-error-c3115"></a>Erreur du compilateur C3115
 
-'attribute' : cet attribut n’est pas autorisé sur 'construction'
+'Attribute' : cet attribut n’est pas autorisé sur’Construct'
 
-Un attribut a été appliqué à une construction pour laquelle il n’a pas été conçu.  Consultez [attributs par utilisation](../../windows/attributes/attributes-by-usage.md) pour plus d’informations.
+Un attribut a été appliqué à une construction pour laquelle il n’était pas prévu.  Pour plus d’informations [, consultez attributs par utilisation](../../windows/attributes/attributes-by-usage.md) .
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3115.
+L’exemple suivant génère l’C3115.
 
-```
+```cpp
 // C3115.cpp
 // compile with: /c
 #include <unknwn.h>

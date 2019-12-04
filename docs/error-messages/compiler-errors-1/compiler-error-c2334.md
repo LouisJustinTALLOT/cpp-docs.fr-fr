@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2334
 ms.assetid: 36142855-e00b-4bbf-80f5-a301edeff46e
-ms.openlocfilehash: 4f068792193fd22ccddc39f9afc555e7c8672d8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8a096a89bdb076b857e5adc49ad8162551612f2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188367"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747694"
 ---
 # <a name="compiler-error-c2334"></a>Erreur du compilateur C2334
 
-jetons inattendus avant ' : ou {'; les corps apparent de la fonction ignoré
+jetons inattendus avant' : ou {'; corps de la fonction apparent ignoré
 
-L’exemple suivant génère l’erreur C2334. Cette erreur se produit après l’erreur C2059 :
+L’exemple suivant génère l’C2334. Cette erreur se produit après l’erreur C2059 :
 
-```
+```cpp
 // C2334.cpp
 // compile with: /c
 // C2059 expected

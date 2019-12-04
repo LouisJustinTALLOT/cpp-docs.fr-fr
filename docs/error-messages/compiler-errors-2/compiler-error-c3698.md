@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3698
 ms.assetid: 3c02fb08-7ba4-4637-a06f-19926cb2b5f1
-ms.openlocfilehash: 78cded92c8f73c77f7871278443bd3dfd4dbe686
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29c1df618d6a8a14f441c09a6db0f9457133910b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325180"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758045"
 ---
 # <a name="compiler-error-c3698"></a>Erreur du compilateur C3698
 
-'type' : Impossible d’utiliser ce type comme argument de 'operator'
+'type' : impossible d’utiliser ce type comme argument de’operator'
 
-Un objet managé a été correctement déclaré.
+Un objet managé a été déclaré de manière incorrecte.
 
-L’exemple suivant génère l’erreur C3698 :
+L’exemple suivant génère l’C3698 :
 
-```
+```cpp
 // C3698.cpp
 // compile with: /clr
 

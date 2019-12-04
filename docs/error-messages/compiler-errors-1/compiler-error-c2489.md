@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2489
 ms.assetid: 67d8cd98-db7e-4f7f-86b4-4af7bc89ec8b
-ms.openlocfilehash: e4024455e17956fc67917e92a3ca531eca5c5e04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1977e32cec9d88a51aa6ec450a09be7fc33eb408
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361033"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757096"
 ---
 # <a name="compiler-error-c2489"></a>Erreur du compilateur C2489
 
-'identificateur' : variable ou initialisée automatiquement register n’est ne pas autorisée à portée de la fonction d’une fonction 'naked'
+'identificateur' : variable auto ou Register initialisée non autorisée au niveau de la portée de la fonction dans la fonction’Naked'
 
-Pour plus d’informations, consultez [naked](../../cpp/naked-cpp.md).
+Pour plus d’informations, consultez [Naked](../../cpp/naked-cpp.md).
 
-L’exemple suivant génère l’erreur C2489 :
+L’exemple suivant génère l’C2489 :
 
-```
+```cpp
 // C2489.cpp
 // processor: x86
 __declspec( naked ) int func() {

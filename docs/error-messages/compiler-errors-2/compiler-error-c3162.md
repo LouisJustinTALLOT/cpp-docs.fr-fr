@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3162
 ms.assetid: 0d4c4a24-1456-4191-b7d8-c38cb7b17c32
-ms.openlocfilehash: f522a2de77e03a7c5f8f8dc774d62744417344fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95cd2c4af614906da7ba2d1c4c5dd488059f970a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174287"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761801"
 ---
 # <a name="compiler-error-c3162"></a>Erreur du compilateur C3162
 
-'type' : un type référence qui a un destructeur ne peut pas être utilisé comme type de données membres static 'membre'
+'type' : un type référence qui a un destructeur ne peut pas être utilisé comme type de données membres static’Member'
 
-Le common language runtime ne peut pas savoir quand exécuter un destructeur défini par l’utilisateur lorsque la classe contient également la fonction membre statique.
+La common language runtime ne peut pas savoir quand exécuter un destructeur défini par l’utilisateur lorsque la classe contient également une fonction membre statique.
 
-Un destructeur ne sera jamais exécuté sauf si l’objet est supprimé explicitement.
+Un destructeur ne sera jamais exécuté, sauf si l’objet est supprimé explicitement.
 
 Pour plus d'informations, consultez
 
@@ -29,9 +29,9 @@ Pour plus d'informations, consultez
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3162.
+L’exemple suivant génère l’C3162.
 
-```
+```cpp
 // C3162.cpp
 // compile with: /clr /c
 ref struct A {

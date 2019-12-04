@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2911
 ms.assetid: 83c7c01a-ab6a-4179-9fb0-289a9ec8d44e
-ms.openlocfilehash: 56977f481a77c1f5865bec5d6ecc01c99d8224cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59061ab8126e3ba45c0b456bb4428652cab8a7e9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408470"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761099"
 ---
 # <a name="compiler-error-c2911"></a>Erreur du compilateur C2911
 
@@ -21,7 +21,7 @@ Dans un espace de noms, une classe ou une fonction, vous ne pouvez définir qu�
 
 L’exemple suivant génère l’erreur C2911 :
 
-```
+```cpp
 // C2911.cpp
 struct A;
 

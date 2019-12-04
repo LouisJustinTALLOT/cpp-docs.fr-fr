@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2770
 ms.assetid: 100001b5-80b0-4971-8ff6-9023f443c926
-ms.openlocfilehash: 9397b52838f61449f0475a31d5bb4077dad7f587
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f6c82823dc619982ff148a83e2cc3316b42cfab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257399"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759774"
 ---
 # <a name="compiler-error-c2770"></a>Erreur du compilateur C2770
 
-argument (s) template_ou_génériques explicite non valide pour 'template'
+argument (s) de template_or_generic explicite non valide pour’template'
 
-Candidats de modèle de fonction avec modèle explicit ou arguments génériques a entraîné des types de fonction non autorisés.
+Les candidats de modèle de fonction avec des arguments template ou Generic explicites ont entraîné des types de fonction non autorisés.
 
-L’exemple suivant génère l’erreur C2770 :
+L’exemple suivant génère l’C2770 :
 
-```
+```cpp
 // C2770.cpp
 #include <stdio.h>
 template <class T>

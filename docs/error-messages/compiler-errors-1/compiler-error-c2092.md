@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2092
 ms.assetid: 037e44ae-16c8-489a-a512-dcdf7f7795a6
-ms.openlocfilehash: d3d0b0e62fbc5f8ad90b3fee5fe39c6bdaba7c2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b530663cae2292ebeab1b871e495e9a45e4633cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376003"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754665"
 ---
 # <a name="compiler-error-c2092"></a>Erreur du compilateur C2092
 
-type d’élément de tableau de 'nom de tableau' ne peut pas être (fonction)
+le type d’élément de tableau’array Name’ne peut pas être une fonction
 
 Les tableaux de fonctions ne sont pas autorisés. Utilisez un tableau de pointeurs vers des fonctions.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C2092 :
+L’exemple suivant génère l’C2092 :
 
-```
+```cpp
 // C2092.cpp
 typedef void (F) ();
 typedef F AT[10];   // C2092
@@ -33,7 +33,7 @@ typedef F AT[10];   // C2092
 
 Solution possible :
 
-```
+```cpp
 // C2092b.cpp
 // compile with: /c
 typedef void (F) ();

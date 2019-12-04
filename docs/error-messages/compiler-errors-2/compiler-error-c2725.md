@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2725
 ms.assetid: 13cd5b1b-e906-4cd8-9b2b-510d587c665a
-ms.openlocfilehash: da5fe354724427ae6806424122281d1653ebca22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5df5a94e32e3cb365166fc38c5df10c248138277
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382981"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756406"
 ---
 # <a name="compiler-error-c2725"></a>Erreur du compilateur C2725
 
@@ -23,7 +23,7 @@ Le type d'une exception managée ou WinRT était incorrect.
 
 L'exemple suivant génère l'erreur C2725 et montre comment la corriger :
 
-```
+```cpp
 // C2725.cpp
 // compile with: /clr
 ref class R {
@@ -44,7 +44,7 @@ int main() {
 
 L'exemple suivant génère l'erreur C2725 et montre comment la corriger :
 
-```
+```cpp
 // C2725b.cpp
 // compile with: /clr
 using namespace System;

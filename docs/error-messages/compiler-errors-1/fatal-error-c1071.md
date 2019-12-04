@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1071
 ms.assetid: 489f1786-370e-4ecd-af67-538fe6e5bd4e
-ms.openlocfilehash: 8fe6b0f3bb1253f72c97f29070ba81cdbdf80508
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f39359d55b5564c6379c84f07e942cf3484e011
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166657"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747408"
 ---
 # <a name="fatal-error-c1071"></a>Erreur irrécupérable C1071
 
@@ -21,13 +21,13 @@ Le compilateur a atteint la fin du fichier lors de l’analyse d’un commentair
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Pour corriger en vérifiant les causes possibles suivantes
 
-1. Terminaison de commentaire manquante (* /).
+1. Indicateur de fin de commentaire manquant (*/).
 
-1. Caractères de saut de ligne manquants après un commentaire sur la dernière ligne d’un fichier source.
+1. Caractère de saut de ligne manquant après un commentaire sur la dernière ligne d’un fichier source.
 
-L’exemple suivant génère l’erreur C1071 :
+L’exemple suivant génère l’C1071 :
 
-```
+```cpp
 // C1071.cpp
 int main() {
 }

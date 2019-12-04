@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2731
 ms.assetid: 9b563999-febd-4582-9147-f355083c091e
-ms.openlocfilehash: 2bb00f972f4c12a00255a9820a768d01691f9940
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b73ee4ad205bfc2203423b5f413011ce090852f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302890"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755809"
 ---
 # <a name="compiler-error-c2731"></a>Erreur du compilateur C2731
 
-'identificateur' : fonction ne peut pas être surchargée.
+'identificateur' : la fonction ne peut pas être surchargée
 
-Les fonctions `main`, `WinMain`, `DllMain`, et `LibMain` ne peut pas être surchargé.
+Les fonctions `main`, `WinMain`, `DllMain`et `LibMain` ne peuvent pas être surchargées.
 
-L’exemple suivant génère l’erreur C2731 :
+L’exemple suivant génère l’C2731 :
 
-```
+```cpp
 // C2731.cpp
 extern "C" void WinMain(int, char *, char *);
 void WinMain(int, short, char *, char*);   // C2731

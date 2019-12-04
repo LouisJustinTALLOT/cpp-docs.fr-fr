@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2682
 ms.assetid: 30c6a7c4-f5f7-4fe8-81a8-c48938521ab4
-ms.openlocfilehash: 8a9ec2f59f362df284e9bd5cd8df6ae986d59d77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1ce0132ed0db418359effe60f59e1eb2d3cc221
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266268"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760281"
 ---
 # <a name="compiler-error-c2682"></a>Erreur du compilateur C2682
 
-Impossible d’utiliser ' opérateur_casting ' pour convertir de 'type1' en 'type2'
+Impossible d’utiliser casting_operator pour convertir de’type1 'en’type2 '
 
-Un opérateur de cast a essayé d’effectuer une conversion entre des types incompatibles. Par exemple, vous ne pouvez pas utiliser le [dynamic_cast](../../cpp/dynamic-cast-operator.md) pour convertir un pointeur vers une référence. Le `dynamic_cast` opérateur ne peut pas être utilisé pour modifier le cast des qualificateurs. Tous les qualificateurs sur les types doivent correspondre.
+Un opérateur de cast a essayé de convertir les types incompatibles. Par exemple, vous ne pouvez pas utiliser l’opérateur [dynamic_cast](../../cpp/dynamic-cast-operator.md) pour convertir un pointeur en référence. L’opérateur `dynamic_cast` ne peut pas être utilisé pour effectuer un cast de qualificateurs. Tous les qualificateurs sur les types doivent correspondre.
 
-Vous pouvez utiliser la `const_cast` opérateur à supprimer des attributs tels que `const`, `volatile`, ou `__unaligned`.
+Vous pouvez utiliser l’opérateur `const_cast` pour supprimer des attributs comme `const`, `volatile`ou `__unaligned`.
 
-L’exemple suivant génère l’erreur C2682 :
+L’exemple suivant génère l’C2682 :
 
-```
+```cpp
 // C2682.cpp
 class A { virtual void f(); };
 class B: public A {};
@@ -33,9 +33,9 @@ void g(A* pa) {
 }
 ```
 
-L’exemple suivant génère l’erreur C2682 :
+L’exemple suivant génère l’C2682 :
 
-```
+```cpp
 // C2682b.cpp
 // compile with: /clr
 ref struct R{};

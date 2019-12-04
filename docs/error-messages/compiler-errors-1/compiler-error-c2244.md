@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2244
 ms.assetid: d9911c12-ceb5-4f93-ac47-b44a485215c2
-ms.openlocfilehash: 7cfa0cd7ff4290ca5f07fb712bbcac7dabf55f29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97ff469c6f3f766bd1b5412133003bae2acaddfc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301394"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759475"
 ---
 # <a name="compiler-error-c2244"></a>Erreur du compilateur C2244
 
-'identificateur' : Impossible de faire correspondre la définition de fonction avec une déclaration existante
+'identificateur' : impossible de faire correspondre la définition de fonction à une déclaration existante
 
-Une utilisation inhabituelle de l’opérateur unaire + a été utilisée devant un appel de fonction qui n’avait pas de parenthèse.
+Une utilisation inhabituelle de l’opérateur unaire + a été utilisée devant un appel de fonction qui n’avait pas de parenthèses.
 
-Cette erreur se produit uniquement dans les projets C++.
+Cette erreur se produit uniquement C++ dans les projets.
 
-L’exemple suivant génère l’erreur C2244 :
+L’exemple suivant génère l’C2244 :
 
-```
+```cpp
 // C2244.cpp
 int func(char) {
    return 0;
@@ -38,9 +38,9 @@ int main() {
 }
 ```
 
-L’erreur C2244 peut également se produire lorsqu’une signature de fonction incorrecte est utilisée pour une fonction membre d’un modèle de classe.
+C2244 peut également se produire lorsqu’une signature de fonction incorrecte est utilisée pour une fonction membre d’un modèle de classe.
 
-```
+```cpp
 // C2244b.cpp
 // compile with: /c
 template<class T>
@@ -54,9 +54,9 @@ void XYZ<T>::func(int i) {}   // C2244 wrong function signature
 // void XYZ<T>::func(T t) {}
 ```
 
-L’erreur C2244 peut également se produire lorsqu’une signature de fonction incorrecte est utilisée pour un modèle de fonction membre.
+C2244 peut également se produire lorsqu’une signature de fonction incorrecte est utilisée pour un modèle de fonction membre.
 
-```
+```cpp
 // C2244c.cpp
 // compile with: /c
 class ABC {
@@ -72,7 +72,7 @@ void ABC::func(int i) {}   // C2244 wrong signature
 
 Vous ne pouvez pas spécialiser partiellement un modèle de fonction.
 
-```
+```cpp
 // C2244d.cpp
 template<class T, class U>
 class QRS {

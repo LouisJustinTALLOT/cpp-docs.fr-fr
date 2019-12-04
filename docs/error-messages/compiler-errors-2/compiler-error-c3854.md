@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3854
 ms.assetid: 32a9ead0-c6c7-485a-8802-c7b1fe921d3a
-ms.openlocfilehash: 3b48e2c65003537102864fdafe7db70b06ade029
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c62117e9437233f614aa0e57a3848fcb8dd0c79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265527"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754847"
 ---
 # <a name="compiler-error-c3854"></a>Erreur du compilateur C3854
 
-expression à gauche de '=' correspond à une fonction. Impossible d’assigner à une fonction (une fonction n’est pas une l-value)
+l’expression à gauche de' = 'prend la valeur d’une fonction. Impossible d’assigner à une fonction (une fonction n’est pas une l-value)
 
-Une référence ne peut pas être réinitialisée. Annulation d’une référence à une fonction génère une fonction, qui est une rvalue, à laquelle vous ne pouvez pas affecter. Par conséquent, vous ne pouvez pas affecter une référence à une fonction.
+Une référence ne peut pas être réinitialisée. Le déréférencement d’une référence à une fonction produit une fonction, qui est une rvalue, à laquelle vous ne pouvez pas assigner. Par conséquent, vous ne pouvez pas assigner par le biais d’une référence à une fonction.
 
-L’exemple suivant génère l’erreur C3854 :
+L’exemple suivant génère l’C3854 :
 
-```
+```cpp
 // C3854.cpp
 int afunc(int i)
 {
