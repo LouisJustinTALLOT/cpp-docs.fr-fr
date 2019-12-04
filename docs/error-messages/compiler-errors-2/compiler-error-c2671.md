@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2671
 ms.assetid: fc0ee40f-c8f3-408f-b89d-745d149c4169
-ms.openlocfilehash: 92ed646b0e4c5d2bbc6556c2a7b1ef66d8192ec1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57f4f2538fd02174f931faa2603a1388906d9944
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165071"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760398"
 ---
 # <a name="compiler-error-c2671"></a>Erreur du compilateur C2671
 
-'fonction' : les fonctions membres statiques n’ont pas de pointeurs 'this'
+'fonction' : les fonctions membres static n’ont pas de pointeurs’This'
 
-Un `static` fonction membre a tenté d’accéder à `this`.
+Une fonction membre de `static` a essayé d’accéder à `this`.
 
-L’exemple suivant génère l’erreur C2671 :
+L’exemple suivant génère l’C2671 :
 
-```
+```cpp
 // C2671.cpp
 struct S {
    static S* const func() { return this; }  // C2671

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2635
 ms.assetid: 9deca2a8-2d61-42eb-9783-6578132ee3fb
-ms.openlocfilehash: 0c31bcc4062aec1d939c801f9b5ee420f2f4fcb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90bc30460cb578d1ed2812e40907a361eeb3b039
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367848"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748422"
 ---
 # <a name="compiler-error-c2635"></a>Erreur du compilateur C2635
 
-Impossible de convertir en un 'identificateur1 *' un ' identificateur2\*' ; conversion à partir de la classe de base virtuelle implicite
+Impossible de convertir’identificateur1 * 'en’identificateur2\*'; la conversion à partir d’une classe de base virtuelle est implicite
 
-La conversion requiert un cast d’un `virtual` classe de base pour une classe dérivée, ce qui n’est pas autorisée.
+La conversion nécessite un cast d’une classe de base `virtual` vers une classe dérivée, ce qui n’est pas autorisé.
 
-L’exemple suivant génère C2635 :
+L’exemple suivant génère l’C2635 :
 
-```
+```cpp
 // C2635.cpp
 class B {};
 class D : virtual public B {};

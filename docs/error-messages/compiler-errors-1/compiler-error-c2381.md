@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2381
 ms.assetid: cc765f67-64ac-406f-93ef-ae7d548d58d7
-ms.openlocfilehash: b29f7dac6c6d71e12eb0f003cdfc151dd2c349a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 834b9939a99c694c702bb268b928575b4beb8856
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347897"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745393"
 ---
 # <a name="compiler-error-c2381"></a>Erreur du compilateur C2381
 
 'fonction' : redéfinition ; __declspec (noreturn) est différent
 
-Une fonction a été déclarée et puis définie mais la définition utilisée la [noreturn](../../cpp/noreturn.md) `__declspec` modificateur. L’utilisation de `noreturn` constitue une redéfinition de la fonction ; la déclaration et la définition doivent s’accorder sur l’utilisation de `noreturn`.
+Une fonction a été déclarée, puis définie, mais la définition a utilisé le modificateur `__declspec` [noreturn](../../cpp/noreturn.md) . L’utilisation de `noreturn` constitue une redéfinition de la fonction ; la déclaration et la définition doivent s’accorder sur l’utilisation de `noreturn`.
 
-L’exemple suivant génère l’erreur C2381 :
+L’exemple suivant génère l’C2381 :
 
-```
+```cpp
 // C2381.cpp
 // compile with: /c
 void f1();

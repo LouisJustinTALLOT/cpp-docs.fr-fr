@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
-ms.openlocfilehash: 3ead2f18cdc8b76a0bb3da30e7086bdc80b49d43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4fca5bfd944514bf2658a8af5cbbd58efe5b39fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328287"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753183"
 ---
 # <a name="compiler-error-c3719"></a>Erreur du compilateur C3719
 
-'interface' : une interface source d’événement en utilisable uniquement pour les événements COM
+'interface' : une source d’événements basée sur une interface ne peut être utilisée que pour les événements COM
 
 Vous avez déclaré une interface dans un contexte non-COM.
 
-L’exemple suivant génère l’erreur C3719 :
+L’exemple suivant génère l’C3719 :
 
-```
+```cpp
 // C3719a.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"
@@ -46,9 +46,9 @@ int main() {
 }
 ```
 
-Pour corriger cette erreur, appliquez le [objet](../../windows/object-cpp.md), [coclasse](../../windows/coclass.md), [event_source](../../windows/event-source.md), et [event_receiver](../../windows/event-receiver.md) attributs de façon appropriée pour rendre le dans lequel vous utilisez les classes de l’interface COM de classes. Exemple :
+Pour corriger cette erreur, appliquez les attributs [Object](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event_source](../../windows/event-source.md)et [event_receiver](../../windows/event-receiver.md) de manière appropriée afin de rendre les classes dans lesquelles vous utilisez les classes com de l’interface. Par exemple :
 
-```
+```cpp
 // C3719b.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

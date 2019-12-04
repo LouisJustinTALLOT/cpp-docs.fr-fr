@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2917
 ms.assetid: ec9da9ee-0f37-47b3-87dd-19ef5a14dc4c
-ms.openlocfilehash: 6926d96eccadacd427cc4d13b93db494809c3775
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f4b82c1138326bad93d3836d6a77c55f2f546e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406780"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761043"
 ---
 # <a name="compiler-error-c2917"></a>Erreur du compilateur C2917
 
@@ -23,7 +23,7 @@ Une liste de paramètres de modèles contient un identificateur qui n’était p
 
 L’exemple suivant génère l’erreur C2917.
 
-```
+```cpp
 // C2917.cpp
 // compile with: /c
 template<class T> class Vector {

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3492
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
-ms.openlocfilehash: facd8c78e775945924d77b09f9dc754bdc301ddd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37129c198096be91a8104aedcb508732d79e3630
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381122"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738308"
 ---
 # <a name="compiler-error-c3492"></a>Erreur du compilateur C3492
 
@@ -27,7 +27,7 @@ Vous ne pouvez pas capturer un membre d’une union sans nom.
 
 L’exemple suivant génère l’erreur C3492, car il capture un membre d’une union anonyme :
 
-```
+```cpp
 // C3492a.cpp
 
 int main()
@@ -47,7 +47,7 @@ int main()
 
 L’exemple suivant résout l’erreur C3492 en nommant l’union et en passant la structure d’union complète à la liste de capture de l’expression lambda :
 
-```
+```cpp
 // C3492b.cpp
 
 int main()

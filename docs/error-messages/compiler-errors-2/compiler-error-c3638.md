@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3638
 ms.assetid: 8d8bc5ca-75aa-480e-b6b6-3178fab51b1d
-ms.openlocfilehash: 33bb248faf946c39543de4a14a44e2ebbda49880
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8d67ac0ff6a1fa5d9efbb8d85747ff94d75c648
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385886"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742494"
 ---
 # <a name="compiler-error-c3638"></a>Erreur du compilateur C3638
 
-'opérateur' : Impossible de redéfinir le boxing standard et les opérateurs de conversion unboxing
+'operator' : impossible de redéfinir les opérateurs de conversion boxing et unboxing standard
 
-Le compilateur définit un opérateur de conversion pour chaque classe managée pour prendre en charge la conversion boxing implicite. Cet opérateur ne peut pas être redéfini.
+Le compilateur définit un opérateur de conversion pour chaque classe managée afin de prendre en charge la conversion boxing implicite. Cet opérateur ne peut pas être redéfini.
 
-Pour plus d’informations, consultez [Boxing implicite](../../extensions/boxing-cpp-component-extensions.md).
+Pour plus d’informations, consultez [conversion boxing implicite](../../extensions/boxing-cpp-component-extensions.md).
 
-L’exemple suivant génère l’erreur C3638 :
+L’exemple suivant génère l’C3638 :
 
-```
+```cpp
 // C3638.cpp
 // compile with: /clr
 value struct V {

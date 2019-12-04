@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7e3f52b2b69058549cb8aa3e14d2a4b4048fc4e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447189"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756849"
 ---
 # <a name="compiler-error-c3867"></a>Erreur du compilateur C3867
 
-'fonction' : appel de fonction manquant de liste d’arguments ; Utilisez ' & func' pour créer un pointeur vers membre
+'Func' : liste d’arguments manquante dans l’appel de fonction ; Utilisez' & Func’pour créer un pointeur vers un membre
 
 Vous avez essayé de prendre l'adresse d'une fonction membre sans qualifier la fonction membre avec son nom de classe et l'opérateur d'adresse.
 
-Cette erreur peut également être due à la mise en conformité du compilateur pour Visual Studio 2005 : conformité pointeur vers membre améliorée. Le code compilé avant Visual Studio 2005 génère désormais l’erreur C3867.
+Cette erreur peut également être générée à la suite du travail de conformité du compilateur pour Visual Studio 2005 : conformité de pointeur vers membre améliorée. Le code compilé avant Visual Studio 2005 génère désormais C3867.
 
 ## <a name="example"></a>Exemple
 
@@ -27,7 +27,7 @@ L'erreur C3867 peut provenir du compilateur avec une résolution suggérée équ
 
 L'exemple suivant génère l'erreur C3867 et montre comment la corriger.
 
-```
+```cpp
 // C3867_1.cpp
 // compile with: /c
 struct Base {
@@ -49,7 +49,7 @@ void Derived::Bar() {
 
 L'exemple suivant génère l'erreur C3867 et montre comment la corriger.
 
-```
+```cpp
 // C3867_2.cpp
 #include<stdio.h>
 
@@ -81,7 +81,7 @@ int main() {
 
 L'exemple suivant génère l'erreur C3867 et montre comment la corriger.
 
-```
+```cpp
 // C3867_3.cpp
 class X {
 public:
@@ -100,7 +100,7 @@ int main() {
 
 L'exemple suivant génère l'erreur C3867.
 
-```
+```cpp
 // C3867_4.cpp
 // compile with: /c
 class A {
@@ -124,7 +124,7 @@ public:
 
 L'exemple suivant génère l'erreur C3867.
 
-```
+```cpp
 // C3867_5.cpp
 // compile with: /EHsc
 #include <iostream>

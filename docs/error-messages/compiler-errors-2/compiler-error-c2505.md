@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2505
 ms.assetid: b19f5c53-399d-425e-90db-fe3ca9b40858
-ms.openlocfilehash: bf5ffb9b6bad3db1d264941a6aefa391be521c98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94a6f180c93839646d771509145b2f65a00780fd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165035"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746862"
 ---
 # <a name="compiler-error-c2505"></a>Erreur du compilateur C2505
 
-'symbol' : '__declspec (modifier)' peut uniquement être appliqué aux déclarations ou définitions d’objets globaux ou de données membres static
+'Symbol' : ' __declspec (modifier) 'ne peut s’appliquer qu’aux déclarations ou définitions d’objets globaux ou de données membres static
 
-Un `__declspec` modificateur qui vise uniquement à être utilisé dans une portée globale a été utilisé dans une fonction.
+Un modificateur de `__declspec` conçu pour être utilisé uniquement au niveau de la portée globale a été utilisé dans une fonction.
 
 Pour plus d’informations, consultez [appdomain](../../cpp/appdomain.md) et [process](../../cpp/process.md).
 
-L’exemple suivant génère l’erreur C2505 :
+L’exemple suivant génère l’C2505 :
 
-```
+```cpp
 // C2505.cpp
 // compile with: /clr
 

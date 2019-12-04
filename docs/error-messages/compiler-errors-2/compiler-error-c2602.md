@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2602
 ms.assetid: 6c07a40e-537e-4954-b5c5-1e0e58fe1952
-ms.openlocfilehash: da38600ea099c9b0d73e929a100a8c338bd3388f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cac8bd8aca0a811e1e009a2fdf07cbc200634f2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215527"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737892"
 ---
 # <a name="compiler-error-c2602"></a>Erreur du compilateur C2602
 
-'classe::identificateur' n’est pas un membre de classe de base de 'class'
+'Class :: identifier’n’est pas un membre d’une classe de base de’class'
 
-`Identifier` n’est pas accessible, car il n’est pas un membre hérité à partir de n’importe quelle classe de base.
+Impossible d’accéder à `Identifier`, car il ne s’agit pas d’un membre hérité d’une classe de base.
 
-L’exemple suivant génère l’erreur C2602 :
+L’exemple suivant génère l’C2602 :
 
-```
+```cpp
 // C2602.cpp
 // compile with: /c
 struct X {

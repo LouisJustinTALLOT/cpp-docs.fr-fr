@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3408
 ms.assetid: 1f5ea979-fb1e-4214-b310-6fd6ca8249b1
-ms.openlocfilehash: c374ea60129b315caf4b72dbf2917a9f4c4ba2ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c606ceb446cdf1e6bc6df52853b8d590751eb21
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353002"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760697"
 ---
 # <a name="compiler-error-c3408"></a>Erreur du compilateur C3408
 
@@ -23,7 +23,7 @@ Les attributs ne peuvent pas être appliqués aux définitions de modèles.
 
 L’exemple suivant génère l’erreur C3408.
 
-```
+```cpp
 // C3408.cpp
 // compile with: /c
 template <class T> struct PTS {

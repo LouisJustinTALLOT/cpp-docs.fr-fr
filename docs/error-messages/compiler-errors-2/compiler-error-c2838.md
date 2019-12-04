@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2838
 ms.assetid: 176b2ad6-7a84-4019-b97e-328866054457
-ms.openlocfilehash: 1482efa8b018914a4ebc509464622726ae9ebb20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 168f45a8cca8591d4780d056403de70440d25bec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383007"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757837"
 ---
 # <a name="compiler-error-c2838"></a>Erreur du compilateur C2838
 
 'membre' : nom qualifié non conforme dans une déclaration de membre
 
-Une classe, une structure ou une union utilise un nom qualifié complet pour redéclarer un membre d’une autre classe, structure ou union.
+Une classe, une structure ou une Union utilise un nom qualifié complet pour redéclarer un membre d’une autre classe, structure ou Union.
 
-L’exemple suivant génère l’erreur C2838 :
+L’exemple suivant génère l’C2838 :
 
-```
+```cpp
 // C2838.cpp
 // compile with: /c
 class Bellini {

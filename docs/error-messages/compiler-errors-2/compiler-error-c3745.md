@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3745
 ms.assetid: 1e64aec5-7e53-47e5-bc7d-3905230cfc66
-ms.openlocfilehash: da80a10cbf7246ad0aeaecffe20992d2050abb3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7e6bde7ce07edf7a75f38c37f3e4cbb3c6c3486
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208254"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752455"
 ---
 # <a name="compiler-error-c3745"></a>Erreur du compilateur C3745
 
-'fonction' : seul un événement peut être 'déclenché'
+'Function' : seul un événement peut être’relief'
 
-Seule une fonction définie par le [__event](../../cpp/event.md) mot clé peut être passé à la [__raise](../../cpp/raise.md) mot clé.
+Seule une fonction définie avec le mot clé [__event](../../cpp/event.md) peut être passée au mot clé [__raise](../../cpp/raise.md) .
 
-L’exemple suivant génère l’erreur C3745 :
+L’exemple suivant génère l’C3745 :
 
-```
+```cpp
 // C3745.cpp
 struct E {
    __event void func();

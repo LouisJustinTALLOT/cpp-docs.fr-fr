@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2583
 ms.assetid: b1c952dc-872c-47e4-9fc8-4dd72bcee6f9
-ms.openlocfilehash: b78b9dd69b701e1a66646234d4603973657e90c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0154d1d9a57d0faa795e639640eb6cb42e7c7cb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366392"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748643"
 ---
 # <a name="compiler-error-c2583"></a>Erreur du compilateur C2583
 
-'identificateur' : ' const/volatile' pointeur 'this' est non conforme pour les constructeurs/destructeurs
+'identificateur' : le pointeur’const/volatile' 'This’est illégal pour les constructeurs/destructeurs
 
-Un constructeur ou un destructeur est déclaré `const` ou `volatile`. Cette opération n’est pas autorisée.
+Un constructeur ou un destructeur est déclaré `const` ou `volatile`. Cela n'est pas autorisé.
 
-L’exemple suivant génère l’erreur C2583 :
+L’exemple suivant génère l’C2583 :
 
-```
+```cpp
 // C2583.cpp
 // compile with: /c
 class A {

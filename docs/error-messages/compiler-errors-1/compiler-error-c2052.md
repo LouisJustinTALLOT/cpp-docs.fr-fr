@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2052
 ms.assetid: 922ca43b-b64b-4ef7-9611-c7313be3fd79
-ms.openlocfilehash: 2f7d77dbfcf8eb13b1c4b1a5f50750f954fd9281
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9e891ad60d5eea31a2554320a8c2c584234c435
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408808"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739114"
 ---
 # <a name="compiler-error-c2052"></a>Erreur du compilateur C2052
 
-'type' : type non conforme pour une expression case
+'type' : type non conforme pour l’expression case
 
-Les expressions case doivent être des constantes entières.
+Les expressions Case doivent être des constantes entières.
 
-L’exemple suivant génère C2052 :
+L’exemple suivant génère l’C2052 :
 
-```
+```cpp
 // C2052.cpp
 int main() {
    int index = 0;

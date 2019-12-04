@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3656
 ms.assetid: 88965d85-73b0-4b35-8020-0650c9c94cd8
-ms.openlocfilehash: 9709f3105e957012c05111ea818890b6d1df8259
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 312fc4311120819fe6621d03e5ab6f7cab13cac9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227055"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758279"
 ---
 # <a name="compiler-error-c3656"></a>Erreur du compilateur C3656
 
-'override' : remplacer spécificateur ne peut pas être répété.
+'override' : le spécificateur de substitution ne peut pas être répété
 
-Un mot clé de substitution explicite peut uniquement être spécifié qu’une seule fois. Pour plus d’informations, consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Un mot clé de substitution explicite ne peut être spécifié qu’une seule fois. Pour plus d’informations, consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-L’exemple suivant génère l’erreur C3656 :
+L’exemple suivant génère l’C3656 :
 
-```
+```cpp
 // C3656.cpp
 // compile with: /clr /c
 public interface struct O {

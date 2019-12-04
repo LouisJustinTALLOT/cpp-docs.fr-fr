@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3374
 ms.assetid: 41431299-bd20-47d4-a0c8-1334dd79018b
-ms.openlocfilehash: 4b00b1cea8ac462c82c11d9f5b207706af74959c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 760eb1bafdaab9995d3238c8bc4e3114acd743eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328969"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755575"
 ---
 # <a name="compiler-error-c3374"></a>Erreur du compilateur C3374
 
@@ -21,7 +21,7 @@ L'adresse d'une fonction a été récupérée dans un autre contexte que la cré
 
 L'exemple suivant génère l'erreur C3374 :
 
-```
+```cpp
 // C3374.cpp
 // compile with: /clr
 public delegate void MyDel(int i);
@@ -44,4 +44,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide pratique pour définir et utiliser des délégués (C++/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
+[Guide pratique pour définir et utiliser des délégués (C++-CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)

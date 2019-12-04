@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2490
 ms.assetid: 9de6bddd-b2e2-4ce6-b33b-201a8c2c8c54
-ms.openlocfilehash: 9e06883d0e8b6103eb44d086d3872d86c50a58b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86d9f41db8ba386a64878eebfae989011f637d71
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361802"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757083"
 ---
 # <a name="compiler-error-c2490"></a>Erreur du compilateur C2490
 
-'keyword' est ne pas autorisée dans une fonction avec l’attribut 'naked'
+'keyword’n’est pas autorisé dans une fonction avec l’attribut’Naked'
 
-Une fonction définie en tant que [naked](../../cpp/naked-cpp.md) ne pouvez pas utiliser la gestion des exceptions structurées.
+Une fonction définie comme [Naked](../../cpp/naked-cpp.md) ne peut pas utiliser la gestion structurée des exceptions.
 
-L’exemple suivant génère l’erreur C2490 :
+L’exemple suivant génère l’C2490 :
 
-```
+```cpp
 // C2490.cpp
 // processor: x86
 __declspec( naked ) int func() {

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
-ms.openlocfilehash: 6961d99d1a0d7d0ea063aee5544a1009af2547c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7da9da2daedc79db619f82848dc864d1cb7bd1f1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397404"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750089"
 ---
 # <a name="compiler-error-c3531"></a>Erreur du compilateur C3531
 
-'symbole' : un symbole dont le type contient 'auto' doit avoir un initialiseur
+'Symbol' : un symbole dont le type contient’auto’doit avoir un initialiseur
 
-La variable spécifiée n’a pas une expression d’initialiseur.
+La variable spécifiée n’a pas d’expression d’initialiseur.
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 
-1. Spécifiez une expression d’initialiseur, comme une assignation simple qui utilise la syntaxe avec signe égal, lorsque vous déclarez la variable.
+1. Spécifiez une expression d’initialiseur, telle qu’une assignation simple qui utilise la syntaxe de signe égal, lorsque vous déclarez la variable.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant donne C3531 parce que les variables `x1`, `y1, y2, y3`, et `z2` ne sont pas initialisés.
+L’exemple suivant génère C3531, car les variables `x1`, `y1, y2, y3`et `z2` ne sont pas initialisées.
 
-```
+```cpp
 // C3531.cpp
 // Compile with /Zc:auto
 int main()

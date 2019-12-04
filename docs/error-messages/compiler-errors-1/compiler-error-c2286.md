@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2286
 ms.assetid: 078e0201-35cc-42e2-8dbc-6f8cf557b098
-ms.openlocfilehash: 7d3b8297c5f5da29b99abe78999396e8c44df0fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79697a17d322ae15a21e522efa7dfd5c2342f7a6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182767"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759163"
 ---
 # <a name="compiler-error-c2286"></a>Erreur du compilateur C2286
 
-pointeurs vers des membres de la représentation sous forme de 'identificateur' est déjà défini sur « héritage » - déclaration ignorée
+les pointeurs vers les membres de la représentation’identifier’ont déjà la valeur’Inheritance'-déclaration ignorée
 
-Il existe deux représentations différentes de pointeurs vers membres pour la classe.
+Il existe deux représentations de pointeur vers membre différentes pour la classe.
 
-Pour plus d’informations, consultez [mots clé d’héritage](../../cpp/inheritance-keywords.md).
+Pour plus d’informations, consultez [Mots clés d’héritage](../../cpp/inheritance-keywords.md).
 
 ## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’erreur C2286 :
 
-```
+```cpp
 // C2286.cpp
 // compile with: /c
 class __single_inheritance X;

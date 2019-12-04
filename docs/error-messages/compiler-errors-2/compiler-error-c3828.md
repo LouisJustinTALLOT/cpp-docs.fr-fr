@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3828
 ms.assetid: 8d9cee75-9504-4bc8-88b6-2413618a3f45
-ms.openlocfilehash: f499bb2a8fd6d3148935daec89835b79d2ff5b49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b47ddbf0775cab2bd7214f68d1b4ed6e06e6eea
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390592"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741701"
 ---
 # <a name="compiler-error-c3828"></a>Erreur du compilateur C3828
 
-type d’objet : arguments de positionnement non autorisés pendant la création d’instances de gestion ou WinRTclasses
+'Object type' : arguments de positionnement non autorisés lors de la création d’instances de Managed ou WinRTclasses
 
-Lorsque vous créez un objet d’un type managé ou d’un type Windows Runtime, vous ne pouvez pas utiliser la forme positionnement de l’opérateur [gcnew nouvelle, ref](../../extensions/ref-new-gcnew-cpp-component-extensions.md) ou [nouveau](../../cpp/new-operator-cpp.md).
+Lors de la création d’un objet d’un type managé ou d’un type de Windows Runtime, vous ne pouvez pas utiliser la forme de placement de Operator [ref New, gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md) ou [New](../../cpp/new-operator-cpp.md).
 
 L'exemple suivant génère l'erreur C3828 et montre comment la corriger :
 
-```
+```cpp
 // C3828a.cpp
 // compile with: /clr
 ref struct M {

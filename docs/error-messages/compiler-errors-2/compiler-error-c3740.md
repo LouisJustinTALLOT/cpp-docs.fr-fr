@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3740
 ms.assetid: edb17a90-2307-4df6-943d-580460d26d2b
-ms.openlocfilehash: dd493e4759b2fb70918bf94f14f4ada022e326b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e32c37853f4c877e6260e38daa0c8357ca54a25
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226999"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752663"
 ---
 # <a name="compiler-error-c3740"></a>Erreur du compilateur C3740
 
-modèles ne peut pas émettre ou recevoir des événements
+les modèles ne peuvent pas recevoir d’événements source ou Receive
 
-Une classe ou structure modélisée ne peut pas contenir [événements](../../cpp/event-handling.md).
+Une classe ou un struct basé sur un modèle ne peut pas contenir d' [événements](../../cpp/event-handling.md).
 
-L’exemple suivant génère C3740 :
+L’exemple suivant génère l’C3740 :
 
-```
+```cpp
 // C3740.cpp
 template <typename T>   // Delete the template specification
 struct E {

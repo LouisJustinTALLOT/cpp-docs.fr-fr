@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
-ms.openlocfilehash: 9f7af4e19fab5f5a0539e9fc3bf9dbeffb5c6fbf
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e40b0c2a56c36b92465fb3bb3451a48c88b5822e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344642"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745925"
 ---
 # <a name="compiler-error-c3154"></a>Erreur du compilateur C3154
 
-Attendu ',' avant les points de suspension. Non-virgule séparées par des points de suspension non pris en charge sur les fonctions de tableau de paramètre.
+', 'Attendu avant les points de suspension. Points de suspension séparés par des virgules non pris en charge dans les fonctions de tableau de paramètres.
 
-Une fonction d’argument variable n’a pas été correctement déclarée.
+Une fonction d’argument de variable n’a pas été déclarée correctement.
 
-Pour plus d’informations, consultez [listes d’arguments variables (...) (C + C++ / CLI) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Pour plus d’informations, consultez [listes d’arguments de variables (..C++.) (/CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3154.
+L’exemple suivant génère l’C3154.
 
-```
+```cpp
 // C3154.cpp
 // compile with: /clr
 ref struct R {

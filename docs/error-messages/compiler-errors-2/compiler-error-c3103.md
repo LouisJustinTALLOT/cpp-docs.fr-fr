@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3103
 ms.assetid: 7984bd3e-d51d-43e4-b6f4-08c1e9fb9704
-ms.openlocfilehash: 6a68e39ac92433eadacd666861f9e00431e4a34a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecbbb3f7e9d173957c35e76cbec407aab9ebfafe
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404180"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749933"
 ---
 # <a name="compiler-error-c3103"></a>Erreur du compilateur C3103
 
 'argument' : argument nommé répété
 
-Un attribut ne peut pas répéter les arguments nommés.
+Un attribut ne peut pas répéter des arguments nommés.
 
 Pour plus d'informations, consultez [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3103.
+L’exemple suivant génère l’C3103.
 
-```
+```cpp
 // C3103.cpp
 // compile with: /clr /c
 using namespace System;

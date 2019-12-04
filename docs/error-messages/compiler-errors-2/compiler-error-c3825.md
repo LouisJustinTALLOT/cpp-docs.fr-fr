@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3825
 ms.assetid: 18e204a1-f26e-42c6-8d74-2b49cc95f940
-ms.openlocfilehash: ddb665dab303b3133d4018910c2142a20a889bb0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98d9dbee8b3d290af0ddd1851380758290a21d4a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390579"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741714"
 ---
 # <a name="compiler-error-c3825"></a>Erreur du compilateur C3825
 
-'class' : géré ou WinRTclass peut uniquement prise en charge géré ou WinRTevents
+'classe' : un managé ou un WinRTclass peut uniquement prendre en charge les éléments managés ou WinRTevents
 
 Seuls les événements .NET sont pris en charge dans les classes managées. Seuls les événements Windows Runtime sont pris en charge dans les classes Windows Runtime. Pour corriger cette erreur dans du code managé, modifiez le paramètre de type de `event_source` et `event_receiver` de `native` à `managed`. Vous pouvez également supprimer l'attribut.
 
@@ -23,7 +23,7 @@ Seuls les événements .NET sont pris en charge dans les classes managées. Seul
 
 L'exemple suivant génère l'erreur C3825 et montre comment la corriger :
 
-```
+```cpp
 // C3825a.cpp
 // compile with: /clr
 public delegate void del1();

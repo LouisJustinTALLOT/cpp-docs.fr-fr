@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2657
 ms.assetid: f7cf29a9-684a-4605-9469-ecfee9ba4b03
-ms.openlocfilehash: 4e2816092b3c0c210ae2c544e9bf9a823a9c5d18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e060c2b9a38866a898a3c5ada9e595464050877e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360435"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756095"
 ---
 # <a name="compiler-error-c2657"></a>Erreur du compilateur C2657
 
-' classe :: *' trouvé au début d’une instruction (vous avez oublié de spécifier un type ?)
+'Class ::* 'trouvé au début d’une instruction (n’auriez-vous pas oublié de spécifier un type ?)
 
-Début de la ligne avec un identificateur de pointeur vers membre.
+La ligne commence par un identificateur pointeur vers membre.
 
-Cette erreur peut être dû à un spécificateur de type manquant dans la déclaration d’un pointeur à un membre.
+Cette erreur peut être causée par un spécificateur de type manquant dans la déclaration d’un pointeur vers un membre.
 
-L’exemple suivant génère l’erreur C2657 :
+L’exemple suivant génère l’C2657 :
 
-```
+```cpp
 // C2657.cpp
 class C {};
 int main() {

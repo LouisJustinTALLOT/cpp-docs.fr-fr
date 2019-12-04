@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - C2460
 ms.assetid: d969fca9-3ac5-4e4e-88fc-df05510e2093
-ms.openlocfilehash: 414b6e53cf1610a55db984a1127bfc884102494f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7d20a7658a75a492e19b9e81acaa3b6fce5cae7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230319"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743937"
 ---
 # <a name="compiler-error-c2460"></a>Erreur du compilateur C2460
 
-'identificateur1' : utilise 'identificateur2', qui est défini
+'identificateur1 ' : utilise’identificateur2 ', qui est défini
 
-Une classe ou structure (`identifier2`) est déclaré en tant que membre de lui-même (`identifier1`). Les définitions des classes et des structures récursives ne sont pas autorisées.
+Une classe ou une structure (`identifier2`) est déclarée en tant que membre de lui-même (`identifier1`). Les définitions récursives de classes et de structures ne sont pas autorisées.
 
-L’exemple suivant génère l’erreur C2460 :
+L’exemple suivant génère l’C2460 :
 
-```
+```cpp
 // C2460.cpp
 class C {
    C aC;    // C2460
 };
 ```
 
-Au lieu de cela, utilisez une référence de pointeur de la classe.
+Au lieu de cela, utilisez une référence de pointeur dans la classe.
 
-```
+```cpp
 // C2460.cpp
 class C {
    C * aC;    // OK

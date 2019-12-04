@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3713
 ms.assetid: 75c6b9b6-955b-49bd-9bc8-ced88b496a1f
-ms.openlocfilehash: 8c8c3b5e6016c7f4af471a163463c91d478fea91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d78d1fb3028e8618035c1c6f7bb3eb0f65409dd2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328378"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753352"
 ---
 # <a name="compiler-error-c3713"></a>Erreur du compilateur C3713
 
-'méthode' : une méthode de gestionnaire d’événements doit avoir les mêmes paramètres de fonction que la source de 'method'
+'méthode' : une méthode de gestionnaire d’événements doit avoir les mêmes paramètres de fonction que la’méthode’source
 
-Vous avez défini une méthode de gestionnaire d’événements qui n’utilise pas les mêmes paramètres que la méthode d’événement source. Pour corriger cette erreur, donnez à la méthode de gestionnaire d’événements les mêmes paramètres que ceux de la méthode d’événement source.
+Vous avez défini une méthode de gestionnaire d’événements qui n’utilisait pas les mêmes paramètres que la méthode d’événement source. Pour corriger cette erreur, attribuez à la méthode de gestionnaire d’événements les mêmes paramètres que ceux de la méthode d’événement source.
 
-L’exemple suivant génère l’erreur C3713 :
+L’exemple suivant génère l’C3713 :
 
-```
+```cpp
 // C3713.cpp
 // compile with: /c
 [event_source(native)]

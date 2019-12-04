@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3498
 ms.assetid: 0a5a7817-0872-4119-83bf-980a19113374
-ms.openlocfilehash: 463e210e5a1ac5eb6d197062ed8921f9bbae4ad2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771e8c72ab4386bb45a11983318f412e784f5bc9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380998"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738100"
 ---
 # <a name="compiler-error-c3498"></a>Erreur du compilateur C3498
 
-'var' : vous ne pouvez pas capturer une variable qui a géré ou un WinRTtype
+'var' : vous ne pouvez pas capturer une variable qui a un managé ou un WinRTtype
 
 Vous ne pouvez pas capturer une variable dotée d'un type managé ou d'un type Windows Runtime dans une expression lambda.
 
@@ -27,7 +27,7 @@ Vous ne pouvez pas capturer une variable dotée d'un type managé ou d'un type W
 
 L’exemple suivant génère l’erreur C3498, car une variable dotée d’un type managé figure dans la liste de capture d’une expression lambda :
 
-```
+```cpp
 // C3498a.cpp
 // compile with: /clr
 using namespace System;
@@ -44,7 +44,7 @@ int main()
 
 L’exemple suivant résout l’erreur C3498 en transmettant la variable managée `s` à la liste des paramètres de l’expression lambda :
 
-```
+```cpp
 // C3498b.cpp
 // compile with: /clr
 using namespace System;

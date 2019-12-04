@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2933
 ms.assetid: 394891e3-6b52-4b61-83d2-a1c5125d9bd5
-ms.openlocfilehash: 8764ce7f79243eec931904378522b90a41b633a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 713189b19fd2a839a05782910c7e7083671535f5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385899"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750076"
 ---
 # <a name="compiler-error-c2933"></a>Erreur du compilateur C2933
 
@@ -21,7 +21,7 @@ Vous ne pouvez pas utiliser une classe générique ou de modèle en tant que mem
 
 L’exemple suivant génère l’erreur C2933 :
 
-```
+```cpp
 // C2933.cpp
 // compile with: /c
 template<class T> struct TC { };
@@ -37,7 +37,7 @@ struct MyStruct2 {
 
 L’erreur C2933 peut également se produire lors de l’utilisation de génériques :
 
-```
+```cpp
 // C2933b.cpp
 // compile with: /clr /c
 generic<class T> ref struct GC { };

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3722
 ms.assetid: 3cb28363-5eff-4548-bd0d-d5c615846353
-ms.openlocfilehash: e9a8c9cc26aeedf49484bb1f7357a76d0eb42bb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08087b9cec0a48f0e439d6a2ff9fbe5f4e58d709
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328255"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753092"
 ---
 # <a name="compiler-error-c3722"></a>Erreur du compilateur C3722
 
-un événement générique n’est pas autorisé.
+événement générique non autorisé
 
-Le compilateur autorise uniquement les fonctions, structures et classes génériques.  Pour plus d’informations, consultez la page [Génériques](../../extensions/generics-cpp-component-extensions.md).
+Le compilateur autorise uniquement les classes, structures et fonctions génériques.  Pour plus d’informations, consultez la page [Génériques](../../extensions/generics-cpp-component-extensions.md).
 
-L’exemple suivant génère l’erreur C3722 :
+L’exemple suivant génère l’C3722 :
 
-```
+```cpp
 // C3722.cpp
 // compile with: /clr
 generic <typename T>

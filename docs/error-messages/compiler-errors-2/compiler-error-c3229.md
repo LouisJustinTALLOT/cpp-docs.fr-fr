@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3229
 ms.assetid: f2d90923-aa8b-444f-ab10-1f37dbb864e1
-ms.openlocfilehash: a3716bafd92bbcd5875ab2ba317f0c6826289c59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd1b4ec21cc041b611b20892c96de0e1170e7a11
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173871"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743326"
 ---
 # <a name="compiler-error-c3229"></a>Erreur du compilateur C3229
 
@@ -23,7 +23,7 @@ Vous ne pouvez pas utiliser de paramètres génériques avec `*`, `^`ou `&`.
 
 L’exemple suivant génère l’erreur C3229.
 
-```
+```cpp
 // C3229.cpp
 // compile with: /clr /c
 generic <class T>
@@ -42,7 +42,7 @@ ref class D {
 
 L’exemple suivant génère l’erreur C3229.
 
-```
+```cpp
 // C3229_b.cpp
 // compile with: /clr /c
 generic <class T>   // OK

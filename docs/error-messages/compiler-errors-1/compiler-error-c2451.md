@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2451
 ms.assetid: a64c93a5-ab8d-4d39-ae57-9ee7ef803036
-ms.openlocfilehash: bd69861b42e14ae30b4d57658719e7a2ce3617ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c42f9349323b08a86b0f8bb9ff79e8f0da6ed77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208783"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744119"
 ---
 # <a name="compiler-error-c2451"></a>Erreur du compilateur C2451
 
-expression conditionnelle de type 'type' n’est pas conforme
+l’expression conditionnelle de type’type’n’est pas conforme
 
-L’expression conditionnelle correspond à un type entier.
+L’expression conditionnelle prend la valeur d’un type entier.
 
-L’exemple suivant génère l’erreur C2451 :
+L’exemple suivant génère l’C2451 :
 
-```
+```cpp
 // C2451.cpp
 class B {};
 

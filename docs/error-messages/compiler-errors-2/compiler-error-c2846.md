@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2846
 ms.assetid: bc090ec2-5410-4112-9ec6-261325374375
-ms.openlocfilehash: 4e1e88e538008cff03349a35e193b7bcd471b950
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eef558301ce2d623ef78aab40a7a054cd73037df
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256748"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750609"
 ---
 # <a name="compiler-error-c2846"></a>Erreur du compilateur C2846
 
-'constructeur' : une interface ne peut pas avoir un constructeur
+'Constructor' : une interface ne peut pas avoir de constructeur
 
-Visual C++ [interface](../../cpp/interface.md) ne peut pas avoir un constructeur.
+Une C++ [interface](../../cpp/interface.md) visuelle ne peut pas avoir de constructeur.
 
-L’exemple suivant génère l’erreur C2846 :
+L’exemple suivant génère l’C2846 :
 
-```
+```cpp
 // C2846.cpp
 // compile with: /c
 __interface C {

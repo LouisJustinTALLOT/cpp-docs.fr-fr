@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3743
 ms.assetid: 7ca9a76e-7b60-46d1-ab8b-18600cf1a306
-ms.openlocfilehash: 137913e0c6909712cbb6745666112d315925ab0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0e2082dc87c6236aa11dd3094d056b0024dfc2f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226854"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752468"
 ---
 # <a name="compiler-error-c3743"></a>Erreur du compilateur C3743
 
-peut uniquement raccorder/décrocher la totalité d’une interface quand le paramètre 'layout_dependent' d’event_receiver a la valeur true
+peut uniquement raccorder/décrocher une interface entière quand le paramètre « layout_dependent » de event_receiver a la valeur true
 
-Le [__unhook](../../cpp/unhook.md) fonction varie en fonction du nombre de paramètres en fonction de la valeur passée à la `layout_dependent` paramètre dans le [event_receiver](../../windows/event-receiver.md) classe.
+La fonction [__unhook](../../cpp/unhook.md) varie selon le nombre de paramètres qu’elle prend en fonction de la valeur transmise au paramètre `layout_dependent` dans la classe [event_receiver](../../windows/event-receiver.md) .
 
-L’exemple suivant génère l’erreur C3743 :
+L’exemple suivant génère l’C3743 :
 
-```
+```cpp
 // C3743.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

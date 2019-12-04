@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3886
 ms.assetid: 485f6c12-cc1b-4146-9034-409a0a5e615e
-ms.openlocfilehash: e9e9d4b478d5b53e50203d1f009295e1da444f2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e7ba0fcc76d723cebb5b82315faf36313b1d7db
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402539"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736631"
 ---
 # <a name="compiler-error-c3886"></a>Erreur du compilateur C3886
 
-'var' : une donnée membre littérale doit être initialisée.
+'var' : une donnée membre littérale doit être initialisée
 
-Un [littéral](../../extensions/literal-cpp-component-extensions.md) variable doit être initialisée lorsqu’elle est déclarée.
+Une variable [littérale](../../extensions/literal-cpp-component-extensions.md) doit être initialisée lorsqu’elle est déclaraie.
 
-L’exemple suivant génère l’erreur C3886 :
+L’exemple suivant génère l’C3886 :
 
-```
+```cpp
 // C3886.cpp
 // compile with: /clr /c
 ref struct Y1 {

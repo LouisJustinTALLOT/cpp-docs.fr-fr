@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2380
 ms.assetid: 717b1e6e-ddfe-4bac-a5f3-7f9a4dcb1572
-ms.openlocfilehash: c0494d4ba405a084e7b455139016c98af7d95191
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ca249bc592bd66c2e461a37fdc18204077f51db2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344819"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745432"
 ---
 # <a name="compiler-error-c2380"></a>Erreur du compilateur C2380
 
-type (s) précédant 'identificateur' (constructeur avec type de retour ou redéfinition non conforme du nom de classe actif ?)
+type (s) précédant’identifier' (constructeur avec type de retour ou redéfinition non conforme de Class-Name actuel ?)
 
-Un constructeur retourne une valeur ou redéfinit le nom de classe.
+Un constructeur retourne une valeur ou redéfinit le nom de la classe.
 
 L’exemple suivant génère l’erreur C2326 :
 
-```
+```cpp
 // C2380.cpp
 // compile with: /c
 class C {

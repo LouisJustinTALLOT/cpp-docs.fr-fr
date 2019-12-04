@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
-ms.openlocfilehash: 61f7479986cccfa3851d85bf8e7bc0e9da3d1cea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 994b235b4775c28126d92c241a7e42dc837d4493
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400199"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757200"
 ---
 # <a name="compiler-error-c3767"></a>Erreur du compilateur C3767
 
-'fonction' candidates non accessible
+la ou les fonctions candidates’Function’ne sont pas accessibles
 
-Une fonction friend définie dans une classe n’est pas censé être traitée comme si elle était définie et déclaré dans la portée espace de noms global. Il peut, toutefois, être trouvée par une recherche dépendante d’un argument.
+Une fonction friend définie dans une classe n’est pas censée être traitée comme si elle était définie et déclarée dans la portée de l’espace de noms global. Elle peut toutefois être trouvée par une recherche dépendante d’un argument.
 
-C3767 peut également être dû à une modification avec rupture : les types natifs sont désormais privés par défaut dans un **/CLR** compilation ; consultez [tapez visibilité](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) pour plus d’informations.
+C3767 peut également être dû à une modification avec rupture : les types natifs sont désormais privés par défaut dans une compilation **/CLR** ; Pour plus d’informations, consultez la rubrique [visibilité des types](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) .
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3767 :
+L’exemple suivant génère l’C3767 :
 
-```
+```cpp
 // C3767a.cpp
 // compile with: /clr
 using namespace System;
@@ -54,9 +54,9 @@ int main() {
 };
 ```
 
-L’exemple suivant génère l’erreur C3767 :
+L’exemple suivant génère l’C3767 :
 
-```
+```cpp
 // C3767c.cpp
 // compile with: /clr /c
 

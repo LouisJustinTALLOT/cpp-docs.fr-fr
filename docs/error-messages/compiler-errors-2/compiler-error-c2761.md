@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2761
 ms.assetid: 38c79a05-b56d-485b-820f-95e8c0cb926f
-ms.openlocfilehash: 1236cfaf70781b6ca80db1a317a0c1b01b0f2740
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbe2b3089d387d356073febf2b27bbb44b6be7e3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228230"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759501"
 ---
 # <a name="compiler-error-c2761"></a>Erreur du compilateur C2761
 
-'fonction' : redéclaration de fonction membre non autorisée
+'fonction' : la redéclaration de la fonction membre n’est pas autorisée
 
-Impossible de redéclarer une fonction membre. Vous pouvez la définir, mais pas redéclarer.
+Vous ne pouvez pas redéclarer une fonction membre. Vous pouvez le définir, mais pas le redéclarer.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C2761 :.
+L’exemple suivant génère l’C2761.
 
-```
+```cpp
 // C2761.cpp
 class a {
    int t;
@@ -36,9 +36,9 @@ void a::test;  // C2761
 
 ## <a name="example"></a>Exemple
 
-Les membres non static d’une classe ou d’une structure ne peuvent pas être définis.  L’exemple suivant génère l’erreur C2761 :.
+Les membres non static d’une classe ou d’une structure ne peuvent pas être définis.  L’exemple suivant génère l’C2761.
 
-```
+```cpp
 // C2761_b.cpp
 // compile with: /c
 struct C {

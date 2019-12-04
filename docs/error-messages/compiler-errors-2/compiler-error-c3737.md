@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3737
 ms.assetid: ca2aeb23-2491-4ccb-8838-884abf7065c8
-ms.openlocfilehash: b6c2a85556e96ff6176e158b7d75a844bb5710d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25dbb8897db45cbddaaf7f0530bcb2a8653b03cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327884"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752793"
 ---
 # <a name="compiler-error-c3737"></a>Erreur du compilateur C3737
 
-'délégué' : un délégué ne peut pas avoir une convention d’appel explicite
+'Delegate' : un délégué ne peut pas avoir de convention d’appel explicite
 
-Vous ne pouvez pas spécifier le [convention d’appel](../../cpp/calling-conventions.md) pour un `delegate`.
+Vous ne pouvez pas spécifier la [Convention d’appel](../../cpp/calling-conventions.md) pour un `delegate`.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3737 :
+L’exemple suivant génère l’C3737 :
 
-```
+```cpp
 // C3737a.cpp
 // compile with: /clr
 delegate void __stdcall MyFunc();   // C3737

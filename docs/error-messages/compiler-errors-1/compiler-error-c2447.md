@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2447
 ms.assetid: d1bd6e9a-ee42-4510-ae5e-6b0378f7b931
-ms.openlocfilehash: 64dca8313af8b640b7b03c1ab27a1a31fa90de09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14fec374927fc798956a249773d9bec814e7a823
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301966"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744184"
 ---
 # <a name="compiler-error-c2447"></a>Erreur du compilateur C2447
 
@@ -21,9 +21,9 @@ Le compilateur a rencontré une accolade ouvrante inattendue au niveau de l'éte
 
 Cette erreur peut également être provoquée par une liste d’arguments formels en langage C à l’ancien format. Pour résoudre ce problème, refactorisez la liste d'arguments afin d'utiliser le style moderne, c'est-à-dire entre parenthèses.
 
-L’exemple suivant génère C2447 :
+L’exemple suivant génère l’C2447 :
 
-```
+```cpp
 // C2447.cpp
 int c;
 {}       // C2447
