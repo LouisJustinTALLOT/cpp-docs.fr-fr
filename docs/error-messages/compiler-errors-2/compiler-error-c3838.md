@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3838
 ms.assetid: d6f470c2-131a-4a8c-843a-254acd43da83
-ms.openlocfilehash: c8664c9df837d44ab6e356d54ff9e35c3776778a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 468fc5e8cb6b3a76880f12fe0aab14810f458a90
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208081"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741350"
 ---
 # <a name="compiler-error-c3838"></a>Erreur du compilateur C3838
 
-ne peut pas hériter explicitement de 'type'
+héritage explicite impossible à partir de’type'
 
-Spécifié `type` ne peut pas agir en tant que classe de base dans n’importe quelle classe.
+La `type` spécifiée ne peut pas agir en tant que classe de base dans une classe.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3838 :
+L’exemple suivant génère l’C3838 :
 
-```
+```cpp
 // C3838a.cpp
 // compile with: /clr /c
 public ref class B : public System::Enum {};   // C3838

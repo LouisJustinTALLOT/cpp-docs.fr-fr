@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2970
 ms.assetid: 21d90348-20d3-438c-b278-efdbfb93a7d2
-ms.openlocfilehash: 425d1bf50d56c4455ccd9292b300e744625d34c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af30ccc4a71c51d042d6f7807a648a1eef066a70
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256334"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742663"
 ---
 # <a name="compiler-error-c2970"></a>Erreur du compilateur C2970
 
-'classe' : paramètre de modèle 'param' : 'arg' : une expression impliquant des objets avec une liaison interne ne peut pas être utilisée comme argument sans type
+'classe' : paramètre de modèle’param' : 'arg' : une expression impliquant des objets avec une liaison interne ne peut pas être utilisée comme argument sans type
 
-Vous ne pouvez pas utiliser le nom ou l’adresse d’une variable statique comme argument de modèle. La classe de modèle attend une valeur const pouvant être évaluée au moment de la compilation.
+Vous ne pouvez pas utiliser le nom ou l’adresse d’une variable statique comme argument de modèle. La classe de modèle attend une valeur const qui peut être évaluée au moment de la compilation.
 
-L’exemple suivant génère C2970 :
+L’exemple suivant génère l’C2970 :
 
-```
+```cpp
 // C2970.cpp
 // compile with: /c
 static int si;

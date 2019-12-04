@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2511
 ms.assetid: df999efe-fe2b-418b-bb55-4af6a0592631
-ms.openlocfilehash: 9d9ba48b0607e7a30b8748d4e9ae4f7025f11dea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff78cb50b274fe40d513739264bd7e9894bbed9d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165019"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746563"
 ---
 # <a name="compiler-error-c2511"></a>Erreur du compilateur C2511
 
-'identificateur' : la fonction membre introuvable dans 'class' surchargée
+'identificateur' : fonction membre surchargée introuvable dans’classe'
 
 Aucune version de la fonction n’est déclarée avec les paramètres spécifiés.  Causes possibles :
 
-1. Paramètres erronés passés à la fonction.
+1. Paramètres incorrects passés à la fonction.
 
-1. Les paramètres passés dans un ordre incorrect.
+1. Les paramètres sont passés dans un ordre incorrect.
 
 1. Orthographe incorrecte des noms de paramètres.
 
-L’exemple suivant génère l’erreur C2511 :
+L’exemple suivant génère l’C2511 :
 
-```
+```cpp
 // C2511.cpp
 // compile with: /c
 class C {

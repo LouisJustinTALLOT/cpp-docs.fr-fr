@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3703
 ms.assetid: 7e3677d9-f2be-4c26-998f-423564e9023c
-ms.openlocfilehash: 0b34760bc3f5b23148ce84cf590685efad2008df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1071623c8dbaef52a6a391d8858e7502de9c74b4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324634"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757993"
 ---
 # <a name="compiler-error-c3703"></a>Erreur du compilateur C3703
 
-'Gestionnaire d’événements' : une méthode de gestionnaire d’événements doit avoir la même classe de stockage en tant que la source 'event'
+'gestionnaire d’événements' : une méthode de gestionnaire d’événements doit avoir la même classe de stockage que le’Event’source
 
-Un [événement](../../cpp/event-handling.md) a une classe de stockage autre que le Gestionnaire d’événements auquel il est lié. Par exemple, cette erreur se produit si le Gestionnaire d’événements est une fonction membre statique et l’événement n’est pas statique. Pour corriger cette erreur, donnez à l’événement et le Gestionnaire d’événements la même classe de stockage.
+Un [événement](../../cpp/event-handling.md) a une classe de stockage différente de celle du gestionnaire d’événements auquel il est raccordé. Par exemple, cette erreur se produit si le gestionnaire d’événements est une fonction membre statique et que l’événement n’est pas statique. Pour corriger cette erreur, attribuez à l’événement et au gestionnaire d’événements la même classe de stockage.
 
-L’exemple suivant génère l’erreur C3703 :
+L’exemple suivant génère l’C3703 :
 
-```
+```cpp
 // C3703.cpp
 // C3703 expected
 #include <stdio.h>

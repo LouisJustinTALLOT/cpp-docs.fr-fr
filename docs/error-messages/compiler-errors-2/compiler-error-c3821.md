@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3821
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
-ms.openlocfilehash: 248431afb25aa4b9480818f76388f6ad56d8e006
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25023277258d33ab77bde18f6cdfabc862f50a63
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384229"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741740"
 ---
 # <a name="compiler-error-c3821"></a>Erreur du compilateur C3821
 
-'fonction' : fonction ou type managé ne peut pas être utilisée dans une fonction non managée
+'fonction' : impossible d’utiliser un type ou une fonction managée dans une fonction non managée
 
-Fonctions avec un assembly inline ou [setjmp](../../c-runtime-library/reference/setjmp.md) ne peut pas contenir des types valeur ou des classes managées. Pour corriger cette erreur, supprimez l’assembly inline et `setjmp` ou supprimez les objets gérés.
+Les fonctions avec un assembly inline ou [setjmp](../../c-runtime-library/reference/setjmp.md) ne peuvent pas contenir de types valeur ou de classes managées. Pour corriger cette erreur, supprimez l’assembly inline et `setjmp` ou supprimez les objets managés.
 
-C3821 peut également se produire si vous essayez d’utiliser le stockage automatique dans une fonction vararg.  Pour plus d’informations, consultez [listes d’arguments variables (...) (C + C++ / CLI) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md) et [sémantique de pile C++ pour les Types référence](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+C3821 peut également se produire si vous essayez d’utiliser le stockage automatique dans une fonction vararg.  Pour plus d’informations, consultez [listes d’arguments de variable (..C++.) (/CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md) et [ C++ sémantique de pile pour les types référence](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3821.
+L’exemple suivant génère l’C3821.
 
-```
+```cpp
 // C3821a.cpp
 // compile with: /clr /c
 public ref struct R {};
@@ -36,9 +36,9 @@ void test1(...) {
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3821.
+L’exemple suivant génère l’C3821.
 
-```
+```cpp
 // C3821b.cpp
 // compile with: /clr
 // processor: /x86

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2894
 ms.assetid: 4e250579-2b59-4993-a6f4-49273e7ecf06
-ms.openlocfilehash: 4184f6360e36a4e8ca0cfc55dc6d9c515cf655d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffc87008c1874f8f5c7e275778237f611dcbb5af
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385964"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760821"
 ---
 # <a name="compiler-error-c2894"></a>Erreur du compilateur C2894
 
-les modèles ne peut pas être déclarés comme ayant une liaison de « C »
+les modèles ne peuvent pas être déclarés comme ayant une liaison’C'
 
-Cette erreur peut être due à un modèle défini à l’intérieur d’un `extern` bloc de « C ».
+Cette erreur peut être due à un modèle défini à l’intérieur d’un bloc `extern` « C ».
 
-L’exemple suivant génère l’erreur C2894 :
+L’exemple suivant génère l’C2894 :
 
-```
+```cpp
 // C2894.cpp
 extern "C" {
    template<class T> class stack {};   // C2894 fail
@@ -30,9 +30,9 @@ extern "C" {
 }
 ```
 
-L’exemple suivant génère l’erreur C2894 :
+L’exemple suivant génère l’C2894 :
 
-```
+```cpp
 // C2894b.cpp
 // compile with: /c
 extern "C" template<class T> void f(const T &aT) {}   // C2894

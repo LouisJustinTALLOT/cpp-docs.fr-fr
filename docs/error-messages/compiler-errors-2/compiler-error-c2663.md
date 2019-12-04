@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2663
 ms.assetid: 1e93e368-fd52-42bf-9908-9b6df467c8c9
-ms.openlocfilehash: d74326e49edd980896276e2c6e67526d8d769cb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07b63202d8f171dfb69f4bb294b392152b9290b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360292"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756030"
 ---
 # <a name="compiler-error-c2663"></a>Erreur du compilateur C2663
 
-'fonction' : nombre surcharges n’ont pas de conversion autorisée pour le pointeur 'this'
+'fonction' : les surcharges de nombre n’ont pas de conversion autorisée pour le pointeur’This'
 
-Le compilateur n’a pas pu convertir `this` à une des versions surchargées de la fonction membre.
+Le compilateur n’a pas pu convertir `this` en aucune des versions surchargées de la fonction membre.
 
-Cette erreur peut être provoquée en appelant une non -`const` fonction membre sur un `const` objet.  Solutions possibles :
+Cette erreur peut être causée par l’appel d’une fonction membre non`const` sur un objet `const`.  Solutions possibles :
 
-1. Supprimer le `const` à partir de la déclaration de l’objet.
+1. Supprimez le `const` de la déclaration de l’objet.
 
-1. Ajouter `const` à une des surcharges de fonction membre.
+1. Ajoutez `const` à l’une des surcharges de la fonction membre.
 
-L’exemple suivant génère l’erreur C2663 :
+L’exemple suivant génère l’C2663 :
 
-```
+```cpp
 // C2663.cpp
 struct C {
    void f() volatile {}

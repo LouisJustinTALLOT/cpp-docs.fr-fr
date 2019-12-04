@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: 93058d34ca9a17ab175a55a7bc7b953d369e65c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec902266550e591623894823e6336bd2436bfbd5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324764"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758032"
 ---
 # <a name="compiler-error-c3699"></a>Erreur du compilateur C3699
 
-'opérateur' : Impossible d’utiliser cette indirection sur le type 'type'
+'operator' : impossible d’utiliser cette indirection sur le type’type'
 
-Une tentative a été effectuée à l’utilisation de l’indirection qui n’est pas autorisée sur `type`.
+Une tentative d’utilisation d’une indirection n’est pas autorisée sur `type`.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3699.
+L’exemple suivant génère l’C3699.
 
-```
+```cpp
 // C3699.cpp
 // compile with: /clr /c
 using namespace System;
@@ -36,9 +36,9 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-Une propriété triviale ne peut pas avoir de type référence. Pour plus d'informations, voir [property](../../extensions/property-cpp-component-extensions.md) . L’exemple suivant génère C3699.
+Une propriété triviale ne peut pas avoir de type référence. Pour plus d'informations, voir [property](../../extensions/property-cpp-component-extensions.md) . L’exemple suivant génère l’C3699.
 
-```
+```cpp
 // C3699_b.cpp
 // compile with: /clr /c
 ref struct C {
@@ -49,9 +49,9 @@ ref struct C {
 
 ## <a name="example"></a>Exemple
 
-L’équivalent d’une syntaxe « pointeur vers un autre pointeur » est un handle vers une référence de suivi. L’exemple suivant génère C3699.
+L’équivalent d’une syntaxe « pointeur vers pointeur » est un handle vers une référence de suivi. L’exemple suivant génère l’C3699.
 
-```
+```cpp
 // C3699_c.cpp
 // compile with: /clr /c
 using namespace System;

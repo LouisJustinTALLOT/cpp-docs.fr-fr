@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: 2fb2aa86a1fd8f8e0710d787682fdd44abd941ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d51d4c7873d43a655dc11fa8e0fa297b8a69bff
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408665"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735942"
 ---
 # <a name="compiler-error-c2059"></a>Erreur du compilateur C2059
 
-Erreur de syntaxe : 'token'
+erreur de syntaxe : 'Token'
 
 Le jeton a provoqué une erreur de syntaxe.
 
 L’exemple suivant génère un message d’erreur pour la ligne qui déclare `j`.
 
-```
+```cpp
 // C2059e.cpp
 // compile with: /c
 // C2143 expected
@@ -29,11 +29,11 @@ L’exemple suivant génère un message d’erreur pour la ligne qui déclare `j
    int j*; // C2059
 ```
 
-Pour déterminer la cause de l’erreur, examinez la ligne qui est répertoriée dans le message d’erreur, mais également les lignes au-dessus de lui. Si l’examen des lignes ne donne aucun indice sur le problème, essayez de le commenter la ligne qui est répertoriée dans le message d’erreur et éventuellement plusieurs lignes au-dessus de lui.
+Pour déterminer la cause de l’erreur, examinez non seulement la ligne qui est indiquée dans le message d’erreur, mais également les lignes au-dessus. Si l’examen des lignes ne donne aucune indication sur le problème, essayez de commenter la ligne qui est indiquée dans le message d’erreur et peut-être plusieurs lignes au-dessus de celle-ci.
 
-Si le message d’erreur se produit sur un symbole qui suit immédiatement un `typedef` variable, assurez-vous que la variable est définie dans le code source.
+Si le message d’erreur se produit sur un symbole qui suit immédiatement une variable `typedef`, assurez-vous que la variable est définie dans le code source.
 
-L’erreur C2059 est déclenché lorsqu’un nom de symbole de préprocesseur est utilisé à nouveau en tant qu’identificateur. Dans l’exemple suivant, le compilateur voit `DIGITS.ONE` en tant que le numéro 1, qui n’est pas valide en tant qu’un nom d’élément enum :
+L’exception C2059 est levée lorsqu’un nom de symbole de préprocesseur est réutilisé comme identificateur. Dans l’exemple suivant, le compilateur voit `DIGITS.ONE` comme le nombre 1, qui n’est pas valide en tant que nom d’élément enum :
 
 ```cpp
 #define ONE 1
@@ -44,9 +44,9 @@ enum class DIGITS {
 };
 ```
 
-Vous pouvez obtenir l’erreur C2059 si un symbole a la valeur nothing, comme peut se produire lorsque **/D**_symbole_ **=** sert à compiler.
+Vous pouvez obtenir C2059 si un symbole prend la valeur Nothing, comme cela peut se produire lorsque l' **=** de_symboles_ **/d**est utilisée pour compiler.
 
-```
+```cpp
 // C2059a.cpp
 // compile with: /DTEST=
 #include <stdio.h>
@@ -60,11 +60,11 @@ int main() {
 }
 ```
 
-Un autre cas dans lequel l’erreur C2059 peut se produire est lorsque vous compilez une application qui spécifie une structure dans les arguments par défaut pour une fonction. La valeur par défaut pour un argument doit être une expression. Une liste d’initialiseurs, par exemple, un utilisée pour initialiser une structure, n’est pas une expression.  Pour résoudre ce problème, définissez un constructeur pour effectuer l’initialisation requise.
+L’apparition d’une application qui spécifie une structure dans les arguments par défaut d’une fonction est un autre cas dans lequel C2059 peut se produire. La valeur par défaut d’un argument doit être une expression. Une liste d’initialiseurs, par exemple, qui est utilisée pour initialiser une structure, n’est pas une expression.  Pour résoudre ce problème, définissez un constructeur pour effectuer l’initialisation requise.
 
-L’exemple suivant génère l’erreur C2059 :
+L’exemple suivant génère l’exemple C2059 :
 
-```
+```cpp
 // C2059b.cpp
 // compile with: /c
 struct ag_type {
@@ -78,11 +78,11 @@ void func(ag_type arg = {5, 7.0});   // C2059
 void func(ag_type arg = ag_type(5, 7.0));   // OK
 ```
 
-L’erreur C2059 peut se produire pour une conversion incorrecte.
+C2059 peut se produire pour un cast mal formé.
 
-L’exemple suivant génère l’erreur C2059 :
+L’exemple suivant génère l’exemple C2059 :
 
-```
+```cpp
 // C2059c.cpp
 // compile with: /clr
 using namespace System;
@@ -96,11 +96,11 @@ int main() {
 }
 ```
 
-L’erreur C2059 peut également se produire si vous essayez de créer un espace de noms qui contient un point.
+L’opération C2059 peut également se produire si vous tentez de créer un nom d’espace de noms qui contient un point.
 
-L’exemple suivant génère l’erreur C2059 :
+L’exemple suivant génère l’exemple C2059 :
 
-```
+```cpp
 // C2059d.cpp
 // compile with: /c
 namespace A.B {}   // C2059
@@ -111,7 +111,7 @@ namespace A  {
 }
 ```
 
-L’erreur C2059 peut se produire lorsqu’un opérateur qui permettre qualifier un nom (`::`, `->`, et `.`) doit être suivi par le mot clé `template`, comme illustré dans cet exemple :
+C2059 peut se produire lorsqu’un opérateur qui peut qualifier un nom (`::`, `->`et `.`) doit être suivi du mot clé `template`, comme illustré dans cet exemple :
 
 ```cpp
 template <typename T> struct Allocator {
@@ -125,7 +125,7 @@ template <typename X, typename AY> struct Container {
 };
 ```
 
-Par défaut, C++ suppose que `AY::Rebind` n’est pas un modèle ; par conséquent, ce qui suit `<` est interprété comme un inférieur-signe supérieur.  Vous devez indiquer au compilateur explicitement qui `Rebind` est un modèle afin de pouvoir analyser correctement le crochet angulaire. Pour corriger cette erreur, utilisez le `template` mot clé sur le nom du type dépendants, comme illustré ici :
+Par défaut, C++ suppose que `AY::Rebind` n’est pas un modèle ; par conséquent, la `<` suivante est interprétée comme un signe inférieur à.  Vous devez indiquer au compilateur explicitement que `Rebind` est un modèle afin qu’il puisse analyser correctement le Chevron. Pour corriger cette erreur, utilisez le mot clé `template` sur le nom du type dépendant, comme illustré ici :
 
 ```cpp
 template <typename T> struct Allocator {

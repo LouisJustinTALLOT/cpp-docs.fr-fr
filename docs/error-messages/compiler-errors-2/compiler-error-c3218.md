@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3218
 ms.assetid: 0eea19e0-503e-4e07-ae8b-2cb2e95922cd
-ms.openlocfilehash: 87084f9751b1593ec93a3062f23714bba403da9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 386a0c180dd01161ebccdd2b04e899e0cc999614
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182520"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737983"
 ---
 # <a name="compiler-error-c3218"></a>Erreur du compilateur C3218
 
-'type' : type non autorisé comme contrainte
+'type' : type non autorisé en tant que contrainte
 
-Pour un type soit une contrainte, il doit être un type valeur ou une référence à une classe managée ou une interface.
+Pour qu’un type soit une contrainte, il doit s’agir d’un type valeur ou d’une référence à une classe ou une interface managée.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3218.
+L’exemple suivant génère l’C3218.
 
-```
+```cpp
 // C3218.cpp
 // compile with: /clr /c
 class A {};

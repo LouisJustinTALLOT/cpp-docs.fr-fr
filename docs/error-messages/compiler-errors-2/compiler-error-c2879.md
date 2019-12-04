@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2879
 ms.assetid: ac92b645-2394-49de-8632-43d44e0553ed
-ms.openlocfilehash: 9ac8f5e5edb1a6ed7314c5b5d125fcc9bfbe67de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c7238faf94a2493894534ae5684634b65bb4342
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378898"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736293"
 ---
 # <a name="compiler-error-c2879"></a>Erreur du compilateur C2879
 
-'symbol' : seul un espace de noms existant peut être renommé par une définition d’alias d’espace de noms
+'Symbol' : seul un espace de noms existant peut être attribué à un autre nom par une définition d’alias d’espace de noms
 
-Vous ne pouvez pas créer un [alias d’espace de noms](../../cpp/namespaces-cpp.md#namespace_aliases) pour un symbole autre qu’un espace de noms.
+Vous ne pouvez pas créer un [alias d’espace de noms](../../cpp/namespaces-cpp.md#namespace_aliases) pour un autre symbole qu’un espace de noms.
 
-L’exemple suivant génère l’erreur C2879 :
+L’exemple suivant génère l’C2879 :
 
-```
+```cpp
 // C2879.cpp
 int main() {
    int i;

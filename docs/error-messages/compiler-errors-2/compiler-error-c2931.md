@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2931
 ms.assetid: 33430407-b149-4ba3-baf8-b0dae1ea3a5d
-ms.openlocfilehash: 8fffa6e272da64ca7baa35af635b2b0a7d40c6f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03c5c1865343afdc0fd7a67ce393c7e1a5d2966f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385743"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757694"
 ---
 # <a name="compiler-error-c2931"></a>Erreur du compilateur C2931
 
@@ -19,11 +19,11 @@ ms.locfileid: "62385743"
 
 Vous ne pouvez pas utiliser une classe ou un modèle générique en tant que fonction membre d’une autre classe.
 
-Cette erreur peut être provoquée si des accolades sont incorrectement appariées.
+Cette erreur peut se produire si des accolades sont appariées incorrectement.
 
 L’exemple suivant génère l’erreur C2931 :
 
-```
+```cpp
 // C2931.cpp
 // compile with: /c
 template<class T>
@@ -40,7 +40,7 @@ struct MyStruct2 {
 
 L’erreur C2931 peut également se produire lors de l’utilisation de génériques.
 
-```
+```cpp
 // C2931b.cpp
 // compile with: /clr /c
 generic<class T> ref struct GC {};

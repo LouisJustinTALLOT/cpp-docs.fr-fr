@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-ms.openlocfilehash: c5a4feae5c8805a27c020b532fd58e0562e46b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f548c72a0e95c533ed711fe9f2583a7abd6c500
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404115"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760759"
 ---
 # <a name="compiler-error-c3114"></a>Erreur du compilateur C3114
 
 'argument' : argument d’attribut nommé non valide
 
-Pour un membre de données de classe attribut soit un argument nommé valide, elle ne doit pas être marquée comme `static`, `const`, ou `literal`. Si une propriété, la propriété ne doit pas être `static` et doit avoir get et accesseurs set.
+Pour qu’un membre de classe d’attributs soit un argument nommé valide, il ne doit pas être marqué `static`, `const`ou `literal`. Si une propriété, la propriété ne doit pas être `static` et doit avoir les accesseurs obtenir et définir.
 
-Pour plus d’informations, consultez [propriété](../../extensions/property-cpp-component-extensions.md) et [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
+Pour plus d’informations, consultez [attributs définis par l’utilisateur](../../extensions/user-defined-attributes-cpp-component-extensions.md)et la [propriété](../../extensions/property-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3114.
+L’exemple suivant génère l’C3114.
 
-```
+```cpp
 // C3114.cpp
 // compile with: /clr /c
 public ref class A : System::Attribute {

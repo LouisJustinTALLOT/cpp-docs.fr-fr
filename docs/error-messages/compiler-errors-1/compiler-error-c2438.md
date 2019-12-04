@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2438
 ms.assetid: 3a0ab3ba-d0e4-4d8f-971d-e503397cc827
-ms.openlocfilehash: b2861090b5f7629c7f0cd94ea38a99e888909258
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da6443f3f319c864b53f6d077e8bf99faffc5888
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375754"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744314"
 ---
 # <a name="compiler-error-c2438"></a>Erreur du compilateur C2438
 
-'identificateur' : Impossible d’initialiser les données de classes static via un constructeur
+'identificateur' : impossible d’initialiser les données de classe statique via un constructeur
 
 Un constructeur est utilisé pour initialiser un membre statique d’une classe. Les membres statiques doivent être initialisés dans une définition en dehors de la déclaration de classe.
 
-L’exemple suivant génère l’erreur C2438 :
+L’exemple suivant génère l’C2438 :
 
-```
+```cpp
 // C2438.cpp
 struct X {
    X(int i) : j(i) {}   // C2438

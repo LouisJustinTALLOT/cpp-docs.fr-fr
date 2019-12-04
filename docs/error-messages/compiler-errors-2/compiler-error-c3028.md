@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3028
 ms.assetid: 175e697f-8e8f-492a-8456-6240ffbbb900
-ms.openlocfilehash: 2a1d76d21005ecffc74f9fc64d4bdeb197e9653d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a497de92d782f65bfc27db27755718e7c6bbdbe
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360045"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735866"
 ---
 # <a name="compiler-error-c3028"></a>Erreur du compilateur C3028
 
-'membre' : seul un membre de données de variable ou static peut être utilisé dans une clause de partage de données
+'membre' : seule une variable ou un membre de données statique peut être utilisé dans une clause de partage de données
 
-Un symbole autre qu’une donnée membre variable ou statique a été passé à la clause reduction.
+Un symbole autre qu’une variable ou un membre de données statique a été passé à la clause Reduction.
 
-L’exemple suivant génère l’erreur C3028 :
+L’exemple suivant génère l’C3028 :
 
-```
+```cpp
 // C3028.cpp
 // compile with: /openmp /link vcomps.lib
 int g_i;

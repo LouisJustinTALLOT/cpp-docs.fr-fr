@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2495
 ms.assetid: bb7066fe-3549-4901-97e4-157f3c04dd57
-ms.openlocfilehash: 83a0359fce175b12dd18e2500d63d7a86bed9f0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e16404e8c23a902a2cdbfc436cecdff21e68b6a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360851"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757018"
 ---
 # <a name="compiler-error-c2495"></a>Erreur du compilateur C2495
 
-'identificateur' : 'nothrow' peut uniquement être appliqué aux définitions ou déclarations de fonction
+'identifier' : 'nothrow’ne peut s’appliquer qu’aux définitions ou déclarations de fonctions
 
-Le [nothrow](../../cpp/nothrow-cpp.md) attribut étendu peut être appliqué aux définitions ou déclarations de fonctions.
+L’attribut étendu [nothrow](../../cpp/nothrow-cpp.md) ne peut être appliqué qu’aux définitions ou déclarations de fonctions.
 
-L’exemple suivant génère l’erreur C2495 :
+L’exemple suivant génère l’C2495 :
 
-```
+```cpp
 // C2495.cpp
 // compile with: /c
 __declspec(nothrow) class X {   // C2495

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2647
 ms.assetid: 1034589e-bc3e-41a6-831f-2a1a4b8a2500
-ms.openlocfilehash: ac69dbb4de23be05d375126947fe003ef75fb85e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9553c85efeedb4d3eee4bd40f9e3b86707fd7eb1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222783"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758383"
 ---
 # <a name="compiler-error-c2647"></a>Erreur du compilateur C2647
 
-'opérateur' : Impossible de déréférencer un 'type1' sur un 'type2'
+'operator' : impossible de déréférencer un’type1 'sur un’type2 '
 
-L’opérande gauche d’un opérateur pointeur vers membre ( `->*` ou `.*` ) ne peut pas être implicitement converti en un type lié à l’opérateur de droite.
+L’opérande gauche d’un opérateur pointeur vers membre (`->*` ou `.*`) ne peut pas être converti implicitement en un type lié à l’opérateur Right.
 
-L’exemple suivant génère C2647 :
+L’exemple suivant génère l’C2647 :
 
-```
+```cpp
 // C2647.cpp
 class C {};
 class D {};

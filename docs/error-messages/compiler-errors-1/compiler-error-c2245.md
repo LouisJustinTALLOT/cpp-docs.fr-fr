@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2245
 ms.assetid: 08aaeadf-10ec-485a-b2a6-6e775289082b
-ms.openlocfilehash: 53288d86a59fe2cd31ddac4af7766360544c65c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc3f8e17d8d3746bdc243193f1349939bca5e164
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403035"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759202"
 ---
 # <a name="compiler-error-c2245"></a>Erreur du compilateur C2245
 
@@ -21,7 +21,7 @@ Une fonction spécifiée comme friend est introuvable par le compilateur.
 
 L’exemple suivant génère l’erreur C2245 :
 
-```
+```cpp
 // C2245.cpp
 // compile with: /c
 class B {

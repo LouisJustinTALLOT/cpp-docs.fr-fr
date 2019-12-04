@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2228
 ms.assetid: 901cadb1-ce90-4ae0-a360-547a9ba2ca18
-ms.openlocfilehash: 20e295d09e39a12ed8163ec980fa304cd4167218
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56eed6aeff5a955253a440d5931d66118f4604e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404336"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759280"
 ---
 # <a name="compiler-error-c2228"></a>Erreur du compilateur C2228
 
 la partie gauche de '.identifier' doit avoir un class/struct/union
 
-L’opérande à gauche de l’opérateur point (.) n’est pas une classe, une structure ou une union.
+L’opérande à gauche du point (.) n’est pas une classe, une structure ou une Union.
 
 L’exemple suivant génère l’erreur C2228 :
 
-```
+```cpp
 // C2228.cpp
 int i;
 struct S {

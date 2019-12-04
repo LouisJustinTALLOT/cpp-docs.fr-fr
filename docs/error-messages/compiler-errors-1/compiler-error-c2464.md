@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2464
 ms.assetid: ace953d6-b414-49ee-bfef-90578a8da00c
-ms.openlocfilehash: a00ac997f73175eeab08a0132128e48e8fc58feb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4952f4702d871ecf1c818b1fc7394e54a1a295f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338894"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743885"
 ---
 # <a name="compiler-error-c2464"></a>Erreur du compilateur C2464
 
-'identificateur' : Impossible d’utiliser 'new' pour allouer une référence
+'identificateur' : impossible d’utiliser’New’pour allouer une référence
 
-Un identificateur de référence a été alloué avec le `new` opérateur. Références ne sont pas des objets de mémoire, par conséquent, `new` ne peut pas retourner un pointeur vers les. Utilisez la syntaxe de déclaration de variable standard pour déclarer une référence.
+Un identificateur de référence a été alloué avec l’opérateur `new`. Les références ne sont pas des objets mémoire, donc `new` ne peut pas retourner un pointeur vers ces objets. Utilisez la syntaxe de déclaration de variable standard pour déclarer une référence.
 
-L’exemple suivant génère l’erreur C2464 :
+L’exemple suivant génère l’C2464 :
 
-```
+```cpp
 // C2464.cpp
 int main() {
    new ( int& ir );   // C2464

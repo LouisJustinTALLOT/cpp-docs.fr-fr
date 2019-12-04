@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
-ms.openlocfilehash: 5bf4e2e42b4534d47a2a7d3c9a838c404a99ba68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d99214f3ad7e7db1edc215d94c98e9cf9ec4ca2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328878"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742897"
 ---
 # <a name="compiler-error-c3379"></a>Erreur du compilateur C3379
 
-'classe' : une classe imbriquée ne peut pas avoir de spécificateur d’accès d’assembly dans le cadre de sa déclaration
+'classe' : une classe imbriquée ne peut pas avoir de spécificateur d’accès à l’assembly dans le cadre de sa déclaration
 
-Lorsqu’il est appliqué à un type managé, telles que la classe ou un struct, le [public](../../cpp/public-cpp.md) et [privé](../../cpp/private-cpp.md) mots clés indiquent si la classe doit être exposée dans les métadonnées de l’assembly. `public` ou `private` ne peut pas être appliqué à une classe imbriquée, qui héritera de l’accès d’assembly de la classe englobante.
+En cas d’application à un type managé, tel qu’une classe ou un struct, les mots clés [public](../../cpp/public-cpp.md) et [Private](../../cpp/private-cpp.md) indiquent si la classe sera exposée par le biais des métadonnées de l’assembly. `public` ou `private` ne peuvent pas être appliqués à une classe imbriquée, ce qui hérite de l’accès à l’assembly de la classe englobante.
 
-Lorsqu’il est utilisé avec [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), le `ref` et `value` mots clés indiquent qu’une classe est managée (consultez [les Classes et Structs](../../extensions/classes-and-structs-cpp-component-extensions.md)).
+En cas d’utilisation avec [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), les mots clés `ref` et `value` indiquent qu’une classe est managée (consultez [classes et structs](../../extensions/classes-and-structs-cpp-component-extensions.md)).
 
-L’exemple suivant génère l’erreur C3379 :
+L’exemple suivant génère l’C3379 :
 
-```
+```cpp
 // C3379a.cpp
 // compile with: /clr
 using namespace System;

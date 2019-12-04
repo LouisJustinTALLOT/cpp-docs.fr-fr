@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2422
 ms.assetid: ef0ec302-4028-4778-b134-0b8cea4bcad9
-ms.openlocfilehash: 524eeadb6cf066d3eba3a7e88c45a9e2b993c0ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39f779ee846cf4f328f9c7af59ae394d97d7a3ca
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402883"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744730"
 ---
 # <a name="compiler-error-c2422"></a>Erreur du compilateur C2422
 
-substitution de segment non conforme dans 'opérande'
+substitution de segment non conforme dans’Operand'
 
-Le code assembleur inline utilise incorrectement un opérateur de substitution de segment (deux-points) sur un opérande.  Plusieurs causes sont possibles :
+Le code assembleur inline utilise incorrectement un opérateur de substitution de segment (deux-points) sur un opérande.  Les causes possibles sont les suivantes :
 
-- Le Registre précédant l’opérateur n’est pas un Registre de segment.
+- Le Registre qui précède l’opérateur n’est pas un registre de segment.
 
-- Le Registre précédant l’opérateur n’est pas le seul Registre de segment de l’opérande.
+- Le Registre qui précède l’opérateur n’est pas le seul registre de segment dans l’opérande.
 
-- L’opérateur de substitution de segment apparaît au sein d’un opérateur d’indirection (crochets).
+- L’opérateur de substitution de segment apparaît dans un opérateur d’indirection (crochets).
 
 - L’expression qui suit l’opérateur de substitution de segment n’est pas un opérande immédiat ou un opérande de mémoire.
 
-L’exemple suivant génère l’erreur C2422 :
+L’exemple suivant génère l’C2422 :
 
-```
+```cpp
 // C2422.cpp
 // processor: x86
 int main() {

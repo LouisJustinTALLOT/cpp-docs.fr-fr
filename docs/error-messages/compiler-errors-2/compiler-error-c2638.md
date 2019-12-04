@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2638
 ms.assetid: 9d4275e8-406d-455e-afee-3a37799230e0
-ms.openlocfilehash: 0c4c1e73c97f51bb0e52a618829ffb0bed417a45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6053e9bcf49159e8ceefe9264d30319493c4cf1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395428"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748344"
 ---
 # <a name="compiler-error-c2638"></a>Erreur du compilateur C2638
 
-'identificateur' : modificateur __based non conforme sur pointeur vers membre
+'identificateur' : modificateur de __based non conforme sur un pointeur vers un membre
 
-Le `__based` modificateur ne peut pas être utilisé pour les pointeurs vers des membres.
+Le modificateur `__based` ne peut pas être utilisé pour les pointeurs vers des membres.
 
-L’exemple suivant génère l’erreur C2638 :
+L’exemple suivant génère l’C2638 :
 
-```
+```cpp
 // C2638.cpp
 void *a;
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2612
 ms.assetid: 6faacfd6-4455-41a2-808e-0f6799f84d6d
-ms.openlocfilehash: b2d4888c1be39c4f48f0ca674426c7af612b9bb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 630e5b1cc6e99ffda28f50c09bccbbc2fea07172
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379023"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737697"
 ---
 # <a name="compiler-error-c2612"></a>Erreur du compilateur C2612
 
-'char' non conforme dans une liste d’initialiseurs de base/membre de fin
+« char » de fin non conforme dans la liste d’initialiseurs de base/membre
 
-Un caractère apparaît après la dernière base ou membres dans une liste d’initialiseurs.
+Un caractère apparaît après la dernière base ou membre d’une liste d’initialiseurs.
 
-L’exemple suivant génère l’erreur C2612 :
+L’exemple suivant génère l’C2612 :
 
-```
+```cpp
 // C2612.cpp
 class A {
 public:

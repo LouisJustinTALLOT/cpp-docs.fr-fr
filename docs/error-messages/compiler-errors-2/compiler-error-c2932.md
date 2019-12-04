@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2932
 ms.assetid: c28e88d9-e654-4367-bfb4-13c780bca9bd
-ms.openlocfilehash: 004767d4adbd87a2a21ec73fa720d6992eb31044
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1afe47e27cb38b2a3886854ce6efe34273c9132
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386068"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750102"
 ---
 # <a name="compiler-error-c2932"></a>Erreur du compilateur C2932
 
@@ -21,7 +21,7 @@ Vous ne pouvez pas utiliser une classe générique ou de modèle en tant que mem
 
 L’exemple suivant génère l’erreur C2932 :
 
-```
+```cpp
 // C2932.cpp
 // compile with: /c
 template<class T>
@@ -35,7 +35,7 @@ struct MyStruct {
 
 L’erreur C2932 peut également se produire lors de l’utilisation de génériques :
 
-```
+```cpp
 // C2932b.cpp
 // compile with: /clr /c
 generic<class T>

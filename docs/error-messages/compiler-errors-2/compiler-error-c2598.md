@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2598
 ms.assetid: 40777c62-39ba-441e-b081-f49f94b43547
-ms.openlocfilehash: 521a67bdf1e1f64853a3f87933b3fa714c8e33f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1ad34d454c5dc80feaac1df1383854391100ab0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257749"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759319"
 ---
 # <a name="compiler-error-c2598"></a>Erreur du compilateur C2598
 
-spécification de liaison doit être portée globale
+la spécification de la liaison doit être au niveau de la portée globale
 
-Le spécificateur de liaison est déclaré dans la portée locale.
+Le spécificateur de liaison est déclaré au niveau de la portée locale.
 
-L’exemple suivant génère l’erreur C2598 :
+L’exemple suivant génère l’C2598 :
 
-```
+```cpp
 // C2598.cpp
 // compile with: /c
 void func() {

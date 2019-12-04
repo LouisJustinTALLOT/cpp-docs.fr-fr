@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3671
 ms.assetid: d684e4ae-87e2-4424-80bb-6f346652c831
-ms.openlocfilehash: c4534b11f3aedf638f69337fb6a7af778e086bb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 030a6acb19c0907956d2a5b833b683821591e5c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215015"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758110"
 ---
 # <a name="compiler-error-c3671"></a>Erreur du compilateur C3671
 
-'function_1' : fonction ne substitue pas 'function_2'
+'function_1 ' : la fonction ne substitue pas’function_2 '
 
-Lorsque vous utilisez la syntaxe de substitution explicite, le compilateur génère une erreur si une fonction n’est pas remplacée.  Consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md) pour plus d’informations.
+Lors de l’utilisation de la syntaxe de substitution explicite, le compilateur génère une erreur si une fonction n’est pas substituée.  Pour plus d’informations, consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3671.
+L’exemple suivant génère l’C3671.
 
-```
+```cpp
 // C3671.cpp
 // compile with: /clr /c
 ref struct S {

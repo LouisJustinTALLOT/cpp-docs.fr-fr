@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: 3f236f18faa92df660ed677df293373fe9f0800c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360370"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756056"
 ---
 # <a name="compiler-error-c2660"></a>Erreur du compilateur C2660
 
-'fonction' : fonction n’accepte pas de paramètres numériques
+'fonction' : la fonction ne prend pas de paramètres numériques
 
 La fonction est appelée avec un nombre incorrect de paramètres.
 
-C2660 peut se produire si vous appelez accidentellement une fonction API de Windows plutôt que d’une fonction de membre MFC du même nom. Pour résoudre ce problème :
+C2660 peut se produire si vous appelez accidentellement une fonction API Windows plutôt qu’une fonction membre MFC portant le même nom. Pour résoudre ce problème :
 
-- Ajuster l’appel de fonction à respecter le format de l’appel de fonction membre.
+- Ajustez l’appel de fonction pour qu’il soit conforme au format de l’appel de fonction membre.
 
-- Utiliser l’opérateur de résolution de portée (`::`) pour indiquer au compilateur de rechercher le nom de fonction dans l’espace de noms global.
+- Utilisez l’opérateur de résolution de portée (`::`) pour indiquer au compilateur de rechercher le nom de la fonction dans l’espace de noms global.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C2660.
+L’exemple suivant génère l’C2660.
 
-```
+```cpp
 // C2660.cpp
 void func( int, int ) {}
 
@@ -41,9 +41,9 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-C2660 peut également se produire si vous essayez d’appeler directement la méthode Dispose d’un type managé. Pour plus d’informations, consultez [destructeurs et finaliseurs](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). L’exemple suivant génère l’erreur C2660.
+C2660 peut également se produire si vous tentez d’appeler directement la méthode dispose d’un type managé. Pour plus d’informations, consultez [destructeurs et finaliseurs](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). L’exemple suivant génère l’C2660.
 
-```
+```cpp
 // C2660_a.cpp
 // compile with: /clr
 using namespace System;
@@ -65,7 +65,7 @@ int main() {
 
 C2660 se produit si une classe dérivée masque une fonction.
 
-```
+```cpp
 // C2660b.cpp
 // C2660 expected
 #include <stdio.h>
@@ -96,7 +96,7 @@ int main() {
 
 C2660 peut se produire si vous appelez une propriété indexée de manière incorrecte.
 
-```
+```cpp
 // C2660c.cpp
 // compile with: /clr
 ref class X {
@@ -121,7 +121,7 @@ int main() {
 
 C2660 peut se produire si vous appelez une propriété indexée de manière incorrecte.
 
-```
+```cpp
 // C2660d.cpp
 // compile with: /clr
 ref class A{
@@ -142,9 +142,9 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-C2660 peut se produire si vous définissez un nouvel opérateur dans une classe de modèle, mais où l’opérateur new crée un objet dont le type est autre que le type englobant.
+C2660 peut se produire si vous définissez un nouvel opérateur dans une classe de modèle, mais que l’opérateur New crée un objet dont le type est différent du type englobant.
 
-```
+```cpp
 // C2660e.cpp
 // compile with: /c
 #include <malloc.h>

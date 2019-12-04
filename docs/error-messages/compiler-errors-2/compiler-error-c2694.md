@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2694
 ms.assetid: 8dc2cec2-67ae-4e16-8c0c-374425aca8bc
-ms.openlocfilehash: 4897512f6bd27465b7281d7a27757918128202d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca378c3e0ce88b454cb89fc08470a277a7be6f47
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367744"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755224"
 ---
 # <a name="compiler-error-c2694"></a>Erreur du compilateur C2694
 
-'override' : fonction virtuelle de substitution a des spécifications d’exception moins restrictive que la classe de base membre virtuel fonction 'base'
+'override' : la fonction virtuelle de substitution a moins de spécifications d’exception restrictives que la fonction membre virtuelle’base’de la classe de base
 
-Une fonction virtuelle a été substituée, mais sous [/Za](../../build/reference/za-ze-disable-language-extensions.md), la fonction de substitution a moins restrictif [spécification d’exception](../../cpp/exception-specifications-throw-cpp.md).
+Une fonction virtuelle a été remplacée, mais sous [/za](../../build/reference/za-ze-disable-language-extensions.md), la fonction de substitution avait une spécification d' [exception](../../cpp/exception-specifications-throw-cpp.md)moins restrictive.
 
-L’exemple suivant génère l’erreur C2694 :
+L’exemple suivant génère l’C2694 :
 
-```
+```cpp
 // C2694.cpp
 // compile with: /Za /c
 class MyBase {

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3097
 ms.assetid: b24bd8f8-e04f-4fbb-be57-4feb9165572e
-ms.openlocfilehash: c1d5603ceb31313add075d334a7d27cbe878906d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71a7762d03c600fed71d76a19088fb70ce311f67
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404232"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756810"
 ---
 # <a name="compiler-error-c3097"></a>Erreur du compilateur C3097
 
@@ -25,7 +25,7 @@ Pour plus d'informations, consultez [User-Defined Attributes](../../extensions/u
 
 L’exemple suivant génère l’erreur C3097.
 
-```
+```cpp
 // C3097.cpp
 // compile with: /clr /c
 using namespace System;

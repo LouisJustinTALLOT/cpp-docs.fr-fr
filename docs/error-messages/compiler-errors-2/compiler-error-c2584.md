@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2584
 ms.assetid: 836e2c0a-86c0-4742-b432-beb0191ad20e
-ms.openlocfilehash: b61ad65555b5d5232468206f6170223c5f160a34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c3b10ecd6808ccd864ecf877fe9f1d0e9f30a3a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360467"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748630"
 ---
 # <a name="compiler-error-c2584"></a>Erreur du compilateur C2584
 
-'Class' : diriger base 'Base2' n’est pas accessible ; déjà une base de 'Base1'
+'Classe' : la base directe’base2 'est inaccessible ; une base de’Base1 'est déjà
 
-`Class` déjà dérive directement `Base1`. `Base2` dérive également de `Base1`. `Class` Impossible de dériver `Base2` car cela équivaudrait héritant (indirectement) `Base1` là encore, ce qui n’est pas légal, car `Base1` est déjà une classe de base directe.
+`Class` dérive déjà directement à partir de `Base1`. `Base2` dérive également de `Base1`. `Class` ne peut pas dériver de `Base2`, car cela signifierait hériter (indirectement) de `Base1`, ce qui n’est pas légal, car `Base1` est déjà une classe de base directe.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C2584.
+L’exemple suivant génère l’C2584.
 
-```
+```cpp
 // C2584.cpp
 // compile with: /c
 struct A1 {

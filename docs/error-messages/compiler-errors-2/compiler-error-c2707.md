@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: ce86f69b36b915b3e757b5d18430c99cb288e4e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161002"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760437"
 ---
 # <a name="compiler-error-c2707"></a>Erreur du compilateur C2707
 
 'identificateur' : contexte incorrect pour une fonction intrinsèque
 
-Fonctions intrinsèques de gestion des exceptions structurées ne sont pas valides dans certains contextes :
+Les intrinsèques de gestion des exceptions structurées ne sont pas valides dans certains contextes :
 
-- `_exception_code()` en dehors d’un filtre d’exception ou `__except` bloc
+- `_exception_code()` en dehors d’un filtre d’exception ou d’un bloc de `__except`
 
 - `_exception_info()` en dehors d’un filtre d’exception
 
-- `_abnormal_termination()` à l’extérieur un `__finally` bloc
+- `_abnormal_termination()` en dehors d’un bloc de `__finally`
 
-Pour résoudre l’erreur, n’oubliez pas que les fonctions intrinsèques de gestion des exceptions sont placées dans le contexte approprié.
+Pour résoudre l’erreur, assurez-vous que les fonctions intrinsèques de gestion des exceptions sont placées dans le contexte approprié.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C2707.
+L’exemple suivant génère l’C2707.
 
-```
+```cpp
 // C2707.cpp
 #include <windows.h>
 #include <stdio.h>

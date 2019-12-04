@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3352
 ms.assetid: f233bed7-474e-425f-aad2-7801578169d4
-ms.openlocfilehash: 6641f05c8daa5ad505c0bcb8d29a369ad5fd9a9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b679a89bb768ad7a50d0bbaa7b814c7a72f9f4c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402630"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740427"
 ---
 # <a name="compiler-error-c3352"></a>Erreur du compilateur C3352
 
-'fonction' : la fonction spécifiée ne correspond pas au type de délégué 'type'
+'fonction' : la fonction spécifiée ne correspond pas au type délégué’type'
 
 Les listes de paramètres pour `function` et le délégué ne correspondent pas.
 
-Pour plus d’informations, consultez [delegate (Extensions du composant C++)](../../extensions/delegate-cpp-component-extensions.md).
+Pour plus d’informations, consultez [DelegateC++ (extensions de composant)](../../extensions/delegate-cpp-component-extensions.md).
 
-L’exemple suivant génère l’erreur C3352 :
+L’exemple suivant génère l’C3352 :
 
-```
+```cpp
 // C3352.cpp
 // compile with: /clr
 delegate int D( int, int );

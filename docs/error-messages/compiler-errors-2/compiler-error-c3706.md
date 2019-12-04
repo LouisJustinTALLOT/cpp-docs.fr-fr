@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
-ms.openlocfilehash: 2d474db5a4d50aed7b59e6f48fb5a3e8165f10c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 810ec59a814b04349913648fb49a03eb63912cd9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400290"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757980"
 ---
 # <a name="compiler-error-c3706"></a>Erreur du compilateur C3706
 
 'fonction' : doit être une interface COM pour déclencher des événements COM
 
-L’interface d’événement qui vous permet de déclencher des événements COM doit être une interface COM. Dans ce cas, l’interface doit être définie à l’aide d’un élément visuel C++ un attribut ou importée à l’aide [#import](../../preprocessor/hash-import-directive-cpp.md) à partir d’une bibliothèque de types possédant l’attribut embedded_idl de #import.
+L’interface d’événement que vous utilisez pour déclencher des événements COM doit être une interface COM. Dans ce cas, l’interface doit être définie à l’aide d' C++ un attribut visuel ou importée à l’aide d' [#import](../../preprocessor/hash-import-directive-cpp.md) d’une bibliothèque de types avec l’attribut embedded_idl de #import.
 
-Notez que le `#include` lignes des fichiers d’en-tête ATL indiqués dans l’exemple ci-dessous sont nécessaires pour utiliser les événements COM. Pour corriger cette erreur, rendez `IEvents` (l’interface d’événement) une interface COM en appliquant une de ces attributs à la définition d’interface : [objet](../../windows/object-cpp.md), [double](../../windows/dual.md), ou [ dispinterface](../../windows/dispinterface.md).
+Notez que les `#include` lignes des fichiers d’en-tête ATL indiqués dans l’exemple ci-dessous sont requises pour l’utilisation d’événements COM. Pour remédier à cette erreur, faites `IEvents` (l’interface d’événement) une interface COM en appliquant l’un des attributs suivants à la définition de l’interface : [Object](../../windows/object-cpp.md), [Dual](../../windows/dual.md)ou [dispinterface](../../windows/dispinterface.md).
 
 Si une interface provient d’un fichier d’en-tête généré par MIDL, le compilateur ne la reconnaît pas comme une interface COM.
 
-L’exemple suivant génère l’erreur C3706 :
+L’exemple suivant génère l’C3706 :
 
-```
+```cpp
 // C3706.cpp
 // compile with: /c
 // C3706 expected

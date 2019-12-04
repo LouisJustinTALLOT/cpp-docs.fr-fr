@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2755
 ms.assetid: 8ee4eeb6-4757-4efe-9100-38ff4a96f1de
-ms.openlocfilehash: c2238058dc4b7df6bbe33e98d6ccde996f36b782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcd4bb5d49f6f6e807ad240c377debb220138c93
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227970"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759553"
 ---
 # <a name="compiler-error-c2755"></a>Erreur du compilateur C2755
 
-'param' : paramètre sans type d’une spécialisation partielle doit être un identificateur simple
+'param' : un paramètre sans type d’une spécialisation partielle doit être un identificateur simple
 
-Le paramètre sans type doit être un identificateur simple, quelque chose que le compilateur peut être convertie au moment de la compilation à un identificateur unique ou une valeur constante.
+Le paramètre sans type doit être un identificateur simple, que le compilateur peut résoudre au moment de la compilation en un identificateur unique ou une valeur constante.
 
-L’exemple suivant génère l’erreur C2755 :
+L’exemple suivant génère l’C2755 :
 
-```
+```cpp
 // C2755.cpp
 template<int I, int J>
 struct A {};

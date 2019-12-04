@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2728
 ms.assetid: 65635f91-1cd1-46e4-9ad7-14726d0546af
-ms.openlocfilehash: 1fbbc3d63386ebe98a447de8b7166a5263d2168f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac9efa88fc4ab17a656172c44de2e49e82108108
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208413"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755666"
 ---
 # <a name="compiler-error-c2728"></a>Erreur du compilateur C2728
 
@@ -23,7 +23,7 @@ Pour plus d'informations, consultez [tableau](../../extensions/arrays-cpp-compon
 
 L'exemple suivant génère l'erreur C2728 et montre comment la corriger :
 
-```
+```cpp
 // C2728.cpp
 // compile with: /clr
 

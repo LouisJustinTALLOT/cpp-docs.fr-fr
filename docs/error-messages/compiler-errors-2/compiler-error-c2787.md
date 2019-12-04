@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2787
 ms.assetid: 34cb57e6-cafe-4ce7-bcc6-53d194629bd0
-ms.openlocfilehash: 656fcd8a1a0429546189de8c3f01ab928c6333ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00f2097dc556055f0becf1d81d784c9126c66f63
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256861"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739595"
 ---
 # <a name="compiler-error-c2787"></a>Erreur du compilateur C2787
 
-'identificateur' : aucun GUID n’a été associé à cet objet
+'identificateur' : aucun GUID associé à cet objet
 
-Le [__uuidof](../../cpp/uuidof-operator.md) opérateur accepte un type défini par l’utilisateur avec un GUID associé ou un objet d’un type défini par l’utilisateur. Cette erreur se produit lorsque l’argument est un type défini par l’utilisateur avec aucun GUID.
+L’opérateur [__uuidof](../../cpp/uuidof-operator.md) prend un type défini par l’utilisateur avec un GUID attaché ou un objet de ce type défini par l’utilisateur. Cette erreur se produit lorsque l’argument est un type défini par l’utilisateur sans GUID.
 
-L’exemple suivant génère l’erreur C2787 :
+L’exemple suivant génère l’C2787 :
 
-```
+```cpp
 // C2787.cpp
 #include <windows.h>
 struct F {};

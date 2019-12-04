@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2452
 ms.assetid: a4ec7642-6660-4c7a-9866-853d1cc67daf
-ms.openlocfilehash: 3e2d583efa2b634cf49d8588fa398bd81f24c607
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e8173c2697a931e5b292dc974b6d1b22f376794
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208757"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744106"
 ---
 # <a name="compiler-error-c2452"></a>Erreur du compilateur C2452
 
 'type' : type de source non valide pour safe_cast
 
-Le type de source pour [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) n’était pas valide.  Par exemple, tous les types dans un `safe_cast` opération doivent être des types CLR.
+Le type de source de [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) n’est pas valide.  Par exemple, tous les types dans une opération de `safe_cast` doivent être des types CLR.
 
-L’exemple suivant génère l’erreur C2452 :
+L’exemple suivant génère l’C2452 :
 
-```
+```cpp
 // C2452.cpp
 // compile with: /clr
 

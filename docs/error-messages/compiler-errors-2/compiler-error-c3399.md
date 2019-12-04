@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3399
 ms.assetid: 306ad199-d150-4f6c-bcf1-24a7948b93be
-ms.openlocfilehash: d05a861a2baedb86482503b6860098f12c41bd78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d20b5e816930969278536fe3771df4ad38c3c86b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300425"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737515"
 ---
 # <a name="compiler-error-c3399"></a>Erreur du compilateur C3399
 
@@ -19,13 +19,13 @@ ms.locfileid: "62300425"
 
 Quand vous spécifiez la contrainte `gcnew()` , vous indiquez que le type de contrainte aura un constructeur sans paramètre. Il est donc incorrect d’essayer d’instancier ce type et de passer un paramètre.
 
-Consultez [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) pour plus d’informations.
+Pour plus d’informations, consultez [contraintesC++sur les paramètres de type générique (/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) .
 
 ## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’erreur C3399.
 
-```
+```cpp
 // C3399.cpp
 // compile with: /clr /c
 generic <class T>

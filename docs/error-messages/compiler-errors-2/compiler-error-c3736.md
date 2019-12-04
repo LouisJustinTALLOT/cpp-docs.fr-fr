@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3736
 ms.assetid: 579b773c-41e7-40ea-8382-2e3ce2667f4c
-ms.openlocfilehash: e31d68a13ebd9c5267fd285d43ebc66ae8b53182
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c4626164fe8fe3fb932fba3ae8e87c774f5aeec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328014"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752845"
 ---
 # <a name="compiler-error-c3736"></a>Erreur du compilateur C3736
 
-'event' : doit être une méthode ou, dans le cas d’événements managés, éventuellement un membre de données
+'Event' : doit être une méthode ou, dans le cas d’événements managés, éventuellement un membre de données
 
-Événements native et COM doivent être des méthodes. Les événements .NET peuvent également être membres de données.
+Les événements natifs et COM doivent être des méthodes. Les événements .NET peuvent également être des membres de données.
 
-L’exemple suivant génère l’erreur C3736 :
+L’exemple suivant génère l’C3736 :
 
-```
+```cpp
 // C3736.cpp
 struct A {
    __event int e();

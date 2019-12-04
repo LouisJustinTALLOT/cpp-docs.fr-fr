@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2326
 ms.assetid: 01a5ea40-de83-4e6f-a4e8-469f441258e0
-ms.openlocfilehash: 36df63ce1ac5bcdb444721be3aa10f9867ae7c58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cf72cddbb1f71f29153ff8d544787285a077f9c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300895"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747798"
 ---
 # <a name="compiler-error-c2326"></a>Erreur du compilateur C2326
 
@@ -23,7 +23,7 @@ Le code tente de modifier une variable membre, ce qui n’est pas possible.
 
 L’exemple suivant génère l’erreur C2326 :
 
-```
+```cpp
 // C2326.cpp
 void MyFunc() {
    int i;

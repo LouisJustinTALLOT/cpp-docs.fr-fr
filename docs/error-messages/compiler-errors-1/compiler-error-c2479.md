@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2479
 ms.assetid: c74c7869-e65b-4ca1-b6fa-eb39fed4458a
-ms.openlocfilehash: 8b3b226ccbe42ec88ed92c64b97256d80a983254
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7bddd21faab8c55f349c6e03fbcd3db42c3fa7d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383256"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743560"
 ---
 # <a name="compiler-error-c2479"></a>Erreur du compilateur C2479
 
-'identifier' : 'allocate( )' is only valid for data items of static extent
+'identifier' : 'Allocate () 'n’est valide que pour les éléments de données d’étendue statique
 
-Le `__declspec( allocate())` syntaxe peut être utilisée pour les données statiques uniquement.
+La syntaxe de `__declspec( allocate())` peut être utilisée uniquement pour les données statiques.
 
-L’exemple suivant génère l’erreur C2479 :
+L’exemple suivant génère l’C2479 :
 
-```
+```cpp
 // C2479.cpp
 // compile with: /c
 #pragma section("mycode", read)

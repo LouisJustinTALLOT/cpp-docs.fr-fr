@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3754
 ms.assetid: 14b877bc-9277-40ec-af1c-196a58b45f10
-ms.openlocfilehash: e03ac39213429fbbb9f289be3514718985c04b4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65b6a24c47df5fc40f0305de4890c2ef2bc3c28b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386640"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757291"
 ---
 # <a name="compiler-error-c3754"></a>Erreur du compilateur C3754
 
-constructeur délégué : fonction membre 'fonction' ne peut pas être appelée sur une instance de type 'type'
+constructeur délégué : la fonction membre’Function’ne peut pas être appelée sur une instance de type’type'
 
-Un appel à une fonction via un pointeur vers un type qui ne contient-elle pas de la fonction.
+Un appel à une fonction a été effectué à l’aide d’un pointeur vers un type qui ne contient pas la fonction.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3754 :
+L’exemple suivant génère l’C3754 :
 
-```
+```cpp
 // C3754a.cpp
 // compile with: /clr
 using namespace System;

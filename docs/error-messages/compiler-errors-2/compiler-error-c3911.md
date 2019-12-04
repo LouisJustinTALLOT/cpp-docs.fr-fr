@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3911
 ms.assetid: b786da59-0e99-479d-bc0d-551126e940f2
-ms.openlocfilehash: 25bf8def4e0a8085e20dc6ba9a04dc7f27cee651
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f803d6f575d78fd7a9a9157f06b3f64c4eeb3d77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406574"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748786"
 ---
 # <a name="compiler-error-c3911"></a>Erreur du compilateur C3911
 
-'méthode_accesseurs_événement' : fonction doit avoir le type 'signature'
+'event_accessor_method' : la fonction doit avoir le type’signature'
 
-Méthode d’accesseur d’un événement n’a pas été correctement déclarée.
+La méthode d’accesseur d’un événement n’a pas été correctement déclarée.
 
-Pour plus d’informations, consultez [événement](../../extensions/event-cpp-component-extensions.md).
+Pour plus d’informations, consultez [Event](../../extensions/event-cpp-component-extensions.md).
 
-L’exemple suivant génère l’erreur C3911 :
+L’exemple suivant génère l’C3911 :
 
-```
+```cpp
 // C3911.cpp
 // compile with: /clr
 using namespace System;

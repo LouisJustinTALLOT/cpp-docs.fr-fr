@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2599
 ms.assetid: 88515f36-7589-47e2-862e-0de8b18d6668
-ms.openlocfilehash: 872c3a66d4738c1a69990dffdbbc59cee9e90002
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c722335660653df7e533ec25d4708f42c16846ef
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395467"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740765"
 ---
 # <a name="compiler-error-c2599"></a>Erreur du compilateur C2599
 
-'enum' : une déclaration anticipée de type enum n’est pas autorisée
+'enum' : la déclaration anticipée d’un type enum n’est pas autorisée
 
-Le compilateur prend en charge n’est plus la déclaration anticipée d’une énumération managée.
+Le compilateur ne prend plus en charge la déclaration anticipée d’une énumération managée.
 
-Une déclaration anticipée d’un type enum n’est pas autorisée sous [/Za](../../build/reference/za-ze-disable-language-extensions.md).
+La déclaration anticipée d’un type enum n’est pas autorisée sous [/za](../../build/reference/za-ze-disable-language-extensions.md).
 
-L’exemple suivant génère l’erreur C2599 :
+L’exemple suivant génère l’C2599 :
 
-```
+```cpp
 // C2599.cpp
 // compile with: /clr /c
 enum class Status;   // C2599

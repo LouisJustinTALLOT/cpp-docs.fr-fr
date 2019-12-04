@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2734
 ms.assetid: e53a77b7-825c-42d1-a655-90e1c93b833e
-ms.openlocfilehash: c20fcc7673c00ea7cfad32bdc3feae042f1f9086
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a188948a6d7ea7902b2df548819ffb8c40486dbc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350765"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755770"
 ---
 # <a name="compiler-error-c2734"></a>Erreur du compilateur C2734
 
-'identificateur' : un objet const doit être initialisé si pas extern
+'identificateur' : l’objet const doit être initialisé s’il n’est pas externe
 
-L’identificateur est déclaré `const` mais non initialisé ou `extern`.
+L’identificateur est déclaré `const` mais pas initialisé ou `extern`.
 
-L’exemple suivant génère l’erreur C2734 :
+L’exemple suivant génère l’C2734 :
 
-```
+```cpp
 // C2734.cpp
 const int j;   // C2734
 extern const int i;   // OK, declared as extern

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2883
 ms.assetid: 5c6d689d-ed42-41ad-b5c0-e9c2e0b8c356
-ms.openlocfilehash: 3f32307e519394433927d49aa92333fdff7b70f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb6b1043d976cfeb8cb92c8780c5b84ea9700b8b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378867"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760952"
 ---
 # <a name="compiler-error-c2883"></a>Erreur du compilateur C2883
 
-'name' : déclaration de fonction est en conflit avec 'identificateur' introduit par une déclaration using
+'name' : la déclaration de fonction est en conflit avec’identifier’introduit par une déclaration using
 
-Vous avez essayé de définir une fonction plusieurs fois. La première définition a été effectuée à partir d’un espace de noms avec un `using` déclaration. La deuxième était une définition locale.
+Vous avez essayé de définir une fonction plusieurs fois. La première définition a été effectuée à partir d’un espace de noms avec une déclaration de `using`. La seconde était une définition locale.
 
-L’exemple suivant génère l’erreur C2883 :
+L’exemple suivant génère l’C2883 :
 
-```
+```cpp
 // C2883.cpp
 namespace A {
    void z(int);

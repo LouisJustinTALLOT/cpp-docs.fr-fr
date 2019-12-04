@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3804
 ms.assetid: 7c4cda28-ec96-4d04-937b-36dbd9944722
-ms.openlocfilehash: c3c00d1d07306a9e8dc67d3f75a5cb25d8f03aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bccfc723a9d62b794fa657e399bd94549448490
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400082"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755289"
 ---
 # <a name="compiler-error-c3804"></a>Erreur du compilateur C3804
 
-'accesseur_propriété' : les méthodes d’accesseur pour une propriété doit être toutes statiques ou non statiques
+'property_accessor' : les méthodes d’accesseur pour une propriété doivent être toutes statiques ou non statiques
 
-Lorsque vous définissez une propriété non triviale, les fonctions d’accesseur peuvent être statiques ou instance, mais pas les deux.
+Lors de la définition d’une propriété non triviale, les fonctions d’accesseur peuvent être statiques ou d’instance, mais pas les deux.
 
 Pour plus d'informations, voir [property](../../extensions/property-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3804.
+L’exemple suivant génère l’C3804.
 
-```
+```cpp
 // C3804.cpp
 // compile with: /c /clr
 ref struct A {

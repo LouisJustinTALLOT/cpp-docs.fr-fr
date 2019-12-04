@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2319
 ms.assetid: 25263e6e-f5ba-4d2c-8727-8c2d8ca2e5ce
-ms.openlocfilehash: f0ec35cfb74fd08180969344180ff42d485d58c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3da0297558a9b8281f9c4756a54a577cc78a682
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404297"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747915"
 ---
 # <a name="compiler-error-c2319"></a>Erreur du compilateur C2319
 
@@ -21,7 +21,7 @@ Un bloc `try` ou `catch` est introuvable après l’instruction `try` ou `catch`
 
 L’exemple suivant génère l’erreur C2319 :
 
-```
+```cpp
 // C2319.cpp
 // compile with: /EHsc
 #include <eh.h>

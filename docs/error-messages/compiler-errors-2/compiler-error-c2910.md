@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2910
 ms.assetid: 09c50e6a-e099-42f6-8ed6-d80e292a7a36
-ms.openlocfilehash: 58d56ad834b34425cda4ac7ba081eabd2424e451
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0061a7171dd08440ec5d8c8b8cadb77303ff8f41
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408353"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761113"
 ---
 # <a name="compiler-error-c2910"></a>Erreur du compilateur C2910
 
 'fonction' : ne peut pas être explicitement spécialisé
 
-Le compilateur a détecté une tentative de spécialiser explicitement une fonction à deux reprises.
+Le compilateur a détecté une tentative de spécialisation explicite d’une fonction à deux reprises.
 
-L’exemple suivant génère l’erreur C2910 :
+L’exemple suivant génère l’C2910 :
 
-```
+```cpp
 // C2910.cpp
 // compile with: /c
 template <class T>
@@ -31,11 +31,11 @@ template <> struct S<int> { void f() {} };
 template <> void S<int>::f() {}   // C2910 delete this specialization
 ```
 
-C2910 peut également être générée si vous tentez de spécialiser explicitement un membre sans modèle. Autrement dit, vous pouvez uniquement spécialiser explicitement un modèle de fonction.
+C2910 peut également être généré si vous essayez de spécialiser explicitement un membre qui n’est pas un modèle. Autrement dit, vous pouvez uniquement spécialiser explicitement un modèle de fonction.
 
-L’exemple suivant génère l’erreur C2910 :
+L’exemple suivant génère l’C2910 :
 
-```
+```cpp
 // C2910b.cpp
 // compile with: /c
 template <class T> struct A {
@@ -54,13 +54,13 @@ template <> A<void>::A(void* p){}   // C2910
 // A<void>::A(void* p){}
 ```
 
-Cette erreur sera également être due à la mise en conformité du compilateur dans Visual Studio .NET 2003 :.
+Cette erreur est également générée en raison du travail de conformité du compilateur effectué dans Visual Studio .NET 2003 :.
 
-Pour produire un code valide dans les versions de Visual Studio .NET 2003 et Visual Studio .NET de Visual C++, supprimez `template <>`.
+Pour que le code soit valide dans les versions Visual Studio .NET 2003 et Visual Studio .NET de C++Visual, supprimez `template <>`.
 
-L’exemple suivant génère l’erreur C2910 :
+L’exemple suivant génère l’C2910 :
 
-```
+```cpp
 // C2910c.cpp
 // compile with: /c
 template <class T> class A {

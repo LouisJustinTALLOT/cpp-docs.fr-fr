@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3846
 ms.assetid: c470f8a5-106b-4efb-b8dc-e1319e04130f
-ms.openlocfilehash: 788f03e4364404ad5c30b7edcba8b743c7f201ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4c51ccfc724cf8309044812b287677f0f1a2ff0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152421"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754899"
 ---
 # <a name="compiler-error-c3846"></a>Erreur du compilateur C3846
 
-'symbole' : Impossible d’importer le symbole de 'assembly2' : comme 'symbol' a déjà été importé à partir d’un autre assembly 'assembly1'
+'Symbol' : impossible d’importer le symbole de’Assembly2 ', car’Symbol’a déjà été importé à partir d’un autre assembly’Assembly1 '
 
-Un symbole n’a pas pu être importé à partir d’un assembly référencé, car il a été précédemment importé à partir d’un assembly référencé.
+Impossible d’importer un symbole à partir d’un assembly référencé, car il a été importé précédemment à partir d’un assembly référencé.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3846 :
+L’exemple suivant génère l’C3846 :
 
-```
+```cpp
 // C3846a.cpp
 // compile with: /LD /clr
 public ref struct G
@@ -31,9 +31,9 @@ public ref struct G
 };
 ```
 
-Et compilez ce code puis :
+Puis compilez ce qui suit :
 
-```
+```cpp
 // C3846b.cpp
 // compile with: /clr
 #using "c3846a.dll"

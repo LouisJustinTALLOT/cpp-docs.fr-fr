@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
-ms.openlocfilehash: 4d935e140d89cb5c3714450597677a7a02a245e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c08a7eca473a4ae043879b49266efec6b8afe7b1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385483"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749436"
 ---
 # <a name="compiler-error-c3894"></a>Erreur du compilateur C3894
 
-'var' : utilisation comme l-value des données membres static initonly est autorisée uniquement dans le constructeur de classe de la classe 'class'
+'var' : l’utilisation de l-value des données membres static initonly n’est autorisée que dans le constructeur de classe de la classe’class'
 
-Statique [initonly](../../dotnet/initonly-cpp-cli.md) données membres peuvent uniquement être utilisés comme l-values à leur point de déclaration ou dans un constructeur statique.
+Les membres de données [initonly](../../dotnet/initonly-cpp-cli.md) statiques ne peuvent être utilisés que comme l-Values à leur point de déclaration, ou dans un constructeur statique.
 
-Instance (non statique) les données membres initonly peuvent uniquement être utilisés comme l-values à leur point de déclaration ou dans des constructeurs d’instance (non statique).
+Les données membres initonly de l’instance (non statiques) peuvent uniquement être utilisées comme l-Values à leur point de déclaration, ou dans des constructeurs d’instance (non statiques).
 
-L’exemple suivant génère l’erreur C3894 :
+L’exemple suivant génère l’C3894 :
 
-```
+```cpp
 // C3894.cpp
 // compile with: /clr
 ref struct Y1 {

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3227
 ms.assetid: 7939c23a-96c8-43c2-89e9-f217d132d155
-ms.openlocfilehash: b175b14af55a9a462e040f064cc6e38d13fffb94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 460000531dba77e42379199f276c9e2e02f43a9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173981"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743417"
 ---
 # <a name="compiler-error-c3227"></a>Erreur du compilateur C3227
 
-'paramètre' : ne peut pas utiliser 'mot_clé' pour allouer un type générique
+'paramètre' : impossible d’utiliser’keyword’pour allouer un type générique
 
-Afin d’instancier un type, un constructeur approprié est nécessaire. Toutefois, le compilateur n’est pas en mesure de garantir qu’un constructeur approprié est disponible.
+Pour instancier un type, un constructeur approprié est requis. Toutefois, le compilateur n’est pas en mesure de s’assurer qu’un constructeur approprié est disponible.
 
-Vous pouvez utiliser des modèles plutôt que des génériques pour résoudre cette erreur, ou vous pouvez utiliser une des méthodes pour créer une instance du type.
+Vous pouvez utiliser des modèles au lieu de génériques pour résoudre cette erreur, ou vous pouvez utiliser l’une des méthodes suivantes pour créer une instance du type.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3227 :.
+L’exemple suivant génère l’C3227.
 
-```
+```cpp
 // C3227.cpp
 // compile with: /clr /c
 generic<class T> interface class ICreate {

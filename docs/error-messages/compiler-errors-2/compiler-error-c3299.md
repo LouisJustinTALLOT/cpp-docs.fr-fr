@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3299
 ms.assetid: 7cabdf01-bceb-404f-9401-cdd9c7fc1641
-ms.openlocfilehash: 314b75a9d0ab8cde2886a7466fa0f95b5bbdd8f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 148433f0d959985eb5a874f588f8cbf9d377e8b7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222464"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735955"
 ---
 # <a name="compiler-error-c3299"></a>Erreur du compilateur C3299
 
@@ -21,13 +21,13 @@ Quand vous substituez une fonction membre générique, vous ne pouvez pas spéci
 
 Les clauses de contrainte de la fonction générique que vous substituez seront héritées.
 
-Pour plus d’informations, consultez [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
+Pour plus d’informations, consultez [Contraintes sur les paramètres de type générique (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’erreur C3299 :
 
-```
+```cpp
 // C3299.cpp
 // compile with: /clr /c
 public ref struct R {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2387
 ms.assetid: 6847b8e1-ffac-458d-ab88-0c92f72f2527
-ms.openlocfilehash: df9e92bfa333be88e860bbdecd5acaa64ec80440
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a884099c7407113d7ef7604f4eec28e0fa86d87e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393673"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745098"
 ---
 # <a name="compiler-error-c2387"></a>Erreur du compilateur C2387
 
 'type' : classe de base ambiguë
 
-Le compilateur peut résoudre pas clairement un appel de fonction, car la fonction existe dans plusieurs classes de base.
+Le compilateur n’a pas pu résoudre de manière non ambiguë un appel de fonction, car la fonction existe dans plusieurs classes de base.
 
-Pour résoudre cette erreur, supprimez l’une des classes de base à partir de l’héritage ou explicitement qualifier l’appel de fonction.
+Pour résoudre cette erreur, supprimez l’une des classes de base de l’héritage ou qualifiez explicitement l’appel de fonction.
 
-L’exemple suivant génère C2387 :
+L’exemple suivant génère l’C2387 :
 
-```
+```cpp
 // C2387.cpp
 namespace N1 {
    struct B {

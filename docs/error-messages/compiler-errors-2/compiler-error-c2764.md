@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2764
 ms.assetid: 3754f5af-e094-4425-be20-d0c9a9b5baec
-ms.openlocfilehash: ba16431fc71a0e594b77dcc6dab62ed6c49c9137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d318742a367487f3688717046a6a798c2add87a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257489"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759839"
 ---
 # <a name="compiler-error-c2764"></a>Erreur du compilateur C2764
 
-'param' : paramètre de modèle non utilisé ou pouvant être déduit dans la spécialisation partielle 'specialization'
+'param' : paramètre de modèle non utilisé ou pouvant être déduit dans la spécialisation partielle’spécialisation'
 
 Un paramètre de modèle n’est pas utilisé dans une spécialisation partielle. Cela rend la spécialisation partielle inutilisable, car le paramètre de modèle ne peut pas être déduit.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C2764 :
+L’exemple suivant génère l’C2764 :
 
-```
+```cpp
 // C2764.cpp
 #include <stdio.h>
 template <class T1, class T2>

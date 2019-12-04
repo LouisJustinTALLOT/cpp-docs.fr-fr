@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3395
 ms.assetid: 26a9ebc9-ed97-47ce-b436-19aa2bcf6e50
-ms.openlocfilehash: 2e5234abcbe46e17035fd0b16e9816c879d86cfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eaf63b42a6c44153a55d8aeb70f4f1174a5c895c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243048"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737541"
 ---
 # <a name="compiler-error-c3395"></a>Erreur du compilateur C3395
 
-'fonction' : __declspec (dllexport) ne peut pas être appliqué à une fonction avec la \__clrcall convention d’appel
+'fonction' : __declspec (dllexport) ne peut pas être appliqué à une fonction avec la Convention d’appel de _clrcall \_
 
 `__declspec(dllexport)` et [__clrcall](../../cpp/clrcall.md) ne sont pas compatibles.  Pour plus d’informations, consultez [dllexport, dllimport](../../cpp/dllexport-dllimport.md).
 
-L’exemple suivant génère l’erreur C3395 :
+L’exemple suivant génère l’C3395 :
 
-```
+```cpp
 // C3395.cpp
 // compile with: /clr /c
 

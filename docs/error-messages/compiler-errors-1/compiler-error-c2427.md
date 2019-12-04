@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2427
 ms.assetid: a7d421af-6180-40b4-b7a6-9f3bc7dfaaf9
-ms.openlocfilehash: b794b90a476f7712c80e7617ec3c0696afb290ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d92f3bce54a4558702d2a6d3870323eb0edd5d4d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402825"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744613"
 ---
 # <a name="compiler-error-c2427"></a>Erreur du compilateur C2427
 
-'classe' : ne peut pas définir de classe dans cette portée
+'class' : impossible de définir une classe dans cette portée
 
-Une tentative a été effectuée pour définir une classe imbriquée, mais la classe imbriquée est un membre de classe de base, pas dans la classe conteneur.
+Une tentative a été effectuée pour définir une classe imbriquée, mais la classe imbriquée est un membre d’une classe de base, et non de la classe la plus conteneur.
 
-L’exemple suivant génère l’erreur C2427 :
+L’exemple suivant génère l’C2427 :
 
-```
+```cpp
 // C2427.cpp
 // compile with: /c
 template <class T>

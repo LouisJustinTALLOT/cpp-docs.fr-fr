@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2571
 ms.assetid: c6522616-dee9-4d7d-9bf8-30a7e1deaadf
-ms.openlocfilehash: d7d4898e5f0b55c50a4c18cef053cc150394d7e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bd87f0732e1a632b8c86cc57fab1a0f104b2c77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408575"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755497"
 ---
 # <a name="compiler-error-c2571"></a>Erreur du compilateur C2571
 
-'fonction' : fonction virtuelle ne peut pas figurer dans l’union 'union'
+'fonction' : la fonction virtuelle ne peut pas être dans l’Union’Union'
 
-Une union est déclarée avec une fonction virtuelle. Vous pouvez déclarer une fonction virtuelle uniquement dans une classe ou structure.  Solutions possibles :
+Une Union est déclarée avec une fonction virtuelle. Vous pouvez déclarer une fonction virtuelle uniquement dans une classe ou une structure.  Solutions possibles :
 
-1. Modifier l’union pour une classe ou structure.
+1. Remplacez l’Union par une classe ou une structure.
 
-1. Rendez la fonction non virtuelle.
+1. Rendez la fonction qui n’est pas virtuelle.
 
-L’exemple suivant génère l’erreur C2571 :
+L’exemple suivant génère l’C2571 :
 
-```
+```cpp
 // C2571.cpp
 // compile with: /c
 union A {

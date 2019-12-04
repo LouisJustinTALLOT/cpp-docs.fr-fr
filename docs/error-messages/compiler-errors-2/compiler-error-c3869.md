@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3869
 ms.assetid: 85b2ad72-95c1-4ed6-9761-6ef66c3802b7
-ms.openlocfilehash: 1a3d0d754557bbc811d1017ed1491181333e82dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae8931d3b139e0e7e7aa947ffea16700e2f12302
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242966"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736709"
 ---
 # <a name="compiler-error-c3869"></a>Erreur du compilateur C3869
 
-contrainte gcnew ne contient n’a pas de liste de paramètres vide '()'
+la contrainte gcnew ne contient pas de liste de paramètres vide' () '
 
-Le `gcnew` contrainte spéciale a été spécifiée sans la liste de paramètres vide. Consultez [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) pour plus d’informations.
+La contrainte spéciale `gcnew` a été spécifiée sans la liste de paramètres vide. Pour plus d’informations, consultez [contraintesC++sur les paramètres de type générique (/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) .
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3869.
+L’exemple suivant génère l’C3869.
 
-```
+```cpp
 // C3869.cpp
 // compile with: /c /clr
 using namespace System;

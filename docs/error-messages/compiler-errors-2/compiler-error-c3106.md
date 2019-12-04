@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3106
 ms.assetid: 39d97a32-0905-4702-87d3-7f8ce473fb93
-ms.openlocfilehash: c5ed544549aecd9811279e065d7c252fe085e545
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85aef1937ccbdbbbc335e4166fab11aa982b1839
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404154"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755835"
 ---
 # <a name="compiler-error-c3106"></a>Erreur du compilateur C3106
 
-'attribute' : arguments sans nom doivent précéder les arguments nommés
+'Attribute' : les arguments sans nom doivent précéder les arguments nommés
 
 Les arguments sans nom doivent être passés à un attribut avant les arguments nommés.
 
@@ -23,9 +23,9 @@ Pour plus d'informations, consultez [User-Defined Attributes](../../extensions/u
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3106.
+L’exemple suivant génère l’C3106.
 
-```
+```cpp
 // C3106.cpp
 // compile with: /c
 [module(name="MyLib", dll)];   // C3106

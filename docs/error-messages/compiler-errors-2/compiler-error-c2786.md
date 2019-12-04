@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2786
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
-ms.openlocfilehash: b03155ad1a209ae59327dd31d432f5623f380ac9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba5d05e9c7cc702509144fb876a1301bfc8bf3d4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265995"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739608"
 ---
 # <a name="compiler-error-c2786"></a>Erreur du compilateur C2786
 
 'type' : opérande non valide pour __uuidof
 
-Le [__uuidof](../../cpp/uuidof-operator.md) opérateur accepte un type défini par l’utilisateur avec un GUID associé ou un objet d’un type défini par l’utilisateur.  Causes possibles :
+L’opérateur [__uuidof](../../cpp/uuidof-operator.md) prend un type défini par l’utilisateur avec un GUID attaché ou un objet de ce type défini par l’utilisateur.  Causes possibles :
 
 1. L’argument n’est pas un type défini par l’utilisateur.
 
-1. `__uuidof` Impossible d’extraire le GUID de l’argument.
+1. `__uuidof` ne peut pas extraire le GUID à partir de l’argument.
 
-L’exemple suivant génère C2786 :
+L’exemple suivant génère l’C2786 :
 
-```
+```cpp
 // C2786.cpp
 struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 

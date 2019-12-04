@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3117
 ms.assetid: dceee392-d4c7-4599-b75e-7aaac7c36fdd
-ms.openlocfilehash: 66efcf95599a18e0d93ff36f0e684ad350941977
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6ef04eca5c059ce1544b62addcaeb0510697d658
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345543"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741168"
 ---
 # <a name="compiler-error-c3117"></a>Erreur du compilateur C3117
 
-'%$S' : une interface peut avoir uniquement une classe de base
+'% $S' : une interface ne peut avoir qu’une seule classe de base
 
 Vous avez déclaré une interface qui hérite de plusieurs classes de base.
 
-L’exemple suivant génère l’erreur C3117 :
+L’exemple suivant génère l’C3117 :
 
-```
+```cpp
 // C3117.cpp
 #include <windows.h>
 

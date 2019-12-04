@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2792
 ms.assetid: 392cf748-4f5e-4e62-a364-3118d5658408
-ms.openlocfilehash: 40047cb557fba49f94e5c4e42f172cbcd999c65a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 175ec7ff6b842eb5f41896c5ec3cc0a0f5db817c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360175"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739530"
 ---
 # <a name="compiler-error-c2792"></a>Erreur du compilateur C2792
 
-'super' : ce mot clé doit être suivi par ' ::'
+'Super' : ce mot clé doit être suivi de' :: '
 
 Le seul jeton qui peut suivre le mot clé `__super` est `::`.
 
-L’exemple suivant génère l’erreur C2792 :
+L’exemple suivant génère l’C2792 :
 
-```
+```cpp
 // C2792.cpp
 struct B {
    void mf();

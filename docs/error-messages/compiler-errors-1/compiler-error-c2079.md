@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2079
 ms.assetid: ca58d6d5-eccd-40b7-ba14-c003223c5bc7
-ms.openlocfilehash: 68435610680e3b21415a1d9439a8133fd1e2557f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea158d8dada013f6b90d0fbe1e7502665c1c24da
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391957"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757720"
 ---
 # <a name="compiler-error-c2079"></a>Erreur du compilateur C2079
 
-'identificateur' utilise la classe/struct/union non défini 'name'
+'identifier’utilise une classe/struct/union’name’non définie
 
-L’identificateur spécifié est une classe non définie, une structure ou une union.
+L’identificateur spécifié est une classe, une structure ou une Union non définie.
 
-Cette erreur peut résulter de l’initialisation d’une union anonyme.
+Cette erreur peut être due à l’initialisation d’une Union anonyme.
 
-L’exemple suivant génère l’erreur C2079 :
+L’exemple suivant génère l’C2079 :
 
-```
+```cpp
 // C2079.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -34,7 +34,7 @@ int main() {
 
 Solution possible :
 
-```
+```cpp
 // C2079b.cpp
 // compile with: /EHsc
 #include <fstream>
@@ -45,7 +45,7 @@ int main( ) {
 
 C2079 peut également se produire si vous tentez de déclarer un objet sur la pile d’un type dont la déclaration anticipée est uniquement dans la portée.
 
-```
+```cpp
 // C2079c.cpp
 class A;
 
@@ -58,7 +58,7 @@ class A {};
 
 Solution possible :
 
-```
+```cpp
 // C2079d.cpp
 // compile with: /c
 class A;

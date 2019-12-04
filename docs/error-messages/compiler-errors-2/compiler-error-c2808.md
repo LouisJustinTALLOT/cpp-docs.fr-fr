@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2808
 ms.assetid: 3d745102-d3b3-4735-a7d2-ad42d5bf3cfa
-ms.openlocfilehash: 84135288255c806e644e153a4d8f678fc13d2787
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c5be25e8606329589e1ac3a215f30fe6ce74c594
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281883"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760593"
 ---
 # <a name="compiler-error-c2808"></a>Erreur du compilateur C2808
 
-l’opérateur unaire 'operator opérateur' a trop de paramètres formels
+l’opérateur unaire’operator opérateur’a trop de paramètres formels
 
-L’opérateur unaire possède une liste de paramètres non ' void '.
+L’opérateur unaire a une liste de paramètres non void.
 
-L’exemple suivant génère l’erreur C2808 :
+L’exemple suivant génère l’C2808 :
 
-```
+```cpp
 // C2808.cpp
 // compile with: /c
 class X {

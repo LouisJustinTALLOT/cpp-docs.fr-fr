@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2912
 ms.assetid: bd55cecd-ab1a-4636-ab8a-a00393fe7b3d
-ms.openlocfilehash: b7f87ae2df5350fcfb2b7a662f517d8d7bd51ef8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 254252bfd21aa28c87810f1e21b4864e2775a71b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408392"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761083"
 ---
 # <a name="compiler-error-c2912"></a>Erreur du compilateur C2912
 
@@ -21,7 +21,7 @@ Vous ne pouvez pas spécialiser une fonction sans modèle.
 
 L'exemple suivant génère l'erreur C2912 :
 
-```
+```cpp
 // C2912.cpp
 // compile with: /c
 void f(char);
@@ -31,7 +31,7 @@ template<class T> void f(T);   // OK
 
 Cette erreur sera également générée suite à la mise en conformité du compilateur dans Visual Studio .NET 2003 : pour chaque spécialisation explicite, vous devez choisir les paramètres de la spécialisation explicite, de sorte qu'ils correspondent aux paramètres du modèle principal.
 
-```
+```cpp
 // C2912b.cpp
 class CF {
 public:

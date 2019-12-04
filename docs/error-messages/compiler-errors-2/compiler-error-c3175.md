@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3175
 ms.assetid: 3f19d513-a05a-4b6c-806f-276fe5c36b90
-ms.openlocfilehash: 368e5a9cb9bea04a7889c25c86a7245049677112
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8be6cfa72c33212593c0b2a73ad38ad9fc113f26
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175459"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761710"
 ---
 # <a name="compiler-error-c3175"></a>Erreur du compilateur C3175
 
-'fonction1' : Impossible d’appeler une méthode d’un type managé à partir de la fonction non managée 'fonction2'
+'fonction1 ' : impossible d’appeler une méthode d’un type managé à partir d’une fonction non managée’fonction2 '
 
-Fonctions non managées ne peuvent pas appeler les fonctions membres de classes managées.
+Les fonctions non managées ne peuvent pas appeler les fonctions membres des classes managées.
 
-L’exemple suivant génère l’erreur C3175 :
+L’exemple suivant génère l’C3175 :
 
-```
+```cpp
 // C3175_2.cpp
 // compile with: /clr
 

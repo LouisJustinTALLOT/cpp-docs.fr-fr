@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3797
 ms.assetid: ab27ff34-8c1d-4297-b004-9e39bd3a4f25
-ms.openlocfilehash: 76206cdffce3f551ff472cbd83df486eb41ae80b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7236cb75aef4250440a1e992415df07fb5b7da3f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400134"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757174"
 ---
 # <a name="compiler-error-c3797"></a>Erreur du compilateur C3797
 
-'override' : déclaration d’événement ne peut pas avoir de spécificateur de substitution (doit être sur les méthodes d’ajout/remove/raise event à la place)
+'override' : la déclaration d’événement ne peut pas avoir de spécificateur de substitution (doit être placé sur les méthodes Add/Remove/Raise de l’événement à la place)
 
-Vous ne pouvez pas remplacer un événement trivial (un événement sans méthodes d’accesseur explicitement définie) avec un autre événement trivial. L’événement de substitution doit définir son comportement avec des fonctions d’accesseur.
+Vous ne pouvez pas substituer un événement trivial (un événement sans méthode d’accesseur explicitement défini) par un autre événement trivial. L’événement de substitution doit définir son comportement avec les fonctions d’accesseur.
 
-Pour plus d’informations, consultez [événement](../../extensions/event-cpp-component-extensions.md).
+Pour plus d’informations, consultez [Event](../../extensions/event-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3797.
+L’exemple suivant génère l’C3797.
 
-```
+```cpp
 // C3797.cpp
 // compile with: /clr /c
 delegate void MyDel();

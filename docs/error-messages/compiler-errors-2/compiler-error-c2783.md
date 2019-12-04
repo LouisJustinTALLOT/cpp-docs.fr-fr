@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2783
 ms.assetid: 1ce94a11-bb8b-4be3-a222-f1f105da74b3
-ms.openlocfilehash: 539eeebc39fa7fc061cc615f29d87d3e6bcfc5c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: adba87853bac764d4975d6b6fa9aa44940ced03c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408431"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739673"
 ---
 # <a name="compiler-error-c2783"></a>Erreur du compilateur C2783
 
-'déclaration' : Impossible de déduire l’argument template pour 'identificateur'
+'Déclaration' : impossible de déduire l’argument template pour’identifier'
 
-Le compilateur ne peut pas déterminer un argument template. Arguments par défaut ne peut pas être utilisés pour déduire un argument template.
+Le compilateur ne peut pas déterminer un argument de modèle. Les arguments par défaut ne peuvent pas être utilisés pour déduire un argument de modèle.
 
-L’exemple suivant génère l’erreur C2783 :
+L’exemple suivant génère l’C2783 :
 
-```
+```cpp
 // C2783.cpp
 template<typename T1, typename T2>
 T1 f(T2) {
@@ -37,7 +37,7 @@ int main() {
 
 C2783 peut également se produire lors de l’utilisation de génériques :
 
-```
+```cpp
 // C2783b.cpp
 // compile with: /clr
 using namespace System;

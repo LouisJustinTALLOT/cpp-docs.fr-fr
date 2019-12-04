@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2754
 ms.assetid: 1cab66c5-da9d-4b81-b7fb-9cdc48ff1ccc
-ms.openlocfilehash: cfe6f8faa1b00faf32ae53e6c25c23532c9f3a3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 179cbaf65bf6440a13da6b35c073af981b074c71
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228523"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759566"
 ---
 # <a name="compiler-error-c2754"></a>Erreur du compilateur C2754
 
-'specialization' : une spécialisation partielle ne peut pas avoir un paramètre de modèle sans type dépendant
+'spécialisation' : une spécialisation partielle ne peut pas avoir un paramètre de modèle sans type dépendant
 
-Une tentative a été effectuée pour spécialiser partiellement une classe de modèle qui a un paramètre de modèle sans type dépendant. Cette opération n’est pas autorisée.
+Une tentative a été faite pour spécialiser partiellement une classe de modèle qui a un paramètre de modèle sans type dépendant. Cela n'est pas autorisé.
 
-L’exemple suivant génère l’erreur C2754 :
+L’exemple suivant génère l’C2754 :
 
-```
+```cpp
 // C2754.cpp
 // compile with: /c
 

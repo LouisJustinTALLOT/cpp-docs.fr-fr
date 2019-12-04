@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3624
 ms.assetid: eaac6a4f-eb11-4e4d-ab12-124ba995c5cf
-ms.openlocfilehash: bb574b194f01aa1da27b962ed6be327f4f988c3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b4f71ed71ddb1b14ed51ccbcd420284ddcc70f6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221994"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761918"
 ---
 # <a name="compiler-error-c3624"></a>Erreur du compilateur C3624
 
-'type' : utilisation de ce type requiert une référence à l’assembly 'assembly'
+'type' : l’utilisation de ce type requiert une référence à l’assembly’assembly'
 
-Un assembly (référence) nécessaire pour compiler votre code n’a pas été spécifié ; Passez l’assembly à la [#using](../../preprocessor/hash-using-directive-cpp.md) directive.
+Un assembly (référence) nécessaire pour compiler votre code n’a pas été spécifié. transmettez l’assembly à la directive [#using](../../preprocessor/hash-using-directive-cpp.md) .
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3624 :
+L’exemple suivant génère l’C3624 :
 
-```
+```cpp
 // C3624.cpp
 // compile with: /clr /c
 #using <System.Windows.Forms.dll>

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
-ms.openlocfilehash: ec6725472d31b0b2ade0cd73da4440036239fde3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8492f108b57fbc63bd171276b1aa601f96a28b24
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381057"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754886"
 ---
 # <a name="compiler-error-c3849"></a>Erreur du compilateur C3849
 
-appel de style fonction sur une expression de type 'type' perdrait les qualificateurs const et/ou volatiles pour nombre de toutes les surcharges d’opérateur disponibles
+un appel de style fonction sur une expression de type’type’perdrait les qualificateurs const et/ou volatile pour toutes les surcharges d’opérateur nombre disponibles
 
-Une variable avec un type spécifié de la const-volatile peut uniquement appeler des membres fonctions avec des qualifications const-volatile égales ou supérieures.
+Une variable avec un type const-volatile spécifié ne peut appeler que des fonctions membres définies avec des qualifications const-volatile identiques ou supérieures.
 
-Pour corriger cette erreur, fournissez une fonction membre approprié. Impossible d’exécuter une conversion sur un objet const ou volatile qualifié lors de la conversion entraîne la perte de qualification. Vous pouvez obtenir des qualificateurs mais vous ne pouvez pas perdre les qualificateurs dans une conversion.
+Pour corriger cette erreur, fournissez une fonction membre appropriée. Vous ne pouvez pas exécuter une conversion sur un objet qualifié const ou volatile lorsque la conversion provoque une perte de qualification. Vous pouvez obtenir des qualificateurs, mais vous ne pouvez pas perdre de qualificateurs dans une conversion.
 
-Les exemples suivants génèrent C3849 :
+Les exemples suivants génèrent des C3849 :
 
-```
+```cpp
 // C3849.cpp
 void glbFunc3(int i, char c)
 {

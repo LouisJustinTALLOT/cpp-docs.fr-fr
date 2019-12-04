@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3852
 ms.assetid: 194e5c5e-0dfb-414e-86db-791c11eb610c
-ms.openlocfilehash: 4ad7718f4efbeb3b0bc481755fd239615ab796cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f264333d802967d0350caa8ab4ba4925ffe019af
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380927"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754873"
 ---
 # <a name="compiler-error-c3852"></a>Erreur du compilateur C3852
 
-'membre' ayant le type 'type' : l’initialisation d’agrégat n’a pas pu initialiser ce membre
+'membre’ayant le type’type' : l’initialisation d’agrégats n’a pas pu initialiser ce membre
 
-Une tentative a été effectuée pour affecter une initialisation par défaut dans le cadre d’une initialisation d’agrégat à un membre de données qui ne peut pas recevoir une initialisation par défaut dans une initialisation d’agrégat.
+Une tentative a été faite pour assigner une initialisation par défaut dans le cadre d’une initialisation d’agrégat à un membre de données qui ne peut pas recevoir une initialisation par défaut dans une initialisation d’agrégats.
 
-Les exemples suivants génèrent C3852 :
+Les exemples suivants génèrent des C3852 :
 
-```
+```cpp
 // C3852.cpp
 struct S
 {

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2004
 ms.assetid: d81526dd-3a00-4593-87b0-d910d3d29bca
-ms.openlocfilehash: fb100d977188cd3a7d5b0ebbb3e29b53942871dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b781e9f81342f35d66eca222bd338252b739096c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208943"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737489"
 ---
 # <a name="compiler-error-c2004"></a>Erreur du compilateur C2004
 
@@ -25,7 +25,7 @@ Cette erreur peut également être générée en raison de la mise en conformit�
 
 L’exemple suivant génère l’erreur C2004 :
 
-```
+```cpp
 // C2004.cpp
 // compile with: /DDEBUG
 #include <stdio.h>
@@ -42,7 +42,7 @@ int main()
 
 Solution possible :
 
-```
+```cpp
 // C2004b.cpp
 // compile with: /DDEBUG
 #include <stdio.h>

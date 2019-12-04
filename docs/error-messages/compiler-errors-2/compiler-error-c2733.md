@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2733
 ms.assetid: 67f83561-c633-407c-a2ee-f9fd16e165bf
-ms.openlocfilehash: 26819f1928223b5fa96d275290105f32787057f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ef669a49f4a3ec5a1af1a15a79f2511fa2699dd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208322"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755783"
 ---
 # <a name="compiler-error-c2733"></a>Erreur du compilateur C2733
 
-seconde liaison C d’une fonction surchargée 'fonction' non autorisée
+deuxième liaison C de la fonction surchargée’fonction’non autorisée
 
-Plus d’une fonction surchargée est déclarée avec liaison C. Lorsque vous utilisez une liaison C, seule une forme d’une fonction spécifiée peut être externe. Dans la mesure où les fonctions surchargées portent le même nom non décoré, ils ne peuvent pas être utilisés avec les programmes C.
+Plusieurs fonctions surchargées sont déclarées avec une liaison C. Lors de l’utilisation de la liaison C, une seule forme d’une fonction spécifiée peut être externe. Étant donné que les fonctions surchargées ont le même nom non décoré, elles ne peuvent pas être utilisées avec des programmes C.
 
-L’exemple suivant génère l’erreur C2733 :
+L’exemple suivant génère l’C2733 :
 
-```
+```cpp
 // C2733.cpp
 extern "C" {
    void F1(int);

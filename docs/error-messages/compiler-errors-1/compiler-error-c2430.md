@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2430
 ms.assetid: 07c20f76-63e1-4d22-b2a9-98b0d45c5cac
-ms.openlocfilehash: 754758e652539e4f2d9b12e568b8ef5ccf41d8db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f82eb4914ec36aa513822964f551a05fbb77aa97
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165695"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744574"
 ---
 # <a name="compiler-error-c2430"></a>Erreur du compilateur C2430
 
-plus d’un registre d’index dans 'identificateur'
+plus d’un registre d’index dans’identifier'
 
-Plus d’un Registre est mis à l’échelle. Le compilateur prend en charge l’indexation à l’échelle, mais vous pouvez uniquement mettre à l’échelle un Registre.
+Plusieurs registres sont mis à l’échelle. Le compilateur prend en charge l’indexation mise à l’échelle, mais vous pouvez uniquement mettre à l’échelle un registre.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C2430.
+L’exemple suivant génère l’C2430.
 
-```
+```cpp
 // C2430.cpp
 // processor: x86
 int main() {

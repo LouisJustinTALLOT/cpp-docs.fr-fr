@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3507
 ms.assetid: 75f89767-f6f9-40f6-9820-81a49e09abdf
-ms.openlocfilehash: 731e84955192688a87c020b2b65a80ab5671cad6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 848536e0808d7d6a82ef387e0ca9c64b68ad0007
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363932"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753794"
 ---
 # <a name="compiler-error-c3507"></a>Erreur du compilateur C3507
 
-un ProgID ne peut être pas plus de 39 caractères 'id' ; ni contenir de signe de ponctuation en dehors de '.'; ni commencer par un chiffre
+un ProgID ne peut pas comporter plus de 39 caractères’ID'; et ne contiennent pas de signes de ponctuation séparés de'. '; ni commencer par un chiffre
 
-Le [progid](../../windows/progid.md) attribut a des restrictions sur les valeurs qu’il peut prendre.
+L’attribut [ProgID](../../windows/progid.md) a des restrictions sur les valeurs qu’il peut prendre.
 
-L’exemple suivant génère l’erreur C3507 :
+L’exemple suivant génère l’C3507 :
 
-```
+```cpp
 // C3507.cpp
 [module(name="x")];
 [

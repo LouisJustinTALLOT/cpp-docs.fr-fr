@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: 2c2d2f2598d06ca228a96f2786fcb02888e29a1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff2b59338c707767fa1d3c382feaa1bfcdf29ce2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386614"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758487"
 ---
 # <a name="compiler-error-c3918"></a>Erreur du compilateur C3918
 
-l’utilisation requiert 'member' être un membre de données
+l’utilisation de’Member’doit être un membre de données
 
-C3918 peut se produire pour plusieurs raisons liées à des événements.
+C3918 peut se produire pour plusieurs raisons liées aux événements.
 
 ## <a name="example"></a>Exemple
 
-C3918 peut se produire, car un membre de classe est requise dans le contexte actuel. L’exemple suivant génère l’erreur C3918.
+C3918 peut se produire parce qu’un membre de classe est requis dans le contexte actuel. L’exemple suivant génère l’C3918.
 
-```
+```cpp
 // C3918.cpp
 // compile with: /clr /c
 public ref class C {
@@ -43,11 +43,11 @@ public:
 
 ## <a name="example"></a>Exemple
 
-C3918 également se produire si vous essayez d’archiver un événement trivial pour la valeur null (le nom de l’événement ne fournira plus un accès direct au délégué de magasin de stockage pour l’événement).
+C3918 est également provoquée si vous tentez de vérifier un événement trivial pour null (le nom de l’événement ne fournira plus d’accès direct au délégué du magasin de stockage pour l’événement).
 
-L’exemple suivant génère l’erreur C3918.
+L’exemple suivant génère l’C3918.
 
-```
+```cpp
 // C3918_2.cpp
 // compile with: /clr /c
 using namespace System;
@@ -68,9 +68,9 @@ ref struct EventSource : public IEFace {
 
 ## <a name="example"></a>Exemple
 
-C3918 peut également se produire si vous ne vous abonnez à un événement. L’exemple suivant génère l’erreur C3918.
+C3918 peut également se produire si vous vous êtes incorrectement abonné à un événement. L’exemple suivant génère l’C3918.
 
-```
+```cpp
 // C3918_3.cpp
 // compile with: /clr /c
 using namespace System;

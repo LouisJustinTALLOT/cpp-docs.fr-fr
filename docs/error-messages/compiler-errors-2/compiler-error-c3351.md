@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3351
 ms.assetid: c021bbbe-1067-4f51-af4f-940d2b792eb5
-ms.openlocfilehash: 3935acc645403efcd579a80340ebb9794bc1052a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d93d6b08268aa8d6a7a7ad2e2086f4799417bbb4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402656"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737463"
 ---
 # <a name="compiler-error-c3351"></a>Erreur du compilateur C3351
 
@@ -21,7 +21,7 @@ Le compilateur attend l’adresse d’une fonction déclarée `static`.
 
 L’exemple suivant génère l’erreur C3351 :
 
-```
+```cpp
 // C3351a.cpp
 // compile with: /clr
 delegate int D(int, int);

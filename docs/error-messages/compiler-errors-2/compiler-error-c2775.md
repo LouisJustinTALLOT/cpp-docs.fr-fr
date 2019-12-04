@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2775
 ms.assetid: 9c488508-ade0-48f1-b94f-d538d15f807a
-ms.openlocfilehash: b0f04a64354f549115c8636cf6130d6e96470016
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be858c7508aa520f78ec144b02738af02099b49b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257190"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740050"
 ---
 # <a name="compiler-error-c2775"></a>Erreur du compilateur C2775
 
-'identificateur' : aucune méthode 'get' n’est associé à cette propriété
+'identificateur' : aucune méthode’obtient’n’est associée à cette propriété
 
-Un membre de données déclaré avec le [propriété](../../cpp/property-cpp.md) étendue d’attribut n’est pas un `get` fonction spécifiée, mais une expression tente de récupérer sa valeur.
+Un membre de données déclaré avec l’attribut étendu de [propriété](../../cpp/property-cpp.md) n’a pas de fonction `get` spécifiée, mais une expression tente de récupérer sa valeur.
 
-L’exemple suivant génère l’erreur C2775 :
+L’exemple suivant génère l’C2775 :
 
-```
+```cpp
 // C2775.cpp
 struct A {
    __declspec(property(put=PutProp2, get=GetProp2)) int prop2;

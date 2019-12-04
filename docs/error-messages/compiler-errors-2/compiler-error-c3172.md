@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3172
 ms.assetid: 1834e2fd-6036-4c33-aff2-b51bc7c99441
-ms.openlocfilehash: 5c9c1561b63c740b9f7f5d85b2bf3e04de2542c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1da2676d660d23e3fb71b56263779b1f1edacbf9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175184"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761736"
 ---
 # <a name="compiler-error-c3172"></a>Erreur du compilateur C3172
 
-'nom_module' : Impossible de spécifier des attributs idl_module différents dans un projet
+'module_name' : impossible de spécifier des attributs de idl_module différents dans un projet
 
-[idl_module](../../windows/idl-module.md) attributs ayant le même nom mais des `dllname` ou `version` paramètres ont été trouvés dans deux des fichiers d’une compilation. Un seul `idl_module` attribut peut être spécifié par la compilation.
+[idl_module](../../windows/idl-module.md) des attributs portant le même nom mais des paramètres `dllname` ou `version` différents ont été trouvés dans deux des fichiers d’une compilation. Un seul attribut `idl_module` unique peut être spécifié par compilation.
 
-Identiques `idl_module` attributs peuvent être spécifiés dans plusieurs fichiers de code source.
+Des attributs de `idl_module` identiques peuvent être spécifiés dans plusieurs fichiers de code source.
 
-Par exemple, si les éléments suivants `idl_module` attributs ont été trouvés :
+Par exemple, si les attributs `idl_module` suivants ont été trouvés :
 
-```
+```cpp
 // C3172.cpp
 [module(name="MyMod")];
 [ idl_module(name="x", dllname="file.dll", version="1.1") ];
@@ -32,11 +32,11 @@ int main() {}
 
 Puis,
 
-```
+```cpp
 // C3172b.cpp
 // compile with: C3172.cpp
 // C3172 expected
 [ idl_module(name="x", dllname="file.dll", version="1.0") ];
 ```
 
-le compilateur génère l’erreur C3172 (Notez les valeurs de version différente).
+le compilateur génère C3172 (Notez les différentes valeurs de version).

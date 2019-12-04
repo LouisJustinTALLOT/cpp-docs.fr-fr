@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2860
 ms.assetid: ccc83553-90ed-4e94-b5e9-38b58ae38e31
-ms.openlocfilehash: 7d468fb2a71ce23bcd527cb02663dd5f7b7eecad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a6bb4bc12e791e36a31ffc4cf417e21cb71dbdd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302863"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760965"
 ---
 # <a name="compiler-error-c2860"></a>Erreur du compilateur C2860
 
-'void' ne peut pas être un type d’argument, à l’exception de '(void)'
+'void’ne peut pas être un type d’argument, à l’exception de' (void) '
 
-Type `void` ne peut pas être utilisé comme type d’argument avec d’autres arguments.
+Le type `void` ne peut pas être utilisé en tant que type d’argument avec d’autres arguments.
 
-L’exemple suivant génère l’erreur C2860 :
+L’exemple suivant génère l’C2860 :
 
-```
+```cpp
 // C2860.cpp
 // compile with: /c
 void profunc1(void, int i);   // C2860

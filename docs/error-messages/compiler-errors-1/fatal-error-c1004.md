@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - C1004
 ms.assetid: dbe034b0-6eb0-41b4-a50c-2fccf9e78ad4
-ms.openlocfilehash: 13fb8963b33569facf62ccedfe9ce8b7bbbbfdc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82a1a3e410505be53d4356e46d5521aebb72763c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383202"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756966"
 ---
 # <a name="fatal-error-c1004"></a>Erreur irrécupérable C1004
 
-fin de fichier inattendue
+fin de fichier inattendue trouvée
 
-Le compilateur a atteint la fin d’un fichier source sans résoudre une construction. Le code est absent un des éléments suivants :
+Le compilateur a atteint la fin d’un fichier source sans résoudre une construction. Il se peut qu’il manque l’un des éléments suivants dans le code :
 
-- Une accolade fermante
+- Accolade fermante
 
-- Une parenthèse fermante
+- Parenthèse fermante
 
-- Marque de commentaire fermant (* /)
+- Marqueur de commentaire de fermeture (*/)
 
 - Un point-virgule
 
 Pour résoudre cette erreur, vérifiez les éléments suivants :
 
-- Le lecteur de disque par défaut l’espace est insuffisant pour les fichiers temporaires, nécessitent environ deux fois plus d’espace que le fichier source.
+- Le lecteur de disque par défaut ne dispose pas de suffisamment d’espace pour les fichiers temporaires, ce qui nécessite environ deux fois plus d’espace que le fichier source.
 
-- Un `#if` directive qui correspond à false n’a pas une fermeture `#endif` directive.
+- Une directive de `#if` qui prend la valeur false ne dispose pas d’une directive de `#endif` de fermeture.
 
 - Un fichier source ne se termine pas par un retour chariot et un saut de ligne.
 
-L’exemple suivant génère l’erreur C1004 :
+L’exemple suivant génère l’C1004 :
 
-```
+```cpp
 // C1004.cpp
 #if TEST
 int main() {}
@@ -46,7 +46,7 @@ int main() {}
 
 Solution possible :
 
-```
+```cpp
 // C1004b.cpp
 #if TEST
 #endif

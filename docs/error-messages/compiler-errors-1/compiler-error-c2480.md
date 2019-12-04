@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2480
 ms.assetid: 1a58d1c2-971b-4084-96fa-f94aa51c02f1
-ms.openlocfilehash: 90016b65d4ddd58da3fb3c5ab6d81322dc0ef394
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e495a8019405a558511637467133877dae1183e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187596"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743521"
 ---
 # <a name="compiler-error-c2480"></a>Erreur du compilateur C2480
 
-'identificateur' : 'thread' est uniquement valide pour les éléments de données d’étendue static
+'identifier' : 'thread’n’est valide que pour les éléments de données d’étendue statique
 
-Vous ne pouvez pas utiliser le `thread` attribut avec une variable automatique, la donnée membre non statique, le paramètre de fonction, ou sur des définitions ou déclarations de fonction.
+Vous ne pouvez pas utiliser l’attribut `thread` avec une variable automatique, un membre de données non statique, un paramètre de fonction ou des définitions ou déclarations de fonction.
 
-Utilisez le `thread` attribut pour les variables globales, les données membres statiques et les variables locales statiques uniquement.
+Utilisez l’attribut `thread` pour les variables globales, les données membres statiques et les variables statiques locales uniquement.
 
-L’exemple suivant génère l’erreur C2480 :
+L’exemple suivant génère l’C2480 :
 
-```
+```cpp
 // C2480.cpp
 // compile with: /c
 __declspec( thread ) void func();   // C2480

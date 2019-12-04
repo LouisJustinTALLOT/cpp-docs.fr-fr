@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2779
 ms.assetid: 4a00e492-855a-41f3-8a18-5f60ee20c2f2
-ms.openlocfilehash: 7cf8aed276ab2aea61dc92b9e9fcbff9552c2ad6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b4e0f255fd62801cb2010c109d05de89362bb9f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257047"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739998"
 ---
 # <a name="compiler-error-c2779"></a>Erreur du compilateur C2779
 
-'déclaration' : les méthodes de propriété peuvent uniquement être associés à des données membres non static
+'Déclaration' : les méthodes de propriété ne peuvent être associées qu’à des données membres non statiques
 
-Le `property` attribut étendu est appliqué correctement à une donnée membre statique.
+L’attribut étendu `property` est appliqué de façon incorrecte à un membre de données statique.
 
-L’exemple suivant génère l’erreur C2779 :
+L’exemple suivant génère l’C2779 :
 
-```
+```cpp
 // C2779.cpp
 struct A {
    static __declspec(property(put=PutProp))

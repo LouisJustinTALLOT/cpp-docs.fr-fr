@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3027
 ms.assetid: 6562a5c2-2f28-4b36-91ca-2a64c0f0501a
-ms.openlocfilehash: 4fa01d6fe29aa010c877c7352563d20b3a6943c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6551a667ba65d860e77c2c372b74abda8b705bb8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382397"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741779"
 ---
 # <a name="compiler-error-c3027"></a>Erreur du compilateur C3027
 
@@ -23,7 +23,7 @@ Un autre type d’expression a été passé à une clause qui nécessite une exp
 
 L’exemple suivant génère l’erreur C3027 :
 
-```
+```cpp
 // C3027.cpp
 // compile with: /openmp /link vcomps.lib
 #include <stdio.h>

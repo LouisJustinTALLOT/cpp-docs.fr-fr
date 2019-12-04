@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3830
 ms.assetid: c9798f88-5001-4067-9fb1-09957ddc6fa8
-ms.openlocfilehash: 25f2b86e21d4672c9e0907c366da17072bafa183
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14272d2c0b0f8de63f55d2ba3d1c01cf04e0dfbd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390540"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741636"
 ---
 # <a name="compiler-error-c3830"></a>Erreur du compilateur C3830
 
-'type1' : ne peut pas hériter de 'type2', valeur types peuvent uniquement hériter de classes interface
+'type1 ' : ne peut pas hériter de’type2 ', les types valeur peuvent uniquement hériter de classes interface
 
-Un type valeur ne peut pas hériter d’une classe de base.  Pour plus d’informations, consultez [les Classes et Structs](../../extensions/classes-and-structs-cpp-component-extensions.md).
+Un type valeur ne peut pas hériter d’une classe de base.  Pour plus d’informations, consultez [Classes et structs](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3830 :
+L’exemple suivant génère l’C3830 :
 
-```
+```cpp
 // C3830a.cpp
 // compile with: /clr /c
 public value struct MyStruct4 {

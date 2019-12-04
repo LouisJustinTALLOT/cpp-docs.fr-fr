@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2806
 ms.assetid: 7c9ff1f4-1590-4c47-991d-b1075a173b48
-ms.openlocfilehash: 1d37f5d1c6e253c01ae8a3b7640fb3ee4cf12534
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be991d26cb822221051316f3557b23a2b82e732d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281965"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760619"
 ---
 # <a name="compiler-error-c2806"></a>Erreur du compilateur C2806
 
-'operator opérateur' a trop de paramètres formels
+'operator opérateur’a trop de paramètres formels
 
-Un opérateur surchargé a trop de paramètres.
+Un opérateur surchargé a un trop grand nombre de paramètres.
 
-L’exemple suivant génère l’erreur C2806 :
+L’exemple suivant génère l’C2806 :
 
-```
+```cpp
 // C2806.cpp
 // compile with: /c
 class X {

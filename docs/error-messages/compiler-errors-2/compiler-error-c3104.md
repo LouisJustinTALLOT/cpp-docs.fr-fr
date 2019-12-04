@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: fee023809246634f2f3da266a718e45861eae76e
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: b92a6eade137a1d319ec286afa08f8477ff029d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447834"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755858"
 ---
 # <a name="compiler-error-c3104"></a>Erreur du compilateur C3104
 
@@ -19,15 +19,15 @@ argument d’attribut non conforme
 
 Vous avez spécifié un argument non valide pour un attribut.
 
-Consultez [Types de paramètre d’attribut](../../extensions/attribute-parameter-types-cpp-component-extensions.md) pour plus d’informations.
+Pour plus d’informations, consultez [types de paramètres d’attribut](../../extensions/attribute-parameter-types-cpp-component-extensions.md) .
 
-Cette erreur peut être due à la mise en conformité du compilateur pour Visual Studio 2005 : lors du passage de tableaux managés à des attributs personnalisés, le type du tableau n’est plus déduit à partir de la liste d’initialisation d’agrégats. Le compilateur requiert désormais vous permettent de spécifier le type de tableau ainsi que la liste d’initialiseurs.
+Cette erreur peut être générée en raison du travail de conformité du compilateur pour Visual Studio 2005 : lors du passage de tableaux managés à des attributs personnalisés, le type du tableau n’est plus déduit de la liste d’initialisation d’agrégats. Désormais, le compilateur vous oblige à spécifier le type du tableau, ainsi que la liste d’initialiseurs.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3104.
+L’exemple suivant génère l’C3104.
 
-```
+```cpp
 // C3104a.cpp
 // compile with: /clr /c
 using namespace System;
@@ -46,9 +46,9 @@ ref struct AStruct{};
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3104.
+L’exemple suivant génère l’C3104.
 
-```
+```cpp
 // C3104b.cpp
 // compile with: /clr /c
 // C3104 expected

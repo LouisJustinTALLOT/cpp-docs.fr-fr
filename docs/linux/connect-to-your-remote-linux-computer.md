@@ -3,12 +3,12 @@ title: Connexion à votre système Linux cible dans Visual Studio
 description: Comment se connecter à une machine Linux distante ou à un sous-système Windows pour Linux C++ à partir d’un projet Visual Studio.
 ms.date: 11/09/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 6f7116ab5dc6c77f88d0787beac32d1c1e0a4716
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966570"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755276"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Connexion à votre système Linux cible dans Visual Studio
 
@@ -82,7 +82,7 @@ Pour configurer cette connexion distante :
 
 ## <a name="tcp-port-forwarding"></a>Réacheminement de port TCP
 
-Le support Linux de Visual Studio dépend de la réacheminement de port TCP. La **synchronisation** et la **gdbserver** sont affectées si le transfert de port TCP est désactivé sur votre système distant. 
+Le support Linux de Visual Studio dépend de la réacheminement de port TCP. La **synchronisation** et la **gdbserver** sont affectées si le transfert de port TCP est désactivé sur votre système distant. Si vous êtes concerné par cette dépendance, vous pouvez voter ce ticket de [suggestion](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) sur la communauté des développeurs.
 
 la synchronisation est utilisée par les projets Linux basés sur MSBuild et les projets CMake pour [copier les en-têtes de votre système distant vers Windows en vue d’une utilisation par IntelliSense](configure-a-linux-project.md#remote_intellisense). Lorsque vous ne pouvez pas activer le transfert de port TCP, désactivez le téléchargement automatique des en-têtes distants. Pour le désactiver, utilisez **outils > Options > multiplateforme > gestionnaire de connexions > en-têtes distants gestionnaire IntelliSense**. Si le réacheminement de port TCP n’est pas activé sur le système distant, vous voyez cette erreur lorsque le téléchargement des en-têtes distants pour IntelliSense commence :
 

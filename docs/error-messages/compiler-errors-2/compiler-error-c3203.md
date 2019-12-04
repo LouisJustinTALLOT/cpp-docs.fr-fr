@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
-ms.openlocfilehash: c55160c855a6188a616f957acee43e409b751b62
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 1d0ed5ec717efecb9fbea4a9451836c0471522b6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447798"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738711"
 ---
 # <a name="compiler-error-c3203"></a>Erreur du compilateur C3203
 
@@ -19,9 +19,9 @@ ms.locfileid: "65447798"
 
 Vous avez passé un argument non valide à une classe modèle ou générique. La classe modèle ou générique attend un type en tant que paramètre.
 
-Cette erreur peut être due à la mise en conformité du compilateur pour Visual Studio 2005 : un modèle de classe non spécialisé ne peut pas être utilisé comme argument template dans une liste de classe de base. Pour résoudre l'erreur C3203, ajoutez explicitement le ou les paramètres de type de modèle au nom de la classe de modèle quand vous l'utilisez en tant que paramètre de modèle dans une liste de classes de base.
+Cette erreur peut être générée en raison du travail de conformité du compilateur pour Visual Studio 2005 : un modèle de classe non spécialisé ne peut pas être utilisé en tant qu’argument de modèle dans une liste de classes de base. Pour résoudre l'erreur C3203, ajoutez explicitement le ou les paramètres de type de modèle au nom de la classe de modèle quand vous l'utilisez en tant que paramètre de modèle dans une liste de classes de base.
 
-```
+```cpp
 // C3203.cpp
 template< typename T >
 struct X {
@@ -42,7 +42,7 @@ int main() {
 
 L'exemple suivant génère l'erreur C3203 et montre comment la corriger :
 
-```
+```cpp
 // C3203_b.cpp
 // compile with: /c
 template <class T>
@@ -67,7 +67,7 @@ typedef C3<S1<int> > MyC12;
 
 L'erreur C3203 peut également se produire lors de l'utilisation de génériques :
 
-```
+```cpp
 // C3203_c.cpp
 // compile with: /clr /c
 generic <class T>

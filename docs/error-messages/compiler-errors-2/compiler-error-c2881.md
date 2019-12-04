@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2881
 ms.assetid: b49c63c2-b064-4d4b-a75e-ddd2af947522
-ms.openlocfilehash: 82a4fbe94bc7250244d57f549e52037d6a54c784
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c171fd529943bb07a6c512e4ac97f64f13f959d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378914"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736280"
 ---
 # <a name="compiler-error-c2881"></a>Erreur du compilateur C2881
 
-'espace de noms1' : est déjà utilisé comme alias pour 'espace de noms2'
+'noms1 ' : est déjà utilisé comme alias pour’noms2 '
 
-Vous ne pouvez pas utiliser le même nom en tant qu’alias pour deux espaces de noms.
+Vous ne pouvez pas utiliser le même nom qu’un alias pour deux espaces de noms.
 
-L’exemple suivant génère C2881 :
+L’exemple suivant génère l’C2881 :
 
-```
+```cpp
 // C2881.cpp
 // compile with: /c
 namespace A {

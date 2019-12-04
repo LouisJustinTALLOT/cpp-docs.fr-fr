@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3710
 ms.assetid: 18bec009-5b6f-464a-a21e-5d58a6936504
-ms.openlocfilehash: 04b79b3c924892eb2a970f880d3f2048f4cb2b10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c060d5b01c0d918071681996e76258eba0ce943
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328470"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753417"
 ---
 # <a name="compiler-error-c3710"></a>Erreur du compilateur C3710
 
-'fonction' : syntaxe incorrecte pour spécifier un gestionnaire d’événements dans __hook /\__unhook
+'fonction' : syntaxe incorrecte pour spécifier un gestionnaire d’événements dans __hook/\__unhook
 
 Lorsque vous spécifiez un gestionnaire d’événements avec [__hook](../../cpp/hook.md) ou [__unhook](../../cpp/unhook.md), le gestionnaire doit être une méthode valide.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3710
+L’exemple suivant génère l’C3710
 
-```
+```cpp
 // C3710.cpp
 // compile with: /link /opt:noref
 #include <atlbase.h>

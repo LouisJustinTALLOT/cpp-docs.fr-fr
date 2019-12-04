@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2675
 ms.assetid: 4b92a12b-bff8-4dd5-a109-620065fc146c
-ms.openlocfilehash: aea79509d0e1ae5c31fcf0cf369c28af39a21154
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b7b81ce7314fbad02d6873403fc5cf1bdd54709
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367926"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760372"
 ---
 # <a name="compiler-error-c2675"></a>Erreur du compilateur C2675
 
-l’opérateur unaire 'opérateur' : 'type' ne définit pas cet opérateur ou une conversion vers un type acceptable pour l’opérateur prédéfini
+'opérateur’unaire : 'type’ne définit pas cet opérateur ou une conversion vers un type acceptable pour l’opérateur prédéfini
 
-C2675 peut également se produire lorsque vous utilisez un opérateur unaire, et le type ne définit pas l’opérateur ou une conversion vers un type acceptable pour l’opérateur prédéfini. Pour utiliser l'opérateur, vous devez le surcharger pour le type spécifié ou définir une conversion vers un type pour lequel l'opérateur est défini.
+C2675 peut également se produire lors de l’utilisation d’un opérateur unaire, et le type ne définit pas l’opérateur ou une conversion vers un type acceptable pour l’opérateur prédéfini. Pour utiliser l'opérateur, vous devez le surcharger pour le type spécifié ou définir une conversion vers un type pour lequel l'opérateur est défini.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C2675.
+L’exemple suivant génère l’C2675.
 
-```
+```cpp
 // C2675.cpp
 struct C {
    C(){}

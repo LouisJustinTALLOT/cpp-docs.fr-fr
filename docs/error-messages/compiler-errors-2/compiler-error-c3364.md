@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3364
 ms.assetid: 98654741-60fe-4472-a6af-e580f8c0a6e1
-ms.openlocfilehash: e99ab3919edcfb883701c08c52cd7aad60cd4591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eae1e7ddbc34d36b55d7afa424c137db00ef047d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400355"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757343"
 ---
 # <a name="compiler-error-c3364"></a>Erreur du compilateur C3364
 
-'délégué' : constructeur délégué : l’argument doit être le pointeur vers la fonction membre de classe managée ou une fonction globale
+'Delegate' : constructeur délégué : l’argument doit être un pointeur vers une fonction membre d’une classe managée ou d’une fonction globale
 
-Le deuxième paramètre de constructeur du délégué prend l’adresse d’une fonction membre ou l’adresse d’une fonction membre statique de n’importe quelle classe. Les deux sont traités en tant qu’adresses simples.
+Le deuxième paramètre du constructeur du délégué prend l’adresse d’une fonction membre ou l’adresse d’une fonction membre statique d’une classe quelconque. Les deux sont traités comme des adresses simples.
 
-L’exemple suivant génère l’erreur C3364 :
+L’exemple suivant génère l’C3364 :
 
-```
+```cpp
 // C3364_2.cpp
 // compile with: /clr
 

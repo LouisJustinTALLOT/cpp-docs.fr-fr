@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3265
 ms.assetid: 10ab3e17-4a9f-4120-bab5-21473869b70f
-ms.openlocfilehash: a675567e23764a0b361cab4bef4bc75019de3756
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 633089115fe7edd0bdf06cdbcda6909ae7ac656e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365843"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754158"
 ---
 # <a name="compiler-error-c3265"></a>Erreur du compilateur C3265
 
-Impossible de déclarer un 'constructeur managé' dans une 'construction non managée' non managée
+Impossible de déclarer une’construction managée’managée dans une’construction non managée’non managée
 
 Vous ne pouvez pas inclure un objet managé dans un contexte non managé.
 
-L’exemple suivant génère C3265 :
+L’exemple suivant reproduit C3265 :
 
-```
+```cpp
 // C3265_2.cpp
 // compile with: /clr /LD
 #include <vcclr.h>

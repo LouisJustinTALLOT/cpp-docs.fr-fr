@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2803
 ms.assetid: 2cdbe374-8cc4-4c4e-ba15-062a7479e937
-ms.openlocfilehash: d20b8dde9f4134273adcba0f947f685f7ce7d213
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d39f737ba02f3fa9c9d5f61594ddf730db6739a5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408522"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760658"
 ---
 # <a name="compiler-error-c2803"></a>Erreur du compilateur C2803
 
-'operator opérateur' doit avoir au moins un paramètre de type de classe
+'operator opérateur’doit avoir au moins un paramètre formel de type classe
 
-L’opérateur surchargé ne dispose pas d’un paramètre de type de classe.
+L’opérateur surchargé n’a pas de paramètre de type classe.
 
-Vous devez passer au moins un paramètre par référence (sans utiliser de pointeurs, mais des références) ou par valeur pour pouvoir écrire « un < b » (un et b en cours de la classe de type A).
+Vous devez passer au moins un paramètre par référence (à l’exception des pointeurs, mais des références) ou par valeur pour pouvoir écrire « a < b » (a et b étant de type classe A).
 
-Si les deux paramètres sont des pointeurs, il sera une pure comparaison d’adresses de pointeur et n’utilise pas la conversion définie par l’utilisateur.
+Si les deux paramètres sont des pointeurs, il s’agit d’une comparaison pure des adresses de pointeur et n’utilise pas la conversion définie par l’utilisateur.
 
-L’exemple suivant génère l’erreur C2803 :
+L’exemple suivant génère l’C2803 :
 
-```
+```cpp
 // C2803.cpp
 // compile with: /c
 class A{};
