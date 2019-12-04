@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3189
 ms.assetid: b254de79-931e-4a59-a9f4-1c690d90ca5e
-ms.openlocfilehash: b2de290178657ae427b5ad7999c511ae7ff9f1eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b53056cf8a7b4b9b49720ef17e8f9318390059a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300638"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761619"
 ---
 # <a name="compiler-error-c3189"></a>Erreur du compilateur C3189
 
-' typeid\<tapez déclarateur abstrait >': cette syntaxe n’est plus pris en charge, utilisez :: typeid à la place
+'typeid\<type abstrait déclarateur > ' : cette syntaxe n’est plus prise en charge, utilisez :: typeid à la place
 
-Une forme obsolète de [typeid](../../extensions/typeid-cpp-component-extensions.md) a été utilisé, utiliser le nouveau formulaire.
+Une forme obsolète de [typeid](../../extensions/typeid-cpp-component-extensions.md) a été utilisée, utilisez le nouveau formulaire.
 
-L’exemple suivant génère l’erreur C3189 :
+L’exemple suivant génère l’C3189 :
 
-```
+```cpp
 // C3189.cpp
 // compile with: /clr
 int main() {

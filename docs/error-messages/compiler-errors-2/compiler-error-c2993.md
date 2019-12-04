@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2993
 ms.assetid: 4ffd2b78-654b-46aa-95a6-b62101cf91c8
-ms.openlocfilehash: 5be4836332f67f2064f60a3b058db159a18ca1e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5aa0d27b2d469f53ec521f587172398b7d4c2d1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160885"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761229"
 ---
 # <a name="compiler-error-c2993"></a>Erreur du compilateur C2993
 
-'identificateur' : type non conforme pour le paramètre de modèle sans type 'paramètre'
+'identificateur' : type non conforme pour le paramètre de modèle sans type’paramètre'
 
-Vous ne pouvez pas déclarer un modèle avec une structure ou un argument d’union. Utiliser des pointeurs pour passer des structures et unions en tant que paramètres de modèle.
+Vous ne pouvez pas déclarer un modèle avec un argument de structure ou d’Union. Utilisez des pointeurs pour passer des structures et des unions en tant que paramètres de modèle.
 
-L’exemple suivant génère l’erreur C2993 :
+L’exemple suivant génère l’C2993 :
 
-```
+```cpp
 // C2993.cpp
 // compile with: /c
 // C2993 expected
@@ -36,11 +36,11 @@ template <class T, struct MyStruct S>   // C2993
 class CMyClass {};
 ```
 
-Cette erreur sera également être due à la mise en conformité du compilateur dans Visual Studio .NET 2003 : les paramètres de modèle sans type ne sont plus autorisés à virgule flottante. La norme C++ n’autorise pas les paramètres de modèle sans type à virgule flottante.
+Cette erreur est également générée en raison du travail de mise en conformité du compilateur effectué dans Visual Studio .NET 2003 : les paramètres de modèle sans type à virgule flottante ne sont plus autorisés. La C++ norme n’autorise pas les paramètres de modèle sans type à virgule flottante.
 
-Dans le cas d’un modèle de fonction, utilisez un argument de fonction à passer dans flottante point de paramètre de modèle sans type (ce code sera valide dans les versions de Visual Studio .NET 2003 et Visual Studio .NET de Visual C++). Dans le cas d’un modèle de classe, il n’existe aucune solution simple.
+S’il s’agit d’un modèle de fonction, utilisez un argument de fonction pour passer le paramètre de modèle sans type à virgule flottante (ce code sera valide dans les versions Visual Studio .NET 2003 et Visual C++Studio .net de Visual). S’il s’agit d’un modèle de classe, il n’existe pas de solution de contournement facile.
 
-```
+```cpp
 // C2993b.cpp
 // compile with: /c
 template<class T, float f> void func(T) {}   // C2993

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2762
 ms.assetid: 8b81a801-fd48-40a1-8bee-0748795b12e4
-ms.openlocfilehash: 0cb05d0e111319ff135bdb48d51af6eb4a2f2353
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2f325fc9266321f224429afd3c295141627ecd6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257541"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759852"
 ---
 # <a name="compiler-error-c2762"></a>Erreur du compilateur C2762
 
-'classe' : expression non valide comme argument template pour 'argument'
+'class' : expression non valide comme argument template pour’argument'
 
-Lorsque vous utilisez [/Za](../../build/reference/za-ze-disable-language-extensions.md), le compilateur ne convertira pas un type intégral vers un autre pointeur.
+Lors de l’utilisation de [/za](../../build/reference/za-ze-disable-language-extensions.md), le compilateur ne convertit pas un intégral en pointeur.
 
-L’exemple suivant génère l’erreur C2762 :
+L’exemple suivant génère l’C2762 :
 
-```
+```cpp
 // C2762.cpp
 // compile with: /Za
 template<typename T, T *pT>

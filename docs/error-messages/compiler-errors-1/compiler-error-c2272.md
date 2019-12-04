@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2272
 ms.assetid: 1517706a-9c27-452e-9b10-3424b3d232bc
-ms.openlocfilehash: 1a5a1e47a721cb6edd795012cc45943e63708936
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd6fdecd3a491ce5f068f4d51d413e6767aabe2f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388889"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758695"
 ---
 # <a name="compiler-error-c2272"></a>Erreur du compilateur C2272
 
 'fonction' : modificateurs non autorisés sur les fonctions membres statiques
 
-Un `static` fonction membre est déclarée avec un spécificateur de modèle de mémoire, tel que [const](../../cpp/const-cpp.md) ou [volatile](../../cpp/volatile-cpp.md), et ces modificateurs ne sont pas autorisés sur `static` fonctions membres.
+Une fonction membre `static` est déclarée avec un spécificateur de modèle de mémoire, tel que [const](../../cpp/const-cpp.md) ou [volatile](../../cpp/volatile-cpp.md), et ces modificateurs ne sont pas autorisés sur `static` fonctions membres.
 
-L’exemple suivant génère l’erreur C2272 :
+L’exemple suivant génère l’C2272 :
 
-```
+```cpp
 // C2272.cpp
 // compile with: /c
 class CMyClass {

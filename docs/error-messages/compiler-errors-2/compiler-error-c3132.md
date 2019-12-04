@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3132
 ms.assetid: d54a3d12-336a-4ed0-ad4e-43cddac33b5e
-ms.openlocfilehash: 1a97e04747cb92909380e66d1f4ea8ca62183054
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3ef68e693b77b72c1e4cc2590a404b09b38ab04
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349878"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760203"
 ---
 # <a name="compiler-error-c3132"></a>Erreur du compilateur C3132
 
-'paramètre de fonction' : les tableaux de paramètres peuvent uniquement être appliqués à un argument formel de type 'single-dimensional managed array'
+'fonction-Parameter' : les tableaux de paramètres ne peuvent être appliqués qu’à un argument formel de type’Single-Dimensional Managed array'
 
-Le <xref:System.ParamArrayAttribute> attribut a été appliqué à un paramètre qui n’était pas un tableau unidimensionnel.
+L’attribut <xref:System.ParamArrayAttribute> a été appliqué à un paramètre qui n’est pas un tableau à une seule dimension.
 
-L’exemple suivant génère l’erreur C3132 :
+L’exemple suivant génère l’C3132 :
 
-```
+```cpp
 // C3132.cpp
 // compile with: /clr /c
 using namespace System;

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2351
 ms.assetid: 5439ccf6-66f6-4859-964c-c73f5eddfc1b
-ms.openlocfilehash: 2d93902ee0008a54da1b2ecf165e0a829362511f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6839d0c44efa10ba9507389fea35964fa748d646
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389019"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759969"
 ---
 # <a name="compiler-error-c2351"></a>Erreur du compilateur C2351
 
-syntaxe de l’initialisation de constructeur C++ obsolète
+syntaxe C++ d’initialisation de constructeur obsolète
 
-Dans une liste d’initialisation de nouveau style pour un constructeur, vous devez nommer explicitement chaque classe de base directe, même si elle est la seule classe de base.
+Dans une liste d’initialisation de nouveau style pour un constructeur, vous devez nommer explicitement chaque classe de base directe, même s’il s’agit de la seule classe de base.
 
-L’exemple suivant génère l’erreur C2351 :
+L’exemple suivant génère l’C2351 :
 
-```
+```cpp
 // C2351.cpp
 // compile with: /c
 class B {

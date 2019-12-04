@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2253
 ms.assetid: bd6445ae-b2c1-4669-9657-a8f4acf80b16
-ms.openlocfilehash: 847c37c6ae5edf14205d3d46ca624a572c8d6b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89acfd8a03dc0ee2dc25e14e0b3a63ab25151cc6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397559"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758851"
 ---
 # <a name="compiler-error-c2253"></a>Erreur du compilateur C2253
 
-'fonction' : spécificateur pure ou abstraite spécificateur de substitution uniquement autorisé sur une fonction virtuelle
+'fonction' : spécificateur pure ou spécificateur de substitution abstrait uniquement autorisé sur une fonction virtuelle
 
-Une fonction non virtuelle est spécifiée comme pure `virtual`.
+Une fonction non virtuelle est spécifiée en tant que `virtual`pur.
 
-L’exemple suivant génère l’erreur C2253 :
+L’exemple suivant génère l’C2253 :
 
-```
+```cpp
 // C2253.cpp
 // compile with: /c
 class A {
@@ -31,9 +31,9 @@ public:
 };
 ```
 
-L’exemple suivant génère l’erreur C2253 :
+L’exemple suivant génère l’C2253 :
 
-```
+```cpp
 // C2253_2.cpp
 // compile with: /clr /c
 ref struct A {

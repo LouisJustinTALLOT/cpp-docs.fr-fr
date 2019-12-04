@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2341
 ms.assetid: aa2a7da5-e1c8-4225-9939-5bdc50158f31
-ms.openlocfilehash: 4356182758398fa7ed1ec6a069affa4bb99ace1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6147ce954c6d21d86f76d1fd8ec6b8a1a5070a12
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188218"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760047"
 ---
 # <a name="compiler-error-c2341"></a>Erreur du compilateur C2341
 
-'section name' : segment doit être défini à l’aide de #pragma data_seg, code_seg ou section avant d’utiliser
+'section Name' : le segment doit être défini à l’aide de #pragma data_seg, code_seg ou section avant d’être utilisé
 
-Un [allouer](../../cpp/allocate.md) instruction fait référence à un segment ne sont pas encore défini par [code_seg](../../preprocessor/code-seg.md), [data_seg](../../preprocessor/data-seg.md), ou [section](../../preprocessor/section.md) pragmas.
+Une instruction [allocate](../../cpp/allocate.md) fait référence à un segment qui n’est pas encore défini par les pragmas [code_seg](../../preprocessor/code-seg.md), [data_seg](../../preprocessor/data-seg.md)ou [section](../../preprocessor/section.md) .
 
-L’exemple suivant génère l’erreur C2341 :
+L’exemple suivant génère l’C2341 :
 
-```
+```cpp
 // C2341.cpp
 // compile with: /c
 __declspec(allocate(".test"))   // C2341
@@ -30,7 +30,7 @@ int j = 1;
 
 Solution possible :
 
-```
+```cpp
 // C2341b.cpp
 // compile with: /c
 #pragma data_seg(".test")

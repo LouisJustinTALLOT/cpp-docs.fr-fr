@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2870
 ms.assetid: 80523ee9-1fd3-4dc4-8a77-5083deb99066
-ms.openlocfilehash: f61281da23e46236e7fce496a4d89086e5d6c0ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b006592723df1222d05e39b3bc9e5729efc8aa6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165038"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755029"
 ---
 # <a name="compiler-error-c2870"></a>Erreur du compilateur C2870
 
-'name' : une définition de l’espace de noms doit apparaître soit au niveau de la portée du fichier, soit immédiatement au sein d’une autre définition de l’espace de noms
+'nom' : une définition d’espace de noms doit apparaître soit au niveau de la portée du fichier, soit immédiatement dans une autre définition d’espace de noms
 
-Vous avez défini l’espace de noms `name` incorrectement. Espaces de noms doit être définie dans la portée du fichier (en dehors de tous les blocs et classes) ou immédiatement au sein d’un autre espace de noms.
+Vous avez défini l’espace de noms `name` de manière incorrecte. Les espaces de noms doivent être définis au niveau de la portée du fichier (à l’extérieur de tous les blocs et classes) ou immédiatement dans un autre espace de noms.
 
-L’exemple suivant génère l’erreur C2870 :
+L’exemple suivant génère l’C2870 :
 
-```
+```cpp
 // C2870.cpp
 // compile with: /c
 int main() {

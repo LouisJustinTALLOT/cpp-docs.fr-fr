@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2688
 ms.assetid: 168c9e9d-8f65-4664-af86-db71d3e6ee46
-ms.openlocfilehash: 5355abc603726eb1bacb7a22fa1095bf2d81c538
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc871467e1e3fb23edc6231c3adb182f5e26c0d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266281"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760242"
 ---
 # <a name="compiler-error-c2688"></a>Erreur du compilateur C2688
 
-'C2::fgrv' : retours covariants avec plusieurs ou l’héritage virtuel non pris en charge pour les fonctions varargs
+'C2 :: fgrv' : retours covariants avec un héritage virtuel ou multiple non pris en charge pour les fonctions varargs
 
-Types de retour covariants ne sont pas pris en charge dans Visual C++ lorsqu’une fonction contient des arguments variables.
+Les types de retour covariants ne sont C++ pas pris en charge dans le visuel quand une fonction contient des arguments de variables.
 
-Pour résoudre cette erreur, définissez vos fonctions afin qu’ils ne pas utiliser d’arguments de variables ou que les valeurs de retour à la même pour toutes les fonctions virtuelles.
+Pour résoudre cette erreur, définissez vos fonctions de manière à ce qu’elles n’utilisent pas d’arguments de variables, ou transmettez les valeurs de retour de la même manière pour toutes les fonctions virtuelles.
 
-L’exemple suivant génère l’erreur C2688 :
+L’exemple suivant génère l’C2688 :
 
-```
+```cpp
 // C2688.cpp
 struct G1 {};
 struct G2 {};

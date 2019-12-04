@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3648
 ms.assetid: 5d042989-41cb-4cd0-aa50-976b70146aaf
-ms.openlocfilehash: 7394f6b9789caa09ffc2ad6c2cf56f037b5d57b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b26be9890bbbdf6276c61023e6867160528e236
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385574"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751831"
 ---
 # <a name="compiler-error-c3648"></a>Erreur du compilateur C3648
 
-Cette syntaxe de substitution explicite requiert/clr : oldSyntax
+Cette syntaxe de substitution explicite requiert/CLR : oldSyntax
 
-Lors de la compilation pour la dernière syntaxe managée, le compilateur a trouvé explicit remplacent la syntaxe pour les versions antérieures ne sont plus pris en charge.
+Lors de la compilation de la dernière syntaxe managée, le compilateur a trouvé une syntaxe de substitution explicite pour les versions précédentes qui n’est plus prise en charge.
 
 Pour plus d’informations, consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3648 :
+L’exemple suivant génère l’C3648 :
 
-```
+```cpp
 // C3648.cpp
 // compile with: /clr
 public interface struct I {

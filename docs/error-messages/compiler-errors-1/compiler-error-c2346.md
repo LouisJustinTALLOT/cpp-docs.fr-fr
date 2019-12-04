@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C2346
 ms.assetid: 246145be-5645-4cd6-867c-e3bc39e33dca
-ms.openlocfilehash: a6d75ca671e22203cb40ca18de21606834eeefa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc2aeac02ecc3f29406c2288051ca6cd9d3a4923
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188089"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760008"
 ---
 # <a name="compiler-error-c2346"></a>Erreur du compilateur C2346
 
-'fonction' ne peut pas être compilée comme code natif : raison
+'Function’ne peut pas être compilé comme Native : Reason
 
-Le compilateur n’a pas pu compiler une fonction en langage MSIL.
+Le compilateur n’a pas pu compiler une fonction en MSIL.
 
-Pour plus d’informations, consultez [managed, unmanaged](../../preprocessor/managed-unmanaged.md) et [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Pour plus d’informations, consultez [managé, non managé](../../preprocessor/managed-unmanaged.md) et [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 
-1. Supprimer le code dans la fonction qui ne peuvent pas être compilée en langage MSIL.
+1. Supprimez le code de la fonction qui ne peut pas être compilé en MSIL.
 
-1. Ne compilez pas le module avec **/CLR**, ou marquez la fonction comme non gérés avec le pragma non managé.
+1. Ne compilez pas le module avec **/CLR**, ou marquez la fonction comme non managée avec le pragma non managé.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C2346.
+L’exemple suivant génère l’C2346.
 
-```
+```cpp
 // C2346.cpp
 // processor: x86
 // compile with: /clr

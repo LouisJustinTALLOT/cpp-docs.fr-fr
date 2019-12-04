@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: 07cfda76af26ddb285be4f77131aaf48a20a761f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 2e0122dd53ba5318077dd33f22a07492c52db26b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447856"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756212"
 ---
 # <a name="compiler-error-c3451"></a>Erreur du compilateur C3451
 
-'attribute' : Impossible d’appliquer l’attribut non managé à 'type'
+'Attribute' : impossible d’appliquer l’attribut non managé à’type'
 
-Un attribut C++ ne peut pas être appliqué à un type CLR. Consultez [référence des attributs C++](../../windows/attributes/attributes-alphabetical-reference.md) pour plus d’informations.
+Un C++ attribut ne peut pas être appliqué à un type CLR. Pour plus d’informations, consultez [ C++ référence des attributs](../../windows/attributes/attributes-alphabetical-reference.md) .
 
 Pour plus d'informations, consultez [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
-Cette erreur peut être due à la mise en conformité du compilateur pour Visual Studio 2005 : le [uuid](../../windows/uuid-cpp-attributes.md) attribut n’est plus autorisé sur un attribut défini par l’utilisateur à l’aide de la programmation CLR. Utilisez plutôt <xref:System.Runtime.InteropServices.GuidAttribute>.
+Cette erreur peut être générée en raison du travail de mise en conformité du compilateur pour Visual Studio 2005 : l’attribut [UUID](../../windows/uuid-cpp-attributes.md) n’est plus autorisé sur un attribut défini par l’utilisateur à l’aide de la programmation CLR. Utilisez plutôt <xref:System.Runtime.InteropServices.GuidAttribute>.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3451.
+L’exemple suivant génère l’C3451.
 
-```
+```cpp
 // C3451.cpp
 // compile with: /clr /c
 using namespace System;

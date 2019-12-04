@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-ms.openlocfilehash: e80fa62db9795838980c63e113300a554afabef3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b487c0f94a00ec64e0c2178265c5a8c27544a51
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376235"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761554"
 ---
 # <a name="compiler-error-c3535"></a>Erreur du compilateur C3535
 
-Impossible de déduire le type de 'type1' à partir de 'type2'
+Impossible de déduire le type de’type1 'à partir de’type2 '
 
-Le type de la variable déclarée par le `auto` mot clé ne peut pas être déduit à partir du type de l’expression d’initialisation. Par exemple, cette erreur se produit si l’expression d’initialisation a la valeur `void`, qui n’est pas un type.
+Le type de la variable déclarée par le mot clé `auto` ne peut pas être déduit du type de l’expression d’initialisation. Par exemple, cette erreur se produit si l’expression d’initialisation prend la valeur `void`, qui n’est pas un type.
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 
 1. Assurez-vous que le type de l’expression d’initialisation n’est pas `void`.
 
-1. Vérifiez que la déclaration n’est pas un pointeur vers un type fondamental. Pour plus d’informations, consultez [Types fondamentaux](../../cpp/fundamental-types-cpp.md).
+1. Vérifiez que la déclaration n’est pas un pointeur vers un type fondamental. Pour plus d’informations, consultez [types fondamentaux](../../cpp/fundamental-types-cpp.md).
 
 1. Assurez-vous que si la déclaration est un pointeur vers un type, l’expression d’initialisation est un type pointeur.
 
@@ -31,7 +31,7 @@ Le type de la variable déclarée par le `auto` mot clé ne peut pas être dédu
 
 L’exemple suivant donne C3535 parce que l’expression d’initialisation prend la valeur `void`.
 
-```
+```cpp
 // C3535a.cpp
 // Compile with /Zc:auto
 void f(){}
@@ -44,9 +44,9 @@ int main()
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant donne C3535 parce que l’instruction déclare la variable `x` comme un pointeur vers un type déduit, mais le type de l’initialiseur de l’expression est double. Par conséquent, le compilateur ne peut pas déduire le type de la variable.
+L’exemple suivant donne C3535 parce que l’instruction déclare une variable `x` comme pointeur vers un type déduit, mais le type de l’expression d’initialiseur est double. Par conséquent, le compilateur ne peut pas déduire le type de la variable.
 
-```
+```cpp
 // C3535b.cpp
 // Compile with /Zc:auto
 int main()
@@ -58,9 +58,9 @@ int main()
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant donne C3535 parce que variable `p` déclare un pointeur vers un type déduit, mais l’expression d’initialisation n’est pas un type de pointeur.
+L’exemple suivant donne C3535, car la variable `p` déclare un pointeur vers un type déduit, mais l’expression d’initialisation n’est pas un type pointeur.
 
-```
+```cpp
 // C3535c.cpp
 // Compile with /Zc:auto
 class A { };

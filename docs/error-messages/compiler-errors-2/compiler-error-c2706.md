@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2706
 ms.assetid: e18da924-c42d-4b09-8e29-f4e0382d7dc6
-ms.openlocfilehash: 9767d36d44b99423d600d299d0803901d3dbfec5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bca86d3c0cf886c64a1d668468c793d0e77b2867
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161106"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757460"
 ---
 # <a name="compiler-error-c2706"></a>Erreur du compilateur C2706
 
-__except non conforme sans correspondance \__try (manquant '}' dans \__try bloc ?)
+__except non conforme sans _try de \_correspondant ('} 'manquant dans \_bloc de _try ?)
 
-Le compilateur n’a pas trouvé une accolade fermante pour un `__try` bloc.
+Le compilateur n’a pas trouvé d’accolade fermante pour un bloc `__try`.
 
-L’exemple suivant génère l’erreur C2706 :
+L’exemple suivant génère l’C2706 :
 
-```
+```cpp
 // C2706.cpp
 int main() {
    __try {

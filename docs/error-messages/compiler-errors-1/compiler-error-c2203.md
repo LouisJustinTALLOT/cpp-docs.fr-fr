@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2203
 ms.assetid: 5497df43-86f6-43d5-b6cb-723c4c589b10
-ms.openlocfilehash: 848fdad460402238f4957344dd49bd9128352b4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db36afa1376a0b64b3e110acd1722d3e0f2af449
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383260"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758955"
 ---
 # <a name="compiler-error-c2203"></a>Erreur du compilateur C2203
 
-supprimer opérateur ne peut pas spécifier de limites pour un tableau
+l’opérateur delete ne peut pas spécifier de limites pour un tableau
 
-Avec le **/Za** option (ANSI), le `delete` opérateur peut supprimer la totalité d’un tableau, mais pas des parties ou des membres spécifiques du tableau.
+Avec l’option **/za** (ANSI), l’opérateur `delete` peut supprimer un tableau entier, mais pas des parties ou des membres spécifiques du tableau.
 
-L’exemple suivant génère l’erreur C2203 :
+L’exemple suivant génère l’C2203 :
 
-```
+```cpp
 // C2203.cpp
 // compile with: /Za
 int main() {

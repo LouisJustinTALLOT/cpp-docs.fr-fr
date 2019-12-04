@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: 85654e266c3157ab145e7ac7aab454a0d4f6c102
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26fdcd3b7989d9030249133e6dc1d277aa1a9f44
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406442"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756277"
 ---
 # <a name="compiler-error-c3915"></a>Erreur du compilateur C3915
 
-'type' n’a aucune propriété indexée par défaut (indexeur de classe)
+'type’n’a pas de propriété indexée par défaut (indexeur de classe)
 
-Un type n’a pas une valeur par défaut, la propriété indexée.
+Un type n’a pas de propriété indexée par défaut.
 
 Pour plus d'informations, consultez [property](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3915.
+L’exemple suivant génère l’C3915.
 
-```
+```cpp
 // C3915.cpp
 // compile with: /clr
 ref class X {
@@ -48,11 +48,11 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-C3915 peut également se produire si vous essayez de consommer un indexeur par défaut dans le même compiland où il a été défini avec <xref:System.Reflection.DefaultMemberAttribute>.
+C3915 peut également se produire si vous tentez d’utiliser un indexeur par défaut dans le même module (compiland) où il a été défini avec <xref:System.Reflection.DefaultMemberAttribute>.
 
-L’exemple suivant génère l’erreur C3915.
+L’exemple suivant génère l’C3915.
 
-```
+```cpp
 // C3915_b.cpp
 // compile with: /clr
 using namespace System;

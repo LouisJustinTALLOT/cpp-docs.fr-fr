@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3185
 ms.assetid: 5bf96279-043c-4981-9d02-b4550071b192
-ms.openlocfilehash: 45afe70b454f72dd8c9b8ce9771ce1f5aef6a10e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36f350287a1cfaf937ee739800042aaf99f31769
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366080"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761632"
 ---
 # <a name="compiler-error-c3185"></a>Erreur du compilateur C3185
 
 'typeid' : utilisé avec le type managé ou WinRT 'type' ; utilisez 'opérateur' à la place
 
-Vous ne pouvez pas appliquer le [typeid](../../cpp/typeid-operator.md) opérateur managée ou WinRT type ; utilisez [typeid](../../extensions/typeid-cpp-component-extensions.md) à la place.
+Vous ne pouvez pas appliquer l’opérateur [typeid](../../cpp/typeid-operator.md) à un type managé ou WinRT ; Utilisez à la place [typeid](../../extensions/typeid-cpp-component-extensions.md) .
 
 L'exemple suivant génère l'erreur C3185 et montre comment la corriger :
 
-```
+```cpp
 // C3185a.cpp
 // compile with: /clr
 ref class Base {};

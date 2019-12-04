@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2013
 ms.assetid: 6b5c955c-53da-48ee-8533-64ef5b905173
-ms.openlocfilehash: b279202b8b32197a99d230040207aa50bc100495
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3dd8c315351ccf38989fc113e7ee31b25e38a07f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351129"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757408"
 ---
 # <a name="compiler-error-c2013"></a>Erreur du compilateur C2013
 
@@ -21,14 +21,14 @@ Il manque un signe supérieur de fermeture à une directive `#include` . Ajoutez
 
 L’exemple suivant génère l’erreur C2013 :
 
-```
+```cpp
 // C2013.cpp
 #include <stdio.h    // C2013
 ```
 
 Solution possible :
 
-```
+```cpp
 // C2013b.cpp
 // compile with: /c
 #include <stdio.h>

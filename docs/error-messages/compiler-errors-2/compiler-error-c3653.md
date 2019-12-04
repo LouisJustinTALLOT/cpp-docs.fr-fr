@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3653
 ms.assetid: 316549d7-f7ef-4578-a2ba-57adc8aac527
-ms.openlocfilehash: 75e2c061190b24019491db7a625ecafb5ac82b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69fc6fa9303b2256172dd079028050823f053246
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227511"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756330"
 ---
 # <a name="compiler-error-c3653"></a>Erreur du compilateur C3653
 
-'fonction' : ne peut pas être utilisé comme substitution nommée : fonction substituée introuvable ; n’auriez-vous pas oublié de nommer la fonction explicitement, à l’aide un :: opérateur ?
+'fonction' : ne peut pas être utilisé en tant que substitution nommée : fonction substituée introuvable ; avez-vous oublié de nommer la fonction explicitement, à l’aide d’un opérateur ::?
 
-Une substitution explicite spécifié à une fonction qui est introuvable dans n’importe quelle interface. Pour plus d’informations, consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Une substitution explicite a spécifié une fonction qui n’a été trouvée dans aucune interface. Pour plus d’informations, consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-L’exemple suivant génère l’erreur C3653 :
+L’exemple suivant génère l’C3653 :
 
-```
+```cpp
 // C3653.cpp
 // compile with: /clr
 public interface struct I {

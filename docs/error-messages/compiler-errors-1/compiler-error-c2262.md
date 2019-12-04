@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2262
 ms.assetid: 727d1c6e-53e8-40e5-b7b8-6a7ac2011727
-ms.openlocfilehash: 12272c21adac0e326cb8b149b359584197577941
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8723c03d37c04a5b99dc4b30cd2604718369c49
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397521"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758760"
 ---
 # <a name="compiler-error-c2262"></a>Erreur du compilateur C2262
 
-'spécificateurs_attributs' : Les déclarations InternalsVisibleTo ne peuvent pas avoir une version, culture ou architecture de processeur spécifiée
+'spécificateurs_attributs' : aucune version, culture ou architecture de processeur ne peut être spécifiée pour les déclarations InternalsVisible
 
 L’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> n’a pas été spécifié correctement.
 
@@ -23,7 +23,7 @@ L’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 
 
 L’exemple suivant génère l’erreur C2262 :
 
-```
+```cpp
 // C2262.cpp
 // compile with: /clr /c
 using namespace System::Runtime::CompilerServices;

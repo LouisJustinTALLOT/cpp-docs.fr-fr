@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2357
 ms.assetid: d1083945-0ea2-4385-9e66-8c665978806c
-ms.openlocfilehash: 1872672e776ad13bf16be5ae69729f4f68d8f3b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce1926468bac7e44485be5c0a0944fdf12dce3d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302031"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759917"
 ---
 # <a name="compiler-error-c2357"></a>Erreur du compilateur C2357
 
-'identificateur' : doit être une fonction de type 'type'
+'identificateur' : doit être une fonction de type’type'
 
-Votre code déclare une version de la `atexit` fonction qui ne correspond pas à la version déclarée en interne par le compilateur. Déclarer `atexit` comme suit :
+Votre code déclare une version de la fonction `atexit` qui ne correspond pas à la version déclarée en interne par le compilateur. Déclarez `atexit` comme suit :
 
 ```
 int __cdecl atexit(void (__cdecl *)());
@@ -25,9 +25,9 @@ int __cdecl atexit(void (__cdecl *)());
 
 Pour plus d’informations, consultez [init_seg](../../preprocessor/init-seg.md).
 
-L’exemple suivant génère l’erreur C2357 :
+L’exemple suivant génère l’C2357 :
 
-```
+```cpp
 // C2357.cpp
 // compile with: /c
 // C2357 expected

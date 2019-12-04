@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3282
 ms.assetid: bac2ac89-c360-4c24-bb81-c20c62ece9ba
-ms.openlocfilehash: 46be1f5250c1ca787909c48646d59180d62bd899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a119f8a9482d3f49c98873fee6f54b434416ee48
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381681"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757577"
 ---
 # <a name="compiler-error-c3282"></a>Erreur du compilateur C3282
 
-paramètre générique listes peuvent apparaître uniquement dans managed ou WinRTclasses, des structs ou des fonctions
+les listes de paramètres génériques ne peuvent apparaître que sur des fonctions managées ou WinRTclasses, des structs ou des fonctions
 
 Une liste de paramètres génériques a été utilisée de façon incorrecte.  Pour plus d’informations, consultez la page [Génériques](../../extensions/generics-cpp-component-extensions.md).
 
@@ -23,7 +23,7 @@ Une liste de paramètres génériques a été utilisée de façon incorrecte.  P
 
 L'exemple suivant génère l'erreur C3282 et montre comment la corriger.
 
-```
+```cpp
 // C3282.cpp
 // compile with: /clr /c
 generic <typename T> int x;   // C3282

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2255
 ms.assetid: 67dc4cb0-de6b-4405-bd64-d47736367a93
-ms.openlocfilehash: ae2c61257af3e1aca2d26ce5f8801999f7bb77c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 758c77b5f54404321eafcc55953c44d2ac7c5412
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387082"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758825"
 ---
 # <a name="compiler-error-c2255"></a>Erreur du compilateur C2255
 
@@ -21,7 +21,7 @@ Par exemple, une fonction non-membre est déclarée comme étant un `friend`.
 
 L’exemple suivant génère l’erreur C2255 :
 
-```
+```cpp
 // C2255.cpp
 // compile with: /c
 class A {
