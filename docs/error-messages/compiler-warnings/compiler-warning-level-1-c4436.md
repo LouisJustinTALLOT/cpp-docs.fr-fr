@@ -1,33 +1,37 @@
 ---
 title: Avertissement du compilateur (niveau 1) C4436
 ms.date: 11/04/2016
+f1_keywords:
+- C4436
+helpviewer_keywords:
+- C4436
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: 487fb8c804ac34ba52661774c2552199c764f6b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 762a458072a0a1104cd1af55ef1f61772485b6c9
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408184"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810611"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>Avertissement du compilateur (niveau 1) C4436
 
-dynamic_cast de la base virtuelle 'classe1' en 'classe2' dans le constructeur ou un destructeur peut échouer avec l’objet partiellement construit compilation avec/vd2 ou définir 'classe2' avec #pragma vtordisp (2) système en vigueur
+dynamic_cast de la base virtuelle « classe1 » à « Class2 » dans le constructeur ou le destructeur peut échouer avec une compilation d’objet partiellement construite avec/VD2 ou définir « Class2 » avec #pragma vtordisp (2) en vigueur
 
-Le compilateur a rencontré un `dynamic_cast` opération avec les caractéristiques suivantes.
+Le compilateur a rencontré une opération de `dynamic_cast` avec les caractéristiques suivantes.
 
-- Le cast est d’un pointeur de classe de base à un pointeur de la classe dérivée.
+- Le cast provient d’un pointeur de classe de base vers un pointeur de classe dérivée.
 
 - La classe dérivée hérite pratiquement de la classe de base.
 
-- La classe dérivée n’a pas un `vtordisp` champ pour la base virtuelle.
+- La classe dérivée n’a pas de champ `vtordisp` pour la base virtuelle.
 
-- Le cast se trouvent dans un constructeur ou un destructeur de la classe dérivée, ou une classe, ce qui hérite de la classe dérivée.
+- Le cast est trouvé dans un constructeur ou un destructeur de la classe dérivée, ou dans une classe qui hérite encore de la classe dérivée.
 
-L’avertissement indique le `dynamic_cast` peuvent ne pas fonctionner correctement, si elle s’exécute sur un objet partiellement construit.  Cela se produit si le constructeur/destructeur dérivé fonctionne sur un sous-objet de certains objets dérivée ultérieure.  Si la classe dérivée nommée dans l’avertissement n’est jamais plus dérivé, l’avertissement peut être ignoré.
+L’avertissement indique que la `dynamic_cast` peut ne pas s’exécuter correctement, si elle fonctionne sur un objet partiellement construit.  Cela se produit si le constructeur/destructeur dérivé fonctionne sur un sous-objet d’un autre objet dérivé.  Si la classe dérivée nommée dans l’avertissement n’est jamais dérivée, l’avertissement peut être ignoré.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C4436 et illustre le problème de génération de code qui produit de champ manquant `vtordisp` champ.
+L’exemple suivant génère l’erreur C4436 et montre le problème de génération de code qui se produit à partir du champ `vtordisp` manquant.
 
 ```cpp
 // C4436.cpp

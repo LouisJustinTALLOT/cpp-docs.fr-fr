@@ -3,31 +3,33 @@ title: Avertissement du compilateur C4868
 ms.date: 10/26/2017
 f1_keywords:
 - C4868
+helpviewer_keywords:
+- C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: 72700091fcd22271e6913228a1206b3d5efcbdef
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: c1d49eb61a5c7c47fa83dacb39ed50f42e0fb147
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447180"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810480"
 ---
-# <a name="compiler-warning-level-4-c4868"></a>Avertissement (niveau 4) du compilateur C4868
+# <a name="compiler-warning-level-4-c4868"></a>Avertissement du compilateur (niveau 4) C4868
 
-> «_fichier_(*line_number*) « compilateur ne peut pas appliquer l’ordre d’évaluation de gauche à droite dans la liste d’initialiseurs entre accolades
+> le compilateur'_file_(*line_number*) 'ne peut pas appliquer l’ordre d’évaluation de gauche à droite dans la liste d’initialiseurs entre accolades
 
-Les éléments d’une liste d’initialiseurs entre accolades doivent être évaluées dans l’ordre de gauche à droite. Il existe deux cas dans lequel le compilateur est incapable de garantir l’ordre : la première est lorsque certains éléments sont des objets passés par valeur ; la seconde est lors de la compilation avec `/clr` et certains éléments de sont des champs d’objets ou éléments de tableau. Lorsque le compilateur ne peut pas garantir l’évaluation de gauche à droite, il émet l’avertissement C4868.
+Les éléments d’une liste d’initialiseurs entre accolades doivent être évalués dans l’ordre de gauche à droite. Il existe deux cas dans lesquels le compilateur ne peut pas garantir cet ordre : le premier est lorsque certains des éléments sont des objets passés par valeur ; la seconde est lors de la compilation avec `/clr` et certains des éléments sont des champs d’objets ou des éléments de tableau. Lorsque le compilateur ne peut pas garantir l’évaluation de gauche à droite, il émet un avertissement C4868.
 
-Cet avertissement peut être généré en raison de travail de la conformité du compilateur pour Visual Studio 2015 Update 2. Le code compilé avant Visual Studio 2015 Update 2 peut désormais générer C4868.
+Cet avertissement peut être généré en raison du travail de mise en conformité du compilateur effectué pour Visual Studio 2015 Update 2. Le code compilé avant Visual Studio 2015 Update 2 peut désormais générer des C4868.
 
 Cet avertissement est désactivé par défaut. Utilisez `/Wall` pour activer cet avertissement.
 
-Pour résoudre cet avertissement, envisagez d’abord si l’évaluation de gauche à droite des éléments de liste d’initialiseur est nécessaire, par exemple lorsque d’évaluation des éléments peut produire des effets d’ordre dépendant. Dans de nombreux cas, l’ordre dans lequel les éléments sont évalués n’a pas d’effet visible.
+Pour résoudre cet avertissement, commencez par déterminer si l’évaluation de gauche à droite des éléments de la liste d’initialiseurs est nécessaire, par exemple lorsque l’évaluation des éléments peut produire des effets secondaires dépendants de la commande. Dans de nombreux cas, l’ordre dans lequel les éléments sont évalués n’a pas d’effet observable.
 
-Si l’ordre d’évaluation doit être de gauche à droite, considérez si il est possible de passer les éléments `const` font référence à la place. Une modification telle que cela supprime l’avertissement dans l’exemple de code suivant.
+Si l’ordre d’évaluation doit être de gauche à droite, déterminez s’il est possible de passer les éléments par `const` référence à la place. Une modification telle que celle-ci élimine l’avertissement dans l’exemple de code suivant.
 
 ## <a name="example"></a>Exemple
 
-Cet exemple génère C4868 et montre un moyen de résoudre le problème :
+Cet exemple génère C4868 et montre un moyen de le corriger :
 
 ```cpp
 // C4868.cpp
