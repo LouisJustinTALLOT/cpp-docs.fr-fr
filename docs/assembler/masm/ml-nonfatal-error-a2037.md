@@ -1,26 +1,26 @@
 ---
 title: Erreur ML non fatale A2037
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2037
 helpviewer_keywords:
 - A2037
 ms.assetid: e7fdb98b-3ce9-4e1f-99fc-1b1ea10b6961
-ms.openlocfilehash: f514dcd344a1dcf0ff30f0b33e4469ac26458d7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48a03c4543f0252b83b4075d723755397cf52e26
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177576"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856673"
 ---
 # <a name="ml-nonfatal-error-a2037"></a>Erreur ML non fatale A2037
 
-**instruction n’est ne pas autorisée à l’intérieur de définition de la structure**
+**instruction non autorisée dans une définition de structure**
 
-Définition d’une structure contient une instruction non valide.
+Une définition de structure contient une instruction non valide.
 
-Une structure ne peut pas contenir des instructions, les étiquettes, les procédures, les directives de flux de contrôle, [. DÉMARRAGE](../../assembler/masm/dot-startup.md), ou [. SORTIE](../../assembler/masm/dot-exit.md).
+Une structure ne peut pas contenir des instructions, des étiquettes, des procédures, des directives de flow de contrôle, [. STARTUP](../../assembler/masm/dot-startup.md), ou [. QUITTEz](../../assembler/masm/dot-exit.md).
 
 ## <a name="see-also"></a>Voir aussi
 

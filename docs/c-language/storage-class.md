@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - static storage class specifiers
 ms.assetid: 39a79ba6-edf5-42b6-8e45-f94227603dd6
-ms.openlocfilehash: d5664634687c689316427c8652865ba9423e24f4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: aa6e977b3aa03b5f08901cfa8b0abe1b4046e72d
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147813"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857006"
 ---
 # <a name="storage-class"></a>Classe de stockage
 
@@ -26,7 +26,7 @@ Dans une définition de fonction, le spécificateur de classe de stockage attrib
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* est spécifique à Microsoft \*/
+/\* *attribute-SEQ* est un \*spécifique à Microsoft /
 
 *declaration-specifiers* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -45,13 +45,13 @@ Les déclarations de fonction dans la portée du bloc avec un spécificateur de 
 
 Une fonction avec la classe de stockage **static** est uniquement visible dans le fichier source dans lequel elle est définie. Toutes les autres fonctions, que la classe de stockage `extern` leur soit attribuée explicitement ou implicitement, sont visibles dans tous les fichiers source du programme. Si la classe de stockage **static** est voulue, elle doit être déclarée dans la première occurrence d'une déclaration (le cas échéant) de la fonction et dans la définition de la fonction.
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Lorsque les extensions Microsoft sont activées, une fonction initialement déclarée sans classe de stockage (ou avec la classe de stockage `extern`) reçoit la classe de stockage **static** si la définition de fonction se trouve dans le même fichier source et que cette définition indique explicitement la classe de stockage **static**.
 
 Lors de la compilation avec l'option de compilateur /Ze, les fonctions déclarées dans un bloc à l'aide du mot clé `extern` ont une visibilité globale. Ce n'est pas le cas lorsque la compilation est effectuée avec /Za. Cette fonctionnalité ne peut pas être considérée comme adaptée si la portabilité du code source est un élément pris en compte.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

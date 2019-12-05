@@ -5,16 +5,16 @@ f1_keywords:
 - _udiv64
 helpviewer_keywords:
 - _udiv64 intrinsic
-ms.openlocfilehash: 6dabbc94260ef578eb1a58a1b289b4a4654decdd
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ddb46f33b0fccc1cedc2a704265b096ba715b506
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219681"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857994"
 ---
 # <a name="_udiv64"></a>_udiv64
 
-L' `_udiv64` intrinsèque divise un entier non signé 64 bits par un entier non signé 32 bits. La valeur de retour contient le quotient et l’intrinsèque retourne le reste à l’aide d’un paramètre de pointeur. `_udiv64`est **spécifique à Microsoft**.
+L’intrinsèque `_udiv64` divise un entier non signé 64 bits par un entier non signé 32 bits. La valeur de retour contient le quotient et l’intrinsèque retourne le reste à l’aide d’un paramètre de pointeur. `_udiv64` est **spécifique à Microsoft**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ unsigned int _udiv64(
 );
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *dividend*\
 dans Entier non signé 64 bits à diviser.
 
-*Division*\
+\ *diviseur*
 dans Entier non signé 32 bits à diviser par.
 
-*sections*\
+*reste*\
 à Reste de l’entier non signé 32 bits.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -43,11 +43,11 @@ dans Entier non signé 32 bits à diviser par.
 
 ## <a name="remarks"></a>Notes
 
-L' `_udiv64` intrinsèque divise le dividendepar diviseur. Elle stocke le reste dans l’entier non signé 32 bits vers le *reste*, et retourne les 32 bits du quotient.
+Le `_udiv64` intrinsèque divise le *dividende* par *diviseur*. Elle stocke le reste dans l’entier non signé 32 bits vers le *reste*, et retourne les 32 bits du quotient.
 
 Le `_udiv64` intrinsèque est disponible à partir de Visual Studio 2019 RTM.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Intrinsèque|Architecture|Header|
 |---------------|------------------|------------|

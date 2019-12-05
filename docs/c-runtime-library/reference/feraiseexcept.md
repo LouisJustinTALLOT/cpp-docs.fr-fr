@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 40ff315c179a6b62a3073d4f07e4e6a6d1c1acab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941125"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857825"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -41,7 +41,7 @@ int feraiseexcept(
 );
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *excepts*<br/>
 Exceptions de virgule flottante à déclencher.
@@ -52,7 +52,7 @@ Si toutes les exceptions spécifiées sont correctement déclenchées, retourne 
 
 ## <a name="remarks"></a>Notes
 
-La fonction **feraiseexcept** tente de déclencher les exceptions à virgule flottante spécifiées par *except*.   La fonction **feraiseexcept** prend en charge les macros d’exception \<suivantes, définies dans fenv. h >:
+La fonction **feraiseexcept** tente de déclencher les exceptions à virgule flottante spécifiées par *except*.   La fonction **feraiseexcept** prend en charge les macros d’exception suivantes, définies dans \<fenv. h >:
 
 |Macros d’exception|Description|
 |---------------------|-----------------|
@@ -67,15 +67,15 @@ L’argument *EXCEPTS* peut être zéro, l’une des valeurs de macro d’except
 
 Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
 
-**Spécifique à Microsoft :** Les exceptions spécifiées dans *except* sont levées dans l’ordre FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Toutefois, FE_INEXACT peut être déclenché lorsque FE_OVERFLOW ou FE_UNDERFLOW est déclenché, même s’il n’est pas spécifié dans *except*. **Fin de la section spécifique à Microsoft**
+**Spécifique à Microsoft :** Les exceptions spécifiées dans *except* sont générées dans l’ordre FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Toutefois, FE_INEXACT peut être déclenché lorsque FE_OVERFLOW ou FE_UNDERFLOW est déclenché, même s’il n’est pas spécifié dans *except*.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |*feraiseexcept*|\<fenv.h>|\<cfenv>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

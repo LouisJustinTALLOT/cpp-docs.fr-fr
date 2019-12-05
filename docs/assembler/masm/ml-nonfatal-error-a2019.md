@@ -1,26 +1,26 @@
 ---
 title: Erreur ML non fatale A2019
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2019
 helpviewer_keywords:
 - A2019
 ms.assetid: 7dff209b-6d91-4e39-88a3-5d6329bac537
-ms.openlocfilehash: 48a80c643bb42ce39df00297c7f5579445c99df9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23412ccd6dc84d889b62acfb4ba09cb1bde8b82a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201934"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856725"
 ---
 # <a name="ml-nonfatal-error-a2019"></a>Erreur ML non fatale A2019
 
-**opérande doit être de type d’enregistrement ou champ**
+**l’opérande doit être un type d’enregistrement ou un champ**
 
-Ce qui suit opérande le [largeur](../../assembler/masm/operator-width.md) ou [masque](../../assembler/masm/operator-mask.md) opérateur n’était pas valide.
+L’opérande qui suit l’opérateur de [largeur](../../assembler/masm/operator-width.md) ou de [masque](../../assembler/masm/operator-mask.md) n’est pas valide.
 
-Le [largeur](../../assembler/masm/operator-width.md) opérateur accepte un opérande est le nom d’un champ ou d’un enregistrement. Le [masque](../../assembler/masm/operator-mask.md) opérateur accepte un opérande est le nom d’un champ ou d’un type d’enregistrement.
+L’opérateur [Width](../../assembler/masm/operator-width.md) accepte un opérande qui est le nom d’un champ ou d’un enregistrement. L’opérateur [Mask](../../assembler/masm/operator-mask.md) accepte un opérande qui est le nom d’un champ ou d’un type d’enregistrement.
 
 ## <a name="see-also"></a>Voir aussi
 

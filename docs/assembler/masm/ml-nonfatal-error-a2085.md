@@ -1,26 +1,26 @@
 ---
 title: Erreur ML non fatale A2085
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2085
 helpviewer_keywords:
 - A2085
 ms.assetid: c2fef415-a32b-4249-896c-6d981fc6e327
-ms.openlocfilehash: 729f6f38761171c6ddc4cccfc2443c6a2b597bf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bd89fb2b7f8b755cdb095e63ed89386332ecf9d
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177186"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74855756"
 ---
 # <a name="ml-nonfatal-error-a2085"></a>Erreur ML non fatale A2085
 
-**instruction ou register ne pas accepté dans le mode actuel du processeur**
+**instruction ou inscription non acceptée en mode UC actuel**
 
-Une tentative a été effectuée d’utiliser une instruction, Registre ou mot clé qui n’était pas valide pour le mode de processeur actuelle.
+Une tentative d’utilisation d’une instruction, d’un registre ou d’un mot clé qui n’était pas valide pour le mode de processeur actuel a été effectuée.
 
-Par exemple, les registres 32 bits requièrent [.386](../../assembler/masm/dot-386.md) ou version ultérieure. Les registres de contrôle, telles que CR0 nécessiter mode privilégié [.386P](../../assembler/masm/dot-386p.md) ou version ultérieure. Cette erreur sera également générée pour le **NEAR32**, **FAR32**, et **plat** les mots clés, qui nécessitent. **386** ou version ultérieure.
+Par exemple, les registres 32 bits requièrent [. 386](../../assembler/masm/dot-386.md) ou version ultérieure. Les registres de contrôle tels que Registre CR0 nécessitent le mode privilégié [. 386P](../../assembler/masm/dot-386p.md) ou version ultérieure. Cette erreur est également générée pour les mots clés **NEAR32**, **FAR32**et **Flat** , qui requièrent. **386** ou version ultérieure.
 
 ## <a name="see-also"></a>Voir aussi
 

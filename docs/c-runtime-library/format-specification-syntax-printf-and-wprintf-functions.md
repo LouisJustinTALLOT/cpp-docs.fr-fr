@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: e4def787dc5792921298999eb643ff56dd2c9f3d
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778388"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857864"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntaxe de spécification de format : fonctions printf et wprintf
 
@@ -48,10 +48,10 @@ Le caractère spécificateur de conversion *type* précise si l’argument corre
 
 Les arguments qui suivent la chaîne de format sont interprétés en fonction du caractère *type* correspondant et du préfixe [size](#size) facultatif. Les conversions pour les types de caractères `char` et `wchar_t` sont spécifiées à l’aide de **c** ou **C**, tandis que les chaînes de caractères codés sur un octet et multioctets ou à caractères larges sont spécifiées à l’aide de **s** ou **S**, selon la fonction de mise en forme utilisée. Les arguments de caractère et de chaîne spécifiés à l’aide de **c** et **s** sont interprétés comme `char` et `char*` par les fonctions de la famille `printf` ou comme `wchar_t` et `wchar_t*` par les fonctions de la famille `wprintf`. Les arguments de caractère et de chaîne spécifiés à l’aide de **C** et **S** sont interprétés comme `wchar_t` et `wchar_t*` par les fonctions de la famille `printf` ou comme`char` et `char*` par les fonctions de la famille `wprintf`. Ce comportement est spécifique à Microsoft.
 
-Les types d’entiers tels que `short`, `int`, `long`, `long long` et leurs `unsigned` variantes, sont spécifiés à l’aide **d**, **i**, **o**, **u**, **x**et **x**. Les types à virgule flottante, tels que 1, 2 et 3, sont spécifiés à l’aide **de**, **a**, **e**, **e**, **f**, **f**, **g**et **g**. Par défaut, à moins qu’ils ne soient modifiés par un préfixe de *taille* , les arguments entiers sont forcés à 3 type, et les arguments à virgule flottante sont forcés à 4. Sur les systèmes 64 bits, un `int` est une valeur 32 bits ; les entiers 64 bits sont donc tronqués quand ils sont mis en forme pour la sortie, à moins qu’un préfixe *size* égal à **ll** ou **I64** soit utilisé. Les types de pointeur spécifiés par **p** utilisent la taille du pointeur par défaut pour la plateforme.
+Les types d’entiers tels que `short`, `int`, `long`, `long long`et leurs `unsigned` variantes, sont spécifiés à l’aide **d**, **i**, **o**, **u**, **x**et **x**. Les types à virgule flottante, tels que `float`, `double`et `long double`, sont spécifiés à l’aide **de**, **a**, **e**, **e**, **f**, **f**, **g**et **g**. Par défaut, à moins qu’ils ne soient modifiés par un préfixe de *taille* , les arguments entiers sont forcés à `int` type, et les arguments à virgule flottante sont forcés à `double`. Sur les systèmes 64 bits, un `int` est une valeur 32 bits ; les entiers 64 bits sont donc tronqués quand ils sont mis en forme pour la sortie, à moins qu’un préfixe *size* égal à **ll** ou **I64** soit utilisé. Les types de pointeur spécifiés par **p** utilisent la taille du pointeur par défaut pour la plateforme.
 
 > [!NOTE]
-> **Section spécifique à Microsoft** Les caractères de type **Z** et le comportement des caractères de type **c**, **C**, **s** et **S** (quand ils sont utilisés avec les fonctions `printf` et `wprintf`) sont des extensions Microsoft. La norme ISO C utilise systématiquement **c** et **s** pour les chaînes et les caractères étroits, et **C** et **S** pour les chaînes et les caractères larges, dans toutes les fonctions de mise en forme.
+> **Spécifique à Microsoft :** Le caractère de type **Z** et le comportement des caractères de type **c**, **c**, **s**et **s** lorsqu’ils sont utilisés avec les fonctions `printf` et `wprintf`, sont des extensions Microsoft. La norme ISO C utilise systématiquement **c** et **s** pour les chaînes et les caractères étroits, et **C** et **S** pour les chaînes et les caractères larges, dans toutes les fonctions de mise en forme.
 
 ### <a name="type-field-characters"></a>Caractères du champ type
 
@@ -75,13 +75,13 @@ Les types d’entiers tels que `short`, `int`, `long`, `long long` et leurs `uns
 |**A**|Virgule flottante|Valeur à virgule flottante double précision hexadécimale signée se présentant sous la forme [-]0X*h.hhhh*__P±__*dd*, où *h.hhhh* correspond aux chiffres hexadécimaux (utilisant des lettres majuscules) de la mantisse, et *dd* à un ou plusieurs chiffres pour l’exposant. La précision indique le nombre de chiffres après la virgule.|
 |**n**|Pointeur désignant un entier|Nombre de caractères correctement écrits jusqu'à présent dans le flux ou la mémoire tampon. Cette valeur est stockée dans l’entier dont l’adresse est fournie sous forme d’argument. La taille de l’entier désigné par le pointeur peut être contrôlée par un préfixe de spécification de la taille de l’argument. Le spécificateur **n** est désactivé par défaut ; pour plus d’informations, consultez la remarque importante sur la sécurité.|
 |**p**|Type de pointeur|Affiche l’argument sous forme d’adresse composée de chiffres hexadécimaux.|
-|**s**|Chaîne|Quand il est utilisé avec les fonctions `printf`, spécifie une chaîne de caractères codés sur un octet ou multioctets ; quand il est utilisé avec les fonctions `wprintf`, spécifie une chaîne de caractères larges. Les caractères s’affichent jusqu’au premier caractère Null ou jusqu’à ce que la valeur de *precision* soit atteinte.|
-|**S**|Chaîne|Quand il est utilisé avec les fonctions `printf`, spécifie une chaîne de caractères larges ; quand il est utilisé avec les fonctions `wprintf`, spécifie une chaîne de caractères codés sur un octet ou multioctets. Les caractères s’affichent jusqu’au premier caractère Null ou jusqu’à ce que la valeur de *precision* soit atteinte.|
+|**s**|String|Quand il est utilisé avec les fonctions `printf`, spécifie une chaîne de caractères codés sur un octet ou multioctets ; quand il est utilisé avec les fonctions `wprintf`, spécifie une chaîne de caractères larges. Les caractères s’affichent jusqu’au premier caractère Null ou jusqu’à ce que la valeur de *precision* soit atteinte.|
+|**S**|String|Quand il est utilisé avec les fonctions `printf`, spécifie une chaîne de caractères larges ; quand il est utilisé avec les fonctions `wprintf`, spécifie une chaîne de caractères codés sur un octet ou multioctets. Les caractères s’affichent jusqu’au premier caractère Null ou jusqu’à ce que la valeur de *precision* soit atteinte.|
 |**Z**|Structure `ANSI_STRING` ou `UNICODE_STRING`|Quand l’adresse d’une structure [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) ou [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) est passée comme argument, affiche la chaîne contenue dans la mémoire tampon désignée par le champ `Buffer` de la structure. Utilisez un préfixe de modificateur de *size* égal à **w** pour spécifier un argument `UNICODE_STRING`, par exemple `%wZ`. Le champ `Length` de la structure doit indiquer la longueur, en octets, de la chaîne. Le champ `MaximumLength` de la structure doit indiquer la longueur, en octets, de la mémoire tampon.<br /><br /> En règle générale, le caractère de type **Z** est utilisé uniquement dans les fonctions de débogage de pilote qui utilisent une spécification de conversion, comme `dbgPrint` et `kdPrint`.|
 
 À compter de Visual Studio 2015, si l’argument qui correspond à un spécificateur de conversion de valeurs à virgule flottante (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) est infini, indéfini ou NaN, la sortie mise en forme est conforme à la norme C99. Ce tableau répertorie les sorties mises en forme :
 
-|valeur|Sortie|
+|Value|Output|
 |-----------|------------|
 |infinity|`inf`|
 |NaN silencieux|`nan`|
@@ -92,7 +92,7 @@ Ces valeurs peuvent toutes être précédées d’un signe. Si un caractère sp�
 
 Avant Visual Studio 2015, le CRT utilisait un autre format non standard pour la sortie des valeurs infinies, indéfinies et NaN :
 
-|valeur|Sortie|
+|Value|Output|
 |-----------|------------|
 |+ infini|`1.#INF` *chiffres aléatoires*|
 |- infini|`-1.#INF` *chiffres aléatoires*|
@@ -160,7 +160,7 @@ Le caractère *type* détermine soit l’interprétation de *precision*, soit la
 
 ### <a name="how-precision-values-affect-type"></a>Impact des valeurs de précision sur le type
 
-|Tapez|Signification|Valeur par défaut|
+|Type|Signification|Valeur par défaut|
 |----------|-------------|-------------|
 |**a**, **A**|La précision indique le nombre de chiffres après la virgule.|La précision par défaut s’élève à 13. Si la précision a la valeur 0, aucune virgule décimale n’est imprimée, sauf si l’indicateur **#** est utilisé.|
 |**c**, **C**|La précision n’a aucun effet.|Le caractère est imprimé.|
@@ -204,7 +204,7 @@ Dans Visual C++, bien que `long double` soit un type distinct, il possède la m
 Un spécificateur de type **hc** ou **hC** est synonyme de **c** dans les fonctions `printf` et de **C** dans les fonctions `wprintf`. Un spécificateur de type **lc**, **lC**, **wc** ou **wC** est synonyme de **C** dans les fonctions `printf` et de **c** dans les fonctions `wprintf`. Un spécificateur de type **hs** ou **hS** est synonyme de **s** dans les fonctions `printf` et de **S** dans les fonctions `wprintf`. Un spécificateur de type **ls**, **lS**, **ws** ou **wS** est synonyme de **S** dans les fonctions `printf` et de **s** dans les fonctions `wprintf`.
 
 > [!NOTE]
-> **Section spécifique à Microsoft** Les préfixes de modificateur de taille d’argument **I** (i majuscule), **I32**, **I64** et **w** sont des extensions Microsoft et ne sont pas compatibles avec la norme ISO C. Le préfixe **h** utilisé avec des données de type `char` et le préfixe**l** (L minuscule) utilisé avec des données de type `double` sont des extensions Microsoft.
+> **Spécifique à Microsoft :** Les préfixes de modificateur de taille d’argument **i** (i majuscule), **i32**, **I64**et **w** sont des extensions Microsoft et ne sont pas compatibles ISO C. Le préfixe **h** utilisé avec des données de type `char` et le préfixe**l** (L minuscule) utilisé avec des données de type `double` sont des extensions Microsoft.
 
 ## <a name="see-also"></a>Voir aussi
 

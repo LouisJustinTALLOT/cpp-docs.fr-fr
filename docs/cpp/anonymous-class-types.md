@@ -1,20 +1,20 @@
 ---
-title: Types de classe anonymes
+title: Types de classes anonymes
 ms.date: 11/04/2016
 helpviewer_keywords:
 - class types [C++], anonymous
 - anonymous class types
 ms.assetid: 9ba667b2-8c2a-4c29-82a6-fa120b9233c8
-ms.openlocfilehash: 9cd27fb40522a07ce4591b654ee8a6dda53b4f28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 815cc4a81addc673349a3133b24ed73cfe0207e2
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184463"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857669"
 ---
-# <a name="anonymous-class-types"></a>Types de classe anonymes
+# <a name="anonymous-class-types"></a>Types de classes anonymes
 
-Les classes peuvent être anonymes, autrement dit, elles peuvent être déclarées sans un *identificateur*. Cela est utile lorsque vous remplacez un nom de classe avec un **typedef** nom, comme suit :
+Les classes peuvent être anonymes, c’est-à-dire qu’elles peuvent être déclarées sans *identificateur*. Cela est utile lorsque vous remplacez un nom de classe par un nom de **typedef** , comme dans l’exemple suivant :
 
 ```cpp
 typedef struct
@@ -25,7 +25,7 @@ typedef struct
 ```
 
 > [!NOTE]
->  L'utilisation de classes anonymes indiquée dans l'exemple précédent est utile pour conserver la compatibilité avec un code C existant. Dans du code C, l’utilisation de **typedef** conjointement avec les structures anonymes est répandus.
+>  L'utilisation de classes anonymes indiquée dans l'exemple précédent est utile pour conserver la compatibilité avec un code C existant. Dans du code C, l’utilisation de **typedef** conjointement à des structures anonymes est courante.
 
 Les classes anonymes sont également utiles lorsque vous souhaitez qu'une référence à un membre de classe apparaisse comme si elle n'était pas été contenue dans une classe distincte, comme dans l'exemple suivant :
 
@@ -43,13 +43,13 @@ struct PTValue
 PTValue ptv;
 ```
 
-Dans le code précédent, `iValue` accessibles à l’aide de l’opérateur de sélection de membre d’objet (**.**) comme suit :
+Dans le code précédent, `iValue` est accessible à l’aide de l’opérateur de sélection de membres d’objet ( **.** ) comme suit :
 
 ```cpp
 int i = ptv.iValue;
 ```
 
-Les classes anonymes sont soumises à certaines restrictions. (Pour plus d’informations sur les unions anonymes, consultez [Unions](../cpp/unions.md).) Classes anonymes :
+Les classes anonymes sont soumises à certaines restrictions. (Pour plus d’informations sur les unions anonymes, consultez [unions](../cpp/unions.md).) Classes anonymes :
 
 - Ne peut pas avoir de constructeur ou de destructeur.
 
@@ -59,7 +59,7 @@ Les classes anonymes sont soumises à certaines restrictions. (Pour plus d’inf
 
 ## <a name="anonymous-structs"></a>Structs anonymes
 
-### <a name="microsoft-specific"></a>Section spécifique à Microsoft
+**Section spécifique de Microsoft**
 
 Une extension Microsoft C vous permet de déclarer une variable de structure dans une autre structure sans lui donner un nom. Ces structures imbriquées sont appelées des structures anonymes. C++ n'autorise pas les structures anonymes.
 
@@ -92,4 +92,4 @@ int main()
 //Output: 1234567
 ```
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**

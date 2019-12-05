@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957042"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857838"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -56,7 +56,7 @@ int _fpclassf(
 ); /* x64 only */
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *x*<br/>
 Valeur à virgule flottante à tester.
@@ -65,7 +65,7 @@ Valeur à virgule flottante à tester.
 
 Les fonctions **_fpclass** et **_fpclassf** retournent une valeur entière qui indique la classification à virgule flottante de l’argument *x*. La classification peut avoir une des valeurs suivantes, définies dans \<float.h>.
 
-|Valeur|Description|
+|Value|Description|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|NaN signalant|
 |**_FPCLASS_QNAN**|NaN silencieux|
@@ -80,9 +80,9 @@ Les fonctions **_fpclass** et **_fpclassf** retournent une valeur entière qui i
 
 ## <a name="remarks"></a>Notes
 
-Les fonctions **_fpclass** et **_fpclassf** sont spécifiques à Microsoft. Elles sont similaires à [fpclassify](fpclassify.md), mais retournent des informations plus détaillées sur l’argument. La fonction **_fpclassf** est disponible uniquement quand elle est compilée pour la plateforme x64.
+Les fonctions **_fpclass** et **_fpclassf** sont spécifiques à Microsoft. Elles sont similaires à [fpclassify](fpclassify.md), mais retournent des informations plus détaillées sur l’argument. La fonction **_fpclassf** n’est disponible que lorsqu’elle est compilée pour la plateforme x64.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

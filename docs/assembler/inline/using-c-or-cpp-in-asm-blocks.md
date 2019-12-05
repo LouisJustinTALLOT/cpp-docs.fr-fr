@@ -14,16 +14,16 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-ms.openlocfilehash: 0949eba769bed33da8fe39bb41500a2ba02af224
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16b298b92a4ba40d9091499a1821ad4f3c413d6c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166553"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854522"
 ---
-# <a name="using-c-or-c-in-asm-blocks"></a>Utilisation de C ou C++ dans les blocs __asm
+# <a name="using-c-or-c-in-__asm-blocks"></a>Utilisation de C ou C++ dans les blocs __asm
 
-** Spécifique à Microsoft **
+**Section spécifique de Microsoft**
 
 Étant donné que les instructions d'assembly inline peuvent être combinées avec des instructions C ou C++, elles peuvent faire référence à des variables C ou C++ par nom et utiliser de nombreux autres éléments de ces langages.
 
@@ -35,11 +35,11 @@ Un bloc `__asm` peut utiliser les éléments de langage suivants :
 
 - Macros et directives de préprocesseur
 
-- Commentaires (les deux __/ \* \* /__ et __//__ )
+- Commentaires ( __/\* \*/__ et __//__ )
 
 - Noms de types (partout où un type MASM est autorisé)
 
-- `typedef` noms, généralement utilisés avec des opérateurs tels que **PTR** et **TYPE** ou pour spécifier les membres de structure ou union
+- noms de `typedef`, généralement utilisés avec des opérateurs tels que **ptr** et **type** , ou pour spécifier des membres de structure ou d’Union
 
 Dans un bloc `__asm`, vous pouvez spécifier des constantes entières avec la notation C ou la notation de base de l'assembleur (0x100 et 100h sont équivalents, par exemple). Cela vous permet de définir (avec `#define`) une constante en C puis de l'utiliser dans C ou C++ et dans des parties d'assembly du programme. Vous pouvez également spécifier des constantes au format octal en les faisant précéder d'un 0. Par exemple, 0777 spécifie une constante octale.
 
@@ -47,13 +47,13 @@ Dans un bloc `__asm`, vous pouvez spécifier des constantes entières avec la no
 
 - [Utilisation d’opérateurs dans les blocs __asm](../../assembler/inline/using-operators-in-asm-blocks.md)
 
-- [À l’aide de C ou C++ symboles __asm (blocs)](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
+- [Utilisation des blocs C++ de __asm C ou Symbols_in](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
 
 - [Accès aux données C ou C++ dans les blocs __asm](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)
 
 - [Écriture de fonctions avec un assembly inline](../../assembler/inline/writing-functions-with-inline-assembly.md)
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

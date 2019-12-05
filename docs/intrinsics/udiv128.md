@@ -5,16 +5,16 @@ f1_keywords:
 - _udiv128
 helpviewer_keywords:
 - _udiv128 intrinsic
-ms.openlocfilehash: 0e66bbe978199f47134aa288bdd2bac4eb3e332a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e8cc9ca3dbf19a04d07edb1d73df84f2e29a5c3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390163"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857981"
 ---
-# <a name="udiv128"></a>_udiv128
+# <a name="_udiv128"></a>_udiv128
 
-Le `_udiv128` intrinsèque divise un entier non signé 128 bits en un entier non signé 64 bits. La valeur de retour conserve le quotient, et la fonction intrinsèque retourne le reste à un paramètre de pointeur. `_udiv128` est **spécifique à Microsoft**.
+L’intrinsèque `_udiv128` divise un entier non signé 128 bits par un entier non signé 64 bits. La valeur de retour contient le quotient et l’intrinsèque retourne le reste à l’aide d’un paramètre de pointeur. `_udiv128` est **spécifique à Microsoft**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,35 +27,35 @@ unsigned __int64 _udiv128(
 );
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *highDividend* \
-[in] 64 bits de poids fort du dividende.
+dans 64 bits de poids fort du dividende.
 
 *lowDividend* \
-[in] 64 bits de poids faibles du dividende.
+dans 64 bits de poids faible du dividende.
 
-*divisor* \
-[in] Entier 64 bits à diviser par.
+ \ *diviseur*
+dans Entier 64 bits à diviser par.
 
-*remainder* \
-[out] Les bits d’entier 64 bits du reste.
+*reste* \
+à Bits d’entier 64 bits du reste.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les 64 bits du quotient.
+64 bits du quotient.
 
 ## <a name="remarks"></a>Notes
 
-Passer les 64 bits supérieurs du dividende 128 bits dans *highDividend*et 64 bits de poids faible dans *lowDividend*. La fonction intrinsèque divise cette valeur en *diviseur*. Il stocke le reste de l’entier non signé 64 bits vers lequel pointé *reste*et retourne les 64 bits du quotient.
+Transmettez les 64 bits supérieurs du dividende 128 bits dans *highDividend*et les 64 bits inférieurs dans *lowDividend*. L’intrinsèque divise cette valeur par *diviseur*. Elle stocke le reste dans l’entier non signé 64 bits vers le *reste*, et retourne les 64 bits du quotient.
 
 Le `_udiv128` intrinsèque est disponible à partir de Visual Studio 2019 RTM.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Intrinsèque|Architecture|Header|
 |---------------|------------------|------------|
-|`_udiv128`|X64|\<immintrin.h>|
+|`_udiv128`|x64|\<immintrin.h>|
 
 ## <a name="see-also"></a>Voir aussi
 
