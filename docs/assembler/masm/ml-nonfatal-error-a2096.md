@@ -1,30 +1,30 @@
 ---
 title: Erreur ML non fatale A2096
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2096
 helpviewer_keywords:
 - A2096
 ms.assetid: bab0b5ee-b39f-4e44-a41a-3f949fab4297
-ms.openlocfilehash: e6b31afeff801e7128b5a76576e9eaa3398f68e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14fb30214cf7badf51368672dc52635d50a067f1
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202488"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74855472"
 ---
 # <a name="ml-nonfatal-error-a2096"></a>Erreur ML non fatale A2096
 
-**segment, groupe ou un Registre de segment attendu**
+**Registre de segment, de groupe ou de segment ATTENDU**
 
-Un segment ou un groupe était attendu mais n’a été trouvé.
+Un segment ou un groupe était attendu mais n’a pas été trouvé.
 
-Parmi les options suivantes s’est produite :
+L’un des éléments suivants s’est produit :
 
-- L’opérande gauche est spécifié avec le segment de substituer l’opérateur (**:**) n’était pas un segment register (CS, DS, SS, ES, FS ou GS), nom du groupe, nom de segment ou expression de segment.
+- L’opérande gauche spécifié avec l’opérateur de substitution de segment ( **:** ) n’est pas un registre de segment (CS, DS, SS, ES, FS ou GS), un nom de groupe, un nom de segment ou une expression de segment.
 
-- Le [ASSUME](../../assembler/masm/assume.md) directive ont été fournie à un Registre de segment sans une adresse valide de segment, Registre de segment, groupe ou spéciale **plat** groupe.
+- La directive [supposer](../../assembler/masm/assume.md) a reçu un registre de segment sans adresse de segment valide, registre de segment, groupe ou groupe **plat** spécial.
 
 ## <a name="see-also"></a>Voir aussi
 

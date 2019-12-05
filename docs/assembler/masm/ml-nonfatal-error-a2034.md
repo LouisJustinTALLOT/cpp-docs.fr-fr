@@ -1,38 +1,38 @@
 ---
 title: Erreur ML non fatale A2034
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2034
 helpviewer_keywords:
 - A2034
 ms.assetid: 6438970c-0aee-4f14-a058-5fe47d0ee216
-ms.openlocfilehash: cbc4dc59da36df682815b0bf2c644892b2db1e70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 578a839b319b10dff7f89d6fafdf556315a4f850
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177862"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856686"
 ---
 # <a name="ml-nonfatal-error-a2034"></a>Erreur ML non fatale A2034
 
-**doit être dans un bloc de segment**
+**doit être dans le bloc de segment**
 
-Parmi les options suivantes a été trouvé en dehors d’un bloc de segment :
+L’un des éléments suivants a été trouvé en dehors d’un bloc de segment :
 
 - Une instruction
 
-- Une définition de l’étiquette
+- Une définition d’étiquette
 
-- Un [THIS](../../assembler/masm/operator-this.md) opérateur
+- Opérateur [This](../../assembler/masm/operator-this.md)
 
-- Un [ $ ](../../assembler/masm/dollar.md) opérateur
+- Opérateur [$](../../assembler/masm/dollar.md)
 
 - Une définition de procédure
 
-- Un [ALIGN](../../assembler/masm/align-masm.md) (directive)
+- Une directive [align](../../assembler/masm/align-masm.md)
 
-- Un [ORG](../../assembler/masm/org.md) (directive)
+- Une directive [org](../../assembler/masm/org.md)
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -44,16 +44,16 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: f7d46cc90c9925a49948da488c2ed7ede7bdee8f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: f6b256ff1551eea4d0b362e78c9780fce29a8513
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217680"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857916"
 ---
 # <a name="_interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement fonctions intrinsèques
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Fournit la prise en charge intrinsèque du compilateur pour la fonction Win32 SDK Windows [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement) .
 
@@ -98,7 +98,7 @@ __int64 _InterlockedDecrement64_nf(
 );
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *lpAddend*\
 [in, out] Pointeur vers la variable à décrémenter.
@@ -107,7 +107,7 @@ __int64 _InterlockedDecrement64_nf(
 
 La valeur de retour est la valeur décrémentée résultante.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
@@ -115,7 +115,7 @@ La valeur de retour est la valeur décrémentée résultante.
 |`_InterlockedDecrement64`|ARM, x64, ARM64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM, ARM64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<Intro. h >
 
 ## <a name="remarks"></a>Notes
 
@@ -123,13 +123,13 @@ Il existe plusieurs variantes de `_InterlockedDecrement` qui varient selon les t
 
 La fonction `_InterlockedDecrement` opère sur des valeurs entières de 32 bits, `_InterlockedDecrement16` sur des valeurs entières de 16 bits et `_InterlockedDecrement64` sur des valeurs entières de 64 bits.
 
-Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les intrinsèques avec un `_nf` suffixe («no cloture») n’agissent pas comme une barrière de mémoire.
+Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les intrinsèques avec un suffixe `_nf` (« no cloture ») n’agissent pas comme une barrière de mémoire.
 
 La variable vers laquelle pointe le paramètre `lpAddend` doit être alignée sur une limite de 32 bits. Dans le cas contraire, cette fonction échoue sur les systèmes x86 multiprocesseurs et les systèmes autres que x86. Pour plus d’informations, consultez [Aligner](../cpp/align-cpp.md).
 
 Ces routines sont disponibles seulement comme fonctions intrinsèques.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // compiler_intrinsics_interlocked.cpp
@@ -196,6 +196,8 @@ void __cdecl SimpleThread(void* pParam) {
    printf_s("Thread %d complete: %d\n", threadNum, data);
 }
 ```
+
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

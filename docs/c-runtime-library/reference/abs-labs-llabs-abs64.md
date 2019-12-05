@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: bf5b4be654a3bd48b3e0d43ac97ce02b348942bc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df5b6a30bf219b78f77f11604d3bbbe3b954c59f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939930"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857851"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
@@ -67,7 +67,7 @@ long double abs( long double n );   // C++ only
 float abs( float n );   // C++ only
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *n*<br/>
 Valeur numérique.
@@ -80,18 +80,18 @@ Les fonctions **ABS**, **Labs**, **LLabs** et **_abs64** retournent la valeur ab
 
 Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges d' **ABS** qui acceptent et retournent des valeurs **long**, **long** **long**, **float**, **double**et **long** **double** . Ces surcharges sont définies dans l’en-tête \<cmath>. Dans un programme C, **ABS** prend toujours et retourne un **int**.
 
-**Spécifique à Microsoft**: Étant donné que la plage d’entiers négatifs qui peuvent être représentés à l’aide de n’importe quel type intégral est supérieure à la plage d’entiers positifs qui peuvent être représentés à l’aide de ce type, il est possible de fournir un argument à ces fonctions qui ne peut pas être converti. Si la valeur absolue de l’argument ne peut pas être représentée par le type de retour, les fonctions **ABS** retournent la valeur d’argument inchangée. Plus précisément, `abs(INT_MIN)` retourne `INT_MIN`, `labs(LONG_MIN)` retourne `LONG_MIN`, `llabs(LLONG_MIN)` retourne `LLONG_MIN`, tandis que `_abs64(_I64_MIN)` retourne `_I64_MIN`. Cela signifie que les fonctions **ABS** ne peuvent pas être utilisées pour garantir une valeur positive.
+**Spécifique à Microsoft**: étant donné que la plage d’entiers négatifs qui peuvent être représentés à l’aide d’un type intégral est supérieure à la plage d’entiers positifs qui peuvent être représentés à l’aide de ce type, il est possible de fournir un argument à ces fonctions qui ne peuvent pas être converties. Si la valeur absolue de l’argument ne peut pas être représentée par le type de retour, les fonctions **ABS** retournent la valeur d’argument inchangée. Plus précisément, `abs(INT_MIN)` retourne `INT_MIN`, `labs(LONG_MIN)` retourne `LONG_MIN`, `llabs(LLONG_MIN)` retourne `LLONG_MIN`, tandis que `_abs64(_I64_MIN)` retourne `_I64_MIN`. Cela signifie que les fonctions **ABS** ne peuvent pas être utilisées pour garantir une valeur positive.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|-----------------------|---------------------------|
 |**abs**, **labs**, **llabs**|\<math.h> ou \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> ou \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> ou \<stdlib.h>|
 
-Pour utiliser les versions surchargées de l’ABS C++dans, vous devez inclure \<l’en-tête > cmath.
+Pour utiliser les versions surchargées de l’ABS C++dans, vous devez inclure l’en-tête \<cmath >.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Ce programme calcule et affiche les valeurs absolues de plusieurs nombres.
 

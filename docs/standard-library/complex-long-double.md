@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: afd85321ee443359f17850384b06b854dfe89985
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 978be97484a259d7ae8f3fd24fecf07d50c4c844
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688231"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857968"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -36,15 +36,15 @@ complex(
 };
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
-*_RealVal* \
+*_RealVal*\
 Valeur de type **long double** pour la partie réelle du nombre complexe en cours de construction.
 
-*_ImagVal* \
+*_ImagVal*\
 Valeur de type **long double** pour la partie imaginaire du nombre complexe en cours de construction.
 
-*complexNum* \
+*complexNum*\
 Nombre complexe de type **double** ou de type **float** dont les parties réelle et imaginaire sont utilisées pour initialiser un nombre complexe de type **long double** en cours de construction.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -115,7 +115,7 @@ Argument of c3 is recovered from c3 using:
 arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Configuration requise pour
 
 **En-tête** : \<complex>
 

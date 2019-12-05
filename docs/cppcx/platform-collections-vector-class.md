@@ -1,6 +1,6 @@
 ---
 title: Classe Platform::Collections::Vector
-ms.date: 10/01/2019
+ms.date: 12/04/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: a70856be04a63cad1c700cb3cc52711dde410265
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: b7774c2cdab7b9abcb3ebac1453779055eacf897
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816581"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857890"
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
@@ -39,7 +39,7 @@ template <typename T, typename E>
    ref class Vector sealed;
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *T*<br/>
 Type des éléments contenus dans l'objet Vector.
@@ -69,13 +69,13 @@ Si vous tentez d’utiliser un type **Vector** dans une valeur ou un paramètre 
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[Vector::Vector](#ctor)|Initialise une nouvelle instance de la classe Vector.|
 
-### <a name="public-methods"></a>Méthodes publiques
+### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[Vector :: Append](#append)|Insère l'élément spécifié après le dernier élément du Vector actif.|
 |[Vector::Clear](#clear)|Supprime tous les éléments du vecteur actuel.|
@@ -84,25 +84,25 @@ Si vous tentez d’utiliser un type **Vector** dans une valeur ou un paramètre 
 |[Vector::GetMany](#getmany)|Récupère une séquence d'éléments du Vector actif en commençant à l'index spécifié.|
 |[Vector::GetView](#getview)|Retourne une vue en lecture seule d'un vecteur ; autrement dit, une [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
 |[Vector :: IndexOf](#indexof)|Recherche l'élément spécifié dans l'objet Vector actuel, et s'il existe, retourne l'index de l'élément.|
-|[Vector :: InsertAt](#insertat)|Insère l'élément spécifié dans le vecteur actuel après l'identification de l'élément par l'index spécifié.|
+|[Vector :: InsertAt](#insertat)|Insère l’élément spécifié dans le vecteur actuel au niveau de l’élément identifié par l’index spécifié.|
 |[Vector :: ReplaceAll](#replaceall)|Supprime les éléments du Vector actif et les insère depuis le tableau spécifié.|
 |[Vector::RemoveAt](#removeat)|Supprime l'élément identifié par l'index spécifié à partir du Vector actif.|
 |[Vector::RemoveAtEnd](#removeatend)|Supprime l'élément à la fin du Vector actif.|
 |[Vector::SetAt](#setat)|Assigne la valeur spécifiée à l'élément du Vector actif identifié par l'index spécifié.|
 |[Vector :: Size](#size)|Retourne le nombre d'éléments dans l'objet Vector actuel.|
 
-### <a name="events"></a>Événements
+### <a name="events"></a>Events
 
 |||
 |-|-|
-|Nom|Description|
+|Name|Description|
 |Event [Windows :: Foundation :: collection :: VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Se produit lorsque le Vector est modifié.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `Vector`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Configuration requise pour
 
 **En-tête :** collection.h
 
@@ -118,7 +118,7 @@ Insère l'élément spécifié après le dernier élément du Vector actif.
 virtual void Append(T item);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 Élément à insérer dans le Vector. Le type d' *élément* est défini par le TypeName *T* .
@@ -163,7 +163,7 @@ Récupère l'élément de l'objet Vector actuel qui est identifié par l'index s
 virtual T GetAt(unsigned int index);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 Entier non signé de base zéro qui spécifie un élément particulier dans l'objet Vector.
@@ -184,7 +184,7 @@ virtual unsigned int GetMany(
     Platform::WriteOnlyArray<T>^ dest);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *startIndex*<br/>
 L'index de base zéro du début des éléments à récupérer.
@@ -224,7 +224,7 @@ Recherche l'élément spécifié dans l'objet Vector actuel, et s'il existe, ret
 virtual bool IndexOf(T value, unsigned int* index);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *valeur*<br/>
 Élément à rechercher.
@@ -244,7 +244,7 @@ IndexOf uses std::find_if pour trouver l'élément. Les types d'élément person
 
 ##  <a name="insertat"></a>Vector :: InsertAt, méthode
 
-Insère l'élément spécifié dans le vecteur actuel après l'identification de l'élément par l'index spécifié.
+Insère l’élément spécifié dans le vecteur actuel au niveau de l’élément identifié par l’index spécifié.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -252,13 +252,13 @@ Insère l'élément spécifié dans le vecteur actuel après l'identification de
 virtual void InsertAt(unsigned int index, T item)
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 Entier non signé de base zéro qui spécifie un élément particulier dans l'objet Vector.
 
 *item*<br/>
-Élément à insérer dans le vecteur après l’élément spécifié par l' *index*. Le type d' *élément* est défini par le TypeName *T* .
+Élément à insérer dans le vecteur au niveau de l’élément spécifié par l' *index*. Le type d' *élément* est défini par le TypeName *T* .
 
 ## <a name="removeat"></a>Vector :: RemoveAt, méthode
 
@@ -270,7 +270,7 @@ Supprime l'élément identifié par l'index spécifié à partir du Vector actif
 virtual void RemoveAt(unsigned int index);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 Entier non signé de base zéro qui spécifie un élément particulier dans l'objet Vector.
@@ -295,7 +295,7 @@ Supprime les éléments du Vector actif et les insère depuis le tableau spécif
 virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *arr*<br/>
 Tableau d’objets dont le type est défini par le TypeName *T* .
@@ -310,7 +310,7 @@ Assigne la valeur spécifiée à l'élément du Vector actif identifié par l'in
 virtual void SetAt(unsigned int index, T item);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 Entier non signé de base zéro qui spécifie un élément particulier dans l'objet Vector.
@@ -355,7 +355,7 @@ template <typename InIt> Vector(InIt first, InIt last);
 Vector(std::initializer_list<T> il);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *a*<br/>
 [Std :: Array](../standard-library/array-class-stl.md) qui sera utilisé pour initialiser le vecteur.

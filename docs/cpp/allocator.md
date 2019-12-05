@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword [C++], allocator
 - allocator __declspec keyword
-ms.openlocfilehash: f9c8de7c8686b89a2ab9570a2558e3f649e545b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e2615829f6491bf660859fbc86ebcd07a56c5fe
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155236"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857682"
 ---
 # <a name="allocator"></a>allocator
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Le **allocateur** spécificateur de déclaration peut être appliqué aux fonctions d’allocation de mémoire personnalisé pour afficher les allocations via Event Tracing for Windows (ETW).
+Le spécificateur de déclaration d' **Allocator** peut être appliqué aux fonctions d’allocation de mémoire personnalisées pour rendre les allocations visibles via suivi d’V nements pour Windows (ETW).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,10 +27,12 @@ Le **allocateur** spécificateur de déclaration peut être appliqué aux foncti
 
 ## <a name="remarks"></a>Notes
 
-Le profileur de mémoire native dans Visual Studio fonctionne en collectant des données d’événement ETW émises pendant l’exécution de répartition. Les allocateurs dans le CRT et le Kit de développement logiciel (SDK) Windows ont été annotés au niveau de la source afin que leurs données d’allocation puissent être capturées. Si vous écrivez vos propres allocateurs, toutes les fonctions qui retournent un pointeur vers la mémoire de tas nouvellement allouée peuvent être décorées avec `__declspec(allocator)`, comme illustré dans cet exemple pour myMalloc :
+Le profileur de mémoire native dans Visual Studio fonctionne en collectant des données d’événement ETW d’allocation émises par pendant l’exécution. Les allocateurs dans le CRT et le Kit de développement logiciel (SDK) Windows ont été annotés au niveau de la source afin que leurs données d’allocation puissent être capturées. Si vous écrivez vos propres allocateurs, toutes les fonctions qui retournent un pointeur vers la mémoire du tas nouvellement allouée peuvent être décorées avec `__declspec(allocator)`, comme illustré dans cet exemple pour myMalloc :
 
 ```cpp
 __declspec(allocator) void* myMalloc(size_t size)
 ```
 
-Pour plus d’informations, consultez [mesurer l’utilisation de mémoire dans Visual Studio](/visualstudio/profiling/memory-usage) et [événements de tas ETW natifs personnalisés](/visualstudio/profiling/custom-native-etw-heap-events).
+Pour plus d’informations, consultez [mesurer l’utilisation de la mémoire dans Visual Studio](/visualstudio/profiling/memory-usage) et les [événements de tas ETW natifs personnalisés](/visualstudio/profiling/custom-native-etw-heap-events).
+
+**Fin de la section spécifique de Microsoft**
