@@ -1,13 +1,13 @@
 ---
 title: Référence de bibliothèque OpenMP
-ms.date: 07/30/2019
+ms.date: 12/02/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-ms.openlocfilehash: c63ae5ba7f04d8ee6bd02418792804373fa71e6b
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: b61eb356b782b3cd17557827734a706e0761a2a8
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72348220"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810739"
 ---
 # <a name="openmp-library-reference"></a>Référence de bibliothèque OpenMP
 
@@ -15,7 +15,7 @@ Fournit des liens vers des constructions utilisées dans l’API OpenMP.
 
 L’implémentation C++ visuelle de la norme OpenMP comprend les constructions suivantes.
 
-|Construction|Description|
+|Construire|Description|
 |---------------|-----------------|
 |[Directives](openmp-directives.md)|Fournit des liens vers les directives utilisées dans l’API OpenMP.|
 |[Clauses](openmp-clauses.md)|Fournit des liens vers des clauses utilisées dans l’API OpenMP.|
@@ -26,10 +26,10 @@ Les fonctions C++ de la bibliothèque Runtime OpenMP Visual sont contenues dans 
 
 |Bibliothèque Runtime OpenMP|Caractéristiques|
 |------------------------------|---------------------|
-|VCOMP. LIB|Multithread, liaison dynamique, (bibliothèque d’importation pour VCOMP. LIB).|
-|VCOMPD. LIB|Multithread, liaison dynamique, (bibliothèque d’importation pour VCOMPD. CAPOT) (débogage)|
+|VCOMP. LIB|Multithread, liaison dynamique, (bibliothèque d’importation pour VCOMP140. DLL).|
+|VCOMPD. LIB|Multithread, liaison dynamique, (bibliothèque d’importation pour VCOMP140D. DLL) (débogage)|
 
-Si _ DEBUG est défini dans une compilation et si `#include <omp.h>` est dans le code source, VCOMPD. LIB sera la bibliothèque par défaut, sinon, VCOMP. LIB sera utilisé.
+Si _DEBUG est défini dans une compilation et si `#include <omp.h>` se trouve dans le code source, VCOMPD. LIB sera la bibliothèque par défaut, sinon, VCOMP. LIB sera utilisé.
 
 Vous pouvez utiliser [/NODEFAULTLIB (ignorer les bibliothèques)](../../../build/reference/nodefaultlib-ignore-libraries.md) pour supprimer la bibliothèque par défaut et établir une liaison explicite avec la bibliothèque de votre choix.
 
