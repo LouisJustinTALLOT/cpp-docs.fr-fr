@@ -7,16 +7,16 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331217"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857318"
 ---
 # <a name="semantics-of-expressions"></a>Sémantique des expressions
 
-Les expressions sont évaluées selon la priorité et le regroupement de leurs opérateurs. ([Priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md) dans [Conventions lexicales](../cpp/lexical-conventions.md), montre les relations du C++ opérateurs imposent aux expressions.)
+Les expressions sont évaluées selon la priorité et le regroupement de leurs opérateurs. ([Priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md) des opérateurs dans les [conventions lexicales](../cpp/lexical-conventions.md), affiche C++ les relations que les opérateurs imposent sur les expressions.)
 
 ## <a name="order-of-evaluation"></a>Ordre d'évaluation
 
@@ -43,8 +43,8 @@ int main()
 54
 ```
 
-![Ordre d’évaluation dans une expression](../cpp/media/vc38zv1.gif "ordre d’évaluation dans une expression") <br/>
-Ordre expression-évaluation
+![Ordre d’évaluation dans une expression](../cpp/media/vc38zv1.gif "Ordre d'évaluation dans une expression") <br/>
+Ordre d’évaluation des expressions
 
 L'ordre dans lequel l'expression affichée dans l'illustration ci-dessus est évaluée est déterminé par la priorité et l'associativité des opérateurs :
 
@@ -52,18 +52,18 @@ L'ordre dans lequel l'expression affichée dans l'illustration ci-dessus est év
 
 1. L'ajout (+) a la priorité la plus élevée suivante, donc `a` est ajouté au produit de `b` et `c`.
 
-1. Décalage vers la gauche (<<) a la priorité la plus basse dans l’expression, mais il existe deux occurrences. Étant donné que l'opérateur de décalage vers la gauche groupe de gauche à droite, la sous-expression gauche est évaluée en premier avant la sous-expression droite.
+1. Le décalage vers la gauche (< <) a la priorité la plus faible dans l’expression, mais il existe deux occurrences. Étant donné que l'opérateur de décalage vers la gauche groupe de gauche à droite, la sous-expression gauche est évaluée en premier avant la sous-expression droite.
 
 Lorsque les parenthèses sont utilisées pour grouper les sous-expressions, elles modifient la priorité et également l'ordre dans lequel l'expression est évaluée, comme indiqué dans l'illustration suivante.
 
-![Ordre d’évaluation d’expression avec parenthèses](../cpp/media/vc38zv2.gif "ordre d’évaluation d’expression avec parenthèses") <br/>
+![Ordre d’évaluation des expressions avec parenthèses](../cpp/media/vc38zv2.gif "Ordre d'évaluation d'une expression avec parenthèses") <br/>
 Ordre expression-évaluation avec parenthèses
 
 Les expressions telles qu'elles existent dans l'illustration ci-dessus sont purement évaluées pour leurs effets secondaires, dans ce cas pour transférer des informations au périphérique de sortie standard.
 
 ## <a name="notation-in-expressions"></a>Notation dans les expressions
 
-Le langage C++ spécifie certaines compatibilités lors de la spécification des opérandes. Le tableau suivant présente les types d’opérandes acceptables pour les opérateurs qui nécessitent des opérandes de type *type*.
+Le langage C++ spécifie certaines compatibilités lors de la spécification des opérandes. Le tableau suivant indique les types d’opérandes acceptables pour les opérateurs qui nécessitent des opérandes *de type type.*
 
 ### <a name="operand-types-acceptable-to-operators"></a>Types d’opérande acceptables pour les opérateurs
 
@@ -88,7 +88,7 @@ func( i, ++i );
 
 Le langage C++ ne garantit pas l'ordre dans lequel les arguments d'un appel de fonction sont évalués. Par conséquent, dans l'exemple précédent, `func` peut recevoir comme paramètres les valeurs 7 et 8, ou 8 et 8, selon que les paramètres sont évalués de gauche à droite ou de droite à gauche.
 
-## <a name="c-sequence-points-microsoft-specific"></a>Points de séquence C++ (section spécifique à Microsoft)
+## <a name="c-sequence-points-microsoft-specific"></a>C++points de séquence (spécifiques à Microsoft)
 
 Une expression peut modifier la valeur d'un objet une seule fois entre des points de séquence consécutifs.
 

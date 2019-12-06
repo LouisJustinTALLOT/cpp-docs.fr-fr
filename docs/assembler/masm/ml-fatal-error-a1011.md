@@ -1,38 +1,38 @@
 ---
 title: Erreur ML irrécupérable A1011
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1011
 helpviewer_keywords:
 - A1011
 ms.assetid: 7fbf092d-4189-4330-a884-dfa2268fc3dd
-ms.openlocfilehash: 591755a1d7066d8251f61d2a22b9601a9ccb9dcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d8d3896f7788aa3f51605651ee1b728b0e1d60a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178564"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856850"
 ---
 # <a name="ml-fatal-error-a1011"></a>Erreur ML irrécupérable A1011
 
 **la directive doit être dans un bloc de contrôle**
 
-L’assembleur trouvé une directive de haut niveau où un n’était pas attendu. Une des directives suivantes a été trouvée :
+L’assembleur a trouvé une directive de niveau supérieur où l’un n’était pas attendu. Une des directives suivantes a été trouvée :
 
-- [. AUTRE](../../assembler/masm/dot-else.md) sans [. IF](../../assembler/masm/dot-if.md)
+- [. SINON](../../assembler/masm/dot-else.md) [, sans. Si](../../assembler/masm/dot-if.md)
 
-- [. ENDIF](../../assembler/masm/dot-endif.md) sans [. IF](../../assembler/masm/dot-if.md)
+- [. ENDIF](../../assembler/masm/dot-endif.md) sans [. Si](../../assembler/masm/dot-if.md)
 
-- [. ENDW](../../assembler/masm/dot-endw.md) sans [. WHILE](../../assembler/masm/dot-while.md)
+- [. ENDW](../../assembler/masm/dot-endw.md) sans [. PENDANT](../../assembler/masm/dot-while.md)
 
-- [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md) sans [. RÉPÉTEZ](../../assembler/masm/dot-repeat.md)
+- [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md) sans [. RÉPÉTER](../../assembler/masm/dot-repeat.md)
 
-- [. CONTINUER](../../assembler/masm/dot-continue.md) sans [. Bien que](../../assembler/masm/dot-while.md) ou [. RÉPÉTEZ](../../assembler/masm/dot-repeat.md)
+- [. CONTINUER](../../assembler/masm/dot-continue.md) sans [. WHILe](../../assembler/masm/dot-while.md) ou [. RÉPÉTER](../../assembler/masm/dot-repeat.md)
 
-- [. ARRÊTER](../../assembler/masm/dot-break.md) sans [. Bien que](../../assembler/masm/dot-while.md) ou [. RÉPÉTEZ](../../assembler/masm/dot-repeat.md)
+- [. ARRÊTER](../../assembler/masm/dot-break.md) sans [. WHILe](../../assembler/masm/dot-while.md) ou [. RÉPÉTER](../../assembler/masm/dot-repeat.md)
 
-- [. AUTRE](../../assembler/masm/dot-else.md) suivant `.ELSE`
+- [. SINON](../../assembler/masm/dot-else.md) , `.ELSE`
 
 ## <a name="see-also"></a>Voir aussi
 

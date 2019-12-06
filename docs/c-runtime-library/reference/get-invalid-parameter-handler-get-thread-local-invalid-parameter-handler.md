@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-ms.openlocfilehash: 534590fed77fe06149db892d98ba0e555297ac7c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 572d21696d38c47fe0f67d68af5eb249aeb94319
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955832"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857801"
 ---
 # <a name="_get_invalid_parameter_handler-_get_thread_local_invalid_parameter_handler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 
@@ -53,7 +53,7 @@ Un pointeur désignant la fonction de gestionnaire de paramètres non valides d�
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_get_invalid_parameter_handler** obtient le gestionnaire de paramètres non valides globaux actuellement définis. Elle retourne un pointeur Null si aucun gestionnaire de paramètres non valides global n’a été défini. De même, **_get_thread_local_invalid_parameter_handler** obtient le gestionnaire de paramètres non valides local de thread actuel du thread sur lequel il est appelé, ou un pointeur null si aucun gestionnaire n’a été défini. Pour plus d’informations sur la façon de définir des gestionnaires de paramètres non valides globaux et locaux de thread, consultez [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
+La fonction **_get_invalid_parameter_handler** obtient le gestionnaire de paramètres non valides globaux actuellement définis. Elle retourne un pointeur Null si aucun gestionnaire de paramètres non valides global n’a été défini. De même, le **_get_thread_local_invalid_parameter_handler** obtient le gestionnaire de paramètres non valides local de thread actuel du thread sur lequel il est appelé, ou un pointeur null si aucun gestionnaire n’a été défini. Pour plus d’informations sur la façon de définir des gestionnaires de paramètres non valides globaux et locaux de thread, consultez [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
 Le pointeur de la fonction de gestionnaire de paramètres non valides retourné a le type suivant :
 
@@ -69,7 +69,7 @@ typedef void (__cdecl* _invalid_parameter_handler)(
 
 Pour plus d’informations sur le gestionnaire de paramètres non valides, consultez le prototype dans [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Routine|En-tête requis|
 |-------------|---------------------|

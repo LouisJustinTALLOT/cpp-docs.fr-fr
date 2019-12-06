@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __fortran keyword [C++]
 - calling conventions, obsolete
 ms.assetid: a91fc665-034a-48ce-b6bd-d27125f308a7
-ms.openlocfilehash: 86c75c779158d9f191dd015410cf16c9ce25690d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f059afe02cbbad77920fd8c4a0e6cb7c958e992
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245020"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857357"
 ---
 # <a name="obsolete-calling-conventions"></a>Conventions d'appel obsolètes
 
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft
+**Section spécifique de Microsoft**
 
-Le **__pascal**, **__fortran**, et **__syscall** conventions d’appel ne sont plus prises en charge. Vous pouvez émuler leurs fonctionnalités en utilisant l’une des conventions d’appel prises en charge et les options appropriées de l’Éditeur de liens.
+Les conventions d’appel **__pascal**, **__fortran**et **__syscall** ne sont plus prises en charge. Vous pouvez émuler leurs fonctionnalités en utilisant l’une des conventions d’appel prises en charge et les options appropriées de l’Éditeur de liens.
 
-\<Windows.h > prend désormais en charge la macro WINAPI, qui se traduit par la convention d’appel appropriée pour la cible. Utilisez WINAPI où vous avez utilisé précédemment PASCAL ou **__far \__pascal**.
+\<Windows. h > prend désormais en charge la macro WINAPI, qui se traduit par la Convention d’appel appropriée pour la cible. Utilisez WINAPI dans lequel vous avez précédemment utilisé PASCAL ou **__far \__pascal**.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

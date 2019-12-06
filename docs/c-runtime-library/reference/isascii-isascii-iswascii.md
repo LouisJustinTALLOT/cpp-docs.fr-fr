@@ -37,12 +37,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: ee20711628d5c2135b4ee1c37b87cb77f3610695
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b7677819a4b138b08ed4ff97de38c091ce0e94fd
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954571"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857786"
 ---
 # <a name="isascii-__isascii-iswascii"></a>isascii, __isascii, iswascii
 
@@ -61,7 +61,7 @@ int iswascii(
 #define isascii __isascii
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *c*<br/>
 Entier à tester.
@@ -72,7 +72,7 @@ Chacune de ces routines retourne une valeur différente de zéro si **c** est un
 
 ## <a name="remarks"></a>Notes
 
-**__Isascii** et **iswascii** sont tous les deux implémentés en tant que macros, sauf si la macro de préprocesseur _CTYPE_DISABLE_MACROS est définie.
+**__Isascii** et **iswascii** sont implémentées en tant que macros, sauf si la macro de préprocesseur _CTYPE_DISABLE_MACROS est définie.
 
 Pour la compatibilité descendante, **isascii** est implémenté en tant que macro uniquement si [ &#95; &#95;STDC&#95; ](../../preprocessor/predefined-macros.md) n’est pas défini ou s’il est défini sur 0. dans le cas contraire, il n’est pas défini.
 
@@ -82,14 +82,14 @@ Pour la compatibilité descendante, **isascii** est implémenté en tant que mac
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istascii**|**__isascii**|**__isascii**|**iswascii**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**isascii**, **__isascii**|C : \<ctype.h><br /><br /> C++ : \<cctype> ou \<ctype.h>|
 |**iswascii**|C : \<wctype.h>, \<ctype.h> ou \<wchar.h><br /><br /> C++ : \<cwctype>, \<cctype>, \<wctype.h>, \<ctype.h> ou \<wchar.h>|
 
-Les fonctions **isascii**, **__isascii** et **iswascii** sont spécifiques à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Les fonctions **isascii**, **__isascii** et **iswascii** sont spécifiques à Microsoft. Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

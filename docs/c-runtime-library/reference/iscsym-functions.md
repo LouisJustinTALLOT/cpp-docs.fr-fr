@@ -65,12 +65,12 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-ms.openlocfilehash: ef5b2487fb49739f9a073adbc87546fb5d49d542
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bc38e72818446a94a51a37b8df5c8c8582971b3f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954412"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857760"
 ---
 # <a name="iscsym-iscsymf-__iscsym-__iswcsym-__iscsymf-__iswcsymf-_iscsym_l-_iswcsym_l-_iscsymf_l-_iswcsymf_l"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
@@ -111,7 +111,7 @@ int _iswcsymf_l(
 #define iscsymf __iscsymf
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *c*<br/>
 Entier à tester. *c* doit être dans la plage de 0-255 pour la version à caractères étroits de la fonction.
@@ -121,7 +121,7 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**__Iscsym** et **__iswcsym** retournent une valeur différente de zéro si *c* est une lettre, un trait de soulignement ou un chiffre. **__Iscsymf** et **__iswcsymf** retournent une valeur différente de zéro si *c* est une lettre ou un trait de soulignement. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test. Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les *paramètres régionaux* passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**__Iscsym** et **__iswcsym** retournent une valeur différente de zéro si *c* est une lettre, un trait de soulignement ou un chiffre. **__Iscsymf** et **__iswcsymf** retournent une valeur différente de zéro si *c* est une lettre ou un trait de soulignement. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test. Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les *paramètres régionaux* passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d'informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -129,13 +129,13 @@ Ces routines sont définies en tant que macros, sauf si la macro de préprocesse
 
 Pour la compatibilité descendante, **iscsym** et **iscsymf** sont définis en tant que macros uniquement lorsque [ &#95; &#95;STDC&#95; ](../../preprocessor/predefined-macros.md) n’est pas défini ou est défini sur 0 ; dans le cas contraire, elles ne sont pas définies.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C : \<ctype.h><br /><br /> C++ : \<cctype> ou \<ctype.h>|
 
-Les routines **iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**et **_iswcsymf_l** sont spécifiques à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Les routines **iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**et **_iswcsymf_l** sont spécifiques à Microsoft. Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -14,24 +14,24 @@ helpviewer_keywords:
 - suppressing environment processing
 - _setenvp function
 ms.assetid: aae01cbb-892b-48b8-8e1f-34f22421f263
-ms.openlocfilehash: da1b3bdd6392b144f9315add4c19de14c1d14d41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1541840521695658b5c4d809ba7e11767b1330a2
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154689"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857552"
 ---
 # <a name="customizing-c-command-line-processing"></a>Personnalisation du traitement de ligne de commande C++
 
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft
+**Section spécifique de Microsoft**
 
-Si votre programme ne prend pas d’arguments de ligne de commande, vous pouvez économiser une petite quantité d’espace en supprimant l’utilisation de la routine de bibliothèque qui exécute le traitement de ligne de commande. Cette routine est appelée `_setargv` et est décrit dans [développement des caractères génériques](../cpp/wildcard-expansion.md). Pour supprimer son utilisation, définissez une routine qui ne fait rien dans le fichier contenant le `main` de fonction et nommez-le `_setargv`. L’appel à `_setargv` est ensuite satisfait par votre définition de `_setargv`, et la version de la bibliothèque n’est pas chargée.
+Si votre programme ne prend pas d’arguments de ligne de commande, vous pouvez économiser une petite quantité d’espace en supprimant l’utilisation de la routine de bibliothèque qui exécute le traitement de ligne de commande. Cette routine est appelée `_setargv` et est décrite dans [extension des caractères génériques](../cpp/wildcard-expansion.md). Pour supprimer son utilisation, définissez une routine qui ne fait rien dans le fichier contenant la fonction `main`, et nommez-la `_setargv`. L’appel à `_setargv` est ensuite satisfait par votre définition de `_setargv`, et la version de la bibliothèque n’est pas chargée.
 
-De même, si vous n’accédez jamais à la table d’environnement via le `envp` argument, vous pouvez fournir votre propre routine vide à utiliser à la place de `_setenvp`, la routine de traitement de l’environnement. Comme avec la `_setargv` (fonction), `_setenvp` doit être déclarée comme **extern « C »**.
+De même, si vous n’accédez jamais à la table d’environnement via l’argument `envp`, vous pouvez fournir votre propre routine vide à utiliser à la place de `_setenvp`, la routine de traitement de l’environnement. À l’instar de la fonction `_setargv`, `_setenvp` doit être déclaré comme **extern "C"** .
 
-Votre programme peut effectuer des appels à la `spawn` ou `exec` famille des routines de la bibliothèque Runtime C. Le cas échéant, vous ne devez pas supprimer la routine de traitement de l'environnement, car cette routine est utilisée pour transmettre un environnement du processus parent au processus enfant.
+Votre programme peut effectuer des appels à la famille de routines `spawn` ou `exec` dans la bibliothèque Runtime C. Le cas échéant, vous ne devez pas supprimer la routine de traitement de l'environnement, car cette routine est utilisée pour transmettre un environnement du processus parent au processus enfant.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -9,32 +9,30 @@ f1_keywords:
 helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
-ms.openlocfilehash: 298485d310ee4039b13781a8b5cd88a489af3b8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4cca797c0bff94a54b0f3302c6c475908870a99
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232400"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857617"
 ---
-# <a name="cdecl"></a>__cdecl
+# <a name="__cdecl"></a>__cdecl
 
-**Section spécifique à Microsoft**
-
-**__cdecl** est la valeur par défaut de convention d’appel pour C et C++ programmes. Étant donné que la pile est nettoyée par l’appelant, il peut faire `vararg` fonctions. Le **__cdecl** convention d’appel crée des exécutables plus grands que [__stdcall](../cpp/stdcall.md), car elle exige de chaque appel de fonction pour inclure du code de nettoyage de pile. La liste suivante illustre l'implémentation de cette convention d'appel.
+**__cdecl** est la Convention d’appel par défaut pour C++ C et les programmes. Étant donné que la pile est nettoyée par l’appelant, elle peut faire `vararg` fonctions. La Convention d’appel **__cdecl** crée des exécutables plus volumineux que [__stdcall](../cpp/stdcall.md), car elle requiert que chaque appel de fonction inclue le code de nettoyage de la pile. La liste suivante illustre l'implémentation de cette convention d'appel. Le modificateur de **__cdecl** est spécifique à Microsoft.
 
 |Élément|Implémentation|
 |-------------|--------------------|
 |Ordre de transmission des arguments|De droite à gauche|
 |Responsabilité de la maintenance de la pile|La fonction appelante enlève les arguments de la pile.|
-|Convention de décoration de nom|Caractère de soulignement (_) est préfixé aux noms, sauf quand \__cdecl les fonctions qui utilisent une liaison C sont exportées.|
+|Convention de décoration de nom|Le trait de soulignement (_) est préfixé aux noms, sauf lorsque \__cdecl fonctions qui utilisent la liaison C sont exportées.|
 |Convention de conversion de casse|Aucune conversion de casse n'est effectuée.|
 
 > [!NOTE]
->  Pour plus d’informations, consultez [noms décorés](../build/reference/decorated-names.md).
+>  Pour obtenir des informations connexes, consultez [noms décorés](../build/reference/decorated-names.md).
 
-Place le **__cdecl** modificateur avant une variable ou un nom de fonction. Étant donné que les noms et conventions d’appel C sont la valeur par défaut, le seul moment où vous devez utiliser **__cdecl** dans x86 code est lorsque vous avez spécifié le `/Gv` (vectorcall), `/Gz` (stdcall) ou `/Gr` (fastcall) option du compilateur. Le [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) du compilateur option force le **__cdecl** convention d’appel.
+Placez le modificateur **__cdecl** avant une variable ou un nom de fonction. Comme les conventions d’affectation de noms et d’appel C sont définies par défaut, la seule fois où vous devez utiliser **__cdecl** dans le code x86 est lorsque vous avez spécifié l’option de compilateur `/Gv` (vectorcall), `/Gz` (stdcall) ou `/Gr` (fastcall). L’option du compilateur [/gd](../build/reference/gd-gr-gv-gz-calling-convention.md) force la Convention d’appel **__cdecl** .
 
-Sur ARM et x64 processeurs, **__cdecl** est accepté mais en général ignoré par le compilateur. Par convention sur ARM et x64, les arguments sont passés dans les registres le cas échéant, et les arguments suivants sont passés sur la pile. Dans x64 de code, utilisez **__cdecl** pour remplacer le **GV** option du compilateur et l’utilisation de la convention d’appel par défaut x64.
+Sur les processeurs ARM et x64, **__cdecl** est acceptée, mais généralement ignorée par le compilateur. Par convention sur ARM et x64, les arguments sont passés dans les registres le cas échéant, et les arguments suivants sont passés sur la pile. Dans le code x64, utilisez **__cdecl** pour remplacer l’option du compilateur **/GV** et utiliser la Convention d’appel x64 par défaut.
 
 Pour les fonctions de classe non statiques, si la fonction est définie hors ligne, il n’est pas nécessaire de spécifier le modificateur de convention d’appel dans la définition hors ligne. En d’autres termes, pour les méthodes membres non statiques de classe, la convention d’appel spécifiée dans le cadre de la déclaration est utilisée par défaut au stade de la définition. Compte tenu de la définition de classe suivante :
 
@@ -56,7 +54,7 @@ void CMyClass::mymethod() { return; }
 void __cdecl CMyClass::mymethod() { return; }
 ```
 
-Pour assurer la compatibilité avec les versions précédentes, **cdecl** et **_cdecl** sont un synonyme de **__cdecl** , sauf si option du compilateur [/Za \(désactiver extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
+Pour la compatibilité avec les versions précédentes, **cdecl** et **_cdecl** sont un synonyme de **__cdecl** , sauf si l’option de compilateur [/za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
 
 ## <a name="example"></a>Exemple
 

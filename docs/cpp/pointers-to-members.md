@@ -1,5 +1,5 @@
 ---
-title: Pointeurs vers membres
+title: Pointeurs vers des membres
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarations, pointers
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14b5c12715d1c4c27d9ef8e262170acb2f85e526
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267687"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857344"
 ---
-# <a name="pointers-to-members"></a>Pointeurs vers membres
+# <a name="pointers-to-members"></a>Pointeurs vers des membres
 
 Les déclarations de pointeurs vers des membres sont des cas spéciaux de déclarations de pointeur.  Elles sont déclarées à l'aide de la séquence suivante :
 
@@ -28,33 +28,33 @@ Les déclarations de pointeurs vers des membres sont des cas spéciaux de décla
 
    - Spécificateur de classe de stockage facultatif.
 
-   - Facultatif **const** et/ou **volatile** spécificateurs.
+   - Spécificateurs **const** et/ou **volatile** facultatifs.
 
    - Spécificateur de type : nom d'un type.  Il s'agit du type du membre vers lequel pointer, et non de la classe.
 
 1. Déclarateur :
 
-   - Modificateur spécifique Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Modificateur spécifique à Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques à Microsoft](../cpp/microsoft-specific-modifiers.md).
 
    - Nom qualifié de la classe contenant les membres vers lesquels pointer.
 
-   - Le __::__ opérateur.
+   - Opérateur __::__ .
 
-   - Le __\*__ opérateur.
+   - Opérateur __\*__ .
 
-   - Facultatif **const** et/ou **volatile** spécificateurs.
+   - Spécificateurs **const** et/ou **volatile** facultatifs.
 
    - Identificateur nommant le pointeur vers le membre.
 
 1. Initialiseur facultatif :
 
-   - Le **=** opérateur.
+   - Opérateur **=** .
 
-   - Le **&** opérateur.
+   - Opérateur **&** .
 
    - Nom qualifié de la classe.
 
-   - Le __::__ opérateur.
+   - Opérateur __::__ .
 
    - Nom d'un membre non statique de la classe du type approprié.
 
@@ -82,7 +82,7 @@ int main()
 }
 ```
 
-Dans l’exemple précédent, `pwCaption` est un pointeur vers n’importe quel membre de classe `Window` qui possède un type `char*`. Le type de `pwCaption` est `char * Window::* `. Le fragment de code suivant déclare des pointeurs vers les fonctions membres `SetCaption` et `GetCaption`.
+Dans l’exemple précédent, `pwCaption` est un pointeur vers n’importe quel membre de la classe `Window` qui a le type `char*`. Le type de `pwCaption` est `char * Window::* `. Le fragment de code suivant déclare des pointeurs vers les fonctions membres `SetCaption` et `GetCaption`.
 
 ```cpp
 const char * (Window::*pfnwGC)() = &Window::GetCaption;
@@ -104,9 +104,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';
 ```
 
-La différence entre la **.** <strong>\*</strong> et **->** <strong>\*</strong> opérateurs (les opérateurs de pointeur vers membre) est que le **.** <strong>\*</strong> opérateur sélectionne des membres étant donné un objet ou une référence d’objet, tandis que le **->** <strong>\*</strong> opérateur Sélectionne les membres via un pointeur. (Pour plus d’informations sur ces opérateurs, consultez [Expressions avec opérateurs pointeur vers membre](../cpp/pointer-to-member-operators-dot-star-and-star.md).)
+Différence entre les **.** les opérateurs <strong>\*</strong> et **->** <strong>\*</strong> (les opérateurs de pointeur vers membre) sont que le **.** <strong>\*</strong> opérateur sélectionne des membres en fonction d’un objet ou d’une référence d’objet, tandis que l’opérateur **->** <strong>\*</strong> sélectionne des membres via un pointeur. (Pour plus d’informations sur ces opérateurs, consultez [expressions avec des opérateurs de pointeur vers membre](../cpp/pointer-to-member-operators-dot-star-and-star.md).)
 
-Le résultat des opérateurs pointeur vers membre est le type du membre, dans ce cas, `char *`.
+Le résultat des opérateurs de pointeur vers membre est le type du membre, dans ce cas, `char *`.
 
 Le fragment de code suivant appelle les fonctions membres `GetCaption` et `SetCaption` à l'aide de pointeurs vers des membres :
 
@@ -127,7 +127,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 ## <a name="restrictions-on-pointers-to-members"></a>Restrictions sur les pointeurs vers des membres
 
-L'adresse d'un membre statique n'est pas un pointeur vers un membre. C'est un pointeur normal vers l'instance du membre statique. Étant donné que seule une instance d’un membre statique existe pour tous les objets d’une classe donnée, l’ordinaire d’adresse (**&**) et déréférencer (<strong>\*</strong>) opérateurs peuvent être utilisés.
+L'adresse d'un membre statique n'est pas un pointeur vers un membre. C'est un pointeur normal vers l'instance du membre statique. Étant donné qu’une seule instance d’un membre statique existe pour tous les objets d’une classe donnée, les opérateurs Address-of ( **&** ) et Dereference (<strong>\*</strong>) peuvent être utilisés.
 
 ## <a name="pointers-to-members-and-virtual-functions"></a>Pointeurs vers des membres et des fonctions virtuelles
 

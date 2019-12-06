@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: 2c75db3e1550927af57054a2cc1561d9df1567a4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148802"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857084"
 ---
 # <a name="function-prototypes"></a>Prototypes de fonctions
 
@@ -24,7 +24,7 @@ Une déclaration de fonction précède la définition de fonction et spécifie l
 *declaration* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *attribute-seq*<sub>opt</sub> est spécifique à Microsoft \*/
+/\* *attribut-SEQ*<sub>opt</sub> est un \*spécifique à Microsoft /
 
 *declaration-specifiers* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -43,14 +43,14 @@ Une déclaration de fonction précède la définition de fonction et spécifie l
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator* : /\*Déclarateur de fonction \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* Déclarateur de nouveau style \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)** /\* Déclarateur de style obsolète \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**   /\* Déclarateur de nouveau style \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Déclarateur de style obsolète \*/
 
 Le prototype a la même forme que la définition de fonction, sauf qu'il se termine par un point-virgule juste après la parenthèse fermante et qu'il n'a par conséquent aucun corps. Dans les deux cas, le type de retour doit correspondre à celui spécifié dans la définition de fonction.
 
 Les principales utilisations des prototypes de fonction sont les suivantes :
 
-- Ils établissent le type de retour pour les fonctions qui retournent des types autres qu’**int**. Bien que les fonctions qui retournent des valeurs **int** ne requièrent pas de prototypes, ceux-ci sont recommandés.
+- Ils établissent le type de retour pour les fonctions qui retournent des types autres que **int**. Bien que les fonctions qui retournent des valeurs **int** ne requièrent pas de prototypes, les prototypes sont recommandés.
 
 - Sans prototypes complets, les conversions standard sont réalisées mais aucune tentative n'est effectuée pour vérifier le type ou le nombre d'arguments avec le nombre de paramètres.
 
