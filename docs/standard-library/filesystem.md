@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f2c90bd7c1d88a94d1dab05b98442111faa71a2
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457019"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898813"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,21 +29,21 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Depuis la sortie de Visual Studio 2017, l' \<en-tête de > FileSystem n’était pas encore une C++ norme. C++dans Visual Studio 2017 (MSVC V141) implémente la norme préliminaire finale, trouvée dans [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> Depuis la sortie de Visual Studio 2017, l’en-tête \<FileSystem > n’était pas C++ encore une norme. C++dans Visual Studio 2017 (MSVC V141) implémente la norme préliminaire finale, trouvée dans [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
-Cet en-tête prend en charge les systèmes de fichiers pour l’une des deux grandes classes de systèmes d’exploitation hôtes: Microsoft Windows et POSIX.
+Cet en-tête prend en charge les systèmes de fichiers pour l’une des deux grandes classes de systèmes d’exploitation hôtes : Microsoft Windows et POSIX.
 
 Bien que la plupart des fonctionnalités soit communes aux deux systèmes d’exploitation, ce document met l’accent sur les différences. Par exemple :
 
 - Windows prend en charge plusieurs noms de racines, par exemple, c: ou \\\nom_réseau. Un système de fichiers se compose d’une forêt d’arborescences, chacune ayant son propre répertoire racine, par exemple, c:\ ou \\\nom_réseau\\, et chacune ayant son propre répertoire actif pour compléter un chemin relatif (le contraire d’un chemin absolu).
 
-- Posix prend en charge une arborescence unique (sans nom de la racine), le répertoire racine unique / et un répertoire actif unique.
+- POSIX prend en charge une arborescence unique, sans nom racine, le répertoire racine unique/et un répertoire actif unique.
 
 Une autre différence importante réside dans la représentation native des chemins :
 
 - Windows utilise une séquence wchar_t terminée par un caractère null, codée au format UTF-16 (un ou deux éléments pour chaque caractère).
 
-- Posix utilise une séquence char terminée par un caractère null, codée au format UTF-8 (un ou plusieurs éléments pour chaque caractère).
+- POSIX utilise une séquence de caractères se terminant par un caractère null, encodée au format UTF-8 (un ou plusieurs éléments pour chaque caractère).
 
 - Un objet de classe path stocke le chemin au format natif. Toutefois, il prend en charge la conversion (avec simplicité) entre ce format stocké et plusieurs formats externes :
 
@@ -63,7 +63,7 @@ Il existe une autre différence, la précision avec laquelle chaque système d�
 
 1. Windows enregistre si un fichier est accessible en lecture seule ou en écriture, un attribut qui n’a aucune signification pour les répertoires.
 
-1. Posix enregistre si un fichier peut être lu, écrit ou exécuté (analysé, s’il s’agit d’un répertoire) par son propriétaire, par le groupe de son propriétaire ou par tout le monde. En outre, il enregistre quelques autorisations supplémentaires.
+1. POSIX enregistre si un fichier peut être lu, écrit ou exécuté (analysé dans le cas d’un répertoire), par le propriétaire, par le groupe du propriétaire ou par tout le monde, ainsi que par d’autres autorisations.
 
 Pour les deux systèmes, la structure imposée au chemin après le nom de la racine est la même. Pour le chemin c:/abc/xyz/def.ext :
 
@@ -102,7 +102,7 @@ Pour plus d’informations et pour obtenir des exemples de code, consultez [Navi
 |[recursive_directory_iterator, classe](../standard-library/recursive-directory-iterator-class.md)|Décrit un itérateur d'entrée qui parcourt les noms de fichiers dans un répertoire de système de fichiers. L'itérateur peut également descendre dans des sous-répertoires.|
 |[file_status, classe](../standard-library/file-status-class.md)|Encapsule un `file_type`.|
 
-### <a name="structs"></a>Structs
+### <a name="structs"></a>Structures
 
 |||
 |-|-|
@@ -120,8 +120,8 @@ Pour plus d’informations et pour obtenir des exemples de code, consultez [Navi
 
 |||
 |-|-|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) et qui détermine le comportement si un fichier de destination existe déjà.|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) et qui détermine le comportement si un fichier de destination existe déjà.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) qui détermine le comportement si un fichier de destination existe déjà.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) qui détermine le comportement si un fichier de destination existe déjà.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Énumération qui spécifie les options pour les itérateurs de répertoire.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Énumération pour les types de fichiers.|
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||

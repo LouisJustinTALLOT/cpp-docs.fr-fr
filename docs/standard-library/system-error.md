@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: e6eef7152e45e8177c451fc25592fab85c58ccb5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b9ddb3117afe37060b8013be235bdb11a2a031ac
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449761"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898855"
 ---
-# <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
+# <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
-Incluez l' \<en-tête system_error > pour définir `system_error` la classe d’exception et les modèles associés pour le traitement des erreurs système de bas niveau.
+Incluez l’en-tête \<system_error > pour définir la `system_error` de la classe d’exception et les modèles associés pour le traitement des erreurs système de bas niveau.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 **En-tête :** \<system_error>
 
@@ -26,7 +26,7 @@ Incluez l' \<en-tête system_error > pour définir `system_error` la classe d’
 
 ## <a name="members"></a>Membres
 
-### <a name="objects"></a>Objets
+### <a name="objects"></a>Objets du
 
 |||
 |-|-|
@@ -51,11 +51,11 @@ Incluez l' \<en-tête system_error > pour définir `system_error` la classe d’
 |[operator<](../standard-library/system-error-operators.md#op_lt)|Vérifie si un objet est inférieur à l'objet passé en vue de leur comparaison.|
 |[operator<<](../standard-library/system-error-operators.md#op_ostream)||
 
-### <a name="enums"></a>Enums
+### <a name="enums"></a>Énumérations
 
 |||
 |-|-|
-|[errc](../standard-library/system-error-enums.md#errc)|Fournit des noms symboliques pour toutes les macros de code d'erreur définies par Posix dans `<errno.h>`.|
+|[errc](../standard-library/system-error-enums.md#errc)|Fournit des noms symboliques pour toutes les macros de code d’erreur définies par POSIX dans `<errno.h>`.|
 
 ### <a name="classes-and-structs"></a>Classes et structs
 

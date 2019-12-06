@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a11f5bf7e8c280da3ba2cae82cf355a3b28c0577
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890159"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898840"
 ---
 # <a name="locale-class"></a>locale, classe
 
@@ -50,14 +50,14 @@ Vous pouvez définir un ensemble ouvert de ces facettes. Vous pouvez également 
 
 Les groupes prédéfinis de ces facettes correspondent aux [catégories de paramètres régionaux](#category) traditionnellement gérées dans la bibliothèque C standard par la fonction `setlocale`.
 
-La catégorie `collate` (LC_COLLATE) comprend les facettes suivantes :
+La `collate` de catégorie (LC_COLLATE) comprend les facettes suivantes :
 
 ```cpp
 collate<char>
 collate<wchar_t>
 ```
 
-La catégorie `ctype` (LC_CTYPE) comprend les facettes suivantes :
+La `ctype` de catégorie (LC_CTYPE) comprend les facettes suivantes :
 
 ```cpp
 ctype<char>
@@ -68,7 +68,7 @@ codecvt<char16_t, char, mbstate_t>
 codecvt<char32_t, char, mbstate_t>
 ```
 
-La catégorie `monetary` (LC_MONETARY) comprend les facettes suivantes :
+La `monetary` de catégorie (LC_MONETARY) comprend les facettes suivantes :
 
 ```cpp
 moneypunct<char, false>
@@ -81,7 +81,7 @@ money_put<char, ostreambuf_iterator<char>>
 money_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-La catégorie `numeric` (LC_NUMERIC) comprend les facettes suivantes :
+La `numeric` de catégorie (LC_NUMERIC) comprend les facettes suivantes :
 
 ```cpp
 num_get<char, istreambuf_iterator<char>>
@@ -92,7 +92,7 @@ numpunct<char>
 numpunct<wchar_t>
 ```
 
-La catégorie `time` (LC_TIME) comprend les facettes suivantes :
+La `time` de catégorie (LC_TIME) comprend les facettes suivantes :
 
 ```cpp
 time_get<char, istreambuf_iterator<char>>
@@ -101,14 +101,14 @@ time_put<char, ostreambuf_iterator<char>>
 time_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-La catégorie `messages` (LC_MESSAGES) comprend les facettes suivantes :
+La `messages` de catégorie (LC_MESSAGES) comprend les facettes suivantes :
 
 ```cpp
 messages<char>
 messages<wchar_t>
 ```
 
-La dernière catégorie est requise par Posix, mais pas par le C standard.
+(La dernière catégorie est requise par POSIX, mais pas par la norme C.)
 
 Certaines de ces facettes prédéfinies sont utilisées par les classes `iostream`, pour contrôler la conversion de valeurs numériques vers et à partir de séquences de texte.
 
@@ -120,7 +120,7 @@ Dans cette implémentation, vous pouvez également appeler la fonction membre st
 static locale empty();
 ```
 
-pour construire un objet de paramètres régionaux sans facette. Il s’agit également de paramètres régionaux transparents. Si les fonctions de modèle [has_facet](../standard-library/locale-functions.md#has_facet) et [use_facet](../standard-library/locale-functions.md#use_facet) ne peuvent pas trouver la facette demandée dans des paramètres régionaux transparents, elles consultent d’abord les paramètres régionaux globaux, puis, s’ils sont transparents, les paramètres régionaux classiques. Vous pouvez donc écrire :
+pour construire un objet de paramètres régionaux sans facette. Il s’agit également de paramètres régionaux transparents. Si le modèle fonctionne [has_facet](../standard-library/locale-functions.md#has_facet) et [use_facet](../standard-library/locale-functions.md#use_facet) ne peut pas trouver la facette demandée dans des paramètres régionaux transparents, ils consultent d’abord les paramètres régionaux globaux, puis, s’ils sont transparents, les paramètres régionaux classiques. Vous pouvez donc écrire :
 
 ```cpp
 cout.imbue(locale::empty());
@@ -150,7 +150,7 @@ Les règles de mise en forme numérique pour les insertions suivantes dans `cout
 |-|-|
 |[category](#category)|Type entier qui fournit des valeurs de masque de bits pour indiquer des familles de facettes standard.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -175,12 +175,12 @@ Les règles de mise en forme numérique pour les insertions suivantes dans `cout
 
 ### <a name="classes"></a>Classes
 
-|Class|Description|
+|Classe|Description|
 |-|-|
 |[facet](#facet_class)|Classe qui sert de classe de base pour toutes les facettes de paramètres régionaux.|
 |[`id`](#id_class)|La classe membre fournit un ID unique de facette utilisé comme index pour rechercher les facettes de paramètres régionaux.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Configuration requise pour
 
 **En-tête :** \<locale>
 
@@ -224,7 +224,7 @@ Deux valeurs plus utiles sont :
 
 - `all`, correspondant à l’Union C de toutes les catégories LC_ALL
 
-Vous pouvez représenter un groupe arbitraire de catégories à l’aide de `OR` avec ces constantes, comme &#124; dans `monetary``time`.
+Vous pouvez représenter un groupe arbitraire de catégories à l’aide de `OR` avec ces constantes, comme &#124; dans `monetary` `time`.
 
 ## <a name="classic"></a>  locale::classic
 
@@ -290,7 +290,7 @@ template <class Facet>
 locale combine(const locale& source_locale) const;
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *source_locale*\
 Paramètres régionaux contenant la facette à insérer dans les paramètres régionaux cibles.
@@ -358,7 +358,7 @@ Réinitialise les paramètres régionaux par défaut du programme. Cet appel aff
 static locale global(const locale& new_default_locale);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *new_default_locale*\
 Paramètres régionaux à utiliser comme paramètres régionaux par défaut par le programme.
@@ -435,7 +435,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 ~locale();
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *locale_name*\
 Nom de paramètres régionaux.
@@ -443,7 +443,7 @@ Nom de paramètres régionaux.
 *from_locale*\
 Paramètres régionaux qui doivent être copiés lors de la construction des nouveaux paramètres régionaux.
 
-*Autres* \
+*Autres*\
 Paramètres régionaux à partir desquels sélectionner une catégorie.
 
 *new_category*\
@@ -454,11 +454,11 @@ Facette à substituer dans les paramètres régionaux construits.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise l’objet pour qu’il corresponde aux paramètres régionaux globaux. Les deuxième et troisième constructeurs initialisent toutes les catégories de paramètres régionaux pour que le comportement soit cohérent avec le nom de paramètres régionaux *locale_name*. Les constructeurs restants copient *from_locale*, avec les exceptions notées :
+Le premier constructeur initialise l’objet pour qu’il corresponde aux paramètres régionaux globaux. Les deuxième et troisième constructeurs initialisent toutes les catégories de paramètres régionaux pour que le comportement soit cohérent avec le nom des paramètres régionaux *locale_name*. Les constructeurs restants copient *from_locale*, avec les exceptions notées :
 
 `locale(const locale& from_locale, const locale& Other, category new_category);`
 
-remplace les *autres* facettes correspondant à une catégorie c pour laquelle la valeur de c & *new_category* est différente de zéro.
+remplace les *autres* facettes correspondant à une catégorie c pour laquelle C & *new_category* est différent de zéro.
 
 `locale(const locale& from_locale, const char* locale_name, category new_category);`
 
@@ -470,7 +470,7 @@ remplace `locale(locale_name, all)` ces facettes correspondant à une catégorie
 
 remplace dans (ou ajoute à) *from_locale* la facette *new_facet*, si *new_facet* n’est pas un pointeur null.
 
-Si le nom de paramètres régionaux *locale_name* est un pointeur null ou n’est pas valide, la fonction lève [runtime_error](../standard-library/runtime-error-class.md).
+Si le nom des paramètres régionaux *locale_name* est un pointeur null ou n’est pas valide, la fonction lève [runtime_error](../standard-library/runtime-error-class.md).
 
 ### <a name="example"></a>Exemple
 
@@ -567,7 +567,7 @@ Vérifie l'inégalité de deux ensembles de paramètres régionaux.
 bool operator!=(const locale& right) const;
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 \ *droit*
 L’un des paramètres régionaux dont l’inégalité doit être testée.
@@ -631,7 +631,7 @@ bool operator()(
     const basic_string<CharType, Traits, Allocator>& right) const;
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 \ *gauche*
 Chaîne de gauche.
@@ -700,7 +700,7 @@ Vérifie l'égalité de deux ensembles de paramètres régionaux.
 bool operator==(const locale& right) const;
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 \ *droit*
 L’un des paramètres régionaux dont l’égalité doit être testée.

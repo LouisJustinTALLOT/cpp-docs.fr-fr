@@ -41,12 +41,12 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: 0e11c11b468ff6e058ccf5c75b000396e0473bfa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 34f92bedfa9606c90196f2e3a5e47dc341b23aea
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747637"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898742"
 ---
 # <a name="errno-constants"></a>errno, constantes
 
@@ -56,7 +56,7 @@ ms.locfileid: "57747637"
 #include <errno.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les valeurs **errno** sont des constantes affectées à [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) lorsque différentes conditions d'erreur se produisent.
 
@@ -87,7 +87,7 @@ Les valeurs **errno** suivantes sont prises en charge :
 |**EXDEV**|Lien entre les périphériques. Une tentative a été effectuée pour déplacer un fichier vers un autre périphérique (à l'aide de la fonction **rename**).|
 |**STRUNCATE**|Une copie ou une concaténation de chaîne a provoqué une chaîne tronquée. Consultez [_TRUNCATE](../c-runtime-library/truncate.md).
 
-Les valeurs suivantes sont prises en charge pour la compatibilité avec Posix. Ce sont les valeurs requises sur les systèmes non Posix.
+Les valeurs suivantes sont prises en charge pour la compatibilité avec POSIX. Il s’agit de valeurs requises sur les systèmes non-POSIX.
 
 ```C
 #define E2BIG /* argument list too long */
