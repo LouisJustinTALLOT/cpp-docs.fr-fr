@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-ms.openlocfilehash: 090eb43289313f12b900e671df61f74e7b464872
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d2e8dab92c70189533656bac359c794de2ad8002
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948500"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857773"
 ---
 # <a name="_set_invalid_parameter_handler-_set_thread_local_invalid_parameter_handler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 
@@ -52,7 +52,7 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 );
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *pNew*<br/>
 Pointeur de fonction désignant le nouveau gestionnaire de paramètre non valide.
@@ -63,7 +63,7 @@ Pointeur désignant le gestionnaire de paramètre non valide avant l’appel.
 
 ## <a name="remarks"></a>Notes
 
-De nombreuses fonctions Runtime C vérifient la validité des arguments qui leur sont transmis. Si un argument non valide est passé, la fonction peut définir le numéro d’erreur **errno** ou retourner un code d’erreur. En pareils cas, le gestionnaire de paramètre non valide est aussi appelé. Le runtime C fournit un gestionnaire de paramètre non valide global par défaut qui met fin au programme et affiche un message d’erreur de runtime. Vous pouvez utiliser **_set_invalid_parameter_handler** pour définir votre propre fonction en tant que gestionnaire de paramètres non valides globaux. Le Runtime C prend aussi en charge un gestionnaire de paramètre non valide de thread local. Si un gestionnaire de paramètres de thread local est défini dans un thread à l’aide de **_set_thread_local_invalid_parameter_handler**, les fonctions du runtime C appelées à partir du thread utilisent ce gestionnaire au lieu du gestionnaire Global. Vous ne pouvez définir qu’une seule fonction comme gestionnaire d’argument non valide global à la fois. De la même manière, vous ne pouvez spécifier qu’une seule fonction comme gestionnaire d’argument non valide de thread local par thread. Par contre, les différents threads peuvent avoir des gestionnaires de thread local distincts. Vous pouvez ainsi remplacer le gestionnaire utilisé dans une partie de votre code sans affecter le comportement des autres threads.
+De nombreuses fonctions Runtime C vérifient la validité des arguments qui leur sont transmis. Si un argument non valide est passé, la fonction peut définir le numéro d’erreur **errno** ou retourner un code d’erreur. En pareils cas, le gestionnaire de paramètre non valide est aussi appelé. Le runtime C fournit un gestionnaire de paramètre non valide global par défaut qui met fin au programme et affiche un message d’erreur de runtime. Vous pouvez utiliser la **_set_invalid_parameter_handler** pour définir votre propre fonction en tant que gestionnaire de paramètres non valides globaux. Le Runtime C prend aussi en charge un gestionnaire de paramètre non valide de thread local. Si un gestionnaire de paramètres de thread local est défini dans un thread à l’aide de **_set_thread_local_invalid_parameter_handler**, les fonctions du runtime C appelées à partir du thread utilisent ce gestionnaire au lieu du gestionnaire Global. Vous ne pouvez définir qu’une seule fonction comme gestionnaire d’argument non valide global à la fois. De la même manière, vous ne pouvez spécifier qu’une seule fonction comme gestionnaire d’argument non valide de thread local par thread. Par contre, les différents threads peuvent avoir des gestionnaires de thread local distincts. Vous pouvez ainsi remplacer le gestionnaire utilisé dans une partie de votre code sans affecter le comportement des autres threads.
 
 Quand le runtime appelle la fonction de paramètre non valide, cela signifie généralement qu’une erreur irrécupérable s’est produite. La fonction de gestionnaire de paramètre non valide que vous fournissez doit enregistrer toutes les données qu’elle peut avant d’abandonner. Elle ne doit pas retourner le contrôle à la fonction principale, sauf si vous êtes certain que l’erreur est récupérable.
 
@@ -81,7 +81,7 @@ void _invalid_parameter(
 
 L’argument *expression* est une représentation sous forme de chaîne étendue de l’expression d’argument qui a déclenché l’erreur. L’argument de *fonction* est le nom de la fonction CRT qui a reçu l’argument non valide. L’argument *file* est le nom du fichier source CRT qui contient la fonction. L’argument de *ligne* est le numéro de ligne dans ce fichier. Le dernier argument est réservé. Les paramètres ont tous la valeur **null** , sauf si une version de débogage de la bibliothèque CRT est utilisée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -89,7 +89,7 @@ L’argument *expression* est une représentation sous forme de chaîne étendue
 
 Les fonctions **_set_invalid_parameter_handler** et **_set_thread_local_invalid_parameter_handler** sont spécifiques à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Dans l’exemple suivant, un gestionnaire d’erreur de paramètre non valide est utilisé pour imprimer la fonction qui a reçu le paramètre non valide, ainsi que le fichier et la ligne des sources CRT. Quand la bibliothèque CRT de débogage est utilisée, les erreurs de paramètre non valide déclenchent aussi une assertion, ce qui est désactivé dans cet exemple via [_CrtSetReportMode](crtsetreportmode.md).
 

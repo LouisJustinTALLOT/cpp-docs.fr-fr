@@ -11,22 +11,22 @@ helpviewer_keywords:
 - command-line wildcards
 - question mark, wildcard
 ms.assetid: 1a543398-607b-4404-93d1-45d290bde638
-ms.openlocfilehash: 2d495f94f2e3fb7b88d235edc7b98f8e90775393
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fdea297bb45a06a08bde4f63f90eabef6ddb539
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209513"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857175"
 ---
 # <a name="wildcard-expansion"></a>Développement des caractères génériques
 
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft
+**Section spécifique de Microsoft**
 
 Vous pouvez utiliser des caractères génériques (le point d'interrogation (?) et l'astérisque (*)) pour spécifier des arguments de nom de fichier et de chemin d'accès sur la ligne de commande.
 
-Arguments de ligne de commande sont gérées par une routine appelée `_setargv` (ou `_wsetargv` dans l’environnement à caractères larges), qui par défaut ne développe pas les caractères génériques dans des chaînes séparées dans le `argv` tableau de chaînes. Pour plus d’informations sur l’activation du développement des caractères génériques, consultez [développement les Arguments génériques](../c-language/expanding-wildcard-arguments.md).
+Les arguments de ligne de commande sont gérés par une routine appelée `_setargv` (ou `_wsetargv` dans l’environnement à caractères larges), qui, par défaut, ne développe pas les caractères génériques en chaînes séparées dans le tableau de chaînes `argv`. Pour plus d’informations sur l’activation de l’extension de caractères génériques, consultez [extension des arguments génériques](../c-language/expanding-wildcard-arguments.md).
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

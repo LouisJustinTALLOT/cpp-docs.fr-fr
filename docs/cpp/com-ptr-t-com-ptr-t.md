@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c169e454029a28f644a2aabc8d3089bf3069c8c5
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498708"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857591"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Construit un objet **_com_ptr_t** .
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 // Default constructor.
 // Constructs a NULL smart pointer.
 _com_ptr_t() throw();
@@ -133,34 +133,36 @@ explicit _com_ptr_t(
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *pInterface*<br/>
 Pointeur d'interface brut.
 
 *fAddRef*<br/>
-Si la valeur `AddRef` est true, est appelé pour incrémenter le décompte de références du pointeur d’interface encapsulé.
+Si la valeur est TRUE, `AddRef` est appelé pour incrémenter le décompte de références du pointeur d’interface encapsulé.
 
 *cp*<br/>
 Objet **_com_ptr_t** .
 
 *p*<br/>
-Pointeur d’interface brut, son type étant différent du type de pointeur intelligent de cet objet **_com_ptr_t** .
+Pointeur d’interface brut qui est différent du type de pointeur intelligent de cet objet **_com_ptr_t** .
 
 *varSrc*<br/>
 Objet `_variant_t`.
 
 *clsid*<br/>
-`CLSID` D’une coclasse.
+`CLSID` d’une coclasse.
 
 *dwClsContext*<br/>
 Contexte d'exécution du code exécutable.
 
 *lpcStr*<br/>
-Une chaîne multioctet qui contient un `CLSID` (en commençant par « **{** ») ou un `ProgID`.
+Une chaîne multioctet qui contient un `CLSID` (en commençant par " **{** ") ou un `ProgID`.
 
 *pOuter*<br/>
 Externe inconnu pour l' [agrégation](/windows/win32/com/aggregation).
+
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

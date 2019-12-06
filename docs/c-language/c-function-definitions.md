@@ -12,12 +12,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: 61662caf28fad2f961a580cf280799711a6909bb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 5cf56375df417ac68b3e03d00f2bd7770ee571e8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147683"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857136"
 ---
 # <a name="c-function-definitions"></a>Définitions de fonction C
 
@@ -36,7 +36,7 @@ Une définition de fonction spécifie le nom de la fonction, les types et le nom
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* est spécifique à Microsoft \*/
+/\* *attribute-SEQ* est un \*spécifique à Microsoft /
 
 Les paramètres de prototype sont les suivants :
 
@@ -53,8 +53,8 @@ Les paramètres de prototype sont les suivants :
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator* : /\*Déclarateur de fonction \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)** /\* Déclarateur de nouveau style \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)** /\* Déclarateur de style obsolète \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* Déclarateur de nouveau style \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Déclarateur de style obsolète \*/
 
 La liste des paramètres dans une définition utilise la syntaxe suivante :
 
@@ -79,7 +79,7 @@ La liste des paramètres dans une définition de fonction de style ancien utilis
 La syntaxe du corps de la fonction est la suivante :
 
 *compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
 
 Les seuls spécificateurs de classe de stockage pouvant modifier une déclaration de fonction sont **extern** et **static**. Le spécificateur **extern** signifie que la fonction peut être référencée à partir d'autres fichiers ; autrement dit, son nom est exporté vers l'éditeur de liens. Le spécificateur **static** signifie que la fonction ne peut pas être référencée à partir d'autres fichiers ; autrement dit, le nom n'est pas exporté par l'éditeur de liens. Si aucune classe de stockage n'apparaît dans une définition de fonction, **extern** est la valeur par défaut. Dans tous les cas, la fonction est toujours visible du point de définition jusqu'à la fin du fichier.
 

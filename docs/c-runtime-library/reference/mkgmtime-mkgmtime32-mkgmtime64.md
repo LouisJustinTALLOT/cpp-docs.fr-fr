@@ -1,6 +1,7 @@
 ---
 title: _mkgmtime, _mkgmtime32, _mkgmtime64
-ms.date: 11/04/2016
+description: Décrit les fonctions de la bibliothèque Runtime C _mkgmtime, _mkgmtime32 et _mkgmtime64 et fournit des exemples de leur utilisation.
+ms.date: 12/04/2019
 api_name:
 - _mkgmtime32
 - _mkgmtime64
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: fcd1e3fdcca37d7e5bb381c234a6d8555ce2766c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d03fc62853705a68e1a2e408d6af833e8c6b02b
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951667"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857734"
 ---
 # <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
@@ -64,9 +65,9 @@ __time64_t _mkgmtime64(
 );
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
-*timeptr*<br/>
+*timeptr*\
 Pointeur vers l’heure UTC en tant que **struct** **TM** à convertir.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -75,25 +76,17 @@ Quantité de type **__time32_t** ou **__time64_t** représentant le nombre de se
 
 ## <a name="remarks"></a>Notes
 
-Les fonctions **_mkgmtime32** et **_mkgmtime64** convertissent une heure UTC en un type **__time32_t** ou **__time64_t** représentant l’heure UTC. Pour convertir une heure locale en heure UTC, utilisez **mktime**, **_mktime32**et **_mktime64** à la place.
+Les fonctions **_mkgmtime32** et **_mkgmtime64** convertissent une heure utc en un type **__time32_t** ou **__time64_t** représentant l’heure UTC. Pour convertir une heure locale en heure UTC, utilisez **mktime**, **_mktime32**et **_mktime64** à la place.
 
-**_mkgmtime** est une fonction inline qui prend la valeur **_mkgmtime64**et **time_t** est équivalent à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t**32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 (la plage maximale d’un 32-bit **time_t**) et n’est pas autorisée du tout sur les plateformes 64 bits.
+**_mkgmtime** est une fonction inline qui prend la valeur **_mkgmtime64**et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t**32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Nous ne le recommandons pas, car votre application peut échouer après le 18 janvier 2038, la plage maximale d’un **time_t**de 32 bits. Elle n’est pas du tout autorisée sur les plateformes 64 bits.
 
-La structure de temps passée est modifiée comme suit, de la même façon qu’elles sont modifiées avec les fonctions **_mktime** : les champs **tm_wday** et **tm_yday** sont définis sur de nouvelles valeurs en fonction des valeurs de **tm_mday** et **tm_year**. Lorsque vous spécifiez une durée de structure **TM** , définissez le champ **tm_isdst** sur :
+La structure de temps passée est modifiée comme suit, de la même façon qu’elle est modifiée par les fonctions **_mktime** : les **champs tm_wday** et **tm_yday** sont définis sur de nouvelles valeurs en fonction des valeurs de **tm_mday** et de **tm_year**. Étant donné que l’heure est supposée être UTC, le champ **tm_isdst** est ignoré.
 
-- zéro (0) pour indiquer que l'heure d'hiver est active ;
+La plage de la fonction **_mkgmtime32** est comprise entre le 1er janvier 1970, 23:59:59 UTC et le 2038 18 janvier, heure UTC. La plage de **_mkgmtime64** est comprise entre le 1er janvier 1970, utc et 23:59:59, le 31 décembre 3000, heure UTC. Une date hors limites produit une valeur de retour de-1. La plage de **_mkgmtime** varie selon que **_USE_32BIT_TIME_T** est défini ou non. Lorsqu’il n’est pas défini (valeur par défaut), la plage est la même que **_mkgmtime64**. Dans le cas contraire, la plage est limitée à la plage 32 bits de **_mkgmtime32**.
 
-- une valeur supérieure à 0 pour indiquer que l'heure d'été est active ;
+**Gmtime** et **localtime** utilisent un tampon statique commun pour la conversion. Si vous fournissez cette mémoire tampon à **_mkgmtime**, le contenu précédent est détruit.
 
-- une valeur inférieure à zéro pour que le code de la bibliothèque Runtime C calcule si l'heure active est l'heure d'hiver ou l'heure d'été.
-
-La bibliothèque Runtime C utilise la variable d’environnement TZ pour déterminer l’heure d’été correcte. Si TZ n’est pas définie, le système d’exploitation est interrogé pour obtenir le comportement d’heure d’été régionale correct. **tm_isdst** est un champ obligatoire. S’il n’est pas défini, sa valeur est indéfinie et la valeur de retour de **mktime** est imprévisible.
-
-La plage de la fonction **_mkgmtime32** est comprise entre le 1er janvier 1970, utc et 23:59:59 le 18 janvier 2038, heure UTC. La plage de **_mkgmtime64** est comprise entre le 1er janvier 1970, utc et 23:59:59, le 31 décembre 3000, heure UTC. Une date hors limites produit une valeur de retour de-1. La plage de **_mkgmtime** varie selon que **_USE_32BIT_TIME_T** est défini ou non. S’il n’est pas défini (valeur par défaut), la plage est celle de **_mkgmtime64**; dans le cas contraire, la plage est limitée à la plage 32 bits de **_mkgmtime32**.
-
-Notez que **gmtime** et **localtime** utilisent une seule mémoire tampon allouée de manière statique pour la conversion. Si vous fournissez cette mémoire tampon à **mkgmtime**, le contenu précédent est détruit.
-
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 ```C
 // crt_mkgmtime.c
@@ -130,8 +123,6 @@ int main()
 }
 ```
 
-### <a name="sample-output"></a>Résultat de l'exemple
-
 ```Output
 Seconds since midnight, January 1, 1970
 My time: 1171588492
@@ -142,7 +133,7 @@ Local Time: Thu Feb 15 17:14:52 2007
 Greenwich Mean Time: Fri Feb 16 01:14:52 2007
 ```
 
-L’exemple suivant montre comment la structure incomplète est remplie avec les valeurs calculées du jour de la semaine et du jour de l’année.
+L’exemple suivant montre comment la structure incomplète est remplie par **_mkgmtime**. Il calcule les valeurs pour le jour de la semaine et de l’année.
 
 ```C
 // crt_mkgmtime2.c
@@ -179,8 +170,6 @@ int main()
 }
 ```
 
-### <a name="output"></a>Sortie
-
 ```Output
 Before calling _mkgmtime, t1 = Sun Feb 12 00:00:00 2003
 t.tm_yday = 0
@@ -190,11 +179,11 @@ t.tm_yday = 42
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gestion du temps](../../c-runtime-library/time-management.md)<br/>
-[asctime, _wasctime](asctime-wasctime.md)<br/>
-[asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>
-[gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
-[gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
-[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
-[mktime, _mktime32, _mktime64](mktime-mktime32-mktime64.md)<br/>
-[time, _time32, _time64](time-time32-time64.md)<br/>
+[Gestion du temps](../../c-runtime-library/time-management.md)\
+[asctime, _wasctime](asctime-wasctime.md)\
+[asctime_s, _wasctime_s](asctime-s-wasctime-s.md)\
+[gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)\
+[gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)\
+[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)\
+[mktime, _mktime32, _mktime64](mktime-mktime32-mktime64.md)\
+[time, _time32, _time64](time-time32-time64.md)

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - novtable __declspec keyword
 - __declspec keyword [C++], novtable
 ms.assetid: cfef09c5-8c1e-4b14-8a72-7d726ded4484
-ms.openlocfilehash: 9dcca6ec07a19d53da238020805299b652cbf919
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a147af8f536923082df3a2d6d332150a57d6af1b
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245152"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857383"
 ---
 # <a name="novtable"></a>novtable
 
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft
+**Section spécifique de Microsoft**
 
-Il s’agit d’un **__declspec** attributs étendus.
+Il s’agit d’un **__declspec** attribut étendu.
 
-Cette forme de **__declspec** peut être appliqué à toute déclaration de classe, mais ne doit être appliquée qu’aux classes d’interface pures, autrement dit, les classes qui ne seront jamais instanciées sur leurs propres. Le **__declspec** arrête la génération de code pour initialiser le vfptr dans l’et le destructeur de la classe par le compilateur. Dans de nombreux cas, cela supprime les seules références à la vtable qui sont associés à la classe et, par conséquent, l'éditeur de liens supprimera cette vtable. À l’aide de cette forme de **__declspec** peut entraîner une réduction significative de la taille du code.
+Cette forme de **__declspec** peut être appliquée à toute déclaration de classe, mais ne doit être appliquée qu’aux classes d’interface pures, c’est-à-dire aux classes qui ne seront jamais instanciées par elles-mêmes. Le **__declspec** empêche le compilateur de générer du code pour initialiser le vfptr dans le (s) constructeur (s) et le destructeur de la classe. Dans de nombreux cas, cela supprime les seules références à la vtable qui sont associés à la classe et, par conséquent, l'éditeur de liens supprimera cette vtable. L’utilisation de cette forme de **__declspec** peut entraîner une réduction significative de la taille du code.
 
-Si vous essayez d’instancier une classe marquée avec **novtable** et ensuite accéder à un membre de classe, vous recevrez une violation d’accès (AV).
+Si vous tentez d’instancier une classe marquée avec **novtable** , puis d’accéder à un membre de classe, vous recevrez une violation d’accès (AV).
 
 ## <a name="example"></a>Exemple
 
@@ -53,7 +53,7 @@ int main() {
 In Y
 ```
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

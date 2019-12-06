@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _get_FMA3_enable
 - _set_FMA3_enable
 ms.assetid: 4c1dc4bc-e86b-451b-9211-5a2ba6c98ee4
-ms.openlocfilehash: e18db90779ed59a6ca6976f69a5993d94d61c6bc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dee75bf5b16b5fe5b619444f7f2736010bb42a84
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955934"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857806"
 ---
 # <a name="_get_fma3_enable-_set_fma3_enable"></a>_get_FMA3_enable, _set_FMA3_enable
 
@@ -40,7 +40,7 @@ int _set_FMA3_enable(int flag);
 int _get_FMA3_enable();
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *flag*<br/>
 Affectez la valeur 1 pour activer les implémentations FMA3 des fonctions de la bibliothèque à virgule flottante transcendant mathématique sur les plateformes x64, ou sur 0 pour utiliser les implémentations qui n’utilisent pas d’instructions FMA3.
@@ -51,11 +51,11 @@ Valeur différente de zéro si les implémentations FMA3 des fonctions de biblio
 
 ## <a name="remarks"></a>Notes
 
-Utilisez la fonction **_set_FMA3_enable** pour activer ou désactiver l’utilisation des instructions FMA3 dans les fonctions à virgule flottante mathématique transcendant dans la bibliothèque CRT. La valeur de retour reflète l’implémentation en cours d’utilisation après la modification. Si le processeur ne prend pas en charge les instructions FMA3, cette fonction ne peut pas les activer dans la bibliothèque, et la valeur de retour est zéro. Utilisez **_get_FMA3_enable** pour récupérer l’état actuel de la bibliothèque. Par défaut, sur les plateformes x64, le code de démarrage du CRT détecte si le processeur prend en charge les instructions FMA3, et active ou désactive les implémentations FMA3 dans la bibliothèque.
+Utilisez la fonction **_set_FMA3_enable** pour activer ou désactiver l’utilisation des instructions FMA3 dans les fonctions à virgule flottante transcendant mathématiques de la bibliothèque CRT. La valeur de retour reflète l’implémentation en cours d’utilisation après la modification. Si le processeur ne prend pas en charge les instructions FMA3, cette fonction ne peut pas les activer dans la bibliothèque, et la valeur de retour est zéro. Utilisez **_get_FMA3_enable** pour récupérer l’état actuel de la bibliothèque. Par défaut, sur les plateformes x64, le code de démarrage du CRT détecte si le processeur prend en charge les instructions FMA3, et active ou désactive les implémentations FMA3 dans la bibliothèque.
 
 Étant donné que les implémentations de FMA3 utilisent des algorithmes différents, de légères différences dans le résultat des calculs peuvent être observables lorsque les implémentations de FMA3 sont activées ou désactivées, ou entre des ordinateurs qui ne prennent pas en charge FMA3. Pour plus d’informations, consultez [problèmes de migration à virgule flottante](../../porting/floating-point-migration-issues.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 Les fonctions **_set_FMA3_enable** et **_get_FMA3_enable** sont uniquement disponibles dans les versions x64 du CRT.
 

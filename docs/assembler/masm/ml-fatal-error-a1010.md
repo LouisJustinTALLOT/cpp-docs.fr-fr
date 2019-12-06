@@ -1,38 +1,38 @@
 ---
 title: Erreur ML irrécupérable A1010
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1010
 helpviewer_keywords:
 - A1010
 ms.assetid: 9e0b5241-67f4-4740-8701-3b2d2d1ad9e4
-ms.openlocfilehash: eb4d77b856e93a8d64ee6c51bec63ceae59b22e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ec82f7f6d559d977a9aa039ed91689a0ef4d49a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202063"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856876"
 ---
 # <a name="ml-fatal-error-a1010"></a>Erreur ML irrécupérable A1010
 
-**imbrication de blocs sans correspondance :**
+**imbrication des blocs non appariés :**
 
-Un début de bloc ne disposait pas end correspondant, ou une fin du bloc ne disposait pas d’un début correspondant. Parmi les options suivantes peut-être être concerné :
+Le début d’un bloc n’a pas de terminaison correspondante, ou la fin d’un bloc n’a pas de début correspondant. L’une des conditions suivantes peut être utilisée :
 
-- Une directive de haut niveau tels que [. IF](../../assembler/masm/dot-if.md), [. RÉPÉTEZ](../../assembler/masm/dot-repeat.md), ou [. Bien que](../../assembler/masm/dot-while.md).
+- Directive de niveau supérieur, telle que [. Si](../../assembler/masm/dot-if.md), [. REPEAT](../../assembler/masm/dot-repeat.md), ou [. WHILe](../../assembler/masm/dot-while.md).
 
-- Une directive conditionnelle de l’assembly comme [IF](../../assembler/masm/if-masm.md), [RÉPÉTEZ](../../assembler/masm/repeat.md), ou **tandis que**.
+- Directive d’assembly conditionnel, telle que [If](../../assembler/masm/if-masm.md), [REPEAT](../../assembler/masm/repeat.md)ou **while**.
 
-- Une définition de structure ou union.
+- Définition de structure ou d’Union.
 
-- Une définition de procédure.
+- Définition de procédure.
 
-- Une définition des segments.
+- Définition de segment.
 
-- Un [POPCONTEXT](../../assembler/masm/popcontext.md) directive.
+- Directive [POPCONTEXT](../../assembler/masm/popcontext.md) .
 
-- Un assembly de conditionnel directive comme une [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), ou **ENDIF** sans une mise en correspondance [IF](../../assembler/masm/if-masm.md).
+- Une directive d’assembly conditionnel, telle qu' [else](../../assembler/masm/else-masm.md), [ElseIf](../../assembler/masm/elseif-masm.md)ou **endif** , sans [If](../../assembler/masm/if-masm.md)correspondant.
 
 ## <a name="see-also"></a>Voir aussi
 

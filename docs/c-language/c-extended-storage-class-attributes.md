@@ -7,16 +7,16 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-ms.openlocfilehash: 9b0c8b60dab3229d5d5c162f7bafc959fa2558f0
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: c2e372ebe93b9240ac6f489e8b1aefc1fbbded80
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146955"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857149"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Attributs étendus de classe de stockage C
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Des informations plus récentes à ce sujet sont disponibles dans [__declspec (Référence C++)](../cpp/declspec.md).
 
@@ -27,13 +27,13 @@ La syntaxe à attributs étendus utilisée pour la spécification des informatio
 ## <a name="syntax"></a>Syntaxe
 
 *storage-class-specifier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)** /\* Spécifique à Microsoft \*/
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Extended-decl-modifier-SEQ* **)**  /\* \*spécifique à Microsoft /
 
-*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Section spécifique à Microsoft \*/<br/>
+*Extended-decl-modifier-SEQ*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*spécifique à Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Section spécifique à Microsoft \*/<br/>
+*Extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*spécifiques à Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
@@ -43,7 +43,7 @@ Un espace blanc sépare les modificateurs de déclaration. Notez que *extended-d
 
 Les attributs de classe de stockage thread, naked, dllimport et dllexport sont une propriété uniquement de la déclaration des données ou de la fonction à laquelle ils sont appliqués. Ils ne redéfinissent pas les attributs de type de la fonction elle-même. L'attribut thread affecte uniquement les données. L'attribut naked affecte uniquement les fonctions. Les attributs dllimport et dllexport affectent les fonctions et les données.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

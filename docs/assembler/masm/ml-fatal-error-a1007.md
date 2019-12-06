@@ -1,40 +1,40 @@
 ---
 title: Erreur ML irrécupérable A1007
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1007
 helpviewer_keywords:
 - A1007
 ms.assetid: bcf9c826-beb3-4e93-91fe-1ffd34995fbf
-ms.openlocfilehash: 98933c3a24da22f447174a3b51c4855690aba83e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01633b4fa084b7d5e14af5a5c6e51e3dca684d2a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177901"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856915"
 ---
 # <a name="ml-fatal-error-a1007"></a>Erreur ML irrécupérable A1007
 
 **niveau d’imbrication trop profond**
 
-L’assembleur atteint sa limite d’imbrication. La limite est de 20 niveaux sauf indication contraire.
+L’assembleur a atteint sa limite d’imbrication. La limite est de 20 niveaux sauf mention contraire.
 
-Parmi les options suivantes a été imbriqué trop profondément :
+L’un des éléments suivants a été imbriqué trop profondément :
 
-- Une directive de haut niveau tels que [. IF](../../assembler/masm/dot-if.md), [. RÉPÉTEZ](../../assembler/masm/dot-repeat.md), ou [. Bien que](../../assembler/masm/dot-while.md).
+- Directive de niveau supérieur, telle que [. Si](../../assembler/masm/dot-if.md), [. REPEAT](../../assembler/masm/dot-repeat.md), ou [. WHILe](../../assembler/masm/dot-while.md).
 
-- Une définition de structure.
+- Définition de structure.
 
-- Une directive conditionnelle de l’assembly.
+- Directive d’assembly conditionnel.
 
-- Une définition de procédure.
+- Définition de procédure.
 
-- Un [PUSHCONTEXT](../../assembler/masm/pushcontext.md) directive (la limite est 10).
+- Directive [PUSHCONTEXT](../../assembler/masm/pushcontext.md) (la limite est 10).
 
-- Une définition des segments.
+- Définition de segment.
 
-- Un fichier include.
+- Fichier include.
 
 - Une macro.
 

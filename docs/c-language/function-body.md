@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-ms.openlocfilehash: c227640e45943fb57b1029a4f03329241d1d6b34
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 2d2e04572de91b161237d999bb95cfda26256c54
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146864"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857097"
 ---
 # <a name="function-body"></a>Corps de fonction
 
@@ -23,10 +23,10 @@ Un *corps de fonction* est une instruction composée contenant les instructions 
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* est spécifique à Microsoft \*/
+/\* *attribute-SEQ* est un \*spécifique à Microsoft /
 
 *compound-statement*: /\* Le corps de la fonction \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
 
 Les variables déclarées dans un corps de fonction, appelées *variables locales*, ont une classe de stockage **auto**, sauf indication contraire. Lorsque la fonction est appelée, du stockage est créé pour les variables locales et les initialisations locales sont exécutées. Le contrôle d'exécution passe à la première instruction dans *compound-statement* et continue jusqu'à ce qu'une instruction **return** soit exécutée ou jusqu'à la fin du corps de la fonction. Le contrôle revient ensuite au point auquel la fonction a été appelée.
 

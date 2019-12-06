@@ -1,26 +1,26 @@
 ---
 title: Erreur ML irrécupérable A1008
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1008
 helpviewer_keywords:
 - A1008
 ms.assetid: fe592f9d-c37b-4cd8-a51d-e3c15ddcab83
-ms.openlocfilehash: 93ae0dabf198369ed667dda3b00dda3ca2954f49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19b1aa5bdc5f3b254cf87840bbf6fabb03c18ada
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202430"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856889"
 ---
 # <a name="ml-fatal-error-a1008"></a>Erreur ML irrécupérable A1008
 
-**imbrication de macro sans correspondance**
+**imbrication des macros non appariées**
 
-Une macro n’est pas terminée avant la fin du fichier ou la directive fin [ENDM](../../assembler/masm/endm.md) a été trouvé en dehors d’un bloc de macro.
+Soit une macro n’a pas été arrêtée avant la fin du fichier, soit la directive de fin [ENDM](../../assembler/masm/endm.md) a été trouvée en dehors d’un bloc macro.
 
-Une des causes de cette erreur est l’omission du point avant [. RÉPÉTEZ](../../assembler/masm/dot-repeat.md) ou [. Bien que](../../assembler/masm/dot-while.md).
+L’une des causes de cette erreur est l’omission du point avant [. RÉPÉTez](../../assembler/masm/dot-repeat.md) ou [. WHILe](../../assembler/masm/dot-while.md).
 
 ## <a name="see-also"></a>Voir aussi
 

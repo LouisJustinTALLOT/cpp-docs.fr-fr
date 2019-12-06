@@ -11,22 +11,22 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: fdf208ffba3e3d63d8672b84af8cf6168b34dc3f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: e06ef25c14f8073d2b8753b57c9593af7bb6c69f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147749"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857123"
 ---
 # <a name="c-multiplicative-operators"></a>Opérateurs de multiplication C
 
-Les opérateurs multiplicatifs sont utilisés dans les opérations de multiplication (<strong>\*</strong>), de division (**/**) et de reste (**%**).
+Les opérateurs multiplicatifs sont utilisés dans les opérations de multiplication (<strong>\*</strong>), de division ( **/** ) et de reste ( **%** ).
 
 ## <a name="syntax"></a>Syntaxe
 
 *multiplicative-expression*: &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* <strong>\*</strong> *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **/** *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **%** *cast-expression*
 
-Les opérandes de l’opérateur de reste (**%**) doivent être intégraux. Les opérateurs de multiplication (<strong>\*</strong>) et de division (**/**) peuvent prendre des opérandes de type entier ou virgule flottante. Les types des opérandes peuvent être différents.
+Les opérandes de l’opérateur de reste ( **%** ) doivent être intégraux. Les opérateurs de multiplication (<strong>\*</strong>) et de division ( **/** ) peuvent prendre des opérandes de type entier ou virgule flottante. Les types des opérandes peuvent être différents.
 
 Les opérateurs de multiplication exécutent les conversions arithmétiques courantes sur les opérandes. Le type du résultat est le type des opérandes après conversion.
 
@@ -35,19 +35,17 @@ Les opérateurs de multiplication exécutent les conversions arithmétiques cour
 
 Les opérateurs de multiplication C sont décrits ci-dessous :
 
-|Opérateur|Description|
+|opérateur|Description|
 |--------------|-----------------|
 |<strong>\*</strong>|L’opérateur de multiplication provoque la multiplication de ces deux opérandes.|
 |**/**|L’opérateur de division provoque la division du premier opérande par le deuxième. Si deux opérandes entiers sont divisés et que le résultat n’est pas un entier, il est tronqué selon les règles suivantes :<br/><br/>- Le résultat de la division par 0 est indéfini selon la norme C ANSI. Le compilateur Microsoft C génère une erreur au moment de la compilation ou de l'exécution.<br/><br/>- Si les deux opérandes sont positifs ou non signés, le résultat est tronqué vers 0.<br/><br/>- Si l’un des opérandes est négatif, si le résultat de l’opération est le plus grand entier inférieur ou égal au quotient algébrique ou le plus petit entier supérieur ou égal au quotient algébrique, l’implémentation est définie. (Consultez la section spécifique à Microsoft ci-dessous.)|
 |**%**|Le résultat de l’opérateur de reste est le reste lorsque le premier opérande est divisé par le deuxième. Lorsque la division est incorrecte, le résultat est déterminé par les règles suivantes :<br/><br/>- Si l’opérande de droite est zéro, le résultat est non défini.<br/><br/>- Si les deux opérandes sont positifs ou non signés, le résultat est positif.<br/><br/>- Si l’un des opérandes est négatif et que le résultat est incorrect, le résultat est que l’implémentation est définie. (Consultez la section spécifique à Microsoft ci-dessous.)|
 
-**Section spécifique à Microsoft**
+### <a name="microsoft-specific"></a>Spécifique à Microsoft
 
 Dans la division où l’un des opérandes est négatif, la direction de la troncation est vers 0.
 
 Si l’une ou l’autre opération est négative dans la division avec l’opérateur de reste, le résultat a la même signature que le dividende (le premier opérande de l’expression).
-
-**FIN de la section spécifique à Microsoft**
 
 ## <a name="examples"></a>Exemples
 
@@ -78,9 +76,9 @@ n = i % j;
 
 Cette instruction assigne le reste entier `n` lorsque 10 est divisé par 3.
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Le signe du reste est identique au signe du dividende. Par exemple :
+Le signe du reste est identique au signe du dividende. Par exemple :
 
 ```
 50 % -6 = 2
@@ -89,7 +87,7 @@ Le signe du reste est identique au signe du dividende. Par exemple :
 
 Dans chaque cas, `50` et `2` ont le même signe.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

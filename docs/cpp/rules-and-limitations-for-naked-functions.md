@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec5c7d635dbbb63af7177395c5ad08356e1a26f0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267370"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857305"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Règles et limitations concernant les fonctions naked
 
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft
+**Section spécifique de Microsoft**
 
 Les règles et les limitations suivantes s'appliquent aux fonctions naked :
 
-- Le **retourner** instruction n’est pas autorisée.
+- L’instruction **Return** n’est pas autorisée.
 
 - Les constructions de gestion structurée des exceptions et de gestion des exceptions C++ ne sont pas autorisées, car elles doivent se dérouler sur le frame de pile.
 
@@ -31,9 +31,9 @@ Les règles et les limitations suivantes s'appliquent aux fonctions naked :
 
 - Vous ne pouvez pas déclarer d'objets de classe C++ dans la portée lexicale de fonction. Vous pouvez toutefois déclarer des objets dans un bloc imbriqué.
 
-- Le **naked** mot clé est ignoré lors de la compilation avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+- Le mot clé **Naked** est ignoré lors de la compilation avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
-- Pour [__fastcall](../cpp/fastcall.md) des fonctions naked, chaque fois qu’il existe une référence en C /C++ code à un des arguments de Registre, le code de prologue doit stocker les valeurs de ce Registre à l’emplacement de la pile pour cette variable. Exemple :
+- Pour [__fastcall](../cpp/fastcall.md) fonctions Naked, chaque fois qu’il existe une référence enC++ C/code à l’un des arguments de Registre, le code de prologue doit stocker les valeurs de ce registre dans l’emplacement de la pile pour cette variable. Par exemple :
 
 ```cpp
 // nkdfastcl.cpp
@@ -70,7 +70,7 @@ __declspec(naked) int __fastcall  power(int i, int j) {
 }
 ```
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

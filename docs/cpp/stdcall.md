@@ -8,22 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-ms.openlocfilehash: b9efac6f729a78db945ff3bd9ab16ebe315b7a5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df753241c093db75202a10b106631ce36cf73379
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266957"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857279"
 ---
-# <a name="stdcall"></a>__stdcall
+# <a name="__stdcall"></a>__stdcall
 
-**Section spécifique à Microsoft**
-
-Le **__stdcall** convention d’appel est utilisée pour appeler des fonctions API Win32. L’appelé nettoie la pile, donc le compilateur est `vararg` fonctions **__cdecl**. Les fonctions qui utilisent cette convention d’appel requièrent un prototype de fonction.
+La Convention d’appel de **__stdcall** est utilisée pour appeler les fonctions de l’API Win32. L’appelé nettoie la pile, de sorte que le compilateur rend `vararg` fonctions **__cdecl**. Les fonctions qui utilisent cette convention d’appel requièrent un prototype de fonction. Le modificateur de **__stdcall** est spécifique à Microsoft.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *return-type* **\_\_stdcall** *function-name*[**(** *argument-list* **)**]
+> *Return-type* **\_\_stdcall** *fonction-name*[ **(** *liste d’arguments* **)** ]
 
 ## <a name="remarks"></a>Notes
 
@@ -35,15 +33,15 @@ La liste suivante illustre l'implémentation de cette convention d'appel.
 |Convention de passage d'argument|Par valeur, à moins qu'un type pointeur ou référence soit passé.|
 |Responsabilité de la maintenance de la pile|La fonction appelée enlève ses propres arguments de la pile.|
 |Convention de décoration de nom|Un trait de soulignement (_) est ajouté en préfixe au nom. Le nom est suivi de l'arobase (@), suivi du nombre d'octets (au format décimal) dans la liste d'arguments. Par conséquent, la fonction déclarée comme `int func( int a, double b )` est décorée comme suit : `_func@12`|
-|Convention de conversion de casse|Aucun.|
+|Convention de conversion de casse|Aucun|
 
-Le [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md) option du compilateur spécifie **__stdcall** pour toutes les fonctions ne sont pas explicitement déclarées avec une autre convention d’appel.
+L’option du compilateur [/gz](../build/reference/gd-gr-gv-gz-calling-convention.md) spécifie **__stdcall** pour toutes les fonctions qui ne sont pas déclarées explicitement avec une convention d’appel différente.
 
-Pour assurer la compatibilité avec les versions précédentes, **_stdcall** est un synonyme de **__stdcall** , sauf si option du compilateur [/Za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
+Pour la compatibilité avec les versions précédentes, **_stdcall** est un synonyme de **__stdcall** sauf si l’option de compilateur [/za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
 
-Les fonctions déclarées à l’aide de la **__stdcall** la même façon que les fonctions déclarées à l’aide des valeurs de retour de modificateur [__cdecl](../cpp/cdecl.md).
+Les fonctions déclarées à l’aide du modificateur **__stdcall** retournent des valeurs de la même façon que les fonctions déclarées à l’aide de [__cdecl](../cpp/cdecl.md).
 
-Sur ARM et x64 processeurs, **__stdcall** est accepté et ignoré par le compilateur ; sur ARM et x64 architectures, par convention, les arguments sont passés dans les registres quand cela est possible, et les arguments suivants sont passés sur la pile.
+Sur les processeurs ARM et x64, **__stdcall** est accepté et ignoré par le compilateur ; sur les architectures ARM et x64, par Convention, les arguments sont passés dans les registres si possible, et les arguments suivants sont passés sur la pile.
 
 Pour les fonctions de classe non statiques, si la fonction est définie hors ligne, il n’est pas nécessaire de spécifier le modificateur de convention d’appel dans la définition hors ligne. En d’autres termes, pour les méthodes membres non statiques de classe, la convention d’appel spécifiée dans le cadre de la déclaration est utilisée par défaut au stade de la définition. Étant donné cette définition de classe,
 
@@ -67,7 +65,7 @@ void __stdcall CMyClass::mymethod() { return; }
 
 ## <a name="example"></a>Exemple
 
-Dans l’exemple suivant, l’utilisation de **__stdcall** entraîne tous `WINAPI` types de fonction comme un appel standard :
+Dans l’exemple suivant, l’utilisation de **__stdcall** entraîne la gestion de tous les types de fonction `WINAPI` en tant qu’appel standard :
 
 ```cpp
 // Example of the __stdcall keyword

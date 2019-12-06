@@ -5,12 +5,12 @@ helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-ms.openlocfilehash: 439bc878bbcd1c9778fb74738cb3b32b908a5943
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 0ffda6522e632533b0aaa4ba146e8fad082ed435
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148346"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857058"
 ---
 # <a name="overview-of-declarations"></a>Vue d'ensemble des déclarations
 
@@ -19,9 +19,9 @@ Une « déclaration » spécifie l'interprétation et les attributs d'un ensem
 ## <a name="syntax"></a>Syntaxe
 
 *declaration* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub>**;**
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *attribute-seq*<sub>opt</sub> est propre à Microsoft */
+/\* *attribut-SEQ*<sub>OPT</sub> est spécifique à Microsoft */
 
 *declaration-specifiers* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -51,7 +51,7 @@ int const *fp;
 
 déclare une variable nommée `fp` de pointeur en valeur non modifiable (**const**)`int` . Vous pouvez définir plusieurs variables dans une déclaration à l'aide de plusieurs déclarateurs, séparés par une virgule.
 
-Une déclaration doit contenir au moins un déclarateur ou son spécificateur de type doit déclarer une balise de structure, une balise d'union ou des membres d'une énumération. Les déclarateurs fournissent toutes les informations restantes sur un identificateur. Un déclarateur est un identificateur pouvant être modifié à l'aide de crochets (**[ ]**), d'astérisques (<strong>\*</strong>) ou de parenthèses ( **( )** ) pour déclarer un tableau, un pointeur ou un type de fonction, respectivement. Quand vous déclarez des variables simples (comme un caractère, un entier et des éléments à virgule flottante) ou des structures et des unions de variables simples, `declarator` est juste un identificateur. Pour plus d'informations sur les déclarateurs, voir [Déclarateurs et déclarations de variable](../c-language/declarators-and-variable-declarations.md).
+Une déclaration doit contenir au moins un déclarateur ou son spécificateur de type doit déclarer une balise de structure, une balise d'union ou des membres d'une énumération. Les déclarateurs fournissent toutes les informations restantes sur un identificateur. Un déclarateur est un identificateur pouvant être modifié à l'aide de crochets ( **[ ]** ), d'astérisques (<strong>\*</strong>) ou de parenthèses ( **( )** ) pour déclarer un tableau, un pointeur ou un type de fonction, respectivement. Quand vous déclarez des variables simples (comme un caractère, un entier et des éléments à virgule flottante) ou des structures et des unions de variables simples, `declarator` est juste un identificateur. Pour plus d'informations sur les déclarateurs, voir [Déclarateurs et déclarations de variable](../c-language/declarators-and-variable-declarations.md).
 
 Toutes les définitions sont implicitement des déclarations, mais toutes les déclarations ne sont pas des définitions. Par exemple, les déclarations de variable commençant par le spécificateur de classe de stockage `extern` sont des déclarations de « référencement » et non de « définition ». Si une variable externe doit être référencée avant d'être définie, ou si elle est définie dans un autre fichier source que celui dans lequel elle est utilisée, une déclaration `extern` est nécessaire. Le stockage n'est pas alloué par les déclarations de « référencement » et les variables ne peuvent pas être initialisées dans les déclarations.
 

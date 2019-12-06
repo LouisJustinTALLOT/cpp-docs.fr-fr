@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: bf8c61e467796c7bfaedff6918bfbf598ada528e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 573be497bafbe5372186f31b3ea60d9a5ef7fac1
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944374"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856980"
 ---
 # <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 
@@ -51,7 +51,7 @@ int _execute_onexit_table(
     );
 ```
 
-#### <a name="parameters"></a>Paramètres
+#### <a name="parameters"></a>Parameters
 
 *table*<br/>
 [in, out] Pointeur vers la table de fonctions onexit.
@@ -73,13 +73,13 @@ La fonction `_register_onexit_function` ajoute une fonction à la fin de la tabl
 
 La fonction `_execute_onexit_table` exécute toutes les fonctions incluses dans la table de fonctions onexit, efface la table, puis retourne le résultat. Après un appel à `_execute_onexit_table`, la table est dans un état non valide ; elle doit être réinitialisée par un appel à `_initialize_onexit_table` avant d’être réutilisée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|
 
-Les fonctions `_initialize_onexit_table`, `_register_onexit_function` et `_execute_onexit_table` sont propres à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../c-runtime-library/compatibility.md).
+Les fonctions `_initialize_onexit_table`, `_register_onexit_function`et `_execute_onexit_table` sont spécifiques à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

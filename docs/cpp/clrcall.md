@@ -6,36 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
-ms.openlocfilehash: bc44feb97223de47f45734f75777ee040d0ebdd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6eb1a05eaf6669daa4cb7142ff16a57f7caf39cd
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364569"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857604"
 ---
-# <a name="clrcall"></a>__clrcall
+# <a name="__clrcall"></a>__clrcall
 
-**Section spécifique à Microsoft**
+Spécifie qu'une fonction peut uniquement être appelée à partir du code managé.  Utilisez **__clrcall** pour toutes les fonctions virtuelles qui seront appelées uniquement à partir du code managé. Toutefois, cette convention d’appel ne peut pas être utilisée pour les fonctions qui sont appelées à partir du code natif. Le modificateur de **__clrcall** est spécifique à Microsoft.
 
-Spécifie qu'une fonction peut uniquement être appelée à partir du code managé.  Utilisez **__clrcall** pour toutes les fonctions virtuelles qui seront appelées uniquement à partir du code managé. Toutefois, cette convention d’appel ne peut pas être utilisée pour les fonctions qui sont appelées à partir du code natif.
+Utilisez **__clrcall** pour améliorer les performances lors de l’appel d’une fonction managée à une fonction managée virtuelle ou d’une fonction managée à une fonction managée à l’aide d’un pointeur.
 
-Utilisez **__clrcall** pour améliorer les performances lors de l’appel d’une fonction managée à une fonction managée virtuelle ou à partir de la fonction managée à la fonction managée via le pointeur.
+Les points d'entrée sont des fonctions séparées et générées par le compilateur. Si une fonction a des points d'entrée natifs et managés, l'un d'eux est la fonction réelle avec l'implémentation de fonction. L'autre fonction est une fonction séparée (une conversion de code) qui appelle la fonction réelle et qui laisse le Common Langage Runtime effectuer PInvoke. Quand vous marquez une fonction comme **__clrcall**, vous indiquez que l’implémentation de fonction doit être MSIL et que la fonction de point d’entrée Native ne sera pas générée.
 
-Les points d'entrée sont des fonctions séparées et générées par le compilateur. Si une fonction a des points d'entrée natifs et managés, l'un d'eux est la fonction réelle avec l'implémentation de fonction. L'autre fonction est une fonction séparée (une conversion de code) qui appelle la fonction réelle et qui laisse le Common Langage Runtime effectuer PInvoke. En marquant une fonction en tant que **__clrcall**, vous indiquez l’implémentation de fonction doit être MSIL et que la fonction de point d’entrée natif n’est pas générée.
+Lors de l’utilisation de l’adresse d’une fonction native si **__clrcall** n’est pas spécifié, le compilateur utilise le point d’entrée natif. **__clrcall** indique que la fonction est managée et qu’il n’est pas nécessaire de passer par la transition de managé à natif. Dans ce cas, le compilateur utilise le point d'entrée managé.
 
-Lorsque vous prenez l’adresse d’une fonction native si **__clrcall** n’est pas spécifié, le compilateur utilise le point d’entrée natif. **__clrcall** indique que la fonction est gérée et il est inutile d’accéder à la transition à partir de gérés natif. Dans ce cas, le compilateur utilise le point d'entrée managé.
+Lorsque `/clr` (non `/clr:pure` ou `/clr:safe`) est utilisé et **__clrcall** n’est pas utilisé, l’utilisation de l’adresse d’une fonction retourne toujours l’adresse de la fonction de point d’entrée native. Lorsque **__clrcall** est utilisé, la fonction de point d’entrée Native n’est pas créée. vous recevez donc l’adresse de la fonction managée, et non une fonction thunk de point d’entrée. Pour plus d’informations, consultez [double médiateur](../dotnet/double-thunking-cpp.md). Les options de compilateur **/clr : pure** et **/clr : safe** sont dépréciées dans Visual Studio 2015 et ne sont pas prises en charge dans Visual Studio 2017.
 
-Lorsque `/clr` (pas `/clr:pure` ou `/clr:safe`) est utilisé et **__clrcall** est ne pas utilisé, en prenant toujours de l’adresse d’une fonction retourne l’adresse de la fonction de point d’entrée natif. Lorsque **__clrcall** est utilisé, la fonction de point d’entrée natif n'est pas créée, vous obtenez l’adresse de la fonction managée, pas une fonction thunk de point d’entrée. Pour plus d’informations, consultez [Double médiateur](../dotnet/double-thunking-cpp.md). Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+[/clr (compilation du Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) implique que toutes les fonctions et les pointeurs de fonction sont **__clrcall** et que le compilateur n’autorise pas la marquage d’une fonction à l’intérieur du module de ligne de fonction autre que **__clrcall**. Quand **/clr : pure** est utilisé, **__clrcall** peut être spécifié uniquement sur les pointeurs de fonction et les déclarations externes.
 
-[/CLR (Compilation pour le common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) implique que toutes les fonctions et les pointeurs de fonction sont **__clrcall** et le compilateur ne permet pas d’une fonction à l’intérieur du module d’être marquée comme autre chose que **__clrcall**. Lorsque **/CLR : pure** est utilisé, **__clrcall** peut être spécifiée qu’avec des pointeurs de fonction et les déclarations externes.
+Vous pouvez appeler directement des fonctions **__clrcall** à C++ partir de code existant qui a été compilé à l’aide de **/CLR** tant que cette fonction a une implémentation MSIL. les fonctions **__clrcall** ne peuvent pas être appelées directement à partir de fonctions qui ont un ASM inline et appellent des intrinsèques spécifiques au processeur, par exemple, même si ces fonctions sont compilées avec `/clr`.
 
-Vous pouvez appeler directement **__clrcall** fonctions depuis C++ code qui a été compilé à l’aide de **/CLR** tant que cette fonction a une implémentation MSIL. **__clrcall** fonctions ne peut pas être appelées directement à partir de fonctions qui ont des code asm incorporé et appellent des intrinsèques spécifiques UC, par exemple, même si ces fonctions sont compilées avec `/clr`.
-
-**__clrcall** des pointeurs de fonction sont uniquement destinés à être utilisés dans le domaine d’application dans lequel ils ont été créés.  Au lieu de passer **__clrcall** des pointeurs de fonction entre domaines d’application, utilisez <xref:System.CrossAppDomainDelegate>. Pour plus d’informations, consultez [domaines d’Application et Visual C++](../dotnet/application-domains-and-visual-cpp.md).
+**__clrcall** pointeurs de fonction sont uniquement destinés à être utilisés dans le domaine d’application dans lequel ils ont été créés.  Au lieu de passer des pointeurs de fonction **__clrcall** à travers des domaines d’application, utilisez <xref:System.CrossAppDomainDelegate>. Pour plus d’informations, consultez [domaines d’application C++et visuels ](../dotnet/application-domains-and-visual-cpp.md).
 
 ## <a name="example"></a>Exemple
 
-Notez que lorsqu’une fonction est déclarée avec **__clrcall**, le code sera généré lorsque nécessaire ; par exemple, lorsque la fonction est appelée.
+Notez que lorsqu’une fonction est déclarée avec **__clrcall**, du code est généré quand cela est nécessaire ; par exemple, lorsque la fonction est appelée.
 
 ```cpp
 // clrcall2.cpp
