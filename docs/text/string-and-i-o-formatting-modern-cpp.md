@@ -4,12 +4,12 @@ description: Choix pour les e/s de chaîne mises en C++forme disponibles dans mo
 ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: facb0b62cc1e92ed09a9ba729d766e5db7404282
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 7ea858a8a8126d3754783edee0dd3ea5409e5f73
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74308174"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898832"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Mise en forme des chaînes et E/S (Modern C++)
 
@@ -49,13 +49,13 @@ Voici quelques avantages de `Boost.Format` :
 
 - Safe : de type sécurisé et lève une exception pour les erreurs, par exemple, la spécification d’un trop petit nombre ou d’un trop grand nombre d’éléments.
 
-- Extensible : fonctionne pour tout type pouvant être diffusé en continu.
+- Extensible : fonctionne pour tout type qui peut être transmis en continu.
 
 - Pratique : POSIX standard et chaînes de format similaires.
 
-Bien que `Boost.Format` repose sur C++ [\<des fonctionnalités iostream >](../standard-library/iostream-programming.md) , qui sont sûres et extensibles, elles ne sont pas optimisées pour les performances. Lorsque vous avez besoin d’une optimisation des performances, pensez à C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) et [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), qui sont rapides et faciles à utiliser. Toutefois, ils ne sont pas extensibles ni sûrs contre les vulnérabilités. (Les versions sécurisées existent, mais elles entraînent une légère baisse des performances. Pour plus d’informations, consultez [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) et [sprintf_s, _sprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md), swprintf_s, _swprintf_s_l).
+Bien que `Boost.Format` repose sur C++ [\<des fonctionnalités iostream >](../standard-library/iostream-programming.md) , qui sont sûres et extensibles, elles ne sont pas optimisées pour les performances. Lorsque vous avez besoin d’une optimisation des performances, pensez à C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) et [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), qui sont rapides et faciles à utiliser. Toutefois, ils ne sont pas extensibles ni sûrs contre les vulnérabilités. Les versions sécurisées existent, mais elles réduisent légèrement les performances. Pour plus d’informations, consultez [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) et [sprintf_s, _sprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md), swprintf_s, _swprintf_s_l).
 
-Le code suivant illustre quelques-unes des fonctionnalités de mise en forme améliorées.
+Le code suivant illustre quelques-unes des fonctionnalités de mise en forme de Boost.
 
 ```cpp
     string s = str( format("%2% %2% %1%\n") % "world" % "hello" );
@@ -71,7 +71,7 @@ Le code suivant illustre quelques-unes des fonctionnalités de mise en forme am�
 
 [Bienvenue dansC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>
 [\<limits>](../standard-library/limits.md)<br/>
 [\<iomanip>](../standard-library/iomanip.md)

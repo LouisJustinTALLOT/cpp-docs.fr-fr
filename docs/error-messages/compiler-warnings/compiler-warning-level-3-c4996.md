@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683325"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898776"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Avertissement du compilateur (niveau 3) C4996
 
@@ -23,7 +23,7 @@ Votre code utilise une fonction, un membre de classe, une variable ou un typedef
 
 ## <a name="remarks"></a>Notes
 
-De nombreuses fonctions, fonctions membres, fonctions de modèle et variables globales dans les bibliothèques Visual Studio sont *déconseillées*. Certaines, telles que les fonctions POSIX, sont dépréciées, car elles ont un nom préféré différent. Certaines fonctions de la bibliothèque Runtime C sont dépréciées, car elles ne sont pas sécurisées et ont une variante plus sécurisée. D’autres sont dépréciées, car elles sont obsolètes. Les messages de désapprobation incluent généralement un remplacement suggéré pour la fonction ou la variable globale déconseillée.
+De nombreuses fonctions, fonctions membres, fonctions de modèle et variables globales dans les bibliothèques Visual Studio sont *déconseillées*. Certains, tels que POSIX et les fonctions spécifiques à Microsoft, sont déconseillés, car ils ont maintenant un nom préféré différent. Certaines fonctions de la bibliothèque Runtime C sont dépréciées, car elles ne sont pas sécurisées et ont une variante plus sécurisée. D’autres sont dépréciées, car elles sont obsolètes. Les messages de désapprobation incluent généralement un remplacement suggéré pour la fonction ou la variable globale déconseillée.
 
 ## <a name="turn-off-the-warning"></a>Désactiver l’avertissement
 
@@ -61,9 +61,9 @@ Voici quelques-unes des sources courantes d’avertissements et d’erreurs C499
 
 **Le nom POSIX pour cet élément est déconseillé. Utilisez plutôt l’ISO C et C++ le nom conforme :** *New-Name*. **Pour plus d’informations, consultez l’aide en ligne.**
 
-Microsoft a renommé certaines fonctions POSIX dans le CRT pour se conformer aux règles C99 et C++ 03 pour les noms de fonctions globales définies par l’implémentation. Seuls les noms sont déconseillés, pas les fonctions elles-mêmes. Dans la plupart des cas, un trait de soulignement de début a été ajouté au nom de fonction POSIX pour créer un nom conforme aux normes. Le compilateur émet un avertissement de désapprobation pour le nom de la fonction d’origine et suggère le nom préféré.
+Microsoft a renommé des fonctions POSIX et de bibliothèque spécifiques à Microsoft dans le CRT pour se conformer aux contraintes C99 et C++ 03 sur les noms réservés et globaux définis par l’implémentation. *Seuls les noms sont déconseillés, pas les fonctions elles-mêmes*. Dans la plupart des cas, un trait de soulignement de début a été ajouté au nom de la fonction pour créer un nom conforme. Le compilateur émet un avertissement de désapprobation pour le nom de la fonction d’origine et suggère le nom préféré.
 
-Pour résoudre ce problème, nous vous recommandons généralement de modifier votre code pour utiliser les noms de fonctions suggérés à la place. Toutefois, les noms mis à jour sont spécifiques à Microsoft. Si vous devez utiliser les noms de fonctions existants pour des raisons de portabilité, vous pouvez désactiver ces avertissements. Les fonctions POSIX sont toujours disponibles dans la bibliothèque sous leurs noms d’origine.
+Pour résoudre ce problème, nous vous recommandons généralement de modifier votre code pour utiliser les noms de fonctions suggérés à la place. Toutefois, les noms mis à jour sont spécifiques à Microsoft. Si vous devez utiliser les noms de fonctions existants pour des raisons de portabilité, vous pouvez désactiver ces avertissements. Les fonctions sont toujours disponibles dans la bibliothèque sous leurs noms d’origine.
 
 Pour désactiver les avertissements de désapprobation pour ces fonctions, définissez la macro de préprocesseur **\_CRT\_NONSTDC\_aucun\_avertissements**. Vous pouvez définir cette macro sur la ligne de commande en incluant l’option `/D_CRT_NONSTDC_NO_WARNINGS`.
 
