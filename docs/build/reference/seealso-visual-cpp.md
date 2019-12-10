@@ -1,5 +1,5 @@
 ---
-title: '&lt;seealso > (commentaires de Documentation C++)'
+title: '&lt;> seealso (C++ commentaires de documentation)'
 ms.date: 11/04/2016
 f1_keywords:
 - <seealso>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - seealso C++ XML tag
 - <seealso> C++ XML tag
 ms.assetid: cb33d100-9c50-4485-8d0c-573429eff155
-ms.openlocfilehash: ea399e98723a265ef3c17f2282b7c81299b4abc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 698db2df462f561acd897d0d0e56b3106a915466
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318834"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988603"
 ---
 # <a name="ltseealsogt"></a>&lt;seealso&gt;
 
@@ -25,14 +25,14 @@ La balise \<seealso> vous permet de spécifier le texte que vous souhaitez voir 
 <seealso cref="member"/>
 ```
 
-#### <a name="parameters"></a>Paramètres
+#### <a name="parameters"></a>Parameters
 
 *member*<br/>
-Référence à un membre ou un champ qu’il est possible d’appeler à partir de l’environnement de compilation actuel.  Mettez le nom entre guillemets simples ou doubles.
+Référence à un membre ou à un champ qui peut être appelé à partir de l’environnement de compilation actuel.  Mettez le nom entre guillemets simples ou doubles.
 
 Le compilateur vérifie que l’élément de code donné existe et qu’il résout `member` en nom d’élément dans le code XML de sortie.  Le compilateur émet un avertissement s'il ne trouve pas `member`.
 
-Pour plus d’informations sur la création d’une référence cref à un type générique, consultez [\<see>](see-visual-cpp.md).
+Pour plus d’informations sur la façon de créer une référence cref à un type générique, consultez [\<see>](see-visual-cpp.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -40,13 +40,13 @@ Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour placer le
 
 Pour obtenir un exemple d’utilisation de \<seealso>, consultez [\<summary>](summary-visual-cpp.md).
 
-Le compilateur MSVC tentera de résoudre les références cref en une seule passe via les commentaires de documentation.  Par conséquent, si lorsque vous utilisez les règles de recherche C++, un symbole est introuvable par le compilateur, la référence est marquée comme non résolue.
+Le compilateur MSVC tente de résoudre les références CREF en une seule passe via les commentaires de documentation.  Par conséquent, si lorsque vous utilisez les règles de recherche C++, un symbole est introuvable par le compilateur, la référence est marquée comme non résolue.
 
 ## <a name="example"></a>Exemple
 
 Dans l’exemple suivant, un symbole non résolu est référencé dans un élément cref. Le commentaire XML pour la référence cref à B::Test est `<seealso cref="!:B::Test" />`, alors que la référence à A::Test est le code `<seealso cref="M:A.Test" />` bien formé.
 
-```
+```cpp
 // xml_seealso_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_seealso_tag.dll

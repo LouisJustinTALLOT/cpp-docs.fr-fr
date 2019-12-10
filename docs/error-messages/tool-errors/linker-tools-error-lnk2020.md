@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2020
 ms.assetid: 4dd017d0-5e83-471b-ac8a-538ac1ed6870
-ms.openlocfilehash: 7290a90dfd92d84c4632e7f9dd38d36eccd4ac27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c6be2548e277af08f1069a70b26cd761db835bc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386328"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988761"
 ---
 # <a name="linker-tools-error-lnk2020"></a>Erreur des outils Éditeur de liens LNK2020
 
-jeton non résolu 'token'
+jeton’Token’non résolu
 
-Semblable à une erreur externe non définie, sauf que la référence est par le biais de métadonnées. Dans les métadonnées, toutes les fonctions et des données doivent être définies.
+Semblable à une erreur externe non définie, à ceci près que la référence est via des métadonnées. Dans les métadonnées, toutes les fonctions et les données doivent être définies.
 
-Pour résoudre :
+Pour résoudre ce problème :
 
-- Définir la fonction manquante ou des données, ou
+- Définir la fonction ou les données manquantes, ou
 
-- Inclure le fichier objet ou la bibliothèque dans lequel la fonction ou les données manquantes sont déjà définies.
+- Incluez le fichier objet ou la bibliothèque dans lequel la fonction ou les données manquantes sont déjà définies.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur LNK2020.
+L’exemple suivant génère l’LNK2020.
 
-```
+```cpp
 // LNK2020.cpp
 // compile with: /clr /LD
 ref struct A {
@@ -48,9 +48,9 @@ ref struct B {
 
 LNK2020 se produira également si vous créez une variable d’un type de modèle managé, mais que vous n’instanciez pas également le type.
 
-L’exemple suivant génère l’erreur LNK2020.
+L’exemple suivant génère l’LNK2020.
 
-```
+```cpp
 // LNK2020_b.cpp
 // compile with: /clr
 

@@ -1,29 +1,29 @@
 ---
-title: 'Procédure : Spécifiez un hors paramètre'
+title: 'Comment : spécifier un paramètre Out'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function parameters
 - out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-ms.openlocfilehash: 901257b92aaa5e13e6e79d612ca590b734e15881
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f0b462e672de4408d50bf95d65c749bf1881078
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387214"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988436"
 ---
-# <a name="how-to-specify-an-out-parameter"></a>Procédure : Spécifiez un hors paramètre
+# <a name="how-to-specify-an-out-parameter"></a>Comment : spécifier un paramètre Out
 
-Cet exemple montre comment spécifier qu’un paramètre de fonction est un paramètre de sortie et comment appeler cette fonction à partir d’un programme c#.
+Cet exemple montre comment spécifier qu’un paramètre de fonction est un paramètre de sortie et comment appeler cette fonction à partir C# d’un programme.
 
-Un paramètre de sortie est spécifié dans Visual C++ avec <xref:System.Runtime.InteropServices.OutAttribute> .
+Un paramètre de sortie est spécifié dans C++ Visual avec <xref:System.Runtime.InteropServices.OutAttribute>.
 
 ## <a name="example"></a>Exemple
 
-La première partie de cet exemple est une DLL Visual C++ avec un type qui contient une fonction avec un paramètre de sortie.
+La première partie de cet exemple est une dll C++ Visual avec un type qui contient une fonction avec un paramètre out.
 
-```
+```cpp
 // cpp_out_param.cpp
 // compile with: /LD /clr:safe
 using namespace System;
@@ -36,7 +36,7 @@ public value struct TestStruct {
 
 ## <a name="example"></a>Exemple
 
-Il s’agit d’un client c# qui consomme le composant Visual C++ créé dans l’exemple précédent.
+Il s’agit C# d’un client qui utilise le C++ composant visuel créé dans l’exemple précédent.
 
 ```
 // cpp_out_param_2.cs

@@ -1,25 +1,25 @@
 ---
-title: 'Procédure : Encapsuler une classe Native pour une utilisation parC#'
+title: 'Comment : inclure une classe native dans un wrapper pour une utilisation par C#'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: e58530577fdcc87f4ca168b6976a848cba29b372
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65a1b11578565e08f0be7aa04f96d3da4cbfbf7a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387121"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988125"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>Procédure : Encapsuler une classe Native pour une utilisation parC#
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Comment : inclure une classe native dans un wrapper pour une utilisation par C#
 
-Cet exemple montre comment encapsuler une classe C++ native, donc il peut être utilisé dans du code créé en c# ou autre langage .NET.
+Cet exemple montre comment inclure dans un wrapper C++ une classe Native afin qu’il puisse être consommé par du C#code créé dans ou d’autres langages .net.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // wrap_native_class_for_mgd_consumption.cpp
 // compile with: /clr /LD
 #include <windows.h>
