@@ -1,23 +1,23 @@
 ---
-title: 'Procédure : Utiliser un Type natif dans une Compilation - clr'
+title: 'Comment : utiliser un type natif dans une compilation-CLR'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: 9979113ac4ffc062ddfe8654279af03036984f38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b506c3d825c4c26236a4ac3fc9682067a011315a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387199"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988426"
 ---
-# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Procédure : Utiliser un Type natif dans une Compilation /clr
+# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Comment : utiliser un type natif dans une compilation /clr
 
-Vous pouvez définir un type natif dans une **/CLR** compilation et toute utilisation de ce type natif à partir de l’assembly n’est valide. Toutefois, les types natifs ne sera pas disponibles pour une utilisation à partir des métadonnées référencées.
+Vous pouvez définir un type natif dans une compilation **/CLR** et toute utilisation de ce type natif à partir de l’assembly est valide. Toutefois, les types natifs ne peuvent pas être utilisés à partir de métadonnées référencées.
 
-Chaque assembly doit contenir la définition de chaque type natif, qu'il utilisera.
+Chaque assembly doit contenir la définition de chaque type natif qu’il utilisera.
 
 Pour plus d’informations, consultez l’article [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
@@ -25,7 +25,7 @@ Pour plus d’informations, consultez l’article [/clr (Compilation pour le Com
 
 Cet exemple crée un composant qui définit et utilise un type natif.
 
-```
+```cpp
 // use_native_type_in_clr.cpp
 // compile with: /clr /LD
 public struct NativeClass {
@@ -42,9 +42,9 @@ public ref struct ManagedClass {
 
 ## <a name="example"></a>Exemple
 
-Cet exemple définit un client qui utilise le composant. Notez qu’il est une erreur pour accéder au type natif, sauf si elle est définie dans le module.
+Cet exemple définit un client qui utilise le composant. Notez qu’il s’agit d’une erreur d’accès au type natif, sauf s’il est défini dans le compiland.
 
-```
+```cpp
 // use_native_type_in_clr_2.cpp
 // compile with: /clr
 #using "use_native_type_in_clr.dll"

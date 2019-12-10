@@ -1,5 +1,5 @@
 ---
-title: '&lt;Résumé > (commentaires de Documentation C++)'
+title: '> Résumé des &lt;C++ (commentaires de documentation)'
 ms.date: 11/04/2016
 f1_keywords:
 - <summary>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <summary> C++ XML tag
 - summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-ms.openlocfilehash: 68bb8b7c269b3406438e5cf21dde7179f7e67646
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0620273f24573539897809b7892d46ad49b7aa57
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318184"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988585"
 ---
 # <a name="ltsummarygt"></a>&lt;summary&gt;
 
@@ -25,7 +25,7 @@ La balise \<summary> doit être utilisée pour décrire un type ou un membre de 
 <summary>description</summary>
 ```
 
-#### <a name="parameters"></a>Paramètres
+#### <a name="parameters"></a>Parameters
 
 *description*<br/>
 Résumé de l’objet.
@@ -38,7 +38,7 @@ Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour placer le
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // xml_summary_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_summary_tag.dll

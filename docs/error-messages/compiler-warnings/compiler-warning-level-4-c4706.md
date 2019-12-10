@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4706
 ms.assetid: 89cd3f4f-812c-4a4b-9426-65a5a6d1b99c
-ms.openlocfilehash: e57470fcd8e7b014084b094c9ca5e39f0a86d85e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff8794dcf29539b492f53bfdf6f0810988c0f72
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395220"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989906"
 ---
 # <a name="compiler-warning-level-4-c4706"></a>Avertissement du compilateur (niveau 4) C4706
 
-assignation au sein d’une expression conditionnelle
+assignation dans une expression conditionnelle
 
 La valeur de test dans une expression conditionnelle était le résultat d’une assignation.
 
-Une affectation a la valeur (la valeur sur le côté gauche de l’assignation) qui peut être légalement utilisée dans une autre expression, y compris une expression de test.
+Une assignation a une valeur (la valeur située à gauche de l’assignation) qui peut être utilisée légalement dans une autre expression, y compris une expression de test.
 
-L’exemple suivant génère l’erreur C4706 :
+L’exemple suivant génère l’C4706 :
 
-```
+```cpp
 // C4706a.cpp
 // compile with: /W4
 int main()
@@ -37,7 +37,7 @@ int main()
 
 L’avertissement se produit même si vous doublez les parenthèses autour de la condition de test :
 
-```
+```cpp
 // C4706b.cpp
 // compile with: /W4
 int main()
@@ -49,9 +49,9 @@ int main()
 }
 ```
 
-Si votre intention est de tester une relation et non ne pas d’effectuer une assignation, utilisez le `==` opérateur. Par exemple, la ligne suivante tests si un et b sont égaux :
+Si vous avez l’intention de tester une relation et de ne pas effectuer d’affectation, utilisez l’opérateur `==`. Par exemple, la ligne suivante teste si a et b sont égaux :
 
-```
+```cpp
 // C4706c.cpp
 // compile with: /W4
 int main()
@@ -63,9 +63,9 @@ int main()
 }
 ```
 
-Si vous souhaitez que votre test de valeur au résultat d’une assignation, un test pour vous assurer que l’assignation est différente de zéro ou non null. Par exemple, le code suivant génère pas cet avertissement :
+Si vous envisagez de faire de la valeur de test le résultat d’une assignation, effectuez un test pour vérifier que l’assignation est différente de zéro ou non null. Par exemple, le code suivant ne génère pas cet avertissement :
 
-```
+```cpp
 // C4706d.cpp
 // compile with: /W4
 int main()

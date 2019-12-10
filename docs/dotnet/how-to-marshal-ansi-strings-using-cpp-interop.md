@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Marshaler des chaînes ANSI à l’aide d’interopérabilité C++'
+title: 'Comment : marshaler des chaînes ANSI à l’aide de l’interopérabilité C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - C++ Interop, strings
 - data marshaling [C++], strings
 ms.assetid: 5eda2eb6-5140-40f0-82cf-7ce171fffb45
-ms.openlocfilehash: b73d8ed403ab0bbad7703f66f0d8d4ac23bb7766
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6987b23311354cfe6fd095e0e811d043e9b9692e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345751"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988468"
 ---
-# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Procédure : Marshaler des chaînes ANSI à l’aide d’interopérabilité C++
+# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Comment : marshaler des chaînes ANSI à l’aide de l’interopérabilité C++
 
-Cette rubrique montre comment les chaînes ANSI peuvent être passées à l’aide de C++ Interop, mais le .NET Framework <xref:System.String> représente des chaînes au format Unicode, par conséquent, la conversion en ANSI est une étape supplémentaire. Pour interagir avec d’autres types de chaîne, consultez les rubriques suivantes :
+Cette rubrique montre comment les chaînes ANSI peuvent être transmises C++ à l’aide de l’interopérabilité, mais que le .NET Framework <xref:System.String> représente des chaînes au format Unicode, la conversion en ANSI est donc une étape supplémentaire. Pour l’interopérabilité avec d’autres types de chaînes, consultez les rubriques suivantes :
 
-- [Guide pratique pour marshaler des chaînes Unicode à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
+- [Guide pratique pour marshaler des chaînes Unicode à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
 - [Guide pratique pour marshaler des chaînes COM à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
 
-Exemple de code suit le [managed, unmanaged](../preprocessor/managed-unmanaged.md) directives #pragma pour implémenter des fonctions managées et dans le même fichier, mais ces fonctions interagissent de la même manière, si elles sont définies dans des fichiers distincts. Étant donné que les fichiers contenant uniquement des fonctions non managées ne doivent pas être compilé avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), ils peuvent conserver leurs caractéristiques de performances.
+Les exemples de code suivants utilisent les directives de #pragma [managées et non managées](../preprocessor/managed-unmanaged.md) pour implémenter des fonctions managées et non managées dans le même fichier, mais ces fonctions interagissent de la même manière si elles sont définies dans des fichiers distincts. Étant donné que les fichiers contenant uniquement des fonctions non managées n’ont pas besoin d’être compilés avec [/clr (compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), ils peuvent conserver leurs caractéristiques de performances.
 
 ## <a name="example"></a>Exemple
 
-L’exemple illustre le passage d’une chaîne ANSI d’une fonction managée à une fonction non managée à l’aide <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>. Cette méthode alloue de la mémoire sur le tas non managé et retourne l’adresse après la conversion. Cela signifie qu’aucun épinglage n’est nécessaire (car la mémoire sur le tas GC n’est pas passée à la fonction non managée) et que le pointeur IntPtr retournée par <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> doit être explicitement libéré ou une fuite des résultats de la mémoire.
+L’exemple montre comment passer une chaîne ANSI d’une fonction managée à une fonction non managée à l’aide de <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>. Cette méthode alloue de la mémoire sur le tas non managé et retourne l’adresse après l’exécution de la conversion. Cela signifie qu’aucun épinglage n’est nécessaire (car la mémoire sur le tas GC n’est pas passée à la fonction non managée) et que le IntPtr retourné à partir de <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> doit être libéré explicitement ou qu’une fuite de mémoire se produit.
 
-```
+```cpp
 // MarshalANSI1.cpp
 // compile with: /clr
 #include <iostream>
@@ -62,9 +62,9 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant illustre le marshaling de données nécessaire pour accéder à une chaîne ANSI dans une fonction managée appelée par une fonction non managée. La fonction managée, à la réception de la chaîne native, pouvez utiliser directement ou convertissez-la en une chaîne managée à l’aide de la <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> méthode, comme indiqué.
+L’exemple suivant illustre le marshaling de données requis pour accéder à une chaîne ANSI dans une fonction managée qui est appelée par une fonction non managée. La fonction managée, lors de la réception de la chaîne native, peut l’utiliser directement ou la convertir en chaîne managée à l’aide de la méthode <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A>, comme indiqué.
 
-```
+```cpp
 // MarshalANSI2.cpp
 // compile with: /clr
 #include <iostream>

@@ -1,5 +1,5 @@
 ---
-title: '&lt;remarks > (commentaires de documentation C++)'
+title: '&lt;notes > (C++ commentaires de documentation)'
 ms.date: 11/04/2016
 f1_keywords:
 - remarks
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <remarks> C++ XML tag
 - remarks C++ XML tag
 ms.assetid: c820083b-3192-40ab-9ec8-1472c55b4247
-ms.openlocfilehash: 0d0c63d55de80f498498a6873dacb5e83fc956b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 096280526b12feff33377a705f7c03548a1f0f13
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319159"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988649"
 ---
 # <a name="ltremarksgt"></a>&lt;remarks&gt;
 
@@ -25,7 +25,7 @@ La balise \<remarks> permet d’ajouter des informations sur un type en complét
 <remarks>description</remarks>
 ```
 
-#### <a name="parameters"></a>Paramètres
+#### <a name="parameters"></a>Parameters
 
 *description*<br/>
 Description du membre.
@@ -36,7 +36,7 @@ Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour placer le
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // xml_remarks_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_remarks_tag.dll
