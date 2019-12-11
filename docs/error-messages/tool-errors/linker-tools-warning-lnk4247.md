@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4247
 ms.assetid: 085d7fdf-9eaf-4641-8473-6eaadd073c7b
-ms.openlocfilehash: cd4108f8bd06ec7a0b2d2eb9fab13917174b797b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 344c219fa1f3daa1e5f9c31431e608f5e7036400
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346958"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991151"
 ---
 # <a name="linker-tools-warning-lnk4247"></a>Avertissement des outils Éditeur de liens LNK4247
 
-point d’entrée 'nom_fonction_décoré' a déjà un attribut de thread ; 'attribute' ignoré
+le point d’entrée’decorated_function_name’a déjà un attribut de thread ; 'Attribute’ignoré
 
-Un point d’entrée, spécifié avec [/ENTRY (symbole de Point d’entrée)](../../build/reference/entry-entry-point-symbol.md), possédait un attribut de thread, mais [/CLRTHREADATTRIBUTE (définir l’attribut de Thread CLR)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) également spécifié, avec un modèle de thread différent.
+Un point d’entrée, spécifié avec [/entry (symbole de point d’entrée)](../../build/reference/entry-entry-point-symbol.md), avait un attribut de thread, mais [/CLRTHREADATTRIBUTE (définir l’attribut de thread CLR)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) a également été spécifié, avec un modèle de thread différent.
 
-L’éditeur de liens a ignoré la valeur spécifiée avec /CLRTHREADATTRIBUTE.
+L’éditeur de liens a ignoré la valeur spécifiée avec/CLRTHREADATTRIBUTE.
 
 Pour résoudre cet avertissement :
 
-- Supprimez /CLRTHREADATTRIBUTE de votre build.
+- Supprimez/CLRTHREADATTRIBUTE de votre Build.
 
-- Supprimez l’attribut à partir de votre fichier de code source.
+- Supprimez l’attribut de votre fichier de code source.
 
-- Retirez les deux l’attribut source et /CLRTHREADATTRIBUTE à partir de votre build et acceptez le modèle de thread CLR par défaut.
+- Supprimez à la fois l’attribut de la source et le/CLRTHREADATTRIBUTE de votre Build, puis acceptez le modèle de thread CLR par défaut.
 
-- Modifiez la valeur passée à /CLRTHREADATTRIBUTE., de sorte qu’elle correspond à l’attribut dans la source.
+- Modifiez la valeur passée à/CLRTHREADATTRIBUTE, de telle sorte qu’elle accepte l’attribut dans la source.
 
-- Modifiez l’attribut dans la source, de sorte qu’elle accepte la valeur passée à /CLRTHREADATTRIBUTE.
+- Modifiez l’attribut dans source, de telle sorte qu’il accepte la valeur transmise à/CLRTHREADATTRIBUTE.
 
-L’exemple suivant génère l’erreur LNK4247
+L’exemple suivant génère l’LNK4247
 
-```
+```cpp
 // LNK4247.cpp
 // compile with: /clr /c
 // post-build command: link /CLRTHREADATTRIBUTE:STA LNK4247.obj /entry:functionTitle /SUBSYSTEM:Console

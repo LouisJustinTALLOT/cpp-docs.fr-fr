@@ -6,22 +6,22 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfdbbeb735f98f77046790e21c19dd2d21b9d5c6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384593"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988109"
 ---
 # <a name="stlclr-containers"></a>STL/CLR, conteneurs
 
-La bibliothèque STL/CLR se compose de conteneurs qui sont similaires à ceux trouvés dans la bibliothèque Standard C++, mais elle s’exécute dans un environnement managé du .NET Framework. Il n’est pas mis à jour avec la bibliothèque Standard C++ réelle et est conservé pour la prise en charge héritée.
+La bibliothèque STL/CLR est constituée de conteneurs similaires à ceux de la C++ bibliothèque standard, mais elle s’exécute dans l’environnement géré de l' .NET Framework. Elle n’est pas mise à jour avec la bibliothèque standard réelle C++ et est conservée pour la prise en charge héritée.
 
-Ce document fournit une vue d'ensemble des conteneurs dans STL/CLR, tels que les conditions requises pour les éléments conteneurs, les types d'éléments que vous pouvez insérer dans des conteneurs, et les problèmes de propriété avec les éléments des conteneurs. Le cas échéant, les différences entre la bibliothèque Standard C++ native et STL/CLR sont indiquées.
+Ce document fournit une vue d'ensemble des conteneurs dans STL/CLR, tels que les conditions requises pour les éléments conteneurs, les types d'éléments que vous pouvez insérer dans des conteneurs, et les problèmes de propriété avec les éléments des conteneurs. Le cas échéant, les différences entre C++ la bibliothèque standard native et STL/CLR sont mentionnées.
 
 ## <a name="requirements-for-container-elements"></a>Exigences pour les éléments de conteneurs
 
-Tous les éléments insérés dans les conteneurs STL/CLR doivent obéir à certaines instructions. Pour plus d’informations, consultez [exigences pour les éléments de conteneur STL/CLR](../dotnet/requirements-for-stl-clr-container-elements.md).
+Tous les éléments insérés dans des conteneurs STL/CLR doivent respecter certaines règles. Pour plus d’informations, consultez [Configuration requise pour les éléments de conteneur STL/CLR](../dotnet/requirements-for-stl-clr-container-elements.md).
 
 ## <a name="valid-container-elements"></a>Éléments de conteneurs valides
 
@@ -37,13 +37,13 @@ Vous ne pouvez pas insérer les valeurs de type encapsulé dans les conteneurs S
 
 ### <a name="handles-to-reference-types"></a>Handle vers des types référence
 
-Vous pouvez insérer un handle à un type référence dans un conteneur STL/CLR. Un descripteur en C++ qui cible le CLR est analogue à un pointeur en mode natif C++. Pour plus d’informations, consultez [gérer sur l’opérateur Object (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
+Vous pouvez insérer un handle à un type référence dans un conteneur STL/CLR. Un descripteur en C++ qui cible le CLR est analogue à un pointeur en mode natif C++. Pour plus d’informations, consultez [handle to Object, opérateur (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
 
 #### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment insérer un handle vers un objet Employee dans un [cliext::set](../dotnet/set-stl-clr.md).
+L’exemple suivant montre comment insérer un handle vers un objet Employee dans un [cliext :: Set](../dotnet/set-stl-clr.md).
 
-```
+```cpp
 // cliext_container_valid_reference_handle.cpp
 // compile with: /clr
 
@@ -138,7 +138,7 @@ Il est également possible d'insérer un type référence (plutôt qu'un handle 
 
 L'exemple suivant indique comment insérer un objet Employee dans un `cliext::set`.
 
-```
+```cpp
 // cliext_container_valid_reference.cpp
 // compile with: /clr
 
@@ -227,15 +227,15 @@ int main()
 
 ### <a name="unboxed-value-types"></a>Types de valeurs non encapsulés
 
-Vous pouvez également insérer un type de valeur non encapsulé dans un conteneur STL/CLR. Un type valeur unboxed est un type valeur qui n’a pas été *boxed* dans un type référence.
+Vous pouvez également insérer un type de valeur non encapsulé dans un conteneur STL/CLR. Un type valeur unboxed est un type valeur qui n’a pas été *converti* en type référence.
 
-Un élément de type valeur peut être l'un des types de valeurs standard, comme `int`, ou il peut s'agir d'un type défini par l'utilisateur, tel que `value class`. Pour plus d’informations, consultez [Classes et Structs](../extensions/classes-and-structs-cpp-component-extensions.md)
+Un élément de type valeur peut être l'un des types de valeurs standard, comme `int`, ou il peut s'agir d'un type défini par l'utilisateur, tel que `value class`. Pour plus d’informations, consultez [classes et structs](../extensions/classes-and-structs-cpp-component-extensions.md) .
 
 #### <a name="example"></a>Exemple
 
 L'exemple suivant modifie le premier exemple en transformant la classe Employee en un type de valeur. Ce type de valeur est alors inséré dans `cliext::set` comme dans le premier exemple.
 
-```
+```cpp
 // cliext_container_valid_valuetype.cpp
 // compile with: /clr
 
@@ -296,7 +296,7 @@ int main()
 }
 ```
 
-Si vous tentez d’insérer un handle vers un type valeur dans un conteneur, [erreur du compilateur C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) est généré.
+Si vous tentez d’insérer un handle vers un type valeur dans un conteneur, l' [Erreur du compilateur C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) est générée.
 
 ### <a name="performance-and-memory-implications"></a>Conséquences de performances et de mémoire
 

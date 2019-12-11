@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4208
 ms.assetid: 5cb0a36e-3fb5-422f-a5f9-e40b70776c27
-ms.openlocfilehash: e15140bd2f0983bde64c89a054fd733d1ab902ac
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: c6e83feacd08bdb2203873a14a47ebde686a94f9
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541865"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991608"
 ---
 # <a name="compiler-warning-level-4-c4208"></a>Avertissement du compilateur (niveau 4) C4208
 
-extension non standard utilisée : delete [exp]-exp évaluée mais ignorée
+nonstandard extension used : delete [exp] - exp evaluated but ignored
 
-Avec les extensions Microsoft (/Ze), vous pouvez supprimer un tableau à l’aide d’une valeur entre crochets avec l' [opérateur delete](../../cpp/delete-operator-cpp.md). La valeur est ignorée.
+With Microsoft extensions (/Ze), you can delete an array using a value within brackets with the [delete operator](../../cpp/delete-operator-cpp.md). The value is ignored.
 
 ```cpp
 // C4208.cpp
@@ -31,4 +31,4 @@ int main()
 }
 ```
 
-Ces valeurs ne sont pas valides sous compatibilité ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).
+Such values are invalid under ANSI compatibility ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

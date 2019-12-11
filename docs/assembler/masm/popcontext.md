@@ -1,21 +1,21 @@
 ---
 title: POPCONTEXT
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - POPCONTEXT
 helpviewer_keywords:
 - POPCONTEXT directive
 ms.assetid: 19f59290-a54d-477d-88d8-97d3f63ed417
-ms.openlocfilehash: b04f863a706fae3378c78dcd33563eaebe573005
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: a1d4106c8f627698fa1df8f810f7c8689c0f5e39
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395044"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988160"
 ---
 # <a name="popcontext"></a>POPCONTEXT
 
-Restaure tout ou partie du *contexte* actuel (enregistré par la directive [PUSHCONTEXT](../../assembler/masm/pushcontext.md) ). Le *contexte* peut être **supposé**, **base**, **répertorier**, **UC**ou **tout**.
+Restaure tout ou partie du *contexte* actuel (enregistré par la directive [PUSHCONTEXT](../../assembler/masm/pushcontext.md) ). Le *contexte* peut être **supposé** (masse de 32 bits uniquement), **base**, **liste**, **processeur** (masse de 32 bits uniquement) ou **tout**.
 
 ## <a name="syntax"></a>Syntaxe
 

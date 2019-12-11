@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: a7ee0ef9c98ee940ab810abd82f6220da95d7346
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da0f2bc1a503226e41198871e6dc48ace7a86854
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351493"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988537"
 ---
-# <a name="callinappdomain-function"></a>call_in_appdomain, fonction
+# <a name="call_in_appdomain-function"></a>call_in_appdomain, fonction
 
 Exécute une fonction dans un domaine d’application spécifié.
 
@@ -39,31 +39,31 @@ RetType call_in_appdomain(
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+#### <a name="parameters"></a>Parameters
 
 *appdomainId*<br/>
-Appdomain dans lequel appeler la fonction.
+AppDomain dans lequel appeler la fonction.
 
 *voidFunc*<br/>
-Pointeur vers un `void` fonction qui accepte des paramètres de N (0 < = N < = 15).
+Pointeur vers une fonction `void` qui accepte N paramètres (0 < = N < = 15).
 
 *nonvoidFunc*<br/>
-Pointeur vers non -`void` fonction qui accepte des paramètres de N (0 < = N < = 15).
+Pointeur vers une fonction non`void` qui accepte N paramètres (0 < = N < = 15).
 
 *arg1...argN*<br/>
-Zéro à 15 paramètres à passer à `voidFunc` ou `nonvoidFunc` dans l’autre appdomain.
+Zéro à 15 paramètres à passer à `voidFunc` ou `nonvoidFunc` dans l’autre AppDomain.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le résultat de l’exécution `voidFunc` ou `nonvoidFunc` dans le domaine d’application spécifié.
+Résultat de l’exécution de `voidFunc` ou `nonvoidFunc` dans le domaine d’application spécifié.
 
 ## <a name="remarks"></a>Notes
 
-Les arguments de la fonction passé à `call_in_appdomain` ne doit pas être de types CLR.
+Les arguments de la fonction passée à `call_in_appdomain` ne doivent pas être des types CLR.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // msl_call_in_appdomain.cpp
 // compile with: /clr
 
@@ -107,7 +107,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 ```
 default appdomain: msl_call_in_appdomain.exe
@@ -116,8 +116,8 @@ default appdomain id = 1
 appDomain1 id = 2
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 **Fichier d’en-tête** \<msclr\appdomain.h >
 
-**Namespace** msclr
+**Espace de noms** msclr,

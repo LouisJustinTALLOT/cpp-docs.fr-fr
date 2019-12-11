@@ -1,27 +1,27 @@
 ---
-title: 'Procédure : Modifier la classe de référence dans une fonction Native'
+title: 'Comment : modifier la classe de référence dans une fonction native'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: c24bca5269cc924482c727d921fd24310f016824
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3368c8cde3d48be1c72fcc0d7b99f2d0ecb10d7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404388"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988231"
 ---
-# <a name="how-to-modify-reference-class-in-a-native-function"></a>Procédure : Modifier la classe de référence dans une fonction Native
+# <a name="how-to-modify-reference-class-in-a-native-function"></a>Comment : modifier la classe de référence dans une fonction native
 
-Vous pouvez passer d’une classe de référence avec un tableau CLR à une fonction native et modifier la classe, à l’aide des services de PInvoke.
+Vous pouvez passer une classe de référence avec un tableau CLR à une fonction native et modifier la classe à l’aide des services PInvoke.
 
 ## <a name="example"></a>Exemple
 
-Compilez la bibliothèque native suivante.
+Compilez la bibliothèque Native suivante.
 
-```
+```cpp
 // modify_ref_class_in_native_function.cpp
 // compile with: /LD
 #include <stdio.h>
@@ -51,7 +51,7 @@ extern "C"  {
 
 Compilez l’assembly suivant.
 
-```
+```cpp
 // modify_ref_class_in_native_function_2.cpp
 // compile with: /clr
 using namespace System;

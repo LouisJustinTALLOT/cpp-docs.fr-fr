@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Charger des ressources non managées dans un tableau d’octets'
+title: "Comment : charger des ressources non managées dans un tableau d'octets"
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: 641bdf4429bca35800e3fbbbb7622f2651bb3fee
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 425def1cd0557298985148d7bb9f74da489643e8
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344968"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988204"
 ---
-# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Procédure : Charger des ressources non managées dans un tableau d’octets
+# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Comment : charger des ressources non managées dans un tableau d'octets
 
-Cette rubrique décrit différentes manières de charger des ressources non managées dans un <xref:System.Byte> tableau.
+This topic discusses several ways to load unmanaged resources into a <xref:System.Byte> array.
 
 ## <a name="example"></a>Exemple
 
-Si vous connaissez la taille de votre ressource non managée, vous pouvez allouer un tableau CLR et puis charger la ressource dans le tableau à l’aide d’un pointeur vers le bloc de tableau du tableau CLR.
+If you know the size of your unmanaged resource, you can preallocate a CLR array and then load the resource into the array using a pointer to the array block of the CLR array.
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array.cpp
 // compile with: /clr
 using namespace System;
@@ -56,9 +56,9 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-Cet exemple montre comment copier des données à partir d’un bloc de mémoire non managée vers un tableau managé.
+This sample shows how to copy data from an unmanaged memory block to a managed array.
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array_2.cpp
 // compile with: /clr
 using namespace System;

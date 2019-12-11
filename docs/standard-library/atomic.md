@@ -1,6 +1,7 @@
 ---
 title: '&lt;atomic&gt;'
-ms.date: 11/04/2016
+description: Décrit les types et les fonctions disponibles dans l’en-tête Atomic C++ de la bibliothèque standard.
+ms.date: 12/06/2019
 f1_keywords:
 - <atomic>
 - atomic/std::atomic_int_least32_t
@@ -48,12 +49,12 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: b33ec1e7fdc7f93062248a9ad42c78c3b30801fe
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d11e8bf2067c1c8525725ae74e713ac834d89ec4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688446"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991167"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -68,17 +69,17 @@ Définit des classes et des modèles de classe à utiliser pour créer des types
 ## <a name="remarks"></a>Notes
 
 > [!NOTE]
-> Dans le code compilé à l’aide de **/CLR**, cet en-tête est bloqué.
+> Dans le code compilé à l’aide de [/clr : pure](../build/reference/clr-common-language-runtime-compilation.md), cet en-tête est bloqué. **/Clr : pure** et **/clr : safe** sont déconseillés dans Visual Studio 2017 et versions ultérieures.
 
 Une opération atomique a deux propriétés clés qui vous aident à utiliser plusieurs threads pour manipuler correctement un objet sans utiliser de verrous mutex.
 
-- Comme une opération atomique est indivisible, une deuxième opération atomique sur le même objet à partir d’un autre thread peut obtenir l’état de l’objet uniquement avant ou après la première opération atomique.
+- Étant donné qu’une opération atomique est indivisible, une deuxième opération atomique sur le même objet à partir d’un thread différent peut obtenir uniquement l’état de l’objet avant ou après la première opération atomique.
 
 - En fonction de son argument [memory_order](../standard-library/atomic-enums.md#memory_order_enum), une opération atomique établit les contraintes d’ordre pour la visibilité des effets d’autres opérations atomiques dans le même thread. Par conséquent, elle empêche les optimisations du compilateur qui enfreignent les contraintes d’ordre.
 
 Sur certaines plateformes, il n’est pas possible d’implémenter efficacement des opérations atomiques pour certains types sans utiliser de verrous `mutex`. Un type atomique est *sans verrou* si aucune opération atomique sur ce type utilise un verrou.
 
-**C++11** : Dans les gestionnaires de signal, vous pouvez effectuer des opérations atomiques sur un objet `obj` si `obj.is_lock_free()` ou `atomic_is_lock_free(x)` ont la valeur true.
+**C++ 11**: dans les gestionnaires de signal, vous pouvez effectuer des opérations atomiques sur un objet `obj` si `obj.is_lock_free()` ou `atomic_is_lock_free(x)` ont la valeur true.
 
 La classe [atomic_flag](../standard-library/atomic-flag-structure.md) fournit un type atomique minimal qui contient un indicateur **bool** . Ses opérations sont toujours sans verrou.
 
@@ -92,11 +93,11 @@ Les spécialisations partielles `atomic<T *>` s’appliquent à tous les types d
 
 ## <a name="integral-specializations"></a>Spécialisations intégrales
 
-Les spécialisations `atomic<integral>` s’appliquent à tous les types intégraux. Elles fournissent des opérations supplémentaires qui ne sont pas disponibles par le biais du modèle principal.
+Les spécialisations `atomic<integral>` s’appliquent à tous les types intégraux. Ils fournissent des opérations supplémentaires qui ne sont pas disponibles par le biais du modèle principal.
 
-Chaque type `atomic<integral>` a une macro correspondante que vous pouvez utiliser dans un `if directive` pour déterminer au moment de la compilation si les opérations sur ce type sont sans verrou. Si la valeur de la macro est zéro, les opérations sur le type ne sont pas sans verrou. Si la valeur est 1, les opérations peuvent être sans verrou et une vérification au moment de l’exécution est nécessaire. Si la valeur est 2, les opérations sont sans verrou. Vous pouvez utiliser la fonction `atomic_is_lock_free` pour déterminer au moment de l’exécution si les opérations sur le type sont sans verrou.
+Chaque type `atomic<integral>` a une macro correspondante que vous pouvez utiliser dans un `if directive` pour déterminer au moment de la compilation si les opérations sur ce type sont sans verrou. Si la valeur de la macro est égale à zéro, les opérations sur le type ne sont pas sans verrou. Si la valeur est 1, les opérations peuvent être sans verrou et une vérification au moment de l’exécution est nécessaire. Si la valeur est 2, les opérations sont sans verrou. Vous pouvez utiliser la fonction `atomic_is_lock_free` pour déterminer au moment de l’exécution si les opérations sur le type sont sans verrou.
 
-Pour chacun des types intégraux, il existe un type d’atomique nommé correspondant qui gère un objet de ce type intégral. Chaque type `atomic_integral` a le même ensemble de fonctions membres que l’instanciation correspondante de `atomic<T>` et peut être passée à toute fonction atomique non-membre.
+Pour chacun des types intégraux, il existe un type atomique nommé correspondant qui gère un objet de ce type intégral. Chaque type `atomic_integral` a le même ensemble de fonctions membres que l’instanciation correspondante de `atomic<T>` et peut être passée à toute fonction atomique non-membre.
 
 |Type de `atomic_integral`|Type intégral|Macro `atomic_is_lock_free`|
 |----------------------------|-------------------|---------------------------------|
@@ -165,7 +166,7 @@ Des noms typedef existent pour les spécialisations du modèle atomique pour cer
 
 ## <a name="functions"></a>Fonctions
 
-Dans la liste suivante, les fonctions qui ne se terminent pas par `_explicit` ont la sémantique du `_explicit` correspondant, sauf qu’elles ont les arguments [memory_order](../standard-library/atomic-enums.md#memory_order_enum) implicites de `memory_order_seq_cst`.
+Dans la liste suivante, les fonctions qui ne se terminent pas par `_explicit` ont la sémantique de la `_explicit`correspondante, à ceci près qu’elles ont les arguments [memory_order](../standard-library/atomic-enums.md#memory_order_enum) implicites de `memory_order_seq_cst`.
 
 |Name|Description|
 |----------|-----------------|

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Déclarer des Handles dans les Types natifs'
+title: 'Comment : déclarer des handles dans les types natifs'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: f5d6d31be9f3c10e1a56639ccf20663ce59d7941
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11dbc196a89a224afe02312fbe4dff99d8467f4c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387407"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988246"
 ---
-# <a name="how-to-declare-handles-in-native-types"></a>Procédure : Déclarer des Handles dans les Types natifs
+# <a name="how-to-declare-handles-in-native-types"></a>Comment : déclarer des handles dans les types natifs
 
-Vous ne pouvez pas déclarer un type de handle dans un type natif. vcclr.h fournit le modèle de wrapper de type sécurisé `gcroot` pour faire référence à un objet CLR à partir du tas C++. Ce modèle vous permet d’incorporer un handle virtuel dans un type natif et le traitent comme s’il s’agissait du type sous-jacent. Dans la plupart des cas, vous pouvez utiliser le `gcroot` objet en tant que type incorporé sans transtypage. Toutefois, avec [pour chacun, dans](../dotnet/for-each-in.md), vous devez utiliser `static_cast` pour récupérer la référence managée sous-jacente.
+Vous ne pouvez pas déclarer un type de handle dans un type natif. Vcclr. h fournit le modèle de wrapper de type sécurisé `gcroot` pour faire référence à un objet CLR C++ à partir du tas. Ce modèle vous permet d’incorporer un handle virtuel dans un type natif et de le traiter comme s’il s’agissait du type sous-jacent. Dans la plupart des cas, vous pouvez utiliser l’objet `gcroot` comme type incorporé sans cast. Toutefois, avec [pour chaque, dans](../dotnet/for-each-in.md), vous devez utiliser `static_cast` pour récupérer la référence managée sous-jacente.
 
-Le `gcroot` modèle est implémenté à l’aide des fonctionnalités de la classe de valeur System::Runtime::InteropServices::GCHandle, qui fournit des « handles » dans le tas de garbage collection. Notez que les handles eux-mêmes ne sont pas nettoyées et sont libérées lorsqu’elles ne sont plus en cours d’utilisation par le destructeur dans la `gcroot` classe (ce destructeur ne peut pas être appelé manuellement). Si vous instanciez un `gcroot` de l’objet sur le tas natif, vous devez appeler delete sur cette ressource.
+Le modèle `gcroot` est implémenté à l’aide des fonctionnalités de la classe value System :: Runtime :: InteropServices :: GCHandle, qui fournit des « handles » dans le tas récupéré par le garbage collector. Notez que les handles eux-mêmes ne sont pas récupérés par le garbage collector et sont libérés lorsqu’ils ne sont plus utilisés par le destructeur de la classe `gcroot` (ce destructeur ne peut pas être appelé manuellement). Si vous instanciez un objet `gcroot` sur le tas natif, vous devez appeler Delete sur cette ressource.
 
-Le runtime gère une association entre le handle et l’objet CLR, qui elle fait référence. Lorsque l’objet CLR se déplace avec le tas de garbage collector, le handle retourne la nouvelle adresse de l’objet. Une variable ne devra pas être épinglé avant lui est attribuée à un `gcroot` modèle.
+Le runtime maintiendra une association entre le handle et l’objet CLR, qu’il référence. Lorsque l’objet CLR est déplacé avec le tas récupéré par le garbage collector, le handle retourne la nouvelle adresse de l’objet. Une variable ne doit pas être épinglée avant d’être assignée à un modèle de `gcroot`.
 
 ## <a name="example"></a>Exemple
 
-Cet exemple montre comment créer un `gcroot` objet sur la pile native.
+Cet exemple montre comment créer un objet `gcroot` sur la pile native.
 
-```
+```cpp
 // mcpp_gcroot.cpp
 // compile with: /clr
 #include <vcclr.h>
@@ -53,9 +53,9 @@ hello
 
 ## <a name="example"></a>Exemple
 
-Cet exemple montre comment créer un `gcroot` objet sur le tas natif.
+Cet exemple montre comment créer un objet `gcroot` sur le tas natif.
 
-```
+```cpp
 // mcpp_gcroot_2.cpp
 // compile with: /clr
 // compile with: /clr
@@ -83,9 +83,9 @@ hello
 
 ## <a name="example"></a>Exemple
 
-Cet exemple montre comment utiliser `gcroot` pour contenir des références à des types valeur (pas les types référence) dans un type natif à l’aide de `gcroot` sur le type boxed.
+Cet exemple montre comment utiliser `gcroot` pour stocker des références à des types valeur (et non des types référence) dans un type natif à l’aide de `gcroot` sur le type boxed.
 
-```
+```cpp
 // mcpp_gcroot_3.cpp
 // compile with: /clr
 #include < vcclr.h >

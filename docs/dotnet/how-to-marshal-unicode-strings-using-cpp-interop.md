@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Marshaler des chaînes Unicode à l’aide d’interopérabilité C++'
+title: 'Comment : marshaler des chaînes Unicode à l’aide de l’interopérabilité C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f666e52b604e4713f02cb14744ac12a0407366a3
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400550"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988164"
 ---
-# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Procédure : Marshaler des chaînes Unicode à l’aide d’interopérabilité C++
+# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Comment : marshaler des chaînes Unicode à l’aide de l’interopérabilité C++
 
-Cette rubrique illustre une facette de l’interopérabilité de Visual C++. Pour plus d’informations, consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+Cette rubrique présente une facette de C++ l’interopérabilité visuelle. Pour plus d’informations, [consultez C++ utilisation de l’interopérabilité (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
-Exemple de code suit le [managed, unmanaged](../preprocessor/managed-unmanaged.md) directives #pragma pour implémenter des fonctions managées et dans le même fichier, mais ces fonctions interagissent de la même manière, si elles sont définies dans des fichiers distincts. Fichiers contenant uniquement des fonctions non managées ne doivent pas être compilé avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Les exemples de code suivants utilisent les directives de #pragma [managées et non managées](../preprocessor/managed-unmanaged.md) pour implémenter des fonctions managées et non managées dans le même fichier, mais ces fonctions interagissent de la même manière si elles sont définies dans des fichiers distincts. Les fichiers contenant uniquement des fonctions non managées n’ont pas besoin d’être compilés avec [/clr (compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
-Cette rubrique montre comment les chaînes Unicode peuvent être passé d’une fonction managée à une fonction non managée et vice versa. Pour interagir avec d’autres types de chaînes, consultez les rubriques suivantes :
+Cette rubrique montre comment passer des chaînes Unicode d’une fonction managée à une fonction non managée, et vice versa. Pour l’interopérabilité avec d’autres types de chaînes, consultez les rubriques suivantes :
 
 - [Guide pratique pour marshaler des chaînes ANSI à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
@@ -30,9 +30,9 @@ Cette rubrique montre comment les chaînes Unicode peuvent être passé d’une 
 
 ## <a name="example"></a>Exemple
 
-Pour transmettre une chaîne Unicode d’une fonction managée à une fonction non managée, la fonction PtrToStringChars (déclarée dans Vcclr.h) peut être utilisée pour accéder à la mémoire où la chaîne managée est stockée. Étant donné que cette adresse doit être passée à une fonction native, il est important que la mémoire soit épinglée avec [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) pour empêcher que les données de chaîne ne soient déplacées, devrait un cycle de garbage collection se produire lors de la fonction non managée s’exécute.
+Pour passer une chaîne Unicode d’une fonction managée à une fonction non managée, la fonction PtrToStringChars (déclarée dans Vcclr. h) peut être utilisée pour accéder à la mémoire où la chaîne managée est stockée. Étant donné que cette adresse sera transmise à une fonction native, il est important que la mémoire soit épinglée avec [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) pour empêcher que les données de chaîne ne soient déplacées, si un cycle de garbage collection a lieu pendant l’exécution de la fonction non managée.
 
-```
+```cpp
 // MarshalUnicode1.cpp
 // compile with: /clr
 #include <iostream>
@@ -63,9 +63,9 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant illustre le marshaling de données requis pour accéder à une chaîne Unicode dans une fonction managée appelée par une fonction non managée. La fonction managée, reçoit la chaîne Unicode native, il convertit en une chaîne managée à l’aide de la <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> (méthode).
+L’exemple suivant illustre le marshaling de données requis pour accéder à une chaîne Unicode dans une fonction managée appelée par une fonction non managée. La fonction managée, lors de la réception de la chaîne Unicode native, la convertit en chaîne managée à l’aide de la méthode <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>.
 
-```
+```cpp
 // MarshalUnicode2.cpp
 // compile with: /clr
 #include <iostream>

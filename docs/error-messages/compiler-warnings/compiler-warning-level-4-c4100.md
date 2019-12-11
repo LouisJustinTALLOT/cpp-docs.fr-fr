@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4100
 ms.assetid: 478ed97d-e502-49e4-9afb-ac2a6c61194b
-ms.openlocfilehash: 80794d270b40a8f40d44630da70455c015158423
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: bcd51c66359d0553b7657d85f5b45ee22d4648ff
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541246"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991645"
 ---
 # <a name="compiler-warning-level-4-c4100"></a>Avertissement du compilateur (niveau 4) C4100
 
 'identificateur' : paramètre formel non référencé
 
-Le paramètre formel n’est pas référencé dans le corps de la fonction. Le paramètre non référencé est ignoré.
+Le paramètre formel n'est pas référencé dans le corps de la fonction. Le paramètre non référencé est ignoré.
 
-C4100 peut également être émis lorsque le code appelle un destructeur sur un paramètre non référencé de type primitif.  Il s’agit d’une limitation du C++ compilateur Microsoft.
+C4100 peut également être émis lorsque le code appelle un destructeur sur un paramètre de type primitif qui autrement n'est pas référencé.  Il s’agit d’une limitation du C++ compilateur Microsoft.
 
-L’exemple suivant génère l’C4100 :
+L'exemple suivant génère l'avertissement C4100 :
 
 ```cpp
 // C4100.cpp

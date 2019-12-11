@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Marshaler des tableaux à l’aide de C++ Interop'
+title: "Comment : marshaler des tableaux à l'aide de l'interopérabilité C++"
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fddb8b4fa645d6fee3597d098fc67a3006603b9f
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324920"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988192"
 ---
-# <a name="how-to-marshal-arrays-using-c-interop"></a>Procédure : Marshaler des tableaux à l’aide de C++ Interop
+# <a name="how-to-marshal-arrays-using-c-interop"></a>Comment : marshaler des tableaux à l'aide de l'interopérabilité C++
 
-Cette rubrique illustre une facette de l’interopérabilité de Visual C++. Pour plus d’informations, consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+Cette rubrique présente une facette de C++ l’interopérabilité visuelle. Pour plus d’informations, [consultez C++ utilisation de l’interopérabilité (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
-Exemple de code suit le [managed, unmanaged](../preprocessor/managed-unmanaged.md) directives #pragma pour implémenter des fonctions managées et dans le même fichier, mais ces fonctions interagissent de la même manière, si elles sont définies dans des fichiers distincts. Fichiers contenant uniquement des fonctions non managées ne doivent pas être compilé avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Les exemples de code suivants utilisent les directives de #pragma [managées et non managées](../preprocessor/managed-unmanaged.md) pour implémenter des fonctions managées et non managées dans le même fichier, mais ces fonctions interagissent de la même manière si elles sont définies dans des fichiers distincts. Les fichiers contenant uniquement des fonctions non managées n’ont pas besoin d’être compilés avec [/clr (compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment passer un tableau managé à une fonction non managée. Utilise la fonction managée [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) pour supprimer le garbage collection pour le tableau avant d’appeler la fonction non managée. En fournissant la fonction non managée avec un pointeur épinglé dans le tas GC, la surcharge d’effectuer une copie du tableau peut être évitée. Pour montrer que la fonction non managée est l’accès à la mémoire de tas GC, elle modifie le contenu du tableau et les modifications sont répercutées lorsque la fonction managée reprend le contrôle.
+L’exemple suivant montre comment passer un tableau managé à une fonction non managée. La fonction managée utilise [pin_ptrC++(/CLI)](../extensions/pin-ptr-cpp-cli.md) pour supprimer garbage collection pour le tableau avant d’appeler la fonction non managée. En fournissant la fonction non managée avec un pointeur épinglé dans le tas GC, la surcharge liée à la création d’une copie du tableau peut être évitée. Pour montrer que la fonction non managée accède à la mémoire du tas GC, elle modifie le contenu du tableau et les modifications sont reflétées lorsque la fonction managée reprend le contrôle.
 
-```
+```cpp
 // PassArray1.cpp
 // compile with: /clr
 #ifndef _CRT_RAND_S
@@ -83,9 +83,9 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant illustre le passage d’un tableau non managé vers une fonction managée. La fonction managée accède à la mémoire du tableau directement (au lieu de créer un tableau managé et copie le contenu du tableau), ce qui permet des modifications apportées par la fonction managée pour être reflétée dans la fonction non managée lorsqu’elle reprend le contrôle.
+L’exemple suivant illustre le passage d’un tableau non managé à une fonction managée. La fonction managée accède directement à la mémoire du tableau (par opposition à la création d’un tableau managé et à la copie du contenu du tableau), ce qui permet aux modifications apportées par la fonction managée d’être reflétées dans la fonction non managée lorsqu’elle acquiert à nouveau le contrôle.
 
-```
+```cpp
 // PassArray2.cpp
 // compile with: /clr
 #include <iostream>

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Caractères d’accès d’un System::String'
+title: "Comment : accéder aux caractères d'un System::String"
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c44c5e7651bb1c5b4c28654b896cbe64bd5bec7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222934"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988644"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>Procédure : Caractères d’accès d’un System::String
+# <a name="how-to-access-characters-in-a-systemstring"></a>Comment : accéder aux caractères d'un System::String
 
-Vous pouvez accéder aux caractères d’un <xref:System.String> objet pour les appels de hautes performances à non managé des fonctions utilisant `wchar_t*` chaînes. La méthode génère un pointeur intérieur vers le premier caractère de la <xref:System.String> objet. Ce pointeur peut être manipulé directement ou épinglé et passé à une fonction qui attend un ordinaire `wchar_t` chaîne.
+Vous pouvez accéder aux caractères d’un objet <xref:System.String> pour les appels haute performance à des fonctions non managées qui acceptent des chaînes `wchar_t*`. La méthode génère un pointeur intérieur vers le premier caractère de l’objet <xref:System.String>. Ce pointeur peut être manipulé directement ou épinglé et passé à une fonction qui attend une chaîne de `wchar_t` ordinaire.
 
 ## <a name="example"></a>Exemple
 
-`PtrToStringChars` Retourne un <xref:System.Char>, qui est un pointeur intérieur (également appelé un `byref`). Par conséquent, il est soumise au garbage collection. Vous n’êtes pas obligé d’épingler ce pointeur à moins que vous allez passer à une fonction native.
+`PtrToStringChars` retourne un <xref:System.Char>, qui est un pointeur intérieur (également appelé `byref`). En tant que tel, il est soumis à garbage collection. Vous n’êtes pas obligé d’épingler ce pointeur à moins que vous ne le passiez à une fonction native.
 
-Prenons le code suivant.  L’épinglage n’est pas nécessaire car `ppchar` est un pointeur intérieur, et si le garbage collector déplace la chaîne qu’il pointe vers, il met également à jour `ppchar`. Sans un [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), le code fonctionnera, et pas la baisse de performances potentiels ont provoqué par l’épinglage.
+Prenons le code suivant.  L’épinglage n’est pas nécessaire, car `ppchar` est un pointeur intérieur et si le garbage collector déplace la chaîne vers laquelle il pointe, il met également à jour `ppchar`. Sans [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), le code fonctionnera et n’aura pas d’impact sur les performances potentielles causées par l’épinglage.
 
-Si vous transmettez `ppchar` à une fonction native, il doit être un pointeur épingle ; le garbage collector ne sera pas en mesure de mettre à jour tous les pointeurs sur le frame de pile non géré.
+Si vous transmettez `ppchar` à une fonction native, il doit s’agir d’un pointeur épingle ; le garbage collector ne sera pas en mesure de mettre à jour les pointeurs sur le frame de pile non managé.
 
-```
+```cpp
 // PtrToStringChars.cpp
 // compile with: /clr
 #include<vcclr.h>
@@ -50,7 +50,7 @@ abcdefg
 
 Cet exemple montre où l’épinglage est nécessaire.
 
-```
+```cpp
 // PtrToStringChars_2.cpp
 // compile with: /clr
 #include <string.h>
@@ -77,9 +77,9 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-Un pointeur intérieur possède toutes les propriétés d’un pointeur C++ natif. Par exemple, vous pouvez l’utiliser pour parcourir une structure de données lié et effectuer des insertions et suppressions à l’aide qu’un seul pointeur :
+Un pointeur intérieur a toutes les propriétés d’un pointeur C++ natif. Par exemple, vous pouvez l’utiliser pour parcourir une structure de données liées et effectuer des insertions et des suppressions à l’aide d’un seul pointeur :
 
-```
+```cpp
 // PtrToStringChars_3.cpp
 // compile with: /clr /LD
 using namespace System;
