@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4112
 ms.assetid: aff64897-bb79-4a67-9b6f-902c6d44f3dc
-ms.openlocfilehash: 3678d0ce5d9eb9568f0272da4173e72502b0557f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f614373e1b96de2c8167d7981c0a87a4e1c58435
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280332"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991227"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4112"></a>Avertissement du compilateur (niveaux 1 et 4) C4112
 
-\#ligne nécessite un entier compris entre 1 et nombre
+\#ligne requiert un entier compris entre 1 et nombre
 
 La directive [#line](../../preprocessor/hash-line-directive-c-cpp.md) spécifie un paramètre entier qui se trouve en dehors de la plage autorisée.
 
@@ -23,7 +23,7 @@ Si le paramètre spécifié est inférieur à 1, le compteur de lignes est réin
 
 L’exemple suivant génère l’avertissement C4112 :
 
-```
+```cpp
 // C4112.cpp
 // compile with: /W4
 #line 0   // C4112, value must be between 1 and number

@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2033
 ms.assetid: d61db467-9328-4788-bf54-e2a20537f13f
-ms.openlocfilehash: 7e95823e23215848ff3e5d201171523c9009eb2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 407f5eaf94a0e2da43425c3bbdd1955a88c95f14
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298904"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991178"
 ---
 # <a name="linker-tools-error-lnk2033"></a>Erreur des outils Éditeur de liens LNK2033
 
-jeton typeref non résolu (jeton) pour 'type'
+jeton TypeRef non résolu (jeton) pour’type'
 
-Un type ne possède pas une définition dans les métadonnées MSIL.
+Un type n’a pas de définition dans les métadonnées MSIL.
 
-LNK2033 peut se produire lors de la compilation avec **/CLR : safe** et où il est uniquement une déclaration anticipée pour un type dans un module MSIL, où le type est référencé dans le module MSIL.
+LNK2033 peut se produire lors de la compilation avec **/clr : safe** et lorsqu’il n’existe qu’une déclaration anticipée pour un type dans un module MSIL, où le type est référencé dans le module MSIL.
 
-Le type doit être défini sous **/CLR : safe**.
+Le type doit être défini sous **/clr : safe**.
 
 Pour plus d’informations, consultez l’article [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur LNK2033.
+L’exemple suivant génère l’LNK2033.
 
-```
+```cpp
 // LNK2033.cpp
 // compile with: /clr:safe
 // LNK2033 expected

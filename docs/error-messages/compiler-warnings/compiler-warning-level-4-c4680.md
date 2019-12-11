@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4680
 ms.assetid: 6e043f4c-c601-4b77-8130-920cff1d912e
-ms.openlocfilehash: 9130fa2665452b85c5ec83eef0b3d1d618c995a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21ea9bf54a493a72dc24c607812eaed69f9ef71b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226867"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990461"
 ---
 # <a name="compiler-warning-level-4-c4680"></a>Avertissement du compilateur (niveau 4) C4680
 
-'class' : coclasse ne spécifie pas une interface par défaut
+'classe' : la coclasse ne spécifie pas d’interface par défaut
 
-Un [par défaut](../../windows/default-cpp.md) interface n’a pas été spécifiée pour une classe qui a été marquée avec la [coclasse](../../windows/coclass.md) attribut. Dans l’ordre pour un objet soit utile, elle doit implémenter une interface.
+Une interface [par défaut](../../windows/default-cpp.md) n’a pas été spécifiée pour une classe marquée avec l’attribut [coclass](../../windows/coclass.md) . Pour qu’un objet soit utile, il doit implémenter une interface.
 
-L’exemple suivant génère l’erreur C4680 :
+L’exemple suivant génère l’C4680 :
 
-```
+```cpp
 // C4680.cpp
 // compile with: /W4
 #include <windows.h>

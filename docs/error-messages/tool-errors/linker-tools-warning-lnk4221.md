@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-ms.openlocfilehash: 299c3ef76006b347d6770d45ca317ff0eb941ffa
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: fb355b6d004d9488abac89ef44c9ec38c791ffda
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630800"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988038"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Avertissement des outils Éditeur de liens LNK4221
 
@@ -19,12 +19,12 @@ Ce fichier objet ne définit aucun symbole public précédemment non défini, do
 
 Considérez les deux extraits de code suivants.
 
-```
+```cpp
 // a.cpp
 #include <atlbase.h>
 ```
 
-```
+```cpp
 // b.cpp
 #include <atlbase.h>
 int function()
@@ -33,7 +33,7 @@ int function()
 }
 ```
 
-Pour compiler les fichiers et créer deux fichiers objets, exécutez **cl/c a. cpp b. cpp** à l’invite de commandes. Si vous liez les fichiers objets en exécutant **link/lib/out: test. lib a. obj b. obj**, vous recevrez l’avertissement LNK4221. Si vous liez les objets en exécutant **link/lib/out: test. lib b. obj a. obj**, vous ne recevrez pas d’avertissement.
+Pour compiler les fichiers et créer deux fichiers objets, exécutez **cl/c a. cpp b. cpp** à l’invite de commandes. Si vous liez les fichiers objets en exécutant **link/lib/out : test. lib a. obj b. obj**, vous recevrez l’avertissement LNK4221. Si vous liez les objets en exécutant **link/lib/out : test. lib b. obj a. obj**, vous ne recevrez pas d’avertissement.
 
 Aucun avertissement n’est émis dans le deuxième scénario, car l’éditeur de liens fonctionne selon une méthode LIFO (dernier entré, premier sorti). Dans le premier scénario, b. obj est traité avant un. objet un. obj n’a aucun nouveau symbole à ajouter. En demandant à l’éditeur de liens de traiter d’abord un. obj, vous pouvez éviter l’avertissement.
 

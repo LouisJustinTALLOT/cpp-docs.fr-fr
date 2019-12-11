@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4625
 ms.assetid: 4cc99e50-846c-4784-97da-48b977067851
-ms.openlocfilehash: edcb43bf11c073e6ce721ba999fd99d28a8df15d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d98e295a9a48da16b58202bc172e112b5c0287d9
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220492"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990711"
 ---
 # <a name="compiler-warning-level-4-c4625"></a>Avertissement du compilateur (niveau 4) C4625
 
@@ -25,7 +25,7 @@ Cet avertissement est désactivé par défaut. Consultez [Avertissements du comp
 
 L'exemple suivant génère l'erreur C4625 et montre comment la corriger.
 
-```
+```cpp
 // C4625.cpp
 // compile with: /W4 /c
 #pragma warning(default : 4625)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: b43658eda749e68c17659fcb41248b88fd843792
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 914498a79d3d3ddae08ae672aac35c6e913ef238
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448501"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988073"
 ---
 # <a name="security-best-practices-for-c"></a>Meilleures pratiques de sécurité pour C++
 
@@ -21,10 +21,10 @@ Cet article contient des informations sur les outils et les pratiques de sécuri
 
 ## <a name="visual-c-security-features"></a>Fonctionnalités de sécurité de Visual C++
 
-Ces fonctionnalités de sécurité sont intégrées à Microsoft C++ du compilateur et éditeur de liens :
+These security features are built into the Microsoft C++ compiler and linker:
 
 [/guard (Activer la protection du flux de contrôle)](../build/reference/guard-enable-control-flow-guard.md)<br/>
-Indique au compilateur d’analyser le flux de contrôle pour les cibles d’appels indirects au moment de la compilation, puis d’insérer du code pour vérifier les cibles lors de l’exécution.
+Causes the compiler to analyze control flow for indirect call targets at compile time, and then to insert code to verify the targets at runtime.
 
 [/GS (vérification de la sécurité des mémoires tampons)](../build/reference/gs-buffer-security-check.md)<br/>
 Indique au compilateur d'insérer du code de détection de débordement dans les fonctions qui courent le risque d'être exploitées. Quand un débordement est détecté, l'exécution est arrêtée. Cette option est activée par défaut.
@@ -32,10 +32,10 @@ Indique au compilateur d'insérer du code de détection de débordement dans les
 [/SAFESEH (L’image est dotée de gestionnaires d’exceptions sécurisés)](../build/reference/safeseh-image-has-safe-exception-handlers.md)<br/>
 Indique à l'éditeur de liens d'inclure dans l'image de sortie une table contenant l'adresse de chaque gestionnaire d'exceptions. Au moment de l'exécution, le système d'exploitation utilise cette table pour s'assurer que seuls les gestionnaires d'exceptions légitimes sont exécutés. Cela contribue à empêcher l'exécution de gestionnaires d'exceptions introduits par une attaque malveillante au moment de l'exécution. Cette option est désactivée par défaut.
 
-[/ NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (Compatible avec Data Execution Prevention)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md) ces options du compilateur et éditeur de liens activer la compatibilité de prévention de l’exécution des données (PED). PED protège l'UC contre l'exécution de pages ne contenant pas de code.
+[/NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (Compatible with Data Execution Prevention)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md) These compiler and linker options enable Data Execution Prevention (DEP) compatibility. PED protège l'UC contre l'exécution de pages ne contenant pas de code.
 
 [/analyze (Analyse de code)](../build/reference/analyze-code-analysis.md)<br/>
-Cette option du compilateur active l'analyse du code, qui signale les problèmes de sécurité potentiels, tels que le dépassement de la mémoire tampon, la mémoire non initialisée, le déréférencement de pointeur null et les fuites de mémoire. Cette option est désactivée par défaut. Pour plus d’informations, consultez [analyse du Code pour C/C++ Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Cette option du compilateur active l'analyse du code, qui signale les problèmes de sécurité potentiels, tels que le dépassement de la mémoire tampon, la mémoire non initialisée, le déréférencement de pointeur null et les fuites de mémoire. Cette option est désactivée par défaut. For more information, see [Code Analysis for C/C++ Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
 
 [/DYNAMICBASE (Utiliser la randomisation du format d’espace d’adresse)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 Cette option de l'éditeur de liens permet de générer une image exécutable qui peut être chargée à différents emplacements dans la mémoire au début de l'exécution. Cette option rend également l'emplacement de la pile en mémoire beaucoup moins prévisible.
@@ -46,15 +46,15 @@ La bibliothèque Runtime C (CRT) a été étendue afin d'inclure des versions s
 
 ## <a name="safeint-library"></a>Bibliothèque SafeInt
 
-[Bibliothèque SafeInt](../safeint/safeint-library.md) permet d’empêcher les dépassements de capacité entière et autres erreurs exploitables pouvant survenir lorsque l’application effectue des opérations mathématiques. Le `SafeInt` library inclut le [classe SafeInt](../safeint/safeint-class.md), le [SafeIntException, classe](../safeint/safeintexception-class.md)et plusieurs [SafeInt, fonctions](../safeint/safeint-functions.md).
+[SafeInt Library](../safeint/safeint-library.md) helps prevent integer overflows and other exploitable errors that might occur when the application performs mathematical operations. The `SafeInt` library includes the [SafeInt Class](../safeint/safeint-class.md), the [SafeIntException Class](../safeint/safeintexception-class.md), and several [SafeInt Functions](../safeint/safeint-functions.md).
 
-La classe `SafeInt` protège contre les dépassements sur les entiers et les tentatives de division par zéro. Vous pouvez l'utiliser pour gérer les comparaisons entre des valeurs de types différents. Il fournit deux stratégies de gestion des erreurs. Dans la stratégie par défaut, la classe `SafeInt` lève une exception de classe `SafeIntException` pour signaler la raison pour laquelle une opération mathématique ne peut pas être exécutée. Dans la seconde stratégie, la classe `SafeInt` arrête l'exécution du programme. Vous pouvez également définir une stratégie personnalisée.
+La classe `SafeInt` protège contre les dépassements sur les entiers et les tentatives de division par zéro. Vous pouvez l'utiliser pour gérer les comparaisons entre des valeurs de types différents. It provides two error handling policies. Dans la stratégie par défaut, la classe `SafeInt` lève une exception de classe `SafeIntException` pour signaler la raison pour laquelle une opération mathématique ne peut pas être exécutée. Dans la seconde stratégie, la classe `SafeInt` arrête l'exécution du programme. Vous pouvez également définir une stratégie personnalisée.
 
 Chaque fonction `SafeInt` protège une opération mathématique d'une erreur exploitable. Vous pouvez utiliser deux types différents de paramètres sans les convertir en un même type. Pour protéger plusieurs opérations mathématiques, utilisez la classe `SafeInt`.
 
-## <a name="checked-iterators"></a>Checked Iterators
+## <a name="checked-iterators"></a>itérateurs vérifiés
 
-Un itérateur vérifié met en place des limites de conteneur. Par défaut, quand un itérateur vérifié est hors limites, il génère une exception et arrête l'exécution du programme. Un itérateur vérifié fournit d’autres niveaux de réponse qui dépendent des valeurs qui sont assignées au préprocesseur définit comme  **\_SECURE\_SCL\_lève** et  **\_ITÉRATEUR\_déboguer\_niveau**. Par exemple, au niveau  **\_ITÉRATEUR\_déboguer\_LEVEL = 2**, un itérateur vérifié fournit de nombreuses vérifications d’exactitude en mode débogage, qui sont accessibles à l’aide des assertions. Pour plus d’informations, consultez [itérateurs vérifiés](../standard-library/checked-iterators.md) et [ \_ITÉRATEUR\_déboguer\_niveau](../standard-library/iterator-debug-level.md).
+Un itérateur vérifié met en place des limites de conteneur. Par défaut, quand un itérateur vérifié est hors limites, il génère une exception et arrête l'exécution du programme. A checked iterator provides other levels of response that depend on values that are assigned to preprocessor defines such as **\_SECURE\_SCL\_THROWS** and **\_ITERATOR\_DEBUG\_LEVEL**. For example, at **\_ITERATOR\_DEBUG\_LEVEL=2**, a checked iterator provides comprehensive correctness checks in debug mode, which are made available by using asserts. For more information, see [Checked Iterators](../standard-library/checked-iterators.md) and [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md).
 
 ## <a name="code-analysis-for-managed-code"></a>Analyse du code managé
 
@@ -72,8 +72,7 @@ L'analyse du code managé, également appelée FxCop, vérifie la conformité de
 
 ## <a name="windows-application-verifier"></a>Windows Application Verifier
 
-Le [Application Verifier (AppVerifier)](/windows-hardware/drivers/debugger/application-verifier
-) peut vous aider à identifier les problèmes de compatibilité, de stabilité et de sécurité potentiels d’application.
+The [Application Verifier (AppVerifier)](/windows-hardware/drivers/debugger/enable-application-verifier) can help you identify potential application compatibility, stability, and security issues.
 
 AppVerifier surveille la manière dont une application utilise le système d'exploitation. Il surveille le système de fichiers, le Registre, la mémoire et les API pendant l'exécution de l'application et recommande des correctifs du code source pour les problèmes qu'il découvre.
 
@@ -87,14 +86,14 @@ Vous pouvez utiliser AppVerifier pour :
 
 ## <a name="windows-user-accounts"></a>Comptes utilisateur Windows
 
-L'utilisation de comptes utilisateur Windows qui appartiennent au groupe Administrateurs expose les développeurs et, par extension, les clients aux risques de sécurité. Pour plus d’informations, consultez [en cours d’exécution en tant que membre du groupe utilisateurs](running-as-a-member-of-the-users-group.md) et [affecte de votre Application de compte des contrôle utilisateur (UAC)](how-user-account-control-uac-affects-your-application.md).
+L'utilisation de comptes utilisateur Windows qui appartiennent au groupe Administrateurs expose les développeurs et, par extension, les clients aux risques de sécurité. For more information, see [Running as a Member of the Users Group](running-as-a-member-of-the-users-group.md) and [How User Account Control (UAC) Affects Your Application](how-user-account-control-uac-affects-your-application.md).
 
-## <a name="guidance-for-speculative-execution-side-channels"></a>Conseils pour les canaux de côté l’exécution spéculative
+## <a name="guidance-for-speculative-execution-side-channels"></a>Guidance for Speculative Execution Side Channels
 
-Pour plus d’informations sur la façon d’identifier et atténuer les vulnérabilités de l’exécution spéculative côté canal matériel dans le logiciel de C++, consultez [Guide du développeur C++ pour les canaux du côté d’exécution spéculatif](developer-guidance-speculative-execution.md).
+For information about how to indentify and mitigate against speculative execution side channel hardware vulnerabilities in C++ software, see [C++ Developer Guidance for Speculative Execution Side Channels](developer-guidance-speculative-execution.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 <xref:System.Security> <br/>
-[Sécurité](/dotnet/standard/security/index)<br/>
+[Security](/dotnet/standard/security/index)<br/>
 [Répercussions du contrôle de compte utilisateur sur votre application](how-user-account-control-uac-affects-your-application.md)

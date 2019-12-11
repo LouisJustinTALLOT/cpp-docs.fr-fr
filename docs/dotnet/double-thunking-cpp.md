@@ -8,36 +8,36 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89cca9ef42910d295cbae8bb677fb51927dbcdd2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404479"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988529"
 ---
 # <a name="double-thunking-c"></a>Double conversion de code (thunking) (C++)
 
-Double médiateur fait référence à la perte de performances que peut se produire lorsqu’un appel de fonction dans un contexte managé appelle une Visual C++ géré (fonction) et où l’exécution du programme appelle le point d’entrée natif de la fonction pour appeler la fonction managée. Cette rubrique explique où double médiateur se produit et comment vous pouvez l’éviter pour améliorer les performances.
+Le double médiateur fait référence à la perte de performances que vous pouvez rencontrer quand un appel de fonction dans un contexte managé C++ appelle une fonction Visual managée et où l’exécution du programme appelle le point d’entrée natif de la fonction pour appeler la fonction managée. Cette rubrique explique où se produit le double médiateur et comment vous pouvez l’éviter pour améliorer les performances.
 
 ## <a name="remarks"></a>Notes
 
-Par défaut, lors de la compilation avec **/CLR**, la définition d’une fonction managée indique au compilateur de générer un point d’entrée managé et un point d’entrée natif. Ainsi, la fonction managée à être appelée à partir de sites d’appel natif et managé. Toutefois, lorsqu’un point d’entrée natif existe, il peut être le point d’entrée pour tous les appels à la fonction. Si une fonction appelante est gérée, le point d’entrée natif appelle ensuite le point d’entrée managé. En effet, les deux appels sont requis pour appeler la fonction (d'où le double médiateur). Par exemple, les fonctions virtuelles sont toujours appelées via un point d’entrée natif.
+Par défaut, lors de la compilation avec **/CLR**, la définition d’une fonction managée force le compilateur à générer un point d’entrée managé et un point d’entrée natif. Cela permet d’appeler la fonction managée à partir de sites d’appel natifs et managés. Toutefois, lorsqu’il existe un point d’entrée natif, il peut s’agir du point d’entrée de tous les appels à la fonction. Si une fonction appelante est managée, le point d’entrée natif appellera ensuite le point d’entrée managé. En effet, deux appels sont requis pour appeler la fonction (par conséquent, le double médiateur). Par exemple, les fonctions virtuelles sont toujours appelées par le biais d’un point d’entrée natif.
 
-Une solution consiste à indiquer au compilateur de ne pas générer un point d’entrée natif pour une fonction managée, que la fonction sera uniquement être appelée à partir d’un contexte managé, à l’aide de la [__clrcall](../cpp/clrcall.md) convention d’appel.
+Une solution consiste à dire au compilateur de ne pas générer de point d’entrée natif pour une fonction managée, que la fonction sera appelée uniquement à partir d’un contexte managé, à l’aide de la Convention d’appel [__clrcall](../cpp/clrcall.md) .
 
-De même, si vous exportez ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) une fonction managée, un point d’entrée natif est généré et toute fonction qui importe et appelle cette fonction appellera via le point d’entrée natif. Pour éviter un double médiateur dans cette situation, n’utilisez pas de sémantique d’exportation/importation native ; Il suffit de référencer les métadonnées via `#using` (consultez [#using, Directive](../preprocessor/hash-using-directive-cpp.md)).
+De même, si vous exportez ([dllexport, DllImport](../cpp/dllexport-dllimport.md)) une fonction managée, un point d’entrée natif est généré et toute fonction qui importe et appelle cette fonction appellera via le point d’entrée natif. Pour éviter le double médiateur dans cette situation, n’utilisez pas de sémantique d’exportation/importation native. référencez simplement les métadonnées par le biais de `#using` (consultez [#using directive](../preprocessor/hash-using-directive-cpp.md)).
 
-Le compilateur a été mis à jour afin de réduire inutiles double médiateur. Par exemple, toute fonction possédant un type managé dans la signature (y compris le type de retour) sera marquée implicitement comme `__clrcall`.
+Le compilateur a été mis à jour pour réduire le double médiateur inutile. Par exemple, toute fonction avec un type managé dans la signature (y compris le type de retour) est marquée implicitement comme `__clrcall`.
 
 ## <a name="example"></a>Exemple
 
 ### <a name="description"></a>Description
 
-L’exemple suivant illustre un double médiateur. Lors de la compilation native (sans **/CLR**), l’appel à la fonction virtuelle dans `main` génère un seul appel à `T`de copier le constructeur et un appel au destructeur. Un comportement similaire survient lorsque la fonction virtuelle est déclarée avec **/CLR** et `__clrcall`. Toutefois, lors de la compilation juste avec **/CLR**, l’appel de fonction génère un appel au constructeur de copie, mais il existe un autre appel au constructeur de copie en raison de la conversion de code natif et managé.
+L’exemple suivant illustre le double médiateur. En cas de compilation native (sans **/CLR**), l’appel à la fonction virtuelle dans `main` génère un appel au constructeur de copie de `T`et un appel au destructeur. Un comportement similaire est obtenu lorsque la fonction virtuelle est déclarée avec **/CLR** et `__clrcall`. Toutefois, quand elle vient d’être compilée avec **/CLR**, l’appel de fonction génère un appel au constructeur de copie, mais il existe un autre appel au constructeur de copie en raison du thunk natif à managé.
 
 ### <a name="code"></a>Code
 
-```
+```cpp
 // double_thunking.cpp
 // compile with: /clr
 #include <stdio.h>
@@ -74,7 +74,7 @@ int main() {
 }
 ```
 
-### <a name="sample-output"></a>Résultat de l'exemple
+### <a name="sample-output"></a>Sortie exemple
 
 ```
 __thiscall T::T(void)
@@ -91,11 +91,11 @@ __thiscall T::~T(void)
 
 ### <a name="description"></a>Description
 
-L’exemple précédent a montré l’existence d’un double médiateur. Cet exemple montre son effet. Le `for` boucle appelle la fonction virtuelle et l’heure de l’exécution de rapports de programme. L’heure les plus lentes est signalé lorsque le programme est compilé avec **/CLR**. Temps de rapides sont signalées lors de la compilation sans **/CLR** ou si la fonction virtuelle est déclarée avec `__clrcall`.
+L’exemple précédent a montré l’existence d’un double médiateur. Cet exemple illustre son effet. La boucle `for` appelle la fonction virtuelle et le programme signale la durée d’exécution. Le temps le plus lent est signalé lorsque le programme est compilé avec **/CLR**. Les temps les plus rapides sont signalés lors de la compilation sans **/CLR** ou si la fonction virtuelle est déclarée avec `__clrcall`.
 
 ### <a name="code"></a>Code
 
-```
+```cpp
 // double_thunking_2.cpp
 // compile with: /clr
 #include <time.h>
@@ -130,7 +130,7 @@ int main() {
 }
 ```
 
-### <a name="sample-output"></a>Résultat de l'exemple
+### <a name="sample-output"></a>Sortie exemple
 
 ```
 4.2 seconds

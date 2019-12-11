@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4670
 ms.assetid: e172b134-b1fb-4dfe-8e9d-209ea08b73c7
-ms.openlocfilehash: 1ce32ef4d07ea5e2c6f328578837f805eed5c897
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ea32e8693fbe310b82eeeb87b1e97f2281ddf04
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408132"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990755"
 ---
 # <a name="compiler-warning-level-4-c4670"></a>Avertissement du compilateur (niveau 4) C4670
 
@@ -21,7 +21,7 @@ La classe de base spécifiée d’un objet devant être levé dans un bloc **try
 
 L’exemple suivant génère l’avertissement C4670 :
 
-```
+```cpp
 // C4670.cpp
 // compile with: /EHsc /W4
 class A

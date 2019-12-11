@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4538
 ms.assetid: 747e3d51-b6d0-41c1-a726-7af3253b59d7
-ms.openlocfilehash: b60d919952b07e63d28a373414f1307d2031f00d
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: c68bcbfe035f12f1a2a16bbcaffbaf4db080388f
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188960"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992031"
 ---
 # <a name="compiler-warning-level-3-c4538"></a>Avertissement du compilateur (niveau 3) C4538
 
-'type' : les qualificateurs const/volatile sur ce type ne sont pas pris en charge
+'type' : const/volatile qualifiers on this type are not supported
 
-Un mot clé de qualificateur a été appliqué de façon incorrecte à un tableau. Pour plus d'informations, consultez [tableau](../../extensions/arrays-cpp-component-extensions.md).
+A qualifier keyword was applied to an array incorrectly. Pour plus d'informations, consultez [tableau](../../extensions/arrays-cpp-component-extensions.md).
 
-L’exemple suivant génère l’C4538 :
+The following sample generates C4538:
 
 ```cpp
 // C4538.cpp

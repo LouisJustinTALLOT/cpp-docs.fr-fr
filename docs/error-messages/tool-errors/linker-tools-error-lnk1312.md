@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1312
 ms.assetid: 48284abb-d849-43fc-ab53-45aded14fd8a
-ms.openlocfilehash: 49fa7e7963d6bb561e1602b58fe1f26c5f3d54bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e462d24f2eb54718ba73617146aab96bb14a66df
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160469"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990907"
 ---
 # <a name="linker-tools-error-lnk1312"></a>Erreur des outils Éditeur de liens LNK1312
 
-fichier non valide ou endommagé : Impossible d’importer l’assembly
+fichier non valide ou endommagé : impossible d’importer l’assembly
 
-Lors de la création d’un assembly, un fichier autre qu’un module ou un assembly compilé avec **/CLR** a été passé à la **/ASSEMBLYMODULE** option de l’éditeur de liens.  Si vous avez passé un fichier objet à **/ASSEMBLYMODULE**, simplement passer l’objet directement à l’éditeur de liens, plutôt qu’à **/ASSEMBLYMODULE**.
+Lors de la génération d’un assembly, un fichier autre qu’un module ou un assembly compilé avec **/CLR** a été passé à l’option de l’éditeur de liens **/ASSEMBLYMODULE** .  Si vous avez passé un fichier objet à **/ASSEMBLYMODULE**, il vous suffit de passer l’objet directement à l’éditeur de liens, plutôt qu’à **/ASSEMBLYMODULE**.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant créé le fichier .obj.
+L’exemple suivant a créé le fichier. obj.
 
-```
+```cpp
 // LNK1312.cpp
 // compile with: /clr /LD
 public ref class A {
@@ -34,9 +34,9 @@ public:
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur LNK1312.
+L’exemple suivant génère l’LNK1312.
 
-```
+```cpp
 // LNK1312_b.cpp
 // compile with: /clr /LD /link /assemblymodule:LNK1312.obj
 // LNK1312 error expected

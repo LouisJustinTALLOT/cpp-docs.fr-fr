@@ -1,17 +1,17 @@
 ---
 title: PROC
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROC
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: 5d1e44fcc4adbbe012b2f31fe9c6c27511bafff1
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e68a7fc9814ba1ca07095e036e88fb5917220086
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395026"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987934"
 ---
 # <a name="proc"></a>PROC
 
@@ -25,6 +25,8 @@ Marque le début et la fin d’un bloc de procédure appelé *label*. Les instru
 > *étiquette* **ENDP**
 
 ## <a name="remarks"></a>Notes
+
+Les arguments ⟦*distance*⟧ et ⟦*Language-type*⟧ sont valides uniquement dans MASM 32 bits.
 
 ⟦**Frame** ⟦ __:__ *ehandler-Address*⟧ ⟧ est valide uniquement avec ml64. exe, et fait MASM pour générer une entrée de table de fonctions dans. pdata et des informations de déroulement dans. XData pour le comportement de déroulement de la gestion structurée des exceptions d’une fonction.
 

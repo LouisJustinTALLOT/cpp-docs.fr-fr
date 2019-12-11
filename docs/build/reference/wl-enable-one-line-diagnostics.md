@@ -8,16 +8,16 @@ helpviewer_keywords:
 - /WL compiler option [C++]
 - WL compiler option [C++]
 ms.assetid: 332cadb4-8ea6-45fe-b67d-33ddec1f2c2e
-ms.openlocfilehash: c0d5110615f66dcf4f7dc170d89ee58c2e8fa5cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1ded1cd18eb75ed47b76c1353ad82a7fa497ba9
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316533"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988563"
 ---
 # <a name="wl-enable-one-line-diagnostics"></a>/WL (Activer un diagnostic de ligne)
 
-Ajoute des informations supplémentaires à un message d’erreur ou avertissement.
+Ajoute des informations supplémentaires à un message d’erreur ou d’avertissement.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,11 +27,11 @@ Ajoute des informations supplémentaires à un message d’erreur ou avertisseme
 
 ## <a name="remarks"></a>Notes
 
-Messages d’erreur et Avertissement du compilateur C++ peuvent être suivies d’autres informations qui s’affiche, par défaut, sur une nouvelle ligne. Lorsque vous compilez à partir de la ligne de commande, la ligne d’informations supplémentaire peut être ajoutée pour le message d’erreur ou avertissement. Cela peut être souhaitable si vous capturez votre sortie de génération dans un fichier journal et ensuite traitez ce journal pour rechercher toutes les erreurs et avertissements. Un point-virgule pour séparer le message d’erreur ou avertissement de la ligne supplémentaire.
+Les C++ messages d’erreur et d’avertissement du compilateur peuvent être suivis d’informations supplémentaires qui, par défaut, sont affichées sur une nouvelle ligne. Quand vous compilez à partir de la ligne de commande, la ligne d’informations supplémentaire peut être ajoutée au message d’erreur ou d’avertissement. Cela peut être souhaitable si vous capturez votre sortie de génération dans un fichier journal, puis traitez ce journal pour rechercher toutes les erreurs et tous les avertissements. Un point-virgule sépare le message d’erreur ou d’avertissement de la ligne supplémentaire.
 
-Pas tous les messages d’erreur et avertissement ont une ligne supplémentaire d’informations. Le code suivant génère une erreur qui a une ligne supplémentaire d’informations ; Il vous permet de tester l’effet lorsque vous utilisez **/WL**.
+Tous les messages d’erreur et d’avertissement n’ont pas de ligne d’informations supplémentaire. Le code suivant génère une erreur qui contient une ligne d’informations supplémentaire ; elle vous permet de tester l’effet lorsque vous utilisez **/WL**.
 
-```
+```cpp
 // compiler_option_WL.cpp
 // compile with: /WL
 #include <queue>
@@ -43,7 +43,7 @@ int main() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 

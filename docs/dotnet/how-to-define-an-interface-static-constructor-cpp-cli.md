@@ -1,25 +1,25 @@
 ---
-title: 'Procédure : Définir un constructeur d’Interface statique (C++ / c++ / CLI)'
+title: "Comment : définir un constructeur d'interface statique (C++/CLI)"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [C++]
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-ms.openlocfilehash: 326b315e1e6c4defbef3ab6e487c78635e0aa50f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 562605a579ac372e4a69953853a6e32668357565
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378959"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988240"
 ---
-# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Procédure : Définir un constructeur d’Interface statique (C++ / c++ / CLI)
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Comment : définir un constructeur d'interface statique (C++/CLI)
 
-Une interface peut avoir un constructeur statique, ce qui peut être utilisé pour initialiser les données membres statiques.  Un constructeur statique sera appelé au maximum une fois et est appelé avant la première fois qu’un membre d’interface statique est accessible.
+Une interface peut avoir un constructeur statique, qui peut être utilisé pour initialiser des membres de données statiques.  Un constructeur statique est appelé au plus une fois et est appelé avant la première fois qu’un membre d’interface statique est accédé.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // mcppv2_interface_class2.cpp
 // compile with: /clr
 using namespace System;

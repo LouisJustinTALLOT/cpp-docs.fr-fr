@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Marshaler des pointeurs incorporés à l’aide d’interopérabilité C++'
+title: "Comment : marshaler des pointeurs incorporés à l'aide de l'interopérabilité C++"
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 972d7a9c09100c35cb0bf527efbd0884c909c46d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345739"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988183"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Procédure : Marshaler des pointeurs incorporés à l’aide d’interopérabilité C++
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Comment : marshaler des pointeurs incorporés à l'aide de l'interopérabilité C++
 
-Exemple de code suit le [managed, unmanaged](../preprocessor/managed-unmanaged.md) directives #pragma pour implémenter des fonctions managées et dans le même fichier, mais ces fonctions interagissent de la même manière, si elles sont définies dans des fichiers distincts. Fichiers contenant uniquement des fonctions non managées ne doivent pas être compilé avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Les exemples de code suivants utilisent les directives de #pragma [managées et non managées](../preprocessor/managed-unmanaged.md) pour implémenter des fonctions managées et non managées dans le même fichier, mais ces fonctions interagissent de la même manière si elles sont définies dans des fichiers distincts. Les fichiers contenant uniquement des fonctions non managées n’ont pas besoin d’être compilés avec [/clr (compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment une fonction non managée qui prend une structure contenant des pointeurs peut être appelée à partir d’une fonction managée. La fonction managée crée une instance de la structure et initialise le pointeur incorporé avec le nouveau mot clé (au lieu du [gcnew nouvelle, ref](../extensions/ref-new-gcnew-cpp-component-extensions.md) mot clé). Étant donné que ceci alloue la mémoire sur le tas natif, il n’est pas nécessaire pour épingler le tableau pour supprimer le garbage collection. Toutefois, la mémoire doit être explicitement supprimée pour éviter toute fuite de mémoire.
+L’exemple suivant montre comment une fonction non managée qui prend une structure contenant des pointeurs peut être appelée à partir d’une fonction managée. La fonction managée crée une instance de la structure et initialise le pointeur incorporé avec le mot clé New (au lieu du mot clé [ref New, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) ). Étant donné que cette valeur alloue la mémoire sur le tas natif, il n’est pas nécessaire d’épingler le tableau pour supprimer garbage collection. Toutefois, la mémoire doit être supprimée explicitement pour éviter les fuites de mémoire.
 
-```
+```cpp
 // marshal_embedded_pointer.cpp
 // compile with: /clr
 #include <iostream>

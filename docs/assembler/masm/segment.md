@@ -1,17 +1,17 @@
 ---
 title: SEGMENT
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - SEGMENT
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: b7344d9cb685e0212748d7835e19f398f14979e7
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 933e4e42b4b0f9cc979a3e67805d017f723472ef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393727"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988013"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -23,7 +23,7 @@ Définit un segment de programme appelé *Name* ayant des attributs de segment
 > *instructions*\
 > **fin** du nom
 
-#### <a name="parameters"></a>Paramètres
+#### <a name="parameters"></a>Parameters
 
 *align*<br/>
 Plage d’adresses mémoire à partir de laquelle une adresse de départ du segment peut être sélectionnée. Le type d’alignement peut être l’un des éléments suivants :
@@ -39,11 +39,11 @@ Plage d’adresses mémoire à partir de laquelle une adresse de départ du segm
 
 Si ce paramètre n’est pas spécifié, **para** est utilisé par défaut.
 
-*combiner*\
+*combiner* (MASM 32 bits uniquement) \
 **Public**, **Stack**, **Common**, **Memory**, **à**l'<em>adresse</em>, **privé**
 
-*utiliser*\
-**USE16**, **USE32**, **plat**
+*use* (MASM 32 bits uniquement) \
+**USE16**, **USE32**, **FLAT**
 
 *caractéristiques*\
 **Info**, **lire**, **écrire**, **exécuter**, **partagé**, **nopage**, **NoCache**et **Ignorer**

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-ms.openlocfilehash: 6a82d7756f1460c56d87a3d7b1360c140de19827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe64eecfbc9fed57c3748afd5804b76d6e4284a4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160605"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990938"
 ---
 # <a name="linker-tools-error-lnk1301"></a>Erreur des outils Éditeur de liens LNK1301
 
-Modules clr LTCG trouvés, incompatibles avec /LTCG : paramètre
+Modules CLR LTCG trouvés, incompatibles avec/LTCG : Parameter
 
-Un module compilé avec/CLR et /GL a été l’éditeur de liens avec un des optimisations guidées par profil (PGO) paramètres passé de /LTCG.
+Un module compilé avec/CLR et/GL a été passé à l’éditeur de liens avec l’un des paramètres d’optimisation guidée par profil (PGO) de/LTCG.
 
-Optimisations guidées par profil ne sont pas pris en charge pour les modules / CLR.
+Les optimisations guidées par profil ne sont pas prises en charge pour les modules/CLR.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, consultez .
 
 - [/GL (Optimisation de l’ensemble du programme)](../../build/reference/gl-whole-program-optimization.md)
 
@@ -33,13 +33,13 @@ Pour plus d'informations, voir :
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 
-1. Ne compilez pas avec/CLR, ou ne pas lier avec l’un des paramètres PGO /LTCG.
+1. Ne compilez pas avec/CLR ou ne liez pas l’un des paramètres PGO à/LTCG.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur LNK1301 :
+L’exemple suivant génère l’LNK1301 :
 
-```
+```cpp
 // LNK1301.cpp
 // compile with: /clr /GL /link /LTCG:PGI LNK1301.obj
 // LNK1301 expected
