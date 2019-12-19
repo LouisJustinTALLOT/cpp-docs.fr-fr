@@ -15,21 +15,21 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397996"
 ---
-# <a name="safeseh-32-bit-masm"></a>.SAFESEH (32-bit MASM)
+# <a name="safeseh-32-bit-masm"></a>. SAFESEH (MASM 32 bits)
 
-Registers a function as a structured exception handler. (32-bit MASM only.)
+Inscrit une fonction comme gestionnaire d’exceptions structurées. (uniquement MASM 32 bits.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.SAFESEH** *identifier*
+> **.**  *Identificateur* SAFESEH
 
 ## <a name="remarks"></a>Notes
 
-*identifier* must be the ID for a locally defined [PROC](../../assembler/masm/proc.md) or [EXTRN](../../assembler/masm/extrn.md) PROC. A [LABEL](../../assembler/masm/label-masm.md) is not allowed. The .SAFESEH directive requires the [/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml.exe command-line option.
+L’*identificateur* doit être l’ID d’une procédure [PROC](../../assembler/masm/proc.md) ou [EXTRN](../../assembler/masm/extrn.md) définie localement. Une [étiquette](../../assembler/masm/label-masm.md) n’est pas autorisée. La. La directive SAFESEH requiert l’option de ligne de commande [/SAFESEH](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml. exe.
 
-For more information about structured exception handlers, see [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
+Pour plus d’informations sur les gestionnaires d’exceptions structurés, consultez [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
 
-For example, to register a safe exception handler, create a new MASM file (as follows), assemble with /safeseh, and add it to the linked objects.
+Par exemple, pour inscrire un gestionnaire d’exceptions sécurisées, créez un nouveau fichier MASM (comme suit), assemblez avec/SafeSEH, puis ajoutez-le aux objets liés.
 
 ```asm
 .386
@@ -41,4 +41,4 @@ end
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives reference](directives-reference.md)
+[Informations de référence sur les directives](directives-reference.md)
