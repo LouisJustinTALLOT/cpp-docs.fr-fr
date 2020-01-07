@@ -1,17 +1,17 @@
 ---
 title: MMWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - MMWORD
 helpviewer_keywords:
 - MMWORD directive
 ms.assetid: b4c5a104-9078-4fb4-afc3-d1e63abe562a
-ms.openlocfilehash: d4378c1435df09f249fe7f55dabd4bd0f43f6100
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: fd3b9f40b7ff9fa4dae570e0ed906c13a9456424
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397175"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311921"
 ---
 # <a name="mmword"></a>MMWORD
 
@@ -38,3 +38,7 @@ Bien que les deux instructions fonctionnent sur des opérandes 64 bits, **QWord*
 ```asm
     movq     mm0, mmword ptr [ebx]
 ```
+
+## <a name="see-also"></a>Voir aussi
+
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

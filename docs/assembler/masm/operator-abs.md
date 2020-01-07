@@ -1,27 +1,28 @@
 ---
 title: ABS, opérateur
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator ABS
 helpviewer_keywords:
 - operator ABS
 - ABS operator
 ms.assetid: 0c70b68e-5706-4042-a5fe-8595d0b510f2
-ms.openlocfilehash: cd1e4a47e93bcde0073e444797c604e4577718f8
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5d2f878910d4ef84d92b75f913f73e2a9ad4e930
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397166"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311895"
 ---
 # <a name="operator-abs"></a>ABS, opérateur
 
-Consultez la directive [EXTERNDEF](../../assembler/masm/externdef.md) .
+Consultez la directive [EXTERNDEF](externdef.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
-> **ABSOLUE**
+> **ABS**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les opérateurs](operators-reference.md)
+Informations de référence sur les [opérateurs](operators-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)
