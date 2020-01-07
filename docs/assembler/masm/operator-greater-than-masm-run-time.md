@@ -1,27 +1,28 @@
 ---
 title: '&gt; d’opérateur (MASM Run Time)'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator >
 helpviewer_keywords:
 - '> operator, comparing specific objects'
 - operator >
 ms.assetid: f2244900-8ddf-4e8c-9ab0-68b9118a6f75
-ms.openlocfilehash: 921bfb246681ea8ecb628d95fc9816a5f752389e
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: fb3089ef51fae8081563fb3b453cc5f8ad6add92
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396937"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311570"
 ---
 # <a name="operator-gt-masm-run-time"></a>&gt; d’opérateur (MASM Run Time)
 
-Est supérieur à. Utilisé uniquement dans [. Si](../../assembler/masm/dot-if.md), [. WHILe](../../assembler/masm/dot-while.md), ou [. RÉPÈTE](../../assembler/masm/dot-repeat.md) les blocs et les évalue au moment de l’exécution, et non au moment de l’assembly.
+Est supérieur à. Utilisé uniquement dans [. Si](dot-if.md), [. WHILe](dot-while.md), ou [. RÉPÈTE](dot-repeat.md) les blocs et les évalue au moment de l’exécution, et non au moment de l’assembly.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* **>** *expression2*
+> *expression1* **>** *Expression2*
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les opérateurs](operators-reference.md)
+Informations de référence sur les [opérateurs](operators-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

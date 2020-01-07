@@ -1,17 +1,17 @@
 ---
 title: MASM pour x64 (ml64.exe)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - ml64
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-ms.openlocfilehash: 68f5a14b092109a647e7a81ed6c3fef148a5571b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5e324414a0d4d7e74bb28d54c1d858ef6fb9793c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397227"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312740"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM pour x64 (ml64.exe)
 
@@ -19,7 +19,7 @@ Visual Studio comprend à la fois des versions 32 bits et 64 bits de Microsoft a
 
 Pour utiliser MASM afin de générer du code pour les cibles x64 sur la ligne de commande, vous devez utiliser une invite de commandes développeur pour les cibles x64, qui définit le chemin d’accès requis et d’autres variables d’environnement. Pour plus d’informations sur le démarrage d’une invite de commandes développeur, consultez [générer du code C/C++ code sur la ligne de commande](../../build/building-on-the-command-line.md).
 
-Pour plus d’informations sur les options de ligne de commande de ml64. exe, consultez [ml et référence de ligne de commande ml64](../../assembler/masm/ml-and-ml64-command-line-reference.md).
+Pour plus d’informations sur les options de ligne de commande de ml64. exe, consultez [ml et référence de ligne de commande ml64](ml-and-ml64-command-line-reference.md).
 
 L’assembleur inline ou l’utilisation du mot clé ASM n’est pas pris en charge pour les cibles x64 ou ARM. Pour porter votre code x86 qui utilise l’assembleur inline vers x64 ou ARM, vous pouvez convertir votre code en C++, utiliser des intrinsèques du compilateur ou créer des fichiers sources assembleur-langage. Le compilateur C++ Microsoft prend en charge les fonctions intrinsèques pour vous permettre d’utiliser des instructions de fonction spéciale, par exemple Privileged, Scan-bit/test, inter-lockd, etc., de la manière la plus proche possible d’une plateforme multiplateforme. Pour plus d’informations sur les intrinsèques disponibles, consultez [intrinsèques du compilateur](../../intrinsics/compiler-intrinsics.md).
 
@@ -43,21 +43,21 @@ Créez votre code assembleur-langue dans le fichier. asm que vous avez ajouté. 
 
 Vous pouvez utiliser les directives spécifiques à ml64 suivantes dans votre code source assembleur-langue qui cible x64 :
 
-- [.ALLOCSTACK](../../assembler/masm/dot-allocstack.md)
+- [.ALLOCSTACK](dot-allocstack.md)
 
-- [.ENDPROLOG](../../assembler/masm/dot-endprolog.md)
+- [.ENDPROLOG](dot-endprolog.md)
 
-- [.PUSHFRAME](../../assembler/masm/dot-pushframe.md)
+- [.PUSHFRAME](dot-pushframe.md)
 
-- [.PUSHREG](../../assembler/masm/dot-pushreg.md)
+- [.PUSHREG](dot-pushreg.md)
 
-- [.SAVEREG](../../assembler/masm/dot-savereg.md)
+- [.SAVEREG](dot-savereg.md)
 
-- [.SAVEXMM128](../../assembler/masm/dot-savexmm128.md)
+- [.SAVEXMM128](dot-savexmm128.md)
 
-- [.SETFRAME](../../assembler/masm/dot-setframe.md)
+- [.SETFRAME](dot-setframe.md)
 
-En outre, la directive [proc](../../assembler/masm/proc.md) a été mise à jour pour être utilisée avec ml64. exe.
+En outre, la directive [proc](proc.md) a été mise à jour pour être utilisée avec ml64. exe.
 
 ## <a name="32-bit-address-mode-address-size-override"></a>32-mode d’adresse bits (remplacement de la taille d’adresse)
 
@@ -82,4 +82,4 @@ mov eax, DWORD PTR [ecx*2+r10+0100h]
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Informations de référence sur Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)
