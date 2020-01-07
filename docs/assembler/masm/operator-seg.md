@@ -1,6 +1,6 @@
 ---
 title: SEG, opérateur
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator SEG
 - SEG
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - operator SEG
 - SEG operator
 ms.assetid: 471733f3-72a0-4024-9861-5cc48c30dd0c
-ms.openlocfilehash: a0afe3d4825d096a0d12f5d15e63d479e78c3bd7
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 8ce392c8e3bbcd72230b2def38e94c5c196e7dbc
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396474"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318980"
 ---
 # <a name="operator-seg"></a>SEG, opérateur
 
@@ -25,4 +25,5 @@ Retourne le segment de l' *expression*.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les opérateurs](operators-reference.md)
+Informations de référence sur les [opérateurs](operators-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)
