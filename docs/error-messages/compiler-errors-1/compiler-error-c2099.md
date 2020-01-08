@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2099
 ms.assetid: 30e151ee-d458-4901-b0c0-d45054a913f5
-ms.openlocfilehash: 9c83b4a50cb9cf5c5b1992f0f64e2eeb013b48e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9fb7739111d13a585579455ed97cecaca3266e4
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376940"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301936"
 ---
 # <a name="compiler-error-c2099"></a>Erreur du compilateur C2099
 
@@ -23,7 +23,7 @@ Cette erreur est émise uniquement par le compilateur C et ne se produit que pou
 
 L’exemple suivant génère l’erreur C2099.
 
-```
+```c
 // C2099.c
 int j;
 int *p;
@@ -38,11 +38,11 @@ En cas d’échec du repli de constante, le compilateur appelle l’initialisati
 
 Pour résoudre cette erreur, compilez le module en tant que fichier .cpp ou simplifiez l’expression.
 
-Pour plus d'informations, consultez [/fp (Specify Floating-Point Behavior)](../../build/reference/fp-specify-floating-point-behavior.md).
+Pour plus d’informations, consultez l’article [/fp (Spécifier le comportement de virgule flottante)](../../build/reference/fp-specify-floating-point-behavior.md).
 
 L’exemple suivant génère l’erreur C2099.
 
-```
+```c
 // C2099_2.c
 // compile with: /fp:strict /c
 float X = 2.0 - 1.0;   // C2099
