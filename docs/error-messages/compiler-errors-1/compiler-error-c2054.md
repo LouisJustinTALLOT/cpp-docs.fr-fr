@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - C2054
 ms.assetid: 37f7c612-0d7d-4728-9e67-ac4160555f48
-ms.openlocfilehash: 7366995f8930b4733ccff73aef38ebcf65a0c120
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7d90d684c1d95f540f6357bf61ee7c6f889ad3f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408769"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302053"
 ---
 # <a name="compiler-error-c2054"></a>Erreur du compilateur C2054
 
-attendu ' (' suivre 'identificateur'
+' ('doit suivre’identifier'
 
-L’identificateur de fonction est utilisé dans un contexte qui requiert des parenthèses fermantes.
+L’identificateur de fonction est utilisé dans un contexte qui requiert des parenthèses de fin.
 
-Cette erreur peut résulter de l’omission d’un signe égal (=) dans une initialisation complexe.
+Cette erreur peut être due à l’omission d’un signe égal (=) sur une initialisation complexe.
 
-L’exemple suivant génère l’erreur C2054 :
+L’exemple suivant génère l’C2054 :
 
-```
+```c
 // C2054.c
 int array1[] { 1, 2, 3 };   // C2054, missing =
 ```
 
 Solution possible :
 
-```
+```c
 // C2054b.c
 int main() {
    int array2[] = { 1, 2, 3 };

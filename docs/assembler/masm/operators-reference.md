@@ -1,16 +1,16 @@
 ---
 title: Informations de référence sur les opérateurs MASM
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: 5295307ad668b76e5ff39882ce2613f2042f914a
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c0059ab1b0204b79e040d18bd5aa88145775ebcd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395214"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318759"
 ---
 # <a name="masm-operators-reference"></a>Informations de référence sur les opérateurs MASM
 
@@ -18,8 +18,8 @@ ms.locfileid: "74395214"
 
 ||||
 |-|-|-|
-|[* (multiplier)](operator-multiply.md)|[+ (ajouter)](operator-add.md)|[-(soustraction ou négation)](operator-subtract-2.md)|
-|[. case](operator-dot.md)|[/(Division)](operator-subtract-1.md)|[&#91;&#93;évaluer](operator-brackets.md)|
+|[* (multiplier)](operator-multiply.md)|[+ (add)](operator-add.md)|[-(soustraction ou négation)](operator-subtract-2.md)|
+|[. case](operator-dot.md)|[/ (divide)](operator-subtract-1.md)|[&#91;&#93; (index)](operator-brackets.md)|
 |[MOD (reste)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>Flux de contrôle
@@ -68,7 +68,7 @@ ms.locfileid: "74395214"
 |[EQ (égal à)](operator-eq.md)|[GE (supérieur ou égal à)](operator-ge.md)|[GT (supérieur à)](operator-gt.md)|
 |[LE (inférieur ou égal à)](operator-le.md)|[LT (inférieur à)](operator-lt.md)|[Ne (pas égal à)](operator-ne.md)|
 
-## <a name="segment"></a>partie
+## <a name="segment"></a>Segment
 
 |||
 |-|-|
@@ -90,4 +90,5 @@ ms.locfileid: "74395214"
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)<br/>
+Informations de [référence sur Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

@@ -1,17 +1,17 @@
 ---
 title: OWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - OWORD
 helpviewer_keywords:
 - OWORD directive
 ms.assetid: 83262c07-6c67-4296-a07d-65502ba5d09c
-ms.openlocfilehash: 7dd69d2b2a42f78d17018e1840c8118aa12d55fa
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 311842ef4b912d96c4dc82418392c50ee2b6729e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395107"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318720"
 ---
 # <a name="oword"></a>OWORD
 
@@ -19,8 +19,9 @@ Utilisé comme spécificateur de type lorsqu’un type de données de 16 octets 
 
 ## <a name="syntax"></a>Syntaxe
 
-> **OWORD**
+> ⟦ *⟧* **OWORD**  *initializer* ⟦ __,__ *initializer* ... ⟧
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](directives-reference.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

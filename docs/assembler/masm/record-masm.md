@@ -1,19 +1,19 @@
 ---
 title: RECORD (MASM)
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - RECORD
 helpviewer_keywords:
 - RECORD directive
 ms.assetid: c83db394-0fe3-468f-813f-13302cdc862d
-ms.openlocfilehash: ac11321ecd9610210fe776db83c3db49749d991a
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c9cbf2c487ab3dd3026b57f7b058a0dd852bed41
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394599"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318512"
 ---
-# <a name="record-masm"></a>RECORD (MASM)
+# <a name="record"></a>RECORD
 
 Déclare un type d’enregistrement composé des champs spécifiés. *fieldName* nomme le champ, *Width* spécifie le nombre de bits et *expression* donne sa valeur initiale.
 
@@ -23,4 +23,5 @@ Déclare un type d’enregistrement composé des champs spécifiés. *fieldName*
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

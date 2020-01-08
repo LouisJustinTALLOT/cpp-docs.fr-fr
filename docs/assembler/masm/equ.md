@@ -1,17 +1,17 @@
 ---
 title: EQU
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - EQU
 helpviewer_keywords:
 - EQU directive
 ms.assetid: 96db466a-1eab-45bd-a3c2-5a59bd754eab
-ms.openlocfilehash: 111493690e6619c44158470fd40705cc177c544d
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: f409110e665edc590383c438f12cc8b13084bc22
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397611"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317342"
 ---
 # <a name="equ"></a>EQU
 
@@ -27,8 +27,9 @@ La première directive assigne la valeur numérique de l' *expression* à *Name*
 
 Le *nom* ne peut pas être redéfini ultérieurement.
 
-La deuxième directive assigne le *texte* spécifié à *Name*. Le *nom* peut être affecté ultérieurement à un autre *texte* . Consultez [TEXTEQU](../../assembler/masm/textequ.md).
+La deuxième directive assigne le *texte* spécifié à *Name*. Le *nom* peut être affecté ultérieurement à un autre *texte* . Consultez [TEXTEQU](textequ.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](directives-reference.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

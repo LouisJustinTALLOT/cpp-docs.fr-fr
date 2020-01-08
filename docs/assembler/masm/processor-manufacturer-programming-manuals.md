@@ -1,13 +1,13 @@
 ---
 title: Manuels de programmation du fabricant du processeur
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.assetid: 61844163-de2f-419a-808e-04de39dfdddf
-ms.openlocfilehash: bd1cba8378a8b173d36e9cc8975b171cd58d388c
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 3e1f1d32c50d86ac1df271add10936f572a59c20
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394832"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318655"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Manuels de programmation du fabricant du processeur
 
@@ -27,4 +27,5 @@ Ni Visual Studio ni l’assembleur de macros Microsoft ne prennent en charge tou
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)
+Informations de [référence sur Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

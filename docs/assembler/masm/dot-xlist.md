@@ -1,21 +1,21 @@
 ---
 title: .XLIST
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .XLIST
 helpviewer_keywords:
 - .XLIST directive
 ms.assetid: e90f04f4-82d0-4f6c-9568-7b3bca5060fb
-ms.openlocfilehash: cf8a13d1e470a72b3d5e854410f104232f550217
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: f2a3da1b9435fcc5c03b6cfc4c68b3438352d4d5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397808"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317446"
 ---
 # <a name="xlist"></a>.XLIST
 
-Consultez [. Nolist](../../assembler/masm/dot-nolist.md).
+Consultez [. Nolist](dot-nolist.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,5 @@ Consultez [. Nolist](../../assembler/masm/dot-nolist.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](directives-reference.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)
