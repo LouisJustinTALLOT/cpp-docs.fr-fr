@@ -3,12 +3,12 @@ title: Bienvenue dans C++ (C++ moderne)
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 2739da77fbfa973ca716abc6d8fa4920b81095d9
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 4dee4779e941c66af1c23f62a88cecec4916a475
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303330"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301741"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Bienvenue dans C++ (C++ moderne)
 
@@ -47,7 +47,7 @@ Dans la mesure du possible, utilisez un pointeur intelligent lors de l’allocat
 
 ## <a name="stdstring-and-stdstring_view"></a>std :: String et std :: string_view
 
-Les chaînes de style C représentent une autre source importante de bogues. En utilisant [std :: String et std :: wstring](../standard-library/basic-string-class.md) , vous pouvez éliminer pratiquement toutes les erreurs associées aux chaînes de style C et tirer parti des fonctions membres pour la recherche, l’ajout, la préattente, etc. Les deux sont hautement optimisés pour la vitesse. Lors du passage d’une chaîne à une fonction qui requiert uniquement un accès en lecture seule, dans (C++ 17), vous pouvez utiliser [std :: string_view](../standard-library/basic-string-view-class.md) pour un gain de performances encore plus important.
+Les chaînes de style C représentent une autre source importante de bogues. En utilisant [std :: String et std :: wstring](../standard-library/basic-string-class.md) , vous pouvez éliminer pratiquement toutes les erreurs associées aux chaînes de style C et tirer parti des fonctions membres pour la recherche, l’ajout, la préattente, etc. Les deux sont hautement optimisés pour la vitesse. Lors du passage d’une chaîne à une fonction qui requiert uniquement un accès en lecture seule, en C++ 17, vous pouvez utiliser [std :: string_view](../standard-library/basic-string-view-class.md) pour un gain de performances encore plus important.
 
 ## <a name="stdvector-and-other-standard-library-containers"></a>std :: Vector et autres conteneurs de bibliothèque standard
 
