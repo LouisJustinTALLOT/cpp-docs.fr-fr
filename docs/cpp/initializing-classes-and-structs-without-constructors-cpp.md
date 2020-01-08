@@ -3,12 +3,12 @@ title: Initialisation des accolades pour les classes, les structs et les unions
 description: Utiliser l’initialisation des accolades avec C++ n’importe quelle classe, struct ou Union
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: c746c6e4c17e5a55475d70f6dc3d927088af579f
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: a2c9db4572b0dde94c42ec6768a0f3bed7766a96
+ms.sourcegitcommit: 15677b0e4d2518847ce59b158990b25c4077e565
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683005"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75652622"
 ---
 # <a name="brace-initialization"></a>Initialisation de l’accolade
 
@@ -136,6 +136,8 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
+En mode **/std : c++ 17** , les règles relatives à l’initialisation des accolades vides sont légèrement plus restrictives. Consultez [constructeurs dérivés et initialisation d’agrégats étendus](constructors-cpp.md#extended_aggregate).
+
 ## <a name="initializer_list-constructors"></a>constructeurs initializer_list
 
 La [classe initializer_list](../standard-library/initializer-list-class.md) représente une liste d’objets d’un type spécifié qui peuvent être utilisés dans un constructeur et dans d’autres contextes. Vous pouvez construire une initializer_list à l’aide de l’initialisation des accolades :
@@ -162,7 +164,7 @@ Les classes de conteneur de la bibliothèque standard, ainsi que `string`, `wstr
 vector<int> v1{ 9, 10, 11 };
 map<int, string> m1{ {1, "a"}, {2, "b"} };
 string s{ 'a', 'b', 'c' };
-regex rgx{'x', 'y', 'z'};
+regex rgx{ 'x', 'y', 'z' };
 ```
 
 
