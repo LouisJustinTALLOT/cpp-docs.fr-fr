@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2142
 ms.assetid: d0dbe10e-0952-49a4-8b33-e82fb7558b19
-ms.openlocfilehash: eda60204e07fd025a8c62b19de70e8204f9f80f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1345fbb44558db01b19eec04b64cf7aa036931a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353584"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301923"
 ---
 # <a name="compiler-error-c2142"></a>Erreur du compilateur C2142
 
-déclarations de fonction différentes, paramètres spécifiés seulement dans un d’eux
+les déclarations de fonction diffèrent, les paramètres de variable spécifiés uniquement dans l’une d’entre elles
 
-Une déclaration de la fonction contient une liste de paramètres de variables. Une autre déclaration ne fait pas. C ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) uniquement.
+Une déclaration de la fonction contient une liste de paramètres de variables. Aucune autre déclaration. C ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)) uniquement.
 
-L’exemple suivant génère l’erreur C2142 :
+L’exemple suivant génère l’C2142 :
 
-```
+```c
 // C2142.c
 // compile with: /Za /c
 void func();

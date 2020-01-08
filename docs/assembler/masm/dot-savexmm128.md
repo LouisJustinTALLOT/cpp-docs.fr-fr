@@ -1,17 +1,17 @@
 ---
 title: .SAVEXMM128
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .SAVEXMM128
 helpviewer_keywords:
 - .SAVEXMM128 directive
 ms.assetid: 551eb472-b8d0-47b1-8d82-995d1f485723
-ms.openlocfilehash: 08bc5ab50e15aa59e0c49992d1810c7de20f364e
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 6402b75c10b1400d56923116621f00b4d0908822
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397949"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318252"
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 
@@ -23,12 +23,13 @@ Génère un `UWOP_SAVE_XMM128` ou une entrée de code de déroulement `UWOP_SAVE
 
 ## <a name="remarks"></a>Notes
 
-**. SAVEXMM128** permet aux utilisateurs de ml64. exe de spécifier le déroulement d’une fonction Frame et est uniquement autorisé dans le prologue, qui s’étend de la déclaration de la trame [proc](../../assembler/masm/proc.md) à l' [. Directive ENDPROLOG](../../assembler/masm/dot-endprolog.md) . Ces directives ne génèrent pas de code ; ils génèrent uniquement des `.xdata` et des `.pdata`. . Les SAVEXMM128 doivent être précédées d’instructions qui implémentent réellement les actions à déenrouler. Il est recommandé d’inclure dans un wrapper les directives de déroulement et le code qu’ils sont censés dérouler dans une macro pour garantir l’accord.
+**. SAVEXMM128** permet aux utilisateurs de ml64. exe de spécifier le déroulement d’une fonction Frame et est uniquement autorisé dans le prologue, qui s’étend de la déclaration de la trame [proc](proc.md) à l' [. Directive ENDPROLOG](dot-endprolog.md) . Ces directives ne génèrent pas de code ; ils génèrent uniquement des `.xdata` et des `.pdata`. . Les SAVEXMM128 doivent être précédées d’instructions qui implémentent réellement les actions à déenrouler. Il est recommandé d’inclure dans un wrapper les directives de déroulement et le code qu’ils sont censés dérouler dans une macro pour garantir l’accord.
 
 *offset* doit être un multiple de 16.
 
-Pour plus d’informations, consultez [MASM pour x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Pour plus d’informations, consultez [MASM pour x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](directives-reference.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

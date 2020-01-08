@@ -1,6 +1,6 @@
 ---
 title: tell
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - tell
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - tell function
 ms.assetid: 3a92a40d-f472-4545-a493-f57c340ee798
-ms.openlocfilehash: 5723df73c79a7eb0b388b9d81a4a43586fec56c9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 18d793ad5fc26cd5f8a4906c160db7c7d25c0607
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957512"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300350"
 ---
 # <a name="tell"></a>tell
 
-Cette fonction POSIX est déconseillée. Utilisez plutôt [_tell](tell-telli64.md), qui est conforme à la norme ISO C++.
+Le nom de fonction spécifique à Microsoft `tell` est un alias déconseillé pour la fonction [_tell](tell-telli64.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
+
+Nous vous recommandons d’utiliser [_tell](tell-telli64.md) à la place. Vous pouvez continuer à utiliser ce nom de fonction et désactiver l’avertissement. Pour plus d’informations, consultez [Désactiver les](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) noms de [fonction](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)d’avertissement et POSIX.

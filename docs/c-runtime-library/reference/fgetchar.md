@@ -1,6 +1,6 @@
 ---
 title: fgetchar
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - fgetchar
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - fgetchar function
 ms.assetid: 2b27a6f2-d973-4d12-a66d-7e6b01e84470
-ms.openlocfilehash: 91ac70da8eb4e1beca844453eaee8ef57759e85a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 66cd0747205402073ef276df7fa39eeaa9900c1e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940850"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299479"
 ---
 # <a name="fgetchar"></a>fgetchar
 
-Cette fonction POSIX est déconseillée. Utilisez à la place [_fgetchar](fgetchar-fgetwchar.md), qui est conforme à la spécification ISO C++.
+Le nom de fonction spécifique à Microsoft `fgetchar` est un alias déconseillé pour la fonction [_fgetchar](fgetchar-fgetwchar.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
+
+Nous vous recommandons d’utiliser [_fgetchar](fgetchar-fgetwchar.md) à la place. Vous pouvez continuer à utiliser ce nom de fonction et désactiver l’avertissement. Pour plus d’informations, consultez [Désactiver les](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) noms de [fonction](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)d’avertissement et POSIX.

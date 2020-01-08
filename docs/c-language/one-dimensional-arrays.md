@@ -10,16 +10,16 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-ms.openlocfilehash: bd3b495483a460f01fe1951ee4c8b5ac3b447701
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 7ac57a65d575ba6a9134f3c4474103735411847d
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147633"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299102"
 ---
 # <a name="one-dimensional-arrays"></a>Tableaux unidimensionnels
 
-Une expression suffixée suivie d'une expression entre crochets (**[ ]**) est une représentation indicée d'un élément d'un objet tableau. Une expression d'indice représente la valeur à l'adresse qui correspond aux positions de *expression* au-delà de *postfix-expression* une fois exprimée comme
+Une expression suffixée suivie d'une expression entre crochets ( **[ ]** ) est une représentation indicée d'un élément d'un objet tableau. Une expression d'indice représente la valeur à l'adresse qui correspond aux positions de *expression* au-delà de *postfix-expression* une fois exprimée comme
 
 ```
 postfix-expression [ expression ]
@@ -27,7 +27,7 @@ postfix-expression [ expression ]
 
 Généralement, la valeur représentée par *postfix-expression* est une valeur de pointeur, par exemple un identificateur de tableau, et *expression* est une valeur intégrale. Toutefois, sur le plan de la syntaxe, il est requis que l'une des expressions soit de type pointeur et l'autre de type intégral. La valeur intégrale peut donc se trouver dans la position *postfix-expression* et la valeur de pointeur peut être entre crochets, dans la position *expression* ou d'indice. Par exemple, ce code est conforme :
 
-```
+```c
 // one_dimensional_arrays.c
 int sum, *ptr, a[10];
 int main() {
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-Les expressions d'indice servent généralement à faire référence à des éléments de tableau, mais vous pouvez appliquer un indice à n'importe quel pointeur. Quel que soit l'ordre des valeurs, *expression* doit être placé entre crochets (**[ ]**).
+Les expressions d'indice servent généralement à faire référence à des éléments de tableau, mais vous pouvez appliquer un indice à n'importe quel pointeur. Quel que soit l'ordre des valeurs, *expression* doit être placé entre crochets ( **[ ]** ).
 
-L'expression d'indice est évaluée en ajoutant la valeur intégrale à la valeur de pointeur, puis en appliquant l'opérateur d'indirection (<strong>\*</strong>) au résultat. (Pour obtenir une description de l'opérateur d'indirection, consultez [Opérateurs d'indirection et d'adresse](../c-language/indirection-and-address-of-operators.md).) En pratique, pour un tableau unidimensionnel, les quatre expressions suivantes sont identiques, en supposant que `a` est un pointeur et `b` un entier :
+L'expression d'indice est évaluée en ajoutant la valeur intégrale à la valeur de pointeur, puis en appliquant l'opérateur d'indirection (<strong>\*</strong>) au résultat. (Pour plus d’informations sur l’opérateur d’indirection, consultez opérateurs d’indirection [et d’adresse](../c-language/indirection-and-address-of-operators.md) .) En effet, pour un tableau unidimensionnel, les quatre expressions suivantes sont équivalentes, en supposant que `a` est un pointeur et `b` est un entier :
 
 ```
 a[b]
@@ -51,9 +51,9 @@ Selon les règles de conversion applicables à l'opérateur d'addition (données
 
 Par exemple, supposons que l'identificateur `line` fait référence à un tableau de valeurs `int`. La procédure suivante est utilisée pour évaluer l'expression d'indice `line[ i ]` :
 
-1. La valeur entière `i` est multipliée par le nombre d'octets définis comme longueur d'un élément `int`. La valeur convertie de `i` représente `i` positions `int`.
+1. La valeur entière `i` est multipliée par le nombre d'octets définis comme longueur d'un élément `int`. La valeur convertie de `i` représente `i` positions de `int`.
 
-1. Cette valeur convertie est ajoutée à la valeur de pointeur d'origine (`line`) de façon à produire une adresse qui est décalée de `i` positions `int` à partir de `line`.
+1. Cette valeur convertie est ajoutée à la valeur de pointeur d’origine (`line`) pour produire une adresse qui est décalée `i` positions de `int` à partir de `line`.
 
 1. L'opérateur d'indirection est appliqué à la nouvelle adresse. Le résultat est la valeur de l'élément de tableau à cette position (intuitivement, `line [ i ]`).
 

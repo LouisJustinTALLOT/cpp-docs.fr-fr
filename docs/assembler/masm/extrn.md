@@ -1,17 +1,17 @@
 ---
 title: EXTRN
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - EXTRN
 helpviewer_keywords:
 - EXTRN directive
 ms.assetid: 090f8ec7-28e7-451e-88a8-29c2e77fb956
-ms.openlocfilehash: baa52a882cc0cb584d2e435c8ff7976255fb6532
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 85edfae3a1af85c4ad102fe840d4be0f7c72abf2
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397544"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317329"
 ---
 # <a name="extrn"></a>EXTRN
 
@@ -21,8 +21,9 @@ ms.locfileid: "74397544"
 
 ## <a name="remarks"></a>Notes
 
-Consultez [extern](../../assembler/masm/extern-masm.md).
+Consultez [extern](extern-masm.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](directives-reference.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

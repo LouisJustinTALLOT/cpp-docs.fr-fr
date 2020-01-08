@@ -6,30 +6,30 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-ms.openlocfilehash: 387b2f4a7156e42e59bd70c5a6f747943fb54ca7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 373ce9fa2c2c96fac349940076873a4a637a9dbe
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313582"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298712"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Pourquoi les nombres à virgule flottante peuvent manquer de précision
 
-Les valeurs décimales à virgule flottante n’ont généralement pas une représentation binaire exacte. Il s’agit d’un effet secondaire de la façon dont l’UC représente les données à virgule flottante. Pour cette raison, vous pouvez rencontrer une certaine perte de précision, et certaines opérations à virgule flottante peuvent produire des résultats inattendus.
+En général, les valeurs décimales à virgule flottante n’ont pas de représentation binaire exacte. Il s’agit d’un effet secondaire de la façon dont l’UC représente des données à virgule flottante. Pour cette raison, vous pouvez constater une perte de précision et certaines opérations à virgule flottante peuvent produire des résultats inattendus.
 
-Ce comportement est le résultat d’un des éléments suivants :
+Ce comportement est le résultat de l’un des éléments suivants :
 
 - La représentation binaire du nombre décimal n’est peut-être pas exacte.
 
-- Il existe une incompatibilité de type entre les numéros utilisés (par exemple, mélange float et double).
+- Il existe une incompatibilité de type entre les nombres utilisés (par exemple, en mélangeant float et double).
 
-Pour résoudre le problème, vérifiez que la valeur est supérieure ou inférieure à ce qui est nécessaire, ou ils obtiennent et utilisent une bibliothèque Binary Coded Decimal (BCD) qui préserve la précision de la plupart des programmeurs.
+Pour résoudre le comportement, la plupart des programmeurs vérifient que la valeur est supérieure ou inférieure à ce qui est nécessaire, ou ils obtiennent et utilisent une bibliothèque de nombres décimaux codés binaires (BCD) qui conserveront la précision.
 
-Représentation binaire des valeurs à virgule flottante affecte la précision et l’exactitude des calculs en virgule flottante. Microsoft Visual C++ utilise [format à virgule flottante IEEE](ieee-floating-point-representation.md).
+La représentation binaire des valeurs à virgule flottante affecte la précision et l’exactitude des calculs à virgule flottante. Microsoft Visual C++ utilise [le format à virgule flottante IEEE](ieee-floating-point-representation.md).
 
 ## <a name="example"></a>Exemple
 
-```
+```c
 // Floating-point_number_precision.c
 // Compile options needed: none. Value of c is printed with a decimal
 // point precision of 10 and 6 (printf rounded value by default) to
@@ -58,9 +58,9 @@ int main() {
 They are not equal! The value of c is  2.4679999352 or 2.468000
 ```
 
-## <a name="comments"></a>Commentaires
+## <a name="comments"></a>Comments
 
-Pour EPSILON, vous pouvez utiliser les constantes FLT_EPSILON, qui est défini pour float en tant que 1.192092896e-07F, ou DBL_EPSILON, qui est défini pour double en tant que la précision est 2.2204460492503131e-016. Vous devez inclure float.h pour ces constantes. Ces constantes sont définies en tant que le plus petit positif number x, tel que x + 1,0 n’est pas égal à 1,0. Comme il s’agit d’un très petit nombre, vous devez employer la tolérance définie par l’utilisateur pour les calculs impliquant de très grands nombres.
+Pour EPSILON, vous pouvez utiliser les constantes FLT_EPSILON, qui est défini pour float comme 1.192092896 e-07F, ou DBL_EPSILON, qui est défini pour double comme 2, 2204460492503131e e-016. Vous devez inclure float. h pour ces constantes. Ces constantes sont définies comme étant le plus petit nombre positif x, de sorte que x + 1,0 n’est pas égal à 1,0. Étant donné qu’il s’agit d’un très petit nombre, vous devez utiliser la tolérance définie par l’utilisateur pour les calculs impliquant de très grands nombres.
 
 ## <a name="see-also"></a>Voir aussi
 

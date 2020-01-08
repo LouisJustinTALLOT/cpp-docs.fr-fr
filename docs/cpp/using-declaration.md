@@ -3,22 +3,20 @@ title: déclaration using
 ms.date: 11/04/2016
 helpviewer_keywords:
 - using declaration
-- declaring namespaces, unqualified names in namespaces
 - declarations [C++], using-declaration
 - namespaces [C++], unqualified names in
 - using keyword [C++]
-- declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: 46d8b1e13b55988efd40643482ffd6123034ccb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a158094141307acb507d5f3e873c600e89135ad7
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403345"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301273"
 ---
 # <a name="using-declaration"></a>déclaration using
 
-La déclaration using introduit un nom dans la région déclarative dans laquelle la déclaration using s’affiche.
+La Déclaration **using** introduit un nom dans la région déclarative dans laquelle la déclaration using s’affiche.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,21 +25,21 @@ using [typename] nested-name-specifier unqualified-id ;
 using declarator-list ;
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
-*spécificateur de nom imbriqué* une séquence d’espace de noms, classe, ou noms d’énumération et opérateurs de résolution de portée ( :), terminée par un opérateur de résolution de portée. Un opérateur de résolution de portée unique peut être utilisé pour introduire un nom à partir de l’espace de noms global. Le mot clé **typename** est facultatif et peut être utilisé pour résoudre des noms dépendants lors de l’introduction dans un modèle de classe à partir d’une classe de base.
+*Nested-Name-specifier* Séquence de noms d’espaces de noms, de classes ou d’énumération et d’opérateurs de résolution de portée ( ::), terminée par un opérateur de résolution de portée. Un opérateur de résolution de portée unique peut être utilisé pour introduire un nom à partir de l’espace de noms global. Le mot clé **TypeName** est facultatif et peut être utilisé pour résoudre des noms dépendants lorsqu’il est introduit dans un modèle de classe à partir d’une classe de base.
 
-*non qualifié id* non qualifiée id-expression, qui peut être un identificateur, un nom d’opérateur surchargé, un défini par l’utilisateur littéral opérateur ou conversion nom de fonction, un nom de destructeur de classe ou une liste de noms et d’arguments de modèle.
+*ID non qualifié* Une expression d’ID non qualifiée, qui peut être un identificateur, un nom d’opérateur surchargé, un opérateur de littéral défini par l’utilisateur ou un nom de fonction de conversion, un nom de destructeur de classe ou un nom de modèle et une liste d’arguments.
 
-*declarator-list* une liste séparée par des virgules de [**typename**] *spécificateur de nom imbriqué* *non qualifié id* déclarateurs, suivis éventuellement par un points de suspension.
+*déclarateur-liste* Liste séparée par des virgules des déclarateurs *Unqualified-ID Unqualified* - *Name-specifier* [**TypeName**], suivi éventuellement d’un point de suspension.
 
 ## <a name="remarks"></a>Notes
 
-Une déclaration using introduit un nom non qualifié en tant que synonyme pour une entité déclaré ailleurs. Il permet à un nom unique à partir d’un espace de noms spécifique pour être utilisé sans qualification explicite dans la région de déclaration dans laquelle elle apparaît. Il s’agit Contrairement à la [à l’aide de la directive](../cpp/namespaces-cpp.md#using_directives), ce qui permet de *tous les* les noms dans un espace de noms sans qualification. Le **à l’aide de** mot clé est également utilisé pour [alias de type](../cpp/aliases-and-typedefs-cpp.md).
+Une déclaration using introduit un nom non qualifié comme synonyme d’une entité déclarée ailleurs. Il permet d’utiliser un seul nom d’un espace de noms spécifique sans qualification explicite dans la région de la déclaration dans laquelle il apparaît. Cela diffère de la [directive using](../cpp/namespaces-cpp.md#using_directives), qui permet d’utiliser *tous* les noms d’un espace de noms sans qualification. Le mot clé **using** est également utilisé pour les [alias de type](../cpp/aliases-and-typedefs-cpp.md).
 
 ## <a name="example"></a>Exemple
 
-Une déclaration using peut être utilisé dans une définition de classe.
+Une déclaration using peut être utilisée dans une définition de classe.
 
 ```cpp
 // using_declaration1.cpp
@@ -87,7 +85,7 @@ In B::g()
 
 ## <a name="example"></a>Exemple
 
-Lorsqu’il est utilisé pour déclarer un membre, un à l’aide de déclaration doit faire référence à un membre d’une classe de base.
+Lorsqu’elle est utilisée pour déclarer un membre, une déclaration using doit faire référence à un membre d’une classe de base.
 
 ```cpp
 // using_declaration2.cpp
@@ -127,7 +125,7 @@ In B::f()
 
 ## <a name="example"></a>Exemple
 
-Les membres déclarés à l’aide d’une déclaration peut être référencée à l’aide de qualification explicite. Le `::` préfixe fait référence à l’espace de noms global.
+Les membres déclarés à l’aide d’une déclaration using peuvent être référencés à l’aide d’une qualification explicite. Le préfixe `::` fait référence à l’espace de noms global.
 
 ```cpp
 // using_declaration3.cpp
@@ -167,9 +165,9 @@ In A::g
 
 ## <a name="example"></a>Exemple
 
-Lors d’un à l’aide de la déclaration est effectuée, le synonyme créé par la déclaration fait uniquement référence aux définitions qui sont valides au moment à l’aide de la déclaration. Définitions ajoutées à un espace de noms après l’utilisation de déclaration ne sont pas synonymes valides.
+Quand une déclaration using est effectuée, le synonyme créé par la déclaration fait référence uniquement aux définitions qui sont valides au point de la déclaration using. Les définitions ajoutées à un espace de noms après la déclaration using ne sont pas des synonymes valides.
 
-Un nom défini par un **à l’aide de** déclaration est un alias pour son nom d’origine. Il n’affecte pas le type, d’une liaison ou d’autres attributs de la déclaration d’origine.
+Un nom défini par une déclaration **using** est un alias pour son nom d’origine. Elle n’affecte pas le type, la liaison ou d’autres attributs de la déclaration d’origine.
 
 ```cpp
 // post_declaration_namespace_additions.cpp
@@ -196,7 +194,7 @@ void b() {
 
 ## <a name="example"></a>Exemple
 
-En ce qui concerne les fonctions dans les espaces de noms, si un ensemble de déclarations locales et à l’aide de déclarations pour bénéficient d’un nom unique dans une région déclarative, elles doivent toutes faire référence à la même entité, ou ils doivent tous faire référence aux fonctions.
+En ce qui concerne les fonctions dans les espaces de noms, si un ensemble de déclarations locales et l’utilisation de déclarations pour un même nom sont fournies dans une région déclarative, elles doivent toutes faire référence à la même entité, ou elles doivent toutes faire référence à des fonctions.
 
 ```cpp
 // functions_in_namespaces1.cpp
@@ -215,11 +213,11 @@ void g() {
 }
 ```
 
-Dans l’exemple ci-dessus, le `using B::i` instruction provoque une seconde `int i` doivent être déclarées dans le `g()` (fonction). Le `using B::f` instruction n’est pas en conflit avec le `f(char)` fonctionner, car les noms des fonctions introduites par `B::f` ont différents types de paramètres.
+Dans l’exemple ci-dessus, l’instruction `using B::i` entraîne la déclaration d’une deuxième `int i` dans la fonction `g()`. L’instruction `using B::f` n’est pas en conflit avec la fonction `f(char)`, car les noms de fonctions introduits par `B::f` ont des types de paramètres différents.
 
 ## <a name="example"></a>Exemple
 
-Une déclaration de fonction locale ne peut pas avoir le même nom et le type en tant que fonction introduite à l’aide de déclaration. Exemple :
+Une déclaration de fonction locale ne peut pas avoir le même nom et le même type qu’une fonction introduite à l’aide d’une déclaration. Par exemple :
 
 ```cpp
 // functions_in_namespaces2.cpp
@@ -246,7 +244,7 @@ void h() {
 
 ## <a name="example"></a>Exemple
 
-En ce qui concerne l’héritage, lors d’un à l’aide de déclaration introduit un nom à partir d’une classe de base dans une étendue de la classe dérivée, les fonctions membres dans les fonctions de membre virtuel de remplacement de classe dérivée avec les mêmes types de nom et l’argument dans la classe de base.
+En ce qui concerne l’héritage, quand une déclaration using introduit un nom d’une classe de base dans une portée de classe dérivée, les fonctions membres dans la classe dérivée remplacent les fonctions membres virtuelles avec les mêmes types de noms et d’arguments dans la classe de base.
 
 ```cpp
 // using_declaration_inheritance1.cpp
@@ -304,9 +302,9 @@ In D::g(char)
 
 ## <a name="example"></a>Exemple
 
-Toutes les instances d’un nom mentionné dans un à l’aide de la déclaration doit être accessible. En particulier, si une classe dérivée utilise une à l’aide de déclaration d’accéder à un membre de classe de base, le nom du membre doit être accessible. Si le nom est celui d’une fonction membre surchargé, puis toutes les fonctions nommées doivent être accessibles.
+Toutes les instances d’un nom mentionné dans une déclaration using doivent être accessibles. En particulier, si une classe dérivée utilise une déclaration using pour accéder à un membre d’une classe de base, le nom du membre doit être accessible. Si le nom est celui d’une fonction membre surchargée, toutes les fonctions nommées doivent être accessibles.
 
-Pour plus d’informations sur l’accessibilité des membres, consultez [contrôle d’accès de membre](../cpp/member-access-control-cpp.md).
+Pour plus d’informations sur l’accessibilité des membres, consultez [member-Access Control](../cpp/member-access-control-cpp.md).
 
 ```cpp
 // using_declaration_inheritance2.cpp

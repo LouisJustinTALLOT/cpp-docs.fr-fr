@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2198
 ms.assetid: 638a845c-9d7f-4115-a9aa-d72455605668
-ms.openlocfilehash: a7fbc5dc6dc91dab5bfea3a81c8d5c045e485161
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbe4f95037aabf3b4febc1a8fff5a324773a33b4
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182819"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301832"
 ---
 # <a name="compiler-error-c2198"></a>Erreur du compilateur C2198
 
@@ -21,7 +21,7 @@ Le compilateur a détecté un nombre insuffisant de paramètres pour un appel à
 
 L’exemple suivant génère l’erreur C2198 :
 
-```
+```c
 // C2198.c
 // compile with: /c
 void func( int, int );

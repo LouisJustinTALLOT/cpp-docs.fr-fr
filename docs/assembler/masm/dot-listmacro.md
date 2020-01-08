@@ -1,17 +1,17 @@
 ---
 title: .LISTMACRO
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LISTMACRO
 helpviewer_keywords:
 - .LISTMACRO directive
 ms.assetid: f8dadf8c-ca6f-4bb9-a4f8-86a0e769a845
-ms.openlocfilehash: fec2908b785b4e16aa5a1c8348349a809ad431a2
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 3eef137ece7069977b133c217d31e81a8ea9010e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398150"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313442"
 ---
 # <a name="listmacro"></a>.LISTMACRO
 
@@ -23,8 +23,9 @@ Commence la liste des instructions de développement de macros qui génèrent du
 
 ## <a name="remarks"></a>Notes
 
-Il s'agit de la valeur par défaut. Identique à [. XALL](../../assembler/masm/dot-xall.md).
+Il s'agit de la valeur par défaut. Identique à [. XALL](dot-xall.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](directives-reference.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

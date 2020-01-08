@@ -1,6 +1,6 @@
 ---
 title: chsize
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - chsize
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - chsize function
 ms.assetid: f94d62f6-b539-4cbf-bf99-b81d081b4216
-ms.openlocfilehash: 5687065c878dfb5fddb504f5c93047e07681dd76
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c3a239ec67f01f10adcee20c5c3170461e436f6e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950935"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301000"
 ---
 # <a name="chsize"></a>chsize
 
-Cette fonction POSIX est déconseillée. Utilisez plutôt [_chsize](chsize.md), qui est conforme à la norme ISO C++, ou [_chsize](chsize-s.md), qui offre une sécurité améliorée.
+Le nom de fonction spécifique à Microsoft `chsize` est un alias déconseillé pour la fonction [_chsize](chsize.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
+
+Nous vous recommandons d’utiliser [_chsize](chsize.md) ou la fonction [_chsize_s](chsize-s.md) à la sécurité améliorée à la place. Vous pouvez continuer à utiliser ce nom de fonction et désactiver l’avertissement. Pour plus d’informations, consultez [Désactiver les](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) noms de [fonction](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)d’avertissement et POSIX.

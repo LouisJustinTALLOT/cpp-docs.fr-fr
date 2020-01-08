@@ -1,22 +1,22 @@
 ---
 title: alignment_of, classe
-ms.date: 11/04/2016
+ms.date: 12/11/2019
 f1_keywords:
 - type_traits/std::alignment_of
 helpviewer_keywords:
 - alignment_of class
 - alignment_of
 ms.assetid: 4141c59a-f94e-41c4-93fd-9ea578b27387
-ms.openlocfilehash: 5222e70965db69d33ec62039bf9013a52d145705
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d241848edf57fe4876c35e22f1762abf5d6888fa
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456452"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302313"
 ---
-# <a name="alignmentof-class"></a>alignment_of, classe
+# <a name="alignment_of-class"></a>alignment_of, classe
 
-Obtient l'alignement du type spécifié. Ce struct est implémenté en termes d’[alignof](../cpp/alignof-and-alignas-cpp.md). Utilisez `alignof` directement quand vous devez simplement interroger une valeur d'alignement. Utilisez alignment_of quand vous avez besoin d’une constante intégrale, par exemple lors de la répartition d’étiquettes.
+Obtient l'alignement du type spécifié. Ce struct est implémenté en termes d’[alignof](../cpp/alignment-cpp-declarations.md). Utilisez **alignof** directement quand vous devez simplement interroger une valeur d’alignement. Utilisez alignment_of quand vous avez besoin d’une constante intégrale, par exemple lors de la répartition d’étiquettes.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,7 +25,7 @@ template <class Ty>
 struct alignment_of;
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *Ty*\
 Type à interroger.
@@ -34,9 +34,9 @@ Type à interroger.
 
 La requête de type contient la valeur de l’alignement du type *Ty*.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
-**En-tête :** \<type_traits>
+**En-tête :** \<type_traits >
 
 **Espace de noms :** std
 

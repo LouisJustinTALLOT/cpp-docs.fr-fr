@@ -1,6 +1,6 @@
 ---
 title: lsearch
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - lsearch
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - lsearch function
 ms.assetid: 130da3fc-904a-4375-b0ab-79bfea8a455f
-ms.openlocfilehash: 2b765ef23c61116ecc57aeea3cebe288b07bd84a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a068b6500de8a1a795f5494ac12afa0e5ca08544
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950518"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300883"
 ---
 # <a name="lsearch"></a>lsearch
 
-Cette fonction POSIX est déconseillée. Utilisez plutôt [_lsearch](lsearch.md), qui est conforme à la norme ISO C++, ou [_lsearch_s](lsearch-s.md), qui offre une sécurité améliorée.
+Le nom de fonction POSIX implémenté par Microsoft `lsearch` est un alias déconseillé pour la fonction [_lsearch](lsearch.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
+
+Nous vous recommandons d’utiliser à la place [_lsearch](lsearch.md) ou la fonction [_lsearch_s](lsearch-s.md) à la sécurité améliorée. Vous pouvez continuer à utiliser ce nom de fonction et désactiver l’avertissement. Pour plus d’informations, consultez [Désactiver les](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) noms de [fonction](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)d’avertissement et POSIX.

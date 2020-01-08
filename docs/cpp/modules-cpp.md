@@ -1,16 +1,16 @@
 ---
 title: Vue d'ensemble des modules dans C++
-ms.date: 07/23/2019
+ms.date: 12/13/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: Les modules en C++ 20 fournissent une alternative moderne aux fichiers d’en-tête.
-ms.openlocfilehash: 17495aa3e295b26fcfa5c489ff6793bb75d13d68
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 28e1824250ad4fb404c528aa9511745abb001f31
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273671"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301377"
 ---
 # <a name="overview-of-modules-in-c"></a>Vue d'ensemble des modules dans C++
 
@@ -20,7 +20,7 @@ Les modules peuvent être utilisés côte à côte avec des fichiers d’en-têt
 
 ## <a name="enable-modules-in-the-microsoft-c-compiler"></a>Activer les modules dans le C++ compilateur Microsoft
 
-Depuis Visual Studio 2019 version 16,2, les modules ne sont pas entièrement implémentés dans C++ le compilateur Microsoft. Vous pouvez utiliser la fonctionnalité Modules pour créer des modules à partition unique et importer les modules de bibliothèque standard fournis par Microsoft. Pour activer la prise en charge des modules, compilez avec [/experimental : module](../build/reference/experimental-module.md) et [/std : c + + latest](../build/reference/std-specify-language-standard-version.md). Dans un projet Visual Studio, cliquez avec le bouton droit sur le nœud du projet dans **Explorateur de solutions** , puis choisissez **Propriétés**. Définissez la liste déroulante **configuration** sur **toutes les configurations**, puis choisissez **Propriétés** > de configuration**C++C/**  >  > langue **C++ activer les modules ( expérimental)** .
+Depuis Visual Studio 2019 version 16,2, les modules ne sont pas entièrement implémentés dans C++ le compilateur Microsoft. Vous pouvez utiliser la fonctionnalité Modules pour créer des modules à partition unique et importer les modules de bibliothèque standard fournis par Microsoft. Pour activer la prise en charge des modules, compilez avec [/experimental : module](../build/reference/experimental-module.md) et [/std : c + + latest](../build/reference/std-specify-language-standard-version.md). Dans un projet Visual Studio, cliquez avec le bouton droit sur le nœud du projet dans **Explorateur de solutions** , puis choisissez **Propriétés**. Définissez la liste déroulante **configuration** sur **toutes les configurations**, puis choisissez **Propriétés de configuration** > **langage** **C/C++**  >  > activer  **C++ les modules (expérimental)** .
 
 Un module et le code qui le consomme doivent être compilés avec les mêmes options de compilateur.
 
@@ -28,24 +28,24 @@ Un module et le code qui le consomme doivent être compilés avec les mêmes opt
 
 Bien que cela ne soit pas spécifié par la norme C++ 20, Microsoft permet C++ l’importation de l’implémentation de la bibliothèque standard en tant que modules. En important la C++ bibliothèque standard sous forme de modules plutôt que de la #including à travers des fichiers d’en-tête, vous pouvez potentiellement accélérer la compilation en fonction de la taille de votre projet. La bibliothèque est composant dans les modules suivants :
 
-- STD. Regex fournit le contenu de l' \<en-tête Regex >
-- le système de fichiers STD fournit le contenu \<du système de fichiers d’en-tête >
-- STD. Memory fournit le contenu de la \<mémoire d’en-tête >
-- STD. Threading fournit le contenu des en- \<têtes Atomic > \<, CONDITION_VARIABLE > \<, future > \<, mutex > \<, shared_mutex > et \<thread >
+- STD. Regex fournit le contenu de l’en-tête \<Regex >
+- STD. FileSystem fournit le contenu de l’en-tête \<FileSystem >
+- STD. Memory fournit le contenu de l’en-tête \<la mémoire >
+- STD. Threading fournit le contenu des en-têtes \<Atomic >, \<condition_variable >, \<future >, \<mutex >, \<shared_mutex > et \<thread >
 - STD. Core fournit tout le reste dans C++ la bibliothèque standard
 
-Pour utiliser ces modules, ajoutez simplement une instruction import en haut du fichier de code source. Par exemple :
+Pour utiliser ces modules, ajoutez simplement une déclaration d’importation au début du fichier de code source. Par exemple :
 
 ```cpp
 import std.core;
 import std.regex;
 ```
 
-Pour utiliser le module Microsoft standard Library, vous devez compiler votre programme avec les options [/EHsc](../build/reference/eh-exception-handling-model.md) et [/MD](../build/reference/md-mt-ld-use-run-time-library.md) .
+Pour utiliser le module Microsoft standard Library, compilez votre programme avec les options [/EHsc](../build/reference/eh-exception-handling-model.md) et [/MD](../build/reference/md-mt-ld-use-run-time-library.md) .
 
 ## <a name="basic-example"></a>Exemple de base
 
-L’exemple suivant montre une définition de module simple dans un fichier source appelé **foo. IXX**. L’extension **. IXX** est requise pour les fichiers d’interface de module dans Visual Studio. Dans cet exemple, le fichier d’interface contient la définition de fonction ainsi que la déclaration. Toutefois, les définitions peuvent également être placées dans un ou plusieurs fichiers distincts (comme indiqué dans un exemple ultérieur). L’instruction **foo du module d’exportation** indique que ce fichier est l’interface principale d’un `Foo`module appelé. Le modificateur d’exportation `f()` sur indique que cette fonction sera visible quand `Foo` est importé par un autre programme ou module. Notez que le module référence un espace `Bar`de noms.
+L’exemple suivant montre une définition de module simple dans un fichier source appelé **foo. IXX**. L’extension **. IXX** est requise pour les fichiers d’interface de module dans Visual Studio. Dans cet exemple, le fichier d’interface contient la définition de fonction ainsi que la déclaration. Toutefois, les définitions peuvent également être placées dans un ou plusieurs fichiers distincts (comme indiqué dans un exemple ultérieur). L’instruction **foo du module d’exportation** indique que ce fichier est l’interface principale d’un module appelé `Foo`. Le modificateur **Export** sur `f()` indique que cette fonction sera visible quand `Foo` est importée par un autre programme ou module. Notez que le module référence un espace de noms `Bar`.
 
 ```cpp
 export module Foo;
@@ -64,7 +64,7 @@ namespace Bar
 }
 ```
 
-Le fichier **MyProgram. cpp** utilise l’instruction **Import** pour accéder au nom exporté par `Foo`. Notez que le nom `Bar` est visible ici, mais pas à tous ses membres. Notez également que la macro `ANSWER` n’est pas visible.
+Le fichier **MyProgram. cpp** utilise la déclaration d' **importation** pour accéder au nom exporté par `Foo`. Notez que le nom `Bar` est visible ici, mais pas tous ses membres. Notez également que la macro `ANSWER` n’est pas visible.
 
 ```cpp
 
@@ -132,7 +132,7 @@ L’unité d’interface principale peut importer des fichiers d’implémentati
 
 ## <a name="modules-and-header-files"></a>Modules et fichiers d’en-tête
 
-Vous pouvez inclure des fichiers d’en-tête dans un fichier source `#include` de module en plaçant la directive avant la déclaration de module. Ces fichiers sont considérés comme étant dans le *fragment de module global*. Un module ne peut voir que les noms dans le *fragment de module global* qui se trouvent dans les en-têtes qu’il comprend explicitement. Le fragment de module global contient uniquement les symboles qui sont réellement utilisés.
+Vous pouvez inclure des fichiers d’en-tête dans un fichier source de module en plaçant la directive `#include` avant la déclaration de module. Ces fichiers sont considérés comme étant dans le *fragment de module global*. Un module ne peut voir que les noms dans le *fragment de module global* qui se trouvent dans les en-têtes qu’il comprend explicitement. Le fragment de module global contient uniquement les symboles qui sont réellement utilisés.
 
 ```cpp
 // MyModuleA.cpp

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 438dd855fbbfec01a31a8d4a1a53078e3c44658c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151778"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299076"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Résumé de la durée de vie et de la visibilité
 
@@ -18,15 +18,15 @@ Le tableau suivant récapitule les caractéristiques de durée de vie et de visi
 
 ### <a name="summary-of-lifetime-and-visibility"></a>Résumé de la durée de vie et de la visibilité
 
-|Attributs :<br /><br /> Niveau|Élément|Classe de stockage<br /><br /> Spécificateur|Résultat : <br /><br /> Durée de vie|Visibilité|
+|Attributs :<br /><br /> Niveau|Élément|Classe de stockage<br /><br /> Spécificateur|Résultat :<br /><br /> Durée de vie|Visibilité|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
 |Portée du fichier|Définition de variable|**static**|Global|Reste du fichier source dans lequel elle se produit|
 ||Déclaration de variable|**extern**|Global|Reste du fichier source dans lequel elle se produit|
 ||Définition ou prototype de fonction|**static**|Global|Fichier source unique|
 ||Prototype de fonction|**extern**|Global|Reste du fichier source|
-|Portée de bloc|Déclaration de variable|**extern**|Global|Bloc|
-||Définition de variable|**static**|Global|Bloc|
-||Définition de variable|**auto** ou **register**|Local|Bloc|
+|Portée de bloc|Déclaration de variable|**extern**|Global|Bloquer|
+||Définition de variable|**static**|Global|Bloquer|
+||Définition de variable|**auto** ou **register**|Local|Bloquer|
 
 ## <a name="example"></a>Exemple
 
@@ -36,7 +36,7 @@ L'exemple suivant illustre les blocs, l'imbrication et la visibilité des variab
 
 ### <a name="code"></a>Code
 
-```
+```c
 // Lifetime_and_Visibility.c
 
 #include <stdio.h>
@@ -62,7 +62,7 @@ int main()  // main function defined at external level
 }
 ```
 
-### <a name="comments"></a>Commentaires
+### <a name="comments"></a>Comments
 
 Dans cet exemple, il existe quatre niveaux de visibilité : le niveau externe et trois niveaux de bloc. Les valeurs sont imprimées à l'écran comme indiqué dans les commentaires suivant chaque instruction.
 

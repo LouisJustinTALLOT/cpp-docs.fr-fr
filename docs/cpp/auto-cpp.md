@@ -1,22 +1,25 @@
 ---
 title: Auto (C++)
-ms.date: 11/04/2016
+ms.date: 12/10/2019
 f1_keywords:
 - auto_CPP
 - auto
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 8af2aceb2964a5ec3adcbb0b0accab0b051ff48c
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 0991c836d1ade663be3e1b734ec4745796b91abd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303378"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301650"
 ---
 # <a name="auto-c"></a>Auto (C++)
 
 Déduit le type d'une variable déclarée de son expression d'initialisation.
+
+> [!NOTE]
+> La C++ norme définit une signification originale et modifiée pour ce mot clé. Avant Visual Studio 2010, le mot clé **auto** déclare une variable dans la classe de stockage *automatique* . autrement dit, une variable qui a une durée de vie locale. À compter de Visual Studio 2010, le mot clé **auto** déclare une variable dont le type est déduit de l’expression d’initialisation dans sa déclaration. L’option [/Zc :&#91;auto&#93; -](../build/reference/zc-auto-deduce-variable-type.md) compiler contrôle la signification du mot clé **auto** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,7 +69,7 @@ Vous pouvez utiliser **auto**, ainsi que le spécificateur de type **decltype** 
 
 ## <a name="references-and-cv-qualifiers"></a>Références et qualificateurs cv
 
-Notez que l’utilisation de références **automatiques** de suppressions, de qualificateurs const et de qualificateurs volatiles. Prenons l'exemple suivant :
+Notez que l’utilisation de références **automatiques** de suppressions, de qualificateurs const et de qualificateurs volatiles. Prenons l'exemple suivant :
 
 ```cpp
 // cl.exe /analyze /EHsc /W4

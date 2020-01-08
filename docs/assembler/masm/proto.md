@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 9df66b6c89498a2cc1a1864a668b7addfbaf593c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3963fa29050653d1706222d33734c4b5f2a17919
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987871"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318642"
 ---
 # <a name="proto"></a>PROTO
 
@@ -55,4 +55,5 @@ addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 ## <a name="see-also"></a>Voir aussi
 
 Informations de référence sur les [Directives](directives-reference.md)\
-[. Référence du modèle](dot-model.md)
+[. Référence de modèle](dot-model.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

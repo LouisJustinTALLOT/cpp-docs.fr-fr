@@ -1,5 +1,5 @@
 ---
-title: Prise en main C++ de build Insights
+title: Bien démarrer avec C++ Build Insights
 description: Une vue d’ensemble de l’utilisation des outils d’analyse des performances au moment de la génération qui font C++ partie de build Insights.
 ms.date: 11/03/2019
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9c31d317cd7b9c6465362e3e532db2128303f602
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 862bfae3bdb27812306dcd356aecab812ea5181c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73633104"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298738"
 ---
-# <a name="get-started-with-c-build-insights"></a>Prise en main C++ de build Insights
+# <a name="get-started-with-c-build-insights"></a>Bien démarrer avec C++ Build Insights
 
 ::: moniker range="<=vs-2017"
 
@@ -39,7 +39,9 @@ Une version de WPA qui prend C++ en charge Build Insights est actuellement dispo
 
 ### <a name="to-download-and-install-wpa"></a>Pour télécharger et installer WPA
 
-1. Accédez à la [page de téléchargement](https://www.microsoft.com/software-download/windowsinsiderpreviewADK)de Windows ADK Insider preview.
+Remarque : Windows 8 ou version ultérieure est requis pour l’installation de l’analyseur de performances Windows.
+
+1. Accédez à la [page de téléchargement](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewADK)de Windows ADK Insider preview.
 
 1. Téléchargez Windows ADK Insider preview. Il s’agit d’une image de disque.
 
@@ -101,8 +103,8 @@ Voici à quoi ressemble une séquence de commande *vcperf. exe* typique dans une
 
 Lancez WPA et ouvrez la trace que vous venez de collecter. WPA doit le reconnaître comme un C++ suivi de build Insights, et les affichages suivants doivent apparaître dans le volet de l’Explorateur graphique sur la gauche :
 
-- Explorateur de builds
-- Fichiers
+- Build Explorer
+- Files
 - Fonction
 
 Si vous ne voyez pas ces affichages, vérifiez que l’activation de la configuration WPA est correctement configurée, comme décrit à l' [étape 1](#configuration-steps). Vous pouvez afficher vos données de build en faisant glisser les vues dans la fenêtre d’analyse vide à droite, comme illustré ici :
@@ -111,7 +113,7 @@ Si vous ne voyez pas ces affichages, vérifiez que l’activation de la configur
 
 D’autres vues sont disponibles dans le panneau de l’Explorateur graphique. Faites-les glisser dans la fenêtre d’analyse lorsque vous êtes intéressé par les informations qu’ils contiennent. Une vue utile est la vue UC (échantillonnée), qui montre l’utilisation de l’UC dans votre Build.
 
-## <a name="more-information"></a>Plus d'informations
+## <a name="more-information"></a>En savoir plus
 
 [Notions de base de l’analyseur de performances Windows](wpa-basics.md)\
 Découvrez les opérations WPA courantes qui peuvent vous aider à analyser vos suivis de Build.

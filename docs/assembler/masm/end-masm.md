@@ -6,25 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - END directive
 ms.assetid: 128d1c17-f4c4-4ac6-bdb7-d14b4a9a7f4c
-ms.openlocfilehash: dbaa9948f598f894e5dedbe04fd975936c34590b
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 5386a38df6a561f23d0a10ca32c4d39ff8f4576f
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987970"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317394"
 ---
-# <a name="end-masm"></a>END (MASM)
+# <a name="end"></a>Fin
 
-Marque la fin d’un module et, éventuellement, définit le point d’entrée du programme sur *Address*.
+Marque la fin d’un module et, éventuellement, définit le point d’entrée du programme sur *procId*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **Fin** de l'*adresse*⟦ ⟧
+> **End** ⟦*procId*⟧
 
 ## <a name="remarks"></a>Notes
 
-L’argument *Address* est valide uniquement dans MASM 32 bits.
+L’argument *procId* est valide uniquement dans MASM 32 bits.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](directives-reference.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

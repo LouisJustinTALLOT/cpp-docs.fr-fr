@@ -1,6 +1,6 @@
 ---
 title: _aligned_malloc
-ms.date: 11/04/2016
+ms.date: 12/11/2019
 api_name:
 - _aligned_malloc
 api_location:
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: b4a2b35e5344757a1269ccb781a0524383a4f792
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c06c822ae4e7584a172c260a5c06e25019a1ce5e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943868"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300129"
 ---
 # <a name="_aligned_malloc"></a>_aligned_malloc
 
@@ -46,7 +46,7 @@ void * _aligned_malloc(
 );
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *size*<br/>
 Taille de l'allocation de mémoire demandée.
@@ -64,15 +64,17 @@ Pointeur vers le bloc de mémoire qui a été alloué ou NULL en cas d’échec 
 
 **_aligned_malloc** est marqué `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’a pas d’alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
-Cette fonction affecte à `errno` la valeur `ENOMEM` si l'allocation de mémoire a échoué ou si la taille demandée était supérieure à `_HEAP_MAXREQ`. Pour plus d’informations sur `errno`, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). De plus, **_aligned_malloc** valide ses paramètres. Si *alignment* n’est pas une puissance de 2 ou que la *taille* est égale à zéro, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne null `errno` et `EINVAL`affecte à la valeur.
+Cette fonction affecte à `errno` la valeur `ENOMEM` si l'allocation de mémoire a échoué ou si la taille demandée était supérieure à `_HEAP_MAXREQ`. Pour plus d’informations sur `errno`, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). De plus, **_aligned_malloc** valide ses paramètres. Si *alignment* n’est pas une puissance de 2 ou que la *taille* est égale à zéro, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne la valeur NULL et définit `errno` sur `EINVAL`.
 
-## <a name="requirements"></a>Configuration requise
+Utilisez [_aligned_free](aligned-free.md) pour libérer de la mémoire obtenue à la fois par **_aligned_malloc** et `_aligned_offset_malloc`. N’utilisez pas `free`, qui ne récupère pas correctement la mémoire alignée et peut entraîner des bogues difficiles à diagnostiquer.
+
+## <a name="requirements"></a>Configuration requise pour
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_aligned_malloc**|\<malloc.h>|
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_aligned_malloc.c

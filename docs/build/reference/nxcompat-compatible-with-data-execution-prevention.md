@@ -1,18 +1,19 @@
 ---
 title: /NXCOMPAT (compatible avec la prévention de l'exécution des données)
-ms.date: 12/29/2017
+description: Décrit l’option de l'C++ éditeur de liens Microsoft C/(MSVC)/NXCOMPAT, qui marque un exécutable comme étant compatible avec la prévention de l’exécution des données (DEP).
+ms.date: 12/17/2019
 f1_keywords:
 - /NXCOMPAT
 helpviewer_keywords:
 - /NXCOMPAT linker option
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
-ms.openlocfilehash: 7c788f5ec499f0edf0c44f1ff269af9767af6c08
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f3a0906a49e3524fff3e1ef1643d1eceee28f169
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492661"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298985"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatible avec la prévention de l'exécution des données)
 
@@ -26,11 +27,9 @@ Indique qu’un fichier exécutable est compatible avec la fonctionnalité de pr
 
 Par défaut, **/NXCOMPAT** est activé.
 
-**/NXCOMPAT: no** peut être utilisé pour spécifier explicitement un exécutable comme étant incompatible avec la prévention de l’exécution des données.
+**/NXCOMPAT : no** peut être utilisé pour spécifier explicitement un exécutable comme étant incompatible avec la prévention de l’exécution des données.
 
-Pour plus d’informations sur la prévention de l’exécution des données, consultez les articles suivants:
-
-- [Description détaillée de la fonctionnalité de prévention de l’exécution des données (DEP)](https://support.microsoft.com/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
+Pour plus d’informations sur la prévention de l’exécution des données, consultez les articles suivants :
 
 - [Prévention de l’exécution des données](/windows/win32/Memory/data-execution-prevention)
 
@@ -40,7 +39,7 @@ Pour plus d’informations sur la prévention de l’exécution des données, co
 
 1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Choisissez la page de propriétés**ligne de commande** de l'**éditeur de liens** >  **Propriétés** > de configuration.
+1. Choisissez **Propriétés de Configuration** > **éditeur de liens** > page de propriétés ligne de **commande** .
 
 1. Entrez l’option dans la zone **options supplémentaires** . Choisissez **OK** ou **appliquer** pour appliquer la modification.
 
@@ -50,5 +49,5 @@ Pour plus d’informations sur la prévention de l’exécution des données, co
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
+\ de référence de l' [éditeur de liens MSVC](linking.md)
 [Options de l’éditeur de liens MSVC](linker-options.md)

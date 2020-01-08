@@ -1,6 +1,6 @@
 ---
 title: rmdir
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - rmdir
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - rmdir function
 ms.assetid: 03a0aff4-f66c-42a9-bee9-84c46f994952
-ms.openlocfilehash: 92f38e090870115e465de59456339d45be963602
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: eb48e9eb4f84d0bea69b3719eea67e51a52b7931
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949168"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300740"
 ---
 # <a name="rmdir"></a>rmdir
 
-Cette fonction POSIX est déconseillée. Utilisez plutôt [_rmdir](rmdir-wrmdir.md), qui est conforme à la norme ISO C++.
+Le nom de fonction POSIX implémenté par Microsoft `rmdir` est un alias déconseillé pour la fonction [_rmdir](rmdir-wrmdir.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
+
+Nous vous recommandons d’utiliser [_rmdir](rmdir-wrmdir.md) à la place. Vous pouvez continuer à utiliser ce nom de fonction et désactiver l’avertissement. Pour plus d’informations, consultez [Désactiver les](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) noms de [fonction](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)d’avertissement et POSIX.

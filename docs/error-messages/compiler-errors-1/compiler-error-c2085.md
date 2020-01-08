@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2085
 ms.assetid: 0a86785c-8e6f-481b-8c7b-412220c1950d
-ms.openlocfilehash: a65e3c0ea622950b99b9ba83fc168b4718d13e46
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7dbf7266a6330a1fdb46d7f2df90e7684f026d9a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345707"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301962"
 ---
 # <a name="compiler-error-c2085"></a>Erreur du compilateur C2085
 
 'identificateur' : pas dans la liste de paramètres formels
 
-L’identificateur a été déclaré dans une définition de fonction mais pas dans la liste de paramètres formels. (C ANSI uniquement)
+L’identificateur a été déclaré dans une définition de fonction, mais pas dans la liste de paramètres formels. (C ANSI uniquement)
 
-L’exemple suivant génère l’erreur C2085 :
+L’exemple suivant génère l’C2085 :
 
-```
+```c
 // C2085.c
 void func1( void )
 int main( void ) {}   // C2085
@@ -29,10 +29,10 @@ int main( void ) {}   // C2085
 
 Solution possible :
 
-```
+```c
 // C2085b.c
 void func1( void );
 int main( void ) {}
 ```
 
-Sans le point-virgule, `func1()` ressemble à une définition de fonction, pas un prototype, donc `main` est défini dans `func1()`, erreur C2085 pour l’identificateur `main`.
+Avec le point-virgule manquant, `func1()` ressemble à une définition de fonction, pas à un prototype, donc `main` est défini dans `func1()`, générant l’erreur C2085 pour l’identificateur `main`.

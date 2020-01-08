@@ -20,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: ecc01362bdc14af32df5093ad1ac1ee606026d8f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940376"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300304"
 ---
 # <a name="filename-search-functions"></a>Fonctions de recherche de nom de fichier
 
@@ -67,22 +67,22 @@ Dans les systèmes de fichiers qui ne prennent pas en charge les heures de créa
 Vous ne pouvez pas spécifier d’attributs cibles (comme `_A_RDONLY`) pour limiter l’opération de recherche. Ces attributs sont retournés dans le champ `attrib` de la structure `_finddata_t` et peuvent prendre les valeurs suivantes (définies dans IO.h). Les utilisateurs ne doivent pas compter sur le fait que ce sont les seules valeurs possibles pour le champ `attrib` .
 
 `_A_ARCH`<br/>
-Archive. Défini chaque fois que le fichier est modifié et supprimé par la commande **BACKUP** . Valeur : 0x20.
+Archive. Défini chaque fois que le fichier est modifié et supprimé par la commande **BACKUP** . Valeur : 0x20.
 
 `_A_HIDDEN`<br/>
-Fichier caché. Ne s’affiche généralement pas avec la commande DIR, sauf si vous utilisez l’option **/AH** . Retourne des informations sur les fichiers normaux et les fichiers qui ont cet attribut. Valeur : 0x02.
+Fichier caché. Ne s’affiche généralement pas avec la commande DIR, sauf si vous utilisez l’option **/AH** . Retourne des informations sur les fichiers normaux et les fichiers qui ont cet attribut. Valeur : 0x02.
 
 `_A_NORMAL`<br/>
-Normal. Aucun autre attribut n’est défini pour le fichier et il est possible d’y effectuer des opérations de lecture ou d’écriture sans restriction. Valeur : 0x00.
+Normal. Aucun autre attribut n’est défini pour le fichier et il est possible d’y effectuer des opérations de lecture ou d’écriture sans restriction. Valeur : 0x00.
 
 `_A_RDONLY`<br/>
-Lecture seule. Impossible d’ouvrir le fichier pour des opérations d’écriture ni de créer un fichier portant le même nom. Valeur : 0x01.
+Lecture seule. Impossible d’ouvrir le fichier pour des opérations d’écriture ni de créer un fichier portant le même nom. Valeur : 0x01.
 
 `_A_SUBDIR`<br/>
-Sous-répertoire. Valeur : 0x10.
+Sous-répertoire. Valeur : 0x10.
 
 `_A_SYSTEM`<br/>
-Fichier système. Ne s’affiche généralement pas avec la commande **DIR** , sauf si vous utilisez l’option **/A** ou **/A:S** . Valeur : 0x04.
+Fichier système. Ne s’affiche généralement pas avec la commande **DIR** , sauf si vous utilisez l’option **/A** ou **/A:S** . Valeur : 0x04.
 
 `_findnext` recherche le nom suivant, le cas échéant, correspondant à l’argument `filespec` spécifié dans un appel antérieur à `_findfirst`. L’argument `fileinfo` doit pointer vers une structure initialisée par l’appel précédent à `_findfirst`. Si une correspondance est trouvée, le contenu de la structure `fileinfo` est modifié comme décrit précédemment. Dans le cas contraire, il reste inchangé. `_findclose` ferme le handle de recherche spécifié et libère toutes les ressources associées à la fois pour `_findfirst` et `_findnext`. Le handle retourné par `_findfirst` ou `_findnext` doit tout d’abord être transmis à `_findclose`, avant de pouvoir effectuer une opération de modification, telle que la suppression, sur les répertoires qui constituent les chemins transmis.
 
@@ -96,7 +96,7 @@ Les fonctions `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`et `_wfindn
 
 `_finddata_t` est en fait une macro qui correspond à `_finddata64i32_t` (ou `_finddata32_t` si `_USE_32BIT_TIME_T` est défini). Le tableau suivant récapitule les différentes variations de `_finddata_t`:
 
-|Structure|Type de temps|Type de taille du fichier|
+|Structure|Type d’heure|Type de taille du fichier|
 |---------------|---------------|--------------------|
 |`_finddata_t`, `_wfinddata_t`|`__time64_t`|`_fsize_t`|
 |`_finddata32_t`, `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
@@ -108,7 +108,7 @@ Les fonctions `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`et `_wfindn
 
 ## <a name="example"></a>Exemple
 
-```
+```c
 // crt_find.c
 // This program uses the 32-bit _find functions to print
 // a list of all files (and their attributes) with a .C extension

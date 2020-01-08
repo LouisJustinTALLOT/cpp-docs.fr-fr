@@ -1,61 +1,64 @@
 ---
-title: Programmes et liaison (C++)
-ms.date: 04/09/2018
+title: Unités de traduction et liaison (C++)
+ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: 4f509979a293f194333e610fbdae7be9d32ec121
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcd66b454da3758996fe827581fe4a73a641407f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301511"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301351"
 ---
-# <a name="program-and-linkage-c"></a>Programme et liaison (C++)
+# <a name="translation-units-and-linkage"></a>Unités de traduction et liaison
 
-Dans un programme C++, un *symbole*, par exemple un nom de variable ou une fonction peut être déclaré n’importe quel nombre de fois dans son étendue, mais il ne peut être défini qu’une seule fois. Il s’agit de la règle de définition d’un (ODR). Un *déclaration* présente (ou nouveau introduit) un nom dans le programme. Un *définition* introduit un nom et, dans le cas d’une variable, explicitement l’initialise. Un *définition de fonction* constitué la signature et le corps de fonction.
+Dans un C++ programme, un *symbole*, par exemple, un nom de variable ou de fonction, peut être déclaré autant de fois que possible dans son étendue, mais il ne peut être défini qu’une seule fois. Cette règle est la « règle de définition unique » (ODR). Une *déclaration* introduit (ou réintroduit) un nom dans le programme. Une *définition* introduit un nom. Si le nom représente une variable, une définition l’initialise explicitement. Une *définition de fonction* se compose de la signature et du corps de la fonction. Une définition de classe se compose du nom de la classe suivi d’un bloc qui répertorie tous les membres de la classe. (Les corps des fonctions membres peuvent éventuellement être définis séparément dans un autre fichier.)
 
-Il s’agit des déclarations :
+L’exemple suivant illustre certaines déclarations :
 
 ```cpp
 int i;
 int f(int x);
+class C;
 ```
 
-Il s’agit de définitions :
+L’exemple suivant montre quelques définitions :
 
 ```cpp
 int i{42};
 int f(int x){ return x * i; }
+class C {
+public:
+   void DoSomething();
+};
 ```
 
-Un programme se compose d’une ou plusieurs *unités de traduction*. Une unité de traduction se compose d’un fichier d’implémentation (.cpp, .cxx, etc.) et tous les en-têtes (.h, .hpp, etc.) qui contient directement ou indirectement. Chaque unité de traduction est compilée indépendamment par le compilateur, après laquelle l’éditeur de liens fusionne les unités de traduction compilée en un seul *programme*. Les violations de la règle ODR généralement s’affichent comme des erreurs de l’éditeur de liens lorsque le même nom a deux définitions différentes dans les unités de traduction différente.
+Un programme se compose d’une ou de plusieurs *unités de traduction*. Une unité de traduction se compose d’un fichier d’implémentation et de tous les en-têtes qu’il inclut directement ou indirectement. Les fichiers d’implémentation ont généralement l’extension de fichier *CPP* ou *cxx*. Les fichiers d’en-tête ont généralement l’extension *h* ou *HPP*. Chaque unité de traduction est compilée indépendamment par le compilateur. Une fois la compilation terminée, l’éditeur de liens fusionne les unités de traduction compilées en un seul *programme*. Les violations de la règle ODR apparaissent généralement en tant qu’erreurs de l’éditeur de liens. Les erreurs de l’éditeur de liens se produisent lorsque le même nom a deux définitions différentes dans des unités de traduction différentes.
 
-En règle générale, la meilleure façon de rendre une variable visible dans plusieurs fichiers consiste à placer dans un fichier d’en-tête et ajouter un #include, directive dans chaque fichier .cpp qui nécessite la déclaration. En ajoutant *#include Guard* autour du contenu de l’en-tête, vous assurez-vous que les noms il déclare sont uniquement définies une seule fois.
+En général, la meilleure façon de rendre une variable visible dans plusieurs fichiers consiste à la placer dans un fichier d’en-tête. Ajoutez ensuite une directive #include dans chaque fichier *CPP* qui requiert la déclaration. En ajoutant des *protections include* autour du contenu d’en-tête, vous vous assurez que les noms déclarés ne sont définis qu’une seule fois.
 
-Toutefois, dans certains cas, il peut être nécessaire de déclarer une variable globale ou une classe dans un fichier .cpp. Dans ce cas, vous devez indiquer au compilateur et l’éditeur de liens si le nom de l’objet s’applique uniquement au un fichier, ou à tous les fichiers.
+En C++ 20, les [modules](modules-cpp.md) sont introduits comme une alternative améliorée aux fichiers d’en-tête.
 
-## <a name="linkage-vs-scope"></a>Liaison et étendue
+Dans certains cas, il peut être nécessaire de déclarer une variable globale ou une classe dans un fichier *CPP* . Dans ce cas, vous avez besoin d’un moyen d’indiquer au compilateur et à l’éditeur de liens le type de *liaison* du nom. Le type de liaison spécifie si le nom de l’objet s’applique uniquement à un fichier ou à tous les fichiers. Le concept de liaison s’applique uniquement aux noms globaux. Le concept de liaison ne s’applique pas aux noms déclarés dans une étendue. Une étendue est spécifiée par un ensemble d’accolades englobant telles que dans les définitions de la fonction ou de la classe.
 
-Le concept de *liaison* fait référence à la visibilité des symboles globaux (par exemple, les variables, les noms de types et les noms de fonction) dans le programme dans sa globalité entre les unités de traduction. Le concept de *étendue* fait référence aux symboles sont déclarés dans un bloc tel qu’un espace de noms, la classe ou le corps de la fonction. Ces symboles sont visibles uniquement dans la portée dans laquelle elles sont définies ; le concept de liaison ne s’applique pas à eux.
+## <a name="external-vs-internal-linkage"></a>Liaison externe et liaison interne
 
-## <a name="external-vs-internal-linkage"></a>Externe et une liaison interne
+Une *fonction Free* est une fonction définie au niveau de la portée globale ou de l’espace de noms. Par défaut, les variables globales et les fonctions libres non const ont une *liaison externe*; ils sont visibles à partir de n’importe quelle unité de traduction du programme. Par conséquent, aucun autre objet global ne peut avoir ce nom. Un symbole avec *liaison interne* ou *aucune liaison* n’est visible que dans l’unité de traduction dans laquelle il est déclaré. Lorsqu’un nom a une liaison interne, le même nom peut exister dans une autre unité de traduction. Les variables déclarées avec des définitions de classe ou des corps de fonction n’ont aucune liaison.
 
-Un *gratuit fonction* est une fonction qui est définie au niveau global ou de la portée de l’espace de noms. Variables globales non-const et fonctions libres par défaut ont *une liaison externe*; ils sont visibles à partir de n’importe quelle unité de traduction dans le programme. Par conséquent, aucun autre objet global (variable, définition de classe, etc.) ne peut avoir ce nom. Un symbole avec *une liaison interne* ou *aucune liaison* est visible uniquement dans l’unité de traduction dans laquelle elle est déclarée. Lorsqu’un nom a une liaison interne, le même nom peut-être exister dans une autre unité de traduction. Les variables déclarées avec les définitions de classe ou le corps de fonction n’ont aucune liaison.
-
-Vous pouvez forcer un nom global pour avoir une liaison interne en déclarant explicitement en tant que **statique**. Cela limite sa visibilité à la même unité de traduction dans laquelle elle est déclarée. Notez que dans ce contexte, **statique** signifie que quelque chose de différent lorsque appliqués aux variables locales.
+Vous pouvez forcer un nom global à avoir une liaison interne en le déclarant explicitement comme **static**. Cela limite sa visibilité à la même unité de traduction dans laquelle elle est déclarée. Dans ce contexte, **static** signifie autre chose que lorsqu’il est appliqué à des variables locales.
 
 Les objets suivants ont une liaison interne par défaut :
 - objets const
-- objets de constexpr
+- objets constexpr
 - typedefs
 - objets statiques dans la portée espace de noms
 
-Pour donner une liaison externe objet const, déclarez-le en tant que **extern** et lui attribuer une valeur :
+Pour donner une liaison externe d’objet const, déclarez-la comme **extern** et affectez-lui une valeur :
 
 ```cpp
 extern const int value = 42;
 ```
 
-Consultez [extern](extern-cpp.md) pour plus d’informations.
+Pour plus d’informations, consultez [extern](extern-cpp.md) .
 
 ## <a name="see-also"></a>Voir aussi
 

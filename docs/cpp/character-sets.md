@@ -1,30 +1,43 @@
 ---
-title: Jeux de caractères
-ms.date: 05/06/2019
+title: Jetons et jeux de caractères
+ms.date: 12/10/2019
 helpviewer_keywords:
+- Tokens (C++)
 - Character sets
 - basic source character set (C++)
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-ms.openlocfilehash: 92d60e3383abd7e3b3fa2d689958cf02a9b91e75
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 1f6dbe2faa6348d61ec00b411cc35e8ef5ceb57a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222521"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301611"
 ---
-# <a name="character-sets"></a>Jeux de caractères
+# <a name="tokens-and-character-sets"></a>Jetons et jeux de caractères
 
-Le texte d’un programme C++ est stocké dans des fichiers sources qui utilisent un encodage des caractères particulier. La norme C++ spécifie un jeu de caractères sources de base pour les fichiers sources, et un jeu de caractères d’exécution de base pour les fichiers compilés. Microsoft C++ compilateur (MSVC) permet à un jeu supplémentaire de caractères spécifiques à utiliser dans les fichiers sources et les fichiers compilés.
+Le texte d’un C++ programme comprend des jetons et des *espaces blancs*. Un jeton est le plus petit élément d’un programme C++ qui est significatif pour le compilateur. L' C++ analyseur reconnaît ces types de jetons :
 
-## <a name="character-sets"></a>Jeux de caractères
+- [Mots clés](../cpp/keywords-cpp.md)
+- [Identificateurs](../cpp/identifiers-cpp.md)
+- [Littéraux numériques, booléens et de pointeur](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
+- [Littéraux de chaîne et de caractère](../cpp/string-and-character-literals-cpp.md)
+- [Littéraux définis par l’utilisateur](../cpp/user-defined-literals-cpp.md)
+- [Opérateurs](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+- [Signes de ponctuation](../cpp/punctuators-cpp.md)
 
-La norme C++ spécifie un *jeu de caractères sources de base* qui peut être utilisé dans les fichiers sources. Pour représenter des caractères qui ne font pas partie de ce jeu, des caractères supplémentaires peuvent être spécifiés à l’aide d’un *nom de caractère universel*. Quand ils sont compilés, le *jeu de caractères d’exécution de base* et le *jeu de caractères larges d’exécution de base* représentent les caractères et les chaînes qui peuvent apparaître dans un programme. L’implémentation de MSVC autorise des caractères supplémentaires dans le code source et le code compilé.
+Les jetons sont généralement séparés par un *espace blanc*, qui peut être un ou plusieurs des éléments suivants :
 
-### <a name="basic-source-character-set"></a>Jeu de caractères sources de base
+- Espaces vides
+- Tabulations horizontales ou verticales
+- Nouvelles lignes
+- Flux de formulaire
+- Comments
 
-Le *jeu de caractères sources de base* est constitué de 96 caractères qui peuvent être utilisés dans les fichiers sources. Ce jeu comprend le caractère d’espace, la tabulation horizontale, la tabulation verticale, les caractères de contrôle de saut de page et de nouvelle ligne, ainsi que cet ensemble de caractères graphiques :
+## <a name="basic-source-character-set"></a>Jeu de caractères sources de base
+
+La C++ norme spécifie un *jeu de caractères sources de base* qui peut être utilisé dans les fichiers sources. Pour représenter des caractères qui ne font pas partie de ce jeu, des caractères supplémentaires peuvent être spécifiés à l’aide d’un *nom de caractère universel*. L’implémentation MSVC autorise des caractères supplémentaires. Le *jeu de caractères source de base* se compose de 96 caractères qui peuvent être utilisés dans les fichiers sources. Ce jeu comprend le caractère d’espace, la tabulation horizontale, la tabulation verticale, les caractères de contrôle de saut de page et de nouvelle ligne, ainsi que cet ensemble de caractères graphiques :
 
 `a b c d e f g h i j k l m n o p q r s t u v w x y z`
 
@@ -36,9 +49,9 @@ Le *jeu de caractères sources de base* est constitué de 96 caractères qui peu
 
 **Section spécifique à Microsoft**
 
-MSVC inclut le `$` caractère en tant que membre du jeu de caractères sources de base. MSVC permet également un jeu supplémentaire de caractères à utiliser dans les fichiers sources, en fonction de l’encodage du fichier. Par défaut, Visual Studio stocke les fichiers sources en utilisant la page de codes par défaut. Lorsque les fichiers source sont enregistrés à l’aide d’une page de codes spécifiques ou une page de codes Unicode, MSVC vous permet d’utiliser des caractères de cette page de codes dans votre code source, sauf pour les codes de contrôle ne sont pas explicitement autorisés dans les caractères sources de base défini. Par exemple, vous pouvez placer des caractères du japonais dans les commentaires, les identificateurs ou les littéraux de chaîne si vous enregistrez le fichier en utilisant une page de codes du japonais. MSVC n’autorise pas les séquences de caractères qui ne peuvent pas être convertis en caractères multioctets valides ou des points de code Unicode. Selon les options du compilateur, certains caractères autorisés ne peuvent pas apparaître dans les identificateurs. Pour plus d’informations, consultez [Identifiers](../cpp/identifiers-cpp.md).
+MSVC comprend le caractère `$` en tant que membre du jeu de caractères sources de base. MSVC autorise également l’utilisation d’un jeu de caractères supplémentaire dans les fichiers sources, en fonction de l’encodage du fichier. Par défaut, Visual Studio stocke les fichiers sources en utilisant la page de codes par défaut. Quand des fichiers sources sont enregistrés à l’aide d’une page de codes spécifique aux paramètres régionaux ou d’une page de codes Unicode, MSVC vous permet d’utiliser l’un des caractères de cette page de codes dans votre code source, à l’exception des codes de contrôle qui ne sont pas explicitement autorisés dans le jeu de caractères source de base. Par exemple, vous pouvez placer des caractères du japonais dans les commentaires, les identificateurs ou les littéraux de chaîne si vous enregistrez le fichier en utilisant une page de codes du japonais. MSVC n’autorise pas les séquences de caractères qui ne peuvent pas être traduites en caractères multioctets valides ou en points de code Unicode. Selon les options du compilateur, certains caractères autorisés ne peuvent pas apparaître dans les identificateurs. Pour plus d’informations, consultez [Identifiers](../cpp/identifiers-cpp.md).
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique à Microsoft**
 
 ### <a name="universal-character-names"></a>noms de caractères universels
 
@@ -48,7 +61,7 @@ Les noms de caractères universels peuvent être utilisés dans les identificate
 
 **Section spécifique à Microsoft**
 
-Microsoft C++ compilateur traite un caractère sous forme de nom de caractère universel et forme littérale de manière interchangeable. Par exemple, vous pouvez déclarer un identificateur en utilisant la forme de nom de caractère universel et l’utiliser sous forme de littéral :
+Le compilateur C++ Microsoft traite de façon interchangeable un caractère sous forme de nom de caractère universel et sous forme de littéral. Par exemple, vous pouvez déclarer un identificateur en utilisant la forme de nom de caractère universel et l’utiliser sous forme de littéral :
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'
@@ -57,8 +70,8 @@ if (キ == 42) return true; // \u30AD and キ are the same to the compiler
 
 Le format des caractères étendus sur le Presse-papiers Windows est spécifique aux valeurs des paramètres régionaux de l’application. Le fait de couper et de coller ces caractères dans votre code depuis une autre application peut introduire des encodages de caractères inattendus. Ceci peut aboutir à des erreurs d’analyse sans cause visible dans votre code. Nous vous recommandons de définir l’encodage de vos fichiers sources sur une page de codes Unicode avant de coller des caractères étendus. Nous vous recommandons aussi d’utiliser un éditeur de méthode d’entrée (IME) ou l’application Character Map pour générer des caractères étendus.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique à Microsoft**
 
-### <a name="basic-execution-character-set"></a>jeu de caractères d’exécution de base
+### <a name="execution-character-sets"></a>Jeux de caractères d’exécution
 
-Le *jeu de caractères d’exécution de base* et le *jeu de caractères larges d’exécution de base* sont constitués de tous les caractères du jeu de caractères sources de base, et des caractères de contrôle qui représentent le caractère alerte, barre oblique inverse, retour chariot et null. Le *jeu de caractères d’exécution* et le *jeu de caractères larges d’exécution* sont des sur-ensembles des jeux de base. Ils comprennent des caractères sources définis par une implémentation en dehors du jeu de caractères sources de base. Le jeu de caractères d’exécution a une représentation spécifique aux paramètres régionaux.
+Les *jeux de caractères d’exécution* représentent les caractères et les chaînes qui peuvent apparaître dans un programme compilé. Ces jeux de caractères sont constitués de tous les caractères autorisés dans un fichier source, ainsi que des caractères de contrôle qui représentent l’alerte, le retour arrière, le retour chariot et le caractère null. Le jeu de caractères d’exécution a une représentation spécifique aux paramètres régionaux.

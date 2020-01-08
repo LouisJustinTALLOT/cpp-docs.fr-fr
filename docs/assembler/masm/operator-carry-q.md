@@ -1,6 +1,6 @@
 ---
 title: CARRY?, opérateur
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - CARRY?
 - operator CARRY?
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - operator CARRY?
 - CARRY? operator
 ms.assetid: 5b195de7-3f66-436a-b75a-4b8d7c3c83b7
-ms.openlocfilehash: 297e4501d87217d112a3163efc76368571c41d6d
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 51d74e28e176a4e7cd84ba817183d420100365ac
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397071"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311739"
 ---
 # <a name="operator-carry"></a>CARRY?, opérateur
 
-État de l’indicateur de transport. Utilisé uniquement dans [. Si](../../assembler/masm/dot-if.md), [. WHILe](../../assembler/masm/dot-while.md), ou [. RÉPÈTE](../../assembler/masm/dot-repeat.md) les blocs et les évalue au moment de l’exécution, et non au moment de l’assembly.
+État de l’indicateur de transport. Utilisé uniquement dans [. Si](dot-if.md), [. WHILe](dot-while.md), ou [. RÉPÈTE](dot-repeat.md) les blocs et les évalue au moment de l’exécution, et non au moment de l’assembly.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,4 +25,5 @@ ms.locfileid: "74397071"
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)
+Informations de référence sur les [opérateurs](operators-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

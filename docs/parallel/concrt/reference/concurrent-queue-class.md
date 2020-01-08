@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: d5bbd361dc2dedc24c2a59050ffa680517186494
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f87ead486d635c933ad356f9868c22344601eda
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263085"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298618"
 ---
-# <a name="concurrentqueue-class"></a>concurrent_queue, classe
+# <a name="concurrent_queue-class"></a>concurrent_queue, classe
 
-La classe `concurrent_queue` est une classe de conteneur de séquence qui autorise un accès Premier entré, premier sorti à ses éléments. Elle permet un ensemble limité d'opérations d'accès concurrentiel sécurisé, comme `push` et `try_pop`.
+La classe `concurrent_queue` est une classe de conteneur de séquence qui autorise un accès Premier entré, premier sorti à ses éléments. Elle permet un ensemble limité d'opérations d'accès concurrentiel sécurisé, comme `push` et `try_pop`. Ici, l’accès concurrentiel sécurisé signifie que les pointeurs ou les itérateurs sont toujours valides. Il ne s’agit pas d’une garantie d’initialisation d’élément ou d’un ordre de parcours particulier.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,23 +34,23 @@ template<typename T, class _Ax>
 class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4;
 ```
 
-#### <a name="parameters"></a>Paramètres
+#### <a name="parameters"></a>Parameters
 
 *T*<br/>
-Le type de données des éléments à stocker dans la file d’attente.
+Type de données des éléments à stocker dans la file d’attente.
 
 *_Ax*<br/>
-Type qui représente l’objet allocateur stocké qui encapsule des informations détaillées sur l’allocation et la désallocation de mémoire pour cette file d’attente simultanée. Cet argument est facultatif et sa valeur par défaut est `allocator<T>`.
+Type qui représente l’objet allocateur stocké qui encapsule des détails sur l’allocation et la désallocation de mémoire pour cette file d’attente simultanée. Cet argument est facultatif et sa valeur par défaut est `allocator<T>`.
 
-## <a name="members"></a>Membres
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|`allocator_type`|Type qui représente la classe d’allocateur pour la file d’attente simultanée.|
-|`const_iterator`|Un type qui représente un non thread-safe `const` itérateur sur les éléments dans une file d’attente simultanée.|
-|`const_reference`|Type qui fournit une référence à un `const` élément stocké dans une file d’attente simultanée pour la lecture et l’exécution `const` operations.|
+|`allocator_type`|Type qui représente la classe Allocator pour la file d’attente simultanée.|
+|`const_iterator`|Type qui représente un itérateur de `const` non thread-safe sur les éléments d’une file d’attente simultanée.|
+|`const_reference`|Type qui fournit une référence à un élément `const` stocké dans une file d’attente simultanée pour la lecture et l’exécution d’opérations de `const`.|
 |`difference_type`|Type qui fournit la distance signée entre deux éléments dans une file d’attente simultanée.|
 |`iterator`|Type qui représente un itérateur non thread-safe sur les éléments dans une file d’attente simultanée.|
 |`reference`|Type qui fournit une référence à un élément stocké dans une file d’attente simultanée.|
@@ -59,23 +59,23 @@ Type qui représente l’objet allocateur stocké qui encapsule des informations
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[concurrent_queue](#ctor)|Surchargé. Construit une file d’attente simultanée.|
-|[~ concurrent_queue, destructeur](#dtor)|Détruit la file d’attente simultanée.|
+|[Destructeur ~ concurrent_queue](#dtor)|Détruit la file d’attente simultanée.|
 
-### <a name="public-methods"></a>M&#233;thodes publiques
+### <a name="public-methods"></a>Méthodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[clear](#clear)|Efface la file d’attente simultanée, en détruisant les actuellement les éléments en file d’attente. Cette méthode n’est pas concurrentiel.|
-|[empty](#empty)|Teste si la file d’attente simultanée est vide pour le moment, cette méthode est appelée. Cette méthode est concurrentiel.|
-|[get_allocator](#get_allocator)|Retourne une copie de l’allocateur utilisé pour construire la file d’attente simultanée. Cette méthode est concurrentiel.|
-|[push](#push)|Surchargé. Place un élément à la fin de la file d’attente simultanée. Cette méthode est concurrentiel.|
-|[try_pop](#try_pop)|Enlève un élément à partir de la file d’attente si celle-ci est disponible. Cette méthode est concurrentiel.|
-|[unsafe_begin](#unsafe_begin)|Surchargé. Retourne un itérateur de type `iterator` ou `const_iterator` au début de la file d’attente simultanée. Cette méthode n’est pas concurrentiel.|
-|[unsafe_end](#unsafe_end)|Surchargé. Retourne un itérateur de type `iterator` ou `const_iterator` à la fin de la file d’attente simultanée. Cette méthode n’est pas concurrentiel.|
-|[unsafe_size](#unsafe_size)|Retourne le nombre d’éléments dans la file d’attente. Cette méthode n’est pas concurrentiel.|
+|[clear](#clear)|Efface la file d’attente simultanée, en détruisant les éléments actuellement mis en file d’attente. Cette méthode n’est pas sécurisée pour la concurrence.|
+|[empty](#empty)|Teste si la file d’attente simultanée est vide au moment où cette méthode est appelée. Cette méthode est sécurisée pour l’accès concurrentiel.|
+|[get_allocator](#get_allocator)|Retourne une copie de l’allocateur utilisé pour construire la file d’attente simultanée. Cette méthode est sécurisée pour l’accès concurrentiel.|
+|[push](#push)|Surchargé. Met en file d’attente un élément à la fin de la file d’attente simultanée. Cette méthode est sécurisée pour l’accès concurrentiel.|
+|[try_pop](#try_pop)|Met en file d’attente un élément de la file d’attente, le cas échéant. Cette méthode est sécurisée pour l’accès concurrentiel.|
+|[unsafe_begin](#unsafe_begin)|Surchargé. Retourne un itérateur de type `iterator` ou `const_iterator` au début de la file d’attente simultanée. Cette méthode n’est pas sécurisée pour la concurrence.|
+|[unsafe_end](#unsafe_end)|Surchargé. Retourne un itérateur de type `iterator` ou `const_iterator` à la fin de la file d’attente simultanée. Cette méthode n’est pas sécurisée pour la concurrence.|
+|[unsafe_size](#unsafe_size)|Retourne le nombre d’éléments dans la file d’attente. Cette méthode n’est pas sécurisée pour la concurrence.|
 
 ## <a name="remarks"></a>Notes
 
@@ -85,21 +85,21 @@ Pour plus d’informations, consultez [conteneurs et objets parallèles](../../.
 
 `concurrent_queue`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
-**En-tête :** concurrent_queue.h
+**En-tête :** concurrent_queue. h
 
 **Espace de noms :** concurrency
 
-##  <a name="clear"></a> Effacer
+##  <a name="clear"></a>effacé
 
-Efface la file d’attente simultanée, en détruisant les actuellement les éléments en file d’attente. Cette méthode n’est pas concurrentiel.
+Efface la file d’attente simultanée, en détruisant les éléments actuellement mis en file d’attente. Cette méthode n’est pas sécurisée pour la concurrence.
 
 ```
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_queue
+##  <a name="ctor"></a>concurrent_queue
 
 Construit une file d’attente simultanée.
 
@@ -120,16 +120,16 @@ concurrent_queue(_InputIterator _Begin,
     _InputIterator _End);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *_InputIterator*<br/>
-Le type de l’itérateur d’entrée qui spécifie une plage de valeurs.
+Type de l’itérateur d’entrée qui spécifie une plage de valeurs.
 
 *_Al*<br/>
 Classe allocator à utiliser avec cet objet.
 
 *_OtherQ*<br/>
-La source `concurrent_queue` objet à copier ou déplacer des éléments à partir de.
+Objet `concurrent_queue` source à partir duquel copier ou déplacer des éléments.
 
 *_Begin*<br/>
 Position du premier élément dans la plage d'éléments à copier.
@@ -139,7 +139,7 @@ Position du premier élément suivant la fin de la plage d'éléments à copier.
 
 ### <a name="remarks"></a>Notes
 
-Tous les constructeurs stockent un objet allocateur `_Al` et initialiser la file d’attente.
+Tous les constructeurs stockent un objet allocateur `_Al` et initialisent la file d’attente.
 
 Le premier constructeur spécifie une file d’attente initiale vide et spécifie explicitement le type d’allocateur à utiliser.
 
@@ -147,7 +147,7 @@ Le deuxième constructeur spécifie une copie de la file d’attente simultanée
 
 Le troisième constructeur spécifie un déplacement de la file d’attente simultanée `_OtherQ`.
 
-Le quatrième constructeur spécifie les valeurs fournies par la plage d’itérateurs [ `_Begin`, `_End`).
+Le quatrième constructeur spécifie les valeurs fournies par la plage d’itérateurs [`_Begin`, `_End`).
 
 ##  <a name="dtor"></a> ~concurrent_queue
 
@@ -157,9 +157,9 @@ Détruit la file d’attente simultanée.
 ~concurrent_queue();
 ```
 
-##  <a name="empty"></a> vide
+##  <a name="empty"></a>vidé
 
-Teste si la file d’attente simultanée est vide pour le moment, cette méthode est appelée. Cette méthode est concurrentiel.
+Teste si la file d’attente simultanée est vide au moment où cette méthode est appelée. Cette méthode est sécurisée pour l’accès concurrentiel.
 
 ```
 bool empty() const;
@@ -167,15 +167,15 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la file d’attente simultanée était vide au moment où nous avons regardés, **false** dans le cas contraire.
+**true** si la file d’attente simultanée était vide au moment où nous avons regardé, sinon **false** .
 
 ### <a name="remarks"></a>Notes
 
-Bien que cette méthode est concurrentiel en ce qui concerne les appels aux méthodes `push`, `try_pop`, et `empty`, la valeur retournée est peut-être incorrecte au moment où il est examiné par le thread appelant.
+Bien que cette méthode soit sécurisée pour l’accès concurrentiel en ce qui concerne les appels aux méthodes `push`, `try_pop`et `empty`, la valeur retournée peut être incorrecte au moment où elle est inspectée par le thread appelant.
 
 ##  <a name="get_allocator"></a> get_allocator
 
-Retourne une copie de l’allocateur utilisé pour construire la file d’attente simultanée. Cette méthode est concurrentiel.
+Retourne une copie de l’allocateur utilisé pour construire la file d’attente simultanée. Cette méthode est sécurisée pour l’accès concurrentiel.
 
 ```
 allocator_type get_allocator() const;
@@ -183,11 +183,11 @@ allocator_type get_allocator() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une copie de l’allocateur utilisé pour construire la file d’attente simultanée.
+Copie de l’allocateur utilisé pour construire la file d’attente simultanée.
 
-##  <a name="push"></a> push
+##  <a name="push"></a>souleve
 
-Place un élément à la fin de la file d’attente simultanée. Cette méthode est concurrentiel.
+Met en file d’attente un élément à la fin de la file d’attente simultanée. Cette méthode est sécurisée pour l’accès concurrentiel.
 
 ```
 void push(const T& _Src);
@@ -195,41 +195,41 @@ void push(const T& _Src);
 void push(T&& _Src);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *_Src*<br/>
-L’élément à ajouter à la file d’attente.
+Élément à ajouter à la file d’attente.
 
 ### <a name="remarks"></a>Notes
 
-`push` est concurrentiel en ce qui concerne les appels aux méthodes `push`, `try_pop`, et `empty`.
+`push` est protégé contre la simultanéité en ce qui concerne les appels aux méthodes `push`, `try_pop`et `empty`.
 
-##  <a name="try_pop"></a> try_pop
+##  <a name="try_pop"></a>try_pop
 
-Enlève un élément à partir de la file d’attente si celle-ci est disponible. Cette méthode est concurrentiel.
+Met en file d’attente un élément de la file d’attente, le cas échéant. Cette méthode est sécurisée pour l’accès concurrentiel.
 
 ```
 bool try_pop(T& _Dest);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *_Dest*<br/>
-Une référence à un emplacement pour stocker l’élément dépilé.
+Référence à un emplacement pour stocker l’élément déplacé dans la file d’attente.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si un élément a été dépilé, **false** dans le cas contraire.
+**true** si un élément a été correctement supprimé de la file d’attente ; sinon, **false** .
 
 ### <a name="remarks"></a>Notes
 
-Si un élément a été dépilé avec succès, le paramètre `_Dest` reçoit la valeur correspondante, la valeur d’origine contenue dans la file d’attente est détruite et cette fonction retourne **true**. S’il n’y avait aucun élément à la file d’attente, cette fonction retourne `false` sans blocage et le contenu de la `_Dest` paramètre ne sont pas définis.
+Si un élément a été correctement supprimé de la file d’attente, le paramètre `_Dest` reçoit la valeur déplacée dans la file d’attente, la valeur d’origine contenue dans la file d’attente est détruite et cette fonction retourne **true**. S’il n’y a aucun élément à défiler, cette fonction retourne `false` sans blocage, et le contenu du paramètre `_Dest` n’est pas défini.
 
-`try_pop` est concurrentiel en ce qui concerne les appels aux méthodes `push`, `try_pop`, et `empty`.
+`try_pop` est protégé contre la simultanéité en ce qui concerne les appels aux méthodes `push`, `try_pop`et `empty`.
 
-##  <a name="unsafe_begin"></a> unsafe_begin
+##  <a name="unsafe_begin"></a>unsafe_begin
 
-Retourne un itérateur de type `iterator` ou `const_iterator` au début de la file d’attente simultanée. Cette méthode n’est pas concurrentiel.
+Retourne un itérateur de type `iterator` ou `const_iterator` au début de la file d’attente simultanée. Cette méthode n’est pas sécurisée pour la concurrence.
 
 ```
 iterator unsafe_begin();
@@ -239,15 +239,15 @@ const_iterator unsafe_begin() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un itérateur de type `iterator` ou `const_iterator` au début de l’objet de file d’attente simultanée.
+Itérateur de type `iterator` ou `const_iterator` au début de l’objet de file d’attente simultané.
 
 ### <a name="remarks"></a>Notes
 
-Les itérateurs pour la `concurrent_queue` classe sont principalement pour le débogage, car ils sont lentes et itération n’est pas d’accès concurrentiel-safe en ce qui concerne les autres opérations de file d’attente.
+Les itérateurs de la classe `concurrent_queue` sont principalement destinés au débogage, car ils sont lents, et l’itération n’est pas sécurisée pour les autres opérations de file d’attente.
 
-##  <a name="unsafe_end"></a> unsafe_end
+##  <a name="unsafe_end"></a>unsafe_end
 
-Retourne un itérateur de type `iterator` ou `const_iterator` à la fin de la file d’attente simultanée. Cette méthode n’est pas concurrentiel.
+Retourne un itérateur de type `iterator` ou `const_iterator` à la fin de la file d’attente simultanée. Cette méthode n’est pas sécurisée pour la concurrence.
 
 ```
 iterator unsafe_end();
@@ -257,15 +257,15 @@ const_iterator unsafe_end() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un itérateur de type `iterator` ou `const_iterator` à la fin de la file d’attente simultanée.
+Itérateur de type `iterator` ou `const_iterator` à la fin de la file d’attente simultanée.
 
 ### <a name="remarks"></a>Notes
 
-Les itérateurs pour la `concurrent_queue` classe sont principalement pour le débogage, car ils sont lentes et itération n’est pas d’accès concurrentiel-safe en ce qui concerne les autres opérations de file d’attente.
+Les itérateurs de la classe `concurrent_queue` sont principalement destinés au débogage, car ils sont lents, et l’itération n’est pas sécurisée pour les autres opérations de file d’attente.
 
-##  <a name="unsafe_size"></a> unsafe_size
+##  <a name="unsafe_size"></a>unsafe_size
 
-Retourne le nombre d’éléments dans la file d’attente. Cette méthode n’est pas concurrentiel.
+Retourne le nombre d’éléments dans la file d’attente. Cette méthode n’est pas sécurisée pour la concurrence.
 
 ```
 size_type unsafe_size() const;
@@ -273,11 +273,11 @@ size_type unsafe_size() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La taille de la file d’attente simultanée.
+Taille de la file d’attente simultanée.
 
 ### <a name="remarks"></a>Notes
 
-`unsafe_size` n’est pas concurrentiel et peut produire des résultats incorrects si elle est appelée en même temps que les appels aux méthodes `push`, `try_pop`, et `empty`.
+`unsafe_size` n’est pas sécurisé pour la concurrence et peut produire des résultats incorrects si elle est appelée simultanément avec des appels aux méthodes `push`, `try_pop`et `empty`.
 
 ## <a name="see-also"></a>Voir aussi
 

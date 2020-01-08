@@ -1,17 +1,17 @@
 ---
 title: ELSE (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - else
 helpviewer_keywords:
 - ELSE directive
 ms.assetid: c43af707-4567-4489-97ca-f14982d84e88
-ms.openlocfilehash: de162bfda80f659dc477d7cbb003a36de60c2328
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e7098cb5be7f39458410e48507a4aea675974724
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397704"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318148"
 ---
 # <a name="else-masm"></a>ELSE (MASM)
 
@@ -19,12 +19,13 @@ Marque le début d’un bloc alternatif au sein d’un bloc conditionnel.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **TIERCE**
+> **ELSE**
 
 ## <a name="remarks"></a>Notes
 
-Consultez [si](../../assembler/masm/if-masm.md).
+Consultez [si](if-masm.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](directives-reference.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

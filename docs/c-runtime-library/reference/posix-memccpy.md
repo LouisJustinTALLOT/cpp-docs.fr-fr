@@ -1,6 +1,6 @@
 ---
 title: memccpy
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - memccpy
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - memccpy function
 ms.assetid: e9951812-2b69-43e9-bbee-a0001bce4d80
-ms.openlocfilehash: 2596bf917c40bddfba6b40ddcfbc43f236cb0ec0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1d092b31b3c372321c37fbf82772e2abd268c8cc
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950500"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300896"
 ---
 # <a name="memccpy"></a>memccpy
 
-Cette fonction POSIX est déconseillée. Utilisez plutôt [_memccpy](memccpy.md), qui est conforme à la norme ISO C++.
+Le nom de fonction POSIX implémenté par Microsoft `memccpy` est un alias déconseillé pour la fonction [_memccpy](memccpy.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
+
+Nous vous recommandons d’utiliser [_memccpy](memccpy.md) à la place. Vous pouvez continuer à utiliser ce nom de fonction et désactiver l’avertissement. Pour plus d’informations, consultez [Désactiver les](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) noms de [fonction](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)d’avertissement et POSIX.

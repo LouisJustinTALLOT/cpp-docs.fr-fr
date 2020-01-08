@@ -1,6 +1,6 @@
 ---
 title: fcvt
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - fcvt
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - fcvt function
 ms.assetid: 1f748ad0-e186-400e-af8e-80d4431523d7
-ms.openlocfilehash: 58c15d545054615bc7da498c7be49cb0cf468ed4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2e4358cbaecca29f282c32070e41771222d54067
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950801"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301182"
 ---
 # <a name="fcvt"></a>fcvt
 
-Cette fonction POSIX est déconseillée. Utilisez plutôt [_fcvt](fcvt.md), qui est conforme à la norme ISO C++, ou [_fcvt_s](fcvt-s.md), qui offre une sécurité améliorée.
+Le nom de fonction spécifique à Microsoft `fcvt` est un alias déconseillé pour la fonction [_fcvt](fcvt.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
+
+Nous vous recommandons d’utiliser [_fcvt](fcvt.md) ou la fonction [_fcvt_s](fcvt-s.md) à la sécurité améliorée à la place. Vous pouvez continuer à utiliser ce nom de fonction et désactiver l’avertissement. Pour plus d’informations, consultez [Désactiver les](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) noms de [fonction](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)d’avertissement et POSIX.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398112"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317628"
 ---
 # <a name="model-32-bit-masm"></a>. MODÈLE (MASM 32 bits)
 
@@ -21,7 +21,7 @@ Initialise le modèle de mémoire du programme. (uniquement MASM 32 bits.)
 
 > **. Memory Model** *-Model* ⟦ __,__ *Language-type*⟧ ⟦ __,__ *Stack-option*⟧
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 \ *de modèle de mémoire*
 Paramètre obligatoire qui détermine la taille des pointeurs du code et des données.
@@ -38,14 +38,14 @@ La spécification de **NEARSTACK** regroupe le segment de pile en un seul segmen
 
 ## <a name="remarks"></a>Notes
 
-**. Le modèle** n’est pas utilisé dans [MASM pour x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**. Le modèle** n’est pas utilisé dans [MASM pour x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 Le tableau suivant liste les valeurs possibles pour chaque paramètre lors du ciblage des plateformes 16 bits et 32 bits :
 
 |Paramètre|Valeurs 32 bits|Valeurs 16 bits (prise en charge du développement en 16 bits antérieur)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*modèle de mémoire*|**PLATE**|**petite**, **petite**, **compacte**, **moyenne**, **grande** **, grande,** **plate**|
-|*Language-type*|**C**, **StdCall**|**C**, **Basic**, **Fortran**, **Pascal**, **syscall**, **StdCall**|
+|*Language-type*|**C**, **StdCall**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
 |*option de pile*|Non utilisé|**NEARSTACK**, **FARSTACK**|
 
 ## <a name="code"></a>Code
@@ -88,4 +88,5 @@ end
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

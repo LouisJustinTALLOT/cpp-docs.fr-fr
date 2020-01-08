@@ -1,6 +1,6 @@
 ---
 title: putenv
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - putenv
 api_location:
@@ -24,16 +24,18 @@ f1_keywords:
 helpviewer_keywords:
 - putenv function
 ms.assetid: 1dc49ef3-6b12-484c-8e60-7048bcc999f1
-ms.openlocfilehash: 8911d29f8e4df9495e4efb01e808b22b6828bbd6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0a2a86753f1d9780f1dd8e3baf60f50ff1e79ea2
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949838"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300766"
 ---
 # <a name="putenv"></a>putenv
 
-Cette fonction POSIX est déconseillée. Utilisez plutôt la fonction [_putenv](putenv-wputenv.md), qui est conforme à la norme ISO C++, ou la fonction [_putenv_s](putenv-s-wputenv-s.md), qui offre une sécurité améliorée.
+Le nom de fonction POSIX implémenté par Microsoft `putenv` est un alias déconseillé pour la fonction [_putenv](putenv-wputenv.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
+
+Nous vous recommandons d’utiliser à la place [_putenv](putenv-wputenv.md) ou la fonction [_putenv_s](putenv-s-wputenv-s.md) à la sécurité améliorée. Vous pouvez continuer à utiliser ce nom de fonction et désactiver l’avertissement. Pour plus d’informations, consultez [Désactiver les](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) noms de [fonction](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)d’avertissement et POSIX.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

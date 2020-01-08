@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2232
 ms.assetid: 76f302b7-30a7-4a81-9a39-b4edde33b54c
-ms.openlocfilehash: f1478c2d06ab535a532b1be45c2db69050afe7b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78ed8970b29126bceb06ff89d12c83cb98c4b5fd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376638"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301806"
 ---
 # <a name="compiler-error-c2232"></a>Erreur du compilateur C2232
 
-'->' : opérande gauche avec 'class-key' type,'.' utiliser
+'-> ' : l’opérande gauche a le type’Class-Key', utilisez'. '
 
-L’opérande à gauche de l’opérateur `->` n’est pas un pointeur. Utilisez l’opérateur point (.) pour une classe, une structure ou une union.
+L’opérande à gauche de l’opérateur `->` n’est pas un pointeur. Utilisez l’opérateur point (.) pour une classe, une structure ou une Union.
 
 L’exemple suivant génère l’erreur C2232 :
 
-```
+```c
 // C2232.c
 struct X {
     int member;

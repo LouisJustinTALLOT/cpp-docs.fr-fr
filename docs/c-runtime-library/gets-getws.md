@@ -31,12 +31,12 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: 722d67336e11250f6a5459078dcea173f69bc2af
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f4e052f91dd2b4adfd5fd7e1ad7c81e0e5b07a11
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944336"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300272"
 ---
 # <a name="gets-_getws"></a>gets, _getws
 
@@ -46,7 +46,7 @@ Obtient une ligne du flux `stdin` Des versions plus sécurisées de ces fonction
 >  Ces fonctions sont obsolètes. Depuis Visual Studio 2015, elles ne sont pas disponibles dans la bibliothèque CRT. Les versions sécurisées de ces fonctions, gets_s et getws_s, sont toujours disponibles. Pour plus d’informations sur ces fonctions alternatives, consultez [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
 
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+>  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,7 +67,7 @@ wchar_t *_getws(
 ); // C++ only
 ```
 
-#### <a name="parameters"></a>Paramètres
+#### <a name="parameters"></a>Parameters
 
 *buffer*<br/>
 Emplacement de stockage pour une chaîne entrée.
@@ -83,7 +83,7 @@ La fonction `gets` lit une ligne dans le flux d’entrée standard `stdin` et la
 > [!IMPORTANT]
 >  Comme il n’existe aucun moyen de limiter le nombre de caractères lus par gets, une entrée non approuvée peut facilement provoquer des dépassements de la mémoire tampon. Utilisez plutôt `fgets` .
 
-En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md).
+En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -91,7 +91,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_getts`|`gets`|`gets`|`_getws`|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -100,9 +100,9 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
-```
+```c
 // crt_gets.c
 // compile with: /WX /W3
 

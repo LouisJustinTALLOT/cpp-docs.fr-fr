@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: aa258eaba34feec8ea25d780ea6392f195e37508
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 97a8de0a7fd0f278e6b0e3730a52ca3d0be6e07a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944690"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298998"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets, _cgetws
 
@@ -45,7 +45,7 @@ Obtient une chaîne de caractères à partir de la console. Des versions plus s�
 >  Ces fonctions sont obsolètes. Depuis Visual Studio 2015, elles ne sont pas disponibles dans la bibliothèque CRT. Les versions sécurisées de ces fonctions, _cgets_s et _cgetws_s, sont toujours disponibles. Pour plus d’informations sur ces fonctions alternatives, consultez [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).
 
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+>  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,7 +66,7 @@ wchar_t *_cgetws(
 ); // C++ only
 ```
 
-#### <a name="parameters"></a>Paramètres
+#### <a name="parameters"></a>Parameters
 
 *buffer*<br/>
 Emplacement de stockage des données.
@@ -81,7 +81,7 @@ Ces fonctions lisent une chaîne de caractères à partir de la console, et stoc
 
 Comme toutes les touches d’édition sont actives quand `_cgets` ou `_cgetws` est appelée alors que c’est une fenêtre de console qui est active, le fait d’appuyer sur la touche F3 répète la dernière entrée saisie.
 
-En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md).
+En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -89,18 +89,18 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |`_cgets`|\<conio.h>|
 |`_cgetws`|\<conio.h> ou \<wchar.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
-```
+```c
 // crt_cgets.c
 // compile with: /c /W3
 // This program creates a buffer and initializes
