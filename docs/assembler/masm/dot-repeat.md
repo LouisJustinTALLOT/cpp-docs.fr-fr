@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - .REPEAT directive
 ms.assetid: cb8ad8c6-587b-42f9-a0ad-b5316a24918c
-ms.openlocfilehash: 2a447cb13fa78b0f2ad3cf61e2d0ff77a5b8cfd9
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: f21f3f3cc4cb86b1ca2503d515dcd7fbcdffe622
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398011"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318278"
 ---
 # <a name="repeat-32-bit-masm"></a>. REPEAT (MASM 32 bits)
 
-Génère du code qui répète l’exécution du bloc d' *instructions* jusqu’à ce que la *condition* devienne true. [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), qui devient true lorsque CX est égal à zéro, peut être substitué à [. JUSQU’à](../../assembler/masm/dot-until.md). La *condition* est facultative avec **. UNTILCXZ**. (uniquement MASM 32 bits.)
+Génère du code qui répète l’exécution du bloc d' *instructions* jusqu’à ce que la *condition* devienne true. [. UNTILCXZ](dot-untilcxz.md), qui devient true lorsque CX est égal à zéro, peut être substitué à [. JUSQU’à](dot-until.md). La *condition* est facultative avec **. UNTILCXZ**. (uniquement MASM 32 bits.)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,4 +25,5 @@ Génère du code qui répète l’exécution du bloc d' *instructions* jusqu’�
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](directives-reference.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

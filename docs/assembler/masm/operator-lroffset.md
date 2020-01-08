@@ -1,6 +1,6 @@
 ---
 title: LROFFSET, opérateur
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - LROFFSET
 - operator LROFFSET
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - operator LROFFSET
 - LROFFSET operator
 ms.assetid: 61ab45d4-7a30-440d-9c11-2a9dfa6ae565
-ms.openlocfilehash: 835849d0f534e67dbc7b08ee025d54c2faf4fe82
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: ea42371a96525072741b90fa5c488e4e9492cfe2
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396693"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317862"
 ---
 # <a name="operator-lroffset"></a>LROFFSET, opérateur
 
@@ -25,4 +25,5 @@ Retourne le décalage de l' *expression*. Identique au **décalage**, mais gén�
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les opérateurs](operators-reference.md)
+Informations de référence sur les [opérateurs](operators-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

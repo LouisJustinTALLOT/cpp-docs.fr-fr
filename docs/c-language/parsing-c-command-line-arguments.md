@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: da8a21ac9ff7ce4fd6bde4d2d1e50d8f30806b78
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151206"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299089"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analyse des arguments de ligne de commande C
 
@@ -23,15 +23,15 @@ Le code de démarrage Microsoft C utilise les règles suivantes lors de l’inte
 
 - Les arguments sont délimités par un espace blanc, qui peut être un espace ou une tabulation.
 
-- Une chaîne placée entre guillemets doubles est interprétée comme un argument unique, quels que soient les espaces blancs inclus. Une chaîne entre guillemets peut être incorporée dans un argument. Notez que le signe insertion (**^**) n'est pas reconnu comme caractère d'échappement ni comme délimiteur.
+- Une chaîne placée entre guillemets doubles est interprétée comme un argument unique, quels que soient les espaces blancs inclus. Une chaîne entre guillemets peut être incorporée dans un argument. Notez que le signe insertion ( **^** ) n'est pas reconnu comme caractère d'échappement ni comme délimiteur.
 
-- Un guillemet double précédé d'une barre oblique inverse **\\\"** est interprété comme un caractère guillemet double littéral (**"**).
+- Un guillemet double précédé d'une barre oblique inverse **\\\"** est interprété comme un caractère guillemet double littéral ( **"** ).
 
 - Les barres obliques inverses sont interprétées littéralement, sauf si elles précèdent immédiatement un guillemet double.
 
-- Si un nombre pair de barres obliques inverses est suivi d'un guillemet double, une barre oblique inverse (**\\**) est placée dans le tableau `argv` pour chaque paire de barres obliques inverses (**\\\\**) et le guillemet double (**"**) est interprété comme un délimiteur de chaîne.
+- Si un nombre pair de barres obliques inverses est suivi d'un guillemet double, une barre oblique inverse ( **\\** ) est placée dans le tableau `argv` pour chaque paire de barres obliques inverses ( **\\\\** ) et le guillemet double ( **"** ) est interprété comme un délimiteur de chaîne.
 
-- Si un nombre impair de barres obliques inverses est suivi d'un guillemet double, une barre oblique inverse (**\\**) est placée dans le tableau `argv` pour chaque paire de barres obliques inverses (**\\\\**) et le guillemet double est interprétée comme une séquence d'échappement par la barre oblique inverse restante, provoquant l'insertion d'un guillemet double littéral (**"**) dans `argv`.
+- Si un nombre impair de barres obliques inverses est suivi d'un guillemet double, une barre oblique inverse ( **\\** ) est placée dans le tableau `argv` pour chaque paire de barres obliques inverses ( **\\\\** ) et le guillemet double est interprétée comme une séquence d'échappement par la barre oblique inverse restante, provoquant l'insertion d'un guillemet double littéral ( **"** ) dans `argv`.
 
 Cette liste illustre les règles énoncées ci-dessus en indiquant le résultat interprété passé à `argv` pour plusieurs exemples d'arguments de ligne de commande. La sortie indiquée dans les deuxième, troisième et quatrième colonnes provient du programme ARGS.C qui suit la liste.
 
@@ -47,7 +47,7 @@ Cette liste illustre les règles énoncées ci-dessus en indiquant le résultat 
 
 ### <a name="code"></a>Code
 
-```
+```c
 // Parsing_C_Commandline_args.c
 // ARGS.C illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -76,7 +76,7 @@ char **envp )      // Array of environment variable strings
 }
 ```
 
-## <a name="comments"></a>Commentaires
+## <a name="comments"></a>Comments
 
 Voici un exemple de sortie de ce programme :
 
@@ -95,7 +95,7 @@ Environment variables:
   WINDIR=c:\nt
 ```
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

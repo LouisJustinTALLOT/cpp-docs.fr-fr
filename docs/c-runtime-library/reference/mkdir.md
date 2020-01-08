@@ -1,6 +1,6 @@
 ---
 title: mkdir
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - mkdir
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - mkdir function
 ms.assetid: 0a212890-181e-45d0-988d-e0f301fcdeb8
-ms.openlocfilehash: 64ca9d6a10b88b6dd0b867ed4ddd5ad327aa1487
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c9c52954cd78e4780f2827d415a1af555dc67126
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951685"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301156"
 ---
 # <a name="mkdir"></a>mkdir
 
-Cette fonction POSIX est déconseillée. Utilisez plutôt [_mkdir](mkdir-wmkdir.md), qui est conforme à la spécification ISO C++.
+Le nom de fonction POSIX implémenté par Microsoft `mkdir` est un alias déconseillé pour la fonction [_mkdir](mkdir-wmkdir.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
+
+Nous vous recommandons d’utiliser [_mkdir](mkdir-wmkdir.md) à la place. Vous pouvez continuer à utiliser ce nom de fonction et désactiver l’avertissement. Pour plus d’informations, consultez [Désactiver les](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) noms de [fonction](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)d’avertissement et POSIX.

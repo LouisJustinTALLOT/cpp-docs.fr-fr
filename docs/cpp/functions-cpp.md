@@ -8,16 +8,16 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154132"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301507"
 ---
 # <a name="functions-c"></a>Fonctions (C++)
 
-Une fonction est un bloc de code qui effectue une opération. Une fonction peut éventuellement définir les paramètres d'entrée qui permettent aux appelants de passer des arguments dans la fonction. Une fonction peut éventuellement retourner une valeur en tant que sortie. Les fonctions sont utiles pour encapsuler les opérations courantes dans un seul bloc réutilisable, idéalement avec un nom qui décrit clairement ce que fait la fonction. La fonction suivante accepte deux entiers à partir d’un appelant et retourne leur somme ; *un* et *b* sont *paramètres* de type **int**.
+Une fonction est un bloc de code qui effectue une opération. Une fonction peut éventuellement définir les paramètres d'entrée qui permettent aux appelants de passer des arguments dans la fonction. Une fonction peut éventuellement retourner une valeur en tant que sortie. Les fonctions sont utiles pour encapsuler les opérations courantes dans un seul bloc réutilisable, idéalement avec un nom qui décrit clairement ce que fait la fonction. La fonction suivante accepte deux entiers d’un appelant et retourne leur somme ; *a* et *b* sont des *paramètres* de type **int**.
 
 ```cpp
 int sum(int a, int b)
@@ -26,7 +26,7 @@ int sum(int a, int b)
 }
 ```
 
-La fonction peut être appelée, ou *appelé*, à partir de n’importe quel nombre d’emplacements dans le programme. Les valeurs qui sont passés à la fonction sont les *arguments*, dont les types doivent être compatibles avec les types de paramètre dans la définition de fonction.
+La fonction peut être appelée, ou *appelée*, à partir de n’importe quel nombre d’emplacements dans le programme. Les valeurs passées à la fonction sont les *arguments*, dont les types doivent être compatibles avec les types de paramètres dans la définition de fonction.
 
 ```cpp
 int main()
@@ -39,19 +39,19 @@ int main()
 
 Il n’existe aucune limite pratique à la longueur de la fonction, mais une conception judicieuse s’adresse aux fonctions qui effectuent une seule tâche bien définie. Les algorithmes complexes doivent être divisés en fonctions plus simples à comprendre chaque fois que possible.
 
-Les fonctions qui sont définies au niveau de la portée de classe sont appelées fonctions membres. En C++, contrairement à d'autres langages, une fonction peut également être définie au niveau de la portée d'espace de noms (y compris l'espace de noms global implicite). Ces fonctions sont appelées *fonctions libres* ou *des fonctions non-membres*; elles sont largement utilisées dans la bibliothèque Standard.
+Les fonctions qui sont définies au niveau de la portée de classe sont appelées fonctions membres. En C++, contrairement à d'autres langages, une fonction peut également être définie au niveau de la portée d'espace de noms (y compris l'espace de noms global implicite). Ces fonctions sont appelées fonctions *libres* ou *fonctions non-membres*. elles sont largement utilisées dans la bibliothèque standard.
 
-Les fonctions peuvent être *surchargé*, ce qui signifie que les différentes versions d’une fonction peut partager le même nom s’ils diffèrent par le nombre et/ou le type de paramètres formels. Pour plus d’informations, consultez [surcharge de fonction](../cpp/function-overloading.md).
+Les fonctions peuvent être *surchargées*, ce qui signifie que les différentes versions d’une fonction peuvent partager le même nom si elles diffèrent par le nombre et/ou le type de paramètres formels. Pour plus d’informations, consultez [surcharge de fonction](../cpp/function-overloading.md).
 
 ## <a name="parts-of-a-function-declaration"></a>Éléments d'une déclaration de fonction
 
-Une fonction minimale *déclaration* est constitué par le type de retour, le nom de fonction et la liste de paramètres (qui peut être vide), ainsi que des mots clés facultatifs qui fournissent des instructions supplémentaires pour le compilateur. L’exemple suivant est une déclaration de fonction :
+Une *déclaration* de fonction minimale se compose du type de retour, du nom de fonction et de la liste de paramètres (qui peuvent être vides), ainsi que des mots clés facultatifs qui fournissent des instructions supplémentaires au compilateur. L’exemple suivant est une déclaration de fonction :
 
 ```cpp
 int sum(int a, int b);
 ```
 
-Une définition de fonction se compose d’une déclaration, ainsi que les *corps*, qui est tout le code entre les accolades :
+Une définition de fonction se compose d’une déclaration, plus le *corps*, qui est tout le code entre les accolades :
 
 ```cpp
 int sum(int a, int b)
@@ -64,7 +64,7 @@ Une déclaration de fonction suivie d'un point-virgule peut apparaître à plusi
 
 Les éléments requis d'une déclaration de fonction sont les suivants :
 
-1. Le type de retour, qui spécifie le type de la valeur retournée par la fonction, ou **void** si aucune valeur n’est retournée. Dans C ++ 11, **automatique** est un type de retour valide qui indique au compilateur de déduire le type à partir de l’instruction return. En C++14, decltype(auto) est également autorisé. Pour plus d'informations, consultez Déduction de type dans les types de retours ci-dessous.
+1. Le type de retour, qui spécifie le type de la valeur retournée par la fonction, ou **void** si aucune valeur n’est retournée. En C++ 11, **auto** est un type de retour valide qui indique au compilateur de déduire le type de l’instruction return. En C++14, decltype(auto) est également autorisé. Pour plus d'informations, consultez Déduction de type dans les types de retours ci-dessous.
 
 1. Le nom de fonction, qui doit commencer par une lettre ou un trait de soulignement et ne peut pas contenir d'espaces. En général, les traits de soulignement de début dans les noms de fonctions de bibliothèque standard indiquent des fonctions membres privées ou des fonctions non membres qui ne sont pas destinées à être utilisées par votre code.
 
@@ -83,7 +83,7 @@ Les éléments facultatifs d'une déclaration de fonction sont les suivants :
     };
     ```
 
-1. Sa spécification de liaison, **extern** ou **statique**.
+1. Sa spécification de liaison, **extern** ou **static**.
 
     ```cpp
     //Declare printf with C linkage.
@@ -91,9 +91,9 @@ Les éléments facultatifs d'une déclaration de fonction sont les suivants :
 
     ```
 
-   Pour plus d’informations, consultez [programme et liaison](../cpp/program-and-linkage-cpp.md).
+   Pour plus d’informations, consultez [unités de traduction et liaison](../cpp/program-and-linkage-cpp.md).
 
-1. **inline**, qui indique au compilateur de remplacer chaque appel à la fonction avec le code de fonction lui-même. L'incorporation peut améliorer les performances dans les scénarios où une fonction s'exécute rapidement et est appelée à plusieurs reprises dans une section du code critique pour les performances.
+1. **inline**, qui indique au compilateur de remplacer chaque appel à la fonction par le code de fonction lui-même. L'incorporation peut améliorer les performances dans les scénarios où une fonction s'exécute rapidement et est appelée à plusieurs reprises dans une section du code critique pour les performances.
 
     ```cpp
     inline double Account::GetBalance()
@@ -102,9 +102,9 @@ Les éléments facultatifs d'une déclaration de fonction sont les suivants :
     }
     ```
 
-   Pour plus d’informations, consultez [fonctions Inline](../cpp/inline-functions-cpp.md).
+   Pour plus d’informations, consultez [fonctions inline](../cpp/inline-functions-cpp.md).
 
-1. Un `noexcept` expression, qui spécifie si la fonction peut lever une exception. Dans l’exemple suivant, la fonction ne lève pas d’exception si le `is_pod` expression prend la valeur **true**.
+1. Expression `noexcept` qui spécifie si la fonction peut lever une exception. Dans l’exemple suivant, la fonction ne lève pas d’exception si l’expression `is_pod` prend la **valeur true**.
 
     ```cpp
     #include <type_traits>
@@ -115,22 +115,22 @@ Les éléments facultatifs d'une déclaration de fonction sont les suivants :
 
    Pour plus d’informations, consultez [noexcept](../cpp/noexcept-cpp.md).
 
-1. (Fonctions membres uniquement) Les qualificateurs cv, ce qui spécifient si la fonction est **const** ou **volatile**.
+1. (Fonctions membres uniquement) Qualificateurs CV, qui spécifient si la fonction est **const** ou **volatile**.
 
-1. (Fonctions membres uniquement) **virtuels**, `override`, ou `final`. **virtuel** Spécifie qu’une fonction peut être substituée dans une classe dérivée. `override` signifie qu'une fonction dans une classe dérivée remplace une fonction virtuelle. `final` signifie qu'une fonction ne peut pas être substituée dans toute classe dérivée supplémentaire. Pour plus d’informations, consultez [fonctions virtuelles](../cpp/virtual-functions.md).
+1. (Fonctions membres uniquement) **virtuel**, `override`ou `final`. **virtuel** spécifie qu’une fonction peut être substituée dans une classe dérivée. `override` signifie qu'une fonction dans une classe dérivée remplace une fonction virtuelle. `final` signifie qu'une fonction ne peut pas être substituée dans toute classe dérivée supplémentaire. Pour plus d’informations, consultez [fonctions virtuelles](../cpp/virtual-functions.md).
 
-1. (fonctions membres uniquement) **statique** appliqué à un membre de fonction signifie que la fonction n’est pas associée à des instances d’objet de la classe.
+1. (fonctions membres uniquement) **statique** appliquée à une fonction membre signifie que la fonction n’est pas associée à des instances d’objet de la classe.
 
-1. (Fonctions membres Non statiques uniquement) Le qualificateur ref, ce qui indique au compilateur quelle surcharge d’une fonction de choisir quand le paramètre d’objet implicite (\*cela) est une référence rvalue ou une référence lvalue. Pour plus d’informations, consultez [surcharge de fonction](function-overloading.md#ref-qualifiers).
+1. (Fonctions membres non statiques uniquement) Le qualificateur REF, qui spécifie au compilateur la surcharge d’une fonction à choisir lorsque le paramètre d’objet implicite (\*This) est une référence rvalue et une référence lvalue. Pour plus d’informations, consultez [surcharge de fonction](function-overloading.md#ref-qualifiers).
 
 L'illustration suivante montre les parties d'une définition de fonction. La zone grisée est le corps de la fonction.
 
-![Parties d’une définition de fonction](../cpp/media/vc38ru1.gif "parties d’une définition de fonction") <br/>
+![Parties d’une définition de fonction](../cpp/media/vc38ru1.gif "Éléments de définition de fonction") <br/>
 Éléments de définition de fonction
 
 ## <a name="function-definitions"></a>Définitions de fonction
 
-Un *définition de fonction* se compose de la déclaration et le corps de la fonction, entre accolades, qui contient les déclarations de variables, des instructions et des expressions. L’exemple suivant montre une définition de fonction complet :
+Une *définition de fonction* se compose de la déclaration et du corps de la fonction, placés entre accolades, qui contient des déclarations, des instructions et des expressions de variables. L’exemple suivant montre une définition de fonction complète :
 
 ```cpp
     int foo(int i, std::string s)
@@ -159,9 +159,9 @@ Les variables déclarées à l'intérieur du corps sont appelées variables loca
 
 ## <a name="const-and-constexpr-functions"></a>fonctions const et constexpr
 
-Vous pouvez déclarer une fonction membre en tant que **const** pour spécifier que la fonction n’est pas autorisée à modifier les valeurs des membres de données dans la classe. En déclarant une fonction membre en tant que **const**, vous aider au compilateur d’appliquer *const-exactitude*. Si une personne par inadvertance tente de modifier l’objet à l’aide d’une fonction déclarée en tant que **const**, une erreur du compilateur est générée. Pour plus d’informations, consultez [const](const-cpp.md).
+Vous pouvez déclarer une fonction membre comme **const** pour spécifier que la fonction n’est pas autorisée à modifier les valeurs des membres de données de la classe. En déclarant une fonction membre comme **const**, vous aidez le compilateur à appliquer *const-corrections*. Si quelqu’un tente par erreur de modifier l’objet à l’aide d’une fonction déclarée comme **const**, une erreur de compilateur est générée. Pour plus d’informations, consultez [const](const-cpp.md).
 
-Déclarer une fonction comme `constexpr` lorsque la valeur qu’il génère peut éventuellement être déterminée au moment de la compilation. En règle générale, une fonction constexpr exécute plus rapidement qu’une fonction régulière. Pour plus d’informations, consultez [constexpr](constexpr-cpp.md).
+Déclarez une fonction comme `constexpr` lorsque la valeur qu’elle produit peut être déterminée au moment de la compilation. Une fonction constexpr s’exécute généralement plus rapidement qu’une fonction normale. Pour plus d’informations, consultez [constexpr](constexpr-cpp.md).
 
 ## <a name="function-templates"></a>Modèles de fonctions
 
@@ -178,31 +178,31 @@ auto a = Add2(3.13, 2.895); // a is a double
 auto b = Add2(string{ "Hello" }, string{ " World" }); // b is a std::string
 ```
 
-Pour plus d’informations, consultez [modèles de fonction](../cpp/function-templates.md)
+Pour plus d’informations, consultez [modèles de fonction](../cpp/function-templates.md) .
 
 ## <a name="function-parameters-and-arguments"></a>Paramètres et arguments de fonction
 
 Une fonction possède une liste de paramètres séparés par des virgules de zéro, un ou plusieurs types, chacun d'eux ayant un nom selon lequel il est accessible à l'intérieur du corps de la fonction. Un modèle de fonction peut spécifier des paramètres de type ou de valeur supplémentaires. L'appelant transmet les arguments, qui sont des valeurs concrètes dont les types sont compatibles avec la liste de paramètres.
 
-Par défaut, les arguments sont passés à la fonction par valeur, ce qui signifie que la fonction reçoit une copie de l'objet passé. Pour les objets volumineux, une copie peut être coûteuse et n'est pas toujours nécessaire. Pour que les arguments à passer par référence (en particulier la référence lvalue), ajoutez un quantificateur référence au paramètre :
+Par défaut, les arguments sont passés à la fonction par valeur, ce qui signifie que la fonction reçoit une copie de l'objet passé. Pour les objets volumineux, une copie peut être coûteuse et n'est pas toujours nécessaire. Pour faire en sorte que les arguments soient passés par référence (notamment la référence lvalue), ajoutez un quantificateur de référence au paramètre :
 
 ```cpp
 void DoSomething(std::string& input){...}
 ```
 
-Lorsqu’une fonction modifie un argument passé par référence, elle modifie l’objet d’origine, pas une copie locale. Pour empêcher une fonction de modifier un tel argument, qualifiez le paramètre comme const & :
+Lorsqu’une fonction modifie un argument passé par référence, elle modifie l’objet d’origine, pas une copie locale. Pour empêcher une fonction de modifier un tel argument, qualifiez le paramètre comme const &:
 
 ```cpp
 void DoSomething(const std::string& input){...}
 ```
 
-**C++11 :**  Pour gérer explicitement les arguments sont passés par référence rvalue ou référence lvalue, utilisez une double perluète sur le paramètre pour indiquer une référence universelle :
+**C++ 11 :**  Pour gérer explicitement les arguments passés par la référence rvalue ou la référence lvalue, utilisez une double esperluette sur le paramètre pour indiquer une référence universelle :
 
 ```cpp
 void DoSomething(const std::string&& input){...}
 ```
 
-Une fonction déclarée avec le mot clé unique **void** dans la déclaration du paramètre liste n’accepte aucun argument, tant que le mot clé **void** est le premier et le seul membre de la liste de déclaration d’argument. Arguments de type **void** ailleurs dans la liste génèrent des erreurs. Exemple :
+Une fonction déclarée avec le mot clé unique **void** dans la liste des déclarations de paramètres ne prend pas d’arguments, tant que le mot clé **void** est le premier et le seul membre de la liste des déclarations d’arguments. Les arguments de type **void** ailleurs dans la liste produisent des erreurs. Par exemple :
 
 ```cpp
 
@@ -210,7 +210,7 @@ Une fonction déclarée avec le mot clé unique **void** dans la déclaration du
 long GetTickCount( void );
 ```
 
-Notez que, bien qu’il soit non conforme pour spécifier un **void** argument à l’exception, comme expliqué ici, types dérivés du type **void** (comme les pointeurs vers **void** et les tableaux de **void**) peuvent apparaître partout dans la liste de déclaration d’argument.
+Notez que, bien qu’il ne soit pas conforme de spécifier un argument **void** , sauf comme indiqué ici, les types dérivés de type **void** (tels que les pointeurs vers **void** et les tableaux de **void**) peuvent apparaître n’importe où dans la liste des déclarations d’arguments.
 
 ### <a name="default-arguments"></a>Arguments par défaut
 
@@ -235,15 +235,15 @@ int DoMore(int num = 5, // Not a trailing parameter!
 {...}
 ```
 
-Pour plus d’informations, consultez [Arguments par défaut](../cpp/default-arguments.md).
+Pour plus d’informations, consultez [arguments par défaut](../cpp/default-arguments.md).
 
 ## <a name="function-return-types"></a>Types de retour de fonction
 
-Une fonction ne peut pas retourner une autre fonction ou un tableau intégré ; Toutefois, elle peut retourner des pointeurs vers ces types, ou un *lambda*, ce qui génère un objet de fonction. Mais dans ce cas, une fonction peut retourner une valeur de n’importe quel type qui est dans la portée, ou elle ne peut retourner aucune valeur, auquel cas le type de retour est **void**.
+Une fonction ne peut pas retourner une autre fonction ou un tableau intégré ; Toutefois, il peut retourner des pointeurs vers ces types, ou une *expression lambda*qui produit un objet de fonction. À l’exception de ces cas, une fonction peut retourner une valeur de n’importe quel type qui est dans la portée, ou elle peut ne retourner aucune valeur, auquel cas le type de retour est **void**.
 
 ### <a name="trailing-return-types"></a>Types de retours de fin
 
-Un type de retour « ordinaire » se trouve sur le côté gauche de la signature de fonction. Un *type de retour de fin* se trouve sur le côté droit de la signature et est précédé par l’opérateur ->. Les types de retours de fin sont particulièrement utiles dans les modèles de fonction quand le type de la valeur de retour dépend des paramètres de modèle.
+Un type de retour « ordinaire » se trouve sur le côté gauche de la signature de fonction. Un *type de retour de fin* se trouve sur le côté droit de la signature et est précédé par l’opérateur->. Les types de retours de fin sont particulièrement utiles dans les modèles de fonction quand le type de la valeur de retour dépend des paramètres de modèle.
 
 ```cpp
 template<typename Lhs, typename Rhs>
@@ -253,19 +253,19 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 }
 ```
 
-Lorsque **automatique** est utilisé conjointement avec un type de retour de fin, il sert seulement un espace réservé pour le produit de l’expression decltype et n’effectue pas lui-même de déduction de type.
+Quand **auto** est utilisé conjointement avec un type de retour de fin, il sert simplement d’espace réservé pour l’expression decltype produite et n’effectue pas lui-même de déduction de type.
 
 ## <a name="function-local-variables"></a>Variables locales de fonction
 
-Une variable est déclarée à l’intérieur d’un corps de fonction est appelée un *variable locale* ou simplement un *local*. Les variables locales non statiques sont uniquement visibles à l'intérieur du corps de la fonction et, si elles sont déclarées sur la pile, sortent de la portée lors de la fermeture de la fonction. Quand vous construisez une variable locale et la retournez par valeur, le compilateur peut généralement exécuter l'optimisation de la valeur de retour pour éviter des opérations de copie inutiles. Si vous retournez une variable locale par référence, le compilateur émet un avertissement, car toute tentative d’utiliser cette référence par l’appelant se produit après la destruction de la variable locale.
+Une variable déclarée à l’intérieur d’un corps de fonction est appelée une *variable locale* ou simplement une variable *locale*. Les variables locales non statiques sont uniquement visibles à l'intérieur du corps de la fonction et, si elles sont déclarées sur la pile, sortent de la portée lors de la fermeture de la fonction. Lorsque vous construisez une variable locale et la retournez par valeur, le compilateur peut généralement effectuer l’optimisation de la *valeur de retour nommée* pour éviter les opérations de copie inutiles. Si vous retournez une variable locale par référence, le compilateur émet un avertissement, car toute tentative d’utiliser cette référence par l’appelant se produit après la destruction de la variable locale.
 
 En C++, une variable locale peut être déclarée comme statique. La variable n'est visible que dans le corps de fonction, mais une seule copie de la variable existe pour toutes les instances de la fonction. Les objets statiques locaux sont détruits durant l’arrêt spécifié par `atexit`. Si un objet statique n’a pas été construit car le flux de contrôle du programme a contourné sa déclaration, aucune tentative de destruction de cet objet n’est effectuée.
 
-##  <a name="type_deduction"></a> Déduction de type dans les types de retour (C ++ 14)
+##  <a name="type_deduction"></a>Déduction de type dans les types de retour (C++ 14)
 
-Dans C ++ 14, vous pouvez utiliser **automatique** pour indiquer au compilateur de déduire le type de retour à partir du corps de fonction sans avoir à fournir un type de retour de fin. Notez que **automatique** toujours déduit à une retour par valeur. Utilisez `auto&&` pour indiquer au compilateur de déduire une référence.
+En C++ 14, vous pouvez utiliser **auto** pour indiquer au compilateur de déduire le type de retour du corps de la fonction sans avoir à fournir un type de retour de fin. Notez que **auto déduit automatiquement** une valeur de retour par valeur. Utilisez `auto&&` pour indiquer au compilateur de déduire une référence.
 
-Dans cet exemple, **automatique** sera déduit en tant que valeur non-const copie de la somme de lhs et rhs.
+Dans cet exemple, **auto** sera déduit comme une copie de valeur non const de la somme de LHS et RHS.
 
 ```cpp
 template<typename Lhs, typename Rhs>
@@ -275,9 +275,9 @@ auto Add2(const Lhs& lhs, const Rhs& rhs)
 }
 ```
 
-Notez que **automatique** ne conserve pas la const-ness de type déduit. Pour les fonctions dont la valeur retournée doit préserver la nature const ou ref de ses arguments de transfert, vous pouvez utiliser la **decltype (auto)** mot clé, qui utilise le **decltype** règles d’inférence de type et conserve les informations de type. **decltype (auto)** peut être utilisé en tant que valeur de retour ordinaire sur le côté gauche, ou comme une valeur de retour de fin.
+Notez que **auto** ne conserve pas la caractère const du type qu’il déduit. Pour les fonctions de transfert dont la valeur de retour doit préserver la nature const ou ref de ses arguments, vous pouvez utiliser le mot clé **decltype (auto)** , qui utilise les règles d’inférence de type **decltype** et conserve toutes les informations de type. **decltype (auto)** peut être utilisé comme valeur de retour ordinaire sur le côté gauche, ou comme valeur de retour de fin.
 
-L’exemple suivant (basé sur le code de [N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html)), montre **decltype (auto)** utilisé pour activer le transfert parfait des arguments de fonction dans un type de retour n’est pas connu jusqu'à ce que le modèle est instancié.
+L’exemple suivant (basé sur le code de [N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html)) affiche **decltype (auto)** utilisé pour activer le transfert parfait des arguments de fonction dans un type de retour qui n’est pas connu jusqu’à ce que le modèle soit instancié.
 
 ```cpp
 template<typename F, typename Tuple = tuple<T...>, int... I>
@@ -293,14 +293,13 @@ template<typename F, typename Tuple = tuple<T...>,
 {
     return apply_(std::forward<F>(f), std::forward<Tuple>(args), Indices());
 }
-}
 ```
 
-## <a name="multi_val"></a> Renvoi de plusieurs valeurs à partir d’une fonction
+## <a name="multi_val"></a>Retour de plusieurs valeurs à partir d’une fonction
 
-Il existe différentes manières de retourner plusieurs valeurs d’une fonction :
+Il existe plusieurs façons de retourner plusieurs valeurs à partir d’une fonction :
 
-1. Encapsuler les valeurs dans un objet de classe ou un struct nommé. Requiert la définition de classe ou struct soient visibles à l’appelant :
+1. Encapsulez les valeurs dans une classe nommée ou un objet struct. Requiert que la définition de classe ou de struct soit visible par l’appelant :
 
     ```cpp
     #include <string>
@@ -329,7 +328,7 @@ Il existe différentes manières de retourner plusieurs valeurs d’une fonction
     }
     ```
 
-1. Retourne un objet std::tuple ou std::pair :
+1. Retourne un objet std :: tuple ou std ::p air :
 
     ```cpp
     #include <tuple>
@@ -363,7 +362,7 @@ Il existe différentes manières de retourner plusieurs valeurs d’une fonction
     }
     ```
 
-1. **Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Utilisez les liaisons structurées. L’avantage de liaisons structurées est que les variables qui stockent les valeurs de retour sont initialisés en même temps, qu'ils sont déclarés, ce qui, dans certains cas peut être beaucoup plus efficace. Dans cette instruction--`auto[x, y, z] = f();`--les crochets introduire et initialiser des noms qui sont dans la portée pour le bloc de la fonction entière.
+1. **Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : utilisez des liaisons structurées. L’avantage des liaisons structurées est que les variables qui stockent les valeurs de retour sont initialisées en même temps qu’elles sont déclarées, ce qui peut, dans certains cas, être beaucoup plus efficace. Dans cette instruction,`auto[x, y, z] = f();`--les crochets présentent et initialisent les noms qui se trouvent dans la portée pour l’ensemble du bloc de fonction.
 
     ```cpp
     #include <tuple>
@@ -403,13 +402,13 @@ Il existe différentes manières de retourner plusieurs valeurs d’une fonction
     }
     ```
 
-1. Outre l’utilisation de la valeur de retour, vous pouvez « return » valeurs en définissant un nombre quelconque de paramètres à utiliser le passage par référence afin que la fonction peut être modifiés ou initialiser les valeurs des objets qui fournit de l’appelant. Pour plus d’informations, consultez [Arguments de fonction de Type référence](reference-type-function-arguments.md).
+1. En plus d’utiliser la valeur de retour elle-même, vous pouvez « retourner » des valeurs en définissant un nombre quelconque de paramètres pour utiliser une référence directe afin que la fonction puisse modifier ou initialiser les valeurs des objets fournis par l’appelant. Pour plus d’informations, consultez [arguments de fonction de type référence](reference-type-function-arguments.md).
 
 ## <a name="function-pointers"></a>Pointeurs fonction
 
 C++ prend en charge les pointeurs de fonction de la même manière que le langage C. Toutefois, une alternative de type plus sécurisé consiste généralement à utiliser un objet de fonction.
 
-Il est recommandé que **typedef** être utilisé pour déclarer un alias pour le type de pointeur fonction si vous déclarez une fonction qui retourne un type de pointeur de fonction.  Exemple :
+Il est recommandé d’utiliser **typedef** pour déclarer un alias pour le type de pointeur de fonction si vous déclarez une fonction qui retourne un type de pointeur de fonction.  Exemple :
 
 ```cpp
 typedef int (*fp)(int);

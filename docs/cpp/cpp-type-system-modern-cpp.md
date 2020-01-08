@@ -3,12 +3,12 @@ title: Système de type C++
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 1f12f7505438dc995aaf8a045fd903488e9ff092
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 5755c7818182c5e26c5b3df6407fbe259bfdbcf3
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246603"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301572"
 ---
 # <a name="c-type-system"></a>Système de type C++
 
@@ -24,9 +24,7 @@ Le concept de *type* est très important dans C++. Chaque variable, argument de 
 
 ## <a name="specifying-variable-and-function-types"></a>Spécification des types de variable et de fonction
 
-C++est un langage *fortement typé* et il est également *typé statiquement*; chaque objet a un type et ce type ne change jamais (à ne pas confondre avec les objets de données statiques).
-**Quand vous déclarez une variable** dans votre code, vous devez spécifier explicitement son type ou utiliser le mot clé **auto** pour indiquer au compilateur de déduire le type à partir de l’initialiseur.
-**Quand vous déclarez une fonction** dans votre code, vous devez spécifier le type de chaque argument et sa valeur de retour, ou **void** si aucune valeur n’est retournée par la fonction. L’exception se produit lorsque vous utilisez des modèles de fonction, qui autorisent les arguments de types arbitraires.
+C++est un langage *fortement typé* et il est également *typé statiquement*; chaque objet a un type et ce type ne change jamais (à ne pas confondre avec les objets de données statiques). Quand vous déclarez une variable dans votre code, vous devez spécifier explicitement son type ou utiliser le mot clé **auto** pour indiquer au compilateur de déduire le type à partir de l’initialiseur. Quand vous déclarez une fonction dans votre code, vous devez spécifier le type de chaque argument et sa valeur de retour, ou **void** si aucune valeur n’est retournée par la fonction. L’exception se produit lorsque vous utilisez des modèles de fonction, qui autorisent les arguments de types arbitraires.
 
 Après avoir commencé par déclarer une variable, vous ne pouvez pas modifier son type à un stade ultérieur. Toutefois, vous pouvez copier la valeur de la variable ou la valeur de retour d'une fonction dans une autre variable d'un type différent. Ces opérations sont appelées *conversions de type*, qui sont parfois nécessaires mais sont également des sources potentielles de perte de données ou d’inexactitude.
 
@@ -55,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 Contrairement à certains langages, C++ n'a aucun type de base universel dont tous les autres types sont dérivés. Le langage comprend de nombreux *types fondamentaux*, également appelés *types intégrés*. Cela comprend les types numériques tels que **int**, **double**, **long**, **bool**, ainsi que les types **char** et **wchar_t** pour les caractères ASCII et Unicode, respectivement. La plupart des types fondamentaux (à l’exception de **bool**, **double**, **wchar_t** et des types connexes) ont tous des versions non signées, qui modifient la plage de valeurs que la variable peut stocker. Par exemple, un **int**, qui stocke un entier signé 32 bits, peut représenter une valeur comprise entre-2 147 483 648 et 2 147 483 647. Un **entier non signé**, qui est également stocké comme 32 bits, peut stocker une valeur comprise entre 0 et 4 294 967 295. Le nombre total de valeurs possibles dans chaque cas est identique ; seule la plage est différente.
 
-Les types fondamentaux sont identifiés par le compilateur, qui dispose de règles intégrées régissant les opérations que vous pouvez exécuter sur ces types, ainsi que la façon dont ces types peuvent être convertis en d'autres types fondamentaux. Pour obtenir la liste complète des types intégrés et leurs limites numériques et de taille, consultez [types fondamentaux](../cpp/fundamental-types-cpp.md).
+Les types fondamentaux sont identifiés par le compilateur, qui dispose de règles intégrées régissant les opérations que vous pouvez exécuter sur ces types, ainsi que la façon dont ces types peuvent être convertis en d'autres types fondamentaux. Pour obtenir la liste complète des types intégrés et leurs limites numériques et de taille, consultez [types intégrés](../cpp/fundamental-types-cpp.md).
 
 L'illustration suivante montre les tailles relatives des types intégrés :
 
@@ -70,7 +68,7 @@ Le tableau suivant répertorie les types fondamentaux les plus souvent utilisés
 |bool|1 octet|Représente des valeurs qui peuvent être true ou false.|
 |char|1 octet|À utiliser pour les caractères ASCII dans les chaînes de style C plus anciennes ou les objets std::string qui ne devront jamais être convertis en UNICODE.|
 |wchar_t|2 octets|Représente les valeurs à caractères « larges » qui peuvent être encodées au format UNICODE (UTF-16 sur Windows, mais peut varier sur les autres systèmes d'exploitation). Type de caractère utilisé dans les chaînes de type `std::wstring`.|
-|caractère&nbsp;non signé|1 octet|C++ n'a aucun type `byte` intégré.  Utilisez le caractère non signé pour représenter une valeur d'octet.|
+|unsigned&nbsp;char|1 octet|C++ n'a aucun type `byte` intégré.  Utilisez le caractère non signé pour représenter une valeur d'octet.|
 |unsigned int|4 octets|Option par défaut pour les bits indicateurs.|
 |long long|8 octets|Représente des valeurs entières très grandes.|
 
@@ -157,7 +155,7 @@ Pour plus d’informations sur les pointeurs en général, consultez [pointeurs]
 
 Dans la programmation Win32 classique pour C et C++, la plupart des fonctions utilisent des typedefs spécifiques de Windows et des macros #define (définies dans `windef.h`) pour spécifier les types des paramètres et valeurs de retour. Ces types de données Windows sont principalement des noms spéciaux (alias) donnés aux types CC++ /intégrés. Pour obtenir la liste complète de ces typedefs et définitions de préprocesseur, consultez [types de données Windows](/windows/win32/WinProg/windows-data-types). Certains de ces typedefs, par exemple HRESULT et LCID, sont utiles et descriptifs. D'autres, par exemple INT, n'ont aucune signification particulière et sont simplement des alias pour les types C++ fondamentaux. D'autres types de données Windows ont des noms qui proviennent de l'époque de la programmation en C et des processeurs 16 bits ; ils n'ont aucune finalité ou signification particulière par rapport au matériel ou aux systèmes d'exploitation modernes. Il existe également des types de données spéciaux associés à la bibliothèque de Windows Runtime, répertoriés en tant que [types de données de base Windows Runtime](/windows/win32/WinRT/base-data-types). En C++ moderne, la règle générale consiste à préférer les types fondamentaux C++ sauf si le type Windows communique une certaine signification supplémentaire sur la manière dont la valeur doit être interprétée.
 
-## <a name="more-information"></a>Informations supplémentaires
+## <a name="more-information"></a>Plus d’informations
 
 Pour plus d'informations sur le système de types C++, consultez les rubriques suivantes.
 
@@ -170,4 +168,4 @@ Pour plus d'informations sur le système de types C++, consultez les rubriques s
 
 [Bienvenue dansC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

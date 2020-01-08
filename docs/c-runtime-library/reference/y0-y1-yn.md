@@ -1,6 +1,6 @@
 ---
 title: y0, y1, yn
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - y1
 - yn
@@ -29,13 +29,15 @@ helpviewer_keywords:
 - y1 function
 - yn function
 ms.assetid: e14215f3-53d4-4ae8-816e-4c1ec2019316
-ms.openlocfilehash: 3a5aef282d6ec774b7d20135b759f5d98733cd69
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ade2978d9a052b481c8250933257cfa33493860f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957764"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301715"
 ---
 # <a name="y0-y1-yn"></a>y0, y1, yn
 
-Ces fonctions POSIX sont déconseillées. Utilisez plutôt les [fonctions de Bessel : _j0, _j1, _jn, _y0, _y1, _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md), qui sont conformes à la norme ISO C++.
+Les noms des fonctions POSIX implémentées par Microsoft `y0`, `y1`et `yn` sont des alias déconseillés pour les fonctions [_y0, _Y1 et _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md) . Par défaut, ils génèrent un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Les noms sont déconseillés, car ils ne suivent pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, les fonctions sont toujours prises en charge.
+
+Nous vous recommandons d’utiliser à la place [_y0, _Y1 et _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md) . Ou encore, vous pouvez continuer à utiliser ces noms de fonctions et désactiver l’avertissement. Pour plus d’informations, consultez [Désactiver les](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) noms de [fonction](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)d’avertissement et POSIX.

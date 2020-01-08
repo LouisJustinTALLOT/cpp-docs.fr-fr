@@ -1,6 +1,6 @@
 ---
 title: fermer
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - close
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - close function
 ms.assetid: c79689f4-9c86-4a4a-a256-d22e3498f55d
-ms.openlocfilehash: 46fdacc3e97818ce9a1befd903a7da32ab42702a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1d3c02e3e2e015d0560b9ca70243f35c9f4a0888
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950932"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301221"
 ---
 # <a name="close"></a>fermer
 
-Cette fonction POSIX est déconseillée. Utilisez plutôt [_close](close.md), qui est conforme à la norme ISO C++.
+Le nom de fonction POSIX implémenté par Microsoft `close` est un alias déconseillé pour la fonction [_close](close.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
+
+Nous vous recommandons d’utiliser [_close](close.md) à la place. Vous pouvez continuer à utiliser ce nom de fonction et désactiver l’avertissement. Pour plus d’informations, consultez [Désactiver les](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) noms de [fonction](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)d’avertissement et POSIX.

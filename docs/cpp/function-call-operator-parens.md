@@ -10,16 +10,16 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 79c43ed11bfc73ec4bfaedad0a20b45fb6ca1ffb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3194c34bacfe7b2ed758ab245c5858eadb18e64e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154150"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301520"
 ---
 # <a name="function-call-operator-"></a>Opérateur d'appel de fonction : ()
 
-Une expression suffixée suivie de l’opérateur d’appel de fonction, **()**, spécifie un appel de fonction.
+Une expression postfixer suivie de l’opérateur d’appel de fonction, **()** , spécifie un appel de fonction.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,9 +32,9 @@ postfix-expression
 
 Les arguments de l’opérateur d’appel de fonction sont zéro expression ou plus séparées par des virgules, les arguments réels de la fonction.
 
-Le *postfix-expression* doit correspondre à une adresse de fonction (par exemple, un identificateur de fonction ou la valeur d’un pointeur fonction), et *argument-expression-list* est une liste d’expressions (séparées par des virgules) dont les valeurs (les arguments) sont passés à la fonction. L’argument *argument-expression-list* peut être vide.
+*Postfix-expression* doit correspondre à une adresse de fonction (par exemple, un identificateur de fonction ou la valeur d’un pointeur de fonction), et *argument-expression-List* est une liste d’expressions (séparées par des virgules) dont les valeurs (les arguments) sont passées à la fonction. L’argument *argument-expression-list* peut être vide.
 
-Le *postfix-expression* doit être un de ces types :
+*Postfix-expression* doit être de l’un des types suivants :
 
 - Fonction retournant le type `T`. Voici un exemple de déclaration
 
@@ -129,7 +129,7 @@ int main()
 }
 ```
 
-Le code précédent définit une classe appelée `Point`, qui contient des données privées des objets qui représentent *x* et *y* coordonnées. Ces objets de données doivent être modifiés et leurs valeurs, récupérées. Ce programme n'est qu'une des nombreuses conceptions de ce type de classe ; l'utilisation des fonctions `GetX` et `SetX` ou `GetY` et `SetY` est une autre conception possible.
+Le code précédent définit une classe appelée `Point`, qui contient des objets de données privés qui représentent les coordonnées *x* et *y* . Ces objets de données doivent être modifiés et leurs valeurs, récupérées. Ce programme n'est qu'une des nombreuses conceptions de ce type de classe ; l'utilisation des fonctions `GetX` et `SetX` ou `GetY` et `SetY` est une autre conception possible.
 
 Les fonctions qui retournent des types de classe, des pointeurs vers des types de classe ou des références à des types de classe peuvent être utilisées comme opérande gauche pour les opérateurs de sélection de membres. Par conséquent, le code suivant est conforme :
 
@@ -174,7 +174,7 @@ int main() {
 }
 ```
 
-Les fonctions peuvent être appelées de manière récursive. Pour plus d’informations sur les déclarations de fonction, consultez [fonctions](functions-cpp.md). Documentation connexe est disponible dans [programme et liaison](../cpp/program-and-linkage-cpp.md).
+Les fonctions peuvent être appelées de manière récursive. Pour plus d’informations sur les déclarations de fonction, consultez [fonctions](functions-cpp.md). Le matériel associé se trouve dans [les unités de traduction et la liaison](../cpp/program-and-linkage-cpp.md).
 
 ## <a name="see-also"></a>Voir aussi
 

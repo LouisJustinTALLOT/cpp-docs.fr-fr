@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: f4bef0ef4f3cad0411f6da54ce5e2d8883913754
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dab670c5baef1c51c39a4c936380fab92c5103cc
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940358"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300301"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec, _wexec, fonctions
 
@@ -118,15 +118,15 @@ Les appels de fonctions `_execl`, `_execle`, `_execlp` et `_execlpe` sont géné
 
 Les appels de fonctions `_execv`, `_execve`, `_execvp` et `_execvpe` sont utiles quand le nombre de paramètres du nouveau processus est variable. Les pointeurs vers les paramètres sont passés comme tableau, `argv`. Le paramètre `argv`[0] est généralement un pointeur vers `cmdname`. Les paramètres `argv`[1] à `argv`[`n`] pointent vers les chaînes de caractères qui forment la nouvelle liste de paramètres. Le paramètre `argv`[`n`+1] doit être un pointeur **NULL** pour marquer la fin de la liste de paramètres.
 
-Les fichiers qui sont ouverts quand un appel de fonction `_exec` est effectué restent ouverts dans le nouveau processus. Dans les appels de fonctions `_execl`, `_execlp`, `_execv` et `_execvp`, le nouveau processus hérite de l'environnement du processus appelant. Les appels de fonctions `_execle`, `_execlpe`, `_execve` et `_execvpe` modifient l'environnement du nouveau processus en passant une liste de paramètres d'environnement via le paramètre `envp`. `envp` est un tableau de pointeurs de caractères, dont chaque élément (excepté le dernier) pointe vers une chaîne terminée par le caractère Null définissant une variable d'environnement. Une telle chaîne a généralement la forme `NAME`=`value` où `NAME` est le nom d’une variable d’environnement et `value` est la valeur de chaîne selon laquelle cette variable est définie. (Notez que `value` n'est pas placé entre guillemets doubles.) Le dernier élément du tableau `envp` doit être **NULL**. Quand `envp` a la valeur **NULL**, le nouveau processus hérite des paramètres d’environnement du processus appelant.
+Les fichiers qui sont ouverts quand un appel de fonction `_exec` est effectué restent ouverts dans le nouveau processus. Dans les appels de fonctions `_execl`, `_execlp`, `_execv` et `_execvp`, le nouveau processus hérite de l'environnement du processus appelant. Les appels de fonctions `_execle`, `_execlpe`, `_execve` et `_execvpe` modifient l'environnement du nouveau processus en passant une liste de paramètres d'environnement via le paramètre `envp`. `envp` est un tableau de pointeurs de caractères, dont chaque élément (excepté le dernier) pointe vers une chaîne terminée par le caractère Null définissant une variable d'environnement. Une telle chaîne a généralement la forme `NAME`=`value` où `NAME` est le nom d’une variable d’environnement et `value` est la valeur de chaîne selon laquelle cette variable est définie. (Notez que `value` n’est pas placé entre guillemets doubles.) L’élément final du tableau `envp` doit avoir la **valeur null**. Quand `envp` a la valeur **NULL**, le nouveau processus hérite des paramètres d’environnement du processus appelant.
 
 Un programme exécuté avec l'une des fonctions `_exec` est toujours chargé en mémoire comme si le champ d'allocation maximale dans l'en-tête du fichier .exe du programme avait pris la valeur par défaut 0xFFFFH.
 
 Les appels de fonction `_exec` ne conservent pas les modes de traduction des fichiers ouverts. Si le nouveau processus doit utiliser des fichiers hérités du processus appelant, utilisez la routine [_setmode](../c-runtime-library/reference/setmode.md) pour définir le mode de traduction souhaité pour ces fichiers. Vous devez explicitement vider (à l'aide de `fflush` ou de `_flushall`) ou fermer tout flux avant l'appel de fonction `_exec`. Les paramètres de signal ne sont pas conservés dans les nouveaux processus qui sont créés par des appels aux routines de fonction `_exec`. Les paramètres de signal sont réinitialisés à la valeur par défaut dans le nouveau processus.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
-```
+```c
 // crt_args.c
 // Illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -157,7 +157,7 @@ char **envp )       // Array of environment variable strings
 
 Lancez le programme suivant pour exécuter Crt_args.exe :
 
-```
+```c
 // crt_exec.c
 // Illustrates the different versions of exec, including
 //      _execl          _execle          _execlp          _execlpe
@@ -232,7 +232,7 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 **En-tête :** process.h
 

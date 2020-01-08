@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .EXIT directive
 ms.assetid: 5f77c281-3d65-4174-83ea-34dcc7085ecf
-ms.openlocfilehash: c93265cad526ca3ce945c532f36113b57fcdae4a
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: a96ffa95ef10b15053c8e62c4adb17ba9c4d0e85
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398295"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318317"
 ---
 # <a name="exit-32-bit-masm"></a>. QUITTER (MASM 32 bits)
 
@@ -27,4 +27,5 @@ Retourne une *expression* facultative à l’interpréteur de commandes.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](directives-reference.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

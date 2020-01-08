@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: 650c69be17c9271c343360edbb90f093841a1047
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: ec08be4941f81abed55420884b34dc817caf3f13
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398258"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317732"
 ---
 # <a name="fpo-32-bit-masm"></a>. FPO (32-bit MASM)
 
@@ -21,7 +21,7 @@ ms.locfileid: "74398258"
 
 > **. FPO** (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *cdwLocals*\
 Nombre de variables locales, valeur de bit 32 non signée.
@@ -43,4 +43,5 @@ Indique le type de trame.  Pour plus d’informations, consultez [FPO_DATA](/win
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](directives-reference.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

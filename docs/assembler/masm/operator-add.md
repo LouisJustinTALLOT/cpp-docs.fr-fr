@@ -1,6 +1,6 @@
 ---
 title: opérateur +
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - +
 - operator +
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - arithmetic operators [C++], addition
 - operators [MASM], arithmetic
 ms.assetid: 89e31a6e-2f68-4481-b394-1348e14e4653
-ms.openlocfilehash: e6f1e587e192fbf38d26c4485e97831b2242effc
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 0a631df986fc60cc024a0f07b3e2074bc6a1fe57
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397131"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316731"
 ---
 # <a name="operator-"></a>opérateur +
 
@@ -23,8 +23,9 @@ Le premier opérateur retourne *expression1* et *Expression2*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* + *Expression2*
+> *expression1* + *expression2*
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)
+Informations de référence sur les [opérateurs](operators-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

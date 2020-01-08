@@ -1,6 +1,6 @@
 ---
-title: Types fondamentaux (C++)
-ms.date: 11/04/2016
+title: Types intégrés (C++)
+ms.date: 12/11/2019
 f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
@@ -43,30 +43,30 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: daa2ad2680a9d7d0239a70ed37ec1d90a3d96d97
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857539"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301494"
 ---
-# <a name="fundamental-types--c"></a>Types fondamentaux (C++)
+# <a name="built-in-types-c"></a>Types intégrés (C++)
 
-En C++, les types fondamentaux sont divisés en trois catégories : intégral, virgule flottante et void. Les types intégraux sont capables de gérer les nombres entiers. Les types virgule flottante peuvent spécifier des valeurs pouvant avoir des parties fractionnaires.
+Les types intégrés (également appelés *types fondamentaux*) sont spécifiés par la C++ norme du langage et sont intégrés au compilateur. Les types intégrés ne sont pas définis dans un fichier d’en-tête. Les types intégrés sont divisés en trois catégories : intégral, virgule flottante et void. Les types intégraux sont capables de gérer les nombres entiers. Les types virgule flottante peuvent spécifier des valeurs pouvant avoir des parties fractionnaires.
 
-Le type [void](../cpp/void-cpp.md) décrit un ensemble de valeurs vide. Aucune variable de type **void** ne peut être spécifiée ; elle est principalement utilisée pour déclarer des fonctions qui ne retournent aucune valeur ou pour déclarer des pointeurs génériques vers des données non typées ou arbitraires. Toute expression peut être convertie explicitement ou castée en type **void**. Toutefois, ces expressions sont limitées aux utilisations suivantes :
+Le type [void](void-cpp.md) décrit un ensemble de valeurs vide. Aucune variable de type **void** ne peut être spécifiée ; elle est principalement utilisée pour déclarer des fonctions qui ne retournent aucune valeur ou pour déclarer des pointeurs génériques vers des données non typées ou arbitraires. Toute expression peut être convertie explicitement ou castée en type **void**. Toutefois, ces expressions sont limitées aux utilisations suivantes :
 
-- Instruction d'expression. (Pour plus d'informations, consultez [Expressions](../cpp/expressions-cpp.md).)
+- Instruction d'expression. (Pour plus d’informations, consultez [expressions](expressions-cpp.md).)
 
-- Opérande gauche de l'opérateur virgule. (Pour plus d'informations, consultez [Opérateur virgule](../cpp/comma-operator.md) .)
+- Opérande gauche de l'opérateur virgule. (Pour plus d’informations, consultez la section [opérateur virgule](comma-operator.md).)
 
-- Deuxième ou troisième opérande de l’opérateur conditionnel (`? :`). (Pour plus d'informations, consultez [Expressions avec l'opérateur conditionnel](../cpp/conditional-operator-q.md) .)
+- Deuxième ou troisième opérande de l’opérateur conditionnel (`? :`). (Pour plus d’informations, consultez [expressions avec l’opérateur conditionnel](conditional-operator-q.md).)
 
-Le tableau suivant décrit les restrictions relatives aux tailles des types. Ces restrictions sont indépendantes de l'implémentation Microsoft.
+Le tableau suivant décrit les restrictions sur les tailles de type par rapport aux autres. Ces restrictions sont imposées par C++ la norme et sont indépendantes de l’implémentation Microsoft. La taille absolue de certains types intégrés n’est pas spécifiée dans la norme.
 
-### <a name="fundamental-types-of-the-c-language"></a>Types fondamentaux du langage C++
+### <a name="built-in-type-size-restrictions"></a>Restrictions de taille de type intégré
 
-|Category|Type|Sommaire|
+|Catégorie|Type|Sommaire|
 |--------------|----------|--------------|
 |Intégral|**char**|Le type **char** est un type intégral qui contient généralement les membres du jeu de caractères d’exécution de base ; par défaut, il C++s’agit de ASCII dans Microsoft.<br /><br /> Le C++ compilateur traite les variables de type **char**, **signed char**et **unsigned char** comme ayant des types différents. Les variables de type **char** sont promues en **int** comme s’il s’agissait de type **signed char** par défaut, sauf si l’option de compilation/j est utilisée. Dans ce cas, elles sont traitées en tant que type **unsigned char** et sont promues en **int** sans extension de signature.|
 ||**bool**|Le type **bool** est un type intégral qui peut avoir l’une des deux valeurs **true** ou **false**. Sa taille n'est pas spécifiée.|
@@ -80,25 +80,25 @@ Le tableau suivant décrit les restrictions relatives aux tailles des types. Ces
 ||**double**|Le type **double** est un type à virgule flottante supérieur ou égal au type **float**, mais inférieur ou égal à la taille du type **long double**.<br /><br /> Spécifique à Microsoft : la représentation de **long double** et **double** est identique. Toutefois, les types **long double** et **double** sont des types distincts.|
 ||**long double**|Le type **long double** est un type à virgule flottante supérieur ou égal au type **double**.|
 
-**Section spécifique de Microsoft**
+**Section spécifique à Microsoft**
 
-Le tableau suivant répertorie la quantité de stockage requise pour les types fondamentaux dans Microsoft C++.
+Le tableau suivant répertorie la quantité de stockage requise pour les types intégrés dans Microsoft C++. En particulier, Notez que **long** est de 4 octets, même sur les systèmes d’exploitation 64 bits.
 
-### <a name="sizes-of-fundamental-types"></a>Tailles des types fondamentaux
+### <a name="sizes-of-built-in-types"></a>Tailles des types intégrés
 
-|Type|Size|
+|Type|Taille|
 |----------|----------|
 |**bool**, **char**, **unsigned char**, signed **char**, **__int8**|1 octet|
 |**__int16**, **short**, **unsigned short**, **wchar_t** **__wchar_t**|2 octets|
 |**float**, **__int32**, **int**, **unsigned int**, **long**, **unsigned long**|4 octets|
 |**double**, **__int64**, **long double**, **long long**|8 octets|
 
-**Fin de la section spécifique de Microsoft**
+**Fin de la section spécifique à Microsoft**
 
-Consultez les informations relatives aux [plages de types de données](../cpp/data-type-ranges.md) pour obtenir un résumé de la plage de valeurs de chaque type.
+Consultez les informations relatives aux [plages de types de données](data-type-ranges.md) pour obtenir un résumé de la plage de valeurs de chaque type.
 
-Pour plus d'informations sur la conversion de type, consultez [Conversions standard](../cpp/standard-conversions.md).
+Pour plus d'informations sur la conversion de type, consultez [Conversions standard](standard-conversions.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Plages de types de données](../cpp/data-type-ranges.md)
+[Plages de types de données](data-type-ranges.md)

@@ -1,21 +1,21 @@
 ---
 title: TBYTE
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - TBYTE
 helpviewer_keywords:
 - TBYTE directive
 ms.assetid: d5f96bb0-403c-413e-9e3c-2af1ce528da7
-ms.openlocfilehash: d0a67133bf38eaaf8f14dfa7f1584bfc12ffe6fd
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 747aaf96b39d7947f33633dba97b8f8a1710639b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393155"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318382"
 ---
 # <a name="tbyte"></a>TBYTE
 
-Alloue et initialise éventuellement 10 octets de stockage pour chaque *initialiseur*. Peut également être utilisé comme spécificateur de type partout où un type est légal.
+Alloue et initialise éventuellement 10 octets de stockage pour chaque *initialiseur*. Peut également être utilisé comme spécificateur de type partout où un type est légal. **DT** est un synonyme de **to**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,5 +23,6 @@ Alloue et initialise éventuellement 10 octets de stockage pour chaque *initiali
 
 ## <a name="see-also"></a>Voir aussi
 
-Informations de référence sur les [Directives](../../assembler/masm/directives-reference.md)\
-[DT](../../assembler/masm/dt.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+\ [DT](dt.md)
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

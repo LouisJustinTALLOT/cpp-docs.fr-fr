@@ -48,12 +48,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: c4a8b33c2233dc0c680ddbe5063ab6fe25a729b0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 81f4bf6c60a0c0e4011536e8d3bc104bbc33e04f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957276"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301702"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn, _wspawn, fonctions
 
@@ -130,7 +130,7 @@ Les appels `_spawnv`, `_spawnve`, `_spawnvp` et `_spawnvpe` sont utiles lorsque 
 
 ## <a name="environment-of-the-spawned-process"></a>Environnement du processus engendré
 
-Les fichiers ouverts pendant un appel `_spawn` restent ouverts dans le nouveau processus. Dans les appels `_spawnl`, `_spawnlp`, `_spawnv` et `_spawnvp`, le nouveau processus hérite de l'environnement du processus appelant. Vous pouvez utiliser les appels `_spawnle`, `_spawnlpe`, `_spawnve` et `_spawnvpe` pour modifier l'environnement du nouveau processus en passant une liste de paramètres d'environnement via l'argument `envp`. L'argument `envp` est un tableau de pointeurs de caractère, dont chaque élément (excepté le dernier) pointe vers une chaîne terminée par le caractère null qui définit une variable d'environnement. Une telle chaîne a généralement la forme `NAME`=`value` où `NAME` est le nom d’une variable d’environnement et `value` est la valeur de chaîne selon laquelle cette variable est définie. (Notez que `value` n'est pas placé entre guillemets doubles.) Le dernier élément du tableau `envp` doit être **NULL**. Quand `envp` lui-même a la valeur **NULL**, le processus engendré hérite des paramètres d’environnement du processus parent.
+Les fichiers ouverts pendant un appel `_spawn` restent ouverts dans le nouveau processus. Dans les appels `_spawnl`, `_spawnlp`, `_spawnv` et `_spawnvp`, le nouveau processus hérite de l'environnement du processus appelant. Vous pouvez utiliser les appels `_spawnle`, `_spawnlpe`, `_spawnve` et `_spawnvpe` pour modifier l'environnement du nouveau processus en passant une liste de paramètres d'environnement via l'argument `envp`. L'argument `envp` est un tableau de pointeurs de caractère, dont chaque élément (excepté le dernier) pointe vers une chaîne terminée par le caractère null qui définit une variable d'environnement. Une telle chaîne a généralement la forme `NAME`=`value` où `NAME` est le nom d’une variable d’environnement et `value` est la valeur de chaîne selon laquelle cette variable est définie. (Notez que `value` n’est pas placé entre guillemets doubles.) L’élément final du tableau `envp` doit avoir la **valeur null**. Quand `envp` lui-même a la valeur **NULL**, le processus engendré hérite des paramètres d’environnement du processus parent.
 
 Les fonctions `_spawn` peuvent passer toutes les informations sur les fichiers ouverts, y compris le mode de traduction, au nouveau processus. Ces informations sont passées en mode réel via l'entrée `C_FILE_INFO` de l'environnement. Le code de démarrage traite normalement cette entrée et la supprime ensuite de l'environnement. Toutefois, si une fonction `_spawn` génère un processus autre que C, cette entrée reste dans l'environnement. L'impression de l'environnement montre les caractères graphiques de la chaîne de définition pour cette entrée, car les informations d'environnement sont passées au format binaire en mode réel. Il ne devrait y avoir aucun autre effet sur les opérations normales. En mode protégé, les informations d'environnement sont passées au format texte et donc ne contiennent pas de caractères graphiques.
 
@@ -146,9 +146,9 @@ Si vous appelez `_spawn` à partir d'une DLL ou d'une application GUI et souhai
 
 - Appelez [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md), ce qui crée un canal et appelle l’application à l’aide de **cmd.exe /c** (ou **command.exe /c**).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
-```
+```c
 // crt_spawn.c
 // This program accepts a number in the range
 // 1-8 from the command line. Based on the number it receives,

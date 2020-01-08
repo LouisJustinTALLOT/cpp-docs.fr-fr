@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: b23e7e6310ba4ed968e2eac8e6d07d81ee4e79ba
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151947"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299115"
 ---
 # <a name="goto-and-labeled-statements-c"></a>Instructions goto et étiquetées (C)
 
@@ -26,10 +26,10 @@ L'instruction `goto` transfère le contrôle à une étiquette. L'étiquette don
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
 
 *saut-instruction* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**goto** **.**
 
 *labeled-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur* **:** *instruction*
 
 Une étiquette d'instruction est uniquement explicite pour une instruction `goto`. Dans tout autre contexte, une instruction étiquetée est exécutée sans tenir compte de l'étiquette.
 
@@ -39,7 +39,7 @@ Il est toutefois conseillé d'utiliser l'instruction **break**, **continue** et 
 
 Cet exemple illustre l'instruction `goto` :
 
-```
+```c
 // goto.c
 #include <stdio.h>
 
