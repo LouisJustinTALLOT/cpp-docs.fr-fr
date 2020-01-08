@@ -1,17 +1,17 @@
 ---
 title: .PUSHREG
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - .PUSHREG
 helpviewer_keywords:
 - .PUSHREG directive
 ms.assetid: e0c83758-dfed-40ea-afe6-cb833c8d2d30
-ms.openlocfilehash: 2190bd05667de82dada34a63f11647c653f97247
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: de6ffd3668f47732144e8c632410f6dfde6b2f31
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398033"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318291"
 ---
 # <a name="pushreg"></a>.PUSHREG
 
@@ -19,15 +19,18 @@ Génère une entrée de code de déroulement `UWOP_PUSH_NONVOL` pour le numéro 
 
 ## <a name="syntax"></a>Syntaxe
 
-> . Registre PUSHREG
+> . *Registre* PUSHREG
 
 ## <a name="remarks"></a>Notes
 
-**. PUSHREG** permet aux utilisateurs de ml64. exe de spécifier le déroulement d’une fonction Frame et est uniquement autorisé dans le prologue, qui s’étend de la déclaration de la **trame** [proc](../../assembler/masm/proc.md) à l' [. Directive ENDPROLOG](../../assembler/masm/dot-endprolog.md) . Ces directives ne génèrent pas de code ; ils génèrent uniquement des `.xdata` et des `.pdata`. **. Les PUSHREG** doivent être précédées d’instructions qui implémentent réellement les actions à déenrouler. Il est recommandé d’inclure dans un wrapper les directives de déroulement et le code qu’ils sont censés dérouler dans une macro pour garantir l’accord.
+**. PUSHREG** permet aux utilisateurs de ml64. exe de spécifier le déroulement d’une fonction Frame et est uniquement autorisé dans le prologue, qui s’étend de la déclaration de la **trame** [proc](proc.md) à l' [. Directive ENDPROLOG](dot-endprolog.md) . Ces directives ne génèrent pas de code ; ils génèrent uniquement des `.xdata` et des `.pdata`. **. Les PUSHREG** doivent être précédées d’instructions qui implémentent réellement les actions à déenrouler. Il est recommandé d’inclure dans un wrapper les directives de déroulement et le code qu’ils sont censés dérouler dans une macro pour garantir l’accord.
 
-Pour plus d’informations, consultez [MASM pour x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+le *Registre* peut être l’un des suivants : \
+RAX | RCX | RDX | RBX | RDI | RSI | RBP | R8 | R9 | R10 | R11 | R12 | R13 | R14 | R15.
 
-## <a name="sample"></a>Exemple
+Pour plus d’informations, consultez [MASM pour x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
+
+## <a name="sample"></a>Aperçu
 
 ### <a name="description"></a>Description
 
@@ -57,4 +60,5 @@ END
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les directives](directives-reference.md)
+Informations de référence sur les [Directives](directives-reference.md)\
+[Syntaxe BNF de MASM](masm-bnf-grammar.md)

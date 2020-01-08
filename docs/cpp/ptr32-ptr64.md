@@ -16,14 +16,14 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: 0e979ed51f9c34700cef75113018c23e69a304f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 957e0deba31552777ef5e738afef13d74a640a18
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244461"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301325"
 ---
-# <a name="ptr32-ptr64"></a>__ptr32, __ptr64
+# <a name="__ptr32-__ptr64"></a>__ptr32, __ptr64
 
 **Section spécifique à Microsoft**
 
@@ -36,16 +36,16 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
-Sur un système 32 bits, un pointeur déclaré avec **__ptr64** est tronqué à un pointeur 32 bits. Sur un système 64 bits, un pointeur déclaré avec **__ptr32** est converti en un pointeur 64 bits.
+Sur un système 32 bits, un pointeur déclaré avec **__ptr64** est tronqué en pointeur 32 bits. Sur un système 64 bits, un pointeur déclaré avec **__ptr32** est converti en pointeur 64 bits.
 
 > [!NOTE]
-> Vous ne pouvez pas utiliser **__ptr32** ou **__ptr64** lors de la compilation avec **/CLR : pure**. Sinon, erreur du compilateur C2472 sera généré. Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+> Vous ne pouvez pas utiliser **__ptr32** ou **__ptr64** lors de la compilation avec **/clr : pure**. Sinon, l’erreur de compilateur C2472 sera générée. Les options de compilateur **/clr : pure** et **/clr : safe** sont dépréciées dans Visual Studio 2015 et ne sont pas prises en charge dans Visual Studio 2017.
 
-Pour assurer la compatibilité avec les versions précédentes, **_ptr32** et **_ptr64** sont synonymes de **__ptr32** et **__ptr64** , sauf si option du compilateur [/Za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
+Pour la compatibilité avec les versions précédentes, **_ptr32** et **_ptr64** sont des synonymes pour **__ptr32** et **__ptr64** sauf si l’option de compilateur [/za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment déclarer et allouer des pointeurs avec le **__ptr32** et **__ptr64** mots clés.
+L’exemple suivant montre comment déclarer et allouer des pointeurs avec les mots clés **__ptr32** et **__ptr64** .
 
 ```cpp
 #include <cstdlib>
@@ -73,8 +73,8 @@ int main()
 64
 ```
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Types fondamentaux](../cpp/fundamental-types-cpp.md)
+[Types intégrés](../cpp/fundamental-types-cpp.md)
