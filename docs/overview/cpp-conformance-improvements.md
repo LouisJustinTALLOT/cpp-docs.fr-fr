@@ -5,12 +5,12 @@ description: Microsoft C++ dans Visual Studio arrive progressivement à une con
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74858033"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546430"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Améliorations de la conformité de C++ dans Visual Studio
 
@@ -1131,11 +1131,11 @@ Dans les versions antérieures de Visual Studio, le compilateur a toujours donn�
 
 ### `not_fn()`
 
-[P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html) `not_fn` vient remplacer `not1` et `not2`.
+[P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html) `not_fn` remplace `not1` et `not2`.
 
 ### <a name="rewording-enable_shared_from_this"></a>Reformulation de `enable_shared_from_this`
 
-[P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) `enable_shared_from_this` a été ajouté dans C++11. La norme C++17 met à jour la spécification pour mieux gérer certains cas extrêmes. [14]
+[P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) `enable_shared_from_this` a été ajouté dans c++ 11. La norme C++17 met à jour la spécification pour mieux gérer certains cas extrêmes. [14]
 
 ### <a name="splicing-maps-and-sets"></a>Ajout de mappages et d’ensembles
 
@@ -1189,7 +1189,7 @@ La bibliothèque standard a été mise à jour en réponse aux modifications du 
 
 ### <a name="c17-improving-class-template-argument-deduction-for-the-standard-library"></a>C++ 17 : amélioration de la déduction d’argument de modèle de classe pour la bibliothèque standard
 
-[P0739R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html) `adopt_lock_t` est déplacé au début de la liste des paramètres de `scoped_lock` pour garantir une utilisation cohérente de `scoped_lock`. Le constructeur `std::variant` est autorisé à participer à la résolution de surcharge dans davantage de cas pour permettre l’assignation de copie.
+[P0739R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html)`adopt_lock_t` est déplacé au début de la liste des paramètres de `scoped_lock` pour garantir une utilisation cohérente de `scoped_lock`. Le constructeur `std::variant` est autorisé à participer à la résolution de surcharge dans davantage de cas pour permettre l’assignation de copie.
 
 ## <a name="improvements_157"></a>Améliorations de la conformité dans 15,7
 
@@ -1241,13 +1241,11 @@ Pour plus d’informations, consultez [Constructeurs](../cpp/constructors-cpp.md
 
 [P0017R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)
 
-Si le constructeur d’une classe de base est non public, mais qu’il est accessible à une classe dérivée, vous ne pouvez plus utiliser d’accolades vides pour initialiser un objet du type dérivé en mode **/std:c++17** dans Visual Studio version 15.7.
-
+Si le constructeur d’une classe de base n’est pas public, mais qu’il est accessible à une classe dérivée, sous **/std : mode c++ 17** dans Visual Studio 2017 version 15,7, vous ne pouvez plus utiliser d’accolades vides pour initialiser un objet du type dérivé.
 L’exemple suivant montre le comportement conforme à C++14 :
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
@@ -1255,32 +1253,26 @@ private:
 };
 
 struct Derived : Base {};
-
 Derived d1; // OK. No aggregate init involved.
 Derived d2 {}; // OK in C++14: Calls Derived::Derived()
                // which can call Base ctor.
 ```
 
 Dans C++17, `Derived` est désormais considéré comme un type d’agrégat. Cela signifie que l’initialisation de `Base` par le biais du constructeur par défaut privé se produit donc directement dans le cadre de la règle d’initialisation d’agrégats étendue. Auparavant, le constructeur privé `Base` était appelé par le biais du constructeur `Derived`, ce qui réussissait en raison de la déclaration friend.
-
 L’exemple suivant montre le comportement de C++17 dans Visual Studio version 15.7 en mode **/std:c++17** :
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
     Base() {}
 };
-
 struct Derived : Base {
     Derived() {} // add user-defined constructor
                  // to call with {} initialization
 };
-
 Derived d1; // OK. No aggregate init involved.
-
 Derived d2 {}; // error C2248: 'Base::Base': cannot access
                // private member declared in class 'Base'
 ```
@@ -1361,7 +1353,7 @@ void sample(A<0> *p)
 
 ### <a name="c17-constexpr-for-char_traits-partial"></a>C++ 17 : **constexpr** pour `char_traits` (partiel)
 
-[P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) Changements apportés aux fonctions membres `std::traits_type` `length`, `compare` et `find` pour rendre `std::string_view` utilisable dans les expressions constantes. (Dans Visual Studio 2017 version 15.6, prise en charge pour Clang/LLVM uniquement. Dans la version 15.7 Preview 2, la prise en charge est presque complète pour ClXX.)
+[P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) Changements apportés aux fonctions membres `std::traits_type``length`, `compare` et `find` pour rendre `std::string_view` utilisable dans les expressions constantes. (Dans Visual Studio 2017 version 15.6, prise en charge pour Clang/LLVM uniquement. Dans la version 15.7 Preview 2, la prise en charge est presque complète pour ClXX.)
 
 ## <a name="improvements_159"></a>Améliorations de la conformité dans 15,9
 
@@ -1928,7 +1920,7 @@ Pour résoudre l’avertissement, placez `extern "C"` d’abord :
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
 
-Cet avertissement est désactivé par défaut dans la version  15.3 (mais activé par défaut dans la version 15.5) et impacte uniquement le code compilé avec **/Wall** **/WX**.
+Cet avertissement est désactivé par défaut dans 15,3, mais activé par défaut dans 15,5, et n’affecte que le code compilé avec **/Wall** **/WX**.
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>**decltype** et appels aux destructeurs supprimés
 
@@ -2179,7 +2171,7 @@ Le code suivant permet d’éviter cette erreur :
 catch (int (*)[1]) {}
 ```
 
-### <a name="tr1"></a> L’espace de noms `std::tr1` est déprécié
+### <a name="tr1"></a>l’espace de noms `std::tr1` est déconseillé
 
 L’espace de noms `std::tr1` non standard est désormais marqué comme déprécié dans les deux modes C++14 et C++17. Dans Visual Studio 2017 version 15.5, le code suivant génère l’erreur C4996 :
 
