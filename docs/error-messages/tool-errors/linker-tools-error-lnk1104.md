@@ -1,92 +1,137 @@
 ---
 title: Erreur des outils Éditeur de liens LNK1104
-ms.date: 09/06/2019
+description: Décrit l’erreur de l' C++ éditeur de liens Microsoft C et (MSVC) LNK1104, ses causes et les solutions possibles.
+ms.date: 12/13/2019
 f1_keywords:
 - LNK1104
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: f3effd9054954a90f69c5b18d8f099e6d705d9a3
-ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
+ms.openlocfilehash: 8878db1b0829703b22b2f7863eb7955d17ad3096
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70808836"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301780"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Erreur des outils Éditeur de liens LNK1104
 
 > Impossible d’ouvrir le fichier'*nom_fichier*'
 
-L’éditeur de liens n’a pas pu ouvrir le fichier spécifié. Les causes les plus courantes de ce problème sont que le fichier est en cours d’utilisation ou verrouillé par un autre processus. Il est également possible que le fichier n’existe pas ou qu’il ne se trouve pas dans l’un des répertoires que l’éditeur de liens recherche. Ou vous ne disposez peut-être pas des autorisations suffisantes pour accéder au fichier. Moins souvent, vous n’avez peut-être pas suffisamment d’espace disque, le fichier est trop volumineux ou le chemin d’accès au fichier est trop long.
+Cette erreur est signalée lorsque l’éditeur de liens ne parvient pas à ouvrir un fichier pour la lecture ou l’écriture. Les deux causes les plus courantes du problème sont les suivantes :
 
-## <a name="possible-causes-and-solutions"></a>Causes et solutions possibles
+- votre programme est déjà en cours d’exécution ou est chargé dans le débogueur, et
 
-Cette erreur peut se produire lorsque l’éditeur de liens tente d’ouvrir un fichier pour la lecture ou l’écriture. Pour limiter les causes possibles, commencez par vérifier le type de fichier. Ensuite, utilisez les sections suivantes pour vous aider à identifier et à résoudre le problème spécifique.
+- les chemins d’accès de la bibliothèque sont incorrects ou ne sont pas encapsulés dans des guillemets doubles.
 
-### <a name="cant-open-your-app-or-its-pdb-file"></a>Impossible d’ouvrir votre application ou son fichier. pdb
+Il existe de nombreuses autres causes possibles pour cette erreur. Pour les réduire, commencez par vérifier le type de *nom* de fichier. Ensuite, utilisez les sections suivantes pour vous aider à identifier et à résoudre le problème spécifique.
 
-Si le nom de fichier est l’exécutable que votre projet génère, ou un fichier. pdb associé, la cause la plus courante est que votre application est déjà en cours d’exécution lorsque vous essayez de la régénérer ou qu’elle est chargée dans un débogueur. Pour résoudre ce problème, arrêtez le programme et déchargez-le du débogueur avant de le régénérer. Si l’application est ouverte dans un autre programme, tel qu’un éditeur de ressources, fermez-la. Dans les cas extrêmes, vous devrez peut-être utiliser le gestionnaire des tâches pour mettre fin au processus, ou arrêter et redémarrer Visual Studio.
+## <a name="cant-open-your-app-or-its-pdb-file"></a>Impossible d’ouvrir votre application ou son fichier. pdb
+
+### <a name="your-app-is-running-or-its-loaded-in-the-debugger"></a>Votre application est en cours d’exécution, ou elle est chargée dans le débogueur
+
+Lorsque *filename* est le nom de l’exécutable ou un fichier. pdb associé, vérifiez si votre application est déjà en cours d’exécution. Vérifiez ensuite s’il est chargé dans un débogueur. Pour résoudre ce problème, arrêtez le programme et déchargez-le du débogueur avant de le régénérer. Si l’application est ouverte dans un autre programme, tel qu’un éditeur de ressources, fermez-la. Si votre programme ne répond pas, vous devrez peut-être utiliser le gestionnaire des tâches pour mettre fin au processus. Vous devrez peut-être également fermer et redémarrer Visual Studio.
+
+### <a name="your-app-is-locked-by-an-antivirus-scan"></a>Votre application est verrouillée par une analyse antivirus
 
 Les programmes antivirus bloquent souvent temporairement l’accès aux fichiers créés récemment, en particulier les fichiers exécutables. exe et. dll. Pour résoudre ce problème, essayez d’exclure les répertoires de build de votre projet du scanneur antivirus.
 
-### <a name="cant-open-a-microsoft-library-file"></a>Impossible d’ouvrir un fichier de bibliothèque Microsoft
+## <a name="cant-open-a-microsoft-library-file"></a>Impossible d’ouvrir un fichier de bibliothèque Microsoft
 
-Si le fichier qui ne peut pas être ouvert est l’un des fichiers de bibliothèque standard fournis par Microsoft, par exemple Kernel32. lib, il se peut que vous ayez une erreur de configuration de projet ou une erreur d’installation. Vérifiez que le SDK Windows a été installé et, si votre projet requiert d’autres bibliothèques Microsoft telles que MFC, assurez-vous que les composants MFC ont également été installés par le programme d’installation de Visual Studio. Vous pouvez réexécuter le programme d’installation pour ajouter des composants facultatifs à tout moment. Pour plus d’informations, consultez [modifier Visual Studio](/visualstudio/install/modify-visual-studio). Utilisez l’onglet composants individuels dans le programme d’installation pour choisir des bibliothèques et des kits de développement logiciel (SDK) spécifiques.
+### <a name="windows-libraries-such-as-kernel32lib"></a>Bibliothèques Windows, telles que kernel32. lib
 
-Il n’existe aucune bibliothèque atténuée spectre pour les applications ou les composants de Windows universel (UWP). Si le rapport d’erreurs mentionne le fichier *vccorlib. lib* , vous avez peut-être activé [/Qspectre](../../build/reference/qspectre.md) dans un projet UWP. Désactivez l’option de compilateur **/Qspectre** pour résoudre ce problème. Dans Visual Studio, modifiez la propriété d' **atténuation spectre** , qui se trouve dans la page de > génération de**code** **C++/C**de la boîte de dialogue **pages de propriétés** du projet.
+Si le fichier qui ne peut pas être ouvert est l’un des fichiers de bibliothèque standard fournis par Microsoft, par exemple *Kernel32. lib*, il se peut que vous ayez une erreur de configuration de projet ou une erreur d’installation. Vérifiez que le SDK Windows a été installé. Si votre projet requiert d’autres bibliothèques Microsoft, telles que MFC, assurez-vous que les composants MFC ont également été installés par le programme d’installation de Visual Studio. Vous pouvez réexécuter le programme d’installation pour ajouter des composants facultatifs à tout moment. Pour plus d’informations, consultez [modifier Visual Studio](/visualstudio/install/modify-visual-studio). Utilisez l’onglet **composants individuels** dans le programme d’installation pour choisir des bibliothèques et des kits de développement logiciel (SDK) spécifiques.
 
-Si vous générez un projet qui a été créé à l’aide d’une version antérieure de Visual Studio, l’ensemble d’outils de plateforme et les bibliothèques pour cette version ne sont peut-être pas installés. Si le message d’erreur s’affiche pour un nom de bibliothèque avec version, tel que msvcr100. lib, il s’agit probablement de la cause. Pour résoudre ce problème, vous avez deux options : vous pouvez mettre à niveau le projet pour utiliser l’ensemble d’outils de plateforme actuel que vous avez installé, ou vous pouvez installer l’ensemble d’outils antérieur et générer le projet sans le modifier. Pour plus d’informations, consultez [mise à niveau de projets à partir C++ de versions antérieures de Visual](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) et [utiliser le multi-ciblage natif dans Visual Studio pour générer des projets anciens](../../porting/use-native-multi-targeting.md).
+### <a name="versioned-vcruntime-libraries"></a>Bibliothèques vcruntime avec version
 
-Si vous voyez cette erreur lorsque vous générez pour une nouvelle plateforme ou configuration cible, les bibliothèques pour cette configuration de projet ou cet ensemble d’outils de plateforme peuvent ne pas être installées. Vérifiez que l' **ensemble d’outils de plateforme** et la **version de SDK Windows** spécifiés dans la [page de propriétés général](../../build/reference/general-property-page-project.md) pour votre projet sont installés, puis vérifiez que les bibliothèques requises sont disponibles dans les **répertoires de bibliothèque** spécifiés dans la [page de propriétés Répertoires VC + +](../../build/reference/vcpp-directories-property-page.md) de vos paramètres de configuration. Il existe des paramètres distincts pour les configurations de débogage et de vente au détail, ainsi que pour les configurations 32 bits et 64 bits, donc si une build fonctionne, mais qu’une autre génère une erreur, assurez-vous que les paramètres sont corrects et que les outils et bibliothèques requis sont installés pour chaque configuration que vous générez.
+Si le message d’erreur a une bibliothèque Microsoft, telle que *msvcr120. lib*, l’ensemble d’outils de plateforme de cette version de compilateur n’est peut-être pas installé. Pour résoudre ce problème, vous avez deux options : mettre à niveau le projet pour utiliser l’ensemble d’outils de plateforme actuel ou installer l’ensemble d’outils antérieur et générer le projet sans le modifier. Pour plus d’informations, consultez [mise à niveau de projets à partir C++ de versions antérieures de Visual](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) et [utiliser le multi-ciblage natif dans Visual Studio pour générer des projets anciens](../../porting/use-native-multi-targeting.md).
 
-Si vous utilisez l’IDE de Visual Studio pour générer un projet qui a été copié à partir d’un autre ordinateur, les emplacements d’installation des bibliothèques peuvent être différents. Vérifiez la propriété **répertoires** de la bibliothèque sur la [page de propriétés Répertoires VC + +](../../build/reference/vcpp-directories-property-page.md) pour le projet et mettez-la à jour si nécessaire. Pour afficher et modifier le jeu de chemins d’accès de bibliothèque actuel dans l’IDE, choisissez le contrôle de liste déroulante de la propriété **répertoires de bibliothèque** , puis choisissez **modifier**. La section **valeur évaluée** de la boîte de dialogue **répertoires de bibliothèque** répertorie les chemins d’accès actuels recherchés pour les fichiers de bibliothèque.
+### <a name="retail-debug-or-platform-specific-libraries"></a>Bibliothèques de vente au détail, débogage ou spécifiques à la plateforme
 
-Cette erreur peut également se produire lorsque le chemin d’accès au SDK Windows est obsolète. Si vous avez installé une version de la SDK Windows qui est plus récente que votre version de Visual Studio, assurez-vous que les chemins d’accès spécifiés dans la [page de propriétés Répertoires VC + +](../../build/reference/vcpp-directories-property-page.md) sont mis à jour pour correspondre au nouveau kit de développement logiciel (SDK). Si vous utilisez la Invite de commandes développeur, assurez-vous que le fichier de commandes qui initialise les variables d’environnement est mis à jour pour les nouveaux chemins d’accès du kit de développement logiciel (SDK). Ce problème peut être évité en utilisant le programme d’installation de Visual Studio pour installer les kits de développement logiciel (SDK) mis à jour.
+L’erreur peut se produire lorsque vous créez pour la première fois une nouvelle plateforme ou une nouvelle configuration cible, comme Retail ou ARM64. Dans l’IDE, vérifiez que l' **ensemble d’outils de plateforme** et la Version de **SDK Windows** spécifiés dans la [page de propriétés général](../../build/reference/general-property-page-project.md) sont installés. Vérifiez également que les bibliothèques requises sont disponibles dans les **répertoires de bibliothèque** spécifiés dans la [page de propriétés Répertoires VC + +](../../build/reference/vcpp-directories-property-page.md). Vérifiez les propriétés de chaque configuration, telles que Debug, Retail, x86 ou ARM64. Si une build fonctionne, mais pas une autre, comparez les paramètres pour les deux. Installez tous les outils et bibliothèques requis manquants.
 
-### <a name="cannot-open-a-third-party-library-file"></a>Impossible d’ouvrir un fichier de bibliothèque tiers
+### <a name="the-vccorliblib-library"></a>Bibliothèque vccorlib. lib
+
+Il n’existe aucune bibliothèque atténuée spectre pour les applications ou les composants de Windows universel (UWP). Si le message d’erreur comprend *vccorlib. lib*, vous avez peut-être activé [/Qspectre](../../build/reference/qspectre.md) dans un projet UWP. Désactivez l’option de compilateur **/Qspectre** pour résoudre ce problème. Dans Visual Studio, modifiez la propriété d' **atténuation spectre** . Elle est disponible dans la page de **génération de code** **CC++ /**  > de la boîte de dialogue pages de **Propriétés** du projet.
+
+### <a name="libraries-in-projects-from-online-or-other-sources"></a>Bibliothèques dans des projets en ligne ou dans d’autres sources
+
+Si vous générez un projet copié à partir d’un autre ordinateur, les emplacements d’installation de la bibliothèque peuvent être différents. Pour les générations à partir de la ligne de commande, vérifiez que la variable d’environnement LIB et les chemins de bibliothèque sont définis correctement pour la Build. Dans Visual Studio, vous pouvez afficher et modifier les chemins d’accès de bibliothèque actuels définis dans les pages de propriétés de votre projet. Dans la page **Répertoires VC + +** , choisissez le contrôle de liste déroulante de la propriété **répertoires de bibliothèque** , puis choisissez **modifier**. La section **valeur évaluée** de la boîte de dialogue **répertoires de bibliothèque** répertorie les chemins d’accès actuels recherchés pour les fichiers de bibliothèque. Mettez à jour ces chemins d’accès pour pointer vers vos bibliothèques locales.
+
+### <a name="updated-windows-sdk-libraries"></a>Bibliothèques de SDK Windows mises à jour
+
+Cette erreur peut se produire lorsque le chemin d’accès Visual Studio vers le SDK Windows est obsolète. Cela peut se produire si vous installez un SDK Windows plus récent indépendamment du programme d’installation de Visual Studio. Pour le corriger dans l’IDE, mettez à jour les chemins d’accès spécifiés dans la [page de propriétés Répertoires VC + +](../../build/reference/vcpp-directories-property-page.md). Définissez la version dans le chemin d’accès pour qu’elle corresponde au nouveau kit de développement logiciel (SDK). Si vous utilisez la Invite de commandes développeur, mettez à jour le fichier de commandes qui initialise les variables d’environnement avec les nouveaux chemins d’accès du kit de développement logiciel (SDK). Ce problème peut être évité en utilisant le programme d’installation de Visual Studio pour installer les kits de développement logiciel (SDK) mis à jour.
+
+## <a name="cant-open-a-third-party-library-file"></a>Impossible d’ouvrir un fichier de bibliothèque tiers
 
 Il existe plusieurs causes courantes à ce problème :
 
-- Le chemin d’accès à votre fichier de bibliothèque est peut-être incorrect, ou vous n’avez peut-être pas spécifié l’éditeur de liens.
+- Le chemin d’accès à votre fichier de bibliothèque est peut-être incorrect ou n’est pas encapsulé dans des guillemets doubles. Ou, vous n’avez peut-être pas spécifié l’éditeur de liens.
 
-- Vous avez peut-être installé une version 32 bits de la bibliothèque, mais vous créez pour 64 bits, ou vice-versa.
+- Vous avez peut-être installé une version 32 bits de la bibliothèque, mais vous générez pour 64 bits, ou d’une autre façon.
 
 - La bibliothèque peut avoir des dépendances avec d’autres bibliothèques qui ne sont pas installées.
 
-Pour résoudre un problème de chemin d’accès, vérifiez que la variable d’environnement LIB est définie et contient tous les répertoires des bibliothèques que vous utilisez, pour chaque configuration que vous générez. Dans l’IDE, la variable LIB est définie par la propriété **répertoires** de la bibliothèque dans la [page de propriétés Répertoires VC + +](../../build/reference/vcpp-directories-property-page.md). Assurez-vous que tous les répertoires contenant les bibliothèques dont vous avez besoin sont répertoriés ici, pour chaque configuration que vous générez.
+Pour résoudre un problème de chemin d’accès pour les générations à partir de la ligne de commande, vérifiez que la variable d’environnement LIB est définie. Assurez-vous qu’il comprend les chemins d’accès de toutes les bibliothèques que vous utilisez et pour chaque configuration que vous générez. Dans l’IDE, les chemins d’accès de la bibliothèque sont définis par la propriété **Répertoires VC + +**  > **répertoires** de la bibliothèque. Assurez-vous que tous les répertoires contenant les bibliothèques dont vous avez besoin sont répertoriés ici, pour chaque configuration que vous générez.
 
-Si vous devez fournir un répertoire de bibliothèque qui remplace un répertoire de bibliothèque standard, vous pouvez utiliser l’option [/LIBPATH](../../build/reference/libpath-additional-libpath.md) sur la ligne de commande ou dans l’IDE, vous pouvez utiliser la propriété **répertoires de bibliothèques supplémentaires** dans les **Propriétés de configuration. > Éditeur de liens >** page de propriétés général pour votre projet.
+Vous devrez peut-être fournir un répertoire de bibliothèque qui remplace un répertoire de bibliothèque standard. Sur la ligne de commande, utilisez l’option [/LIBPATH](../../build/reference/libpath-additional-libpath.md) . Dans l’IDE, utilisez la propriété **répertoires de bibliothèques supplémentaires** dans les **propriétés de configuration > éditeur de liens >** page de propriétés général pour votre projet.
 
-Vérifiez que vous avez installé toutes les versions de la bibliothèque dont vous avez besoin pour les configurations que vous créez. Envisagez d’utiliser l’utilitaire de gestion des packages [vcpkg](../../vcpkg.md) pour automatiser l’installation et la configuration de nombreuses bibliothèques courantes. Dans la mesure du possible, il est préférable de créer vos propres copies des bibliothèques tierces. vous devez donc vous assurer que vous disposez de toutes les dépendances locales requises par les bibliothèques et qu’elles sont générées pour les mêmes configurations que votre projet.
+Veillez à installer toutes les versions de la bibliothèque dont vous avez besoin pour les configurations que vous créez. Envisagez d’utiliser l’utilitaire de gestion des packages [vcpkg](../../vcpkg.md) pour automatiser l’installation et la configuration de nombreuses bibliothèques courantes. Dans la mesure du possible, il est préférable de créer vos propres copies des bibliothèques tierces. Vous êtes alors sûr de disposer de toutes les dépendances locales des bibliothèques, créées pour les mêmes configurations que votre projet.
 
-### <a name="cannot-open-a-file-built-by-your-project"></a>Impossible d’ouvrir un fichier généré par votre projet
+## <a name="cant-open-a-file-built-by-your-project"></a>Impossible d’ouvrir un fichier généré par votre projet
 
-Cette erreur peut s’afficher si le *nom* de fichier est généré par votre solution, mais n’existe pas encore lorsque l’éditeur de liens tente d’y accéder. Cela peut se produire lorsqu’un projet dépend d’un autre projet, mais que les projets ne sont pas générés dans le bon ordre. Pour résoudre ce problème, assurez-vous que vos références de projet sont définies dans le projet qui utilise le fichier, de sorte que le fichier manquant est généré avant qu’il ne soit requis. Pour plus d’informations, consultez [Ajout de références dans C++ les projets Visual Studio](../../build/adding-references-in-visual-cpp-projects.md) et [gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project).
+Cette erreur peut s’afficher si le *nom de fichier* n’existe pas encore lorsque l’éditeur de liens tente d’y accéder. Cela peut se produire lorsqu’un projet dépend d’un autre dans la solution, mais que les projets sont générés dans le mauvais ordre. Pour résoudre ce problème, assurez-vous que vos références de projet sont définies dans le projet qui utilise le fichier. Le fichier manquant est alors généré avant d’être requis. Pour plus d’informations, consultez [Ajout de références dans C++ les projets Visual Studio](../../build/adding-references-in-visual-cpp-projects.md) et [gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project).
 
-### <a name="cannot-open-file-cprogramobj"></a>Impossible d’ouvrir le fichier'\\C : Program. obj'
+## <a name="cannot-open-file-cprogramobj"></a>Impossible d’ouvrir le fichier’C :\\Program. obj'
 
-Si vous voyez cette erreur ou une erreur similaire impliquant un fichier. obj inattendu à la racine de votre lecteur, le problème est certainement un chemin d’accès de bibliothèque qui n’est pas placé entre guillemets doubles.
+Si vous voyez le nom de fichier *C :\\Program. obj* dans le message d’erreur, encapsulez vos chemins de bibliothèque entre guillemets doubles. Cette erreur se produit lorsqu’un chemin d’accès non encapsulé qui commence par *C :\\fichiers programme* est passé à l’éditeur de liens. Les chemins d’accès désencapsulés peuvent également provoquer des erreurs similaires. En règle générale, ils affichent un fichier. obj inattendu à la racine de votre lecteur.
 
-Pour résoudre ce problème pour les générations à partir de la ligne de commande, vérifiez les paramètres de l’option [/LIBPATH](../../build/reference/libpath-additional-libpath.md) , les chemins d’accès spécifiés dans la variable d’environnement lib et les chemins d’accès spécifiés sur la ligne de commande, et veillez à utiliser des guillemets doubles autour des chemins d’accès qui incluent des espaces.
+Pour résoudre ce problème pour les générations à partir de la ligne de commande, vérifiez les paramètres de l’option [/LIBPATH](../../build/reference/libpath-additional-libpath.md) . Vérifiez également les chemins d’accès spécifiés dans la variable d’environnement LIB et les chemins d’accès spécifiés sur la ligne de commande. Veillez à utiliser des guillemets doubles autour de tous les chemins d’accès qui incluent des espaces.
 
-Pour résoudre ce problème dans l’IDE, vérifiez la propriété **répertoires** de la bibliothèque sur la page [propriétés de configuration > Répertoires VC + +](../../build/reference/vcpp-directories-property-page.md) , la propriété **répertoires de bibliothèques supplémentaires** dans les **Propriétés de configuration > l’éditeur de liens. >** Page de propriétés général, et la propriété **dépendances supplémentaires** dans l' **éditeur de liens propriétés de configuration > >** page de propriétés d’entrée pour votre projet. Assurez-vous que tous les chemins d’accès aux répertoires contenant les bibliothèques dont vous avez besoin sont enveloppés par des guillemets doubles, si nécessaire.
+Pour résoudre ce problème dans l’IDE, ajoutez des guillemets doubles, le cas échéant, aux propriétés suivantes de votre projet :
 
-### <a name="other-common-issues"></a>Autres problèmes courants
+- La propriété **répertoires** de la bibliothèque dans les propriétés de configuration > page de propriétés [Répertoires VC + +](../../build/reference/vcpp-directories-property-page.md) ,
 
-Cette erreur peut se produire lorsque le chemin d’accès ou le nom de fichier de bibliothèque spécifié pour l’éditeur de liens sur la ligne de commande ou dans une directive [#pragma comment (lib, « library_name »)](../../preprocessor/comment-c-cpp.md) est incorrect ou que le chemin d’accès a une spécification de lecteur non valide. Vérifiez l’orthographe et l’extension de fichier et vérifiez que le fichier existe à l’emplacement spécifié.
+- La propriété **répertoires de bibliothèques supplémentaires** dans les **propriétés de configuration > éditeur de liens >** page de propriétés général,
 
-Un autre programme a peut-être ouvert le fichier et l’éditeur de liens ne peut pas y accéder en écriture. Les programmes antivirus bloquent souvent temporairement l’accès aux fichiers nouvellement créés. Pour résoudre ce problème, essayez d’exclure les répertoires de build de votre projet du scanneur antivirus.
+- La propriété **dépendances supplémentaires** dans les **propriétés de configuration > éditeur de liens >** page de propriétés d’entrée.
 
-Si vous utilisez une option de génération parallèle, il est possible que Visual Studio ait verrouillé le fichier sur un autre thread. Pour résoudre ce problème, vérifiez que vous ne générez pas le même objet de code ou la même bibliothèque dans plusieurs projets, et que vous utilisez des dépendances de génération ou des références de projet pour récupérer des fichiers binaires générés dans votre projet.
+## <a name="other-common-issues"></a>Autres problèmes courants
 
-Lorsque vous spécifiez directement des bibliothèques individuelles dans la propriété **dépendances supplémentaires** , utilisez des espaces pour séparer les noms de bibliothèque, et non des virgules ou des points-virgules. Si vous utilisez l’élément de menu **modifier** pour ouvrir la boîte de dialogue **dépendances supplémentaires** , utilisez les nouvelles lignes pour séparer les noms, et non les virgules, les points-virgules ou les espaces. Utilisez également les nouvelles lignes lorsque vous spécifiez des chemins de bibliothèque dans les boîtes de dialogue **répertoires de bibliothèque** et **répertoires de bibliothèques supplémentaires** .
+### <a name="path-or-filename-issues"></a>Problèmes de chemin d’accès ou de nom de fichier
 
-Cette erreur peut s’afficher lorsque le chemin d’accès au *nom de fichier* se développe en plus de 260 caractères. Modifiez les noms ou réorganisez votre structure de répertoires si nécessaire pour raccourcir les chemins d’accès aux fichiers requis.
+Cette erreur peut se produire lorsque le nom de fichier ou le chemin d’accès de bibliothèque spécifié pour l’éditeur de liens est incorrect. Ou, lorsque le chemin d’accès a une spécification de lecteur non valide. Recherchez des problèmes dans la ligne de commande ou dans n’importe quel [#pragma commentaire (lib, "library_name")](../../preprocessor/comment-c-cpp.md) . Vérifiez l’orthographe et l’extension de fichier et vérifiez que le fichier existe à l’emplacement spécifié.
 
-Cette erreur peut se produire si le fichier est trop volumineux. Les bibliothèques ou les fichiers objets dont la taille est supérieure à 1 Go peuvent entraîner des problèmes pour l’éditeur de liens 32 bits. Pour résoudre ce problème, vous pouvez utiliser l’ensemble d’outils 64 bits. Pour plus d’informations sur la façon de procéder sur la ligne de commande [, consultez Procédure : Activez un ensemble d’outils visuels C++ 64 bits sur la ligne](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)de commande. Pour plus d’informations sur la façon de procéder dans l’IDE, consultez [utilisation de MSBuild avec le compilateur et les outils 64 bits](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) et ce Stack Overflow publication : [Comment faire en sorte que Visual Studio utilise le chaîne d’outils amd64 natif](https://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
+### <a name="parallel-build-synchronization"></a>Synchronisation des builds parallèles
 
-Cette erreur peut se produire si vous disposez d’autorisations de fichiers insuffisantes pour accéder au *nom*de fichier. Cela peut se produire si vous utilisez un compte d’utilisateur ordinaire et tentez d’accéder aux fichiers de bibliothèque dans des répertoires système protégés, ou d’utiliser des fichiers copiés à partir d’autres utilisateurs dont les autorisations d’origine sont définies. Pour résoudre ce problème, déplacez le fichier vers un répertoire de projet accessible en écriture. Si le fichier se trouve dans un répertoire accessible en écriture mais a des autorisations inaccessibles, vous pouvez utiliser une invite de commandes d’administrateur et exécuter la commande takeown. exe pour prendre possession du fichier.
+Si vous utilisez une option de génération parallèle, Visual Studio peut avoir verrouillé le fichier sur un autre thread. Pour résoudre ce problème, vérifiez que le même objet ou la même bibliothèque de code n’est pas généré dans plusieurs projets. Utilisez des dépendances de build ou des références de projet pour récupérer des fichiers binaires générés dans votre projet.
 
-L’erreur peut se produire lorsque vous n’avez pas suffisamment d’espace disque. L’éditeur de liens utilise des fichiers temporaires dans plusieurs cas. Même si vous disposez d’un espace disque suffisant, un lien très volumineux peut épuiser ou fragmenter l’espace disque disponible. Envisagez d’utiliser l’option [/OPT (optimisations)](../../build/reference/opt-optimizations.md) ; l’élimination de COMDAT transitif lit tous les fichiers objets plusieurs fois.
+### <a name="additional-dependencies-specified-in-the-ide"></a>Dépendances supplémentaires spécifiées dans l’IDE
 
-Si le *nom* de fichier est nommé LNK*nnn*, qui est un nom de fichier généré par l’éditeur de liens pour un fichier temporaire, le répertoire spécifié dans la variable d’environnement TMP peut ne pas exister, ou plusieurs répertoires peuvent être spécifiés pour la variable d’environnement TMP. Un seul chemin d’accès au répertoire doit être spécifié pour la variable d’environnement TMP.
+Lorsque vous spécifiez directement des bibliothèques individuelles dans la propriété **dépendances supplémentaires** , utilisez des espaces pour séparer les noms de bibliothèque. N’utilisez pas de virgules ou de points-virgules. Si vous utilisez l’élément de menu **modifier** pour ouvrir la boîte de dialogue **dépendances supplémentaires** , utilisez les nouvelles lignes pour séparer les noms, et non les virgules, les points-virgules ou les espaces. Utilisez également les nouvelles lignes lorsque vous spécifiez des chemins de bibliothèque dans les boîtes de dialogue **répertoires de bibliothèque** et **répertoires de bibliothèques supplémentaires** .
+
+### <a name="paths-that-are-too-long"></a>Chemins d’accès trop longs
+
+Cette erreur peut s’afficher lorsque le chemin d’accès au *nom de fichier* se développe en plus de 260 caractères. Si nécessaire, réorganisez la structure de votre répertoire ou raccourcissez les noms des dossiers et des fichiers pour raccourcir les chemins.
+
+### <a name="files-that-are-too-large"></a>Fichiers trop volumineux
+
+Cette erreur peut se produire si le fichier est trop volumineux. Les bibliothèques ou les fichiers objets dont la taille est supérieure à 1 Go peuvent entraîner des problèmes pour l’éditeur de liens 32 bits. Pour résoudre ce problème, vous pouvez utiliser l’ensemble d’outils 64 bits. Pour plus d’informations sur l’utilisation de l’ensemble d’outils 64 bits sur la ligne de commande, consultez [Comment : activer un ensemble d' C++ outils visuels 64 bits sur la ligne de commande](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Pour plus d’informations sur l’utilisation de l’ensemble d’outils 64 bits dans l’IDE, consultez [utilisation de MSBuild avec le compilateur et les outils 64 bits](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project). Consultez également cette Stack Overflow publication : [Comment faire en sorte que Visual Studio utilise le chaîne d’outils amd64 natif](https://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
+
+### <a name="incorrect-file-permissions"></a>Autorisations de fichier incorrectes
+
+Cette erreur peut se produire si vous disposez d’autorisations de fichiers insuffisantes pour accéder au *nom*de fichier. Cela peut se produire si vous utilisez un compte d’utilisateur ordinaire pour accéder aux fichiers de bibliothèque dans les répertoires système protégés. Ou, si vous utilisez des fichiers copiés à partir d’autres utilisateurs dont les autorisations d’origine sont toujours définies. Pour résoudre ce problème, déplacez le fichier vers un répertoire de projet accessible en écriture. Si le fichier déplacé a des autorisations inaccessibles, exécutez la commande takeown. exe dans une fenêtre de commande d’administrateur pour prendre possession du fichier.
+
+### <a name="insufficient-disk-space"></a>Espace disque insuffisant.
+
+L’erreur peut se produire lorsque vous n’avez pas suffisamment d’espace disque. L’éditeur de liens utilise des fichiers temporaires dans plusieurs cas. Même si vous disposez d’un espace disque suffisant, un grand lien peut épuiser ou fragmenter l’espace disque disponible. Envisagez d’utiliser l’option [/OPT (optimisations)](../../build/reference/opt-optimizations.md) ; l’élimination de COMDAT transitif lit tous les fichiers objets plusieurs fois.
+
+### <a name="problems-in-the-tmp-environment-variable"></a>Problèmes dans la variable d’environnement TMP
+
+Si le *nom* de fichier est nommé LNK*nnn*, il s’agit d’un nom de fichier généré par l’éditeur de liens pour un fichier temporaire. Le répertoire spécifié dans la variable d’environnement TMP n’existe peut-être pas. Ou bien, plusieurs répertoires peuvent être spécifiés pour la variable d’environnement TMP. Un seul chemin d’accès au répertoire doit être spécifié pour la variable d’environnement TMP.
+
+## <a name="help-my-issue-isnt-listed-here"></a>Aide, mon problème n’est pas répertorié ici.
+
+Si aucun des problèmes répertoriés ici ne s’applique, vous pouvez utiliser les outils de commentaires de Visual Studio pour obtenir de l’aide. Dans l’IDE, accédez à la barre de menus et choisissez **aide > envoyer des commentaires > signaler un problème**. Ou soumettez une suggestion en utilisant l' **aide > envoyer des commentaires > envoyer une suggestion**. Vous pouvez également utiliser le site Web C++ de la [communauté de développeurs](https://developercommunity.visualstudio.com/spaces/62/index.html)Visual Studio). Utilisez-le pour rechercher des réponses aux questions et demander de l’aide. Pour plus d’informations, consultez [Guide pratique pour signaler un problème avec C++ l’ensemble d’outils ou la documentation de Visual](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+
+Si vous avez découvert un nouveau moyen de résoudre ce problème, nous devons l’ajouter à cet article, faites-le nous savoir. Vous pouvez nous envoyer vos commentaires en utilisant le bouton ci-dessous pour **cette page**. Utilisez-le pour créer un nouveau problème dans notre [ C++ documentation GitHub référentiel](https://github.com/MicrosoftDocs/cpp-docs/issues). Merci.
