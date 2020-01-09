@@ -1,15 +1,15 @@
 ---
 title: Prise en charge de la fonctionnalité Dossier ouvert pour les systèmes de génération C++ dans Visual Studio
-ms.date: 10/21/2019
+ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 0eed40430050655f8fd9bdc83144adc7aa8c32e7
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 8342060e7286c1089312874199bf341ec36bed62
+ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778341"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556689"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Prise en charge de la fonctionnalité Dossier ouvert pour les systèmes de génération C++ dans Visual Studio
 
@@ -39,15 +39,15 @@ Pour utiliser l’IDE de Visual Studio avec un système de génération ou un en
 
 ## <a name="configure-code-navigation-with-cpppropertiesjson"></a>Configurer la navigation du code avec CppProperties. JSON
 
-Pour que les fonctionnalités IntelliSense et de navigation telles que **atteindre la définition** fonctionnent correctement, Visual Studio doit savoir quel compilateur vous utilisez, où se trouvent les en-têtes système et où se trouvent les fichiers include supplémentaires s’ils ne sont pas directement dans le dossier que vous avez ouvert (dossier de l’espace de travail). Pour spécifier une configuration, vous pouvez choisir **gérer les configurations** dans la liste déroulante de la barre d’outils principale :
+Pour que les fonctionnalités IntelliSense et de navigation telles que **atteindre la définition** fonctionnent correctement, Visual Studio doit savoir quel compilateur vous utilisez, où se trouvent les en-têtes système, et où se trouvent les fichiers include supplémentaires s’ils ne se trouvent pas directement dans le dossier que vous avez ouvert (le dossier de l’espace de travail). Pour spécifier une configuration, vous pouvez choisir **gérer les configurations** dans la liste déroulante de la barre d’outils principale :
 
 ![Liste déroulante gérer les configurations](media/manage-configurations-dropdown.png)
 
-Actuellement, Visual Studio propose quatre configurations par défaut, toutes pour le compilateur C++ Microsoft :
+Visual Studio propose les configurations par défaut suivantes :
 
 ![Configurations par défaut](media/default-configurations.png)
 
-Si, par exemple, vous choisissez **x64-Debug**, Visual Studio crée un fichier appelé *CppProperties. JSON* dans le dossier racine de votre projet et le remplit comme suit :
+Si, par exemple, vous choisissez **x64-Debug**, Visual Studio crée un fichier appelé *CppProperties. JSON* dans le dossier racine de votre projet :
 
 ```json
 {
@@ -73,19 +73,18 @@ Si, par exemple, vous choisissez **x64-Debug**, Visual Studio crée un fichier a
 }
 ```
 
-Cette configuration « hérite » les variables d’environnement du Invite de commandes développeur Visual Studio [x64](building-on-the-command-line.md). L’une de ces variables est `INCLUDE` et vous pouvez vous y référer ici à l’aide de la macro `${env.INCLUDE}`. La propriété `includePath` indique à Visual Studio où rechercher toutes les sources dont il a besoin pour IntelliSense. Dans ce cas, il indique « Rechercher dans tous les répertoires spécifiés par la variable d’environnement INCLUDe », ainsi que tous les répertoires de l’arborescence de dossiers de travail active. La propriété `name` est le nom qui s’affiche dans la liste déroulante, et peut être tout ce que vous aimez. La propriété `defines` fournit des indications à IntelliSense lorsqu’il rencontre des blocs de compilation conditionnelle. La propriété `intelliSenseMode` fournit des indications supplémentaires basées sur le type de compilateur. Plusieurs options sont disponibles pour MSVC, GCC et Clang.
+Cette configuration hérite des variables d’environnement du Invite de commandes développeur Visual Studio [x64](building-on-the-command-line.md). L’une de ces variables est `INCLUDE` et vous pouvez vous y référer ici à l’aide de la macro `${env.INCLUDE}`. La propriété `includePath` indique à Visual Studio où rechercher toutes les sources dont il a besoin pour IntelliSense. Dans ce cas, il indique « Rechercher dans tous les répertoires spécifiés par la variable d’environnement INCLUDe », ainsi que tous les répertoires de l’arborescence de dossiers de travail active. La propriété `name` est le nom qui s’affiche dans la liste déroulante, et peut être tout ce que vous aimez. La propriété `defines` fournit des indications à IntelliSense lorsqu’il rencontre des blocs de compilation conditionnelle. La propriété `intelliSenseMode` fournit des indications supplémentaires basées sur le type de compilateur. Plusieurs options sont disponibles pour MSVC, GCC et Clang.
 
 > [!NOTE]
 > Si Visual Studio semble ignorer les paramètres dans *CppProperties. JSON*, essayez d’ajouter une exception à votre fichier *. gitignore* comme suit : `!/CppProperties.json`.
 
-## <a name="example-configuration-for-gcc"></a>Exemple de configuration pour GCC
+## <a name="default-configuration-for-mingw-w64"></a>Configuration par défaut de MinGW-W64
 
-Si vous utilisez un autre compilateur que Microsoft C++, vous devez créer une configuration et un environnement personnalisés dans *CppProperties. JSON*. L’exemple suivant montre un fichier *CppProperties. JSON* complet avec une configuration personnalisée unique pour l’utilisation de GCC dans une installation MSYS2 :
+Si vous ajoutez la configuration MinGW-W64, le JSON se présente comme suit :
 
 ```json
 {
-  "configurations": [
-   {
+  {
       "inheritEnvironments": [
         "mingw_64"
       ],
@@ -100,20 +99,17 @@ Si vous utilisez un autre compilateur que Microsoft C++, vous devez créer une c
           "MINGW64_ROOT": "C:\\msys64\\mingw64",
           "BIN_ROOT": "${env.MINGW64_ROOT}\\bin",
           "FLAVOR": "x86_64-w64-mingw32",
-          "TOOLSET_VERSION": "8.3.0",
-          "PATH": "${env.MINGW64_ROOT}\\bin;${env.MINGW64_ROOT}\\..\\usr\\local\\bin;${env.MINGW64_ROOT}\\..\\usr\\bin;${env.MINGW64_ROOT}\\..\\bin;${env.PATH}",
+          "TOOLSET_VERSION": "9.1.0",
+          "PATH": "${env.BIN_ROOT};${env.MINGW64_ROOT}\\..\\usr\\local\\bin;${env.MINGW64_ROOT}\\..\\usr\\bin;${env.MINGW64_ROOT}\\..\\bin;${env.PATH}",
           "INCLUDE": "${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION};${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\tr1;${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\${env.FLAVOR}",
           "environment": "mingw_64"
         }
       ]
-   }
+    }
 }
 ```
 
 Notez le bloc `environments`. Il définit des propriétés qui se comportent comme des variables d’environnement et qui sont disponibles non seulement dans le fichier *CppProperties. JSON* , mais également dans les autres fichiers de configuration *Task. vs. JSON* et *Launch. vs. JSON*. La configuration `Mingw64` hérite de l’environnement `mingw_w64` et utilise sa propriété `INCLUDE` pour spécifier la valeur de `includePath`. Vous pouvez ajouter d’autres chemins d’accès à cette propriété de tableau en fonction des besoins.
-
-> [!WARNING]
-> Il existe actuellement un problème connu dans lequel la valeur `INCLUDE` spécifiée dans `environments` n’est pas correctement transmise à la propriété `includePath`. Vous pouvez contourner le problème en ajoutant les chemins d’accès include du littéral complet au tableau `includePath`.
 
 La propriété `intelliSenseMode` est définie sur une valeur appropriée pour GCC. Pour plus d’informations sur toutes ces propriétés, consultez [référence de schéma CppProperties](cppproperties-schema-reference.md).
 
@@ -123,7 +119,7 @@ Lorsque tout fonctionne correctement, IntelliSense s’affiche à partir des en-
 
 ## <a name="enable-intellisense-diagnostics"></a>Activer les diagnostics IntelliSense
 
-Si vous ne voyez pas la fonctionnalité IntelliSense que vous attendez, vous pouvez résoudre les problèmes en accédant à **Outils** > **options** > **éditeur de texte** > **C/C++**  > **avancé** et en définissant **activer la journalisation** la **valeur est true**. Pour commencer, essayez de définir le **niveau de journalisation** sur 5 et les **filtres de journalisation** sur 8.
+Si vous ne voyez pas la fonctionnalité IntelliSense que vous attendez, vous pouvez résoudre les problèmes en accédant à **Outils** > **options** > **éditeur de texte** > **C/C++**  > **avancé** et en affectant à **activer la journalisation** la **valeur true**. Pour commencer, essayez de définir le **niveau de journalisation** sur 5 et les **filtres de journalisation** sur 8.
 
 ![Journaux de diagnostic](media/diagnostic-logging.png)
 
@@ -158,7 +154,7 @@ Cela crée (ou ouvre) le fichier *Tasks. vs. JSON* dans le dossier. vs que Visua
 
 ```
 
-Le fichier JSON est placé dans le sous-dossier *. vs* , que vous pouvez voir si vous cliquez sur le bouton **Afficher tous les fichiers** en haut de **Explorateur de solutions**. Vous pouvez exécuter cette tâche en cliquant avec le bouton droit sur le nœud racine dans **Explorateur de solutions** et en choisissant **générer Hello**. Lorsque la tâche se termine, vous devez voir un nouveau fichier *Hello. exe* dans **Explorateur de solutions**.
+Le fichier JSON est placé dans le sous-dossier *. vs* . Pour afficher ce dossier, cliquez sur le bouton **Afficher tous les fichiers** en haut de **Explorateur de solutions**. Vous pouvez exécuter cette tâche en cliquant avec le bouton droit sur le nœud racine dans **Explorateur de solutions** et en choisissant **générer Hello**. Lorsque la tâche se termine, vous devez voir un nouveau fichier *Hello. exe* dans **Explorateur de solutions**.
 
 Vous pouvez définir plusieurs types de tâches. L’exemple suivant montre un *fichier Tasks. vs. JSON* qui définit une tâche unique. `taskLabel` définit le nom qui apparaît dans le menu contextuel. `appliesTo` définit les fichiers sur lesquels la commande peut être exécutée. La propriété `command` fait référence à la variable d’environnement COMSPEC, qui identifie le chemin d’accès de la console (*cmd. exe* sur Windows). Vous pouvez également référencer des variables d’environnement déclarées dans CppProperties.json ou CMakeSettings.json. La propriété `args` spécifie la ligne de commande à appeler. La macro `${file}` extrait le fichier sélectionné dans **l’Explorateur de solutions**. L’exemple suivant affiche le nom du fichier .cpp actuellement sélectionné.
 
@@ -183,7 +179,7 @@ Pour plus d’informations, consultez [Informations de référence sur le schém
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Configurer les paramètres de débogage avec launch.vs.json
 
-Pour personnaliser les arguments de ligne de commande et les instructions de débogage de votre programme, cliquez avec le bouton droit sur le fichier exécutable dans **Explorateur de solutions** et sélectionnez **paramètres de débogage et de lancement**. Cela ouvre un fichier *Launch. vs. JSON* existant, ou s’il n’en existe aucun, il crée un nouveau fichier avec un ensemble de paramètres de lancement minimal. Tout d’abord, vous avez le choix du type de session de débogage que vous souhaitez configurer. Pour déboguer un projet MinGw-W64, nous choisissons **CC++ /Launch pour MinGGW/Cygwin (GDB)** . Cela permet de créer une configuration de lancement pour l’utilisation de *gdb. exe* , avec quelques hypothèses sur les valeurs par défaut. L’une de ces valeurs par défaut est `MINGW_PREFIX`. Vous pouvez substituer le chemin d’accès littéral (comme indiqué ci-dessous) ou vous pouvez définir une propriété `MINGW_PREFIX` dans *CppProperties. JSON*:
+Pour personnaliser les arguments de ligne de commande et les instructions de débogage de votre programme, cliquez avec le bouton droit sur le fichier exécutable dans **Explorateur de solutions** et sélectionnez **paramètres de débogage et de lancement**. Cela ouvre un fichier *Launch. vs. JSON* existant, ou s’il n’en existe aucun, il crée un nouveau fichier avec un ensemble de paramètres de lancement minimal. Tout d’abord, vous avez le choix du type de session de débogage que vous souhaitez configurer. Pour déboguer un projet MinGw-W64, nous choisissons **CC++ /Launch pour MinGw/Cygwin (GDB)** . Cela permet de créer une configuration de lancement pour l’utilisation de *gdb. exe* , avec quelques hypothèses sur les valeurs par défaut. L’une de ces valeurs par défaut est `MINGW_PREFIX`. Vous pouvez substituer le chemin d’accès littéral (comme indiqué ci-dessous) ou vous pouvez définir une propriété `MINGW_PREFIX` dans *CppProperties. JSON*:
 
 ```json
 {
