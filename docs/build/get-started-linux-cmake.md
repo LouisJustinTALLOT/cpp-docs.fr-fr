@@ -1,15 +1,14 @@
 ---
 title: Créer des projets multiplateformes C++ dans Visual Studio
 description: Comment installer, compiler et déboguer un projet C++ cmake Open source dans Visual Studio qui cible à la fois Linux et Windows.
-author: mikeblome
 ms.topic: tutorial
-ms.date: 11/08/2019
-ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.date: 01/08/2020
+ms.openlocfilehash: 83d71d3078e892a51aef159b225fecec2b581f20
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303254"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791761"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Didacticiel : créer C++ des projets multiplateformes dans Visual Studio
 
@@ -44,10 +43,10 @@ Dans ce didacticiel, vous apprendrez à :
     chmod +x cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh
     ```
 
-  * Vous pouvez voir les options d’exécution du script en spécifiant `-–help`. Nous vous recommandons d’utiliser l’option `–prefix` pour spécifier l’installation dans le chemin **/usr/local** , car il s’agit de l’emplacement par défaut où Visual Studio recherche cmake. L’exemple suivant montre le script Linux-x86_64. Modifiez-le si nécessaire si vous utilisez une plateforme cible différente.
+  * Vous pouvez voir les options d’exécution du script en spécifiant `-–help`. Nous vous recommandons d’utiliser l’option `–prefix` pour spécifier l’installation dans le chemin d’accès **/usr** , car **/usr/bin** est l’emplacement par défaut où Visual Studio recherche cmake. L’exemple suivant montre le script Linux-x86_64. Modifiez-le si nécessaire si vous utilisez une plateforme cible différente.
 
     ```cmd
-    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr/local
+    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr
     ```
 
 * Git pour Windows installé sur votre machine Windows.

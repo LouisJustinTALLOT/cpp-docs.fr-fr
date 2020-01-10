@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Visual C++, platforms supported
 - platforms [C++]
 ms.assetid: 0d893056-4008-411a-b3d1-5f57fd7da95c
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: eb2a258a73e69ef032576f5b42e8071fd27439a1
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 049b28d23c7f5f5f023f3b2964577b75992c2998
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810599"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793828"
 ---
 # <a name="supported-platforms-visual-c"></a>Plateformes prises en charge (Visual C++)
 
@@ -21,7 +19,7 @@ Les applications générées à l'aide de Visual Studio peuvent être ciblées p
 
 |Système d'exploitation|x86|x64|ARM|ARM64\*\*\*\*|
 |----------------------|---------|---------|---------|---------|
-|Windows XP|X\*|X\*|||
+|Windows XP|X\*|X\*|||
 |Windows Server 2003|X\*|X\*|||
 |Windows Vista|x|x|||
 |Windows Server 2008|x|x|||

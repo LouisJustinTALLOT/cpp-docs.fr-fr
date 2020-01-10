@@ -3,14 +3,12 @@ title: Nouveautés de C++ dans Visual Studio
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
-ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754133"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793969"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Nouveautés de C++ dans Visual Studio
 
@@ -184,7 +182,7 @@ IntelliCode est désormais fourni en tant que composant facultatif dans la charg
 
 IncrediBuild est désormais fourni en tant que composant facultatif dans la charge de travail **Développement Desktop en C++** . Le moniteur de build IncrediBuild est entièrement intégré à l’IDE de Visual Studio. Pour en savoir plus, voir [Visualiser votre build avec le moniteur de build d’IncrediBuild et Visual Studio 2019](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/).
 
-## <a name="debugging"></a>Débogage
+## <a name="debugging"></a>débogage
 
 - Pour les applications C++ exécutées sur Windows, les fichiers PDB se chargent désormais dans un processus 64 bits distinct. Ce changement résout plusieurs problèmes de plantage qui pouvaient survenir quand le débogueur manquait de mémoire au moment du débogage d’applications contenant de nombreux modules et fichiers PDB.
 
@@ -312,7 +310,7 @@ Vous pouvez utiliser l’option [/Zc:noexceptTypes-](../build/reference/zc-noexc
 
 ##### <a name="visual-studio-2017-rtm-version-150"></a>Visual Studio 2017 RTM (version 15.0)
 
-- Améliorations mineures des diagnostics `basic_string` `_ITERATOR_DEBUG_LEVEL != 0`. Le déplacement d’une vérification IDL dans le système des chaînes signale désormais le comportement spécifique qui a provoqué le déplacement. Par exemple, au lieu de « itérateur de chaîne non déréférençable » vous recevez « impossible de déréférencer l’itérateur de chaîne car il est hors limites (par exemple un itérateur de fin) ».
+- Amélioration des diagnostics `_ITERATOR_DEBUG_LEVEL != 0` des `basic_string` mineurs. Le déplacement d’une vérification IDL dans le système des chaînes signale désormais le comportement spécifique qui a provoqué le déplacement. Par exemple, au lieu de « itérateur de chaîne non déréférençable » vous recevez « impossible de déréférencer l’itérateur de chaîne car il est hors limites (par exemple un itérateur de fin) ».
 - Correction de l’opérateur d’affectation de déplacement `std::promise`, qui pouvait provoquer le blocage définitif du code.
 - Correction des erreurs du compilateur avec la conversion implicite de `atomic<T*>` en `T*`.
 - `pointer_traits<Ptr>` détecte désormais `Ptr::rebind<U>` correctement.
@@ -517,7 +515,7 @@ Plusieurs opérations C++ qui utilisent le moteur IntelliSense pour la refactori
 
 |||
 |-|-|
-|Fonction|Amélioration des performances|
+|Composant|Amélioration des performances|
 |Renommer|x 5,3|
 |Changer la signature |x 4,5|
 |Rechercher toutes les références|x 4,7|
@@ -532,7 +530,7 @@ C++ prend maintenant en charge la fonctionnalité **Atteindre la définition** a
 
 - Nous avons ajouté une fonctionnalité de filtrage des erreurs et une aide pour les erreurs IntelliSense figurant dans la liste d’erreurs. Le fait de cliquer sur la colonne d’erreur permet maintenant un filtrage. De plus, en cliquant sur une erreur spécifique ou sur F1, une recherche en ligne est lancée sur le message d’erreur concerné.
 
-  ![Liste d'erreurs](media/ErrorList1.png "Liste d'erreurs")
+  ![Liste d'erreurs](media/ErrorList1.png "Liste d’erreurs")
 
   ![Liste d’erreurs filtré](media/ErrorList2.png "Liste d’erreurs filtrée")
 

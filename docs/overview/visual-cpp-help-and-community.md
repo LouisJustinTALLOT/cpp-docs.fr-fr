@@ -3,14 +3,12 @@ title: Aide et communauté Visual C++
 ms.date: 11/30/2017
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: a897f3b6154368c7381f1cac8e51ed5acfac5d32
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: eb266354b818e95583c0d236c19209963a34f1f5
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708167"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791691"
 ---
 # <a name="visual-c-help-and-community"></a>Aide et communauté Visual C++
 
