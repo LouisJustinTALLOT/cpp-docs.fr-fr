@@ -1,6 +1,7 @@
 ---
 title: _mbclen, mblen, _mblen_l, _mbclen_l
-ms.date: 01/22/2019
+description: Décrit les fonctions de la bibliothèque Microsoft C Runtime (CRT) _mbclen, mblen, _mblen_l et _mbclen_l.
+ms.date: 01/08/2020
 api_name:
 - _mbclen
 - mblen
@@ -42,19 +43,19 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: 96775f513b33eb407981480c17cb609dd85383f6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4676d850448af386a5aface69f616a4ac6f85cbf
+ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952560"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755069"
 ---
 # <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
 Obtient la longueur et détermine la validité d’un caractère multioctet.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,31 +78,35 @@ int _mblen_l(
 );
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
-*c*<br/>
+\ *c*
 Caractères multioctet.
 
-*mbstr*<br/>
+*mbstr*\
 Adresse d’une séquence d’octets de caractères multioctets.
 
-*count*<br/>
+*nombre*\
 Nombre d'octets à vérifier.
 
-*locale*<br/>
+*paramètres régionaux*\
 Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_mbclen** retourne 1 ou 2, selon que le caractère multioctet *c* a une longueur de 1 ou 2 octets. Il n’y a pas de retour d’erreur pour **_mbclen**. Si *mbstr* n’est pas **null**, **mblen** retourne la longueur, en octets, du caractère multioctet. Si *mbstr* a la **valeur null** ou qu’il pointe vers le caractère null à caractères larges, **mblen** retourne 0. Lorsque l’objet sur lequel pointe *mbstr* ne forme pas un caractère multioctet valide dans les *premiers caractères* , **mblen** retourne-1.
+**_mbclen** et **_mbclen_l** retournent 1 ou 2, en fonction de la longueur du caractère multioctet *c*. Les fonctions retournent toujours 1 pour UTF-8, que *c* soit multioctet ou non. Il n’y a pas d’erreur de retour pour **_mbclen**.
+
+Si *mbstr* n’a pas la **valeur null**, **mblen** et **_mblen_l** retourner la longueur, en octets, du caractère multioctet. Les fonctions **mblen** et **_mblen_l** fonctionnent correctement sur UTF-8 et peuvent retourner une valeur comprise entre 1 et 3. Lorsque *mbstr* a la **valeur null** (ou pointe vers le caractère null à caractères larges), **mblen** et **_mblen_l** retournent 0. L’objet vers lequel pointe *mbstr* doit former un caractère multioctet valide dans les premiers caractères de *nombre* , ou **mblen** et **_mblen_l** retourner-1.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_mbclen** retourne la longueur, en octets, du caractère multioctet *c*. Si *c* ne pointe pas vers l’octet de tête d’un caractère multioctet comme déterminé par un appel implicite à **_ismbblead**, le résultat de **_mbclen** est imprévisible.
+La fonction **_mbclen** retourne la longueur, en octets, du caractère multioctet *c*. Si *c* ne pointe pas vers l’octet de tête d’un caractère multioctet (comme déterminé par un appel implicite à [_ismbblead](ismbblead-ismbblead-l.md), le résultat de **_mbclen** est imprévisible.
 
-**mblen** retourne la longueur en octets de *mbstr* s’il s’agit d’un caractère multioctet valide et détermine la validité des caractères multioctets associée à la page de codes. **mblen** examine le *nombre* ou moins d’octets contenus dans *mbstr*, mais pas plus de **MB_CUR_MAX** octets.
+**mblen** retourne la longueur en octets de *mbstr* s’il s’agit d’un caractère multioctet valide. Elle détermine également la validité des caractères multioctets associée à la page de codes. **mblen** examine le *nombre* ou moins d’octets contenus dans *mbstr*, mais pas plus de **MB_CUR_MAX** octets.
 
-La valeur de sortie est affectée par le paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md) . Les versions de ces fonctions sans le suffixe **_L** utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. Les versions avec suffixe **_L** se comportent de la même façon, mais elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par le paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Les versions de ces fonctions sans le suffixe **_L** utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. Les versions avec suffixe **_L** se comportent de la même façon, mais elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md) et [paramètres régionaux](../../c-runtime-library/locale.md).
+
+**_mbclen**, **_mblen_l**et **_mbclen_l** sont spécifiques à Microsoft et ne font pas partie de la bibliothèque C standard. Nous vous déconseillons de les utiliser là où vous voulez un code portable. Pour la compatibilité C standard, utilisez **mblen** ou **mbrlen** à la place.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -109,7 +114,7 @@ La valeur de sortie est affectée par le paramètre de catégorie **LC_CTYPE** d
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tclen**|Mappe à la macro ou à la fonction inline|**_mbclen**|Mappe à la macro ou à la fonction inline|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -117,7 +122,7 @@ La valeur de sortie est affectée par le paramètre de catégorie **LC_CTYPE** d
 |**mblen**|\<stdlib.h>|
 |**_mblen_l**|\<stdlib.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -160,8 +165,9 @@ Length in bytes of NULL multibyte character 0: 0
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multi-octets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md)<br/>
-[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>
+[Classifications des caractères](../../c-runtime-library/character-classification.md)\
+[Locale](../../c-runtime-library/locale.md)\
+[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
+[_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md)\
+[mbrlen](mbrlen.md)\
+[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)
