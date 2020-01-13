@@ -1,26 +1,29 @@
 ---
-title: Bienvenue dans C++ (C++ moderne)
-ms.date: 11/19/2019
+title: Retour à C++ la page moderneC++
+description: Décrit les nouveaux idiomes de programmation dans C++ moderne et leurs raisonnements.
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 4dee4779e941c66af1c23f62a88cecec4916a475
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 9630322024e639f9e5db1888dac5a1530befc716
+ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301741"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75869719"
 ---
-# <a name="welcome-back-to-c-modern-c"></a>Bienvenue dans C++ (C++ moderne)
+# <a name="welcome-back-to-c---modern-c"></a>Retour à C++ la page moderneC++
 
-Au cours des 25 dernières années C++ , a été l’un des langages de programmation les plus couramment utilisés au monde. Les programmes C++ bien écrits sont rapides et efficaces. Le langage est plus flexible que d’autres langages, car il vous permet d’accéder à des fonctionnalités matérielles de bas niveau pour optimiser la vitesse et réduire les besoins en mémoire. Vous pouvez l’utiliser pour créer un large éventail d’applications, des jeux à des logiciels scientifiques à hautes performances, des pilotes de périphériques, des programmes intégrés, des bibliothèques et des compilateurs pour d’autres langages de programmation, des applications clientes Windows, et bien plus encore.
+Depuis sa création, C++ est devenu l’un des langages de programmation les plus couramment utilisés au monde. Les programmes C++ bien écrits sont rapides et efficaces. Le langage est plus flexible que d’autres langages : il peut fonctionner aux niveaux d’abstraction les plus élevés et baisser au niveau du silicium. C++fournit des bibliothèques standard hautement optimisées. Il permet d’accéder aux fonctionnalités matérielles de bas niveau, afin d’optimiser la vitesse et de réduire les besoins en mémoire. À C++l’aide de, vous pouvez créer un large éventail d’applications. Jeux, pilotes de périphériques et logiciels scientifiques à hautes performances. Programmes incorporés. Applications clientes Windows. Même les bibliothèques et les compilateurs pour d’autres langages de C++programmation sont écrits dans.
 
-L'une des spécifications d'origine du C++ était la compatibilité descendante avec le langage C. Par conséquent C++ , il a toujours permis la programmation de style C avec des pointeurs bruts, des tableaux, des chaînes de caractères se terminant par null, des structures de données personnalisées et d’autres fonctionnalités qui peuvent permettre de meilleures performances, mais peuvent également générer des bogues et une complexité. L’évolution de C++ a mis en évidence des fonctionnalités qui réduisent de façon considérable la nécessité d’utiliser des idiomes de style C. Les anciennes fonctionnalités de programmation en C sont là lorsque vous en avez besoin, mais C++ avec du code moderne, vous devez en avoir besoin moins et moins. Le C++ code moderne est plus simple, plus sûr, plus élégant et toujours aussi rapide que jamais.
+L'une des spécifications d'origine du C++ était la compatibilité descendante avec le langage C. Par conséquent, C++ a toujours autorisé la programmation de style C, avec des pointeurs bruts, des tableaux, des chaînes de caractères se terminant par null et d’autres fonctionnalités. Elles peuvent permettre de meilleures performances, mais elles peuvent également générer des bogues et une complexité. L’évolution de C++ a mis en évidence des fonctionnalités qui réduisent de façon considérable la nécessité d’utiliser des idiomes de style C. Les anciennes fonctionnalités de programmation en C sont là lorsque vous en avez besoin, mais C++ avec du code moderne, vous devez en avoir besoin moins et moins. Le C++ code moderne est plus simple, plus sûr, plus élégant et toujours aussi rapide que jamais.
 
 Les sections suivantes fournissent une vue d’ensemble des principales fonctionnalités d' C++moderne. Sauf indication contraire, les fonctionnalités répertoriées ici sont disponibles dans C++ 11 et versions ultérieures. Dans le compilateur C++ Microsoft, vous pouvez définir l’option du compilateur [/STD](../build/reference/std-specify-language-standard-version.md) pour spécifier la version de la norme à utiliser pour votre projet.
 
-## <a name="raii-and-smart-pointers"></a>Pointeurs RAII et intelligent
+## <a name="resources-and-smart-pointers"></a>Ressources et pointeurs intelligents
 
-L’une des principales classes de bogues dans la programmation de style C est la *fuite de mémoire* en raison de l’échec de l’appel de **Delete** pour la mémoire qui a été allouée avec **New**. Moderne C++ insiste sur le principe de l' *acquisition des ressources* , qui stipule que toutes les ressources (mémoire du tas, descripteurs de fichiers, Sockets, etc.) doivent *appartenir* à un objet qui crée ou reçoit la ressource nouvellement allouée dans son constructeur et le supprime dans son destructeur. En adhérant au principe de RAII, vous garantissez que toutes les ressources seront correctement retournées au système d’exploitation lorsque l’objet propriétaire sera hors de portée. Pour prendre en charge l’adoption facile des principes C++ RAII, la bibliothèque standard fournit trois types pointeur intelligents : [std :: unique_ptr](../standard-library/unique-ptr-class.md), [std :: shared_ptr](../standard-library/shared-ptr-class.md)et [std :: weak_ptr](../standard-library/weak-ptr-class.md). Un pointeur intelligent gère l’allocation et la suppression de la mémoire qu’il détient. L’exemple suivant montre une classe avec un membre de tableau qui est alloué sur le tas dans l’appel à `make_unique()`. Les appels à **New** et **Delete** sont encapsulés par la classe `unique_ptr`. Quand un objet `widget` est hors de portée, le destructeur unique_ptr est appelé et libère la mémoire qui a été allouée pour le tableau.  
+La *fuite de mémoire*est l’une des principales classes de bogues dans la programmation de style C. Les fuites sont souvent dues à l’impossibilité d’appeler **Delete** pour la mémoire qui a été allouée avec **New**. Moderne C++ insiste sur le principe de l’initialisation de l' *acquisition des ressources* (RAII). L’idée est simple. Les ressources (mémoire du tas, descripteurs de fichiers, Sockets, etc.) doivent *appartenir* à un objet. Cet objet crée ou reçoit la ressource qui vient d’être allouée dans son constructeur, puis le supprime dans son destructeur. Le principe de l’RAII garantit que toutes les ressources sont correctement retournées au système d’exploitation lorsque l’objet propriétaire sort de l’étendue.
+
+Pour prendre en charge l’adoption facile des principes C++ RAII, la bibliothèque standard fournit trois types pointeur intelligents : [std :: unique_ptr](../standard-library/unique-ptr-class.md), [std :: shared_ptr](../standard-library/shared-ptr-class.md)et [std :: weak_ptr](../standard-library/weak-ptr-class.md). Un pointeur intelligent gère l’allocation et la suppression de la mémoire qu’il détient. L’exemple suivant montre une classe avec un membre de tableau qui est alloué sur le tas dans l’appel à `make_unique()`. Les appels à **New** et **Delete** sont encapsulés par la classe `unique_ptr`. Quand un objet `widget` est hors de portée, le destructeur unique_ptr est appelé et libère la mémoire qui a été allouée pour le tableau.  
 
 ```cpp
 #include <memory>
@@ -47,11 +50,11 @@ Dans la mesure du possible, utilisez un pointeur intelligent lors de l’allocat
 
 ## <a name="stdstring-and-stdstring_view"></a>std :: String et std :: string_view
 
-Les chaînes de style C représentent une autre source importante de bogues. En utilisant [std :: String et std :: wstring](../standard-library/basic-string-class.md) , vous pouvez éliminer pratiquement toutes les erreurs associées aux chaînes de style C et tirer parti des fonctions membres pour la recherche, l’ajout, la préattente, etc. Les deux sont hautement optimisés pour la vitesse. Lors du passage d’une chaîne à une fonction qui requiert uniquement un accès en lecture seule, en C++ 17, vous pouvez utiliser [std :: string_view](../standard-library/basic-string-view-class.md) pour un gain de performances encore plus important.
+Les chaînes de style C représentent une autre source importante de bogues. En utilisant [std :: String et std :: wstring](../standard-library/basic-string-class.md), vous pouvez éliminer pratiquement toutes les erreurs associées aux chaînes de style C. Vous bénéficiez également de l’avantage des fonctions membres pour la recherche, l’ajout, le préattente, etc. Les deux sont hautement optimisés pour la vitesse. Lors du passage d’une chaîne à une fonction qui requiert uniquement un accès en lecture seule, en C++ 17, vous pouvez utiliser [std :: string_view](../standard-library/basic-string-view-class.md) pour un gain de performances encore plus important.
 
 ## <a name="stdvector-and-other-standard-library-containers"></a>std :: Vector et autres conteneurs de bibliothèque standard
 
-Les conteneurs de la bibliothèque standard suivent tous le principe de l’RAII, fournissent des itérateurs pour un parcours sécurisé des éléments, sont hautement optimisés pour les performances et ont été soigneusement testés pour l’exactitude. En utilisant ces conteneurs chaque fois que cela est possible, vous éliminez le risque de bogues ou d’inefficacités qui peuvent être introduits dans des structures de données personnalisées. Par défaut, utilisez [Vector](../standard-library/vector-class.md) comme conteneur séquentiel par défaut dans C++. Cela équivaut à `List<T>` dans les langages .NET.
+Les conteneurs de la bibliothèque standard suivent tous le principe du RAII. Ils fournissent des itérateurs pour un parcours sécurisé des éléments. De plus, ils sont hautement optimisés pour les performances et ont été soigneusement testés pour l’exactitude. À l’aide de ces conteneurs, vous éliminez les risques de bogues ou d’inefficacités qui peuvent être introduits dans des structures de données personnalisées. Au lieu de tableaux bruts, utilisez [Vector](../standard-library/vector-class.md) comme conteneur séquentiel dans C++.
 
 ```cpp
 vector<string> apples;
@@ -82,7 +85,7 @@ Avant de supposer que vous devez écrire un algorithme personnalisé pour votre 
 
 Voici quelques exemples importants :
 
-- **for_each**, l’algorithme de parcours par défaut (avec les boucles for basées sur une plage). 
+- **for_each**, l’algorithme de parcours par défaut (avec les boucles for basées sur une plage).
 
 - **transformation**, pour la modification sur place des éléments de conteneur
 
@@ -112,7 +115,7 @@ auto i = m.begin(); // modern C++
 
 ## <a name="range-based-for-loops"></a>Boucles for basées sur une plage
 
-L’itération de style C sur les tableaux et les conteneurs est sujette à l’indexation des erreurs et est également fastidieux à taper. Pour éliminer ces erreurs et rendre votre code plus lisible, utilisez des boucles for basées sur des plages avec des conteneurs de bibliothèque standard ainsi que des tableaux bruts. Pour plus d’informations, consultez [instruction for basée sur une plage](../cpp/range-based-for-statement-cpp.md).
+L’itération de style C sur les tableaux et les conteneurs est sujette à l’indexation des erreurs et est également fastidieux à taper. Pour éliminer ces erreurs et rendre votre code plus lisible, utilisez des boucles for basées sur une plage avec des conteneurs de bibliothèque standard et des tableaux bruts. Pour plus d’informations, consultez [instruction for basée sur une plage](../cpp/range-based-for-statement-cpp.md).
 
 ```cpp
 #include <iostream>
@@ -147,7 +150,7 @@ constexpr int size = 10; // modern C++
 
 ### <a name="uniform-initialization"></a>Initialisation uniforme
 
-Dans moderne C++, vous pouvez utiliser l’initialisation des accolades pour n’importe quel type. Cette forme d’initialisation est particulièrement pratique lors de l’initialisation de tableaux, de vecteurs ou d’autres conteneurs. Dans l’exemple suivant, `v2` est initialisé avec 3 instances de `S`. `v3` est initialisé avec 3 instances de `S` qui sont elles-mêmes initialisées avec des accolades. Le compilateur déduit le type de chaque élément en fonction du type déclaré de `v3`.
+Dans moderne C++, vous pouvez utiliser l’initialisation des accolades pour n’importe quel type. Cette forme d’initialisation est particulièrement pratique lors de l’initialisation de tableaux, de vecteurs ou d’autres conteneurs. Dans l’exemple suivant, `v2` est initialisée avec trois instances de `S`. `v3` est initialisée avec trois instances de `S` qui sont elles-mêmes initialisées à l’aide d’accolades. Le compilateur déduit le type de chaque élément en fonction du type déclaré de `v3`.
 
 ```cpp
 #include <vector>
@@ -184,11 +187,11 @@ Pour plus d’informations, consultez [initialisation des accolades](initializin
 
 ## <a name="move-semantics"></a>Sémantique de déplacement
 
-Moderne C++ fournit la *sémantique de déplacement* qui permet d’éliminer les copies de mémoire inutiles qui, dans les versions antérieures du langage, étaient inévitables dans certaines situations. Une opération de *déplacement* transfère la propriété d’une ressource d’un objet à l’autre sans effectuer de copie. Lors de l’implémentation d’une classe qui possède une ressource telle que la mémoire du tas, les handles de fichiers, etc., vous pouvez définir un *constructeur de déplacement* et un opérateur d' *assignation de déplacement* pour celui-ci. Le compilateur choisira ces membres spéciaux lors de la résolution de la surcharge dans les cas où une copie n’est pas nécessaire. Les types de conteneurs de la bibliothèque standard appellent le constructeur de déplacement sur les objets, s’il est défini. Pour plus d’informations, consultez [constructeurs de déplacement et opérateurs d’assignationC++de déplacement ()](move-constructors-and-move-assignment-operators-cpp.md).
+Moderne C++ fournit la *sémantique de déplacement*, qui permet d’éliminer les copies de mémoire inutiles. Dans les versions antérieures du langage, les copies étaient inévitables dans certaines situations. Une opération de *déplacement* transfère la propriété d’une ressource d’un objet à l’autre sans effectuer de copie. Lors de l’implémentation d’une classe qui possède une ressource (telle que la mémoire du tas, les handles de fichiers, etc.), vous pouvez définir un *constructeur de déplacement* et un opérateur d' *assignation de déplacement* pour celui-ci. Le compilateur choisira ces membres spéciaux lors de la résolution de la surcharge dans les cas où une copie n’est pas nécessaire. Les types de conteneurs de la bibliothèque standard appellent le constructeur de déplacement sur les objets, s’il est défini. Pour plus d’informations, consultez [constructeurs de déplacement et opérateurs d’assignationC++de déplacement ()](move-constructors-and-move-assignment-operators-cpp.md).
 
 ## <a name="lambda-expressions"></a>Expressions lambda
 
-Dans la programmation de style C, une fonction peut être passée à une autre fonction au moyen d’un *pointeur de fonction*. Les pointeurs fonction sont peu pratiques à gérer et à comprendre, car la fonction à laquelle ils font référence peut être définie ailleurs dans le code source, loin du point auquel elle est appelée. En outre, ils ne sont pas de type sécurisé. Moderne C++ fournit des objets de fonction, des classes qui remplacent l’opérateur [()](function-call-operator-parens.md) , ce qui leur permet d’être appelés comme une fonction. La méthode la plus pratique pour créer des objets de fonction consiste à utiliser des [expressions lambda](../cpp/lambda-expressions-in-cpp.md)Inline. L’exemple suivant montre comment utiliser une expression lambda pour passer un objet de fonction, que la fonction `for_each` appellera sur chaque élément du vecteur :
+Dans la programmation de style C, une fonction peut être passée à une autre fonction à l’aide d’un *pointeur de fonction*. Les pointeurs de fonction sont peu pratiques à gérer et à comprendre. La fonction à laquelle ils font référence peut être définie ailleurs dans le code source, loin du point auquel elle est appelée. En outre, ils ne sont pas de type sécurisé. Moderne C++ fournit des *objets de fonction*, des classes qui remplacent l’opérateur [()](function-call-operator-parens.md) , ce qui leur permet d’être appelés comme une fonction. La méthode la plus pratique pour créer des objets de fonction consiste à utiliser des [expressions lambda](../cpp/lambda-expressions-in-cpp.md)Inline. L’exemple suivant montre comment utiliser une expression lambda pour passer un objet de fonction, que la fonction `for_each` appellera sur chaque élément du vecteur :
 
 ```cpp
     std::vector<int> v {1,2,3,4,5};
@@ -197,11 +200,11 @@ Dans la programmation de style C, une fonction peut être passée à une autre f
     auto result = find_if(begin(v), end(v), [=](int i) { return i > x && i < y; });
 ```
 
-L’expression lambda `[=](int i) { return i > x && i < y; }` peut être lue en tant que fonction qui accepte un argument unique de type `int` et retourne une valeur booléenne qui indique si l’expression a la valeur true. Notez que les variables `x` et `y` à partir du contexte environnant peuvent être utilisées dans l’expression lambda. L' `[=]` spécifie que ces variables sont *capturées* par valeur ; en d’autres termes, l’expression lambda a ses propres copies de ces valeurs.
+L’expression lambda `[=](int i) { return i > x && i < y; }` peut être lue comme « Function qui accepte un argument unique de type `int` et retourne une valeur booléenne qui indique si l’argument est supérieur à `x` et inférieur à `y`». Notez que les variables `x` et `y` à partir du contexte environnant peuvent être utilisées dans l’expression lambda. L' `[=]` spécifie que ces variables sont *capturées* par valeur ; en d’autres termes, l’expression lambda a ses propres copies de ces valeurs.
 
 ## <a name="exceptions"></a>Exceptions
 
-En règle générale, moderne C++ met l’accent sur les exceptions plutôt que sur les codes d’erreur comme la meilleure façon de signaler et gérer les conditions d’erreur. Pour plus d’informations, [consultez C++ meilleures pratiques modernes pour les exceptions et la gestion des erreurs](errors-and-exception-handling-modern-cpp.md).
+Moderne C++ met en évidence les exceptions plutôt que les codes d’erreur comme la meilleure façon de signaler et gérer les conditions d’erreur. Pour plus d’informations, [consultez C++ meilleures pratiques modernes pour les exceptions et la gestion des erreurs](errors-and-exception-handling-modern-cpp.md).
 
 ## <a name="stdatomic"></a>std :: Atomic
 
@@ -213,7 +216,7 @@ Les unions sont couramment utilisées dans la programmation de style C pour éco
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Expressions lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
-[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)<br/>
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)\
+[Expressions lambda](../cpp/lambda-expressions-in-cpp.md)\
+[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)\
 [Table C++ de conformité linguistique Microsoft](../overview/visual-cpp-language-conformance.md)
