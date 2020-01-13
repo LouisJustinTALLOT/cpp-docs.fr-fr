@@ -5,21 +5,21 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: e3e86acb81120af1b663b56681ff0f8c41036b5a
-ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.openlocfilehash: e029752ebaae5debb33d8e4a3920c5572f4d923b
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754072"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302144"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tableau de conformité du langage Microsoft C++
 
-Cette rubrique récapitule la conformité aux normes de langage ISO C++03, C++11, C++14, C++17 et C++20 des fonctionnalités du compilateur et des fonctions de la bibliothèque standard pour le compilateur Microsoft C++ dans Visual Studio 2019 et versions antérieures. À chaque nom de fonctionnalité du compilateur et de la bibliothèque standard correspond un lien vers le document de proposition de norme ISO C++ qui décrit la fonctionnalité en question (sous réserve de disponibilité de ce document au moment de la publication). La colonne Prise en charge indique la première version de Visual Studio à prendre en charge la fonctionnalité.
+La conformité aux normes pour le compilateur C++ Microsoft dans Visual Studio (MSVC) est un travail en cours. Voici un résumé de la conformité de notre C++ langue et de votre bibliothèque ISO standard par rapport à Visual Studio version. Chaque nom de fonctionnalité du compilateur et de la bibliothèque standard est C++ lié au document de la proposition standard ISO qui décrit la fonctionnalité, si celle-ci est disponible au moment de la publication. La colonne **pris en charge** répertorie la version de Visual Studio dans laquelle la prise en charge de la fonctionnalité est apparue pour la première fois.
 
-Pour plus d’informations sur les améliorations de la conformité et les autres changements dans Visual Studio 2017 ou Visual Studio 2019, définissez le sélecteur de version dans le coin supérieur gauche de cette page, puis consultez [Améliorations de la conformité de C++ dans Visual Studio](cpp-conformance-improvements.md) et [Nouveautés de Visual C++ dans Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md). Pour passer en revue les changements de conformité dans les versions antérieures, consultez [Historique des modifications de Visual C++](../porting/visual-cpp-change-history-2003-2015.md) et [Nouveautés de Visual C++ entre 2003 et 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md). Pour connaître l’actualité de l’équipe C++, visitez le [blog de l’équipe C++](https://devblogs.microsoft.com/cppblog/).
+Pour plus d’informations sur les améliorations apportées à Visual Studio 2017 ou à Visual Studio 2019 MSVC, consultez [ C++ améliorations de la conformité dans Visual Studio](cpp-conformance-improvements.md). Pour obtenir la liste des autres modifications, consultez [nouveautés pour Visual C++ dans Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md). Pour passer en revue les changements de conformité dans les versions antérieures, consultez [Historique des modifications de Visual C++](../porting/visual-cpp-change-history-2003-2015.md) et [Nouveautés de Visual C++ entre 2003 et 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md). Pour connaître l’actualité de l’équipe C++, visitez le [blog de l’équipe C++](https://devblogs.microsoft.com/cppblog/).
 
 > [!NOTE]
-> Aucun changement binaire cassant n’a été effectué entre Visual Studio 2015, Visual Studio 2017 et Visual Studio 2019.
+> Aucun changement binaire cassant n’a été effectué entre Visual Studio 2015, Visual Studio 2017 et Visual Studio 2019. Pour plus d’informations, consultez [ C++ compatibilité binaire entre Visual Studio 2015, 2017 et 2019](../porting/binary-compat-2015-2017.md)
 
 ## <a name="compiler-features"></a>Fonctionnalités du compilateur
 
@@ -31,7 +31,7 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[N2634 SFINAE sur les expressions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[N1653 Préprocesseur C99](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|Partiel <sup>[C](#note_C)</sup>|
 |__Fonctionnalités principales du langage C++14__|__Prise en charge__|
-|&nbsp;&nbsp;[N3323 Formulation optimisée pour les conversions contextuelles](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3323.pdf)|VS 2013|
+|&nbsp;&nbsp;[N3323 Formulation optimisée pour les conversions contextuelles](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3323.pdf)|VS 2013|
 |&nbsp;&nbsp;[N3472 Littéraux binaires](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)|VS 2015|
 |&nbsp;&nbsp;[N3638 Types de retour auto et decltype(auto)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)|VS 2015|
 |&nbsp;&nbsp;[N3648 init-captures](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3648.html)|VS 2015|
@@ -87,9 +87,12 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[P0702R1 Résolution de la déduction d’argument de modèle de classe pour les ctors de la liste d’initialiseurs](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0961R1 Assouplissement des règles de recherche d’un point de personnalisation de liaisons structurées](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0969R0 Autorisation des liaisons structurées aux membres accessibles](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0588R1 Simplification de la capture lambda implicite](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Non|
-|&nbsp;&nbsp;[P0962R2 Assouplissement des règles de recherche d’un point de personnalisation de boucle range-for](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|Non|
+|&nbsp;&nbsp;[P0588R1 Simplification de la capture lambda implicite](http://wg21.link/p0588r1)|VS 2019 16,4 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P1771R1 \[\[noignore\]\] pour les constructeurs](https://wg21.link/p1771r1)|VS 2019 16,4 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P1825R0 de texte de la fusion pour P0527R1 et P1155R3, plus les déplacements implicites](https://wg21.link/p1825r0)|VS 2019 16,4 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0929R2 Vérification des types de classe abstraite](https://wg21.link/P0929R2)|Non|
+|&nbsp;&nbsp;[P0962R2 Assouplissement des règles de recherche d’un point de personnalisation de boucle range-for](https://wg21.link/p0962r1)|Non|
+|&nbsp;&nbsp;[P0859R0 CWG 1581 : quand les fonctions membres constexpr sont-elles définies](https://wg21.link/p0859r0)|Non|
 |&nbsp;&nbsp;[P1009R2 Déduction de la taille du tableau des nouvelles expressions](https://wg21.link/P1009R2)|Non|
 |&nbsp;&nbsp;[P1286R2 Contra CWG DR1778](https://wg21.link/P1286R2)|Non|
 |__Fonctionnalités principales du langage C++20__|__Prise en charge__|
@@ -97,44 +100,47 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[P1041R4 Transformer les littéraux de chaîne char16_t/char32_t en UTF-16/32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1330R0 Modification du membre actif d’une union à l’intérieur de constexpr](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0972R0 noexcept pour \<chrono> zero(), min(), max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0329R4 Initialisation désignée](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0409R2 Autorisation de capture lambda \[=, this\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0515R3 Opérateur de comparaison trilatérale (vaisseau spatial) <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0941R2 Macros de test de fonctionnalité](https://wg21.link/P0941R2)|VS 2019 16.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1008R1 Interdiction des agrégats avec les constructeurs déclarés par l’utilisateur](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0329R4 Initialisation désignée](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0846R0 Modèles ADL et de fonction qui ne sont pas visibles](https://wg21.link/P0846R0)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0409R2 Autorisation de capture lambda \[=, this\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0428R2 Syntaxe de modèle familier pour les expressions lambda génériques](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0624R2 Lambdas sans état constructibles et assignables par défaut](https://wg21.link/P0624R2)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0780R2 Autorisation de l’expansion de package dans une init-capture lambda](https://wg21.link/P0780R2)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0806R2 Déconseiller cette capture implicite via \[=\]](https://wg21.link/P0806R2)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P1120R0 Améliorations de la cohérence pour <=> et d’autres opérateurs de comparaison](https://wg21.link/P1120R0)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P1185R2 \<=\> != ==](https://wg21.link/P1185R2)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0734R0 Concepts](https://wg21.link/P0734R0)|VS 2019 16,3 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0857R0 Résolution des lacunes de fonctionnalités dans des contraintes](https://wg21.link/P0857R0)|VS 2019 16,3 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P1084R2 Les exigencesde type de retour du jour sont insuffisantes](https://wg21.link/P1084R2)|VS 2019 16,3 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0892R2 Conditional explicite](https://wg21.link/P0892R2)|VS 2019 16,4 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P1091R3 Extension des liaisons structurées pour ressembler davantage à des déclarations de variable](https://wg21.link/P1091R3)|VS 2019 16,4 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P1099R5 à l’aide d’enum](https://wg21.link/P1099R5)|VS 2019 16,4 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P1186R3 quand vous utilisez \<=>](https://wg21.link/P1186R3)|VS 2019 16,4 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P1630R1 Spaces nécessitent une optimisation](https://wg21.link/P1630R1)|VS 2019 16,4 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0641R2 Incompatibilité de const avec le constructeur de copie par défaut](https://wg21.link/P0641R2)|Partial|
 |&nbsp;&nbsp;[P0306R4 Ajout de \_\_VA_OPT\_\_ pour l’omission de virgule et la suppression de virgule](https://wg21.link/P0306R4)|Non|
 |&nbsp;&nbsp;[P0315R4 Autorisation de lambdas dans des contextes non évalués](https://wg21.link/P0315R4)|Non|
-|&nbsp;&nbsp;[P0428R2 Syntaxe de modèle familier pour les expressions lambda génériques](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|Non|
 |&nbsp;&nbsp;[P0479R5 \[\[attributs\]\] probables \[\[ et \]\]peu probables](https://wg21.link/P0479R5)|Non|
 |&nbsp;&nbsp;[P0542R5 Contrats](https://wg21.link/P0542R5)|Non|
 |&nbsp;&nbsp;[P0614R1 Boucles range-based for avec initialiseurs](https://wg21.link/P0614R1)|Non|
-|&nbsp;&nbsp;[P0624R2 Lambdas sans état constructibles et assignables par défaut](https://wg21.link/P0624R2)|Non|
 |&nbsp;&nbsp;[P0634R3 À bas les typename !](https://wg21.link/P0634R3)|Non|
 |&nbsp;&nbsp;[P0683R1 Initialiseurs de membres par défaut pour les champs de bits](https://wg21.link/P0683R1)|Non|
 |&nbsp;&nbsp;[P0692R1 Assouplissement des contrôles d’accès sur les spécialisations](https://wg21.link/P0692R1)|Non|
 |&nbsp;&nbsp;[P0722R3 Suppression dimensionnée efficace des classes dimensionnées variables](https://wg21.link/P0722R3)|Non|
 |&nbsp;&nbsp;[P0732R2 Types de classe dans les paramètres de modèle sans type](https://wg21.link/P0732R2)|Non|
-|&nbsp;&nbsp;[P0734R0 Concepts](https://wg21.link/P0734R0)|Non|
-|&nbsp;&nbsp;[P0780R2 Autorisation de l’expansion de package dans une init-capture lambda](https://wg21.link/P0780R2)|Non|
-|&nbsp;&nbsp;[P0806R2 Déconseiller cette capture implicite via \[=\]](https://wg21.link/P0806R2)|Non|
 |&nbsp;&nbsp;[P0840R2 \[\[attribut\]\] no_unique_address](https://wg21.link/P0840R2)|Non|
-|&nbsp;&nbsp;[P0857R0 Résolution des lacunes de fonctionnalités dans des contraintes](https://wg21.link/P0857R0)|Non|
-|&nbsp;&nbsp;[P0892R2 Conditional explicite](https://wg21.link/P0892R2)|Non|
 |&nbsp;&nbsp;[P0912R5 Coroutines](https://wg21.link/P0912R5)|Non|
 |&nbsp;&nbsp;[P0960R3 Autoriser l’initialisation d’agrégats à partir de la liste des valeurs entre parenthèses](https://wg21.link/P0960R3)|Non|
 |&nbsp;&nbsp;[P1002R1 Blocs try-catch des fonctions constexpr](https://wg21.link/P1002R1)|Non|
 |&nbsp;&nbsp;[P1064R0 Autorisation d’appels de fonction virtuels dans les expressions constantes](https://wg21.link/P1064R0)|Non|
 |&nbsp;&nbsp;[P1073R3 Fonctions immédiates](https://wg21.link/P1073R3)|Non|
-|&nbsp;&nbsp;[P1084R2 Les exigencesde type de retour du jour sont insuffisantes](https://wg21.link/P1084R2)|Non|
-|&nbsp;&nbsp;[P1091R3 Extension des liaisons structurées pour ressembler davantage à des déclarations de variable](https://wg21.link/P1091R3)|Non|
 |&nbsp;&nbsp;[P1094R2 Espaces de noms inline imbriqués](https://wg21.link/P1094R2)|Non|
 |&nbsp;&nbsp;[P1103R3 Modules](https://wg21.link/P1103R3)|Non|
-|&nbsp;&nbsp;[P1120R0 Améliorations de la cohérence pour <=> et d’autres opérateurs de comparaison](https://wg21.link/P1120R0)|Non|
 |&nbsp;&nbsp;[P1139R2 Problèmes de formulation d’adresse liés à la norme ISO 10646](https://wg21.link/P1139R2)|Non|
 |&nbsp;&nbsp;[P1141R2 Encore une nouvelle approche pour les déclarations contraintes](https://wg21.link/P1141R2)|Non|
-|&nbsp;&nbsp;[P1185R2 \<=\> != ==](https://wg21.link/P1185R2)|Non|
 |&nbsp;&nbsp;[P1236R1 Les entiers signés sont un complément de deux](https://wg21.link/P1236R1)|Non|
 |&nbsp;&nbsp;[P1289R1 Contrôle d’accès des conditions de contrat](https://wg21.link/P1289R1)|Non|
 |&nbsp;&nbsp;[P1323R2 Post-conditions de contrat et déduction de type de retour](https://wg21.link/P1323R2)|Non|
@@ -150,6 +156,7 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[P0809R0 Comparaison de conteneurs non ordonnés](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0858R0 Exigences de l’itérateur constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0777R1 Prévention des dégradations inutiles](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P1164R1 rendre create_directory () intuitif](https://wg21.link/P1164R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0318R1 unwrap_reference, unwrap_ref_decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0318r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0457R2 starts_with()/ends_with() pour basic_string/basic_string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
@@ -157,46 +164,48 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[P0646R1 list/forward_list remove()/remove_if()/unique() size_type de retour](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0646r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0769R2 shift_left(), shift_right()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0769r2.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0020R6 atomic\<float>, atomic\<double>, atomic\<long double>](https://wg21.link/p0020r6)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0463R1 endian](https://wg21.link/p0463r1)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0482R6 char8_t : type pour les chaînes et les caractères UTF-8](https://wg21.link/P0482R6)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0600R1 \[\[nodiscard\]\] pour STL (première partie)](https://wg21.link/p0600r1)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0653R2 to_address()](https://wg21.link/p0653r2)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0754R2 \<version>](https://wg21.link/p0754r2)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0771R1 noexcept pour le constructeur de déplacement de std::function](https://wg21.link/P0771R1)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0487R1 Opérateur de résolution>>(basic_istream &,CharT*)](https://wg21.link/P0487R1)|VS 2019 16,3 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0616R0 Utilisation de move() dans \<numeric>](https://wg21.link/p0616r0)|VS 2019 16,3 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0758R1 is_nothrow_convertible](https://wg21.link/P0758R1)|VS 2019 16,3 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0898R3 Concepts de bibliothèque standard](https://wg21.link/P0898R3)|VS 2019 16,3 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0919R3 Recherche hétérogène pour les conteneurs non ordonnés](https://wg21.link/P0919R3)|VS 2019 16,3 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P1754R1 renommer les concepts en standard_case](https://wg21.link/P1754R1)|VS 2019 16,4 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0019R8 atomic_ref](https://wg21.link/P0019R8)|Non|
-|&nbsp;&nbsp;[P0020R6 atomic\<float>, atomic\<double>, atomic\<long double>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)|Non|
 |&nbsp;&nbsp;[P0053R7 \<syncstream>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br/>&nbsp;&nbsp;[P0753R2 Manipulateurs osyncstream](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|Non|
 |&nbsp;&nbsp;[P0122R7 \<span>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|Non|
 |&nbsp;&nbsp;[P0202R3 constexpr pour \<algorithm> et exchange()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|Non|
 |&nbsp;&nbsp;[P0339R6 polymorphic_allocator<>](https://wg21.link/P0339R6)|Non|
 |&nbsp;&nbsp;[P0340R3 underlying_type compatible avec SFINAE](https://wg21.link/P0340R3)|Non|
-|&nbsp;&nbsp;[P0355R7 \<Calendriers et fuseaux horaires chrono>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|Non|
+|&nbsp;&nbsp;[P0355R7 Calendriers et fuseaux horaires \<chrono>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|Non|
 |&nbsp;&nbsp;[P0356R5 bind_front()](https://wg21.link/P0356R5)|Non|
 |&nbsp;&nbsp;[P0357R3 Prise en charge de types incomplets dans reference_wrapper](https://wg21.link/P0357R3)|Non|
 |&nbsp;&nbsp;[P0415R1 constexpr pour \<complex> (à nouveau)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|Non|
 |&nbsp;&nbsp;[P0439R0 Classe enum memory_order](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|Non|
-|&nbsp;&nbsp;[P0463R1 endian](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|Non|
 |&nbsp;&nbsp;[P0475R1 Élision de copie garantie pour la construction par morceaux](https://wg21.link/P0475R1)|Non|
 |&nbsp;&nbsp;[P0476R2 <bit> bit_cast](https://wg21.link/P0476R2)|Non|
-|&nbsp;&nbsp;[P0482R6 char8_t : type pour les chaînes et les caractères UTF-8](https://wg21.link/P0482R6)|Non|
-|&nbsp;&nbsp;[P0487R1 Opérateur de résolution>>(basic_istream &,CharT*)](https://wg21.link/P0487R1)|Non|
 |&nbsp;&nbsp;[P0528R3 Comparaison et échange atomique avec remplissage de Bits](https://wg21.link/P0528R3)|Non|
 |&nbsp;&nbsp;[P0556R3 <bit> ispow2(), ceil2(), floor2(), log2p1()](https://wg21.link/P0556R3)|Non|
 |&nbsp;&nbsp;[P0591R4 Fonctions utilitaires pour la construction de Uses-Allocator](https://wg21.link/P0591R4)|Non|
-|&nbsp;&nbsp;[P0600R1 \[\[nodiscard\]\] pour STL (première partie)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)|Non|
 |&nbsp;&nbsp;[P0608R3 Amélioration du constructeur de conversion/opérateur d’assignation de variante](https://wg21.link/P0608R3)|Non|
-|&nbsp;&nbsp;[P0616R0 Utilisation de move() dans \<numeric>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0616r0.pdf)|Non|
 |&nbsp;&nbsp;[P0619R4 Suppression des fonctionnalités déconseillées de C++17 dans C++20](https://wg21.link/P0619R4)|Non|
 |&nbsp;&nbsp;[P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|Non|
 |&nbsp;&nbsp;[P0655R1 visit<R>()](https://wg21.link/P0655R1)|Non|
 |&nbsp;&nbsp;[P0674R1 make_shared() pour tableaux](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|Non|
 |&nbsp;&nbsp;[P0718R2 atomic\<shared_ptr\<T>>, atomic\<weak_ptr\<T>>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0718r2.html)|Non|
 |&nbsp;&nbsp;[P0738R2 Nettoyage de istream_iterator](https://wg21.link/P0738R2)|Non|
-|&nbsp;&nbsp;[P0754R2 \<version>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0754r2.pdf)|Non|
-|&nbsp;&nbsp;[P0758R1 is_nothrow_convertible](https://wg21.link/P0758R1)|Non|
 |&nbsp;&nbsp;[P0767R1 Dépréciation de is_pod](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|Non|
 |&nbsp;&nbsp;[P0768R1 Prise en charge des bibliothèques pour l’opérateur de comparaison spaceship \<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|Non|
-|&nbsp;&nbsp;[P0771R1 noexcept pour le constructeur de déplacement de std::function](https://wg21.link/P0771R1)|Non|
 |&nbsp;&nbsp;[P0811R3 midpoint(), lerp()](https://wg21.link/P0811R3)|Non|
 |&nbsp;&nbsp;[P0879R0 constexpr pour les fonctions de permutation](https://wg21.link/P0879R0)|Non|
 |&nbsp;&nbsp;[P0896R4 \<Plages\>](https://wg21.link/P0896R4)|Non|
-|&nbsp;&nbsp;[P0898R3 Concepts de bibliothèque standard](https://wg21.link/P0898R3)|Non|
 |&nbsp;&nbsp;[P0912R5 Prise en charge de la bibliothèque pour les coroutines](https://wg21.link/P0912R5)|Non|
-|&nbsp;&nbsp;[P0919R3 Recherche hétérogène pour les conteneurs non ordonnés](https://wg21.link/P0919R3)|Non|
 |&nbsp;&nbsp;[P0920R2 Recherche de valeurs de hachage précalculées](https://wg21.link/P0920R2)|Non|
 |&nbsp;&nbsp;[P0935R0 Éradication des constructeurs inutilement explicites par défaut](https://wg21.link/P0935R0)|Non|
 |&nbsp;&nbsp;[P0966R1 string::reserve() ne doit pas être réduit](https://wg21.link/P0966R1)|Non|
@@ -248,7 +257,7 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[P0033R1 Reformulation d’enable_shared_from_this](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|VS 2017 15.5 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0040R3 Extension des outils de gestion de mémoire](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0040r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0063R3 Bibliothèque standard C11](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0063r3.html)|VS 2015 <sup>[C11](#note_C11), [14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0067R5 Conversions de chaîne élémentaires](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0067r5.html)|VS 2017 15.7 <sup>[charconv](#note_charconv)</sup>|
+|&nbsp;&nbsp;[P0067R5 Conversions de chaîne élémentaires](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0067r5.html)|VS 2019 16,4 <sup> [charconv](#note_charconv)</sup>|
 |&nbsp;&nbsp;[P0074R0 owner_less\<>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0074r0.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0077R2 is_callable, is_nothrow_callable](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0077r2.html)|VS 2017 15.0|
 |&nbsp;&nbsp;[P0083R3 Transfert de mappages et d’ensembles](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf)<br/>&nbsp;&nbsp;[P0508R0 Clarification d’insert_return_type](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
@@ -316,53 +325,56 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[N3789 constexpr pour \<functional>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3789.htm)|VS 2015|
 |&nbsp;&nbsp;[N3887 tuple_element_t](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3887.pdf)|VS 2015|
 |&nbsp;&nbsp;[N3891 Renommage de shared_mutex (avec contrainte de temps) en shared_timed_mutex](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3891.htm)|VS 2015|
-|&nbsp;&nbsp;[N3346 Spécifications minimales d’éléments conteneurs](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3346.pdf)|VS 2013|
-|&nbsp;&nbsp;[N3421 Foncteurs d’opérateurs transparents (less\<>, etc.)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3421.htm)|VS 2013|
-|&nbsp;&nbsp;[N3655 Modèles d’alias pour \<type_traits> (decay_t, etc.)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3655.pdf)|VS 2013|
-|&nbsp;&nbsp;[N3656 make_unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3656.htm)|VS 2013|
+|&nbsp;&nbsp;[N3346 Spécifications minimales d’éléments conteneurs](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3346.pdf)|VS 2013|
+|&nbsp;&nbsp;[N3421 Foncteurs d’opérateurs transparents (less\<>, etc.)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3421.htm)|VS 2013|
+|&nbsp;&nbsp;[N3655 Modèles d’alias pour \<type_traits> (decay_t, etc.)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3655.pdf)|VS 2013|
+|&nbsp;&nbsp;[N3656 make_unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3656.htm)|VS 2013|
 
-Un groupe de documents répertoriés ensemble indique qu’une fonctionnalité a été approuvée dans la norme, puis qu’un ou plusieurs documents visant à améliorer ou à développer cette fonctionnalité ont aussi été approuvés. Ces fonctionnalités sont implémentées ensemble.
+Un groupe de documents regroupés indique une fonctionnalité standard, ainsi qu’une ou plusieurs améliorations ou expansions approuvées. Ces fonctionnalités sont implémentées ensemble.
 
 ### <a name="supported-values"></a>Valeurs prises en charge
 
-__Non__  signifie que la fonctionnalité n’est pas encore implémentée.<br/>
-__Partielle__ signifie que l’implémentation est incomplète. Pour plus d’informations, consultez la section Notes.<br/>
-__VS 2010__ indique des fonctionnalités prises en charge dans Visual Studio 2010.<br/>
-__VS 2013__ indique des fonctionnalités prises en charge dans Visual Studio 2013.<br/>
-__VS 2015__ indique les fonctionnalités prises en charge dans Visual Studio 2015 RTM.<br/>
-__Visual Studio 2015.2__ et __VS 2015.3__ indiquent des fonctionnalités prises en charge dans Visual Studio 2015 Update 2 et Visual Studio 2015 Update 3, respectivement.<br/>
-__VS 2017 15.0__ indique les fonctionnalités prises en charge dans Visual Studio 2017 version 15.0 (RTW).<br/>
-__VS 2017 15.3__ indique des fonctionnalités prises en charge dans Visual Studio 2017 version 15.3.<br/>
-__VS 2017 15.5__ indique des fonctionnalités prises en charge dans Visual Studio 2017 version 15.5.<br/>
-__VS 2017 15.7__ indique les fonctionnalités prises en charge dans Visual Studio 2017 version 15.7.<br/>
-__VS 2019 16.0__ indique les fonctionnalités prises en charge dans Visual Studio 2019 version 16.0 (RTW).<br/>
-__VS 2019 16.1__ indique les fonctionnalités prises en charge dans Visual Studio 2019 version 16.1.
+__Aucun__ signifie pas encore implémenté. \
+__Partielle__ signifie que l’implémentation est incomplète. Pour plus d’informations, consultez la section Remarques.
+__VS 2010__ indique les fonctionnalités prises en charge dans Visual Studio 2010. \
+__VS 2013__ indique les fonctionnalités prises en charge dans Visual Studio 2013. \
+__VS 2015__ indique les fonctionnalités prises en charge dans Visual Studio 2015 (RTW). \
+__Vs 2015,2__ et __vs 2015,3__ indiquent les fonctionnalités prises en charge dans Visual Studio 2015 Update 2 et Visual Studio 2015 Update 3, respectivement. \
+__VS 2017 15,0__ indique les fonctionnalités prises en charge dans Visual Studio 2017 version 15,0 (RTW).
+__VS 2017 15,3__ indique les fonctionnalités prises en charge dans Visual Studio 2017 version 15,3. \
+__VS 2017 15,5__ indique les fonctionnalités prises en charge dans Visual Studio 2017 version 15,5. \
+__VS 2017 15,7__ indique les fonctionnalités prises en charge dans Visual Studio 2017 version 15,7. \
+__VS 2019 16,0__ indique les fonctionnalités prises en charge dans Visual Studio 2019 version 16,0 (RTW).
+__VS 2019 16,1__ indique les fonctionnalités prises en charge dans Visual Studio 2019 version 16,1. \
+__VS 2019 16,2__ indique les fonctionnalités prises en charge dans Visual Studio 2019 version 16,2. \
+__VS 2019 16,3__ indique les fonctionnalités prises en charge dans Visual Studio 2019 version 16,3. \
+__VS 2019 16,4__ indique les fonctionnalités prises en charge dans Visual Studio 2019 version 16,4.
 
-### <a name="notes"></a>Notes
+### <a name="notes"></a>Remarques
 
-<a name="note_A"></a>__A__ En mode [/std:c++14](../build/reference/std-specify-language-standard-version.md), les spécifications d’exceptions dynamiques restent non implémentées, et `throw()` est toujours traité comme un synonyme de `__declspec(nothrow)`. Dans C++17, la plupart des spécifications d’exceptions dynamiques ont été supprimées par P0003R5, laissant un vestige : `throw()` est déconseillé et doit se comporter comme synonyme de `noexcept`. En mode [/std:c++17](../build/reference/std-specify-language-standard-version.md), MSVC est désormais conforme à la norme en donnant à `throw()` le même comportement que `noexcept`, comme la mise en œuvre par terminaison.
+<a name="note_A"></a>__A__ En mode [/std:c++14](../build/reference/std-specify-language-standard-version.md), les spécifications d’exceptions dynamiques restent non implémentées, et `throw()` est toujours traité comme un synonyme de `__declspec(nothrow)`. Dans C++17, la plupart des spécifications d’exceptions dynamiques ont été supprimées par P0003R5, laissant un vestige : `throw()` est déconseillé et doit se comporter comme synonyme de `noexcept`. Dans [/std : mode c++ 17](../build/reference/std-specify-language-standard-version.md) , MSVC est maintenant conforme à la norme en donnant à `throw()` le même comportement que `noexcept`, c’est-à-dire la mise en œuvre via la terminaison.
 
 L’option de compilateur [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.md) requiert l’ancien comportement de `__declspec(nothrow)`. Il est vraisemblable que `throw()` soit supprimé de C++20. Pour faciliter la migration de code en réponse à ces changements dans la norme et notre implémentation, de nouveaux avertissements du compilateur pour les problèmes de spécification d’exception ont été ajoutés sous [/std:c++17](../build/reference/std-specify-language-standard-version.md) et [/permissive-](../build/reference/permissive-standards-conformance.md).
 
-<a name="note_B"></a>__B__ Pris en charge dans le mode [/permissive-](../build/reference/permissive-standards-conformance.md) dans Visual Studio 2017 15.7. Pour plus d’informations, consultez [Prise en charge d’une recherche de nom en deux phases avec MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/).
+<a name="note_B"></a>__B__ Pris en charge dans le mode [/permissive-](../build/reference/permissive-standards-conformance.md) dans Visual Studio 2017 15.7. Pour plus d’informations, consultez [prise en charge de la recherche de noms en deux phases dans MSVC](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/).
 
 <a name="note_C"></a>__C__ La prise en charge par le compilateur des règles de préprocesseur C99 est incomplète dans Visual Studio 2017. Nous recherchons le préprocesseur et avons commencé à expédier ces modifications dans Visual Studio 2017 version 15,8 avec le commutateur de compilateur de [préprocesseur/experimental :](../build/reference/experimental-preprocessor.md) .
 
 <a name="note_D"></a>__D__ Pris en charge sous [/std:c++14](../build/reference/std-specify-language-standard-version.md) avec un avertissement pouvant être supprimé, [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md).
 
-<a name="note_E"></a>__E__ Il s’agit d’une toute nouvelle implémentation, incompatible avec la version précédente de `std::experimental`, exigée par la prise en charge de symlink, les correctifs de bogues et les changements apportés à la norme. Actuellement, l’inclusion de \<filesystem> fournit le nouveau `std::filesystem` et le `std::experimental::filesystem` précédent, et l’inclusion de \<experimental/filesystem> fournit uniquement l’ancienne implémentation expérimentale. L’implémentation expérimentale sera supprimée de la prochaine version de rupture avec ABI des bibliothèques.
+<a name="note_E"></a>__E__ il s’agit d’une implémentation entièrement nouvelle, incompatible avec la version précédente de `std::experimental`, rendue nécessaire par la prise en charge des liens symboliques, des correctifs de bogues et des modifications du comportement requis standard. Actuellement, l’inclusion de \<filesystem> fournit le nouveau `std::filesystem` et le `std::experimental::filesystem` précédent, et l’inclusion de \<experimental/filesystem> fournit uniquement l’ancienne implémentation expérimentale. L’implémentation expérimentale sera supprimée de la prochaine version de rupture avec ABI des bibliothèques.
 
 <a name="note_G"></a>__G__ Pris en charge par une fonction intrinsèque du compilateur.
 
-<a name="note_14"></a>__14__ Ces fonctionnalités C++17/20 sont toujours activées, même quand [/std:c++14](../build/reference/std-specify-language-standard-version.md) (valeur par défaut) est spécifié. Soit parce que la fonctionnalité a été implémentée avant l’introduction des options **/std**, soit parce que l’implémentation conditionnelle était trop complexe.
+<a name="note_14"></a>__14__ Ces fonctionnalités C++17/20 sont toujours activées, même quand [/std:c++14](../build/reference/std-specify-language-standard-version.md) (valeur par défaut) est spécifié. La raison est soit que la fonctionnalité a été implémentée avant l’introduction des options **/STD** , soit parce que l’implémentation conditionnelle était indésirable.
 
 <a name="note_17"></a>__17__ Ces fonctionnalités sont activées par l’option du compilateur [/std:c++17](../build/reference/std-specify-language-standard-version.md) (ou [/std:c++latest](../build/reference/std-specify-language-standard-version.md)).
 
 <a name="note_20"></a>__20__ Ces fonctionnalités sont activées par l’option du compilateur [/std:c++17](../build/reference/std-specify-language-standard-version.md). Quand l’implémentation C++20 est terminée, une nouvelle option de compilateur **/std:c++20** est ajoutée, sous laquelle ces fonctionnalités seront également disponibles.
 
-<a name="note_byte"></a>__byte__ `std::byte` est activé par [/std:c++17](../build/reference/std-specify-language-standard-version.md) (ou [/std:c++latest](../build/reference/std-specify-language-standard-version.md)), mais étant donné qu’il peut entrer en conflit avec les en-têtes du SDK Windows dans certains cas, il comporte une macro d’annulation affinée. Il peut être désactivé en définissant `_HAS_STD_BYTE` sur `0`.
+<a name="note_byte"></a>le `std::byte` d' __octets__ est activé par [/std : c++ 17](../build/reference/std-specify-language-standard-version.md) (ou [/std : c + + latest](../build/reference/std-specify-language-standard-version.md)), mais comme il peut entrer en conflit avec les en-têtes SDK Windows dans certains cas, il a une macro de désactivation fine. Il peut être désactivé en définissant `_HAS_STD_BYTE` sur `0`.
 
-<a name="note_C11"></a>__C11__ Le CRT universel implémentait les parties de la bibliothèque standard C11 qui étaient requises par C++17, à l’exception des spécificateurs de conversion alternatifs C99 `strftime()` E/O, du mode exclusif C11 `fopen()` et de C11 `aligned_alloc()`. Ce dernier est peu susceptible d’être implémenté, car C11 spécifiait `aligned_alloc()` d’une manière non compatible avec l’implémentation Microsoft de `free()`, à savoir, que `free()` doit être en mesure de gérer les allocations très alignées.
+<a name="note_C11"></a>__C11__ Le CRT universel implémentait les parties de la bibliothèque standard C11 qui étaient requises par C++17, à l’exception des spécificateurs de conversion alternatifs C99 `strftime()` E/O, du mode exclusif C11 `fopen()` et de C11 `aligned_alloc()`. Ce dernier est peu probable à implémenter, car C11 spécifié `aligned_alloc()` d’une manière incompatible avec l’implémentation Microsoft de `free()`: à savoir, que `free()` doit pouvoir gérer des allocations hautement alignées.
 
 <a name="note_rem"></a>__rem__ Fonctionnalités supprimées lorsque l’option du compilateur [/std:c++17](../build/reference/std-specify-language-standard-version.md) (ou [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) est spécifiée. Ces fonctionnalités peuvent être réactivées pour faciliter la transition vers des modes de langage plus récents à l’aide des macros suivants : `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS`, et `_HAS_UNEXPECTED`.
 
@@ -372,17 +384,17 @@ L’option de compilateur [/Zc:noexceptTypes](../build/reference/zc-noexcepttype
 - VS 2017 15,9 : virgule flottante `to_chars()` surcharges pour la valeur décimale la plus petite.
 - VS 2019 16,0 : virgule flottante `to_chars()` surcharges pour les valeurs hexadécimales hex et de précision les plus courtes.
 - VS 2019 16,2 : virgule flottante `to_chars()` surcharges pour la précision fixe et la précision scientifique.
-- Pas encore implémenté : la surcharge de `to_chars()` à virgule flottante pour la précision générale. 
+- VS 2019 16,4 : la surcharge de `to_chars()` à virgule flottante pour la précision générale.
 
-<a name ="note_parallel"></a> __parallel__ La bibliothèque d’algorithmes parallèles de C++17 est terminée. Cela ne signifie pas que chaque algorithme est parallélisé dans chaque cas. Les algorithmes les plus importants ont été parallélisés, et des signatures de stratégie d’exécution sont fournies même lorsque les algorithmes ne sont pas parallélisés. L’en-tête interne central de l’implémentation, yvals_core. h, contient les « remarques sur les algorithmes parallèles » suivantes : C++ permet à une implémentation d’implémenter des algorithmes parallèles comme appels aux algorithmes série.  Cette implémentation parallélise plusieurs appels d’algorithme courants, mais pas tous.
+<a name ="note_parallel"></a>en __parallèle__ La bibliothèque d’algorithmes parallèles c++ 17 est terminée. Complete ne signifie pas que chaque algorithme est parallélisée dans tous les cas. Les algorithmes les plus importants ont été mis en parallèle, et les signatures de stratégie d’exécution sont fournies, même lorsque les algorithmes ne sont pas mis en parallèle. L’en-tête interne central de l’implémentation, yvals_core. h, contient les « remarques sur les algorithmes parallèles » suivantes : C++ permet à une implémentation d’implémenter des algorithmes parallèles comme appels aux algorithmes série. Cette implémentation parallélise plusieurs appels d’algorithme courants, mais pas tous.
 
 Les algorithmes suivants sont parallélisés :
 
 - `adjacent_difference`, `adjacent_find`, `all_of`, `any_of`, `count`, `count_if`, `equal`, `exclusive_scan`, `find`, `find_end`, `find_first_of`, `find_if`, `find_if_not`, `for_each`, `for_each_n`, `inclusive_scan`, `is_heap`, `is_heap_until`, `is_partitioned`, `is_sorted`, `is_sorted_until`, `mismatch`, `none_of`, `partition`, `reduce`, `remove`, `remove_if`, `replace`, `replace_if`, `search`, `search_n`, `set_difference`, `set_intersection`, `sort`, `stable_sort`, `transform`, `transform_exclusive_scan`, `transform_inclusive_scan`, `transform_reduce`
 
-Actuellement, les éléments suivants ne sont pas parallélisés :
+Les éléments suivants ne sont pas actuellement mis en parallèle :
 
-- Aucune amélioration apparente n’a été apportée aux performances du parallélisme sur le matériel cible. La bande passante de mémoire de tous les algorithmes qui copient ou permutent simplement des éléments sans aucune branche est généralement limitée :
+- Aucune amélioration notable des performances du parallélisme sur le matériel cible ; tous les algorithmes qui effectuent simplement des opérations de copie ou de permutation d’éléments sans branches sont généralement limités en bande passante de la mémoire :
   - `copy`, `copy_n`, `fill`, `fill_n`, `move`, `reverse`, `reverse_copy`, `rotate`, `rotate_copy`, `shift_left`, `shift_right`, `swap_ranges`
 - Une certaine confusion existe concernant les exigences du parallélisme ; probablement dans la catégorie ci-dessus :
   - `generate`, `generate_n`
@@ -393,10 +405,10 @@ Actuellement, les éléments suivants ne sont pas parallélisés :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)<br/>
-[Améliorations de la conformité de C++ dans Visual Studio](cpp-conformance-improvements.md)<br/>
-[Nouveautés de Visual C++ dans Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-[Historique des modifications de Visual C++ entre 2003 et 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
-[Nouveautés de Visual C++ entre 2003 et 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)\
+[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)\
+[améliorations de la conformité dans Visual Studio\ C++ ](cpp-conformance-improvements.md)
+[Nouveautés de Visual C++ Studio](what-s-new-for-visual-cpp-in-visual-studio.md)\
+[Historique C++ des modifications visuelles 2003 à 2015](../porting/visual-cpp-change-history-2003-2015.md)\
+[Nouveautés C++ de Visual 2003 à 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)\
 [Blog de l’équipe C++](https://devblogs.microsoft.com/cppblog/)
