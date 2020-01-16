@@ -4,12 +4,12 @@ description: Décrit comment utiliser Visual Studio pour configurer les paramèt
 ms.date: 01/13/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: ff1de8241c2489e675f82f469f1cf697a72f5034
-ms.sourcegitcommit: 275b71219d2a8bd5d78f87e21dd909e9968c2f44
+ms.openlocfilehash: 5e627f02b5245baede6e92268cedfc43957f3abc
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946816"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031326"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurer des sessions de débogage CMake
 
@@ -73,7 +73,7 @@ Il existe de nombreuses propriétés *Launch. vs. JSON* pour prendre en charge t
 
 ## <a name="launchvsjson-reference-for-remote-linux-projects"></a>Référence Launch. vs. JSON pour les projets Linux distants
 
-Les propriétés suivantes sont spécifiques aux **configurations de débogage distant**. Vous pouvez également [Envoyer des commandes directement à gdb](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) et [activer la journalisation MIEngine](https://github.com/microsoft/MIEngine/wiki/Logging). Ces propriétés vous permettent de voir les commandes qui sont envoyées à gdb, le résultat renvoyé par gdb, ainsi que la durée de chaque commande.
+Les propriétés suivantes sont spécifiques aux **configurations de débogage distant**. Vous pouvez également [exécuter des commandes gdb personnalisées](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) pour envoyer directement des commandes au débogueur sous-jacent et [activer la journalisation MIEngine](https://github.com/microsoft/MIEngine/wiki/Logging) pour voir les commandes qui sont envoyées à gdb, le résultat renvoyé par gdb et la durée de chaque commande.
 
 - `cwd`: répertoire de travail actuel pour la recherche de dépendances et d’autres fichiers sur l’ordinateur distant. La macro `${debugInfo.defaultWorkingDirectory}` peut être utilisée. La valeur par défaut est la racine de l’espace de travail distant, sauf si elle est remplacée dans *fichier CMakeLists. txt*. Cette propriété est utilisée uniquement pour les configurations distantes. `currentDir` est utilisé pour définir le répertoire actif de l’application de lancement pour un projet local.
 
