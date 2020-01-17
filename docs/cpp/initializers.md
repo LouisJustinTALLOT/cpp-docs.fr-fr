@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C++], array-element initializers
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: fd926177dd7540d8dc1e8512e9f17e20a0b8238c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661613"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123966"
 ---
 # <a name="initializers"></a>Initialiseurs
 
@@ -81,7 +81,7 @@ L'initialisation à zéro attribue à une variable une valeur zéro convertie im
 
 - Les variables numériques sont initialisées à 0 (ou 0,0, ou 0,0000000000, etc.).
 
-- Les variables char sont initialisées `'\0'`à.
+- Les variables char sont initialisées avec `'\0'`.
 
 - Les pointeurs sont initialisés sur **nullptr**.
 
@@ -173,7 +173,7 @@ int main() {
 }
 ```
 
-Pour plus d’informations sur l’initialisation des objets statiques globaux, consultez [Considérations supplémentaires relatives au démarrage](../cpp/additional-startup-considerations.md).
+Pour plus d’informations sur l’initialisation des objets statiques globaux, consultez [fonctions principales et arguments de ligne de commande](main-function-command-line-args.md).
 
 ### <a name="value-initialization"></a>Initialisation de valeurs
 
@@ -224,7 +224,7 @@ L'initialisation de copie correspond à l'initialisation d'un objet à l'aide d'
 
 - Des données membres non statiques sont initialisées à l'aide d'un signe égal.
 
-- Les membres des classes, des structs et des unions sont initialisés par initialisation de copie pendant l'initialisation des agrégats. Pour obtenir des exemples, consultez [initialisation](#agginit) d’agrégats.
+- Les membres des classes, des structs et des unions sont initialisés par initialisation de copie pendant l'initialisation des agrégats. Pour obtenir des exemples, consultez [initialisation d’agrégats](#agginit) .
 
 Le code suivant montre plusieurs exemples d'initialisation de copie :
 
@@ -427,7 +427,7 @@ myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> Les membres du tableau qui sont déclarés mais pas explicitement initialisés pendant l’initialisation de l’agrégat sont initialisés `myArr3` à zéro, comme indiqué ci-dessus.
+> Les membres du tableau qui sont déclarés mais pas explicitement initialisés pendant l’initialisation de l’agrégat sont initialisés à zéro, comme dans `myArr3` ci-dessus.
 
 #### <a name="initializing-unions-and-structs"></a>Initialisation des unions et des structs
 
@@ -534,9 +534,9 @@ Lors de l'initialisation d'une variable de type référence, le compilateur util
 ![Graphique de décision pour l’initialisation des types référence](../cpp/media/vc38s71.gif "Graphique de décision pour l’initialisation des types référence") <br/>
 Graphique de décision pour l’initialisation des types référence
 
-Les références aux types volatiles (déclarées comme *identificateur* *TypeName* <strong>&</strong> **volatile** ) peuvent être initialisées avec des objets **volatiles** du même type ou avec des objets qui n’ont pas été déclarés comme **volatile** . Toutefois, elles ne peuvent pas être initialisées avec des objets const de ce type. De même, les références aux types const (déclarés en tant qu' *identificateur* *TypeName* <strong>&</strong> **const** ) peuvent être initialisées avec des objets **const** du même type (ou tout ce qui a une conversion vers ce type ou avec des objets qui n’ont pas été déclarés comme **const**). Toutefois, elles ne peuvent pas être initialisées avec des objets volatiles de ce type.
+Les références aux types **volatiles** (déclarées en tant qu' *identificateur*<strong>&</strong> *TypeName* **volatile** ) peuvent être initialisées avec des objets **volatiles** du même type ou avec des objets qui n’ont pas été déclarés comme **volatile**. Toutefois, elles ne peuvent pas être initialisées avec des objets **const** de ce type. De même, les références aux types **const** (déclarés comme **const** *TypeName* <strong>&</strong> *identificateur*) peuvent être initialisées avec des objets **const** du même type (ou tout ce qui a une conversion vers ce type ou avec des objets qui n’ont pas été déclarés comme **const**). Toutefois, elles ne peuvent pas être initialisées avec des objets **volatiles** de ce type.
 
-Les références qui ne sont pas qualifiées avec le mot clé const ou **volatile** peuvent être initialisées uniquement avec des objets déclarés comme **const** ou **volatile**.
+Les références qui ne sont pas qualifiées avec le mot clé **const** ou **volatile** peuvent être initialisées uniquement avec des objets déclarés comme **const** ou **volatile**.
 
 ### <a name="initialization-of-external-variables"></a>Initialisation des variables externes
 

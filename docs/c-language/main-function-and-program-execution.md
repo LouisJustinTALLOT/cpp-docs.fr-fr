@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: d16f8a5b7b6b23ad90aad886bbb9654e706549cb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151038"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123940"
 ---
 # <a name="main-function-and-program-execution"></a>Fonction main et exécution du programme
 
@@ -26,7 +26,7 @@ Chaque programme C possède une fonction principale (main) qui doit être nomm�
 main( int argc, char *argv[ ], char *envp[ ] )
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les fonctions du programme source effectuent une ou plusieurs tâches spécifiques. La fonction **main** peut appeler ces fonctions afin qu’elles effectuent leurs tâches respectives. Lorsque **main** appelle une autre fonction, elle passe le contrôle d'exécution à cette fonction afin que l'exécution commence à la première instruction de cette fonction. Une fonction retourne le contrôle à **main** lorsqu'une instruction `return` est exécutée ou que la fin de la fonction est atteinte.
 
@@ -38,5 +38,5 @@ Consultez [Utilisation de wmain](../c-language/using-wmain.md) pour obtenir une 
 
 ## <a name="see-also"></a>Voir aussi
 
-[main : démarrage du programme](../cpp/main-program-startup.md)<br/>
+[fonction main et arguments de ligne de commandeC++()](../cpp/main-function-command-line-args.md)\
 [Analyse des arguments de ligne de commande C](../c-language/parsing-c-command-line-arguments.md)

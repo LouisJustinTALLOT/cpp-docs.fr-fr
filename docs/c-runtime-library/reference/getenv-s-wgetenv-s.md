@@ -1,6 +1,7 @@
 ---
 title: getenv_s, _wgetenv_s
-ms.date: 11/04/2016
+description: Décrit les fonctions de getenv_s et _wgetenv_s de la bibliothèque Runtime C de Microsoft.
+ms.date: 01/15/2020
 api_name:
 - getenv_s
 - _wgetenv_s
@@ -32,19 +33,36 @@ helpviewer_keywords:
 - environment variables
 - tgetenv_s function
 ms.assetid: c3ae1ffe-d4cd-4bae-bcb1-3afa754c613a
-ms.openlocfilehash: 7cbd1feab14ac29c46bb8851ff94a48c67bc6014
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- getenv_s
+- _wgetenv_s
+- _putenv_s
+- main
+- wmain
+- errno
+- EINVAL
+- ERANGE
+- _environ
+- _wenviron
+- _putenv
+- _wputenv
+- _tgetenv_s
+- _tzset
+- _dupenv_s
+- _wdupenv_s
+ms.openlocfilehash: 1eb0adc8c92f1133fd929b9d877b2526c042855f
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955054"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76124005"
 ---
-# <a name="getenv_s-_wgetenv_s"></a>getenv_s, _wgetenv_s
+# <a name="opno-locgetenv_s-opno-loc_wgetenv_s"></a>getenv_s, _wgetenv_s
 
 Obtient une valeur à partir de l'environnement actuel. Ces versions de [getenv, _wgetenv](getenv-wgetenv.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,7 +93,7 @@ errno_t _wgetenv_s(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *pReturnValue*<br/>
 Taille de mémoire tampon nécessaire ou 0 si la variable est introuvable.
@@ -97,25 +115,25 @@ Zéro en cas de réussite ; code d'erreur en cas d'échec.
 
 |*pReturnValue*|*buffer*|*numberOfElements*|*argument*|Valeur de retour|
 |--------------------|--------------|------------------------|---------------|------------------|
-|**NULL**|any|any|any|**EINVAL**|
-|any|**NULL**|>0|any|**EINVAL**|
-|any|any|any|**NULL**|**EINVAL**|
+|**NULL**|indifférent|indifférent|indifférent|**EINVAL**|
+|indifférent|**NULL**|>0|indifférent|**EINVAL**|
+|indifférent|indifférent|indifférent|**NULL**|**EINVAL**|
 
-Ces conditions d’erreur appellent un gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions définissent **errno** sur **EINVAL** et retournent **EINVAL**.
+Ces conditions d’erreur appellent un gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions définissent **errno** pour **EINVAL** et retourner **EINVAL** .
 
-En outre, si la mémoire tampon est trop petite, ces fonctions retournent **ERANGE**. Elles n'appellent pas de gestionnaire de paramètres non valides. Elles écrivent la taille de mémoire tampon requise dans *pReturnValue*et permettent ainsi aux programmes d’appeler à nouveau la fonction avec une mémoire tampon plus grande.
+En outre, si la mémoire tampon est trop petite, ces fonctions retournent **ERANGE** . Elles n'appellent pas de gestionnaire de paramètres non valides. Elles écrivent la taille de mémoire tampon requise dans *pReturnValue*et permettent ainsi aux programmes d’appeler à nouveau la fonction avec une mémoire tampon plus grande.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **getenv_s** recherche la liste de variables d’environnement pour *varname*. **getenv_s** ne respecte pas la casse dans le système d’exploitation Windows. **getenv_s** et [_putenv_s](putenv-s-wputenv-s.md) utilisent la copie de l’environnement vers lequel pointe la variable globale **_environ** pour accéder à l’environnement. **getenv_s** fonctionne uniquement sur les structures de données qui sont accessibles à la bibliothèque Runtime et non sur l’environnement « segment » créé pour le processus par le système d’exploitation. Par conséquent, les programmes qui utilisent l’argument *envp* pour [main](../../cpp/main-program-startup.md) ou [wmain](../../cpp/main-program-startup.md) peuvent récupérer des informations non valides.
+La fonction **getenv_s** recherche la liste de variables d’environnement pour *varname*. **getenv_s** ne respecte pas la casse dans le système d’exploitation Windows. **getenv_s** et [_putenv_s](putenv-s-wputenv-s.md) utilisent la copie de l’environnement vers lequel pointe la variable globale **_environ** pour accéder à l’environnement. **getenv_s** fonctionne uniquement sur les structures de données qui sont accessibles à la bibliothèque Runtime et non sur l’environnement « segment » créé pour le processus par le système d’exploitation. Par conséquent, les programmes qui utilisent l’argument *envp* pour [main](../../cpp/main-function-command-line-args.md) ou [wmain](../../cpp/main-function-command-line-args.md) peuvent récupérer des informations non valides.
 
-**_wgetenv_s** est une version à caractères larges de **getenv_s**; l’argument et la valeur de retour de **_wgetenv_s** sont des chaînes à caractères larges. La variable globale **_wenviron** est une version à caractères larges de **_environ**.
+**_wgetenv_s** est une version à caractères larges de **getenv_s** ; l’argument et la valeur de retour de **_wgetenv_s** sont des chaînes à caractères larges. La variable globale **_wenviron** est une version à caractères larges de **_environ** .
 
-Dans un programme MBCS (par exemple, dans un programme ASCII SBCS), **_wenviron** est initialement **null** , car l’environnement est composé de chaînes de caractères multioctets. Ensuite, lors du premier appel à [_wputenv](putenv-wputenv.md), ou lors du premier appel à **_wgetenv_s**, si un environnement (MBCS) existe déjà, un environnement de chaîne de caractères larges correspondant est créé et est ensuite désigné par **_wenviron**.
+Dans un programme MBCS (par exemple, dans un programme ASCII SBCS), **_wenviron** est initialement **null** , car l’environnement est composé de chaînes de caractères multioctets. Ensuite, lors du premier appel à [_wputenv](putenv-wputenv.md), ou lors du premier appel à **_wgetenv_s** , si un environnement (MBCS) existe déjà, un environnement de chaîne de caractères larges correspondant est créé, puis désigné par **_wenviron** .
 
-De même, dans un programme Unicode ( **_wmain**), **_Environ** est initialement **null** , car l’environnement est composé de chaînes à caractères larges. Ensuite, lors du premier appel à [_putenv](putenv-wputenv.md), ou lors du premier appel à **getenv_s** si un environnement (Unicode) existe déjà, un environnement MBCS correspondant est créé et est ensuite désigné par **_environ**.
+De même, dans un programme Unicode ( **_wmain**), **_environ** a initialement la **valeur null** , car l’environnement est composé de chaînes à caractères larges. Ensuite, lors du premier appel à [_putenv](putenv-wputenv.md), ou lors du premier appel à **getenv_s** si un environnement (Unicode) existe déjà, un environnement MBCS correspondant est créé et est ensuite désigné par **_environ** .
 
-Quand il existe simultanément deux copies de l'environnement (MBCS et Unicode) dans un programme, le système Runtime doit gérer les deux copies, ce qui ralentit les temps d'exécution. Par exemple, quand vous appelez **_putenv**, un appel à **_wputenv** est également exécuté automatiquement afin que les deux chaînes d’environnement correspondent.
+Quand il existe simultanément deux copies de l'environnement (MBCS et Unicode) dans un programme, le système Runtime doit gérer les deux copies, ce qui ralentit les temps d'exécution. Par exemple, quand vous appelez **_putenv** , un appel à **_wputenv** est également exécuté automatiquement afin que les deux chaînes d’environnement correspondent.
 
 > [!CAUTION]
 > Dans de rares cas, quand le système Runtime gère une version Unicode et une version multioctet de l'environnement, il se peut que les deux versions d'environnement ne correspondent pas exactement. En effet, même si une chaîne de caractères multioctets unique est mappée à une chaîne Unicode unique, le mappage d'une chaîne Unicode unique à une chaîne de caractères multioctets n'est pas nécessairement unique. Pour plus d’informations, consultez [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
@@ -131,9 +149,9 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tgetenv_s**|**getenv_s**|**getenv_s**|**_wgetenv_s**|
 
-Pour vérifier ou modifier la valeur de la variable d’environnement **TZ** , utilisez **getenv_s**, **_putenv**et **_tzset**, selon les besoins. Pour plus d’informations sur **TZ**, consultez [_tzset](tzset.md) et [_daylight, _dstbias, _timezone et _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+Pour vérifier ou modifier la valeur de la variable d’environnement **TZ** , utilisez **getenv_s** , **_putenv** et **_tzset** , selon les besoins. Pour plus d’informations sur **TZ**, consultez [_tzset](tzset.md) et [_daylight, _dstbias, _timezone et _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Routine|En-tête requis|
 |-------------|---------------------|
