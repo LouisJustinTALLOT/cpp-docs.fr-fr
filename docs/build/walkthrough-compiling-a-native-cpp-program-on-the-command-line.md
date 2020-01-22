@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: d002fd4c4edc99775e62023dda7998fba2c6a44f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051509"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518169"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procédure pas à pas : compilation d'un programme C++ natif sur la ligne de commande
 
@@ -24,7 +24,7 @@ Dans cette procédure pas à pas, vous créez un programme de type C++ « Hello
 
 Dans cette procédure pas à pas, vous pouvez utiliser votre propre programme Visual C++ au lieu de taper le programme illustré, ou vous pouvez utiliser un exemple de code Visual C++ provenant d'un autre article d'aide.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prerequisites
 
 Pour effectuer cette procédure pas à pas, vous devez avoir installé Visual Studio et le **développement Desktop C++ facultatif avec** une charge de travail, ou les outils de génération en ligne de commande pour Visual Studio.
 
@@ -78,7 +78,7 @@ Avant de pouvoir créer un C ou C++ un programme sur la ligne de commande, vous 
    ```cpp
    #include <iostream>
    using namespace std;
-   void main()
+   int main()
    {
        cout << "Hello, world, from Visual C++!" << endl;
    }
@@ -142,7 +142,7 @@ Avant de pouvoir créer un C ou C++ un programme sur la ligne de commande, vous 
 
    Félicitations, vous avez compilé et exécuté un C++ programme à l’aide des outils en ligne de commande.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Cet exemple « Hello, World » est le plus simple qu’un C++ programme peut obtenir. Les programmes réels contiennent des fichiers d’en-tête et d’autres fichiers sources, des liens dans les bibliothèques et un travail utile.
 

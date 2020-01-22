@@ -1,6 +1,7 @@
 ---
 title: Pointeur this
-ms.date: 11/04/2016
+description: Le pointeur this est un pointeur généré par le compilateur vers l’objet actuel dans des fonctions membres non statiques.
+ms.date: 01/22/2020
 f1_keywords:
 - this_cpp
 helpviewer_keywords:
@@ -8,16 +9,24 @@ helpviewer_keywords:
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-ms.openlocfilehash: c90a843ba978a98c1c61d9e096d62b85256ab0c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+no-loc:
+- this
+- class
+- struct
+- union
+- sizeof
+- const
+- volatile
+ms.openlocfilehash: 58bba2edd7a457c624b747b5a65d209995852848
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330477"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518333"
 ---
-# <a name="this-pointer"></a>Pointeur this
+# <a name="opno-locthis-pointer"></a>Pointeur this
 
-Le **cela** pointeur est un pointeur accessible uniquement dans les fonctions membres non statiques d’un **classe**, **struct**, ou **union** type. Il pointe vers l'objet pour lequel la fonction membre est appelée. Les fonctions membres statiques n’ont pas un **cela** pointeur.
+Le pointeur **this** est un pointeur accessible uniquement dans les fonctions membres non statiques d’un type **class** , **struct** ou **union** . Il pointe vers l'objet pour lequel la fonction membre est appelée. Les fonctions membres statiques n’ont pas de pointeur **this** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,19 +37,19 @@ this->member-identifier
 
 ## <a name="remarks"></a>Notes
 
-D’un objet **cela** pointeur ne fait pas partie de l’objet lui-même ; il n’est pas reflétée dans le résultat d’une **sizeof** instruction sur l’objet. En revanche, lorsqu'une fonction membre non statique est appelée pour un objet, l'adresse de l'objet est passée par le compilateur comme argument masqué à la fonction. Par exemple, l'appel de fonction suivant :
+Le pointeur **this** d’un objet ne fait pas partie de l’objet lui-même. Elle n’est pas reflétée dans le résultat d’une instruction **sizeof** sur l’objet. Lorsqu’une fonction membre non statique est appelée pour un objet, le compilateur passe l’adresse de l’objet à la fonction en tant qu’argument masqué. Par exemple, l'appel de fonction suivant :
 
 ```cpp
 myDate.setMonth( 3 );
 ```
 
-peut être interprété de cette façon :
+peut être interprété comme suit :
 
 ```cpp
 setMonth( &myDate, 3 );
 ```
 
-L’adresse de l’objet est accessible à partir de la fonction membre en tant que le **cela** pointeur. La plupart des utilisations de **cela** sont implicites. Il est permis, bien qu’inutile d’utiliser explicitement **cela** lorsque vous faites référence aux membres de la classe. Exemple :
+L’adresse de l’objet est disponible dans la fonction membre comme pointeur de **this** . La plupart des utilisations des pointeurs **this** sont implicites. Il est légal, bien que inutile, d’utiliser un **this** explicite pour faire référence aux membres du class. Par exemple :
 
 ```cpp
 void Date::setMonth( int mn )
@@ -57,7 +66,7 @@ L'expression `*this` est utilisée couramment pour retourner l'objet actuel d'un
 return *this;
 ```
 
-Le **cela** pointeur est également utilisé pour se prémunir contre les autoréférences :
+Le pointeur **this** est également utilisé pour assurer la protection contre les auto-références :
 
 ```cpp
 if (&Object != this) {
@@ -65,9 +74,9 @@ if (&Object != this) {
 ```
 
 > [!NOTE]
->  Étant donné que le **cela** pointeur est non modifiable, affectations aux **cela** ne sont pas autorisés. Les implémentations précédentes de C++ autorisaient les assignations à **cela**.
+> Étant donné que le pointeur **this** n’est pas modifiable, les assignations au pointeur **this** ne sont pas autorisées. Implémentations antérieures de C++ l’assignation autorisée à **this** .
 
-Parfois, le **cela** pointeur est utilisé directement, par exemple, pour manipuler les données auto-référentielles les structures, où l’adresse de l’objet actuel est obligatoire.
+Parfois, le pointeur **this** est utilisé directement, par exemple pour manipuler des structures de données auto-référentielles, où l’adresse de l’objet actuel est requise.
 
 ## <a name="example"></a>Exemple
 
@@ -139,11 +148,11 @@ my buffer
 your buffer
 ```
 
-## <a name="type-of-the-this-pointer"></a>Type du pointeur this
+## <a name="type-of-the-opno-locthis-pointer"></a>Type du pointeur this
 
-Le **cela** type de pointeur peut être modifié dans la déclaration de fonction par le **const** et **volatile** mots clés. Pour déclarer une fonction comme ayant les attributs d'un ou plusieurs de ces mots clés, ajoutez le ou les mots clés après la liste d'arguments de la fonction.
+Le type du pointeur **this** peut être modifié dans la déclaration de fonction par les mots clés **const** et **volatile** . Pour déclarer une fonction qui a l’un de ces attributs, ajoutez le ou les mots clés après la liste d’arguments de la fonction.
 
-Considérez cet exemple :
+Prenons un exemple :
 
 ```cpp
 // type_of_this_pointer1.cpp
@@ -156,7 +165,7 @@ int main()
 }
 ```
 
-Le code précédent déclare une fonction membre, `X`, dans lequel le **cela** pointeur est traité comme un **const** pointeur vers un **const** objet. Combinaisons de *cv-mod-list* options peuvent être utilisées, mais elles modifient toujours l’objet vers lequel pointé **cela**, et non le **cela** pointeur lui-même. Par conséquent, la déclaration suivante déclare la fonction `X`; le **cela** pointeur est un **const** pointeur vers un **const** objet :
+Le code précédent déclare une fonction membre, `X`, dans laquelle le pointeur **this** est traité comme un pointeur **const** vers un objet **const** . Des combinaisons d’options *CV-mod-List* peuvent être utilisées, mais elles modifient toujours l’objet désigné par le pointeur **this** , pas le pointeur lui-même. La déclaration suivante déclare la fonction `X`, où le pointeur **this** est un pointeur **const** vers un objet **const** :
 
 ```cpp
 // type_of_this_pointer2.cpp
@@ -169,27 +178,29 @@ int main()
 }
 ```
 
-Le type de **cela** dans un membre de fonction est décrite par la syntaxe suivante, où *cv-qualifier-list* est déterminé à partir du déclarateur de fonctions de membre et peut être **const**ou **volatile** (ou les deux), et *type de classe* est le nom de la classe :
+Le type de **this** dans une fonction membre est décrit par la syntaxe suivante. La *liste CV-qualifier* est déterminée à partir du déclarateur de la fonction membre. Il peut être **const** ou **volatile** (ou les deux). *class-type* est le nom du class:
 
-*type de classe [cv-qualifier-list]* **&#42; const cela**
+[*CV-qualifier-List*] *class* **\* const this**
 
-En d’autres termes, **cela** est toujours un pointeur const ; il ne peut pas être réassigné.  Le **const** ou **volatile** qualificateurs utilisés dans la déclaration de fonction membre s’appliquent à l’instance de classe vers laquelle pointé **cela** dans la portée de cette fonction.
+En d’autres termes, le pointeur **this** est toujours un pointeur const. Il ne peut pas être réassigné.  Les qualificateurs **const** ou **volatile** utilisés dans la déclaration de fonction membre s’appliquent à l’instance class vers laquelle pointe le pointeur **this** , dans la portée de cette fonction.
 
 Le tableau ci-dessous fournit davantage d'explications sur le fonctionnement de ces modificateurs.
 
-### <a name="semantics-of-this-modifiers"></a>Sémantique des modificateurs du pointeur this
+### <a name="semantics-of-opno-locthis-modifiers"></a>Sémantique des modificateurs this
 
 |Modificateur|Signification|
 |--------------|-------------|
-|**const**|Ne peut pas modifier les données de membres ; Impossible d’appeler des fonctions membres qui ne sont pas **const**.|
-|**volatile**|Les données membres sont chargées à partir de la mémoire chaque fois que vous y accédez ; certaines optimisations sont désactivées.|
+|**const**|Impossible de modifier les données de membre ; Impossible d’appeler des fonctions membres qui ne sont pas **const** .|
+|**volatile**|Les données de membre sont chargées à partir de la mémoire chaque fois que vous y accédez ; désactive certaines optimisations.|
 
-Il est incorrect de passer une **const** objet à une fonction membre qui n’est pas **const**. De même, il est incorrect de passer une **volatile** objet à une fonction membre qui n’est pas **volatile**.
+C’est une erreur de passer un objet **const** à une fonction membre qui n’est pas **const** .
 
-Fonctions membres déclarées comme **const** ne peut pas modifier les données membres, dans ces fonctions, le **cela** pointeur est un pointeur vers un **const** objet.
+De même, il s’agit également d’une erreur pour passer un objet **volatile** à une fonction membre qui n’est pas **volatile** .
+
+Les fonctions membres déclarées comme **const** ne peuvent pas modifier les données de membre ; dans ces fonctions, le pointeur **this** est un pointeur vers un objet **const** .
 
 > [!NOTE]
->  Constructeurs et destructeurs ne peuvent pas être déclarés en tant que **const** ou **volatile**. Ils peuvent, toutefois, être appelée sur **const** ou **volatile** objets.
+> Les constructeurs et les destructeurs ne peuvent pas être déclarés en tant que **const** ou **volatile** . Toutefois, elles peuvent être appelées sur des objets **const** ou **volatile** .
 
 ## <a name="see-also"></a>Voir aussi
 

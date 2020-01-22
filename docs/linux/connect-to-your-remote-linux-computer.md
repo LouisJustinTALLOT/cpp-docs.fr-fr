@@ -1,14 +1,13 @@
 ---
 title: Connexion à votre système Linux cible dans Visual Studio
 description: Comment se connecter à une machine Linux distante ou à un sous-système Windows pour Linux C++ à partir d’un projet Visual Studio.
-ms.date: 11/09/2019
-ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.date: 01/17/2020
+ms.openlocfilehash: d0065b63d7a81d3ae3d68b26184c88aca77f601c
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755276"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518216"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Connexion à votre système Linux cible dans Visual Studio
 
@@ -18,17 +17,58 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 
 ::: moniker-end
 
+::: moniker range="vs-2017"
+
+Vous pouvez configurer un projet Linux pour cibler une machine virtuelle ou le sous-système Windows pour Linux (WSL). Pour les ordinateurs distants et pour WSL, vous devez configurer une connexion à distance dans Visual Studio 2017.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Vous pouvez configurer un projet Linux pour cibler une machine virtuelle ou le sous-système Windows pour Linux (WSL). Pour un ordinateur distant, vous devez configurer une connexion à distance dans Visual Studio. Pour vous connecter à WSL, passez directement à la section [se connecter à WSL](#connect-to-wsl) .
+
+::: moniker-end
+
 ::: moniker range=">=vs-2017"
 
-Vous pouvez configurer un projet Linux pour cibler une machine virtuelle ou le sous-système Windows pour Linux (WSL). Pour les machines distantes et WSL sur Visual Studio 2017, vous devez configurer une connexion à distance.
+Lors de l’utilisation d’une connexion à distance C++ , Visual Studio génère des projets Linux sur l’ordinateur distant. Peu importe s’il s’agit d’un ordinateur physique, d’une machine virtuelle dans le Cloud ou de WSL.
+Pour générer le projet, Visual Studio copie le code source sur votre ordinateur Linux distant. Ensuite, le code est compilé en fonction des paramètres de Visual Studio.
 
-## <a name="connect-to-a-remote-linux-computer"></a>Se connecter à un ordinateur Linux distant
+::: moniker-end
 
-Lors de la C++ création d’un projet Linux pour un système Linux distant (machine virtuelle ou ordinateur physique), le code source Linux est copié sur votre ordinateur Linux distant. Elle est ensuite compilée en fonction des paramètres de Visual Studio.
+::: moniker range="vs-2019"
 
-Pour configurer cette connexion distante :
+> [!NOTE]
+> Visual Studio 2019 version 16,5 et versions ultérieures prennent également en charge les connexions de chiffrement sécurisées, normes FIPS (Federal Information Processing Standard) (FIPS) 140-2 aux systèmes Linux pour le développement à distance. Pour utiliser une connexion conforme aux normes FIPS, suivez les étapes décrites dans [configurer le développement Linux à distance sécurisé compatible FIPS](set-up-fips-compliant-secure-remote-linux-development.md) à la place.
 
-1. Générez le projet pour la première fois. Ou vous pouvez créer une nouvelle entrée manuellement. Sélectionnez **outils > options**, ouvrez le nœud **Cross Platform > Connection Manager** , puis cliquez sur le bouton **Ajouter** .
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+## <a name="set-up-the-ssh-server-on-the-remote-system"></a>Configuration du serveur SSH sur le système distant
+
+Si ssh n’est pas déjà configuré et en cours d’exécution sur votre système Linux, procédez comme suit pour l’installer. Les exemples de cet article utilisent Ubuntu 18,04 LTS avec OpenSSH Server version 7,6. Toutefois, les instructions doivent être les mêmes pour tout distribution utilisant une version modérément récente d’OpenSSH.
+
+1. Sur le système Linux, installez et démarrez le serveur OpenSSH :
+
+   ```bash
+   sudo apt install openssh-server
+   sudo service ssh start
+   ```
+
+1. Si vous souhaitez que le serveur SSH démarre automatiquement lorsque le système démarre, activez-le à l’aide de systemctl :
+
+   ```bash
+   sudo systemctl enable ssh
+   ```
+
+## <a name="set-up-the-remote-connection"></a>Configurer la connexion à distance
+
+1. Dans Visual Studio, choisissez **outils > options** dans la barre de menus pour ouvrir la boîte de dialogue **options** . Ensuite, sélectionnez **multiplateforme > gestionnaire de connexions** pour ouvrir la boîte de dialogue Gestionnaire de connexions.
+
+   Si vous n’avez pas encore configuré de connexion dans Visual Studio, quand vous générez votre projet pour la première fois, Visual Studio ouvre la boîte de dialogue Gestionnaire de connexions pour vous.
+
+1. Dans la boîte de dialogue Gestionnaire de connexions, cliquez sur le bouton **Ajouter** pour ajouter une nouvelle connexion.
 
    ![Gestionnaire de connexion](media/settings_connectionmanager.png)
 
@@ -48,19 +88,11 @@ Pour configurer cette connexion distante :
    | **Fichier de clé privée**    | Fichier de clé privée créé pour la connexion ssh
    | **Phrase secrète**          | Phrase secrète utilisée avec la clé privée sélectionnée ci-dessus
 
-   Vous pouvez utiliser un mot de passe ou un fichier de clé et une phrase secrète pour l’authentification. Pour de nombreux scénarios de développement, l’authentification par mot de passe est suffisante. Si vous préférez utiliser un fichier de clé publique/privée, vous pouvez en créer un nouveau ou [en réutiliser un](https://security.stackexchange.com/questions/10203/reusing-private-public-keys). Actuellement, seules les clés RSA et DSA sont prises en charge.
-
-   Vous pouvez créer un fichier de clé privée RSA en suivant ces étapes :
-
-   1. Sur la machine Windows, créez la paire de clés ssh avec `ssh-keygen -t rsa`. La commande crée une clé publique et une clé privée. Par défaut, il place les clés sous `C:\Users\%USERNAME%\.ssh`, à l’aide des noms `id_rsa.pub` et `id_rsa`.
-
-   1. À partir de Windows, copiez la clé publique sur la machine Linux : `scp -p C:\Users\%USERNAME%\.ssh\id_rsa.pub user@hostname`.
-
-   1. Sur le système Linux, ajoutez la clé à la liste de clés autorisées (et vérifiez que le fichier dispose des autorisations appropriées) : `cat ~/id_rsa.pub >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys`
+   Vous pouvez utiliser un mot de passe ou un fichier de clé et une phrase secrète pour l’authentification. Pour de nombreux scénarios de développement, l’authentification par mot de passe est suffisante, mais les fichiers clés sont plus sécurisés. Si vous disposez déjà d’une paire de clés, il est possible de la réutiliser. Actuellement, Visual Studio ne prend en charge que les clés RSA et DSA pour les connexions à distance.
 
 1. Choisissez le bouton **se connecter** pour tenter une connexion à l’ordinateur distant.
 
-   Si la connexion réussit, Visual Studio commence à configurer IntelliSense pour utiliser les en-têtes distants. Pour plus d’informations, consultez [IntelliSense pour les en-têtes sur les systèmes distants](configure-a-linux-project.md#remote_intellisense).
+   Si la connexion est établie, Visual Studio configure IntelliSense pour utiliser les en-têtes distants. Pour plus d’informations, consultez [IntelliSense pour les en-têtes sur les systèmes distants](configure-a-linux-project.md#remote_intellisense).
 
    Si la connexion échoue, les zones des entrées qui doivent être modifiées seront surlignées en rouge.
 
@@ -72,31 +104,41 @@ Pour configurer cette connexion distante :
 
    ::: moniker range="vs-2019"
 
-   Accédez à **Outils > Options > Multiplateforme > Journalisation** pour activer la journalisation afin de résoudre les problèmes de connexion :
+## <a name="logging-for-remote-connections"></a>Journalisation des connexions à distance
+
+   Vous pouvez activer la journalisation pour aider à résoudre les problèmes de connexion. Dans la barre de menus, sélectionnez **outils > options**. Dans la boîte de dialogue **options** , sélectionnez **multiplateforme > la journalisation**:
 
    ![Journalisation à distance](media/remote-logging-vs2019.png)
 
    Les journaux incluent les connexions, toutes les commandes envoyées à la machine distante (leur texte, le code de sortie et la durée d’exécution) et toutes les sorties de Visual Studio à dans l’interpréteur de commandes. La journalisation fonctionne pour n’importe quel projet CMake multiplateforme ou projet Linux basé sur MSBuild dans Visual Studio.
 
-   Vous pouvez configurer la sortie pour qu’elle soit écrite dans un fichier ou dans le volet de **Journalisation multiplateforme** dans la fenêtre Sortie. Pour les projets Linux basés sur MSBuild, les commandes MSBuild envoyées à l’ordinateur distant ne sont pas acheminées vers le **fenêtre Sortie** , car elles sont émises hors processus. Au lieu de cela, ils sont enregistrés dans un fichier, avec le préfixe « msbuild_ ».
+   Vous pouvez configurer la sortie pour accéder à un fichier ou au volet de **journalisation multiplateforme** dans la fenêtre sortie. Pour les projets Linux basés sur MSBuild, les commandes MSBuild envoyées à l’ordinateur distant ne sont pas acheminées vers le **fenêtre Sortie** , car elles sont émises hors processus. Au lieu de cela, ils sont enregistrés dans un fichier, avec le préfixe « msbuild_ ».
+
+## <a name="command-line-utility-for-the-connection-manager"></a>Utilitaire de ligne de commande pour le gestionnaire de connexions  
+
+**Visual studio 2019 version 16,5 ou ultérieure**: ConnectionManager. exe est un utilitaire de ligne de commande permettant de gérer les connexions de développement à distance en dehors de Visual Studio. Elle est utile pour des tâches telles que la configuration d’un nouvel ordinateur de développement. Ou vous pouvez l’utiliser pour configurer Visual Studio pour une intégration continue. Pour obtenir des exemples et une référence complète à la commande ConnectionManager, consultez [référence ConnectionManager](connectionmanager-reference.md).  
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="tcp-port-forwarding"></a>Réacheminement de port TCP
 
-Le support Linux de Visual Studio dépend de la réacheminement de port TCP. La **synchronisation** et la **gdbserver** sont affectées si le transfert de port TCP est désactivé sur votre système distant. Si vous êtes concerné par cette dépendance, vous pouvez voter ce ticket de [suggestion](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) sur la communauté des développeurs.
+Le support Linux de Visual Studio dépend de la réacheminement de port TCP. La **synchronisation** et les **gdbserver** sont affectés si le transfert de port TCP est désactivé sur votre système distant. Si vous êtes concerné par cette dépendance, vous pouvez voter ce ticket de [suggestion](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) sur la communauté des développeurs.
 
 la synchronisation est utilisée par les projets Linux basés sur MSBuild et les projets CMake pour [copier les en-têtes de votre système distant vers Windows en vue d’une utilisation par IntelliSense](configure-a-linux-project.md#remote_intellisense). Lorsque vous ne pouvez pas activer le transfert de port TCP, désactivez le téléchargement automatique des en-têtes distants. Pour le désactiver, utilisez **outils > Options > multiplateforme > gestionnaire de connexions > en-têtes distants gestionnaire IntelliSense**. Si le réacheminement de port TCP n’est pas activé sur le système distant, vous voyez cette erreur lorsque le téléchargement des en-têtes distants pour IntelliSense commence :
 
 ![Erreur en-têtes](media/port-forwarding-headers-error.png)
 
-La synchronisation de la synchronisation est également utilisée par la prise en charge CMake de Visual Studio pour copier les fichiers sources sur le système distant. Si vous ne pouvez pas activer le réacheminement de port TCP, vous pouvez utiliser SFTP comme méthode de copie distante de sources. sftp est souvent plus lent que la synchronisation d’annuaire, mais ne dépend pas du transfert de port TCP. Vous pouvez gérer votre méthode de copie distante de sources à l’aide de la propriété **remoteCopySourcesMethod** dans l' [éditeur de paramètres cmake](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects). Si le transfert de port TCP est désactivé sur votre système distant, une erreur s’affiche dans la fenêtre de sortie de CMake la première fois qu’elle appelle la synchronisation.
+la synchronisation de la synchronisation est également utilisée par la prise en charge CMake de Visual Studio pour copier les fichiers sources sur le système distant. Si vous ne pouvez pas activer le réacheminement de port TCP, vous pouvez utiliser SFTP comme méthode de copie distante de sources. sftp est souvent plus lent que la synchronisation d’annuaire, mais ne dépend pas du transfert de port TCP. Vous pouvez gérer votre méthode de copie distante de sources à l’aide de la propriété **remoteCopySourcesMethod** dans l' [éditeur de paramètres cmake](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects). Si le transfert de port TCP est désactivé sur votre système distant, une erreur s’affiche dans la fenêtre de sortie de CMake la première fois qu’elle appelle la synchronisation.
 
 ![Erreur de synchronisation](media/port-forwarding-copy-error.png)
 
-Gdbserver peut être utilisé pour le débogage sur des appareils intégrés. Si vous ne pouvez pas activer le réacheminement de port TCP, vous devez utiliser gdb pour tous les scénarios de débogage distant. Gdb est utilisé par défaut lors du débogage de projets sur un système distant.
-
-::: moniker-end
+gdbserver peut être utilisé pour le débogage sur des appareils intégrés. Si vous ne pouvez pas activer le réacheminement de port TCP, vous devez utiliser gdb pour tous les scénarios de débogage distant. gdb est utilisé par défaut lors du débogage de projets sur un système distant.
 
 ## <a name="connect-to-wsl"></a>Se connecter à WSL
+
+::: moniker-end
 
 ::: moniker range="vs-2017"
 

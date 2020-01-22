@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 08ecb5bc55ead207d6e4a0029a21e737d447143b
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556732"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518203"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Informations de référence sur le schéma CMakeSettings.json
 
@@ -146,6 +146,7 @@ Quand la configuration active spécifie un générateur Visual Studio, MSBuild.e
 ```
 
 Notez que si vous ne définissez pas le `"type"`, le type de `"STRING"` est supposé par défaut.
+- `remoteCopyOptimizations`: propriétés de **Visual Studio 2019 version 16,5 ou ultérieure** pour le contrôle de la copie source sur la cible distante. Les optimisations sont activées par défaut. Comprend `remoteCopyUseOptimizations`, `rsyncSingleDirectoryCommandArgs`et `remoteCopySourcesMaxSmallChange`.
 
 ## <a name="environments"></a>Environnements
 

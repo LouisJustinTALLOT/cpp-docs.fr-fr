@@ -1,23 +1,23 @@
 ---
-title: Avertissement du compilateur (niveau 4) C4701
+title: Avertissement du compilateur (niveau 4) C4701
 ms.date: 11/04/2016
 f1_keywords:
 - C4701
 helpviewer_keywords:
 - C4701
 ms.assetid: d7c76c66-1f3f-4d3c-abe4-5d94c84a5a1f
-ms.openlocfilehash: cbe70de39d2306edd50bb936ac5bbb4ad14af0e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b83ad810da06de1f9d640477f73d4393c932054a
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395285"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518385"
 ---
-# <a name="compiler-warning-level-4-c4701"></a>Avertissement du compilateur (niveau 4) C4701
+# <a name="compiler-warning-level-4-c4701"></a>Avertissement du compilateur (niveau 4) C4701
 
-variable locale potentiellement non initialisée 'name' utilisé
+Variable locale potentiellement non initialisée’nom’utilisée
 
-La variable locale *nom* a peut-être été utilisé sans assignée une valeur. Cela peut entraîner des résultats imprévisibles.
+Le *nom* de la variable locale a peut-être été utilisé sans valeur. Cela peut entraîner des résultats imprévisibles.
 
 ## <a name="example"></a>Exemple
 
@@ -37,7 +37,7 @@ void func(int size)
         free(p);
 }
 
-void main()
+int main()
 {
     func(9);
 }
@@ -48,7 +48,7 @@ c:\src\test.cpp(10) : warning C4701: potentially uninitialized local variable 'p
 c:\src\test.cpp(10) : warning C4703: potentially uninitialized local pointer variable 'p' used
 ```
 
-Pour corriger cet avertissement, initialisez la variable comme indiqué dans cet exemple :
+Pour corriger cet avertissement, initialisez la variable comme indiqué dans l’exemple suivant :
 
 ```cpp
 #include <malloc.h>
@@ -64,7 +64,7 @@ void func(int size)
         free(p);
 }
 
-void main()
+int main()
 {
     func(9);
 }
@@ -73,4 +73,4 @@ void main()
 ## <a name="see-also"></a>Voir aussi
 
 [Avertissement du compilateur (niveau 4) C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)<br/>
-[Avertissements, /sdl et amélioration de la détection des variables non initialisée](https://www.microsoft.com/security/blog/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)
+[Avertissements,/SDL et amélioration de la détection des variables non initialisées](https://www.microsoft.com/security/blog/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)

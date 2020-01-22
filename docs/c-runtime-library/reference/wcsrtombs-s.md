@@ -26,12 +26,12 @@ helpviewer_keywords:
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-ms.openlocfilehash: bd43e4d4bf3a916f83fb014fc85aa5270fbd4c51
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 68f5b6f6b87fb3ad21899035dfc82d997d90cf38
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945187"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518307"
 ---
 # <a name="wcsrtombs_s"></a>wcsrtombs_s
 
@@ -58,7 +58,7 @@ errno_t wcsrtombs_s(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *pReturnValue*<br/>
 Taille en octets de la chaîne convertie, y compris la marque de fin null.
@@ -73,7 +73,7 @@ Taille en octets de la mémoire tampon *mbstr* .
 Pointe vers la chaîne de caractères larges à convertir.
 
 *count*<br/>
-Nombre maximal d’octets à stocker dans la mémoire tampon *mbstr* , ou [_TRUNCATE](../../c-runtime-library/truncate.md).
+Nombre maximal d’octets à stocker dans la mémoire tampon *mbstr* ou [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *mbstate*<br/>
 Pointeur vers un objet d’état de conversion **mbstate_t** .
@@ -88,11 +88,11 @@ Zéro si l'opération a réussi, un code d'erreur en cas d'échec.
 |*wcstr* a la **valeur null**|**EINVAL**|
 |La mémoire tampon de destination est trop petite pour contenir la chaîne convertie (sauf si *Count* est **_TRUNCATE**; consultez les remarques ci-dessous)|**ERANGE**|
 
-Si l’une de ces conditions se présente, l’exception de paramètre non valide est appelée, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne un code d’erreur et définit **errno** comme indiqué dans le tableau.
+Si l’une de ces conditions se produit, l’exception de paramètre non valide est appelée, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne un code d’erreur et définit **errno** comme indiqué dans le tableau.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **wcsrtombs_s** convertit une chaîne de caractères larges pointée par *wcstr* en caractères multioctets stockés dans la mémoire tampon pointée par *mbstr*, à l’aide de l’état de conversion contenu dans *mbstate*. La conversion se poursuit pour chaque caractère jusqu'à ce qu'une des conditions suivantes soit remplie :
+La fonction **wcsrtombs_s** convertit une chaîne de caractères larges pointés par *wcstr* en caractères multioctets stockés dans la mémoire tampon pointée par *mbstr*, à l’aide de l’état de conversion contenu dans *mbstate*. La conversion se poursuit pour chaque caractère jusqu'à ce qu'une des conditions suivantes soit remplie :
 
 - Un caractère large null est rencontré
 
@@ -102,20 +102,20 @@ La fonction **wcsrtombs_s** convertit une chaîne de caractères larges pointée
 
 La chaîne de destination est toujours terminée par null (même en cas d'erreur).
 
-Si *Count* est la valeur spéciale [_TRUNCATE](../../c-runtime-library/truncate.md), **wcsrtombs_s** convertit le plus possible la chaîne telle qu’elle est contenue dans la mémoire tampon de destination, tout en laissant de l’espace pour une marque de fin null.
+Si *Count* correspond à la valeur spéciale [_TRUNCATE](../../c-runtime-library/truncate.md), **wcsrtombs_s** convertit autant de chaînes que vous le configurez dans la mémoire tampon de destination, tout en laissant de l’espace pour une marque de fin null.
 
 Si **wcsrtombs_s** convertit correctement la chaîne source, elle place la taille en octets de la chaîne convertie, y compris la marque de fin null, dans  *&#42;pReturnValue* (le *pReturnValue* fourni n’est pas **null**). Cela se produit même si l’argument *mbstr* est **null** et fournit un moyen de déterminer la taille de mémoire tampon requise. Notez que si *mbstr* a la **valeur null**, *Count* est ignoré.
 
-Si **wcsrtombs_s** rencontre un caractère étendu qu’il ne peut pas convertir en caractère multioctet, il place-1 dans  *\*pReturnValue*, définit la mémoire tampon de destination sur une chaîne vide, définit **errno** sur **EILSEQ**et retourne **EILSEQ** .
+Si **wcsrtombs_s** rencontre un caractère étendu qu’il ne peut pas convertir en caractère multioctet, il place-1 dans *\*pReturnValue*, définit la mémoire tampon de destination sur une chaîne vide, affecte à **errno** la valeur **EILSEQ**et retourne **EILSEQ**.
 
-Si les séquences pointées par *wcstr* et *mbstr* se chevauchent, le comportement de **wcsrtombs_s** n’est pas défini. **wcsrtombs_s** est affecté par la catégorie LC_TYPE des paramètres régionaux actuels.
+Si les séquences pointées par *wcstr* et *mbstr* se chevauchent, le comportement de **wcsrtombs_s** n’est pas défini. **wcsrtombs_s** est affectée par la catégorie LC_TYPE des paramètres régionaux actuels.
 
 > [!IMPORTANT]
 > Assurez-vous que *wcstr* et *mbstr* ne se chevauchent pas, et que ce *nombre* reflète correctement le nombre de caractères larges à convertir.
 
 La fonction **wcsrtombs_s** diffère de [wcstombs_s, _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md) par son redémarrage. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou à d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables. Par exemple, une application utilise **wcsrlen** plutôt que **wcslen**, si un appel ultérieur à **wcsrtombs_s** était utilisé à la place de **wcstombs_s**.
 
-En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Exceptions
 
@@ -138,7 +138,7 @@ La fonction **wcsrtombs_s** est multithread Safe tant qu’aucune fonction dans 
 
 #define MB_BUFFER_SIZE 100
 
-void main()
+int main()
 {
     const wchar_t   wcString[] =
                     {L"Every good boy does fine."};
@@ -168,7 +168,7 @@ void main()
 The string was successfully converted.
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Routine|En-tête requis|
 |-------------|---------------------|

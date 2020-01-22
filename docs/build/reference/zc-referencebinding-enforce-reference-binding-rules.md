@@ -1,5 +1,5 @@
 ---
-title: '/ Zc : referencebinding (appliquer les règles de liaison aux références)'
+title: /Zc:referenceBinding (Appliquer les règles de liaison de références)
 ms.date: 03/06/2018
 f1_keywords:
 - referenceBinding
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 0c6cfaac-9c2a-41a3-aa94-64ca8ef261fc
-ms.openlocfilehash: 9dfe8f5b4713d9567f6e98af6685c552fb51160e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7e297d6fd913ddda4d44a42298a361e314af0b5
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316104"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518476"
 ---
-# <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/ Zc : referencebinding (appliquer les règles de liaison aux références)
+# <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc:referenceBinding (Appliquer les règles de liaison de références)
 
-Lorsque le **/Zc : referencebinding** est spécifiée, le compilateur n’autorise pas une référence non const lvalue à lier à une table temporaire.
+Lorsque l’option **/Zc : referenceBinding** est spécifiée, le compilateur n’autorise pas la liaison d’une référence lvalue non-const à un temporaire.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Zc:referenceBinding**[**-**]
+> **/Zc:referenceBinding**[ **-** ]
 
 ## <a name="remarks"></a>Notes
 
-Si **/Zc : referencebinding** est spécifié, le compilateur suit la section 8.5.3 de la norme C ++ 11 et n’autorise pas les expressions qui lient un type défini par l’utilisateur temporaire à une référence non const lvalue. Par défaut, ou si **/Zc:referenceBinding-** n’est spécifié, le compilateur autorise de telles expressions comme une extension de Microsoft, mais un avertissement de niveau 4. Pour la sécurité du code, la portabilité et la conformité, nous vous recommandons d’utiliser **/Zc : referencebinding**.
+Si **/Zc : referenceBinding** est spécifié, le compilateur suit la section 8.5.3 de la norme c++ 11 : il n’autorise pas les expressions qui lient un type défini par l’utilisateur à une référence lvalue non-const. Par défaut, ou si **/Zc : referenceBinding-** est spécifié, le compilateur autorise ces expressions comme une extension Microsoft, mais un avertissement de niveau 4 est émis. Pour la sécurité du code, la portabilité et la conformité, nous vous recommandons d’utiliser **/Zc : referenceBinding**.
 
-Le **/Zc : referencebinding** option est désactivée par défaut. Le [/ permissive-](permissive-standards-conformance.md) option du compilateur définit implicitement cette option, mais elle peut être substituée à l’aide de **/Zc:referenceBinding-**.
+L’option **/Zc : referenceBinding** est désactivée par défaut. L’option de compilateur [/permissive-](permissive-standards-conformance.md) définit implicitement cette option, mais elle peut être substituée à l’aide de **/Zc : referenceBinding-** .
 
 ## <a name="example"></a>Exemple
 
-Cet exemple montre l’extension Microsoft qui permet à une table temporaire d’un type défini par l’utilisateur doit être lié à une référence non const lvalue.
+Cet exemple montre l’extension Microsoft qui permet de lier une variable temporaire d’un type défini par l’utilisateur à une référence lvalue non-const.
 
 ```cpp
 // zcreferencebinding.cpp
@@ -48,7 +48,7 @@ S g() {
     return S{};
 }
 
-void main() {
+int main() {
     S& s = g();         // warning C4239 at /W4
     const S& cs = g();  // okay, bound to const ref
     f(g());             // Extension: error C2664 only if /Zc:referenceBinding
@@ -59,11 +59,11 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
+1. Sélectionnez la page de propriétés **Propriétés de configuration** > **C/C++**  > **Ligne de commande**.
 
-1. Modifier le **des Options supplémentaires** propriété à inclure **/Zc : referencebinding** , puis **OK**.
+1. Modifiez la propriété **options supplémentaires** pour inclure **/Zc : referenceBinding** , puis choisissez **OK**.
 
 ## <a name="see-also"></a>Voir aussi
 
