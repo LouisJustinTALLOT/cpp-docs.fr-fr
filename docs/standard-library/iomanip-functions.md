@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 995ad9ae21d7f00a74a912436d599dfead2c9ebb
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890148"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518463"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt;, fonctions
 
@@ -51,7 +51,7 @@ template <class Money>
 T7 get_money(Money& amount, bool use_intl);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *quantité*\
 Valeur monétaire extraite.
@@ -61,7 +61,7 @@ Si la **valeur est true**, utilisez le format international. La valeur par défa
 
 ### <a name="remarks"></a>Notes
 
-Le manipulateur retourne un objet qui, lorsqu’il est extrait du `str`de flux, se comporte comme un `formatted input function` qui appelle la fonction membre `get` pour la facette de paramètres régionaux `money_get` associée à `str`, à l’aide de *use_intl* pour indiquer le format international . En cas de réussite, l’appel stocke dans *amount* la valeur monétaire extraite. Le manipulateur retourne ensuite `str`.
+Le manipulateur retourne un objet qui, lorsqu’il est extrait du `str`de flux, se comporte comme un `formatted input function` qui appelle la fonction membre `get` pour la facette de paramètres régionaux `money_get` associée à `str`, à l’aide de *use_intl* pour indiquer le format international. En cas de réussite, l’appel stocke dans *amount* la valeur monétaire extraite. Le manipulateur retourne ensuite `str`.
 
 `Money` doit être de type `long double` ou une instanciation de `basic_string` avec le même élément et les mêmes paramètres de caractéristiques que `str`.
 
@@ -74,12 +74,12 @@ template <class Elem>
 T10 put_time(struct tm *time_ptr, const Elem *time_format);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *time_ptr*\
 Heure sous la forme d’une structure de temps.
 
-\ *time_format*
+*time_format*\
 Format à utiliser pour obtenir la valeur de temps.
 
 ### <a name="remarks"></a>Notes
@@ -95,7 +95,7 @@ template <class Money>
 T8 put_money(const Money& amount, bool use_intl);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *quantité*\
 Valeur monétaire à insérer dans le flux.
@@ -105,11 +105,11 @@ A la valeur **true** si le manipulateur doit utiliser le format international, *
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne `str`.
+Renvoie `str`.
 
 ### <a name="remarks"></a>Notes
 
-Le manipulateur retourne un objet qui, quand il est inséré dans le flux `str`, se comporte comme une fonction de sortie mise en forme qui appelle la fonction membre `put` pour la facette de paramètres régionaux `money_put` associée à `str`. En cas de réussite, l’appel insère `amount` mis en forme de manière appropriée, à l’aide de *use_intl* pour indiquer le format international et `str.fill()`, en tant qu’élément de remplissage. Le manipulateur retourne ensuite `str`.
+Le manipulateur retourne un objet qui, quand il est inséré dans le flux `str`, se comporte comme une fonction de sortie mise en forme qui appelle la fonction membre `put` pour la facette de paramètres régionaux `money_put` associée à `str`. En cas de réussite, l’appel insère `amount` mis en forme de manière appropriée, en utilisant *use_intl* pour indiquer le format international et `str.fill()`, en tant qu’élément de remplissage. Le manipulateur retourne ensuite `str`.
 
 `Money` doit être de type `long double` ou une instanciation de `basic_string` avec le même élément et les mêmes paramètres de caractéristiques que `str`.
 
@@ -122,17 +122,17 @@ template <class Elem>
 T10 put_time(struct tm* time_ptr, const Elem* time_format);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *time_ptr*\
 Valeur de temps à écrire dans le flux, fournie dans une structure de temps.
 
-\ *time_format*
+*time_format*\
 Format à utiliser pour écrire la valeur de temps.
 
 ### <a name="remarks"></a>Notes
 
-Le manipulateur retourne un objet qui, quand il est inséré dans le flux `str`, se comporte comme un `formatted output function`. La fonction de sortie appelle la fonction membre `put` pour la facette de paramètres régionaux `time_put` associée à `str`. La fonction output utilise *time_ptr* pour indiquer la structure de temps et *time_format* pour indiquer le début d’une chaîne de format terminée par le caractère null. En cas de réussite, l’appel insère le texte littéral à partir de la chaîne de format et les valeurs converties à partir de la structure de temps. Le manipulateur retourne ensuite `str`.
+Le manipulateur retourne un objet qui, quand il est inséré dans le flux `str`, se comporte comme un `formatted output function`. La fonction de sortie appelle la fonction membre `put` pour la facette de paramètres régionaux `time_put` associée à `str`. La fonction de sortie utilise *time_ptr* pour indiquer la structure de temps et *time_format* pour indiquer le début d’une chaîne de format terminée par le caractère null. En cas de réussite, l’appel insère le texte littéral à partir de la chaîne de format et les valeurs converties à partir de la structure de temps. Le manipulateur retourne ensuite `str`.
 
 ## <a name="quoted"></a>  quoted
 
@@ -145,10 +145,10 @@ quoted(std::string str, char delimiter, char escape) // or wide versions
 quoted(const char* str, char delimiter, char escape) // or wide versions
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
-*str* \
-Std :: String, char\*, littéral de chaîne ou littéral de chaîne brute, ou une version étendue de l’un d’entre eux (par exemple, std :: wstring, wchar_t\*).
+*str*\
+Std :: String, char\*, littéral de chaîne ou littéral de chaîne brute, ou une version étendue de l’une d’entre elles (par exemple, std :: wstring, wchar_t\*).
 
 *délimiteur*\
 Caractère spécifié par l'utilisateur ou caractère large à utiliser comme délimiteur de début et de fin de chaîne.
@@ -195,7 +195,7 @@ void show_quoted_v_nonquoted()
     cout << "Quoted          : " << extracted_quoted << endl;
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     show_quoted_v_nonquoted();
 
@@ -271,7 +271,7 @@ void show_custom_escape()
     // after round-tripping.
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     cout << "Custom delimiter:" << endl;
     show_custom_delimiter();
@@ -309,7 +309,7 @@ Efface les indicateurs spécifiés.
 T1 resetiosflags(ios_base::fmtflags mask);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *masque*\
 Indicateurs à effacer.
@@ -330,7 +330,7 @@ Définir la base pour les entiers.
 T3 setbase(int base);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *base*\
 Base numérique.
@@ -360,7 +360,7 @@ template <class Elem>
 T4 setfill(Elem Ch);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *Ch*\
 Caractère qui sera utilisé pour remplir les espaces dans un affichage aligné à droite.
@@ -381,7 +381,7 @@ Définit les indicateurs spécifiés.
 T2 setiosflags(ios_base::fmtflags mask);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *masque*\
 Indicateurs à définir.
@@ -402,7 +402,7 @@ Définit la précision des valeurs à virgule flottante.
 T5 setprecision(streamsize Prec);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *Prec*\
 Précision des valeurs à virgule flottante.
@@ -423,9 +423,9 @@ Spécifie la largeur du champ affichage pour l’élément suivant dans le flux.
 T6 setw(streamsize Wide);
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
-\ *larges*
+*Large*\
 Largeur de la zone d’affichage.
 
 ### <a name="return-value"></a>Valeur de retour

@@ -3,16 +3,16 @@ title: informations de référence sur le schéma Launch.C++vs. JSON ()
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 49b4f4e6c4359837e820684c29b0e102a08c3fd5
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: 5d8f657dda58d581ccc3441a777fdf31470ef25f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556641"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518229"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>informations de référence sur le schéma Launch.C++vs. JSON ()
 
-Utilisez le fichier *Launch. vs. JSON* pour configurer les paramètres de débogage. Pour créer le fichier. Cliquez avec le bouton droit sur un fichier exécutable dans **Explorateur de solutions** et choisissez **paramètres de débogage et de lancement**. Choisissez l’option qui correspond le mieux à votre projet, puis utilisez les propriétés suivantes pour modifier la configuration en fonction des besoins :
+Utilisez le fichier *Launch. vs. JSON* pour configurer les paramètres de débogage. Pour créer le fichier. Cliquez avec le bouton droit sur un fichier exécutable dans **Explorateur de solutions** et choisissez **paramètres de débogage et de lancement**. Choisissez l’option qui correspond le mieux à votre projet, puis utilisez les propriétés suivantes pour modifier la configuration en fonction des besoins. Pour plus d’informations sur le débogage des projets CMake, consultez [configurer des sessions de débogage cmake](/cpp/build/configure-cmake-debugging-sessions).
 
 ## <a name="default-properties"></a>Propriétés par défaut
 
