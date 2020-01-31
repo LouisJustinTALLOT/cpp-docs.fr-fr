@@ -1,6 +1,7 @@
 ---
 title: _popen, _wpopen
-ms.date: 11/04/2016
+description: Une référence pour les fonctions de la bibliothèque Microsoft C Runtime (CRT) _popen et _wpopen.
+ms.date: 01/28/2020
 api_name:
 - _popen
 - _wpopen
@@ -36,19 +37,28 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 0e58ffd523c6919d70c68454f3547736afdef565
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- _popen
+- _wpopen
+- _tpopen
+- _doserrno
+- errno
+- _sys_errlist
+- _sys_nerr
+- EINVAL
+ms.openlocfilehash: 68531256fd688b50b659c885635ffa17d17773a5
+ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950994"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76894318"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
 Crée un canal et exécute une commande.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,23 +73,23 @@ FILE *_wpopen(
 );
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
-*command*<br/>
+\ de *commande*
 Commande à exécuter.
 
-*mode*<br/>
+\ du *mode*
 Mode du flux retourné.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un flux associé à une extrémité du canal créé. L’autre extrémité du canal est associée à l’entrée ou à la sortie standard de la commande générée. Les fonctions retournent la valeur **NULL** en cas d’erreur. Si l’erreur est un paramètre non valide, par exemple si la *commande* ou le *mode* est un pointeur null ou si le *mode* n’est pas un mode valide, **errno** a la valeur **EINVAL**. Consultez la section Notes pour en savoir plus sur les modes valides.
+Retourne un flux associé à une extrémité du canal créé. L’autre extrémité du canal est associée à l’entrée ou à la sortie standard de la commande générée. Les fonctions retournent la valeur **NULL** en cas d’erreur. Si l’erreur est provoquée par un paramètre non valide, **errno** a la valeur **EINVAL**. Consultez la section Notes pour en savoir plus sur les modes valides.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_popen** crée un canal et exécute de façon asynchrone une copie générée du processeur de commandes avec la *commande*de chaîne spécifiée. La chaîne de caractères *mode* spécifie le type d’accès demandé, comme suit.
+La fonction **_popen** crée un canal. Il exécute ensuite de manière asynchrone une copie générée du processeur de commandes et utilise la *commande* comme ligne de commande. La chaîne de caractères *mode* spécifie le type d’accès demandé, comme suit.
 
 |Mode d'accès|Description|
 |-|-|
@@ -99,20 +109,20 @@ La fonction **_popen** crée un canal et exécute de façon asynchrone une copie
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tpopen**|**_popen**|**_popen**|**_wpopen**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_popen**|\<stdio.h>|
 |**_wpopen**|\<stdio.h> ou \<wchar.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_popen.c
@@ -141,7 +151,7 @@ int main( void )
 
    while(fgets(psBuffer, 128, pPipe))
    {
-      printf(psBuffer);
+      puts(psBuffer);
    }
 
    /* Close pipe and print return value of pPipe. */
@@ -156,9 +166,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Résultat de l'exemple
-
-Cette sortie suppose la présence d’un seul fichier dans le répertoire actuel avec une extension de nom de fichier .c.
+Cette sortie suppose qu’il n’y a qu’un seul fichier dans le répertoire actif qui a une extension de nom de fichier `.c`.
 
 ```Output
 Volume in drive C is CDRIVE
@@ -175,6 +183,6 @@ Process returned 0
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_pclose](pclose.md)<br/>
-[_pipe](pipe.md)<br/>
+\ [de contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)
+[_pclose](pclose.md)\
+[_pipe](pipe.md)
