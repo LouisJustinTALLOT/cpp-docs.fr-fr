@@ -1,6 +1,7 @@
 ---
 title: setlocale, _wsetlocale
-ms.date: 11/04/2016
+description: Décrit les fonctions de la bibliothèque Microsoft C Runtime (CRT) setlocale et _wsetlocale.
+ms.date: 01/28/2020
 api_name:
 - _wsetlocale
 - setlocale
@@ -33,12 +34,15 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-ms.openlocfilehash: 375b1de82f72447d7e41b051c2aa1307716fb0dd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- setlocale
+- _wsetlocale
+ms.openlocfilehash: 08684e17a801e660ae2771c9e717dfa28621d600
+ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948232"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76894344"
 ---
 # <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
 
@@ -57,12 +61,12 @@ wchar_t *_wsetlocale(
 );
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
-*category*<br/>
+\ de *catégorie*
 Catégorie affectée par les paramètres régionaux.
 
-*locale*<br/>
+*paramètres régionaux*\
 Spécificateur de paramètres régionaux.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -87,7 +91,7 @@ Vous pouvez copier la chaîne retournée par **setlocale** pour restaurer cette 
 
 Utilisez la fonction **setlocale** pour définir, modifier ou interroger certaines ou toutes les informations de paramètres régionaux du programme en cours spécifiées par les *paramètres régionaux* et la *catégorie*. les *paramètres régionaux* font référence à la localité (pays/région et langue) pour laquelle vous pouvez personnaliser certains aspects de votre programme. Certaines catégories dépendent des paramètres régionaux, notamment la mise en forme des dates et le format d'affichage des valeurs monétaires. Si vous définissez les *paramètres régionaux* sur la chaîne par défaut pour une langue qui a plusieurs formulaires pris en charge sur votre ordinateur, vous devez vérifier la valeur de retour de **setlocale** pour connaître la langue en vigueur. Par exemple, si vous affectez à *paramètres régionaux* la valeur « chinois », la valeur de retour peut être « chinois simplifié » ou « chinois traditionnel ».
 
-**_wsetlocale** est une version à caractères larges de **setlocale**; l’argument de *paramètres régionaux* et la valeur de retour de **_wsetlocale** sont des chaînes à caractères larges. **_wsetlocale** et **setlocale** se comportent de la même manière dans le cas contraire.
+**_wsetlocale** est une version à caractères larges de **setlocale**; l’argument de *paramètres régionaux* et la valeur de retour de **_wsetlocale** sont des chaînes à caractères larges. dans le cas contraire, **_wsetlocale** et **setlocale** se comportent de la même façon.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -103,10 +107,10 @@ L’argument *Category* spécifie les parties des informations relatives aux par
 | **LC_COLLATE** | Les fonctions **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**et **wcsxfrm** . |
 | **LC_CTYPE** | Fonctions de gestion de caractères (à l’exception de **IsDigit**, **isxdigit**, **mbstowcs**et **mbtowc**, qui ne sont pas affectées). |
 | **LC_MONETARY** | Informations de mise en forme monétaire retournées par la fonction **localeconv** . |
-| **LC_NUMERIC** | Caractère de virgule décimale pour les routines de sortie mises en forme (telles que **printf**), pour les routines de conversion de données et pour les informations de mise en forme non monétaire retournées par **localeconv**. Outre le caractère de virgule décimale, **LC_NUMERIC** définit le séparateur de milliers et la chaîne de contrôle de regroupement retournés par [localeconv](localeconv.md). |
+| **LC_NUMERIC** | Caractère de virgule décimale pour les routines de sortie mises en forme (telles que **printf**), pour les routines de conversion de données et pour les informations de mise en forme non monétaire retournées par **localeconv**. Outre le caractère de virgule décimale, **LC_NUMERIC** définit le séparateur des milliers et la chaîne de contrôle de regroupement retournée par [localeconv](localeconv.md). |
 | **LC_TIME** | Fonctions **strftime** et **wcsftime** . |
 
-Cette fonction valide le paramètre de catégorie. Si le paramètre de catégorie ne fait pas partie des valeurs fournies dans le tableau précédent, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction définit **errno** sur **EINVAL** et retourne **null**.
+Cette fonction valide le paramètre de catégorie. Si le paramètre Category n’est pas l’une des valeurs indiquées dans le tableau précédent, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction définit **errno** sur **EINVAL** et retourne **null**.
 
 L’argument de *paramètres régionaux* est un pointeur vers une chaîne qui spécifie les paramètres régionaux. Pour plus d’informations sur le format de l’argument de *paramètres régionaux* , consultez [noms de paramètres régionaux, langues et chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Si *locale* pointe vers une chaîne vide, les paramètres régionaux sont donnés par l'environnement défini lors de l'implémentation. La valeur **c** spécifie l’environnement de conformité ANSI minimal pour la traduction C. Les paramètres régionaux **C** partent du principe que tous les types de données **char** sont 1 octet et que leur valeur est toujours inférieure à 256.
 
@@ -126,7 +130,7 @@ setlocale(LC_MONETARY, "fr-FR");
 printf("%s\n", setlocale(LC_ALL, NULL));
 ```
 
-retourne
+renvoie
 
 ```Output
 LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
@@ -134,31 +138,31 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 qui est la chaîne associée à la catégorie **LC_ALL** .
 
-Les exemples suivants appartiennent à la catégorie **LC_ALL** . Les deux chaînes « .OCP » et « .ACP » peuvent être utilisées à la place du numéro de page de codes pour spécifier, respectivement, l'utilisation de la page de codes OEM utilisateur par défaut et la page de codes ANSI utilisateur par défaut.
+Les exemples suivants se rapportent à la catégorie **LC_ALL** . L’une ou l’autre des chaînes». OCP « and ». ACP» peut être utilisé à la place d’un numéro de page de codes pour spécifier l’utilisation de la page de codes OEM par défaut de l’utilisateur et de la page de codes ANSI utilisateur par défaut pour ce nom de paramètres régionaux, respectivement.
 
 - `setlocale( LC_ALL, "" );`
 
-   Définit les paramètres régionaux à la valeur par défaut, qui est la page de codes ANSI utilisateur par défaut obtenue du système d'exploitation.
+   Définit les paramètres régionaux à la valeur par défaut, qui est la page de codes ANSI utilisateur par défaut obtenue du système d'exploitation. Le nom des paramètres régionaux est défini sur la valeur retournée par [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). La page de codes est définie sur la valeur retournée par [GetACP](/windows/win32/api/winnls/nf-winnls-getacp).
 
 - `setlocale( LC_ALL, ".OCP" );`
 
-   Définit explicitement les paramètres régionaux à la page de codes OEM actuelle fournie par le système d'exploitation.
+   Définit les paramètres régionaux sur la page de codes OEM actuelle obtenue à partir du système d’exploitation. Le nom des paramètres régionaux est défini sur la valeur retournée par [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). La page de codes est définie sur la valeur [LOCALE_IDEFAULTCODEPAGE](/windows/win32/intl/locale-idefault-constants) pour le nom de paramètres régionaux par défaut de l’utilisateur par [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, ".ACP" );`
 
-   Définit les paramètres régionaux à la page de codes ANSI fournie par le système d'exploitation.
+   Définit les paramètres régionaux à la page de codes ANSI fournie par le système d'exploitation. Le nom des paramètres régionaux est défini sur la valeur retournée par [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). La page de codes est définie sur la valeur [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) pour le nom de paramètres régionaux par défaut de l’utilisateur par [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, "<localename>" );`
 
-   Définit les paramètres régionaux en fonction du nom de paramètres régionaux indiqué par *\<localename>* .
+   Définit les paramètres régionaux en fonction du nom de paramètres régionaux indiqué par *\<localename>* . La page de codes est définie sur la valeur [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) pour le nom de paramètres régionaux spécifié par [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, "<language>_<country>" );`
 
-   Définit les paramètres régionaux en fonction de la langue et du pays/région indiqués par *\<language>* et *\<country>* et en tenant compte de la page de codes par défaut obtenue du système d’exploitation hôte.
+   Définit les paramètres régionaux en fonction de la langue et du pays/région indiqués par *\<language>* et *\<country>* et en tenant compte de la page de codes par défaut obtenue du système d’exploitation hôte. La page de codes est définie sur la valeur [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) pour le nom de paramètres régionaux spécifié par [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   Définit les paramètres régionaux de la langue, du pays/de la région et de la page  *\<* de codes indiqués par les chaînes >,  *\<Country >* et  *\<code_page >* . Vous pouvez utiliser différentes combinaisons de langues, pays/région et page de codes. Par exemple, cet appel définit les paramètres régionaux à français du Canada avec la page de codes 1252 :
+   Définit les paramètres régionaux de la langue, du pays/de la région et de la page de codes indiqués par les *\<> Language*, *\<Country >* *et\<code_page > Strings* . Vous pouvez utiliser différentes combinaisons de langues, pays/région et page de codes. Par exemple, cet appel définit les paramètres régionaux à français du Canada avec la page de codes 1252 :
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 
@@ -194,9 +198,9 @@ La catégorie doit être **LC_ALL** ou **LC_CTYPE** pour appliquer une modificat
 
 Pour plus d’informations, consultez la directive pragma [setlocale](../../preprocessor/setlocale.md) dans [Référence du préprocesseur C/C++](../../preprocessor/c-cpp-preprocessor-reference.md).
 
-La fonction [_configthreadlocale](configthreadlocale.md) est utilisée pour contrôler si **setlocale** affecte les paramètres régionaux de tous les threads d’un programme ou uniquement les paramètres régionaux du thread appelant.
+La fonction [_configthreadlocale](configthreadlocale.md) permet de contrôler si **setlocale** affecte les paramètres régionaux de tous les threads d’un programme ou uniquement les paramètres régionaux du thread appelant.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -205,7 +209,7 @@ La fonction [_configthreadlocale](configthreadlocale.md) est utilisée pour cont
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_setlocale.c
@@ -311,18 +315,18 @@ The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 
 ## <a name="see-also"></a>Voir aussi
 
-[Chaînes relatives aux noms des paramètres régionaux, aux langues et au pays/à la région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[_configthreadlocale](configthreadlocale.md)<br/>
-[_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[localeconv](localeconv.md)<br/>
-[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
-[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>
-[mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
-[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
-[_setmbcp](setmbcp.md)<br/>
-[strcoll, fonctions](../../c-runtime-library/strcoll-functions.md)<br/>
-[strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
-[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>
-[wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
+[Chaînes relatives aux noms, aux langues, au pays et à la région des paramètres régionaux](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[_configthreadlocale](configthreadlocale.md)\
+[_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)\
+[Paramètres régionaux](../../c-runtime-library/locale.md)\
+[localeconv](localeconv.md)\
+[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)\
+[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)\
+[mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)\
+[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)\
+[_setmbcp](setmbcp.md)\
+[strcoll Functions](../../c-runtime-library/strcoll-functions.md)\
+[strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)\
+[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)\
+[wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)\
+[wctomb, _wctomb_l](wctomb-wctomb-l.md)
