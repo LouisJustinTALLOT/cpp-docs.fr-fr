@@ -1,28 +1,28 @@
 ---
-title: 'Procédure pas à pas : Création d’une application de ruban à l’aide de MFC'
+title: "Procédure pas à pas : création d'une application de ruban à l'aide de MFC"
 ms.date: 09/09/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
-- creating a ribbon aplication (MFC)
+- creating a ribbon application (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 41084a78287521610ba400deab32d1052c9217c1
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 0f81b27d479b15864302b21a467bff9489ba465a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907391"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821920"
 ---
-# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procédure pas à pas : Création d’une application de ruban à l’aide de MFC
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procédure pas à pas : création d'une application de ruban à l'aide de MFC
 
 Cette procédure pas à pas montre comment utiliser l' **Assistant Application MFC** pour créer une application qui a un ruban par défaut. Vous pouvez ensuite développer le ruban en ajoutant une catégorie de ruban **personnalisée** qui contient un panneau de ruban **favoris** , puis en ajoutant des commandes fréquemment utilisées au panneau.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Prerequisites
 
 Cette procédure pas à pas suppose que vous avez configuré Visual Studio pour utiliser les **paramètres de développement généraux**. Si vous utilisez des paramètres différents, certains éléments de l’interface utilisateur référencés dans les instructions suivantes peuvent ne pas s’afficher.
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Pour créer une application MFC comportant un ruban
 
-1. Utilisez l **'Assistant Application MFC** pour créer une application MFC qui possède un ruban. Consultez [Procédure pas à pas : Utilisation des nouveaux contrôles de l'](walkthrough-using-the-new-mfc-shell-controls.md) interpréteur de commandes MFC pour obtenir des instructions sur l’ouverture de l’Assistant pour votre version de Visual Studio.
+1. Utilisez l **'Assistant Application MFC** pour créer une application MFC qui possède un ruban. Consultez [procédure pas à pas : utilisation des nouveaux contrôles de l’interpréteur de commandes MFC](walkthrough-using-the-new-mfc-shell-controls.md) pour obtenir des instructions sur l’ouverture de l’Assistant pour votre version de Visual Studio.
 
 1. Définissez les options suivantes dans l' **Assistant Application MFC**:
 
@@ -54,7 +54,7 @@ Cette procédure pas à pas suppose que vous avez configuré Visual Studio pour 
 
     Cliquez avec le bouton droit sur **Category1** , puis cliquez sur **Propriétés**. Dans la fenêtre **Propriétés** , remplacez la **légende** par *personnalisé*.
 
-    Les propriétés **grandes images** et **petites images** spécifient les bitmaps qui sont utilisées comme icônes pour les éléments de ruban dans cette catégorie. La création de bitmaps personnalisées n'entrant pas dans le cadre de cette procédure, réutilisez les bitmaps créées par l'Assistant. Les bitmaps de petite taille mesurent 16 pixels par 16 pixels. Pour les petites images, utilisez les bitmaps qui sont accessibles par `IDB_FILESMALL` l’ID de ressource. Les bitmaps de grande taille mesurent 32 pixels par 32 pixels. Pour les images de grande taille, utilisez les bitmaps qui sont `IDB_FILELARGE` accessibles par l’ID de ressource.
+    Les propriétés **grandes images** et **petites images** spécifient les bitmaps qui sont utilisées comme icônes pour les éléments de ruban dans cette catégorie. La création de bitmaps personnalisées n'entrant pas dans le cadre de cette procédure, réutilisez les bitmaps créées par l'Assistant. Les bitmaps de petite taille mesurent 16 pixels par 16 pixels. Pour les petites images, utilisez les bitmaps qui sont accessibles par l’ID de ressource `IDB_FILESMALL`. Les bitmaps de grande taille mesurent 32 pixels par 32 pixels. Pour les images de grande taille, utilisez les bitmaps qui sont accessibles par l’ID de ressource `IDB_FILELARGE`.
 
     > [!NOTE]
     > Sur les écrans HDPI (high dots per inch), les versions HDPI des images sont automatiquement utilisées.
@@ -73,17 +73,17 @@ Cette procédure pas à pas suppose que vous avez configuré Visual Studio pour 
 
     Pour créer le bouton **Imprimer** , faites glisser un outil bouton sur le panneau.
 
-    Dans la fenêtre **Propriétés** , remplacez la valeur de la propriété **ID** par **ID_FILE_PRINT**, qui doit déjà être défini. Remplacez la **légende** par *Imprimer*. Remplacez **index image** par *4*.
+    Dans la fenêtre **Propriétés** , remplacez la valeur de la propriété **ID** par **ID_FILE_PRINT**, qui doit déjà être définie. Remplacez la **légende** par *Imprimer*. Remplacez **index image** par *4*.
 
-    Pour créer le bouton **impression rapide** , cliquez sur la colonne valeur de la propriété en regard de **éléments de menu**, puis cliquez sur les points de suspension ( **...** ). Dans l' **éditeur d’éléments**, cliquez sur le bouton **Ajouter** sans étiquette pour créer un élément de menu. Dans la fenêtre **Propriétés** , remplacez **la légende** par *impression rapide*, **ID** par *ID_FILE_PRINT_DIRECT*et **image** par *5*. La propriété image spécifie l’icône d' **impression rapide** dans la `IDB_FILESMALL` ressource bitmap.
+    Pour créer le bouton **impression rapide** , cliquez sur la colonne valeur de la propriété en regard de **éléments de menu**, puis cliquez sur les points de suspension ( **...** ). Dans l' **éditeur d’éléments**, cliquez sur le bouton **Ajouter** sans étiquette pour créer un élément de menu. Dans la fenêtre **Propriétés** , remplacez **la légende** par *impression rapide*, **ID** par *ID_FILE_PRINT_DIRECT*et **image** par *5*. La propriété image spécifie l’icône d' **impression rapide** dans la ressource bitmap `IDB_FILESMALL`.
 
 1. Pour vérifier que les boutons ont été ajoutés au volet du ruban, générez l'application et exécutez-la. Pour générer l’application, dans le menu **générer** , cliquez sur **générer la solution**. Si l’application est générée avec succès, exécutez l’application en cliquant sur **Démarrer le débogage** dans le menu **Déboguer** . Le bouton **Imprimer** et la zone de liste déroulante du panneau **favoris** de l’onglet **personnalisé** sur le ruban doivent s’afficher.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Guide pratique pour Personnaliser la barre d’outils Accès rapide](../mfc/how-to-customize-the-quick-access-toolbar.md)
+[Guide pratique pour personnaliser la barre d’outils Accès rapide](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-[Guide pratique pour Personnaliser le bouton Application](../mfc/how-to-customize-the-application-button.md)
+[Guide pratique pour personnaliser le bouton Application](../mfc/how-to-customize-the-application-button.md)
 
 Pour obtenir des exemples de bout en bout, consultez [exemples (Feature Pack MFC)](../overview/visual-cpp-samples.md).
 

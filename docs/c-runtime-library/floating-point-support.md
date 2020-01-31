@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
-ms.translationtype: HT
+ms.openlocfilehash: a0ee21378a6feb7ada39dc00f0e181672470e231
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703127"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821510"
 ---
 # <a name="math-and-floating-point-support"></a>Prise en charge des fonctions mathématiques et à virgule flottante
 
@@ -25,7 +25,7 @@ Les précédentes versions 16 bits de Microsoft C/C++ et Microsoft Visual C++ 
 
 ## <a name="supported-math-and-floating-point-routines"></a>Routines à virgule flottante et mathématiques prises en charge
 
-|Routine|Utilisez|
+|Routine|Utiliser|
 |-|-|
 [abs, labs, llabs, _abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Calcule la valeur absolue d’un type integer
 [acos, acosf, acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|Calcule l’arc cosinus
@@ -72,7 +72,7 @@ Les précédentes versions 16 bits de Microsoft C/C++ et Microsoft Visual C++ 
 [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|Calcule la valeur plancher
 [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|Calcule une multiplication-addition fusionnées
 [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|Calcule la valeur maximale des arguments
-[fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|Calcule la valeur minimale des arguments
+[fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|Calcule le minimum des arguments
 [fmod, fmodf, fmodl](../c-runtime-library/reference/fmod-fmodf.md)|Calcule le reste à virgule flottante
 [_fpclass, _fpclassf](../c-runtime-library/reference/fpclass-fpclassf.md)|Retourne la classification d’une valeur à virgule flottante
 [fpclassify](../c-runtime-library/reference/fpclassify.md)|Retourne la classification d’une valeur à virgule flottante
@@ -127,7 +127,7 @@ Les précédentes versions 16 bits de Microsoft C/C++ et Microsoft Visual C++ 
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Calcule la racine carrée
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Obtient le mot d’état de virgule flottante
 [strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Convertit une chaîne en une valeur **float**
-[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Convertit une chaîne en une valeur **long** **double**
+[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Convertit une chaîne en valeur de type **long** **double**
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Calcule la tangente
 [tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Calcule la tangente hyperbolique
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Calcule la fonction gamma

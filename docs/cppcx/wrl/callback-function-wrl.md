@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10fb053ed97aaca0f4a31e3843d96aa194d8949d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398899"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821686"
 ---
 # <a name="callback-function-wrl"></a>Fonction de rappel (WRL)
 
@@ -189,7 +189,7 @@ ComPtr<TDelegateInterface> Callback(
 );
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *TDelegateInterface*<br/>
 Paramètre de modèle qui spécifie l'interface du délégué à appeler lorsqu'un événement se produit.
@@ -233,7 +233,7 @@ Objet qui représente l'objet de rappel et sa fonction membre.
 *object*<br/>
 Objet dont la fonction membre est appelée lorsqu'un événement se produit.
 
-*method*<br/>
+*méthode*<br/>
 Fonction membre à appeler lorsqu'un événement se produit.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -242,13 +242,13 @@ Objet dont la fonction membre est la méthode de rappel spécifiée.
 
 ## <a name="remarks"></a>Notes
 
-La base d’un objet délégué doit être `IUnknown`, et non `IInspectable`.
+La base d’un objet de délégué doit être `IUnknown`, pas `IInspectable`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
-**En-tête :** event.h
+**En-tête :** Event. h
 
-**Espace de noms :** Microsoft::wrl
+**Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
 

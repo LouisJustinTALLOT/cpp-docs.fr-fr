@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: 7d36793e4467f9454aca1eb207f3c3dfbd483bff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b80e49489c0b0d26469ba9f8b77e80a962668e35
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516674"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821636"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>Substitutions explicites (C++/CLI et C++/CX)
 
@@ -25,7 +25,7 @@ overriding-function-declarator = type::function [,type::function] { overriding-f
 overriding-function-declarator = function { overriding-function-definition }
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *overriding-function-declarator*<br/>
 Type de retour, nom et liste d’arguments de la fonction de substitution.  Notez que la fonction de substitution n’a pas à avoir le même nom que la fonction qui est remplacée.
@@ -39,25 +39,25 @@ Liste d’un ou plusieurs noms de fonctions à remplacer séparés par des virgu
 *overriding-function-definition*<br/>
 Instructions de corps de fonction qui définissent la fonction de substitution.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-Utilisez des substitutions explicites pour créer un alias pour une signature de méthode, ou pour fournir différentes implémentations pour des méthodes avec la même signature.
+Utilisez des substitutions explicites pour créer un alias pour une signature de méthode, ou pour fournir des implémentations différentes pour les méthodes ayant la même signature.
 
 Pour des informations concernant la modification des types hérités ou de comportement et des membres de type hérités, consultez [Spécificateurs de substitution](override-specifiers-cpp-component-extensions.md).
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise pour
 
 Option du compilateur : `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur les substitutions explicites dans du code natif ou compilé avec `/clr:oldSyntax`, consultez [Substitutions explicites](../cpp/explicit-overrides-cpp.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise pour
 
 Option du compilateur : `/clr`
 
