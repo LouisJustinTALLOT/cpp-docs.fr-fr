@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraits structure
 - Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-ms.openlocfilehash: 17109508cf99888ccde79be39a41c5361da24c6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c13e7fec3289b66b40e44f91404a50cba7a473b1
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398808"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821712"
 ---
 # <a name="argtraits-structure"></a>ArgTraits (structure)
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -127,50 +127,50 @@ struct ArgTraits<
              (TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *TMemberFunction*<br/>
-Paramètre TypeName pour une ArgTraits (structure) qui ne correspond à aucune `Invoke` signature de méthode.
+Paramètre TypeName pour une structure ArgTraits qui ne peut pas correspondre à une signature de méthode `Invoke`.
 
 *TDelegateInterface*<br/>
-Une interface de délégué.
+Interface de délégué.
 
 *TArg1*<br/>
-Le type du premier argument de la `Invoke` (méthode).
+Type du premier argument de la méthode `Invoke`.
 
 *TArg2*<br/>
-Le type du deuxième argument de la `Invoke` (méthode).
+Type du deuxième argument de la méthode `Invoke`.
 
 *TArg3*<br/>
-Le type du troisième argument de la `Invoke` (méthode).
+Type du troisième argument de la méthode `Invoke`.
 
 *TArg4*<br/>
-Le type du quatrième argument de la `Invoke` (méthode).
+Type du quatrième argument de la méthode `Invoke`.
 
 *TArg5*<br/>
-Le type du cinquième argument de la `Invoke` (méthode).
+Type du cinquième argument de la méthode `Invoke`.
 
 *TArg6*<br/>
-Le type du sixième argument de la `Invoke` (méthode).
+Type du sixième argument de la méthode `Invoke`.
 
 *TArg7*<br/>
-Le type du septième argument de la `Invoke` (méthode).
+Type du septième argument de la méthode `Invoke`.
 
 *TArg8*<br/>
-Le type du huitième argument de la `Invoke` (méthode).
+Type du huitième argument de la méthode `Invoke`.
 
 *TArg9*<br/>
-Le type du neuvième argument de la `Invoke` (méthode).
+Type du neuvième argument de la méthode `Invoke`.
 
 ## <a name="remarks"></a>Notes
 
-Le `ArgTraits` structure déclare un délégué spécifié interface et une fonction membre anonyme qui a un nombre spécifié de paramètres.
+La structure `ArgTraits` déclare une interface de délégué spécifiée et une fonction membre anonyme qui a un nombre spécifié de paramètres.
 
-## <a name="members"></a>Membres
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-Nom       | Description
+Name       | Description
 ---------- | ----------------------
 `Arg1Type` | Typedef pour TArg1.
 `Arg2Type` | Typedef pour TArg2.
@@ -184,23 +184,23 @@ Nom       | Description
 
 ### <a name="public-constants"></a>Constantes publiques
 
-Nom                     | Description
+Name                     | Description
 ------------------------ | ---------------------------------------------------------------------------------------
-[ArgTraits::args](#args) | Conserve le nombre de paramètres sur le `Invoke` méthode d’une interface de délégué.
+[ArgTraits::args](#args) | Conserve le nombre de paramètres sur la méthode `Invoke` d’une interface de délégué.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `ArgTraits`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
-**En-tête :** event.h
+**En-tête :** Event. h
 
-**Espace de noms :** Microsoft::WRL::Details
+**Espace de noms :** Microsoft :: WRL ::D étails
 
 ## <a name="args"></a>ArgTraits::args
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 static const int args = -1;
@@ -208,4 +208,4 @@ static const int args = -1;
 
 ### <a name="remarks"></a>Notes
 
-Conserve le nombre de paramètres sur le `Invoke` méthode d’une interface de délégué. Lorsque `args` est égal à -1, il ne peut y avoir aucune correspondance pour le `Invoke` signature de méthode.
+Conserve le nombre de paramètres sur la méthode `Invoke` d’une interface de délégué. Lorsque `args` est égal à-1, il ne peut y avoir aucune correspondance pour la signature de méthode `Invoke`.

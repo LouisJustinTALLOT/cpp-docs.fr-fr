@@ -1,5 +1,5 @@
 ---
-title: Ccomapartment, classe
+title: CComApartment, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CComApartment
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - apartments in ATL EXE modules
 - CComApartment class
 ms.assetid: dbc177d7-7ee4-45f2-b563-d578a467ca93
-ms.openlocfilehash: 92db42a45a0863f8b43f7c46da9624e424d1e488
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f4c7fc356e61210e9b99bf9989b1bb3f0abc98a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246776"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821673"
 ---
-# <a name="ccomapartment-class"></a>Ccomapartment, classe
+# <a name="ccomapartment-class"></a>CComApartment, classe
 
-Cette classe prend en charge la gestion d’un cloisonnement dans un module EXE mis en pool de thread.
+Cette classe fournit la prise en charge de la gestion d’un cloisonnement dans un module EXE mis en pool de threads.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+>  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,42 +36,42 @@ Cette classe prend en charge la gestion d’un cloisonnement dans un module EXE 
 class CComApartment
 ```
 
-## <a name="members"></a>Membres
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CComApartment::CComApartment](#ccomapartment)|Constructeur.|
 
-### <a name="public-methods"></a>M&#233;thodes publiques
+### <a name="public-methods"></a>Méthodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CComApartment::Apartment](#apartment)|Marque l’adresse de départ du thread.|
-|[CComApartment::GetLockCount](#getlockcount)|Retourne le nombre de verrous du thread actuel.|
+|[CComApartment::Apartment](#apartment)|Marque l’adresse de début du thread.|
+|[CComApartment::GetLockCount](#getlockcount)|Retourne le nombre de verrous actuel du thread.|
 |[CComApartment::Lock](#lock)|Incrémente le nombre de verrous du thread.|
-|[CComApartment::Unlock](#unlock)|Décrémente de nombre de verrou du thread.|
+|[CComApartment::Unlock](#unlock)|Décrémente le nombre de verrous du thread.|
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CComApartment::m_dwThreadID](#m_dwthreadid)|Contient l’identificateur du thread.|
 |[CComApartment::m_hThread](#m_hthread)|Contient le handle du thread.|
-|[CComApartment::m_nLockCnt](#m_nlockcnt)|Contient le nombre de verrous du thread actuel.|
+|[CComApartment::m_nLockCnt](#m_nlockcnt)|Contient le nombre de verrous actuel du thread.|
 
 ## <a name="remarks"></a>Notes
 
-`CComApartment` est utilisé par [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) pour gérer un thread cloisonné dans un module EXE mis en pool de thread. `CComApartment` Fournit des méthodes pour incrémenter et décrémenter le verrou compter sur un thread.
+`CComApartment` est utilisé par [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) pour gérer un cloisonnement dans un module exe mis en pool de threads. `CComApartment` fournit des méthodes pour incrémenter et décrémenter le nombre de verrous sur un thread.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
-**En-tête :** atlbase.h
+**En-tête :** atlbase. h
 
 ##  <a name="apartment"></a>  CComApartment::Apartment
 
-Marque l’adresse de départ du thread.
+Marque l’adresse de début du thread.
 
 ```
 DWORD Apartment();
@@ -83,7 +83,7 @@ Toujours 0.
 
 ### <a name="remarks"></a>Notes
 
-Automatiquement définies pendant [CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init).
+Défini automatiquement pendant [CComAutoThreadModule :: init](../../atl/reference/ccomautothreadmodule-class.md#init).
 
 ##  <a name="ccomapartment"></a>  CComApartment::CComApartment
 
@@ -99,7 +99,7 @@ Initialise le `CComApartment` membres de données [m_nLockCnt](#m_nlockcnt) et [
 
 ##  <a name="getlockcount"></a>  CComApartment::GetLockCount
 
-Retourne le nombre de verrous du thread actuel.
+Retourne le nombre de verrous actuel du thread.
 
 ```
 LONG GetLockCount();
@@ -107,7 +107,7 @@ LONG GetLockCount();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre de verrous sur le thread.
+Nombre de verrous sur le thread.
 
 ##  <a name="lock"></a>  CComApartment::Lock
 
@@ -119,11 +119,11 @@ LONG Lock();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur qui peut-être être utiles pour le diagnostic ou de test.
+Valeur qui peut être utile pour les diagnostics ou les tests.
 
 ### <a name="remarks"></a>Notes
 
-Appelé par [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock).
+Appelé par [CComAutoThreadModule :: Lock](../../atl/reference/ccomautothreadmodule-class.md#lock).
 
 Le nombre de verrous sur le thread est utilisé à des fins statistiques.
 
@@ -145,7 +145,7 @@ HANDLE m_hThread;
 
 ##  <a name="m_nlockcnt"></a>  CComApartment::m_nLockCnt
 
-Contient le nombre de verrous du thread actuel.
+Contient le nombre de verrous actuel du thread.
 
 ```
 LONG m_nLockCnt;
@@ -153,7 +153,7 @@ LONG m_nLockCnt;
 
 ##  <a name="unlock"></a>  CComApartment::Unlock
 
-Décrémente de nombre de verrou du thread.
+Décrémente le nombre de verrous du thread.
 
 ```
 LONG Unlock();
@@ -161,11 +161,11 @@ LONG Unlock();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur qui peut-être être utiles pour le diagnostic ou de test.
+Valeur qui peut être utile pour les diagnostics ou les tests.
 
 ### <a name="remarks"></a>Notes
 
-Appelé par [CComAutoThreadModule::Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock).
+Appelé par [CComAutoThreadModule :: Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock).
 
 Le nombre de verrous sur le thread est utilisé à des fins statistiques.
 

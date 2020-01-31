@@ -2,22 +2,22 @@
 title: Énumérations (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-ms.openlocfilehash: 3bdcff03872dcfe83f0be5752cec4f567fbc6b72
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: be11d8d8f38a92fbe4be00eed53dd5226bab0b59
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740210"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821751"
 ---
 # <a name="enums-ccx"></a>Énumérations (C++/CX)
 
-C++/CX prend en `public enum class` charge le mot clé, qui est analogue C++ `scoped  enum`à une norme. Lorsque vous utilisez un énumérateur qui est déclaré à l'aide du mot clé `public enum class` , vous devez utiliser l'identificateur d'énumération pour limiter chaque valeur de l'énumérateur.
+C++/CX prend en charge le mot clé `public enum class`, qui est analogue C++ à un `scoped  enum`standard. Lorsque vous utilisez un énumérateur qui est déclaré à l'aide du mot clé `public enum class` , vous devez utiliser l'identificateur d'énumération pour limiter chaque valeur de l'énumérateur.
 
 ### <a name="remarks"></a>Notes
 
 Un `public enum class` qui n'a pas de spécificateur d'accès, tel que `public`, est traité comme un [scoped enum](../cpp/enumerations-cpp.md)C++ standard.
 
-Une `public enum class` Déclaration `public enum struct` ou peut avoir un type sous-jacent de tout type intégral bien que le Windows Runtime lui-même nécessite que le type soit Int32 ou UInt32 pour une énumération d’indicateurs. La syntaxe suivante décrit les éléments d'un `public enum class` ou d'un `public enum struct`.
+Une déclaration `public enum class` ou `public enum struct` peut avoir un type sous-jacent de n’importe quel type intégral bien que le Windows Runtime lui-même exige que le type soit Int32 ou UInt32 pour un enum Flags. La syntaxe suivante décrit les éléments d'un `public enum class` ou d'un `public enum struct`.
 
 Cet exemple montre comment définir une classe d'énumération publique :
 

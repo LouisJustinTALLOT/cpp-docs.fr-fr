@@ -7,16 +7,16 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: 86b780c71a0b0265cbd0c8829fb5aea70f0fa42e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cc75c93d5173ceb7fa12b9722a797499b4225a53
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243273"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821614"
 ---
-# <a name="logicaland-struct"></a>logical_and (struct)
+# <a name="logical_and-struct"></a>logical_and (struct)
 
-Un objet de fonction prédéfini qui effectue l’opération de conjonction logique (`operator&&`) sur ses arguments.
+Objet de fonction prédéfini qui effectue l’opération de conjonction logique (`operator&&`) sur ses arguments.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,16 +37,16 @@ struct logical_and<void>
 };
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *Type*, *T*, *U*\
 Tout type qui prend en charge un `operator&&` qui accepte des opérandes des types spécifiés ou inférés.
 
-*Gauche*\
-Opérande gauche de l’opération de conjonction logique. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
+\ *gauche*
+Opérande gauche de l’opération de conjonction logique. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type déduit *T*.
 
-*Oui*\
-Opérande droit de l’opération de conjonction logique. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
+\ *droit*
+Opérande droit de l’opération de conjonction logique. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type inféré *U*.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -112,7 +112,7 @@ int main( )
    // of d1 & d2, use the logical_and function object
    transform( d1.begin( ), d1.end( ), d2.begin( ),
       d3.begin( ), logical_and<bool>( ) );
-   cout << "The deque which is the conjuction of d1 & d2 is:\n d3 = ( " ;
+   cout << "The deque which is the conjunction of d1 & d2 is:\n d3 = ( " ;
    for ( iter3 = d3.begin( ) ; iter3 != d3.end( ) ; iter3++ )
       cout << *iter3 << " ";
    cout << ")" << endl;
@@ -124,6 +124,6 @@ Original deque:
 d1 = ( true true true true true false false )
 Original deque:
 d2 = ( true false true true false true false )
-The deque which is the conjuction of d1 & d2 is:
+The deque which is the conjunction of d1 & d2 is:
 d3 = ( true false true true false false false )
 ```

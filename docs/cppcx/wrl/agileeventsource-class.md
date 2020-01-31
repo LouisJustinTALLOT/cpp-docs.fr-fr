@@ -1,5 +1,5 @@
 ---
-title: Agileeventsource, classe
+title: AgileEventSource, classe
 ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 - event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223032"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821738"
 ---
-# <a name="agileeventsource-class"></a>Agileeventsource, classe
+# <a name="agileeventsource-class"></a>AgileEventSource, classe
 
-Représente un événement est déclenché par un composant agile, qui est un composant qui est accessible à partir de n’importe quel thread. Hérite de [EventSource](eventsource-class.md) et remplace le `Add` fonction membre avec un paramètre de type supplémentaires pour spécifier des options pour l’appel de l’événement agile.
+Représente un événement déclenché par un composant agile, qui est un composant accessible à partir de n’importe quel thread. Hérite de [EventSource](eventsource-class.md) et substitue la fonction membre `Add` par un paramètre de type supplémentaire pour spécifier les options d’appel de l’événement agile.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,17 +30,17 @@ class AgileEventSource :
         TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>Paramètres
+## <a name="parameters"></a>Parameters
 
 *TDelegateInterface*<br/>
-L’interface à un délégué qui représente un gestionnaire d’événements.
+Interface à un délégué qui représente un gestionnaire d’événements.
 
 *TEventSourceOptions*<br/>
-Un [InvokeModeOptions](invokemodeoptions-structure.md) structure dont le champ invokeMode a la valeur `InvokeMode::StopOnFirstError` ou `InvokeMode::FireAll`.
+Structure [InvokeModeOptions](invokemodeoptions-structure.md) dont le champ invokeMode a la valeur `InvokeMode::StopOnFirstError` ou `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Notes
 
-La grande majorité des composants dans le Runtime Windows sont des composants agiles. Pour plus d’informations, consultez [thread et Marshaling (C++ / c++ / CX)](../../cppcx/threading-and-marshaling-c-cx.md).
+La grande majorité des composants de la Windows Runtime sont des composants agiles. Pour plus d’informations, consultez [Threading et marshalingC++(/CX)](../../cppcx/threading-and-marshaling-c-cx.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -48,23 +48,23 @@ La grande majorité des composants dans le Runtime Windows sont des composants a
 
 `AgileEventSource`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise pour
 
-**En-tête :** event.h
+**En-tête :** Event. h
 
-**Espace de noms :** Microsoft::wrl
+**Espace de noms :** Microsoft::WRL
 
-## <a name="members"></a>Membres
+## <a name="members"></a>Members
 
-### <a name="public-methods"></a>M&#233;thodes publiques
+### <a name="public-methods"></a>Méthodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[AgileEventSource::Add (méthode)](#add)|Ajoute le Gestionnaire d’événements agile représenté par l’interface de délégué spécifié à l’ensemble des gestionnaires d’événements pour actuel **AgileEventSource** objet.|
+|[AgileEventSource :: Add, méthode](#add)|Ajoute le gestionnaire d’événements agile représenté par l’interface de délégué spécifiée au jeu de gestionnaires d’événements pour l’objet **AgileEventSource** actuel.|
 
-## <a name="add"></a> AgileEventSource::Add (méthode)
+## <a name="add"></a>AgileEventSource :: Add, méthode
 
-Ajoute le Gestionnaire d’événements représenté par l’interface de délégué spécifié à l’ensemble des gestionnaires d’événements pour actuel [EventSource](eventsource-class.md) objet.
+Ajoute le gestionnaire d’événements représenté par l’interface de délégué spécifiée au jeu de gestionnaires d’événements pour l’objet [EventSource](eventsource-class.md) en cours.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -75,13 +75,13 @@ HRESULT Add(
 );
 ```
 
-### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Parameters
 
 *delegateInterface*<br/>
-L’interface à un objet délégué, qui représente un gestionnaire d’événements.
+Interface à un objet délégué, qui représente un gestionnaire d’événements.
 
 *token*<br/>
-Lorsque cette opération se termine, un handle qui représente l’événement. Utiliser ce jeton en tant que paramètre à la `Remove()` méthode pour ignorer le Gestionnaire d’événements.
+Lorsque cette opération est terminée, il s’agit d’un handle qui représente l’événement. Utilisez ce jeton comme paramètre de la méthode `Remove()` pour ignorer le gestionnaire d’événements.
 
 ### <a name="return-value"></a>Valeur de retour
 
