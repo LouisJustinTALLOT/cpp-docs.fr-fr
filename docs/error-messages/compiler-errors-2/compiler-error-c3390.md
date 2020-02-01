@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
-ms.openlocfilehash: 3f1149d4584a0ea3d0061a3ec4e2b77830603ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c624d3b0379d057b0ed566deffc2a0efcc324f88
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400316"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912874"
 ---
 # <a name="compiler-error-c3390"></a>Erreur du compilateur C3390
 
 'type_arg' : argument de type non valide pour le paramètre générique 'param' du générique 'generic_type', doit être un type référence
 
-Un type générique a été instancié de manière incorrecte.  Vérifiez la définition du type.  Pour plus d’informations, consultez la page [Génériques](../../extensions/generics-cpp-component-extensions.md).
+Un type générique a été instancié de manière incorrecte.  Vérifiez la définition du type.  Pour plus d’informations, consultez [Génériques](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 
-Le premier exemple utilise c# pour créer un composant qui contient un type générique qui a certaines contraintes ne sont pas pris en charge lors de la création de types génériques en C / c++ / CLR. Pour plus d’informations, consultez [Contraintes sur les paramètres de type](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+Le premier exemple utilise C# pour créer un composant qui contient un type générique qui a certaines contraintes qui ne sont pas prises en charge lors de la C++création de types génériques dans/CLR. Pour plus d’informations, consultez [Contraintes sur les paramètres de type](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
-```cs
+```csharp
 // C3390.cs
 // Compile by using: csc /target:library C3390.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-Lorsque le composant C3390.dll est disponible, l’exemple suivant génère l’erreur C3390.
+Lorsque le composant C3390. dll est disponible, l’exemple suivant génère C3390.
 
 ```cpp
 // C3390_b.cpp

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: ec1e2cefa33bc9d749d0f05e170c2f2db9b25f02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 4db75653251a558d6f43f5be63098fbb26e1e6ff
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515954"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912848"
 ---
 # <a name="variable-argument-lists--ccli"></a>Listes d'arguments de variable (...) (C++/CLI)
 
@@ -68,7 +68,7 @@ La fonction `f` peut être appelée à partir de C# ou de Visual Basic, par exem
 
 Dans C#, un argument passé à un paramètre `ParamArray` peut être appelé par un nombre variable d’arguments. L’exemple de code suivant est en C#.
 
-```cs
+```csharp
 // mcppv2_paramarray3.cs
 // compile with: /r:mcppv2_paramarray2.dll
 // a C# program

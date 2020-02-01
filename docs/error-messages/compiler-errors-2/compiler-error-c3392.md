@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4109a59f093740c9e0865cef6a31f3b09127c747
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243022"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912809"
 ---
 # <a name="compiler-error-c3392"></a>Erreur du compilateur C3392
 
@@ -21,9 +21,9 @@ Un type générique a été instancié de manière incorrecte. Vérifiez la déf
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant utilise c# pour créer un composant qui contient un type générique qui a certaines contraintes ne sont pas pris en charge lors de la création de types génériques en C / c++ / CLI. Pour plus d’informations, consultez [Contraintes sur les paramètres de type](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+L’exemple suivant utilise C# pour créer un composant qui contient un type générique qui a certaines contraintes qui ne sont pas prises en charge lors de la C++création de types génériques dans/CLI. Pour plus d’informations, consultez [Contraintes sur les paramètres de type](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
-```cs
+```csharp
 // C3392.cs
 // Compile by using: csc /target:library C3392.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-Lorsque le composant C3392.dll est disponible, l’exemple suivant génère l’erreur C3392.
+Lorsque le composant C3392. dll est disponible, l’exemple suivant génère C3392.
 
 ```cpp
 // C3392_b.cpp

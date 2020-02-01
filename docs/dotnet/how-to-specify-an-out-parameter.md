@@ -1,31 +1,31 @@
 ---
-title: 'Comment : spécifier un paramètre Out'
+title: 'Comment : spécifier un paramètre de sortie'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function parameters
 - out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-ms.openlocfilehash: 5f0b462e672de4408d50bf95d65c749bf1881078
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 4bd6ad1d3009adcc124bdeb90d9d67de07112de2
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988436"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912794"
 ---
-# <a name="how-to-specify-an-out-parameter"></a>Comment : spécifier un paramètre Out
+# <a name="how-to-specify-an-out-parameter"></a>Comment : spécifier un paramètre de sortie
 
-Cet exemple montre comment spécifier qu’un paramètre de fonction est un paramètre de sortie et comment appeler cette fonction à partir C# d’un programme.
+Cet exemple montre comment spécifier qu’un paramètre de fonction est un paramètre `out` et comment appeler cette fonction à partir d’un C# programme.
 
-Un paramètre de sortie est spécifié dans C++ Visual avec <xref:System.Runtime.InteropServices.OutAttribute>.
+Un paramètre `out` est spécifié dans C++ à l’aide de <xref:System.Runtime.InteropServices.OutAttribute>.
 
 ## <a name="example"></a>Exemple
 
-La première partie de cet exemple est une dll C++ Visual avec un type qui contient une fonction avec un paramètre out.
+La première partie de cet exemple crée une C++ dll. Il définit un type qui contient une fonction avec un paramètre `out`.
 
 ```cpp
 // cpp_out_param.cpp
-// compile with: /LD /clr:safe
+// compile with: /LD /clr
 using namespace System;
 public value struct TestStruct {
    static void Test([Runtime::InteropServices::Out] String^ %s) {
@@ -34,11 +34,9 @@ public value struct TestStruct {
 };
 ```
 
-## <a name="example"></a>Exemple
+Ce fichier source est un C# client qui utilise le C++ composant créé dans l’exemple précédent.
 
-Il s’agit C# d’un client qui utilise le C++ composant visuel créé dans l’exemple précédent.
-
-```
+```csharp
 // cpp_out_param_2.cs
 // compile with: /reference:cpp_out_param.dll
 using System;
