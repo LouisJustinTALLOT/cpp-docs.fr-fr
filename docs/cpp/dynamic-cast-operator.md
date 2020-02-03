@@ -1,21 +1,22 @@
 ---
 title: dynamic_cast, opérateur
-ms.date: 11/19/2018
+description: Vue d’ensemble C++ de l’opérateur Language dynamic_cast.
+ms.date: 02/03/2020
 f1_keywords:
 - dynamic_cast_cpp
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: 3b359885eb72f9272fb1efe14afe9a6cbe6ddb30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0073aaa886bba33a0ec6c07fb89d6eee032765c8
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399041"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972219"
 ---
-# <a name="dynamiccast-operator"></a>dynamic_cast, opérateur
+# <a name="dynamic_cast-operator"></a>dynamic_cast, opérateur
 
-Convertit l’opérande `expression` à un objet de type `type-id`.
+Convertit l’opérande `expression` en un objet de type `type-id`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,17 +26,17 @@ dynamic_cast < type-id > ( expression )
 
 ## <a name="remarks"></a>Notes
 
-Le `type-id` doit être un pointeur ou une référence à un type de classe précédemment définie ou un « pointeur vers void ». Le type de `expression` doit être un pointeur si `type-id` est un pointeur ou une l-value si `type-id` est une référence.
+Le `type-id` doit être un pointeur ou une référence à un type de classe précédemment défini ou un « pointeur vers void ». Le type de `expression` doit être un pointeur si `type-id` est un pointeur ou une l-value si `type-id` est une référence.
 
-Consultez [static_cast](../cpp/static-cast-operator.md) pour obtenir une explication de la différence entre les conversions de casting statiques et dynamiques, et quand il convient d’utiliser chacune.
+Consultez [static_cast](../cpp/static-cast-operator.md) pour obtenir une explication de la différence entre les conversions de cast statique et dynamique, et à quel moment il convient d’utiliser chacune d’elles.
 
-Il existe deux modifications avec rupture dans le comportement de **dynamic_cast** dans du code managé :
+Il existe deux modifications importantes dans le comportement de **dynamic_cast** dans du code managé :
 
-- **dynamic_cast** vers un pointeur vers le type sous-jacent d’un enum boxed échoue lors de l’exécution, la méthode retournant 0 au lieu du pointeur converti.
+- **dynamic_cast** à un pointeur vers le type sous-jacent d’un enum boxed échoue au moment de l’exécution, ce qui retourne 0 au lieu du pointeur converti.
 
-- **dynamic_cast** ne lève plus une exception lorsque `type-id` est un pointeur intérieur vers un type valeur, avec le cast échoue lors de l’exécution.  Le cast retourne désormais la valeur de pointeur 0 au lieu de lever.
+- **dynamic_cast** ne lève plus d’exception quand `type-id` est un pointeur intérieur vers un type valeur, avec le cast qui échoue au moment de l’exécution.  La conversion retourne maintenant la valeur du pointeur 0 au lieu de la levée.
 
-Si `type-id` est un pointeur vers un non équivoque accessible directe ou indirecte classe de base de `expression`, un pointeur vers le sous-objet unique de type `type-id` est le résultat. Exemple :
+Si `type-id` est un pointeur vers une classe de base directe ou indirecte accessible non ambiguë de `expression`, un pointeur vers le sous-objet unique de type `type-id` est le résultat. Par exemple :
 
 ```cpp
 // dynamic_cast_1.cpp
@@ -52,9 +53,9 @@ void f(D* pd) {
 }
 ```
 
-Ce type de conversion est appelé un « upcast », car il passe un pointeur d’une hiérarchie de classes, à partir d’une classe dérivée à une classe, qu'il est dérivé. Un upcast est une conversion implicite.
+Ce type de conversion est appelé « upcast », car il déplace un pointeur vers le haut d’une hiérarchie de classes, d’une classe dérivée vers une classe dérivée de. Un upcast est une conversion implicite.
 
-Si `type-id` est void *, une vérification de l’exécution est effectuée pour déterminer le type réel de `expression`. Le résultat est un pointeur vers l’objet complet vers lequel pointé `expression`. Exemple :
+Si `type-id` est void *, une vérification au moment de l’exécution est effectuée pour déterminer le type réel de `expression`. Le résultat est un pointeur vers l’objet complet pointé par `expression`. Par exemple :
 
 ```cpp
 // dynamic_cast_2.cpp
@@ -73,9 +74,9 @@ void f() {
 }
 ```
 
-Si `type-id` n’est pas void *, une vérification de l’exécution est effectuée pour déterminer si l’objet vers lequel pointe `expression` peut être converti vers le type vers lequel pointé `type-id`.
+Si `type-id` n’est pas void *, une vérification au moment de l’exécution est effectuée pour déterminer si l’objet vers lequel pointe `expression` peut être converti vers le type désigné par `type-id`.
 
-Si le type de `expression` est une classe de base du type de `type-id`, une vérification de l’exécution est effectuée pour déterminer si `expression` réellement pointe vers un objet complet du type de `type-id`. Si la valeur est true, le résultat est un pointeur vers un objet complet du type de `type-id`. Exemple :
+Si le type de `expression` est une classe de base du type de `type-id`, une vérification au moment de l’exécution est effectuée pour déterminer si `expression` pointe en fait vers un objet complet du type de `type-id`. Si la valeur est true, le résultat est un pointeur vers un objet complet du type de `type-id`. Par exemple :
 
 ```cpp
 // dynamic_cast_3.cpp
@@ -92,13 +93,13 @@ void f() {
 }
 ```
 
-Ce type de conversion est appelé un « effectuer un downcast », car il déplace un pointeur vers le bas d’une hiérarchie de classes, à partir d’une classe donnée d’une classe dérivée de celui-ci.
+Ce type de conversion est appelé « downcast », car il déplace un pointeur vers le dessous d’une hiérarchie de classes, d’une classe donnée vers une classe dérivée de celui-ci.
 
-En cas d’héritage multiple, les possibilités d’ambiguïté sont introduites. Envisagez la hiérarchie de classes illustrée à la figure suivante.
+En cas d’héritage multiple, des possibilités d’ambiguïté sont introduites. Examinez la hiérarchie de classes illustrée dans la figure suivante.
 
-Pour les types CLR, **dynamic_cast** se traduit par une absence d’opération si la conversion peut être effectuée implicitement, ou d’un code MSIL `isinst` instruction, qui effectue une vérification dynamique et retourne **nullptr** si le la conversion échoue.
+Pour les types CLR, **dynamic_cast** produit une absence d’opération si la conversion peut être effectuée implicitement, ou une instruction MSIL `isinst`, qui effectue une vérification dynamique et retourne **nullptr** si la conversion échoue.
 
-L’exemple suivant utilise **dynamic_cast** pour déterminer si une classe est une instance de type particulier :
+L’exemple suivant utilise **dynamic_cast** pour déterminer si une classe est une instance d’un type particulier :
 
 ```cpp
 // dynamic_cast_clr.cpp
@@ -121,38 +122,40 @@ int main() {
 }
 ```
 
-![Hiérarchie qui montre l’héritage multiple de classes](../cpp/media/vc39011.gif "hiérarchie qui montre l’héritage multiple de classes") <br/>
+![Hiérarchie de classes qui affiche plusieurs héritages](../cpp/media/vc39011.gif "Hiérarchie de classes montrant un héritage multiple") <br/>
 Hiérarchie de classes montrant un héritage multiple
 
-Un pointeur vers un objet de type `D` pouvant être casté en toute sécurité en `B` ou `C`. Toutefois, si `D` est converti pour pointer vers un `A` de l’objet, instance de `A` provoquerait ? Cela entraînerait une erreur de conversion ambiguë. Pour contourner ce problème, vous pouvez effectuer deux casts non équivoque. Exemple :
+Un pointeur vers un objet de type `D` peut être casté en toute sécurité en `B` ou `C`. Toutefois, si `D` est casté pour pointer vers un objet `A`, quelle instance de `A` produira-t-elle ? Cela entraînerait une erreur de conversion ambiguë. Pour contourner ce problème, vous pouvez effectuer deux casts non ambigus. Par exemple :
 
 ```cpp
 // dynamic_cast_4.cpp
 // compile with: /c /GR
 class A {virtual void f();};
-class B {virtual void f();};
-class D : public B {virtual void f();};
+class B : public A {virtual void f();};
+class C : public A {virtual void f();};
+class D : public B, public C {virtual void f();};
 
 void f() {
    D* pd = new D;
+   A* pa = dynamic_cast<A*>(pd);   // C4540, ambiguous cast fails at runtime
    B* pb = dynamic_cast<B*>(pd);   // first cast to B
    A* pa2 = dynamic_cast<A*>(pb);   // ok: unambiguous
 }
 ```
 
-Ambiguïtés supplémentaires peuvent être introduites lorsque vous utilisez des classes de base virtuelles. Envisagez la hiérarchie de classes illustrée à la figure suivante.
+D’autres ambiguïtés peuvent être introduites lorsque vous utilisez des classes de base virtuelles. Examinez la hiérarchie de classes illustrée dans la figure suivante.
 
-![Classe de hiérarchie qui montre les classes de base virtuelles](../cpp/media/vc39012.gif "classe hiérarchie qui montre les classes de base virtuelles") <br/>
+![Hiérarchie de classes qui affiche les classes de base virtuelles](../cpp/media/vc39012.gif "Hiérarchie de classes montrant des classes de base virtuelles") <br/>
 Hiérarchie de classes montrant des classes de base virtuelles
 
-Dans cette hiérarchie, `A` est une classe de base virtuelle. Une instance donnée de la classe `E` et un pointeur vers le `A` sous-objet, un **dynamic_cast** vers un autre pointeur vers `B` échoue en raison de l’ambiguïté. Vous devez commencer par caster à l’ensemble `E` de l’objet, puis progressez sauvegarder la hiérarchie, de manière non équivoque, pour atteindre le bon `B` objet.
+Dans cette hiérarchie, `A` est une classe de base virtuelle. À partir d’une instance de la classe `E` et d’un pointeur vers le sous-objet `A`, un **dynamic_cast** vers un pointeur vers `B` échouera en raison d’une ambiguïté. Vous devez d’abord effectuer un cast vers l’objet complet `E`, puis travailler de manière non ambiguë pour sauvegarder la hiérarchie afin d’atteindre l’objet de `B` approprié.
 
-Envisagez la hiérarchie de classes illustrée à la figure suivante.
+Examinez la hiérarchie de classes illustrée dans la figure suivante.
 
-![Hiérarchie montrant des classes de base en double de classes](../cpp/media/vc39013.gif "hiérarchie montrant des classes de base en double de classes") <br/>
+![Hiérarchie de classes qui affiche des classes de base en double](../cpp/media/vc39013.gif "Hiérarchie de classes montrant des classes de base en double") <br/>
 Hiérarchie de classes montrant des classes de base en double
 
-Étant donné un objet de type `E` et un pointeur vers le `D` sous-objet, accéder à partir de la `D` sous-objet à l’extrême gauche `A` sous-objet, trois conversions peuvent être effectuées. Vous pouvez effectuer un **dynamic_cast** conversion à partir de la `D` pointeur vers un `E` pointeur, puis une conversion (soit **dynamic_cast** ou une conversion implicite) à partir de `E`à `B`et enfin une conversion implicite de `B` à `A`. Exemple :
+En fonction d’un objet de type `E` et d’un pointeur vers le sous-objet `D`, pour naviguer du sous-objet `D` vers le sous-objet `A` le plus à gauche, trois conversions peuvent être effectuées. Vous pouvez effectuer une conversion **dynamic_cast** du pointeur `D` vers un pointeur `E`, puis une conversion ( **dynamic_cast** ou une conversion implicite) de `E` à `B`, et enfin une conversion implicite de `B` en `A`. Par exemple :
 
 ```cpp
 // dynamic_cast_5.cpp
@@ -170,9 +173,9 @@ void f(D* pd) {
 }
 ```
 
-Le **dynamic_cast** opérateur peut également être utilisé pour effectuer un « cast croisé ». À l’aide de la même hiérarchie de classe, il est possible d’effectuer un cast d’un pointeur, par exemple, à partir de la `B` sous-objet à la `D` sous-objet, tant que l’objet complet est de type `E`.
+L’opérateur **dynamic_cast** peut également être utilisé pour effectuer un « cross cast ». À l’aide de la même hiérarchie de classes, il est possible d’effectuer un cast d’un pointeur, par exemple, du sous-objet `B` vers le sous-objet `D`, à condition que l’objet complet soit de type `E`.
 
-Envisagez d’utiliser entre les casts, il est en fait possible d’effectuer la conversion d’un pointeur vers `D` vers un pointeur vers l’extrême gauche `A` sous-objet en deux étapes seulement. Vous pouvez effectuer une croix effectuer un cast du `D` à `B`, puis une conversion implicite de `B` à `A`. Exemple :
+Si vous envisagez des transtypages croisés, il est possible d’effectuer la conversion d’un pointeur vers `D` en un pointeur vers le sous-objet `A` le plus à gauche en deux étapes. Vous pouvez effectuer une conversion croisée de `D` à `B`, puis une conversion implicite de `B` en `A`. Par exemple :
 
 ```cpp
 // dynamic_cast_6.cpp
@@ -189,9 +192,9 @@ void f(D* pd) {
 }
 ```
 
-Une valeur de pointeur null est convertie à la valeur de pointeur null du type de destination par **dynamic_cast**.
+Une valeur de pointeur null est convertie en valeur de pointeur null du type de destination par **dynamic_cast**.
 
-Lorsque vous utilisez `dynamic_cast < type-id > ( expression )`si `expression` ne peut pas être converti en toute sécurité en type `type-id`, la vérification de l’exécution provoque la conversion en échec. Exemple :
+Lorsque vous utilisez `dynamic_cast < type-id > ( expression )`, si `expression` ne peut pas être converti en toute sécurité en type `type-id`, le contrôle au moment de l’exécution provoque l’échec de la conversion. Par exemple :
 
 ```cpp
 // dynamic_cast_7.cpp
@@ -206,13 +209,13 @@ void f() {
 }
 ```
 
-La valeur d’un échec de cast en type pointeur est le pointeur null. Un échec de cast pour référencer le type lève une [bad_cast, Exception](../cpp/bad-cast-exception.md).   Si `expression` ne pas pointer vers ou référencer un objet valid, un `__non_rtti_object` exception est levée.
+La valeur d’un cast ayant échoué en type pointeur est le pointeur null. Un échec de conversion en type référence lève une [Exception bad_cast](../cpp/bad-cast-exception.md).   Si `expression` ne pointe pas vers un objet valide ou ne fait pas référence à celui-ci, une exception `__non_rtti_object` est levée.
 
-Consultez [typeid](../cpp/typeid-operator.md) pour une explication de la `__non_rtti_object` exception.
+Consultez [typeid](../cpp/typeid-operator.md) pour obtenir une explication de l’exception `__non_rtti_object`.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant crée le pointeur de la classe de base (struct A), à un objet (struct C).  Ceci, ainsi que le fait il sont des fonctions virtuelles, Active le polymorphisme de runtime.
+L’exemple suivant crée le pointeur de classe de base (struct A) dans un objet (struct C).  Cela, plus le fait qu’il existe des fonctions virtuelles, active le polymorphisme du Runtime.
 
 L’exemple appelle également une fonction non virtuelle dans la hiérarchie.
 
