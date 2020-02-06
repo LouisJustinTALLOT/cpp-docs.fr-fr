@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 9dd3675f200be4f0ec66620bcf3cf05706991b66
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 722a63a43e5e08fe80b26f908c7ae92df2fdb29c
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518168"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034517"
 ---
 # <a name="q-options-low-level-operations"></a>/Q (Opérations de bas niveau), options
 
@@ -33,6 +33,10 @@ Vous pouvez utiliser les options du compilateur **/q** pour effectuer les opéra
 - [/Qsafe_fp_loads](qsafe-fp-loads.md): supprime les optimisations pour les chargements de registres à virgule flottante et pour les déplacements entre la mémoire et les registres MMX.
 
 - [/Qspectre](qspectre.md): génère des instructions pour limiter certaines vulnérabilités de sécurité spectre.
+
+- [/Qspectre-Load](qspectre-load.md): génère des instructions pour atténuer les vulnérabilités de sécurité spectre en fonction des charges.
+
+- [/Qspectre-Load-CF](qspectre-load-cf.md): génère des instructions pour atténuer les vulnérabilités de sécurité spectre en fonction des instructions de workflow de contrôle qui sont chargées.
 
 - [/Qvec-Report (niveau de rapport Vectoriseur automatique)](qvec-report-auto-vectorizer-reporting-level.md): active les niveaux de création de rapports pour la vectorisation automatique.
 
